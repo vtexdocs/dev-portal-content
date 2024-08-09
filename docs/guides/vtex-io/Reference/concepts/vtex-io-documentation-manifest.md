@@ -4,17 +4,17 @@ slug: "vtex-io-documentation-manifest"
 excerpt: "Learn more about the manifest file, a crucial document containing metadata that defines and shapes the core attributes and functionalities of a VTEX IO app."
 hidden: false
 createdAt: "2020-09-22T21:29:09.380Z"
-updatedAt: "2022-12-13T20:17:44.879Z"
+updatedAt: "2024-08-09T15:26:04.475Z"
 category: "App Development"
 ---
 
-Every IO app must have a `manifest.json` file in its root folder. This file serves as the initial point of communication with VTEX IO, holding important metadata about an app, such as its name, version, vendor, description, and dependencies.
+Every [VTEX IO app](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) must have a `manifest.json` file in its root folder. This file serves as the initial point of communication with [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and holds important metadata about an app, such as its name, version, vendor, description, and dependencies.
 
 ## Fields
 
 Check the following snippet, which shows a manifest example and its supported fields.
 
-Click on each field to learn more about it.
+Click each field to learn more.
 
 ```json manifest.json
 {
@@ -53,13 +53,13 @@ Click on each field to learn more about it.
 }
 ```
 
-For a real example of a `manifest.json` file, refer to [this file](https://github.com/vtex-apps/store-theme/blob/master/manifest.json).
+For a real example of a `manifest.json` file, check out [this file](https://github.com/vtex-apps/store-theme/blob/master/manifest.json).
 
 ## `name`
 
 The app name. It should concisely express the app's purpose.
 
-App names are [kebab case](https://en.wiktionary.org/wiki/kebab_case). Basically, they must be comprised of lowercase letters separated by hyphens. Special characters, such as `*` and `@`, and numbers at the beginning of the name are not recommended.
+App names are in [kebab case](https://en.wiktionary.org/wiki/kebab_case). Basically, they must consist of lowercase letters separated by hyphens. Special characters, such as `*` and `@`, and numbers at the beginning of the name are not recommended.
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
@@ -67,21 +67,21 @@ App names are [kebab case](https://en.wiktionary.org/wiki/kebab_case). Basically
 
 The app owner, i.e., the VTEX account responsible for the app development, maintenance, and distribution.
 
-If the app is to be sold on the VTEX App Store, the vendor is the one to profit from its installation. Therefore, remember the following: an app must have only one vendor. Even if the app is installed on multiple accounts, you shouldn't change the app's `vendor` value for each one of them.
+If the app is to be sold on the VTEX App Store, the vendor will profit from its installation. Therefore, remember the following: an app must have only one vendor. Even if the app is installed on multiple accounts, you should not change the app's `vendor` value for each account.
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `version`
 
-The app version, according to the [Semantic Versioning 2.0.0](https://semver.org/).
+The app version, following [Semantic Versioning 2.0.0](https://semver.org/).
 
-> ℹ️ For more information, please refer to [Understanding app versioning](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning).
+> ℹ️ For more information, see [Understanding app versioning](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning).
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `title`
 
-The app distribution name. This name is the one used in the Apps section from the Admin and in the VTEX App Store.
+The app distribution name. This name is the one used in the Apps section of the Admin and in the VTEX App Store.
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
@@ -93,9 +93,9 @@ A brief description explaining the app's purpose.
 
 ## `builders`
 
-The list of builders used by the app. A builder is an abstraction to configure other IO services, such as `node`, `dotnet`, `react`, etc. It acts as an API service, responsible for processing and interpreting a directory from the app. Hence, it’s possible to use as many builders as you want in one single app.
+The list of builders used by the app. A builder is an abstraction for configuring other IO services, such as `node`, `dotnet`, `react`. It acts as an API service, which processes and interprets a directory from the app. Hence, you can use as many builders as you want in a single app.
 
-For example, if you want to **develop React components** on an app, you should use the builder `react@3.x`, declaring it on the manifest:
+For example, if you want to **develop React components** in an app, you should use the builder `react@3.x` and declare it in the manifest:
 
 ```
 "builders": {
@@ -103,9 +103,9 @@ For example, if you want to **develop React components** on an app, you should u
 }
 ```
 
-And create a `react` folder inside the app, placing there the component files. Each builder has its own set of rules and validation processes.
+And create a `react` folder inside the app, adding the component files. Each builder has its own set of rules and validation processes.
 
-> ℹ️ For more information, please refer to [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
+> ℹ️ For more information, see [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
@@ -127,7 +127,7 @@ The most recurrent use of VTEX IO apps as dependencies is for:
 - Using GraphQL or REST definitions declared in another app.
 - Implementing a GraphQL schema from another app.
 
-> ℹ️ For more information, please refer to [Dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies/).
+> ℹ️ For more information, see [Dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies/).
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
@@ -135,25 +135,25 @@ The most recurrent use of VTEX IO apps as dependencies is for:
 
 The list of other apps that the app relies on to properly work. However, unlike regular dependencies, peer dependencies are not automatically installed in an account. Hence, these are mostly used in cases where an app relies on paid apps or a specific version of an app.
 
-> ℹ️ For more information, please refer to [peerdependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-peerdependencies/).
+> ℹ️ For more information, see [peerdependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-peerdependencies/).
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `policies`
 
-The list of policies, responsible for granting permissions to the app in case it needs access to external services or specific data from other sources, such as external APIs.
+The list of policies that grant permissions to the app, in case it needs access to external services or specific data from other sources, such as external APIs.
 
-> ℹ️ For more information, please refer to [Policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies/).
+> ℹ️ For more information, see [Policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies/).
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
 ## `settingsSchema`
 
-The layout settings of the app, displayed in the VTEX Admin.
+The layout settings of the app displayed in the VTEX Admin.
 
-Using [JSON Schema](https://json-schema.org/), it’s possible to accept multiple fields with multiple data types. The persistence of the information is taken care of by the VTEX Platform, and you may fetch the current configuration on your app code.
+Using [JSON Schema](https://json-schema.org/), you can accept multiple fields with multiple data types. The VTEX Platform manages the persistence of information, and you may fetch the current configuration in your app code.
 
-For example, on the `vtex.wordpress-integration` app, the following `settingsSchema`:
+For example, in the `vtex.wordpress-integration` app, the following `settingsSchema`:
 
 ```json
 "settingsSchema": {
@@ -179,14 +179,16 @@ For example, on the `vtex.wordpress-integration` app, the following `settingsSch
   }
 ```
 
-will generate the following form once that app is installed:
+This will generate the following form once that app is installed:
 
 ![settingsschema](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-manifest-0.png)
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
 
+> ℹ️ For more information, see [Creating an interface for your app settings](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-an-interface-for-your-app-settings).
+
 ## [DEPRECATED] `credentialType`
 
-The credential type. When set as `relative`, a request from the app can only be performed if the app and the role who called it have the required permissions. When set as `absolute`, if the app has the necessary permission, a request from the app can be performed.
+The credential type. When set as `relative`, an app request can only be performed if the app and the role who called it have the required permissions. When set as `absolute`, a request from the app can be performed if the app has the necessary permissions.
 
 <div style="text-align: right"><a href="#fields">Fields</a> 🔼</div>
