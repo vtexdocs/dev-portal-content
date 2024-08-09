@@ -7,7 +7,7 @@ updatedAt: "2024-07-24T13:32:33.320Z"
 category: "Storefront Development"
 excerpt: "Learn how to set specific styles for your store components to enhance your store's user experience."
 seeAlso:
-  - "/docs/guides/vtex-io-documentation-6-buildingyourownstoretheme"
+ - "/docs/guides/vtex-io-documentation-6-buildingyourownstoretheme"
 ---
 
 Your website’s visual style is fundamental to building your store’s identity.
