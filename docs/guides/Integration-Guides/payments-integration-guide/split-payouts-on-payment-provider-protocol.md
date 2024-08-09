@@ -35,8 +35,8 @@ In this scenario, the VTEX gateway is responsible for:
 An illustrative example is shown below to explain how a **calculation breakdown** for split is performed:
 
 1. The registered commission is:
-   a. 16% for the Marketplace when buying the product from sellerX.
-   b. 20% for the Marketplace when buying products from sellerY.
+   a. 16% for the marketplace when buying the product from seller X.
+   b. 20% for the marketplace when buying products from seller Y.
 2. The cart is made up of products from sellerX, sellerY, and the Marketplace itself.
 3. An Order with the value of 199.62 is registered. See below:
 
