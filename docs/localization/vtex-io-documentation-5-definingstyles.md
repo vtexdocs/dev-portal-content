@@ -1,13 +1,13 @@
 ---
-title: 5. Defining styles
-slug: vtex-io-documentation-5-definingstyles
+title: "5. Defining styles"
+slug: "vtex-io-documentation-5-definingstyles"
 hidden: false
-createdAt: 2020-08-11T07:03:18.383Z
-updatedAt: 2024-07-24T13:32:33.320Z
-category: Storefront Development
-excerpt: Learn how to set specific styles for your store components to enhance your store's user experience.
+createdAt: "2020-08-11T07:03:18.383Z"
+updatedAt: "2024-07-24T13:32:33.320Z"
+category: "Storefront Development"
+excerpt: "Learn how to set specific styles for your store components to enhance your store's user experience."
 seeAlso:
-  - /docs/guides/vtex-io-documentation-6-buildingyourownstoretheme
+  - "/docs/guides/vtex-io-documentation-6-buildingyourownstoretheme"
 ---
 
 Your website’s style is fundamental to building your store’s identity.
@@ -16,8 +16,8 @@ Once you understand what blocks and templates are and how they render interface 
 
 The Store Theme allows you to:
 
-* Set a default style for all your store components.
-* Set a specific style for a store component type or a single component from all available in your store.
+- Set a default style for all your store components.
+- Set a specific style for a store component type or a single component from all available in your store.
 
 ## Setting a default style for all store components
 
