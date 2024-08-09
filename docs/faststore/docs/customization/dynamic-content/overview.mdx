@@ -2,11 +2,12 @@
 title: 'Dynamic Content'
 ---
 
-Dynamic Content allows you to customize your home and landing pages with server-side data fetching using FastStore. This feature improves performance and SEO by dynamically displaying fetched data in store sections on these pages.
+Dynamic Content is a FastStore feature that allows you to customize your store home and landing pages using server-side data fetching.  This feature improves performance and SEO by dynamically displaying fetched data in store sections on these pages.
+
+In the following example, a page slug, `/my-landing-page`, is configured in the store code and included in the Headless CMS. 
+The landing page features two Hero sections: a [native one](https://developers.vtex.com/docs/guides/faststore/organisms-hero) displaying an image added from the Headless CMS, and a custom one with a fixed image sourced directly from an API defined in the store code.
 
 ![dynamic-content-headless-cms](https://vtexhelp.vtexassets.com/assets/docs/src/dynamic-content-feature___31dbd2fb1003d00bf492eb6479e3fe0c.gif)
-
-*In the example above, we've already set up the page slug, `/my-landing-page`, in the store code, and now we are including it in the Headless CMS. The landing page features two Hero sections: a [native one](https://developers.vtex.com/docs/guides/faststore/organisms-hero) displaying an image added from the Headless CMS, and a custom one with a fixed image sourced directly from an API defined in the store code.*
 
 > ℹ️ For other types of pages, such as collections (PLPs) and product pages (PDPs), server-side data fetching is already available via API Extensions. Refer to the [API Extension documentation](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) for more details on fetching data for these pages.
 
@@ -16,13 +17,13 @@ Dynamic Content allows you to customize your home and landing pages with server-
 
 ### Update the `@faststore/core` package
 
-To benefit from this feature,  your store `@faststore/core` package must have a version equal to or above  `v3.0.55`. Follow the steps below to update the package:
+Ensure your store uses `@faststore/core` v3.0.55 or greater. Follow the steps below to update the package:
 
-1. Update your store’s `@faststore/core` package to, for example, the `v3.0.55` by running the following command:
+1. Update your store’s `@faststore/core` package to the latest version by running the following command:
 
-    ```bash
-    yarn add @faststore/core@3.0.55
-    ```
+```bash
+yarn add @faststore/core@latest
+```
 
 2. Run `yarn dev` to sync the changes to your project.
 
@@ -32,9 +33,9 @@ To work with dynamic content, you need knowledge of [Section Override](https://d
 
 </Steps>
 
-## Next steps
+## Implementing Dynamic Content
 
-To use the Dynamic Content feature in your home and landing pages, refer to the following guides:
+To use the Dynamic Content feature in your home and landing pages, follow these steps:
 
-- [Setting up your store code for Dynamic Content](https://developers.vtex.com/docs/guides/faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content): Request Fetch API or any HTTP library to fetch the data directly ([Axios](https://axios-http.com/docs/intro), fetch, etc). 
-- [Consuming Dynamic Content within sections](https://developers.vtex.com/docs/guides/faststore/dynamic-content-consuming-the-dynamic-content-in-custom-sections): Fetch the data using the existing API Extension feature.
+- [Step 1 - Setting up your store code for Dynamic Content](https://developers.vtex.com/docs/guides/faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content): Request Fetch API or any HTTP library to fetch the data directly ([Axios](https://axios-http.com/docs/intro), fetch, etc). 
+- [Step 2 - Handling Dynamic Content within custom sections](https://developers.vtex.com/docs/guides/faststore/dynamic-content-step-2-handling-the-dynamic-content-in-custom-sections): Fetch the data using the existing API Extension feature.

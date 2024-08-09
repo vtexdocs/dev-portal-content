@@ -3,7 +3,7 @@ title: "Feed v3"
 slug: "orders-feed"
 hidden: false
 createdAt: "2021-03-29t19:21:28.241z"
-updatedAt: "2024-06-18T12:13:22.990Z"
+updatedAt: "2024-07-31T12:13:22.990Z"
 ---
 
 The [order feed](https://developers.vtex.com/docs/guides/orders-overview#feed-v3) is a list of order updates. This means that whenever an order is updated, the event is included as a new entry in the feed. Updates can include status changes, items added or removed by the store, order delivered, and others.
@@ -169,7 +169,10 @@ The following is an example of a complete `filter` object with a more complex an
 You should validate the events of the configured expression before implementing the filter in your integration. There are three useful tests:
 
 - [The API endpoint for JSONata Testing](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata).
-- [JSONata Exerciser](https://try.jsonata.org/) which tests the expression against a real JSON file. To run this test, copy the order to JSONata Exerciser and simulate different expressions and requests. Use an order extracted from the [Get Order API endpoint](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-).
+- [JSONata Exerciser](https://try.jsonata.org/) which tests the expression against a real JSON file. To run this test, copy the order to JSONata Exerciser and simulate different expressions and requests. Use an order extracted from the [Get order](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-) endpoint from the [Orders API - PII data architecture](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#overview).
+
+  >⚠️ Be aware that the [Get order](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-) endpoint from **Orders API - PII data architecture** differs from the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint from **Orders API**.
+
 - Configure a test feed or hook with a test [appKey](https://developers.vtex.com/docs/guides/getting-started-authentication) and check whether the events behave as expected.
 
 ##### `disableSingleFire`
