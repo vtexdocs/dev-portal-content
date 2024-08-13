@@ -24,9 +24,9 @@ The `messages` builder uses a folder named `messages` located in the app’s roo
 
 - `{language-code}.json`: JSON file of the language containing the message IDs with their corresponding strings in the language. See below examples of file names:
 
-    - `en.json`: JSON file for English messages.
-    - `es.json`: JSON file for Spanish messages.
-    - `pt.json`: JSON file for Portuguese messages.
+  - `en.json`: JSON file for English messages.
+  - `es.json`: JSON file for Spanish messages.
+  - `pt.json`: JSON file for Portuguese messages.
 
 ## Usage
 
