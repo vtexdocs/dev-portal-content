@@ -24,16 +24,16 @@ The `gql` helper serves as a function to define GraphQL operations such as queri
     import { gql } from '@faststore/graphql-utils'
 
     export const fragment = gql`
-    fragment ClientProduct on Query {
-        product(locator: $locator) {
-        id: productID
-        breadcrumbList {
-            itemListElement {
-            item
-            name
-            position
+        fragment ClientProduct on Query {
+            product(locator: $locator) {
+            id: productID
+            breadcrumbList {
+                itemListElement {
+                    item
+                    name
+                    position
+                }
             }
-        }
         }
     }
     `
@@ -45,18 +45,18 @@ Import the `gql` helper from `@faststore/core/api`and call it as a function - wi
     import { gql } from '@faststore/core/api'
 
     export const fragment = gql(`
-    fragment ClientProduct on Query {
-        product(locator: $locator) {
-        id: productID
-        breadcrumbList {
-            itemListElement {
-            item
-            name
-            position
+        fragment ClientProduct on Query {
+            product(locator: $locator) {
+                id: productID
+                breadcrumbList {
+                    itemListElement {
+                        item
+                        name
+                        position
+                    }
+                }
             }
         }
-        }
-    }
     `)
     ```
 
