@@ -185,6 +185,171 @@ Check the available Headless CMS schema that you can customize for this componen
 
 ---
 
+---
+
+### CrossSellingShelf
+
+| Type                              | Availability                                                                                                                     |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Overridable components            | <ul className="doc-list"><li>[`ProductShelf`](https://developers.vtex.com/docs/guides/faststore/organisms-product-shelf)</li><li>`__experimentalCarousel`</li><li>`__experimentalProductCard`</li></ul> |
+| Headless CMS: props customization | <ul className="doc-list"><li> `title`</li><li> `kind`</li></ul>                                                           |
+
+<details>
+<summary><b>CrossSellingShelf - Available schema</b></summary> 
+
+Check the available Headless CMS schema that you can customize for this component:
+
+```json
+{
+    "name": "NewSectionName",
+    "requiredScopes": ["pdp", "custom"],
+    "schema": {
+      "title": "Add the Section name",
+      "description": "Short description for the the section's purpose",
+      "type": "object",
+      "required": ["title", "numberOfItems", "kind"],
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "numberOfItems": {
+          "title": "Total number of items",
+          "type": "integer",
+          "default": 5,
+          "description": "Total number of items. The quantity may be smaller if the query returns fewer products."
+        },
+        "itemsPerPage": {
+          "type": "integer",
+          "title": "Number of items per page",
+          "default": 5,
+          "description": "Number of items to display per page in carousel"
+        },
+        "kind": {
+          "title": "Kind",
+          "description": "Change cross selling types",
+          "default": "buy",
+          "enum": ["buy", "view"],
+          "enumNames": ["Who bought also bought", "Who saw also saw"]
+        },
+        "taxesConfiguration": {
+          "title": "Taxes Configuration",
+          "type": "object",
+          "properties": {
+            "usePriceWithTaxes": {
+              "title": "Should use taxes to calculate the price?",
+              "type": "boolean",
+              "default": false
+            },
+            "taxesLabel": {
+              "title": "Tax label to be displayed",
+              "type": "string",
+              "default": "Tax included"
+            }
+          }
+        }
+      }
+    }
+},
+```
+
+</details>
+
+---
+
+### Empty State
+
+| Type                              | Availability                                                                                                                                                                   |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Overridable components            | [`EmptyState`](https://developers.vtex.com/docs/guides/faststore/organisms-empty-state)                                                                                       |
+| Headless CMS: props customization | <ul className="doc-list"><li> `title`</li><li> `titleIcon`</li><li> `variant`</li><li> `bkgColor`</li></ul>                                                                    |
+
+
+<details>
+<summary><b>Empty State - Available schema</b></summary> 
+
+Check the available Headless CMS schema that you can customize for this component:
+
+```json
+{
+    "name": "NewSectionName",
+    "schema": {
+      "title": "Add the Section name",
+      "type": "object",
+      "description": "Short description for the the section's purpose",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "titleIcon": {
+          "title": "Title Icon",
+          "type": "object",
+          "properties": {
+            "icon": {
+              "title": "Icon",
+              "type": "string",
+              "enumNames": ["CircleWavy Warning"],
+              "enum": ["CircleWavyWarning"]
+            },
+            "alt": {
+              "title": "Alternative Label",
+              "type": "string"
+            }
+          }
+        },
+        "subtitle": {
+          "title": "Subtitle",
+          "type": "string"
+        },
+        "showLoader": {
+          "type": "boolean",
+          "title": "Show loader?",
+          "default": false
+        },
+        "errorState": {
+          "title": "Error state used for shown errorId and fromUrl properties in 500 and 404 pages",
+          "type": "object",
+          "properties": {
+            "errorId": {
+              "title": "errorId used in 500 and 404 pages",
+              "type": "object",
+              "properties": {
+                "show": {
+                  "type": "boolean",
+                  "title": "Show errorId in the end of message?"
+                },
+                "description": {
+                  "type": "string",
+                  "title": "Description shown before the errorId"
+                }
+              }
+            },
+            "fromUrl": {
+              "title": "fromUrl used in 500 and 404 pages",
+              "type": "object",
+              "properties": {
+                "show": {
+                  "type": "boolean",
+                  "title": "Show fromUrl in the end of message?"
+                },
+                "description": {
+                  "type": "string",
+                  "title": "Description shown before the fromUrl"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
+```
+
+</details>
+
+---
+
 ### Hero
 
 | Type                              | Availability                                                                                                                                                                                             |
@@ -259,7 +424,7 @@ Check the available Headless CMS schema that you can customize for this componen
 
 | Type | Availability |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Overridable components | <ul className="doc-list"><li> [`Navbar`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar)</li> <li> [`NavbarLinks`](https://developers.vtex.com/docs/guides/faststore/molecules-navbar-links)</li> <li> [`NavbarLinksList`](https://developers.vtex.com/docs/guides/faststore/molecules-navbar-links#navbar-links-list)</li> <li> [`NavbarSlider`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider)</li> <li> [`NavbarSliderHeader`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider#navbar-slider-header)</li> <li> [`NavbarSliderContent`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider#navbar-slider-content)</li> <li> [`NavbarSliderFooter`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider#navbar-slider-content)</li> <li> [`NavbarHeader`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar#navbar-header)</li> <li> [`NavbarRow`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar#navbar-row)</li> <li> [`NavbarButtons`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar#navbar-buttons)</li> <li>[`IconButton`](https://developers.vtex.com/docs/guides/faststore/molecules-icon-button)</li></ul> |
+| Overridable components | <ul className="doc-list"><li> [`Navbar`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar)</li> <li> [`NavbarLinks`](https://developers.vtex.com/docs/guides/faststore/molecules-navbar-links)</li> <li> [`NavbarLinksList`](https://developers.vtex.com/docs/guides/faststore/molecules-navbar-links#navbar-links-list)</li> <li> [`NavbarSlider`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider)</li> <li> [`NavbarSliderHeader`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider#navbar-slider-header)</li> <li> [`NavbarSliderContent`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider#navbar-slider-content)</li> <li> [`NavbarSliderFooter`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider#navbar-slider-content)</li> <li> [`NavbarHeader`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar#navbar-header)</li> <li> [`NavbarRow`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar#navbar-row)</li> <li> [`NavbarButtons`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar#navbar-buttons)</li> <li>[`IconButton`](https://developers.vtex.com/docs/guides/faststore/molecules-icon-button)</li><li>`_experimentalButtonSignIn`: Overriding this prop will prevent the default redirect to the `/account` page.</li></ul> |
 | Headless CMS: props customization | <ul className="doc-list"><li>NavbarRow: `Logo`</li><li>NavbarButtons: `SignIn Button Icon`, `Cart Icon`</li><li>Navigation: `Regionalization Icon`, `Menu Icon`, `Home Icon`</li></ul> |
 
 <details>
@@ -491,6 +656,7 @@ Check the available Headless CMS schema that you can customize for this componen
 
 <details>
 <summary><b>Newsletter - Available schema</b></summary> 
+
 Check the available Headless CMS schema that you can customize for this component:
 
 ```json
@@ -784,121 +950,6 @@ Check the available Headless CMS schema that you can customize for this componen
 
 ---
 
-### Product Shelf
-
-| Type                              | Availability                                                                                                                                                         |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Overridable components            | <ul className="doc-list"><li> [`ProductShelf`](https://developers.vtex.com/docs/guides/faststore/organisms-product-shelf)</li><li> `__experimentalCarousel`</li><li> `__experimentalProductCard`</li></ul> |
-| Headless CMS: props customization | <ul className="doc-list"><li>Product Card Configuration: `showDiscountBadge`, `bordered`</li></ul>                                                                   |
-
-<details>
-<summary><b>Product Shelf - Available schema</b></summary> 
-
-Check the available Headless CMS schema that you can customize for this component:
-
-```json
-{
-    "name": "NewSectionName",
-    "requiredScopes": [],
-    "schema": {
-      "title": "Add the Section name",
-      "description": "Short description for the the section's purpose",
-      "type": "object",
-      "required": ["title", "numberOfItems", "after", "sort"],
-      "properties": {
-        "title": { "type": "string", "title": "Title" },
-        "numberOfItems": {
-          "type": "integer",
-          "title": "Total number of items",
-          "default": 5,
-          "description": "Total number of items. The quantity may be smaller if the query returns fewer products."
-        },
-        "itemsPerPage": {
-          "type": "integer",
-          "title": "Number of items per page",
-          "default": 5,
-          "description": "Number of items to display per page in carousel"
-        },
-        "after": {
-          "type": "integer",
-          "title": "After",
-          "default": "0",
-          "description": "Initial pagination item"
-        },
-        "sort": {
-          "title": "Sort",
-          "description": "Items order",
-          "default": "score_desc",
-          "enum": [
-            "discount_desc",
-            "name_asc",
-            "name_desc",
-            "orders_desc",
-            "price_asc",
-            "price_desc",
-            "release_desc",
-            "score_desc"
-          ],
-          "enumNames": [
-            "Discount: higher to lower",
-            "Name: A-Z",
-            "Name: Z-A",
-            "Orders: higher to lower",
-            "Price: lower to higher",
-            "Price: higher to lower",
-            "Release date: newer to older",
-            "Relevance: higher to lower"
-          ]
-        },
-        "term": { "type": "string", "title": "Search term" },
-        "selectedFacets": {
-          "title": "Facets",
-          "type": "array",
-          "items": {
-            "title": "Facet",
-            "type": "object",
-            "required": ["key", "value"],
-            "properties": {
-              "key": {
-                "title": "Key",
-                "description": "For collections use: productClusterIds",
-                "type": "string",
-                "default": "productClusterIds"
-              },
-              "value": {
-                "title": "Value",
-                "description": "E.g. For 'Most Wanted' collection, use: 140. To consult your collection ids go to Collections page",
-                "type": "string",
-                "default": "140"
-              }
-            }
-          }
-        },
-        "productCardConfiguration": {
-          "title": "Product Card Configuration",
-          "type": "object",
-          "properties": {
-            "showDiscountBadge": {
-              "title": "Show discount badge?",
-              "type": "boolean",
-              "default": true
-            },
-            "bordered": {
-              "title": "Cards should be bordered?",
-              "type": "boolean",
-              "default": true
-            }
-          }
-        }
-      }
-    }
-  }
-```
-
-</details>
-
----
-
 ### Product Gallery
 
 | Type                              | Availability                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -1104,6 +1155,121 @@ Check the available Headless CMS schema that you can customize for this componen
                   "default": "RocketLaunch"
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+```
+
+</details>
+
+---
+
+### Product Shelf
+
+| Type                              | Availability                                                                                                                                                         |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Overridable components            | <ul className="doc-list"><li> [`ProductShelf`](https://developers.vtex.com/docs/guides/faststore/organisms-product-shelf)</li><li> `__experimentalCarousel`</li><li> `__experimentalProductCard`</li></ul> |
+| Headless CMS: props customization | <ul className="doc-list"><li>Product Card Configuration: `showDiscountBadge`, `bordered`</li></ul>                                                                   |
+
+<details>
+<summary><b>Product Shelf - Available schema</b></summary> 
+
+Check the available Headless CMS schema that you can customize for this component:
+
+```json
+{
+    "name": "NewSectionName",
+    "requiredScopes": [],
+    "schema": {
+      "title": "Add the Section name",
+      "description": "Short description for the the section's purpose",
+      "type": "object",
+      "required": ["title", "numberOfItems", "after", "sort"],
+      "properties": {
+        "title": { "type": "string", "title": "Title" },
+        "numberOfItems": {
+          "type": "integer",
+          "title": "Total number of items",
+          "default": 5,
+          "description": "Total number of items. The quantity may be smaller if the query returns fewer products."
+        },
+        "itemsPerPage": {
+          "type": "integer",
+          "title": "Number of items per page",
+          "default": 5,
+          "description": "Number of items to display per page in carousel"
+        },
+        "after": {
+          "type": "integer",
+          "title": "After",
+          "default": "0",
+          "description": "Initial pagination item"
+        },
+        "sort": {
+          "title": "Sort",
+          "description": "Items order",
+          "default": "score_desc",
+          "enum": [
+            "discount_desc",
+            "name_asc",
+            "name_desc",
+            "orders_desc",
+            "price_asc",
+            "price_desc",
+            "release_desc",
+            "score_desc"
+          ],
+          "enumNames": [
+            "Discount: higher to lower",
+            "Name: A-Z",
+            "Name: Z-A",
+            "Orders: higher to lower",
+            "Price: lower to higher",
+            "Price: higher to lower",
+            "Release date: newer to older",
+            "Relevance: higher to lower"
+          ]
+        },
+        "term": { "type": "string", "title": "Search term" },
+        "selectedFacets": {
+          "title": "Facets",
+          "type": "array",
+          "items": {
+            "title": "Facet",
+            "type": "object",
+            "required": ["key", "value"],
+            "properties": {
+              "key": {
+                "title": "Key",
+                "description": "For collections use: productClusterIds",
+                "type": "string",
+                "default": "productClusterIds"
+              },
+              "value": {
+                "title": "Value",
+                "description": "E.g. For 'Most Wanted' collection, use: 140. To consult your collection ids go to Collections page",
+                "type": "string",
+                "default": "140"
+              }
+            }
+          }
+        },
+        "productCardConfiguration": {
+          "title": "Product Card Configuration",
+          "type": "object",
+          "properties": {
+            "showDiscountBadge": {
+              "title": "Show discount badge?",
+              "type": "boolean",
+              "default": true
+            },
+            "bordered": {
+              "title": "Cards should be bordered?",
+              "type": "boolean",
+              "default": true
             }
           }
         }
