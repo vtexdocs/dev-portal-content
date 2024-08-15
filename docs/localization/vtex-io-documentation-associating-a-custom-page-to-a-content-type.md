@@ -25,7 +25,7 @@ To associate a custom landing page with a content type, note the following when 
 
 - Any URL parameter named `{entity}_id` is recognized as a content type. For example, `finder_id` creates the `${finder}` content type.
 
-  	>⚠️ For the URL definition, adding the identifier of the content type is not enough. You must also attach `_id` in the sequence. For example, if you create a URL such as `/foo/:bar`, the content will be tied to that URL, since there is no parameter capable of being interpreted as a content type. Thus, if you access *Storefront > Site Editor* and update the content for `/foo/skywalker`, the content related to any page matching `/foo/:bar` will be updated as well.
+  >⚠️ For the URL definition, adding the identifier of the content type is not enough. You must also attach `_id` in the sequence. For example, if you create a URL such as `/foo/:bar`, the content will be tied to that URL, since there is no parameter capable of being interpreted as a content type. Thus, if you access *Storefront > Site Editor* and update the content for `/foo/skywalker`, the content related to any page matching `/foo/:bar` will be updated as well.
 
 - The page URL can have only one parameter that designates a content type.
 - The page URL can have only one parameter ending with `_id`.
