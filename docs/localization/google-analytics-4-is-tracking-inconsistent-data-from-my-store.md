@@ -12,7 +12,6 @@ tags:
 
 **Tags/Keywords:** GA4 | performance | analytics
 
-
 After configuring [Google Analytics 4 (GA4)](https://developers.vtex.com/docs/guides/google-tag-manager), your store may experience issues with inconsistent data tracking.
 
 Due to General Data Protection Regulation (GDPR) restrictions, some companies are updating their operating systems, browsers, and devices to block events triggered during the shoppers' navigation, which is the main reason behind this problem.
@@ -31,7 +30,7 @@ To configure server-side tagging, follow Google’s [Server Side Tag Manager](ht
 
 ### Step 2 - Creating a VTEX IO Pixel app
 
-Follow the instructions in the [Pixel App](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps) guide to develop yours. 
+Follow the instructions in the [Pixel App](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps) guide to develop yours.
 
 After creating the Pixel App, add the GTM script passing the correct container code and the URL of the server (which holds the server side tag manager configuration) that would trigger the events for Google.
 
