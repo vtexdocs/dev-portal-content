@@ -4,7 +4,7 @@ slug: "2024-08-19-faststore-core-new-version"
 type: "new"
 excerpt: "Upgrade your `@faststore/core` package version to leverage enhanced API extensions, customizable error pages, and support for Next.js 13."
 createdAt: "2024-05-23T10:30:00.000Z"
-updateAt: "2024-06-26T10:30:00.000Z"
+updateAt: "2024-08-19T10:30:00.000Z"
 ---
 
 FastStore v2 users can now update the `@faststore/core` package version and benefit from enhanced API extensions, streamlined error page customization in the Headless CMS, and support for Next.js 13.
