@@ -3,7 +3,7 @@ title: "Migrating your storefront from Legacy CMS Portal to Store Framework"
 slug: "vtex-io-documentation-migrating-storefront-from-legacy-to-io"
 hidden: false
 createdAt: "2022-10-25T18:41:04.323Z"
-updatedAt: "2024-08-09T15:42:08.321Z"
+updatedAt: "2024-08-20T15:42:08.321Z"
 ---
 
 VTEX provides different storefront solutions for you to choose from based on your operation’s needs: [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) and [FastStore](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore). However, there are still stores running the [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj).
@@ -56,6 +56,7 @@ Once you have developed and tested your new storefront and everything is ready i
 
 When opening the ticket, keep in mind that you must:
 
+- Open the ticket at least 3 days before the go-live date.
 - Request VTEX internal DNS pointing change only after you have promoted your production workspace to master.
 - Make it clear that you wish to go live in the ticket title.
 - Indicate a time from 9 a.m. to 5 p.m. (UTC-3) for the change to happen.
