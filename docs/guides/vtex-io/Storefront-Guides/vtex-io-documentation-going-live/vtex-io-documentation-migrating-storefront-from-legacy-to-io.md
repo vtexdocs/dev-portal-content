@@ -57,6 +57,6 @@ Once you have developed and tested your new storefront and everything is ready i
 When opening the ticket, keep in mind that you must:
 
 - Request VTEX internal DNS pointing change only after you have promoted your production workspace to master.
-- Make it clear that you wish to go live in the ticket title.
+- Make it clear that you wish to go live in the ticket title with three days before the Go Live.
 - Indicate a time from 9 a.m. to 5 p.m. (UTC-3) for the change to happen.
 - Indicate whether your store has any [trade policy conditional rules](https://help.vtex.com/en/tutorial/criar-uma-politica-comercial--563tbcL0TYKEKeOY4IAgAE).
