@@ -55,17 +55,14 @@ To solve this problem, follow these steps:
      The expected output is a path, which is the location where globally installed Yarn packages are stored on your computer. It might follow the pattern: `{UserProfileDirectory}\AppData\Local\Yarn\bin`, where `{UserProfileDirectory}` refers to the directory for your user profile, typically found at `C:\Users\{YourUserName}` on Windows systems.
 
      In the example below, the output is `C:\Users\Barbara Celi\AppData\Local\Yarn\bin`
-     
      ![windows-yarn-global-bin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/windows-yarn-global-bin.png)
 
   2. Copy the path that the terminal returned after running the `yarn global bin` command.
   3. In the Windows search bar, type **Edit the system environment variables**.
   4. Click **Open**.
-   
       ![edit-variables](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/windows-search-en.png)
 
   5. In the **System Properties** settings, go to the **Advanced** section and click **Environment Variables**.
-     
       ![system-properties](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/environment-variables-en.png)
 
   6. In the **Environment Variables** settings, double-click **Path**.
