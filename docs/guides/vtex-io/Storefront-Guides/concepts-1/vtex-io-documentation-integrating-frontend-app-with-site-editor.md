@@ -34,15 +34,15 @@ Follow the steps below to update your Store Theme dependencies with the name and
 
    ```js
    "dependencies": {
-      "{accountName}.{appName}": "{appVersion}",
-       "vtex.store": "2.x",
-       "vtex.store-header": "2.x",
-       "vtex.product-summary": "2.x",
-       "vtex.store-footer": "2.x",
-       "vtex.store-components": "3.x",
-       "vtex.styleguide": "9.x",
-       "vtex.slider": "0.x",
-       "vtex.carousel": "2.x",
+     "{accountName}.{appName}": "{appVersion}",
+     "vtex.store": "2.x",
+     "vtex.store-header": "2.x",
+     "vtex.product-summary": "2.x",
+     "vtex.store-footer": "2.x",
+     "vtex.store-components": "3.x",
+     "vtex.styleguide": "9.x",
+     "vtex.slider": "0.x",
+     "vtex.carousel": "2.x",
    ...
    }
    ```
@@ -53,7 +53,7 @@ Consider your frontend app has a component named `CustomComponent`, which is dec
 
 ```js frontend-app/store/interfaces.json
 {
- "custom-component": {
+  "custom-component": {
     "component": "CustomComponent"
   }
 }
@@ -63,9 +63,9 @@ To use this component on the store’s main page, for example, declare the `cust
 
 ```js store-theme/store/blocks/home/home.jsonc
 {
-"store.home": {
-   "blocks": ["custom-component"]
-}
+  "store.home": {
+    "blocks": ["custom-component"]
+  }
 }
 ```
 
