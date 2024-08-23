@@ -9,7 +9,7 @@ excerpt: "Learn how to use the VTEX IO Messages builder."
 
 The `messages` builder handles the internationalization (i18n) of strings in VTEX IO apps using [React](https://react.dev/). Instead of declaring static strings in frontend components, this builder allows you to use an ID for each message, which will be dynamically replaced by the corresponding string in the user's language.
 
-For details about creating apps that support multiple languages, see [7. Translating the component in the Storefront apps tutorial](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component).
+For details about creating apps that support multiple languages, see [7. Translating the component in the Storefront apps tutorial](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) and [Internationalization](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores).
 
 ## Folder structure
 
@@ -36,51 +36,55 @@ To develop an app using the `messages` builder, refer to the following steps:
 2. **Add the react i18n libraries**: Open a terminal in the `react` folder of your app and run the command `yarn add react-intl@3 && yarn add @types/react-intl@3 --dev`.
 3. **Configure the manifest**: Access the `manifest.json` file and add the `messages` builder to the builders list.
 
-```diff manifest.json
-{
-  ...
-  "builders": {
-  "react": "3.x",
-  "docs": "0.x",
-+ "messages": "1.x"
-  },
-  ...
-}
-```
+    ```diff manifest.json
+    {
+      ...
+      "builders": {
+      "react": "3.x",
+      "docs": "0.x",
+    + "messages": "1.x"
+      },
+      ...
+    }
+    ```
 
-4. **Add the message identifiers:** Use the string identifiers in your React code. In the example below, `"store/my-app.hello"` is a string identifier for the `<Formatted Message>` component.
+4. **Add the message identifiers:** Use the string identifiers in your React code. In the example below, `"store/my-app.hello"` is a string identifier for the `<Formatted Message>` component. Keys starting with `store/` are used in the storefront. Keys starting with `admin/` are used in the Admin UI. If a string identifier is used in the code and does not have a correspondent key in the message JSON files, it will fallback to the [automatic translation service](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores#automatic-translations).
 
-```typescript
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
+    ```typescript
+    import React from 'react'
+    import { FormattedMessage } from 'react-intl'
 
-const HelloWorld = () => {
-  return (
-   <div>
-     <FormattedMessage id="store/my-app.hello"/>
-   </div>
-  )
-}
+    const HelloWorld = () => {
+      return (
+      <div>
+        <FormattedMessage id="store/my-app.hello"/>
+      </div>
+      )
+    }
 
-export default HelloWorld
-```
+    export default HelloWorld
+    ```
 
-5. **Add the messages files with the strings:** Create a separate JSON file for each language in the `messages` folder. In each file, define an object where the keys are the message IDs and the values are  the corresponding strings in the target language. See the examples below for English, Spanish, and Portuguese.
+    > ⚠️ Use meaningful and descriptive keys for all strings. Maintain a consistent naming convention that reflects the context and location of the text. This practice helps developers and translators to find the keys, understand their meaning and organize the strings.
 
-```json en.json
-{
-  "store/my-app.hello": "Hello World!"
-}
-```
+5. **Add the messages files with the strings:** Create a separate JSON file for each language in the `messages` folder. In each file, define an object where the keys are the message IDs and the values are  the corresponding strings in the target language. Each key must be present in every JSON file. See the examples below for English, Spanish, and Portuguese.
 
-```json es.json
-{
-  "store/my-app.hello": "Hola Mundo!"
-}
-```
+    ```json en.json
+    {
+      "store/my-app.hello": "Hello World!"
+    }
+    ```
 
-```json pt.json
-{
-  "store/my-app.hello": "Olá Mundo!"
-}
-```
+    ```json es.json
+    {
+      "store/my-app.hello": "Hola Mundo!"
+    }
+    ```
+
+    ```json pt.json
+    {
+      "store/my-app.hello": "Olá Mundo!"
+    }
+    ```
+
+    > ℹ️ We recommend inserting the keys to the JSON files in alphabetical order. This helps developers and translators to locate and work with the keys.
