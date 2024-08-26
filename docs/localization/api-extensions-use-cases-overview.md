@@ -1,15 +1,16 @@
 ---
-title: API extensions use cases
-slug: api-extensions-use-cases-overview
+title: "API extensions use cases"
+slug: "api-extensions-use-cases-overview"
 hidden: false
-createdAt: 2024-05-08T00:00:15.623Z
+createdAt: "2024-05-08T00:00:15.623Z"
 updatedAt: ""
 ---
+
 
 This section provides an introduction, implementation instructions, and storefront results, showing how to extend FastStore APIs and integrate them with external ones. These examples are designed to help you understand how to use this feature.
 
 | Use case                                                                                                                                                                                     | Description                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| -------- | ----------- |
 | [Adding a contact form to the landing page](https://developers.vtex.com/docs/guides/faststore/api-extensions-use-cases-adding-a-contact-form-to-a-landing-page)                              | Allows shoppers to contact your store through a form.                                                          |
 | [Adding available installment information on the PDP](https://developers.vtex.com/docs/guides/faststore/api-extensions-use-cases-adding-installment-information-in-the-product-details-page) | Displays the available installment options for a product on the Product Details Page (PDP). |
 
