@@ -11,7 +11,7 @@ This section provides an introduction, implementation instructions, and storefro
 
 | Use case | Description |
 | -------- | ----------- |
-| [Adding a contact form to the landing page](https://developers.vtex.com/docs/guides/faststore/api-extensions-use-cases-adding-a-contact-form-to-a-landing-page) | Allows shoppers to contact your store through a form.                                                          |
+| [Adding a contact form to the landing page](https://developers.vtex.com/docs/guides/faststore/api-extensions-use-cases-adding-a-contact-form-to-a-landing-page) | Allows shoppers to contact your store through a form. |
 | [Adding available installment information on the PDP](https://developers.vtex.com/docs/guides/faststore/api-extensions-use-cases-adding-installment-information-in-the-product-details-page) | Displays the available installment options for a product on the Product Details Page (PDP). |
 
 > ℹ️ For detailed code examples, access the [playground.store](https://github.com/vtex-sites/playground.store) repository, which provides in-depth details on each use case.
