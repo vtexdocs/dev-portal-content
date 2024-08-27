@@ -126,7 +126,6 @@ Configure the accounts of sellers who have already accepted the invitation to jo
 
 `GET` [Get Seller data by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers/-sellerId-)
 
-
 ### Sales Channel Mapping  
 
 Map your sales channels with a seller affiliate.  
