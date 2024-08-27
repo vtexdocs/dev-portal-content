@@ -8,7 +8,7 @@ updatedAt: "2022-06-17T14:46:06.405Z"
 ---
 
 >❗ The Offer Management module has been discontinued and is no longer supported. The module has been replaced by Offer Status.
-To learn more, visit the [announcement](https://help.vtex.com/pt/announcements/modulo-status-dos-anuncios-para-integracoes-com-marketplaces-vtex--1EeGgit1Brq3mmm8qhv2m3).
+To learn more, visit the [announcement](https://help.vtex.com/en/announcements/modulo-status-dos-anuncios-para-integracoes-com-marketplaces-vtex--1EeGgit1Brq3mmm8qhv2m3).
 
 Offer Management is the VTEX feature that gives sellers more visibility around a product’s sending process to external channels, like marketplaces. Offer Management does not reflect what happens to offers after they’re sent to channels and start being sold. Instead, it helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing that they can be sent to the marketplace and synced correctly.
 
