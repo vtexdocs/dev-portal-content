@@ -1,8 +1,8 @@
 ---
-title: API extensions use cases
-slug: api-extensions-use-cases-overview
+title: "API extensions use cases"
+slug: "api-extensions-use-cases-overview"
 hidden: false
-createdAt: 2024-05-08T00:00:15.623Z
+createdAt: "2024-05-08T00:00:15.623Z"
 updatedAt: ""
 ---
 
