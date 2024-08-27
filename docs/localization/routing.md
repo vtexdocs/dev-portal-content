@@ -31,7 +31,7 @@ Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vt
 
 ### Check the builders
 
-Check if the builders are properly installed in your Store Theme. To use builders, you must have at least the `vtex.builder-hub@0.293.4` version installed in your account. Also, you need to specify them in the app’s `manifest.json` file. Learn more at [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders). 
+Check if the builders are properly installed in your Store Theme. To use builders, you must have at least the `vtex.builder-hub@0.293.4` version installed in your account. Also, you need to specify them in the app’s `manifest.json` file. Learn more at [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
 ### Have the Rewriter app
 
@@ -55,7 +55,7 @@ linkTitle="See more"
 <WhatsNextCard
 title="Enabling 404 pages"
 description="Learn how to enable and configure 404 error pages for better user experience."
-linkTo=https://developers.vtex.com/docs/guides/vtex-io-documentation-enabling-404-pages"
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-enabling-404-pages"
 linkTitle="See more"
 />
 
