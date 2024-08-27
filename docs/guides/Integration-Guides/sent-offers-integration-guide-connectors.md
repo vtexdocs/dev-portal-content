@@ -29,7 +29,7 @@ The diagram below shows the Offer Management’s interface, which the vendors ac
 
 ![offer\_management\_ui](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/sent-offers-integration-guide-connectors-0.png)
 
-## 1.  Create Channel
+## 1. Create Channel
 
 > **API Reference:** [Create Channel](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/channels)
 
@@ -39,7 +39,7 @@ The [Create Channel API](https://developers.vtex.com/docs/api-reference/marketpl
 
 >⚠️ Note that creating the channel through API is a sensitive step, and does not include public endpoints for retrieving (`GET`), updating (`PUT`), or deleting (`DELETE`) the channel created. If you wish to make any changes of this sort, you can request it through a [support](https://help.vtex.com/support?/cultureInfo=en-us) ticket with VTEX.
 
-## 2.  Feed: establishing the connection
+## 2. Feed: establishing the connection
 
 > **API Reference:** [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#post-/api/sent-offers/feeds)
 
