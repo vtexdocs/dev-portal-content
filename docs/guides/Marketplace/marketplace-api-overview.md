@@ -126,36 +126,6 @@ Configure the accounts of sellers who have already accepted the invitation to jo
 
 `GET` [Get Seller data by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers/-sellerId-)
 
-### Offer Management
-
-Connect to Offer Management and become an available channel for sellers to track their offers.
-
-`POST` [Create Channel](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/channels)
-
-`POST` [Activate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds)
-
-`GET` [List Feeds](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds)
-
-`PUT` [Update Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#put-/api/sent-offers/feeds/-feedId-)
-
-`GET` [Get Feed by feedId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds/-feedId-)
-
-`DELETE` [Deactivate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#delete-/api/sent-offers/feeds/-feedId-)
-
-`POST` [Open Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions)
-
-`GET` [Get Interaction Data by interactionId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-)
-
-`POST` [Close Interaction](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close)
-
-`POST` [Create Log](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#post-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs)
-
-`GET` [Get Log Data by logId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs/-logId-)
-
-`GET` [Search Interactions and their Logs](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/search/interactions)
-
-`GET` [Get Error Code data by errorCodeId](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management/#get-/api/sent-offers/error-codes/-errorCodeId-)
-
 ### Sales Channel Mapping  
 
 Map your sales channels with a seller affiliate.  
