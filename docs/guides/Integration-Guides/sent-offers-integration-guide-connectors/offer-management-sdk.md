@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-07-06T14:04:18.259Z"
 updatedAt: "2022-07-06T14:38:05.752Z"
 ---
->❗ The Offer Management module has been discontinued and is no longer supported. The module has been replaced by [Offer Status](https://help.vtex.com/en/tutorial/status-de-anuncios-beta--2OE87wU26F7lApl99OdwvJ).
+>❗ The Offer Management module has been discontinued and is no longer supported. The module has been replaced by Offer Status.
 To learn more, visit the [announcement](https://help.vtex.com/pt/announcements/modulo-status-dos-anuncios-para-integracoes-com-marketplaces-vtex--1EeGgit1Brq3mmm8qhv2m3).
 
 The [Offer Management](https://help.vtex.com/en/tutorial/offer-management--7MRb9S78aBdZjFGpbuffpE) allows sellers to track the sending and syncing of their offers in marketplaces integrated with their store. The feature helps sellers identify updates and solve errors in their offers during the sending process, guaranteeing they were sent to the marketplace and synced correctly.  In VTEX, an offer is an SKU from a seller that has been sent to a marketplace and whose price and inventory information have been configured.
