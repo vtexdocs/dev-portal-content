@@ -47,13 +47,13 @@ In this example, the `Home` Content Type stores content for your home page and h
 When [creating custom sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections), you can restrict their usage to specific Content Types using these default scopes:
 
 | `scopes` name | Content type |
-| ------------- | -------------------- |
-| `custom`| Landing Page|
-| `global`| Global Sections|
-| `landing`| Landing Page|
-| `pdp`| Product Details Page|
-| `plp`| Product Listing Page|
-| `search`| Search Page|
+| ------------- | ------------- |
+|`custom`|Landing Page|
+|`global`|Global Sections|
+|`landing`|Landing Page|
+|`pdp`|Product Details Page|
+|`plp`|Product Listing Page|
+|`search`|Search Page|
 
 ## `requiredScopes`
 
@@ -89,10 +89,10 @@ When [creating custom sections](https://developers.vtex.com/docs/guides/faststor
 
 | `requiredScopes` name | Section name |
 | --------------------- | ------------ |
-| `custom`| `CrossSelingShelf`|
-| `pdp`| `CrossSelingShelf`, `Breadcrumb`, and `ProductDetails`|
-| `plp`| `Breadcrumb` and `ProductGallery`|
-| `search`| `ProductGallery`|
+|`custom`|`CrossSelingShelf`|
+|`pdp`|`CrossSelingShelf`, `Breadcrumb`, and `ProductDetails`|
+|`plp`|`Breadcrumb` and `ProductGallery`|
+|`search`|`ProductGallery`|
 
 ## Using `scopes` and `requiredScopes`
 
