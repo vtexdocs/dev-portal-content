@@ -1,9 +1,9 @@
 ---
-title: Managing content with 'scopes' and 'requiredScopes'
-slug: managing-content-with-scopes-and-requiredscopes
+title: "Managing content with 'scopes' and 'requiredScopes'"
+slug: "anaging-content-with-scopes-and-requiredscopes"
 hidden: false
-createdAt: 2024-07-29T14:00:15.623Z
-updatedAt: 2024-07-29T15:12:15.623Z
+createdAt: "2024-07-29T14:00:15.623Z"
+updatedAt: "2024-07-29T15:12:15.623Z"
 ---
 
 `scopes` and `requiredScopes` are Headless CMS schema definitions that determine which store sections can be added to specific pages (defined within [Content Types](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms)).
@@ -46,14 +46,14 @@ In this example, the `Home` Content Type stores content for your home page and h
 
 When [creating custom sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections), you can restrict their usage to specific Content Types using these default scopes:
 
-| `scopes` name | Content type         |
+| `scopes` name | Content type |
 | ------------- | -------------------- |
-| `custom`      | Landing Page         |
-| `global`      | Global Sections      |
-| `landing`     | Landing Page         |
-| `pdp`         | Product Details Page |
-| `plp`         | Product Listing Page |
-| `search`      | Search Page          |
+| `custom`| Landing Page|
+| `global`| Global Sections|
+| `landing`| Landing Page|
+| `pdp`| Product Details Page|
+| `plp`| Product Listing Page|
+| `search`| Search Page|
 
 ## `requiredScopes`
 
@@ -87,12 +87,12 @@ When a section has an empty `requiredScopes` (`[]`), the section is available fo
 
 When [creating custom sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms) for Headless CMS, you can use these default `requiredScopes` for specific Content Types:
 
-| `requiredScopes` name | Section name                                           |
-| --------------------- | ------------------------------------------------------ |
-| `custom`              | `CrossSelingShelf`                                     |
-| `pdp`                 | `CrossSelingShelf`, `Breadcrumb`, and `ProductDetails` |
-| `plp`                 | `Breadcrumb` and `ProductGallery`                      |
-| `search`              | `ProductGallery`                                       |
+| `requiredScopes` name | Section name |
+| --------------------- | ------------ |
+| `custom`| `CrossSelingShelf`|
+| `pdp`| `CrossSelingShelf`, `Breadcrumb`, and `ProductDetails`|
+| `plp`| `Breadcrumb` and `ProductGallery`|
+| `search`| `ProductGallery`|
 
 ## Using `scopes` and `requiredScopes`
 
