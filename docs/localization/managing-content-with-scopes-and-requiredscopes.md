@@ -1,6 +1,6 @@
 ---
 title: "Managing content with 'scopes' and 'requiredScopes'"
-slug: "anaging-content-with-scopes-and-requiredscopes"
+slug: "managing-content-with-scopes-and-requiredscopes"
 hidden: false
 createdAt: "2024-07-29T14:00:15.623Z"
 updatedAt: "2024-07-29T15:12:15.623Z"
