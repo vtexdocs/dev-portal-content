@@ -46,7 +46,7 @@ In this example, the `Home` Content Type stores content for your home page and h
 
 When [creating custom sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections), you can restrict their usage to specific Content Types using these default scopes:
 
-| `scopes` name | Content type |
+| `scopes` name | Content Type |
 | ------------- | ------------- |
 |`custom`|Landing Page|
 |`global`|Global Sections|
