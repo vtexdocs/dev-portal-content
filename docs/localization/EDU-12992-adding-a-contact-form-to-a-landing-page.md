@@ -1,8 +1,8 @@
 ---
-title: Adding a contact form to a landing page
-slug: adding-a-contact-form-to-a-landing-page
+title: "Adding a contact form to a landing page"
+slug: "adding-a-contact-form-to-a-landing-page"
 hidden: false
-createdAt: 2024-07-17T18:10:15.623Z
+createdAt: "2024-07-17T18:10:15.623Z"
 updatedAt: ""
 ---
 
@@ -12,9 +12,9 @@ This guide describes how to handle data from a Contact Us form and send it to a 
 
 ## Context
 
-* You want to create a Contact Us page so shoppers can contact your store.
-* You want to add a form so shoppers can send their requests or feedback.
-* To handle the data submitted through this contact form, you need to [extend the FastStore API with third-party API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema#extending-faststore-api-with-third-party-api-schemas) to handle the data that comes from the form.
+- You want to create a Contact Us page so shoppers can contact your store.
+- You want to add a form so shoppers can send their requests or feedback.
+- To handle the data submitted through this contact form, you need to [extend the FastStore API with third-party API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema#extending-faststore-api-with-third-party-api-schemas) to handle the data that comes from the form.
 
 ## Implementation
 
@@ -23,19 +23,17 @@ This guide describes how to handle data from a Contact Us form and send it to a 
 First, you need to set up the necessary GraphQL files to handle data submissions.
 
 1. In your store repository, go to the `src` folder. If you don’t have it, create a new `graphql` folder.
-
 2. Inside `graphql`, create the `thirdParty` folder.
-
 3. In the `thirdParty` folder, create two subfolders:
 
-   * `resolvers`
-   * `typeDefs`
+   - `resolvers`
+   - `typeDefs`
 
 4. Create an `index.ts` file inside the `resolvers` folder to set up the base structure for your resolver functions.
 
-> ℹ️ For more details about code implementation, see the [`thirdParty`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/thirdParty) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
+  > ℹ️ For more details about code implementation, see the [`thirdParty`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/thirdParty) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
-\<CH.Scrollycoding>
+<CH.Scrollycoding>
 
 ### Defining the types
 
@@ -45,32 +43,30 @@ Next, define the GraphQL types for your contact form.
 2. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
 3. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions.
 
-\<CH.Code rows={7} show={["contactForm.graphql"]}>
+<CH.Code rows={7} show={["contactForm.graphql"]}>
 
-```graphql contactForm.graphql
-type ContactFormResponse {
-  message: String!
-}
+  ```graphql contactForm.graphql
+  type ContactFormResponse {
+    message: String!
+  }
 
-input ContactFormInput {
-  name: String!
-  email: String!
-  subject: String!
-  message: String!
-}
+  input ContactFormInput {
+    name: String!
+    email: String!
+    subject: String!
+    message: String!
+  }
 
-type Mutation {
-  submitContactForm(input: ContactFormInput!): ContactFormResponse
-}
-```
+  type Mutation {
+    submitContactForm(input: ContactFormInput!): ContactFormResponse
+  }
+  ```
 
-\</CH.Code>
+  </CH.Code>
 
-```
  - `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
-  - `ContactFormInput`: Specifies the input fields required for the contact form.
-  - `Mutation`: Declares a mutation for submitting the contact form data.
-```
+ - `ContactFormInput`: Specifies the input fields required for the contact form.
+ - `Mutation`: Declares a mutation for submitting the contact form data.
 
 ---
 
@@ -80,7 +76,7 @@ Now, let's create the resolver function to process the form submission.
 
 In the `contactForm.ts` file, add the following code. This file imports the `contactFormResolver` and combines it with other potential resolvers into a single object.
 
-\<CH.Code rows={7} show={["contactForm.ts"]}>
+<CH.Code rows={7} show={["contactForm.ts"]}>
 
 ```ts contactForm.ts mark=10,12
 type SubmitContactFormData = {
@@ -120,9 +116,11 @@ const contactFormResolver = {
     },
   },
 };
+
+export default contactFormResolver;
 ```
 
-\</CH.Code>
+</CH.Code>
 
 ---
 
@@ -130,7 +128,7 @@ const contactFormResolver = {
 
 In the `graphql/thirdParty/resolvers` folder, create an `index.ts` file to consolidate the resolvers:
 
-\<CH.Code rows={7} show={["index.ts"]}>
+<CH.Code rows={7} show={["index.ts"]}>
 
 ```ts index.ts
 import contactFormResolver from "./contactForm";
@@ -142,7 +140,7 @@ const resolvers = {
 export default resolvers;
 ```
 
-\</CH.Code>
+</CH.Code>
 
 ---
 
@@ -154,122 +152,120 @@ Create a new section to receive the contact form data.
 
 2. In the `ContactForm` folder, create the following files:
 
-   * `ContactForm.tsx`: The main component file.
-   * `contant-form.module.scss`: The stylesheet for the component.
+   - `ContactForm.tsx`: The main component file.
+   - `contant-form.module.scss`: The stylesheet for the component.
 
 3. Add the following code to `ContactForm.tsx`.
 
-\<CH.Code rows={7} show={["ContactForm.tsx"]}>
+  <CH.Code rows={7} show={["ContactForm.tsx"]}>
 
-```tsx ContactForm.tsx
-import { useCallback, useState } from "react";
-import { gql } from "@faststore/core/api";
-import { useLazyQuery_unstable as useLazyQuery } from "@faststore/core/experimental";
+  ```tsx ContactForm.tsx
+  import { useCallback, useState } from "react";
+  import { gql } from "@faststore/core/api";
+  import { useLazyQuery_unstable as useLazyQuery } from "@faststore/core/experimental";
 
-import {
-  InputField as UIInputField,
-  Button as UIButton,
-  TextArea as UITextArea,
-} from "@faststore/ui";
+  import {
+    InputField as UIInputField,
+    Button as UIButton,
+    TextArea as UITextArea,
+  } from "@faststore/ui";
 
-import styles from "./contact-form.module.scss";
+  import styles from "./contact-form.module.scss";
 
-export const mutation = gql(`
-      mutation SubmitContactForm($data: ContactFormInput!) {
-        submitContactForm(input: $data) {
-          message
+  export const mutation = gql(`
+        mutation SubmitContactForm($data: ContactFormInput!) {
+          submitContactForm(input: $data) {
+            message
+          }
         }
-      }
-    `);
+      `);
 
-export const ContactForm = () => {
-  const [submitContactForm, { data, error }] = useLazyQuery(mutation, {
-    data: { name: "", email: "", subject: "", message: "" },
-  });
+  export const ContactForm = () => {
+    const [submitContactForm, { data, error }] = useLazyQuery(mutation, {
+      data: { name: "", email: "", subject: "", message: "" },
+    });
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
 
-  const onSubmit = useCallback(
-    (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
+    const onSubmit = useCallback(
+      (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
 
-      const formValues = {
-        name,
-        email,
-        subject,
-        message,
-      };
+        const formValues = {
+          name,
+          email,
+          subject,
+          message,
+        };
 
-      submitContactForm({ data: formValues });
+        submitContactForm({ data: formValues });
 
-      if (error) {
-        console.error(error);
-      }
+        if (error) {
+          console.error(error);
+        }
 
-      if (data) {
-        setName("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
-      }
-    },
-    [submitContactForm]
-  );
+        if (data) {
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        }
+      },
+      [submitContactForm]
+    );
 
-  return (
-    <section className={styles.contactForm}>
-      <div>
-        <h2>Contact Us</h2>
-        <p>
-          Need to get in touch with us? Please fill out the form, we'll get in
-          touch with you soon.
-        </p>
-      </div>
-      <form onSubmit={onSubmit}>
-        <UIInputField
-          id="name"
-          label="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <UIInputField
-          id="email"
-          label="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <UIInputField
-          id="subject"
-          label="Subject"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-        />
-        <UITextArea
-          id="message"
-          placeholder="Write your message here."
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <UIButton type="submit" variant="primary">
-          Send
-        </UIButton>
-      </form>
-    </section>
-  );
-};
+    return (
+      <section className={styles.contactForm}>
+        <div>
+          <h2>Contact Us</h2>
+          <p>
+            Need to get in touch with us? Please fill out the form, we'll get in
+            touch with you soon.
+          </p>
+        </div>
+        <form onSubmit={onSubmit}>
+          <UIInputField
+            id="name"
+            label="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <UIInputField
+            id="email"
+            label="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <UIInputField
+            id="subject"
+            label="Subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+          <UITextArea
+            id="message"
+            placeholder="Write your message here."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <UIButton type="submit" variant="primary">
+            Send
+          </UIButton>
+        </form>
+      </section>
+    );
+  };
 
-export default ContactForm;
-```
+  export default ContactForm;
+  ```
 
-\</CH.Code>
+</CH.Code>
 
-```
- - This component renders a contact form with name, email, subject, and message fields.
-  - The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
-```
+- This component renders a contact form with name, email, subject, and message fields.
+- The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
 
 ---
 
@@ -277,7 +273,7 @@ export default ContactForm;
 
 In the `contact-form.module.scss` file, add the following code. The stylesheet applies specific styles to the Contact Form component, including layout and spacing adjustments.
 
-\<CH.Code rows={7} show={["contact-form.module.scss"]}>
+<CH.Code rows={7} show={["contact-form.module.scss"]}>
 
 ```scss contact-form.module.scss
 .contactForm {
@@ -326,7 +322,7 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 }
 ```
 
-\</CH.Code>
+</CH.Code>
 
 > ℹ️ For more information about code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
@@ -337,7 +333,7 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 Add the section to Headless CMS by following the instructions available in [Syncing components with Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 The following schema was used as an example:
 
-\<CH.Code rows={7} show={["sections.json"]}>
+<CH.Code rows={7} show={["sections.json"]}>
 
 ```json sections.json
 [
@@ -353,7 +349,7 @@ The following schema was used as an example:
 ]
 ```
 
-\</CH.Code>
+</CH.Code>
 
 > ℹ️ For more information about code implementation, see the `sections.json` file available in the playground.store repository.
 > \</CH.Scrollycoding>
