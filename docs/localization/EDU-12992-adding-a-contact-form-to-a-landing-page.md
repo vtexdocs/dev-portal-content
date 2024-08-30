@@ -43,7 +43,7 @@ Next, define the GraphQL types for your contact form.
 2. In the `graphql/thirdParty/resolvers` folder, create a `contactForm.ts` file to handle the resolver logic for your contact form.
 3. In the `graphql/thirdParty/typeDefs` folder, create a `contactForm.graphql` file and add the following schema definitions.
 
-<CH.Code rows={7} show={["contactForm.graphql"]}>
+  <CH.Code rows={7} show={["contactForm.graphql"]}>
 
   ```graphql contactForm.graphql
   type ContactFormResponse {
@@ -64,9 +64,9 @@ Next, define the GraphQL types for your contact form.
 
   </CH.Code>
 
- - `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
- - `ContactFormInput`: Specifies the input fields required for the contact form.
- - `Mutation`: Declares a mutation for submitting the contact form data.
+     - `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
+     - `ContactFormInput`: Specifies the input fields required for the contact form.	 - `ContactFormInput`: Specifies the input fields required for the contact form.
+     - `Mutation`: Declares a mutation for submitting the contact form data.
 
 ---
 
@@ -262,10 +262,10 @@ Create a new section to receive the contact form data.
   export default ContactForm;
   ```
 
-</CH.Code>
+  </CH.Code>
 
-- This component renders a contact form with name, email, subject, and message fields.
-- The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
+     - This component renders a contact form with name, email, subject, and message fields.
+     - The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
 
 ---
 
@@ -325,7 +325,6 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 </CH.Code>
 
 > ℹ️ For more information about code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
-
 ---
 
 ### Synchronizing the changes with Headless CMS
