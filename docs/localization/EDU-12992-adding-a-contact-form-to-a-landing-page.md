@@ -6,36 +6,36 @@ createdAt: "2024-07-17T18:10:15.623Z"
 updatedAt: ""
 ---
 
-This guide illustrates how to handle data from a Contact Us form and send it to a third-party API. To this end, we will create a Contact Us page with a Contact form.
+This guide describes how to handle data from a Contact Us form and send it to a third-party API. To illustrate this, we will create a Contact Us page with a Contact form.
 
-> ℹ️ For detailed instructions on API extensions, refer to [API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) guide.
+> ℹ️ For detailed instructions on API extensions, see the [API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) guide.
 
 ## Context
 
 - You want to create a Contact Us page so shoppers can contact your store.
 - You want to add a form so shoppers can send their requests or feedback.
-- To handle the data submissions from this contact form, you need to [extend FastStore API with third-party API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema#extending-faststore-api-with-third-party-api-schemas) to handle the form data submission.
+- To handle the data submitted through this contact form, you need to [extend the FastStore API with third-party API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema#extending-faststore-api-with-third-party-api-schemas) to handle the data that comes from the form.
 
-## implementation
+## Implementation
 
-### Create the GraphQL files
+### Creating GraphQL files
 
 First, you need to set up the necessary GraphQL files to handle data submissions.
 
-1. In your store repository, go to the `src` folder, if you don’t have one already, create a new `graphql` folder.
+1. In your store repository, go to the `src` folder. If you don’t have it, create a new `graphql` folder.
 2. Inside `graphql`, create the `thirdParty` folder.
-3. In the `thirdParty` folder, create two other subfolders:
+3. In the `thirdParty` folder, create two subfolders:
 
    - `resolvers`
    - `typeDefs`
 
 4. Create an `index.ts` file inside the `resolvers` folder to set up the base structure for your resolver functions.
 
-  > ℹ️ For further details on code implementation, see the [`thirdParty`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/thirdParty) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
+  > ℹ️ For more details about code implementation, see the [`thirdParty`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/thirdParty) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 
 <CH.Scrollycoding>
 
-### Define the types
+### Defining the types
 
 Next, define the GraphQL types for your contact form.
 
@@ -65,12 +65,12 @@ Next, define the GraphQL types for your contact form.
   </CH.Code>
 
      - `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
-      - `ContactFormInput`: Specifies the input fields required for the contact form.
-      - `Mutation`: Declares a mutation for submitting the contact form data.
+     - `ContactFormInput`: Specifies the input fields required for the contact form.
+     - `Mutation`: Declares a mutation for submitting the contact form data.
 
 ---
 
-### Create the resolvers
+### Creating resolvers
 
 Now, let's create the resolver function to process the form submission.
 
@@ -144,18 +144,18 @@ export default resolvers;
 
 ---
 
-### Creating the new section
+### Creating a new section
 
-Create a new section to receive the Contact Form data.
+Create a new section to receive the contact form data.
 
 1. In the `src/components` folder, create the `ContactForm` folder.
 
-2. In `ContactForm` folder, create the following files:
+2. In the `ContactForm` folder, create the following files:
 
    - `ContactForm.tsx`: The main component file.
    - `contant-form.module.scss`: The stylesheet for the component.
 
-3. Add the following code to the `ContactForm.tsx`.
+3. Add the following code to `ContactForm.tsx`.
 
   <CH.Code rows={7} show={["ContactForm.tsx"]}>
 
@@ -247,7 +247,7 @@ Create a new section to receive the Contact Form data.
           />
           <UITextArea
             id="message"
-            placeholder="Write here your message."
+            placeholder="Write your message here."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
@@ -265,11 +265,11 @@ Create a new section to receive the Contact Form data.
   </CH.Code>
 
      - This component renders a contact form with name, email, subject, and message fields.
-      - The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
+     - The `onSubmit` function handles form submission, sends the data to the server, and clears the form fields upon success.
 
 ---
 
-### Creating the stylesheet for the section
+### Creating a stylesheet for the section
 
 In the `contact-form.module.scss` file, add the following code. The stylesheet applies specific styles to the Contact Form component, including layout and spacing adjustments.
 
@@ -324,12 +324,12 @@ In the `contact-form.module.scss` file, add the following code. The stylesheet a
 
 </CH.Code>
 
-> ℹ️ For further details on code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
+> ℹ️ For more information about code implementation, see the [ContactForm](https://github.com/vtex-sites/playground.store/tree/main/src/components/ContactForm) folder available in the [playground.store](https://github.com/vtex-sites/playground.store) repository.
 ---
 
-### Synchronizing the changes with the Headless CMS
+### Synchronizing the changes with Headless CMS
 
-Add the section to the Headless CMS by following the instructions available in [syncing components with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
+Add the section to Headless CMS by following the instructions available in [Syncing components with Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 The following schema was used as an example:
 
 <CH.Code rows={7} show={["sections.json"]}>
@@ -350,12 +350,12 @@ The following schema was used as an example:
 
 </CH.Code>
 
-> ℹ️ For further details on code implementation, see the `sections.json` file available in the playground.store repository.
+> ℹ️ For more information about code implementation, see the `sections.json` file available in the playground.store repository.
 </CH.Scrollycoding>
 
 ### Creating a new landing page
 
-Let’s create a new landing page for the Contact Us page to add the new Contact form section. For this part, we will follow the [Creating a new page tutorial](https://help.vtex.com/en/tutorial/managing-pages--3DO6rBhZ1p3zndnFu5BgRt#creating-a-new-page).
+Let’s create a new landing page for the Contact Us page to add the new Contact Form section. For this part, we will follow the [Creating a new page tutorial](https://help.vtex.com/en/tutorial/managing-pages--3DO6rBhZ1p3zndnFu5BgRt#creating-a-new-page).
 
 1. Go to the VTEX Admin and access Storefront > Headless CMS.
 2. Click `Create document` and select `Landing Page`.
@@ -365,6 +365,6 @@ Let’s create a new landing page for the Contact Us page to add the new Contact
 
 ## Results
 
-Once you have [set your development mode](https://developers.vtex.com/docs/guides/building-sections/overrides/sending-components-to-the-headless-cms#previewing-changes-in-the-development-mode) to see the changes locally, access the `https://localhost:3000/contact-us` and you will see the new landing page with the Contact us form. Below, you can check a storefront example:
+Once you have [set your development mode](https://developers.vtex.com/docs/guides/building-sections/overrides/sending-components-to-the-headless-cms#previewing-changes-in-the-development-mode) to see the changes locally, access `https://localhost:3000/contact-us` and you will see the new landing page with the Contact Us form. Check the storefront example below:
 
 ![contact-form-component](https://vtexhelp.vtexassets.com/assets/docs/src/api-extension-example-one___ceffcf6726b7316bbe61eaf4c013e069.png)
