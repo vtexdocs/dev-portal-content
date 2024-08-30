@@ -292,20 +292,14 @@ A prerequisite for this procedure is to have products for sale at your store for
 
 1. Launch a beta version of your connector. E.g.: `vtex.payment-provider-test@0.1.0-beta`. If you need, check the [Making your app publicly available article](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
 2. Install the beta version on `master` workspace. Wait for around 1 hour.
-3. Go to `https://{account}.myvtex.com/admin/pci-gateway/#/affiliations/{connector-name}/`. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
+3. Go to `https://{account}myvtex.com/admin/affiliations/connector/Vtex.PaymentGateway.Connectors.PaymentProvider.PaymentProviderConnector_{connector-name}/`. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
    ![Payment affiliation configuration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-framework-0.png)
-4. Change the toggle option to `Test`.
-5. Click on **Save** and refresh the page.
-6. Enter again in the saved configuration and you will notice that a new field appears, called **Workspace**.
-7. Set the **Workspace** as you wish. You can leave it as `master` if it is the workspace you want to test on.
+4. In **Payment Control**, activate the test environment by clicking **Enable test mode**. A new field called **Workspace** will appear.
+5. Set the **Workspace** as you wish. You can leave it as `master` if it is the workspace you want to test on.
    ![Payment affiliation configuration test](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-framework-1.png)
 8. Configure a [payment condition](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) with your newly created connector and wait 10 minutes to appear on Checkout.
 9. Make a purchase with the payment condition you configured with your connector.
-10. After completing all transaction testing in the beta version of the connector, [release and deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version) a stable version of your connector (e.g.: vtex.payment-provider-test@0.1.0). This stable version must be sent to the homologation process.
-
-> ⚠️ Our Payment Provider Test Suite, an app used to test payment connector flows, is not prepared to test cases considering an integration using Secure Proxy. More details about this app can be found in the [Payment Provider  Homologation article](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation).
-
-Also, differently from connectors that do not use Payment Provider Framework, integrations that do use it do not support the ability to have a sandbox service provider endpoint, which is used for tests. A PPF connector only supports one production endpoint, so the toggle to choose between test and production in the configuration page of the Admin will not appear.
+10. After completing all transaction testing in the beta version of the connector, [release and deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version) a stable version of your connector (e.g.: vtex.payment-provider-test@0.1.0). This stable version must be sent to the [homologation process](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#7-homologation-and-go-live).
 
 ## Making your connector available to process sales
 
