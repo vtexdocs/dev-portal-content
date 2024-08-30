@@ -3,7 +3,7 @@ title: "Best practices for associating a custom page with a content type"
 slug: "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type"
 hidden: false
 createdAt: "2024-07-25T19:50:31.469Z"
-updatedAt: "2024-08-15T15:34:39.964Z"
+updatedAt: "2024-08-30T17:48:35.094Z"
 excerpt: "Configure URLs effectively when associating custom pages with content types."
 ---
 
@@ -15,7 +15,7 @@ Follow the guidelines below to manage your website content more efficiently and 
 
 ## Before you begin
 
-Make sure you have created a new page following the guide [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page).
+Ensure you have created a new page following the guide [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page).
 
 ## URL guidelines
 
