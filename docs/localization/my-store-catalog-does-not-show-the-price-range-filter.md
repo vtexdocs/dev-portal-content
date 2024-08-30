@@ -23,8 +23,8 @@ In some situations, price filters may have rendering issues and not be displayed
 To solve this problem, consider checking the following:
 
 - [Price range filter configuration](#check-the-price-range-filter-configuration)
-- [simulationBehavior](#heading=h.miblh2erzort)[ field value](#check-simulationBehavior-field-value)
-- [priceRange](#heading=h.jzixxyx4uel6)[ field value](#check-priceRange-field-value)
+- [simulationBehavior](#heading=h.miblh2erzort)[field value](#check-simulationBehavior-field-value)
+- [priceRange](#heading=h.jzixxyx4uel6)[field value](#check-priceRange-field-value)
 
 ### Check the price range filter configuration
 
