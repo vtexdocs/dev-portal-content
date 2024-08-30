@@ -351,7 +351,7 @@ The following schema was used as an example:
 </CH.Code>
 
 > ℹ️ For more information about code implementation, see the `sections.json` file available in the playground.store repository.
-> \</CH.Scrollycoding>
+</CH.Scrollycoding>
 
 ### Creating a new landing page
 
