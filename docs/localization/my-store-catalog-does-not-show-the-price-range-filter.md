@@ -18,7 +18,6 @@ After creating [price range filters](https://help.vtex.com/en/tutorial/setting-u
 In some situations, price filters may have rendering issues and not be displayed on the product listing page (PLP).
 
 ## ## Solution
-
 To solve this problem, consider checking the following:
 - [Price range filter configuration](#check-the-price-range-filter-configuration)
 - [simulationBehavior](#heading=h.miblh2erzort)[ field value](#check-simulationBehavior-field-value)
