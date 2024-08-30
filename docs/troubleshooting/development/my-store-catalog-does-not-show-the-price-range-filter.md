@@ -1,6 +1,6 @@
 ---
 title: "My store catalog does not display the price range filter"
-slug: "my-store-catalog-does-not-display-the-price-range-filter"
+slug: "my-store-catalog-does-not-show-the-price-range-filter"
 hidden: false
 createdAt: "2024-08-30T00:00:00.000Z"
 updatedAt: "2024-08-30T00:00:00.000Z"
