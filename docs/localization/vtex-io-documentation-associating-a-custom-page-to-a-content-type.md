@@ -45,6 +45,6 @@ For example, if you create a page with the URL `/store/:store_id`, where `store_
 
 | ❌ Don'ts | Explanation |
 | - | - |
-| `/foo/:{entity}`| The URL is wrong because it lacks the required `_id` suffix. Without `_id`, the system cannot identify it as a content type, which means no assets will be associated with this URL.                                           |
-| `/foo/:bar/:{entity}_id`| While this URL includes a valid content type parameter, additional variable parameters (like `:bar`) are ignored when determining content association. This can lead to unexpected content being delivered. |
-| `/foo/:{entity}_id/{entity2}_id`| The URL is not allowed because it has two parameters ending with `_id`. To maintain clarity in the content association, a URL can only have one content type parameter ending with `_id`. |
+| `/foo/:{entity}`|The URL is wrong because it lacks the required `_id` suffix. Without `_id`, the system cannot identify it as a content type, which means no assets will be associated with this URL. |
+| `/foo/:bar/:{entity}_id`|While this URL includes a valid content type parameter, additional variable parameters (like `:bar`) are ignored when determining content association. This can lead to unexpected content being delivered. |
+| `/foo/:{entity}_id/{entity2}_id`|The URL is not allowed because it has two parameters ending with `_id`. To maintain clarity in the content association, a URL can only have one content type parameter ending with `_id`. |
