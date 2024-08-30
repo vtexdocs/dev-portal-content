@@ -2,11 +2,13 @@
 title: "My store catalog does not display the price range filter"
 slug: "my-store-catalog-does-not-display-the-price-range-filter"
 hidden: false
-createdAt: "2024-08-19T00:00:00.000Z"
-updatedAt: ""
+createdAt: "2024-08-30T00:00:00.000Z"
+updatedAt: "2024-08-30T00:00:00.000Z"
+excerpt: "Price filters are not available on the product listing page (PLP)."
+tags:
+  - pricing
+  - catalog
 ---
-
-# My store catalog does not display the price range filter
 
 **Keywords:** price range |  filters |  catalog
 
@@ -14,7 +16,7 @@ The price range feature allows you to [create a filter](https://help.vtex.com/en
 
 After creating [price range filters](https://help.vtex.com/en/tutorial/setting-up-the-price-range-filter--tutorials_240) in your store catalog, there may be rendering issues, and they may not display on the product listing page (PLP).
 
-![](https://raw.githubusercontent.com/vtexdocs/.png)
+![price range filter front](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/price-range-filter-front.png)
 
 In some situations, price filters may have rendering issues and not be displayed on the product listing page (PLP).
 
@@ -35,7 +37,7 @@ To confirm that the price range filters are properly configured, follow the step
 3. Click **ACTIONS** and **Price range**.
 4. Check the configured price ranges and make changes if necessary.
 
-![](https://raw.githubusercontent.com/vtexdocs/.png)
+![price range filter back](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/price-range-filter-back.png)
 
 ### Check the `simulationBehavior` field value
 
