@@ -7,6 +7,7 @@ updatedAt: ""
 ---
 
 # My store catalog does not display the price range filter
+
 **Keywords:** price range |  filters |  catalog
 
 The price range feature allows you to [create a filter](https://help.vtex.com/en/tutorial/setting-up-the-price-range-filter--tutorials_240) that displays price ranges to customers in your store.
