@@ -1,10 +1,10 @@
 ---
 title: "`vtex release` CLI command returns an EBADF message"
-slug: vtex-release-cli-command-returns-ebadf-message
+slug: "vtex-release-cli-command-returns-ebadf-message"
 hidden: false
-createdAt: 2024-08-09T13:00:00.000Z
-updatedAt: 2024-08-09T13:00:00.000Z
-excerpt: Creating an app release using the VTEX IO CLI returns an EBADF error.
+createdAt: "2024-08-09T13:00:00.000Z"
+updatedAt: "2024-08-09T13:00:00.000Z"
+excerpt: "Creating an app release using the VTEX IO CLI returns an EBADF error."
 tags:
   - vtex-io
   - cli
