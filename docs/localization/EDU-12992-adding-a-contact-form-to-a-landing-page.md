@@ -65,7 +65,7 @@ Next, define the GraphQL types for your contact form.
   </CH.Code>
 
      - `ContactFormResponse`: Defines the structure of the response from the API, with a mandatory message field.
-     - `ContactFormInput`: Specifies the input fields required for the contact form.	 - `ContactFormInput`: Specifies the input fields required for the contact form.
+     - `ContactFormInput`: Specifies the input fields required for the contact form.
      - `Mutation`: Declares a mutation for submitting the contact form data.
 
 ---
