@@ -1,8 +1,8 @@
 ---
-title: Google Analytics 4 is tracking inconsistent data from my store
-slug: google-analytics-4-is-tracking-inconsistent-data-from-my-store
+title: "Google Analytics 4 is tracking inconsistent data from my store"
+slug: "google-analytics-4-is-tracking-inconsistent-data-from-my-store"
 hidden: false
-createdAt: 2024-08-15T12:58:16.587Z
+createdAt: "2024-08-15T12:58:16.587Z"
 updatedAt: ""
 tags:
   - performance
