@@ -1,13 +1,12 @@
 ---
-title: My store catalog does not display the price range filter
-slug: my-store-catalog-does-not-display-the-price-range-filter
+title: "My store catalog does not display the price range filter"
+slug: "my-store-catalog-does-not-display-the-price-range-filter"
 hidden: false
-createdAt: 2024-08-19T00:00:00.000Z
+createdAt: "2024-08-19T00:00:00.000Z"
 updatedAt: ""
 ---
 
 # My store catalog does not display the price range filter
-
 **Keywords:** price range |  filters |  catalog
 
 The price range feature allows you to [create a filter](https://help.vtex.com/en/tutorial/setting-up-the-price-range-filter--tutorials_240) that displays price ranges to customers in your store.
@@ -21,7 +20,6 @@ In some situations, price filters may have rendering issues and not be displayed
 ## ## Solution
 
 To solve this problem, consider checking the following:
-
 - [Price range filter configuration](#check-the-price-range-filter-configuration)
 - [simulationBehavior](#heading=h.miblh2erzort)[ field value](#check-simulationBehavior-field-value)
 - [priceRange](#heading=h.jzixxyx4uel6)[ field value](#check-priceRange-field-value)
