@@ -1,34 +1,35 @@
 ---
-title: 'Widgets for Headless CMS'
-slug: 'headless-cms-widgets'
+title: Widgets for Headless CMS
+slug: widgets-for-headless-cms
 ---
 
 Widgets are interface elements in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) that merchants can use to enhance store sections. These can include date pickers, dropdown menus, image uploaders, and more, helping editors create and edit content.
 In this guide, you will find:
 
 - [Widgets available](#widgets-available): An overview of each widget and its function.
-- [Instructions on how to add a widget to a section](#adding-a-widget-to-a-store-section): A step-by-step example of incorporating a widget into a new store section.
+- [Instructions on how to add a widget to a section](#adding-a-widget-to-a-store-section): A guide with instructions on incorporating a widget into a new store section.
 
 ## Widgets available
 
-Below is a brief description of the widgets that can be implemented and used in the Headless CMS interface in the VTEX Admin. For detailed information about each widget, click on the respective widget name.
-| Widget name    | Description     |
-| -------------------- | ------------------ |
-| [`checkboxes`](#checkboxes)               | Displays checkboxes for selecting options in forms.  |
-| [`image-uploader`](#image-uploader)       | Uploads images from your local machine.             |
-| [`date-time`](#date-time)                 | Provides a calendar popup for selecting a date and time. |
-| [`draftjs-rich-text`](#draftjs-rich-text) | Rich text editor for formatting and styling store text.        |
-| [`media-gallery`](#media-gallery)         | Uploads or selects existing images or videos from [Media](https://vtexhelp.myvtex.com/tutorial/media-overview--31fhjHTt4TBoo50AmGQ9b2). |
+Below is a brief description of the widgets that can be implemented and used in the Headless CMS interface in the VTEX Admin. For detailed information about each widget, click the respective widget name.
 
-<CH.Scrollycoding>
+| Widget name                               | Description                                                                                                                                                        |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`checkboxes`](#checkboxes)               | Displays checkboxes for selecting options in forms.                                                                                                |
+| [`image-uploader`](#image-uploader)       | Uploads images from your local machine.                                                                                                            |
+| [`date-time`](#date-time)                 | Provides a calendar popup for selecting a date and time.                                                                                           |
+| [`draftjs-rich-text`](#draftjs-rich-text) | Rich text editor for formatting and styling store text.                                                                                            |
+| [`media-gallery`](#media-gallery)         | Uploads or selects existing images or videos from the [Media](https://vtexhelp.myvtex.com/tutorial/media-overview--31fhjHTt4TBoo50AmGQ9b2) module. |
+
+\<CH.Scrollycoding>
 
 ### `checkboxes`
 
-Displays a checkbox commonly used in forms to select an option. The following image shows how the `checkboxes` appears within the headless CMS interface:
+Displays a checkbox commonly used in forms to select an option. The following image shows how the `checkboxes` are displayed within the headless CMS interface:
 
 ![checkboxes-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-three___77a45e8e239de651e1169b6b15ebe222.gif)
 
-<CH.Code>
+\<CH.Code>
 
 ```json checkboxes
 "activate": {
@@ -41,19 +42,19 @@ Displays a checkbox commonly used in forms to select an option. The following im
 },
 ```
 
-</CH.Code>
+\</CH.Code>
 
 ---
 
 ### `image-uploader`
 
-Displays a card to upload an image from your local machine. The following image shows how the `image-uploader` appears within the headless CMS interface:
+Displays a card to upload an image from your local machine. The following image shows how the `image-uploader` is displayed within the headless CMS interface:
 
 ![image-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-four___58dba186180d5e731436a06c41a8c454.png)
 
-> ⚠️ The `image-uploader` is one of the widgets available. Still, we recommend using the [`media gallery`](#media-gallery) widget, which allows selecting and uploading not only images but also videos from the [Media](https://help.vtex.com/tutorial/media-overview--31fhjHTt4TBoo50AmGQ9b2) module.
+> ⚠️ The `image-uploader` is one of the available widgets. Still, we recommend using the [`media gallery`](#media-gallery) widget, which allows you to select and upload not only images but also videos from the [Media](https://help.vtex.com/tutorial/media-overview--31fhjHTt4TBoo50AmGQ9b2) module.
 
-<CH.Code>
+\<CH.Code>
 
 ```json image-uploader
 "imageSrc": {
@@ -65,17 +66,17 @@ Displays a card to upload an image from your local machine. The following image 
  }
 ```
 
-</CH.Code>
+\</CH.Code>
 
 ---
 
 ### `date-time`
 
-Provides a calendar popup for selecting a single date and time. It is ideal for displaying deadlines, event times, or any scenario where you need to specify a specific date and time within your headless CMS content. For example, showcase a product's expiration date or display a time-limited coupon badge. The following image shows how the `date-time` appears within the headless CMS interface:
+Provides a calendar popup for selecting a date and time. It is ideal for displaying deadlines, event times, or any scenario where you need to specify a specific date and time within your headless CMS content. For example, you can showcase a product's expiration date or display a time-limited coupon badge. The following image shows how the `date-time` is displayed within the headless CMS interface:
 
 ![date-time-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-five___ddd15e6fbc00b8687276bd6bf6d72e78.gif)
 
-<CH.Code>
+\<CH.Code>
 
 ```json date-time
 "dateAndTime": {
@@ -87,17 +88,17 @@ Provides a calendar popup for selecting a single date and time. It is ideal for 
  },
 ```
 
-</CH.Code>
+\</CH.Code>
 
 ---
 
 ### `draftjs-rich-text`
 
-Displays an editor that allows formatting and styling of store text. The following image shows how the `draftjs-rich-text` appears within the headless CMS interface:
+Displays an editor that allows formatting and styling the store text. The following image shows how the `draftjs-rich-text` is displayed within the headless CMS interface:
 
 ![draftjs-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-six___b1c1f6a8a646661428c75d7e68dcdbd2.png)
 
-<CH.Code>
+\<CH.Code>
 
 ```json draftjs-rich-text
 "richText": {
@@ -109,19 +110,19 @@ Displays an editor that allows formatting and styling of store text. The followi
  },
 ```
 
-</CH.Code>
+\</CH.Code>
 
 ---
 
 ### `media-gallery`
 
-Property a card to upload or select an existing image from the [Media](https://help.vtex.com/en/tutorial/media-overview--31fhjHTt4TBoo50AmGQ9b2) module. The following image shows how the `media-gallery` appears within the headless CMS interface:
+Displays a card to upload or select an existing image from the [Media](https://help.vtex.com/en/tutorial/media-overview--31fhjHTt4TBoo50AmGQ9b2) module. The following image shows how the `media-gallery` is displayed within the headless CMS interface:
 
-> ⚠️ The difference between the [`image-uploader`](#image-uploader) and the `media-gallery` is that when you click the `media-gallery` property, you can select or upload an image or a video from the [Media](https://help.vtex.com/tutorial/media-overview--31fhjHTt4TBoo50AmGQ9b2) module. The `image-uploader` allows you to upload only images from your machine.
+> ⚠️ The difference between the [`image-uploader`](#image-uploader) and the `media-gallery` is that when you click the `media-gallery` property, you can select or upload an image or a video from the [Media](https://help.vtex.com/tutorial/media-overview--31fhjHTt4TBoo50AmGQ9b2) module. The `image-uploader` on the other hand, only allows you to upload images from your machine.
 
 ![media-gallery-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-seven___ab9decd87c30ee0c44428ff83dcae592.png)
 
-<CH.Code>
+\<CH.Code>
 
 ```json media-gallery
 "mediaGallery": {
@@ -133,181 +134,186 @@ Property a card to upload or select an existing image from the [Media](https://h
  },
 ```
 
-</CH.Code>
+\</CH.Code>
 
 ---
 
 ## Adding a widget to a store section
 
-Widgets can help when you have [created a new store section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) and want to add a new property to it. To illustrate how a widget can be used in a store section, below there’s an example using the [`media-gallery`](#media-gallery) widget in the new `Custom Newsletter` section based on the [`Newsletter`](https://developers.vtex.com/docs/guides/faststore/organisms-newsletter) native section.
+Widgets are useful when you've [created a new store section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) and want to add a new property to it. To illustrate how a widget can be used in a store section, here's an example using the [`media-gallery`](#media-gallery) widget in the new `Custom Newsletter` section, based on the [`Newsletter`](https://developers.vtex.com/docs/guides/faststore/organisms-newsletter) native section.
 
-> ℹ️ To create a new section, such as the `Custom Newsletter`, follow the instructions in the [Creating a new store section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) guide.
+> ℹ️ To create a new section, such as the `Custom Newsletter`, follow the instructions in the guide [Creating a new store section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section).
 
 1. Open your store project code in a code editor and navigate to the `cms/faststore` folder.
+
 2. Open the `sections.json` file.
+
 3. In the `sections.json` file, find the section where you want to add the widget. In the following `sections.json` file example, the new section, `Custom Newsletter`, receives the [`media-gallery`](#media-gallery) widget.
 
-    <CH.Code>
+   \<CH.Code>
 
-    ```json sections.json focus=34:39
-        …
-        {
-        "name": "CustomNewsletter",
-        "requiredScopes": [],
-        "schema": {
-            "title": "Custom Newsletter",
-            "description": "Short description for the section's purpose",
-            "type": "object",
-            "required": ["title"],
-            "properties": {
-            "icon": {
-                "title": "Icon",
-                "type": "object",
-                "properties": {
-                "icon": {
-                    "title": "Icon",
-                    "type": "string",
-                    "enumNames": ["Envelope"],
-                    "enum": ["Envelope"],
-                    "default": "Envelope"
-                },
-                "alt": {
-                    "type": "string",
-                    "title": "Alternative Label",
-                    "default": "Envelope"
-                }
-                }
-            },
-            "title": {
-                "title": "Title",
-                "type": "string",
-                "default": "Get News and Special Offers!"
-            },
-            "mediaGallery": {
-                "title": "Media Gallery",
-                "type": "string",
-                "widget": {
-                "ui:widget": "media-gallery"
-                }
-            },
-            "description": {
-                "title": "Description",
-                "type": "string",
-                "default": "Receive our news and promotions in advance"
-            },
-            "privacyPolicy": {
-                "title": "Privacy Policy Disclaimer",
-                "type": "string",
-                "widget": {
-                "ui:widget": "draftjs-rich-text"
-                }
-            },
-            "emailInputLabel": {
-                "title": "Email input label",
-                "type": "string",
-                "default": "Your Email"
-            },
-            "displayNameInput": {
-                "title": "Request name?",
-                "type": "boolean",
-                "default": true
-            },
-            "nameInputLabel": {
-                "title": "Name input label",
-                "type": "string",
-                "default": "Your Name"
-            },
-            "subscribeButtonLabel": {
-                "title": "Subscribe button label",
-                "type": "string",
-                "default": "Subscribe"
-            },
-            "subscribeButtonLoadingLabel": {
-                "title": "Subscribe button loading label",
-                "type": "string",
-                "default": "Loading..."
-            },
-            "card": {
-                "title": "Newsletter should be in card format?",
-                "type": "boolean",
-                "default": false
-            },
-            "colorVariant": {
-                "title": "Color variant",
-                "type": "string",
-                "enumNames": ["Main", "Light", "Accent"],
-                "enum": ["main", "light", "accent"],
-                "default": "main"
-            },
-            "toastSubscribe": {
-                "title": "Toast Subscribe",
-                "type": "object",
-                "properties": {
-                "title": {
-                    "title": "Title",
-                    "description": "Message Title",
-                    "type": "string",
-                    "default": "Hooray!"
-                },
-                "message": {
-                    "title": "Message",
-                    "description": "Message",
-                    "type": "string",
-                    "default": "Thank you for your subscription."
-                },
-                "icon": {
-                    "title": "Icon",
-                    "type": "string",
-                    "enumNames": ["CircleWavyCheck"],
-                    "enum": ["CircleWavyCheck"],
-                    "default": "CircleWavyCheck"
-                }
-                }
-            },
-            "toastSubscribeError": {
-                "title": "Toast Subscribe Error",
-                "type": "object",
-                "properties": {
-                "title": {
-                    "title": "Title",
-                    "description": "Message Title",
-                    "type": "string",
-                    "default": "Oops."
-                },
-                "message": {
-                    "title": "Message",
-                    "description": "Message",
-                    "type": "string",
-                    "default": "Something went wrong. Please try again."
-                },
-                "icon": {
-                    "title": "Icon",
-                    "type": "string",
-                    "enumNames": ["CircleWavyWarning"],
-                    "enum": ["CircleWavyWarning"],
-                    "default": "CircleWavyWarning"
-                }
-                }
-            }
-            }
-        }
-        },
+   ```json sections.json focus=34:39
+       …
+       {
+       "name": "CustomNewsletter",
+       "requiredScopes": [],
+       "schema": {
+           "title": "Custom Newsletter",
+           "description": "Short description for the section's purpose",
+           "type": "object",
+           "required": ["title"],
+           "properties": {
+           "icon": {
+               "title": "Icon",
+               "type": "object",
+               "properties": {
+               "icon": {
+                   "title": "Icon",
+                   "type": "string",
+                   "enumNames": ["Envelope"],
+                   "enum": ["Envelope"],
+                   "default": "Envelope"
+               },
+               "alt": {
+                   "type": "string",
+                   "title": "Alternative Label",
+                   "default": "Envelope"
+               }
+               }
+           },
+           "title": {
+               "title": "Title",
+               "type": "string",
+               "default": "Get News and Special Offers!"
+           },
+           "mediaGallery": {
+               "title": "Media Gallery",
+               "type": "string",
+               "widget": {
+               "ui:widget": "media-gallery"
+               }
+           },
+           "description": {
+               "title": "Description",
+               "type": "string",
+               "default": "Receive our news and promotions in advance"
+           },
+           "privacyPolicy": {
+               "title": "Privacy Policy Disclaimer",
+               "type": "string",
+               "widget": {
+               "ui:widget": "draftjs-rich-text"
+               }
+           },
+           "emailInputLabel": {
+               "title": "Email input label",
+               "type": "string",
+               "default": "Your Email"
+           },
+           "displayNameInput": {
+               "title": "Request name?",
+               "type": "boolean",
+               "default": true
+           },
+           "nameInputLabel": {
+               "title": "Name input label",
+               "type": "string",
+               "default": "Your Name"
+           },
+           "subscribeButtonLabel": {
+               "title": "Subscribe button label",
+               "type": "string",
+               "default": "Subscribe"
+           },
+           "subscribeButtonLoadingLabel": {
+               "title": "Subscribe button loading label",
+               "type": "string",
+               "default": "Loading..."
+           },
+           "card": {
+               "title": "Newsletter should be in card format?",
+               "type": "boolean",
+               "default": false
+           },
+           "colorVariant": {
+               "title": "Color variant",
+               "type": "string",
+               "enumNames": ["Main", "Light", "Accent"],
+               "enum": ["main", "light", "accent"],
+               "default": "main"
+           },
+           "toastSubscribe": {
+               "title": "Toast Subscribe",
+               "type": "object",
+               "properties": {
+               "title": {
+                   "title": "Title",
+                   "description": "Message Title",
+                   "type": "string",
+                   "default": "Hooray!"
+               },
+               "message": {
+                   "title": "Message",
+                   "description": "Message",
+                   "type": "string",
+                   "default": "Thank you for your subscription."
+               },
+               "icon": {
+                   "title": "Icon",
+                   "type": "string",
+                   "enumNames": ["CircleWavyCheck"],
+                   "enum": ["CircleWavyCheck"],
+                   "default": "CircleWavyCheck"
+               }
+               }
+           },
+           "toastSubscribeError": {
+               "title": "Toast Subscribe Error",
+               "type": "object",
+               "properties": {
+               "title": {
+                   "title": "Title",
+                   "description": "Message Title",
+                   "type": "string",
+                   "default": "Oops."
+               },
+               "message": {
+                   "title": "Message",
+                   "description": "Message",
+                   "type": "string",
+                   "default": "Something went wrong. Please try again."
+               },
+               "icon": {
+                   "title": "Icon",
+                   "type": "string",
+                   "enumNames": ["CircleWavyWarning"],
+                   "enum": ["CircleWavyWarning"],
+                   "default": "CircleWavyWarning"
+               }
+               }
+           }
+           }
+       }
+       },
 
-    …
+   …
 
-    ```
+   ```
 
-    </CH.Code>
+   \</CH.Code>
 
-4. Open the terminal and run `yarn cms-sync` to synchronize the new section with the Headless CMS. Once the changes are synchronized, you will see the following message: `info: CMS synced successfully...`.
+4. Open the terminal and run `yarn cms-sync` to sync the new section with the Headless CMS. Once the changes are synced, you will see the following message: `info: CMS synced successfully...`.
+
 5. Go to the VTEX Admin and access **Storefront > Headless CMS**.
-6. Open the page where you want to add the new section. In this context, we will add the `Custom Newsletter` to the `Home`.
-7. Add the section to the page, and you will notice the widget you have added, the [`media-gallery`](#media-gallery).
 
-    ![newsletter-hcms-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-one___6c8c5e28b43487efc6f6048afd8d8d15.gif)
+6. Open the page where you want to add the new section. In this example, we will add the `Custom Newsletter` to `Home`.
 
-8. Click `Preview` to see the new component with the new image.
+7. Add the section to the page, and you will notice the widget you added, the [`media-gallery`](#media-gallery).
 
-    ![newsletter-store-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-two___9c76a69ce03639b33faa85eb2a7cb367.png)
+   ![newsletter-hcms-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-one___6c8c5e28b43487efc6f6048afd8d8d15.gif)
 
-</CH.Scrollycoding>
+8. Click `Preview` to view the new component with the new image.
+
+   ![newsletter-store-interface](https://vtexhelp.vtexassets.com/assets/docs/src/scoped-widgets-two___9c76a69ce03639b33faa85eb2a7cb367.png)
+
+\</CH.Scrollycoding>
