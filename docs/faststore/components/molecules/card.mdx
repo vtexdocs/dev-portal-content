@@ -9,55 +9,6 @@ sidebar_custom_props:
 
 Card displays some information divided into a body and a header.
 
-## Overview
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-  <OverviewSection>
-    <Card
-      iconName="PlusCircle"
-      title="Card with Icon"
-      style={{width: '300px'}}>
-      <h1> First Product </h1>
-      <hr/>
-      <h1> Second Product </h1>
-    </Card>
-  </OverviewSection>
-
-  <OverviewSection>
-    <Card
-      title="Card without Icon"
-      style={{width: '300px'}}>
-      <h1> Message </h1>
-    </Card>
-  </OverviewSection>
-
-  </Tab>
-    ```tsx
-    <Card
-        iconName="PlusCircle"
-        title="Card with Icon"
-        style={{width: '300px'}}>
-        <h1> First Product </h1>
-        <hr/>
-        <h1> Second Product </h1>
-      </Card>
-    ```
-
-    ```tsx
-     <Card
-      title="Card without Icon"
-      style={{width: '300px'}}>
-      <h1> Message </h1>
-    </Card>
-    ```
-
-  <Tab>
-  Code Example
-
-  </Tab>
-</Tabs>
-
 ---
 
 ## Import
@@ -65,7 +16,7 @@ Card displays some information divided into a body and a header.
 Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
 
 ```tsx
-import { Card } from '@faststore/ui'
+import { Card } from "@faststore/ui";
 ```
 
 ### Import Styles into your FastStore project
@@ -73,7 +24,7 @@ import { Card } from '@faststore/ui'
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
 ```scss copy
-@import '@faststore/ui/src/components/molecules/Card/styles.scss';
+@import "@faststore/ui/src/components/molecules/Card/styles.scss";
 ```
 
 Follow the instructions in the [Importing FastStore UI component styles](/docs/customizing/importing-styles-to-faststore-ui-components) tutorial.
@@ -95,13 +46,12 @@ Follow the instructions in the [Importing FastStore UI component styles](/docs/c
     </Card>
   </OverviewSection>
 
-  <OverviewSection>
-    <Card
-      title="Card without Icon"
-      style={{width: '300px'}}>
-      <h1> Message </h1>
-    </Card>
-  </OverviewSection>
+{" "}
+<OverviewSection>
+  <Card title="Card without Icon" style={{ width: "300px" }}>
+    <h1> Message </h1>
+  </Card>
+</OverviewSection>
 
   </Tab>
     ```tsx
@@ -130,6 +80,7 @@ Follow the instructions in the [Importing FastStore UI component styles](/docs/c
 </Tabs>
 
 ---
+
 ## Props
 
 <ComponentPropsSection component="Card" />
@@ -147,10 +98,7 @@ Follow the instructions in the [Importing FastStore UI component styles](/docs/c
     isColor
   />
   <TokenDivider />
-  <TokenRow
-    token="--fs-card-header-padding"
-    value="var(--fs-spacing-3)"
-  />
+  <TokenRow token="--fs-card-header-padding" value="var(--fs-spacing-3)" />
   <TokenRow
     token="--fs-card-header-bkg-color"
     value="var(--fs-color-neutral-bkg)"
@@ -160,16 +108,13 @@ Follow the instructions in the [Importing FastStore UI component styles](/docs/c
     token="--fs-card-header-font-weight"
     value="var(--fs-text-weight-bold)"
   />
-    <TokenRow
+  <TokenRow
     token="--fs-card-header-icon-color"
     value="var(--fs-color-main-2)"
     isColor
   />
   <TokenDivider />
-  <TokenRow
-    token="--fs-card-body-padding"
-    value="var(--fs-spacing-3)"
-  />
+  <TokenRow token="--fs-card-body-padding" value="var(--fs-spacing-3)" />
 </TokenTable>
 
 ---
