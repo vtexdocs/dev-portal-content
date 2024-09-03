@@ -32,13 +32,13 @@ To configure server-side tagging, follow Google's [Server-Side Tag Manager](http
 
 Follow the instructions in the [Pixel apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps) guide to develop your own Pixel app.
 
-After creating the Pixel app, add the GTM script passing the correct container code and the server URL (which holds the server-side tag manager configuration) that will trigger the events for Google.
+After creating the Pixel app, add the Google Tag Manager (GTM) script passing the correct container code and the server URL (which holds the server-side tag manager configuration) that will trigger the events for Google.
 
 ### Step 3 - Setting up the native GTM app
 
 Keep the native [GTM app](https://developers.vtex.com/docs/guides/google-tag-manager) installed in your store, but pass a **fake container code** to the app.
 
-To access the GTM app settings, go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.5.4/setup/`, replacing `{accountName}` with your VTEX account name.
+To access the GTM app settings, go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.5.4/setup/`, replacing `{accountName}` with your VTEX account name. In the `Enter the ID (GTM-XXXX) from your Google Tag Manager` field, add the fake container code.
 
 ![gtm-fake-container](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/store-performance/gtm-fake-container.png)
 
