@@ -4,6 +4,7 @@ slug: "google-analytics-4-is-tracking-inconsistent-data-from-my-store"
 hidden: false
 createdAt: "2024-09-03T14:22:52.165Z"
 updatedAt: ""
+excerpt: "If Google Analytics 4 is not accurately traciing data, try server-side tagging and configuring a VTEX IO Pixel app."
 tags:
   - performance
   - analytics
