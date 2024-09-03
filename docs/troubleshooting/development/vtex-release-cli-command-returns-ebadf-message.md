@@ -29,26 +29,26 @@ Consider your app was at version `0.1.0` and a new version `0.1.1` was created o
 
 2. Update the version header from `## [Unreleased]` to `## [0.1.1] - 2024-07-15`, as follows:
 
-  ```diff
-  - ## [Unreleased]
-  + ## [0.1.1] - 2024-07-15
-  +
-  + ### Added
-  +
-  + * New feature
+    ```diff
+    - ## [Unreleased]
+    + ## [0.1.1] - 2024-07-15
+    +
+    + ### Added
+    +
+    + * New feature
 
-  ## [0.1.0] - 2024-06-03
+    ## [0.1.0] - 2024-06-03
 
-  ### Fixed
+    ### Fixed
 
-  * Bug fixes
-  ```
+    * Bug fixes
+    ```
 
 3. Open the `manifest.json` file of your app and change the app version to the new version. In this example, we are changing the version from `0.1.0` to `0.1.1`.
 
-  ```json
-  "version": “0.1.1”
-  ```
+    ```json
+    "version": “0.1.1”
+    ```
 
 4. Open a terminal in the root folder of your app.
 
