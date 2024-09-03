@@ -25,26 +25,26 @@ To associate a custom landing page with a content type, note the following when 
 
 - Any URL parameter named `{entity}_id` is identified as a content type. For example, `finder_id` creates the `${finder}` content type.
 
-  > ⚠️ For the URL definition, adding the content type identifier is not enough. You must also attach `_id` next to it. For example, if you create a URL like `/foo/:bar`, the content will be tied to that URL since there is no parameter that can be interpreted as a content type. Thus, if you access _Storefront > Site Editor_ and update the content for `/foo/skywalker`, the content related to any page matching `/foo/:bar` will also be updated.
+  > ⚠️ For the URL definition, adding the content type identifier is not enough. You must also attach `_id` next to it. For example, if you create a URL like `/store/:category`, the content will be tied to that URL since there is no parameter that can be interpreted as a content type. Thus, if you access _Storefront > Site Editor_ and update the content for `/store/bakery`, the content related to any page matching `/store/:category` will also be updated.
 
 - The page URL can have only one parameter to indicate a content type.
 - The page URL can have only one parameter ending with `_id`.
-- Any additional variable parameters in the URL are ignored when matching content. For example, if you create the route `/foo/:bar/:{entity}_id`, the same content will be delivered for `/foo/skywalker/1` and `/foo/palpatine/1` as they both relate to the `{$entity}` content type.
+- Any additional variable parameters in the URL are ignored when matching content. For example, if you create the route `/store/:category/:{entity}_id`, the same content will be delivered for `/store/bakery/1` and `/store/beverages/1` as they both relate to the `{$entity}` content type.
 
 ### Handling URL changes
 
 If you change your URL, the assets will remain associated with the content type, not the specific URL.
 
-For example, if you create a page with the URL `/store/:store_id`, where `store_id` represents the `${store}` content type, and later change it to`/store-finder/:store_id`, the assets will still be accessible at the new URL, as both URLs relate to the `${store}` content type.
+For example, if you create a page with the URL `/store/:store_id`, where `store_id` represents the `${store}` content type, and later change it to `/store-finder/:store_id`, the assets will still be accessible at the new URL, as both URLs relate to the `${store}` content type.
 
 ### Dos and Don'ts
 
 | ✅ Do |  Explanation |
 | - | - |
-| `/foo/:{entity}_id` | The URL uses a content type parameter (ending with `_id`), allowing the system to identify the content type. For example: If `{entity}` is a finder, this URL would link to the `${finder}` content type. |
+| `/store/:{entity}_id` | The URL uses a content type parameter (ending with `_id`), allowing the system to identify the content type. For example: If `{entity}` is a finder, this URL would link to the `${finder}` content type. |
 
 | ❌ Don'ts | Explanation |
 | - | - |
-| `/foo/:{entity}`|The URL is wrong because it lacks the required `_id` suffix. Without `_id`, the system cannot identify it as a content type, which means no assets will be associated with this URL. |
-| `/foo/:bar/:{entity}_id`|While this URL includes a valid content type parameter, additional variable parameters (like `:bar`) are ignored when determining content association. This can lead to unexpected content being delivered. |
-| `/foo/:{entity}_id/{entity2}_id`|The URL is not allowed because it has two parameters ending with `_id`. To maintain clarity in the content association, a URL can only have one content type parameter ending with `_id`. |
+| `/store/:{entity}`| The URL is wrong because it lacks the required `_id` suffix. Without `_id`, the system cannot identify it as a content type, which means no assets will be associated with this URL. |
+| `/store/:category/:{entity}_id`| While this URL includes a valid content type parameter, additional variable parameters (like `:category`) are ignored when determining content association. This can lead to unexpected content being delivered. |
+| `/store/:{entity}_id/{entity2}_id`| The URL is not allowed because it has two parameters ending with `_id`. To maintain clarity in the content association, a URL can only have one content type parameter ending with `_id`. |
