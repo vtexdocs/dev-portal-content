@@ -76,4 +76,4 @@ If the `@faststore/cli` is not listed, follow these steps:
 
 5. If no errors occur during or after running `yarn`, create a pull request with these changes to your remote repository to apply the updates to production.
 
-> ⚠️ If you encounter any errors when updating these dependencies, please open a ticket with [VTEX Support](https://help.vtex.com/en/support)
+> ⚠️ If you encounter any errors when updating these dependencies, please open a ticket with [VTEX Support](https://help.vtex.com/en/support).
