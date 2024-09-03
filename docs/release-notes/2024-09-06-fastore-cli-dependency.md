@@ -57,7 +57,7 @@ If the `@faststore/cli` is not listed, follow these steps:
 
     >⚠️ Replace for a `@faststore/cli` version equals or greater than `3.0.87`. The `3.0.87` is when these package dependencies changes were applied.
 
-3. Still on the `package.json` file, remove the `@faststore/cli` from the `devDependencies` property. After removal, it should look like this: 
+3. Still on the `package.json` file, remove the `@faststore/cli` from the `devDependencies` property. After removal, it should look like this:
 
     ``` package.json
     "devDependencies": {
@@ -76,4 +76,4 @@ If the `@faststore/cli` is not listed, follow these steps:
 
 5. If no errors occur during or after running `yarn`, create a pull request with these changes to your remote repository to apply the updates to production.
 
-> ⚠️ If you encounter any errors when updating these dependencies, please open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+> ⚠️ If you encounter any errors when updating these dependencies, please open a ticket with [VTEX Support](https://help.vtex.com/en/support)
