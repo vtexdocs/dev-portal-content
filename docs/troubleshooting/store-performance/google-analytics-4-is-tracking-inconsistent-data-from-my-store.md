@@ -2,7 +2,7 @@
 title: "Google Analytics 4 is tracking inconsistent data from my store"
 slug: "google-analytics-4-is-tracking-inconsistent-data-from-my-store"
 hidden: false
-createdAt: "2024-08-15T12:58:16.587Z"
+createdAt: "2024-09-03T14:22:52.165Z"
 updatedAt: ""
 tags:
   - performance
@@ -10,7 +10,7 @@ tags:
   - ga4
 ---
 
-**Tags/Keywords:** GA4 | performance | analytics
+**Keywords:** GA4 | performance | analytics
 
 After configuring [Google Analytics 4 (GA4)](https://developers.vtex.com/docs/guides/google-tag-manager), your store may experience issues with inconsistent data tracking.
 
@@ -50,7 +50,7 @@ Go to `https://{accountName}.myvtex.com/admin/portal/#/sites/default/checkout/`,
 
 ![checkout-settings-gtm](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/store-performance/checkout-settings-gtm.png)
 
-Insert the GTM script with the correct container and the server URL into the JavaScript tab within the [Checkout UI Custom app](https://developers.vtex.com/docs/apps/vtex.checkout-ui-custom) to track the events triggered on the store checkout pages.
+Insert the GTM script with the correct container and the server URL into the JavaScript tab within the [Checkout UI Custom app](https://developers.vtex.com/docs/apps/vtex.checkout-ui-custom) and click `Publish` to track the events triggered on the store checkout pages.
 
 ![checkout-custom](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/store-performance/checkout-custom.png)
 
