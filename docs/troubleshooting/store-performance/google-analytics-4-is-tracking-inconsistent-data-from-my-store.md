@@ -54,6 +54,10 @@ Insert the GTM script with the correct container and the server URL into the Jav
 
 ![checkout-custom](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/store-performance/checkout-custom.png)
 
+The expected behavior is that your store's analytics data should be consistent and reflect user interactions.
+
+After following these steps, if the error continues, open a [support ticket](https://help.vtex.com/support).
+
 ## Learn more
 
 - [Configuring Google Tag Manager](https://help.vtex.com/tutorial/integration-with-google-tag-manager--frequentlyAskedQuestions_616)
