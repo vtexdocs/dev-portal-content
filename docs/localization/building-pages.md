@@ -9,7 +9,7 @@ excerpt: "Discover how to leverage Store Framework to build various types of pag
 
 VTEX IO streamlines page creation by offering a set of pre-built components and [development tools](https://developers.vtex.com/docs/guides/developer-experience#developer-tools). These resources simplify the building and customization of different page types, such as product details pages, promotional layouts, and custom pages.
 
-This section covers a range of page-building scenarios, and each guide focuses on practical implementation, ensuring you can effectively develop pages that meet your business needs. 
+This section covers a range of page-building scenarios, and each guide focuses on practical implementation, ensuring you can effectively develop pages that meet your business needs.
 
 ## Before you begin
 
@@ -21,7 +21,7 @@ Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vt
 
 ### Check the builders
 
-Check if the builders are properly installed in your Store Theme. To use builders, you must have at least the `vtex.builder-hub@0.293.4` version installed in your account. Also, you need to specify them in the app’s `manifest.json` file. Learn more at [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders). 
+Check if the builders are properly installed in your Store Theme. To use builders, you must have at least the `vtex.builder-hub@0.293.4` version installed in your account. Also, you need to specify them in the app’s `manifest.json` file. Learn more at [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
 You must have at least the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) configured. This builder enables the development of Store Framework storefronts.
 
