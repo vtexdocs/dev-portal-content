@@ -16,8 +16,8 @@ If you are experiencing issues with your store, it is important to first determi
 
 | Issue | Description | Solutions |
 | ---- | ---- | ---- |
-| **Store is unavailable** | The store stopped functioning or had a go-live failure.  | 1. [Checking VTEX Status page](#checking-vtex-status-page)<br>2. [Checking your connection](#checking-your-connection)<br>3. [Verifying DNS configuration](#if-the-store-is-unavailable-verifying-dns-configuration)<br>4. [Checking your storefront code](#checking-your-storefront-code) |
-| **Store is slow** |  Shopping operations work, but slowly. It takes longer than expected to load or perform actions. | 1. [Checking VTEX Status page](#checking-vtex-status-page)<br>2. [Checking your connection](#checking-your-connection)<br> 3. [Reviewing customizations and integrations](#if-the-store-is-slow-reviewing-customizations-and-integrations)<br>4. [Checking your storefront code](#checking-your-storefront-code) |
+| **Store is unavailable** | The store stopped functioning or had a go-live failure.  | 1. [Checking VTEX Status page](#checking-vtex-status-page)<br>2. [Checking your connection](#checking-your-connection)<br>3. [Verifying DNS configuration](#if-the-store-is-unavailable-verifying-dns-configuration)<br>4. [Checking your storefront code and settings](#checking-your-storefront-code-and-settings) |
+| **Store is slow** |  Shopping operations work, but slowly. It takes longer than expected to load or perform actions. | 1. [Checking VTEX Status page](#checking-vtex-status-page)<br>2. [Checking your connection](#checking-your-connection)<br> 3. [Reviewing customizations and integrations](#if-the-store-is-slow-reviewing-customizations-and-integrations)<br>4. [Checking your storefront code and settings](#checking-your-storefront-code-and-settings) |
 
 Once you identify whether your store is unavailable or slow, follow the listed troubleshooting steps to solve the issue.
 
@@ -74,7 +74,7 @@ Depending on your selected storefront development solution, there are additional
 If your store uses [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework) and the topics above have not helped you, see the instructions below.
 
 * **Edition App compatibility:**
-   
+
   If your [go-live](https://developers.vtex.com/docs/guides/vtex-io-documentation-go-live) or [storefront migration](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io) has failed, it may be a good idea to check if you have the correct [account edition](https://developers.vtex.com/docs/guides/vtex-io-documentation-go-live\#account-edition).
 
 * **Store Framework performance optimization:**
