@@ -2,8 +2,8 @@
 title: "`vtex release` CLI command returns an EBADF message"
 slug: "vtex-release-cli-command-returns-ebadf-message"
 hidden: false
-createdAt: "2024-08-09T13:00:00.000Z"
-updatedAt: "2024-08-09T13:00:00.000Z"
+createdAt: "2024-09-04T13:00:00.000Z"
+updatedAt: "2024-09-04T13:00:00.000Z"
 excerpt: "Creating an app release using the VTEX IO CLI returns an EBADF error."
 tags:
   - vtex-io
@@ -13,7 +13,7 @@ tags:
 
 **Keywords:** Release | CLI
 
-When running the [VTEX IO CLI command](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#release) [vtex release](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#release), it returns an EBADF (error bad file descriptor) message. This happens because a file descriptor variable does not correctly point to a file during command execution.
+When running the [VTEX IO CLI command `vtex release`](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#release), it returns an EBADF (error bad file descriptor) message. This happens because a file descriptor variable does not correctly point to a file during command execution.
 
 The `vtex release` command creates a new version of a VTEX IO app by rewriting the `CHANGELOG.md` and the `manifest.json` files. For more details about this process, see [Releasing a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version).
 
