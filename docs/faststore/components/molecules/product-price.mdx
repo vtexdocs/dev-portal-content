@@ -24,35 +24,32 @@ It wraps two [Price](https://developers.vtex.com/docs/guides/faststore/atoms-pri
   <Tab>
 
     ```tsx
-        <ProductPrice
-          value={950.04} listPrice={999} formatter={useFormattedPrice}
-        />
+    <ProductPrice value={950.04} listPrice={999} formatter={useFormattedPrice} />
     ```
 
     ```tsx
     // Example of formatter
     interface PriceFormatterOptions {
-    decimals?: boolean
+      decimals?: boolean;
     }
 
     export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
-    return useCallback(
-    (price: number) =>
-    Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: decimals ? 2 : 0,
-    }).format(price),
-    [decimals]
-    )
-    }
+      return useCallback(
+        (price: number) =>
+          Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: decimals ? 2 : 0,
+          }).format(price),
+        [decimals]
+      );
+    };
 
     export const useFormattedPrice = (price: number) => {
-    const formatter = usePriceFormatter()
+      const formatter = usePriceFormatter();
 
-    return useMemo(() => formatter(price), [formatter, price])
-    }
-
+      return useMemo(() => formatter(price), [formatter, price]);
+    };
     ````
 
   </Tab>
