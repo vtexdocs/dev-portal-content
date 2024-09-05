@@ -11,47 +11,40 @@ A basic card that divides the content into a header and body, making it ideal fo
 
 ## Overview
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
-  <OverviewSection>
-    <Card
-      iconName="PlusCircle"
-      title="Edit profile"
-      style={{width: '300px'}}>
-      <div>
-        <p>Name</p>
-        <p><b>Jane Doe</b></p>
-      </div>
-      <hr/>
-      <div>
-        <p>Email</p>
-        <p><b>jane@doe.com</b></p>
-      </div>
-    </Card>
-  </OverviewSection>
-
-  </Tab>
-    ```tsx
-    <Card
+    <OverviewSection>
+      <Card
         iconName="PlusCircle"
-        title="Edit profile"
-        style={{width: '300px'}}>
-        <div>
-          <p>Name</p>
-          <p><b>Jane Doe</b></p>
-        </div>
-        <hr/>
-        <div>
-          <p>Email</p>
-          <p><b>jane@doe.com</b></p>
-        </div>
+        title="Card with Icon"
+        style={{ width: "300px" }}
+      >
+        <h1> First Product </h1>
+        <hr />
+        <h1> Second Product </h1>
       </Card>
-    ```
-  <Tab>
-  Code Example
-
+    </OverviewSection>{" "}
+    <OverviewSection>
+      <Card title="Card without Icon" style={{ width: "300px" }}>
+        <h1> Message </h1>
+      </Card>
+    </OverviewSection>
   </Tab>
-</Tabs>
+  ```tsx
+  <Card iconName="PlusCircle" title="Card with Icon" style={{ width: "300px" }}>
+    <h1> First Product </h1>
+    <hr />
+    <h1> Second Product </h1>
+  </Card>
+  ``` ```tsx
+  <Card title="Card without Icon" style={{ width: "300px" }}>
+    <h1> Message </h1>
+  </Card>
+  ```
+  <Tab>Code Example</Tab>
+</Tabs>;
+
+---
 
 ## Import
 
@@ -75,51 +68,30 @@ Follow the instructions in the [Importing FastStore UI component styles](/docs/c
 
 ## Usage
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-  <OverviewSection>
-    <Card
-      iconName="PlusCircle"
-      title="Card with Icon"
-      style={{width: '300px'}}>
-      <h1> First Product </h1>
-      <hr/>
-      <h1> Second Product </h1>
-    </Card>
-  </OverviewSection>
-
-{" "}
 <OverviewSection>
   <Card title="Card without Icon" style={{ width: "300px" }}>
     <h1> Message </h1>
   </Card>
-</OverviewSection>
+</OverviewSection>;
 
-  </Tab>
-    ```tsx
-    <Card
-        iconName="PlusCircle"
-        title="Card with Icon"
-        style={{width: '300px'}}>
-        <h1> First Product </h1>
-        <hr/>
-        <h1> Second Product </h1>
-      </Card>
-    ```
+```tsx
+<Card
+  iconName="PlusCircle"
+  title="Card with Icon"
+  style={{width: '300px'}}>
+  <h1> First Product </h1>
+  <hr/>
+  <h1> Second Product </h1>
+</Card>
+```
 
-    ```tsx
-     <Card
-      title="Card without Icon"
-      style={{width: '300px'}}>
-      <h1> Message </h1>
-    </Card>
-    ```
-
-  <Tab>
-  Code Example
-
-  </Tab>
-</Tabs>
+```tsx
+<Card
+  title="Card without Icon"
+  style={{width: '300px'}}>
+  <h1> Message </h1>
+</Card>
+```
 
 ---
 
