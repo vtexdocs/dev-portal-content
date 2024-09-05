@@ -50,16 +50,16 @@ If your store had a go-live failure or was functioning normally and then stopped
 | **DNS provider settings**  | If you have not configured your DNS provider settings properly, VTEX may not be able to generate the SSL certificate, leading to store unavailability. See this guide on how to [Set up DNS pointing to VTEX](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj) and double check your DNS provider settings.  |
 | **DNS propagation** | DNS propagation may take up to 48 hours after [DNS pointing](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj\#setting-up-dns-pointing). The length of this period depends on the Time To Live (TTL) you configured in your DNS provider. If you are within this timeframe, the store may not be accessible yet. Please be patient and allow sufficient time for DNS propagation to complete. |
 | **DNS pointing deadline** | Once you register your domain in VTEX, you have up to seven days to set up DNS pointing. If you miss this deadline, you must [register your domain in VTEX](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/7sM5IMx02zaHvAFTm0OxiJ\#registering-the-domain-on-vtex) again. See the [go-live guide](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/1iP90RcJvlrfQhnlxM54wo) to learn details about this process. |
-| **Cloudflare proxy**  | If cloudflare is your DNS provider, their native proxy can interfere with SSL certificate, causing your store to go down. If this is your case, learn [how to disable the Cloudflare proxy](https://help.vtex.com/en/tutorial/disable-cloudflare-proxy--75QqsXAqR7NdkRc1GZPiXb).  |
+| **Cloudflare proxy**  | If [Cloudflare](https://www.cloudflare.com/) is your DNS provider, their native proxy can interfere with the SSL certificate, causing your store to go down. If this is your case, learn [how to disable the Cloudflare proxy](https://help.vtex.com/en/tutorial/disable-cloudflare-proxy--75QqsXAqR7NdkRc1GZPiXb).  |
 | **Reverse proxy** | [Reverse proxy](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir) malfunction can cause store availability issues. When you use a reverse proxy, you give up the optimized edge service managed by VTEX and are responsible for the site's actual provisioning, which is tasked with the settings, monitoring and feature management such as header forwarding, cookies and cache management.<br><br>If this is your case, you can see this article on [How to insert a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir) and follow up with your infrastructure team or provider to learn if this is the cause of your problem.<br><br>❗ **VTEX does not recommend using reverse proxies.** |
 
 If the issue persists, you can find additional troubleshooting steps below for [Checking your storefront code and settings](\#checking-your-storefront-code-and-settings).
 
 ### If the store is slow: Reviewing customizations and integrations
 
-The VTEX platform is designed to be multi-tenant and autoscalable, which means that it can handle the needs of several merchants simultaneously without impacting individual store performance.
+The VTEX platform is designed to be multi-tenant and autoscalable, which means the platform can handle several merchants' needs simultaneously without impacting individual store performance.
 
-To maintain the overall health of the platform, VTEX may occasionally throttle unintentionally abusive requests. Therefore, if you notice slow performance, it is recommended to review your storefront code customizations and composable integrations.
+To maintain the platform's overall health, VTEX may occasionally throttle unintentionally abusive requests. Therefore, if you notice slow performance, it is recommended to review your storefront code customizations and composable integrations.
 
  Ensure that these elements are not generating excessive requests to VTEX, as this can lead to throttling issues or bottlenecks for your store. By optimizing your requests and ensuring they are within acceptable limits, you can improve the overall performance of your store while ensuring compliance with VTEX's request throttling mechanisms.
 
@@ -90,7 +90,7 @@ If your store uses [FastStore](https://developers.vtex.com/docs/guides/faststore
   See this guide on [Debugging Releases and VTEX Headless CMS publishing errors](https://v1.faststore.dev/how-to-guides/troubleshooting/debugging-releases-publishing).
 * **Lighthouse tests**
 
-   [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) is an open-source tool that helps developers assess website performance. FastStore projects run automatic Lighthouse tests with every pull request. It is very important that you consider the results of these automatic tests to identify and mitigate any performance issues before they impact your store in production.
+   [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) is an open-source tool that helps developers assess website performance. FastStore projects run automatic Lighthouse tests with every pull request. You need to consider the results of these automatic tests to identify and mitigate any performance issues before they impact your store in production.
 
   >ℹ️ Learn more about [using Lighthouse in your FastStore project](https://v1.faststore.dev/how-to-guides/performance/lighthouse\#how-to-run-lighthouse-audits).
 * **Data fetching**
