@@ -13,20 +13,65 @@ It wraps two [Price](https://developers.vtex.com/docs/guides/faststore/atoms-pri
 
 ## Overview
 
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <ProductPrice
+              value={950.04} listPrice={999} formatter={useFormattedPrice}
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+    ```tsx
+        <ProductPrice
+          value={950.04} listPrice={999} formatter={useFormattedPrice}
+        />
+    ```
+
+    ```tsx
+    // Example of formatter
+    interface PriceFormatterOptions {
+    decimals?: boolean
+    }
+
+    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
+    return useCallback(
+    (price: number) =>
+    Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: decimals ? 2 : 0,
+    }).format(price),
+    [decimals]
+    )
+    }
+
+    export const useFormattedPrice = (price: number) => {
+    const formatter = usePriceFormatter()
+
+    return useMemo(() => formatter(price), [formatter, price])
+    }
+
+    ````
+
+  </Tab>
+</Tabs>
+
 ## Import
 
 Import the component from [@faststore/ui](/../components)
 
 ```tsx
 import { ProductPrice } from '@faststore/ui'
-```
+````
 
 ### Import Styles into your FastStore project
 
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/molecules/ProductPrice/styles.scss';
+@import "@faststore/ui/src/components/molecules/ProductPrice/styles.scss";
 ```
 
 Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
@@ -46,26 +91,26 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 ```tsx copy
 // Example of formatter
 interface PriceFormatterOptions {
-  decimals?: boolean
+  decimals?: boolean;
 }
 
 export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
   return useCallback(
     (price: number) =>
-      Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
+      Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
         minimumFractionDigits: decimals ? 2 : 0,
       }).format(price),
     [decimals]
-  )
-}
+  );
+};
 
 export const useFormattedPrice = (price: number) => {
-  const formatter = usePriceFormatter()
+  const formatter = usePriceFormatter();
 
-  return useMemo(() => formatter(price), [formatter, price])
-}
+  return useMemo(() => formatter(price), [formatter, price]);
+};
 ```
 
 ---
