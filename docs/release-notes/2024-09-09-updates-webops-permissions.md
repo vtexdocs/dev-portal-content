@@ -1,6 +1,6 @@
 ---
 title: "FastStore WebOps: Preview your store changes before deployment"
-slug: "2024-09-09-faststore-core-new-version"
+slug: "2024-09-09-updates-webops-permissions"
 type: "added"
 excerpt: "FastStore WebOps users can now preview their pull request changes in a live environment before merging into production, reducing the risk of bugs and improving store quality."
 createdAt: "2024-09-05T10:00:00.000Z"
@@ -42,7 +42,7 @@ To enable the **Deployment Previews**, update the FastStore WebOps permissions o
    > An example of a change, you can go to `src/themes/custom-theme.scss` and change one of the [Global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) of the stylesheet.
 
 8. Submit the changes as a pull request.
-9. Once you have open the pull request, look for the deployment preview link in the pull request details.:
+9. Once you have opened the pull request, look for the deployment preview link in the pull request details.:
 
    ![view-deployment](https://vtexhelp.vtexassets.com/assets/docs/src/pr-preview___7a3e866da3e934077b5a1f595dc00d69.png)
 
