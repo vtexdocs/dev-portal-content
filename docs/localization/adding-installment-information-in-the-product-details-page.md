@@ -148,25 +148,24 @@ Now that we've defined the `availableInstallments` field using GraphQL types and
   ```ts ClientProduct.ts
   import { gql } from "@faststore/core/api";
 
-export const fragment = gql(`
-  fragment ClientProduct on Query {
-    product(locator: $locator) {
-      availableInstallments {
-        installmentPaymentSystemName
-        installmentValue
-        installmentInterest
-        installmentNumber
+  export const fragment = gql(`
+    fragment ClientProduct on Query {
+      product(locator: $locator) {
+        availableInstallments {
+          installmentPaymentSystemName
+          installmentInterest
+          installmentNumber
+       }
       }
     }
-  }
-`);
-```
+  `);
+  ```
 
   </CH.Code>
 
-- `gql`: Imported from @faststore/core/api to construct the GraphQL fragment.
-- `ClientProduct`: Fragment to indicate it extends the product query.
-- The fragment defines the specific fields we want to retrieve from the `availableInstallments` data structure.
+    - `gql`: Imported from @faststore/core/api to construct the GraphQL fragment.
+    - `ClientProduct`: Fragment to indicate it extends the product query.
+    - The fragment defines the specific fields we want to retrieve from the `availableInstallments` data structure.
 
 ---
 
@@ -174,26 +173,26 @@ export const fragment = gql(`
 
 Add a product fragment focusing on installment details to ensure consistency in data retrieval on the client and server sides. In the `ServerProduct.ts` file, add the following:
 
-<CH.Code show={["ServerProduct.ts"]}>
+  <CH.Code show={["ServerProduct.ts"]}>
 
-```ts ServerProduct.ts
-import { gql } from "@faststore/core/api";
+  ```ts ServerProduct.ts
+  import { gql } from "@faststore/core/api";
 
-export const fragment = gql(`
-  fragment ServerProduct on Query {
-    product(locator: $locator) {
-      availableInstallments {
-        installmentPaymentSystemName
-        installmentValue
-        installmentInterest
-        installmentNumber
+  export const fragment = gql(`
+    fragment ServerProduct on Query {
+      product(locator: $locator) {
+        availableInstallments {
+          installmentPaymentSystemName
+          installmentValue
+          installmentInterest
+          installmentNumber
+        }
       }
     }
-  }
-`);
-```
+  `);
+  ```
 
-</CH.Code>
+  </CH.Code>
 
 > ℹ️ For further information on code implementation, see the [`fragments`](https://github.com/vtex-sites/playground.store/tree/main/src/fragments) folder available in the playground.store repository.
 
