@@ -196,7 +196,6 @@ import { gql } from "@faststore/core/api";
   </CH.Code>
 
 > ℹ️ For further information on code implementation, see the [`fragments`](https://github.com/vtex-sites/playground.store/tree/main/src/fragments) folder available in the playground.store repository.
-
 ---
 
 ### Formatting installment values
@@ -206,7 +205,7 @@ For a more user-friendly display, you can format the installment values to inclu
 1. In the `src` folder of your store code, create a `utils` folder.
 2. Inside `utils`, create the `priceFormatter.ts` file and add the following:
 
-<CH.Code show={["priceFormatter.ts"]}>
+  <CH.Code show={["priceFormatter.ts"]}>
 
   ```ts priceFormatter.ts
   import FaststoreConfig from "../../faststore.config.js";
@@ -219,7 +218,7 @@ For a more user-friendly display, you can format the installment values to inclu
   };
   ```
 
-</CH.Code>
+  </CH.Code>
 
 - `FaststoreConfig`: Imported to access the current store's locale and currency settings.
 - `priceFormatter`: Takes a numeric value and formats it based on the store's locale and currency.
@@ -283,11 +282,11 @@ Now that we've established the rationale for retrieving installment data let's c
 
   </CH.Code>
 
-- `priceFormatter`: Format installment values.
-- `styles`: Stylesheet for the BuyButtonWithDeatils imported from the `.scss` file.
-- [`usePDP`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions): Hook to retrieve the PDP context containing product and extension data.
-- We conditionally display the first installment option if it's interest-free (you can change this to display all installments).
-- The component renders a section containing the installment information and the buy button.
+    - `priceFormatter`: Format installment values.
+    - `styles`: Stylesheet for the BuyButtonWithDeatils imported from the `.scss` file.
+    - [`usePDP`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions): Hook to retrieve the PDP context containing product and extension data.
+    - We conditionally display the first installment option if it's interest-free (you can change this to display all installments).
+    - The component renders a section containing the installment information and the buy button.
 
 ---
 
