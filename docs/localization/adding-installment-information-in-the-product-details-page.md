@@ -136,7 +136,6 @@ export default resolvers;
 Now that we've defined the `availableInstallments` field using GraphQL types and resolvers, we need to specify where this information will be used in your storefront queries. You can do this through GraphQL fragments.
 
 1. In the `src` folder of your store code, create a `fragments` folder.
-
 2. In the `fragments` folder, create the following files:
 
    - `ClientProduct.ts`: Defines the client-side fragment.
@@ -144,7 +143,7 @@ Now that we've defined the `availableInstallments` field using GraphQL types and
 
 3. In the `ClientProduct.ts` file, defines the GraphQL fragment for retrieving installment information:
 
-<CH.Code show={["ClientProduct.ts"]}>
+  <CH.Code show={["ClientProduct.ts"]}>
 
   ```ts ClientProduct.ts
   import { gql } from "@faststore/core/api";
