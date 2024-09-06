@@ -1,13 +1,13 @@
 ---
-title: "I cant update the EAN of my SKUs via API"
-slug: "i-cant-update-the-ean-of-my-skus-via-api"
-excerpt: "Updating EANs in VTEX can lead to catalog sync issues affecting inventory."
+title: "I am getting 500 errors in VTEX IO CLI"
+slug: "i-am-getting-500-errors-in-vtex-io-cli"
 hidden: false
-createdAt: "2024-07-17T12:40:00.508Z"
-updatedAt: "2024-09-02T09:20:00.508Z"
+createdAt: "2024-06-28T14:00:00.000Z"
+updatedAt: ""
+excerpt: "Running VTEX IO CLI commands returns a 500 internal server error"
 tags:
-        - catalog
-        - sku
+    - vtex-io
+    - cli
 ---
 
 **Product tags:** Catalog
