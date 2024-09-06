@@ -89,6 +89,6 @@ Request to retrieve a specific page:
 
 The `REST-Content-Total` response header provides the total number of documents that match your query, allowing you to calculate the number of pages available based on the `_size` parameter.
 
-For example, if the response header is `REST-Content-Total: 5000` and you are retrieving 1000 documents per page (`_size=1000`), you know that there are 5 pages of data available. 
+For example, if the response header is `REST-Content-Total: 5000` and you are retrieving 1000 documents per page (`_size=1000`), you know that there are 5 pages of data available.
 
 You can use this information to determine if there are more pages to fetch and to set up logic in your application to continue retrieving data until all pages are processed.
