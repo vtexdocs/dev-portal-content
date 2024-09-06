@@ -1,8 +1,8 @@
 ---
-title: "Site Editor"
-slug: "site-editor"
+title: "Working with Site Editor"
+slug: "working-with-site-editor"
 hidden: false
-createdAt: "2024-08-15T12:58:16.587Z"
+createdAt: "2024-09-06T14:53:36.032Z"
 updatedAt: ""
 excerpt: "Discover how Site Editor simplifies the customization of your Store Framework storefront."
 ---
@@ -23,10 +23,29 @@ Learn more in [Site Editor - Overview](https://help.vtex.com/tutorial/site-edito
 
 ## Before you begin
 
-- Make sure your store has a Store Theme developed with VTEX IO and Store Framework, following the Storefront guide.
-- Check if the builders are properly installed in your Store Theme.
-- Build your store pages, following the [Building pages](https://developers.vtex.com/docs/guides/building-pages) guides.
-- Configure your components, following the [Using components](https://developers.vtex.com/docs/guides/using-components) guides.
+<Steps>
+
+### Develop your Store Theme
+
+Make sure your store has a Store Theme developed following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
+
+### Check the builders
+
+Check if the builders are properly installed in your Store Theme. To use builders, you must have at least the `vtex.builder-hub@0.293.4` version installed in your account. Also, you need to specify them in the app’s `manifest.json` file. Learn more at [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders). 
+
+You must have at least the following builders configured:
+- [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
+- [react builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions.
+
+### Create the store pages
+
+Develop your store pages following the [Building pages](https://developers.vtex.com/docs/guides/building-pages) guides.
+
+### Configure your components
+
+Set up your components following the [Using components](https://developers.vtex.com/docs/guides/using-components) guides.
+
+</Steps>
 
 ## Essential concepts
 
