@@ -1,10 +1,10 @@
 ---
-title: Site Editor
-slug: site-editor
+title: "Site Editor"
+slug: "site-editor"
 hidden: false
-createdAt: 2024-08-15T12:58:16.587Z
+createdAt: "2024-08-15T12:58:16.587Z"
 updatedAt: ""
-excerpt: Discover how Site Editor simplifies the customization of your Store Framework storefront.
+excerpt: "Discover how Site Editor simplifies the customization of your Store Framework storefront."
 ---
 
 Site Editor works as a Content Management System (CMS) designed for stores developed with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), reflecting the blocks defined in the [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) of the VTEX account.
