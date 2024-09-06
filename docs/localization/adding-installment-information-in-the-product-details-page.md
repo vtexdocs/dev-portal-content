@@ -153,9 +153,10 @@ Now that we've defined the `availableInstallments` field using GraphQL types and
       product(locator: $locator) {
         availableInstallments {
           installmentPaymentSystemName
+          installmentValue
           installmentInterest
           installmentNumber
-       }
+        }
       }
     }
   `);
