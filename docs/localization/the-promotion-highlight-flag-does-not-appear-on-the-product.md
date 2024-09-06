@@ -1,10 +1,10 @@
 ---
-title: The promotion highlight flag does not appear on the product.
-slug: the-promotion-highlight-flag-does-not-appear-on-the-product
+title: "The promotion highlight flag does not appear on the product."
+slug: "the-promotion-highlight-flag-does-not-appear-on-the-product"
 hidden: false
-createdAt: 2024-08-21T13:43:55.841Z
+createdAt: "2024-08-21T13:43:55.841Z"
 updatedAt: ""
-excerpt: When creating a promotion and enabling the highlight option, the product does not display the highlight flag in the store.
+excerpt: "When creating a promotion and enabling the highlight option, the product does not display the highlight flag in the store."
 tags:
   - store-framework
   - product-highlights
@@ -41,7 +41,7 @@ Using the [Get promotion or tax by ID](https://developers.vtex.com/docs/api-refe
 2. Go to the page template where the product should be displayed with the highlight flag.
 3. Check if the template has a product highlight block declared.
 
-> ⚠ The Product Highlights blocks require a product context to work properly. Therefore, when declaring these blocks, ensure that they are placed in a theme template or a block where this context is available, such as `store.product` and `product-summary.shelf`.
+  >⚠ The Product Highlights blocks require a product context to work properly. Therefore, when declaring these blocks, ensure that they are placed in a theme template or a block where this context is available, such as `store.product` and `product-summary.shelf`.
 
 4. If a product highlight block is not declared, follow the [Product Highlights](https://developers.vtex.com/docs/apps/vtex.product-highlights) documentation to set it up.
 
