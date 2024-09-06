@@ -224,7 +224,6 @@ For a more user-friendly display, you can format the installment values to inclu
 - `priceFormatter`: Takes a numeric value and formats it based on the store's locale and currency.
 
 > ℹ️ For further details on code implementation, see the [`utils`](https://github.com/vtex-sites/playground.store/tree/main/src/utils) folder available in the playground.store repository.
-
 ---
 
 ### Creating a new component with installments
