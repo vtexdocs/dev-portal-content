@@ -162,13 +162,11 @@ export const fragment = gql(`
 `);
 ```
 
-</CH.Code>
+  </CH.Code>
 
-```
 - `gql`: Imported from @faststore/core/api to construct the GraphQL fragment.
 - `ClientProduct`: Fragment to indicate it extends the product query.
 - The fragment defines the specific fields we want to retrieve from the `availableInstallments` data structure.
-```
 
 ---
 
