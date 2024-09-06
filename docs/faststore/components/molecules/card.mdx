@@ -18,16 +18,6 @@ A basic card that divides the content into a header and body, making it ideal fo
       iconName="PlusCircle"
       title="Card with Icon"
       style={{width: '300px'}}>
-      <h1> First Product </h1>
-      <hr/>
-      <h1> Second Product </h1>
-    </Card>
-  </OverviewSection>
-
-  <OverviewSection>
-    <Card
-      title="Card without Icon"
-      style={{width: '300px'}}>
       <h1> Message </h1>
     </Card>
   </OverviewSection>
@@ -35,23 +25,12 @@ A basic card that divides the content into a header and body, making it ideal fo
   </Tab>
     ```tsx
     <Card
-        iconName="PlusCircle"
-        title="Card with Icon"
-        style={{width: '300px'}}>
-        <h1> First Product </h1>
-        <hr/>
-        <h1> Second Product </h1>
-      </Card>
-    ```
-
-    ```tsx
-     <Card
-      title="Card without Icon"
+      iconName="PlusCircle"
+      title="Card with Icon"
       style={{width: '300px'}}>
       <h1> Message </h1>
     </Card>
     ```
-
   <Tab>
   Code Example
 
@@ -83,10 +62,23 @@ Follow the instructions in the [Importing FastStore UI component styles](/docs/c
 ## Usage
 
 <OverviewSection>
-  <Card title="Card without Icon" style={{ width: "300px" }}>
-    <h1> Message </h1>
-  </Card>
-</OverviewSection>
+    <Card
+      iconName="PlusCircle"
+      title="Card with Icon"
+      style={{width: '300px'}}>
+      <h1> First Product </h1>
+      <hr/>
+      <h1> Second Product </h1>
+    </Card>
+  </OverviewSection>
+
+  <OverviewSection>
+    <Card
+      title="Card without Icon"
+      style={{width: '300px'}}>
+      <h1> Message </h1>
+    </Card>
+  </OverviewSection>
 
 ```tsx
 <Card
