@@ -193,7 +193,7 @@ import { gql } from "@faststore/core/api";
   `);
   ```
 
-  </CH.Code>
+</CH.Code>
 
 > ℹ️ For further information on code implementation, see the [`fragments`](https://github.com/vtex-sites/playground.store/tree/main/src/fragments) folder available in the playground.store repository.
 ---
