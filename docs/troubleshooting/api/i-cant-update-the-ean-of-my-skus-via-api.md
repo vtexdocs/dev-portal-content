@@ -10,8 +10,6 @@ tags:
     - sku
 ---
 
-**Keywords:** SKU, product, EAN, catalog
-
 When trying to update the EAN (European Article Number), which contains the barcode information for a SKU, you may face issues with catalog synchronization between the VTEX Admin and API. This can impact inventory management and customer experience.
 
 ## Solution
