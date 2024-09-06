@@ -174,10 +174,10 @@ Now that we've defined the `availableInstallments` field using GraphQL types and
 
 Add a product fragment focusing on installment details to ensure consistency in data retrieval on the client and server sides. In the `ServerProduct.ts` file, add the following:
 
-  <CH.Code show={["ServerProduct.ts"]}>
+<CH.Code show={["ServerProduct.ts"]}>
 
-  ```ts ServerProduct.ts
-  import { gql } from "@faststore/core/api";
+```ts ServerProduct.ts
+import { gql } from "@faststore/core/api";
 
   export const fragment = gql(`
     fragment ServerProduct on Query {
@@ -208,16 +208,16 @@ For a more user-friendly display, you can format the installment values to inclu
 
 <CH.Code show={["priceFormatter.ts"]}>
 
-```ts priceFormatter.ts
-import FaststoreConfig from "../../faststore.config.js";
+  ```ts priceFormatter.ts
+  import FaststoreConfig from "../../faststore.config.js";
 
-export const priceFormatter = (value: number) => {
-  return value.toLocaleString(FaststoreConfig.session.locale, {
-    style: "currency",
-    currency: FaststoreConfig.session.currency.code,
-  });
-};
-```
+  export const priceFormatter = (value: number) => {
+    return value.toLocaleString(FaststoreConfig.session.locale, {
+      style: "currency",
+      currency: FaststoreConfig.session.currency.code,
+    });
+  };
+  ```
 
 </CH.Code>
 
@@ -283,13 +283,11 @@ Now that we've established the rationale for retrieving installment data let's c
 
   </CH.Code>
 
-```
 - `priceFormatter`: Format installment values.
 - `styles`: Stylesheet for the BuyButtonWithDeatils imported from the `.scss` file.
 - [`usePDP`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions): Hook to retrieve the PDP context containing product and extension data.
 - We conditionally display the first installment option if it's interest-free (you can change this to display all installments).
 - The component renders a section containing the installment information and the buy button.
-```
 
 ---
 
