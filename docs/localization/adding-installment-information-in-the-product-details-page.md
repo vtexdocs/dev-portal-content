@@ -28,7 +28,7 @@ First, you must configure the necessary GraphQL files to retrieve and structure 
    - `typeDefs`
 
   > ℹ️ For further information on code implementation, see the [`vtex`](https://github.com/vtex-sites/playground.store/tree/main/src/graphql/vtex) folder available in the playground.store repository.
-  <CH.Scrollycoding>
+<CH.Scrollycoding>
 
 ### Defining types
 
@@ -56,7 +56,8 @@ extend type StoreProduct {
 
 </CH.Code>
 
-- `Installments`: Specifies the structure of each installment option. Each installment has properties for:
+- `Installments`: Specifies the structure of each installment option.
+Each installment has properties for:
 - `installmentPaymentSystemName`: Name of the payment system used (e.g., Credit Card).
 - `installmentValue`: Amount of each installment.
 - `installmentInterest`: Interest rate applied per installment.
