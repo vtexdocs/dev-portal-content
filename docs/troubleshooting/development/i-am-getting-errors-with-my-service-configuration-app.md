@@ -5,8 +5,9 @@ hidden: false
 createdAt: "2024-09-09T10:00:00.000Z"
 updatedAt: "2024-09-09T10:00:00.000Z"
 tags:
-  -apps
-  -services
+    - apps
+    - vtex-io
+    - services
 ---
 
 If you are [developing a configuration app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps), you may be getting some errors due to the service that your app is configuring being installed or linked to a different workspace you are working in. That happens because, when creating a new configuration app, the configuration builder first looks for the schema of that configuration in all the apps installed in your current workspace. Consequently, linking your app may fail if the configuration builder cannot find this specific configuration.
