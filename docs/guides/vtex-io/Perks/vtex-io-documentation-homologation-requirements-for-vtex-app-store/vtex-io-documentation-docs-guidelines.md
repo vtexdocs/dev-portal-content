@@ -133,7 +133,7 @@ The `{insert app's name}` is responsible for `{app's purpose}` so you can `{job 
 
 ![insert-an-image-preview](/)
 
-## Before you start
+## Before you begin
 
 You need to have `{insert what the user needs to have: an account in another platform, CLI, knowledge in another app, etc}`.
 

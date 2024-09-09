@@ -18,7 +18,7 @@ A favorable way out is to set your store to fetch product prices on the client-s
 
 Learn below how to set your store up to decrease page response time with asynchronous prices!
 
-## Step by step
+## Instructions
 
 1. Ensure that your store is not fetching the price data on the server-side by setting the `simulationBehavior` prop (from the [Search Result](https://developers.vtex.com/docs/guides/vtex-search-result/) app) to `skip`:
 

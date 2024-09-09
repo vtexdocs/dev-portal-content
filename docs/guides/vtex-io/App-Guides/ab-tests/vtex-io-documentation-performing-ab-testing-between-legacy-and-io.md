@@ -23,7 +23,7 @@ flowchart LR;
 
 3. **Check Edition App Version:** Verify that your `development` workspace has the `vtex.edition-store@5.x` Edition app installed by running  `vtex edition get`  in your terminal. If it's not installed, [Open a ticket to the VTEX support team](https://help-tickets.vtex.com/smartlink/sso/login/zendesk?_ga=2.222513819.1487123273.1647865109-1001456323.1619912759) to request its installation in the new Development workspace.
 
-## Step by step
+## Instructions
 
 ### Step  1 - Setting up the Legacy CMS
 

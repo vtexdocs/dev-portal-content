@@ -11,7 +11,7 @@ Once you're using VTEX IO Store Framework, making a new version of your theme pu
 
 Note that your Store Theme works exactly as any other VTEX IO app. This means it takes on an app's default behavior, with its own versioning and deploys.
 
-## Step by step
+## Instructions
 
 If you’re comfortable with the configurations you’ve performed and want your new theme to be made available to any user, you’ll need to:
 

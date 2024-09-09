@@ -20,7 +20,7 @@ When deciding which translation the store should display, the Messages app first
 
 To disable the Messages' automatic translation service, check the following section.
 
-## Step by step
+## Instructions
 
 1. Access the admin.
 2. Go to *Account Settings > My apps*.

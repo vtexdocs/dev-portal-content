@@ -10,7 +10,7 @@ If your store is a [Multistore](https://help.vtex.com/en/tutorial/creating-multi
 
 Hence, for a step by step on how to access this information, check the following section.
 
-## Step by step
+## Instructions
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
 2. Access the **GraphQL admin IDE**.

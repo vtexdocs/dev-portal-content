@@ -26,7 +26,7 @@ Below you can learn more about some of the Profile System's features and how to 
 
 >⚠️ Data stored in the new Profile System is not related to documents saved in [Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api) or [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2). The API endpoints and features described in this article only apply to documents registered in the new Profile System designed to handle PII data architecture.
 
-## Before you start
+## Before you begin
 
 - Check the [changes in VTEX features behavior to handle PII data](https://developers.vtex.com/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data) that impact other integrations.
 - Check the [current limitations related to PII data architecture](https://developers.vtex.com/docs/guides/limitations-of-the-pii-data-architecture-during-closed-beta). Note that, at the moment, [Master Data triggers](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270) are not supported by the PII platform version Profile System, for example.

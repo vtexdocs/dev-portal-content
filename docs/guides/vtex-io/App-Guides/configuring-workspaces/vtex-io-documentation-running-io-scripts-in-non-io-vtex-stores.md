@@ -19,7 +19,7 @@ In the following sections, we'll teach you how to develop and implement your own
 
 Before proceeding with the steps outlined in this document, ensure that you have the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) installed on your machine.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Clone the boilerplate repository
 

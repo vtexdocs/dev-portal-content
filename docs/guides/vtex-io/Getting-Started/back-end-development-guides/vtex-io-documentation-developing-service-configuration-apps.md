@@ -35,7 +35,7 @@ end
 C -- Provides schema configurations --> S
 ```
 
-## Step by step
+## Instructions
 
 ### Step 1 - Creating a Service app
 

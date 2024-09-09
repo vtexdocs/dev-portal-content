@@ -15,7 +15,7 @@ However, you may feel that some translations done by the app are not what you wa
 
 In the next section, we present you a step-by-step on how to overwrite a translation from your store's catalog, such as a product name or a product description, and text messages exported from an app.
 
-## Step by step
+## Instructions
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the **GraphQL IDE app** by running the following in your terminal.
 

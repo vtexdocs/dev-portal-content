@@ -13,7 +13,7 @@ As you expand your business globally, it becomes essential to properly internati
 
 Before you start the internationalization process, it's essential to understand [trade policies](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV). Trade policies contain configurations for catalog, pricing, promotions, logistics, customer segmentation, and payments for different sales strategies. If your store operates in multiple sales channels with varying settings, you need to [create a new trade policy](https://help.vtex.com/tutorial/creating-a-trade-policy--563tbcL0TYKEKeOY4IAgAE) for each unique setup. Thus, before proceeding with this guide, ensure you have set up different trade policies that align with your store's operational requirements.
 
-## Step by step
+## Instructions
 
 1. Access the Admin.
 2. Go to **Store Settings > Channels > Trade Policies**.

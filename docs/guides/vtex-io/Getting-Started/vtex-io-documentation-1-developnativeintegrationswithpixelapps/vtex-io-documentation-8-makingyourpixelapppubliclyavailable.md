@@ -12,7 +12,7 @@ Until this point, your Pixel app has been restricted to your local development e
 
 Once you are happy with your app development, the next step is to transition it into a publicly accessible state, allowing other users to install and utilize your Pixel app. It's worth emphasizing that [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) the app you are working on in a development workspace is not enough. To make it available in the VTEX IO platform, you will need to release, publish, test, and, finally, deploy it. 
 
-## Step by step
+## Instructions
 
 ### Step 1 - Defining your app distribution
 

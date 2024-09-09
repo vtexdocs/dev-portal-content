@@ -26,7 +26,7 @@ An integration app created from our App Template already includes:
 - Complete **search endpoint** to retrieve seller configurations using [AppKey and AppToken](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) generated in the seller’s account, defined by the appVendor.
 - **Link to [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register)**, allowing sellers to map their catalog according to the marketplace’s definitions.
 
-## Before you start
+## Before you begin
 
 The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io). Before you begin creating your app from our template, make sure to:
 

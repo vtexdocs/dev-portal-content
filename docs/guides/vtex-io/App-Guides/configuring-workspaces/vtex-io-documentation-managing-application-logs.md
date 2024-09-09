@@ -19,7 +19,7 @@ To complete this guide, you must have the VTEX IO CLI installed in your machine.
 
 ---
 
-## Step by step
+## Instructions
 
 ### Implementing the VTEX IO Logging Service
 

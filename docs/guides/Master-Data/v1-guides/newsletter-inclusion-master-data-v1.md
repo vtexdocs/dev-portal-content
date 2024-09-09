@@ -17,7 +17,7 @@ Integrating newsletter subscriptions with **Master Data** streamlines customer m
 
 - Install the SafeData app in your VTEX account. SafeData provides a middleware for retrieving and storing Master Data (v1 e v2) information directly from the frontend. For more information, please refer to the [SafeData documentation](https://developers.vtex.com/docs/apps/vtex.safedata).
 
-## Step by step
+## Instructions
 
 Below, we provide a step-by-step guide to assist you in setting up this configuration:
 

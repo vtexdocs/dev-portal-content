@@ -25,7 +25,7 @@ Before proceeding any further with this step-by-step:
 
 It's also worth noting that **this technique only works if the custom pages were created via the CMS** rather than the Store Theme.
 
-## Step by step
+## Instructions
 
 ### Linking a landing page to a binding
 

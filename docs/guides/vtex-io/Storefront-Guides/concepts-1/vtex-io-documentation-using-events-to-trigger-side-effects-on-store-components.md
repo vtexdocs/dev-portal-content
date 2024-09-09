@@ -34,7 +34,7 @@ In the step by step below, you are going to learn how events and the `customPixe
 
 ![open-minicart-demo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components-0.gif)
 
-## Step by step
+## Instructions
 
 1. Make sure the apps whose blocks are responsible for sending and receiving the desired event are already listed as dependencies in the theme's `manifest.json` file:
 

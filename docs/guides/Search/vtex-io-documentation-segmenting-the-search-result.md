@@ -14,7 +14,7 @@ Take the following example in which different results for the same search are ob
 
 ![Segmented Catalog B2B](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-segmenting-the-search-result.gif)
 
-## Step by step
+## Instructions
 
 To create segmented search results, we'll create a new VTEX IO app from the [`vtex.search-segment-resolver`](https://github.com/vtex-apps/search-segment-resolver) boilerplate and customize it to establish our own segmentation rules.
 

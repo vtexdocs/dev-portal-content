@@ -16,7 +16,7 @@ To resolve this scenario, we use the `markers` prop. Following the same logic as
 
 Find out how to configure the `markers` prop in the step-by-step below.
 
-## Step by step
+## Instructions
 
 > ℹ️ Before going through the steps, make sure that the block in which you are working accepts the `markers` prop. You can check this in its <a href="https://developers.vtex.com/docs/vtex-io-apps/">documentation</a>.
 

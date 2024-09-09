@@ -12,7 +12,7 @@ seeAlso:
 
 In this step, you will send the current pricing information for all your products to VTEX.
 
-## Before you start
+## Before you begin
 
 It is common for store owners to delegate price calculations to the ERP. In such scenarios, the ERP is responsible for calculating the price of each SKU and sending this price to VTEX.
 

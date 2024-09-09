@@ -19,7 +19,7 @@ Ensure a smooth development process by having the following prerequisites in pla
 - **TypeScript Familiarity:** Acquire a basic understanding of TypeScript, as we'll be using the `node` [Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) for TypeScript development. For details, refer to [Typescript's Official Documentation](https://www.typescriptlang.org/docs/).
 - **Understanding of Clients:** Clients play a crucial role in facilitating interactions between your application and both external and internal services. Learn more about [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
 
-## Step by step
+## Instructions
 
 ### Step 1 - Setting up your VTEX IO app
 

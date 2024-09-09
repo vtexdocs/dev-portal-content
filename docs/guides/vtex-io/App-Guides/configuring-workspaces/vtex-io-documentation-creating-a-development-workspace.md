@@ -10,7 +10,7 @@ Development [workspaces](https://developers.vtex.com/docs/guides/vtex-io-documen
 
 Since Development workspaces operate in isolation from user traffic, they are ideal for making code changes. Note: Development workspaces cannot be [promoted to Master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/) or used for [A/B testing](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing/); these capabilities are reserved for [Production workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace/).
 
-## Step by step
+## Instructions
 
 1. [Log in to](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) the desired VTEX account.
 2. Create a development workspace by running the following command:

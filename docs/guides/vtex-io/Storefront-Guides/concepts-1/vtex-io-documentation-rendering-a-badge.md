@@ -25,7 +25,7 @@ To render a badge on top of a [Product Summary](/docs/guides/vtex-product-summar
 
 3. Also, make sure you have as a dependency `"vtex.product-summary": "2.x"` in your theme’s `manifest.json`.
 
-## Step by step
+## Instructions
 
 1. In your theme’s `manifest.json` file, add the Product Highlights app and Stack Layout as a dependency:
 

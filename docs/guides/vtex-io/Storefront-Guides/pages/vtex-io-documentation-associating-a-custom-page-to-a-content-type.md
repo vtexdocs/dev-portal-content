@@ -15,7 +15,7 @@ A few days have passed and you decided to change the `/store/:store_id` URL to `
 
 For implementation details on how to associate a custom page to a content type, check the following sections.
 
-## Step by step
+## Instructions
 
 In this step by step, you will learn how to create a content type and customize different pages associated with it via the Admin. As an example, we'll use the `${collection}` content type.
 

@@ -8,7 +8,7 @@ updatedAt: "2022-02-10T15:59:10.915Z"
 
 In this step, you will send the number of products you currently have in stock to VTEX.
 
-## Before you start
+## Before you begin
 
 The **Shipping** module is where you control your store's inventory and the processes of receiving, managing, packing, and shipping orders. It includes concepts like:
 

@@ -23,7 +23,7 @@ B -->|Yes| C[Deprecate app version]
 B -->|No| D[Release bug-fix version]
 ```
 
-## Step by step
+## Instructions
 
 To deprecate an app version, take the following steps:
 

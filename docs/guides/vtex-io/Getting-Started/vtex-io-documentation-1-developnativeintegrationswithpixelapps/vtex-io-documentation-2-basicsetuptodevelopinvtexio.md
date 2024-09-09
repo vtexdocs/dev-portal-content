@@ -15,7 +15,7 @@ In this part of the tutorial, you will:
 - Create a new development workspace.
 - Access your store using a workspace.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Installing the VTEX IO CLI
 

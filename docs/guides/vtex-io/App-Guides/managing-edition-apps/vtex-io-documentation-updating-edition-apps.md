@@ -11,7 +11,7 @@ After an [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documenta
 
 To do this, follow the walk-through below:
 
-## Step by step
+## Instructions
 
 1. Open the Edition App folder and access the `apps.json` file using the code editor of your preference.
 2. Make the desired apps and settings changes in the file.

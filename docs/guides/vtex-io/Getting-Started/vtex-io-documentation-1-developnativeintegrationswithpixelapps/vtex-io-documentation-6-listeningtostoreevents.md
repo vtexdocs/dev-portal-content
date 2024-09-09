@@ -13,7 +13,7 @@ Some services provided by third-party solutions may rely on store events. Events
 
 In these scenarios, your Pixel app must be able to listen to the desired events and provide the required data to the third-party service in question.
 
-## Step by step
+## Instructions
 
 1. Open the `react/index.tsx` file.
 2. Write your script based on your Pixel app needs. Some store events you can use in your Pixel app are:

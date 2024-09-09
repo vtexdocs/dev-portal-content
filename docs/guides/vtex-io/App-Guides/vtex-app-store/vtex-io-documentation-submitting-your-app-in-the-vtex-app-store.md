@@ -51,7 +51,7 @@ Finally, before submitting your app to the VTEX App Store, ensure you've complet
 - [**Become a registered VTEX App Store developer**](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer): To submit an app to the VTEX App Store, you need to be a registered VTEX App Store developer.
 - [**Prepared your app for distribution**](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution): Ensure your app adheres to VTEX's [business](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-vtex-app-store), [design](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines), [marketing](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets), and [engineering](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines) guidelines. These guidelines guarantee the standard of quality, viability, and usability of all apps made available through the VTEX App Store, so you must be aware of them before submitting your extension for the homologation process.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Submitting the app for validation
 
