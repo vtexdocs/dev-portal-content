@@ -9,7 +9,7 @@ updatedAt: "2024-09-09T16:00:00.000Z"
 
 The [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) now includes **Deployment Previews**, a feature that allows users to preview their pull request changes in a live environment before merging them into production. This feature helps minimize the risk of introducing bugs or unexpected behaviors to the live store, safeguarding the store user experience.
 
-![webops-preview-example](https://vtexhelp.vtexassets.com/assets/docs/src/webops-preview___81240fb41a9ba63f108020f4193147e8.gif)
+![webops-preview-example](https://vtexhelp.vtexassets.com/assets/docs/src/webops-deployment-overview___2ad1ba00eeeae1bb590d159271449936.gif)
 
 ## What has changed?
 
@@ -35,7 +35,7 @@ To enable the **Deployment Previews**, update the FastStore WebOps permissions o
 4. In the FastStore WebOps app section, click `Configure`.
 5. You will see the message `FastStore WebOps is requesting an update to its permissions`. Click `Review request`.
 
-   ![review-webops-permissions](https://vtexhelp.vtexassets.com/assets/docs/src/webops-review-permissions___2369dff18d193c85e02c640ac2a99c89.png)
+   ![review-webops-permissions](https://vtexhelp.vtexassets.com/assets/docs/src/webops-pr-preview___ca4ce57e2afa1323eb0c678e98f6c73b.png)
 
 6. Click `Accept new permissions`.
 7. Make a small change to your store's code.
@@ -47,6 +47,6 @@ To enable the **Deployment Previews**, update the FastStore WebOps permissions o
 9. Submit the changes as a pull request.
 10. Once you have opened the pull request, look for the deployment preview link in the pull request details:
 
-      ![view-deployment](https://vtexhelp.vtexassets.com/assets/docs/src/pr-preview___7a3e866da3e934077b5a1f595dc00d69.png)
+      ![view-deployment](https://vtexhelp.vtexassets.com/assets/docs/src/webops-pr-deploy-preview___ac839d3368cab18043e87c9516333198.png)
 
 11. Click `View deployment`, and a new browser tab will open with a new store preview.
