@@ -179,6 +179,17 @@ hideTOC: true
     </ProductCard>
   </CardItem>
   <CardItem
+    title="Product Price"
+    description="ProductPrice displays the product's listing and spot price."
+    actionPath="/docs/guides/faststore/molecules-product-price"
+  >
+    <ProductPrice
+      value={950.04}
+      listPrice={999}
+      formatter={useFormattedPrice}
+    />
+  </CardItem>
+  <CardItem
     title="Product Title"
     description="Used on Product Details Page, wraps the product name, a product label and the rating."
     actionPath="/docs/guides/faststore/molecules-product-title"    
@@ -190,17 +201,6 @@ hideTOC: true
       ratingValue={4}
     />
 </CardItem>
-  <CardItem
-    title="Product Price"
-    description="Displays product's selling and listing prices."
-    actionPath="/docs/guides/faststore/molecules-product-price"
-  >
-    <ProductPrice
-      value={950.04}
-      listPrice={999}
-      formatter={useFormattedPrice}
-    />
-  </CardItem>
   <CardItem
     title="Quantity Selector"
     description="Allows customers to select the quantity of a given product to purchase."
