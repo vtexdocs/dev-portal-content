@@ -16,13 +16,13 @@ Ensure that your Store Theme is using the [`styles` builder](https://developers.
 
 ## Instructions
 
-### Step 1 - Create an Icon Pack
+### Step 1 - Creating an icon pack
 
 1. In your Store Theme, create a new folder named `iconpacks` within the `styles` folder.
 2. Inside the `iconpacks` folder, create a file named `iconpack.svg`.
 3. Copy the content of the [iconpack.svg](https://github.com/vtex-apps/store-icons/blob/master/styles/iconpacks/iconpack.svg?short_path=62ebf4b) file and paste it into your `iconpack.svg` file.
 
-### Step 2 - Customize Icons
+### Step 2 - Customizing icons
 
 The `iconpack.svg` file contains all the store's icons, with each icon having a unique `id` and grouped inside a `<g>` tag. These `id`s allow you to reference and modify individual icons.
 
