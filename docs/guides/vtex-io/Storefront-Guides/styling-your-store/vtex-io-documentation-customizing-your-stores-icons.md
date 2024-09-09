@@ -12,7 +12,7 @@ updatedAt: "2022-12-13T20:17:44.425Z"
 
 Although these can satisfy your store’s needs, you may want to override and customize default icons according to your store's identity. If so, simply follow the steps below.
 
-## Step by step
+## Instructions
 
 1. In your `store-theme` code, create a new folder named `iconpacks/` within `styles/`.
 2. Inside `iconpacks/`, create the file `iconpack.svg`.

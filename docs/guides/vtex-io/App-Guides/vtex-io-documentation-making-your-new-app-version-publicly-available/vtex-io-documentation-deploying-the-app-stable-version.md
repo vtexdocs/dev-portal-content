@@ -16,7 +16,7 @@ Before proceeding any further, make sure the app you are about to deploy has alr
 
 Also, keep in mind that after publishing your app, you must wait 7 minutes before deploying it. Otherwise, you'll receive the following error: **Invalid state transition**. If you are deploying a **hotfix**, you can use the **`--force`** flag to instantly deploy your new app version. This flag is available only for VTEX IO CLI versions higher than `2.118.0`.
 
-## Step by step
+## Instructions
 
 If you have already published and validated your app, take the steps below to deploy your app's candidate version as a **stable version**.
 

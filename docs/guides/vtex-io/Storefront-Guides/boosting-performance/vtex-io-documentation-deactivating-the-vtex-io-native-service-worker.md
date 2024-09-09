@@ -15,7 +15,7 @@ A PWA is a sort of web app used to promote certain advantageous features to user
 As a result of this native usage, you may face a conflict when working with a third party service responsible for providing its own service worker to operate.
 Since a website can only have one service worker running, you can **choose to deactivate the native service worker provided by VTEX IO in order to successfully use a third party solution in your store**.
 
-## Step by step
+## Instructions
 
 1. Access your account's admin.
 2. Access CMS and then Store.

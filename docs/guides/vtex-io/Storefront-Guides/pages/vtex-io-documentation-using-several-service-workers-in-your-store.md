@@ -21,7 +21,7 @@ graph LR
     SWB -->|Service workers package| S(Store)
 ```
 
-## Step by step
+## Instructions
 
 Follow these instructions to create an app using the Service Worker builder. If you are editing an already-existing app, ensure the Service Worker builder is declared in the `manifest.json`'s builders list, as shown below.
  

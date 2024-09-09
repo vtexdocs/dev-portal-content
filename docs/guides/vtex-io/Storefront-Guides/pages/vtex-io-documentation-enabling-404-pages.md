@@ -18,7 +18,7 @@ In VTEX IO, 404 pages are **natively** enabled for inexistent product pages and 
 
 > ⚠️ In rare cases when the parameter `map=specificationFilter` is present in the path of such search originated URLs, 404 pages may be rendered. This happens because the platform cannot interpret these URL segments as originating from user searches since it cannot find the `map=ft` parameter usually present in such URLs. This behavior is uncommon and is being addressed by our product team.
 
-## Step by step
+## Instructions
 
 1. In your VTEX account's admin, access the App section and click on **My apps**.
 2. Look for the **Rewriter** app and click on the gear button icon to go to its settings.

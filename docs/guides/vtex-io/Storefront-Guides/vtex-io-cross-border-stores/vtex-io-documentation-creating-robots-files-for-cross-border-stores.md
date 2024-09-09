@@ -19,7 +19,7 @@ You must adjust these directives according to your scenario.
 
 >⚠️ This feature is available for stores using `vtex.edition-store@3.x` [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app/). To check which Edition App is installed on your account, run `vtex edition get`. If it's a different Edition, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to the VTEX Support team asking for the installation of the `vtex.edition-store@3.x` Edition App.
 
-## Step by step
+## Instructions
 
 In this step by step, you'll learn how to develop and release your own *Robots app*, an app responsible for managing your cross-border store's `robots.txt` files.
 

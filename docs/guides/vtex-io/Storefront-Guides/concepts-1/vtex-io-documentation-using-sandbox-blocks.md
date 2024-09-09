@@ -12,7 +12,7 @@ VTEX Store Framework is a very powerful tool meant to attend most client needs. 
 
 The **Sandbox App** is basically a component that supports iFrames. Therefore, it allows you to use custom `html`, `css` and `js` code to customize your store.
 
-## Step by step
+## Instructions
 
 1. Go ahead and open your `manifest.json` file and declare the Sandbox app as a dependency.
 

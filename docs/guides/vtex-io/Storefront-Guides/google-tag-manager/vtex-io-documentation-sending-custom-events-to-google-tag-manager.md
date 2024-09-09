@@ -9,7 +9,7 @@ This guide will teach you how to send custom events to [Google Tag Manager (GTM)
 
 > ℹ️ For standard Google Tag Manager events and Universal Analytics Enhanced Ecommerce features, please consider using the [Google Tag Manager Pixel app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-google-tag-manager).
 
-## Step by step
+## Instructions
 
 ### Step 1 - Tracking a custom event
 

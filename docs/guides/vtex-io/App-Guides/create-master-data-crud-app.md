@@ -25,7 +25,7 @@ Before diving into coding your app, it's essential to grasp some fundamental con
 - VTEX IO service development
   - [Developing services on VTEX IO](https://learn.vtex.com/docs/course-service-course-lang-en).
 
-## Step by step
+## Instructions
 
 To create a [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) app, follow these steps:
 

@@ -15,7 +15,7 @@ This guide will teach you the essential steps to configure your development envi
 
 When working with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), you are essentially developing within [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io/). This means you have access to a comprehensive suite of frontend and backend [VTEX IO apps](https://developers.vtex.com/docs/vtex-io-apps) to help you build and customize your storefront.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Installing VTEX IO CLI
 

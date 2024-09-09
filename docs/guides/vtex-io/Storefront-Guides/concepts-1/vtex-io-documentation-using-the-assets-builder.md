@@ -17,7 +17,7 @@ The Assets Builder has two main advantages:
 
 Check out the instructions to use it below:
 
-## Step by step
+## Instructions
 
 1. Add the  `assets-builder`  to your theme's builder list in the  `manifest.json`  file. For example:
 

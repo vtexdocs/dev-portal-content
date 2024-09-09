@@ -23,7 +23,7 @@ To avoid this unnecessary overhead, it is possible to disable the legacy `OrderF
 
 Find out how to enable the Order Form optimization in the steps below.
 
-## Step by step
+## Instructions
 
 1. In the VTEX Admin, access **Store Settings > Storefront > Store**.
 

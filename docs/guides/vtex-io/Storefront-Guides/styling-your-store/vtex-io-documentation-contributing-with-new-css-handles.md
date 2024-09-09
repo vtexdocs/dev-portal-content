@@ -12,7 +12,7 @@ At the end of the day, they are nothing more than the store's layout building as
 
 In the step by step below, we will guide you on how to **create new CSS Handle whenever you feel the need**. To that end, we will create an example of a brand new Handle for a filter from the Search Results page.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Finding the React component
 

@@ -26,7 +26,7 @@ However, considering literal translations and cultural factors, we understand th
 
 This is possible via the `catalog-graphql` app, which is the GraphQL interface of the Catalog API.
 
-## Step by step
+## Instructions
 
 Follow this step-by-step guide to translate text messages from your store's catalog.
 

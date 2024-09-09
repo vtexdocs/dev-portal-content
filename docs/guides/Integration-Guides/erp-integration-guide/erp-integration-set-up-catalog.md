@@ -9,7 +9,7 @@ In this step, we give you an overview of how to prepare your catalog structure t
 
 > While this article provides the basic flow of integration, we recommend you check the implementation details provided on our [Catalog integration guide](https://developers.vtex.com/docs/guides/catalog-integration), as well as each **Learn more** section below.
 
-## Before you start
+## Before you begin
 
 Before uploading your entire catalog to VTEX it is very important to think carefully about your desired catalog structure. The way you structure your catalog and product specifications can have a great impact on site navigation, order integration and other aspects of your store.
 

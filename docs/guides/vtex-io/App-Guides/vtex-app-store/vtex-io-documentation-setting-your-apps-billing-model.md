@@ -16,7 +16,7 @@ When preparing your app for distribution, you must first establish if your new a
 
 Take the following steps to make your app private:
 
-### Step by step
+### Instructions
 
 1. Open your project in any code editor of your preference.
 2. Open the `manifest.json` file and remove the `billingOptions` field.
@@ -29,7 +29,7 @@ When making your app public available to the VTEX IO ecosystem, you must set up 
 
 > ℹ️ You can [contact the VTEX support team](https://help.vtex.com/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) to get more information about the contracts and accounts that have installed your app.
 
-### Step by step
+### Instructions
 
 The first step in making an app public is defining whether the app will be charged or not. Consider the following according to your scenario:
 

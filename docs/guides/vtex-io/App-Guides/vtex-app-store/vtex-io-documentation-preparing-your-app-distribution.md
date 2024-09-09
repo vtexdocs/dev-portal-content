@@ -19,7 +19,7 @@ Before proceeding, make sure you have already:
 
 2. Registered as [VTEX App Store developer](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer).
 
-## Step by step
+## Instructions
 
 ### Step 1 - Preparing your app billing options
 

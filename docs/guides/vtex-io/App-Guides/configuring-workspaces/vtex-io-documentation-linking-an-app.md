@@ -10,7 +10,7 @@ For development, an app can be linked to a **development workspace** so that any
 
 >⚠️ Linking an app to a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) is not possible.
 
-## Step by step
+## Instructions
 
 1. Open the terminal and log in to your VTEX account.
 

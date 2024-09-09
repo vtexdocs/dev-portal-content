@@ -21,7 +21,7 @@ To render an app in VTable you must follow these steps:
 
 Below you can also learn more about all necessary [JSON schema configurations](#json-schema-configurations).
 
-## Step by step
+## Instructions
 
 ### Step 1 - Creating a JSON schema
 

@@ -22,7 +22,7 @@ With VTEX IO CLI, you can log in to your VTEX account, manage workspaces, develo
 
 - Check our recommended practices for tooling, features, flexibility, scalability, performance, accessibility, internationalization, and styling. For more information, please refer to [Best practices for developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components).
 
-## Step by step
+## Instructions
 
 ### Step 1 - Getting started with VTEX IO CLI
 

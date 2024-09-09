@@ -12,7 +12,7 @@ seeAlso:
 ---
 To become a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) and be able to manage apps and configurations across multiple accounts with [Edition Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app), you must first check if your account meets the conditions described in the [Prerequisites](#prerequisites) section.
 
-If your account is qualified to be a Sponsor Account, follow the [Step by Step](#step-by-step) section to activate this behavior on your account.
+If your account is qualified to be a Sponsor Account, follow the [Instructions](#instructions) section to activate this behavior on your account.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ To be eligible to become a Sponsor account, make sure you have:
 
   > ℹ️ You can check the Edition App installed on your account by running `vtex edition get` in your terminal. If you see the following error `Message: Edition not set`, [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) requesting the installation of either the `vtex.edition-business@0.x` or `vtex.edition-store@2.x`. See [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) for more information.
 
-## Step by step
+## Instructions
 
 If your account meets the prerequisites described in the previous section, take the following steps to become a Sponsor Account.  
 
