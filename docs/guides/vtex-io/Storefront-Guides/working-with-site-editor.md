@@ -7,9 +7,9 @@ updatedAt: ""
 excerpt: "Discover how Site Editor simplifies the customization of your Store Framework storefront."
 ---
 
-Site Editor works as a Content Management System (CMS) designed for stores developed with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), reflecting the blocks defined in the [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) of the VTEX account.
+[Site Editor](https://help.vtex.com/tutorial/site-editor-overview) works as a Content Management System (CMS) designed for stores developed with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), reflecting the blocks defined in the [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) of the VTEX account.
 
-Based on the source code, the Site Editor section on the VTEX Admin displays an editable version of the website's storefront, enabling non-technical users to manage content as desired and modifying components and their behavior through a friendly interface.
+Based on the source code, the Site Editor displays an editable version of the website's storefront, enabling non-technical users to manage content as desired and modifying components and their behavior through a friendly interface.
 
 In your VTEX Admin, go to **Storefront > Site Editor** to see the main available tools.
 
@@ -17,7 +17,7 @@ In your VTEX Admin, go to **Storefront > Site Editor** to see the main available
 
 Changes made in Site Editor are immediately reflected in the store, and every storefront block can have its properties changed there. For example, you can change the content of a rich text block and shelf properties, such as which collection is being shown, among other changes.
 
-In this context, developers are responsible for building custom components tailored to specific needs, defining the structure and behavior of these components within the Store Theme, and ensuring seamless integration with Site Editor. This integration allows non-technical users to manage and update components easily, empowering store administrators to make changes to their storefronts without modifying the codebase.
+> ℹ️ Developers are responsible for creating components, defining the structure of the [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme), and ensuring seamless integration with Site Editor. This integration allows non-technical users to manage and update components easily, empowering store administrators to make changes to their storefronts without modifying the codebase.
 
 Learn more in [Site Editor - Overview](https://help.vtex.com/tutorial/site-editor-overview--299Dbeb9mFczUTyNQ9xPe1).
 
@@ -27,7 +27,7 @@ Learn more in [Site Editor - Overview](https://help.vtex.com/tutorial/site-edito
 
 ### Develop your Store Theme
 
-Make sure your store has a Store Theme developed following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
+Make sure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
 
 ### Check the builders
 
