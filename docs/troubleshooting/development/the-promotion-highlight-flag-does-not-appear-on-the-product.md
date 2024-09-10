@@ -23,7 +23,7 @@ To display the promotion highlight on a product, follow the steps below.
 
 Make sure your promotion is configured properly and has the highlight option enabled. You can check this directly in the VTEX Admin or using a VTEX API.
 
-#### **VTEX Admin**
+#### VTEX Admin
 
 1. In the VTEX Admin, go to **Promotions > Promotions**.
 2. Open the promotion you configured.
@@ -31,7 +31,7 @@ Make sure your promotion is configured properly and has the highlight option ena
 
 ![is-featured](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/development/is-featured-en.png)
 
-#### **VTEX API**
+#### VTEX API
 
 Using the [Get promotion or tax by ID](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#get-/api/rnb/pvt/calculatorconfiguration/-idCalculatorConfiguration-) API, check if the `isFeatured` field is set as **true**.
 
