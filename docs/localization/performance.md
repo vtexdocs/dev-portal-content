@@ -1,10 +1,10 @@
 ---
-title: Performance
-slug: performance
+title: "Performance"
+slug: "performance"
 hidden: false
 createdAt: ""
 updatedAt: ""
-excerpt: Explore best practices and tools for continuously optimizing website performance.
+excerpt: "Explore best practices and tools for continuously optimizing website performance."
 ---
 
 In ecommerce, website performance directly impacts the shopper experience. It may affect **sales conversion rate**, **user session time**, and other relevant metrics. Every millisecond counts and influences the shopper's decision-making process and your store website **rank in search engine results**. Therefore, ensuring that your website is as fast and performant as possible is crucial, which leads to **high scores in [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) audits**.
