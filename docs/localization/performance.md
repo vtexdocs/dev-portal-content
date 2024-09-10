@@ -2,12 +2,12 @@
 title: "Performance"
 slug: "performance"
 hidden: false
-createdAt: ""
+createdAt: "2024-09-10T12:08:37.773Z"
 updatedAt: ""
 excerpt: "Explore best practices and tools for continuously optimizing website performance."
 ---
 
-In ecommerce, website performance directly impacts the shopper experience. It may affect **sales conversion rate**, **user session time**, and other relevant metrics. Every millisecond counts and influences the shopper's decision-making process and your store website **rank in search engine results**. Therefore, ensuring that your website is as fast and performant as possible is crucial, which leads to **high scores in [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) audits**.
+In ecommerce, website performance directly impacts the shopper experience. It may affect **sales conversion rate**, **user session time**, and other relevant metrics. Every millisecond counts, influencing the shopper's decision-making process and affecting your store's **search engine ranking**. Therefore, ensuring that your website is as fast and performant as possible is crucial, which leads to **high scores in [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) audits**.
 
 ## Performance slowdowns
 
@@ -19,7 +19,7 @@ Some things to keep in mind:
 
 - **Page weight:** Page weight is the total size of a web page, including all the resources that need loading (i.e., images, stylesheets, and other static files). The heavier the files and data your website sends to the client, the longer the browser takes to render your page. Hence, reducing page weight is a great opportunity to improve website performance.
 
-  Page weight issues are mainly related to:
+Page weight issues are mainly related to:
 
   - Uncompressed files.
   - Unoptimized images.
