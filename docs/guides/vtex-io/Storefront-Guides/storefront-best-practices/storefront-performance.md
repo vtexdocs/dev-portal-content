@@ -1,6 +1,6 @@
 ---
 title: "Performance"
-slug: "performance"
+slug: "storefront-performance"
 hidden: false
 createdAt: "2024-09-10T12:08:37.773Z"
 updatedAt: ""
@@ -15,7 +15,7 @@ As your project becomes more complex, many factors may slow down website perform
 
 Some things to keep in mind:
 
-- **Third-party scripts:** Third-party scripts are one of the leading causes of performance slowdowns. These scripts trigger additional network requests to multiple servers and are likely to block DOM construction, keeping the main thread busy and delaying pages rendering.
+- **Third-party scripts:** Third-party scripts are one of the leading causes of performance slowdowns. These scripts trigger additional network requests to multiple servers and are likely to block DOM construction, keeping the main thread busy and delaying page rendering.
 
 - **Page weight:** Page weight is the total size of a web page, including all the resources that need loading (i.e., images, stylesheets, and other static files). The heavier the files and data your website sends to the client, the longer the browser takes to render your page. Hence, reducing page weight is a great opportunity to improve website performance.
 
