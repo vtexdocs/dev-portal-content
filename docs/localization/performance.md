@@ -19,12 +19,12 @@ Some things to keep in mind:
 
 - **Page weight:** Page weight is the total size of a web page, including all the resources that need loading (i.e., images, stylesheets, and other static files). The heavier the files and data your website sends to the client, the longer the browser takes to render your page. Hence, reducing page weight is a great opportunity to improve website performance.
 
-Page weight issues are mainly related to:
+  Page weight issues are mainly related to:
 
-  - Uncompressed files.
-  - Unoptimized images.
-  - Unoptimized fonts.
-  - Unclean code.
+    - Uncompressed files.
+    - Unoptimized images.
+    - Unoptimized fonts.
+    - Unclean code.
 
 - **HTTP requests:** When a user visits a web page, the browser sends multiple HTTP requests to load all the resources (i.e., images, stylesheets, fonts, etc.) needed to render the web page. Downloading these resources, however, significantly impacts the loading time of the page. Therefore, besides optimizing images, compressing files, and reducing download size, it is also important to consider minimizing download frequency.
 
