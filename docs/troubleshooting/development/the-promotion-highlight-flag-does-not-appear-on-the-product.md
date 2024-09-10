@@ -1,5 +1,5 @@
 ---
-title: "The promotion highlight flag does not appear on the product."
+title: "The promotion highlight flag does not appear on the product"
 slug: "the-promotion-highlight-flag-does-not-appear-on-the-product"
 hidden: false
 createdAt: "2024-09-10T12:08:37.773Z"
