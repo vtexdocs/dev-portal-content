@@ -2,8 +2,8 @@
 title: "How to keep attachments from original orders in subscriptions"
 slug: "how-to-keep-attachments-from-original-orders-in-subscriptions"
 hidden: false
-createdAt: "2024-09-09T15:00:00.209Z"
-updatedAt: "2024-09-09T15:00:00.459Z"
+createdAt: "2024-09-10T15:00:00.958Z"
+updatedAt: "2024-09-10T15:00:00.958Z"
 ---
 
 [Subscriptions](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453) is the VTEX solution for customers who want to make recurring purchases at the store on a regular schedule. When customers subscribe, they define what products they want to acquire regularly and at the frequency they want these automatic orders to be created.
@@ -30,7 +30,7 @@ The table below shows how the SKU grouping works:
 
 | **Original order** | **Subscription order grouping different attachments for the same SKU** | **Behavior** |
 | :--- | :--- | :--- |
-| <p>Total: 8 items<ul><li>[1] SKU X - Attachment A: Type I<ul><li>Quantity: 2</li></ul></li><li>[2] SKU X - Attachment A: Type II<ul><li>Quantity: 3</li></ul></li><li>[3] SKU X - No attachment<ul><li>Quantity: 1</li></ul></li><li>[4] SKU X - No attachment<ul><li>Quantity: 1</li></ul></li><li>[5] SKU Y - No attachment<ul><li>Quantity: 1</li></ul></li></ul></p> | <p>Total: 8 items<ul><li>[1] SKU X - Attachment A: Type I + SKU X - Attachment A: Type II + SKU X - No attachment<ul><li>Quantity: 7</li></ul></li><li>[2] SKU Y - No attachment<ul><li>Quantity: 1</li></ul></li></ul></p>| When the original order has the same SKUs, with and without attachments, the subscription order groups them together. |
+| <p>Total: 8 items<ul><li>[1] SKU X - Attachment A: Type I<ul><li>Quantity: 2</li></ul></li><li>[2] SKU X - Attachment A: Type II<ul><li>Quantity: 3</li></ul></li><li>[3] SKU X - No attachment<ul><li>Quantity: 1</li></ul></li><li>[4] SKU X - No attachment<ul><li>Quantity: 1</li></ul></li><li>[5] SKU Y - No attachment<ul><li>Quantity: 1</li></ul></li></ul></p> | <p>Total: 8 items<ul><li>[1] SKU X - Attachment A: Type I + SKU X - Attachment A: Type II + SKU X - No attachment<ul><li>Quantity: 7</li></ul></li><li>[2] SKU Y - No attachment<ul><li>Quantity: 1</li></ul></li></ul></p> | When the original order has the same SKUs, with and without attachments, the subscription order groups them together. |
 
 You can change this behavior so that subscription orders created from original orders containing the same SKUs with different attachments are not grouped together but kept separate.
 
