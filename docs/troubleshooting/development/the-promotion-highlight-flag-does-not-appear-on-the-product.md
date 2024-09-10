@@ -2,7 +2,7 @@
 title: "The promotion highlight flag does not appear on the product."
 slug: "the-promotion-highlight-flag-does-not-appear-on-the-product"
 hidden: false
-createdAt: "2024-08-21T13:43:55.841Z"
+createdAt: "2024-09-10T12:08:37.773Z"
 updatedAt: ""
 excerpt: "When creating a promotion and enabling the highlight option, the product does not display the highlight flag in the store."
 tags:
