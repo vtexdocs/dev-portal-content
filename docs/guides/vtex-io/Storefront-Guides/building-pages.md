@@ -62,7 +62,7 @@ linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a
 
 <WhatsNextCard
 title="Creating a Black Friday page from template"
-description="Explore our templates to create promotional pages.”
+description="Explore our templates to create promotional pages."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-black-friday-page-from-template"
 linkTitle="See more"
 />
