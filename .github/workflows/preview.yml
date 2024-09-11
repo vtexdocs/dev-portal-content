@@ -63,16 +63,31 @@ jobs:
               output += 'You can now access the edited pages with the following URLs:\n'
 
               for (const file of files) {
-                const slug = file.split('/').pop().split('.')[0]
+                const parts = file.split('/');
+                const category = parts[1];
+                const slug = file.split('/').pop().split('.')[0];
+                console.log(`Processing file: ${file}, category: ${category}, slug: ${slug}, path: ${paths[slug] || 'not found'}`)
+                
                 if (!paths[slug]) {
-                  output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file? `
-                  output += `Maybe you can find it in https://developers.vtex.com/docs/guides/${slug}\n`
+                  output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file? `;
+                  if (["troubleshooting", "guides"].includes(category)) {
+                    url = `https://developers.vtex.com/docs/${category}/${slug}`;
+                  } else if (category === "release-notes") {
+                    url = `https://developers.vtex.com/updates/release-notes/${slug}`;
+                  } else if (category === "faststore") {
+                    const lastFolder = parts[parts.length - 2];
+                    url = `https://developers.vtex.com/docs/guides/faststore/${lastFolder}-${slug}`;
+                  } else {
+                    url = `https://developers.vtex.com/docs/guides/${slug}`;
+                  }
+                  console.log(url)
+                  output += `Maybe you can find it in ${url}\n`;
                 } else {
-                  output += `* https://developers.vtex.com/${paths[slug]}\n`
+                  output += `* https://developers.vtex.com/${paths[slug]}\n`;
                 }
               }
             }
-
+            
             core.setOutput('preview-links', output)
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
