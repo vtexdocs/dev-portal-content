@@ -7,7 +7,7 @@ updatedAt: ""
 excerpt: "Discover how to leverage Store Framework to build various types of pages tailored to your business needs."
 ---
 
-VTEX IO streamlines page creation by offering a set of pre-built components and [development tools](https://developers.vtex.com/docs/guides/developer-experience#developer-tools). These resources simplify the building and customization of different page types, such as product details pages, promotional layouts, and custom pages.
+VTEX IO streamlines page creation by offering a set of pre-built components and [development tools](https://developers.vtex.com/docs/guides/developer-experience#developer-tools). These resources simplify building and customizing different page types, such as product details pages, promotional layouts, and custom pages.
 
 This section covers a range of page-building scenarios, and each guide focuses on practical implementation, ensuring you can effectively develop pages that meet your business needs.
 
@@ -17,29 +17,29 @@ This section covers a range of page-building scenarios, and each guide focuses o
 
 ### Develop your Store Theme
 
-Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed according to the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
+Make sure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
 
 ### Check the builders
 
-Check if the builders are properly installed in your Store Theme. To use builders, you must have at least the `vtex.builder-hub@0.293.4` version installed in your account. Also, you need to specify them in the app’s `manifest.json` file. Learn more at [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
+Check if the builders are properly installed in your Store Theme. To use builders, your account must have at least version `vtex.builder-hub@0.293.4` installed. Also, you need to specify them in the app's `manifest.json` file. Learn more in [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
-You must have at least the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) configured. This builder enables the development of Store Framework storefronts.
+Make sure the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) is configured, as it enables the development of Store Framework storefronts.
 
 ### Learn about VTEX IO apps
 
-Become familiar with the [VTEX IO apps](https://developers.vtex.com/docs/vtex-io-apps).
+Familiarize yourself with [VTEX IO apps](https://developers.vtex.com/docs/vtex-io-apps).
 
 </Steps>
 
 ## Essential concepts
 
-To better understand how to build your store’s pages, you should comprehend the concepts of  **components** and **templates**.
+To better understand how to build your store pages, you should understand the concepts of **components** and **templates**.
 
-Components are building blocks built on the [VTEX IO development platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [React](https://react.dev/) technology, used to create storefronts and admin apps.
+Components are building blocks created using the [VTEX IO development platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [React](https://react.dev/) technology, which are used to create storefronts and admin apps.
 
 Learn more in the [Using components] section.
 
-A template refers to the structural layout of your site’s pages. Templates define the components for various pages, such as the home, product, and search results pages, by declaring `json` blocks that render these components.
+A template refers to the structural layout of your site pages. Templates define the components for various pages, such as the home, product, and search results pages, by declaring `json` blocks that render these components.
 
 Learn more in the [Configuring templates](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates) guide.
 
