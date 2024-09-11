@@ -6,7 +6,7 @@ excerpt: "The new FastStore CLI version now depends on the FastStore Core packag
 createdAt: "2024-09-03T11:00:00.000Z"
 ---
 
-To simplify the installation process and reduce potential version conflicts, the [FastStore Core (`@faststore/core`)](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) package now directly depends on [FastStore CLI (`@faststore/cli`)](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli).
+To simplify the installation process and reduce potential version conflicts, the [FastStore CLI (`@faststore/cli`)](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli) package now directly depends on [FastStore Core (`@faststore/core`)](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
 
 ## What has changed?
 
@@ -18,7 +18,7 @@ Now, the new `@faststore/cli` version depends on the `@faststore/core` package, 
 
 If the `@faststore/cli` is already listed in your `dependencies`, no further action is needed. To check if the package is listed, open your FastStore project in a code editor, go to the `package.json` file, and check the `dependencies` property. For example:
 
-``` package.json
+```json package.json
  "dependencies": {
     "@faststore/cli": "^3.0.87",
     "next": "^13.5.6",
@@ -35,7 +35,7 @@ If the `@faststore/cli` is not listed, follow these steps:
 
 2. In the `dependencies` property, replace `@faststore/core` with `@faststore/cli`. Before removing the `@faststore/core`, the `dependencies` property might look like this:
 
-    ``` package.json
+    ```json package.json
     "dependencies": {
         "@faststore/core": "^3.0.xx",
         "next": "^13.5.6",
@@ -59,7 +59,7 @@ If the `@faststore/cli` is not listed, follow these steps:
 
 3. Still on the `package.json` file, remove the `@faststore/cli` from the `devDependencies` property. After removal, it should look like this:
 
-    ``` package.json
+    ```json package.json
     "devDependencies": {
         "@cypress/code-coverage": "^3.12.1",
         "@faststore/lighthouse": "^3.0.68",
