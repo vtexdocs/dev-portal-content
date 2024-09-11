@@ -7,7 +7,7 @@ updatedAt: ""
 excerpt: "Discover how to leverage Store Framework to build various types of pages tailored to your business needs."
 ---
 
-VTEX IO streamlines page creation by offering a set of pre-built components and [development tools](https://developers.vtex.com/docs/guides/developer-experience#developer-tools). These resources simplify building and customizing different page types, such as product details pages, promotional layouts, and custom pages.
+Store Framework streamlines page creation by offering a set of pre-built components and [development tools](https://developers.vtex.com/docs/guides/developer-experience#developer-tools). These resources simplify building and customizing different page types, such as product details pages, promotional layouts, and custom pages.
 
 This section covers a range of page-building scenarios, and each guide focuses on practical implementation, ensuring you can effectively develop pages that meet your business needs.
 
@@ -17,7 +17,7 @@ This section covers a range of page-building scenarios, and each guide focuses o
 
 ### Develop your Store Theme
 
-Make sure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
+Make sure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Getting Started](https://developers.vtex.com/docs/guides/getting-started-3) tutorial.
 
 ### Check the builders
 
@@ -49,7 +49,7 @@ Learn more in the [Configuring templates](https://developers.vtex.com/docs/guide
 
 <WhatsNextCard
 title="Building a product details page"
-description="Discover how to create a product page for your store."
+description="Discover how to create a product details page for your store."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-product-details-page"
 linkTitle="See more"
 />
