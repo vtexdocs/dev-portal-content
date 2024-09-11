@@ -4,7 +4,7 @@ slug: "2024-09-11-faststore-cli-dependency"
 type: "added"
 excerpt: "The new FastStore CLI version now depends on the FastStore Core package, simplifying the installation process and reducing potential version conflicts."
 createdAt: "2024-09-11T11:00:00.000Z"
-createdAt: "2024-09-11T11:30:00.000Z"
+updatedAt: "2024-09-11T11:30:00.000Z"
 ---
 
 To simplify the installation process and reduce potential version conflicts, the [FastStore CLI (`@faststore/cli`)](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli) package now directly depends on [FastStore Core (`@faststore/core`)](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
