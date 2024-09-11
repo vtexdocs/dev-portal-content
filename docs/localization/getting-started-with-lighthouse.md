@@ -104,7 +104,7 @@ Check in the following how Lighthouse classifies TBT times:
 |--|--|
 |Over 600|<span className="text-2xl text-red-500">▲</span>  Poor|
 |200 - 600|<span className="text-xl text-orange-500">■</span> Needs improvement|
-|0 - 200|<span className="text-xl text-green-500">●</spa> Good|
+|0 - 200|<span className="text-xl text-green-500">●</span> Good|
 
 TBT is mainly affected by JavaScript and third-party scripts parsing and execution. Besides removing or reducing JavaScript code, it is possible to improve TBT by splitting long tasks into smaller ones, improving code efficiency, and implementing lazy loading.
 
