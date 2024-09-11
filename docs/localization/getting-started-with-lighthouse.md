@@ -35,7 +35,7 @@ There are different ways to conduct a Lighthouse audit: from [PageSpeed Insights
 
 ### FastStore WebOps - Lighthouse Scores
 
-For stores using [FastStore](https://developers.vtex.com/docs/guides/faststore),  you can run Lighthouse audit using the ways presented in the prior section and you can also streamline your web audits by using the [Lighthouse Scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores) tool for the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) app. 
+For stores using [FastStore](https://developers.vtex.com/docs/guides/faststore),  you can run Lighthouse audit using the ways presented in the prior section and you can also streamline your web audits by using the [Lighthouse Scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores) tool for the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) app.
 
 ![WebOps Previews](https://vtexhelp.vtexassets.com/assets/docs/src/lighthouse-scores-webops___f9a501c9132684e7398456db26da2547.png)
 
@@ -90,7 +90,7 @@ When running Lighthouse, you will notice that the metrics results obey a color c
 | <span className="text-3xl text-orange-500">■</span> | Needs improvement | 50-89 |
 | <span className="text-3xl text-green-500">●</span> | Good | 90-100 |
 
-#### Total Blocking Time (TBT) | 30% 
+#### Total Blocking Time (TBT) | 30%
 
 The [**Total Blocking Time (TBT)**](https://web.dev/lighthouse-total-blocking-time/) is the amount of time between the [**First Contentful Paint (FCP)**](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint) and [**Time to Interactive (TTI)**](https://developer.chrome.com/docs/lighthouse/performance/interactive) during which user inputs, such as mouse clicks, screen taps, or keyboard presses are blocked. When a page has a long TBT, the user may notice the delay and perceive the page as sluggish.
 
@@ -110,7 +110,7 @@ TBT is mainly affected by JavaScript and third-party scripts parsing and executi
 
 >ℹ️ For information on improving TBT, refer to [Google's guidelines](https://web.dev/lighthouse-total-blocking-time/#how-to-improve-your-tbt-score).
 
-#### Largest Contentful Paint (LCP) | 25% 
+#### Largest Contentful Paint (LCP) | 25%
 
 [**Largest Contentful Paint (LCP)**](https://web.dev/lcp/) measures the time it takes to render the largest visible element of the page within the viewport. Fast LCPs help reassure the user that the page is useful.
 
@@ -137,7 +137,7 @@ LCP is primarily affected by the following factors:
 
 >ℹ️ For information on how to improve LCP, refer to [Google's guidelines](https://web.dev/fcp/#how-to-improve-fcp).
 
-#### Cumulative Layout Shift (CLS) | 25% 
+#### Cumulative Layout Shift (CLS) | 25%
 
 The [**Cumulative Layout Shift (CLS)**](https://web.dev/cls/) metric measures the impact of undesired content shifts that occur during the entire lifespan of a page.
 
