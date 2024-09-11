@@ -1,10 +1,10 @@
 ---
-title: Building pages
-slug: building-pages
+title: "Building pages"
+slug: "building-pages"
 hidden: false
-createdAt: 2024-09-04T19:00:34.804Z
+createdAt: "2024-09-04T19:00:34.804Z"
 updatedAt: ""
-excerpt: Discover how to leverage Store Framework to build various types of pages tailored to your business needs.
+excerpt: "Discover how to leverage Store Framework to build various types of pages tailored to your business needs."
 ---
 
 VTEX IO streamlines page creation by offering a set of pre-built components and [development tools](https://developers.vtex.com/docs/guides/developer-experience#developer-tools). These resources simplify building and customizing different page types, such as product details pages, promotional layouts, and custom pages.
@@ -60,21 +60,21 @@ description="Learn how to create search result pages leveraging our VTEX IO apps
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-search-results-page-with-multiple-layouts"
 />
 
-\<WhatsNextCard
+<WhatsNextCard
 title="Creating a Black Friday page from template"
 description="Explore our templates to create promotional pages.”
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-black-friday-page-from-template"
 linkTitle="See more"
 />
 
-\<WhatsNextCard
+<WhatsNextCard
 title="Creating a custom search results page"
 description="Learn how to customize your search results page and enhance user interaction."
 linkTo=”https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-custom-search-results-page”
 linkTitle="See more"
 />
 
-\<WhatsNextCard
+<WhatsNextCard
 title="Creating a new custom page"
 description="Understand the process of building a custom page that meets specific business needs."
 linkTo=https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page"
