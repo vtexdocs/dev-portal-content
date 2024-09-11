@@ -70,10 +70,13 @@ jobs:
                 } else {
                   output += `* https://developers.vtex.com/${paths[slug]}\n`
                 }
-                console.log(`Processing file: ${file}, slug: ${slug}, path: ${paths[slug] || 'not found'}`)
-
               }
             }
 
             core.setOutput('preview-links', output)
-      
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: preview-links
+          message: ${{ steps.get-preview-links.outputs.preview-links }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
