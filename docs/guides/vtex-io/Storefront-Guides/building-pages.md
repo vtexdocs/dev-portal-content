@@ -70,14 +70,14 @@ linkTitle="See more"
 <WhatsNextCard
 title="Creating a custom search results page"
 description="Learn how to customize your search results page and enhance user interaction."
-linkTo=”https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-custom-search-results-page”
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-custom-search-results-page"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Creating a new custom page"
 description="Understand the process of building a custom page that meets specific business needs."
-linkTo=https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page"
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page"
 linkTitle="See more"
 />
 
