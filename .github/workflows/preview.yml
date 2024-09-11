@@ -70,8 +70,8 @@ jobs:
                 
                 if (!paths[slug]) {
                   output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file? `;
-                  if (["troubleshooting", "guides"].includes(category)) {
-                    url = `https://developers.vtex.com/docs/${category}/${slug}`;
+                  if (category === "troubleshooting") {
+                    url = `https://developers.vtex.com/docs/troubleshooting/${slug}`;
                   } else if (category === "release-notes") {
                     url = `https://developers.vtex.com/updates/release-notes/${slug}`;
                   } else if (category === "faststore") {
