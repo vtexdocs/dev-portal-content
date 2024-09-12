@@ -4,14 +4,14 @@ slug: "styling"
 hidden: false
 createdAt: "2024-08-30T13:52:29.126Z"
 updatedAt: ""
-excerpt: "Discover how to customize your store’s appearance with VTEX IO Store Framework." 
+excerpt: "Discover how to customize your store layout with VTEX IO Store Framework."
 ---
 
-Styling directly influences user experience and brand perception. A well-styled store not only attracts visitors but also keeps them engaged, encouraging further exploration and interaction with your site.
+Styling directly impacts user experience and brand perception. A well-styled store attracts visitors and keeps them engaged, encouraging navigation and interaction with your site.
 
-In [Store Framework](https://developers.vtex.com/docs/guides/store-framework), styling is flexible and customizable, allowing you to create a visual identity that aligns with your brand. Whether you need to make minor adjustments or comprehensive changes, Store Framework’s tools enable you to tailor each visual element to meet specific business needs. 
+In [Store Framework](https://developers.vtex.com/docs/guides/store-framework), styling is flexible and customizable, allowing you to create a visual identity that aligns with your brand. Whether you need to make minor adjustments or comprehensive changes, Store Framework’s tools enable you to tailor each visual element to meet specific business needs.
 
-In the guides within this section, you will learn how to leverage our styling tools to customize your store.
+In this guide, you will learn how to leverage our styling tools to customize your store.
 
 ## Before you begin
 
@@ -19,27 +19,28 @@ In the guides within this section, you will learn how to leverage our styling to
 
 ### Develop your Store Theme
 
-Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed according to the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
+Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
 
 ### Check the builders
 
-Check if the builders are properly installed in your Store Theme. To use builders, you must have at least the `vtex.builder-hub@0.293.4` version installed in your account. Also, you need to specify them in the app’s `manifest.json` file. Learn more at [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders). 
+Check if the Builders are properly installed in your Store Theme. To use builders, your account must have at least version `vtex.builder-hub@0.293.4` installed. Also, you need to specify them in the app’s `manifest.json` file. Learn more in [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
 You must have at least the following builders configured:
+
 - [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
 - [styles builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-styles-builder): Exports CSS configurations for Store Framework blocks.
 
-### Create the store’s pages
+### Create store pages
 
-Develop your store’s pages by following the [Building pages](https://developers.vtex.com/docs/guides/building-pages) guides.
+Develop your store pages by following the [Building pages](https://developers.vtex.com/docs/guides/building-pages) guides.
 
 </Steps>
 
 ## Essential concepts
 
-To better understand the styling process in Store Framework, you should comprehend the concept of CSS Handle, which is a CSS class that maps out an HTML element. It serves as a layout-building assistant for your store, allowing you to customize any block by applying CSS classes within the Store Theme’s code. Therefore, CSS Handles streamline the appearance customization of your store by targeting specific elements in your custom CSS.
+To better understand the styling process in Store Framework, you should know the concept of CSS Handle, which is a CSS class that maps to an HTML element. It serves as a layout-building assistant for your store, allowing you to customize any block by applying CSS classes within the Store Theme’s code. Therefore, CSS Handles streamline the layout customization of your store by targeting specific elements in your custom CSS.
 
-Each VTEX component is preconfigured with unique CSS Handles, enabling you to apply styles directly to specific parts of a component without needing to modify the component’s structure.
+Each VTEX component is preconfigured with unique CSS Handles, allowing you to apply styles to specific parts of a component without changing its structure.
 
 ## Guides in this section
 
