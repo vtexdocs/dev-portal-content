@@ -1,10 +1,10 @@
 ---
-title: Styling
-slug: styling
+title: "Styling"
+slug: "styling"
 hidden: false
-createdAt: 2024-08-30T13:52:29.126Z
+createdAt: "2024-08-30T13:52:29.126Z"
 updatedAt: ""
-excerpt: Discover how to customize your store layout with VTEX IO Store Framework.
+excerpt: "Discover how to customize your store layout with VTEX IO Store Framework."
 ---
 
 Styling directly impacts user experience and brand perception. A well-styled store attracts visitors and keeps them engaged, encouraging navigation and interaction with your site.
