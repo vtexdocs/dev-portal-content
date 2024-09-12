@@ -15,7 +15,7 @@ The VTEX platform provides three options for storefront development, each with d
 
 The following table outlines the main differences between VTEX FastStore, Store Framework, and Legacy CMS Portal.
 
-|   | FastStore | Store Framework | Legacy CMS Portal |
+|     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | --- | --- | --- |
 | **Storefront development** | FastStore is built with a **performance** focus based on the Jamstack (JavaScript, API, and Markup) architecture.<br><br>Development is done through the integration of `npm` packages provided by VTEX and customizations via the extensibility of VTEX API core services. | Store Framework is based on **composability**, as development is based on VTEX IO apps, allowing the combination of different content, services, and data. | Development is done through the Admin, using the [Legacy Content Management System (CMS)](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC). |
 | **Tech stack** | <ul><li>[React](https://react.dev/)</li><li>[Typescript](https://www.typescriptlang.org/)</li><li>[Node.js](https://nodejs.org/)</li><li>[Next.js](https://nextjs.org/)</li><li>[GraphQL](https://graphql.org/)</li></ul> | <ul><li>[React](https://react.dev/)</li><li>[TypeScript](https://www.typescriptlang.org/)</li><li>[Node.js](https://nodejs.org/)</li><li>[.NET](https://learn.microsoft.com/pt-pt/dotnet/)</li><li>[GraphQL](https://graphql.org/)</li></ul> | <ul><li>[CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS/)</li><li>HTML</li><li>JavaScript</li></ul> |
@@ -33,60 +33,60 @@ The following table outlines the main differences between VTEX FastStore, Store 
 
 The VTEX platform supports the configuration of different business models, such as business-to-business (B2B), marketplaces, omnichannel, and internationalization. See below the availability for each storefront technology.
 
-|   | FastStore | Store Framework | Legacy CMS Portal |
+|     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
-| [**B2B capabilities**](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC?\&utm_source=autocomplete)| ❌ | ✅ | ❌ |
-| [**Bindings**](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W?\&utm_source=autocomplete)| ❌ | ✅ | ✅ |
-| [**Cross-border and multi-language stores**](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/5qgXy9Erm7FDP3UB5Ox8Bs)| ❌ | ✅ | ❌ |
-| [**Franchise accounts**](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl)| ✅ | ✅ | ✅ |
-| [**Marketplace capabilities**](https://help.vtex.com/en/tutorial/marketplace-strategies-at-vtex--tutorials_402)| ✅ | ✅ | ✅ |
-| [**Multiple trade policies**](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV)| ✅ | ✅ | ✅ |
-| [**Regionalization**](https://developers.vtex.com/docs/guides/faststore/features-regionalization)| ✅ | ✅ | ❌ |
+| [**B2B capabilities**](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC?\&utm_source=autocomplete) | ❌ | ✅ | ❌ |
+| [**Bindings**](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W?\&utm_source=autocomplete) | ❌ | ✅ | ✅ |
+| [**Cross-border and multi-language stores**](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/5qgXy9Erm7FDP3UB5Ox8Bs) | ❌ | ✅ | ❌ |
+| [**Franchise accounts**](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) | ✅ | ✅ | ✅ |
+| [**Marketplace capabilities**](https://help.vtex.com/en/tutorial/marketplace-strategies-at-vtex--tutorials_402) | ✅ | ✅ | ✅ |
+| [**Multiple trade policies**](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) | ✅ | ✅ | ✅ |
+| [**Regionalization**](https://developers.vtex.com/docs/guides/faststore/features-regionalization) | ✅ | ✅ | ❌ |
 
 ## Features and functionalities
 
 Below, explore the features and functionalities available for each storefront technology. Consider the following legend:
 
 ✅ **Available:** An out-of-the-box feature, ready to use.
-⚠️** Limited:** The feature is possible but needs custom implementation.
+⚠️**Limited:** The feature is possible but needs custom implementation.
 ❌ **Not available:** This feature is currently unavailable, even with customizations.
 
 ### Advanced store functionalities
 
-|   | FastStore | Store Framework | Legacy CMS Portal |
+|     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
-| [**Abandoned Cart**](https://help.vtex.com/en/tutorial/setting-up-abandoned-carts--tutorials_740)| ⚠️ | ✅ | ✅ |
-| [**Attachments**](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm)| ✅ | ✅ | ✅ |
-| [**Coupons**](https://help.vtex.com/en/tutorial/coupons-beta--1aAEN3ADpz19ss5JCIEBdL)| ✅ | ✅ | ✅ |
-| [**Gift Card**](https://developers.vtex.com/docs/guides/gift-card-integration-guide) **integration**| ✅ | ✅ | ✅ |
-| [**GTM - Google Analytics 4**](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG)| ✅ | ✅ | ✅ |
-| [**Master Data**](https://developers.vtex.com/docs/guides/master-data-introduction) **integration**| ⚠️ | ✅ | ✅ |
-| [**Newsletter integration with Master Data**](https://developers.vtex.com/docs/guides/newsletter-inclusion-master-data-v1)| ✅ | ✅ | ✅ |
-| [**Price table**](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S)| ✅ | ✅ | ✅ |
-| [**Promotions**](https://help.vtex.com/en/tutorial/creating-promotions--tutorials_320)| ✅ | ✅ | ✅ |
-| [**SmartCheckout**](https://help.vtex.com/en/tutorial/smartcheckout-customer-information-automatic-fill-in--2Nuu3xAFzdhIzJIldAdtan)| ✅ | ✅ | ✅ |
-| [**Sitemap**](https://help.vtex.com/en/tutorial/rastreamento-google-search-console-sitemap--tutorials_575) **integration**| ✅ | ✅ | ✅ |
-| [**Subscription**](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453)| ✅ | ✅ | ✅ |
-| **Support for** [**VTEX IO frontend apps**](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io)| ❌ | ✅ | ❌ |
+| [**Abandoned Cart**](https://help.vtex.com/en/tutorial/setting-up-abandoned-carts--tutorials_740) | ⚠️ | ✅ | ✅ |
+| [**Attachments**](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm) | ✅ | ✅ | ✅ |
+| [**Coupons**](https://help.vtex.com/en/tutorial/coupons-beta--1aAEN3ADpz19ss5JCIEBdL) | ✅ | ✅ | ✅ |
+| [**Gift Card**](https://developers.vtex.com/docs/guides/gift-card-integration-guide) **integration** | ✅ | ✅ | ✅ |
+| [**GTM - Google Analytics 4**](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG) | ✅ | ✅ | ✅ |
+| [**Master Data**](https://developers.vtex.com/docs/guides/master-data-introduction) **integration** | ⚠️ | ✅ | ✅ |
+| [**Newsletter integration with Master Data**](https://developers.vtex.com/docs/guides/newsletter-inclusion-master-data-v1) | ✅ | ✅ | ✅ |
+| [**Price table**](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S) | ✅ | ✅ | ✅ |
+| [**Promotions**](https://help.vtex.com/en/tutorial/creating-promotions--tutorials_320) | ✅ | ✅ | ✅ |
+| [**SmartCheckout**](https://help.vtex.com/en/tutorial/smartcheckout-customer-information-automatic-fill-in--2Nuu3xAFzdhIzJIldAdtan) | ✅ | ✅ | ✅ |
+| [**Sitemap**](https://help.vtex.com/en/tutorial/rastreamento-google-search-console-sitemap--tutorials_575) **integration** | ✅ | ✅ | ✅ |
+| [**Subscription**](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453) | ✅ | ✅ | ✅ |
+| **Support for** [**VTEX IO frontend apps**](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) | ❌ | ✅ | ❌ |
 
 ### VTEX IO Apps
 
-|   | FastStore | Store Framework | Legacy CMS Portal |
+|     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
-| [**Assembly options**](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH?\&utm_source=autocomplete)| ⚠️ | ✅ | ❌ |
-| [**Intelligent Search**](https://help.vtex.com/tracks/vtex-intelligent-search) **integration**| ✅ | ✅ | ❌ |
-| [**Live Shopping**](https://developers.vtex.com/docs/apps/vtexventures.livestreaming)| ⚠️ | ✅ | ✅ |
-| [**Reviews & Ratings**](https://developers.vtex.com/docs/apps/vtex.reviews-and-ratings)| ⚠️ | ✅ | ❌ |
-| [**Store Locator**](https://developers.vtex.com/docs/apps/vtex.store-locator)| ⚠️ | ✅ | ❌ |
-| [**Wishlist**](https://developers.vtex.com/docs/apps/vtex.wish-list)| ⚠️ | ✅ | ❌ |
+| [**Assembly options**](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH?\&utm_source=autocomplete) | ⚠️ | ✅ | ❌ |
+| [**Intelligent Search**](https://help.vtex.com/tracks/vtex-intelligent-search) **integration** | ✅ | ✅ | ❌ |
+| [**Live Shopping**](https://developers.vtex.com/docs/apps/vtexventures.livestreaming) | ⚠️ | ✅ | ✅ |
+| [**Reviews & Ratings**](https://developers.vtex.com/docs/apps/vtex.reviews-and-ratings) | ⚠️ | ✅ | ❌ |
+| [**Store Locator**](https://developers.vtex.com/docs/apps/vtex.store-locator) | ⚠️ | ✅ | ❌ |
+| [**Wishlist**](https://developers.vtex.com/docs/apps/vtex.wish-list) | ⚠️ | ✅ | ❌ |
 
 ### Development experience
 
-|   | FastStore | Store Framework | Legacy CMS Portal |
+|     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
 | **API integration** | ✅<br><br>[FastStore APIs](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) | ✅<br><br>[API reference]([https://developers.vtex.com/docs/api-reference) | ✅<br><br>[API reference](https://developers.vtex.com/docs/api-reference) |
-| **Automatic storefront updates**| ✅ | ✅ | ❌ |
-| **Command Line Interface (CLI)**| ✅ | ✅ | ❌ |
-| **GitHub WebOps workflow**| ✅ | ❌ | ❌ |
+| **Automatic storefront updates** | ✅ | ✅ | ❌ |
+| **Command Line Interface (CLI)** | ✅ | ✅ | ❌ |
+| **GitHub WebOps workflow** | ✅ | ❌ | ❌ |
 
 Learn more in [Developer experience](https://developers.vtex.com/docs/guides/developer-experience).
