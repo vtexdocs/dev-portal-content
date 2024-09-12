@@ -2,16 +2,16 @@
 title: "Styling"
 slug: "styling"
 hidden: false
-createdAt: "2024-08-30T13:52:29.126Z"
+createdAt: "2024-09-12T12:52:42.285Z"
 updatedAt: ""
-excerpt: "Discover how to customize your store layout with VTEX IO Store Framework."
+excerpt: "Discover how to customize your store layout with Store Framework."
 ---
 
 Styling directly impacts user experience and brand perception. A well-styled store attracts visitors and keeps them engaged, encouraging navigation and interaction with your site.
 
 In [Store Framework](https://developers.vtex.com/docs/guides/store-framework), styling is flexible and customizable, allowing you to create a visual identity that aligns with your brand. Whether you need to make minor adjustments or comprehensive changes, Store Framework’s tools enable you to tailor each visual element to meet specific business needs.
 
-In this guide, you will learn how to leverage our styling tools to customize your store.
+In this section, you will learn how to leverage our styling tools to customize your store.
 
 ## Before you begin
 
@@ -19,11 +19,11 @@ In this guide, you will learn how to leverage our styling tools to customize you
 
 ### Develop your Store Theme
 
-Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
+Make sure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Getting Started](https://developers.vtex.com/docs/guides/getting-started-3) tutorial.
 
 ### Check the builders
 
-Check if the Builders are properly installed in your Store Theme. To use builders, your account must have at least version `vtex.builder-hub@0.293.4` installed. Also, you need to specify them in the app’s `manifest.json` file. Learn more in [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
+Check if the builders are properly installed in your Store Theme. To use builders, your account must have at least version `vtex.builder-hub@0.293.4` installed. Also, you need to specify them in the app's `manifest.json` file. Learn more in [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
 You must have at least the following builders configured:
 
@@ -43,8 +43,6 @@ To better understand the styling process in Store Framework, you should know the
 Each VTEX component is preconfigured with unique CSS Handles, allowing you to apply styles to specific parts of a component without changing its structure.
 
 ## Guides in this section
-
-In this section, you will find the following guides.
 
 <Flex>
 
