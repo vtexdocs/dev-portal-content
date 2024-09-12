@@ -47,6 +47,13 @@ Each VTEX component is preconfigured with unique CSS Handles, allowing you to ap
 <Flex>
 
 <WhatsNextCard
+title="Using CSS handles for store customizations"
+description="Target and style specific elements within your store using CSS Handles."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
 title="Contributing with new CSS Handles"
 description="Enhance the styling options available for VTEX IO components."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-contributing-with-new-css-handles"
@@ -71,13 +78,6 @@ linkTitle="See more"
 title="Interactively inspecting storefront blocks"
 description="Inspect and identify block elements in your store for targeted customization."
 linkTo="https://developers.vtex.com/docs/guides/how-to-interactively-inspect-blocks-on-a-store-framework-store"
-linkTitle="See more"
-/>
-
-<WhatsNextCard
-title="Using CSS handles for store customizations"
-description="Target and style specific elements within your store using CSS Handles."
-linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization"
 linkTitle="See more"
 />
 
