@@ -48,7 +48,9 @@ The VTEX platform supports the configuration of different business models, such 
 Below, explore the features and functionalities available for each storefront technology. Consider the following legend:
 
 ✅ **Available:** An out-of-the-box feature, ready to use.
+
 ⚠️**Limited:** The feature is possible but needs custom implementation.
+
 ❌ **Not available:** This feature is currently unavailable, even with customizations.
 
 ### Advanced store functionalities
@@ -84,7 +86,7 @@ Below, explore the features and functionalities available for each storefront te
 
 |     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
-| **API integration** | ✅<br><br>[FastStore APIs](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) | ✅<br><br>[API reference]([https://developers.vtex.com/docs/api-reference) | ✅<br><br>[API reference](https://developers.vtex.com/docs/api-reference) |
+| **API integration** | ✅<br><br>[FastStore APIs](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) | ✅<br><br>[API reference](https://developers.vtex.com/docs/api-reference) | ✅<br><br>[API reference](https://developers.vtex.com/docs/api-reference) |
 | **Automatic storefront updates** | ✅ | ✅ | ❌ |
 | **Command Line Interface (CLI)** | ✅ | ✅ | ❌ |
 | **GitHub WebOps workflow** | ✅ | ❌ | ❌ |
