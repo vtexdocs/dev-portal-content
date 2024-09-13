@@ -4,7 +4,7 @@ slug: "getting-started-with-storefront-solutions"
 hidden: false
 excerpt: "Learn about the main differences between VTEX storefront solutions."
 createdAt: "2024-05-20t12:59:27.687z"
-updatedAt: "2024-09-05T14:35:24.197Z"
+updatedAt: "2024-09-13T14:32:02.701Z"
 ---
 
 The VTEX platform provides three options for storefront development, each with distinct characteristics to meet the needs of our clients:
