@@ -85,10 +85,10 @@ Below, explore the features and functionalities available for each storefront te
 ### Development experience
 
 |     | FastStore | Store Framework | Legacy CMS Portal |
-| --- | :---: | :---: | :---: |
-| **API integration** | ✅<br><br>[FastStore APIs](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) | ✅<br><br>[API reference](https://developers.vtex.com/docs/api-reference) | ✅<br><br>[API reference](https://developers.vtex.com/docs/api-reference) |
+| --- | --- | --- | :---: |
+| **API integration** | ✅ [FastStore APIs](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) | ✅ [API reference](https://developers.vtex.com/docs/api-reference) | ✅ [API reference](https://developers.vtex.com/docs/api-reference) |
 | **Automatic storefront updates** | ✅ | ✅ | ❌ |
-| **Command Line Interface (CLI)** | ✅ | ✅ | ❌ |
-| **GitHub WebOps workflow** | ✅ | ❌ | ❌ |
+| **Command Line Interface (CLI)** | ✅ [FastStore CLI](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli) | ✅ [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) | ❌ |
+| **GitHub [WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) workflow** | ✅ | ❌ | ❌ |
 
 Learn more in [Developer experience](https://developers.vtex.com/docs/guides/developer-experience).
