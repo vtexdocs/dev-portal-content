@@ -1,10 +1,10 @@
 ---
-title: Routing
-slug: routing
+title: "Routing"
+slug: "routing"
 hidden: false
-createdAt: 2024-08-27T12:32:13.057Z
+createdAt: "2024-08-27T12:32:13.057Z"
 updatedAt: ""
-excerpt: Learn how routing is managed in VTEX IO Store Framework.
+excerpt: "Learn how routing is managed in VTEX IO Store Framework."
 ---
 
 A route maps a URL pattern and an HTTP request method to an action. It defines how the application responds to client requests for specific endpoints.
