@@ -28,21 +28,20 @@ The store builder manages custom routes. Therefore, custom routes are not stored
 
 ### Develop your Store Theme
 
-Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed with [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [Store Framework](https://developers.vtex.com/docs/guides/store-framework), following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
+Make sure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Getting Started](https://developers.vtex.com/docs/guides/getting-started-3) tutorial.
 
 ### Check the builders
 
 Check if the builders are properly installed in your Store Theme. To use builders, your account must have at least version `vtex.builder-hub@0.293.4` installed. Also, you need to specify them in the app's `manifest.json` file. Learn more in [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
-### Check Rewriter installation
+Make sure the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) is configured, as it enables the development of Store Framework storefronts.
 
-To check if the [Rewriter app](https://developers.vtex.com/docs/apps/vtex.rewriter) is installed in your store, follow the guide [Listing an account's apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-listing-an-accounts-apps) and search for `vtex.rewriter` in the **Installed apps** list. If it is not, install the app by following the guide [Installing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app).
+### Learn about VTEX IO apps
 
+Familiarize yourself with [VTEX IO apps](https://developers.vtex.com/docs/vtex-io-apps).
 </Steps>
 
 ## Guides in this section
-
-In this section, you will find the following guides.
 
 <Flex>
 
