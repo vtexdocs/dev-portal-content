@@ -3,12 +3,7 @@ title: "Interfaces"
 slug: "vtex-io-documentation-interface"
 hidden: false
 createdAt: "2021-04-07T19:00:37.442Z"
-updatedAt: "2024-08-26T14:11:30.330ZZ"
-seeAlso:
-  [
-    "/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io",
-    "/docs/guides/using-components"
-  ]
+updatedAt: "2024-09-17T14:35:35.726Z"
 ---
 
 Interfaces establish a relation between a block and a React component, allowing the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) to build the store frontend. These interfaces are defined in the app's `interfaces.json` file.
