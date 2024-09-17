@@ -2,7 +2,7 @@
 title: "Routing"
 slug: "routing"
 hidden: false
-createdAt: "2024-08-27T12:32:13.057Z"
+createdAt: "2024-09-17T14:48:17.530Z"
 updatedAt: ""
 excerpt: "Learn how routing is managed in VTEX IO Store Framework."
 ---
