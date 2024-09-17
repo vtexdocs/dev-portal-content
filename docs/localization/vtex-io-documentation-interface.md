@@ -11,7 +11,7 @@ seeAlso:
   ]
 ---
 
-Interfaces establish a relation between a block and a React component, allowing the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) to build the store's frontend. These interfaces are defined in the app's `interfaces.json` file.
+Interfaces establish a relation between a block and a React component, allowing the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) to build the store frontend. These interfaces are defined in the app's `interfaces.json` file.
 
 Interfaces provide a set of rules that dictate the behavior of theme blocks when rendering their React components and the available properties and methods.
 
@@ -32,7 +32,7 @@ The following table shows some possible keys that could be added to the block in
 | `preview`     | Defines the behavior of the page while the block is loading.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `render`      | Defines the block rendering type. Possible values are `lazy` (the block is only rendered when a user interacts with it), `server` (the block is rendered from the server side), or `client` (the block is rendered from the client side.                                                                                                                                                                                                                                                                                                                                                                                    |
 
-The only mandatory key that needs to be declared in a block interface is `component`. You may declare the other ones based on the desired scenario for your new theme block.
+The only required key that needs to be declared in a block interface is `component`. You may declare the other ones based on the desired scenario for your new theme block.
 
 ## Example
 
@@ -51,9 +51,9 @@ For each exported block, the app specifies a corresponding React component. For 
 }
 ```
 
-Let's delve into the example provided for a component named `ProductSummary`:
+Let's delve into this example of a component named `ProductSummary`:
 
-- `product-summary`: Defines the name of the interface block being defined.
-- `component`: Specifies the name of the React component (`ProductSummary`) associated with the interface. Refer to [Component](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) for more information.
-- `composition`: Indicates the structure and composition of the component within its parent component. Refer to [Composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition) for more information.
+- `product-summary`: Sets the name of the interface block being defined.
+- `component`: Specifies the name of the React component (`ProductSummary`) associated with the interface. Check [Component](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) for more information.
+- `composition`: Indicates the structure and composition of the component within its parent component. Check [Composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition) for more information.
 - `content`: Points to an external schema definition for the `ProductSummary` component. The structure and properties expected within the `ProductSummary` component are defined in a separate schema file associated with the `vtex.product-summary` app.
