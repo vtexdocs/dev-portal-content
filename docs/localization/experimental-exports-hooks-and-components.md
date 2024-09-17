@@ -52,10 +52,8 @@ All experimental [hooks and components](#list-of-hooks-and-components) are suffi
 
 Explore the functionalities of the experimental hooks and the `Image_unstable` component available.
 
-- [Instructions](#instructions)
-- [List of hooks and components](#list-of-hooks-and-components)
-  - [Hooks](#hooks)
-  - [`Image_unstable` component](#image_unstable-component)
+- [Hooks](#hooks)
+- [`Image_unstable` component](#image_unstable-component)
 
 ### Hooks
 
