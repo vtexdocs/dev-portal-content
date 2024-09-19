@@ -246,7 +246,7 @@ Once you created a new cart, use the [Get current or create a new cart](https://
 }
 ```
 
-Once you have the orderForm, you must add the client data to it. To do so, send the profile data in the [Add client profile](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData) endpoint request, as in the example.
+Once you have the `orderForm`, you must add the client data to it. To do so, send the profile data in the [Add client profile](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData) endpoint request, as in the example.
 
 ```json Request Add client profile
 {
