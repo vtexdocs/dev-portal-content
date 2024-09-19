@@ -20,9 +20,7 @@ In Store Framework, different apps and builder manage various types of routes. T
 | **Catalog routes**     | Rewriter app                  | Custom routes for predefined templates (e.g., [department](https://github.com/vtex-apps/store/blob/master/store/routes.json#L27), [brand](https://github.com/vtex-apps/store/blob/master/store/routes.json#L21), and [category](https://github.com/vtex-apps/store/blob/master/store/routes.json#L33) handled by the Rewriter app and mapped to the appropriate page.|
 | **Custom routes**    |  Store builder              | User-defined routes for custom landing pages or other routes that fall outside of predefined product or category routes, directly managed by the store builder and forwarded to the render server. |
 
-The [Rewriter app](https://developers.vtex.com/docs/apps/vtex.rewriter) interprets the requested path, identifies the route type, and then forwards the route path to the rendering pipeline. Learn more in [Rewriter GraphQL API](https://developers.vtex.com/docs/apps/vtex.rewriter@1.63.0/rewriter-graphql-api).
-
-The [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) forwards custom route paths directly to the render server. To learn how to create a custom page, see the [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) guide.
+The [Rewriter app](https://developers.vtex.com/docs/apps/vtex.rewriter) interprets the requested path, identifies the route type, and then forwards the route path to the rendering pipeline. Learn more in [Rewriter GraphQL API](https://developers.vtex.com/docs/apps/vtex.rewriter@1.63.0/rewriter-graphql-api). Meanwhile, the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) forwards custom route paths directly to the render server. To learn how to create a custom page, see the [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) guide.
 
 In this section, you will learn how to manage routes in your Store Framework store.
 
@@ -52,7 +50,7 @@ To check if the [Rewriter app](https://developers.vtex.com/docs/apps/vtex.rewrit
 
 <WhatsNextCard
 title="Best practices for associating a custom page with a content type"
-description="Learn how to effectively associate custom pages with content types in VTEX IO."
+description="Configure URLs effectively when associating custom pages with content types."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type"
 linkTitle="See more"
 />
