@@ -14,7 +14,7 @@ To set up the product availability form, follow the step-by-step below.
 
 >⚠️ This configuration does not include sending automatic e-mails to users. The product availability form only stores the user data filled out in the form to the store's Master Data entity.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Creating a Master Data entity
 

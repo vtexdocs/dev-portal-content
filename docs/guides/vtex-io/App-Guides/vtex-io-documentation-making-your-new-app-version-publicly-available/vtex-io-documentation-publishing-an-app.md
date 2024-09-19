@@ -18,7 +18,7 @@ Before proceeding any further, make sure the app you are about to publish has al
 
 Notice that publishing an app is one of the steps to **making your new app version publicly available**. Please refer to [this](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide for more information.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Publishing a candidate version
 

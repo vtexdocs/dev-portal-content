@@ -21,7 +21,7 @@ Remember that, when you promote a workspace to master, your changes are applied 
 
 Promoting a workspace to Master is a step in **making your new app version publicly available**. Please check [this](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide for more information.
 
-## Step by step
+## Instructions
 
 Follow these steps to promote a production workspace to Master. Remember to replace the values between curly brackets according to your scenario.
 

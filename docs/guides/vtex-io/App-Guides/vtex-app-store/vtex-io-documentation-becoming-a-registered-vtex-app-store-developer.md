@@ -27,7 +27,7 @@ For that, you must register as a VTEX App Store seller by taking the following s
 2. Sign our commercial agreement.
 3. Register as a VTEX App Store seller.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Expressing your interest
 

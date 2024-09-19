@@ -23,7 +23,7 @@ Before diving into Client development, make sure you have the following prerequi
 - **TypeScript Familiarity:** This guide assumes you have a basic understanding of TypeScript, as we'll be using the `node` [Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) to develop with TypeScript. For more information, refer to [Typescript's official documentation](https://www.typescriptlang.org/docs/).
 - **Understanding of Clients:** Clients play a crucial role in facilitating interactions between your application and both external and internal services. For more information, refer to [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
 
-## Step by step
+## Instructions
 
 In this guide, we will create an example custom Client for communicating with GitHub APIs. We'll implement the following methods within our Client:
 

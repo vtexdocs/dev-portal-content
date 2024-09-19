@@ -9,7 +9,7 @@ In this step, you will send all product information from your ERP or PIM to VTEX
 
 >⚠️ While this article provides the basic flow of integration, we recommend you check the implementation details provided on our [Product integration guide](https://developers.vtex.com/docs/guides/products) and [SKU integration guide](https://developers.vtex.com/docs/guides/skus), as well as the links in each **Learn more** section below.
 
-## Before you start
+## Before you begin
 
 Before importing all your products and SKUs to VTEX it is very important to think about how you plan to display variations in your shelves and product pages. In some cases, it might be useful to split similar SKUs into different products, in others you might want to group them under the same product.
 

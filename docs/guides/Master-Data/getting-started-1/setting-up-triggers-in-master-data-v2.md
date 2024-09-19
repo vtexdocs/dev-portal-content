@@ -24,7 +24,7 @@ A **Master Data** trigger is an [action](#action) executed immediately after a d
 
 You may use **Master Data v2** triggers to create and add hooks to VTEX first-party apps. To do that, [Create a new JSON schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) for the data entity used by the app and then follow the instructions below.
 
-## Step by step
+## Instructions
 
 Each trigger is described as an item of the array `v-triggers` of a [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle). If you want to create a trigger for a data entity with no associated schema, you may [create a new schema](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) with the trigger settings according to what is described below. 
 

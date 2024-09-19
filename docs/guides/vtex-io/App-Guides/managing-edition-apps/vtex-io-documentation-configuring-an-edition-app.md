@@ -14,7 +14,7 @@ If you belong to a complex VTEX account family under the same brand or holding, 
 
 Before you dive into the development process, ensure that you have already [enabled the Sponsor Account behavior](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-sponsor-account) on one of your accounts.
 
-## Step by step
+## Instructions
 
 To create a new Edition App, you'll initiate the development of a VTEX IO app. In this app, you will specify an Edition App dependency and define the apps to be included within the new Edition App.
 

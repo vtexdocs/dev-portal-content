@@ -23,7 +23,7 @@ Hence, be aware that you'll need to perform the following step by step for each 
 
 > ℹ️ It's important for search engines that each version of a page indicates itself as well as the other localized versions as `alternates`. However, **you don't need to worry about self-referencing** since we already do that for you.
 
-## Step by step
+## Instructions
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
 2. In your browser, access your account's admin and go to the GraphQL IDE section.

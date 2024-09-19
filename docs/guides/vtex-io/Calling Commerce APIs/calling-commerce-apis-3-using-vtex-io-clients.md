@@ -44,7 +44,7 @@ export class Clients extends IOClients {
 }
 ```
 
-![Client methods autocomplete](https://drive.google.com/uc?export=view&id=1-DBosXllypqOj2DBGHx667lH4dkj-ADs)
+![Client methods autocomplete](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/calling-commerce-apis-3-using-vtex-io-clients.jpeg)
 
 ---
 

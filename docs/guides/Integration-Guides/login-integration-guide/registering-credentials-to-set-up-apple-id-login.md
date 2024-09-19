@@ -10,8 +10,8 @@ updatedAt: "2023-09-05T17:34:17Z"
 
 To allow users to [sign in to your store with their Apple ID](https://developer.apple.com/sign-in-with-apple/get-started/), you must create valid Apple credentials before [setting up this type of authentication through the VTEX Admin](https://help.vtex.com/en/tutorial/configuring-sign-in-with-apple-id-beta--5qprgEmHYfPTghnYwm0KrV). This guide describes all the necessary steps to get these credentials:
 
-- [Before you start](#before-you-start)
-- [Step by step](#step-by-step)
+- [Before you begin](#before-you-begin)
+- [Instructions](#instructions)
   - [Step 1: Creating an App ID](#step-1-creating-an-app-id)
   - [Step 2: Creating a Services ID](#step-2-creating-a-services-id)
   - [Step 3: Creating a private Key ID and p8 Certificate](#step-3-creating-a-private-key-id-and-p8-certificate)
@@ -21,11 +21,11 @@ After following these steps to register Apple credentials, you must complete the
 
 > ℹ️ Read [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/create-a-sign-in-with-apple-private-key) for more information about the required credentials.
 
-## Before you start
+## Before you begin
 
 You must have an [Apple ID](https://support.apple.com/apple-id) and be a member of the [Apple Developer Program](https://developer.apple.com/programs/) to follow the instructions presented in this guide.
 
-## Step by step
+## Instructions
 
 ### Step 1: Creating an App ID
 

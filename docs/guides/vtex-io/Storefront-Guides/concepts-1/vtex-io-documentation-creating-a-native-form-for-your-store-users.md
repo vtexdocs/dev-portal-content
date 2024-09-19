@@ -15,7 +15,7 @@ A form may give a greater amount of information about your users, as well as mor
 
 With VTEX IO Store Framework, your store can have a 100% native form component which is integrated with [**VTEX Master Data**](https://help.vtex.com/tutorial/what-is-master-data--4otjBnR27u4WUIciQsmkAw?locale=en).
   
-## Step by step
+## Instructions
 
 ### Step 1 - Creating the JSON Schema in Master Data
 

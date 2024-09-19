@@ -54,10 +54,10 @@ That's it for your bootstrap, it should be running.
 1. First, add `vtex.session@0.x` to your manifest.json file under `builders`
 
    ```json
-   "Builders": {
-       "Node": "6.x",
-       "Docs: "0.x",
-       "Vtex.session": "0.x"
+   "builders": {
+       "node": "6.x",
+       "docs: "0.x",
+       "vtex.session": "0.x"
    },
    ```
 
@@ -90,7 +90,7 @@ Below you can see the app’s content. It will listen to changes in the authenti
         "input": {
             "authentication": ["storeUserEmail"],
             "checkout": ["orderFormId]
-        }
+        },
         "output": {
             "public": ["demo"]
         }
@@ -136,12 +136,12 @@ It should look like the example below.
 4. Now that you have your handler, import it to the `./node/index.ts` file and load it to the Service.
 
 ```javascript
-Import { resolvers } from ‘./resolvers’
+import { resolvers } from ‘./resolvers’
 …
 // Export a service that defines route handlers and client options.
-Export default new Service{{
-    Clients,
-    Routes: resolvers.Routes,
+export default new Service{{
+    clients,
+    routes: resolvers.Routes,
 })
 ```
 

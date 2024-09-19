@@ -16,7 +16,7 @@ To create a product list, you can configure the Shelf component to use the [Prod
 
 Check out the instructions below for how it can be done.
 
-## Step by step
+## Instructions
 
 1. Add the `product-summary` and the `slider-layout` apps to your theme's dependencies in the `manifest.json` file:
 

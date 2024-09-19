@@ -3,7 +3,7 @@ title: "FastStore: New @faststore/core package version"
 slug: "2024-08-19-faststore-core-new-version"
 type: "added"
 excerpt: "Upgrade your `@faststore/core` package version to leverage enhanced API extensions, customizable error pages, and support for Next.js 13."
-createdAt: "2024-05-23T10:30:00.000Z"
+createdAt: "2024-08-19T10:30:00.000Z"
 updateAt: "2024-08-20T10:30:00.000Z"
 ---
 

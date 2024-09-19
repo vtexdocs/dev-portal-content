@@ -13,7 +13,7 @@ In addition to that, if you are developing a new project, installing an app is a
 
 > ℹ️ Remember the following: private apps (apps without the `billingOptions` field in its `manifest.json` file) can only be installed in the VTEX account where it was published. Public apps with free `billingOptions` can be installed in any VTEX account by any admin user. Lastly, public apps with billable `billingOptions` can only be installed by admin users with the License Manager's `BuyApp` permission. Once this installation takes place, the app will be charged by the end of every month in the accounts that installed it.
 
-## Step by step
+## Instructions
 
 1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), make sure you are logged into the desired account and using the desired workspace.
 2. Then, run one of the following commands according to your needs and scenario:

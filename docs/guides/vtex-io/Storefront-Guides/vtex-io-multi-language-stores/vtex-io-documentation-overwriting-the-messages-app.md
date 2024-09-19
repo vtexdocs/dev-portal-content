@@ -7,15 +7,13 @@ createdAt: "2020-09-01T19:49:09.322Z"
 updatedAt: "2022-12-13T20:17:44.427Z"
 ---
 
-## Introduction
-
 Messages is VTEX IO's key tool for your store's internationalization since it's responsible for translating any website message (that is, website text content) for rendering.
 
 However, you may feel that some translations done by the app are not what you want them to be. Therefore, you may want to change the translated content to something more specific or representative of your store, such as a special login message for Spanish-speaking users from Argentina.
 
 In the next section, we present you a step-by-step on how to overwrite a translation from your store's catalog, such as a product name or a product description, and text messages exported from an app.
 
-## Step by step
+## Instructions
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the **GraphQL IDE app** by running the following in your terminal.
 

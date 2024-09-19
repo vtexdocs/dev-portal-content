@@ -31,9 +31,22 @@ hideTOC: true
   <CardItem
     title="Buy Button"
     description="Intends to send the user to the checkout/cart step directly."
-    actionPath="/docs/guides/faststore/molecules-breadcrumb"
+    actionPath="/docs/guides/faststore/molecules-buy-button"
   >
     <BuyButton>Buy Now</BuyButton>
+  </CardItem>
+
+  <CardItem
+    title="Card"
+    description="A card with a header and body, ideal for displaying products, messages, or store information."
+    actionPath="/docs/guides/faststore/molecules-card"
+  >
+    <Card
+      iconName="PlusCircle"
+      title="Card with Icon"
+      style={{width: '300px'}}>
+      <h1> Message </h1>
+    </Card>
   </CardItem>
 
   <CardItem
@@ -179,6 +192,17 @@ hideTOC: true
     </ProductCard>
   </CardItem>
   <CardItem
+    title="ProductPrice"
+    description="Displays the product's listing and spot price."
+    actionPath="/docs/guides/faststore/molecules-product-price"
+  >
+    <ProductPrice
+      value={950.04}
+      listPrice={999}
+      formatter={useFormattedPrice}
+    />
+  </CardItem>
+  <CardItem
     title="Product Title"
     description="Used on Product Details Page, wraps the product name, a product label and the rating."
     actionPath="/docs/guides/faststore/molecules-product-title"    
@@ -190,17 +214,6 @@ hideTOC: true
       ratingValue={4}
     />
 </CardItem>
-  <CardItem
-    title="Product Price"
-    description="Displays product's selling and listing prices."
-    actionPath="/docs/guides/faststore/molecules-product-price"
-  >
-    <ProductPrice
-      value={950.04}
-      listPrice={999}
-      formatter={useFormattedPrice}
-    />
-  </CardItem>
   <CardItem
     title="Quantity Selector"
     description="Allows customers to select the quantity of a given product to purchase."

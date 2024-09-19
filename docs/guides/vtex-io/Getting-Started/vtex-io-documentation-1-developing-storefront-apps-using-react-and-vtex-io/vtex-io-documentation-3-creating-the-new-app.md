@@ -18,7 +18,7 @@ To begin developing your app, you need to follow these steps:
 
 Once copied, the repository will automatically import the basic settings that you will need to kickstart your app development.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Cloning the boilerplate repository to your local files
 

@@ -19,7 +19,7 @@ For example, you may want to set a special login message for Spanish-speaking us
 
 Considering this case, in the following step-by-step, we'll teach you how to overwrite a storefront message with exclusive content for your store through the Messages app.
 
-## Step by step
+## Instructions
 
 Follow this step-by-step to translate text messages exported from an app (declared in the app's `messages` folder).
 

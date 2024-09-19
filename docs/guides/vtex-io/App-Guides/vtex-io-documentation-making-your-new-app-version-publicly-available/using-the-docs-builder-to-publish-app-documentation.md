@@ -24,7 +24,7 @@ Any app developer can make their documentation publicly available using the `doc
 
 > ⚠️ Please be aware that access to files in the `docs` directory is not restricted to accounts or users that have the app installed. **Do not share any sensitive or private information that should not be made public on the web!**
 
-## Step by step
+## Instructions
 
 1. Add the `docs` builder to your app's builder list in the `manifest.json` file. [Check the example of vtex.store-theme](https://github.com/vtex-apps/store-theme/tree/master/manifest.json#L9). For example:
 

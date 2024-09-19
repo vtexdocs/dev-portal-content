@@ -16,7 +16,7 @@ This guide will show you how to implement the Black Friday landing page template
 
 ![Black Friday landing page template](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-black-friday-page-from-template-0.gif)
 
-## Step by step
+## Instructions
 
 ### Step 1 - Downloading the template files
 

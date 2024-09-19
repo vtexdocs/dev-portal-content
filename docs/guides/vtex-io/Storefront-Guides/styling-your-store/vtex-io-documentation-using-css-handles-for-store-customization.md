@@ -9,7 +9,7 @@ updatedAt: "2022-12-13T20:17:44.398Z"
 
 This guide will teach you how to customize your storefront using CSS handles. CSS handles are unique identifiers assigned to HTML elements. They can be used in your Store Theme to target and add CSS classes to a component, allowing you to personalize your storefront according to your preferences.
 
-## Step by step
+## Instructions
 
 1. Access the following URL: `https://{workspace}--{account}.myvtex.com?__inspect`, replacing the values between curly braces according to your scenario. Please note that you must use a development workspace rather than a production one, and the store domain must be under `myvtex.com`.
 

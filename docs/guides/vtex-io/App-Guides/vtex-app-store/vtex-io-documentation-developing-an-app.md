@@ -24,7 +24,7 @@ Make sure to install the [VTEX IO CLI (Command Line Interface) in your machine](
 
 Any development in VTEX IO begins and ends with our CLI (Command Line Interface). VTEX IO's CLI allows you to perform any action necessary to your app development process, such as linking local files to the VTEX platform, managing workspaces, and releasing new app versions.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Creating an app
 

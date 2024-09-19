@@ -16,7 +16,7 @@ Once you have defined the blocks for your theme, the next step is to consider th
 
 Customizing the style in a component requires basic CSS knowledge. If you're new to CSS, we recommended checking the [documentation](https://www.w3schools.com/css/default.asp) for this language before following the instructions detailed in this article.
 
-## Step by step
+## Instructions
 
 Store Framework provides three different tools for applying CSS to a storefront:
 

@@ -1,0 +1,157 @@
+---
+title: "ProductPrice"
+excerpt: ProductPrice displays the product's listing and spot price.
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/product-price___90342b9516448a71008988620e629225.png
+components:
+  - ProductPrice.tsx
+  - Price.tsx
+---
+
+The `ProductPrice` component displays both the listing price and spot price of a product.
+It wraps two [Price](https://developers.vtex.com/docs/guides/faststore/atoms-price) components.
+
+## Overview
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <ProductPrice
+              value={950.04} listPrice={999} formatter={useFormattedPrice}
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+    ```tsx
+    <ProductPrice value={950.04} listPrice={999} formatter={useFormattedPrice} />
+    ```
+
+    ```tsx
+    // Example of formatter
+    interface PriceFormatterOptions {
+      decimals?: boolean;
+    }
+
+    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
+      return useCallback(
+        (price: number) =>
+          Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: decimals ? 2 : 0,
+          }).format(price),
+        [decimals]
+      );
+    };
+
+    export const useFormattedPrice = (price: number) => {
+      const formatter = usePriceFormatter();
+
+      return useMemo(() => formatter(price), [formatter, price]);
+    };
+    ````
+
+  </Tab>
+</Tabs>
+
+## Import
+
+To use the `ProductPrice` component, import it from the [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index) package.
+
+```tsx
+import { ProductPrice } from '@faststore/ui'
+````
+
+### Import Styles into your FastStore project
+
+To apply the `ProductPrice` styles, add the following line to your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/ProductPrice/styles.scss";
+```
+
+For more details on importing component styles, refer to the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) guide.
+
+---
+
+## Usage
+
+<OverviewSection>
+  <ProductPrice value={950.04} listPrice={999} formatter={useFormattedPrice} />
+</OverviewSection>
+
+```tsx
+<ProductPrice value={950.04} listPrice={999} formatter={useFormattedPrice} />
+```
+
+```tsx
+// Example of formatter
+interface PriceFormatterOptions {
+  decimals?: boolean;
+}
+
+export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
+  return useCallback(
+    (price: number) =>
+      Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        minimumFractionDigits: decimals ? 2 : 0,
+      }).format(price),
+    [decimals]
+  );
+};
+
+export const useFormattedPrice = (price: number) => {
+  const formatter = usePriceFormatter();
+
+  return useMemo(() => formatter(price), [formatter, price]);
+};
+```
+
+---
+
+## Props
+
+<ComponentPropsSection component="ProductPrice" />
+
+---
+
+## Design tokens
+
+<TokenTable>
+  <TokenRow token="--fs-product-price-gap" value="var(--fs-spacing-1)" />
+</TokenTable>
+
+---
+
+## Use cases
+
+The `ProductPrice` component wraps two instances of the `Price` component, representing the prices with the spot and listing variants.
+
+- If the spot price and listing price are the same, only the spot price is shown.
+- If the listing price is set to `0`, only the spot price is shown.
+
+---
+
+## Customization
+
+The `ProductPrice` component can be customized using the following data attribute:
+
+`data-fs-product-price`
+
+---
+
+## Related components
+
+<SectionList>
+  <SectionItem
+    title="Price"
+    description="
+ Prices are used to display the price of a given product, discount and total values."
+    actionPath="https://developers.vtex.com/docs/guides/faststore/atoms-price"
+  >
+    <Price value={62.5} variant="selling" />
+  </SectionItem>
+</SectionList>

@@ -8,7 +8,7 @@ updatedAt: "2022-04-12T15:06:12.084Z"
 
 In this step, you will send order updates from your ERP or WMS to VTEX.
 
-## Before you start
+## Before you begin
 
 When an order is processed in an external fulfillment platform such as an ERP or WMS, it's not enough to set up order integration. VTEX should also receive order updates when applicable.
 

@@ -17,7 +17,7 @@ By enabling the Manual Price feature for Subscriptions v3, you can:
 * Maintain the same manual price for every future recurrent order from that subscription, if desired.
 
 
-## Before you start
+## Before you begin
 
 To enable Manual Prices for Subscriptions v3, it is first necessary to enable it in the Checkout settings. This means you must make a request to the <span class="APIMethod APIMethod_fixedWidth APIMethod_post">post</span> [Update orderForm configuration](https://developers.vtex.com/vtex-rest-api/reference/updateorderformconfiguration) endpoint, setting `allowManualPrices` to `true`, if you have not done this yet. For more information on how manual prices work at VTEX, we recommend reading [Enabling Manual Price in my store](https://developers.vtex.com/docs/guides/enable-the-manual-price).
 

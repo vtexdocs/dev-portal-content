@@ -46,7 +46,7 @@ By the end of these steps, you'll have your store products highlighted according
 
 6. Fill in the presented fields as in the following:
    - **Default Seller Id** - Enter the default seller ID to use in cases the shopper's region is not detected (e.g., `jumboargentinav692lanus692`).
-   - **Default Collection Name** - Enter the name of the collection corresponding to the default seller ID (e.g., `leyDeGondolas`). This is the `{defaultCollectionName}` part of the **Collection Name** (*See [Before you start](#before-you-start) for more information*).
+   - **Default Collection Name** - Enter the name of the collection corresponding to the default seller ID (e.g., `leyDeGondolas`). This is the `{defaultCollectionName}` part of the **Collection Name** (*See [Before you begin](#before-you-begin) for more information*).
    - **Image Url of Highlight** - Enter the URL of the ximage badge that will highlight the products. For example: ![Image Url of Highlight](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-product-highlight-by-vtex-segment-3.png)
 7. Click on **Save**.
 
