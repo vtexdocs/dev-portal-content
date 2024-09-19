@@ -376,7 +376,7 @@ Learn more about these endpoints:
 
 #### Retrieving saved credit cards
 
-In the payment section at checkout, we recommend retrieving the saved credit card information from the customer profile. This can ease the checkout process as the customer would only need to select the chosen credit card and input the CVV (Card Verification Value). This process will only display the last four numbers of a credit card to the customer, making it a secure interaction with the shopper data.
+In the payment section at checkout, we recommend retrieving the saved credit card information from the customer profile. This can ease the checkout process as the customer would only need to select the chosen credit card and input the CVV (Card Verification Value). This process will only display the last four numbers of a credit card to the customer, making it a secure interaction with the client data.
 
 To check if the customer has any saved cards, use the [Get client profile by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles?endpoint=get-/api/checkout/pub/profiles) endpoint. This endpoint returns the available cards. The card information is displayed in the `availableAccounts` array, as shown in the examples.
 
