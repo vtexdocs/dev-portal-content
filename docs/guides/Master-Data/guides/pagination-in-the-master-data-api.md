@@ -16,17 +16,17 @@ When using the search endpoint, the results are paginated by specifying a range 
 
 See the search endpoint reference according to the Master Data version you are using:
 
-* [Master Data API v1 \- Search](https://developers.vtex.com/docs/api-reference/masterdata-api\#get-/api/dataentities/-acronym-/search)
-* [Master Data API v2 \- Search](https://developers.vtex.com/docs/api-reference/master-data-api-v2\#get-/api/dataentities/-dataEntityName-/search)
+* [Master Data API v1 - Search](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search)
+* [Master Data API v2 - Search](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search)
 
 ### Setting up pagination
 
 To paginate your results using the search endpoint, include the `REST-Range` header in your request. The value of this header should follow the format: `resources={x}-{y}`.
 
 * **`x`**: The index of the first document in the returned array.
-* **`y`**: The index of the last document in the returned array \+ 1\.
+* **`y`**: The index of the last document in the returned array + 1.
 
-For example, `resources=0-100` would return the first 100 documents from index 0 to 99\. Note that you are limited to retrieving 100 documents per query.
+For example, `resources=0-100` would return the first 100 documents from index 0 to 99. Note that you are limited to retrieving 100 documents per query.
 
 ### Retrieving subsequent pages
 
@@ -37,10 +37,10 @@ To retrieve the next set of results, adjust the `x` and `y` values accordingly. 
 The `REST-Content-Range` response header provides information about the range of documents returned in the current response and the total number of documents available. It follows this format: `resources={x}-{y}/{total}`.
 
 * **`x`**: The index of the first document in the returned array.
-* **`y`**: The index of the last document in the returned array \+ 1\.
+* **`y`**: The index of the last document in the returned array + 1.
 * **`total`**: The total number of documents that match the query.
 
-For example, `resources=0-100/250` indicates that the response contains documents from index 0 to 99 out of 250\. If `y` is less than `total`, you can retrieve more pages.
+For example, `resources=0-100/250` indicates that the response contains documents from index 0 to 99 out of 250. If `y` is less than `total`, you can retrieve more pages.
 
 ## Scroll pagination
 
@@ -48,14 +48,14 @@ The scroll endpoint is used when you need to retrieve a large dataset that might
 
 See the scroll endpoint reference according to the Master Data version you are using:
 
-* [Master Data API v1 - Scroll](https://developers.vtex.com/docs/api-reference/masterdata-api\#get-/api/dataentities/-acronym-/scroll)
-* [Master Data API v2 - Scroll](https://developers.vtex.com/docs/api-reference/master-data-api-v2\#get-/api/dataentities/-dataEntityName-/scroll)
+* [Master Data API v1 - Scroll](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/scroll)
+* [Master Data API v2 - Scroll](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/scroll)
 
 ### Setting up pagination
 
 Pagination with the scroll endpoint is managed using three parameters:
 
-* `_size`: Specifies the number of documents returned per request. The maximum value is 1000\.
+* `_size`: Specifies the number of documents returned per request. The maximum value is 1000.
 * `_token`: A unique token returned in the `X-VTEX-MD-TOKEN` header of the first request. This token is passed as a query parameter in subsequent requests to retrieve the next page of results. It expires in 20 minutes.
 * `_page`: Specifies the page to retrieve.
 
