@@ -2,7 +2,7 @@
 title: "Routing"
 slug: "routing"
 hidden: false
-createdAt: "2024-09-17T14:48:17.530Z"
+createdAt: "2024-09-19T13:32:26.286Z"
 updatedAt: ""
 excerpt: "Learn how routing is managed in VTEX IO Store Framework."
 ---
@@ -11,16 +11,20 @@ A route maps a URL pattern and an HTTP request method to an action. It defines h
 
 When using [VTEX IO Store Framework](https://developers.vtex.com/docs/guides/store-framework), you do not need to manage routing and HTTP methods directly. Instead, routing and HTTP request methods are managed by either the [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) app or the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder), depending on the route type. This allows you to focus on creating and managing route paths and page templates.
 
-Store Framework routes are classified into four different categories:
+In Store Framework, different apps and builder manage various types of routes. The table below outlines the primary managers for each route type:
 
-- **Product routes:** Related to product pages.
-- **Search routes:** Related to search pages.
-- **Navigation routes:** Client-side defined routes related to Store Framework custom paths and predefined templates, such as [department](https://github.com/vtex-apps/store/blob/master/store/routes.json#L27), [brand](https://github.com/vtex-apps/store/blob/master/store/routes.json#L21), and [category](https://github.com/vtex-apps/store/blob/master/store/routes.json#L33) routes.
-- **Custom routes:** Created by the user to handle custom landing pages.
+| Route type      | Responsibility             | Description                                                                                   |
+|---------------------|------------------------------------|---------------------------------------------------------------------------------------------------|
+| **Product routes**    |  Rewriter app                   | Routes related to product pages, forwarded by the Rewriter app to the rendering pipeline. |
+| **Search routes**     | Rewriter app                     | Routes related to search result pages, processed and forwarded by the Rewriter app. |
+| **Catalog routes**     | Rewriter app                  | Custom routes for predefined templates (e.g., [department](https://github.com/vtex-apps/store/blob/master/store/routes.json#L27), [brand](https://github.com/vtex-apps/store/blob/master/store/routes.json#L21), and [category](https://github.com/vtex-apps/store/blob/master/store/routes.json#L33) handled by the Rewriter app and mapped to the appropriate page.|
+| **Custom routes**    |  Store builder              | User-defined routes for custom landing pages or other routes that fall outside of predefined product or category routes, directly managed by the store builder and forwarded to the render server. |
 
-The [Rewriter app](https://developers.vtex.com/docs/apps/vtex.rewriter) manages the first three route types. It interprets the requested path, identifies the route type, and then forwards the route path to the rendering pipeline. Learn more in [Rewriter GraphQL API](https://developers.vtex.com/docs/apps/vtex.rewriter@1.63.0/rewriter-graphql-api).
+The [Rewriter app](https://developers.vtex.com/docs/apps/vtex.rewriter) interprets the requested path, identifies the route type, and then forwards the route path to the rendering pipeline. Learn more in [Rewriter GraphQL API](https://developers.vtex.com/docs/apps/vtex.rewriter@1.63.0/rewriter-graphql-api).
 
-The [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) manages custom routes. Therefore, custom routes are not stored in the Rewriter app, meaning their paths are directly forwarded to the render server. To learn how to create a custom page, see the [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) guide.
+The [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) forwards custom route paths directly to the render server. To learn how to create a custom page, see the [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) guide.
+
+In this section, you will learn how to manage routes in your Store Framework store.
 
 ## Before you begin
 
