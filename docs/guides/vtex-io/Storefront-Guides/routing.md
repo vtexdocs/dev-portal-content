@@ -1,6 +1,6 @@
 ---
 title: "Routing"
-slug: "routing"
+slug: "store-framework-routing"
 hidden: false
 createdAt: "2024-09-19T13:32:26.286Z"
 updatedAt: ""
