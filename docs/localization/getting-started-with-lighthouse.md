@@ -1,8 +1,8 @@
 ---
-title: Getting started with Lighthouse
-slug: getting-started-with-lighthouse
+title: "Getting started with Lighthouse"
+slug: "getting-started-with-lighthouse"
 hidden: false
-createdAt: 2024-09-11T15:31:19.301Z
+createdAt: "2024-09-11T15:31:19.301Z"
 updatedAt: ""
 excerpt: ""
 ---
@@ -21,17 +21,17 @@ By auditing a web app URL, Lighthouse generates detailed reports detailing how t
 
 Lighthouse audits are grouped into five categories:
 
-* [**Performance**](https://web.dev/lighthouse-performance): Evaluates how users perceive and experience a web page by testing key web metrics.
-* [**Accessibility**](https://web.dev/lighthouse-accessibility/): Assesses the page usability for people with disabilities or impairments.
-* [**SEO**](https://web.dev/lighthouse-seo/): Checks if the page is optimized for search engine results ranking.
-* [**Progressive web apps**](https://web.dev/lighthouse-pwa/): Validates the aspects of a progressive web app, checking whether a full application-like experience is offered.
-* [**Best practices**](https://web.dev/lighthouse-best-practices/): Assesses the overall code health of a webpage. Lighthouse also runs checks for best practices in modern web development, focusing on security aspects.
+- [**Performance**](https://web.dev/lighthouse-performance): Evaluates how users perceive and experience a web page by testing key web metrics.
+- [**Accessibility**](https://web.dev/lighthouse-accessibility/): Assesses the page usability for people with disabilities or impairments.
+- [**SEO**](https://web.dev/lighthouse-seo/): Checks if the page is optimized for search engine results ranking.
+- [**Progressive web apps**](https://web.dev/lighthouse-pwa/): Validates the aspects of a progressive web app, checking whether a full application-like experience is offered.
+- [**Best practices**](https://web.dev/lighthouse-best-practices/): Assesses the overall code health of a webpage. Lighthouse also runs checks for best practices in modern web development, focusing on security aspects.
 
 ## Running Lighthouse audits
 
 You can conduct a Lighthouse audit in different ways: using [PageSpeed Insights](https://pagespeed.web.dev/), [Chrome DevTools](https://developer.chrome.com/docs/lighthouse/overview/#devtools), the [command line](https://developer.chrome.com/docs/lighthouse/overview/#cli), or a [Chrome extension](https://developer.chrome.com/docs/lighthouse/overview/#extension).
 
-> ⚠ Although Lighthouse is a powerful tool for inspecting web page quality, it operates only at the URL level. To ensure comprehensive coverage of the web page quality, we strongly recommend testing at least the Home page, a Product Details Page (PDP), and a Collection page of your store.
+>⚠ Although Lighthouse is a powerful tool for inspecting web page quality, it operates only at the URL level. To ensure comprehensive coverage of the web page quality, we strongly recommend testing at least the Home page, a Product Details Page (PDP), and a Collection page of your store.
 
 ### FastStore WebOps - Lighthouse scores
 
@@ -47,11 +47,11 @@ Lighthouse reports is a native WebOps tool. For more information about using thi
 
 When you submit a URL to Lighthouse to audit your web page performance, it creates a report with the following information:
 
-* [**Performance score and metrics**](#performance-score-and-metrics): A weighted average of _Metrics scores_ and results of independent metrics that aim to represent the user's perception of performance.
-* [**Opportunities**](#opportunities): Suggestions and documentation on how to improve page load speed, with estimated potential savings.
-* [**Diagnostics**](#diagnostics): Additional guidance that developers can explore to further enhance page performance.
-* [**Passed audits**](#passed-audits): Suggestions from _Opportunities_ and _Diagnostics_ that have already been implemented on the page.
-* [**Additional information**](#additional-information): Details about the sampled data, including the data collection period, devices used for emulation, Chrome version, etc.
+- [**Performance score and metrics**](#performance-score-and-metrics): A weighted average of _Metrics scores_ and results of independent metrics that aim to represent the user's perception of performance.
+- [**Opportunities**](#opportunities): Suggestions and documentation on how to improve page load speed, with estimated potential savings.
+- [**Diagnostics**](#diagnostics): Additional guidance that developers can explore to further enhance page performance.
+- [**Passed audits**](#passed-audits): Suggestions from _Opportunities_ and _Diagnostics_ that have already been implemented on the page.
+- [**Additional information**](#additional-information): Details about the sampled data, including the data collection period, devices used for emulation, Chrome version, etc.
 
 In general, only **Metrics** — not the outcomes of **Opportunities** and **Diagnostics** — directly affect the overall **Performance score**. However, there is an indirect relationship because implementing the suggestions from Opportunities and Diagnostics will likely improve the Metric scores as well.
 
@@ -70,22 +70,22 @@ To ensure Lighthouse metrics are relevant to users, they are structured around a
 
 Given these four moments during the page load journey, a series of individual metrics were created to reflect what could be relevant for users in each moment. These metrics include the time it takes for the first contentful paint to be displayed and for the page to become interactive. A weighted average of these metrics determines the final Lighthouse **Performance score**:
 
-\| Audit | Weight |
-\| ------- -| ---------- |
-\| [Total Blocking Time (TBT)](#total-blocking-time-tbt--30) | 30% |
-\| [Largest Contentful Paint (LCP)](#largest-contetful-paint--25) | 25% |
-\| [Cumulative Layout Shift (CLS)](#cumulative-layout-shift-cls--15) | 25% |
-\| [First Contentful Paint (FCP)](#first-contentful-paint-fcp--10) | 10% |
-\| [Speed Index (SI)](#speed-index-si--10)| 10% |
+| Audit | Weight |
+| ------- -| ---------- |
+| [Total Blocking Time (TBT)](#total-blocking-time-tbt--30) | 30% |
+| [Largest Contentful Paint (LCP)](#largest-contetful-paint--25) | 25% |
+| [Cumulative Layout Shift (CLS)](#cumulative-layout-shift-cls--15) | 25% |
+| [First Contentful Paint (FCP)](#first-contentful-paint-fcp--10) | 10% |
+| [Speed Index (SI)](#speed-index-si--10)| 10% |
 
 The following sections briefly explain each of these metrics. Notice that the **Total Blocking Time**, **Largest Contentful Paint**, and **Cumulative Layout Shift** have higher weights and, consequently, a greater impact on the overall **performance score**. Therefore, paying close attention to these two metrics is essential.
 
-> ⚠ Due to frequent adjustments to Google's ranking formula, the overall **performance score** may vary over time. To stay up to date with Lighthouse's latest updates, we recommend visiting the [Lighthouse performance scoring](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) article.
+>⚠ Due to frequent adjustments to Google's ranking formula, the overall **performance score** may vary over time. To stay up to date with Lighthouse's latest updates, we recommend visiting the [Lighthouse performance scoring](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) article.
 
 When running Lighthouse, you will notice that the metric results follow a color code based on the following ranges:
 
 | Code | Meaning | Range |
-| --- | --- | --- |
+| ---------|-----------|---------- |
 | <span className="text-4xl text-red-500">▲</span> | Poor | 0–49 |
 | <span className="text-3xl text-orange-500">■</span> | Needs improvement | 50–89 |
 | <span className="text-3xl text-green-500">●</span> | Good | 90–100 |
@@ -100,15 +100,15 @@ User interaction is blocked when a long task blocks the main thread and prevents
 
 See below how Lighthouse classifies TBT times:
 
-| TBT time (milliseconds) | Color-coding |
-| --- | --- |
-| Over 600 | <span className="text-2xl text-red-500">▲</span>  Poor |
-| 200–600 | <span className="text-xl text-orange-500">■</span> Needs improvement |
-| 0–200 | <span className="text-xl text-green-500">●</span> Good |
+|TBT time (milliseconds)|Color-coding|
+|--|--|
+|Over 600|<span className="text-2xl text-red-500">▲</span>  Poor|
+|200–600|<span className="text-xl text-orange-500">■</span> Needs improvement|
+|0–200|<span className="text-xl text-green-500">●</span> Good|
 
 TBT is mainly affected by the parsing and execution of JavaScript and third-party scripts. Besides removing or reducing JavaScript code, you can improve TBT by splitting long tasks into smaller ones, improving code efficiency, and implementing lazy loading.
 
-> ℹ️ For more information about improving TBT, see [Google's guidelines](https://web.dev/lighthouse-total-blocking-time/#how-to-improve-your-tbt-score).
+>ℹ️ For more information about improving TBT, see [Google's guidelines](https://web.dev/lighthouse-total-blocking-time/#how-to-improve-your-tbt-score).
 
 #### Largest Contentful Paint (LCP) | 25%
 
@@ -122,20 +122,20 @@ TBT is mainly affected by the parsing and execution of JavaScript and third-part
 
 The metric only considers the loading time of elements significantly relevant to the user experience, such as:
 
-* `<img>` elements,
-* `<image>` elements inside an `<svg>` element.
-* `<video>` elements.
-* Elements with a background image loaded via the `url()` function.
-* Block-level elements, such as `<h1>`, `<h2>`, `<div>`, `<ul>`, `<table>`, etc.
+- `<img>` elements,
+- `<image>` elements inside an `<svg>` element.
+- `<video>` elements.
+- Elements with a background image loaded via the `url()` function.
+- Block-level elements, such as `<h1>`, `<h2>`, `<div>`, `<ul>`, `<table>`, etc.
 
 LCP is primarily affected by the following factors:
 
-* Long server response times.
-* Render-blocking resources, such as CSS stylesheets, font files, and JavaScript scripts.
-* Resource size and load time.
-* Client-side rendering.
+- Long server response times.
+- Render-blocking resources, such as CSS stylesheets, font files, and JavaScript scripts.
+- Resource size and load time.
+- Client-side rendering.
 
-> ℹ️ For more information about how to improve LCP, see [Google's guidelines](https://web.dev/fcp/#how-to-improve-fcp).
+>ℹ️ For more information about how to improve LCP, see [Google's guidelines](https://web.dev/fcp/#how-to-improve-fcp).
 
 #### Cumulative Layout Shift (CLS) | 25%
 
@@ -145,15 +145,15 @@ A layout shift occurs when a visible element changes its initial position from o
 
 ![Cumulative Layout Shift](https://vtexhelp.vtexassets.com/assets/docs/src/cls___0bb6a4c7ea83b32047329627b93a786a.png)
 
-| CLS | Color-coding |
-| --- | --- |
-| Over 0.25 | <span className="text-2xl text-red-500">▲</span>  Poor |
-| 0.1–0.25 | <span className="text-xl text-orange-500">■</span> Needs improvement |
-| 0–0.1 | <span className="text-xl text-green-500">●</span> Good |
+|CLS|Color-coding|
+|--|--|
+|Over 0.25|<span className="text-2xl text-red-500">▲</span>  Poor|
+|0.1–0.25|<span className="text-xl text-orange-500">■</span> Needs improvement|
+|0–0.1|<span className="text-xl text-green-500">●</span> Good|
 
 This metric is mostly affected by images, ads, embeds, iframes without predefined dimensions, and by content dynamically inserted by JavaScript on the client side (e.g., a bar that suddenly appears in the header).
 
-> ℹ️ For more information about improving CLS, see [Google's guidelines](https://web.dev/cls/#how-to-improve-cls).
+>ℹ️ For more information about improving CLS, see [Google's guidelines](https://web.dev/cls/#how-to-improve-cls).
 
 #### First Contentful Paint (FCP) | 10%
 
@@ -163,21 +163,21 @@ This metric is mostly affected by images, ads, embeds, iframes without predefine
 
 See below how Lighthouse classifies FCP times:
 
-| FCP time (seconds) | Color-coding |
-| --- | --- |
-| Over 3 | <span className="text-2xl text-red-500">▲</span>  Poor |
-| 1.8–3 | <span className="text-xl text-orange-500">■</span> Needs improvement |
-| 0–1.8 | <span className="text-xl text-green-500">●</span> Good |
+|FCP time (seconds)|Color-coding|
+|--|--|
+|Over 3|<span className="text-2xl text-red-500">▲</span>  Poor|
+|1.8–3|<span className="text-xl text-orange-500">■</span> Needs improvement|
+|0–1.8|<span className="text-xl text-green-500">●</span> Good|
 
 The FCP affects most of the other metrics and serves as a huge red flag if it is taking too long. This metric can be affected by:
 
-* Long server response times.
-* Render-blocking resources, such as CSS stylesheets, font files, and JavaScript scripts.
-* Script-based elements above the fold.
-* Large DOM trees.
-* Multiple 301 redirects.
+- Long server response times.
+- Render-blocking resources, such as CSS stylesheets, font files, and JavaScript scripts.
+- Script-based elements above the fold.
+- Large DOM trees.
+- Multiple 301 redirects.
 
-> ℹ️ For more information about improving FCP, see [Google's guidelines](https://web.dev/fcp/#how-to-improve-fcp).
+>ℹ️ For more information about improving FCP, see [Google's guidelines](https://web.dev/fcp/#how-to-improve-fcp).
 
 #### Speed Index (SI) | 10%
 
@@ -187,15 +187,15 @@ The [**Speed Index (SI)**](https://web.dev/speed-index/) indicates how quickly a
 
 See below how Lighthouse classifies SI times:
 
-| SI time (seconds) | Color-coding |
-| --- | --- |
-| 0ver 5.8 | <span className="text-2xl text-red-500">▲</span>  Poor |
-| 3.4–5.8 | <span className="text-xl text-orange-500">■</span> Needs improvement |
-| 0–3.4 | <span className="text-xl text-green-500">●</span> Good |
+|SI time (seconds)|Color-coding|
+|--|--|
+|0ver 5.8|<span className="text-2xl text-red-500">▲</span>  Poor|
+|3.4–5.8|<span className="text-xl text-orange-500">■</span> Needs improvement|
+|0–3.4|<span className="text-xl text-green-500">●</span> Good|
 
 The Speed Index is a unified metric that considers many other metrics and audits, which can help you figure out whether your page speed optimizations are working. Generally, most improvements to your page's [First Contentful Paint](#first-contentful-paint-fcp--10) and [Largest Contentful Paint](#largest-contentful-paint-lcp--25) are also likely to improve the _Speed Index_.
 
-> ℹ️ For more information about improving SI, see [Google's guidelines](https://web.dev/speed-index/#how-to-improve-your-speed-index-score).
+>ℹ️ For more information about improving SI, see [Google's guidelines](https://web.dev/speed-index/#how-to-improve-your-speed-index-score).
 
 ### Opportunities
 
@@ -219,11 +219,11 @@ The **Passed audits** section lists all the audits that the page passed. Once yo
 
 The **Additional information** section shares the following details about the sampled data:
 
-* Data collection period
-* Visit durations
-* Devices
-* Network connections
-* Sample size
-* Chrome version
+- Data collection period
+- Visit durations
+- Devices
+- Network connections
+- Sample size
+- Chrome version
 
 ![Additional information](https://vtexhelp.vtexassets.com/assets/docs/src/additional-info___b0ba8b0e27f40a84f634c70976a16e16.png)
