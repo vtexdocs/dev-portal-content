@@ -103,8 +103,8 @@ See below how Lighthouse classifies TBT times:
 |TBT time (milliseconds)|Color-coding|
 |--|--|
 |Over 600|<span className="text-2xl text-red-500">▲</span>  Poor|
-|200–600|<span className="text-xl text-orange-500">■</span> Needs improvement|
-|0–200|<span className="text-xl text-green-500">●</span> Good|
+|200 – 600|<span className="text-xl text-orange-500">■</span> Needs improvement|
+|0 – 200|<span className="text-xl text-green-500">●</span> Good|
 
 TBT is mainly affected by the parsing and execution of JavaScript and third-party scripts. Besides removing or reducing JavaScript code, you can improve TBT by splitting long tasks into smaller ones, improving code efficiency, and implementing lazy loading.
 
@@ -114,11 +114,11 @@ TBT is mainly affected by the parsing and execution of JavaScript and third-part
 
 [**Largest Contentful Paint (LCP)**](https://web.dev/lcp/) measures the time it takes to render the largest visible element on the page within the viewport. Fast LCPs help reassure the user that the page is useful.
 
-| LCP time (seconds) | Color-coding |
-| --- | --- |
-| Over 4 | <span className="text-2xl text-red-500">▲</span>  Poor |
-| 2.5–4 | <span className="text-xl text-orange-500">■</span> Needs improvement |
-| 0–2.5 | <span className="text-xl text-green-500">●</span> Good |
+|LCP time (seconds)|Color-coding|
+|--|--|
+|Over 4|<span className="text-2xl text-red-500">▲</span>  Poor|
+|2.5–4|<span className="text-xl text-orange-500">■</span> Needs improvement|
+|0–2.5|<span className="text-xl text-green-500">●</span> Good|
 
 The metric only considers the loading time of elements significantly relevant to the user experience, such as:
 
@@ -148,8 +148,8 @@ A layout shift occurs when a visible element changes its initial position from o
 |CLS|Color-coding|
 |--|--|
 |Over 0.25|<span className="text-2xl text-red-500">▲</span>  Poor|
-|0.1–0.25|<span className="text-xl text-orange-500">■</span> Needs improvement|
-|0–0.1|<span className="text-xl text-green-500">●</span> Good|
+|0.1 – 0.25|<span className="text-xl text-orange-500">■</span> Needs improvement|
+|0 – 0.1|<span className="text-xl text-green-500">●</span> Good|
 
 This metric is mostly affected by images, ads, embeds, iframes without predefined dimensions, and by content dynamically inserted by JavaScript on the client side (e.g., a bar that suddenly appears in the header).
 
