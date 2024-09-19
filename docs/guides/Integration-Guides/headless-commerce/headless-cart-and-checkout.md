@@ -3,7 +3,7 @@ title: "Headless cart and checkout"
 slug: "headless-cart-and-checkout"
 hidden: false
 createdAt: "2021-03-31T21:20:32.157Z"
-updatedAt: "2023-05-29T21:21:53.940Z"
+updatedAt: "2024-09-19T20:06:12Z"
 excerpt: "This guide explains how to implement a shopping cart and manage the checkout process in a headless ecommerce store, using the Checkout API to handle all interactions through API requests, without a traditional user interface."
 ---
 
