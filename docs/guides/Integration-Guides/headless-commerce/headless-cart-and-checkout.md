@@ -98,7 +98,7 @@ Shopping cart attachments are `orderForm` objects containing order information r
 
 ## Place order
 
-There are two ways of placing orders with Checkout API:
+There are two ways of placing orders with the Checkout API:
 
 - [Place new order](#place-new-order): Manage shopping cart information in your frontend and then use one API request to send all order information to VTEX.
 - [Place order from existing cart](#place-order-from-existing-cart): Manage shopping cart information in the VTEX platform throughout the shopping experience, then place an order from that data using just the cart ID.
