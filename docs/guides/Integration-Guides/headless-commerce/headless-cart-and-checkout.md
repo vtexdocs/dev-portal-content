@@ -332,7 +332,7 @@ To send the payment information to VTEX, use one of these endpoints:
 - [Send payment information (public)](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments)
 - [Send payment information (private)](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/payments).
 
-The request body used in this step is based on the order's `paymentData` attachment. You can get this data from the response of the [Get client profile by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles?endpoint=get-/api/checkout/pub/profiles), as in the example.
+The request body used in this step is based on the order's `paymentData` attachment. You can get this data from the response of the [Get client profile by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles), as in the example.
 
 ```json Request
 "paymentData":{
