@@ -11,16 +11,16 @@ A route maps a URL pattern and an HTTP request method to an action. It defines h
 
 When using [VTEX IO Store Framework](https://developers.vtex.com/docs/guides/store-framework), you do not need to manage routing and HTTP methods directly. Instead, routing and HTTP request methods are managed by either the [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) app or the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder), depending on the route type. This allows you to focus on creating and managing route paths and page templates.
 
-VTEX IO routes are classified into four different categories:
+Store Framework routes are classified into four different categories:
 
 - **Product routes:** Related to product pages.
 - **Search routes:** Related to search pages.
-- **Navigation routes:** Client-side defined routes related to VTEX IO custom paths and predefined templates, such as [department](https://github.com/vtex-apps/store/blob/master/store/routes.json#L27), [brand](https://github.com/vtex-apps/store/blob/master/store/routes.json#L21), and [category](https://github.com/vtex-apps/store/blob/master/store/routes.json#L33) routes.
+- **Navigation routes:** Client-side defined routes related to Store Framework custom paths and predefined templates, such as [department](https://github.com/vtex-apps/store/blob/master/store/routes.json#L27), [brand](https://github.com/vtex-apps/store/blob/master/store/routes.json#L21), and [category](https://github.com/vtex-apps/store/blob/master/store/routes.json#L33) routes.
 - **Custom routes:** Created by the user to handle custom landing pages.
 
-The Rewriter app manages the first three route types. It interprets the requested path, identifies the route type, and then forwards the route path to the rendering pipeline. Learn more in [Rewriter GraphQL API](https://developers.vtex.com/docs/apps/vtex.rewriter@1.63.0/rewriter-graphql-api).
+The [Rewriter app](https://developers.vtex.com/docs/apps/vtex.rewriter) manages the first three route types. It interprets the requested path, identifies the route type, and then forwards the route path to the rendering pipeline. Learn more in [Rewriter GraphQL API](https://developers.vtex.com/docs/apps/vtex.rewriter@1.63.0/rewriter-graphql-api).
 
-The store builder manages custom routes. Therefore, custom routes are not stored in the Rewriter app, meaning their paths are directly forwarded to the render server. To learn how to create a custom page, see the [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) guide.
+The [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) manages custom routes. Therefore, custom routes are not stored in the Rewriter app, meaning their paths are directly forwarded to the render server. To learn how to create a custom page, see the [Creating a new custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) guide.
 
 ## Before you begin
 
