@@ -1,14 +1,14 @@
 ---
-title: Pagination in the Master Data API
-slug: pagination-in-the-master-data-api
+title: "Pagination in the Master Data API"
+slug: "pagination-in-the-master-data-api"
 hidden: true
-createdAt: 2024-09-06T18:10:15.623Z
-updatedAt: 2024-09-06T18:10:15.623Z
+createdAt: "2024-09-06T18:10:15.623Z"
+updatedAt: "2024-09-06T18:10:15.623Z"
 ---
 
 When working with the Master Data API, whether you're using v1 or v2, you may need to handle a large volume of data. Pagination breaks down these large datasets into smaller, manageable parts. This guide will walk you through using pagination in the search and scroll endpoints in the Master Data API.
 
-> ℹ️ Learn more about [Extracting data from Master Data](https://developers.vtex.com/docs/guides/search-and-scroll-api-queries) using the search and scroll endpoints.
+>ℹ️ Learn more about [Extracting data from Master Data](https://developers.vtex.com/docs/guides/search-and-scroll-api-queries) using the search and scroll endpoints.
 
 ## Search pagination
 
@@ -65,7 +65,7 @@ Example of an initial request:
 
 `GET /api/dataentities/{data_entity}/scroll?_size={page_size}`
 
-> ℹ️ You can only define the page size in the first request. It cannot be changed in subsequent requests.
+>ℹ️ You can only define the page size in the first request. It cannot be changed in subsequent requests.
 
 To obtain the next pages, you can choose between retrieving subsequent pages or retrieving a specific page. See details about each option in the following sections.
 
