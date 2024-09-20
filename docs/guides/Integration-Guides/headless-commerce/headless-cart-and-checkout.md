@@ -27,6 +27,7 @@ For a customer to make a purchase, the store must have a shopping cart that cont
 
 In the `orderForm`, product information is stored inside `items`, where each object corresponds to a SKU contained in the cart. Below is a basic example of a shopping cart containing two units of SKU `123`, to be fulfilled by seller 1, at a price of `$100.00` per unit.
 
+<CH.Code>
 ```json Request
 "items": [
     {
@@ -37,6 +38,7 @@ In the `orderForm`, product information is stored inside `items`, where each obj
     }
 ]
 ```
+</CH.Code>
 
 The information above is sufficient to place an order, but there are other possible fields for shopping cart items, many of which are populated by VTEX modules.
 
@@ -50,6 +52,7 @@ To learn how to add products to a shopping cart, read the guide [Add cart items]
 
 Shopping cart attachments are `orderForm` objects containing order information related to the [client profile](https://developers.vtex.com/docs/guides/add-client-profile), [shipping address and delivery option](https://developers.vtex.com/docs/guides/add-shipping-address-and-delivery-option-to-the-cart), [marketing data](https://developers.vtex.com/docs/guides/add-marketing-information-to-the-cart), [payment data](https://developers.vtex.com/docs/guides/adding-payment-information-to-the-cart), and [merchant context data](https://developers.vtex.com/docs/guides/add-merchant-context-information-to-the-cart). Check a basic example of a cart attachments.
 
+<CH.Code>
 ```json Request
 {
   "userProfileId": "fb542e51-5488-4c34-8d17-ed8fcf597a94",
@@ -93,6 +96,7 @@ Shopping cart attachments are `orderForm` objects containing order information r
   "isComplete": true
 }
 ```
+</CH.Code>
 
 > ℹ️ Some attachments may contain arrays of objects, where each object corresponds to an item in the [items](#cart-items) array.
 
@@ -108,6 +112,8 @@ There are two ways of placing orders with the Checkout API:
 The [place new order](#place-new-order) method increases the complexity of your application since you must manage all shopping cart data to correctly assemble the [`orderForm`](#shopping-cart). Additionally, placing a new order does not send shopping cart information to VTEX until the customers complete their purchase.
 
 The [place order from existing cart](#place-order-from-existing-cart) method is recommended in most cases. Use [place new order](#place-new-order) if your operation has specific requirements, such as limiting the number of HTTP requests sent from your storefront.
+
+---
 
 ### Place new order
 
@@ -141,7 +147,11 @@ You need to make requests with the client data to set `CheckoutOrderFormOwnershi
 
 Once you created a new cart, use the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint to retrieve the created `orderForm`, as in the example.
 
-```json Response Get current or create a new cart
+
+
+<CH.Code>
+
+```json Response-Get-current-or-create-a-new-cart
 {
   "orderFormId": "9ceee0fde6db489fbc682a0e2ab13a86",
   "salesChannel": "1",
@@ -160,7 +170,6 @@ Once you created a new cart, use the [Get current or create a new cart](https://
   "selectableGifts": [],
   "totalizers": [],
   "shippingData": null,
-// !mark(1:17) gold
   "clientProfileData": {
     "email": "clark.kent@examplemail.com",
     "firstName": "Clark",
@@ -253,10 +262,14 @@ Once you created a new cart, use the [Get current or create a new cart](https://
   }
 }
 ```
+</CH.Code>
+
+--- 
 
 Once you have the `orderForm`, you must add the client data to it. To do so, send the profile data in the [Add client profile](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData) endpoint request, as in the example.
 
-```json Request Add client profile
+<CH.Code>
+```json Request-Add-client-profile
 {
   "email": "customer@examplemail.com",
   "firstName": "first-name",
@@ -272,6 +285,7 @@ Once you have the `orderForm`, you must add the client data to it. To do so, sen
   "isCorporate": false
 }
 ```
+</CH.Code>
 
 For more information about this endpoint, check the guide [Adding customer profile information to the cart](https://developers.vtex.com/docs/guides/add-customer-profile-information-to-the-cart).
 
@@ -283,6 +297,7 @@ After making this request, the `CheckoutOrderFormOwnership` cookie will be set a
 
 Once the client data has been added, it is also important to add the customer address data to the `orderForm`. This data includes all information about the delivery of the order to the customer. To do so, use the [Add shipping address and select delivery option](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) endpoint.
 
+<CH.Code>
 ```json Request
 {
   "clearAddressIfPostalCodeNotFound": false,
@@ -312,6 +327,7 @@ Once the client data has been added, it is also important to add the customer ad
   ]
 }
 ```
+</CH.Code>
 
 For more information about this endpoint, check the [Adding shipping address and delivery options to the cart](https://developers.vtex.com/docs/guides/add-shipping-address-and-delivery-option-to-the-cart) guide.
 
@@ -335,6 +351,8 @@ After placing an order using either of the methods presented above, you will rec
 
 > ❗ Failing to perform these steps within five minutes will cause the order to be automatically canceled and tagged as [`incomplete`](https://help.vtex.com/en/tutorial/how-incomplete-orders-work--tutorials_294).
 
+---
+
 ### Send payment information
 
 To send the payment information to VTEX, use one of these endpoints:
@@ -344,6 +362,7 @@ To send the payment information to VTEX, use one of these endpoints:
 
 The request body used in this step is based on the order's `paymentData` attachment. You can get this data from the response of the [Get client profile by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles), as in the example.
 
+<CH.Code>
 ```json Request
 "paymentData":{
    "updateStatus":"updated",
@@ -374,6 +393,7 @@ The request body used in this step is based on the order's `paymentData` attachm
    ]
 }
 ```
+</CH.Code>
 
 Learn more about these endpoints:
 
@@ -390,11 +410,11 @@ In the payment section at checkout, we recommend retrieving the saved credit car
 
 To check if the customer has any saved cards, use the [Get client profile by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles) endpoint. This endpoint returns the available cards. The card information is displayed in the `availableAccounts` array, as shown in the examples.
 
-```json Response for customer with available cards
+<CH.Code>
+```json Response-for-customer-with-available-cards
 {
     "userProfileId": "f072eafc-53a4-4aa7-9e14-6b266f918e77",
     "profileProvider": "PROFILE PROVIDER DESCRIPTION",
-// !mark(1:16) gold
     "availableAccounts": [
         {
             "accountId": "AD6ADBF4359F4B3EBCC4A61ADD176BBE",
@@ -414,20 +434,21 @@ To check if the customer has any saved cards, use the [Get client profile by ema
 ...
 }
 ```
+---
 
-```json Response for customer with no available cards
+```json Response-for-customer-with-no-available-cards
 {
     "userProfileId": "f072eafc-53a4-4aa7-9e14-6b266f918e77",
     "profileProvider": "PROFILE PROVIDER DESCRIPTION",
-// !mark(1) gold
     "availableAccounts": [],
 ...
 }
 ```
+</CH.Code>
 
 > ℹ️ You can enable a checkbox that allows the customer to choose if they want to save the credit card information or not. To learn how to enable it, read the guide [Enable the Save user data opt-in](https://developers.vtex.com/docs/guides/enable-the-save-user-data-opt-in#saving-personal-and-payment-data).
 
----
+</CH.Scrollycoding>
 
 ### Process order
 
@@ -468,6 +489,8 @@ Implement an address autofill feature using the following endpoint:
 
 - [`GET` Get address by postal code](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/postal-code/-countryCode-/-postalCode-)
 
+---
+
 ### Pickup points
 
 Shipping information is added to the order as [`orderForm` attachments](#order-details). To allow customers to choose nearby pickup points, use the following endpoint:
@@ -485,5 +508,3 @@ Check these other guides to learn more about building a headless shopping experi
 - [Headless commerce overview](https://developers.vtex.com/docs/guides/headless-commerce)
 - [Headless catalog and search](https://developers.vtex.com/docs/guides/headless-catalog)
 - [Headless profile management and order history](https://developers.vtex.com/docs/guides/headless-profile-management-and-order-history)
-
-</CH.Scrollycoding>
