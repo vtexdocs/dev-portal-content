@@ -9,6 +9,8 @@ excerpt: "This guide explains how to implement a shopping cart and manage the ch
 
 A [headless](https://developers.vtex.com/docs/guides/headless-commerce) store handles all ecommerce integration without a traditional user interface, relying solely on API requests. In this guide, you will learn how to create a shopping cart and manage the checkout flow using features from the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) in your headless store.
 
+> ⚠️ New fields can be added in the Checkout API payload without previous warning.
+
 ## Shopping cart
 
 In the Checkout API, the VTEX shopping cart information is organized using the `orderForm`, an object containing all information relevant to the purchase, from the products to shipping and payment information, among others.
@@ -113,11 +115,15 @@ To place a new order without any shopping cart data previously stored on the VTE
 
 For a tutorial of this method, check the guide [Create a regular order from an existing cart](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api) or follow the steps in the [Create a regular order using the Checkout API](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api).
 
+---
+
 ### Place order from existing cart
 
 You can also place an order from an existing cart, which already has an orderForm structure and a shopping cart ID. To do so, use the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint or follow the steps in the [Create a regular order from an existing cart](https://developers.vtex.com/docs/guides/create-a-regular-order-from-an-existing-cart) guide.
 
 This endpoint may be used to perform tasks such as adding products to a cart or linking shipping information to the order.
+
+---
 
 ## Order privacy
 
@@ -128,6 +134,8 @@ When a new cart is created, a new cookie named `CheckoutOrderFormOwnership` is s
 You need to make requests with the client data to set `CheckoutOrderFormOwnership` to a value. Without this cookie, the returned order form will have masked personal data such as `clientProfileData` and `shippingData`.
 
 > ⚠️ Please contact [VTEX support](https://support.vtex.com/hc/en-us/requests) to enable this feature in your store. This feature is not available to stores using [FastStore](https://developers.vtex.com/docs/guides/faststore).
+
+---
 
 ### Add client profile data
 
@@ -319,6 +327,8 @@ After adding the client profile data and address data, you can access the previo
 
 With the correct ownership cookie, both client profile data and address data are unmasked, providing the full details.
 
+---
+
 ## Complete order
 
 After placing an order using either of the methods presented above, you will receive an `orderId` and `transactionId` in the response body, along with some login values. Your integration must use this information to complete the purchase process within five minutes. This involves [sending payment information](#send-payment-information) and then [requesting order processing](#process-order).
@@ -425,15 +435,21 @@ Lastly, you must request order processing by using the [Process order](https://d
 
 > ⚠️ Keep in mind that this process uses the [gateway connectors](https://help.vtex.com/en/tutorial/what-is-the-connector--3lze0Cu0bmyC6u2o2iaeEA#) configured in your VTEX environment. Be careful when using it to avoid any unwanted charges or unexpected payment denials.
 
+---
+
 ## Verify order status
 
 Once you have successfully placed an order, sent payment information, and requested order processing, you will be able to see the order in the [Order management module](https://help.vtex.com/en/tutorial/orders-list--tutorials_200#) in VTEX Admin.
 
 You can also use the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) and [List orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) endpoints for this purpose. Another way to check the order updates is by integrating [Feed v3](https://developers.vtex.com/docs/guides/orders-feed#best-practices-for-integrations) and [Hook](https://developers.vtex.com/docs/guides/orders-feed#hook) with your store.
 
+---
+
 ## Checkout interface
 
 When a customer goes to your store checkout, your [frontend implementation](https://help.vtex.com/en/tracks/trilha-da-loja-vtex--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ) must handle several tasks. Follow the sections below to implement these tasks effectively.
+
+---
 
 ### Order details
 
@@ -443,6 +459,8 @@ You must handle this information based on the order placement method you choose.
 
 - [Place new order](#place-new-order)
 - [Place order from existing cart](#place-order-from-existing-cart)
+
+---
 
 ### Address autofill
 
@@ -457,6 +475,8 @@ Shipping information is added to the order as [`orderForm` attachments](#order-d
 - [`GET` List pickup points by location](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/pickup-points)
 
 >❗️ [reCAPTCHA integration](https://help.vtex.com/en/tutorial/using-recaptcha-at-checkout--18Te3oDd7f4qcjKu9jhNzP) does not work in Headless checkout. It only works with stores using [Checkout v6](https://help.vtex.com/en/tutorial/enable-checkout-v6--7qVqv3ptRvpVVplrvg8ruH).
+
+---
 
 ## Learn more
 
