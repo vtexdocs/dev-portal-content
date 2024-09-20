@@ -49,7 +49,7 @@ Below, explore the features and functionalities available for each storefront te
 
 ✅ **Available:** An out-of-the-box feature, ready to use.
 
-⚠️**Limited:** The feature is possible but needs custom implementation.
+⚠️ **Limited:** The feature is possible but needs custom implementation.
 
 ❌ **Not available:** This feature is currently unavailable, even with customizations.
 
