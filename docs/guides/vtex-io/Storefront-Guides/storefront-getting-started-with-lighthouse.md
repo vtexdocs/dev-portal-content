@@ -24,7 +24,6 @@ Lighthouse audits are grouped into five categories:
 - [**Performance**](https://web.dev/lighthouse-performance): Evaluates how users perceive and experience a web page by testing key web metrics.
 - [**Accessibility**](https://web.dev/lighthouse-accessibility/): Assesses the page usability for people with disabilities or impairments.
 - [**SEO**](https://web.dev/lighthouse-seo/): Checks if the page is optimized for search engine results ranking.
-- [**Progressive web apps**](https://web.dev/lighthouse-pwa/): Validates the aspects of a progressive web app, checking whether a full application-like experience is offered.
 - [**Best practices**](https://web.dev/lighthouse-best-practices/): Assesses the overall code health of a webpage. Lighthouse also runs checks for best practices in modern web development, focusing on security aspects.
 
 ## Running Lighthouse audits
@@ -35,7 +34,7 @@ You can conduct a Lighthouse audit in different ways: using [PageSpeed Insights]
 
 ### FastStore WebOps - Lighthouse scores
 
-For stores using [FastStore](https://developers.vtex.com/docs/guides/faststore),  you can run Lighthouse audit using the methods presented in the previous section. You can also streamline your web audits by using the [Lighthouse scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores) tool for the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) app.
+For stores using [FastStore](https://developers.vtex.com/docs/guides/faststore), you can run Lighthouse audit using the methods presented in the previous section. You can also streamline your web audits by using the [Lighthouse scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores) tool for the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) app.
 
 ![WebOps Previews](https://vtexhelp.vtexassets.com/assets/docs/src/lighthouse-scores-webops___f9a501c9132684e7398456db26da2547.png)
 
