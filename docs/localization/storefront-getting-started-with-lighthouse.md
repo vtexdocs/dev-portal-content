@@ -1,10 +1,10 @@
 ---
 title: "Getting started with Lighthouse"
-slug: "getting-started-with-lighthouse"
+slug: "storefront-getting-started-with-lighthouse"
 hidden: false
-createdAt: "2024-09-11T15:31:19.301Z"
+createdAt: "2024-09-20T14:50:12.165Z"
 updatedAt: ""
-excerpt: ""
+excerpt: "Explore how to leverage Google Lighthouse to improve your store's overall performance."
 ---
 
 <img align="right" src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/images/vtex-io-documentation-getting-started-with-lighthouse-3.png"/>
@@ -71,10 +71,10 @@ To ensure Lighthouse metrics are relevant to users, they are structured around a
 Given these four moments during the page load journey, a series of individual metrics were created to reflect what could be relevant for users in each moment. These metrics include the time it takes for the first contentful paint to be displayed and for the page to become interactive. A weighted average of these metrics determines the final Lighthouse **Performance score**:
 
 | Audit | Weight |
-| ------- -| ---------- |
+| -------- | ---------- |
 | [Total Blocking Time (TBT)](#total-blocking-time-tbt--30) | 30% |
-| [Largest Contentful Paint (LCP)](#largest-contetful-paint--25) | 25% |
-| [Cumulative Layout Shift (CLS)](#cumulative-layout-shift-cls--15) | 25% |
+| [Largest Contentful Paint (LCP)](#largest-contentful-paint-lcp--25) | 25% |
+| [Cumulative Layout Shift (CLS)](#cumulative-layout-shift-cls--25) | 25% |
 | [First Contentful Paint (FCP)](#first-contentful-paint-fcp--10) | 10% |
 | [Speed Index (SI)](#speed-index-si--10)| 10% |
 
