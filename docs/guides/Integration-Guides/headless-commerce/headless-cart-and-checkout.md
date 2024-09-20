@@ -3,7 +3,7 @@ title: "Headless cart and checkout"
 slug: "headless-cart-and-checkout"
 hidden: false
 createdAt: "2021-03-31T21:20:32.157Z"
-updatedAt: "2024-09-19T20:06:12Z"
+updatedAt: "2024-09-19T20:20:32.157Z"
 excerpt: "This guide explains how to implement a shopping cart and manage the checkout process in a headless ecommerce store, using the Checkout API to handle all interactions through API requests, without a traditional user interface."
 ---
 
@@ -465,3 +465,5 @@ Check these other guides to learn more about building a headless shopping experi
 - [Headless commerce overview](https://developers.vtex.com/docs/guides/headless-commerce)
 - [Headless catalog and search](https://developers.vtex.com/docs/guides/headless-catalog)
 - [Headless profile management and order history](https://developers.vtex.com/docs/guides/headless-profile-management-and-order-history)
+
+</CH.Scrollycoding>
