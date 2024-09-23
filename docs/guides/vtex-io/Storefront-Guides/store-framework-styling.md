@@ -1,6 +1,6 @@
 ---
 title: "Styling"
-slug: "styling"
+slug: "store-framework-styling"
 hidden: false
 createdAt: "2024-09-12T12:52:42.285Z"
 updatedAt: ""
