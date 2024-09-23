@@ -6,7 +6,7 @@ Once you have [created your FastStore project](https://developers.vtex.com/docs/
 
 The WebOps Dashboard provides a comprehensive overview of website builds and deploy previews and offers suggestions on how to improve your storefront's performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
 
-    ![dashboard-overview](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-webops___5bfc079a32f4d0b5facb70dfb3422152.png)
+![dashboard-overview](https://vtexhelp.vtexassets.com/assets/docs/src/webops-dashboard-overview___c417a869e982d91e94106cf63c9ec162.png)
 
 To access the WebOps Dashboard, in the VTEX Admin, go to **Storefront > FastStore WebOps**. The Dashboard has two tabs: [Overview](#overview) and [Integrations](#integrations).
 
@@ -24,7 +24,7 @@ The **Production Overview** section provides the following information about the
 | :-------------------- | :----------------------------------------------------------------------------------------------- |
 | **Live Store**        | URL for your production environment, accessible to shoppers.                                     |
 | **Repository**        | GitHub repository associated with the project.                                                   |
-| **Deploy**            | Commit for the current deployment, including the date, time, and who made it.                        |
+| **Deploy**            | Commit for the current deployment, including the date, time, and who made it.                    |
 | **CMS Provider**      | Link to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
 | **CMS Project**       | Link to the FastStore project in Headless CMS.                                                   |
 
@@ -44,19 +44,19 @@ The live store URL includes a `liveStoreId`, a unique identifier for your store.
 
 This section also displays the status of the live deployment:
 
-    - **Success:** The commit was deployed to the production environment and is live.
-    - **Queued:** The commit is next in line to be deployed.
-    - **In progress:** The commit is currently being deployed.
-    - **Failed:** The deployment failed. Further details can be found by clicking the link below the `Deploy` button.
+- **Success:** The commit was deployed to the production environment and is live.
+- **Queued:** The commit is next in line to be deployed.
+- **In progress:** The commit is currently being deployed.
+- **Failed:** The deployment failed. Further details can be found by clicking the link below the `Deploy` button.
 
 ### Lighthouse Scores
 
 When your store goes live (in production), ensuring optimal performance and a good user experience becomes crucial. The Lighthouse Scores section offers insights into four key areas measured by Lighthouse, helping you understand their impact on your store's performance.
 
-    - **Performance:** Indicates how fast your pages load.
-    - **Accessibility:** Reflects how usable your pages are for people with disabilities.
-    - **Best practices:** Indicates how well your pages adhere to coding best practices.
-    - **SEO:** Reflects how well your pages are optimized for search engines.
+- **Performance:** Indicates how fast your pages load.
+- **Accessibility:** Reflects how usable your pages are for people with disabilities.
+- **Best practices:** Indicates how well your pages adhere to coding best practices.
+- **SEO:** Reflects how well your pages are optimized for search engines.
 
 These scores are based on the pages defined for testing in the [Integrations](#integrations) tab.
 
@@ -64,19 +64,32 @@ These scores are based on the pages defined for testing in the [Integrations](#i
 
 This section lists all the recent deploys to your production store. Each item on the list is composed of the following:
 
-    ![dashbard-lighthouse-score](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-production-deploys___840fcb7b30bc2c7a1e4e5d1d255a58f9.png)
+![dashboard-lighthouse-score](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-production-deploys___840fcb7b30bc2c7a1e4e5d1d255a58f9.png)
+
+### Build logs
+
+The Dashboard integrates the build logs feature, providing an integrated experience of your store deployment for monitoring the store deployment status, and help you understand the success or failure of each deployment.
+
+![webops-build-logs](https://vtexhelp.vtexassets.com/assets/docs/src/webops-build-logs___dcab2fcebc09675e9087f3d25ca33058.gif)
+
+To access the build logs for each deployment, follow these steps:
+
+1. Go to [Production Deploys](#production-deploys) and click in one of the the deploys you want to see the build information.
+2. Click on a specific deployment to view its details.
+3. The build logs view will display deployment information, including a `Preview Link` to see a preview of your store for that deployment.
 
 ### Preview Deploys
 
 This section lists all the deploy previews created for GitHub branches in your project repository. These previews are automatically available for each pull request opened for a corresponding branch.
 
-## Integrations 
+## Integrations
 
 The Integrations tab allows you to configure store pages for Lighthouse Tests. Here, you can specify the URLs for a product listing page (PLP) and a product details page (PDP) to undergo automatic Lighthouse score testing during deployments. This ensures a consistent testing experience.
 
-    ![dashboard-integrations](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-integrations___8575a9f0fc2abfa64bdfc10fc7534e9d.png)
+![dashboard-integrations](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-integrations___8575a9f0fc2abfa64bdfc10fc7534e9d.png)
 
 ### Configuring pages for Lighthouse testing
+
 To set the pages you want to test with Lighthouse, follow these steps:
 
 1. In the **Default Category for PLP** field, enter the [category](https://help.vtex.com/en/tutorial/what-is-a-category--6HV4Q3E2FauUoOQoiCCgCg) slug defined in the Catalog.
@@ -85,11 +98,10 @@ To set the pages you want to test with Lighthouse, follow these steps:
 
 Once you've set the pages for testing and after a new deploy, go to the **Overview** tab and access the **Lighthouse Scores** section to check the scores for those pages.
 
-
 ## Deleting the project
 
 To delete your FastStore project, click the **More actions menu** (`⋮`). Then, click **Delete Project**.
 
 A modal to confirm your choice will open.
 
-    > ⚠️  Proceed with caution. Deleting the project is irreversible and will permanently remove all deployments and domains associated with it.
+> ⚠️ Proceed with caution. Deleting the project is irreversible and will permanently remove all deployments and domains associated with it.
