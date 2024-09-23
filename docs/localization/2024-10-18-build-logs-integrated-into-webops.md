@@ -13,7 +13,7 @@ The FastStore WebOps app now provides direct access to build logs for each store
 
 ## What has changed?
 
-Previously, build logs were only accessible through GitHub. 
+Previously, build logs were only accessible through GitHub.
 
 Now, build logs are also available directly within the WebOps page of  VTEX Admin. With build logs integrated alongside other store information, you gain a better understanding of the deployment's context, making it easier to share build logs with team members for faster troubleshooting and problem-solving.
 
