@@ -17,7 +17,7 @@ While the native service worker greatly enhances the functionality of your store
 3. Click the `Advanced` tab.
 4. Enable the `Service Worker` option to deactivate the native service worker.
 
-    ![service-worker-toggle-recipe](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker-0.png)
+        ![service-worker-toggle-recipe](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker-0.png)
 
 5. Save your changes.
 
