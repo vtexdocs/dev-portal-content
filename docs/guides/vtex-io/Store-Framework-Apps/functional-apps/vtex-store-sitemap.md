@@ -17,7 +17,7 @@ This app is available to stores using `vtex.edition-store@3.x` or a later versio
 
 Before generating your store's sitemap, you might want to adjust if products, navigation, app and/or custom routes will be included in it or not. If that is the case, check the [Advanced Configuration section](#advanced-configuration) for more information.
 
-## Step by step
+## Instructions
 
 1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into your account.
 2. Run `vtex use {workspaceName} --production` to use a production workspace or [create a production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) from scratch.

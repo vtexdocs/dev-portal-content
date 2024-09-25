@@ -14,7 +14,7 @@ Now that you have completed the basic setup for VTEX IO, it is time to configure
 
 By fulfilling these prerequisites, you will ensure your store is ready to harness the VTEX Store Framework's capabilities, avoiding potential technical issues during the implementation process.
 
-## Step by step
+## Instructions
 
 ### Step 1 - Setting your account's Edition app
 

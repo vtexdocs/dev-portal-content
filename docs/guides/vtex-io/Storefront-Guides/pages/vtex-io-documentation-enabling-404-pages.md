@@ -6,57 +6,55 @@ createdAt: "2020-06-03T16:02:44.190Z"
 updatedAt: "2022-12-13T20:17:44.467Z"
 ---
 
-The 404 error is an HTTP standard response code for when the server was not able to return what the browser request or was configured to not handle that request.
+A 404 error is an HTTP response code indicating that the server cannot find the requested page. This often happens when a user tries to access a page that has been removed or doesn’t exist, such as a deactivated product page.
 
-When navigating the internet, it's quite common to run across 404 pages or page Not Found when we ask the browser to perform an action that cannot be executed by the server, such as accessing a product page that was deactivated from the store's catalog.
+For ecommerce websites, enabling 404 pages is essential to:
+- Prevent search engines like Google from indexing non-existent pages, which can negatively impact SEO.
+- Enhance the user experience by guiding visitors to valid content.
 
-For ecommerce companies, **one of the main advantages of enabling 404 pages is to avoid that Google indexes pages with paths that do not exist**, thereby harming the store's SEO and its customer experience.
+In VTEX IO, 404 pages are enabled by default for:
+- Non-existent product pages.
+- URLs with more than one invalid segment.
 
-In VTEX IO, 404 pages are **natively** enabled for inexistent product pages and for URLs that have more than one invalid segment. But in addition, it is also possible to allow 404 pages when URLs have a **single** invalid segment, as shown in the step by step section below.
+In addition, you can also configure 404 pages for URLs with a single invalid segment, as outlined in the instructions below.
 
-> ℹ️ Due to implementation rules, the native functionality of 404 pages does not function for URLs originating from user searches. The reason behind this is that URLs originating from product searches include the `map=ft` parameter in their path, helping the platform to interpret that such URL segments reflect user performed searches, and thus should not be interpreted as non-existent (which would lead to a 404 page being rendered).
+> ℹ️ The native 404 functionality does not apply to URLs originating from user searches. These URLs include the `map=ft` parameter and are not considered non-existent. In rare cases where search URLs include the `map=specificationFilter` parameter without `map=ft`, 404 pages might be rendered. 
 
-> ⚠️ In rare cases when the parameter `map=specificationFilter` is present in the path of such search originated URLs, 404 pages may be rendered. This happens because the platform cannot interpret these URL segments as originating from user searches since it cannot find the `map=ft` parameter usually present in such URLs. This behavior is uncommon and is being addressed by our product team.
+## Instructions
 
-## Step by step
-
-1. In your VTEX account's admin, access the App section and click on **My apps**.
-2. Look for the **Rewriter** app and click on the gear button icon to go to its settings.
-3. In the Settings section, check the radio button to **enable 404 for paths with one segment**, e.g. `/foo`. This will enable 404 pages on pages whose URLs have one invalid segment, following the restriction stated above.
+1. Open the VTEX Admin and navigate to **Apps > App Management**.
+2. Find the **Rewriter** app and click the **Settings** button.
+3. Select the check button to **Enable 404 for paths with one segment, e.g. `/foo`**. This setting ensures that 404 pages are shown for URLs with a single invalid segment.
 4. Save your changes.
 
-![404-pages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-404-pages-0.png)
-
-Once your changes are duly saved, your store is ready to display 404 pages whenever this scenario occurs.
+    ![404-pages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-404-pages-0.png)
 
 ### Customizing your 404 Page
 
-You can customize 404 pages using blocks in your store's theme following the step by step below:
+To customize 404 pages, you can use blocks in your store’s theme:
 
-1. In your terminal, [create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/).
-2. Then, open your store's theme in it using your preferred code editor.
-3. In the theme's product or search template (`store.product` or `store.search`) you can declare, respectively, the block `store.not-found#product` or `store.not-found#search`  and have it contain another Rich Text block.
+1. Open the terminal and [change to a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace/).
+2. Open your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) using your preferred code editor.
+3. In the product or search template (`store.product` or `store.search`), add and configure the `store.not-found#product` or `store.not-found#search` block, respectively. Find below an example of a `store.not-found#product` for a product template:
+    
+    ```json
+    "store.not-found#product": {
+      "blocks": ["rich-text#not-found"]
+    },
+    "rich-text#not-found": {
+      "props": {
+        "textAlignment": "CENTER",
+        "textPosition": "CENTER",
+        "text": "**PAGE NOT FOUND**",
+        "font": "t-heading-1"
+      }
+    }
+    ```
+    
+    > ℹ️ The `store.not-found` blocks will only be rendered when the server returns a 404 error. The child block will be displayed to users in such cases.
 
-Find below an example of a `store.not-found#product` in a product template:
+4. Save your changes and run `vtex link` in your terminal to preview the updated 404 page:
 
-```json
-"store.not-found#product": {
-  "blocks": ["rich-text#not-found"]
-},
-"rich-text#not-found": {
-  "props": {
-    "textAlignment": "CENTER",
-    "textPosition": "CENTER",
-    "text": "**PAGE NOT FOUND**",
-    "font": "t-heading-1"
-  }
-}
-```
+    ![not-found-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-404-pages-1.png)
 
-> ℹ️ The `store.not-found` blocks will only be triggered when the server returns a 404 error for a browser request. In such scenarios, the block that is set as child will be effectively rendered to users.
-
-4. Save your changes and then run `vtex link` in your terminal to witness the above block being rendered as follows:
-
-![not-found-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-404-pages-1.png)
-
-5. If you're happy with all configurations done in your Development workspace, it is time do [make your new theme version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/).
+5. Once you are satisfied with the changes, [make your new theme version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/).

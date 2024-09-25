@@ -15,7 +15,7 @@ To add this tracking tool, you’ll need to ensure that your Analytics is proper
 
 Follow the steps below and configure your store’s tracking.
 
-## Step by step
+## Instructions
 
 1. Accessing Google Analytics in the desired account, click on **Admin** (gear button) in the lower left corner of your screen.
 2. Access **View Settings**.

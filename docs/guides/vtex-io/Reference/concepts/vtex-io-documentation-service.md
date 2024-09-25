@@ -47,7 +47,7 @@ Let's delve into the parameters you can set within the `service.json` file:
 |`memory`|`number`|Defines the memory size (in MB) that should be allocated to the service. Default: 128, maximum: 1024.|
 |`minReplicas`|`number`|Defines the minimum number of replicas available when the service is running. Minimum: 2 for installed apps and 1 for linked apps.|
 |`maxReplicas`|`number`|Defines the maximum number of replicas available. Minimum: 5, maximum: 60.|
-|`timeout`|`number`|Sets the timeout (in seconds) for aborting a connection if a request takes too long. This parameter affects only incoming requests to the app. It does not affect outgoing requests that the app makes to other clients. Default: 10, minimum: 1, maximum: 180.|
+|`timeout`|`number`|Sets the timeout (in seconds) for aborting a connection if a request takes too long. This parameter affects only incoming requests to the app. It does not affect outgoing requests that the app makes to other clients. Default: 10, minimum: 1, maximum: 60.|
 |`ttl`|`number`|Defines the time-to-live (in minutes) for how long the platform will keep each instance of the service running without receiving new requests. Default: 10, minimum: 10, maximum: 60. The requested value is only honored for the most recent stable version of the app. Older versions, versions that have not been deployed, linked apps, or beta versions will have the value overridden to 10.|
 |`workers`|`number`|Specifies the number of workers to spawn for the service on production. Minimum: 1, maximum: 4.|
 |`rateLimitPerReplica`|`object`|This object contains global parameters whose values define specific throttling limits for requests and events. The values of this object are overridden by the values set for a specific route or event.|

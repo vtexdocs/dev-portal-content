@@ -21,7 +21,7 @@ Ensure you have the following tools installed on your machine. They are responsi
    vtex install vtex.admin-graphql-ide@3.x
    ```
 
-## Step by step
+## Instructions
 
 1. Open the terminal and log in to your account.
 2. Change to the [**production workspace**](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) containing your latest changes and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your Store Theme app.

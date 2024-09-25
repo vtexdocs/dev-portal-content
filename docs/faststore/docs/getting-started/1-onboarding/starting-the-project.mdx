@@ -1,45 +1,42 @@
 ---
 title: 'Starting a new FastStore project'
-updatedAt: "2023-01-31T16:31:00.813Z"
 ---
-
 
 Now that you have an [overview of the app](https://developers.vtex.com/docs/guides/faststore/getting-started-overview), it's time to kickstart your project. In this guide, you will:
 
-- Create your FastStore project with the FastStore Onboarding app.
-- Configure a GitHub repository for your project.
-- Generate a live preview of your store.
+    - Create your FastStore project with the FastStore Onboarding app.
+    - Configure a GitHub repository for your project.
+    - Generate a live preview of your store.
 
 ---
 
-## Step by step
+## Instructions
 
 ### Step 1: Setting up the project
 
-1. Open the Admin and acess the FastStore Onboarding app.
+1. Open the Admin and access the FastStore Onboarding app.
 2. Click `Start Project`.
 3. In the **Setup & Create Project** page, configure the following options for your store:
 
-#### CMS Integration
+#### Project
 
-| Field                 | Description                                                                                 |
-| --------------------- | ------------------------------------------------------------------------------------------- |
-| **VTEX Headless CMS** | Choose this option to integrate with [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), VTEX's Content Management solution. |
+Choose the option that best fits your project's purpose. 
+This helps us understand what you're trying to achieve with FastStore and improve your experience.
+
+| Field                                                     | Description                                                    |
+| --------------------------------------------------------- | -------------------------------------------------------------- |
+| **Project name**                                          | Enter your FastStore project's name, e.g., `Marcio Car store`. |
+| **Which option best describes the goal of your project?** | Choose the option that best fits your project’s purpose.       |
 
 #### SEO Tags
 
 | Field               | Description                                                                                                                                                                                                                                                     |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title Tag**       | Enter a keyword-optimized title for your store. For example: `Buy Online with the Best Game Store - GameStore`. In this example, we used the length limit of around 50-60 characters to ensure it is fully displayed in search results without being truncated. |
-| **Description Tag** | Enter a brief description of your store, for example `Shop online at GameStore, the best game store for PC, Xbox, PS4 and Headphones. Explore our wide selection and buy your favorite games today!`                                                            |
-| **Title Template**  | Enter a page title that helps search engines and users better understand the content of your store. For example `The best game store - GameStore`.                                                                                                              |
+| **Description Tag** | Enter a brief description of your store, for example, `Shop online at GameStore, the best game store for PC, Xbox, PS4 and Headphones. Explore our wide selection and buy your favorite games today!`                                                            |
+| **Title Template**  | Enter a page title that helps search engines and users better understand the content of your store. For example, `The best game store - GameStore`.                                                                                                              |
 | **Site Author**     | Enter the name of the agency or person responsible for the development of the storefront.                                                                                                                                                                       |
 
-#### Github Acesss
-
-| Field                | Description                                                                                                                                                        |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Repository owner** | Enter the GitHub username of the user who will be the owner of the FastStore repository. Once the repository is created, the owner will be granted `admin` access. |
 
 #### Google Tag Manager
 
@@ -53,15 +50,67 @@ Now that you have an [overview of the app](https://developers.vtex.com/docs/guid
 | ----------- | ------------------------------------------------------ |
 | **Catalog** | Choose which catalog your store should be linked with. |
 
+#### Terms of use
+
+If you already have content created in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), be aware that it will be automatically deleted during FastStore WebOps onboarding to avoid content duplication.
+
+To proceed, please confirm that you understand by checking the Terms of use box.
+
+After setting up the basic configuration for your store and reviewing it, click `Continue` to proceed to the next page.
+
+### Step 2: Integrations
+
+On this page, you will set up the native Headless CMS integration and connect to a GitHub organization.
+
+#### CMS Integration
+
+Choose this option to integrate with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), VTEX's Content Management solution.
+
 After setting up the basic configuration for your store and reviewing it, click `Create` to proceed to the next page, [Deploy Summary](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project).
 
-### Step 2: Deploying the project
+#### Git Provider
+
+Connect with a GitHub personal account or organization of your choice to host the source code of your FastStore project. 
+
+    > ⚠️ If you choose to install the app in a GitHub organization, make sure you have admin access to an organization.
+
+To connect to the FastStore WebOps app, follow these steps:
+
+1. Click `Connect with GitHub`. A new browser tab will open on the side for you to integrate the app with GitHub.
+
+    > ⚠️ If you are not logged in to your GitHub account, in the new tab, you will be asked to log in. Then, you can continue to the next step.
+
+2. Once you are logged in to your GitHub account, choose the organization or your personal account you want to install the app. You will be redirected to the **Settings** page on GitHub.
+
+    > ⚠️ Once you define the GitHub organization, you cannot change it later.
+
+3. In **Repository access**, choose one of the following options: **All repositories from the organization** or **Only select repositories**.
+
+4. Click `Install`.
+
+The following successful message will appear on the page:
+
+    ```
+    Success! You can now close this page and proceed with the onboarding process.
+    ```
+
+After seeing the success message, close the browser tab and continue the onboarding process in the VTEX Admin.
+
+5. Now that the app is integrated with GitHub, select which repository you want to start the project:
+
+    - **New repository:** Create a repository from scratch, in this option, you only need to type a name for the repository, and after clicking `Create`, it will create the repository for you.
+
+    - **Existing one:** Select one existing repository from the organization to start the project.
+
+6. Click `Create`. The deploy process will begin and, once the deployment process is complete, you will be redirected to the [Deploy Summary](#deploying-the-project) page.
+
+### Step 3: Deploying the project
 
 After completing the setup for your store, the deploy process will begin. This process involves creating a GitHub repository and a default domain for your project. Once the deployment process is complete, you will have one of the following scenarios:
 
 #### Repository and live Store created
 
-![success-scenario](https://vtexhelp.vtexassets.com/assets/docs/src/fs-deploy-summary___fff7675f0520efb8e7fbf51307af69f8.png)
+    ![success-scenario](https://vtexhelp.vtexassets.com/assets/docs/src/deploy-summary-webops___ff30808c6eef395f89173c38880b683f.png)
 
 In this scenario, both the repository and the live preview of the store have been successfully created. You now have the following options:
 
@@ -70,13 +119,11 @@ In this scenario, both the repository and the live preview of the store have bee
 | **Your Repository**      | Access the store's GitHub repository and start setting up and customizing your store.                                                                                                                                                                                                                                                       |
 | **Documentation**        | Access the FastStore Portal Documentation.                                                                                                                                                                                                                                                                                                  |
 | **Customization**        | Access the documentation on how to customize your store.                                                                                                                                                                                                                                                                                    |
-| **View Dashboard**       | Access the Dashboard with the current status of your store, including its domains, deployed versions, store preview, and settings. For more information, please refer to the [Dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) guide. |
+| **View Dashboard**       | Access the Dashboard with the current status of your store, including its domains, deployed versions, store preview, and Lighthouse scores. For more information, please refer to the [Dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) guide. |
 
 Now that your store is up and running, let's set up the development environment by following the step-by-step instructions in [Setting up the Project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project).
 
 #### Repository creation failed
-
-![failed-scenario](https://vtexhelp.vtexassets.com/assets/docs/src/fs-deploy-error___82b3aa8e15a88bbe4fb8f134eba79fca.png)
 
 In this scenario, the repository creation was unsuccessful, resulting in the failure to generate the live store preview. Click `Retry` to redeploy the process. Once the issue is resolved, you will see the [Repository and Live Store created](#repository-and-live-store-created) scenario.
 

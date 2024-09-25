@@ -8,7 +8,7 @@ updatedAt: "2022-02-03t13:51:54.342Z"
 
 In this step, you will send your orders from VTEX to your ERP or WMS.
 
-## Before you start
+## Before you begin
 
 After an order is placed in a VTEX store, it follows a predefined [order flow](https://help.vtex.com/tutorial/order-flow-on-the-oms--tutorials_196) in our Order Management System (OMS). Each [status](https://help.vtex.com/tutorial/order-flow-on-the-oms--tutorials_196#understanding-the-status) has a meaning and specified behavior.
 

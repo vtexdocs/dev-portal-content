@@ -13,7 +13,7 @@ To your business, it's advantageous to trigger a popup window in this removal ic
 
 To build modals in such a scenario using Store Framework, we'll use the [Modal Layout](https://developers.vtex.com/docs/guides/vtex-modal-layout) block and the icons exported by the [Store Icons](https://developers.vtex.com/docs/guides/vtex-store-icons) app.
 
-## Step by step
+## Instructions
 
 For this step, we'll take the example given above: let's add a modal to the icon used by the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart) to remove product list items.
 

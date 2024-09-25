@@ -16,7 +16,7 @@ Thanks to the [Flex Layout app](https://developers.vtex.com/docs/guides/vtex-fle
 
 Learn in the instructions below how to use the powerful combination between the Flex Layout and the Product Summary apps in order to display your product data horizontally.
 
-## Step by step
+## Instructions
 
 > ℹ️ This recipe requires previous understanding of the [Flex Layout app](https://developers.vtex.com/docs/guides/vtex-flex-layout). It is strongly advised that you read the app documentation before performing the steps below!
 

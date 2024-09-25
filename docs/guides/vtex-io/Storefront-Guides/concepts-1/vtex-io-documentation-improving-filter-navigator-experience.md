@@ -19,7 +19,7 @@ Here is a quick summary of the changes that will be made:
 
 All props mentioned here are documented on [documentation page](https://developers.vtex.com/docs/guides/vtex-search-result). You will be able to check both the description and the possible values ​​of each prop.
 
-## Step by step
+## Instructions
 
 1. Ensure that you have the `vtex.search-result@3.x` as a dependency of your `manifest.json`:
 

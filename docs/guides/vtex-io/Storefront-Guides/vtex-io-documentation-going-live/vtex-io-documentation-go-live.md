@@ -33,7 +33,7 @@ You must develop your storefront before going live. Check these guides to learn 
 - [Storefront apps overview](https://developers.vtex.com/docs/guides/store-framework-apps)
 - [Building a Store Framework theme](https://developers.vtex.com/docs/guides/getting-started-3)
 
-## Step by step
+## Instructions
 
 To go live with your VTEX store, built with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), follow these steps:
 

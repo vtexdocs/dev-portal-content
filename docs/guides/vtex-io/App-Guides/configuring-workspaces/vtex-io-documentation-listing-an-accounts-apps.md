@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T20:17:44.074Z"
 
 Understanding the apps installed or linked to an account is pivotal for effective development and account management. The [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) simplifies this task by providing a straightforward command to access the list of apps associated with a specific account and workspace.
 
-## Step by step
+## Instructions
 
 1. Open the terminal and log into the desired account using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference). If applicable, switch to the desired [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace).
 2. Run the following command:

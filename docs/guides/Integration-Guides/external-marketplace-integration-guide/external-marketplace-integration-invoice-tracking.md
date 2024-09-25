@@ -33,7 +33,7 @@ After receiving invoice information, the order status is updated to invoiced in 
 2. VTEX OMS notifies the connector through the URL informed in the [Place Fulfillment Order API](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders) by the connector through the property `marketplaceServicesEndpoint`, once the order is inserted in VTEX.
 3. Connector collects information sent through the notification.
 a. To collect information about **invoice**, use the properties:
-    - `invoiceNumer`: invoice’s ID code.
+    - `invoiceNumber`: invoice’s ID code.
     - `invoiceUrl`: URL that leads to the invoice document.
     - `embeddedInvoice`: invoice document’s XML file. 
     - `invoiceValue`: value declared in the invoice.

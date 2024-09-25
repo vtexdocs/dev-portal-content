@@ -9,7 +9,7 @@ We understand that *site performance* is a common concern among ecommerce stores
 
 Thus, to help you guarantee the success of your brand's online presence, we'll teach you, in the following step by step, how to test and implement our [recommendations for optimizing your store's performance](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance).
 
-## Step by step
+## Instructions
 
 ## Step 1: Applying changes on a production workspace
 

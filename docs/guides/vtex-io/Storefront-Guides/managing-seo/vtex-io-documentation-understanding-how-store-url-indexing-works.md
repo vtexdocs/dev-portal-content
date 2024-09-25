@@ -6,29 +6,27 @@ createdAt: "2020-06-03T16:02:44.299Z"
 updatedAt: "2022-12-13T20:17:44.212Z"
 ---
 
-## Introduction
-
-In order to be accessed by any type of user, all website pages need to have their own addresses, called **URLs**.
+In order to be accessed by any type of user, all website pages need to have their own addresses, called URLs.
 
 It is however possible for a page to have more than one address format, thereby allowing users to access it from different URLs, such as `www.storetheme.com.br` and `storetheme.com.br` .
 
 The two URLs in the example above are distinct and therefore indexed separately by search engines - even if they direct to the same page.
 
-To solve this issue, **each website URL needs its canonical URL**, which is nothing more than the official URL - not necessarily identical - that will be given to search engines and indexed, thereby improving the site's overall content findability.
+To solve this issue, each website URL needs its canonical URL, which is nothing more than the official URL - not necessarily identical - that will be given to search engines and indexed, thereby improving the site's overall content findability.
 
 ## URL indexing requisites
 
-**In VTEX IO, all store canonical URLs (product, category, subcategory, brand and custom page URLs) are automatically held in Sitemap where they are indexed by search engines.**
+In VTEX IO, all store canonical URLs (product, category, subcategory, brand and custom page URLs) are automatically held in Sitemap where they are indexed by search engines.
 
 As the name suggests, Sitemap is simply the mapping tool for all canonical URLs, and displays your site's architecture to search bots and user browsers.
 
-To ensure that every relevant URL from your site has been indexed, VTEX IO also identifies the **most visited search URLs** and transforms these into canonical URLs that are then added to Sitemap.
+To ensure that every relevant URL from your site has been indexed, VTEX IO also identifies the most visited search URLs and transforms these into canonical URLs that are then added to Sitemap.
 
 ### Most visited search URLs
 
 To define the most visited search URLs, the platform calculates how many users already visited each of these site addresses, as long as the site is online.
 
-By default, a URL needs to have been accessed at least **once** to enter the list of most visited site addresses.
+By default, a URL needs to have been accessed at least once to enter the list of most visited site addresses.
 
 The algorithm that calculates the accesses to each of these URLs in order to add them to the list of most visited addresses takes the following criteria into account:
 
@@ -50,12 +48,12 @@ It's not possible to control which search URLs will enter the most visited list,
 
 What you can do is **control the max number of most visited URLs that your site will index**, by following the instructions below:
 
-1. Log in to the admin of the desired VTEX account;
-2. Access the Apps section, located in the admin side bar;
-3. Select the Store Indexer;
-4. In the Setup section, fill out the following field with the desired value `Number of search URLs to be indexed`;
+1. Log in to the admin of the desired VTEX account.
+2. Access the Apps section, located in the admin side bar.
+3. Select the Store Indexer.
+4. In the Setup section, fill out the following field with the desired value `Number of search URLs to be indexed`.
 
-![store-indexer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-understanding-how-store-url-indexing-works-0.png)
+        ![store-indexer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-understanding-how-store-url-indexing-works-0.png)
 
 5. Save the configurations.
 

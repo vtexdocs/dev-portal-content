@@ -16,7 +16,7 @@ The Gift List app allows you to create an environment that contains gift lists. 
 
 >⚠ All orders made through gift lists have their value converted to credits as a gift card. The gift cards used in gift lists are VTEX native ones. Gift cards from external providers are not supported by the app.
 
-## Before you start
+## Before you begin
 
 The Gift List app is a paid [VTEX app](https://apps.vtex.com/vtex-list/p). Before using it on your store, you must acquire it on the VTEX App Store. The app has a fixed monthly fee that varies country by country, which can be found on the app page.
 

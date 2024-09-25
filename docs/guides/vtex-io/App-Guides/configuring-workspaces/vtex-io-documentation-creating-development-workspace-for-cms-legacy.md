@@ -15,7 +15,7 @@ When working in a Development workspace, the public version of your store, that 
 
 2. Ensure that you understand the concepts of [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace).
 
-## Step by step
+## Instructions
 
 1. Using your terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log into your VTEX account by running the following command:
 

@@ -2,7 +2,6 @@
 title: Overriding native component's props
 ---
 
-
 Overriding props allows you to customize a component's behavior while preserving its native integration. This approach is useful when you want to customize specific aspects of a native component, for example, an icon or a button label. 
 
 For this guide, we'll use the [Buy Button](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button) component to make the customization. 
@@ -16,13 +15,13 @@ Here's how the initial component looks with the `size` prop set as `regular` in 
 Make sure your `@faststore/core` package has the 3.x version or above. If you need to update
 it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
 
-## Step by step
+## Instructions
 ### Step 1 - Setting up the component file
 
 1. After choosing a native section to be customized from the [list of available native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections), open your FastStore project in any code editor of your preference.
 2. Go to the `src` folder, create the `components` folder, and inside it, create the `sections` folder. You can run the following command to create them:
 
-    > ℹ️ The naming of the `sections` folder is arbitrary, as overrides can be created in any file, since the import is made in the `src/components/index.tsx` file. 
+    > ℹ️ The naming of the `sections` folder is arbitrary, as overrides can be created in any file since the import is made in the `src/components/index.tsx` file. 
 
     <Tabs items={['macOS and Linux', 'Windows']}>
         <Tab>```bash copy mkdir src/components src/components/sections ```</Tab>
@@ -244,14 +243,14 @@ This schema Adds the new `Product Details with custom button` section to the Hea
 
 7. Access the VTEX Admin and proceed to **Storefront > Headless CMS**.
 8. Click on the page you desire to add the new section.
-9. Click the add button (`+`) and add the new section and complete values from the sections fields.
+9. Click the add button (`+`), add the new section, and complete values from the section fields.
 10. Click `Save`.
 
     > ⚠️ Remember: props changed via Headless CMS overlap the changes made through [overrides](/tbs). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
 
 ### Step 4 - Visualizing the component on the page locally
-To see your changes locally you need to set the Headless CMS preview to the development mode. 
-Refer to the [How to preview Headless CMS changes in development mode](/docs/how-to-preview-headless-cms-changes-in-development-mode) guide for more information.
+
+To see your changes locally, you must set the Headless CMS preview to the development mode. For more information, refer to the [Previewing Headless CMS changes in development mode](https://developers.vtex.com/docs/guides/faststore/headless-cms-previewing-changes-in-development-mode) guide.
 
 Once you have set the preview for development mode, you should see your new Buy Button in a Product Details Page (PDP):
 

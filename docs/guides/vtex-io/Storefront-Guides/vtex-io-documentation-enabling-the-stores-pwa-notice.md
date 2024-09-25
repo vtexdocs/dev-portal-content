@@ -14,7 +14,7 @@ This PWA can be made available for user installation in three distinct moments o
 
 Find out how to configure the prompt in your store by following the steps below.
 
-## Step by step
+## Instructions
 
 1. In the desired account's admin, access **CMS** and select the **Site Editor**.
 2. Click on **Store**.

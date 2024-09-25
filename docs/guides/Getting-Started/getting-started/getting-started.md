@@ -18,11 +18,11 @@ Leverage your ecommerce operation with our headless architecture by learning wha
 
 <OverviewCard icon='Platform'>
 
-### Platform overview
+### Platform Overview
 
-Understand the VTEX platform's architecture and data orchestration in our Platform Overview article.
+Understand the VTEX platform's infrastructure, security and data privacy measures, composable capabilities, store architecture models, and developer tools.
 
-- [Platform overview](https://developers.vtex.com/vtex-rest-api/docs/getting-started-platform-overview)
+- [VTEX Platform Overview](https://developers.vtex.com/docs/guides/vtex-platform-overview)
 
 </OverviewCard>
 

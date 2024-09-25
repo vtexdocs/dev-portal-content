@@ -18,7 +18,7 @@ However, you can configure the SKU selector to display a **custom image**, meani
 
 Follow the step-by-step below to see how to apply this configuration in your store.
 
-## Step by step
+## Instructions
 
 1. Access the Admin and go to **Catalog > All Products**.
 2. Find the desired product, and click the down arrow button. Then, click  **SKU**.

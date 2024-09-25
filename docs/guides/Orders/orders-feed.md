@@ -3,7 +3,7 @@ title: "Feed v3"
 slug: "orders-feed"
 hidden: false
 createdAt: "2021-03-29t19:21:28.241z"
-updatedAt: "2023-10-27T18:14:22.990Z"
+updatedAt: "2024-07-31T12:13:22.990Z"
 ---
 
 The [order feed](https://developers.vtex.com/docs/guides/orders-overview#feed-v3) is a list of order updates. This means that whenever an order is updated, the event is included as a new entry in the feed. Updates can include status changes, items added or removed by the store, order delivered, and others.
@@ -35,6 +35,7 @@ Some stores use the List orders API request to check order status changes. Howev
 - Because the `list` method depends on indexing, it's slower and performs less than the feed.
 
 On the other hand, the feed has been specifically developed to track order updates. It runs before indexing and doesn't depend on it, making it the most reliable and fastest method to track order updates.
+
 >⚠️ If you have an integration based on the List orders API request, you should migrate it to the feed. However, keep in mind that this means changing the integration flow. Read the [order integration guide](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) to learn how to implement this change.
 
 ## Access
@@ -103,25 +104,25 @@ This filter offers many possibilities that can't be achieved with the `FromWorkf
 
 - Delivered orders
 
-```
+```JSONata
 isAllDelivered = true
 ```
 
 - Orders with added items
 
-```
+```JSONata
 $count(changesAttachment.changesData.itemsAdded) > 0
 ```
 
 - Orders with removed items
 
-```
+```JSONata
 $count(changesAttachment.changesData.itemsRemoved) > 0
 ```
 
 You can also filter multiple properties at the same time. For example, the following is an expression that filters orders that contain at least one refrigerator that costs at least $1000.00:
 
-```
+```JSONata
 $count(items[name ~> /.*refrigerator.*/i and price>=1000]) > 0
 ```
 
@@ -129,28 +130,29 @@ Here are some additional expression examples:
 
 - Order in specific status and trade policy (sales channel)
 
-```
+```JSONata
 (status = "ready-for-handling" and salesChannel="2")
 ```
 
 - Orders from a seller that don't have a specific [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV) (sales channel)
 
-```
+```JSONata
 (salesChannel.Id != "3" and sellers.id ="sellerId")
 ```
 
 - Order with refund/item return
 
-```
+```JSONata
 $count(packageAttachment.packages.restitutions.Refund.value) > 0
 ```
 
 - Order invoiced with a specific shipping policy
 
-```
+```JSONata
 status = "invoiced" and (packageAttachment.packages[$[$contains($string(courier), "Carrier Name")]])
 ```
-> ❗ Keep in mind that the `expression` field receives only strings and all JSONata expressions have to be escaped. For example, the expression `status = “canceled”` has to be passed as `”status = \\”canceled\\””` to be read correctly by the API.
+
+>❗ Keep in mind that the `expression` field receives only strings and all JSONata expressions have to be escaped. For example, the expression `status = “canceled”` has to be passed as `”status = \\”canceled\\””` to be read correctly by the API.
 
 The following is an example of a complete `filter` object with a more complex and escaped JSONata expression.
 
@@ -166,14 +168,18 @@ The following is an example of a complete `filter` object with a more complex an
 
 You should validate the events of the configured expression before implementing the filter in your integration. There are three useful tests:
 
-- [The API endpoint for JSONata Testing](https://developers.vtex.com/vtex-rest-api/reference/testjsonataexpression).
-- [JSONata Exerciser](https://try.jsonata.org/) which tests the expression against a real JSON file. To run this test, copy the order to JSONata Exerciser and simulate different expressions and requests. Use an order extracted from the [Get Order API endpoint](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-).
+- [The API endpoint for JSONata Testing](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata).
+- [JSONata Exerciser](https://try.jsonata.org/) which tests the expression against a real JSON file. To run this test, copy the order to JSONata Exerciser and simulate different expressions and requests. Use an order extracted from the [Get order](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-) endpoint from the [Orders API - PII data architecture](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#overview).
+
+  >⚠️ Be aware that the [Get order](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-) endpoint from **Orders API - PII data architecture** differs from the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint from **Orders API**.
+
 - Configure a test feed or hook with a test [appKey](https://developers.vtex.com/docs/guides/getting-started-authentication) and check whether the events behave as expected.
 
 ##### `disableSingleFire`
 
 This field limits how often a specific order shows in the feed after it meets the filter conditions. If this field is `false`, orders will appear in the feed only once.
-> ❗ The `FromOrders` filter receives order updates whenever any change is made to the order JSON document, provided the order meets the criteria set in the `expression` field. Because of this, if the `disableSingleFire` field is set to `true`, orders may appear more than once in a feed — even hundreds of times in some cases. To prevent that from happening, keep `disableSingleFire` set to `false`.
+
+>❗ The `FromOrders` filter receives order updates whenever any change is made to the order JSON document, provided the order meets the criteria set in the `expression` field. Because of this, if the `disableSingleFire` field is set to `true`, orders may appear more than once in a feed — even hundreds of times in some cases. To prevent that from happening, keep `disableSingleFire` set to `false`.
 
 ### `queue`
 
@@ -239,13 +245,13 @@ Here are two complete example bodies for the [Feed configuration response](https
 }
 ```
 
- >ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
+>ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
 
-> ❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
+>❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
 
 ## Feed readout
 
-Every system that depends on order updates should consume the feed to be able to take the necessary actions based on that information. The most common behavior is a store system or an integration reading every event in the feed and, based on its status, making a decision for each one. 
+Every system that depends on order updates should consume the feed to be able to take the necessary actions based on that information. The most common behavior is a store system or an integration reading every event in the feed and, based on its status, making a decision for each one.
 >⚠️ When filtering statuses, be aware that all possible order statuses must be dealt with during integration to avoid errors. Particular attention should be paid to `Status Null`, which may be unidentified and end up being mapped as another status, which can potentially lead to errors.
 
 ### Example
@@ -268,7 +274,7 @@ Hook is a counterpart to Feed. It allows integrations to consume order update da
 
 >⚠️ Since Hook is a counterpart, [access](#access) follows the same principles described for Feed above. This means each appKey can configure or access only one hook. Different users that sharing the same appKey access the same hook. We recommend configuring one hook per appKey per user, ensuring that each user has access to their own hook.
 
-### Configuration
+### Hook configuration
 
 Similar to a feed, a hook can be configured through a POST call to the [Create or update hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) endpoint of the Orders API. Here are a couple of body examples for the request, each using a different filter type:
 
@@ -321,7 +327,7 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
 
 ```json
 {
-    “hookConfig”: “ping”
+    "hookConfig": "ping"
 }
 ```
 
@@ -334,7 +340,8 @@ When the hook is configured, VTEX sends a ping to the endpoint given in the conf
 If configured, the Hook notifies the integration endpoint whenever an order update is made and meets the conditions specified in the `filter`.
 
 If a new event is not correctly notified to the endpoint, the interval for future retries is recalculated based on an internal geometric progression algorithm.
-> ❗ If the hook has no notifications for three days, your configuration will be removed, and you will have to reconfigure it with the [Hook configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) to continue using it. Therefore, it's important to be mindful of your filter configuration. You can check it any time using the [Get hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/hook/config) endpoint.
+
+>❗ If the hook has no notifications for three days, your configuration will be removed, and you will have to reconfigure it with the [Hook configuration API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/hook/config) call to continue using it. Therefore, it's important to be mindful of your filter configuration. You can check it any time using the [Get hook configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/hook/config) endpoint.
 
 >⚠️ When notified, the configured endpoint must always respond with HTTP status 200 within 5000 ms.
 Below is an example of a hook notification request body made to the integration endpoint.
@@ -352,8 +359,7 @@ Below is an example of a hook notification request body made to the integration 
 }
 ```
 
->⚠️ When using a hook, it's important to be aware that it's a reactive feature. This means your middleware or ERP system must be ready to deal with whatever volume of data the hook sends. Large peaks in sales – due to Black Friday, for example – tend to increase hook notifications. If the implementation is not prepared for this peak, it may cause problems in the integration, compromising the store’s ability to handle orders and receive further notifications. Learn more about how to deal with this issue in the next section.
-Getting order updates from a feed requires the integration to make periodical API calls, returning whatever number of updates is available each time. A hook, on the other hand, notifies the integration whenever a new update is available. This means a feed is active, whereas a hook is reactive.
+>⚠️ When using a hook, it's important to be aware that it's a reactive feature. This means your middleware or ERP system must be ready to deal with whatever volume of data the hook sends. Large peaks in sales – due to Black Friday, for example – tend to increase hook notifications. If the implementation is not prepared for this peak, it may cause problems in the integration, compromising the store’s ability to handle orders and receive further notifications. Learn more about how to deal with this issue in the next section. Getting order updates from a feed requires the integration to make periodical API calls, returning whatever number of available updates each time, with no guarantee of ordination due to the infrastructure and technology used. A hook, on the other hand, notifies the integration whenever a new update is available. This means a feed is active, whereas a hook is reactive.
 
 Because of this, a hook can be more efficient and provide a lower response time for each order update. But as a reactive feature, the integration must have scalability to handle great variations in data volume, such as can be caused by a Black Friday sales peak, for example.
 

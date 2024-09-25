@@ -26,7 +26,7 @@ Before following this guide, ensure that you:
   }
   ```
 
-## Step by step
+## Instructions
 
 1. Open your Store Theme app in your preferred code editor.
 2. Create a new folder named `fonts` within the `assets` directory. 

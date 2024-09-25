@@ -1,6 +1,5 @@
 ---
-title: 'Extending queries using fragments'
-sidebar_label: 'API Extensions'
+title: "Extending queries using fragments"
 ---
 
 After [defining the new fields exposed by the FastStore API Extension](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema), the next step is to specify where these fields will be used within GraphQL fragments.
@@ -20,7 +19,7 @@ Even though you can add information to the FastStore API schema, you must be car
 
 ---
 
-## Step by step
+## Instructions
 
 ### Step 1: Create a new file
 
@@ -46,13 +45,14 @@ In the `ServerProduct.ts` file, define the GraphQL fragment corresponding to the
 
 import { gql } from '@faststore/core/api'
 
-export const fragment = gql`
+export const fragment = gql(`
   fragment ServerProduct on Query {
     product(locator: $locator) {
-      customData
+        customData
     }
   }
-`
+`)
+
 ```
 Now, you can consume `customData` by following the [Consuming FastStore API extension with custom components](https://developers.vtex.com/docs/guides/faststore/api-extensions/consuming-api-extensions) guide.
 

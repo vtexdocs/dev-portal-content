@@ -15,7 +15,7 @@ This verification is generally performed via a user identification issued by the
 
 In the following steps, you will learn how to make your Pixel app read the user identification and determine if a user is allowed.
 
-## Step by step
+## Instructions
 
 1. Open the `manifest.json` file.
 2. Change the `vendor` field value (`vtex`) to the name of the VTEX account in which you are working.

@@ -1,6 +1,6 @@
 ---
 title: "Security"
-slug: "security"
+slug: "checkout-security"
 hidden: false
 createdAt: "2022-10-20T17:32:48.440Z"
 updatedAt: "2022-10-20T17:32:48.440Z"

@@ -52,7 +52,26 @@ In this section, we'll take a closer look at the files and folders that make up 
 
 The following files and folders comprise the Store Theme app:
 
-![Repository tree](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-3-settingyourstoretheme-1.png)
+```txt mark=5,9,16
+📂 STORE-THEME/
+│
+├── 📂 .github/
+├── 📂 public/
+├── 📂 store/
+│   ├── 📂 blocks/
+│   ├── 📄 blocks.jsonc
+│   └── 📄 routes.json
+├── 📂 styles/
+│   ├── 📂 configs/
+│   └── 📂 css/
+├── 📄 .editorconfig
+├── 📄 .gitignore
+├── 📄 .vtexignore
+├── 📄 CHANGELOG.md
+├── 📄 manifest.json
+├── 📄 package-lock.json
+└── 📄 README.md
+```
 
 - **`manifest.json`** - File containing the metadata about the app, including its vendor, name, version, [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies/) and [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/).
 - **`store`** - Folder containing the store's templates, including components and properties for various pages, such as the Product Listing Page and Product Details Page.

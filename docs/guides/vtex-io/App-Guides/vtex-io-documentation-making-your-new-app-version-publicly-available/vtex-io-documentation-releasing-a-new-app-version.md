@@ -22,7 +22,7 @@ Please note that releasing a new app version does not make it available to end-u
 
 If you are releasing an app in the [App Store](https://apps.vtex.com/), make sure that you have covered the [VTEX guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store) before proceeding.
 
-## Step by step
+## Instructions
 
 1. Open the terminal and log in to the account responsible for the app development, i.e., the account specified as the app vendor in the [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file.
 2. Change to the app root folder.

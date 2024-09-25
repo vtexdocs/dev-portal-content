@@ -1,15 +1,17 @@
 ---
-title: "Creating a Master Data CRUD app"
-excerpt: "Learn how to create a Master Data CRUD apps in VTEX IO."
+title: "Creating a Master Data v2 CRUD app"
+excerpt: "Learn how to create a Master Data v2 CRUD apps in VTEX IO."
 slug: "create-master-data-crud-app"
 hidden: false
 createdAt: "2022-10-13T18:45:34.059Z"
 updatedAt: "2022-10-17T13:53:29.359Z"
 ---
 
-This guide will teach you how to build a Master Data CRUD (Create, Read, Update, Delete) application within VTEX IO using the `masterdata` builder. [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) is a native key-document database that allows you to efficiently store, search, expand, and personalize your data. While it is possible to integrate Master Data into any VTEX IO app by connecting to the [Master Data API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview), this is not the most efficient approach.
+This guide will teach you how to build a Master Data v2 CRUD (Create, Read, Update, Delete) application within VTEX IO using the `masterdata` builder. [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) is a native key-document database that allows you to efficiently store, search, expand, and personalize your data. While it is possible to integrate Master Data into any VTEX IO app by connecting to the [Master Data API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview), this is not the most efficient approach.
 
 To streamline your development experience, we recommend leveraging the `masterdata` [builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) to create apps with [Master Data v2](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) features, including data creation, editing, and deletion.
+
+> If you prefer to use Master Data v1, check [Creating a VTEX IO service to interact with Master Data v1](https://developers.vtex.com/docs/guides/interacting-with-master-data-v1-through-vtex-io-services).
 
 ## Before you begin
 
@@ -23,7 +25,7 @@ Before diving into coding your app, it's essential to grasp some fundamental con
 - VTEX IO service development
   - [Developing services on VTEX IO](https://learn.vtex.com/docs/course-service-course-lang-en).
 
-## Step by step
+## Instructions
 
 To create a [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) app, follow these steps:
 

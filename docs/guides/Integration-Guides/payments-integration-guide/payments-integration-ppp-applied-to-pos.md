@@ -1,5 +1,5 @@
 ---
-title: "Payment Provider Protocol applied to payments with POS"
+title: "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App"
 slug: "payments-integration-ppp-applied-to-pos"
 hidden: false
 createdAt: "2022-09-28T22:39:13.979Z"
@@ -13,6 +13,7 @@ For payment partners to integrate their solutions for payments using a POS, ther
   - Include the supported payment methods (credit or debit card) in the [Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
   - Use [callbacks](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) for asynchronous payments.
   - Work with [Payment Apps](https://developers.vtex.com/docs/guides/payments-integration-payment-app) to identify the POS and wait for its response.
+  - The endpoint must return to any call in less than 20 seconds.
 - For testing, have a VTEX store configured with the supported payment methods. This should be provided by VTEX.
 - If needed for testing, have a device with the [VTEX Sales App installed](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh).
 - Developers might want to create their Payment App to identify the POS. This app will also have to be installed in the store.

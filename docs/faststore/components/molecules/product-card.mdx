@@ -366,6 +366,24 @@ All product card related components support all attributes also supported by the
   />
 </TokenTable>
 
+#### Tax Label
+
+<TokenTable>
+  <TokenRow
+    token="--fs-order-summary-taxes-label-color"
+    value="var(--fs-color-info-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-order-summary-taxes-text-size"
+    value="var(--fs-text-size-tiny)"
+  />
+  <TokenRow
+    token="--fs-order-summary-taxes-text-weight"
+    value="var(--fs-text-weight-regular)"
+  />
+</TokenTable>
+
 ### Variants
 
 #### Default
@@ -481,6 +499,11 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   <TokenRow
     token="--fs-product-card-out-of-stock-bkg-color"
     value="var(--fs-color-disabled-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-product-card-out-of-stock-border-color"
+    value="var(--fs-color-neutral-1)"
     isColor
   />
   <TokenRow token="--fs-product-card-out-of-stock-img-opacity" value=".5" />
@@ -693,6 +716,8 @@ Use the `ProductCard` to:
 `data-fs-product-card-prices`
 
 `data-fs-product-card-actions`
+
+`data-fs-product-card-taxes-label`
 
 ---
 

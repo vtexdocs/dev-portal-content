@@ -1,79 +1,107 @@
 ---
-title: 'Dashboard'
-updatedAt: "2023-01-31T17:00:00.813Z"
+title: 'FastStore WebOps - Dashboard'
 ---
 
-After [successfully deploying and creating the repository and live preview of your store](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project), 
-you can access the Dashboard page for detailed information about your store deploys. 
-The Dashboard displays the current status of your store, including its domains, deployed versions, store preview, and commits.
+Once you have [created your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project) or are already working on customizing it, you can use the WebOps Dashboard to have an overview of your website’s deployments and performance.
 
-![dashboard-overview](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-overview___56923825cfdcfc7018cbfe3a9aa726ee.gif)
+The WebOps Dashboard provides a comprehensive overview of website builds and deploy previews and offers suggestions on how to improve your storefront's performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
 
-On the Dashboard page, you will find two main views: Overview and Deploys. For more information about each view, continue reading the next sections.
+![dashboard-overview](https://vtexhelp.vtexassets.com/assets/docs/src/webops-dashboard-overview___c417a869e982d91e94106cf63c9ec162.png)
+
+To access the WebOps Dashboard, in the VTEX Admin, go to **Storefront > FastStore WebOps**. The Dashboard has two tabs: [Overview](#overview) and [Integrations](#integrations).
 
 ---
 
 ## Overview
 
-The **Overview** section provides information about the production deployment of your store.
+The Overview tab provides a quick snapshot of your website's key details, including the live store URL, CMS information, and latest deploy.
 
-![overview-view](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-view-overview___7b8f9c67ff14be86263514d62ae471f1.png)
+### Production Overview
 
-Check out the table below for more information:
+The **Production Overview** section provides the following information about the latest deploy of your live store:
 
 | Field                 | Description                                                                                                                                                                                          |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Preview FastStore** | Opens a preview of your store in a new tab.                                                                                                                                                          |
-| **Deployment**        | Opens the deployed version of the store in a new tab.                                                                                                                                                |
-| **Domain**            | Opens the URL of your store's domain, which is the same as the preview.                                                                                                                              |
-| **Last commit**       | Displays the most recent commit to your store's repository, including the date, month, year, and the GitHub user who made the commit.                                                                |
-| **Status**            | Displays the status of the deployment. For more information on the status values, refer to [Status available values](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#status-available-values). |
+| :-------------------- | :----------------------------------------------------------------------------------------------- |
+| **Live Store**        | URL for your production environment, accessible to shoppers.                                     |
+| **Repository**        | GitHub repository associated with the project.                                                   |
+| **Deploy**            | Commit for the current deployment, including the date, time, and who made it.                    |
+| **CMS Provider**      | Link to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
+| **CMS Project**       | Link to the FastStore project in Headless CMS.                                                   |
 
-### Status available values
+#### Live store ID
 
-The **Status** field can have one of the following values: 
-- `Success`: The deployment was successful. If you want to check the commit associated with it, go to the **Deploys** tab.
+After onboarding with the WebOps app, you can access your store through a live store URL. To find the live store URL, access **Storefront > FastStore WebOps** in the VTEX Admin. In the [**Production Overview**](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#production-overview) card, locate the **Live Store** URL.
 
-- `Error`: An error in the pipeline caused the deploy to fail. To identify the specific step where the error occurred, access the **Deploys** tab and check the last commit. 
-Then, access your store repository and verify the pipeline related to that commit. 
+The live store URL includes a `liveStoreId`, a unique identifier for your store. It combines your store account name and a live store ID number, for example: `https://mystore-clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b.vtex.app`. Let's break down the example to understand the `liveStoreId`:
 
-  Note that a deploy can fail even if the build process is successful. 
-  In this case, even though the code compiled correctly, the deploy may have failed in a specific step of the pipeline.
+- `mystore-clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b`: the `liveStoreId`.
+- `mystore`: the account name.
+- `clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b`: the live store ID number.
 
---- 
+> The live store ID also helps you [set up the Preview URL in the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-2-configuring-the-headless-cms), enabling you to preview changes to your pages via the Headless CMS.
 
-## Deploys
+#### Live deployment statuses
 
-The **Deploys** section provides a summary of each deployment made in your store's repository.
+This section also displays the status of the live deployment:
 
-![deploy-view](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-view-deploys___e5f04f3e5613d52e4b2864ef48134608.png)
+- **Success:** The commit was deployed to the production environment and is live.
+- **Queued:** The commit is next in line to be deployed.
+- **In progress:** The commit is currently being deployed.
+- **Failed:** The deployment failed. Further details can be found by clicking the link below the `Deploy` button.
 
-| Field                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| :---------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Preview URL**               | Displays the URL to the deploy preview of a specific commit.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Commit**                    | Displays the commit hash associated with a particular commit.                                                                                                                                                                                                                                                                                                                                                                                                |
-| **Timestamp**                 | Displays the date and time of the commit in the format `dd/mm/yyyy`.                                                                                                                                                                                                                                                                                                                                                                                         |
-| **Elapsed time**              | Displays the time it took to complete the commit process.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **Deploy**                    | Indicates the status of the deployment. Possible statuses are `Success` and `Failed`. For more information on the `Failed` status, go to the repository and check what failed in the commit.                                                                                                                                                                                                                                                                 |
-| **Quality checks**            | Provides an overview of the status of quality checks, including Lighthouse audits and Integration Tests. These checks help you identify and prevent regressions in your store. For more information on the Quality checks values, refer to [Quality checks available values](http://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#quality-checks-available-values). *Remember: Lighthouse audits are an essential step in the [go-live checklist](https://developers.vtex.com/docs/guides/faststore/go-live-overview#go-live-checklist).* Ensure you achieve the recommended score for the lighthouse checks to pass. |
-| **More actions menu** (`⋮`)    | Opens a list with the following options after being clicked: <li>**Preview**: Opens the store preview for the commit in a new tab.</li>  <li>**Commit**: Opens the commit page in GitHub in a new tab.</li>                                                                                                                                                                                                                                                 |
+### Lighthouse Scores
 
-### Quality checks available values
+When your store goes live (in production), ensuring optimal performance and a good user experience becomes crucial. The Lighthouse Scores section offers insights into four key areas measured by Lighthouse, helping you understand their impact on your store's performance.
 
-The **Quality checks** field can have one of the following values:
+- **Performance:** Indicates how fast your pages load.
+- **Accessibility:** Reflects how usable your pages are for people with disabilities.
+- **Best practices:** Indicates how well your pages adhere to coding best practices.
+- **SEO:** Reflects how well your pages are optimized for search engines.
 
-- `Success`: All checks have passed.
+These scores are based on the pages defined for testing in the [Integrations](#integrations) tab.
 
-- `Skipped`: In the CI process, specific checks were not performed for certain commits. 
-This often occurs when the commit being tested was never the HEAD commit of the main branch, saving time and resources without compromising code quality.
+### Production Deploys
 
-- `Failed`: For more information on the `Failed` status, go to the repository and check what failed in the commit.
+This section lists all the recent deploys to your production store. Each item on the list is composed of the following:
+
+![dashboard-lighthouse-score](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-production-deploys___840fcb7b30bc2c7a1e4e5d1d255a58f9.png)
+
+### Build logs
+
+The Dashboard includes the Build Logs section, which offers insights into your store's deployments. This feature allows you to monitor the status of each deployment and verify whether it succeeded or failed.
+
+![webops-build-logs](https://vtexhelp.vtexassets.com/assets/docs/src/webops-build-logs___dcab2fcebc09675e9087f3d25ca33058.gif)
+
+To access the build logs for a specific deployment, follow these steps:
+
+1. Go to the [Production Deploys](#production-deploys) section of the WebOps page.
+2. Click on a specific deployment to view its details.
+3. The Build Logs will appear on the right-hand side of the screen, displaying deployment details, such as a `Preview Link` to a live preview of your store for that specific deployment.
+
+### Preview Deploys
+
+This section lists all the deploy previews created for GitHub branches in your project repository. These previews are automatically available for each pull request opened for a corresponding branch.
+
+## Integrations
+
+The Integrations tab allows you to configure store pages for Lighthouse Tests. Here, you can specify the URLs for a product listing page (PLP) and a product details page (PDP) to undergo automatic Lighthouse score testing during deployments. This ensures a consistent testing experience.
+
+![dashboard-integrations](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-integrations___8575a9f0fc2abfa64bdfc10fc7534e9d.png)
+
+### Configuring pages for Lighthouse testing
+
+To set the pages you want to test with Lighthouse, follow these steps:
+
+1. In the **Default Category for PLP** field, enter the [category](https://help.vtex.com/en/tutorial/what-is-a-category--6HV4Q3E2FauUoOQoiCCgCg) slug defined in the Catalog.
+2. In the **Default Product Slug for PDP**, enter the slug for the specific PDP you want to test.
+3. Click `Save`.
+
+Once you've set the pages for testing and after a new deploy, go to the **Overview** tab and access the **Lighthouse Scores** section to check the scores for those pages.
+
 ## Deleting the project
 
 To delete your FastStore project, click the **More actions menu** (`⋮`). Then, click **Delete Project**.
 
 A modal to confirm your choice will open.
 
-> ⚠️  Proceed with caution. Deleting the project is irreversible and will permanently remove all deployments and domains associated with it.
-
-![delete-project](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-delete-project___46d68be9204ce3948c1785235aeae59f.gif)
+> ⚠️ Proceed with caution. Deleting the project is irreversible and will permanently remove all deployments and domains associated with it.

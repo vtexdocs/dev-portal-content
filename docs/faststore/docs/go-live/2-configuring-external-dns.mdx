@@ -18,7 +18,7 @@ Besides making your FastStore website accessible via a custom domain, **VTEX Che
    - Buy the desired domain.
    - [Redirect the **root domain** to the `www` subdomain.](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www)
 
-## Step by step
+## Instructions
 
 > ⚠️ If you still need to configure other VTEX solutions, please **use a fictitious domain name** while taking the following steps. Once you have set up all the desired integrations, repeat this guide using your final domain to make your website publicly available to end-users.
 
@@ -41,13 +41,18 @@ Now, you must set up your VTEX account to use the DNS records created in the pre
 1. On VTEX Admin, click your profile avatar, which can be identified by the first letter of your email address.
 2. Access **Account Settings > Account**.
 3. Go to the **Stores** tab and in the **Hosts** table, click the menu (**⋮**) and choose **Edit**.
-4. In the **Hosts** field, enter your main domain (e.g., `mystore.com`) to the list.
+4. In the **Hosts** field, enter your main domain (e.g., `www.mystore.com`) to the list.
 5. Click `Add`.
 6. Add the `secure` subdomain (e.g., `secure.mystore.com`) to the list.
    ![host-configuration](https://vtexhelp.vtexassets.com/assets/docs/src/account-settings-new___2e13bee3041e8505922a737b94652ca6.png)
-7. Click the **Save** button.
+7. Add the root domain as well; e.g., if your domain is `www.mystore.com`, add `mystore.com`. For a complete setup, you must add three hosts for each domain:
+   - `www.mystore.com`  (store domain)
+   - `mystore.com` (root domain)
+   - `secure.mystore.com` (checkout/myaccount subdomain)
 
-> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the hosts' list. Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. In other words, you must include both the `www.` and non-`www.` domains in the hosts' list. Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+
+8. Click the **Save** button.
 
 ### Step 4 - Associating your custom domain with your FastStore project
 

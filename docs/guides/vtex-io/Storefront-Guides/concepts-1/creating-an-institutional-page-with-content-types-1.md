@@ -8,7 +8,9 @@ updatedAt: "2022-09-23T19:41:16.408Z"
 
 Content types are templates that structure your documents. They can be pages, publications, articles, events, products, and any other type of content that you want to insert into your project. You can also use them in the CMS to create an institutional page.
 
-To create an institutional page, follow these tutorial.
+To create an institutional page, follow these instructions.
+
+## Instructions
 
 1. Define the components of your page. In the example below, we use the `ww.vtex.com` page and its title, partners, highlights, and carousel components.
 
@@ -19,60 +21,60 @@ To create an institutional page, follow these tutorial.
   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/creating-an-institutional-page-with-content-types-1-1.png)
 
 3. In the `content-type.json` file, create a new content type. To do this, define the following information:
+    
+    - `id`: content type ID. It is recommended to have a lowercase pattern with no spaces, like with URLs.
+    - `name`: name that will be displayed on the page.
+    - `configurationSchemaSets`: extra blocks that will configure the page, such as menu settings and slug blocks, for example.
+    
+    ```json content-type.json
+    {
+      "id": "landing",
+      "name": "Landing Page",
+      "configurationSchemaSets": []
+    }
+    ```
 
-- `id`: content type ID. It is recommended to have a lowercase pattern with no spaces, like with URLs.
-- `name`: name that will be displayed on the page.
-- `configurationSchemaSets`: extra blocks that will configure the page, such as menu settings and slug blocks, for example.
-
-```json
-{
-  "id": "landing",
-  "name": "Landing Page",
-  "configurationSchemaSets": []
-}
-```
-
-4. Determine the page sections in the `section.json` file. To define the sections, duplicate an existing one and edit it using the new names and descriptions that you want in your page.
-
-```json
-{
-  “name” “Hero”,
-  “schema”:  {
-    “title” “Hero”,
-    “description”: “Add a quick promotion with an image/action pair”,
-    “type”: “object”,
-    “properties”: {
-      “title”: {
-        “type”: “string”
-      },
-      “subtitle”: {
-        “type”: “string”
-      },
-      “linkText”: {
-        “type”: “string”,
-        “title”: “Link text”
-      },
-      “link”: {
-        “type”: “string”,
-        “title”: “Link path”
-      },
-      “ImageSrc”: {
-        “type”: “string”,
-        “title”: “Image”,
-        “widget”: {
-          “ui:widget”: image-uploader
-        },
-        “Imagealt”: {
-          “Type”: “string”,
-          “title”: “Alt text”
+4. Determine the page sections in the `section.json` file. To define the sections, duplicate an existing one and edit it with the new names and descriptions you want on your page.
+    
+    ```json section.json
+    {
+      “name” “Hero”,
+      “schema”:  {
+        “title” “Hero”,
+        “description”: “Add a quick promotion with an image/action pair”,
+        “type”: “object”,
+        “properties”: {
+          “title”: {
+            “type”: “string”
+          },
+          “subtitle”: {
+            “type”: “string”
+          },
+          “linkText”: {
+            “type”: “string”,
+            “title”: “Link text”
+          },
+          “link”: {
+            “type”: “string”,
+            “title”: “Link path”
+          },
+          “ImageSrc”: {
+            “type”: “string”,
+            “title”: “Image”,
+            “widget”: {
+              “ui:widget”: image-uploader
+            },
+            “Imagealt”: {
+              “Type”: “string”,
+              “title”: “Alt text”
+            }
+          }
         }
       }
     }
-  }
-}
-```
-
-> ℹ️️ These fields are the structure of your page. Complete them based on what was defined in step one of this tutorial.
+    ```
+    
+    > ℹ️️ These fields are the structure of your page. Complete them based on what was defined in step one of this guide.
 
 5. After defining the sections, save them. If you want to view the draft, go to the repository for testing. 6. Go to the store to view the final version of your page.
 

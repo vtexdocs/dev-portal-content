@@ -32,7 +32,7 @@ Before proceeding any further, make sure you have the following requisites:
 
 2. Created A Google Analytics 4 (GA4) Configuration tag using your Measumerent ID in [Google Tag Manager (GTM)](https://tagmanager.google.com/). For more information, refer to the following Google article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
 
-## Step by step
+## Instructions
 
 ### Step 1 - Setting up GA4 events
 

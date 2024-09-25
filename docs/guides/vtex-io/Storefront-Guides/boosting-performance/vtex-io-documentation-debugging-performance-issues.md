@@ -12,11 +12,11 @@ A series of tools are available to measure website performance, such as [Lightho
 
 Keeping an eye on how your store's website performs is essential for delivering a fast and efficient solution to final users.
 
-With that in mind, the following [section](#step-by-step) intends to guide you when debugging performance issues, aiming for high scores in Lighthouse audits.
+With that in mind, the [Instructions](#instructions) intends to guide you when debugging performance issues, aiming for high scores in Lighthouse audits.
 
 > ⚠️ The practices presented in this doc are intended to guide you when debugging your store's performance, they do not provide definitive solutions. For information on how to improve performance, [folow this link](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance).
 
-## Step by step
+## Instructions
 
 Before proceeding any further, we recommend that you run [Lighthouse](https://developers.google.com/speed/pagespeed/insights/) using the following URL pattern `https://{account}.myvtex.com/?workspace={workspace}`, given the production workspace you're currently working, and take note of your store's performance. You can also analyze the store in production. In this case, please consider the URL available to end-users.
 
