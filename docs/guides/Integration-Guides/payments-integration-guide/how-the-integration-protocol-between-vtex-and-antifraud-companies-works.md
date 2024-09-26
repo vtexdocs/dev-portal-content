@@ -142,6 +142,8 @@ When your integration has successfully passed all tests, please open a ticket in
 
 The SLA required for the VTEX payments team to carry out the homologation is 30 days.
 
+> ⚠️ VTEX Antifraud provider protocol supports payment transactions carried out using credit, debit, and gift cards. If you want to allow gift card payment transactions in your anti-fraud provider, set the `allowAntifraudOnGiftCard` field to `true` in the manifest.
+
 ## VTEX Credentials
 
 When calling `CallbackURL`, you must specify the authentication headers, which in VTEX are **X-VTEX-API-AppKey** and **X-VTEX-API-AppToken**. You can find these credentials in VTEX License Manager. These credentials are used by the Anti-fraud Provider only.
