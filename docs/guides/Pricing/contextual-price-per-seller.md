@@ -17,24 +17,31 @@ To apply the contextual price per seller in a B2B marketplace scenario, you need
 
 Follow the steps below to ensure that all the prerequisites are met:
 
-1. **Activate Audience Manager:** Contact [VTEX support](https://help.vtex.com/support?/cultureInfo=pt-br) and request the activation of the Audience Manager *feature toggle* for the Checkout module in the marketplace and sellers accounts.
+1. **Activate Audience Manager:** Contact [VTEX support](https://help.vtex.com/support?/cultureInfo=pt-br) and request the activation of the Audience Manager feature toggle for the Checkout module in the marketplace and sellers accounts.
 
 2. **Allow email sharing:**  Set the `TrustPolicy` field to the value `AllowEmailSharing` when creating or updating a seller using the [POST Create Seller](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/seller) or [PUT Update Seller endpoints](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog_system/pvt/seller). This allows the marketplace to share customers' email addresses with the sellers.
 
-Make sure that all the steps have been completed before proceeding with the configuration of custom prices.
-
 ### Seller configuration
 
-Sellers must configure price lists associated with customer email addresses using the [Fetch audience](https://developers.vtex.com/docs/api-reference/audience-api#post-/api/audience-manager/pvt/audience?endpoint=post-/api/audience-manager/pvt/audience) endpoint of the **Audience Manager** API. This API generates a unique `audienceId` (UUID) based on the content of a JSON *payload*, which can be used to save price tables via the **Price Table Mapper** API.
+Sellers must configure price lists associated with customer email addresses using the [Fetch audience](https://developers.vtex.com/docs/api-reference/audience-api#post-/api/audience-manager/pvt/audience?endpoint=post-/api/audience-manager/pvt/audience) endpoint of the **Audience Manager** API. This API generates a unique `audienceId` (UUID) based on the content of a JSON payload, which can be used to save price tables via the **Price Table Mapper** API.
 
 This operation requires the buyer email as an input parameter. See the example below:
 
+#### POST /api/audience-manager/pvt/audience
+
+`https://{accountName}.{environment}.com.br/api/audience-manager/pvt/audience`
+
+Request body
+
 ```json
-POST /api/audience-manager/pvt/audience
 {
   "email": "email-do-comprador@email.com"
 }
 ```
+
+If the request is successful (**status 200 OK**), the endpoint will return an array with the ID of one or more audiences associated with the provided email, which will be used in the following steps to configure the pricing table.
+
+Response body
 
 ```json
 [
@@ -42,9 +49,7 @@ POST /api/audience-manager/pvt/audience
 ]
 ```
 
-If the request is successful (**status 200 OK**), the endpoint will return an array with the ID of one or more audiences associated with the provided email, which will be used in the following steps to configure the pricing table.
-
-> ℹ️ Any change to the *payload* will generate a new UUID, representing an audience created based on the updated content of the *payload*.
+> ℹ️ Any change to the payload will generate a new UUID, representing an audience created based on the updated content of the payload.
 
 ## Configuring price tables
 
@@ -52,8 +57,13 @@ With the audience ID obtained, configure the price table using the [Set price ta
 
 See the example below:
 
+### PUT /api/price-table-mapper/pvt/mapping/{audienceId}
+
+`https://{accountName}.{environment}.com.br/api/price-table-mapper/pvt/mapping/{audienceId}`
+
+Request body
+
 ```json
-PUT /api/price-table-mapper/pvt/mapping/{audienceId}
 [
     "gold-price-table"
 ]
@@ -67,9 +77,9 @@ In `{audienceId}`, use the desired audience ID. The endpoint will associate the 
 
 To remove the configuration of a price table for a specific audience, use the endpoint [Delete price table mapping](https://developers.vtex.com/docs/api-reference/audience-api#delete-/api/price-table-mapper/pvt/mapping/-audienceId-).
 
-```json
-DELETE /api/price-table-mapper/pvt/mapping/{audienceId}
-```
+### DELETE /api/price-table-mapper/pvt/mapping/{audienceId}
+
+`https://{accountName}.{environment}.com.br/api/price-table-mapper/pvt/mapping/{audienceId}`
 
 Replace `{audienceId}` with the ID of the audience from which you want to remove the price table. After the call, the endpoint will return the **status 204 No Content**, confirming that the price table has been removed from the audience.
 
@@ -77,11 +87,13 @@ Replace `{audienceId}` with the ID of the audience from which you want to remove
 
 To query the price table mapping of a specific audience, use the [GET price table mapping endpoint](https://developers.vtex.com/docs/api-reference/audience-api#get-/api/price-table-mapper/pvt/mapping/-audienceId-?endpoint=get-/api/price-table-mapper/pvt/mapping/-audienceId-).
 
-```json
-GET /api/price-table-mapper/pvt/mapping/{audienceId}
-```
+### GET /api/price-table-mapper/pvt/mapping/{audienceId}
+
+`https://{accountName}.{environment}.com.br/api/price-table-mapper/pvt/mapping/{audienceId}`
 
 Replace `{audienceId}' with the ID of the audience you want to query. If the request is successful, the API will return an array containing the name of the pricing table associated with the audience ID. See the example below:
+
+Response body
 
 ```json
 [
