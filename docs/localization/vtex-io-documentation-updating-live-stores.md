@@ -2,7 +2,7 @@
 title: "Updating live stores"
 slug: "vtex-io-documentation-updating-live-stores"
 hidden: false
-createdAt: "2024-09-06T19:25:50.729Z"
+createdAt: "2024-09-26T13:09:11.226Z"
 updatedAt: ""
 excerpt: "Learn how to update your Store Framework store, which is already live and accessible to shoppers."
 ---
@@ -17,7 +17,7 @@ In this section, you will find recommendations to help you update your live stor
 
 ### Develop your Store Theme
 
-Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed with [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [Store Framework](https://developers.vtex.com/docs/guides/store-framework), following the guide [Storefront](https://developers.vtex.com/docs/guides/getting-started-3).
+Make sure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed with [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [Store Framework](https://developers.vtex.com/docs/guides/store-framework), following the [Getting started](https://developers.vtex.com/docs/guides/getting-started-3) tutorial.
 
 ### Check the builders
 
@@ -29,7 +29,7 @@ Customize your store theme based on your business needs, following the guides wi
 
 ### Go live
 
-After developing your store with VTEX IO and Store Framework and customizing it based on your business needs, follow the instructions in [Going live with a new store](https://developers.vtex.com/docs/guides/vtex-io-documentation-go-live) to make your ecommerce available to shoppers.
+After developing your store with [Store Framework](https://developers.vtex.com/docs/guides/store-framework) and customizing it based on your business needs, follow the instructions in [Going live with a new store](https://developers.vtex.com/docs/guides/vtex-io-documentation-go-live) to make your ecommerce available to shoppers.
 
 </Steps>
 
