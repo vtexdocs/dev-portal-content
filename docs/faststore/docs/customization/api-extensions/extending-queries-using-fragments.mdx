@@ -143,6 +143,8 @@ const context = usePDP()
 
 </details>
 
+> ⚠️ When using both [`ServerProductQuery`](#serverproductquery) and ClientProductQuery on the PDP, remember that `ServerProductQuery` fetches the initial product data from the server, while `ClientProductQuery` updates that data based on user actions. Make sure to manage how these queries interact to ensure data accuracy. When developing API extensions, prioritize keeping the data consistent and using both queries appropriately to provide users with the most up-to-date information.
+
 ### `ClientManyProductsQuery`
 
 | **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
