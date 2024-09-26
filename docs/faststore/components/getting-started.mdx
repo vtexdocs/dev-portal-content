@@ -1,8 +1,12 @@
 ---
 title: "Getting started with FastStore UI"
+hidden: true
 ---
 
-FastStore UI is an ecommerce-focused library of [brandless](https://developers.vtex.com/docs/guides/faststore/using-themes-overview#brandless-and-the-theming-structure) components you can easily use on your application.
+> ⚠️ If your store project is built with [FastStore](https://developers.vtex.com/docs/guides/faststore), you don't need to follow the steps in this guide to install the FastStore UI. FastStore projects include by default FastStore UI components.
+
+FastStore UI is an ecommerce-focused library of [brandless](https://developers.vtex.com/docs/guides/faststore/using-themes-overview#brandless-and-the-theming-structure) components you can easily use on your store projects.
+
 It provides features & basic style that makes it faster to implement and customize on top of it.
 
 ## Installation
@@ -23,9 +27,16 @@ npm install @faststore/ui
 
 ---
 
-## Adding styles
+## Applying Styles to FastStore UI components
 
-Import one of the following options:
+There are two main scenarios where you may want to apply styles to FastStore UI components:
+
+- [Overriding a component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component): Customize the appearance of an existing component.
+- [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section): Style a new UI section.
+
+In both scenarios, you'll create a stylesheet for your component and import the necessary styles. For more details on creating a stylesheet and importing styles, refer to the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+Once you have the stylesheet, import one of the following styles to it:
 
 ### All components included
 
@@ -38,4 +49,6 @@ Import one of the following options:
 ```sh
 @import "@faststore/ui/src/styles/base.scss";
 ```
+
 You should also import the desired components' style individually by checking the component references to import its style.
+
