@@ -61,214 +61,148 @@ Now, you can consume `customData` by following the [Consuming FastStore API exte
 Extendable queries in FastStore's GraphQL API are predefined queries that form the basis for fetching data from the API.
 These queries enable customization by allowing the addition or modification of fields to align data retrieval with your store-specific requirements.
 
+
+### `ClientProductGalleryQuery`
+
+| **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
+| ------------ | -------- | ------------------- | -------- | --------- | ---------- | ---------- |
+| `ClientProductGallery` | `Client` | `search` | PLP | In the hook `useProductGalleryQuery()` from the `ProductListingPage` (`PLP`) and `Search` Pages. | Products totalCount from [StorePageInfo](https://developers.vtex.com/docs/guides/faststore/schema-objects#storepageinfo), and facets ([StoreFacet](https://v1.faststore.dev/reference/api/objects#storefacet)) from [StoreSearchResult](https://developers.vtex.com/docs/guides/faststore/schema-objects#storesearchresult). | Frontend data from the `useSearch()` and `useLocalizedVariables()` hooks, the latter uses `useSession()`. |
+
 <details>
-<summary>Query: `ClientProductGalleryQuery`</summary>
-<table>
-  <td>ClientProductGallery</td>
-  <td>Client</td>
-  <td>search</td>
-  <td>PLP</td>
-  <td>
-    In the hook `useProductGalleryQuery()` from the `ProductListingPage` (`PLP`) and `Search` Pages.
-  </td>
-  <td>
-    Products totalCount from [StorePageInfo](https://developers.vtex.com/docs/guides/faststore/schema-objects#storepageinfo), and facets ([StoreFacet](https://v1.faststore.dev/reference/api/objects#storefacet)) from
-    [StoreSearchResult](https://developers.vtex.com/docs/guides/faststore/schema-objects#storesearchresult).
-  </td>
-  <td>
-    Frontend data from the `useSearch()` and `useLocalizedVariables()`
-    hooks, the latter uses `useSession()`.
-  </td>
-</table>
+<summary>Consuming the query</summary>
 
-### How to consume it
+Use the `usePage()` hook when you have a single section that is used in more than one type of page.
+```ts
+import { usePage } from "@faststore/core"
 
-    Use the `usePage()` hook when you have a single section that is used in more than one type of page.
-    ```ts
-    import { usePage } from "@faststore/core"
-
-    const context = usePage()
-    ```
-    This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
+const context = usePage()
+```
+This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
     
-    ```ts
-    import { usePage } from "@faststore/core"
+```ts
+import { usePage } from "@faststore/core"
 
-    const context = usePage<PLPContext | SearchPageContext>()
-    ```
+const context = usePage<PLPContext | SearchPageContext>()
+```
+
 </details>
 
+### `ServerCollectionPageQuery`
+
+| **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
+| ------------ | -------- | ------------------- | -------- | --------- | ---------- | ---------- |
+| `ServerCollectionPage` | `Server` | `collection` | PLP | In the function `getStaticProps()` from `PLP`. | `seo`, `breadcrumbList` and `metaData` from the collection ([StoreCollection](https://developers.vtex.com/docs/guides/faststore/schema-objects#storecollection)). | Collection `slug` that comes from URL. |
+
 <details>
-<summary>Query: `ServerCollectionPageQuery`</summary>
-<table>
-  <td>ServerCollectionPage</td>
-  <td>Server</td>
-  <td>collection</td>
-  <td>PLP</td>
-  <td>In the function `getStaticProps()` from `PLP`.</td>
-  <td>
-    seo, breadcrumbList and meta data from the collection ([StoreCollection](https://developers.vtex.com/docs/guides/faststore/schema-objects#storecollection)).
-  </td>
-  <td>Collection `slug` that comes from URL.</td>
-</table>
+<summary>Consuming the query</summary>
 
-### How to consume it
+Use the `usePLP()` hook when integrating your section with a Product Listing Page (PLP).
+```ts
+import { usePLP } from "@faststore/core"
 
-    Use the `usePLP()` hook when integrating your section with a Product Listing Page (PLP).
-    ```ts
-    import { usePLP } from "@faststore/core"
+const context = usePLP()
+```
 
-    const context = usePLP()
-    ```
 </details>
 
+### `ServerProductQuery`
+
+| **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
+| ------------ | -------- | ------------------- | -------- | --------- | ---------- | ---------- |
+| `ServerProduct` | `Server` | `product` | PDP | In the function `getStaticProps()` from `PDP`. | General product data from [StoreProduct](https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct). | The `locator` with `slug` key/value. |
+
 <details>
-<summary>Query: `ServerProductQuery`</summary>
-<table>
-  <td>ServerProduct</td>
-  <td>Server</td>
-  <td>product</td>
-  <td>PDP</td>
-  <td>In the function `getStaticProps()` from `PDP`.</td>
-  <td>General product data from [StoreProduct](https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct).</td>
-  <td>The `locator` with `slug` key/value.</td>
-</table>
+<summary>Consuming the query</summary>
 
-### How to consume it
+`usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).
 
-    `usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).
+```ts
+import { usePDP } from "@faststore/core"
 
-    ```ts
-      import { usePDP } from "@faststore/core"
+const context = usePDP()
+```
 
-      const context = usePDP()
-    ```
 </details>
 
+### `ClientProductQuery`
+
+| **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
+| ------------ | -------- | ------------------- | -------- | --------- | ---------- | ---------- |
+| `ClientProduct` | `Client` | `product` | PDP | In the hook `useProductQuery()` from `PDP`. | General product data from [StoreProduct](https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct) to update product data inside `PDP` (product coming from `ServerProductQuery` as fallback). | Frontend data from the `useSession()` hook in the locator array with `id`, `channel`, `locale` as key/values. |
+
 <details>
-<summary>Query: `ClientProductQuery`</summary>
-<table>
-  <td>ClientProduct</td>
-  <td>Client</td>
-  <td>product</td>
-  <td>PDP</td>
-  <td>In the hook `useProductQuery()` from `PDP`.</td>
-  <td>
-    General product data from [StoreProduct](https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct) to update product data inside
-    `PDP` (product coming from `ServerProductQuery` as fallback).
-  </td>
-  <td>
-    Frontend data from the `useSession()` hook in the locator array with
-    `id`, `channel`, `locale` as key/values.
-  </td>
-</table>
+<summary>Consuming the query</summary>
 
-### How to consume it
+`usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).
 
-    `usePDP()`: Use this hook when integrating your section with a Product Detail Page (PDP).
+```ts
+import { usePDP } from "@faststore/core"
 
-    ```ts
-      import { usePDP } from "@faststore/core"
+const context = usePDP()
+```
 
-      const context = usePDP()
-    ```
 </details>
 
+### `ClientManyProductsQuery`
+
+| **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
+| ------------ | -------- | ------------------- | -------- | --------- | ---------- | ---------- |
+| `ClientManyProducts` | `Client` | `search` | `PLP`, `Search Page`, and pages that use `ProductShelf`, and `ProductTiles` components. | <ol><li>In the hook `usePageProductsQuery()` from `PLP` and `Search Page`.</li><br><li>In the hook `useProductsPrefetch()` to prefetch the previous (prev) and next (next) page from the current `PLP` or `Search Page`.</li><br><li>In the hook `useProductsQuery()`, in `ProductShelf`, `ProductTiles` components, that can be used on multiple pages.</li></ol> | General products data ([StoreProduct](https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct)) with the `totalCount` from [StorePageInfo](https://developers.vtex.com/docs/guides/faststore/schema-objects#storepageinfo). | Frontend data from the `useLocalizedVariables()` and `useSession()` hooks. |
+
 <details>
-<summary>Query: `ClientManyProductsQuery`</summary>
-<table>
-  <td>ClientManyProducts</td>
-  <td>Client</td>
-  <td>search</td>
-  <td>
-    `PLP`, `Search Page`, and pages that use `ProductShelf`, and `ProductTiles` components.
-  </td>
-  <td>
-    - In the hook `usePageProductsQuery()` from `PLP` and `Search Page`.
-    <br />
-    - In the hook `useProductsPrefetch()` to prefetch the previous (prev)
-    and next (next) page from the current `PLP` or `Search Page`.
-    <br />
-    - In the hook `useProductsQuery()`, in `ProductShelf`, `ProductTiles`
-    components, that can be used on multiple pages.
-    <br />
-  </td>
-  <td>
-    General products data ([StoreProduct](https://developers.vtex.com/docs/guides/faststore/schema-objects#storeproduct)) with the `totalCount` from [StorePageInfo](https://developers.vtex.com/docs/guides/faststore/schema-objects#storepageinfo).
-  </td>
-  <td>
-    Frontend data from the `useLocalizedVariables()` and `useSession()` hooks.
-  </td>
-</table>
+<summary>Consuming the query</summary>
 
-### How to consume it
+Use the `usePage()` hook when you have a single section that is used in more than one type of page.
+```ts
+import { usePage } from "@faststore/core"
 
-    Use the `usePage()` hook when you have a single section that is used in more than one type of page.
-    ```ts
-    import { usePage } from "@faststore/core"
-
-    const context = usePage()
-    ```
-    This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
+const context = usePage()
+```
+This hook returns one of the following types as context: `PDPContext`, `PLPContext`, or `SearchPageContext`, and you can decide how to handle it depending on the page that will use this hook by passing the types as generics.
     
-    ```ts
-    import { usePage } from "@faststore/core"
+```ts
+import { usePage } from "@faststore/core"
 
-    const context = usePage<PLPContext | SearchPageContext>()
-    ```
+const context = usePage<PLPContext | SearchPageContext>()
+```
+
 </details>
 
+### `ClientShippingSimulationQuery`
+
+| **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
+| ------------ | -------- | ------------------- | -------- | --------- | ---------- | ---------- |
+| `ClientShippingSimulation` | `Client` | `shipping` | PDP | In the `ShippingSimulation` component. | General shipping simulation data with the `address` and `logisticsInfo`. | Frontend `country`, and `postalCode` from `useSession()` hook, and the `items` Array of `IShippingItem` (`id`, `quantity`, and `seller`). |
+
 <details>
-<summary>Query: `ClientShippingSimulationQuery`</summary>
-<table>
-  <td>ClientShippingSimulation</td>
-  <td>Client</td>
-  <td>shipping</td>
-  <td>PDP</td>
-  <td>In the `ShippingSimulation` component.</td>
-  <td>
-    General shipping simulation data with the `address` and `logisticsInfo`.
-  </td>
-  <td>
-    Frontend `country`, and `postalCode` from `useSession()` hook, and the `items` Array of `IShippingItem` (`id`, `quantity`, and `seller`).
-  </td>
-</table>
+<summary>Consuming the query</summary>
 
-### How to consume it
+You can use the experimental `useShippingSimulation_unstable()` hook, or the `getShippingSimulation_unstable()` function to retrieve shipping data in Overridable (custom) components.
 
-    You can use the experimental `useShippingSimulation_unstable()` hook, or the `getShippingSimulation_unstable()` function to retrieve shipping data in Overridable (custom) components.
 </details>
 
-<details>
-<summary>Query: `ClientSearchSuggestionsQuery`</summary>
-<table>
-  <td>ClientSearchSuggestions</td>
-  <td>Client</td>
-  <td>search</td>
-  <td>`SearchInput` component from `GlobalSection`.</td>
-  <td>In the `SearchInput` component.</td>
-  <td>General search data with the `suggestions` and `products`.</td>
-  <td>Frontend data from `useSession()` hook, and the `term` searched.</td>
-</table>
+### `ClientSearchSuggestionsQuery`
 
-### How to consume it
+| **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
+| ------------ | -------- | ------------------- | -------- | --------- | ---------- | ---------- |
+| `ClientSearchSuggestions` | `Client` | `search` | `SearchInput` component from `GlobalSection`. | In the `SearchInput` component. | General search data with the `suggestions` and `products`. | Frontend data from `useSession()` hook, and the `term` searched. |
+
+<details>
+<summary>Consuming the query</summary>
 
 You can use the experimental `useSuggestions_unstable()` hook to retrieve the search suggestions data in Overridable (custom) components.
+
 </details>
 
-<details>
-<summary>Query: `ClientTopSearchSuggestionsQuery`</summary>
-<table>
-  <td>ClientTopSearchSuggestions</td>
-  <td>Client</td>
-  <td>search</td>
-  <td>`SearchInput` component from `GlobalSection`.</td>
-  <td>In the `SearchInput` component.</td>
-  <td>The top searched suggestions.</td>
-  <td>Frontend data from `useSession()` hook.</td>
-</table>
+### `ClientTopSearchSuggestionsQuery`
 
-### How to consume it
+| **Fragment** | **Side** | **Query operation** | **Page** | **Usage** | **Return** | Parameters |
+| ------------ | -------- | ------------------- | -------- | --------- | ---------- | ---------- |
+| `ClientTopSearchSuggestions` | `Client` | `search` | `SearchInput` component from `GlobalSection`. | In the `SearchInput` component. | The top searched suggestions. | Frontend data from `useSession()` hook. |
+
+<details>
+<summary>Consuming the query</summary>
 
 You can use the experimental `useTopSearch_unstable()` hook to retrieve the top search suggestions data in Overridable (custom) components.
+
 </details>
