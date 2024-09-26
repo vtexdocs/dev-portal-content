@@ -1,6 +1,6 @@
 ---
 title: "Updating live stores"
-slug: "vtex-io-documentation-updating-live-stores"
+slug: "store-framework-updating-live-stores"
 hidden: false
 createdAt: "2024-09-26T13:09:11.226Z"
 updatedAt: ""
