@@ -1,8 +1,8 @@
 ---
 title: "SEO"
-slug: "seo"
+slug: "storefront-seo"
 hidden: false
-createdAt: "2024-09-06T14:53:36.032Z"
+createdAt: "2024-09-26T14:09:58.908Z"
 updatedAt: ""
 excerpt: "Explore strategies to improve your ecommerce SEO."
 ---
