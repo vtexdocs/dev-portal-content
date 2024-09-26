@@ -4,7 +4,7 @@ slug: "storefront-seo"
 hidden: false
 createdAt: "2024-09-26T14:09:58.908Z"
 updatedAt: ""
-excerpt: "Explore strategies to improve your ecommerce SEO."
+excerpt: "Discover strategies to improve your ecommerce SEO."
 ---
 
 Search Engine Optimization (SEO) is a set of strategies to enhance the performance of websites, blogs, and web pages. The primary goal is to achieve higher rankings in organic search results, driving more traffic and boosting the site's authority.
