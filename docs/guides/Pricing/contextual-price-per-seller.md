@@ -27,7 +27,7 @@ Sellers must configure price lists associated with customer email addresses usin
 
 This operation requires the buyer email as an input parameter. See the example below:
 
-#### POST /api/audience-manager/pvt/audience
+#### POST - Fetch audience
 
 `https://{accountName}.{environment}.com.br/api/audience-manager/pvt/audience`
 
@@ -57,7 +57,7 @@ With the audience ID obtained, configure the price table using the [Set price ta
 
 See the example below:
 
-### PUT /api/price-table-mapper/pvt/mapping/{audienceId}
+### PUT - Set price table mapping
 
 `https://{accountName}.{environment}.com.br/api/price-table-mapper/pvt/mapping/{audienceId}`
 
@@ -77,7 +77,7 @@ In `{audienceId}`, use the desired audience ID. The endpoint will associate the 
 
 To remove the configuration of a price table for a specific audience, use the endpoint [Delete price table mapping](https://developers.vtex.com/docs/api-reference/audience-api#delete-/api/price-table-mapper/pvt/mapping/-audienceId-).
 
-### DELETE /api/price-table-mapper/pvt/mapping/{audienceId}
+### DELETE - Delete price table mapping
 
 `https://{accountName}.{environment}.com.br/api/price-table-mapper/pvt/mapping/{audienceId}`
 
@@ -87,7 +87,7 @@ Replace `{audienceId}` with the ID of the audience from which you want to remove
 
 To query the price table mapping of a specific audience, use the [GET price table mapping endpoint](https://developers.vtex.com/docs/api-reference/audience-api#get-/api/price-table-mapper/pvt/mapping/-audienceId-?endpoint=get-/api/price-table-mapper/pvt/mapping/-audienceId-).
 
-### GET /api/price-table-mapper/pvt/mapping/{audienceId}
+### GET - Get price table mapping
 
 `https://{accountName}.{environment}.com.br/api/price-table-mapper/pvt/mapping/{audienceId}`
 
