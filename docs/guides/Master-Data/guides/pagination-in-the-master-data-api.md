@@ -1,7 +1,7 @@
 ---
 title: "Pagination in the Master Data API"
 slug: "pagination-in-the-master-data-api"
-hidden: true
+hidden: false
 createdAt: "2024-09-06T18:10:15.623Z"
 updatedAt: "2024-09-06T18:10:15.623Z"
 ---
@@ -27,6 +27,8 @@ To paginate your results using the search endpoint, include the `REST-Range` hea
 * **`y`**: The index of the last document in the returned array + 1.
 
 For example, `resources=0-100` would return the first 100 documents from index 0 to 99. Note that you are limited to retrieving 100 documents per query.
+
+>ℹ When paginating, the `_sort` parameter is recommended. The API does not guarantee a specific order by default; therefore, omitting the `_sort` parameter may lead to duplicate documents or return unexpected pages.
 
 ### Retrieving subsequent pages
 
