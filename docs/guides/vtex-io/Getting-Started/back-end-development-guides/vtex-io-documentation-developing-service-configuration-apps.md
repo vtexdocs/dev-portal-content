@@ -219,14 +219,4 @@ Each element in this array consists of:
 
 Note that multiple apps can configure the same service. Hence, each element in this array represents a configuration originating from a different app.
 
-## Troubleshooting
-
-If you are developing a configuration app and the service that your app is configuring is not installed or linked in the same workspace you're working at, you may run into some errors. That happens because, when creating a new configuration app, the configuration builder first looks for the schema of that configuration in all the apps installed in your current workspace. Consequently, if the configuration builder cannot find this specific configuration, linking your app may fail.
-
-To avoid errors, remember to always have the service you're configuring linked or installed in the same workspace you're developing your configuration app.
-
-To publish your Configuration app without installing the service in the `master` workspace, you can `link` or `install` the Service app in an alternative branch and then use the `-w` flag when publishing:
-
-```sh
-vtex publish -w {alternativeBranchName}
-```
+> ℹ️ If you are getting errors with the service configuration app, see the [troubleshooting guide](https://developers.vtex.com/docs/guides/i-am-getting-errors-with-my-service-configuration-app).
