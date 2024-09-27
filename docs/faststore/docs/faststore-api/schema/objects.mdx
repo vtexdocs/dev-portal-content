@@ -1681,6 +1681,68 @@ The delivery window end date information.
 </tbody>
 </table>
 
+### StoreFacet
+
+Search facet information.
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>key</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet key.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>label</strong></td>
+<td valign="top"><a href="https://developers.vtex.com/docs/guides/faststore/schema-scalars#string">String</a>!</td>
+<td>
+
+Facet label.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>values</strong></td>
+<td valign="top">[<a href="#storefacetvalue">StoreFacetValue</a>!]!</td>
+<td>
+
+Array with information on each facet value.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#storefacetboolean">StoreFacetBoolean</a>!</td>
+<td>
+
+Facet type. Possible values are `BOOLEAN` and `RANGE`.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#storefacetrange">StoreFacetRange</a>!</td>
+<td>
+
+Facet type.
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ### StoreFacetBoolean
 
 Search facet boolean information.

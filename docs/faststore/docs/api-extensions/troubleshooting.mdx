@@ -4,46 +4,40 @@ title: "Troubleshooting"
 
 ## GraphQL changes not visible during development
 
-If your GraphQL changes aren't appearing during development, this is because the changes you have made since you started the development server (`yarn dev`) are probably not optimized yet.
+If your GraphQL changes aren't visible during development, the changes you have made since you started the development server (`yarn dev`) are probably not optimized. 
 Follow these steps to trigger the optimization:
 
 - Run `yarn generate` (recommended) or `yarn run faststore generate-graphql`.
 
-  > ℹ️ This optimization can also be performed while the development server is running.
+    > ℹ️ This optimization can also be performed while the development server is running.
 
-- Alternatively, you can stop the development server and then restart it using `yarn dev`.
-
----
+- Alternatively, you can stop and restart the development server using `yarn dev`.
 
 ## Deploy preview/production GraphQL schema different from development
 
-If you notice differences between the GraphQL schema in your deploy preview or production environment compared to your development setup, it may be due to the schema not being optimized since the development server's initiation.
+If you notice differences between the GraphQL schema in your deploy preview or production environment compared to your development setup, it may be due to the schema not being optimized since the development server's initiation. 
 The build process optimizes the schema before deployment to accurately reflect the schema declared in the store's code.
 
-Refer to the [GraphQL changes not visible during development](#graphql-changes-not-visible-during-development) topic, to fix the issue.
+To fix the issue, refer to the [GraphQL changes not visible during development](https://developers.vtex.com/docs/api-extension/troubleshooting#graphql-changes-not-visible-during-development) topic.
 
----
+## Type generation errors and warnings
 
-## Generation errors and warnings
-
-A few errors can happen during the GraphQL Optimizations and types generations. Here's how to troubleshoot them:
+Some errors can occur during GraphQL optimizations and type generation. Here's how to troubleshoot them:
 
 <details>
 <summary>`error Failed to run 'yarn generate:schema'. Please check your setup.`</summary>
 
-- **Possible cause:** Malformed files in your GraphQL Schema Extensions definitions.
+**- Possible cause:** Malformed files in your GraphQL Schema Extensions definitions.
 
-- **Solution:** Check the graphql files inside the `src/graphql/(vtex or thirdParty)/typeDefs` folders for syntax or definition errors.
-
+**- Solution:** Check the graphql files inside the `src/graphql/(vtex or thirdParty)/typeDefs` folders for syntax or definition errors.
 </details>
 
 <details>
 <summary>`error GraphQL was not optimized and TS files were not updated. Changes in the GraphQL layer did not take effect`</summary>
 
-- **Possible Cause:** Malformed files or GraphQL types within your GraphQL layer, including errors in GraphQL Schema Extensions, declared queries, and fragments.
+**- Possible Cause:** Malformed files or GraphQL types within your GraphQL layer, including errors in GraphQL Schema Extensions, declared queries, and fragments.
 
-- **Solution:** Check the graphql files inside the `src/graphql/(vtex or thirdParty)/typeDefs` folders and component (.ts, tsx) files declaring queries and fragments in your project for syntax or definition errors.
-
+**- Solution:** Check the graphql files inside the `src/graphql/(vtex or thirdParty)/typeDefs` folders and component (.ts, tsx) files declaring queries and fragments in your project for syntax or definition errors.
 </details>
 
 <details>
@@ -58,6 +52,6 @@ To access more detailed error information, use the `--debug` flag when manually 
 
 ## GraphQL changes not visible in production/deploy preview
 
-During the build step, the GraphQL optimization and type files are always generated fresh, which means they always reflect the most recent changes present in the code.
+During the build step, the GraphQL optimization and type files are always generated fresh, which means they always reflect the most recent changes in the code.
 
-If your changes are not visible in production, this means you must not have committed them to the branch you're currently working on. If you see a different GraphQL Schema, queries, or data during development, refer to the [GraphQL changes not visible during development](#graphql-changes-not-visible-during-development) topic.
+If your changes are not visible in production, this means you must not have committed them to the branch you're currently working on. If you see different GraphQL schema, queries, or data during development, refer to the [GraphQL changes not visible during development](https://developers.vtex.com/docs/api-extension/troubleshooting#graphql-changes-not-visible-during-development) topic.
