@@ -1,7 +1,7 @@
 ---
 title: "Pagination in the Master Data API"
 slug: "pagination-in-the-master-data-api"
-hidden: true
+hidden: false
 createdAt: "2024-09-06T18:10:15.623Z"
 updatedAt: "2024-09-06T18:10:15.623Z"
 ---
