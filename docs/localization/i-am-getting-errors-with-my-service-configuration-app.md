@@ -16,8 +16,8 @@ If you are [developing a configuration app](https://developers.vtex.com/docs/gui
 
 Below, we outline solutions for addressing errors with your service configuration app:
 
-1. Avoid errors when installing or linking your configuration app.
-2. Publish your configuration app in an alternative workspace.
+1. [Avoid errors when installing or linking your configuration app](#avoiding-errors-when-installing-or-linking-your-configuration-app).
+2. [Publish your configuration app in an alternative workspace](#publishing-your-configuration-app-in-an-alternative-workspace).
 
 ### Avoiding errors when installing or linking your configuration app
 
