@@ -28,6 +28,8 @@ To paginate your results using the search endpoint, include the `REST-Range` hea
 
 For example, `resources=0-100` would return the first 100 documents from index 0 to 99. Note that you are limited to retrieving 100 documents per query.
 
+>ℹ When paginating, the `_sort` parameter is recommended. The API by itself does not guarantee order, so without a defined `_sort`, documents may return duplicate or not return at the expected page.
+
 ### Retrieving subsequent pages
 
 To retrieve the next set of results, adjust the `x` and `y` values accordingly. For example, to get the next 100 documents after the first set, your `REST-Range` header would look like this: `resources=100-200`.
