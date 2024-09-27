@@ -28,7 +28,7 @@ To paginate your results using the search endpoint, include the `REST-Range` hea
 
 For example, `resources=0-100` would return the first 100 documents from index 0 to 99. Note that you are limited to retrieving 100 documents per query.
 
->ℹ When paginating, the `_sort` parameter is recommended. The API by itself does not guarantee order, so without a defined `_sort`, documents may return duplicate or not return at the expected page.
+>ℹ When paginating, the `_sort` parameter is recommended. The API does not guarantee a specific order by default; therefore, omitting the `_sort` parameter may lead to duplicate documents or return unexpected pages.
 
 ### Retrieving subsequent pages
 
