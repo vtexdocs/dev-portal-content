@@ -4,6 +4,8 @@ slug: "extracting-data-from-master-data-with-search-and-scroll"
 hidden: false
 createdAt: "2024-09-27T10:00:00.000Z"
 updatedAt: "2024-09-27T10:00:00.000Z"
+seeAlso:
+ - "/docs/guides/pagination-in-the-master-data-api"
 ---
 
 In this guide, you will learn how to extract data from Master Data using the search and scroll endpoints, including when to use each route, how to optimize queries, and best practices.
@@ -14,7 +16,7 @@ In this guide, you will learn how to extract data from Master Data using the sea
 
 The search route is ideal when you need to find a specific set of documents within your store. It is particularly useful for paginated queries, where you want to retrieve up to 10000 documents in small chunks over multiple requests. Each page is limited to 100 documents.
 
->ℹ When paginating, the `_sort` parameter is recommended. The API by itself does not guarantee order, so without a defined `_sort`, documents may return duplicate or not return at the expected page.
+>ℹ When paginating, the `_sort` parameter is recommended. The API does not guarantee a specific order by default; therefore, omitting the `_sort` parameter may lead to duplicate documents or return unexpected pages.
 
 See the Search endpoint reference depending on the Master Data version you are using:
 
@@ -26,10 +28,10 @@ See the Search endpoint reference depending on the Master Data version you are u
 When using the search endpoint, these best practices will help enhance your data retrieval process:
 
 * **Apply filters to narrow your search**: Improve performance by reducing the number of documents returned. This speeds up the query and ensures that your requests are more efficient.
-
 * **Use exact values for queries instead of wildcards (`*`):** Heavy usage of wildcards may be subject to temporary blocks.
-
 * **Avoid large datasets:** If you are querying many documents, break your query into smaller intervals.
+
+>ℹ Learn more about [Search pagination in the Master Data API](https://developers.vtex.com/docs/guides/pagination-in-the-master-data-api#search-pagination).
 
 ## Scroll
 
@@ -41,6 +43,8 @@ See the Scroll endpoint reference depending on the Master Data version you are u
 * [Master Data API v2 - Scroll](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/scroll)
 
 Your first scroll request will return a token in the `X-VTEX-MD-TOKEN` response header. Inform this value in the `_token` query parameter for your next requests until you receive an empty list, indicating that all documents have been retrieved.
+
+>ℹ Learn more about [Scroll pagination in the Master Data API](https://developers.vtex.com/docs/guides/pagination-in-the-master-data-api#scroll-pagination).
 
 ### Scroll best practices
 
