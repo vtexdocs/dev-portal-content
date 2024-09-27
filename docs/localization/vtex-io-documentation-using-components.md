@@ -1,10 +1,10 @@
 ---
-title: Using components
-slug: vtex-io-documentation-using-components
+title: "Using components"
+slug: "vtex-io-documentation-using-components"
 hidden: false
-createdAt: 2024-09-06T19:42:53.178Z
+createdAt: "2024-09-06T19:42:53.178Z"
 updatedAt: ""
-excerpt: Discover how components in VTEX IO Store Framework enable you to build your storefront, from basic elements to advanced customizations.
+excerpt: "Discover how components in VTEX IO Store Framework enable you to build your storefront, from basic elements to advanced customizations." 
 ---
 
 Components are building blocks used to create storefronts and admin apps. They are built on the [VTEX IO development platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) using [React](https://react.dev/) technology.
@@ -29,8 +29,8 @@ Check if the builders are properly installed in your Store Theme. To use builder
 
 You must have at least the following builders configured:
 
-* [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
-* [react builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions.
+- [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
+- [react builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions.
 
 ### Learn about VTEX IO apps
 
@@ -46,11 +46,11 @@ A deep understanding of native and custom components is important for using them
 
 Within the VTEX IO ecosystem, different types of components address different aspects of store development. Below are the main types of components:
 
-* [**Basic components**](https://developers.vtex.com/docs/guides/basic-components): Reusable UI elements such as buttons, forms, input fields, and other fundamental interface elements. These components provide the building blocks for creating more complex UI elements and features.
+- [**Basic components**](https://developers.vtex.com/docs/guides/basic-components): Reusable UI elements such as buttons, forms, input fields, and other fundamental interface elements. These components provide the building blocks for creating more complex UI elements and features.
 
 The [Product Summary](https://developers.vtex.com/docs/apps/vtex.product-summary) exemplifies a basic storefront component, summarizing essential product information like name, price, and image, which can be seamlessly integrated into other store blocks, such as the [Shelf](https://developers.vtex.com/docs/apps/vtex.shelf).
 
-* [**Store Components**](https://developers.vtex.com/docs/guides/store-components): Collection of components that can be used to create or extend other VTEX apps, aiming to improve the functionality and appearance of the storefront. They cover a range of elements, including product displays, navigation bars, checkout processes, and category pages. Some components in this collection offer advanced features, such as product recommendations, search filters, and personalized content delivery.
+- [**Store Components**](https://developers.vtex.com/docs/guides/store-components): Collection of components that can be used to create or extend other VTEX apps, aiming to improve the functionality and appearance of the storefront. They cover a range of elements, including product displays, navigation bars, checkout processes, and category pages. Some components in this collection offer advanced features, such as product recommendations, search filters, and personalized content delivery.
 
 ### Custom components
 
