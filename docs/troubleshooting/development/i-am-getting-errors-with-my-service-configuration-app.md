@@ -4,6 +4,7 @@ slug: "i-am-getting-errors-with-my-service-configuration-app"
 hidden: false
 createdAt: "2024-09-09T10:00:00.000Z"
 updatedAt: "2024-09-09T10:00:00.000Z"
+excerpt: "Errors with the service configuration app occur depending on your workspace configuration"
 tags:
     - apps
     - vtex-io
