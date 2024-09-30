@@ -60,8 +60,6 @@ See our guide about how to [develop an app](https://developers.vtex.com/docs/gui
 
 ## Guides in this section
 
-In this section, you will find the following guides:
-
 <Flex>
 
 <WhatsNextCard
