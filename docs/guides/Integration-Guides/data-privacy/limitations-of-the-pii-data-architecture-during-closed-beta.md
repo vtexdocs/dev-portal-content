@@ -26,19 +26,7 @@ In this guide, you can learn about the current limitations you must be aware of 
 
 ### Master Data
 
-Note that **Master Data** features may be impacted in the following three aspects.
-
-#### Triggers
-
-At the moment, triggers are not supported by the PII platform version Profile System.
-
-#### Orders Index
-
-This is a legacy integration that was deprecated. VTEX will disable it.
-
-#### CL
-
-Currently, Master Data custom CL fields are not supported.
+Accounts with the PII data architecture must use only the dedicated [Profile System](https://developers.vtex.com/docs/guides/profile-system) for managing customer profiles. [Master Data](https://developers.vtex.com/docs/guides/master-data-components), previously used for profile management, is not compatible with the PII data architecture. You cannot use it alongside or instead of the Profile System. Triggers are not supported in the current version of Profile System.
 
 ### Pricing - Price tables
 
