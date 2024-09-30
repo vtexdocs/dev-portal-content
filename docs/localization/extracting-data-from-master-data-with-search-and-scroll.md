@@ -4,6 +4,7 @@ slug: "extracting-data-from-master-data-with-search-and-scroll"
 hidden: false
 createdAt: "2024-09-27T10:00:00.000Z"
 updatedAt: "2024-09-27T10:00:00.000Z"
+excerpt: "Learn how to extract data from Master Data using the search and scroll endpoints, with best practices for optimizing queries and handling large datasets."
 seeAlso:
  - "/docs/guides/pagination-in-the-master-data-api"
 ---
