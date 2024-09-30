@@ -1,8 +1,8 @@
 ---
 title: "Using components"
-slug: "vtex-io-documentation-using-components"
+slug: "store-framework-using-components"
 hidden: false
-createdAt: "2024-09-06T19:42:53.178Z"
+createdAt: "2024-09-30T13:36:50.810Z"
 updatedAt: ""
 excerpt: "Discover how components in VTEX IO Store Framework enable you to build your storefront, from basic elements to advanced customizations." 
 ---
