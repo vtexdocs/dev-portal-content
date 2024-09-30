@@ -86,14 +86,14 @@ linkTitle="See more"
 <WhatsNextCard
 title="Configuring custom images for the SKU Selector"
 description="Learn how to customize the images for your SKU Selector."
-linkTo=”https://developers.vtex.com/docs/guides/vtex-io-documentation-configuring-custom-images-for-the-sku-selector”
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-configuring-custom-images-for-the-sku-selector"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Creating a native form for your store users"
 description="Discover how to customize and integrate forms directly on your store."
-linkTo=https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-native-form-for-your-store-users"
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-native-form-for-your-store-users"
 linkTitle="See more"
 />
 
