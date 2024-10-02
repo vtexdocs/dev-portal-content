@@ -42,6 +42,13 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
+title="Extensibility"
+description="Understand how to extend VTEX capabilities beyond what comes out of the box."
+linkTo="https://developers.vtex.com/docs/guides/extensibility"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
 title="Store architecture"
 description="Dive into store architecture models within our platform that are tailored to various business needs."
 linkTo="https://developers.vtex.com/docs/guides/store-architecture"
