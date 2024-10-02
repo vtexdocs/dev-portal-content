@@ -15,7 +15,7 @@ Adding a script to the `<header>` ensures that it will be executed before any ot
 
 ## Instructions
 
-1. Open the `pixel/header.html` file and replace the provided function with your own.
+1. Open the `pixel/head.html` file and replace the provided function with your own.
 
   > ℹ️ If you choose to execute your script inside the `<body>` tag, rename the `header.html` file to `body.html`.
 
