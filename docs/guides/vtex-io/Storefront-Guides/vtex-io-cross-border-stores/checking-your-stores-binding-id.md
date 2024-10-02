@@ -14,7 +14,7 @@ Hence, for a step by step on how to access this information, check the following
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
 2. Access the **GraphQL admin IDE**.
-3. From the dropdown list, choose the `vtex.tenant` app.
+3. From the dropdown list, choose the `vtex.tenant-graphql@0.x.x` app.
 4. Write the following query command in the text box that is displayed:
 
 ```gql
