@@ -30,8 +30,8 @@ The `content-types.json` file is an array of JSON objects that describes the typ
     ```json filename="cms/faststore/content-types.json" copy
     [
        {
-        "id": "customPage",
-        "name": "Custom Page",
+        "id": "landingPage",
+        "name": "Landing Page",
         "configurationSchemaSets": [
           {
             "name": "Settings",
@@ -85,7 +85,7 @@ The `content-types.json` file is an array of JSON objects that describes the typ
   </Tab>
 
   <Tab>
-    <img src="https://vtexhelp.vtexassets.com/assets/docs/src/cms-custom-page___e603fdbc92945b4627c6c5576e169ea6.png" width="40%" />
+    <img src="https://vtexhelp.vtexassets.com/assets/docs/src/content-type-landing-page___32f4d9db9b5f4a1265ce19eeaea0fd5d.png" width="40%" />
   </Tab>
 </Tabs>
 
@@ -95,14 +95,14 @@ Notice that, to declare a new Content Type, you must specify at least the follow
 | --- | ------------|
 | `id` | The identification key of a Content Type, written in Camel Case.   |
 | `name` | The name presented at the Headless CMS app.  |
-| **(optional)** `configurationSchemaSets` | Creates a new tab on the page of that Content Type with advanced settings. In our example, the **Custom Page** includes a new tab called **Settings** with custom SEO settings. Check the [following section](#the-configurationschemasets-property) for more information. |
+| **(optional)** `configurationSchemaSets` | Creates a new tab on the page of that Content Type with advanced settings. In our example, the **Landing Page** includes a new tab called **Settings** with custom SEO settings. Check the [following section](#the-configurationschemasets-property) for more information. |
 
 #### The `configurationSchemaSets` property
 
-Back to our example, notice that the **Custom Page** Content Type has the `configurationSchemaSets` definition. 
+Back to our example, notice that the **Landing Page** Content Type has the `configurationSchemaSets` definition. 
 The `configurationSchemaSets` prop creates a new tab at the Headless CMS for that Content Type with advanced settings.
 
-For the **Custom Page**, a custom section named **Settings**, which allows editors to change the site metadata, was created.
+For the **Landing Page**, a custom section named **Settings**, which allows editors to change the site metadata, was created.
 
 ![Configuration Schema Sets](https://vtexhelp.vtexassets.com/assets/docs/src/cms-settings-section___f6c8cfc11de6578e2a208ea1602ed127.png) 
 
@@ -114,7 +114,7 @@ In its turn, the `configurations` object must include a `name` for identificatio
 After editing the `cms/content-types.json` file, remember to save your changes and check them live:
 1. Access the VTEX Admin and go to **Storefront > Headless CMS**. 
 2. Click on **Create New** and check the available Content Type options. 
-3. Click on **Custom Page** to create a new **Custom Page** and check the Settings tab.
+3. Click on **Landing Page** to create a new page and check the Settings tab.
 
 ### Step 3: Adding Sections to the Headless CMS
 
