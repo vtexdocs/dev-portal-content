@@ -7,7 +7,7 @@ updatedAt: ""
 excerpt: "Learn how to use the VTEX IO Pixel builder."
 ---
 
-The `pixel` builder allows implementing JavaScript scripts in HTML files. The scripts run in the header or body of every store page and can collect user data, respond to events, and connect with third-party services.
+The `pixel` builder allows the implementation of JavaScript scripts in HTML files. The scripts run in the head or body of every store page and can collect user data, respond to events, and connect with third-party services.
 
 For details about creating Pixel apps, see the [Pixel apps tutorial](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps). You can find examples of available apps that use this builder in the [Pixel Apps section](https://developers.vtex.com/docs/guides/pixel-apps).
 
@@ -18,17 +18,17 @@ The `pixel` builder uses a folder named `pixel` located in the app’s root fold
 ```txt
 pixel
  ┣ 📄body.html
- ┗ 📄header.html
+ ┗ 📄head.html
 ```
 
-- `body.html`: HTML file with the script that will run in the body of the store pages. Scripts running in the body can have a better performance, but some events might be missed, since the execution takes place while HTML elements are rendered.
-- `header.html`: HTML file with the script that will run in the header of the store pages. Running scripts in the header can have a higher impact on performance but ensures all events are detected since the execution takes place before HTML elements are rendered.
+- `body.html`: HTML file with the script that will run in the body of the store pages. Scripts running in the body can perform better, but some events might be missed since the execution takes place while HTML elements are rendered.
+- `head.html`: HTML file with the script that will run in the head of the store pages. Running scripts in the head can have a higher impact on performance but ensures all events are detected since the execution takes place before HTML elements are rendered.
 
 ## Usage
 
 1. **Start with a template:** Download the [pixel-app-template](https://github.com/vtex-apps/pixel-app-template/).
 2. **Add the app settings to the manifest:** Open the `manifest.json` file in the app’s root folder and add the necessary settings to work with your script in the `settingsSchema` object. For example, you can add a field to insert a Google Tag Manager ID. For more details, see [Creating an interface for your app settings](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-an-interface-for-your-app-settings).
-3. **Implement the script:** Insert the script code in the `header.html` file or `body.html` file, depending on the desired implementation. The script will run on every store page. The choice between header or body execution is a trade-off of page performance against ensuring event detection and user data collection. Below is a script example.
+3. **Implement the script:** Insert the script code in the `head.html` file or `body.html` file, depending on the desired implementation. The script will run on every store page. The choice between head or body execution is a trade-off of page performance against ensuring event detection and user data collection. Below is a script example.
 
     ```html
     <script>
