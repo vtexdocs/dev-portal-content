@@ -84,7 +84,7 @@ The communication between stores and customers about subscription orders happens
 
 ## Enabling manual prices
 
-When using **Subscriptions**, stores might need to configure prices manually. By [enabling the Manual Price feature for Subscriptions](https://developers.vtex.com/docs/guides/enabling-manual-prices-for-subscriptions-v3#setting-a-manual-price-in-a-subscription-item), merchants can apply a manual price on each subscription item, overriding the current price, and maintain the same manual price for future recurrent orders from a given subscription.
+When using **Subscriptions**, merchants might need to configure prices manually. By [enabling the Manual Price feature for Subscriptions](https://developers.vtex.com/docs/guides/enabling-manual-prices-for-subscriptions-v3#setting-a-manual-price-in-a-subscription-item), merchants can apply a manual price on each subscription item, overriding the current price, and maintain the same manual price for future recurrent orders from a given subscription.
 
 ## Simulating prices
 
@@ -97,12 +97,12 @@ It is possible to simulate a subscription order price at checkout, getting infor
 
 >ℹ️ The feature pickup points for subscription orders is in beta and available only for stores using the **Checkout V6**.
 
-A [pickup point](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R) is a physical location where shoppers can pick up their orders instead of having them delivered to their addresses, and merchants can [configure pickup points for subscription orders](https://help.vtex.com/tutorial/pickup-points-for-subscription-orders-beta--csIqB6iBh4QNIFdEj0nVv). The requirements are the following:
+A [pickup point](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R) is a physical location where customers can pick up their orders instead of having them delivered to their addresses, and merchants can [configure pickup points for subscription orders](https://help.vtex.com/tutorial/pickup-points-for-subscription-orders-beta--csIqB6iBh4QNIFdEj0nVv). The requirements are the following:
 
 * Have the [Subscriptions module](https://help.vtex.com/en/tutorial/how-to-configure-subscriptions-in-your-store--1FA9dfE7vJqxBna9Nft5Sj) installed.
 * Have pickup points configured.
-* Associate to pickup points for subscription orders only carriers that do not have a [delivery windows](https://help.vtex.com/pt/tutorial/scheduled-delivery--22g3HAVCGLFiU7xugShOBi) configured.
-* Have items in stock at the subscription cycle date.
+* Associate to pickup points for subscriptions orders only carriers that do not have a [delivery windows](https://help.vtex.com/pt/tutorial/scheduled-delivery--22g3HAVCGLFiU7xugShOBi) configured.
+* Have items count in inventory at the subscription cycle date.
 
 ## Controlling reports
 
