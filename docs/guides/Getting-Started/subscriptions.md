@@ -36,10 +36,6 @@ After the installation, merchants have to [create subscription plans](https://he
 
 We highly recommend creating subscription plans in the **Subscriptions** module of your VTEX Admin, although it is also possible to create them as [catalog attachments](https://help.vtex.com/tutorial/how-to-create-a-subscription-attachment-via-the-catalog-module--2bUuKyPflA8cOGLv8OvaKK).
 
-**In Admin:** Orders > Order Management > Subscriptions > Dashboards
-
-**In Redesigned Admin:** Orders > Subscriptions > Dashboards
-
 ## Managing Subscriptions
 
 In this section, you will find content about controlling and editing the **Subscriptions** settings of your store, and about updating, retrieving data and removing subscription orders.
