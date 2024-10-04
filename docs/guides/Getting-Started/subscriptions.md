@@ -68,7 +68,7 @@ You can update settings, edit items and retrieve information about a given subsc
 
 ### Cycles
 
-Cycles are the execution count of subscription orders. The cycle determines the position of an order counting from when the shopper subscribed.
+Cycles are the execution count of subscription orders. The cycle determines the position of an order counting from when the customer subscribed.
 
 You can retrieve information about cycles and rerun cycles that present errors, which will reprocess the order.
 
