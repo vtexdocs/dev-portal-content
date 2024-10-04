@@ -78,7 +78,7 @@ You can retrieve information about cycles and rerun cycles that present errors, 
 
 ### Communication
 
-The communication between stores and shoppers about subscription orders happens via [transactional emails](https://help.vtex.com/en/tutorial/transactional-emails-for-subscription-orders--2NYHqHMRqZ43Cn6s84ZCB5). It is possible to retrieve the conversation messages sent to a shopper regarding a subscription order.
+The communication between stores and customers about subscription orders happens via [transactional emails](https://help.vtex.com/en/tutorial/transactional-emails-for-subscriptions-orders--2NYHqHMRqZ43Cn6s84ZCB5). It is possible to retrieve the conversation messages sent to a customer regarding a subscription order.
 
 * [GET - Get conversation messages](https://developers.vtex.com/docs/api-reference/subscriptions-api-v3#get-/api/rns/pub/subscriptions/-subscriptionId-/conversation-message)
 
