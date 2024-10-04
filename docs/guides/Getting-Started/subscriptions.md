@@ -24,19 +24,17 @@ The composition of a subscription is as the following:
 
 Every subscription order has an execution count called cycle. The cycle determines the position of an order counting from when the shopper subscribed. The original order that creates the subscription corresponds to 0, the first subscription order corresponds to 1, the second corresponds to 2, and so on.
 
-Shoppers can create a subscription during checkout or on their [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh) page, and the communication between merchants and shoppers regarding subscriptions is made in the **Message Center** module through [transactional emails](https://help.vtex.com/en/tutorial/transactional-emails-for-subscription-orders--2NYHqHMRqZ43Cn6s84ZCB5).
+Customers can create a subscription during checkout or on their [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh) page, and the communication between merchants and customers regarding subscriptions is made in the **Email Templates** module through [transactional emails](https://help.vtex.com/en/tutorial/transactional-emails-for-subscriptions-orders--2NYHqHMRqZ43Cn6s84ZCB5).
 
 > This module may process personal or sensitive information. Learn more about how VTEX handles data privacy at our [Data privacy](https://developers.vtex.com/docs/guides/data-privacy) guide.
 
 ## Setting up Subscriptions (mandatory)
 
-To install the Subscriptions module, merchants have to contact [our Support](https://help.vtex.com/support). After that, they have to follow the configuration steps described in [How to configure Subscriptions in your store](https://help.vtex.com/en/tutorial/how-to-configure-subscriptions-in-your-store--1FA9dfE7vJqxBna9Nft5Sj).
+To install the **Subscriptions** module, merchants have to contact [our Support](https://help.vtex.com/support). After that, they have to follow the configuration steps described in [How to configure Subscriptions in your store](https://help.vtex.com/en/tutorial/how-to-configure-subscriptions-in-your-store--1FA9dfE7vJqxBna9Nft5Sj).
 
 After the installation, merchants have to [create subscription plans](https://help.vtex.com/en/tutorial/creating-a-subscription-plan--1qGRoFczm98Wgt81f9mUqC) to associate the products valid for subscriptions and the frequencies available for recurrent orders.
 
->ℹ️ Subscription plans are in Beta stage, meaning we are working to improve it.
-
-We highly recommend creating subscription plans in the **Subscriptions** module of your VTEX Admin, although it is also possible to create them as catalog attachments.
+We highly recommend creating subscription plans in the **Subscriptions** module of your VTEX Admin, although it is also possible to create them as [catalog attachments](https://help.vtex.com/tutorial/how-to-create-a-subscription-attachment-via-the-catalog-module--2bUuKyPflA8cOGLv8OvaKK).
 
 **In Admin:** Orders > Order Management > Subscriptions > Dashboards
 
