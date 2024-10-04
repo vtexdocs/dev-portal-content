@@ -3,22 +3,20 @@ title: "Subscriptions"
 slug: "subscriptions"
 hidden: false
 createdAt: "2023-01-11T18:18:00.000Z"
-updatedAt: "2023-01-11T18:18:00.000Z"
+updatedAt: "2024-04-10T18:18:00.000Z"
 ---
 
 > **Help us improve our documentation!** Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
 
-[Subscriptions](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453) is the VTEX solution for shoppers to make recurrent purchases on a regular schedule, determining the orders’ products and frequency. This overview article presents what you can accomplish with **Subscriptions** and gathers relevant documentation on the subject.
+[Subscriptions](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453) is the VTEX solution for customers to make recurrent purchases on a regular schedule, determining the orders’ products and frequency. This overview article presents what you can accomplish with **Subscriptions** and gathers relevant documentation on the subject.
 
 ## Understanding Subscriptions
 
-**Subscriptions** is an app developed by VTEX to facilitate recurring sales for a store. It works as an automatic scheduler, executing a repurchase at the frequency requested by the shopper.
+**Subscriptions** is an app developed by VTEX to facilitate recurring sales for a store. It works as an automatic scheduler, executing a repurchase at the frequency requested by the customer.
 
-To enable **Subscriptions** for shoppers, merchants have to [create subscription plans](https://help.vtex.com/en/tutorial/creating-a-subscription-plan--1qGRoFczm98Wgt81f9mUqC) to associate the products valid for subscriptions and the frequencies available for recurrent orders.
+To enable **Subscriptions** for customers, merchants have to [create subscription plans](https://help.vtex.com/en/tutorial/creating-a-subscription-plan--1qGRoFczm98Wgt81f9mUqC) to associate the products valid for subscriptions and the frequencies available for recurrent orders.
 
-Once the [Subscriptions module is configured](#setting-up-subscriptions-mandatory), the merchant can generate, edit and manage shoppers’ recurrent orders, and [create subscription promotions](https://help.vtex.com/tutorial/creating-a-subscription-promotion--3ROT13HYNeUIv0plDqgNed).
-
->ℹ️ Have the most performative VTEX solution by using the version **Subscriptions v3**. For more information, see [Subscriptions v3 migration guide](https://developers.vtex.com/docs/guides/subscriptions-v3-migration-guide#what-is-a-subscription-to-subscriptions-v2).
+Once the [Subscriptions module is configured](#setting-up-subscriptions-mandatory), the merchant can generate, edit and manage customers’ recurrent orders, and [create subscription promotions](https://help.vtex.com/tutorial/creating-a-subscription-promotion--3ROT13HYNeUIv0plDqgNed).
 
 The composition of a subscription is as the following:
 
