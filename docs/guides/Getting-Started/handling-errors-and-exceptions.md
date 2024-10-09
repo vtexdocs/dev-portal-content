@@ -30,6 +30,7 @@ HTTP status codes in the 4xx range denote client errors, typically originating f
 | `403 Forbidden`          | <ul><li>Ensure you have the appropriate [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc?&utm_source=autocomplete) to perform the desired action.</li><li>Check the expiration or validity of your access credentials.</li></ul> |
 | `404 Not Found`          | <ul><li>Refer to [API Reference](https://developers.vtex.com/docs/api-reference) for correct endpoint naming.</li><li>Double-check the URL or endpoint for accuracy.</li><li>Confirm if the resource has been moved or deleted.</li><li>Check the [VTEX status page](https://status.vtex.com/) for real-time outages and incident reports. If the issue persists, reach out to [VTEX Support](https://help.vtex.com/support).</li></ul> |
 | `405 Method Not Allowed` | <ul><li>Ensure the request method matches the allowed methods for the resource. Refer to [VTEX API Reference](https://developers.vtex.com/docs/api-reference) for supported methods.</li><li>Check for spelling errors in the method used.</li></ul> |
+| `429 Too Many Requests` | <ul><li>Implement strategies to minimize request frequency and optimize the code.</li><li>Implement an [exponential backoff strategy](https://developers.vtex.com/docs/guides/best-practices-for-avoiding-rate-limit-errors) to gradually increase the time between retry attempts.</li><li>Monitor rate limit usage and adjust the application accordingly.</li></ul> |
 
 ## Handle 5xx errors
 
