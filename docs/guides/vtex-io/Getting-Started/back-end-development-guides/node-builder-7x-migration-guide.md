@@ -1,7 +1,7 @@
 ---
 title: "Node builder 7.x migration guide"
 slug: "node-builder-7x-migration-guide"
-excerpt: ""
+excerpt: "Learn how to update your Node app to builder version 7.x."
 hidden: false
 createdAt: "2024-10-1T10:00:00.000Z"
 updatedAt: "2024-10-1T10:00:00.000Z"
