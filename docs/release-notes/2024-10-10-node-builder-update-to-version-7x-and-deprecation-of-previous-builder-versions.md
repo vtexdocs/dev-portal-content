@@ -83,7 +83,7 @@ If you have already published and deployed your app, we recommend releasing a ne
 
 If you choose to keep the current Node builder version, your app will work as usual until the legacy Node builder is deprecated. After this date, your app will still run on our platform, but you will not be able to link, install, and create new versions of the app with this builder version.
 
-To update your app with Node builder `7.x`, follow the instructions in the [Node 7.x builder migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide).
+To update your app with Node builder `7.x`, follow the instructions in the [Node builder 7.x migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide).
 
 ⚠️ After making the changes, please test your app thoroughly to identify any potential issues, especially regarding dependencies and compatibility.
 

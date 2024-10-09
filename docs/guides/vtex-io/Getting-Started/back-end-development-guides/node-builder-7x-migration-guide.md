@@ -49,7 +49,7 @@ To update your app to use the new builder version, follow the instructions below
         > ⚠️ For apps in the [App Store](https://developers.vtex.com/docs/guides/vtex-app-store), creating a new **major** will require the app to go through the [homologation process](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-2-managing-the-homologation-process).
     2. Follow the other steps (Publish, Test, Deploy, and Promote) according to your scenario. Some apps are used only on one account, and others should deploy the new version to other accounts.
 
-If you need help migrating your app to the Node `7.x` builder, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+If you need help migrating your app to the Node builder `7.x`, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
 
 ## Troubleshooting
 
@@ -70,10 +70,10 @@ This means that the argument is being declared as a certain type and is recogniz
 Errors may occur in the following scenario:
 
 1. There is a lint configuration at the root of the project. It should be in files such as `.eslintrc` and `.eslintignore`.
-2. The `package.json` file in the root is configured with an old version of TypeScript. For instance, the file has TypeScript version `3.9.6`, but the Node `7.x` builder uses `5.5.3`.
+2. The `package.json` file in the root is configured with an old version of TypeScript. For instance, the file has TypeScript version `3.9.6`, but the Node builder `7.x` uses `5.5.3`.
 3. Something (a class, a library, etc.) used in the code does not exist in the old TypeScript version.
 
-**Solution**: Update the TypeScript version in the root `package.json`. We recommend using version `5.5.3`, since it is used in the Node `7.x` builder.
+**Solution**: Update the TypeScript version in the root `package.json`. We recommend using version `5.5.3`, since it is used in the Node builder `7.x`.
 
 **Side effect**: If the app uses the `eslint-config-vtex` package, you will get a warning in the console about version incompatibility.
 
@@ -88,7 +88,7 @@ These alerts may appear because some of the app's dependencies may run with an o
 
 ℹ️ Errors in this scenario might be due to some VTEX libraries not being updated yet with TypeScript `5.x`. They should be updated gradually over time.
 
-**Solution**: Update the `package.json` files of the dependencies manually with the new TypeScript version. We recommend using version `5.5.3`, since it is the same used in the Node `7.x` builder.
+**Solution**: Update the `package.json` files of the dependencies manually with the new TypeScript version. We recommend using version `5.5.3`, since it is the same used in the Node builder `7.x`.
 
 ### Error with MetricsAggregator
 
