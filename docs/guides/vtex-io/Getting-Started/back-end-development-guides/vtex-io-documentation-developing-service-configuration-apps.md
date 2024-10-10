@@ -130,7 +130,7 @@ In the `manifest.json` file, add the `read-workspace-apps` [policy](https://deve
       "name": "vtex.most-amazing-service-ever",
       "version": "0.0.0",
       "builders": {
-        "node": "4.x",
+        "node": "7.x",
    +    "configuration": "0.x"
       }
     }

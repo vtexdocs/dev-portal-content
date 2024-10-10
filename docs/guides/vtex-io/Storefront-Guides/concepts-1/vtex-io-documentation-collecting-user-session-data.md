@@ -37,7 +37,7 @@ Before starting, ensure you have the following:
 
       ```json manifest.json
       "builders": {
-          "node": "6.x",
+          "node": "7.x",
           "docs: "0.x",
           "vtex.session": "0.x"
       },

@@ -91,7 +91,7 @@ To do so, open the `manifest.json` file and add the highlighted code in the righ
   "categories": [],
   "dependencies": {},
   "builders": {
-    "node": "6.x",
+    "node": "7.x",
     "docs": "0.x"
   },
   "scripts": {

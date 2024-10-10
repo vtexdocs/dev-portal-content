@@ -32,7 +32,7 @@ Avoid unnecessary or excessive API calls and ensure they are fast and scalable. 
 [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) work as an API responsible for configuring other IO services in your app.
 For developing and publishing apps for the VTEX App Store, the following builders must be up-to-date in your app's code:
 
-- Node builder - version 6.x.
+- Node builder - version 7.x.
 - React builder - version 3.x.
 - Admin builder - version 1.x.
 - Messages builder - version 1.x.
