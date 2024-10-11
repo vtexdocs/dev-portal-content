@@ -29,15 +29,15 @@ This is an example of VTEX's custom OAuth2 authentication flow:
 
 ### User agent
 
-The user agent in this context is the user's browser. The user interacts with the browser manually, but it's the application that sends requests to servers, follows redirects, and renders pages to the user.
+The user agent in this context is the user's browser. The user interacts with the browser manually, but it's the application that sends requests to servers, follows redirects and renders pages to the user.
 
 ### Redirects
 
-All server communications in the context of this guide happen via the HTTPS protocol. One of the features of this protocol is responding to a request by redirecting the user agent to a different URI. When the browser receives a redirect response, it instantly proceeds to the specified URI. For example, when a user tries to access protected areas of a store, they can be redirected to a login page.
+All server communications in this guide happen via the HTTPS protocol. One feature of this protocol is responding to a request by redirecting the user agent to a different URI. When the browser receives a redirect response, it instantly proceeds to the specified URI. For example, when a user tries to access protected areas of a store, they can be redirected to a login page.
 
 ### VTEX ID
 
-__VTEX ID__ is the service used for identifying users on our platform. Usually, applications talk to it to obtain the token required to access protected information.
+__VTEX ID__ is the service used to identify users on our platform. Applications usually talk to it to obtain the token required to access protected information.
 
 ### Relevant requests
 
@@ -59,7 +59,7 @@ Once the __identity provider__ has safely identified the user, it should generat
 
 #### Authorization code callback request
 
-The __user agent__ should be redirected to this endpoint after the __identity provider__ has successfully checked its user credentials. Two parameters will be retrieved from the query variables by VTEX ID: `code` and `state`.
+The __user agent__ should be redirected to this endpoint after the __identity provider__ has successfully checked its user credentials. VTEX ID will retrieve two parameters from the query variables: `code` and `state`.
 
 - `code`: Single-use code that should expire after a few minutes, as indicated by the [RFC specification](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2). If there are multiple attempts to use this code, the credentials must be revoked.
 - `state`: Used to identify the authentication session, which is important to detect [replay attacks](https://en.wikipedia.org/wiki/Replay_attack). In addition, the `code` variable will be used so VTEX ID can get the __access token__ by using the __Access Token Exchange__endpoint.
@@ -86,7 +86,7 @@ This endpoint should only allow requests with valid `access_token` credentials, 
 - `email` (required)
 - `name`
 
-A user's `email` is the key to uniquely identify each VTEX user. This is the information VTEX ID needs in order to finish the authentication process.
+A user's `email` is the key to uniquely identifying each VTEX user. VTEX ID needs this information to finish the authentication process.
 
 ## Custom OAuth
 
@@ -100,7 +100,7 @@ You can implement a custom OAuth option by going to your Admin and providing inf
 
 >⚠️ Each VTEX store may have up to one custom OAuth implementation, which will be active for all store names in that account.
 
-See the table below to learn the information you are required to configure for each request. After the table, you will find more details about each configuration step.
+The table below lists the information you need to configure for each request. After the table, you will find more details about each configuration step.
 
 | __Request__                                                                 | __From__                     | __To__                       | __Fields requiring setup__                                                                                                                                                                                                                 |
 | --------------------------------------------------------------------------- | ---------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -149,7 +149,7 @@ In this step, you must first provide the authorization request __URL__.
 
 ![Authorization code section in the custom OAuth set up, an interface with the options described in the tutorial](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-2.PNG)
 
-> ℹ️ If you want, you can also add [custom parameters](#custom-parameters) to this request." } [/block] Then, scroll down to the __Callback Request Information__ section and enter the __Key__ under which the authorization code will be sent by the __identity provider__ to VTEX.
+> ℹ️ If you want, you can also add [custom parameters](#custom-parameters) to this request. Then, scroll down to the __Callback Request Information__ section and enter the __Key__ under which the authorization code will be sent by the __identity provider__ to VTEX.
 > ![Scrolling further down in the authorization code section, in the custom OAuth set up an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-3.PNG)
 > Click `NEXT`.
 
