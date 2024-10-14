@@ -1,14 +1,14 @@
 ---
-title: "How to Configure TradeName for Use in the Organization Search Field"
+title: "How to configure tradeName to use in the organization search field"
 slug: "configure-tradename"
 hidden: false
 createdAt: "2024-10-07t09:00:09.698z"
 updatedAt: "2024-10-07t09:00:09.698z"
 ---
 
-The **tradeName** field is used to identify buyer and supplier companies on the platform. When configured as Filterable, the field allows users to filter data and search for companies based on their trade name. The **tradeName** is displayed as one of the identification attributes on the **Organizations** page in the VTEX Admin, enabling its use in record search and filtering.
+The `tradeName` field is used to identify buyer and supplier companies on the platform. When configured as `Filterable`, the field allows users to filter data and search for companies based on their trade name. The `tradeName` is displayed as one of the identification attributes on the **Organizations** page in the VTEX Admin, enabling its use in record search and filtering.
 
-To configure the tradeName field, follow the steps below:
+To configure the `tradeName` field, follow the steps below:
 
 1. In VTEX Admin, go to **Store Settings** > **Storefront** > **Master Data**.
 
