@@ -12,30 +12,30 @@ To configure the `tradeName` field, follow the steps below:
 
 1. In VTEX Admin, go to **Store Settings** > **Storefront** > **Master Data**.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata1.png)
+![Master Data](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata1.png)
 
 2. After logging in, click **Advanced settings** as shown in the image below.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata2.png)
+![Advanced Settings](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata2.png)
 
 3. In the Settings column, click on Data structure.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata3.png)
+![Data Structure](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata3.png)
 
 4. Click **Data Entities**, find the CL row, and click the **Edit** button as shown in the image below.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata4a.png)
+![Data Entities](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata4a.png)
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata4b.png)
+![Edit Customer](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata4b.png)
 
 5. Find the **tradeName** field and click `Is filterable`.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata5.png)
+![Filterable](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata5.png)
 
 6. Click **Save**.
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata6.png)
+![Save](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata6.png)
 
 7. Click the **Publish** button to apply the changes
 
-![](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata7.png)
+![Publish](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/B2B-Suite/settings/masterdata7.png)
