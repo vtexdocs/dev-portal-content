@@ -25,7 +25,7 @@ To follow the instructions in this guide, you must understand the concepts of [A
 
 ## Instructions
 
-For this tutorial, we will create a custom gallery for the PDP using the [ label](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/17PxekVPmVYI4c3OCQ0ddJ#adding-an-image-to-the-sku) feature from the [VTEX Catalog]((https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ).
+For this tutorial, we will create a custom gallery for the PDP using the [ label](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/17PxekVPmVYI4c3OCQ0ddJ#adding-an-image-to-the-sku) feature from the [VTEX Catalog](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ).
 
 In this example, we will create a context by labeling selected images with the term `gallery`. This gallery will only display images that have been assigned the `gallery` label in the [catalog](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ).
 
