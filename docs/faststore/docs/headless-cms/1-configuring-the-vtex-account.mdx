@@ -25,8 +25,6 @@ Ensure that you have installed the `vtex.admin-cms@1.x` and its dependencies as 
 
 Make sure the FastStore Onboarding process has been completed successfully. The Headless CMS is installed during this onboarding phase. For detailed instructions, please refer to the [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project) tutorial.
 
->❗ Changes made through [Headless CMS in VTEX Admin](https://help.vtex.com/tutorial/headless-cms-overview--3U5gvhHdQL0jczYH8gjX09), such as creating new content types, adding sections, and updating fields, might not automatically trigger deployments or be reflected in the store's GitHub history. This means these changes won't be published to your storefront and won't be visible to your customers. The workaround for this issue is to manually create a commit in your store GitHub repository to trigger the store build and be able to apply the changes made in the Headless CMS. See more details in the [WebOps app is not fully integrated with Headless CMS](https://help.vtex.com/known-issues/webops-app-is-not-fully-integrated-with-headless-cms--577fIocKB9BYYCOkN9dZfW) Known Issue article.
-
 ### Installation of VTEX IO CLI
 
 Ensure that you have installed the VTEX IO CLI on your machine. This CLI is required to install the Headless CMS plugins and CMS dependencies. For more information, please refer to the [Installing VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) guide.
@@ -72,24 +70,22 @@ Let's configure the URLs of the webhooks used by the Headless CMS app.
 1. In the VTEX Admin, access **Storefront > Headless CMS**. 
 2. In the FastStore project interface, click on `Settings` (⚙️).
 3. In **Settings**, click the `Build` tab.
-4. Fill the **Preview URL** field with your live store URL. This URL activates the button on Headless CMS so you can preview the changes made on a page. 
+4. In **Build Webhook URL**, click `Add`.
+5. Enter the following value. _Replace the values between curly brackets according to your scenario._
 
     ```sh
-    https://{liveStoreId}.vtex.app/api/preview
-    ```
-    > ⚠️ Replace the values between curly brackets according to your [live store ID from WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#production-overview). To find the live store ID in, refer to the [Live store ID](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#production-overview#live-store-id) instructions.
-
-8. Fill in the **Production base URL** field with your store's endpoint to preview changes in the Headless CMS before publishing them. _Replace the values between curly brackets according to your scenario._
-
-    ```sh
-    https://{liveStoreId}.vtex.app
+    https://app.io.vtex.com/vtex.cms-builder-sf-jamstack/v1/{account}/master/build-releases
     ```
 
-9. Click on **SAVE**.
+6. Click **SAVE**.
+    
+  > ℹ️ When an editor clicks to publish a page using the Headless CMS interface, the CMS calls the **Build Webhook URL**, which changes the page's status to `published`. The CMS then waits for the content to be built in the background.
+
+7. Fill in the **Preview URL** field with your production URL. This URL activates the button on Headless CMS so you can preview the changes made on a page. _Replace the values between curly brackets according to your scenario._
 
 ### Step 3 - Communicating WebOps updates to the Headless CMS
 
-Now, if you are developing your FastStore project with CI/CD and Headless CMS, you must ensure that CI/CD is aware of every CMS update performed via the VTEX Admin. To do so, you must configure the WebOps webhooks responsible for communicating with the Headless CMS as in the following.
+If you are developing your FastStore project with CI/CD and Headless CMS, you must ensure that CI/CD is aware of every CMS update performed via the VTEX Admin. To do so, you must configure the WebOps webhooks responsible for communicating with the Headless CMS as in the following.
 
 1. Open your FastStore project in any code editor of your preference.
 2. Edit the `faststore.config.js` file in the root directory of your project.
@@ -103,7 +99,7 @@ Now, if you are developing your FastStore project with CI/CD and Headless CMS, y
     }
     ```
 
-4. Open a Pull Request in your project including the previous changes.
+4. Open a Pull Request in your project, including the previous changes.
 5. Merge the Pull Request.
 
 Now you can make changes to the Headless CMS and check if commits are being created in the project. In the following example, the `Hero` title was modified to `10% off on first purchase`, and we can see that it generated a commit in the repository.
