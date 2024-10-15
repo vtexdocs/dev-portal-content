@@ -2,7 +2,7 @@
 title: "Customer Credit"
 slug: "customer-credit-integration-guide"
 hidden: false
-createdAt: "2024-06-101T15:00:41.385Z"
+createdAt: "2024-07-101T15:00:41.385Z"
 updatedAt: ""
 ---
 With Customer Credit your store can enable credit payments through the checkout. You can also control invoices and the credit limits of your clients.
