@@ -1,10 +1,9 @@
 ---
 title: "FastStore WebOps: Build logs now integrated into the app"
-slug: "2024-10-18-build-logs-integrated-into-webops"
+slug: "2024-10-17-build-logs-integrated-into-webops"
 hidden: true
 excerpt: "The FastStore WebOps app now provides direct access to build logs for each store deployment in the VTEX Admin."
-createdAt: "2024-09-23T14:10:15.623Z"
-updatedAt: ""
+createdAt: "2024-10-17T14:10:15.623Z"
 ---
 
 The FastStore WebOps app now provides direct access to build logs for each store deployment in the VTEX Admin. This improvement helps you monitor deployment status and quickly understand the success or failure of each build.
