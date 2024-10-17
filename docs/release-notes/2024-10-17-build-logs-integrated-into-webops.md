@@ -1,7 +1,7 @@
 ---
 title: "FastStore WebOps: Build logs now integrated into the app"
 slug: "2024-10-17-build-logs-integrated-into-webops"
-hidden: true
+hidden: false
 excerpt: "The FastStore WebOps app now provides direct access to build logs for each store deployment in the VTEX Admin."
 createdAt: "2024-10-17T14:10:15.623Z"
 ---
