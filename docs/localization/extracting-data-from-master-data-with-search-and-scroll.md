@@ -6,7 +6,7 @@ createdAt: "2024-09-27T10:00:00.000Z"
 updatedAt: "2024-09-27T10:00:00.000Z"
 excerpt: "Learn how to extract data from Master Data using the search and scroll endpoints and best practices for optimizing queries and handling large datasets."
 seeAlso:
-- "/docs/guides/pagination-in-the-master-data-api"
+ - "/docs/guides/pagination-in-the-master-data-api"
 ---
 
 In this guide, you will learn how to extract data from Master Data using the search and scroll endpoints, including when to use each route, how to optimize queries, and best practices.
