@@ -6,11 +6,11 @@ createdAt: "2024-09-18T10:00:15.623Z"
 updatedAt: ""
 ---
 
-In this guide, learn how to configure redirects and rewrites in your FastStore project to manage how users access your content.
+In this guide, you will learn how to configure redirects and rewrites in your FastStore project to manage how users access your content.
 
-Redirects are used to send users from one URL to another automatically. This is useful when a page has been moved, renamed, or removed. For example, if a page has been moved or renamed, the redirect ensures the user is sent to the new location.
+Redirects are used to take users from one URL to another automatically. This is useful when a page has been moved, renamed, or removed. For example, if a page has been moved or renamed, the redirect ensures the user is taken to the new location.
 
-Rewrites allow you to map custom URLs to existing page templates without changing the URL in the browser. This is useful when you want to hide complex or dynamic URL structures from users while maintaining clean and SEO-friendly URLs. For example, you can map a custom URL `/sale` to an existing Product Listing Page template.
+Rewrites allow you to map custom URLs to existing page templates without changing the URL in the browser. This is useful when you want to hide complex or dynamic URL structures from users while maintaining clean and SEO-friendly URLs. For example, you can map a custom URL, such as `/sale`, to an existing product listing page template.
 
 In summary:
 
@@ -21,12 +21,13 @@ These two tools enhance content organization, help maintain a good user experien
 
 ## Creating redirects
 
-FastStore provides a way to configure redirects through the [`faststore.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on the [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
+FastStore allows you to configure redirects through the [`faststore.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
 
-> ⚠️For projects hosted on Vercel there are redirect limits such as the following: Number of redirects in the array: 1.024 maximum. String length for `source` and `destination` parameters: 4.096 maximum. For more information access the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.
+> ⚠️ Projects hosted on Vercel have redirect limits such as, "Number of redirects in the array: 1,024 maximum" and "String length for `source` and `destination` parameters: 4.096 maximum." For more information, check the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.
 
-1. Open your FastStore project in your preferred code editor and go to the `faststore.config.js` file within your project directory.
-2. Inside the `faststore.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
+1. Open your FastStore project in your preferred code editor and go to the `faststore.config.js` file in your project directory.
+
+2. In `faststore.config.js`, add the `redirects` function. This function will define your redirect rules. For example:
 
     ```faststore.config.js mark=3:6
     account: "{accountName}",
@@ -37,10 +38,10 @@ FastStore provides a way to configure redirects through the [`faststore.config.j
     },
     ```
 
-    > ℹ️ The `redirects` function requires the `required.json` file, which you will create in the next step. This file holds the redirect definitions.
+    > ℹ️ The `redirects` function requires the `required.json` file, which you will create in the next step. This file contains the redirect definitions.
 
 3. Go to the `src` folder and create the `redirects.json` file.
-Inside the `redirects.json` file, add the following:
+In the `redirects.json` file, add the following:
 
     ```src/redirects.json
     [
@@ -55,14 +56,15 @@ Inside the `redirects.json` file, add the following:
     | Property name | Description |
     | ------------------- | --------------- |
     | `source` | Original URL pattern that triggers the redirect. In this example, any URL starting with `/office` will be redirected. |
-    | `destination` | New URL to which users will be sent. Here, `/about` is the destination for users coming from `/office`. |
+    | `destination` | New URL the users will be redirected to. In this case, `/about` is the destination for users coming from `/office`. |
     | `permanent` | The type of redirect. Set to `true` for a permanent (308 status code) redirect, which search engines will cache. Set to `false` for a temporary (307 status code) redirect. |
 
-    > ℹ️ For more information about each property, access the Next.js documentation.
+    > ℹ️ For more information about each property, check the Next.js documentation.
 
-4. Run `yarn dev`  to start your project in development mode.
-5. Open the browser and access the old URL (e.g., `/office`). If the redirect is set up correctly, you should be automatically redirected to the new URL (e.g., `/about`).
+4. Run `yarn dev` to start your project in development mode.
+
+5. Open a browser and go to the old URL (example: `/office`). If the redirect is set up correctly, you should be automatically redirected to the new URL (example: `/about`).
 
 ## Creating rewrites
 
-FastStore leverages [Next.js rewrites](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites) to create custom routes while using existing Product Listing Page (PLP) templates. This allows you to map specific URLs to templates defined in your Headless CMS, providing flexibility in content organization and URL structure. For more information on using rewrites with PLP templates, see the [Using Rewrites with PLP template](https://developers.vtex.com/docs/guides/faststore/headless-cms-multiple-page-template#product-listing-page-plp-template-selection-criteria ) section on the Multiple page template documentation.
+FastStore leverages [Next.js rewrites](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites) to create custom routes while using existing product listing page (PLP) templates. This allows you to map specific URLs to templates defined in Headless CMS, providing flexibility in content organization and URL structure. For more information on using rewrites with PLP templates, check the [Using rewrites with PLP template](https://developers.vtex.com/docs/guides/faststore/headless-cms-multiple-page-template#product-listing-page-plp-template-selection-criteria) section on the Multiple page templates documentation.
