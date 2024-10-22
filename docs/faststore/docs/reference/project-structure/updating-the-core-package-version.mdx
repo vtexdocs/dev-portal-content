@@ -1,15 +1,28 @@
 ---
-title: "Updating the '@fastore/core' package version"
+title: "Updating the '@fastore/cli' package version"
 ---
 
-If you need to update the [`@fastore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) package, follow the instructions below:
+If you need to update the [`@fastore/cli`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) package, follow these instructions.
 
 1. Open your FastStore codebase in the code editor of your preference.
 
 2. Open the terminal and run the following:
 
     ```bash
-    yarn add @faststore/core@latest
+    yarn add @faststore/cli@latest
     ```
 
-3. Run `yarn dev` to sync the changes to your project.
+3. The following message will appear:
+
+```bash
+error Running this command will add the dependency to the workspace root rather than the workspace itself, which might not be what you want - if you really meant it, make it explicit by running this command again with the -W flag (or --ignore-workspace-root-check).
+info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this command.
+```
+
+4. Run the `yarn add @faststore/cli@latest` command again and add the `-W` flag:
+
+```bash
+yarn add @faststore/cli@latest -W
+```
+
+5. Run `yarn dev` to sync the changes to your project.
