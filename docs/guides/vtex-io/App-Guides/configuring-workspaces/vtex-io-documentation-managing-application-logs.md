@@ -56,7 +56,9 @@ const helloWorld = (ctx: Context) => {
 
 ### Retrieving application logs
 
-Every log written by a running application with the VTEX IO logging service is collected and stored for 7 days. These logs can be retrieved by the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) as in the following:
+Every log written by a running application with the VTEX IO logging service is collected and stored for later retrieval.
+
+You can retrieve the logs using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) with the following steps:
 
 1. Log in to your VTEX account.
 2. Install the Logs plugin for the VTEX IO CLI by running the following command:
@@ -96,3 +98,14 @@ vtex logs --all
 We suggest running `vtex logs --all > {mylogfile.logs}` to save the log messages in a local file. Replace `{mylogfile.logs}` with the most suitable name for you.
 
 Also, if you want to see log messages that you have previously retrieved, run `vtex logs --past`.
+
+## Log storage and retention limits
+
+VTEX limits the storage size and retention period of logs to guarantee the stability and performance of the platform. The limits are:
+
+- Logs are stored for 7 days at most.
+- Each app can have up to 1 GB of logs stored per account. If an app generates more than 1 GB of logs in one account in 7 days or less, the oldest logs are excluded.
+
+If you need more than 1 GB of logs per week for an app, we recommend retrieving and storing your logs before they reach the storage limit. You can verify the size of the logs from the size of the retrieved files in your local environment. See the instructions in the [Retrieving application logs](#retrieving-application-logs) section.
+
+>⚠️ VTEX may change the storage limits of app logs without further notice. Check this documentation for the updated limit values.
