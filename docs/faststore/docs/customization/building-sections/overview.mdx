@@ -2,11 +2,9 @@
 title: 'Building and Customizing sections'
 ---
 
-FastStore offers the ability to extend and customize your store components in four ways:
+FastStore offers the ability to extend and customize your store components in the following ways:
 
-<Steps>
- 
-### Content customization with Headless CMS
+## Content customization with Headless CMS
  
 Change the behavior of specific components by changing their props in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 In the VTEX Admin, go to **Storefront > Headless CMS** and select the section where the desired component is located.
@@ -14,22 +12,37 @@ From there, you can customize the component by modifying its props. Find the ava
 
   > ⚠️ The props changed via Headless CMS overlap the changes made through [override](/docs/building-sections/overriding-components-and-props#override-native-components-props). For example, if you change a prop through override and also change it using Headless CMS, the final prop's value will be the one added using CMS.
  
-### Theming customization
+## Theming customization
  
 Change the store theme and component styling using theming and design tokens. For detailed instructions on customizing through these methods, refer to the [Store Theme](https://developers.vtex.com/docs/guides/faststore/themes-overview) and [Styling a Component](https://developers.vtex.com/docs/guides/faststore/using-themes-components) documentation.
  
-### Components and sections customization
+## Components and sections customization
+
 You have the following customization options for components and sections:
 
-  - [Override native component's props](https://developers.vtex.com/docs/guides/faststore/overrides-component-props): Modify the behavior of a specific component by passing additional props to it in your store code.
-  - [Override a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component): Create a new component and override its native equivalent to achieve the desired functionality.
-  - [Create a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section): If the available FastStore native sections do not meet your business requirements, you can create a new section and make it available in the Headless CMS.
+| Type of customization | Description |
+| --------------------- | ----------- |
+| [Override native component's props](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) | Modify the behavior of a specific component by passing additional props to it in your store code. |
+| [Override a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component) | Create a new component and override its native equivalent to achieve the desired functionality.|
+| [Create a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) | If the available FastStore native sections do not meet your business requirements, you can create a new section and make it available in the Headless CMS.
 
-  > ⚠️ Consider using overrides when [FastStore design tokens (theming tools)](https://developers.vtex.com/docs/guides/faststore/using-themes-overview#what-is-theming) or Headless CMS props alone cannot achieve the customization you need.
+### Considerations for customizing components and sections
+
+<Steps>
+
+### Use for advanced customizations
+
+Consider using overrides when [FastStore design tokens (theming tools)](https://developers.vtex.com/docs/guides/faststore/using-themes-overview#what-is-theming) or Headless CMS props alone cannot achieve the customization you need.
 Overrides are suitable for making changes in component behavior or replacing components entirely.
 
-### API extension
+### Manage Analytics
 
-Add new data to existing queries on the FastStore API by extending it. Refer to the [API extension guide](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) for more information.
+The [ProductCard](https://developers.vtex.com/docs/guides/faststore/molecules-product-card) and [SearchInput](https://developers.vtex.com/docs/guides/faststore/organisms-search-input) components are FastStore components that need to be customizaed with careful, since they can affect in triggering analytics events.
+To understand how these components while customize them, refer to the [List of native sections and overridable components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections).
+
 
 </Steps>
+
+## API extension
+
+Add new data to existing queries on the FastStore API by extending it. Refer to the [API extension guide](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) for more information.
