@@ -88,10 +88,10 @@ Let's configure the URLs of the webhooks used by the Headless CMS app.
 If you are developing your FastStore project with CI/CD and Headless CMS, you must ensure that CI/CD is aware of every CMS update performed via the VTEX Admin. To do so, you must configure the WebOps webhooks responsible for communicating with the Headless CMS as in the following.
 
 1. Open your FastStore project in any code editor of your preference.
-2. Edit the `faststore.config.js` file in the root directory of your project.
+2. Edit the `discovery.config.js` file in the root directory of your project.
 3. In the Headless CMS configuration, add the `webhookUrls` property corresponding to your store website as in the following:
 
-    ```js faststore.config.js
+    ```js discovery.config.js
     "vtexHeadlessCms": {
       webhookUrls: [
         "https://{account}.myvtex.com/cms-releases/webhook-releases"

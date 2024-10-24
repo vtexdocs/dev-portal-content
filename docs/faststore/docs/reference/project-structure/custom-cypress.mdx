@@ -1,6 +1,5 @@
 ---
 title: 'enableCypressExtension'
-sidebar_label: 'Configuration options for faststore.config.js'
 ---
 
 > ⚠️ This is an experimental feature.
@@ -30,10 +29,10 @@ Learn how to add custom integration tests in the following steps.
 
 ## Step 1: Enabling `enableCypressExtension`
 
-1. Open the `faststore.config.js` file.
+1. Open the `discovery.config.js` file.
 2. Add the `experimental` object and set the `enableCypressExtension` value to `true`:
 
-```js faststore.config.js mark=1:3
+```js discovery.config.js mark=1:3
   experimental: {
       enableCypressExtension: true,
   }
@@ -62,7 +61,7 @@ As storefront projects evolve, changes to component and page code may lead to er
 In such cases, you can override FastStore's default tests using custom tests with the same name as the original test files. For example:
 
 ```js plp.test.js
-import { cypress } from '../../faststore.config'
+import { cypress } from '../../discovery.config'
 
 const { pages } = cypress
 
@@ -86,11 +85,11 @@ Follow the steps below to configure your project to only run custom Cypress test
 
 First, ensure that you use Cypress version 12 by setting the `cypressVersion` experimental feature flag:
 
-1. Open the `faststore.config.js` file.
+1. Open the `discovery.config.js` file.
 2. Inside the `experimental` object, add the `cypressVersion` property.
 3. Set the `cypressVersion` value to `12`.
 
-```js faststore.config.js mark=3
+```js discovery.config.js mark=3
   experimental: {
       enableCypressExtension: true,
       cypressVersion: 12,
