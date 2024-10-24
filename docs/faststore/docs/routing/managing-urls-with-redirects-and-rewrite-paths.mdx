@@ -17,14 +17,14 @@ These two tools enhance content organization, help maintain a good user experien
 
 ## Creating redirects
 
-FastStore allows you to configure redirects through the [`faststore.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
+FastStore allows you to configure redirects through the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
 
 > ⚠️ Projects hosted on Vercel have redirect limits such as, "Number of redirects in the array: 1,024 maximum" and "String length for `source` and `destination` parameters: 4.096 maximum." For more information, check the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.
 
-1. Open your FastStore project in your preferred code editor and go to the `faststore.config.js` file within your project directory.
-2. Inside the `faststore.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
+1. Open your FastStore project in your preferred code editor and go to the `discovery.config.js` file within your project directory.
+2. Inside the `discovery.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
 
-    ```faststore.config.js mark=3:6
+    ```discovery.config.js mark=3:6
     account: "{accountName}",
     …
     async redirects() {
