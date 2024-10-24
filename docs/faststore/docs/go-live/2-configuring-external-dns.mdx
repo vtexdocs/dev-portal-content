@@ -59,7 +59,7 @@ Now, you must set up your VTEX account to use the DNS records created in the pre
 Back to your FastStore project, you must also configure your project to point to the right addresses and domains.
 
 1. Open your FastStore project in any code editor of your preference.
-2. Open the `faststore.config.js` file.
+2. Open the `discovery.config.js` file.
 3. Update the `storeUrl`, `secureSubdomain`, `checkoutUrl`, `loginUrl`, and `accountUrl` properties as in the following:
 
    - **`storeUrl`**: `https://{rootDomain}`
@@ -70,7 +70,7 @@ Back to your FastStore project, you must also configure your project to point to
 
 Take the following example of how this code block would look after configuring a store with the `www.mystore.com` domain and `secure` subdomain:
 
-   ```diff /faststore.config.js
+   ```diff /discovery.config.js
    ...
    
    // Default channel
