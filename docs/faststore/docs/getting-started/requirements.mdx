@@ -95,8 +95,32 @@ If you are using a different major version and want to migrate, please [open a t
 
 </details>
 
-## Request the installation of the FastStore WebOps app
+## Install the FastStore WebOps app
 
-[Open a ticket with the VTEX support team](https://help.vtex.com/support) and request the installation of the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) app.
+To be able to start your FastStore project, make sure to install the [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) in your account.
+The app is your first step on creating and setting up setting up a store and gives you a clear view of your website's deployments and performance.
+
+To install the WebOps app, follow these steps:
+
+1. In a terminal, log into your VTEX account by running the following:
+
+    ```bash
+    vtex login {accountName}
+    ```
+
+    > ⚠️ Remember to change the `{accountName}` for your account name, for example `vtex login store`.
+
+2. Install the FastStore WebOps app by running the following command:
+
+    ```bash
+    vtex install vtex.webops
+    ```
+3. The following message will appear and type `y`.
+
+    ```bash
+    ? Are you sure you want to force this operation on the master workspace on the account store? » (y/N)
+    ```
+After typing `y` the following successful message will appear and the app is already installed in your account. 
+Now, you can start using the app by following the [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) guide.
 
 </Steps>
