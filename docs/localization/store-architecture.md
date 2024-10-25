@@ -1,12 +1,12 @@
 ---
-title: Store architecture
-slug: store-architecture
+title: "Store architecture"
+slug: "store-architecture"
 hidden: false
-createdAt: 2024-05-23T13:08:55.338Z
-updatedAt: 2024-09-09T18:14:39.196Z
-excerpt: Learn how our store architecture models are tailored to meet different business needs.
+createdAt: "2024-05-23T13:08:55.338Z"
+updatedAt: "2024-09-09T18:14:39.196Z"
+excerpt: "Learn how our store architecture models are tailored to meet different business needs."
 seeAlso:
-  - /docs/guides/understanding-vtex-reference-architectures
+- "/docs/guides/understanding-vtex-reference-architectures"
 ---
 
 Store architecture diagrams represent the fundamental structure of a particular project, providing a unified vision to all stakeholders and translating business needs into software components and project requirements. In this guide, we present an overview of basic store architecture models on VTEX.
@@ -17,14 +17,14 @@ To demonstrate how VTEX integrates with the ecosystem, we have created VTEX refe
 
 These are the main use cases for common scenarios:
 
-* [Business-to-customer (B2C)](#business-to-customer-b2c)
-* [Business-to-business (B2B)](#business-to-business-b2b)
-* [Franchise accounts (Omnichannel)](#franchise-accounts-omnichannel)
-* [Multi-language and multi-currency](#multi-language-and-multi-currency)
-  * [Single account, multi-bindings](#single-account-multi-bindings)
-  * [Multi-account](#multi-account)
+- [Business-to-customer (B2C)](#business-to-customer-b2c)
+- [Business-to-business (B2B)](#business-to-business-b2b)
+- [Franchise accounts (Omnichannel)](#franchise-accounts-omnichannel)
+- [Multi-language and multi-currency](#multi-language-and-multi-currency)
+- [Single account, multi-bindings](#single-account-multi-bindings)
+- [Multi-account](#multi-account)
 
-> ℹ️ Except for the [Headless](#headless) architecture, the following diagrams consider the client is using [Store Framework](https://developers.vtex.com/docs/guides/store-framework) as a storefront solution.
+>ℹ️ Except for the [Headless](#headless) architecture, the following diagrams consider the client is using [Store Framework](https://developers.vtex.com/docs/guides/store-framework) as a storefront solution.
 
 ## Business-to-customer (B2C)
 
@@ -64,15 +64,15 @@ In the diagram above, you can see the synchronous communication between the [Org
 
 ### Why choose this architecture?
 
-* **Streamlined organization management**: Manage multiple [organizations](https://developers.vtex.com/docs/apps/vtex.b2b-organizations) from a centralized platform by grouping storefront users into organizations and dividing them into cost centers.
-* **Customized user experience**: Tailor the user experience for each [organization](https://developers.vtex.com/docs/apps/vtex.b2b-organizations), providing personalized pricing, payment methods, and product catalogs to meet specific business needs.
-* **Enhanced security and control**: Assign roles and permissions to B2B clients, ensuring appropriate access levels and maintaining control over sensitive information and transactions. Learn more in the [Storefront Permissions](https://developers.vtex.com/docs/apps/vtex.storefront-permissions) and [Storefront Permissions UI](https://developers.vtex.com/docs/apps/vtex.storefront-permissions-ui) app documentation.
-* **Optimized quoting system**: Facilitate [quote requests](https://developers.vtex.com/docs/guides/vtex-b2b-quotes) and management, enhancing negotiations and ensuring accurate pricing by integrating the quote-to-order process.
-* **Efficient order processing**: Simplify the [checkout](https://developers.vtex.com/docs/apps/vtex.b2b-checkout-settings) process with shared shipping addresses for cost centers, reducing errors and streamlining order fulfillment.
+- **Streamlined organization management**: Manage multiple [organizations](https://developers.vtex.com/docs/apps/vtex.b2b-organizations) from a centralized platform by grouping storefront users into organizations and dividing them into cost centers.
+- **Customized user experience**: Tailor the user experience for each [organization](https://developers.vtex.com/docs/apps/vtex.b2b-organizations), providing personalized pricing, payment methods, and product catalogs to meet specific business needs.
+- **Enhanced security and control**: Assign roles and permissions to B2B clients, ensuring appropriate access levels and maintaining control over sensitive information and transactions. Learn more in the [Storefront Permissions](https://developers.vtex.com/docs/apps/vtex.storefront-permissions) and [Storefront Permissions UI](https://developers.vtex.com/docs/apps/vtex.storefront-permissions-ui) app documentation.
+- **Optimized quoting system**: Facilitate [quote requests](https://developers.vtex.com/docs/guides/vtex-b2b-quotes) and management, enhancing negotiations and ensuring accurate pricing by integrating the quote-to-order process.
+- **Efficient order processing**: Simplify the [checkout](https://developers.vtex.com/docs/apps/vtex.b2b-checkout-settings) process with shared shipping addresses for cost centers, reducing errors and streamlining order fulfillment.
 
 ### Learn more
 
-* [B2B Suite - Overview](https://help.vtex.com/en/tutorial/b2b-suite-overview--5eG6UfveWrai7looK0kVG3)
+- [B2B Suite - Overview](https://help.vtex.com/en/tutorial/b2b-suite-overview--5eG6UfveWrai7looK0kVG3)
 
 ## Franchise accounts (omnichannel)
 
@@ -80,13 +80,13 @@ This is a very common architecture model that integrates physical stores with ec
 
 A franchise account is linked to a main account and has the following characteristics:
 
-* **No separate website**: Franchise accounts have no dedicated website. Instead, they operate within the main account's ecommerce site as part of a larger [marketplace](https://help.vtex.com/en/tutorial/what-is-a-marketplace--680lLJTnmEAmekcC0MIea8).
-* **Customer data storage**: Customer data is stored in the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
-* **Seller type**: Each franchise account automatically operates as a [white-label seller](https://help.vtex.com/en/tutorial/seller-white-label--5orlGHyDHGAYciQ64oEgKa) within the main account.
-* **Catalog**: Franchise accounts inherit their [catalog](https://developers.vtex.com/docs/guides/catalog-overview) from the main account.
-* **Logistics and OMS**: Each franchise account has its own [logistics](https://developers.vtex.com/docs/guides/fulfillment) settings and performs its own [order management](https://developers.vtex.com/docs/guides/orders-overview).
-* **Prices and payments**: Each franchise can have its own [pricing](https://developers.vtex.com/docs/guides/pricing-overview) and [payment](https://developers.vtex.com/docs/guides/payments-overview) methods, or they can inherit these from the main account.
-* **Promotions**: [Promotions](https://developers.vtex.com/docs/guides/promotions-overview) can be created for each franchise account and for the main account.
+- **No separate website**: Franchise accounts have no dedicated website. Instead, they operate within the main account's ecommerce site as part of a larger [marketplace](https://help.vtex.com/en/tutorial/what-is-a-marketplace--680lLJTnmEAmekcC0MIea8).
+- **Customer data storage**: Customer data is stored in the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
+- **Seller type**: Each franchise account automatically operates as a [white-label seller](https://help.vtex.com/en/tutorial/seller-white-label--5orlGHyDHGAYciQ64oEgKa) within the main account.
+- **Catalog**: Franchise accounts inherit their [catalog](https://developers.vtex.com/docs/guides/catalog-overview) from the main account.
+- **Logistics and OMS**: Each franchise account has its own [logistics](https://developers.vtex.com/docs/guides/fulfillment) settings and performs its own [order management](https://developers.vtex.com/docs/guides/orders-overview).
+- **Prices and payments**: Each franchise can have its own [pricing](https://developers.vtex.com/docs/guides/pricing-overview) and [payment](https://developers.vtex.com/docs/guides/payments-overview) methods, or they can inherit these from the main account.
+- **Promotions**: [Promotions](https://developers.vtex.com/docs/guides/promotions-overview) can be created for each franchise account and for the main account.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/franchises-omni.png)
 
@@ -94,13 +94,13 @@ This architecture model works well for brands with multiple physical stores, fra
 
 ### Why choose this architecture?
 
-* Potential to reduce the percentage of out-of-stock items.
-* More shipping options, potentially reducing logistics costs.
-* Physical stores can be configured as [pickup points](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/4hXfgqXxS1lwAfnxgja3xW).
-* Physical stores can operate as small warehouses, using the [ship-from-store](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/50GAmxxFsJoLWqcnMysWdl) strategy.
-* Possible inventory reduction through the implementation of the [Endless Aisle](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/40KMlmGI5tN0r0KPCDWgGn) strategy through [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf).
+- Potential to reduce the percentage of out-of-stock items.
+- More shipping options, potentially reducing logistics costs.
+- Physical stores can be configured as [pickup points](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/4hXfgqXxS1lwAfnxgja3xW).
+- Physical stores can operate as small warehouses, using the [ship-from-store](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/50GAmxxFsJoLWqcnMysWdl) strategy.
+- Possible inventory reduction through the implementation of the [Endless Aisle](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/40KMlmGI5tN0r0KPCDWgGn) strategy through [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf).
 
-> ℹ️ VTEX Sales App is available in Brazil and some LATAM countries. To check if it's available in your country, open a ticket with [VTEX Support](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM).
+>ℹ️ VTEX Sales App is available in Brazil and some LATAM countries. To check if it's available in your country, open a ticket with [VTEX Support](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM).
 
 ## Multi-language and multi-currency
 
@@ -112,16 +112,16 @@ In this architecture, a single VTEX account is configured to support multiple la
 
 The reference architecture below exemplifies its main characteristics:
 
-* **Separate website**: A single account, but each store with its own domain, bound to different [trade policies](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4EPwTXx5oFdSG1dA3zIchz#trade-policy) by [bindings](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W).
-* **Search**: Same [search settings](https://developers.vtex.com/docs/guides/search-overview) for all websites.
-* **CMS**: Shared access to the [Content Management System (CMS)](https://developers.vtex.com/docs/guides/vtex-io-documentation-cms) between websites.
-* **Customer data storage**: A single [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) for all stores.
-* **Catalog**: A single catalog segmented by trade policies.
-* **Logistics**: Each store manages its logistics through different warehouses in the same logistics panel.
-* **Order Management System (OMS)**: A unified OMS panel for all stores.
-* **Payments**: Shared payment settings across all stores.
-* **Prices and promotions**: Different prices and promotions can be configured for each store, segmented by trade policy. Still, prices and promotions for all stores are managed in the same panel.
-* **Message Center**: A single [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) for all stores.
+- **Separate website**: A si-gle account, but each store with its own domain, bound to different [trade policies](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4EPwTXx5oFdSG1dA3zIchz#trade-policy) by [bindings](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W).
+- **Search**: Same [search settings](https://developers.vtex.com/docs/guides/search-overview) for all websites.
+- **CMS**: Shared access to the [Content Management System (CMS)](https://developers.vtex.com/docs/guides/vtex-io-documentation-cms) between websites.
+- **Customer data storage**: A single [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) for all stores.
+- **Catalog**: A single catalog segmented by trade policies.
+- **Logistics**: Each store manages its logistics through different warehouses in the same logistics panel.
+- **Order Management System (OMS)**: A unified OMS panel for all stores.
+- **Payments**: Shared payment settings across all stores.
+- **Prices and promotions**: Different prices and promotions can be configured for each store, segmented by trade policy. Still, prices and promotions for all stores are managed in the same panel.
+- **Message Center**: A single [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) for all stores.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-single-account.png)
 
@@ -129,10 +129,10 @@ This model is easier to set up, integrate, and maintain compared to the [multi-a
 
 #### Why choose this architecture?
 
-* Supports [multi-currency](https://developers.vtex.com/docs/guides/vtex-io-documentation-internationalizing-product-prices) natively.
-* Supports multi-language with [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
+- Supports [multi-currency](https://developers.vtex.com/docs/guides/vtex-io-documentation-internationalizing-product-prices) natively.
+- Supports multi-language with [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
 
-> ⚠ Product names aren't translated on the [Checkout](https://help.vtex.com/en/tutorial/checkout-vtex-overview--7wcprkM7yZUflOqbzAN5SI) and [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh) pages. These modules call the Catalog API directly to retrieve product data, so the information doesn't pass through the Messages API.
+>⚠ Product names aren't translated on the [Checkout](https://help.vtex.com/en/tutorial/checkout-vtex-overview--7wcprkM7yZUflOqbzAN5SI) and [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh) pages. These modules call the Catalog API directly to retrieve product data, so the information doesn't pass through the Messages API.
 
 ### Multi-account
 
@@ -140,14 +140,14 @@ In this architecture, a main account acts as a [seller](https://help.vtex.com/en
 
 The reference architecture below highlights its main characteristics:
 
-* **Separate VTEX account**: Each store operates with its own VTEX account.
-* **Separate website**: Each store has its own website and can customize a different frontend style.
-* **Customer data storage**: Customer data is segregated by marketplace account. No customer information is stored within the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
-* **Promotions**: Promotions from the main account have limited capabilities because the main account can't access customer data from the marketplace. For example, if you want to create promotions for a customer cluster in the main account, it won't work because the account doesn't have access to the marketplace Master Data.
-* **Checkout, Order Management System (OMS), Payments, and Message Center**: Each store manages these modules independently in its own Admin, without relying on the main account.
-* **Catalog, Pricing, and Logistics**: The main account is the source of truth for these [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), but management is independent, as each account has its own Admin. The product assortment can vary between accounts, but it's always based on the main account's catalog, as the main account is the owner.
+- **Separate VTEX account**: Each store operates with its own VTEX account.
+- **Separate website**: Each store has its own website and can customize a different frontend style.
+- **Customer data storage**: Customer data is segregated by marketplace account. No customer information is stored within the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
+- **Promotions**: Promotions from the main account have limited capabilities because the main account can't access customer data from the marketplace. For example, if you want to create promotions for a customer cluster in the main account, it won't work because the account doesn't have access to the marketplace Master Data.
+- **Checkout, Order Management System (OMS), Payments, and Message Center**: Each store manages these modules independently in its own Admin, without relying on the main account.
+- **Catalog, Pricing, and Logistics**: The main account is the source of truth for these [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), but management is independent, as each account has its own Admin. The product assortment can vary between accounts, but it's always based on the main account's catalog, as the main account is the owner.
 
-> ⚠ [Assembly options](https://developers.vtex.com/docs/guides/assembly-options-app), [attachments](https://help.vtex.com/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm), and [services](https://help.vtex.com/en/tutorial/what-is-a-service--46Ha8CEEQoC6Y40i6akG0y) aren't supported.
+>⚠ [Assembly options](https://developers.vtex.com/docs/guides/assembly-options-app), [attachments](https://help.vtex.com/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm), and [services](https://help.vtex.com/en/tutorial/what-is-a-service--46Ha8CEEQoC6Y40i6akG0y) aren't supported.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-multi-account.png)
 
@@ -155,14 +155,14 @@ This architecture is recommended for operations across multiple countries that r
 
 #### Why choose this architecture?
 
-* Supports both single fulfillment (all items shipped from one account) and multiple fulfillment (items shipped from different accounts within the same purchase), ensuring efficiency by optimizing logistics based on item availability and proximity to the customer.
-* Having the seller (main account) act as catalog owner and the accounts for each country act as marketplaces enables a multi-language solution. This allows each store to manage its language and currency locally within its own environment.
-* Support better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you don’t need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
+- Supports both single fulfillment (all items shipped from one account) and multiple fulfillment (items shipped from different accounts within the same purchase), ensuring efficiency by optimizing logistics based on item availability and proximity to the customer.
+- Having the seller (main account) act as catalog owner and the accounts for each country act as marketplaces enables a multi-language solution. This allows each store to manage its language and currency locally within its own environment.
+- Support better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you don’t need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
 
 #### Learn more
 
-* [Accounts and architecture](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl)
-* [Choosing between a multi-store architecture or an additional environment](https://help.vtex.com/en/tutorial/choosing-between-a-multi-store-architecture-or-an-additional-environment--4HRNpa1OCKZ5YzP8yiilBL)
+- [Accounts and architecture](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl)
+- [Choosing between a multi-store architecture or an additional environment](https://help.vtex.com/en/tutorial/choosing-between-a-multi-store-architecture-or-an-additional-environment--4HRNpa1OCKZ5YzP8yiilBL)
 
 ## Headless
 
@@ -174,16 +174,16 @@ The frontend layer includes font type, colors, styles, images, buttons, etc. The
 
 The diagram above represents an account implemented with [FastStore](https://developers.vtex.com/docs/guides/faststore), the VTEX native solution that allows developers to build headless storefronts. It outlines the main components of a headless implementation, providing an overview that can be expanded to address specific business needs.
 
-> ℹ️  If your store uses a third-party Content Management System (CMS) instead of VTEX storefront solutions, you can leverage VTEX APIs to build a headless shopping experience. Learn more in the [Headless Commerce](https://developers.vtex.com/docs/guides/headless-commerce) guide and the Pragmatic Composability section in the [Composability](https://developers.vtex.com/docs/guides/composability#pragmatic-composability) guide.
+>ℹ️  If your store uses a third-party Content Management System (CMS) instead of VTEX storefront solutions, you can leverage VTEX APIs to build a headless shopping experience. Learn more in the [Headless Commerce](https://developers.vtex.com/docs/guides/headless-commerce) guide and the Pragmatic Composability section in the [Composability](https://developers.vtex.com/docs/guides/composability#pragmatic-composability) guide.
 
 ### Why choose this architecture?
 
-* **Flexibility:** A headless approach allows complete ownership over the website architecture.
-* **Faster websites:** A headless ecommerce platform houses content centrally and can deliver it anywhere via APIs, allowing faster delivery compared to traditional ecommerce architecture.
-* **Personalized experiences:** Stores can create customizable experiences and adapt them to achieve the desired look and feel.
-* **Low-risk experimentation:** Decoupling the backend from the frontend makes it simpler and less risky to make changes to the frontend, knowing that it won't impact the site's underlying backend architecture.
-* **Seamless integration:** Stores can integrate their existing systems (ERP, PIM, OMS, etc.) to build a cohesive shopping experience using any programming language.
+- **Flexibility:** A headless approach allows complete ownership over the website architecture.
+- **Faster websites:** A headless ecommerce platform houses content centrally and can deliver it anywhere via APIs, allowing faster delivery compared to traditional ecommerce architecture.
+- **Personalized experiences:** Stores can create customizable experiences and adapt them to achieve the desired look and feel.
+- **Low-risk experimentation:** Decoupling the backend from the frontend makes it simpler and less risky to make changes to the frontend, knowing that it won't impact the site's underlying backend architecture.
+- **Seamless integration:** Stores can integrate their existing systems (ERP, PIM, OMS, etc.) to build a cohesive shopping experience using any programming language.
 
 ### Learn more
 
-* [Headless CMS - Overview](https://help.vtex.com/en/tutorial/headless-cms-overview--3U5gvhHdQL0jczYH8gjX09)
+- [Headless CMS - Overview](https://help.vtex.com/en/tutorial/headless-cms-overview--3U5gvhHdQL0jczYH8gjX09)
