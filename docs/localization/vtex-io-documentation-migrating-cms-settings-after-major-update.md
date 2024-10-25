@@ -46,7 +46,7 @@ Make sure you have the following tools installed on your machine. They facilitat
    }
    ```
 
- >❗ Replace only the values in curly brackets with those that apply to your scenario. Keep the `x` without replacing it with the minor and patch versions. If you do that, the mutation won't work.
+  >❗ Replace only the values in curly brackets with those that apply to your scenario. Keep the `x` without replacing it with the minor and patch versions. If you do that, the mutation won't work.
 
 7. Run the code by clicking `Execute Query` (▶).
 
