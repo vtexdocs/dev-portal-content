@@ -54,7 +54,7 @@ jobs:
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             echo "Running styleguide checker on $file"
-            node .github/workflows/check-styleguide.js "./$file" >> style_issues.txt
+            node .github/workflows/scripts/check-styleguide.js "./$file" >> style_issues.txt
           done
           
       # Step 6: Run Reviewdog
