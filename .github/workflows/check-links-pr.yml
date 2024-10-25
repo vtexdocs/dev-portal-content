@@ -1,0 +1,71 @@
+name: Check Broken Links
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  check-broken-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure all branches are accessible
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      # Step 3: Install necessary dependencies
+      - name: Install dependencies
+        run: npm install node-fetch
+      
+      - name: Install dependencies
+        run: npm install @actions/core@1.10
+        
+      - name: Install Reviewdog
+        uses: reviewdog/action-setup@v1
+
+      # Step 4: Get all changed markdown files
+      - name: Get all changed markdown files
+        id: changed-markdown-files
+        uses: tj-actions/changed-files@v45
+        with:
+          files: |
+             **.md
+             **.mdx
+
+      - name: List all changed files
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
+          done
+
+      # Step 6: Check for broken links in changed markdown files
+      - name: Check for broken links
+        id: collect-broken-link-issues
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "Checking for broken links in $file"
+            node .github/scripts/check-links-pr.mjs "./$file" >> link_issues.txt
+          done
+          
+      # Step 6: Run Reviewdog
+      - name: Run Reviewdog
+        if: steps.collect-broken-link-issues.outputs.link-issues != ''
+        run: |
+          echo "Running Reviewdog with the following style issues:"
+          cat link_issues.txt
+          reviewdog -efm="%f:%l:%c:%m" -name="link-check" -reporter=github-pr-review < link_issues.txt
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
