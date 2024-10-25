@@ -6,7 +6,7 @@ createdAt: "2024-05-23T13:08:55.338Z"
 updatedAt: "2024-09-09T18:14:39.196Z"
 excerpt: "Learn how our store architecture models are tailored to meet different business needs."
 seeAlso:
-- "/docs/guides/understanding-vtex-reference-architectures"
+ - "/docs/guides/understanding-vtex-reference-architectures"
 ---
 
 Store architecture diagrams represent the fundamental structure of a particular project, providing a unified vision to all stakeholders and translating business needs into software components and project requirements. In this guide, we present an overview of basic store architecture models on VTEX.
@@ -21,8 +21,8 @@ These are the main use cases for common scenarios:
 - [Business-to-business (B2B)](#business-to-business-b2b)
 - [Franchise accounts (Omnichannel)](#franchise-accounts-omnichannel)
 - [Multi-language and multi-currency](#multi-language-and-multi-currency)
-- [Single account, multi-bindings](#single-account-multi-bindings)
-- [Multi-account](#multi-account)
+  - [Single account, multi-bindings](#single-account-multi-bindings)
+  - [Multi-account](#multi-account)
 
 >ℹ️ Except for the [Headless](#headless) architecture, the following diagrams consider the client is using [Store Framework](https://developers.vtex.com/docs/guides/store-framework) as a storefront solution.
 
