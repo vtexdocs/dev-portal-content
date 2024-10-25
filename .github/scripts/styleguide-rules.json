@@ -1,0 +1,291 @@
+{
+    "administrative panel": {
+      "replace": "VTEX Admin",
+      "note": "Incorrect branded name."
+    },
+    "address complement": {
+      "replace": "address additional information",
+      "note": "Always use 'additional information' in addresses."
+    },
+    "Adds in": {
+      "replace": "adds",
+      "note": "Remove filler words."
+    },
+    "Aimed at": {
+      "replace": "for",
+      "note": "Remove filler phrases."
+    },
+    "Almost entirely": {
+      "replace": [],
+      "note": "Remove filler phrases."
+    },
+    "as of yet": {
+      "replace": "yet",
+      "note": "Avoid unnecessarily wordy phrases."
+    },
+    "at Master Data": {
+      "replace": "in Master Data",
+      "note": "'in' is the preferred preposition for Master Data."
+    },
+    "back end": {
+      "replace": "backend",
+      "note": "Use Style Guide spelling."
+    },
+    "back-end": {
+      "replace": "backend",
+      "note": "Use Style Guide spelling."
+    },
+    "bank slip": {
+      "replace": "boleto",
+      "note": "'Boleto' is a common Brazilian payment method. Do not translate or use 'bank slip'. This concept doesn't exist in the US and translation can be confused with other financial concepts."
+    },
+    "Before you start": {
+      "note": "Use Style Guide procedures",
+      "replace": "Before you begin",
+      "caseSensitive": true
+    },
+    "blog article": {
+      "note": "Not e-commerce. Never hyphanate.",
+      "replace": "blog post"
+    },
+    "cancelled": {
+      "replace": "canceled",
+      "note": "'Cancelled' is UK spelling."
+    },
+    "cli": {
+      "replace": "CLI",
+      "note": "Incorrect use of abbreviation.",
+      "caseSensitive": true
+    },
+    "click at": {
+      "replace": "click",
+      "note": "Use controlled vocabulary."
+    },
+    "click on": {
+      "replace": "click",
+      "note": "Use controlled vocabulary."
+    },
+    "clicking on": {
+      "replace": "clicking",
+      "note": "Use controlled vocabulary."
+    },
+    "close": {
+      "replace": "close",
+      "note": "Avoid unncessary prepositions."
+    },
+    "close down": {
+      "replace": "close",
+      "note": "Avoid unncessary prepositions."
+    },
+    "created at": {
+      "replace": "created on",
+      "note": "Not created at. The correct preposition for dates is on."
+    },
+    "due to the fact that": {
+      "replace": "because",
+      "note": "Avoid unnecessarily wordy phrases."
+    },
+    "e-commerce": {
+      "note": "Not e-commerce. Never hyphenate.",
+      "replace": "ecommerce"
+    },
+    "e-mail": {
+      "note": "Not e-mail. Never hyphenate.",
+      "replace": "email"
+    },
+    "Extension Hub": {
+      "replace": "Extensions Hub",
+      "note": "Incorrect branded name.",
+      "caseSensitive": true
+    },
+    "faststore": {
+      "note": "Incorrect capitalization of branded name.",
+      "replace": "FastStore",
+      "caseSensitive": true
+    },
+    "fill in": {
+      "replace": "enter, complete",
+      "note": "Use 'enter (x in the field)' or 'complete (the form, the field)' instead."
+    },
+    "for the purposes of": {
+      "replace": "to",
+      "note": "Remove filler phrases."
+    },
+    "front end": {
+      "replace": "frontend",
+      "note": "Use Style Guide spelling."
+    },
+    "front-end": {
+      "replace": "frontend",
+      "note": "Use Style Guide spelling."
+    },
+    "freight": {
+      "replace": "shipping",
+      "note": "Always use shipping."
+    },
+    "headless cms": {
+      "note": "Incorrect capitalization of branded name.",
+      "replace": "Headless CMS",
+      "caseSensitive": true
+    },
+    "home page": {
+      "note": "Use Style Guide.",
+      "replace": "homepage"
+    },
+    "id": {
+      "note": "Use Style Guide.",
+      "replace": "ID",
+      "caseSensitive": true
+    },
+    "in fact": {
+      "replace": [],
+      "note": "Remove filler phrases."
+    },
+    "in order to": {
+      "replace": "to",
+      "note": "Remove filler phrases."
+    },
+    "in the event that": {
+      "replace": "if",
+      "note": "Remove filler phrases."
+    },
+    "in VTEX": {
+      "replace": "on VTEX, at VTEX",
+      "note": "When referring to VTEX as a platform or system, use 'on VTEX'. When referring to VTEX as a company, use 'at VTEX'."
+    },
+    "input": {
+      "replace": "enter",
+      "note": "Use controlled vocabulary."
+    },
+    "it is best to": {
+      "replace": [],
+      "note": "Remove filler phrases."
+    },
+    "it is important to": {
+      "replace": [],
+      "note": "Remove filler phrases."
+    },
+    "it is not possible to": {
+      "replace": "you can’t",
+      "note": "Remove filler phrases."
+    },
+    "it’s best to": {
+      "replace": [],
+      "note": "Remove filler phrases."
+    },
+    "it’s important to": {
+      "replace": [],
+      "note": "Remove filler phrases."
+    },
+    "it’s not possible to": {
+      "replace": "you can’t",
+      "note": "Remove filler phrases."
+    },
+    "login to": {
+      "replace": "log in to",
+      "note": "'Login is' a noun, not a verb."
+    },
+    "log into": {
+      "replace": "log in to",
+      "note": "Log into."
+    },
+    "microsservices": {
+      "replace": "microservices"
+    },
+    "micro services": {
+      "replace": "microservices"
+    },
+    "on Master Data": {
+      "replace": "in Master Data",
+      "note": "'in' is the preferred preposition for Master Data."
+    },
+    "one-stop shop": {
+      "replace": "one-stop-shop",
+      "note": "Use Style Guide spelling."
+    },
+    "phone": {
+      "replace": "phone",
+      "note": "Don't use 'telephone'."
+    },
+    "profile": {
+      "replace": "role",
+      "note": "Avoid 'profile' when referring to permissions, the correct term is 'role'."
+    },
+    "register": {
+      "replace": "add, create, sign up",
+      "note": "'Register' as translation of PT 'cadastrar' is an incorrect element."
+    },
+    "R$": {
+      "note": "Use 'BRL' instead of 'R$' to avoid confusion and maintain uniformity in currency references.",
+      "replace": "BRL"
+    },
+    "shipping complement": {
+      "replace": "address additional information",
+      "note": "Always use additional information in addresses."
+    },
+    "sorry": {
+      "replace": [],
+      "note": "Be direct and not apologetic."
+    },
+    "Step by step": {
+      "replace": "Instructions",
+      "note": "In English, 'Step by step' is an adjective phrase and requires a noun to convey a complete thought. Never use it on its own.",
+      "caseSensitive": true
+    },
+    "tap": {
+      "replace": "tap",
+      "note": "Use controlled vocabulary."
+    },
+    "tap on": {
+      "replace": "tap",
+      "note": "Use controlled vocabulary."
+    },
+    "tapping on": {
+      "replace": "tapping",
+      "note": "Use controlled vocabulary."
+    },
+    "telephone": {
+      "replace": "phone",
+      "note": "Don't use 'telephone'."
+    },
+    "type in": {
+      "replace": "enter",
+      "note": "Use controlled vocabulary."
+    },
+    "un": {
+      "replace": "unit",
+      "note": "Never abbreviate as 'un'. Units doesn't have an abbreviation in EN. For a generic unit next to product quantity, use 'each' or 'ea'."
+    },
+    "unfortunately": {
+      "replace": [],
+      "note": "Be direct and not apologetic."
+    },
+    "US$": {
+      "note": "Use 'USD' instead of 'US$' to avoid confusion and maintain uniformity in currency references.",
+      "replace": "USD"
+    },
+    "utilize": {
+      "replace": "use",
+      "note": "Choose a simpler verb to convey exactly the same message."
+    },
+    "voucher": {
+      "replace": "gift card",
+      "note": "Don't use 'voucher' to refer to gift cards."
+    },
+    "zip code": {
+      "replace": "postal code",
+      "note": "Don't use 'zip code'. Both 'postal code' and 'zip code' are acceptable in US English. However, 'postal code' is more generic."
+    },
+    "warning": {
+      "replace": "attention",
+      "note": "Avoid using 'warning' at the beginning of a cautionary message. Use 'attention' instead."
+    },
+    "wish to": {
+      "replace": "want to",
+      "note": "Use controlled vocabulary."
+    },
+    "would like to": {
+      "replace": "want to",
+      "note": "Use controlled vocabulary."
+    }
+  }
