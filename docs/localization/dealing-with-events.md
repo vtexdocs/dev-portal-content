@@ -1,10 +1,10 @@
 ---
-title: Dealing with events
-slug: dealing-with-events
+title: "Dealing with events"
+slug: "dealing-with-events"
 hidden: false
 createdAt: ""
 updatedAt: ""
-excerpt: Learn how to manage user and system-generated events in your VTEX store.
+excerpt: "Learn how to manage user and system-generated events in your VTEX store."
 ---
 
 Events are actions or notifications that trigger specific responses. They provide insights into customer behavior and allow you to create dynamic shopping experiences.
