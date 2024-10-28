@@ -14,7 +14,7 @@ This is how prices look like in our current homepage (with the default color bla
 
 > ℹ️ Remember that when changing a component's style, you can use [Global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) or styling from scratch using your preferred styling tool. However, changing the value of a global token may affect different parts of your store's interface.
 
-1. In your `custom-theme.scss` theme file , add the `data-fs-price` and  `data-fs-price-variant` data attributes with the `Listing` value:
+1. In your `custom-theme.scss` theme file, add the `data-fs-price` data attribute:
 
 ```scss src/themes/custom-theme.scss
   ...
@@ -27,7 +27,7 @@ This is how prices look like in our current homepage (with the default color bla
 
 > ℹ️ Each FastStore UI component has a list of data attributes that can be used for further customization. You can find it in the component's [customization section](https://developers.vtex.com/docs/guides/faststore/atoms-price#customization).
 
-2. Now, change the color of the `Listing` variant using the `Price` [local token](https://developers.vtex.com/docs/guides/faststore/atoms-price#design-tokens). For this tutorial, we will use the shade of red `#cb4242`:
+2. Now, add the `Listing` variant using the `Price` [local token](https://developers.vtex.com/docs/guides/faststore/atoms-price#design-tokens). For this tutorial, we will use the shade of red `#cb4242`:
 
 ```scss src/themes/custom-theme.scss mark=6
 
