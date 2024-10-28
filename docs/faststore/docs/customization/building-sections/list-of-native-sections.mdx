@@ -9,7 +9,33 @@ Sections in FastStore are components that organize and encapsulate other compone
 
 For example, the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) is a native section designed to capture your brand's identity and messaging. To effective function in the store, the Hero comprises three components: `Hero`, `HeroImage`, and `HeroHeader`.
 
----
+## Considerations while customizing default components
+
+Customizing `__experimentalProductCard` and `SearchInput` can impact store analytics. These components collect data for your store analytics dashboard. Prioritize maintaining tracking functionality.
+
+### `__experimentalProductCard`
+
+**Affected sections:** [`ProductGallery`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productgallery) and [`ProductShelf`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productshelf).
+
+To ensure that click events on this component continue to be recorded after overriding the component, use the [`useProductLink_unstable` hook](https://developers.vtex.com/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components#hooks). 
+For more information on how to use the `useProductLink_unstable` hook and how to add it to the component, see the [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components).
+
+### `SearchInput`
+
+**Affected section:** [`Navbar`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#navbar)
+
+Customizing the `SearchInput` may affect the tracking of search events. 
+To maintain this functionality, add the following code to the override file which is based on the default implementation of the [`SearchInput`](https://github.com/vtex/faststore/blob/611283638dc01f55a65d0b5fd01e4a0163d53f4b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L46) component:
+
+```tsx const sendAnalytics = async (term: string) => {
+  import('@faststore/sdk').then(({ sendAnalyticsEvent }) => {
+    sendAnalyticsEvent<SearchEvent>({
+      name: 'search',
+      params: { search_term: term },
+    })
+  })
+}
+```
 
 ## FastStore Native Sections
 
