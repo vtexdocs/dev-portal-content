@@ -3,7 +3,7 @@ title: "Store architecture"
 slug: "store-architecture"
 hidden: false
 createdAt: "2024-05-23T13:08:55.338Z"
-updatedAt: "2024-09-09T18:14:39.196Z"
+updatedAt: "2024-10-28T14:22:32.885Z"
 excerpt: "Learn how our store architecture models are tailored to meet different business needs."
 seeAlso:
  - "/docs/guides/understanding-vtex-reference-architectures"
@@ -170,7 +170,7 @@ In a headless architecture, the frontend (or "head") is decoupled from the backe
 
 The frontend layer includes font type, colors, styles, images, buttons, etc. The backend manages the ecommerce functionality, pricing, infrastructure, security, checkout, and more. This architecture allows stores to fully control the user experience on the storefront while customizing backend to meet their specific needs.
 
-![headless]https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/headless.png)
+![headless](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/headless.png)
 
 The diagram above represents an account implemented with [FastStore](https://developers.vtex.com/docs/guides/faststore), the VTEX native solution that allows developers to build headless storefronts. It outlines the main components of a headless implementation, providing an overview that can be expanded to address specific business needs.
 
