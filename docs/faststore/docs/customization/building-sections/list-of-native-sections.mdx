@@ -15,17 +15,17 @@ Customizing `__experimentalProductCard` and `SearchInput` can impact your [Intel
 
 ### `__experimentalProductCard`
 
-**Affected sections:** [`ProductGallery`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productgallery) and [`ProductShelf`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productshelf).
+**Impacted sections:** [`ProductGallery`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productgallery) and [`ProductShelf`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productshelf).
 
 To ensure that click events on this component continue to be recorded after overriding the component, use the [`useProductLink_unstable` hook](https://developers.vtex.com/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components#hooks). 
-For more information on how to use the `useProductLink_unstable` hook and how to add it to the component, see the [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components).
+For more information on how to use the `useProductLink_unstable` hook and how to add it to the component, see the [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components). Refer [ProductCard](https://github.com/vtex/faststore/blob/91d2669f5d390da4a3889f9c12948290c213866d/packages/core/src/components/product/ProductCard/ProductCard.tsx#L88) default implementation to more details.
 
 ### `SearchInput`
 
 **Affected section:** [`Navbar`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#navbar)
 
 Customizing the `SearchInput` may affect the tracking of search events. 
-To maintain this functionality, add the following code to the override file which is based on the default implementation of the [`SearchInput`](https://github.com/vtex/faststore/blob/611283638dc01f55a65d0b5fd01e4a0163d53f4b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L46) component:
+To maintain this functionality, add the following code to the override component which is based on the default implementation of the [`SearchInput`](https://github.com/vtex/faststore/blob/611283638dc01f55a65d0b5fd01e4a0163d53f4b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L46) component:
 
 ```tsx const sendAnalytics = async (term: string) => {
   import('@faststore/sdk').then(({ sendAnalyticsEvent }) => {
