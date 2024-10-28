@@ -4,11 +4,11 @@ title: "Theming"
 
 Theming allows you to change the UI of your project by using CSS stylesheets called themes.
 
-In this guide, you'll have an overview of theming in FastStore, explaining the concept of theming, the use of global and local tokens, the structure and architecture of themes, and the naming scheme for design tokens.
+This guide provides an overview of theming in FastStore, explaining the concept of theming, the use of global and local tokens, the structure and architecture of themes, and the naming scheme for design tokens.
 
 ---
 
-## What is Theming?
+## Overview
 
 Theming refers to the process of customizing the UI of a project by using CSS stylesheets called themes.
 Themes consist of configurable design tokens that define the look and feel of the UI.
@@ -75,7 +75,7 @@ Local design tokens are connected to global tokens, forming the Theme. Global to
 
 The interaction between components, local design tokens, and global design tokens creates a hierarchical structure allowing modular theming and customization.
 
-![](https://vtexhelp.vtexassets.com/assets/docs/src/theming-architecture___f965569346d8d7d6a3de1f020f06ac99.png)
+![tokens-interaction](https://vtexhelp.vtexassets.com/assets/docs/src/theming-architecture___f965569346d8d7d6a3de1f020f06ac99.png)
 
 ---
 
@@ -95,7 +95,7 @@ Design tokens follow a specific naming scheme to ensure predictability and cohes
 
 ![Naming scheme](https://vtexhelp.vtexassets.com/assets/docs/src/theming-naming-1___32778b6c40f12a94ac4a54a90879aeef.png)
 
-Additional increments can be added to the token's name, such as hierarchy, nested element, variant, or situation, to differentiate tokens and provide more context.
+To differentiate tokens and provide more context, additional increments can be added to the token's name, such as hierarchy, nested element, variant, or situation.
 
 - **Hierarchy**: Define its tier.
 - **Nested Element**: To style elements contained inside the component.
@@ -120,23 +120,6 @@ Global design tokens are parameters that affect all UI look 'n' feel. They are t
 
 ## Learn more
 
-<Flex>
-<WhatsNextCard
-  title="Global Tokens"
-  linkTo="https://developers.vtex.com/docs/guides/faststore/global-tokens-overview"
-/>
-
-<WhatsNextCard
-  title="Themes"
-  linkTo="https://developers.vtex.com/docs/guides/faststore/themes-overview"
-/>
-
-<WhatsNextCard
-  title="Icons"
-  linkTo="https://developers.vtex.com/docs/guides/faststore/reference-icons"
-/>
-<WhatsNextCard
-  title="Customizing"
-  linkTo="https://developers.vtex.com/docs/guides/faststore/building-sections-overview"
-/>
-</Flex>
+- [Global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview)
+- [Themes](https://developers.vtex.com/docs/guides/faststore/themes-overview)
+- [Icons](https://developers.vtex.com/docs/guides/faststore/reference-icons)
