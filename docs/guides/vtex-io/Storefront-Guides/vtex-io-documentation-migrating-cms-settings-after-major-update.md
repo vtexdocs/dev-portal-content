@@ -3,16 +3,16 @@ title: "Migrating CMS settings after a major theme update"
 slug: "vtex-io-documentation-migrating-cms-settings-after-major-update"
 hidden: false
 createdAt: "2020-09-22T20:44:01.218Z"
-updatedAt: "2022-12-13T20:17:44.742Z"
+updatedAt: "2024-10-28T16:10:59.161Z"
 ---
 
-You may need to perform a major update of your Store Theme app due to changes in its peer dependencies. However, transitioning to a new major version of the Store Theme could result in undesired consequences, such as losing the configured Admin page template settings.
+When making changes to the peer dependencies of your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app, you may need to perform a major update. However, transitioning to a new major version of the Store Theme may lead to undesired consequences, such as losing the configured Admin page template settings.
 
-To handle this situation and ensure a smooth migration, follow the steps below to migrate template settings.
+To handle this situation, follow the steps below to migrate template settings.
 
 ## Before you begin
 
-Ensure you have the following tools installed on your machine. They are responsible for facilitating the interactions with the VTEX platform and enhancing your development experience:
+Make sure you have the following tools installed on your machine. They facilitate interactions with the VTEX platform and enhance your development experience:
 
 1. Install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 2. Install GraphQL IDE by running the following command:
@@ -24,7 +24,7 @@ Ensure you have the following tools installed on your machine. They are responsi
 ## Instructions
 
 1. Open the terminal and log in to your account.
-2. Change to the [**production workspace**](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) containing your latest changes and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your Store Theme app.
+2. Switch to the [**production workspace**](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) with your latest changes, and [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-2---publishing-the-new-app-version) a new major version of your Store Theme app.
 3. In the **production workspace**, install the Store Theme version published in the previous steps by running the following command:
 
    ```sh
@@ -46,9 +46,9 @@ Ensure you have the following tools installed on your machine. They are responsi
    }
    ```
 
-   >⚠️ Replace only the values in curly brackets with those that apply to your scenario. You must keep the `x`, without replacing it with the minor and patch versions. If you do that, the mutation will not work.
+  >❗ Replace only the values in curly brackets with those that apply to your scenario. Keep the `x` without replacing it with the minor and patch versions. If you do that, the mutation won't work.
 
-7. Execute the code by clicking `Execute Query` (▶). 
+7. Run the code by clicking `Execute Query` (▶).
 
    The expected response body is
 
@@ -60,6 +60,6 @@ Ensure you have the following tools installed on your machine. They are responsi
    }
    ```
 
-8. Go to the **Storefront** module within VTEX Admin and validate the content in its features, such as **Site Editor**, **Pages** and **Redirects**.
+8. In the VTEX Admin, go to the **Storefront** module and validate the content in its features, such as **Site Editor**, **Pages**, and **Redirects**.
 
 9. Once you have validated your data in the **Storefront** module, [promote your workspace to master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/).
