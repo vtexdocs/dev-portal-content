@@ -35,7 +35,7 @@ Supported frameworks include [TypeScript](https://www.typescriptlang.org/), [Rea
 
 For teams specifically focused on building and maintaining storefronts, VTEX IO offers the [Store Framework](https://developers.vtex.com/docs/guides/store-framework). This framework provides foundational tools and components, making it easy to create dynamic and customized ecommerce experiences.
 
-- **React-based store blocks:** The Store Framework offers pre-built, customizable React [blocks]https://developers.vtex.com/docs/vtex-io-apps), which simplify the process of developing and updating storefront layouts and features.
+- **React-based store blocks:** The Store Framework offers pre-built, customizable React [blocks](https://developers.vtex.com/docs/vtex-io-apps), which simplify the process of developing and updating storefront layouts and features.
 - **Consistent architecture:** Designed to integrate seamlessly with other VTEX services, the Store Framework ensures stable, scalable storefronts that align with VTEX’s core capabilities, supporting efficient and robust ecommerce solutions.
 
 For further technical information, see the [VTEX IO Frequently Asked Questions](https://developers.vtex.com/docs/guides/vtex-io-documentation-frequently-asked-questions) to explore detailed use cases and platform-specific guidance.
