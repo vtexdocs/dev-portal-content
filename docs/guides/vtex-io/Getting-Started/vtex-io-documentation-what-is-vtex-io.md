@@ -20,7 +20,7 @@ VTEX IO provides a cloud-native environment optimized for scalability and high a
 
 ## Workspaces
 
-The [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) functionality in VTEX IO provides isolated environments, allowing teams to develop, test, and deploy code safely without impacting the live environment.
+The [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) functionality on VTEX IO provides isolated environments, allowing teams to develop, test, and deploy code safely without impacting the live environment.
 
 - **Version control:** Multiple workspaces allow developers to maintain and test separate code versions. Each workspace can be deployed independently to evaluate changes.
 - **Testing and monitoring:** Workspaces support A/B testing and enable real-time performance tracking, allowing teams to measure the impact of updates and optimize them accordingly.
