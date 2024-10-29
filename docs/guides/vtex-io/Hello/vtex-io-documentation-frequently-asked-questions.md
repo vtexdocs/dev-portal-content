@@ -5,84 +5,72 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.268Z"
 updatedAt: "2022-12-13T20:17:44.080Z"
 ---
-If you already understood what VTEX IO is, you may you want to know more and discover how it can be used, who can use it, how much it costs, how VTEX IO Store Framework works, what restrictions may be applied and so on.
 
-Don't worry. You're not alone in wanting to know about all the above. The answers to the VTEX IO and VTEX IO Store Framework frequently asked questions are as follows:
+This FAQ provides detailed information on VTEX IO and the VTEX IO Store Framework, covering their usage, access requirements, cost, and support options.
 
 ## VTEX IO
 
-### What can I develop?
+### What can I develop with VTEX IO?
 
-With VTEX IO, you can create:
+VTEX IO enables you to build:
 
-- **Custom Storefront App** - *Build sophisticated, tailor-made React storefront components for your store - works as an open beta.*
-- **Custom Admin Apps** - *Unlock and extend VTEX data by creating apps for your store's admin interface - works as a closed beta.*
-- **Custom backend Apps** - *Speed up connections with Storefront apps or Admin apps by building backend services that are developed using Node or .NET Core - works as a closed beta.*
-- **Custom Pixel apps** -  *Collect user data for a third-party service of your choosing by creating a pixel app - works as a closed beta.*
-- **Custom mobile Apps** - *Your store website in your customers' mobile device - works as a closed beta.*
+- **Storefront apps:** Design tailored storefront components with React.
+- **Admin apps:** Extend your store's admin capabilities with additional applications.
+- **Backend apps:** Create backend services for integration with Storefront or Admin apps, using Node or .NET Core.
+- **Pixel apps:** Develop pixel apps to gather user data for integration with third-party services.
 
-### Who can use the solution?
+### Who can use VTEX IO?
 
-For every project type besides Custom Storefront App, VTEX IO works as a closed beta, meaning that it's only open to a small group of developers.
+VTEX IO access is generally limited to a small group of developers as a closed beta, except for custom storefront apps.
 
-At present, the requisite to enter this closed beta group is to have an *Enterprise* VTEX plan if you are a VTEX account (you can verify the plan account you have in your VTEX contract). If you are a partner, you must be a VTEX IO developer certified partner.
-
-In case you aim to develop a Custom Storefront App, do not worry about prerequisites: every VTEX account and partner can use the platform to create React projects according to their own business needs.  
+- **Closed beta access:** To join the closed beta for project types like Admin, backend, and pixel, you must meet one of the following criteria:
+  - Enterprise VTEX Accounts: Users on an Enterprise plan can verify eligibility based on their contract.
+  - Partners: VTEX IO-certified development partners are eligible for closed beta access.
+- **Storefront apps:** All VTEX accounts and partners can develop storefront apps without restrictions. This option allows you to build React-based storefronts to suit your specific business needs, regardless of your VTEX plan or certification status.
 
 ### I meet all the necessary prerequisites. What do I need to do to start developing?
 
-If you've met all the necessary conditions to be part of the small group of VTEX IO developers regarding Admin, backend, pixel and mobile apps, fill in and submit the  [Application form](https://forms.gle/f7bYdTA7tfdfB5tt7) with your project's details to let us know about your interest in order to understand your scenario and provide all the necessary permissions.
+If you meet the prerequisites for closed beta access, complete the [Application form](https://forms.gle/f7bYdTA7tfdfB5tt7) with your project details. Review the guidelines on [filling out the application form for development](https://developers.vtex.com/docs/guides/vtex-io-documentation-filling-the-application-form-for-development/) to ensure you meet all criteria.
 
-Don't forget to give a good read to the documentation on [filling the Application form for development](https://developers.vtex.com/docs/guides/vtex-io-documentation-filling-the-application-form-for-development/).
-
-> ℹ️ Only submit the Application form when developing Admin, backend, pixel, or mobile apps. Storefront app development no longer requires VTEX authorization i.e., the form submission.
+> **Note:** No application is needed to develop storefront apps.
 
 ### How much does it cost?
 
-There is still *no* extra cost to develop in VTEX IO.
+Currently, developing on VTEX IO does not incur additional fees.
 
-### What type of support in ensured?
+### What type of support is available?
 
-Custom apps are the liability of whoever developed and implemented them, meaning the app's vendor.
-
-**VTEX shall bear no responsibility with any of these apps, nor provide support for them**.
-
-However, you will be able to benefit from our documentation and always keep yourself up-to-date with the platform's evolution by reading our [Release Notes](https://developers.vtex.com/vtex-developer-docs/changelog).
+Custom apps are the responsibility of their developers. VTEX does not provide support for custom apps.
 
 ## VTEX IO Store Framework
 
-### What advantages are there to building my store using Store Framework?
+### What are the advantages of building with the Store Framework?
 
-The **fastest time-to-market**, coupled with the **lowest maintenance cost** and **highest customizable framework**. In addition, accelerated and scalable evolution of your business thanks to a community of developers making every store block  —  and therefore your own store — better every day.
+The Store Framework is designed to reduce time-to-market, lower maintenance costs, and provide extensive customization options for storefront development. It is backed by an active developer community that contributes enhancements to store blocks, fostering scalable and customizable storefronts.
 
-### Can I customize Store Framework blocks to adapt them to my business needs?
+### Can I customize Store Framework blocks?
 
-Each Store Framework block has its own properties and CSS Handles that allow it to adapt to your style and behavior.
+Yes, Store Framework blocks are designed with flexibility in mind. Each block comes with configurable properties and CSS Handles, allowing you to adapt styling and behavior to match your brand and design requirements, making it easier to build a distinct store identity and streamline implementation time.
 
-This block flexibility was masterminded so that retailers no longer face difficulties when building their brand and identity, helping them decrease store implementation time.  
-
-However, advanced customizations are allowed if necessary to create storefront components adapted to specific use cases. But notice: **VTEX does not provide support to custom components developed by third-parties**. Their maintenance, performance, and quality are under the responsibility of the app's vendor.  
+For more complex needs, custom apps and components can be created. However, note that VTEX does not provide support for third-party apps; the app vendor is responsible for maintaining and supporting these custom solutions.
 
 ### Who can use Store Framework?
 
-Any VTEX store can start using Store Framework since it is an open beta. But bear in mind that due to that status, you can expect a constant state of accelerated evolution.
+All VTEX accounts can use Store Framework, as it is available in open beta. However, as an open-source project in active development, expect ongoing updates and improvements.
 
-### How much does it cost?
+### How much does Store Framework cost?
 
-The Store Framework solution is already included by default in VTEX contracts, without any additional cost for clients.
+The Store Framework is included by default in VTEX contracts, with no additional cost for clients.
 
-### What type of support is ensured?
+### What support is available for Store Framework?
 
-All **native Store Framework blocks benefit from VTEX support**, which means that any problem that your store may face with Store Framework blocks can be dealt with by opening a [ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) and getting in touch with VTEX's Customer Care team.
+VTEX provides support for all native Store Framework blocks, so any issues related to these blocks can be resolved by opening a [support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) with the VTEX Support team.
 
-Because it's an open-source project, Store Framework also grants its users communication channels throughout the community and direct contact with the development team, where you can request new features, improvements, bug fixes, and even framework improvement requests.
+Being open-source, the Store Framework also benefits from a community-driven support network. Users can request new features, report bugs, and engage with other developers via the [VTEX Community](https://community.vtex.com/), and follow updates in our [Release Notes](https://developers.vtex.com/updates/release-notes).
 
-Exchange ideas with other users by using [Discord](https://discordapp.com/channels/652163009988263940/652253291916296232)) or by reaching out to the product team on [Store Discussion](https://github.com/vtex-apps/store-discussion).
+### How do I get started with Store Framework?
 
-In addition, you can benefit from our documentation and always be up-to-date with the evolution surrounding Framework by reading our [Release Notes](https://developers.vtex.com/vtex-developer-docs/changelog).
+To start building with Store Framework, check out our [Getting Started guide](https://developers.vtex.com/docs/guides/getting-started-3).  
 
-### I want to use Store Framework. What do I need to do?
+> ℹ️ Need additional assistance? If you have questions not covered here, feel free to [VTEX support](https://help.vtex.com/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) for further help.
 
-Welcome aboard, then! Simply access our getting started material on how to [build a store using Store Framework](https://developers.vtex.com/docs/guides/getting-started-3).  
-
-> ℹ️ **You haven't found the answer you were looking for?** No worries! These are just the frequently asked question on VTEX IO and VTEX IO Store Framework, not all the questions on everything... so, we are here for you: [get in touch with VTEX's support team](https://help.vtex.com/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) and send us any questions you may have on the platform.
