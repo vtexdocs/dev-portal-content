@@ -12,12 +12,12 @@ Changes made in the Headless CMS on VTEX Admin, including creating new pages, ad
 
 Previously, FastStore WebOps could not sync changes from the Headless CMS. These updates weren’t reflected on the storefront and were inaccessible to store customers.
 
-> ℹ️ For more information about this issue, refer to the  WebOps app not being fully integrated with Headless CMS known issue article.
+> ℹ️ For more information about this issue, refer to the [WebOps app not being fully integrated with Headless CMS](https://help.vtex.com/known-issues/webops-app-is-not-fully-integrated-with-headless-cms--577fIocKB9BYYCOkN9dZfW) known issue article.
 
 FastStore WebOps now fully integrates with Headless CMS, automatically syncing changes and reflecting them on your storefront.
 
 ## What needs to be done?
 
-Make sure your account is configured with the Headless CMS. For instructions, refer to the Configuring your VTEX account with the Headless CMS guide.
+Make sure your account is configured with the Headless CMS. For instructions, refer to the [Configuring your VTEX account with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#instructions) guide.
 
 After configuring the Headless CMS for your store account, no further action is needed. This update is automatically applied to all VTEX stores using FastStore WebOps, so you can continue using both the app and the Headless CMS without synchronization issues.
