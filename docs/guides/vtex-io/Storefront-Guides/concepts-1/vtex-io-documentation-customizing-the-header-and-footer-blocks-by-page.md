@@ -1,40 +1,45 @@
 ---
 title: "Customizing the Header and Footer blocks by page"
 slug: "vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page"
+excerpt: Learn how to customize the header and footer blocks for specific pages within your store.
 hidden: false
 createdAt: "2020-06-03T16:02:44.275Z"
 updatedAt: "2022-12-13T20:17:44.048Z"
 ---
-The Header and Footer are the two blocks that appear the most during a user's store navigation. From the homepage to the product page, from checkout to the Order Placed page, whatever a template's content may be, these two blocks will probably be present.
 
-With that constancy in mind, you just need to declare these blocks once in the `blocks.jsonc` file, in a template of your choosing (usually it's `store.home`).
+The Header and Footer blocks are essential for enhancing navigation and ensuring consistency across your online store, including the homepage, product listings, and checkout. These blocks are typically defined once in the `blocks.jsonc` file and serve as default elements for all other templates in the Store Framework.
 
-This is only possible because both Header and Footer have been previously defined behind the scenes as **default store interface elements**, allowing the Framework to identify the Header and Footer block as default for any other templates as well.
+However, you may want to customize these blocks for specific pages. For instance, you might wish to display a unique Header on your homepage while retaining the default Header for the Order Placed page, or even remove the Footer from product pages entirely to declutter the user interface.
 
-You may, however, want to apply a Header configured differently onto your Homepage and keep the default Framework Header for the Order Placed page or you may even not want any Footer on your product pages.
+This guide outlines how to customize these blocks for specific pages within your store.
 
-All of the above and more may be easily customized in the Header and Footer blocks, by simply **overwriting the specific automatic duplication** and **declaring the desired new configurations** thereafter.
+## Instructions
 
-## Step 1 - Overwriting automatic duplication
+1. Open your Store Theme project in your preferred code editor.
+2. Find the template you want to customize within the `blocks.jsonc` file. 
+3. [Replace](#replacing-the-header-and-footer-blocks) or [remove](#removing-the-header-and-footer-blocks) the Header and Footer blocks according to your needs.
+4. Save your changes and [link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to see the new configurations reflected on the desired page.
 
-In the desired template, declare the code given as an example below to overwrite the Header and Footer automatic duplication.  
+### Replacing the header and footer blocks
 
-> ℹ Replace the `{headerBlock}` and `{footerBlock}` values with real block names. Also, replace the `{templateName}` value with a valid theme template, such as `product`, `search#category`, and `custom`.
+To customize the Header and Footer for a particular template, locate the desired template in the `blocks.jsonc` file and add the following code to override the default blocks:
 
-```json
-{
-  "store.{templateName}": {
-    "parent": { 
-      "header": "{headerBlock}", 
-      "footer": "{footerBlock}"
+    ```json blocks.jsonc
+    {
+      "store.{templateName}": {
+        "parent": { 
+          "header": "{headerBlock}", 
+          "footer": "{footerBlock}"
+        }
+      }
     }
-  }
-}
-```
+    ```
+    
+    > ℹ Replace `{headerBlock}` and `{footerBlock}` with the actual block names you want to use. Also, replace `{templateName}` with a valid theme template, such as `product`, `search#category`, and `custom`.
 
-The code above works in scenarios where the Header **and** Footer will be overwritten. When overwriting just one of the two, keep the template's `parent` structure and determine which block will be customized. For example:
+If you wish to override only one block, keep the parent structure and specify the block you want to change. For instance, to customize just the Header, use the following code:
 
-```json
+```json blocks.jsonc
 {
   "store.{templateName}": {
     "parent": { 
@@ -44,13 +49,11 @@ The code above works in scenarios where the Header **and** Footer will be overwr
 }
 ```
 
-## Step 2 - Applying new customizations
+You can then configure the Header and Footer blocks based on your specific requirements for the selected template. 
 
-The next step is to configure the previously declared blocks in accordance with what's desired for this template.
+Here’s an example configuration that customizes the Header for a product page:
 
-If you want to apply new customizations to the blocks, simply follow the usual flow explained in the [Header](https://developers.vtex.com/docs/guides/vtex-store-header/) and [Footer](https://developers.vtex.com/docs/guides/vtex-store-footer/) documentation. For example:  
-
-```json
+```json blocks.jsonc
 {
   "store.product": {
     "parent": { 
@@ -77,9 +80,13 @@ If you want to apply new customizations to the blocks, simply follow the usual f
 }
 ```
 
-It is possible, however, that you do not want new configurations, but rather want to remove the blocks from the template. In such a scenario, you need to declare the desired blocks and leave the `children` blank, as shown in the following example:
+> For further customization, refer to the [Header](https://developers.vtex.com/docs/apps/vtex.store-header/) and [Footer](https://developers.vtex.com/docs/apps/vtex.store-footer/) documentation. 
 
-```json
+### Removing the header and footer blocks
+
+If you prefer to remove the Header and Footer blocks from a specific template, you can declare the blocks with empty `children` arrays:
+
+```json blocks.jsonc
 {
   "store.custom#noheaderfooter": {
     "parent": {
@@ -113,5 +120,3 @@ It is possible, however, that you do not want new configurations, but rather wan
   }
 }
 ```
-
-Once you save the changes and link your app, you'll see the new configurations for these blocks reflected on the desired page.
