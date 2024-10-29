@@ -24,17 +24,33 @@ For more information on how to use the `useProductLink_unstable` hook and how to
 **Impacted section:** [`Navbar`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#navbar)
 
 Customizing the `SearchInput` may affect the tracking of search events. 
-To maintain this functionality, add the following code to the override component which is based on the default implementation of the [`SearchInput`](https://github.com/vtex/faststore/blob/611283638dc01f55a65d0b5fd01e4a0163d53f4b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L46) component:
+To maintain this functionality, you'll need to ensure that search events continue to be logged even after making modifications to the component.
 
-```tsx const sendAnalytics = async (term: string) => {
-  import('@faststore/sdk').then(({ sendAnalyticsEvent }) => {
-    sendAnalyticsEvent<SearchEvent>({
-      name: 'search',
-      params: { search_term: term },
+1. Add the following code to the custom component you are overriding (based on the default [`SearchInput`](https://github.com/vtex/faststore/blob/611283638dc01f55a65d0b5fd01e4a0163d53f4b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L46) component):
+
+  ```tsx const sendAnalytics = async (term: string) => {
+    import('@faststore/sdk').then(({ sendAnalyticsEvent }) => {
+      sendAnalyticsEvent<SearchEvent>({
+        name: 'search',
+        params: { search_term: term },
+      })
     })
-  })
-}
-```
+  }
+  ```
+
+2. Within the custom component, make sure the `sendAnalytics` function is called whenever a user enters a search term. The following code is an example calling the `sendAnalytics` function based on the [FastStore default implementation](https://github.com/vtex/faststore/blob/611283638dc01f55a65d0b5fd01e4a0163d53f4b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L85).
+
+  ```tsx const onSearchSelection: SearchProviderContextValue['onSearchSelection'] = (
+        term,
+        path
+      ) => {
+        addToSearchHistory({ term, path })
+        sendAnalytics(term)
+        setSearchDropdownVisible(false)
+        setSearchQuery(term)
+      }
+  ```
+3. Open the terminal and run `yarn dev` to sync the changes you made.
 
 ## FastStore Native Sections
 
