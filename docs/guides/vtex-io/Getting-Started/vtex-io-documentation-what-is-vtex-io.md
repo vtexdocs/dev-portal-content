@@ -27,13 +27,15 @@ The [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-wo
 
 ## Supported frameworks and technologies
 
-VTEX IO incorporates an opinionated set of frameworks to streamline development using familiar tools, including [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), [GraphQL](https://graphql.org/), [.NET](https://dotnet.microsoft.com/en-us/), and [Node](https://nodejs.org/en). This predefined technology stack ensures that applications built on VTEX IO are efficient and compatible with other VTEX solutions.
+VTEX IO incorporates an opinionated set of frameworks supported by [VTEX IO Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) to facilitate development with familiar tools. 
+
+Supported frameworks include [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), [GraphQL](https://graphql.org/), [.NET](https://dotnet.microsoft.com/en-us/), and [Node](https://nodejs.org/en).
 
 ### VTEX IO Store Framework
 
-For teams specifically focused on building and maintaining storefronts, VTEX IO offers the Store Framework. This framework provides foundational tools and components, making it easy to create dynamic and customized e-commerce experiences.
+For teams specifically focused on building and maintaining storefronts, VTEX IO offers the [Store Framework](https://developers.vtex.com/docs/guides/store-framework). This framework provides foundational tools and components, making it easy to create dynamic and customized ecommerce experiences.
 
 - **React-based store blocks:** The Store Framework offers pre-built, customizable React [blocks]https://developers.vtex.com/docs/vtex-io-apps), which simplify the process of developing and updating storefront layouts and features.
-- **Consistent architecture:** Designed to integrate seamlessly with other VTEX services, the Store Framework ensures stable, scalable storefronts that align with VTEX’s core capabilities, supporting efficient and robust e-commerce solutions.
+- **Consistent architecture:** Designed to integrate seamlessly with other VTEX services, the Store Framework ensures stable, scalable storefronts that align with VTEX’s core capabilities, supporting efficient and robust ecommerce solutions.
 
 For further technical information, see the [VTEX IO Frequently Asked Questions](https://developers.vtex.com/docs/guides/vtex-io-documentation-frequently-asked-questions) to explore detailed use cases and platform-specific guidance.
