@@ -6,7 +6,7 @@ excerpt: "FastStore WebOps now fully syncs with the Headless CMS, automatically 
 createdAt: "2024-10-30T16:00:00.667Z"
 ---
 
-Changes made in the Headless CMS in VTEX Admin, including creating new pages, adding sections, and updating fields, now automatically trigger pull requests to the store's GitHub repository and are reflected in its version history.
+Changes made in the Headless CMS on VTEX Admin, including creating new pages, adding sections, and updating fields, now automatically trigger pull requests to the store's GitHub repository and are reflected in its version history.
 
 ## What has changed?
 
