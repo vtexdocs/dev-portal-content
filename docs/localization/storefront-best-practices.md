@@ -11,7 +11,7 @@ To maintain a high-performing website, you should follow best practices when dev
 
 The guides within this section explore key guidelines related to the main factors that influence the competitiveness of your ecommerce:
 
-- **Accessibility:** Create a more inclusive shopping experience by ensuring that your site is accessible to all users. 
+- **Accessibility:** Create a more inclusive shopping experience by ensuring that your site is accessible to all users.
 - **Analytics:** Leverage data-driving insights to understand customer behavior and make informed decisions.
 - **Performance:** Optimize your website by ensuring fast load times, minimizing slowdowns, and enhancing the overall user experience.
 - **SEO:** Improve your website visibility in search engine results through effective search engine optimization (SEO) practices.
