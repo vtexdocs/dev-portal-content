@@ -45,16 +45,16 @@ To maintain this functionality, you'll need to ensure that search events are log
 
 2. Within the custom component, make sure the `sendAnalytics` function is called whenever a user enters a search term. The following code is an example calling the `sendAnalytics` function based on the [FastStore default implementation](https://github.com/vtex/faststore/blob/611283638dc01f55a65d0b5fd01e4a0163d53f4b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L85). Adjust the code to suit your specific context as needed.
 
-  ```tsx 
+  ```tsx
   const onSearchSelection: SearchProviderContextValue['onSearchSelection'] = (
-        term,
-        path
-      ) => {
-        addToSearchHistory({ term, path })
-        sendAnalytics(term)
-        setSearchDropdownVisible(false)
-        setSearchQuery(term)
-      }
+    term,
+    path
+  ) => {
+    addToSearchHistory({ term, path })
+    sendAnalytics(term)
+    setSearchDropdownVisible(false)
+    setSearchQuery(term)
+  }
   ```
 
 ## FastStore Native Sections
