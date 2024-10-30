@@ -6,25 +6,27 @@ slug: list-of-native-sections
 
 Sections in FastStore are components that organize and encapsulate other components, enabling you to create cohesive and functional content for your store.
 
-For example, the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) is a native section designed to capture your brand's identity and messaging. To effective function in the store, the Hero comprises three components: `Hero`, `HeroImage`, and `HeroHeader`.
+For example, the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) is a native section designed to capture your brand's identity and messaging. To effectively function in the store, the Hero comprises three components: `Hero`, `HeroImage`, and `HeroHeader`.
 
 ## Considerations while customizing default components
 
-Overriding certain default FastStore components can affect the store’s behavior. For example, customizing `__experimentalProductCard` and `SearchInput` can impact your [Intelligent Search Analytics](https://help.vtex.com/en/tutorial/analytics--6qRMAHDL9hvv3oE0bh8mA1) store report. These components collect data for your store analytics. Prioritize maintaining tracking functionality.
+Overriding certain FastStore components can affect the store’s behavior. For example, customizing `__experimentalProductCard` and `SearchInput` can impact your [Intelligent Search Analytics](https://help.vtex.com/en/tutorial/analytics--6qRMAHDL9hvv3oE0bh8mA1) store report. These components collect data for your store analytics. Prioritize maintaining tracking functionality, as these components, `__experimentalProductCard` and `SearchInput`, collect data for your store analytics.
 
 ### `__experimentalProductCard`
 
 **Impacted sections:** [`ProductGallery`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productgallery) and [`ProductShelf`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productshelf).
 
 To ensure that click events on this component continue to be recorded after overriding the component, use the [`useProductLink_unstable` hook](https://developers.vtex.com/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components#hooks). 
-For more information on how to use the `useProductLink_unstable` hook and how to add it to the component, see the [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components). Refer to the [ProductCard](https://github.com/vtex/faststore/blob/91d2669f5d390da4a3889f9c12948290c213866d/packages/core/src/components/product/ProductCard/ProductCard.tsx#L88) default implementation to more details.
+For more information on how to use the `useProductLink_unstable` hook and how to add it to the component, see the [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components). 
+
+> ❕You can also refer to the [ProductCard](https://github.com/vtex/faststore/blob/91d2669f5d390da4a3889f9c12948290c213866d/packages/core/src/components/product/ProductCard/ProductCard.tsx#L88) default implementation for more details.
 
 ### `SearchInput`
 
 **Impacted section:** [`Navbar`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#navbar)
 
 Customizing the `SearchInput` may affect the tracking of search events. 
-To maintain this functionality, you'll need to ensure that search events continue to be logged even after making modifications to the component.
+To maintain this functionality, you'll need to ensure that search events are logged even after modifications to the component.
 
 1. Add the following code to the custom component you are overriding (based on the default [`SearchInput`](https://github.com/vtex/faststore/blob/611283638dc01f55a65d0b5fd01e4a0163d53f4b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L46) component):
 
