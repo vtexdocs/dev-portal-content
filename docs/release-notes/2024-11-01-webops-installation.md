@@ -1,7 +1,7 @@
 ---
 title: "FastStore WebOps app: Users can now install the app by themselves"
 slug: "2024-11-01-webops-installation"
-type: "added"
+type: "improved"
 excerpt: "VTEX clients can now install the FastStore WebOps app by themselves."
 createdAt: "2024-11-01T14:10:15.623Z"
 ---
