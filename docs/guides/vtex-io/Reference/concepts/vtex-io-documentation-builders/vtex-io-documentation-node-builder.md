@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-node-builder"
 excerpt: "Learn how to use the VTEX IO Node builder."
 hidden: false
 createdAt: "2024-03-26T11:00:00.000Z"
-updatedAt: "2024-06-05T17:53:00.000Z"
+updatedAt: "2024-11-01T17:53:00.000Z"
 category: "App Development"
 ---
 
@@ -12,7 +12,7 @@ The `node` builder is used to develop [backend apps](https://developers.vtex.com
 
 ## Versioning
 
-The Node builder has its versions defined in the table below. Each builder version works with a specific version of the Node.js engine, [`@types/node` package](https://www.npmjs.com/package/@types/node) (TypeScript definitions for Node), and TypeScript. You can choose the builder version in your app’s `manifest.json` file.
+The Node builder versions are defined in the table below. Each builder version is compatible with a specific version of the Node.js engine, [`@types/node` package](https://www.npmjs.com/package/@types/node) (TypeScript definitions for Node), and TypeScript. You can select the desired builder version in your app’s `manifest.json` file.
 
 |Builder version|Node.js|@types/node|TypeScript|Status|
 |-|-|-|-|-|
@@ -20,7 +20,7 @@ The Node builder has its versions defined in the table below. Each builder versi
 |6.x|[16.x](https://nodejs.org/en/blog/release/v16.0.0)|[12.0.0](https://www.npmjs.com/package/@types/node/v/12.0.0)|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Active until June 2025|
 |7.x|[20.x](https://nodejs.org/en/blog/release/v20.0.0)|[20.0.0](https://www.npmjs.com/package/@types/node/v/20.0.0)|[5.5.3](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html)|Active|
 
->⚠️ Apps using deprecated builder versions will not link and build. For details about updating the Node builder version, see our [migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide).
+>⚠️ Apps using deprecated builder versions won't link or build. For details about updating the Node builder version, see our [migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide).
 
 ## Folder structure
 
