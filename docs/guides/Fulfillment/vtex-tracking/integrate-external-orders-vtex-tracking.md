@@ -54,7 +54,7 @@ Use the [Order invoice notification request](https://developers.vtex.com/docs/ap
 
 >ℹ️ Note that this step can occur in parallel to steps 2 and 3. Once an order has been created, the platform can receive its invoice information.
 
-You can use the [Order invoice notification request](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) to send all invoice information at once, or you can send part of the information and update the invoice with the rest of the information later by using the  [Update order's partial invoice request](https://developers.vtex.com/vtex-rest-api/reference/updatepartialinvoicesendtrackingnumber).
+You can use the [Order invoice notification request](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) to send all invoice information at once, or you can send part of the information and update the invoice with the rest of the information later by using the [Update order's partial invoice request](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/oms/pvt/orders/-orderId-/invoice/-invoiceNumber-).
 
 An example of the latter is when you need to include a tracking number to an invoice that is already registered to the platform.
 
