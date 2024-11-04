@@ -3,7 +3,7 @@ title: "Integrating external orders via API to be used with VTEX Tracking"
 slug: "integrate-external-orders-vtex-tracking"
 hidden: false
 createdAt: "2021-07-21T20:48:44.673Z"
-updatedAt: "2022-02-03T19:34:41.464Z"
+updatedAt: "2024-11-04T19:34:41.464Z"
 ---
 The [VTEX Tracking app](https://help.vtex.com/en/tutorial/visao-geral-vtex-tracking--1uDRquVudbPuoK05MtbZGh#) automatically gets invoiced orders’ information from VTEX’s Order Management System (OMS) so as to create delivery routes. However, it is possible to import external orders by using our APIs.
 
