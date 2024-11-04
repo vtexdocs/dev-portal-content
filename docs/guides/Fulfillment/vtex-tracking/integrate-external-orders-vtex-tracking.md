@@ -42,14 +42,13 @@ This field is meant to be a three-letter code identifying the marketplace that m
 
 To move the created order to the next status, use the [Authorize dispatch for fulfillment orders request](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders/-orderId-/fulfill).
 
-
 ## 3. Start handling
 
 After dispatch is authorized, the order goes automatically into the grace period also known as the cancellation window. This is a period of time in which the store waits to see if the customer wants to cancel the purchase before it actually starts handling the order. This window is set to 30 minutes by default, but can be changed in the Order Management settings. Learn how to [set the grace period for order cancelation](https://help.vtex.com/en/tutorial/setting-the-grace-period-for-order-cancellation--jYFdnPDtNm4WCEkYWqqC#).
 
 After the grace period, the order status will be `ready-for-handling`. To move it to the next status, use the [Start handling order API request](https://developers.vtex.com/vtex-rest-api/reference/starthandling).
 
-## 4. Send invoice 
+## 4. Send invoice
 
 Use the [Order invoice notification request](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) to send invoice information to VTEX.
 
