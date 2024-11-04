@@ -24,7 +24,7 @@ This step actually creates the order in the [OMS](https://help.vtex.com/en/tutor
 
 To do this, use the [Place fulfillment order API request](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders).
 
->❗ In order to successfully place an order on the platform, you must have products already registered in your VTEX [catalog](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ#) and make sure they are available in the platform's [inventory](https://help.vtex.com/en/tutorial/managing-stock-items--tutorials_139#). For this purpose, it may be a good idea to [set unlimited inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139).
+>❗ In order to successfully place an order on the platform, you must have products already registered in your VTEX [catalog](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ#) and make sure they are available in the platform's [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139). For this purpose, it may be a good idea to [set unlimited inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139).
 
 >⚠️ The field `marketplaceServicesEndpoint` is required, but not necessarily applicable in the context of integrating orders to VTEX Tracking. Because of this, you may send it with a mock value not corresponding with a real working endpoint, such as `https://exampleseller.marketplaceservices.com`.
 
@@ -36,7 +36,7 @@ This field is meant to be a three-letter code identifying the marketplace that m
 
 >⚠️ For a given order you should use the same `affiliateId`, `orderId` and `marketplaceOrderId` in steps 2, 3 and 4, as used in this first step when required in the API requests. The `orderId` will be in the response of the [Place fulfillment order request](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders) and it is composed of the `affiliateId` and `marketplaceOrderId` joined by a “-`.
 
-> Do not use an affiliate that is configured to use the seller's payment methods, or else this request will return a `status 500`. In this case, create a new affiliate without this configuration or use an arbitrary `affiliateId`.
+>⚠️ Do not use an affiliate that is configured to use the seller's payment methods, or else this request will return a `status 500`. In this case, create a new affiliate without this configuration or use an arbitrary `affiliateId`.
 
 ## 2. Authorize dispatch
 
