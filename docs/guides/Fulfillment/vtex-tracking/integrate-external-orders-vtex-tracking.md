@@ -62,6 +62,6 @@ An example of the latter is when you need to include a tracking number to an inv
 
 ## Checking an integrated order's information
 
-During integration or after you are done integrating a given order with these steps, you can check the order's information and progress in the [Order Management](https://help.vtex.com/en/category/orders-management--2663q96EyQuYc20y0yYAEE#) section in VTEX Admin or with the [Orders API](https://developers.vtex.com/vtex-rest-api/reference/orders).
+During integration or after you are done integrating a given order with these steps, you can check the order's information and progress in the [Order Management](https://help.vtex.com/en/category/orders-management--2663q96EyQuYc20y0yYAEE#) section in VTEX Admin or with the [Orders API](https://developers.vtex.com/docs/api-reference/orders-api).
 
 For order information related to VTEX Tracking, see the [VTEX Tracking API documentation](https://developers.vtex.com/docs/api-reference/tracking).
