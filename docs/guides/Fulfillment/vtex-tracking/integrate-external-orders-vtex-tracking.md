@@ -7,7 +7,7 @@ updatedAt: "2024-11-04T19:34:41.464Z"
 ---
 The [VTEX Tracking app](https://help.vtex.com/en/tutorial/vtex-tracking-overview--1uDRquVudbPuoK05MtbZGh) automatically gets invoiced orders’ information from VTEX’s Order Management System (OMS) so as to create delivery routes. However, it is possible to import external orders by using our APIs.
 
-Since the actual fulfillment and tracking only happen for invoiced orders, external order integrations must accomplish four steps in order to create and move the imported orders along the [OMS’s workflow](https://help.vtex.com/en/tutorial/fluxo-de-pedido--tutorials_196#) to the `invoiced` status. The steps are:
+Since the actual fulfillment and tracking only happen for invoiced orders, external order integrations must accomplish four steps to create and move the imported orders along the [OMS’s workflow](https://help.vtex.com/en/tutorial/fluxo-de-pedido--tutorials_196#) to the `invoiced` status. The steps are:
 
 1. Place order
 2. Authorize dispatch
@@ -16,7 +16,7 @@ Since the actual fulfillment and tracking only happen for invoiced orders, exter
 
 >ℹ️ Because this type of integration assumes payment is already taken care of when orders are imported, we can use the fulfillment order workflow. This is the same workflow used by sellers integrating with marketplaces, for example.
 
->ℹ️ Make sure you have [API authentication credentials](https://developers.vtex.com/docs/guides/getting-started-authentication) in order to use the APIs listed below.
+>ℹ️ Make sure you have [API authentication credentials](https://developers.vtex.com/docs/guides/getting-started-authentication) to use the APIs listed below.
 
 ## 1. Place order
 
@@ -24,7 +24,7 @@ This step actually creates the order in the [OMS](https://help.vtex.com/en/tutor
 
 To do this, use the [Place fulfillment order API request](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders).
 
->❗ In order to successfully place an order on the platform, you must have products already registered in your VTEX [catalog](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ#) and make sure they are available in the platform's [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139). For this purpose, it may be a good idea to [set unlimited inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139).
+>❗ To successfully place an order on the platform, you must have products already registered in your VTEX [catalog](https://help.vtex.com/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ#) and make sure they are available in the platform's [inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139). For this purpose, it may be a good idea to [set unlimited inventory](https://help.vtex.com/en/tutorial/inventory-management--tutorials_139).
 
 >⚠️ The field `marketplaceServicesEndpoint` is required, but not necessarily applicable in the context of integrating orders to VTEX Tracking. Because of this, you may send it with a mock value not corresponding with a real working endpoint, such as `https://exampleseller.marketplaceservices.com`.
 
