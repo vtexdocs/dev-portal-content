@@ -7,7 +7,7 @@ updatedAt: "2024-11-04T19:34:41.464Z"
 ---
 The [VTEX Tracking app](https://help.vtex.com/en/tutorial/vtex-tracking-overview--1uDRquVudbPuoK05MtbZGh) automatically gets invoiced orders’ information from VTEX’s Order Management System (OMS) so as to create delivery routes. However, it is possible to import external orders by using our APIs.
 
-Since the actual fulfillment and tracking only happens for invoiced orders, external order integrations must accomplish four steps in order to create and move the imported orders along the [OMS’s workflow](https://help.vtex.com/en/tutorial/fluxo-de-pedido--tutorials_196#) to the `invoiced` status. The steps are:
+Since the actual fulfillment and tracking only happen for invoiced orders, external order integrations must accomplish four steps in order to create and move the imported orders along the [OMS’s workflow](https://help.vtex.com/en/tutorial/fluxo-de-pedido--tutorials_196#) to the `invoiced` status. The steps are:
 
 1. Place order
 2. Authorize dispatch
