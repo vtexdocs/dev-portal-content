@@ -80,7 +80,11 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
     ```tsx index.tsx
     import ProductDetailsWithCustomButton from "./sections/ProductDetailsWithCustomButton";
 
-    export default { ProductDetailsWithCustomButton };
+    const sections = {
+
+    ProductDetails: ProductDetailsWithCustomButton
+    };
+    export default sections;
 
     ```
 
