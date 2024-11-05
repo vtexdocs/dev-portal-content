@@ -23,7 +23,7 @@ To help you identify the root cause of publishing errors with the VTEX Headless 
 
 ### Step 1: Verifying the Release status
 
-Access the VTEX Admin, navigate to **Storefront > Releases**, and click on **Releases**.
+Access the VTEX Admin, navigate to **Storefront > Releases**, and click **Releases**.
 
 Check if your page release status corresponds to **Published** or **Failed**.
 
@@ -35,7 +35,7 @@ After [getting the Release identifier](#step-1-verifying-the-release-status), fo
 
 1. Access the GitHub repository of your FastStore project.
 2. In the repository search field, search for the code obtained in the [previous section](#step-1-verifying-the-release-status). If you find a commit with the corresponding Release identifier in its name, that means the Release has undergone the CI/CD.
-3. Check the status of the **Build check** for that commit by clicking on one of the following marks:
+3. Check the status of the **Build check** for that commit by clicking one of the following marks:
 
 | Check icon | Description |
 | ---------- | ----------- |
