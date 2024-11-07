@@ -8,7 +8,7 @@ For example, you may want to replace the current `BuyButton` component from the 
 
     ![overrides-PDP-buy-button-component](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-buy-button-open-cart___a5853a88238fa31610a93e8a1333bb00.gif)
 
-For this guide, we will create a custom Buy Button that displays an `alert` once the user clicks on it.
+For this guide, we will create a custom BuyButton that displays an `alert` once the user clicks on it.
 
     > ⚠️ Using overrides does not significantly impact performance. FastStore's handling of props and design tokens is designed for good performance.
 
@@ -74,7 +74,7 @@ To integrate the section into the [Headless CMS](https://developers.vtex.com/doc
             "name": "ProductDetailsWithCustomButton.tsx",
             "requiredScopes": ["pdp"],
             "schema": {
-            "title": "Custom Buy Button",
+            "title": "Custom BuyButton",
             "description": "A new buy button to display an alert message.",
             "type": "object",
             "properties": {
@@ -107,7 +107,7 @@ To integrate the section into the [Headless CMS](https://developers.vtex.com/doc
                 }
                 },
                 "buyButton": {
-                "title": "Buy Button",
+                "title": "BuyButton",
                 "type": "object",
                 "properties": {
                     "title": {
@@ -194,7 +194,7 @@ To integrate the section into the [Headless CMS](https://developers.vtex.com/doc
     ]
     ```
 
-This schema Adds the new `Custom Buy Button` section to the Headless CMS.
+This schema Adds the new `Custom BuyButton` section to the Headless CMS.
 
 5. Open a new terminal window and log in to your VTEX account by running `vtex login {accountName}`.
 6. Run the following command to sync your changes with the Headless CMS:
@@ -213,7 +213,7 @@ This schema Adds the new `Custom Buy Button` section to the Headless CMS.
 To see your changes locally, set the Headless CMS preview to the development mode. 
 Refer to the [How to preview Headless CMS changes in development mode](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview-preview-changes-in-development-mode) guide for more information.
 
-Once you have set the preview for development mode, you should see your new Buy Button on a Product Details Page (PDP).
+Once you have set the preview for development mode, you should see your new BuyButton on a Product Details Page (PDP).
 
 ### Step 5 - Publishing your changes
 
