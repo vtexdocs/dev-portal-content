@@ -8,7 +8,7 @@ For example, you may want to replace the current `BuyButton` component from the 
 
     ![overrides-PDP-buy-button-component](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-buy-button-open-cart___a5853a88238fa31610a93e8a1333bb00.gif)
 
-For this guide, we will create a custom Buy Button that displays an `alert` once the user clicks on it.
+For this guide, we will create a custom BuyButton that displays an `alert` once the user clicks on it.
 
     > ⚠️ Using overrides does not significantly impact performance. FastStore's handling of props and design tokens is designed for good performance.
 
@@ -18,6 +18,7 @@ Make sure your `@faststore/core` package has the 3.0.0 version or above. If you 
 it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
 
 ## Instructions
+
 ### Step 1 - Setting up the component file
 
 1. After choosing a native section to be customized from the [list of available native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections), open your FastStore project in any code editor of your preference.
@@ -30,8 +31,49 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
         <Tab>```bash copy mkdir src\components src\components\sections ```</Tab>
     </Tabs>
 
-3. In the `sections` folder, create a new file for your customized section. For example, create a new file named `ProductDetailsWithCustomButton.tsx` under the `src/components/sections` directory.
-4. Open the `ProductDetailsWithCustomButton.tsx` file and update it with the following code:
+### Step 2 - Create your custom component
+
+1. Inside the `components` folder, create a file named `CustomBuyButton.tsx`.
+
+    <Tabs items={['macOS and Linux', 'Windows']}>
+    <Tab>
+    ```bash
+    touch src/components/CustomBuyButton.tsx
+    ```
+    </Tab>
+    <Tab>
+    ```bash
+    type nul > src\components\CustomBuyButton.tsx
+    ```
+    </Tab>
+    </Tabs>
+
+    > ℹ️ When creating a custom component, it's important to choose a name that distinguishes it from the native component. For example, `Custom{ComponentName}` = `CustomBuyButton`.
+
+2. Add the following code into `CustomBuyButton.tsx` file:
+
+    ```tsx CustomBuyButton.tsx
+    import React from 'react'
+    import { Button as UIButton } from '@faststore/ui'
+
+    export function CustomBuyButton() {
+    return (
+        <UIButton
+        variant="primary"
+        onClick={() => {
+            alert('Hello User!')
+        }}
+        >
+        New Buy Button
+        </UIButton>
+    )
+    }
+    ```
+
+### Step 3 - Setting up the custom section
+
+1. In the `sections` folder, create a new file for your customized section. For example, create a new file named `ProductDetailsWithCustomButton.tsx` under the `src/components/sections` directory.
+2. Open the `ProductDetailsWithCustomButton.tsx` file and update it with the following code:
 
     ```tsx ProductDetailsWithCustomButton.tsx
     import { ProductDetailsSection, getOverriddenSection } from '@faststore/core'
@@ -46,7 +88,7 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
     export default ProductDetailsWithCustomButton;
     ```
 
-#### Step 2 - Overriding the component
+#### Step 4 - Overriding the component
 
 1. Choose a component to override from the [list of overridable components of each native section](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections). 
 In this example, we are overriding the `BuyButton` component in the `ProductDetails` section.
@@ -59,166 +101,19 @@ In this example, we are overriding the `BuyButton` component in the `ProductDeta
 
     ```
 
-### Step 3 - Adding the component to the Headless CMS
+3. Open the terminal, and run `yarn dev` to sync the new custom component to your store preview. 
+4. Open the localhost available after running `yarn dev`. 
+5. Open a PDP and click `New BuyButton`. An alert with `Hello user` message will appear.
 
-To integrate the section into the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), follow the steps below:
+![custom-buybutton-with-alert](https://vtexhelp.vtexassets.com/assets/docs/src/custom-buybutton___85eef62d606c75d7d9a206635979a050.gif)
 
-1. Create a folder named `cms` in the FastStore root directory.
-2. Inside `cms`, create the `faststore` folder.
-3. Within the `cms/faststore` folder, create the `sections.json` file.
-4. Add the schema of the new section to the `sections.json` file, named `CustomBuyButton`, to the `sections.json` file:
-
-    ```json sections.json
-    [
-        {
-            "name": "ProductDetailsWithCustomButton.tsx",
-            "requiredScopes": ["pdp"],
-            "schema": {
-            "title": "Custom Buy Button",
-            "description": "A new buy button to display an alert message.",
-            "type": "object",
-            "properties": {
-                "productTitle": {
-                "title": "Product Title",
-                "type": "object",
-                "properties": {
-                    "discountBadge": {
-                    "title": "Discount Badge",
-                    "type": "object",
-                    "properties": {
-                        "showDiscountBadge": {
-                        "title": "Show Discount Badge?",
-                        "type": "boolean",
-                        "default": false
-                        },
-                        "size": {
-                        "title": "Size",
-                        "type": "string",
-                        "enumNames": ["Big", "Small"],
-                        "enum": ["big", "small"]
-                        }
-                    }
-                    },
-                    "refNumber": {
-                    "title": "Show Reference Number?",
-                    "type": "boolean",
-                    "default": false
-                    }
-                }
-                },
-                "buyButton": {
-                "title": "Buy Button",
-                "type": "object",
-                "properties": {
-                    "title": {
-                    "title": "Title",
-                    "type": "string",
-                    "default": "Add to Cart"
-                    },
-                    "customAlert": {
-                    "title": "Custom Alert Message",
-                    "type": "string",
-                    "default": "Customize your alert message here"
-                    }
-                }
-                },
-                "notAvailableButton": {
-                "title": "Not Available Button",
-                "description": "Shown when a SKU is not available",
-                "type": "object",
-                "properties": {
-                    "title": {
-                    "title": "Title",
-                    "type": "string",
-                    "default": "Not Available"
-                    }
-                }
-                },
-                "shippingSimulator": {
-                "title": "Shipping Simulation",
-                "type": "object",
-                "properties": {
-                    "title": {
-                    "title": "Title",
-                    "type": "string",
-                    "default": "Shipping"
-                    },
-                    "inputLabel": {
-                    "title": "Input Label",
-                    "type": "string",
-                    "default": "Postal Code"
-                    },
-                    "link": {
-                    "title": "Postal Code Discovery",
-                    "type": "object",
-                    "properties": {
-                        "text": {
-                        "title": "Link Text",
-                        "type": "string",
-                        "default": "I don't know my Postal Code"
-                        },
-                        "to": { "title": "URL", "type": "string" }
-                    }
-                    },
-                    "shippingOptionsTableTitle": {
-                    "title": "Shipping Options Table Header",
-                    "type": "string"
-                    }
-                }
-                },
-                "productDescription": {
-                "title": "Product Description",
-                "type": "object",
-                "properties": {
-                    "initiallyExpanded": {
-                    "type": "string",
-                    "title": "Initially Expanded?",
-                    "enumNames": ["First", "All", "None"],
-                    "enum": ["first", "all", "none"]
-                    },
-                    "displayDescription": {
-                    "title": "Should display description?",
-                    "type": "boolean",
-                    "default": true
-                    },
-                    "title": {
-                    "title": "Description section title",
-                    "type": "string",
-                    "default": "Description"
-                    }
-                }
-                }
-            }
-            }
-        }
-    ]
-    ```
-
-This schema Adds the new `Custom Buy Button` section to the Headless CMS.
-
-5. Open a new terminal window and log in to your VTEX account by running `vtex login {accountName}`.
-6. Run the following command to sync your changes with the Headless CMS:
-
-    ```bash
-    yarn cms-sync
-    ```
-
-7. Access the VTEX Admin and proceed to **Storefront > Headless CMS**.
-8. Click on the page you desire to add the new section.
-9. Click the add button (`+`), add the new section, and complete values from the section fields.
-10. Click `Save`.
-
-### Step 4 - Visualizing the component on the page locally
-
-To see your changes locally, set the Headless CMS preview to the development mode. 
-Refer to the [How to preview Headless CMS changes in development mode](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview-preview-changes-in-development-mode) guide for more information.
-
-Once you have set the preview for development mode, you should see your new Buy Button on a Product Details Page (PDP).
 
 ### Step 5 - Publishing your changes
 
-If your changes are working in the development mode and you want to publish them, follow the steps below:
+If your changes are working locally and you want to publish them in production, follow the steps below:
 
-1. Go to the Headless CMS in the VTEX Admin.
-2. Click on a PDP page.
-3. Click `Publish` to make the new button available on the production store.
+1. Publish your branch with the custom components files.
+2. Open a pull request in the store's GitHub repository.
+3. Review the pull request
+4. Merge the changes from this branch to the `main` one and the new component will be available in the live store.
+
