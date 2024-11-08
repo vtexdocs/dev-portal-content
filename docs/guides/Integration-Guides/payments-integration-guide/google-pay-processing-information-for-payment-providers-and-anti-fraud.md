@@ -1,5 +1,5 @@
 ---
-title: "Google Pay: processing information for payment providers and anti-fraud"
+title: "FAQ - Google Pay: processing information for payment providers and anti-fraud"
 slug: "google-pay-processing-information-for-payment-providers-and-anti-fraud"
 hidden: false
 createdAt: "2022-06-22T00:00:00.000Z"
