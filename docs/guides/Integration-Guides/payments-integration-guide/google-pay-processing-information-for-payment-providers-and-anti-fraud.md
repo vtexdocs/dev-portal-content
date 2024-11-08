@@ -21,7 +21,7 @@ In the VTEX Admin, go to **Orders > Transactions** to check if a transaction has
 
 > ℹ️ The `paymentOrigin`, `panType`, and `cryptogram` fields aren't sent in standard credit or debit card transactions (without using a digital wallet).
 
-## 2. What are the possible values for the "paymentOrigin" field in the payload?
+## What are the possible values for the `paymentOrigin` field in the payload?
 
 The "paymentOrigin" field is always sent with the "Google Pay" value. Payment transactions using other payment methods don't have the "paymentOrigin" field in the payload.
 
