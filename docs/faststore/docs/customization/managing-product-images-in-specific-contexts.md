@@ -170,13 +170,13 @@ Customize the default [ImageGallery](https://developers.vtex.com/docs/guides/fas
 
     </CH.Code>
 
-    </CH.Scrollycoding>
-
    - The `ServerProduct` and `ClientProduct` fragments are accessed via the `usePDP` hook.
    - Instead of using the images being passed to the [ImageGallery](https://developers.vtex.com/docs/guides/faststore/organisms-image-gallery) component, we are using the `galleryImages` we defined.
 
 3. Open a terminal and run `yarn dev` to sync the changes made in the previous steps.
 4. Open a pull request to your store with these changes. Once the pull request is reviewed and approved, merge it into the `main` branch.
+
+</CH.Scrollycoding>
 
 ### Considerations for SKU Selector Images
 
