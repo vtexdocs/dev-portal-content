@@ -29,6 +29,8 @@ For this tutorial, we will create a custom gallery for the PDP using the [label]
 
 In this example, we will create a context by labeling selected images with the term `gallery`. This gallery will only display images that have been assigned the `gallery` label in [Catalog](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ).
 
+<CH.Scrollycoding>
+
 ### Step 1: Labeling images in Catalog
 
 Label your product images with the label field in Catalog.
@@ -52,8 +54,6 @@ To label your images, follow these steps:
     | `skuvariation` | Assigns the image to the SKU Selector. If no image has this label, the first image of the SKU is used. |
 
 7. Click `Save Label` and `Save`.
-
-<CH.Scrollycoding>
 
 ### Step 2: Querying images by context
 
@@ -176,10 +176,10 @@ Customize the default [ImageGallery](https://developers.vtex.com/docs/guides/fas
 3. Open a terminal and run `yarn dev` to sync the changes made in the previous steps.
 4. Open a pull request to your store with these changes. Once the pull request is reviewed and approved, merge it into the `main` branch.
 
-</CH.Scrollycoding>
-
 ### Considerations for SKU Selector Images
 
 The FastStore API defines a specific name for images that are supposed to display on the SKU Selector. The first image labeled `skuvariation` in Catalog will automatically display on the SKU Selector. If no image has the `skuvariation` label, the first image of the SKU will be displayed.
 
 > ⚠ If an image needs to display on the SKU Selector and Product Gallery, you must upload it twice and assign different labels.
+
+</CH.Scrollycoding>
