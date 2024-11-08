@@ -29,7 +29,7 @@ The "paymentOrigin" field is always sent with the "Google Pay" value. Payment tr
 
 No. The card CVV is sent in certain FPAN-type transactions. DPAN payment transactions don't require the card CVV number.
 
-> ℹ️ Transactions processed in subscription or recurring operations also don't use the card CVV.
+> ℹ️ Transactions processed in subscription or recurring operations do not use the card CVV as well.
 
 ## 4. How can I simulate a DPAN test transaction?
 
