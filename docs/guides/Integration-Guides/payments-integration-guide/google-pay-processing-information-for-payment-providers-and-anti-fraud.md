@@ -27,7 +27,7 @@ The "paymentOrigin" field is always sent with the "Google Pay" value. Payment tr
 
 ## 3. Is the card CVV sent in Google Pay transactions?
 
-No. The card CVV is sent in certain FPAN-type transactions. DPAN payment transactions don't require the card CVV number.
+No. The card CVV is sent in certain FPAN-type transactions. DPAN payment transactions do not require the card CVV number.
 
 > ℹ️ Transactions processed in subscription or recurring operations do not use the card CVV as well.
 
