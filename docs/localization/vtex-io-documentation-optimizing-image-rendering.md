@@ -35,7 +35,7 @@ Store Framework offers several image blocks, each suited to different use cases.
 
   ![beat-practices-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-rendering-images-0.png)
 
-  > ℹ️ You do not need to define all four properties in your Product Summary Image block at the same time. Each property has a unique purpose and can be configured based on your specific needs. 
+  > ℹ️ You do not need to define all four properties in your Product Summary Image block at the same time. Each property has a unique purpose and can be configured based on your specific needs.
 
 - [**Image:**](https://developers.vtex.com/docs/apps/vtex.store-components/image): Renders standalone images without additional elements such as links or text, for when you just need to display an image.
 
