@@ -53,6 +53,8 @@ To label your images, follow these steps:
 
 7. Click `Save Label` and `Save`.
 
+<CH.Scrollycoding>
+
 ### Step 2: Querying images by context
 
 Update your store `ServerProduct` and `ClientProduct` fragments to retrieve images based on their [assigned labels](#step-1-labeling-images-in-catalog). This ensures that only relevant images for specific contexts, like the PDP, are retrieved.
@@ -62,7 +64,7 @@ Update your store `ServerProduct` and `ClientProduct` fragments to retrieve imag
 1. Open your store code using the code editor of your choice.
 2. Go to `src/fragments/ServerProduct.ts` and add the following:
 
-    //REMINDER: Add CodeHike
+    <CH.Code>
 
     ```js src/fragments/ServerProduct.ts
     import { gql } from '@faststore/core/api'
@@ -79,9 +81,11 @@ Update your store `ServerProduct` and `ClientProduct` fragments to retrieve imag
     `
     ```
 
+    </CH.Code>
+
 3. Go to `src/fragments/ClientProduct` and add the following:
 
-    //REMINDER: Add CodeHike
+    <CH.Code>
 
     ```js src/fragments/ClientProduct
     import { gql } from '@faststore/core/api'
@@ -98,6 +102,8 @@ Update your store `ServerProduct` and `ClientProduct` fragments to retrieve imag
     `
     ```
 
+    </CH.Code>
+
 > ❕The `limit: 3` argument selects only three images. Omitting this argument returns all images labeled `gallery`. By default, all images are returned if no context label is found.
 
 ### Step 3: Overriding the `ImageGallery` component
@@ -107,7 +113,7 @@ Customize the default [ImageGallery](https://developers.vtex.com/docs/guides/fas
 1. In your store code, create the `ProductDetails.tsx` file inside the `src/components/overrides` folder.
 2. In the `ProductDetails.tsx` file, add the following content:
 
-    //REMINDER: Add CodeHike
+    <CH.Code>
 
     ```tsx
     import { SectionOverride } from "@faststore/core";
@@ -161,6 +167,10 @@ Customize the default [ImageGallery](https://developers.vtex.com/docs/guides/fas
 
     export { override };
     ```
+
+    </CH.Code>
+
+    </CH.Scrollycoding>
 
    - The `ServerProduct` and `ClientProduct` fragments are accessed via the `usePDP` hook.
    - Instead of using the images being passed to the [ImageGallery](https://developers.vtex.com/docs/guides/faststore/organisms-image-gallery) component, we are using the `galleryImages` we defined.
