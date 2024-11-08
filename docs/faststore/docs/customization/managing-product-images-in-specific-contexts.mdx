@@ -55,6 +55,8 @@ To label your images, follow these steps:
 
 7. Click `Save Label` and `Save`.
 
+---
+
 ### Step 2: Querying images by context
 
 Update your store `ServerProduct` and `ClientProduct` fragments to retrieve images based on their [assigned labels](#step-1-labeling-images-in-catalog). This ensures that only relevant images for specific contexts, like the PDP, are retrieved.
@@ -105,6 +107,8 @@ Update your store `ServerProduct` and `ClientProduct` fragments to retrieve imag
     </CH.Code>
 
 > ❕The `limit: 3` argument selects only three images. Omitting this argument returns all images labeled `gallery`. By default, all images are returned if no context label is found.
+
+---
 
 ### Step 3: Overriding the `ImageGallery` component
 
@@ -173,6 +177,8 @@ Customize the default [ImageGallery](https://developers.vtex.com/docs/guides/fas
    - The `ServerProduct` and `ClientProduct` fragments are accessed via the `usePDP` hook.
    - Instead of using the images being passed to the [ImageGallery](https://developers.vtex.com/docs/guides/faststore/organisms-image-gallery) component, we are using the `galleryImages` we defined.
 
+</CH.Scrollycoding>
+
 3. Open a terminal and run `yarn dev` to sync the changes made in the previous steps.
 4. Open a pull request to your store with these changes. Once the pull request is reviewed and approved, merge it into the `main` branch.
 
@@ -182,4 +188,3 @@ The FastStore API defines a specific name for images that are supposed to displa
 
 > ⚠ If an image needs to display on the SKU Selector and Product Gallery, you must upload it twice and assign different labels.
 
-</CH.Scrollycoding>
