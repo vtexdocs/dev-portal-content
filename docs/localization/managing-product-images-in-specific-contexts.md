@@ -4,7 +4,7 @@ createdAt: "2024-10-14T00:00:15.623Z"
 updatedAt: ""
 ---
 
-In this guide, you will learn how to control the product images that will be displayed in your store sections by labeling them with specific contexts in VTEX Catalog. These contexts determine where the image is displayed and are defined as follows:
+In this guide, you will learn how to control the product images that will be displayed in your store sections by labeling them with specific contexts on [VTEX Catalog](https://help.vtex.com/en/tutorial/catalog-overview--77M8ItLhDXs6aBdQTqToVe?&utm_source=autocomplete). These contexts determine where the image is displayed and are defined as follows:
 
 - **Gallery context:** Restricts the image to display only in the Product Image Gallery, allowing you to curate a set of images highlighting key features.
 - **SKU selector context:** Restricts the image to display only in the SKU selector, providing a zoomed-in view for detailed examination.
