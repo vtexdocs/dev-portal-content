@@ -48,7 +48,7 @@ To label your images, follow these steps:
     | Label name | Description |
     | ---------------- | ---------------- |
     | `gallery` | Restricts the image to display only on the Product Image Gallery. |
-    | `general` | Includes the image in all contexts by default. Images labeled as `generic` are always displayed as part of the complete set of images. |
+    | `generic` | Includes the image in all contexts by default. Images labeled as `generic` are always displayed as part of the complete set of images. |
     | `skuvariation` | Assigns the image to the SKU Selector. If no image has this label, the first image of the SKU is used. |
 
 7. Click `Save Label` and `Save`.
