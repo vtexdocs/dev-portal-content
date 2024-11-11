@@ -3,7 +3,7 @@ title: "Building pages"
 slug: "building-pages"
 hidden: false
 createdAt: "2024-09-11T13:08:11.350Z"
-updatedAt: ""
+updatedAt: "2024-11-11T14:25:13.298Z"
 excerpt: "Discover how to leverage Store Framework to build various types of pages tailored to your business needs."
 ---
 
