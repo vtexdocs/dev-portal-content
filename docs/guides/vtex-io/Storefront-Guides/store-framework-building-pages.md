@@ -1,6 +1,6 @@
 ---
 title: "Building pages"
-slug: "building-pages"
+slug: "store-framework-building-pages"
 hidden: false
 createdAt: "2024-09-11T13:08:11.350Z"
 updatedAt: "2024-11-11T14:25:13.298Z"
