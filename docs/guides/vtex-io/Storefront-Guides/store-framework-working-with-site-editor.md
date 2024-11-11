@@ -1,6 +1,6 @@
 ---
 title: "Working with Site Editor"
-slug: "working-with-site-editor"
+slug: "store-framework-working-with-site-editor"
 hidden: false
 createdAt: "2024-09-06T14:53:36.032Z"
 updatedAt: ""
