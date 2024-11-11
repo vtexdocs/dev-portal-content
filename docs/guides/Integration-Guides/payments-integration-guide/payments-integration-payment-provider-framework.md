@@ -180,7 +180,6 @@ You can also declare the `customFields` array to allow your payment provider to 
 }
 ```
 
-
 ### Overriding the Manifest route
 
 If you wish to override the default `/manifest` route due to some specific feature of your provider, please [open a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) describing your use case and add special parameters as specified below.
