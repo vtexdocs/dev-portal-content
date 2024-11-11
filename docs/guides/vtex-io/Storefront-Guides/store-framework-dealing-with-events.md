@@ -1,9 +1,9 @@
 ---
 title: "Dealing with events"
-slug: "dealing-with-events"
+slug: "store-framework-dealing-with-events"
 hidden: false
 createdAt: "2024-10-28T15:02:03.178Z"
-updatedAt: ""
+updatedAt: "2024-11-11T15:00:36.249Z"
 excerpt: "Learn how to manage user and system-generated events in your VTEX store."
 ---
 
