@@ -3,12 +3,12 @@ title: "Order canceling improvements"
 slug: "order-canceling-improvements"
 hidden: false
 createdAt: "2023-08-17T13:21:05.725Z"
-updatedAt: "2023-11-17T13:17:33.816Z"
+updatedAt: "2024-12-11T13:17:33.816Z"
 ---
 
 There are many scenarios where canceling an order is necessary, whether on behalf of sellers, marketplaces or shoppers. To cover multiple scenarios, we made the following improvements in order cancellation:
 
-- [Cancel order requested by shopper](#cancel-order-requested-by-shopper): When the marketplace customer care service cancels an order after a shopper requests ir, now the seller is notified about the cancellation reason and whether or not it was made on behalf of the shopper.
+- [Cancel order requested by shopper](#cancel-order-requested-by-shopper): When the marketplace customer care service cancels an order after a shopper requests it, now the seller is notified about the cancellation reason and whether or not it was made on behalf of the shopper.
 - [Deny cancel order](#deny-cancel-order): After the [cancellation window](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196) period – or grace period –, now the seller can deny cancellation requests.
 
 In each case, both seller and marketplace will be notified about changes, have access to information about each other's reasons for canceling and/or denying a cancel request, and sellers will know when the shopper requested the cancellation.
@@ -54,12 +54,12 @@ See below the [Cancel order](https://developers.vtex.com/docs/api-reference/orde
 
 ```sh
 curl --request post \
-	--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/cancel' \
-	--header 'Accept: application/json' \
-	--header 'Content-Type: application/json' \
-	--header 'X-VTEX-API-AppKey: ' \
-	--header 'X-VTEX-API-AppToken: ' \
-	--data '{
+--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/cancel' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-VTEX-API-AppKey: ' \
+--header 'X-VTEX-API-AppToken: ' \
+--data '{
            "reason": "string",
            "requestedByUser": boolean
        }'
@@ -182,12 +182,12 @@ See below the endpoint deny order cancellation, where `orderId` corresponds to t
 
 ```sh
 curl --request post \
-	--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/deny-cancellation-request' \
-	--header 'Accept: application/json' \
-	--header 'Content-Type: application/json' \
-	--header 'X-VTEX-API-AppKey: ' \
-	--header 'X-VTEX-API-AppToken: ' \
-	--data '{
+--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/deny-cancellation-request' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-VTEX-API-AppKey: ' \
+--header 'X-VTEX-API-AppToken: ' \
+--data '{
          "cancellationRequestId": "cancellationRequestId",
          "denyReason": "dIt isnandRIt isasOn"
       }'
