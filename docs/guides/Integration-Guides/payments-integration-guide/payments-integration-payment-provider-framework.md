@@ -141,6 +141,45 @@ manifest.json
 
 > ℹ️ To check which payment methods are currently available in the VTEX Admin, go to Store **Settings > Payment > Settings**, or type **Settings** in the search bar at the top of the page and click the green `+` button. If you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
 
+You can also declare the `customFields` array to allow your payment provider to send specific information. The `type` field can be configured as follows: `text` for non-confidential data; `password` for sensitive and security information (except `appKey` and `AppToken` which should not be sent in this field); and `select` to group a set of custom information.
+
+```json
+{
+  "name": "MyConnector",
+  "paymentMethods": [
+    ...
+  ],
+  "customFields": [
+    {
+      "name": "Company account",
+      "type": "text"
+    },
+    {
+      "name": "POS URL",
+      "type": "text"
+    },
+    {
+      "name": "Client key",
+      "type": "password"
+    },
+    {
+      "name": "Auto Capture Settings",
+      "type": "select",
+      "options": [
+        {
+          "text": "Automatic Capture Immediately After Payment Authorization",
+          "value": "Immediately"
+        },
+        {
+          "text": "Auto Settle Delay: 7 Days",
+          "value": "Deactivated"
+        }
+      ]
+    }
+  ]
+}
+```
+
 ### Overriding the Manifest route
 
 If you wish to override the default `/manifest` route due to some specific feature of your provider, please [open a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) describing your use case and add special parameters as specified below.
