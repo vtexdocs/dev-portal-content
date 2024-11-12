@@ -182,12 +182,12 @@ See below the endpoint deny order cancellation, where `orderId` corresponds to t
 
 ```sh
 curl --request post \
-	--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/deny-cancellation-request' \
-	--header 'Accept: application/json' \
-	--header 'Content-Type: application/json' \
-	--header 'X-VTEX-API-AppKey: ' \
-	--header 'X-VTEX-API-AppToken: ' \
-	--data '{
+--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/deny-cancellation-request' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-VTEX-API-AppKey: ' \
+--header 'X-VTEX-API-AppToken: ' \
+--data '{
          "cancellationRequestId": "cancellationRequestId",
          "denyReason": "dIt isnandRIt isasOn"
       }'
