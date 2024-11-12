@@ -54,12 +54,12 @@ See below the [Cancel order](https://developers.vtex.com/docs/api-reference/orde
 
 ```sh
 curl --request post \
-	--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/cancel' \
-	--header 'Accept: application/json' \
-	--header 'Content-Type: application/json' \
-	--header 'X-VTEX-API-AppKey: ' \
-	--header 'X-VTEX-API-AppToken: ' \
-	--data '{
+--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/cancel' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-VTEX-API-AppKey: ' \
+--header 'X-VTEX-API-AppToken: ' \
+--data '{
            "reason": "string",
            "requestedByUser": boolean
        }'
