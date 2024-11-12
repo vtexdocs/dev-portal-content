@@ -3,7 +3,7 @@ title: "Order canceling improvements"
 slug: "order-canceling-improvements"
 hidden: false
 createdAt: "2023-08-17T13:21:05.725Z"
-updatedAt: "2023-11-17T13:17:33.816Z"
+updatedAt: "2024-12-11T13:17:33.816Z"
 ---
 
 There are many scenarios where canceling an order is necessary, whether on behalf of sellers, marketplaces or shoppers. To cover multiple scenarios, we made the following improvements in order cancellation:
