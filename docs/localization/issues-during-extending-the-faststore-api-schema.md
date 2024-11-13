@@ -1,10 +1,10 @@
 ---
-title: Issues during extending the FastStore API schema
-slug: issues-during-extending-the-faststore-api-schema
-excerpt: Updating EANs on VTEX can lead to catalog sync issues affecting inventory.
+title: 'Issues during extending the FastStore API schema'
+slug: "issues-during-extending-the-faststore-api-schema"
+excerpt: "Updating EANs on VTEX can lead to catalog sync issues affecting inventory."
 tags:
-  - faststore
-  - api
+    - faststore
+    - api
 ---
 
 **Keywords:** FastStore | API extension
@@ -25,9 +25,7 @@ If your GraphQL changes aren't visible during development, your changes are prob
 
 To trigger the optimization, run `yarn generate` (recommended) or `yarn run faststore generate-graphql`. Alternatively, you can stop and restart the development server using `yarn dev`.
 
-```
-> ℹ️ This optimization can also be performed while the development server is running.
-```
+    > ℹ️ This optimization can also be performed while the development server is running.
 
 ## Deploy preview/production GraphQL schema different from development
 
@@ -40,7 +38,7 @@ To fix this issue, see the section [GraphQL changes not visible during developme
 Some errors can occur during GraphQL optimizations and type generation. Here's how to troubleshoot them:
 
 | **Error message** | **Possible cause** | **Solution** |
-| --- | --- | --- |
+| ----------------- | ------------------ | ------------ |
 | `error Failed to run 'yarn generate:schema'. Please check your setup.` | Malformed files in your GraphQL schema extensions definitions. | Check the GraphQL files in the `src/graphql/(vtex or thirdParty)/typeDefs` folders for syntax or definition errors. |
 | `error GraphQL was not optimized, and TS files were not updated. Changes in the GraphQL layer did not take effect` | Malformed files or GraphQL types within your GraphQL layer, including errors in GraphQL schema extensions, declared queries, and fragments. | Check the GraphQL files in the `src/graphql/(vtex or thirdParty)/typeDefs` folders and component (`.ts`, `tsx`) files declaring queries and fragments in your project for syntax or definition errors. |
 | `warn: Failed to format generated files. 'yarn format:generated' thrown errors` | An issue occurred during the formatting process for the generated GraphQL optimization and type files. | This is a warning, not an error. Your GraphQL layer will still work correctly. To investigate and solve the formatting issue, follow these steps: <ol><li>1. Retry formatting: Run the `yarn format:generated` command again.</li> <li>2. Check formatting configuration: Make sure the formatting rules are correct and compatible with the generated files.</li><li>3. Inspect error logs: Look for specific error messages that might provide more clues about the issue.</li></ol> |
