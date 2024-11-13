@@ -1,7 +1,7 @@
 ---
 title: 'Issues during extending the FastStore API schema'
 slug: "issues-during-extending-the-faststore-api-schema"
-excerpt: "Updating EANs in VTEX can lead to catalog sync issues affecting inventory."
+excerpt: "Development and deployment challenges may arise while extending FastStore API schema with GraphQL."
 tags:
     - faststore
     - api
