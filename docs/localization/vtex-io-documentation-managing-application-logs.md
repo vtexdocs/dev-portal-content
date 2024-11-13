@@ -1,11 +1,10 @@
 ---
-title: Managing application logs
-slug: vtex-io-documentation-managing-application-logs
+title: "Managing application logs"
+slug: "vtex-io-documentation-managing-application-logs"
 hidden: false
-createdAt: 2020-09-22T21:29:09.307Z
-updatedAt: 2022-12-13T20:17:44.453Z
+createdAt: "2020-09-22T21:29:09.307Z"
+updatedAt: "2022-12-13T20:17:44.453Z"
 ---
-
 VTEX IO provides a logging service that allows developers to keep track of app errors, warnings, and informative events. The VTEX IO Logging Service collects data from the cloud infrastructure where VTEX applications run and delivers them via the VTEX IO CLI.
 
 In the following section, you'll learn how to implement the VTEX IO Logging Service in your apps and how to retrieve their respective logs.
@@ -109,4 +108,4 @@ VTEX limits the storage size and retention period of logs to guarantee the stabi
 
 If you need more than 1 GB of logs per week for an app, we recommend retrieving and storing your logs before they reach the storage limit. You can check the size of the logs from the size of the retrieved files in your local environment. See the instructions in the [Retrieving application logs](#retrieving-application-logs) section.
 
-> ⚠️ VTEX may change the storage limits of app logs without additional notice. Check this documentation for the updated limit values.
+>⚠️ VTEX may change the storage limits of app logs without additional notice. Check this documentation for the updated limit values.
