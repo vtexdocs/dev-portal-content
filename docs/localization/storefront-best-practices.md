@@ -1,10 +1,10 @@
 ---
-title: Storefront best practices
-slug: storefront-best-practices
+title: "Storefront best practices"
+slug: "storefront-best-practices"
 hidden: false
-createdAt: 2024-10-29T13:59:17.317Z
+createdAt: "2024-10-29T13:59:17.317Z"
 updatedAt: ""
-excerpt: Learn how to optimize your VTEX storefront by following best practices.
+excerpt: "Learn how to optimize your VTEX storefront by following best practices."
 ---
 
 To maintain a high-performing website, you should follow best practices when developing your storefront. By implementing effective strategies, you can create a seamless shopping journey that attracts and retains customers.
