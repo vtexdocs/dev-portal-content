@@ -106,6 +106,6 @@ VTEX limits the storage size and retention period of logs to guarantee the stabi
 - Logs are stored for 7 days at most.
 - Each app can have up to 1 GB of logs stored per account. If an app generates more than 1 GB of logs in one account in 7 days or less, the oldest logs are deleted.
 
-If you need more than 1 GB of logs per week for an app, we recommend retrieving and storing your logs before they reach the storage limit. You can check the size of the logs from the size of the retrieved files in your local environment. See the instructions in the [Retrieving application logs](#retrieving-application-logs) section.
+If you need more than 1 GB of logs per week for an app, we recommend retrieving and storing your logs before they reach the storage limit. You can check the size of the logs from the size of the retrieved files in your local environment. See the instructions in the [Retrieving app logs](#retrieving-app-logs) section.
 
 >⚠️ VTEX may change the storage limits of app logs without additional notice. Check this documentation for the updated limit values.
