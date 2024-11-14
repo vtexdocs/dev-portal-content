@@ -9,6 +9,10 @@ updatedAt: "2024-11-01T10:00:00.000Z"
 
 With the [Node builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-node-builder) update to version `7.x`, IO apps using this builder benefit from the Node.js 20 engine and TypeScript 5.x libraries, improving performance and security. However, this also means these apps need to be adjusted for the latest features.
 
+Check the demo video below showing how to migrate your app to Node builder `7.x`.
+
+<iframe width="100%" style="aspect-ratio: 16/9" src="https://www.youtube.com/embed/sTSf7AZLqGg?si=eM_SIxKMAgsROXf5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe>
+
 ## Instructions
 
 To update your app to use the new builder version, follow the instructions below:
@@ -87,7 +91,7 @@ When linking your app, you might get errors like the following examples:
 
 These alerts may appear because some of the app's dependencies may run with an old TypeScript version.
 
-ℹ️ Errors in this scenario might be due to some VTEX libraries not being updated with TypeScript `5.x`. They should be updated gradually over time.
+>ℹ️ Errors in this scenario might be due to some VTEX libraries not being updated with TypeScript `5.x`. They should be updated gradually over time.
 
 **Solution**: Update the `package.json` files of the dependencies manually with the new TypeScript version. We recommend using version `5.5.3`, since it’s the same used in Node builder `7.x`.
 
