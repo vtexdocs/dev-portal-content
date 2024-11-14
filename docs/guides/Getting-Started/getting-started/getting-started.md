@@ -30,81 +30,81 @@ At the core of VTEX are microservices, each designed to provide specific ecommer
 
 ![](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Getting-Started/getting-started/getting-started.png?raw=true)
 
-<OverviewCard icon='Catalog'>
+<OverviewCard icon='Catalog' link='https://developers.vtex.com/docs/guides/catalog-overview'>
 
-### [Catalog](https://developers.vtex.com/docs/guides/catalog-overview)
+### Catalog
 
 Manage all aspects of product information, including categories, brands, SKUs, and specifications.
 
 </OverviewCard>
 
-<OverviewCard icon='Checkout'>
+<OverviewCard icon='Checkout' link='https://developers.vtex.com/docs/guides/checkout-overview'>
 
-### [Checkout](https://developers.vtex.com/docs/guides/checkout-overview)
+### Checkout
 
 Access and manage checkout cart data to enhance the purchasing experience.
 
 </OverviewCard>
 
-<OverviewCard icon='Orders'>
+<OverviewCard icon='Orders' link='https://developers.vtex.com/docs/guides/orders-overview'>
 
-### [Orders](https://developers.vtex.com/docs/guides/orders-overview)
+### Orders
 
 Receive, process, and manage every order through the VTEX Orders API.
 
 </OverviewCard>
 
-<OverviewCard icon='Fulfillment'>
+<OverviewCard icon='Fulfillment' link='https://developers.vtex.com/docs/guides/fulfillment'>
 
-### [Fulfillment](https://developers.vtex.com/docs/guides/fulfillment)
+### Fulfillment
 
 Coordinate store logistics, including warehouses, pickup points, carriers, shipping rates, and inventory updates for each SKU.  
 
 </OverviewCard>
 
-<OverviewCard icon='Payments'>
+<OverviewCard icon='Payments' link='https://developers.vtex.com/docs/guides/payments-overview'>
 
-### [Payments](https://developers.vtex.com/docs/guides/payments-overview)
+### Payments
 
 Access payment data and process transactions within the VTEX ecosystem.
 
 </OverviewCard>
 
-<OverviewCard icon='Promotions'>
+<OverviewCard icon='Promotions' link='https://developers.vtex.com/docs/guides/promotions-overview'>
 
-### [Promotions](https://developers.vtex.com/docs/guides/promotions-overview)
+### Promotions
 
 Boost sales by creating and managing promotions and coupons for your store.
 
 </OverviewCard>
 
-<OverviewCard icon='Pricing'>
+<OverviewCard icon='Pricing' link='https://developers.vtex.com/docs/guides/pricing-overview'>
 
-### [Pricing](https://developers.vtex.com/docs/guides/pricing-overview)
+### Pricing
 
 Create, read, and edit prices for each SKU, sales channel, or price table.
 
 </OverviewCard>
 
-<OverviewCard icon='AccountManagement'>
+<OverviewCard icon='AccountManagement' link='https://help.vtex.com/category/account-management--2d48l0t9GweqoGkWCg2IQU'>
 
-### [Account Management](https://help.vtex.com/category/account-management--2d48l0t9GweqoGkWCg2IQU)
+### Account Management
 
 Manage users, roles, hosts, AppKeys, and AppTokens within the VTEX platform.
 
 </OverviewCard>
 
-<OverviewCard icon='StoreSearch'>
+<OverviewCard icon='StoreSearch' link='https://developers.vtex.com/docs/guides/search-overview'>
 
-### [Search](https://developers.vtex.com/docs/guides/search-overview)
+### Search
 
 Search and sort products in the catalog using full-text, category, and brand search terms. Retrieve product information to create custom searches and product shelves.
 
 </OverviewCard>
 
-<OverviewCard icon='Subscriptions'>
+<OverviewCard icon='Subscriptions' link='https://developers.vtex.com/docs/guides/subscriptions'>
 
-### [Subscriptions](https://developers.vtex.com/docs/guides/subscriptions)
+### Subscriptions
 
 Manage store subscription rules to optimize revenue and reduce bounce rate and churn.
 
