@@ -9,6 +9,8 @@ updatedAt: "2024-11-01T10:00:00.000Z"
 
 With the [Node builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-node-builder) update to version `7.x`, IO apps using this builder benefit from the Node.js 20 engine and TypeScript 5.x libraries, improving performance and security. However, this also means these apps need to be adjusted for the latest features.
 
+>ℹ️ Check the [demo video](https://www.youtube.com/watch?v=sTSf7AZLqGg) showing how to migrate your app to Node builder `7.x`.
+
 ## Instructions
 
 To update your app to use the new builder version, follow the instructions below:
