@@ -4,7 +4,6 @@ slug: "getting-started"
 hidden: false
 createdAt: "2019-11-26T19:13:15.434Z"
 updatedAt: "2024-01-02T20:40:28.033Z"
-hidePaginationPrevious: true
 excerpt: "Discover the features and capabilities of VTEX Core Commerce APIs."
 ---
 
@@ -16,7 +15,7 @@ VTEX is a comprehensive headless commerce platform, designed to deliver flexibil
 
 VTEX’s modular architecture ensures security, data privacy, and composability while providing robust developer tools. This architecture facilitates integration with third-party systems and allows extensive customization to meet diverse business needs.
 
-To learn more about VTEX's platform capabilities, see the [VTEX Platform Overview](https://developers.vtex.com/docs/guides/vtex-platform-overview)
+To learn more about VTEX's platform capabilities, see the [VTEX Platform Overview](https://developers.vtex.com/docs/guides/vtex-platform-overview) documentation.
 
 ## VTEX REST APIs
 
