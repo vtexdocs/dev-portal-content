@@ -11,7 +11,7 @@ With the [Node builder](https://developers.vtex.com/docs/guides/vtex-io-document
 
 Check the demo video below showing how to migrate your app to Node builder `7.x`.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sTSf7AZLqGg?si=eM_SIxKMAgsROXf5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe>
+<iframe width="80%" style="aspect-ratio: 16/9" src="https://www.youtube.com/embed/sTSf7AZLqGg?si=eM_SIxKMAgsROXf5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe>
 
 ## Instructions
 
