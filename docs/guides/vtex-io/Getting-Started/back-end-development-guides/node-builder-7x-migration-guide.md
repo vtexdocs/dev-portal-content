@@ -91,7 +91,7 @@ When linking your app, you might get errors like the following examples:
 
 These alerts may appear because some of the app's dependencies may run with an old TypeScript version.
 
-ℹ️ Errors in this scenario might be due to some VTEX libraries not being updated with TypeScript `5.x`. They should be updated gradually over time.
+>ℹ️ Errors in this scenario might be due to some VTEX libraries not being updated with TypeScript `5.x`. They should be updated gradually over time.
 
 **Solution**: Update the `package.json` files of the dependencies manually with the new TypeScript version. We recommend using version `5.5.3`, since it’s the same used in Node builder `7.x`.
 
