@@ -116,7 +116,7 @@ Once the request is executed successfully, the JSON Schema is ready and you can 
 
 ### Step 2 - Configuring the Store Form app
 
-Lastly, you must configure the Store Form app and the blocks it exports in order to make your store render the native Store Framework form component.
+Lastly, you must configure the Store Form app and the blocks it exports to make your store render the native Store Framework form component.
 
 Access the [Store Form app documentation](https://developers.vtex.com/docs/apps/vtex.store-form) and follow the step-by-step instructions to complete its configuration.
 
