@@ -15,7 +15,7 @@ With Store Framework, your store can integrate a native form component with [Mas
 
 ### Step 1 - Creating the JSON Schema in Master Data v2
 
-To begin, you must create a [JSON schema](https://json-schema.org/understanding-json-schema/index.html) in [Master Data v2](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#v2-schemas) that defines the fields your form will include and the expected input types. This schema acts as a blueprint for your form, specifying both required data fields and storage structure.
+To begin, you must create a [JSON schema](https://json-schema.org/understanding-json-schema) in [Master Data v2](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#v2-schemas) that defines the fields your form will include and the expected input types. This schema acts as a blueprint for your form, specifying both required data fields and storage structure.
 
 Make a request to the [Save Schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint to define your schema. Include the JSON example below as the default request body, modifying it to suit your store’s needs:
 
