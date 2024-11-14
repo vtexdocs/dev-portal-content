@@ -21,7 +21,7 @@ Make a request to the [Save Schema by name](https://developers.vtex.com/docs/api
 
 <details>
   <summary>Schema example</summary>
-  <pre>
+  ```json
   {
     "title": "Person",
     "type": "object",
@@ -100,7 +100,7 @@ Make a request to the [Save Schema by name](https://developers.vtex.com/docs/api
       "publicFilter": [ "fieldExample" ]
     }
   }
-  </pre>
+  ```
 </details>
 
 > ℹ️ Bear in mind that the schema's language will define the form's default language.
