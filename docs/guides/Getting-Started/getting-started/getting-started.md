@@ -1,5 +1,5 @@
 ---
-title: "Getting started"
+title: "Getting started with VTEX Core Commerce APIs"
 slug: "getting-started"
 hidden: false
 createdAt: "2019-11-26T19:13:15.434Z"
@@ -8,37 +8,25 @@ hidePaginationPrevious: true
 excerpt: "Discover the features and capabilities of VTEX Core Commerce APIs."
 ---
 
-Welcome! VTEX is a headless commerce platform that is highly customizable and constantly evolving to meet your business needs.
+VTEX is a comprehensive headless commerce platform, designed to deliver flexibility and scalability for diverse ecommerce operations. This guide introduces VTEX Core Services and provides essential information to help developers integrate and extend the platform’s features.
 
-> ℹ️ Please note that you are in our Developer Portal. If you are looking for business-focused content and documentation about our platform, visit our [Help Center](https://help.vtex.com/).
+> ℹ️ Please note that you are in our Developer Portal. For business-oriented content, visit our [Help Center](https://help.vtex.com/).
 
-## VTEX Core services
+## Platform overview
 
-Leverage your ecommerce operation with our headless architecture by learning what you can accomplish with each microservice on the VTEX platform.
+VTEX’s modular architecture ensures security, data privacy, and composability while providing robust developer tools. This architecture facilitates integration with third-party systems and allows extensive customization to meet diverse business needs.
 
-<OverviewCard icon='Platform'>
+To learn more about VTEX's platform capabilities, see the [VTEX Platform Overview](https://developers.vtex.com/docs/guides/vtex-platform-overview)
 
-### Platform Overview
+## VTEX REST APIs
 
-Understand the VTEX platform's infrastructure, security and data privacy measures, composable capabilities, store architecture models, and developer tools.
-
-- [VTEX Platform Overview](https://developers.vtex.com/docs/guides/vtex-platform-overview)
-
-</OverviewCard>
-
-<OverviewCard icon='RestApis'>
-
-### REST API
-
-See how to use our APIs to integrate third-party solutions with a single platform for all experiences.
+VTEX REST APIs provide the foundation for custom integrations, enabling third-party connections and unifying data for a simplified commerce experience.
 
 - [List of REST APIs](https://developers.vtex.com/vtex-rest-api/docs/getting-started-list-of-rest-apis)
 - [Authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication)
 - [Making your first request](https://developers.vtex.com/vtex-rest-api/docs/getting-started-making-your-first-request)
 
-</OverviewCard>
-
-Our API Guides and Reference cover VTEX Core Services, as illustrated in the image below.
+At the core of VTEX are microservices, each designed to provide specific ecommerce functionalities and targeted capabilities. The following image offers an overview of VTEX Core Services covered in our API Guides and Reference:
 
 ![](https://github.com/vtexdocs/dev-portal-content/blob/main/docs/guides/Getting-Started/getting-started/getting-started.png?raw=true)
 
@@ -46,7 +34,7 @@ Our API Guides and Reference cover VTEX Core Services, as illustrated in the ima
 
 ### [Catalog](https://developers.vtex.com/docs/guides/catalog-overview)
 
-Manage your store's categories, brands, products, SKUs, and specifications effectively.
+Manage all aspects of product information, including categories, brands, SKUs, and specifications.
 
 </OverviewCard>
 
@@ -54,7 +42,7 @@ Manage your store's categories, brands, products, SKUs, and specifications effec
 
 ### [Checkout](https://developers.vtex.com/docs/guides/checkout-overview)
 
-Access and manipulate checkout cart item data seamlessly.
+Access and manage checkout cart data to enhance the purchasing experience.
 
 </OverviewCard>
 
@@ -62,7 +50,7 @@ Access and manipulate checkout cart item data seamlessly.
 
 ### [Orders](https://developers.vtex.com/docs/guides/orders-overview)
 
-Receive, process, and manage every order through our APIs.
+Receive, process, and manage every order through the VTEX Orders API.
 
 </OverviewCard>
 
@@ -70,28 +58,25 @@ Receive, process, and manage every order through our APIs.
 
 ### [Fulfillment](https://developers.vtex.com/docs/guides/fulfillment)
 
-Manage all store logistics data by accessing warehouses, loading docks, pickup points, carriers, shipping rates, and inventory updates for each SKU.  
+Coordinate store logistics, including warehouses, pickup points, carriers, shipping rates, and inventory updates for each SKU.  
 
 </OverviewCard>
-
 
 <OverviewCard icon='Payments'>
 
 ### [Payments](https://developers.vtex.com/docs/guides/payments-overview)
 
-Get payment data and process your transactions.
+Access payment data and process transactions within the VTEX ecosystem.
 
 </OverviewCard>
-
 
 <OverviewCard icon='Promotions'>
 
 ### [Promotions](https://developers.vtex.com/docs/guides/promotions-overview)
 
-Boost your sales by creating and managing promotions and coupons.
+Boost sales by creating and managing promotions and coupons for your store.
 
 </OverviewCard>
-
 
 <OverviewCard icon='Pricing'>
 
@@ -101,15 +86,13 @@ Create, read, and edit prices for each SKU, sales channel, or price table.
 
 </OverviewCard>
 
-
 <OverviewCard icon='AccountManagement'>
 
 ### [Account Management](https://help.vtex.com/category/account-management--2d48l0t9GweqoGkWCg2IQU)
 
-Manage users, roles, hosts, AppKeys, and AppTokens in the VTEX platform.
+Manage users, roles, hosts, AppKeys, and AppTokens within the VTEX platform.
 
 </OverviewCard>
-
 
 <OverviewCard icon='StoreSearch'>
 
@@ -118,7 +101,6 @@ Manage users, roles, hosts, AppKeys, and AppTokens in the VTEX platform.
 Search and sort products in the catalog using full-text, category, and brand search terms. Retrieve product information to create custom searches and product shelves.
 
 </OverviewCard>
-
 
 <OverviewCard icon='Subscriptions'>
 
