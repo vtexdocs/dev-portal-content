@@ -9,7 +9,7 @@ updatedAt: "2024-11-01T10:00:00.000Z"
 
 With the [Node builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-node-builder) update to version `7.x`, IO apps using this builder benefit from the Node.js 20 engine and TypeScript 5.x libraries, improving performance and security. However, this also means these apps need to be adjusted for the latest features.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sTSf7AZLqGg?si=eM_SIxKMAgsROXf5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sTSf7AZLqGg?si=eM_SIxKMAgsROXf5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe>
 
 ## Instructions
 
