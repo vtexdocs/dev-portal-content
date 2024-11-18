@@ -7,36 +7,56 @@ metadata:
 createdAt: "2021-04-08T20:20:35.782Z"
 updatedAt: "2021-04-08T22:22:38.592Z"
 ---
-This article explains the Master Data core components: Data Entity, Document, Field and Index.
 
->ℹ️ The Master Data core components are equivalent to what is found in database solutions. Some of these components might be found in common database solutions with other names such as record or table.
+This guide introduces the key components of Master Data and their functionalities. These components are conceptually similar to those in traditional database systems, but with distinct terminology:  
+
+- **Data Entity**: Represents a table-like structure that contains multiple Documents.
+- **Document**: Represents a record (row) within a Data Entity.
+- **Field**: Represents an attribute (column) of a Document.
+- **Index**: Represents an optimization layer linked to a specific field to speed up searches.
 
 ## Data Entity
 
-In comparison to a regular database, Data Entity is a table in which records (or [Documents](#document)) and [Fields](#field) are always stored.
+A Data Entity is analogous to a table in traditional databases. It stores records (or [Documents](#document)) and [Fields](#field), representing the structure of data in Master Data.
 
-Master Data currently has two versions (V1 and V2). In V1, a Data Entity is referred by its acronym (a sequence of two uppercase characters). In V2, the Data Entity name is used as reference. For instance, in Master Data V1 a data entity can be identified by NT, while in Master Data V2 it can be identified by Notification.
+Master Data has two versions (V1 and V2):
+- **V1:** Data Entities are identified by a two-letter uppercase acronym (e.g., `NT`).
+  - Example: `CL` stores customer-related data like name, email, and document; `AD` stores customer address data, such as street, city, and recipient name.
+- **V2:** Data Entities are identified by their full name (e.g., `Notification`).
 
-In Master Data v1, the CL Data Entity is used to keep all customer data related to personal information such as name, email, document and others stored in the same place, and the AD Data Entity is used to store all customers addresses with their respective information such as: receiver name, street, city, etc.
-
-> This module may process personal or sensitive information. Learn more about how VTEX handles data privacy at our [Data privacy](https://developers.vtex.com/docs/guides/data-privacy) guide.
+> This module may process personal or sensitive information. Learn more about how VTEX handles data privacy in our [Data privacy](https://developers.vtex.com/docs/guides/data-privacy) guide.
 
 ### Document
 
-A Document is a record (a row of the table) inside a Data Entity with an identifier (a Field named `id`). Inside CL Data Entity, for example, each person is represented by a document that has an `id` and other information.
+A Document represents a record (or row) within a Data Entity. Each Document has a unique identifier (the `id` Field). 
+
+For example, in the `CL` Data Entity, each customer is represented by a Document that includes fields like `id`, `name`, `email`, and other personal details.
 
 ### Field
 
-Documents are composed by one or more Fields (attributes) that specifies characteristics of the Data Entity record. Fields can also be considered as the columns of a Data Entity table. For example, the CL Data Entity has Fields to store the customer's name, email, birth date and document number. 
+A Field is a specific attribute or characteristic of a Document within a Data Entity, analogous to columns in a database table. Each Field has a defined data type:  
 
-Data has a shape. A name field is usually expressed as string type, whereas in age is used an integer number type. You can configure the shape of your data for each Data Entity to guarantee consistency. In other words, every Document follows the shape defined by the Data Entity in which it is inserted and its Fields.
+- `string`: Text-based data (e.g., `name`).
+- `number`: Numeric data (e.g., `age`).
+- `date`: Date-based data (e.g., `birthdate`) 
+- `object`: A structured data type with key-value pairs.
+- `array`: A list of values.
+- `null`: Explicitly undefined value.
 
-Meaning that each Field has a Type which indicates the format of the attribute being string, number, date, null, object or array.
+For example, in the `CL` Data Entity, Fields may include `name`, `email`, `birthdate`, and `document_number`. Each Field has a type that determines its data format:
+
+Consistent structure is enforced across all Documents in a Data Entity based on its defined Fields.
 
 ## Index
 
-An Index is a shortcut to find Documents whenever users do not know the Document `id`. An Index can be set up for each Field of a Data Entity. As well as when using an `id`, the Index is used to retrieve a single Document at a time, but using the value of indexed Field instead. For instance, users can find a Document inside CL Data Entity through the email because it has a native Index for the email Field. Indexes are set up in [Master Data V1 using the Admin](https://help.vtex.com/en/tutorial/setting-up-an-index-on-master-data--tutorials_785) and in [Master Data V2 through the API](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/indices).
+An Index enables you to search for Documents based on a Field, without needing the Document's `id`. You can create an Index for any Field in a Data Entity.
 
->⚠️ The Index of a Document is created when the Document is created or modified. Documents will only have Index if the creation or change occurs after the Index of the Data Entity was set up. Documents created before the Index set up of the Data Entity need to be updated to receive the Index.
+For example, if the `CL` Data Entity has an Index on the `email` Field, you can retrieve a Document by querying the `email` value instead of the `id`.
 
-Once a Document has an Index, you can retrieve it by using the [Search documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search?endpoint=get-/api/dataentities/-acronym-/search) endpoint with the Field name as a query parameter and the value of Field as the value of the parameter. Example: `/dataentities/CL/search?email=my@email.com`.
+Indexes are configured differently depending on the Master Data version:
+- **V1:** Managed via the Admin interface. For more information, refer to [Indexes in Master Data V1](https://help.vtex.com/en/tutorial/setting-up-an-index-on-master-data--tutorials_785). Once an Index is set up, you can retrieve Documents using the [Search documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search) endpoint with the Field name as the query parameter and the value of Field as the value of the parameter. Example: `/dataentities/CL/search?email=my@email.com`.
+- **V2:** Managed via API. Refer to [PUT - Create index](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/indices) for more information. Once an Index is set up, you can retrieve Documents using the [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) endpoint.
+
+When using an `id`, the Index retrieves a single Document at a time, but using an indexed Field allows you to search for Documents based on that Field's value instead.
+
+>⚠️ Indexes are created when a Document is created or modified. Documents will only have an Index if the Data Entity's Index was set up before or during the Document's creation or modification. Documents created before the Index was set up must be updated to receive it.
