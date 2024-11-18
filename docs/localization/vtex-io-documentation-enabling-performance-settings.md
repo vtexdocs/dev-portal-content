@@ -174,7 +174,7 @@ Previously, each `menu-item` was set up as an individual child/block. With the c
 
 This approach reduces the number of blocks from 3 to 1.
 
-> ℹ️ Learn more about how to apply both configurations in the guide [Menu](https://developers.vtex.com/docs/guides/vtex-menu).
+> ℹ️ Learn more about how to apply both configurations in the guide [Menu](https://developers.vtex.com/docs/apps/vtex.menu).
 
 #### Adjusting image sizes
 
