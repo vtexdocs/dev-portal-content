@@ -16,7 +16,7 @@ You can enable actions to boost your store’s website performance directly in y
 
 ![cms-store-advanced](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-0.png)
 
-Additionally, you can implement manual optimization by making changes in the project's source code, as described in the [Manual optimization](#manual-optimization) section.
+Additionally, you can implement manual optimization by making changes in the project's source code, as described in the [Manual optimizations](#manual-optimizations) section.
 
 These actions can improve SEO by up to 80% and page loading time by over 50%. This data can be identified with leading website performance analysis tools, such as [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/1205784?hl=en). Learn more in the **Monitoring tools** section within the [Performance](LINK) guide.
 
