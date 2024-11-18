@@ -15,7 +15,7 @@ This guide introduces the key components of Master Data and their functionalitie
 - **Field**: Represents an attribute (column) of a Document.
 - **Index**: Represents an optimization layer linked to a specific field to speed up searches.
 
-![Master Data Structure](https://github.com/vtexdocs/dev-portal-content/blob/main/images/master-data-components.jpg)
+![Master Data Structure](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/master-data-components.jpg)
 
 ## Data Entity
 
