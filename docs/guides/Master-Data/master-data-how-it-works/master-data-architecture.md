@@ -7,35 +7,63 @@ metadata:
 createdAt: "2021-04-08T20:20:59.105Z"
 updatedAt: "2021-11-18T13:44:22.424Z"
 ---
-This article explains the Master Data services. A service is a kind of program that performs automated tasks and responds to hardware events or requests from other software. Master Data is composed by the following services: API, Worker, Storage and Search Engine.
 
-## API
+This guide provides an overview of the Master Data architecture. A service is a program that performs automated tasks or responds to specific events, whether hardware-related or triggered by requests from other software.
 
-The API is the service responsible to perform HTTP requests through endpoints that enable access to other services. The other services are the ones that actually store and execute tasks over the data.
+The Master Data architecture is composed of four core services:
+- API: Serves as the entry point for external systems to interact with Master Data.
+- Worker: Manages backend processes, ensuring data consistency and enabling advanced operations.
+- Storage: Serves as the central repository for documents.
+- Search Engine: Provides advanced search and aggregation capabilities.
 
-The Master Data API endpoints can be found in our API reference for [Master Data V1](ref:master-data-api-v1-overview) and [Master Data V2](ref:master-data-api-v2-overview).
+## Core services
 
-## Worker
+### API service
 
-The Worker is the service responsible for:
+The API service acts as the primary gateway for interacting with Master Data. It handles HTTP requests, providing endpoints to access and manipulate data stored in the system. Key features include:
 
-- Sending Documents to the [Search Engine](#search-engine) - This allows the Documents to be searchable and that their latest version are shown in the search results.
-- Executing Triggers - This allows the execution of tasks that are triggered from operations in the Documents (i.e.: send an email after any field of a Client Document is changed).
-- Import/Export process - Export to a csv file or import from a csv file Documents of a specific Data Entity.
+- Access to endpoints for reading, writing, searching, and managing documents.
+- Routing external requests to internal services like [Storage](#storage) and [Search Engine](#search-engine).
+- Ensuring secure communication between client applications and Master Data.
 
-## Storage
+The Master Data API endpoints can be found in our API reference:
+- [Master Data V1](https://developers.vtex.com/docs/api-reference/masterdata-api)
+- [Master Data V2](https://developers.vtex.com/docs/api-reference/master-data-api-v2).
 
-The Storage service is where your data is kept. Master Data uses a powerful database to keep billions of documents stored safely.
+> The API service does not process or store data directly. Instead, it routes requests to the appropriate services for execution.
 
-The [Documents API](ref:documents) retrieves documents directly from the Storage service and it is used to retrieve one Document per request.
-[block:callout]
-{
-  "type": "warning",
-  "body": "The data of a store account can only be accessed by this account. One account cannot access the data stored in other accounts and vice versa."
-}
-[/block]
-## Search Engine
+### Worker service
 
-The Search Engine is a service that handles filters and aggregations. This service allows Documents to be searchable and is responsible to make the searches. The [Search](ref:search-1) and [Scroll](ref:scroll-1) APIs go to the Search Engine service and can retrieve many Documents at once.
+The Worker service is responsible for ensuring data consistency and enabling advanced operations by automating and optimizing backend processes. Key features include:
 
-When any data in the Storage is updated, a message is sent to Master Data Worker to execute triggers and to send the latest version of the Documents to the Search Engine, so the updated Documents become searchable. More details about this process can be found in the [Consistency Level](/docs/guides/master-data-consistency-level) article.
+- **Document indexing:** Sends Documents to the [Search Engine](#search-engine) for indexing, keeping data searchable and up-to-date.
+- **Trigger execution:** Automates tasks triggered by specific events, such as updating fields or sending notifications (e.g., emailing a client when their Document is updated).
+- **Bulk data operations:** Handles bulk imports or exports of Documents in CSV format for specific Data Entities.
+
+The Worker service ensures data is consistently updated across all services, maintaining integrity and accessibility.
+
+### Storage service
+
+The Storage service functions as the central repository for your data. It is a secure, scalable database designed to store billions of documents for VTEX accounts. Key features include:
+
+- **Document storage:** Documents are securely stored and can be retrieved individually via the Documents API.
+- **Account-specific access:** Data access is account-specific. A store account can only access its own data, ensuring strict data isolation between accounts.
+
+> **Tip:** For precise and secure data retrieval, use the Documents API, which retrieves one document per request.
+
+### Search Engine service
+
+The Search Engine service enables advanced filtering and aggregations, allowing users to filter, sort, and retrieve Documents. It indexes data from the Storage service, enabling the retrieval of multiple documents through filtering and scrolling.
+
+> **Tip:** Use the Search and Scroll APIs to retrieve large sets of indexed data from the Search Engine with advanced filtering and pagination capabilities.
+
+## Data consistency workflow
+
+To ensure data consistency across its services, Master Data employs a synchronized workflow:
+
+1. **Storage update:** When data is updated in Storage, a notification is triggered to inform other services.
+2. **Worker execution:** The Worker processes the notification, executes any associated triggers, and forwards the updated Document to the Search Engine.
+3. **Search Engine update:** The Search Engine indexes the updated document, making the latest version available for search and retrieval.
+
+For more information, refer to the [Consistency Level](https://developers.vtex.com/docs/guides/master-data-consistency-level) article.
+
