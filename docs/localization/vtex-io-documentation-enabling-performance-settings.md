@@ -156,7 +156,7 @@ The use of the `__fold__` block is recommended for scrollable pages. With this b
 
 Additionally, use the `__fold__.experimentalLazyAssets` block to specify which theme blocks should load statically upon the first user interaction.
 
-> ℹ️ Learn more about fold blocks in the guide [Lazy loading components](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-fold-blocks). 
+> ℹ️ Learn more about fold blocks in the guide [Lazy loading components](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-fold-blocks).
 
 > ⚠️ If you notice any side effects on the store website, please [open a ticket to VTEX support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
 
