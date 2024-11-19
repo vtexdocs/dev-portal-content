@@ -2,6 +2,7 @@
 title: "Consistency Level"
 slug: "master-data-consistency-level"
 hidden: false
+excerpt: Learn how data synchronization operates across Master Data API endpoints.
 createdAt: "2021-04-08T20:22:51.616Z"
 updatedAt: "2021-06-23T02:09:50.777Z"
 ---
@@ -20,13 +21,13 @@ This approach ensures that all users see the same data at the same time, without
 
 In eventual consistency, changes take some time to propagate across instances. The updates are queued and processed asynchronously, meaning users may not see the updated data immediately. This approach is used in resource-intensive tasks, especially in large datasets. As a result, performance is optimized while synchronization occurs gradually.
 
-For example, the `/search` API uses eventual consistency. After a document is updated, the change will appear in the search results only after it has been processed by the system. 
+For example, the `/search` API uses eventual consistency. After a Document is updated, the change will appear in the search results only after the system has processed it. 
 
 When data is persisted in Master Data, the Storage is updated in an atomic operation. A message is sent to the Master Data Worker to trigger actions like sending the updated Document to the Search Engine. Only after the Search Engine is updated will the changes be available through the `/search` API.
 
 For more information on the update process in the Search Engine, refer to [Schema Lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle).
 
-### Example
+## Example
 
 Consider the following Document:
 
@@ -47,7 +48,7 @@ If the `firstName` value is updated to `Super Jhon`, two subsequent API requests
 
 Note that the `/documents` API provides the updated data immediately (strong consistency), whereas the `/search` API reflects the change only after the update is processed asynchronously (eventual consistency).
 
-## Consistency level
+## Consistency level by API endpoint
 
 The table below shows the consistency level for each API endpoint.
 
