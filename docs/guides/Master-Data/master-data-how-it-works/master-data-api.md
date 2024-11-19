@@ -5,6 +5,9 @@ excerpt: Learn how to manage and retrieve documents, define data structures, and
 hidden: false
 createdAt: "2021-04-08T20:22:19.710Z"
 updatedAt: "2021-10-28T22:16:34.979Z"
+seeAlso:
+    - /docs/api-reference/master-data-api-v2
+    - /docs/api-reference/masterdata-api
 ---
 
 Master Data API provides a structured way to store, retrieve, and manage data. It is organized into two categories:
