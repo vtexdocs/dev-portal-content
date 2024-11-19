@@ -2,8 +2,7 @@
 title: "Components"
 slug: "master-data-components"
 hidden: false
-metadata: 
-  title: "Master Data - Components"
+excerpt: Learn about Data Entities, Documents, Fields, and Indexes in Master Data, and how these components work together to structure and optimize data for efficient querying.
 createdAt: "2021-04-08T20:20:35.782Z"
 updatedAt: "2021-04-08T22:22:38.592Z"
 ---
