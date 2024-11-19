@@ -2,20 +2,33 @@
 title: "Consistency Level"
 slug: "master-data-consistency-level"
 hidden: false
-metadata: 
-  title: "Master Data - Consistency Level"
 createdAt: "2021-04-08T20:22:51.616Z"
 updatedAt: "2021-06-23T02:09:50.777Z"
 ---
-Master Data is a distributed database system, which allows the data to be quickly accessed and managed all over the world. A distributed system is a network of servers spread around the world. An important feature of this kind of system is that the data needs to be consistent. In other words, when there is a change in the data, this change needs to be replicated to be available by all other instances. The propagation of this change to all instances is what guarantees the consistency of the data. This happens in two ways: with strong consistency and with eventual consistency.
+
+Master Data is a distributed database system designed to provide fast global access to data. In such systems, maintaining data consistency is essential to ensure that changes are accurately reflected across all instances.
+
+This consistency is achieved through two approaches: strong consistency and eventual consistency.
 
 ## Strong consistency
 
-Strong consistency means that a change can be accessed immediately after it occurred. For that to occur, the other instances will lock the access to that piece of data until all of them are updated.
+With strong consistency, any change to data is immediately reflected and accessible after it occurs. This is achieved by locking access to the updated data until all instances have been synchronized.
 
-When using `/documents` API to store and retrieve documents, users experience a strong consistency for reading after a Document is updated.
+This approach ensures that all users see the same data at the same time, without delay. For example, when using the `/documents` API to store and retrieve data, strong consistency ensures that the data is immediately up-to-date after any changes to a Document.
 
-Take the following Document as example in a Data Entity:
+## Eventual consistency
+
+In eventual consistency, changes take some time to propagate across instances. The updates are queued and processed asynchronously, meaning users may not see the updated data immediately. This approach is used in resource-intensive tasks, especially in large datasets. As a result, performance is optimized while synchronization occurs gradually.
+
+For example, the `/search` API uses eventual consistency. After a document is updated, the change will appear in the search results only after it has been processed by the system. 
+
+When data is persisted in Master Data, the Storage is updated in an atomic operation. A message is sent to the Master Data Worker to trigger actions like sending the updated Document to the Search Engine. Only after the Search Engine is updated will the changes be available through the `/search` API.
+
+For more information on the update process in the Search Engine, refer to [Schema Lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle).
+
+### Example
+
+Consider the following Document:
 
 ```
 {
@@ -24,54 +37,19 @@ Take the following Document as example in a Data Entity:
 }
 ```
 
-In this example, the value of `firstName` is changed to `Super Jhon` and, immediately after that, two API requests are made to get the Document. The first one tries to obtain the Document through the ID using the `/documents` endpoint. The second request is a search looking for the new value of `firstName` using the `/search` endpoint. The two requests are made as:
+If the `firstName` value is updated to `Super Jhon`, two subsequent API requests made immediately after the update may yield different results:
 
-`GET /documents/0e860678-83cc-4c21-8194-3377adcee0b7?_fields=id,firstName`
 
-and
+|Endpoint|Consistency Type|API Request|Response|
+|-----|-------|-----------|---------|
+|`/documents`|Strongly Consistent|`GET /documents/0e860678-83cc-4c21-8194-3377adcee0b7?_fields=id,firstName`|`{ "id": "0e860678-83cc-4c21-8194-3377adcee0b7", "firstName": "Super Jhon" }`|
+|`/search`|Eventually Consistent|`GET /search?_where=firstName="Super Jhon"&_fields=id,firstName`|`{}`|
 
-`GET /search?_where=firstName="Super Jhon"&_fields=id,firstName`
-
-You will notice the following responses respectively:
-
-```
-GET /documents/0e860678-83cc-4c21-8194-3377adcee0b7?_fields=id,firstName
-Status Code: 200
-{
- 	"id": "0e860678-83cc-4c21-8194-3377adcee0b7",
- 	"firstName": "Super Jhon"
-}
-```
-
-and
-
-```
-GET /search?_where=firstName="Super Jhon"&_fields=id,firstName
-Status Code: 200
-{
-}
-```
-
-The `/document` API is strongly consistent and it will respond to the data updated immediately after the change. But with the `/search` API, the result of the change does not appear since it is not strongly consistent.
-
-## Eventual consistency
-
-Eventual consistency means that the change takes some time to be reflected and be available to the user. In other words, the change will enter in a queue and eventually will be propagated to all the server instances.
-
-Unlike the operations with `/document`, the `/search` API is eventually consistent and the updated data will be shown after a short time.
-
-The `/document` API goes directly to the Storage service whereas the `/search` API goes to the Search Engine service. When some data is persisted in Master Data, the Storage is updated in an atomic operation. A message is sent to Master Data Worker to execute triggers and to send the Document to the Search Engine. Only after the Search Engine is updated that the updated Documents will be available through the `/search` API.
-[block:callout]
-{
-  "type": "info",
-  "body": "The necessity of eventual consistency for the `/search` API is that indexing the Documents in the Search Engine is a costly operation (even more when the amount of Documents is too large), so it happens asynchronously from the direct access of the Documents using the `/document` API."
-}
-[/block]
-A more detailed explanation of the update process in the Search Engine can be found in the article [Schema Lifecycle](/docs/guides/master-data-schema-lifecycle).
+Note that the `/documents` API provides the updated data immediately (strong consistency), whereas the `/search` API reflects the change only after the update is processed asynchronously (eventual consistency).
 
 ## Consistency level
 
-The table below shows the consistency level for each API.
+The table below shows the consistency level for each API endpoint.
 
 | Name | Path | Level |
 | - | - | - |
