@@ -103,10 +103,6 @@ From left to right: original icon asset, new icon asset (recommended adaptation)
 
 If possible, pick a background color for your asset that is appropriate for your brand and does not include any transparency. Transparent assets will display the background color of the App Store UI.
 
-#### Figma Template
-
-Access our [Figma Community template](https://www.figma.com/community/file/1246469471037339772) and use our baseline grid and keylines on the Guide page.
-
 ### Screenshots
 
 Use screenshots to visually represent your app's key features and purpose.
@@ -124,10 +120,6 @@ Use screenshots to visually represent your app's key features and purpose.
 - Do not use images that reveal actual usernames and accounts. Opt to take images with fictional or blurred information.
 - Do not fully maximize the window when taking a screenshot. It can damage the quality of the image.
 
-Download and use our templates to create great app images for your App Page, such as the ones from the [Live Shopping](https://apps.vtex.com/liveshopping/p) app.
-
-- [Download image templates - Figma](https://www.figma.com/community/file/1078681677235396508)
-
 ## Licenses
 
 Licenses are written documents that contain your app's Terms and Conditions (T&C). They establish the direct business relationship between you, the developer, and the retailer that installs the app.
@@ -139,9 +131,9 @@ Licenses are written documents that contain your app's Terms and Conditions (T&C
 - Consider wording limiting liability clauses.
 - Remember to cover Intellectual Property issues.
 - Offer the T&C in your User's language (Expected in English, Portuguese, and Spanish).
-- Analyze the consumer laws of the countries in which you operate, and offer consumers the rights provided.
+- Analyze the consumer laws of the countries where you operate, and offer consumers the rights provided.
 - Review specific legislation related to your business, such as those issued by central banks if you are in financial services.
-- Make it clear how you can hire your service: free, freemium, or premium, for example. Also, review the regulations regarding the payment methods you will accept.
+- Make it clear how to hire your service: free, freemium, or premium, for example. Also, review the regulations regarding the payment methods you will accept.
 
 > ⚠️ The recommendations presented here are intended to serve as guidelines for third-party developers and do not represent a legal recommendation. VTEX is not responsible for direct, indirect, moral, punitive damages, consequential damages, or loss of profits arising from the use and/or compliance with these guidelines. Hiring legal advice is necessary and recommended for the final writing of terms and conditions for applications.
 
