@@ -9,7 +9,7 @@ Developing and publishing apps on the VTEX App Store requires meticulous documen
 
 ## Identifying your audience
 
-Clearly distinguish between developers and business users when developing documentation. Developers will focus on installation, setup, and other configuration options, while business users need a streamlined understanding of app functionalities and operations.
+When developing documentation, clearly distinguish between developers and business users. Developers will focus on installation, setup, and other configuration options, while business users need a streamlined understanding of app functionalities and operations.
 
 ## Defining the documentation objectives
 
@@ -40,7 +40,7 @@ The title must be concise and memorable. Ensure that it describes the experience
 
 - Do not use the word _App_.
 
-- Do not include the version number of the app.
+- Do not include the app version number.
 
 | ✅ Do              | ❌ Don't                 |
 |--------------------|---------------------------|
@@ -60,7 +60,7 @@ The introduction should summarize your app’s purpose and what the user will le
 |--------|----------|
 | The `Availability Subscriber` component shows the availability subscriber form displayed when a product is unavailable. This component can be imported and used by any VTEX App. | The `Availability Subscriber` is a First-Party solution and can be imported and used by any VTEX App.|
 
-### (Optional) Before you start
+### (Optional) Before you begin
 
 Before the app’s installation, the user may need to meet some prerequisites. For example, an account or permission in another platform, knowledge of specific web technology, or a development tool like the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
