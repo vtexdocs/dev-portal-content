@@ -2,8 +2,7 @@
 title: "Architecture"
 slug: "master-data-architecture"
 hidden: false
-metadata: 
-  title: "Master Data - Architecture"
+excerpt: Learn how the Master Data core services (API, Worker, Storage, and Search Engine) ensure data consistency and efficient document management.
 createdAt: "2021-04-08T20:20:59.105Z"
 updatedAt: "2021-11-18T13:44:22.424Z"
 ---
