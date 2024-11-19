@@ -5,38 +5,50 @@ hidden: false
 createdAt: "2021-04-08T20:22:19.710Z"
 updatedAt: "2021-10-28T22:16:34.979Z"
 ---
-Master Data allows users to store and manage data in a structured manner. To abstract this kind of organization, the Master Data API is divided in two categories: Data Plane and Control Plane. The Data Plane is where the management of records happens, including searches and accessing documents. The Control Plane is where the structure of both the records and the access to them is defined.
+
+Master Data API provides a structured way to store, retrieve, and manage data. It is organized into two categories:
+- **[Data Plane](#data-plane):** Manages records, enabling tasks such as searching and accessing documents. 
+- **[Control Plane](#control-plane):** Defines the structure of records and access configurations.
 
 ## Data Plane
 
-The Data Plane is the category to store and retrieve documents. The Data Plane has a higher access volume to provide the necessary data to the stores, so the access to the Data Plane happens quickly and is highly available.
+The Data Plane stores and retrieves documents. Designed for high-volume operations, the Data Plane ensures quick and reliable data access for store operations.
 
-The `/documents` API can be used to store and retrieve documents. In case of retrieval, you must indicate the `id` field of the desired document. The `id` field contains an unique identifier of the document.
+### Getting a Document by `id`
 
-The `id` field of a document can be found through a search using other fields (i.e.: the name of a client). The `/search` and `/scroll` APIs can be used to find documents by fields that are set up as Searchable or as an Index.
+The `/documents` endpoint is used to store and retrieve individual Documents. To retrieve a Document, you must provide the `id` value of the desired document, which serves as the unique identifier of the Document.
 
-Searchable is a field configuration which enables the field to be used in the `/scroll` API. In Master Data V1, it is the `Is Filter` property. In Master Data V2, it is the `v-indexed` property.
+### Searching for Documents
 
-An Index is a configuration which enables a shortcut to retrieve documents faster and to guarantee uniqueness, which represents an alternative to using the `id`. More information about Indices can be found in the article [Components](https://developers.vtex.com/docs/guides/master-data-components).
+When the `id` of a document is unknown, you can use the following APIs to locate it using Searchable fields or Indexes:
+
+- `/search`: Retrieves documents using Index fields. Learn more about Indices in [Components](https://developers.vtex.com/docs/guides/master-data-components).
+- `/scroll`: Handles large datasets, enabling bulk document retrieval through Searchable fields.
+
+> Searchable fields are configured to work with the `/search` and `/scroll` endpoints. In Master Data V1, they are defined using the `Is Filter` property. In Master Data V2, they use the `v-indexed` property.
 
 ## Control Plane
 
-The Control Plane is the category that lets you manage how Data Plane behaves. Developers can configure validation, search and triggers within Data Entities. Since the Control Plane only deals with the structure, and not the records themselves, access to the Control Plane happens less frequently than to the Data Plane.
+The Control Plane manages the structure and behavior of the Data Plane. It enables developers to configure data validation, searchable fields and triggers within Data Entities. Control Plane operations are less frequent but crucial for defining data structures.
 
-Master Data V1 does not have a Control Plane API. All configuration is handled by the Admin through the Dynamic Storage, which can be accessed using the link `https://{{account}}.ds.vtexcrm.com.br` or through Admin, on **Store Settings > Storefront > Master Data > ⚙ > Data structure**.
+### Master Data V1
 
-Master Data V2 has the `/schema` and `/indices` APIs and allows users to create and update [JSON Schemas](https://spacetelescope.github.io/understanding-json-schema/) to any Data Entity at Master Data V2.
+Master Data V1 does not provide a Control Plane API. All configurations are handled via the VTEX Admin through the Dynamic Storage at **Store Settings > Storefront > Master Data > ⚙ > Data structure** (`https://{{account}}.ds.vtexcrm.com.br`).
 
->⚠️ Creating and updating JSON Schemas changes the Data Plane behavior. JSON Schemas only exist in Master Data V2.
+### Master Data V2
+
+Master Data V2 has the `/schema` and `/indices` endpoints, allowing for the creation and management of [JSON Schemas](https://json-schema.org/) for Data Entities. These schemas define the structure of stored data and directly influence how the Data Plane processes and validates documents.
+
+>⚠️ JSON Schemas are exclusive to Master Data V2.
 
 ## Master Data API endpoints
 
-The table below shows what endpoints from Master Data API belong to which category and Master Data version.
+The table below summarizes the available endpoints, their categories, descriptions, and supported versions.
 
-| Name | Path | Category | Description | Version |
-| - | - | - | - | - |
-| Schemas | `/schemas` | Control Plane |  Create and read schemas for a Data Entity. The use of schemas enables searches with custom fields and to add rules when managing documents. More information about schemas can also be found in the article [Schema Lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle). | [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2) |
-| Indices | `/indices` | Control Plane | Retrieve, create or delete indices, which are shortcuts to documents that enable fast access using other fields beyond the document `id`. More information about indices can be found in the article [Components](https://developers.vtex.com/docs/guides/master-data-components). | [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2) |
-| Documents | `/documents` | Data Plane | Manage documents directly, accessing them individually through their `id`. | [Master Data API - v1](https://developers.vtex.com/docs/api-reference/masterdata-api) <br> [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2) |
-| Search | `/search` | Data Plane | Retrieve documents with a variety of parameters, including schemas and indexed fields. | [Master Data API - v1](https://developers.vtex.com/docs/api-reference/masterdata-api) <br> [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2) |
-| Scroll | `/scroll` | Data Plane | Retrieve a large amount of documents. | [Master Data API - v1](https://developers.vtex.com/docs/api-reference/masterdata-api) <br> [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2) |
+| Endpoint | Category | Description                                                                | V1 Documentation | V2 Documentation |
+|----------|----------|----------------------------------------------------------------------------|------------------|------------------|
+| `/schemas`   | Control Plane | Creates and manages schemas for a Data Entity. The use of schemas enables searches with custom fields and to add rules when managing documents. Learn more in [Schema Lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle). | N/A  |    <ul><li><a href="https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas">Get schemas</a></li><li><a href="https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/schemas/-schemaName-">Get schema by name</a></li><li><a href="https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-">Save schema by name</a></li><li><a href="https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/schemas/-schemaName-">Delete schema by name</a></li></ul>  |
+|  `/indices`   | Control Plane | Manages indices for fast Document access via fields other than `id`. Learn more in [Components](https://developers.vtex.com/docs/guides/master-data-components). | N/A      | <ul><li>[Get indices](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/indices)</li><li>[Put indices](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/indices)</li><li>[Get index by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/indices/-index_name-)</li><li>[Delete index by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/indices/-index_name-)</li></ul>    |
+|  `/documents` | Data Plane    | Manages individual Documents using their `id`.                                      | <ul><li><a href="https://developers.vtex.com/docs/api-reference/masterdata-api#post-/api/dataentities/-acronym-/documents">Create new document</a></li><li><a href="https://developers.vtex.com/docs/api-reference/masterdata-api#put-/api/dataentities/-acronym-/documents/-id-">Create document with custom ID or Update entire document</a></li><li><a href="https://developers.vtex.com/docs/api-reference/masterdata-api#patch-/api/dataentities/-acronym-/documents">Create or update partial document</a></li><li><a href="https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/documents/-id-">Get document</a></li><li><a href="https://developers.vtex.com/docs/api-reference/masterdata-api#put-/api/dataentities/-acronym-/documents/-id-">Update entire document</a></li><li><a href="https://developers.vtex.com/docs/api-reference/masterdata-api#patch-/api/dataentities/-acronym-/documents/-id-">Update partial document</a></li><li><a href="https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-">Delete document</a></li></ul>          |  <ul><li>[Create new document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents)</li><li>[Create partial document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#patch-/api/dataentities/-dataEntityName-/documents)</li><li>[Get document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/documents/-id-)</li><li>[Create document with custom ID or Update entire document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-)</li><li>[Update partial document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#patch-/api/dataentities/-dataEntityName-/documents/-id-)</li><li>[Delete document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)</li></ul>       |
+|`/search`    | Data Plane    | Retrieves documents based on parameters like schemas and indexed fields.                     | [Search documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search)           | [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search)       |
+|`/scroll`   | Data Plane    | Retrieves large amount of Documents.                                                       | [Scroll documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/scroll)           | [Scroll documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/scroll)       |
