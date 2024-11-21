@@ -222,7 +222,8 @@ Before a VTEX store can provide payments in the physical world, some setup steps
 2. Configure a Gateway affiliation with the installed connector. You can find more details in the [Registering gateway affiliations](https://help.vtex.com/en/tutorial/registering-gateway-affiliations--tutorials_444) article.
 3. Configure a payment condition that works with a POS. For credit cards is **Venda Direta Crédito**, and for debit cards is **Venda Direta Débito**. Remember to choose the configured affiliation. You can find more details in the [Configuring payment conditions](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) article.
 4. Make the payment method available on the VTEX Sales App by following the steps in the [Define payment methods displayed on VTEX Sales App](https://developers.vtex.com/docs/guides/define-payment-methods-displayed-on-vtex-sales-app) article. The ID of the payment conditions used in the `filter` array is `44` for debit and `45` for credit and it can also be checked on the **Payment Conditions** page of the Admin.
-5. [Install the VTEX Sales App](https://help.vtex.com/pt/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh) on a device of your choice and simulate a purchase using your connector as a payment condition.
+5. [Install the VTEX Sales App](https://help.vtex.com/pt/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh) on a device of your choice.
+6. Simulate a purchase using your connector as a payment condition.
 
 ## Making your connector available to everyone
 
