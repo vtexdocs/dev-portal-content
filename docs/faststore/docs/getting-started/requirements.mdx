@@ -9,19 +9,17 @@ updatedAt: "2024-06-03T11:30:00.813Z"
 
 For more information, please refer to [this guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
-## Install the Headless CMS and dependencies
+## Install Headless CMS and its dependencies
 
-The [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) is the content management solution for FastStore projects. During the [Onboarding](https://developers.vtex.com/docs/guides/faststore/getting-started-overview),
-the integration between your project and the Headless CMS is initiated.
+[Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) is the content management solution for FastStore projects. During the [Onboarding](https://developers.vtex.com/docs/guides/faststore/getting-started-overview),
+the integration between your project and Headless CMS is initiated.
 
 To prevent content duplication that could cause build failures during Onboarding, it is important to confirm the installation of the following apps in your account: 
 - `vtex.admin-cms@1.x`
 - `vtex.admin-cms-graphql`
 - `vtex.admin-cms-graphql-rc`
 
-To check whether you have them installed, refer to [Installing the Headless CMS app](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#installing-the-headless-cms-app-and-its-dependencies).
-
-### Checking installed apps in your account
+To check whether you have them installed, follow the instructions below:
 
 1. Open the terminal and log in to your account using the following command. *Remember to replace `{accountName}` with your account's name.*
 
@@ -31,12 +29,9 @@ To check whether you have them installed, refer to [Installing the Headless CMS 
 
 2. Run `vtex ls` to list all the installed apps in your account.
 3. Check if the `vtex.admin-cms@1.x`, `vtex.admin-cms-graphql`, and `vtex.admin-cms-graphql-rc` are in the list.
+If yes, proceed to check the [next requirement](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#install-headless-cms-plugins). If not, continue following these instructions.
 
-If yes, proceed to check other requirements. If not, install them by following the instructions in [Installing the Headless CMS app](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#installing-the-headless-cms-app-and-its-dependencies).
-
-### Installing the Headless CMS app and its dependencies
-
-1. After logging into your account, install `vtex.admin-cms@1.x` by running the following command:
+4. After logging into your account, install `vtex.admin-cms@1.x` by running the following command:
 
     ```bash
     vtex install vtex.admin-cms@1.x
@@ -46,13 +41,43 @@ If yes, proceed to check other requirements. If not, install them by following t
 
     ![installation-message](https://vtexhelp.vtexassets.com/assets/docs/src/cms-install___7144afabf5a895ba92905926808507b2.png)
 
-2. Install the Headless CMS dependencies by running the following command:
+5. Install Headless CMS dependencies by running the following command:
 
     ```bash
     vtex install vtex.admin-cms-graphql vtex.admin-cms-graphql-rc
     ```
 
-Once the app and its dependencies are installed, proceed to check the next requirements.
+Once the app and its dependencies are installed, proceed to check the [next requirement](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#install-headless-cms-plugins).
+
+## Install Headless CMS plugins
+
+To ensure you won't get errors while running Headless CMS commands in the CLI, install Headless CMS plugins by following these steps:
+
+1. Open the terminal and log in to your VTEX account using the VTEX IO CLI:
+
+    > ⚠️ Remember to replace the values between curly brackets according to your account name.
+
+    ```bash
+    vtex login {account}
+    ```
+
+2. Install Headless CMS plugins:
+
+    ```bash
+    vtex plugins install cms
+    ```
+
+Now, check if the installation of Headless CMS plugins was successful by running `vtex cms`.
+
+![success-vtex-cms-sync](https://vtexhelp.vtexassets.com/assets/docs/src/faststore-vtex-cms___460365970fb39c94e300b9fbd497e17e.png)
+
+> ⚠️
+>
+> - **Windows user:** If you find problems while installing the plugin, please refer to the [Troubleshooting](https://developers.vtex.com/docs/guides/faststore/troubleshooting-error-installing-headless-cms) article
+>
+> - **macOS user:** If you find problems, run `yarn config set ignore-engines true` to ignore the Node.js incompatibility version, then run `vtex plugins install cms` again.
+>
+> Remember, we recommend using the latest Node.js version or a version higher than `15.0.0`.
 
 ## Enable the VTEX Intelligent Search app in your account
 
