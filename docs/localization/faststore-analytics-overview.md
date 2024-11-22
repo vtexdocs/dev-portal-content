@@ -1,7 +1,7 @@
 ---
-title: Analytics
-slug: faststore-analytics-overview
-createdAt: 2024-11-05T18:10:15.623Z
+title: "Analytics"
+slug: "faststore-analytics-overview"
+createdAt: "2024-11-05T18:10:15.623Z"
 updatedAt: ""
 ---
 
@@ -23,26 +23,26 @@ Additionally,  the Analytics module offers built-in [ecommerce event](https://su
 The Analytics module comes with native types based on [ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en). All event types are available for use and extension. Here is a list of events natively supported by the Analytics module:
 
 | Type | Parameters |
-| --- | --- |
-| `add_payment_info` | `currency`, `value`, `coupon`, `payment_type`, and `items` |
-| `add_shipping_info` | `currency`, `value`, `coupon`, `shipping_tier`, and `items` |
-| `add_to_cart` | `currency`, `value`, and `items` |
-| `add_to_wishlist` | `currency`, `value`, and `items` |
-| `begin_checkout` | `currency`, `value`, `coupon`, and `items` |
-| `login` | `method` |
-| `page_view` | `page_title`, `page_location`, and `send_page_view` |
-| `purchase` | `currency`, `transaction_id`, `value`, `affiliation`, `coupon`, `shipping`, `tax`, and `items` |
-| `refund` | `currency`, `transaction_id`, `value`, `affiliation`, `coupon`, `shipping`, `tax`, and `items` |
-| `remove_from_cart` | `currency`, `value`, and `items` |
-| `search` | `search_term` |
-| `select_item` | `item_list_id`, `item_list_name`, and `items` |
-| `select_promotion` | `item_list_id`, `item_list_name`, and `items` |
-| `share` | `method`, `content_type`, and `item_id` |
-| `signup` | `method`, `content_type`, and `item_id` |
-| `view_cart` | `currency`, `value`, and `items` |
-| `view_item` | `currency`, `value`, and `items` |
-| `view_item_list` | `item_list_id`, `item_list_name`, and `items` |
-| `view_promotion` | `items` |
+|--------|-----------------|
+|`add_payment_info`|`currency`, `value`, `coupon`, `payment_type`, and `items`|
+|`add_shipping_info`|`currency`, `value`, `coupon`, `shipping_tier`, and `items`|
+|`add_to_cart`|`currency`, `value`, and `items`|
+|`add_to_wishlist`|`currency`, `value`, and `items`|
+|`begin_checkout`|`currency`, `value`, `coupon`, and `items`|
+|`login`|`method`|
+|`page_view`|`page_title`, `page_location`, and `send_page_view`|
+|`purchase`|`currency`, `transaction_id`, `value`, `affiliation`, `coupon`, `shipping`, `tax`, and `items`|
+|`refund`|`currency`, `transaction_id`, `value`, `affiliation`, `coupon`, `shipping`, `tax`, and `items`|
+|`remove_from_cart`|`currency`, `value`, and `items`|
+|`search`|`search_term`|
+|`select_item`|`item_list_id`, `item_list_name`, and `items`|
+|`select_promotion`|`item_list_id`, `item_list_name`, and `items`|
+|`share`|`method`, `content_type`, and `item_id`|
+|`signup`|`method`, `content_type`, and `item_id`|
+|`view_cart`|`currency`, `value`, and `items`|
+|`view_item`|`currency`, `value`, and `items`|
+|`view_item_list`|`item_list_id`, `item_list_name`, and `items`|
+|`view_promotion`|`items`|
 
 Each event exports at least two types: one for the event parameters and one for the event type itself. For example, the `add_to_cart` event has two exported types: `AddToCartParams<T extends Item = Item>` and `AddToCartEvent<T extends Item = Item>`.
 
