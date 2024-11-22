@@ -2,7 +2,7 @@
 title: "Managing Performance"
 slug: "store-framework-managing-performance"
 hidden: false
-createdAt: "2024-11-08T15:53:16.138Z"
+createdAt: "2024-11-22T18:14:56.195Z"
 updatedAt: ""
 excerpt: "Explore the key configurations to improve your store performance on Store Framework."
 ---
@@ -21,7 +21,7 @@ In this section, you will learn how to optimize your website performance by conf
 
 Ensure your store has a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) developed following the [Storefront](https://developers.vtex.com/docs/guides/getting-started-3) guide.
 
-Customize your store theme based on your business needs by following the guides within the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) section, such as the guides [Building pages](https://developers.vtex.com/docs/guides/building-pages) and [Using components](https://developers.vtex.com/docs/guides/using-components).
+Customize your store theme based on your business needs by following the guides within the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) section, such as the guides [Building pages](https://developers.vtex.com/docs/guides/store-framework-building-pages) and [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components).
 
 ### Check the builders
 
