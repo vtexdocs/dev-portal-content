@@ -59,7 +59,6 @@ Pagination with the scroll endpoint is managed using three parameters:
 
 * `_size`: Specifies the number of documents returned per request. The maximum value is 1000.
 * `_token`: A unique token returned in the `X-VTEX-MD-TOKEN` header of the first request. This token is passed as a query parameter in subsequent requests to retrieve the next page of results. It expires in 20 minutes.
-* `_page`: Specifies the page to retrieve.
 
 In the initial request, you should only use `_size` to determine the number of results per page, as you will obtain the `_token` value in the  `X-VTEX-MD-TOKEN` response header.
 
@@ -69,8 +68,6 @@ Example of an initial request:
 
 >ℹ️ You can only define the page size in the first request. It cannot be changed in subsequent requests.
 
-To obtain the next pages, you can choose between retrieving subsequent pages or retrieving a specific page. See details about each option in the following sections.
-
 ### Retrieving subsequent pages
 
 Use the `X-VTEX-MD-TOKEN` header returned from the previous request as the `_token` query parameter in your next request to retrieve the subsequent pages. You can repeat this request until the response body is empty, indicating that there are no more documents to retrieve.
@@ -78,14 +75,6 @@ Use the `X-VTEX-MD-TOKEN` header returned from the previous request as the `_tok
 Subsequent requests to retrieve additional pages:
 
 `GET /api/dataentities/{data_entity}/scroll?_token={X-VTEX-MD-TOKEN}`
-
-### Retrieving specific pages
-
-In case you want to specify the page to retrieve, include the `_page` query parameter. This is useful when you need direct access to a particular page without sequentially navigating through all prior pages.
-
-Request to retrieve a specific page:
-
-`GET /api/dataentities/{data_entity}/scroll?_token={X-VTEX-MD-TOKEN}&_page={page_number}`
 
 ### Checking if more pages are available
 
