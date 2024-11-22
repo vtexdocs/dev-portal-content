@@ -43,6 +43,6 @@ Store Framework offers several image blocks for different use cases. Selecting t
 
 Follow these guidelines to upload images efficiently and avoid performance issues:
 
-- To upload images, use the [Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-assets-builder) or [Site Editor](https://developers.vtex.com/docs/guides/working-with-site-editor). These tools handle cropping automatically, ensuring a consistent user experience across your store.
+- To upload images, use the [Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-assets-builder) or [Site Editor](https://developers.vtex.com/docs/guides/store-framework-working-with-site-editor). These tools handle cropping automatically, ensuring a consistent user experience across your store.
 - Avoid hardcoding image URLs in the `blocks.json` file, as this can lead to image deformation.
 - Don't use images with large dimensions, as they may not crop correctly in Site Editor, leading to display issues.
