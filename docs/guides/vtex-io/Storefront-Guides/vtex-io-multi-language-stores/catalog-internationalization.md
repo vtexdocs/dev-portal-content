@@ -33,7 +33,7 @@ To translate text messages from your store catalog, follow these steps:
 
 ![graphql-ide](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/graphql-ide.gif)
 
-5. Based on your scenario, check the sections ([category](#category), [brand](#brand), [product](#product), [SKU](#SKU), [SKU or product specification](#SKU-or-product-specification), [specification values](#specification-values)) for orientations on how to complete the main text box and the _Query variables_ section.
+5. Based on your scenario, check the sections ([category](#category), [brand](#brand), [product](#product), [SKU](#sku), [SKU or product specification](#sku-or-product-specification), [specification values](#specification-values)) for orientations on how to complete the main text box and the _Query variables_ section.
 6. After adjusting your query, click the play button to run the declared mutation. The expected response is a boolean value indicating `true`.
 
 Below is an example of the complete process of the automatic translation of a product name:
