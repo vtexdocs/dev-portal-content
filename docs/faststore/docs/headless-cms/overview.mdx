@@ -21,7 +21,7 @@ Ensure you have a VTEX account to set up the Headless CMS with a FastStore proje
 
 ### Set up your FastStore project
 
-If you do not have a FastStore project, refer to the [Setting up the project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project) guide.
+If you do not have a FastStore project, refer to the [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project) guide.
 
 ### Set up CMS resources with your VTEX user role
 
@@ -43,23 +43,22 @@ To associate a role with the resources mentioned above, you can [create a custom
 
 Headless CMS is a headless content management system that allows users to store content in a decoupled data layer and deliver it as structured data to their FastStore project via an API.
 
-After successfully completing the [FastStore Onboarding process](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview), the app will be installed in your VTEX account. To access it, go to the VTEX Admin and navigate to **Storefront > Headless CMS**.
-The CMS provides a list of all web pages created with it, which is initially empty but populates as editors create new pages.
+After onboarding through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview), users can manage their FastStore project on VTEX Admin by navigating to **Storefront > Headless CMS** under the [Projects](https://help.vtex.com/tutorial/managing-projects--42IpDFqTVTESH8DCypJMPM) feature.
 
-Notice that each page created with the Headless CMS is related to a specific URL and is distinguished by the following properties:
+Each project lists all web pages created within it, starting empty and filling as editors add new pages. Each page corresponds to a unique URL and is identified by the following properties:
 
 | Property name                          | Description                                                                                                                                                                                                                                                                      |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**                               | Identifies a given page. This name is not available elsewhere and is used only internally in the Headless CMS for identification purposes.                                                                                                                                  |
 | **Type** *(a.k.a., Content Type)*      | Determines the nature of a page. For example, the **Type** can be a Landing Page, a Product Listing Page (PLP), a Product Details Page (PDP), etc. You, as a developer, are the one responsible for defining which content types will be available for the editors of your store. |
 | **Last modified**                      | Indicates the last time a given page was edited.                                                                                                                                                                                                                                 |
-| **Version**                            | Identifies the state of a page, if it's `draft` or `published`. Notice that editors can have more than one version of the same page with distinct settings and content.                                                                                           |
+| **Status**                            | Identifies the state of a page: <ul><li><code>Published</code>: Pages that are published and already available in the live store.</li> <li><code>Draft</code>: Pages that are in draft with work in progress and haven't been published yet.</li></ul>                            |
 
 ### Content Types
 
-Once editors click on **Create New** in the Headless CMS interface, they'll be able to select a type from a list of **Content Types** that you, the developer, established.
+Once editors click **Create Document** in the Headless CMS interface, they'll be able to select a type from a list of **Content Types** that you, the developer, established.
 
-![CMS Settings](https://vtexhelp.vtexassets.com/assets/docs/src/cms-content-type___ad51b03aa6be86b12b930a6cdb6b3269.png)
+![CMS Settings](https://vtexhelp.vtexassets.com/assets/docs/src/headless-cms-projects___5472a0870899c945ece289905ac92758.png)
 
 ### Sections
 
