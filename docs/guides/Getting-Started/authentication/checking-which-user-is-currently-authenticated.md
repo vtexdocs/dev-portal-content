@@ -1,28 +1,42 @@
 ---
-title: "Checking which user is currently authenticated"
+title: "Verifying user authentication in your store"
 slug: "checking-which-user-is-currently-authenticated"
+excerpt: Verify if a user is currently authenticated in your store using their authentication token and VTEX APIs.
 hidden: false
 createdAt: "2022-08-04T22:00:24.684Z"
 updatedAt: "2022-08-04T22:08:52.246Z"
 seeAlso:
  - "/docs/guides/api-authentication-using-user-tokens"
 ---
-When a user logs into your store, cookies that store the authorization token are created. From this moment, any request to VTEX servers will load these cookies automatically, identifying the user responsible for the action.
 
-In many contexts different than API requests to VTEX, it may be necessary to verify that the user is logged in or maybe get something that identifies them, such as email or ID. Cookies also allow this type of action.
+In this guide, you will learn how to verify if a user is currently authenticated in your store using their authentication token stored in cookies. Additionally, you will learn how to retrieve identifying information, such as their user ID and email, using VTEX's API.
 
-However, note that these cookies have the "HTTP Only" and "Secure" options enabled, which means that they are not accessible by any JavaScript method, and will only be sent in secure HTTP requests (i.e., using the HTTPS protocol).
+## Authentication cookies overview
 
-So the verification of the user who is authenticated must happen through the following API endpoint:
+When a user logs into your store, cookies are created to store the authorization token. From that point onward, these cookies are automatically included in all requests to VTEX servers, enabling the system to identify the user performing the action.
 
-```bash
+In situations other than API requests to VTEX, you may need to check whether the user is logged in or retrieve identifying information, such as their email or user ID. These actions can also be accomplished using the authentication cookies.
+
+> Note that these cookies have the `HTTP Only` and `Secure` options enabled. This means they cannot be accessed via JavaScript and will only be sent over secure HTTPS requests.
+
+## Instructions
+
+<CH.Scrollycoding>
+
+### Sending the request to verify user authentication
+
+To check the authenticated user, send a request to the indicated API endpoint.
+
+<CH.Code>
+
+```bash Request
 GET
 https://{accountName}.{environment}.com.br/api/vtexid/pub/authenticated/user?authToken={VtexIdclientAutCookie}
 ```
 
-The response will be structured like this:
+---
 
-```json
+```json Response
 {
     "userId": "88888888-8888-8888-8888-888888888888",
     "user": "user@mail.com",
@@ -30,8 +44,29 @@ The response will be structured like this:
 }
 ```
 
-- `userId`: is the user ID within VTEX services.
-- `user`: user email.
-- `userType`: meant for VTEX internal use.
+</CH.Code>
 
-If the user is not authenticated, the response for this API will be empty (`null` response body), with an HTTP status `200 (OK)` or `401 (Unauthorized)`.
+---
+
+### Analyzing the API response
+
+If the user is authenticated, the API will return a JSON object with the following structure:
+
+- `userId`: The unique user ID within VTEX services.
+- `user`: The user's email address.
+- `userType`: Internal VTEX user type identifier (for VTEX use only).
+
+If the user is not authenticated, the response body will be empty (`null`), and the HTTP status will be either `200 (OK)` or `401 (Unauthorized)`.
+
+<CH.Code>
+
+```json Request
+```
+
+---
+
+```json Response mark=2:4
+```
+</CH.Code>
+
+</CH.Scrollycoding>
