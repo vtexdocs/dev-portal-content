@@ -1,14 +1,14 @@
 ---
-title: My pages are taking too long to be published on Headless CMS
-slug: my-pages-are-taking-too-long-to-be-published-on-headless-cms
+title: "My pages are taking too long to be published on Headless CMS"
+slug: "my-pages-are-taking-too-long-to-be-published-on-headless-cms"
 hidden: false
-createdAt: 2024-06-28T14:00:00.000Z
+createdAt: "2024-06-28T14:00:00.000Z"
 updatedAt: ""
-excerpt: Releasing or publishing a page via Headless CMS or Releases can take a long build times
+excerpt: "Releasing or publishing a page via Headless CMS or Releases can take a long build times"
 tags:
-  - headless-cms
-  - releases
-  - faststore
+    - headless-cms
+    - releases
+    - faststore
 ---
 
 **Tags:** Headless CMS, Releases, FastStore
@@ -38,7 +38,7 @@ After [getting the Release identifier](#step-1-verifying-the-release-status), fo
 3. Check the status of the **Build check** for the commit by clicking one of the following icons:
 
 | Icon | Description |
-| --- | --- |
+| ---------- | ----------- |
 | ✓ | The build was successful. If this status doesn't match what you see in the Admin, the communication between the Releases module and WebOps must have failed. No action is required, as this error is related to a communication issue on our end. |
 | ● | The build is queued, waiting for other builds to complete. If queued for longer than 45 minutes, please [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk). |
 | ⨯ | The build failed. For more details, proceed to [Step 3 - Identifying the build error](#step-3 -identifying the build error). |
@@ -53,6 +53,6 @@ If the Release's build failed, follow these instructions to identify the root ca
 
 2. Click the **Re-run checks** button to try deploying your Release again.
 
-   > ⚠️ If the **Re-run checks** button is not available, you might not have _write access_ to the repository. In this case, contact the repository's Admin.
+    > ⚠️ If the **Re-run checks** button is not available, you might not have _write access_ to the repository. In this case, contact the repository's Admin.
 
 3. If the error persists, review the build log, check the error, and [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) with a description of the issue.
