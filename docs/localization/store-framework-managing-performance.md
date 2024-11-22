@@ -1,10 +1,10 @@
 ---
-title: Managing Performance
-slug: store-framework-managing-performance
+title: "Managing Performance"
+slug: "store-framework-managing-performance"
 hidden: false
-createdAt: 2024-11-08T15:53:16.138Z
+createdAt: "2024-11-08T15:53:16.138Z"
 updatedAt: ""
-excerpt: Explore the key configurations to improve your store performance on Store Framework.
+excerpt: "Explore the key configurations to improve your store performance on Store Framework."
 ---
 
 The performance of your website directly impacts overall business success. Fast-loading websites provide a smoother shopping experience, keep users engaged, and reduce bounce rates. In contrast, poor performance, such as slow load times, may frustrate users and result in lost sales.
