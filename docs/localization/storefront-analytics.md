@@ -1,10 +1,10 @@
 ---
-title: Analytics
-slug: storefront-analytics
+title: "Analytics"
+slug: "storefront-analytics"
 hidden: false
-createdAt: 2024-11-06T14:57:11.767Z
+createdAt: "2024-11-06T14:57:11.767Z"
 updatedAt: ""
-excerpt: Explore how to leverage data to drive informed decisions and optimize your VTEX store performance.
+excerpt: "Explore how to leverage data to drive informed decisions and optimize your VTEX store performance."
 ---
 
 Analytics involves collecting, processing, and analyzing data to identify patterns and insights that support decision-making. In ecommerce, analytics helps businesses understand user experience, optimize operations, and drive sales growth.
