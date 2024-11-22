@@ -83,7 +83,7 @@ If the user is not authenticated, the response body will be empty (`null`), and 
 ---
 
 ```json 200-Response
- {}
+ null
 ```
 </CH.Code>
 
