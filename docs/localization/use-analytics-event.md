@@ -4,7 +4,7 @@ createdAt: "2024-11-08T14:10:15.623Z"
 updatedAt: ""
 ---
 
-The `useAnalyticsEvent` hook intercepts both native and custom events fired by the [`sendAnalyticsEvent`](/LINK) function. The hook automatically detects which events were sent by [`sendAnalyticsEvent`](/LINK) and provides a way to respond to those events.
+The `useAnalyticsEvent` hook intercepts both native and custom events triggered by the [`sendAnalyticsEvent`](/LINK) function. The hook automatically detects the events sent by [`sendAnalyticsEvent`](/LINK) and provides a response to them.
 
 ## Import
 
@@ -15,7 +15,7 @@ import { useAnalyticsEvent } from '@faststore/sdk'
 
 ## Usage
 
-The `useAnalyticsEvent` hook accepts a callback function that runs whenever the `sendAnalyticsEvent` is fired. The callback function you provide receives the event that triggered its execution as an argument.
+The `useAnalyticsEvent` hook accepts a callback function that runs whenever the `sendAnalyticsEvent` is triggered. The callback function receives the event that triggered its execution as an argument.
 
 Ideally, you should use the `useAnalyticsEvent` hook to transmit events to the analytics provider of your choice (e.g., Google Analytics).
 
@@ -39,4 +39,4 @@ export const AnalyticsHandler = () => {
 
 ## Events from external libraries
 
-External libraries can also send events via the Analytics module. This means that you might come across unexpected events being intercepted by `useAnalyticsEvent`. This is usually not a problem since most common analytics providers don't break if you send them meaningless data. However, if you face this issue, filter the events by name to ensure that only the desired events are sent to the provider.
+External libraries can also send events via the Analytics module, which means you might come across unexpected events being intercepted by `useAnalyticsEvent`. This is usually not an issue, as most common analytics providers don't break if you send them meaningless data. However, if that's the case, filter events by name to ensure only the desired events are sent to the provider.
