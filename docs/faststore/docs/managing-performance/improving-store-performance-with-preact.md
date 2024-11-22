@@ -1,5 +1,5 @@
 ---
-title: 'Improving store performance with Preact"
+title: 'Improving store performance with Preact'
 ---
 
 Enabling [Preact](https://preactjs.com/) in your FastStore project can reduce the package size used in the project and improve performance. Preact is a lightweight alternative to [React](https://react.dev/) that improves performance by reducing the size of the JavaScript bundle. Enabling Preact decreases the overall build size in a FastStore project, resulting in faster page load times and better performance.
