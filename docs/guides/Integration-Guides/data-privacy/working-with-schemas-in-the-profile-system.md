@@ -28,7 +28,6 @@ Using the `PUT` [Create or delete custom fields](https://developers.vtex.com/doc
 
 - [Adding custom fields](#adding-custom-fields)
 - [Defining PII and sensitive custom fields](#defining-pii-and-sensitive-custom-fields)
-- [Configuring Unique Alternate Keys](#configuring-unique-alternate-keys)
 - [Configuring TTL](#configuring-ttl)
 - [Deleting custom fields](#deleting-custom-fields)
 - [Restrictions](#restrictions)
@@ -75,27 +74,6 @@ Set the `sensitive` and/or `pii` properties as `true` inside the JSON Schema pro
     }
 }
 
-```
-
-### Configuring Unique Alternate Keys
-
-Unique Alternate Keys are properties that must be used to identify the profile, such as email, phone number, and document number. When defined, these properties can be used as the `key` parameter to retrieve and manage information from the Profile System API.
-
-This property must be structured as a string or as an array. The `v-unique-alternate-keys` array accepts up to three items, meaning three different keys. **Once created, alternate keys cannot be removed**.
-
-**Example**
-
-```json
-`v-unique-alternate-keys`: [
-    {
-        "name": "email",
-        "fields": ["email"]
-    },
-    {
-        "name": "phone",
-        "fields": ["phone"]
-    }
-]
 ```
 
 ### Configuring TTL
