@@ -1,10 +1,10 @@
 ---
-title: Optimizing image rendering
-slug: vtex-io-documentation-optimizing-image-rendering
+title: "Optimizing image rendering"
+slug: "vtex-io-documentation-optimizing-image-rendering"
 hidden: false
-createdAt: 2020-06-03T16:02:44.306Z
-updatedAt: 2024-11-08T13:25:53.180Z
-excerpt: Learn how to optimize image rendering for faster load times.
+createdAt: "2020-06-03T16:02:44.306Z"
+updatedAt: "2024-11-08T13:25:53.180Z"
+excerpt: "Learn how to optimize image rendering for faster load times."
 ---
 
 This guide outlines best practices for using images in your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) to maintain consistency and performance.
@@ -21,15 +21,11 @@ This guide presents the following sections:
 Store Framework offers several image blocks for different use cases. Selecting the right block helps to maintain performance and visual consistency.
 
 - [**Logo**](https://developers.vtex.com/docs/apps/vtex.store-components/logo): Renders your brand logo, typically in the header or footer.
-
 - [**Infocard**](https://developers.vtex.com/docs/apps/vtex.store-components/infocard): Renders images with links and call-to-action (CTA) buttons when you want to guide users with image-based CTAs.
-
 - [**Rich Text**](https://developers.vtex.com/docs/apps/vtex.rich-text): Renders markdown text when you need to combine text and images in a single block.
-
 - [**Product Summary Image**](https://developers.vtex.com/docs/apps/vtex.product-summary/productsummaryimage): Renders the product image attached to the product summary information, such as the product name and price. It's commonly used within other store components, like the [Shelf](https://developers.vtex.com/docs/apps/vtex.shelf), to display products with their key details.
 
   When using the Product Summary block, configure at least one of the following props:
-
   - `aspectRatio`
   - `width`
   - `height`
