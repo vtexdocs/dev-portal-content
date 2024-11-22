@@ -1,10 +1,10 @@
 ---
-title: Translating Catalog content
-excerpt: Overwrite automatic message translations from the catalog with more representative content from your store.
-slug: catalog-internationalization
+title: "Translating Catalog content"
+excerpt: "Overwrite automatic message translations from the catalog with more representative content from your store."
+slug: "catalog-internationalization"
 hidden: false
-createdAt: 2020-08-31T17:18:54.238Z
-updatedAt: 2024-10-04T15:19:12.970Z
+createdAt: "2020-08-31T17:18:54.238Z"
+updatedAt: "2024-10-04T15:19:12.970Z"
 ---
 
 In this guide, you'll learn how to overwrite an automatic message translation from the catalog, such as a product name or a product description, with a more specific and representative content of your store.
@@ -273,13 +273,13 @@ Complete the _Query variables_ section with the desired translations for each pa
   > You can retrieve ID values by running the following query:
   >
   > ```gql
-  > query{
+  >query{
   >  fieldValues(fieldId:"24"){
   >    fieldValueId
   >    value
   >  }
-  > }
-  > ```
+  >}
+  >```
   >
   > Where `fieldId` is the specification ID, which you can find following the guide [Products and SKU Specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en).
 
@@ -315,13 +315,13 @@ Complete the _Query variables_ section with the desired translations for each pa
 
   > You can retrieve category group IDs by running the following query:
   >
-  > ```gql
-  > query{
+  >```gql
+  >query{
   >  groupsByCategory(categoryId:1){
   >    id
   >    name
   >  }
-  > }
-  > ```
+  >}
+  >```
   >
   > Where `categoryId` is the ID of the category related to that group.
