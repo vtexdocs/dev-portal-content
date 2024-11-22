@@ -1,6 +1,6 @@
 ---
 title: "`useAnalyticsEvent`"
-createdAt: 2024-11-08T14:10:15.623Z
+createdAt: "2024-11-08T14:10:15.623Z"
 updatedAt: ""
 ---
 
