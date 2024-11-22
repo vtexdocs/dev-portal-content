@@ -1,8 +1,8 @@
 ---
-title: Improving store performance with Preact
-slug: improving-store-performance-with-preact
+title: "Improving store performance with Preact"
+slug: "improving-store-performance-with-preact"
 hidden: false
-createdAt: 2024-10-31T18:10:15.623Z
+createdAt: "2024-10-31T18:10:15.623Z"
 updatedAt: ""
 ---
 
@@ -11,7 +11,7 @@ Enabling [Preact](https://preactjs.com/) in your FastStore project can reduce th
 > ⚠️ This is an experimental feature.
 
 | Before Preact | After Preact |
-| --- | --- |
+| ------------------- | ------------ |
 | ![before-preact](https://vtexhelp.vtexassets.com/assets/docs/src/before-preact___aa7837e2280b911dd89fe3df3171f298.png) | ![after-preact](https://vtexhelp.vtexassets.com/assets/docs/src/after-preact___d5254919671e8304591421d3ec542610.png) |
 | The initial load times for store pages varied significantly, with some pages requiring up to 159 KB of JavaScript to load initially. This resulted in slower performance and longer wait times for users. Additionally, the shared JavaScript bundle was 94.1 KB, further contributing to the initial load size. | Preact optimized store performance by reducing the initial JavaScript load size for all pages. While some pages still required around 100–120 KB of JavaScript, this is an improvement compared to the previous 159 KB. The shared JavaScript bundle was also reduced to 58.7 KB. These optimizations led to faster load times and overall better performance for the store. |
 
@@ -22,16 +22,15 @@ Make sure the `@faststore/cli` package from your project is updated to the lates
 ## Instructions
 
 1. Open your FastStore project code.
-
 2. Go to `faststore.config.js` and add the `preact` flag in the `experimental` section:
 
-   ```json faststore.config.json mark="4"
-   experimental: {
-       nodeVersion: 18,
-       cypressVersion: 12,
-       preact: true
-   }
-   ```
+    ```json faststore.config.json mark="4"
+    experimental: {
+        nodeVersion: 18,
+        cypressVersion: 12,
+        preact: true
+    }
+    ```
 
 3. Open the terminal and run `yarn dev` to start the development server with Preact enabled.
 
