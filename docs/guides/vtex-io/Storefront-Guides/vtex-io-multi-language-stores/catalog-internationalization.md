@@ -4,7 +4,7 @@ excerpt: "Overwrite automatic message translations from the catalog with more re
 slug: "catalog-internationalization"
 hidden: false
 createdAt: "2020-08-31T17:18:54.238Z"
-updatedAt: "2024-10-04T15:19:12.970Z"
+updatedAt: "2024-11-22T17:01:18.514Z"
 ---
 
 In this guide, you'll learn how to overwrite an automatic message translation from the catalog, such as a product name or a product description, with a more specific and representative content of your store.
@@ -44,7 +44,7 @@ Below is an example of the complete process of the automatic translation of a pr
 
 See how to complete the main text box and the _Query variables_ section when configuring your catalog translation.
 
-### Catalog
+### Category
 
 #### Mutation
 
