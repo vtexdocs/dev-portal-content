@@ -27,14 +27,14 @@ In the VTEX Admin, go to **Storefront > Releases**, and click **Releases**.
 
 Check if the page release status is either **Published** or **Failed**.
 
-Open the release and copy its identifier (e.g., `635feddd372d5fef67c4160e`) at the end of the page URL (e.g., `https://{accountname}.myvtex.com/admin/releases/calendar/?period=ONE_DAY-1708916400000&release=635feddd372d5fef67c4160e&search=&sort=LAST_MODIFIED&sort=DESC&status=ALL`). After copying the identifier, proceed to [Checking the GitHub pipeline](#step-2-checking-the-github-pipeline) to continue checking the status.
+Open the release and copy its identifier (e.g., `635feddd372d5fef67c4160e`) at the end of the page URL (e.g., `https://{accountname}.myvtex.com/admin/releases/calendar/?period=ONE_DAY-1708916400000&release=635feddd372d5fef67c4160e&search=&sort=LAST_MODIFIED&sort=DESC&status=ALL`). After copying the identifier, proceed to [Checking the GitHub pipeline](#step-2-check-the-github-pipeline) to continue checking the status.
 
 ### Step 2: Check the GitHub pipeline
 
-After [getting the Release identifier](#step-1-verifying-the-release-status), follow these steps to verify the status of the corresponding build.
+After [getting the Release identifier](#step-1-check-the-release-status), follow these steps to verify the status of the corresponding build.
 
 1. Access the GitHub repository of your FastStore project.
-2. In the repository search field, search for the code obtained in the [previous section](#step-1-verifying-the-release-status). If you find a commit with the corresponding Release identifier in its name, it indicates that the Release has undergone the CI/CD process.
+2. In the repository search field, search for the code obtained in the [previous section](#step-1-check-the-release-status). If you find a commit with the corresponding Release identifier in its name, it indicates that the Release has undergone the CI/CD process.
 3. Check the status of the **Build check** for the commit by clicking one of the following icons:
 
 | Icon | Description |
