@@ -9,7 +9,7 @@ seeAlso:
   - /docs/api-reference
 ---
 
-This guide provides essential information for developers working with VTEX REST APIs. It covers fundamental concepts such as authentication, error handling, and HTTP response codes.
+This collection of guides provides essential information for developers working with VTEX REST APIs. It covers fundamental concepts such as authentication, error handling, and HTTP response codes.
 
 <Flex>
 
