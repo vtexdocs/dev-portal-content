@@ -28,7 +28,7 @@ linkTitle="See more"
 <WhatsNextCard  
 title="Authentication"  
 description="Understand how to securely authenticate your API requests and protect sensitive data."  
-linkTo="https://example.com/docs/authentication"  
+linkTo="https://developers.vtex.com/docs/guides/authentication"  
 linkTitle="See more"  
 />  
 
