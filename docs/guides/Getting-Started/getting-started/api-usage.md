@@ -5,8 +5,6 @@ hidden: false
 createdAt: "2024-11-25T12:00:00.000Z"  
 updatedAt: "2024-11-25T12:30:00.000Z"  
 excerpt: "Learn how to effectively use VTEX REST APIs, from sending your first request to building resilient integrations."  
-seeAlso:
-  - /docs/api-reference
 ---
 
 This collection of guides provides essential information for developers working with VTEX REST APIs. It covers fundamental concepts such as authentication, error handling, and HTTP response codes.
