@@ -10,7 +10,7 @@ excerpt: "Set up your account Edition to get started with Store Framework."
 
 Once you have completed the set up of your development workspace, configure your account to leverage the full power of the VTEX Store Framework. This guide will walk you through two essential prerequisites:
 
-- [Setting your account's Edition app](#step-1---setting-your-accounts-edition-app) 
+- [Setting your account's Edition app](#step-1---setting-your-accounts-edition-app)
 - [Implementing the VTEX Intelligent Search](#step-2---implementing-the-vtex-intelligent-search)
 
 ## Instructions
