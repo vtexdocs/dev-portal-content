@@ -10,10 +10,11 @@ hidden: false
 To ensure the reliability and stability of our services during the high-demand Shopping Season 2024, the generation of routes within the [Sitemap](https://developers.vtex.com/docs/apps/vtex.store-sitemap) will be disabled temporarily.
 
 >ℹ️ This disablement impacts only Store Framework stores.
+
 ## When will the disablement occur?
 
-**Start date:** Tuesday, November 26th
-**End date:** Tuesday, December 3rd
+- **Start date:** Tuesday, November 26th
+- **End date:** Tuesday, December 3rd
 
 ## Why did we make this change?
 
