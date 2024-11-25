@@ -3,7 +3,8 @@ title: "Managing URL redirects"
 slug: "vtex-io-documentation-managing-url-redirects"
 hidden: false
 createdAt: "2020-06-03T16:02:44.302Z"
-updatedAt: "2024-06-18T14:48:09.566Z"
+updatedAt: "2024-11-25T18:10:16.429Z"
+excerpt: "Learn how to manage your store's URL redirects to prevent 404 errors."
 ---
 
 URL redirection is a method of forwarding website visitors and search engines from one URL to another. Redirects might be useful when you need to move content to a new URL, remove an old product page, or forward users from a specific region to a custom page. Implementing the appropriate redirects can improve the user experience by preventing visitors from hitting 404 error pages.
@@ -63,27 +64,29 @@ Check the [CSV file template](#csv-file-template) to understand the meaning of e
 
 To create or delete URL redirects in your store, you must create a `.csv` file as in the following example.
 
-![csv-file-url-redirect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-managing-url-redirects-0.png)
+
+
+![redirects](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/redirects.png)
 
 Notice that the file must contain a row with four columns and the following values:
 
 | Property name | Description                                                                                   | Example                   |
 | ------------- | --------------------------------------------------------------------------------------------- | ------------------------- |
 | `from`        | Original path.                                                                                | `/blouse/p`               |
-| `to`          | Relative path or full URL to which you want to redirect your visitors.                        | `/blouse/p?skuId=2000549` |
+| `to`          | Relative path or full URL to which you want to redirect your visitors.                        | `/shirts/p` |
 | `type`        | Redirect type. `TEMPORARY` or `PERMANENT`                                                     | `TEMPORARY`               |
-| `endDate`     | (Only for `TEMPORARY` redirects.) Expiration date of the redirect on the format `mm/dd/yyyy`. | `5/20/2020`               |
+| `endDate`     | **Only for `TEMPORARY` redirects**. Expiration date of the redirect on the format `mm/dd/yyyy`. | `5/20/2020`               |
 
 > ⚠️ You must not modify this row. Otherwise, you will not be able to create or delete redirects.
 
 Under the first row of your `.csv` file, enter the `from`, `to`, `type`, and `endDate` values corresponding to the redirects you want to create or delete, as in the following example:
 
-![urls-redirect-csv-file](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-managing-url-redirects-1.png)
+![redirects2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/redirects2.png)
 
 Keep in mind that:
 
 - The `from` column can only receive relative paths.
-- The `to` column can receive either relative paths (e.g., `/blouse/p?skuId=200`) or full URLs (e.g., `https://myotherstore.com`).
+- The `to` column can receive either relative paths (e.g., `/shirts/p`) or full URLs (e.g., `https://myotherstore.com`).
 
 > ⚠️ You cannot create redirects using wildcards or variables. You must specify each redirect using relative paths or full URLs.
   
