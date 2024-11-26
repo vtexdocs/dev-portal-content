@@ -1,6 +1,6 @@
 ---
 title: "`sendAnalyticsEvent`"
-createdAt: 2024-11-08T14:34:00.623Z
+createdAt: "2024-11-08T14:34:00.623Z"
 updatedAt: ""
 ---
 
