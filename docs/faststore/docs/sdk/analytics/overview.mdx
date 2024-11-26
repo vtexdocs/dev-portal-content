@@ -4,12 +4,12 @@ title: "Analytics"
 
 The Analytics module manages events on a website. The module is composed of two main functions:
 
-- [`sendAnalyticsEvent`](/TBD): Fires events in the browser. Events fired using this function are shared only with the website's origin. The event is wrapped and sent to the [Window object](https://developer.mozilla.org/en-US/docs/Web/API/Window) via standard `postMessage` calls.
-- [`useAnalyticsEvent`](/TBD): Intercepts fired events and usually communicates with an analytics provider.
+- [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Fires events in the browser. Events fired using this function are shared only with the website's origin. The event is wrapped and sent to the [Window object](https://developer.mozilla.org/en-US/docs/Web/API/Window) via standard `postMessage` calls.
+- [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event): Intercepts fired events and usually communicates with an analytics provider.
 
 ![Analytics module](https://vtexhelp.vtexassets.com/assets/docs/src/analyticsmodule___37ad6fdb1e969835206b6d4b91461529.png)
 
-> ⚠️ Events sent via the Analytics module are not automatically sent to any analytics provider (e.g., Google Analytics). To connect with a provider, configure the [`useAnalyticsEvent`](LINK) hook.
+> ⚠️ Events sent via the Analytics module are not automatically sent to any analytics provider (e.g., Google Analytics). To connect with a provider, configure the [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook.
 
 The Analytics module supports sending and receiving different events, allowing you to implement custom event types and override default ones.
 
@@ -49,7 +49,7 @@ Some types are [common](https://github.com/vtex/faststore/blob/main/packages/sdk
 
 Google Analytics is the industry-leading analytics solution that most ecommerce websites use, and the Analytics module was designed with this in mind. All the helper functions and hooks in the module use the [Google Analytics 4 (GA4) data model](https://developers.google.com/analytics/devguides/collection/ga4/reference/events) by default. This allows you to use [code hinting](#code-hinting) tools to receive suggestions of GA4 events and their recommended properties while coding.
 
-To send the events to Google Analytics, use the [`useAnalyticsEvent`](/TBD) hook. The hook must listen to events from [`sendAnalyticsEvents`](/TBD) and add them to the `dataLayer` (recommended for Google Tag Manager) or call the `gtag` function directly (for `gtag` script implementations).
+To send the events to Google Analytics, use the [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook. The hook must listen to events from [`sendAnalyticsEvents`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) and add them to the `dataLayer` (recommended for Google Tag Manager) or call the `gtag` function directly (for `gtag` script implementations).
 
 ## Code hinting
 
