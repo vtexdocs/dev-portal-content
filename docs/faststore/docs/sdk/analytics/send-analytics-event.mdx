@@ -26,6 +26,7 @@ import { sendAnalyticsEvent } from '@faststore/sdk'
 
 const MyComponent = () => {
   const addToCartCallback = useCallback(() => {
+   import('@faststore/sdk').then(({ sendAnalyticsEvent }) => {
     /* ... */
 
     const addToCartEvent = {
@@ -38,6 +39,7 @@ const MyComponent = () => {
     }
 
     sendAnalyticsEvent(addToCartEvent)
+    })
   }, [])
 
   return <button onClick={addToCartCallback}>Add to cart</button>
