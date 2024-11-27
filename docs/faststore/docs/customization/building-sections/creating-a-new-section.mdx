@@ -240,18 +240,19 @@ After creating a new section, you can style it to match your store's branding. F
 1. In your store code, open the `components` folder and create the `ourStores.module.scss` file. This file will import the FastStore UI components styles.
 2. Add the following code to the `ourStores.module.scss` file:
 
-  ```scss filename="src/components/ourStores.module.scss" copy
+  ```scss 
   .ourStores {
     @import '@faststore/ui/src/components/atoms/Button/styles.scss';
     @import '@faststore/ui/src/components/atoms/Select/styles.scss';
     @import '@faststore/ui/src/components/molecules/SelectField/styles.scss';
   }
   ```
+
 > ℹ️ This code imports the [Button](https://developers.vtex.com/docs/guides/faststore/atoms-icon) and [SelectField](https://developers.vtex.com/docs/guides/faststore/molecules-select-field) styles to the custom component that you are creating. The `Select` component styles is also being improted, since `SelectField` inherits it.
 
 3. Import this stylesheet into the `OurStores.tsx` file:
 
-  ```tsx {4-5,13} filename="src/components/OurStores.tsx" copy
+  ```tsx mark="4-5,13"
   import React from 'react'
   import { Button, Icon, SelectField } from '@faststore/ui'
 
@@ -303,11 +304,11 @@ After creating a new section, you can style it to match your store's branding. F
 
 4. Open the terminal and run `yarn dev` to see the section with initial styling.
 
-![new-section-without-styles](https://vtexhelp.vtexassets.com/assets/docs/src/without-styles___4680d2a9a67e4175f3b73eff036ca8ac.png)
+  ![new-section-without-styles](https://vtexhelp.vtexassets.com/assets/docs/src/without-styles___4680d2a9a67e4175f3b73eff036ca8ac.png)
 
 5. Add more styles to the section by using [design tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview#global-tokens) and [component's data attributes](https://developers.vtex.com/docs/guides/faststore/atoms-button#customization) to the `ourStores.module.scss` file:
 
-  ```scss filename="src/components/ourStores.module.scss" copy
+  ```scss
   .ourStores {
     @import '@faststore/ui/src/components/atoms/Button/styles.scss';
     @import '@faststore/ui/src/components/atoms/Select/styles.scss';
@@ -352,7 +353,9 @@ After creating a new section, you can style it to match your store's branding. F
   }
   ```
 
-  ```tsx {14,16} filename="src/components/OurStores.tsx" copy
+6. Update the `OuStore.tsx` file by 
+  
+  ```tsx mark="14,16"
   import React from 'react'
   import { Button, Icon, SelectField } from '@faststore/ui'
 
