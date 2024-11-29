@@ -40,8 +40,8 @@ To create a new trigger in an existing schema, follow these steps:
 
 | Property | Type | Description |
 | - | - | - |
-| `name` |`string`| A descriptive name for your trigger, limited to 100 characters. |
-| `active` | `boolean`| Whether the trigger is enabled (`true`) or disabled (`false`). |
+| `name` |`string`| Trigger name, limited to 100 characters. Don't use blank spaces; only underscores (`_`) or dashes (`-`) are allowed. |
+| `active` | `boolean`| Defines whether the trigger is enabled (`true`) or disabled (`false`). |
 | `condition` | `string` | A rule that validates the document before executing the trigger. See the [condition](#condition) section for more information. |
 | `runAt` | `object` | The scheduled date to execute the action. See the [runAt](#runat) section for more information. |
 | `weight` |`integer` | Percentage value used for A/B testing. See the [Setting up an A/B test with Master Data trigger](https://help.vtex.com/en/tutorial/setting-up-a-b-test--4xFzBMHYty6gmEosWGWMC0) article for more information. |
