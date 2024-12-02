@@ -8,6 +8,7 @@ excerpt: "Discover how to configure custom headers in your store"
 ---
 
 In this guide, you'll learn how to configure custom response headers in your Store Framework store. HTTP headers play a key role in communication between the user's browser and the server, providing additional information about the request in progress. There are two main types of headers:
+
 - **Request Headers:** Sent by the client to the server. They contain information about the request made, such as the type of HTTP method used, the type of accepted content, cookies, among others.
 - **Response Headers:** Sent by the server to the client. They provide information about the sent response, such as the response status, type of returned content, cookies, among others.
 
@@ -28,6 +29,7 @@ Here are the headers that accept editing:
 
 You can configure a custom header, a value that is not standardized and is tailored to the specific requirements or features of your store.
 To add a custom heading, follow the instructions below:
+
 1. In the VTEX Admin, go to **Store Settings > Storefront > Store**.
 2. Click the Advanced tab.
 3. Scroll down to the **Custom Header** section.
