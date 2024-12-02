@@ -3,7 +3,7 @@ title: "Migrating CMS settings after a major theme update"
 slug: "vtex-io-documentation-migrating-cms-settings-after-major-update"
 hidden: false
 createdAt: "2020-09-22T20:44:01.218Z"
-updatedAt: "2024-10-30T20:16:26.204Z"
+updatedAt: "2024-12-02T21:07:29.844Z"
 ---
 
 When making changes to the peer dependencies of your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app, you may need to perform a major update. However, transitioning to a new major version of the Store Theme may lead to undesired consequences, such as losing the configured Admin page template settings.
