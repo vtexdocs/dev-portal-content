@@ -19,4 +19,6 @@ Under the [Store Framework](https://developers.vtex.com/docs/guides/store-framew
 
 You can also access our [hands-on course on the VTEX Store Framework](https://learn.vtex.com/page/learning-path-lang-en).
 
-> ℹ Once you’ve finished customizing your storefront, whether by completing the hands-on course or following our guides, keep in mind that your Store Theme app is still stored locally on your computer and it is linked to your VTEX store only through the development workspace. To make your changes visible to end users, you need to [make your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
+> ℹ To promote constructive collaboration among developers, facilitate version monitoring, and enhance the visibility of your Store Theme app, use code versioning tools such as GitHub. Learn more in [Best practices on workspace management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices).
+
+Once you’ve finished customizing your storefront, whether by completing the hands-on course or following our guides, keep in mind that your Store Theme app is still stored locally on your computer and it is linked to your VTEX store only through the development workspace. To make your changes visible to end users, you need to [make your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
