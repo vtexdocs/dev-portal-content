@@ -8,7 +8,7 @@ createdAt: "2020-06-03T16:02:49.869Z"
 updatedAt: "2024-11-29T15:09:48.674Z"
 ---
 
-Since a Store Theme is a VTEX IO app, it works exactly like an app’s default behavior, including versioning and deployment capabilities.
+A Store Theme is a VTEX IO app, meaning it operates like any other app, with built-in features such as versioning and deployment capabilities.
 
 In this guide, you will find instructions to make your Store Theme available to end users.
 
