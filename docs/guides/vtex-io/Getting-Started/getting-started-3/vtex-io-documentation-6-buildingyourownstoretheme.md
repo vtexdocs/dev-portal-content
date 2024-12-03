@@ -8,7 +8,7 @@ updatedAt: "2024-11-28T20:06:03.731Z"
 excerpt: "Explore resources to personalize your VTEX store with Store Framework."
 ---
 
-After making the first setups, creating your Store Theme project, and learning how to customize your store pages, you can begin personalizing your store more advancedly.
+After completing the initial setup, creating your Store Theme project, and learning how to customize your store pages, you can begin advanced personalization of your store.
 
 Under the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) category, you will find a set of guides to help you customize your storefront:
 
