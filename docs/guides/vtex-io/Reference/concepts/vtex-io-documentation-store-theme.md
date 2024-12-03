@@ -3,7 +3,7 @@ title: "Store Theme"
 slug: "vtex-io-documentation-store-theme"
 hidden: false
 createdAt: "2024-07-24T13:48:10.752Z"
-updatedAt: "2024-08-13T15:55:50.856Z"
+updatedAt: "2024-12-03T15:29:21.377Z"
 category: "Storefront development"
 seeAlso:
   - "/docs/guides/vtex-io-documentation-manifest"
@@ -14,7 +14,30 @@ In [Store Framerwork](https://developers.vtex.com/docs/guides/store-framework), 
 
 ## Project structure
 
-Although the structure of a Store Theme project may vary depending on its specific settings, certain folders and files are essential for the theme to function properly, such as the following:
+Although the structure of a Store Theme project may vary depending on its specific settings, it typically includes the following files and folders:
+
+```txt mark=5,9,16
+📂 STORE-THEME/
+│
+├── 📂 .github/
+├── 📂 public/
+├── 📂 store/
+│   ├── 📂 blocks/
+│   ├── 📄 blocks.jsonc
+│   └── 📄 routes.json
+├── 📂 styles/
+│   ├── 📂 configs/
+│   └── 📂 css/
+├── 📄 .editorconfig
+├── 📄 .gitignore
+├── 📄 .vtexignore
+├── 📄 CHANGELOG.md
+├── 📄 manifest.json
+├── 📄 package-lock.json
+└── 📄 README.md
+```
+
+Some of these files and folders are essential for the theme to function properly:
 
 - **`/store` folder:** Contains the blocks, interfaces, and routes necessary to build the storefront.
 - **`/styles` folder:** Contains the store’s visual elements, such as colors, typography, and other style-related settings.
