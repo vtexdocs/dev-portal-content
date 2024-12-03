@@ -6,18 +6,21 @@ createdAt: "2022-09-20T20:22:27.378Z"
 updatedAt: "2022-09-20T20:22:27.378Z"
 ---
 
-VTEX’s **Sessions System** is a new architecture that allows stores to use new platform features and potentialize its use. With the installation of the new sessions system, your store will be able to handle complex **B2B** scenarios, will be able to **regionalize the experience** of your customer and perform promotions segmentations by **Campaign Audiences**.
+VTEX’s Sessions System is an architecture that allows stores to handle complex B2B scenarios, regionalize customer experience and perform promotion segmentation by Campaign Audiences.
 
-## Functioning of the Sessions System
+## How it works
 
-### Cookie vtex_session
+The Sessions System operates using two cookies: `vtex_session` and `vtex_segment`. Learn how they work in the following sections.
 
-The Sessions System identifies, through the `vtex_session` cookie, the information of a specific session of a user browsing in your store.
-It is possible to see the properties of a sessions by doing a `GET` on the route `{{accountname}}.{{environment}}.com.br/api/sessions?items={{namespace}}.{{value}},{{namespace}}.{{value2}}`.
+### `vtex_session` cookie
 
-In the JSON reply, the API returns several **namespaces**. The namespaces are the keys that group together certain types of information about the session.
+Through the `vtex_session` cookie, the Sessions System identifies the information of a specific session of a user browsing in your store.
 
-Below, you may see the example of reply with basic data on a session:
+It is possible to see session properties by making a request to `GET` `https://{{accountname}}.{{environment}}.com.br/api/sessions?items={{namespace}}.{{value}},{{namespace}}.{{value2}}`.
+
+The API returns several **namespaces**, which are the keys that group together certain types of information about the session.
+
+Below, see a response example with basic data on a session:
 
 ```json
 {
@@ -62,17 +65,17 @@ Below you will find a list of possible namespaces that can be returned by the AP
 - `cookie`: Namespace with information on the authentication cookies of the user.
 - `impersonate`: Namespace that identifies if the logged in user has permission to impersonate another user and browse on that user’s behalf.
 - `profile`: Namespace with information related to the customer’s profile logged into that session. Eligible price tables for that customer are listed in this namespace.
-- `public`: Namespace with general information on a session, `utm_campaign`, `utm_source` and `utmi_campaign`. In this namespace, we also find information about `country` and `postalCode`, which are given to VTEX’s checkout so that it can return the `regionId`, require in the namespace `checkout`.
+- `public`: Namespace with general information on a session, `utm_campaign`, `utm_source` and `utmi_campaign`. In this namespace, we also find `postalCode` or `geoCoordinates` and `country`, which are given to VTEX’s checkout so that it can return the `regionId`, require in the namespace `checkout`. These values follow the format defined in the [Checkout API reference](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/regions/-regionId-).
 - `authentication`: Namespace with user authentication data in the context of the session.
 - `rnb`: Namespace that gives information related to applicable Campaign Audiences and promotions for that session.
 
-### Cookie vtex_segment
+### `vtex_segment` cookie
 
-VTEX Sessions also creates the cookie `vtex_segment`. This cookie contains the information with the commercial conditions to be applied to a session.
+The Sessions System also creates the `vtex_segment` cookie, which contains the information of the commercial conditions to be applied to a session.
 
-It is possible to see the properties of a segment by doing a `GET` on the route `{{accountName}}.{{environment}}.com.br/api/segments/{{segmentToken}}`
+It is possible to see the properties of a segment by making a `GET` request to `https://{{accountName}}.{{environment}}.com.br/api/segments/{{segmentToken}}`.
 
-Below you will find an example of answer with data from a segment:
+Below you will find a response example with data from a segment:
 
 ```json
 {
@@ -86,15 +89,15 @@ Below you will find an example of answer with data from a segment:
 }
 ```
 
-It’s important to stress that the session identified by the cookie `vtex_session` is **individual**. However, the cookie `vtex_segment` uses information that can be **shared** among different users. For example: the same price table can be available to different users in distinct sessions. This way, `vtex_segment` is used to control the cache key of the pages.
+>ℹ️ The session identified by the `vtex_session` cookie is individual. However, the `vtex_segment`cookie uses information that can be shared among different users. For example: the same price table can be available to different users in distinct sessions. This way, `vtex_segment` is used to control the cache key of the pages.
 
 ## Changing information from a session
 
-It is possible to change a session’s information by performing a `POST` on the following route:
+It is possible to change a session’s information by making a `POST` request to the following route:
 
-`{{account-name}}.{{environment}}.com.br/api/sessions/{{session_token}}`
+`https://{{account-name}}.{{environment}}.com.br/api/sessions/{{session_token}}`
 
-Below you can see an example of a `body` used to update the information of a session:
+Below you can see an example of a request body used to update the information of a session:
 
 ```json
 {
@@ -114,14 +117,24 @@ Below you can see an example of a `body` used to update the information of a ses
 
 ## Main features related to the Sessions System
 
-### Price Tables
+### Price tables
 
-The feature Price Table is identified by the sessions system in the namespace `profile`. The price table displays customized prices for that identified user that is browsing in the store. You can create price table for specific customer groups. The Price Tables can by used mainly to handle B2B scenarios. To configure the price tables in your store, access our documentation about [how to configure Price Tables](https://help.vtex.com/en/tutorial/setting-up-price-tables)
+Price tables are identified by the sessions system in the namespace `profile`. Each price table displays customized prices for that identified user that is browsing in the store. You can create price tables for specific customer groups. Price tables can by used to handle B2B scenarios.
+
+Learn more about [Configuring price tables for specific users](https://help.vtex.com/en/tutorial/setting-up-price-tables-for-specific-users--5S9oDOMHNmY4K0kAewAiWY).
 
 ### Region
 
-The region feature is identified by the sessions system in the namespace `checkout`, with the `regionId` property, which is generated when a `postalCode` and a `country` are added to a session. The feature’s objective is to regionalize the experience of the user in the store. It allows, for example, sellers to configure their own prices and marketplaces to display according to the customer’s region. To configure price and availability according to the customer’s region, access our article about [setting up SKU price and availability by Region](https://help.vtex.com/en/tutorial/setting-up-price-and-availability-of-skus-by-region--12ne58BmvYsYuGsimmugoc).
+The Region feature is identified by the sessions system in the namespace `checkout`, with the `regionId` property, which is generated when a `postalCode` or `geoCoordinates` and a `country` are added to a session. The feature's goal is to regionalize the experience of the user in the store.
 
-### Campaign Audiences
+It allows, for example, sellers to configure their own prices and marketplaces to be displayed according to the customer's region.
 
-Campaign Audiences are clustering rules that allow promotions to be applied to customers that meet the campaign rules. The Campaign Audiences feature works much like Price Tables. In the **Promotions & Taxes** module, you can create conditions that apply a promotion to a particular customer if campaign conditions are met.
+To configure price and availability according to the customer’s region, access our article about [setting up SKU price and availability by Region](https://help.vtex.com/en/tutorial/setting-up-price-and-availability-of-skus-by-region--12ne58BmvYsYuGsimmugoc).
+
+### Campaign audiences
+
+Campaign Audiences are clustering rules that allow promotions to be applied to customers that meet a set of criteria.
+
+The campaign audiences feature works much like price tables. In the **Promotions & Taxes** module, you can create conditions that apply a promotion to a particular customer if campaign conditions are met.
+
+Learn more about [Campaign Audiences](https://help.vtex.com/en/tutorial/campaign-audiences--3o7lhpNseXY2WmjZO0gQ6m).
