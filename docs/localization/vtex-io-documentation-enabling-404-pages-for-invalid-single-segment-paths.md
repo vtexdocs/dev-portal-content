@@ -1,9 +1,9 @@
 ---
-title: Enabling 404 pages for invalid single-segment paths
-slug: vtex-io-documentation-enabling-404-pages-for-invalid-single-segment-paths
+title: "Enabling 404 pages for invalid single-segment paths"
+slug: "vtex-io-documentation-enabling-404-pages-for-invalid-single-segment-paths"
 hidden: false
-createdAt: 2020-06-03T16:02:44.190Z
-updatedAt: 2024-11-19T16:23:47.752Z
+createdAt: "2020-06-03T16:02:44.190Z"
+updatedAt: "2024-11-19T16:23:47.752Z"
 excerpt: Learn how to enable 404 error pages for invalid single-segment paths.
 ---
 
