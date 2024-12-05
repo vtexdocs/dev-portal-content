@@ -21,4 +21,4 @@ Now:
 
 ## What needs to be done?
 
-To manage your store headers, follow the instructions in the guide [Adding custom headers to your Store Framework store](https://developers.vtex.com/docs/guides/adding-custom-headers-to-your-store-framework-store).
+To manage your store headers, follow the instructions in the guide [Adding custom headers to your Store Framework store](https://developers.vtex.com/docs/guides/vtex-io-documentation-adding-custom-headers-to-your-store-framework-store).
