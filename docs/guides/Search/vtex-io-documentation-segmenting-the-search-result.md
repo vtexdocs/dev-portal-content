@@ -57,7 +57,7 @@ To create segmented search results, we'll create a new VTEX IO app from the [`vt
    }
    ```
    
-   > ⚠️ Filtering by facets in the final domain requires adding the facet to the `public` namespace, a configuration that this app does not handle by default. You need to ensure this step is completed manually by following the [Sessions System](https://developers.vtex.com/docs/guides/sessions-system-overview#changing-information-from-a-session) guide if required.
+   > ⚠️ ️Filtering by facets in the final domain without the customer’s authentication requires adding the facet to the `public` namespace, a configuration that this app does not handle by default. You need to ensure this step is completed manually by following the [Sessions System](https://developers.vtex.com/docs/guides/sessions-system-overview#changing-information-from-a-session) guide if required.
 
 6. [Create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and [link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to test if your segmentation rules are working as expected.
 7. Once you finish your tests, follow all the necessary steps to [make your app publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) before promoting it to master.
