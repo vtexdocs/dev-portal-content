@@ -1,8 +1,8 @@
 ---
 title: "Store Framework: Simplified custom header management now available in VTEX admin"
-slug: "2024-11-26-store-framework-simplified-custom-header-management-now-available-in-vtex-admin"
+slug: "2024-12-05-store-framework-simplified-custom-header-management-now-available-in-vtex-admin"
 type: improved
-createdAt: ""
+createdAt: "2024-12-05T13:06:54.507Z"
 updatedAt: ""
 hidden: false
 ---
@@ -21,4 +21,4 @@ Now:
 
 ## What needs to be done?
 
-To manage your store headers, follow the instructions in the guide [Adding custom headers to your Store Framework store](LINK).
+To manage your store headers, follow the instructions in the guide [Adding custom headers to your Store Framework store](https://developers.vtex.com/docs/guides/adding-custom-headers-to-your-store-framework-store).
