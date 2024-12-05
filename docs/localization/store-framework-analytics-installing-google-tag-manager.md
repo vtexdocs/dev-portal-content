@@ -1,10 +1,10 @@
 ---
-title: Installing Google Tag Manager
-slug: store-framework-analytics-installing-google-tag-manager
+title: "Installing Google Tag Manager"
+slug: "store-framework-analytics-installing-google-tag-manager"
 hidden: false
-createdAt: 2022-02-01t13:34:01.638z
-updatedAt: 2024-11-18T16:28:11.922Z
-excerpt: Discover the steps to install the Google Tag Manager app in your Store Framework store.
+createdAt: "2022-02-01t13:34:01.638z"
+updatedAt: "2024-11-18T16:28:11.922Z"
+excerpt: "Discover the steps to install the Google Tag Manager app in your Store Framework store."
 ---
 
 This guide provides instructions for managing Analytics on Store Framework stores by installing and configuring [Google Tag Manager (GTM)](https://tagmanager.google.com/). It also outlines restrictions to avoid performance issues and unpredictable behavior, such as blocklists for custom HTML tags and variables.
