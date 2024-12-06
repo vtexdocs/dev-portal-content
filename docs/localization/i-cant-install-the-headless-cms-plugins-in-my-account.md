@@ -1,10 +1,10 @@
 ---
-title: I can’t install the Headless CMS plugins in my account
+title: "I can’t install the Headless CMS plugins in my account"
 excerpt: "Windows users may encounter the 'EPERM: operation not permitted' error during the installation of the Headless CMS plugin."
-slug: error-installing-headless-cms-plugins-on-windows'
+slug: "error-installing-headless-cms-plugins-on-windows"
 tags:
-  - headless-cms
-  - faststore
+    - headless-cms
+    - faststore
 ---
 
 If you are a Windows user, you may encounter the following error after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment):
