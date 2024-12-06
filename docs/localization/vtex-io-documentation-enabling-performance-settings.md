@@ -1,8 +1,8 @@
 ---
-title: Enabling performance settings
-slug: vtex-io-documentation-enabling-performance-settings
+title: "Enabling performance settings"
+slug: "vtex-io-documentation-enabling-performance-settings"
 hidden: false
-createdAt: 2024-11-18T15:26:22.439Z
+createdAt: "2024-11-18T15:26:22.439Z"
 updatedAt: ""
 ---
 
@@ -38,14 +38,14 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 1. Using the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired account by running `vtex login {account}`.
 2. Run the command `vtex use {productionWorkspace} --production` to create and use a **new** [Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/).
 
-> ⚠️ Replace the values between the curly braces based on your scenario.
+  >⚠️ Replace the values between the curly braces based on your scenario.
 
 3. Using your browser, access the Admin for that workspace.
 4. From the account's Admin panel, go to Store Settings > Storefront > Store > Advanced.
 5. Follow the instructions in the [Store-settings](#store-settings) section to activate the desired features, then save the changes.
 6. Access your store in the workspace you're using and check if the performance improvements were applied.
 
-> ℹ️ Changes may take some time to reflect.
+  > ℹ️ Changes may take some time to reflect.
 
 ### Step 3 - Testing and analyzing performance
 
@@ -53,7 +53,7 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 2. Access [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights).
 3. Using the following URL pattern: `https://{account}.myvtex.com/?workspace={productionWorkspace}`, check your store's performance in the production workspace you're currently working in.
 
-> ⚠️ Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show your store performance score in the specified workspace. To analyze performance in a workspace, **you must use the `?workspace={productionWorkspace}` query string** as shown in Step 2.3.
+  > ⚠️ Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show your store performance score in the specified workspace. To analyze performance in a workspace, **you must use the `?workspace={productionWorkspace}` query string** as shown in Step 2.3.
 
 ### Step 4: Making your changes publicly available
 
