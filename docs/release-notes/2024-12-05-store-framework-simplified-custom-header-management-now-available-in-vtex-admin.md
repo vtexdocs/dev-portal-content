@@ -17,6 +17,7 @@ Previously:
 - You could only add a single custom header.
 
 Now:
+
 - Fully manage headers in the VTEX Admin.
 - Easily add multiple custom headers.
 
