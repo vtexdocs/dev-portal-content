@@ -1,6 +1,6 @@
 ---
 title: "Adding custom headers to your Store Framework store"
-slug: "adding-custom-headers-to-your-store-framework-store"
+slug: "vtex-io-documentation-adding-custom-headers-to-your-store-framework-store"
 hidden: false
 createdAt: "2024-11-25T18:10:16.429Z"
 updatedAt: ""
