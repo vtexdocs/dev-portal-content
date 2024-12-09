@@ -12,6 +12,7 @@ You can now manage headers in stores built with Store Framework directly in the 
 ## What has changed?
 
 Previously:
+
 - Adding or modifying headers required opening a ticket with VTEX Support.
 - You could only add a single custom header.
 
