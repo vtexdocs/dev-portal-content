@@ -3,12 +3,14 @@ title: "Migrating CMS settings after a major theme update"
 slug: "vtex-io-documentation-migrating-cms-settings-after-major-update"
 hidden: false
 createdAt: "2020-09-22T20:44:01.218Z"
-updatedAt: "2024-10-28T16:10:59.161Z"
+updatedAt: "2024-12-02T21:07:29.844Z"
 ---
 
 When making changes to the peer dependencies of your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app, you may need to perform a major update. However, transitioning to a new major version of the Store Theme may lead to undesired consequences, such as losing the configured Admin page template settings.
 
 To handle this situation, follow the steps below to migrate template settings.
+
+>❗These instructions must be followed even when downgrading to a previous major theme version, such as from 5.x to 4.x.
 
 ## Before you begin
 
@@ -31,7 +33,7 @@ Make sure you have the following tools installed on your machine. They facilitat
    vtex install {appVendor}.{appName}@{appVersion}
    ```
 
-4. Open the VTEX Admin of the production workspace used in the previous steps and go to the **GraphQL Admin IDE**:
+4. Open the VTEX Admin of the production workspace used in the previous steps and go to **GraphQL Admin IDE**:
 
    ```sh
    vtex browse admin/graphql-ide
@@ -50,7 +52,7 @@ Make sure you have the following tools installed on your machine. They facilitat
 
 7. Run the code by clicking `Execute Query` (▶).
 
-   The expected response body is
+   The expected response body is:
 
    ```json
    {
