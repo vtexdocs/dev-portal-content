@@ -6,7 +6,7 @@ createdAt: "2022-10-14T21:11:36.747Z"
 updatedAt: "2022-11-02T14:39:45.843Z"
 ---
 
-To deliver relevant search results to your store's shoppers, it's essential to understand how they search for products in your store. The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview) offers powerful insights into [popular search terms](#get-the-most-searched-terms) and [autocomplete suggestions](#get-autocomplete-suggested-terms-and-similar-attributes). The sections below outline how to utilize these tools to optimize your store's search experience.
+To deliver relevant search results to your store's shoppers, it's essential to understand how they search for products in your store. The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview) offers powerful insights into [popular search terms](#get-the-most-searched-terms) and [autocomplete suggestions](#get-autocomplete-suggested-terms-and-similar-attributes). The sections below outline how to use these tools to optimize your store's search experience.
 
 ## Retrieving the most searched terms
 
