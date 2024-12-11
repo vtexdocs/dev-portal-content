@@ -10,7 +10,7 @@ To deliver relevant search results to your store's shoppers, it's essential to u
 
 ## Retrieving the most searched terms
 
-To identify the terms your customers search for most frequently, use the [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches) endpoint. This endpoint allows you to filter results by specifying a `locale` in the query parameters.
+To get your customers' most searched terms, use the [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches) endpoint. This endpoint allows you to filter results by specifying a `locale` in the query parameters.
 
 The response will return the most searched terms in order of popularity along with the number of searches:
 
