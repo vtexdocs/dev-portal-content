@@ -20,20 +20,20 @@ To manage which auto-capture options are available in the connector, the payment
 
 The **Payment capture** field is composed of the following options:
 
-- **Use Behavior Recommended By The Payment Processor**: Capture is not automatic; it is scheduled according to the period specified by the acquirer. The acquirer indicates whether the payment has been authorized and can determine or recommend a number of days for the capture upon payment authorization. (This is the platform's default behavior).
-- **Automatic Capture Immediately After Payment Authorization**: Capture is automatically performed right after payment authorization, even if the transaction includes an anti-fraud analysis.
-- **Automatic Capture Immediately After Anti-fraud Analysis**: Capture is automatically performed right after payment authorization and anti-fraud analysis. If you select this behavior and do not have anti-fraud analysis, the system will perform the payment capture as in *Automatic Capture Immediately After Payment Authorization*.
-- **Scheduled: Schedules The Automatic Capture**: By selecting this option, the field **Scheduled time frame in hours for automatic capture** will be displayed, and it must be completed with the period in which the automatic capture will take place. This period must be in accordance with the limits allowed by the payment provider.
-- **Deactivated: Not Automatically Captured**: Capture takes place only when the order is invoiced. If you select this behavior, it is important to pay attention to the invoicing time, as invoicing can exceed the capture time agreed with the payment provider and lead to the cancellation of the transaction.
+- **Use behavior recommended by the payment processor**: Capture is not automatic; it is scheduled according to the period specified by the acquirer. The acquirer indicates whether the payment has been authorized and can determine or recommend a number of days for the capture upon payment authorization. (This is the platform's default behavior).
+- **Automatic capture immediately after payment authorization**: Capture is automatically performed right after payment authorization, even if the transaction includes an anti-fraud analysis.
+- **Automatic capture immediately after anti-fraud analysis**: Capture is automatically performed right after payment authorization and anti-fraud analysis. If you select this behavior and do not have anti-fraud analysis, the system will perform the payment capture as in *Automatic Capture Immediately After Payment Authorization*.
+- **Disabled**: Capture takes place only when the order is invoiced. If you select this behavior, it is important to pay attention to the invoicing time, as invoicing can exceed the capture time agreed with the payment provider and lead to the cancellation of the transaction.
+- **Scheduled: Schedules the automatic capture**: By selecting this option, the field **Scheduled time frame in hours for automatic capture** will be displayed, and it must be completed with the period in which the automatic capture will take place. This period must be in accordance with the limits allowed by the payment provider.
+
 
 > ⚠️ Enable the `usesAutoSettleOptions` will override any other behavior available for the `earlySecurityCapture` field.
 
 2. **autoSettleDelay**: provides a customized capture option for merchants based on hourly intervals. The "minimum" and "maximum" interval values must be defined by the provider in their manifest.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-auto-capture-feature-0.JPG)
-When the `usesAutoSettleOptions` field is enabled in the provider’s connector (set to "true") and the `autoSettleDelay` field is set in the provider’s manifest, the **“Scheduled: Schedules The Automatic Capture”** option will be available in the **Payment capture** field when configuring a gateway on the VTEX Admin.
+When the `usesAutoSettleOptions` field is enabled in the provider’s connector (set to "true") and the `autoSettleDelay` field is set in the provider's manifest, the **“Scheduled: Schedules The Automatic Capture”** option will be available in the **Payment capture** field when configuring a gateway on the VTEX Admin.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-auto-capture-feature-1.JPG)
 After selecting this option, a new field **“Scheduled time frame in hours for automatic capture”** will be displayed. This field is used by the merchant to set the capture time.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-auto-capture-feature-2.JPG)
