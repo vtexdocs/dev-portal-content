@@ -16,4 +16,4 @@ To rename the file to `discovery.config.js` follow these steps:
 2. Open the terminal and run the following to update the `@faststore/cli` package to the latest version.
 3. Go to `faststore.config.js` and rename it to `discovery.config.js`.
 Update any references pointing to `faststore.config.js` to use `discovery.config.js` instead.
-4. un `yarn dev` to sync the updates you made in the `@faststore/cli` package and the new filename.
+4. Run `yarn dev` to sync the updates you made in the `@faststore/cli` package and the new filename.
