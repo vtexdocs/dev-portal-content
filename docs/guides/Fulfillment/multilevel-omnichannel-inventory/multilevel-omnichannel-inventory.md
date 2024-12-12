@@ -85,7 +85,7 @@ Check out the order flow for chain orders in the image below:
 
 The order flow seen by the level 2 store in a Multilevel Omnichannel Inventory is similar to the marketplace order flow, except for receiving the payment for orders. In the Payment pending stage, instead of the chain receiving payment directly from the gateway, the marketplace informs the chain it has received the payment confirmation.
 
-> VTEX stores cannot use the [change order](https://developers.vtex.com/docs/guides/change-order) feature for chain orders made in VTEX marketplaces.
+> VTEX stores cannot use the [change order](https://developers.vtex.com/docs/guides/change-order) feature for chain orders made on VTEX marketplaces.
 
 ## Setup for VTEX marketplaces
 
