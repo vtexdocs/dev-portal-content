@@ -28,7 +28,7 @@ Follow the instructions below to enable brand search as full text when receiving
    ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@maindocs/guides/Search/setting-up-brand-search-queries-as-full-text-1.png)
 3. In the Store Indexer card, click **Settings**.  
 4. In the **Brand Queries Map** field, select **Full Text**.  
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@maindocs/guides/Search/setting-up-brand-search-queries-as-full-text-2.png) 
+   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@maindocs/guides/Search/setting-up-brand-search-queries-as-full-text-2.png)
 5. Click `Save`.
 
 If you need to revert back to the default behavior, repeat the instructions above, changing step 4 back to **Brand**.
