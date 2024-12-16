@@ -1,6 +1,6 @@
 ---
 title: "FastStore: `faststore.config.js` file is now `discovery.config.js`"
-slug: "2024-12-13-discovery-config-file"
+slug: "2024-12-16-discovery-config-file"
 type: "added"
 excerpt: ""
 createdAt: "2024-12-13T10:10:15.623Z"
