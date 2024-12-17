@@ -5,28 +5,28 @@ hidden: false
 createdAt: "2020-06-03T16:02:44.272Z"
 updatedAt: "2024-11-13T18:51:12.992Z"
 category: "Storefront development"
-excerpt: "Explore how to track and analyze data from your store using Google Analytics 4"
+excerpt: "Explore how to track and analyze store data using Google Analytics 4"
 ---
 
 After installing the VTEX IO [Google Tag Manager app](https://developers.vtex.com/docs/apps/vtex.google-tag-manager), configure the necessary variables, triggers, and tags to set it up in your store.
 
-In this guide, you will learn how to track and analyze store data using Google Analytics 4 (GA4). It includes:
-- Configuring GA4 events by downloading and importing a container file, adding the necessary tags, triggers, and variables, and updating the Measurement ID field with your Google tag ID.
+In this guide, you will learn how to track and analyze store data using Google Analytics 4 (GA4). The guide covers:
+- Configuring GA4 events by downloading and importing a container file; adding the necessary tags, triggers, and variables; and updating the Measurement ID field with your Google tag ID.
 - Testing the GA4 Configuration tag to ensure it fires correctly on every page and confirming that GA4 Event tags accurately track user actions, such as viewing a product or adding a product to the cart.
-- Using Google Analytics DebugView and Reports to verify that events are being received and data is populating your reports.
-- Tracking key user actions - including product impressions, add-to-cart events, and completed orders - by leveraging Pixel Apps and GA4 events.
+- Using Google Analytics DebugView and Reports to check if events are being received and data is populating your reports.
+- Tracking key user actions — including product impressions, add-to-cart events, and completed orders — by leveraging Pixel Apps and GA4 events.
 
 ## Before you begin
 
 <Steps>
 
-### Have the VTEX IO Google Tag Manager app
+### Get the VTEX IO Google Tag Manager app
 
 Install and configure the VTEX IO Google Tag Manager app. For more information, see the guide [Installing Google Tag Manager](https://developers.vtex.com/docs/guides/store-framework-analytics-installing-google-tag-manager).
 
-### Create a Google Analytics 4 (GA4) Configuration Tag
+### Create a Google Analytics 4 (GA4) Configuration tag
 
-Create a Google Analytics 4 (GA4) Configuration Tag using your Measumerent ID in [Google Tag Manager (GTM)](https://tagmanager.google.com/). For more information, see the Google article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
+Create a Google Analytics 4 (GA4) Configuration tag using your Measumerent ID in [Google Tag Manager (GTM)](https://tagmanager.google.com/). For more information, see the Google article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
 
 </Steps>
 
@@ -36,42 +36,42 @@ Create a Google Analytics 4 (GA4) Configuration Tag using your Measumerent ID in
 
 After creating the GA4 Configuration tag, set up GA4 events as follows:
 
-1. Download the [GTM container file](https://developers.vtex.com/container-template.json) to pre-load all necessary tags, triggers, and variables.
+1. Download the [GTM container file](https://developers.vtex.com/container-template.json) to preload all necessary tags, triggers, and variables.
 2. Import the container file by following Google’s [Import a container](https://support.google.com/tagmanager/answer/6106997?#import) guide. This will add all the necessary tags, triggers, and variables to the workspace.
 
     ![import-container](https://vtexhelp.vtexassets.com/assets/docs/src/new-ga4-tags-variables___b2619df57689429d97a8abd56a5f7d83.png)
 
-3. In the GTM container, go to the GA4 Configuration tag, and edit the **Measurement ID** field with your Google Tag ID ( G- ID).
+3. In the GTM container, go to the GA4 Configuration tag, and edit the **Measurement ID** field with your Google tag ID (G- ID).
 
-    > ℹ️ To find your Google Tag ID, refer to [Find your Google tag ID](https://support.google.com/analytics/answer/9539598?sjid=16676572490197811169-SA#find-G-ID) guide.
+    > ℹ️ To find your Google tag ID, check the [Find your Google tag ID](https://support.google.com/analytics/answer/9539598?sjid=16676572490197811169-SA#find-G-ID) guide.
 
-### Step 2 - Testing Tags in Google Tag Manager
+### Step 2 - Testing tags in Google Tag Manager
 
-To test if the GA4 Configuration tag is firing correctly on every page, use the [Preview mode](https://support.google.com/tagmanager/answer/6107056) in GTM. Additionally, confirm that the GA4 Event tags are firing accurately for user actions, such as viewing a product or adding a product to the cart.
+To test if the GA4 Configuration tag is firing correctly on every page, use the [Preview mode](https://support.google.com/tagmanager/answer/6107056) in GTM. Additionally, check if the GA4 Event tags are firing accurately for user actions, such as viewing a product or adding a product to the cart.
 
-### Step 3 - Testing Events sent to Google Analytics 4
+### Step 3 - Testing events sent to Google Analytics 4
 
-To confirm that the events are being received and reports are populated with data, access the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to verify if the events are arriving and the [Reports](https://support.google.com/analytics/answer/9212670) are being filled with data.
+To check if the events are being received and the reports are populated with data, go to the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to make sure the events are arriving and the [Reports](https://support.google.com/analytics/answer/9212670) are getting the data.
 
 ![gtm-debug-view](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-debug-view___e2dc572dcc33e2e23e81749583226ec8.png)
 
-To see the available events that GA4 can track, refer to the [Overview of trackable events](#overview-of-trackable-events) section.
+To see the available events that GA4 can track, check the [Overview of trackable events](#overview-of-trackable-events) section.
 
 ## Overview of trackable events
 
-This section provides a list of events that GA4 can track and explains the `view_promotion` event, which is usually attached to the promotion banners carousel displayed by the [Slider Layout](https://developers.vtex.com/docs/apps/vtex.slider-layout) block.
+This section provides a list of events that GA4 can track and explains the `view_promotion` event, which is usually attached to the promotion banner carousel displayed by the [Slider Layout](https://developers.vtex.com/docs/apps/vtex.slider-layout) block.
 
-### View Promotion
+### View promotion
 
-The [GA4 view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion) expects to receive the product’s name or ID associated with it.
+The [GA4 view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion) event expects the product name or ID associated with it.
 
-This event is commonly attached to the promotion banner carousel displayed by the Slider Layout block. For example, you can use the Site Editor to configure the `Product ID` and `Product Name`. To access the Site Editor, go to **Storefront > Site Editor** in the VTEX Admin.
+This event is commonly attached to the promotion banner carousel displayed by the Slider Layout block. For example, you can use Site Editor to configure the `Product ID` and `Product Name`. To access Site Editor, go to **Storefront > Site Editor** in the VTEX Admin.
 
 ![gtm-site-editor-fields](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-site-editor___bc52365aafad63deb5bfed1d74f307c0.png)
 
 ### Supported events
 
-Check out the available events that [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) can listen to, along with their corresponding names in Universal Analytics (UA) and Google Analytics 4 (GA4):
+Check the available events that [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) can listen to, along with their corresponding names in Universal Analytics (UA) and Google Analytics 4 (GA4):
 
 | VTEX                   | UA                                                                                              | GA4                                                                                                                                      |
 |------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -92,9 +92,9 @@ Check out the available events that [Pixel Apps](https://developers.vtex.com/doc
 | vtex:share             | Not applicable                                                                                  | [share](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#share)                         |
 | vtex:addToWishlist     | Not applicable                                                                                  | [add_to_wishlist](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_wishlist)     |
 
-### Partially-supported events
+### Partially supported events
 
-The following events are not fully supported yet. Although the GTM app will listen and format them into GA4, their VTEX event triggers have not been implemented yet:
+The following events are not fully supported yet. Although the GTM app will listen and format them into GA4, corresponding VTEX event triggers have not been implemented yet:
 
 | VTEX        | GA4                                                                                                                  |
 |-------------|----------------------------------------------------------------------------------------------------------------------|
