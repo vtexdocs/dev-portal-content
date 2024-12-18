@@ -21,7 +21,7 @@ If you have already installed the Google Tag Manager app, go to the [Create a Go
 
 You need a Google account to use Google Tag Manager (GTM). If you already use Google products like Gmail, you can use the same account.
 
-If you don't have an account, create one by following Google's guide on [Creating your Google account](https://accounts.google.com/signup/v2/webcreateaccount?service=analytics\&continue=https%3A%2F%2Ftagmanager.google.com%2F\&dsh=S1158101756%3A1642078409369040\&biz=true\&flowName=GlifWebSignIn\&flowEntry=SignUp\&nogm=true).
+If you don't have an account, create one by following Google's guide on [Creating your Google account](https://accounts.google.com/lifecycle/steps/signup/workspaceinterstitial?continue=https://tagmanager.google.com/&ddm=1&dsh=S1747300419:1734533693867352&flowEntry=SignUp&flowName=GlifWebSignIn&service=analytics&TL=AE--Llz4c9wxBXCL_HUOxs0VQwkCVyn1dVQZDuQL8ZvZUnVGcbKDfXTlaI-fN0ks).
 
 ### Get a GTM container
 
