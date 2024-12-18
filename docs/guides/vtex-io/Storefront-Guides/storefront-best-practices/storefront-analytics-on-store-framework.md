@@ -1,6 +1,6 @@
 ---
 title: "Analytics on Store Framework"
-slug: "analytics-on-store-framework"
+slug: "storefront-analytics-on-store-framework"
 hidden: false
 createdAt: "2022-01-13T14:20:38.126Z"
 updatedAt: "2024-12-18T15:07:42.158Z"
