@@ -6,6 +6,8 @@ createdAt: "2022-11-18T18:48:14.043Z"
 updatedAt: "2022-11-18T18:53:14.127Z"
 ---
 
+>⚠️ The [Multilevel Omnichannel Inventory (MOI)](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) feature has been discontinued for integrations with external marketplaces. Now, MOI is available only for integrations between VTEX marketplaces and sellers. We recommend reviewing your integration strategies to align with the currently supported functionalities. For more information, please contact [VTEX support](https://help.vtex.com/en/support).
+
 Marketplaces following the [External Marketplace protocol](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide) can also make the [Multilevel Omnichannel Inventory](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) setting available for VTEX sellers connected to it. This allows for more fulfillment options by VTEX sellers, since they can connect their franchise accounts' inventories as fulfillment options. You can learn more about the benefits and restrictions of implementing this feature in our [Multilevel Omnichannel Inventory Help article](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).
 
 External marketplaces and connectors should follow this article's instructions to configure Multilevel Omnichannel Inventory in their marketplace architecture with VTEX.
