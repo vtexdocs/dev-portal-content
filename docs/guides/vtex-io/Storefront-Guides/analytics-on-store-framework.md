@@ -3,7 +3,7 @@ title: "Analytics on Store Framework"
 slug: "analytics-on-store-framework"
 hidden: false
 createdAt: "2022-01-13T14:20:38.126Z"
-updatedAt: "2024-11-13T14:15:26.707Z"
+updatedAt: "2024-12-18T15:07:42.158Z"
 excerpt: "Discover how to manage Analytics on Store Framework using the Google Tag Manager app."
 ---
 
