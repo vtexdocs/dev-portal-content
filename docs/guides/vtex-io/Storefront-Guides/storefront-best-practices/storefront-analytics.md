@@ -2,7 +2,7 @@
 title: "Analytics"
 slug: "storefront-analytics"
 hidden: false
-createdAt: "2024-11-25T14:01:22.113Z"
+createdAt: "2024-12-18T17:53:38.402Z"
 updatedAt: ""
 excerpt: "Explore how to leverage data to drive informed decisions and optimize your VTEX store performance."
 ---
@@ -41,6 +41,6 @@ In [FastStore](https://developers.vtex.com/docs/guides/faststore), there is no e
 
 Below are the main characteristics of Google Analytics in FastStore:
 
-- You can trigger your own events, customize them with your own types, and add any properties of your choice. This flexibility empowers developers and store managers to collect data tailored to their business needs. Learn how to extend and customize types in the guide [Extending and customizing native types](https://v1.faststore.dev/reference/sdk/analytics/how-to-extend-types). For more information about sending custom events, see [Sending custom events](https://v1.faststore.dev/reference/sdk/analytics/how-to-send-custom-events).
+- You can trigger your own events, customize them with your own types, and add any properties of your choice. This flexibility empowers developers and store managers to collect data tailored to their business needs.
 - You have the flexibility to implement analytics based on your business needs, but you are responsible for triggering events and ensuring their completeness. Events will not trigger automatically unless you include them, which requires careful attention from maintainers to avoid gaps in analytics.
 - All analytics events can be found in the store repository. You can easily search for [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) calls to understand when and where events are triggered. Additionally, FastStore provides end-to-end (E2E) tests for [GA4 Recommended events](https://support.google.com/analytics/answer/9267735?sjid=7873480420853807302-SA), helping you identify and fix issues before they impact data collection.
