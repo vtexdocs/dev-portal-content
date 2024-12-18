@@ -35,7 +35,7 @@ Create a Google Analytics 4 (GA4) property using the GA4 Setup Assistant. This p
 
 ### Take note of GTM settings
 
-Take note of the Measurement ID, also known as [_G- ID_](https://support.google.com/analytics/answer/9539598#find-G-ID), as it will be used later to configure the GA4 tag on GTM.
+Take note of the Measurement ID, also known as [G-ID](https://support.google.com/analytics/answer/9539598#find-G-ID), as it will be used later to configure the GA4 tag on GTM.
 
 </Steps>
 
@@ -55,7 +55,7 @@ Take note of the Measurement ID, also known as [_G- ID_](https://support.google.
 
 5. On the checkout page, click `Place Order`.
 
-> ℹ️ GTM is a free app.
+> ℹ GTM is a free app.
 
 6. You will see a success message about the purchase. Click `Go to Install Page` to be redirected to the GTM setup page in the VTEX admin.
 
@@ -67,7 +67,7 @@ Take note of the Measurement ID, also known as [_G- ID_](https://support.google.
    In the Google Tag Manager field, add your **GTM ID**.
    Check the box for **Send Google Analytics 4 Events**.
 
-> ℹ️ To find your store's **GTM ID**, you first need to create a container in your Google Tag Manager account. If you don't have one yet, follow the [Create an account and container](https://support.google.com/tagmanager/answer/6103696?hl=en#install) tutorial. Once created, you can find the GTM ID in the `Container ID` column of the container.
+> ℹ To find your store's **GTM ID**, you first need to create a container in your Google Tag Manager account. If you don't have one yet, follow the [Create an account and container](https://support.google.com/tagmanager/answer/6103696?hl=en#install) tutorial. Once created, you can find the GTM ID in the `Container ID` column of the container.
 
 ![gtm-new-field](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-new-field___bf665f34409d6d7cbcfc79239e277ee0.png)
 
@@ -81,7 +81,7 @@ To prevent performance issues and unpredictable behavior, the VTEX IO Google Tag
 
 As a result, custom HTML tags will not be triggered. **The HTML blacklist is the default setting in the VTEX Google Tag Manager app**. To disable this restriction, go to `https://{accountName}.myvtex.com/admin/apps/vtex.google-tag-manager@3.x/setup` and check the setting below.
 
-> ⚠ Replace {accountName} with your store account name.
+> ⚠ Replace `{accountName}` with your store account name.
 
 ![restrictions](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-installing-google-tag-manager-1.png)
 
