@@ -3,7 +3,7 @@ title: "Installing Google Tag Manager"
 slug: "store-framework-analytics-installing-google-tag-manager"
 hidden: false
 createdAt: "2022-02-01t13:34:01.638z"
-updatedAt: "2024-11-18T16:28:11.922Z"
+updatedAt: "2024-12-18T14:38:14.781Z"
 excerpt: "Discover the steps to install the Google Tag Manager app in your Store Framework store."
 ---
 
