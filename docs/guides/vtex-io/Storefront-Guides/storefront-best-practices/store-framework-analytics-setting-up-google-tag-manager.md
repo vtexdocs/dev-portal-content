@@ -3,7 +3,7 @@ title: "Setting up Google Tag Manager"
 slug: "store-framework-analytics-setting-up-google-tag-manager"
 hidden: false
 createdAt: "2020-06-03T16:02:44.272Z"
-updatedAt: "2024-11-13T18:51:12.992Z"
+updatedAt: "2024-12-18T16:04:22.033Z"
 category: "Storefront development"
 excerpt: "Explore how to track and analyze store data using Google Analytics 4"
 ---
