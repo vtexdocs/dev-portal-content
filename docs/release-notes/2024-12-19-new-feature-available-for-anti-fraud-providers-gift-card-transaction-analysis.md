@@ -48,7 +48,7 @@ See an example of a payload sent on the [Send anti-fraud data](https://developer
 …
 ```
 
-> ℹ️ The information in the `"redemptionToken"` and `"redemptionCode"` fields is sent to anti-fraud providers only in masked format (****), preserving its security.
+> ℹ️ The information in the `redemptionToken` and `redemptionCode` fields is sent to anti-fraud providers only in masked format (****), enhancing security and data protection.
 
 ## What needs to be done?
 
