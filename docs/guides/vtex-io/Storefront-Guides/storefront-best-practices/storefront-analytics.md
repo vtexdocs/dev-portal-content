@@ -25,7 +25,7 @@ To learn how to implement Google Analytics, see the section for your store's sto
 
 In [Store Framework](https://developers.vtex.com/docs/guides/store-framework), a VTEX IO app manages Google Analytics by implementing the [Google Tag Manager (GTM)](https://tagmanager.google.com/) script, setting event properties, and adding events to the `dataLayer`.
 
-> ℹ️ Learn more in the guide [Analytics on Store Framework](https://developers.vtex.com/docs/guides/storefront-analytics-on-store-framework).
+> ℹ️ Learn more in the guide [Configuring Analytics (Google Tag Manager)](https://developers.vtex.com/docs/guides/store-framework-configuring-analytics-google-tag-manager).
 
 Below are the main characteristics of Google Analytics in Store Framework:
 
