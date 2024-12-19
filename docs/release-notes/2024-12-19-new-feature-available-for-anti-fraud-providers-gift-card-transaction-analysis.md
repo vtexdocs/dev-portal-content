@@ -12,7 +12,7 @@ Anti-fraud providers integrated with VTEX can now analyze payment transactions m
 
 ## What has changed?
 
-The `allowAntifraudOnGiftCard` field was created within the [Anti-fraud Provider Protocol](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works), allowing anti-fraud providers to indicate whether they want to process gift card transaction data in a VTEX store.
+The `allowAntifraudOnGiftCard` field was created within the [Anti-fraud Provider Protocol](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works), allowing anti-fraud providers to indicate whether they provide the service for processing gift card transaction data in a VTEX store.
 
 Gift card transaction information is sent to providers through the [Send anti-fraud pre-analysis data (optional)](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/pre-analysis) or [Send anti-fraud data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/transactions) endpoints, as in payment operations made by credit or debit card.
 
