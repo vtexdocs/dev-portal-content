@@ -58,5 +58,4 @@ To enable the gift card data analysis at your anti-fraud provider, follow the st
 2. Open a ticket with [VTEX Support](https://help.vtex.com/support) requesting the provider integration update.
 3. Contact VTEX merchants with whom you have contracts to inform them about the availability of this new anti-fraud analysis service.
 
-
 > ⚠️ Learn more in the [Announcement Anti-fraud analysis for gift cards](https://help.vtex.com/en/announcements/anti-fraud-analysis-for-gift-cards).
