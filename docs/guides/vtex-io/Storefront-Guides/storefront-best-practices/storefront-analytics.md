@@ -37,7 +37,7 @@ Below are the main characteristics of Google Analytics in Store Framework:
 
 In [FastStore](https://developers.vtex.com/docs/guides/faststore), there is no equivalent app; instead, all management is done directly within the storefront source code.
 
-> ℹ️ Learn more in the guide [Analytics on FastStore](https://developers.vtex.com/docs/guides/storefront-analytics-on-faststore).
+> ℹ️ Learn more in the guide [Analytics on FastStore](https://developers.vtex.com/docs/guides/faststore/analytics-overview).
 
 Below are the main characteristics of Google Analytics in FastStore:
 
