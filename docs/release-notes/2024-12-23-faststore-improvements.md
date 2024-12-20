@@ -15,9 +15,9 @@ The main focus of these enhancements is on optimizing the homepage experience fo
 
 ### Preact (experimental feature)
 
-[Preact](https://preactjs.com/) is a lightweight alternative to React that improves performance by reducing the JavaScript bundle size.
+FastStore now supports [Preact](https://preactjs.com/), a lightweight alternative to React that improves performance by reducing the JavaScript bundle size.
 
-For implementation details, see the [Improving store performance with Preact](https://developers.vtex.com/docs/guides/faststore/managing-performance-improving-store-performance-with-preact) guide.
+[After updating your FastStore project version](#what-needs-to-be-done-?) to `3.0.112` or later, see the [Improving store performance with Preact](https://developers.vtex.com/docs/guides/faststore/managing-performance-improving-store-performance-with-preact) guide to enable Preact.
 
 ### Removal of unused libraries
 
