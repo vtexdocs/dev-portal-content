@@ -50,7 +50,7 @@ Now, you must set up your VTEX account to use the DNS records created in the pre
    - `mystore.com` (root domain)
    - `secure.mystore.com` (checkout/myaccount subdomain)
 
-> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. In other words, you must include both the `www.` and non-`www.` domains in the hosts' list. Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. For more information, see the [Adding subdomains to the host list](#adding-subdomains-to-the-host-list) section.
 
 8. Click the **Save** button.
 
@@ -99,7 +99,33 @@ Take the following example of how this code block would look after configuring a
 7. Save your changes.
 8. Open a Pull Request, commit your changes, and deploy them to `main`.
 
-#### Adding `subDomainPrefix` for prefixed domains
+> ⚠️ For stores with prefixed domains, add the `subDomainPrefix` property to `discovery.config.js` to ensure product visibility in the secured environment. For more information, see the [Adding `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains) section. 
+
+### Step 5 - Configuring the CDN workflow (Only for new go-lives)
+
+If your FastStore website is going live for the first time, [open a ticket with VTEX Support](https://help.vtex.com/en/support) and specify that you need to configure the CDN workflow for the secure and main domains of your store.
+
+Remember to include the following information in your ticket:
+
+   - Your VTEX **account name**.
+   - The **secure** and **main** domains of your store.
+
+The VTEX team will evaluate your request and take the necessary actions to configure your account's CDN workflow.
+
+## Configuring custom domain prefixes
+
+To ensure your store operates efficiently, it's important to configure custom domain prefixes correctly for both checkout and secure product viewing. There are some scenarios where you need to configure custom domains prefixes:
+
+- Stores with multiple subdomains: [Add all the subdomains to the host list](#adding-subdomains-to-the-host-list).
+- Stores with prefixed domains: [Add `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains).
+
+### Adding subdomains to the host list
+
+To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the hosts' list. 
+
+Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+
+### Adding `subDomainPrefix` for prefixed domains
 
 To ensure customers can view products in the secured environment on your store final domain, add the `subDomainPrefix` property to the [`dicovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#files) file. 
 The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
@@ -122,17 +148,6 @@ To add the `subDomainPrefix` property, follow these steps:
 
 4. Save your changes.
 5. Open a Pull Request, commit your changes, and deploy them to `main`.
-
-### Step 5 - Configuring the CDN workflow (Only for new go-lives)
-
-If your FastStore website is going live for the first time, [open a ticket with VTEX Support](https://help.vtex.com/en/support) and specify that you need to configure the CDN workflow for the secure and main domains of your store.
-
-Remember to include the following information in your ticket:
-
-   - Your VTEX **account name**.
-   - The **secure** and **main** domains of your store.
-
-The VTEX team will evaluate your request and take the necessary actions to configure your account's CDN workflow.
 
 ## Related Resources
 
