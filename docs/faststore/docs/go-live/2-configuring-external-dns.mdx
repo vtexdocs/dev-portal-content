@@ -97,7 +97,30 @@ Take the following example of how this code block would look after configuring a
    ```
 
 7. Save your changes.
-8. Open a Pull Request, commit your changes, and deploy them to `main`/`master`.
+8. Open a Pull Request, commit your changes, and deploy them to `main`.
+
+#### Adding `subDomainPrefix` for domains with a prefix
+
+To ensure customers can view products in the secured environment on the final domain, add the `subDomainPrefix` property to the `dicovery.config.js` file. The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
+
+To add the `subDomainPrefix` property, follow these steps:
+
+1. Open your FastStore project in a code editor of your preference.
+2. Open the `discovery.config.js` file.
+3. Navigate to the `api` object and add the following:
+
+   ```js
+   // Platform specific configs for API
+   api: {
+    ...
+    subDomainPrefix: ['xxx']
+   },
+   ```
+
+   > ⚠ The `subDomainPrefix` property should be an array of strings, with each string representing a prefix.
+
+4. Save your changes.
+5. Open a Pull Request, commit your changes, and deploy them to `main`.
 
 ### Step 5 - Configuring the CDN workflow (Only for new go-lives)
 
