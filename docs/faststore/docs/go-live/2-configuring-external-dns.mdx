@@ -99,9 +99,10 @@ Take the following example of how this code block would look after configuring a
 7. Save your changes.
 8. Open a Pull Request, commit your changes, and deploy them to `main`.
 
-#### Adding `subDomainPrefix` for domains with a prefix
+#### Adding `subDomainPrefix` for prefixed domains
 
-To ensure customers can view products in the secured environment on the final domain, add the `subDomainPrefix` property to the `dicovery.config.js` file. The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
+To ensure customers can view products in the secured environment on your store final domain, add the `subDomainPrefix` property to the `dicovery.config.js` file. 
+The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
 
 To add the `subDomainPrefix` property, follow these steps:
 
@@ -117,7 +118,7 @@ To add the `subDomainPrefix` property, follow these steps:
    },
    ```
 
-   > ⚠ The `subDomainPrefix` property should be an array of strings, with each string representing a prefix.
+   > ⚠ Replace 'xxx' from `subDomainPrefix` property with the actual subdomain prefix (e.g., `'b2b'`). If you have multiple prefixes, add them as an array of strings (e.g., ['b2b', 'dev']).
 
 4. Save your changes.
 5. Open a Pull Request, commit your changes, and deploy them to `main`.
