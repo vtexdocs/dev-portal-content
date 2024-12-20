@@ -41,7 +41,7 @@ To fix it, follow these steps:
 
 1. Go to the file where you are using the `ClientManyProducts` fragment, and add the missing `sponsoredCount` parameter. For example:
 
-    ```ts mark=8
+    ```ts mark=11
     import { gql } from "@faststore/core/api";
 
     export const fragment = gql(`
@@ -52,7 +52,7 @@ To fix it, follow these steps:
         sort: $sort
         term: $term
         selectedFacets: $selectedFacets
-        sponsoredCount: $sponsoredCount  // Add this parameter!
+        sponsoredCount: $sponsoredCount
     ) {
         … 
     }
