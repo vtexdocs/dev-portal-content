@@ -1,9 +1,9 @@
 ---
-title: "Analytics on Store Framework"
-slug: "storefront-analytics-on-store-framework"
+title: "Configuring Analytics (Google Tag Manager)"
+slug: "store-framework-configuring-analytics-google-tag-manager"
 hidden: false
 createdAt: "2022-01-13T14:20:38.126Z"
-updatedAt: "2024-12-18T15:07:42.158Z"
+updatedAt: "2024-12-26T15:07:42.158Z"
 excerpt: "Discover how to manage Analytics on Store Framework using the Google Tag Manager app."
 ---
 
@@ -20,14 +20,14 @@ The app allows you to manage website tags without accessing the store source cod
   <WhatsNextCard
   title="Installing Google Tag Manager"
   description="Learn how to install the Google Tag Manager app in your VTEX store."
-  linkTo="/docs/guides/store-framework-analytics-installing-google-tag-manager"
+  linkTo="/docs/guides/vtex-io-documentation-installing-google-tag-manager"
   linkTitle="Learn more"
   />
 
   <WhatsNextCard
   title="Setting up Google Tag Manager"
   description="Set up the Google Tag Manager app with variables, triggers, and tags."
-  linkTo="/docs/guides/store-framework-analytics-setting-up-google-tag-manager"
+  linkTo="/docs/guides/vtex-io-documentation-setting-up-google-tag-manager"
   linkTitle="Learn more"
   />
  
