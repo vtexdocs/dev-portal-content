@@ -3,7 +3,7 @@ title: "Optimizing image rendering"
 slug: "vtex-io-documentation-optimizing-image-rendering"
 hidden: false
 createdAt: "2020-06-03T16:02:44.306Z"
-updatedAt: "2024-11-08T13:25:53.180Z"
+updatedAt: "2024-11-22T15:43:44.058Z"
 excerpt: "Learn how to optimize image rendering for faster load times."
 ---
 
