@@ -11,6 +11,7 @@ excerpt: "Explore how to track and analyze store data using Google Analytics 4."
 After installing the VTEX IO [Google Tag Manager app](https://developers.vtex.com/docs/apps/vtex.google-tag-manager), configure the necessary variables, triggers, and tags to set it up in your store.
 
 In this guide, you will learn how to track and analyze store data using Google Analytics 4 (GA4). The guide covers:
+
 - Configuring GA4 events by downloading and importing a container file; adding the necessary tags, triggers, and variables; and updating the Measurement ID field with your Google tag ID.
 - Testing the GA4 Configuration tag to ensure it fires correctly on every page and confirming that GA4 Event tags accurately track user actions, such as viewing a product or adding a product to the cart.
 - Using Google Analytics DebugView and Reports to check if events are being received and data is populating your reports.
