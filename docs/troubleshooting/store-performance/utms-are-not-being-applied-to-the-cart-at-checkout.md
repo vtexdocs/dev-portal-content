@@ -12,7 +12,7 @@ tags:
 ---
 Keywords: utm source | utm campaign | utm medium | checkout | cart
 
-When a [UTM parameter](https://help.vtex.com/pt/tutorial/what-are-utm-source-utm-campaign-and-utm-medium--2wTz7QJ8KUG6skGAoAQuii) (`utm_source`, `utm_campaign` or `utm_medium`) is used to load a store page, the system creates a cookie named **IPS** whose value is equal to the value of the parameter.
+When an [UTM parameter](https://help.vtex.com/en/tutorial/what-are-utm-source-utm-campaign-and-utm-medium--2wTz7QJ8KUG6skGAoAQuii) (`utm_source`, `utm_campaign` or `utm_medium`) is used to load a store page, the system creates a cookie named **IPS** whose value is equal to the value of the parameter.
 
 The [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) of orders closed by the user will receive this cookie in the header of the request sent to Checkout (until this cookie expires). In other words, the moment the customer clicks the **Buy** button, the buy button native control (`<vtex.cmc:BuyButton/>`) will perform a **POST** request to send the value of the **utm_source** parameter to the Checkout.
 
