@@ -1,6 +1,6 @@
 ---
-title: "Starting to work on Master Data v2 with JSON Schemas"
-slug: "starting-to-work-on-master-data-with-json-schema"
+title: "Working with JSON Schemas in Master Data v2"
+slug: "working-with-json-schemas-in-master-data-v2"
 hidden: false
 excerpt: "Learn more about how to set up your JSON schemas"
 createdAt: "2022-07-05T19:36:42.104Z"

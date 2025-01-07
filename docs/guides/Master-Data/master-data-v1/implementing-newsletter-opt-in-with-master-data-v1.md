@@ -1,7 +1,7 @@
 ---
 title: "Setting up Newsletter opt-in with Master Data v1"
 excerpt: "Learn how to configure newsletter subscriptions with Master Data v1."
-slug: "newsletter-inclusion-master-data-v1"
+slug: "implementing-newsletter-opt-in-with-master-data-v1"
 hidden: false
 createdAt: "2022-10-20T18:16:54.439Z"
 updatedAt: "2022-10-20T19:13:15.403Z"

@@ -1,6 +1,6 @@
 ---
 title: "v2 Guides"
-slug: "master-data-v2-guides"
+slug: "master-data-v2"
 hidden: false
 createdAt: "2021-10-13T19:26:01.932Z"
 updatedAt: "2022-08-09T22:12:35.462Z"

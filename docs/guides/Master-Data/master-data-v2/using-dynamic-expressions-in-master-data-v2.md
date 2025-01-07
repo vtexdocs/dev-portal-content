@@ -1,6 +1,6 @@
 ---
 title: "Using dynamic expressions in Master Data v2"
-slug: "adding-document-field-values-with-dynamic-expressions"
+slug: "using-dynamic-expressions-in-master-data-v2"
 hidden: false
 createdAt: "2022-08-03T14:54:11.873Z"
 updatedAt: "2022-08-03T14:57:56.514Z"

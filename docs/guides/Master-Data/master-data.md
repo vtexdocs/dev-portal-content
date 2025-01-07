@@ -1,6 +1,6 @@
 ---
 title: "Master Data"
-slug: "master-data-introduction"
+slug: "master-data"
 hidden: false
 createdAt: "2021-04-08T20:18:50.708Z"
 updatedAt: "2022-07-13T22:11:49.125Z"

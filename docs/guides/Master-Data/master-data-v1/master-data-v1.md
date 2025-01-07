@@ -1,6 +1,6 @@
 ---
-title: "v1 Guides"
-slug: "v1-guides"
+title: "Master Data v1"
+slug: "master-data-v1"
 excerpt: "Learn how to use Master Data v1 with these step-by-step guides."
 hidden: false
 createdAt: "2022-08-09T22:08:08.215Z"

@@ -1,6 +1,6 @@
 ---
-title: "Setting up an auto increment field"
-slug: "auto-increment-field"
+title: "Setting up an auto increment field on Master Data v2"
+slug: "setting-up-an-auto-increment-field-on-master-data-v2"
 hidden: false
 createdAt: "2022-09-27T20:49:42.874Z"
 updatedAt: "2022-10-04T21:56:43.466Z"

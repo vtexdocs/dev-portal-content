@@ -1,6 +1,6 @@
 ---
-title: "Avoiding CORS in your Master Data requests"
-slug: "avoiding-cors-in-your-masterdata-requests"
+title: "Avoiding CORS in Master Data requests"
+slug: "avoiding-cors-in-master-data-requests"
 excerpt: "Learn how to avoid CORS issues in your Master Data requests."
 hidden: false
 createdAt: "2021-10-13T19:45:36.960Z"
