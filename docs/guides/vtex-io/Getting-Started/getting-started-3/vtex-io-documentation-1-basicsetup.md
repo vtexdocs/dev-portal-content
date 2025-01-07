@@ -22,7 +22,7 @@ Download [Git](https://git-scm.com/downloads) on your computer directly from its
 
 Install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) (Command Line Interface), which serves as the gateway between your VTEX account and the VTEX IO development platform. The VTEX IO CLI is an essential tool for managing, developing, and deploying your Store Theme app.
 
-Follow the VTEX IO CLI [installation guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) for detailed instructions. 
+Follow the VTEX IO CLI [installation guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) for detailed instructions.
 
 ### Step 2 - Logging in to your VTEX account
 
