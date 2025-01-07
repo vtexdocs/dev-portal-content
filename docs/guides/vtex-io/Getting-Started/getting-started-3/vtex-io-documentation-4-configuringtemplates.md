@@ -57,7 +57,7 @@ According to their composition, the listed blocks will determine whether they sh
 
 </Steps>
 
-> ℹ Learn more about these and other relevant concepts in [Essential concepts](LINK).
+> ℹ Learn more about these and other relevant concepts in [Composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition), [Interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface), [Properties](https://developers.vtex.com/docs/guides/vtex-io-documentation-properties), and [Slots](https://developers.vtex.com/docs/guides/vtex-io-documentation-slots).
 
 ## Instructions
 
