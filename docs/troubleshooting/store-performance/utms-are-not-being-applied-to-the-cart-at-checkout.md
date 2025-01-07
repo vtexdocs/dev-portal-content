@@ -55,7 +55,7 @@ Carry out procedures to check the existence of UTMs in the cart according to you
 
 As previously stated, the native buy button control (`<vtex.cmc:BuyButton/>`) triggers a POST request sending all the data needed to the Checkout, including the value of the `utm_source`, `utm_campaign` and `utm_medium`.
 
-If the UTM parameters are not being sent to the cart, you should check if your store is using a **custom purchase POST call** instead of the native control. After confirming the existence of a custom purchase POST call, you can update its settings to ensure that contains all the data needed to assemble the **orderForm**, including the marketing context, or perform one of the actions below:
+If the UTM parameters are not being sent to the cart, you should check if your store is using a **custom purchase POST call** instead of the native control. After confirming the existence of a custom purchase POST call, you can update its settings to ensure that contains all the data needed to assemble the orderForm, including the marketing context, or perform one of the actions below:
 
 - Send UTM parameters for a specific cart by accessing the [Add marketing data](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/marketingData) endpoint or by entering the `marketingData` information via the [sendAttachment](https://developers.vtex.com/docs/guides/vtexjs-for-checkout#sendattachmentattachmentid-attachment-expectedorderformsections).
 - Use the [Cartman](https://help.vtex.com/tutorial/configurar-o-cartman--1ACMTStZYkMqB0lTgwg451#define-marketing-data) tool on the checkout screen to add UTM parameters directly to the cart.
