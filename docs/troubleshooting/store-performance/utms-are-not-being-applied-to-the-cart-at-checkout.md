@@ -20,7 +20,7 @@ In this way, the Checkout will be able to assemble the orderForm considering the
 
 > ⚠️ The IPS cookie is created for Legacy CMS Portal accounts only. For stores using the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), information from marketing UTMs is sent to Checkout through the Sessions system.
 
-However, there are some situations in which the UTM parameters are not being loaded into the cart, preventing the identification of the origin of the traffic or the application of a specific promotion assigned to a UTM.
+However, there are some situations in which the UTM parameters are not being loaded into the cart, preventing the identification of the origin of the traffic or the application of a specific promotion assigned to an UTM.
 
 ## Solutions
 
