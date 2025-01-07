@@ -8,7 +8,7 @@ category: "Storefront Development"
 excerpt: "Learn how to manage templates and customize your Store Theme."
 ---
 
-In this guide, you will learn how to customize your store theme by managing templates, which are the website’s page structure. Templates are responsible for declaring `JSON` blocks that, once rendered, define the set of components for your website's pages, such as the home page, product page, search results page, etc.
+In this guide, you will learn how to customize your store theme by managing templates, which are the website’s page structure. Templates are responsible for declaring `JSON` blocks that, once rendered, define the set of components for your website's pages, such as the homepage, product page, search results page, etc.
 
 The [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app already implements basic templates for each page of your store, defined within its `blocks.json` or `blocks.jsonc` files. These templates enable your store to display VTEX Store Framework default components, even if you haven’t made any custom configurations in the code. By managing templates, you can create a tailored theme for your website by adding or removing blocks to meet your store's needs.
 
@@ -222,7 +222,7 @@ This means that your default store homepage will comprise the components defined
 
 To build more complex components, the `home.jsonc` file also contains each block’s declaration, along with its configuration, using the block’s props and even other blocks.
 
->⚠ More than simply declaring a block in the block list template, you also need to define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#clarifying-block-naming-and-properties) section, and include other child blocks to define its configuration, as detailed in the [Defining the blocks composition](#defining-the-blocks-composition).
+>⚠ More than simply declaring a block in the block list template, you also need to define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#clarifying-block-naming-and-properties) section, and include other child blocks to define its configuration, as detailed in the [Defining blocks composition](#defining-blocks-composition).
 
 ### Clarifying block naming and properties
 
@@ -245,7 +245,7 @@ To check the available props of the app behind the `rich-text` block, see the Co
 
 ### Defining blocks composition
 
-Still in the `home.jsonc, search for the `shelf#home` block.
+Still in the `home.jsonc, search for the`shelf#home` block.
 
 ```json
 "shelf#home": {
