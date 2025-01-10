@@ -11,19 +11,19 @@ Welcome to the VTEX IO weekly release notes!
 
 Here's a sneak peek at the key changes made in the last week:
 
-> 🔔 Keep up with VTEX IO release notes! Just click on **Releases only** in the **Watch** box on the right upper corner of this page.
+> 🔔 Keep up with VTEX IO release notes! Just click on **Releases only** in the **Watch** box on the upper right corner of this page.
 
 ### New features 🚀
 
-- [Brand component](brand-component.md) - Show a product's brand name or logo in your Product Details page with this new component.
+- [Brand component](brand-component.md) - Shows a product's brand name or logo on your Product Details page.
 
 ### Improvements ➕
 
-- [VTEX IO CLI dependency on Housekeeper](vtex io cli-dependency-on-housekeeper.md) - Housekeep API is presently used by VTEX IO CLI, giving app updates more reliability in a workspace.
-- [Search Bar component](search-bar-component.md) - Increase the search results preview performance with this new Search Bar component improvement.
-- [React builder optimization](react-builder-optimization.md) - The webpack logic has now been improved with the React builder optimization, leading to an impressive reduction in resources.
-- [Product Description component](product-description-component.md) - It is now possible to display a product description in your store regardless of its size.
+- [VTEX IO CLI dependency on Housekeeper](https://developers.vtex.com/updates/release-notes/toolbelt-dependency-on-housekeeper) - Housekeep API is presently used by VTEX IO CLI, giving app updates more reliability in a workspace.
+- [Search Bar component](https://developers.vtex.com/updates/release-notes/search-bar-component) - Improves search results preview performance with this new Search Bar component improvement.
+- [React builder optimization](https://developers.vtex.com/updates/release-notes/react-builder-optimization) - The webpack logic has now been improved with the React builder optimization, leading to an impressive reduction in resources.
+- [Product Description component](https://developers.vtex.com/updates/release-notes/product-description-component)— You can now display a product description in your store regardless of its size.
 
 ### Notable Bug Fixes 🐛
 
-- [Login infinite loop](https://github.com/vtex-apps/login/pull/135) - Users without a set session cookie will no longer encounter problems with infinite loop logins on any store website.
+- [Login infinite loop](https://github.com/vtex-apps/login/) - Users without a set session cookie will no longer encounter problems with infinite loop logins on any store website.
