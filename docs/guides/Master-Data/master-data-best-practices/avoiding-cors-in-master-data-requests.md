@@ -31,4 +31,3 @@ This section will cover best practices for using **Master Data** API endpoints. 
 To perform Master Data entity searches correctly, opt for relative paths, as demonstrated in the jQuery example. This approach simplifies your code by eliminating the need to include account names and environments in each request.
 
 Do not make direct requests to **Master Data** endpoints, and avoid including account names and environments directly in the endpoint.
-
