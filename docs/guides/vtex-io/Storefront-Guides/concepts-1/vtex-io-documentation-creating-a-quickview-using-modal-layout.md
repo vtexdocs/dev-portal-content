@@ -7,11 +7,11 @@ updatedAt: ""
 excerpt: "Learn how to create a Quickview feature using the Modal Layout app."
 ---
 
-In this guide, you'll learn how to configure a Quickview feature in your store using the [Modal Layout](https://developers.vtex.com/docs/guides/vtex-modal-layout) app. The Quickview allows users to view product details directly from the homepage or category pages without navigating to the product detail page.
+In this guide, you'll learn how to configure a Quickview feature in your store using the [Modal Layout](https://developers.vtex.com/docs/apps/vtex.modal-layout) app. The Quickview allows users to view product details directly from the homepage or category pages without navigating to the product detail page.
 
 ![quickview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-modal-layout-0.png)
 
->⚠ This guide is based on the [Store Theme template](https://github.com/vtex-apps/store-theme), a boilerplate with pre-set configurations for creating a store using [Store Framework](LINK). Learn more in [Available templates](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme#available-themes).
+>⚠ This guide is based on the [Store Theme template](https://github.com/vtex-apps/store-theme), a boilerplate with pre-set configurations for creating a store using [Store Framework](https://developers.vtex.com/docs/guides/store-framework). Learn more in [Available templates](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme#available-themes).
 
 ## Instructions
 
@@ -21,7 +21,7 @@ In this guide, you'll learn how to configure a Quickview feature in your store u
 
 2. Open the `manifest.json` file and add the Modal Layout app to your theme dependencies.
 
-```js manifest.json
+```json manifest.json
  "dependencies": {
     "vtex.modal-layout": "0.x",
   }
@@ -34,7 +34,7 @@ To enable the Quickview feature, define the trigger for the modal. The `modal-tr
 1. Open the `quickview.jsonc` file located in the `store/blocks/product-summary` folder.
 2. Add the `modal-trigger#quickview` block to trigger the Quickview modal. In this example, we're using `icon-expand` to represent the trigger.
 
-```js store/blocks/product-summary/quickview.json mark=3
+```json store/blocks/product-summary/quickview.json mark=3
  "modal-trigger#quickview": {
     "children": [
       "icon-expand",
@@ -48,7 +48,7 @@ To enable the Quickview feature, define the trigger for the modal. The `modal-tr
 
 3. Add the `modal-layout#quickview` as a child of the `modal-trigger#quickview` block. This defines the modal layout.
 
-```js store/blocks/product-summary/quickview.json mark=4
+```json store/blocks/product-summary/quickview.json mark=4
   "modal-trigger#quickview": {
     "children": [
       "icon-expand",
