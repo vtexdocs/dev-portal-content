@@ -1,7 +1,7 @@
 ---
-title: "Setting up triggers in Master Data v2"
+title: "Setting up triggers on Master Data v2"
 excerpt: "Learn how to create and configure triggers in Master Data v2 to automate actions after a document update."
-slug: "setting-up-triggers-in-master-data-v2"
+slug: "setting-up-triggers-on-master-data-v2"
 hidden: false
 createdAt: "2022-07-05T16:11:49.082Z"
 updatedAt: "2022-10-28T14:34:21.479Z"
