@@ -2,7 +2,7 @@
 title: "Creating a Quickview using Modal Layout"
 slug: "vtex-io-documentation-creating-a-quickview-using-modal-layout"
 hidden: false
-createdAt: "2024-11-25T14:01:22.113Z"
+createdAt: "2025-01-10T18:23:36.344Z"
 updatedAt: ""
 excerpt: "Learn how to create a Quickview feature using the Modal Layout app."
 ---
