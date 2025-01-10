@@ -33,7 +33,7 @@ Make sure you have the following tools installed on your machine. They facilitat
    vtex install {appVendor}.{appName}@{appVersion}
    ```
 
-4. Open the VTEX Admin of the production workspace used in the previous steps and go to **GraphQL Admin IDE**:
+4. Open the VTEX Admin of the production workspace used in the previous steps and go to the **GraphQL Admin IDE**:
 
    ```sh
    vtex browse admin/graphql-ide
@@ -48,7 +48,7 @@ Make sure you have the following tools installed on your machine. They facilitat
    }
    ```
 
-  >❗ Replace only the values in curly brackets with those that apply to your scenario. Keep the `x` without replacing it with the minor and patch versions. If you do that, the mutation won't work.
+  >❗ Replace only the values in curly brackets with those that apply to your scenario. Keep the `x` without replacing it with the minor and patch versions. If you do so, the mutation won't work.
 
 7. Run the code by clicking `Execute Query` (▶).
 
