@@ -229,3 +229,187 @@ For this section, we will use the following components from the Faststore UI: [B
 
   ![new-section-structure-without-styles](https://vtexhelp.vtexassets.com/assets/docs/src/section-structure-without-styles___7be40088d6137bdd63cbb4940c2fa599.png)
 
+To add styles to `OurStore`, refer to the following section [Importing styles when creating a new section](#importing-styles-when-creating-a-new-section).
+
+## Adding styles to a new section
+
+After creating a new section, you can style it to match your store's branding. Follow the steps below using the [`OurStores`](#ourstores) section as an example.
+
+### Instructions
+
+1. In your store code, open the `components` folder and create a `.module.scss` file for your component. For example, if your component is `OurStores`, name the file `ourStores.module.scss`. This file will contain the styles specific to this section.
+2. Import the necessary FastStore UI styles into your `.module.scss` file. For example, to style the `OurStores` component, we imported the styles for the [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) and [SelectField](https://developers.vtex.com/docs/guides/faststore/molecules-select-field) components. The `Select`  styles are also imported since `SelectField` inherits them.
+
+  ```scss 
+  .ourStores {
+    @import '@faststore/ui/src/components/atoms/Button/styles.scss';
+    @import '@faststore/ui/src/components/atoms/Select/styles.scss';
+    @import '@faststore/ui/src/components/molecules/SelectField/styles.scss';
+  }
+  ```
+
+3. Open the component's `.tsx` file. For example, `OurStores.tsx`. 
+4. Import the newly created stylesheet into the component:
+ ```tsx mark=4
+ import React from 'react'
+ import { Button, Icon, SelectField } from '@faststore/ui'
+
+ import styles from './ourStores.module.scss' ```
+
+5. Apply the styles to your components using `className={styles.<className>}`. Replace `<className>` with the appropriate class name defined in your stylesheet. For example:
+  ```tsx mark=13
+  import React from 'react'
+  import { Button, Icon, SelectField } from '@faststore/ui'
+
+  import styles from './ourStores.module.scss'
+
+  export interface OurStoresProps {
+    title: string
+    description: string
+  }
+
+  export default function OurStores(props: OurStoresProps) {
+    return (
+      <section className={styles.ourStores}>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+        <div>
+          <SelectField
+            id="select-state-store"
+            label="State:"
+            options={{
+              newYork: 'New York',
+              arizona: 'Arizona',
+              massachusetts: 'Massachusetts',
+              hawaii: 'Hawaii',
+            }}
+          />
+          <SelectField
+            id="select-city-store"
+            label="City:"
+            options={{
+              newYorkCity: 'New York City',
+              phoenix: 'Phoenix',
+              boston: 'Boston',
+              honolulu: 'Honolulu',
+            }}
+          />
+          <Button
+            variant="secondary"
+            icon={<Icon name="ArrowRight" />}
+            iconPosition="right"
+          >
+            Find Store
+          </Button>
+        </div>
+      </section>
+    )
+  }
+  ```
+
+6. Open the terminal and run `yarn dev` to see your changes.
+
+  ![new-section-without-styles](https://vtexhelp.vtexassets.com/assets/docs/src/without-styles___4680d2a9a67e4175f3b73eff036ca8ac.png)
+
+7. Add more styles to the section by using [design tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview#global-tokens) and [component-specific data attributes](https://developers.vtex.com/docs/guides/faststore/atoms-button#customization) to the `.module.scss` file:
+
+  ```scss mark=6:42
+  .ourStores {
+    @import '@faststore/ui/src/components/atoms/Button/styles.scss';
+    @import '@faststore/ui/src/components/atoms/Select/styles.scss';
+    @import '@faststore/ui/src/components/molecules/SelectField/styles.scss';
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--fs-spacing-5);
+    margin: auto;
+    background-color: var(--fs-color-neutral-bkg);
+
+    [data-fs-select-field] {
+      flex-direction: column;
+      align-items: flex-start;
+
+      [data-fs-select] {
+        border: var(--fs-border-width) solid var(--fs-border-color);
+        margin-top: var(--fs-spacing-0);
+        width: 10rem;
+        height: var(--fs-control-min-height);
+
+        select {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .ourStores__title {
+    font-size: var(--fs-text-size-title-section);
+    margin-bottom: var(--fs-spacing-1);
+  }
+
+  .ourStores__content {
+    display: flex;
+    align-items: flex-end;
+    column-gap: var(--fs-spacing-5);
+    margin: var(--fs-spacing-5);
+  }
+  ```
+
+8. Update the component's file by adding the appropriate CSS classes to elements, ensuring they align with the newly defined styles in your stylesheet. For example:
+  
+  ```tsx mark=14:16
+  import React from 'react'
+  import { Button, Icon, SelectField } from '@faststore/ui'
+
+  import styles from './ourStores.module.scss'
+
+  export interface OurStoresProps {
+    title: string
+    description: string
+  }
+
+  export default function OurStores(props: OurStoresProps) {
+    return (
+      <section className={styles.ourStores}>
+        <h2 className={styles.ourStores__title}>{props.title}</h2>
+        <p>{props.description}</p>
+        <div className={styles.ourStores__content}>
+          <SelectField
+            id="select-state-store"
+            label="State:"
+            options={{
+              newYork: 'New York',
+              arizona: 'Arizona',
+              massachusetts: 'Massachusetts',
+              hawaii: 'Hawaii',
+            }}
+          />
+          <SelectField
+            id="select-city-store"
+            label="City:"
+            options={{
+              newYorkCity: 'New York City',
+              phoenix: 'Phoenix',
+              boston: 'Boston',
+              honolulu: 'Honolulu',
+            }}
+          />
+          <Button
+            variant="secondary"
+            icon={<Icon name="ArrowRight" />}
+            iconPosition="right"
+          >
+            Find Store
+          </Button>
+        </div>
+      </section>
+    )
+  }
+  ```
+
+9. Navigate to `http://localhost:3000` in your browser to see the updated component with the applied styles.
+
+![new-section-with-styles](https://vtexhelp.vtexassets.com/assets/docs/src/with-styles___4b1cd40d4dcbbba544fd051b1f2dcb36.png)

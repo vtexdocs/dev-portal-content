@@ -96,7 +96,7 @@ To start a new project from pre-defined templates, you can run the following com
 vtex init
 ```
 
-![Init command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/vtex-io/Reference/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/vtex-io-documentation-vtex-io-cli-vtex-init.png)
+![Init command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-5.png)
 
 For example, choose the `store` option to start developing a Store Theme app. This will clone the [Store Theme](https://github.com/vtex-apps/store) boilerplate app to your local files.
 
