@@ -33,10 +33,10 @@ To customize 404 pages, follow the steps below:
     }
     ```
     
-> ℹ The `store.not-found` blocks will only be rendered when the server returns a 404 error. The child block will be displayed to users in such cases.
+    > ℹ The `store.not-found` blocks will only be rendered when the server returns a 404 error. The child block will be displayed to users in such cases.
 
 4. Save your changes and run `vtex link` in your terminal to preview the updated 404 page:
 
-![not-found-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-404-pages-1.png)
+  ![not-found-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-enabling-404-pages-1.png)
 
 5. Once you're satisfied with the changes, [publish your new theme version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/).
