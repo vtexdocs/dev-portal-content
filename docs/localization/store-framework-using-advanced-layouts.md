@@ -7,22 +7,22 @@ updatedAt: ""
 excerpt: "Discover how to create advanced layouts in your Store Framework store." 
 ---
 
-In this section, you will learn how to leverage advanced layout components in your Store Framework store to enhance your storefront’s design and functionality.
+In this section, you'll learn how to use advanced layout components in your Store Framework store to improve your storefront design and functionality.
 
-Advanced layout components, as well as other components, are built on the [VTEX IO development platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) using [React](https://react.dev/) technology. To learn more about the use of components, see [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components) section.
+Advanced layout components, as well as other components, are built on the [VTEX IO development platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) using [React](https://react.dev/) technology. To learn more about the use of components, see the section [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components).
 
-See below the [Layout Apps](https://developers.vtex.com/docs/guides/layout-apps) available:
+See below the available [Layout apps](https://developers.vtex.com/docs/guides/layout-apps):
 
 - [Condition Layout](https://developers.vtex.com/docs/apps/vtex.condition-layout): Renders a component in your store when predefined conditions are met.
 - [Disclosure Layout](https://developers.vtex.com/docs/apps/vtex.disclosure-layout): Creates a layout structure based on disclosure indicators.
 - [Flex Layout](https://developers.vtex.com/docs/apps/vtex.flex-layout): Allows building complex custom layouts using the concept of rows and columns.
 - [Modal Layout](https://developers.vtex.com/docs/apps/vtex.modal-layout): Provides blocks to help you create modals in your store.
-- [Overlay Layout](https://developers.vtex.com/docs/apps/vtex.overlay-layout): Provides blocks that help you create a Dropdown, Select or a Tooltip component.
+- [Overlay Layout](https://developers.vtex.com/docs/apps/vtex.overlay-layout): Provides blocks to create a Dropdown, Select, or Tooltip component.
 - [Responsive Layout](https://developers.vtex.com/docs/apps/vtex.responsive-layout): Allows you to declare layout structures that will only be rendered in a specific screen-size breakpoint.
-- [Slider Layout](https://developers.vtex.com/docs/apps/vtex.slider-layout): Allows building block sliders, such as a carousel.
+- [Slider Layout](https://developers.vtex.com/docs/apps/vtex.slider-layout): Allows building block sliders, such as carousels.
 - [Stack Layout](https://developers.vtex.com/docs/apps/vtex.stack-layout): Shows blocks on top of other blocks.
-- [Sticky Layout](https://developers.vtex.com/docs/apps/vtex.sticky-layout): Provides layout structures to help build elements that should be fixed relative to the viewport in certain contexts
-- [Tab Layout](https://developers.vtex.com/docs/apps/vtex.tab-layout): Creates different layouts within the store’s main one from the use of *tabs*.
+- [Sticky Layout](https://developers.vtex.com/docs/apps/vtex.sticky-layout): Provides layout structures to build elements that remain fixed relative to the viewport in certain contexts.
+- [Tab Layout](https://developers.vtex.com/docs/apps/vtex.tab-layout): Creates different layouts within the store's main one using *tabs*.
 
 ## Before you begin
 
