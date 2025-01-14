@@ -21,6 +21,6 @@ To update the VTEX IO CLI workspace plugin to `v1.2.0`, follow the steps below:
 
 With VTEX IO CLI, log in to your VTEX account by running the `vtex login {accountName}` command.
 
->⚠ Replace `{accountName}` according to your scenario.
+>⚠ Replace `{accountName}` based on your scenario.
 
 Update the `@vtex/cli-plugin-workspace` to `v1.2.0` by running the `vtex plugins update` command. Another option is to directly install the new version by running the `vtex plugins install @vtex/cli-plugin-workspace@1.2.0` command.
