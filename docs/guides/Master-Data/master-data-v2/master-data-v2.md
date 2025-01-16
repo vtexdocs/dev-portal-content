@@ -7,10 +7,10 @@ updatedAt: "2022-08-09T22:12:35.462Z"
 ---
 This section contains tutorials about Master Data v2. Here you will find the following articles:
 
-- [Use v2 triggers to interact with orders](/docs/guides/use-master-data-with-orders)
-- [Creating relationships between data entities using API](/docs/guides/creating-relationships-between-data-entities-using-api)
-- [Setting up triggers in Master Data v2](/docs/guides/setting-up-triggers-in-master-data-v2)
-- [Sending emails with triggers in Master Data v2](/docs/guides/sending-emails-with-triggers-in-master-data-v2)
-- [Dynamic expressions in Master Data v2](/docs/guides/adding-document-field-values-with-dynamic-expressions)
-- [Search by geocoordinates](/docs/guides/search-by-geo-coordinates)
-- [Master Data v2 document saving flow](/docs/guides/master-data-v2-document-saving-flow)
+- [Using Master Data v2 triggers to interact with orders](https://developers.vtex.com/docs/guides/using-master-data-v2-triggers-to-interact-with-orders)
+- [Creating relationships between data entities using Master Data v2](https://developers.vtex.com/docs/guides/creating-relationships-between-data-entities-using-master-data-v2)
+- [Setting up triggers on Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2)
+- [Sending emails with triggers on Master Data v2](https://developers.vtex.com/docs/guides/sending-emails-with-triggers-on-master-data-v2)
+- [Using dynamic expressions in Master Data v2](https://developers.vtex.com/docs/guides/using-dynamic-expressions-on-master-data-v2)
+- [Search by geocoordinates](https://developers.vtex.com/docs/guides/search-by-geo-coordinates)
+- [Master Data v2 document saving flow](https://developers.vtex.com/docs/guides/master-data-v2-document-saving-flow)

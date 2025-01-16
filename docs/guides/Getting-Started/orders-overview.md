@@ -185,7 +185,7 @@ A VTEX store can act as both a [seller](https://help.vtex.com/en/tutorial/config
 
 ## Adding optional configurations
 
-There are additional configurations available for you to manage your store orders. This allows you to take advantage of other VTEX features, such as [VTEX Sales App](https://developers.vtex.com/docs/guides/how-to-customize-vtex-sales-app), [VTEX DO](https://help.vtex.com/en/tutorial/vtex-do-interface--7KMbRL4OslN8DTX9oiuCiu), [B2B](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC), and [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
+There are additional configurations available for you to manage your store orders. This allows you to take advantage of other VTEX features, such as [VTEX Sales App](https://developers.vtex.com/docs/guides/how-to-customize-vtex-sales-app), [VTEX DO](https://help.vtex.com/en/tutorial/vtex-do-interface--7KMbRL4OslN8DTX9oiuCiu), [B2B](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC), and [Master Data](https://developers.vtex.com/docs/guides/master-data).
 
 ### VTEX Sales App
 
@@ -209,4 +209,4 @@ There are additional configurations available for you to manage your store order
 
 ### Master Data
 
-- [Use v2 triggers to interact with orders](https://developers.vtex.com/vtex-rest-api/docs/use-master-data-with-orders)
+- [Use v2 triggers to interact with orders](https://developers.vtex.com/docs/guides/using-master-data-with-orders)

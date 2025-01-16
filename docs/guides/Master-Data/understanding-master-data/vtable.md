@@ -8,7 +8,7 @@ updatedAt: "2022-07-28T21:27:21.269Z"
 
 > ⚠️ VTable has been deprecated, which means it will not be updated, and support and maintenance are no longer provided.
 
- VTable is a dynamic user interface designed to handle data from Master Data v2 directly from VTEX Admin. It allows you to create custom applications for managing and visualizing data from documents efficiently, using [JSON schemas](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
+ VTable is a dynamic user interface designed to handle data from Master Data v2 directly from VTEX Admin. It allows you to create custom applications for managing and visualizing data from documents efficiently, using [JSON schemas](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2).
 
 To render an app in VTable you must follow these steps:
 
@@ -25,7 +25,7 @@ Below you can also learn more about all necessary [JSON schema configurations](#
 
 ### Step 1 - Creating a JSON schema
 
-First, create a [data entity](https://developers.vtex.com/docs/guides/master-data-components#data-entity) and a [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema) associated with it to store data in a specific format.
+First, create a [data entity](https://developers.vtex.com/docs/guides/master-data-components#data-entity) and a [JSON schema](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2) associated with it to store data in a specific format.
 
 You can create it with the [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) endpoint. Use your JSON schema as a request body, as exemplified below.
 

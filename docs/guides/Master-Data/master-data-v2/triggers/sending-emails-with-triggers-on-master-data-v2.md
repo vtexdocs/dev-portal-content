@@ -11,7 +11,7 @@ There are two ways of sending emails automatically with Master Data v2 triggers:
 - [Sending emails](#sending-emails)
 - [Sending emails using Message Center templates](#sending-emails-using-message-center-templates)
 
->ℹ️ Learn more about triggers in the article [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2).
+>ℹ️ Learn more about triggers in the article [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2).
 
 ## Sending emails
 
@@ -34,7 +34,7 @@ This is the more direct method of sending emails with Master Data v2 triggers, b
 
 ### Dynamic expressions
 
-You can use dynamic expressions to deal with document properties in these settings. For more information, look at the [Article on dynamic expressions](https://developers.vtex.com/vtex-rest-api/docs/adding-document-field-values-with-dynamic-expressions).
+You can use dynamic expressions to deal with document properties in these settings. For more information, look at the [Article on dynamic expressions](https://developers.vtex.com/docs/guides/using-dynamic-expressions-on-master-data-v2).
 
 ### JSON schema example
 

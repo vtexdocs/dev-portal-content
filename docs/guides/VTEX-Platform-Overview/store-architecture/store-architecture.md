@@ -56,7 +56,7 @@ The main account has access to more modules than the sellers, sharing only some 
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2b-suite.png)
 
-Declaring these modules in the architecture not only makes the process clearer but also makes it easier to understand the responsibilities of each player. In this case, for example, [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) remains with the sellers because customer approvals are handled at the seller level.
+Declaring these modules in the architecture not only makes the process clearer but also makes it easier to understand the responsibilities of each player. In this case, for example, [Master Data](https://developers.vtex.com/docs/guides/master-data) remains with the sellers because customer approvals are handled at the seller level.
 
 In B2B scenarios, real-time communication between the B2B Suite and sellers is common, as the information is always up-to-date. This is also crucial for fee and tax calculations at checkout to ensure a smooth purchasing experience for the end customer.
 
@@ -81,7 +81,7 @@ This is a very common architecture model that integrates physical stores with ec
 A franchise account is linked to a main account and has the following characteristics:
 
 - **No separate website**: Franchise accounts have no dedicated website. Instead, they operate within the main account's ecommerce site as part of a larger [marketplace](https://help.vtex.com/en/tutorial/what-is-a-marketplace--680lLJTnmEAmekcC0MIea8).
-- **Customer data storage**: Customer data is stored in the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
+- **Customer data storage**: Customer data is stored in the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data).
 - **Seller type**: Each franchise account automatically operates as a [white-label seller](https://help.vtex.com/en/tutorial/seller-white-label--5orlGHyDHGAYciQ64oEgKa) within the main account.
 - **Catalog**: Franchise accounts inherit their [catalog](https://developers.vtex.com/docs/guides/catalog-overview) from the main account.
 - **Logistics and OMS**: Each franchise account has its own [logistics](https://developers.vtex.com/docs/guides/fulfillment) settings and performs its own [order management](https://developers.vtex.com/docs/guides/orders-overview).
@@ -115,7 +115,7 @@ The reference architecture below exemplifies its main characteristics:
 - **Separate website**: A si-gle account, but each store with its own domain, bound to different [trade policies](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4EPwTXx5oFdSG1dA3zIchz#trade-policy) by [bindings](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W).
 - **Search**: Same [search settings](https://developers.vtex.com/docs/guides/search-overview) for all websites.
 - **CMS**: Shared access to the [Content Management System (CMS)](https://developers.vtex.com/docs/guides/vtex-io-documentation-cms) between websites.
-- **Customer data storage**: A single [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) for all stores.
+- **Customer data storage**: A single [Master Data](https://developers.vtex.com/docs/guides/master-data) for all stores.
 - **Catalog**: A single catalog segmented by trade policies.
 - **Logistics**: Each store manages its logistics through different warehouses in the same logistics panel.
 - **Order Management System (OMS)**: A unified OMS panel for all stores.
@@ -142,7 +142,7 @@ The reference architecture below highlights its main characteristics:
 
 - **Separate VTEX account**: Each store operates with its own VTEX account.
 - **Separate website**: Each store has its own website and can customize a different frontend style.
-- **Customer data storage**: Customer data is segregated by marketplace account. No customer information is stored within the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction).
+- **Customer data storage**: Customer data is segregated by marketplace account. No customer information is stored within the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data).
 - **Promotions**: Promotions from the main account have limited capabilities because the main account can't access customer data from the marketplace. For example, if you want to create promotions for a customer cluster in the main account, it won't work because the account doesn't have access to the marketplace Master Data.
 - **Checkout, Order Management System (OMS), Payments, and Message Center**: Each store manages these modules independently in its own Admin, without relying on the main account.
 - **Catalog, Pricing, and Logistics**: The main account is the source of truth for these [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), but management is independent, as each account has its own Admin. The product assortment can vary between accounts, but it's always based on the main account's catalog, as the main account is the owner.

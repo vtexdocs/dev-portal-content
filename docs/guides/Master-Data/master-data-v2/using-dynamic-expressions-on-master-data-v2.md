@@ -6,7 +6,7 @@ createdAt: "2022-08-03T14:54:11.873Z"
 updatedAt: "2022-08-03T14:57:56.514Z"
 excerpt: Learn how to automate processes based on Document updates using dynamic expressions.
 seeAlso:
-    - /docs/guides/setting-up-triggers-in-master-data-v2
+    - /docs/guides/setting-up-triggers-on-master-data-v2
 ---
 
 Dynamic expressions on Master Data v2 enable you to populate document fields dynamically, making it easier to automate tasks like sending personalized marketing emails or processing document updates. This guide explains how to configure and use dynamic expressions with JSON schemas.
@@ -26,13 +26,13 @@ Dynamic expressions use placeholders to reference and retrieve values from Docum
     
 ## Before you begin
 
-Before using dynamic expressions, ensure you have a [JSON schema](https://json-schema.org/) configured for your Data Entity in Master Data v2. For more information, refer to [Creating JSON Schemas for a Data Entity](https://developers.vtex.com/docs/guides/starting-to-work-on-master-data-with-json-schema).
+Before using dynamic expressions, ensure you have a [JSON schema](https://json-schema.org/) configured for your Data Entity in Master Data v2. For more information, refer to [Creating JSON Schemas for a Data Entity](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2).
 
 ## Instructions
 
 ### Step 1: Creating a trigger
 
-Follow the instructions in the [Setting up triggers](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2) guide to create a trigger in Master Data v2. This defines when the action will be triggered (e.g., Document creation) and what action will be taken.
+Follow the instructions in the [Setting up triggers](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2) guide to create a trigger in Master Data v2. This defines when the action will be triggered (e.g., Document creation) and what action will be taken.
 
 ### Step 2: Configuring a trigger to use dynamic expressions
 
