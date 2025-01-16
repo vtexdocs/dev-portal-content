@@ -1,6 +1,6 @@
 ---
 title: "Searching by geocoordinates in Master Data v2"
-slug: "searching-by-geo-coordinates-in-master-data-v2"
+slug: "searching-by-geocoordinates-in-master-data-v2"
 hidden: false
 createdAt: "2022-08-03T15:05:51.107Z"
 updatedAt: "2022-08-03T17:45:21.243Z"
