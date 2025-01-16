@@ -209,4 +209,4 @@ There are additional configurations available for you to manage your store order
 
 ### Master Data
 
-- [Use v2 triggers to interact with orders](https://developers.vtex.com/docs/guides/using-master-data-with-orders)
+- [Using Master Data v2 triggers to interact with orders](https://developers.vtex.com/docs/guides/using-master-data-v2-triggers-to-interact-with-orders)
