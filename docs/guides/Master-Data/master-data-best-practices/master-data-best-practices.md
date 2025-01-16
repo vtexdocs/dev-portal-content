@@ -23,7 +23,7 @@ See Master Data v2 endpoints for managing documents:
 See these articles about customizing data entities and schemas:
 
 - [How to create a data entity](https://help.vtex.com/en/tutorial/creating-data-entity--tutorials_1265)
-- [Starting to work on Master Data with JSON Schema](/docs/guides/working-with-json-schemas-in-master-data-v2) 
+- [Starting to work on Master Data with JSON Schema](/docs/guides/working-with-json-schemas-in-master-data-v2)
 
 ## Search documents
 

@@ -12,6 +12,7 @@ updatedAt: "2022-10-04T21:56:43.466Z"
   "body": "The starting value of auto increment fields is always `1`. This value can not be changed."
 }
 [/block]
+
 ## Set up
 
 Auto increment fields can be set up in data entities' [JSON schemas](/docs/guides/working-with-json-schemas-in-master-data-v2).
