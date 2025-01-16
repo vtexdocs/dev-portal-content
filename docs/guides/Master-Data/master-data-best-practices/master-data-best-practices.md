@@ -1,6 +1,6 @@
 ---
-title: "Getting started"
-slug: "getting-started-1"
+title: "Master Data best practices"
+slug: "master-data-best-practices"
 excerpt: "Get started with Master Data document management, data entity customization, and trigger utilization."
 hidden: false
 createdAt: "2022-07-05T19:11:40.758Z"

@@ -1,6 +1,6 @@
 ---
-title: "Using dynamic expressions in Master Data v2"
-slug: "adding-document-field-values-with-dynamic-expressions"
+title: "Using dynamic expressions on Master Data v2"
+slug: "using-dynamic-expressions-on-master-data-v2"
 hidden: false
 createdAt: "2022-08-03T14:54:11.873Z"
 updatedAt: "2022-08-03T14:57:56.514Z"
@@ -9,7 +9,7 @@ seeAlso:
     - /docs/guides/setting-up-triggers-in-master-data-v2
 ---
 
-Dynamic expressions in Master Data v2 enable you to populate document fields dynamically, making it easier to automate tasks like sending personalized marketing emails or processing document updates. This guide explains how to configure and use dynamic expressions with JSON schemas.
+Dynamic expressions on Master Data v2 enable you to populate document fields dynamically, making it easier to automate tasks like sending personalized marketing emails or processing document updates. This guide explains how to configure and use dynamic expressions with JSON schemas.
 
 ## Syntax
 

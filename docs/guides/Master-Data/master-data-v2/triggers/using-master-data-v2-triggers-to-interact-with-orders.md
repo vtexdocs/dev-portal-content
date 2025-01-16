@@ -1,6 +1,6 @@
 ---
-title: "Use v2 triggers to interact with orders"
-slug: "use-master-data-with-orders"
+title: "Using Master Data v2 triggers to interact with orders"
+slug: "using-master-data-v2-triggers-to-interact-with-orders"
 hidden: false
 createdAt: "2022-05-03T13:57:44.519Z"
 updatedAt: "2022-05-03T14:07:07.237Z"

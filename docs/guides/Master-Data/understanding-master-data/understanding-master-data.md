@@ -1,6 +1,6 @@
 ---
-title: "How it works"
-slug: "master-data-how-it-works"
+title: "Understanding Master Data"
+slug: "understanding-master-data"
 hidden: false
 excerpt: Learn about the fundamental concepts of Master Data, including its components, architecture, API usage, and schema lifecycle.
 createdAt: "2021-04-08T20:20:13.904Z"

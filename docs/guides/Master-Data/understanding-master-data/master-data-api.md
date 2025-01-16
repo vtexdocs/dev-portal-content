@@ -1,5 +1,5 @@
 ---
-title: "Master Data - API"
+title: "Master Data API"
 slug: "master-data-api"
 excerpt: Learn how to manage and retrieve documents, define data structures, and configure searchable fields in Master Data.
 hidden: false

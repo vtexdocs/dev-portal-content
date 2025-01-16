@@ -1,6 +1,6 @@
 ---
-title: "Creating relationships between data entities using API"
-slug: "creating-relationships-between-data-entities-using-api"
+title: "Creating relationships between data entities using Master Data v2"
+slug: "creating-relationships-between-data-entities-using-master-data-v2"
 excerpt: "Learn how to create relationships between data entities in Master Data v2."
 hidden: false
 createdAt: "2022-07-05T15:15:24.161Z"

@@ -1,6 +1,6 @@
 ---
-title: "Setting up alternate keys"
-slug: "setting-up-alternate-keys"
+title: "Setting up alternate keys in Master Data v2"
+slug: "setting-up-alternate-keys-in-master-data-v2"
 hidden: false
 createdAt: "2022-08-04T18:58:24.930Z"
 updatedAt: "2022-08-04T19:08:53.907Z"

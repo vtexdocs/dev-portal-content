@@ -1,6 +1,6 @@
 ---
-title: "Sending emails with triggers in Master Data v2"
-slug: "sending-emails-with-triggers-in-master-data-v2"
+title: "Sending emails with triggers on Master Data v2"
+slug: "sending-emails-with-triggers-on-master-data-v2"
 hidden: false
 createdAt: "2022-08-03T14:48:49.642Z"
 updatedAt: "2022-08-03T14:56:02.147Z"

@@ -1,6 +1,6 @@
 ---
-title: "Consistency Level"
-slug: "master-data-consistency-level"
+title: "Data consistency and synchronization in Master Data"
+slug: "data-consistency-and-synchronization-in-master-data"
 hidden: false
 excerpt: Learn how data synchronization operates across Master Data API endpoints.
 createdAt: "2021-04-08T20:22:51.616Z"

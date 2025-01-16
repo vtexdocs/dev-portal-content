@@ -1,5 +1,5 @@
 ---
-title: "Components"
+title: "Master Data components"
 slug: "master-data-components"
 hidden: false
 excerpt: Learn about Data Entities, Documents, Fields, and Indexes in Master Data, and how these components work together to structure and optimize data for efficient querying.
