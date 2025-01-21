@@ -3,7 +3,7 @@ title: "Store Theme"
 slug: "vtex-io-documentation-store-theme"
 hidden: false
 createdAt: "2024-07-24T13:48:10.752Z"
-updatedAt: "2024-12-03T15:29:21.377Z"
+updatedAt: "2025-01-21T15:07:44.619Z"
 category: "Storefront development"
 seeAlso:
   - "/docs/guides/vtex-io-documentation-manifest"
@@ -84,4 +84,4 @@ This boilerplate gives you a ready-to-go default storefront structure, including
 - **Default styles:** A customizable set of styles that helps you achieve a professional look and feel without extensive custom styling.
 - **Sitemap:** An example of a [Sitemap](https://github.com/vtex-apps/store-theme/blob/master/sitemap/sitemap.json) use case.
 
->ℹ️ Learn how to start a project with this boilerplate in the [Getting Started](https://developers.vtex.com/docs/guides/getting-started-3) section.
+>ℹ️ Learn how to start a project with this boilerplate in the [Getting started](https://developers.vtex.com/docs/guides/getting-started-3) section.
