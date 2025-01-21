@@ -64,8 +64,6 @@ Check the [CSV file template](#csv-file-template) to understand the meaning of e
 
 To create or delete URL redirects in your store, you must create a `.csv` file as in the following example.
 
-
-
 ![redirects](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/redirects.png)
 
 Notice that the file must contain a row with four columns and the following values:
