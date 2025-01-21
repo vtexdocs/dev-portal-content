@@ -2,7 +2,7 @@
 title: "Analytics"
 slug: "storefront-analytics"
 hidden: false
-createdAt: "2024-12-18T17:53:38.402Z"
+createdAt: "2025-01-21T15:16:47.252Z"
 updatedAt: ""
 excerpt: "Explore how to leverage data to drive informed decisions and optimize your VTEX store performance."
 ---
