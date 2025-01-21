@@ -128,4 +128,4 @@ Use the property `v-cache` to disable default caching.
 
 ## Creating triggers
 
-Use the property `v-triggers` to set up automatic actions that will be performed by the platform if the creation or update of a document meets certain criteria defined by you. Learn more in [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2).
+Use the property `v-triggers` to set up automatic actions that will be performed by the platform if the creation or update of a document meets certain criteria defined by you. Learn more in [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2).

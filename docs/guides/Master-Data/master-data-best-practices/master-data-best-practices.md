@@ -23,7 +23,7 @@ See Master Data v2 endpoints for managing documents:
 See these articles about customizing data entities and schemas:
 
 - [How to create a data entity](https://help.vtex.com/en/tutorial/creating-data-entity--tutorials_1265)
-- [Starting to work on Master Data with JSON Schema](/docs/guides/starting-to-work-on-master-data-with-json-schema) 
+- [Starting to work on Master Data with JSON Schema](/docs/guides/working-with-json-schemas-in-master-data-v2)
 
 ## Search documents
 
@@ -37,4 +37,4 @@ Below, you can see Master Data v2 endpoints for searching documents.
 A Master Data trigger is an action executed after the insert or update of a given document.
 
 - [Create triggers with Master Data v1](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270)
-- [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2)
+- [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2)

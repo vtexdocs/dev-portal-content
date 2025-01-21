@@ -17,9 +17,9 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Architecture"
+title="Infrastructure"
 description= "Learn how the Master Data core services (API, Worker, Storage, and Search Engine) ensure data consistency and efficient document management."
-linkTo="https://developers.vtex.com/docs/guides/master-data-architecture"
+linkTo="https://developers.vtex.com/docs/guides/master-data-infrastructure"
 linkTitle="See more"
 />
 
@@ -31,16 +31,16 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Consistency Level"
+title="Data consistency and synchronization in Master Data"
 description= "Learn how data synchronization operates across Master Data API endpoints."
-linkTo="https://developers.vtex.com/docs/guides/master-data-consistency-level"
+linkTo="https://developers.vtex.com/docs/guides/data-consistency-and-synchronization-in-master-data"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Schema Lifecycle"
 description= "Learn how changes in a Master Data v2 Schema affect Data Entities."
-linkTo="https://developers.vtex.com/docs/guides/master-data-consistency-level"
+linkTo="https://developers.vtex.com/docs/guides/master-data-schema-lifecycle"
 linkTitle="See more"
 />
 

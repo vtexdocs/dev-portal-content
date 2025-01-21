@@ -58,7 +58,7 @@ We're so glad you're here! Thanks for being interested.
 The frontmatter is the table with metadata about the article you're adding. It contains the following fields:
 
 - **title:** article's title. E.g. "Setting up triggers in Master Data v2"
-- **slug:** slug of the article's link on Developer Portal, which should match the file name. E.g. "setting-up-triggers-in-master-data-v2". For release notes, add the inverted date before the slug and the file name, as in `yyyy-mm-dd-title`, e.g. "2024-03-07-faststore-content-in-the-developer-portal".
+- **slug:** slug of the article's link on Developer Portal, which should match the file name. E.g. "setting-up-triggers-on-master-data-v2". For release notes, add the inverted date before the slug and the file name, as in `yyyy-mm-dd-title`, e.g. "2024-03-07-faststore-content-in-the-developer-portal".
 - **excerpt:** brief description of release notes and guides, like a synopsis or TLDR.
   - *Release notes:* it is rendered as a synopsis of the release notes, readable when the user clicks on the ▶️ collapsible button next to the release's title, in our [changelog UI](https://developers.vtex.com/updates/release-notes). This field is mandatory for release notes. Character limit: 400.
   - *Guides*: it is rendered as the greyed-out sentence at the bottom of the title, with a brief TLDR for that article. Character limit: 120.

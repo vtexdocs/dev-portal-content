@@ -64,5 +64,5 @@ To ensure data consistency across its services, Master Data employs a synchroniz
 2. **Worker execution:** The Worker processes the notification, executes any associated triggers, and forwards the updated Document to the Search Engine.
 3. **Search Engine update:** The Search Engine indexes the updated document, making the latest version available for search and retrieval.
 
-For more information, refer to the [Consistency Level](https://developers.vtex.com/docs/guides/master-data-consistency-level) article.
+For more information, refer to the [Data consistency and synchronization in Master Data](https://developers.vtex.com/docs/guides/data-consistency-and-synchronization-in-master-data) article.
 

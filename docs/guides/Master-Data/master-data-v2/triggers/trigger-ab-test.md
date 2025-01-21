@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-07-28T22:16:57.620Z"
 updatedAt: "2022-11-16T23:48:57.663Z"
 ---
-The [Master Data v2 trigger](https://developers.vtex.com/vtex-rest-api/docs/setting-up-triggers-in-master-data-v2) configuration has an optional property called `weight`.
+The [Master Data v2 trigger](https://developers.vtex.com/vtex-rest-api/docs/setting-up-triggers-on-master-data-v2) configuration has an optional property called `weight`.
 
 It is a field that accepts integers between zero and 100. This number is a percentage value of distribution between triggers.
 

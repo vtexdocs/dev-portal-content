@@ -40,7 +40,7 @@ Before using our Pricing API Reference, check out our [Pricing v2 - API Referenc
 }
 [/block]
 
-> ℹ️️ [Master Data](https://developers.vtex.com/vtex-rest-api/docs/master-data-introduction) is used to [connect a price table to a desired context](https://help.vtex.com/en/tutorial/criando-promocao-para-um-cluster-de-clientes--tutorials_342)
+> ℹ️️ [Master Data](https://developers.vtex.com/vtex-rest-api/docs/master-data) is used to [connect a price table to a desired context](https://help.vtex.com/en/tutorial/criando-promocao-para-um-cluster-de-clientes--tutorials_342)
 
 [block:html]
 {

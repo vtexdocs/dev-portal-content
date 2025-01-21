@@ -8,7 +8,7 @@ updatedAt: "2024-09-06T18:10:15.623Z"
 
 When working with the Master Data API, whether you're using v1 or v2, you may need to handle a large volume of data. Pagination breaks down these large datasets into smaller, manageable parts. This guide will walk you through using pagination in the search and scroll endpoints in the Master Data API.
 
->ℹ️ Learn more about [Extracting data from Master Data](https://developers.vtex.com/docs/guides/search-and-scroll-api-queries) using the search and scroll endpoints.
+>ℹ️ Learn more about [Extracting data from Master Data](https://developers.vtex.com/docs/guides/extracting-data-from-master-data-with-search-and-scroll) using the search and scroll endpoints.
 
 ## Search pagination
 

@@ -19,21 +19,21 @@ linkTitle="See more"
 <WhatsNextCard
 title="Search and scroll API queries"
 description="Learn the main differences between search and scroll endpoints."
-linkTo="https://developers.vtex.com/docs/guides/search-and-scroll-api-queries"
+linkTo="https://developers.vtex.com/docs/guides/extracting-data-from-master-data-with-search-and-scroll"
 linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Setting Up Newsletter opt-in with Master Data v1"
 description="Learn how to configure newsletter subscriptions with Master Data v1."
-linkTo="https://developers.vtex.com/docs/guides/newsletter-inclusion-master-data-v1"
+linkTo="https://developers.vtex.com/docs/guides/implementing-newsletter-opt-in-with-master-data-v1"
 linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Uploading files to Master Data"
+title="Uploading files to Master Data v1"
 description="Learn how to upload files to Master Data v1."
-linkTo="https://developers.vtex.com/docs/guides/uploading-files-to-master-data"
+linkTo="https://developers.vtex.com/docs/guides/uploading-files-to-master-data-v1"
 linkTitle="See more"
 />
 
