@@ -2,7 +2,7 @@
 title: "Using advanced layouts"
 slug: "store-framework-using-advanced-layouts"
 hidden: false
-createdAt: "2025-01-02T16:19:50.859Z"
+createdAt: "2025-01-21T16:36:39.917Z"
 updatedAt: ""
 excerpt: "Discover how to create advanced layouts in your Store Framework store." 
 ---
