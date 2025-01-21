@@ -37,6 +37,7 @@ Make sure your store has a [Store Theme](https://developers.vtex.com/docs/guides
 Check if the builders are properly installed in your Store Theme. To use builders, your account must have at least version `vtex.builder-hub@0.293.4` installed. Also, you need to specify them in the app's manifest.json file. Learn more in [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders).
 
 You must have at least the following builders configured:
+
 - [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
 - [react builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with React when your project requires customized frontend solutions.
 
