@@ -3,7 +3,7 @@ title: "Managing URL redirects"
 slug: "vtex-io-documentation-managing-url-redirects"
 hidden: false
 createdAt: "2020-06-03T16:02:44.302Z"
-updatedAt: "2024-11-25T18:10:16.429Z"
+updatedAt: "2025-01-21T14:43:36.816Z"
 excerpt: "Learn how to manage your store's URL redirects to prevent 404 errors."
 ---
 
