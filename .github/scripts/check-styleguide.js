@@ -39,6 +39,14 @@ const getSanitizedRanges = (content) => {
         ranges.push([match.index + match[0].indexOf(']') + 1, match.index + match[0].length]);
     });
 
+    // Match <a href="url">
+    const anchorHrefMatches = [...content.matchAll(/<a\s+[^>]*href="([^"]*)"[^>]*>/gi)];
+    anchorHrefMatches.forEach((match) => {
+        const hrefStart = match.index + match[0].indexOf('href="') + 6;
+        const hrefEnd = hrefStart + match[1].length;
+        ranges.push([hrefStart, hrefEnd]);
+    });
+
     return ranges;
 };
 
