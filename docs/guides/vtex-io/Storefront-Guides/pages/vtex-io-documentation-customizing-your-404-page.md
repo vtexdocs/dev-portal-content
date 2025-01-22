@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-customizing-your-404-page"
 hidden: false
 createdAt: "2025-01-22T14:11:43.125Z"
 updatedAt: ""
-excerpt: ""
+excerpt: "Learn how to customize your store's 404 error page using Store Framework."
 seeAlso:
   - "/docs/guides/vtex-io-documentation-enabling-404-pages-for-invalid-single-segment-paths"
 ---
