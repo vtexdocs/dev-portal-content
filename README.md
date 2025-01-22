@@ -56,7 +56,7 @@ By clicking `Suggest edits (GitHub)`, a new browser window will open with the do
 
 2. Click `Commit changes…`.
 3. In the **Propose changes** modal, complete the following:
-	
+
 | Field name | Description |
 | --- | --- |
 | Commit message | Write a short description of your commit, for example, `Fix typo`. |
