@@ -52,7 +52,7 @@ By clicking `Suggest edits (GitHub)`, a new browser window will open with the do
 
 1. On the documentation repository page, edit the documentation file to include your suggestions.
 
-> ⚠ Make sure your suggestions follow the documentation guidelines and the code of conduct, and keep the documentation structured as in the template.
+  > ⚠ Make sure your suggestions follow the documentation guidelines and the code of conduct, and keep the documentation structured as in the template.
 
 2. Click `Commit changes…`.
 3. In the **Propose changes** modal, complete the following:
@@ -78,4 +78,4 @@ By clicking `Suggest edits (GitHub)`, a new browser window will open with the do
 
 Once you create a pull request, our team will review your changes as soon as possible and follow up with you in the pull request comments.
 
-> ⚠ Pull requests are a collaborative process. While your suggestions are highly valued, approval is not guaranteed. Stay open to feedback and discussions throughout the process.
+  > ⚠ Pull requests are a collaborative process. While your suggestions are highly valued, approval is not guaranteed. Stay open to feedback and discussions throughout the process.

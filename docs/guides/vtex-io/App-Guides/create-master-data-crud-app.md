@@ -19,9 +19,9 @@ Before diving into coding your app, it's essential to grasp some fundamental con
 
 - Master Data
   - [Basic components](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#basic-components).
-  - [Architecture](https://developers.vtex.com/vtex-rest-api/docs/master-data-architecture).
-  - [Starting to work with schemas](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
-  - [Schema lifecycle](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle).
+  - [Infrastructure](https://developers.vtex.com/docs/guides/master-data-infrastructure).
+  - [Working with JSON Schemas in Master Data v2](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2).
+  - [Schema lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle).
 - VTEX IO service development
   - [Developing services on VTEX IO](https://learn.vtex.com/docs/course-service-course-lang-en).
 
@@ -33,7 +33,7 @@ To create a [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u
 
 Before diving into coding, take time to plan your data structure. Since you will be setting up a VTEX IO service app with a focus on [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw)'s basic elements, ensure you have well-defined data entities and written schemas prepared for each entity your app will interact with.
 
-For each [data entity](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) that your app will interact with, plan and prepare its corresponding [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema). See an example below:
+For each [data entity](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) that your app will interact with, plan and prepare its corresponding [JSON schema](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2). See an example below:
 
 <details>
 <summary>Schema example</summary>
@@ -106,7 +106,7 @@ For each [data entity](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u
          | --schema.json
   ```
 
-4. Populate the `schema.json` file with the [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema) corresponding to the respective and save your changes. Notice that each data entity must have its own `schema.json` with a valid JSON schema.
+4. Populate the `schema.json` file with the [JSON schema](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2) corresponding to the respective and save your changes. Notice that each data entity must have its own `schema.json` with a valid JSON schema.
 5. In the terminal, run `vtex link` to test your code.
 
 Note that your app creates regular Master Data entities accessible via the [Master Data v2 endpoints](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview). The naming convention for the entities follows this pattern: `{vendor}_{appName}_{entityName}`.
@@ -142,11 +142,11 @@ public get entity() {
 
 ### Step 6 - Configuring Master Data triggers
 
-To configure [Master Data triggers](https://developers.vtex.com/vtex-rest-api/docs/setting-up-triggers-in-master-data-v2) in your app, follow these steps:
+To configure [Master Data triggers](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2) in your app, follow these steps:
 
 1. Create a folder named `triggers` inside your `masterdata/{dataEntity}` folder.
 2. Create a JSON file inside the `triggers` folder.
-3. Declare your triggers in the JSON file, following the same format described for the `v-triggers` field when [setting up Master Data v2 triggers](https://developers.vtex.com/vtex-rest-api/docs/setting-up-triggers-in-master-data-v2).
+3. Declare your triggers in the JSON file, following the same format described for the `v-triggers` field when [setting up Master Data v2 triggers](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2).
    
 ### Step 7 - Creating Master Data functions
 

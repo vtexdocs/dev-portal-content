@@ -54,7 +54,7 @@ See below the [Cancel order](https://developers.vtex.com/docs/api-reference/orde
 
 ```sh
 curl --request post \
---url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/cancel' \
+--url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{orderId}/cancel' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'X-VTEX-API-AppKey: ' \
@@ -176,13 +176,13 @@ The step by step is the following:
 
 See below the endpoint deny order cancellation, where `orderId` corresponds to the ID of the order witches cancellation is being denied:
 
-**POST -** `[https://{accountName}.{environment}.com.br/api/orders/pvt/document/{OrderId}/deny-cancellation-request](https://{accountName}.{environment}.com.br/api/orders/pvt/document/{OrderId}/deny-cancellation-request)`
+**POST -** `https://{accountName}.{environment}.com.br/api/orders/pvt/document/{orderId}/deny-cancellation-request`
 
 **cURL**
 
 ```sh
 curl --request post \
---url 'https://{accountname}.{environment}.com.br/api/oms/pvt/orders/{{orderId}}/deny-cancellation-request' \
+--url 'https://{accountname}.{environment}.com.br/api/orders/pvt/document/{orderId}/deny-cancellation-request' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'X-VTEX-API-AppKey: ' \

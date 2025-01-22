@@ -19,7 +19,7 @@ Before you start coding your app, it is a good idea to review some concepts:
 - Master Data
   - [Basic components](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#basic-components).
   - [Architecture](https://developers.vtex.com/vtex-rest-api/docs/master-data-architecture).
-  - [Starting to work with schemas](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
+  - [Starting to work with schemas](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2).
   - [Schema lifecycle](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle).
 - VTEX IO service development
   - [Developing services on VTEX IO](https://learn.vtex.com/docs/course-service-course-lang-en).
@@ -28,7 +28,7 @@ Before you start coding your app, it is a good idea to review some concepts:
 
 You will set up a VTEX IO service app according to [Master Data](https://help.vtex.com/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) basic elements.
 
-Further along this guide, you will create a folder for each [data entity](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) that you want your app to interact with. And for each data entity you use in your project, you must create a corresponding [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema). See an example schema below:
+Further along this guide, you will create a folder for each [data entity](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities) that you want your app to interact with. And for each data entity you use in your project, you must create a corresponding [JSON schema](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2). See an example schema below:
 
 ```json
 {
@@ -97,7 +97,7 @@ masterdata
        | --schema.json
 ```
 
-7. Put the [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema) corresponding to the data entity in the `schema.json` file.
+7. Put the [JSON schema](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2) corresponding to the data entity in the `schema.json` file.
 8. Run `vtex link` to make sure everything was set up correctly so far.
 9. Run `vtex setup`. This command will generate all typescript typings for your data entity. The typings will be available to be imported from your app. You can find them in your `node/node_modules` folder.
 
@@ -133,11 +133,11 @@ public get entity() {
 
 ### Triggers
 
-To configure [Master Data triggers](https://developers.vtex.com/vtex-rest-api/docs/setting-up-triggers-in-master-data-v2) in the app you created, follow these steps:
+To configure [Master Data triggers](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2) in the app you created, follow these steps:
 
 1. Create a folder named `triggers` inside your `masterdata/{dataEntity}` folder.
 2. Create a JSON file inside the triggers folder.
-3. Declare your triggers in the JSON file. They should be in an array in the same format described for the `v-triggers` field when [setting up Master Data v2 triggers](https://developers.vtex.com/vtex-rest-api/docs/setting-up-triggers-in-master-data-v2).
+3. Declare your triggers in the JSON file. They should be in an array in the same format described for the `v-triggers` field when [setting up Master Data v2 triggers](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2).
 
 ### Typings
 
@@ -165,7 +165,7 @@ At this point, your app may not recognize the folder created by `vtex setup`, le
 
 ### Data entities and schemas
 
-You can set more than one data entity in you app. To do so, create one folder inside the `masterdata` folder for each data entity you wish to create. Each must have its own `schema.json` with a valid [JSON schema](https://developers.vtex.com/vtex-rest-api/docs/starting-to-work-on-master-data-with-json-schema).
+You can set more than one data entity in you app. To do so, create one folder inside the `masterdata` folder for each data entity you wish to create. Each must have its own `schema.json` with a valid [JSON schema](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2).
 
 Your app creates regular Master Data entities, which can be accessed via the [Master Data v2 endpoints](https://developers.vtex.com/docs/api-reference/master-data-api-v2#overview). The name of the entity created follows this pattern: `{vendor}_{appName}_{entityName}`.
 

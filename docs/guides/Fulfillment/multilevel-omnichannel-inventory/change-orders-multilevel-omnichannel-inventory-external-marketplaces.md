@@ -6,7 +6,7 @@ createdAt: "2022-11-18T18:48:14.043Z"
 updatedAt: "2022-11-18T18:53:14.127Z"
 ---
 
-> ℹ️️ This feature works exclusively for VTEX stores with **Multilevel Omnichannel Inventory** chain orders made in external marketplaces. The external marketplace must be responsible for the payment and be able to support the [Change order](https://developers.vtex.com/vtex-rest-api/docs/change-order) feature.
+>⚠️ The [Multilevel Omnichannel Inventory (MOI)](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) feature has been discontinued for integrations with external marketplaces. Now, MOI is available only for integrations between VTEX marketplaces and sellers. We recommend reviewing your integration strategies to align with the currently supported functionalities. For more information, please contact [VTEX support](https://help.vtex.com/en/support).
 
 [Multilevel Omnichannel Inventory](https://developers.vtex.com/vtex-rest-api/docs/multilevel-omnichannel-inventory) is the VTEX setting that allows franchise accounts or white label sellers' inventory to be sold in marketplaces connected to the main account. This article explains how to use the [Change order](https://developers.vtex.com/vtex-rest-api/docs/change-order) while performing Multilevel Omnichannel Inventory operations in [external marketplaces](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide).
 

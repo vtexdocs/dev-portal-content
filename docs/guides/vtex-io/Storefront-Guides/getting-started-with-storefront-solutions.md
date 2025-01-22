@@ -62,8 +62,8 @@ Below, explore the features and functionalities available for each storefront te
 | [**Coupons**](https://help.vtex.com/en/tutorial/coupons-beta--1aAEN3ADpz19ss5JCIEBdL) | ✅ | ✅ | ✅ |
 | [**Gift Card**](https://developers.vtex.com/docs/guides/gift-card-integration-guide) **integration** | ✅ | ✅ | ✅ |
 | [**GTM - Google Analytics 4**](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG) | ✅ | ✅ | ✅ |
-| [**Master Data**](https://developers.vtex.com/docs/guides/master-data-introduction) **integration** | ⚠️ | ✅ | ✅ |
-| [**Newsletter integration with Master Data**](https://developers.vtex.com/docs/guides/newsletter-inclusion-master-data-v1) | ✅ | ✅ | ✅ |
+| [**Master Data**](https://developers.vtex.com/docs/guides/master-data) **integration** | ⚠️ | ✅ | ✅ |
+| [**Newsletter integration with Master Data**](https://developers.vtex.com/docs/guides/implementing-newsletter-opt-in-with-master-data-v1) | ✅ | ✅ | ✅ |
 | [**Price table**](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S) | ✅ | ✅ | ✅ |
 | [**Promotions**](https://help.vtex.com/en/tutorial/creating-promotions--tutorials_320) | ✅ | ✅ | ✅ |
 | [**SmartCheckout**](https://help.vtex.com/en/tutorial/smartcheckout-customer-information-automatic-fill-in--2Nuu3xAFzdhIzJIldAdtan) | ✅ | ✅ | ✅ |

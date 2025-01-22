@@ -37,7 +37,7 @@ In Legacy CMS Portal stores, the SEO settings for the home page, such as `meta t
 
 For stores developed with Store Framework, the SEO settings for the home page are configured through *Store Settings > Storefront > Store*. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/pt/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR). To enhance SEO for product listing pages, see [Improving the SEO of Product Listing Pages](https://help.vtex.com/en/tutorial/improving-the-seo-of-product-listing-pages--UrQtlKAMuSaLBP5wG9ftG).
 
-For FastStore stores, see [Configuration options for faststore.config.js](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options).
+For FastStore stores, see [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options).
 
 ### Images and videos
 

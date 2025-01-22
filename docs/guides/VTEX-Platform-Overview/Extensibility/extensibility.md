@@ -42,7 +42,7 @@ The following sections show how Master Data extends the basic functionality of a
 
 Master Data comes with a default set of data entities necessary for basic ecommerce operations. Additionally, it allows customization and extension of the data models. This can be done in two ways depending on the Master Data version.
 
-In Master Data v1, you can create and edit data entities [using its UI](https://help.vtex.com/en/tutorial/data-entity--tutorials_1265#creating-data-entities). In Master Data v2, you can create and edit [data schemas](https://developers.vtex.com/docs/guides/starting-to-work-on-master-data-with-json-schema) through the [API](https://developers.vtex.com/docs/api-reference/master-data-api-v2). The table below shows a summary of the data entity capabilities.
+In Master Data v1, you can create and edit data entities [using its UI](https://help.vtex.com/en/tutorial/data-entity--tutorials_1265#creating-data-entities). In Master Data v2, you can create and edit [data schemas](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2) through the [API](https://developers.vtex.com/docs/api-reference/master-data-api-v2). The table below shows a summary of the data entity capabilities.
 
 <details>
   <summary><b>Click here to view the capabilities table</b></summary>
@@ -252,7 +252,7 @@ These actions from specific events in the data allows creating automated custom 
 
 In Master Data v1, you configure triggers from the UI. For more details, see [How to create a trigger in Master Data v1](https://help.vtex.com/en/tutorial/creating-trigger-in-master-data--tutorials_1270).
 
-In Master Data v2, you configure triggers in the v-triggers field in a JSON Schema of the data entity. This field is an array of objects, where each object represents a trigger. For more details, see [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-in-master-data-v2).
+In Master Data v2, you configure triggers in the v-triggers field in a JSON Schema of the data entity. This field is an array of objects, where each object represents a trigger. For more details, see [Setting up triggers in Master Data v2](https://developers.vtex.com/docs/guides/setting-up-triggers-on-master-data-v2).
 
 ### Custom Master Data apps with VTEX IO
 

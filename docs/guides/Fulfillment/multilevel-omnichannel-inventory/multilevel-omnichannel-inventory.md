@@ -22,7 +22,7 @@ This article covers the account architecture details, chain order flows and nece
 
 When a store sells its products in a marketplace, we have a one-level relationship between seller and marketplace. However, VTEX's architecture allows stores to act as both sellers and marketplaces, expanding the number of possible combinations.
 
-Stores that have white label sellers and franchises are marketplaces to those accounts. But they can also be connected to external marketplaces, becoming sellers themselves. In this case, we have a three level architecture, as illustrated in the image below.
+Stores that have white label sellers and franchises are marketplaces to those accounts. But they can also be connected to other VTEX marketplaces, becoming sellers themselves. In this case, we have a three level architecture, as illustrated in the image below.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/multilevel-omnichannel-inventory-0.png)
 
@@ -30,9 +30,9 @@ Stores that have white label sellers and franchises are marketplaces to those ac
 - **Direct seller (level 2):** main account, integrated to the marketplace level 1. Serves as a marketplace for white label sellers, franchise accounts and physical stores connected to it.
 - **Franchise accounts/physical stores (level 3):** owns the product, and is responsible for fulfillment. Connected as white label sellers to the main account.
 
-With the Multilevel Omnichannel Inventory setting, all franchise accounts and white label sellers (level 3) are already fully integrated to a store's main account (level 2). This means that when the main account sets up an integration with an external marketplace (level 1), the franchise accounts can be integrated as well, no longer being necessary to manage each franchise individually in order to set up its integration with the marketplace.
+With the Multilevel Omnichannel Inventory setting, all franchise accounts and white label sellers (level 3) are already fully integrated to a store's main account (level 2). This means that when the main account sets up an integration with an other marketplace (level 1), the franchise accounts can be integrated as well, no longer being necessary to manage each franchise individually in order to set up its integration with the marketplace (level 1).
 
->ℹ️ This feature is valid for [VTEX marketplaces](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#ser-um-marketplace-vtex), [native connectors](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#integrado-a-conector-nativo-vtex) and [certified partners](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#integrado-a-conector-certificado-parceiro).
+>ℹ️ This feature is valid just for [VTEX marketplaces](https://help.vtex.com/pt/tutorial/marketplace-strategies-at-vtex--tutorials_402#ser-um-marketplace-vtex).
 
 ## Order flow
 
@@ -85,7 +85,7 @@ Check out the order flow for chain orders in the image below:
 
 The order flow seen by the level 2 store in a Multilevel Omnichannel Inventory is similar to the marketplace order flow, except for receiving the payment for orders. In the Payment pending stage, instead of the chain receiving payment directly from the gateway, the marketplace informs the chain it has received the payment confirmation.
 
-> VTEX stores cannot use the [change order](https://developers.vtex.com/docs/guides/change-order) feature for chain orders made in VTEX marketplaces. However, it is possible to [Change chain orders in external marketplaces](https://developers.vtex.com/docs/guides/change-orders-multilevel-omnichannel-inventory-external-marketplaces).
+> VTEX stores cannot use the [change order](https://developers.vtex.com/docs/guides/change-order) feature for chain orders made on VTEX marketplaces.
 
 ## Setup for VTEX marketplaces
 
@@ -105,5 +105,3 @@ To configure Multilevel Omnichannel Inventory via REST API:
    - **sellerAccount**: [Account name](https://help.vtex.com/pt/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC) of the seller in VTEX.
    - **affiliateId**: 3-digit [afiliate](https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0) identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
    - **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
-
-> Check out the [Multilevel Omnichannel Inventory API integration](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory-api-integration) guide to learn how to  external marketplace integrations, and headless architectures can make Multilevel omnichannel inventory available for their sellers.

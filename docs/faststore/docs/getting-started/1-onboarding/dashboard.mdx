@@ -6,9 +6,9 @@ Once you have [created your FastStore project](https://developers.vtex.com/docs/
 
 The WebOps Dashboard provides a comprehensive overview of website builds and deploy previews and offers suggestions on how to improve your storefront's performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
 
-![dashboard-overview](https://vtexhelp.vtexassets.com/assets/docs/src/webops-dashboard-overview___c417a869e982d91e94106cf63c9ec162.png)
+![dashboard-overview](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-overview___68ef21af7fa7ba11562a961be1448cb2.png)
 
-To access the WebOps Dashboard, in the VTEX Admin, go to **Storefront > FastStore WebOps**. The Dashboard has two tabs: [Overview](#overview) and [Integrations](#integrations).
+To access the WebOps Dashboard, in the VTEX Admin, go to **Storefront > FastStore WebOps**. The Dashboard has three tabs: [Overview](#overview), [Deploys](#deploys) and [Integrations](#integrations).
 
 ---
 
@@ -62,29 +62,43 @@ These scores are based on the pages defined for testing in the [Integrations](#i
 
 ### Production Deploys
 
-This section lists all the recent deploys to your production store. Each item on the list is composed of the following:
+This section lists the recent deploys to your production store. Each item on the list is composed of the following:
 
 ![dashboard-lighthouse-score](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-production-deploys___840fcb7b30bc2c7a1e4e5d1d255a58f9.png)
 
-### Build logs
-
-The Dashboard includes the Build Logs section, which offers insights into your store's deployments. This feature allows you to monitor the status of each deployment and verify whether it succeeded or failed.
-
-![webops-build-logs](https://vtexhelp.vtexassets.com/assets/docs/src/webops-build-logs___dcab2fcebc09675e9087f3d25ca33058.gif)
-
-To access the build logs for a specific deployment, follow these steps:
-
-1. Go to the [Production Deploys](#production-deploys) section of the WebOps page.
-2. Click on a specific deployment to view its details.
-3. The Build Logs will appear on the right-hand side of the screen, displaying deployment details, such as a `Preview Link` to a live preview of your store for that specific deployment.
+The complete list of all store deploys and details about them, see the [Deploys](#deploys) tab.
 
 ### Preview Deploys
 
 This section lists all the deploy previews created for GitHub branches in your project repository. These previews are automatically available for each pull request opened for a corresponding branch.
 
+## Deploys
+
+The **Deploys** tab provides insights into your store's deployments, including their status (success, failed, etc.). The table below summarizes the key features of the Deploys page.
+
+![deploys-overview-page](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-deploys-ui___73666db46f823dbaf51087d163545254.png)
+
+| **Feature** | Description |
+| ----------- | ----------- |
+| 1 - Search bar | Searchs by deploy ID, commit, message, or author. |
+| 2 - Pagination | Navigates through pages of deployment data. |
+| 3 - Enviroment | Filters deployments by environment: <ol><li>Production: The live store where customers can interact with. </li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol> |
+| 4 - Branch | Filters deployments by GitHub branches. |
+| 5 - Status | Filters deploy status: <ol><li>Queued: The deployment is the next in line to be executed.</li><li>In progress: The deployment is underway.</li><li>Success: The deployment has completed successfully.</li><li>Failed: The deployment process encountered an error and did not complete as expected.</li></ol> |
+| 6 - Sort by | Filters deployments by **Latest first** or **Oldest First**. |
+| 7 - Deployments table | Lists each store deployment with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deploy author, and the date and time of the deploy.</li><li>Environment: The environment which received the changes, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deploy status.</li></ol>
+
+### Deployment details
+
+For more information, click any entry in the deploy table.
+
+![dashboard-deploys-page-details](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-deploys-details___0bf4d690aaa118020420dd70ddd3a1b6.gif)
+
+In the **Deploy Steps** section, select a step (e.g., **Build - Discovery**) to view build logs. These logs appear on the right and help diagnose failed deployments.
+
 ## Integrations
 
-The Integrations tab allows you to configure store pages for Lighthouse Tests. Here, you can specify the URLs for a product listing page (PLP) and a product details page (PDP) to undergo automatic Lighthouse score testing during deployments. This ensures a consistent testing experience.
+The **Integrations** tab allows you to configure store pages for Lighthouse Tests. Here, you can specify the URLs for a product listing page (PLP) and a product details page (PDP) to undergo automatic Lighthouse score testing during deployments. This ensures a consistent testing experience.
 
 ![dashboard-integrations](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-integrations___8575a9f0fc2abfa64bdfc10fc7534e9d.png)
 
