@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-6-buildingyourownstoretheme"
 hidden: false
 category: "Storefront Development"
 createdAt: "2020-08-11T07:03:17.864Z"
-updatedAt: "2024-11-28T20:06:03.731Z"
+updatedAt: "2025-01-22T15:55:09.561Z"
 excerpt: "Explore resources to personalize your VTEX store with Store Framework."
 ---
 
@@ -14,6 +14,7 @@ Under the [Store Framework](https://developers.vtex.com/docs/guides/store-framew
 
 - [Building pages](https://developers.vtex.com/docs/guides/store-framework-building-pages): Create different types of pages tailored to your business needs.
 - [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components): Build your storefront, from basic elements to advanced customizations, by leveraging VTEX IO Store Framework components.
+- [Using advanced layouts](https://developers.vtex.com/docs/guides/store-framework-using-advanced-layouts): Create advanced layouts in your Store Framework store.
 - [Working with Site Editor](https://developers.vtex.com/docs/guides/store-framework-working-with-site-editor): Customize your Store Framework storefront by using Site Editor.
 - [Styling](https://developers.vtex.com/docs/guides/store-framework-styling): Customize your store layout with Store Framework.
 
