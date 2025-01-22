@@ -2,7 +2,7 @@
 title: "Customizing your 404 page"
 slug: "vtex-io-documentation-customizing-your-404-page"
 hidden: false
-createdAt: "2025-01-02T13:53:06.141Z"
+createdAt: "2025-01-22T14:11:43.125Z"
 updatedAt: ""
 excerpt: ""
 seeAlso:
@@ -33,7 +33,7 @@ To customize 404 pages, follow the steps below:
     }
     ```
     
-    > ℹ The `store.not-found` blocks will only be rendered when the server returns a 404 error. The child block will be displayed to users in such cases.
+  > ℹ The `store.not-found` blocks will only be rendered when the server returns a 404 error. The child block will be displayed to users in such cases.
 
 4. Save your changes and run `vtex link` in your terminal to preview the updated 404 page:
 
