@@ -3,7 +3,7 @@ name: Check VTEX Styleguide
 on:
   pull_request:
     types: [opened, synchronize]
-    
+
 jobs:
   check-vtex-styleguide:
     runs-on: ubuntu-latest
@@ -13,18 +13,18 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Ensure all branches are accessible
+          fetch-depth: 0
 
       # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          
-      # Step 3: Install necessary dependencies
+
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install @actions/core@1.10
-      
+
       - name: Install Reviewdog
         uses: reviewdog/action-setup@v1
 
@@ -34,41 +34,34 @@ jobs:
         uses: tj-actions/changed-files@v45
         with:
           files: |
-             **.md
-             **.mdx
+            **.md
+            **.mdx
 
-      - name: List all changed files
-        env:
-          ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
-        run: |
-          for file in ${ALL_CHANGED_FILES}; do
-            echo "$file was changed"
-          done
-
-      # Step 5: Run style checker and output in Reviewdog format
-      - name: Collect messages from styleguide checker
-        id: collect-messages
+      # Step 5: Run style checker and collect issues
+      - name: Run style checker
+        id: style-check
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
-        env:
-          ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
-        continue-on-error: true
         run: |
-          for file in ${ALL_CHANGED_FILES}; do
+          > style_issues.txt
+          for file in ${{ steps.changed-markdown-files.outputs.all_changed_files }}; do
             echo "Running styleguide checker on $file"
-            node .github/scripts/check-styleguide.js "./$file" >> style_issues.txt
+            node .github/scripts/check-styleguide.js "./$file" >> style_issues.txt || true
           done
-          
+          if [ -s style_issues.txt ]; then
+            echo "style-issues=true" >> $GITHUB_ENV
+          fi
+
       # Step 6: Run Reviewdog
       - name: Run Reviewdog
-        if: steps.collect-messages.outputs.style-issues != ''
+        if: env.style-issues == 'true'
         run: |
           echo "Running Reviewdog with the following style issues:"
           cat style_issues.txt
           reviewdog -efm="%f:%l:%c:%m" -name="style-check" -reporter=github-pr-review < style_issues.txt
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    # Step 7: Final PR status
-      - name: Mark PR status
-        if: failure()  # Conditionally fail the job
-        run: echo "PR failed due to style issues."
+
+      # Step 7: Fail the PR if there are style issues
+      - name: Fail PR if style issues
+        if: env.style-issues == 'true'
+        run: exit 1
