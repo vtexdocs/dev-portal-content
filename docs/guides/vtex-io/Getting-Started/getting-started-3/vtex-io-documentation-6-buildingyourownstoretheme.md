@@ -4,15 +4,22 @@ slug: "vtex-io-documentation-6-buildingyourownstoretheme"
 hidden: false
 category: "Storefront Development"
 createdAt: "2020-08-11T07:03:17.864Z"
-updatedAt: "2022-12-13T20:17:44.531Z"
-excerpt: "Access our hands-on course on Store Framework."
-seeAlso:
- - "/docs/guides/vtex-io-documentation-making-your-theme-content-public"
+updatedAt: "2025-01-22T15:55:09.561Z"
+excerpt: "Explore resources to personalize your VTEX store with Store Framework."
 ---
-Throughout this track, you understood what *workspace*, *VTEX IO CLI*, *Store Theme* and *blocks* are, in addition to learning how to customize your store’s pages by configuring *templates* and defining *styles*.
 
-It's time to put your knowledge to the task and to practice by creating a Store Theme to call your own from scratch - block by block, style by style. Are you ready?
+After completing the initial setup, creating your Store Theme project, and learning how to customize your store pages, you can start implementing advanced personalization for your store.
 
-Access our [**hands-on course on VTEX Store Framework**](https://learn.vtex.com/page/learning-path-lang-en).
+Under the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) category, you'll find a set of guides to help you customize your storefront:
 
-> ℹ️ If you've already completed the course and wish to move on to the next step of configuring your Store Theme, remember: up until the very last step of this track, the Store Theme app is stored in your local files and is linked to your VTEX store only through your Development workspace. To make these changes to your store's theme reach end users, you'll need to [make your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/).
+- [Building pages](https://developers.vtex.com/docs/guides/store-framework-building-pages): Create different types of pages tailored to your business needs.
+- [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components): Build your storefront, from basic elements to advanced customizations, by leveraging VTEX IO Store Framework components.
+- [Using advanced layouts](https://developers.vtex.com/docs/guides/store-framework-using-advanced-layouts): Create advanced layouts in your Store Framework store.
+- [Working with Site Editor](https://developers.vtex.com/docs/guides/store-framework-working-with-site-editor): Customize your Store Framework storefront by using Site Editor.
+- [Styling](https://developers.vtex.com/docs/guides/store-framework-styling): Customize your store layout with Store Framework.
+
+You can also access our [hands-on course on the VTEX Store Framework](https://learn.vtex.com/page/learning-path-lang-en).
+
+> ℹ To foster constructive collaboration among developers, facilitate version monitoring, and improve the visibility of your Store Theme app, use code versioning tools such as GitHub. Learn more in [Best practices on workspace management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices).
+
+Once you've finished customizing your storefront, whether by completing the hands-on course or following our guides, remember that your Store Theme app is still stored locally on your computer and linked to your VTEX store only through the development workspace. To make your changes visible to end users, you need to [make your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
