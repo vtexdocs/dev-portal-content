@@ -22,6 +22,8 @@ If you're satisfied with the configurations you've made and want your theme to b
 4. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the theme in a [**production workspace**](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace/) to test your changes with traffic.
 5. [**Validate**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/) it as a release candidate if no more changes are needed. Otherwise, go back to step 1 and use a development workspace. **Don't perform changes in a production workspace**.
 6. [**Deploy**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/) it as a stable version if you're sure about all the changes you've made.
-7. [**Promote the production workspace to master**](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/) to make your theme public to your store's end users.
+7. [**Promote the production workspace to master**](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master/) to make your theme public to your store's end users. Follow the [Deployment and workspace promotion](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices#deployment-and-workspace-promotion) best practices to deploy changes and promote workspaces seamlessly.
 
 For more details on each of these steps, see [Making your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available/).
+
+>ℹ To publish a new major version of your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app, see [Migrating CMS settings after a major theme update](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update).
