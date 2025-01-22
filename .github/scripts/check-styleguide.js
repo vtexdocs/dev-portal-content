@@ -93,7 +93,7 @@ if (issues.length > 0) {
     const formattedIssues = issues.join('\n');
     console.log(formattedIssues);
     core.setOutput('style-issues', formattedIssues);
-    process.exit(0); // Indicate that issues were found
+    process.exit(1); // Indicate that issues were found
 } else {
     console.log('No style issues found.');
     process.exit(0); // Indicate success
