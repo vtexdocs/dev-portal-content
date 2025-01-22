@@ -102,7 +102,7 @@ if (issues.length > 0) {
     console.log(formattedIssues);
     core.setOutput('style-issues', formattedIssues);
     core.setFailed('Style issues detected.'); 
-    process.exit(1); // Indicate success
+    process.exit(1); // Indicate that issues were found
 } else {
     console.log('No style issues found.');
     process.exit(0); // Indicate success
