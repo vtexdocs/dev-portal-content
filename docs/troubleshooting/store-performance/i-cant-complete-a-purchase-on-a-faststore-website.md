@@ -28,7 +28,7 @@ To solve this problem, there are two troubleshooting checks and instructions you
 
 ### Step 1 - Configuring an external DNS
 
-Configure an external DNS to allow customers to access your FastStore website through your chosen domain and enable features like VTEX Checkout. See the [Configuring external DNS](https://developers.vtex.com/docs/guides/faststore/go-live-2-configuring-external-dns) guide for more information.
+Configure an external DNS to allow customers to access your FastStore website through your chosen domain and enable features like VTEX Checkout. See the [Configuring external DNS](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide for more information.
 
 ### Step 2 - Check the `secure` subdomain pointing
 
