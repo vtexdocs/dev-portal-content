@@ -36,7 +36,7 @@ vtex login {accountName}
 
 After running this command, a new browser tab will open, prompting you to log in to your VTEX account using your email credentials.
 
-Once logged in, your web browser will display the following message: 'You may now close this window.' At this point, you will have access to your VTEX account.
+Once logged in, your web browser will display the following message: `You may now close this window`. At this point, you will have access to your VTEX account.
 
 ### Step 4 - Creating a development workspace
 
