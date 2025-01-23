@@ -24,7 +24,7 @@ Install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-docume
 
 For detailed instructions, follow the VTEX IO CLI [installation guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 
-### Step 2 - Logging in to your VTEX account
+### Step 3 - Logging in to your VTEX account
 
 With the VTEX IO CLI installed, log in to your VTEX account using the command below, and replace `{accountName}` with your VTEX account name:
 
@@ -38,7 +38,7 @@ After running this command, a new browser tab will open, prompting you to log in
 
 Once logged in, your web browser will display the following message: 'You may now close this window.' At this point, you will have access to your VTEX account.
 
-### Step 3 - Creating a development workspace
+### Step 4 - Creating a development workspace
 
 On VTEX IO, all the interactions with your account occur within a specific [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/), which acts as a separate version of your account where you can run the changes without affecting the live version of your store.
 
@@ -61,7 +61,7 @@ To confirm the `account` and `workspace` you're using, run the `vtex whoami` com
 
 ![VTEX IO CLI-whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-1-basicsetup-0.png)
 
-### Step 4 - Accessing your store using a workspace
+### Step 5 - Accessing your store using a workspace
 
 Once you've created your development workspace, access your store by visiting `https://{workspace}--{accountName}.myvtex.com`, replacing `{workspace}` with the name of your workspace and `{accountName}` with your VTEX account name. Alternatively, run the `vtex browse` command in your terminal to open your browser with the correct workspace and account settings.
 
