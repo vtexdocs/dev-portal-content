@@ -8,7 +8,7 @@ createdAt: "2020-06-03T16:02:49.869Z"
 updatedAt: "2025-01-22T17:41:31.648Z"
 ---
 
-A Store Theme is a VTEX IO app that operates like any other app with built-in features such as versioning and deployment.
+A [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) is a VTEX IO app that operates like any other app with built-in features such as versioning and deployment.
 
 In this guide, you'll find instructions on how to make your Store Theme available to end users.
 
@@ -26,4 +26,4 @@ If you're satisfied with the configurations you've made and want your theme to b
 
 For more details on each of these steps, see [Making your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available/).
 
->ℹ To publish a new major version of your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app, see [Migrating CMS settings after a major theme update](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update).
+>ℹ To publish a new major version of your Store Theme, see also [Migrating CMS settings after a major theme update](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-cms-settings-after-major-update).
