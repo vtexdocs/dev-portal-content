@@ -3,7 +3,7 @@ title: "2. Configuring your account"
 slug: "vtex-io-documentation-2-prerequesites"
 hidden: false
 createdAt: "2020-08-11T07:03:18.428Z"
-updatedAt: "2024-11-21T20:12:49.926Z"
+updatedAt: "2025-01-24T14:02:14.684Z"
 category: "Storefront Development"
 excerpt: "Set up your account Edition to get started with Store Framework."
 ---
