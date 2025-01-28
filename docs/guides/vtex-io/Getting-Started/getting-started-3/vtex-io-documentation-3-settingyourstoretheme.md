@@ -96,4 +96,6 @@ Once you're logged in, you should see the following Store Theme rendered on your
 
 ![Store Theme](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-3-settingyourstoretheme-3.png)
 
-Now that your store is using a default theme code, you can start configuring the Store Theme app to match your store needs. This includes changing templates and customizing styles to create a unique identity for your store. In the upcoming guides of this tutorial, you'll learn how to define templates by configuring and combining components for each store page, as well as declaring styles such as colors, typography scales, and spacing.
+Now that your store is using a default theme code, you can start configuring the Store Theme app to match your store needs. This includes changing templates and customizing styles to create a unique identity for your store.
+
+In the upcoming guides of this tutorial, you'll learn how to define templates by configuring and combining components for each store page, as well as declaring styles such as colors, typography scales, and spacing.
