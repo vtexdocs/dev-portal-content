@@ -2,7 +2,7 @@
 title: "New Pick and Pack Order Changes API"
 slug: "2025-01-29-new-pick-pack-order-changes-api"
 type: "added"
-createdAt: "2025-01-29T17:08:52.219Z}"
+createdAt: "2025-01-29T17:08:52.219Z"
 updatedAt: ""
 hidden: false
 excerpt: "The new Pick and Pack Order Changes API allows merchants to efficiently modify orders by adding or removing items, adjusting prices, and applying discounts, ensuring accurate inventory and order records."
