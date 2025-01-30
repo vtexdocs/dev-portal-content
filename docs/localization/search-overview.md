@@ -38,7 +38,7 @@ For more information about this component, see the guide [`SearchProvider`](/TBD
 
 ## `serializer`
 
-The `serializer` file parses URLs and create serialized URLs that represent specific filter combinations.
+The `serializer` file parses URLs and creates serialized URLs that represent specific filter combinations.
 
 ## Use cases
 
