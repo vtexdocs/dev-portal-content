@@ -5,7 +5,7 @@ slug: "search-overview"
 
 The `Search` module helps create and manage faceted store search experiences. The module allows users to filter products by attributes like brand, price, or features. These filters generate unique URLs (facet states) for each combination, enabling:
 
-- Easy navigation: Allows users to revisit previous searches using their browser history.
+- Easy navigation: Allows users to view previous searches using their browser history.
 - Improved filtering experience: Selecting or removing filters updates the URL without reloading the page.
 - SEO-friendly: Unique URLs for each search state help with search engine optimization.
 
@@ -13,7 +13,7 @@ The `Search` module helps create and manage faceted store search experiences. Th
 
 The `Search` module relies on the following parts:
 
-- [`SearchProvider`](https://github.com/vtex/faststore/blob/master/packages/sdk/src/search/Provider.tsx) component and [`useSearch`](https://github.com/vtex/faststore/blob/master/packages/sdk/src/search/useSearch.ts) hook: Defines the search state (selected filters, sort criteria, etc.) and functions to change it (select/remove filters, change sort).
+- [`SearchProvider`](https://github.com/vtex/faststore/blob/master/packages/sdk/src/search/Provider.tsx) component and [`useSearch`](https://github.com/vtex/faststore/blob/master/packages/sdk/src/search/useSearch.ts) hook: Defines the search state (selected filters, sort criteria, etc.) and provide functions to change it (select/remove filters, change sort options).
 - [`serializer`](https://github.com/vtex/faststore/blob/master/packages/sdk/src/search/serializer.ts): Parses URLs to create a serialized URL for every filter combination.
 
 ## `SearchProvider`
@@ -25,26 +25,26 @@ The `SearchProvider` component defines the structure of a faceted search state a
 | `base`           | `string`     | Base URL path to be ignored by the search context. Use `/en` to ignore the locale-specific part of the URL in the search context. |
 | `page`           | `number`     | Index of the current page in the pagination context. Use `0` if it's the first page in the pagination result and `1` if it's the second. |
 | `selectedFacets` | `Facet[]`    | All selected facets. |
-| `sort`           | `SearchSort` | Selected sorting criteria for the search (e.g., ascending/descending price, number of reviews)  |
+| `sort`           | `SearchSort` | Selected sorting criteria for the search (for example, ascending/descending price, number of reviews)  |
 | `term`           | `string`     | Terms of the full text search. |
 
 The `SearchProvider` also provides functions to change the facet state:
 
-- `setFacet` - Selects a facet by its key.
-- `toggleFacet` - Replace a selected facet with its key.
-- `removeFacet` - Remove the selected facet with its value.
+- `setFacet`: Selects a facet by its key.
+- `toggleFacet`: Replaces a selected facet with its key.
+- `removeFacet`: Removes the selected facet with its value.
 
-For more information about this component, see the [`SearchProvider`](/TBD) guide.
+For more information about this component, see the guide [`SearchProvider`](/TBD).
 
 ## `serializer`
 
-The `serializer` file handles parsing URLs and creating serialized URLs representing specific filter combinations.
+The `serializer` file parses URLs and creates serialized URLs that represent specific filter combinations.
 
 ## Use cases
 
-The `Search` module is versatile for ecommerce applications, especially for creating dynamic product search interfaces. Key features include sorting, filtering by facets like price or category, and generating unique URLs for search states, enhancing user experience and SEO.
+The `Search` module is versatile for ecommerce applications, especially for creating dynamic product search interfaces. Key features include sorting, filtering by facets like price or category, and generating unique URLs for search states, which enhance user experience and SEO.
 
-For more examples, refer to the FastStore repository in the [`search` tests folder](https://github.com/vtex/faststore/tree/master/packages/sdk/test/search).
+For more examples, see the FastStore repository in the [`search` tests folder](https://github.com/vtex/faststore/tree/master/packages/sdk/test/search).
 
 ### Brand filtering
 
@@ -81,4 +81,4 @@ function Checkbox() {
 }
 ```
 
-The `Page` component parses the search state from the URL and passes it to `SearchProvider`, which manages the faceted search context. When the checkbox is clicked, the URL is updated with the selected filter and redirects to the corresponding results page. The `itemsPerPage` prop ensures 12 products are displayed per page.
+The `Page` component parses the search state from the URL and passes it to `SearchProvider`, which manages the faceted search context. When the checkbox is selected, the URL updates with the chosen filter and redirects to the corresponding results page. The `itemsPerPage` prop ensures that 12 products are displayed per page.
