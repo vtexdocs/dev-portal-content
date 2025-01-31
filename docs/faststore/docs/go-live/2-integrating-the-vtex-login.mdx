@@ -25,7 +25,10 @@ The VTEX Login is provided by the `vtexcommercestable` environment and uses a su
 
 ### Step 1 - Adding a redirect back to your FastStore domain
 
-By the end of this step, changes will be live to all end-users, meaning that once shoppers finish logging in to your store, they will be redirected back to your website's main domain.
+By completing this step, shoppers will be redirected back to your website's main domain after logging in or completing a checkout.
+The instructions to complete this step depend on whether your store uses the My Account and Checkout pages in the [CMS Portal (Legacy)](#for-cms-portal-legacy-stores) or [Store Framework](#for-store-framework-stores).
+
+#### For CMS Portal (Legacy) stores
 
 1. Access the VTEX Admin.
 2. Go to **Storefront > Layout**.
@@ -41,9 +44,60 @@ By the end of this step, changes will be live to all end-users, meaning that onc
 
 6. Clean the `<body>` section to remove unnecessary code. By the end of this step, your Home file should look like the following:
 
-![Home Template](https://vtexhelp.vtexassets.com/assets/docs/src/home-template___a12a67566b69529d2a3f19c98f135060.png)
+   ![Home Template](https://vtexhelp.vtexassets.com/assets/docs/src/home-template___a12a67566b69529d2a3f19c98f135060.png)
 
 7. Click on the **Save Template** button.
+
+#### For Store Framework stores
+
+Store Framework stores are built on [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io), which has a decoupled architecture where pages like My Account and Checkout are managed as apps. Unlike the CMS Portal (Legacy), these pages are part of the VTEX IO ecosystem and require a different approach for handling redirects.
+
+To redirect users back to your FastStore domain after events like logins or checkouts, follow these steps:
+
+1. Create a Pixel App by following the [Pixel Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps) track.
+2. In the [4. Writing the head and body scripts](https://developers.vtex.com/docs/guides/vtex-io-documentation-5-writingtheheaderandbodyscripts) step, add the following script:
+
+   ```html
+   <script>
+
+   function redirectToProduction(){
+
+      const { pathname, search } = window.location
+      const redirectDomain = decodeURIComponent("https://www.{addDomainName}.com") // Replace with your domain
+
+      if(
+         pathname === '/account' ||
+         pathname === '/login' ||
+         pathname === '/checkout' ||
+         pathname === '/checkout/orderPlaced' ||
+         pathname === '/checkout/orderPlaced/' ||
+         pathname === '/api/io/account' ||
+         pathname === '/api/io/login' ||
+         !redirectDomain) {
+         return false
+         }
+
+      const redirectLink = redirectDomain + pathname + search
+
+      window.location.href = redirectLink
+   }
+
+   (function() {
+      redirectToProduction()
+
+      window.addEventListener('hashchange',() => {
+         redirectToProduction()
+      })
+   })()
+
+   </script>
+   ```
+
+   > ⚠ Replace `https://www.{addDomainName}.com` with your store's main domain. For example, if the store's main domain is `https://www.mystore.com`, set the `const` as the following: `const redirectDomain = decodeURIComponent("https://www.mystore.com")`.
+
+3. Complete the remaining steps in the [Pixel app](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps) track to inject the script into your store's login page.
+
+Once implemented, shoppers will be automatically redirected to your website’s main domain after logging in or completing a checkout.
 
 ### Step 2 - Setting the auth cookie root domain
 
