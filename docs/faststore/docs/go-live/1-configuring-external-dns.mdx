@@ -24,7 +24,7 @@ Besides making your FastStore website accessible via a custom domain, **VTEX Che
 ### Step 1 - Creating DNS records
 
 1. Access your domain provider's website.
-2. Create a **CNAME** DNS record for your `www` domain (e.g., `www.mystore.com`) that points to `www.{rootDomain}.com.cdn.vtex.com` (e.g., `www.mystore.com.cdn.vtex.com`). Check the documentation of your domain provider for more information.
+2. Create a **CNAME** DNS record for your `www` domain (e.g., `www.mystore.com`) that points to `www.{rootDomain}.cdn.vtex.com` (e.g., `www.mystore.com.cdn.vtex.com`). Check your domain provider's documentation for more information.
 3. Now, create a **CNAME** record for the `secure` subdomain (e.g., `secure.mystore.com`) that points to `secure.{rootDomain}.cdn.vtex.com` (e.g., `secure.mystore.com.cdn.vtex.com`). This subdomain will be used by the **Checkout**, **Order Placed**, **Login**, and **My Account** pages.
 
 > ℹ️ Please note that the configured addresses may not be immediately available to everyone due to DNS propagation, which can take 24-48 hours to complete.
