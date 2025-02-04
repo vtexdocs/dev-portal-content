@@ -12,8 +12,8 @@ After understanding blocks and templates and how they render interface component
 
 The Store Theme allows you to:
 
-- [Set a default style for all your store components](#set-a-default-style-for-all-your-store-components)
-- [Set a specific style for a component type or a single component](#set-a-specific-style-for-a-component-type-or-a-single-component)
+- [Set a default style for all store components](#setting-a-default-style-for-all-store-components)
+- [Set a specific style for a component type or a single component](#setting-a-specific-style-for-a-component-type-or-a-single-component)
 
 ## Setting a default style for all store components
 
