@@ -2,7 +2,7 @@
 title: "Accessibility"
 slug: "storefront-accessibility"
 hidden: false
-createdAt: "2025-01-03T16:57:23.824Z"
+createdAt: "2025-02-04T14:50:43.401Z"
 updatedAt: ""
 excerpt: "Make sure your store is accessible to all by following these best practices for ecommerce accessibility."
 ---
