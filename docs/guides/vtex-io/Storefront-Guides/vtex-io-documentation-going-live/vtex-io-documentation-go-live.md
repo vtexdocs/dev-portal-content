@@ -47,6 +47,8 @@ To go live with your VTEX store, built with [Store Framework](https://developers
 
 To launch your store, you must own a [domain name](https://en.wikipedia.org/wiki/Domain_name). If you have not already, you can buy one from a domain provider.
 
+>❗ VTEX uses two CDN providers in the stores: Cloudfront and Azion. Your store's domain must not be registered with them by the time you perform the pointing. Otherwise, there will be a failure in the CDN provisioning for your store and, consequently, at go-live. So, if you have the store domain registered on the Cloudfront or Azion platform, delete it before pointing the DNS to VTEX.
+
 [Configure your domain as your store's host](https://help.vtex.com/en/tutorial/configuring-domains-in-license-manager--tutorials_2450) as presented in this guide to make sure that shoppers will be directed to your new VTEX store.
 
 ### Step 2 - Requesting internal DNS pointing
