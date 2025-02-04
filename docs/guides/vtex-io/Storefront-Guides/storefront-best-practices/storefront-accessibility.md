@@ -122,7 +122,7 @@ ARIA attributes improve accessibility by providing assistive technologies with a
 - **ARIA attributes must match their functions:** Ensure that `aria-*` attributes are being used for the correct purpose and correspond to their intended function.
 - **ARIA roles and children must meet requirements:** Ensure that elements with specific ARIA roles (for example, `role="treeitem"`) contain the appropriate child roles as required.
 
-### Multimedia 
+### Multimedia
 
 - **Images include `alt` text:** All images must have descriptive `alt` attributes that provide meaningful content for screen reader users.
 - **`<input type="image">` elements include `alt` text:** Images used within form buttons, such as `<input type="image">`, should also have descriptive `alt` text.
@@ -168,6 +168,7 @@ See below the accessibility features available for each technology.
 When developing your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme), follow the best practices in the [Building your storefront](#building-your-storefront) section. Learn how to start developing yours in the [Getting started](https://developers.vtex.com/docs/guides/getting-started-3) tutorial.
 
 When creating a [Storefront app](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) to your store developed with Store Framework, prioritize accessibility within the creation process to improve the shopping experience for all users. To promote inclusion, key practices are:
+
 - Ensuring keyboard interactivity for all user actions.
 - Applying good color contrast in component styles.
 - Avoiding the use of HTML `<div>` elements where possible to enhance accessibility for screen readers and improve SEO.
