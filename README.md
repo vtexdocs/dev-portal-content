@@ -1,8 +1,10 @@
-# Dev-portal-content
+# VTEX Developer Portal content
 
 >ℹ This repository is managed by the [VTEX Tech Writing](https://github.com/vtexdocs/dev-portal-content/graphs/contributors) team.
 
 This repository contains all the files for the guides featured in the [VTEX Developer Portal](https://developers.vtex.com).
+
+## Contributing to the documentation
 
 We invite you to join us and learn how to contribute to our documentation. Your help makes a huge difference in improving our documentation experience. Below are several ways you can do it:
 
@@ -78,4 +80,4 @@ By clicking `Suggest edits (GitHub)`, a new browser window will open with the do
 
 Once you create a pull request, our team will review your changes as soon as possible and follow up with you in the pull request comments.
 
-  > ⚠ Pull requests are a collaborative process. While your suggestions are highly valued, approval is not guaranteed. Stay open to feedback and discussions throughout the process.
+  > ⚠ Pull requests go through a review process to ensure quality and consistency. Our team may request changes before approving them.
