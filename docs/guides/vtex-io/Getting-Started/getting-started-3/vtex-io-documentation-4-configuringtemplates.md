@@ -220,7 +220,7 @@ This means that your default store homepage will comprise the components defined
 
 To build more complex components, the `home.jsonc` file includes each block’s declaration and configuration, using the block's props and, if necessary, other blocks.
 
->⚠ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining blocks composition](#defining-blocks-composition).
+>⚠ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#step-3-clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining blocks composition](#step-4-defining-blocks-composition).
 
 ### Step 3 - Clarifying block naming and properties
 
@@ -272,4 +272,4 @@ In the example above, `product-summary.shelf` requires other blocks as children,
 
 To build a component using multiple blocks, the main block can declare a `blocks` list, such as `shelf#home`, or a `children` list, as seen in the `product-summary.shelf` block.
 
-As explained in [Understand block composition](#understand-block-composition), the choice between using a `blocks` or `children` list depends on the *composition* of the blocks being declared.
+As explained in [Understand the block composition](#understand-the-block-composition), the choice between using a `blocks` or `children` list depends on the *composition* of the blocks being declared.
