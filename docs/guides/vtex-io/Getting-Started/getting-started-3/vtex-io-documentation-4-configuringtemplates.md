@@ -59,7 +59,7 @@ According to their composition, the listed blocks will determine whether they sh
 
 ## Instructions
 
-### Declaring blocks in your Store Theme app
+### Step 1 - Declaring blocks in your Store Theme app
 
 Declare all your blocks in the `blocks.jsonc` file, or create as many files and folders as needed within the `store` folder to organize store blocks and templates. You can also declare blocks in the `blocks` subfolder. The only difference is that `jsonc` files allow you to add comments to the code.
 
@@ -71,7 +71,7 @@ When declaring a new block in your Store Theme app, check if the app blocking it
 
 > ⚠ Replace the values between the curly braces based on your scenario.
 
-### Managing blocks in your theme
+### Step 2 - Managing blocks in your theme
 
 To better understand how to manage blocks within your Store Theme app, follow the steps below to see the structure of the predefined homepage template:
 
@@ -222,7 +222,7 @@ To build more complex components, the `home.jsonc` file includes each block’s 
 
 >⚠ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining blocks composition](#defining-blocks-composition).
 
-### Clarifying block naming and properties
+### Step 3 - Clarifying block naming and properties
 
 Still in the `home.jsonc` file, use `ctrl+f` and search for the `rich-text#question` block. This block renders a component that displays markdown text to users.
 
@@ -241,7 +241,7 @@ To check the available props of the app behind the `rich-text` block, see the Co
 
 > ℹ All the props available to configure a block can be found in the documentation of its exporting app or in the block's own documentation (if applicable).
 
-### Defining blocks composition
+### Step 4 - Defining blocks composition
 
 Still in the `home.jsonc`, search for the`shelf#home` block.
 
