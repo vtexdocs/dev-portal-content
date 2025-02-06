@@ -19,12 +19,12 @@ After **April 1, 2025**, users or API keys must have a role with the new *Paymen
 
 * **New License Manager resource:** *Payments Notification*
 
-Required to access the [`GET`](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/payments/pvt/payments/-paymentId-/payment-notification) or [`POST`](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/pvt/payments/-paymentId-/payment-notification) payment notification endpoints on the Payments Gateway API, after **April 1, 2025**.
+  Required to access the [`GET`](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/payments/pvt/payments/-paymentId-/payment-notification) or [`POST`](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/pvt/payments/-paymentId-/payment-notification) payment notification endpoints on the Payments Gateway API, after **April 1, 2025**.
 
 * **New predefined role:** *Payments Notifier*
 
-Includes the new *Payments Notification* resource.
-By default, this role will only be assigned to the **Sponsor** user.
+  Includes the new *Payments Notification* resource.
+  By default, this role will only be assigned to the **Sponsor** user.
 
 ## What needs to be done?
 
