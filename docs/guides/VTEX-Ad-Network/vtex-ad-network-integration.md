@@ -123,7 +123,7 @@ The request body for sending ad events must include key identifiers such as `Mac
     "Ref": "https://www.test.com.br",
     "SessionId": "fb252d90-7494-4097-90fd-cc73eeaa575c",
     "accountName": "test",
-    "placement":'search_results',
+    "placement":"search_results",
     "position": 1,
     "adRequestId": "1f97dca0-b022-4bce-907c-d22daa1cef01",
     "adResponseId": "b0b5d188-21b3-4d3a-b3ca-81c0626ff7d6",
