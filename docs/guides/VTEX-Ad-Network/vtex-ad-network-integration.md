@@ -69,7 +69,7 @@ There are two ways of requesting sponsored products, depending on the search eng
 
 To successfully request ads from the VTEX Ad Network, you need to structure your API calls correctly. This section explains how to configure the request parameters to retrieve sponsored products based on your use case.
 
-To specify the number of sponsored products to retrieve, use the `sponsoredCount` query parameter, for example, `sponsoredCount=5`. 
+To specify the number of sponsored products to retrieve, use the `sponsoredCount` query parameter, for example, `sponsoredCount=5`.
 
 If you are using ads in a different placement than `top_search`, use the `advertisementPlacement` option in the query string to inform the placement, for example, `advertisementPlacement=search_shelf`.
 
