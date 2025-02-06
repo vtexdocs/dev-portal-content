@@ -19,11 +19,11 @@ This approach ensures that all users see the same data at the same time, without
 
 ## Eventual consistency
 
-In eventual consistency, changes take some time to propagate across instances. The updates are queued and processed asynchronously, meaning users may not see the updated data immediately. This approach is used in resource-intensive tasks, especially in large datasets. As a result, performance is optimized while synchronization occurs gradually.
+In eventual consistency, changes take some time to propagate across instances, and synchronization occurs gradually. Updates are queued and processed asynchronously, meaning users may not see the updated data immediately. This approach enhances scalability and performance, especially for large datasets.
 
-For example, the `/search` API uses eventual consistency. After a document is updated, the change will appear in the search results only after the system has processed it. 
+For example, the `/search` API uses eventual consistency. After a document is updated, the change will appear in the search results only after the system has processed it. While this allows for optimized performance, there is a delay before updates become visible in search queries.
 
-When data is persisted in Master Data, the Storage is updated in an atomic operation. A message is sent to the Master Data Worker to trigger actions like sending the updated document to the Search Engine. Only after the Search Engine is updated will the changes be available through the `/search` API.
+When data is persisted in Master Data, the Storage update occurs in an atomic operation, meaning all changes happen at once, ensuring data integrity. A message is sent to the Master Data Worker, which then triggers actions like forwarding the updated document to the Search engine. Only after the Search engine is updated changes are available through the `/search` API.
 
 For more information on the update process in the Search Engine, refer to [Schema Lifecycle](https://developers.vtex.com/docs/guides/master-data-schema-lifecycle).
 
@@ -58,3 +58,5 @@ The table below shows the consistency level for each Master Data API path.
 | Schemas | `/schemas` | Strong consistency |
 | Search | `/search` | Eventual consistency |
 | Scroll | `/scroll` | Eventual consistency |
+
+For more details on specific endpoints, refer to the [Master Data API - v1](https://developers.vtex.com/docs/api-reference/masterdata-api) and [Master Data API - v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2) reference.
