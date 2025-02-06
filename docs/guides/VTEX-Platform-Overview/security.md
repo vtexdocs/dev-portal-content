@@ -46,16 +46,14 @@ This requirement only applies to email and password logins, not to other login m
 
 ### Password rules
 
-VTEX Admin and store passwords have the following requirements:
+VTEX Admin and store passwords must have at least:
 
-* Minimum length of 8 characters.
-* 6-digit MFA (multi-factor authentication) token.
-* Minimum of 1 uppercase character.
-* Minimum of 1 digit.
-* Minimum of 1 special character.
-* Can’t repeat the last 4 passwords.
+* 8 characters
+* 1 number
+* 1 uppercase letter
+* 1 lowercase letter
 
-Merchants can choose to [enforce password expiration](https://help.vtex.com/en/tutorial/authentication--21CkKHLKP1o41lUpGhuRUs#enforcing-password-expiration-for-admin-users) after a specific period for Admin users, which can be 15, 30, or 90 days.
+Merchants can choose to [enforce password expiration](https://help.vtex.com/en/tutorial/authentication--21CkKHLKP1o41lUpGhuRUs#enforcing-password-expiration) after a specific period, which can be 15, 30, or 90 days.
 
 Merchants can also choose to integrate an external identity provider, allowing them to define their own customized password policies. See [Login integrations](#login-integrations) for more information.
 
