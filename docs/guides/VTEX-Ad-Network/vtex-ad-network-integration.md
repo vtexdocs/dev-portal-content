@@ -149,12 +149,12 @@ The request body for sending order events must include key identifiers such as `
 
 ```json
 {
-"accountName": "test",    
-"macId": "f805a89b-ef06-4d6a-ae9d-4dd5699ccd6f",
-    	"url": "https://www.test.com.br/busca?tshirt",
-    	"ref": "https://www.test.com.br",
-    	"sessionId": "fb252d90-7494-4097-90fd-cc73eeaa575c",
-    	"orderGroup": "XYZ1241DVD",
-    	"channel": "website"
+    "accountName": "test",    
+    "macId": "f805a89b-ef06-4d6a-ae9d-4dd5699ccd6f",
+    "url": "https://www.test.com.br/busca?tshirt",
+    "ref": "https://www.test.com.br",
+    "sessionId": "fb252d90-7494-4097-90fd-cc73eeaa575c",
+    "orderGroup": "XYZ1241DVD",
+    "channel": "website"
 }
 ```
