@@ -17,20 +17,20 @@ According to your operating system, follow the respective steps to install VTEX 
 
   1. Install Xcode by running the following command:
 
-     ```sh
-     xcode-select --install
-     ```
+    ```sh
+    xcode-select --install
+    ```
 
   2. Install **Homebrew** by following the instructions on the [**Homebrew website**](https://brew.sh/index).
 
-     ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
+    ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
 
   3. Install **VTEX IO CLI** by running the following command:
 
-     ```sh
-     brew tap vtex/vtex
-     brew install vtex
-     ```
+    ```sh
+    brew tap vtex/vtex
+    brew install vtex
+    ```
 
 ## Linux
 
