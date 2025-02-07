@@ -10,7 +10,7 @@ Order modification is a feature that allows your store to modify the items or pr
 
 > ℹ️ We recommend you use the new version of this feature with the [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes) endpoint.
 
-> Learn more about [Order replacement](https://help.vtex.com/en/tutorial/order-replacement--2IK9mwQjBKseQmE8K8saO8#) and how to enable your customers to easily request order changes.
+> Learn more about [Order replacement](https://help.vtex.com/en/tutorial/order-replacement--2IK9mwQjBKseQmE8K8saO8) and how to enable your customers to request order changes.
 
 ## Implementation
 
