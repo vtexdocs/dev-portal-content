@@ -51,10 +51,20 @@ You can use the [Audit app](https://help.vtex.com/tutorial/searching-for-events-
 
 See the table below to learn more about the Profile System events available on Audit.
 
-| **Action**                   | **Description**                                      | **Event details**                     |
-|------------------------------|------------------------------------------------------|---------------------------------------|
-| GetProfileVersionUnmasked    | Retrieval of an unmasked profile by ID and version.  | Profile ID and version ID.            |
-| EmailRectification           | Change existing email address.                       | ID of user whose email was rectified. |
+| Action | Description | Event details |
+| ---- | ---- | ---- |
+| GetAddressUnmasked | Retrieval of an unmasked address. | Address ID. |
+| GetAddressVersionUnmasked | Retrieval of an unmasked address by ID and version. | Address ID and version ID. |
+| GetContactsUnmasked | Retrieval of unmasked contact information. | Contact ID. |
+| GetContactsVersionUnmasked | Retrieval of unmasked contact information by ID and version. | Contact ID and version ID. |
+| GetInvoiceSubjectUnmasked | Retrieval of unmasked invoice subject information. | Invoice subject ID. |
+| GetInvoiceSubjectVersionUnmasked | Retrieval of unmasked invoice subject information by ID and version. | Invoice subject ID and version ID. |
+| GetPickupInfoUnmasked | Retrieval of unmasked pickup point information. | Pickup point ID. |
+| GetPickupInfoVersionUnmasked | Retrieval of unmasked pickup point information by ID and version. | Pickup point ID  and version ID. |
+| GetProfileUnmasked | Retrieval of an unmasked profile. | Profile ID. |
+| GetProfileVersionUnmasked | Retrieval of an unmasked profile by ID and version. | Profile ID and version ID. |
+| PutSchema | Schema modification. | Schema ID. |
+| ProfileSystemUserRightsDelete | Deletion of a user profile. | Profile ID. |
 
 ## TTL
 
