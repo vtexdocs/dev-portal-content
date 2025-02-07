@@ -3,11 +3,11 @@ title: Cart
 createdAt: "2025-01-16T14:47:00.000Z"
 ---
 
-The Cart module offers functionalities to manage the store's shopping cart. It handles large orders and complex ecommerce operations, such as marketplace integration, coupons, gift options, and promotions.
+The Cart module offers features to manage the store shopping cart. It handles large orders and complex ecommerce operations, such as marketplace integration, coupons, gift options, and promotions.
 
 ## Cart data storage
 
-Cart data is saved in the browser’s [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), ensuring that users' carts persist even when they close the browser and is structured as follows.
+Cart data is saved in the browser's [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), ensuring that users' carts remain saved even when they close the browser. The data is structured as follows:
 
 ![Cart SDK Architecture](https://vtexhelp.vtexassets.com/assets/docs/src/Cart___74c390e654f666b3a2adb7b6a0b5ecf7.png)
 
@@ -15,15 +15,15 @@ Cart data is saved in the browser’s [IndexedDB](https://developer.mozilla.org/
 
 The Cart module provides two modes:
 
-- [**Pure**](#pure-mode) (default) - Works on the client side, stores cart data locally, and works offline. It lacks server-side validation and may not handle complex cases like unavailable items. It is ideal for basic cart functionality.
+- [**Pure**](#pure-mode) (default): Operates on the client side, storing cart data locally and supporting offline use. It lacks server-side validation and may not handle complex cases like unavailable items. Ideal for basic cart functionality.
 
-- [**Optimistic**](#optimistic-mode) - Handles complex ecommerce operations like unavailable items. Validates the cart state on the server using debounced requests
+- [**Optimistic**](#optimistic-mode): Handles complex ecommerce operations like unavailable items. Validates the cart state on the server using debounced requests.
 
 ## Pure mode
 
-The Pure mode stores cart data locally in the browser. This allows users to add or remove items and keep their carts even if they close the browser. However, it cannot validate items on the server side.
+The Pure mode stores cart data locally in the browser. This allows users to add or remove items and keep their carts even if they close the browser. However, it can't validate items on the server side.
 
-The Pure cart can also work offline. However, it can't automatically fix mistakes. For example, if a customer tries to add an out-of-stock item, the cart won't stop them. It will still show the item as added, even though it's not available to buy.
+The Pure cart also works offline but doesn't automatically correct errors. For example, if a customer adds an out-of-stock item, the cart won't prevent it. The item will appear in the cart even though it's unavailable.
 
 ### Implementing Pure mode
 
@@ -50,9 +50,9 @@ To implement the Pure cart mode, follow these steps:
 
 ## Optimistic mode
 
-The Optimistic mode validates the cart state on the server and can handle edge cases like unavailable items. For example, if a customer tries to add an out-of-stock product, Optimistic mode will check with the store's system. If the product is not available, it will be removed from the cart and let the customer know.
+Optimistic mode validates the cart state on the server and handles edge cases like unavailable items. For example, Optimistic mode checks with the store system if a customer tries to add an out-of-stock item. If the product is unavailable, it's removed from the cart, and the customer is notified.
 
-This feature can be implemented in the `optimistic` mode via a callback function, `validateCart`,  that allows developers to make requests and cause side effects to the cart. If the function returns `null`, the cart behavior does not change. However, if you opt to change the state of the cart to handle some specific side effect, they must return the new cart state on the callback function.
+This feature can be implemented in the `optimistic` mode using the `validateCart` callback function, which allows developers to make requests and cause side effects to the cart. If the function returns `null`, the cart behavior doesn't change. However, if you opt to change the cart state to handle a specific side effect, it must return the new cart state within the callback function.
 
 ### Implementing Optimistic mode
 
