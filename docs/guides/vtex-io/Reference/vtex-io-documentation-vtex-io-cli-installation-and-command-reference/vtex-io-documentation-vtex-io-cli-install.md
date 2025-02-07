@@ -13,24 +13,24 @@ According to your operating system, follow the respective steps to install VTEX 
 
 - **Brew**
 
-   > ⚠️ For computers running on an Apple M series chip (M1, M2, etc.), before installing VTEX IO CLI, install [Rosetta](https://support.apple.com/en-us/HT211861). This enables your computer to use the command-line interface for a Mac with an Intel processor. To install Rosetta, run the following in your terminal: `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`.
+> ⚠️ For computers running on an Apple M series chip (M1, M2, etc.), before installing VTEX IO CLI, install [Rosetta](https://support.apple.com/en-us/HT211861). This enables your computer to use the command-line interface for a Mac with an Intel processor. To install Rosetta, run the following in your terminal: `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`.
 
   1. Install Xcode by running the following command:
 
-     ```sh
-     xcode-select --install
-     ```
+```sh
+xcode-select --install
+```
 
   2. Install **Homebrew** by following the instructions on the [**Homebrew website**](https://brew.sh/index).
 
-     ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
+![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
 
-  3. Install **VTEX IO CLI** by running the following command:
+  1. Install **VTEX IO CLI** by running the following command:
 
-     ```sh
-     brew tap vtex/vtex
-     brew install vtex
-     ```
+```sh
+brew tap vtex/vtex
+brew install vtex
+```
 
 ## Linux
 
@@ -40,9 +40,9 @@ According to your operating system, follow the respective steps to install VTEX 
 
   Open the terminal and run the following command to install VTEX IO CLI.
 
-  ```sh
-  curl -L https://vtex.io/vtexcli/install | sh
-  ```
+```sh
+curl -L https://vtex.io/vtexcli/install | sh
+```
 
 ## Windows
 
@@ -53,15 +53,15 @@ According to your operating system, follow the respective steps to install VTEX 
   3. Run the Windows Terminal with admin permission by right-clicking the Windows Terminal icon and selecting `Run as administrator`.
   4. Run the following command to complete the installation:
 
-     ```sh
-     vtex
-     ```
+```sh
+vtex
+```
 
-  After completing these steps, you'll see the following message:
+   After completing these steps, you'll see the following message:
 
-  ![VTEX IO CLI Windows first execution](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-1.png)
+![VTEX IO CLI Windows first execution](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-1.png)
 
-  > ℹ️ Further usage of VTEX IO CLI doesn't require admin permission.
+> ℹ️ Further usage of VTEX IO CLI doesn't require admin permission.
 
 ## Installing CLI via NPM
 
@@ -75,25 +75,25 @@ Since VTEX IO CLI is built with [Node.js](https://nodejs.org/en/), you can insta
   <br>
 1. Install **Homebrew** by following the instructions on the [**Homebrew website**](https://brew.sh/index).
 
-   ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-2.png)
+![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-2.png)
 
 2. Install **Node.js** via Homebrew by running the following command.
 
-   ```sh
-   brew install node
-   ```
+```sh
+brew install node
+```
 
 3. Then, install **Yarn**.
 
-   ```sh
-   brew install yarn
-   ```
+```sh
+brew install yarn
+```
 
 4. Finally, install **VTEX IO CLI**.
 
-   ```sh
-   yarn global add vtex
-   ```
+```sh
+yarn global add vtex
+```
 
 <br>
 </details>
@@ -105,16 +105,16 @@ Since VTEX IO CLI is built with [Node.js](https://nodejs.org/en/), you can insta
 
 1. Install **Node.js** by running the following command:
 
-   ```sh
-   sudo apt install nodejs
-   ```
+```sh
+sudo apt install nodejs
+```
 
 2. Install **Yarn** by following the [Yarn installation](https://classic.yarnpkg.com/en/docs/install#gentoo-stable) for Linux.
 3. Install **VTEX IO CLI** by running the following command:
 
-   ```sh
-   sudo yarn global add vtex
-   ```
+```sh
+sudo yarn global add vtex
+```
 
 <br>
 </details>
@@ -129,21 +129,21 @@ Since VTEX IO CLI is built with [Node.js](https://nodejs.org/en/), you can insta
 3. Run the Windows Terminal with elevated administrator permission by right-clicking the Windows Terminal icon and selecting `Run as administrator`.
 4. Install **VTEX IO CLI** by running the following command.
 
-   ```sh
-   yarn global add vtex
-   ```
+```sh
+yarn global add vtex
+```
 
 5. Run the following command to finish the installation.
 
-   ```sh
-   vtex
-   ```
+```sh
+vtex
+```
 
-  After following the steps, this message will appear.
+After following the steps, this message will appear.
 
-  ![VTEX IO CLI Windows first execution](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-3.png)
+![VTEX IO CLI Windows first execution](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-3.png)
 
-  You don't have to be in your admin role for the next step.
+You don't have to be in your admin role for the next step.
 
 <br>
 </details>
