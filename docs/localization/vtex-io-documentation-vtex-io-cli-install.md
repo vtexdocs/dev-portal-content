@@ -13,19 +13,19 @@ According to your operating system, follow the respective steps to install VTEX 
 
 - **Brew**
 
-  > ⚠️ For computers running on an Apple M series chip (M1, M2, etc.), before installing VTEX IO CLI, install [Rosetta](https://support.apple.com/en-us/HT211861) and enable your computer to use the command-line interface for a Mac with an Intel processor.  To install Rosetta, run the following in your terminal: `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`.
+> ⚠️ For computers running on an Apple M series chip (M1, M2, etc.), before installing VTEX IO CLI, install [Rosetta](https://support.apple.com/en-us/HT211861). This enables your computer to use the command-line interface for a Mac with an Intel processor. To install Rosetta, run the following in your terminal: `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`.
 
-  1. Install Xcode by running the following command.
+1. Install Xcode by running the following command:
 
   ```sh
   xcode-select --install
   ```
 
-  2. Install **Homebrew** by following the instructions on the [**Homebrew website**](https://brew.sh/index).
+2. Install **Homebrew** by following the instructions on the [**Homebrew website**](https://brew.sh/index).
 
-  ![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
+![brew](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-0.png)
 
-  3. Then, install **VTEX IO CLI** by running the following command.
+3. Install **VTEX IO CLI** by running the following command:
 
   ```sh
   brew tap vtex/vtex
@@ -36,9 +36,9 @@ According to your operating system, follow the respective steps to install VTEX 
 
 - **Tarball**
 
-  > ⚠️ Before the installation, check if you have the [curl](https://curl.se/) command-line tool and library installed on your computer.
+> ⚠️ Before the installation, check if you have the [curl](https://curl.se/) command-line tool and library installed on your computer.
 
-  Open the terminal and run the following command to install VTEX IO CLI.
+Open the terminal and run the following command to install VTEX IO CLI.
 
   ```sh
   curl -L https://vtex.io/vtexcli/install | sh
@@ -49,25 +49,25 @@ According to your operating system, follow the respective steps to install VTEX 
 - **Installer for Windows**
 
 1. Download the appropriate installer for your Windows system ([64-bit installer](https://vtex.io/vtexcli/install/win-x64); [32-bit installer](https://vtex.io/vtexcli/install/win-x32)).
-2. Open the downloaded file and follow the instructions to finish the installation process.
-3. Run the Windows Terminal with elevated administrator permission by right-clicking the Windows Terminal icon and selecting `Run as administrator`.
-4. Run the following command to finish the installation.
+2. Open the downloaded file and follow the instructions to complete the installation process.
+3. Run the Windows Terminal with admin permission by right-clicking the Windows Terminal icon and selecting `Run as administrator`.
+4. Run the following command to complete the installation:
 
   ```sh
   vtex
   ```
 
-  After following the steps, this message will appear.
+After completing these steps, you'll see the following message:
 
-  ![VTEX IO CLI Windows first execution](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-1.png)
+![VTEX IO CLI Windows first execution](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-install-1.png)
 
-  > ℹ️ You don't need administrator permission for further uses of VTEX IO CLI.
+> ℹ️ Further usage of VTEX IO CLI doesn't require admin permission.
 
 ## Installing CLI via NPM
 
-Since VTEX IO CLI is built with [Node.js](https://nodejs.org/en/), you can manually install it via [npm](https://www.npmjs.com/package/vtex). This method is recommended only for environments where auto-updating VTEX IO CLI is not ideal.
+Since VTEX IO CLI is built with [Node.js](https://nodejs.org/en/), you can install it manually via [npm](https://www.npmjs.com/package/vtex). This method is recommended only for environments where auto-updating VTEX IO CLI is not ideal.
 
-> ❗️ We highly recommend using an alternative installation method. If you opt to use npm to install the VTEX IO CLI, remember that CLI won't be automatically updated, and the Node version on your computer might conflict with the one used by CLI developers. If you opt for any other installation method, VTEX IO CLI will always be up-to-date, and you will avoid installation issues.
+> ❗️ We highly recommend using an alternative installation method. If you choose to install VTEX IO CLI via npm, remember that CLI won't update automatically, and the Node version on your computer might conflict with the one used by CLI developers. If you opt for any other installation method, VTEX IO CLI will always be up-to-date, preventing installation issues.
 
 <details>
   <summary><span class="fa fa-apple">&nbsp;</span>MacOS</summary>
@@ -104,14 +104,14 @@ Since VTEX IO CLI is built with [Node.js](https://nodejs.org/en/), you can manua
 
 <br>
 
-  1. Install **Node.js** by running the following command.
+1. Install **Node.js** by running the following command:
 
   ```sh
   sudo apt install nodejs
   ```
 
-  2. Install **Yarn** by following the [Yarn installation](https://classic.yarnpkg.com/en/docs/install#gentoo-stable) for Linux.
-  3. Install **VTEX IO CLI** by running the following command.
+2. Install **Yarn** by following the [Yarn installation](https://classic.yarnpkg.com/en/docs/install#gentoo-stable) for Linux.
+3. Install **VTEX IO CLI** by running the following command:
 
   ```sh
   sudo yarn global add vtex
