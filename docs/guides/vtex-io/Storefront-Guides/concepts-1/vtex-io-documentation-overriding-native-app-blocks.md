@@ -61,13 +61,14 @@ Add the blocks corresponding of you custom app in the `interfaces.json` file of 
 }
 ```
 
->⚠ The blocks included must share the same schema as the original block. Example: If the native app block has `example-child` as `required`
+>⚠ The blocks included must share the same schema as the original block. Example: If the native app block has `example-child` as `required`.
 >
 > ```json
 > "example-block": {
 >  "required": ['example-child']
 >}
 >```
+> 
 > Then, the  `example-block.custom` also needs to declare `example-child` (or `example-child.custom`) as a required child block.
 
 ---
