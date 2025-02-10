@@ -123,6 +123,6 @@ return renderWrapper(
 
 With the process finished, you will see the following page when placing an order:
 
-"[overriding-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/overriding-blocks.png)
+![overriding-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/overriding-blocks.png)
 
 </CH.Scrollycoding>
