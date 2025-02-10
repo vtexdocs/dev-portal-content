@@ -1,0 +1,128 @@
+In this guide, you will learn how to override the blocks provided by a native app with a custom app by configuring the Store Theme's `plugins.json` file.
+
+For example, consider you've developed a custom `my-orders` app to replace the native `vtex.my-orders-app`. Follow the steps below to ensure that your custom app will work properly with existing dependencies and block schemas within your Store Theme.
+
+## Instructions
+
+<CH.Scrollycoding>
+
+### Step 1 - Managing dependencies
+
+Add the corresponding native VTEX IO app as a dependency in the custom app's `manifest.json` file.
+
+```json manifest.json/dependencies focus=14
+{
+  "vendor": "sandboxusdev",
+  "name": "my-orders-app",
+  "version": "3.18.3",
+  "title": "My Orders",
+  "description": "My orders page powered by Render",
+  "builders": {
+    "messages": "1.x",
+    "react": "3.x",
+    "store": "0.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.my-orders-app": "3.x"
+    "vtex.my-account-commons": "1.x",
+    "vtex.address-form": "4.x",
+    "vtex.totalizer-translator": "2.x",
+    "vtex.css-handles": "0.x",
+    "vtex.search-graphql": "0.x"
+    "vtex.subscriptions-commons": "1.x",
+    ...
+  },
+...
+}
+```
+---
+
+### Step 2 - Overriding blocks
+
+Add the blocks corresponding of you custom app in the `interfaces.json` file of your Store Theme app.
+
+```json store/interfaces.json
+{
+  "my-orders.sandboxusdev": {
+    "component": "EntensionRouter",
+    "required": ["my-order-extra-actions-container.sandboxusdev"]
+  },
+  "my-order-link.sandboxusdev": {
+    "component": "ExtensionLinks"
+  },
+  "my-orders-extra-actions-container.sandboxusdev": {
+    "allowed": ["my-orders-extra-actions.sandboxusdev"]
+  },
+  "my-orders-extra-actions-container.sandboxusdev": {
+    "component": "*",
+    "extensibility": "public"
+  }
+}
+```
+
+>⚠ The blocks included must share the same schema as the original block. Example: If the native app block has `example-child` as `required`
+>
+> ```json
+> "example-block": {
+>  "required": ['example-child']
+>}
+>```
+> Then, the  `example-block.custom` also needs to declare `example-child` (or `example-child.custom`) as a required child block.
+
+---
+
+### Step 3 - Configuring plugins
+
+In the `plugins.json` file of your Store Theme app, search for the app you want to override and replace the vendor, writing the name of your custom app. In the example below, the vendor was replaced for `sandboxusdev`.
+
+```json store/plugins.json
+{
+  "my-orders": "my-orders.sandboxusdev",
+  "my-orders-link": "my-orders-link.sandboxusdev",
+  "my-orders-extra-actions-container": "my-irders-extra-actions-container.sandoxusdev",
+  "my-orders-extra-actions": "my-orders-extra-actions.sandboxusdev"
+}
+```
+
+---
+
+### Step 4 - Customizing your app code
+
+Customize your app's code according to your business needs. In the example below, we added the greeting **HELLO WORLD**.
+
+```js react/pages/MyOrders.js focus=15,20
+return renderWrapper(
+  <div className="center w-100 helvetica">
+    <Greeting
+      param="replacedOrder"
+      variation="primary"
+      greetingId="greeting.replaced"
+    />
+    <Greeting
+      param="canceledOrder"
+      variation="alert"
+      greetingId="greeting.cancelled"
+    />
+    {emptyOrders ? (
+      <div>
+        <h1>HELLO WORLD</h1>
+        <Empty />
+      </div>
+    ) : (
+      <div>
+        <h1>HELLO WORLD</h1>
+        <Orders>
+          <OrdersList orders={userOrders} allowSAC={allowSAC} />
+        </Orders>
+      </div>
+    )}
+  </div>
+);
+```
+
+With the process finished, you will see the following page when placing an order:
+
+"[overriding-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/overriding-blocks.png)
+
+</CH.Scrollycoding>
