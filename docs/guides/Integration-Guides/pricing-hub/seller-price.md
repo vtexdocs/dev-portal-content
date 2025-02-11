@@ -1,7 +1,7 @@
 ---
 title: "B2B Seller Price"
 slug: "seller-price"
-hidden: false
+hidden: true
 createdAt: "2021-11-08T16:34:25.542Z"
 updatedAt: "2022-06-13T16:08:09.500Z"
 ---
