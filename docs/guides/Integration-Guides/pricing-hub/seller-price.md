@@ -3,7 +3,7 @@ title: "B2B Seller Price"
 slug: "seller-price"
 hidden: true
 createdAt: "2021-11-08T16:34:25.542Z"
-updatedAt: "2022-06-13T16:08:09.500Z"
+updatedAt: "2025-00-11T07:08:09.500Z"
 ---
 
 > This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://help.vtex.com/support).
