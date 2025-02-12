@@ -1,6 +1,5 @@
 ---
 title: "Search"
-slug: "search-overview"
 ---
 
 The `Search` module helps create and manage faceted store search experiences. The module allows users to filter products by attributes like brand, price, or features. These filters generate unique URLs (facet states) for each combination, enabling:
@@ -20,13 +19,16 @@ The `Search` module relies on the following parts:
 
 The `SearchProvider` component defines the structure of a faceted search state and provides functions to change that state. This component exposes the `State` interface that allows you to access and modify the following search variables:
 
-| Variable     | Type       | Description   |
+| Variable name     | Data type       | Description   |
 | ---------------- | ------------ | ----------------- |
-| `base`           | `string`     | Base URL path to be ignored by the search context. Use `/en` to ignore the locale-specific part of the URL in the search context. |
-| `page`           | `number`     | Index of the current page in the pagination context. Use `0` if it's the first page in the pagination result and `1` if it's the second. |
-| `selectedFacets` | `Facet[]`    | All selected facets. |
-| `sort`           | `SearchSort` | Selected sorting criteria for the search (for example, ascending/descending price, number of reviews)  |
-| `term`           | `string`     | Terms of the full text search. |
+| `onChange`  |  `(url: URL) => void` | Callback function responsible for handling changes in the facet state. |
+| `itemsPerPage` |  `number` | Number of product items displayed on a given page. |
+| `sort` |  `SearchSort` | Sorting criteria of the search result (e.g., `price_asc`, `orders_desc`, `discount_desc`, etc.). |
+| `term` |  `string` / `null` | Full-text term used on the search. |
+| `page` |  `number` | Current page index of search pagination. |
+| `base` |  `string` | Base URL path of the search page. Useful when dealing with localization and prefixing paths by locale (e.g., /pt-br/). |
+| `selectedFacets` |  `Array<{ key: string, value: string }>` | Array of selected facets on the search. |
+| `passThrough` |  `URLSearchParams` | Additional URL parameters to preserve when building URLs. |
 
 The `SearchProvider` also provides functions to change the facet state:
 
