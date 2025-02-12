@@ -10,14 +10,14 @@ tags:
 
 If you are a Windows user, you may encounter the following errors after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment).
 
-<table style="width: 100%; table-layout: fixed; border-collapse: collapse">
+<table width="100%">
 <tr>
-<th style="width: 40%; overflow-wrap: break-word;">Error message</th>
-<th  style="width: 30%; overflow-wrap: break-word;">Possible cause</th>
-<th  style="width: 30%; overflow-wrap: break-word;">Solution</th>
+<th width="40%">Error message</th>
+<th width="30%">Possible cause</th>
+<th width="30%">Solution</th>
 </tr>
 <tr>
-<td style="width: 40%; overflow-wrap: break-word;">
+<td width="40%">
 ```sh
 vtex plugins install cms
 warning "@vtex/cli-plugin-cms > @vtex/api > apollo-server-core > apollo-graphql@0.9.5" has incorrect peer dependency "graphql@^14.2.1 || ^15.0.0".
@@ -28,15 +28,15 @@ Installing plugin @vtex/cli-plugin-cms... failed
     Code: EPERM
 ```
 </td>
-<td style="width: 30%; overflow-wrap: break-word;">
+<td width="30%">
 Your device isn’t enabled for development.
 </td>
-<td style="width: 30%; overflow-wrap: break-word;">
+<td width="30%">
 <a href="https://developers.vtex.com/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows#enable-developer-mode-in-your-machine">Enable Developer Mode in your machine</a>
 </td>
 </tr>
 <tr>
-<td style="width: 40%; overflow-wrap: break-word;">
+<td width="40%">
 ```
 vtex plugins install cms
 error @oclif/core@1.26.2: The engine "node" is incompatible with this module. Expected version ">=14.0.0". Got "12.12.0"
@@ -45,10 +45,10 @@ Installing plugin @vtex/cli-plugin-cms... failed
     Error: yarn add @vtex/cli-plugin-cms@latest --non-interactive --mutex=file:C:\Users\barbara.celi\AppData\Local\vtex\yarn.lock --preferred-cach
 ```
 </td>
-<td style="width: 30%; overflow-wrap: break-word;">
+<td width="30%">
 The VTEX IO CLI’s node version isn’t updated. See that the expected version was `>=14.0.0`, but, in this case, the node version in the VTEX IO CLI was `12.12.0`.
 </td>
-<td style="width: 30%; overflow-wrap: break-word;">
+<td width="30%">
 <a href="https://developers.vtex.com/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows#update-vtex-io-cli">Update VTEX IO CLI</a>
 </td>
 </tr>
