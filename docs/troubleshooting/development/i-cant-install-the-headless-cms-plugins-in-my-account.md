@@ -10,11 +10,11 @@ tags:
 
 If you are a Windows user, you may encounter the following errors after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment).
 
-<table>
+<table border="1" width="100%">
 <tr>
-<th>Error message</th>
-<th>Possible cause</th>
-<th>Solution</th>
+<th width="40%">Error message</th>
+<th  width="30%">Possible cause</th>
+<th  width="30%">Solution</th>
 </tr>
 <tr>
 <td>
