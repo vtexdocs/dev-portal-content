@@ -77,6 +77,6 @@ Even if you update the `node` version on your machine, you must also keep VTEX I
 
 To update VTEX IO CLI, open the Windows Terminal and follow these instructions:
 
-1. Run the `vtex autoupdate` command in the Windows Terminal. 
+1. Run the `vtex autoupdate` command in the Windows Terminal.
 2. Run the `vtex -v` command to verify if the VTEX IO CLI and `node` versions are updated.
 3. Run the `vtex plugins install cms` command to install the Headless CMS plugins.
