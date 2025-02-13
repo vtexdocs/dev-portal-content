@@ -1,17 +1,17 @@
 ---
-title: "Contextual price per seller"
+title: "Contextual price per shopper"
 slug: "contextual-price-per-seller"
 hidden: false
-createdAt: "2024-09-25T12:00:00.152Z"
-updatedAt: "2024-09-25T12:00:00.152Z"
+createdAt: "2025-02-13T13:00:00.152Z"
+updatedAt: "2025-02-13T13:00:00.152Z"
 ---
-Contextual price per seller allows you to set different prices for a product based on the sale context. These contexts can vary based on criteria such as the marketplace, the seller listing the product, the buyer's geolocation, or active promotions.
+Contextual price allows you to define different prices for a product based on the sale context. These contexts can include criteria such as the marketplace, the seller offering the product, the buyer's geolocation, or active promotions.
 
 This feature is ideal for scenarios where multiple sellers sell the same SKU on a marketplace but want to apply specific pricing strategies for customers or regions. Thus, the final price of the SKU can vary depending on the seller and the context of the sale.
 
 ## Configuring custom prices in B2B marketplaces
 
-To apply the contextual price per seller in a B2B marketplace scenario, you need to use the Audience Manager and Price Table Mapper APIs. They allow sellers to configure custom price tables for each customer, using email addresses as a reference.
+To apply contextual pricing per seller in a B2B marketplace scenario, it is necessary to use the Audience Manager and Price Table Mapper APIs. These APIs enable sellers to configure custom price tables for each customer, using email addresses as a reference.
 
 ### Marketplace configuration
 
