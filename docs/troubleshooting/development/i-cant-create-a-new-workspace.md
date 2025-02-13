@@ -17,9 +17,7 @@ If you can't [create a new workspace](https://developers.vtex.com/docs/guides/vt
 Render fail when sender is vtex.menu. Request failed with status code 400.
 ```
 
-To solve this issue, follow the instructions below.
-
-## Checking if the Search Integration process started
+This issue is related to the Intelligent Search integration. To solve it, follow the instructions below.
 
 1. Access the Admin and go to **Store Settings** > **Intelligent Search** > **Integrations**.
 2. Check if the search has been activated in the store.
