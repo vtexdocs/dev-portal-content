@@ -22,4 +22,4 @@ To correct the inconsistencies, You can manually trigger the in
 1. [Reindex](https://help.vtex.com/en/tutorial/i-cant-index-a-product-in-the-catalog--5ZKLTqnCyGbWEYGPTCBIxI) the products in Catalog presenting inconsistencies.
 2. Check the value set for the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app's `simulationBehavior` property. If set to `skip`, change it to `default`.
 
->ℹ️ When the `simulationBehavior` is set to `skip`, the Search Results page displays the cold price based on the user cache. In order to fetch and display the latest price registered in the Catalog, change it to `default`.
+>ℹ️ When the `simulationBehavior` is set to `skip`, the Search Results page displays the cold price based on the user cache. To fetch and display the latest price registered in the Catalog, change it to `default`.
