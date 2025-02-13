@@ -9,7 +9,7 @@ tags:
     - development
 ---
 
-**Keywords:** Store Theme | Workspace | Cache
+**Keywords:** Store Theme | Workspace
 
 Once you [link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app), you should see all your changes live at `https://{workspace}--{accountName}.myvtex.com`. If the changes in your [Store Theme app](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) are not reflecting on your store workspace, check the following solutions to fix your scenario.
 

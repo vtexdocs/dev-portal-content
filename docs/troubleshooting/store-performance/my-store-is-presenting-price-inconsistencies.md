@@ -6,10 +6,12 @@ hidden: false
 createdAt: "2025-01-30T14:25:00.00Z"
 updatedAt: "2025-01-30T14:25:00.00Z"
 tags:
-    - inconsistencies
+    - catalog
+    - search
+    - pricing
 ---
 
-**Keywords:** Inconsistencies | Store | Pricing
+**Keywords:** Catalog | Search | Pricing
 
 The Search Results and Product Details pages have different indexing processes. This can lead to differences in the price.
 

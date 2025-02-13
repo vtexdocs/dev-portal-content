@@ -9,7 +9,7 @@ tags:
     - apps
 ---
 
-**Keywords:** Installation | Apps | Edition App
+**Keywords:** Apps | Edition App
 
 If you are unable to install an app with a major [version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) other than `0.x`, follow the instructions below.
 
