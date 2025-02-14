@@ -7,7 +7,7 @@ createdAt: "2025-14-02T17:00:00.000Z"
 updatedAt: "2025-14-02T17:00:00.000Z"
 ---
 
-This GraphQL API can retrieve and change the external marketplace integration settings.
+This document outlines the GraphQL API for managing external marketplace integrations within the VTEX ecosystem, provided via the [mkp-app-template](https://github.com/vtex/mkp-app-template) app template. The API enables querying and modifying integration settings, including sales channel configurations, affiliate mappings, and account details.
 
 ## Schema overview
 
