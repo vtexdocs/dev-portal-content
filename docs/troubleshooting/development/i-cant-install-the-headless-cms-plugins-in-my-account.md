@@ -63,3 +63,13 @@ To update VTEX IO CLI, open the Windows Terminal and follow these instructions:
 1. Run the `vtex autoupdate` command in the Windows Terminal.
 2. Run the `vtex -v` command to verify if the VTEX IO CLI and `node` versions are updated.
 3. Run the `vtex plugins install cms` command to install the Headless CMS plugins.
+4. Check if the installation of Headless CMS plugins was successful by running `vtex cms`. You should see the following:
+
+```sh
+$ vtex cms
+Syncs CMS schemas with the current workspace in use.
+
+USAGE
+     $ vtex cms COMMAND
+COMMANDS
+     cms sync Syncs CMS schemas with the current workspace in use.
