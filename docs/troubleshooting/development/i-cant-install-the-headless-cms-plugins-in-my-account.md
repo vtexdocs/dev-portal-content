@@ -10,36 +10,10 @@ tags:
 
 If you are a Windows user, you may encounter the following errors after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment).
 
-<table>
-<tr>
-<th>Error message</th>
-<th>Possible cause</th>
-<th>Solution</th>
-</tr>
-<tr>
-<td>
-`Error: EPERM: operation not permitted, symlink`
-</td>
-<td>
-Your device isn’t enabled for development.
-</td>
-<td>
-<a href="https://developers.vtex.com/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows#enable-developer-mode-in-your-machine">Enable Developer Mode in your machine</a>
-</td>
-</tr>
-<tr>
-<td>
-`error @oclif/core@1.26.2: The engine "node" is incompatible
-with this module. Expected version ">=14.0.0". Got "12.12.0"`
-</td>
-<td>
-The VTEX IO CLI’s node version isn’t updated. See that the expected version was `>=14.0.0`, but, in this case, the node version in the VTEX IO CLI was `12.12.0`.
-</td>
-<td>
-<a href="https://developers.vtex.com/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows#update-vtex-io-cli">Update VTEX IO CLI</a>
-</td>
-</tr>
-</table>
+| Error message                                                                 | Possible cause                                                                 | Solution                                                                                       |
+|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| `Error: EPERM: operation not permitted, symlink`                              | Your device isn’t enabled for development.                                     | [Enable Developer Mode in your machine](https://developers.vtex.com/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows#enable-developer-mode-in-your-machine) |
+| `error @oclif/core@1.26.2: The engine "node" is incompatible with this module. Expected version ">=14.0.0". Got "12.12.0"` | The VTEX IO CLI’s node version isn’t updated. Expected version was `>=14.0.0`, but the current version is `12.12.0`. | [Update VTEX IO CLI](https://developers.vtex.com/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows#update-vtex-io-cli) |
 
 ## Solutions
 
