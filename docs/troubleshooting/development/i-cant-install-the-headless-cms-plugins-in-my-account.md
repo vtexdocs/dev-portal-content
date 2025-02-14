@@ -18,9 +18,7 @@ If you are a Windows user, you may encounter the following errors after [install
 </tr>
 <tr>
 <td>
-```sh
-Error: EPERM: operation not permitted, symlink
-```
+`Error: EPERM: operation not permitted, symlink`
 </td>
 <td>
 Your device isn’t enabled for development.
@@ -31,10 +29,8 @@ Your device isn’t enabled for development.
 </tr>
 <tr>
 <td>
-```sh
-error @oclif/core@1.26.2: The engine "node" is incompatible
-with this module. Expected version ">=14.0.0". Got "12.12.0"
-```
+`error @oclif/core@1.26.2: The engine "node" is incompatible
+with this module. Expected version ">=14.0.0". Got "12.12.0"`
 </td>
 <td>
 The VTEX IO CLI’s node version isn’t updated. See that the expected version was `>=14.0.0`, but, in this case, the node version in the VTEX IO CLI was `12.12.0`.
