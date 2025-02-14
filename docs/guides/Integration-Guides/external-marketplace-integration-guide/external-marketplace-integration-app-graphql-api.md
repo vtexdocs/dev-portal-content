@@ -1,5 +1,5 @@
 ---
-title: "Integration app GraphQL API"
+title: "External Marketplace Integration app GraphQL API"
 slug: "external-marketplace-integration-app-graphql-api"
 hidden: false
 excerpt: "GraphQL API reference for the External Marketplace integration app."
