@@ -65,9 +65,7 @@ classDiagram
       <td>Retrieves the current marketplace integration configuration, including account settings, affiliate details, and sales channel information.</td>
     </tr>
     <tr>
-      <td colspan="2" valign="top">
-        <strong id="query.getsaleschannel">getSalesChannel</strong>
-      </td>
+      <td colspan="2" valign="top"><strong id="query.getsaleschannel">getSalesChannel</strong></td>
       <td valign="top"><a href="#saleschannel">SalesChannel</a></td>
       <td>Retrieves detailed properties of a specific sales channel using its unique ID.</td>
     </tr>
@@ -104,35 +102,23 @@ classDiagram
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" valign="top">
-        <strong id="mutation.saveconfiguration">saveConfiguration</strong>
-      </td>
-      <td valign="top">
-        String
-      </td>
+      <td colspan="2" valign="top"><strong id="mutation.saveconfiguration">saveConfiguration</strong></td>
+      <td valign="top">String</td>
       <td>Updates the integration configuration with the provided settings. Returns a success message or error if the operation fails. </td>
     </tr>
     <tr>
       <td colspan="2" align="right" valign="top">config</td>
-      <td valign="top">
-        <a href="#configurationinput">ConfigurationInput</a>
-      </td>
+      <td valign="top"><a href="#configurationinput">ConfigurationInput</a></td>
       <td>Properties of the configuration to be saved.</td>
     </tr>
     <tr>
-      <td colspan="2" valign="top">
-        <strong id="mutation.createsaleschannel">createSalesChannel</strong>
-      </td>
-      <td valign="top">
-        String
-      </td>
+      <td colspan="2" valign="top"><strong id="mutation.createsaleschannel">createSalesChannel</strong></td>
+      <td valign="top">String</td>
       <td>Creates or updates a sales channel with the provided information. Returns a success message or error if the operation fails.</td>
     </tr>
     <tr>
       <td colspan="2" align="right" valign="top">salesChannelData</td>
-      <td valign="top">
-        <a href="#saleschannelinput">SalesChannelInput</a>
-      </td>
+      <td valign="top"><a href="#saleschannelinput">SalesChannelInput</a></td>
       <td>Sales channel properties to be created or modified.</td>
     </tr>
   </tbody>
@@ -362,58 +348,36 @@ classDiagram
   </thead>
   <tbody>
     <tr>
-      <td valign="top">
-        <strong id="saleschannel.id">Id</strong>
-      </td>
+      <td valign="top"><strong id="saleschannel.id">Id</strong></td>
       <td valign="top">ID!</td>
       <td>Sales channel ID. Example: <code>1</code>.</td>
     </tr>
     <tr>
-      <td valign="top">
-        <strong id="saleschannel.name">Name</strong>
-      </td>
-      <td valign="top">
-        String
-      </td>
+      <td valign="top"><strong id="saleschannel.name">Name</strong></td>
+      <td valign="top">String</td>
       <td>Sales channel name. Example: <code>"Marketplace channel"</code>.</td>
     </tr>
     <tr>
-      <td valign="top">
-        <strong id="saleschannel.countrycode">CountryCode</strong>
-      </td>
-      <td valign="top">
-        String
-      </td>
+      <td valign="top"><strong id="saleschannel.countrycode">CountryCode</strong></td>
+      <td valign="top">String</td>
       <td>Sales channel country code in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">ISO 3166-1 alpha-2 format</a> for the external marketplace. Example: <code>"US"</code>.</td>
     </tr>
     <tr>
-      <td valign="top">
-        <strong id="saleschannel.cultureinfo">CultureInfo</strong>
-      </td>
-      <td valign="top">
-        String
-      </td>
+      <td valign="top"><strong id="saleschannel.cultureinfo">CultureInfo</strong></td>
+      <td valign="top">String</td>
       <td>Sales channel culture information for the external marketplace in <a href="https://www.rfc-editor.org/info/bcp47" target="_blank">IETF BCP 47 format</a> and combining a language code in <a href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes" target="_blank">ISO-639 format</a> and a region code in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">ISO 3166-1 alpha-2 format</a>. Example: <code>"en-US"</code>.</td>
     </tr>
     <tr>
-      <td valign="top">
-        <strong id="saleschannel.timezone">TimeZone</strong>
-      </td>
-      <td valign="top">
-        String
-      </td>
+      <td valign="top"><strong id="saleschannel.timezone">TimeZone</strong></td>
+      <td valign="top">String</td>
       <td>Sales channel <a href="https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11" target="_blank">time zone name</a> for the external marketplace. Example: <code>"Pacific Standard Time"</code>.</td>
     </tr>
     <tr>
-      <td valign="top">
-        <strong id="saleschannel.currencycode">CurrencyCode</strong>
-      </td>
-      <td valign="top">
-        String
-      </td>
+      <td valign="top"><strong id="saleschannel.currencycode">CurrencyCode</strong></td>
+      <td valign="top">String</td>
       <td>Sales channel currency code in <a href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes" target="_blank">ISO 4217 format</a> for the external marketplace. Example: <code>"USD"</code>.</td>
     </tr>
   </tbody>
 </table>
 
-<div style="text-align: right"><a href="#mutation">Mutation</a🔼</div>
+<div style="text-align: right"><a href="#mutation">🔼 Mutation</a></div>
