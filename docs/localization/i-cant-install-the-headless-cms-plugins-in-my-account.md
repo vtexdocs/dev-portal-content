@@ -1,6 +1,6 @@
 ---
 title: "I can’t install the Headless CMS plugins in my account"
-excerpt: "Windows users may encounter the 'EPERM: operation not permitted' error during the installation of the Headless CMS plugin."
+excerpt: "Users may encounter errors related to symbolic links and node version incompatibility."
 slug: "error-installing-headless-cms-plugins-on-windows"
 updatedAt: "2025-02-12T14:56:25.977Z"
 tags:
