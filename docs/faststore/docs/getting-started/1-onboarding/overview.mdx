@@ -10,7 +10,15 @@ This document provides an overview of the FastStore WebOps app, a tool designed 
 
 ### Install the FastStore WebOps app
 
-Make sure you have installed the FastStore WebOps app to your store account by following the instructions in [Install the FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#install-the-faststore-webops-app).
+To get started, make sure you have installed the FastStore WebOps app to your store account by following the instructions in [Install the FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#install-the-faststore-webops-app).
+
+The FastStore WebOps app follows a specific workflow for setup and development process. keep the following in mind:
+
+- **Environment Requirement:** The FastStore WebOps app operates exclusively in the production environment. Therefore, it must be installed only in your account's master environment.
+- **Development workflow:** Different than VTEX IO, which uses [workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace), FastStore relies on [branches system](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) for development and testing. Here's how it works:
+    1. The app is installed in the `master` environment of your account.
+    2. Development and testing occur on Git branches.
+    3. Once changes are approved, they are merged into your repository's `main` branch and will be available in the production environment for your customers.
 
 ### Create your store Catalog
 
