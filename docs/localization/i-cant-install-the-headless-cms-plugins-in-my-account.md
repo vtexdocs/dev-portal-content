@@ -8,7 +8,7 @@ tags:
     - faststore
 ---
 
-If you are a Windows user, you may encounter the following errors after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment).
+FastStore users may encounter the following errors after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment).
 
 | Error message                                                                 | Possible cause                                                                 | Solution                                                                                       |
 |-------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -24,7 +24,7 @@ To solve these issues, see the following instructions:
 
 ### Enable Developer Mode on your machine
 
-If you run the `vtex plugins install cms` and receive the error below, you must enable the Developer Mode on your machine.
+Windows users, while running the `vtex plugins install cms`, can receive the error below:
 
 ```sh
 vtex plugins install cms
@@ -36,7 +36,7 @@ Installing plugin @vtex/cli-plugin-cms... failed
     Code: EPERM
 ```
 
-FastStore projects rely on creating symbolic links (symlinks), and the [Developer Mode](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers) grants the necessary permissions and privileges to use them, which reduces the probability of encountering errors during development.
+FastStore projects rely on creating symbolic links (symlinks), and to solve this error, you must enable the [Developer Mode](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers) on your machine. The Developer Mode grants the necessary permissions and privileges to use the symlinks, which reduces the probability of encountering errors during development.
 
 > ⚠️ Running the FastStore project as an Administrator isn’t recommended.
 
