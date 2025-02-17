@@ -52,7 +52,7 @@ When following these steps, remember to replace the values with the ones that co
 3. In the newly created file, add the sample code provided below:
 
 ```jsx
-import { React } from 'react'
+import React from 'react'
 
 const HelloWorld = () => <div>Hello, World!</div>
 
