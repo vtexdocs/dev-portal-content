@@ -12,9 +12,8 @@ tags:
 
 **Keywords:** Routes | Redirects | GraphiQL
 
-My redirect path doesn't work.
 
-If your routes are not behaving as expected, follow these troubleshooting steps.
+If your store redirect path doesn't work and the routes are not behaving as expected, follow these troubleshooting steps.
 
 ## Solution
 
