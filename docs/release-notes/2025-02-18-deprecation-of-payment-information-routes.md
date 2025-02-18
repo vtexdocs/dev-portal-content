@@ -12,7 +12,7 @@ To improve payment information management in the VTEX Payments Gateway API, the 
 |  METHOD  |                                                    ROUTES                                                    |
 | :------: | :----------------------------------------------------------------------------------------------------------: |
 | `POST` | `https://{accountName}.vtexcommercestable.com.br/api/payments/pub/transactions/{transactionId}/payments` |
-| `POST` | `https://{accountName}.vtexcommercestable.com.br/api/payments/pvt/transactions/{{transactionId}}/payments` |
+| `POST` | `https://{accountName}.vtexcommercestable.com.br/api/payments/pvt/transactions/{transactionId}/payments` |
 
 ## What has changed?
 
