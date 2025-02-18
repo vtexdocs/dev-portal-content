@@ -2,7 +2,7 @@
 title: "Payments Gateway API: Deprecation of payment information routes"
 slug: "2025-02-18-deprecation-of-payment-information-routes"
 type: improved
-excerpt: "The VTEX IO CLI workspace plugin has been updated to address the issue of content loss in Site Editor during workspace promotions."
+excerpt: "Two routes used to send payment information will be deprecated."
 createdAt: "2025-02-18T00:00:00.000Z"
 updatedAt: ""
 hidden: false
