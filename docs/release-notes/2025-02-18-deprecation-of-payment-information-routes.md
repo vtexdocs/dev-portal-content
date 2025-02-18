@@ -16,7 +16,7 @@ To improve payment information management in the VTEX Payments Gateway API, the 
 
 ## What has changed?
 
-Previously, merchants could use one of the following endpoints/routes to forward payment information to VTEX:
+Previously, merchants could use one of the following endpoints to forward payment information to VTEX:
 
 |  METHOD  |                                                                                                                            ROUTES                                                                                                                            |
 | :------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
