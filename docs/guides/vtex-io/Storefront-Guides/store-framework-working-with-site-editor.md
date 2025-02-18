@@ -9,7 +9,7 @@ excerpt: "Discover how Site Editor simplifies the customization of your Store Fr
 
 [Site Editor](https://help.vtex.com/tutorial/site-editor-overview) works as a Content Management System (CMS) designed for stores developed with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), reflecting the blocks defined in the [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) of the VTEX account.
 
-Based on the source code, the Site Editor displays an editable version of the website's storefront, enabling non-technical users to manage content as desired and modifying components and their behavior through a friendly interface.
+Based on the source code, the Site Editor displays an editable version of the website's storefront, enabling non-technical users to manage content as desired and modify components and their behavior through a friendly interface.
 
 In your VTEX Admin, go to **Storefront > Site Editor** to see the main available tools.
 
@@ -40,11 +40,11 @@ You must have at least the following builders configured:
 
 ### Create the store pages
 
-Develop your store pages following the [Building pages](https://developers.vtex.com/docs/guides/building-pages) guides.
+Develop your store pages following the [Building pages](https://developers.vtex.com/docs/guides/store-framework-building-pages) guides.
 
 ### Configure your components
 
-Set up your components following the [Using components](https://developers.vtex.com/docs/guides/using-components) guides.
+Set up your components following the [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components) guides.
 
 </Steps>
 
@@ -54,7 +54,7 @@ It is important to understand the concept of a Content Management System (CMS) t
 
 A Content Management System (CMS) is a tool for creating, managing, and modifying website content. VTEX offers different CMS options based on the storefront technology used to develop your site. Store Framework uses Site Editor, Legacy CMS Portal uses [Layout](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj), and FastStore leverages [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
-On VTEX, these tools allow you to manage the pages that make up your store website, with the autonomy to create, organize, edit, and define the entire structure of folders, files, and components to create the storefront you want.
+On VTEX, these tools allow you to manage the pages that make up your store website with the autonomy to create, organize, edit, and define the entire structure of folders, files, and components to create the storefront you want.
 
 To learn more, see [CMS - Overview](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC).
 
