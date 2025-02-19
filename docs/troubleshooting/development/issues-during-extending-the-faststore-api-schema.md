@@ -13,11 +13,32 @@ Although the FastStore API provides a GraphQL schema for ecommerce, you can exte
 
 Below are different troubleshooting checks and instructions you can use to solve API extension issues:
 
+- [Debugging API extension issues](#debugging-api-extensions-issues)
 - [GraphQL changes not visible during development](#graphql-changes-not-visible-during-development)
 - [Deploy preview/production GraphQL schema different from development](#deploy-previewproduction-graphql-schema-different-from-development)
 - [Type generation errors and warnings](#type-generation-errors-and-warnings)
   - [Error details](#error-details)
 - [GraphQL changes not visible in production/deploy preview](#graphql-changes-not-visible-in-productiondeploy-preview)
+
+## Debugging API extension issues
+
+1. Navigate to the `.faststore` folder by running the following in the terminal:
+
+   ```bash
+   cd .faststore
+   ```
+
+2. Make sure all dependencies are installed, by running `yarn` in the terminal.
+
+   > ⚠ If you already have dependencies installed in the root folder, you can create a symbolic link to avoid reinstalling them by running the following in the terminal: `ln -s {your-project-path}/{yourrepository.name}/node_modules {your-project-path}/{yourrepository.name}/.faststore`.
+   >
+   > If you no longer need the symbolic link, unlink it by running the following in the terminal: `unlink -- {your-project-path}/{yourrepository.name}/node_modules {your-project-path}/{yourrepository.name}/.faststore/node_modules`.
+
+3. In the terminal, run `yarn generate -d` to provide detailed logs and insights into what might be going wrong. Look for any error messages, warnings, or unexpected behavior in the output. Here's an example of what the debug output might look like:
+
+   ![debug-example](https://vtexhelp.vtexassets.com/assets/docs/src/api-extension-debugl___07c80970289d7f2d90c280e5b0c9a527.png)
+
+Once you have identified the error, check the following sections from this article to fix them.
 
 ## GraphQL changes not visible during development
 
