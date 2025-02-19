@@ -84,7 +84,7 @@ Now, check if the installation of Headless CMS plugins was successful by running
 The [VTEX Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) app enhances the user experience by providing accurate and personalized search results throughout the shopping journey.
 Before developing a storefront in FastStore, you need to enable the app on your account. For more information on the Intelligent Search and its integration, please refer to the [VTEX Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) and [Integration Settings](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) guides.
 
-To enable the app, begin by checking the version of your [Edition Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) account.
+To enable the app, check the version of your [Edition Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) account.
 
 Based on the edition version, follow the instructions below.
 
@@ -95,7 +95,7 @@ Based on the edition version, follow the instructions below.
 
 If your account is using the `vtex.edition-store@5.x` major, the VTEX Intelligent Search app is already included, and you need to integrate the app via VTEX Admin.
 
-To integrate the VTEX Intelligent Search, go to the VTEX Admin and access **Store Settings > Intelligent Search > Integrations** and click on `START INTEGRATION`.
+To integrate the VTEX Intelligent Search, go to the VTEX Admin, access **Store Settings > Intelligent Search > Integrations** and click on `START INTEGRATION`.
 
 </details>
 
@@ -122,7 +122,7 @@ If you are using a different major version and want to migrate, please [open a t
 
 ## Install the FastStore WebOps app
 
-The [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) is the first step for you to create, set up and manage your FastStore project. It also provides deployment and performance insights of your website.
+The [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) is the first step in creating, setting up, and managing your FastStore project. It also provides deployment and performance insights into your website.
 
 > ⚠️ The FastStore WebOps app only works in stores using the [Edition Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app#list-of-native-edition-apps). If your store is on the Edition Business, also known as using the [Legacy CMS Portal](https://help.vtex.com/es/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) technology, make sure to [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to change it to the Edition Store.
 Once you have changed the edition, follow the instructions on this [requirements guide](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#install-the-vtex-io-cli-on-your-machine).
@@ -135,19 +135,20 @@ To install the app, follow these steps.
     vtex login {accountName}
     ```
 
-    > ⚠️ The FastStore WebOps app only works in the production environment, so you must install it only in your account's master environment.
-
 2. Install the FastStore WebOps app by running the following command:
 
     ```bash
     vtex install vtex.webops
     ```
+    
+    > ⚠️ The FastStore WebOps app only works in the production environment, so you must install it only in your account's master environment.
 
 3. A confirmation message will appear. Type `y` to proceed.
 
     ```bash
     ? Are you sure you want to force this operation on the master workspace on the account store? » (y/N)
     ```
+
 The FastStore WebOps app is now installed in your account. Refer to the [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) guide to create your first FastStore project.
 
 </Steps>
