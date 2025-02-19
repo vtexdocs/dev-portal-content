@@ -23,14 +23,14 @@ In this article, we will explain how to extend your Payment Provider Protocol im
 
 If you are ready to develop the middleware that implements our Payment Provider Protocol, you should be aware of these requirements:
 
-- **All endpoints must be served over HTTPS on port 443 with TLS 1.2 support.** Connections over non-secured HTTP will not be accepted under any circumstances.
-- **The integrator must create a subdomain or a domain name for the provider endpoints.** IP addresses will not be accepted as names under any circumstances.
-- **The middleware must consistently respond within established response times.** We enforce a maximum response time of 5 seconds for homologation tests, as well as a maximum response time of 20 seconds to any other API request.
+- **All endpoints must be served over HTTPS on port 443 with TLS 1.2 support**: Connections over non-secured HTTP will not be accepted under any circumstances.
+- **The integrator must create a subdomain or a domain name for the provider endpoints**: IP addresses will not be accepted as names under any circumstances.
+- **The middleware must consistently respond within established response times**: We enforce a maximum response time of 5 seconds for homologation tests, as well as a maximum response time of 20 seconds to any other API request.
 
 While our protocol describes nine endpoints for implementation, not all of them are applicable when integrating Pix instant payments. Regarding the two provider flows:
 
-- [Payment Flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): six endpoints that must be **mandatory** implemented.
-- [Configuration Flow endpoints](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token): three endpoints whose implementation is **optional and currently not available for Pix**.
+- [Payment Flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): six endpoints that must be mandatory implemented.
+- [Configuration Flow endpoints](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token): three endpoints whose implementation is optional and currently not available for Pix.
 
 The table below gives further detail on the applicability of each endpoint to Pix instant payments.
 
@@ -46,9 +46,9 @@ The table below gives further detail on the applicability of each endpoint to Pi
 | Payment       | Provider Authentication        | ⛔ No              |
 | Payment       | Get Credentials                | ⛔ No              |
 
-> ℹ️ Pix is **not available** for marketplace clients that use the Checkout Split.
+> ⚠️ Pix is not available for marketplace clients that use the Checkout Split.
 
-> ⚠️ The following JSONs are just **examples**. Each partner **must adapt** the models to their own realities, with the data needed to realize the integration.
+> ⚠️ The following JSONs are just examples. Each partner must adapt the models to their own realities, with the data needed to realize the integration.
 
 ## Integration steps
 
@@ -117,7 +117,7 @@ The expected response is:
 }
 ```
 
-> ⚠️ Pix still **does not** handle payment split, but this feature may be released in the future. For more information on payment methods that currently accept split, check the [List Payment Provider Manifest endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
+> ⚠️ Pix still does not handle payment split, but this feature may be released in the future. For more information on payment methods that currently accept split, check the [List Payment Provider Manifest endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
 
 ### Create Pix Payment Method
 
