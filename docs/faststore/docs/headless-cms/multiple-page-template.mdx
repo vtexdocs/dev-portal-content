@@ -61,7 +61,7 @@ The template selection process follows a specific hierarchy, starting with the m
 FastStore checks for templates in the following order:
 
 ```mermaid
-graph TB
+graph LR
 A[Start] --> B{SKU Template exists?}
 B --> C{Yes} --> D(Use SKU Template)
 B --> E{No} --> F{Product Slug match?}
