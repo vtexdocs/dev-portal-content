@@ -2,137 +2,75 @@
 title: "Overriding native app blocks"
 slug: "vtex-io-documentation-overriding-native-app-blocks"
 hidden: false
-createdAt: "2025-02-18T18:43:35.543Z"
+createdAt: "2025-02-20T13:08:48.990Z"
 updatedAt: ""
-excerpt: ""
+excerpt: "Discover how to override the blocks of your custom VTEX IO app."
 ---
 
-In this guide, you will learn how to override the blocks provided by a native app with a custom app by configuring the Store Theme's `plugins.json` file.
+In this guide, you will learn how to override the blocks provided by a native VTEX IO app with a custom app by configuring the `store/plugins.json` file. This approach allows custom apps to modify existing Store Framework blocks without directly modifying the original app's code. 
 
-For example, consider you've developed a custom `my-orders` app to replace the native `vtex.my-orders-app`. Follow the steps below to ensure that your custom app will work properly with existing dependencies and block schemas within your Store Theme.
+This is especially useful when you need to customize a page or component while maintaining compatibility with future updates of the original app. Follow the steps below to ensure that your custom app will work properly with existing dependencies and block schemas.
+
+## Before you begin
+
+<Steps>
+
+### Develop your VTEX IO custom app
+
+Start the development of a new VTEX IO app by running the `vtex init` command and choosing the appropriate template. Learn more in the tutorial [Storefront apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io).
+
+### Check the builders
+
+Configure the following builders in the app's `manifest.json` file:
+  - [`store builder`](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
+  - [`react builder`](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions.
+
+</Steps>
 
 ## Instructions
-
-<CH.Scrollycoding>
 
 ### Step 1 - Managing dependencies
 
 Add the corresponding native VTEX IO app as a dependency in the custom app's `manifest.json` file.
 
-```json manifest.json/dependencies focus=14
-{
-  "vendor": "sandboxusdev",
-  "name": "my-orders-app",
-  "version": "3.18.3",
-  "title": "My Orders",
-  "description": "My orders page powered by Render",
-  "builders": {
-    "messages": "1.x",
-    "react": "3.x",
-    "store": "0.x"
-  },
+```json manifest.json/dependencies
   "dependencies": {
-    "vtex.styleguide": "9.x",
-    "vtex.my-orders-app": "3.x"
-    "vtex.my-account-commons": "1.x",
-    "vtex.address-form": "4.x",
-    "vtex.totalizer-translator": "2.x",
-    "vtex.css-handles": "0.x",
-    "vtex.search-graphql": "0.x"
-    "vtex.subscriptions-commons": "1.x",
-    ...
-  },
-...
-}
-```
----
-
-### Step 2 - Overriding blocks
-
-Add the blocks corresponding of you custom app in the `interfaces.json` file of your Store Theme app.
-
-```json store/interfaces.json
-{
-  "my-orders.sandboxusdev": {
-    "component": "EntensionRouter",
-    "required": ["my-order-extra-actions-container.sandboxusdev"]
-  },
-  "my-order-link.sandboxusdev": {
-    "component": "ExtensionLinks"
-  },
-  "my-orders-extra-actions-container.sandboxusdev": {
-    "allowed": ["my-orders-extra-actions.sandboxusdev"]
-  },
-  "my-orders-extra-actions-container.sandboxusdev": {
-    "component": "*",
-    "extensibility": "public"
+    "vtex.original-app": "1.x"
   }
-}
 ```
 
->⚠ The blocks included must share the same schema as the original block. Example: If the native app block has `example-child` as `required`.
->
-> ```json
-> "example-block": {
->  "required": ['example-child']
->}
->```
-> 
-> Then, the  `example-block.custom` also needs to declare `example-child` (or `example-child.custom`) as a required child block.
+### Step 2 - Defining the app's schema
 
----
+1. Inside your app's root directory, create the `store` folder.
+2. In the `store` folder, create the `interfaces.json` file and define the app's schema by following the original. For example, if the native app block has `example-child` as `required`, the new block must also declare it:
+
+  ```json
+  "new-block": {
+   "component": "NewBlock"
+   "required": ['example-child']
+  }
+  ```
 
 ### Step 3 - Configuring plugins
 
-In the `plugins.json` file of your Store Theme app, search for the app you want to override and replace the vendor, writing the name of your custom app. In the example below, the vendor was replaced for `sandboxusdev`.
+In the `store` folder, create the `plugins.json` file within the key-value pairs of the blocks you want to override.
 
-```json store/plugins.json
-{
-  "my-orders": "my-orders.sandboxusdev",
-  "my-orders-link": "my-orders-link.sandboxusdev",
-  "my-orders-extra-actions-container": "my-irders-extra-actions-container.sandoxusdev",
-  "my-orders-extra-actions": "my-orders-extra-actions.sandboxusdev"
-}
-```
-
----
+  ```json store/plugins.json
+  {
+    "original-block": "new-block"
+  }
+  ```
 
 ### Step 4 - Customizing your app code
 
-Customize your app's code according to your business needs. In the example below, we added the greeting **HELLO WORLD**.
+Declare the React component for your new block. In the example below, we added the greeting **HELLO WORLD**.
 
-```js react/pages/MyOrders.js focus=15,20
-return renderWrapper(
-  <div className="center w-100 helvetica">
-    <Greeting
-      param="replacedOrder"
-      variation="primary"
-      greetingId="greeting.replaced"
-    />
-    <Greeting
-      param="canceledOrder"
-      variation="alert"
-      greetingId="greeting.cancelled"
-    />
-    {emptyOrders ? (
-      <div>
-        <h1>HELLO WORLD</h1>
-        <Empty />
-      </div>
-    ) : (
-      <div>
-        <h1>HELLO WORLD</h1>
-        <Orders>
-          <OrdersList orders={userOrders} allowSAC={allowSAC} />
-        </Orders>
-      </div>
-    )}
-  </div>
-);
+```js NewBlock.js
+import React from 'react'
+
+const NewBlock: React.FC = () => {
+  return <h1>HELLO WORLD</h1>
+}
+
+export default NewBlock
 ```
-
-With the process finished, you will see the following page when placing an order:
-
-![overriding-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/overriding-blocks.png)
-
-</CH.Scrollycoding>
