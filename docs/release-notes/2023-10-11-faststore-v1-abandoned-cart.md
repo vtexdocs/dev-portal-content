@@ -6,9 +6,9 @@ excerpt: "Introducing a solution for precise abandoned cart tracking and analyti
 createdAt: "2023-10-11T00:00:00.000Z"
 ---
 
-We have implemented a solution to ensure correct tracking and monitoring of abandoned carts and analytics data for stores currently on [FastStorev1](https://v1.faststore.dev/). Stores using this version of FastStore must update their project code with the new `VTEX_METADATA` object.
+We have implemented a solution to ensure correct tracking and monitoring of abandoned carts and analytics data for stores currently on [FastStorev1](https://v1.faststore.dev/docs). Stores using this version of FastStore must update their project code with the new `VTEX_METADATA` object.
 
-> ⚠️ This change only affects stores using [FastStore v1](https://v1.faststore.dev/).
+> ⚠️ This change only affects stores using [FastStore v1](https://v1.faststore.dev/docs).
 
 ## What has changed?
 
@@ -18,7 +18,7 @@ Now, by implementing the `VTEX_METADATA` object, you can set the correct account
 
 ## What needs to be done?
 
-Stores using [FastStore v1](https://v1.faststore.dev/) must define the `VTEX_METADATA` object to ensure the correct behavior. To do so, open your FastStore project code and follow the steps below:
+Stores using [FastStore v1](https://v1.faststore.dev/docs) must define the `VTEX_METADATA` object to ensure the correct behavior. To do so, open your FastStore project code and follow the steps below:
 
 1. In the `src/sdk/analytics/index.tsx` file, add the highlighted code:
 

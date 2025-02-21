@@ -87,12 +87,12 @@ If your store uses [FastStore](https://developers.vtex.com/docs/guides/faststore
 
 * **Publishing failures**
   
-  See this guide on [Debugging Releases and VTEX Headless CMS publishing errors](https://v1.faststore.dev/how-to-guides/troubleshooting/debugging-releases-publishing).
+  See this guide on [Debugging Releases and VTEX Headless CMS publishing errors](https://developers.vtex.com/docs/troubleshooting/my-pages-are-taking-too-long-to-be-published-on-headless-cms).
 * **Lighthouse tests**
 
    [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) is an open-source tool that helps developers assess website performance. FastStore projects run automatic Lighthouse tests with every pull request. You need to consider the results of these automatic tests to identify and mitigate any performance issues before they impact your store in production.
 
-  >ℹ️ Learn more about [using Lighthouse in your FastStore project](https://v1.faststore.dev/how-to-guides/performance/lighthouse\#how-to-run-lighthouse-audits).
+  >ℹ️ Learn more about [using Lighthouse in your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores).
 * **Data fetching**
 
    Data fetching can negatively impact your storefront's performance if not done correctly on FastStore. See the [Best practices for fetching data on your storefront](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview\#best-practices-for-fetching-data) and make sure they are implemented.
