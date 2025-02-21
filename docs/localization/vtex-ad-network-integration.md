@@ -7,7 +7,7 @@ createdAt: "2025-01-30T15:35:11.721Z"
 updatedAt: "2025-01-30T15:35:11.721Z"
 ---
 
-[VTEX Ad Network](https://help.vtex.com/en/tutorial/vtex-ad-network-beta--2cgqXcBuJmXN2livQvClur) allows publishers to monetize their traffic through ads and advertisers to promote their products to multiple publishers from a single admin panel. This guide explains how publishers can implement sponsored ads in VTEX stores using VTEX Ad Network.
+[VTEX Ad Network](https://help.vtex.com/en/tutorial/vtex-ad-network-beta--2cgqXcBuJmXN2livQvClur) allows publishers to monetize their traffic through ads and allows advertisers to promote their products in multiple publishers from a single admin panel. This guide explains how publishers can implement sponsored ads in VTEX stores using VTEX Ad Network.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ To use VTEX Ad Network, your store must be a multi-brand retailer or a marketpla
 
 ## Integration flow
 
-Two flows are required for the VTEX Ad Network to function: one for requesting ads and another for sending ad and order events. The following diagram shows the sequence for requesting ads and tracking performance metrics.
+VTEX Ad Network requires two flows to work: one for requesting ads and another for sending ad and order events. The following diagram shows the sequence for requesting ads and tracking performance metrics.
 
 ```mermaid
 sequenceDiagram
@@ -34,27 +34,27 @@ The steps below explain the ad request and event tracking process:
 
 1. **Request sponsored products**
 
-   VTEX Ad Network initiates with a request to the ad server for sponsored product recommendations. This request includes parameters such as user data, ad placement, and targeting information. See [Requesting ads](#requesting-ads) for more information.
+VTEX Ad Network initiates a request to the ad server for sponsored product recommendations. This request includes parameters such as user data, ad placement, and targeting information. See [Requesting ads](#requesting-ads) for more information.
 
 2. **Retrieve sponsored products**
 
-   The ad server processes the request and returns the details of the sponsored products. See [Requesting ads](#requesting-ads) for more information.
+The ad server processes the request and returns the details of the sponsored products. See [Requesting ads](#requesting-ads) for more information.
 
 3. **Render sponsored products on the storefront**
 
-   After receiving the response, the app displays the sponsored products in the appropriate section of the storefront.
+After receiving the response, the app displays the sponsored products in the appropriate section of the storefront.
 
 4. **Send ad events**
 
-   When the user interacts with the ads (e.g., views, clicks, or impressions), the app sends the corresponding ad events back to the AdServer. See [Sending ad events](#sending-ad-events) for more information.
+When the user interacts with ads (for example, through views, clicks, or impressions), the app sends the corresponding ad events back to the ad server. See [Sending ad events](#sending-ad-events) for more information.
 
 5. **Send order events**
 
-   When the user makes an order from an ad, the app sends the corresponding order event to the AdServer. See [Sending order events](#sending-order-events) for more information.
+When the user places an order from an ad, the app sends the corresponding order event to the ad server. See [Sending order events](#sending-order-events) for more information.
 
 6. **Log events in ActivityFlow**
 
-   The ad server forwards the collected ad events to the ActivityFlow system for tracking and analysis. This step ensures accurate monitoring of the ad's performance metrics.
+The ad server forwards the collected ad events to the ActivityFlow system for tracking and analysis. This step ensures accurate monitoring of ad performance metrics.
 
 ## Requesting ads
 
@@ -67,19 +67,19 @@ There are two ways of requesting sponsored products, depending on the search eng
 
 ### Setting up the request
 
-To successfully request ads from the VTEX Ad Network, you need to structure your API calls correctly. This section explains how to configure the request parameters to retrieve sponsored products based on your use case.
+To successfully request ads from VTEX Ad Network, you need to structure your API calls correctly. This section explains how to configure the request parameters to retrieve sponsored products based on your use case.
 
-To specify the number of sponsored products to retrieve, use the `sponsoredCount` query parameter, for example, `sponsoredCount=5`.
+To specify the number of sponsored products to retrieve, use the `sponsoredCount` query parameter. For example, `sponsoredCount=5`.
 
-If you are using ads in a different placement than `top_search`, use the `advertisementPlacement` option in the query string to inform the placement, for example, `advertisementPlacement=search_shelf`.
+If you're using ads in a different placement than `top_search`, use the `advertisementPlacement` option in the query string to indicate the placement. For example, `advertisementPlacement=search_shelf`.
 
 ### Considerations for Intelligent Search
 
 When using Intelligent Search to retrieve sponsored products, consider the following:
 
 * Use the `showSponsored=true` query parameter to include sponsored products.
-* Don’t use the `sort` query parameter, as sponsored products must be sorted by relevance.
-* Use `repeatSponsoredProducts=false` to prevent sponsored products from appearing again in organic results or `repeatSponsoredProducts=true to allow duplicates`.
+* Don't use the `sort` query parameter, as sponsored products must be sorted by relevance.
+* Use `repeatSponsoredProducts=false` to prevent sponsored products from showing again in organic results or `repeatSponsoredProducts=true` to allow duplicates.
 
 ### Response example with ad information
 
@@ -99,7 +99,7 @@ When retrieving sponsored products through the API, the response includes detail
 
 ## Sending ad events
 
-Ad events include impressions, views, and clicks, all sent via the `POST` [Send ad events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/ads) endpoint in Ad Network API. Each event should be sent at a specific moment:
+Ad events include impressions, views, and clicks, all sent via the `POST` [Send ad events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/ads) endpoint in the Ad Network API. Each event should be sent at a specific moment:
 
 | Event type | Trigger condition |
 | :---- | :---- |
@@ -109,11 +109,11 @@ Ad events include impressions, views, and clicks, all sent via the `POST` [Send 
 
 Check the `POST` [Send ad events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/ads) API reference for details on each field that should be sent in the request.
 
->⚠️ The `MacId` and `SessionID` properties are required and must be handled as described in `POST` [Send ad events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/ads). They are used as anonymous identifiers to link events with orders. These attributes are the publisher's responsibility and need to be managed at the device level.
+>⚠️ The `MacId` and `SessionID` properties are required and must be handled as described in `POST` [Send ad events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/ads). They're used as anonymous identifiers to link events with orders. These attributes are the publisher's responsibility and need to be managed at the device level.
 
 ### Request body example
 
-The request body for sending ad events must include key identifiers such as `MacId`, `SessionId`, and `adRequestId`. These attributes ensure proper tracking of ad interactions and attribution to campaigns. Below is an example request body:  
+The request body for sending ad events must include key identifiers such as `MacId`, `SessionId`, and `adRequestId`. These attributes ensure proper tracking of ad interactions and attribution to campaigns. Below is a request body example:
 
 ```json
 {
@@ -139,13 +139,13 @@ The request body for sending ad events must include key identifiers such as `Mac
 
 ## Sending order events
 
-Order events should be sent when a user places an order containing a sponsored product. These events should be sent separately using the `POST` [Send order events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/order) endpoint from Ad Network API. Check the `POST` [Send order events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/order) API reference for details on each field that should be sent in the request.
+Order events should be sent when a user places an order containing a sponsored product. These events should be sent separately using the `POST` [Send order events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/order) endpoint from the Ad Network API. Check the `POST` [Send order events](https://developers.vtex.com/docs/api-reference/vtex-ad-network-api#post-/order) API reference for details on each field that should be sent in the request.
 
 >⚠️ The request must contain the `MacId` and the `orderGroup` attributes. The `orderGroup` should be the same as the one created in the OMS to enable the correlation between the order events and the order tables.
 
 ### Request body example
 
-The request body for sending order events must include key identifiers such as `MacId`, `SessionId`, and `adRequestId`. These attributes ensure proper tracking of ad interactions and attribution to campaigns. Below is an example request body:
+The request body for sending order events must include key identifiers such as `MacId`, `SessionId`, and `adRequestId`. These attributes ensure proper tracking of ad interactions and attribution to campaigns. Below is a request body example:
 
 ```json
 {
