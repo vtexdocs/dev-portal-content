@@ -34,27 +34,27 @@ The steps below explain the ad request and event tracking process:
 
 1. **Request sponsored products**
 
-VTEX Ad Network initiates a request to the ad server for sponsored product recommendations. This request includes parameters such as user data, ad placement, and targeting information. See [Requesting ads](#requesting-ads) for more information.
+   VTEX Ad Network initiates a request to the ad server for sponsored product recommendations. This request includes parameters such as user data, ad placement, and targeting information. See [Requesting ads](#requesting-ads) for more information.
 
 2. **Retrieve sponsored products**
 
-The ad server processes the request and returns the details of the sponsored products. See [Requesting ads](#requesting-ads) for more information.
+   The ad server processes the request and returns the details of the sponsored products. See [Requesting ads](#requesting-ads) for more information.
 
 3. **Render sponsored products on the storefront**
 
-After receiving the response, the app displays the sponsored products in the appropriate section of the storefront.
+   After receiving the response, the app displays the sponsored products in the appropriate section of the storefront.
 
 4. **Send ad events**
 
-When the user interacts with ads (for example, through views, clicks, or impressions), the app sends the corresponding ad events back to the ad server. See [Sending ad events](#sending-ad-events) for more information.
+   When the user interacts with ads (for example, through views, clicks, or impressions), the app sends the corresponding ad events back to the ad server. See [Sending ad events](#sending-ad-events) for more information.
 
 5. **Send order events**
 
-When the user places an order from an ad, the app sends the corresponding order event to the ad server. See [Sending order events](#sending-order-events) for more information.
+   When the user places an order from an ad, the app sends the corresponding order event to the ad server. See [Sending order events](#sending-order-events) for more information.
 
 6. **Log events in ActivityFlow**
 
-The ad server forwards the collected ad events to the ActivityFlow system for tracking and analysis. This step ensures accurate monitoring of ad performance metrics.
+   The ad server forwards the collected ad events to the ActivityFlow system for tracking and analysis. This step ensures accurate monitoring of ad performance metrics.
 
 ## Requesting ads
 
