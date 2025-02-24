@@ -16,7 +16,8 @@ Make sure the `@faststore/cli` package is updated to the latest version. If you 
 
 FastStore follows a specific priority order when generating SEO metadata for PLP pages:
 
-### Section title
+<details>
+<summary>Section title</summary>
 
 ```mermaid
 graph LR
@@ -28,7 +29,10 @@ C --> F[Display Title];
 E --> F;
 ```
 
-### Title template
+</details>
+
+<details>
+<summary>Title template</summary>
 
 ```mermaid
 graph LR
@@ -38,7 +42,10 @@ B -- No --> D[Uses the generic title template from the 'seo' object in 'discover
 D --> C;
 ```
 
-### Description template
+</details>
+
+<details>
+<summary>Description template</summary>
 
 ```mermaid
 graph LR
@@ -52,6 +59,8 @@ C --> H[Display Description];
 F --> H;
 G --> H;
 ```
+
+</details>
 
 ## Instructions
 
@@ -67,16 +76,16 @@ To understand the order to generate the SEO metadata for PLPs, see the [Understa
 1. Open your FastStore project in a code editor of your preference.
 2. Go to the `discovey.config.js` file and in the `seo` section add the following:
 
-   ```discovery.config.js
-   seo: {
-       plp: {
-       titleTemplate: '%s | FastStore PLP',
-       descriptionTemplate: '%s products on FastStore Product Listing Page',
-       },
-   },
-   ```
+  ```discovery.config.js
+  seo: {
+    plp: {
+      titleTemplate: '%s | FastStore PLP',
+      descriptionTemplate: '%s products on FastStore Product Listing Page',
+    },
+  },
+  ```
 
-   > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. The `%s` should be used where you would like the collection name to appear. 
+  > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. The `%s` should be used where you would like the collection name to appear. 
 
 ### Step 2: Controlling lazy loading for custom sections
 
