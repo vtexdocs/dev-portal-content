@@ -12,11 +12,57 @@ In this guide, learn how to optimize SEO by controlling lazy loading for section
 
 Make sure the `@faststore/cli` package is updated to the latest version. If you need to update it, follow the instructions on [Updating the '@fastore/cli' package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
 
+## Understand how SEO metadata is determined
+
+FastStore follows a specific priority order when generating SEO metadata for PLP pages:
+
+### Section title
+
+```mermaid
+graph LR
+A[Checking the Catalog for product's title] --> B{Is there a title in the Catalog?};
+B -- Yes --> C[Use the title from the Catalog];
+B -- No --> D[Check 'discovery.config.js' file];
+D --> E[Use general SEO title];
+C --> F[Display Title];
+E --> F;
+```
+
+### Title template
+
+```mermaid
+graph LR
+A[Checks for a template configured in 'discovery.config.js' in the 'seo' section] --> B{Is there a title template?};
+B -- Yes --> C[Display Title];
+B -- No --> D[Uses the generic title template from the 'seo' object in 'discovery.config.js'.];
+D --> C;
+```
+
+### Description template
+
+```mermaid
+graph LR
+A[Check the Catalog for the product's description] --> B{Is there a description in the Catalog?};
+B -- Yes --> C[Use the description from the Catalog];
+B -- No --> D[Check the PLP description template in the 'plp' property of 'discovery.config.js'];
+D --> E{Is there a PLP description template?};
+E -- Yes --> F[Use the PLP description template];
+E -- No --> G[Use the generic description template in the 'seo' object of 'discovery.config.js'];
+C --> H[Display Description];
+F --> H;
+G --> H;
+```
+
 ## Instructions
 
 ### Step 1: Configuring SEO for Product Listing Pages (PLP)
 
-Configure the title and description templates for product listing pages (PLP) in the discovery.config.js file to optimize your store's SEO and allow dynamically generating metadata based on the collection name.
+Configure the title and description templates for product listing pages (PLP) in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file to optimize your store's SEO. These templates allow you to dynamically generate metadata based on the type of PLP, such as collections, categories, subcategories, or brands: 
+
+- Title template: This template will be applied to all PLPs, including collections, categories, subcategories, and brands.
+- Description template: This template is used for `collections`, as descriptions for `collections` are not configured in the Catalog. If a specific description isn't configured in the Catalog for a category, subcategory, or brand, this template will be used as a fallback.
+
+To understand the order to generate the SEO metadata for PLPs, see the [Understand how SEO metadata is determined](#understand-how-seo-metadata-is-determined) section.
 
 1. Open your FastStore project in a code editor of your preference.
 2. Go to the `discovey.config.js` file and in the `seo` section add the following:
@@ -34,50 +80,50 @@ Configure the title and description templates for product listing pages (PLP) in
 
 ### Step 2: Controlling lazy loading for custom sections
 
-By default, sections in FastStore are lazy-loaded for performance reasons. However, some sections (e.g., those containing H1 headers) may need to appear in the initial HTML for SEO purposes. To achieve this, you can configure a section to skip lazy loading.
+By default, FastStore lazy-loads sections for performance optimization. However, certain custom sections (e.g., those containing H1 headers) may need to appear in the initial HTML for SEO purposes. To ensure these sections are included in the initial HTML, you can configure them to skip lazy loading.
+
+Below are the steps to disable lazy loading for a custom section. In this example, we’ll use a custom section named `CustomPLPName`. If you haven’t created a custom section yet, refer to the [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) guide.
 
 1. Open the `cms/faststore/sections.json` file in your project.
-2. Locate the custom section, add the `skipLazyLoadingSection` property, and set it to `true`. In the following example, we created new custom section called `CustomCollectionName` that displays the store collection name:
+2. Locate your custom section in the file and add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomPLPName`, the configuration would look like this:
 
-```sections.json
-…
-{
-  "name": "CustomCollectionName",
-  "schema": {
-    "title": "Collection Name",
-    "description": "Custom H1 configuration",
-    "type": "object",
-    "required": ["skipLazyLoadingSection"],
-    "properties": {
-      "skipLazyLoadingSection": {
-        "title": "Skip lazy loading",
-        "type": "boolean",
-        "default": true
+  ```sections.json
+  …
+  {
+    "name": "CustomPLPName",
+    "schema": {
+      "title": "Collection Name",
+      "description": "Custom H1 configuration",
+      "type": "object",
+      "required": ["skipLazyLoadingSection"],
+      "properties": {
+        "skipLazyLoadingSection": {
+          "title": "Skip lazy loading",
+          "type": "boolean",
+          "default": true
+        }
       }
     }
   }
-}
-```
+  ```
 
-### Step 3: Accessing collection data in a custom section
+3. To display data related to the PLP (e.g., collection, category, or brand names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook in the section’s file:
 
-To display data related to the PLP in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook in the section’s file:
+  ```CallToAction.tsx
+  import { usePLP } from '@faststore/core'
 
-```CallToAction.tsx
-import { usePLP } from '@faststore/core'
+  export default function CustomPLPName() {
+    const context = usePLP()
 
-export default function CustomCollectionName() {
-  const context = usePLP()
+    return (
+      <section>
+        <h1>Testing - {context.data?.collection?.seo?.title ?? 'PLP'}!</h1>
+      </section>
+    )
+  }
+  ```
 
-  return (
-    <section>
-      <h1>Testing - {context.data?.collection?.seo?.title ?? 'PLP'}!</h1>
-    </section>
-  )
-}
-```
-
-### Sending the changes to the Headless CMS
+### Step 3: Sending the changes to the Headless CMS
 
 1. Open the terminal and run `faststore cms-sync` to sync your local changes with the Headless CMS.
 2. Go to the VTEX Admin, access **Storefront > Headless CMS**.
@@ -92,12 +138,15 @@ export default function CustomCollectionName() {
 
     ![custom-section-ui](https://vtexhelp.vtexassets.com/assets/docs/src/custom-section___48bf7d70d678b4fb4ddae39aa0cf14cb.png)
 
-### Checking if the custom section is visible to search engines
+### Step 4: Checking if the custom section is visible to search engines
 
 To make sure that the custom section is present in the initial HTML response, follow these steps:
 
 1. In the browser, right-click anywhere on the page and select **Inspect** from the context menu.
 2. In the **Developer Tools** panel, click on the **Network tab**. Ensure that the **All filter** is selected.
+
+  > ℹ To focus only on the main HTML document, you can filter by **Doc** in the filter bar. This will show only the initial HTML request, making it easier to inspect the page's source code.
+
 3. Reload the page while the Developer Tools are open. This will capture all network requests made during the page load.
 4. In the **Name** column of the **Network** tab, look for the request corresponding to the page you're inspecting In our example `just-arrived`.
 5. Click the **Response** tab in this panel.
