@@ -51,6 +51,8 @@ Below you can see details of the session data managed by the module.
 | `givenName`  | String   | Contains the customer’s first name.                                     |
 | `familyName` | String   | Contains the customer’s last name.                                   |
 
+<CH.Scrollycoding>
+
 ## Import
 
 The Session module exports a `createSessionStore` function and `Session` type, which you can import like this:
@@ -59,8 +61,6 @@ The Session module exports a `createSessionStore` function and `Session` type, w
 import { createSessionStore } from '@faststore/sdk'
 import type { Session } from '@faststore/sdk'
 ```
-
-<CH.Scrollycoding>
 
 ## Usage
 
