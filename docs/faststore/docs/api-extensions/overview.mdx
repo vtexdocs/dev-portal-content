@@ -6,7 +6,7 @@ This track will teach you how to extend the FastStore API schema by adding new d
 
 While the [FastStore API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) provides a [GraphQL schema](https://developers.vtex.com/docs/guides/faststore/schema-queries) that caters to common use cases, some stores may require access to additional and more specific data. If you need to retrieve data not natively provided by the FastStore API, you can achieve this by extending the FastStore API schema and incorporating new data into the existing [queries](https://developers.vtex.com/docs/guides/faststore/schema-queries).
 
-  > ⚠️ Please be aware that introducing additional API endpoints to your storefront can potentially affect site performance, as already covered in [Best practices for fetching data](#best-practices-for-fetching-data). 
+  > ⚠️ Please be aware that introducing additional API endpoints to your storefront can potentially affect site performance, as already covered in the [Main concepts](#main-concepts) section. 
 
 ## Main concepts
 
@@ -33,11 +33,17 @@ These queries allow you to add or change fields within the query to tailor the d
 
 </details>
 
-### Fetching only the data you need
+### Fetch only the data you need
 
 GraphQL allows you to customize your query to get precisely the data you need, which reduces the data returned from the requests. Double-check your queries to make sure they are not over-fetching.
 
 This also means that you must be mindful of the data added to your query with [GraphQL fragments](https://graphql.org/learn/queries/#fragments) returned. Use them only when they do not include unnecessary data.
+
+### Optimize FastStore API integration with VTEX APIs
+
+When integrating FastStore with VTEX APIs, always use your store's own domain for API calls. Avoid using the `vtexcommercestable` environment directly, as it is not optimized for storefront customization and can negatively impact performance and scalability. 
+
+For example, when using the [Get list of products for a query instead](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-?endpoint=get-/product_search/-facets-) endpoint, instead of calling `https://mystore.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search/{facets}`, use your store's domain like `https://www.mystore.com/api/io/_v/api/intelligent-search/product_search/{facets}`.
 
 ### Do not send direct requests to external APIs
 
