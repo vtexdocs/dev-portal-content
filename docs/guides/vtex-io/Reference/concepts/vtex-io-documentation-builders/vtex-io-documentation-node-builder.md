@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-node-builder"
 excerpt: "Learn how to use the VTEX IO Node builder."
 hidden: false
 createdAt: "2024-03-26T11:00:00.000Z"
-updatedAt: "2024-11-01T17:53:00.000Z"
+updatedAt: "2025-02-25T12:20:00.000Z"
 category: "App Development"
 ---
 
@@ -16,6 +16,7 @@ The Node builder versions are defined in the table below. Each builder version i
 
 |Builder version|Node.js|@types/node|TypeScript|Status|
 |-|-|-|-|-|
+|3.x|[8.x](https://nodejs.org/en/blog/release/v8.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Deprecated|
 |4.x|[12.x](https://nodejs.org/en/blog/release/v12.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Active until March 2025|
 |6.x|[16.x](https://nodejs.org/en/blog/release/v16.0.0)|[12.0.0](https://www.npmjs.com/package/@types/node/v/12.0.0)|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Active until June 2025|
 |7.x|[20.x](https://nodejs.org/en/blog/release/v20.0.0)|[20.0.0](https://www.npmjs.com/package/@types/node/v/20.0.0)|[5.5.3](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html)|Active|
