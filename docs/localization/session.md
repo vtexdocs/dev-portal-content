@@ -57,10 +57,16 @@ Below you can see details of the session data managed by the module.
 
 The Session module exports a `createSessionStore` function and `Session` type, which you can import like this:
 
+<CH.Code>
+
 ```ts
 import { createSessionStore } from '@faststore/sdk'
 import type { Session } from '@faststore/sdk'
 ```
+
+</CH.Code>
+
+---
 
 ## Usage
 
