@@ -16,8 +16,8 @@ Below you can see details of the session data managed by the module.
 | `b2b` | `object` | Contains B2B information. See [B2B] for more details.  |
 | `channel`    | `string`   | Represents the sales channel associated with the session.                                   |
 | `country`    | `string`   | Represents the country associated with the session in a three-letter ISO code (e.g., `USA`).          |
-| `currency`   | `object`   | Contains currency details for the session. See [Currency]() for details.            |
-| `geoCoordinates` | `object`  | Contains geographical coordinates for the user session. See [GeoCoordinates]() for details. |
+| `currency`   | `object`   | Contains currency details for the session. See [Currency](#currency) for details.            |
+| `geoCoordinates` | `object`  | Contains geographical coordinates for the user session. See [GeoCoordinates](#geocoordinates) for details. |
 | `locale`     | `string`   | Represents the locale of the session, indicating language and region (e.g., "en-US").    |
 | `person`     | `object`   | Contains information about the customer. See [Person] for details. |
 | `postalCode` | `string`   | Represents the postal code associated with the session.   |
@@ -70,8 +70,8 @@ import type { Session } from '@faststore/sdk'
 
 ## Usage
 
-The following example demonstrates how to manage a session using `createSessionStore`. 
-The `createSessionStore` function initializes a session store with the provided default session and an optional validation function. 
+The following example demonstrates how to manage a session using `createSessionStore`.
+The `createSessionStore` function initializes a session store with the provided default session and an optional validation function.
 The `validateSession` function sends the current session data to the [FastStore API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) for validation and returns the validated session.
 
 <CH.Code>
