@@ -5,6 +5,7 @@ type: "added"
 excerpt: "Expanding protective measures against potential bot attacks."
 createdAt: "2023-09-12T00:00:00.000Z"
 updatedAt: "2023-09-12T00:00:00.000Z"
+hidden: true
 ---
 
 In order to enhance system security, new Checkout configuration options have been made available, expanding protective measures against potential bot attacks.
