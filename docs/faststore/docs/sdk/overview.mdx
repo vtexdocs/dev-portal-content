@@ -36,19 +36,29 @@ The Search module offers functions for implementing a faceted search based on UR
 
 The Analytics module helps you create a simple, extensive event system to feed your data pool. It is geared towards [Google Analytics 4](https://developers.google.com/analytics/devguides/collection/ga4) but supports other analytics providers. Learn more about how to use the [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview) module.
 
+<CH.Scrollycoding>
+
 ## Getting started with the FastStore SDK
 
 Install @faststore/sdk as a dependency of your FastStore project via the command line:
 
+<CH.Code>
+
 ```bash
 yarn add @faststore/sdk
 ```
+
+</CH.Code>
+
+---
 
 ### Usage
 
 The FastStore SDK makes available different functions and hooks to manage essential ecommerce features. To use these functions and hooks, import them from the `@faststore/sdk` package.
 
 The following example demonstrates how to manage a shopping cart using the `useCart` hook. It focuses on adding an item to the cart and displaying the cart's contents.
+
+<CH.Code>
 
 ```tsx
 import React from 'react'
@@ -91,7 +101,11 @@ const NewComponent = () => {
 export default NewComponent
 ```
 
+</CH.Code>
+
 In the example above, if the cart is empty, it shows a message indicating that the cart is empty. However, if the cart contains items, it lists each item's name, price, and quantity.
+
+</CH.Scrollycoding>
 
 ### Inspecting browser data
 
