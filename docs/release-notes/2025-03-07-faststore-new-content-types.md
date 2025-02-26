@@ -18,7 +18,7 @@ Now headers and footers can be customized independently, improving performance b
 
 ## What has changed?
 
-The existing [global sections](https://docs.google.com/document/d/1im0qARU2cy8VBOhgNYUQKHSbAnqvcV_Osl0tr2ThIEc/edit?tab=t.0) still remain in place. However, with this update, Global Header Sections will now appear in the header area (before the Children section), and Global Footer Sections will appear in the footer area (after the Children section ).
+The existing global sections still remain in place. However, with this update, Global Header Sections will now appear in the header area (before the Children section), and Global Footer Sections will appear in the footer area (after the Children section ).
 
 > ℹ The Children section is a CMS-specific feature that organizes store sections. While visible and configurable in the Headless CMS, it does not appear on the storefront. For global sections (available across all store pages), it ensures headers and footers are clearly separated from other content.
 
