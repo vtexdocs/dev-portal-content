@@ -17,7 +17,7 @@ Make sure the `@faststore/cli` package is updated to the latest version. If you 
 FastStore follows a specific priority order when generating SEO metadata for PLP pages:
 
 <details>
-<summary>Section title</summary>
+<summary>Title</summary>
 
 ```mermaid
 graph LR
@@ -37,7 +37,7 @@ E --> F;
 ```mermaid
 graph LR
 A[Checks for a template configured in 'discovery.config.js' in the 'seo' section] --> B{Is there a title template?};
-B -- Yes --> C[Display Title];
+B -- Yes --> C[Display Title using the template];
 B -- No --> D[Uses the generic title template from the 'seo' object in 'discovery.config.js'.];
 D --> C;
 ```
@@ -49,11 +49,11 @@ D --> C;
 
 ```mermaid
 graph LR
-A[Check the Catalog for the product's description] --> B{Is there a description in the Catalog?};
+A[Check the Catalog for the PLP's description] --> B{Is there a description in the Catalog?};
 B -- Yes --> C[Use the description from the Catalog];
 B -- No --> D[Check the PLP description template in the 'plp' property of 'discovery.config.js'];
 D --> E{Is there a PLP description template?};
-E -- Yes --> F[Use the PLP description template];
+E -- Yes --> F[Use the PLP description template using the PLP title in it];
 E -- No --> G[Use the generic description template in the 'seo' object of 'discovery.config.js'];
 C --> H[Display Description];
 F --> H;
@@ -85,7 +85,7 @@ To understand the order to generate the SEO metadata for PLPs, see the [Understa
   },
   ```
 
-  > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. The `%s` should be used where you would like the collection name to appear. 
+  > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. The `%s` should be used where you would like the PLP title/name to appear. 
 
 ### Step 2: Controlling lazy loading for custom sections
 
