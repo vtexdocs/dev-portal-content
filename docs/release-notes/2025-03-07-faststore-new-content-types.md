@@ -18,14 +18,10 @@ Now headers and footers can be customized independently, improving performance b
 
 ## What has changed?
 
-The existing global sections still remain in place. However, with this update, Global Header Sections will now appear in the header area (before the Children section), and Global Footer Sections will appear in the footer area (after the Children section ).
+The existing global sections still remain in place and these new Content Types can be applied to all store pages:
 
-> ℹ The Children section is a CMS-specific feature that organizes store sections. While visible and configurable in the Headless CMS, it does not appear on the storefront. For global sections (available across all store pages), it ensures headers and footers are clearly separated from other content.
-
-These new Content Types are available for global sections, meaning they can be applied to all store pages:
-
-- **Global Header Sections:** Defines the content for the global header, which appears at the top of every page.
-- **Global Footer Sections:** Defines the content for the global footer, which appears at the bottom of every page.
+- **Global Header Sections:** Defines the content for the global header, which appears in the header area of every page (before the [Children section](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)).
+- **Global Footer Sections:** Defines the content for the global footer, which appears at in the footer area of every page (after the [Children section](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)).
 
 ## Why did we make this change?
 
