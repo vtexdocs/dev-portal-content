@@ -134,7 +134,7 @@ To work with FastStore, you should be familiar with the following technologies:
 
 ## Quickstart
 
-Follow the getting started track below to build and deploy a FastStore storefront at the domain `https://{accountName}.vtex.app/`.
+Follow the steps below to start building and deploying a FastStore storefront.
 
 ### 1. Initial settings
 
@@ -150,7 +150,7 @@ After you have prepared your machine with the initial settings, you can start yo
 
 ## Next steps
 
-Now that you have your FastStore project running, extend your store functionalities by working with FastStore customization tools:
+Now that you have your FastStore project running extend your store functionalities by working with FastStore customization tools:
 
 <Flex>
 
