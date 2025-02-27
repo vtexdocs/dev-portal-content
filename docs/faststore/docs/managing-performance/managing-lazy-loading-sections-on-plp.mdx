@@ -22,10 +22,10 @@ FastStore follows a specific priority order when generating SEO metadata for PLP
 ```mermaid
 graph LR
 A[Checks the Catalog for PLP's title] --> B{Is there a title in the Catalog?};
-B -- Yes --> C[Use the title from the Catalog];
-B -- No --> D[Check 'discovery.config.js' file];
-D --> E[Use general SEO title];
-C --> F[Display Title];
+B -- Yes --> C[Uses the title from the Catalog];
+B -- No --> D[Checks 'discovery.config.js' file];
+D --> E[Uses general SEO title];
+C --> F[Displays Title];
 E --> F;
 ```
 
@@ -37,7 +37,7 @@ E --> F;
 ```mermaid
 graph LR
 A[Checks for a template configured in 'discovery.config.js' in the 'seo' section] --> B{Is there a title template?};
-B -- Yes --> C[Display Title using the template];
+B -- Yes --> C[Displays Title using the template];
 B -- No --> D[Uses the generic title template from the 'seo' object in 'discovery.config.js'.];
 D --> C;
 ```
@@ -49,13 +49,13 @@ D --> C;
 
 ```mermaid
 graph LR
-A[Check the Catalog for the PLP's description] --> B{Is there a description in the Catalog?};
-B -- Yes --> C[Use the description from the Catalog];
-B -- No --> D[Check the PLP description template in the 'plp' property of 'discovery.config.js'];
+A[Checks the Catalog for the PLP's description] --> B{Is there a description in the Catalog?};
+B -- Yes --> C[Uses the description from the Catalog];
+B -- No --> D[Checks the PLP description template in the 'plp' property of 'discovery.config.js'];
 D --> E{Is there a PLP description template?};
-E -- Yes --> F[Use the PLP description template using the PLP title in it];
-E -- No --> G[Use the generic description template in the 'seo' object of 'discovery.config.js'];
-C --> H[Display Description];
+E -- Yes --> F[Uses the PLP description template using the PLP title in it];
+E -- No --> G[Uses the generic description template in the 'seo' object of 'discovery.config.js'];
+C --> H[Displays Description];
 F --> H;
 G --> H;
 ```
