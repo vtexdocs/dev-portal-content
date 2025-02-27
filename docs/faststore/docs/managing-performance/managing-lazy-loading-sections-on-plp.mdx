@@ -25,10 +25,14 @@ FastStore follows a specific priority order when generating SEO metadata for PLP
 graph LR
 A[Checks the Catalog for PLP's title] --> B{Is there a title in the Catalog?};
 B -- Yes --> C[Uses the title from the Catalog];
-B -- No --> D[Checks 'discovery.config.js' file];
-D --> E[Uses general SEO title];
-C --> F[Displays Title];
-E --> F;
+B -- No --> D[Checks the Catalog for PLP's name];
+D --> E{Is there a name in the Catalog?};
+E -- Yes --> F[Uses the name from the Catalog];
+E -- No --> G[Checks 'discovery.config.js' file];
+G --> H[Uses general SEO title];
+C --> I[Displays Title];
+F --> I;
+H --> I;
 ```
 
 </details>
