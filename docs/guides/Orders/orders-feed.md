@@ -192,7 +192,7 @@ The properties of this object define the behavior of feed items once they are in
     }
 ```
 
-- `visibilityTimeoutInSeconds` - This is the maximum time after retrieving an item from the feed when it can be committed. When a user retrieves the events from the feed queue using the [Retrieve Feed items](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed) API request, the returned items are omitted from the feed for the time set in this field. Then, the user may take any necessary actions and commit the items to the feed. If events are not committed, they are returned to the feed after this time expires.
+- `visibilityTimeoutInSeconds` - This is the maximum time after retrieving an item from the feed when it can be committed. When a user retrieves the events from the feed queue using the [Retrieve Feed items](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed) API request, the returned items are omitted from the feed for the time set in this field. Then, the user may take any necessary actions and [commit](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) the items to the feed. If events are not committed, they are returned to the feed after this time expires.
 
 - `MessageRetentionPeriodInSeconds` - Items will be excluded from the feed — even if they aren't committed — when they stay in the feed longer than the retention period defined in this field.
 
@@ -369,6 +369,6 @@ Another option is using a hook as the primary source of data for the integration
 
 We recommend a hook for larger and more complex operations, which tend to have greater middleware scalability capacity and can benefit more from the feature’s efficiency.
 
-On the other hand, a feed requires active retrieving and committing items to the queue. This means the integration has control over how many order updates it receives, and it knows how much data it needs to be able to handle at any given time. For this reason, it is less likely for the integration to crash or miss updates from the queue.
+On the other hand, a feed requires active [retrieving](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed) and [committing](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) items to the queue. This means the integration has control over how many order updates it receives, and it knows how much data it needs to be able to handle at any given time. For this reason, it is less likely for the integration to crash or miss updates from the queue.
 
 To learn more, read the [order integration with ERP](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-integration) guide and the API reference for [Feed v3](https://developers.vtex.com/vtex-rest-api/reference/feed-v3) and [Hook](https://developers.vtex.com/docs/guides/orders-overview#creating-an-order-integration).
