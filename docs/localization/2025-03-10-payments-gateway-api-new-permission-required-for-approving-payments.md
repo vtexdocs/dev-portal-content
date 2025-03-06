@@ -1,6 +1,6 @@
 ---
 title: "Payments Gateway API: New permission required for approving payments"
-slug: "2025-02-07-payments-gateway-api-new-permission-required-for-approving-payments"
+slug: "2025-03-10-payments-gateway-api-new-permission-required-for-approving-payments"
 type: "added"
 createdAt: "2025-02-07T17:08:52.219Z"
 updatedAt: ""
