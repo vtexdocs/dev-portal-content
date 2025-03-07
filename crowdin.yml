@@ -3,3 +3,5 @@ files:
     translation: /%original_path%/%original_file_name%_%two_letters_code%
     translation_replace:
       _en: ''
+  - source: /docs/localization/*/*.md
+    translation: /%original_path%/%original_file_name%_%two_letters_code%
