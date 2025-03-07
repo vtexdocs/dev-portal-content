@@ -8,7 +8,7 @@ While lazy loading improves performance, it can harm SEO. Search engine crawlers
 
 In this guide, learn how to optimize SEO by controlling lazy loading for custom sections in FastStore.
 
->❗ Disabling lazy loading may increase initial page load time. Use it only when necessary.
+> ❗ Disabling lazy loading may increase initial page load time. Use it only when necessary.
 
 ## Before you begin
 
@@ -88,43 +88,42 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
 1. Open the `cms/faststore/sections.json` file in your project.
 2. Locate your custom section in the file and add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomPLPName`, the configuration would look like this:
 
-    ```sections.json
-    …
-    {
-      "name": "CustomPLPName",
-      "schema": {
-        "title": "Collection Name",
-        "description": "Custom H1 configuration",
-        "type": "object",
-        "required": ["skipLazyLoadingSection"],
-        "properties": {
-          "skipLazyLoadingSection": {
-            "title": "Skip lazy loading",
-            "type": "boolean",
-            "default": true
-          }
-        }
-      }
-    }
-    ```
+   ```sections.json
+   …
+   {
+     "name": "CustomPLPName",
+     "schema": {
+       "title": "Collection Name",
+       "description": "Custom H1 configuration",
+       "type": "object",
+       "required": ["skipLazyLoadingSection"],
+       "properties": {
+         "skipLazyLoadingSection": {
+           "title": "Skip lazy loading",
+           "type": "boolean",
+           "default": true
+         }
+       }
+     }
+   }
+   ```
 
 3. To display data related to the PLP (e.g., collection, category, or brand names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook in the section’s file:
 
-  ```CallToAction.tsx
+```CallToAction.tsx
+import { usePLP } from '@faststore/core'
 
-  import { usePLP } from '@faststore/core'
+export default function CustomPLPName() {
+  const context = usePLP()
 
-  export default function CustomPLPName() {
-    const context = usePLP()
+  return (
+    <section>
+      <h1>Testing - {context.data?.collection?.seo?.title ?? 'PLP'}!</h1>
+    </section>
+  )
+}
 
-    return (
-      <section>
-        <h1>Testing - {context.data?.collection?.seo?.title ?? 'PLP'}!</h1>
-      </section>
-    )
-  }
-
-  ```
+```
 
 ### Step 2: Sending the changes to the Headless CMS
 
@@ -139,7 +138,7 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
 6. Click `Preview`.
 7. Search for a collection name to see your new section. For example, if you have a `Just arrived` collection, add its slug to the URL, for example: `https://mystore.vtex.app/just-arrived`. You’ll be able to see something similar to the following:
 
-    ![custom-section-ui](https://vtexhelp.vtexassets.com/assets/docs/src/custom-section___48bf7d70d678b4fb4ddae39aa0cf14cb.png)
+   ![custom-section-ui](https://vtexhelp.vtexassets.com/assets/docs/src/custom-section___48bf7d70d678b4fb4ddae39aa0cf14cb.png)
 
 ### Step 3: Checking if the custom section is visible to search engines
 
@@ -148,7 +147,7 @@ To make sure that the custom section is present in the initial HTML response, fo
 1. In the browser, right-click anywhere on the page and select **Inspect** from the context menu.
 2. In the **Developer Tools** panel, click the **Network tab**. Ensure that the **All filter** is selected.
 
-    > ℹ To focus only on the main HTML document, you can filter by **Doc** in the filter bar. This will show only the initial HTML request, making it easier to inspect the page's source code.
+   > ℹ To focus only on the main HTML document, you can filter by **Doc** in the filter bar. This will show only the initial HTML request, making it easier to inspect the page's source code.
 
 3. Reload the page while the Developer Tools are open. This will capture all network requests made during the page load.
 4. In the **Name** column of the **Network** tab, look for the request corresponding to the page you're inspecting In our example `just-arrived`.
