@@ -25,60 +25,6 @@ For instructions, see the [Configuring SEO for Product Listing Pages (PLP)](http
 
 </Steps>
 
-## SEO metadata for PLPs
-
-FastStore follows a structured approach to generating SEO metadata for PLPs, prioritizing available catalog data before falling back to predefined templates in `discovery.config.js`.
-
-<details>
-<summary>Title</summary>
-
-```mermaid
-graph LR
-A[Checks the Catalog for PLP's title] --> B{Is there a title in the Catalog?};
-B -- Yes --> C[Uses the title from the Catalog];
-B -- No --> D[Checks the Catalog for PLP's name];
-D --> E{Is there a name in the Catalog?};
-E -- Yes --> F[Uses the name from the Catalog];
-E -- No --> G[Checks 'discovery.config.js' file];
-G --> H[Uses general SEO title];
-C --> I[Displays Title];
-F --> I;
-H --> I;
-```
-
-</details>
-
-<details>
-<summary>Title template</summary>
-
-```mermaid
-graph LR
-A[Checks for a template configured in 'discovery.config.js' in the 'seo' section] --> B{Is there a title template?};
-B -- Yes --> C[Displays Title using the template];
-B -- No --> D[Uses the generic title template from the 'seo' object in 'discovery.config.js'.];
-D --> C;
-```
-
-</details>
-
-<details>
-<summary>Description template</summary>
-
-```mermaid
-graph LR
-A[Checks the Catalog for the PLP's description] --> B{Is there a description in the Catalog?};
-B -- Yes --> C[Uses the description from the Catalog];
-B -- No --> D[Checks the PLP description template in the 'plp' property of 'discovery.config.js'];
-D --> E{Is there a PLP description template?};
-E -- Yes --> F[Uses the PLP description template using the PLP title in it];
-E -- No --> G[Uses the generic description template in the 'seo' object of 'discovery.config.js'];
-C --> H[Displays Description];
-F --> H;
-G --> H;
-```
-
-</details>
-
 ## Instructions
 
 ### Step 1: Controlling lazy loading for custom sections
