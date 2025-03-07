@@ -1,5 +1,5 @@
 ---
-title: "Managing lazy loading sections on Product Listing Pages (PLPs)"
+title: "Optimizing SEO by managing lazy loading on Product Listing Pages (PLPs)"
 ---
 
 By default, FastStore improves performance by wrapping store sections in `LazyLoadingSection` and `ViewportObserver` components. These components delay loading non-essential sections until needed, such as when a user scrolls near them. This approach reduces initial page load times and improves user experience, particularly on slower networks or devices.
@@ -8,15 +8,15 @@ While lazy loading improves performance, it can harm SEO. Search engine crawlers
 
 In this guide, learn how to optimize SEO by controlling lazy loading for sections in FastStore.
 
-> ⚠ This feature may increase initial page load times, potentially impacting performance and user experience. Use it only when necessary.
+>❗ Disabling lazy loading may increase initial page load time. Use it only when necessary.
 
 ## Before you begin
 
 Make sure the `@faststore/cli` package is updated to the latest version. If you need to update it, follow the instructions on [Updating the '@fastore/cli' package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
 
-## Understand how SEO metadata is determined
+## SEO metadata for PLPs
 
-FastStore follows a specific priority order when generating SEO metadata for PLP pages:
+FastStore follows a structured approach to generating SEO metadata for PLPs, prioritizing available catalog data before falling back to predefined templates in `discovery.config.js`.
 
 <details>
 <summary>Title</summary>
@@ -72,12 +72,10 @@ G --> H;
 
 ### Step 1: Configuring SEO for Product Listing Pages (PLP)
 
-Configure the title and description templates for product listing pages (PLP) in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file to optimize your store's SEO. These templates allow you to dynamically generate metadata based on the type of PLP, such as collections, categories, subcategories, or brands: 
 
 - Title template: This template will be applied to all PLPs, including collections, categories, subcategories, and brands.
 - Description template: This template is used for `collections`, as descriptions for `collections` are not configured in the Catalog. If a specific description isn't configured in the Catalog for a category, subcategory, or brand, this template will be used as a fallback.
 
-To understand the order to generate the SEO metadata for PLPs, see the [Understand how SEO metadata is determined](#understand-how-seo-metadata-is-determined) section.
 
 1. Open your FastStore project in a code editor of your preference.
 2. Go to the `discovey.config.js` file and in the `seo` section add the following:
@@ -91,13 +89,12 @@ To understand the order to generate the SEO metadata for PLPs, see the [Understa
   },
   ```
 
-  > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. The `%s` should be used where you would like the PLP title/name to appear. 
+  > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. Use %s as a placeholder for the PLP title/name.
 
 ### Step 2: Controlling lazy loading for custom sections
 
-By default, FastStore lazy-loads sections for performance optimization. However, certain custom sections (e.g., those containing H1 headers) may need to appear in the initial HTML for SEO purposes. To ensure these sections are included in the initial HTML, you can configure them to skip lazy loading.
+FastStore lazy-loads sections for performance reasons. However, certain [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section), such as those containing H1 headers, may need to appear in the initial HTML for SEO purposes. To disable lazy loading for these sections, consider the following:
 
-Below are the steps to disable lazy loading for a custom section. In this example, we’ll use a custom section named `CustomPLPName`. If you haven’t created a custom section yet, refer to the [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) guide.
 
 1. Open the `cms/faststore/sections.json` file in your project.
 2. Locate your custom section in the file and add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomPLPName`, the configuration would look like this:
