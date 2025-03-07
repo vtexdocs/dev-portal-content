@@ -20,7 +20,7 @@ Make sure the `@faststore/cli` package is updated to the latest version. If you 
 
 ### Configure SEO for PLPs
 
-Set up title and description templates in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file to dynamically generate metadata for PLPs, such as collections, categories, subcategories, or brands. 
+Set up title and description templates in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file to dynamically generate metadata for PLPs, such as collections, categories, subcategories, or brands.
 For instructions, see the [Configuring SEO for Product Listing Pages (PLP)](https://developers.vtex.com/docs/guides/faststore/managing-performance-configuring-seo-for-plp) guide.
 
 </Steps>
@@ -88,27 +88,25 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
 1. Open the `cms/faststore/sections.json` file in your project.
 2. Locate your custom section in the file and add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomPLPName`, the configuration would look like this:
 
-  ```sections.json
-
-  …
-  {
-    "name": "CustomPLPName",
-    "schema": {
-      "title": "Collection Name",
-      "description": "Custom H1 configuration",
-      "type": "object",
-      "required": ["skipLazyLoadingSection"],
-      "properties": {
-        "skipLazyLoadingSection": {
-          "title": "Skip lazy loading",
-          "type": "boolean",
-          "default": true
+    ```sections.json
+    …
+    {
+      "name": "CustomPLPName",
+      "schema": {
+        "title": "Collection Name",
+        "description": "Custom H1 configuration",
+        "type": "object",
+        "required": ["skipLazyLoadingSection"],
+        "properties": {
+          "skipLazyLoadingSection": {
+            "title": "Skip lazy loading",
+            "type": "boolean",
+            "default": true
+          }
         }
       }
     }
-  }
-
-  ```
+    ```
 
 3. To display data related to the PLP (e.g., collection, category, or brand names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook in the section’s file:
 
@@ -150,7 +148,7 @@ To make sure that the custom section is present in the initial HTML response, fo
 1. In the browser, right-click anywhere on the page and select **Inspect** from the context menu.
 2. In the **Developer Tools** panel, click the **Network tab**. Ensure that the **All filter** is selected.
 
-  > ℹ To focus only on the main HTML document, you can filter by **Doc** in the filter bar. This will show only the initial HTML request, making it easier to inspect the page's source code.
+    > ℹ To focus only on the main HTML document, you can filter by **Doc** in the filter bar. This will show only the initial HTML request, making it easier to inspect the page's source code.
 
 3. Reload the page while the Developer Tools are open. This will capture all network requests made during the page load.
 4. In the **Name** column of the **Network** tab, look for the request corresponding to the page you're inspecting In our example `just-arrived`.
