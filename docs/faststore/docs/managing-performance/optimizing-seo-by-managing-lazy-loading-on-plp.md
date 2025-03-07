@@ -23,6 +23,10 @@ Make sure the `@faststore/cli` package is updated to the latest version. If you 
 Set up title and description templates in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file to dynamically generate metadata for PLPs, such as collections, categories, subcategories, or brands.
 For instructions, see the [Configuring SEO for Product Listing Pages (PLP)](https://developers.vtex.com/docs/guides/faststore/managing-performance-configuring-seo-for-plp) guide.
 
+### Understand Faststore's SEO metadata generation for PLPs
+
+FastStore uses a structured approach to generate SEO metadata for PLPs. For more information, see the [SEO metadata for PLPs](https://developers.vtex.com/docs/guides/faststore/managing-performance-configuring-seo-for-plp#seo-metadat-for-plps).
+
 </Steps>
 
 ## Instructions
