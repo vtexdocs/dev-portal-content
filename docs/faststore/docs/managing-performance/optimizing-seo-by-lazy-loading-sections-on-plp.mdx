@@ -25,8 +25,6 @@ For instructions, see the [Configuring SEO for Product Listing Pages (PLP)](/) g
 
 </Steps>
 
-
-
 ## SEO metadata for PLPs
 
 FastStore follows a structured approach to generating SEO metadata for PLPs, prioritizing available catalog data before falling back to predefined templates in `discovery.config.js`.
@@ -83,28 +81,7 @@ G --> H;
 
 ## Instructions
 
-### Step 1: Configuring SEO for Product Listing Pages (PLP)
-
-
-- Title template: This template will be applied to all PLPs, including collections, categories, subcategories, and brands.
-- Description template: This template is used for `collections`, as descriptions for `collections` are not configured in the Catalog. If a specific description isn't configured in the Catalog for a category, subcategory, or brand, this template will be used as a fallback.
-
-
-1. Open your FastStore project in a code editor of your preference.
-2. Go to the `discovey.config.js` file and in the `seo` section add the following:
-
-  ```discovery.config.js
-  seo: {
-    plp: {
-      titleTemplate: '%s | FastStore PLP',
-      descriptionTemplate: '%s products on FastStore Product Listing Page',
-    },
-  },
-  ```
-
-  > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. Use %s as a placeholder for the PLP title/name.
-
-### Step 2: Controlling lazy loading for custom sections
+### Step 1: Controlling lazy loading for custom sections
 
 FastStore lazy-loads sections for performance reasons. However, certain [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section), such as those containing H1 headers, may need to appear in the initial HTML for SEO purposes. To disable lazy loading for these sections, consider the following:
 
@@ -148,7 +125,7 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
   }
   ```
 
-### Step 3: Sending the changes to the Headless CMS
+### Step 2: Sending the changes to the Headless CMS
 
 1. Open the terminal and run `faststore cms-sync` to sync your local changes with the Headless CMS.
 2. Go to the VTEX Admin, access **Storefront > Headless CMS**.
@@ -163,7 +140,7 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
 
     ![custom-section-ui](https://vtexhelp.vtexassets.com/assets/docs/src/custom-section___48bf7d70d678b4fb4ddae39aa0cf14cb.png)
 
-### Step 4: Checking if the custom section is visible to search engines
+### Step 3: Checking if the custom section is visible to search engines
 
 To make sure that the custom section is present in the initial HTML response, follow these steps:
 
