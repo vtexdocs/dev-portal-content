@@ -88,7 +88,7 @@ Below is an example of each case.
 
 ```gql
 query getSettings {
-  publicSettingsForApp(app: "{vendor}.{app.name}", version: "0.x")
+  appSettings(app: "{vendor}.{app.name}", version: "0.x")
     @context(provider: "vtex.apps-graphql") {
     message
   }
