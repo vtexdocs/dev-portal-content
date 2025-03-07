@@ -3,7 +3,7 @@ title: "Setting your app's billing model"
 slug: "vtex-io-documentation-setting-your-apps-billing-model"
 hidden: false
 createdAt: "2021-03-31T16:50:10.042Z"
-updatedAt: "2022-12-13T20:17:44.838Z"
+updatedAt: "2025-03-07T08:17:44.838Z"
 ---
 Once your app has been developed and is ready to go live, it's time to think about its distribution. In this step, you must define who will be allowed to install your app, whether your app will be paid or not, and how much it will cost if so.
 
@@ -167,9 +167,9 @@ From the previous example, we have:
 
 Therefore, the extra variable rate would be charged as follows:
 
-- For 1500 SMSs =  US$ 30.00 _(1500 x US$ 0.07 = US$ 30.00)_
-- For 3500 SMSs = US$ 60.00 _(3500 x US$ 0.06 = US$ 60.00)_
-- For 7000 SMSs = US$ 100.00 _(7000 x US$ 0.05 = US$ 100.00)_
+- For 1500 SMSs = US$ 105.00 _(1500 x US$ 0.07 = US$ 105.00)_
+- For 3500 SMSs = US$ 210.00 _(3500 x US$ 0.06 = US$ 210.00)_
+- For 7000 SMSs = US$ 350.00 _(7000 x US$ 0.05 = US$ 350.00)_
 
 </details>
 
