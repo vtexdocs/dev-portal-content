@@ -4,9 +4,9 @@ title: "Optimizing SEO by managing lazy loading on Product Listing Pages (PLPs)"
 
 By default, FastStore improves performance by wrapping store sections in `LazyLoadingSection` and `ViewportObserver` components. These components delay loading non-essential sections until needed, such as when a user scrolls near them. This approach reduces initial page load times and improves user experience, particularly on slower networks or devices.
 
-While lazy loading improves performance, it can harm SEO. Search engine crawlers often do not execute JavaScript or wait for dynamically loaded content. As a result, critical sections like product grids on category pages may not be indexed. For instance, if a user accesses the "gym clothes" collection, its product listing might not appear in search results if it's not included in the initial HTML.
+While lazy loading improves performance, it can harm SEO. Search engine crawlers often do not execute JavaScript or wait for dynamically loaded content. As a result, critical sections like product grids on category pages may not be indexed. For instance, if a user accesses the `gym clothes` collection, its product listing might not appear in search results if it's not included in the initial HTML.
 
-In this guide, learn how to optimize SEO by controlling lazy loading for sections in FastStore.
+In this guide, learn how to optimize SEO by controlling lazy loading for custom sections in FastStore.
 
 >❗ Disabling lazy loading may increase initial page load time. Use it only when necessary.
 
@@ -84,7 +84,6 @@ G --> H;
 ### Step 1: Controlling lazy loading for custom sections
 
 FastStore lazy-loads sections for performance reasons. However, certain [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section), such as those containing H1 headers, may need to appear in the initial HTML for SEO purposes. To disable lazy loading for these sections, consider the following:
-
 
 1. Open the `cms/faststore/sections.json` file in your project.
 2. Locate your custom section in the file and add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomPLPName`, the configuration would look like this:
