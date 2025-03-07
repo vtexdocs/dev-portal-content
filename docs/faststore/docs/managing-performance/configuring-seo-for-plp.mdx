@@ -1,0 +1,28 @@
+---
+title: "Configuring SEO for Product Listing Pages (PLPs)"
+---
+
+Set up SEO settings for Product Listing Pages (PLPs) to customize title and description templates. This ensures your PLPs align with your brand and improve discoverability. Follow these steps to configure SEO for PLPs:
+
+1. Open your FastStore project in a code editor of your preference.
+2. Go to the `discovey.config.js` file and in the `seo` section add the following:
+
+  ```discovery.config.js
+
+  seo: {
+    plp: {
+      titleTemplate: '%s | FastStore PLP',
+      descriptionTemplate: '%s products on FastStore Product Listing Page',
+    },
+  },
+
+  ```
+
+  > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. Use %s as a placeholder for the PLP title/name.
+
+  - Title template: This template will be applied to all PLPs, including collections, categories, subcategories, and brands.
+  - Description template: This template is used for `collections`, as descriptions for `collections` are not configured in the Catalog. If a specific description isn't configured in the Catalog for a category, subcategory, or brand, this template will be used as a fallback.
+
+## Lazy Loading and SEO Considerations
+
+FastStore uses lazy loading to improve performance, but this can impact SEO as search engine crawlers may not index dynamically loaded content. If you need to optimize SEO for PLPs, see the [Optimizing SEO by managing Lazy Loading on Product Listing Pages (PLPs)](https://developers.vtex.com/docs/guides/faststore/optimizing-seo-by-managing-lazy-loading-sections-on-plp) guide.
