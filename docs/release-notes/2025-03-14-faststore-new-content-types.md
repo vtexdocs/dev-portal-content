@@ -20,8 +20,8 @@ Now headers and footers can be customized independently, improving performance b
 
 The existing global sections still remain in place and these new Content Types can be applied to all store pages:
 
-- **Global Header Sections:** Defines the content for the global header, which appears in the header area of every page (before the [Children section](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)).
-- **Global Footer Sections:** Defines the content for the global footer, which appears at in the footer area of every page (after the [Children section](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)).
+- **Global Header Sections:** Defines the content for the global header, which appears in the header area of every page (before the [Children section](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#sections)).
+- **Global Footer Sections:** Defines the content for the global footer, which appears at in the footer area of every page (after the [Children section](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#sections)).
 
 ## Why did we make this change?
 
