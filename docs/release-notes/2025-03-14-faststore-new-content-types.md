@@ -32,7 +32,7 @@ As stores grow, managing global content becomes more complex. The introduction o
 To start using the new Content Types, follow these steps:
 
 1. Open the terminal and navigate to your FastStore project folder.
-2. In the terminal, log into your account by running `vtex login {accountName}`.
+2. In the terminal, log in to your account by running `vtex login {accountName}`.
 
     > ⚠ Change `{accountName}` for your account name, for example, `vtex login mystore`.
 
