@@ -41,19 +41,19 @@ The first step in making an app public is defining whether the app will be charg
 1. Open your app in any code editor of your preference.
 2. Open the `manifest.json` file.
 3. Add the `billingOptions` field to your app's `manifest.json` file and set the `type` property as `free`.
-5. Set up the `support` property to provide a support channel for the app users.
-6. Set up the `availableCountries` property to define in which countries the app will be available. If you want to make it available for all countries, use `*`.
+4. Set up the `support` property to provide a support channel for the app users.
+5. Set up the `availableCountries` property to define in which countries the app will be available. If you want to make it available for all countries, use `*`.
 
-```json
-  "billingOptions": {
-    "type": "free",
-    "support": {
-        "email": "support@com.br",
-        "url": "https://support.com/hc/requests"
-      },
-    "availableCountries" : ["*"]
-  }
-```
+    ```json
+      "billingOptions": {
+        "type": "free",
+        "support": {
+            "email": "support@com.br",
+            "url": "https://support.com/hc/requests"
+          },
+        "availableCountries" : ["*"]
+      }
+    ```
 
 #### Setting the app as charged
 
@@ -63,24 +63,24 @@ The first step in making an app public is defining whether the app will be charg
 4. Set up the `support` property to provide a support channel for the app users.
 5. Set up the `availableCountries` property to define in which countries the app will be available. If you want to make it available for all countries, use `*`.
 
-```json
-  "billingOptions": {
-    "type": "billable",
-    "support": {
-        "email": "support@com.br",
-        "url": "https://support.com/hc/requests"
-      },
-    "availableCountries" : ["*"]
-  }
-```
+    ```json
+      "billingOptions": {
+        "type": "billable",
+        "support": {
+            "email": "support@com.br",
+            "url": "https://support.com/hc/requests"
+          },
+        "availableCountries" : ["*"]
+      }
+    ```
 
-7. Now, choose one of the following billing options and follow the procedures corresponding to your selection.
+6. Now, choose one of the following billing options and follow the procedures corresponding to your selection.
 
-- [**Fixed subscription**](#fixed-subscription) - Charges a fixed subscription price per month. This billing model only allows a single subscription plan to be created for the app.
-- [**Fixed subscription + Variable rate**](#fixed-subscription--variable-rate) - Charges a fixed subscription price plus a variable charge based on the app's usage. Apps with a variable rate are charged according to a metric value.
-- [**Variable subscription + Variable rate**](#variable-subscription--variable-rate) - Charges a variable subscription price plus a variable rate based on the app's usage. Apps with a variable rate are charged according to a metric value.
+    - [**Fixed subscription**](#fixed-subscription) - Charges a fixed subscription price per month. This billing model only allows a single subscription plan to be created for the app.
+    - [**Fixed subscription + Variable rate**](#fixed-subscription--variable-rate) - Charges a fixed subscription price plus a variable charge based on the app's usage. Apps with a variable rate are charged according to a metric value.
+    - [**Variable subscription + Variable rate**](#variable-subscription--variable-rate) - Charges a variable subscription price plus a variable rate based on the app's usage. Apps with a variable rate are charged according to a metric value.
 
-8. Finally, if you opt for a variable-charge pricing strategy, take the steps presented in the [Registering the metrics data](#registering-the-metrics-data-only-for-apps-with-a-variable-pricing-strategy) section.
+7. Finally, if you opt for a variable-charge pricing strategy, take the steps presented in the [Registering the metrics data](#registering-the-metrics-data-only-for-apps-with-a-variable-pricing-strategy) section.
 
 ##### Fixed subscription
 
@@ -110,6 +110,7 @@ Establish a subscription plan for your app by setting up the `plan` property and
       }]
     }
 ```
+
 </details>
 
 ##### Fixed subscription + variable rate
@@ -314,61 +315,61 @@ If you opted for a variable-charge pricing strategy, you must ensure that your m
 1. Create the `policies` field in the app's `manifest.json` file and add the `vtex.billing:save-metrics` as its child.
 2. Make a POST request to `https://app.io.vtex.com/vtex.billing/v0/{account}/{workspace}/_v/billing-metrics` with the following body:
 
-```
-{
-  "metric_id": "{metricId}",
-  "value": "{metricAmount}"
-}
-```
+    ```Json
+    {
+      "metric_id": "{metricId}",
+      "value": "{metricAmount}"
+    }
+    ```
 
-Remember to remove the curly brackets from the endpoint and body replacing them with real values according to your own scenario.
+    Remember to remove the curly brackets from the endpoint and body replacing them with real values according to your own scenario.
 
-- `account` - VTEX account responsible for the app development and maintenance.
-- `Workspace` - Workspace being used for the app development.
-- `metricId` - ID of the metric specified in the `billingOptions` field.
-- `metricAmount` - Use of metrics for billing. For example: if your metric consists of charging for each SMS sent, the `metricAmount` should be equal to 1.
+    - `account` - VTEX account responsible for the app development and maintenance.
+    - `Workspace` - Workspace being used for the app development.
+    - `metricId` - ID of the metric specified in the `billingOptions` field.
+    - `metricAmount` - Use of metrics for billing. For example: if your metric consists of charging for each SMS sent, the `metricAmount` should be equal to 1.
 
 3. Create a client for the `vtex.billing` app or complement it with the `saveBillingMetric` method:
 
-```ts
-import {AppClient, IOContext, InstanceOptions} from '@vtex/api'
+    ```ts
+    import {AppClient, IOContext, InstanceOptions} from '@vtex/api'
 
-const routes = {
-  billingMetrics: `/_v/billing-metrics`,
-}
+    const routes = {
+      billingMetrics: `/_v/billing-metrics`,
+    }
 
-export class BillingApp extends AppClient {
-  public constructor(ioContext: IOContext, opts?: InstanceOptions) {
-    super('vtex.billing@0.x', ioContext, opts)
-  }
+    export class BillingApp extends AppClient {
+      public constructor(ioContext: IOContext, opts?: InstanceOptions) {
+        super('vtex.billing@0.x', ioContext, opts)
+      }
 
-  public saveBillingMetric = (billingMetric: {
-    metric_id: string
-    value: number
-  }) =>
-    this.http.post(routes.billingMetrics, billingMetric, {
-      metric: 'save-billing-metric',
-    })
-}
-```
+      public saveBillingMetric = (billingMetric: {
+        metric_id: string
+        value: number
+      }) =>
+        this.http.post(routes.billingMetrics, billingMetric, {
+          metric: 'save-billing-metric',
+        })
+    }
+    ```
 
 4. Call the `saveBillingMetric` method whenever you need to add a new quantity to the metric value:
 
-```ts
-async function saveSMSBillingMetric(
-  {clients: {billingApp}, vtex: {logger}}: ServiceContext<Clients>,
-  res: SMSInfo,
-) {
-  try {
-    await billingApp.saveBillingMetric({
-      metric_id: 'smsSent', // metric_id is defined in the app's billingOptions
-      value: 1, // value is a whole/integer number that you want to register. This is accumulative.
-    })
-  } catch (e) {
-    // That was an error trying to save the metric value
-  }
-}
-```
+    ```ts
+    async function saveSMSBillingMetric(
+      {clients: {billingApp}, vtex: {logger}}: ServiceContext<Clients>,
+      res: SMSInfo,
+    ) {
+      try {
+        await billingApp.saveBillingMetric({
+          metric_id: 'smsSent', // metric_id is defined in the app's billingOptions
+          value: 1, // value is a whole/integer number that you want to register. This is accumulative.
+        })
+      } catch (e) {
+        // That was an error trying to save the metric value
+      }
+    }
+    ```
 
 Now, all the specified billing metrics will be tracked and updated by the `saveBillingMetric` method.
 
