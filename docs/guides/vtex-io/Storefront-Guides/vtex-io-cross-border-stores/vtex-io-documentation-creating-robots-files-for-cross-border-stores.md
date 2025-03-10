@@ -6,12 +6,13 @@ createdAt: "2020-09-15T12:24:38.963Z"
 updatedAt: "2025-02-28T13:33:38.731Z"
 ---
 
-In this guide, you'll learn how to develop and release your own **Robots app**, which manages your cross-border store's ´robots.txt´ files.
+This guide explains how to develop and release a Robots app to manage ´robots.txt´ files for cross-border stores using Store Framework.
 
 A `robots.txt` file controls which folders or files search engines can crawl on a website. Given its impact on a store’s SEO, the following steps explain how to create `robots.txt` files for cross-border stores.
 
->⚠️ If your store isn't a cross-border one, check this [link](https://help.vtex.com/tutorial/google-search-console-tracking-robots-txt--tutorials_574?locale=en) to learn how to create a `robots.txt` file through your store's admin.
+>❗ This guide applies only to cross-border stores. If your store is not cross-border, refer to [this guide](https://help.vtex.com/tutorial/google-search-console-tracking-robots-txt--tutorials_574?locale=en).
 
+## `robots.txt` file structure
 See below the basic structure of a `robots.txt` file:
 
 - `User-agent`: Specifies the search engine robot to which the following rules apply. To apply the same rules to all robots, use `*`.
@@ -20,9 +21,12 @@ See below the basic structure of a `robots.txt` file:
 
 You must adjust these directives according to your scenario.
 
->⚠️ This feature is available for stores using `vtex.edition-store@3.x` [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app/) or newer. To check which Edition App is installed on your account, run `vtex edition get`. If a different Edition is installed, [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to the VTEX Support asking for the installation of the `vtex.edition-store@5.x`.
+## Before you begin
+
+This feature is available for stores using `vtex.edition-store@3.x` [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app/) or newer. To check which Edition app is installed on your account, run `vtex edition get`. If your store is using an older Edition, [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) with VTEX Support asking for the installation of the `vtex.edition-store@5.x`.
 
 ## Instructions
+
 Follow the steps below to develop your Robots app:
 
 1. Using the command below, clone the `store-theme-robots` app boilerplate repository.
@@ -79,6 +83,6 @@ store-theme-robots
 
 11. Follow the guide [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) to test your Robots app in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) and, once you’re satisfied with the result, promote it to master.
 
->⚠️ The Robots app must be tested in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace). 
+>⚠️ The Robots app must be tested in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace).
 
 Now, you’re ready to check out your store's `robots` files by accessing `https://{account}.myvtex.com/{locale}/robots.txt` on your browser, replacing the values between the curly brackets according to your scenario.
