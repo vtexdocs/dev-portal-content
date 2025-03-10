@@ -1,9 +1,9 @@
 ---
 title: "FastStore: New global Content Types"
-slug: "2025-03-07-faststore-new-content-types"
+slug: "2025-03-14-faststore-new-content-types"
 type: added
 excerpt: "FastStore introduces two new Content Types in Headless CMS, enabling better organization and scalability for headers and footers across all store pages."
-createdAt: "2025-03-07T00:00:00.000Z"
+createdAt: "2025-03-14T00:00:00.000Z"
 updatedAt: ""
 hidden: false
 ---
