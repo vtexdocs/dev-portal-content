@@ -217,16 +217,17 @@ Therefore, the extra variable rate would be charged as follows:
       }]
     }
 ```
+
 </details>
 
 ##### Variable subscription + variable rate
 
 1. Establish a subscription plan for your app by setting up the `plan` property and its child properties:
 
-- `id`: Plan identifier.
-- `currency`: Currency code following the ISO.
-- `price.subscription`: Subscription price. This property is of type `number` and accepts values with or without cents. Examples: `10` (10 dollars), `60.25` (60 dollars and 25 cents), `0.9` (90 cents).
-- `price.metrics`: An array specifying the metric's id and the ranges related to the app's usage and associated extra charge. Notice that you can set one or more metrics to calculate the variable rate.
+    - `id`: Plan identifier.
+    - `currency`: Currency code following the ISO.
+    - `price.subscription`: Subscription price. This property is of type `number` and accepts values with or without cents. Examples: `10` (10 dollars), `60.25` (60 dollars and 25 cents), `0.9` (90 cents).
+    - `price.metrics`: An array specifying the metric's id and the ranges related to the app's usage and associated extra charge. Notice that you can set one or more metrics to calculate the variable rate.
 
 2. Repeat the previous step to create a new subscription plan. This new plan will be a new object inside the `plan` array.
 
