@@ -14,11 +14,11 @@ FastStore projects now include two new Content Types available in the Headless C
 | -------------------------------- | ------------------------------ |
 |  ![header-content-type](https://vtexhelp.vtexassets.com/assets/docs/src/new-section___861ccac1997461c0e5a7fd06bd460cb0.png)  |    ![footer-content-type](https://vtexhelp.vtexassets.com/assets/docs/src/new-section-footer___568b53489a6345f82ce8089dab53f16a.png) |
 
-Now headers and footers can be customized independently, improving performance by reducing the data load associated with global sections.
+Now headers and footers can be customized independently, improving performance by reducing the data load associated with Global Sections.
 
 ## What has changed?
 
-The existing global sections still remain in place and these new Content Types can be applied to all store pages:
+The existing Global Sections still remain in place and these new Content Types can be applied to all store pages:
 
 - **Global Header Sections:** Defines the content for the global header, which appears in the header area of every page (before the [Children section](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#sections)).
 - **Global Footer Sections:** Defines the content for the global footer, which appears at in the footer area of every page (after the [Children section](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#sections)).
