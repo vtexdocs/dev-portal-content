@@ -8,7 +8,7 @@ updatedAt: ""
 hidden: false
 ---
 
-FastStore projects now include two new Content Types available in the Headless CMS: **Global Header Sections** or **Global Footer Sections**. These Content Types provide a more organized way to manage global headers and footers across the store.
+FastStore projects now include two new Content Types available in the Headless CMS: **Global Header Sections** and **Global Footer Sections**. These Content Types provide a more organized way to manage global headers and footers across the store.
 
 | Global Header Sections with the banner `Everything you need to tidy up your home!` | Global Footer Sections with the alert `Enjoy the new arrivals!` |
 | -------------------------------- | ------------------------------ |
