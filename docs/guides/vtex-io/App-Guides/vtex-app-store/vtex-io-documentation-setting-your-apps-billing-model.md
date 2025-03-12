@@ -16,8 +16,6 @@ When preparing your app for distribution, you must first establish if your new a
 
 Take the following steps to make your app private:
 
-### Instructions
-
 1. Open your project in any code editor of your preference.
 2. Open the `manifest.json` file and remove the `billingOptions` field.
 
