@@ -3,7 +3,7 @@ title: "Creating robots files for cross-border stores"
 slug: "vtex-io-documentation-creating-robots-files-for-cross-border-stores"
 hidden: false
 createdAt: "2020-09-15T12:24:38.963Z"
-updatedAt: "2025-02-28T13:33:38.731Z"
+updatedAt: "2025-03-10T12:32:29.211Z"
 ---
 
 This guide explains how to develop and release a Robots app to manage ´robots.txt´ files for cross-border stores using Store Framework.
