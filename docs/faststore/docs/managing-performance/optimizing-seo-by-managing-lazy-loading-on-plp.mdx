@@ -34,8 +34,8 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
 1. Open the `cms/faststore/sections.json` file in your project.
 2. Locate your custom section in the file and add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomPLPName`, the configuration would look like this:
 
-   ```sections.json
-   …
+   ```json
+   ...
    {
      "name": "CustomPLPName",
      "schema": {
@@ -56,20 +56,20 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
 
 3. To display data related to the PLP (e.g., collection, category, or brand names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook in the section’s file:
 
-```CallToAction.tsx
-import { usePLP } from '@faststore/core'
+    ```tsx
+    import { usePLP } from '@faststore/core'
 
-export default function CustomPLPName() {
-  const context = usePLP()
+    export default function CustomPLPName() {
+      const context = usePLP()
 
-  return (
-    <section>
-      <h1>Testing - {context.data?.collection?.seo?.title ?? 'PLP'}!</h1>
-    </section>
-  )
-}
+      return (
+        <section>
+          <h1>Testing - {context.data?.collection?.seo?.title ?? 'PLP'}!</h1>
+        </section>
+      )
+    }
 
-```
+    ```
 
 ### Step 2: Sending the changes to the Headless CMS
 

@@ -63,20 +63,21 @@ G --> H;
 1. Open your FastStore project in a code editor of your preference.
 2. Go to the `discovey.config.js` file and in the `seo` section add the following:
 
-  ```discovery.config.js
-  seo: {
-    plp: {
-      titleTemplate: '%s | FastStore PLP',
-      descriptionTemplate: '%s products on FastStore Product Listing Page',
-    },
+```js
+...
+seo: {
+  ...
+  plp: {
+    titleTemplate: '%s | FastStore PLP',
+    descriptionTemplate: '%s products on FastStore Product Listing Page',
   },
+},
+```
 
-  ```
+> ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. Use `%s` as a placeholder for the PLP title/name.
 
-  > ⚠ Change the values in `titleTemplate` and `descriptionTemplate` according to your needs. Use `%s` as a placeholder for the PLP title/name.
-
-  - **Title template:** This template will be applied to all PLPs, including collections, categories, subcategories, and brands.
-  - **Description template:** This template is used for `collections`, as descriptions for `collections` are not configured in the Catalog. If a specific description isn't configured in the Catalog for a category, subcategory, or brand, this template will be used as a fallback.
+- **Title template:** This template will be applied to all PLPs, including collections, categories, subcategories, and brands.
+- **Description template:** This template is used for `collections`, as descriptions for `collections` are not configured in the Catalog. If a specific description isn't configured in the Catalog for a category, subcategory, or brand, this template will be used as a fallback.
 
 ## Lazy loading and SEO considerations
 
