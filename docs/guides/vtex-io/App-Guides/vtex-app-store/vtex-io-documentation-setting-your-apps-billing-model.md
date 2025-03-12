@@ -75,11 +75,9 @@ The first step in making an app public is defining whether the app will be charg
     ```
 
 6. Now, choose one of the following billing options and follow the procedures corresponding to your selection.
-
     - [**Fixed subscription**](#fixed-subscription) - Charges a fixed subscription price per month. This billing model only allows a single subscription plan to be created for the app.
     - [**Fixed subscription + Variable rate**](#fixed-subscription--variable-rate) - Charges a fixed subscription price plus a variable charge based on the app's usage. Apps with a variable rate are charged according to a metric value.
     - [**Variable subscription + Variable rate**](#variable-subscription--variable-rate) - Charges a variable subscription price plus a variable rate based on the app's usage. Apps with a variable rate are charged according to a metric value.
-
 7. Finally, if you opt for a variable-charge pricing strategy, take the steps presented in the [Registering the metrics data](#registering-the-metrics-data-only-for-apps-with-a-variable-pricing-strategy) section.
 
 ##### Fixed subscription
@@ -227,7 +225,7 @@ Therefore, the extra variable rate would be charged as follows:
     - `id`: Plan identifier.
     - `currency`: Currency code following the ISO.
     - `price.subscription`: Subscription price. This property is of type `number` and accepts values with or without cents. Examples: `10` (10 dollars), `60.25` (60 dollars and 25 cents), `0.9` (90 cents).
-    - `price.metrics`: An array specifying the metric's id and the ranges related to the app's usage and associated extra charge. Notice that you can set one or more metrics to calculate the variable rate.
+    - `price.metrics`: An array specifying the metric's ID and the ranges related to the app's usage and associated extra charge. Notice that you can set one or more metrics to calculate the variable rate.
 
 2. Repeat the previous step to create a new subscription plan. This new plan will be a new object inside the `plan` array.
 
@@ -316,7 +314,7 @@ If you opted for a variable-charge pricing strategy, you must ensure that your m
 1. Create the `policies` field in the app's `manifest.json` file and add the `vtex.billing:save-metrics` as its child.
 2. Make a POST request to `https://app.io.vtex.com/vtex.billing/v0/{account}/{workspace}/_v/billing-metrics` with the following body:
 
-    ```Json
+    ```json
     {
       "metric_id": "{metricId}",
       "value": "{metricAmount}"
