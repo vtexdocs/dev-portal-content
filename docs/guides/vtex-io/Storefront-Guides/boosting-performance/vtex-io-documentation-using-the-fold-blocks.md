@@ -89,7 +89,7 @@ Add the `__fold__.experimentalLazyAssets` above the blocks you want to defer. Co
 },
 ```
 
-> ⚠️ Ensure `__fold__.experimentalLazyAssets` is below interactive components (for example, `carousel`) to avoid rendering or navigation issues. 
+> ⚠️ Ensure `__fold__.experimentalLazyAssets` is below interactive components (for example, `carousel`) to avoid rendering or navigation issues.
 
 ## Best practices
 
