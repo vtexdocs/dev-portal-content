@@ -11,7 +11,7 @@ tags:
 
 **Keywords:** Translation
 
-This issue is related to the store's default locale. If your store translation is not behaving as expected, follow the instructions below.
+This issue is related to the store's default locale. If store translation is not behaving as expected, follow the instructions below.
 
 1. Access the API `GET http://portal.vtexcommercestable.com.br/api/tenant/tenants?q={accountName}` and check the `defaultLocale` property.
 
