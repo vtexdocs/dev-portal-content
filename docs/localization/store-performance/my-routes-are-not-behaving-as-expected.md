@@ -10,19 +10,19 @@ tags:
     - redirects
 ---
 
-**Keywords:** Routes | Redirects | GraphiQL
+**Keywords:** Routes | Redirects | GraphQL
 
 
-If your store redirect path doesn't work and the routes are not behaving as expected, follow these troubleshooting steps.
+If the store redirect path doesn't work and the routes are not behaving as expected, follow these troubleshooting steps.
 
 ## Solution
 
 ### Checking if the redirect is saved in the Rewriter
 
-1. Install the GraphiQL IDE in your account by running `vtex install vtex.admin-graphql-ide@3.x`.
-2. Access the Admin and go to **Store Settings > Storefront > GraphiQL IDE**.
+1. Install the GraphQL IDE in your account by running `vtex install vtex.admin-graphql-ide@3.x`.
+2. Access the Admin and go to **Store Settings > Storefront > GraphQL IDE**.
 3. Select the `vtex.rewriter@1.x` app from the dropdown list.
-4. Run the following query, replacing `{URL}` with the `from` path you are having trouble with:
+4. Run the following query, replacing `{URL}` with the `from` path you're having trouble with:
 
 ```graphql
   {
@@ -35,7 +35,7 @@ If your store redirect path doesn't work and the routes are not behaving as expe
   }
 ```
 
-The expected answer is a JSON object containing all the redirects related to that path. Take the following example:
+The expected response is a JSON object containing all the redirects related to that path, as in the following example:
 
 ```json
 {
@@ -52,7 +52,7 @@ The expected answer is a JSON object containing all the redirects related to tha
 
 ### If the query doesn't return the redirect path
 
-Access the Admin, go to **Storefront** > **Pages** > **Redirects**, and save the desired URL redirects. For more information, refer to the [Managing URL redirects](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects) guide.
+Access the Admin, go to **Storefront** > **Pages** > **Redirects**, and save the desired URL redirects. For more information, check the [Managing URL redirects](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects) guide.
 
 ### If the query returns the redirect path
 
