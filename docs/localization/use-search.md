@@ -13,7 +13,7 @@ import { useSearch } from '@faststore/sdk'
 
 ## Usage
 
-The following example demonstrates how to implement a sorting dropdown using `useSearch`:
+The following example shows how to implement a sorting dropdown using `useSearch`:
 
 ```tsx
 import { useSearch } from '@faststore/sdk'
@@ -57,7 +57,7 @@ function Component () {
 `useSearch`: Accesses the search context to read and update the search state.
 `keyMap`: Maps sorting keys to user-friendly labels.
 `setSort`: Updates the sorting criteria.
-`sort`: The current sorting criteria from the search state.
+`sort`: Contains the current sorting criteria from the search state.
 
 ## API reference
 
@@ -66,7 +66,7 @@ The `useSearch` hook returns an object with the following properties and functio
 | Variable name | Data type | Description |
 | -------- | --------------- | ------------ |
 | `itemsPerPage` | `number` | Number of items displayed per page. |
-| `state` | `SearchState` | Current state of the search, including selected facets, sorting criteria, and pagination. |
+| `state` | `SearchState` | Contains the current state of the search, including selected facets, sorting criteria, and pagination. |
 | `setSort` | `(sort: SearchSort) => void` | Updates the sorting criteria of the search results. |
 | `setTerm` | `(term: string / null) => void` | Updates the full-text search term. |
 | `setPage` | `(page: number) => void` | Updates the current page in the search pagination. |
