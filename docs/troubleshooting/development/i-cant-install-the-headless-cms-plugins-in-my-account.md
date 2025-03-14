@@ -1,6 +1,6 @@
 ---
 title: "I can’t install the Headless CMS plugins in my account"
-excerpt: "Windows users may encounter the 'EPERM: operation not permitted' error during the installation of the Headless CMS plugin."
+excerpt: "Users may encounter errors related to symbolic links and node version incompatibility."
 slug: "error-installing-headless-cms-plugins-on-windows"
 updatedAt: "2025-02-12T14:56:25.977Z"
 tags:
@@ -8,7 +8,7 @@ tags:
     - faststore
 ---
 
-If you are a Windows user, you may encounter the following errors after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment).
+FastStore users may encounter the following errors after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment).
 
 | Error message                                                                 | Possible cause                                                                 | Solution                                                                                       |
 |-------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -17,14 +17,14 @@ If you are a Windows user, you may encounter the following errors after [install
 
 ## Solutions
 
-To solve these issues, see the following instructions:
+To solve these issues, follow the instructions below:
 
 - [Enable Developer Mode on your machine](#enable-developer-mode-on-your-machine)
 - [Update VTEX IO CLI](#update-vtex-io-cli)
 
 ### Enable Developer Mode on your machine
 
-If you run the `vtex plugins install cms` and receive the error below, you must enable the Developer Mode on your machine.
+While running the `vtex plugins install cms`, Windows users can get the following error:
 
 ```sh
 vtex plugins install cms
@@ -36,17 +36,17 @@ Installing plugin @vtex/cli-plugin-cms... failed
     Code: EPERM
 ```
 
-FastStore projects rely on creating symbolic links (symlinks), and the [Developer Mode](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers) grants the necessary permissions and privileges to use them, which reduces the probability of encountering errors during development.
+FastStore projects rely on creating symbolic links (symlinks). To solve this error, you must enable [Developer Mode](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers) on your machine. Developer Mode grants the necessary permissions and privileges to use symlinks, which reduces the probability of encountering errors during development.
 
-> ⚠️ Running the FastStore project as an Administrator isn’t recommended.
+> ⚠️ Running the FastStore project as an administrator isn't recommended.
 
-Learn how to enable Developer Mode in the Microsoft's official guide [Enable your device for development](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers).
+Learn how to enable Developer Mode in Microsoft's official guide [Enable your device for development](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development#accessing-settings-for-developers).
 
 After enabling Developer Mode, launch Windows Terminal and run `vtex cms`. This will allow the system to create the necessary symlinks for running commands from the Headless CMS plugin.
 
 ### Update VTEX IO CLI
 
-If you run the `vtex plugins install cms` command and receive the error below, it means you need to update the VTEX IO CLI version you're working.
+If you run the `vtex plugins install cms` command and get the error below, you need to update the VTEX IO CLI version you're using.
 
 ```sh
 vtex plugins install cms
@@ -58,10 +58,10 @@ Installing plugin @vtex/cli-plugin-cms... failed
 
 Even if you update the `node` version on your machine, you must also keep VTEX IO CLI updated to avoid errors.
 
-To update VTEX IO CLI, open the Windows Terminal and follow these instructions:
+To update VTEX IO CLI, open Windows Terminal and follow these instructions:
 
-1. Run the `vtex autoupdate` command in the Windows Terminal.
-2. Run the `vtex -v` command to verify if the VTEX IO CLI and `node` versions are updated.
+1. Run the `vtex autoupdate` command in Windows Terminal.
+2. Run the `vtex -v` command to check if the VTEX IO CLI and `node` versions are updated.
 3. Run the `vtex plugins install cms` command to install the Headless CMS plugins.
 4. Check if the installation of Headless CMS plugins was successful by running `vtex cms`. You should see the following:
 
@@ -73,3 +73,4 @@ USAGE
      $ vtex cms COMMAND
 COMMANDS
      cms sync Syncs CMS schemas with the current workspace in use.
+```
