@@ -1,4 +1,3 @@
-
 ---
 title: "Lazy loading components"
 slug: "vtex-io-documentation-using-the-fold-blocks"
