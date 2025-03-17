@@ -31,7 +31,7 @@ Make sure the [store builder](https://developers.vtex.com/docs/guides/vtex-io-do
 
 ### Customize your storefront
 
-Customize your store theme based on your business needs by following the guides within the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) section, such as the guides [Building pages](https://developers.vtex.com/docs/guides/building-pages) and [Using components](https://developers.vtex.com/docs/guides/using-components).
+Customize your store theme based on your business needs by following the guides within the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) section, such as the guides [Building pages](https://developers.vtex.com/docs/guides/store-framework-building-pages) and [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components).
 
 ### Learn about VTEX IO apps
 
