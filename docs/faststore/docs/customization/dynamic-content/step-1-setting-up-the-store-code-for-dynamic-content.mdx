@@ -130,34 +130,33 @@ After [mapping pages and data-fetching functions](#1-mapping-pages-and-data-fetc
 7. Add the following code to it:
 
    ```ts src/graphql/thirdParty/resolvers/query.ts
-
    export type ProductsExtraData = {
-   id: number;
-   title: string;
-   price: number;
-   description: string;
-   category: string;
-   image: string;
-   rating: {
-       rate: number;
-       count: number;
-   };
-   };
+      id: number;
+      title: string;
+      price: number;
+      description: string;
+      category: string;
+      image: string;
+      rating: {
+        rate: number;
+        count: number;
+      };
+    };
 
-   async function getProductsFromAPI() {
-   const response = await fetch("https://fakestoreapi.com/products");
-   return response.json();
-   }
+    async function getProductsFromAPI() {
+      const response = await fetch("https://fakestoreapi.com/products");
+      return response.json();
+    }
 
-   export const Query = {
-   extraData: async (): Promise<{ data: ProductsExtraData[] }> => {
-       const products = await getProductsFromAPI();
-       return { data: products };
-   },
-   namedExtraData: (_: unknown, { name }: { name: string }) => ({
-       data: `Named extra data: ${name}`,
-   }),
-   };
+    export const Query = {
+      extraData: async (): Promise<{ data: ProductsExtraData[] }> => {
+        const products = await getProductsFromAPI();
+        return { data: products };
+      },
+      namedExtraData: (_: unknown, { name }: { name: string }) => ({
+        data: `Named extra data: ${name}`,
+      }),
+    };
    ```
 
    - `getProductsFromAPI` fetches product data from an external API.
@@ -167,21 +166,21 @@ After [mapping pages and data-fetching functions](#1-mapping-pages-and-data-fetc
 8. Create a file called `extra.ts` inside the' resolvers' folder.
 9. Add the following code to it:
 
-   ```ts src/graphql/thirdParty/resolvers/extra.ts
-   import { ExtraDataRoot } from "./query";
+  ```ts src/graphql/thirdParty/resolvers/extra.ts
+  import { ExtraDataRoot } from "./query";
 
-   export const ExtraData = {
-   data: (root: ExtraDataRoot) => root.data,
-   customFieldFromRoot: (root: ExtraDataRoot) => root?.data?.[0]?.image ?? "",
-   customField: async (_: ExtraDataRoot) => {
-       const res = await fetch(
-       "https://fakestoreapi.com/products/category/jewelery"
-       );
-       const customField = await res.json();
-       return (customField?.[0]?.title as string) ?? "";
-   },
-   };
-   ```
+  export const ExtraData = {
+    data: (root: ExtraDataRoot) => root.data,
+    customFieldFromRoot: (root: ExtraDataRoot) => root?.data?.[0]?.image ?? "",
+    customField: async (_: ExtraDataRoot) => {
+      const res = await fetch(
+        "https://fakestoreapi.com/products/category/jewelery"
+      );
+      const customField = await res.json();
+      return (customField?.[0]?.title as string) ?? "";
+    },
+  };
+  ```
 
    - The `Query` function returns the API data in the field `extraData` through a request on an external API.
 
@@ -192,8 +191,8 @@ After [mapping pages and data-fetching functions](#1-mapping-pages-and-data-fetc
     import { Query } from "./query";
 
     const resolvers = {
-    ExtraData,
-    Query,
+      ExtraData,
+      Query,
     };
 
     export default resolvers;
@@ -206,39 +205,39 @@ After [mapping pages and data-fetching functions](#1-mapping-pages-and-data-fetc
     import { execute_unstable as execute } from "@faststore/core/experimental";
 
     const query = gql(`
-    query ServerDynamicContent($name: String!){
+      query ServerDynamicContent($name: String!){
         extraData {
-        data {
+          data {
             title
             rating {
-            rate
-            count
+              rate
+              count
             }
-        }
-        customField
-        customFieldFromRoot
+         }
+          customField
+          customFieldFromRoot
         }
         namedExtraData(name: $name) {
-        data
+          data
         }
-    }
+      }
     `);
 
     async function fetchDataUsingApiExtension() {
-    try {
+      try {
         const result = await execute({
-        variables: { name: "example-name" },
-        operation: query,
+          variables: { name: "example-name" },
+          operation: query,
         });
         return { data: result.data };
-    } catch (error) {
+      } catch (error) {
         return { data: null, errors: ["Error fetching data from API Extensions"] };
-    }
+      }
     }
 
     // Map slugs to data-fetching functions
     const dynamicContent = {
-    "my-landing-page-api-extensions": fetchDataUsingApiExtension,
+      "my-landing-page-api-extensions": fetchDataUsingApiExtension,
     };
 
     export default dynamicContent;
@@ -268,14 +267,14 @@ You can use [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_A
 
 ```ts src/dynamicContent/index.ts
 async function fetchDataMyLandingPage() {
-const response = await fetch("https://fakestoreapi.com/products");
-const data = await response.json();
-return { data };
+  const response = await fetch("https://fakestoreapi.com/products");
+  const data = await response.json();
+  return { data };
 }
 
 // Mapping slug to the data-fetching function
 const dynamicContent = {
-"my-landing-page": fetchDataMyLandingPage,
+  "my-landing-page": fetchDataMyLandingPage,
 };
 
 export default dynamicContent;
@@ -292,26 +291,26 @@ Use `Promise.all` to fetch data from multiple endpoints concurrently.
 ```ts src/dynamicContent/index.ts
 async function fetchDataHomepage() {
 try {
-    const [apiData1, apiData2] = await Promise.all([
+  const [apiData1, apiData2] = await Promise.all([
     fetch("https://fakestoreapi.com/products/1").then(res => res.json()),
     fetch("https://fakestoreapi.com/products/2").then(res => res.json())
-    ]);
+  ]);
 
-    return {
+  return {
     data: {
         product1: apiData1,
         product2: apiData2,
     },
-    };
+  };
 } catch (error) {
-    return { data: null, error: "Error fetching data from APIs" };
-}
+  return { data: null, error: "Error fetching data from APIs" };
+  }
 }
 
 // Mapping slugs to their respective data-fetching functions
 const dynamicContent = {
-home: fetchDataHomepage,
-"my-landing-page": fetchDataMyLandingPage,
+  home: fetchDataHomepage,
+  "my-landing-page": fetchDataMyLandingPage,
 };
 
 export default dynamicContent;
@@ -329,9 +328,9 @@ For both approaches, [data fetching using Fetch API](#using-fetch-api-or-any-req
 
 ```ts
 return {
-data: {
+  data: {
     // data fetched
-},
+  },
 };
 ```
 
@@ -339,9 +338,9 @@ The data object can contain other objects inside:
 
 ```ts
 return {
-data: {
+  data: {
     key1: result1,
     key2: result2,
-},
-    ;
+  },
+};
 ```
