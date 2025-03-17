@@ -166,23 +166,23 @@ After [mapping pages and data-fetching functions](#1-mapping-pages-and-data-fetc
 8. Create a file called `extra.ts` inside the' resolvers' folder.
 9. Add the following code to it:
 
-  ```ts src/graphql/thirdParty/resolvers/extra.ts
-  import { ExtraDataRoot } from "./query";
+    ```ts src/graphql/thirdParty/resolvers/extra.ts
+    import { ExtraDataRoot } from "./query";
 
-  export const ExtraData = {
-    data: (root: ExtraDataRoot) => root.data,
-    customFieldFromRoot: (root: ExtraDataRoot) => root?.data?.[0]?.image ?? "",
-    customField: async (_: ExtraDataRoot) => {
-      const res = await fetch(
-        "https://fakestoreapi.com/products/category/jewelery"
-      );
-      const customField = await res.json();
-      return (customField?.[0]?.title as string) ?? "";
-    },
-  };
-  ```
+    export const ExtraData = {
+      data: (root: ExtraDataRoot) => root.data,
+      customFieldFromRoot: (root: ExtraDataRoot) => root?.data?.[0]?.image ?? "",
+      customField: async (_: ExtraDataRoot) => {
+        const res = await fetch(
+          "https://fakestoreapi.com/products/category/jewelery"
+        );
+        const customField = await res.json();
+        return (customField?.[0]?.title as string) ?? "";
+      },
+    };
+    ```
 
-     - The `Query` function returns the API data in the field `extraData` through a request on an external API.
+      - The `Query` function returns the API data in the field `extraData` through a request on an external API.
 
 10. Inside the `resolvers` folder, create a file called `index.ts` and add the following code:
 
