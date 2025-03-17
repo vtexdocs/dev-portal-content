@@ -94,7 +94,7 @@ It is also possible to define your configurations through event listening. In th
 
 If you are developing a GraphQL app, add the `@settings` directive to all queries that can receive configurations.
 
-A [GraphQL Directive](https://graphql.org/learn/queries/#directives) is a way of changing how the query will be performed. When you add the `settings` directive, the system knows it must search for configurations for that service. Under the hood, this directive is including one extra step to the query, which is responsible for finding all the configurations and adding them to the context.
+A [GraphQL Directive](https://graphql.org/learn/queries/#directives) is a way of changing how the query will be performed. When you add the `settings` directive, the system knows it must search for configurations for that service. Under the hood, this directive includes one extra step to the query, which is responsible for finding all the configurations and adding them to the context.
 
 Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app as an example. In this app's root directory, you'll see the following file `grapqhl/schema.graphql`. Now, if you open it and add the `@settings` directive to the query `book`, you'll have something like:
 
@@ -111,7 +111,7 @@ Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app a
 
 ### Step 3 - Declaring policies and permissions
 
-In the `manifest.json` file, add the `read-workspace-apps` [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) to the `"policies"` list. This policy is responsible for allowing the service app to read the data from the configuration app.
+In the `manifest.json` file, add the `read-workspace-apps` [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) to the `policies` list. This policy allows the service app to read data from the configuration app.
 
 ```json
 "policies": [
@@ -123,7 +123,7 @@ In the `manifest.json` file, add the `read-workspace-apps` [policy](https://deve
 
 ### Step 4 - Setting up the `configuration` builder
 
-1. Open the app's `manifest.json` file and add the `configuration` builder to the `builders` list. Also, update the `name` and `vendor` fields according your scenario. For example:
+1. Open the app's `manifest.json` file and add the `configuration` builder to the `builders` list. Also, update the `name` and `vendor` fields according to your scenario. For example:
 
    ```diff
     {
@@ -137,7 +137,7 @@ In the `manifest.json` file, add the `read-workspace-apps` [policy](https://deve
    ```
 
 2. Create a `configuration` folder in your app's root directory.
-3. Create a file named `schema.json` inside the `configuration` folder. This file will hold information about the settings structure that the Service app is going to accept from other apps on the platform.
+3. Create a file named `schema.json` inside the `configuration` folder. This file holds information about the settings structure that the Service app will accept from other apps on the platform.
 4. In the `configuration/schema.json` file, create a JSON Schema according to your scenario. The JSON Schema will be used to identify new configurations coming from apps and define the expected format of a new configuration. For example:
 
    ```json
@@ -173,7 +173,7 @@ Once your Service app is deployed, it is ready to receive configurations from ot
    }
    ```
 
-  Ensure that the name of the builder matches the Service you want your app to configure, and the version matches the desired Service app version.
+  Ensure that the builder's name matches the Service you want your app to configure and that its version matches the desired Service app version.
 2. Create a new folder named after your Service app and create a new file named `configuration.json` within it (e.g., `vtex.most-amazing-service-ever/configuration.json`).
 3. In the `configuration.json`, define which service configurations are expected according to the JSON schema structure previously defined in the Service app. For example:
 
@@ -196,7 +196,7 @@ To retrieve the configurations received by the Service app, use the following co
 const settings = ctx.vtex.settings;
 ```
 
-The `ctx` can be either a `EventContext` or a `ServiceContext`.
+The `ctx` can be either `EventContext` or `ServiceContext`.
 
 The received configurations are structured as an array of objects, as demonstrated in the example below:
 
@@ -219,4 +219,4 @@ Each element in this array consists of:
 
 Note that multiple apps can configure the same service. Hence, each element in this array represents a configuration originating from a different app.
 
-> ℹ️ If you are getting errors with the service configuration app, see the [troubleshooting guide](https://developers.vtex.com/docs/guides/i-am-getting-errors-with-my-service-configuration-app).
+> ℹ️ If you are getting errors with the service configuration app, see the [troubleshooting guide](https://developers.vtex.com/docs/troubleshooting/i-am-getting-errors-with-my-service-configuration-app).
