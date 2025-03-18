@@ -18,7 +18,7 @@ You can enable actions to boost your store's website performance directly in the
 
 Additionally, you can implement manual optimization by changing the project source code, as described in the [Manual optimizations](#manual-optimizations) section.
 
-These actions can improve SEO by up to 80% and page loading time by over 50%. This data can be identified with leading website performance analysis tools, such as [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/1205784?hl=en). Learn more in the **Monitoring tools** section within the [Performance](LINK) guide.
+These actions can improve SEO by up to 80% and page loading time by over 50%. This data can be identified with leading website performance analysis tools, such as [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/1205784?hl=en). Learn more in the **Monitoring tools** section within the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
 
 This guide presents the following sections:
 
@@ -162,7 +162,7 @@ Use the `__fold__.experimentalLazyAssets` block to specify which theme blocks sh
 
 #### Reduce the number of menu blocks
 
-In cases where a menu block doesn't have submenus declared within it, configure it to use `menu-item` blocks as props.
+In cases where a menu block doesn't have a submenu declared within it, configure it to use `menu-item` blocks as props.
 
 In the example below, the main `menu items` (Apparel & Accessories, Home & Decor, and More) can't be modified in their implementation. They must remain as children since they have a trigger to open a `submenu`.
 
