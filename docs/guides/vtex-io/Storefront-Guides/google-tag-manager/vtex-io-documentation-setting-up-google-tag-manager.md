@@ -23,7 +23,7 @@ In this guide, you will learn how to track and analyze store data using Google A
 
 ### Get the VTEX IO Google Tag Manager app
 
-Install and configure the VTEX IO Google Tag Manager app. For more information, see the guide [Installing Google Tag Manager](https://developers.vtex.com/docs/guides/store-framework-analytics-installing-google-tag-manager).
+Install and configure the VTEX IO Google Tag Manager app. For more information, see the guide [Installing Google Tag Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-google-tag-manager).
 
 ### Create a Google Analytics 4 (GA4) Configuration tag
 
