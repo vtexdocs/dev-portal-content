@@ -4,32 +4,30 @@ excerpt: "A new component which shows either the product brand name or product b
 createdAt: "2019-07-03T14:47:00.000Z"
 ---
 
-## What has changed 
-
-Before the release of this component, it was only possible to retrieve the product’s brand name through the [Product Name component](https://github.com/vtex-apps/store-components/blob/master/react/components/ProductName/README.md), meaning that it was not possible to show a brand name by itself in the Product Details page since the brand data would always be displayed alongside the product name. 
-
-With Brand component, it is now possible to display not only the product’s brand name independently, but also the product’s brand logo, which was not available before.
+With the introduction of the Brand component, you can now display the product’s brand name independently and also showcase the brand logo, which was not possible before.
 
 ![brand-component](https://user-images.githubusercontent.com/52087100/60600980-a374d700-9d87-11e9-9f57-e10cbe371577.png)
 
-## Key advantage
+## What has changed 
 
-The new component provides more flexibility to build your Product Details pages, by showing the product brand name and/or the brand logo in any position on the page with its own css customization.
+Previously, the product’s brand name could only be retrieved through the [Product Name component](https://developers.vtex.com/docs/apps/vtex.store-components@3.68.0/ProductName). This limitation meant that the brand name could not be displayed separately from the product name on the Product Details page.
 
-## What you need to do
+## Why did we make this change?
 
-__1.__ Make sure your store has at least the 3.47.0 version of the app [Store Components](https://github.com/vtex-apps/store-components) installed.
+The new component provides more flexibility in building your Product Details pages by showing the product brand name and/or the brand logo in any position on the page with its own CSS customization.
 
-__2.__ Add the component [Product Brand](https://github.com/vtex-apps/store-components/tree/master/react/components/ProductBrand) to your [Product Details](https://github.com/vtex-apps/product-details) page block.
+## What needs to be done?
 
-__3.__ Configure your Product Details Page block with the following props:
+1. Ensure your store is running [Store Components](https://developers.vtex.com/docs/apps/vtex.store-components) version 3.47.0 or later.
+2. Add the component [Product Brand](https://developers.vtex.com/docs/apps/vtex.store-components@3.68.0/ProductBrand) to your Product Details Page (PDP).
+3. Configure your PDP block with the following props:
 
-- `displayMode`: __string__ - you should choose between “logo” or “text”. This will define whether the product brand will be displayed by name or logo.
+| Property          | Type                | Description                                                                                                                |
+|-------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `displayMode`     | `string`            | Choose between `logo` or `text` to define how the product brand is displayed. |
+| `fallbackToText`  | `boolean`           | Defines what should be done when no image is registered in the VTEX Catalog. Defaults to `true`, replacing the logo with the brand name. Set it to `false` to hide the brand if no logo is available. Only applicable when `displayMode` is `logo`. |
+| `height`          | `number`            | Sets the brand logo height. Only applicable when `displayMode` is `logo`.                                            |
+| `excludeBrands`   | `array of strings`  | List of brand names or brand IDs to exclude from being displayed. Useful for hiding test brands/logos. |
 
-- `fallbackToText`: __boolean__ - This prop should only be used when `displayMode` is set to `logo`. It defines what should be done when the Brand Component should have displayed a brand logo but no image was registered in the VTEX Catalog. This prop is set as `true` by default, allowing the logo to be replaced with the brand name in those cases. When set as `false`, the store will not show the brand name instead of the brand logo.
 
-- `height`: __number__ - it sets the logo height. It should only be used when `displaymode` is set to “logo”.
-
-- `excludeBrands`: __array of strings__ - The brand names or brand IDs that are listed in the array will never be displayed by the Brand component. It is usually useful to hide default brand names/logos or test brand names/logos on the store front.
-
-:eyes: Remember that it is necessary to choose between “text” and “logo” in the ‘displaymode’ prop, meaning that __if you want to add both the Brand name and the Brand logo to to your Product Details page, the Brand component should be added twice__, setting the ‘displaymode’ prop to “logo” and “text” each time.
+> ⚠️ The `displayMode` prop allows you to choose between `text` and `logo`. If you want to display both the brand name and logo, add the Brand component twice, setting `displayMode` to `text` in one instance and `logo` in the other.
