@@ -4,6 +4,7 @@ slug: "2025-03-14-vtex-id-api-new-endpoints-for-token-renewal"
 hidden: false
 type: "added"
 createdAt: "2025-03-14T00:00:00.219Z"
+updatedAt: ""
 excerpt: "VTEX ID API now allows you to renew API tokens with new secure endpoints."
 ---
 
