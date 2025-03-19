@@ -16,6 +16,8 @@ It supports integration with [Headless CMS](https://developers.vtex.com/docs/gui
 | **Stability** | Built to be stable and avoid crashes, so your store doesn't lose sales due to provider issues.  |
 | **Analytics/SEO** | Works with analytics tools to understand store customers and with SEO tools to improve store visibility in search results. |
 
+> ⚠ For a detailed understanding of the key differences between FastStore versions, their support levels, and guidelines for upgrading, please refer to the [FastStore versions and support levels](https://developers.vtex.com/docs/guides/faststore/versions-support) guide.
+
 ## FastStore architecture
 
   ```mermaid
