@@ -112,6 +112,7 @@ A set of configurations on the VTEX platform defining catalog, pricing, promotio
 
 ## V
 ### VTEX App Store
+A marketplace for [VTEX IO](#vtex-io) plug-and-play solutions, where both first-party and third-party apps can be published and downloaded by clients and partners. Learn more in [VTEX App Store](https://developers.vtex.com/docs/guides/vtex-app-store).
 
 ### VTEX IO
 A cloud-based development platform designed to enhance the agility and autonomy of creating and managing online stores. It allows for the streamlined and independent development of applications and new software, supporting multiple environments known as [workspaces](#workspaces). Learn more in [What is VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
