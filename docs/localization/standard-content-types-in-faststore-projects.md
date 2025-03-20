@@ -3,9 +3,9 @@ title: "Standard Content Types in FastStore projects"
 createdAt: "2025-02-18T19:02:14.003z"
 ---
 
-Headless CMS [Content Types](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms) are the building blocks for creating a scalable and maintainable storefront in FastStore. After onboarding via the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) app, these Content Types are pre-implemented in your starter store, enabling you to quickly build pages like the Home, Product Listing, and Custom Landing.
+Headless CMS [Content Types](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms) are the building blocks for creating a scalable and maintainable storefront in FastStore. After onboarding via the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) app, Content Types are pre-implemented in your starter store, enabling you to quickly build pages like Home, Product Listing, and Custom Landing.
 
-Content Types are organized by [Scopes](https://developers.vtex.com/docs/guides/faststore/headless-cms-managing-content-with-scopes-and-requiredscopes#scopes), which define the context in which each Content Type can be used. They categorize Content Types based on their functionality. For example, a Content Type with a `pdp` scope can only be used on PDPs.
+Content Types are organized by [Scopes](https://developers.vtex.com/docs/guides/faststore/headless-cms-managing-content-with-scopes-and-requiredscopes#scopes), which define the context in which each Content Type can be used. Scopes categorize Content Types based on their functionality. For example, a Content Type with a `pdp` scope can only be used on PDPs.
 
 The following table provides an overview of the standard Content Types, their IDs, scopes, and their respective purposes.
 
@@ -13,11 +13,11 @@ The following table provides an overview of the standard Content Types, their ID
 
 | **Content Type** | **ID** | **Scopes** | **Purpose** |
 | ------------------------------- | -------- | --------------- | --------------- |
-| Global Sections | `globalSections` | `global` | Defines reusable sections that appear across pages. |
+| Global Sections | `globalSections` | `global` | Defines reusable sections that show across pages. |
 | Global Header Sections | `globalHeaderSections` | `global` | Defines the content for the global header, displayed at the top of every page. |
 | Global Footer Sections | `globalFooterSections` | `global` | Defines the content for the global footer, displayed at the bottom of every page. |
 | Landing Page | `landingPage` | `landing` and `custom` | Creates custom landing pages with SEO optimization. |
-| Home | `home` | `home` | Defines the structure and SEO metadata for the home page. |
+| Home | `home` | `home` | Defines the structure and SEO metadata for the homepage. |
 | Product Page | `pdp` | `pdp` | Defines the structure and template for Product Detail Pages (PDP). |
 | Product List Page | `plp` | `plp` | Defines the structure and settings for Product Listing Pages (PLP). |
 | Search Page | `search` | `plp` and `search` | Defines the structure and settings for search results pages. |
