@@ -4,6 +4,24 @@
 
 This repository contains all the files for the guides featured in the [VTEX Developer Portal](https://developers.vtex.com).
 
+## Table of Contents
+
+- [Contributing to the documentation](#contributing-to-the-documentation)
+  - [Feedback button](#feedback-button)
+    - [Feedback type](#feedback-type)
+  - [Was this helpful?](#was-this-helpful)
+  - [Suggest edits (GitHub)](#suggest-edits-github)
+- [GitHub Actions](#github-actions)
+  - [Preview Modified Pages](#preview-modified-pages)
+  - [Write Good](#write-good)
+  - [Check Links](#check-links)
+  - [Links Issues](#links-issues)
+  - [Update MDX Images](#update-mdx-images)
+  - [Check Broken Links](#check-broken-links)
+  - [Check VTEX Styleguide](#check-vtex-styleguide)
+  - [Navigation Preview](#navigation-preview)
+  - [Markdown Lint](#markdown-lint)
+
 ## Contributing to the documentation
 
 We invite you to join us and learn how to contribute to our documentation. Your help makes a huge difference in improving our documentation experience. Below are several ways you can do it:
@@ -81,3 +99,87 @@ By clicking `Suggest edits (GitHub)`, a new browser window will open with the do
 Once you create a pull request, our team will review your changes as soon as possible and follow up with you in the pull request comments.
 
   > ⚠ Pull requests go through a review process to ensure quality and consistency. Our team may request changes before approving them.
+
+
+## GitHub Actions
+
+This repository uses several GitHub Actions to ensure documentation quality and provide helpful previews. Here's a detailed overview of each action:
+
+### Preview Modified Pages
+**Trigger**: Pull requests  
+**Purpose**: Generates preview links for modified markdown/MDX files.  
+**Dependencies**:
+- `actions/checkout@v3`: Checks out the repository
+- `tj-actions/branch-names@v7`: Gets branch name information
+- `tj-actions/changed-files@v36`: Detects changed markdown files
+- `actions/github-script@v6`: Runs JavaScript in the workflow
+- `thollander/actions-comment-pull-request@v2`: Comments on PRs with preview links
+
+### Write Good
+**Trigger**: Pull requests  
+**Purpose**: Checks documentation quality using textlint with the write-good rule.  
+**Dependencies**:
+- `actions/checkout@v2`: Checks out the repository
+- `actions/setup-node@v1`: Sets up Node.js environment
+- `tsuyoshicho/action-textlint@v3`: Runs textlint checks and reports issues
+
+### Check Links
+**Trigger**: Pull requests  
+**Purpose**: Validates links in modified markdown files.  
+**Dependencies**:
+- `actions/checkout@master`: Checks out the repository
+- `gaurav-nelson/github-action-markdown-link-check@v1`: Performs link checking
+
+### Links Issues
+**Trigger**: Repository dispatch, manual workflow, or daily at 17:00 UTC  
+**Purpose**: Performs comprehensive link checking and creates issues for broken links.  
+**Dependencies**:
+- `actions/checkout@v3`: Checks out the repository
+- `lycheeverse/lychee-action@v1.5.4`: Performs link checking
+- `peter-evans/create-issue-from-file@v4`: Creates issues from check results
+
+### Update MDX Images
+**Trigger**: Pull requests to main branch  
+**Purpose**: Updates and manages images in MDX files.  
+**Dependencies**:
+- `actions/checkout@v3`: Checks out the repository
+- `tj-actions/changed-files@v29.0.2`: Detects changed files
+- `stefanzweifel/git-auto-commit-action@v4`: Commits image updates
+- Node.js packages: `front-matter`, `image-downloader`
+
+### Check Broken Links
+**Trigger**: Pull requests (opened or synchronized)  
+**Purpose**: Checks for broken links in modified markdown files.  
+**Dependencies**:
+- `actions/checkout@v3`: Checks out the repository
+- `actions/setup-node@v3`: Sets up Node.js environment
+- `tj-actions/changed-files@v45`: Detects changed markdown files
+- `reviewdog/action-setup@v1`: Sets up Reviewdog
+- Node.js packages: `node-fetch`, `@actions/core`
+
+### Check VTEX Styleguide
+**Trigger**: Pull requests (opened or synchronized)  
+**Purpose**: Ensures documentation follows VTEX style guidelines.  
+**Dependencies**:
+- `actions/checkout@v3`: Checks out the repository
+- `actions/setup-node@v3`: Sets up Node.js environment
+- `tj-actions/changed-files@v45`: Detects changed markdown files
+- `reviewdog/action-setup@v1`: Sets up Reviewdog
+- Node.js packages: `@actions/core`
+
+### Navigation Preview
+**Trigger**: Pull requests  
+**Purpose**: Provides preview links for navigation changes.  
+**Dependencies**:
+- `actions/checkout@v3`: Checks out the repository
+- `tj-actions/branch-names@v7`: Gets branch name information
+- `tj-actions/changed-files@v36`: Detects navigation file changes
+- `actions/github-script@v6`: Runs JavaScript in the workflow
+- `thollander/actions-comment-pull-request@v2`: Comments on PRs with preview links
+
+### Markdown Lint
+**Trigger**: Pull requests  
+**Purpose**: Lints markdown files for consistent formatting.  
+**Dependencies**:
+- `actions/checkout@v1`: Checks out the repository
+- `reviewdog/action-markdownlint@v0`: Runs markdown linting with reviewdog integration
