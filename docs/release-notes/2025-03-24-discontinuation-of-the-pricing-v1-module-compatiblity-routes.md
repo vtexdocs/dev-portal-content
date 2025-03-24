@@ -16,7 +16,7 @@ After July 1, 2025, any store using the compatibility routes of the Pricing V1 m
 
 We've disabled the compatibility routes of the Pricing V1 module to simplify maintenance and focus on evolving the platform. This change requires all clients to adopt the routes of the Pricing V2 module, which ensures access to updates and new features.
 
-This action is part of the deprecation process of the previous version of the module, announced in [Pricing V1 module will be discontinued](https://help.vtex.com/en/announcements/deprecacao-pricing-v1--46YxKNOCLH2Ykw6a9uyxXB?&utm_source=autocomplete).
+This action is part of the deprecation process of the previous version of the module, announced in [Pricing V1 module will be discontinued](https://help.vtex.com/en/announcements/deprecacao-pricing-v1--46YxKNOCLH2Ykw6a9uyxXB).
 
 ## What needs to be done?
 
