@@ -6,15 +6,15 @@ Once you have [created your FastStore project](https://developers.vtex.com/docs/
 
 The WebOps Dashboard provides a comprehensive overview of website builds and deploy previews and offers suggestions on how to improve your storefront's performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
 
-![dashboard-overview](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-overview___68ef21af7fa7ba11562a961be1448cb2.png)
+![dashboard-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-14723-faststore-dashboard/images/dashboard-overview.png)
 
-To access the WebOps Dashboard, in the VTEX Admin, go to **Storefront > FastStore WebOps**. The Dashboard has three tabs: [Overview](#overview), [Deploys](#deploys) and [Integrations](#integrations).
+To access the WebOps Dashboard, go to **Storefront > FastStore WebOps** in the VTEX Admin. The Dashboard has four tabs: [Overview](#overview), [Deploys](#deploys), [Integrations](#integrations), and [Settings](#settings).
 
 ---
 
 ## Overview
 
-The Overview tab provides a quick snapshot of your website's key details, including the live store URL, CMS information, and latest deploy.
+The **Overview** tab provides a quick snapshot of your website's key details, including the live store URL, CMS information, and latest deploy.
 
 ### Production Overview
 
@@ -24,21 +24,9 @@ The **Production Overview** section provides the following information about the
 | :-------------------- | :----------------------------------------------------------------------------------------------- |
 | **Live Store**        | URL for your production environment, accessible to shoppers.                                     |
 | **Repository**        | GitHub repository associated with the project.                                                   |
-| **Deploy**            | Commit for the current deployment, including the date, time, and who made it.                    |
+| **Source**            | Commit for the current deployment, including the date, time, and who made it.                    |
 | **CMS Provider**      | Link to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
 | **CMS Project**       | Link to the FastStore project in Headless CMS.                                                   |
-
-#### Live store ID
-
-After onboarding with the WebOps app, you can access your store through a live store URL. To find the live store URL, access **Storefront > FastStore WebOps** in the VTEX Admin. In the [**Production Overview**](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#production-overview) card, locate the **Live Store** URL.
-
-The live store URL includes a `liveStoreId`, a unique identifier for your store. It combines your store account name and a live store ID number, for example: `https://mystore-clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b.vtex.app`. Let's break down the example to understand the `liveStoreId`:
-
-- `mystore-clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b`: the `liveStoreId`.
-- `mystore`: the account name.
-- `clwjc7fw200ay9qau1smn8i4l-21vm59f3q.b`: the live store ID number.
-
-> The live store ID also helps you [set up the Preview URL in the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-2-configuring-the-headless-cms), enabling you to preview changes to your pages via the Headless CMS.
 
 #### Live deployment statuses
 
@@ -66,7 +54,7 @@ This section lists the recent deploys to your production store. Each item on the
 
 ![dashboard-lighthouse-score](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-production-deploys___840fcb7b30bc2c7a1e4e5d1d255a58f9.png)
 
-The complete list of all store deploys and details about them, see the [Deploys](#deploys) tab.
+For a complete list of all store deployments and details about them, see the [Deploys](#deploys) tab.
 
 ### Preview Deploys
 
@@ -76,41 +64,57 @@ This section lists all the deploy previews created for GitHub branches in your p
 
 The **Deploys** tab provides insights into your store's deployments, including their status (success, failed, etc.). The table below summarizes the key features of the Deploys page.
 
-![deploys-overview-page](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-deploys-ui___73666db46f823dbaf51087d163545254.png)
+![deploys-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-14723-faststore-dashboard/images/deploys-webops.png)
 
 | **Feature** | Description |
 | ----------- | ----------- |
-| 1 - Search bar | Searchs by deploy ID, commit, message, or author. |
+| 1 - Search bar | Searches by deploy ID, commit, message, or author. |
 | 2 - Pagination | Navigates through pages of deployment data. |
 | 3 - Enviroment | Filters deployments by environment: <ol><li>Production: The live store where customers can interact with. </li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol> |
 | 4 - Branch | Filters deployments by GitHub branches. |
 | 5 - Status | Filters deploy status: <ol><li>Queued: The deployment is the next in line to be executed.</li><li>In progress: The deployment is underway.</li><li>Success: The deployment has completed successfully.</li><li>Failed: The deployment process encountered an error and did not complete as expected.</li></ol> |
 | 6 - Sort by | Filters deployments by **Latest first** or **Oldest First**. |
-| 7 - Deployments table | Lists each store deployment with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deploy author, and the date and time of the deploy.</li><li>Environment: The environment which received the changes, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deploy status.</li></ol>
+| 7 - Deployments table | Lists each store deployment with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deploy author and the date and time of the deployment.</li><li>Environment: The environment which received the changes, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deploy status.</li></ol>
 
 ### Deployment details
 
 For more information, click any entry in the deploy table.
 
-![dashboard-deploys-page-details](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-deploys-details___0bf4d690aaa118020420dd70ddd3a1b6.gif)
+![deployment-details](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-14723-faststore-dashboard/images/deployment-details.gif)
 
-In the **Deploy Steps** section, select a step (e.g., **Build - Discovery**) to view build logs. These logs appear on the right and help diagnose failed deployments.
+In the **Deploy Steps** section, select a step (example: **Build - Discovery**) to view logs. These logs appear on the right and help diagnose failed deployments.
 
 ## Integrations
 
-The **Integrations** tab allows you to configure store pages for Lighthouse Tests. Here, you can specify the URLs for a product listing page (PLP) and a product details page (PDP) to undergo automatic Lighthouse score testing during deployments. This ensures a consistent testing experience.
+The **Integrations** tab allows you to configure store pages for Lighthouse Tests. Here, you can specify the URLs for a product listing page (PLP) and a product details page (PDP) to undergo automatic Lighthouse score testing during deployments, ensuring a consistent testing experience.
 
-![dashboard-integrations](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-integrations___8575a9f0fc2abfa64bdfc10fc7534e9d.png)
+![integrations-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-14723-faststore-dashboard/images/integrations-webops.png)
 
 ### Configuring pages for Lighthouse testing
 
 To set the pages you want to test with Lighthouse, follow these steps:
 
-1. In the **Default Category for PLP** field, enter the [category](https://help.vtex.com/en/tutorial/what-is-a-category--6HV4Q3E2FauUoOQoiCCgCg) slug defined in the Catalog.
-2. In the **Default Product Slug for PDP**, enter the slug for the specific PDP you want to test.
+1. In the **Path for a PLP** field, enter the [category](https://help.vtex.com/en/tutorial/what-is-a-category--6HV4Q3E2FauUoOQoiCCgCg) slug defined in the Catalog.
+2. In the **Path for a PDP** field, enter the slug for the specific product detail page (PDP) you want to test.
 3. Click `Save`.
 
-Once you've set the pages for testing and after a new deploy, go to the **Overview** tab and access the **Lighthouse Scores** section to check the scores for those pages.
+Once you've set the pages for testing and after a new deployment, go to the **Overview** tab and access the **Lighthouse Scores** section to check the scores for those pages.
+
+## Settings
+
+The **Settings** tab allows you to quickly configure the production domains, without needing VTEX intervention.
+
+![settings-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-14723-faststore-dashboard/images/settings-webops.png)
+
+> ⚠️ The proper configuration of the **Settings** tab is an essential step in the process of going live. For further information, see [Configuring external DNS](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns).
+### Production domain
+
+In the **Production domain** section, choose your store’s domain from the dropdown list within the **Host** field and then click `Add` to set up the primary domain of your store.
+### Current Domains
+
+In the **Current Domains** section are the default and the primary domains configured for your store.
+
+To verify if your domain is properly configured in the FastStore WebOps environment, navigate to the Settings tab and check if it appears in the **Current Domains** list.
 
 ## Deleting the project
 
