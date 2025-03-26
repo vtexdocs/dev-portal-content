@@ -102,7 +102,7 @@ Once you've set the pages for testing and after a new deployment, go to the **Ov
 
 ## Settings
 
-The **Settings** tab allows you to quickly configure the production domains, without needing VTEX intervention.
+The **Settings** tab is where you configure your store’s production domain as part of the go-live process. Here, you can add your primary production domain to ensure it is properly set up for customer access. Before adding the domain, make sure the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) are correctly configured in your VTEX Account Settings.
 
 ![settings-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-14723-faststore-dashboard/images/settings-webops.png)
 
@@ -110,11 +110,13 @@ The **Settings** tab allows you to quickly configure the production domains, wit
 ### Production domain
 
 In the **Production domain** section, choose your store’s domain from the dropdown list within the **Host** field and then click `Add` to set up the primary domain of your store.
+
 ### Current Domains
 
-In the **Current Domains** section are the default and the primary domains configured for your store.
+The **Current Domains** section displays the default and primary domains that have been configured for your store. This section serves as a reference point to ensure that your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment. 
 
-To verify if your domain is properly configured in the FastStore WebOps environment, navigate to the Settings tab and check if it appears in the **Current Domains** list.
+If your domain is not listed, it may indicate an issue with the configuration or DNS settings that need to be addressed before proceeding with the go-live process.
+
 
 ## Deleting the project
 
