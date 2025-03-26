@@ -7,7 +7,7 @@ components:
   - Rating.tsx
 ---
 
-The `Rating` component displays the average rating of a product based on other shoppers' feedback and reviews. `Rating` supports icons from our components.
+The `Rating` component displays a product's average rating based on other shoppers' feedback and reviews. It supports icons from our components.
 
 ## Overview
 
@@ -80,6 +80,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 <TokenTable>
   <TokenRow token="--fs-rating-gap" value="var(--fs-spacing-0)" />
   <TokenRow token="--fs-rating-color" value="var(--fs-color-text)" isColor />
+  <TokenRow token="--fs-rating-color-empty" value="var(--fs-color-neutral-4)" isColor />
 </TokenTable>
 
 ### Nested Elements
@@ -88,10 +89,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 <TokenTable>
   <TokenRow token="--fs-rating-icon-width" value="var(--fs-spacing-3)" />
-  <TokenRow
-    token="--fs-rating-icon-height"
-    value="var(--fs-rating-icon-width)"
-  />
+  <TokenRow token="--fs-rating-icon-height"  value="var(--fs-rating-icon-width)" />
 </TokenTable>
 
 ### Variants
@@ -126,7 +124,10 @@ const [rating, setRating] = useState(3)
 ```
 
 <TokenTable>
-  <TokenRow token="--fs-rating-actionable-gap" value="0" />
+  <TokenRow
+    token="--fs-rating-actionable-gap"
+    value="0"
+  />
   <TokenRow
     token="--fs-rating-actionable-icon-width"
     value="var(--fs-rating-icon-width)"
@@ -134,6 +135,20 @@ const [rating, setRating] = useState(3)
   <TokenRow
     token="--fs-rating-actionable-icon-height"
     value="var(--fs-rating-actionable-icon-width)"
+  />
+  <TokenRow
+    token="--fs-rating-actionable-icon-color"
+    value="var(--fs-rating-color-empty)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-rating-actionable-icon-color-selected"
+    value="var(--fs-rating-color)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-rating-button-min-height"
+    value="var(--fs-spacing-5)"
   />
 </TokenTable>
 
