@@ -56,43 +56,43 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
 
 3. To display PLP data (e.g., collection names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook. For PDP data (e.g., product titles), use [`usePDP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#hooks-for-consuming-api-extension-data) hook:
 
-  <details>
-  <summary>`usePLP()` hook</summary>
+    <details>
+    <summary>`usePLP()` hook</summary>
 
-    ```tsx
-    import { usePLP } from '@faststore/core'
+      ```tsx
+      import { usePLP } from '@faststore/core'
 
-      export default function CustomPLPName() {
-        const context = usePLP()
+        export default function CustomPLPName() {
+          const context = usePLP()
 
-        return (
-          <section>
-            <h1>Testing - {context.data?.collection?.seo?.title ?? 'PLP'}!</h1>
-          </section>
-        )
-      }
-    ```
+          return (
+            <section>
+              <h1>Testing - {context.data?.collection?.seo?.title ?? 'PLP'}!</h1>
+            </section>
+          )
+        }
+      ```
 
-  </details>
+    </details>
 
-  <details>
-  <summary>`usePDP()` hook</summary>
+    <details>
+    <summary>`usePDP()` hook</summary>
 
-    ```tsx
-    import { usePDP } from '@faststore/core'
+      ```tsx
+      import { usePDP } from '@faststore/core'
 
-      export default function CustomPDPName() {
-        const context = usePDP()
+        export default function CustomPDPName() {
+          const context = usePDP()
 
-        return (
-          <section>
-            <h1>Testing - {context.data?.product?.seo?.title ?? 'PDP'}!</h1>
-          </section>
-        )
-      }
-    ```
+          return (
+            <section>
+              <h1>Testing - {context.data?.product?.seo?.title ?? 'PDP'}!</h1>
+            </section>
+          )
+        }
+      ```
 
-  </details>
+    </details>
 
 ### Step 2: Sending the changes to the Headless CMS
 
@@ -100,7 +100,7 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
 2. Go to the VTEX Admin, access **Storefront > Headless CMS**.
 3. Access the **Product List Page** or **Product Details Page** Content Type. For this instruction, we'll use the **Product List Page** Content Type.
 
-  > ⚠ Repeat these steps for the **Product Details Page** Content Type if optimizing a PDP section.
+    > ⚠ Repeat these steps for the **Product Details Page** Content Type if optimizing a PDP section.
 
 4. Add the custom section you created. At the end of the section, you’ll notice the **Skip lazy loading** option.
 
