@@ -1,6 +1,6 @@
 ---
 title: "Textarea"
-excerpt: Status descriptors used to emphasize an item's state.
+excerpt: Multi-line fields used to get long user inputs.
 keywords:
   - UI library
   - ecommerce
@@ -15,7 +15,20 @@ sidebar_custom_props:
 
 ## Overview
 
-
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Textarea placeholder="Label" id="textareafield-default" />
+      <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+     <Textarea placeholder="Label" id="textareafield-default" />
+     <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
@@ -40,6 +53,15 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 ---
 
 ## Usage
+
+<OverviewSection>
+  <Textarea placeholder="Text area" />
+</OverviewSection>
+```tsx
+<Textarea placeholder="Text area" />
+```
+
+---
 
 ## Props
 
@@ -169,6 +191,6 @@ For further customization, you can use the following data attributes:
 TextareaField wraps a Textarea and its corresponding Label."
     actionPath="/docs/guides/faststore/molecules-textarea-field"
   >
-    <TextareaField label="Share your thoughts about the product. How would you describe its quality?" id="textareafield-default" />
+    <TextareaField label="Label" id="textareafield-default" />
   </SectionItem>
 </SectionList>
