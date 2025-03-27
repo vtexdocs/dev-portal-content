@@ -58,11 +58,13 @@ The Session module exports a `createSessionStore` function and `Session` type, w
 ```ts
 import { createSessionStore } from '@faststore/sdk'
 import type { Session } from '@faststore/sdk'
+```
+
 ## Usage
 
 The following example demonstrates how to manage a session using `createSessionStore`.
-The `createSessionStore` function initializes a session store with the provided default session and an optional validation function.
-The `validateSession` function sends the current session data to the [FastStore API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) for validation and returns the validated session.
+- The `createSessionStore` function initializes a session store with the provided default session and an optional validation function.
+- The `validateSession` function sends the current session data to the [FastStore API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) for validation and returns the validated session.
 
 ```ts
 
