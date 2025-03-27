@@ -1,15 +1,11 @@
 ---
 title: "TextareaField"
 excerpt: Multi-line text fields used to get long user inputs.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/textarea___e8ea154f93f83a4e740ec760311665b0.png
 components:
   - TextareaField.tsx
 ---
 
 The `TextareaField` is a multi-line text field component to get long user inputs. The component wraps an [Textarea](https://developers.vtex.com/docs/guides/faststore/atoms-textarea) and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label).
-
-## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -22,6 +18,7 @@ The `TextareaField` is a multi-line text field component to get long user inputs
       />
       <TextareaField label="Input Disabled" id="textareafield-disabled" disabled />
     </OverviewSection>
+
   </Tab>
   <Tab>
     ```tsx
@@ -113,6 +110,14 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 #### Label
 
+<OverviewSection>
+  <TextareaField label="Label" id="textareafield-default" />
+</OverviewSection>
+
+```tsx
+  <TextareaField label="Label" id="textareafield-default" />
+```
+
 <TokenTable>
   <TokenRow
     token="--fs-textarea-field-label-placeholder-top-padding"
@@ -162,6 +167,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   error="Error Message"
   />
 </OverviewSection>
+
 ```tsx
 <TextareaField
  label="Input w/ Error Message"
@@ -209,6 +215,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 <OverviewSection>
   <TextareaField label="Input Disabled" id="textareafield-disabled" disabled />
 </OverviewSection>
+
 ```tsx
 <TextareaField label="Input Disabled" id="textareafield-disabled" disabled />
 ```
