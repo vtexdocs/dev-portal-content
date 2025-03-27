@@ -24,8 +24,8 @@ As soon as you complete this guide, your FastStore website will be accessible vi
 ### Step 1 - Creating DNS records
 
 1. Access your domain provider's website.
-2. Create a **CNAME** DNS record for your `www` domain (e.g., `www.mystore.com`) that points to `www.{rootDomain}.cdn.vtex.com` (example: `www.mystore.com.cdn.vtex.com`). Check your domain provider's documentation for more information.
-3. Now, create a **CNAME** record for the `secure` subdomain (example: `secure.mystore.com`) that points to `secure.{rootDomain}.cdn.vtex.com` (example: `secure.mystore.com.cdn.vtex.com`). The **Checkout **, **Order Placed**, **Login**, and **My Account** pages will use this subdomain.
+2. Create a **CNAME** DNS record for your `www` domain (example: `www.mystore.com`) that points to `www.{rootDomain}.cdn.vtex.com` (example: `www.mystore.com.cdn.vtex.com`). Check your domain provider's documentation for more information.
+3. Now, create a **CNAME** record for the `secure` subdomain (example: `secure.mystore.com`) that points to `secure.{rootDomain}.cdn.vtex.com` (example: `secure.mystore.com.cdn.vtex.com`). The **Checkout**, **Order Placed**, **Login**, and **My Account** pages will use this subdomain.
 
 > ℹ️ The configured addresses may not be immediately available to everyone due to DNS propagation, which can take 24-48 hours to complete.
 
@@ -118,10 +118,10 @@ The VTEX team will evaluate your request and take the necessary actions to confi
 
 To finish the domain configuration, add your store’s domain to [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview).
 
-> ⚠️ FastStore WebOps domain configuration always takes priority over any settings in discovery.config.js. It’s recommended that you manage all domain configurations through FastStore WebOps to centralize all domain settings into a single source.
+> ⚠️ FastStore WebOps domain configuration always takes priority over any settings in `discovery.config.js`. It’s recommended that you manage all domain configurations through FastStore WebOps to centralize all domain settings into a single source.
 
 1. Access your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard).
-2. Navigate to the Settings tab.
+2. Navigate to the **Settings** tab.
 3. In the **Host** field, choose your store’s domain (example: `www.mystore.com`) from the dropdown list.
 4. Click `Add`.
 
@@ -134,7 +134,7 @@ After adding your domain to FastStore WebOps, a new deployment will be triggered
 Then, verify that your domain is properly configured in the FastStore WebOps environment:
 
 1. Access your FastStore WebOps dashboard.
-2. Navigate to the Settings tab.
+2. Navigate to the **Settings** tab.
 3. Confirm your domain appears in the **Current Domains** list.
 
    ![currrent-domains](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-14746-update-golive-webops/docs/faststore/docs/go-live/current-domains.png)
