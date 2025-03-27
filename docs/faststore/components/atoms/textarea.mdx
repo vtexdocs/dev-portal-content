@@ -1,19 +1,11 @@
 ---
 title: "Textarea"
 excerpt: Multi-line fields used to get long user inputs.
-keywords:
-  - UI library
-  - ecommerce
-  - react
 components:
   - Textarea.tsx
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/textarea___e8ea154f93f83a4e740ec760311665b0.png
 ---
 
 `Textarea` enables users to input multi-line text. It's commonly used for longer user inputs, such as comments or descriptions.
-
-## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -49,17 +41,6 @@ To apply the styles of this component in your FastStore project, import the foll
 ```
 
 Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
-
-<OverviewSection>
-  <Textarea placeholder="Text area" />
-</OverviewSection>
-```tsx
-<Textarea placeholder="Text area" />
-```
 
 ---
 
@@ -149,6 +130,14 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 #### Disabled
 
+<OverviewSection>
+  <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+</OverviewSection>
+
+```tsx
+<Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+```
+
 <TokenTable>
   <TokenRow
     token="--fs-textarea-disabled-bkg-color"
@@ -178,7 +167,16 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 For further customization, you can use the following data attributes:
 
 `data-fs-textarea`
+
 `data-fs-textarea-resize`
+
+---
+
+## Best Practices
+
+### ✅ Do's
+
+- Provide a [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) when using `Textarea`. Descriptive labels help users understand the purpose of a form control.
 
 ---
 
@@ -187,8 +185,7 @@ For further customization, you can use the following data attributes:
 <SectionList>
   <SectionItem
     title="TextareaField"
-    description="
-TextareaField wraps a Textarea and its corresponding Label."
+    description="TextareaField wraps a Textarea and its corresponding Label."
     actionPath="/docs/guides/faststore/molecules-textarea-field"
   >
     <TextareaField label="Label" id="textareafield-default" />
