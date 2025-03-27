@@ -1,0 +1,147 @@
+---
+title: "Tooltip"
+excerpt: Tooltip provides contextual information.
+components:
+  - Tooltip.tsx
+---
+
+The `Tooltip` is a component that provides contextual information when users hover over or click an element.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Tooltip content="Simple tooltip" id="tooltip-content" />
+      <Tooltip
+        content="Dismissible tooltip"
+        placement="right-center"
+        dismissible
+      />
+    </OverviewSection>
+  </Tab>
+
+  <Tab>
+    ```tsx
+    <Tooltip content="Simple tooltip" id="tooltip-content" />
+     <Tooltip
+       content="Dismissible tooltip"
+       placement="right-center"
+       dismissible
+    />
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+
+```tsx
+import { Tooltip } from '@faststore/ui'
+```
+
+### Import Styles into your FastStore project
+
+To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/molecules/Tooltip/styles.scss';
+```
+
+Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+
+---
+
+## Props
+
+<ComponentPropsSection component="Tooltip" />
+
+---
+
+## Design Tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-button-height"
+    value="var(--fs-control-tap-size)"
+  />
+  <TokenRow
+    token="--fs-tooltip-z-index"
+    value="var(--fs-z-index-high)"
+  />
+  <TokenRow
+    token="--fs-tooltip-background"
+    value="var(--fs-color-neutral-6)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-tooltip-text-color"
+    value="var(--fs-color-text-inverse)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-tooltip-border-radius"
+    value="var(--fs-border-radius)"
+  />
+  <TokenRow
+    token="--fs-tooltip-padding"
+    value="var(--fs-spacing-2)"
+  />
+  <TokenRow
+    token="--fs-tooltip-gap"
+    value="var(--fs-spacing-1)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-tooltip-transition-property"
+    value="opacity"
+  />
+  <TokenRow
+    token="--fs-tooltip-transition-timing"
+    value="var(--fs-transition-timing)"
+  />
+  <TokenRow
+    token="--fs-tooltip-transition-function"
+    value="var(--fs-transition-function)"
+  />
+</TokenTable>
+
+### Nested Elements
+
+#### Indicator
+
+<TokenTable>
+  <TokenRow
+    token="--fs-tooltip-indicator-size"
+    value="var(--fs-spacing-1)"
+  />
+  <TokenRow
+    token="--fs-tooltip-indicator-distance-edge"
+    value="var(--fs-spacing-3)"
+  />
+  <TokenRow
+    token="--fs-tooltip-indicator-distance-base"
+    value="var(--fs-spacing-1)"
+  />
+  <TokenRow
+    token="--fs-tooltip-indicator-translate"
+    value="calc(var(--fs-tooltip-indicator-size) + var(--fs-tooltip-indicator-distance-base))"
+  />
+</TokenTable>
+
+---
+
+## Customization
+
+For further customization, you can use the following data attributes:
+
+`data-fs-tooltip`
+
+`data-fs-tooltip-wrapper`
+
+`data-fs-tooltip-content`
+
+`data-fs-tooltip-dismiss-button`
+
+`data-fs-tooltip-indicator`
