@@ -10,27 +10,40 @@ The `Tooltip` is a component that provides contextual information when users hov
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Tooltip content="Simple tooltip" id="tooltip-default" />
       <Tooltip
-        content="Dismissible tooltip"
-        placement="right-center"
-        dismissible
-      />
+        id="textarea-field"
+        content="Simple tooltip"
+      >
+      <Icon name="XCircle" />
+      </>
+      <Tooltip
+        id="textarea-field"
+        content="Dismissable tooltip"
+        dismissable
+      >
+       <Icon name="XCircle" />
+      </>
     </OverviewSection>
   </Tab>
 
   <Tab>
     ```tsx
-    <Tooltip content="Simple tooltip" id="tooltip-content" />
-     <Tooltip
-       content="Dismissible tooltip"
-       placement="right-center"
-       dismissible
-    />
+      <Tooltip
+        id="textarea-field"
+        content="Simple tooltip"
+      >
+      <Icon name="XCircle" />
+      />
+      <Tooltip
+        id="textarea-field"
+        content="Dismissable tooltip"
+        dismissable
+      >
+      <Icon name="XCircle" />
+      />
     ```
   </Tab>
 </Tabs>
-
 ---
 
 ## Import
