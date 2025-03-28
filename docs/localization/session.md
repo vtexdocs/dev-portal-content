@@ -6,7 +6,7 @@ The Session module manages the state of session-related information in the custo
 
 ## Session object structure
 
-Below you can see details of the session data managed by the module.
+You can see details of the session data managed by the module below.
 
 ### Session
 
@@ -14,39 +14,39 @@ Below you can see details of the session data managed by the module.
 | ------------ | -------- | ------------------------------------------------------------- |
 | `addressType` | `string`  | Specifies the type of address associated with the session. Possible values are: `shipping` (delivery addresses), `billing` (payment addresses), or `null` if not specified. |
 | `b2b` | `object` | Contains B2B information. See [B2B] for more details.  |
-| `channel`    | `string`   | Represents the sales channel associated with the session.                                   |
-| `country`    | `string`   | Represents the country associated with the session in a three-letter ISO code (e.g., `USA`).          |
-| `currency`   | `object`   | Contains currency details for the session. See [Currency](#currency) for details.            |
+| `channel`    | `string`   | Indicates the sales channel associated with the session.                                   |
+| `country`    | `string`   | Indicates the country associated with the session in a three-letter ISO code (example: `USA`).          |
+| `currency`   | `object`   | Contains currency details for the session. See [Currency](#currency) for more information.            |
 | `geoCoordinates` | `object`  | Contains geographical coordinates for the user session. See [GeoCoordinates](#geocoordinates) for details. |
-| `locale`     | `string`   | Represents the locale of the session, indicating language and region (e.g., "en-US").    |
+| `locale`     | `string`   | Indicates the locale of the session, including language and region (example: "en-US").    |
 | `person`     | `object`   | Contains information about the customer. See [Person] for details. |
-| `postalCode` | `string`   | Represents the postal code associated with the session.   |
+| `postalCode` | `string`   | Indicates the postal code associated with the session.   |
 
 #### `b2b`
 
 | **Field** | **Type** | **Description**                           |
 | --------- | -------- | ----------------------------------------- |
-| `customerID`    | String   | Identifies the buyer organization to which the customer belongs. |
+| `customerID`    | String   | Identifies the buyer organization the customer belongs to. |
 
 #### `geoCoordinates`
 
 | **Field** | **Type** | **Description**                           |
 | --------- | -------- | ----------------------------------------- |
-| `latitude`    | `number`   | Represents the latitude coordinate of the geographical location. |
-| `symbol`  | `number`   | Represents the longitude coordinate of the geographical location.              |
+| `latitude`    | `number`   | Indicates the latitude coordinate of the geographical location. |
+| `symbol`  | `number`   | Indicates the longitude coordinate of the geographical location.              |
 
 #### `currency`
 
 | **Field** | **Type** | **Description**                           |
 | --------- | -------- | ----------------------------------------- |
-| `code`    | String   | Represents the currency code in three-letter ISO format (e.g., `USD`). |
-| `symbol`  | String   | Represents the symbol associated with the currency (e.g., `$`).              |
+| `code`    | String   | Indicates the currency code in three-letter ISO format (example: `USD`). |
+| `symbol`  | String   | Indicates the symbol associated with the currency (example: `$`).              |
 
 #### `person`
 
 | **Field**    | **Type** | **Description**                                         |
 | ------------ | -------- | ------------------------------------------------------- |
-| `id`         | String   | Provides the identifier for the customer, if available in the ecommerce platform. |
+| `id`         | String   | Provides the customer identifier, if available in the ecommerce platform. |
 | `email`      | String   | Stores the email address provided by the customer.                  |
 | `givenName`  | String   | Contains the customer’s first name.                                     |
 | `familyName` | String   | Contains the customer’s last name.                                   |
