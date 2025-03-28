@@ -31,6 +31,8 @@ Create a new section to receive the two new custom events:
 2. Inside `components`, create the `sections` folder.
 3. Inside the `sections` folder, create the `CustomNewsletter.tsx` file and add the following:
 
+    <CH.Code>
+
    ```tsx
    import type {
      ToastProps,
@@ -219,6 +221,8 @@ Create a new section to receive the two new custom events:
    export default CustomNewsletter;
    ```
 
+   <CH.Focus>
+
    - `NewsletterProps`: Defines the customizable properties of the newsletter component.
 
      - `title`: Heading of the newsletter.
@@ -245,9 +249,13 @@ Create a new section to receive the two new custom events:
      - `Submit newsletter success` event: Tracks if the subscription was successful.
    - [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook: track and handle custom analytics events.
 
-    ---
+    </CH.Focus>
+
+    </CH.Code>
 
 4. To add styles to this new section, create a `section.module.scss` file and add the following:
+
+    <CH.Code>
 
    ```scss
    @layer components {
@@ -262,9 +270,11 @@ Create a new section to receive the two new custom events:
    }
    ```
 
-   ---
+   </CH.Code>
 
 5. Create a file named `index.tsx` inside the components folder and add the following:
+
+    <CH.Code>
 
    ```tsx
    import CustomNewsletter from "./sections/CustomNewsletter/CustomNewsletter";
@@ -276,12 +286,14 @@ Create a new section to receive the two new custom events:
    export default sections;
    ```
 
-   ---
+   </CH.Code>
 
 6. In your store root repository, if you don’t have it already, create a folder named `cms`.
 7. Inside `cms`, create the `faststore` folder.
 8. Within the `cms/faststore` folder, create the `sections.json` file.
 9. In the `sections.json` file, add the new section you want to display in the Headless CMS. The schema below defines how the Headless CMS renders a section:
+
+    <CH.Code>
 
    ```json
    [
@@ -422,7 +434,7 @@ Create a new section to receive the two new custom events:
    ]
    ```
 
-   ---
+   </CH.Code>
 
 </CH.Scrollycoding>
 
