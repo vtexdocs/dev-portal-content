@@ -127,10 +127,7 @@ import { useAnalyticsEvent } from '@faststore/sdk'
 import type { ExtendedEvents } from './types'
 
 export const AnalyticsHandler = () => {
-  /**
-   * By typing the callback function with the extended types, you are able to
-   * reference properties that are not natively offered by the analytics module.
-   */
+
   useAnalyticsEvent((event: ExtendedEvents) => {
     /* ... */
   })
@@ -140,6 +137,8 @@ export const AnalyticsHandler = () => {
   return null
 }
 ```
+
+> ℹ  By typing the callback function with the extended types, you are able to reference properties that are not natively offered by the analytics module.
 
 ### Step 3 - Firing custom events
 
