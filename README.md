@@ -79,20 +79,20 @@ By clicking `Suggest edits (GitHub)`, a new browser window will open with the do
 
 | Field name | Description |
 | --- | --- |
-| Commit message | Write a short description of your commit, for example, `Fix typo`. |
+| Commit message | Write a short description of your commit following our [commit rules](#commit-rules). |
 | Extended description (Optional) | Provide a detailed description of your changes. |
 | Create a new branch for this commit and start a pull request | Name your branch to open a pull request, allowing the team to review your suggestions. |
 
 4. Click `Propose changes`.
 5. Create a pull request with your changes by completing the following:
 
-![pull-request](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/pull-request.png)
+   ![pull-request](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/pull-request.png)
 
-| Field name | Description |
-| --- | --- |
-| Add a title | Enter a title for your pull request by adding the type of change, the filename, and what you changed, for example, `Fix (customer-credit-integration-guide.md): Documentation typos`. |
-| Add a description | Check the type(s) of change(s) you are proposing: New content, Improvement, Fix, or Spelling and grammar accuracy. Also, feel free to provide more details in your description to help the team review your suggestion. |
-| Reviewers | Click `Reviewers` and select the group `vtexdocs/vtex-education`. |
+   | Field name | Description |
+   | --- | --- |
+   | Add a title | Enter a title for your pull request by adding the type of change, the filename, and what you changed, for example, `fix(typo): customer credit integration guide`. |
+   | Add a description | Provide more details in your description to help the team review your suggestion. |
+   | Reviewers | Click `Reviewers` and select the group `vtexdocs/vtex-education`. |
 
 6. Click `Create pull request`.
 
@@ -100,6 +100,50 @@ Once you create a pull request, our team will review your changes as soon as pos
 
   > ⚠ Pull requests go through a review process to ensure quality and consistency. Our team may request changes before approving them.
 
+## Commit rules
+
+This project uses a custom version of [Conventional Commits](https://www.conventionalcommits.org) optimized for documentation changes. 
+
+| Commit type | When to use | Allowed scopes |
+|-|-|-|
+| `new` | Add new documentation pages. Adding a scope is required (e.g. `new(guide): catalog overview`) | `guide`, `troubleshooting`, `release-notes` |
+| `fix` | Fix typos, broken links, or minor corrections. Adding a scope is optional (e.g. `fix(broken-link): learn more`, `fix: marketplace name`). | `typo`, `broken-link` |
+| `style` | Make Markdown formatting changes (tables, code blocks, lists) without content edits | N/A |
+| `update` | Update existing documentation content | N/A |
+| `remove` | Remove deprecated/outdated documentation pages | N/A |
+| `loc` | Add or update translations/localization content | N/A |
+| `media` | Add, update or remove images, GIFs, or videos | N/A |
+| `docs` | Update repository documentation files (README.md) | N/A |
+| `test` | Internal testing changes (hidden from changelog) | N/A |
+| `feat` | New features and actions within the repository (hidden from changelog) | N/A |
+
+If there are any **breaking changes** introduced by your changes, follow one of the options:
+
+  - Append a `!` after `<type>[optional scope]`:
+
+    ```
+    <type>[optional scope]!: <description>
+
+    [optional body]
+
+    [optional footer(s)]
+    ```
+
+  - Add `BREAKING CHANGE: <breaking change description>` to the footer:
+ 
+    ```
+    <type>[optional scope]: <description>
+
+    [optional body]
+
+    BREAKING CHANGE: <breaking change description>
+    ```
+
+🚫 What *not* to do:
+
+* Add dot in the end of text. E.g.: `docs: add contribution guidelines.`
+* Start with uppercase
+* Write in Portuguese
 
 ## GitHub Actions
 
@@ -183,3 +227,12 @@ This repository uses several GitHub Actions to ensure documentation quality and 
 **Dependencies**:
 - `actions/checkout@v1`: Checks out the repository
 - `reviewdog/action-markdownlint@v0`: Runs markdown linting with reviewdog integration
+
+### Generate Automated Changelog
+**Trigger**: Push to `main` branch  
+**Purpose**: Automatically generates and commits CHANGELOG.md based on custom conventional commits.
+**Dependencies**:
+- `actions/checkout@v4`: Checks out repository with full history
+- `actions/setup-node@v4`: Node.js environment setup
+- `standard-version`: Changelog generation tool
+- `actions/github-script@v6`: GitHub API interactions
