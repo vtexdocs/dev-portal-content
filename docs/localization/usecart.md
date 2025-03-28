@@ -2,7 +2,7 @@
 title: "useCart"
 ---
 
-The `useCart` hook gives access to the `Cart` object and helper functions for managing the shopping cart. The hook allows adding, removing, and updating items in the cart and checking its status (e.g., whether it is empty or validating).
+The `useCart` hook gives access to the `Cart` object and helper functions for managing the shopping cart. It allows adding, removing, and updating items in the cart and checking its status (whether it's empty or being validated).
 
 ## Import
 
@@ -30,7 +30,7 @@ function Cart () {
 }
 ```
 
-The `isValidating` flag is used to show a loading state while the cart is being validated.
+The `isValidating` flag shows a loading state while the cart is being validated.
 
 ## API reference
 
@@ -41,11 +41,11 @@ The `useCart` hook returns an object with the following properties and functions
 | `addItem` | `(item: T) => void` | Adds an item to the cart. |
 | `emptyCart` | `() => void` | Removes all items from the cart. |
 | `getItem` | `(id: string) => T | undefined` | Retrieves an item from the cart by its `id`. Returns `undefined` if not found. |
-| `id` | `string` | Gets the cart's unique identifier. |
+| `id` | `string` | Retrieves the cart's unique identifier. |
 | `inCart` | `(id: string) => boolean` | Checks if an item with the given `id` exists in the cart. |
 | `isEmpty` | `boolean` | Returns `true` if the cart is empty. |
-| `isValidating` | `boolean` | Returns `true` if the cart is being validated (e.g., syncing with a server). |
-| `items` | `Item[]` | Gets the current items in the cart. |
-| `removeItem` | `(id: string) => void` | Removes an item from the cart by its `id`. |
+| `isValidating` | `boolean` | Returns `true` if the cart is being validated (for example, syncing with a server). |
+| `items` | `Item[]` | Retrieves the current items in the cart. |
+| `removeItem` | `(id: string) => void` | Removes an item from the cart using its `id`. |
 | `setCart` | `(cart: Cart) => void` | Replaces the current cart with a new one. |
 | `updateItemQuantity` | `(id: string, quantity: number) => void` | Updates the quantity of a given item in the cart. |
