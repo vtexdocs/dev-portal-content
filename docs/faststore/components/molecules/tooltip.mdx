@@ -10,29 +10,23 @@ The `Tooltip` is a component that provides contextual information when users hov
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Tooltip
-        id="textarea-field"
-        content="Simple tooltip"
-      />
-      <Tooltip
-        id="textarea-field"
-        content="Dismissable tooltip"
-        dismissable
-      />
+      <Tooltip id="textarea-field" content="Simple tooltip">
+        <Icon name="ShoppingCart" weight="light" />
+      </Tooltip>
+      <Tooltip id="textarea-field" content="Dismissible tooltip" dismissible>
+        <Icon name="ShoppingCart" weight="light" />
+      </Tooltip>
     </OverviewSection>
   </Tab>
 
   <Tab>
     ```tsx
-      <Tooltip
-        id="textarea-field"
-        content="Simple tooltip"
-      />
-      <Tooltip
-        id="textarea-field"
-        content="Dismissable tooltip"
-        dismissable
-      />
+      <Tooltip id="textarea-field" content="Simple tooltip">
+        <Icon name="ShoppingCart" weight="light" />
+      </Tooltip>
+      <Tooltip id="textarea-field" content="Dismissible tooltip" dismissible>
+        <Icon name="ShoppingCart" weight="light" />
+      </Tooltip>
     ```
   </Tab>
 </Tabs>
