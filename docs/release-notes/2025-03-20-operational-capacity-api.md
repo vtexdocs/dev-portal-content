@@ -1,6 +1,6 @@
 ---
 title: "New Operational Capacity API"
-slug: "2025-03-20-new-operational-capacity-api"
+slug: "2025-03-20-operational-capacity-api"
 type: "added"
 createdAt: "2025-03-31T14:34:56.219Z"
 updatedAt: ""
