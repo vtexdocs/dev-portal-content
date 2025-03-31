@@ -2,7 +2,7 @@
 title: "New Operational Capacity API"
 slug: "2025-03-20-new-operational-capacity-api"
 type: "added"
-createdAt: "2025-03-20T14:34:56.219Z"
+createdAt: "2025-03-31T14:34:56.219Z"
 updatedAt: ""
 hidden: false
 excerpt: "The new Operational Capacity API enables merchants to efficiently manage and configure the sellers' operational capacities of their fulfillment locations, ensuring optimal order processing and resource allocation."
