@@ -1,0 +1,61 @@
+{
+    "skip": {
+        "bump": true,
+        "commit": false,
+        "tag": false
+    },
+    "types": [
+        {
+            "type": "new",
+            "section": "New documentation",
+            "groupByScope": true,
+            "scopeMap": {
+                "release-notes": "Release notes",
+                "guide": "Guides",
+                "troubleshooting": "Troubleshooting"
+            }
+        },
+        {
+            "type": "fix",
+            "section": "Small fixes and improvements",
+            "scopeMap": {
+                "broken-link": "Broken link",
+                "typo": "Typo"
+            }
+        },
+        {
+            "type": "style",
+            "section": "Markdown formatting changes"
+        },
+        {
+            "type": "update",
+            "section": "Updated documentation"
+        },
+        {
+            "type": "remove",
+            "section": "Removed documentation"
+        },
+        {
+            "type": "loc",
+            "section": "Localization updates"
+        },
+        {
+            "type": "media",
+            "section": "Added or modified images, GIFs, or videos"
+        },
+        {
+            "type": "docs",
+            "section": "Repository documentation updates"
+        },
+        {
+            "type": "test",
+            "section": "Tests",
+            "hidden": true
+        },
+        {
+            "type": "feat",
+            "section": "New repository features and actions",
+            "hidden": true
+        }
+    ]
+}
