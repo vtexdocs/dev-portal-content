@@ -17,7 +17,7 @@ The previous builder versions, `6.x` and below, will be deprecated as follows:
 - **Node builder `4.x` deprecation date:** March 2025
 - **Node builder `6.x` deprecation date:** June 2025
 
->⚠️ We strongly recommend upgrading your Node app to the latest Node builder before legacy Node builder versions are deprecated. After deprecation, apps using a legacy builder version will continue to work, but you won't be able to release or publish new **major** [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of the app. See the [What needs to be done? section](#what-needs-to-be-done) for details.
+>⚠️ We strongly recommend upgrading your Node app to the latest Node builder before legacy Node builder versions are deprecated. After deprecation, apps using a legacy builder version will continue to work, but you won't be able to release or publish new app **major** [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning). See the [What needs to be done? section](#what-needs-to-be-done) for details.
 
 ## Why did we make this change?
 
