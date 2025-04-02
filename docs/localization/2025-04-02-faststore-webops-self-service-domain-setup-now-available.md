@@ -14,7 +14,7 @@ Developers and merchants can now configure their store’s production domains by
 
 ## What has changed?
 
-This feature allows developers and merchants to manage their production storefront domains directly, without needing to open a support ticket to VTEX. With this self-service approach, teams have more flexibility and autonomy when configuring their storefronts.
+This feature allows developers and merchants to manage their production storefront domains. This self-service approach gives teams more flexibility and autonomy when configuring their storefronts.
 
 Users can:
 - **Add** a new production domain 
