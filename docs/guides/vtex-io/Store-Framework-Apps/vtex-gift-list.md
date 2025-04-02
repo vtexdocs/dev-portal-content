@@ -124,12 +124,6 @@ If you want to send the emails that are triggered with the checkout above, creat
 
 An optional HTML code for the email template can be found [here](https://drive.google.com/file/d/1ZkI--JZn25PyG4FssoqqPi6a33075skO/view?usp=sharing).
 
-### Login integration with the main account
-
-With login unification, you can provide a unified navigation experience, since a login into the subaccount will also be a login into the main account and vice versa. Unify the login of the main account with the subaccount to provide a unified navigation experience. Logging into either account will grant access to both, ensuring a unified experience. By default, at VTEX a login to the main account is separated from a login to a subaccount. Without login unification, after a client is logged in to a store, they will need to log in again to access gift lists.
-
-You can check the instructions for this configuration in the [Unifying login for different accounts](https://developers.vtex.com/vtex-rest-api/docs/unifying-login-for-different-accounts) article, using the main account as the **primary account** and the subaccount as the **secondary account**.
-
 ## Store owner interface
 
 There is also an interface available for the shopkeeper to follow the metrics obtained by the list application. You can access it on the Admin by going to the **Store owner interface** menu. In this interface, you will see on the first screen all the users that contain a gift list, with their respective amounts of lists, the value they have already earned in gifts, the value converted into gift vouchers, and whether or not there is already an active list at the moment, respectively. You can also search for emails.
