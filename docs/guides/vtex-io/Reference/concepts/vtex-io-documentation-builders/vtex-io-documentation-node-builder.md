@@ -21,7 +21,7 @@ The Node builder versions are defined in the table below. Each builder version i
 |6.x|[16.x](https://nodejs.org/en/blog/release/v16.0.0)|[12.0.0](https://www.npmjs.com/package/@types/node/v/12.0.0)|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Active until June 2025|
 |7.x|[20.x](https://nodejs.org/en/blog/release/v20.0.0)|[20.0.0](https://www.npmjs.com/package/@types/node/v/20.0.0)|[5.5.3](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html)|Active|
 
->⚠️ We strongly recommend upgrading your Node app to the latest Node builder before legacy Node builder versions are deprecated. After deprecation, apps using a legacy builder version will continue to work, but you won't be able to release or publish new **major** [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of the app. Follow the instructions in [Node builder 7.x migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide) to upgrade your Node app.
+>⚠️ We strongly recommend upgrading your Node app to the latest Node builder before legacy Node builder versions are deprecated. After deprecation, apps using a legacy builder version will continue to work, but you won't be able to release or publish new app **major** [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning). Follow the instructions in [Node builder 7.x migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide) to upgrade your Node app.
 
 ## Folder structure
 
