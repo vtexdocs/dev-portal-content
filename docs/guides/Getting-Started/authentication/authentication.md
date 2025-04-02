@@ -31,7 +31,6 @@ VTEX allows stores to integrate with external identity providers to provide sing
 * [Store SSO with OAuth 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2)
 * [Admin SSO with SAML 2.0](https://developers.vtex.com/docs/guides/login-integration-guide-admin-saml2)
 * [Use your VTEX account as an OAuth provider](https://developers.vtex.com/docs/apps/vtex.oauth-provider-admin@2.x)
-* [Unifying login for different accounts](https://developers.vtex.com/vtex-rest-api/docs/unifying-login-for-different-accounts)
 
 ## Learn more
 
