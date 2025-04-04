@@ -107,7 +107,7 @@ Time-to-live (TTL) is the time that a service instance will keep running in the 
 
 When new requests are made and there are no instances available to respond, the platform has to start new instances to process and respond to the requests, a process that we call cold start. A cold start is slow, so the first request a new instance responds to takes longer than usual, and the following requests are processed as usual.
 
-Depending on the service usage, a small TTL value can lead to cold starts happening more frequently, which causes slower response times. We recommend increasing the TTL above the default value only if you frequently notice slow response times that can be caused by cold starts.
+Depending on the service usage, a small TTL value can lead to cold starts happening more frequently, which causes slower response times.
 
 ### Worker configuration
 
