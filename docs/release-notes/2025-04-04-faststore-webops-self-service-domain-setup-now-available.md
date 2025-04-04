@@ -17,8 +17,9 @@ Developers and merchants can now configure their store’s production domains by
 This feature allows developers and merchants to manage their production storefront domains. This self-service approach gives teams more flexibility and autonomy when configuring their storefronts.
 
 Users can:
-- **Add** a new production domain 
-- **Remove** a domain that is no longer needed. 
+
+- **Add** a new production domain
+- **Remove** a domain that is no longer needed.
 
 After adding a domain to FastStore WebOps, a new deployment will be triggered automatically, and the deployment’s progress can be tracked in the WebOps Dashboard. If something is wrong with the domain setting, the deployment will receive the status `Failed`. Learn more about deployment statuses and how to check build logs in [Production deploys](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#production-deploys).
 
