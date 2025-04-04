@@ -128,7 +128,6 @@ curl --location --request POST 'https://{{storeDomain}}/api/vtexid/pub/authentic
 --header 'Cookie: _vss={{authenticationToken}}'
 ```
 
-
 The expected response is an empty `200 OK`, and the user will instantly receive an email with the access code.
 
 ### 3. Validating the session
