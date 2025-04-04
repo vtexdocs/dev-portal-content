@@ -32,17 +32,6 @@ The self-service domain configuration has been released to:
 
 ## What needs to be done?
 
-During the go-live process, after completing the DNS configuration, configure the production domain directly in the WebOps. Learn more about the complete go-live process in [Configuring external DNS](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns).
-
-To add a new production domain, follow the steps below:
-
-1. Access [WebOps Dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard).
-2. Navigate to **Settings** tab.
-3. In the **Host** field, select your store’s domain (example: `www.mystore.com`) from the dropdown list.
-4. Click `Add`.
-5. Monitor the deployment process until it is totally finished (status `Success`).
-6. Confirm the domain appears in the **Current Domains** list.
-
-To remove an existing domain, click on the trash icon alongside the domain you want to remove in the **Current Domains** list.
+During the go-live process, after completing the DNS configuration, configure the production domain directly in WebOps. Learn more about the complete go-live process in [Configuring external DNS](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns).
 
 To learn more about domain management via WebOps, see the section [Settings](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#settings) in the FastStore WebOps Dashboard guide.
