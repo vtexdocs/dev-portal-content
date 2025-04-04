@@ -1,0 +1,169 @@
+---
+title: "Rating"
+excerpt: Displays a product rating based on other shoppers' feedback.
+components:
+  - Rating.tsx
+---
+
+The `Rating` component displays a product's average rating based on other shoppers' feedback and reviews. It supports icons from our components.
+
+## Overview
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <h3>Readonly</h3>
+      <Rating value={3.5} icon={<Icon name="Star" />} />
+    </OverviewSection>
+    <OverviewSection>
+      <h3>Actionable</h3>
+      <RatingActionable value={0} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+    ```tsx
+    <Rating value={3.5} icon={<Icon name="Star" />} />
+    ```
+
+    ```tsx
+    const [rating, setRating] = useState(0)
+    <Rating value={rating} onChange={setRating} icon={<Icon name="Star" />} />
+    ```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+
+```tsx
+import { Rating } from '@faststore/ui'
+```
+
+### Import Styles into your FastStore project
+
+To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/molecules/Rating/styles.scss';
+```
+
+Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+
+---
+
+## Usage
+
+<OverviewSection>
+  <Rating value={3.5} icon={<Icon name="Star" />} />
+</OverviewSection>
+```tsx
+<Rating value={3.5} icon={<Icon name="Star" />} />
+```
+
+---
+
+## Props
+
+<ComponentPropsSection component="Rating" />
+
+---
+
+## Design Tokens
+
+<TokenTable>
+  <TokenRow token="--fs-rating-gap" value="var(--fs-spacing-0)" />
+  <TokenRow token="--fs-rating-color" value="var(--fs-color-text)" isColor />
+  <TokenRow token="--fs-rating-color-empty" value="var(--fs-color-neutral-4)" isColor />
+</TokenTable>
+
+### Nested Elements
+
+#### Icon
+
+<TokenTable>
+  <TokenRow token="--fs-rating-icon-width" value="var(--fs-spacing-3)" />
+  <TokenRow token="--fs-rating-icon-height"  value="var(--fs-rating-icon-width)" />
+</TokenTable>
+
+### Variants
+
+#### Readonly
+
+<OverviewSection>
+  <Rating value={3.5} icon={<Icon name="Star" />} />
+</OverviewSection>
+```tsx
+<Rating value={3.5} icon={<Icon name="Star" />} />
+```
+
+#### Other Icon
+
+<OverviewSection>
+  <Rating value={3.5} icon={<Icon name="Heart" />} />
+</OverviewSection>
+```tsx
+<Rating value={3.8} icon={<Icon name="Heart" />} />
+```
+
+#### Actionable
+
+<OverviewSection>
+  <RatingActionable value={3} />
+</OverviewSection>
+
+```tsx
+const [rating, setRating] = useState(3)
+<Rating value={rating} onChange={setRating} icon={<Icon name="Star" />} />
+```
+
+<TokenTable>
+  <TokenRow
+    token="--fs-rating-actionable-gap"
+    value="0"
+  />
+  <TokenRow
+    token="--fs-rating-actionable-icon-width"
+    value="var(--fs-rating-icon-width)"
+  />
+  <TokenRow
+    token="--fs-rating-actionable-icon-height"
+    value="var(--fs-rating-actionable-icon-width)"
+  />
+  <TokenRow
+    token="--fs-rating-actionable-icon-color"
+    value="var(--fs-rating-color-empty)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-rating-actionable-icon-color-selected"
+    value="var(--fs-rating-color)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-rating-button-min-height"
+    value="var(--fs-spacing-5)"
+  />
+</TokenTable>
+
+---
+
+## Customization
+
+For further customization, you can use the following data attributes:
+
+`data-fs-rating`
+
+`data-fs-rating-button`
+
+`data-fs-rating-icon-wrapper`
+
+`data-fs-rating-icon-outline`
+
+`data-fs-rating-item="empty" | "partial"`
+
+`data-fs-rating-actionable="true"`
