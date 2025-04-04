@@ -57,11 +57,11 @@ The following steps detail the refresh token flow shown in the diagram:
 
 3. **Reauthentication after access token expiration**
 
-   After 24 hours, the access token expires. If the refresh token is still valid, the client can automatically obtain a new access token—without requiring additional interaction.
+   After 24 hours, the access token expires. If the refresh token is still valid, the client can automatically obtain a new access token without requiring additional interaction.
 
    For example, if the refresh token has a 30-day lifespan and the user attempts to log in 29 days after their last authentication, the user’s browser sends the refresh token to VTEX ID to obtain a new access token. However, once the 30-day period ends, the refresh token expires, and the user must log in again to generate new access and refresh tokens.
 
-   This happens automatically when stores use Store Framework or Legacy CMS Portal. For headless stores, it needs to be manually implemented following the instructions on this guide.
+   This happens automatically when stores use [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj). For headless stores, it needs to be manually implemented following the instructions on this guide.
 
 1. **VTEX ID issues new tokens**
 
