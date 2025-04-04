@@ -71,7 +71,7 @@ Let's delve into the parameters you can set within the `service.json` file:
 
 Note that most of these fields are optional, and default values provided by the platform are often sufficient.
 
-> ℹ️ The VTEX platform defines the TTL (time-to-live) parameter for all IO apps as 24 hours. As of [this release](https://developers.vtex.com/updates/release-notes/vtex-io-ttl-parameter-standardizeded-for-all-io-apps), app developers can no longer modify this parameter, which will be ignored if declared in the `service.json` file.
+> ℹ️ The VTEX platform defines the TTL (time-to-live) parameter for all IO apps as 24 hours. As of [this release](https://developers.vtex.com/updates/release-notes/2025-04-25-vtex-io-ttl-parameter-standardizeded-for-all-io-apps), app developers can no longer modify this parameter, which will be ignored if declared in the `service.json` file.
 
 ## Best practices
 
