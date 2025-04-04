@@ -48,7 +48,6 @@ Let's delve into the parameters you can set within the `service.json` file:
 |`minReplicas`|`number`|Defines the minimum number of replicas available when the service is running. Minimum: 2 for installed apps and 1 for linked apps.|
 |`maxReplicas`|`number`|Defines the maximum number of replicas available. Minimum: 5, maximum: 60.|
 |`timeout`|`number`|Sets the timeout (in seconds) for aborting a connection if a request takes too long. This parameter affects only incoming requests to the app. It does not affect outgoing requests that the app makes to other clients. Default: 10, minimum: 1, maximum: 60.|
-|`ttl`|`number`|Defines the time-to-live (in minutes) for how long the platform will keep each instance of the service running without receiving new requests. Default: 10, minimum: 10, maximum: 60. The requested value is only honored for the most recent stable version of the app. Older versions, versions that have not been deployed, linked apps, or beta versions will have the value overridden to 10.|
 |`workers`|`number`|Specifies the number of workers to spawn for the service on production. Minimum: 1, maximum: 4.|
 |`rateLimitPerReplica`|`object`|This object contains global parameters whose values define specific throttling limits for requests and events. The values of this object are overridden by the values set for a specific route or event.|
 |`↳perMinute`|`number`|Defines the global maximum number of requests and event triggers allowed per minute per replica. This value is overridden by the value set for a specific route or event.|
@@ -70,6 +69,8 @@ Let's delve into the parameters you can set within the `service.json` file:
 |`↳↳concurrent`|`number`|Defines the maximum number of requests a replica will handle for this route. This value overrides the global `rateLimitPerReplica.concurrent` value.|
 
 Note that most of these fields are optional, and default values provided by the platform are often sufficient.
+
+> ℹ️ The VTEX platform defines the TTL (time-to-live) parameter for all IO apps as 24 hours. As of [this release](https://developers.vtex.com/updates/release-notes/2025-04-25-vtex-io-ttl-parameter-standardizeded-for-all-io-apps), app developers can no longer modify this parameter, which will be ignored if declared in the `service.json` file.
 
 ## Best practices
 
@@ -105,7 +106,7 @@ Time-to-live (TTL) is the time that a service instance will keep running in the 
 
 When new requests are made and there are no instances available to respond, the platform has to start new instances to process and respond to the requests, a process that we call cold start. A cold start is slow, so the first request a new instance responds to takes longer than usual, and the following requests are processed as usual.
 
-Depending on the service usage, a small TTL value can lead to cold starts happening more frequently, which causes slower response times. We recommend increasing the TTL above the default value only if you frequently notice slow response times that can be caused by cold starts.
+Depending on the service usage, a small TTL value can lead to cold starts happening more frequently, which causes slower response times.
 
 ### Worker configuration
 
