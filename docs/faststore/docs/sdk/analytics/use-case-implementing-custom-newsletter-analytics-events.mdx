@@ -29,9 +29,9 @@ Create a new section to receive the two new custom events:
 
 1. Open your store repository, and If you don't already have it, create a folder named `components` inside the `src` directory.
 2. Inside `components`, create the `sections` folder.
-3. Inside the `sections` folder, create the `CustomNewsletter.tsx` file and add the following:
+3. Inside the `sections` folder, create the `CustomNewsletter.tsx` file and add the following code. Below, see an explanation of the code.
 
-- `NewsletterProps`: Defines the customizable properties of the newsletter component.
+- `NewsletterProps`: Defines the customizable properties of the newsletter.
 
   - `title`: Heading of the newsletter.
   - `description`: Subtitle or description text.
@@ -43,8 +43,8 @@ Create a new section to receive the two new custom events:
   - `card`: Whether the newsletter should appear in a card-style container.
   - `colorVariant`: Styling theme (e.g., "primary", "secondary").
 
-  - `onSubmit` function: Handles the newsletter subscription process.
-    - `event.preventDefault()`: Prevents default form submission.
+- `onSubmit` function: Handles the newsletter subscription process.
+  - `event.preventDefault()`: Prevents default form submission.
   - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks the submission attempt
     - The `onSubmit` function calls the `subscribeUser()` with email and name.
       - If successful:
@@ -444,9 +444,9 @@ To add styles to this new section, create a `section.module.scss` file and add t
 
    ![analytics-custom-newsletter-cms-section](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-section___96abd10dc72c4f09c15f71a9e42651d7.gif)
 
-5. Delete the **Newsletter** default component.
+5. Delete the **Newsletter** default section.
 6. Click `Save`.
-7. Click `Preview` to preview the new component before publishing it to the live store.
+7. Click `Preview` to preview the new section before publishing it to the live store.
 
 ## Results
 
