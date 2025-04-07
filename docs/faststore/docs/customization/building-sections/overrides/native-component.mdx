@@ -99,7 +99,7 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
 1. Choose a component to override from the [list of overridable components of each native section](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections). In this example, we are overriding the `BuyButton` component in the `ProductDetails` section.
 2. In the `components` folder, if you don't have already the `index.tsx` file, create the file and add the following:
 
-        ```tsx index.tsx
+        ```tsx components/index.tsx
         import ProductDetailsWithCustomButton from "./sections/ProductDetailsWithCustomButton";
 
         export default { ProductDetails: ProductDetailsWithCustomButton }
