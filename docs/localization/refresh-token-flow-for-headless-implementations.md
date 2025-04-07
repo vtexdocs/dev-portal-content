@@ -115,13 +115,20 @@ curl --location 'https://{{storeDomain}}/api/vtexid/pub/authentication/start?sco
 }
 ```
 
-### 2. Sending an access key
+### 2. Continuing authentication
 
-After starting authentication, send a login code to the user’s email using `POST` [Send access key](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/send).
+After starting authentication, the next step is to proceed with the login method configured for the store. VTEX ID supports multiple login providers, including:
 
-You should pass the user’s email as a query string, and the `authenticationToken` value obtained from the previous request as a cookie (`_vss`). See the request structure below:
+* Access key (login code sent by email)  
+* Email and password  
+* Social logins (Google, Facebook)  
+* Custom OAuth providers
 
-**Request:**
+Each store can enable one or more of these options, and they all follow the same general flow at this stage: the client uses the `authenticationToken` from the previous step to complete the login process.
+
+If the store uses **access key** as the login method, you should send a login code to the user’s email using `POST` [Send access key](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/send).
+
+**Example request for access key login:**
 
 ```curl
 curl --location --request POST 'https://{{storeDomain}}/api/vtexid/pub/authentication/accesskey/send?email={{userEmail}}' \
@@ -132,7 +139,9 @@ The expected response is an empty `200 OK`, and the user will instantly receive 
 
 ### 3. Validating the session
 
-Next, use the received access key and the user email to validate the session with the `POST` [Validate session](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/validate) endpoint. The request is structured as follows:
+Once the user has provided their credentials or login code — depending on the login provider configured for the store — you must validate the session to complete authentication and receive the access and refresh tokens.
+
+For access key method, use the received access key and the user email to validate the session with the `POST` [Validate session](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/validate) endpoint. The request is structured as follows:
 
 **Request:**
 
