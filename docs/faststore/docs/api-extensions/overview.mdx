@@ -41,9 +41,18 @@ This also means that you must be mindful of the data added to your query with [G
 
 ### Optimize FastStore API integration with VTEX APIs
 
-When integrating FastStore with VTEX APIs, always use your store's own domain for API calls. Avoid using the `vtexcommercestable` environment directly, as it is not optimized for storefront customization and can negatively impact performance and scalability. 
+When integrating FastStore with VTEX APIs, always use your store's domain for API calls instead of `vtexcommercestable` environment directly. Direct calls for this environment can impact performance and scalability. 
 
 For example, when using the [Get list of products for a query instead](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-?endpoint=get-/product_search/-facets-) endpoint, instead of calling `https://mystore.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search/{facets}`, use your store's domain like `https://www.mystore.com/api/io/_v/api/intelligent-search/product_search/{facets}`.
+
+In the list below, see endpoints requiring the use of your store's domain when integrating FastStore API with other VTEX APIs:
+
+- [Get sellers by region or address](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/regions/-regionId-)
+- [Get address by postal code](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/postal-code/-countryCode-/-postalCode-)
+- [Get sellers by region or address](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/regions/-regionId-)
+- [Get address by postal code](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/postal-code/-countryCode-/-postalCode-)
+- [Get brand list](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/brand/list?endpoint=get-/api/catalog_system/pvt/brand/list)
+- [Get category tree](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pub/category/tree/-categoryLevels-?endpoint=get-/api/catalog_system/pub/category/tree/-categoryLevels-)
 
 ### Do not send direct requests to external APIs
 
