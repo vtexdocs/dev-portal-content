@@ -1,6 +1,6 @@
 ---
 title: "FastStore WebOps: Self-service domain setup now available"
-slug: "2025-04-04-faststore-webops-self-service-domain-setup-now-available"
+slug: "2025-04-08-faststore-webops-self-service-domain-setup-now-available"
 type: improved
 excerpt: "FastStore WebOps now allows users to configure their store’s production domains."
 createdAt: "2025-04-03T17:15:14.007Z"
