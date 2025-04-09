@@ -35,7 +35,7 @@ Before implementing your cross-border store, make sure you have the following in
 - **Teams:** Identify if different teams will manage each country/region’s ecommerce operations.
 - **ERP Systems:** Confirm if each country/region has its own ERP or a centralized system.
 - **Payment gateway:** Ensure you have a gateway that supports multiple currencies.
-- **Domains:** Define the primary and secondary domains for your stores. Learn more in [Rules for main hosts](https://help.vtex.com/pt/tutorial/configuring-the-store-domain--tutorials_2450#rules-for-main-host) 
+- **Domains:** Define the primary and secondary domains for your stores. Learn more in [Rules for main hosts](https://help.vtex.com/pt/tutorial/configuring-the-store-domain--tutorials_2450#rules-for-main-host).
 
 This information will help you to choose the most suitable architecture for your cross-border store.
 
