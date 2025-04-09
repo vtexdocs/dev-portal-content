@@ -7,9 +7,9 @@ updatedAt: "2025-03-12T11:41:22.220Z"
 excerpt: ""
 ---
 
-Cross-border stores are a specialized type of [multistore](https://help.vtex.com/en/tutorial/creating-multi-store-multi-domain--tutorials_510?locale=en), where a single VTEX account manages multiple stores in different countries or regions.
+Cross-border stores are a specialized type of [multistore](https://help.vtex.com/en/tutorial/creating-multi-store-multi-domain--tutorials_510?locale=en), where a single VTEX account manages multiple stores across different countries or regions.
 
-This feature is ideal for stores with different brands and business models that require multiple operational environments. In a multistore, also known as a subaccount or multidomain, each store can be set up independently, which means that layouts, products, prices, and logistics can vary for each local store depending on its domain.
+This setup is ideal for stores with different brands and business models that require multiple operational environments. In a multistore setup — also known as a subaccount or multidomain — each store can be configured independently, which means that layouts, products, prices, and logistics can be tailored to each region and domain.
 
 In a cross-border context, a multistore setup allows a single VTEX account to manage multiple stores, such as:
 - `http://{storeName}.com/en` (English store)
@@ -45,11 +45,11 @@ After defining your operation based on the topics above, choose the architecture
 </Steps>
 ## Essential concepts
 
-To better understand how a VTEX cross-border multistore works, it's essential to comprehend the key concepts of bindings and trade policies.
+To better understand how a VTEX cross-border multistore works, it's essential to understand the key concepts of bindings and trade policies.
 
 ### Binding
 
-In VTEX, **binding** is the process of linking a website, a store name, and a trade policy to create a unique identifier for each store. This is essential for managing multiple stores within a single VTEX account.
+In VTEX, **binding** is the process of linking a website, store name, and trade policy to create a unique identifier for each store. This is essential for managing multiple stores within a single VTEX account.
 
 Each store has a unique binding value, which is crucial for routing and configuring store-specific settings.
 
@@ -57,9 +57,9 @@ Each store has a unique binding value, which is crucial for routing and configur
 
 ### Trade Policies
 
-A **trade policy** is a set of configurations that define a store’s catalog, pricing, and logistics strategy. Each store can have its own trade policy, allowing for different setups depending on the market. For example, if the pricing structure differs between your stores in Spain and France, you'll need separate trade policies.
+A **trade policy** is a set of configurations that define a store's catalog, pricing, and logistics strategy. Each store can have its own trade policy, allowing for different setups depending on the market. For example, if the pricing structure differs between your stores in Spain and France, you'll need separate trade policies.
 
-If two stores share the same logistics, catalog, and prices, they can use a common trade policy.
+However, if two stores share the same logistics, catalog, and prices, they can use a common trade policy.
 
 >ℹ️ To learn more, see the guide [How trade policies work](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV).
 
