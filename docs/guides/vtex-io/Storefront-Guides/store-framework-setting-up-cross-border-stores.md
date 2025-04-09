@@ -12,6 +12,7 @@ Cross-border stores are a specialized type of [multistore](https://help.vtex.com
 This setup is ideal for stores with different brands and business models that require multiple operational environments. In a multistore setup — also known as a subaccount or multidomain — each store can be configured independently, which means that layouts, products, prices, and logistics can be tailored to each region and domain.
 
 In a cross-border context, a multistore setup allows a single VTEX account to manage multiple stores, such as:
+
 - `http://{storeName}.com/en` (English store)
 - `http://{storeName}.com/pt` (Portuguese store)
 
@@ -31,7 +32,7 @@ Before implementing your cross-border store, make sure you have the following in
 - **Tax and Export partner:** If using fulfillment from Brazil, choose a partner for handling export taxes and fees. To find your partner, check out the [Partners](https://vtex.com/en-us/partners/) page on the VTEX website.
 - **Catalog translation:** Check if your catalog is translated or needs localization for each country/region.
 - **Promotions:** Plan the types of promotions for each store. Learn about the types available in [Promotions](https://help.vtex.com/subcategory/benefits--1yTYB5p4b6iwMsUg8uieyq) guides.
-- **Operations:** Consider any existing physical stores, sellers, or other operations abroad. Learn more in [VTEX account types](https://help.vtex.com/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types) 
+- **Operations:** Consider any existing physical stores, sellers, or other operations abroad. Learn more in [VTEX account types](https://help.vtex.com/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types)
 - **Teams:** Identify if different teams will manage each country/region’s ecommerce operations.
 - **ERP Systems:** Confirm if each country/region has its own ERP or a centralized system.
 - **Payment gateway:** Ensure you have a gateway that supports multiple currencies.
