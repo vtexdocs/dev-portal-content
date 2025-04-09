@@ -43,11 +43,17 @@ Sets basic metadata related to Search Engine Optimization (SEO). All fields insi
 
 Learn more in [SEO](https://developers.vtex.com/docs/guides/faststore/seo).
 
+---
+
 ### `theme`
 Defines the look and feel of your FastStore project. This field is a `string` that specifies the name of the theme being used. Learn more in [Theming](https://developers.vtex.com/docs/guides/faststore/using-themes-overview).
 
+---
+
 ### `platform`
 Describes the ecommerce platform being used, that is, `vtex`.
+
+---
 
 ### `api`
 Contains settings related to the store's API, including:
@@ -56,6 +62,8 @@ Contains settings related to the store's API, including:
   - `environment`: A string that defines the name of the specific environment being used.
   - `hideUnavailableItems`: A boolean flag to hide or show items without available stock.
   - `incrementAddress`: Flag to determine how address information should be handled.
+
+---
 
 ### `session`
 Defines the settings for the user session, including:
@@ -69,12 +77,16 @@ Defines the settings for the user session, including:
   - `geoCoordinates`:  An array containing two numbers (latitude and longitude) for the user session.
   - `person`: An object containing the customer's unique identification, email, first name, and last name as registered in their profile.
 
+---
+
 ### `cart`
 Contains the settings related to the shopping cart, including:
   - `id`: A string representing the unique identifier of the cart.
   - `items`: An array containing the items added to the cart.
   - `messages`: An array of strings with messages associated with the cart, such as shipping changes or any other relevant information.
   - `shouldSplitItem`: A boolean flag that determines whether an item should be split in the cart.
+
+---
 
 ### `storeUrl`
 Defines the URL of the FastStore online store as a string. 
@@ -93,6 +105,8 @@ Defines the URL for the user's account section as a string.
 
 Learn more about store domains in [Associating your custom domain with your FatStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
 
+---
+
 ### `previewRedirects`
 Maps redirect URLs for the following page types in preview mode, with each field defined as a string:
   - `home`: Redirect URL for the home page.
@@ -101,6 +115,8 @@ Maps redirect URLs for the following page types in preview mode, with each field
   - `pdp`: Redirect URL for a product details page.
 
 Learn more in [Managing URLs with redirects and rewrite paths](https://developers.vtex.com/docs/guides/faststore/routing-managing-urls-with-redirects-and-rewrite-paths).
+
+---
 
 ### `lighthouse`
 Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview), a tool for auditing and improving the quality of web pages.
@@ -111,6 +127,8 @@ Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/
     - `collection`: URL of a collection page.
 
 Learn more in [Lighthouse Scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores).
+
+---
 
 ### `cypress`
 Contains settings for [Cypress](https://docs.cypress.io/app/get-started/why-cypress), a testing tool.
@@ -124,11 +142,15 @@ Contains settings for [Cypress](https://docs.cypress.io/app/get-started/why-cypr
 
 Learn more in [`enableCypressExtension`](https://developers.vtex.com/docs/guides/faststore/project-structure-custom-cypress).
 
+---
+
 ### `analytics`
 Defines the [Google Tag Manager ID](https://support.google.com/tagmanager/answer/12326985?hl=en&ref_topic=14595647&sjid=12859079805529639111-SA) being used.
   - `gtmContainerId`: A string that defines the Google Tag Manager container ID.
 
 Learn more in [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview).
+
+---
 
 ### `experimental`
 Contains settings for experimental features, including:
@@ -138,8 +160,12 @@ Contains settings for experimental features, including:
     - `maxAge`: Maximum time (in seconds) that the response can be cached.
     - `staleWhileRevalidate`: Time (in seconds) during which stale responses can be served while revalidating.
 
+---
+
 ### `account`
 Specifies the name of the account as a string.
+
+---
 
 ### `vtexHeadlessCms`
 Contains settings for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), including:
