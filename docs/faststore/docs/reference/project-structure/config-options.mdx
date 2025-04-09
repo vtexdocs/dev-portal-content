@@ -34,81 +34,113 @@ Check the full file example at [`discovery.config.js` sample code](https://githu
 
 Below is a description of each setting you can configure in the `discovery.config.js` file:
 
-### SEO
-
-Contains settings related to Search Engine Optimization (SEO).
+### `seo`
+Sets basic metadata related to Search Engine Optimization (SEO). All fields inside this object are strings.
   - `title`: Store headline in search results.
   - `description`: Brief description of the store.
   - `titleTemplate`: Template for generating page titles.
   - `author`: Author of the store content.
 
-### Theme
+Learn more in [SEO](https://developers.vtex.com/docs/guides/faststore/seo).
 
-Defines the look and feel of your FastStore project.
-- **Theme:** Name of the theme being used.
-- **Platform:** Ecommerce platform being used, that is, `vtex`.
-- **API:** Contains settings related to the store's API, including:
-  - `storeId`: Identifier of the account or store being used.
-  - `workspace`: Name of the workspace being used.
-  - `environment`: Name of the specific environment being used.
-  - `hideUnavailableItems`: Flag to hide or show items without available stock.
+### `theme`
+Defines the look and feel of your FastStore project. This field is a `string` that specifies the name of the theme being used. Learn more in [Theming](https://developers.vtex.com/docs/guides/faststore/using-themes-overview).
+
+### `platform`
+Describes the ecommerce platform being used, that is, `vtex`.
+
+### `api`
+Contains settings related to the store's API, including:
+  - `storeId`: A string that identifies the account or store being used.
+  - `workspace`: A string that defines the name of the workspace being used.
+  - `environment`: A string that defines the name of the specific environment being used.
+  - `hideUnavailableItems`: A boolean flag to hide or show items without available stock.
   - `incrementAddress`: Flag to determine how address information should be handled.
-- **Session:** Defines the settings for the user session, including:
-  - `currency`: Currency code used in the store and its corresponding symbol.
-  - `locale`: Locale or language setting of the store.
-  - `channel`: Trade policy, region, and seller for the sales process.
-  - `country`: Country code associated with the store.
-  - `deliveryMode`: How orders are fulfilled, including delivery channel, selected courier or method, and delivery window (start and end times).
-  - `addressType`: Selected address type.
-  - `postalCode`: Postal code set for the user session.
-  - `geoCoordinates`:  Latitude and longitude (as floats) for the user session.
-  - `person`: Customer's unique identification, email, first name, and last name as registered in their profile.
-- **Cart:** Contains settings related to the shopping cart, including:
-  - `id`: Unique identifier of the cart.
-  - `items`: Array of items in the cart.
-  - `messages`: Messages associated with the cart, such as shipping changes or any other relevant information.
-  - `shouldSplitItem`: Flag to determine if an item should be split in the cart.
-- **Store URL:** URL of the FastStore online store.
-- **Secure Subdomain:** Secure subdomain URL for HTTPS connections.
-- **Checkout URL:** URL for the checkout process.
-- **Login URL:** URL for the login process.
-- **Account URL:** URL for the user's account section.
-- **Preview redirects:** Maps redirect URLs for different page types in preview mode.
-- **Lighthouse:** Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview), a tool for auditing and improving the quality of web pages.
-  - `server`: Server URL for running Lighthouse audits.
-  - `pages`: Page URL to be audited by Lighthouse.
-- **Cypress:** Contains settings for [Cypress](https://docs.cypress.io/app/get-started/why-cypress), a testing tool.
-  - `pages`: Page URL for end-to-end testing with Cypress.
-- **Analytics:** Defines the [Google Tag Manager ID](https://support.google.com/tagmanager/answer/12326985?hl=en&ref_topic=14595647&sjid=12859079805529639111-SA) being used.
-- **Experimental:** Contains settings for experimental features, such as specifying the `node` and `cypress` versions being used.
-- **Account:** Name of the account.
-- **VTEX Headless CMS:** Contains settings for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), such as webhook URLs used to interact with the CMS.
 
-## Learn more
+### `session`
+Defines the settings for the user session, including:
+  - `currency`: An object containing the currency code (string) used in the store and its corresponding symbol (string).
+  - `locale`: A string representing the locale or language setting of the store.
+  - `channel`: A string with information about the trade policy, region, and seller for the sales process.
+  - `country`: A string with the country code associated with the store.
+  - `deliveryMode`: A string describing how orders are fulfilled, including delivery channel, selected courier or method, and delivery window (start and end times).
+  - `addressType`: A string indicating the selected address type.
+  - `postalCode`: A string representing the postal code set for the user session.
+  - `geoCoordinates`:  An array containing two numbers (latitude and longitude) for the user session.
+  - `person`: An object containing the customer's unique identification, email, first name, and last name as registered in their profile.
 
-In the following guides, explore specific configuration options for `discovery.config.js`:
+### `cart`
+Contains the settings related to the shopping cart, including:
+  - `id`: A string representing the unique identifier of the cart.
+  - `items`: An array containing the items added to the cart.
+  - `messages`: An array of strings with messages associated with the cart, such as shipping changes or any other relevant information.
+  - `shouldSplitItem`: A boolean flag that determines whether an item should be split in the cart.
 
-<Flex>
+### `storeUrl`
+Defines the URL of the FastStore online store as a string. 
 
-<WhatsNextCard
-  linkTo="/"
-  title="SEO (Coming soon)"
-  description="Optimize your store's visibility in search results by configuring SEO settings."
-  linkTitle="See more"
-/>
+### `secureSubdomain`
+Defines the secure subdomain URL for HTTPS connections as a string.
 
-<WhatsNextCard
-  linkTo="/"
-  title="Theme (Coming soon)"
-  description="Define your store’s visual identity and functionalities by setting up theme and platform configurations."
-  linkTitle="See more"
-/>
+### `checkoutUrl`
+Defines the URL for the checkout process as a string.
 
-<WhatsNextCard
-  linkTo="/docs/guides/faststore/project-structure-custom-cypress"
-  title="enableCypressExtension"
-  description="Add custom Cypress tests to your FastStore project, enhancing testing capabilities for seamless integration."
-  linkTitle="See more"
-/>
+### `loginUrl`
+Defines the URL for the login process as a string.
 
-</Flex>
+### `accountUrl`
+Defines the URL for the user's account section as a string.
+
+Learn more about store domains in [Associating your custom domain with your FatStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
+
+### `previewRedirects`
+Maps redirect URLs for the following page types in preview mode, with each field defined as a string:
+  - `home`: Redirect URL for the home page.
+  - `plp`: Redirect URL for a product listing page.
+  - `search`: Redirect URL for a search results page.
+  - `pdp`: Redirect URL for a product details page.
+
+Learn more in [Managing URLs with redirects and rewrite paths](Managing URLs with redirects and rewrite paths).
+
+### `lighthouse`
+Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview), a tool for auditing and improving the quality of web pages.
+  - `server`: A string that defines the server URL for running Lighthouse audits.
+  - `pages`: An object that maps the URL of pages to be audited by Lighthouse, with each field defined as a string.
+    - `home`: URL of the home page.
+    - `pdp`: URL of a product details page.
+    - `collection`: URL of a collection page.
+
+Learn more in [Lighthouse Scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores).
+
+### `cypress`
+Contains settings for [Cypress](https://docs.cypress.io/app/get-started/why-cypress), a testing tool.
+  - `pages`: An object that maps the URLs of pages for end-to-end testing with Cypress, with each field defined as a string.
+    - `home`: URL of the home page.
+    - `pdp`: URL of the product details page.
+    - `collection`: URL of a collection page.
+    - `collection_2`: URL of a secondary collection page.
+    - `collection_filtered`: URL of a filtered collection page.
+    - `search`: URL a search results page.
+
+Learn more in [`enableCypressExtension`](https://developers.vtex.com/docs/guides/faststore/project-structure-custom-cypress).
+
+### `analytics`
+Defines the [Google Tag Manager ID](https://support.google.com/tagmanager/answer/12326985?hl=en&ref_topic=14595647&sjid=12859079805529639111-SA) being used.
+  - `gtmContainerId`: A string that defines the Google Tag Manager container ID.
+
+Learn more in [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview).
+
+### `experimental`
+Contains settings for experimental features, including:
+  - `nodeVersion`: A string that defines the Node.js version.
+  - `cypressVersion`: A string that defines the Cypress version.
+  - `graphqlCacheControl`: An object that contains settings for GraphQL responses, with each field defined as a number.
+    - `maxAge`: Maximum time (in seconds) that the response can be cached.
+    - `staleWhileRevalidate`: Time (in seconds) during which stale responses can be served while revalidating.
+
+### `account`
+Specifies the name of the account as a string.
+
+### `vtexHeadlessCms`
+Contains settings for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), including:
+  - `webhookUrls`: An object of strings that defines the webhook URLs used to interact with the Headless CMS.
