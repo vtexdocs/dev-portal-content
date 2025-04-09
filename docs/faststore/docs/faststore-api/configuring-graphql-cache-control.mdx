@@ -20,7 +20,7 @@ Make sure the @faststore/cli package from your project is updated to the latest 
 
 Since the `graphqlCacheControl` flag is an experimental feature, declare it under the `experimental` section of `discovery.config.js` file.
 
-1. Open your FastStore project in a code editor of your preference.
+1. Open your FastStore project in a code editor.
 2. Open the `discovery.config.js` file.
 3. Under the `experimental` section add `graphqlCacheControl` flag:
 
@@ -58,7 +58,18 @@ Since the `graphqlCacheControl` flag is an experimental feature, declare it unde
     | 300 s - 360 s  | Stale | <ul><li>Serves old data while fetching updates.</li><li>Simultaneously fetches fresh data in background.</li></ul> |
     | After 360 s  | Expired | <ul><li>Cache fully expires.</li><li>Next request triggers fresh data fetch.</li></ul> |
 
-### Recommend values
+5. Open a terminal and run `yarn dev` to sync the changes and [start testing cache configuration](#testing-the-cache-configuration).
+
+## Testing the cache configuration
+
+After enabling the `graphqlCacheControl` flag in `discovery.config.js` and running `yarn dev` in a terminal, follow these steps to test the cache configuration:
+
+1. Open the localhost path available in the terminal to see the store preview (e.g., `http://localhost:3000/`).
+2. On the store preview page, open your browser's **Developer Tools**.
+3. Go to the **Network** tab and look for **HIT** cache indicators on GET request as the image below:
+   ![cache-hit](https://vtexhelp.vtexassets.com/assets/docs/src/graphql-cache-control-flag___fc3e68d4013087ccf826b2b1b4217de9.png)
+
+### Recommended values for `maxAge` and `staleWhileRevalidate`
 
 {/* Is that possible to recommend `maxAge` and `staleWhileRevalidate` values? See an example on how we could demonstrate below
 
@@ -66,7 +77,3 @@ Since the `graphqlCacheControl` flag is an experimental feature, declare it unde
 | PLPs | 300s (5m) | 60s (1m)
 | Static content (user-specific data)? | --------------- |
 | --------- | --------------- | */}
-
-## Testing the cache configuration
-
-{/* How to test this configuration? Is there an use case example? */}
