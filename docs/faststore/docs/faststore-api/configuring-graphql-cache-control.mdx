@@ -1,0 +1,72 @@
+---
+title: 'Configuring GraphQL cache control for GET Requests'
+---
+
+> ⚠ This is an experimental feature.
+
+This guide explains how to configure caching for GraphQL GET requests using the `graphqlCacheControl` flag. By setting cache rules, you can store responses and reuse them for subsequent requests, reducing server load and speeding up API performance.
+
+The `graphqlCacheControl` flag defines how long responses should be stored and reused by configuring caching for GraphQL GET requests.
+
+> ℹ POST requests bypass caching by default.
+
+In this guide, learn how to enable and configure the `graphqlCacheControl` flag.
+
+## Before you begin
+
+Make sure the @faststore/cli package from your project is updated to the latest version. To do so, follow the instructions in [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
+
+## Instructions
+
+Since the `graphqlCacheControl` flag is an experimental feature, declare it under the `experimental` section of `discovery.config.js` file.
+
+1. Open your FastStore project in a code editor of your preference.
+2. Open the `discovery.config.js` file.
+3. Under the `experimental` section add `graphqlCacheControl` flag:
+
+    ```js discovery.config.js
+    experimental: {
+        …
+        graphqlCacheControl: {},
+    },
+    ```
+
+4. Inside the `graphqlCacheControl` flag, add the `maxAge` and `staleWhileRevalidate` objects and their values:
+
+    ```js discovery.config.js
+    experimental: {
+        …
+        graphqlCacheControl: {
+        maxAge: 5 * 60, // 0 disables cache, 5 * 60 enable cache control maxAge 5 minutes
+        staleWhileRevalidate: 60,
+        },
+    },
+    ```
+
+    For the example above the `maxAge` and `staleWhileRevalidate` objects received the following values:
+
+    | Object    | Description     |
+    | --------- | --------------- |
+    | `maxAge: 5 * 60` | Refers to the time of a response stays fresh in cache. <ul><li>Responses are cached for 5 minutes (300 seconds).</li><li>After 5 minutes, the cache is considered `stale`.</li><li>`maxAge: 0` - The `0` value would disable caching entirely.</li></ul> |
+    | `staleWhileRevalidate: 60` | Refers to the time of stale cache can be used while new data fetches in the background. <ul><li>After the initial 5 minutes (when `maxAge expires`), stale cached data can still be served for up to 1 extra minute (60 seconds) while the system fetches fresh data in the background.</li><li>This ensures users see slightly older data (for 1 minute maximum) instead of waiting for a full reload.</li></ul> |
+
+    This configuration creates a tiered caching system that balances immediate performance with data freshness. See in the table below what happens over time:
+
+    | **Object** | **Cache state** | **Behavior** |
+    | ------ | ----------- | -------- |
+    | 0s - 300s  | Fresh | <ul><li>Serves cached responses instantly.</li><li>No backend requests unless first hit.</li></ul> |
+    | 300 s - 360 s  | Stale | <ul><li>Serves old data while fetching updates.</li><li>Simultaneously fetches fresh data in background.</li></ul> |
+    | After 360 s  | Expired | <ul><li>Cache fully expires.</li><li>Next request triggers fresh data fetch.</li></ul> |
+
+### Recommend values
+
+{/* Is that possible to recommend `maxAge` and `staleWhileRevalidate` values? See an example we show below
+
+| **Use case** | **Suggested `maxAge`** | **Suggested `staleWhileRevalidate`** |
+| PLPs | 300s (5m) | 60s (1m)
+| Static content (user-specific data)? | --------------- |
+| --------- | --------------- | */}
+
+## Testing the cache configuration
+
+{/* How to test this configuration? Is that a real case scenario example? */}
