@@ -35,7 +35,8 @@ Check the full file example at [`discovery.config.js` sample code](https://githu
 Below is a description of each setting you can configure in the `discovery.config.js` file:
 
 ### `seo`
-Sets default metadata related to Search Engine Optimization (SEO). It receives an object with the following structure:
+Sets default metadata related to Search Engine Optimization (SEO).
+
 | Property        | Type   | Description                                                                 |
 |-----------------|--------|-----------------------------------------------------------------------------|
 | `title`         | `string` | Store headline displayed in search results (60 chars recommended).      |
@@ -56,7 +57,8 @@ Describes the ecommerce platform being used, that is, `vtex`.
 ---
 
 ### `api`
-Contains settings related to the store's API, including:
+Contains settings related to the store's API.
+
 | Property               | Type    | Description                                                                 |
 |------------------------|---------|-----------------------------------------------------------------------------|
 | `storeId`              | `string`  | VTEX account being used.                            |
@@ -68,7 +70,8 @@ Contains settings related to the store's API, including:
 ---
 
 ### `session`
-Defines the settings for the user session, including:
+Defines the settings for the user session.
+
 | Property           | Type     | Description                                                                 |
 |--------------------|----------|-----------------------------------------------------------------------------|
 | `currency`         | `object`   | Currency information, including: `code` for ISO currency code (`string,` e.g., `USD`) and `symbol` for the currency symbol  (`string,` e.g., `$`) . |
@@ -84,7 +87,7 @@ Defines the settings for the user session, including:
 ---
 
 ### `cart`
-Contains the settings related to the shopping cart, including:
+Contains the settings related to the shopping cart.
 
 | Property           | Type         | Description                                                                 |
 |--------------------|--------------|-----------------------------------------------------------------------------|
@@ -115,13 +118,14 @@ Learn more about store domains in [Associating your custom domain with your FatS
 ---
 
 ### `previewRedirects`
-Maps redirect URLs for the following page types in preview mode, with each field defined as a string:
+Maps redirect URLs for the following page types in preview mode.
+
 | Property    | Type       | Description                                      |
 |-------------|------------|--------------------------------------------------|
 | `home`      | `string`   | Redirect URL for the home page.                   |
 | `plp`       | `string`   | Redirect URL for product listing pages (PLP).     |
 | `search`    | `string`   | Redirect URL for search results pages.            |
-| `pdp`       | `string`   | Redirect URL for product detail pages (PDP) .     |
+| `pdp`       | `string`   | Redirect URL for product detail pages (PDP).     |
 
 Learn more in [Managing URLs with redirects and rewrite paths](https://developers.vtex.com/docs/guides/faststore/routing-managing-urls-with-redirects-and-rewrite-paths).
 
@@ -129,11 +133,14 @@ Learn more in [Managing URLs with redirects and rewrite paths](https://developer
 
 ### `lighthouse`
 Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview), a tool for auditing and improving the quality of web pages.
-  - `server`: A string that defines the server URL for running Lighthouse audits.
-  - `pages`: An object that maps the URL of pages to be audited by Lighthouse, with each field defined as a string.
-    - `home`: URL of the home page.
-    - `pdp`: URL of a product details page.
-    - `collection`: URL of a collection page.
+
+| Property       | Type       | Description                                     |
+|----------------|------------|-------------------------------------------------|
+| `server`       | `string`   | The server URL for running Lighthouse audits.   |
+| `pages`        | `object`   | Maps the URL of pages to be audited by Lighthouse. |
+| &nbsp;&nbsp;├─ `home`      | `string`   | URL of the home page.                           |
+| &nbsp;&nbsp;├─ `pdp`       | `string`   | URL of a product details page.                  |
+| &nbsp;&nbsp;└─ `collection`| `string`   | URL of a collection page.                       |
 
 Learn more in [Lighthouse Scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores).
 
@@ -141,13 +148,16 @@ Learn more in [Lighthouse Scores](https://developers.vtex.com/docs/guides/fastst
 
 ### `cypress`
 Contains settings for [Cypress](https://docs.cypress.io/app/get-started/why-cypress), a testing tool.
-  - `pages`: An object that maps the URLs of pages for end-to-end testing with Cypress, with each field defined as a string.
-    - `home`: URL of the home page.
-    - `pdp`: URL of the product details page.
-    - `collection`: URL of a collection page.
-    - `collection_2`: URL of a secondary collection page.
-    - `collection_filtered`: URL of a filtered collection page.
-    - `search`: URL a search results page.
+
+| Property                 | Type     | Description                                     |
+|---------------------------|----------|-------------------------------------------------|
+| `pages`                   | `object` | Maps the URLs of pages for end-to-end testing with Cypress, with each field defined as a string. |
+| &nbsp;&nbsp;├─ `home`               | `string` | URL of the home page.                           |
+| &nbsp;&nbsp;├─ `pdp`                | `string` | URL of the product details page.                |
+| &nbsp;&nbsp;├─ `collection`         | `string` | URL of a collection page.                       |
+| &nbsp;&nbsp;├─ `collection_2`       | `string` | URL of a secondary collection page.             |
+| &nbsp;&nbsp;├─ `collection_filtered`| `string` | URL of a filtered collection page.              |
+| &nbsp;&nbsp;└─ `search`             | `string` | URL of a search results page.                   |
 
 Learn more in [`enableCypressExtension`](https://developers.vtex.com/docs/guides/faststore/project-structure-custom-cypress).
 
@@ -155,19 +165,25 @@ Learn more in [`enableCypressExtension`](https://developers.vtex.com/docs/guides
 
 ### `analytics`
 Defines the [Google Tag Manager ID](https://support.google.com/tagmanager/answer/12326985?hl=en&ref_topic=14595647&sjid=12859079805529639111-SA) being used.
-  - `gtmContainerId`: A string that defines the Google Tag Manager container ID.
+
+| Property         | Type     | Description                               |
+|------------------|----------|-------------------------------------------|
+| `gtmContainerId` | `string` | The Google Tag Manager container ID.      |
 
 Learn more in [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview).
 
 ---
 
 ### `experimental`
-Contains settings for experimental features, including:
-  - `nodeVersion`: A string that defines the Node.js version.
-  - `cypressVersion`: A string that defines the Cypress version.
-  - `graphqlCacheControl`: An object that contains settings for GraphQL responses, with each field defined as a number.
-    - `maxAge`: Maximum time (in seconds) that the response can be cached.
-    - `staleWhileRevalidate`: Time (in seconds) during which stale responses can be served while revalidating.
+Contains settings for experimental features.
+
+| Property                   | Type     | Description                                     |
+|-----------------------------|----------|-------------------------------------------------|
+| `nodeVersion`               | `string` | The Node.js version.                            |
+| `cypressVersion`            | `string` | The Cypress version.                            |
+| `graphqlCacheControl`       | `object` | Settings for GraphQL responses. |
+| &nbsp;&nbsp;├─ `maxAge`                | `number` | Maximum time (in seconds) that the response can be cached. |
+| &nbsp;&nbsp;└─ `staleWhileRevalidate`  | `number` | Time (in seconds) during which stale responses can be served while revalidating. |
 
 ---
 
@@ -177,5 +193,8 @@ Specifies the name of the account as a string.
 ---
 
 ### `vtexHeadlessCms`
-Contains settings for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), including:
-  - `webhookUrls`: An object of strings that defines the webhook URLs used to interact with the Headless CMS.
+Contains settings for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+
+| Property         | Type     | Description                                               |
+|------------------|----------|-----------------------------------------------------------|
+| `webhookUrls`    | `object` | An object of strings that defines the webhook URLs used to interact with the Headless CMS. |
