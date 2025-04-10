@@ -6,7 +6,7 @@ FastStore has two main versions: FastStore v1 and FastStore v2+. This document o
 
 ## FastStore v1
 
-[FastStore v1](https://v1.faststore.dev/docs) was the first version of the framework. While it served as the foundation for FastStore, it's no longer actively maintained. We recommend using the latest version for new projects.
+[FastStore v1](https://v1.faststore.dev/docs) was the first version of the framework. While it served as the foundation for FastStore, it's no longer actively maintained. New projects must use the latest version of FastStore.
 
 ## FastStore v2+
 
@@ -14,10 +14,10 @@ FastStore v2+ is the latest and most advanced version of the storefront solution
 
 - **Simplified updates:** Stores are monitored for version updates with minimal friction, including automatic non-critical updates and a more efficient integration process.
 - **Separation of VTEX-managed code and store customizations:** Clear segmentation between VTEX and custom code to help in the debug process.
-- **CMS-first approach:** A headless CMS manages content updates (texts, images, links) while behavioral and UI component changes remain code-based, ensuring a structured workflow.
-- **Optimized performance and quality monitoring:** Ongoing performance tracking with proactive safeguards to prevent deployments that don’t meet Lighthouse or internal quality standards.
+- **CMS-first approach:** Headless CMS manages content updates (texts, images, links) while behavioral and UI component changes remain code-based, ensuring a structured workflow.
+- **Optimized performance and quality monitoring:** Ongoing performance tracking with proactive safeguards to prevent deployments that don’t meet Lighthouse and quality standards.
 - **Semantic versioning:** FastStore v2+ uses [Semantic Versioning](https://semver.org/) for managing releases:
-  - **Majors:** Introduce extensive changes, including incompatible API updates.
+  - **Majors:** Introduce breaking changes, including incompatible API updates.
   - **Minors:** Introduce backward-compatible features.
   - **Patches:** Include backward-compatible bug fixes.
 
