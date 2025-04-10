@@ -1,5 +1,5 @@
 ---
-title: 'Overriding a native component'
+title: "Overriding a native component"
 ---
 
 Now that you know how to [override a component's prop](https://developers.vtex.com/docs/guides/faststore/overrides-component-props), learn how to override a native component to use a custom component.
@@ -24,12 +24,12 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
 1. After choosing a native section to be customized from the [list of available native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections), open your FastStore project in any code editor of your preference.
 2. Go to the `src` folder, create the `components` folder, and inside it, create the `sections` folder. You can run the following command to create them:
 
-    > ℹ️ The naming of the `sections` folder is arbitrary, as overrides can be created in any file, since the import is made in the `src/components/index.tsx` file. 
+   > ℹ️ The naming of the `sections` folder is arbitrary, as overrides can be created in any file, since the import is made in the `src/components/index.tsx` file.
 
-    <Tabs items={['macOS and Linux', 'Windows']}>
-        <Tab>```bash copy mkdir src/components src/components/sections ```</Tab>
-        <Tab>```bash copy mkdir src\components src\components\sections ```</Tab>
-    </Tabs>
+   <Tabs items={['macOS and Linux', 'Windows']}>
+   <Tab>`bash copy mkdir src/components src/components/sections `</Tab>
+   <Tab>`bash copy mkdir src\components src\components\sections `</Tab>
+   </Tabs>
 
 ### Step 2 - Create your custom component
 
@@ -37,9 +37,11 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
 
     <Tabs items={['macOS and Linux', 'Windows']}>
     <Tab>
+
     ```bash
     touch src/components/CustomBuyButton.tsx
     ```
+
     </Tab>
     <Tab>
     ```bash
@@ -52,61 +54,62 @@ it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/
 
 2. Add the following code into `CustomBuyButton.tsx` file:
 
-    ```tsx CustomBuyButton.tsx
-    import React from 'react'
-    import { Button as UIButton } from '@faststore/ui'
+        ```tsx CustomBuyButton.tsx
+        import React from "react";
+        import { Button as UIButton } from "@faststore/ui";
 
-    export function CustomBuyButton() {
-    return (
-        <UIButton
-        variant="primary"
-        onClick={() => {
-            alert('Hello User!')
-        }}
-        >
-        New Buy Button
-        </UIButton>
-    )
-    }
-    ```
+        export function CustomBuyButton() {
+            return (
+            <UIButton
+                variant="primary"
+                onClick={() => {
+                alert("Hello User!");
+                }}
+            >
+                New Buy Button
+            </UIButton>
+            );
+        }
+        ```
 
 ### Step 3 - Setting up the custom section
 
 1. In the `sections` folder, create a new file for your customized section. For example, create a new file named `ProductDetailsWithCustomButton.tsx` under the `src/components/sections` directory.
 2. Open the `ProductDetailsWithCustomButton.tsx` file and update it with the following code:
 
-    ```tsx ProductDetailsWithCustomButton.tsx
-    import { ProductDetailsSection, getOverriddenSection } from '@faststore/core'
+        ```tsx ProductDetailsWithCustomButton.tsx
+        import {
+            ProductDetailsSection,
+            getOverriddenSection,
+        } from "@faststore/core";
+        import { CustomBuyButton } from "./CustomBuyButton";
 
-    const ProductDetailsWithCustomButton = getOverriddenSection({
-        Section: ProductDetailsSection,
-        components: {
+        const ProductDetailsWithCustomButton = getOverriddenSection({
+            Section: ProductDetailsSection,
+            components: {
             BuyButton: { Component: CustomBuyButton },
-        },
-    })
+            },
+        });
 
-    export default ProductDetailsWithCustomButton;
-    ```
+        export default ProductDetailsWithCustomButton;
+        ```
 
 #### Step 4 - Overriding the component
 
-1. Choose a component to override from the [list of overridable components of each native section](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections). 
-In this example, we are overriding the `BuyButton` component in the `ProductDetails` section.
+1. Choose a component to override from the [list of overridable components of each native section](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections). In this example, we are overriding the `BuyButton` component in the `ProductDetails` section.
 2. In the `components` folder, if you don't have already the `index.tsx` file, create the file and add the following:
 
-    ```tsx components/index.tsx
+        ```tsx components/index.tsx
         import ProductDetailsWithCustomButton from "./sections/ProductDetailsWithCustomButton";
 
-        export default { ProductDetailsWithCustomButton };
+        export default { ProductDetails: ProductDetailsWithCustomButton }
+        ```
 
-    ```
-
-3. Open the terminal, and run `yarn dev` to sync the new custom component to your store preview. 
-4. Open the localhost available after running `yarn dev`. 
+3. Open the terminal, and run `yarn dev` to sync the new custom component to your store preview.
+4. Open the localhost available after running `yarn dev`.
 5. Open a PDP and click `New BuyButton`. An alert with `Hello user` message will appear.
 
 ![custom-buybutton-with-alert](https://vtexhelp.vtexassets.com/assets/docs/src/custom-buybutton___85eef62d606c75d7d9a206635979a050.gif)
-
 
 ### Step 5 - Publishing your changes
 
@@ -116,4 +119,3 @@ If your changes are working locally and you want to publish them in production, 
 2. Open a pull request in the store's GitHub repository.
 3. Review the pull request
 4. Merge the changes from this branch to the `main` one and the new component will be available in the live store.
-

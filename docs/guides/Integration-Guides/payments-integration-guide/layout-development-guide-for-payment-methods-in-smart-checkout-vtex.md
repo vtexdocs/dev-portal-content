@@ -15,7 +15,7 @@ As part of a layout, information such as contact details (e.g. phone number or e
 
 The following sections show how to create a layout to be used for payment methods in VTEX's Smart Checkout.
 
-> ℹ️ It is not possible to create a new layout to be used in custom payment methods (those developed by the merchant and that only work in their stores).
+>ℹ️ You cannot create a new layout for custom payment methods (those developed by the merchant and that only work in their stores, such as notes payable, co-branded, or private label cards).
 
 ## Layout Requirements
 

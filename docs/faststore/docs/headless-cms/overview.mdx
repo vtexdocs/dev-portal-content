@@ -59,14 +59,56 @@ Each project lists all web pages created within it, starting empty and filling a
 
 Once editors click **Create Document** in the Headless CMS interface, they'll be able to select a type from a list of **Content Types** that you, the developer, established.
 
-![CMS Settings](https://vtexhelp.vtexassets.com/assets/docs/src/headless-cms-projects___5472a0870899c945ece289905ac92758.png)
+![CMS Settings](https://vtexhelp.vtexassets.com/assets/docs/src/default-content-types___347e90fd55cac37f060199fa6718b799.png)
+
+Content Types are the building blocks for creating a scalable and maintainable storefront in FastStore. Predefined Content Types are available after onboarding through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview), enabling quick setup for pages like Home, Product Listing, and Custom Landing.
+
+Content Types are organized by [Scopes](https://developers.vtex.com/docs/guides/faststore/headless-cms-managing-content-with-scopes-and-requiredscopes#scopes), which define the context in which each Content Type can be used. Scopes categorize Content Types based on their functionality. For example, a Content Type with a `pdp` scope can only be used on PDPs.
+
+The following table provides an overview of the standard Content Types, their IDs, scopes, and their respective purposes.
+
+> ℹ These standard Content Types are natively implemented. You can view their structure in the [content-types.json](https://github.com/vtex/faststore/blob/main/packages/core/cms/faststore/content-types.json) file.
+
+| **Content Type** | **ID** | **Scopes** | **Purpose** |
+| ------------------------------- | -------- | --------------- | --------------- |
+| **Global Sections** | `globalSections` | `global` | Defines reusable sections that show across pages. |
+| **Global Header Sections** | `globalHeaderSections` | `global` | Defines the content for the global header, displayed at the top of every page. |
+| **Global Footer Sections** | `globalFooterSections` | `global` | Defines the content for the global footer, displayed at the bottom of every page. |
+| **Landing Page** | `landingPage` | `landing` and `custom` | Creates custom landing pages with SEO optimization. |
+| **Home** | `home` | `home` | Defines the structure and SEO metadata for the homepage. |
+| **Product Page** | `pdp` | `pdp` | Defines the structure and template for Product Detail Pages (PDP). |
+| **Product List Page** | `plp` | `plp` | Defines the structure and settings for Product Listing Pages (PLP). |
+| **Search Page** | `search` | `plp` and `search` | Defines the structure and settings for search results pages. |
+| **Login** | `login` | - | Defines the structure for the login page. |
+| **Error 500** | `500` | - | Defines the structure for the 500 Internal Server Error page. |
+| **Error 400** | `400` | - | Defines the structure for the 400 pages, including the 404 Not Found Error page. |
 
 ### Sections
 
-For each Content Type, different **Sections** will be available to compose that page. Sections represent the content structure of a React component, for example, the [Alert](https://developers.vtex.com/docs/guides/faststore/molecules-alert).
+Each Content Type has different sections available to build a page. Sections represent key React components, such as Hero or Product Gallery, manageable within the CMS. Editors can visually configure and arrange storefront sections without needing to code. For example, the [Alert component](https://developers.vtex.com/docs/guides/faststore/molecules-alert) is a FastStore UI component and section that can be used in various Content Types.
 
 ![CMS Section](https://vtexhelp.vtexassets.com/assets/docs/src/cms-sections___ccc8b00d73f222d249a009eb195c8e0c.png)
 
-Sections can be reused on different pages of an ecommerce. You are the one who will choose which Sections will be available at the CMS. Check the following example of the [Hero Section](https://developers.vtex.com/docs/guides/faststore/organisms-hero) being used:
+Sections are reusable across different pages. Developers determine which sections are available in the CMS. Below is an example of the **Hero** section:
 
 ![Hero Section](https://vtexhelp.vtexassets.com/assets/docs/src/headless-example-hero___7cbbc99654d6607f50c013053b1348ca.png)
+
+#### The Children section
+
+The **Children** section is a special section used to organize and structure content within the Headless CMS interface. It is a global section, meaning it appears on all store pages and represents the core content of each page. This section is only available for the **Global Sections** Content Type.
+
+![childre-section](https://vtexhelp.vtexassets.com/assets/docs/src/children-section___1c3e8b7d72e66c28eb59a3d9c0bafe10.png)
+
+> ❗ The **Children** section cannot be deleted. Removing it would erase the main content of your store page.
+
+The **Children** Section ensures that headers and footers (defined in **Global Sections**) are clearly separated from the main content of each page. For example, on a Product Listing Page (PLP), the Children section might include the following sections: Breadcrumb, Hero, Product Gallery, and Product Shelf. These sections are wrapped within the Children section.
+
+![children-plp-cms](https://vtexhelp.vtexassets.com/assets/docs/src/children-section-cms___33640231fc80e521504c130aa6def7cc.png)
+
+In summary:
+
+- Headers and footers are defined in the **Global Sections** Content Type and appear on all store pages.
+
+- The **Children** section wraps the main content of a page, ensuring clear separation from headers and footers.
+
+![children-store-plp](https://vtexhelp.vtexassets.com/assets/docs/src/children-section-store___c21eb36deeea20fcedeea495b9066218.png)

@@ -61,7 +61,7 @@ Merchant channels are digital sales channels used by the store, such as the webs
 
 VTEX Core Services are the essential components or frameworks provided by VTEX within the platform. These services include modules, such as [Catalog](https://developers.vtex.com/docs/guides/catalog-overview), [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview), [Pricing](https://developers.vtex.com/docs/guides/pricing-overview). They constitute the foundation of the VTEX platform, empowering businesses to effectively manage and conduct their ecommerce operation strategies.
 
-In a [B2C store](https://developers.vtex.com/docs/guides/store-architecture-use-cases) architecture, the diagram below presents the blocks with a pink background and border, representing the native components of VTEX.
+In a [B2C store](https://developers.vtex.com/docs/guides/store-architecture) architecture, the diagram below presents the blocks with a pink background and border, representing the native components of VTEX.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/vtex-core-services.png)
 
