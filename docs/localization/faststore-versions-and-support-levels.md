@@ -17,9 +17,9 @@ FastStore v2+ is the latest and most advanced version of the storefront solution
 - **CMS-first approach:** A headless CMS manages content updates (texts, images, links) while behavioral and UI component changes remain code-based, ensuring a structured workflow.
 - **Optimized performance and quality monitoring:** Ongoing performance tracking with proactive safeguards to prevent deployments that don’t meet Lighthouse or internal quality standards.
 - **Semantic versioning:** FastStore v2+ uses [Semantic Versioning](https://semver.org/) for managing releases:
-- **Majors:** Introduce extensive changes, including incompatible API updates.
-- **Minors:** Introduce backward-compatible features.
-- **Patches:** Include backward-compatible bug fixes.
+  - **Majors:** Introduce extensive changes, including incompatible API updates.
+  - **Minors:** Introduce backward-compatible features.
+  - **Patches:** Include backward-compatible bug fixes.
 
 ## Key differences between FastStore versions
 
@@ -27,11 +27,11 @@ One of the main changes from FastStore v1 to FastStore v2+ is the separation bet
 
 ### Packages
 
-| Package name | FastStore v1 | FastStore v2 | FastStore v3 |
+| Package name    | FastStore v1 | FastStore v2 | FastStore v3 |
 | --------------- | ------------ | ------------ | ------------ |
-| `api` | ✅ | ✅ | ✅ |
-| `cli` | ✅ | ✅ | ✅ |
-| `components` | ✅ | ✅ | ✅ |
+| `api`           | ✅           | ✅           | ✅           |
+| `cli`           | ✅           | ✅           | ✅           |
+| `components`    | ✅           | ✅           | ✅           |
 | `core`          | ❌           | ✅           | ✅           |
 | `graphql-utils` | ✅           | ✅           | ✅           |
 | `lighthouse`    | ✅           | ✅           | ✅           |
