@@ -28,18 +28,20 @@ module.exports = {
 
 Check the full file example at [`discovery.config.js` sample code](https://github.com/vtex-sites/starter.store/blob/main/discovery.config.js).
 
-> ⚠️ `discovery.config.js` is the new filename for the legacy `faststore.config.js` file. If you're still using the legacy name, please check [this release note](https://developers.vtex.com/updates/release-notes/2024-12-16-discovery-config-file) to update it.
+> ⚠️ As of December 16, 2024, `discovery.config.js` is the new filename for the legacy `faststore.config.js` file. If you're still using the legacy name, please check [this release note](https://developers.vtex.com/updates/release-notes/2024-12-16-discovery-config-file) to update it.
 
 ## Configuration options
 
 Below is a description of each setting you can configure in the `discovery.config.js` file:
 
 ### `seo`
-Sets basic metadata related to Search Engine Optimization (SEO). All fields inside this object are strings.
-  - `title`: Store headline in search results.
-  - `description`: Brief description of the store.
-  - `titleTemplate`: Template for generating page titles.
-  - `author`: Author of the store content.
+Sets default metadata related to Search Engine Optimization (SEO). It receives an object with the following structure:
+| Property        | Type   | Description                                                                 |
+|-----------------|--------|-----------------------------------------------------------------------------|
+| `title`         | `string` | Store headline displayed in search results (60 chars recommended).      |
+| `description`   | `string` | Brief description of the store (150-160 chars optimal).                |
+| `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder (e.g., `"%s \| StoreName"`).    |
+| `author`        | `string` | Content author/owner for attribution.                                        |
 
 Learn more in [SEO](https://developers.vtex.com/docs/guides/faststore/seo).
 
@@ -57,34 +59,41 @@ Describes the ecommerce platform being used, that is, `vtex`.
 
 ### `api`
 Contains settings related to the store's API, including:
-  - `storeId`: A string that identifies the account or store being used.
-  - `workspace`: A string that defines the name of the workspace being used.
-  - `environment`: A string that defines the name of the specific environment being used.
-  - `hideUnavailableItems`: A boolean flag to hide or show items without available stock.
-  - `incrementAddress`: Flag to determine how address information should be handled.
+| Property               | Type    | Description                                                                 |
+|------------------------|---------|-----------------------------------------------------------------------------|
+| `storeId`              | `string`  | VTEX account being used.                            |
+| `workspace`            | `string`  | Workspace being used.    |
+| `environment`          | `string`  | API environment (e.g., `vtexcommercestable`).        |
+| `hideUnavailableItems` | `boolean` | When `true`, hides products that are out of stock.                         |
+| `incrementAddress`     | `boolean` | Determines address handling behavior.                |
 
 ---
 
 ### `session`
 Defines the settings for the user session, including:
-  - `currency`: An object containing the currency code (string) used in the store and its corresponding symbol (string).
-  - `locale`: A string representing the locale or language setting of the store.
-  - `channel`: A string with information about the trade policy, region, and seller for the sales process.
-  - `country`: A string with the country code associated with the store.
-  - `deliveryMode`: A string describing how orders are fulfilled, including delivery channel, selected courier or method, and delivery window (start and end times).
-  - `addressType`: A string indicating the selected address type.
-  - `postalCode`: A string representing the postal code set for the user session.
-  - `geoCoordinates`:  An array containing two numbers (latitude and longitude) for the user session.
-  - `person`: An object containing the customer's unique identification, email, first name, and last name as registered in their profile.
+| Property           | Type     | Description                                                                 |
+|--------------------|----------|-----------------------------------------------------------------------------|
+| `currency`         | `object`   | Currency information, including: `code` for ISO currency code (`string,` e.g., `USD`) and `symbol` for the currency symbol  (`string,` e.g., `$`) . |
+| `locale`           | `string`   | Language or locale setting (e.g., `en-US`).                                     |
+| `channel`          | `string`   | Trade policy, region, and seller information for the sales process.                 |
+| `country`          | `string`   | ISO country code (e.g., `US`).                                               |
+| `deliveryMode`     | `string`   | Order fulfillment method, including delivery channel, selected courier or method, and delivery window (start and end times).            |
+| `addressType`      | `string`   | Type of address.                       |
+| `postalCode`       | `string`   | User’s postal code (e.g., "10001").                                          |
+| `geoCoordinates`   | `float[]` | User’s location as [latitude, longitude] (e.g., `[40.7128, -74.0060]`).     |
+| `person`           | `object`   | Shopper data, including: `id` (`string`) for unique customer ID, `email` (`string`) for registered email, `firstName` (`string`) for first name, and `lastName` (`string`) for last name. |
 
 ---
 
 ### `cart`
 Contains the settings related to the shopping cart, including:
-  - `id`: A string representing the unique identifier of the cart.
-  - `items`: An array containing the items added to the cart.
-  - `messages`: An array of strings with messages associated with the cart, such as shipping changes or any other relevant information.
-  - `shouldSplitItem`: A boolean flag that determines whether an item should be split in the cart.
+
+| Property           | Type         | Description                                                                 |
+|--------------------|--------------|-----------------------------------------------------------------------------|
+| `id`               | `string`     | Unique identifier of the cart.                                              |
+| `items`            | `array`      | Products added to the cart.                                                 |
+| `messages`         | `string[]`   | System messages associated with the cart, such as shipping changes or any other relevant information. |
+| `shouldSplitItem`  | `boolean`    | When `true`, allows cart items to be divided into separate shipments.       |
 
 ---
 
@@ -109,10 +118,12 @@ Learn more about store domains in [Associating your custom domain with your FatS
 
 ### `previewRedirects`
 Maps redirect URLs for the following page types in preview mode, with each field defined as a string:
-  - `home`: Redirect URL for the home page.
-  - `plp`: Redirect URL for a product listing page.
-  - `search`: Redirect URL for a search results page.
-  - `pdp`: Redirect URL for a product details page.
+| Property    | Type       | Description                                      |
+|-------------|------------|--------------------------------------------------|
+| `home`      | `string`   | Redirect URL for the home page.                   |
+| `plp`       | `string`   | Redirect URL for product listing pages (PLP).     |
+| `search`    | `string`   | Redirect URL for search results pages.            |
+| `pdp`       | `string`   | Redirect URL for product detail pages (PDP) .     |
 
 Learn more in [Managing URLs with redirects and rewrite paths](https://developers.vtex.com/docs/guides/faststore/routing-managing-urls-with-redirects-and-rewrite-paths).
 
