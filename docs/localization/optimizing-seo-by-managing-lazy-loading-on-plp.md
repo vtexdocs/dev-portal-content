@@ -2,11 +2,11 @@
 title: "Optimizing SEO by managing lazy loading on Product Listing Pages (PLPs)"
 ---
 
-By default, FastStore improves performance by wrapping store sections in `LazyLoadingSection` and `ViewportObserver` components. These components delay loading non-essential sections until needed, such as when a user scrolls near them. This approach reduces initial page load times and improves user experience, particularly on slower networks or devices.
+By default, FastStore boosts performance by wrapping store sections in the `LazyLoadingSection` and `ViewportObserver` components. These components delay the loading of non-essential content until it's needed, such as when a user scrolls near it. This approach reduces initial page load times and enhances the user experience, especially on slower networks or devices.
 
-While lazy loading improves performance, it can harm SEO. Search engine crawlers often do not execute JavaScript or wait for dynamically loaded content. As a result, critical sections like product grids on category pages may not be indexed. For instance, if a user accesses the `gym clothes` collection, its product listing might not appear in search results if it's not included in the initial HTML.
+While lazy loading enhances performance, it may negatively impact SEO. Search engine crawlers often don't execute JavaScript or wait for dynamically loaded content. Consequently, important sections like product grids on category pages might not be indexed. For example, if a user accesses the `gym clothes` collection, its product listing might not be returned in search results if not included in the initial HTML.
 
-In this guide, learn how to optimize SEO by controlling lazy loading for custom sections in FastStore.
+In this guide, learn how to optimize SEO by managing lazy loading for custom sections in FastStore.
 
 > ❗ Disabling lazy loading may increase initial page load time. Use it only when necessary.
 
@@ -29,10 +29,10 @@ For instructions, see the [Configuring SEO for Product Listing Pages (PLP)](http
 
 ### Step 1: Controlling lazy loading for custom sections
 
-FastStore lazy-loads sections for performance reasons. However, certain [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section), such as those containing H1 headers, may need to appear in the initial HTML for SEO purposes. To disable lazy loading for these sections, consider the following:
+FastStore lazy-loads sections to improve performance. However, some custom sections (https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section), such as those containing H1 headers, may need to be included in the initial HTML for SEO purposes. To disable lazy loading for these sections, consider the following:
 
 1. Open the `cms/faststore/sections.json` file in your project.
-2. Locate your custom section in the file and add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomPLPName`, the configuration would look like this:
+2. Locate your custom section in the file, add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomPLPName`, the configuration would look like this:
 
    ```sections.json
    …
@@ -54,7 +54,7 @@ FastStore lazy-loads sections for performance reasons. However, certain [custom 
    }
    ```
 
-3. To display data related to the PLP (e.g., collection, category, or brand names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook in the section’s file:
+3. To display data related to the PLP (for example, collection, category, or brand names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook in the section\u2019s file:
 
 ```CallToAction.tsx
 import { usePLP } from '@faststore/core'
@@ -73,33 +73,33 @@ export default function CustomPLPName() {
 
 ### Step 2: Sending the changes to the Headless CMS
 
-1. Open the terminal and run `faststore cms-sync` to sync your local changes with the Headless CMS.
-2. Go to the VTEX Admin, access **Storefront > Headless CMS**.
+1. Open the terminal and run `faststore cms-sync` to synchronize your local changes with the Headless CMS.
+2. Go to the VTEX Admin and access **Storefront > Headless CMS**.
 3. Access the **Product List Page** Content Type.
 4. Add the custom section you created. At the end of the section, you’ll notice the **Skip lazy loading** option.
 
-   ![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading-option___32bda38cafbf728774a30ad9ada8be01.png)
+![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading-option___32bda38cafbf728774a30ad9ada8be01.png)
 
-5. Click `Save` and publish the changes you made.
-6. Click `Preview`.
-7. Search for a collection name to see your new section. For example, if you have a `Just arrived` collection, add its slug to the URL, for example: `https://mystore.vtex.app/just-arrived`. You’ll be able to see something similar to the following:
+5. Click "Save" to publish the changes you made.
+6. Click "Preview".
+7. Search for the collection name to view your new section. For example, if you have a `Just arrived` collection, append its slug to the URL like `https://mystore.vtex.app/just-arrived`. You should see something similar to the following:
 
-   ![custom-section-ui](https://vtexhelp.vtexassets.com/assets/docs/src/custom-section___48bf7d70d678b4fb4ddae39aa0cf14cb.png)
+![custom-section-ui](https://vtexhelp.vtexassets.com/assets/docs/src/custom-section___48bf7d70d678b4fb4ddae39aa0cf14cb.png)
 
 ### Step 3: Checking if the custom section is visible to search engines
 
-To make sure that the custom section is present in the initial HTML response, follow these steps:
+To ensure that the custom section is included in the initial HTML response, follow these steps:
 
 1. In the browser, right-click anywhere on the page and select **Inspect** from the context menu.
-2. In the **Developer Tools** panel, click the **Network tab**. Ensure that the **All filter** is selected.
+2. In the **Developer Tools** panel, click the **Network** tab. Ensure that the **All** filter is selected.
 
-   > ℹ To focus only on the main HTML document, you can filter by **Doc** in the filter bar. This will show only the initial HTML request, making it easier to inspect the page's source code.
+> ℹ To focus only on the main HTML document, you can filter by **Doc** in the filter bar. This will show only the initial HTML request, making inspecting the page's source code easier.
 
 3. Reload the page while the Developer Tools are open. This will capture all network requests made during the page load.
-4. In the **Name** column of the **Network** tab, look for the request corresponding to the page you're inspecting In our example `just-arrived`.
+4. In the Name column of the Network tab, look for the request corresponding to the page you’re inspecting, such as `just-arrived`.
 5. Click the **Response** tab in this panel.
-6. If the section is present in the initial HTML response, you will see the corresponding HTML code in the **Response** tab. For example:
+6. If the section is in the initial HTML response, you will see the corresponding HTML code in the **Response** tab. For example:
 
-   ![developer-tools-panel](https://vtexhelp.vtexassets.com/assets/docs/src/developer-tools-panel___9240a6f4b36ce8151f6d346e78674f2b.png)
+![developer-tools-panel](https://vtexhelp.vtexassets.com/assets/docs/src/developer-tools-panel___9240a6f4b36ce8151f6d346e78674f2b.png)
 
-If the section is present in the initial HTML, as in the example above, it means it is not lazy-loaded and is visible to search engines.
+If the section is in the initial HTML, as in the example above, it means it isn't lazy-loaded and is visible to search engines.
