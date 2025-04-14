@@ -8,19 +8,19 @@ updatedAt: ""
 hidden: false
 ---
 
-We've improved how FastStore WebOps displays deployment details for content published through the Headless CMS. FastStore WebOps now accurately reflects Headless CMS publications, making content changes clearer.
+We've improved how FastStore WebOps displays deployment details for content published through the Headless CMS. FastStore WebOps now accurately reflects publications made via the Headless CMS, making content updates clearer and easier to track.
 
 ## What has changed?
 
-Previously, when a user updated content through the Headless CMS, a new deployment entry would appear in FastStore WebOps. However, this entry displayed repetitive information related to the integration between the Headless CMS and the GitHub repository. The description, date, and author of the last Git-based deployment were shown for all content updates, which could lead to confusion.
+Previously, whenever a user updated content through the Headless CMS, a new deployment entry was displayed in FastStore WebOps. However, these entries repeated the same details — description, date, and author — from the last Git-based deployment. This could cause confusion, as the information didn't reflect the actual content update.
 
-Now, deployments display more accurate details from Headless CMS:
+Now, deployments display more accurate details from the Headless CMS:
 
-- For content updates to the live website, it’s displayed `Publish now` followed by the release ID.
+- For content updates to the live website, it displays `Publish now` followed by the release ID.
 
   ![publish-now](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/publish-now.png)
 
-- For scheduled content updates related to a release, it’s displayed the release name.
+- For scheduled content updates related to a release, it displays the release name.
 
   ![add-a-release](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/add-a-release.png)
 
