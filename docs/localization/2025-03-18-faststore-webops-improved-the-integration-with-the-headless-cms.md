@@ -1,9 +1,9 @@
 ---
 title: "FastStore WebOps: Improved the integration with the Headless CMS"
-slug: "2025-03-18-faststore-webops-improved-the-integration-with-the-headless-cms"
+slug: "2025-04-15-faststore-webops-improved-the-integration-with-the-headless-cms"
 type: improved
 excerpt: "FastStore WebOps now displays detailed content publishing information from the Headless CMS."
-createdAt: "2025-03-18T13:44:15.362Z"
+createdAt: "2025-04-15T13:44:15.362Z"
 updatedAt: ""
 hidden: false
 ---
