@@ -11,15 +11,15 @@ The `RatingField` component allows users to input ratings in their product revie
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection containerStyle={{ flexDirection:'column', alignItems: 'normal' }}>
-      <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
-      <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-error" error="This field is required." />
+      <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" actionable />
+      <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-error" error="This field is required." actionable />
      </OverviewSection>
   </Tab>
   
   <Tab>
     ```tsx
-      <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
-      <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-error" error="This field is required." />
+      <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" actionable />
+      <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-error" error="This field is required." actionable />
     ```
   </Tab>
 </Tabs>
@@ -59,11 +59,11 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 #### Label
 
 <OverviewSection>
-  <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
+  <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" actionable />
 </OverviewSection>
 
 ```tsx
-  <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
+  <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" actionable />
 ```
 
 <TokenTable>
@@ -87,11 +87,11 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 #### Error
 
 <OverviewSection>
-  <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-error" error="This field is required." />
+  <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-error" error="This field is required." actionable />
 </OverviewSection>
 
 ```tsx
-  <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-error" error="This field is required." />
+  <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-error" error="This field is required." actionable />
 ```
   
 <TokenTable>
