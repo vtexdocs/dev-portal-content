@@ -28,6 +28,7 @@ Previously, using the `imageDimensions` attribute directly in the `<img>` tag co
 ## What needs to be done?
 
 To benefit from the new functionality:
+
 1. Update your Store Theme to use the latest version of the Store Image app.
 2. Set the `experimentalSetExplicitDimensions` attribute to `true`.
 3. Update the desired image dimensions following the [Store Image](https://developers.vtex.com/docs/apps/vtex.store-image) documentation.
