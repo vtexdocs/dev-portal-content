@@ -44,33 +44,33 @@ The following steps detail the refresh token flow shown in the diagram:
 
 1. **Login**
 
-  The user initiates authentication by logging into the system. VTEX ID processes the login request.
+   The user initiates authentication by logging into the system. VTEX ID processes the login request.
 
 2. **VTEX ID responds with tokens**
 
-  If authentication is successful, VTEX ID issues:
+   If authentication is successful, VTEX ID issues:
 
-    * Access token
-    * Refresh token
+     * Access token
+     * Refresh token
 
-  These tokens are stored in cookies during the user's browser session.
+   These tokens are stored in cookies during the user's browser session.
 
 3. **Reauthentication after access token expiration**
 
-  After 24 hours, the access token expires. If the refresh token is still valid, the client can automatically obtain a new access token without any additional interaction.
+   After 24 hours, the access token expires. If the refresh token is still valid, the client can automatically obtain a new access token without any additional interaction.
 
-  For example, if the refresh token has a 30-day lifespan and the user attempts to log in 29 days after their last authentication, the user’s browser sends the refresh token to VTEX ID to obtain a new access token. However, once the 30-day period ends, the refresh token expires, and the user must log in again to generate new access and refresh tokens.
+   For example, if the refresh token has a 30-day lifespan and the user attempts to log in 29 days after their last authentication, the user’s browser sends the refresh token to VTEX ID to obtain a new access token. However, once the 30-day period ends, the refresh token expires, and the user must log in again to generate new access and refresh tokens.
 
-  This happens automatically when stores use [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj). For [headless](https://developers.vtex.com/docs/guides/headless-commerce) stores, it needs to be manually implemented following the instructions on this guide.
+   This happens automatically when stores use [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj). For [headless](https://developers.vtex.com/docs/guides/headless-commerce) stores, it needs to be manually implemented following the instructions on this guide.
 
 1. **VTEX ID issues new tokens**
 
-  VTEX ID validates the refresh token and, if it's still valid:
+   VTEX ID validates the refresh token and, if it's still valid:
 
-    * Issues a new access token
-    * Provides a new refresh token
+     * Issues a new access token
+     * Provides a new refresh token
 
-  These new tokens replace the old ones in the browser.
+   These new tokens replace the old ones in the browser.
 
 This cycle repeats until the refresh token expires, ensuring uninterrupted user authentication.
 
