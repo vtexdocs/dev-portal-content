@@ -1,6 +1,6 @@
 ---
 title: "Store Framework: Improved image dimension control with Store Image"
-slug: "2025-04-16-store-image-component-improved-image-dimension-handling"
+slug: "2025-04-16-store-framework-improved-image-dimension-control-with-store-image"
 type: improved
 excerpt: "Store Image app has been updated to allow a more flexible management of image dimensions."
 createdAt: "2025-04-16T08:18:58.347Z"
