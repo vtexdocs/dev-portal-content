@@ -5,3 +5,5 @@ files:
       _en: ''
   - source: /docs/localization/*/*.md
     translation: /%original_path%/%original_file_name%_%two_letters_code%
+  - source: /docs/localization/*.mdx
+    translation: /%original_path%/%original_file_name%_%two_letters_code%
