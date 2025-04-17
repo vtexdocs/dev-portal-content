@@ -30,16 +30,16 @@ Modules defined in the `manifest.json` file that specify the functionality of an
 A [composition](#composition) type that allows flexible ordering of child [blocks](#blocks). Child blocks are listed in a `children` array, and their sequence determines their positioning on the page, enabling dynamic layout control for store themes. Learn more in [Children](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#children).
 
 ### Content Management System (CMS)
-A tool that allows you to create, manage, and publish digital content easily, without needing advanced technical skills. In Store Framework, [Site Editor](#site-editor) works as a Content Management System (CMS), reflecting the blocks defined in the [Store Theme](#store-theme) of the VTEX account. Learn more in [CMS Overview](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC).
+A tool that allows you to create, manage, and publish digital content easily, without needing advanced technical skills. In Store Framework, [Site Editor](#site-editor) functions as a Content Management System (CMS), reflecting the blocks defined in the [Store Theme](#store-theme) of the VTEX account. Learn more in [CMS Overview](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/6OCY6S9tqBXPD5mgpbBInC).
 
 ### Components
-Building [blocks](#blocks) used to create storefronts and admin apps. These blocks accept [properties](#properties-props) and return React elements to define what is displayed in the user interface. They range from basic elements (buttons, forms) to complex features (product carousels, navigation bars). Learn more in [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components).
+Building [blocks](#blocks) used to create storefronts and admin apps. These blocks accept [properties](#properties-props) and return React elements to define what is displayed in the user interface. They range from basic elements (such as buttons and forms) to complex features (such as product carousels and navigation bars). Learn more in [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components).
 
 ### Composition
-A property in the `interfaces.json` file that defines how [React](https://react.dev/) components are organized and structured within a parent-child hierarchy in a [Store Theme](#store-theme). There are three types: [blocks](#blocks), [children](#children), and [slots](#slots). Learn more in [Composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition).
+A property in the `interfaces.json` file that defines how [React](https://react.dev/) components are organized and structured within a parent-child hierarchy in a [Store Theme](#store-theme). There are three types of composition: [blocks](#blocks), [children](#children), and [slots](#slots). Learn more in [Composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition).
 
 ### CSS Handles
-CSS class that maps to an HTML element. It serves as a layout-building assistant for your store, allowing you to customize any block by applying CSS classes within the [Store Theme](#store-theme)’s code. Learn more in [Using CSS handles for store customizations](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
+A CSS class that maps to an HTML element. It serves as a layout-building assistant for your store, allowing you to customize any block by applying CSS classes within the [Store Theme](#store-theme) code. Learn more in [Using CSS handles for store customizations](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 ---
 
@@ -51,7 +51,7 @@ A property (#properties-props) in the `manifest.json` file that specifies other 
 
 ## I
 ### Interfaces
-Rules defined in the `interfaces.json` file that link a [block](#blocks) to a [component](#components), enabling storefront development. They dictate block behavior, available [properties](#properties-props), and methods during rendering. Learn more in [Interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface).
+Rules defined in the `interfaces.json` file that link a [block](#blocks) to a [component](#components), enabling storefront development. These rules define the block's behavior, available [properties](#properties-props), and methods used during rendering. Learn more in [Interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface).
 
 ---
 
@@ -63,7 +63,7 @@ A declarative format for defining the structure, constraints, and default values
 
 ## M
 ### Manifest
-A document containing metadata that defines and shapes the core attributes and functionalities of a [VTEX IO app](#vtex-io-app). Learn more in [Manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+A document containing metadata that defines and shapes the core attributes and features of a [VTEX IO app](#vtex-io-app). Learn more in [Manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 ---
 
@@ -79,7 +79,7 @@ Key-value pairs used to define the behavior and appearance of [components](#comp
 
 ## R
 ### Routes
-Routes are configurations that map URL patterns and HTTP methods to specific actions, dictating how an application handles incoming client requests. In [Store Framework](#store-framework), routing is managed by the [Rewriter app[(https://developers.vtex.com/docs/apps/vtex.rewriter) and [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder), enabling developers to focus on defining route paths and designing page templates without handling low-level routing logic directly. Learn more in [Routing](https://developers.vtex.com/docs/guides/store-framework-routing).
+Routes are configurations that map URL patterns and HTTP methods to specific actions, determining how an application handles incoming client requests. In the context of [Store Framework](#store-framework), routing is managed by the [Rewriter app[(https://developers.vtex.com/docs/apps/vtex.rewriter) and [Store Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder), enabling developers to focus on defining route paths and designing page templates without managing low-level routing logic directly. Learn more in [Routing](https://developers.vtex.com/docs/guides/store-framework-routing).
 
 ---
 
@@ -106,7 +106,7 @@ A [VTEX IO app](#vtex-io-app) that defines a storefront’s appearance and funct
 
 ## T
 ### Trade policy
-A set of configurations on the VTEX platform defining catalog, pricing, promotions, logistics, and payments for specific sales strategies. Used to segment sales conditions for different channels (for example, B2B, marketplaces), trade policies adapt store navigation and offerings based on user type. Learn more in [How trade policies work](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV).
+A set of configurations on the VTEX platform that define catalog, pricing, promotions, logistics, and payments for specific sales strategies. Trade policies are used to segment sales conditions across different channels (for example, B2B, marketplaces), adapting store navigation and offerings based on the user type. Learn more in [How trade policies work](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV).
 
 ---
 
