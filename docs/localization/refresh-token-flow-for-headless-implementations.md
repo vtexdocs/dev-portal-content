@@ -4,10 +4,10 @@ slug: "refresh-token-flow-for-headless-implementations"
 hidden: false
 excerpt: "Learn how to implement refresh token in headless stores."
 createdAt: "2025-04-04T22:18:24.684Z"
-updatedAt: "2025-04-04T22:18:24.684Z"
+updatedAt: "2025-04-16T22:08:16.684Z"
 ---
 
-The refresh token flow is a security mechanism in authentication systems that allows clients to obtain new access tokens without requiring users to re-authenticate.
+The refresh token flow is a security mechanism in authentication systems that allows clients to obtain new access tokens without requiring users to reauthenticate.
 
 This guide explains how to implement the refresh token flow in [headless](https://developers.vtex.com/docs/guides/headless-commerce) scenarios using native VTEX Login.
 
@@ -15,7 +15,7 @@ This guide explains how to implement the refresh token flow in [headless](https:
 
 The refresh token flow operates with two types of tokens:
 
-* **Access token (`VtexIdclientAutCookie_{{accountName}}`)**: Short-lived token (24h), the primary credential used to authenticate API requests. It has a short expiration time to minimize security risks.  
+* **Access token (`VtexIdclientAutCookie_{{accountName}}`)**: Short-lived token (24h), the primary credential used to authenticate API requests. It has a short expiration time to minimize security risks.
 * **Refresh token (`vid_rt`)**: Token with configurable expiration, always with a longer duration when compared to the access token (1, 7, or 30 days). Used to renew access tokens.
 
 >ℹ️ Contact VTEX [Support](https://support.vtex.com/hc/en-us/requests) to request the refresh token activation and expiration time configuration.
@@ -53,11 +53,11 @@ The following steps detail the refresh token flow shown in the diagram:
      * Access token
      * Refresh token
 
-   These tokens are stored in cookies in the user’s browser session.
+   These tokens are stored in cookies during the user's browser session.
 
 3. **Reauthentication after access token expiration**
 
-   After 24 hours, the access token expires. If the refresh token is still valid, the client can automatically obtain a new access token without requiring additional interaction.
+   After 24 hours, the access token expires. If the refresh token is still valid, the client can automatically obtain a new access token without any additional interaction.
 
    For example, if the refresh token has a 30-day lifespan and the user attempts to log in 29 days after their last authentication, the user’s browser sends the refresh token to VTEX ID to obtain a new access token. However, once the 30-day period ends, the refresh token expires, and the user must log in again to generate new access and refresh tokens.
 
@@ -65,10 +65,10 @@ The following steps detail the refresh token flow shown in the diagram:
 
 1. **VTEX ID issues new tokens**
 
-   VTEX ID validates the refresh token and, if still valid:
+   VTEX ID validates the refresh token and, if it's still valid:
 
-     * Issues a new access token.
-     * Provides a new refresh token.
+     * Issues a new access token
+     * Provides a new refresh token
 
    These new tokens replace the old ones in the browser.
 
@@ -80,7 +80,7 @@ To implement the refresh token flow in headless stores, use the VTEX ID API endp
 
 ### 1. Starting authentication
 
-Initiate the authentication flow and obtain an `authenticationToken` by making a request to `GET` [Start authentication](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/pub/authentication/start).
+Initiate the authentication flow and obtain an `authenticationToken` by sending a `GET` request to the [Start authentication](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/pub/authentication/start) endpoint.
 
 **Request:**
 
@@ -117,16 +117,16 @@ curl --location 'https://{{storeDomain}}/api/vtexid/pub/authentication/start?sco
 
 ### 2. Continuing authentication
 
-After starting authentication, the next step is to proceed with the login method configured for the store. VTEX ID supports multiple login providers, including:
+After starting the authentication process, the next step is to proceed with the login method configured for the store. VTEX ID supports multiple login providers, including:
 
-* Access key (login code sent by email)  
-* Email and password  
-* Social logins (Google, Facebook)  
+* Access key (login code sent by email)
+* Email and password
+* Social logins (Google, Facebook)
 * Custom OAuth providers
 
-Each store can enable one or more of these options, and they all follow the same general flow at this stage: the client uses the `authenticationToken` from the previous step to complete the login process.
+Each store can enable one or more of these options, and all of which follow the same general flow at this stage: the client uses the `authenticationToken` from the previous step to complete the login process.
 
-If the store uses **access key** as the login method, you should send a login code to the user’s email using `POST` [Send access key](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/send).
+If the store uses **access key** as the login method, you must send a login code to the user's email using a `POST` request to the [Send access key](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/send) endpoint.
 
 **Example request for access key login:**
 
@@ -141,7 +141,7 @@ The expected response is an empty `200 OK`, and the user will instantly receive 
 
 Once the user has provided their credentials or login code — depending on the login provider configured for the store — you must validate the session to complete authentication and receive the access and refresh tokens.
 
-For access key method, use the received access key and the user email to validate the session with the `POST` [Validate session](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/validate) endpoint. The request is structured as follows:
+For the access key method, use the received access key and the user email to validate the session via a `POST` request to the [Validate session](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/validate) endpoint. The request is structured as follows:
 
 **Request:**
 
@@ -175,14 +175,14 @@ curl --location 'https://{{storeDomain}}/api/vtexid/pub/authentication/accesskey
 }
 ```
 
-The response headers will set a `vid_rt` cookie, which is the refresh token value, as illustrated below:
+The response headers will set a `vid_rt` cookie, which contains the refresh token value, as illustrated below:
 
 | Set-Cookie | `vid_rt=QiEOQKuzdRjukvSnsn7F8h1wwkrqq8wWlkk7bXA5LSbTHkbKbYEfDJ7MGb6_pllGWd1VQ-JxQI7UDLvYrCUH9o7i1rOSeSG8zJewZw; expires=Thu, 27 Mar 2025 10:22:49 GMT; domain={{storeDomain}}; path=/api/vtexid/refreshtoken/webstore; secure; samesite=strict; httponly` |
 | - | - |
 
 ### 4. Refreshing the token
 
-Finally, use the obtained refresh token to obtain a new access token through the `POST` [Refresh token](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/refreshtoken/webstore) endpoint.
+Finally, use the obtained refresh token to request a new access token via a `POST` request to the [Refresh token](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/refreshtoken/webstore) endpoint.
 
 **Request:**
 
@@ -207,7 +207,7 @@ VtexIdclientAutCookie_{{accountId}}={{VtexIdclientAutCookie_accountId}}; VtexIdc
 }
 ```
 
-The response cookies provides valid values for:
+The response cookies provide valid values for:
 
 * `vid_rt`
 * `VtexIdclientAutCookie_{{accountId}}`
