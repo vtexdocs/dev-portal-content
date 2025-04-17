@@ -2,7 +2,7 @@
 title: "Glossary"
 slug: "store-framework-glossary"
 hidden: false
-createdAt: "2025-03-20T17:55:11.833Z"
+createdAt: "2025-04-17T18:11:56.877Z"
 updatedAt: ""
 category: "Storefront Development"
 ---
