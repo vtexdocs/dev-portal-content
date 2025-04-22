@@ -31,9 +31,9 @@ Basic Authentication is a method for an HTTP user agent to provide a username an
 
 Below, you will find an Api-Key for the Development environment that you can use. To find the Api-Key of the environment in Production, Admin users can generate an API Key in the users section of their Pick and Pack settings.
 
-**Production (Prod)**
+### Production (Prod)
 
-```
+``` json
 {{alphanumericSequence}}
 ```
 
@@ -44,8 +44,6 @@ JSON Web Token (JWT) is an open standard ([RFC 7519](https://www.rfc-editor.org/
 In order to authorize the [API request](#get-order-status-and-information-api), you will have to generate a JWT. For that, you will use the Api-Key from the previous section.
 
 The first step is to create a token of authentication with the endpoint below. No authentication is required:
-
-#### Endpoint
 
 | Method | URL                                      |
 | ------ | ---------------------------------------- |
@@ -94,8 +92,6 @@ After you have created the token of authentication, make the request to the endp
 ## Get order status and information API
 
 In order to get the **VTEX Pick and Pack** status and details of a given order, use the endpoint below:
-
-### Endpoint
 
 | Method | URL                                                   |
 | ------ | ----------------------------------------------------- |
@@ -163,7 +159,6 @@ Use the authorization retrieved from the steps listed in [Before you begin](#bef
 | 400         | 1002                   | OrderId is not found \| Order not found by {orderId} |
 | 500         | 1003                   | Internal error                          |
 
-
 ## Webhook
 
 You will need to create a webhook to receive the response of the request, used for receiving notifications for invoicing purposes, for example.
@@ -172,7 +167,7 @@ Your webhook may have your desired setting for URL, path, method, and authentica
 
 The order’s information and status change notifications received will be an object like the following example:
 
-**Example**
+### Example
 
 ```json
 {
@@ -190,7 +185,7 @@ In the table below, you will find the possible order statuses in the **VTEX Pick
 | Status                 | Description                                                                                                     |
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
 | READY_FOR_HANDLING     | An order imported from the Order Management System (OMS) that is ready to be fulfilled.                         |
-| IDLE (Inactive)        | The order was an external fulfillment, and *VTEX Pick and Pack* will not be able to process it. If the order is invoiced in OMS in a status different from `Ready for invoicing`, the system will also consider it an external fulfillment and change the order status to ` Idle`. |
+| IDLE (Inactive)        | The order was an external fulfillment, and *VTEX Pick and Pack* will not be able to process it. If the order is invoiced in OMS in a status different from `Ready for invoicing`, the system will also consider it an external fulfillment and change the order status to `Idle`. |
 | READY_FOR_PICKING      | The order was assigned to a picker and is depending on the picker’s confirmation to move to the next status.     |
 | PICKING                | The picker is collecting the order items.                                                                       |
 | READY_FOR_PACKING      | The picker has finished the picking process and the order is ready to be packed.                              |
