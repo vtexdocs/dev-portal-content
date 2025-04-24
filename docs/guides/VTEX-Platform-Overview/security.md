@@ -148,11 +148,11 @@ VTEX generates an SSL certificate for your store and guarantees its automatic re
 
 ## Penetration tests and vulnerability reports
 
-Our Security team regularly performs vulnerability checks, including recurring scans and penetration tests. Merchants interested in conducting penetration tests on their stores must acquire [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh) and follow the procedures outlined in the [Penetration tests and vulnerability notifications](https://help.vtex.com/en/tutorial/penetration-testing-and-vulnerability-notice--6jodF6s1I50Fg84ZwutOCb) guide.
+Our Security team regularly performs vulnerability checks, including recurring scans and penetration tests.  Upon request to our [Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/2Ik9CGbPeZIHHaYFsuyId3), merchants may have access to the **Attestation of Penetration Testing** report for the latest penetration tests performed on our behalf by an independent, reputable and technically competent third-party security consultancy. Learn more at [Penetration tests](https://help.vtex.com/en/tutorial/penetration-tests--6jodF6s1I50Fg84ZwutOCb).
 
-Merchants are encouraged to share the pentest reports and vulnerability notifications with VTEX, allowing our Security team to promptly address any potential issues identified.
+Vulnerabilities will be assessed as long as they are reported in accordance with the procedures outlined in [Reporting vulnerabilities](https://help.vtex.com/en/tutorial/reporting-vulnerabilities--2veBKt7ZGkjdqlMU3F0JYC).
 
-While VTEX Shield is mandatory for conducting penetration tests and sharing the results with our Security team, reporting vulnerabilities does not require VTEX Shield. Vulnerabilities will be assessed as long as they are reported in accordance with the procedures outlined in [Reporting vulnerabilities](https://help.vtex.com/en/tutorial/penetration-testing-and-vulnerability-notice--6jodF6s1I50Fg84ZwutOCb#reporting-vulnerabilities).
+>⚠️ Our [Master Services Agreement (MSA)](https://vtex.com/us-en/privacy-and-agreements/agreements/) expressly forbids performing penetration tests against the VTEX platform without our prior written consent. Doing so without our authorization would constitute a breach of contract by the customer.
 
 ## Security incident response
 
@@ -173,11 +173,5 @@ With a business continuity plan, we address challenges arising from emergencies,
 ## VTEX Shield
 
 [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh) is an add-on product that offers supplementary, customizable protection layers for stores that prioritize platform resilience and the security standards guaranteed by VTEX's existing security [certifications and practices](https://vtex.com/br-pt/security/security-practices/).
-
-When requesting VTEX Shield, you can choose from the following features:
-
-* [Security Monitor](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh#security-monitor)
-* [Penetration tests](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh#penetration-tests)
-* [Web Application Firewall (WAF)](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh#web-application-firewall-waf)
 
 >ℹ If you are an existing VTEX client and want to get VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you are not a VTEX client but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
