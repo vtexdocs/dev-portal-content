@@ -17,15 +17,6 @@ Follow the steps below to add custom fields to an [existing query](https://devel
  
 Even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. See the [best practices for fetching data on your storefront](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview#best-practices-for-fetching-data).
 
-### Ensure store page caching
-
-To ensure proper caching behavior when navigating store pages (such as Home, PDP, and PLP), use `GET` instead of `POST` for API requests. `GET` requests are cacheable by default, while `POST` requests bypass caching.
-
-To follow this caching behavior for store pages, suffix new queries with `Query` to default to `GET`. For example:
-
-- Uncached (`POST`): `getOrderForm`
-- Cached (`GET`): `getOrderFormQuery` (ensures proper store caching)
-
 ---
 
 ## Instructions
