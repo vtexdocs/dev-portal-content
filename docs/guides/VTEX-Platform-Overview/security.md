@@ -152,7 +152,7 @@ Our Security team regularly performs vulnerability checks, including recurring s
 
 Vulnerabilities will be assessed as long as they are reported in accordance with the procedures outlined in [Reporting vulnerabilities](https://help.vtex.com/en/tutorial/reporting-vulnerabilities--2veBKt7ZGkjdqlMU3F0JYC).
 
->⚠️ Please note that our Master Services Agreement (MSA) expressly forbids performing penetration tests against the VTEX platform without our prior written consent. Doing so without our authorization would constitute a breach of contract by the customer.
+>⚠️ Our [Master Services Agreement (MSA)](https://vtex.com/us-en/privacy-and-agreements/agreements/) expressly forbids performing penetration tests against the VTEX platform without our prior written consent. Doing so without our authorization would constitute a breach of contract by the customer.
 
 ## Security incident response
 
