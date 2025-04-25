@@ -8,7 +8,7 @@ category: "Storefront Development"
 excerpt: "Discover how to create your very first Store Framework storefront."
 ---
 
-This guide explains how to start building a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme), a VTEX IO project that uses the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) and Store Framework blocks to create the storefront of a VTEX store. The Store Theme defines the store visual and interactive elements, including layout, colors, typography, icons, and animations.
+This guide explains how to start building a [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme), a VTEX IO project that uses the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) and Store Framework blocks to create the storefront of a VTEX store. The Store Theme defines the store's visual and interactive elements, including layout, colors, typography, icons, and animations.
 
 To kickstart our storefront project, we'll use a pre-defined [Store Theme boilerplate app](https://github.com/vtex-apps/store-theme), which simplifies the process of creating a custom Store Theme by providing pre-defined templates and styles. For more information about available themes, see the guide [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme).
 
@@ -30,24 +30,20 @@ Familiarize yourself with the Store Theme’s structure. Understanding the purpo
 
 ### Step 1 - Downloading the Store Theme app
 
-The VTEX IO CLI simplifies starting a new VTEX IO project by providing a list of pre-defined app templates. In the following steps, we'll kickstart a new Store Theme project.
+The VTEX IO CLI provides pre-defined app templates to simplify the creation of a new VTEX IO project. Follow these steps to set up a Store Theme project:
 
-1. Using your terminal, navigate to an existing local directory where you want to copy the Store Theme:
+1. Open your terminal and run the following command to create a new project:
+  
+   ```sh
+   vtex init
+   ```
 
- ```sh
- cd {folderName}
- ```
+2. When prompted, select `store`. The CLI will ask for confirmation before cloning the `minimum-boilerplate-theme`. Type `y` to proceed.
 
-> ⚠ Replace `{folderName}` with the actual folder name where you want to copy the Store Theme boilerplate app.
+   ![VTEX IO CLI-store-theme-selection](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-3-settingyourstoretheme-0.png)
 
-2. Run the following command to clone the Store Theme boilerplate app in your folder:
-
- ```sh
- vtex clone https://github.com/vtex-apps/store-theme.git
- ```
-
-3. Open the `store-theme` in the code editor of your preference.
-4. Go to the `manifest.json` file and replace the predefined `vendor` value with the account name of the store you're developing. This will ensure that you can correctly publish your Store Theme app later.
+3. Open the `minimum-boilerplate-theme` in  your preferred code editor.
+4. Go to the `manifest.json` file and replace the predefined `vendor` value with your store's account name. This ensures you can publish your Store Theme app correctly.
 
 ### Step 2 - Linking your local code to the VTEX IO platform
 
@@ -78,7 +74,7 @@ Since the Store Theme boilerplate app already includes a default theme, you can 
 
 The `vtex link` command sends your code to the platform, allowing you to see your changes in real time.
 
-![VTEX link example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/link-store-theme.png)
+![VTEX link example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-3-settingyourstoretheme-2.png)
 
 By successfully running this command in your terminal, your local code is sent to the VTEX IO cloud-native infrastructure and reflected in the development workspace you're currently working in. Any changes made to your Store Theme app files will now be automatically reflected on your website in real time.
 

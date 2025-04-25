@@ -65,7 +65,7 @@ Queries, and mutations are must be invoked using secure hashes, which are random
 
     ```tsx
     import { gql } from '@faststore/core/api'
-    import { useQuery_unstable as useQuery } from '@faststore/core/experimental'
+    import { useQuery_unstable as useQuery } from '@faststore/core/src/experimental'
 
     const query = gql(`
     query MyCustomQuery {
@@ -88,7 +88,7 @@ Queries, and mutations are must be invoked using secure hashes, which are random
 A custom component can call a query or mutation defined by `@faststore/core`, such as `ClientManyProductsQuery`. In these cases, replace the `useQuery` hook call with a call to the specific hook for that query. 
 
     ```tsx
-    import { useClientManyProducts_unstable as useClientManyProducts } from '@faststore/core/experimental'
+    import { useClientManyProducts_unstable as useClientManyProducts } from '@faststore/core/src/experimental'
 
     // ClientManyProductsQuery will be called with the variables passed by CustomComponent
     function CustomComponent() {
