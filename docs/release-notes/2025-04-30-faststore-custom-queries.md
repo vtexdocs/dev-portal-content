@@ -1,5 +1,5 @@
 ---
-title: "FastStore: Use `GET` requests for custom queries to improve caching"
+title: "FastStore: Use `GET` requests for custom queries to improve store caching"
 slug: "2025-04-30-faststore-custom-queries"
 type: improved
 excerpt: "Ensure proper caching by using GET requests for custom queries in FastStore."
@@ -16,7 +16,7 @@ Previously, some custom queries used `POST` methods, which prevented caching. No
 
 ## What needs to be done?
 
-Follow these steps to enable proper caching related to custom queries:
+To enable proper caching related to custom queries do the following:
 
 1. Review your project's custom queries using `POST` method.
 2. Rename these queries by adding the `Query` suffix to default to `GET`. For example:
