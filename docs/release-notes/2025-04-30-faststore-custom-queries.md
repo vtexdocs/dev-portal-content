@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Use `GET` requests for custom queries to improve caching"
-slug: "2025-04-08-faststore-webops-self-service-domain-setup-now-available"
+slug: "2025-04-30-faststore-custom-queries"
 type: improved
 excerpt: "Ensure proper caching by using GET requests for custom queries in FastStore."
-createdAt: "2025-04-03T17:15:14.007Z"
+createdAt: "2025-04-30T00:00:00.007Z"
 updatedAt: ""
 hidden: false
 ---
