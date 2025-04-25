@@ -14,7 +14,7 @@ The Pick and Pack API contains the following endpoints:
 
 - `POST` [Generate JWT token](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#post-/token?endpoint=post-/token): Generate a JWT token.
 - `GET` [Get order by ID](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/orders/-orderId-?endpoint=get-/orders/-orderId-): Retrieve orders by ID and set delivery details, including tracking information.
-- `PATCH` [Set order delivery](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#patch-/orders/-orderId-/tracking?endpoint=patch-/orders/-orderId-/tracking): Update delivery tracking.
+- `PATCH` [Set order delivery](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#patch-/orders/-orderId-/tracking?endpoint=patch-/orders/-orderId-/tracking): Update delivery tracking information.
 - `GET` [Get worksheet by ID](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/worksheets/-worksheetId-?endpoint=get-/worksheets/-worksheetId-): Retrieve worksheet data.
 - `GET` [Get worksheets by order ID](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/worksheets?endpoint=get-/worksheets): Retrieve all worksheets linked to a specific order.
 - `GET` [Get facility by ID](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/facilities/-facilityId-?endpoint=get-/facilities/-facilityId-): Retrieve facility-related information.
