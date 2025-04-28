@@ -19,6 +19,6 @@ The Pick and Pack API contains the following endpoints:
 - `GET` [Get worksheets by order ID](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/worksheets): Retrieve all worksheets linked to a specific order.
 - `GET` [Get facility by ID](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/facilities/-facilityId-): Retrieve facility-related information.
 - `GET` [Get shipment](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/shipments/-shipmentId-): Retrieve shipment tracking for individual shipments.
-- `GET` [List shipments](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/shipments): Retrieve a list of all shipments.
+- `GET` [List shipments](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/shipments/-orderId-): Retrieve a list of all shipments.
 
 For more information about the feature, refer to the [Pick and Pack](https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU) article.
