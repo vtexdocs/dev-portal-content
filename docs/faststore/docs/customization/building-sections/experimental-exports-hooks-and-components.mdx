@@ -8,7 +8,7 @@ For example, you can create a custom [BuyButton](https://developers.vtex.com/doc
 
 ## Before you begin
 
-All experimental [hooks and components](#list-of-hooks-and-components) are suffixed with `_unstable`, indicating that they are subject to change and may not be stable for use in production.
+All experimental [hooks and components](#list-of-hooks-and-components) are suffixed with `_unstable`, indicating they are available for use but may not function as expected or could have limitations with certain store customizations. Before deploying them in a production environment, make sure to test them to confirm compatibility with your store.
 
 ## Instructions
 
@@ -74,6 +74,9 @@ Hooks provide features or statuses from native components that you can integrate
 |`useDiscountPercent_unstable`|Calculates the discount percentage for a given price.|
 |`useFormattedPrice_unstable`|Formats a price value based on the current locale.|
 |`useLocalizedVariables_unstable`|Provides localized variables for use in components.|
+|`useCreateUseGalleryPage_unstable`|Handles the creation of a gallery page.|
+|`useGalleryPage_unstable`|Manages the state and functionality of a gallery page.|
+|`UseGalleryPageContext_unstable`|Provides access to and management of the context for a gallery page.|
 |`useProductGalleryQuery_unstable`|Retrieves product gallery images.|
 |`useProductLink_unstable`|Generates a product link based on the product ID.|
 |`useProductQuery_unstable`|Retrieves product details.|

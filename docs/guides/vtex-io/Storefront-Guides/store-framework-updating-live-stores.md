@@ -25,7 +25,7 @@ Check if the builders are properly installed in your Store Theme. To use builder
 
 ### Customize your theme
 
-Customize your store theme based on your business needs, following the guides within the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) section, such as [Building pages](https://developers.vtex.com/docs/guides/building-pages) and [Using components](https://developers.vtex.com/docs/guides/using-components).
+Customize your store theme based on your business needs, following the guides within the [Store Framework](https://developers.vtex.com/docs/guides/store-framework) section, such as [Building pages](https://developers.vtex.com/docs/guides/store-framework-building-pages) and [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components).
 
 ### Go live
 

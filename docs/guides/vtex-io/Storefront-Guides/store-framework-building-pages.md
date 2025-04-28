@@ -37,7 +37,7 @@ To better understand how to build your store pages, you should understand the co
 
 Components are building blocks created using the [VTEX IO development platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) and [React](https://react.dev/) technology, which are used to create storefronts and admin apps.
 
-Learn more in the [Components](https://developers.vtex.com/docs/guides/using-components) guide.
+Learn more in the [Components](https://developers.vtex.com/docs/guides/store-framework-using-components) guide.
 
 A template refers to the structural layout of your site pages. Templates define the components for various pages, such as the home, product, and search results pages, by declaring `json` blocks that render these components.
 

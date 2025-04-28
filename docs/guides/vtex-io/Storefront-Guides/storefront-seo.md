@@ -19,7 +19,7 @@ In this guide, you will learn some best practices for implementing strategies to
 
 ## Store settings
 
-Properly configuring the elements of your ecommerce store, such as titles, descriptions, media, and URLs may significantly impact how search engines index and rank your pages.
+Properly configuring the elements of your ecommerce store, such as titles, descriptions, media, and URLs, may significantly impact how search engines index and rank your pages.
 
 ### Titles and descriptions
 
@@ -29,7 +29,7 @@ When setting up your store, consider how title tags and descriptions affect your
 
 > ℹ️ For stores developed with Store Framework, you can customize Department, Category, and Subcategory titles using [VTEX Intelligent Search app](https://developers.vtex.com/docs/apps/vtex.search@1.0.8). This allows your store to display different titles for each category level within the search navigation bar. Learn more in [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search).
 
-- **Meta descriptions:** Include relevant keywords, limit them to 140-160 characters, and provide a compelling reason for users to click, which will help improve organic traffic. Meta descriptions are crucial for SEO because they appear in search engine results pages (SERPs) as snippets under the page title, giving users an idea of what they can find on the site. They can be configured for home, product, category, and brand pages in the same setup page where you configure the title tags, directly in the VTEX Admin.
+- **Meta descriptions:** Include relevant keywords, limit them to 140-160 characters, and provide a compelling reason for users to click, which will help improve organic traffic. Meta descriptions are crucial for SEO because they appear in search engine results pages (SERPs) as snippets under the page title, giving users an idea of what they can find on the site. They can be configured for home, product, category, and brand pages on the same setup page where you configure the title tags directly in the VTEX Admin.
 - **Unique content:** Avoid duplication across pages. Make sure titles and descriptions are unique for each page to improve search visibility and prevent keyword cannibalization, where multiple pages compete for the same search terms.
 - **Robots.txt:** Edit or customize your `robots.txt`, which is a text file that search engines use to define site scanning rules for crawlers based on your business needs. Learn more in [Google Search Console Tracking - robots.txt](https://help.vtex.com/en/tutorial/google-search-console-tracking-robots-txt--tutorials_574).
 
@@ -44,7 +44,7 @@ For FastStore stores, see [Configuration options for discovery.config.js](https:
 When adding images or videos to your store, whether for SKUs, banners, or any other page on your site, follow these guidelines:
 
 - **Media file name:** Rename media files used in your store with descriptive keywords, avoiding generic names such as `image1.png`.
-- **`alt text`:** Use clear `alt text` with relevant keywords to describe the media content accurately. Search engines don't read images and videos, so each media piece should have personalized alternative text (`alt text`). Moreover, the `alt text` promotes [Accessibility](LINK) by helping visually impaired users understand the content on the page.
+- **`alt text`:** Use clear `alt text` with relevant keywords to describe the media content accurately. Search engines don't read images and videos, so each media piece should have personalized alternative text (`alt text`). Moreover, the `alt text` promotes [Accessibility](https://developers.vtex.com/docs/guides/storefront-accessibility) by helping visually impaired users understand the content on the page.
 - **Image optimization:** Compress images to improve page load speed without sacrificing quality. Learn more in [Image compression](https://help.vtex.com/tutorial/image-compression--4klbgpsPksq44KcwqKeye8).
 
 ### URLs
