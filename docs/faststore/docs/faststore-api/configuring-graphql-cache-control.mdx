@@ -4,17 +4,15 @@ title: 'Configuring GraphQL cache control for GET requests'
 
 > ⚠ This is an experimental feature.
 
-This guide explains how to configure caching for GraphQL GET requests using the `graphqlCacheControl` flag. By setting cache rules, you can store responses and reuse them for subsequent requests through [FastStore API's GraphQL layer](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview), reducing server load and improving store performance.
+This guide explains how to configure caching for GraphQL GET requests using the `graphqlCacheControl` flag. Setting cache rules allows responses to be stored and reused for subsequent requests, reducing server load and improving store performance.
 
 The `graphqlCacheControl` flag defines how long responses should be stored and reused by configuring caching for GraphQL GET requests.
 
-> ℹ POST requests bypass caching by default.
-
-In this guide, learn how to enable and configure the `graphqlCacheControl` flag.
+> ℹ POST requests are excluded from caching by default. This ensures that data sent in the request body, such as user inputs or sensitive information, is always processed in real time and not served from the cache.
 
 ## Before you begin
 
-Make sure the @faststore/cli package from your project is updated to the latest version. To do so, follow the instructions in [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
+Ensure that your project is using the latest version of the @faststore/cli package. To do so, follow the instructions in [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
 
 ## Instructions
 
@@ -22,7 +20,7 @@ Since the `graphqlCacheControl` flag is an experimental feature, declare it unde
 
 1. Open your FastStore project in a code editor.
 2. Open the `discovery.config.js` file.
-3. Under the `experimental` section add `graphqlCacheControl` flag:
+3. Under the `experimental` section, add the `graphqlCacheControl` flag:
 
     ```js discovery.config.js
     experimental: {
@@ -54,9 +52,9 @@ Since the `graphqlCacheControl` flag is an experimental feature, declare it unde
 
     | **Object** | **Cache state** | **Behavior** |
     | ------ | ----------- | -------- |
-    | 0s - 300s  | Fresh | <ul><li>Serves cached responses instantly.</li><li>No backend requests unless first hit.</li></ul> |
+    | 0s - 300s  | Fresh | <ul><li>Serves cached responses instantly.</li><li>No backend requests unless it's the first request.</li></ul> |
     | 300 s - 360 s  | Stale | <ul><li>Serves old data while fetching updates.</li><li>Simultaneously fetches fresh data in background.</li></ul> |
-    | After 360 s  | Expired | <ul><li>Cache fully expires.</li><li>Next request triggers fresh data fetch.</li></ul> |
+    | After 360 s  | Expired | <ul><li>Cache fully expires.</li><li>Next request triggers a fresh data fetch.</li></ul> |
 
 5. Open a terminal and run `yarn dev` to sync the changes and [start testing cache configuration](#testing-the-cache-configuration).
 
