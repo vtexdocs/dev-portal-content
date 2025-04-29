@@ -2,7 +2,7 @@
 title: "Optimizing SEO by managing lazy loading on PLPs and PDPs"
 ---
 
-By default, FastStore improves performance by wrapping store sections in `LazyLoadingSection` and `ViewportObserver` components. These components delay the loading of non-essential content until it's needed, such as when a user scrolls near it. This approach reduces initial page load times and enhances the user experience, especially on slower networks or devices.
+By default, FastStore improves performance by wrapping store sections in `LazyLoadingSection` and `ViewportObserver` components. These components delay the loading of non-essential sections until it's needed, such as when a user scrolls near it. This approach reduces initial page load times and enhances the user experience, especially on slower networks or devices.
 
 While lazy loading enhances performance, it may negatively impact SEO. Search engine crawlers often don't execute JavaScript or wait for dynamically loaded content. Consequently, important sections like product grids on category pages might not be indexed. For example, if a user accesses the `gym clothes` collection, its product listing might not be returned in search results if not included in the initial HTML.
 
