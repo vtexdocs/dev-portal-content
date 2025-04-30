@@ -43,4 +43,4 @@ The `CartProvider` component accepts the following properties and functions:
 | `onItemAdd` |  `(newItem: Item, oldItem?: Item) => void` | Callback function called when an item is added to the cart. |
 | `onItemRemove` |  `(item?: Item) => void` | Callback function called when an item is removed from the cart. |
 | `onItemUpdate` |  (newItem: Item, oldItem?: Item) => void` | Callback function called when an item is updated. |
-| `onValidateCart` |  `(cart: Cart) => Promise<Cart | null>` | Callback function called whenever the cart changes. This is only available in `optimistic` mode and can be used to validate or modify the cart before changes are applied. |
+| `onValidateCart` |  `(cart: Cart) => Promise<Cart /> null>` | Callback function called whenever the cart changes. This is only available in `optimistic` mode and can be used to validate or modify the cart before changes are applied. |
