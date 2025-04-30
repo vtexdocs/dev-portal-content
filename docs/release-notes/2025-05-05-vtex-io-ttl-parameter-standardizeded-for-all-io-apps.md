@@ -1,7 +1,7 @@
 ---
 slug: "vtex-io-ttl-parameter-standardizeded-for-all-io-apps"
 title: "VTEX IO: TTL parameter standardized for all IO apps"
-createdAt: 2025-04-25T12:00:00.000Z
+createdAt: 2025-05-05T12:00:00.000Z
 hidden: false
 type: "info"
 excerpt: "The TTL parameter was removed from services configuration and is now defined as 24 hours for all IO apps."
