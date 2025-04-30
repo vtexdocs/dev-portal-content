@@ -2,7 +2,7 @@
 title: "CartProvider"
 ---
 
-`CartProvider` is a React component that wraps an entire app, providing it with the necessary context to manage shopping cart operations. The component handles actions in the cart such as adding, removing, and updating items, and ensures the cart state is consistent across the application. For more details on these actions, see  [`useCart`](/TBD).
+`CartProvider` is a React component that wraps an entire app, providing it with the necessary context to manage shopping cart operations. The component handles actions in the cart such as adding, removing, and updating items, and ensures the cart state is consistent across the application. For more details on these actions, see [`useCart`](/TBD).
 
 ## Import
 
@@ -12,7 +12,7 @@ import { CartProvider } from '@faststore/sdk'
 
 ## Usage
 
-The following example demonstrates how to wrap your application with `CartProvider` to manage shopping cart operations:
+The following example shows how to wrap your application with `CartProvider` to manage shopping cart operations:
 
 ```tsx
 import { CartProvider } from '@faststore/sdk'
@@ -37,10 +37,10 @@ The `CartProvider` component accepts the following properties and functions:
 
 | Variable name | Type | Description |
 | -------- | --------------- | ------------ |
-| `mode` (required) |  `optimistic` or `pure` | Determines how cart operations are handled. |
+| `mode` (required) |  `optimistic` or `pure` | Defines how cart operations are processed. |
 | `initialCart` |  `Cart` | Initial cart state used before hydrating it from IndexedDB. If not provided, the cart will start empty. |
 | `namespace` |  `string` | A unique identifier for the cart. This is used to avoid collisions in IndexedDB when multiple carts are used in the same application. |
 | `onItemAdd` |  `(newItem: Item, oldItem?: Item) => void` | Callback function called when an item is added to the cart. |
 | `onItemRemove` |  `(item?: Item) => void` | Callback function called when an item is removed from the cart. |
 | `onItemUpdate` |  (newItem: Item, oldItem?: Item) => void` | Callback function called when an item is updated. |
-| `onValidateCart` |  `(cart: Cart) => Promise<Cart | null>` | Callback function called whenever the cart changes. This is only available in `optimistic` mode and can be used to validate or modify the cart before applying changes. |
+| `onValidateCart` |  `(cart: Cart) => Promise<Cart | null>` | Callback function called whenever the cart changes. This is only available in `optimistic` mode and can be used to validate or modify the cart before changes are applied. |
