@@ -25,7 +25,6 @@ Here's an example of a `service.json` file:
 ```json service.json
 {
   "memory": 256,
-  "ttl": 10,
   "timeout": 2,
   "minReplicas": 2,
   "maxReplicas": 4,
