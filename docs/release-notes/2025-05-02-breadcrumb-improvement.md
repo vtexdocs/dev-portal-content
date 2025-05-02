@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Improved breadcrumb navigation"
-slug: "2025-05-05-breadcrumb-improvement"
+slug: "2025-05-02-breadcrumb-improvement"
 hidden: false
 type: "fixed"
-createdAt: "2025-05-05T00:00:00.219Z"
+createdAt: "2025-05-02T00:00:00.219Z"
 updatedAt: ""
 excerpt: "Store’s breadcrumb now displays only the main categories and has consistent styling on all pages."
 ---
