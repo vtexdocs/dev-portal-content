@@ -8,7 +8,7 @@ updatedAt: ""
 excerpt: "Store’s breadcrumb now displays only the main categories and has consistent styling on all pages."
 ---
 
-The store [breadcrumb](https://developers.vtex.com/docs/guides/faststore/molecules-breadcrumb) navigation is now visible during scrolling (no longer conflicting with the [`RegionBar`](https://developers.vtex.com/docs/guides/faststore/molecules-region-bar) component), removes redundant categories, applies consistent dropdown styling, and properly displays on PLP and Search pages.
+The store [breadcrumb](https://developers.vtex.com/docs/guides/faststore/molecules-breadcrumb) navigation is now visible during scrolling, resolving the previous conflict with the [`RegionBar`](https://developers.vtex.com/docs/guides/faststore/molecules-region-bar) component. This update also removes redundant categories, ensures consistent dropdown styling, and improves display on PLP and Search pages.
 
 ## What has changed?
 
@@ -30,13 +30,17 @@ Issues with the breadcrumb section display were solved, including:
 | ---------- | --------- |
 | ![scrolling-behavior-before](https://vtexhelp.vtexassets.com/assets/docs/src/scrolling-behavior-before___f5ac656bb56e19bd9f7737c75d43302e.png) | ![scrolling-behavior-after](https://vtexhelp.vtexassets.com/assets/docs/src/scrolling-behavior-after___8b840a4d795738ee2d93716514e2d291.png) |
 
-- **Dropdown menu styling:** Updated for consistency across pages.
+### Dropdown menu styling
+
+The styling of the menu dropdown was updated for consistency across pages.
 
 | **Before** | **After** |
 | ---------- | --------- |
 | ![dropdown-menu-before](https://vtexhelp.vtexassets.com/assets/docs/src/dropdown-menu-before___f885a2989e42f8882900305330ac4293.png) | ![dropdown-menu-after](https://vtexhelp.vtexassets.com/assets/docs/src/dropdown-menu-after___6cb408f330e4cec509b6f5490cf16f3f.png) |
 
-- **Restored visibility on PLP and Search pages:** Breadcrumbs now display correctly on all page types.
+### Restored visibility on PLP and Search pages
+
+Breadcrumbs now display correctly on all page types.
 
 | **Before** | **After** |
 | ---------- | --------- |
