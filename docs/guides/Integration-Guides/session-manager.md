@@ -13,7 +13,7 @@ This article aims to describe Session Manager from a system design perspective. 
 
 Whenever a new device comes in contact with the VTEX infrastructure, Session Manager receives a request for a new session. Events that would trigger this request include visiting a store page, opening the VTEX Admin panel and loading the inStore vendor interface, to name a few. After a new session is created, Session Manager will start receiving all the important information associated to navigation from that specific device. 
 
-Using the [Session Manager API](https://developers.vtex.com/docs/api-reference/session-manager-api#overview), you can make a request to receive the session data you need for your application. This includes important inferences made by VTEX modules. See [Data available from VTEX apps](#data-available-from-vtex-apps) for more information.
+Using the [Session Manager API](https://developers.vtex.com/docs/api-reference/session-manager-api#overview), you can make a request to receive the session data you need for your application. This includes important inferences made by VTEX modules. See [Data available from VTEX apps](https://developers.vtex.com/docs/guides/session-data-available-from-vtex-apps) for more information.
 
 For instance, a user with a specific campaign referral link might have a promotional price table set on his session, which will cause them to see updated prices when navigating the store that created that campaign.
 
