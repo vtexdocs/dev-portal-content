@@ -3,8 +3,8 @@ title: "GraphQL builder"
 slug: "vtex-io-documentation-graphql-builder"
 excerpt: "Learn how to use the GraphQL builder."
 hidden: false
-createdAt: "2025-04-30T12:00:00.000Z"
-updatedAt: "2025-04-30T12:00:00.000Z"
+createdAt: "2025-05-05T12:00:00.000Z"
+updatedAt: "2025-05-05T12:00:00.000Z"
 category: "App Development"
 ---
 
@@ -25,8 +25,8 @@ Our recommendation is to:
 ```txt
 graphql
 ┣ 📂 types
-      ┣ 📄 a_type.graphql
-      ┗ 📄 b_type.graphql
+    ┣ 📄 a_type.graphql
+    ┗ 📄 b_type.graphql
 ┣ 📄 directives.graphql
 ┗ 📄 schema.graphql
 ```
