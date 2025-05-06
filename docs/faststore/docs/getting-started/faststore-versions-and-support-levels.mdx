@@ -2,22 +2,22 @@
 title: "FastStore versions and support levels"
 ---
 
-FastStore has two main versions: FastStore v1 and FastStore v2+. This document presents the key differences between these versions, their support levels, and guidelines for upgrading.
+FastStore has two main versions: FastStore v1 and FastStore v2+. This document outlines the key differences between these versions, their support levels, and guidelines for upgrading.
 
 ## FastStore v1
 
-[FastStore v1](https://v1.faststore.dev/docs) was the first version of the framework. While it served as the foundation for FastStore, it is no longer actively maintained. New projects must use the latest version of FastStore.
+[FastStore v1](https://v1.faststore.dev/docs) was the first version of the framework. While it served as the foundation for FastStore, it's no longer actively maintained. New projects must use the latest version of FastStore.
 
 ## FastStore v2+
 
-FastStore v2+ is the latest and most advanced version of the storefront solution. It includes all versions starting from v2 and introduces significant improvements over FastStore v1, such as:
+FastStore v2+ is the latest and most advanced version of the storefront solution. It encompasses all versions starting from v2 and introduces major improvements over FastStore v1, such as:
 
 - **Simplified updates:** Stores are monitored for version updates with minimal friction, including automatic non-critical updates and a more efficient integration process.
 - **Separation of VTEX-managed code and store customizations:** Clear segmentation between VTEX and custom code to help in the debug process.
-- **CMS-first approach:** Headless CMS manages content updates (texts, images, links), while behavioral and UI component changes remain code-based, ensuring a structured workflow.
-- **Optimized performance and quality monitoring:** Continuous performance monitoring, with proactive measures to prevent deployments that fail to meet Lighthouse and quality standards.
-- **Semantic versioning:** FastStore v2+ uses [Semantic Versioning](https://semver.org/) to manage releases:
-  - **Majors:** Introduce breaking changes, including incompatible API changes.
+- **CMS-first approach:** Headless CMS manages content updates (texts, images, links) while behavioral and UI component changes remain code-based, ensuring a structured workflow.
+- **Optimized performance and quality monitoring:** Ongoing performance tracking with proactive safeguards to prevent deployments that don’t meet Lighthouse and quality standards.
+- **Semantic versioning:** FastStore v2+ uses [Semantic Versioning](https://semver.org/) for managing releases:
+  - **Majors:** Introduce breaking changes, including incompatible API updates.
   - **Minors:** Introduce backward-compatible features.
   - **Patches:** Include backward-compatible bug fixes.
 
@@ -49,7 +49,7 @@ One of the main changes from FastStore v1 to FastStore v2+ is the separation bet
 
 ## Support levels
 
-Different levels of support are available depending on the FastStore version. The following table details the status, support availability, support availability, and recommendations for new projects for each version.
+Different levels of support are available depending on the FastStore version. The following table details the status, support availability, and recommendations for each version of new projects.
 
 | **Criteria** | **FastStore v1** | **FastStore v2+** |
 |-------------|----------------|--------------------|
@@ -61,4 +61,4 @@ If you have any questions about the level of support provided for different Fast
 
 ## Upgrade between FastStore versions
 
-Before upgrading to a new FastStore version, consult VTEX to ensure compatibility and a smooth transition. For assistance, [open a ticket](https://help.vtex.com/en/support) with the VTEX Support team.
+Before upgrading to a new FastStore version, contact VTEX to ensure compatibility and a smooth transition. For assistance, [open a ticket](https://help.vtex.com/en/support) with the VTEX Support team.

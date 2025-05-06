@@ -8,6 +8,7 @@ updatedAt: ""
 hidden: false
 ---
 
+
 Developers and merchants can now configure their store’s production domains by accessing the new **Settings** tab in the [FastStore WebOps Dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard).
 
 ![settings-webops](https://vtexhelp.vtexassets.com/assets/docs/src/settings-webops___e1ce8e4cc9ced1c62e74d7d81e88ca65.png)
