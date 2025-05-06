@@ -17,11 +17,11 @@ The Node builder versions are defined in the table below. Each builder version i
 |Builder version|Node.js|@types/node|TypeScript|Status|
 |-|-|-|-|-|
 |3.x|[8.x](https://nodejs.org/en/blog/release/v8.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Deprecated|
-|4.x|[12.x](https://nodejs.org/en/blog/release/v12.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Active until March 2025|
+|4.x|[12.x](https://nodejs.org/en/blog/release/v12.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Deprecated|
 |6.x|[16.x](https://nodejs.org/en/blog/release/v16.0.0)|[12.0.0](https://www.npmjs.com/package/@types/node/v/12.0.0)|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Active until June 2025|
 |7.x|[20.x](https://nodejs.org/en/blog/release/v20.0.0)|[20.0.0](https://www.npmjs.com/package/@types/node/v/20.0.0)|[5.5.3](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html)|Active|
 
->⚠️ Apps using deprecated builder versions won't link or build. For details about updating the Node builder version, see our [migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide).
+>⚠️ We strongly recommend upgrading your Node app to the latest Node builder before legacy Node builder versions are deprecated. After deprecation, apps using a legacy builder version will continue to work, but you won't be able to release or publish new app **major** [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning). Follow the instructions in [Node builder 7.x migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide) to upgrade your Node app.
 
 ## Folder structure
 
@@ -38,7 +38,7 @@ node
   ┣ 📄 {TypeScriptCodeFileName}.ts
   ┣ 📄 index.ts
   ┣ 📄 package.json
-  ┣ 📄 services.json
+  ┣ 📄 service.json
   ┗ 📄 tsconfig.json
 ```
 
@@ -48,18 +48,18 @@ node
   - `event`: Directory with the code files of event functions.
 - `index.ts`: Main TyepScript code file, where the execution begins. This file contains the main class of the service.
 - `package.json`: JSON file describing the dependencies, script commands for building, and version details.
-- `services.json`: Service configuration file used for defining the app parameters such as routes, events, time-to-live, etc. For more details, see [Service configuration parameters](https://developers.vtex.com/docs/guides/vtex-io-documentation-service#service-configuration-parameters).
+- `service.json`: Service configuration file used for defining the app parameters such as routes, events, time-to-live, etc. For more details, see [Service configuration parameters](https://developers.vtex.com/docs/guides/vtex-io-documentation-service#service-configuration-parameters).
 - `tsconfig.json`: JSON file containing build configuration options.
 
 ## Usage
 
 To develop an app using the `node` builder, refer to the following steps:
 
-- **Start with a template**: Download the [`service-example` template](https://github.com/vtex-apps/service-example) or create a new project using the [`vtex init` CLI command](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#starting-a-new-project) and choose the `service-example` option.
-- **Configure the `service.json` file**: Edit the `service.json` configuration file. For more information, see [Service configuration parameters](https://developers.vtex.com/docs/guides/vtex-io-documentation-service#service-configuration-parameters).
-- **Configure permissions**: If you want to access external resources, add the necessary [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) to get permission for each resource in the [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) and the corresponding [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) in the code to access the resources.
-- **Implement the app's logic**: Add the necessary TypeScript files containing the app logic.
-- **Testing**: [Link the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to a development workspace for testing.
+1. **Start with a template**: Download the [`service-example` template](https://github.com/vtex-apps/service-example) or create a new project using the [`vtex init` CLI command](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#starting-a-new-project) and choose the `service-example` option.
+2. **Configure the `service.json` file**: Edit the `service.json` configuration file. For more information, see [Service configuration parameters](https://developers.vtex.com/docs/guides/vtex-io-documentation-service#service-configuration-parameters).
+3. **Configure permissions**: If you want to access external resources, add the necessary [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) to get permission for each resource in the [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) and the corresponding [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) in the code to access the resources.
+4. **Implement the app's logic**: Add the necessary TypeScript files containing the app logic.
+5. **Testing**: [Link the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to a development workspace for testing.
 
 >ℹ️ Refer to [Engineering guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines) for further information on scalability, performance optimization, data privacy best practices, and versioning.
 
