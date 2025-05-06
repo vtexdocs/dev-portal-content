@@ -57,7 +57,7 @@ Follow the steps below to develop your Robots app:
     
     Your app folder should have a structure similar to the following:
     
-    ```
+    ```txt
     store-theme-robots
     ├── manifest.json
     ├── README.md
