@@ -1,8 +1,6 @@
 ---
 title: "Rating"
 excerpt: Displays a product rating based on other shoppers' feedback.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/AggregateRating___a8300916874f5a11de7633b7cabc12e9.png
 components:
   - Rating.tsx
 ---
@@ -46,7 +44,7 @@ Import the component from [@faststore/ui](https://developers.vtex.com/docs/guide
 import { Rating } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles into your FastStore project
 
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
@@ -75,7 +73,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-rating-gap" value="var(--fs-spacing-0)" />
@@ -83,7 +81,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <TokenRow token="--fs-rating-color-empty" value="var(--fs-color-neutral-4)" isColor />
 </TokenTable>
 
-### Nested Elements
+### Nested elements
 
 #### Icon
 
@@ -103,7 +101,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 <Rating value={3.5} icon={<Icon name="Star" />} />
 ```
 
-#### Other Icon
+#### Other icon
 
 <OverviewSection>
   <Rating value={3.5} icon={<Icon name="Heart" />} />
