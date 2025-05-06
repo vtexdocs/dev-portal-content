@@ -11,7 +11,7 @@ The [Marketplace API](https://developers.vtex.com/docs/api-reference/marketplace
 
 The Marketplace API update includes the following endpoints:
 
-- `GET` [List affiliates](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/api/fulfillment/pvt/affiliates): Retrieve a list of affiliates.
-- `GET` [Get affiliate by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/api/fulfillment/pvt/affiliates/-affiliateId-): Retrieve a specific affiliate by its ID.
-- `PUT` [Update affiliate by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#put-/api/fulfillment/pvt/affiliates/-affiliateId-): Update an existing affiliate.
-- `DELETE` [Delete affiliate by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#delete-/api/fulfillment/pvt/affiliates/-affiliateId-): Delete an affiliate by its ID.
+- `GET` [List affiliates](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/fulfillment/pvt/affiliates): Retrieve a list of affiliates.
+- `GET` [Get affiliate by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/fulfillment/pvt/affiliates/-affiliateId-): Retrieve a specific affiliate by its ID.
+- `PUT` [Update affiliate by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#put-/fulfillment/pvt/affiliates/-affiliateId-): Update an existing affiliate.
+- `DELETE` [Delete affiliate by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#delete-/fulfillment/pvt/affiliates/-affiliateId-): Delete an affiliate by its ID.
