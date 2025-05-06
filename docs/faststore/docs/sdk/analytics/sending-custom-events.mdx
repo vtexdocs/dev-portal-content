@@ -2,32 +2,30 @@
 title: "Sending custom events"
 ---
 
-Even though the [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview) module supports [Google Analytics ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en) by default, a store may need to monitor customer activity not covered by the Analytics module. In these cases, you can still use the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) and [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) functions to fire and intercept custom events. In this guide, learn how to define and send custom events.
+Even though the [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview) module natively supports [Google Analytics ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en), you may need to track customer activity not covered by default events. In such cases, you can trigger and intercept custom events using the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) and [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) functions. In this guide, learn how to define and send custom events.
 
 ## Instructions
 
 ### Step 1 - Declaring an interface for your custom event
 
-To fire a custom event, declare an interface that describes the structure of your event object, including all its properties and types. To do so, you can:
+To trigger a custom event, you must define an interface that describes the structure of your event object, including its properties and types. There are three approaches to doing this:
 
-- [Instructions](#instructions)
-  - [Step 1 - Declaring an interface for your custom event](#step-1---declaring-an-interface-for-your-custom-event)
-    - [Creating a new event interface](#creating-a-new-event-interface)
-    - [Extending existing types from the Analytics module](#extending-existing-types-from-the-analytics-module)
-    - [Overriding multiple types](#overriding-multiple-types)
-  - [Step 2 - Intercepting custom events](#step-2---intercepting-custom-events)
-  - [Step 3 - Firing custom events](#step-3---firing-custom-events)
+- [Creating a new event interface](#creating-a-new-event-interface)
+- [Extending existing types from the Analytics Module](#extending-existing-types-from-the-analytics-module)
+- [Overriding Multiple Types](#overriding-multiple-types)
 
 #### Creating a new event interface
 
-You can use the sendAnalyticsEvent function to build a custom event interface. This function requires the event to include two properties:
+To create a custom event interface, use the `sendAnalyticsEvent` function. This function requires the event to include two properties:
 
 | Property name | Type | Description |
 | ------------------- |-------- |---------------- |
 | `name`            | `string` | The name of the event that appears in Analytics reports. The `name` doesn't need to follow any event name conventions related to natively supported events. |
 | `params` | `any` | Any type and value your custom event uses. |
 
-Take the following example to track when a user adds a product to their wishlist by defining the `WishlistEvent`:
+##### Example
+
+In the following example, we define a custom event called `WishlistEvent` to track when a user adds a product to their wishlist:
 
     ```ts
     import { sendAnalyticsEvent } from '@faststore/sdk'
@@ -45,13 +43,15 @@ Take the following example to track when a user adds a product to their wishlist
     sendAnalyticsEvent<WishlistEvent>({ name, params, userId, isLoggedIn })
     ```
 
-This custom event interface allows you to capture when a user adds a product to their wishlist. It logs details such as the `productId`, `productName`, and whether the user is logged in (`isLoggedIn`). This data can then be sent to your analytics tool to better understand customer behavior, such as which products are popular on wishlists and how engagement varies between logged-in and anonymous users.
+This custom event interface captures when a user adds a product to their wishlist, logging details like `productId`, `productName`, and whether the user is logged in (`isLoggedIn`). This data can then be sent to your analytics tool to better understand customer behavior, such as which products are popular on wishlists and how engagement varies between logged-in and anonymous users.
 
 #### Extending existing types from the Analytics module
 
-If your event is related to an existing one, you can extend existing types {/*ADD THE LINK FOR THE EXTENDING EXISTING EVENTS ONCE WE HAVE THE DOCUMENTATION*/} from the Analytics module by using the [generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) available in the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
+If your event is related to an existing one, you can extend relevant types from the Analytics module. You can do this by using the [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) with the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
 
-Take the following example where the `AddToCartEvent` interface is extended to accept the `couponCode` property, which is useful for tracking if a customer applied a coupon code when adding an item to the cart:
+##### Example
+
+The following example extends the `AddToCartEvent` interface to include the `couponCode` property, which is useful for tracking if a customer applied a coupon code when adding an item to the cart:
 
     ```ts
     import type { AddToCartEvent } from '@faststore/sdk'
@@ -68,7 +68,7 @@ Take the following example where the `AddToCartEvent` interface is extended to a
 
 #### Overriding multiple types
 
-If you have multiple custom events, such as adding to the cart, removing from the cart, or viewing products, you can create a unified type to manage them all and easily fire extended events:
+If you have multiple custom events, such as adding/removing items from the cart or viewing products, you can define a unified type to handle them all. This approach simplifies firing multiple events from the same interface.
 
     ```ts
     /* types.ts */
@@ -104,7 +104,7 @@ The example above sets up a flexible way to fire multiple custom events. Instead
 
 ### Step 2 - Intercepting custom events
 
-After creating or extending an event interface, you'll need to intercept these events using the `useAnalyticsEvent` hook. You can do that in the following:
+After defining the event interface, you'll need to intercept these events using the `useAnalyticsEvent` hook. Below is an example of how to set up an event handler:
 
     ```ts
     import { useAnalyticsEvent } from '@faststore/sdk'
@@ -140,7 +140,7 @@ Note that to target extended properties of events, you'll also need to configure
     }
     ```
 
-> ℹ  By typing the callback function with the extended types, you can reference properties not natively offered by the analytics module.
+> ℹ By typing the callback function with the extended types, you can reference properties not natively offered by the analytics module.
 
 ### Step 3 - Firing custom events
 
