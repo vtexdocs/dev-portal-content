@@ -153,7 +153,7 @@ vtex link
 
 After that, every change can be seen in your browser in real-time, and you can access it by running `vtex browse` in your terminal.
 
-## Next Steps
+## Next steps
 
 Now that you have created your app and it is already live in your development workspace, here are some options of what you can do next:
 
