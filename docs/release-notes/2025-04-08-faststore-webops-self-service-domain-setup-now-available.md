@@ -18,6 +18,7 @@ Developers and merchants can now configure their store’s production domains by
 This feature allows developers and merchants to manage their production storefront domains. This self-service approach gives teams more flexibility and autonomy when configuring their storefronts.
 
 Users can:
+
 - **Add** a new production domain
 - **Remove** a domain that is no longer needed.
 
@@ -34,12 +35,5 @@ The self-service domain configuration has been released to:
 ## What needs to be done?
 
 During the go-live process, after completing the DNS configuration, configure the production domain directly in WebOps. Learn more about the complete go-live process in [Configuring external DNS](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns).
-
-1. Access [WebOps Dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard).
-2. Go to the **Settings** tab.
-3. In the **Host** field, select your store’s domain (example: `www.mystore.com`) from the dropdown list.
-4. Click `Add`.
-5. Monitor the deployment process until it is totally finished (status `Success`).
-6. Confirm the domain appears in the **Current Domains** list.
 
 To learn more about domain management, see the section [Settings](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#settings) in the FastStore WebOps Dashboard guide.
