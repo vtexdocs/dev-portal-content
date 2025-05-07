@@ -1,13 +1,11 @@
 ---
 title: "Rating"
 excerpt: Displays a product rating based on other shoppers' feedback.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/AggregateRating___a8300916874f5a11de7633b7cabc12e9.png
 components:
   - Rating.tsx
 ---
 
-The `Rating` component displays the average rating of a product based on other shoppers' feedback and reviews. `Rating` supports icons from our components.
+The `Rating` component displays a product’s average rating based on shopper feedback and reviews. It supports customizable icons provided by the [Icon component](https://developers.vtex.com/docs/guides/faststore/reference-icons).
 
 ## Overview
 
@@ -46,7 +44,7 @@ Import the component from [@faststore/ui](https://developers.vtex.com/docs/guide
 import { Rating } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles into your FastStore project
 
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
@@ -80,18 +78,16 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 <TokenTable>
   <TokenRow token="--fs-rating-gap" value="var(--fs-spacing-0)" />
   <TokenRow token="--fs-rating-color" value="var(--fs-color-text)" isColor />
+  <TokenRow token="--fs-rating-color-empty" value="var(--fs-color-neutral-4)" isColor />
 </TokenTable>
 
-### Nested Elements
+### Nested elements
 
 #### Icon
 
 <TokenTable>
   <TokenRow token="--fs-rating-icon-width" value="var(--fs-spacing-3)" />
-  <TokenRow
-    token="--fs-rating-icon-height"
-    value="var(--fs-rating-icon-width)"
-  />
+  <TokenRow token="--fs-rating-icon-height"  value="var(--fs-rating-icon-width)" />
 </TokenTable>
 
 ### Variants
@@ -105,7 +101,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 <Rating value={3.5} icon={<Icon name="Star" />} />
 ```
 
-#### Other Icon
+#### Other icon
 
 <OverviewSection>
   <Rating value={3.5} icon={<Icon name="Heart" />} />
@@ -126,7 +122,10 @@ const [rating, setRating] = useState(3)
 ```
 
 <TokenTable>
-  <TokenRow token="--fs-rating-actionable-gap" value="0" />
+  <TokenRow
+    token="--fs-rating-actionable-gap"
+    value="0"
+  />
   <TokenRow
     token="--fs-rating-actionable-icon-width"
     value="var(--fs-rating-icon-width)"
@@ -134,6 +133,20 @@ const [rating, setRating] = useState(3)
   <TokenRow
     token="--fs-rating-actionable-icon-height"
     value="var(--fs-rating-actionable-icon-width)"
+  />
+  <TokenRow
+    token="--fs-rating-actionable-icon-color"
+    value="var(--fs-rating-color-empty)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-rating-actionable-icon-color-selected"
+    value="var(--fs-rating-color)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-rating-button-min-height"
+    value="var(--fs-spacing-5)"
   />
 </TokenTable>
 
