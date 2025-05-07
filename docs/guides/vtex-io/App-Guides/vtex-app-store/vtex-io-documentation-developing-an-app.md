@@ -70,11 +70,11 @@ Once you have [cloned the boilerplate repository](#cloning-the-boilerplate-repos
 2. Open the `manifest.json` file and look at the primary information that it provides, such as in the [Manifest article](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 3. Change the following fields according to your scenario:
 
-- Replace the value of the `name` field with the name of your app.
-- Replace the value of the `vendor` field with the VTEX account you are using for development. This should be the name of the VTEX account resposible for the app development, maintenance, and distribution.
-- Replace the value of the `version` field with the app version, according to the [Semantic Versioning 2.0.0](https://semver.org/).
-- Replace the value of the `title` field with the app distribution name. This name will be displayed on the Apps section in the admin and on the VTEX App Store.
-- Replace the value of the `description` field with a brief description of the app's functionality.
+   - Replace the value of the `name` field with the name of your app.
+   - Replace the value of the `vendor` field with the VTEX account you are using for development. This should be the name of the VTEX account resposible for the app development, maintenance, and distribution.
+   - Replace the value of the `version` field with the app version, according to the [Semantic Versioning 2.0.0](https://semver.org/).
+   - Replace the value of the `title` field with the app distribution name. This name will be displayed on the Apps section in the admin and on the VTEX App Store.
+   - Replace the value of the `description` field with a brief description of the app's functionality.
 
 4. Go to the **`builders`** prop and add the ones that make sense for your app project.
 
