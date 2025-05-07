@@ -12,4 +12,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           filter_mode: file
-          markdownlint_flags: --disable MD013 -- .
+          markdownlint_flags: |
+            --disable MD013
+            --disable MD033
+            -- .

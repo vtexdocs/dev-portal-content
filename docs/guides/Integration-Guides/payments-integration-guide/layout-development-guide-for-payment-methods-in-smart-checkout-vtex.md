@@ -100,9 +100,9 @@ Follow these steps to create your layout:
 6. Open your preferred browser and go to the link `http://localhost:8080`.
 7. Modify the following files in accordance with the requirements of the User interface: structure and code section:
 
-   - *src/partials/payment.html*: this file is responsible for the presented layout itself. This is where you should insert the HTML structure of your layout.
-   - *src/assets/css/less/style.less*: this is where you insert the classes responsible for styles, spacing, fonts, and other CSS customizations in your layout. Remember to follow the guidelines described in the section above.
-   - *src/assets/img*: here you should insert and refer to all the images used in your layout.
+   - *src/partials/payment.html*: This file is where you should insert the HTML structure of your layout. When adding information about a new payment method, change the text `newpayment` in the file to the name of the payment method created. For example, when creating the Safety Pay payment method, replace the information `newpayment` with `SafetyPay`.
+   - *src/assets/css/less/style.less*: This is where you insert the classes responsible for styles, spacing, fonts, and other CSS customizations in your layout. Remember to follow the guidelines described in the section above.
+   - *src/assets/img*: Here you should insert and refer to all the images used in your layout.
    - *src/i18n*: Inside this folder you are going to find four files, each one corresponding to one language (*pt-BR, en-US, es, and fr*). You should change the values for the keys and check if the languages are rendered correctly by clicking on the flags located in the upper left corner in the Payment Mocker, see the example in the section below.
 8. Open the file *src/assets/css/less/style.less*, get access to the property *#payment-group-template-PaymentGroup* *.payment-group-item-text* and update the attribute background-image, in order to insert the icon referring to your payment method.
 
