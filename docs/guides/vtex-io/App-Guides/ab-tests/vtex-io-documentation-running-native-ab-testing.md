@@ -102,13 +102,13 @@ By agreeing to proceed with the test, you need to answer the following two quest
 
 1. `What's the proportion of traffic initially directed to the master workspace?`
 
-You must answer this question with any whole number between 0 and 10000. For example, if you answer `9000`, you will set 90% of the traffic to the `master` workspace.
+      You must answer this question with any whole number between 0 and 10000. For example, if you answer `9000`, you will set 90% of the traffic to the `master` workspace.
 
->⚠️ To promote the changes from your production workspace in the safest way possible, we strongly recommend leaving 90% of traffic dedicated to the `master` and the other 10% to the production workspace being tested.
+      >⚠️ To promote the changes from your production workspace in the safest way possible, we strongly recommend leaving 90% of traffic dedicated to the `master` and the other 10% to the production workspace being tested.
 
 2. `What's the amount of time respecting the restriction?`
 
-This is the time (in hours) when the traffic proportion stated in the previous question remains constant. After this period, the A/B testing system automatically balances the traffic proportions, sending more traffic to the best-performing workspace. There are two possible answers to this question:
+      This is the time (in hours) when the traffic proportion stated in the previous question remains constant. After this period, the A/B testing system automatically balances the traffic proportions, sending more traffic to the best-performing workspace. There are two possible answers to this question:
 
 | Option | Description |
 |------------|-----------------|
