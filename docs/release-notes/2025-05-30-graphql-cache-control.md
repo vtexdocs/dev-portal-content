@@ -16,9 +16,8 @@ FastStore projects can now configure caching for GraphQL `GET` requests using th
 
 The `graphqlCacheControl` flag supports two key caching parameters:
 
-`maxAge`: Defines how long a response remains fresh in the cache (e.g., `5 * 60` seconds for 5 minutes).
-
-`staleWhileRevalidate`: Allows stale cache to be served while fetching fresh data in the background (e.g., `60` seconds).
+- `maxAge`: Defines how long a response remains fresh in the cache (e.g., `5 * 60` seconds for 5 minutes).
+- `staleWhileRevalidate`: Allows stale cache to be served while fetching fresh data in the background (e.g., `60` seconds).
 
 ## What needs to be done?
 
