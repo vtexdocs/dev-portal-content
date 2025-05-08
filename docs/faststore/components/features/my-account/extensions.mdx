@@ -31,7 +31,7 @@ Next, you must enable this new page as a valid route:
 2. In the `src/myAccount` folder, create a file named `navigation.ts`.
 3. In the `src/myAccount/navigation.ts` file, import the `getMyAccountRoutes` function from `@faststore/core` and set the new route as in the following example:
 
-    ```ts src/myAccount/navigation.ts
+    ```ts src/myAccount/navigation.ts mark=4:8
     import { getMyAccountRoutes } from "@faststore/core";
 
     export default getMyAccountRoutes({
