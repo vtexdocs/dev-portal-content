@@ -1,0 +1,60 @@
+name: VTEX AI Documentation Reviewer
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '**/*.mdx'
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  get-changed-files:
+    runs-on: ubuntu-latest
+    outputs:
+      files: ${{ steps.get-files.outputs.all_modified_files }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Get changed files
+        id: get-files
+        uses: tj-actions/changed-files@v44
+        with:
+          json: true
+          escape_json: false
+          files: |
+            **/*.md
+            **/*.mdx
+      - name: Check output
+        run: echo "${{ steps.get-files.outputs.all_modified_files }}"
+
+  ai-reviewer:
+    needs: get-changed-files
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        file: ${{ fromJson(needs.get-changed-files.outputs.files) }}
+    steps:
+    - uses: actions/setup-python@v5
+    - uses: actions/checkout@v4
+    - uses: vtexdocs/ai-reviewer-action@v1.0
+      id: generate-feedback
+      with:
+        gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+        file_paths: ${{ matrix.file }}
+    - name: Comment PR with AI feedback
+      uses: thollander/actions-comment-pull-request@v3
+      with:
+        message: |
+          ## Documentation feedback for ${{ matrix.file }}
+          ${{ steps.generate-feedback.outputs.response }}
+          
+          <hr><h2 id="ai-feedback">Was this feedback useful?</h2>
+
+          - [ ] Yes
+          - [ ] No
+        comment-tag: ${{ matrix.file }} 
