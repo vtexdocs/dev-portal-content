@@ -27,5 +27,5 @@ jobs:
         COMMENT_URL: ${{ github.event.comment.html_url }}
       run: |
         pip install requests
-        python -m scripts.get_feedback
+        python -m scripts/get_feedback.py
       
