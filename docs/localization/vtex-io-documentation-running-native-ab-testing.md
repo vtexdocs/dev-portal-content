@@ -3,7 +3,7 @@ title: "Running A/B tests"
 slug: "vtex-io-documentation-running-native-ab-testing"
 hidden: false
 createdAt: "2020-06-03T16:02:44.475Z"
-updatedAt: "2025-04-29T16:57:02.117Z"
+updatedAt: "2025-05-07T21:33:46.225Z"
 category: "App Development"
 seeAlso:
  - "/docs/guides/vtexarg-abtester"
