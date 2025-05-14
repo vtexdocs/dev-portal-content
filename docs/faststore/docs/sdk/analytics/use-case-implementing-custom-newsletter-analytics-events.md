@@ -16,7 +16,7 @@ This guide explains how to track user subscriptions by implementing two custom a
 To follow this guide, you should be familiar with the following topics:
 
 - [FastStore Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview)
-- [Sending custom events](https://developers.vtex.com/docs/guides/faststore/analytics-sending-custon-events)
+- [Sending custom events](https://developers.vtex.com/docs/guides/faststore/analytics-sending-custom-events)
 - [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section)
 
 ## Implementation
