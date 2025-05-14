@@ -1,0 +1,114 @@
+---
+title: "Popover"
+components:
+  - Popover.tsx
+---
+
+`Popover` is a floating container component that provides contextual information positioned relative to a trigger element, such as a button or icon, when a user interacts with it to open the container.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ flexDirection:'column', alignItems: 'normal' }}>
+
+    </OverviewSection>
+
+  </Tab>
+  <Tab>
+    ```tsx
+
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+
+```tsx
+import { Popover } from '@faststore/ui'
+```
+
+### Import styles into your FastStore project
+
+To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/molecules/Popover/styles.scss';
+```
+
+Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+
+---
+
+## Props
+
+<ComponentPropsSection component="Popover" />
+
+---
+
+## Design tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-popover-margin"
+    value="0 var(--fs-spacing-3)"
+  />
+  <TokenRow
+    token="--fs-popover-padding"
+    value="var(--fs-spacing-3) var(--fs-spacing-4) var(--fs-spacing-4)"
+  />
+  <TokenRow
+    token="--fs-popover-border-radius"
+    value="var(--fs-border-radius)"
+  />
+  <TokenRow
+    token="--fs-popover-bkg-color"
+    value="var(--fs-color-body-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-popover-box-shadow"
+    value="var(--fs-shadow-darker)"
+  />
+  <TokenRow
+    token="--fs-popover-z-index"
+    value="var(--fs-z-index-top)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-popover-indicator-size"
+    value="var(--fs-spacing-1)"
+  />
+  <TokenRow
+    token="--fs-popover-indicator-distance-edge"
+    value="var(--fs-spacing-3)"
+  />
+  <TokenRow
+    token="--fs-popover-indicator-distance-base"
+    value="var(--fs-spacing-1)"
+  />
+  <TokenRow
+    token="--fs-popover-indicator-translate"
+    value="calc(var(--fs-popover-indicator-size) + var(--fs-popover-indicator-distance-base))"
+  />
+</TokenTable>
+
+---
+
+## Customization
+
+For further customization, you can use the following data attributes:
+
+`data-fs-popover`
+
+`data-fs-popover-header`
+
+`data-fs-popover-header-title`
+
+`data-fs-popover-header-dismiss-button`
+
+`data-fs-popover-indicator`
+
+`data-fs-popover-header-placement="top | top-center | top-start | top-end | bottom | bottom-center | bottom-start | bottom-end"`
