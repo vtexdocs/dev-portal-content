@@ -61,7 +61,7 @@ The possible filters are:
 
 Learn more about each of them in the following sections.
 
-#### Delivery to the shopper’s ZIP code {#delivery-to-the-shopper’s-zip-code}
+#### Delivery to the shopper’s ZIP code
 
 Filters the search for products that can be delivered to the zip code entered by the buyer.
 
@@ -73,7 +73,7 @@ Example:
 https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875/shipping/delivery
 ```
 
-#### Pickup at a specific location {#pickup-at-a-specific-location}
+#### Pickup at a specific location
 
 Filters the search for products that can be picked up at a specific pickup point selected by the buyer.
 
