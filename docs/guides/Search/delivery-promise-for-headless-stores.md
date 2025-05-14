@@ -26,7 +26,7 @@ Only products that can be delivered to the provided address or picked up at pick
 
 The `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) endpoint from Intelligent Search API accepts path parameters referred to as facets:
 
-```
+```txt
 https://{accountName}.{environment}.com.br/api/io/_v/api/intelligent-search/product_search/{facets}
 ```
 
@@ -34,8 +34,8 @@ To enable the Delivery Promise functionality, you should use the following addit
 
 | Facet | Description | Example |
 | :---- | :---- | :---- |
-| `zip-code` **\[required\]** | Postal code. It can also be used as a query string. | Query string: **`?zip-code=22250040`**`&coordinates=-43.18218231201172,-22.94549560546875 ` Facet: **`/zip-code/22250040`**`/coordinates/-43.18218231201172,-22.94549560546875` |
-| `coordinates` **\[required\]** | Address coordinates. To get the coordinates based on a postal code, follow the steps on [Get address by postal code](https://developers.vtex.com/docs/guides/get-address-by-postal-code) to return the coordinates in the correct and expected value inside the `geoCoordinates` object. It can also be used as a query string. | Query string: `?zip-code=22250040&coordinates=-43.18218231201172,-22.94549560546875 ` Facet: `/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875`  |
+| `zip-code` **\[required\]** | Postal code. It can also be used as a query string. | Query string: **`?zip-code=22250040`**`&coordinates=-43.18218231201172,-22.94549560546875` Facet: **`/zip-code/22250040`**`/coordinates/-43.18218231201172,-22.94549560546875` |
+| `coordinates` **\[required\]** | Address coordinates. To get the coordinates based on a postal code, follow the steps on [Get address by postal code](https://developers.vtex.com/docs/guides/get-address-by-postal-code) to return the coordinates in the correct and expected value inside the `geoCoordinates` object. It can also be used as a query string. | Query string: `?zip-code=22250040&coordinates=-43.18218231201172,-22.94549560546875` Facet: `/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875`  |
 | `shipping` | Shipping method. It must always be combined with `zip-code` and `coordinates`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875/shipping/pickup-in-point/` |
 | `pickupPoint` | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters. It can also be used as a query string. |  Query string: `/shipping/pickup-in-point?zip-code=22250040&coordinates=-43.18218231201172,-22.94549560546875&pickupPoint=vtex-botafogo` Facet: `/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875/shipping/pickup-in-point/pickupPoint/vtex-botafogo` |
 
@@ -45,7 +45,7 @@ To enable the Delivery Promise functionality, you should use the following addit
 
 Here is an example of a basic Delivery Promise search using only postal code and coordinates, which are the required facets:
 
-```
+```txt
 https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875
 ```
 
@@ -55,7 +55,7 @@ To filter the search by a shipping method, you must use the `shipping` parameter
 
 The possible filters are:
 
-* [Delivery to the shopper’s ZIP code](#delivery-to-the-shopper’s-zip-code)  
+* [Delivery to the shopper’s ZIP code](#delivery-to-the-shoppers-zip-code)  
 * [Pickup at a specific location](#pickup-at-a-specific-location)  
 * [Pickup at a nearby location](?tab=t.0#heading=h.qzpibergwrec)
 
@@ -69,13 +69,13 @@ Parameters: `/shipping/delivery`
 
 Example:
 
-```
+```txt
 https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875/shipping/delivery
 ```
 
 #### Pickup at a specific location {#pickup-at-a-specific-location}
 
-Filters the search for products that can be picked up at a specific pickup point selected by the buyer. 
+Filters the search for products that can be picked up at a specific pickup point selected by the buyer.
 
 Parameters: `/shipping/pickup-in-point/pickupPoint/{pickupPointId}`
 
@@ -83,7 +83,7 @@ Parameters: `/shipping/pickup-in-point/pickupPoint/{pickupPointId}`
 
 Example:
 
-```
+```txt
 https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875/shipping/pickup-in-point/pickupPoint/vtex-botafogo
 ```
 
@@ -95,7 +95,7 @@ Parameters: `/shipping/pickup-in-point/pickup-nearby`
 
 Example:
 
-```
+```txt
 https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875/shipping/pickup-in-point/pickup-nearby 
 ```
 
@@ -111,7 +111,7 @@ You can retrieve available filters using the `GET` [Get facets](https://develope
 
 Example request:
 
-```
+```txt
 GET https://{{accountName}}.myvtex.com/_v/api/intelligent-search/facets/?query=moisturizer
 ```
 
