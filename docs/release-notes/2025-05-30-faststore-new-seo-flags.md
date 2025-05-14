@@ -43,4 +43,4 @@ To use these flags, update your FastStore project and add them to the [`discover
 4. Run `yarn dev` in the terminal.
 5. Open the available localhost URL and check if the flags are applied by inspecting your page’s `<head>` or using SEO tools:
 
-![seo-experimental-flags-example](https://vtexhelp.vtexassets.com/assets/docs/src/seo-flags___8e77083576529c49e160590a9229ed02.png)
+    ![seo-experimental-flags-example](https://vtexhelp.vtexassets.com/assets/docs/src/seo-flags___8e77083576529c49e160590a9229ed02.png)
