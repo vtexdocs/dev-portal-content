@@ -121,7 +121,7 @@ In the **Production domain** section, select the store domain from the dropdown 
 
 The **Current Domains** section displays the default and primary domains configured for your store. This section is a reference point to ensure your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment. 
 
-If your domain isn't listed, it may indicate an issue with the configuration or DNS settings that need to be addressed before proceeding with the go-live.
+If your domain isn't listed, it may indicate an issue with the configuration or DNS settings that need to be addressed before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly and the problem persists, open a ticket to [VTEX support](https://help.vtex.com/en/support).
 
 ### Secrets
 
@@ -129,11 +129,11 @@ Secrets are encrypted credentials, like API keys and passwords, that require sec
 
 In the **Secrets** section, define the **Key** and **Value** in their respective fields and click `Add` to set up the secret.
 
+>ℹ Learn more about Secrets in [Managing secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets).
+
 #### Current keys
 
 The **Current keys** section lists all secrets configured for your store. This list shows each secret’s key (the identifier), while the value is hidden by default for security reasons. You can toggle the visibility of a secret’s value if needed.
-
->ℹ Learn more about Secrets in [Managing secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets).
 
 ## Deleting the project
 
@@ -141,4 +141,4 @@ To delete your FastStore project, click the **More actions menu** (`⋮`). Then,
 
 A modal to confirm your action will open.
 
-> ⚠️ Proceed with caution. Deleting the project can't be undone and will permanently remove all deployments and domains associated with it.
+> ⚠️ Proceed with caution. Deleting the project can't be undone, and all deployments and associated domains will be permanently removed.
