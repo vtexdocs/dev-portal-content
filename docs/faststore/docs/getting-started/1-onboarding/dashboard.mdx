@@ -104,16 +104,16 @@ Once you've set the pages for testing and after a new deployment, go to the **Ov
 
 The **Settings** tab is where you manage the following configurations:
 
-- [**Production domain**](#production-domain): The primary URL customers use to access the live store.
-- [**Secrets**](#secrets): Sensitive information securely managed during the FastStore project deployment process.
+- [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
+- [**Secrets**](#secrets): Store and securely manage sensitive information, such as API keys and passwords, required during FastStore deployment.
 
 ![settings-webops](https://vtexhelp.vtexassets.com/assets/docs/src/secrets-webops___2869e469b5a613f389f19cc555f4c3c5.png) 
 
 ### Production domain
 
-As part of the go-live process, you must define your store’s production domain.
+As part of the [go-live](https://developers.vtex.com/docs/guides/faststore/go-live-overview) process, you must define your store's production domain, the main URL customers will use to access your store.
 
-Before adding the domain, make sure the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) are correctly configured in your VTEX account settings.
+> ⚠️ Before adding the domain, make sure the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) are correctly configured in your VTEX account settings.
 
 In the **Production domain** section, select the store domain from the dropdown list in the **Host** field and click `Add` to set up your store's primary domain.
 
@@ -125,7 +125,7 @@ If your domain isn't listed, it may indicate an issue with the configuration or 
 
 ### Secrets
 
-Secrets, like API keys and passwords, need secure management during FastStore deployment. Standardizing secrets management via WebOps enhances security and consistency across deployment providers.
+Secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing secrets management via WebOps enhances security and consistency across deployment providers.
 
 In the **Secrets** section, define the **Key** and **Value** in their respective fields and click `Add` to set up the secret.
 
