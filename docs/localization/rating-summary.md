@@ -35,6 +35,7 @@ To apply the styles of this component in your FastStore project, import the foll
 Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
 
 ---
+
 ## Props
 
 ### RatingSummary
@@ -140,6 +141,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
       }}
     />
 ```
+
 #### Header
 
 <TokenTable>
