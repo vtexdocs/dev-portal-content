@@ -16,10 +16,10 @@ Previously, some custom queries used `POST` methods, which prevented caching. No
 
 ## What needs to be done?
 
-To enable proper caching related to custom queries do the following:
+To enable proper caching in custom queries:
 
-1. Review your project's custom queries using `POST` method.
-2. Rename these queries by adding the `Query` suffix to default to `GET`. For example:
+1. Check the custom queries in your project that use the `POST` method.
+2. Rename the queries by adding the `Query` suffix to default to `GET`. For example:
 
 - Uncached (`POST`): `getOrderForm`
 - Cached (`GET`): `getOrderFormQuery` (ensures proper store caching)
