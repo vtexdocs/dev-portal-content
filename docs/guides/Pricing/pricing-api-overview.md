@@ -1,9 +1,9 @@
 ---
 title: "Pricing API - Overview"
 slug: "pricing-api-overview"
-hidden: false
+hidden: true
 createdAt: "2020-01-02T10:50:22.523Z"
-updatedAt: "2022-08-08T18:29:59.041Z"
+updatedAt: "2025-05-16T17:29:59.041Z"
 ---
 [block:callout]
 {
