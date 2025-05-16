@@ -1,9 +1,9 @@
 ---
 title: "FastStore: new experimental SEO flags for search engines"
-slug: "2025-05-30-faststore-new-seo-flags"
+slug: "2025-05-16-faststore-new-seo-flags"
 type: added
 excerpt: "Control search engine behavior with three new experimental flags: `noRobots`, `noindex`, and `nofollow`."
-createdAt: "2025-05-30T00:00:00.000Z"
+createdAt: "2025-05-16T00:00:00.000Z"
 updatedAt: ""
 hidden: false
 ---
