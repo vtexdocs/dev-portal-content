@@ -12,11 +12,11 @@ FastStore projects can now use new experimental flags to manage how search engin
 
 | Flag | Type | Description |
 | ------ | ------- | -------------- |
-| `noRobots` | boolean | Disables the default `robots` meta tag from being inserted on all pages, removing the default crawler instructions. <ul><li>Set the flag to `true`: Prevents the inclusion of any robots-related meta tags on the page.</li><li>Set the flag to `false`: Includes crawler instructions as the FastStore default behavior, allowing search engines to understand how to index and follow the site.</li></ul> |
-| `noindex` | boolean | Instructs web crawlers not to index the store page, which keeps the page out of search results. <ul><li>Set the flag to `true`: Indicates that the specified page should not be indexed by search engines.</li><li>Set the flag to `false`: Allows search engines to add the page to their search results.</li></ul> |
-| `nofollow` | Boolean | Prevents search engines from following links on the page, ensuring that sensitive or irrelevant content is not included in search results. <ul><li>Set the flag to `true`: Stops the page from passing SEO value to linked pages.</li><li>Set the flag to `false`: Allows search engines to crawl and potentially pass SEO value to linked pages.</li></ul> |
+| `noRobots` | boolean | Disables the default `robots` meta tag on all pages, removing the default crawler instructions. <ul><li>Set to `true`: Prevents the inclusion of any robots-related meta tags on the page.</li><li>Set to `false`: Includes crawler instructions as the FastStore default behavior, allowing search engines to understand how to index and follow the site.</li></ul> |
+| `noindex` | boolean | Instructs web crawlers not to index the store page, which keeps the page out of search results. <ul><li>Set to `true`: Indicates the page should not be indexed by search engines.</li><li>Set to `false`: Allows search engines to include the page in their search results.</li></ul> |
+| `nofollow` | Boolean | Prevents search engines from following links on the page, ensuring that sensitive or irrelevant content is not included in search results. <ul><li>Set to `true`: Stops the page from passing SEO value to linked pages.</li><li>Set to `false`: Allows search engines to crawl and potentially pass SEO value to linked pages.</li></ul> |
 
-> ⚠️ These flags are experimental and may have limitations. Before using it in the production environment, make sure to test it to ensure compatibility with your store.
+> ⚠️ These flags are experimental and may have limitations. Before using it in the production environment, test it to ensure compatibility with your store.
 
 ## What needs to be done?
 
@@ -29,7 +29,7 @@ To use these flags, update your FastStore project and add them to the [`discover
     yarn upgrade -L --scope @faststore
     ```
 
-3. Open the `discovery.config.js` file and under the `experimental` field, add the `noRobots` and `noindex` or `nofollow` flags. The experimental field will look like this:
+3. Open the `discovery.config.js` file and, under the `experimental` field, add the `noRobots` and `noindex` or `nofollow` flags. The experimental field will look like this:
 
     ```js discovery.config.js
 
