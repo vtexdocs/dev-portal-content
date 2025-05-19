@@ -15,14 +15,18 @@ This guide outlines the process of creating such an interface and using the data
 
 The app settings interface displays configuration forms for installed apps in the [App Store](https://help.vtex.com/en/tracks/extensions-hub--AW7klkYMh557y5IUOgzco/2LDRvGujYsumxi7IlE7CEJ). This interface is defined via the `settingsSchema` field on [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest), where you declare the schema of your app’s configuration.
 
-Below is an example of the Google Tag Manager app interface and its corresponding `settingsSchema`configuration:
+Below is an example of the Google Tag Manager app interface and its corresponding `settingsSchema` configuration:
 
-<Tabs items={[Interface, settingsSchema]} defaultIndex="0">
-  <Tab>
+<table>
+<tr>
+<th>Interface</th>
+<th>settingsSchema</th>
+</tr>
+<tr>
+<td>
   <img src="https://github.com/vtexdocs/dev-portal-content/assets/112641072/d916b8da-0039-4364-b21e-a8cf8ba629dd" alt="GTM_image" />
-  </Tab>
-  
-  <Tab>
+</td>
+<td>
 ```json manifest.json
   "settingsSchema": {
     "title": "Google Tag Manager",
@@ -47,9 +51,9 @@ Below is an example of the Google Tag Manager app interface and its correspondin
     }
   },
 ```
-  </Tab>
-</Tabs>
-
+</td>
+</tr>
+</table>
 
 After building your app's settings interface, you need to consume the data provided by the app’s user. Consider the Google Tag Manager example above, retrieving the GTM ID.
 
