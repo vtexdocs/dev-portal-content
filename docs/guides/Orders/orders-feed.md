@@ -105,7 +105,7 @@ This filter offers many possibilities that can't be achieved with the `FromWorkf
 - Delivered orders
 
 ```JSONata
-isAllDelivered = true
+finished = true
 ```
 
 - Orders with added items
