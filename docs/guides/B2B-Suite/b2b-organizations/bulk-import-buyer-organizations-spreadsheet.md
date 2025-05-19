@@ -3,7 +3,7 @@ title: "Bulk Import Buyer Organizations Spreadsheet"
 slug: "bulk-import-buyer-organizations-spreadsheet"
 hidden: false
 createdAt: "2024-03-26t09:00:09.698z"
-updatedAt: "2024-03-26t09:00:09.698z"
+updatedAt: "2025-04-28t09:00:09.698z"
 ---
 
 This guide will walk you through the process of filling out the bulk import spreadsheet for use with the [Bulk Import API](https://developers.vtex.com/docs/api-reference/buyer-organizations) to efficiently manage Buyer Organizations, Cost Centers, and Members through bulk import functionality.
@@ -12,9 +12,11 @@ This guide will walk you through the process of filling out the bulk import spre
 
 To use the bulk import of buyer organizations, you must first install and configure the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) which includes the [B2B Organizations](https://developers.vtex.com/docs/apps/vtex.b2b-organizations) app.
 
+>⚠️ Bulk Import does not allow updating (editing) existing data in organizations or cost centers. This functionality is exclusively intended for creating and managing members.
+
 ## Step-by-step
 
-1. Download the [template file](https://io.vtex.com.br/b2b-bulk-import/b2b-bulk-import-template.xlsx).
+1. Download the [template file](https://images.ctfassets.net/alneenqid6w5/PkYPXgHoDpok9ajVXQcM2/e5ff6b732ad776d2d04946855e109f15/b2b-bulk-import-template_v1.xlsx).
 2. Fill in the file with buyer organizations data following the specifications detailed in [File structure for import](#file-structure-for-import).
 
   >ℹ Ensure your file is in `.xlsx` format and does not exceed 50MB.

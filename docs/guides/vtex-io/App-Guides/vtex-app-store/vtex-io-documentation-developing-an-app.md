@@ -6,12 +6,12 @@ createdAt: "2022-03-04T20:09:05.300Z"
 updatedAt: "2022-12-13T20:17:44.583Z"
 category: "App Development"
 seeAlso:
- - "/docs/guides/vtex-io-documentation-manifest"
- - "/docs/guides/vtex-io-documentation-builders"
- - "/docs/guides/vtex-io-documentation-dependencies"
- - "/docs/guides/vtex-io-documentation-workspace"
- - "/docs/guides/vtex-io-getting-started"
- - "docs/guides/app-development-guides"
+  - "/docs/guides/vtex-io-documentation-manifest"
+  - "/docs/guides/vtex-io-documentation-builders"
+  - "/docs/guides/vtex-io-documentation-dependencies"
+  - "/docs/guides/vtex-io-documentation-workspace"
+  - "/docs/guides/vtex-io-getting-started"
+  - "docs/guides/app-development-guides"
 ---
 
 In this guide, you will learn how to develop an app using the VTEX IO platform. You will be presented with some core concepts of the platform and guided through the necessary steps to have a running application in VTEX IO.
@@ -30,71 +30,64 @@ Any development in VTEX IO begins and ends with our CLI (Command Line Interface)
 
 When developing an app in VTEX IO, you can start one from scratch or use one of our boilerplates. Our boilerplates contain implementation examples and all the initial settings needed for you to start developing an app. Take a look at the available boilerplates:
 
-| Boilerplate name | Description |
-| ---------------------- | ---------------- |
-| `graphql-example` | Implements a [VTEX IO service with GraphQL resolvers](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps#if-you-are-developing-a-graphql-app). |
-| `payment-provider-example` | Implements a [Payment-Provider protocol](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-protocol) |
-| `admin-example` | Implements an admin app that adds a menu button to the admin sidebar and navigation via parameter example. |
-| `store` | Implements the basic structure of a VTEX Store Framework storefront. |
-| `service-example` | Implements a [VTEX IO service](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps) with HTTP route handlers. |
-| `render-guide` | Guide repository for an app with all common patterns in app development, such as pagination and editing entities. |
-| `edition app` | Creates an an [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app). |
-| `react-guide` | Creates a frontend app with React. See… [react app](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io). |
-| `checkout-ui-settings` | Guide repository for the Checkout UI Settings app, responsible for A/B testing in your store's scripts, in addition to the possibility of quick rollbacks for old scripts, i.e., scripts of older Checkout UI Settings app's versions. |
-| `service-worker-example` | Guide repository for apps that enable service-worker builder to expose Service Worker. |
-| `admin-ui-example` | Guide repository for Admin apps for the admin v4 with the admin-ui design system. |
+| Boilerplate name           | Description                                                                                                                                                                                                                            |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `graphql-example`          | Implements a [VTEX IO service with GraphQL resolvers](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps#if-you-are-developing-a-graphql-app).                                        |
+| `payment-provider-example` | Implements a [Payment-Provider protocol](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-protocol)                                                                                                |
+| `admin-example`            | Implements an admin app that adds a menu button to the admin sidebar and navigation via parameter example.                                                                                                                             |
+| `store`                    | Implements the basic structure of a VTEX Store Framework storefront.                                                                                                                                                                   |
+| `service-example`          | Implements a [VTEX IO service](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps) with HTTP route handlers.                                                                          |
+| `render-guide`             | Guide repository for an app with all common patterns in app development, such as pagination and editing entities.                                                                                                                      |
+| `edition app`              | Creates an an [Edition app](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).                                                                                                                                |
+| `react-guide`              | Creates a frontend app with React. See… [react app](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io).                                                               |
+| `checkout-ui-settings`     | Guide repository for the Checkout UI Settings app, responsible for A/B testing in your store's scripts, in addition to the possibility of quick rollbacks for old scripts, i.e., scripts of older Checkout UI Settings app's versions. |
+| `service-worker-example`   | Guide repository for apps that enable service-worker builder to expose Service Worker.                                                                                                                                                 |
+| `admin-ui-example`         | Guide repository for Admin apps for the admin v4 with the admin-ui design system.                                                                                                                                                      |
 
 #### Cloning the boilerplate repository to your local files
 
 1. Open the terminal and clone the boilerplate you desire by running the following command:
 
-```sh
-vtex init
-```
+   ```sh
+   vtex init
+   ```
 
 2. Select the boilerplate that you want.
 
-![boilerplates](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-0.png)
+   ![boilerplates](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-0.png)
 
 3. A new folder will be created in your machine, and to access it run `cd {folder-name}` in your terminal.
 
-> ℹ️ Change the name in the curly brackets to the boilerplate that you choose, for example `cd graphql-example`
+   > ℹ️ Change the name in the curly brackets to the boilerplate that you choose, for example `cd graphql-example`
 
 #### Editing the manifest.json file
 
 Once you have [cloned the boilerplate repository](#cloning-the-boilerplate-repository-to-your-local-files) into your local files, let's learn how to make it your own by editing the **`manifest.json`** file.
 
-> ℹ️ The `manifest.json` file saves essential information about a VTEX IO app, such as its name, version, vendor, description, dependencies, etc. It is the core communication of your app with the VTEX IO platform.  For more information, see the [Manifest article](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+> ℹ️ The `manifest.json` file saves essential information about a VTEX IO app, such as its name, version, vendor, description, dependencies, etc. It is the core communication of your app with the VTEX IO platform. For more information, see the [Manifest article](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 1. Open the boilerplate project you started in [the previous step](#cloning-the-boilerplate-repository-to-your-local-files) in any code editor of your choice.
-
 2. Open the `manifest.json` file and look at the primary information that it provides, such as in the [Manifest article](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
-
 3. Change the following fields according to your scenario:
 
-- Replace the value of the `name` field with the name of your app.
-
-- Replace the value of the `vendor` field with the VTEX account you are using for development. This should be the name of the VTEX account resposible for the app development, maintenance, and distribution.
-
-- Replace the value of the `version` field with the app version, according to the [Semantic Versioning 2.0.0](https://semver.org/).
-
-- Replace the value of the `title` field with the app distribution name. This name will be displayed on the Apps section in the admin and on the VTEX App Store.
-
-- Replace the value of the `description` field with a brief description of the app's functionality.
+   - Replace the value of the `name` field with the name of your app.
+   - Replace the value of the `vendor` field with the VTEX account you are using for development. This should be the name of the VTEX account resposible for the app development, maintenance, and distribution.
+   - Replace the value of the `version` field with the app version, according to the [Semantic Versioning 2.0.0](https://semver.org/).
+   - Replace the value of the `title` field with the app distribution name. This name will be displayed on the Apps section in the admin and on the VTEX App Store.
+   - Replace the value of the `description` field with a brief description of the app's functionality.
 
 4. Go to the **`builders`** prop and add the ones that make sense for your app project.
 
-> ℹ️  A Builder defines the nature of an app. If you are developing a frontend app, you'll probably want to use the `react` builder. Instead, if you're developing a backend integration, you'll probably want to use the `node` or `dotnet` builder. In summary, a builder is responsible for processing, validating, and forwarding a given block of code to a runtime or a framework capable of executing it. Notice that an app can have as many builders as you want. That allows bundling front and backend development and delivering your solution with just one package. Please refer to the [Builders article](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) for more information.
+   > ℹ️ A Builder defines the nature of an app. If you are developing a frontend app, you'll probably want to use the `react` builder. Instead, if you're developing a backend integration, you'll probably want to use the `node` or `dotnet` builder. In summary, a builder is responsible for processing, validating, and forwarding a given block of code to a runtime or a framework capable of executing it. Notice that an app can have as many builders as you want. That allows bundling front and backend development and delivering your solution with just one package. Please refer to the [Builders article](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) for more information.
 
 5. Install the [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies) and [peer dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-peerdependencies) necessary for your app to properly work by relying on VTEX IO apps and other apps, respectively.
-
 6. Save your changes.
 
 So far, you have created an app and made it your own. Now, it is time to start making changes to your code and use a development server to see your changes live.
 
 ### Step 2 - Starting the app development
 
-In this step, you will create a  a development workspace to perform the necessary changes in your app without worrying about the app's live version and see your changes in real-time by sending the app’s changes to our cloud platform.
+In this step, you will create a development workspace to perform the necessary changes in your app without worrying about the app's live version and see your changes in real-time by sending the app’s changes to our cloud platform.
 
 #### Logging in to your VTEX account
 
@@ -102,17 +95,16 @@ This step will guarantee that your VTEX account is in sync with the VTEX IO deve
 
 1. Once installed the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install), log in to your VTEX account with the following command:
 
-```sh
-vtex login {accountName}
-```
+   ```sh
+   vtex login {accountName}
+   ```
 
-> ⚠️ Replace `{accountName}` with the name of your VTEX account.
+   > ⚠️ Replace `{accountName}` with the name of your VTEX account.
 
 2. A browser window will open and ask for your credentials.
-
 3. Once logged in, run the `vtex whoami` command to show which account and workspace the VTEX IO CLI is using.
 
-![Login - Whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-1.png)
+   ![Login - Whoami](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-1.png)
 
 #### Creating a development workspace
 
@@ -125,13 +117,13 @@ To start developing, you have to create a [Development workspace](https://develo
 
 1. Run the `vtex use` command in your terminal as shown below:
 
-```sh
-vtex use {exampleName}
-```
+   ```sh
+   vtex use {exampleName}
+   ```
 
-This changes your VTEX account to a Developer workspace called `exampleName` ( ️ replace it with the name of your choice), creating it from scratch if it does not already exist.
+   This changes your VTEX account to a Developer workspace called `exampleName` ( ️ replace it with the name of your choice), creating it from scratch if it does not already exist.
 
-![vtex-use](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-2.png)
+   ![vtex-use](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-an-app-2.png)
 
 2. Type `Y`, and a Development workspace will be created under your chosen name.
 
@@ -142,29 +134,23 @@ So far, you have created an app and have a Development workspace to perform any 
 Now that you have your app up and running on your machine, it is time to send all the changes you have performed locally so far to the cloud and reflect them in the workspace in which you are working. In other words, you will be able to see your changes in real-time by accessing the account you are logged in using the workspace you are using to develop.
 
 1. Run `vtex whoami` in your terminal and make sure you are logged into the desired account using the development workspace you have created.
-
 2. In the terminal, access the app's directory in your local files.
-
 3. Once in the accurate directory, type the following command in the terminal:
 
-```sh
-vtex link
-```
+   ```sh
+   vtex link
+   ```
 
 After that, every change can be seen in your browser in real-time, and you can access it by running `vtex browse` in your terminal.
 
-## Next Steps
+## Next steps
 
 Now that you have created your app and it is already live in your development workspace, here are some options of what you can do next:
 
 - [Manage application logs](https://developers.vtex.com/docs/guides/managing-application-logs): keep track of errors, warnings, and informative events with VTEX IO logging service.
-
 - [Run A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing): Optimize your store's conversion rates by running A/B tests.
-
 - [Release a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version): Release a new app version If you’re sure about all the code changes that you’ve done to your app in a development workspace.
-
 - [Create a Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace): Create a Production workspace to test in a user traffic environment the changes you performed in a development workspace Once you are sure of your changes performed in the Development workspace with traffic.
-
 - [Promote a workspace to Master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master): Promoting a workspace to Master marks the final step to make an app publicly available to end-users.
 
 ### Developing for the VTEX App Store
@@ -172,10 +158,7 @@ Now that you have created your app and it is already live in your development wo
 If you are developing an app that will be distributed to the [VTEX App Store](https://apps.vtex.com/) make sure to check the following guidelines:
 
 - [Engineering Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines) - The Engineering guidelines are your go-to guides to learn the coding standards to develop an app using the VTEX IO infrastructure, such as scalability, performance, security and data privacy.
-
-- [User experience guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines) -  Learn how you can design an app to meet the VTEX App Store requirements.
-
-- Business Guidelines -  The Business Guidelines are divided in two:
+- [User experience guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines) - Learn how you can design an app to meet the VTEX App Store requirements.
+- Business Guidelines - The Business Guidelines are divided in two:
   - [App monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization): Learn the types of business models for your app.
-
   - [Marketing assets](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets): Learn how to prepare the assets to market the app in the VTEX App Store.
