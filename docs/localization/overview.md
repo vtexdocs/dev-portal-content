@@ -32,7 +32,6 @@ The default SEO values are set in the [`discovery.config.js`](https://developers
 ## Managing SEO for PLPs and PDPs
 
 After you finish the onboarding process, you can update the SEO settings using the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options). In this file, you can update the title and description templates for both Product Listing Pages (PLPs) and Product Details Pages (PDPs).
- 
 For detailed instructions, see the [Configuring SEO for PLPs and PDPs](https://developers.vtex.com/docs/guides/faststore/seo-configuring-seo-for-plp-and-pdp) guide.
 
 Additionally, you can improve performance and SEO by controlling lazy loading for custom sections. For more information, see [Optimizing SEO by managing lazy loading on PLPs and PDPs](https://developers.vtex.com/docs/guides/faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp).
