@@ -44,7 +44,7 @@ To verify if UTMs are stored when a user visits your store, we will simulate a c
 
 3. To confirm if the `utm_source=google` was captured when the user enters the store, open your browser’s Developer Tools and click the **Application** tab.
 4. Go to the **Storage** section and navigate to **IndexedDB > keyval-store**.
-5. Expand the **keyval-store* option and click **keyval**.
+5. Expand the **keyval-store** option and click **keyval**.
 6. In the column **Value**, expand the `addressType`.
 7. Find the field `marketingData` and expand it. There, you will see the parameter `utmSource: "google"`, which means that it was captured during the user’s session.
 
