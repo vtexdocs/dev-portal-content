@@ -1,0 +1,257 @@
+---
+title: "TextareaField"
+excerpt: Multi-line text fields used to get long user inputs.
+components:
+  - TextareaField.tsx
+---
+
+`TextareaField` is a multi-line text field component to get long user inputs. The component wraps a [Textarea](https://developers.vtex.com/docs/guides/faststore/atoms-textarea) and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label).
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ flexDirection:'column', alignItems: 'normal' }}>
+      <TextareaField label="Label" id="textareafield-default" />
+      <TextareaField
+        label="Input w/ Error Message"
+        id="textareafield-error"
+        error="Error Message"
+      />
+      <TextareaField label="Input Disabled" id="textareafield-disabled" disabled />
+    </OverviewSection>
+
+  </Tab>
+  <Tab>
+    ```tsx
+      <TextareaField label="Label" id="textareafield-default" />
+      <TextareaField
+        label="Input w/ Error Message"
+        id="textareafield-error"
+        error="Error Message"
+      />
+      <TextareaField label="Input Disabled" id="textareafield-disabled" disabled />
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+
+```tsx
+import { TextareaField } from '@faststore/ui'
+```
+
+### Import styles into your FastStore project
+
+To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/molecules/TextareaField/styles.scss';
+```
+
+Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+
+---
+
+## Props
+
+<ComponentPropsSection component="TextareaField" />
+
+---
+
+## Design tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-textarea-width"
+    value="100%"
+  />
+  <TokenRow
+    token="--fs-textarea-height"
+    value="100%"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-textarea-field-padding"
+    value="18px var(--fs-spacing-2) 0"
+  />
+  <TokenRow
+    token="--fs-textarea-field-color"
+    value="var(--fs-color-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-textarea-field-size"
+    value="var(--fs-text-size-body)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-border-color"
+    value="var(--fs-border-color)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-textarea-field-transition-function"
+    value="var(--fs-transition-function)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-transition-property"
+    value="var(--fs-transition-property)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-transition-timing"
+    value="var(--fs-transition-timing)"
+  />
+</TokenTable>
+
+### Nested elements
+
+#### Label
+
+<OverviewSection>
+  <TextareaField label="Label" id="textareafield-default" />
+</OverviewSection>
+
+```tsx
+  <TextareaField label="Label" id="textareafield-default" />
+```
+
+<TokenTable>
+  <TokenRow
+    token="--fs-textarea-field-label-placeholder-top-padding"
+    value="var(--fs-spacing-2)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-label-max-width"
+    value="var(--fs-textarea-width)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-label-max-height"
+    value="calc(var(--fs-textarea-height) - var(--fs-textarea-field-label-placeholder-top-padding))"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-textarea-field-label-padding"
+    value="0 var(--fs-spacing-2)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-label-color"
+    value="var(--fs-color-text-light)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-textarea-field-label-size"
+    value="var(--fs-text-size-tiny)"
+  />
+</TokenTable>
+
+#### Button
+
+<TokenTable>
+  <TokenRow
+    token="--fs-textarea-field-button-height"
+    value="var(--fs-control-tap-size)"
+  />
+</TokenTable>
+
+### Variants
+
+#### Error
+
+<OverviewSection>
+  <TextareaField
+  label="Input w/ Error Message"
+  id="textareafield-error"
+  error="Error Message"
+  />
+</OverviewSection>
+
+```tsx
+<TextareaField
+ label="Input w/ Error Message"
+ id="textareafield-error"
+ error="Error Message"
+/>
+```
+
+<TokenTable>
+  <TokenRow
+    token="--fs-textarea-field-error-message-size"
+    value="var(--fs-text-size-legend)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-error-message-line-height"
+    value="1.1"
+  />
+  <TokenRow
+    token="--fs-textarea-field-error-message-margin-top"
+    value="var(--fs-spacing-0)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-error-message-color"
+    value="var(--fs-color-danger-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-textarea-field-error-border-color"
+    value="var(--fs-color-danger-border)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-textarea-field-error-box-shadow"
+    value="0 0 0 var(--fs-border-width) var(--fs-textarea-field-error-border-color)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-error-focus-ring"
+    value="var(--fs-color-focus-ring-danger)"
+    isColor
+  />
+</TokenTable>
+
+#### Disabled
+
+<OverviewSection>
+  <TextareaField label="Input Disabled" id="textareafield-disabled" disabled />
+</OverviewSection>
+
+```tsx
+<TextareaField label="Input Disabled" id="textareafield-disabled" disabled />
+```
+
+<TokenTable>
+  <TokenRow
+    token="--fs-textarea-field-disabled-bkg-color"
+    value="var(--fs-color-disabled-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-textarea-field-disabled-text-color"
+    value="var(--fs-color-disabled-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-textarea-field-disabled-border-width"
+    value="var(--fs-border-width)"
+  />
+  <TokenRow
+    token="--fs-textarea-field-disabled-border-color"
+    value="var(--fs-border-color)"
+    isColor
+  />
+</TokenTable>
+
+---
+
+## Customization
+
+For further customization, you can use the following data attributes:
+
+`data-fs-textarea-field`
+
+`data-fs-textarea-field-label`
+
+`data-fs-textarea-field-error`
+
+`data-fs-textarea-field-error-message`
