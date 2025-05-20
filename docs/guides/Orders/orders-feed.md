@@ -3,7 +3,7 @@ title: "Feed v3"
 slug: "orders-feed"
 hidden: false
 createdAt: "2021-03-29t19:21:28.241z"
-updatedAt: "2024-07-31T12:13:22.990Z"
+updatedAt: "2025-05-20T14:42:22.990Z"
 ---
 
 The [order feed](https://developers.vtex.com/docs/guides/orders-overview#feed-v3) is a list of order updates. This means that whenever an order is updated, the event is included as a new entry in the feed. Updates can include status changes, items added or removed by the store, order delivered, and others.
