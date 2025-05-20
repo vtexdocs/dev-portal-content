@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Configuring GraphQL cache control for `GET` requests"
-slug: "2025-05-30-graphql-cache-control"
+slug: "2025-05-20-graphql-cache-control"
 hidden: false
 type: "added"
-createdAt: "2025-05-30T00:00:00.219Z"
+createdAt: "2025-05-20T00:00:00.219Z"
 updatedAt: ""
 excerpt: "Improve performance by reducing server load and speeding up page loads with the `graphqlCacheControl` flag"
 ---
