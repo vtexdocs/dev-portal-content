@@ -77,7 +77,7 @@ To add custom dimensions or metrics to individual items within an event without 
 
 2. Create a new type that combines the native `Item` type with your `ItemExtension` using a TypeScript intersection (`&`):
 
-    ```ts mark={7,9}
+    ```ts mark=7,8,9
     import type { AddToCartEvent, Item } from '@faststore/sdk'
 
     interface ItemExtension {
