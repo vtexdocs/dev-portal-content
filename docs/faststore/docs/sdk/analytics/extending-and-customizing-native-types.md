@@ -121,6 +121,15 @@ analytics.sendEvent(addToCartWithExtendedItemsEvent);
 - `params: { ... }`: Holds the default GA4 parameters for an `add_to_cart` event (`currency`, `value`, `items`).
 - dimension10: `ItemExtended` now includes the `dimension10` custom dimension.
 
-## Validating extended types at runtime
+## Best practices for validating extended types at runtime
 
-Since TypeScript types are erased during compilation, validate your extended event data at runtime to ensure analytics tools like [Google Analytics 4](https://support.google.com/analytics/topic/14089939?hl=en&ref_topic=14090456&sjid=1384409646416570899-SA) receive correctly formatted events. You can validate by trying one of the following options or a combination of them:
+Since TypeScript types are erased during compilation, make sure to validate your extended event data at runtime to ensure analytics tools like [Google Analytics 4](https://support.google.com/analytics/topic/14089939?hl=en&ref_topic=14090456&sjid=1384409646416570899-SA) receive correctly formatted events. Consider the following methods:
+
+> ⚠️ These methods can help catch runtime errors. Choose what fits your workflow.
+
+| **Method** | **Purpose** |
+| --------- | ------------ |
+| Installing a validation library | Use a validation library of your choice to catch typos and validate backend data. |
+| Intercepting events | Verify events before they reach analytics tools by wrapping `analytics.sendEvent(safeEvent)` with validation logic to filter invalid events in your code. |
+| Debugging with [GA4 DebugView](https://support.google.com/analytics/answer/7201382?hl=en#zippy=) | Enable debug mode and monitor real-time events in GA4's DebugView interface. For more information, see the [GA4 DebugView](https://support.google.com/analytics/answer/7201382?hl=en#zippy=) guide. |
+| Adding unit tests | Write tests that verify your event objects catches schema violations during development. |
