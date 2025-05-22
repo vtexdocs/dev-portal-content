@@ -9,13 +9,7 @@ updatedAt: "Thu Jun 13 2024 19:58:32 GMT+0000 (Coordinated Universal Time)"
 
 Inventory information defines the price, promotional price, and "stock." Regarding stock, we should only receive whether the product is available for sale.
 
-| Field             | Description                                                                                          | Type    | Required? |
-|-------------------|----------------------------------------------------------------------------------------------------|---------|-----------|
-| product_sku       | Product ID to be inserted/updated.                                                                  | String  | Yes       |
-| store_id          | Store identifier. If store_id is not sent, it will be interpreted that this inventory information will be used for all stores. | String  | No        |
-| price             | Product price                                                                                       | Number  | Yes       |
-| promotional_price | Promotional price of the product.                                                                   | Number  | Yes       |
-| is_available      | Indicates if the product is available for sale                                                     | Boolean | Yes       |
+Learn more about each field on `POST` [Synchronize inventory information](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/product/bulk/inventories).
 
 > 🚧 Batch Insert / Update
 > 
@@ -28,7 +22,7 @@ Inventory information defines the price, promotional price, and "stock." Regardi
 Processing will be performed asynchronously.
 
 ```http
-POST https://api-retail-media.newtail.com.br/product/bulk/inventories HTTP/1.1
+POST https://api.ads.vtex.com/product/bulk/inventories HTTP/1.1
 accept: application/json
 content-type: application/json
 x-app-id: <PUBLISHER_APP_ID>
