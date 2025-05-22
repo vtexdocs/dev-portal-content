@@ -247,6 +247,13 @@ hideTOC: true
     <Rating value={3.5} icon={<Icon name="Star" />} />
   </CardItem>
   <CardItem
+    title="RatingField"
+    description="Allows users to submit ratings when submitting product reviews."
+    actionPath="/docs/guides/faststore/molecules-rating-field"
+  >
+    <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
+  </CardItem>
+  <CardItem
     title="Region Bar"
     description="Trigger the `RegionModal` and is part of `Regionalization` feature."
     actionPath="/docs/guides/faststore/molecules-region-bar"
@@ -410,10 +417,17 @@ hideTOC: true
   </CardItem>
   <CardItem
     title="Tag"
-    description="Are an interactive `Badge`. By default, its have a close button."
+    description="An interactive `Badge` with a close button by default."
     actionPath="/docs/guides/faststore/molecules-tag"
   >
     <Tag variant="highlighted" label="Tag" onClose={() => {}} />
+  </CardItem>
+  <CardItem
+    title="TextareaField"
+    description="Used to get long user inputs."
+    actionPath="/docs/guides/faststore/molecules-textarea-field"
+  >
+    <TextareaField label="Label" id="textareafield-default" />
   </CardItem>
   <CardItem
     title="Toast"
@@ -441,5 +455,14 @@ hideTOC: true
     actionPath="/docs/guides/faststore/molecules-toggle-field"
   >
     <ToggleField id="toggle-field-default" label="Label" />
+  </CardItem>
+  <CardItem
+    title="Tooltip"
+    description="Provides contextual information when users hover over or click an element."
+    actionPath="/docs/guides/faststore/molecules-tooltip"
+  >
+    <Tooltip id="textarea-field" content="Simple tooltip">
+      <Icon name="ShoppingCart" weight="light" />
+    </Tooltip>
   </CardItem>
 </CardList>
