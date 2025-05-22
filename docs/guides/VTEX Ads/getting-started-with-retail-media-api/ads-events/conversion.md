@@ -64,7 +64,7 @@ Ideally, it should be notified at the moment the order is closed, thus having a 
 > 🚧 The price and promotional price must not be multiplied by the quantity.
 
 ```http
-POST https://newtail-media.newtail.com.br/v1/beacon/conversion HTTP/1.1
+POST https://events-api.ads.vtex.com/v1/beacon/conversion HTTP/1.1
 accept: application/json
 content-type: application/json
 
