@@ -114,13 +114,7 @@ Example ad request
 
 **Attributes**
 
-| Attribute           | Description                                                                 | Type          |
-|---------------------|------------------------------------------------------------------------------|---------------|
-| `assets`            | URL and type of the campaign's image/video. One or more assets will be returned. | Array<Object> |
-| `assets.#.url`      | URL of the object to be displayed                                            | String        |
-| `assets.#.type`     | Type of the object<br><br>- image<br>- video                                 | String        |
-| `assets.#.duration` | Duration of the asset                                                        | Integer       |
-| `impression_url`    | Destination URL for the impression event                                     | String        |
+See the available attributes and more on `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).
 
 **Payload**
 
