@@ -80,9 +80,9 @@ Response example:
             "destination_url": null,
             "type": "banner",
             "seller_id": "37582",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/8771ebf0-ca93-46c7-9a40-3071d93d5ebf?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=banner",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/8771ebf0-ca93-46c7-9a40-3071d93d5ebf?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=banner",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/8771ebf0-ca93-46c7-9a40-3071d93d5ebf?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=banner"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/8771ebf0-ca93-46c7-9a40-3071d93d5ebf?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=banner",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/8771ebf0-ca93-46c7-9a40-3071d93d5ebf?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=banner",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/8771ebf0-ca93-46c7-9a40-3071d93d5ebf?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=banner"
         }
     ],
     "placementName2": [
@@ -92,9 +92,9 @@ Response example:
             "destination_url": "iphone-14-pro-apple-256gb-roxo-profundo-tela-de-61-quot-5g-camera-tripla-de-48mp-12mp-12mp/p/1547471458",
             "type": "product",
             "seller_id": "37582",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/c9483619-773d-450c-a1c8-5cbd31cd473e?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/c9483619-773d-450c-a1c8-5cbd31cd473e?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/c9483619-773d-450c-a1c8-5cbd31cd473e?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/c9483619-773d-450c-a1c8-5cbd31cd473e?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/c9483619-773d-450c-a1c8-5cbd31cd473e?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/c9483619-773d-450c-a1c8-5cbd31cd473e?publisher_id=3b7bcd3a-fde6-42d1-8de4-47a6e41a415a&ad_type=product"
         }
     ]
 }
@@ -109,7 +109,7 @@ For the requests, the `publisher_id` needs to be entered. This will be provided 
 ## Search context
 
 ```http
-POST https://newtail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
+POST https://api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
@@ -136,9 +136,9 @@ Content-Type: application/json
             "media_url": "https://cdn.newtail.com.br/retail_media/ads/2023/05/03/f97a938660e56fe38a9c9ade21c27df8-1280x256-red.png",
             "destination_url": null,
             "type": "banner",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
         }
     ],
     "placementName3": [
@@ -147,25 +147,25 @@ Content-Type: application/json
             "media_url": "https://cdn.newtail.com.br/retail_media/ads/2023/05/03/d51e784c8541780b2bb53543bebd7f02-375x172-red.png",
             "destination_url": null,
             "type": "banner",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
         },
         {
             "ad_id": "846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7",
             "product_sku": "10001236",
             "type": "product",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
         },
         {
             "ad_id": "243ad5fe-53e1-4fc1-ac86-9f5286c48a8a",
             "product_sku": "104810",
             "type": "product",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
         }
     ],
     "placementName2": [
@@ -173,17 +173,17 @@ Content-Type: application/json
             "ad_id": "846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7",
             "product_sku": "10001236",
             "type": "product",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
         },
         {
             "ad_id": "243ad5fe-53e1-4fc1-ac86-9f5286c48a8a",
             "product_sku": "104810",
             "type": "product",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
         }
     ]
 }
@@ -192,7 +192,7 @@ Content-Type: application/json
 ## Category context
 
 ```http
-POST https://newtail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
+POST https://events-api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
@@ -212,7 +212,7 @@ Content-Type: application/json
 ## Brand context
 
 ```http
-POST https://newtail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
+POST https://events-api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
@@ -232,7 +232,7 @@ Content-Type: application/json
 ## Product details page (PDP) context
 
 ```http
-POST https://newtail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
+POST https://events-api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
@@ -257,7 +257,7 @@ Content-Type: application/json
 In the case of an untargeted context, such as Home, a list of ads will be displayed that are most relevant to that user_id. It's very important that we have a history and the correct user ID so that this context is more relevant.
 
 ```http
-POST https://newtail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
+POST https://events-api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
@@ -288,9 +288,9 @@ HTTP 200
             "media_url": "https://cdn.newtail.com.br/retail_media/ads/2023/05/03/f97a938660e56fe38a9c9ade21c27df8-1280x256-red.png",
             "destination_url": null,
             "type": "banner",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
         }
     ],
     "placementName3": [
@@ -299,25 +299,25 @@ HTTP 200
             "media_url": "https://cdn.newtail.com.br/retail_media/ads/2023/05/03/d51e784c8541780b2bb53543bebd7f02-375x172-red.png",
             "destination_url": null,
             "type": "banner",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/c06ef1c5-f9bb-4f53-96c2-d53769a95b9b?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
         },
         {
             "ad_id": "846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7",
             "product_sku": "10001236",
             "type": "product",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
         },
         {
             "ad_id": "243ad5fe-53e1-4fc1-ac86-9f5286c48a8a",
             "product_sku": "104810",
             "type": "product",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
         }
     ],
     "placementName2": [
@@ -325,17 +325,17 @@ HTTP 200
             "ad_id": "846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7",
             "product_sku": "10001236",
             "type": "product",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/846fbf5e-6980-4a5e-a4a1-9b2a2dcbafb7?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
         },
         {
             "ad_id": "243ad5fe-53e1-4fc1-ac86-9f5286c48a8a",
             "product_sku": "104810",
             "type": "product",
-            "click_url": "https://newtail-media.newtail.com.br/v1/beacon/click/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "impression_url": "https://newtail-media.newtail.com.br/v1/beacon/impression/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
-            "view_url": "https://newtail-media.newtail.com.br/v1/beacon/view/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
+            "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product",
+            "view_url": "https://events-api.ads.vtex.com/v1/beacon/view/243ad5fe-53e1-4fc1-ac86-9f5286c48a8a?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=product"
         }
     ]
 }
