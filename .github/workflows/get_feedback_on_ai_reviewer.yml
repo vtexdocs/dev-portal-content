@@ -1,0 +1,31 @@
+name: Get Feedback on AI Reviewer
+
+on:
+  issue_comment:
+    types: [edited]
+
+jobs:
+  get-feedback-on-ai-reviewer:
+    if: github.event.comment.user.login == 'github-actions[bot]' && github.event.comment.user.login != github.event.sender.login
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Check if the comment contains feedback on the AI reviewer and save the response
+      id: check_comment
+      env:
+        PR_NUMBER: ${{ github.event.issue.number }}
+        COMMENT_BODY: ${{ github.event.comment.body }}
+        USER: ${{ github.event.sender.login }}
+        COMMENT_URL: ${{ github.event.comment.html_url }}
+      run: |
+        pip install requests
+        python .github/scripts/get_feedback.py
+      
