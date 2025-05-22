@@ -4,11 +4,11 @@ title: "Building My Account"
 
 >⚠️ This is an experimental feature.
 
-In this guide, you'll learn how to enable the experimental **My Account** feature in your store.
+In this guide, you'll learn how to enable the experimental **My Account** feature in your B2B store.
 
 **My Account** is a crucial component for any ecommerce website, as it allows customers to manage their personal information, track order history, update security settings, and perform other account-related actions.
 
->ℹ️ Unlike the previous version of My Account, which was based on the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) platform and accessed through a subdomain configured in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file, the new version uses a FastStore-based setup that allows you to build and manage **My Account** directly within FastStore.
+>ℹ️ Unlike the previous version of My Account, which was based on the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) platform and accessed through a subdomain configured in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file, the new version uses a FastStore-based setup that allows you to build and manage **My Account** directly within FastStore. **This feature is available only for B2B stores. B2C stores should continue using the previous version**.
 
 For details on the previous version, check [Integrating VTEX Order Placed and My Account](https://developers.vtex.com/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account). While that article discusses the Order Placed page, the experimental feature covered in this guide is solely related to the My Account section.
 
