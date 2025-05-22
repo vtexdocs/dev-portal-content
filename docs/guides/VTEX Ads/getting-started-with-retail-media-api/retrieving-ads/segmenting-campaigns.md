@@ -19,14 +19,7 @@ Campaigns with targeting will have higher priority during the query process, mea
 
 Attributes are the types of information that the audience can have and consequently that a campaign can have during its creation.
 
-| Attribute      | Description                                                                                      |
-|----------------|------------------------------------------------------------------------------------------------|
-| AGE            | Indicates age                                                                                   |
-| GENDER         | Indicates gender  <br><br>- F: female  <br>- M: male  <br>- O: others                           |
-| STATE          | State abbreviation (UF)                                                                         |
-| CITY           | City name                                                                                      |
-| AUDIENCES      | Audiences are pre-created and fully customized information                                      |
-| NBO_CATEGORIES | Indicates the possible categories the user intends to purchase                                 |
+Learn more about targeting attributes on `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).
 
 ## Ad Search with Targeting
 
@@ -39,7 +32,7 @@ In this approach, targeting information is sent directly in the request body, in
 #### Request
 
 ```http
-POST https://newtail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
+POST https://api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
@@ -70,7 +63,7 @@ In this approach, targeting information is obtained based on the audiences assoc
 ### Request
 
 ```http
-POST https://newtail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
+POST https://api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
