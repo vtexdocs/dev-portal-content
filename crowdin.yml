@@ -1,5 +1,5 @@
 files:
   - source: /docs/localization/*.md
-    translation: /%original_path%/%original_file_name%_%two_letters_code%
+    translation: /%original_path%/%original_file_name%.%file_extension%
   - source: /docs/localization/*.mdx
-    translation: /%original_path%/%original_file_name%_%two_letters_code%
+    translation: /%original_path%/%original_file_name%.%file_extension%
