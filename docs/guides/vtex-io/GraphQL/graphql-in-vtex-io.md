@@ -9,7 +9,7 @@ updatedAt: "2025-04-28T11:00:00.000Z"
 
 GraphQL has the advantage of being self-documenting, making it easier for developers to explore and consume APIs. With [introspection queries](https://graphql.org/learn/introspection/) and GraphQL IDEs such as [GraphiQL](https://github.com/graphql/graphiql), consumers can inspect the schema to view available endpoints, arguments, and fields.
 
-In VTEX IO, there are specific ways to interact with GraphQL APIs. They include authenticating endpoints, implementing an API in an app, making GraphQL requests in an app, and more. For example, you need to use the GraphQL builder to define the schema when creating an API in an app, and you also need to use [IO clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) to make GraphQL requests in an app.
+In VTEX IO, there are specific ways to interact with GraphQL APIs. They include authenticating endpoints, implementing an API in an app, making GraphQL requests in an app, and more. For example, you need to use the [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder) to define the schema when creating an API in an app, and you also need to use [IO clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) to make GraphQL requests in an app.
 
 ## Essential concepts
 
