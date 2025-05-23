@@ -23,4 +23,13 @@ To effectively work with GraphQL APIs in VTEX IO, it's important to understand t
 
 In this section, we will cover the following topics:
 
-- [List of GraphQL APIs](https://developers.vtex.com/docs/guides/vtex-io-graphql-api-list)
+<Flex>
+
+<WhatsNextCard
+title="List of GraphQL APIs"
+description="See how to use GraphQL APIs of VTEX Apps."
+linkTo="https://developers.vtex.com/docs/guides/vtex-io-graphql-api-list"
+linkTitle="See more"
+/>
+
+</Flex>
