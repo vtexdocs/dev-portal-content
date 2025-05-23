@@ -1,5 +1,5 @@
 ---
-title: "List of Apps GraphQL APIs"
+title: "List of GraphQL APIs"
 slug: "vtex-io-graphql-api-list"
 hidden: false
 excerpt: "See how to use GraphQL APIs of VTEX Apps."
