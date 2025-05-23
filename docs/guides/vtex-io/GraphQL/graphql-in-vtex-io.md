@@ -18,3 +18,9 @@ To effectively work with GraphQL APIs in VTEX IO, it's important to understand t
 - **Schema**: The GraphQL schema defines the structure of the API, including types, queries, and mutations. It serves as the blueprint for both the server and the client.
 - **Queries** and **mutations**: Queries are used to fetch data, while mutations are used to modify data. Understanding how to craft these is crucial for interacting with GraphQL APIs.
 - **Introspection**: GraphQL allows for introspection, meaning you can query the API to understand its structure. This is particularly useful for exploring available queries, mutations, and types.
+
+## Guides in this section
+
+In this section, we will cover the following topics:
+
+- [List of GraphQL APIs](https://developers.vtex.com/docs/guides/vtex-io-graphql-api-list)
