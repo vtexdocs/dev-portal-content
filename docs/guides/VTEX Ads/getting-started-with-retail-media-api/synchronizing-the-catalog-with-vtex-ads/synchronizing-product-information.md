@@ -3,8 +3,8 @@ title: "Synchronizing product information"
 slug: "synchronizing-product-information"
 excerpt: "Sync product details such as name, image, price, and category."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:38:25 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Dec 11 2024 14:36:58 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 To send catalog information, it is necessary to provide the basic information of a product. The fields may be mandatory or optional in this operation.

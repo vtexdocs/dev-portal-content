@@ -3,8 +3,8 @@ title: "Conversion"
 slug: "conversion"
 excerpt: "Track when an ad leads to a purchase."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:46:12 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Jan 13 2025 20:29:12 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 > 🚧 The event URL must not be "constructed"; always use the URL that comes from the ad request response.  

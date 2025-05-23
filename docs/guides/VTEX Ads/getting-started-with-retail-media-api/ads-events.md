@@ -3,8 +3,8 @@ title: "Ads events"
 slug: "ads-events"
 excerpt: "Overview of event types and how they’re used for campaign analytics."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:45:34 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Apr 04 2024 19:00:02 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 To accurately track campaign performance and apply the appropriate billing model — whether based on clicks (CPC), impressions (CPM), or conversions (CPA) — you must notify VTEX Ads whenever a relevant ad event occurs.

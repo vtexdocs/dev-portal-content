@@ -3,8 +3,8 @@ title: "Views"
 slug: "views"
 excerpt: "Track views for banner ads."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:46:50 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Sep 30 2024 14:19:09 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 > 🚧 The event URL must not be "constructed" manually—always use the URL provided when retrieving the ads.

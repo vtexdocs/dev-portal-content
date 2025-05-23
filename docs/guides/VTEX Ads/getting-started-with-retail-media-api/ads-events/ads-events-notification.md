@@ -3,8 +3,8 @@ title: "Ads events notification"
 slug: "ads-events-notification"
 excerpt: "Learn how to send events like impressions, clicks, and conversions to VTEX Ads."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:46:03 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Jun 28 2024 12:53:27 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 The sections below cover sending notifications, specifically handling conversion notifications, which require receiving information about the completed order. We will address this in the following page: [Conversion Event](https://newtail-media.readme.io/reference/evento-de-conversao)

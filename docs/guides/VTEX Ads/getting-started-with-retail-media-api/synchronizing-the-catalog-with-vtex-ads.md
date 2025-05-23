@@ -3,8 +3,8 @@ title: "Synchronizing the catalog with VTEX Ads"
 slug: "synchronizing-the-catalog-with-vtex-ads"
 excerpt: "Synchronize your product catalog with VTEX Ads to keep product information and inventory data up to date."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:37:13 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Mar 09 2023 13:27:20 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 To activate your VTEX Ads integration, the first step is to synchronize your product catalog. This ensures that product and inventory data is available for campaign creation and conversion tracking.

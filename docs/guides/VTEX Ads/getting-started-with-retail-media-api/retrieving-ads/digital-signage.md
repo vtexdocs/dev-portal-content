@@ -3,8 +3,8 @@ title: "Digital Signage"
 slug: "digital-signage"
 excerpt: "Deliver Retail Media experiences in physical stores via digital signage integration."
 hidden: false
-createdAt: "Thu Sep 05 2024 08:28:33 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Feb 10 2025 13:36:00 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 The Digital Signage integration uses the same API that is used for retrieving ads for your digital platform.
 

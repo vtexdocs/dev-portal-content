@@ -3,8 +3,8 @@ title: "Impressions"
 slug: "impressions"
 excerpt: "Track when an ad is rendered or visible to a user."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:45:55 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Jun 28 2024 12:53:13 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 > 🚧 The event URL must not be "constructed" manually—always use the URL provided from the ad query.
 >

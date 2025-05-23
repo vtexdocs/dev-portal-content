@@ -3,11 +3,11 @@ title: "VTEX Ads"
 slug: "vtex-ads"
 excerpt: "Get started with VTEX Ads by exploring how to integrate, sync, deliver, and track Retail Media campaigns across digital and physical channels."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:37:13 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Mar 09 2023 13:27:20 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
-[VTEX Ads](#) is a Retail Media solution that allows brands, retailers, and agencies to create and manage ad campaigns directly within the VTEX ecosystem.
+VTEX Ads is a Retail Media solution that allows brands, retailers, and agencies to create and manage ad campaigns directly within the VTEX ecosystem.
 
 For developers, VTEX Ads provides the infrastructure and APIs to integrate ad placements across ecommerce storefronts, leverage campaign data, and customize ad rendering behavior.
 

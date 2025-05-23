@@ -3,8 +3,8 @@ title: "Segmenting campaigns"
 slug: "segmenting-campaigns"
 excerpt: "Use customer data and contexts to serve personalized campaigns through Retail Media API."
 hidden: false
-createdAt: "Thu Sep 05 2024 08:05:10 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Sep 23 2024 17:32:37 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 Campaign targeting allows meta-information to be provided during an ad query, which can be used in real time to prioritize campaigns aimed at that specific audience.

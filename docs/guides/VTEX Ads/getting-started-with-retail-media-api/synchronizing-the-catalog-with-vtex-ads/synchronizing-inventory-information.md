@@ -3,8 +3,8 @@ title: "Synchronizing inventory information"
 slug: "synchronizing-inventory-information"
 excerpt: "Ensure inventory availability data is kept up to date for ad display."
 hidden: false
-createdAt: "Thu Mar 09 2023 13:26:32 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Jun 13 2024 19:58:32 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 Inventory information defines the price, promotional price, and "stock." Regarding stock, we should only receive whether the product is available for sale.

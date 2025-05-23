@@ -3,8 +3,8 @@ title: "Understanding ads events"
 slug: "understanding-ads-events"
 excerpt: "Learn how ad events are tracked, identified, and deduplicated to ensure accurate campaign measurement—covering sessions, user identification, conversion windows, and attribution rules."
 hidden: false
-createdAt: "Thu Mar 30 2023 18:45:16 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Jun 07 2024 13:12:08 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 ## User and session identification

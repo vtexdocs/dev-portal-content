@@ -3,8 +3,8 @@ title: "Clicks"
 slug: "clicks"
 excerpt: "Track ad clicks."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:46:03 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Jun 28 2024 12:53:27 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2023-03-01T15:46:03.000Z"
+updatedAt: "2024-06-28T12:53:27.000Z"
 ---
 
 > 🚧 The event URL must not be "constructed"; always use the URL that comes from the ad request response.  

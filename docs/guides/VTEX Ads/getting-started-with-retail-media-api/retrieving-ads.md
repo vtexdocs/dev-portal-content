@@ -3,71 +3,26 @@ title: "Retrieving ads"
 slug: "retrieving-ads"
 excerpt: "Learn how to fetch relevant ads based on context like search terms, categories, or behavior."
 hidden: false
-createdAt: "Wed Mar 01 2023 15:37:45 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Sep 05 2024 08:28:52 GMT+0000 (Coordinated Universal Time)"
+createdAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
 The available ad formats are Sponsored Products (Product Ads) and Banner Banner / Display ads.
 
-The `POST` [Get ads](#) endpoint can return both Product and Banner ad formats, using a unified query interface.
+The `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-) endpoint can return both Product and Banner ad formats, using a unified query interface.
 
 >ℹ️ This request has a 10-minute cache.
 
 ## Request
 
-The table below outlines which fields are required and which are optional for this operation:
-
-| Field                     | Description                                                                                                          | Type            | Required                              |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------------------|
-| session_id                | Unique identifier for a user session. **Must contain only alphanumeric characters**                                  | String          | Yes                                 |
-| user_id                   | Unique identifier for the user. **Must contain only alphanumeric characters**                                        | String          | No                                  |
-| store_id                  | Filters ads based on the store’s inventory. **If store_id is not provided, ads with any available inventory will be returned** | String          | No                                  |
-| context                   | Context where the ad will be displayed. Examples: home, category, search, product_page, brand_page                    | String          | Yes                                 |
-| term                      | Search terms used for product searches.                                                                              | String          | Only in search context               |
-| category_name             | Name of the category used for targeting. Always provide the full breadcrumb path of the current category. Ex: Daily Care > Deodorant > Spray (Level 1: Daily Care, Level 2: Deodorant, Level 3: Spray) | String          | Only in category context             |
-| product_sku               | SKU ID used for targeting.                                                                                           | String          | Only in product context              |
-| brand_name                | Name of the brand to filter products by.                                                                             | String          | Only in brand context                |
-| placements                | Placements are used to query multiple ads for different site regions with their own configurations                    | Object          | Yes                                 |
-| placements.{name}         | The name indicates the site region name, which can be any user-defined value, as it will be used in the response      | Object          | Yes                                 |
-| placements.{name}.quantity | Number of ads to be returned                                                                                         | Integer         | Yes                                 |
-| placements.{name}.size    | Expected ad size. Important when a region has a predefined size and requires a media asset fitting that size. Sizes vary by publisher | String          | Yes                                 |
-| placements.{name}.types   | Types of ads that can be returned in this request. Options:  - product  - banner  - sponsored_brand - digital_signage [Digital Signage](https://developers.vtex.com/docs/guides/digital-signage) | Array\<String\> | Yes                                 |
-| placements.{name}.asset_types | Accepted media types (valid for banner and sponsored_brands):  - image  - video                                      | Array\<String\> | No (Default: ["image"])              |
-| placements.{name}.allow_sku_duplications | Allows the same SKU ads to appear multiple times in the same placement. Default=false                        | Boolean         | No                                  |
-| product_attributes        | Additional product information. Used when catalog data is incomplete and these details need to be sent during ad queries | Object          | No                                  |
-| product_attributes.category_name | Product category. Ex: Daily Care > Deodorant > Spray (Level 1: Daily Care, Level 2: Deodorant, Level 3: Spray)       | String          | No                                  |
-| product_attributes.brand_name | Product brand. Ex: iPhone                                                                                          | String          | No                                  |
-| channel                   | Indicates the device type accessing the ad. Examples:  - site  - msite  - app                                        | String          | No                                  |
-| device_id                 | Unique device identifier                                                                                             | String          | Required for digital signage         |
-| userAgent                 | Provides meta-information about the client environment accessing the ad. For browsers, use navigator.userAgent or request header "user-agent". For apps, construct as: App/1.0 ({Device}; {OS} {Version}); e.g., App/1.0 (Pixel 6; Android 12.0) | String          | No                                  |
-| tags                      | Filters ads that contain at least one of the requested tags. **Only works with product campaigns**. Integration with VTEX Intelligent Search provides automatic product cluster tags. Format: `product_cluster/:id_cluster` | Array\<String\> | No                                  |
-| skus                      | SKU filter for querying sponsored products. Note: Only sponsored product campaigns respect this filter               | Array\<String\> | No                                  |
-| dedup_campaign_ads        | Specifies whether results should be deduplicated by campaign, so at most one ad per campaign is returned. Default=false | Boolean         | No                                  |
-| dedup_ads                 | Specifies whether results should deduplicate ads across multiple placements (use only when querying multiple placements simultaneously). Default=false | Boolean         | No                                  |
-| segmentation              | Allows campaign segmentation based on user information. Useful when: user is not logged in, no integration exists, or user segmentation data needs to be overridden. See [Campaign Segmentation](ref:segmentação-de-campanhas) | Array\<Object\> | No                                  |
-| segmentation.#.key        | Type of segmentation. Possible values:  - AGE  - GENDER  - STATE  - CITY  - AUDIENCES                                | String          | Yes                                 |
-| segmentation.#.values     | One or more accepted values                                                                                          | Array\<String\> | Yes (minimum 1)                     |
+Learn more about each field on `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).
 
 
 ## Response
 
 The response will be a dictionary where each key is the name of a placement used in the query.
 
-| Field                          | Description                                                                                 | Type          | Required                                   |
-|--------------------------------|---------------------------------------------------------------------------------------------|---------------|--------------------------------------------|
-| `{placementName}`               | List of ads that can be displayed in the specific placement                                 | Array<Object> | Yes                                        |
-| `{placementName}.#.ad_id`       | Unique identifier of the ad                                                                | String        | Yes                                        |
-| `{placementName}.#.asset_type`  | Type of media <br><br>- image <br>- video                                                  | String        | Yes                                        |
-| `{placementName}.#.media_url`   | URL of the image to be displayed                                                           | String        | Yes                                        |
-| `{placementName}.#.destination_url` | Destination URL of the ad (not all ads have a destination)                               | String        | No                                         |
-| `{placementName}.#.type`        | Type of ad <br><br>- banner <br>- product <br>- sponsored_brands                          | String        | Yes                                        |
-| `{placementName}.#.click_url`   | URL of the click event beacon for the ad                                                  | String        | Yes                                        |
-| `{placementName}.#.impression_url` | URL of the impression event beacon for the ad                                           | String        | Yes                                        |
-| `{placementName}.#.view_url`    | URL of the view event beacon for the ad                                                   | String        | Yes                                        |
-| `{placementName}.#.seller_id`   | Identifier of the seller                                                                  | String        | No                                         |
-| `{placementName}.#.product_sku` | Product identifier                                                                       | String        | Yes (when the ad is of type product)       |
-| `{placementName}.#.product_name`| Product name                                                                            | String        | Yes (when the ad is of type product)       |
-
+Learn more about each field on `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).
 
 Response example:
 
