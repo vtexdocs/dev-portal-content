@@ -1,9 +1,9 @@
 ---
 title: "Contextual price per shopper"
-slug: "contextual-price-per-seller"
+slug: "contextual-price-per-shopper"
 hidden: false
 createdAt: "2025-02-13T13:00:00.152Z"
-updatedAt: "2025-02-13T13:00:00.152Z"
+updatedAt: "2025-05-19T13:00:00.152Z"
 ---
 Contextual price allows you to define different prices for a product based on the sale context. These contexts can include criteria such as the marketplace, the seller offering the product, the buyer's geolocation, or active promotions.
 
