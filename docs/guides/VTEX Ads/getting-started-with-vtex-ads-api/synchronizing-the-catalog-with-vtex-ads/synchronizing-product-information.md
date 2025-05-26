@@ -63,9 +63,9 @@ x-api-key: <API_KEY>
 
 ```json
 {
-	"messages": [
-		"products will be processed soon"
-	]
+ "messages": [
+  "products will be processed soon"
+ ]
 }
 ```
 
