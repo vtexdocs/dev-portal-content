@@ -21,7 +21,7 @@ Learn more about each field on `POST` [Synchronize inventory information](https:
 
 Processing will be performed asynchronously.
 
-```http
+```json
 POST https://api.ads.vtex.com/product/bulk/inventories HTTP/1.1
 accept: application/json
 content-type: application/json
@@ -47,9 +47,9 @@ x-api-key: <API_KEY>
 
 ### Response with validation error
 
-For validations, we use the RFC 8927 format https://datatracker.ietf.org/doc/rfc8927/.
+For validations, we use the [RFC 8927](https://datatracker.ietf.org/doc/rfc8927/) format, as exemplified below.
 
-The request will return HTTP status code 422. HTTP 422
+>ℹ️ A failed response will have HTTP code 422.
 
 ```json
 [

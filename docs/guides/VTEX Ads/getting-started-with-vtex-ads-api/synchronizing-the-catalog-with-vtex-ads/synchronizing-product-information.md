@@ -25,7 +25,7 @@ To update the basic product data, the following endpoint must be used:
 
 Processing will be performed asynchronously.
 
-```http
+```json
 POST https://api.ads.vtex.com/product/bulk/products HTTP/1.1
 accept: application/json
 content-type: application/json
@@ -59,7 +59,7 @@ x-api-key: <API_KEY>
 
 ### Response
 
-> The response will have HTTP code 202
+>ℹ️ A successful response will have HTTP code 202.
 
 ```json
 {
@@ -71,9 +71,9 @@ x-api-key: <API_KEY>
 
 ### Response with Validation Error
 
-For validations, we use the format defined by RFC 8927 https://datatracker.ietf.org/doc/rfc8927/
+For validations, we use the format defined by [RFC 8927](https://datatracker.ietf.org/doc/rfc8927/), as exemplified below.
 
-The request response will have HTTP status code 422
+>ℹ️ A failed response will have HTTP code 422.
 
 ```json
 [
