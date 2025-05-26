@@ -13,7 +13,7 @@ This guide explains how to send event notifications to VTEX Ads. You can send ev
 - Server-side or through native apps using REST endpoints
 
 > 🚧 Don't construct event URLs manually. Always use the URL provided from the `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-) request.
-> 
+>
 > This is extremely important to ensure long-term stability of the integration, because the parameters of the event URL may change over time, but the integration itself does not.
 
 ## Sending events via browser

@@ -18,7 +18,7 @@ Conversion tracking is crucial for measuring ad campaign effectiveness in VTEX A
 - All customer identifiers (email, phone, etc.) must be hashed for privacy.
 
 > 🚧 Don't construct event URLs manually. Always use the URL provided from the `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-) request.
-> 
+>
 > This is extremely important to ensure long-term stability of the integration, because the parameters of the event URL may change over time, but the integration itself does not.
 
 ## Sending a conversion event
