@@ -56,25 +56,25 @@ Failed response example:
 ```json
 [
   {
-    instancePath: '',
-    keyword: 'required',
-    message: "must have required property 'user_id'",
-    params: { missingProperty: 'user_id' },
-    schemaPath: '#/anyOf/0/required',
+    "instancePath": "",
+    "keyword": "required",
+    "message": "must have required property 'user_id'",
+    "params": { "missingProperty": "user_id" },
+    "schemaPath": "#/anyOf/0/required"
   },
   {
-    instancePath: '',
-    keyword: 'required',
-    message: "must have required property 'session_id'",
-    params: { missingProperty: 'session_id' },
-    schemaPath: '#/anyOf/1/required',
+    "instancePath": "",
+    "keyword": "required",
+    "message": "must have required property 'session_id'",
+    "params": { "missingProperty": "session_id" },
+    "schemaPath": "#/anyOf/1/required"
   },
   {
-    instancePath: '',
-    keyword: 'anyOf',
-    message: 'must match a schema in anyOf',
-    params: {},
-    schemaPath: '#/anyOf',
+    "instancePath": "",
+    "keyword": "anyOf",
+    "message": "must match a schema in anyOf",
+    "params": {},
+    "schemaPath": "#/anyOf"
   }
 ]
 ```
