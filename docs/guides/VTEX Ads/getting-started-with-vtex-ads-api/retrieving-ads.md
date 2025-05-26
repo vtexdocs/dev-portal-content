@@ -20,7 +20,7 @@ Use the `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads
 All ad requests require:
 
 - A context (search, category, brand, product, or home)
-- User identification (`user_id` and `session_id`) 
+- User identification (`user_id` and `session_id`)
 - Placement configuration
 
 Learn more about each field in the [API Reference](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).

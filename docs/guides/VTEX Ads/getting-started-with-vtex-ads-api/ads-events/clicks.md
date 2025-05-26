@@ -44,9 +44,9 @@ Sucessful response example:
 
 ```json
 {
-	"messages": [
-		"click will be processed soon"
-	]
+ "messages": [
+  "click will be processed soon"
+ ]
 }
 ```
 

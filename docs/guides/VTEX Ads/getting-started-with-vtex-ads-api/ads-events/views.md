@@ -42,9 +42,9 @@ Successful response example:
 
 ```json
 {
-	"messages": [
-		"view will be processed soon"
-	]
+ "messages": [
+  "view will be processed soon"
+ ]
 }
 ```
 
