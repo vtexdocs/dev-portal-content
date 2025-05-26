@@ -6,22 +6,16 @@ hidden: false
 createdAt: "2025-05-21T22:18:24.684Z"
 updatedAt: "2025-05-21T22:18:24.684Z"
 ---
-The Digital Signage integration uses the same API that is used for retrieving ads for your digital platform.
 
-API Documentation: [Retrieving ads](https://developers.vtex.com/docs/guides/retrieving-ads)
+The Digital Signage integration uses the `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-), the same request used for retrieving ads for your digital platform.
 
-# Retrieving Ads for Generic Screens
+## Retrieving ads for generic screens
 
-> 📘 All ads that should be displayed will be returned.  
->
-> Once all ads have been displayed, the API must be called again to retrieve the next batch of items to be shown.  
->
-> **Can I display the same items twice?**  
->
-> You shouldn’t, as display metrics will only be counted once.
+All ads that should be displayed will be returned. Once all ads have been displayed, the API must be called again to retrieve the next batch of items to be shown.
 
+>🚧 Don't display the same items twice, as display metrics will only be counted once.
 
-**Example ad request**
+Request example:
 
 ```json
 {
@@ -60,17 +54,15 @@ API Documentation: [Retrieving ads](https://developers.vtex.com/docs/guides/retr
 }
 ```
 
-# Retrieving Ads During Checkout at the POS
+## Retrieving ads during checkout at the POS
 
 In some cases, it is possible to identify the user making a purchase, typically during the payment process at the point of sale (POS).
 
 Once the user is identified, you can request a personalized ad for that user.
 
-> 📘 Segmentations
-> 
-> For segmented campaigns, an audience integration is required. [Audience Integration](#)
+>🚧 For segmented campaigns, an audience integration is required.
 
-Example ad request
+Request example:
 
 ```json
 {
@@ -110,13 +102,11 @@ Example ad request
 }
 ```
 
-# Response
+## Response
 
-**Attributes**
+See the available response attributes on `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).
 
-See the available attributes and more on `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).
-
-**Payload**
+Response example:
 
 ```json
 {
