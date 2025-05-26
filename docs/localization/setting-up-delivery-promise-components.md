@@ -51,9 +51,9 @@ To use Delivery Promise, customers need to define a delivery address early in th
       }
    ```
 
-2. Declare the shipping-option-location-selector block as a child block of your [header](https://developers.vtex.com/docs/apps/vtex.store-header) block, exported by the store-header app. Example:
+2. Declare the `shipping-option-location-selector` block as a child block of your [header](https://developers.vtex.com/docs/apps/vtex.store-header) block, exported by the `store-header` app. Example:
 
-   ```json
+   ```json mark=15:17
         "header.full": {
            "blocks": ["header-layout.desktop", "header-layout.mobile"]
          },
@@ -82,7 +82,7 @@ To use Delivery Promise, customers need to define a delivery address early in th
 
    Learn more about all the available props on [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components).
 
-When the customer provides their address, an initial selection of products is made to display only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by Checkout. This selection impacts all subsequent product listings and filters. 
+When the customer provides their address, an initial selection of products is made to display only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by Checkout. This selection impacts all subsequent product listings and filters.
 
 #### Setting up a blocking model
 
@@ -115,7 +115,7 @@ This configuration ensures the page is filtered for deliverability from the firs
 The `shippingSelection` prop controls which delivery methods are shown:
 
 * `delivery-and-pickup`: Enables both delivery and pickup location options.
-* `only-pickup`: Shows only the pickup selector (e.g., for stores focusing on in-store pickup).
+* `only-pickup`: Shows only the pickup selector (for example, in stores focusing on in-store pickup).
 
 Configure the prop as shown in the example below:
 
@@ -127,12 +127,11 @@ Configure the prop as shown in the example below:
 }
 ```
 
-
 ### Step 3 - Implementing sidebar filters
 
 To display available delivery filters in the search sidebar, follow the steps below using the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) component. It automatically renders facets, including those related to delivery and pickup availability.
 
-1. In your theme's `manifest.json`, add the search-result app as a dependency:
+1. In your theme's `manifest.json`, add the `search-result` app as a dependency:
 
    ```json
     "dependencies": {
