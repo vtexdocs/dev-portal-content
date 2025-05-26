@@ -11,10 +11,9 @@ updatedAt: "2025-05-21T22:18:24.684Z"
 
 All Beacon requests require specific information to accurately identify and attribute events to users and their corresponding conversions. For this purpose, we use two key concepts:
 
-
 ### `session_id`
 
-The **`session_id`** is the user's session identifier. It has a limited lifespan and helps us determine when a user transitions from an anonymous to an identified state. It also allows us to understand how many sessions a user goes through before converting.
+The `session_id` is the user's session identifier. It has a limited lifespan and helps us determine when a user transitions from an anonymous to an identified state. It also allows us to understand how many sessions a user goes through before converting.
 
 The `session_id` is **mandatory** in all cases—even for short-lived sessions. For example, in an offline point-of-sale (POS) conversion, you can generate a random value. For web sessions, the value should match the current user session ID. 
 
