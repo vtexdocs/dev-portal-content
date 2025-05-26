@@ -7,17 +7,25 @@ createdAt: "2025-05-21T22:18:24.684Z"
 updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
-> 🚧 The event URL must not be "constructed" manually—always use the URL provided when retrieving the ads.
+VTEX Ads uses view tracking to measure when banner advertisements are effectively displayed to users. This guide explains how to properly send view events when banner ads become visible to users.
+
+## View event rules
+
+- View events should only be sent for banner ads.
+- View events require both `user_id` and `session_id` for proper attribution.
+- View URLs are unique to each ad and should be obtained from the [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-) response.
+
+> 🚧 Don't construct event URLs manually. Always use the URL provided from the `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-) request.
 > 
-> This is extremely important to ensure long-term integration stability. The event URL parameters may change over time, but the integration itself won't need to be updated. This makes the whole process evolutionary and transparent for everyone.
+> This is extremely important to ensure long-term stability of the integration, because the parameters of the event URL may change over time, but the integration itself does not.
 
-# View Notification
+## Sending a view event
 
-Example of a view notification (only for banner ads) below:
+Use the `POST` [Track ad views](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/view/-ad_id-) endpoint to send view events. Check the endpoint documentation for detailed information about all available fields.
 
-### Request
+Request example:
 
-```http HTTP
+```json
 POST https://events-api.ads.vtex.com/v1/beacon/view/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1 HTTP/1.1
 accept: application/json
 content-type: application/json
@@ -26,14 +34,13 @@ content-type: application/json
   "user_id": "6f92d1e9-00b6-4f8b-9645-faeab321e1cc",
   "session_id": "5898b8d1-c250-4bb5-931b-8b9d0ee7b499"
 }
- 
 ```
 
-### Response
+Successful response example:
 
-The request response will have HTTP status code 202
+>ℹ️ A successful response will have HTTP code 202.
 
-```
+```json
 {
 	"messages": [
 		"view will be processed soon"
@@ -41,9 +48,9 @@ The request response will have HTTP status code 202
 }
 ```
 
-> The error response will have HTTP status code 422  
->  
-> The error format follows RFC 8927 https://datatracker.ietf.org/doc/rfc8927/
+Failed response example:
+
+>ℹ️ A failed response will have HTTP code 422. The error message follows the [RFC 8927](https://datatracker.ietf.org/doc/rfc8927/) format.
 
 ```json
 [
