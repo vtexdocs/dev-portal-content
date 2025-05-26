@@ -1,13 +1,13 @@
 ---
-title: "Getting started with Retail Media API"
-slug: "getting-started-with-retail-media-api"
+title: "Getting started with VTEX Ads API"
+slug: "getting-started-with-vtex-ads-api"
 hidden: false
-excerpt: "Learn how to integrate Retail Media into your store."
+excerpt: "Learn how to integrate VTEX Ads into your store."
 createdAt: "2025-05-21T22:18:24.684Z"
 updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
-The **Retail Media API** serves as the central point of integration between VTEX Ads and the retailer's platform, enabling the display of advertisements to consumers.
+The **VTEX Ads API** serves as the central point of integration between VTEX Ads and the retailer's platform, enabling the display of advertisements to consumers.
 
 Built using REST architecture, this API allows your platform to:
 

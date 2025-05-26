@@ -1,7 +1,7 @@
 ---
 title: "Segmenting campaigns"
 slug: "segmenting-campaigns"
-excerpt: "Use customer data and contexts to serve personalized campaigns through Retail Media API."
+excerpt: "Use customer data and contexts to serve personalized campaigns through VTEX Ads API."
 hidden: false
 createdAt: "2025-05-21T22:18:24.684Z"
 updatedAt: "2025-05-21T22:18:24.684Z"

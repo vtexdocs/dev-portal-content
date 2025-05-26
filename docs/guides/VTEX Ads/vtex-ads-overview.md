@@ -14,9 +14,9 @@ For developers, VTEX Ads provides the infrastructure and APIs to integrate ad pl
 <Flex>
 
 <WhatsNextCard
-title="Getting started with Retail Media API"
-description="Learn how to integrate Retail Media into your store."
-linkTo="/docs/guides/ads/getting-started-with-retail-media-api"
+title="Getting started with VTEX Ads API"
+description="Learn how to integrate VTEX Ads into your store."
+linkTo="/docs/guides/ads/getting-started-with-vtex-ads-api"
 linkTitle="See more"
 />
 
