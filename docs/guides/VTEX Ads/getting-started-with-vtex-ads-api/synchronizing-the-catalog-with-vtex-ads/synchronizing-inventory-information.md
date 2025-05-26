@@ -54,76 +54,73 @@ For validations, we use the [RFC 8927](https://datatracker.ietf.org/doc/rfc8927/
 ```json
 [
   {
-    instancePath: '/0',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: {
-      missingProperty: 'product_sku'
+    "instancePath": "/0",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "product_sku"
     },
-    message: "must have required property 'product_sku'"
+    "message": "must have required property 'product_sku'"
   },
   {
-    instancePath: '/0',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: {
-      missingProperty: 'promotional_price'
+    "instancePath": "/0",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "promotional_price"
     },
-    message: "must have required property 'promotional_price'"
+    "message": "must have required property 'promotional_price'"
+  },  {
+    "instancePath": "/0",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "is_available"
+    },
+    "message": "must have required property 'is_available'"
   },
   {
-    instancePath: '/0',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: {
-      missingProperty: 'is_available'
+    "instancePath": "/1",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "price"
     },
-    message: "must have required property 'is_available'"
+    "message": "must have required property 'price'"
+  },  {
+    "instancePath": "/1",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "promotional_price"
+    },
+    "message": "must have required property 'promotional_price'"
   },
   {
-    instancePath: '/1',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: {
-      missingProperty: 'price'
+    "instancePath": "/1",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "is_available"
     },
-    message: "must have required property 'price'"
+    "message": "must have required property 'is_available'"
+  },  {
+    "instancePath": "/2",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "price"
+    },
+    "message": "must have required property 'price'"
   },
   {
-    instancePath: '/1',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: {
-      missingProperty: 'promotional_price'
+    "instancePath": "/2",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "is_available"
     },
-    message: "must have required property 'promotional_price'"
-  },
-  {
-    instancePath: '/1',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: {
-      missingProperty: 'is_available'
-    },
-    message: "must have required property 'is_available'"
-  },
-  {
-    instancePath: '/2',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: {
-      missingProperty: 'price'
-    },
-    message: "must have required property 'price'"
-  },
-  {
-    instancePath: '/2',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: {
-      missingProperty: 'is_available'
-    },
-    message: "must have required property 'is_available'"
+    "message": "must have required property 'is_available'"
   }
 ]
 ```

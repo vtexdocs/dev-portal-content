@@ -78,46 +78,46 @@ For validations, we use the format defined by [RFC 8927](https://datatracker.iet
 ```json
 [
   {
-    instancePath: '/0',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: { missingProperty: 'product_sku' },
-    message: "must have required property 'product_sku'",
+    "instancePath": "/0",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": { "missingProperty": "product_sku" },
+    "message": "must have required property 'product_sku'"
   },
   {
-    instancePath: '/0',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: { missingProperty: 'url' },
-    message: "must have required property 'url'",
+    "instancePath": "/0",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": { "missingProperty": "url" },
+    "message": "must have required property 'url'"
   },
   {
-    instancePath: '/0',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: { missingProperty: 'image_url' },
-    message: "must have required property 'image_url'",
+    "instancePath": "/0",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": { "missingProperty": "image_url" },
+    "message": "must have required property 'image_url'"
   },
   {
-    instancePath: '/1',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: { missingProperty: 'name' },
-    message: "must have required property 'name'",
+    "instancePath": "/1",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": { "missingProperty": "name" },
+    "message": "must have required property 'name'"
   },
   {
-    instancePath: '/1',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: { missingProperty: 'url' },
-    message: "must have required property 'url'",
+    "instancePath": "/1",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": { "missingProperty": "url" },
+    "message": "must have required property 'url'"
   },
   {
-    instancePath: '/1',
-    schemaPath: '#/items/required',
-    keyword: 'required',
-    params: { missingProperty: 'image_url' },
-    message: "must have required property 'image_url'",
-  },
+    "instancePath": "/1",
+    "schemaPath": "#/items/required",
+    "keyword": "required",
+    "params": { "missingProperty": "image_url" },
+    "message": "must have required property 'image_url'"
+  }
 ]
 ```
