@@ -7,17 +7,20 @@ createdAt: "2025-05-21T22:18:24.684Z"
 updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
-The sections below cover sending notifications, specifically handling conversion notifications, which require receiving information about the completed order. We will address this in the following page: [Conversion Event](https://developers.vtex.com/docs/guides/conversion)
+This guide explains how to send event notifications to VTEX Ads. You can send events in two ways:
 
-> 🚧 The event URL must never be "constructed" manually; always use the URL provided from the ad request.
+- Through a web browser using the `sendBeacon()` API
+- Server-side or through native apps using REST endpoints
+
+> 🚧 Don't construct event URLs manually. Always use the URL provided from the `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-) request.
 > 
-> This is extremely important to ensure long-term stability of the integration. This is because the parameters of the event URL may change over time, but the integration itself does not. This makes the entire process evolutionary and transparent for everyone.
+> This is extremely important to ensure long-term stability of the integration, because the parameters of the event URL may change over time, but the integration itself does not.
 
 ## Sending events via browser
 
 For sending notifications in a web environment (browser), use the `sendBeacon()` method, as it is the most modern way to send data notifications. The advantage of using `sendBeacon()` is that the request is asynchronous, which means it doesn't block the loading of the current page nor the next page.
 
-Using the following response example from an ad request:
+Response example from `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-):
 
 ```json
 {
@@ -39,7 +42,7 @@ Using the following response example from an ad request:
 }
 ```
 
-To send an impression event, for example, we can take the `impression_url` from the first ad and use it as follows:
+To send an impression event, for example, take the `impression_url` from the first ad and use it as follows:
 
 ```javascript
 let user_data = {
@@ -56,7 +59,7 @@ navigator.sendBeacon(beacon_url, jsonBlob);
 
 ## Sending events server-side or through a native app
 
-In the cases that require sending via server-side or through a native app, the key is to send a `POST` request to the event URL, passing the user and session information in the payload.
+In the cases that require sending via server-side or through a native app, make a `POST` request to the event URL, sending the user and session information in the payload.
 
 You can use one of the following endpoints, depending on the event:
 
@@ -65,9 +68,9 @@ You can use one of the following endpoints, depending on the event:
 - `POST`  [Track ad views](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/view/-ad_id-)
 - `POST`  [Track conversions](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/conversion)
 
-### Example
+Request example:
 
-```http
+```json
 POST https://events-api.ads.vtex.com/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1 HTTP/1.1
 user-agent: newtail
 accept: application/json
@@ -79,4 +82,4 @@ content-type: application/json
 }
 ```
 
-> A successful response will return HTTP status code 202 with no body.
+>ℹ️ A successful response will return HTTP status code 202 with no body.
