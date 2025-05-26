@@ -7,63 +7,27 @@ createdAt: "2025-05-21T22:18:24.684Z"
 updatedAt: "2025-05-21T22:18:24.684Z"
 ---
 
-> 🚧 The event URL must not be "constructed"; always use the URL that comes from the ad request response.  
->  
-> This is very important to ensure long-term integration stability. The parameters of the event URL may change over time, but the integration itself does not need to be modified. This makes the entire process evolutionary and transparent for everyone.
+Conversion tracking is crucial for measuring ad campaign effectiveness in VTEX Ads. This guide explains how to properly send conversion events when users complete purchases after interacting with your advertisements.
 
-# Basic Order Information
+## Conversion event rules
 
-To send catalog information, it is necessary to provide the basic information of a product. The table below describes which fields are mandatory and which are optional in this operation:
+- Conversion events should be sent when an order is closed.
+- Each conversion requires both `user_id` and `session_id` for proper attribution.
+- Events must include complete order information including items and customer details, as detailed in `POST` [Track conversions](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/conversion).
+- Prices must be sent per unit. Don't multiply the `price` or `promotional_price` by the `quantity`.
+- All customer identifiers (email, phone, etc.) must be hashed for privacy.
 
-### Order:
+> 🚧 Don't construct event URLs manually. Always use the URL provided from the `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-) request.
+> 
+> This is extremely important to ensure long-term stability of the integration, because the parameters of the event URL may change over time, but the integration itself does not.
 
-> 📘 Hash Fields  
->  
-> Hash fields ensure the anonymity of user data and allow obtaining new information about the user so that segmented campaigns and reports can be more effective.  
->  
-> To learn how to hash the information, see: <http://bit.ly/3WiL5ns>
+## Sending a conversion event
 
-| Field             | Type         | Description                                                                                   | Required?   | Recommended? |
-|-------------------|--------------|-----------------------------------------------------------------------------------------------|-------------|--------------|
-| publisher_id      | String       | Publisher identification                                                                     | Yes         |              |
-| user_id           | String       | User identification                                                                          | Yes         |              |
-| session_id        | String       | Identification of the session in which the purchase was made, to help attribute the sale to ads. | Yes         |              |
-| order_id          | String       | Order identification                                                                        | Yes         |              |
-| email_hashed      | String       | Hashed user email identification                                                            | Yes         |              |
-| created_at        | String       | Order creation date in ISO 8601 format (UTC - no timezone)                                   | Yes         |              |
-| items             | Array[Item]  | List of items purchased in the order                                                        | Yes         |              |
-| channel           | String       | Identifies the conversion channel                                                           | No          | Yes          |
-| is_company        | Bool         | Indicates if the sale was made to an individual or a company.  \ndefault=false                | No          | Yes          |
-| gender            | String       | Indicates customer's gender.  \n\n- F: female  \n- M: male  \n- O: other  \n- null: unidentified Default=null | No          | Yes          |
-| uf                | String       | Indicates the state where the order was made                                                | No          | Yes          |
-| city              | String       | Indicates the name of the city where the customer bought                                    | No          | Yes          |
-| phone_hashed      | String       | Hashed user phone number identification                                                     | No          | Yes          |
-| social_id_hashed  | String       | Hashed user CPF or CNPJ identification                                                      | No          | Yes          |
-| first_name_hashed | String       | Hashed user first name identification                                                      | No          | Yes          |
-| last_name_hashed  | String       | Hashed user last name identification                                                       | No          | Yes          |
+Use the `POST` [Track conversions](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/conversion) endpoint to send conversion events. Check the endpoint documentation for detailed information about all available fields.
 
-### Item:
+Request example:
 
-| Field             | Description                                    | Type   | Required       |
-| :---------------- | :--------------------------------------------- | :----- | :------------- |
-| sku               | Product SKU identification                     | String | Yes            |
-| quantity          | Quantity of product purchased                   | Double | Yes            |
-| price             | Product "from" price                            | Double | Yes            |
-| promotional_price | Product "for" price (discounted price)         | Double | Yes            |
-| seller_id         | Seller ID identification                        | String | No             |
-| product_id        | Unique product identification that includes the SKU | String | No         |
-
-# Conversion Notification
-
-The conversion notification should use the order integration endpoint, which can be used to notify one or more orders (sending them in a batch).
-
-Ideally, it should be notified at the moment the order is closed, thus having a view of the placed sale.
-
-### Request
-
-> 🚧 The price and promotional price must not be multiplied by the quantity.
-
-```http
+```json
 POST https://events-api.ads.vtex.com/v1/beacon/conversion HTTP/1.1
 accept: application/json
 content-type: application/json
@@ -81,28 +45,27 @@ content-type: application/json
       "seller_id": "1234",
       "product_id": "4567",
       "quantity": 1,
-      "price": 2000.00, // note que não há multiplicação da quantidade com o valor
-      "promotional_price": 1899.00 // note que não há multiplicação da quantidade com o valor
+      "price": 2000.00,
+      "promotional_price": 1899.00
     },
     {
       "sku": "12222",
       "seller_id": null,
       "product_id": "4568",
       "quantity": 2,
-      "price": 500.00, // note que não há multiplicação da quantidade com o valor
-      "promotional_price": 400.00 // note que não há multiplicação da quantidade com o valor
+      "price": 500.00,
+      "promotional_price": 400.00
     }
-  ]
+  ],
   "created_at": "2023-01-01T09:20:00Z"
 }
- 
 ```
 
-### Response
+Sucessful response example:
 
-> The successful response of the request will have HTTP status code 202
+>ℹ️ A successful response will have HTTP code 202.
 
-```json JSON
+```json
 {
 	"messages": [
 		"conversion will be processed soon"
@@ -110,9 +73,9 @@ content-type: application/json
 }
 ```
 
-> The failure response of the request will have HTTP status code 422
+Failed response example:
 
-> The error response follows RFC 8927 https://datatracker.ietf.org/doc/rfc8927/
+>ℹ️ A failed response will have HTTP code 422. The error message follows the [RFC 8927](https://datatracker.ietf.org/doc/rfc8927/) format.
 
 ```json
 [
