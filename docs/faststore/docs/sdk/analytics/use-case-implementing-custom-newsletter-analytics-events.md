@@ -2,7 +2,7 @@
 title: "Use case: Implementing custom newsletter analytics events"
 ---
 
-This guide explains how to track user subscriptions by implementing two custom analytics events for a custom newsletter section:
+This guide provides an introduction, implementation instructions, and expected results for implementing custom analytics events in FastStore projects. The example in this guide explains how to track user subscriptions by implementing two custom analytics events for a custom newsletter section:
 
 - `Submit Newsletter`: Triggered when a user clicks `Subscribe`.
 - `Submit newsletter success`: Triggered upon successful subscription.
