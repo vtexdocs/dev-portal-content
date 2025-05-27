@@ -1,5 +1,5 @@
 ---
-title: "FastStore: Now supporting B2B Price Tables and personalized promotions”
+title: "FastStore: Now supporting B2B Price Tables and personalized promotions"
 slug: "2025-06-20-faststore-b2b-price-tables-session-cookies"
 hidden: false
 type: "added"
