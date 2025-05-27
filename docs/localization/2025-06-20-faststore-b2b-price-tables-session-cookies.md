@@ -2,9 +2,9 @@
 title: "FastStore: Now supporting B2B Price Tables and personalized promotions"
 slug: "2025-06-20-faststore-b2b-price-tables-session-cookies"
 hidden: false
-type: "added"
+type: "improved"
 createdAt: "2025-06-20T00:00:00.219Z"
-updatedAt: ""
+updatedAt: "2025-06-20T00:00:00.219Z"
 excerpt: "FastStore now enables B2B customer-specific pricing and promotions by automatically forwarding session cookies to Intelligent Search, ensuring personalized experiences for customers."
 ---
 
@@ -12,7 +12,7 @@ FastStore storefronts now integrate with [Price Tables](https://help.vtex.com/pt
 
 - Display custom prices by customer segment.
 - Deliver targeted promotions based on store session context.
-- Implement advanced pricing strategies without extra configuration.
+- Implement advanced pricing strategies with no additional configuration required.
 
 ## What has changed?
 
@@ -39,3 +39,5 @@ No further configuration is required. Cookie forwarding is automatic once you up
 4. Under the **Storage** section, open the **Cookies** menu, click on the URL, and you will see all the cookies being forwarded, including the `vtex_segment` cookie.
 
 ![b2b-cookies](https://vtexhelp.vtexassets.com/assets/docs/src/b2b-events___70e69c8494f863d0c6a59929349b3d34.gif)
+
+> ℹ️ For more information on configuring B2B Price Tables, see the [Price Tables documentation](https://help.vtex.com/pt/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S).
