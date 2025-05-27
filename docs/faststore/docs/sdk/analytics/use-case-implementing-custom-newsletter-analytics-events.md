@@ -437,16 +437,20 @@ To add styles to this new section, create a `section.module.scss` file and add t
 
 ### Synchronizing the new section with the Headless CMS
 
-1. In the terminal, run `yarn cms-sync` to synchronize the new section you created with the CMS.
-2. Go to the VTEX Admin and access **Storefront > Headless CMS**.
-3. Click the **Home** Content Type.
-4. In the Sections tab, click `+`, search for the new **Custom Newsletter** section, and add it to your page.
+1. In the terminal, log in to your VTEX account by running `vtex login {accountName}`.
+
+   > ⚠️ Replace `{accountName}` with the name of your account. For example, `vtex login store`.
+
+2. Run `yarn cms-sync` to synchronize the new section you created with the CMS.
+3. Go to the VTEX Admin and access **Storefront > Headless CMS**.
+4. Click the **Home** Content Type.
+5. In the Sections tab, click `+`, search for the new **Custom Newsletter** section, and add it to your page.
 
    ![analytics-custom-newsletter-cms-section](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-section___96abd10dc72c4f09c15f71a9e42651d7.gif)
 
-5. Delete the **Newsletter** default section.
-6. Click `Save`.
-7. Click `Preview` to preview the new section before publishing it to the live store.
+6. Delete the **Newsletter** default section.
+7. Click `Save`.
+8. Click `Preview` to preview the new section before publishing it to the live store.
 
 ## Results
 
