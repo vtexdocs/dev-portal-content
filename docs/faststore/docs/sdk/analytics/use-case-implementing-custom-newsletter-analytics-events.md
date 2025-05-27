@@ -31,20 +31,25 @@ Create a new section to receive the two new custom events:
 2. Inside `components`, create the `sections` folder.
 3. Inside the `sections` folder, create the `CustomNewsletter.tsx` file and add the following code. Below, see an explanation of the code.
 
-- `NewsletterProps`: Defines the customizable properties of the newsletter.
+<details>
+<summary>`NewsletterProps`: Defines the customizable properties of the newsletter</summary>
 
-  - `title`: Heading of the newsletter.
-  - `description`: Subtitle or description text.
-  - `emailInputLabel`: Label for the email input field.
-  - `subscribeButtonLabel`: Text for the submit button.
-  - `toastSubscribe`: Configurations for success popup.
-  - `toastSubscribeError`: Configurations for error popup.
-  - `privacyPolicy`: Legal disclaimer text.
-  - `card`: Whether the newsletter should appear in a card-style container.
-  - `colorVariant`: Styling theme (e.g., "primary", "secondary").
+- `title`: Heading of the newsletter.
+- `description`: Subtitle or description text.
+- `emailInputLabel`: Label for the email input field.
+- `subscribeButtonLabel`: Text for the submit button.
+- `toastSubscribe`: Configurations for success popup.
+- `toastSubscribeError`: Configurations for error popup.
+- `privacyPolicy`: Legal disclaimer text.
+- `card`: Whether the newsletter should appear in a card-style container.
+- `colorVariant`: Styling theme (e.g., "primary", "secondary").
 
-- `onSubmit` function: Handles the newsletter subscription process.
-  - `event.preventDefault()`: Prevents default form submission.
+</details>
+
+<details>
+<summary>`onSubmit` function: Handles the newsletter subscription process.</summary>
+
+- `event.preventDefault()`: Prevents default form submission.
   - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks the submission attempt
     - The `onSubmit` function calls the `subscribeUser()` with email and name.
       - If successful:
@@ -56,6 +61,8 @@ Create a new section to receive the two new custom events:
     - `Submit Newsletter` event: Tracks the form submission attempt when the user clicks the `Subscribe` button.
     - `Submit newsletter success` event: Tracks if the subscription was successful.
   - [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook: track and handle custom analytics events.
+
+</details>
 
 <CH.Code>
 
