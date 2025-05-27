@@ -1,5 +1,10 @@
 files:
   - source: /docs/localization/*.md
-    translation: /%original_path%/%two_letters_code%.%file_extension%
+    translation: /%original_path%/%original_file_name%_%two_letters_code%.%file_extension%
+    translation_replace:
+      "_en": ""
   - source: /docs/localization/*.mdx
-    translation: /%original_path%/%two_letters_code%.%file_extension%
+    translation: /%original_path%/%original_file_name%_%two_letters_code%.%file_extension%
+    translation_replace:
+      "_en": ""
+    type: mdx_v2
