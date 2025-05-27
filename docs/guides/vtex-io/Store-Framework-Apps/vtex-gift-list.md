@@ -3,8 +3,12 @@ title: "Gift List"
 slug: "vtex-gift-list"
 hidden: false
 createdAt: "2022-07-08T07:17:48.371Z"
-updatedAt: "2022-10-27T19:47:24.537Z"
+updatedAt: "2025-10-27T19:47:24.537Z"
 ---
+
+> ⚠️ **Warning**
+>
+> **The Gift List has been deprecated, and VTEX doesn't provide support for this app**. You cannot install this app in any account from the App Store or the VTEX IO CLI. If this app is installed in your store, you can still use it at your own risk, but we recommend uninstalling it to prevent any issues. If you need further help, contact [VTEX support](https://help.vtex.com/en/support).
 
 A gift list is a list of products a shopper creates and sends to guests (other shoppers) asking them to buy the products. The app can be useful for events like birthdays, weddings, and baby showers. When a guest buys one or more products from the list, virtual credit is generated that can be converted into a [gift card](https://developers.vtex.com/vtex-rest-api/docs/gift-card-integration-guide). The list’s creator has a wallet with information about the generated credit and the gift card. Then, the creator of the list can use the gift card to purchase the desired items.
 
