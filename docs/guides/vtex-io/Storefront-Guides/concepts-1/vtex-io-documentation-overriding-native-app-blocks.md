@@ -24,8 +24,9 @@ Start the development of a new VTEX IO app by running the `vtex init` command an
 ### Check the builders
 
 Configure the following builders in the app's `manifest.json` file:
-  - [`store builder`](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
-  - [`react builder`](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions.
+
+- [`store builder`](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder): Enables the development of Store Framework storefronts.
+- [`react builder`](https://developers.vtex.com/docs/guides/vtex-io-documentation-react-builder): Used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions.
 
 </Steps>
 
