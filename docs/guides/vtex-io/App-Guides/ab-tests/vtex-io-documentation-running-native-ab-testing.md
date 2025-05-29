@@ -135,7 +135,7 @@ Before concluding your A/B test, it's essential to understand the comparative an
 
 #### Comparative results
 
-| Metric                        | Description     
+| Metric                        | Description
 |------------------------------|-------------------------------------------------------------------------------------------------------|
 | **Conversion**               | Conversion rate percentage displayed by each workspace during the test.                            |
 | **Expected Loss**            | Anticipated percentage of conversion loss for the store if the lower conversion rate workspace is selected as the winner (based on **Conversion** results). |
