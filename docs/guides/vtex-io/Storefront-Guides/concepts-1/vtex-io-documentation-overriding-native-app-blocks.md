@@ -3,13 +3,13 @@ title: "Overriding native app blocks"
 slug: "vtex-io-documentation-overriding-native-app-blocks"
 hidden: false
 createdAt: "2025-05-06T15:06:15.403Z"
-updatedAt: ""
+updatedAt: "2025-05-29T14:27:44.625Z"
 excerpt: "Discover how to override the blocks of your custom VTEX IO app."
 ---
 
-In this guide, you will learn how to override the blocks provided by a native VTEX IO app with a custom app by configuring the `store/plugins.json` file. This approach allows custom apps to modify existing Store Framework blocks without directly modifying the original app's code. 
+In this guide, you will learn how to override the blocks provided by a native VTEX IO app with a custom app by configuring the `store/plugins.json` file. This approach allows custom apps to modify existing Store Framework blocks without changing the original app's code.
 
-This is especially useful when you need to customize a page or component while maintaining compatibility with future updates of the original app. Follow the steps below to ensure that your custom app will work properly with existing dependencies and block schemas.
+This is especially useful when you need to customize a page or component while maintaining compatibility with future updates of the original app. Follow the steps below to ensure your custom app works properly with existing dependencies and block schemas.
 
 ## Before you begin
 
@@ -43,8 +43,8 @@ Add the corresponding native VTEX IO app as a dependency in the custom app's `ma
 
 ### Step 2 - Defining the app's schema
 
-1. Inside your app's root directory, create the `store` folder.
-2. In the `store` folder, create the `interfaces.json` file and define the app's schema by following the original. For example, if the native app block has `example-child` as `required`, the new block must also declare it:
+1. In your app's root directory, create the `store` folder.
+2. In the `store` folder, create the `interfaces.json` file and define the app's schema by following the original native app. For example, if the native app block has `example-child` as `required`, the new block must also declare it:
 
   ```json
   "new-block": {
@@ -79,10 +79,12 @@ export default NewBlock
 
 ### Step 5 - Testing your custom app
 
-[Link the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) in the development workspace you're working in to see the changes. Based on the given example, you'll see the following page when placing an order:
+[Link the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) in the development workspace you're working in to see the changes.
+
+Based on the given example, you'll see the following page when placing an order:
 
 ![overriding-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-11304-Overriding-blocks/docs/guides/vtex-io/Storefront-Guides/images/overriding-blocks.png)
 
 ### Step 6 - Making your app publicly available
 
-Once you finish developing and testing your custom app, deploy it to make it available in the live store. Learn how in the [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
+Once you finish developing and testing your custom app, deploy it to make it available in the live store. Learn how in the guide [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
