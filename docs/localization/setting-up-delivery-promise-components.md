@@ -7,14 +7,14 @@ createdAt: "2025-05-23T22:18:24.684Z"
 updatedAt: "2025-05-23T22:18:24.684Z"
 ---
 
->ℹ️ This feature is in closed beta, which means that only selected customers can access it for now. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+>ℹ️ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
 The [Delivery Promise (Beta)](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products that can be delivered to the provided address or picked up at available locations.
 
 The availability is displayed following these rules:
 
-* For pickup points selected in the header or a specific pickup point, the system displays all available pickup points within a 50 km pickup radius configured in Checkout. There is no limit to the number of pickup points shown.
-* For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are shown, with a maximum of 40 pickup points.
+* For pickup points selected in the header or a specific pickup point, the system displays all available pickup points within a 50 km pickup radius configured in Checkout. There is no limit to the number of pickup points displayed.
+* For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are displayed, with a maximum of 40 pickup points.
 
 ![delivery-promise-components](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/delivery-promise-component.gif)
 
@@ -31,17 +31,17 @@ To enable Delivery Promise (Beta) in your store, the following conditions must b
 
 * The store must use [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG).
 * Your storefront must be built with [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework).
-* The store cannot act as a marketplace for [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types) accounts or external sellers.
+* The store can't act as a marketplace for [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types) accounts or external sellers.
 
 ## Instructions
 
 ### Step 1 - Requesting Delivery Promise activation
 
-Contact our [Support](https://support.vtex.com/hc/en-us) team to request the activation of the Delivery Promise feature.
+Contact our [Support](https://support.vtex.com/hc/en-us) team to request the activation of Delivery Promise.
 
 ### Step 2 - Displaying a location selector
 
-To use Delivery Promise, customers need to define a delivery address early in their shopping journey. The [`Shipping Option Components`](https://developers.vtex.com/docs/apps/vtex.shipping-option-components) app provides blocks that allow users to select a location and display delivery options accordingly.
+To use Delivery Promise, customers must define a delivery address early in their shopping journey. The [`Shipping Option Components`](https://developers.vtex.com/docs/apps/vtex.shipping-option-components) app provides blocks that allow users to select a location and display delivery options accordingly.
 
 1. Add the `shipping-option-components` app to your theme dependencies in the `manifest.json` as shown below:
 
@@ -75,27 +75,27 @@ To use Delivery Promise, customers need to define a delivery address early in th
         },
    ```
 
-3. Configure the behavior with props to customize how location selection is presented. Below we highlight some of the key uses of the available props.
+3. Configure the behavior with props to customize how location selection is presented. Below, we highlight some of the key uses of the available props.
  
    * [Setting up a blocking modal](#setting-up-a-blocking-modal)
    * [Defining displayed delivery methods](#defining-displayed-delivery-methods)
 
-   Learn more about all the available props on [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components).
+   Learn more about all the available props in [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components).
 
-When the customer provides their address, an initial selection of products is made to display only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by Checkout. This selection impacts all subsequent product listings and filters.
+When the customer provides their address, an initial selection of products is made to display only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by the Checkout. This selection impacts all subsequent product listings and filters.
 
 #### Setting up a blocking model
 
-To ensure location input is provided before any browsing, you can configure a blocking modal that appears when the page loads and cannot be dismissed until a ZIP code is entered.
+To ensure location input is provided before browsing, you can configure a blocking modal that displays when the page loads and can't be dismissed until a postal code is entered.
 
 To do this, you must use both the `callToAction` and `dismissible` props:
 
 * `callToAction`: Defines which UI is displayed on load:
  
-  * `modal`: Shows a modal requiring postal code entry.
-  * `popover-input` *(default)*: Opens a popover with a ZIP code input field.
+  * `modal`: Displays a modal requiring postal code entry.
+  * `popover-input` *(default)*: Opens a popover with a postal code input field.
   * `popover-button`: Displays a button that opens the popover when clicked.
-* `dismissible`: When set to `false`, the modal cannot be closed until a valid ZIP code is entered.
+* `dismissible`: When set to `false`, the modal can't be closed until a valid postal code is entered.
 
 Configure the props as shown in the example below:
 
@@ -108,14 +108,14 @@ Configure the props as shown in the example below:
 }
 ```
 
-This configuration ensures the page is filtered for deliverability from the first interaction, improving both performance and relevance.
+This configuration ensures the page is filtered for delivery availability from the first interaction, improving performance and relevance.
 
 #### Defining displayed delivery methods
 
-The `shippingSelection` prop controls which delivery methods are shown:
+The `shippingSelection` prop controls which delivery methods are displayed:
 
 * `delivery-and-pickup`: Enables both delivery and pickup location options.
-* `only-pickup`: Shows only the pickup selector (for example, in stores focusing on in-store pickup).
+* `only-pickup`: Displays only the pickup selector (for example, in stores focusing on in-store pickup).
 
 Configure the prop as shown in the example below:
 
@@ -141,7 +141,7 @@ To display available delivery filters in the search sidebar, follow the steps be
 
 2. Ensure your theme includes the `search-result-layout.desktop` or `search-result-layout.mobile` block, depending on the layout.
 
-   Within this layout, make sure the sidebar block includes `filter-navigator.v3`:
+Within this layout, make sure the sidebar block includes `filter-navigator.v3`:
 
    ```json
     // store/search.json
@@ -157,4 +157,4 @@ To display available delivery filters in the search sidebar, follow the steps be
 
 These blocks will display all applicable filters automatically. If a customer has selected a location using the Shipping Option component, delivery filters will reflect real-time availability based on that address.
 
->⚠️ The delivery promise filters are part of a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can adapt to updates.
+>⚠️ The delivery promise filters are a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can adapt to updates.
