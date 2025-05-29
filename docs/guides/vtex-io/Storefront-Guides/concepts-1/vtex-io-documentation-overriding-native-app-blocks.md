@@ -84,7 +84,7 @@ export default NewBlock
 
 Based on the given example, you'll see the following page when placing an order:
 
-![overriding-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-11304-Overriding-blocks/docs/guides/vtex-io/Storefront-Guides/images/overriding-blocks.png)
+![overriding-block](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/overriding-blocks.png)
 
 ### Step 6 - Making your app publicly available
 
