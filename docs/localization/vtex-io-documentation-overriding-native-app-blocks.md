@@ -7,9 +7,9 @@ updatedAt: ""
 excerpt: "Discover how to override the blocks of your custom VTEX IO app."
 ---
 
-In this guide, you will learn how to override the blocks provided by a native VTEX IO app with a custom app by configuring the `store/plugins.json` file. This approach allows custom apps to modify existing Store Framework blocks without directly modifying the original app's code. 
+In this guide, you will learn how to override the blocks provided by a native VTEX IO app with a custom app by configuring the `store/plugins.json` file. This approach allows custom apps to modify existing Store Framework blocks without changing the original app's code.
 
-This is especially useful when you need to customize a page or component while maintaining compatibility with future updates of the original app. Follow the steps below to ensure that your custom app will work properly with existing dependencies and block schemas.
+This is especially useful when you need to customize a page or component while maintaining compatibility with future updates of the original app. Follow the steps below to ensure your custom app works properly with existing dependencies and block schemas.
 
 ## Before you begin
 
@@ -43,8 +43,8 @@ Add the corresponding native VTEX IO app as a dependency in the custom app's `ma
 
 ### Step 2 - Defining the app's schema
 
-1. Inside your app's root directory, create the `store` folder.
-2. In the `store` folder, create the `interfaces.json` file and define the app's schema by following the original. For example, if the native app block has `example-child` as `required`, the new block must also declare it:
+1. In your app's root directory, create the `store` folder.
+2. In the `store` folder, create the `interfaces.json` file and define the app's schema by following the original native app. For example, if the native app block has `example-child` as `required`, the new block must also declare it:
 
   ```json
   "new-block": {
