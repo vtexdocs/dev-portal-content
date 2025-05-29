@@ -29,7 +29,7 @@ The A/B Tester app allows you to run A/B tests via the Admin. To use the app, fo
     vtex login {accountName}
     ```
 
->ℹ️ Replace the values between curly brackets based on your account name.
+   >ℹ️ Replace the values between curly brackets based on your account name.
 
 2. Install the A/B Tester app in the `master` workspace by running:
 
@@ -60,7 +60,7 @@ The A/B Tester app allows you to run A/B tests via the Admin. To use the app, fo
     vtex login {accountName}
     ```
 
->ℹ️ Replace the values between curly brackets based on your account name.
+   >ℹ️ Replace the values between curly brackets based on your account name.
 
 2. [Create and switch to a Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) by running the following command:
 
@@ -70,7 +70,7 @@ The A/B Tester app allows you to run A/B tests via the Admin. To use the app, fo
 
 3. Perform the changes you want to test in the production workspace you are using, such as installing or editing an app.
 
-> ⚠️ If your store uses the [Checkout UI Custom](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0) app, you must first publish its configurations on your new production workspace. Otherwise, you might experience undesired consequences, such as losing the Checkout custom JavaScript code and styles.
+   >⚠️ If your store uses the [Checkout UI Custom](https://developers.vtex.com/docs/guides/vtex-checkout-ui-custom-v0) app, you must first publish its configurations on your new production workspace. Otherwise, you might experience undesired consequences, such as losing the Checkout custom JavaScript code and styles.
 
 4. Switch to the `master` workspace.
 
@@ -84,7 +84,7 @@ The A/B Tester app allows you to run A/B tests via the Admin. To use the app, fo
     vtex install vtex.ab-tester
     ```
 
->ℹ️ You can run `vtex ls` to ensure you have successfully installed `vtex.ab-tester` in the `master` workspace.
+   >ℹ️ You can run `vtex ls` to ensure you have successfully installed `vtex.ab-tester` in the `master` workspace.
 
 6. Run the following command in the `master` workspace.
 
@@ -92,7 +92,7 @@ The A/B Tester app allows you to run A/B tests via the Admin. To use the app, fo
     vtex workspace abtest start
     ```
 
-![ab-testing-start-step1](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-start___5c87b822a4829a1b74a8318510b00c4e.png)
+   ![ab-testing-start-step1](https://vtexhelp.vtexassets.com/assets/docs/src/abtest-start___5c87b822a4829a1b74a8318510b00c4e.png)
 
 7. Select the production workspace you want to use for comparison with the `master` and agree to proceed.
 
@@ -185,13 +185,13 @@ In [Step 4](#step-4---finishing-the-ab-test), you only ended the test on the sel
 
 1. Change to the production workspace to be promoted.
 
-> ℹ️ You must be logged in to your VTEX account.
+   > ℹ️ You must be logged in to your VTEX account.
 
     ```bash
     vtex use {workspaceName}
     ```
 
-> ℹ️ Replace the values between curly brackets based on your workspace name.
+   > ℹ️ Replace the values between curly brackets based on your workspace name.
 
 2. Promote the workspace being used.
 
