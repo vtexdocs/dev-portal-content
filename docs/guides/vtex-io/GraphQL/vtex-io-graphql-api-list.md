@@ -14,4 +14,4 @@ updatedAt: "2025-05-09T11:00:00.000Z"
 |[Messages GraphQL API](https://developers.vtex.com/docs/apps/vtex.messages/messages-graphql-api)|Manages the internationalization of messages in different store contexts.|
 |[Rewriter GraphQL API](https://developers.vtex.com/docs/apps/vtex.rewriter/rewriter-graphql-api)|Manages internal URLs and URL redirects.|
 |[Session Client GraphQL API](https://developers.vtex.com/docs/apps/vtex.session-client@1.0.5/session-client-graphql-api)|Manages the [`vtex_session` cookie](https://developers.vtex.com/docs/guides/sessions-system-overview#vtexsession-cookie), which holds session-related data for users.|
-|[Tax Protocol GraphQL API](https://developers.vtex.com/docs/apps/vtex.tax-protocol-example/tax-protocol-graphql-api)|Defines the requirements for integrating a [tax service](https://developers.vtex.com/docs/guides/tax-services-overview) into VTEX.|
+|[Tax Protocol GraphQL API](https://developers.vtex.com/docs/guides/tax-protocol-graphql-api)|Defines the requirements for integrating a [tax service](https://developers.vtex.com/docs/guides/tax-services-overview) into VTEX.|
