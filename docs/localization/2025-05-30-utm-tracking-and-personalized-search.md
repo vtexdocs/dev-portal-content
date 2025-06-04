@@ -33,4 +33,4 @@ Additionally, session and segmentation cookies are forwarded in search requests,
 
 ## What needs to be done?
 
-To enable your store to capture and retain marketing campaign data (UTM and UTMi parameters) from visitor sessions and attach it to their orders, check the [UTM tracking in FastStore](/TBD) guide.
+To enable your store to capture and retain marketing campaign data (UTM and UTMi parameters) from visitor sessions and attach it to their orders, check the [UTM tracking in FastStore](https://developers.vtex.com/docs/guides/faststore/seo-validating-utm-tracking-in-faststore) guide.
