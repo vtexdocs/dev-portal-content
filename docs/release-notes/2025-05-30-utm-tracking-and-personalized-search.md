@@ -1,5 +1,5 @@
 ---
-title: "FastStore: Enhanced UTM Tracking and Personalized Search with Improved Data Capture"
+title: "FastStore: Enhanced UTM tracking and personalized search"
 slug: "2025-06-05-utm-tracking-and-personalized-search"
 hidden: false
 type: "improved"
