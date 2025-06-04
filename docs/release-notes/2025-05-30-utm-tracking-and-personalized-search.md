@@ -1,9 +1,9 @@
 ---
-title: "FastStore: UTM tracking and personalized search"
-slug: "2025-05-30-utm-tracking-and-personalized-search"
+title: "FastStore: Enhanced UTM Tracking and Personalized Search with Improved Data Capture"
+slug: "2025-06-05-utm-tracking-and-personalized-search"
 hidden: false
 type: "improved"
-createdAt: "2025-05-30T00:00:00.219Z"
+createdAt: "2025-06-05T00:00:00.219Z"
 updatedAt: ""
 excerpt: "FastStore now preserves UTM and UTMi parameters throughout the customer journey, improving campaign attribution and analytics."
 ---
@@ -30,6 +30,10 @@ This improvement allows merchants to launch UTM-based promotions and track the e
 Additionally, session and segmentation cookies are forwarded in search requests, ensuring a consistent and personalized search experience.
 
 > ⚠️Only non-identifiable marketing data is collected. No personal information is tracked or shared. Data is used strictly to improve site analytics and customer experience.
+
+## Why did we make this change?
+
+We implemented these changes to address the need for more accurate campaign attribution and enhanced user experience. By preserving UTM and UTMi parameters, merchants can gain deeper insights into the effectiveness of their marketing efforts. Forwarding session and segmentation cookies in search requests ensures that users receive consistent and personalized search results, improving product discovery.
 
 ## What needs to be done?
 
