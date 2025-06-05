@@ -8,8 +8,6 @@ Search Engine Optimization (SEO) is one of the most essential strategies for imp
 
 FastStore provides configuration options, such as editable meta tags (title, description, author, and templates), which help search engines understand and index your content. You can define these settings during the [project onboarding](#setting-seo-during-the-project-onboarding) or [updated later](#managing-seo-for-plps-and-pdps) in the `discovery.config.js` file.
 
->ℹ To manage SEO settings via Headless CMS, see the guide [Configuring SEO in your FastStore website](LINK-DO-HELP)
-
 ## Setting SEO during the project onboarding
 
 When [starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project), you should configure your website's SEO tags by setting values for the **Title Tag**, **Description Tag**, **Title Template**, and **Site Author**. These tags are part of your site's optimization strategy.
