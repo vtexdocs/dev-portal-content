@@ -1,6 +1,6 @@
 ---
-title: "Deprecated"
-slug: "deprecated"
+title: "VTEX IO deprecated apps"
+slug: "vtex-io-deprecated-apps"
 excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
@@ -71,7 +71,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Customer Management  | `vtex.admin-customers`<br><br>`vtex.admin-customers-graphql` |
 | Safe Data                        | `vtex.safedata`               |
 
-### Multi-language and Multi-currency
+### Multi-language and multi-currency
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -95,7 +95,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Shopper Location (Inventory Locator)     | `qualitydigital.shopper-location`      |
 | Store Locator                           | `vtex.store-locator`                  |
 
-### Marketing and Sales
+### Marketing and sales
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -171,7 +171,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Treasure Data    | `qualitydigital.treasure-data-pixel`  |
 | Wordpress App    | `vtex.wordpress-integration`          |
 
-### Pricing and Promotions
+### Pricing and promotions
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -217,7 +217,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Mega Menu         | `vtex.mega-menu`               |
 | Toggle Layout     | `vtex.toggle-layout`           |
 
-### Tax Service
+### Tax service
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
