@@ -57,7 +57,7 @@ In the [Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-
 
 1. Go to the `Current Keys` section.
 2. Alongside the secret you need to update, click `⋮`, then click `Delete`.
-3. Validate the secret you want to remove. 
+3. Validate the secret you want to remove.
 
    >⚠ This action can’t be undone.
 
