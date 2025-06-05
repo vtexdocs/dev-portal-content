@@ -40,7 +40,7 @@ Below is an example of the Google Tag Manager app interface and its correspondin
       },
       "allowCustomHtmlTags": {
         "title": "Allow Custom HTML tags",
-        "description": "Beware that using Custom HTML tags can drastically impact the store's performance",
+        "description": "Note that using Custom HTML tags can drastically impact the store's performance",
         "type": "boolean"
       },
       "sendGA4Events": {
@@ -57,15 +57,15 @@ Below is an example of the Google Tag Manager app interface and its correspondin
 
 After building your app's settings interface, you need to consume the data provided by the app’s user. Consider the Google Tag Manager example above, retrieving the GTM ID.
 
-Based on the given example, below is a step-by-step guide for creating an interface for your app and retrieving the data to use within the app.
+Based on the given example, below are the instructions for creating an interface for your app and retrieving the data to use within the app.
 ## Instructions
 ### Step 1 - Creating the settings interface
 
 To create the app settings interface, define the `settingsSchema` object in its `manifest.json` file.
 
-This object declares a JSON Schema containing the fields that meet your business needs. See the [JSON Schema documentation](http://json-schema.org/understanding-json-schema/) to build the `settingsSchema` field correctly.
+This object declares a JSON Schema with the fields that meet your business needs. See the [JSON Schema documentation](http://json-schema.org/understanding-json-schema/) to correctly build the `settingsSchema` field.
 
-> ℹ️ The JSON Schema offers a predefined model that outlines how the settings should be formatted in your app. Note that, according to the JSON Schema specification, the types accepted within a property include: `string`, `number`, `integer`, `boolean`, `object`, `array`, or `null`. It is also possible to use arrays of types (for example, `[string, number]`) to indicate that the property accepts multiple types.
+> ℹ️ The JSON Schema offers a predefined model that outlines how the settings should be formatted in your app. Note that, depending on the JSON Schema specification, the types accepted within a property include: `string`, `number`, `integer`, `boolean`, `object`, `array`, or `null`. You can also use arrays of types (for example, `[string, number]`) to indicate that the property accepts multiple types.
 
 Considering the example of the Google Tag Manager interface previously presented, the `settingsSchema` object was configured as follows:
 
@@ -82,7 +82,7 @@ Considering the example of the Google Tag Manager interface previously presented
       },
       "allowCustomHtmlTags": {
         "title": "Allow Custom HTML tags",
-        "description": "Beware that using Custom HTML tags can drastically impact the store's performance",
+        "description": "Note that using Custom HTML tags can drastically impact the store's performance",
         "type": "boolean"
       },
       "sendGA4Events": {
@@ -96,13 +96,13 @@ Considering the example of the Google Tag Manager interface previously presented
 
 This code defines a schema for the settings UI that interacts with the Google Tag Manager app. The configured fields are described below:
 
-- `title`: App name shown in the app settings interface. It is recommended to use the same app name configured in the [`title` field of the manifest.json file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#title).
+- `title`: App name displayed in the app settings interface. We recommend using the same app name configured in the [`title` field of the manifest.json file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#title).
 - `type`: JSON Schema type (this must always be set as `object`).
 - `description` (optional): Description of the `settingsSchema` field.
 - `properties`: Key-value pairs that define the fields that will be displayed to the app users, with their own definition within this object. Each defined key accepts the following `properties`: `title`, `description`, and `type`.
 - `gtmId`: String-type property that represents the Google Tag Manager ID. In the settings UI, this property is shown as a text box.
-- `allowCustomHtmlTags`: Boolean-type property that determines whether custom HTML tags are allowed. In the settings UI, this property is shown as a checkbox.
-- `sendGA4Events`: Boolean-type property that indicates whether to send Google Analytics 4 events. In the settings UI, this property is shown as a checkbox.
+- `allowCustomHtmlTags`: Boolean-type property that determines whether custom HTML tags are allowed. In the settings UI, this property is displayed as a checkbox.
+- `sendGA4Events`: Boolean-type property that indicates whether to send Google Analytics 4 events. In the settings UI, this property is displayed as a checkbox.
 
 ### Step 2 - Retrieving and consuming the app settings data
 
@@ -113,8 +113,8 @@ In your app’s code, you can retrieve the app settings in two ways:
 
 Below is an example of each case.
 
->⚠ Make sure your app has the necessary permissions to communicate with the frontend or backend app. 
-Without proper permissions, your store won’t be able to share data with the solution. Learn more in [Policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies).
+>⚠ Make sure your app has the required permissions to communicate with the frontend or backend app. 
+> Without proper permissions, your store won’t be able to share data with the solution. Learn more in [Policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies).
 
 #### Frontend apps
 
@@ -131,7 +131,7 @@ query getSettings {
 }
 ```
 
->⚠ Replace `vendor`, `app.name`, and `0.x` with values based on your scenario. In the case of Google Tag Manager app, the `app` value is `vtex.google-tag-manager`, and the `version` value is `1.x`.
+>⚠ Replace `vendor`, `app.name`, and `0.x` with values based on your scenario. In the case of the Google Tag Manager app, the `app` value is `vtex.google-tag-manager`, and the `version` value is `1.x`.
 
 The example above is a GraphQL query that fetches the data of a specific app declared in the arguments of `publicSettingsForApp` field: the app and its version. The configured fields are described below:
 
@@ -156,7 +156,7 @@ This query will return an object like the one below:
 import AppSettings from './queries/AppSettings.graphql'
 ```
 
-5. Parse and use the defined query value (for example, `AppSettings`) based on your needs. Check the example below:
+5. Parse and use the defined query value (for example, `AppSettings`) based on your needs. See the example below:
 
 ```tsx
   const { data: appSettingsData } = useQuery(AppSettings, {
@@ -183,7 +183,7 @@ The code above interacts with an API through a GraphQL query, which is managed b
 #### Backend apps
 
 1. Open your `node` app in any code editor of your choice.
-2. Declare a new function (for example, `getConfig`) and use the `getAppSettings` method from the `apps` client to retrieve and return the app settings data. Consider the example below:
+2. Declare a new function (for example, `getConfig`) and use the `getAppSettings` method from the `apps` client to retrieve and return the app settings data. See the example below:
 
 ```ts
 export const getConfig = async (_: any, __: any, ctx: Context) => {
@@ -206,6 +206,6 @@ export const getConfig = async (_: any, __: any, ctx: Context) => {
 };
 ```
 
-The `getConfig` function returns a promise as it fetches the app settings and handles errors. It retrieves an app ID from environment variables, uses it to request settings, and logs any errors that occur.
+The `getConfig` function returns a promise as it fetches the app settings and handles errors. It retrieves an app ID from environment variables, uses it to request settings, and logs any errors.
 
 3. Import the defined function and consume it based on your needs. For example, you can use it in a resolver, middleware, or any other part of your backend app.
