@@ -31,7 +31,6 @@ Create a new section to receive the two new custom events:
 2. Inside `components`, create the `sections` folder.
 3. Inside the `sections` folder, create the `CustomNewsletter.tsx` file and add the following code. Below, see an explanation of the code.
 
-
 <CH.Code>
 
 ```tsx CustomNewsletter.tsx
