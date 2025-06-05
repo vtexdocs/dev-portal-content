@@ -117,7 +117,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Octopia (casino)               | `vtex.octopia-integration`             |
 | Seller Products Import         | `vtex.seller-products-import`          |
 
-### Obversability
+### Observability
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
