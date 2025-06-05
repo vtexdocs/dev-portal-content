@@ -228,7 +228,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 ## Checking your store’s apps
 
-If your store is using a deprecated app, [review its dependencies](#review-dependencies) and [check the installed apps](#check-the-installed-apps).
+To identify if your store is using a deprecated app, [review its dependencies](#review-dependencies) and [check the installed apps](#check-the-installed-apps).
 
 ### Review dependencies
 
