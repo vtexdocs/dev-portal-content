@@ -215,7 +215,48 @@ export default CustomNewsletter;
 
 ---
 
-### Create the section `index` file
+#### `NewsletterProps`
+
+Defines the customizable properties of the newsletter.
+
+- `title`: Heading of the newsletter.
+- `description`: Subtitle or description text.
+- `emailInputLabel`: Label for the email input field.
+- `subscribeButtonLabel`: Text for the submit button.
+- `toastSubscribe`: Configurations for the success popup.
+- `toastSubscribeError`: Configurations for error popup.
+- `privacyPolicy`: Legal disclaimer text.
+- `card`: Whether the newsletter should appear in a card-style container.
+- `colorVariant`: Styling theme (e.g., "primary", "secondary").
+
+```tsx CustomNewsletter.tsx focus=37:54
+```
+
+---
+
+#### `onSubmit` function
+
+Handles the newsletter subscription process.
+
+- `event.preventDefault()`: Prevents default form submission.
+  - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks the submission attempt
+    - The `onSubmit` function calls the `subscribeUser()` with email and name.
+      - If successful:
+        - Shows a success toast (`pushToast`).
+        - Resets the form (`formRef.current?.reset()`).
+      - If it fails, it shows an error toast.
+  - `pushToast`: Displays temporary success/error messages.
+  - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks user interactions.
+    - `Submit Newsletter` event: Tracks the form submission attempt when the user clicks the `Subscribe` button.
+    - `Submit newsletter success` event: Tracks if the subscription was successful.
+  - [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook: track and handle custom analytics events.
+
+```tsx CustomNewsletter.tsx focus=89:132
+```
+
+---
+
+### Creating the section `index` file
 
 To make the Newsletter section available in the project, create a file named `index.tsx` inside the components folder and add the following:
 
