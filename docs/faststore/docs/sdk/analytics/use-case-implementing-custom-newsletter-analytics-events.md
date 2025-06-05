@@ -2,9 +2,9 @@
 title: "Use case: Implementing custom newsletter analytics events"
 ---
 
-This guide provides an introduction, implementation instructions, and expected results for implementing custom analytics events in FastStore projects. The example in this guide explains how to track user subscriptions by implementing two custom analytics events for a custom newsletter section:
+This guide walks you through the process of implementing custom analytics events in FastStore projects. The example in this guide explains how to track user subscriptions by implementing two custom analytics events for a custom newsletter section:
 
-- `Submit Newsletter`: Triggered when a user clicks `Subscribe`.
+- `Submit newsletter`: Triggered when a user clicks `Subscribe`.
 - `Submit newsletter success`: Triggered upon successful subscription.
 
 ![analytics-custom-newsletter-firing-event](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-firing-event___45d3f6e3f8586ef7fbbb389128bb4460.gif)
@@ -19,15 +19,15 @@ To follow this guide, you should be familiar with the following topics:
 - [Sending custom events](https://developers.vtex.com/docs/guides/faststore/analytics-sending-custom-events)
 - [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section)
 
-## Implementation
+## Instructions
 
 <CH.Scrollycoding>
 
-### Create a custom newsletter section
+### Creating a custom newsletter section
 
 Create a new section to receive the two new custom events:
 
-1. Open your store repository, and If you don't already have it, create a folder named `components` inside the `src` directory.
+1. Open your store repository. If you don't already have it, create a folder named `components` inside the `src` directory.
 2. Inside `components`, create the `sections` folder.
 3. Inside the `sections` folder, create the `CustomNewsletter.tsx` file and add the following code. Below, see an explanation of the code.
 
@@ -267,7 +267,7 @@ export default sections;
 
 ---
 
-### Style the new section
+### Styling the new section
 
 To add styles to this new section, create a `section.module.scss` file and add the following:
 
@@ -290,9 +290,9 @@ To add styles to this new section, create a `section.module.scss` file and add t
 
 ---
 
-### Update the CMS folder
+### Updating the CMS folder
 
-1. In your store root repository, if you don’t have it already, create a folder named `cms`.
+1. In the root directory of your storefront project, create a folder named `cms` if it doesn't already exist.
 2. Inside `cms`, create the `faststore` folder.
 3. Within the `cms/faststore` folder, create the `sections.json` file.
 4. In the `sections.json` file, add the new section you want to display in the Headless CMS. The schema below defines how the Headless CMS renders a section:
@@ -461,8 +461,8 @@ To add styles to this new section, create a `section.module.scss` file and add t
 
 ## Results
 
-1. Once you open the preview browser tab, open the **Console** of your browser’s **Developer Tools**.
-2. Go to the newsletter section on the store page and complete the fields **Your Name** and **Your Email**.
+1. Once you open the preview browser tab, open your browser's **Developer Tools** and go to the **Console** tab.
+2. Go to the newsletter section on the store page and fill in **Your Name** and **Your Email** fields.
 3. Click `Subscribe`. You will notice in the **Console** tab that the two custom events were successfully triggered.
 
    ![analytics-custom-newsletter-firing-event](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-firing-event___45d3f6e3f8586ef7fbbb389128bb4460.gif)
