@@ -20,8 +20,6 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 ## List of deprecated apps
 
-See below the deprecated app’s list.
-
 ### Account management
 
 | App                             | `vendor.app-name`    |
@@ -40,145 +38,145 @@ See below the deprecated app’s list.
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Admin Catalog Translation | `vtex.admin-catalog-translations |
-| Assembly Options | `vtex.admin-assembly-options<br>`vtex.assembly-options-graphql |
-| Export Feeds IO | `vtex.export-feeds-io |
-| Google Catalog Import | `vtex.sheets-catalog-import |
-| Google Drive Import | qualitydigital.google-drive-import |
-| Massive Score Update | vtexarg.massive-score-update |
+| Admin Catalog Translation | `vtex.admin-catalog-translations` |
+| Assembly Options | `vtex.admin-assembly-options`<br>`vtex.assembly-options-graphql` |
+| Export Feeds IO | `vtex.export-feeds-io` |
+| Google Catalog Import | `vtex.sheets-catalog-import` |
+| Google Drive Import | `qualitydigital.google-drive-import` |
+| Massive Score Update | `vtexarg.massive-score-update` |
 
 ### Checkout
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Checkout IO           | `vtex.checkout-custom-template       |
-| Checkout UI Custom    | `vtex.checkout-ui-custom            |
-| Checkout V6 Invoice Data | vtexeurope.checkout-v6-invoice-data |
-| Cross Device Cart     | `vtex.cross-device-cart             |
-| GiveX                 | qualitydigital.givex               |
-| TSYS Gift Cards       | `vtex.tsys-merchantware             |
+| Checkout IO           | `vtex.checkout-custom-template`       |
+| Checkout UI Custom    | `vtex.checkout-ui-custom`            |
+| Checkout V6 Invoice Data | `vtexeurope.checkout-v6-invoice-data` |
+| Cross Device Cart     | `vtex.cross-device-cart`             |
+| GiveX                 | `qualitydigital.givex`               |
+| TSYS Gift Cards       | `vtex.tsys-merchantware`             |
 
 ### Content management
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| GeoCMS | qualitydigital.geocms-store-locator |
-| Yext | `vtex.yext-store-locator |
+| GeoCMS | `qualitydigital.geocms-store-locator` |
+| Yext | `vtex.yext-store-locator` |
 
 ### Data management
 
 | App                                | `vendor.app-name`    |
 | -------------------------------- | ---------------------------- |
-| Customer Management  | `vtex.admin-customers<br>`vtex.admin-customers-graphql |
-| Safe Data                        | `vtex.safedata               |
+| Customer Management  | `vtex.admin-customers`<br>`vtex.admin-customers-graphql` |
+| Safe Data                        | `vtex.safedata`               |
 
 ### Multi-language and Multi-currency
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Catalog Translation API| `vtex.catalog-translations-rest |
-| Currency Selector      | `vtex.currency-selector         |
+| Catalog Translation API| `vtex.catalog-translations-rest` |
+| Currency Selector      | `vtex.currency-selector`         |
 
 ### Logistics
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Curbside Pickup                         | `vtex.curbside-pickup                |
-| Delivery Window Blocker                  | `vtex.delivery-window-blocker         |
-| EasyPost                                | qualitydigital.easypost             |
-| Fedex Shipping                          | `vtex.fedex-shipping                 |
-| innoship app                            | `vtex.innoship                       |
-| Location Availability (Inventory Locator)| qualitydigital.location-availability |
-| Massive Stock Update                     | vtexarg.massive-stock-update         |
-| Package Optimizer (FedEx Shipping)       | `vtex.packing-optimization           |
-| Return App                              | `vtex.return-app                     |
-| ShipStation                             | `vtex.ship-station                   |
-| Shopper Location (Inventory Locator)     | qualitydigital.shopper-location      |
-| Store Locator                           | `vtex.store-locator                  |
+| Curbside Pickup                         | `vtex.curbside-pickup`                |
+| Delivery Window Blocker                  | `vtex.delivery-window-blocker`         |
+| EasyPost                                | `qualitydigital.easypost`             |
+| Fedex Shipping                          | `vtex.fedex-shipping`                 |
+| innoship app                            | `vtex.innoship`                       |
+| Location Availability (Inventory Locator)| `qualitydigital.location-availability` |
+| Massive Stock Update                     | `vtexarg.massive-stock-update`         |
+| Package Optimizer (FedEx Shipping)       | `vtex.packing-optimization`           |
+| Return App                              | `vtex.return-app`                     |
+| ShipStation                             | `vtex.ship-station`                   |
+| Shopper Location (Inventory Locator)     | `qualitydigital.shopper-location`      |
+| Store Locator                           | `vtex.store-locator`                  |
 
 ### Marketing and Sales
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Abandoned Cart      | `vtex.abandoned-cart              |
-| Affiliates Program  | `vtex.affiliates-order-form-spy   |
-| Marketing Autopilot | vtexbr.marketing-autopilot       |
-| SMS Provider        | qualitydigital.sms-provider      |
+| Abandoned Cart      | `vtex.abandoned-cart`              |
+| Affiliates Program  | `vtex.affiliates-order-form-spy`   |
+| Marketing Autopilot | `vtexbr.marketing-autopilot`       |
+| SMS Provider        | `qualitydigital.sms-provider`      |
 
 ### Marketplace
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Advanced seller onboarding      | vtexromania.advanced-seller-onboarding |
-| Google Shopping                | `vtex.google-shopping<br>`vtex.google-shopping-api             |
-| Glovo                          | `vtex.glovo-integration               |
-| Lengow                         | `vtex.lengow-integration              |
-| Mktplace Financial Commissions | `vtex.marketplace-financial-commission|
-| Mktplace Mapper                | `vtex.seller-mkp-mapper               |
-| Octopia (casino)               | `vtex.octopia-integration             |
-| Seller Products Import         | `vtex.seller-products-import          |
+| Advanced seller onboarding      | `vtexromania.advanced-seller-onboarding` |
+| Google Shopping                | `vtex.google-shopping`<br>`vtex.google-shopping-api`             |
+| Glovo                          | `vtex.glovo-integration`               |
+| Lengow                         | `vtex.lengow-integration`              |
+| Mktplace Financial Commissions | `vtex.marketplace-financial-commission` |
+| Mktplace Mapper                | `vtex.seller-mkp-mapper`               |
+| Octopia (casino)               | `vtex.octopia-integration`             |
+| Seller Products Import         | `vtex.seller-products-import`          |
 
 ### Obversability
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Logger GraphQL         | `vtex.vtex-logger-graphql |
-| Logger React              | `vtex.vtex-logger-react   |
+| Logger GraphQL         | `vtex.vtex-logger-graphql` |
+| Logger React              | `vtex.vtex-logger-react`   |
 
 ### Order
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Lightspeed            | `vtex.lightspeed                 |
-| Order Quote           | qualitydigital.order-quote      |
-| Order Summary         | `vtex.external-invoice-viewer    |
-| Order Bulk Import     | `vtex.admin-order-bulk-import    |
-| Smartbill Integration | `vtex.smartbill                  |
-| Yotpo Integration     | `vtex.yotpo-integration          |
+| Lightspeed            | `vtex.lightspeed`                 |
+| Order Quote           | `qualitydigital.order-quote`      |
+| Order Summary         | `vtex.external-invoice-viewer`    |
+| Order Bulk Import     | `vtex.admin-order-bulk-import`    |
+| Smartbill Integration | `vtex.smartbill`                  |
+| Yotpo Integration     | `vtex.yotpo-integration`          |
 
 ### Payment
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Bizum (PPP)                     | `vtex.integration-bizum                   |
-| Cetelem (PPP)                   | `vtex.integration-cetelem                 |
-| Digital River                   | qualitydigital.digital-river             |
-| GestPay (PPP)                   | `vtex.ppp-gestpay                         |
-| Instore Payments North Latam    | `vtex.order-instore                       |
-| Mollie (PPP)                    | `vtex.integration-mollie                  |
-| ONEY (PPP)                      | `vtex.oney-auth-app                       |
-| Payment APP PuntosColombia      | exito.pco-payment-authorization-app      |
-| Payment APP TuyaPay             | vtexcol.tuyapay-payment-authorization-app |
-| Sequra (PPP)                    | `vtex.sequra-connector                    |
-| Sequra promotions               | `vtex.sequra-promotions                   |
-| Stripe Connect (PPP)            | `vtex.ppp-stripe-connect                  |
-| WorldLine SIPS (casino)         | `vtex.ppp-worldline-sips                  |
+| Bizum (PPP)                     | `vtex.integration-bizum`                   |
+| Cetelem (PPP)                   | `vtex.integration-cetelem`                 |
+| Digital River                   | `qualitydigital.digital-river`             |
+| GestPay (PPP)                   | `vtex.ppp-gestpay`                         |
+| Instore Payments North Latam    | `vtex.order-instore`                       |
+| Mollie (PPP)                    | `vtex.integration-mollie`                  |
+| ONEY (PPP)                      | `vtex.oney-auth-app`                       |
+| Payment APP PuntosColombia      | `exito.pco-payment-authorization-app`      |
+| Payment APP TuyaPay             | `vtexcol.tuyapay-payment-authorization-app` |
+| Sequra (PPP)                    | `vtex.sequra-connector`                    |
+| Sequra promotions               | `vtex.sequra-promotions`                   |
+| Stripe Connect (PPP)            | `vtex.ppp-stripe-connect`                  |
+| WorldLine SIPS (casino)         | `vtex.ppp-worldline-sips`                  |
 
 ### Pixel
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| accessiBe        | `vtex.accessibe                      |
-| Adobe Launch Pixel| vtexasia.adobe-launch-pixel        |
-| Digioh           | `vtex.digioh-pixel                   |
-| edrone pixel     | vtexromania.edrone                  |
-| Facebook         | `vtex.facebook-capi<br>`vtex.facebook-fbe<br>`vtex.facebook-checkout-pixel<br>`vtex.facebook-fbe-webhook<br>`vtex.facebook-fbe-authentication<br>`vtex.facebook-fbe-redirect<br>`vtex.facebook-fbe-service<br>`vtex.facebook-fbe-worker      |
-| Klaviyo          | `vtex.klaviyo-pixel                  |
-| Listrak          | `vtex.listrak-pixel                  |
-| newsman pixel    | `vtex.newsman                        |
-| Podium           | `vtex.podium-pixel                   |
-| retargeting pixel| `vtex.retargeting                    |
-| Tiktok           | vtexbr.tiktok-tbp                   |
-| Treasure Data    | qualitydigital.treasure-data-pixel  |
-| Wordpress App    | `vtex.wordpress-integration          |
+| accessiBe        | `vtex.accessibe`                      |
+| Adobe Launch Pixel| `vtexasia.adobe-launch-pixel`        |
+| Digioh           | `vtex.digioh-pixel`                   |
+| edrone pixel     | vtexromania.edrone`                  |
+| Facebook         | `vtex.facebook-capi`<br>`vtex.facebook-fbe`<br>`vtex.facebook-checkout-pixel`<br>`vtex.facebook-fbe-webhook`<br>`vtex.facebook-fbe-authentication`<br>`vtex.facebook-fbe-redirect`<br>`vtex.facebook-fbe-service`<br>`vtex.facebook-fbe-worker`      |
+| Klaviyo          | `vtex.klaviyo-pixel`                  |
+| Listrak          | `vtex.listrak-pixel`                  |
+| newsman pixel    | `vtex.newsman`                        |
+| Podium           | `vtex.podium-pixel`                   |
+| retargeting pixel| `vtex.retargeting`                    |
+| Tiktok           | `vtexbr.tiktok-tbp`                   |
+| Treasure Data    | `qualitydigital.treasure-data-pixel`  |
+| Wordpress App    | `vtex.wordpress-integration`          |
 
 ### Pricing and Promotions
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| External Promotion Provider  | `vtex.external-promotion-provider-middleware |
-| Massive Price Update         | vtexarg.massive-price-update            |
-| Tintometric (for paint shops)| vtexarg.tintometric                     |
+| External Promotion Provider  | `vtex.external-promotion-provider-middleware` |
+| Massive Price Update         | `vtexarg.massive-price-update`            |
+| Tintometric (for paint shops)| `vtexarg.tintometric`                     |
 
 ### Shopper experience
 
@@ -186,46 +184,46 @@ See below the deprecated app’s list.
 | ----------------------------- | ---------------------------- |
 | Availability Notifier      | `vtex.availability-notify               |
 | Buy Box                    | `vtex.buybox-resolver`<br>`vtex.buybox-context`<br>`vtex.buybox-graphql` |
-| Kit Look                   | `vtex.kit-look                          |
-| Minicart free shipping bar | vtexeurope.minicart-freeshipping-bar    |
-| Pickup Selector            | `vtex.pickup-selector                   |
-| Power Reviews              | `vtex.powerreviews                      |
-| QR & Bar Code Reader       | vtexarg.qr-barcode-reader              |
-| Quantity on Cart           | vtexarg.quantity-on-cart                |
-| Questions and Answers      | `vtex.questions-and-answers             |
-| Reviews and Ratings        | `vtex.reviews-and-ratings               |
-| Shopper Approved           | qualitydigital.shopper-approved        |
-| Speech to Text             | vtexarg.speech-to-text                 |
-| Viewed products            | `vtex.viewed-products                   |
-| Wishlist                   | `vtex.wish-list                         |
-| Yotpo                      | `vtex.yotpo                             |
-| Yotpo UGC                  | `vtex.yotpo-visual-ugc                  |
+| Kit Look                   | `vtex.kit-look`                          |
+| Minicart free shipping bar | `vtexeurope.minicart-freeshipping-bar`    |
+| Pickup Selector            | `vtex.pickup-selector`                   |
+| Power Reviews              | `vtex.powerreviews`                      |
+| QR & Bar Code Reader       | `vtexarg.qr-barcode-reader`              |
+| Quantity on Cart           | `vtexarg.quantity-on-cart`                |
+| Questions and Answers      | `vtex.questions-and-answers`             |
+| Reviews and Ratings        | `vtex.reviews-and-ratings`               |
+| Shopper Approved           | `qualitydigital.shopper-approved`        |
+| Speech to Text             | `vtexarg.speech-to-text`                 |
+| Viewed products            | `vtex.viewed-products`                   |
+| Wishlist                   | `vtex.wish-list`                         |
+| Yotpo                      | `vtex.yotpo`                             |
+| Yotpo UGC                  | `vtex.yotpo-visual-ugc`                  |
 
 ### Store management
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| WorkSpace Manager  | ``vtex.workspace-manager |
+| WorkSpace Manager  | `vtex.workspace-manager` |
 
 ### Storefront
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Badges            | `vtex.badges                  |
-| Bazaarvoice       | `vtex.bazaarvoice             |
-| Disposition Layout| `vtex.disposition-layout      |
-| Info card list    | `vtex.info-card-list-context  |
-| Mega Menu         | `vtex.mega-menu               |
-| Toggle Layout     | `vtex.toggle-layout           |
+| Badges            | `vtex.badges`                  |
+| Bazaarvoice       | `vtex.bazaarvoice`             |
+| Disposition Layout| `vtex.disposition-layout`      |
+| Info card list    | `vtex.info-card-list-context`  |
+| Mega Menu         | `vtex.mega-menu`               |
+| Toggle Layout     | `vtex.toggle-layout`           |
 
 ### Tax Service
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Avalara  | qualitydigital.avalara|
-| TaxJar   | qualitydigital.taxjar |
-| Taxproxy | `vtex.tax-proxy        |
-| Vertex   | `vtex.vertex           |
+| Avalara  | qualitydigital.avalara` |
+| TaxJar   | qualitydigital.taxjar` |
+| Taxproxy | `vtex.tax-proxy`        |
+| Vertex   | `vtex.vertex`           |
 
 ## Checking your store’s apps
 
