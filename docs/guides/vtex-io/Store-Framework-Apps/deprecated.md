@@ -22,28 +22,21 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 See below the deprecated app’s list.
 
-<details>
-<summary>Account management</summary>
+### Account management
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Binding Selector          | `vtex.binding-selector` |
 | Franchise Setup          | `vtex.franchise-setup`   |
 
-</details>
-
-<details>
-<summary>Analytics</summary>
+### Analytics
 
 | App                             | `vendor.app-name`    |
 | ---------------------------- | ---------------------------- |
 | AB Tester                   | vtexarg.abtester`         |
 | Lightspeed                 | `vtex.lightspeed`           |
 
-</details>
-
-<details>
-<summary>Catalog</summary>
+### Catalog
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -54,10 +47,7 @@ See below the deprecated app’s list.
 | Google Drive Import | qualitydigital.google-drive-import |
 | Massive Score Update | vtexarg.massive-score-update |
 
-</details>
-
-<details>
-<summary>Checkout</summary>
+### Checkout
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -68,40 +58,28 @@ See below the deprecated app’s list.
 | GiveX                 | qualitydigital.givex               |
 | TSYS Gift Cards       | `vtex.tsys-merchantware             |
 
-</details>
-
-<details>
-<summary>Content management</summary>
+### Content management
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | GeoCMS | qualitydigital.geocms-store-locator |
 | Yext | `vtex.yext-store-locator |
 
-</details>
-
-<details>
-<summary>Data management</summary>
+### Data management
 
 | App                                | `vendor.app-name`    |
 | -------------------------------- | ---------------------------- |
 | Customer Management  | `vtex.admin-customers<br>`vtex.admin-customers-graphql |
 | Safe Data                        | `vtex.safedata               |
 
-</details>
-
-<details>
-<summary>Multi-language and Multi-currency</summary>
+### Multi-language and Multi-currency
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Catalog Translation API| `vtex.catalog-translations-rest |
 | Currency Selector      | `vtex.currency-selector         |
 
-</details>
-
-<details>
-<summary>Logistics</summary>
+### Logistics
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -118,10 +96,7 @@ See below the deprecated app’s list.
 | Shopper Location (Inventory Locator)     | qualitydigital.shopper-location      |
 | Store Locator                           | `vtex.store-locator                  |
 
-</details>
-
-<details>
-<summary>Marketing and Sales</summary>
+### Marketing and Sales
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -130,10 +105,7 @@ See below the deprecated app’s list.
 | Marketing Autopilot | vtexbr.marketing-autopilot       |
 | SMS Provider        | qualitydigital.sms-provider      |
 
-</details>
-
-<details>
-<summary>Marketplace</summary>
+### Marketplace
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -146,20 +118,14 @@ See below the deprecated app’s list.
 | Octopia (casino)               | `vtex.octopia-integration             |
 | Seller Products Import         | `vtex.seller-products-import          |
 
-</details>
-
-<details>
-<summary>Obversability</summary>
+### Obversability
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Logger GraphQL         | `vtex.vtex-logger-graphql |
 | Logger React              | `vtex.vtex-logger-react   |
 
-</details>
-
-<details>
-<summary>Order</summary>
+### Order
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -170,10 +136,7 @@ See below the deprecated app’s list.
 | Smartbill Integration | `vtex.smartbill                  |
 | Yotpo Integration     | `vtex.yotpo-integration          |
 
-</details>
-
-<details>
-<summary> </summary>
+### Payment
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -191,10 +154,7 @@ See below the deprecated app’s list.
 | Stripe Connect (PPP)            | `vtex.ppp-stripe-connect                  |
 | WorldLine SIPS (casino)         | `vtex.ppp-worldline-sips                  |
 
-</details>
-
-<details>
-<summary>Pixel</summary>
+### Pixel
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -202,7 +162,7 @@ See below the deprecated app’s list.
 | Adobe Launch Pixel| vtexasia.adobe-launch-pixel        |
 | Digioh           | `vtex.digioh-pixel                   |
 | edrone pixel     | vtexromania.edrone                  |
-| Facebook         | `vtex.facebook-capi<br>`vtex.facebook-fbe<br>`vtex.facebook-checkout-pixel<br>`vtex.facebook-fbe-webhook<br>`vtex.facebook-fbe-authentication<br>`vtex.facebook-fbe-redirect<br>`vtex.facebook-fbe-service<br>`vtex.facebook-fbe-worker            |
+| Facebook         | `vtex.facebook-capi<br>`vtex.facebook-fbe<br>`vtex.facebook-checkout-pixel<br>`vtex.facebook-fbe-webhook<br>`vtex.facebook-fbe-authentication<br>`vtex.facebook-fbe-redirect<br>`vtex.facebook-fbe-service<br>`vtex.facebook-fbe-worker      |
 | Klaviyo          | `vtex.klaviyo-pixel                  |
 | Listrak          | `vtex.listrak-pixel                  |
 | newsman pixel    | `vtex.newsman                        |
@@ -212,10 +172,7 @@ See below the deprecated app’s list.
 | Treasure Data    | qualitydigital.treasure-data-pixel  |
 | Wordpress App    | `vtex.wordpress-integration          |
 
-</details>
-
-<details>
-<summary>Pricing and Promotions</summary>
+### Pricing and Promotions
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -223,17 +180,12 @@ See below the deprecated app’s list.
 | Massive Price Update         | vtexarg.massive-price-update            |
 | Tintometric (for paint shops)| vtexarg.tintometric                     |
 
-</details>
-
-<details>
-<summary>Shopper experience</summary>
+### Shopper experience
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Availability Notifier      | `vtex.availability-notify               |
-| Buy Box                    | `vtex.buybox-resolver                   |
-| Buy Box                    | `vtex.buybox-context                    |
-| Buy Box                    | `vtex.buybox-graphql                    |
+| Buy Box                    | `vtex.buybox-resolver`<br>`vtex.buybox-context`<br>`vtex.buybox-graphql` |
 | Kit Look                   | `vtex.kit-look                          |
 | Minicart free shipping bar | vtexeurope.minicart-freeshipping-bar    |
 | Pickup Selector            | `vtex.pickup-selector                   |
@@ -249,19 +201,13 @@ See below the deprecated app’s list.
 | Yotpo                      | `vtex.yotpo                             |
 | Yotpo UGC                  | `vtex.yotpo-visual-ugc                  |
 
-</details>
-
-<details>
-<summary>Store management</summary>
+### Store management
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | WorkSpace Manager  | ``vtex.workspace-manager |
 
-</details>
-
-<details>
-<summary>Storefront</summary>
+### Storefront
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -272,10 +218,7 @@ See below the deprecated app’s list.
 | Mega Menu         | `vtex.mega-menu               |
 | Toggle Layout     | `vtex.toggle-layout           |
 
-</details>
-
-<details>
-<summary>Tax Service</summary>
+### Tax Service
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -284,11 +227,9 @@ See below the deprecated app’s list.
 | Taxproxy | `vtex.tax-proxy        |
 | Vertex   | `vtex.vertex           |
 
-</details>
-
 ## Checking your store’s apps
 
-To identify the apps your store uses, [review its dependencies](#review-dependencies) and [check the installed apps](#check-the-installed-apps) on it.
+If your store is using a deprecated app, [review its dependencies](#review-dependencies) and [check the installed apps](#check-the-installed-apps).
 
 ### Review dependencies
 
@@ -303,4 +244,4 @@ Review any [dependencies](https://developers.vtex.com/docs/guides/vtex-io-docume
 Check the apps installed in your account:
  
 1. Open the terminal and run the `vtex list` command.
-2. Check the apps installed.
+2. Identify the apps installed.
