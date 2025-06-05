@@ -124,7 +124,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Logger GraphQL         | `vtex.vtex-logger-graphql` |
 | Logger React              | `vtex.vtex-logger-react`   |
 
-### Order
+### Orders
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
@@ -135,7 +135,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Smartbill Integration | `vtex.smartbill`                  |
 | Yotpo Integration     | `vtex.yotpo-integration`          |
 
-### Payment
+### Payments
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
