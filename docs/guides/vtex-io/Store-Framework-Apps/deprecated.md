@@ -31,7 +31,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                             | `vendor.app-name`    |
 | ---------------------------- | ---------------------------- |
-| AB Tester                   | vtexarg.abtester`         |
+| AB Tester                   | `vtexarg.abtester`         |
 | Lightspeed                 | `vtex.lightspeed`           |
 
 ### Catalog
@@ -39,7 +39,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Admin Catalog Translation | `vtex.admin-catalog-translations` |
-| Assembly Options | `vtex.admin-assembly-options`<br>`vtex.assembly-options-graphql` |
+| Assembly Options | `vtex.admin-assembly-options`<br><br>`vtex.assembly-options-graphql` |
 | Export Feeds IO | `vtex.export-feeds-io` |
 | Google Catalog Import | `vtex.sheets-catalog-import` |
 | Google Drive Import | `qualitydigital.google-drive-import` |
@@ -67,7 +67,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                                | `vendor.app-name`    |
 | -------------------------------- | ---------------------------- |
-| Customer Management  | `vtex.admin-customers`<br>`vtex.admin-customers-graphql` |
+| Customer Management  | `vtex.admin-customers`<br><br>`vtex.admin-customers-graphql` |
 | Safe Data                        | `vtex.safedata`               |
 
 ### Multi-language and Multi-currency
@@ -108,7 +108,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Advanced seller onboarding      | `vtexromania.advanced-seller-onboarding` |
-| Google Shopping                | `vtex.google-shopping`<br>`vtex.google-shopping-api`             |
+| Google Shopping                | `vtex.google-shopping`<br><br>`vtex.google-shopping-api`   |
 | Glovo                          | `vtex.glovo-integration`               |
 | Lengow                         | `vtex.lengow-integration`              |
 | Mktplace Financial Commissions | `vtex.marketplace-financial-commission` |
@@ -159,8 +159,8 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | accessiBe        | `vtex.accessibe`                      |
 | Adobe Launch Pixel| `vtexasia.adobe-launch-pixel`        |
 | Digioh           | `vtex.digioh-pixel`                   |
-| edrone pixel     | vtexromania.edrone`                  |
-| Facebook         | `vtex.facebook-capi`<br>`vtex.facebook-fbe`<br>`vtex.facebook-checkout-pixel`<br>`vtex.facebook-fbe-webhook`<br>`vtex.facebook-fbe-authentication`<br>`vtex.facebook-fbe-redirect`<br>`vtex.facebook-fbe-service`<br>`vtex.facebook-fbe-worker`      |
+| edrone pixel     | `vtexromania.edrone`                  |
+| Facebook         | `vtex.facebook-capi`<br><br>`vtex.facebook-fbe`<br><br>`vtex.facebook-checkout-pixel`<br><br>`vtex.facebook-fbe-webhook`<br><br>`vtex.facebook-fbe-authentication`<br><br>`vtex.facebook-fbe-redirect`<br><br>`vtex.facebook-fbe-service`<br><br>`vtex.facebook-fbe-worker`      |
 | Klaviyo          | `vtex.klaviyo-pixel`                  |
 | Listrak          | `vtex.listrak-pixel`                  |
 | newsman pixel    | `vtex.newsman`                        |
@@ -182,8 +182,8 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Availability Notifier      | `vtex.availability-notify               |
-| Buy Box                    | `vtex.buybox-resolver`<br>`vtex.buybox-context`<br>`vtex.buybox-graphql` |
+| Availability Notifier      | `vtex.availability-notify`               |
+| Buy Box                    | `vtex.buybox-resolver`<br><br>`vtex.buybox-context`<br><br>`vtex.buybox-graphql` |
 | Kit Look                   | `vtex.kit-look`                          |
 | Minicart free shipping bar | `vtexeurope.minicart-freeshipping-bar`    |
 | Pickup Selector            | `vtex.pickup-selector`                   |
@@ -220,8 +220,8 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Avalara  | qualitydigital.avalara` |
-| TaxJar   | qualitydigital.taxjar` |
+| Avalara  | `qualitydigital.avalara` |
+| TaxJar   | `qualitydigital.taxjar` |
 | Taxproxy | `vtex.tax-proxy`        |
 | Vertex   | `vtex.vertex`           |
 
