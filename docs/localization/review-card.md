@@ -7,7 +7,7 @@ components:
   - ReviewCardDate.tsx
 ---
 
-The `ReviewCard` component displays key details of a product review in a structured format. The final component is composed of the following:
+The `ReviewCard` component displays key details of a product review in a structured format. The final component contains the following:
 
 - `ReviewCard`: Renders the main container that structures the review content. It displays the review title, text, rating, author information, and date, while managing expandable text functionality.
 - `ReviewCardAuthor`: Displays the author’s name and verification status.
@@ -16,7 +16,7 @@ The `ReviewCard` component displays key details of a product review in a structu
 ---
 ## Import
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index).
 
 ```tsx
 import { ReviewCard, ReviewCardAuthor, ReviewCardDate } from '@faststore/ui'
@@ -50,7 +50,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -72,7 +72,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
+### Nested elements
 
 <OverviewSection>
   <ReviewCard
@@ -83,8 +83,8 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     author="John"
     date={new Date('2025-05-01')}
     isVerified={true}
-    readMoreText="Read More"
-    readLessText="Read Less"
+    readMoreText="Show more"
+    readLessText="Show less"
   />
 </OverviewSection>
 
@@ -97,8 +97,8 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     author="John"
     date={new Date('2025-05-01')}
     isVerified={true}
-    readMoreText="Read More"
-    readLessText="Read Less"
+    readMoreText="Show more"
+    readLessText="Show less"
   />
 ```
 #### Header
