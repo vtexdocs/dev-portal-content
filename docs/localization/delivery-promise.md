@@ -110,7 +110,7 @@ The expected response is that you receive the message `CMS synced successfully..
 
 - **Region Modal section:** Go to *Storefronts > Headless CMS > Global Sections > Region Modal*.
 
-You only need to [add one new section](#adding-the-region-popover-section), the `Region Popover`.
+You only need to [add one new section](#step-3-adding-region-popover-section), the `Region Popover`.
 
 ### Step 3 - Adding `Region Popover` section
 
@@ -168,11 +168,7 @@ To make the postal code mandatory, open your `discovery.config.js` file and chan
 
 To better understand how this flow works, see the following diagram.
 
----
-config:
-  look: classic
-  theme: default
----
+```mermaid
 graph TD
     A{"User provided location?"} -- Yes --> B(["Use the provided location"])
     A -- No --> C{"Logged-in user's address available?"}
@@ -184,3 +180,4 @@ graph TD
     K --> L["User inputs postal code"]
     L --> M(["Use the provided postal code"])
     H -- No --> N(["Display products without using Delivery Promise"])
+```
