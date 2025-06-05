@@ -89,12 +89,11 @@ Run the `yarn upgrade @faststore/cli` command to update the `@faststore/cli` pac
 2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
 3. Under the [`deliveryPromise`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options#deliverypromise) section, set the `enabled` value to `true`. Set the `mandatory` value according to your business needs. Learn more in the [Default settings](#default-settings) section.
 
-	```js discovery.config.js
-	deliveryPromise: {
-	   enabled: true,
-  	   mandatory: false,
-	}
-	```
+ ```js discovery.config.js
+ deliveryPromise: {
+    enabled: true,
+      mandatory: false,
+ }
 
 4. Open a ticket to [VTEX support](https://help.vtex.com/en/support) and ask to enable Delivery Promise in your account.
 
@@ -102,7 +101,7 @@ Run the `yarn upgrade @faststore/cli` command to update the `@faststore/cli` pac
 
 After receiving the confirmation that Delivery Promise is set up in your account, run the `faststore cms-sync` command to sync the `cms` folder of your FastStore project with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
-The expected response is that you receive the message `CMS synced successfully... `. The native regionalization components and sections will be automatically updated. You can check them in the VTEX Admin:
+The expected response is that you receive the message `CMS synced successfully...`. The native regionalization components and sections will be automatically updated. You can check them in the VTEX Admin:
 
 - **Regionalization component:** Go to *Storefronts > Headless CMS > Global Sections > NavBar > Navigation > Regionalization*.
 
@@ -133,7 +132,8 @@ To set a default zip code for your store, follow the steps below:
 2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
 3. In the [`session`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options#session) object, set the `postalCode` value according to your scenario. See the following example:
 
-	```js discovery.config.js mark=12
+ ```js discovery.config.js mark=12
+
   session: {
     currency: {
       code: "USD",
@@ -163,7 +163,7 @@ To provide accurate Delivery Promise estimates, FastStore projects determine use
 
 4. **No postal code (not mandatory):** If no postal code is provided, and it’s not mandatory, products are displayed without using Delivery Promise.
 5. **No postal code (mandatory)**: If no postal code is provided and it’s mandatory, a modal is displayed that the buyer cannot close until a postal code is entered. 
-	
+ 
 To make the postal code mandatory, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
 
 To better understand how this flow works, see the following diagram.
