@@ -1,6 +1,7 @@
 ---
 title: "Deprecated"
 slug: "deprecated"
+excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
 updatedAt: "2025-06-05T14:56:20.954Z"
