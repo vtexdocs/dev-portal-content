@@ -35,7 +35,7 @@ Review any [dependencies](https://developers.vtex.com/docs/guides/vtex-io-docume
 ### Check the apps installed
 
 Check the apps installed in your account:
-	
+ 
 1. Open the terminal and run the `vtex list` command.
 2. Check the apps installed.
 
