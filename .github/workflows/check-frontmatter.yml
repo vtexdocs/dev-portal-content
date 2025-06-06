@@ -20,4 +20,4 @@ jobs:
       - name: Run frontmatter review script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python .github/scripts/frontmatter_review.py
+        run: python .github/scripts/check_frontmatter.py
