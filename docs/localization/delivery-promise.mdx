@@ -84,7 +84,7 @@ Run the `yarn upgrade @faststore/cli` command to update the `@faststore/cli` pac
 
 ### Open a ticket to VTEX support
 
-Open a ticket to [VTEX support](https://help.vtex.com/en/support) and ask to enable Delivery Promise in your account.
+Open a ticket to [VTEX support](https://help.vtex.com/en/support) and request the activation of Delivery Promise for your account
 
 ## Instructions
 
@@ -128,40 +128,40 @@ You only need to [add one new section](#step-3-adding-region-popover-section), t
 
 Learn more in [Adding Sections to the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)
 
-### [Optional] Step 4 - Defining default zip code
+### Step 4 - [Optional] Defining default postal code
 
-To set a default zip code for your store, follow the steps below:
+To set a default postal code for your store, follow the steps below:
 
 1. Open your FastStore project using the code editor of your choice.
 2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
 3. In the [`session`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options#session) object, set the `postalCode` value according to your scenario. See the following example:
 
- ```js discovery.config.js mark=12
-  session: {
-    currency: {
-      code: "USD",
-      symbol: "$",
-    },
-    locale: "en-US",
-    channel: '{"salesChannel":"1","regionId":""}',
-    country: "USA",
-    deliveryMode: null,
-    addressType: null,
-    city: null,
-    postalCode: 10021,
-    geoCoordinates: null,
-    person: null,
-  },
-  ```
+     ```js discovery.config.js mark=12
+      session: {
+        currency: {
+          code: "USD",
+          symbol: "$",
+        },
+        locale: "en-US",
+        channel: '{"salesChannel":"1","regionId":""}',
+        country: "USA",
+        deliveryMode: null,
+        addressType: null,
+        city: null,
+        postalCode: 10021,
+        geoCoordinates: null,
+        person: null,
+      },
+      ```
 
 ## Understanding location priority
 
 To provide accurate Delivery Promise estimates, FastStore projects determine user location based on the following priority:
 
-1. **User-provided location:** If the user provided their location, such as postal code, this information is used. No further action is needed to use Delivery Promise; just ensure that the [instructions](#instructions) provided above are completed.
-2. **Logged-in user’s address:** If the user hasn’t provided a postal code, we attempt to identify the location using the logged-in user's address. No further action is needed to use Delivery Promise; just ensure that the [instructions](#instructions) provided above are completed.
-3. **Default postal code:** If the user hasn't provided a location, isn’t logged in or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#optional-step-4-defining-a-default-postal-code).
-4. **No postal code (not mandatory):** If no postal code is provided, and it’s not mandatory, products are displayed without using Delivery Promise.
+1. **User-provided location:** If the user provided their location, such as postal code, this information is used.
+2. **Logged-in user’s address:** If the user hasn’t provided a postal code, we attempt to identify the location using the logged-in user's address.
+3. **Default postal code:** If the user hasn't provided a location, isn’t logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-default-postal-code).
+4. **No postal code (not mandatory):** If no postal code is provided and it’s not mandatory, products are displayed without using Delivery Promise.
 5. **No postal code (mandatory)**: If no postal code is provided and it’s mandatory, a modal is displayed that the buyer cannot close until a postal code is entered. 
  
 To make the postal code mandatory, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
