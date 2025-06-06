@@ -3,7 +3,7 @@ title: "VTEX IO Apps: End of official support for legacy apps"
 slug: "2025-06-05-vtex-io-apps-end-of-official-support-for-legay-apps"
 type: deprecated
 excerpt: "VTEX no longer offers support for legacy apps."
-createdAt: "2025-06-05T20:20:14.287Z"
+createdAt: "2025-06-06T12:45:40.909Z"
 updatedAt: ""
 hidden: false
 ---
