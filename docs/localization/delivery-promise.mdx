@@ -23,7 +23,7 @@ deliveryPromise: {
 ```
 
 - `enabled`: When set to **true**, Delivery Promise activates, allowing the store to provide delivery estimates based on the customer’s location.
-- `mandatory`: When set to **false**, providing a postal code is optional for the user. Customers can browse and purchase items without submitting their zip code, though the accuracy of delivery information may be limited.
+- `mandatory`: When set to **false**, providing a postal code is optional for the user. Customers can browse and add items to cart without submitting their zip code, though the accuracy of delivery information may be limited.
 
 If your FastStore project was created before the launch of Delivery Promise, follow the instructions below to activate it.
 
@@ -154,7 +154,7 @@ To provide accurate Delivery Promise estimates, FastStore projects determine use
 
 1. **User-provided location:** If the user provided their location, such as postal code, this information is used. No further action is needed to use Delivery Promise; just ensure that the [instructions](#instructions) provided above are completed.
 2. **Logged-in user’s address:** If the user hasn’t provided a postal code, we attempt to identify the location using the logged-in user's address. No further action is needed to use Delivery Promise; just ensure that the [instructions](#instructions) provided above are completed.
-3. **Default postal code:** If the user isn’t logged in or has no address, we check if the merchant has configured a default postal code for all buyers.
+3. **Default postal code:** If the user hasn't provided a location, isn’t logged in or has no saved address, we check if the merchant has configured a default postal code for all buyers.
 
   Learn to do so in [Defining a default postal code](#optional-step-4-defining-a-default-postal-code).
 
