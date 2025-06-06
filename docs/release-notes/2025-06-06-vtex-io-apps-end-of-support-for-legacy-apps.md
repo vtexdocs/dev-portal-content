@@ -14,7 +14,7 @@ This decision allows us to focus on developing and improving other solutions tha
 
 ## What does it mean?
 
-Stores currently using unsupported apps can continue to use them, but at your own risk, considering:
+Stores currently using unsupported apps can continue to use them, but please be aware of the following:
 
 - VTEX no longer offers technical support for these apps.
 - VTEX assumes no responsibility for issues arising from its use.
