@@ -30,7 +30,7 @@ deliveryPromise: {
 ```
 
 - `enabled`: When set to **true**, Delivery Promise activates, allowing the store to provide delivery estimates based on the customer’s location.
-- `mandatory`: When set to **false**, providing a postal code is optional for the user. Customers can browse and add items to cart without submitting their zip code, though the accuracy of delivery information may be limited.
+- `mandatory`: When set to **false**, providing a postal code is optional for the user. Customers can browse and add items to the cart without submitting their postal code, though the accuracy of delivery information may be limited.
 
 ## Before you begin
 
@@ -119,7 +119,7 @@ You only need to [add one new section](#step-3-adding-region-popover-section), t
 
 `Region Popover` is a section to manage user location inputs.
 
-1. Access your VTEX Admin and go to **Storefront > Headless CMS > Global Sections**
+1. Access your VTEX Admin and go to **Storefront > Headless CMS > Global Sections**.
 2. In the Sections tab, click `+` to open a modal with a list of section options.
 3. Search for the **Region Popover** section and click on it to add.
 4. Set the `Title` and `Close popover aria-label` fields according to your scenario.
@@ -128,7 +128,9 @@ You only need to [add one new section](#step-3-adding-region-popover-section), t
 
 Learn more in [Adding Sections to the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)
 
-### Step 4 - [Optional] Defining default postal code
+### Step 4 - [Optional] Defining a default postal code
+
+The default postal code serves as a fallback mechanism when the user doesn't provide a location, isn't logged in, or has no saved address.
 
 To set a default postal code for your store, follow the steps below:
 
@@ -160,11 +162,9 @@ To provide accurate Delivery Promise estimates, FastStore projects determine use
 
 1. **User-provided location:** If the user provided their location, such as postal code, this information is used.
 2. **Logged-in user’s address:** If the user hasn’t provided a postal code, we attempt to identify the location using the logged-in user's address.
-3. **Default postal code:** If the user hasn't provided a location, isn’t logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-default-postal-code).
+3. **Default postal code:** If the user hasn't provided a location, isn’t logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
 4. **No postal code (not mandatory):** If no postal code is provided and it’s not mandatory, products are displayed without using Delivery Promise.
-5. **No postal code (mandatory)**: If no postal code is provided and it’s mandatory, a modal is displayed that the buyer cannot close until a postal code is entered. 
- 
-To make the postal code mandatory, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
+5. **No postal code (mandatory)**: If no postal code is provided and it’s mandatory, a modal is displayed that the buyer cannot close until a postal code is entered. To make the postal code mandatory, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
 
 To better understand how this flow works, see the following diagram.
 
