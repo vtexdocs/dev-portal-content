@@ -7,29 +7,29 @@ createdAt: "2025-05-21T10:18:55.338Z"
 updatedAt: "2025-05-21T10:18:55.338Z"
 ---
 
->ℹ️ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you are already a VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/br-pt/contato/).
+>ℹ️ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you're a current VTEX customer and want to adopt VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you're not a customer yet but are interested in this solution, please complete our [contact form](https://vtex.com/en-us/contact/).
 
 VTEX automatically manages SSL certificates for stores by default, but merchants may need to use their own certificates for specific compliance reasons, internal security requirements, or certification entities that offer additional warranties.
 
-To give them a flexible and secure way to upload their certificates to our infrastructure, we offer the [SSL Certificates API](https://developers.vtex.com/docs/api-reference/ssl-certificates-api) and the [SSL Certificates](https://help.vtex.com/tutorial/custom-ssl-certificates--1hoaDEbU50PDZSe6AYep9q) page in the Admin panel.
+To give them a flexible and secure way to upload their certificates to our infrastructure, we offer the [SSL Certificates API](https://developers.vtex.com/docs/api-reference/ssl-certificates-api) and the [SSL certificates](https://help.vtex.com/tutorial/custom-ssl-certificates--1hoaDEbU50PDZSe6AYep9q) page in the Admin.
 
-This guide explains how to use the API for certificate management.
+This guide explains how to use the API for managing certificates.
 
-The SSL Certificates API allows users to list their custom SSL certificates, get a specific certificate by its ID and install or renew a certificate.
+The SSL Certificates API allows users to list their custom SSL certificates, get a specific certificate by ID, and install or renew a certificate.
 
 ## Before you begin
 
-Make sure you comply with the following prerequisites to manage SSL certificates:
+Make sure you meet the following prerequisites to manage SSL certificates:
 
-* You must have adopted the [Custom SSL certificates](https://help.vtex.com/tutorial/custom-ssl-certificates--1hoaDEbU50PDZSe6AYep9q) feature from [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh).  
-* You must have a user or API key associated with a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that contains the following [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3):  
-  * **Product:** *CDN API*  
-  * **Category:** *Certificate management*  
-  * **Resources:** *Update certificate* and *View certificate*
+* You must have the [Custom SSL certificates](https://help.vtex.com/tutorial/custom-ssl-certificates--1hoaDEbU50PDZSe6AYep9q) feature from [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh).
+* You must have a user or API key associated with a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that contains the following [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3):
+* **Product:** *CDN API*
+* **Category:** *Certificate management*
+* **Resources:** *Update certificate* and *View certificate*
 
 ## Installing or renewing an SSL certificate
 
-To install a certificate you can send its information through the `PUT` [Install or renew SSL certificate](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#put-/api/edge/certificates) request, using *multipart/form-data* or *application/json*. The process of renewing a certificate is the same as the process of installing one.
+To install a certificate, you can send its information through an [Install or renew SSL certificate](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#put-/api/edge/certificates) `PUT` request, using *multipart/form-data* or *application/json*. The process of renewing a certificate is the same as the process of installing one.
 
 #### Request example \- multipart/form-data
 
@@ -108,11 +108,11 @@ In both cases, whether installing or renewing a certificate, the response should
 ]
 ```
 
->ℹ️ Find more details about each field in the `PUT` [Install or renew SSL certificate](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#put-/api/edge/certificates) reference.
+>ℹ️ Find more details about each field in the [Install or renew SSL certificate](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#put-/api/edge/certificates) `PUT` reference.
 
 ## Listing SSL certificates
 
-You can list your certificates with the `GET` [List SSL certificates](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates) endpoint, as exemplified below. Remember to replace the `accountName` and `VtexIdclientAutCookie` placeholders.
+You can list your certificates with the [List SSL certificates](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates) `GET` endpoint, as shown below. Remember to replace the `accountName` and `VtexIdclientAutCookie` placeholders.
 
 ### Request example
 
@@ -156,11 +156,11 @@ curl 'https://myaccountname.vtexcommercestable.com.br/api/edge/certificates' \
 ]
 ```
 
->ℹ️ Find more details about each field in the `GET` [List SSL certificates](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates) reference.
+>ℹ️ Find more details about each field in the [List SSL certificates](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates) `GET` reference.
 
 ## Getting an SSL certificate by its ID
 
-To get a specific certificate, you can use the `GET` [Get SSL certificate by ID](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates/-certificateId-) request. Remember to replace the `accountName` and `VtexIdclientAutCookie` placeholders.
+To get a specific certificate, you can use the [Get SSL certificate by ID](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates/-certificateId-) GET` request. Remember to replace the `accountName` and `VtexIdclientAutCookie` placeholders.
 
 ### Request example
 
@@ -203,4 +203,4 @@ t's Encrypt",
 }
 ```
 
->ℹ️ Find more details about each field in the `GET` [Get SSL certificate by ID](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates/-certificateId-) reference.
+>ℹ️ Find more details about each field in the [Get SSL certificate by ID](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates/-certificateId-) `GET` reference.
