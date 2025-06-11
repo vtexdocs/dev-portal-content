@@ -102,19 +102,40 @@ Once you've set the pages for testing and after a new deployment, go to the **Ov
 
 ## Settings
 
-The **Settings** tab is where you configure the production domain of the store as part of the go-live process. You can add your primary production domain to make sure it's properly set up for customer access. Before adding the domain, make sure the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) are correctly configured in your VTEX account settings.
+The **Settings** tab is where you manage the following configurations:
 
-![settings-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/settings-webops.png)
+- [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
+- [**Secrets**](#secrets): Store and securely manage sensitive information, such as API keys and passwords, required during FastStore deployment.
+
+![settings-webops](https://vtexhelp.vtexassets.com/assets/docs/src/secrets-webops___2869e469b5a613f389f19cc555f4c3c5.png) 
 
 ### Production domain
 
-In the **Production domain** section, choose the store domain from the dropdown list in the **Host** field and click `Add` to set up the primary domain of your store.
+As part of the [go-live](https://developers.vtex.com/docs/guides/faststore/go-live-overview) process, you must define your store's production domain, the main URL customers will use to access your store.
 
-### Current domains
+> ⚠️ Before adding the domain, make sure the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) are correctly configured in your VTEX account settings.
 
-The **Current Domains** section displays the default and primary domains that have been configured for your store. This section serves as a reference point to ensure that your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment. 
+In the **Production domain** section, select the store domain from the dropdown list in the **Host** field and click `Add` to set up your store's primary domain.
 
-If your domain isn't listed, it may indicate an issue with the configuration or DNS settings that need to be addressed before proceeding with the go-live.
+#### Current domains
+
+The **Current Domains** section displays the default and primary domains configured for your store. This section is a reference point to ensure your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment. 
+
+> ⚠️ If your domain isn't listed, it may indicate an issue with the configuration or DNS settings that need to be addressed before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly and the problem persists, open a ticket to [VTEX support](https://help.vtex.com/en/support).
+
+### Secrets
+
+Secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing secrets management via WebOps enhances security and consistency across deployment providers.
+
+In the **Secrets** section, define the **Key** and **Value** in their respective fields and click `Add` to set up the secret.
+
+>ℹ Learn more about Secrets in [Managing secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets).
+
+#### Current keys
+
+The **Current keys** section lists all secrets configured for your store. This list shows each secret’s key (the identifier), while the value is hidden by default for security reasons. You can toggle the visibility of a secret’s value if needed.
+
+In this section, you can update or delete an existing secret by clicking `⋮` and choosing the corresponding option, `Edit` or `Delete`.
 
 ## Deleting the project
 
@@ -122,4 +143,4 @@ To delete your FastStore project, click the **More actions menu** (`⋮`). Then,
 
 A modal to confirm your action will open.
 
-> ⚠️ Proceed with caution. Deleting the project can't be undone and will permanently remove all deployments and domains associated with it.
+> ⚠️ Proceed with caution. Deleting the project can't be undone, and all deployments and associated domains will be permanently removed.
