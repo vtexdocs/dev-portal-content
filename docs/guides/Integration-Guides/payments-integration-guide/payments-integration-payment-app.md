@@ -187,7 +187,7 @@ The [3D Secure 2](https://3dsecure2.com/) is a protocol that allows a website’
 
 The 3D Secure 2 (3DS2) is an evolution of the 3D Secure 1 (3DS1). It introduces the [frictionless authentication flow](https://3dsecure2.com/glossary/#what-is-frictionless-flow) and improves the purchase experience compared to 3DS1. More details about the differences between 3DS1 and 3DS2 can be found in the [3D Secure 2 FAQ](https://3dsecure2.com/frequently-asked-questions/#what-are-the-main-changes-in-3d-secure-2).
 
-> ⚠️ On VTEX, [3D Secure 2](https://3dsecure2.com/) can only be implemented through the Payment App, as the platform does not support alternative methods such as redirect URLs for this protocol.
+> ⚠️ On VTEX, [3D Secure 2](https://3dsecure2.com/) can only be implemented through the Payment App, as the platform doesn't support alternative methods such as redirect URLs for this protocol.
 
 #### 3DS2 flow
 
