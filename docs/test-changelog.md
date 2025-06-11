@@ -11,8 +11,11 @@ This is a test file for changelog generation.
 ## Section 1
 Fixed test content 1
 
-## Section 2
-Test content 2
-
 ## Media Section
-This section has a media reference. (Updated with more details)
+This section has a media reference.
+
+## Updated Section
+This section was added in an update commit.
+
+## Localization Section
+This section tests localization changes.
