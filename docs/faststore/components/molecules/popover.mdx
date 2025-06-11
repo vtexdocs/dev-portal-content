@@ -9,28 +9,7 @@ components:
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection containerStyle={{ flexDirection:'column', alignItems: 'normal' }}>
-    <>
-      <Button
-        variant="primary"
-        onClick={() => openPopover({ isOpen: true, triggerRef: buttonRef })}
-        ref={buttonRef}
-      >
-        Popover Trigger
-      </Button>
-
-      {displayPopover.isOpen && (
-        <Popover
-          title="Popover Title"
-          content={<div>Popover content goes here</div>}
-          dismissible
-          onDismiss={closePopover}
-          isOpen={displayPopover.isOpen}
-          triggerRef={displayPopover.triggerRef}
-          placement="bottom-start"
-          offsetTop={-16}
-        />
-      )}
-    </>
+        <PopoverUsage />
     </OverviewSection>
   </Tab>
   <Tab>
