@@ -15,4 +15,4 @@ Fixed test content 1
 Test content 2
 
 ## Media Section
-This section has a media reference.
+This section has a media reference. (Updated with more details)
