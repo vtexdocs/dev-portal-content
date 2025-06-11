@@ -13,3 +13,6 @@ Fixed test content 1
 
 ## Section 2
 Test content 2
+
+## Media Section
+This section has a media reference.
