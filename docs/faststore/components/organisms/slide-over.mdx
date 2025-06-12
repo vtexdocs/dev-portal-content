@@ -1,6 +1,6 @@
 ---
 title: "SlideOver"
-excerpt: Represents an aditional session that complements the screen's information.
+excerpt: Represents an additional session that complements the screen's information.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
 components:
@@ -8,7 +8,7 @@ components:
   - SlideOverHeader.tsx
 ---
 
-The `SlideOver` component represents an aditional session that complements the screen's information.
+The `SlideOver` component represents an additional session that complements the screen's information.
 
 ## Import
 
@@ -57,6 +57,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     <b>Open Partial</b>
 
     ```tsx
+      import { SlideOver } from '@faststore/ui'
       export const SlideOverPartialRight = () => {
         const { modal, openModal } = useUI()
         return (
@@ -65,7 +66,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
               Right
             </Button>
             {modal && (
-              <SlideOverUsage size="partial" direction="rightSide" isOpen={modal} />
+              <SlideOver size="partial" direction="rightSide" isOpen={modal} >
+                <div style={{ padding: 16 }}>
+                  <h2>SlideOver content</h2>
+                  <button onClick={handleClose}>Close</button>
+                </div>
+              </SlideOver>
             )}
           </>
         )
@@ -73,6 +79,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     ```
 
     ```tsx
+      import { SlideOver } from '@faststore/ui'
       export const SlideOverPartialLeft = () => {
         const { modal, openModal } = useUI()
         return (
@@ -81,7 +88,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
               Left
             </Button>
             {modal && (
-              <SlideOverUsage size="partial" direction="leftSide" isOpen={modal} />
+              <SlideOver size="partial" direction="leftSide" isOpen={modal} fade={modal ? 'in' : 'out'} onDismiss={openModal} >
+                <div style={{ padding: 16 }}>
+                  <h2>SlideOver content</h2>
+                  <button onClick={handleClose}>Close</button>
+                </div>
+              </SlideOver>
             )}
           </>
         )
@@ -91,6 +103,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     <b>Open Full</b>
   
   ```tsx
+  import { SlideOver } from '@faststore/ui'
   export const SlideOverFullRight = () => {
     const { modal, openModal } = useUI()
     return (
@@ -99,7 +112,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
           Right
         </Button>
         {modal && (
-          <SlideOverUsage size="full" direction="rightSide" isOpen={modal} />
+          <SlideOver size="full" direction="rightSide" isOpen={modal} fade={modal ? 'in' : 'out'} onDismiss={openModal} >
+            <div style={{ padding: 16 }}>
+              <h2>SlideOver content</h2>
+              <button onClick={handleClose}>Close</button>
+            </div>
+          </SlideOver>
         )}
       </>
     )
@@ -107,6 +125,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   ```
 
     ```tsx
+    import { SlideOver } from '@faststore/ui'
     export const SlideOverFullLeft = () => {
       const { modal, openModal } = useUI()
       return (
@@ -115,7 +134,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
             Left
           </Button>
           {modal && (
-            <SlideOverUsage size="full" direction="leftSide" isOpen={modal} />
+            <SlideOverUsage size="full" direction="leftSide" isOpen={modal} fade={modal ? 'in' : 'out'} onDismiss={openModal} >
+              <div style={{ padding: 16 }}>
+                <h2>SlideOver content</h2>
+                <button onClick={handleClose}>Close</button>
+              </div>
+          </SlideOver>
           )}
         </>
       )
