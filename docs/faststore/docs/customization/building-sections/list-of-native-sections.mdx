@@ -1402,3 +1402,338 @@ Check the available Headless CMS schema that you can customize for this componen
 ```
 
 </details>
+
+---
+
+### ReviewsAndRatings
+
+| Type                              | Availability                                                                                                                                                                                           |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Overridable components            | <ul className="doc-list"><li>[`RatingSummary`](https://developers.vtex.com/docs/guides/faststore/molecules-rating-summary)</li><li> `LocationIcon` [(Icon)](https://developers.vtex.com/docs/guides/faststore/atoms-icon)</li><li> `ButtonIcon` [(Icon)](https://developers.vtex.com/docs/guides/faststore/atoms-icon)</li><li>`__experimentalRatingSummarySkeleton`</li><li>`__experimentalReviewModal`</li><li>`__experimentalReviewList`</li></ul> |
+| Headless CMS: props customization | <ul className="doc-list"><li> </li><li> </li></ul>                                                                                                                 |
+
+<details>
+<summary><b>Reviews and Ratings - Available schema</b></summary>
+
+```js
+  {
+    "name": "NewSectionName",
+    "schema": {
+      "title": "Add the Section name",
+      "description": "Short description for the the section's purpose",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "default": "Reviews"
+        },
+        "ratingSummary": {
+          "title": "Rating Summary",
+          "type": "object",
+          "properties": {
+            "ratingCounter": {
+              "title": "Rating Counter",
+              "type": "object",
+              "properties": {
+                "noReviewsText": {
+                  "title": "No reviews text",
+                  "type": "string",
+                  "default": "No reviews yet"
+                },
+                "multipleReviewsText": {
+                  "title": "Multiple reviews text",
+                  "type": "string",
+                  "default": "Reviews"
+                },
+                "singleReviewText": {
+                  "title": "Single review text",
+                  "type": "string",
+                  "default": "Review"
+                }
+              }
+            }
+          }
+        },
+        "createReviewButton": {
+          "title": "Create Review Button",
+          "type": "object",
+          "properties": {
+            "noReviewsText": {
+              "title": "No reviews Text",
+              "type": "string",
+              "default": "Write the first review"
+            },
+            "defaultText": {
+              "title": "Default Text",
+              "type": "string",
+              "default": "Write a review"
+            }
+          }
+        },
+        "reviewModal": {
+          "title": "Review Modal",
+          "description": "Review Modal configuration",
+          "type": "object",
+          "properties": {
+            "title": {
+              "title": "Title",
+              "type": "string",
+              "default": "Add a review"
+            },
+            "closeButtonAriaLabel": {
+              "title": "Close modal aria-label",
+              "type": "string",
+              "default": "Close Review Modal"
+            },
+            "ratingField": {
+              "title": "Rating input field",
+              "type": "object",
+              "properties": {
+                "label": {
+                  "title": "Rating input field label",
+                  "type": "string",
+                  "default": "Rate the product from 1 to 5 stars"
+                },
+                "requiredErrorMessage": {
+                  "title": "Input field error message",
+                  "type": "string",
+                  "default": "This field is required"
+                }
+              }
+            },
+            "reviewTitleField": {
+              "title": "Review title input field",
+              "type": "object",
+              "properties": {
+                "label": {
+                  "title": "Review title input field label",
+                  "type": "string",
+                  "default": "Review headline"
+                },
+                "requiredErrorMessage": {
+                  "title": "Review title field error message",
+                  "type": "string",
+                  "default": "This field is required"
+                }
+              }
+            },
+            "reviewerNameField": {
+              "title": "Reviewer name input field",
+              "type": "object",
+              "properties": {
+                "label": {
+                  "title": "Reviewer name input field label",
+                  "type": "string",
+                  "default": "Name"
+                },
+                "requiredErrorMessage": {
+                  "title": "Reviewer name field error message",
+                  "type": "string",
+                  "default": "This field is required"
+                }
+              }
+            },
+            "reviewTextField": {
+              "title": "Reviewer text input field",
+              "type": "object",
+              "properties": {
+                "label": {
+                  "title": "Reviewer text input field label",
+                  "type": "string",
+                  "default": "Share your thoughts about the product. How would you describe its quality?"
+                },
+                "requiredErrorMessage": {
+                  "title": "Reviewer text field error message",
+                  "type": "string",
+                  "default": "This field is required"
+                }
+              }
+            },
+            "privacyPolicyCheckboxField": {
+              "title": "Privacy Policy Checkbox Field",
+              "type": "object",
+              "properties": {
+                "label": {
+                  "title": "Privacy policy checkbox field label",
+                  "type": "string",
+                  "default": "I confirm that I agree to the Privacy Policy, Terms of Use, and Terms of Service. I acknowledge that my review may be used for marketing purposes by the company or its partners. I understand that my rating and review may be visible publicly, may include a \"Verified buyer\" badge, and that my data may be associated with my review."
+                },
+                "requiredErrorMessage": {
+                  "title": "Privacy policy checkbox field error message",
+                  "type": "string",
+                  "default": "This field is required"
+                }
+              }
+            },
+            "cancelButtonLabel": {
+              "title": "Cancel button label",
+              "type": "string",
+              "default": "Cancel"
+            },
+            "submitButtonLabel": {
+              "title": "Submit review button label",
+              "type": "string",
+              "default": "Submit your review"
+            },
+            "successTitle": {
+              "title": "Success title",
+              "type": "string",
+              "default": "Success!"
+            },
+            "successSubtitle": {
+              "title": "Success subtitle",
+              "type": "string",
+              "default": "Your review has been submitted."
+            },
+            "successButtonLabel": {
+              "title": "Success button label",
+              "type": "string",
+              "default": "Back to reviews"
+            },
+            "authErrorMessage": {
+              "title": "Authentication error message",
+              "type": "string",
+              "default": "You need to be logged in to submit a review. Please sign in and try again."
+            }
+          }
+        },
+        "reviewList": {
+          "title": "Review List",
+          "type": "object",
+          "properties": {
+            "filterSelect": {
+              "title": "Filter Select",
+              "type": "object",
+              "properties": {
+                "label": {
+                  "title": "Label",
+                  "type": "string",
+                  "default": "Filter by"
+                },
+                "options": {
+                  "title": "Options",
+                  "type": "object",
+                  "properties": {
+                    "all": {
+                      "title": "All",
+                      "type": "string",
+                      "default": "All"
+                    },
+                    "1": {
+                      "title": "1 star",
+                      "type": "string",
+                      "default": "1 star"
+                    },
+                    "2": {
+                      "title": "2 stars",
+                      "type": "string",
+                      "default": "2 stars"
+                    },
+                    "3": {
+                      "title": "3 stars",
+                      "type": "string",
+                      "default": "3 stars"
+                    },
+                    "4": {
+                      "title": "4 stars",
+                      "type": "string",
+                      "default": "4 stars"
+                    },
+                    "5": {
+                      "title": "5 stars",
+                      "type": "string",
+                      "default": "5 stars"
+                    }
+                  }
+                }
+              }
+            },
+            "sortSelect": {
+              "title": "Sort Select",
+              "type": "object",
+              "properties": {
+                "label": {
+                  "title": "Label",
+                  "type": "string",
+                  "default": "Sort by"
+                },
+                "options": {
+                  "title": "Options",
+                  "type": "object",
+                  "properties": {
+                    "reviewDateTime_desc": {
+                      "title": "Most Recent",
+                      "type": "string",
+                      "default": "Most Recent"
+                    },
+                    "reviewDateTime_asc": {
+                      "title": "Oldest",
+                      "type": "string",
+                      "default": "Oldest"
+                    },
+
+                    "rating_desc": {
+                      "title": "Highest Rated",
+                      "type": "string",
+                      "default": "Highest Rated"
+                    },
+                    "rating_asc": {
+                      "title": "Lowest Rated",
+                      "type": "string",
+                      "default": "Lowest Rated"
+                    }
+                  }
+                }
+              }
+            },
+            "emptyFilter": {
+              "title": "No reviews found message when a filter is applied",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "title": "Title",
+                  "type": "string",
+                  "default": "No reviews found for this filter"
+                },
+                "subtitle": {
+                  "title": "Subtitle",
+                  "type": "string",
+                  "default": "Try adjusting your selection and check again"
+                },
+                "buttonLabel": {
+                  "title": "Button Label",
+                  "type": "string",
+                  "default": "See all reviews"
+                }
+              }
+            },
+            "emptyList": {
+              "title": "No reviews available message when there are no reviews",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "title": "Title",
+                  "type": "string",
+                  "default": "There are no reviews for this item yet"
+                },
+                "subtitle": {
+                  "title": "Subtitle",
+                  "type": "string",
+                  "default": "Be the first one to do it"
+                },
+                "buttonLabel": {
+                  "title": "Button Label",
+                  "type": "string",
+                  "default": "Write the first review"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+```
+
+</details>
