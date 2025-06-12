@@ -8,7 +8,7 @@ updatedAt: "2025-06-12T14:00:00.000Z"
 ---
 Authenticated GraphQL requests are crucial for securing access to your VTEX IO app's data and functionalities. Authentication ensures that only authorized users or applications can interact with your GraphQL endpoints, protecting sensitive information and preventing unauthorized actions. Besides authentication, app developers can implement authorization to control who can access specific resources and what operations they can perform.
 
-GraphQL authorization in VTEX IO apps works with auth tokens and [directives](https://graphql.org/learn/schema/#directives) within your GraphQL schema, enabling fine-grained access control based on [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). The app identifies the requester by the [auth token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) in [apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) or the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in API calls, which will have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) associated with VTEX’s resources.
+GraphQL authorization in VTEX IO apps works with auth tokens and [directives](https://graphql.org/learn/schema/#directives) within your GraphQL schema, enabling fine-grained access control based on [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). The app identifies the requester by the [auth token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) in [apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) or the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in API calls, which will have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) associated with VTEX's resources.
 
 In this guide, you will learn how to:
 
@@ -16,11 +16,11 @@ In this guide, you will learn how to:
 2. Make requests in apps with the proper authorization.
 3. Make external requests with the appropriate authorization.
 
-> ℹ️ Only VTEX apps, Admin users, and [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys) can be authorized in GraphQL requests, since they must be associated with a role or policy granting access to a License Manager resource. Store users don’t have this type of access.
+> ℹ️ Only VTEX apps, Admin users, and [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys) can be authorized in GraphQL requests, since they must be associated with a role or policy granting access to a License Manager resource. Store users don't have this type of access.
 
 ## Implementing GraphQL API authorization in apps
 
-By default, GraphQL APIs in VTEX apps don’t require authorization. To enable authorization, you must add the `@auth` directive to the specific fields or operations in your GraphQL schema that require protection. This directive ensures that only requesters with access to the corresponding [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) are allowed to execute the operation.
+By default, GraphQL APIs in VTEX apps don't require authorization. To enable authorization, you must add the `@auth` directive to the specific fields or operations in your GraphQL schema that require protection. This directive ensures that only requesters with access to the corresponding [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) are allowed to execute the operation.
 
 The `@auth` directive uses the following arguments:
 
@@ -40,7 +40,7 @@ You can see the available products and resources in [License Manager resources](
 
 ## Making requests to protected GraphQL APIs from a VTEX IO app
 
-When making requests to a protected GraphQL API from another VTEX IO app, you must export a [custom Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) that extends the `AppGraphQLClient` type and declare the auth token in the [Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients)’s `VtexIdClientAutCookie` header. The requester must have the role or policy that includes the `resourceCode` and `productCode` defined in the target operation’s `@auth` directive.
+When making requests to a protected GraphQL API from another VTEX IO app, you must export a [custom Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) that extends the `AppGraphQLClient` type and declare the auth token in the [Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients)'s `VtexIdClientAutCookie` header. The requester must have the role or policy that includes the `resourceCode` and `productCode` defined in the target operation's `@auth` directive.
 
 Declare the token considering the requester context:
 
@@ -71,7 +71,7 @@ For details about token types, see [App authentication using auth tokens](https:
 
 ## Making requests to protected GraphQL API apps
 
-When making external requests to a GraphQL API app, declare the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in the `VtexIdClientAutCookie` HTTP header. The requester must have a role that includes the resource and product defined in the endpoint’s `@auth` directive.
+When making external requests to a GraphQL API app, declare the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in the `VtexIdClientAutCookie` HTTP header. The requester must have a role that includes the resource and product defined in the endpoint's `@auth` directive.
 
 Example (cURL):
 
