@@ -29,7 +29,7 @@ The `@auth` directive uses the following arguments:
 
 Example:
 
-```graphql
+```graphql graphql/schema.graphql mark=2
 createWorkspace(account: String, workspace: String): GenericResponse
   @auth(productCode: "66", resourceCode: "workspace-read-write")
 ```
@@ -49,8 +49,8 @@ Declare the token considering the requester context:
 
 Example:
 
-```typescript
-import { AppGraphQLClient, InstanceOptions, IOContext } from ‘@’vtex/api’
+```typescript node/clients/catalogGraphQL/index.ts mark=9
+import { AppGraphQLClient, InstanceOptions, IOContext } from '@vtex/api'
 
 export class CatalogGQL extends AppGraphQLClient {
   constructor(ctx: IOContext, options?: InstanceOptions) {
@@ -67,7 +67,7 @@ export class CatalogGQL extends AppGraphQLClient {
 
 For details about token types, see [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens).
 
-> ⚠️ Use the user token (store or Admin) whenever possible to properly identify the requester. The app token (`ctx.authToken`) should only be used when the user cannot access the requested service.
+> ⚠️ Use the user token (Admin) whenever possible to properly identify the requester. The app token (`ctx.authToken`) should only be used when the user cannot access the requested service.
 
 ## Making requests to protected GraphQL API apps
 
@@ -75,7 +75,7 @@ When making external requests to a GraphQL API app, declare the [user token](htt
 
 Example (cURL):
 
-```sh
+```sh terminal mark=4
 curl -X POST \
   'https://https://app.io.vtex.com/vtex.rewriter/v1/{account}/_v/graphql' \
   -H 'Content-Type: application/json' \
