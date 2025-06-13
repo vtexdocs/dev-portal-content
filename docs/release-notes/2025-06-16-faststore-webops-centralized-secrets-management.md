@@ -1,6 +1,6 @@
 ---
 title: "FastStore WebOps: Centralized secrets management"
-slug: "2025-06-06-vtex-io-apps-end-of-official-support-for-legacy-apps"
+slug: "2025-06-16-faststore-webops-centralized-secrets-management"
 type: added
 excerpt: "FastStore secrets are now managed in WebOps, improving security by deploying them as environment variables through AWS Secrets Manager."
 createdAt: "2025-06-16T00:00:00.909Z"
