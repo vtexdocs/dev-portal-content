@@ -52,7 +52,7 @@ curl --request PUT 'https://myaccountname.vtexcommercestable.com.br/api/edge/cer
 
 ```
 
-#### Request example \- application/json
+#### Request example - application/json
 
 ```shell
 curl --request PUT 'https://{{accountName}}.vtexcommercestable.com.br/api/edge/certificates' \
@@ -189,8 +189,7 @@ curl 'https://myaccountname.vtexcommercestable.com.br/api/edge/certificates/8c66
     "subjectOrganization": null,
     "issuerDistinguishedName": "CN=R10, O=Let's Encrypt, C=US",
     "issuerCommonName": "R10",
-    "issuerOrganization": "Le
-t's Encrypt",
+    "issuerOrganization": "Let's Encrypt",
     "installDate": "2025-04-22T16:24:58.768939Z",
     "startDate": "2024-08-29T01:43:25Z",
     "expiryDate": "2024-11-27T01:43:24Z",
