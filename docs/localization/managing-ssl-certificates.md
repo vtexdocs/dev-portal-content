@@ -31,7 +31,7 @@ Make sure you meet the following prerequisites to manage SSL certificates:
 
 To install a certificate, you can send its information through an [Install or renew SSL certificate](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#put-/api/edge/certificates) `PUT` request, using *multipart/form-data* or *application/json*. The process of renewing a certificate is the same as the process of installing one.
 
-#### Request example \- multipart/form-data
+#### Request example - multipart/form-data
 
 ```shell
 curl --request PUT 'https://{{accountName}}.vtexcommercestable.com.br/api/edge/certificates' \
