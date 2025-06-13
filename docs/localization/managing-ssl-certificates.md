@@ -23,9 +23,9 @@ Make sure you meet the following prerequisites to manage SSL certificates:
 
 * You must have the [Custom SSL certificates](https://help.vtex.com/tutorial/custom-ssl-certificates--1hoaDEbU50PDZSe6AYep9q) feature from [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh).
 * You must have a user or API key associated with a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that contains the following [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3):
-* **Product:** *CDN API*
-* **Category:** *Certificate management*
-* **Resources:** *Update certificate* and *View certificate*
+  * **Product:** *CDN API*
+  * **Category:** *Certificate management*
+  * **Resources:** *Update certificate* and *View certificate*
 
 ## Installing or renewing an SSL certificate
 
