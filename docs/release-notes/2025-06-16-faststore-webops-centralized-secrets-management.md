@@ -1,0 +1,36 @@
+---
+title: "FastStore WebOps: Centralized secrets management"
+slug: "2025-06-06-vtex-io-apps-end-of-official-support-for-legacy-apps"
+type: added
+excerpt: "FastStore secrets are now managed in WebOps, improving security by deploying them as environment variables through AWS Secrets Manager."
+createdAt: "2025-06-16T00:00:00.909Z"
+updatedAt: ""
+hidden: false
+---
+
+Secrets are now managed via the WebOps interface to improve the security of sensitive data and streamline deployment processes. This change centralizes the handling of sensitive information, such as API keys, tokens, and passwords, directly within WebOps.
+
+![secrets-settings-webops](https://vtexhelp.vtexassets.com/assets/docs/src/secrets-settings-webops___c4cc35670f1faf9ecabd30447d1ee9b6.gif)
+
+## What has changed?
+
+Previously, secrets were handled through the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) secrets plugin. To enable secrets management, an empty `vtex.env` file needed to be present in the project root. The key-value pairs were stored in the `secrets.revealed.json` file, then encrypted into `secrets.hidden.json` before being committed to the main branch.
+
+Now, this workflow has been deprecated, and secrets are managed directly through the WebOps interface, where you can create, update, and delete them. Secrets are loaded as environment variables during deployment and are no longer committed to your project’s codebase.
+
+## Why did we make this change?
+
+Secrets management via WebOps addresses the following concerns:
+
+- To improve the security of sensitive data by eliminating secrets from source code and version control.
+- To reduce operational overhead and potential sync errors that might arise from CLI-managed secrets files.
+- To ensure that secrets are managed in a uniform way across all FastStore deployment providers.
+
+## What needs to be done?
+
+To manage your secrets via WebOps, follow these steps:
+
+1. Access your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) and navigate to the Settings tab.
+2. In the [Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) section, you can create, update, or delete secrets according to your needs.
+
+For detailed instructions, see the [Managing Secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) guide.
