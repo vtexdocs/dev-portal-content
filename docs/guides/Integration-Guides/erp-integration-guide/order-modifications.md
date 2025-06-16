@@ -111,3 +111,24 @@ These are errors that are returned when the request is correct but the order can
         <td>There is an issue with the payment gateway.</td>
     </tr>
 </table>
+
+#### Errors with exception codes
+
+<table>
+    <td><strong> Error code</strong></td>
+    <td><stron> Error message</strong></td>
+    <td><strong> Description</strong></td>
+    <tr>
+        <td><code>CHK0022</code></td>
+        <td><code>Invalid id for item.</code></td>
+        <td>The <code>item ID</code> provided is not valid or does not exist.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0022</code></td>
+        <td><code>Invalid id for item.</code></td>
+        <td>The <code>item ID</code> provided is not valid or does not exist.</td>
+    </tr>
+        <td><code>CHK0022</code></td>
+        <td><code>Invalid id for item.</code></td>
+        <td>The <code>item ID</code> provided is not valid or does not exist.</td>
+</table>
