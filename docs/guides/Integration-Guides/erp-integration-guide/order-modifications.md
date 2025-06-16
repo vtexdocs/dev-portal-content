@@ -121,14 +121,26 @@ These are errors that are returned when the request is correct but the order can
     <tr>
         <td><code>CHK0022</code></td>
         <td><code>Invalid id for item.</code></td>
-        <td>The <code>item ID</code> provided is not valid or does not exist.</td>
+        <td>The item <code>id</code> provided is not valid or does not exist.</td>
     </tr>
     <tr>
-        <td><code>CHK0022</code></td>
-        <td><code>Invalid id for item.</code></td>
-        <td>The <code>item ID</code> provided is not valid or does not exist.</td>
+        <td><code>CHK0023</code></td>
+        <td><code>Invalid quantity for item.</code></td>
+        <td>The specified item <code>quantity</code> is not allowed (e.g., less than 1).</td>
     </tr>
-        <td><code>CHK0022</code></td>
-        <td><code>Invalid id for item.</code></td>
-        <td>The <code>item ID</code> provided is not valid or does not exist.</td>
+    <tr>
+        <td><code>CHK0034</code></td>
+        <td><code>The value of the change exceed the order's price.</code></td>
+        <td>The change value is greater than the total order price.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0095</code></td>
+        <td><code>Changes in chain orders are not allowed.</code></td>
+        <td>Chain orders do not support change operations.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0096</code></td>
+        <td><code>Change cannot be done. Possible reason: settlement directly done by API.</code></td>
+        <td>The change operation is not allowed, possibly due to a direct settlement.</td>
+    </tr>
 </table>
