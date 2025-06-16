@@ -148,4 +148,14 @@ These are errors that are returned when the request is correct but the order can
         <td><code>Change of product cannot be done when seller is not from a franchise account.</code></td>
         <td>Product modifications are restricted to franchise sellers.</td>
     </tr>
+    <tr>
+        <td><code>CHK0098</code></td>
+        <td><code>The change value needs to be greater or equal than zero.</code></td>
+        <td>The value for the change operation must not be negative.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0124</code></td>
+        <td><code>Invalid change for order.</code></td>
+        <td>The requested modification is not valid for the current order state or data.</td>
+    </tr>
 </table>
