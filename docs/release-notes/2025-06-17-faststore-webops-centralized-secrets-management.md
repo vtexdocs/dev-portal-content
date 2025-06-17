@@ -33,13 +33,19 @@ Secrets management via WebOps addresses the following concerns:
 If your store currently uses the deprecated [secrets plugin](https://v1.faststore.dev/how-to-guides/webops/security/setting-up-secrets) via the VTEX IO CLI, follow these steps to migrate to WebOps secrets management:
 
 1. Push a new commit to your repository to trigger migration.
-2. After pushing the new commit, [manage secrets](#for-all-stores-managing-secrets) through WebOps in the VTEX Admin.
+2. After pushing the new commit, access the VTEX Admin and got to **Storefront** > **WebOps**.
+3. In the WebOps, go to the [Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) tab and verify if the secrets were correctly migrated.
+4. Once the secrets were correctly migrated, delete the `secrets.revealed.json` and `secrets. hidden.json` files from your store repository.
+
+    > ⚠️ Do not delete the `vtex.env` file, it's still necessary for local development.
+
+5. After finishing this process, you can [manage secrets](#for-all-stores-managing-secrets) through WebOps in the VTEX Admin.
 
 ### For all stores managing secrets
 
 All FastStore deployments now use WebOps for secrets management by default. To manage your secrets, follow these steps:
 
 1. Access your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) and navigate to the Settings tab.
-2. In the [Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) section, you can create, update, or delete secrets according to your needs.
+2. In the [Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) tab, you can create, update, or delete secrets according to your needs.
 
 For detailed instructions, see the [Managing Secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) guide.
