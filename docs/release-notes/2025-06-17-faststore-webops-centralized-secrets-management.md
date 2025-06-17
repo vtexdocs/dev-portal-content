@@ -28,9 +28,9 @@ Secrets management via WebOps addresses the following concerns:
 
 ## What needs to be done?
 
-### For store using the deprecated workflow
+### For stores using the deprecated workflow
 
-For stores currently using the deprecated workflow using the [secrets plugin](https://v1.faststore.dev/how-to-guides/webops/security/setting-up-secrets) through the VTEX IO CLI, follow these steps to complete migrate the secrets workflow to the WebOps interface in the VTEX Admin:
+If your store currently uses the deprecated [secrets plugin](https://v1.faststore.dev/how-to-guides/webops/security/setting-up-secrets) via the VTEX IO CLI, follow these steps to migrate to WebOps secrets management:
 
 1. Push a new commit to your repository to trigger migration.
 2. After pushing the new commit, [manage secrets](#for-all-stores-managing-secrets) through WebOps in the VTEX Admin.
