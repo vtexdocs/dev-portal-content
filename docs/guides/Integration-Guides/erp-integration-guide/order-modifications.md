@@ -158,4 +158,19 @@ These are errors that are returned when the request is correct but the order can
         <td><code>Invalid change for order.</code></td>
         <td>The requested modification is not valid for the current order state or data.</td>
     </tr>
+    <tr>
+        <td><code>CHK0196</code></td>
+        <td><code>Cannot cancel order {0} - Payment not found.</code></td>
+        <td>The order cannot be canceled because no payment was found.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0199</code></td>
+        <td><code>OrderGroup {0} not found.</code></td>
+        <td>The specified order group does not exist.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0229</code></td>
+        <td><code>Workflow not found for order {0}.</code></td>
+        <td>No workflow was found for the specified order.</td>
+    </tr>
 </table>
