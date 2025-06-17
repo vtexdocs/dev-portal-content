@@ -37,7 +37,7 @@ If your store currently uses the deprecated [secrets plugin](https://v1.faststor
 3. In the WebOps, go to the [Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) tab and verify if the secrets were correctly migrated.
 4. Delete the `secrets.revealed.json` and `secrets. hidden.json` files from your store repository.
 
-    > ⚠️ Do not delete the `vtex.env` file, it's still necessary for local development.
+    > ⚠️ Do not delete the `vtex.env` file. This file still necessary for local development.
 
 5. After finishing this process, you can [manage secrets](#for-all-stores-managing-secrets) through WebOps in the VTEX Admin.
 
