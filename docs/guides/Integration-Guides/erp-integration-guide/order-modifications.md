@@ -177,4 +177,29 @@ See below what API errors can be returned when attempting to [modify an order vi
         <td><code>Workflow not found for order {0}.</code></td>
         <td>No workflow was found for the specified order.</td>
     </tr>
+    <tr>
+        <td><code>CHK0289</code></td>
+        <td><code>Change order request {0} not found.</code></td>
+        <td>The specified modification order request does not exist.</td>
+    </tr>
+    <tr>
+        <td><code>CHK00342</code></td>
+        <td><code>Change order cannot increase the value for this payment method.</code></td>
+        <td>Increasing the order value is not allowed for the selected payment method.</td>
+    </tr>
+    <tr>
+        <td><code>ORD055</code></td>
+        <td><code>Item Id is required.</code></td>
+        <td>The item <code>id</code> is missing from the request.</td>
+    </tr>
+    <tr>
+        <td><code>ORD056</code></td>
+        <td><code>Duplicated item.</code></td>
+        <td>The request contains the same item more than once.</td>
+    </tr>
+    <tr>
+        <td><code>ORD057</code></td>
+        <td><code>Invalid value for refund.</code></td>
+        <td>The refund amount provided is not valid for this operation.</td>
+    </tr>
 </table>
