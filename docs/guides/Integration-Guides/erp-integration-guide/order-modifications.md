@@ -148,11 +148,6 @@ See below what API errors can be returned when attempting to [modify an order vi
         <td>The change operation is not allowed, possibly due to a direct settlement.</td>
     </tr>
     <tr>
-        <td><code>CHK0097</code></td>
-        <td><code>Change of product cannot be done when seller is not from a franchise account.</code></td>
-        <td>Product modifications are restricted to franchise sellers.</td>
-    </tr>
-    <tr>
         <td><code>CHK0098</code></td>
         <td><code>The change value needs to be greater or equal than zero.</code></td>
         <td>The value for the change operation must not be negative.</td>
@@ -186,20 +181,5 @@ See below what API errors can be returned when attempting to [modify an order vi
         <td><code>CHK00342</code></td>
         <td><code>Change order cannot increase the value for this payment method.</code></td>
         <td>Increasing the order value is not allowed for the selected payment method.</td>
-    </tr>
-    <tr>
-        <td><code>ORD055</code></td>
-        <td><code>Item Id is required.</code></td>
-        <td>The item <code>id</code> is missing from the request.</td>
-    </tr>
-    <tr>
-        <td><code>ORD056</code></td>
-        <td><code>Duplicated item.</code></td>
-        <td>The request contains the same item more than once.</td>
-    </tr>
-    <tr>
-        <td><code>ORD057</code></td>
-        <td><code>Invalid value for refund.</code></td>
-        <td>The refund amount provided is not valid for this operation.</td>
     </tr>
 </table>
