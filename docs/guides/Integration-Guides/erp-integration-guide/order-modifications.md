@@ -22,9 +22,9 @@ Modifications made this way can be confirmed by the `changesAttachment` field in
 
 >❗ Increasing the price of an order is only available for credit card purchases. The connector must also be able to handle purchases without the CVV, as well as duplicated sequences.
 
-### Errors
+### Errors in Change v1
 
-See below what API errors can be returned when attempting to [modify an order via API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
+See below what API errors can be returned when attempting to [modify an order via Change v1 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
 
 #### Request errors
 
@@ -111,6 +111,10 @@ These are errors that are returned when the request is correct but the order can
         <td>There is an issue with the payment gateway.</td>
     </tr>
 </table>
+
+### Errors in Change v2
+
+See below what API errors can be returned when attempting to [modify an order via Change v2 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
 
 #### Errors with exception codes
 
