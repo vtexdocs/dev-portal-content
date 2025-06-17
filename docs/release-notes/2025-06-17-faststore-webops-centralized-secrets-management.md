@@ -1,9 +1,9 @@
 ---
 title: "FastStore WebOps: Centralized secrets management"
-slug: "2025-06-16-faststore-webops-centralized-secrets-management"
+slug: "2025-06-17-faststore-webops-centralized-secrets-management"
 type: added
 excerpt: "FastStore secrets are now managed in WebOps, improving security by deploying them as environment variables through AWS Secrets Manager."
-createdAt: "2025-06-16T00:00:00.909Z"
+createdAt: "2025-06-17T00:00:00.909Z"
 updatedAt: ""
 hidden: false
 ---
@@ -28,7 +28,16 @@ Secrets management via WebOps addresses the following concerns:
 
 ## What needs to be done?
 
-To manage your secrets via WebOps, follow these steps:
+### For store using the deprecated workflow
+
+For stores currently using the deprecated workflow using the [secrets plugin](https://v1.faststore.dev/how-to-guides/webops/security/setting-up-secrets) through the VTEX IO CLI, follow these steps to complete migrate the secrets workflow to the WebOps interface in the VTEX Admin:
+
+1. Push a new commit to your repository to trigger migration.
+2. After pushing the new commit, [manage secrets](#for-all-stores-managing-secrets) through WebOps in the VTEX Admin.
+
+### For all stores managing secrets
+
+All FastStore deployments now use WebOps for secrets management by default. To manage your secrets, follow these steps:
 
 1. Access your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) and navigate to the Settings tab.
 2. In the [Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) section, you can create, update, or delete secrets according to your needs.
