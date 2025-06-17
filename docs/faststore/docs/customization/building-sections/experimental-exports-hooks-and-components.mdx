@@ -62,7 +62,7 @@ Hooks provide features or statuses from native components that you can integrate
 |`useSession_unstable`|Accesses and manages current session information.|
 |`sessionStore_unstable`|Stores and retrieves session data.|
 |`validateSession_unstable`|Validates the current user session.|
-|`useCart_unstable`|Accesses the current cart's status and actions.|
+|`useCart_unstable`|Accesses the current cart's status and actions. For more details on this hook's properties and functions, see the (#useCart_unstable--api-reference)|
 |`cartStore_unstable`|Stores and retrieves cart details.|
 |`useBuyButton_unstable`|Leverages the behavior of the native [BuyButton](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button).|
 |`useCartToggleButton_unstable`|Adds a cart toggle feature to custom components.|
@@ -89,6 +89,24 @@ Hooks provide features or statuses from native components that you can integrate
 |`useDelayedFacets_unstable`|Delays facet application to improve performance.|
 |`useDelayedPagination_unstable`|Delays pagination to improve performance.|
 |`getShippingSimulation_unstable`|Retrieves the shipping simulation data, which can be used to display shipping costs, options, and delivery estimates.|
+
+### `useCart_unstable` - API reference
+
+The `useCart_unstable` hook returns an object with the following properties and functions:
+
+| Variable name | Type | Description |
+| -------- | --------------- | ------------ |
+| `addItem` | `(item: T) => void` | Adds an item to the cart. |
+| `emptyCart` | `() => void` | Removes all items from the cart. |
+| `getItem` | `(id: string) => T | undefined` | Retrieves an item from the cart by its `id`. Returns `undefined` if not found. |
+| `id` | `string` | Gets the cart's unique identifier. |
+| `inCart` | `(id: string) => boolean` | Checks if an item with the given `id` exists in the cart. |
+| `isEmpty` | `boolean` | Returns `true` if the cart is empty. |
+| `isValidating` | `boolean` | Returns `true` if the cart is being validated (e.g., syncing with a server). |
+| `items` | `Item[]` | Gets the current items in the cart. |
+| `removeItem` | `(id: string) => void` | Removes an item from the cart by its `id`. |
+| `setCart` | `(cart: Cart) => void` | Replaces the current cart with a new one. |
+| `updateItemQuantity` | `(id: string, quantity: number) => void` | Updates the quantity of a given item in the cart. |
 
 ### `Image_unstable` component
 
