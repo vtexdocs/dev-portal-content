@@ -1,24 +1,24 @@
 ---
-title: "FastStore: Now supporting B2B Price Tables and personalized promotions"
-slug: "2025-06-20-faststore-b2b-price-tables-session-cookies"
+title: "FastStore: Supports B2B Price Tables and personalized promotions"
+slug: "2025-06-23-faststore-b2b-price-tables-session-cookies"
 hidden: false
 type: "improved"
-createdAt: "2025-06-20T00:00:00.219Z"
-updatedAt: "2025-06-20T00:00:00.219Z"
+createdAt: "2025-06-23T00:00:00.219Z"
+updatedAt: "2025-06-23T00:00:00.219Z"
 excerpt: "FastStore now enables B2B customer-specific pricing and promotions by automatically forwarding session cookies to Intelligent Search, ensuring personalized experiences for customers."
 ---
 
 FastStore storefronts now integrate with [Price Tables](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S) for B2B and [Intelligent Search](https://help.vtex.com/en/tutorial/intelligent-search-overview--5o8ixTpYIxx3uJD0B1xp3z?&utm_source=autocomplete), allowing B2B sellers to:
 
-- Display custom prices by customer segment
-- Deliver targeted promotions based on store session context
-- Implement advanced pricing strategies with no additional configuration required
+- Display custom prices by customer segment.
+- Deliver targeted promotions based on store session context.
+- Implement advanced pricing strategies with minimal configuration.
 
 ## What has changed?
 
 Previously, FastStore did not forward session cookies (like `vtex_segment`) to Intelligent Search, preventing the system from applying the correct price table and trade policy for B2B clients. As a result, B2B clients were restricted to default pricing, regardless of their negotiated agreements.
 
-FastStore now includes session cookies (like `vtex_segment`) in HTTP requests to Intelligent Search APIs via the `Cookie` header. This improvement allows Intelligent Search to apply the appropriate trade policy for each client, instead of returning prices from the default trade policy. This integration between Intelligent Search and FastStore also serves cluster-based promotions, enabling personalized discounts.
+FastStore now includes session cookies (like `vtex_segment`) in HTTP requests to Intelligent Search APIs via the `Cookie` header. This improvement allows Intelligent Search to apply the appropriate trade policy for each client, instead of returning prices from the default trade policy. This integration between Intelligent Search and FastStore also serves cluster-based promotions, enabling personalized discounts. This change ensures B2B customers receive accurate, customer-specific pricing and promotions, improving their shopping experience.
 
 ## What needs to be done?
 
