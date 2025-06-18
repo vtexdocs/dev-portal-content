@@ -182,4 +182,14 @@ See below what API errors can be returned when attempting to [modify an order vi
         <td><code>Change order cannot increase the value for this payment method.</code></td>
         <td>Increasing the order value is not allowed for the selected payment method.</td>
     </tr>
+    <tr>
+        <td><code>SalesOrderSystem010</code></td>
+        <td><code>It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.</code></td>
+        <td>The specified item <code>id</code> cannot be removed in the original order. Please verify the <code>id</code> in your operation.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem011</code></td>
+        <td><code>It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.</code></td>
+        <td>The <code>quantity</code> being removed exceeds the <code>quantity</code> available in the order.</td>
+    </tr>
 </table>
