@@ -12,12 +12,12 @@ The [Pick and Pack Order changes AP](https://developers.vtex.com/docs/api-refere
 
 ## What has changed?
 
-The following endpoints were added:
+The following endpoints were added to the Pick and Pack Order Changes API:
 
-- [`GET` Get BIN location](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api#get-/-skuId-/warehouses/-warehouseId-)
-- [`POST` Create BIN location](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api#post-/-skuId-/warehouses/-warehouseId-)
-- [`PUT` Update BIN location](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api#put-/-skuId-/warehouses/-warehouseId-)
-- [`DELETE` Delete BIN location](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api#delete-/-skuId-/warehouses/-warehouseId-)
+- [`GET` Get BIN location](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api#get-/-skuId-/warehouses/-warehouseId-): Retrieves details of a specific BIN location.
+- [`POST` Create BIN location](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api#post-/-skuId-/warehouses/-warehouseId-): Creates a new BIN location.
+- [`PUT` Update BIN location](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api#put-/-skuId-/warehouses/-warehouseId-): Updates an existing BIN location.
+- [`DELETE` Delete BIN location](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api#delete-/-skuId-/warehouses/-warehouseId-): Deletes a BIN location.
 
 ## Why did we make this change?
 
