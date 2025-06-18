@@ -2,7 +2,7 @@
 title: "FastStore: Supports B2B Price Tables and personalized promotions"
 slug: "2025-06-23-faststore-b2b-price-tables-session-cookies"
 hidden: false
-type: "improved"
+type: "added"
 createdAt: "2025-06-23T00:00:00.219Z"
 updatedAt: "2025-06-23T00:00:00.219Z"
 excerpt: "FastStore now enables B2B customer-specific pricing and promotions by automatically forwarding session cookies to Intelligent Search, ensuring personalized experiences for customers."
