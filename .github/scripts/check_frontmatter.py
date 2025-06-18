@@ -41,10 +41,12 @@ print(f"Found {len(changed_files)} markdown file{plural_list(changed_files)} in 
 
 error_found = False
 frontmatters = {}
+file_errors = {}  # filename -> list of error strings
 for f in changed_files:
     print(f"- {f.filename}")
     content = repo.get_contents(f.filename, ref=pr.head.ref)
     text = content.decoded_content.decode('utf-8')
+    errors = []
 
     # Extract frontmatter
     if text.startswith('---'):
@@ -54,71 +56,65 @@ for f in changed_files:
             try:
                 fm_dict = yaml.safe_load(frontmatter)
                 if not isinstance(fm_dict, dict):
-                    print(' \n')
-                    print(f"ERROR: Frontmatter in '{f.filename}' is not a valid YAML dictionary.")
+                    errors.append(f"Frontmatter in '{f.filename}' is not a valid YAML dictionary.")
                     error_found = True
                     fm_dict = {}
             except Exception as e:
-                print(f"ERROR: Failed to parse YAML frontmatter in '{f.filename}': {e}")
+                errors.append(f"Failed to parse YAML frontmatter: {e}")
                 error_found = True
                 fm_dict = {}
             frontmatters[f.filename] = fm_dict
-            print(' \n')
-            print(f"Frontmatter dict for '{f.filename}':\n{{")
-            for k, v in fm_dict.items():
-                print(f"  {k}: {v}")
-            print('}')
 
             # Validate formatting in present fields
             iso8601_regex = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$")
             for key, value in fm_dict.items():
                 if key == 'title':
                     if not isinstance(value, str) or not value:
-                        print(f"ERROR: '{key}' in '{f.filename}' must be a non-empty string.")
+                        errors.append(f"'title' must be a non-empty string.")
                         error_found = True
                     continue
                 if key == 'excerpt':
                     if not isinstance(value, str):
-                        print(f"ERROR: '{key}' in '{f.filename}' must be a string.")
+                        errors.append(f"'excerpt' must be a string.")
                         error_found = True
                     continue
                 if key == 'slug':
                     if not (isinstance(value, str) and re.fullmatch(r'[a-z0-9\-]+', value)):
-                        print(f"ERROR: 'slug' in '{f.filename}' must contain only lowercase letters, numbers, and hyphens.")
+                        errors.append(f"'slug' must contain only lowercase letters, numbers, and hyphens.")
                         error_found = True
-                    if value!= f.filename.split('/')[-1].replace('.mdx', '').replace('.md', ''):
-                        print(f"ERROR: 'slug' in '{f.filename}' must match the filename without extension.")
+                    if value != f.filename.split('/')[-1].replace('.mdx', '').replace('.md', ''):
+                        errors.append(f"'slug' must match the filename without extension.")
                         error_found = True
                     continue
                 if key == 'hidden':
                     if not isinstance(value, bool):
-                        print(f"ERROR: 'hidden' in '{f.filename}' must be a boolean (true or false).")
+                        errors.append(f"'hidden' must be a boolean (true or false).")
                         error_found = True
                     continue
                 if key == 'createdAt':
                     if not (isinstance(value, str) and iso8601_regex.match(value)):
-                        print(f"ERROR: '{key}' in '{f.filename}' must be a string in ISO 8601 format (YYYY-MM-DDThh:mm:ss.sssZ).")
+                        errors.append(f"'createdAt' must be a string in ISO 8601 format (YYYY-MM-DDThh:mm:ss.sssZ).")
                         error_found = True
                     continue
                 if key == 'updatedAt':
                     if not (isinstance(value, str) and iso8601_regex.match(value)):
-                        print(f"ERROR: '{key}' in '{f.filename}' must be a string in ISO 8601 format (YYYY-MM-DDThh:mm:ss.sssZ).")
+                        errors.append(f"'updatedAt' must be a string in ISO 8601 format (YYYY-MM-DDThh:mm:ss.sssZ).")
                         error_found = True
                     continue
                 if key == 'tags':
                     if not (isinstance(value, list)):
-                        print(f"ERROR: 'tags' in '{f.filename}' must be a list.")
+                        errors.append(f"'tags' must be a list.")
                         error_found = True
                     continue
                 if key == 'type':
                     allowed_types = {"added", "deprecated", "fixed", "improved", "info", "removed"}
                     if not (isinstance(value, str) and value in allowed_types):
-                        print(f"ERROR: 'type' in '{f.filename}' must be one of: {', '.join(allowed_types)}.")
+                        errors.append(f"'type' must be one of: {', '.join(allowed_types)}.")
                         error_found = True
 
             # Validate mandatory fields for all doc types
             if 'title' not in fm_dict:
-                print(f"ERROR: '{f.filename}' must have a 'title' field in frontmatter.")
+                errors.append(f"Missing required field: 'title'.")
                 error_found = True
 
             # Validate fields by doc type using folder structure
@@ -132,38 +128,47 @@ for f in changed_files:
             if f.filename.startswith('docs/release-notes'):
                 missing_fields = not_present_keys(rn_mandatory_fields, fm_dict)
                 if missing_fields:
-                    print(f"ERROR: '{f.filename}' release note missing {missing_fields} field{plural_list(missing_fields)} in frontmatter.")
+                    errors.append(f"Release note missing field{plural_list(missing_fields)}: {missing_fields}.")
                     error_found = True
             else:
                 if 'type' in fm_dict:
-                    print(f"ERROR: '{f.filename}' should not have a 'type' field in frontmatter for non-release notes.")
+                    errors.append(f"'type' should not be present for non-release notes.")
                     error_found = True
 
             if f.filename.startswith('docs/guides'):
                 missing_fields = not_present_keys(guides_mandatory_fields, fm_dict)
                 if missing_fields:
-                    print(f"ERROR: '{f.filename}' guide missing {missing_fields} field{plural_list(missing_fields)} in frontmatter.")
+                    errors.append(f"Guide missing field{plural_list(missing_fields)}: {missing_fields}.")
                     error_found = True
 
             if f.filename.startswith('docs/troubleshooting'):
                 missing_fields = not_present_keys(ts_mandatory_fields, fm_dict)
                 if missing_fields:
-                    print(f"ERROR: '{f.filename}' troubleshooting missing {missing_fields} field{plural_list(missing_fields)} in frontmatter.")
+                    errors.append(f"Troubleshooting missing field{plural_list(missing_fields)}: {missing_fields}.")
                     error_found = True
 
             if f.filename.startswith('docs/faststore'):
                 if fm_dict.keys() != {'title'}:
-                    print(f"ERROR: '{f.filename}' FastStore docs must have only 'title' field in frontmatter.")
+                    errors.append(f"FastStore docs must have only 'title' field in frontmatter.")
                     error_found = True
 
         else:
-            print(f"ERROR: '{f.filename}' frontmatter not closed with '---'.")
+            errors.append(f"Frontmatter not closed with '---'.")
             error_found = True
     else:
-        print(f"ERROR: '{f.filename}' does not start with frontmatter block ('---').")
+        errors.append(f"Does not start with frontmatter block ('---').")
         error_found = True
 
-if error_found:
+    if errors:
+        file_errors[f.filename] = errors
+
+# Post a comment per file with errors
+if file_errors:
+    for filename, errors in file_errors.items():
+        comment_body = f"**Frontmatter errors in `{filename}`:**\n\n"
+        for err in errors:
+            comment_body += f"- {err}\n"
+        pr.create_issue_comment(comment_body)
     print(' \n')
     print("Frontmatter errors found. Failing the action.")
     sys.exit(1)
