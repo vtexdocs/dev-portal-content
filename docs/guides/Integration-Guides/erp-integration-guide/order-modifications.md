@@ -192,4 +192,59 @@ See below what API errors can be returned when attempting to [modify an order vi
         <td><code>It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.</code></td>
         <td>The <code>quantity</code> being removed exceeds the <code>quantity</code> available in the order.</td>
     </tr>
+    <tr>
+        <td><code>SalesOrderSystem012</code></td>
+        <td><code>The logistics information couldn't be determined for the item due to the presence of multiple options.</code></td>
+        <td>The order contains multiple logistics options, so the system cannot infer which one to use.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem013</code></td>
+        <td><code>The logistics information provided was not found on the order.</code></td>
+        <td>The logistics details given do not match any information on the order.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem015</code></td>
+        <td><code>A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.</code></td>
+        <td>Only one type of order change (v1 or v2) can be applied; a v1 change already exists.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem017</code></td>
+        <td><code>Change process was automatically canceled after failed retries.</code></td>
+        <td>The modification was canceled by the system after several failed attempts.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem018</code></td>
+        <td><code>Unable to communicate with Participants Client.</code></td>
+        <td>The system could not reach the Participants Client service.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem026</code></td>
+        <td><code>Unable to match an item to the information provided. Try providing the item's uniqueId for identification.</code></td>
+        <td>The item could not be identified with the given data. Try using the item's <code>uniqueId</code>.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem030</code></td>
+        <td><code>Cannot change profile e-mail.</code></td>
+        <td>Changing the profile email is not permitted.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem031</code></td>
+        <td><code>Cannot change profile id.</code></td>
+        <td>Changing the profile <code>id</code> is not permitted.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem032</code></td>
+        <td><code>Cannot change user profile id.</code></td>
+        <td>Changing the user profile <code>id</code> is not permitted.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem033</code></td>
+        <td><code>Only marketplace can change user profile.</code></td>
+        <td>Only the marketplace is authorized to change the user profile.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem035</code></td>
+        <td><code>The {0} is not a valid Agreement Type.</code></td>
+        <td>The provided agreement type is not recognized or supported.</td>
+    </tr>
 </table>
