@@ -33,7 +33,7 @@ Secrets management via WebOps addresses the following concerns:
 If your store currently uses the deprecated [secrets plugin](https://v1.faststore.dev/how-to-guides/webops/security/setting-up-secrets) via the VTEX IO CLI, follow these steps to migrate to WebOps secrets management:
 
 1. Push a new commit to your repository to trigger migration.
-2. After pushing the new commit, access the VTEX Admin and got to **Storefront** > **WebOps**.
+2. After pushing the new commit, access the VTEX Admin and go to **Storefront** > **WebOps**.
 3. In WebOps, go to the [Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) tab and verify if the secrets were correctly migrated.
 4. Delete the `secrets.revealed.json` and `secrets. hidden.json` files from your store repository.
 
