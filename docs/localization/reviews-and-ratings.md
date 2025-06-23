@@ -1,0 +1,135 @@
+---
+title: Reviews and Ratings
+--- 
+
+The Reviews and Ratings feature allows shoppers to view and submit feedback and rate products purchased in your store, bringing user-generated content to product detail pages (PDPs).
+
+This solution supports star ratings, review listing, filtering and sorting options, and enables authenticated users to leave their feedback. 
+
+Currently, this feature has some limitations:
+
+- **Authentication required:** Only logged-in customers can submit reviews. Anonymous reviews aren’t supported at this time.
+- **Reviews management:** Customers cannot access, edit, or delete their reviews after submission.
+- **Automatic approval:** All reviews are automatically approved and published withou moderation after submission.
+- **My Account integration:** Reviews are final and unavailable for further management by shoppers through the My Account interface.
+
+## Before you begin
+
+Ensure your store uses the latest version of the `faststore/core` package. Follow the steps below to update the package:
+
+Run the following command:
+
+```bash
+yarn add @faststore/core@latest
+```
+
+Run `yarn dev` to sync the changes to your project.
+
+## Instructions
+
+### Step 1 - Enabling `reviewsAndRatings`
+
+Open the `discovery.config.js` file in your project.
+Set the `reviewsAndRatings` field to **true**.
+
+```javascript discovery.config.js
+module.exports = {
+ …
+  reviewsAndRatings: true,
+}
+```
+
+>ℹ️ New stores have this feature enabled by default. To disable, go to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file and set the `reviewsAndRatings` field to **false**.
+
+### Step 2 - Syncing FastStore project with Headless CMS
+
+Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore project with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+
+The expected response is that you receive the message `CMS synced successfully...`. The native components of the Reviews and Ratings feature will be automatically updated.
+
+### Step 3 - Adding `ReviewsAndRatings` section
+
+The `ReviewsAndRatings` section displays customer feedback and product ratings.
+
+1. Access your VTEX Admin and go to **Storefront > Headless CMS > Global Sections**.
+2. In the Sections tab, click `+` to open a modal with a list of section options.
+3. Search for the **ReviewsAndRatings** section and click on it to add.
+4. Click `Save` to save your changes.
+5. Click `Publish` to open a dropdown list with the options `Add to Release`, to schedule the update, and `Publish now`, to publish immediately. Choose the most suitable option for your scenario.
+
+### Step 4 - [Optional] Customizing Reviews and Rating
+
+To customize your component, see the [List of Native Sections and Overridable Components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#reviews-and-ratings) to check the components that can be overridden.
+
+## Components
+
+<SectionList grid="column" columns={2}>
+  <SectionItem
+    title="Region Bar"
+    description="A custom `Button` that triggers the `RegionModal`"
+    actionPath="/docs/guides/faststore/molecules-region-bar"
+  >
+    <RegionBar
+      postalCode={'151515'}
+      onButtonClick={() => {
+        alert('This could trigger the RegionModal.')
+      }}
+    />
+  </SectionItem>
+  <SectionItem
+    title="Region Modal"
+    description="A modal interface for selecting and configuring region-specific options."
+    actionPath="/docs/guides/faststore/organisms-region-modal"
+  >
+    <UIProvider>
+      <RegionModalUsage />
+    </UIProvider>
+  </SectionItem>
+  <SectionItem
+    title="Review Card"
+    description=""
+    actionPath="/docs/guides/faststore/molecules-review-card"
+  >
+  <ReviewCard
+    id="review-card-example"
+    title="Great product!"
+    text="I'm very satisfied with this product. It works well and meets my expectations."
+    rating={5}
+    author="John"
+    date={new Date('2025-05-01')}
+    isVerified={true}
+    readMoreText="Show more"
+    readLessText="Show less"
+  />
+  </SectionItem>
+ <SectionItem
+    title="Rating Field"
+    description="Allows users to rate products when submitting reviews."
+    actionPath="/docs/guides/faststore/molecules-rating-field"
+  >
+    <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
+  </SectionItem>
+  <SectionItem
+    title="Rating Summary"
+    description="Provides detailed information about a product’s rating reviews."
+    actionPath="/docs/guides/faststore/organism-rating-summary"
+  >
+    <RatingSummary
+      id="rating-summary-example"
+      ratingValue={4.2}
+      reviewCount={18}
+      distribution={{
+        starsOne: 5,
+        starsTwo: 3,
+        starsThree: 2,
+        starsFour: 4,
+        starsFive: 4,
+      }}
+      textLabels={{
+        ratingCounter: {
+          multipleReviewsText: 'Reviews',
+        },
+      }}
+    />
+  </SectionItem>
+</SectionList>
