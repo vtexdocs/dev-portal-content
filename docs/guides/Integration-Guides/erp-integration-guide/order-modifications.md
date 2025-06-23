@@ -168,6 +168,11 @@ See below what API errors can be returned when attempting to [modify an order vi
         <td>The specified order group does not exist.</td>
     </tr>
     <tr>
+        <td><code>CHK0201</code></td>
+        <td><code>Order {0} not found.</code></td>
+        <td>The specified order does not exist.</td>
+    </tr>
+    <tr>
         <td><code>CHK0229</code></td>
         <td><code>Workflow not found for order {0}.</code></td>
         <td>No workflow was found for the specified order.</td>
@@ -221,26 +226,6 @@ See below what API errors can be returned when attempting to [modify an order vi
         <td><code>SalesOrderSystem026</code></td>
         <td><code>Unable to match an item to the information provided. Try providing the item's uniqueId for identification.</code></td>
         <td>The item could not be identified with the given data. Try using the item's <code>uniqueId</code>.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem030</code></td>
-        <td><code>Cannot change profile e-mail.</code></td>
-        <td>Changing the profile email is not permitted.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem031</code></td>
-        <td><code>Cannot change profile id.</code></td>
-        <td>Changing the profile <code>id</code> is not permitted.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem032</code></td>
-        <td><code>Cannot change user profile id.</code></td>
-        <td>Changing the user profile <code>id</code> is not permitted.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem033</code></td>
-        <td><code>Only marketplace can change user profile.</code></td>
-        <td>Only the marketplace is authorized to change the user profile.</td>
     </tr>
     <tr>
         <td><code>SalesOrderSystem035</code></td>
