@@ -61,34 +61,6 @@ The `ReviewsAndRatings` section displays customer feedback and product ratings.
 To customize your component, see the [List of Native Sections and Overridable Components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#reviews-and-ratings) to check the components that can be overridden.
 
 ## Components
-
-<SectionList grid="column" columns={2}>
-  <SectionItem
-    title="Region Bar"
-    description="A custom `Button` that triggers the `RegionModal`"
-    actionPath="/docs/guides/faststore/molecules-region-bar"
-  >
-    <RegionBar
-      postalCode={'151515'}
-      onButtonClick={() => {
-        alert('This could trigger the RegionModal.')
-      }}
-    />
-  </SectionItem>
-  <SectionItem
-    title="Region Modal"
-    description="A modal interface for selecting and configuring region-specific options."
-    actionPath="/docs/guides/faststore/organisms-region-modal"
-  >
-    <UIProvider>
-      <RegionModalUsage />
-    </UIProvider>
-  </SectionItem>
-  <SectionItem
-    title="Rating Field"
-    description="Allows users to rate products when submitting reviews."
-    actionPath="/docs/guides/faststore/molecules-rating-field"
-  >
     <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
   </SectionItem>
 </SectionList>
