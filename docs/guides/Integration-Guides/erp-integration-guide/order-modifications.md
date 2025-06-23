@@ -165,22 +165,22 @@ See below what API errors can be returned when attempting to [modify an order vi
     <tr>
         <td><code>CHK0199</code></td>
         <td><code>OrderGroup {0} not found.</code></td>
-        <td>The specified order group does not exist.</td>
+        <td>The order group does not exist.</td>
     </tr>
     <tr>
         <td><code>CHK0201</code></td>
         <td><code>Order {0} not found.</code></td>
-        <td>The specified order does not exist.</td>
+        <td>The order does not exist.</td>
     </tr>
     <tr>
         <td><code>CHK0229</code></td>
         <td><code>Workflow not found for order {0}.</code></td>
-        <td>No workflow was found for the specified order.</td>
+        <td>No workflow was found for the order.</td>
     </tr>
     <tr>
         <td><code>CHK0289</code></td>
         <td><code>Change order request {0} not found.</code></td>
-        <td>The specified modification order request does not exist.</td>
+        <td>The modification order request does not exist.</td>
     </tr>
     <tr>
         <td><code>CHK00342</code></td>
@@ -230,6 +230,6 @@ See below what API errors can be returned when attempting to [modify an order vi
     <tr>
         <td><code>SalesOrderSystem035</code></td>
         <td><code>The {0} is not a valid Agreement Type.</code></td>
-        <td>The provided agreement type is not recognized or supported.</td>
+        <td>The agreement type is not recognized or supported.</td>
     </tr>
 </table>
