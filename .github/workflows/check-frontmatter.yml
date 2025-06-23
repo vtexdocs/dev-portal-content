@@ -3,6 +3,15 @@ name: Check frontmatter
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - 'docs/guides/**/*.md'
+      - 'docs/guides/**/*.mdx'
+      - 'docs/release-notes/**/*.md'
+      - 'docs/release-notes/**/*.mdx'
+      - 'docs/troubleshooting/**/*.md'
+      - 'docs/troubleshooting/**/*.mdx'
+      - 'docs/faststore/**/*.md'
+      - 'docs/faststore/**/*.mdx'
 
 jobs:
   review-frontmatter:
