@@ -104,4 +104,4 @@ em até{{#hasSubStr shippingEstimate 'bd'}}
 ```
 
 **Result:**
-![result-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-set-up-functions-in-the-message-center-templates-1.jpg)
+![result-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/how-to-set-up-functions-in-the-message-center-templates-1.png)
