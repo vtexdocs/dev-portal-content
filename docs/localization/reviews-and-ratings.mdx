@@ -2,15 +2,15 @@
 title: Reviews and Ratings
 --- 
 
-The Reviews and Ratings feature allows shoppers to view and submit feedback and rate products purchased in your store, bringing user-generated content to product detail pages (PDPs).
+The Reviews and Ratings feature allows shoppers to view, submit feedback, and rate products purchased in your store, bringing user-generated content to product detail pages (PDPs).
 
-This solution supports star ratings, review listing, filtering and sorting options, and enables authenticated users to leave their feedback. 
+This solution supports star ratings, review listing, filtering, and sorting options, enabling authenticated users to leave feedback. 
 
-Currently, this feature has some limitations:
+Currently, this feature provides the following characteristics:
 
 - **Authentication required:** Only logged-in customers can submit reviews. Anonymous reviews aren’t supported at this time.
 - **Reviews management:** Customers cannot access, edit, or delete their reviews after submission.
-- **Automatic approval:** All reviews are automatically approved and published withou moderation after submission.
+- **Automatic approval:** All reviews are automatically approved and published without moderation after submission.
 - **My Account integration:** Reviews are final and unavailable for further management by shoppers through the My Account interface.
 
 ## Before you begin
@@ -86,50 +86,10 @@ To customize your component, see the [List of Native Sections and Overridable Co
     </UIProvider>
   </SectionItem>
   <SectionItem
-    title="Review Card"
-    description=""
-    actionPath="/docs/guides/faststore/molecules-review-card"
-  >
-  <ReviewCard
-    id="review-card-example"
-    title="Great product!"
-    text="I'm very satisfied with this product. It works well and meets my expectations."
-    rating={5}
-    author="John"
-    date={new Date('2025-05-01')}
-    isVerified={true}
-    readMoreText="Show more"
-    readLessText="Show less"
-  />
-  </SectionItem>
- <SectionItem
     title="Rating Field"
     description="Allows users to rate products when submitting reviews."
     actionPath="/docs/guides/faststore/molecules-rating-field"
   >
     <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
-  </SectionItem>
-  <SectionItem
-    title="Rating Summary"
-    description="Provides detailed information about a product’s rating reviews."
-    actionPath="/docs/guides/faststore/organism-rating-summary"
-  >
-    <RatingSummary
-      id="rating-summary-example"
-      ratingValue={4.2}
-      reviewCount={18}
-      distribution={{
-        starsOne: 5,
-        starsTwo: 3,
-        starsThree: 2,
-        starsFour: 4,
-        starsFive: 4,
-      }}
-      textLabels={{
-        ratingCounter: {
-          multipleReviewsText: 'Reviews',
-        },
-      }}
-    />
   </SectionItem>
 </SectionList>
