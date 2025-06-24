@@ -31,9 +31,9 @@ The form helps our team understand the best approach and prioritize the publicat
 
 If the form is complete and the team agrees that the application is suitable for the VTEX App Store, the next step is to sign a commercial agreement with VTEX.
 
-This contract, provided by the VTEX team, grants VTEX distribution rights over the app. Additionally, it enrolls your account in the VTEX **Network Partner Program** if you're not already a member.
+This contract, provided by the VTEX team, grants VTEX distribution rights over the app. Additionally, it enrolls your account in the VTEX [Partner Program](https://vtex.com/en-us/partners/) if you're not already a member.
 
-> ℹ️ The [Network Partner Program](https://network.vtex.com/terms_of_use) provides access to a VTEX account, allowing you to test and develop new apps and receive tech support from the VTEX partner team.
+> ℹ️ The Partner Program provides access to a VTEX account, allowing you to test and develop new apps and receive tech support from the VTEX partner team.
 
 ### Step 3 - Registering as a VTEX App Store seller
 
