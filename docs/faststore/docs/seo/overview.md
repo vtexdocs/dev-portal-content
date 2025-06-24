@@ -1,5 +1,5 @@
 ---
-title:"SEO"
+title: "SEO"
 ---
 
 Search Engine Optimization (SEO) is one of the most essential strategies for improving your site's visibility in organic search engine results. Well-optimized pages are more likely to appear in prominent positions on search engines, leading to higher traffic and better conversion rates.
