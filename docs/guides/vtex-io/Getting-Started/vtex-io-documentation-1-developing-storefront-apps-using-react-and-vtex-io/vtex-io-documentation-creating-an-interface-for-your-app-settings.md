@@ -1,6 +1,6 @@
 ---
 title: "Creating an interface for your app settings"
-slug: "creating-an-interface-for-your-app-settings"
+slug: "vtex-io-documentation-creating-an-interface-for-your-app-settings"
 hidden: false
 createdAt: "2024-06-18T14:06:36.006Z"
 updatedAt: "2025-06-23T14:05:37.168Z"
@@ -58,7 +58,9 @@ Below is an example of the Google Tag Manager app interface and its correspondin
 After building your app's settings interface, you need to consume the data provided by the app’s user. Consider the Google Tag Manager example above, retrieving the GTM ID.
 
 Based on the given example, below are the instructions for creating an interface for your app and retrieving the data to use within the app.
+
 ## Instructions
+
 ### Step 1 - Creating the settings interface
 
 To create the app settings interface, define the `settingsSchema` object in its `manifest.json` file.
@@ -113,7 +115,7 @@ In your app’s code, you can retrieve the app settings in two ways:
 
 Below is an example of each case.
 
->⚠ Make sure your app has the required permissions to communicate with the frontend or backend app. 
+> ⚠ Make sure your app has the required permissions to communicate with the frontend or backend app.
 > Without proper permissions, your store won’t be able to share data with the solution. Learn more in [Policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies).
 
 #### Frontend apps
@@ -122,7 +124,7 @@ Below is an example of each case.
 2. In the `react` directory, create a new folder named `queries`.
 3. Create a new `graphql` file (for example, `AppSettings.graphql`) and query the settings options as in the following example.
 
-```gql
+```graphql
 query getSettings {
   publicSettingsForApp(app: "{vendor}.{app.name}", version: "0.x")
     @context(provider: "vtex.apps-graphql") {
@@ -131,7 +133,7 @@ query getSettings {
 }
 ```
 
->⚠ Replace `vendor`, `app.name`, and `0.x` with values based on your scenario. In the case of the Google Tag Manager app, the `app` value is `vtex.google-tag-manager`, and the `version` value is `1.x`.
+> ⚠ Replace `vendor`, `app.name`, and `0.x` with values based on your scenario. In the case of the Google Tag Manager app, the `app` value is `vtex.google-tag-manager`, and the `version` value is `1.x`.
 
 The example above is a GraphQL query that fetches the data of a specific app declared in the arguments of `publicSettingsForApp` field: the app and its version. The configured fields are described below:
 
