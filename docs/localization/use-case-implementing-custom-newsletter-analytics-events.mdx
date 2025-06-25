@@ -9,7 +9,7 @@ This guide walks you through the process of implementing custom analytics events
 
 ![analytics-custom-newsletter-firing-event](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-firing-event___45d3f6e3f8586ef7fbbb389128bb4460.gif)
 
-> ℹ For a complete implementation example, refer to the [playground.store](https://github.com/vtex-sites/playground.store/tree/main/src/components/sections/CustomNewsletter) repository, which provides more in-depth details of the example.
+> ℹ For a complete implementation example, check the [playground.store](https://github.com/vtex-sites/playground.store/tree/main/src/components/sections/CustomNewsletter) repository, which provides more in-depth details.
 
 ## Before you begin
 
@@ -27,9 +27,9 @@ To follow this guide, you should be familiar with the following topics:
 
 Create a new section to receive the two new custom events:
 
-1. Open your store repository. If you don't already have it, create a folder named `components` inside the `src` directory.
-2. Inside `components`, create the `sections` folder.
-3. Inside the `sections` folder, create the `CustomNewsletter.tsx` file and add the following code. Below, see an explanation of the code.
+1. Open your store repository. If you don't have it, create a folder named `components` in the `src` directory.
+2. In `components`, create the `sections` folder.
+3. In the `sections` folder, create the `CustomNewsletter.tsx` file and add the following code. Below is an explanation of the code.
 
 <CH.Code>
 
@@ -222,11 +222,11 @@ Defines the customizable properties of the newsletter.
 - `description`: Subtitle or description text.
 - `emailInputLabel`: Label for the email input field.
 - `subscribeButtonLabel`: Text for the submit button.
-- `toastSubscribe`: Configurations for the success popup.
-- `toastSubscribeError`: Configurations for error popup.
+- `toastSubscribe`: Success pop-up settings.
+- `toastSubscribeError`: Error pop-up settings.
 - `privacyPolicy`: Legal disclaimer text.
-- `card`: Whether the newsletter should appear in a card-style container.
-- `colorVariant`: Styling theme (e.g., "primary", "secondary").
+- `card`: Defines whether the newsletter should display in a card-style container.
+- `colorVariant`: Styling theme (example: "primary", "secondary").
 
 ```tsx CustomNewsletter.tsx focus=37:54
 ```
@@ -238,17 +238,17 @@ Defines the customizable properties of the newsletter.
 Handles the newsletter subscription process.
 
 - `event.preventDefault()`: Prevents default form submission.
-  - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks the submission attempt
+  - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks the submission attempt.
     - The `onSubmit` function calls the `subscribeUser()` with email and name.
       - If successful:
         - Shows a success toast (`pushToast`).
         - Resets the form (`formRef.current?.reset()`).
-      - If it fails, it shows an error toast.
+      - If the call fails, it shows an error toast.
   - `pushToast`: Displays temporary success/error messages.
   - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks user interactions.
     - `Submit Newsletter` event: Tracks the form submission attempt when the user clicks the `Subscribe` button.
     - `Submit newsletter success` event: Tracks if the subscription was successful.
-  - [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook: track and handle custom analytics events.
+  - [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook: Tracks and handles custom analytics events.
 
 ```tsx CustomNewsletter.tsx focus=89:132
 ```
@@ -257,7 +257,7 @@ Handles the newsletter subscription process.
 
 ### Creating the section `index` file
 
-To make the Newsletter section available in the project, create a file named `index.tsx` inside the components folder and add the following:
+To make the Newsletter section available in the project, create a file named `index.tsx` in the components folder and add the following:
 
 <CH.Code>
 
@@ -300,10 +300,10 @@ To add styles to this new section, create a `section.module.scss` file and add t
 
 ### Updating the CMS folder
 
-1. In the root directory of your storefront project, create a folder named `cms` if it doesn't already exist.
-2. Inside `cms`, create the `faststore` folder.
-3. Within the `cms/faststore` folder, create the `sections.json` file.
-4. In the `sections.json` file, add the new section you want to display in the Headless CMS. The schema below defines how the Headless CMS renders a section:
+1. In the root directory of your storefront project, create a folder named `cms` if it doesn't exist.
+2. In `cms`, create the `faststore` folder.
+3. In the `cms/faststore` folder, create the `sections.json` file.
+4. In the `sections.json` file, add the new section you want to display in Headless CMS. The schema below defines how Headless CMS renders a section:
 
 <CH.Code>
 
@@ -450,14 +450,14 @@ To add styles to this new section, create a `section.module.scss` file and add t
 
 </CH.Scrollycoding>
 
-### Synchronizing the new section with the Headless CMS
+### Syncing the new section with Headless CMS
 
 1. In the terminal, log in to your VTEX account by running `vtex login {accountName}`.
 
    > ⚠️ Replace `{accountName}` with the name of your account. For example, `vtex login store`.
 
-2. Run `yarn cms-sync` to synchronize the new section you created with the CMS.
-3. Go to the VTEX Admin and access **Storefront > Headless CMS**.
+2. Run `yarn cms-sync` to sync the new section you created with CMS.
+3. Go to the VTEX Admin and navigate to **Storefront > Headless CMS**.
 4. Click the **Home** Content Type.
 5. In the Sections tab, click `+`, search for the new **Custom Newsletter** section, and add it to your page.
 
@@ -469,8 +469,8 @@ To add styles to this new section, create a `section.module.scss` file and add t
 
 ## Results
 
-1. Once you open the preview browser tab, open your browser's **Developer Tools** and go to the **Console** tab.
-2. Go to the newsletter section on the store page and fill in **Your Name** and **Your Email** fields.
+1. After opening the preview browser tab, open the browser's **Developer Tools** and go to the **Console** tab.
+2. Go to the newsletter section on the store page and complete **Your Name** and **Your Email** fields.
 3. Click `Subscribe`. You will notice in the **Console** tab that the two custom events were successfully triggered.
 
    ![analytics-custom-newsletter-firing-event](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-firing-event___45d3f6e3f8586ef7fbbb389128bb4460.gif)
