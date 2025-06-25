@@ -29,8 +29,7 @@ Now, Delivery Promise addresses these issues by offering a centralized, automate
 
 - **APIs:**
   - `productCount`: Provides the total number of products based on location.
-  - `pickupPoints`: Enables querying and returning a list of pickup points based on location.
-  - `validateSession`: Updates the shopper’s session with their current location whenever it changes, ensuring Delivery Promise displays accurate product availability and delivery estimates. This information is saved in the session (and `vtex_session` cookie) and used by other VTEX services like Checkout and Intelligent Search to offer suitable delivery options.
+  - `pickupPoints`: Returns a list of pickup points near a given location.
 
 ## Why did we make this change?
 
