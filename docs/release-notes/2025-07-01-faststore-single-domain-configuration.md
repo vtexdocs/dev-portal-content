@@ -41,7 +41,7 @@ The single-domain feature simplifies domain management for FastStore stores, red
 
 ## What needs to be done?
 
-To implement the single domain feature, follow these steps:
+To configure the single-domain feature, follow these steps:
 
 1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting that the account be configured for a single-domain setup. Please include the following information in the ticket:
 
