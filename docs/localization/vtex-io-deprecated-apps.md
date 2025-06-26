@@ -9,11 +9,11 @@ updatedAt: "2025-06-05T14:56:20.954Z"
 
 A deprecated app refers to an application no longer supported or maintained by VTEX, meaning that:
 
-- VTEX no longer offers technical support.
-- VTEX assumes no responsibility for issues arising from its use.
-- VTEX no longer provides bug fixes, updates, or security patches.
-- VTEX no longer develops new features.
-- Documentation is no longer updated.
+- VTEX no longer provides technical support.
+- VTEX is not liable for issues arising from their use.
+- VTEX will not provide bug fixes, updates, or security patches.
+- VTEX will not develop new features.
+- The documentation will not be updated.
 
 Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re using any of them, take appropriate action to remove or replace them.
 
