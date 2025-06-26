@@ -24,10 +24,10 @@ By default, GraphQL APIs in VTEX apps don't require authorization. To enable aut
 
 The `@auth` directive uses the following arguments:
 
-- `productCode`: The numeric code that identifies the product in License Manager (e.g., `"66"` for **VTEX IO**).
-- `resourceCode`: The License Manager resource identifier (e.g., `"workspace-read-write"` for **Workspace CRUD**).
+- `productCode`: The numeric code that identifies the product in License Manager (for example, `"66"` for **VTEX IO**).
+- `resourceCode`: The License Manager resource identifier (for example, `"workspace-read-write"` for **Workspace CRUD**).
 
-Example:
+Example
 
 ```graphql graphql/schema.graphql mark=2
 createWorkspace(account: String, workspace: String): GenericResponse
@@ -47,7 +47,7 @@ Declare the token considering the requester context:
 - **App**: `ctx.authToken`.
 - **Admin user**: `ctx.adminUserAuthToken`.
 
-Example:
+Example
 
 ```typescript node/clients/catalogGraphQL/index.ts mark=9
 import { AppGraphQLClient, InstanceOptions, IOContext } from '@vtex/api'
@@ -67,7 +67,7 @@ export class CatalogGQL extends AppGraphQLClient {
 
 For details about token types, see [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens).
 
-> ⚠️ Use the user token (Admin) whenever possible to properly identify the requester. The app token (`ctx.authToken`) should only be used when the user cannot access the requested service.
+> ⚠️ Use the user token (Admin) whenever possible to properly identify the requester. The app token (`ctx.authToken`) should only be used when the user can't access the requested service.
 
 ## Making requests to protected GraphQL API apps
 
@@ -110,4 +110,4 @@ curl -X POST \
   }'
 ```
 
-> ⚠️ It is possible to make GraphQL requests with GraphQL IDEs that support custom HTTP headers, such as the [one in the VTEX Admin](https://developers.vtex.com/docs/guides/graphql-ide). Not all GraphQL IDEs allow setting authentication headers, which may prevent requests to protected operations from being executed successfully.
+> ⚠️ You can make GraphQL requests with GraphQL IDEs that support custom HTTP headers, such as the [one in the VTEX Admin](https://developers.vtex.com/docs/guides/graphql-ide). Not all GraphQL IDEs allow setting authentication headers, which may prevent requests to protected operations from being executed successfully.
