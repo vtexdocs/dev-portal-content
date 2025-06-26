@@ -13,7 +13,7 @@ FastStore now routes Checkout and My Account pages through the store’s primary
 
 ## What has changed?
 
-Previously, FastStore required a distinct secure domain for Checkout and My Account pages. Now, FastStore operates with a single domain by default. This means all store URLs, including those for secure operations, will use the same base domain. See a comparison of the changes in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file:
+Previously, FastStore required a [distinct secure domain for Checkout and My Account pages](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-3-configuring-domains-in-vtex-account-settings). Now, FastStore operates with a single domain by default. This means all store URLs, including those for secure operations, will use the same base domain. See a comparison of the changes in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file:
 
 - **Before:** Stores required a separate `secure.domain.com` subdomain for secure pages.
 
