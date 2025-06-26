@@ -1,14 +1,14 @@
 ---
-title: "FastStore: Single-domain default configuration for stores hosted on Vercel"
+title: "FastStore: Simplified domain configuration for stores hosted on Vercel"
 slug: "2025-07-01-faststore-single-domain-configuration"
 hidden: false
 type: "added"
-createdAt: "2025-07-01T00:00:00Z"
-updatedAt: "2025-07-01T00:00:00Z"
-excerpt: "FastStore now uses a single domain by default for Checkout and My Account pages, eliminating the need for a separate secure domain configuration."
+createdAt: 2025-07-01T00:00:00Z
+updatedAt: 2025-07-01T00:00:00Z
+excerpt: "FastStore now defaults to a single domain for Checkout and My Account pages on, simplifying store domain management."
 ---
 
-FastStore has simplified its domain configuration by adopting a single-domain approach for Checkout and My Account pages. This change removes the requirement for a separate secure subdomain (e.g., `secure.domain.com`), streamlining setup and improving consistency across storefronts.
+FastStore has simplified its domain configuration by adopting the single-domain feature for Checkout and My Account pages. This change removes the requirement for a separate secure subdomain (e.g., `secure.domain.com`), streamlining setup and improving consistency across storefronts.
 
 > ⚠️ This update is currently available only for stores hosted on [Vercel](https://vercel.com/).
 
@@ -38,24 +38,17 @@ Previously, FastStore required a distinct secure domain for Checkout and My Acco
 
 ## Why did we make this change?
 
-The single-domain approach simplifies domain management for FastStore stores, reducing the need to configure and maintain multiple secure domains.
+The single-domain feature simplifies domain management for FastStore stores, reducing the need to configure and maintain multiple secure domains.
 
 ## What needs to be done?
 
-### For new stores
+To implement the single domain feature, follow these steps:
 
-Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requiring the account to have a single-domain setup. Please provide the following details in the ticket:
-
-- Account name
-- FastStore version
-
-### For existing stores hosted on Vercel
-
-1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting the account to be configured with a single-domain setup. Please include the following information in the ticket:
+1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting that the account be configured for a single-domain setup. Please include the following information in the ticket:
 
    - Account name
    - FastStore version
 
-   > ⚠️ If your store has already been through the process of setting up the single domain before June 26, 2025, you must open a new ticket requesting this setup to be re-implemented.
+   > ⚠️ For existing stores that have already been through the process of setting up the single domain before June 26, 2025, you must open a new ticket requesting this setup to be re-implemented.
 
-2. Once you receive confirmation that the single-domain is configured in your store account, review and update the `Production URLs` section in the discovery.config.js file to ensure all URLs are consistent. For more information, see the [TBD](/tbd) instructions.
+2. Once you receive confirmation that the single-domain setup is configured in your store account, review and update the `Production URLs` section in the discovery.config.js file to ensure all URLs are consistent. For more information, see the [TBD](/tbd) instructions.
