@@ -4,7 +4,7 @@ slug: "2025-07-01-faststore-single-domain-configuration"
 hidden: false
 type: "added"
 createdAt: "2025-07-01T00:00:00Z"
-updatedAt: ""
+updatedAt: "2025-07-01T00:00:00Z"
 excerpt: "FastStore now uses a single domain by default for Checkout and My Account pages, eliminating the need for a separate secure domain configuration."
 ---
 
