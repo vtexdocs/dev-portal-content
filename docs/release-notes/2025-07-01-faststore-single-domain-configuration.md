@@ -3,7 +3,7 @@ title: "FastStore: Simplified domain configuration for stores hosted on Vercel"
 slug: "2025-07-01-faststore-single-domain-configuration"
 hidden: false
 type: "added"
-createdAt: 2025-07-01T00:00:00Z
+createdAt: "2025-07-01T10:00:000Z"
 excerpt: "FastStore now defaults to a single domain for Checkout and My Account pages on, simplifying store domain management."
 ---
 
