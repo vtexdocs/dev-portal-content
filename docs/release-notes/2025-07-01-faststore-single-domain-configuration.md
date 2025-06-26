@@ -4,11 +4,10 @@ slug: "2025-07-01-faststore-single-domain-configuration"
 hidden: false
 type: "added"
 createdAt: 2025-07-01T00:00:00Z
-updatedAt: 2025-07-01T00:00:00Z
 excerpt: "FastStore now defaults to a single domain for Checkout and My Account pages on, simplifying store domain management."
 ---
 
-FastStore has simplified its domain configuration by adopting the single-domain feature for Checkout and My Account pages. This change removes the requirement for a separate secure subdomain (e.g., `secure.domain.com`), streamlining setup and improving consistency across storefronts.
+FastStore has simplified its domain configuration by adopting the single-domain feature for Checkout and My Account pages. This change removes the requirement for a separate secure subdomain (e.g., `secure.domain.com`), simplifying setup and improving consistency across storefronts.
 
 > ⚠️ This update is currently available only for stores hosted on [Vercel](https://vercel.com/).
 
@@ -49,6 +48,6 @@ To implement the single domain feature, follow these steps:
    - Account name
    - FastStore version
 
-   > ⚠️ For existing stores that have already been through the process of setting up the single domain before June 26, 2025, you must open a new ticket requesting this setup to be re-implemented.
+    > ⚠️ For existing stores that set up the single domain before June 26, 2025, you must open a new ticket to request re-implementation, as the feature has been improved since then.
 
 2. Once you receive confirmation that the single-domain setup is configured in your store account, review and update the `Production URLs` section in the discovery.config.js file to ensure all URLs are consistent. For more information, see the [TBD](/tbd) instructions.
