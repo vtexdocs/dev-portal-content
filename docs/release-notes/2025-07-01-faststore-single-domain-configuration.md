@@ -3,8 +3,8 @@ title: "FastStore: Simplified domain configuration for stores hosted on Vercel"
 slug: "2025-07-01-faststore-single-domain-configuration"
 hidden: false
 type: "added"
-createdAt: "2025-07-01T10:00:000Z"
-excerpt: "FastStore now defaults to a single domain for Checkout and My Account pages on, simplifying store domain management."
+createdAt: "2025-07-01T10:00:00.000Z"  
+excerpt: "FastStore now defaults to a single domain for Checkout and My Account pages on, improving store domain management."
 ---
 
 FastStore has simplified its domain configuration by adopting the single-domain feature for Checkout and My Account pages. This change removes the requirement for a separate secure subdomain (e.g., `secure.domain.com`), simplifying setup and improving consistency across storefronts.
