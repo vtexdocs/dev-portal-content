@@ -2,7 +2,9 @@
 title:"CSS Analysis"
 ---
 
-To enforce proper containment and prevent global style leakage, the Analyzer supports CSS analysis. As shown in [step 1](#instructions) of the previous section, when calling `analyzeFiles()`, you can specify CSS analysis options:
+In this guide, you will learn how to configure and use the Analyzer to enforce CSS containment and prevent global style leakage in custom modules or extensions. The CSS analysis checks for common CSS violations and ensures proper namespacing to avoid style conflicts within different parts of your application.
+
+As shown in [Implementing FastStore Analyzer](https://developers.vtex.com/docs/guides/faststore/faststore-analyzer-implementation#instructions) guide, when calling `analyzeFiles()`, you can specify CSS analysis options:
 
 ```typescript
 await analyzer.analyzeFiles({
