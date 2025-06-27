@@ -2,7 +2,7 @@
 title: "FastStore WebOps: Centralized secrets management"
 slug: "2025-06-24-faststore-webops-centralized-secrets-management"
 type: added
-excerpt: "FastStore secrets are now managed in WebOps, improving security by deploying them as environment variables through AWS Secrets Manager."
+excerpt: "FastStore secrets are now managed in WebOps, improving security by deploying them as environment variables."
 createdAt: "2025-06-24T13:23:53.214Z"
 updatedAt: ""
 hidden: false
