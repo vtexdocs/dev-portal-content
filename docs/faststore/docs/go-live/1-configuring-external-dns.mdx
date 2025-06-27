@@ -35,6 +35,8 @@ To proceed, make sure your store is active and in production by following the st
 
 ### Step 3 - Configuring domains in VTEX Account Settings
 
+> ⚠️ For stores hosted on [Vercel](https://vercel.com/), see the [Single-domain setup for stores hosted on Vercel](#step-5--single--domain-setup-only-for-stores-hosted-on-vercel) section.
+
 Now, you must set up your VTEX account to use the DNS records created in the previous step.
 
 > ℹ For more information about store domain configuration, see the [Configuring the store domain](https://help.vtex.com/en/tutorial/configuring-the-store-domain--tutorials_2450) guide.
@@ -45,6 +47,7 @@ Now, you must set up your VTEX account to use the DNS records created in the pre
 4. In the **Hosts** field, enter your main domain (example: `www.mystore.com`) into the list.
 5. Click `Add`.
 6. Add the `secure` subdomain (example: `secure.mystore.com`) to the list.
+   
    ![host-configuration](https://vtexhelp.vtexassets.com/assets/docs/src/account-settings-new___2e13bee3041e8505922a737b94652ca6.png)
 
 7. Add the root domain as well; for example, if your domain is `www.mystore.com`, add `mystore.com`. For a complete setup, you must add three hosts for each domain:
@@ -57,6 +60,8 @@ Now, you must set up your VTEX account to use the DNS records created in the pre
 8. Click the **Save** button.
 
 ### Step 4 - Associating your custom domain with your FastStore project
+
+> ⚠️ For stores hosted on [Vercel](https://vercel.com/), see the [Single-domain setup for stores hosted on Vercel](#step-5--single--domain-setup-only-for-stores-hosted-on-vercel) section.
 
 Back to your FastStore project, you must also configure your project to point to the right addresses and domains.
 
@@ -103,7 +108,70 @@ Take the following example of how this code block would look after configuring a
 
 > ⚠️ For stores with prefixed domains, add the `subDomainPrefix` property to `discovery.config.js` to ensure product visibility in the secured environment. For more information, see the [Adding `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains) section. 
 
-### Step 5 - Configuring the CDN workflow (Only for new go-lives)
+### Step 5 - Single-domain setup (Only for stores hosted on Vercel)
+
+FastStore stores hosted on [Vercel](https://vercel.com/) can benefit from a single domain. This feature simplifies domain management by routing Checkout and My Account pages through the store’s primary domain (e.g., `www.domain.com`), removing the need for a separate `secure.domain.com` subdomain. To use this feature, follow these instructions:
+
+#### Check the store configuration file and store version
+
+1. Check if you have renamed the configuration file name from `faststore.config.js` to `discovery.config.js`. For more information, see this [release note](https://developers.vtex.com/updates/release-notes/2024-12-16-discovery-config-file).
+2. Check if the `@faststore/cli` is listed as a dependency of your store `package.json`. For more information, see this [release note](https://developers.vtex.com/updates/release-notes/2024-09-11-faststore-cli-dependency).
+3. Make sure your FastStore project is on version `3.6.0` or later. To update your store to the latest version, open your FastStore project in a code editor of your preference.
+4. Open the terminal and run the following command to update FastStore packages:
+
+   ```bash
+   yarn upgrade -L --scope @faststore
+   ```
+
+#### Setup domains in VTEX Account Settings
+
+> ℹ For more information about store domain configuration, see the [Configuring the store domain](https://help.vtex.com/en/tutorial/configuring-the-store-domain--tutorials_2450) guide.
+
+1. In the VTEX Admin, click your profile avatar, which can be identified by the first letter of your email address.
+2. Access **Account Settings > Account**.
+3. Go to the **Stores** tab and in the **Hosts** table, click the menu (**⋮**) and choose **Edit**.
+4. In the **Hosts** field, enter your main domain (example: `www.mystore.com`) into the list.
+5. Click `Add`.
+6. Add the subdomain root domain as well; for example, if your domain is `www.mystore.com`, add `mystore.com`. For a complete setup, you must add three hosts for each domain:
+   - `www.mystore.com`  (store domain)
+   - `mystore.com` (root domain)
+   - `domain.com/checkout` (checkout/myaccount subdomain)
+
+> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. For more information, see the [Adding subdomains to the host list](#adding-subdomains-to-the-host-list) section.
+
+#### Open a ticket to VTEX Support
+
+To enable the single-domain feature, request the account configuration from VTEX. This ensures proper routing and security settings for your store. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting that the account be configured for a single-domain setup. Please include the following information in the ticket:
+
+   - Account name.
+   - [FastStore store version](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels).
+   - Final domain name.
+
+>⚠️ For existing stores that set up the single domain before June 26, 2025, you must open a new ticket to request re-implementation, as the feature has been improved since then.
+
+#### Update the `discovery.config.js` file
+
+1.  After receiving [confirmation that the single-domain setup is configured](#open-a-ticket-to-vtex-support), go back to the FastStore project in a code editor.
+2. Go to the `discovery.config.js` file, update the `Production URLs` field with the new URLs, and replace the `rootDomain` value with your store root domain name. See the example below:
+    
+   ```js
+   ...
+
+   // Production URLs
+   storeUrl: "https://www.{rootDomain}.com",
+   secureSubdomain: "https://www.{rootDomain}.com",
+   checkoutUrl: "https://www.{rootDomain}.com/checkout",
+   loginUrl: "https://www.{rootDomain}.com/api/io/login",
+   accountUrl: "https://www.{rootDomain}.com/api/io/account",
+
+   ...
+   ```
+
+3. Save your changes.
+4. Open the `vtex.env` file.
+5. Add the `SITE_HOST` key with the main domain specified in [Setup domains in VTEX Account Settings](#setup-domains-in-vtex-account-settings) as the value.
+
+### Step 6 - Configuring the CDN workflow (Only for new go-lives)
 
 If your FastStore website is going live for the first time, [open a ticket with VTEX Support](https://help.vtex.com/en/support) and specify that you need to configure the CDN workflow for your store's secure and main domains.
 
@@ -114,7 +182,7 @@ Include the following information in your ticket:
 
 The VTEX team will evaluate your request and take the necessary actions to configure your account's CDN workflow.
 
-### Step 6 - Adding your store domain to FastStore WebOps
+### Step 7 - Adding your store domain to FastStore WebOps
 
 To finish the domain configuration, add your store domain to [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview).
 
@@ -127,7 +195,7 @@ To finish the domain configuration, add your store domain to [FastStore WebOps](
 
    ![adding-host-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/adding-host-webops.png)
 
-### Step 7 - Monitoring the new deployment
+### Step 8 - Monitoring the new deployment
 
 After adding your domain to FastStore WebOps, a new deployment will be triggered automatically. Before proceeding to the next step, monitor the deployment progress in the FastStore WebOps dashboard until it is fully completed.
 
@@ -139,7 +207,7 @@ Then, check if your domain is configured correctly in the FastStore WebOps envir
 
    ![currrent-domains](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/current-domains.png)
 
-### Step 8 - Migrating the domain
+### Step 9 - Migrating the domain
 
 1. Open a ticket to [VTEX Support](https://help.vtex.com/en/support) requesting a **domain migration** for your FastStore WebOps implementation. Please include the following information:
    - VTEX account name
