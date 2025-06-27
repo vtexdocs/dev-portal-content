@@ -53,9 +53,8 @@ Now, you must set up your VTEX account to use the DNS records created in the pre
    - `mystore.com` (root domain)
    - `secure.mystore.com` (checkout/myaccount subdomain)
 
-> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. For more information, see the [Adding subdomains to the host list](#adding-subdomains-to-the-host-list) section.
-
-#### Stores hosted on Vercel
+<details>
+<summary><b>Stores hosted on Vercel<b></summary>
 
 Stores hosted on [Vercel](https://vercel.com/) can benefit from a single domain. This feature simplifies domain management by routing Checkout and My Account pages through the store’s primary domain (e.g., `www.domain.com`), removing the need for a separate `secure.domain.com` subdomain.
 
@@ -64,7 +63,11 @@ Add the hosts for the domain as shown in the example below:
    - `www.mystore.com` (store domain)
    - `mystore.com` (root domain)   
 
+</details>
+
 8. Click the **Save** button.
+
+> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. For more information, see the [Adding subdomains to the host list](#adding-subdomains-to-the-host-list) section.
 
 ### Step 4 - Associating your custom domain with your FastStore project
 
