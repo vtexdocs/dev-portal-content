@@ -167,6 +167,23 @@ This repository uses several GitHub Actions to ensure documentation quality and 
 - `reviewdog/action-setup@v1`: Sets up Reviewdog
 - Node.js packages: `@actions/core`
 
+### Changelog Generation
+**Trigger**: Push to main branch or merged pull requests  
+**Purpose**: Automatically generates changelog entries based on commit messages.  
+**Dependencies**:
+- `actions/checkout@v4`: Checks out the repository
+- `actions/setup-node@v4`: Sets up Node.js environment
+Commit types supported:
+- new: New guides, troubleshooting articles, or release notes
+- fix: Bug fixes for typos, broken links, or markdown
+- media: Media asset updates
+- update: Content updates
+- remove: File removals
+- loc: Localization changes
+- docs: README documentation updates
+- feat: New features
+- test: Test updates
+
 ### Navigation Preview
 **Trigger**: Pull requests  
 **Purpose**: Provides preview links for navigation changes.  

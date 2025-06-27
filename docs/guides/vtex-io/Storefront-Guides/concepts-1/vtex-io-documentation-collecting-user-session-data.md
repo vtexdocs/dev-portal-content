@@ -38,7 +38,7 @@ Before starting, ensure you have the following:
       ```json manifest.json
       "builders": {
           "node": "7.x",
-          "docs: "0.x",
+          "docs": "0.x",
           "vtex.session": "0.x"
       },
       ```
@@ -74,7 +74,7 @@ In the following example, the app listens for changes in the `authentication` na
     "session-watcher-demo": {
         "input": {
             "authentication": ["storeUserEmail"],
-            "checkout": ["orderFormId]
+            "checkout": ["orderFormId"]
         },
         "output": {
             "public": ["demo"]
@@ -100,7 +100,7 @@ To set up this endpoint, take the following steps:
       }
       ```
 
-2. Create the `node/resolvers/index.ts` file and define the handler function for processing session changes. This function will respond with the expected output defined in the `configuration.json`. Take the following example and note the handler receives a `Context` that gives access to the request body. The handle should respond as a JSON with the object expected on the `output` definition.
+2. Create the `node/resolvers/index.ts` file and define the handler function for processing session changes. This function will respond with the expected output defined in the `configuration.json`. Take the following example and note that the handler receives a `Context` that gives access to the request body. The handle should respond as a JSON with the object expected on the `output` definition.
 
       ```ts node/resolvers/index.ts mark=6,17:23,25:26
       /* eslint-disable no-console */
@@ -134,7 +134,7 @@ To set up this endpoint, take the following steps:
       }
       ```
    
-4. In the `./node/index.ts` file, import the handler function file ( `node/reseolvers/index.ts`) and load it to the Service.
+4. In the `./node/index.ts` file, import the handler function file ( `node/reseolvers/index.ts`) and load it into the Service.
 
       ```ts node/index.ts
       import { resolvers } from ‘./resolvers’
