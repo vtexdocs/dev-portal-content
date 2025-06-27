@@ -2,7 +2,7 @@
 title: 'FastStore WebOps - Dashboard'
 ---
 
-Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project) or are already working on customizing it, you can use the WebOps dashboard to see an overview of website deployments and performance.
+Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project) or if you're already working on customizing it, you can use the WebOps dashboard to see an overview of website deployments and performance.
 
 The WebOps dashboard provides a comprehensive overview of website builds and deploy previews and offers suggestions on how to improve storefront performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
 
@@ -20,41 +20,41 @@ The **Overview** tab provides a quick snapshot of key website details, including
 
 The **Production overview** section provides the following information about the latest live store deploy:
 
-| Field                 | Description                                                                                                                                                                                          |
-| :-------------------- | :----------------------------------------------------------------------------------------------- |
-| **Live Store**        | URL of your production environment, accessible to shoppers.                                      |
-| **Repository**        | GitHub repository associated with the project.                                                   |
-| **Source**            | Commit for the current deployment, including date, time, and author.                             |
-| **CMS Provider**      | Link to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
-| **CMS Project**       | Link to the FastStore project in Headless CMS.                                                   |
+| Field            | Description                                                                                      |
+| :--------------- | :----------------------------------------------------------------------------------------------- |
+| **Live store**   | URL of your production environment accessible to shoppers.                                       |
+| **Repository**   | GitHub repository associated with the project.                                                   |
+| **Source**       | Commit for the current deployment, including date, time, and author.                             |
+| **CMS provider** | Link to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
+| **CMS project**  | Link to the FastStore project in Headless CMS.                                                   |
 
 #### Live deployment statuses
 
 This section also displays the status of the live deployment:
 
-- **Success:** The commit was deployed to the production environment and is live.
-- **Queued:** The commit is next in line to be deployed.
-- **In progress:** The commit is currently being deployed.
-- **Failed:** The deployment failed. You can find more details by clicking the link below the `Deploy` button.
+* **Success:** The commit was deployed to the production environment and is live.
+* **Queued:** The commit is waiting to be deployed.
+* **In progress:** The commit is currently being deployed.
+* **Failed:** The deployment failed. You can find more details by clicking the link below the `Deploy` button.
 
 ### Lighthouse scores
 
-When your store goes live (in production), ensuring optimal performance and a good user experience is crucial. The Lighthouse scores section offers insights into four key areas measured by Lighthouse, helping you understand their impact on store performance.
+When your store goes live (in production), ensuring optimal performance and a good user experience is crucial. The Lighthouse scores section offers insights into four key areas, which helps you understand their impact on store performance.
 
-- **Performance:** Indicates how fast your pages load.
-- **Accessibility:** Reflects how usable your pages are for people with disabilities.
-- **Best practices:** Indicates how well your pages adhere to coding best practices.
-- **SEO:** Reflects how well your pages are optimized for search engines.
+* **Performance:** Indicates how fast your pages load.
+* **Accessibility:** Reflects how usable your pages are for people with disabilities.
+* **Best practices:** Indicates how well your pages adhere to coding best practices.
+* **SEO:** Reflects how well your pages are optimized for search engines.
 
 These scores are based on the pages defined for testing in the [Integrations](#integrations) tab.
 
 ### Production deploys
 
-This section lists the recent deploys to your production store. Each item on the list is composed of the following:
+This section lists recent deploys to your production store. Each item on the list is composed of the following:
 
 ![dashboard-lighthouse-score](https://vtexhelp.vtexassets.com/assets/docs/src/dashboard-production-deploys___840fcb7b30bc2c7a1e4e5d1d255a58f9.png)
 
-For a complete list of all store deployments and details about them, see the [Deploys](#deploys) tab.
+For a complete list of store deployments and their details, check the [Deploys](#deploys) tab.
 
 ### Preview deploys
 
@@ -62,23 +62,23 @@ This section lists all the deploy previews created for GitHub branches in your p
 
 ## Deploys
 
-The **Deploys** tab provides insights into store deployments, including their status (success, failed, etc.). The table below summarizes the key features of the Deploys page.
+The **Deploys** tab provides insights into store deployments, including their status (success, failed, etc.). The table below summarizes the key features of the Deploys tab.
 
 ![deploys-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/deploys-webops.png)
 
-| **Feature** | Description |
-| ----------- | ----------- |
-| 1 - Search bar        | Allows you to search by deploy ID, commit, message, or author. |
-| 2 - Pagination        | Allows you to navigate through pages of deployment data. |
-| 3 - Enviroment        | Filters deployments by environment: <ol><li>Production: The live store customers can interact with. </li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol> |
-| 4 - Branch            | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                       |
-| 5 - Status            | Filters deploy status: <ol><li>Queued: The deployment is next in line to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment has completed successfully.</li><li>Failed: The deployment process encountered an error and didn't complete as expected.</li></ol> |
-| 6 - Sort by           | Filters deployments by **Latest first** or **Oldest First**. |
-| 7 - Deployments table | Lists all store deployments with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deploy author and the date and time of the deployment.</li><li>Environment: The environment that was changed, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deploy status.</li></ol> |
+| **Feature**          | Description                                                                                                                                                                                                                                                                                                                                                                                                       |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 - Search bar       | Allows you to search by deploy ID, commit, message, or author.                                                                                                                                                                                                                                                                                                                                                    |
+| 2 - Pagination       | Allows you to navigate through pages of deployment data.                                                                                                                                                                                                                                                                                                                                                          |
+| 3 - Enviroment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with. </li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                    |
+| 4 - Branch           | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                           |
+| 5 - Status           | Filters deployments by status: <ol><li>Queued: The deployment is waiting to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment was completed successfully.</li><li>Failed: The deployment encountered an error and didn't complete as expected.</li></ol>                                                                                                        |
+| 6 - Sort by          | Filters deployments by **Latest first** or **Oldest first**.                                                                                                                                                                                                                                                                                                                                                      |
+| 7 - Deployment table | Lists all store deployments with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deploy author and the date and time of the deployment.</li><li>Environment: The environment that was changed, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deployment status.</li></ol> |
 
 ### Deployment details
 
-For more information, click any entry in the deploy table.
+For more information, click any entry in the deployment table.
 
 ![deployment-details](https://vtexhelp.vtexassets.com/assets/docs/src/deployment-details___011bb7391157ad21eb965d8bcfc75b03.gif)
 
@@ -98,34 +98,34 @@ To set the pages you want to test with Lighthouse, follow these steps:
 2. In the **Path for a PDP** field, enter the slug for the specific PDP you want to test.
 3. Click `Save`.
 
-Once you've set the pages for testing and after a new deployment, go to the **Overview** tab and access the **Lighthouse Scores** section to check the scores for those pages.
+Once you've set the pages for testing and after a new deployment, go to the **Overview** tab and access the **Lighthouse scores** section to check the scores for those pages.
 
 ## Settings
 
 The **Settings** tab is where you manage the following configurations:
 
-- [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
-- [**Secrets**](#secrets): Store and securely manage sensitive information, such as API keys and passwords, required during FastStore deployment.
+* [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
+* [**Secrets**](#secrets): Stores and allows secure management of sensitive information, such as API keys and passwords, required during FastStore deployment.
 
-![settings-webops](https://vtexhelp.vtexassets.com/assets/docs/src/secrets-webops___2869e469b5a613f389f19cc555f4c3c5.png) 
+![settings-webops](https://vtexhelp.vtexassets.com/assets/docs/src/secrets-webops___2869e469b5a613f389f19cc555f4c3c5.png)
 
 ### Production domain
 
-As part of the [go-live](https://developers.vtex.com/docs/guides/faststore/go-live-overview) process, you must define your store's production domain, the main URL customers will use to access your store.
+As part of the [go-live](https://developers.vtex.com/docs/guides/faststore/go-live-overview) process, you must define the production domain of the store, the main URL customers will use to access your store.
 
 > ⚠️ Before adding the domain, make sure the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) are correctly configured in your VTEX account settings.
 
-In the **Production domain** section, select the store domain from the dropdown list in the **Host** field and click `Add` to set up your store's primary domain.
+In the **Production domain** section, select the store domain from the dropdown list in the **Host** field and click `Add` to set up the primary domain of your store.
 
 #### Current domains
 
-The **Current Domains** section displays the default and primary domains configured for your store. This section is a reference point to ensure your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment. 
+The **Current domains** section displays the default and primary domains configured for your store. This section is a reference point to ensure your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment.
 
-> ⚠️ If your domain isn't listed, it may indicate an issue with the configuration or DNS settings that need to be addressed before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly and the problem persists, open a ticket to [VTEX support](https://help.vtex.com/en/support).
+> ⚠️ If your domain isn't listed, there might be an issue with the configuration or DNS settings that you need to be addressed before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
 
 ### Secrets
 
-Secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing secrets management via WebOps enhances security and consistency across deployment providers.
+Secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing secret management via WebOps enhances security and consistency across deployment providers.
 
 In the **Secrets** section, define the **Key** and **Value** in their respective fields and click `Add` to set up the secret.
 
@@ -135,11 +135,11 @@ In the **Secrets** section, define the **Key** and **Value** in their respective
 
 The **Current keys** section lists all secrets configured for your store. This list shows each secret’s key (the identifier), while the value is hidden by default for security reasons. You can toggle the visibility of a secret’s value if needed.
 
-In this section, you can update or delete an existing secret by clicking `⋮` and choosing the corresponding option, `Edit` or `Delete`.
+In this section, you can update or delete an existing secret by clicking `⋮` and selecting the corresponding option, `Edit` or `Delete`.
 
 ## Deleting the project
 
-To delete your FastStore project, click the **More actions menu** (`⋮`). Then, click **Delete Project**.
+To delete your FastStore project, click the **More actions menu** (`⋮`). Then, click **Delete project**.
 
 A modal to confirm your action will open.
 
