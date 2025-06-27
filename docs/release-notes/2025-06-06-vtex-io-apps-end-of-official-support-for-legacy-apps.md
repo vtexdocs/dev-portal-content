@@ -4,7 +4,7 @@ slug: "2025-06-06-vtex-io-apps-end-of-official-support-for-legacy-apps"
 type: deprecated
 excerpt: "VTEX no longer offers support for legacy apps."
 createdAt: "2025-06-06T12:45:40.909Z"
-updatedAt: ""
+updatedAt: "2025-06-27T18:50:17.810Z"
 hidden: false
 ---
 
