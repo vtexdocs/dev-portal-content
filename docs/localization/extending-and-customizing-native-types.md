@@ -4,11 +4,11 @@ title: "Extending and customizing native types"
 
 The [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview) module offers built-in [ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en) based on the [Google Analytics 4 (GA4) data model](https://developers.google.com/analytics/devguides/collection/ga4/reference/events).
 
-While these parameters are often the most used in online stores, you may need to track additional properties to monitor specific behaviors that are only valuable to particular business models. For example, a subscription box service would want to track details like `subscription_frequency` or `is_renewal` beyond standard purchase data to better understand customer lifetime value and churn.
+While these parameters are often the most used in online stores, you may need to track additional properties to monitor specific behaviors that are only valuable to particular business models. For example, a subscription box service would want to track details like `subscription_frequency` or `is_renewal` beyond standard purchase data to understand customer lifetime value and churn better.
 
-Extending and customizing native types from Analytics is natively supported by FastStore. The Analytics module can accept new types and also export its native types. You don't need to rewrite an event interface's code to add minor additions. Also, since the Analytics module is built with [generics](https://www.typescriptlang.org/docs/handbook/2/generics.html), you can rewrite only part of a type, like the `Item` structure,  if necessary.
+FastStore natively supports extending and customizing Analytics native types. The Analytics module can accept new types and also export its native types. You don't need to rewrite an event interface's code to make minor additions. Also, since the Analytics module is built with [generics](https://www.typescriptlang.org/docs/handbook/2/generics.html), you can rewrite only part of a type, like the `Item` structure,  if necessary.
 
-In this guide, learn how to extend and customize native types from the Analytics module.
+In this guide, you'll learn how to extend and customize native types from the Analytics module.
 
 ## Before you begin
 
@@ -18,7 +18,7 @@ In this guide, learn how to extend and customize native types from the Analytics
 
 ## Extending event interfaces
 
-To add new properties to an existing event interface, you must create a new TypeScript interface that extends the native FastStore Analytics event type. This step allows you to add custom event-level details that are not part of the standard GA4 data model but are important for your business. For example, knowing if the entire cart contains a product bundle might be key for a specific promotion or product strategy.
+To add new properties to an existing event interface, you must create a new TypeScript interface that extends the native FastStore Analytics event type. This step allows you to add custom event-level details that aren't part of the standard GA4 data model but are important for your business. For example, knowing whether the cart contains a product bundle can be key to a specific promotion or product strategy.
 
 1. Create a new interface that extends the native FastStore Analytics event type. For example, to add an `isProductBundle` property to `AddToCartEvent`:
 
@@ -33,7 +33,7 @@ To add new properties to an existing event interface, you must create a new Type
    - The `isProductBundle` property is a flag that indicates whether the added item is part of a product bundle.
    - The `AddToCartExtended` interface now includes all properties from `AddToCartEvent` (`name` and `params`) and the new `isProductBundle` property.
 
-2. To use this extended type when sending an event, make sure your event object conforms to the `AddToCartExtended` new interface structure inside the component you send analytics events. See the following example:
+2. To use this extended type when sending an event, ensure your event object conforms to the `AddToCartExtended` new interface structure inside the component you send analytics events. See the following example:
 
     ```ts
     import { analytics } from 'src/sdk/analytics'
@@ -123,13 +123,13 @@ analytics.sendEvent(addToCartWithExtendedItemsEvent);
 
 ## Best practices for validating extended types at runtime
 
-Since TypeScript types are erased during compilation, make sure to validate your extended event data at runtime to ensure analytics tools like [Google Analytics 4](https://support.google.com/analytics/topic/14089939?hl=en&ref_topic=14090456&sjid=1384409646416570899-SA) receive correctly formatted events. Consider the following methods:
+Since TypeScript types are erased during compilation, validate your extended event data at runtime to ensure analytics tools like [Google Analytics 4](https://support.google.com/analytics/topic/14089939?hl=en&ref_topic=14090456&sjid=1384409646416570899-SA) receive correctly formatted events. Consider the following methods:
 
 > ⚠️ These methods can help catch runtime errors. Choose what fits your workflow.
 
 | **Method** | **Purpose** |
 | --------- | ------------ |
-| Installing a validation library | Use a validation library of your choice to catch typos and validate backend data. |
+| Installing a validation library | Use a validation library to catch typos and validate backend data. |
 | Intercepting events | Verify events before they reach analytics tools by wrapping `analytics.sendEvent(safeEvent)` with validation logic to filter invalid events in your code. |
 | Debugging with [GA4 DebugView](https://support.google.com/analytics/answer/7201382?hl=en#zippy=) | Enable debug mode and monitor real-time events in GA4's DebugView interface. For more information, see the [GA4 DebugView](https://support.google.com/analytics/answer/7201382?hl=en#zippy=) guide. |
 | Adding unit tests | Write tests that verify your event objects catches schema violations during development. |
