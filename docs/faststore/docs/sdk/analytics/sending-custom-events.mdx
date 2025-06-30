@@ -4,6 +4,10 @@ title: "Sending custom events"
 
 Even though the [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview) module natively supports [Google Analytics ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en), you may need to track customer activity not covered by default events. In such cases, you can trigger and intercept custom events using the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) and [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) functions. In this guide, learn how to define and send custom events.
 
+## Before you begin
+
+Make sure you have created the Newsletter data entity that stores use subscription information. For more details, see the [Creating the Newsletter data entity in VTEX Master Data](https://developers.vtex.com/docs/guides/faststore/organisms-newsletter#creating-the-newsletter-data-entity-in-vtex-master-data) instructions.
+
 ## Instructions
 
 ### Step 1 - Declaring an interface for your custom event
