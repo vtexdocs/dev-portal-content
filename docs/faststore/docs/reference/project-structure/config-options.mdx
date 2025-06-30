@@ -2,36 +2,201 @@
 title: "Configuration options for discovery.config.js"
 ---
 
-> ⚠️ This documentation is currently under development.
+The `discovery.config.js` is a configuration file for managing various settings that control store behavior, appearance, and functionality. It works as a central hub for configuring key aspects of a FastStore website, such as SEO, API connections, session management, URLs, analytics, and more.
 
-The `discovery.config.js` file is the central configuration file for managing store settings.
-It allows you, for example, to set SEO settings, define the store ID, select a theme, and set up custom Cypress tests. Check out the example for this file: [`discovery.config.js` sample code](https://github.com/vtex-sites/starter.store/blob/main/discovery.config.js).
+## Example file
 
-> ⚠️ `discovery.config.js` is the new filename for the legacy one `faststore.config.js`. If you still using the legacy name, please refer to [this release note](https://developers.vtex.com/updates/release-notes/2024-12-16-discovery-config-file) to update it.
+```javascript
+module.exports = {
+  seo: {
+    title: "FastStore Starter",
+    description: "Fast Demo Store",
+    titleTemplate: "%s | FastStore",
+    author: "FastStore",
+  },
+  theme: "custom-theme",
+  platform: "vtex",
+  api: {
+    storeId: "storeframework",
+    workspace: "master",
+    environment: "vtexcommercestable",
+    hideUnavailableItems: false,
+    incrementAddress: false,
+  },
+};
+```
 
-Explore more in-depth specific configuration options for `discovery.config.js`:
+Check the full file example at [`discovery.config.js` sample code](https://github.com/vtex-sites/starter.store/blob/main/discovery.config.js).
 
-<Flex>
+> ⚠️ As of December 16, 2024, `discovery.config.js` is the new filename for the legacy `faststore.config.js` file. If you're still using the legacy name, please check [this release note](https://developers.vtex.com/updates/release-notes/2024-12-16-discovery-config-file) to update it.
 
-<WhatsNextCard
-  linkTo="/docs/guides/faststore/project-structure-custom-cypress"
-  title="enableCypressExtension"
-  description="Add custom Cypress tests to your FastStore project, enhancing testing capabilities for seamless integration."
-  linkTitle="See more"
-/>
+## Configuration options
 
-<WhatsNextCard
-  linkTo="/"
-  title="SEO (Coming soon)"
-  description="Define the store's headline in search results, important for relevance and keywords. "
-  linkTitle="See more"
-/>
+Below is a description of each setting you can configure in the `discovery.config.js` file:
 
-<WhatsNextCard
-  linkTo="/"
-  title="theme (coming soon)"
-  description="Defines your project's theme name, which is the look n' feel of your FastStore project."
-  linkTitle="See more"
-/>
+### `seo`
+Sets default metadata related to Search Engine Optimization (SEO).
 
-</Flex>
+| Property        | Type   | Description                                                                 |
+|-----------------|--------|-----------------------------------------------------------------------------|
+| `title`         | `string` | Store headline displayed in search results (60 chars recommended).      |
+| `description`   | `string` | Brief description of the store (150-160 chars optimal).                |
+| `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder (e.g., `"%s \| StoreName"`).    |
+| `author`        | `string` | Content author/owner for attribution.                                        |
+
+Learn more in [SEO](https://developers.vtex.com/docs/guides/faststore/seo-overview).
+
+---
+
+### `theme`
+Defines the look and feel of your FastStore project. This field is a `string` that specifies the name of the theme being used. Learn more in [Theming](https://developers.vtex.com/docs/guides/faststore/using-themes-overview).
+
+---
+
+### `platform`
+Describes the ecommerce platform being used, that is, `vtex`.
+
+---
+
+### `api`
+Contains settings related to the store's API.
+
+| Property               | Type    | Description                                                                 |
+|------------------------|---------|-----------------------------------------------------------------------------|
+| `storeId`              | `string`  | VTEX account being used.                            |
+| `workspace`            | `string`  | Workspace being used.    |
+| `environment`          | `string`  | API environment (e.g., `vtexcommercestable`).        |
+| `hideUnavailableItems` | `boolean` | When `true`, hides products that are out of stock.                         |
+| `incrementAddress`     | `boolean` | Determines address handling behavior.                |
+
+---
+
+### `session`
+Defines the settings for the user session.
+
+| Property           | Type     | Description                                                                 |
+|--------------------|----------|-----------------------------------------------------------------------------|
+| `currency`         | `object`   | Currency information, including: `code` for ISO currency code (`string,` e.g., `USD`) and `symbol` for the currency symbol  (`string,` e.g., `$`) . |
+| `locale`           | `string`   | Language or locale setting (e.g., `en-US`).                                     |
+| `channel`          | `string`   | Trade policy, region, and seller information for the sales process.                 |
+| `country`          | `string`   | ISO country code (e.g., `US`).                                               |
+| `deliveryMode`     | `string`   | Order fulfillment method, including delivery channel, selected courier or method, and delivery window (start and end times).            |
+| `addressType`      | `string`   | Type of address.                       |
+| `postalCode`       | `string`   | User’s postal code (e.g., "10001").                                          |
+| `geoCoordinates`   | `float[]` | User’s location as [latitude, longitude] (e.g., `[40.7128, -74.0060]`).     |
+| `person`           | `object`   | Shopper data, including: `id` (`string`) for unique customer ID, `email` (`string`) for registered email, `firstName` (`string`) for first name, and `lastName` (`string`) for last name. |
+
+---
+
+### `cart`
+Contains the settings related to the shopping cart.
+
+| Property           | Type         | Description                                                                 |
+|--------------------|--------------|-----------------------------------------------------------------------------|
+| `id`               | `string`     | Unique identifier of the cart.                                              |
+| `items`            | `array`      | Products added to the cart.                                                 |
+| `messages`         | `string[]`   | System messages associated with the cart, such as shipping changes or any other relevant information. |
+| `shouldSplitItem`  | `boolean`    | When `true`, allows cart items to be divided into separate shipments.       |
+
+---
+
+### `storeUrl`
+Defines the URL of the FastStore online store as a string. 
+
+### `secureSubdomain`
+Defines the secure subdomain URL for HTTPS connections as a string.
+
+### `checkoutUrl`
+Defines the URL for the checkout process as a string.
+
+### `loginUrl`
+Defines the URL for the login process as a string.
+
+### `accountUrl`
+Defines the URL for the user's account section as a string.
+
+Learn more about store domains in [Associating your custom domain with your FatStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
+
+---
+
+### `previewRedirects`
+Maps redirect URLs for the following page types in preview mode.
+
+| Property    | Type       | Description                                      |
+|-------------|------------|--------------------------------------------------|
+| `home`      | `string`   | Redirect URL for the homepage.                   |
+| `plp`       | `string`   | Redirect URL for product listing pages (PLP).     |
+| `search`    | `string`   | Redirect URL for search results pages.            |
+| `pdp`       | `string`   | Redirect URL for product detail pages (PDP).     |
+
+Learn more in [Managing URLs with redirects and rewrite paths](https://developers.vtex.com/docs/guides/faststore/routing-managing-urls-with-redirects-and-rewrite-paths).
+
+---
+
+### `lighthouse`
+Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview), a tool for auditing and improving the quality of web pages.
+
+| Property       | Type       | Description                                     |
+|----------------|------------|-------------------------------------------------|
+| `server`       | `string`   | The server URL for running Lighthouse audits.   |
+| `pages`        | `object`   | Maps the URL of pages to be audited by Lighthouse. |
+| &nbsp;&nbsp;├─ `home`      | `string`   | URL of the homepage.                           |
+| &nbsp;&nbsp;├─ `pdp`       | `string`   | URL of a product details page.                  |
+| &nbsp;&nbsp;└─ `collection`| `string`   | URL of a collection page.                       |
+
+Learn more in [Lighthouse Scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores).
+
+---
+
+### `cypress`
+Contains settings for [Cypress](https://docs.cypress.io/app/get-started/why-cypress), a testing tool.
+
+| Property                 | Type     | Description                                     |
+|---------------------------|----------|-------------------------------------------------|
+| `pages`                   | `object` | Maps the URLs of pages for end-to-end testing with Cypress, with each field defined as a string. |
+| &nbsp;&nbsp;├─ `home`               | `string` | URL of the homepage.                           |
+| &nbsp;&nbsp;├─ `pdp`                | `string` | URL of the product details page.                |
+| &nbsp;&nbsp;├─ `collection`         | `string` | URL of a collection page.                       |
+| &nbsp;&nbsp;├─ `collection_2`       | `string` | URL of a secondary collection page.             |
+| &nbsp;&nbsp;├─ `collection_filtered`| `string` | URL of a filtered collection page.              |
+| &nbsp;&nbsp;└─ `search`             | `string` | URL of a search results page.                   |
+
+Learn more in [`enableCypressExtension`](https://developers.vtex.com/docs/guides/faststore/project-structure-custom-cypress).
+
+---
+
+### `analytics`
+Defines the [Google Tag Manager ID](https://support.google.com/tagmanager/answer/12326985?hl=en&ref_topic=14595647&sjid=12859079805529639111-SA) being used.
+
+| Property         | Type     | Description                               |
+|------------------|----------|-------------------------------------------|
+| `gtmContainerId` | `string` | The Google Tag Manager container ID.      |
+
+Learn more in [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview).
+
+---
+
+### `experimental`
+Contains settings for experimental features.
+
+| Property                   | Type     | Description                                     |
+|-----------------------------|----------|-------------------------------------------------|
+| `nodeVersion`               | `string` | The Node.js version.                            |
+| `cypressVersion`            | `string` | The Cypress version.                            |
+| `graphqlCacheControl`       | `object` | Settings for GraphQL responses. |
+| &nbsp;&nbsp;├─ `maxAge`                | `number` | Maximum time (in seconds) that the response can be cached. |
+| &nbsp;&nbsp;└─ `staleWhileRevalidate`  | `number` | Time (in seconds) during which stale responses can be served while revalidating. |
+
+---
+
+### `account`
+Specifies the name of the account as a string.
+
+---
+
+### `vtexHeadlessCms`
+Contains settings for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+
+| Property         | Type     | Description                                               |
+|------------------|----------|-----------------------------------------------------------|
+| `webhookUrls`    | `object` | An object of strings that defines the webhook URLs used to interact with the Headless CMS. |

@@ -3,21 +3,23 @@ title: "Lazy loading components"
 slug: "vtex-io-documentation-using-the-fold-blocks"
 hidden: false
 createdAt: "2020-06-03T16:02:44.215Z"
-updatedAt: "2022-12-13T20:17:44.156Z"
+updatedAt: "2025-04-25T15:58:56.624Z"
 seeAlso:
-  - "/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance"
+  - "/docs/guides/vtex-io-documentation-enabling-performance-settings"
 ---
 
-Store Framework provides two key blocks, `__fold__` and the `__fold__.experimentalLazyAssets`, to improve your store’s performance by optimizing how components are loaded. By implementing these blocks effectively, you can enhance your store’s initial loading time and overall user experience.
+In this guide, you’ll learn how to use the `__fold__` and `__fold__.experimentalLazyAssets` blocks to optimize component loading and improve store performance. Below is an overview of these blocks:
 
-- `__fold__`: determines the priority of loading interface components, defining which elements load first and which load dynamically as users scroll down the page.
-- `__fold__.experimentalLazyAssets` (optional): keeps specified components statically loaded until the user's first interaction, offering additional flexibility in load management.
+| Block                          | Description                                                                                              | Instructions |
+|--------------------------------|----------------------------------------------------------------------------------------------------------|--------------|
+| `__fold__`                     | Determines the loading priority of interface components, and defines which elements load first and which load dynamically as users scroll down the page. | [Using the `__fold__` block](#using-the-fold-block) |
+| `__fold__.experimentalLazyAssets` | (Optional) Keeps specified components statically loaded until the user's first interaction, offering additional flexibility in load management. | [(Optional) Using the `__fold__.experimentalLazyAssets` block](#optional-using-the-fold-experimentalLazyAssets-block) |
 
-This guide will walk you through the effective use of these blocks.
+By implementing these blocks effectively, you can enhance store initial loading time and overall user experience.
 
 ## Using the `__fold__` block
 
-Add the `__fold__` block to your store theme's desired templates, such as `store.product` and `store.home`. For example:
+Add the `__fold__` block to any store theme templates you want, such as `store.product` and `store.home`. For example:
 
 ```diff
 "store.home": {
@@ -35,10 +37,10 @@ Add the `__fold__` block to your store theme's desired templates, such as `store
 
 In this configuration:
 
-- Components above `__fold__` (e.g., `carousel#home`) will load immediately.
-- Components below `__fold__` (e.g., `shelf#home`, `info-card#home`) will load dynamically as the user scrolls.
+- Components above `__fold__` (for example, `carousel#home`) will load immediately.
+- Components below `__fold__` (for example, `shelf#home`, `info-card#home`) will load dynamically as the user scrolls.
 
-> Note: Use `__fold__` only on scrollable pages. Non-scrollable pages do not benefit from this optimization.
+>ℹ️ Use `__fold__` only on scrollable pages. Non-scrollable pages don’t benefit from this optimization.
 
 ### Device-specific configuration
 
@@ -68,9 +70,9 @@ In this configuration:
 
 ## (Optional) Using the `__fold__.experimentalLazyAssets` block
 
-> ❗ This block is experimental and may cause side effects, such as failing to render an interactive component in the storefront. 
+> ❗ This block is experimental and may cause unexpected effects, such as failing to render an interactive component in the storefront.
 
-Add the `__fold__.experimentalLazyAssets` above the blocks you want to defer. Consider adding this block to your store's home page for optimal results. For example:
+Add the `__fold__.experimentalLazyAssets` above the blocks you want to defer. Consider adding this block to the store homepage for optimal results. For example:
 
 ```diff
 "store.home": {
@@ -87,13 +89,13 @@ Add the `__fold__.experimentalLazyAssets` above the blocks you want to defer. Co
 },
 ```
 
-> ⚠️ Ensure `__fold__.experimentalLazyAssets` is below interactive components (e.g., `carousel`) to avoid rendering or navigation issues. 
+> ⚠️ Make sure `__fold__.experimentalLazyAssets` is below interactive components (for example, `carousel`) to avoid rendering or navigation issues.
 
 ## Best practices
 
-- **Prioritize above-the-fold content**: Ensure that critical components, such as banners or carousels, are placed above the `__fold__` block so they load quickly and are indexed by search engines.
-- **Separate mobile and desktop configurations**: Use `__fold__.mobile` and `__fold__.desktop` blocks to adjust the loading sequence based on the device, optimizing the experience for both mobile and desktop users.
-- **Monitor store performance**: Use tools like Google Lighthouse to evaluate the impact of lazy loading and fine-tune your configurations.
-- **SEO awareness**: Keep SEO-critical components, such as metadata and key textual content, above the `__fold__` block to ensure they are indexed by search engines.
-- **Use `__fold__.experimentalLazyAssets` carefully**: This block is experimental and may cause rendering or interaction issues. Always test thoroughly before deploying to production.
-- **Lazy load images and product data**: For scenarios where you need to [lazy load images and product data in a slider](https://developers.vtex.com/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance#lazy-loading-images-and-products-data-in-a-slider), consider [building a carousel using Slider Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout).
+- **Prioritize above-the-fold content:** Make sure that critical components, such as banners or carousels, are placed above the `__fold__` block so they load quickly and are indexed by search engines.
+- **Optimize for different devices:** Use `__fold__.mobile` and `__fold__.desktop` blocks to adjust the loading sequence based on the device, optimizing the experience for both mobile and desktop users.
+- **Monitor store performance:** Use tools like Google Lighthouse to evaluate the impact of lazy loading and fine-tune your configuration. Learn more in [Performance](https://developers.vtex.com/docs/guides/storefront-performance).
+- **Ensure SEO visibility:** Position essential SEO elements, such as metadata and key textual content, above the `__fold__` block to ensure they are indexed by search engines. Learn more in [SEO](https://developers.vtex.com/docs/guides/storefront-seo).
+- **Use `__fold__.experimentalLazyAssets` carefully:** This block is experimental and may cause rendering or interaction issues. Always test thoroughly before deploying to production.
+- **Lazy load images and product information efficiently:** For scenarios where you need to [lazy load images and product information in a slider](https://developers.vtex.com/docs/guides/vtex-io-documentation-enabling-performance-settings#manual-optimizations), consider [building a carousel using Slider Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout).

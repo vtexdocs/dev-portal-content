@@ -1,0 +1,476 @@
+---
+title: "Use case: Implementing custom newsletter analytics events"
+---
+
+This guide walks you through the process of implementing custom analytics events in FastStore projects. The example in this guide explains how to track user subscriptions by implementing two custom analytics events for a custom newsletter section:
+
+- `Submit newsletter`: Triggered when a user clicks `Subscribe`.
+- `Submit newsletter success`: Triggered upon successful subscription.
+
+![analytics-custom-newsletter-firing-event](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-firing-event___45d3f6e3f8586ef7fbbb389128bb4460.gif)
+
+>ℹ For a complete implementation example, check the [playground.store](https://github.com/vtex-sites/playground.store/tree/main/src/components/sections/CustomNewsletter) repository, which provides more in-depth details.
+
+## Before you begin
+
+To follow this guide, you should be familiar with the following topics:
+
+- [FastStore Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview)
+- [Sending custom events](https://developers.vtex.com/docs/guides/faststore/analytics-sending-custom-events)
+- [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section)
+
+## Instructions
+
+<CH.Scrollycoding>
+
+### Creating a custom newsletter section
+
+Create a new section to receive the two new custom events:
+
+1. Open your store repository. If you don't have it, create a folder named `components` in the `src` directory.
+2. In `components`, create the `sections` folder.
+3. In the `sections` folder, create the `CustomNewsletter.tsx` file and add the following code. Below is an explanation of the code.
+
+<CH.Code>
+
+```tsx CustomNewsletter.tsx
+import type {
+  ToastProps,
+  NewsletterAddendumProps as UINewsletterAddendumProps,
+  NewsletterHeaderProps as UINewsletterHeaderProps,
+  NewsletterProps as UINewsletterProps,
+} from "@faststore/ui";
+import { useUI } from "@faststore/ui";
+import styles from "./section.module.scss";
+
+import {
+  Button,
+  Icon,
+  InputField,
+  Newsletter,
+  NewsletterAddendum,
+  NewsletterContent,
+  NewsletterForm,
+  NewsletterHeader,
+} from "@faststore/ui";
+
+import { Section } from "@faststore/core";
+import { useNewsletter_unstable as useNewsletter } from "@faststore/core/experimental";
+import { type FormEvent, useRef } from "react";
+import { sendAnalyticsEvent, useAnalyticsEvent } from "@faststore/sdk";
+
+interface ArbitraryEvent {
+  name: string;
+  params: string;
+}
+
+type SubscribeMessage = {
+  icon: string;
+  title: string;
+  message: string;
+};
+
+export interface NewsletterProps {
+  title: UINewsletterHeaderProps["title"];
+  card?: UINewsletterProps["card"];
+  colorVariant?: UINewsletterProps["colorVariant"];
+  description?: UINewsletterHeaderProps["description"];
+  privacyPolicy?: UINewsletterAddendumProps["addendum"];
+  emailInputLabel?: string;
+  displayNameInput?: boolean;
+  icon: {
+    alt: string;
+    icon: string;
+  };
+  nameInputLabel?: string;
+  subscribeButtonLabel?: string;
+  subscribeButtonLoadingLabel?: string;
+  toastSubscribe?: SubscribeMessage;
+  toastSubscribeError?: SubscribeMessage;
+}
+
+export const AnalyticsHandler = () => {
+  useAnalyticsEvent((event: ArbitraryEvent) => {
+    console.log("Received event", event);
+  });
+
+  /* ... */
+
+  return null;
+};
+
+function CustomNewsletter({
+  icon: { icon, alt: iconAlt },
+  title,
+  description,
+  privacyPolicy,
+  emailInputLabel,
+  displayNameInput,
+  nameInputLabel,
+  subscribeButtonLabel,
+  subscribeButtonLoadingLabel,
+  card,
+  toastSubscribe,
+  toastSubscribeError,
+  colorVariant,
+  ...otherProps
+}: NewsletterProps) {
+  const { pushToast } = useUI();
+  const { subscribeUser, loading } = useNewsletter();
+
+  const formRef = useRef<HTMLFormElement>(null);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+
+  const onSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+
+    try {
+      // send event start
+      sendAnalyticsEvent<ArbitraryEvent>({
+        name: "Submit Newsletter",
+        params: "test",
+      });
+
+      const data = await subscribeUser({
+        data: {
+          name: nameInputRef.current?.value ?? "",
+          email: emailInputRef.current?.value ?? "",
+        },
+      });
+
+      if (data?.subscribeToNewsletter?.id) {
+        // send event start
+        sendAnalyticsEvent<ArbitraryEvent>({
+          name: "Submit newsletter success",
+          params: "test",
+        });
+
+        pushToast({
+          ...toastSubscribe,
+          status: "INFO",
+          icon: (
+            <Icon width={30} height={30} name={toastSubscribe?.icon ?? ""} />
+          ),
+        } as ToastProps);
+
+        formRef?.current?.reset();
+      }
+    } catch (error) {
+      pushToast({
+        ...toastSubscribeError,
+        status: "ERROR",
+        icon: (
+          <Icon width={30} height={30} name={toastSubscribeError?.icon ?? ""} />
+        ),
+      } as ToastProps);
+    }
+  };
+
+  return (
+    <Section className={`${styles.section} section-newsletter layout__section`}>
+      <AnalyticsHandler />
+      <Newsletter card={card ?? false} colorVariant={colorVariant}>
+        <NewsletterForm ref={formRef} onSubmit={onSubmit}>
+          <NewsletterHeader
+            title={title}
+            description={description}
+            icon={
+              <Icon width={32} height={32} name={icon} aria-label={iconAlt} />
+            }
+          />
+
+          <NewsletterContent>
+            {displayNameInput && (
+              <InputField
+                id="newsletter-name"
+                required
+                label={nameInputLabel ?? "Name"}
+                inputRef={nameInputRef}
+              />
+            )}
+            <InputField
+              id="newsletter-email"
+              type="email"
+              required
+              label={emailInputLabel ?? "Email"}
+              inputRef={emailInputRef}
+            />
+            <NewsletterAddendum addendum={privacyPolicy} />
+            <Button variant="secondary" inverse type="submit">
+              {loading ? subscribeButtonLoadingLabel : subscribeButtonLabel}
+            </Button>
+          </NewsletterContent>
+        </NewsletterForm>
+      </Newsletter>
+    </Section>
+  );
+}
+
+export default CustomNewsletter;
+```
+
+</CH.Code>
+
+---
+
+#### `NewsletterProps`
+
+Defines the customizable properties of the newsletter.
+
+- `title`: Heading of the newsletter.
+- `description`: Subtitle or description text.
+- `emailInputLabel`: Label for the email input field.
+- `subscribeButtonLabel`: Text for the submit button.
+- `toastSubscribe`: Success pop-up settings.
+- `toastSubscribeError`: Error pop-up settings.
+- `privacyPolicy`: Legal disclaimer text.
+- `card`: Defines whether the newsletter should display in a card-style container.
+- `colorVariant`: Styling theme (example: "primary", "secondary").
+
+```tsx CustomNewsletter.tsx focus=37:54
+```
+
+---
+
+#### `onSubmit` function
+
+Handles the newsletter subscription process.
+
+- `event.preventDefault()`: Prevents default form submission.
+  - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks the submission attempt.
+    - The `onSubmit` function calls the `subscribeUser()` with email and name.
+      - If successful:
+        - Shows a success toast (`pushToast`).
+        - Resets the form (`formRef.current?.reset()`).
+      - If the call fails, it shows an error toast.
+  - `pushToast`: Displays temporary success/error messages.
+  - [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event): Tracks user interactions.
+    - `Submit Newsletter` event: Tracks the form submission attempt when the user clicks the `Subscribe` button.
+    - `Submit newsletter success` event: Tracks if the subscription was successful.
+  - [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook: Tracks and handles custom analytics events.
+
+```tsx CustomNewsletter.tsx focus=89:132
+```
+
+---
+
+### Creating the section `index` file
+
+To make the Newsletter section available in the project, create a file named `index.tsx` in the components folder and add the following:
+
+<CH.Code>
+
+```tsx index.tsx
+import CustomNewsletter from "./sections/CustomNewsletter/CustomNewsletter";
+
+const sections = {
+  CustomNewsletter,
+};
+
+export default sections;
+```
+
+</CH.Code>
+
+---
+
+### Styling the new section
+
+To add styles to this new section, create a `section.module.scss` file and add the following:
+
+<CH.Code>
+
+```scss section.module.scss
+@layer components {
+  .section {
+    @import "@faststore/ui/src/components/atoms/Button/styles.scss";
+    @import "@faststore/ui/src/components/atoms/Icon/styles.scss";
+    @import "@faststore/ui/src/components/atoms/Input/styles.scss";
+    @import "@faststore/ui/src/components/atoms/Link/styles.scss";
+    @import "@faststore/ui/src/components/molecules/InputField/styles.scss";
+    @import "@faststore/ui/src/components/organisms/Newsletter/styles.scss";
+  }
+}
+```
+
+</CH.Code>
+
+---
+
+### Updating the CMS folder
+
+1. In the root directory of your storefront project, create a folder named `cms` if it doesn't exist.
+2. In `cms`, create the `faststore` folder.
+3. In the `cms/faststore` folder, create the `sections.json` file.
+4. In the `sections.json` file, add the new section you want to display in Headless CMS. The schema below defines how Headless CMS renders a section:
+
+<CH.Code>
+
+```json sections.json
+[
+  {
+    "name": "CustomNewsletter",
+    "requiredScopes": [],
+    "schema": {
+      "title": "Custom Newsletter",
+      "description": "Allow users to subscribe to your updates",
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "icon": {
+          "title": "Icon",
+          "type": "object",
+          "properties": {
+            "icon": {
+              "title": "Icon",
+              "type": "string",
+              "enumNames": ["Envelope"],
+              "enum": ["Envelope"],
+              "default": "Envelope"
+            },
+            "alt": {
+              "type": "string",
+              "title": "Alternative Label",
+              "default": "Envelope"
+            }
+          }
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "default": "Get News and Special Offers!"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "default": "Receive our news and promotions in advance"
+        },
+        "privacyPolicy": {
+          "title": "Privacy Policy Disclaimer",
+          "type": "string",
+          "widget": {
+            "ui:widget": "draftjs-rich-text"
+          }
+        },
+        "emailInputLabel": {
+          "title": "Email input label",
+          "type": "string",
+          "default": "Your Email"
+        },
+        "displayNameInput": {
+          "title": "Request name?",
+          "type": "boolean",
+          "default": true
+        },
+        "nameInputLabel": {
+          "title": "Name input label",
+          "type": "string",
+          "default": "Your Name"
+        },
+        "subscribeButtonLabel": {
+          "title": "Subscribe button label",
+          "type": "string",
+          "default": "Subscribe"
+        },
+        "subscribeButtonLoadingLabel": {
+          "title": "Subscribe button loading label",
+          "type": "string",
+          "default": "Loading..."
+        },
+        "card": {
+          "title": "Newsletter should be in card format?",
+          "type": "boolean",
+          "default": false
+        },
+        "colorVariant": {
+          "title": "Color variant",
+          "type": "string",
+          "enumNames": ["Main", "Light", "Accent"],
+          "enum": ["main", "light", "accent"],
+          "default": "main"
+        },
+        "toastSubscribe": {
+          "title": "Toast Subscribe",
+          "type": "object",
+          "properties": {
+            "title": {
+              "title": "Title",
+              "description": "Message Title",
+              "type": "string",
+              "default": "Hooray!"
+            },
+            "message": {
+              "title": "Message",
+              "description": "Message",
+              "type": "string",
+              "default": "Thank for your subscription."
+            },
+            "icon": {
+              "title": "Icon",
+              "type": "string",
+              "enumNames": ["CircleWavyCheck"],
+              "enum": ["CircleWavyCheck"],
+              "default": "CircleWavyCheck"
+            }
+          }
+        },
+        "toastSubscribeError": {
+          "title": "Toast Subscribe Error",
+          "type": "object",
+          "properties": {
+            "title": {
+              "title": "Title",
+              "description": "Message Title",
+              "type": "string",
+              "default": "Oops."
+            },
+            "message": {
+              "title": "Message",
+              "description": "Message",
+              "type": "string",
+              "default": "Something went wrong. Please Try again."
+            },
+            "icon": {
+              "title": "Icon",
+              "type": "string",
+              "enumNames": ["CircleWavyWarning"],
+              "enum": ["CircleWavyWarning"],
+              "default": "CircleWavyWarning"
+            }
+          }
+        }
+      }
+    }
+  }
+]
+```
+
+</CH.Code>
+
+</CH.Scrollycoding>
+
+### Syncing the new section with Headless CMS
+
+1. In the terminal, log in to your VTEX account by running `vtex login {accountName}`.
+
+   > ⚠️ Replace `{accountName}` with the name of your account. For example, `vtex login store`.
+
+2. Run `yarn cms-sync` to sync the new section you created with CMS.
+3. Go to the VTEX Admin and navigate to **Storefront > Headless CMS**.
+4. Click the **Home** Content Type.
+5. In the Sections tab, click `+`, search for the new **Custom Newsletter** section, and add it to your page.
+
+   ![analytics-custom-newsletter-cms-section](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-section___96abd10dc72c4f09c15f71a9e42651d7.gif)
+
+6. Delete the **Newsletter** default section.
+7. Click `Save`.
+8. Click `Preview` to preview the new section before publishing it to the live store.
+
+## Results
+
+1. After opening the preview browser tab, open the browser's **Developer Tools** and go to the **Console** tab.
+2. Go to the newsletter section on the store page and complete **Your Name** and **Your Email** fields.
+3. Click `Subscribe`. You will notice in the **Console** tab that the two custom events were successfully triggered.
+
+   ![analytics-custom-newsletter-firing-event](https://vtexhelp.vtexassets.com/assets/docs/src/analytics-custom-newsletter-firing-event___45d3f6e3f8586ef7fbbb389128bb4460.gif)
