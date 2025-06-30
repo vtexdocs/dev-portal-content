@@ -22,9 +22,9 @@ Modifications made this way can be confirmed by the `changesAttachment` field in
 
 >❗ Increasing the price of an order is only available for credit card purchases. The connector must also be able to handle purchases without the CVV, as well as duplicated sequences.
 
-### Errors
+### Errors in Change v1
 
-See below what API errors can be returned when attempting to [modify an order via API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
+See below what API errors can be returned when attempting to [modify an order via Change v1 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
 
 #### Request errors
 
@@ -109,5 +109,127 @@ These are errors that are returned when the request is correct but the order can
     <tr>
         <td><code>500 Internal Server Error</code></td>
         <td>There is an issue with the payment gateway.</td>
+    </tr>
+</table>
+
+### Errors in Change v2
+
+See below what API errors can be returned when attempting to [modify an order via Change v2 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
+
+#### Errors with exception codes
+
+<table>
+    <td><strong> Error code</strong></td>
+    <td><stron> Error message</strong></td>
+    <td><strong> Description</strong></td>
+    <tr>
+        <td><code>CHK0022</code></td>
+        <td><code>Invalid id for item.</code></td>
+        <td>The item <code>id</code> is not valid or does not exist.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0023</code></td>
+        <td><code>Invalid quantity for item.</code></td>
+        <td>The item <code>quantity</code> is not allowed (e.g., less than 1).</td>
+    </tr>
+    <tr>
+        <td><code>CHK0034</code></td>
+        <td><code>The value of the change exceed the order's price.</code></td>
+        <td>The modification value is greater than the total order price.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0095</code></td>
+        <td><code>Changes in chain orders are not allowed.</code></td>
+        <td>Chain orders do not support modifications.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0096</code></td>
+        <td><code>Change cannot be done. Possible reason: settlement directly done by API.</code></td>
+        <td>The change operation is not allowed, possibly due to a direct settlement.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0098</code></td>
+        <td><code>The change value needs to be greater or equal than zero.</code></td>
+        <td>The value for the change operation must not be negative.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0124</code></td>
+        <td><code>Invalid change for order.</code></td>
+        <td>The requested modification is not valid for the current order state or data.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0196</code></td>
+        <td><code>Cannot cancel order {0} - Payment not found.</code></td>
+        <td>The order cannot be canceled because no payment was found.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0199</code></td>
+        <td><code>OrderGroup {0} not found.</code></td>
+        <td>The order group does not exist.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0201</code></td>
+        <td><code>Order {0} not found.</code></td>
+        <td>The order does not exist.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0229</code></td>
+        <td><code>Workflow not found for order {0}.</code></td>
+        <td>No workflow was found for the order.</td>
+    </tr>
+    <tr>
+        <td><code>CHK0289</code></td>
+        <td><code>Change order request {0} not found.</code></td>
+        <td>The modification order request does not exist.</td>
+    </tr>
+    <tr>
+        <td><code>CHK00342</code></td>
+        <td><code>Change order cannot increase the value for this payment method.</code></td>
+        <td>Increasing the order value is not allowed for the selected payment method.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem010</code></td>
+        <td><code>It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.</code></td>
+        <td>The specified item <code>id</code> cannot be removed in the original order. Please verify the <code>id</code> in your operation.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem011</code></td>
+        <td><code>It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.</code></td>
+        <td>The <code>quantity</code> being removed exceeds the <code>quantity</code> available in the order.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem012</code></td>
+        <td><code>The logistics information couldn't be determined for the item due to the presence of multiple options.</code></td>
+        <td>The order contains multiple logistics options, so the system cannot infer which one to use.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem013</code></td>
+        <td><code>The logistics information provided was not found on the order.</code></td>
+        <td>The logistics details given do not match any information on the order.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem015</code></td>
+        <td><code>A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.</code></td>
+        <td>Only one type of order change (v1 or v2) can be applied; a v1 change already exists.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem017</code></td>
+        <td><code>Change process was automatically canceled after failed retries.</code></td>
+        <td>The modification was canceled by the system after several failed attempts.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem018</code></td>
+        <td><code>Unable to communicate with Participants Client.</code></td>
+        <td>The system could not reach the Participants Client service.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem026</code></td>
+        <td><code>Unable to match an item to the information provided. Try providing the item's uniqueId for identification.</code></td>
+        <td>The item could not be identified with the given data. Try using the item's <code>uniqueId</code>.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem035</code></td>
+        <td><code>The {0} is not a valid Agreement Type.</code></td>
+        <td>The agreement type is not recognized or supported.</td>
     </tr>
 </table>
