@@ -29,7 +29,7 @@ openssl x509 -noout -serial -in yourcertificate.crt | sed 's/serial=//'
 
 Example output:
 
-```
+```shell
 4D0A0A39360B2E1254DDB6CE57DBC940
 ```
 
@@ -43,7 +43,7 @@ openssl x509 -in yourcertificate.crt -noout -text | grep "Serial Number" -A1 | t
 
 Example output:
 
-```
+```shell
 4d:0a:0a:39:36:0b:2e:12:54:dd:b6:ce:57:db:c9:40
 ```
 
