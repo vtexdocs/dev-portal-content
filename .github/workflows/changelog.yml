@@ -6,6 +6,7 @@ on:
   pull_request:
     types: [closed]
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   generate-changelog:
@@ -16,6 +17,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 
+
+      - name: Pull
+        run: git pull
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
