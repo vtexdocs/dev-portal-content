@@ -7,7 +7,7 @@ createdAt: "2025-07-01T00:00:00.000Z"
 updatedAt: "2025-07-01T00:00:00.000Z"
 ---
 
->ℹ️ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you're already a VTEX client and would like to adopt VTEX Shield for your business, contact our [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you're not a VTEX client yet but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contato/).
+>ℹ️ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you're already a VTEX client and would like to adopt VTEX Shield for your business, contact our [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you're not a VTEX client yet but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
 
 When making requests to VTEX services using [mTLS](https://help.vtex.com/en/tutorial/mutual-transport-layer-security-mtls--6YR3SoynJMfeEKGlY1Cqlo), VTEX validates whether the certificate was issued and signed by its internal Certificate Authority (CA). This guide walks you through the process of obtaining and managing certificates for mTLS authentication.
 
