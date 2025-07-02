@@ -4,23 +4,23 @@ slug: "2025-06-06-vtex-io-apps-end-of-official-support-for-legacy-apps"
 type: deprecated
 excerpt: "VTEX no longer offers support for legacy apps."
 createdAt: "2025-06-06T12:45:40.909Z"
-updatedAt: ""
+updatedAt: "2025-06-27T18:50:17.810Z"
 hidden: false
 ---
 
-As part of our ongoing efforts to improve platform performance and focus on core solutions, we’re officially ending support for some legacy and third-party apps. These apps will no longer receive updates, security patches, or technical support from VTEX.
+As part of our efforts to optimize platform performance and focus on core solutions, VTEX will officially end support for some legacy and third-party apps. These apps will no longer receive updates, security patches, or technical support.
 
 This decision allows us to focus on developing and improving other solutions that align with our future strategy and meet the market's increasing demands.
 
 ## What does it mean?
 
-Stores currently using unsupported apps can continue to use them, but please be aware of the following:
+Stores that use deprecated apps can continue using them at their own risk, keeping in mind that:
 
-- VTEX no longer offers technical support for these apps.
-- VTEX assumes no responsibility for issues arising from its use.
-- VTEX no longer provides bug fixes, updates, or security patches.
-- VTEX no longer develops new features.
-- Documentation is no longer updated.
+- VTEX no longer provides technical support for these apps.
+- VTEX is not liable for issues arising from their use.
+- VTEX will not provide bug fixes, updates, or security patches.
+- VTEX will not develop new features.
+- The documentation will not be updated.
 
 ## What needs to be done?
 
