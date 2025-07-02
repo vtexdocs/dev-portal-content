@@ -7,9 +7,9 @@ updatedAt: "2025-18-06t12:50:00.000Z"
 excerpt: "Learn how to make GraphQL queries in the Admin and use the IDE features."
 ---
 
-Admin GraphQL IDE is an [Admin app](https://learn.vtex.com/docs/course-admin-lang-en) that allows users to make GraphQL queries. This app is embedded with [Graph*i*QL](https://github.com/graphql/graphiql), an open-source tool for writing, validating, and testing GraphQL queries.
+Admin GraphQL IDE is an [Admin app](https://learn.vtex.com/docs/course-admin-lang-en) that allows users to make GraphQL queries. It includes [Graph*i*QL](https://github.com/graphql/graphiql), an open-source interface for writing, validating, and testing queries.
 
-Admin GraphQL IDE allows developers to test and validate GraphQL APIs by providing functionalities, such as:
+Admin GraphQL IDE allows developers to test and validate GraphQL APIs by providing features, such as:
 
 - Autocomplete.
 - Syntax highlighting.
@@ -24,14 +24,14 @@ Make sure you have the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vte
 
 Follow these steps to install and open Admin GraphQL IDE:
 
-1. On a terminal, use the VTEX IO CLI to [log in to your VTEX account](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#logging-in-to-your-vtex-account).
+1. In a terminal, use the VTEX IO CLI to [log in to your VTEX account](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#logging-in-to-your-vtex-account).
 2. Run `vtex use {workspaceName} --production` to use a production workspace or [create a production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) from scratch.
 
-    > ℹ️ Remember to replace the values between curly brackets according to your scenario. If you just want to run tests, consider using a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
+    > ℹ️ Remember to replace the values between curly brackets according to your scenario. To run tests, consider using a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace).
 
 3. Install the GraphQL IDE app by running `vtex install vtex.admin-graphql-ide@3.x` in your terminal.
 4. In your browser, go to `https://{workspace}--{account}.myvtex.com/admin`.
-5. Under the **Store Settings** > **Storefront**, click **GraphQL IDE**.
+5. Under **Store Settings** > **Storefront**, click **GraphQL IDE**.
 
     ![Admin GraphQL IDE navigation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/graphql-ide-navigation.png)
 
@@ -53,7 +53,7 @@ Follow these steps to make a GraphQL query:
 
 1. In the **Choose an app** dropdown menu, select the app you want to query.
 2. In the top-left box, write your query.
-3. If you need to use variables, click on **Query Variables** in the bottom-left corner and insert your variables in the box using JSON format.
+3. If you need to use variables, click **Query Variables** in the bottom-left corner and insert your variables in the box using JSON format.
 4. Click **Execute Query** ▶️ to send your query. The result will appear on the panel to the right.
 
 ![Admin GraphQL IDE Query](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/graphql-ide-query.gif)
@@ -66,7 +66,7 @@ Another section of Admin GraphQL IDE is the **Documentation Explorer**, which ca
 
 ### History
 
-Another feature of Admin GraphQL IDE is keeping a log of all the queries and mutations that are run, which can be viewed through the History dashboard. If you click on one of the queries from the History list, the query code will appear in the top-left box.
+Another feature of Admin GraphQL IDE is keeping a log of all the queries and mutations that are run, which can be viewed through the History dashboard. If you click one of the queries from the History list, the query code will appear in the top-left box.
 
 ![Admin GraphQL IDE History](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/graphql-ide-history.gif)
 
