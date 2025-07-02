@@ -15,6 +15,8 @@ The protocol has the following features:
 - Processing of synchronous and asynchronous risk analysis.
 - Webhook for status notification.
 
+> ⚠️ The Anti-fraud Provider Protocol can be used at VTEX only for payment transactions carried out with credit, [debit](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions), and gift cards.
+
 ## Concepts
 
 **Provider**: system or provider that offers the anti-fraud risk analysis service.
