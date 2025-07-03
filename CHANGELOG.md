@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.1...v1.1.2) (2025-07-03)
+
+
+### 🔧 Fixes and improvements
+
+* **overview.mdx:** adding popover card ([d3c00b7](https://github.com/vtexdocs/dev-portal-content/commit/d3c00b7e8b72b7de9ecb27ddb5807f835adaf4f2))
+
+
+### 📝 Documentation updates
+
+* **components/index.mdx:** adding popover card ([50d176a](https://github.com/vtexdocs/dev-portal-content/commit/50d176a10b5b0027e80f80dc57bf3d2792619abf))
+
 ### [1.1.1](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.0...v1.1.1) (2025-07-02)
 
 ## 1.1.0 (2025-07-01)
