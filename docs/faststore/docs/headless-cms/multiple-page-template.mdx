@@ -42,7 +42,7 @@ Here's the difference between Product Details and Product Listing Page template 
 | Matching Criteria               | Slug, Subcategory, Category, Department, Generic.              | Slug (subcategory, category, department implied), Generic. |
 | Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details beyond the slug.                   |
 
-### Product Details Page (PDP) template selection criteria
+### PDP template selection criteria
 
 The template selection process follows a specific hierarchy, starting with the most specific template and progressing towards a generic one if no exact match is found.
 
@@ -74,7 +74,7 @@ The system first searches for a template named after the product slug. For examp
 
 ![pdp-page-list](https://vtexhelp.vtexassets.com/assets/docs/src/pdplist___d6f00d8bcfc23aecc477c97d487eebca.png)
 
-### Product Listing Page (PLP) template selection criteria
+### PLP template selection criteria
 
 PLP templates are selected in FastStore based on URL slug matching. Templates defined at a department (e.g., `/office`) are always inherited by all subcategories (e.g., `/office/chairs`, `/office/desks`), unless a more specific template exists for that subcategory.
 
@@ -152,7 +152,7 @@ From version `3.0.61` of the `@faststore/core` package, it's also possible to us
 yarn add @faststore/core@3.0.61
 ```
 
-### Main difference between PDP and PLP template selection criteria
+### Key difference between PDP and PLP template selection criteria
 
 To sum up, here's the difference between the two template hierarchies:
 
