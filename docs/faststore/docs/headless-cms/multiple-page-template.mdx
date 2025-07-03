@@ -169,11 +169,11 @@ In this section, we'll delve into different scenarios for selecting PDP and PLP 
 
 For this example, we will explore three template scenarios to render in Headless CMS for the Apple Magic Mouse product:
 
-- [Slug](#rendering-within-a-slug): Matches the product slug, e.g., `/apple-magic-mouse/p`. It offers the highest level of specificity.
-- [Department](#rendering-within-a-department): Applies to products within a specific department category, such as `/technology/`, if no slug template is defined.
-- [Generic Product Page Template](#rendering-the-generic-product-page-template): Fallback template used if no other specific template matches.
+- [Slug](#slug-template): Matches the product slug, e.g., `/apple-magic-mouse/p`. It offers the highest level of specificity.
+- [Department](#department-template): Applies to products within a specific department category, such as `/technology/`, if no slug template is defined.
+- [Generic PDP Template](#generic-pdp-template): Fallback template used if no other specific template matches.
 
-#### Rendering within a slug
+#### Slug template
 
 When using PDPs, this type of page template is recognized by the slug pattern. In the example, we will use the [Apple Magic Mouse product page](https://starter.vtex.app/apple-magic-mouse/p), which has the slug `/apple-magic-mouse/p`.
 
@@ -181,7 +181,7 @@ When using PDPs, this type of page template is recognized by the slug pattern. I
 
 Adding the slug to this template makes it specific, prompting FastStore to prioritize it for rendering on the product page.
 
-#### Rendering within a `department`
+#### Department template
 
 Products in [catalog](https://help.vtex.com/en/tutorial/catalog-overview--77M8ItLhDXs6aBdQTqToVe) fall under a [category tree](https://help.vtex.com/en/tutorial/what-is-a-category--6HV4Q3E2FauUoOQoiCCgCg), typically `/department/category/subcategory/`. For example, the product we’ve been using is in the `Technology department`, allowing you to create a department-specific template.
 
@@ -195,7 +195,7 @@ You can also see the category hierarchy through the breadcrumb.
 
 ![PDP breadcrumb](https://vtexhelp.vtexassets.com/assets/docs/src/breadcrumb___c9c12da51f685572dfb3a9403168b26a.png)
 
-#### Rendering the generic Product Page template
+#### Generic PDP template
 
 If no matches are found for the slug or department, the generic template will be used to render the PDP. In this case, create a Headless CMS document with the `Product Page` option, leaving the **Template** field empty in the **Sections** tab.
 
