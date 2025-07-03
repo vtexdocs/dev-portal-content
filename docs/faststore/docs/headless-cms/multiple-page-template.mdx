@@ -8,29 +8,17 @@ This document outlines the implementation details, usage instructions, and templ
 
 ## Before you begin
 
-To benefit from this feature, follow the steps below:
+To benefit from this feature, update your FastStore project to `v3.0.17` or higher. To do this, follow these steps:
 
-1. Update your store’s `@faststore/core` package to the `v3.0.17` by running the following command:
+1. Open your project in a code editor.
 
-```bash
-yarn add @faststore/core@3.0.17
-```
+2. Open a terminal and run the following command to update the FastStore packages to the latest version:
 
-2. Update the `@faststore/cli` package to the latest version, `v.3.0.24`:
-
-```bash
-yarn add -D @faststore/cli@3.0.24
-```
+  ```bash
+  yarn upgrade -L --scope @faststore
+  ```
 
 3. Run `yarn dev` to apply the changes to your project.
-
-4. After updating the `@faststore/core`, run the following command in your terminal to sync the changes from the Headless CMS:
-
-```bash
-faststore cms-sync
-```
-
-After the sync, you can start [creating the templates](#creating-a-multiple-page-template).
 
 ## Creating a multiple page template
 
