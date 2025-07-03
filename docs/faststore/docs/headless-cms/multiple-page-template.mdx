@@ -29,7 +29,7 @@ To add multiple templates to your FastStore project, follow the steps below:
 3. Click `Create Document` and choose between `Product Page` and `Product List Page`.
 4. Now that you have created the template, check the [Template hierarchy logic] section to learn how to use and edit the template.
 
-> ℹ️ Check the [Managing pages in the Headless CMS](https://help.vtex.com/tutorial/managing-pages--3DO6rBhZ1p3zndnFu5BgRt) guide to learn how to edit the name, publish, duplicate, or delete the template.
+> ℹ️ To learn how to edit the name, publish, duplicate, or delete the template, see the [Managing pages in the Headless CMS](https://help.vtex.com/tutorial/managing-pages--3DO6rBhZ1p3zndnFu5BgRt) guide.
 
 ## Template hierarchy logic
 
@@ -205,12 +205,12 @@ If no matches are found for the slug or department, the generic template will be
 
 For PLPs, we will go over the following possible templates:
 
-- [Slug](#rendering-within-slugs)
-- [Product Listing Page generic template](#rendering-the-generic-product-listing-page).
+- [Slug](#slug-template-plp)
+- [Generic PLP](#generic-plp-template).
 
 When using PLPs, this type of page template is recognized by the slug pattern. In the example, we will use the [office/chairs slug](https://starter.vtex.app/office/chairs) to render the PLP template.
 
-#### Rendering within slugs
+#### Slug template (PLP)
 
 Products in the catalog are organized within a category tree, structured as `/department/category/subcategory`. If a slug template exists for any of these options, it will be rendered accordingly.
 
@@ -222,9 +222,9 @@ If this product were under a `subcategory`, it would still be possible to create
 
 ![PLP subcategory template](https://vtexhelp.vtexassets.com/assets/docs/src/plpsubcategory___ac973acd0b5d1745e848f1a0a94c5988.png)
 
-> ⚠️ Keep in mind that if a more specific template, such as `/office/chairs`, exists, it will take precedence when the slug matches the same pattern.
+> ⚠️ If a more specific template, such as `/office/chairs`, exists, it will take precedence when the slug matches the same pattern.
 
-#### Rendering the generic Product Listing Page
+#### Generic PLP
 
 If no matches are found for the slug, the generic template will be used to render the PLP. In this case, create a Headless CMS page with the `Product List Page` option, leaving the Template field empty in the **Sections** tab.
 
