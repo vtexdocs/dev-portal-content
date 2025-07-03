@@ -76,16 +76,36 @@ The system first searches for a template named after the product slug. For examp
 
 ### Product Listing Page (PLP) template selection criteria
 
-PLPs adhere to the following template selection logic:
+PLP templates are selected in FastStore based on URL slug matching. Templates defined at a department (e.g., `/office`) are always inherited by all subcategories (e.g., `/office/chairs`, `/office/desks`), unless a more specific template exists for that subcategory.
 
-1. FastStore prioritizes templates based on the slug information. This can include the combined department and category (department/category) or just the department (department).
-2. If no slug match is found, the generic PLP template is used.
+The PLP template selection process follows this order:
 
-For example:
+1. FastStore system first checks for a template that matches the exact requested slug, such as `/office/chairs`. If a match is found, this template is used.
+2. If no exact slug match exists, the system checks for a template matching the main department template slug (e.g., `/office` applies to `/office/chairs`). If a department template is found, it applies to all subcategory under that department by default. (e.g., `/office/chairs`, `/office/desks`).
+3. If no department or category template matches, the generic PLP template with an empty template value in Headless CMS is applied.
+4. If no template is found at any of these levels, the system uses the first available PLP template.
 
-- Slug: `/office/chairs` - matches department and category.
-- Department template: `/office` alternative for products within a department, ignoring category.
-- Generic PLP template: Used if no other matches are found.
+For example, suppose you define the following in Headless CMS:
+
+- Template value `/computers`: applies to both `/computers` and any slug under it unless overridden.
+- Template value `/computers/accessories`: applies only to `/computers/tools`.
+- Template value left empty: default template used if neither previous options match.
+
+Resulting behavior:
+
+- Visiting `/computers` uses the department template.
+- Visiting `/computers/accessories` uses the category template.
+- Visiting `/computers/laptop` (with no template defined for it) inherits the `/computers` template.
+- Any slug not matched by the above uses the generic PLP template. 
+
+The table below summaries the template selection logic:
+
+| URL slug         | Template Defined For | Applied Template                                   | 
+| ---------------- | -------------------- | -------------------------------------------------- |
+| `/computers`        | `/computers`            | Department template (exact match).                 |
+| `/computers/laptops` | None                 | Inherits `/computers` (falls back to department).     |
+| `/computers/accessories` | `/computers/accessories`     | Category template (overrides main department template). |
+| `/unknown-slug`  | None                 | Default template	(no matches, uses fallback).     |
 
 #### Using Rewrites with PLP template
 
@@ -138,8 +158,8 @@ To sum up, here's the difference between the two template hierarchies:
 
 | Feature                         | PDP Hierarchy logic                                            | PLP Hierarchy logic                                        |
 | ------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------- |
-| Matching Criteria               | Slug, Subcategory, Category, Department, Generic.              | Slug (subcategory, category, department implied), Generic. |
-| Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details beyond the slug.                   |
+| Matching Criteria               | Slug, Subcategory, Category, Department, Generic.              | Slug, fallback to main department, generic/default, fallback |
+| Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details and uses URL slug only.           |
 
 ## Examples
 
