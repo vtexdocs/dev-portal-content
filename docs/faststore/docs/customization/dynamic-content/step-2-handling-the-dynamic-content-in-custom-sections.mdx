@@ -10,7 +10,13 @@ After [mapping pages and data-fetching functions](https://developers.vtex.com/do
 
 ## Before you begin
 
-Ensure you have set up your store code by following the guide [Step 1 - Setting up your store code for Dynamic Content](https://developers.vtex.com/docs/guides/faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content).
+- Complete the [Step 1 - Setting up your store code for Dynamic Content](https://developers.vtex.com/docs/guides/faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content) to set up your store code.
+
+- Make sure your store's Headless CMS includes the following sections in addition to your existing store page sections
+   - **Global Sections**: Includes the global header and footer sections, which are required for all page types.
+   - **Children Section**: Acts as the placeholder for the unique content of each page (including Landing Pages), and it is a mandatory section. Your local build will fail if this section is missing.
+
+For more information, refer to [Sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#sections).
 
 ## Instructions
 
