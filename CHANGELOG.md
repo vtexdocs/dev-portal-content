@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.2...v1.1.3) (2025-07-04)
+
+
+### 🔧 Fixes and improvements
+
+* **typo:** edit table html in order-modifications ([df8839c](https://github.com/vtexdocs/dev-portal-content/commit/df8839c46ccc6a1f2f4873db6036d07ca167bfbe))
+
 ### [1.1.2](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.1...v1.1.2) (2025-07-03)
 
 
