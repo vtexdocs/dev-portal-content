@@ -76,7 +76,7 @@ The system first searches for a template named after the product slug. For examp
 
 ### PLP template selection criteria
 
-PLP templates are selected in FastStore based on URL slug matching. Templates defined at a department (e.g., `/office`) are always inherited by all subcategories (e.g., `/office/chairs`, `/office/desks`), unless a more specific template exists for that subcategory.
+PLP templates are selected in FastStore based on URL slug matching. 
 
 The PLP template selection process follows this order:
 
@@ -87,8 +87,9 @@ The PLP template selection process follows this order:
 
 For example, you define the following in Headless CMS:
 
-- Template value `/computers`: applies to both `/computers` and any slug under it unless overridden.
-- Template value `/computers/accessories`: applies only to `/computers/tools`.
+If there is a category named `computers` in your catalog, and two subcategory under `computers` named `tools` and `accessories`:
+- Template value `/computers`: applies to both `/computers` and any slug under it unless overridden (e.g., `/computers/tools`).
+- Template value `/computers/accessories`: applies only to `/computers/accessories`.
 - Template value left empty: default template used if neither previous options match.
 
 Resulting behavior:
@@ -98,7 +99,7 @@ Resulting behavior:
 - Visiting `/computers/laptop` (with no template defined for it) inherits the `/computers` template.
 - Any slug not matched by the above uses the generic PLP template. 
 
-The table below summaries the template selection logic:
+The table below summarizes the template selection logic:
 
 | URL slug         | Template Defined For | Applied Template                                   | 
 | ---------------- | -------------------- | -------------------------------------------------- |
@@ -158,7 +159,7 @@ To sum up, here's the difference between the two template hierarchies:
 
 | Feature                         | PDP Hierarchy logic                                            | PLP Hierarchy logic                                        |
 | ------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------- |
-| Matching Criteria               | Slug, Subcategory, Category, Department, Generic.              | Slug, fallback to main department, generic/default, fallback. |
+| Matching Criteria               | Slug, Subcategory, Category, Department, Generic.              | Slug, fallback to main department, generic/default, fallback to first available PLP template. |
 | Reliance on Product Information | Considers product details (subcategory, category, department). | Ignores product details and uses URL slug only.           |
 
 ## Examples of template selection
