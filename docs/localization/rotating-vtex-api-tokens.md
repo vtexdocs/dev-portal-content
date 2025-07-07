@@ -39,7 +39,7 @@ Note over System,VTEX API: Step 2 – Complete renewal
 
 System->>VTEX API: PATCH /apitoken/finish-renewal
 VTEX API-->>System: 200 OK - Old token deactivated
-``` 
+```
 
 ## Required permission
 
