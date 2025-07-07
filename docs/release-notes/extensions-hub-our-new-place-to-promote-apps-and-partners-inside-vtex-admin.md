@@ -5,15 +5,8 @@ type: "added"
 hidden: false
 excerpt: "Extensions Hub is a new section in the Admin that allows VTEX-certified developers and partners to expand their reach by offering their products and services directly to VTEX merchants."
 createdAt: "2023-06-04T17:34:00.000Z"
+updatedAt: "2025-07-07T16:00:00.000Z"
 ---
-
->⚠ With the release of Extensions Hub, we changed our terms of service to enable VTEX partners to promote and sell their apps in the App Store. Thus, we created an addendum in the contract with partners, considering the app monetization and the new payment flow.
->
-> Due to changes in our internal procedures, we applied temporary restrictions related to publishing apps in the App Store:
->
-> - Partners that already have published apps and still did not sign the new contract with the addendum must sign it as soon as possible.
-> - Only partners that already signed the new contract can publish apps as usual, following the [homologation process](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
-> - We are not accepting new partners for publishing apps in the App Store.
 
 Extensions Hub is a new section in the Admin that allows VTEX-certified developers and partners to expand their reach by offering their products and services directly to VTEX merchants. The Extensions Hub will be available globally in all VTEX stores in the third quarter (Q3) of 2023.
 
