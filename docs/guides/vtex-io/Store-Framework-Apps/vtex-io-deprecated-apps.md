@@ -4,7 +4,7 @@ slug: "vtex-io-deprecated-apps"
 excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
-updatedAt: "2025-06-27T14:45:36.444Z"
+updatedAt: "2025-07-07T18:16:48.854Z"
 ---
 
 A deprecated app refers to an application no longer supported or maintained by VTEX, meaning that:
@@ -97,12 +97,14 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 ### Marketing and sales
 
-| App                             | `vendor.app-name`    |
+| App                           | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Abandoned Cart      | `vtex.abandoned-cart`              |
-| Affiliates Program  | `vtex.affiliates-order-form-spy`   |
-| Marketing Autopilot | `vtexbr.marketing-autopilot`       |
-| SMS Provider        | `qualitydigital.sms-provider`      |
+| Abandoned Cart                | `vtex.abandoned-cart`              |
+| Affiliates                    | `vtex.affiliates`                  |
+| Affiliates Commission Service | `vtex.affiliates-comission-service` |
+| Affiliates Program            | `vtex.affiliates-order-form-spy`   |
+| Marketing Autopilot           | `vtexbr.marketing-autopilot`       |
+| SMS Provider                  | `qualitydigital.sms-provider`      |
 
 ### Marketplace
 
