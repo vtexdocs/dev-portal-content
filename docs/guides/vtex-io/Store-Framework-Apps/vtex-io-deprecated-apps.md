@@ -43,6 +43,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Assembly Options | `vtex.admin-assembly-options`<br><br>`vtex.assembly-options-graphql` |
 | Export Feeds IO | `vtex.export-feeds-io` |
 | Google Catalog Import | `vtex.sheets-catalog-import` |
+| Google Drive Import | `vtex.google-drive-import` |
 | Massive Score Update | `vtexarg.massive-score-update` |
 
 ### Checkout
@@ -129,6 +130,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Lightspeed            | `vtex.lightspeed`                 |
+| Order Quote | `vtex.orderquote` |
 | Order Summary         | `vtex.external-invoice-viewer`    |
 | Order Bulk Import     | `vtex.admin-order-bulk-import`    |
 | Smartbill Integration | `vtex.smartbill`                  |
@@ -140,6 +142,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | ----------------------------- | ---------------------------- |
 | Bizum (PPP)                     | `vtex.integration-bizum`                   |
 | Cetelem (PPP)                   | `vtex.integration-cetelem`                 |
+| Digital River                   | `vtexus.connector-digital-river`           |
 | GestPay (PPP)                   | `vtex.ppp-gestpay`                         |
 | Instore Payments North Latam    | `vtex.order-instore`                       |
 | Mollie (PPP)                    | `vtex.integration-mollie`                  |
@@ -165,6 +168,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Podium           | `vtex.podium-pixel`                   |
 | retargeting pixel| `vtex.retargeting`                    |
 | Tiktok           | `vtexbr.tiktok-tbp`                   |
+| Treasure Data    | `vtex.treasure-data-pixel`            |
 | Wordpress App    | `vtex.wordpress-integration`          |
 
 ### Pricing and promotions
