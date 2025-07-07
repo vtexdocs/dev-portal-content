@@ -40,4 +40,4 @@ jobs:
 
       - name: Push Changes
         run: |
-          git push --follow-tags origin main
+          git push --force --follow-tags origin main
