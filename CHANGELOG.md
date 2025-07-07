@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.5...v1.1.6) (2025-07-07)
+
+
+### ✨ New documentation
+
+* **guide:** rotating VTEX API tokens ([8339584](https://github.com/vtexdocs/dev-portal-content/commit/8339584e8594a6b44c8c9b02f53a3b1558dd37ad))
+
 ### [1.1.5](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.4...v1.1.5) (2025-07-07)
 
 ### [1.1.4](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.3...v1.1.4) (2025-07-07)
