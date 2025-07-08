@@ -15,7 +15,7 @@ Events or Pixel Events are notifications broadcast by your store whenever a user
 
 Analytics tools widely use these events as they enable the tracking of users' shopping profiles and interactions with your store pages.
 
-You can also use events to create dynamic interactions between your store’s components by using the `customPixelEventId` prop. They can generate side effects on the UI, triggering automatic behaviors in your store components as needed. 
+You can also use events to create dynamic interactions between your store’s components by using the `customPixelEventId` prop. These events can generate side effects on the UI, triggering automatic behaviors in your store components as needed. 
 
 The `customPixelEventId` prop’s behavior depends on the component where it’s declared:
 
