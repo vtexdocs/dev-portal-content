@@ -3,40 +3,49 @@ title: "Using events to trigger side effects on store components"
 slug: "vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components"
 hidden: false
 createdAt: "2020-10-26T10:30:54.362Z"
-updatedAt: "2022-12-13T20:17:44.413Z"
+updatedAt: "2025-07-08T19:40:25.326Z"
 ---
 
-Events or Pixel Events are notifications automatically broadcasted by a website whenever users perform critical actions in your store, such as:
+Events or Pixel Events are notifications broadcast by your store whenever a user performs a key action, such as:
 
 - Adding an item to the cart (`addToCart` event).
 - Removing an item from the cart (`removeItem` event).
 - Accessing a loaded page (`pageView` event).
 - Seeing a product data (`productImpression` event).
 
-These events are broadly used by analytics tools since they allow you to track users' shopping profiles and interactions with your store pages.
+Analytics tools widely use these events as they enable the tracking of users' shopping profiles and interactions with your store pages.
 
-Yet, you can take the use of event data to another level: with the `customPixelEventId` prop, they can generate side effects on the UI, triggering automatic behaviors in your store components as you desire.
+You can also use events to create dynamic interactions between your store’s components by using the `customPixelEventId` prop. They can generate side effects on the UI, triggering automatic behaviors in your store components as needed. 
 
-The `customPixelEventId` prop works as an event sender and receiver depending on the theme block where it was declared. Its value must always be a unique ID, helping blocks easily identify which event is being sent or received upon user interaction on the UI.
+The `customPixelEventId` prop’s behavior depends on the component where it’s declared:
 
-In the table below, you can find the list of blocks that currently accept the `customPixelEventId` as a means to work with events, as well as their behavior when declaring the prop:
+- **Sender:** A component that sends an event when a user interacts with it.
+- **Receiver:** A component that listens for a specific event and reacts with a UI change.
+
+The prop's value must be a unique ID, enabling blocks to identify which event is being sent or received during user interaction on the UI.
+
+The following table lists the components that support the `customPixelEventId` prop:
 
 | Block name           | Behavior                                            |
 | -------------------- | --------------------------------------------------- |
-| `add-to-cart-button` | Sends an event whenever it is clicked on.           |
-| `minicart.v2`        | Receives an event and behaves on the UI accordingly. |
-| `drawer-trigger`     | Sends an event whenever it is clicked on.           |
-| `drawer`             | Receives an event and behaves on the UI accordingly. |
-| `modal-trigger`      | Sends an event whenever it is clicked on.           |
-| `modal-layout`       | Receives an event and behaves on the UI accordingly. |
+| `add-to-cart-button` | Sends an event when clicked.           |
+| `minicart.v2`        | Receives an event and performs a UI action. |
+| `drawer-trigger`     | Sends an event when clicked.          |
+| `drawer`             | Receives an event and performs a UI action. |
+| `modal-trigger`      | Sends an event when clicked.           |
+| `modal-layout`       | Receives an event and performs a UI action. |
 
-In the Instructions section below, you will learn how events and the `customPixelEventId` prop can trigger side effects on the interface in a real scenario. For example, you will configure the Minicart to automatically open itself once a new product is added to it by the Add To Cart Button.
+## Use case example
+
+In this section, you’ll learn how events and the `customPixelEventId` prop can trigger side effects on the interface. Follow the steps below to configure the [`Minicart`](https://developers.vtex.com/docs/apps/vtex.minicart) to automatically open once a new product is added to it using the [`Add To Cart Button`](https://developers.vtex.com/docs/apps/vtex.add-to-cart-button).
 
 ![open-minicart-demo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components-0.gif)
 
-## Instructions
+### Instructions
 
-1. Make sure the apps whose blocks are responsible for sending and receiving the desired event are already listed as dependencies in the theme's `manifest.json` file:
+#### Step 1 - Add dependencies
+
+In your theme’s `manifest.json` file, ensure the `minicart` and `add-to-cart-button` apps are listed as dependencies:
 
   ```json
   "dependencies": {
@@ -45,7 +54,9 @@ In the Instructions section below, you will learn how events and the `customPixe
   }
   ```
 
-2. Declare the `customPixelEventId` prop in the block responsible for sending the desired event, passing as its value a unique ID. For example:
+#### Step 2 - Configure the event sender
+
+In your store theme code, declare the `customPixelEventId` prop in the block responsible for sending the desired event, passing as its value a unique ID. For example:
 
   ```json
   {
@@ -57,17 +68,21 @@ In the Instructions section below, you will learn how events and the `customPixe
   }
   ```
 
-3. Declare the `customPixelEventId` prop in the block responsible for listening to the desired event, passing as its value the same unique ID previously declared in the sender block. For example:
+#### Step 3 - Configure the event receiver
+
+In the `minicart.v2` block, declare the `customPixelEventIdName` prop in the block responsible for listening to the desired event, passing as its value the same unique ID previously declared in the sender block. For example:
 
   ```json
   {
     "minicart.v2": {
       "props": {
-        "customPixelEventId": "example-add-to-cart"
+        "customPixelEventName": "example-add-to-cart"
       },
       "children": ["minicart-base-content"]
     }
   }
   ```
 
-Once you save your changes and deploy your new Store Theme version, the Add To Cart Button component will send the `example-add-to-cart` event whenever it is clicked on. At the same time, the Minicart will be ready to automatically open itself as a response to any event with this ID.
+>ℹ The `customPixelEventIdName` prop triggers the `minicart.v2` to open automatically in the interface. When you use the `customPixelEventIdName` prop, the `minicart.v2` will open for every event that has the specified name, unless you provide a `customPixelEventId`. Learn more in [Minicart](https://developers.vtex.com/docs/apps/vtex.minicart).
+
+After saving your changes and [deploying your new Store Theme version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available), the Add To Cart Button component will send the `example-add-to-cart` event whenever it’s clicked on. At the same time, the Minicart will be ready to automatically open itself as a response to any event with this ID.
