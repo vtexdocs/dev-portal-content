@@ -23,13 +23,13 @@ Now, Delivery Promise addresses these issues by offering a centralized, automate
 - **`RegionPopover` component:** Allows users to enter or update their location. It's used when location data is missing or when the store's default postal code is applied. Available in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson), `RegionPopover` uses the [`Popover`](https://developers.vtex.com/docs/guides/faststore/molecules-popover) component as its UI base.
 
 - **Hooks:**
-- `useRegion`: Accesses or updates the user's region information, such as postal code or location.
-- `useRegionModal`: Handles the modal display logic for region selection, especially when a location input is required.
-- `useGeoLocation`: Interacts with the browser's geolocation API or other client-side mechanisms to auto-detect the user's location.
+  - `useRegion`: Accesses or updates the user's region information, such as postal code or location.
+  - `useRegionModal`: Handles the modal display logic for region selection, especially when a location input is required.
+  - `useGeoLocation`: Interacts with the browser's geolocation API or other client-side mechanisms to auto-detect the user's location.
 
 - **APIs:**
-- `productCount`: Returns the total number of products available based on location.
-- `pickupPoints`: Returns a list of pickup points near a given location.
+  - `productCount`: Returns the total number of products available based on location.
+  - `pickupPoints`: Returns a list of pickup points near a given location.
 
 ## Why did we make this change?
 
