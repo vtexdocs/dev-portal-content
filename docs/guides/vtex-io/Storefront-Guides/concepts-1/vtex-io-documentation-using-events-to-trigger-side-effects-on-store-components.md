@@ -17,10 +17,7 @@ Analytics tools commonly use these events to track users' shopping behavior and 
 
 You can also use events to create dynamic interactions between your store’s components by using the `customPixelEventId` prop. These events can generate side effects on the UI, triggering automatic behaviors in your store components as needed.
 
-The `customPixelEventId` prop’s behavior depends on the component where it’s declared:
-
-- **Sender:** A component that sends an event when a user interacts with it.
-- **Receiver:** A component that listens for a specific event and reacts with a UI change.
+The `customPixelEventId` prop can be used as either an event sender or receiver, depending on its implementation. When used in a sender component, it emits an event in response to user interaction. In a receiver component, it listens for that specific event and triggers a corresponding UI update.
 
 The prop's value must be a unique ID, enabling blocks to identify which event is being sent or received during user interaction on the UI.
 
