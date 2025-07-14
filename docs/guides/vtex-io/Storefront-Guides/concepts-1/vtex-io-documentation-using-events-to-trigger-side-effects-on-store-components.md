@@ -6,16 +6,16 @@ createdAt: "2020-10-26T10:30:54.362Z"
 updatedAt: "2025-07-08T19:40:25.326Z"
 ---
 
-Events or Pixel Events are notifications broadcast by your store whenever a user performs a key action, such as:
+Events or Pixel Events are notifications broadcast by your storefront whenever a user performs a tracked action, such as:
 
 - Adding an item to the cart (`addToCart` event).
 - Removing an item from the cart (`removeItem` event).
 - Accessing a loaded page (`pageView` event).
 - Seeing a product data (`productImpression` event).
 
-Analytics tools widely use these events as they enable the tracking of users' shopping profiles and interactions with your store pages.
+Analytics tools commonly use these events to track users' shopping behavior and interactions across your store pages.
 
-You can also use events to create dynamic interactions between your store’s components by using the `customPixelEventId` prop. These events can generate side effects on the UI, triggering automatic behaviors in your store components as needed. 
+You can also use events to create dynamic interactions between your store’s components by using the `customPixelEventId` prop. These events can generate side effects on the UI, triggering automatic behaviors in your store components as needed.
 
 The `customPixelEventId` prop’s behavior depends on the component where it’s declared:
 
