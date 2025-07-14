@@ -1,6 +1,6 @@
 ---
 title: "FastStore: Enhance shopping experience with Delivery Promise"
-slug: "2025-06-23-faststore-enhance-shopping-experience-with-delivery-promise"
+slug: "2025-07-16-faststore-enhance-shopping-experience-with-delivery-promise"
 type: added
 excerpt: " Delivery Promise is now available for FastStore."
 createdAt: ""
