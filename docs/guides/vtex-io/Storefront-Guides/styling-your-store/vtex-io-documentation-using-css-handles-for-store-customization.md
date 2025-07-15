@@ -45,7 +45,7 @@ Follow the steps below to apply a style that affects every block instance:
 
 >⚠️ If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon)`.
 
-4. [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to see the changes. Once linked, the new style applies to all `menu-item` blocks in the workspace you’re working on.n.
+4. [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to see the changes. Once linked, the new style applies to all `menu-item` blocks in the workspace you’re working on.
 
 ![css handles customization applied to the menuItem](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-1.png)
 
