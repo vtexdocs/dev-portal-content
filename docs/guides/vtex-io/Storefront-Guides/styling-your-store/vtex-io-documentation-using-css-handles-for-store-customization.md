@@ -9,7 +9,7 @@ updatedAt: "2025-07-15T16:34:53.615Z"
 
 In this guide, you’ll learn how to customize your storefront using CSS handles. These unique identifiers assigned to HTML elements allow you to target and add CSS classes to a component within your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme).
 
-CSS handles can overwrite a storefront's default styles, allowing for independent customization of specific blocks within a Store Theme. For example, consider you want to customize the `menu-item` blocks of the [Menu](https://developers.vtex.com/docs/apps/vtex.menu) component. You can apply a [general customization]((#applying-a-general-customization) or [customize a single block](#customizing-a-single-block).
+CSS handles can overwrite a storefront's default styles, allowing for independent customization of specific blocks within a Store Theme. For example, consider that you want to customize the `menu-item` blocks of the [Menu](https://developers.vtex.com/docs/apps/vtex.menu) component. You can apply a [general customization](#applying-a-general-customization) or [customize a single block](#customizing-a-single-block).
 
 ## Instructions
 
@@ -19,7 +19,7 @@ CSS handles can overwrite a storefront's default styles, allowing for independen
 
 >ℹ Always use a development workspace and make sure your store domain is under `myvtex.com`.
 
-2. Hover your mouse over the page element you want to customize. A box will appear displaying its available CSS handles in a box (names beginning with `.`), CSS file names, and related information.
+2. Hover your mouse over the page element you want to customize. A box will appear displaying its available CSS handles (names beginning with `.`), CSS file names, and related information.
 
 ![css-handles-inspect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-0.png)
 
@@ -45,13 +45,13 @@ Follow the steps below to apply a style that affects every block instance:
 
 >⚠️ If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon)`.
 
-4. [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to see the changes. Once completed, the new style applies to all `menu-item` blocks in the workspace you’re working on.
+4. [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to see the changes. Once linked, the new style applies to all `menu-item` blocks in the workspace you’re working on.n.
 
 ![css handles customization applied to the menuItem](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-1.png)
 
 ### Customizing a single block
 
-To customize a single, specific block without affecting others of the same type, use the  `blockClass` property, which serves as the block’s unique identifier for customization: 
+To customize a single, specific block without affecting others of the same type, use the  `blockClass` property, which serves as the block’s unique identifier for customization:
 
 1. In the `json` file where your target block is declared, add the prop `blockClass` to the element you want to customize. Assign any unique name as its value. For example:
 
@@ -70,7 +70,7 @@ To customize a single, specific block without affecting others of the same type,
 
 ![css handles with block class](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-2.png)
 
-4. In your CSS file, you can now use this new class (for example: `.menu-Item--header`) to target only the block with that specific `blockClass`. 
+4. In your CSS file, you can now use this new class (for example: `.menu-Item--header`) to target only the block with that specific `blockClass`.
 
 ![specific menu items with css handles applied using blockClass](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-3.png)
 
@@ -88,7 +88,7 @@ Customization using CSS selectors is mostly deprecated. The following selectors 
 - All pseudo-elements, such as  `::before`, `::after`, and `::placeholder`
 - Space combinator (example: `.foo .bar`)
 - `[data-...]`
-- `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selection of elements that come from different apps
+- `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selecting elements that come from different apps
 - Media queries, such as `@media (max-width: 768px)` (responsive override for screens up to 768px wide) and `@media (prefers-reduced-motion: reduce)` (remove transitions if user prefers reduced motion).
 
 >⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, aren’t supported. Attempting to use them will cause processes like linking your app to fail.
