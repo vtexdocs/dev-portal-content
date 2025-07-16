@@ -92,7 +92,7 @@ graphql
 
 #### Type example
 
-```graphql /graphql/types/ProductView.graphql
+```graphql graphql/types/ProductView.graphql
 type ProductView {
   slug: String
   liveUsers: Int
@@ -101,7 +101,7 @@ type ProductView {
 
 #### Query schema example
 
-```graphql /graphql/schema.graphql
+```graphql graphql/schema.graphql
 type Query {
   getSku(topN: Int): String
 }
@@ -131,7 +131,7 @@ Here's an example of how to add the Catalog client to your app:
 
 3. Open `node/clients/index.ts` and extend the `IOClients` class to register the `catalog` client:
 
-    ```ts node/clients/index.ts mark=2,6-8
+    ```ts node/clients/index.ts mark=2,6:8
     import { IOClients } from '@vtex/api'
     import { Catalog } from '@vtex/clients'
 
@@ -172,7 +172,7 @@ export const getSku = async (
 
 After defining your resolver functions, add them to the `Service` class of the `node/index.ts` file. You should add a `graphql` field with the resolvers for each endpoint implemented with the directives.
 
-```ts node/index.ts mark=3,9-15
+```ts node/index.ts mark=3,9:15
 import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
 import { productList } from './resolvers/products'
@@ -195,7 +195,7 @@ export default new Service({
 
 If your app accesses external endpoints and resources, add the required policies to your `manifest.json`:
 
-```json manifest.json mark=2-8
+```json manifest.json mark=2:8
 "policies": [
   {
     "name": "outbound-access",
