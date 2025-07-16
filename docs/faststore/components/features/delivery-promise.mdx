@@ -357,7 +357,7 @@ To provide accurate Delivery Promise estimates, FastStore projects determine use
 To better understand how this flow works, see the following diagram.
 
 ```mermaid
-graph TD
+graph LR
     A{"User provided location?"} -- Yes --> B(["Use the provided location"])
     A -- No --> C{"Logged-in user's address available?"}
     C -- Yes --> D(["Use the logged-in user's address"])
