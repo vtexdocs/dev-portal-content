@@ -7,13 +7,13 @@ createdAt: "2025-07-02T00:00:00.000Z"
 updatedAt: "2025-07-02T00:00:00.000Z"
 ---
 
-Punchout login integration enables external procurement systems to authenticate users into a VTEX store without requiring manual credential input. This guide explains how to implement the [Punchout](https://developers.vtex.com/docs/guides/punchout) login flow using one-time tokens (OTT) for secure, session-based authentication.
+The Punchout login integration enables external procurement systems to authenticate users into a VTEX store without requiring manual credential input. This guide explains how to implement the [Punchout](https://developers.vtex.com/docs/guides/punchout) login flow using one-time tokens (OTT) for secure, session-based authentication.
 
 The flow supports two integration types:
 
-* **[VTEX user flow](#vtex-user-flow):** For procurement users who exist on the VTEX platform. In this flow, the username and password are sent as part of the request body, and VTEX is responsible for authorization.
+* **[VTEX user flow](#vtex-user-flow):** For procurement users who exist on the VTEX platform. In this flow, the username and password are sent as part of the request body, and VTEX authorizes them.
 
-* **[Pre-authenticated user flow](#pre-authenticated-user-flow):** For procurement users who do not exist in VTEX. In these cases, VTEX trusts the integrator to authorize these users, and receive their username for login.
+* **[Pre-authenticated user flow](#pre-authenticated-user-flow):** For procurement users who don't exist on VTEX. In these cases, VTEX trusts the integrator to authorize these users and receive their username for login.
 
 ## How it works
 
@@ -25,11 +25,11 @@ Example flow:
 
 1. Request (VTEX user flow):
 
-   `https://host.com/api/authenticator/punchout/start?returnURL=/checkout`
+`https://host.com/api/authenticator/punchout/start?returnURL=/checkout`
 
 1. Final redirect (logged-in session):
 
-   `https://host.com/checkout`
+`https://host.com/checkout`
 
 Each flow returns a URL with a short-lived token that must be accessed within 5 minutes and can only be used once.
 
@@ -37,7 +37,7 @@ Each flow returns a URL with a short-lived token that must be accessed within 5 
 
 This flow validates the credentials of an existing VTEX user. It requires the user’s email and password. If the validation is positive, the response provides a URL that can be accessed directly via web browsers, initiating a session in the selected host.
 
->ℹ️ Find more details about each field in `POST` [Start VTEX user punchout flow](https://developers.vtex.com/docs/api-reference/api-reference/punchout-api#post-/api/authenticator/punchout/start).
+>ℹ️ Find more details about each field in `POST` in [Start VTEX user punchout flow](https://developers.vtex.com/docs/api-reference/api-reference/punchout-api#post-/api/authenticator/punchout/start).
 
 ### Request example
 
@@ -60,11 +60,11 @@ curl -X POST "https://store.myvtex.com/api/authenticator/punchout/start?returnUR
 
 ## Pre-authenticated user flow
 
-This flow is used when the procurement user doesn’t exist in VTEX. In this case, no password is required. An authenticated integration, using a valid API key / API Token pair associated with a role that has the `CanPunchout` permission, generates an OTT on the user’s behalf.  Other authentication methods (such as `VtexIdClientAutCookie`) don't work for this endpoint.
+This flow is used when the procurement user doesn’t exist on VTEX. In this case, a password isn't required. An authenticated integration, using a valid API key/API token pair associated with a role that has the `CanPunchout` permission, generates an OTT on behalf of the user.  Other authentication methods (such as `VtexIdClientAutCookie`) don't work for this endpoint.
 
 If the validation is positive, the response provides a URL that can be accessed directly via web browsers, initiating a session created with the username provided in the request body.
 
->ℹ️ Find more details about each field in `POST` [Start pre-authenticated user punchout flow](https://developers.vtex.com/docs/api-reference/punchout-api#post-/api/authenticator/punchout/authenticated/start).
+>ℹ️ Find more details about each field in `POST` in [Start pre-authenticated user punchout flow](https://developers.vtex.com/docs/api-reference/punchout-api#post-/api/authenticator/punchout/authenticated/start).
 
 ### Request example
 
