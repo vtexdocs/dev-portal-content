@@ -7,17 +7,17 @@ createdAt: "2025-07-07T00:00:00.000Z"
 updatedAt: "2025-07-07T00:00:00.000Z"
 ---
 
-The older API tokens are, the higher the risk of exposure and potential damage to your operations. To minimize vulnerabilities and ensure your store’s security, it's strongly recommended to renew tokens regularly, ideally before any renewal alert in the [API Keys](https://help.vtex.com/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) admin.
+The older API tokens are, the higher the risk of exposure and potential damage to your operations. To minimize vulnerabilities and ensure store security, we strongly recommend renewing tokens regularly, ideally before any renewal alert in the [API keys](https://help.vtex.com/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) dashboard.
 
->ℹ️ This guide explains how to renew VTEX API tokens using the [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api). Alternatively, you can rotate tokens using the API Keys admin page. Learn more at [Renewing API tokens](https://help.vtex.com/en/tutorial/renewing-api-tokens--7r4AzptYjXErGHadg9LnJ3).
+>ℹ️ This guide explains how to renew VTEX API tokens using the [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api). Alternatively, you can rotate tokens using the API keys Admin page. Learn more at [Renewing API tokens](https://help.vtex.com/en/tutorial/renewing-api-tokens--7r4AzptYjXErGHadg9LnJ3).
 
-VTEX’s renewal process allows you to generate a new token while the old one remains active, ensuring uninterrupted service during the transition.
+The VTEX renewal process allows you to generate a new token while the old one remains active, ensuring uninterrupted service during the transition.
 
->ℹ️ VTEX recommends renewing tokens every 90 or 180 days, based on your organization’s policies. Tokens do not expire automatically, so regular rotation is a proactive security best practice.
+>ℹ️ VTEX recommends renewing tokens every 90 or 180 days, based on the policies of your organization. Tokens don't expire automatically, so regular rotation is a proactive security best practice.
 
 ## Token rotation process
 
-The API-based token rotation process involves two steps as illustrated in the diagram below:
+The API-based token rotation process involves two steps, as illustrated in the diagram below:
 
 1. The system initiates the token renewal by calling the `PATCH` [Initiate token renewal](https://developers.vtex.com/docs/api-reference/vtex-id-api#patch-/api/vtexid/apikey/-apiKey-/apitoken/renew) endpoint. The API responds with a new token while keeping the old one active.
 
@@ -79,9 +79,9 @@ The response includes the new token (`newToken`), which is valid but not yet exc
 
 ## Step 2 - Complete token renewal
 
-After you’ve updated all systems to use the new token, call the `PATCH` [Complete token renewal](https://developers.vtex.com/docs/api-reference/vtex-id-api#patch-/api/vtexid/apikey/-apiKey-/apitoken/finish-renewal) endpoint to finalize the process. This step deactivates the old token, ensuring that only the new one remains valid.
+After you’ve updated all systems to use the new token, call the `PATCH` [Complete token renewal](https://developers.vtex.com/docs/api-reference/vtex-id-api#patch-/api/vtexid/apikey/-apiKey-/apitoken/finish-renewal) endpoint to complete the process. This step deactivates the old token, ensuring that only the new one remains valid.
 
->⚠️ Before completing the renewal, make sure that no integrations are still using the old token. This action is irreversible.
+>⚠️ Before completing the renewal, make sure that no integrations are still using the old token. This action is can't be undone.
 
 ### Request example
 
