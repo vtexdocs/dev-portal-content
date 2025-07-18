@@ -20,11 +20,11 @@ Now, this workflow has been deprecated, and secrets are managed directly through
 
 ## Why did we make this change?
 
-Secrets management via WebOps addresses provides the following advantages:
+Secrets management via WebOps provides the following advantages:
 
 - Increased security of sensitive data by eliminating secrets from source code and version control.
 - Reduced operational overhead and potential sync errors that might arise from CLI-managed secrets files.
-- Secrets managed in a uniform way across all FastStore deployment providers.
+- Secrets are managed uniformly across all FastStore deployment providers.
 
 ## What needs to be done?
 
