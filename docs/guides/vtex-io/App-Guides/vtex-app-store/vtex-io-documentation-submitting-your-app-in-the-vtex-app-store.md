@@ -4,7 +4,7 @@ excerpt: "Learn how to submit your app for distribution in the VTEX App Store."
 slug: "vtex-io-documentation-submitting-your-app-in-the-vtex-app-store"
 hidden: false
 createdAt: "2020-09-11T19:35:00.561Z"
-updatedAt: "2022-12-13T20:17:44.608Z"
+updatedAt: "2025-07-07T17:30:00.000Z"
 category: "App Development"
 seeAlso:
  - "/docs/guides/vtex-io-documentation-business-guidelines-app-monetization"
@@ -12,14 +12,6 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-design-guidelines"
  - "/docs/guides/vtex-io-documentation-engineering-guidelines"
 ---
-
->⚠ From the [release of Extensions Hub](https://developers.vtex.com/updates/release-notes/extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin), we changed our terms of service to enable VTEX partners to promote and sell their apps in the App Store. Thus, we created an addendum in the contract with partners, considering the app monetization and the new payment flow.
->
-> Due to changes in our internal procedures, we applied temporary restrictions related to publishing apps in the App Store:
->
-> - Partners that already have published apps and still did not sign the new contract with the addendum must sign it as soon as possible.
-> - Only partners that already signed the new contract can publish apps as usual, following the homologation process.
-> - We are not accepting new partners for publishing apps in the App Store.
 
 Learn how to successfully submit your app for distribution in the VTEX App Store by following this guide. The VTEX App Store is a marketplace where VTEX clients can discover and install applications that enhance their ecommerce experience. Before your app can be featured in the VTEX App Store, it must pass the homologation process, which involves evaluation in three key areas: business, user experience (UX), and security/performance. This process applies to all apps, regardless of their functionality, such as storefront, admin, backend, or pixel.
 
