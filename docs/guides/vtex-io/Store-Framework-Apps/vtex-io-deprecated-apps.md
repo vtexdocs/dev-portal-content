@@ -4,7 +4,7 @@ slug: "vtex-io-deprecated-apps"
 excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
-updatedAt: "2025-06-27T14:45:36.444Z"
+updatedAt: "2025-07-07T18:16:48.854Z"
 ---
 
 A deprecated app refers to an application no longer supported or maintained by VTEX, meaning that:
@@ -43,7 +43,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Assembly Options | `vtex.admin-assembly-options`<br><br>`vtex.assembly-options-graphql` |
 | Export Feeds IO | `vtex.export-feeds-io` |
 | Google Catalog Import | `vtex.sheets-catalog-import` |
-| Google Drive Import | `qualitydigital.google-drive-import` |
+| Google Drive Import | `vtex.google-drive-import` |
 | Massive Score Update | `vtexarg.massive-score-update` |
 
 ### Checkout
@@ -54,14 +54,14 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Checkout UI Custom    | `vtex.checkout-ui-custom`            |
 | Checkout V6 Invoice Data | `vtexeurope.checkout-v6-invoice-data` |
 | Cross Device Cart     | `vtex.cross-device-cart`             |
-| GiveX                 | `qualitydigital.givex`               |
+| GiveX                 | `vtex.givex`               |
 | TSYS Gift Cards       | `vtex.tsys-merchantware`             |
 
 ### Content management
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| GeoCMS | `qualitydigital.geocms-store-locator` |
+| GeoCMS | `vtex.geocms-store-locator` |
 | Yext | `vtex.yext-store-locator` |
 
 ### Data management
@@ -84,25 +84,26 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | ----------------------------- | ---------------------------- |
 | Curbside Pickup                         | `vtex.curbside-pickup`                |
 | Delivery Window Blocker                  | `vtex.delivery-window-blocker`         |
-| EasyPost                                | `qualitydigital.easypost`             |
+| EasyPost                                | `vtex.easypost`             |
 | Fedex Shipping                          | `vtex.fedex-shipping`                 |
 | innoship app                            | `vtex.innoship`                       |
-| Location Availability (Inventory Locator)| `qualitydigital.location-availability` |
+| Location Availability (Inventory Locator)| `vtex.location-availability` |
 | Massive Stock Update                     | `vtexarg.massive-stock-update`         |
 | Package Optimizer (FedEx Shipping)       | `vtex.packing-optimization`           |
 | Return App                              | `vtex.return-app`                     |
 | ShipStation                             | `vtex.ship-station`                   |
-| Shopper Location (Inventory Locator)     | `qualitydigital.shopper-location`      |
+| Shopper Location (Inventory Locator)     | `vtex.shopper-location`      |
 | Store Locator                           | `vtex.store-locator`                  |
 
 ### Marketing and sales
 
-| App                             | `vendor.app-name`    |
+| App                           | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Abandoned Cart      | `vtex.abandoned-cart`              |
-| Affiliates Program  | `vtex.affiliates-order-form-spy`   |
-| Marketing Autopilot | `vtexbr.marketing-autopilot`       |
-| SMS Provider        | `qualitydigital.sms-provider`      |
+| Abandoned Cart                | `vtex.abandoned-cart`              |
+| Affiliates                    | `vtex.affiliates`                  |
+| Affiliates Commission Service | `vtex.affiliates-comission-service` |
+| Affiliates Program            | `vtex.affiliates-order-form-spy`   |
+| Marketing Autopilot           | `vtexbr.marketing-autopilot`       |
 
 ### Marketplace
 
@@ -129,7 +130,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Lightspeed            | `vtex.lightspeed`                 |
-| Order Quote           | `qualitydigital.order-quote`      |
+| Order Quote | `vtex.orderquote` |
 | Order Summary         | `vtex.external-invoice-viewer`    |
 | Order Bulk Import     | `vtex.admin-order-bulk-import`    |
 | Smartbill Integration | `vtex.smartbill`                  |
@@ -141,12 +142,11 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | ----------------------------- | ---------------------------- |
 | Bizum (PPP)                     | `vtex.integration-bizum`                   |
 | Cetelem (PPP)                   | `vtex.integration-cetelem`                 |
-| Digital River                   | `qualitydigital.digital-river`             |
+| Digital River                   | `vtexus.connector-digital-river`           |
 | GestPay (PPP)                   | `vtex.ppp-gestpay`                         |
 | Instore Payments North Latam    | `vtex.order-instore`                       |
 | Mollie (PPP)                    | `vtex.integration-mollie`                  |
 | ONEY (PPP)                      | `vtex.oney-auth-app`                       |
-| Payment APP PuntosColombia      | `exito.pco-payment-authorization-app`      |
 | Payment APP TuyaPay             | `vtexcol.tuyapay-payment-authorization-app` |
 | Sequra (PPP)                    | `vtex.sequra-connector`                    |
 | Sequra promotions               | `vtex.sequra-promotions`                   |
@@ -168,7 +168,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Podium           | `vtex.podium-pixel`                   |
 | retargeting pixel| `vtex.retargeting`                    |
 | Tiktok           | `vtexbr.tiktok-tbp`                   |
-| Treasure Data    | `qualitydigital.treasure-data-pixel`  |
+| Treasure Data    | `vtex.treasure-data-pixel`            |
 | Wordpress App    | `vtex.wordpress-integration`          |
 
 ### Pricing and promotions
@@ -193,7 +193,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Quantity on Cart           | `vtexarg.quantity-on-cart`                |
 | Questions and Answers      | `vtex.questions-and-answers`             |
 | Reviews and Ratings        | `vtex.reviews-and-ratings`               |
-| Shopper Approved           | `qualitydigital.shopper-approved`        |
+| Shopper Approved           | `vtex.shopper-approved`        |
 | Speech to Text             | `vtexarg.speech-to-text`                 |
 | Viewed products            | `vtex.viewed-products`                   |
 | Wishlist                   | `vtex.wish-list`                         |
@@ -221,8 +221,8 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Avalara  | `qualitydigital.avalara` |
-| TaxJar   | `qualitydigital.taxjar` |
+| Avalara  | `vtex.avalara` |
+| TaxJar   | `vtex.taxjar` |
 | Taxproxy | `vtex.tax-proxy`        |
 | Vertex   | `vtex.vertex`           |
 

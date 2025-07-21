@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.12](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.9...v1.1.12) (2025-07-21)
+
+### [1.1.10](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.9...v1.1.10) (2025-07-18)
+
+### [1.1.10](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.9...v1.1.10) (2025-07-14)
+
+### [1.1.10](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.9...v1.1.10) (2025-07-11)
+
+### [1.1.9](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.6...v1.1.9) (2025-07-10)
+
+
+### ⚙️ Repository features
+
+* force push changelog action ([00b7abe](https://github.com/vtexdocs/dev-portal-content/commit/00b7abef8f4a4a2aded7d27577411612b4f9ae26))
+* handle release tags on changelog action ([575d26a](https://github.com/vtexdocs/dev-portal-content/commit/575d26a92dbfabab527a010446a3248100ffe70a))
+
+### [1.1.7](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.6...v1.1.7) (2025-07-07)
+
+### [1.1.6](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.5...v1.1.6) (2025-07-07)
+
+
+### ✨ New documentation
+
+* **guide:** rotating VTEX API tokens ([8339584](https://github.com/vtexdocs/dev-portal-content/commit/8339584e8594a6b44c8c9b02f53a3b1558dd37ad))
+
+### [1.1.5](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.4...v1.1.5) (2025-07-07)
+
+### [1.1.4](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.3...v1.1.4) (2025-07-07)
+
+### [1.1.3](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.2...v1.1.3) (2025-07-04)
+
+
+### 🔧 Fixes and improvements
+
+* **typo:** edit table html in order-modifications ([df8839c](https://github.com/vtexdocs/dev-portal-content/commit/df8839c46ccc6a1f2f4873db6036d07ca167bfbe))
+
+### [1.1.2](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.1...v1.1.2) (2025-07-03)
+
+
+### 🔧 Fixes and improvements
+
+* **overview.mdx:** adding popover card ([d3c00b7](https://github.com/vtexdocs/dev-portal-content/commit/d3c00b7e8b72b7de9ecb27ddb5807f835adaf4f2))
+
+
+### 📝 Documentation updates
+
+* **components/index.mdx:** adding popover card ([50d176a](https://github.com/vtexdocs/dev-portal-content/commit/50d176a10b5b0027e80f80dc57bf3d2792619abf))
+
 ### [1.1.1](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.0...v1.1.1) (2025-07-02)
 
 ## 1.1.0 (2025-07-01)

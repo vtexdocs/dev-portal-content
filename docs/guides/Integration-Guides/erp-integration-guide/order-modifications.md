@@ -120,7 +120,7 @@ See below what API errors can be returned when attempting to [modify an order vi
 
 <table>
     <td><strong> Error code</strong></td>
-    <td><stron> Error message</strong></td>
+    <td><strong> Error message</strong></td>
     <td><strong> Description</strong></td>
     <tr>
         <td><code>CHK0022</code></td>
