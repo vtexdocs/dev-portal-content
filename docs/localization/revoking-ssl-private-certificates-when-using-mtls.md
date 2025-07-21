@@ -7,9 +7,9 @@ createdAt: "2025-07-01T00:00:00.000Z"
 updatedAt: "2025-07-01T00:00:00.000Z"
 ---
 
->ℹ️ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you're already a VTEX client and would like to adopt VTEX Shield for your business, contact our [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you're not a VTEX client yet but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
+>ℹ️ This feature is part of [VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh). If you're already a VTEX client and would like to adopt VTEX Shield for your business, contact our [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you're not yet a VTEX client but are interested in this solution, complete our [contact form](https://vtex.com/us-en/contact/).
 
-For security reasons, when using [mTLS](https://help.vtex.com/en/tutorial/mutual-transport-layer-security-mtls--6YR3SoynJMfeEKGlY1Cqlo), you may need to revoke previously issued certificates if they are compromised or no longer needed. VTEX provides a `DELETE` [Revoke certificate](https://developers.vtex.com/docs/api-reference/mtls-api#delete-/api/edge/private-certificates/-serialNumber-) endpoint that allows revocation using the certificate’s serial number.
+For security reasons, when using [mTLS](https://help.vtex.com/en/tutorial/mutual-transport-layer-security-mtls--6YR3SoynJMfeEKGlY1Cqlo), you may need to revoke previously issued certificates if they're compromised or no longer needed. VTEX provides a `DELETE` [Revoke certificate](https://developers.vtex.com/docs/api-reference/mtls-api#delete-/api/edge/private-certificates/-serialNumber-) endpoint, which allows you to revoke a certificate using its serial number.
 
 This guide provides step-by-step instructions for revoking certificates using this endpoint.
 
@@ -49,17 +49,17 @@ Example output:
 
 ## Step 2 - Revoking the certificate
 
-Send a revocation request to `DELETE` [Revoke certificate](https://developers.vtex.com/docs/api-reference/mtls-api#delete-/api/edge/private-certificates/-serialNumber-) with the certificate's serial number in the URL. Both serial number formats shown in the [Step 1 \- Getting the certificate serial number](#step-1-getting-the-certificate-serial-number) section are accepted.
+Send a revocation request to the `DELETE` [Revoke certificate](https://developers.vtex.com/docs/api-reference/mtls-api#delete-/api/edge/private-certificates/-serialNumber-) endpoint, including the certificate's serial number in the URL. Both serial number formats shown in the [Step 1 \- Getting the certificate serial number](#step-1-getting-the-certificate-serial-number) section are accepted.
 
 ### Required permission
 
-The user or application must have the following License Manager resource to make this call. Otherwise, they will receive a 403 status code error.
+The user or application must have the following License Manager resource to make this call. Otherwise, a 403 status code error will be returned.
 
 | Product | Category | Resource |
 | :---- | :---- | :---- |
 | CDN API | Certificate management | Update certificate |
 
-There are no predefined access profiles for these resources. To use this endpoint, you must create a custom profile and add the above resource. Learn more about platform resources and profiles in the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) documentation.
+There are no predefined roles for these resources. To use this endpoint, you must create a custom role and add the above resource. Learn more about platform resources and roles in the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) documentation.
 
 ### Request example
 
