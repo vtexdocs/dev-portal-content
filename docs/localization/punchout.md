@@ -29,9 +29,9 @@ Here's an overview of a typical punchout workflow:
 
 2. **Browsing and adding items:** The employee is redirected to the supplier’s ecommerce website and automatically logged in using the credentials provided by the eprocurement system.
 
-The supplier’s ecommerce website may be customized for the employee’s company, with a unique homepage, product selection, and pricing based on the applicable trade policy.
+   The supplier’s ecommerce website may be customized for the employee’s company, with a unique homepage, product selection, and pricing based on the applicable trade policy.
 
-The employee can browse or search the supplier’s catalog and add items to their shopping cart.
+   The employee can browse or search the supplier’s catalog and add items to their shopping cart.
 
 3. **Checkout:** The employee clicks the checkout button on the supplier's site and is redirected to their eprocurement system. Rather than going through the regular checkout flow on the supplier's site, the shopping cart is sent back to the eprocurement system.
 
