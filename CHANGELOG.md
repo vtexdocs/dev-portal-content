@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.15](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.14...v1.1.15) (2025-07-21)
+
+
+### 🖼️ Media updates
+
+* **implementing-mtls:** add postman gif ([462b66a](https://github.com/vtexdocs/dev-portal-content/commit/462b66a2db8b0d76977035ac075ff84905cb8b1d))
+
+
+### ✨ New documentation
+
+* **guide:** implementing mTLS ([6ca1ec1](https://github.com/vtexdocs/dev-portal-content/commit/6ca1ec14ca1a00da75df2e20cf5516f1d2ff7343))
+* **guide:** revoking SSL private certificates when using mTLS ([3658a4f](https://github.com/vtexdocs/dev-portal-content/commit/3658a4fe446bd048b987973a6b6b490cae71f11e))
+
+
+### 📝 Documentation updates
+
+* move mTLS guides to VTEX Shield folder ([515ff71](https://github.com/vtexdocs/dev-portal-content/commit/515ff7108a5ae699444d558f80273c7f305dffb3))
+
+
+### 🔧 Fixes and improvements
+
+* add space to learn more callout in revoking-ssl-private-certificates-when-using-mtls guide ([e0ffb90](https://github.com/vtexdocs/dev-portal-content/commit/e0ffb900cfac3fc7c01e425518bd456ad19f7fdc))
+* **broken-link:** contact form in mTLS guides ([7cce37b](https://github.com/vtexdocs/dev-portal-content/commit/7cce37bb0530e38196958c78306b1a5e8b25ecd1))
+* implementing mTLS internal link ([dcf0913](https://github.com/vtexdocs/dev-portal-content/commit/dcf09135d40d32c1b4928048748726bde351694d))
+* internal link in implementing mTLS guide ([816fe60](https://github.com/vtexdocs/dev-portal-content/commit/816fe60efcfee350662bf45c2df289acd3c94645))
+* **markdown:** add code block language to revoking ssl certificates guide ([f3649a9](https://github.com/vtexdocs/dev-portal-content/commit/f3649a920863577b9f2a1e0a24ab0502c1b7b953))
+* mTLS guides text ([bcd0b67](https://github.com/vtexdocs/dev-portal-content/commit/bcd0b67474aa4b9b7799b9e6dce8a9931fc52bf8))
+* revoking-ssl-private-certificates-when-using-mtls slug ([486c9c5](https://github.com/vtexdocs/dev-portal-content/commit/486c9c5fb180828d7047df91b28864e3dab6faaa))
+* **typo:** remove dash in revoking ssl certificates mTLS guide ([86f802e](https://github.com/vtexdocs/dev-portal-content/commit/86f802e9c4c94b8874917a33b83f5125e583312e))
+
 ### [1.1.14](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.12...v1.1.14) (2025-07-21)
 
 
