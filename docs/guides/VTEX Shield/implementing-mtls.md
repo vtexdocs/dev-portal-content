@@ -37,7 +37,7 @@ To use this endpoint, your user or API key must have access to the following Lic
 | :---- | :---- | :---- |
 | CDN API | Certificate management | Update certificate |
 
-There are no predefined roles for these resources. To use this endpoint, you must create a [custom role](https://help.vtex.com/en/tutorial/creating-roles--qGtNQpKSSAduX94l2WZBW#creating-custom-roles) and add the above resource to use this endpoint. Learn more about roles and resources in the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) documentation.
+There are no predefined roles for these resources. To use this endpoint, you must create a [custom role](https://help.vtex.com/en/tutorial/creating-roles--qGtNQpKSSAduX94l2WZBW#creating-custom-roles) and add the above resource. Learn more about roles and resources in the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) documentation.
 
 ### Request example
 

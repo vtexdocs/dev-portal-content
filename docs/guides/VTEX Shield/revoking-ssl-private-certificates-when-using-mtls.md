@@ -19,7 +19,7 @@ To revoke a certificate, you first need to retrieve its serial number, which uni
 
 There are two ways to extract the serial number, depending on how you intend to format the value in the revocation request. The VTEX API accepts both formats.
 
-### Method 1 – Hex string without colons
+### Method 1 - Hex string without colons
 
 Open a terminal and use the command below to extract the serial number in a plain hexadecimal format:
 
