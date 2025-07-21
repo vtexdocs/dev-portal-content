@@ -41,7 +41,7 @@ There are no predefined roles for these resources. To use this endpoint, you mus
 
 ### Request example
 
-The request body should contain the [previously generated CSR](#step-1–generating-a-certificate-signing-request-csr) as plain text:
+The request body should contain the [previously generated CSR](#step-1-generating-a-certificate-signing-request-csr) as plain text:
 
 ```curl
 curl --request post \
