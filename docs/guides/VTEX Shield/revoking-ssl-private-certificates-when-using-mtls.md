@@ -78,4 +78,4 @@ curl --location --request DELETE 'https://mystore.vtexcommercestable.com.br/api/
 --header 'X-VTEX-API-AppToken: appToken'
 ```
 
->ℹ️Learn more in the `DELETE` [Revoke certificate](https://developers.vtex.com/docs/api-reference/mtls-api#delete-/api/edge/private-certificates/-serialNumber-) API reference.
+>ℹ️ Learn more in the `DELETE` [Revoke certificate](https://developers.vtex.com/docs/api-reference/mtls-api#delete-/api/edge/private-certificates/-serialNumber-) API reference.
