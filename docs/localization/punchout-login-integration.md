@@ -25,11 +25,11 @@ Example flow:
 
 1. Request (VTEX user flow):
 
-`https://host.com/api/authenticator/punchout/start?returnURL=/checkout`
+   `https://host.com/api/authenticator/punchout/start?returnURL=/checkout`
 
 1. Final redirect (logged-in session):
 
-`https://host.com/checkout`
+   `https://host.com/checkout`
 
 Each flow returns a URL with a short-lived token that must be accessed within 5 minutes and can only be used once.
 
