@@ -27,7 +27,7 @@ Save both generated files (`.csr` and `.key`) for the next step.
 
 ## Step 2 - Issuing a certificate signed by VTEX
 
-Once you've [generated the CSR](#step-1–generating-a-certificate-signing-request-csr), use the `POST` [Sign certificate](https://developers.vtex.com/docs/api-reference/mtls-api#post-/api/edge/private-certificates/sign) endpoint to request a certificate signed by VTEX's Certificate Authority. This request allows you to submit a CSR and receive a signed certificate.
+Once you've [generated the CSR](#step-1-generating-a-certificate-signing-request-csr), use the `POST` [Sign certificate](https://developers.vtex.com/docs/api-reference/mtls-api#post-/api/edge/private-certificates/sign) endpoint to request a certificate signed by VTEX's Certificate Authority. This request allows you to submit a CSR and receive a signed certificate.
 
 ### Required permission
 
