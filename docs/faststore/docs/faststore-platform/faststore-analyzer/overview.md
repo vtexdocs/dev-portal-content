@@ -1,5 +1,5 @@
 ---
-title:"FastStore Analyzer"
+title: "FastStore Analyzer"
 ---
 
 FastStore Analyzer provides a secure and controlled environment for implementing extension points, ensuring that custom code and third-party extensions don't affect the host application's performance, security, or integrity.
