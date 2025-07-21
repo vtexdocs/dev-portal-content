@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.14](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.12...v1.1.14) (2025-07-21)
+
+
+### 🖼️ Media updates
+
+* add punchout diagram ([6ad3463](https://github.com/vtexdocs/dev-portal-content/commit/6ad34632175d045bf5686ddee3c8b23dce615450))
+
+
+### ✨ New documentation
+
+* **guide:** punchout login integration ([f0108f2](https://github.com/vtexdocs/dev-portal-content/commit/f0108f2099c4f394399306de9d6e84cd1c061c33))
+* **guide:** punchout overview ([4a8a351](https://github.com/vtexdocs/dev-portal-content/commit/4a8a351216c6d07174414a82c284312b5b19d6e8))
+
 ### [1.1.12](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.9...v1.1.12) (2025-07-21)
 
 ### [1.1.10](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.9...v1.1.10) (2025-07-18)
