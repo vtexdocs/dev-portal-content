@@ -1,7 +1,7 @@
 ---
 title: "Revoking SSL private certificates when using Mutual Transport Layer Security (mTLS)"
 excerpt: "Learn how to revoke SSL private certificates in VTEX when using mTLS, including how to extract the serial number and use the API to revoke compromised or unused certificates."
-slug: "revoking-ssl-private-certificates-mtls"
+slug: "revoking-ssl-private-certificates-when-using-mtls"
 hidden: false
 createdAt: "2025-07-01T00:00:00.000Z"
 updatedAt: "2025-07-01T00:00:00.000Z"
