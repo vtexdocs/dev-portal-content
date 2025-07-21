@@ -49,7 +49,7 @@ Example output:
 
 ## Step 2 - Revoking the certificate
 
-Send a revocation request to the `DELETE` [Revoke certificate](https://developers.vtex.com/docs/api-reference/mtls-api#delete-/api/edge/private-certificates/-serialNumber-) endpoint, including the certificate's serial number in the URL. Both serial number formats shown in the [Step 1 \- Getting the certificate serial number](#step-1-getting-the-certificate-serial-number) section are accepted.
+Send a revocation request to the `DELETE` [Revoke certificate](https://developers.vtex.com/docs/api-reference/mtls-api#delete-/api/edge/private-certificates/-serialNumber-) endpoint, including the certificate's serial number in the URL. Both serial number formats shown in the [Step 1 - Getting the certificate serial number](#step-1-getting-the-certificate-serial-number) section are accepted.
 
 ### Required permission
 
