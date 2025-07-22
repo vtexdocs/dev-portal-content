@@ -331,3 +331,113 @@ For further customization, you can use the following data attributes:
 `data-fs-newsletter-content`
 
 `data-fs-newsletter-addendum`
+
+## Creating the Newsletter data entity in VTEX Master Data
+
+The Newsletter data entity, also known as the `NL` acronym, is a [Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw?&utm_source=autocomplete) entity that stores subscription information for the Newsletter component. This entity enables the newsletter subscription feature for stores using FastStore.
+
+When customers subscribe to the store newsletter, their information is saved in the `NL` entity. For the newsletter to operate, such as when a user subscribes, the `NL` entity must be set up in the Master Data.
+
+To create the `NL` entity, follow the instructions below based on the method you prefer: [creating via Admin](#creating-via-admin) or [creating via API](#creating-via-api).
+
+> ℹ For more details about Master Data data entities, see the [data entity](https://help.vtex.com/en/tutorial/data-entity--tutorials_1265) article.
+
+### Creating via Admin
+
+1. In the VTEX Admin, go to **Store Settings > Storefront > Master Data**.
+2. In Master Data, click **Applications > Advanced Settings > Data structure**.
+3. Click the **Data Entities** tab.
+4. Click `Add new`.
+5. Complete the fields of the **Data Entity** section with the following information:
+
+    | **Field name**             | **Value**              |
+    | -------------------------- | ---------------------- |
+    | **Acronym**                | `NL`                   |
+    | **Name**                   | Newsletter             |
+    | **Primary key type**       | Generate a unique GUID |
+
+6. In the **Fields** tab, create three new fields:
+
+    <details>
+    <summary><b>Field 1</b></summary>
+
+    This field will store the customer's email address for newsletter subscription. 
+
+    1. Click `New Field` and complete the fields with the following values:
+    
+        | **Name**   | **Display Name** | **Type** |
+        | ---------- | ---------------- | -------- |
+        | email      | Email            | Email    |
+
+    2. Click the gear icon (⚙️) to open the field configuration options and check all the following options:
+
+        - **Is nullable?**
+        - **Make readable without credentials**
+        - **Allow editing without credentials**
+        - **Allow filtering without credentials**
+
+    3. In the **Search and filter settings** section, check the **Is searchable?** and **Is filterable?** options.
+      
+      ![newsletter-field-1](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-1___61c595999569e52175f1de93d9ecd8f0.png)
+
+    </details>
+
+    <details>
+    <summary><b>Field 2</b></summary>
+
+    This field will indicate whether the user will receive the newsletter.
+
+    1. Click `New field` and complete the fields with the following values:
+        
+      | **Name** | **Display Name** | **Type** |
+      | ----------------- | ------------------- | -------- |
+      | isNewsletterOptIn | Receive newsletter? | Boolean |
+
+    2. Click the gear icon ⚙️ to open the field configuration options and check all the following options:
+
+      - **Make readable without credentials**
+      - **Allow editing without credentials**
+      - **Allow filtering without credentials**
+
+    3. In the **Search and filter settings** section, check the **Is searchable?** and **Is filterable?** options.
+          
+      ![newsletter-field-2](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-2___62281c88b10436ce052707080cc5173e.png)
+
+    </details>
+
+    <details>
+    <summary><b>Field 3</b></summary>
+
+    This field will store the user’s name. 
+
+    1. Click `New Field` and complete the fields with the following values:
+
+        | **Name** | **Display Name** | **Type**     |
+        | -------- | ---------------- | ------------ |
+        | name     | Name             | Varchar 750  |
+
+    2. Click the gear icon (⚙️) to open the field configuration options and check all the following options:
+
+        - **Make readable without credentials**
+        - **Allow editing without credentials**
+        - **Allow filtering without credentials**
+
+    3. In the **Search and filter settings** section, check the **Is searchable?** and **Is filterable?** options.
+      
+      ![newsletter-field-3](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-3___4e7d9fec7f0a827c5d49908df0e2f20b.png)
+
+    </details>
+
+7. Click `Save` and you will be redirected back to the Data Entity tab.
+8. In the row of the new `NL` entity, click the diskette 💾 to publish the created data entity.
+9. Click `OK`.
+10. Click the **Applications** tab to return to the Master Data homepage.
+11. Click `Reload applications`.
+
+### Creating via API
+
+You can also create the Newsletter data entity using the [Create partial document](https://developers.vtex.com/docs/api-reference/masterdata-api#patch-/api/dataentities/-acronym-/documents) endpoint.
+
+To create the three fields for the Newsletter data entity, see the [Create document with custom ID or update entire document](https://developers.vtex.com/docs/api-reference/masterdata-api#put-/api/dataentities/-acronym-/documents/-id-) endpoint reference.
+
+> ⚠️ The field information must be the same as described in [Creating via Admin](#creating-via-admin).
