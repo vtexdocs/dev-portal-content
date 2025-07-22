@@ -11,7 +11,7 @@ excerpt: "Use 'scopes' and 'requiredScopes' to define which store sections can b
 
 `scopes` and `requiredScopes` are Headless CMS schema definitions that determine which store sections can be added to specific pages (defined within [Content Types](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-2-adding-content-types-to-the-headless-cms)).
 
-These features help manage the content structure and ensure store sections are used in appropriate contexts. For example, the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) component is only available for the homepage or pages like the Product Details Page (PDP).
+These features help manage the content structure and ensure store sections are used in appropriate contexts. For example, the [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero) component is only available for the home page or pages like the Product Details Page (PDP).
 
 ## Before you begin
 
@@ -107,7 +107,7 @@ In the following example, let’s set a new Content Type `Custom Page` to displa
 
 ### Setting up the Headless CMS files
 
-> ⚠️ Make sure you have set up the Headless CMS files `content-types.json` and `sections.json` in your store project by following the [Setting up the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms) guide. These files contain the store custom Content Types and sections.
+> ⚠️ Make sure you have set up the Headless CMS files `content-types.json` and `sections.json` in your store project by following the [Setting up the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms) guide. These files contain the store’s custom Content Types and sections.
 
 1. In the `content-types.json` file, create a new `Custom Page` Content Type by adding the following:
 
@@ -210,7 +210,7 @@ We defined that the `Call To Action` section will only be available for `customP
 
 > ℹ️ The `Call To Action` section is also available for use with the `landingPage` Content Type because the [`custom` scope is FastStore's default](#default-faststore-scopes).
 
-When editing the `Custom Page` Content Type, the Headless CMS checks its scopes (`custom`) and matches them against the sections' `requiredScopes` (`custom`). Since the Call to Action section matches the Custom Page and Landing Page scope, the section is available to use in these two Content Types.
+When editing the `Custom Page` Content Type, the Headless CMS checks its scopes (`custom`) and matches them against the sections' `requiredScopes` (`custom`). Since the Call to Action section matches the Custom Page and Landing Page scope, the section is available for use in these two Content Types.
 
 ### Syncing the Headless CMS changes
 
