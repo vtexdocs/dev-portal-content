@@ -1,5 +1,5 @@
 ---
-title: "Managing content with 'scopes' and 'requiredScopes'"
+title: "Managing content with `scopes` and `requiredScopes`"
 slug: "managing-content-with-scopes-and-requiredscopes"
 hidden: true
 createdAt: "2024-07-29T14:00:15.623Z"
@@ -60,9 +60,9 @@ When [creating custom sections](https://developers.vtex.com/docs/guides/faststor
 
 ## `requiredScopes`
 
-`requiredScopes` defines the Content Types a section can be used in. Similar to `scopes`, `requiredScopes` is specified as string arrays within the section definition in the [`sections.json` file](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms).
+`requiredScopes` defines the Content Types a section can be used in. Similar to `scopes`, `requiredScopes` are specified as string arrays within the section definition in the [`sections.json` file](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms).
 
-A section is only available for a Content Type in Headless CMS if the Content Type's `scopes` include at least one matching `scope` from the section's `requiredScopes`. Sections without any `requiredScopes` can be used in any Content Type.
+A section is only available for a Content Type in Headless CMS if the Content Type's `scopes` include at least one matching `scope` from the section's `requiredScopes`. Sections with an empty `requiredScopes` array can be used in any Content Type.
 
 In the following example, the [`ProductShelf` section](https://developers.vtex.com/docs/guides/faststore/organisms-product-shelf) is only available for PDPs:
 
