@@ -12,6 +12,29 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 🔧 Fixes and improvements
 
+* **delivery-promise.mdx:** changing mermaid graph flow ([b506961](https://github.com/vtexdocs/dev-portal-content/commit/b506961586be7a6e44ae3fa19bf123656d21b600))
+* **delivery-promise.mdx:** fixing format ([9647ef8](https://github.com/vtexdocs/dev-portal-content/commit/9647ef8b6b1ffe71c2da996083a4b4d19333f1fe))
+* **delivery-promise.mdx:** mermaid graph ([1d9a452](https://github.com/vtexdocs/dev-portal-content/commit/1d9a452ad2cb84d389eeacb07ab7bc79d92e6304))
+* remove trailing space ([a9c9da6](https://github.com/vtexdocs/dev-portal-content/commit/a9c9da66bf19acf774a93971c6af5ed2cf12af6c))
+
+
+### 📝 Documentation updates
+
+* **delivery-promise.mdx:** adding `RegionPopover` code ([8d6cc07](https://github.com/vtexdocs/dev-portal-content/commit/8d6cc07c1a98011cce5d2bc9d36a759eb18443d7))
+* **delivery-promise.mdx:** callout ([78395a3](https://github.com/vtexdocs/dev-portal-content/commit/78395a3fa79424e5285fc6ce2dd2e2dae525242a))
+* move punchout guides to punchout folder ([9877bdc](https://github.com/vtexdocs/dev-portal-content/commit/9877bdc1a8c23c25ee4a80989c1bc87929a1dc46))
+* move rotating-vtex-api-tokens guide to authentication folder ([96021e5](https://github.com/vtexdocs/dev-portal-content/commit/96021e5555fd70b07bdba70d79aade12df162b6b))
+
+### [1.1.22](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.20...v1.1.22) (2025-07-23)
+
+
+### ✨ New documentation
+
+* **guide:** rotating VTEX API tokens ([67363de](https://github.com/vtexdocs/dev-portal-content/commit/67363de700ac7ed5cdaf24e604c439bc72ee6d55))
+
+
+### 🔧 Fixes and improvements
+
 * remove trailing space ([a9c9da6](https://github.com/vtexdocs/dev-portal-content/commit/a9c9da66bf19acf774a93971c6af5ed2cf12af6c))
 
 
