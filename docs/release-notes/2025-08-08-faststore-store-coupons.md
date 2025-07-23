@@ -19,7 +19,7 @@ Now, when a user refreshes their cart or adds a new item, existing coupon inform
 
 ## Why did we make this change?
 
-Losing applied coupon codes during cart validation was a point of friction for customers, which could lead to abandoned carts and lost sales. This fix ensures `marketingData` is combined rather than overwritten. The update eliminates this friction point, contributing to a better customer journey.
+Losing applied coupon codes during cart validation could lead to abandoned carts and lost sales. This fix ensures `marketingData` is combined rather than overwritten. The update eliminates this friction point, contributing to a better customer journey.
 
 ## What needs to be done?
 
