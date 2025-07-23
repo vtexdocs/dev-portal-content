@@ -12,14 +12,14 @@ Applied coupons now remain in the store cart after any cart interaction, such as
 
 ## What has changed?
 
-Previously, applied coupons on the cart store would disappear from the cart after a page refresh or any interaction.
-This happened because the `marketingData` object, which holds coupon information and other session data (like UTMs), was being overwritten during cart interaction, causing applied discounts to be deleted from the cart.
+Previously, applied coupons in the cart would disappear after a page refresh or any interaction.
+This happened because the `marketingData` object, which holds coupon information and other session data (like UTMs), was being overwritten during cart interaction, causing applied coupons to be deleted from the cart.
 
-Now, when a user refreshes their cart or adds a new item, existing coupon information within `marketingData`, including previously applied coupons, is combined with any new session data instead of being overwritten. This ensures that the previously applied coupons and other `marketingData` properties like UTMs are preserved.
+Now, when a user refreshes their cart or adds a new item, existing coupon information within `marketingData` is combined with any new session data instead of being overwritten. This ensures that the previously applied coupons and other `marketingData` properties like UTMs are preserved.
 
 ## Why did we make this change?
 
-Losing applied coupon codes during cart validation was a point of friction for customers, which could lead to abandoned carts and lost sales. This fix ensures the `marketingData` is combined rather than overwritten. The update eliminates this friction point, contributing to a better customer journey.
+Losing applied coupon codes during cart validation was a point of friction for customers, which could lead to abandoned carts and lost sales. This fix ensures `marketingData` is combined rather than overwritten. The update eliminates this friction point, contributing to a better customer journey.
 
 ## What needs to be done?
 
