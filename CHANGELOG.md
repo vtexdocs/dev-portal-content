@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.21](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.20...v1.1.21) (2025-07-23)
+
+
+### ✨ New documentation
+
+* **guide:** rotating VTEX API tokens ([67363de](https://github.com/vtexdocs/dev-portal-content/commit/67363de700ac7ed5cdaf24e604c439bc72ee6d55))
+
+
+### 🔧 Fixes and improvements
+
+* remove trailing space ([a9c9da6](https://github.com/vtexdocs/dev-portal-content/commit/a9c9da66bf19acf774a93971c6af5ed2cf12af6c))
+
+
+### 📝 Documentation updates
+
+* move punchout guides to punchout folder ([9877bdc](https://github.com/vtexdocs/dev-portal-content/commit/9877bdc1a8c23c25ee4a80989c1bc87929a1dc46))
+* move rotating-vtex-api-tokens guide to authentication folder ([96021e5](https://github.com/vtexdocs/dev-portal-content/commit/96021e5555fd70b07bdba70d79aade12df162b6b))
+
 ### [1.1.20](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.19...v1.1.20) (2025-07-22)
 
 ### [1.1.19](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.18...v1.1.19) (2025-07-22)
