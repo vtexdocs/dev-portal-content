@@ -31,14 +31,29 @@ Let’s walk through each of the steps in the integration.
 
 ## Catalog notification
 
-The seller is responsible for suggesting new SKUs to be sold in the marketplace and also for informing the marketplace about changes in their SKUs that already exist in the marketplace. Both actions start with a catalog notification.
+The seller is responsible for suggesting new SKUs to be sold in the marketplace, as well as notifying the marketplace about updates to SKUs that already exist. Both scenarios begin with a catalog notification.
+To send this notification, the seller must call the `[POST ChangeNotification](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-)` endpoint provided by the marketplace.
 
-For this notification to happen, the seller must call the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-">Change Notification</a></span> endpoint, provided by the marketplace.
+Use the **Change Notification API** to notify the marketplace about changes in the **catalog information** of a SKU, such as:
 
-If you are authenticated and the request is correctly made, there are two possible responses:
+- Name  
+- Description  
+- Images  
+- EAN  
+- Specifications
 
-- **Status 404**: "Seller StockKeepingUnit not found for this seller id"
-- **Status 200**
+[block:callout]
+{
+  "type": "info",
+  "body": "For price and inventory change notification, please see the [Catalog Update](#catalog-update) section."
+}
+[/block]
+
+If the request is properly authenticated and formatted, there are two possible responses:
+
+- **200 OK**: The SKU already exists in the marketplace. The seller should proceed to update its catalog information.
+- **404 Not Found**: `"Seller StockKeepingUnit not found for this seller id"`  
+  This means the SKU does not yet exist in the marketplace. The seller must first register the SKU offer before it can be updated.
 
 The “status 404” response means that the SKU does not yet exist in the marketplace. In this case, in order to push the SKU offer to the marketplace, the seller should register the seller.
 
@@ -74,12 +89,12 @@ Besides sending new SKU offers to the marketplace, the seller can update offers 
 
 ## Catalog update
 
-As explained in the [Catalog notification](#catalog-notification) section, when the Change Notification request returns a response with status 200, it means that the SKU already exists in the marketplace. Whenever this happens, the marketplace will call the seller to get two updated information about the SKU:
+To notify the marketplace of price and inventory changes, the seller must call the following endpoints:
 
-- Price
-- Inventory
+- [Notify marketplace of price update](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/notificator/-sellerId-/changenotification/-skuId-/price)  
+- [Notify marketplace of inventory update](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/notificator/-sellerId-/changenotification/-skuId-/inventory)
 
-So the seller needs to have an endpoint implemented in order to receive this call and send a response containing the requested information to the marketplace.
+After these notifications, the marketplace will reach out to the seller to retrieve the latest SKU information.
 
 ### Endpoint implementation
 
