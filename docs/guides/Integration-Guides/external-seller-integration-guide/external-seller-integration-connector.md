@@ -55,7 +55,7 @@ If the request is properly authenticated and formatted, there are two possible r
 - **404 Not Found**: `"Seller StockKeepingUnit not found for this seller id"`  
   This means the SKU does not yet exist in the marketplace. The seller must first register the SKU offer before it can be updated.
 
-The “status 404” response means that the SKU does not yet exist in the marketplace. In this case, in order to push the SKU offer to the marketplace, the seller should register the seller.
+The “status 404” response means that the SKU does not yet exist in the marketplace. In this case, in order to push the SKU offer to the marketplace, the seller should register the SKU.
 
 The “status 200” response means that the SKU informed in the request already exists in the seller. In this case, the seller should *update* the SKU information.
 
