@@ -2,6 +2,124 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.24](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.20...v1.1.24) (2025-07-24)
+
+
+### ✨ New documentation
+
+* **guide:** rotating VTEX API tokens ([67363de](https://github.com/vtexdocs/dev-portal-content/commit/67363de700ac7ed5cdaf24e604c439bc72ee6d55))
+
+
+### 🔧 Fixes and improvements
+
+* **delivery-promise.mdx:** changing mermaid graph flow ([b506961](https://github.com/vtexdocs/dev-portal-content/commit/b506961586be7a6e44ae3fa19bf123656d21b600))
+* **delivery-promise.mdx:** fixing format ([9647ef8](https://github.com/vtexdocs/dev-portal-content/commit/9647ef8b6b1ffe71c2da996083a4b4d19333f1fe))
+* **delivery-promise.mdx:** mermaid graph ([1d9a452](https://github.com/vtexdocs/dev-portal-content/commit/1d9a452ad2cb84d389eeacb07ab7bc79d92e6304))
+* remove trailing space ([a9c9da6](https://github.com/vtexdocs/dev-portal-content/commit/a9c9da66bf19acf774a93971c6af5ed2cf12af6c))
+
+
+### 📝 Documentation updates
+
+* **delivery-promise.mdx:** adding `RegionPopover` code ([8d6cc07](https://github.com/vtexdocs/dev-portal-content/commit/8d6cc07c1a98011cce5d2bc9d36a759eb18443d7))
+* **delivery-promise.mdx:** callout ([78395a3](https://github.com/vtexdocs/dev-portal-content/commit/78395a3fa79424e5285fc6ce2dd2e2dae525242a))
+* move punchout guides to punchout folder ([9877bdc](https://github.com/vtexdocs/dev-portal-content/commit/9877bdc1a8c23c25ee4a80989c1bc87929a1dc46))
+* move rotating-vtex-api-tokens guide to authentication folder ([96021e5](https://github.com/vtexdocs/dev-portal-content/commit/96021e5555fd70b07bdba70d79aade12df162b6b))
+
+### [1.1.22](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.20...v1.1.22) (2025-07-23)
+
+
+### ✨ New documentation
+
+* **guide:** rotating VTEX API tokens ([67363de](https://github.com/vtexdocs/dev-portal-content/commit/67363de700ac7ed5cdaf24e604c439bc72ee6d55))
+
+
+### 🔧 Fixes and improvements
+
+* **delivery-promise.mdx:** changing mermaid graph flow ([b506961](https://github.com/vtexdocs/dev-portal-content/commit/b506961586be7a6e44ae3fa19bf123656d21b600))
+* **delivery-promise.mdx:** fixing format ([9647ef8](https://github.com/vtexdocs/dev-portal-content/commit/9647ef8b6b1ffe71c2da996083a4b4d19333f1fe))
+* **delivery-promise.mdx:** mermaid graph ([1d9a452](https://github.com/vtexdocs/dev-portal-content/commit/1d9a452ad2cb84d389eeacb07ab7bc79d92e6304))
+* remove trailing space ([a9c9da6](https://github.com/vtexdocs/dev-portal-content/commit/a9c9da66bf19acf774a93971c6af5ed2cf12af6c))
+
+
+### 📝 Documentation updates
+
+* **delivery-promise.mdx:** adding `RegionPopover` code ([8d6cc07](https://github.com/vtexdocs/dev-portal-content/commit/8d6cc07c1a98011cce5d2bc9d36a759eb18443d7))
+* **delivery-promise.mdx:** callout ([78395a3](https://github.com/vtexdocs/dev-portal-content/commit/78395a3fa79424e5285fc6ce2dd2e2dae525242a))
+* move punchout guides to punchout folder ([9877bdc](https://github.com/vtexdocs/dev-portal-content/commit/9877bdc1a8c23c25ee4a80989c1bc87929a1dc46))
+* move rotating-vtex-api-tokens guide to authentication folder ([96021e5](https://github.com/vtexdocs/dev-portal-content/commit/96021e5555fd70b07bdba70d79aade12df162b6b))
+
+### [1.1.22](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.20...v1.1.22) (2025-07-23)
+
+
+### ✨ New documentation
+
+* **guide:** rotating VTEX API tokens ([67363de](https://github.com/vtexdocs/dev-portal-content/commit/67363de700ac7ed5cdaf24e604c439bc72ee6d55))
+
+
+### 🔧 Fixes and improvements
+
+* remove trailing space ([a9c9da6](https://github.com/vtexdocs/dev-portal-content/commit/a9c9da66bf19acf774a93971c6af5ed2cf12af6c))
+
+
+### 📝 Documentation updates
+
+* move punchout guides to punchout folder ([9877bdc](https://github.com/vtexdocs/dev-portal-content/commit/9877bdc1a8c23c25ee4a80989c1bc87929a1dc46))
+* move rotating-vtex-api-tokens guide to authentication folder ([96021e5](https://github.com/vtexdocs/dev-portal-content/commit/96021e5555fd70b07bdba70d79aade12df162b6b))
+
+### [1.1.20](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.19...v1.1.20) (2025-07-22)
+
+### [1.1.19](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.18...v1.1.19) (2025-07-22)
+
+### [1.1.18](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.16...v1.1.18) (2025-07-22)
+
+
+### 🔧 Fixes and improvements
+
+* **my-account/overview.mdx:** fixing code snippet ([33729a9](https://github.com/vtexdocs/dev-portal-content/commit/33729a9340462de764239419e300ff5afd13bf30))
+
+### [1.1.16](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.14...v1.1.16) (2025-07-21)
+
+
+### 🖼️ Media updates
+
+* **implementing-mtls:** add postman gif ([462b66a](https://github.com/vtexdocs/dev-portal-content/commit/462b66a2db8b0d76977035ac075ff84905cb8b1d))
+
+
+### ✨ New documentation
+
+* **guide:** implementing mTLS ([6ca1ec1](https://github.com/vtexdocs/dev-portal-content/commit/6ca1ec14ca1a00da75df2e20cf5516f1d2ff7343))
+* **guide:** revoking SSL private certificates when using mTLS ([3658a4f](https://github.com/vtexdocs/dev-portal-content/commit/3658a4fe446bd048b987973a6b6b490cae71f11e))
+
+
+### 📝 Documentation updates
+
+* move mTLS guides to VTEX Shield folder ([515ff71](https://github.com/vtexdocs/dev-portal-content/commit/515ff7108a5ae699444d558f80273c7f305dffb3))
+
+
+### 🔧 Fixes and improvements
+
+* add space to learn more callout in revoking-ssl-private-certificates-when-using-mtls guide ([e0ffb90](https://github.com/vtexdocs/dev-portal-content/commit/e0ffb900cfac3fc7c01e425518bd456ad19f7fdc))
+* **broken-link:** contact form in mTLS guides ([7cce37b](https://github.com/vtexdocs/dev-portal-content/commit/7cce37bb0530e38196958c78306b1a5e8b25ecd1))
+* implementing mTLS internal link ([dcf0913](https://github.com/vtexdocs/dev-portal-content/commit/dcf09135d40d32c1b4928048748726bde351694d))
+* internal link in implementing mTLS guide ([816fe60](https://github.com/vtexdocs/dev-portal-content/commit/816fe60efcfee350662bf45c2df289acd3c94645))
+* **markdown:** add code block language to revoking ssl certificates guide ([f3649a9](https://github.com/vtexdocs/dev-portal-content/commit/f3649a920863577b9f2a1e0a24ab0502c1b7b953))
+* mTLS guides text ([bcd0b67](https://github.com/vtexdocs/dev-portal-content/commit/bcd0b67474aa4b9b7799b9e6dce8a9931fc52bf8))
+* revoking-ssl-private-certificates-when-using-mtls slug ([486c9c5](https://github.com/vtexdocs/dev-portal-content/commit/486c9c5fb180828d7047df91b28864e3dab6faaa))
+* **typo:** remove dash in revoking ssl certificates mTLS guide ([86f802e](https://github.com/vtexdocs/dev-portal-content/commit/86f802e9c4c94b8874917a33b83f5125e583312e))
+
+### [1.1.14](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.12...v1.1.14) (2025-07-21)
+
+
+### 🖼️ Media updates
+
+* add punchout diagram ([6ad3463](https://github.com/vtexdocs/dev-portal-content/commit/6ad34632175d045bf5686ddee3c8b23dce615450))
+
+
+### ✨ New documentation
+
+* **guide:** punchout login integration ([f0108f2](https://github.com/vtexdocs/dev-portal-content/commit/f0108f2099c4f394399306de9d6e84cd1c061c33))
+* **guide:** punchout overview ([4a8a351](https://github.com/vtexdocs/dev-portal-content/commit/4a8a351216c6d07174414a82c284312b5b19d6e8))
+
 ### [1.1.12](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.9...v1.1.12) (2025-07-21)
 
 ### [1.1.10](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.9...v1.1.10) (2025-07-18)
