@@ -5,6 +5,8 @@ excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
 updatedAt: "2025-05-23T22:18:24.684Z"
+seeAlso:
+ - "/docs/apps/vtex.shipping-option-components"
 ---
 
 >ℹ️ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
@@ -47,7 +49,7 @@ To use Delivery Promise, customers must define a delivery address early in their
 
    ```json
       "dependencies": {
-        "vtex.shipping-option-components": "0.x"
+        "vtex.shipping-option-components": "1.x"
       }
    ```
 
