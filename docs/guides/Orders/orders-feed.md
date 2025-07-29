@@ -196,6 +196,8 @@ The properties of this object define the behavior of feed items once they are in
 
 - `MessageRetentionPeriodInSeconds` - Items will be excluded from the feed — even if they aren't committed — when they stay in the feed longer than the retention period defined in this field.
 
+>⚠️ The minimum value for the `messageRetentionPeriodInSeconds` field is `345600` and the maximum is `1209600`.
+
 ### Other fields
 
 There are also a couple of other fields that give us some information about the state of the field:
