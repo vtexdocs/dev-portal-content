@@ -1,8 +1,8 @@
 ---
 title: Reviews and Ratings
---- 
+---
 
-The Reviews and Ratings feature allows shoppers to view, rate, and provide feedback on products purchased in your store, enriching product detail pages (PDPs) with user-generated content.
+The Reviews and Ratings feature allows shoppers to view, rate, and provide feedback on products purchased in your store, enriching product details pages (PDPs) with user-generated content.
 
 This solution supports star ratings, review listing, filtering, and sorting options. Authenticated users can leave feedback directly on the product page.
 
@@ -10,29 +10,27 @@ This solution supports star ratings, review listing, filtering, and sorting opti
 
 ## App behavior
 
-* **Authentication required:** Only logged-in customers can submit reviews. Anonymous reviews aren’t supported.
-* **Reviews management:** Customers cannot view or manage a list of their submitted reviews. 
-* **Automatic approval:** All reviews are automatically approved and published upon submission without prior moderation. Still, store administrators can remove individual reviews anytime using the Reviews and Ratings app through VTEX Admin.
+* **Authentication required:** Only logged-in customers can submit reviews. Anonymous reviews aren't supported.
+* **Reviews management:** Customers can't view or manage their submitted reviews.
+* **Automatic approval:** All reviews are automatically approved and published upon submission without prior moderation. Still, store administrators can remove individual reviews anytime using the Reviews and Ratings app through the VTEX Admin.
 
 ## Before you begin
 
 <Steps>
+  ### Install the Reviews and Ratings app
 
-### Install the Reviews and Ratings app
+  1. Open your terminal and log in to your account by running the command `vtex login {accountName}`. Replace the values inside the curly brackets based on your scenario.
+  2. Run the `vtex list` command to view all VTEX apps installed in the current account and workspace.
+  3. Check if the `Reviews and Ratings` app is installed. If so, proceed to the next (#updating-the-faststore-cli-package-version) step.
+  4. If the Reviews and Ratings app isn't installed in your account, run the `vtex install vtex.reviews-and-ratings@3.x` command to install it. You should see this confirmation message: `info: Installed app vtex.reviews-and-ratings@3.x successfully`.
 
-1. Open your terminal and log in to your account by running the command `vtex login {accountName}`. Replace the values between the curly brackets according to your scenario.
-2. Run the `vtex list` command to list all VTEX apps installed in the active account and workspace.
-3. Check if you have the `Reviews and Ratings` app. If you have, go to the following (#updating-the-faststore-cli-package-version) step.
-4. If you don’t have the app, run the `vtex install vtex.reviews-and-ratings@3.x` command to install the Reviews and Ratings app in your account. It’s expected that you receive the message: `info: Installed app vtex.reviews-and-ratings@3.x successfully`.
+  ### Update the `@faststore/cli` package version
 
-### Update the `@faststore/cli` package version
+  Make sure your store uses the latest version of the [`faststore/cli`](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli) package:
 
-Make sure your store uses the latest version of the [`faststore/cli`](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli) package:
-
-1. Open your FastStore codebase in the code editor of your choice.
-2. Open the terminal and run the `yarn add @faststore/cli@latest` command.
-3. Run `yarn dev` to sync the changes to your project
-
+  1. Open your FastStore codebase in the code editor of your choice.
+  2. Open the terminal and run the `yarn add @faststore/cli@latest` command.
+  3. Run `yarn dev` to sync the changes to your project.
 </Steps>
 
 ## Instructions
@@ -42,105 +40,79 @@ Make sure your store uses the latest version of the [`faststore/cli`](https://de
 1. Open the `discovery.config.js` file in your project.
 2. Set the `reviewsAndRatings` field to **true**.
 
- ```javascript discovery.config.js
- module.exports = {
-   ...
-   reviewsAndRatings: true,
- }
- ```
+```javascript discovery.config.js
+module.exports = {
+  ...
+  reviewsAndRatings: true,
+}
+```
 
->ℹ️ This feature is enabled by default. To disable, go to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file and set the `reviewsAndRatings` field to **false**.
+> ℹ️ This feature is enabled by default. To disable it, open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file and set the `reviewsAndRatings` field to **false**.
 
-### Step 2 - Syncing FastStore project with Headless CMS
+### Step 2 - Syncing the FastStore project with Headless CMS
 
 Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore project with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
-The expected response is that you receive the message `CMS synced successfully...`. The native components of the Reviews and Ratings feature will be automatically updated.
+The expected response is the message `CMS synced successfully...`. The native components of the Reviews and Ratings feature will be updated automatically.
 
-### Step 3 - Adding `ReviewsAndRatings` section
+### Step 3 - Adding the `ReviewsAndRatings` section
 
 The `ReviewsAndRatings` section displays customer feedback and product ratings.
 
-1. Access your VTEX Admin and go to **Storefront > Headless CMS > Product Details Page**.
+1. In the VTEX Admin, go to **Storefront > Headless CMS > Product Details Page**.
 2. In the Sections tab, click `+` to open a modal with a list of section options.
-3. Search for the **ReviewsAndRatings** section and click on it to add.
-4. Click `Save` to save your changes.
+3. Search for the **ReviewsAndRatings** section and click it to add.
+4. Click `Save` to apply your changes.
 5. Click `Publish` to open a dropdown list with the options `Add to Release`, to schedule the update, and `Publish now`, to publish immediately. Choose the most suitable option for your scenario.
 
 ### Step 4 - [Optional] Customizing Reviews and Ratings
 
-To customize your component, see the [List of Native Sections and Overridable Components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#reviews-and-ratings) to check the components that can be overridden.
+To customize the component, see the [List of Native Sections and Overridable Components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#reviews-and-ratings) to check which components can be overridden.
 
 ## Components
 
-**Reviews and Ratings** feature comprises modular, reusable native components. See below the key components that compose this solution:
+The **Reviews and Ratings** feature comprises modular, reusable native components. See below the key components of this solution:
 
 <SectionList grid="column" columns={2}>
-  <SectionItem
-    title="Region Bar"
-    description="A custom `Button` that triggers the `RegionModal`"
-    actionPath="/docs/guides/faststore/molecules-region-bar"
-  >
+  <SectionItem title="Bar region" description="A custom `Button` that triggers the `RegionModal`" actionPath="/docs/guides/faststore/molecules-region-bar">
     <RegionBar
       postalCode={'151515'}
       onButtonClick={() => {
-        alert('This could trigger the RegionModal.')
+       alert('This could trigger the RegionModal.')
       }}
     />
   </SectionItem>
-  <SectionItem
-    title="Region Modal"
-    description="A modal interface for selecting and configuring region-specific options."
-    actionPath="/docs/guides/faststore/organisms-region-modal"
-  >
+
+  <SectionItem title="Region modal" description="A modal interface for selecting and configuring region-specific options." actionPath="/docs/guides/faststore/organisms-region-modal">
     <UIProvider>
       <RegionModalUsage />
     </UIProvider>
   </SectionItem>
-  <SectionItem
-    title="Review Card"
-    description=""
-    actionPath="/docs/guides/faststore/molecules-review-card"
-  >
-  <ReviewCard
-    id="review-card-example"
-    title="Great product!"
-    text="I'm very satisfied with this product. It works well and meets my expectations."
-    rating={5}
-    author="John"
-    date={new Date('2025-05-01')}
-    isVerified={true}
-    readMoreText="Show more"
-    readLessText="Show less"
-  />
+
+  <SectionItem title="Review card" description="" actionPath="/docs/guides/faststore/molecules-review-card">
+    <ReviewCard id="review-card-example" title="Great product!" text="I'm very satisfied with this product. It works well and meets my expectations." rating={5} author="John" date={new Date('2025-05-01')} isVerified={true} readMoreText="Show more" readLessText="Show less" />
   </SectionItem>
- <SectionItem
-    title="Rating Field"
-    description="Allows users to rate products when submitting reviews."
-    actionPath="/docs/guides/faststore/molecules-rating-field"
-  >
+
+  <SectionItem title="Rating field" description="Allows users to rate products when submitting reviews." actionPath="/docs/guides/faststore/molecules-rating-field">
     <RatingField label="Rate the product from 1 to 5 stars" id="rating-field-default" />
   </SectionItem>
-  <SectionItem
-    title="Rating Summary"
-    description="Provides detailed information about a product’s rating reviews."
-    actionPath="/docs/guides/faststore/organism-rating-summary"
-  >
+
+  <SectionItem title="Rating summary" description="Provides detailed information about a product's submitted ratings." actionPath="/docs/guides/faststore/organism-rating-summary">
     <RatingSummary
       id="rating-summary-example"
       ratingValue={4.2}
       reviewCount={18}
       distribution={{
-        starsOne: 5,
-        starsTwo: 3,
-        starsThree: 2,
-        starsFour: 4,
-        starsFive: 4,
+       starsOne: 5,
+       starsTwo: 3,
+       starsThree: 2,
+       starsFour: 4,
+       starsFive: 4,
       }}
       textLabels={{
-        ratingCounter: {
-          multipleReviewsText: 'Reviews',
-        },
+       ratingCounter: {
+         multipleReviewsText: 'Reviews',
+       },
       }}
     />
   </SectionItem>
