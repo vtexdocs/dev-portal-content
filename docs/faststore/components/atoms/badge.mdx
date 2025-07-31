@@ -60,7 +60,7 @@ Import the component from [@faststore/ui](/../docs/guides/faststore/components-i
 import { Badge } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles into your FastStore project
 
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
@@ -134,27 +134,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </TokenTable>
 
 ### Variants
-
-#### Big
-
-<OverviewSection>
-  <Badge size="big">Big Badge</Badge>
-</OverviewSection>
-
-```tsx
-<Badge size="big">Big Badge</Badge>
-```
-
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-big-text-size"
-    value="var(--fs-text-size-legend)"
-  />
-  <TokenRow
-    token="--fs-badge-big-padding"
-    value="var(--fs-spacing-1) var(--fs-spacing-2)"
-  />
-</TokenTable>
 
 #### Neutral
 
@@ -324,6 +303,41 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     token="--fs-badge-danger-border-color"
     value="var(--fs-color-danger-bkg)"
     isColor
+  />
+</TokenTable>
+
+---
+
+### Size
+
+#### Small (Default)
+
+<OverviewSection>
+  <Badge size="small">Small Badge</Badge>
+</OverviewSection>
+
+```tsx
+<Badge size="small">Small Badge</Badge>
+```
+
+#### Big
+
+<OverviewSection>
+  <Badge size="big">Big Badge</Badge>
+</OverviewSection>
+
+```tsx
+<Badge size="big">Big Badge</Badge>
+```
+
+<TokenTable>
+  <TokenRow
+    token="--fs-badge-big-text-size"
+    value="var(--fs-text-size-legend)"
+  />
+  <TokenRow
+    token="--fs-badge-big-padding"
+    value="var(--fs-spacing-1) var(--fs-spacing-2)"
   />
 </TokenTable>
 
