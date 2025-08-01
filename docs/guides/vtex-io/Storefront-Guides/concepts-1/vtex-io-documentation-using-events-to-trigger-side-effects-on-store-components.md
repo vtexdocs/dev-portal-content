@@ -67,7 +67,7 @@ In your store theme code, declare the `customPixelEventId` prop in the block res
 
 #### Step 3 - Configure the event receiver
 
-In the `minicart.v2` block, declare the `customPixelEventIdName` prop in the block responsible for listening to the desired event. Use the same unique ID that you declared in the sender block. Example:
+In the `minicart.v2` block, declare the `customPixelEventIdName` prop in the block responsible for listening for the desired event. Use the same unique ID that you declared in the sender block. Example:
 
   ```json
   {
