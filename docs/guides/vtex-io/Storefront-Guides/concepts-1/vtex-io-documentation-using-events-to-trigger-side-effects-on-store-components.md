@@ -80,6 +80,6 @@ In the `minicart.v2` block, declare the `customPixelEventIdName` prop in the blo
   }
   ```
 
->ℹ The `customPixelEventIdName` prop triggers the `minicart.v2` to open automatically on the interface. When you use the `customPixelEventIdName` prop, the `minicart.v2` will open for every event that has the specified name, unless you provide a `customPixelEventId`. Learn more in [Minicart](https://developers.vtex.com/docs/apps/vtex.minicart).
+>ℹ The `customPixelEventIdName` prop triggers the `minicart.v2` to open automatically on the interface whenever it detects a pixel event with the specified name. If you also set a `customPixelEventId` prop on the sender, the `minicart.v2` opens only for events that match the name and the custom ID. Learn more in [Minicart](https://developers.vtex.com/docs/apps/vtex.minicart).
 
 After saving your changes and [deploying your new Store Theme version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available), the Add To Cart Button component will send the `example-add-to-cart` event when clicked. At the same time, the Minicart will automatically open in response to any event with this ID.
