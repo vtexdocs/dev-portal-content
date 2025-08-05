@@ -2,7 +2,7 @@
 title: "FastStore: Coupons persist through store cart validation"
 slug: "2025-08-06-faststore-store-coupons"
 type: fixed
-excerpt: "Coupons stay applied after store cart updates"
+excerpt: "Coupons remain applied after store cart updates"
 createdAt: "2025-08-06T09:50:00.214Z"
 updatedAt: "2025-08-06T10:00:00.214Z"
 hidden: false
@@ -13,9 +13,9 @@ Applied coupons now remain in the store cart after any cart interaction, such as
 ## What has changed?
 
 Previously, applied coupons in the cart would disappear after a page refresh or any interaction.
-This happened because the `marketingData` object, which holds coupon information and other session data (like UTMs), was being overwritten during cart interaction, causing applied coupons to be deleted from the cart.
+This happened because the `marketingData` object, which holds coupon information and other session data (like UTMs), was overwritten during cart interaction, causing applied coupons to be removed from the cart.
 
-Now, when a user refreshes their cart or adds a new item, existing coupon information within `marketingData` is combined with any new session data instead of being overwritten. This ensures that the previously applied coupons and other `marketingData` properties such as UTMs are preserved.
+Now, when a user refreshes the page or adds a new item, existing coupon information within `marketingData` is combined with any new session data instead of being overwritten. This ensures that the previously applied coupons and other `marketingData` properties such as UTMs are preserved.
 
 ## Why did we make this change?
 
