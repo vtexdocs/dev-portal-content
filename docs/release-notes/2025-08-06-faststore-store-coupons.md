@@ -33,4 +33,4 @@ To implement the fix for persistent coupons in the cart, update your store proje
 yarn upgrade -L --scope @faststore
 ```
 
-No further configuration is required. The new cart validation logic, ensuring coupons are preserved, is automatic once you upgrade your project version. To test whether the `marketingData` object contains coupon tracking and UTM data, follow the instructions available at [Validating UTM tracking in FastStore](https://developers.vtex.com/docs/guides/faststore/seo-validating-utm-tracking-in-faststore#instructions).
+No further configuration is required. The new cart validation logic, ensuring coupons are preserved, is automatically applied once you upgrade your project version. To test whether the `marketingData` object contains coupon tracking and UTM data, follow the instructions available at [Validating UTM tracking in FastStore](https://developers.vtex.com/docs/guides/faststore/seo-validating-utm-tracking-in-faststore#instructions).
