@@ -1,10 +1,10 @@
 ---
 title: "FastStore: Coupons persist through store cart validation"
-slug: "2025-08-08-faststore-store-coupons"
+slug: "2025-08-06-faststore-store-coupons"
 type: fixed
 excerpt: "Coupons stay applied after store cart updates"
-createdAt: "2025-08-08T09:50:00.214Z"
-updatedAt: "2025-08-08T10:00:00.214Z"
+createdAt: "2025-08-06T09:50:00.214Z"
+updatedAt: "2025-08-06T10:00:00.214Z"
 hidden: false
 ---
 
