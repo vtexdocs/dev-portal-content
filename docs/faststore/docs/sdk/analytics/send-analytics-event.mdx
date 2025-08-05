@@ -4,7 +4,7 @@ title: "sendAnalyticsEvent"
 
 The `sendAnalyticsEvent` function triggers events in the browser, following the [Google Analytics 4 (GA4) data model](https://developers.google.com/analytics/devguides/collection/ga4/reference/events). This function is primarily used for ecommerce tracking but also supports custom events, serving as a centralized point for managing events.
 
-{ /* Remember to add a link to 'custom events' once we have the following task done: EDU-13545 */ }
+The `sendAnalyticsEvent` function centralizes and aggregates tracking events and also supports [custom events](https://developers.vtex.com/docs/guides/faststore/analytics-sending-custom-events).
 
 > ⚠️ `sendAnalyticsEvent` doesn't send events to any analytics provider. To intercept events triggered by this function, use the [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook.
 
