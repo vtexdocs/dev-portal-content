@@ -13,7 +13,7 @@ Applied coupons now remain in the store cart after any cart interaction, such as
 ## What has changed?
 
 Previously, applied coupons in the cart would disappear after a page refresh or any interaction.
-This happened because the `marketingData` object, which holds coupon information and other session data (like UTMs), was overwritten during cart interaction, causing applied coupons to be removed from the cart.
+This happened because the `marketingData` object, which holds coupon information and other session data (such as UTMs), was overwritten during cart interaction, causing applied coupons to be removed from the cart.
 
 Now, when a user refreshes the page or adds a new item, existing coupon information within `marketingData` is combined with any new session data instead of being overwritten. This ensures that the previously applied coupons and other `marketingData` properties such as UTMs are preserved.
 
