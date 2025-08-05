@@ -10,7 +10,7 @@ In this guide, learn how to enable the redirect feature for FastStore.
 
 ## Before you begin
 
-Update your FastStore project to version 3.2.0 or higher. To do this, follow these steps:
+Update your FastStore project to version `3.2.0` or higher. To do this, follow these steps:
 
 1. Open your project in a code editor.
 
@@ -26,7 +26,7 @@ Update your FastStore project to version 3.2.0 or higher. To do this, follow the
 2. Open the `discovery.config.js` file.
 3. Within the `experimental` section, add `enableRedirects: true` to enable the redirects feature in the project, for example:
 
-    ```discovery.config.js
+    ```js discovery.config.js mark=5
     …
     experimental: {
         nodeVersion: 18,
@@ -38,4 +38,5 @@ Update your FastStore project to version 3.2.0 or higher. To do this, follow the
 
 4. Run `yarn dev` to check for errors before deploying this change to production. Make sure to address any errors before deployment.
 5. Create a new branch and open a pull request to deploy the changes made in the `discovery.config.js` file to production.
-6. Once the change is live, you can begin managing the store’s redirects in VTEX Admin by following the instructions in [Managing URL redirects](https://help.vtex.com/tutorial/managing-url-redirects--3UJuFrU8imSVWg134mkvJV)
+
+Once the change is live, you can manage the store’s redirects in VTEX Admin by following the instructions in [Managing URL redirects](https://help.vtex.com/tutorial/managing-url-redirects--3UJuFrU8imSVWg134mkvJV)
