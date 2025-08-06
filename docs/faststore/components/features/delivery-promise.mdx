@@ -1,20 +1,55 @@
 ---
 title: "Delivery Promise"
+updatedAt: "2025-08-06T23:24:54.978Z"
 ---
 
->ℹ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+>ℹ This feature is in closed beta, meaning only selected customers can access it. If you’re interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
 In this guide, you’ll learn how to configure Delivery Promise in your FastStore project.
 
-**Delivery Promise** is a feature that provides accurate and reliable delivery estimations for available products based on the customer location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at nearby locations.
+**Delivery Promise** is a feature that provides accurate and reliable delivery estimations for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location.
 
 This solution continuously updates product availability throughout the buying journey by responding to changes in catalog, pricing, inventory, or shipping settings. These updates are then sent to [Checkout](https://developers.vtex.com/docs/guides/checkout-overview) and [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search), ensuring customers see up-to-date options based on their region.
 
-This feature introduces new hooks as part of the regionalization and location workflow:
+## Hooks
 
-- `useRegion`: Accesses or updates the user's region information, such as postal code or location.
-- `useRegionModal`: Handles modal display logic for region selection, especially when the location input is required.
-- `useGeoLocation`: Uses the browser’s geolocation API or other client-side methods to attempt to auto-detect the user's location.
+This feature introduces the following hooks as part of the regionalization and location workflow:
+
+* `useGeoLocation`: Uses the browser’s geolocation API or other client-side methods to auto-detect the user's location when not provided.
+* `useRegion`: Accesses or updates the user's region information, such as postal code or location, and manages region validation flows.
+* `useRegionModal`: Handles modal display logic for region selection, especially when the location input is mandatory.
+* `useDeliveryPromise`: Centralizes all logic for querying, displaying, and updating delivery-availability filters and states.
+
+## Filter options
+
+With Delivery Promise, shoppers can filter the available products by using a [global filter](#global-filter), which affects all navigation, or it can be directly in a [Product List Page (PLP) or search page](#plp-or-search-page-filters), affecting only the current page they’re navigating. In both scenarios, they can filter by shipping method or pickup points.
+
+For pickup points selected in the global filter or a specific pickup point, the system displays all available pickup points within a 50 km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
+
+### Global filters
+
+Global filters determine the fulfillment method for all user navigation and are applied to all product queries until they change or are cleared.
+
+Shoppers can filter available products globally **by shipping** or **by store**.
+
+* **Filter by shipping:** Allows shoppers to select between delivery and pickup as a fulfillment method.
+
+![filter-by-shipping](https://vtexhelp.vtexassets.com/assets/docs/src/filter-by-shipping___040d93770d3280239260a2a02b8e3b67.png)
+
+* **Filter by store:** Allows shoppers to filter products to display only those available for pickup at a specific store.
+
+![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/filter-by-store___8a78ad88234e979848d10b7da6ec49cc.png)
+
+### PLP or search page filters
+
+In PLPs or search pages, the shopper may have the following options to filter:
+
+* **Deliver:** Displays available products according to the shopper's location.
+* **Pickup at:** Displays the store set in the global pickup point filter, or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper may click it and select a new store in the modal that will open.               
+* **Pickup nearby:** Displays products available for pickup at nearby stores. It shows up to 40 pickup points within 10 km of the shopper’s location.
+* **Pickup anywhere:** Displays products available for pickup at any participating store within the merchant’s network, rather than restricting results to a selected pickup location or geographic proximity. **It's mainly used by B2B stores**.
+
+![plp-search](https://vtexhelp.vtexassets.com/assets/docs/src/plp-search___a8cfec375f28a7849ebe47ac886b5869.png)
 
 ## Default settings
 
@@ -29,8 +64,8 @@ deliveryPromise: {
   },
 ```
 
-- `enabled`: When set to **true**, Delivery Promise activates, allowing the store to provide delivery estimates based on the user’s location.
-- `mandatory`: When set to **false**, providing a postal code is optional for the user. Users can browse and add items to the cart without entering their postal code, though the accuracy of delivery information may be limited.
+* `enabled`: When set to **true**, Delivery Promise activates, allowing the store to provide delivery estimates based on the user’s location.
+* `mandatory`: When set to **false**, providing a postal code is optional for the user. Users can browse and add items to the cart without entering their postal code, though the accuracy of delivery information may be limited.
 
 ## Before you begin
 
@@ -111,17 +146,17 @@ Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore 
 
 The expected response is that you receive the message `CMS synced successfully...`. The native regionalization components and sections will be automatically updated. You can check them in the VTEX Admin:
 
-- **Regionalization component:** Go to *Storefronts > Headless CMS > Global Sections > NavBar > Navigation > Regionalization*.
+* **Regionalization component:** Go to *Storefronts > Headless CMS > Global Sections > NavBar > Navigation > Regionalization*.
 
-- **Region Bar section:** Go to *Storefronts > Headless CMS > Global Sections > Region Bar*.
+* **Region Bar section:** Go to *Storefronts > Headless CMS > Global Sections > Region Bar*.
 
-- **Region Modal section:** Go to *Storefronts > Headless CMS > Global Sections > Region Modal*.
+* **Region Modal section:** Go to *Storefronts > Headless CMS > Global Sections > Region Modal*.
 
 You only need to [add a new section](#step-3-adding-region-popover-section), the `Region Popover`.
 
 ### Step 3 - Adding `Region Popover` section
 
-`RegionPopover` is a section that manages user location inputs. It's used when location data is missing or the store's default postal code is applied. Available in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson), `RegionPopover` uses the [`Popover`](https://developers.vtex.com/docs/guides/faststore/molecules-popover) component as its UI base.
+`RegionPopover` is a section that manages user location inputs. It's used when location data is missing, or the store's default postal code is applied. Available in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson), `RegionPopover` uses the [`Popover`](https://developers.vtex.com/docs/guides/faststore/molecules-popover) component as its UI base.
 
 ![regionpopover](https://vtexhelp.vtexassets.com/assets/docs/src/regionpopover___dedb0aad756657e71d4c8d40cb2ef5e7.png)
 
@@ -348,24 +383,31 @@ To set a default postal code for your store, follow the steps below:
 
 To provide accurate Delivery Promise estimates, FastStore projects determine user location based on the following priority:
 
-1. **User-provided location:** If the user provided their location, such as postal code, this information is used.
-2. **Logged-in user’s address:** If the user hasn’t provided a postal code, we attempt to identify the location using the logged-in user's address.
+1. **Logged in user’s address:** If the user is logged in and has a saved address, this information is used.
+2. **User-provided location:** If the user is logged in but doesn’t have a saved address, or isn’t logged in but provided their location, like a postal code, this data is used.
 3. **Default postal code:** If the user hasn't provided a location, isn’t logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
 4. **No postal code (not required):** If no postal code is provided and not required, products are displayed without using Delivery Promise.
-5. **No postal code (required)**: If no postal code is provided when it's required, a modal is displayed that the buyer can't close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
+5. **No postal code (required)**: If no postal code is provided when required, a modal is displayed that the buyer can't close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
 
 To better understand how this flow works, see the following diagram.
 
 ```mermaid
 graph LR
-    A{"User provided location?"} -- Yes --> B(["Use the provided location"])
-    A -- No --> C{"Logged-in user's address available?"}
+    S{"Is the user logged in?"} -- Yes --> C{"Logged-in user's address available?"}
+    S -- No --> A{"Location provided?"}
+
     C -- Yes --> D(["Use the logged-in user's address"])
-    C -- No --> E{"Default postal code configured?"}
+    C -- No --> A
+
+    A -- Yes --> B(["Use the provided location"])
+    A -- No --> E{"Default postal code configured?"}
+
     E -- Yes --> F(["Use the default postal code"])
     E -- No --> H{"Postal code mandatory?"}
+
     H -- Yes --> K(["Display mandatory postal code modal"])
     K --> L["User inputs postal code"]
     L --> M(["Use the provided postal code"])
+
     H -- No --> N(["Display products without using Delivery Promise"])
 ```
