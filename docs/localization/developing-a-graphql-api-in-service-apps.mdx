@@ -9,17 +9,17 @@ updatedAt: "2025-07-16T14:00:00.000Z"
 
 When developing a [service app](https://developers.vtex.com/docs/guides/vtex-io-documentation-service), you may need to expose an API so that other systems, such as other VTEX IO apps or external integrations, can interact with it. There are two options for developing APIs: [REST](https://restfulapi.net/) and [GraphQL](https://graphql.org/). REST is commonly used for interacting with other services and external integrations, while GraphQL is usually recommended for interactions with frontend apps and systems.
 
-This guide will show you how to make an API using GraphQL and VTEX IO.
+This guide will show you how to create an API using GraphQL and VTEX IO.
 
-> ℹ️ For details on REST API development, see [Developing services in VTEX IO](https://developers.vtex.com/docs/guides/developing-services-on-vtex-io).
+> ℹ️ For details about REST API development, see [Developing services in VTEX IO](https://developers.vtex.com/docs/guides/developing-services-on-vtex-io).
 
 ## Before you begin
 
-Make sure you check the technical requirements to follow this guide:
+Make sure to check the technical requirements to follow this guide:
 
-- The [VTEX IO CLI is installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) on your computer.
+- [VTEX IO CLI is installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) on your computer.
 - Access to a VTEX store with a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and the Admin environment.
-- Knowledge of GraphQL and its concepts, such as [queries](https://graphql.org/learn/queries/), [schema](https://graphql.org/learn/schema/), and [resolvers](https://graphql.org/learn/execution/).
+- Knowledge of GraphQL and related concepts, such as [queries](https://graphql.org/learn/queries/), [schema](https://graphql.org/learn/schema/), and [resolvers](https://graphql.org/learn/execution/).
 - Experience developing in the [TypeScript](https://www.typescriptlang.org/) language.
 
 ## App behavior
@@ -28,7 +28,7 @@ The basic behavior of a service app with a GraphQL API works as follows:
 
 1. A requester (store user, another app, external service, etc.) makes a GraphQL request to an app instantiated in a VTEX store.
 2. Upon receiving the request, the app executes it through a resolver function.
-3. The resolver uses a [VTEX client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) to call the desired resource ([VTEX commerce API](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis), another app, external service, etc.).
+3. The resolver uses a [VTEX client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) to call the desired resource ([VTEX API](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis), another app, external service, etc.).
 4. The app receives the response from the resource and continues executing the resolver.
 5. The resolver generates the response body of the request based on the received data.
 6. The app returns the GraphQL request to the requester with the response body.
@@ -43,7 +43,7 @@ sequenceDiagram
 
 ## Implementation
 
-The next sections will show how to implement a GraphQL API in a service app. This example shows how to view mocked data about "live users" accessing product pages. The implementation includes creating the GraphQL schema, a [custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients), and a resolver function.
+The next sections explain how to implement a GraphQL API in a service app. This example shows how to view mocked data about "live users" accessing product pages. The implementation includes creating the GraphQL schema, a [custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients), and a resolver function.
 
 ### 1. Start with a template
 
@@ -62,9 +62,9 @@ git clone https://github.com/vtex-apps/service-example
 
 ### 2. Add the GraphQL builder
 
-Open the `manifest.json` file in your app root and add the [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder). The builder is responsible for interpreting the GraphQL schema in your TypeScript code in the `node` folder.
+Open the `manifest.json` file in your app root and add the [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder). The builder interprets the GraphQL schema in your TypeScript code in the `node` folder.
 
-> ℹ️ Your app may already have the GraphQL builder in the schema. If that is the case, you only have to verify if it uses the latest builder version (1.x).
+> ℹ️ Your app may already have the GraphQL builder in the schema. If that's the case, you only have to check if it uses the latest builder version (1.x).
 
 ```json mark=3
 "builders": {
@@ -111,7 +111,7 @@ type Query {
 
 ### 4. Declare the list of Clients
 
-Your app will likely access an external resource such as [VTEX Core commerce APIs](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis), an endpoint from another app, or a service external to VTEX. In VTEX services, these interactions are handled through [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
+Your app will likely access an external resource such as [VTEX APIs](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis), an endpoint from another app, or a service external to VTEX. In VTEX services, these interactions are handled through [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
 
 Instead of calling endpoints directly in your resolver functions, you should define and use clients to encapsulate your HTTP logic and keep your resolvers clean and focused.
 
@@ -154,8 +154,8 @@ To access routes and resources not present in the native clients, you need to [d
 Resolvers are the functions that are executed when a GraphQL endpoint is called. A resolver function must have the same name as its corresponding endpoint. Follow the steps below to define your resolvers:
 
 1. In the `node` folder, create another folder called `resolvers`.
-2. In the new folder, add the TypeScript files that will have the resolvers' code. We recommend creating a `.ts` file for each resolver.
-3. In the created files, add the resolvers’ code. The following example shows a resolver example that you can use as a reference:
+2. In the new folder, add the TypeScript files that will have resolver code. We recommend creating a `.ts` file for each resolver.
+3. In the created files, add the resolver code. The following example shows a resolver that you can use as reference:
 
 ```ts node/resolvers/products.ts
 export const getSku = async (
@@ -219,12 +219,12 @@ vtex link
 
 ### 9. Test your endpoints
 
-With your app running, you can test the implemented endpoints by making requests. One way to do it is using the VTEX [GraphQL IDE](https://developers.vtex.com/docs/guides/graphql-ide) in the Admin with the following steps:
+With your app running, you can test the implemented endpoints by making requests. One way to do this is using the VTEX [GraphQL IDE](https://developers.vtex.com/docs/guides/graphql-ide) in the Admin:
 
 1. Install the GraphQL IDE app by running `vtex install vtex.admin-graphql-ide` in your terminal.
 2. Open the VTEX Admin in the workspace to which your app was linked. In your browser, go to `https://{workspace}--{account}.myvtex.com/admin`.
 3. Go to **Store Settings** > **Storefront** and click **GraphQL IDE**.
-4. Select the VTEX IO app you linked.
+4. Select the linked VTEX IO app.
 5. Write the query to test your endpoint. Here is an example:
 
     ```graphql
