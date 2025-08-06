@@ -64,7 +64,7 @@ git clone https://github.com/vtex-apps/service-example
 
 Open the `manifest.json` file in your app root and add the [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder). The builder interprets the GraphQL schema in your TypeScript code in the `node` folder.
 
-> ℹ️ Your app may already have the GraphQL builder in the schema. If that's the case, you only have to check if it uses the latest builder version (1.x).
+> ℹ️ Your app may already have the GraphQL builder configured. If that's the case, you only need to check if it uses the latest builder version (1.x).
 
 ```json mark=3
 "builders": {
@@ -75,7 +75,7 @@ Open the `manifest.json` file in your app root and add the [GraphQL builder](htt
 
 ### 3. Define the GraphQL schema
 
-In the `graphql` folder, add the `.graphql` files to define the GraphQL schema. You can add the whole schema in a single file or use as many files as you want, including subfolders. To better organize your project, we recommend using the following structure:
+In the `graphql` folder, add the `.graphql` files to define the GraphQL schema. You can add the entire schema in a single file or use multiple files, including subfolders. To better organize your project, we recommend using the following structure:
 
 - Add your endpoints (queries, mutations, or subscriptions) in the `schema.graphql` file.
 - Add the directives in the `directives.graphql` file.
@@ -147,7 +147,7 @@ This setup allows you to access the `catalog` client in your resolvers through t
 
 #### Using external resources
 
-To access routes and resources not present in the native clients, you need to [develop your custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients). Just like with native clients, you must register each custom client in the `Clients` class located in `node/clients/index.ts` so it can be accessed across your app.
+To access routes and resources not available through the native clients, you need to [develop your custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients). Just like with native clients, you must register each custom client in the `Clients` class located in `node/clients/index.ts` so it can be accessed across your app.
 
 ### 5. Define the resolvers
 
@@ -170,7 +170,7 @@ export const getSku = async (
 
 ### 6. Instantiate the resolvers
 
-After defining your resolver functions, add them to the `Service` class of the `node/index.ts` file. You should add a `graphql` field with the resolvers for each endpoint implemented with the directives.
+After defining your resolver functions, add them to the `Service` class of the `node/index.ts` file. You should add a `graphql` field containing the resolvers for each implemented endpoint.
 
 ```ts node/index.ts mark=3,9:15
 import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
