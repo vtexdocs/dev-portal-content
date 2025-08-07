@@ -159,12 +159,12 @@ The finish endpoint:
   * For pre-authenticated flow: Creates session using the username from the token's sub claim.
   * Adds `authMethod: "Punchout"` to the session token for tracking login source.
 
-- **Sets authentication cookies**
+* **Sets authentication cookies**
 
   * Returns VTEX session cookies in response headers.
   * These cookies are required for subsequent authenticated requests.
 
->ℹ️ Find more details about this endpoint in `GET` [](https://developers.vtex.com/docs/api-reference/punchout-api#get-/api/authenticator/punchout/finish).
+>ℹ️ Find more details about this endpoint in `GET` [Finish punchout login flow](https://developers.vtex.com/docs/api-reference/punchout-api#get-/api/authenticator/punchout/finish).
 
 ### Request example
 
