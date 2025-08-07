@@ -36,6 +36,7 @@ Example flow:
    ```
 
 3. Final redirect (logged-in session):
+
    ```
    https://host.com/checkout
    ```
@@ -147,21 +148,21 @@ For headless operations where no browser is involved, integrators must explicitl
 
 The finish endpoint:
 
-- **Validates the OTT**
+* **Validates the OTT**
 
-   - Checks if the token exists and hasn't expired.
-   - Ensures the token hasn't been used before.
+  * Checks if the token exists and hasn't expired.
+  * Ensures the token hasn't been used before.
 
 - **Creates a VTEX session**
 
-   - For VTEX user flow: Creates session based on the validated VTEX user.
-   - For pre-authenticated flow: Creates session using the username from the token's sub claim.
-   - Adds `authMethod: "Punchout"` to the session token for tracking login source.
+  * For VTEX user flow: Creates session based on the validated VTEX user.
+  * For pre-authenticated flow: Creates session using the username from the token's sub claim.
+  * Adds `authMethod: "Punchout"` to the session token for tracking login source.
 
 - **Sets authentication cookies**
 
-   - Returns VTEX session cookies in response headers.
-   - These cookies are required for subsequent authenticated requests.
+  * Returns VTEX session cookies in response headers.
+  * These cookies are required for subsequent authenticated requests.
 
 >ℹ️ Find more details about this endpoint in `GET` [](https://developers.vtex.com/docs/api-reference/punchout-api#get-/api/authenticator/punchout/finish).
 
