@@ -92,7 +92,7 @@ This flow validates the credentials of an existing VTEX user. It requires the us
 
 ### Request example
 
-```json
+```curl
 curl -X POST "https://store.myvtex.com/api/authenticator/punchout/start?returnURL=/checkout" \
   -H "Content-Type: application/json" \
   -d '{
@@ -119,7 +119,7 @@ If the validation is positive, the response provides a URL that can be accessed 
 
 ### Request example
 
-```json
+```curl
 curl -X POST "https://store.myvtex.com/api/authenticator/punchout/authenticated/start?returnURL=/checkout" \
   -H "Content-Type: application/json" \
   -H "X-VTEX-API-AppKey: your-app-key" \
@@ -148,15 +148,18 @@ For headless operations where no browser is involved, integrators must explicitl
 The finish endpoint:
 
 - **Validates the OTT**
+
    - Checks if the token exists and hasn't expired.
    - Ensures the token hasn't been used before.
 
 - **Creates a VTEX session**
+
    - For VTEX user flow: Creates session based on the validated VTEX user.
    - For pre-authenticated flow: Creates session using the username from the token's sub claim.
    - Adds `authMethod: "Punchout"` to the session token for tracking login source.
 
 - **Sets authentication cookies**
+
    - Returns VTEX session cookies in response headers.
    - These cookies are required for subsequent authenticated requests.
 
@@ -164,7 +167,7 @@ The finish endpoint:
 
 ### Request example
 
-```json
+```curl
 curl -X GET "https://store.myvtex.com/api/authenticator/punchout/finish?ott={one_time_token}" \
   -H "Content-Type: application/json" \
 ```
