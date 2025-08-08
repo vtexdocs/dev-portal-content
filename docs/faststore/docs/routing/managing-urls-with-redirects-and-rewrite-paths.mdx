@@ -19,7 +19,7 @@ These two tools enhance content organization, help maintain a good user experien
 
 FastStore allows you to configure redirects through the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
 
-> ⚠️ Projects hosted on Vercel have redirect limits such as "Number of redirects in the array: a maximum of 1,024" and "String length for `source` and `destination` parameters: a maximum of 4,096." For more information, check the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.
+> ⚠️ Projects hosted on Vercel have redirect limits such as "Number of redirects in the array: a maximum of 1,024" and "String length for `source` and `destination` parameters: a maximum of 4,096." (see the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article). If you need to configure more than 1,024 redirects, see the [(Experimental) Enabling redirects using the `enableRedirects` flag](#experimental-enabling-redirects-using-the-enableredirects-flag) section for an alternative workflow.
 
 1. Open your FastStore project in your preferred code editor and go to the `discovery.config.js` file within your project directory.
 2. Inside `discovery.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
@@ -67,8 +67,8 @@ For projects requiring more than 1,024 redirects, you can enable the `enableRedi
 1. Update your FastStore project to version `3.2.0` or higher. To do this, open your project in a code editor.
 
 2. Open a terminal and run the following command to update the FastStore packages to the latest version:
-	
-	```bash
+    
+    ```bash
     yarn upgrade -L --scope @faststore
     ```
 
@@ -84,7 +84,7 @@ For projects requiring more than 1,024 redirects, you can enable the `enableRedi
     …
     ```
 
-5. Run `yarn dev` to check for errors before deploying this change to production. Make sure to address any errors before deployment.
+5. Run `yarn dev` to check for and address any errors before deploying this change to production.
 6. Create a new branch and open a pull request to deploy the changes made in the `discovery.config.js` file to production.
 
 Once the change is live, you can manage the store’s redirects in VTEX Admin by following the instructions in [Managing URL redirects](https://help.vtex.com/tutorial/managing-url-redirects--3UJuFrU8imSVWg134mkvJV).
