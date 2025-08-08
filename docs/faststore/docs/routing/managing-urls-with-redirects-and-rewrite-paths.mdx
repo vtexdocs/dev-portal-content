@@ -58,6 +58,38 @@ FastStore allows you to configure redirects through the [`discovery.config.js`](
 4. Run `yarn dev`  to start your project in development mode.
 5. Open a browser and go to the old URL (e.g., `/office`). If the redirect is set up correctly, you should be automatically redirected to the new URL (e.g., `/about`).
 
+## (Experimental) Enabling redirects using the `enableRedirects` flag
+
+For projects requiring more than 1024 redirects, you can enable the `enableRedirects` flag in the `discovery.config.js` file. This flag lets you manage redirects through [redirects](https://help.vtex.com/tutorial/managing-url-redirects) in the VTEX Admin.
+
+> ⚠️ This workflow, which uses both a code configuration and the [redirects](https://help.vtex.com/tutorial/managing-url-redirects) interface.
+
+1. Update your FastStore project to version `3.2.0` or higher. To do this, open your project in a code editor.
+
+2. Open a terminal and run the following command to update the FastStore packages to the latest version:
+	
+	```bash
+    yarn upgrade -L --scope @faststore
+    ```
+
+3. With your FastStore project open, navigate to the `discovery.config.js` file in the project directory.
+4. Open the `discovery.config.js` file.
+5. Within the `experimental` section, add `enableRedirects: true` to enable the redirects feature in the project, for example:
+
+    ```js discovery.config.js mark=5
+    …
+    experimental: {
+        ...
+        enableRedirects: true,
+    },
+    …
+    ```
+
+4. Run `yarn dev` to check for errors before deploying this change to production. Make sure to address any errors before deployment.
+5. Create a new branch and open a pull request to deploy the changes made in the `discovery.config.js` file to production.
+
+Once the change is live, you can manage the store’s redirects in VTEX Admin by following the instructions in [Managing URL redirects](https://help.vtex.com/tutorial/managing-url-redirects--3UJuFrU8imSVWg134mkvJV).
+ 
 ## Creating rewrites
 
 FastStore leverages [Next.js rewrites](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites) to create custom routes while using existing Product Listing Page (PLP) templates. This allows you to map specific URLs to templates defined in Headless CMS, providing flexibility in content organization and URL structure.
