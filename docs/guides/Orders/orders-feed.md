@@ -44,7 +44,7 @@ Configuring and using Feed v3 and Hook is only allowed when authorization is gra
 
 The feed's application key must have a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#) with one of the appropriate resources: `Feed v3 and Hook Admin` or `Feed v3 and Hook view only`, depending on the intended use.
 
->⚠️ Each [appKey](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user commits an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
+>⚠️ Each [appKey](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user [commits](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
 
 ## Configuration
 
@@ -192,9 +192,9 @@ The properties of this object define the behavior of feed items once they are in
     }
 ```
 
-- `visibilityTimeoutInSeconds` - This is the maximum time after retrieving an item from the feed when it can be committed. When a user retrieves the events from the feed queue using the [Retrieve Feed items](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed) API request, the returned items are omitted from the feed for the time set in this field. Then, the user may take any necessary actions and [commit](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) the items to the feed. If events are not committed, they are returned to the feed after this time expires.
+- `visibilityTimeoutInSeconds` - This is the maximum time after retrieving an item from the feed when it can be [committed](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed). When a user retrieves the events from the feed queue using the [Retrieve Feed items](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed) API request, the returned items are omitted from the feed for the time set in this field. Then, the user may take any necessary actions and [commit](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) the items to the feed. If events are not committed, they are returned to the feed after this time expires.
 
-- `MessageRetentionPeriodInSeconds` - Items will be excluded from the feed — even if they aren't committed — when they stay in the feed longer than the retention period defined in this field.
+- `MessageRetentionPeriodInSeconds` - Items will be excluded from the feed — even if they aren't [committed](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) — when they stay in the feed longer than the retention period defined in this field.
 
 >⚠️ The minimum value for the `messageRetentionPeriodInSeconds` field is `345600` and the maximum is `1209600`.
 
@@ -247,7 +247,7 @@ Here are two complete example bodies for the [Feed configuration response](https
 }
 ```
 
->ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are committed or until the retention period expires.
+>ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are [committed](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) or until the retention period expires.
 
 >❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
 
