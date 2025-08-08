@@ -22,7 +22,7 @@ FastStore allows you to configure redirects through the [`discovery.config.js`](
 > ⚠️ Projects hosted on Vercel have redirect limits such as "Number of redirects in the array: a maximum of 1,024" and "String length for `source` and `destination` parameters: a maximum of 4,096." For more information, check the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.
 
 1. Open your FastStore project in your preferred code editor and go to the `discovery.config.js` file within your project directory.
-2. Inside the `discovery.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
+2. Inside `discovery.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
 
     ```discovery.config.js mark=3:6
     account: "{accountName}",
@@ -35,15 +35,15 @@ FastStore allows you to configure redirects through the [`discovery.config.js`](
 
     > ℹ️ The `redirects` function requires the `redirects.json` file, which you will create in the next step. This file contains the redirect definitions.
 
-3. Go to the `src` folder and create the `redirects.json` file. In the `redirects.json` file, add the following:
+3. Go to the `src` folder and create the `redirects.json` file and add the following:
 
     ```src/redirects.json
     [
-    {
-        "source": "/office",
-        "destination": "/about",
-        "permanent": true
-    }
+        {
+            "source": "/office",
+            "destination": "/about",
+            "permanent": true
+        }
     ]
     ```
 
