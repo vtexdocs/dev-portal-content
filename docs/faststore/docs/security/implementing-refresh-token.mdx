@@ -1,0 +1,45 @@
+---
+title: "Implementing refresh token"
+---
+
+[Refresh token](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations) is a security method that allows users to obtain a new, short-lived access token without requiring them to log in again.
+
+In this guide, learn how to implement the refresh token workflow in a FastStore store.
+
+> ℹ️ For more information on how the refresh token flow works, refer to the Refresh token flow for headless implementation guide.
+
+## Before you begin
+
+<Steps>
+
+### Update your FastStore project
+
+Make sure you project is updated to the latest version, to do this follow these steps:
+
+1. Open your project in a code editor.
+2. Open a terminal and run the following command to update the FastStore packages to the latest version:
+
+    ```bash
+    yarn upgrade -L --scope @faststore
+    ```
+
+### Request the refresh token activation
+
+Open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request the refresh token activation and expiration time, like 7 days. Include the account(s) name(s) to enable the feature in your request. Without the activation, you won’t be able to enable the refresh token in your account.
+
+</Steps>
+
+## Instructions
+
+1. Open your FastStore project in a code editor.
+2. Go to `discovery.config.js` file,  in the `experimental` section, add the `refreshToken` flag with the value `true`:
+
+
+    ```js discovery.config.js
+    experimental: {
+        …
+        refreshToken: true
+    }
+    ```
+
+3. Commit and push your changes to the main branch to deploy the update to production.
