@@ -19,7 +19,7 @@ These two tools enhance content organization, help maintain a good user experien
 
 FastStore allows you to configure redirects through the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
 
-> ⚠️ Projects hosted on Vercel have redirect limits, such as a maximum of 1,024 redirects in the array and a maximum string length of 4,096 for `source` and `destination` parameters. (For details, see the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article). If you need to configure more than 1,024 redirects, see the [(Experimental) Enabling redirects using the `enableRedirects` flag](#experimental-enabling-redirects-using-the-enableredirects-flag) section for an alternative workflow.
+> ⚠️ Projects hosted on Vercel have redirect limits, such as a maximum of 1,024 redirects in the array and a maximum string length of 4,096 for `source` and `destination` parameters. (For details, see the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article). If you need to configure more than 1,024 redirects, see the [(Beta) Enabling redirects using the `enableRedirects` flag](#beta-enabling-redirects-using-the-enableredirects-flag) section for an alternative workflow.
 
 1. Open your FastStore project in your preferred code editor and go to the `discovery.config.js` file within your project directory.
 2. Inside `discovery.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
@@ -58,11 +58,11 @@ FastStore allows you to configure redirects through the [`discovery.config.js`](
 4. Run `yarn dev`  to start your project in development mode.
 5. Open a browser and go to the old URL (e.g., `/office`). If the redirect is set up correctly, you should be automatically redirected to the new URL (e.g., `/about`).
 
-## (Experimental) Enabling redirects using the `enableRedirects` flag
+## (Beta) Enabling redirects using the `enableRedirects` flag
 
 For projects requiring more than 1,024 redirects, you can enable the `enableRedirects` flag in the `discovery.config.js` file. This flag lets you manage redirects through the [Redirects](https://help.vtex.com/tutorial/managing-url-redirects) feature in the VTEX Admin.
 
-> ⚠️ This workflow, which uses both a code configuration and the [Redirects](https://help.vtex.com/tutorial/managing-url-redirects) interface, is currently experimental.
+> ⚠️ This workflow, which uses both a code configuration and the [Redirects](https://help.vtex.com/tutorial/managing-url-redirects) interface, is currently in beta.
 
 1. Update your FastStore project to version `3.2.0` or higher. To do this, open your project in a code editor.
 
