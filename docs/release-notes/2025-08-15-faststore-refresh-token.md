@@ -22,4 +22,4 @@ By extending user session duration, shoppers can remain logged in for longer per
 
 ## What needs to be done?
 
-To enable the refresh token flow in your account, see the instructions in the [Implementing refresh token](/tbd) guide.
+To enable the refresh token flow in your account, see the instructions in the [Implementing refresh token](https://developers.vtex.com/docs/guides/faststore/security-implementing-refresh-token) guide.
