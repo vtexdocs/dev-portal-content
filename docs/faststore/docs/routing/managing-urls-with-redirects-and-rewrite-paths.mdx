@@ -19,10 +19,10 @@ These two tools enhance content organization, help maintain a good user experien
 
 FastStore allows you to configure redirects through the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
 
-> ⚠️ Projects hosted on Vercel have redirect limits, such as a maximum of 1,024 redirects in the array and a maximum string length of 4,096 for `source` and `destination` parameters. (For details, see Vercel's [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.) If you need to configure more than 1,024 redirects, see the [(Beta) Enabling redirects using the `enableRedirects` flag](#beta-enabling-redirects-using-the-enableredirects-flag) section for an alternative workflow.
+> ⚠️ Projects hosted on Vercel have redirect limits, such as a maximum of 1,024 redirects in the array and a maximum string length of 4,096 for `source` and `destination` properties. (For details, see Vercel's [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.) If you need to configure more than 1,024 redirects, see the [(Beta) Enabling redirects using the `enableRedirects` flag](#beta-enabling-redirects-using-the-enableredirects-flag) section for an alternative workflow.
 
 1. Open your FastStore project in your preferred code editor and go to the `discovery.config.js` file within your project directory.
-2. Inside `discovery.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
+2. Inside `discovery.config.js`, add the `redirects` function. This function will define your redirect rules, for example:
 
     ```discovery.config.js mark=3:6
     account: "{accountName}",
@@ -50,12 +50,12 @@ FastStore allows you to configure redirects through the [`discovery.config.js`](
     | Property name | Description |
     | ------------------- | --------------- |
     | `source` | Original URL pattern that triggers the redirect. In this example, any URL starting with `/office` will be redirected. |
-    | `destination` | New URL to which users will be sent. Here, `/about` is the destination for users coming from `/office`. |
+    | `destination` | New URL to which users are sent. Here, `/about` is the destination for users coming from `/office`. |
     | `permanent` | The type of redirect. Set to `true` for a permanent (308 status code) redirect, which search engines will cache. Set to `false` for a temporary (307 status code) redirect. |
 
     > ℹ️ For more information about each property, refer to the [Next.js](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects) documentation.
 
-4. Run `yarn dev`  to start your project in development mode.
+4. Run `yarn dev` to start your project in development mode.
 5. Open a browser and go to the old URL (e.g., `/office`). If the redirect is set up correctly, you should be automatically redirected to the new URL (e.g., `/about`).
 
 ## (Beta) Enabling redirects using the `enableRedirects` flag
