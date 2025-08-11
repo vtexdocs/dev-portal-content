@@ -8,7 +8,7 @@ updatedAt: "2025-08-15T00:00:00.219Z"
 excerpt: "FastStore now supports refresh tokens, allowing users to stay logged in longer without re-authenticating, improving the shopping experience."
 ---
 
-FastStore storefronts now support the [refresh token](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations) feature, ensuring users stay logged in to their store sessions longer without needing to reauthenticate.
+FastStore storefronts now support the [refresh token](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations) feature, ensuring users stay logged in to their store sessions longer without re-authenticating.
 
 ## What has changed?
 
