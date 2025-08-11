@@ -18,7 +18,7 @@ With the refresh token, the cookie's duration is extended, ensuring sessions las
 
 ## Why did we make this change?
 
-By extending user session duration, shoppers can remain logged in for longer periods, resulting in a more continuous and improved shopping experience, with fewer login prompts.
+By extending user session duration, shoppers can remain logged in for longer, resulting in a more continuous and improved shopping experience, and fewer login prompts.
 
 ## What needs to be done?
 
