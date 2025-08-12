@@ -4,7 +4,7 @@ slug: "getting-started-with-storefront-solutions"
 hidden: false
 excerpt: "Learn about the main differences between VTEX storefront solutions."
 createdAt: "2024-05-20t12:59:27.687z"
-updatedAt: "2025-08-12T20:31:34.468Z"
+updatedAt: "2025-08-12T21:03:47.603Z"
 ---
 
 VTEX platform provides three options for storefront development, each with distinct characteristics. This guide compares them to help you choose the best one for your business needs. 
@@ -41,16 +41,14 @@ The VTEX platform supports the configuration of different business models, such 
 | [**Franchise accounts**](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) | ✅ | ✅ | ✅ |
 | [**Marketplace capabilities**](https://help.vtex.com/en/tutorial/marketplace-strategies-at-vtex--tutorials_402) | ✅ | ✅ | ✅ |
 | [**Multiple trade policies**](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) | ✅ | ✅ | ✅ |
-| [**Regionalization**](https://developers.vtex.com/docs/guides/faststore/features-regionalization) | ✅ | ✅ | ❌ |
-| [**Delivery Promise**](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) | ✅ | ✅ | ❌ |
 
 ## Features and functionalities
 
-Explore the features and functionalities available for each storefront technology. Consider the following legend:
+Explore below the features and functionalities available for each storefront technology. Consider the following legend:
 
 ✅ **Available:** An out-of-the-box feature, ready to use.
 
-⚠️ **Limited:** The feature is possible but needs custom implementation.
+⚠️ **Limited:** The feature is possible but requires custom implementation. To understand the viability of this implementation for your project, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
 
 ❌ **Not available:** This feature is currently unavailable, even with customizations.
 
@@ -61,6 +59,7 @@ Explore the features and functionalities available for each storefront technolog
 | [**Abandoned Cart**](https://help.vtex.com/en/tutorial/setting-up-abandoned-carts--tutorials_740) | ⚠️ | ✅ | ✅ |
 | [**Attachments**](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm) | ✅ | ✅ | ✅ |
 | [**Coupons**](https://help.vtex.com/en/tutorial/coupons-beta--1aAEN3ADpz19ss5JCIEBdL) | ✅ | ✅ | ✅ |
+| [**Delivery Promise**](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) | ✅ | ✅ | ❌ |
 | [**Gift Card**](https://developers.vtex.com/docs/guides/gift-card-integration-guide) **integration** | ✅ | ✅ | ✅ |
 | [**GTM - Google Analytics 4**](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG) | ✅ | ✅ | ✅ |
 | [**Intelligent Search**](https://help.vtex.com/tracks/vtex-intelligent-search) **integration** | ✅ | ✅ | ❌ |
@@ -69,6 +68,7 @@ Explore the features and functionalities available for each storefront technolog
 | [**Newsletter integration with Master Data**](https://developers.vtex.com/docs/guides/implementing-newsletter-opt-in-with-master-data-v1) | ✅ | ✅ | ✅ |
 | [**Price table**](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S) | ✅ | ✅ | ✅ |
 | [**Promotions**](https://help.vtex.com/en/tutorial/creating-promotions--tutorials_320) | ✅ | ✅ | ✅ |
+| [**Regionalization**](https://developers.vtex.com/docs/guides/faststore/features-regionalization) | ✅ | ✅ | ❌ |
 | [**SmartCheckout**](https://help.vtex.com/en/tutorial/smartcheckout-customer-information-automatic-fill-in--2Nuu3xAFzdhIzJIldAdtan) | ✅ | ✅ | ✅ |
 | [**Sitemap**](https://help.vtex.com/en/tutorial/rastreamento-google-search-console-sitemap--tutorials_575) **integration** | ✅ | ✅ | ✅ |
 | [**Subscription**](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453) | ✅ | ✅ | ✅ |
