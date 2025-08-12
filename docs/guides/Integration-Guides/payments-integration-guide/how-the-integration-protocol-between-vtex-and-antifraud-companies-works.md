@@ -64,8 +64,8 @@ In the Anti-fraud Provider Tester app environment, fill in the fields as indicat
 
 - **Connector Name**: name you want to give to your connector within VTEX.
 - **Service URL**: URL of your provider service. This URL will be the base address of the protocol and must follow the format determined by it. For example, if the service URL is `http://10.10.10.10`, the full URL for the endpoint *transactions* will be `http://10.10.10.10/transactions`.
-- **Application Key**: "X-PROVIDER-API-AppKey" value of your provider's request header for testing purposes.
-- **Application Token**: "X-PROVIDER-API-AppToken" value of your provider's request header for testing purposes.
+- **API key**: "X-PROVIDER-API-AppKey" value of your provider's request header for testing purposes.
+- **API token**: "X-PROVIDER-API-AppToken" value of your provider's request header for testing purposes.
 
 ![Anti-fraud test suite](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-2_53.png)
 

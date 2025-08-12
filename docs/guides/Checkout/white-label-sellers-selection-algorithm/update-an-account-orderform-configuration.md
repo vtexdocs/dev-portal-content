@@ -92,7 +92,7 @@ To confirm that the new orderForm settings have been applied to your account, ac
 The following errors may appear as a message in the response body.
 
 ### 401 - Unauthorized
-- **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (Application Key and Application Token) used in this request are incorrect or not authorized to access this type of information.
+- **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (API key and API token) used in this request are incorrect or not authorized to access this type of information.
 
 ```json
 {
