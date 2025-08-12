@@ -5,13 +5,13 @@ hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"
 seeAlso:
- - "/docs/guides/api-authentication-using-application-keys"
+ - "/docs/guides/api-authentication-using-api-keys"
  - "/docs/guides/api-authentication-using-user-tokens"
  - "/docs/guides/app-authentication-using-auth-tokens"
 ---
 Authentication is a crucial aspect of API integrations, backend, and frontend app development. It ensures authorized access by requiring valid credentials like API keys or tokens. This shields sensitive data, prevents breaches, and builds user trust. Get started with VTEX authentication for developers with the following guides:
 
-- [API authentication using application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys)
+- [API authentication using application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys)
 - [API authentication using user tokens](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens)
 - [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens)
 
@@ -21,7 +21,7 @@ There are different contexts in which authentication is required in the regular 
 | ----- | ----- |
 | Backend VTEX IO app | [User token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) via VTEX IO context, or, if needed, [app authentication token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) via VTEX IO context |
 | Frontend VTEX IO app | [User token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) via VTEX IO context |
-| Self-hosted backend request to VTEX APIs | [Application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys) |
+| Self-hosted backend request to VTEX APIs | [Application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) |
 | Self-hosted frontend request to VTEX APIs | [User token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) |
 
 ## Single sign on integrations
