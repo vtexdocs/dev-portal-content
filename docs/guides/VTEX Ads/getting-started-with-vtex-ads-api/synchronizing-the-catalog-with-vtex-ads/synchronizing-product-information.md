@@ -26,7 +26,7 @@ To update the basic product data, the following endpoint must be used:
 Processing will be performed asynchronously.
 
 ```json
-POST https://api.ads.vtex.com/product/bulk/products HTTP/1.1
+POST https://api-retail-media.newtail.com.br/product/bulk/products HTTP/1.1
 accept: application/json
 content-type: application/json
 x-app-id: <PUBLISHER_APP_ID>

@@ -22,7 +22,7 @@ Learn more about each field on `POST` [Synchronize inventory information](https:
 Processing will be performed asynchronously.
 
 ```json
-POST https://api.ads.vtex.com/product/bulk/inventories HTTP/1.1
+POST https://api-retail-media.newtail.com.br/product/bulk/inventories HTTP/1.1
 accept: application/json
 content-type: application/json
 x-app-id: <PUBLISHER_APP_ID>

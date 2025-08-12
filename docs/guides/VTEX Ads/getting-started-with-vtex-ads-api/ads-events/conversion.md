@@ -28,7 +28,7 @@ Use the `POST` [Track conversions](https://developers.vtex.com/docs/api-referenc
 Request example:
 
 ```json
-POST https://events-api.ads.vtex.com/v1/beacon/conversion HTTP/1.1
+POST https://events.newtail-media.newtail.com.br/v1/beacon/conversion HTTP/1.1
 accept: application/json
 content-type: application/json
 

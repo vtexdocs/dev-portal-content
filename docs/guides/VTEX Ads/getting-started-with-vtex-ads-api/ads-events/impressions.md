@@ -27,7 +27,7 @@ Use the `POST` [Track ad impressions](https://developers.vtex.com/docs/api-refer
 Request example:
 
 ```json
-POST https://events-api.ads.vtex.com/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1 HTTP/1.1
+POST https://events.newtail-media.newtail.com.br/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1 HTTP/1.1
 accept: application/json
 content-type: application/json
 

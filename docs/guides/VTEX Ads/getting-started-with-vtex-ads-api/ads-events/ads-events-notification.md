@@ -28,14 +28,14 @@ Response example from `POST` [Get ads](https://developers.vtex.com/docs/api-refe
     {
       "ad_id": "4a94bc6e-7db1-425f-8430-cb4d17488b3b",
       "sku": "120210",
-      "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1",
-      "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1",
+      "click_url": "https://events.newtail-media.newtail.com.br/v1/beacon/click/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1",
+      "impression_url": "https://events.newtail-media.newtail.com.br/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1",
     },
     {
       "ad_id": "8c293205-52f4-45cf-9a01-37e7c26a5abc",
       "sku": "123123",
-      "click_url": "https://events-api.ads.vtex.com/v1/beacon/click/8c293205-52f4-45cf-9a01-37e7c26a5abc?pos=2",
-      "impression_url": "https://events-api.ads.vtex.com/v1/beacon/impression/8c293205-52f4-45cf-9a01-37e7c26a5abc?pos=2",
+      "click_url": "https://events.newtail-media.newtail.com.br/v1/beacon/click/8c293205-52f4-45cf-9a01-37e7c26a5abc?pos=2",
+      "impression_url": "https://events.newtail-media.newtail.com.br/v1/beacon/impression/8c293205-52f4-45cf-9a01-37e7c26a5abc?pos=2",
     }
   ],
   "banners": []
@@ -50,7 +50,7 @@ let user_data = {
    session_id: "5898b8d1-c250-4bb5-931b-8b9d0ee7b499"
 }
 
-let beacon_url =  "https://events-api.ads.vtex.com/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1"
+let beacon_url =  "https://events.newtail-media.newtail.com.br/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1"
 
 var jsonBlob = new Blob([JSON.stringify(user_data)], { type: 'application/json' });
 
@@ -71,7 +71,7 @@ You can use one of the following endpoints, depending on the event:
 Request example:
 
 ```json
-POST https://events-api.ads.vtex.com/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1 HTTP/1.1
+POST https://events.newtail-media.newtail.com.br/v1/beacon/impression/4a94bc6e-7db1-425f-8430-cb4d17488b3b?pos=1 HTTP/1.1
 user-agent: newtail
 accept: application/json
 content-type: application/json

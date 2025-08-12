@@ -28,7 +28,7 @@ In this approach, targeting information is sent directly in the request body, in
 Request example:
 
 ```json
-POST https://api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
+POST https://api-retail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
@@ -61,7 +61,7 @@ In this approach, targeting information is obtained based on the audiences assoc
 Request example:
 
 ```json
-POST https://api.ads.vtex.com/v1/rma/:publisher_id HTTP/1.1
+POST https://api-retail-media.newtail.com.br/v1/rma/:publisher_id HTTP/1.1
 Content-Type: application/json
 
 {
