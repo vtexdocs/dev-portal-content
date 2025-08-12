@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.38](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.37...v1.1.38) (2025-08-12)
+
+
+### 🔧 Fixes and improvements
+
+* VTEX Ads API servers on guides ([bc10116](https://github.com/vtexdocs/dev-portal-content/commit/bc101161990f5e2c7910a0371addb48444035c1e))
+
 ### [1.1.37](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.36...v1.1.37) (2025-08-12)
 
 
