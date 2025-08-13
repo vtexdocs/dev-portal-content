@@ -1,5 +1,5 @@
 ---
-title: "FastStore: Supports refresh token session"
+title: "FastStore: Support for refresh token sessions"
 slug: "2025-08-15-faststore-refresh-token"
 hidden: false
 type: "added"
