@@ -66,12 +66,12 @@ You can see the list of possible order statuses in the article [Order flow in or
 "filter": {
     "type": "FromWorkflow",
     "status": [
-        “order-completed”,
+        "order-completed",
         "ready-for-handling",
-        “start-handling”,
-        “handling”,
-        “waiting-ffmt-authorization”,
-        “cancel”
+        "start-handling",
+        "handling",
+        "waiting-ffmt-authorization",
+        "cancel"
         ]
     }
 ```
