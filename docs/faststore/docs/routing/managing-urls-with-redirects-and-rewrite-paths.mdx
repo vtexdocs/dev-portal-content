@@ -19,10 +19,10 @@ These two tools enhance content organization, help maintain a good user experien
 
 FastStore allows you to configure redirects through the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
 
-> ⚠️ Projects hosted on Vercel have redirect limits such as, "Number of redirects in the array: 1,024 maximum" and "String length for `source` and `destination` parameters: 4.096 maximum." For more information, check the Vercel [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.
+> ⚠️ Projects hosted on Vercel have redirect limits, such as a maximum of 1,024 redirects in the array and a maximum string length of 4,096 for `source` and `destination` properties. (For details, see Vercel's [Redirects](https://vercel.com/docs/edge-network/redirects#configuration) article.) If you need to configure more than 1,024 redirects, see the [(Beta) Enabling redirects using the `enableRedirects` flag](#beta-enabling-redirects-using-the-enableredirects-flag) section for an alternative workflow.
 
 1. Open your FastStore project in your preferred code editor and go to the `discovery.config.js` file within your project directory.
-2. Inside the `discovery.config.js`, add the `redirects`  function. This function will define your redirect rules, for example:
+2. Inside `discovery.config.js`, add the `redirects` function. This function will define your redirect rules, for example:
 
     ```discovery.config.js mark=3:6
     account: "{accountName}",
@@ -33,33 +33,64 @@ FastStore allows you to configure redirects through the [`discovery.config.js`](
     },
     ```
 
-    > ℹ️ The `redirects` function requires the `required.json` file, which you will create in the next step. This file contains the redirect definitions.
+    > ℹ️ The `redirects` function requires the `redirects.json` file, which you will create in the next step. This file contains the redirect definitions.
 
-3. Go to the `src` folder and create the `redirects.json` file. In the `redirects.json` file, add the following:
+3. Go to the `src` folder, create the `redirects.json` file, and add the following:
 
     ```src/redirects.json
     [
-    {
-        "source": "/office",
-        "destination": "/about",
-        "permanent": true
-    }
+        {
+            "source": "/office",
+            "destination": "/about",
+            "permanent": true
+        }
     ]
     ```
 
     | Property name | Description |
     | ------------------- | --------------- |
     | `source` | Original URL pattern that triggers the redirect. In this example, any URL starting with `/office` will be redirected. |
-    | `destination` | New URL to which users will be sent. Here, `/about` is the destination for users coming from `/office`. |
+    | `destination` | New URL to which users are sent. Here, `/about` is the destination for users coming from `/office`. |
     | `permanent` | The type of redirect. Set to `true` for a permanent (308 status code) redirect, which search engines will cache. Set to `false` for a temporary (307 status code) redirect. |
 
-    > ℹ️ For more information about each property, access the [Next.js](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects) documentation.
+    > ℹ️ For more information about each property, refer to the [Next.js](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects) documentation.
 
-4. Run `yarn dev`  to start your project in development mode.
+4. Run `yarn dev` to start your project in development mode.
 5. Open a browser and go to the old URL (e.g., `/office`). If the redirect is set up correctly, you should be automatically redirected to the new URL (e.g., `/about`).
+
+## (Beta) Enabling redirects using the `enableRedirects` flag
+
+For projects requiring more than 1,024 redirects, you can enable the `enableRedirects` flag in the `discovery.config.js` file. This flag lets you manage redirects through the [Redirects](https://help.vtex.com/tutorial/managing-url-redirects) feature in the VTEX Admin.
+
+> ⚠️ This workflow, which uses both a code configuration and the [Redirects](https://help.vtex.com/tutorial/managing-url-redirects) interface, is currently in beta.
+
+1. Update your FastStore project to version `3.2.0` or higher. To do this, open your project in a code editor.
+
+2. Open a terminal and run the following command to update the FastStore packages to the latest version:
+    
+    ```bash
+    yarn upgrade -L --scope @faststore
+    ```
+
+3. With your FastStore project open, navigate to the `discovery.config.js` file in the project directory.
+4. Within the `experimental` section, add `enableRedirects: true` to enable the redirects feature in the project, for example:
+
+    ```js discovery.config.js mark=5
+    …
+    experimental: {
+        ...
+        enableRedirects: true,
+    },
+    …
+    ```
+
+5. Run `yarn dev` to check for and address any errors before deploying this change to production.
+6. Create a new branch and open a pull request to deploy the changes made in the `discovery.config.js` file to production.
+
+Once the change is live, you can manage the store's redirects in VTEX Admin by following the instructions in [Managing URL redirects](https://help.vtex.com/tutorial/managing-url-redirects--3UJuFrU8imSVWg134mkvJV).
 
 ## Creating rewrites
 
 FastStore leverages [Next.js rewrites](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites) to create custom routes while using existing Product Listing Page (PLP) templates. This allows you to map specific URLs to templates defined in Headless CMS, providing flexibility in content organization and URL structure.
 
-For more information on using rewrites with PLP templates, check the [Using rewrites with PLP template](https://developers.vtex.com/docs/guides/faststore/headless-cms-multiple-page-template#product-listing-page-plp-template-selection-criteria) section on the Multiple page templates documentation.
+For more information on using rewrites with a PLP template, check the [Using rewrites with PLP template](https://developers.vtex.com/docs/guides/faststore/headless-cms-multiple-page-template#product-listing-page-plp-template-selection-criteria) section in the Multiple Page Templates documentation.

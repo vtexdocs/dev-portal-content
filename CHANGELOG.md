@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.39](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.38...v1.1.39) (2025-08-13)
+
+
+### 📝 Documentation updates
+
+* replace application key and token with API key and token ([212ac74](https://github.com/vtexdocs/dev-portal-content/commit/212ac7461ca110d5021bcd217c00e3f0adc6ad4b))
+* replace application-keys in URLs for api-keys ([2e1050a](https://github.com/vtexdocs/dev-portal-content/commit/2e1050a1c24bc5f6fa32bc5a70628834b07b1e81))
+
+
+### 🔧 Fixes and improvements
+
+* API Keys article URL ([a15d7ba](https://github.com/vtexdocs/dev-portal-content/commit/a15d7ba2843d601110c58dc3f4d915613d9b31dd))
+
+### [1.1.39](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.38...v1.1.39) (2025-08-13)
+
+
+### 📝 Documentation updates
+
+* replace application key and token with API key and token ([212ac74](https://github.com/vtexdocs/dev-portal-content/commit/212ac7461ca110d5021bcd217c00e3f0adc6ad4b))
+* replace application-keys in URLs for api-keys ([2e1050a](https://github.com/vtexdocs/dev-portal-content/commit/2e1050a1c24bc5f6fa32bc5a70628834b07b1e81))
+
+### [1.1.38](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.37...v1.1.38) (2025-08-12)
+
+
+### 🔧 Fixes and improvements
+
+* VTEX Ads API servers on guides ([bc10116](https://github.com/vtexdocs/dev-portal-content/commit/bc101161990f5e2c7910a0371addb48444035c1e))
+
+### [1.1.37](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.36...v1.1.37) (2025-08-12)
+
+
+### 🔧 Fixes and improvements
+
+* links on VTEX Ads guide ([2b9a8ee](https://github.com/vtexdocs/dev-portal-content/commit/2b9a8eea19d6c6b3ad3b4f037dc7b13cdfdf2a0d))
+
+### [1.1.36](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.35...v1.1.36) (2025-08-12)
+
+
+### 🔧 Fixes and improvements
+
+* rename vtex-ads guide ([bff2fd1](https://github.com/vtexdocs/dev-portal-content/commit/bff2fd1e26b295d17c4ec98ce38f3856d39c35a7))
+
+### [1.1.35](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.33...v1.1.35) (2025-08-12)
+
+### [1.1.33](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.31...v1.1.33) (2025-08-11)
+
 ### [1.1.31](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.29...v1.1.31) (2025-08-06)
 
 ### [1.1.29](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.27...v1.1.29) (2025-08-05)
