@@ -16,7 +16,7 @@ In this guide, you will learn how to:
 2. Make requests in apps with the proper authorization.
 3. Make external requests with the appropriate authorization.
 
-> ℹ️ Only VTEX apps, Admin users, and [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys) can be authorized in GraphQL requests, since they must be associated with a role or policy granting access to a License Manager resource. Store users don't have this type of access.
+> ℹ️ Only VTEX apps, Admin users, and [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) can be authorized in GraphQL requests, since they must be associated with a role or policy granting access to a License Manager resource. Store users don't have this type of access.
 ## Implementing GraphQL API authorization in apps
 
 By default, GraphQL APIs in VTEX apps don't require authorization. To enable authorization, you must add the `@auth` directive to the specific fields or operations in your GraphQL schema that require protection. This directive ensures that only requesters with access to the corresponding [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) are allowed to execute the operation.

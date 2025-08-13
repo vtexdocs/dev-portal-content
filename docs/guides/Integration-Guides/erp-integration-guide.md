@@ -149,5 +149,5 @@ For marketplaces, it may also be necessary to perform changes in sellers. Learn 
 
 To learn more see [Cancel order](https://developers.vtex.com/docs/guides/erp-integration-set-up-order-processing#cancel-order).
 
->ℹ️ Make sure you have gone through our [Platform Overview guides](https://developers.vtex.com/docs/guides/vtex-platform-overview) and have [created the appKey and appToken](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys) for the system you want to integrate with VTEX.
+>ℹ️ Make sure you have gone through our [Platform Overview guides](https://developers.vtex.com/docs/guides/vtex-platform-overview) and have [created the appKey and appToken](https://developers.vtex.com/docs/guides/getting-started-authentication#api-keys) for the system you want to integrate with VTEX.
 >You can find the Application Keys page by clicking on your **profile's avatar**, which is marked with the initial from your email, then going to **Account settings > Application keys.**

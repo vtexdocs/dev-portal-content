@@ -1,6 +1,6 @@
 ---
 title: "API authentication using application keys"
-slug: "api-authentication-using-application-keys"
+slug: "api-authentication-using-api-keys"
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"
@@ -9,15 +9,15 @@ seeAlso:
  - "/docs/guides/api-authentication-using-user-tokens"
 ---
 
-Application keys (`appKey`) are credentials used to authenticate requests to VTEX APIs. Store administrators can create multiple application keys that may be used, for example, for different integrations. Read [Generating and managing application keys](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) to learn how to create these credentials.
+Application keys (`appKey`) are credentials used to authenticate requests to VTEX APIs. Store administrators can create multiple application keys that may be used, for example, for different integrations. Read [Generating and managing application keys](https://help.vtex.com/en/tutorial/api-keys--2iffYzlvvz4BDMr6WGUtet) to learn how to create these credentials.
 
-An application key includes specific permissions, based on License Manager [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) selected when creating or editing the application key. Read [Managing app key permissions](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet#managing-app-key-permissions) for more details.
+An API key includes specific permissions, based on License Manager [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) selected when creating or editing the API key. Read [Managing app key permissions](https://help.vtex.com/en/tutorial/api-keys--2iffYzlvvz4BDMr6WGUtet#managing-app-key-permissions) for more details.
 
 Each `appKey` you create has an associated `appToken`. The appKey-appToken pair can be used in API requests to authorize interactions with VTEX services if they have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) with the required [resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3?&utm_source=autocomplete).
 
 Application keys are usually the best way to authenticate API calls in your integrations or in self-hosted backend requests in general. However, frontend requests should be authenticated with [user tokens](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens).
 
->❗ Do not use application keys in your client-side code. This makes your store vulnerable to attacks. Follow the [Best practices for using application keys](https://help.vtex.com/en/tutorial/best-practices-application-keys--7b6nD1VMHa49aI5brlOvJm#never-use-client-side-code-for-integrations).
+>❗ Do not use application keys in your client-side code. This makes your store vulnerable to attacks. Follow the [Best practices for using application keys](https://help.vtex.com/en/tutorial/best-practices-api-keys--7b6nD1VMHa49aI5brlOvJm#never-use-client-side-code-for-integrations).
 
 ## Usage
 

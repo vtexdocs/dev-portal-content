@@ -13,9 +13,9 @@ You'll also discover how to import API specifications into popular API testing p
 
 ## Before you begin
 
-To interact with VTEX APIs, you need to authenticate your requests. [Authentication](https://developers.vtex.com/docs/guides/getting-started-authentication) can be done via either [application keys](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys) or [user tokens](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). 
+To interact with VTEX APIs, you need to authenticate your requests. [Authentication](https://developers.vtex.com/docs/guides/getting-started-authentication) can be done via either [application keys](https://developers.vtex.com/docs/guides/getting-started-authentication#api-keys) or [user tokens](https://developers.vtex.com/docs/guides/getting-started-authentication#user-token). 
 
-For testing using the Developer Portal `TEST METHOD` feature, you will need a valid [application key](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys), which consists of a pair of an `appKey` and `appToken`. These credentials should be associated with [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that grant you the necessary [permissions](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to run the desired requests. If you don't have this credential yet, refer to the [Application keys](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) guide to learn how to create them.
+For testing using the Developer Portal `TEST METHOD` feature, you will need a valid [API key](https://developers.vtex.com/docs/guides/getting-started-authentication#api-keys), which consists of a pair of an `appKey` and `appToken`. These credentials should be associated with [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that grant you the necessary [permissions](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to run the desired requests. If you don't have this credential yet, refer to the [Application keys](https://help.vtex.com/en/tutorial/api-keys--2iffYzlvvz4BDMr6WGUtet) guide to learn how to create them.
 
 ## Testing a request in the Developer Portal
 
@@ -33,7 +33,7 @@ To test an API request directly in the Developer Portal, follow these steps:
 
    ![request and response](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Getting-Started/getting-started/making-your-first-request-3.png)
 
->⚠️ If you get a `401 - Unauthorized` response, double-check your [application key and token](https://developers.vtex.com/docs/guides/getting-started-authentication#application-keys). Ensure the values are correctly entered in the request headers, and verify that they are associated with the appropriate [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [permissions](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
+>⚠️ If you get a `401 - Unauthorized` response, double-check your [API key and token](https://developers.vtex.com/docs/guides/getting-started-authentication#api-keys). Ensure the values are correctly entered in the request headers, and verify that they are associated with the appropriate [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [permissions](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
 
 ## Using an API testing platform
 

@@ -69,6 +69,6 @@ Your development project should be **as descriptive as possible!** This means th
 
 #### Do's
 
-- "*This app will integrate a VTEX Storefront with Instagram API, allowing merchants to display their latests Instagram posts and stories. It will also allow style customization via Admin. We also need a backend service because of the external service's API quotas, since an application key is necessary for high usage.*"
+- "*This app will integrate a VTEX Storefront with Instagram API, allowing merchants to display their latests Instagram posts and stories. It will also allow style customization via Admin. We also need a backend service because of the external service's API quotas, since an API key is necessary for high usage.*"
 
 If you have any question about these guidelines or about the Application form, feel free to contact our team on [Store Discussion](http://github.com/vtex-apps/store-discussion/)!

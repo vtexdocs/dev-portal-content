@@ -73,7 +73,7 @@ VTEX efficiently manages logical access, ensuring precise control and monitoring
 
 ### Roles and permissions
 
-Every interaction with our platform, whether it is accessing a page in the Admin or making an API call, involves a request to our infrastructure. **License Manager** is the system that ensures the security of these operations by verifying that a user or application key has the necessary permissions to perform actions on the platform. To simplify permission management, it is based on **roles** and **resources**.
+Every interaction with our platform, whether it is accessing a page in the Admin or making an API call, involves a request to our infrastructure. **License Manager** is the system that ensures the security of these operations by verifying that a user or API key has the necessary permissions to perform actions on the platform. To simplify permission management, it is based on **roles** and **resources**.
 
 A resource is an entity associated with an action or information within our infrastructure. For example, the _View order_ resource allows a user to view the Order Details page in the Orders module. For details on each available resource, see [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
 
@@ -83,7 +83,7 @@ See below an example access control structure:
 
 ```mermaid
 graph LR
-subgraph User or application key
+subgraph User or API key
 A((Jane))
 B((Taylor))
 C((appKey-x))
