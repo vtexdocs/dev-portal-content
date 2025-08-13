@@ -2,7 +2,7 @@
 title: "Feed v3"
 slug: "orders-feed"
 hidden: false
-createdAt: "2021-03-29t19:21:28.241z"
+createdAt: "2021-03-29T19:21:28.241z"
 updatedAt: "2025-05-20T14:42:22.990Z"
 ---
 
@@ -247,7 +247,7 @@ Here are two complete example bodies for the [Feed configuration response](https
 }
 ```
 
->ℹ️ When a new feed is configured, its queue contains whatever orders are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are [committed](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) or until the retention period expires.
+>ℹ️ When a new feed is configured, its queue contains any orders that are changed right after the setup is complete. If the feed is reconfigured, events from the former queue will remain in the feed until they are [committed](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) or the retention period expires.
 
 >❗ If the feed doesn't receive any new events in its queue during the time set in `messageRetentionPeriodInSeconds`, your configuration will be removed, and you will have to reconfigure it with the [Feed configuration API call](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) to continue using the feed. Therefore, it's important to be mindful of the filter configuration you are using. You can check it any time using the [Get feed configuration](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/orders/feed/config) endpoint.
 
