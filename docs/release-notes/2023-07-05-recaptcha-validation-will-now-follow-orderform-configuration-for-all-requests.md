@@ -35,7 +35,7 @@ The diagram below can help you assess whether an integration needs to be adjuste
 
   Your store uses reCAPTCHA at Checkout and is ready to display it correctly in the user interface. Congratulations for following best practices in security!
 
-You must make sure that the [API key](https://help.vtex.com/en/tutorial/api-keys--2iffYzlvvz4BDMr6WGUtet) used to make the requests to the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) ("Transaction") / [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) ("PlaceOrder") endpoints of the Checkout API has one of these [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) in their [roles](https://help.vtex.com/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc):
+You must make sure that the [API key](https://help.vtex.com/en/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) used to make the requests to the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) ("Transaction") / [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) ("PlaceOrder") endpoints of the Checkout API has one of these [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) in their [roles](https://help.vtex.com/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc):
 
 - Checkout > CheckoutResources > Shopping Cart Full Access
 - Catalog > Telesales > Assisted Sales

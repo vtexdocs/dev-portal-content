@@ -44,7 +44,7 @@ Configuring and using Feed v3 and Hook is only allowed when authorization is gra
 
 The feed's API key must have a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#) with one of the appropriate resources: `Feed v3 and Hook Admin` or `Feed v3 and Hook view only`, depending on the intended use.
 
->⚠️ Each [appKey](https://help.vtex.com/en/tutorial/api-keys--2iffYzlvvz4BDMr6WGUtet) can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user commits an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
+>⚠️ Each [appKey](https://help.vtex.com/en/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user commits an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
 
 ## Configuration
 

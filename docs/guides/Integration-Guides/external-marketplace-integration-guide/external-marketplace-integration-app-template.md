@@ -23,7 +23,7 @@ An integration app created from our App Template already includes:
   - Save Settings button
 - **Custom settings page** containing:
   - Button to activate/deactivate [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl)
-- Complete **search endpoint** to retrieve seller configurations using [AppKey and AppToken](https://help.vtex.com/en/tutorial/api-keys--2iffYzlvvz4BDMr6WGUtet) generated in the seller’s account, defined by the appVendor.
+- Complete **search endpoint** to retrieve seller configurations using [AppKey and AppToken](https://help.vtex.com/en/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) generated in the seller’s account, defined by the appVendor.
 - **Link to [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register)**, allowing sellers to map their catalog according to the marketplace’s definitions.
 
 ## Before you begin
@@ -391,7 +391,7 @@ Once the app is configured, it is possible to recover the seller’s configurati
     </tr>
 </table>
 
-2. Generate the account’s [AppKey and AppToken](https://help.vtex.com/en/tutorial/api-keys--2iffYzlvvz4BDMr6WGUtet) to authenticate it.
+2. Generate the account’s [AppKey and AppToken](https://help.vtex.com/en/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) to authenticate it.
 
 #### Request’s curl in a workspace
 
