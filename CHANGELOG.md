@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.39](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.38...v1.1.39) (2025-08-13)
+
+
+### 📝 Documentation updates
+
+* replace application key and token with API key and token ([212ac74](https://github.com/vtexdocs/dev-portal-content/commit/212ac7461ca110d5021bcd217c00e3f0adc6ad4b))
+* replace application-keys in URLs for api-keys ([2e1050a](https://github.com/vtexdocs/dev-portal-content/commit/2e1050a1c24bc5f6fa32bc5a70628834b07b1e81))
+
 ### [1.1.38](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.37...v1.1.38) (2025-08-12)
 
 
