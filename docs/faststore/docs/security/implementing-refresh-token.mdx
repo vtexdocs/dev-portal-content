@@ -27,14 +27,14 @@ yarn upgrade -L --scope @faststore
 
 ### Request refresh token activation
 
-Open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request refresh token activation and expiration time (1, 7, or 30 days). Include the account name(s) in your request to enable the feature. Without this activation, you won’t be able to enable the refresh token in your account.
+Open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request refresh token activation and an expiration time (1, 7, or 30 days). Include the account name(s) in your request to enable the feature. Without this activation, you won’t be able to enable the refresh token in your account.
 
 </Steps>
 
 ## Instructions
 
 1. Open your FastStore project in a code editor.
-2. In the `discovery.config.js` file, within the `experimental` section, add the `refreshToken` flag with the value `true`:
+2. In the `discovery.config.js` file, within the `experimental` section, add the `refreshToken` flag and set its value to `true`:
 
 
     ```js discovery.config.js
