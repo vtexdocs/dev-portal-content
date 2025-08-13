@@ -10,7 +10,7 @@ The [order feed](https://developers.vtex.com/docs/guides/orders-overview#feed-v3
 
 In this sense, the feed is not a list of orders, but rather a list of events. For example, if the status of an order is changed to `Approve payment` and then to `Authorize shipping`, the feed will receive two events: one for each update, both related to the same order. You can configure the feed to filter the updates that will actually generate feed events, instead of having all updates in all orders generating events in the feed queue.
 
-This guide explains how Feed and Hook work and how to configure each to build order integrations. Also, in the latter part of the article, we explain the differences between each and when to choose one over the other based on the specific needs of your operation.
+This guide explains how Feed and Hook work and how to configure them to build order integrations. Also, in the latter part of the article, we explain the differences between each and when to choose one over the other based on the specific needs of your operation.
 
 >ℹ️ Feed and Hook are independent configurations to build order integrations.
 
@@ -21,7 +21,7 @@ When designing an orders integration, consider the practices below to increase p
 - Optimize your code to get only the required data.
 - Use caching for often-used data.
 - Consider including code that catches errors. By ignoring these errors and persisting in making requests, your app will not be able to recover gracefully.
-- After getting a 429 status code error, you should stop making additional API requests and wait before retrying. We recommend a 1 minute backoff time.
+- After getting a 429 status code error, you should stop making additional API requests and wait before retrying. We recommend a 1-minute backoff time.
 - Configure your integration to communicate asynchronously with VTEX APIs in order to keep requests in a queue and do other processing tasks while waiting for the next queued job to run.
 
 >⚠️ If your integration is getting 429 status code errors, we recommend you to regulate the rate of your requests for smoother distribution. When the account exceeds the request limit, VTEX Admin might also become unavailable.
@@ -44,7 +44,7 @@ Configuring and using Feed v3 and Hook is only allowed when authorization is gra
 
 The feed's application key must have a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#) with one of the appropriate resources: `Feed v3 and Hook Admin` or `Feed v3 and Hook view only`, depending on the intended use.
 
->⚠️ Each [appKey](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user [commits](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) an item to the queue, the item is removed from the feed and won't be available for any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
+>⚠️ Each [appKey](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) can configure or access only one feed. This means that different users sharing an appKey access the same feed. In this case, if a user [commits](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/feed) an item to the queue, the item is removed from the feed and won't be available to any users sharing the same appKey. Therefore, we recommend configuring one feed per appKey per user, ensuring that each user has access to their own feed.
 
 ## Configuration
 
