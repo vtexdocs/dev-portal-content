@@ -10,7 +10,7 @@ The [order feed](https://developers.vtex.com/docs/guides/orders-overview#feed-v3
 
 In this sense, the feed is not a list of orders, but rather a list of events. For example, if the status of an order is changed to `Approve payment` and then to `Authorize shipping`, the feed will receive two events: one for each update, both related to the same order. You can configure the feed to filter the updates that will actually generate feed events, instead of having all updates in all orders generating events in the feed queue.
 
-This guide explains how Feed and Hook work and how to configure them to build order integrations. Also, in the latter part of the article, we explain the differences between each and when to choose one over the other based on the specific needs of your operation.
+This guide explains how Feed and Hook work and how to configure each to build order integrations. Also, in the latter part of the article, we explain the differences between each and when to choose one over the other based on the specific needs of your operation.
 
 >ℹ️ Feed and Hook are independent configurations to build order integrations.
 
