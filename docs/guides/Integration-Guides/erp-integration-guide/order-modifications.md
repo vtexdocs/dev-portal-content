@@ -192,7 +192,7 @@ See below which API errors can be returned when attempting to [modify an order v
     <tr>
         <td><code>SalesOrderSystem010</code></td>
         <td><code>It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.</code></td>
-        <td>The specified item <code>id</code> cannot be removed in the original order. Please verify the <code>id</code> in your operation.</td>
+        <td>The specified item <code>id</code> cannot be removed from the original order. Please verify the <code>id</code> in your operation.</td>
     </tr>
     <tr>
         <td><code>SalesOrderSystem011</code></td>
