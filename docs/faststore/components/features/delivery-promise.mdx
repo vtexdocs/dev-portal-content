@@ -18,17 +18,19 @@ This feature introduces the following hooks as part of the regionalization and l
 * `useGeoLocation`: Uses the browser's geolocation API or other client-side methods to auto-detect the user's location when not provided.
 * `useRegion`: Accesses or updates the user's region information, such as postal code or location, and manages region validation flows.
 * `useRegionModal`: Handles modal display logic for region selection, especially when the location input is mandatory.
-* `useDeliveryPromise`: Centralizes all logic for querying, displaying, and updating delivery-availability filters and states.
+* `useDeliveryPromise`: Manages all logic for querying, displaying, and updating delivery-availability filters and states.
 
 ## Filter options
 
-With Delivery Promise, shoppers can filter available products by using a [global filter](#global-filter), which affects all navigation, or a local filter directly on a [Product List Page (PLP) or search page](#plp-or-search-page-filters), affecting only the current page they're navigating.
+Delivery Promise offers shoppers two product filtering options:
+- [Global filters](#global-filters): Applies to all store navigation.
+- [Product List Page (PLP) or search page](#plp-or-search-page-filters): Only applies to the current page they're navigating.
 
 >ℹ Learn more about filters usage and user flows in the [Delivery Promise Figma Community](https://www.figma.com/community/file/1514671929470875586) page.
 
 ### Global filters
 
-Global filters determine the fulfillment method for all user navigation and are applied to all product queries until they change or are cleared.
+Global filters determine the fulfillment method for all user navigation and are applied to all product search until they change or are cleared.
 
 Shoppers can filter available products globally **by shipping** or **by store**.
 
@@ -142,15 +144,15 @@ Open a ticket with [VTEX Support](https://help.vtex.com/en/support) and request 
 
 ### Step 2 - Syncing FastStore project with Headless CMS
 
-Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore project with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+Open a terminal and run the [`faststore cms-sync`](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli#cms-sync) command to sync the `cms` folder of your FastStore project with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
 The expected response is the message `CMS synced successfully...`. The native regionalization components and sections will be automatically updated. You can check them in the VTEX Admin:
 
-* **Regionalization component:** Go to *Storefronts > Headless CMS > Global Sections > NavBar > Navigation > Regionalization*.
+* **Regionalization component:** Go to **Storefronts > Headless CMS > Global Sections > NavBar > Navigation > Regionalization**.
 
-* **Region Bar section:** Go to *Storefronts > Headless CMS > Global Sections > Region Bar*.
+* **Region Bar section:** Go to **Storefronts > Headless CMS > Global Sections > Region Bar**.
 
-* **Region Modal section:** Go to *Storefronts > Headless CMS > Global Sections > Region Modal*.
+* **Region Modal section:** Go to **Storefronts > Headless CMS > Global Sections > Region Modal**.
 
 You only need to [add a new section](#step-3-adding-region-popover-section), the `Region Popover`.
 
