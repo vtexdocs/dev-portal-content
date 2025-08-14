@@ -41,7 +41,7 @@ jobs:
     steps:
     - uses: actions/setup-python@v5
     - uses: actions/checkout@v4
-    - uses: vtexdocs/ai-documentation-reviewer-action@v1.1
+    - uses: vtexdocs/ai-documentation-reviewer-action@v1.2
       id: generate-feedback
       with:
         gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
