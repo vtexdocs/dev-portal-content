@@ -730,18 +730,57 @@ export function Example() {
   <Button variant="primary" size="small">
     {'Button'}
   </Button>
+</OverviewSection>
+
+```tsx
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary" size="small">
+            Button
+        </Button>
+
+
+    );
+}
+```
+
+<TokenTable>
+  <TokenRow
+    token="--fs-button-small-padding"
+    value="var(--fs-spacing-0) var(--fs-spacing-1)"
+  />
+  <TokenRow token="--fs-button-small-min-height" value="var(--fs-spacing-5)" />
+  <TokenRow token="--fs-button-small-gap" value="var(--fs-spacing-1)" />
+  <TokenDivider />
+  <TokenRow token="--fs-button-small-icon-width" value="var(--fs-spacing-3)" />
+  <TokenRow
+    token="--fs-button-small-icon-height"
+    value="var(--fs-button-small-icon-width)"
+  />
+</TokenTable>
+
+#### Small with an icon
+
+<OverviewSection>
   <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
     {'Button'}
   </Button>
 </OverviewSection>
 
 ```tsx
-<Button variant="primary" size="small">
-  Button
-</Button>
-<Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
-  Button
-</Button>
+import { Button, Icon } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
+            Button
+        </Button>
+
+
+    );
+}
 ```
 
 <TokenTable>
