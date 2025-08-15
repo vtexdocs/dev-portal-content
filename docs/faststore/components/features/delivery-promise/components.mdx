@@ -16,7 +16,7 @@ Below are the core components related to the Delivery Promise feature in FastSto
 
 `RegionButton` is a desktop-only component integrated into the `NavBar` section, under the Global Sections content type in the Headless CMS.
 
-Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+Its behavior is context-dependent, meaning if a shopper doesn't add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 When customizing the `NavBar` section, you must also customize `RegionButton`.
 
@@ -29,7 +29,7 @@ This component leverages the following:
 
 ### RegionModal
 
-`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, so the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
+`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, which means the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
 
 When customizing the `NavBar` section, you must also customize `RegionModal`.
 
@@ -44,7 +44,7 @@ This component leverages the following:
 
 `RegionBar` is a mobile-only component that acts as a section under the Global Sections content type in the Headless CMS.
 
-Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+Its behavior is context-dependent, meaning if a shopper doesn't add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 Even if the `NavBar` is customized, you can use the native `RegionBar`.
 
@@ -74,7 +74,7 @@ The `RegionSlider` component enables shoppers to manage their delivery-related l
 
 This component leverages the following:
 
-* **UI Components:** [SliderOver](https://developers.vtex.com/docs/guides/faststore/organisms-slide-over)
+* **UI Components:** [SlideOver](https://developers.vtex.com/docs/guides/faststore/organisms-slide-over)
 * **Hooks:** `useRegion` and `useDeliveryPromise`
 
 It includes three interaction types: Setting a new location (no postal code set), changing an existing location (postal code set), and selecting a pickup point (pickup point filter) for more precise delivery options.
@@ -83,7 +83,7 @@ It includes three interaction types: Setting a new location (no postal code set)
 
 ![setLocation](https://vtexhelp.vtexassets.com/assets/docs/src/set-location___c737fdd322b9233809e4f876f1feeb41.png)
 
-* **Post code set:** User clicks the postal code link, then the `RegionSlider` appears to change location.
+* **Postal code set:** User clicks the postal code link, then the `RegionSlider` appears to change location.
 
 ![changeLocation](https://vtexhelp.vtexassets.com/assets/docs/src/change-location___4f3e2a93c0aec741af90968b84779aa1.png)
 
