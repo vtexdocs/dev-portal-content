@@ -1,0 +1,105 @@
+---
+title: "Delivery Promise components"
+---
+
+This guide outlines the main components related to the Delivery Promise feature for FastStore. It details the structure of these elements and emphasizes the necessary customizations when altering standard sections, such as `NavBar` and `ProductGallery`.
+
+You'll understand which components are reusable and which need to be customized, serving as a connection between native implementation and customized modifications.
+
+Delivery Promise introduces a set of modular components and hooks. These are structured in the FastStore core and UI packages, and are inserted into key sections. We'll focus on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, including the FastStore starter.
+
+Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
+
+## Components
+
+Below are the core components related to the Delivery Promise feature in FastStore.
+
+### RegionButton
+
+`RegionButton` is a desktop-only component integrated into the `NavBar` section, under the Global Sections content type in the Headless CMS.
+Its behavior is context-dependent, meaning that if a shopper doesn’t add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Also, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+
+When customizing the `NavBar` section, you must also customize `RegionButton`.
+
+This component leverages the following:
+
+* **UI Components:** [`Button`](https://developers.vtex.com/docs/guides/faststore/atoms-button)  and [`Icon`](https://developers.vtex.com/docs/guides/faststore/atoms-icon).
+* **Hooks:** `useSession`
+
+![RegionButton](https://vtexhelp.vtexassets.com/assets/docs/src/region-button___ccb03f5e9e36d837a4b03aae6a0a58ff.png)
+
+### RegionModal
+
+`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, such that the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
+
+When customizing the `NavBar` section, you must also customize `RegionModal`.
+
+This component leverages the following:
+
+* **UI Components:** [`RegionModal`](https://developers.vtex.com/docs/guides/faststore/organisms-region-modal)
+* **Hooks:** `useRegion`
+
+![RegionModal](https://vtexhelp.vtexassets.com/assets/docs/src/region-modal___6352f280eeb8eb77ee4674a5caf4f328.png)
+
+### RegionBar
+
+`RegionBar` is a mobile-only component that acts as a section under the Global Sections content type in the Headless CMS.
+
+Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Also, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+
+Even if the `NavBar` is customized, you can use the native `RegionBar`.
+
+This component leverages the following:
+
+* **UI Components**: [RegionBar](https://developers.vtex.com/docs/guides/faststore/molecules-region-bar)
+* **Hooks:** `useSession`
+
+![RegionBar](https://vtexhelp.vtexassets.com/assets/docs/src/region-bar___ef5221d500b05778f136a540a35253bd.png)
+
+### RegionPopover
+
+`RegionPopover` is a component that serves as a section under the Global Sections content type in the Headless CMS. When a default postal code is set in the `discovery.config.js` file, the location data (city and postal code) is displayed in a `Popover`.
+
+When customizing the `RegionBar` or `RegionButton` components, you must also customize `RegionPopover`.
+
+This component leverages the following:
+
+* **UI Components**: [`Icon`](https://developers.vtex.com/docs/guides/faststore/atoms-icon), [`InputField`](https://developers.vtex.com/docs/guides/faststore/molecules-input-field), [`Link`](https://developers.vtex.com/docs/guides/faststore/atoms-link), and [`Popover`](https://developers.vtex.com/docs/guides/faststore/molecules-popover).
+* **Hooks:** `useSession`, `useRegion`
+
+![RegionPopover](https://vtexhelp.vtexassets.com/assets/docs/src/regionpopover___dedb0aad756657e71d4c8d40cb2ef5e7.png)
+
+### RegionSlider
+
+`RegionSlider` component enables shoppers to manage their delivery-related location settings and pickup point filters in the Product Detail Pages (PLPs) or search pages. This component is implemented as a Global Section, making it available throughout the store. It can be implemented in mobile and desktop browsers.
+
+This component leverages the following:
+
+* **UI Components:** [SliderOver](https://developers.vtex.com/docs/guides/faststore/organisms-slide-over)
+* **Hooks:** `useRegion` and `useDeliveryPromise`
+
+It includes three interaction types: Setting a new location (no postal code set), changing an existing location (postal code set), and selecting a pickup point (pickup point filter) for more precise delivery options.
+
+* **No postal code set:** User clicks the "Set location" button, then the `RegionSlider` appears to set a postal code.
+
+![setLocation](https://vtexhelp.vtexassets.com/assets/docs/src/set-location___c737fdd322b9233809e4f876f1feeb41.png)
+
+* **Post code set:** User clicks the postal code link, then the `RegionSlider` appears to change location.
+
+![changeLocation](https://vtexhelp.vtexassets.com/assets/docs/src/change-location___4f3e2a93c0aec741af90968b84779aa1.png)
+
+* **Pickup point filter:** User applies or clears filters related to pickup points. When filters are cleared, the `RegionSlider` resets its state and removes selected pickup points without closing the component.
+
+![changePickupPoint](https://vtexhelp.vtexassets.com/assets/docs/src/change-pickup-point___458c47c2a06d40385e47058bcbfeaac2.png)
+
+### FilterDesktop
+
+`FilterDesktop` is a desktop-only component integrated into the `ProductGallery` section, under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that aggregates all search and PLP filters.
+
+![FilterDesktop](https://vtexhelp.vtexassets.com/assets/docs/src/filter-desktop___b7c358c72f742ab91467621e4d19839a.png)
+
+### FilterSlider
+
+`FilterSlider` is a mobile-only component integrated into the `ProductGallery` section under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that aggregates all search and PLP filters.
+
+![FilterSlider](https://vtexhelp.vtexassets.com/assets/docs/src/filter-slider___f885f64836ae3bf247ab7b849575230d.png)
