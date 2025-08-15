@@ -54,7 +54,7 @@ Import the component from [@faststore/ui](https://developers.vtex.com/docs/guide
 import { Button } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles into your FastStore project
 
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
@@ -63,17 +63,6 @@ To apply the styles of this component in your FastStore project, import the foll
 ```
 
 Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
-
-<OverviewSection>
-  <Button variant="primary">Add to Cart</Button>
-</OverviewSection>
-```tsx
-<Button variant="primary">Add to Cart</Button>
-```
 
 ---
 
@@ -123,9 +112,35 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
+---
 
-#### Icon
+## Default usage
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary">Add to Cart</Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button variant="primary">Add to Cart</Button>
+
+        );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Examples
+
+### Button with an icon
 
 <OverviewSection>
   <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
@@ -134,16 +149,24 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
-  Add to Cart
-</Button>
+import { Button, Icon } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
+            Add to Cart
+        </Button>
+
+
+    );
+}
 ```
 
 <TokenTable>
   <TokenRow token="--fs-button-icon-padding" value="0 var(--fs-spacing-1)" />
 </TokenTable>
 
-### Hierarchy
+### Visual hierarchy
 
 #### Primary
 
@@ -152,7 +175,15 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Button variant="primary">Button</Button>
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary">Button</Button>
+
+
+    );
+}
 ```
 
 <TokenTable>
@@ -221,9 +252,16 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Button inverse variant="primary">
-  Button
-</Button>
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button inverse variant="primary">
+            Button
+        </Button>
+
+    );
+}
 ```
 
 <TokenTable>
@@ -292,7 +330,14 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Button variant="secondary">Button</Button>
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="secondary">Button</Button>
+
+    );
+}
 ```
 
 <TokenTable>
@@ -363,9 +408,15 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Button inverse variant="secondary">
-  Button
-</Button>
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button inverse variant="secondary">
+            Button
+        </Button>
+    );
+}
 ```
 
 <TokenTable>
@@ -438,7 +489,14 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Button variant="tertiary">Button</Button>
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="tertiary">Button</Button>
+
+    );
+}
 ```
 
 <TokenTable>
@@ -507,9 +565,16 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Button inverse variant="tertiary">
-  Button
-</Button>
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button inverse variant="tertiary">
+            Button
+        </Button>
+
+    );
+}
 ```
 
 <TokenTable>
@@ -586,9 +651,17 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Button variant="primary" disabled>
-  Button
-</Button>
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary" disabled>
+            Button
+        </Button>
+
+
+    );
+}
 ```
 
 <TokenTable>
@@ -630,16 +703,23 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <Tab>
 
     ```tsx
-    const [loading, setLoading] = useState(false)
+    import React, { useState } from "react";
+    import { Button } from "@faststore/ui";
 
-    <Button
-      variant="primary"
-      onClick={() => setLoading(true)}
-      loadingLabel="Loading"
-      loading={loading}
-    >
-      Click me to trigger loading
-    </Button>
+    export function Example() {
+        const [loading, setLoading] = useState(false);
+
+        return (
+            <Button
+                variant="primary"
+                onClick={() => setLoading(true)}
+                loadingLabel="Loading"
+                loading={loading}
+            >
+                Click me to trigger loading
+            </Button>
+        );
+    }
     ```
 
   </Tab>
@@ -658,18 +738,57 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <Button variant="primary" size="small">
     {'Button'}
   </Button>
+</OverviewSection>
+
+```tsx
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary" size="small">
+            Button
+        </Button>
+
+
+    );
+}
+```
+
+<TokenTable>
+  <TokenRow
+    token="--fs-button-small-padding"
+    value="var(--fs-spacing-0) var(--fs-spacing-1)"
+  />
+  <TokenRow token="--fs-button-small-min-height" value="var(--fs-spacing-5)" />
+  <TokenRow token="--fs-button-small-gap" value="var(--fs-spacing-1)" />
+  <TokenDivider />
+  <TokenRow token="--fs-button-small-icon-width" value="var(--fs-spacing-3)" />
+  <TokenRow
+    token="--fs-button-small-icon-height"
+    value="var(--fs-button-small-icon-width)"
+  />
+</TokenTable>
+
+#### Small with an icon
+
+<OverviewSection>
   <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
     {'Button'}
   </Button>
 </OverviewSection>
 
 ```tsx
-<Button variant="primary" size="small">
-  Button
-</Button>
-<Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
-  Button
-</Button>
+import { Button, Icon } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
+            Button
+        </Button>
+
+
+    );
+}
 ```
 
 <TokenTable>
@@ -693,8 +812,8 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 Use the `Button` component to communicate user actions on the following components:
 
-- `Buy now` and `Add to cart` buttons on [Product Cards](https://developers.vtex.com/docs/guides/faststore/molecules-product-card).
-- Submit and/or withdraw actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) windows.
+- `Buy Now` and `Add to Cart` buttons on [Product Cards](https://developers.vtex.com/docs/guides/faststore/molecules-product-card).
+- Submit and/or cancel actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) windows.
 
 ---
 
@@ -725,12 +844,12 @@ For further customization, you can use the following data attributes:
 - Place the buttons in an **order that reflects a conversation between the user and the system**.
 - Provide visual or audio **feedback on interactions**. Whenever a user interacts with a button, the button should change its state and let the user know that something is happening as a consequence.
 - Define a style system for your **button states** (i.e., normal, focus, hover, active, pressed, disabled).
-- Use icon-only buttons only for widespread actions with highly standardized icons, such as a cross for close.
+- Use icon-only buttons only for widespread actions with highly standardized icons, such as a cross for closing.
 - Use the `aria-label` attribute to provide a textual alternative for icon-only buttons.
 
 ### ❌ Don'ts
 
-- Don’t make users hunt for buttons. Place buttons where users expect to see them or can easily find them.
+- Don't make users hunt for buttons. Place buttons where users expect to see them or can easily find them.
 - Don't rely on icons to communicate complex actions.
 - Don't use generic words that can potentially confuse users.
 - Avoid cluttering the UI with too many buttons.
@@ -747,7 +866,7 @@ For further customization, you can use the following data attributes:
 <SectionList grid="column">
   <SectionItem
     title="IconButton"
-    description="A button which content is only an icon, without any label."
+    description="A button that contains only an icon"
     actionPath="https://developers.vtex.com/docs/guides/faststore/molecules-icon-button"
   >
     <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" />
