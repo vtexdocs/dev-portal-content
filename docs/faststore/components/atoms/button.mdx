@@ -695,16 +695,23 @@ export function Example() {
   <Tab>
 
     ```tsx
-    const [loading, setLoading] = useState(false)
+    import React, { useState } from "react";
+    import { Button } from "@faststore/ui";
 
-    <Button
-      variant="primary"
-      onClick={() => setLoading(true)}
-      loadingLabel="Loading"
-      loading={loading}
-    >
-      Click me to trigger loading
-    </Button>
+    export function Example() {
+        const [loading, setLoading] = useState(false);
+
+        return (
+            <Button
+                variant="primary"
+                onClick={() => setLoading(true)}
+                loadingLabel="Loading"
+                loading={loading}
+            >
+                Click me to trigger loading
+            </Button>
+        );
+    }
     ```
 
   </Tab>
