@@ -2,11 +2,11 @@
 title: "Delivery Promise components"
 ---
 
-This guide outlines the main components related to the Delivery Promise feature for FastStore. It details the structure of these elements and emphasizes the necessary customizations when altering standard sections, such as `NavBar` and `ProductGallery`.
+This guide outlines the main components related to the Delivery Promise feature for FastStore. It details the structure of these elements and emphasizes the necessary customizations required when altering standard sections, such as `NavBar` and `ProductGallery`.
 
 You'll understand which components are reusable and which need to be customized, illustrating the connection between native implementation and customized modifications.
 
-Delivery Promise introduces a set of modular components and hooks. These are structured in the FastStore core and UI packages, and are inserted into key sections. We'll focus on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, including the FastStore starter.
+Delivery Promise introduces a set of modular components and hooks. These are structured in the FastStore core and UI packages, and are inserted into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, including the FastStore starter.
 
 Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
 
@@ -51,7 +51,7 @@ Even if the `NavBar` is customized, you can use the native `RegionBar`.
 
 This component leverages the following:
 
-* **UI Components**: [RegionBar](https://developers.vtex.com/docs/guides/faststore/molecules-region-bar)
+* **UI Components**: [`RegionBar`](https://developers.vtex.com/docs/guides/faststore/molecules-region-bar)
 * **Hooks:** `useSession`
 
 ![RegionBar](https://vtexhelp.vtexassets.com/assets/docs/src/region-bar___ef5221d500b05778f136a540a35253bd.png)
@@ -71,7 +71,7 @@ This component leverages the following:
 
 ### RegionSlider
 
-`RegionSlider` component enables shoppers to manage their delivery-related location settings and pickup point filters in the Product Detail Pages (PLPs) or search pages. This component is implemented as a Global Section, making it available throughout the store. It can be implemented in mobile and desktop browsers.
+The `RegionSlider` component enables shoppers to manage their delivery-related location settings and pickup point filters in the Product Detail Pages (PLPs) or search pages. This component is implemented as a Global Section, making it available throughout the store. It works on mobile and desktop browsers.
 
 This component leverages the following:
 
