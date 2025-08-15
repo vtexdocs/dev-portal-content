@@ -72,7 +72,14 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <Button variant="primary">Add to Cart</Button>
 </OverviewSection>
 ```tsx
-<Button variant="primary">Add to Cart</Button>
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary">Add to Cart</Button>
+
+    );
+}
 ```
 
 ---
