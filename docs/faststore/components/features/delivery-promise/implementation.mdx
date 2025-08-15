@@ -1,20 +1,13 @@
 ---
-title: "Delivery Promise"
+title: "Implementing Delivery Promise"
+updatedAt: "2025-08-15T14:36:33.694Z"
 ---
 
 >ℹ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
 In this guide, you’ll learn how to configure Delivery Promise in your FastStore project.
 
-**Delivery Promise** is a feature that provides accurate and reliable delivery estimations for available products based on the customer location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at nearby locations.
-
-This solution continuously updates product availability throughout the buying journey by responding to changes in catalog, pricing, inventory, or shipping settings. These updates are then sent to [Checkout](https://developers.vtex.com/docs/guides/checkout-overview) and [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search), ensuring customers see up-to-date options based on their region.
-
-This feature introduces new hooks as part of the regionalization and location workflow:
-
-- `useRegion`: Accesses or updates the user's region information, such as postal code or location.
-- `useRegionModal`: Handles modal display logic for region selection, especially when the location input is required.
-- `useGeoLocation`: Uses the browser’s geolocation API or other client-side methods to attempt to auto-detect the user's location.
+To understand how Delivery Promise operates, see the guide [Delivery Promise (Beta)](https://developers.vtex.com/docs/guides/faststore/features-delivery-promise-overview).
 
 ## Default settings
 
@@ -29,8 +22,8 @@ deliveryPromise: {
   },
 ```
 
-- `enabled`: When set to **true**, Delivery Promise activates, allowing the store to provide delivery estimates based on the user’s location.
-- `mandatory`: When set to **false**, providing a postal code is optional for the user. Users can browse and add items to the cart without entering their postal code, though the accuracy of delivery information may be limited.
+* `enabled`: When set to **true**, Delivery Promise activates, allowing the store to provide delivery estimates based on the user’s location.
+* `mandatory`: When set to **false**, providing a postal code is optional for the user. Users can browse and add items to the cart without entering their postal code, though the accuracy of delivery information may be limited.
 
 ## Before you begin
 
@@ -111,11 +104,11 @@ Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore 
 
 The expected response is that you receive the message `CMS synced successfully...`. The native regionalization components and sections will be automatically updated. You can check them in the VTEX Admin:
 
-- **Regionalization component:** Go to *Storefronts > Headless CMS > Global Sections > NavBar > Navigation > Regionalization*.
+- **Regionalization component:** Go to **Storefronts > Headless CMS > Global Sections > NavBar > Navigation > Regionalization**.
 
-- **Region Bar section:** Go to *Storefronts > Headless CMS > Global Sections > Region Bar*.
+- **Region Bar section:** Go to **Storefronts > Headless CMS > Global Sections > Region Bar**.
 
-- **Region Modal section:** Go to *Storefronts > Headless CMS > Global Sections > Region Modal*.
+- **Region Modal section:** Go to **Storefronts > Headless CMS > Global Sections > Region Modal**.
 
 You only need to [add a new section](#step-3-adding-region-popover-section), the `Region Popover`.
 
@@ -316,7 +309,7 @@ Follow the steps below to add the `RegionPopover` section to the Headless CMS.
 
 Learn more in [Adding Sections to the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)
 
-### Step 4 - [Optional] Defining a default postal code
+### Step 4 - (Optional) Defining a default postal code
 
 The default postal code is a fallback mechanism when the user doesn't provide a location, isn't logged in, or has no saved address.
 
@@ -343,29 +336,3 @@ To set a default postal code for your store, follow the steps below:
         person: null,
       },
       ```
-
-## Understanding location priority
-
-To provide accurate Delivery Promise estimates, FastStore projects determine user location based on the following priority:
-
-1. **User-provided location:** If the user provided their location, such as postal code, this information is used.
-2. **Logged-in user’s address:** If the user hasn’t provided a postal code, we attempt to identify the location using the logged-in user's address.
-3. **Default postal code:** If the user hasn't provided a location, isn’t logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
-4. **No postal code (not required):** If no postal code is provided and not required, products are displayed without using Delivery Promise.
-5. **No postal code (required)**: If no postal code is provided when it's required, a modal is displayed that the buyer can't close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
-
-To better understand how this flow works, see the following diagram.
-
-```mermaid
-graph LR
-    A{"User provided location?"} -- Yes --> B(["Use the provided location"])
-    A -- No --> C{"Logged-in user's address available?"}
-    C -- Yes --> D(["Use the logged-in user's address"])
-    C -- No --> E{"Default postal code configured?"}
-    E -- Yes --> F(["Use the default postal code"])
-    E -- No --> H{"Postal code mandatory?"}
-    H -- Yes --> K(["Display mandatory postal code modal"])
-    K --> L["User inputs postal code"]
-    L --> M(["Use the provided postal code"])
-    H -- No --> N(["Display products without using Delivery Promise"])
-```
