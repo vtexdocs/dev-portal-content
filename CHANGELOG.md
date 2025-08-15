@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.49](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.48...v1.1.49) (2025-08-15)
+
+
+### 📝 Documentation updates
+
+* add callout about faststore refresh token ([9e1ef37](https://github.com/vtexdocs/dev-portal-content/commit/9e1ef37517515f34f3785055c6ddb9f437b02cc0))
+
 ### [1.1.48](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.47...v1.1.48) (2025-08-15)
 
 ### [1.1.47](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.46...v1.1.47) (2025-08-15)
