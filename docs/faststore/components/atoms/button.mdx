@@ -54,7 +54,7 @@ Import the component from [@faststore/ui](https://developers.vtex.com/docs/guide
 import { Button } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles into your FastStore project
 
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
@@ -813,7 +813,7 @@ export function Example() {
 Use the `Button` component to communicate user actions on the following components:
 
 - `Buy now` and `Add to cart` buttons on [Product Cards](https://developers.vtex.com/docs/guides/faststore/molecules-product-card).
-- Submit and/or withdraw actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) windows.
+- Submit and/or cancel actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) windows.
 
 ---
 
@@ -849,7 +849,7 @@ For further customization, you can use the following data attributes:
 
 ### ❌ Don'ts
 
-- Don’t make users hunt for buttons. Place buttons where users expect to see them or can easily find them.
+- Don't make users hunt for buttons. Place buttons where users expect to see them or can easily find them.
 - Don't rely on icons to communicate complex actions.
 - Don't use generic words that can potentially confuse users.
 - Avoid cluttering the UI with too many buttons.
@@ -866,7 +866,7 @@ For further customization, you can use the following data attributes:
 <SectionList grid="column">
   <SectionItem
     title="IconButton"
-    description="A button which content is only an icon, without any label."
+    description="A button that contains only an icon"
     actionPath="https://developers.vtex.com/docs/guides/faststore/molecules-icon-button"
   >
     <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" />
