@@ -66,7 +66,7 @@ To provide accurate Delivery Promise estimates, FastStore projects determine use
 2. **User-provided location:** If the user is logged in but doesn't have a saved address, or isn’t logged in but provides their location, like a postal code, this data is used.
 3. **Default postal code:** If the user hasn't provided a location, isn't logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
 4. **No postal code (not required):** If no postal code is provided and not required, products are displayed without using Delivery Promise.
-5. ****No postal code (required):** If no postal code is provided when required, a modal is displayed that the buyer can't close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
+5. **No postal code (required):** If no postal code is provided when required, a modal is displayed that the buyer can't close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
 
 To better understand how this flow works, see the following diagram:
 
@@ -90,5 +90,3 @@ graph LR
 
     H -- No --> N(["Display products without using Delivery Promise"])
 ```
-
-
