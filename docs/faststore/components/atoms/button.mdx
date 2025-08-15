@@ -66,24 +66,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Usage
-
-<OverviewSection>
-  <Button variant="primary">Add to Cart</Button>
-</OverviewSection>
-```tsx
-import { Button } from "@faststore/ui";
-
-export function Example() {
-    return (
-        <Button variant="primary">Add to Cart</Button>
-
-    );
-}
-```
-
----
-
 ## Props
 
 <ComponentPropsSection component="Button" />
@@ -130,9 +112,29 @@ export function Example() {
   />
 </TokenTable>
 
-### Nested Elements
+---
 
-#### Icon
+## Default usage
+
+<OverviewSection>
+  <Button variant="primary">Add to Cart</Button>
+</OverviewSection>
+```tsx
+import { Button } from "@faststore/ui";
+
+export function Example() {
+    return (
+        <Button variant="primary">Add to Cart</Button>
+
+    );
+}
+```
+
+---
+
+## Examples
+
+### Button with an icon
 
 <OverviewSection>
   <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
@@ -158,7 +160,7 @@ export function Example() {
   <TokenRow token="--fs-button-icon-padding" value="0 var(--fs-spacing-1)" />
 </TokenTable>
 
-### Hierarchy
+### Visual hierarchy
 
 #### Primary
 
