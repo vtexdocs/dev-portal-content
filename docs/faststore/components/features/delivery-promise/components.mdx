@@ -2,7 +2,7 @@
 title: "Delivery Promise components"
 ---
 
-This guide outlines the main components related to the Delivery Promise feature for FastStore. It details the structure of these elements and emphasizes the necessary customizations required when altering standard sections, such as `NavBar` and `ProductGallery`.
+This guide outlines the main components related to the Delivery Promise feature for FastStore. It details the structure of these elements and emphasizes the customizations required when altering standard sections, such as `NavBar` and `ProductGallery`.
 
 You'll understand which components are reusable and which need to be customized, illustrating the connection between native implementation and customized modifications.
 
@@ -17,7 +17,8 @@ Below are the core components related to the Delivery Promise feature in FastSto
 ### RegionButton
 
 `RegionButton` is a desktop-only component integrated into the `NavBar` section, under the Global Sections content type in the Headless CMS.
-Its behavior is context-dependent, meaning that if a shopper doesn’t add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Also, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+
+Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 When customizing the `NavBar` section, you must also customize `RegionButton`.
 
@@ -30,7 +31,7 @@ This component leverages the following:
 
 ### RegionModal
 
-`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, so that the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
+`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, so the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
 
 When customizing the `NavBar` section, you must also customize `RegionModal`.
 
@@ -45,7 +46,7 @@ This component leverages the following:
 
 `RegionBar` is a mobile-only component that acts as a section under the Global Sections content type in the Headless CMS.
 
-Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Also, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 Even if the `NavBar` is customized, you can use the native `RegionBar`.
 
