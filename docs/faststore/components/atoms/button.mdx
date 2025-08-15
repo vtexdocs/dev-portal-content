@@ -141,11 +141,14 @@ export function Example() {
 </OverviewSection>
 
 ```tsx
-import { Button } from "@faststore/ui";
+import { Button, Icon } from "@faststore/ui";
 
 export function Example() {
     return (
-        <Button variant="primary">Add to Cart</Button>
+        <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
+            Add to Cart
+        </Button>
+
 
     );
 }
