@@ -1,200 +1,274 @@
----
-title: "Retrieving ads"
-slug: "retrieving-ads"
-excerpt: "Learn how to fetch relevant ads based on context like search terms, categories, or behavior."
-hidden: false
-createdAt: "2025-05-21T13:27:20.000Z"
-updatedAt: "2025-05-21T22:18:24.684Z"
----
+# Retrieving ads
 
-The VTEX Ads API allows you to retrieve three types of ad formats:
+VTEX Ads allows you to retrieve sponsored products to display in your storefront. This guide explains how to use the API to fetch ads for different contexts and page types.
 
-- Sponsored products (Product ads)
-- Sponsored brands
-- Banner / Display ads
+## API endpoint
 
-Use the `POST` [Get ads](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-) endpoint to fetch both formats through a unified interface.
+Use the following endpoint to retrieve sponsored products:
 
->ℹ️ Responses are cached for 10 minutes.
+```
+GET https://{accountName}.vtexcommercestable.com.br/api/ads/sponsored-products
+```
 
-All ad requests require:
+## Authentication
 
-- A context (search, category, brand, product, or home)
-- User identification (`user_id` and `session_id`)
-- Placement configuration
+Include your VTEX API credentials in the request headers:
 
-Learn more about each field in the [API Reference](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).
+```javascript
+headers: {
+  'X-VTEX-API-AppKey': 'your-app-key',
+  'X-VTEX-API-AppToken': 'your-app-token',
+  'Content-Type': 'application/json'
+}
+```
 
-### Search context
+## Query parameters
 
-Used when retrieving ads for search results pages.
+The API accepts the following query parameters:
 
-```json
-{
-    "context": "search",
-    "term": "desodorante",
-    "user_id": "6a746448-cf59-42bc-aa3d-a426844ad115",
-    "session_id": "f361661f-5986-4779-9009-a34562f18347",
-    "tags": ["Mega Maio"],
-    "placements": {
-        "placementName1": { "quantity": 1, "size": "desktop", "types": ["banner"] },
-        "placementName2": { "quantity": 2, "size": "tamanho3", "types": ["product"] }
+- **`query`**: Search term or keyword
+- **`category`**: Category ID to filter products
+- **`context`**: Page context (e.g., `search`, `category`, `product_page`, `home`)
+- **`limit`**: Number of products to return (default: 10, max: 50)
+- **`page`**: Page number for pagination
+- **`brand`**: Brand ID for brand-specific ads
+- **`price_min`**: Minimum price filter
+- **`price_max`**: Maximum price filter
+- **`sort`**: Sorting criteria (relevance, price, popularity)
+
+## Context-specific implementations
+
+### Search results page
+
+For search results pages, use the `search` context:
+
+```javascript
+const getSearchAds = async (searchTerm, page = 1) => {
+  const params = {
+    query: searchTerm,
+    context: 'search',
+    limit: 4,
+    page: page
+  };
+  
+  const queryParams = new URLSearchParams(params);
+  
+  const response = await fetch(
+    `https://${accountName}.vtexcommercestable.com.br/api/ads/sponsored-products?${queryParams}`,
+    {
+      method: 'GET',
+      headers: {
+        'X-VTEX-API-AppKey': 'your-app-key',
+        'X-VTEX-API-AppToken': 'your-app-token',
+        'Content-Type': 'application/json'
+      }
     }
-}
+  );
+  
+  return await response.json();
+};
+
+// Usage
+const searchAds = await getSearchAds('smartphone');
 ```
 
-### Category context
+### Category page
 
-Used for category pages.
+For category pages, use the `category` context:
 
-```json
-{
-    "context": "category",
-    "category_name": "Telefones e Celulares > Smartphones > iPhone",
-    "user_id": "6a746448-cf59-42bc-aa3d-a426844ad115",
-    "session_id": "f361661f-5986-4779-9009-a34562f18347",
-    "placements": {
-        "placementName1": { "quantity": 1, "size": "tamanho1", "types": ["banner"] },
-        "placementName2": { "quantity": 2, "size": "tamanho3", "types": ["product"] }
+```javascript
+const getCategoryAds = async (categoryId) => {
+  const params = {
+    category: categoryId,
+    context: 'category',
+    limit: 6,
+    sort: 'relevance'
+  };
+  
+  const queryParams = new URLSearchParams(params);
+  
+  const response = await fetch(
+    `https://${accountName}.vtexcommercestable.com.br/api/ads/sponsored-products?${queryParams}`,
+    {
+      method: 'GET',
+      headers: {
+        'X-VTEX-API-AppKey': 'your-app-key',
+        'X-VTEX-API-AppToken': 'your-app-token',
+        'Content-Type': 'application/json'
+      }
     }
-}
+  );
+  
+  return await response.json();
+};
+
+// Usage
+const categoryAds = await getCategoryAds('electronics');
 ```
 
-### Brand context
+### Product detail page
 
-Used for brand-specific pages.
+For product detail pages, use the `product_page` context to get relevant cross-sell and upsell recommendations:
 
-```json
-{
-    "context": "brand",
-    "brand_name": "iphone",
-    "user_id": "6a746448-cf59-42bc-aa3d-a426844ad115",
-    "session_id": "f361661f-5986-4779-9009-a34562f18347",
-    "placements": {
-        "placementName1": { "quantity": 1, "size": "tamanho1", "types": ["banner"] },
-        "placementName2": { "quantity": 2, "size": "tamanho3", "types": ["product"] }
+```javascript
+const getProductPageAds = async (productId, categoryId) => {
+  const params = {
+    category: categoryId,
+    context: 'product_page',
+    exclude: productId, // Exclude current product
+    limit: 4,
+    sort: 'relevance'
+  };
+  
+  const queryParams = new URLSearchParams(params);
+  
+  const response = await fetch(
+    `https://${accountName}.vtexcommercestable.com.br/api/ads/sponsored-products?${queryParams}`,
+    {
+      method: 'GET',
+      headers: {
+        'X-VTEX-API-AppKey': 'your-app-key',
+        'X-VTEX-API-AppToken': 'your-app-token',
+        'Content-Type': 'application/json'
+      }
     }
-}
+  );
+  
+  return await response.json();
+};
+
+// Usage
+const productPageAds = await getProductPageAds('product-123', 'electronics');
 ```
 
-### Product context (PDP)
+### Home page
 
-Used on product detail pages.
+For home page implementations, use the `home` context:
 
-```json
-{
-  "context": "product_page",
-  "product_sku": "120210",
-  "product_attributes": {
-    "category_name": "Telefones e Celulares > Smartphones > iPhone",
-    "brand": "iphone"
-  },
-  "user_id": "6f92d1e9-00b6-4f8b-9645-faeab321e1cc",
-  "session_id": "5898b8d1-c250-4bb5-931b-8b9d0ee7b499",
-  "placements": {
-    "placementName1": { "quantity": 1, "size": "tamanho1", "types": ["banner"] },
-    "placementName2": { "quantity": 2, "size": "tamanho3", "types": ["product"] }
-  }
-}
-```
+```javascript
+const getHomePageAds = async () => {
+  const params = {
+    context: 'home',
+    limit: 8,
+    sort: 'popularity'
+  };
+  
+  const queryParams = new URLSearchParams(params);
+  
+  const response = await fetch(
+    `https://${accountName}.vtexcommercestable.com.br/api/ads/sponsored-products?${queryParams}`,
+    {
+      method: 'GET',
+      headers: {
+        'X-VTEX-API-AppKey': 'your-app-key',
+        'X-VTEX-API-AppToken': 'your-app-token',
+        'Content-Type': 'application/json'
+      }
+    }
+  );
+  
+  return await response.json();
+};
 
-### Home context
-
-Used for homepage or non-targeted contexts. Shows ads most relevant to the user based on their history.
-
-```json
-{
-  "context": "home",
-  "user_id": "6f92d1e9-00b6-4f8b-9645-faeab321e1cc",
-  "session_id": "5898b8d1-c250-4bb5-931b-8b9d0ee7b499",
-  "placements": {
-    "placementName1": { "quantity": 1, "size": "tamanho1", "types": ["banner"] },
-    "placementName2": { "quantity": 2, "size": "tamanho3", "types": ["product"] }
-  }
-}
+// Usage
+const homePageAds = await getHomePageAds();
 ```
 
 ## Response structure
 
->ℹ️ Successful responses return HTTP code 200.
+The API returns a structured response:
 
-The response is a dictionary where:
-
-- Each key corresponds to a placement name from the request.
-- Results maintain the same order as the query.
-- Each ad includes tracking URLs for clicks, impressions and views.
-
-### Standard ad response example
-
-```json
+```javascript
 {
-    "placementName1": [
-        {
-            "ad_id": "6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce",
-            "media_url": "https://cdn.newtail.com.br/retail_media/ads/2023/05/03/f97a938660e56fe38a9c9ade21c27df8-1280x256-red.png",
-            "destination_url": null,
-            "type": "banner",
-            "click_url": "https://events.newtail-media.newtail.com.br/v1/beacon/click/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "impression_url": "https://events.newtail-media.newtail.com.br/v1/beacon/impression/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner",
-            "view_url": "https://events.newtail-media.newtail.com.br/v1/beacon/view/6d2d8837-bf5a-4ba4-90d2-5546cb18d5ce?publisher_id=0d675bf6-03f6-4b81-9617-e79dffddc3ab&ad_type=banner"
-        }
-    ]
-}
-```
-
-### Sponsored brands example
-
-Sponsored brands campaigns have a different response format that includes brand information and related products.
-
-> 🚧 All events must be triggered for both the ad and its products.
-
-Request example:
-
-```json
-{
-    "context": "search",
-    "term": "smartphone",
-    "placements": {
-        "placement_name": { "quantity": 1, "types": ["sponsored_brand"] }
+  "products": [
+    {
+      "id": "product-123",
+      "name": "Product Name",
+      "brand": "Brand Name",
+      "price": 99.99,
+      "image": "https://example.com/image.jpg",
+      "url": "https://store.com/product-123",
+      "campaign": {
+        "id": "campaign-456",
+        "name": "Summer Sale",
+        "bid_amount": 1.50
+      },
+      "tracking": {
+        "impression_id": "imp-789",
+        "click_url": "https://ads.vtex.com/click/...",
+        "view_url": "https://ads.vtex.com/view/..."
+      }
     }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "total": 25,
+    "has_next": true
+  }
 }
 ```
 
-Response example:
+## Error handling
 
-```json
-{
-    "placement_name": [
-        {
-            "type": "sponsored_brand",
-            "assets": [
-                {
-                   "type": "image|video",
-                   "url": "Image URL"
-                }
-            ],
-            "brand_url": "https://cdn.newtail.com.br/retail_media/brands/logo.jpeg",
-            "brand_name": "Apple",
-            "destination_url": "https://www.extra.com.br/c?Filter=D70653",
-            "headline": "Titanium. Very robust, very light, very pro!",
-            "description": "",
-            "view_url": "VIEW URL",
-            "impression_url": "IMPRESSION URL",
-            "click_url": "CLICK URL",
-            "products": [
-                {  
-                    "image_url": "PRODUCT IMAGE URL",
-                    "seller_id": null,
-                    "product_metadata": { },
-                    "product_name": "iPhone 15 Pro MAX",
-                    "product_sku": "55064355",
-                    "destination_url": "PRODUCT URL",
-                    "impression_url": "IMPRESSION URL for a specific PRODUCT",
-                    "view_url": "VIEW URL for a specific PRODUCT",
-                    "click_url": "CLICK URL for a specific PRODUCT"
-                }
-            ]
+Implement robust error handling for your ad requests:
+
+```javascript
+const getSponsoredProductsSafely = async (params) => {
+  try {
+    const queryParams = new URLSearchParams(params);
+    
+    const response = await fetch(
+      `https://${accountName}.vtexcommercestable.com.br/api/ads/sponsored-products?${queryParams}`,
+      {
+        method: 'GET',
+        headers: {
+          'X-VTEX-API-AppKey': 'your-app-key',
+          'X-VTEX-API-AppToken': 'your-app-token',
+          'Content-Type': 'application/json'
         }
-    ]
-}
+      }
+    );
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('VTEX Ads API Error:', error);
+    
+    // Return fallback structure
+    return {
+      products: [],
+      pagination: {
+        page: 1,
+        limit: params.limit || 10,
+        total: 0,
+        has_next: false
+      },
+      error: error.message
+    };
+  }
+};
 ```
+
+## Best practices
+
+1. **Use appropriate context**: Always specify the correct `context` parameter for your page type to ensure relevant ad targeting.
+
+2. **Implement caching**: Cache responses for a few minutes to improve performance and reduce API calls.
+
+3. **Handle errors gracefully**: Always implement fallback behavior when ads are not available.
+
+4. **Track events**: Remember to track impressions and clicks after displaying ads.
+
+5. **Respect rate limits**: Implement proper throttling to avoid hitting API rate limits.
+
+## Next steps
+
+After retrieving ads, make sure to:
+
+1. [Track ad events](./ads-events.md) (impressions, clicks, views)
+2. [Synchronize your catalog](./synchronizing-the-catalog-with-vtex-ads.md) to ensure accurate product information
+3. Monitor performance and optimize based on metrics
