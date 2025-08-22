@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.53](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.52...v1.1.53) (2025-08-22)
+
+
+### 📝 Documentation updates
+
+* add warning about custom OAuth in headless authentication guide ([27eb789](https://github.com/vtexdocs/dev-portal-content/commit/27eb789a0060ae624c7c40298cc151b449ebeb83))
+
 ### [1.1.52](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.51...v1.1.52) (2025-08-15)
 
 ### [1.1.51](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.50...v1.1.51) (2025-08-15)
