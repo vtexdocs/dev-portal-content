@@ -140,27 +140,33 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ## Examples
 
+
 ### Button with an icon
 
-<OverviewSection>
-  <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
-    {'Add to Cart'}
-  </Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
+        {'Add to Cart'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button, Icon } from "@faststore/ui";
 
-```tsx
-import { Button, Icon } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
+                Add to Cart
+            </Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
-            Add to Cart
-        </Button>
-
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow token="--fs-button-icon-padding" value="0 var(--fs-spacing-1)" />
@@ -168,23 +174,29 @@ export function Example() {
 
 ### Visual hierarchy
 
+
 #### Primary
 
-<OverviewSection>
-  <Button variant="primary">Button</Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary">Button</Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
 
-```tsx
-import { Button } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button variant="primary">Button</Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button variant="primary">Button</Button>
-
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -243,26 +255,33 @@ export function Example() {
   />
 </TokenTable>
 
+
 #### Primary Inverse
 
-<OverviewSection dark>
-  <Button inverse variant="primary">
-    {'Button'}
-  </Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Button inverse variant="primary">
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
 
-```tsx
-import { Button } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button inverse variant="primary">
+                Button
+            </Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button inverse variant="primary">
-            Button
-        </Button>
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -323,22 +342,29 @@ export function Example() {
   />
 </TokenTable>
 
+
 #### Secondary
 
-<OverviewSection>
-  <Button variant="secondary">Button</Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="secondary">Button</Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
 
-```tsx
-import { Button } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button variant="secondary">Button</Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button variant="secondary">Button</Button>
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -399,25 +425,33 @@ export function Example() {
   />
 </TokenTable>
 
+
 #### Secondary Inverse
 
-<OverviewSection dark>
-  <Button inverse variant="secondary">
-    {'Button'}
-  </Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Button inverse variant="secondary">
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
 
-```tsx
-import { Button } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button inverse variant="secondary">
+                Button
+            </Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button inverse variant="secondary">
-            Button
-        </Button>
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -482,22 +516,29 @@ export function Example() {
   />
 </TokenTable>
 
+
 #### Tertiary
 
-<OverviewSection>
-  <Button variant="tertiary">Button</Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="tertiary">Button</Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
 
-```tsx
-import { Button } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button variant="tertiary">Button</Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button variant="tertiary">Button</Button>
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -556,26 +597,33 @@ export function Example() {
   />
 </TokenTable>
 
+
 #### Tertiary Inverse
 
-<OverviewSection dark>
-  <Button inverse variant="tertiary">
-    {'Button'}
-  </Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Button inverse variant="tertiary">
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
 
-```tsx
-import { Button } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button inverse variant="tertiary">
+                Button
+            </Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button inverse variant="tertiary">
-            Button
-        </Button>
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -642,27 +690,33 @@ export function Example() {
 
 ### Variants
 
+
 #### Disabled
 
-<OverviewSection>
-  <Button variant="primary" disabled>
-    {'Button'}
-  </Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary" disabled>
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
 
-```tsx
-import { Button } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button variant="primary" disabled>
+                Button
+            </Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button variant="primary" disabled>
-            Button
-        </Button>
-
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -732,27 +786,33 @@ export function Example() {
   />
 </TokenTable>
 
+
 #### Small
 
-<OverviewSection>
-  <Button variant="primary" size="small">
-    {'Button'}
-  </Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary" size="small">
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
 
-```tsx
-import { Button } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button variant="primary" size="small">
+                Button
+            </Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button variant="primary" size="small">
-            Button
-        </Button>
-
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -769,27 +829,33 @@ export function Example() {
   />
 </TokenTable>
 
+
 #### Small with an icon
 
-<OverviewSection>
-  <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
-    {'Button'}
-  </Button>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button, Icon } from "@faststore/ui";
 
-```tsx
-import { Button, Icon } from "@faststore/ui";
+    export function Example() {
+        return (
+            <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
+                Button
+            </Button>
+        );
+    }
+    ```
 
-export function Example() {
-    return (
-        <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
-            Button
-        </Button>
-
-
-    );
-}
-```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
