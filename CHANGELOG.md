@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.61](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.60...v1.1.61) (2025-08-25)
+
+
+### 🔧 Fixes and improvements
+
+* **implementation.mdx:** fix link ([37e6074](https://github.com/vtexdocs/dev-portal-content/commit/37e60741af8c2b743b5bf8ffe5228b31d4c63752))
+
 ### [1.1.60](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.57...v1.1.60) (2025-08-25)
 
 
