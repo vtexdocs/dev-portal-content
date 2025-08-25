@@ -6,7 +6,7 @@ createdAt: "2020-10-26T10:30:54.362Z"
 updatedAt: "2025-07-31T20:13:24.802Z"
 ---
 
-Events or Pixel Events are notifications broadcast by your storefront whenever a user performs a tracked action, such as:
+Events or pixel events are notifications broadcast by your storefront whenever a user performs a tracked action, such as:
 
 - Adding an item to the cart (`addToCart` event).
 - Removing an item from the cart (`removeItem` event).
@@ -67,7 +67,7 @@ In your store theme code, declare the `customPixelEventId` prop in the block res
 
 #### Step 3 - Configure the event receiver
 
-In the `minicart.v2` block, declare the `customPixelEventIdName` prop in the block responsible for listening for the desired event. Use the same unique ID that you declared in the sender block. Example:
+In the `minicart.v2` block, declare the `customPixelEventName` prop in the block responsible for listening for the desired event. Use the same unique ID that you declared in the sender block. Example:
 
   ```json
   {
@@ -80,6 +80,6 @@ In the `minicart.v2` block, declare the `customPixelEventIdName` prop in the blo
   }
   ```
 
->ℹ The `customPixelEventIdName` prop triggers the `minicart.v2` to open automatically on the interface whenever it detects a pixel event with the specified name. If you also set a `customPixelEventId` prop on the sender, the `minicart.v2` opens only for events that match the name and the custom ID. Learn more in [Minicart](https://developers.vtex.com/docs/apps/vtex.minicart).
+>ℹ The `customPixelEventName` prop triggers the `minicart.v2` to open automatically on the interface whenever it detects a pixel event with the specified name. If you also set a `customPixelEventId` prop on the sender, the `minicart.v2` opens only if the event matches both the name and the custom ID. Learn more in [Minicart](https://developers.vtex.com/docs/apps/vtex.minicart).
 
 After saving your changes and [deploying your new Store Theme version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available), the Add To Cart Button component will send the `example-add-to-cart` event when clicked. At the same time, the Minicart will automatically open in response to any event with this ID.
