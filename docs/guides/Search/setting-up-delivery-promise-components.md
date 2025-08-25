@@ -27,6 +27,8 @@ If you're building your storefront with Store Framework, you can enable this exp
 
 This guide walks you through the basic setup needed to implement these components in your store.
 
+>ℹ️ Explore the [Delivery Promise Figma library](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8001-14744&t=JbrAHcrHvPRLKhuJ-0) to learn more about component specs, usage guidelines, reference use cases, and behavioral patterns.
+
 ## Before you begin
 
 To enable Delivery Promise (Beta) in your store, the following conditions must be met:
