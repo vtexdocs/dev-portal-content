@@ -3,7 +3,7 @@ title: "Using events to trigger side effects on store components"
 slug: "vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components"
 hidden: false
 createdAt: "2020-10-26T10:30:54.362Z"
-updatedAt: "2025-07-31T20:13:24.802Z"
+updatedAt: "2025-08-25T21:31:34.106Z"
 ---
 
 Events or pixel events are notifications broadcast by your storefront whenever a user performs a tracked action, such as:
