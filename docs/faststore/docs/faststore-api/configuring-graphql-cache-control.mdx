@@ -60,10 +60,10 @@ Since the `graphqlCacheControl` flag is an experimental feature, declare it unde
 
 ## Ensuring custom queries are cacheable
 
-To ensure proper caching behavior for your custom queries, they must use the `GET` method. Queries with the `Query` suffix in their names automatically use `GET`. To enable proper caching in custom queries, follow these steps:
+To ensure proper caching behavior for your custom queries, they must use the `GET` method. Queries with the `Query` suffix in their names automatically default to `GET`. To enable proper caching for custom queries, follow these steps:
 
-1. Check the custom queries in your project that use the `POST` method.
-2. Rename the queries by adding the `Query` suffix to default to `GET`. For example:
+1. Identify custom queries in your project that use the `POST` method.
+2. Rename the queries by adding the `Query` suffix to ensure they default to `GET`. For example:
 
 - Uncached (`POST`): `getOrderForm`
 
@@ -71,7 +71,7 @@ To ensure proper caching behavior for your custom queries, they must use the `GE
 
 ## Testing the cache configuration
 
-After enabling the `graphqlCacheControl` flag in `discovery.config.js` and running `yarn dev` in a terminal, follow these steps to test the cache configuration:
+After enabling the `graphqlCacheControl` flag in the `discovery.config.js` file and running `yarn dev` in a terminal, follow these steps to test the cache configuration:
 
 1. Open the localhost path available in the terminal to view the store preview (example: `http://localhost:3000/`).
 2. On the store preview page, open your browser's **Developer Tools**.
