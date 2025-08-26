@@ -1,7 +1,7 @@
 ---
 title: "App authentication using auth tokens"
 slug: "app-authentication-using-auth-tokens"
-excerpt: "Learn how to to use app auth tokens for each context"
+excerpt: "Learn how to use app auth tokens for each context"
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2025-08-26T14:20:00.000Z"
@@ -29,7 +29,7 @@ If your project requires features not provided by the available [clients](https:
 
 ## Usage examples
 
-Below we show examples of how to use each token type in a client’s definition.
+Below we show examples of how to use each token type in a client definition.
 
 ### App authentication token
 
