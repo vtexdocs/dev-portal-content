@@ -1,9 +1,10 @@
 ---
 title: "App authentication using auth tokens"
 slug: "app-authentication-using-auth-tokens"
+excerpt: "Learn how to to use app auth tokens for each context"
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
-updatedAt: "2022-12-13T18:43:56.137Z"
+updatedAt: "2025-08-26T14:20:00.000Z"
 seeAlso:
  - "/docs/guides/api-authentication-using-user-tokens"
 ---
