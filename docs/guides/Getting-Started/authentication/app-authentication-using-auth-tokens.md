@@ -25,3 +25,61 @@ You can import the context in your app as in the following: `import { IOContext 
 If your project requires features not provided by the available [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients), we recommend creating your own clients following the same authentication logic.
 
 > ❗ Authenticate your apps' actions with user tokens whenever possible. Currently, app authentication tokens are not subject to [License Manager permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). We recommend that you consider this when defining your app's architecture and configuring [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies).
+
+## Usage examples
+
+Below we show examples of how to use each token type in a client’s definition.
+
+### App authentication token
+
+Use the app's `authToken` when the operations are not linked to any user. In this case, you define the permission level with [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in the app's [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+
+```ts
+export class OmsClient extends JanusClient {
+ constructor(ctx: IOContext, options?: InstanceOptions) {
+   super(ctx, {
+     ...options,
+     headers: {
+       ...options?.headers,
+       VtexIdclientAutCookie: ctx.authToken,
+     },
+   })
+ }
+}
+```
+
+### Store user token
+
+When the app's focus is on the **store browsing** experience, it is recommended to use `storeUserAuthToken` whenever possible. This way, the app's permissions are limited to the **shopper** user's permissions in the account.
+
+```ts
+export class OmsClient extends JanusClient {
+ constructor(ctx: IOContext, options?: InstanceOptions) {
+   super(ctx, {
+     ...options,
+     headers: {
+       ...options?.headers,
+       VtexIdclientAutCookie: ctx.storeUserAuthToken,
+     },
+   })
+ }
+}
+```
+
+### Admin user token
+
+When the app's focus is on the **Admin** experience, it is recommended to use `adminUserAuthToken` whenever possible. This way, the app's permissions are limited to the **Admin** user's permissions in the account.
+
+```ts
+export class OmsClient extends JanusClient {
+ constructor(ctx: IOContext, options?: InstanceOptions) {
+   super(ctx, {
+     ...options,
+     headers: {
+       ...options?.headers,
+       VtexIdclientAutCookie: ctx.adminUserAuthToken,
+     },
+   })
+ }
+}
+```
