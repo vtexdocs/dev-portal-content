@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.68](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.67...v1.1.68) (2025-08-26)
+
+
+### 📝 Documentation updates
+
+* add hideUnavailableItems query param to delivery promise headless guide ([2c8c6bc](https://github.com/vtexdocs/dev-portal-content/commit/2c8c6bce812fea1bdfe5a6abdc0614255006aadf))
+
 ### [1.1.67](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.65...v1.1.67) (2025-08-26)
 
 
