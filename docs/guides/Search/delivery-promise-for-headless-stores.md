@@ -32,14 +32,17 @@ https://{accountName}.{environment}.com.br/api/io/_v/api/intelligent-search/prod
 
 To enable the Delivery Promise functionality, you should use the following additional query strings and facets on this request. We recommend using query strings when possible for better performance.
 
-| Facet | Description | Example |
+| Query string / Facet | Description | Example |
 | :---- | :---- | :---- |
 | `zip-code` **\[required\]** | Postal code. It can also be used as a query string. | Query string: **`?zip-code=22250040`**`&coordinates=-43.18218231201172,-22.94549560546875` Facet: **`/zip-code/22250040`**`/coordinates/-43.18218231201172,-22.94549560546875` |
 | `coordinates` **\[required\]** | Address coordinates. To get the coordinates based on a postal code, follow the steps in [Get address by postal code](https://developers.vtex.com/docs/guides/get-address-by-postal-code) to return the coordinates in the correct and expected value inside the `geoCoordinates` object. It can also be used as a query string. | Query string: `?zip-code=22250040&coordinates=-43.18218231201172,-22.94549560546875` Facet: `/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875`  |
 | `shipping` | Shipping method. It must always be combined with `zip-code` and `coordinates`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875/shipping/pickup-in-point/` |
 | `pickupPoint` | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters. It can also be used as a query string. |  Query string: `/shipping/pickup-in-point?zip-code=22250040&coordinates=-43.18218231201172,-22.94549560546875&pickupPoint=vtex-botafogo` Facet: `/zip-code/22250040/coordinates/-43.18218231201172,-22.94549560546875/shipping/pickup-in-point/pickupPoint/vtex-botafogo` |
+| `hideUnavailableItems` | When set to `true`, this query parameter ensures only products actually available for delivery or pickup are returned. If omitted, products with the `showIfNotAvailable` property set to `true` in Catalog may appear even if unavailable. | Query string: `?hideUnavailableItems=true` |
 
 >⚠️ `zip-code` and `coordinates` are **required** to filter product availability based on the shopper’s location and are integral to any request using Delivery Promise. You must use them when filtering by shipping method and pickup point.
+
+>⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `showIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `showIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`.
 
 ### Filtering by location
 
