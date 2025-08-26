@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.66](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.65...v1.1.66) (2025-08-26)
+
+
+### 📝 Documentation updates
+
+* delivery promise setup requirements ([ddf49a2](https://github.com/vtexdocs/dev-portal-content/commit/ddf49a2c7ea8f6584d267431f525306562b746a3))
+
 ### [1.1.65](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.63...v1.1.65) (2025-08-25)
 
 ### [1.1.63](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.61...v1.1.63) (2025-08-25)
