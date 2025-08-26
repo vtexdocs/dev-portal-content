@@ -25,7 +25,7 @@ You can import the context in your app as in the following: `import { IOContext 
 
 If your project requires features not provided by the available [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients), we recommend creating your own clients following the same authentication logic.
 
-> ❗ Authenticate your app's actions with user tokens whenever possible. Currently, app authentication tokens are not subject to [License Manager permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). We recommend that you consider this when defining your app's architecture and configuring [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies).
+> ❗ Authenticate your app's actions with user tokens whenever possible. Currently, app authentication tokens are not subject to [License Manager permissions](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). We recommend considering this when defining your app's architecture and configuring [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies).
 
 ## Usage examples
 
@@ -33,7 +33,7 @@ Below are examples of how to use each token type in a client definition.
 
 ### App authentication token
 
-Use the app's `authToken` when operations are not linked to a user. In this case, you define the permission level through [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in the app's [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+Use the app's `authToken` when operations are not linked to a user. In this case, the permission level is defined through [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in the app's [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 ```ts
 export class OmsClient extends JanusClient {
