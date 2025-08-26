@@ -1,7 +1,7 @@
 ---
 title: "App authentication using auth tokens"
 slug: "app-authentication-using-auth-tokens"
-excerpt: "Learn how to use app auth tokens for each context"
+excerpt: "Learn how to use app auth tokens in each context"
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2025-08-26T14:20:00.000Z"
@@ -33,7 +33,7 @@ Below are examples of how to use each token type in a client definition.
 
 ### App authentication token
 
-Use the app's `authToken` when operations are not linked to a user. In this case, you define the permission level with [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in the app's [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+Use the app's `authToken` when operations are not linked to a user. In this case, you define the permission level through [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in the app's [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 ```ts
 export class OmsClient extends JanusClient {
