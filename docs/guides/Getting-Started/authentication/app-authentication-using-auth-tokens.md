@@ -9,9 +9,9 @@ seeAlso:
  - "/docs/guides/api-authentication-using-user-tokens"
 ---
 
-When working on VTEX IO apps, you generally won't have to make direct requests to VTEX APIs. This is because VTEX IO already provides convenient access to VTEX APIs through predefined [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). Therefore, using application keys within your app is often be unnecessary. If necessary, the recommended approach is to employ authentication tokens.
+When working on VTEX IO apps, you generally won't have to make direct requests to VTEX APIs. This is because VTEX IO already provides convenient access to VTEX APIs through predefined [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). Therefore, using application keys within your app is often unnecessary. If necessary, the recommended approach is to employ authentication tokens.
 
-We recommend using the VTEX IO [clients package](https://github.com/vtex/io-clients) when possible. In this context, every [client method](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients#step-3-implementing-client-methods) has an optional argument called `authMethod`, which accepts one of three authentication options, indicating which token will be used in this request.
+We recommend using the VTEX IO [clients package](https://github.com/vtex/io-clients) when possible. With this package, every [client method](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients#step-3-implementing-client-methods) has an optional argument called `authMethod`, which accepts one of three authentication options, each indicating which token to use for the request.
 
 The tokens are available via the VTEX IO context and are associated with different permissions.
 
@@ -33,7 +33,7 @@ Below are examples of how to use each token type in a [client definition](https:
 
 ### App authentication token
 
-Use the app's `authToken` when operations are not linked to a user. In this case, the permission level is defined through [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in the app's [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+Use the app's `authToken` when operations are not linked to a user. In this case, the permission level is defined by [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in the app's [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
 ```ts
 export class OmsClient extends JanusClient {
