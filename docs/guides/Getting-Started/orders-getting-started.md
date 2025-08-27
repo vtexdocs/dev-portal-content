@@ -39,7 +39,7 @@ Every order follow similar. Each step of the order correspond to a status
 
 > ℹ️ An order is considered for pickup when its `selectedDeliveryChannel` field contains the value `pickup-in-point`. You can retrieve this information using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint.
 
-### Step 1:
+### Step 1
 
 <table>
     <td><strong> Trigger</strong></td>
@@ -62,7 +62,7 @@ Every order follow similar. Each step of the order correspond to a status
     </tr>
 </table>
 
-### Step 2:
+### Step 2
 
 <table>
     <td><strong> Trigger</strong></td>
@@ -85,7 +85,7 @@ Every order follow similar. Each step of the order correspond to a status
     </tr>
 </table>
 
-### Step 3:
+### Step 3
 
 <table>
     <td><strong> Trigger</strong></td>
@@ -108,7 +108,7 @@ Every order follow similar. Each step of the order correspond to a status
     </tr>
 </table>
 
-### Step 4:
+### Step 4
 
 <table>
     <td><strong> Trigger</strong></td>
@@ -137,7 +137,7 @@ Every order follow similar. Each step of the order correspond to a status
     </tr>
 </table>
 
-### Step 5:
+### Step 5
 When the order has been `invoiced`.
 
 <table>
