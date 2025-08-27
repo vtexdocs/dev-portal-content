@@ -34,16 +34,72 @@ The order flow describes the status, possibilities, and actions throughout the l
 [/block]
 
 ## Understanding order statuses
+Every order follow similar 
 Each step of the order correspond to a status
 
+### Step 1:
 <table>
     <td><strong> Trigger</strong></td>
     <td><strong> Description</strong></td>
     <td><strong> My Account status</strong></td>
     <tr>
         <td><code>order.progress.confirmOrder</code></td>
-        <td>It remains in this state if the workflow is not created.</td>
+        <td>Workflow was not created.</td>
         <td>Place order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.confirmingOrder</code></td>
+        <td>Order status is one of the following: <code>order-created</code>, <code>order-completed</code> or <code>on-order-completed</code>.</td>
+        <td>Placing order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.orderConfirmed</code></td>
+        <td>Order status is none of the above, i.e. the order is in an earlier status.</td>
+        <td>Order placed</td>
+    </tr>
+</table>
+
+### Step 2:
+<table>
+    <td><strong> Trigger</strong></td>
+    <td><strong> Description</strong></td>
+    <td><strong> My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.approvePayment</code></td>
+        <td>Order status is in Step 1.</td>
+        <td>Approve payment</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.approvingPayment</code></td>
+        <td>Order status is <code>payment-pending</code> or <code>approve-payment</code>.</td>
+        <td>Approving payment</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.paymentApproved</code></td>
+        <td>Order status is none of the above nor one in Step 1, i.e. the order is in an earlier status.</td>
+        <td>Payment approved</td>
+    </tr>
+</table>
+
+### Step 3:
+<table>
+    <td><strong> Trigger</strong></td>
+    <td><strong> Description</strong></td>
+    <td><strong> My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.handleShipping</code></td>
+        <td>Order status is in Step 1 or Step 2.</td>
+        <td>Handle order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.handlingShipping</code></td>
+        <td>Order status is one of the following: <code>window-to-cancel</code>, <code>payment-approved</code>, <code>ready-for-handling</code>, <code>authorize-fullfilment</code>, <code>release-to-fulfillment</code>, <code>handling</code> or <code>invoice</code>.</td>
+        <td>Handling order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.shippingHandled</code></td>
+        <td>Order status is none of the above nor one in Step 1 and Step 2, i.e. the order is in an earlier status.</td>
+        <td>Package handled</td>
     </tr>
 </table>
 
