@@ -9,23 +9,23 @@ updatedAt: "2025-07-15T16:34:53.615Z"
 
 In this guide, you’ll learn how to customize your storefront using CSS handles. These unique identifiers assigned to HTML elements allow you to target and add CSS classes to a component within your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme).
 
-CSS handles can overwrite a storefront's default styles, allowing for independent customization of specific blocks within a Store Theme. For example, consider that you want to customize the `menu-item` blocks of the [Menu](https://developers.vtex.com/docs/apps/vtex.menu) component. You can apply a [general customization](#applying-a-general-customization) or [customize a single block](#customizing-a-single-block).
+CSS handles can overwrite a storefront's default styles, allowing for independent customization of specific blocks within a Store Theme. For example, consider you want to customize the `menu-item` blocks of the [Menu](https://developers.vtex.com/docs/apps/vtex.menu) component. You can apply a [general customization](#applying-a-general-customization) or [customize a single block](#customizing-a-single-block).
 
 ## Instructions
 
 ### Identifying CSS handles
 
-1. In your browser, access your store’s development workspace using the following URL: `https://{workspace}--{account}.myvtex.com?__inspect`. Replace the values between curly braces according to your scenario.
+1. Open your browser and go to your store’s development workspace using this URL: `https://{workspace}--{account}.myvtex.com?__inspect`. Replace the values inside curly braces with your specific workspace and account names.
 
->ℹ Always use a development workspace and make sure your store domain is under `myvtex.com`.
+>⚠️ Always use a development workspace and make sure your store domain is under `myvtex.com`.
 
-2. Hover your mouse over the page element you want to customize. A box will appear displaying its available CSS handles (names beginning with `.`), CSS file names, and related information.
+2. Hover your mouse over the page element you want to customize. A box will appear displaying its available CSS handles (names starting with `.`), CSS file names, and related information.
 
 ![css-handles-inspect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-0.png)
 
 3. Check the CSS handles table in the documentation of the app or block that renders the HTML element. This allows you to confirm whether the inspected handle is valid and if the customization requires another add-on, such as the HTML element attribute.
 
->⚠️ If a handle requires an HTML element attribute for customization, inspect the page again using your browser’s developer tools instead of the `?__inspect` option. Look for the desired HTML element and copy its linked attribute for the upcoming customization.
+>⚠️ If a handle requires an HTML element attribute for customization, inspect the page again using your browser’s developer tools instead of the `?__inspect` option. Look for the desired HTML element and copy its associated attribute for the upcoming customization.
 
 ### Applying a general customization
 
@@ -91,4 +91,4 @@ Customization using CSS selectors is mostly deprecated. The following selectors 
 - `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selecting elements that come from different apps
 - Media queries, such as `@media (max-width: 768px)` (responsive override for screens up to 768px wide) and `@media (prefers-reduced-motion: reduce)` (remove transitions if user prefers reduced motion).
 
->⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, aren’t supported. Attempting to use them will cause processes like linking your app to fail.
+>⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, aren’t supported. Using them can cause issues like app linking failure.
