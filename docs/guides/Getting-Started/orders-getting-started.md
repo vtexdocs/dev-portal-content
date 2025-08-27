@@ -33,6 +33,20 @@ The order flow describes the status, possibilities, and actions throughout the l
 }
 [/block]
 
+## Understanding order statuses
+Each step of the order correspond to a status
+
+<table>
+    <td><strong> Trigger</strong></td>
+    <td><strong> Description</strong></td>
+    <td><strong> My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.confirmOrder</code></td>
+        <td>It remains in this state if the workflow is not created.</td>
+        <td>Place order</td>
+    </tr>
+</table>
+
 ## Creating an order integration
 
 In the following sections, you will learn how to build order integrations with the Feed and Hook. This is useful when you want to develop an integration between your store’s ERP and the VTEX platform, for example.
