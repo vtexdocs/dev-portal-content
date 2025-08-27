@@ -34,10 +34,13 @@ The order flow describes the status, possibilities, and actions throughout the l
 [/block]
 
 ## Understanding order statuses
-Every order follow similar 
-Each step of the order correspond to a status
+
+Every order follow similar. Each step of the order correspond to a status
+
+> ℹ️ An order is considered for pickup when its `selectedDeliveryChannel` field contains the value `pickup-in-point`. You can retrieve this information using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint.
 
 ### Step 1:
+
 <table>
     <td><strong> Trigger</strong></td>
     <td><strong> Description</strong></td>
@@ -60,6 +63,7 @@ Each step of the order correspond to a status
 </table>
 
 ### Step 2:
+
 <table>
     <td><strong> Trigger</strong></td>
     <td><strong> Description</strong></td>
@@ -82,6 +86,7 @@ Each step of the order correspond to a status
 </table>
 
 ### Step 3:
+
 <table>
     <td><strong> Trigger</strong></td>
     <td><strong> Description</strong></td>
@@ -100,6 +105,65 @@ Each step of the order correspond to a status
         <td><code>order.progress.shippingHandled</code></td>
         <td>Order status is none of the above nor one in Step 1 and Step 2, i.e. the order is in an earlier status.</td>
         <td>Package handled</td>
+    </tr>
+</table>
+
+### Step 4:
+
+<table>
+    <td><strong> Trigger</strong></td>
+    <td><strong> Description</strong></td>
+    <td><strong> My Account status</strong></td>
+    <tr>
+        <td><p>Pickup: <code>order.progress.deliverToPickup</code></p>
+        <p>Delivery: <code>order.progress.deliverToCarrier</code></p></td>
+        <td>Order status is in Step 1, Step 2 or Step 3.</td>
+        <td><p>Pickup: Ship to pickup point</p>
+        <p>Delivery: Deliver to carrier</p></td>
+    </tr>
+    <tr>
+        <td><p>Pickup: <code>order.progress.deliveringToPickup</code></p>
+        <p>Delivery: <code>order.progress.delivering</code></p></td>
+        <td>Order status is <code>invoiced</code>.</td>
+        <td><p>Pickup: Shipping to pickup point</p>
+        <p>Delivery: Delivering to carrier</p></td>
+    </tr>
+    <tr>
+        <td><p>Pickup: <code>order.progress.deliveredToPickup</code></p>
+        <p>Delivery: <code>order.progress.delivered</code></p></td>
+        <td>It remains in this state if the rules for Step 5 are not followed through.</td>
+        <td><p>Pickup: Shipped to pickup point</p>
+        <p>Delivery: Delivered to carrier</p></td>
+    </tr>
+</table>
+
+### Step 5:
+When the order has been `invoiced`.
+
+<table>
+    <td><strong> Trigger</strong></td>
+    <td><strong> Description</strong></td>
+    <td><strong> My Account status</strong></td>
+    <tr>
+        <td><p>Pickup: <code>order.progress.pickup</code></p>
+        <p>Delivery: <code>order.progress.ship</code></p></td>
+        <td>Order status is in Step 1, Step 2 or Step 3.</td>
+        <td><p>Pickup: Ship to pickup point</p>
+        <p>Delivery: Deliver to carrier</p></td>
+    </tr>
+    <tr>
+        <td><p>Pickup: <code>order.progress.ready-for-pickup</code></p>
+        <p>Delivery: <code>order.progress.shipping</code></p></td>
+        <td>Order status is <code>invoiced</code>.</td>
+        <td><p>Pickup: Shipping to pickup point</p>
+        <p>Delivery: Delivering to carrier</p></td>
+    </tr>
+    <tr>
+        <td><p>Pickup: <code>order.progress.pickedUp</code></p>
+        <p>Delivery: <code>order.progress.shipped</code></p></td>
+        <td>It remains in this state if the rules for Step 5 are not followed through.</td>
+        <td><p>Pickup: Shipped to pickup point</p>
+        <p>Delivery: Delivered to carrier</p></td>
     </tr>
 </table>
 
