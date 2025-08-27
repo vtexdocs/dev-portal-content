@@ -116,7 +116,7 @@ return (
   <TokenRow token="--fs-region-bar-width" value="100%" />
   <TokenRow
     token="--fs-region-bar-padding"
-    value="var(--fs-spacing-0) var(--fs-spacing-1) var(--fs-spacing-1) var(--fs-spacing-2)"
+    value="var(--fs-spacing-0) 0 var(--fs-spacing-0) var(--fs-spacing-2)"
   />
   <TokenDivider />
   <TokenRow
@@ -143,23 +143,16 @@ return (
 
 ### Nested Elements
 
-#### CTA (Call To Action)
+#### Icon
 
 <TokenTable>
-  <TokenRow token="--fs-region-bar-cta-margin-left" value="auto" />
-  <TokenRow token="--fs-region-bar-cta-text-decoration" value="underline" />
+  <TokenRow token="--fs-region-bar-icon-margin-right" value="var(--fs-spacing-1)" />
 </TokenTable>
 
-#### Message
+#### Location
 
 <TokenTable>
-  <TokenRow token="--fs-region-bar-message-margin-right" value="auto" />
-</TokenTable>
-
-#### Postal Code
-
-<TokenTable>
-  <TokenRow token="--fs-region-bar-postal-code-margin-right" value="auto" />
+  <TokenRow token="--fs-region-bar-location-height" value="var(--fs-spacing-4)" />
 </TokenTable>
 
 ---
@@ -170,8 +163,14 @@ For further customization, you can use the following data attributes:
 
 `data-fs-region-bar`
 
-`data-fs-region-bar-postal-code`
+`data-fs-region-bar-filter`
 
-`data-fs-region-bar-cta`
+`data-fs-region-bar-filter-message`
 
-`data-fs-region-bar-message`
+`data-fs-region-bar-location`
+
+`data-fs-region-bar-location-city`
+
+`data-fs-region-bar-location-message`
+
+`data-fs-region-bar-location-postal-code`
