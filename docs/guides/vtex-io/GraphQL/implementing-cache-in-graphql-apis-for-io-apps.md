@@ -17,7 +17,7 @@ Returning cached data is faster than reprocessing data for every request, so cac
 
 Caching is recommended in the following scenarios:
 
-- High volume of requests to the same queries and data.
+- High volume of requests for the same queries or data.
 - Response data doesn't mutate frequently.
 - It's acceptable to have stale data in a short time window.
 
@@ -38,7 +38,7 @@ The `@cacheControl` directive defines the scope of access and duration of cached
 
 The `@cacheControl` directive uses the following arguments:
 
-- `scope`: Scope of users who can access the cached endpoint or field. Choose the scope based on the level of privacy you want for the cached data. The possible values are:
+- `scope`: Defines which users can access the cached endpoint or field. Choose the scope based on the level of privacy you want for the cached data. The possible values are:
   - `PUBLIC`: Cached data can be accessed by any authenticated user.
   - `SEGMENT`: Cached data can be accessed by users of the same segment as the one who made the first request. Users are divided into segments using different criteria such as region, audience, or sales channel. VTEX handles segmentation automatically using [`vtex_segment` cookie](https://developers.vtex.com/docs/guides/sessions-system-overview#vtexsegment-cookie) data.
   - `PRIVATE`: Cached data can only be accessed by the user who made the first request.
