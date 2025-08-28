@@ -35,7 +35,7 @@ The order flow describes the status, possibilities, and actions throughout the l
 
 ## Understanding order statuses
 
-Every order in the My Account shows a timeline of five stages, indicating the order flow. Each stage of the order has several triggers that change the order status accordingly. You can see the triggers, their description and the order status on the My Account they generate. Stages 1, 2 and 3 are the same for every order; however, stages 4 and 5 have different triggers and outcomes whether it's a pickup order or a delivery order.
+In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh#view-order-details) menu, every order shows a timeline of five stages, indicating the order flow. Each stage has several triggers that change the order status accordingly. You can see the triggers, their description and the order status they generate on My Account. Stages 1, 2 and 3 are the same for every order; however, stages 4 and 5 have different triggers and outcomes whether it's a pickup order or a delivery order.
 
 > ℹ️ An order is considered for pickup when its `selectedDeliveryChannel` field contains the value `pickup-in-point`. You can retrieve this information using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint.
 
@@ -47,17 +47,17 @@ Every order in the My Account shows a timeline of five stages, indicating the or
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.confirmOrder</code></td>
-        <td>Workflow was not created.</td>
+        <td>Workflow hasn't been created due to an error in the payment gateway.</td>
         <td>Place order</td>
     </tr>
     <tr>
         <td><code>order.progress.confirmingOrder</code></td>
-        <td>Order status is one of the following: <code>order-created</code>, <code>order-completed</code> or <code>on-order-completed</code>.</td>
+        <td>The order's API status is one of the following: <code>order-created</code>, <code>order-completed</code> or <code>on-order-completed</code>.</td>
         <td>Placing order</td>
     </tr>
     <tr>
         <td><code>order.progress.orderConfirmed</code></td>
-        <td>Order status is none of the above, i.e. the order is in an earlier status.</td>
+        <td>The order's API status is none of the above, i.e. the order is in a later status.</td>
         <td>Order placed</td>
     </tr>
 </table>
@@ -70,17 +70,17 @@ Every order in the My Account shows a timeline of five stages, indicating the or
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.approvePayment</code></td>
-        <td>Order status is in Step 1.</td>
+        <td>The order's API status is a status in stage 1.</td>
         <td>Approve payment</td>
     </tr>
     <tr>
         <td><code>order.progress.approvingPayment</code></td>
-        <td>Order status is <code>payment-pending</code> or <code>approve-payment</code>.</td>
+        <td>The order's API status is <code>payment-pending</code> or <code>approve-payment</code>.</td>
         <td>Approving payment</td>
     </tr>
     <tr>
         <td><code>order.progress.paymentApproved</code></td>
-        <td>Order status is none of the above nor one in Step 1, i.e. the order is in an earlier status.</td>
+        <td>The order's API status is none of the above nor one in stage 1, i.e. the order is in a later status.</td>
         <td>Payment approved</td>
     </tr>
 </table>
@@ -93,17 +93,17 @@ Every order in the My Account shows a timeline of five stages, indicating the or
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.handleShipping</code></td>
-        <td>Order status is in Step 1 or Step 2.</td>
+        <td>The order's API status is a status in stage 1 or 2.</td>
         <td>Handle order</td>
     </tr>
     <tr>
         <td><code>order.progress.handlingShipping</code></td>
-        <td>Order status is one of the following: <code>window-to-cancel</code>, <code>payment-approved</code>, <code>ready-for-handling</code>, <code>authorize-fullfilment</code>, <code>release-to-fulfillment</code>, <code>handling</code> or <code>invoice</code>.</td>
+        <td>The order's API status is one of the following: <code>window-to-cancel</code>, <code>payment-approved</code>, <code>ready-for-handling</code>, <code>authorize-fullfilment</code>, <code>release-to-fulfillment</code>, <code>handling</code> or <code>invoice</code>.</td>
         <td>Handling order</td>
     </tr>
     <tr>
         <td><code>order.progress.shippingHandled</code></td>
-        <td>Order status is none of the above nor one in Step 1 and Step 2, i.e. the order is in an earlier status.</td>
+        <td>Order status is none of the above nor one in stage 1 or 2, i.e. the order is in a later status.</td>
         <td>Package handled</td>
     </tr>
 </table>
@@ -118,17 +118,17 @@ Every order in the My Account shows a timeline of five stages, indicating the or
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.deliverToPickup</code></td>
-        <td>Order status is in Step 1, Step 2 or Step 3.</td>
+        <td>The order's API status is a status in stage 1, 2 or 3.</td>
         <td>Ship to pickup point</td>
     </tr>
     <tr>
         <td><code>order.progress.deliveringToPickup</code></td>
-        <td>Order status is <code>invoiced</code>.</td>
+        <td>The order's API status is <code>invoiced</code>.</td>
         <td>Shipping to pickup point</td>
     </tr>
     <tr>
         <td><code>order.progress.deliveredToPickup</code></td>
-        <td>It remains in this state if the rules for Step 5 are not followed through.</td>
+        <td>The order will remain in this status until the rules for stage 5 are completed.</td>
         <td>Shipped to pickup point</td>
     </tr>
 </table>
@@ -141,24 +141,24 @@ Every order in the My Account shows a timeline of five stages, indicating the or
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.deliverToCarrier</code></td>
-        <td>Order status is in Step 1, Step 2 or Step 3.</td>
+        <td>The order's API status is a status in stage 1, 2 or 3.</td>
         <td>Deliver to carrier</td>
     </tr>
     <tr>
         <td><code>order.progress.delivering</code></td>
-        <td>Order status is <code>invoiced</code>.</td>
+        <td>The order's API status is <code>invoiced</code>.</td>
         <td>Delivering to carrier</td>
     </tr>
     <tr>
         <td><code>order.progress.delivered</code></td>
-        <td>It remains in this state if the rules for Step 5 are not followed through.</td>
+        <td>The order will remain in this status until the rules for stage 5 are completed.</td>
         <td>Delivered to carrier</td>
     </tr>
 </table>
 
 ### Stage 5
 
-Reaches this stage when the order has been `invoiced`.
+The order reaches this stage when it has been `invoiced`.
 
 #### Orders for pickup
 
@@ -168,17 +168,17 @@ Reaches this stage when the order has been `invoiced`.
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.pickup</code></td>
-        <td>Remais in this status if the field <code>shippingEstimateDate</code> of every invoice has a future estimate date.</td>
+        <td>Order status if the field <code>shippingEstimateDate</code> has a future estimate date.</td>
         <td>Pickup</td>
     </tr>
     <tr>
         <td><code>order.state.ready-for-pickup</code></td>
-        <td>Remais in this status if the field <code>shippingEstimateDate</code> of every invoice is empty or has a past estimate date.</td>
+        <td>Order status if the field <code>shippingEstimateDate</code> is empty or has a past estimate date.</td>
         <td>Ready for pickup</td>
     </tr>
     <tr>
         <td><code>order.state.pickedUp</code></td><
-        <td>It remains in this state if the field <code>courierStatus.finished</code> is <code>true</code>.</td>
+        <td>Order status if the field <code>finished</code> inside the object <code>courierStatus</code> is set to <code>true</code>.</td>
         <td>Picked up</td>
     </tr>
 </table>
@@ -191,7 +191,7 @@ Reaches this stage when the order has been `invoiced`.
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.ship</code></td>
-        <td>It remains in this status if the field <code>courierStatus.Data</code> of the invoice is empty.</td>
+        <td>It remains in this status if the field <code>Data</code> inside the object <code>courierStatus</code> is empty.</td>
         <td>Ship order</td>
     </tr>
     <tr>
