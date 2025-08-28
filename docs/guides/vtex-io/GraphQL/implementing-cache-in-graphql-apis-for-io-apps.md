@@ -48,7 +48,7 @@ The `@cacheControl` directive uses the following arguments:
 
 ### Example
 
-The following example caches the userProfile query for 5 minutes (300 seconds) and restricts access to the user who initiated the request:
+The following example caches the `userProfile` query for 5 minutes (300 seconds) and restricts access to the user who initiated the request:
 
 ```graphql
 type Query {
