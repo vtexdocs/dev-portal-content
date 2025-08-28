@@ -168,17 +168,17 @@ The order reaches this stage when it has been `invoiced`.
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.pickup</code></td>
-        <td>Order status if the field <code>shippingEstimateDate</code> has a future estimate date.</td>
+        <td>Order status when the field <code>shippingEstimateDate</code> has a future estimate date.</td>
         <td>Pickup</td>
     </tr>
     <tr>
         <td><code>order.state.ready-for-pickup</code></td>
-        <td>Order status if the field <code>shippingEstimateDate</code> is empty or has a past estimate date.</td>
+        <td>Order status when the field <code>shippingEstimateDate</code> is empty or has a past estimate date.</td>
         <td>Ready for pickup</td>
     </tr>
     <tr>
         <td><code>order.state.pickedUp</code></td><
-        <td>Order status if the field <code>finished</code> inside the object <code>courierStatus</code> is set to <code>true</code>.</td>
+        <td>Order status when the field <code>finished</code> inside the object <code>courierStatus</code> is set to <code>true</code>.</td>
         <td>Picked up</td>
     </tr>
 </table>
@@ -191,17 +191,17 @@ The order reaches this stage when it has been `invoiced`.
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.ship</code></td>
-        <td>It remains in this status if the field <code>Data</code> inside the object <code>courierStatus</code> is empty.</td>
+        <td>Order status when the array <code>Data</code> inside the object <code>courierStatus</code> is empty.</td>
         <td>Ship order</td>
     </tr>
     <tr>
         <td><code>order.progress.shipping</code></td>
-        <td>It remains in this status if the field <code>courierStatus.Data</code> of the invoice is has been filled.</td>
+        <td>Order status when the array <code>Data</code> inside the object <code>courierStatus</code> has been filled.</td>
         <td>Shipping order</td>
     </tr>
     <tr>
         <td><code>order.progress.shipped</code></td>
-        <td>It remains in this status if the field <code>courierStatus.Data</code> is <code>true</code>.</td>
+        <td>It remains in this status if the array <code>Data</code> inside the object <code>courierStatus</code> is <code>true</code>.</td>
         <td>Order shipped</td>
     </tr>
 </table>
