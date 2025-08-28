@@ -35,11 +35,11 @@ The order flow describes the status, possibilities, and actions throughout the l
 
 ## Understanding order statuses
 
-Every order follow similar. Each step of the order correspond to a status
+Every order in the My Account shows a timeline of five stages, indicating the order flow. Each stage of the order has several triggers that change the order status accordingly. You can see the triggers, their description and the order status on the My Account they generate. Stages 1, 2 and 3 are the same for every order; however, stages 4 and 5 have different triggers and outcomes whether it's a pickup order or a delivery order.
 
 > ℹ️ An order is considered for pickup when its `selectedDeliveryChannel` field contains the value `pickup-in-point`. You can retrieve this information using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint.
 
-### Step 1
+### Stage 1
 
 <table>
     <td><strong>Trigger</strong></td>
@@ -62,7 +62,7 @@ Every order follow similar. Each step of the order correspond to a status
     </tr>
 </table>
 
-### Step 2
+### Stage 2
 
 <table>
     <td><strong>Trigger</strong></td>
@@ -85,7 +85,7 @@ Every order follow similar. Each step of the order correspond to a status
     </tr>
 </table>
 
-### Step 3
+### Stage 3
 
 <table>
     <td><strong>Trigger</strong></td>
@@ -108,7 +108,7 @@ Every order follow similar. Each step of the order correspond to a status
     </tr>
 </table>
 
-### Step 4
+### Stage 4
 
 #### Orders for pickup
 
@@ -156,9 +156,9 @@ Every order follow similar. Each step of the order correspond to a status
     </tr>
 </table>
 
-### Step 5
+### Stage 5
 
-When the order has been `invoiced`.
+Reaches this stage when the order has been `invoiced`.
 
 #### Orders for pickup
 
