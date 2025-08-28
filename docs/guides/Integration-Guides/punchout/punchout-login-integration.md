@@ -23,21 +23,73 @@ The authentication process creates a one-time token (OTT) and returns a URL to b
 
 Example flow:
 
-1. Request (VTEX user flow):
+1. Start request (VTEX user flow):
 
-   `https://host.com/api/authenticator/punchout/start?returnURL=/checkout`
+   ```txt
+   https://host.com/api/authenticator/punchout/start?returnURL=/checkout
+   ```
 
-1. Final redirect (logged-in session):
+2. Finish redirect (with OTT):
 
-   `https://host.com/checkout`
+   ```txt
+   https://host.com/api/authenticator/punchout/finish?ott=TOKEN123
+   ```
 
-Each flow returns a URL with a short-lived token that must be accessed within 5 minutes and can only be used once.
+3. Final redirect (logged-in session):
 
-## VTEX user flow
+   ```txt
+   https://host.com/checkout
+   ```
+
+>ℹ️ The OTT is short-lived (expires in 5 minutes) and can only be used once.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant PU as Procurement User
+    participant Proxy as WebMethods
+    participant VTEX as VTEX Authenticator Service
+
+    %% VTEX-User Flow
+    alt VTEX-User Flow (Existing VTEX User)
+        PU->>Proxy: Initiate Punchout Login (username, password, optional returnURL)
+        Proxy->>VTEX: POST /api/authenticator/punchout/start {username, password} + returnURL
+        VTEX->>VTEX: Validate user credentials
+        VTEX->>VTEX: Generate one-time token (OTT)
+        VTEX-->>Proxy: 200 OK with URL (including OTT)
+        Proxy-->>PU: Provide login URL
+        PU->>VTEX: GET /api/authenticator/punchout/finish?ott={token}
+        VTEX->>VTEX: Validate OTT and create session (set session cookie)
+        alt returnURL provided
+            VTEX-->>PU: 302 Redirect to validated returnURL
+        else
+            VTEX-->>PU: 200 OK (session established)
+        end
+    end
+
+    %% Pre-Authenticated User Flow
+    alt Pre-Authenticated Flow (Delegated Login)
+        PU->>Proxy: Initiate Delegated Punchout Login (target username, optional returnURL)
+        Proxy->>VTEX: POST /api/authenticator/punchout/authenticated/start {username} + valid auth cookie + returnURL
+        VTEX->>VTEX: Validate API key/token and permissions
+        VTEX->>VTEX: Generate one-time token (OTT) with delegated subject claim
+        VTEX-->>Proxy: 200 OK with URL (including OTT)
+        Proxy-->>PU: Provide login URL
+        PU->>VTEX: GET /api/authenticator/punchout/finish?ott={token}
+        VTEX->>VTEX: Validate OTT and create session (set session cookie for delegated user)
+        alt returnURL provided
+            VTEX-->>PU: 302 Redirect to validated returnURL
+        else
+            VTEX-->>PU: 200 OK (session established)
+        end
+    end
+```
+
+## Start VTEX user flow
 
 This flow validates the credentials of an existing VTEX user. It requires the user’s email and password. If the validation is positive, the response provides a URL that can be accessed directly via web browsers, initiating a session in the selected host.
 
->ℹ️ Find more details about each field in `POST` in [Start VTEX user punchout flow](https://developers.vtex.com/docs/api-reference/api-reference/punchout-api#post-/api/authenticator/punchout/start).
+>ℹ️ Find more details about this endpoint in `POST` [Start VTEX user punchout flow](https://developers.vtex.com/docs/api-reference/punchout-api#post-/api/authenticator/punchout/start).
 
 ### Request example
 
@@ -58,13 +110,13 @@ curl -X POST "https://store.myvtex.com/api/authenticator/punchout/start?returnUR
 }
 ```
 
-## Pre-authenticated user flow
+## Start pre-authenticated user flow
 
 This flow is used when the procurement user doesn’t exist on VTEX. In this case, a password isn't required. An authenticated integration, using a valid API key/API token pair associated with a role that has the `CanPunchout` permission, generates an OTT on behalf of the user.  Other authentication methods (such as `VtexIdClientAutCookie`) don't work for this endpoint.
 
 If the validation is positive, the response provides a URL that can be accessed directly via web browsers, initiating a session created with the username provided in the request body.
 
->ℹ️ Find more details about each field in `POST` in [Start pre-authenticated user punchout flow](https://developers.vtex.com/docs/api-reference/punchout-api#post-/api/authenticator/punchout/authenticated/start).
+>ℹ️ Find more details about this endpoint in `POST` [Start pre-authenticated user punchout flow](https://developers.vtex.com/docs/api-reference/punchout-api#post-/api/authenticator/punchout/authenticated/start).
 
 ### Request example
 
@@ -84,6 +136,41 @@ curl -X POST "https://store.myvtex.com/api/authenticator/punchout/authenticated/
 {
   "url": "https://apiexamples.com/punchout/redirect/OTT123"
 }
+```
+
+## Finish redirect
+
+The finish endpoint exchanges the OTT for VTEX session cookies and completes the authentication process.
+
+In browser-based integrations, the finish flow happens automatically when the user's browser accesses the URL returned by the start endpoint. This creates a seamless login experience.
+
+For headless operations where no browser is involved, integrators must explicitly call the finish endpoint to obtain the necessary authentication cookies. This is useful for automated processes or server-side integrations.
+
+The finish endpoint:
+
+* **Validates the OTT**  
+    
+  * Checks if the token exists and hasn't expired.  
+  * Ensures the token hasn't been used before.
+
+* **Creates a VTEX session**  
+    
+  * For VTEX user flow: Creates session based on the validated VTEX user.  
+  * For pre-authenticated flow: Creates session using the username from the token's sub claim.  
+  * Adds `authMethod: "Punchout"` to the session token for tracking login source.
+
+* **Sets authentication cookies**  
+    
+  * Returns VTEX session cookies in response headers.  
+  * These cookies are required for subsequent authenticated requests.
+
+>ℹ️ Find more details about this endpoint in `GET` [Finish punchout login flow](https://developers.vtex.com/docs/api-reference/punchout-api#get-/api/authenticator/punchout/finish).
+
+### Request example
+
+```curl
+curl -X GET "https://store.myvtex.com/api/authenticator/punchout/finish?ott={one_time_token}" \
+  -H "Content-Type: application/json" \
 ```
 
 ## Security mechanisms
