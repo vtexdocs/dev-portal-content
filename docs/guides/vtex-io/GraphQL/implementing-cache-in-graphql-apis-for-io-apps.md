@@ -40,7 +40,7 @@ The `@cacheControl` directive uses the following arguments:
 
 - `scope`: Defines which users can access the cached endpoint or field. Choose the scope based on the level of privacy you want for the cached data. The possible values are:
   - `PUBLIC`: Cached data can be accessed by any authenticated user.
-  - `SEGMENT`: Cached data can be accessed by users of the same segment as the one who made the first request. Users are divided into segments based on different criteria such as region, audience, or sales channel. VTEX handles segmentation automatically using [`vtex_segment` cookie](https://developers.vtex.com/docs/guides/sessions-system-overview#vtexsegment-cookie) data.
+  - `SEGMENT`: Cached data can be accessed by users of the same segment as the one who made the first request. Users are divided into segments based on different criteria such as region, audience, or sales channel. VTEX handles segmentation automatically using data from the [`vtex_segment` cookie](https://developers.vtex.com/docs/guides/sessions-system-overview#vtexsegment-cookie).
   - `PRIVATE`: Cached data can only be accessed by the user who made the first request.
 - `maxAge`: The time in seconds for which the endpoint response or field remains cached. If a subsequent request is made within the `maxAge` period after the last request, the app returns the cached value instead of reprocessing it. If this value is 0, the data won't be cached.
 
