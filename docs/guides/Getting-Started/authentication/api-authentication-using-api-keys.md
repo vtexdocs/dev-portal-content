@@ -1,5 +1,5 @@
 ---
-title: "API authentication using application keys"
+title: "API authentication using API keys"
 slug: "api-authentication-using-api-keys"
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
