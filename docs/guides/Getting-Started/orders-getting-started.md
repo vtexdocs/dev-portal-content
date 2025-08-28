@@ -47,7 +47,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.confirmOrder</code></td>
-        <td>Workflow has not been created due to an error in the payment gateway.</td>
+        <td>Workflow has not been created due to an error with the payment gateway.</td>
         <td>Place order</td>
     </tr>
     <tr>
