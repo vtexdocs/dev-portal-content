@@ -62,7 +62,7 @@ git clone https://github.com/vtex-apps/service-example
 
 ### 2. Add the GraphQL builder
 
-Open the `manifest.json` file in your app root and add the [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder). The builder interprets the GraphQL schema in your TypeScript code in the `node` folder.
+Open the `manifest.json` file in your app root and add the [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder). The builder interprets the GraphQL schema defined in your TypeScript code in the `node` folder.
 
 > ℹ️ Your app may already have the GraphQL builder configured. If that's the case, you only need to check if it uses the latest builder version (1.x).
 
@@ -170,7 +170,7 @@ export const getSku = async (
 
 ### 6. Instantiate the resolvers
 
-After defining your resolver functions, add them to the `Service` class of the `node/index.ts` file. You should add a `graphql` field containing the resolvers for each implemented endpoint.
+After defining your resolver functions, add them to the `Service` class of the `node/index.ts` file. You should add a `graphql` field that contains the resolvers for each implemented endpoint.
 
 ```ts node/index.ts mark=3,9:15
 import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
