@@ -42,9 +42,9 @@ Every order follow similar. Each step of the order correspond to a status
 ### Step 1
 
 <table>
-    <td><strong> Trigger</strong></td>
-    <td><strong> Description</strong></td>
-    <td><strong> My Account status</strong></td>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.confirmOrder</code></td>
         <td>Workflow was not created.</td>
@@ -65,9 +65,9 @@ Every order follow similar. Each step of the order correspond to a status
 ### Step 2
 
 <table>
-    <td><strong> Trigger</strong></td>
-    <td><strong> Description</strong></td>
-    <td><strong> My Account status</strong></td>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.approvePayment</code></td>
         <td>Order status is in Step 1.</td>
@@ -88,9 +88,9 @@ Every order follow similar. Each step of the order correspond to a status
 ### Step 3
 
 <table>
-    <td><strong> Trigger</strong></td>
-    <td><strong> Description</strong></td>
-    <td><strong> My Account status</strong></td>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.handleShipping</code></td>
         <td>Order status is in Step 1 or Step 2.</td>
@@ -113,9 +113,9 @@ Every order follow similar. Each step of the order correspond to a status
 #### Orders for pickup
 
 <table>
-    <td><strong> Trigger</strong></td>
-    <td><strong> Description</strong></td>
-    <td><strong> My Account status</strong></td>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.deliverToPickup</code></td>
         <td>Order status is in Step 1, Step 2 or Step 3.</td>
@@ -136,9 +136,9 @@ Every order follow similar. Each step of the order correspond to a status
 #### Orders with delivery
 
 <table>
-    <td><strong> Trigger</strong></td>
-    <td><strong> Description</strong></td>
-    <td><strong> My Account status</strong></td>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.deliverToCarrier</code></td>
         <td>Order status is in Step 1, Step 2 or Step 3.</td>
@@ -157,34 +157,55 @@ Every order follow similar. Each step of the order correspond to a status
 </table>
 
 ### Step 5
+
 When the order has been `invoiced`.
 
+#### Orders for pickup
+
 <table>
-    <td><strong> Trigger</strong></td>
-    <td><strong> Description</strong></td>
-    <td><strong> My Account status</strong></td>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
     <tr>
-        <td><p>Pickup: <code>order.progress.pickup</code></p>
-        <p>Delivery: <code>order.progress.ship</code></p></td>
-        <td>Order status is in Step 1, Step 2 or Step 3.</td>
-        <td><p>Pickup: Ship to pickup point</p>
-        <p>Delivery: Deliver to carrier</p></td>
+        <td><code>order.progress.pickup</code></td>
+        <td>Remais in this status if the field <code>shippingEstimateDate</code> of every invoice has a future estimate date.</td>
+        <td>Pickup</td>
     </tr>
     <tr>
-        <td><p>Pickup: <code>order.progress.ready-for-pickup</code></p>
-        <p>Delivery: <code>order.progress.shipping</code></p></td>
-        <td>Order status is <code>invoiced</code>.</td>
-        <td><p>Pickup: Shipping to pickup point</p>
-        <p>Delivery: Delivering to carrier</p></td>
+        <td><code>order.state.ready-for-pickup</code></td>
+        <td>Remais in this status if the field <code>shippingEstimateDate</code> of every invoice is empty or has a past estimate date.</td>
+        <td>Ready for pickup</td>
     </tr>
     <tr>
-        <td><p>Pickup: <code>order.progress.pickedUp</code></p>
-        <p>Delivery: <code>order.progress.shipped</code></p></td>
-        <td>It remains in this state if the rules for Step 5 are not followed through.</td>
-        <td><p>Pickup: Shipped to pickup point</p>
-        <p>Delivery: Delivered to carrier</p></td>
+        <td><code>order.state.pickedUp</code></td><
+        <td>It remains in this state if the field <code>courierStatus.finished</code> is <code>true</code>.</td>
+        <td>Picked up</td>
     </tr>
 </table>
+
+#### Orders with delivery
+
+<table>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.ship</code></td>
+        <td>It remains in this status if the field <code>courierStatus.Data</code> of the invoice is empty.</td>
+        <td>Ship order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.shipping</code></td>
+        <td>It remains in this status if the field <code>courierStatus.Data</code> of the invoice is has been filled.</td>
+        <td>Shipping order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.shipped</code></td>
+        <td>It remains in this status if the field <code>courierStatus.Data</code> is <code>true</code>.</td>
+        <td>Order shipped</td>
+    </tr>
+</table>
+
 
 ## Creating an order integration
 
