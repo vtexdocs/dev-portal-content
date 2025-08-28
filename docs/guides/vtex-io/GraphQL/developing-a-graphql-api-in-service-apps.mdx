@@ -62,7 +62,7 @@ git clone https://github.com/vtex-apps/service-example
 
 ### 2. Add the GraphQL builder
 
-Open the `manifest.json` file in your app root and add the [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder). The builder interprets the GraphQL schema defined in your TypeScript code in the `node` folder.
+Open the `manifest.json` file in your app's root and add the [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder). The builder interprets the GraphQL schema defined in your TypeScript code in the `node` folder.
 
 > ℹ️ Your app may already have the GraphQL builder configured. If that's the case, you only need to check if it uses the latest builder version (1.x).
 
@@ -109,7 +109,7 @@ type Query {
 
 > ℹ️ GraphQL has many more functionalities you can add to the schema, such as mutations, subscriptions, and directives. See the [official GraphQL documentation](https://graphql.org/learn/) for details.
 
-### 4. Declare the list of Clients
+### 4. Declare the list of clients
 
 Your app will likely access an external resource such as [VTEX APIs](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis), an endpoint from another app, or a service external to VTEX. Within VTEX services, these interactions are handled through [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
 
