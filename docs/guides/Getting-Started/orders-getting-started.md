@@ -110,30 +110,49 @@ Every order follow similar. Each step of the order correspond to a status
 
 ### Step 4
 
+#### Orders for pickup
+
 <table>
     <td><strong> Trigger</strong></td>
     <td><strong> Description</strong></td>
     <td><strong> My Account status</strong></td>
     <tr>
-        <td><p>Pickup: <code>order.progress.deliverToPickup</code></p>
-        <p>Delivery: <code>order.progress.deliverToCarrier</code></p></td>
+        <td><code>order.progress.deliverToPickup</code></td>
         <td>Order status is in Step 1, Step 2 or Step 3.</td>
-        <td><p>Pickup: Ship to pickup point</p>
-        <p>Delivery: Deliver to carrier</p></td>
+        <td>Ship to pickup point</td>
     </tr>
     <tr>
-        <td><p>Pickup: <code>order.progress.deliveringToPickup</code></p>
-        <p>Delivery: <code>order.progress.delivering</code></p></td>
+        <td><code>order.progress.deliveringToPickup</code></td>
         <td>Order status is <code>invoiced</code>.</td>
-        <td><p>Pickup: Shipping to pickup point</p>
-        <p>Delivery: Delivering to carrier</p></td>
+        <td>Shipping to pickup point</td>
     </tr>
     <tr>
-        <td><p>Pickup: <code>order.progress.deliveredToPickup</code></p>
-        <p>Delivery: <code>order.progress.delivered</code></p></td>
+        <td><code>order.progress.deliveredToPickup</code></td>
         <td>It remains in this state if the rules for Step 5 are not followed through.</td>
-        <td><p>Pickup: Shipped to pickup point</p>
-        <p>Delivery: Delivered to carrier</p></td>
+        <td>Shipped to pickup point</td>
+    </tr>
+</table>
+
+#### Orders with delivery
+
+<table>
+    <td><strong> Trigger</strong></td>
+    <td><strong> Description</strong></td>
+    <td><strong> My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.deliverToCarrier</code></td>
+        <td>Order status is in Step 1, Step 2 or Step 3.</td>
+        <td>Deliver to carrier</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.delivering</code></td>
+        <td>Order status is <code>invoiced</code>.</td>
+        <td>Delivering to carrier</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.delivered</code></td>
+        <td>It remains in this state if the rules for Step 5 are not followed through.</td>
+        <td>Delivered to carrier</td>
     </tr>
 </table>
 
