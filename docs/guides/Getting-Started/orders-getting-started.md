@@ -201,7 +201,7 @@ The order reaches this stage when it has been `invoiced`.
     </tr>
     <tr>
         <td><code>order.progress.shipped</code></td>
-        <td>It remains in this status if the array <code>Data</code> inside the object <code>courierStatus</code> is <code>true</code>.</td>
+        <td>Order status when the array <code>Data</code> inside the object <code>courierStatus</code> is set to <code>true</code>.</td>
         <td>Order shipped</td>
     </tr>
 </table>
