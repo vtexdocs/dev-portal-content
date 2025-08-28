@@ -1,7 +1,7 @@
 ---
 title: "Governance and shared security in VTEX IO apps"
 slug: "governance-and-shared-security-in-vtex-io-apps"
-excerpt: "Understand the responsibilities of VTEX, developers, and clients about IO apps"
+excerpt: "Understand the responsibilities of VTEX, developers, and clients for IO apps"
 hidden: false
 createdAt: "2025-08-28T16:30:00.000Z"
 updatedAt: "2025-08-28T16:30:00.000Z"
@@ -20,7 +20,7 @@ The sections below outline these responsibilities in detail.
 ## VTEX responsibilities
 
 - Generate the [available tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) in the context of VTEX IO.
-- Maintenance of the access control infrastructure and license verification via [License Manager](https://help.vtex.com/en/tutorial/license-manager-resources).
+- Maintaining the access control infrastructure and license verification via [License Manager](https://help.vtex.com/en/tutorial/license-manager-resources).
 - Protecting the token lifecycle.
 - Monitoring and responding to incidents in the ecosystem.
 
