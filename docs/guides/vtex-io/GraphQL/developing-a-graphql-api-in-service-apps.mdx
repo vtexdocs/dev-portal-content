@@ -111,7 +111,7 @@ type Query {
 
 ### 4. Declare the list of Clients
 
-Your app will likely access an external resource such as [VTEX APIs](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis), an endpoint from another app, or a service external to VTEX. In VTEX services, these interactions are handled through [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
+Your app will likely access an external resource such as [VTEX APIs](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis), an endpoint from another app, or a service external to VTEX. Within VTEX services, these interactions are handled through [clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
 
 Instead of calling endpoints directly in your resolver functions, you should define and use clients to encapsulate your HTTP logic and keep your resolvers clean and focused.
 
@@ -147,7 +147,7 @@ This setup allows you to access the `catalog` client in your resolvers through t
 
 #### Using external resources
 
-To access routes and resources not available through the native clients, you need to [develop your custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients). Just like with native clients, you must register each custom client in the `Clients` class located in `node/clients/index.ts` so it can be accessed across your app.
+To access routes and resources not available through the native clients, you need to [develop your custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients). Similar to native clients, you must register each custom client in the `Clients` class located in `node/clients/index.ts` so it can be accessed across your app.
 
 ### 5. Define the resolvers
 
@@ -155,7 +155,7 @@ Resolvers are the functions that are executed when a GraphQL endpoint is called.
 
 1. In the `node` folder, create another folder called `resolvers`.
 2. In the new folder, add the TypeScript files that will contain resolver code. We recommend creating a `.ts` file for each resolver.
-3. In the created files, add the resolver code. The following example shows a resolver that you can use as reference:
+3. In the created files, add the resolver code. The following example shows a resolver that you can use as a reference:
 
 ```ts node/resolvers/products.ts
 export const getSku = async (
@@ -219,7 +219,7 @@ vtex link
 
 ### 9. Test your endpoints
 
-With your app running, you can test the implemented endpoints by making requests. One way to do this is using the VTEX [GraphQL IDE](https://developers.vtex.com/docs/guides/graphql-ide) in the Admin:
+With your app running, you can test the implemented endpoints by making requests. One way to do this is using the VTEX [GraphQL IDE](https://developers.vtex.com/docs/guides/graphql-ide) in the Admin panel:
 
 1. Install the GraphQL IDE app by running `vtex install vtex.admin-graphql-ide` in your terminal.
 2. Open the VTEX Admin in the workspace to which your app was linked. In your browser, go to `https://{workspace}--{account}.myvtex.com/admin`.
