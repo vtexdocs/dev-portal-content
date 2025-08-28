@@ -47,7 +47,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.confirmOrder</code></td>
-        <td>Workflow hasn't been created due to an error in the payment gateway.</td>
+        <td>Workflow has not been created due to an error in the payment gateway.</td>
         <td>Place order</td>
     </tr>
     <tr>
@@ -57,7 +57,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     </tr>
     <tr>
         <td><code>order.progress.orderConfirmed</code></td>
-        <td>The order's API status is none of the above, i.e. the order is in a later status.</td>
+        <td>The order's API status is none of the above, i.e., the order is in a later status.</td>
         <td>Order placed</td>
     </tr>
 </table>
@@ -70,7 +70,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.approvePayment</code></td>
-        <td>The order's API status is a status in stage 1.</td>
+        <td>The order's API status is a stage 1 status.</td>
         <td>Approve payment</td>
     </tr>
     <tr>
@@ -80,7 +80,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     </tr>
     <tr>
         <td><code>order.progress.paymentApproved</code></td>
-        <td>The order's API status is none of the above nor one in stage 1, i.e. the order is in a later status.</td>
+        <td>The order's API status is none of the above, nor one from stage 1, i.e., the order is in a later status.</td>
         <td>Payment approved</td>
     </tr>
 </table>
@@ -93,7 +93,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.handleShipping</code></td>
-        <td>The order's API status is a status in stage 1 or 2.</td>
+        <td>The order's API status is a stage 1 or 2 status.</td>
         <td>Handle order</td>
     </tr>
     <tr>
@@ -103,7 +103,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     </tr>
     <tr>
         <td><code>order.progress.shippingHandled</code></td>
-        <td>Order status is none of the above nor one in stage 1 or 2, i.e. the order is in a later status.</td>
+        <td>The order's API status is none of the above, nor one from stage 1 or 2, i.e., the order is in a later status.</td>
         <td>Package handled</td>
     </tr>
 </table>
@@ -118,7 +118,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.deliverToPickup</code></td>
-        <td>The order's API status is a status in stage 1, 2 or 3.</td>
+        <td>The order's API status is a stage 1, 2, or 3 status.</td>
         <td>Ship to pickup point</td>
     </tr>
     <tr>
@@ -141,7 +141,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.deliverToCarrier</code></td>
-        <td>The order's API status is a status in stage 1, 2 or 3.</td>
+        <td>The order's API status is a status in stage 1, 2, or 3.</td>
         <td>Deliver to carrier</td>
     </tr>
     <tr>
@@ -158,7 +158,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
 
 ### Stage 5
 
-The order reaches this stage when it has been `invoiced`.
+The order reaches this stage when it has been invoiced.
 
 #### Orders for pickup
 
@@ -178,7 +178,7 @@ The order reaches this stage when it has been `invoiced`.
     </tr>
     <tr>
         <td><code>order.state.pickedUp</code></td><
-        <td>Order status when the field <code>finished</code> inside the object <code>courierStatus</code> is set to <code>true</code>.</td>
+        <td>Order status when the field <code>finished</code> within the object <code>courierStatus</code> is set to <code>true</code>.</td>
         <td>Picked up</td>
     </tr>
 </table>
@@ -205,7 +205,6 @@ The order reaches this stage when it has been `invoiced`.
         <td>Order shipped</td>
     </tr>
 </table>
-
 
 ## Creating an order integration
 
