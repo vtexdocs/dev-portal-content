@@ -52,7 +52,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     </tr>
     <tr>
         <td><code>order.progress.confirmingOrder</code></td>
-        <td>The order's API status is one of the following: <code>order-created</code>, <code>order-completed</code> or <code>on-order-completed</code>.</td>
+        <td>The order's API status is one of the following: <code>order-created</code>, <code>order-completed</code>, or <code>on-order-completed</code>.</td>
         <td>Placing order</td>
     </tr>
     <tr>
