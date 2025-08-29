@@ -98,7 +98,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     </tr>
     <tr>
         <td><code>order.progress.handlingShipping</code></td>
-        <td>The order's API status is one of the following: <code>window-to-cancel</code>, <code>payment-approved</code>, <code>ready-for-handling</code>, <code>authorize-fullfilment</code>, <code>release-to-fulfillment</code>, <code>handling</code> or <code>invoice</code>.</td>
+        <td>The order's API status is one of the following: <code>window-to-cancel</code>, <code>payment-approved</code>, <code>ready-for-handling</code>, <code>authorize-fulfillment</code>, <code>release-to-fulfillment</code>, <code>handling</code>, or <code>invoice</code>.</td>
         <td>Handling order</td>
     </tr>
     <tr>
