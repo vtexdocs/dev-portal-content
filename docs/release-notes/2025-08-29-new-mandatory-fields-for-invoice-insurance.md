@@ -1,23 +1,24 @@
 
 ---
+
 title: "Orders API: support for NT 2025.001 fields"
 slug: "2025-08-29-xxx-xxx-xxxx"
 hidden: false
 type: "added"
 createdAt: "2025-08-29T00:00:00.219Z"
 updatedAt: ""
-excerpt: "The Orders API now supports the NT 2025.001 fields, ensuring tax compliance and preventing invoice rejections. These updates introduce new customApps fields, with variations depending on the marketplace. The changes apply only to stores in Brazil."
+excerpt: "The Orders API now supports the NT 2025.001 fields, ensuring tax compliance and preventing invoice rejections. These updates introduce new customApps fields, with variations, depending on the marketplace. The changes apply only to stores in Brazil."
 ---
 
 >ℹ️ The following changes apply only to stores in Brazil.
 
-To ensure tax compliance for all orders and avoid rejections during invoice issuance, VTEX has added new fields inside the order’s `customApps`.
-See below the new fields:
+To ensure tax compliance for all orders and avoid rejections during invoice issuance, VTEX has added new fields within the order’s `customApps`.
+The new fields are listed below:
 
 - `marketplacePaymentMethods`: Payment methods used.
 - `marketplacePaymentCnpjAcquirers`: CNPJ of the acquirer.
 - `marketplacePaymentAuthorizationCodes`: Authorization code.
-- `marketplacePaymentCreditCardBrands`: Credit card brand. This field will be empty in case of other payment methods.
+- `marketplacePaymentCreditCardBrands`: Credit card brand. This field will be empty for other payment methods.
 
 The new fields can be retrieved using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint, as in the example below:
 
@@ -40,7 +41,7 @@ The new fields can be retrieved using the [Get order](https://developers.vtex.co
 }
 ```
 
->ℹ️ Values may vary between marketplaces, since they are transported **AS IS** (without standardization) from the marketplace (e.g.: “Credit Cards”, “Credit”, “Credit Card”, “credit-card”).
+>ℹ️ Values may vary between marketplaces, as they are transported **AS IS** (without standardization) from the marketplace (e.g., “Credit Cards”, “Credit”, “Credit Card”, “credit-card”).
 
 ## Dafiti marketplace
 
