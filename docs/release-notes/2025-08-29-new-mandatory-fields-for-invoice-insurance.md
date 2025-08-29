@@ -1,6 +1,6 @@
 ---
 title: "Orders API: support for NT 2025.001 fields"
-slug: "2025-08-29-xxx-xxx-xxxx"
+slug: "2025-08-29-new-mandatory-fields-for-invoice-insurance"
 hidden: false
 type: "added"
 createdAt: "2025-08-29T00:00:00.219Z"
