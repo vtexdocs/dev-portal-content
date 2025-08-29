@@ -13,6 +13,7 @@ excerpt: "The Orders API now supports the NT 2025.001 fields, ensuring tax compl
 
 To ensure tax compliance for all orders and avoid rejections during invoice issuance, VTEX has added new fields inside the order’s `customApps`.
 See below the new fields:
+
 - `marketplacePaymentMethods`: Payment methods used.
 - `marketplacePaymentCnpjAcquirers`: CNPJ of the acquirer.
 - `marketplacePaymentAuthorizationCodes`: Authorization code.
@@ -41,9 +42,10 @@ The new fields can be retrieved using the [Get order](https://developers.vtex.co
 
 >ℹ️ Values may vary between marketplaces, since they are transported **AS IS** (without standardization) from the marketplace (e.g.: “Credit Cards”, “Credit”, “Credit Card”, “credit-card”).
 
-### Dafiti marketplace
+## Dafiti marketplace
 
 For the [Dafiti](https://help.vtex.com/pt/tracks/configurar-integracao-da-dafiti--4wF4RBx9ygEkimW6SsKw8i/5lAIj7OCqizD5EisLJvatx) marketplace, the fields are in singular form:
+
 - `marketplacePaymentMethod`
 - `marketplacePaymentCnpjAcquirer`
 - `marketplacePaymentAuthorizationCode`
