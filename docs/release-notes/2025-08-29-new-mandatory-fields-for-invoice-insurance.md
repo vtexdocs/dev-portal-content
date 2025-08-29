@@ -49,6 +49,6 @@ For the [Dafiti](https://help.vtex.com/pt/tracks/configurar-integracao-da-dafiti
 - `marketplacePaymentCnpjAcquirer`
 - `marketplacePaymentAuthorizationCode`
 
-The field `marketplacePaymentCreditCardBrands` is not available, since this information is included in the `marketplacePaymentMethod` field.
+The field `marketplacePaymentCreditCardBrands` is not available, as this information is already included in the `marketplacePaymentMethod` field.
 
 For more information, read the [New mandatory fields for invoice issuance announcement]().
