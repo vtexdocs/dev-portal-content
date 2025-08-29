@@ -103,7 +103,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     </tr>
     <tr>
         <td><code>order.progress.shippingHandled</code></td>
-        <td>The order's API status is none of the above, nor one from stage 1 or 2, i.e., the order is in a later status.</td>
+        <td>The order's API status is none of the above, or any from stage 1 or 2, i.e., the order is in a later status.</td>
         <td>Package handled</td>
     </tr>
 </table>
