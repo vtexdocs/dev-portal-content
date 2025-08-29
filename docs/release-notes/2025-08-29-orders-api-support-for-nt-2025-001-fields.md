@@ -51,4 +51,4 @@ For the [Dafiti](https://help.vtex.com/pt/tracks/configurar-integracao-da-dafiti
 
 The field `marketplacePaymentCreditCardBrands` is not available, as this information is already included in the `marketplacePaymentMethod` field.
 
-For more information, read the [New mandatory fields for invoice issuance announcement](https://help.vtex.com/pt/announcements/novos-campos-obrigatorios-para-emissao-de-notas-fiscais--5jDozNwc272jtq92dvKQkq)).
+For more information, read the [New mandatory fields for invoice issuance announcement](https://help.vtex.com/pt/announcements/novos-campos-obrigatorios-para-emissao-de-notas-fiscais--5jDozNwc272jtq92dvKQkq).
