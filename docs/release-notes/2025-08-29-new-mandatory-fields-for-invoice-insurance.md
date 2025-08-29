@@ -5,7 +5,7 @@ hidden: false
 type: "added"
 createdAt: "2025-08-29T00:00:00.219Z"
 updatedAt: ""
-excerpt: "The Orders API now supports the NT 2025.001 fields, ensuring tax compliance and preventing invoice rejections. These updates introduce new customApps fields, with variations, depending on the marketplace. The changes apply only to stores in Brazil."
+excerpt: "The Orders API now supports the NT 2025.001 fields, ensuring tax compliance and preventing invoice rejections. These updates introduce new fields within `customApps`, with variations depending on the marketplace. The changes apply only to stores in Brazil."
 ---
 
 >ℹ️ The following changes apply only to stores in Brazil.
