@@ -33,6 +33,179 @@ The order flow describes the status, possibilities, and actions throughout the l
 }
 [/block]
 
+## Understanding order statuses
+
+In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh#view-order-details) menu, every order shows a timeline of five stages, indicating the order flow. Each stage has several triggers that change the order status accordingly. You can see the triggers, their descriptions, and the order statuses they generate in My Account. Stages 1, 2 and 3 are the same for every order; however, stages 4 and 5 have different triggers and outcomes depending on whether it's a pickup order or a delivery order.
+
+> ℹ️ An order is considered for pickup when its `selectedDeliveryChannel` field contains the value `pickup-in-point`. You can retrieve this information using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint.
+
+### Stage 1
+
+<table>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.confirmOrder</code></td>
+        <td>Workflow has not been created due to an error with the payment gateway.</td>
+        <td>Place order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.confirmingOrder</code></td>
+        <td>The order's API status is one of the following: <code>order-created</code>, <code>order-completed</code>, or <code>on-order-completed</code>.</td>
+        <td>Placing order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.orderConfirmed</code></td>
+        <td>The order's API status is none of the above, i.e., the order is in a later status.</td>
+        <td>Order placed</td>
+    </tr>
+</table>
+
+### Stage 2
+
+<table>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.approvePayment</code></td>
+        <td>The order's API status is a stage 1 status.</td>
+        <td>Approve payment</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.approvingPayment</code></td>
+        <td>The order's API status is <code>payment-pending</code> or <code>approve-payment</code>.</td>
+        <td>Approving payment</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.paymentApproved</code></td>
+        <td>The order's API status is none of the above, or any from stage 1, i.e., the order is in a later status.</td>
+        <td>Payment approved</td>
+    </tr>
+</table>
+
+### Stage 3
+
+<table>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.handleShipping</code></td>
+        <td>The order's API status is a stage 1 or 2 status.</td>
+        <td>Handle order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.handlingShipping</code></td>
+        <td>The order's API status is one of the following: <code>window-to-cancel</code>, <code>payment-approved</code>, <code>ready-for-handling</code>, <code>authorize-fulfillment</code>, <code>release-to-fulfillment</code>, <code>handling</code>, or <code>invoice</code>.</td>
+        <td>Handling order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.shippingHandled</code></td>
+        <td>The order's API status is none of the above, or any from stage 1 or 2, i.e., the order is in a later status.</td>
+        <td>Package handled</td>
+    </tr>
+</table>
+
+### Stage 4
+
+#### Orders for pickup
+
+<table>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.deliverToPickup</code></td>
+        <td>The order's API status is a stage 1, 2, or 3 status.</td>
+        <td>Ship to pickup point</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.deliveringToPickup</code></td>
+        <td>The order's API status is <code>invoiced</code>.</td>
+        <td>Shipping to pickup point</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.deliveredToPickup</code></td>
+        <td>The order will remain in this status until the rules for stage 5 are completed.</td>
+        <td>Shipped to pickup point</td>
+    </tr>
+</table>
+
+#### Orders with delivery
+
+<table>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.deliverToCarrier</code></td>
+        <td>The order's API status is a status in stage 1, 2, or 3.</td>
+        <td>Deliver to carrier</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.delivering</code></td>
+        <td>The order's API status is <code>invoiced</code>.</td>
+        <td>Delivering to carrier</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.delivered</code></td>
+        <td>The order will remain in this status until the rules for stage 5 are completed.</td>
+        <td>Delivered to carrier</td>
+    </tr>
+</table>
+
+### Stage 5
+
+The order reaches this stage when it has been invoiced.
+
+#### Orders for pickup
+
+<table>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.pickup</code></td>
+        <td>Order status when the field <code>shippingEstimateDate</code> has a future estimate date.</td>
+        <td>Pickup</td>
+    </tr>
+    <tr>
+        <td><code>order.state.ready-for-pickup</code></td>
+        <td>Order status when the field <code>shippingEstimateDate</code> is empty or has a past estimate date.</td>
+        <td>Ready for pickup</td>
+    </tr>
+    <tr>
+        <td><code>order.state.pickedUp</code></td><
+        <td>Order status when the field <code>finished</code> within the object <code>courierStatus</code> is set to <code>true</code>.</td>
+        <td>Picked up</td>
+    </tr>
+</table>
+
+#### Orders with delivery
+
+<table>
+    <td><strong>Trigger</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>My Account status</strong></td>
+    <tr>
+        <td><code>order.progress.ship</code></td>
+        <td>Order status when the array <code>Data</code> within the object <code>courierStatus</code> is empty.</td>
+        <td>Ship order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.shipping</code></td>
+        <td>Order status when the array <code>Data</code> within the object <code>courierStatus</code> has been filled.</td>
+        <td>Shipping order</td>
+    </tr>
+    <tr>
+        <td><code>order.progress.shipped</code></td>
+        <td>Order status when the array <code>Data</code> within the object <code>courierStatus</code> is set to <code>true</code>.</td>
+        <td>Order shipped</td>
+    </tr>
+</table>
+
 ## Creating an order integration
 
 In the following sections, you will learn how to build order integrations with the Feed and Hook. This is useful when you want to develop an integration between your store’s ERP and the VTEX platform, for example.
