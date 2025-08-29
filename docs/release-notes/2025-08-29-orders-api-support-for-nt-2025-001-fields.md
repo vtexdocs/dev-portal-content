@@ -39,7 +39,7 @@ The new fields can be retrieved using the [Get order](https://developers.vtex.co
 }
 ```
 
->ℹ️ Values may vary between marketplaces, as they are passed as is (without standardization) from the marketplace. For example: `Credit Cards`, `Credit`, `Credit Card`, `credit-card`).
+>ℹ️ Values may vary between marketplaces, as they are passed as is, without standardization, from the marketplace. For example: `Credit Cards`, `Credit`, `Credit Card`, `credit-card`.
 
 ## Dafiti marketplace
 
