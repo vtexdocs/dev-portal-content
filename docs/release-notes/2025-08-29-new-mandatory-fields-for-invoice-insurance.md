@@ -10,7 +10,7 @@ excerpt: "The Orders API now supports the NT 2025.001 fields, ensuring tax compl
 
 >ℹ️ The following changes apply only to stores in Brazil.
 
-To ensure tax compliance for all orders and avoid rejections during invoice issuance, VTEX has added new fields within the order’s `customApps`.
+To ensure tax compliance for all orders and avoid rejections during invoice issuance, the Orders API now includes new fields in the `customApps` object.
 The new fields are listed below:
 
 - `marketplacePaymentMethods`: Payment methods used.
