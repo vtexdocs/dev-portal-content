@@ -1,6 +1,6 @@
 ---
 title: "Orders API: support for NT 2025.001 fields"
-slug: "2025-08-29-new-mandatory-fields-for-invoice-issuance"
+slug: "2025-08-29-orders-api-support-for-nt-2025-001-fields"
 hidden: false
 type: "added"
 createdAt: "2025-08-29T00:00:00.219Z"
