@@ -1,0 +1,53 @@
+
+---
+title: "Orders API: support for NT 2025.001 fields"
+slug: "2025-08-29-xxx-xxx-xxxx"
+hidden: false
+type: "added"
+createdAt: "2025-08-29T00:00:00.219Z"
+updatedAt: ""
+excerpt: "The Orders API now supports the NT 2025.001 fields, ensuring tax compliance and preventing invoice rejections. These updates introduce new customApps fields, with variations depending on the marketplace. The changes apply only to stores in Brazil."
+---
+
+>ℹ️ The following changes apply only to stores in Brazil.
+
+To ensure tax compliance for all orders and avoid rejections during invoice issuance, VTEX has added new fields inside the order’s `customApps`.
+See below the new fields:
+- `marketplacePaymentMethods`: Payment methods used.
+- `marketplacePaymentCnpjAcquirers`: CNPJ of the acquirer.
+- `marketplacePaymentAuthorizationCodes`: Authorization code.
+- `marketplacePaymentCreditCardBrands`: Credit card brand. This field will be empty in case of other payment methods.
+
+The new fields can be retrieved using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint, as in the example below:
+
+```shell
+"customData": {
+  {
+    "customApps": [
+      {
+        "id": "integration-marketplace-[marketplace name]",
+        "major": 1,
+        "fields": {
+          "marketplacePaymentCnpjAcquirers": "11.222.333/0001-44",
+          "marketplacePaymentAuthorizationCodes": "XYZ",
+          "marketplacePaymentCreditCardBrands": "",
+          "marketplacePaymentMethods": "Pix"
+        }
+      }
+    ]
+  }
+}
+```
+
+>ℹ️ Values may vary between marketplaces, since they are transported **AS IS** (without standardization) from the marketplace (e.g.: “Credit Cards”, “Credit”, “Credit Card”, “credit-card”).
+
+### Dafiti marketplace
+
+For the [Dafiti](https://help.vtex.com/pt/tracks/configurar-integracao-da-dafiti--4wF4RBx9ygEkimW6SsKw8i/5lAIj7OCqizD5EisLJvatx) marketplace, the fields are in singular form:
+- `marketplacePaymentMethod`
+- `marketplacePaymentCnpjAcquirer`
+- `marketplacePaymentAuthorizationCode`
+
+The field `marketplacePaymentCreditCardBrands` is not available, since this information is included in the `marketplacePaymentMethod` field.
+
+For more information, read the [New mandatory fields for invoice issuance announcement]().
