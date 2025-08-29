@@ -80,7 +80,7 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
     </tr>
     <tr>
         <td><code>order.progress.paymentApproved</code></td>
-        <td>The order's API status is none of the above, nor one from stage 1, i.e., the order is in a later status.</td>
+        <td>The order's API status is none of the above, or any from stage 1, i.e., the order is in a later status.</td>
         <td>Payment approved</td>
     </tr>
 </table>
@@ -191,17 +191,17 @@ The order reaches this stage when it has been invoiced.
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.ship</code></td>
-        <td>Order status when the array <code>Data</code> inside the object <code>courierStatus</code> is empty.</td>
+        <td>Order status when the array <code>Data</code> within the object <code>courierStatus</code> is empty.</td>
         <td>Ship order</td>
     </tr>
     <tr>
         <td><code>order.progress.shipping</code></td>
-        <td>Order status when the array <code>Data</code> inside the object <code>courierStatus</code> has been filled.</td>
+        <td>Order status when the array <code>Data</code> within the object <code>courierStatus</code> has been filled.</td>
         <td>Shipping order</td>
     </tr>
     <tr>
         <td><code>order.progress.shipped</code></td>
-        <td>Order status when the array <code>Data</code> inside the object <code>courierStatus</code> is set to <code>true</code>.</td>
+        <td>Order status when the array <code>Data</code> within the object <code>courierStatus</code> is set to <code>true</code>.</td>
         <td>Order shipped</td>
     </tr>
 </table>
