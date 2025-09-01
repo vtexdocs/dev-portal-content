@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.79](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.78...v1.1.79) (2025-09-01)
+
+
+### 🔧 Fixes and improvements
+
+* **overview.mdx:** removing 'filter by shipping' ([2898e72](https://github.com/vtexdocs/dev-portal-content/commit/2898e729838f082402166bf5329b27450f25b70e))
+
 ### [1.1.78](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.76...v1.1.78) (2025-09-01)
 
 ### [1.1.76](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.74...v1.1.76) (2025-09-01)
