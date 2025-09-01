@@ -36,7 +36,7 @@ Besides being able to buy all the products viewed, customers can filter the prod
 - Products available for the desired postal code.
 - Product delivery deadlines.
 - Products available in stores near the customer's location.
-- Faster shipping method to deliver the order.
+- Faster shipping methods to deliver the order.
 - [Pickup point](https://help.vtex.com/en/tutorial/pontos-de-retirada--2fljn6wLjn8M4lJHA6HP3R) where the customer wants to pick up the order.
 
 At this stage, **Delivery Promise** allows your store's customers to filter the products displayed in the navigation by using these filters:
