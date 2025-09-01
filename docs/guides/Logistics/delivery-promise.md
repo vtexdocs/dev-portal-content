@@ -34,7 +34,7 @@ When the customer provides their address, an initial selection of products is ma
 Besides being able to buy all the products viewed, customers can filter the products on the product listing page to view only the results that meet certain criteria, as shown below. This allows customers to tailor their navigation experience to meet their needs:
 
 - Products available for the desired postal code.
-- Product delivery deadline.
+- Product delivery deadlines.
 - Products available in stores near the customer's location.
 - Faster shipping method to deliver the order.
 - [Pickup point](https://help.vtex.com/en/tutorial/pontos-de-retirada--2fljn6wLjn8M4lJHA6HP3R) where the customer wants to pick up the order.
