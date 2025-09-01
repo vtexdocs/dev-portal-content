@@ -3,7 +3,7 @@ title: "Delivery Promise"
 slug: "delivery-promise"
 hidden: false
 createdAt: "2025-09-01T16:53:51.8Z"
-updatedAt: "",
+updatedAt: ""
 excerpt: ""
 ---
 
