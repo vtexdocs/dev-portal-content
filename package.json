@@ -1,6 +1,6 @@
 {
   "name": "dev-portal-content",
-  "version": "1.1.76",
+  "version": "1.1.78",
   "description": "content for vtex developer portal",
   "main": "index.js",
   "repository": "https://github.com/vtexdocs/dev-portal-content",
