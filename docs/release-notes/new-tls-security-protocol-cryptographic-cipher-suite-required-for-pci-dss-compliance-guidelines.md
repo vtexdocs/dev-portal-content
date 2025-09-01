@@ -10,7 +10,7 @@ TLS (Transport Layer Security) is a security and privacy protocol applied to onl
 
 ## What changed?
 
-After January 31, 2024, VTEX payment systems will only accept TLS 1.2 and 1.3 communication protocols using the following cipher suites:
+After January 31, 2024, VTEX payment systems will only accept the TLS 1.2 communication protocol using the following cipher suites:
 
 - TLS_AES_128_GCM_SHA256
 - TLS_AES_256_GCM_SHA384
@@ -24,6 +24,6 @@ After January 31, 2024, VTEX payment systems will only accept TLS 1.2 and 1.3 co
 
 ## What needs to be done?
 
-You must update the cipher suite used by your payment or anti-fraud provider to communicate with VTEX payment systems to meet the requirements of the TLS 1.2 or 1.3 protocol by January 31, 2024.
+You must update the cipher suite used by your payment or anti-fraud provider to communicate with VTEX payment systems to meet the requirements of the TLS 1.2 protocol by January 31, 2024.
 
-> ⚠️ After January 31, 2024, all payment or anti-fraud providers that do not use the TLS 1.2 or 1.3 protocols with the above-mentioned cipher suites will have their communications with the VTEX payment gateway interrupted.
+> ⚠️ After January 31, 2024, all payment or anti-fraud providers that do not use the TLS 1.2 protocol with the above-mentioned cipher suites will have their communications with the VTEX payment gateway interrupted.
