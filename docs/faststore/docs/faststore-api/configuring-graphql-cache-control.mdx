@@ -52,7 +52,7 @@ Declare the `graphqlCacheControl` flag in the `experimental` section of the `dis
 
     | **Object** | **Cache state** | **Behavior** |
     | ------ | ----------- | -------- |
-    | 0s - 300s  | Fresh | <ul><li>Serves cached responses instantly.</li><li>No backend requests are made unless it is the first request.</li></ul> |
+    | 0s - 300s  | Fresh | <ul><li>Serves cached responses instantly.</li><li>No backend requests are made, unless it is the initial request.</li></ul> |
     | 300s - 360s  | Stale | <ul><li>Serves old data while fetching updates.</li><li>Fresh data is simultaneously fetched in the background.</li></ul> |
     | After 360s  | Expired | <ul><li>Cache fully expires.</li><li>Next request triggers a fresh data fetch.</li></ul> |
 
