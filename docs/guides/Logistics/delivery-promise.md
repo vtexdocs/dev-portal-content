@@ -29,7 +29,7 @@ The content is organized as follows:
 
 ## Available features
 
-When the customer provides their address, an initial selection of products is made to display only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by Checkout.
+When the customer provides their address, an initial selection of products is made, displaying only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by Checkout.
 
 Besides being able to buy all the products viewed, customers can filter the products on the product listing page to view only the results that meet certain criteria, as shown below. This allows customers to tailor their navigation experience to meet their needs:
 
