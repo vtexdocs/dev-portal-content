@@ -6,7 +6,7 @@ title: 'Configuring GraphQL cache control for `GET` requests'
 
 In this guide, learn how to configure caching for GraphQL `GET` requests using the `graphqlCacheControl` flag. Setting cache rules allows responses to be stored and reused for subsequent requests, reducing server load and improving store performance. For example, caching a product listing page (such as "Summer Collection") for five minutes allows the page to load faster for store visitors. The system serves cached content immediately, then updates it in the background, further ensuring a seamless user experience and minimizing additional server load.
 
-The `graphqlCacheControl` flag defines how long responses should be stored and reused when caching for GraphQL `GET` requests.
+The `graphqlCacheControl` flag defines how long responses should be stored and reused when caching GraphQL `GET` requests.
 
 > ℹ `POST` requests are excluded from caching by default. This ensures that data sent in the request body, such as user input or sensitive information, is always processed in real time and not served from the cache.
 
@@ -46,14 +46,14 @@ Declare the `graphqlCacheControl` flag in the `experimental` section of the `dis
     | Object    | Description     |
     | --------- | --------------- |
     | `maxAge: 5 * 60` | Defines how long responses stay fresh in cache. <ul><li>Responses are cached for 5 minutes (300 seconds).</li><li>After 5 minutes, the cache is considered `stale`.</li><li>`maxAge: 0` - A value of `0` disables caching entirely.</li></ul> |
-    | `staleWhileRevalidate: 60` | Defines how long stale cached data can be used while new data is fetched in the background. <ul><li>After the initial 5 minutes (when `maxAge expires`), stale cached data can still be served for up to one extra minute (60 seconds) while the system fetches fresh data in the background.</li><li>This ensures users see slightly older data (for 1 minute maximum) instead of waiting for a full reload.</li></ul> |
+    | `staleWhileRevalidate: 60` | Defines how long stale cached data can be used while new data is fetched in the background. <ul><li>After the initial 5 minutes (when `maxAge` is reached), stale cached data can still be served for up to one extra minute (60 seconds) while the system fetches fresh data in the background.</li><li>This ensures users see slightly older data (for 1 minute maximum) instead of waiting for a full reload.</li></ul> |
 
     This configuration creates a tiered caching system that balances immediate performance with data freshness. The table below illustrates what happens over time:
 
     | **Object** | **Cache state** | **Behavior** |
     | ------ | ----------- | -------- |
-    | 0s - 300s  | Fresh | <ul><li>Serves cached responses instantly.</li><li>No backend requests unless it is the first request.</li></ul> |
-    | 300s - 360s  | Stale | <ul><li>Serves old data while fetching updates.</li><li>Simultaneously fetches fresh data in background.</li></ul> |
+    | 0s - 300s  | Fresh | <ul><li>Serves cached responses instantly.</li><li>No backend requests are made unless it is the first request.</li></ul> |
+    | 300s - 360s  | Stale | <ul><li>Serves old data while fetching updates.</li><li>Fresh data is simultaneously fetched in the background.</li></ul> |
     | After 360s  | Expired | <ul><li>Cache fully expires.</li><li>Next request triggers a fresh data fetch.</li></ul> |
 
 5. Open a terminal and run `yarn dev` to sync the changes and [test the cache configuration](#testing-the-cache-configuration).
