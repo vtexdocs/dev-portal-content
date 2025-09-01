@@ -3,7 +3,8 @@ title: "Delivery Promise"
 slug: "delivery-promise"
 hidden: false
 createdAt: "2025-09-01T16:53:51.8Z"
-updatedAt: ""
+updatedAt: "",
+excerpt: ""
 ---
 
 >ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
