@@ -10,7 +10,7 @@ TLS (Transport Layer Security) is a security and privacy protocol applied to onl
 
 ## What changed?
 
-After January 31, 2024, VTEX payment systems will only accept TLS 1.2 and 1.3 communication protocols using the following cipher suites:
+After January 31, 2024, VTEX payment systems will only accept the TLS 1.2 communication protocol using the following cipher suites:
 
 - TLS_AES_128_GCM_SHA256
 - TLS_AES_256_GCM_SHA384
