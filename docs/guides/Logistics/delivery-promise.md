@@ -23,7 +23,7 @@ The content is organized as follows:
 - [Advantages](#advantages)
 - [Requirements and restrictions](#requirements-and-restrictions)
 - [Delivery Promise for Store Framework](#delivery-promise-for-store-framework)
-- [Delivery promise for headless stores](#delivery-promise-for-headless-stores)
+- [Delivery Promise for headless stores](#delivery-promise-for-headless-stores)
 - [Delivery Promise for FastStore](#delivery-promise-for-faststore)
 - [Learn more](#learn-more)
 
@@ -37,12 +37,12 @@ Besides being able to buy all the products viewed, customers can filter the prod
 - Product delivery deadline.
 - Products available in stores near the customer's location.
 - Faster shipping method to deliver the order.
-- [Pickup point](https://help.vtex.com/en/tutorial/pontos-de-retirada--2fljn6wLjn8M4lJHA6HP3R) where you want to pick up the order.
+- [Pickup point](https://help.vtex.com/en/tutorial/pontos-de-retirada--2fljn6wLjn8M4lJHA6HP3R) where the customer wants to pick up the order.
 
 At this stage, **Delivery Promise** allows your store's customers to filter the products displayed in the navigation by using these filters:
 
 - **Deliver to**: Products available for delivery to the provided address.
-- **Pickup:** Products available for pickup at pickup points within a radius of up to 50 km from the provided address.
+- **Pickup**: Products available for pickup at pickup points within a radius of up to 50 km from the provided address.
 - **Pickup nearby:** Products available for pickup at pickup points within a radius of up to 10 km from the provided address.
 - **Pickup at {{name}}:** Products available for pickup at a given pickup point.
 
@@ -78,9 +78,9 @@ When building your storefront with Store Framework, you can enable Delivery Prom
 
 Learn how to configure these components in the [Setting up Delivery Promise components (Beta)](https://developers.vtex.com/docs/guides/setting-up-delivery-promise-components) guide.
 
-## Delivery promise for headless stores
+## Delivery Promise for headless stores
 
-When using a headless approach in your store, you can use the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) to enable Delivery Promise. To learn how to apply it to your store, read the [Delivery promise for headless stores (Beta)](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide.
+When using a headless approach in your store, you can use the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) to enable Delivery Promise. To learn how to apply it to your store, read the [Delivery Promise for headless stores (Beta)](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide.
 
 ## Delivery Promise for FastStore
 
