@@ -63,7 +63,7 @@ For [omnichannel](https://help.vtex.com/en/tracks/estrategias-de-comercio-unific
 
 ## Requirements and restrictions
 
-**Delivery Promise** requires the customer's location from the beginning of the buying journey, ensuring that only products with valid shipping methods are displayed on the product listing page. To do this, you must install the [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG), which requires the customer's location.
+**Delivery Promise** requires the customer's location from the beginning of the buying journey, ensuring that only products with valid shipping methods are displayed on the product listing page. To do this, you must install [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG), which requires the customer's location.
 
 To join the current phase of **Delivery Promise**, you must meet the following conditions:
 
