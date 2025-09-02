@@ -11,7 +11,7 @@ excerpt: ""
 
 **Delivery Promise** is a VTEX solution that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location.
 
-With **Delivery Promise**, your store can make a “delivery promise” to customers for all products they view, as shown in the video below:
+Using this solution, your store can make a "delivery promise" to customers for all products they view, as shown in the video below:
 
 [![VTEX Vision Spring '24: Delivery Promises](https://img.youtube.com/vi/l8HU2qVpsBg/0.jpg)](https://www.youtube.com/watch?v=l8HU2qVpsBg)
 
