@@ -2,11 +2,13 @@
 title: "Delivery Promise components"
 ---
 
+>ℹ This feature is in closed beta, meaning only selected customers can access it. If you're interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+
 This guide explains the components of the [Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview) feature for FastStore. It describes the structure of these parts and highlights the customizations needed when modifying standard sections like `NavBar` and `ProductGallery`. 
 
 You'll learn which components can be reused and which require customization, illustrating the connection between native implementation and customization.
 
->ℹ To learn how to implement Delivery Promise in your store, see the guide [Implementing Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation). To understand this feature's operation, see the guide [Delivery Promise (Beta)](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview).
+>⚠️ To learn how to implement Delivery Promise in your store, see the guide [Implementing Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 ## Components
 
@@ -82,7 +84,7 @@ It includes three interaction types: Setting a new location (no postal code set)
 
 * **Postal code set:** The user clicks the postal code link, then the `RegionSlider` appears, allowing them to change the location.
 
-![changeLocation](https://vtexhelp.vtexassets.com/assets/docs/src/set-location___8887a7be647d76a0584e1b977233a672.png)
+![changeLocation](https://vtexhelp.vtexassets.com/assets/docs/src/change-location___ada68e0df1bac1e8a20abc9040dbf82f.png)
 
 * **Pickup point filter:** The user applies or clears filters related to pickup points. When filters are cleared, the `RegionSlider` resets its state and removes selected pickup points without closing the component.
 
