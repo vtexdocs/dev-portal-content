@@ -85,6 +85,6 @@ A connector is exempt from the payment provider homologation process only if all
 - It is a [PPF connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework), developed using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
 - It only uses payment methods already available on the VTEX platform.
 - It is installed locally, restricted to specific accounts.
-- The target account is already using any connector IO/PPF.
+- The target account is already using any IO/PPF connector.
 
 > ⚠️ If any of these conditions is not satisfied, the connector must follow the homologation process.
