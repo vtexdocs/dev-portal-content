@@ -4,7 +4,7 @@ title: "Optimizing SEO by managing lazy loading on PLPs and PDPs"
 
 By default, FastStore improves performance by wrapping store sections in `LazyLoadingSection` and `ViewportObserver` components. These components delay the loading of non-essential sections until they are needed, for example, when a user scrolls near them. This approach reduces initial page load times and enhances the user experience, especially on slower networks or devices.
 
-While lazy loading enhances performance, it may negatively impact SEO. Search engine crawlers often don't execute JavaScript or wait for dynamically loaded content. Consequently, important sections like product grids on category pages might not be indexed. For example, if a user accesses the `gym clothes` collection, its product listing might not be returned in search results if the content is not included in the initial HTML.
+While lazy loading enhances performance, it may negatively impact SEO. Search engine crawlers often do not execute JavaScript or wait for dynamically loaded content. Consequently, important sections like product grids on category pages might not be indexed. For example, if a user accesses the `gym clothes` collection, its product listings might not be returned in search results if that content is not included in the initial HTML.
 
 In this guide, learn how to optimize SEO by managing lazy loading for custom sections in FastStore.
 
@@ -24,7 +24,7 @@ Lazy loading can improve store performance and SEO, but it must be used strategi
 
 By delaying the loading of these non-critical assets, the initial page load speed is significantly faster, allowing users to interact with the core content without delay.
 
-Example: A clothing store's homepage has "Seasonal Offers" promotional banners and lookbooks further down the page. Lazy loading these large images ensures shoppers see top-selling categories immediately, while the heavier promotional assets only load as they scroll.
+Example: A clothing store's homepage has "Seasonal Offers" promotional banners and lookbooks further down the page. Lazy loading these large images ensures shoppers see top-selling categories immediately, while heavier promotional assets load only as they scroll.
 
 </details>
 
@@ -35,7 +35,7 @@ Example: A clothing store's homepage has "Seasonal Offers" promotional banners a
 
 This optimizes resource usage and improves overall page speed.
 
-Example: A PDP includes a "Complete the Look" carousel at the bottom. Since these are supplementary suggestions, lazy loading ensures the main product details are prioritized, and the carousel images only load when the user scrolls to that section.
+Example: A PDP includes a "Complete the Look" carousel at the bottom. Since these are supplementary suggestions, lazy loading ensures the main product details are prioritized, and the carousel images load only when the user scrolls to that section.
 
 Lazy loading is a great way to improve the initial page load speed for visitors, especially on media-heavy pages.
 
@@ -48,7 +48,7 @@ Example: A product page has a "Customer Gallery" with user-uploaded photos below
 <details>
 <summary>Lazy loading is suitable for content that does not contain structured product data or other critical SEO information.</summary>
 
-Example: A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content doesn't impact structured product data for SEO, lazy loading it won't negatively affect search engine visibility.
+Example: A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured product data for SEO, lazy loading it will not negatively affect search engine visibility.
 </details>
 
 <CheckboxField label="To balance server load" id="checkboxfield-account" />
@@ -166,7 +166,7 @@ FastStore lazy-loads sections to improve store performance. However, some [custo
     <details>
       <summary>**PDP example**</summary>
       
-      For PDPs, test with a product URL (e.g., `https://mystore.vtex.app/p/blue-shirt`). In the image below, you will see the **New arrivals** title on the PDP.
+      For PDPs, test with a product URL (e.g., `https://mystore.vtex.app/p/blue-shirt`). In the image below, you will see the **New Arrivals** title on the PDP.
 
       ![pdp-title-section](https://vtexhelp.vtexassets.com/assets/docs/src/pdp___01ad8375320cc80e565347e057927e97.png)
     
