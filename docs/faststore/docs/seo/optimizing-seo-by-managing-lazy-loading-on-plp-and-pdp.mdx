@@ -10,6 +10,46 @@ In this guide, learn how to optimize SEO by managing lazy loading for custom sec
 
 > ❗ Disabling lazy loading may increase initial page load time. Use it only when necessary.
 
+
+## Deciding when to lazy load
+
+Lazy loading can improve a store performance and SEO, but it must be used strategically. Below, see a checklist to help you decide when to use lazy loading to balance fast page speeds with search engine crawlability.
+
+### 
+
+<details>
+<summary>When to use lazy loading? ✅</summary>
+
+<CheckboxField label="The content is not immediately visible" id="checkboxfield-account" />
+
+Lazy loading is ideal for content that appears below the fold—the part of a webpage that users have to scroll down to see. By delaying the loading of these non-critical assets, the initial page load speed is significantly faster, allowing users to interact with the core content without delay.
+
+Example: A clothing store's homepage has "Seasonal Offers" promotional banners and lookbooks far down the page. Lazy loading these large images ensures shoppers see top-selling categories immediately, and the heavier promotional assets only load as they scroll.
+
+<CheckboxField label="The page speed needs to be improved" id="checkboxfield-account" />
+
+Use lazy loading for deferred content that isn't essential for the initial view. This optimizes resource usage and improves overall page speed.
+
+Example: A PDP includes a "Complete the Look" carousel at the bottom. Since these are supplementary suggestions, lazy loading ensures the main product details are prioritized, and the carousel images only load when the user scrolls to that section.
+
+Lazy loading is a great way to improve the initial page load speed for visitors, especially on media-heavy pages.
+
+Example: A product page has a "Customer Gallery" with user-uploaded photos below the main product pictures. Lazy loading these gallery images speeds up the initial PDP load, so customers see the core product information and main photos instantly.
+
+<CheckboxField label="The content doesn't affect SEO or crawling" id="checkboxfield-account" />
+
+Lazy loading is suitable for content that does not contain structured product data or other critical SEO information.
+
+Example: A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content doesn't impact structured product data for SEO, lazy loading it won't negatively affect search engine visibility.
+
+<CheckboxField label="Balanced server load" id="checkboxfield-account" />
+Lazy loading helps manage server load on pages with many images or heavy resources, especially during high-traffic periods.
+
+Example: Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, reducing server spikes and keeping the browsing experience fast.
+
+</details>
+
+
 ## Before you begin
 
 <Steps>
