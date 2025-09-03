@@ -20,7 +20,7 @@ Below are the core components related to the Delivery Promise feature in FastSto
 
 `RegionButton` is a desktop-only component integrated into the `NavBar` section, under the [Global Sections content type](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#content-types) in the Headless CMS.
 
-Its behavior is context-dependent, meaning if a shopper doesn't add a postal code, a `Popover` is displayed, and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed, and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 ![RegionButton](https://vtexhelp.vtexassets.com/assets/docs/src/region-button___ccb03f5e9e36d837a4b03aae6a0a58ff.png)
 
@@ -33,7 +33,7 @@ This component leverages the following:
 
 ### RegionModal
 
-`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, which means the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
+`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, meaning the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
 
 ![RegionModal](https://vtexhelp.vtexassets.com/assets/docs/src/region-modal___6352f280eeb8eb77ee4674a5caf4f328.png)
 
@@ -74,9 +74,9 @@ This component leverages the following:
 
 ### RegionSlider
 
-The `RegionSlider` component enables shoppers to manage their delivery-related location settings and pickup point filters in the Product Listing Pages (PLPs) or search pages. This component is implemented as a Global Section, making it available throughout the store. It works on mobile and desktop browsers.
+The `RegionSlider` component enables shoppers to manage their delivery-related location settings and pickup point filters in the Product Listing Pages (PLPs) or search pages. This component is implemented as a Global Section, making it available throughout the store. It is compatible with mobile and desktop browsers.
 
-It includes three interaction types: Setting a new location (no postal code set), changing an existing location (postal code set), and selecting a pickup point (pickup point filter) for more precise delivery options.
+It includes three interaction types: setting a new location (when no postal code is set), changing an existing location (when a postal code is set), and selecting a pickup point (for filtering) to refine delivery options.
 
 * **No postal code set:** The user clicks the "Set location" button, then the `RegionSlider` appears, allowing them to set a postal code.
 
