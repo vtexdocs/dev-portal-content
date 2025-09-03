@@ -80,7 +80,7 @@ After that, the VTEX support team will inform you whether the implementation was
 
 ## When is payment provider homologation not required?
 
-A connector is exempt from the payment provider homologation process only if every condition below is met simultaneously:
+A connector is exempt from the payment provider homologation process only if all of the conditions below are met simultaneously:
 
 - It is a [PPF connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework), developed using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
 - Only use payment methods already available on the VTEX platform.
