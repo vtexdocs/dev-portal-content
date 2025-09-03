@@ -2,7 +2,7 @@
 title: "Optimizing SEO by managing lazy loading on PLPs and PDPs"
 ---
 
-By default, FastStore improves performance by wrapping store sections in `LazyLoadingSection` and `ViewportObserver` components. These components delay the loading of non-essential sections until it's needed, such as when a user scrolls near it. This approach reduces initial page load times and enhances the user experience, especially on slower networks or devices.
+By default, FastStore improves performance by wrapping store sections in `LazyLoadingSection` and `ViewportObserver` components. These components delay the loading of non-essential sections until they are needed, for example, when a user scrolls near it. This approach reduces initial page load times and enhances the user experience, especially on slower networks or devices.
 
 While lazy loading enhances performance, it may negatively impact SEO. Search engine crawlers often don't execute JavaScript or wait for dynamically loaded content. Consequently, important sections like product grids on category pages might not be indexed. For example, if a user accesses the `gym clothes` collection, its product listing might not be returned in search results if not included in the initial HTML.
 
@@ -149,11 +149,11 @@ FastStore lazy-loads sections to improve store performance. However, some [custo
 
 1. Open the terminal and run `yarn cms-sync` to synchronize your local changes with the Headless CMS.
 2. Go to the VTEX Admin and access **Storefront > Headless CMS**.
-3. Access the **Product List Page** or **Product Details Page** Content Type. For this instruction, we'll use the **Product List Page** Content Type.
+3. Access the **Product List Page** or **Product Details Page** Content Type. For this example, we'll use the **Product List Page** Content Type.
 
     > ⚠ Repeat these steps for the **Product Details Page** Content Type if optimizing a PDP section.
 
-4. Add the custom section you created. At the end of the section, you’ll notice the **Skip lazy loading** option.
+4. Add the custom section you created. At the end of the section, you will notice the **Skip lazy loading** option.
 
    ![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading___2a0ca0c7a90d61cda31c2ce9200e377f.png)
 
