@@ -63,7 +63,7 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 
 | Requirement | Description |  
 | -------------- | ------------ |  
-| Install Intelligent Search | Install the [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) app in your VTEX account. This app provides advanced search capabilities for your store. | 
+| Install Intelligent Search | Install the [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) app in your VTEX account. This app provides advanced search capabilities for your store. |
 | Install Session Manager | Install the [Session Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-collecting-user-session-data) app in your VTEX account. This app enables your store to collect user session data. |
 | Build the storefront | Build your store's frontend using [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) or [FastStore](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#faststore). |  
 
