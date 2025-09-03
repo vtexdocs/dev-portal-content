@@ -76,7 +76,7 @@ The SLA required for the payment team to carry out the homologation is 30 days. 
 
 > ❗ It is mandatory to open a ticket with VTEX Support. Without doing so, the implementation will not be recognized by our system.
 
-After that, the VTEX support team will inform you if the implementation was done correctly.
+After that, the VTEX support team will inform you whether the implementation was performed correctly.
 
 ## When is payment provider homologation not required?
 
