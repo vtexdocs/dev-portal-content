@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.86](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.85...v1.1.86) (2025-09-03)
+
+
+### ⚙️ Repository features
+
+* **components.mdx:** creating doc ([2629a6b](https://github.com/vtexdocs/dev-portal-content/commit/2629a6bebb8552427dffdb4fc7bbbd364364e2f7))
+
+
+### 📝 Documentation updates
+
+* **components.mdx:** adding callout ([70b4d3c](https://github.com/vtexdocs/dev-portal-content/commit/70b4d3c5e6c20c9dccd4bb489abc19e8f2c4b951))
+* **components.mdx:** applying suggestions and updating images ([a04488b](https://github.com/vtexdocs/dev-portal-content/commit/a04488b227edfa88b705cd17592e80c7bea1ba0e))
+* **components.mdx:** updating image link ([c793711](https://github.com/vtexdocs/dev-portal-content/commit/c793711c69b195917efdb7ebb03f9baafc167118))
+
 ### [1.1.85](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.83...v1.1.85) (2025-09-03)
 
 
