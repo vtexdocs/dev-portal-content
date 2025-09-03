@@ -88,4 +88,3 @@ A connector is exempt from the payment provider homologation process only if eve
 - The target account is already using any connector IO/PPF.
 
 > ⚠️ If any of these conditions is not satisfied, the connector must follow the homologation process.
-
