@@ -13,7 +13,7 @@ In this guide, learn how to optimize SEO by managing lazy loading for custom sec
 
 ## Deciding when to lazy load
 
-Lazy loading can improve a store performance and SEO, but it must be used strategically. Below, see a checklist to help you decide when to use lazy loading to balance fast page speeds with search engine crawlability.
+Lazy loading can improve store performance and SEO, but it must be used strategically. Below, see a checklist to help you decide when to use lazy loading to balance fast page speeds with search engine crawlability.
 
 ### When to use lazy loading? ✅
 
@@ -47,8 +47,6 @@ Example: A product page has a "Customer Gallery" with user-uploaded photos below
 
 <details>
 <summary>Lazy loading is suitable for content that does not contain structured product data or other critical SEO information.</summary>
-
-This optimizes resource usage and improves overall page speed.
 
 Example: A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content doesn't impact structured product data for SEO, lazy loading it won't negatively affect search engine visibility.
 </details>
@@ -107,7 +105,7 @@ FastStore lazy-loads sections to improve store performance. However, some [custo
    }
    ```
 
-3. To display PLP data (for example, collection names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook. For PDP data (e.g., product titles), use [`usePDP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#hooks-for-consuming-api-extension-data) hook:
+3. To display PLP data (for example, collection names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook. For PDP data (e.g., product titles), use [`usePDP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#hooks-for-consuming-api-extension-data) hook.
 
     <details>
     <summary>`usePLP()` hook</summary>
@@ -168,7 +166,7 @@ FastStore lazy-loads sections to improve store performance. However, some [custo
     <details>
       <summary>**PDP example**</summary>
       
-      For PDPs, test with a product URL (e.g., `https://mystore.vtex.app/p/blue-shirt`). In the exampe below, we have the **New arrivals** title for the PDP.
+      For PDPs, test with a product URL (e.g., `https://mystore.vtex.app/p/blue-shirt`). In the example below, we have the **New arrivals** title for the PDP.
 
       ![pdp-title-section](https://vtexhelp.vtexassets.com/assets/docs/src/pdp___01ad8375320cc80e565347e057927e97.png)
     
@@ -176,7 +174,7 @@ FastStore lazy-loads sections to improve store performance. However, some [custo
 
 ### Step 3: Checking if the custom section is visible to search engines
 
-To make sure that the custom section is present in the initial HTML response, follow these steps:
+To ensure that the custom section is present in the initial HTML response, follow these steps:
 
 1. In the browser, right-click anywhere on the page and select **Inspect** from the context menu.
 2. In the **Developer Tools** panel, click the **Network** tab. Ensure that the **All filter** is selected.
@@ -184,7 +182,7 @@ To make sure that the custom section is present in the initial HTML response, fo
    > ℹ To focus only on the main HTML document, you can filter by **Doc** in the filter bar. This will show only the initial HTML request, making it easier to inspect the page's source code.
 
 3. Reload the page while the Developer Tools are open. This will capture all network requests made during the page load.
-4. In the **Name** column of the **Network** tab, look for the request corresponding to the page you're inspecting In our example `just-arrived`.
+4. In the **Name** column of the **Network** tab, look for the request corresponding to the page you're inspecting. In our example, `just-arrived`.
 5. Click the **Response** tab in this panel.
 6. If the section is in the initial HTML response, you will see the corresponding HTML code in the **Response** tab. For example:
 
