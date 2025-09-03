@@ -1,8 +1,9 @@
 ---
 title: "Delivery Promise (Beta)"
+updatedAt: "2025-09-03T15:35:51.192Z"
 ---
 
->ℹ This feature is in closed beta, meaning only selected customers can access it. If you’re interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+>ℹ This feature is in closed beta, meaning only selected customers can access it. If you're interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
 **Delivery Promise** is a feature that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location.
 
@@ -39,7 +40,7 @@ Global filters remain active across all user navigation and are applied to all p
 
 Shoppers can filter available products globally using the **Filter by store**, which displays only products available for pickup at a specific store. It shows all available pickup points within a 50 km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
 
-![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/filter-by-store___d79c9efc5c4391247bf9b67403911987.png)
+![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/by-store___745e8c3ae10a84e55f88b107e5b00218.png)
 
 ### PLP or search page filters
 
@@ -47,17 +48,17 @@ In PLPs or search pages, the shopper may have the following options to filter:
 
 * **Deliver to:** Displays available products according to the shopper's location.
 * **Pickup at:** Displays the store set in the global pickup point filter, or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper may click it and select a new store in the modal that will open. It shows all available pickup points within a 50 km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
-* **Pickup nearby:** Displays products available for pickup at nearby stores. It shows up to 40 pickup points within 10 km of the shopper’s location.
-* **Pickup anywhere:** Displays products available for pickup at any participating store within the merchant’s network, rather than restricting results to a selected pickup location or geographic proximity. **It's mainly used by B2B stores**.
+* **Pickup nearby:** Displays products available for pickup at nearby stores. It shows up to 40 pickup points within 10 km of the shopper's location.
+* **Pickup anywhere:** Displays products available for pickup at any participating store within the merchant's network, rather than restricting results to a selected pickup location or geographic proximity. **It's mainly used by B2B stores**.
 
-![plp-search](https://vtexhelp.vtexassets.com/assets/docs/src/plp-search___a8cfec375f28a7849ebe47ac886b5869.png)
+![plp-filters](https://vtexhelp.vtexassets.com/assets/docs/src/plp-by-shipping___e9ba4d4e3f0840c3ec53dc94ac7aafc4.png)
 
 ## Understanding location priority
 
 To provide accurate Delivery Promise estimates, FastStore projects determine user location based on the following priority:
 
 1. **Logged-in user's address:** If the user is logged in and has a saved address, this information is used.
-2. **User-provided location:** If the user is logged in but doesn't have a saved address, or isn’t logged in but provides their location, like a postal code, this data is used.
+2. **User-provided location:** If the user is logged in but doesn't have a saved address, or isn't logged in but provides their location, like a postal code, this data is used.
 3. **Default postal code:** If the user hasn't provided a location, isn't logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
 4. **No postal code (not required):** If no postal code is provided and not required, products are displayed without using Delivery Promise.
 5. **No postal code (required):** If no postal code is provided when required, a modal is displayed that the buyer can't close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
@@ -84,5 +85,3 @@ graph LR
 
     H -- No --> N(["Display products without using Delivery Promise"])
 ```
-
-
