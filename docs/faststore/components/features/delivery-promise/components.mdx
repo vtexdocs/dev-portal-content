@@ -8,7 +8,7 @@ You'll learn which components can be reused and which require customization, ill
 
 ## Components
 
-Delivery Promise introduces a set of modular components and hooks. These are structured in the FastStore core and UI packages, and are inserted into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, including the FastStore starter. Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
+Delivery Promise introduces a set of modular components and hooks. These are organized within the FastStore core and UI packages and are inserted into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, such as those found in the FastStore starter. Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
 
 Below are the core components related to the Delivery Promise feature in FastStore.
 
@@ -24,7 +24,7 @@ If you have customized the `NavBar`, you must also customize the `RegionButton` 
 
 This component leverages the following:
 
-* **UI Components:** [`Button`](https://developers.vtex.com/docs/guides/faststore/atoms-button)  and [`Icon`](https://developers.vtex.com/docs/guides/faststore/atoms-icon).
+* **UI Components:** [`Button`](https://developers.vtex.com/docs/guides/faststore/atoms-button) and [`Icon`](https://developers.vtex.com/docs/guides/faststore/atoms-icon).
 * **Hooks:** `useSession`
 
 ### RegionModal
@@ -70,15 +70,15 @@ This component leverages the following:
 
 ### RegionSlider
 
-The `RegionSlider` component enables shoppers to manage their delivery-related location settings and pickup point filters in the Product Detail Pages (PLPs) or search pages. This component is implemented as a Global Section, making it available throughout the store. It works on mobile and desktop browsers.
+The `RegionSlider` component enables shoppers to manage their delivery-related location settings and pickup point filters in the Product Listing Pages (PLPs) or search pages. This component is implemented as a Global Section, making it available throughout the store. It works on mobile and desktop browsers.
 
 It includes three interaction types: Setting a new location (no postal code set), changing an existing location (postal code set), and selecting a pickup point (pickup point filter) for more precise delivery options.
 
-* **No postal code set:** The user clicks the "Set location" button, then the `RegionSlider` appears to set a postal code.
+* **No postal code set:** The user clicks the "Set location" button, then the `RegionSlider` appears, allowing them to set a postal code.
 
 ![setLocation](https://vtexhelp.vtexassets.com/assets/docs/src/set-location___8887a7be647d76a0584e1b977233a672.png)
 
-* **Postal code set:** The user clicks the postal code link, then the `RegionSlider` appears to change location.
+* **Postal code set:** The user clicks the postal code link, then the `RegionSlider` appears, allowing them to change the location.
 
 ![changeLocation](https://vtexhelp.vtexassets.com/assets/docs/src/set-location___8887a7be647d76a0584e1b977233a672.png)
 
@@ -93,12 +93,12 @@ This component leverages the following:
 
 ### FilterDesktop
 
-`FilterDesktop` is a desktop-only component integrated into the `ProductGallery` section, under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that aggregates all search and PLP filters.
+`FilterDesktop` is a desktop-only component integrated into the `ProductGallery` section, under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that combines all search and PLP filters.
 
 ![FilterDesktop](https://vtexhelp.vtexassets.com/assets/docs/src/filter-desktop___b7c358c72f742ab91467621e4d19839a.png)
 
 ### FilterSlider
 
-`FilterSlider` is a mobile-only component integrated into the `ProductGallery` section under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that aggregates all search and PLP filters.
+`FilterSlider` is a mobile-only component integrated into the `ProductGallery` section under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that combines all search and PLP filters.
 
 ![FilterSlider](https://vtexhelp.vtexassets.com/assets/docs/src/filter-slider___f885f64836ae3bf247ab7b849575230d.png)
