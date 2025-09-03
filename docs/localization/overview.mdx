@@ -14,7 +14,7 @@ This guide explains how the solution operates, covering:
 * [Filter options](#filter-options): Learn how shoppers can filter products by delivery or pickup methods.
 * [Location priority](#location-priority): Understand the order and logic used to determine the shopper's location for accurate delivery estimates.
 
->⚠️ To learn how to implement Delivery Promise in your store, see the guide [Implementing Delivery Promise](https://developers.vtex.com/docs/guides/faststore/features-delivery-promise-implementation).
+>⚠️ To learn how to implement Delivery Promise in your store, see the guide [Implementing Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 ## Hooks
 
@@ -35,17 +35,11 @@ Delivery Promise offers shoppers two product filtering options:
 
 ### Global filters
 
-Global filters determine the fulfillment method for all user navigation and are applied to all product searches until they change or are cleared.
+Global filters remain active across all user navigation and are applied to all product searches until they change or are cleared.
 
-Shoppers can filter available products globally **by shipping** or **by store**.
+Shoppers can filter available products globally using the **Filter by store**, which displays only products available for pickup at a specific store. It shows all available pickup points within a 50 km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
 
-* **Filter by shipping:** Allows shoppers to select between delivery and pickup as a fulfillment method.
-
-![filter-by-shipping](https://vtexhelp.vtexassets.com/assets/docs/src/filter-by-shipping___040d93770d3280239260a2a02b8e3b67.png)
-
-* **Filter by store:** Allows shoppers to filter products to display only those available for pickup at a specific store. It shows all available pickup points within a 50-km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
-
-![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/filter-by-store___d79c9efc5c4391247bf9b67403911987.png)
+![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/by-store___745e8c3ae10a84e55f88b107e5b00218.png)
 
 ### PLP or search page filters
 
@@ -56,7 +50,7 @@ In PLPs or search pages, the shopper may have the following options to filter:
 * **Pickup nearby:** Displays products available for pickup at nearby stores. It shows up to 40 pickup points within 10 km of the shopper's location.
 * **Pickup anywhere:** Displays products available for pickup at any participating store within the merchant's network, rather than restricting results to a selected pickup location or geographic proximity. **It's mainly used by B2B stores**.
 
-![plp-search](https://vtexhelp.vtexassets.com/assets/docs/src/plp-search___a8cfec375f28a7849ebe47ac886b5869.png)
+![plp-filters](https://vtexhelp.vtexassets.com/assets/docs/src/plp-by-shipping___e9ba4d4e3f0840c3ec53dc94ac7aafc4.png)
 
 ## Understanding location priority
 
