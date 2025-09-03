@@ -74,7 +74,7 @@ The SLA required for the payment team to carry out the homologation is 30 days. 
 
 > ❗ Do **not** open the ticket for homologation if the Logs box presents any type of error. Redo the operation until the Logs box results are clear. If you need help in this scenario, talk to your Partner Account Manager.
 
-> ❗ It is mandatory to open a ticket to VTEX Support. Without that, the implementation will not be recognized by our system.
+> ❗ It is mandatory to open a ticket with VTEX Support. Without doing so, the implementation will not be recognized by our system.
 
 After that, the VTEX support team will inform you if the implementation was done correctly.
 
