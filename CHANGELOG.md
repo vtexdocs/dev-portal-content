@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.83](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.81...v1.1.83) (2025-09-03)
+
+
+### 📝 Documentation updates
+
+* **overview.mdx:** update images ([c67edf1](https://github.com/vtexdocs/dev-portal-content/commit/c67edf1d5a8c8cd3c56e402a60017c477de9357f))
+
 ### [1.1.81](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.79...v1.1.81) (2025-09-01)
 
 ### [1.1.79](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.78...v1.1.79) (2025-09-01)
