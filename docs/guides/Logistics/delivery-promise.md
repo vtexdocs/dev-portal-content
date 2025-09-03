@@ -4,13 +4,13 @@ slug: "delivery-promise"
 hidden: false
 createdAt: "2025-09-01T16:53:51.8Z"
 updatedAt: ""
-excerpt: "Delivery Promise helps your store show only products that can be delivered or picked up based on the customer’s location. It improves shopping experience, reduces cart abandonment, and increases product assortment visibility."
+excerpt: "Delivery Promise helps your store show only products that can be delivered or picked up based on the customer’s location. It improves the shopping experience, reduces cart abandonment, and increases product assortment visibility."
 seeAlso: "https://help.vtex.com/en/tutorial/delivery-promise-faq--2frHHK5uPsQrLK5XbYHALN"
 ---
 
 >ℹ️ This feature is in beta, which means we are working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
 
-**Delivery Promise** a VTEX solution that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location. Using this solution, your store can guarantee delivery for every product a customer sees.
+**Delivery Promise** is a VTEX solution that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location. Using this solution, your store can guarantee delivery for every product a customer sees.
 
 The content is organized as follows:
 
@@ -29,7 +29,7 @@ When the customer provides their address, an initial selection of products is ma
 - Product delivery deadlines.
 - Products available in stores near the customer's location.
 - Faster shipping methods to deliver the order.
-- [Pickup point](https://help.vtex.com/en/tutorial/pontos-de-retirada--2fljn6wLjn8M4lJHA6HP3R) where the customer wants to pick up the order.
+- [Pickup point](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R) where the customer wants to pick up the order.
 
 At this stage, **Delivery Promise** allows your store's customers to filter the products displayed in the navigation by using these filters:
 
@@ -54,7 +54,7 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 | Fewer abandoned carts | <p>Customers often abandon an order after entering their location in the cart step when they find out the products can't be shipped to their location or that the shipping time doesn't meet their expectations.</p><p>With <b>Delivery Promise</b>, the availability and delivery feasibility of each product the customer sees on the product listing page are considered based on the customer's location. In addition, shipping information is displayed from the beginning of the customer's buying journey.</p> |
 | Increased product assortment on the product listing page | <p>Without <b>Delivery Promise</b>, the product assortment displayed on the product listing page may not reflect all available products from sellers due to limitations in features such as <a href="https://help.vtex.com/en/tutorial/configure-seller-regionalization--32t6wLpQCEnumoh8TjT5fw">seller regionalization</a>, <a href="https://help.vtex.com/en/tutorial/comprehensive-seller--5Qn4O2GpjUIzWTPpvLUfkI">comprehensive seller</a> and the <a href="https://help.vtex.com/en/tutorial/white-label-sellers-selection--3MemNQ4pKkWCpMdzI27AHa">seller selection algorithm</a>.</p><p>With <b>Delivery Promise</b>, the customer can view the complete product assortment of all sellers, provided that:<ul><li>Sellers are correctly configured.</li><li>Products are available in stock.</li><li>Products have a valid shipping method to the address entered by the customer.</li></ul></p> |
 | Improved shopping experience | <p><b>Delivery Promise</b> promotes a better shopping experience for the customer as a whole:<ul><li>It eliminates any frustration at checkout when they find it impossible to place an order.</li><li>It allows customers to view more products.</li><li>It allows customers to browse the storefront in a way that meets their needs, whether they prioritize the type of shipment or choose to place an order in a physical store.</li></ul></p> |
-| Promotion of physical stores sales | <b>Delivery Promise</b> gives customers confidence in finding certain products in physical stores, which encourages them to go to the stores and increases sales opportunities. |
+| Promotion of physical store sales | <b>Delivery Promise</b> gives customers confidence in finding certain products in physical stores, which encourages them to go to the stores and increases sales opportunities. |
 
 ## Requirements and restrictions
 
@@ -62,11 +62,11 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 
 | Requirement | Description |  
 | -------------- | ------------ |  
-| Install Intelligent Search | Install the [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) app in your VTEX account. This app provides advanced search capabilities for your store. | 
+| Install Intelligent Search | Install the [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) app in your VTEX account. This app provides advanced search capabilities for your store. |
 | Install Session Manager | Install the [Session Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-collecting-user-session-data) app in your VTEX account. This app enables your store to collect user session data. |
 | Build the storefront | Build your store's frontend using [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) or [FastStore](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#faststore). |  
 
->ℹ️ Check the [Delivery Promise visual library](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8001-14744&p=f&t=wbvHJWUyiGar68ag-0) with [use cases](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8001-14743&p=f&t=wbvHJWUyiGar68ag-0), [behaviour specs](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8002-48329&p=f&t=wbvHJWUyiGar68ag-0) and [components](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8001-14732&p=f&t=wbvHJWUyiGar68ag-0) to better understand how to apply it to your store.
+>ℹ️ Check the [Delivery Promise visual library](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8001-14744&p=f&t=wbvHJWUyiGar68ag-0) with [use cases](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8001-14743&p=f&t=wbvHJWUyiGar68ag-0), [behavior specs](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8002-48329&p=f&t=wbvHJWUyiGar68ag-0) and [components](https://www.figma.com/design/PDiXfXZOhcUrUQudSa56fz/-Public--Delivery-Promise?node-id=8001-14732&p=f&t=wbvHJWUyiGar68ag-0) to better understand how to apply it to your store.
 
 ## Delivery Promise for Store Framework
 
