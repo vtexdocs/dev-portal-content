@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.84](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.83...v1.1.84) (2025-09-03)
+
+
+### 📝 Documentation updates
+
+* **overview.mdx:** reorganizing DP docs ([a568519](https://github.com/vtexdocs/dev-portal-content/commit/a56851997d186c946bb9ed1b95aa52f5f38b3732))
+
 ### [1.1.83](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.81...v1.1.83) (2025-09-03)
 
 
