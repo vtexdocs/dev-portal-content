@@ -9,11 +9,7 @@ excerpt: ""
 
 >ℹ️ This feature is in beta, which means we are working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
 
-**Delivery Promise** is a VTEX solution that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location.
-
-Using this solution, your store can make a "delivery promise" to customers for all products they view, as shown in the video below:
-
-[![VTEX Vision Spring '24: Delivery Promises](https://img.youtube.com/vi/l8HU2qVpsBg/0.jpg)](https://www.youtube.com/watch?v=l8HU2qVpsBg)
+**Delivery Promise** a VTEX solution that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location. Using this solution, your store can make a “delivery promise” to customers for all products they view.
 
 >ℹ️ Currently, **Delivery Promise** does not yet allow you to filter the product listing page by shipping time. To learn more about filters, see the [Available features](#available-features) section.
 
