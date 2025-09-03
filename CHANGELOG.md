@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.89](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.87...v1.1.89) (2025-09-03)
+
+
+### ⚙️ Repository features
+
+* add new delivery promise documentation ([d090444](https://github.com/vtexdocs/dev-portal-content/commit/d090444df997478355c48f6bcb1e05854d016ce7))
+
+
+### 🔧 Fixes and improvements
+
+* add excerpt ([7b9accb](https://github.com/vtexdocs/dev-portal-content/commit/7b9accb2ef3d2e046292ef047365dfa8287837b5))
+* fix bot suggestions ([9c4cf77](https://github.com/vtexdocs/dev-portal-content/commit/9c4cf77bf9b75bb4117c81e1114a77186b85aca0))
+* fix createdAt ([2c4ffc5](https://github.com/vtexdocs/dev-portal-content/commit/2c4ffc5c457f8cbc3dde6c143da491b141c042dc))
+* fix grammar errors ([cd4fdb9](https://github.com/vtexdocs/dev-portal-content/commit/cd4fdb9bbc569d64a5a061aa554213e492a88f87))
+* fix grammar errors ([1f060b3](https://github.com/vtexdocs/dev-portal-content/commit/1f060b3f6b8555f7051362098e2d1947c99d82f1))
+* fix reviewers suggestions ([a27bd8a](https://github.com/vtexdocs/dev-portal-content/commit/a27bd8a678f882c6b902fbb827acc1fb98d19e0c))
+* fix space ([99ebb2c](https://github.com/vtexdocs/dev-portal-content/commit/99ebb2c37768e60d2173e68af3798924843df3fe))
+* remove video ([a3f80a6](https://github.com/vtexdocs/dev-portal-content/commit/a3f80a65de994bb157ea411c2d1a6eac00eee0ad))
+
 ### [1.1.88](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.87...v1.1.88) (2025-09-03)
 
 
