@@ -41,6 +41,8 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
 
 ### Stage 1
 
+The order is created and starts in this stage.
+
 <table>
     <td><strong>Trigger</strong></td>
     <td><strong>Description</strong></td>
@@ -63,6 +65,8 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
 </table>
 
 ### Stage 2
+
+The order reaches this stage after it is placed.
 
 <table>
     <td><strong>Trigger</strong></td>
@@ -87,6 +91,8 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
 
 ### Stage 3
 
+The order reaches this stage after its payment is approved.
+
 <table>
     <td><strong>Trigger</strong></td>
     <td><strong>Description</strong></td>
@@ -109,6 +115,8 @@ In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3
 </table>
 
 ### Stage 4
+
+The order reaches this stage after it's handled.
 
 #### Orders for pickup
 
