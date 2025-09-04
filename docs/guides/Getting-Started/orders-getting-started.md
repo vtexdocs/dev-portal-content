@@ -99,7 +99,7 @@ The order reaches this stage after its payment is approved.
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.handleShipping</code></td>
-        <td>The order's API status is a stage 1 or 2 status.</td>
+        <td>The order's API status is a Stage 1 or 2 status.</td>
         <td>Handle order</td>
     </tr>
     <tr>
