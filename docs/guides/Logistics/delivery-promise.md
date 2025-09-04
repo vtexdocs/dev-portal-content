@@ -5,11 +5,11 @@ hidden: false
 createdAt: "2025-09-01T16:53:51.8Z"
 updatedAt: ""
 excerpt: "Delivery Promise helps your store show only products that can be delivered or picked up based on the customer’s location. It improves shopping experience, reduces cart abandonment, and increases product assortment visibility."
-seeAlso: "https://help.vtex.com/en/tutorial/delivery-promise-faq--2frHHK5uPsQrLK5XbYHALN"
+seeAlso: 
+    - "https://help.vtex.com/en/tutorial/delivery-promise-faq--2frHHK5uPsQrLK5XbYHALN"
 ---
 
 >ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).  
-
 
 **Delivery Promise** a VTEX solution that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location. Using this solution, your store can guarantee delivery for every product a customer sees.
 
