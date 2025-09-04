@@ -11,10 +11,6 @@ updatedAt: "2025-05-14T22:18:24.684Z"
 
 This guide details how to use the [Delivery Promise](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) feature on headless stores, using the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) with additional facets.
 
-## How it works
-
->ℹ️ To display all available pickup points, you must fetch the complete list of pickup points using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/pickup-points). This is a current dependency of the Delivery Promise feature for headless stores.
-
 With Delivery Promise enabled, only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
 
 * The system displays all available pickup points within the 50 km radius configured in Checkout. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed.
