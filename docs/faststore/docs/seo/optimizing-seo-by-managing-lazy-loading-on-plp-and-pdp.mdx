@@ -12,63 +12,27 @@ In this guide, learn how to optimize SEO by managing lazy loading for custom sec
 
 ## Deciding when to lazy load
 
-Lazy loading can improve store performance and SEO, but it must be used strategically. Below is a checklist to help you decide when to implement lazy loading to balance fast page speed with search engine crawlability.
+Lazy loading can improve store performance and SEO, but it must be used strategically. To help you decide when to implement lazy loading, the tables below outline the contexts, the benefits, and the risks involved.
 
-<details>
-<summary>When to use lazy loading? ✅</summary>
+### When to implement lazy loading ✅
 
-<CheckboxField
-  label="To load content that isn't immediately visible"
-  id="checkboxfield-account"
-/>
+| Context | Benefit | Example |
+| :--- | :--- | :--- |
+| **To load content that isn't immediately visible** | Improves initial page load speed by delaying non-critical assets that are below the fold. | A homepage with promotional banners and lookbooks that load as the user scrolls down the page. |
+| **To improve page speed for a media-heavy page** | Optimizes resource usage and ensures the most important content is prioritized and loads first. | A PDP includes a "Complete the Look" carousel at the bottom. Since these are supplementary suggestions, lazy loading ensures the main product details are prioritized, and the carousel images load only when the user scrolls to that section. |
+| **The content doesn't affect SEO or crawling** | It won't negatively impact search engine visibility since the content isn't critical for SEO or structured data. | A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured product data for SEO, lazy loading it will not negatively affect search engine visibility. |
+| **To balance server load during high traffic** | It reduces server spikes by only loading images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, reducing server spikes and keeping the browsing experience fast. |
 
-<details>
-<summary>Use lazy loading for content that appears below the fold—the part of a webpage that users must scroll down to see.</summary>
+### When to avoid lazy loading ❌
 
-By delaying the loading of these non-critical assets, the initial page load speed is significantly faster, allowing users to interact with the core content without delay.
+While lazy loading is great for improving page speed, there are certain situations where you should avoid implementing it. Here are some key scenarios when lazy loading can do more harm than good.
 
-Example: A clothing store's homepage has "Seasonal Offers" promotional banners and lookbooks further down the page. Lazy loading these large images ensures shoppers see top-selling categories immediately, while heavier promotional assets load only as they scroll.
-
-</details>
-
-<CheckboxField
-  label="To improve page speed for a media-heavy page"
-  id="checkboxfield-account"
-/>
-
-<details>
-<summary>Use lazy loading for delay the content that isn't essential for the initial view.</summary>
-
-This optimizes resource usage and improves overall page speed.
-
-Example: A PDP includes a "Complete the Look" carousel at the bottom. Since these are supplementary suggestions, lazy loading ensures the main product details are prioritized, and the carousel images load only when the user scrolls to that section.
-
-</details>
-
-<CheckboxField
-  label="The content doesn't affect SEO or crawling"
-  id="checkboxfield-account"
-/>
-
-<details>
-<summary>Use lazy loading for content that isn't essential for search engine optimization.</summary>
-
-This includes content that doesn't contain structured product data or other critical SEO information.
-
-Example: A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured product data for SEO, lazy loading it will not negatively affect search engine visibility.
-</details>
-
-<CheckboxField label="To balance server load during high traffic" id="checkboxfield-account" />
-
-<details>
-<summary>Use lazy loading to manage server load on pages with many images or heavy resources.</summary>
-
-This can prevent server spikes and ensure a faster browsing experience for shoppers.
-
-Example: Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, reducing server spikes and keeping the browsing experience fast.
-
-</details>
-</details>
+| Context | Reason to Avoid | Example |
+| :--- | :--- | :--- |
+| **The store section is part of your core PLP or PDP** | Essential product details like names, prices, and descriptions must be immediately visible to users and search engines. | A "Jeans" category page where product names and thumbnails need to load instantly for indexing and shoppers don't experience delays in viewing products. |
+| **All product content needs to appear for search engines.** | Critical content for SEO, like size charts and availability, must be crawlable and indexable right away. | A product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
+| **There's a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it's lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index every new product shown in this grid. |
+| **To avoid overloading all store content simultaneously** | Lazy loading should be applied selectively. Overloading a page with too many assets can exhaust crawl budgets and slow indexing. | A homepage with numerous campaign images that should be lazy-loaded to avoid slowing down the site and increasing server load. |
 
 ## Before you begin
 
