@@ -74,7 +74,7 @@ The order reaches this stage after it is placed.
     <td><strong>My Account status</strong></td>
     <tr>
         <td><code>order.progress.approvePayment</code></td>
-        <td>The order's API status is a stage 1 status.</td>
+        <td>The order's API status is a Stage 1 status.</td>
         <td>Approve payment</td>
     </tr>
     <tr>
