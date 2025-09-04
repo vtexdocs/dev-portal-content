@@ -247,8 +247,6 @@ There are several actions a VTEX store can perform on orders. In the next sectio
 
 In other words, the feature allows VTEX sellers to sell products from their franchises or white label sellers in a marketplace, without the need to set up the integration with the desired marketplace. For marketplaces, this means selling products from their direct sellers as well as physical stores and white label sellers associated with those sellers in a scalable way. For more information, see the article [Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4).
 
-
-
 ## Integrating orders from an external marketplace
 
 A VTEX store can act both as a [seller](https://help.vtex.com/en/tutorial/configuring-a-seller-on-vtex-marketplace--6g045OkRSjNpqhkExbQRlP) and a [marketplace](https://help.vtex.com/en/tutorial/configuring-vtex-marketplace--7splyp5MqIyt2Iyz5jsNzb) for another VTEX store or an external partner. If you are an [external marketplace](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide) that wishes to integrate with VTEX sellers, see the links below to learn how to develop a custom connector to connect with VTEX's architecture and sellers' orders.
