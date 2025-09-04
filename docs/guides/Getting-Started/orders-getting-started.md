@@ -116,7 +116,7 @@ The order reaches this stage after its payment is approved.
 
 ### Stage 4
 
-The order reaches this stage after it's handled.
+The order reaches this stage after it is handled.
 
 #### Orders for pickup
 
