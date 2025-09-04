@@ -13,7 +13,7 @@ This guide details how to use the [Delivery Promise](https://help.vtex.com/en/tu
 
 With Delivery Promise enabled, only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
 
-* The system displays all available pickup points within the 50 km radius configured in Checkout. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed.
+* The system displays all available pickup points within the 50 km radius configured in Checkout. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed. To enable this functionality, you must fetch the complete list of pickup points using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/pickup-points). Retrieving this list is a mandatory dependency for the Delivery Promise feature in headless stores.
 
 * For the nearby pickup filter, the system displays pickup points within a 10 km radius of the buyer's location, up to 40 pickup points.
 
@@ -37,11 +37,11 @@ To enable the Delivery Promise functionality, you should use the following addit
 | `zip-code` **\[required\]** (query string) | Postal code. | `?zip-code=22250040`
 | `shipping` (facet)  | Shipping method. It must always be combined with `zip-code`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/shipping/pickup-in-point/?zip-code=22250040` |
 | `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters.| `/shipping/pickup-in-point?zip-code=22250040&pickupPoint=vtex-botafogo` |
-| `hideUnavailableItems` (query string) | When set to `true`, this query parameter ensures only products actually available for delivery or pickup are returned. If omitted, products with the `showIfNotAvailable` property set to `true` in Catalog may appear even if unavailable. | `?hideUnavailableItems=true` |
+| `hideUnavailableItems` (query string) | When set to `true`, this query parameter ensures only products actually available for delivery or pickup are returned. If omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
 
 >⚠️ `zip-code` is **required** to filter product availability based on the shopper’s location and is integral to any request using Delivery Promise. You must use it when filtering by shipping method and pickup point.
 
->⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `showIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `showIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`.
+>⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
 
 ### Filtering by location
 
