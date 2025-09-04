@@ -29,10 +29,10 @@ Lazy loading can improve store performance and SEO, but it must be used strategi
 <details>
 <summary>When to avoid lazy loading ❌</summary>
 
-| Context | Reason to Avoid | Example |
+| Context | Reason to avoid | Example |
 | :--- | :--- | :--- |
 | **The store section is part of your core PLP or PDP** | Essential product details like names, prices, and descriptions must be immediately visible to users and search engines. | A "Jeans" category page where product names and thumbnails need to load instantly for indexing and shoppers don't experience delays in viewing products. |
-| **All product content needs to appear for search engines.** | Critical content for SEO, like size charts and availability, must be crawlable and indexable right away. | A product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
+| **All product content needs to appear for search engines** | Critical content for SEO, like size charts and availability, must be crawlable and indexable right away. | A product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
 | **There's a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it's lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index every new product shown in this grid. |
 | **To avoid overloading all store content simultaneously** | Lazy loading should be applied selectively. Overloading a page with too many assets can exhaust crawl budgets and slow indexing. | A homepage with numerous campaign images that should be lazy-loaded to avoid slowing down the site and increasing server load. |
 
