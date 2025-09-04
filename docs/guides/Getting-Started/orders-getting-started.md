@@ -35,7 +35,7 @@ The order flow describes the status, possibilities, and actions throughout the l
 
 ## Understanding order statuses
 
-In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh#view-order-details) menu, every order shows a timeline of five stages, indicating the order flow. Each stage has several triggers that change the order status accordingly. You can see the triggers, their descriptions, and the order statuses they generate in My Account. Stages 1, 2 and 3 are the same for every order; however, stages 4 and 5 have different triggers and outcomes depending on whether it's a pickup order or a delivery order.
+In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh#view-order-details) menu, every order shows a timeline of five stages, indicating the order flow. Each stage has several triggers that change the order status accordingly. You can see the triggers, their descriptions, and the order statuses they generate in My Account. Stages 1, 2, and 3 are the same for every order; however, stages 4 and 5 have different triggers and outcomes depending on whether it's a pickup order or a delivery order.
 
 > ℹ️ An order is considered for pickup when its `selectedDeliveryChannel` field contains the value `pickup-in-point`. You can retrieve this information using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint.
 
