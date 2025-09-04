@@ -32,7 +32,7 @@ Lazy loading can improve store performance and SEO, but it must be used strategi
 | Context | Reason to avoid | Example |
 | :--- | :--- | :--- |
 | **The store section is part of your core PLP or PDP** | Essential product details like names, prices, and descriptions must be immediately visible to users and search engines. | A "Jeans" category page where product names and thumbnails need to load instantly for indexing and shoppers don't experience delays in viewing products. |
-| **All product content needs to appear for search engines** | Critical content for SEO, like size charts and availability, must be crawlable and indexable right away. | A product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
+| **All product content needs to appear for search engines** | Critical content for SEO, like size charts and availability, must be crawlable and indexable right away. | On a product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
 | **There's a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it's lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index every new product shown in this grid. |
 | **To avoid overloading all store content simultaneously** | Lazy loading should be applied selectively. Overloading a page with too many assets can exhaust crawl budgets and slow indexing. | A homepage with numerous campaign images that should be lazy-loaded to avoid slowing down the site and increasing server load. |
 
@@ -130,7 +130,7 @@ FastStore lazy-loads sections to improve store performance. However, some [custo
 
    > ⚠ Repeat these steps for the **Product Details Page** Content Type if optimizing a PDP section.
 
-4. Add the custom section you created. At the end of the section, you will notice the **Skip lazy loading** option.
+4. Add the custom section you created. The **Skip lazy loading** option will appear at the end of the section.
 
    ![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading___2a0ca0c7a90d61cda31c2ce9200e377f.png)
 
@@ -143,7 +143,7 @@ FastStore lazy-loads sections to improve store performance. However, some [custo
     <details>
       <summary>**PDP example**</summary>
       
-      For PDPs, test with a product URL (e.g., `https://mystore.vtex.app/p/blue-shirt`). In the image below, you will see the **New Arrivals** title on the PDP.
+      For PDPs, test with a product URL (e.g., `https://mystore.vtex.app/p/blue-shirt`). The image below shows the **New Arrivals** title on the PDP.
 
     </details>
 
