@@ -14,7 +14,8 @@ In this guide, learn how to optimize SEO by managing lazy loading for custom sec
 
 Lazy loading can improve store performance and SEO, but it must be used strategically. To help you decide when to implement lazy loading, the tables below outline the contexts, the benefits, and the risks involved.
 
-### When to implement lazy loading ✅
+<details>
+<summary>When to implement lazy loading ✅</summary>
 
 | Context | Benefit | Example |
 | :--- | :--- | :--- |
@@ -23,9 +24,10 @@ Lazy loading can improve store performance and SEO, but it must be used strategi
 | **The content doesn't affect SEO or crawling** | It won't negatively impact search engine visibility since the content isn't critical for SEO or structured data. | A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured product data for SEO, lazy loading it will not negatively affect search engine visibility. |
 | **To balance server load during high traffic** | It reduces server spikes by only loading images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, reducing server spikes and keeping the browsing experience fast. |
 
-### When to avoid lazy loading ❌
+</details>
 
-While lazy loading is great for improving page speed, there are certain situations where you should avoid implementing it. Here are some key scenarios when lazy loading can do more harm than good.
+<details>
+<summary>When to avoid lazy loading ❌</summary>
 
 | Context | Reason to Avoid | Example |
 | :--- | :--- | :--- |
@@ -33,6 +35,8 @@ While lazy loading is great for improving page speed, there are certain situatio
 | **All product content needs to appear for search engines.** | Critical content for SEO, like size charts and availability, must be crawlable and indexable right away. | A product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
 | **There's a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it's lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index every new product shown in this grid. |
 | **To avoid overloading all store content simultaneously** | Lazy loading should be applied selectively. Overloading a page with too many assets can exhaust crawl budgets and slow indexing. | A homepage with numerous campaign images that should be lazy-loaded to avoid slowing down the site and increasing server load. |
+
+</details>
 
 ## Before you begin
 
