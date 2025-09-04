@@ -34,10 +34,10 @@ To enable the Delivery Promise functionality, you should use the following addit
 
 | Query string / Facet | Description | Example |
 | :---- | :---- | :---- |
-| `zip-code` **\[required\]** | Postal code. | Query string: **`?zip-code=22250040`**`
-| `shipping` | Shipping method. It must always be combined with `zip-code`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/shipping/pickup-in-point/?zip-code=22250040` |
-| `pickupPoint` | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters.|  Query string: `/shipping/pickup-in-point?zip-code=22250040&pickupPoint=vtex-botafogo` |
-| `hideUnavailableItems` | When set to `true`, this query parameter ensures only products actually available for delivery or pickup are returned. If omitted, products with the `showIfNotAvailable` property set to `true` in Catalog may appear even if unavailable. | Query string: `?hideUnavailableItems=true` |
+| `zip-code` **\[required\]** (query string) | Postal code. | `?zip-code=22250040`
+| `shipping` (facet)  | Shipping method. It must always be combined with `zip-code`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/shipping/pickup-in-point/?zip-code=22250040` |
+| `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters.| `/shipping/pickup-in-point?zip-code=22250040&pickupPoint=vtex-botafogo` |
+| `hideUnavailableItems` (query string) | When set to `true`, this query parameter ensures only products actually available for delivery or pickup are returned. If omitted, products with the `showIfNotAvailable` property set to `true` in Catalog may appear even if unavailable. | `?hideUnavailableItems=true` |
 
 >⚠️ `zip-code` is **required** to filter product availability based on the shopper’s location and is integral to any request using Delivery Promise. You must use it when filtering by shipping method and pickup point.
 
