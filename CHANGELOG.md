@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.94](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.92...v1.1.94) (2025-09-04)
+
+
+### 📝 Documentation updates
+
+* add finish endpoint to punchout login integration guide ([6e5c542](https://github.com/vtexdocs/dev-portal-content/commit/6e5c542131ec4739fb790aa7171dca8c4e475c4c))
+
 ### [1.1.92](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.91...v1.1.92) (2025-09-04)
 
 ### [1.1.91](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.90...v1.1.91) (2025-09-04)
