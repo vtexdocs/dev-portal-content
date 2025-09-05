@@ -2,7 +2,7 @@
 title: "GraphQL builder update to version 2.x and deprecation of version 1.x"
 slug: "2025-09-05-graphql-builder-update-2x"
 type: improved
-excerpt: "The new builder version enhances security by requiring an authentication directive."
+excerpt: "The new builder version enhances security by requiring an authorization directive."
 createdAt: "2025-09-05T15:00:00.000Z"
 updatedAt: "2025-09-05T15:00:00.000Z"
 hidden: false
