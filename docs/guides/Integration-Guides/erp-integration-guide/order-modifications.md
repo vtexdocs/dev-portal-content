@@ -234,4 +234,34 @@ See below which API errors can be returned when attempting to [modify an order v
         <td><code>The {0} is not a valid Agreement Type.</code></td>
         <td>The agreement type is not recognized or supported.</td>
     </tr>
+    <tr>
+        <td><code>SalesOrderSystem045</code></td>
+        <td><code>Invalid address.</code></td>
+        <td>The address is invalid.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem046</code></td>
+        <td><code>The order change is not allowed after the item invoice has been issued.</code></td>
+        <td>The order modification is not allowed after the item invoice has been issued.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem047</code></td>
+        <td><code>The address change is not allowed.</code></td>
+        <td>The address modification is not allowed.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem048</code></td>
+        <td><code>The address change is not allowed when there are packages associated.</code></td>
+        <td>The address change is not allowed when there are packages associated.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem051</code></td>
+        <td><code>Change order not allowed with tax hub and multiple delivery docks.</code></td>
+        <td>Order modification is not allowed with tax hub and multiple delivery docks.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem055</code></td>
+        <td><code>Item modification is not allowed when the measurement unit differs from the original.</code></td>
+        <td>Item modification is not allowed when the measurement unit differs from the original.</td>
+    </tr>
 </table>
