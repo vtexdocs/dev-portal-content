@@ -8,7 +8,7 @@ While lazy loading enhances performance, it may negatively impact SEO. Search en
 
 In this guide, learn how to optimize SEO by managing lazy loading for custom sections in FastStore.
 
-> ❗ Disabling lazy loading may increase initial page load time. Use this only when necessary.
+> ❗ Disabling lazy loading may increase initial page load time. Use this feature only when necessary.
 
 ## Deciding when to lazy load
 
@@ -19,10 +19,10 @@ Lazy loading can improve store performance and SEO, but it must be used strategi
 
 | Context | Benefit | Example |
 | :--- | :--- | :--- |
-| **To load content that isn't immediately visible** | Improves initial page-load speed by delaying non-critical assets that are below the fold. | A homepage with promotional banners and lookbooks that load as the user scrolls down the page. |
-| **To improve page-speed for a media-heavy page** | Optimizes resource usage and ensures the most important content is prioritized and loads first. | A PDP includes a "Complete the Look" carousel at the bottom. Since these are supplementary suggestions, lazy loading ensures the main product details are prioritized, and the carousel images load only when the user scrolls to that section. |
+| **To load content that isn't immediately visible** | Improves initial page load speed by delaying non-critical assets that are below the fold. | A homepage with promotional banners and lookbooks that load as the user scrolls down the page. |
+| **To improve page speed for a media-heavy page** | Optimizes resource usage and ensures the most important content is prioritized and loads first. | A PDP includes a "Complete the Look" carousel at the bottom. Since these are supplementary suggestions, lazy loading ensures the main product details are prioritized, and the carousel images load only when the user scrolls to that section. |
 | **The content doesn't affect SEO or crawling** | It won't negatively impact search engine visibility since the content isn't critical for SEO or structured data. | A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured product data for SEO, lazy loading it will not negatively affect search engine visibility. |
-| **To balance server-load during high traffic** | It reduces server spikes by only loading images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, reducing server spikes and keeping the browsing experience fast. |
+| **To balance server load during high traffic** | It reduces server spikes by only loading images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, reducing server spikes and keeping the browsing experience fast. |
 
 </details>
 
@@ -34,7 +34,7 @@ Lazy loading can improve store performance and SEO, but it must be used strategi
 | **The store section is part of your core PLP or PDP** | Essential product details like names, prices, and descriptions must be immediately visible to users and search engines. | A "Jeans" category page where product names and thumbnails need to load instantly for indexing and shoppers do not experience delays in viewing products. |
 | **All product content needs to appear for search engines** | Critical content for SEO, like size charts and availability, must be crawlable and indexable immediately. | On a product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
 | **There is a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it's lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index every new product shown in this grid. |
-| **To avoid overloading all store content simultaneously** | Lazy loading should be applied selectively. Overloading a page with too many assets can exhaust crawl budgets and slow indexing. | A homepage with numerous campaign images that should be lazy-loaded to avoid slowing down the site and increasing server-load. |
+| **To avoid overloading all store content simultaneously** | Lazy loading should be applied selectively. Overloading a page with too many assets can exhaust crawl budgets and slow indexing. | A homepage with numerous campaign images that should be lazy-loaded to avoid slowing down the site and increasing server load. |
 
 </details>
 
