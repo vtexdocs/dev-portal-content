@@ -3,7 +3,7 @@ title: "SEO"
 slug: "storefront-seo"
 hidden: false
 createdAt: "2024-09-26T14:09:58.908Z"
-updatedAt: ""
+updatedAt: "2025-04-26T14:09:58.908Z"
 excerpt: "Discover strategies to improve your ecommerce SEO."
 ---
 
