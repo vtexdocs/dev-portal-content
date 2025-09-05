@@ -40,7 +40,7 @@ When setting up your store, consider how title tags and descriptions affect your
 When adding images or videos to your store, whether for SKUs, banners, or any other page on your site, follow these guidelines:
 
 - **Media file name:** Rename media files used in your store with descriptive keywords, avoiding generic names such as `image1.png`.
-- **`alt text`:** Use clear `alt text` with relevant keywords to describe the media content accurately. Search engines don't read images and videos, so each media piece should have descriptive alternative text (`alt text`). Moreover, the `alt text` promotes [Accessibility](https://developers.vtex.com/docs/guides/storefront-accessibility) by helping visually impaired users understand the content on the page.
+- **`alt text`:** Use clear `alt text` with relevant keywords to describe the media content accurately. Search engines cannot interpret images and videos directly, so each media piece should have descriptive alternative text (`alt text`). Moreover, the `alt text` promotes [Accessibility](https://developers.vtex.com/docs/guides/storefront-accessibility) by helping visually impaired users understand the content on the page.
 - **Image optimization:** Compress images to improve page load speed without sacrificing quality. Learn more in [Image compression](https://help.vtex.com/tutorial/image-compression--4klbgpsPksq44KcwqKeye8).
 
 #### URLs
@@ -91,7 +91,7 @@ For stores developed with [FastStore](https://developers.vtex.com/docs/guides/fa
 
 For stores developed with [Store Framework](https://developers.vtex.com/docs/guides/store-framework), follow these specific practices:
 
-- **Store SEO settings:** Configure basic SEO settings for the homepage through VTEX Admin by accessing **Store Settings > Storefront > Store**. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/pt/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR).
+- **Store SEO settings:** Configure basic SEO settings for the homepage through VTEX Admin by accessing **Store Settings > Storefront > Store**. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/en/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR).
 
 - **Intelligent Search for Categories:** Use the [VTEX Intelligent Search app](https://developers.vtex.com/docs/apps/vtex.search@1.0.8) to customize titles and meta descriptions for Department, Category, and Subcategory pages within the search navigation bar. Learn more in [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search).
 
@@ -101,7 +101,7 @@ For stores developed with [Store Framework](https://developers.vtex.com/docs/gui
 
 For stores using the (Legacy) CMS Portal, configure SEO settings as follows:
 
-- **Home page SEO:** Configure the homepage `meta tag description` and `robots.txt` file through **Store Settings > Storefront > Settings** in the VTEX Admin. Learn more in [Settings](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj#settings).
+- **Homepage SEO:** Configure the homepage `meta tag description` and `robots.txt` file through **Store Settings > Storefront > Settings** in the VTEX Admin. Learn more in [Settings](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj#settings).
 
 - **Meta tags control:** To improve SEO on other pages (product, category, etc.), use the meta tags control feature. Learn more in [How to use the meta tags control](https://help.vtex.com/en/tutorial/how-to-use-the-meta-tags-control--2OPiSPubgcEqIikAWsCouk).
 
