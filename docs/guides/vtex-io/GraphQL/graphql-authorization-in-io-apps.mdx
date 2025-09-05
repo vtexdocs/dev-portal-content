@@ -8,7 +8,7 @@ updatedAt: "2025-06-30T14:00:00.000Z"
 ---
 Authenticated GraphQL requests are crucial for securing access to your VTEX IO app's data and functionalities. Authentication ensures that only authorized users or applications can interact with your GraphQL endpoints, protecting sensitive information and preventing unauthorized actions. Besides authentication, app developers can implement authorization to control who can access specific resources and what operations they can perform.
 
-GraphQL authorization in VTEX IO apps works with auth tokens and [directives](https://graphql.org/learn/schema/#directives) within your GraphQL schema, enabling fine-grained access control based on [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). The app identifies the requester by the [auth token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) in [apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) or the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in API calls, which will have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) associated with VTEX's resources.
+GraphQL authorization in VTEX IO apps works with auth tokens and [directives](https://graphql.org/learn/schema/#directives) within your GraphQL schema, enabling fine-grained access control based on [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). The app identifies the requester by the [auth token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) in [apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) or the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in API calls. These tokens have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) associated with VTEX's resources.
 
 In this guide, you will learn how to:
 
@@ -17,25 +17,94 @@ In this guide, you will learn how to:
 3. Make external requests with the appropriate authorization.
 
 > ℹ️ Only VTEX apps, Admin users, and [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) can be authorized in GraphQL requests, since they must be associated with a role or policy granting access to a License Manager resource. Store users don't have this type of access.
+
 ## Implementing GraphQL API authorization in apps
 
-By default, GraphQL APIs in VTEX apps don't require authorization. To enable authorization, you must add the `@auth` directive to the specific fields or operations in your GraphQL schema that require protection. This directive ensures that only requesters with access to the corresponding [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) are allowed to execute the operation.
+The `@auth` directive has different implementation methods depending on the builder version.
+
+For builder version `1.x`, the directive is optional. If a query or mutation doesn't have the directive, it is considered public by default. For builder version `2.x`, the directive is mandatory.
+
+To enable authorization, you must add the `@auth` directive to the specific fields or operations in your GraphQL schema that need protection. This directive ensures that only requesters with access to the corresponding [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) are allowed to execute the operation.
 
 The `@auth` directive uses the following arguments:
 
-- `productCode`: The numeric code that identifies the product in License Manager (for example, `"66"` for **VTEX IO**).
-- `resourceCode`: The License Manager resource identifier (for example, `"workspace-read-write"` for **Workspace CRUD**).
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Description</th>
+      <th><a href="https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder#versioning">Builder version</a> details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>1.x</code></td>
+      <td>
+        The authorization scope of the query or mutation. It has two possible values:
+        <ul>
+          <li><code>PUBLIC</code>: The query is public, so it doesn't require any authorization. This scope is mostly used for shoppers while browsing in a store.</li>
+          <li><code>PRIVATE</code>: The query is private, which requires authorization for a specific License Manager resource and product. This scope should be used in cases outside of store browsing by a shopper, such as in the Admin.</li>
+        </ul>
+      </td>
+      <td>Works only on version <code>2.x</code>, and it is mandatory.</td>
+    </tr>
+    <tr>
+      <td><code>productCode</code></td>
+      <td>The numeric code that identifies the product in License Manager (for example, <code>"66"</code> for <b>VTEX IO</b>). See the product codes in the <b>Product ID</b> column of the table in License Manager resources.</td>
+      <td>Works on versions <code>1.x</code> and <code>2.x</code>. For <code>2.x</code>, this argument is mandatory if scope is set to <code>PRIVATE</code>.</td>
+    </tr>
+    <tr>
+      <td><code>resourceCode</code></td>
+      <td>The License Manager resource identifier (for example, <code>"workspace-read-write"</code> for <b>Workspace CRUD</b>). See the resource codes in the <b>Key</b> column of the table in License Manager resources.</td>
+      <td>Works on versions <code>1.x</code> and <code>2.x</code>. For <code>2.x</code>, this argument is mandatory if scope is set to <code>PRIVATE</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
-Example:
+Examples:
 
-```graphql graphql/schema.graphql mark=2
-createWorkspace(account: String, workspace: String): GenericResponse
-  @auth(productCode: "66", resourceCode: "workspace-read-write")
+With version `1.x`:
+
+```graphql
+type Mutation {
+  createWorkspace(account: String, workspace: String): GenericResponse
+    @auth(productCode: "66", resourceCode: "workspace-read-write")
+}
 ```
 
-In this example, when the user requests the `createWorkspace` mutation, VTEX will check if this user has access to the `workspace-read-write` resource from License Manager. If the user has this access, the endpoint will process as intended. Otherwise, the request will be denied.
+Public with version `2.x`:
+
+```graphql
+type Query {
+  source(id: ID!): String
+    @auth(scope: PUBLIC)
+}
+```
+
+In this example, there is no verification of whether the requester has access to a specific License Manager resource.
+
+Private with version `2.x`:
+
+```graphql
+type Mutation {
+  createWorkspace(account: String, workspace: String): GenericResponse
+    @auth(scope: PRIVATE, productCode: "66", resourceCode: "workspace-read-write")
+}
+```
+
+In this example, when the user requests the `createWorkspace` mutation, VTEX checks if the user has access to the `workspace-read-write` resource from License Manager. If the user has this access, the endpoint will process as intended. Otherwise, the request will be denied.
 
 You can see the available products and resources in [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
+
+### Error scenarios
+
+If a developer tries to build an app with the GraphQL builder `2.x`, the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) will show an error message in the following cases:
+
+- Any query or mutation doesn't have the `@auth` directive.
+- The `scope` argument is missing in the directive.
+- When `scope` is `PRIVATE` in the directive and `productCode` or `resourceCode` arguments are missing.
+
+![GraphQL auth directive error](../../images/graphql-auth-directive-error.png)
 
 ## Making requests to protected GraphQL APIs from a VTEX IO app
 
@@ -49,7 +118,6 @@ Declare the token considering the requester context:
 Example
 
 ```typescript node/clients/catalogGraphQL/index.ts mark=9
-
 import { AppGraphQLClient, InstanceOptions, IOContext } from '@vtex/api'
 export class CatalogGQL extends AppGraphQLClient {
     constructor(ctx: IOContext, options?: InstanceOptions) {
