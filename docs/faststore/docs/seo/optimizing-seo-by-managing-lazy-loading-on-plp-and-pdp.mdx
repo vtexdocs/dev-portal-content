@@ -34,7 +34,7 @@ Lazy loading can improve store performance and SEO, but it must be used strategi
 | **The store section is part of your core PLP or PDP** | Essential product details like names, prices, and descriptions must be immediately visible to users and search engines. | A "Jeans" category page where product names and thumbnails need to load instantly for indexing and shoppers do not experience delays in viewing products. |
 | **All product content needs to appear for search engines** | Critical content for SEO, like size charts and availability, must be crawlable and indexable immediately. | On a product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
 | **There is a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it's lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index every new product shown in this grid. |
-| **To avoid overloading all store content simultaneously** | Lazy loading should be applied selectively. Overloading a page with too many assets can exhaust crawl budgets and slow indexing. | A homepage with numerous campaign images where not applying lazy loading selectively leads to an overloaded page, exhausting crawl budgets and slowing indexing. |
+| **To avoid overloading all store content simultaneously** | Lazy loading should be applied selectively. Overloading a page with too many assets can exhaust crawl budgets and slow indexing. | A homepage with numerous campaign images. If lazy loading is not applied selectively, the page can become overloaded, exhausting crawl budgets and slowing indexing. |
 
 </details>
 
@@ -57,7 +57,7 @@ For instructions, see the [Configuring SEO for PLPs and PDPs](https://developers
 
 ### Step 1: Controlling lazy loading for custom sections
 
-FastStore lazy-load sections to improve store performance. However, some [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section), such as those containing H1 headers, may need to appear in the initial HTML for SEO purposes. To disable lazy loading for these sections, consider the following:
+FastStore lazy loads sections to improve store performance. However, some [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section), such as those containing H1 headers, may need to appear in the initial HTML for SEO purposes. To disable lazy loading for these sections, consider the following:
 
 1. Open the `cms/faststore/sections.json` file in your project.
 2. Locate your custom section in the file, add the `skipLazyLoadingSection` property, and set it to `true`. For example, if your custom section is named `CustomSEOSection`, the configuration would look like this:

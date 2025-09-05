@@ -101,7 +101,7 @@ For stores developed with [Store Framework](https://developers.vtex.com/docs/gui
 
 For stores using the (Legacy) CMS Portal, configure SEO settings as follows:
 
-- **Home page SEO:** Configure the home page `meta tag description` and `robots.txt` file through **Store Settings > Storefront > Settings** in the VTEX Admin. Learn more in [Settings](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj#settings).
+- **Home page SEO:** Configure the homepage `meta tag description` and `robots.txt` file through **Store Settings > Storefront > Settings** in the VTEX Admin. Learn more in [Settings](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj#settings).
 
 - **Meta tags control:** To improve SEO on other pages (product, category, etc.), use the meta tags control feature. Learn more in [How to use the meta tags control](https://help.vtex.com/en/tutorial/how-to-use-the-meta-tags-control--2OPiSPubgcEqIikAWsCouk).
 
