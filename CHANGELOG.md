@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.99](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.97...v1.1.99) (2025-09-05)
+
+
+### 🗑️ Removed content
+
+* callout about checkout on delivery promise guide ([bb6f355](https://github.com/vtexdocs/dev-portal-content/commit/bb6f35532bdcf30d4ad76015153187828a02842a))
+
+
+### 📝 Documentation updates
+
+* add explanation about checkout and catalog ([7cb8310](https://github.com/vtexdocs/dev-portal-content/commit/7cb83108c834f06c12d9c70f6aa31b85c3ed0c71))
+* apply suggestions from review - delivery promise headless guide ([f8d4bcb](https://github.com/vtexdocs/dev-portal-content/commit/f8d4bcb84343995b097af7623ac9801a74040808))
+* delivery promise headless guide params ([ed39a1d](https://github.com/vtexdocs/dev-portal-content/commit/ed39a1d7dca79de32a1465754421a6d93292cc10))
+* edit table in delivery promise headless guide ([7f18eac](https://github.com/vtexdocs/dev-portal-content/commit/7f18eacd66780f472226409b0ab961746bece38e))
+
 ### [1.1.97](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.96...v1.1.97) (2025-09-04)
 
 ### [1.1.96](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.94...v1.1.96) (2025-09-04)
