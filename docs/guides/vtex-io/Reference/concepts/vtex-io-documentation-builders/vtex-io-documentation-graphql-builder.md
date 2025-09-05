@@ -52,7 +52,7 @@ To develop an app using the `graphql` builder, follow the steps below:
 2. **Add the schema files:** Add the `.graphql` files with the schema definitions, including the endpoints (queries, mutations, and subscriptions), directives, and other custom types.
 3. **Add the API implementation logic**: Add the code that implements and instantiates the resolver functions.
     1. **Create the resolvers**: Create the resolver functions that will run when your GraphQL endpoints are called. The functions must have the same names as the endpoints defined in the schema. If you're developing a Node service, you should add the TypeScript code (`.ts` files) in the `node/resolvers` folder.
-    2. **Instantiate the resolvers**: Add the code to instantiate the resolvers. If you're developing a Node service, in the `Service` class of the `node/index.ts` file, you should add a `graphql` field with the resolvers for each implemented endpoint, along with the directives.
+    2. **Instantiate the resolvers**: Add the code to instantiate the resolvers. If you're developing a Node service, in the `node/index.ts` file, within the `Service` class, you should add a `graphql` field that includes the resolvers for each implemented endpoint and the directives.
 4. **Testing**: [Link the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to a development workspace for testing. Test the endpoints with the [GraphQL IDE](https://developers.vtex.com/docs/guides/graphql-ide).
 
 For a more detailed tutorial on implementing an app with this builder, see [Developing a GraphQL API in service apps](https://developers.vtex.com/docs/guides/developing-a-graphql-api-in-service-apps).

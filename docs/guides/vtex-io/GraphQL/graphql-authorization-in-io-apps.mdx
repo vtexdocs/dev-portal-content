@@ -6,9 +6,9 @@ excerpt: "Learn to implement and use protected GraphQL operations with IO apps."
 createdAt: "2025-06-30T14:00:00.000Z"
 updatedAt: "2025-06-30T14:00:00.000Z"
 ---
-Authenticated GraphQL requests are crucial for securing access to your VTEX IO app's data and functionalities. Authentication ensures that only authorized users or applications can interact with your GraphQL endpoints, protecting sensitive information and preventing unauthorized actions. Besides authentication, app developers can implement authorization to control who can access specific resources and what operations they can perform.
+Authenticated GraphQL requests are crucial for securing access to your VTEX IO app's data and functions. Authentication ensures that only authorized users or applications can interact with your GraphQL endpoints, protecting sensitive information and preventing unauthorized actions. Besides authentication, app developers can implement authorization to control who can access specific resources and what operations they can perform.
 
-GraphQL authorization in VTEX IO apps works with auth tokens and [directives](https://graphql.org/learn/schema/#directives) within your GraphQL schema, enabling fine-grained access control based on [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). The app identifies the requester by the [auth token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) in [apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) or the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in API calls. These tokens have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) associated with VTEX's resources.
+GraphQL authorization in VTEX IO apps works with auth tokens and [directives](https://graphql.org/learn/schema/#directives) within your GraphQL schema, enabling fine-grained access control based on [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). The app identifies the requester by the [auth token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) in [apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) or the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in API calls. These tokens have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) associated with VTEX resources.
 
 In this guide, you will learn how to:
 
@@ -46,7 +46,7 @@ The `@auth` directive uses the following arguments:
           <li><code>PRIVATE</code>: The query is private, which requires authorization for a specific License Manager resource and product. This scope should be used for scenarios other than store browsing by a shopper, such as in the Admin.</li>
         </ul>
       </td>
-      <td>Works only on version <code>2.x</code>, and it is mandatory.</td>
+      <td>Works only on version <code>2.x</code>, and is mandatory.</td>
     </tr>
     <tr>
       <td><code>productCode</code></td>
@@ -108,9 +108,9 @@ If a developer tries to build an app with the GraphQL builder `2.x`, the [VTEX I
 
 ## Making requests to protected GraphQL APIs from a VTEX IO app
 
-When making requests to a protected GraphQL API from another VTEX IO app, you must export a [custom Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) that extends the `AppGraphQLClient` type and set the auth token in the [Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients)'s `VtexIdclientAutCookie` header. The requester must have the role or policy that includes the `resourceCode` and `productCode` defined in the target operation's `@auth` directive.
+When making requests to a protected GraphQL API from another VTEX IO app, you must export a [custom Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) that extends the `AppGraphQLClient` type and set the `VtexIdclientAutCookie` header with the auth token in the [Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients). The requester must have the role or policy that includes the `resourceCode` and `productCode` defined in the target operation's `@auth` directive.
 
-Declare the token considering the requester context:
+Declare the token based on the requester's context:
 
 - **App**: `ctx.authToken`.
 - **Admin user**: `ctx.adminUserAuthToken`.
@@ -138,7 +138,7 @@ For details about token types, see [App authentication using auth tokens](https:
 
 ## Making requests to protected GraphQL APIs of apps
 
-When making external requests to a GraphQL API app, declare the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in the `VtexIdclientAutCookie` HTTP header. The requester must have a role that includes the resource and product defined in the endpoint's `@auth` directive.
+When making external requests to a GraphQL API of an app, include the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in the `VtexIdclientAutCookie` HTTP header. The requester must have a role that includes the resource and product defined in the endpoint's `@auth` directive.
 
 Example (cURL):
 
