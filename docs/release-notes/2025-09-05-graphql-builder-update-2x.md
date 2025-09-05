@@ -1,8 +1,8 @@
 ---
-title: "GraphQL builder: Update to v2.x, v1.x deprecation"
+title: "GraphQL builder: Update to 2.x, 1.x deprecation"
 slug: "2025-09-05-graphql-builder-update-2x"
 type: improved
-excerpt: "GraphQL builder v2.x enforces enhanced security with mandatory authorization directive. Version 1.x will be deprecated."
+excerpt: "GraphQL builder 2.x enhances security with mandatory authorization directive. Version 1.x will be deprecated."
 createdAt: "2025-09-05T15:00:00.000Z"
 updatedAt: "2025-09-05T15:00:00.000Z"
 hidden: false
@@ -16,9 +16,9 @@ Version `2.x` requires all queries to use the `@auth` directive, enhancing secur
 
 The `@auth` directive is added to queries and mutations to determine the authorization required for users or apps to gain access.
 
-In GraphQL builder `1.x`, the `@auth` directive is optional and defines a [License Manager resource and product](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). Users or apps need a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) that includes the resource or product defined in the directive. Without the `@auth` directive, the query is public by default.
+In GraphQL builder `1.x`, the `@auth` directive is optional and defines a [License Manager resource and product](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). Users or apps need a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) that includes the resource or product defined by the directive. Without the `@auth` directive, the query is public by default.
 
-> ⚠️ **Deprecation notice:** GraphQL builder `1.x` will be deprecated on January 7, 2026. Existing apps built with version `1.x` will continue to function. However, creating new apps or major [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps using version `1.x` will no longer be possible. After the deprecation date, apps using builder `1.x` will fail to build via [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) or [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).
+> ⚠️ GraphQL builder `1.x` will be deprecated on January 7, 2026. Existing apps built with version `1.x` will continue to function. However, creating new apps or major [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps using version `1.x` will no longer be possible. After the deprecation date, apps using builder `1.x` will fail to build via [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) or [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).
 
 With builder version `2.x`, the `@auth` directive is mandatory and requires the `scope` argument, with the following values:
 
@@ -41,31 +41,31 @@ This change enhances the security and transparency of GraphQL APIs in VTEX IO ap
 
 To use the new builder version, developers must update their apps:
 
-1. Update the GraphQL builder version to `2.x` in the [app’s manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+1. Update the GraphQL builder version to `2.x` in the [app's manifest](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
-```json
-  "builders": {
-    "graphql": "2.x",
-    ...
-  },
-```
+    ```json
+      "builders": {
+        "graphql": "2.x",
+        ...
+      },
+    ```
 
-2. Add the `@auth` directive to every query and mutation in the app’s GraphQL schema, including the `scope` argument. For public queries, use:
+2. Add the `@auth` directive to every query and mutation in the app's GraphQL schema, and include the `scope` argument. For public queries, use:
 
-```graphql
-type Query {
-  source(id: ID!): String
-  @auth(scope: PUBLIC)
-}
-```
+    ```graphql
+    type Query {
+      source(id: ID!): String
+      @auth(scope: PUBLIC)
+    }
+    ```
 
     For private queries, include the authorization requirements:
 
-```graphql
-type Query {
-  book(id: ID!): Book
-  @auth(scope: PRIVATE, productCode: "64", resourceCode: "read_account_config")
-}
-```
+    ```graphql
+    type Query {
+      book(id: ID!): Book
+      @auth(scope: PRIVATE, productCode: "64", resourceCode: "read_account_config")
+    }
+    ```
 
 For more information, refer to [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder) and [GraphQL authorization in IO apps](https://developers.vtex.com/docs/guides/graphql-authorization-in-io-apps).

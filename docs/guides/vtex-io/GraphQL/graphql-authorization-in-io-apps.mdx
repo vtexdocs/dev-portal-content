@@ -12,9 +12,9 @@ GraphQL authorization in VTEX IO apps works with auth tokens and [directives](ht
 
 In this guide, you will learn how to:
 
-1. Implement protected operations with GraphQL APIs in apps using authorization.
-2. Make requests in apps with the proper authorization.
-3. Make external requests with the appropriate authorization.
+1. Implement protected GraphQL API operations in apps using authorization.
+2. Make authorized requests from apps.
+3. Make external requests with appropriate authorization.
 
 > ℹ️ Only VTEX apps, Admin users, and [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) can be authorized in GraphQL requests, since they must be associated with a role or policy granting access to a License Manager resource. Store users don't have this type of access.
 
@@ -136,7 +136,7 @@ For details about token types, see [App authentication using auth tokens](https:
 
 > ⚠️ Use the user token (Admin) whenever possible to properly identify the requester. The app token (`ctx.authToken`) should only be used when the user can't access the requested service.
 
-## Making requests to protected GraphQL API apps
+## Making requests to protected GraphQL APIs of apps
 
 When making external requests to a GraphQL API app, declare the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in the `VtexIdClientAutCookie` HTTP header. The requester must have a role that includes the resource and product defined in the endpoint's `@auth` directive.
 
