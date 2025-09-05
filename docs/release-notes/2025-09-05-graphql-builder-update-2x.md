@@ -14,13 +14,13 @@ Version `2.x` requires all queries to use the `@auth` directive, enhancing secur
 
 ## What has changed?
 
-The `@auth` directive is added to queries and mutations to determine the type of authorization the user or app must have to gain access.
+The `@auth` directive is added to queries and mutations to determine the authorization required for users or apps to gain access.
 
-In GraphQL builder `1.x`, the `@auth` directive is optional, defining a [License Manager resource and product](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). Users or apps need a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) that included the resource or product defined in the directive. Without the `@auth` directive, the query is public by default.
+In GraphQL builder `1.x`, the `@auth` directive is optional and defines a [License Manager resource and product](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). Users or apps need a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) that includes the resource or product defined in the directive. Without the `@auth` directive, the query is public by default.
 
 > ⚠️ **Deprecation notice:** GraphQL builder `1.x` will be deprecated on January 7, 2026. Existing apps built with version `1.x` will continue to function. However, creating new apps or major [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps using version `1.x` will no longer be possible. After the deprecation date, apps using builder `1.x` will fail to build via [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) or [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).
 
-With builder version `2.x`, the `@auth` directive is mandatory and requires the `scope` argument, with these values:
+With builder version `2.x`, the `@auth` directive is mandatory and requires the `scope` argument, with the following values:
 
 - `PUBLIC`: The query is public and requires no authorization.
 - `PRIVATE`: The query is private and requires authorization for a specific [License Manager resource and product](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). When using `PRIVATE`, the `productCode` and `resourceCode` arguments are also mandatory.
@@ -50,7 +50,7 @@ To use the new builder version, developers must update their apps:
   },
 ```
 
-2. Add the `@auth` directive to every query and mutation in the app’s GraphQL schema, including the `scope` property. For public queries, use:
+2. Add the `@auth` directive to every query and mutation in the app’s GraphQL schema, including the `scope` argument. For public queries, use:
 
 ```graphql
 type Query {

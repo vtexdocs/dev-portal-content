@@ -38,7 +38,7 @@ The `@auth` directive uses the following arguments:
   </thead>
   <tbody>
     <tr>
-      <td><code>1.x</code></td>
+      <td><code>scope</code></td>
       <td>
         The authorization scope of the query or mutation. It has two possible values:
         <ul>
@@ -92,7 +92,7 @@ type Mutation {
 }
 ```
 
-In this example, when the user requests the `createWorkspace` mutation, VTEX checks if the user has access to the `workspace-read-write` resource from License Manager. If the user has this access, the endpoint will process as intended. Otherwise, the request will be denied.
+In this example, when the user requests the `createWorkspace` mutation, VTEX checks if the user has access to the `workspace-read-write` resource from License Manager. If the user has this access, the endpoint will be processed as intended. Otherwise, the request will be denied.
 
 You can see the available products and resources in [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
 
@@ -108,7 +108,7 @@ If a developer tries to build an app with the GraphQL builder `2.x`, the [VTEX I
 
 ## Making requests to protected GraphQL APIs from a VTEX IO app
 
-When making requests to a protected GraphQL API from another VTEX IO app, you must export a [custom Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) that extends the `AppGraphQLClient` type and declare the auth token in the [Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients)'s `VtexIdClientAutCookie` header. The requester must have the role or policy that includes the `resourceCode` and `productCode` defined in the target operation's `@auth` directive.
+When making requests to a protected GraphQL API from another VTEX IO app, you must export a [custom Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) that extends the `AppGraphQLClient` type and set the auth token in the [Client](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients)'s `VtexIdClientAutCookie` header. The requester must have the role or policy that includes the `resourceCode` and `productCode` defined in the target operation's `@auth` directive.
 
 Declare the token considering the requester context:
 
