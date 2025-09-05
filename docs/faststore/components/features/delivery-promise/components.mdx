@@ -12,7 +12,7 @@ You'll learn which components can be reused and which require customization, ill
 
 ## Components
 
-Delivery Promise introduces a set of modular components and hooks. These are organized within the FastStore core and UI packages and are inserted into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, such as those found in the FastStore starter. Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
+Delivery Promise introduces a set of modular components and hooks. These are organized within the FastStore core and UI packages and inserted into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, such as those found in the FastStore starter. Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
 
 Below are the core components related to the Delivery Promise feature in FastStore.
 
@@ -37,7 +37,7 @@ This component leverages the following:
 
 ### RegionModal
 
-`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, meaning the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
+`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, which means the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
 
 ![RegionModal](https://vtexhelp.vtexassets.com/assets/docs/src/region-modal___6352f280eeb8eb77ee4674a5caf4f328.png)
 
@@ -84,11 +84,11 @@ The `RegionSlider` component enables shoppers to manage their delivery-related l
 
 It includes three interaction types: setting a new location (when no postal code is set), changing an existing location (when a postal code is set), and selecting a pickup point (for filtering) to refine delivery options.
 
-* **No postal code set:** The user clicks the "Set location" button, then the `RegionSlider` appears, allowing them to set a postal code.
+* **No postal code set:** The user clicks the `Set location` button, and the `RegionSlider` appears, allowing them to set a postal code.
 
 ![setLocation](https://vtexhelp.vtexassets.com/assets/docs/src/set-location___8887a7be647d76a0584e1b977233a672.png)
 
-* **Postal code set:** The user clicks the postal code link, then the `RegionSlider` appears, allowing them to change the location.
+* **Postal code set:** The user clicks the postal code link, and the `RegionSlider` appears, allowing them to change the location.
 
 ![changeLocation](https://vtexhelp.vtexassets.com/assets/docs/src/change-location___ada68e0df1bac1e8a20abc9040dbf82f.png)
 
