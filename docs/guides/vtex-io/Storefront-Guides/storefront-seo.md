@@ -15,13 +15,15 @@ To learn more about SEO strategies, check Google’s documentation resource [Exp
 
 VTEX offers a set of tools and settings that allow you to optimize your store for search engines, making your products more discoverable and improving site performance.
 
-In this guide, you will learn some best practices for implementing strategies to improve SEO in your VTEX store.
+In this guide, you will learn some best practices for implementing strategies to improve SEO in your VTEX store and it is divided into [general best practices](#general-seo-best-practices) applicable to all storefronts, followed by specific configurations for [FastStore](#faststore), [Store Framework](#store-framework), and [(Legacy) CMS Portal](#legacy-cms-portal).
 
-## Store settings
+## General SEO best practices
+
+### Store settings
 
 Properly configuring the elements of your ecommerce store, such as titles, descriptions, media, and URLs, may significantly impact how search engines index and rank your pages.
 
-### Titles and descriptions
+#### Titles and descriptions
 
 When setting up your store, consider how title tags and descriptions affect your store’s SEO:
 
@@ -33,13 +35,7 @@ When setting up your store, consider how title tags and descriptions affect your
 - **Unique content:** Avoid duplication across pages. Make sure titles and descriptions are unique for each page to improve search visibility and prevent keyword cannibalization, where multiple pages compete for the same search terms.
 - **Robots.txt:** Edit or customize your `robots.txt`, which is a text file that search engines use to define site scanning rules for crawlers based on your business needs. Learn more in [Google Search Console Tracking - robots.txt](https://help.vtex.com/en/tutorial/google-search-console-tracking-robots-txt--tutorials_574).
 
-In Legacy CMS Portal stores, the SEO settings for the home page, such as `meta tag description` and `robots.txt` file are configured through *Store Settings > Storefront > Settings* in the VTEX Admin. Learn more in [Settings](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj#settings). To improve SEO on other pages of your site, you can leverage **meta tags control**. Learn more in [How to use the meta tags control](https://help.vtex.com/en/tutorial/how-to-use-the-meta-tags-control--2OPiSPubgcEqIikAWsCouk).
-
-For stores developed with Store Framework, the SEO settings for the home page are configured through *Store Settings > Storefront > Store*. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/pt/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR). To enhance SEO for product listing pages, see [Improving the SEO of Product Listing Pages](https://help.vtex.com/en/tutorial/improving-the-seo-of-product-listing-pages--UrQtlKAMuSaLBP5wG9ftG).
-
-For FastStore stores, see [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options).
-
-### Images and videos
+#### Images and videos
 
 When adding images or videos to your store, whether for SKUs, banners, or any other page on your site, follow these guidelines:
 
@@ -47,7 +43,7 @@ When adding images or videos to your store, whether for SKUs, banners, or any ot
 - **`alt text`:** Use clear `alt text` with relevant keywords to describe the media content accurately. Search engines don't read images and videos, so each media piece should have personalized alternative text (`alt text`). Moreover, the `alt text` promotes [Accessibility](https://developers.vtex.com/docs/guides/storefront-accessibility) by helping visually impaired users understand the content on the page.
 - **Image optimization:** Compress images to improve page load speed without sacrificing quality. Learn more in [Image compression](https://help.vtex.com/tutorial/image-compression--4klbgpsPksq44KcwqKeye8).
 
-### URLs
+#### URLs
 
 When defining the URLs for your site, keep in mind the following best practices:
 
@@ -56,7 +52,7 @@ When defining the URLs for your site, keep in mind the following best practices:
 
 > ⚠ In cross-border stores, you must configure the canonical tag for each binding, as they have different canonical base addresses. For example: `store.com/en` and `store.com/pt`. Learn more in [Cross-border store content internationalization](https://developers.vtex.com/docs/guides/cross-border-custom-urls-1).
 
-## Monitoring and analysis
+### Monitoring and analysis
 
 Effective monitoring and analysis are crucial for understanding the impact of your SEO efforts and making data-driven decisions:
 
@@ -66,3 +62,50 @@ Effective monitoring and analysis are crucial for understanding the impact of yo
 - **Evaluate on-page performance:** Analyze page load times, mobile usability, and overall user experience with tools such as [PageSpeed Insights](https://pagespeed.web.dev/). Review on-page metrics such as bounce rate, time on page, and conversion rates to assess content effectiveness.
 
 Learn more in [Integration with monitoring tools](https://help.vtex.com/subcategory/tracking-integration--1luKrYptdi8WoMYckakUaM).
+
+## FastStore
+
+For stores developed with [FastStore](https://developers.vtex.com/docs/guides/faststore), follow these specific practices:
+
+- **Configuration and setup:** Configure fundamental SEO settings during the project onboarding and after in the `discovery.config.js` file. Learn more in [SEO guide overview for FastStore](https://developers.vtex.com/docs/guides/faststore/seo-overview).
+
+- **Canonical Tags:** Ensure canonical tags are correctly implemented on all pages, especially on Product Listing Pages (PLPs) that use URL parameters for functionality. Products accessible via multiple URLs must specify a canonical version to avoid duplicate content.
+
+- **Structured Data (Schema):**
+  - Use global identifiers like GTIN or UPC codes in your product schema. If catalog data is incomplete, you may need to customize the schema client-side.
+  - Map the SEO title to the schema `name` field. Use the product name, not the SKU, if no SEO title is set.
+  - Ensure the `availability` field accurately reflects stock status using standard [Schema.org](https://schema.org/) URLs (`InStock`, `OutOfStock`).
+  - Enrich data with Manufacturer Part Numbers (MPN) to improve chances for rich results.
+  - Remove deprecated Offer schema fields such as `listPriceWithTaxes` and `priceWithTaxes`.
+
+- **Performance and Crawlability:**
+  - **Lazy Loading:** Apply lazy loading strategically. Avoid using it on critical content sections of PLPs and PDPs to ensure search engine bots can crawl all content. Disabling it entirely can increase crawl budget and harm performance. Learn more in [Optimizing SEO by managing lazy loading on PLPs and PDPs](https://developers.vtex.com/docs/guides/faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp).
+  - **Caching:** Use `GET` requests (not `POST`) for custom queries to improve caching, which benefits performance and SEO. Learn more in [Configuring GraphQL cache control for `GET` requests](https://developers.vtex.com/docs/guides/faststore/faststore-api-configuring-graphql-cache-control).
+  - **Page Types:** When building department pages, favor the Product List Page (PLP) template over a Landing Page (LP). PLPs support better caching and automate structured data for breadcrumbs.
+
+- **Core Web Vitals:** Actively monitor and fix issues with Cumulative Layout Shift (CLS) and Largest Contentful Paint (LCP) using tools like PageSpeed Insights.
+
+- **404 Tracking:** Implement custom title tags for 404 pages to easily identify and track them in analytics platforms.
+
+## Store Framework
+
+For stores developed with [Store Framework](https://developers.vtex.com/docs/guides/store-framework), follow these specific practices:
+
+- **Store SEO settings:** Configure basic SEO settings for the home page through VTEX Admin accessing **Store Settings > Storefront > Store**. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/pt/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR).
+
+- **Intelligent Search for Categories:** Use the [VTEX Intelligent Search app](https://developers.vtex.com/docs/apps/vtex.search@1.0.8) to customize titles and meta descriptions for Department, Category, and Subcategory pages within the search navigation bar. Learn more in [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search).
+
+- **Product Listing Pages (PLP):** Implement specific strategies to enhance the SEO of your category pages. Learn more in [Improving the SEO of Product Listing Pages](https://help.vtex.com/en/tutorial/improving-the-seo-of-product-listing-pages--UrQtlKAMuSaLBP5wG9ftG).
+
+## (Legacy) CMS Portal
+
+For stores using the (Legacy) CMS Portal, configure SEO settings as follows:
+
+- **Home page SEO:** Configure the home page `meta tag description` and `robots.txt` file through **Store Settings > Storefront > Settings** in the VTEX Admin. Learn more in [Settings](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj#settings).
+
+- **Meta tags control:** To improve SEO on other pages (product, category, etc.), use the meta tags control feature. Learn more in [How to use the meta tags control](https://help.vtex.com/en/tutorial/how-to-use-the-meta-tags-control--2OPiSPubgcEqIikAWsCouk).
+
+- **Titles and URLs:** Configure title tags and URLs for products, categories, and brands in their respective registration fields in the Admin:
+  - [Product registration fields](https://help.vtex.com/en/tutorial/product-registration-fields--4dYXWIK3zyS8IceKkQseke)
+  - [Category registration fields](https://help.vtex.com/en/tutorial/category-registration-fields--5Z7RrvW41yumyQCmk2iqoG)
+  - [Brand registration fields](https://help.vtex.com/en/tutorial/brand-registration-fields--37Ky7lTbEkiWIAYA80EMyI)
