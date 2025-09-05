@@ -11,7 +11,7 @@ Search Engine Optimization (SEO) is a set of strategies to enhance the performan
 
 In ecommerce, a well-implemented SEO strategy enhances visibility, attracts organic traffic, and improves user experience. By elevating search engine rankings, SEO provides a competitive edge, reduces customer acquisition costs, and ensures long-term results.
 
-To learn more about SEO strategies, check Google’s documentation resource [Explore Google Search documentation to improve your site's SEO](https://developers.google.com/search/docs).
+To learn more about SEO strategies, check Google's documentation [Explore Google Search documentation to improve your site's SEO](https://developers.google.com/search/docs).
 
 VTEX offers a set of tools and settings that allow you to optimize your store for search engines, making your products more discoverable and improving site performance.
 
