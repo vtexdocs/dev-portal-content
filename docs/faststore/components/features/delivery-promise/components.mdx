@@ -20,11 +20,15 @@ Below are the core components related to the Delivery Promise feature in FastSto
 
 `RegionButton` is a desktop-only component integrated into the `NavBar` section, under the [Global Sections content type](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#content-types) in the Headless CMS.
 
-Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed, and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+Its behavior is context-dependent:
+
+- If a shopper hasn't added a postal code, a `Popover` is displayed, and the button label adjusts based on whether a default postal code is present.
+- If a postal code is added, the button shows the location and suppresses the `Popover`.
+- When a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 ![RegionButton](https://vtexhelp.vtexassets.com/assets/docs/src/region-button___ccb03f5e9e36d837a4b03aae6a0a58ff.png)
 
-If you have customized the `NavBar`, you must also customize the `RegionButton` component to use Delivery Promise.
+If you have customized the `NavBar`, you can still use the native `RegionButton` by integrating it into your custom NavBar component. However, depending on your customization, you may need to implement your own version of `RegionButton`.
 
 This component leverages the following:
 
@@ -37,8 +41,6 @@ This component leverages the following:
 
 ![RegionModal](https://vtexhelp.vtexassets.com/assets/docs/src/region-modal___6352f280eeb8eb77ee4674a5caf4f328.png)
 
-If you have customized the `NavBar`, you must also customize the `RegionModal` component to use Delivery Promise.
-
 This component leverages the following:
 
 * **UI Components:** [`RegionModal`](https://developers.vtex.com/docs/guides/faststore/organisms-region-modal)
@@ -48,11 +50,15 @@ This component leverages the following:
 
 `RegionBar` is a mobile-only component that acts as a section under the Global Sections content type in the Headless CMS.
 
-Its behavior is context-dependent, meaning if a shopper doesn't add a postal code, a `Popover` is displayed, and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+Its behavior is context-dependent:
+
+- If a shopper hasn't added a postal code, a `Popover` is displayed, and the button label adjusts based on whether a default postal code is present.
+- If a postal code is added, the button shows the location and suppresses the `Popover`.
+- When a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 ![RegionBar](https://vtexhelp.vtexassets.com/assets/docs/src/regionbar80___52615261c9d206fd8e305d92751c00b5.png)
 
-Even if you have customized the `NavBar`, you can still utilize the native `RegionBar` component to use Delivery Promise.
+Even if you have customized the `NavBar`, you can still use the native `RegionBar` component to use Delivery Promise.
 
 This component leverages the following:
 
@@ -65,7 +71,7 @@ This component leverages the following:
 
 ![RegionPopover](https://vtexhelp.vtexassets.com/assets/docs/src/regionpopover___dedb0aad756657e71d4c8d40cb2ef5e7.png)
 
-If you have customized `RegionBar` or `RegionButton`, you must also customize the `RegionPopover` component to use Delivery Promise.
+If you have customized `RegionBar` or `RegionButton`, you can still use the native `RegionPopover` by integrating it into your custom components. However, depending on your customization, you may need to implement your own version of `RegionPopover`.
 
 This component leverages the following:
 
