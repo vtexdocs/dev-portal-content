@@ -11,7 +11,7 @@ Search Engine Optimization (SEO) is a set of strategies to enhance the performan
 
 In ecommerce, a well-implemented SEO strategy enhances visibility, attracts organic traffic, and improves user experience. By elevating search engine rankings, SEO provides a competitive edge, reduces customer acquisition costs, and ensures long-term results.
 
-To learn more about SEO strategies, check Google's documentation [Explore Google Search documentation to improve your site's SEO](https://developers.google.com/search/docs).
+To learn more about SEO strategies, refer to Google's documentation [Explore Google Search documentation to improve your site's SEO](https://developers.google.com/search/docs).
 
 VTEX offers a set of tools and settings that allow you to optimize your store for search engines, making your products more discoverable and improving site performance.
 
@@ -27,11 +27,11 @@ Properly configuring the elements of your ecommerce store, such as titles, descr
 
 When setting up your store, consider how title tags and descriptions affect your store’s SEO:
 
-- **Title tags:** Use primary keywords at the beginning of the title and ensure titles are concise (50-60 characters). The value assigned to this tag is displayed at the top of the browser's title bar when someone visits your website. It can be configured for home, [product](https://help.vtex.com/en/tutorial/product-registration-fields--4dYXWIK3zyS8IceKkQseke), [category](https://help.vtex.com/en/tutorial/category-registration-fields--5Z7RrvW41yumyQCmk2iqoG), and [brand](https://help.vtex.com/en/tutorial/brand-registration-fields--37Ky7lTbEkiWIAYA80EMyI) pages.
+- **Title tags:** Use primary keywords at the beginning of the title and ensure titles are concise (50-60 characters). The value assigned to this tag is displayed at the top of the browser's title bar when someone visits your website. It can be configured for homepage, [product](https://help.vtex.com/en/tutorial/product-registration-fields--4dYXWIK3zyS8IceKkQseke), [category](https://help.vtex.com/en/tutorial/category-registration-fields--5Z7RrvW41yumyQCmk2iqoG), and [brand](https://help.vtex.com/en/tutorial/brand-registration-fields--37Ky7lTbEkiWIAYA80EMyI) pages.
 
 > ℹ️ For stores developed with Store Framework, you can customize Department, Category, and Subcategory titles using [VTEX Intelligent Search app](https://developers.vtex.com/docs/apps/vtex.search@1.0.8). This allows your store to display different titles for each category level within the search navigation bar. Learn more in [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search).
 
-- **Meta descriptions:** Include relevant keywords and limit them to 140-160 characters. A compelling description encourages users to click and can improve organic traffic. These crucial SEO elements appear as snippets in search results (SERPs), giving users a preview of your site. Configure them for home, product, category, and brand pages alongside title tags in the VTEX Admin.
+- **Meta descriptions:** Include relevant keywords and limit them to 140-160 characters. A compelling description encourages users to click and can improve organic traffic. These crucial SEO elements appear as snippets in search results (SERPs), giving users a preview of your site. Configure them for homepage, product, category, and brand pages alongside title tags in the VTEX Admin.
 - **Unique content:** Avoid duplication across pages. Make sure titles and descriptions are unique for each page to improve search visibility and prevent keyword cannibalization, where multiple pages compete for the same search terms.
 - **Robots.txt:** Edit or customize your `robots.txt`, which is a text file that search engines use to define site scanning rules for crawlers based on your business needs. Learn more in [Google Search Console Tracking - robots.txt](https://help.vtex.com/en/tutorial/google-search-console-tracking-robots-txt--tutorials_574).
 
@@ -91,7 +91,7 @@ For stores developed with [FastStore](https://developers.vtex.com/docs/guides/fa
 
 For stores developed with [Store Framework](https://developers.vtex.com/docs/guides/store-framework), follow these specific practices:
 
-- **Store SEO settings:** Configure basic SEO settings for the home page through VTEX Admin by accessing **Store Settings > Storefront > Store**. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/pt/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR).
+- **Store SEO settings:** Configure basic SEO settings for the homepage through VTEX Admin by accessing **Store Settings > Storefront > Store**. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/pt/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR).
 
 - **Intelligent Search for Categories:** Use the [VTEX Intelligent Search app](https://developers.vtex.com/docs/apps/vtex.search@1.0.8) to customize titles and meta descriptions for Department, Category, and Subcategory pages within the search navigation bar. Learn more in [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search).
 
