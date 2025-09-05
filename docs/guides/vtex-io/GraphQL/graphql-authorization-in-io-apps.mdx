@@ -33,7 +33,7 @@ The `@auth` directive uses the following arguments:
     <tr>
       <th>Argument</th>
       <th>Description</th>
-      <th><a href="https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder#versioning">Builder version</a> details</th>
+      <th><a href="https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder#versioning" target="_blank">Builder version</a> details</th>
     </tr>
   </thead>
   <tbody>
@@ -50,12 +50,12 @@ The `@auth` directive uses the following arguments:
     </tr>
     <tr>
       <td><code>productCode</code></td>
-      <td>The numeric code that identifies the product in License Manager (for example, <code>"66"</code> for <b>VTEX IO</b>). See the product codes in the <b>Product ID</b> column of the table in License Manager resources.</td>
+      <td>The numeric code that identifies the product in License Manager (for example, <code>"66"</code> for <b>VTEX IO</b>). See the product codes in the <b>Product ID</b> column of the table in <a href="https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3" target="_blank">License Manager resources</a>.</td>
       <td>Works on versions <code>1.x</code> and <code>2.x</code>. For <code>2.x</code>, this argument is mandatory if scope is set to <code>PRIVATE</code>.</td>
     </tr>
     <tr>
       <td><code>resourceCode</code></td>
-      <td>The License Manager resource identifier (for example, <code>"workspace-read-write"</code> for <b>Workspace CRUD</b>). See the resource codes in the <b>Key</b> column of the table in License Manager resources.</td>
+      <td>The License Manager resource identifier (for example, <code>"workspace-read-write"</code> for <b>Workspace CRUD</b>). See the resource codes in the <b>Key</b> column of the table in <a href="https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3" target="_blank">License Manager resources</a>.</td>
       <td>Works on versions <code>1.x</code> and <code>2.x</code>. For <code>2.x</code>, this argument is mandatory if scope is set to <code>PRIVATE</code>.</td>
     </tr>
   </tbody>
@@ -146,7 +146,7 @@ Example (cURL):
 curl -X POST \
   'https://https://app.io.vtex.com/vtex.rewriter/v1/{account}/_v/graphql' \
     -H 'Content-Type: application/json' \
-    -H 'VtexIdClientAutCookie: {your_user_token}' \
+    -H 'VtexIdclientAutCookie: {your_user_token}' \
     -d '{
       "query": "
           mutation SaveInternal($route: InternalInput!) {
