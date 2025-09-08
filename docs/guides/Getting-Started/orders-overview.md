@@ -48,6 +48,82 @@ The chain order flow is visible to the store acting as an intermediary between t
 
 ![chain_flow](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/orders-overview-3.png)
 
+## Understanding order statuses
+
+In the [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh#view-order-details) menu, every order shows a timeline of five stages, indicating the order flow. Each stage has several triggers that change the order status accordingly. You can see the triggers, their descriptions, and the order statuses they generate in My Account. Stages 1, 2, and 3 are the same for every order; however, Stages 4 and 5 have different triggers and outcomes depending on whether it's a pickup or a delivery order.
+
+> ℹ️ An order is considered for pickup when its `selectedDeliveryChannel` field contains the value `pickup-in-point`. You can retrieve this information using the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint.
+
+### Stage 1
+
+The order is created and starts in this stage.
+
+| Trigger | Description | My Account status |
+| --- | --- | --- |
+| `order.progress.confirmOrder` | Workflow has not been created due to an error with the payment gateway. | Place order |
+| `order.progress.confirmingOrder` | The order's API status is one of the following: `order-created`, `order-completed`, or `on-order-completed`. | Placing order |
+| `order.progress.orderConfirmed` | The order's API status is none of the above, i.e., the order is in a later status. | Order placed |
+
+### Stage 2
+
+The order reaches this stage after it is placed.
+
+| Trigger | Description | My Account status |
+| --- | --- | --- |
+| `order.progress.approvePayment` | The order's API status is a Stage 1 status. | Approve payment |
+| `order.progress.approvingPayment` | The order's API status is `payment-pending` or `approve-payment`. | Approving payment |
+| `order.progress.paymentApproved` | The order's API status is none of the above, i.e., the order is in a later status. | Payment approved |
+
+### Stage 3
+
+The order reaches this stage after its payment is approved.
+
+| Trigger | Description | My Account status |
+| --- | --- | --- |
+| `order.progress.handleShipping` | The order's API status is a Stage 1 or 2 status. | Handle order |
+| `order.progress.handlingShipping` | The order's API status is one of the following: `window-to-cancel`, `payment-approved`, `ready-for-handling`, `authorize-fulfillment`, `release-to-fulfillment`, `handling`, or `invoice`. | Handling order |
+| `order.progress.shippingHandled` | The order's API status is none of the above, i.e., the order is in a later status. | Package handled |
+
+### Stage 4
+
+The order reaches this stage after it is handled.
+
+#### Orders for pickup
+
+| Trigger | Description | My Account status |
+| --- | --- | --- |
+| `order.progress.deliverToPickup` | The order's API status is a stage 1, 2, or 3 status. | Ship to pickup point |
+| `order.progress.deliveringToPickup` | The order's API status is `invoiced`. | Shipping to pickup point |
+| `order.progress.deliveredToPickup` | The order will remain in this status until the rules for stage 5 are completed. | Shipped to pickup point |
+
+#### Orders with delivery
+
+| Trigger | Description | My Account status |
+| --- | --- | --- |
+| `order.progress.deliverToCarrier` | The order's API status is a status in stage 1, 2, or 3. | Deliver to carrier |
+| `order.progress.delivering` | The order's API status is `invoiced`. | Delivering to carrier |
+| `order.progress.delivered` | The order will remain in this status until the rules for stage 5 are completed. | Delivered to carrier |
+
+### Stage 5
+
+The order reaches this stage when it has been invoiced.
+
+#### Orders for pickup
+
+| Trigger | Description | My Account status |
+| --- | --- | --- |
+| `order.progress.pickup` | Order status when the field `shippingEstimateDate` has a future estimate date. | Pickup |
+| `order.state.ready-for-pickup` | Order status when the field `shippingEstimateDate` is empty or has a past estimate date. | Ready for pickup |
+| `order.state.pickedUp` | Order status when the field `finished` within the object `courierStatus` is set to `true`. | Picked up |
+
+#### Orders with delivery
+
+| Trigger | Description | My Account status |
+| --- | --- | --- |
+| `order.progress.ship` | Order status when the array `Data` within the object `courierStatus` is empty. | Ship order |
+| `order.progress.shipping` | Order status when the array `Data` within the object `courierStatus` has been filled. | Shipping order |
+| `order.progress.shipped` | Order status when the array `Data` within the object `courierStatus` is set to `true`. | Order shipped |
+
 ## Creating an order integration
 
 In the following sections, you will learn how to build order integrations with Feed and Hook. For example, this can be useful for developing an integration between your store ERP and the VTEX platform.
