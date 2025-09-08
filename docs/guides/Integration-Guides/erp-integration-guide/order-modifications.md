@@ -8,21 +8,21 @@ updatedAt: "2022-04-13T17:36:48.363Z"
 
 Order modification is a feature that allows your store to modify the items or prices of an order. With this feature, the store can handle potential changes in orders due to customer mistakes, product unavailability, and the inclusion of discounts, among other reasons. Learn more about how it works and its restrictions in the article [Changing items from a completed order](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190).
 
-> ℹ️ We recommend you use the [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes) endpoint to modify an order.
+> ℹ️ We recommend that you use the [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes) endpoint to modify an order.
 
->⚠️ The [Order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes) feature isn't applicable to the Catalog API - Seller Portal.
+>⚠️ The [Order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes) feature is not applicable to the Catalog API - Seller Portal.
 
 > Learn more about [Order replacement](https://help.vtex.com/en/tutorial/order-replacement--2IK9mwQjBKseQmE8K8saO8) and how to enable your customers to request order changes.
 
 ## Implementation
 
-The [Register modifications on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) endpoint in the Orders API allows you to create a discount, change an item or increase the price of an order.
+The [Register modifications on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) endpoint in the Orders API allows you to create a discount, change an item, or increase the price of an order.
 
->⚠️ When removing or adding items to an order, the inventory of the affected SKUs is not updated automatically; you should update it [using the Logistics API](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-).
+>⚠️ When removing or adding items to an order, the inventory of the affected SKUs is not updated automatically. You should update it [using the Logistics API](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-).
 
-Modifications made this way can be confirmed by the `changesAttachment` field in the response of the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint. Alternatively, you may search for the order in the **Orders > Orders management > All orders** section of your Admin panel and see the item modification history in the order details.
+Modifications made this way can be confirmed using the `changesAttachment` field in the response of the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint. Alternatively, you may search for the order in the **Orders > Orders management > All orders** section of your Admin panel and see the item modification history in the order details.
 
->❗ Increasing the price of an order is only available for credit card purchases. The connector must also be able to handle purchases without the CVV, as well as duplicated sequences.
+>❗ Increasing the price of an order is only available for credit card purchases. The connector must also be able to handle purchases without the CVV, as well as duplicate sequences.
 
 ### Errors in Change v1
 
@@ -41,7 +41,7 @@ These errors happen when there are one or more errors in the information sent in
     </tr>
     <tr>
         <td><code>Invalid modification for order</code></td>
-        <td>All of these conditions are true:- <code>incrementValue</code> is equal to <code>discountValue</code>.- <code>itemsAdded</code> is empty.- <code>itemsRemoved</code> is empty.</td>
+        <td>All of these conditions are true: <br> - <code>incrementValue</code> is equal to <code>discountValue</code>. <br> - <code>itemsAdded</code> is empty. <br> - <code>itemsRemoved</code> is empty.</td>
     </tr>
     <tr>
         <td><code>Invalid id for item</code></td>
@@ -55,7 +55,7 @@ These errors happen when there are one or more errors in the information sent in
 
 #### Restriction errors
 
-These are errors that are returned when the request is correct but the order cannot be modified due to [order change restrictions](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190#restrictions).
+These are errors returned when the request is correct but the order cannot be modified due to [order change restrictions](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190#restrictions).
 
 <table>
     <td><strong> Error</strong></td>
@@ -86,23 +86,23 @@ These are errors that are returned when the request is correct but the order can
     </tr>
     <tr>
         <td><code>Max allowed modifications for order exceeded: {0}</code></td>
-        <td>More than 50 registered modifications requests for a single order.</td>
+        <td>More than 50 registered modification requests for a single order.</td>
     </tr>
     <tr>
         <td><code>404 Not Found</code></td>
-        <td>At least one of these conditions is true:- Removed item does not exist in the order.- Added item does not exist in the catalog.</td>
+        <td>At least one of these conditions is true: <br> - The removed item does not exist in the order. <br> - The added item does not exist in the catalog.</td>
     </tr>
     <tr>
         <td><code>Invalid quantity to remove from item {0}</code></td>
         <td>An item’s quantity would be reduced to less than 0 after the modification.</td>
     </tr>
     <tr>
-        <td><code>It's not allowed to make modifications in orders without a credit card payment, promissory card, cash or credit control</code></td>
-        <td>All of these conditions are true:- Attempt to increase order price.- Payment method does not support value change.- Payment method is not credit card payment, promissory card, cash or credit control.Consult with your payment gateway to see which methods allow for order value change.</td>
+        <td><code>It's not allowed to make modifications in orders without a credit card payment, promissory card, cash, or credit control</code></td>
+        <td>All of these conditions are true: <br> - An attempt to increase order price was made. <br> - The payment method does not support value changes. <br> - The payment method is not credit card payment, promissory card, cash, or credit control. Consult with your payment gateway to see which methods allow for order value changes.</td>
     </tr>
     <tr>
         <td><code>Modification cannot be done. Possible reason: settlement directly done by API</code></td>
-        <td>All of these conditions are true:- Attempt to reduce order price.- Payment method does not support value modification. Consult with your payment gateway to see which methods allow for order value modification.</td>
+        <td>All of these conditions are true: <br> - An attempt to reduce order price. <br> - The payment method does not support value modifications. Consult with your payment gateway to see which methods allow for order value modifications.</td>
     </tr>
     <tr>
         <td><code>The value of the modification exceeds the order's price</code></td>
@@ -207,12 +207,12 @@ See below which API errors can be returned when attempting to [modify an order v
     <tr>
         <td><code>SalesOrderSystem013</code></td>
         <td><code>The logistics information provided was not found on the order.</code></td>
-        <td>The logistics details given do not match any information on the order.</td>
+        <td>The logistics details given do not match any information in the order.</td>
     </tr>
     <tr>
         <td><code>SalesOrderSystem015</code></td>
         <td><code>A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.</code></td>
-        <td>Only one type of order change (v1 or v2) can be applied; a v1 change already exists.</td>
+        <td>Only one type of order change (v1 or v2) can be applied. A v1 change already exists.</td>
     </tr>
     <tr>
         <td><code>SalesOrderSystem017</code></td>
@@ -233,5 +233,35 @@ See below which API errors can be returned when attempting to [modify an order v
         <td><code>SalesOrderSystem035</code></td>
         <td><code>The {0} is not a valid Agreement Type.</code></td>
         <td>The agreement type is not recognized or supported.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem045</code></td>
+        <td><code>Invalid address.</code></td>
+        <td>The address is invalid.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem046</code></td>
+        <td><code>The order change is not allowed after the item invoice has been issued.</code></td>
+        <td>The order modification is not allowed after the item invoice has been issued.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem047</code></td>
+        <td><code>The address change is not allowed.</code></td>
+        <td>The address modification is not allowed.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem048</code></td>
+        <td><code>The address change is not allowed when there are packages associated.</code></td>
+        <td>The address change is not allowed when there are packages associated.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem051</code></td>
+        <td><code>Change order not allowed with tax hub and multiple delivery docks.</code></td>
+        <td>Order modification is not allowed with tax hub and multiple delivery docks.</td>
+    </tr>
+    <tr>
+        <td><code>SalesOrderSystem055</code></td>
+        <td><code>Item modification is not allowed when the measurement unit differs from the original.</code></td>
+        <td>Item modification is not allowed when the measurement unit differs from the original.</td>
     </tr>
 </table>
