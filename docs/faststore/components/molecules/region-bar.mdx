@@ -1,6 +1,6 @@
 ---
 title: "RegionBar"
-excerpt: Acts as a custom Button, usually used on mobile devices only. It should trigger the `RegionModal`.
+excerpt: This component is a custom button, designed primarily for mobile devices, that triggers the `RegionModal`.
 keywords:
   - UI library
   - ecommerce
@@ -11,9 +11,9 @@ components:
   - RegionBar.tsx
 ---
 
-The `RegionBar` is a custom Button, usually used on mobile devices only. It should trigger the [RegionModal](https://developers.vtex.com/docs/guides/faststore/organisms-region-modal).
+The `RegionBar` is a custom button, usually used only on mobile devices. It should trigger the [RegionModal](https://developers.vtex.com/docs/guides/faststore/organisms-region-modal).
 
-The component is part of [Regionalization](https://developers.vtex.com/docs/guides/faststore/feature-regionalization) feature.
+The component is part of the [Regionalization](https://developers.vtex.com/docs/guides/faststore/feature-regionalization) feature.
 
 
 ## Overview
@@ -116,7 +116,7 @@ return (
   <TokenRow token="--fs-region-bar-width" value="100%" />
   <TokenRow
     token="--fs-region-bar-padding"
-    value="var(--fs-spacing-0) var(--fs-spacing-1) var(--fs-spacing-1) var(--fs-spacing-2)"
+    value="var(--fs-spacing-0) 0 var(--fs-spacing-0) var(--fs-spacing-2)"
   />
   <TokenDivider />
   <TokenRow
@@ -143,23 +143,35 @@ return (
 
 ### Nested Elements
 
-#### CTA (Call To Action)
+#### CTA (Call to Action) ![deprecated](https://img.shields.io/badge/deprecated-lightgrey)
 
 <TokenTable>
   <TokenRow token="--fs-region-bar-cta-margin-left" value="auto" />
   <TokenRow token="--fs-region-bar-cta-text-decoration" value="underline" />
 </TokenTable>
 
-#### Message
+#### Message ![deprecated](https://img.shields.io/badge/deprecated-lightgrey)
 
 <TokenTable>
   <TokenRow token="--fs-region-bar-message-margin-right" value="auto" />
 </TokenTable>
 
-#### Postal Code
+#### Postal Code ![deprecated](https://img.shields.io/badge/deprecated-lightgrey)
 
 <TokenTable>
   <TokenRow token="--fs-region-bar-postal-code-margin-right" value="auto" />
+</TokenTable>
+
+#### Icon
+
+<TokenTable>
+  <TokenRow token="--fs-region-bar-icon-margin-right" value="var(--fs-spacing-1)" />
+</TokenTable>
+
+#### Location
+
+<TokenTable>
+  <TokenRow token="--fs-region-bar-location-height" value="var(--fs-spacing-4)" />
 </TokenTable>
 
 ---
@@ -175,3 +187,15 @@ For further customization, you can use the following data attributes:
 `data-fs-region-bar-cta`
 
 `data-fs-region-bar-message`
+
+`data-fs-region-bar-filter`
+
+`data-fs-region-bar-filter-message`
+
+`data-fs-region-bar-location`
+
+`data-fs-region-bar-location-city`
+
+`data-fs-region-bar-location-message`
+
+`data-fs-region-bar-location-postal-code`
