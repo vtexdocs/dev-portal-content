@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.104](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.103...v1.1.104) (2025-09-08)
+
+
+### 📝 Documentation updates
+
+* **region-bar.mdx:** design tokens ([e3a4f75](https://github.com/vtexdocs/dev-portal-content/commit/e3a4f75e1d71f385f3c1c4504f7f2a48b6ade267))
+
 ### [1.1.103](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.99...v1.1.103) (2025-09-08)
 
 
