@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.103](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.99...v1.1.103) (2025-09-08)
+
+
+### 📝 Documentation updates
+
+* **managing-secrets.mdx:** secrets resources ([5d36eed](https://github.com/vtexdocs/dev-portal-content/commit/5d36eedd61a25bed273d90f2dff683c16ed5aae2))
+
 ### [1.1.101](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.99...v1.1.101) (2025-09-08)
 
 ### [1.1.100](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.99...v1.1.100) (2025-09-08)
