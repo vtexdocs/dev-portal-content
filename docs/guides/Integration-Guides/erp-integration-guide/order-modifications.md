@@ -41,7 +41,7 @@ These errors happen when there are one or more errors in the information sent in
     </tr>
     <tr>
         <td><code>Invalid modification for order</code></td>
-        <td>All of these conditions are true:- <code>incrementValue</code> is equal to <code>discountValue</code>.- <code>itemsAdded</code> is empty.- <code>itemsRemoved</code> is empty.</td>
+        <td>All of these conditions are true: <br> - <code>incrementValue</code> is equal to <code>discountValue</code>. <br> - <code>itemsAdded</code> is empty. <br> - <code>itemsRemoved</code> is empty.</td>
     </tr>
     <tr>
         <td><code>Invalid id for item</code></td>
@@ -90,7 +90,7 @@ These are errors that are returned when the request is correct but the order can
     </tr>
     <tr>
         <td><code>404 Not Found</code></td>
-        <td>At least one of these conditions is true:- Removed item does not exist in the order.- Added item does not exist in the catalog.</td>
+        <td>At least one of these conditions is true: <br> - Removed item does not exist in the order. <br> - Added item does not exist in the catalog.</td>
     </tr>
     <tr>
         <td><code>Invalid quantity to remove from item {0}</code></td>
@@ -98,11 +98,11 @@ These are errors that are returned when the request is correct but the order can
     </tr>
     <tr>
         <td><code>It's not allowed to make modifications in orders without a credit card payment, promissory card, cash or credit control</code></td>
-        <td>All of these conditions are true:- Attempt to increase order price.- Payment method does not support value change.- Payment method is not credit card payment, promissory card, cash or credit control.Consult with your payment gateway to see which methods allow for order value change.</td>
+        <td>All of these conditions are true: <br> - Attempt to increase order price. <br> - Payment method does not support value change. <br> - Payment method is not credit card payment, promissory card, cash or credit control. Consult with your payment gateway to see which methods allow for order value change.</td>
     </tr>
     <tr>
         <td><code>Modification cannot be done. Possible reason: settlement directly done by API</code></td>
-        <td>All of these conditions are true:- Attempt to reduce order price.- Payment method does not support value modification. Consult with your payment gateway to see which methods allow for order value modification.</td>
+        <td>All of these conditions are true: <br> - Attempt to reduce order price. <br> - Payment method does not support value modification. Consult with your payment gateway to see which methods allow for order value modification.</td>
     </tr>
     <tr>
         <td><code>The value of the modification exceeds the order's price</code></td>
