@@ -1,18 +1,18 @@
 ---
 title: 'Requirements'
-updatedAt: "2024-06-03T11:30:00.813Z"
+excerpt: "This guide provides the requirements before starting a FastStore project."
+updatedAt: "2025-09-09T10:00:00.813Z"
 ---
 
-<Steps>
+Before starting a FastStore project, you must have the necessary tools and apps installed in your VTEX account. This guide walks you through the required steps.
 
-## Install the VTEX IO CLI on your machine
+## 1. Installing VTEX IO CLI on your machine
 
-For more information, please refer to [this guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
+The VTEX IO CLI is the command-line interface you'll use to manage your VTEX projects. If you haven't already done so, install it on your machine. For detailed instructions, refer to the [this guide](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference).
 
-## Install Headless CMS and its dependencies
+## 2. Installing Headless CMS and its dependencies
 
-[Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) is the content management solution for FastStore projects. During the [Onboarding](https://developers.vtex.com/docs/guides/faststore/getting-started-overview),
-the integration between your project and Headless CMS is initiated.
+[Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) is the content management solution for FastStore projects. During the [Onboarding](https://developers.vtex.com/docs/guides/faststore/getting-started-overview), the integration between your project and Headless CMS is initiated.
 
 To prevent content duplication that could cause build failures during Onboarding, it is important to confirm the installation of the following apps in your account: 
 - `vtex.admin-cms@1.x`
@@ -28,7 +28,7 @@ To check whether you have them installed, follow the instructions below:
 
 2. Run `vtex ls` to list all the installed apps in your account.
 3. Check if the `vtex.admin-cms@1.x` and `vtex.admin-cms-graphql-rc` are in the list.
-If yes, proceed to check the [next requirement](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#install-headless-cms-plugins). If not, continue following these instructions.
+If yes, proceed to check the [next requirement](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#3-installing-headless-cms-plugins). If not, continue following these instructions.
 
 4. After logging into your account, install `vtex.admin-cms@1.x` by running the following command:
 
@@ -46,9 +46,9 @@ If yes, proceed to check the [next requirement](https://developers.vtex.com/docs
     vtex install vtex.admin-cms-graphql-rc
     ```
 
-Once the app and its dependency are installed, proceed to check the [next requirement](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#install-headless-cms-plugins).
+Once the app and its dependency are installed, proceed to check the [next requirement](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#3-installing-headless-cms-plugins).
 
-## Install Headless CMS plugins
+## 3. Installing Headless CMS plugins
 
 To ensure you won't get errors while running Headless CMS commands in the CLI, install Headless CMS plugins by following these steps:
 
@@ -78,7 +78,7 @@ Now, check if the installation of Headless CMS plugins was successful by running
 >
 > Remember, we recommend using the latest Node.js version or a version higher than `15.0.0`.
 
-## Enable the VTEX Intelligent Search app in your account
+## 4. Enabling the VTEX Intelligent Search app in your account
 
 The [VTEX Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) app enhances the user experience by providing accurate and personalized search results throughout the shopping journey.
 Before developing a storefront in FastStore, you need to enable the app on your account. For more information on the Intelligent Search and its integration, please refer to the [VTEX Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) and [Integration Settings](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) guides.
@@ -89,17 +89,13 @@ Based on the edition version, follow the instructions below.
 
 > ℹ️ To confirm which Edition App version is installed in your account, open the terminal and use the VTEX IO CLI. Log in to your account by running `vtex login {accountName}` and run `vtex edition get` to see the Edition App version installed on the current account.
 
-<details>
-<summary>Accounts in the `vtex.edition-store@5.x`</summary>
+### Accounts in the `vtex.edition-store@5.x`
 
 If your account is using the `vtex.edition-store@5.x` major, the VTEX Intelligent Search app is already included, and you need to integrate the app via VTEX Admin.
 
 To integrate the VTEX Intelligent Search, go to the VTEX Admin, access **Store Settings > Intelligent Search > Integrations**, and click `START INTEGRATION`.
 
-</details>
-
-<details>
-<summary>Accounts using an edition version below `5.x`</summary>
+### Accounts using an edition version below `5.x`
 
 1. In the VTEX IO CLI, log in to your VTEX account by running `vtex login {accountName}`. *Remember to replace the value between brackets with your account name.*
 2. If the VTEX Intelligent Search app is not installed in your account, run the following for Intelligent Search:
@@ -108,18 +104,13 @@ To integrate the VTEX Intelligent Search, go to the VTEX Admin, access **Store S
     vtex install vtex.search-resolver@1.x vtex.admin-search@1.x
     ```
 
-After successfully installing the app, integrate it by accessing the VTEX Admin, go to **Store Settings > Intelligent Search > Integrations**, and click on `START INTEGRATION`.
+After successfully installing the app, integrate it by accessing the VTEX Admin, go to **Store Settings > Intelligent Search > Integrations**, and click `START INTEGRATION`.
 
-</details>
-
-<details>
-<summary>Accounts that want to migrate to the `5.x`</summary>
+### Accounts that want to migrate to the `5.x`</summary>
 
 If you are using a different major version and want to migrate, please [open a ticket with VTEX Support](https://help.vtex.com/en/support) and request the installation of the Edition app `vtex.edition-store@5.x`.
 
-</details>
-
-## Install the FastStore WebOps app
+## 5. Installing the FastStore WebOps app
 
 The [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) is the first step in creating, setting up, and managing your FastStore project. It also provides deployment and performance insights into your website.
 
@@ -128,7 +119,7 @@ Once you have changed the edition, follow the instructions on this [requirements
 
 To install the app, follow these steps.
 
-1. In a terminal, log in to your VTEX account by running the following. Replace `{accountName}` with your store account name, for example `vtex login store`.
+1. In a terminal, log in to your VTEX account by running the following. Replace `{accountName}` with your store account name, for example, `vtex login store`.
 
     ```bash
     vtex login {accountName}
@@ -149,5 +140,3 @@ To install the app, follow these steps.
     ```
 
 The FastStore WebOps app is now installed in your account. Refer to the [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) guide to create your first FastStore project.
-
-</Steps>
