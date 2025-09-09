@@ -1,18 +1,19 @@
 ---
-title: "Delivery Promise components"
+title: "Understanding Delivery Promise components"
+excerpt: "Explore the core components of the Delivery Promise feature in FastStore, their functions, and how they integrate into your store."
 ---
 
 >ℹ This feature is in closed beta, meaning only selected customers can access it. If you're interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
-This guide explains the components of the [Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview) feature for FastStore. It describes the structure of these parts and highlights the customizations needed when modifying standard sections like `NavBar` and `ProductGallery`. 
-
-You'll learn which components can be reused and which require customization, illustrating the connection between native implementation and customization.
+This guide provides an overview of the [Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview) components for FastStore. You will understand the purpose of each component, how they function, and where they are located in the FastStore architecture. This knowledge will help you effectively implement and customize the Delivery Promise feature in your store.
 
 >⚠️ To learn how to implement Delivery Promise in your store, see the guide [Implementing Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 ## Components
 
-Delivery Promise introduces a set of modular components and hooks. These are organized within the FastStore core and UI packages and are inserted into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, such as those found in the FastStore starter. Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
+Delivery Promise introduces modular components and hooks organized within the `@faststore/core` and `@faststore/ui` packages. 
+
+This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in FastStore projects. To learn more about the packages, see [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
 
 Below are the core components related to the Delivery Promise feature in FastStore.
 
@@ -20,11 +21,15 @@ Below are the core components related to the Delivery Promise feature in FastSto
 
 `RegionButton` is a desktop-only component integrated into the `NavBar` section, under the [Global Sections content type](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#content-types) in the Headless CMS.
 
-Its behavior is context-dependent, meaning that if a shopper doesn't add a postal code, a `Popover` is displayed, and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+Its behavior is context-dependent:
+
+- If a shopper hasn't added a postal code, a `Popover` is displayed, and the button label adjusts depending on whether a default postal code is present.
+- If a postal code is set, the button shows the location and suppresses the `Popover`.
+- When a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 ![RegionButton](https://vtexhelp.vtexassets.com/assets/docs/src/region-button___ccb03f5e9e36d837a4b03aae6a0a58ff.png)
 
-If you have customized the `NavBar`, you must also customize the `RegionButton` component to use Delivery Promise.
+If you have customized the `NavBar`, you can still use the native `RegionButton` by integrating it into your custom `NavBar` component. However, depending on your customization, you may need to implement your own version of `RegionButton`.
 
 This component leverages the following:
 
@@ -37,8 +42,6 @@ This component leverages the following:
 
 ![RegionModal](https://vtexhelp.vtexassets.com/assets/docs/src/region-modal___6352f280eeb8eb77ee4674a5caf4f328.png)
 
-If you have customized the `NavBar`, you must also customize the `RegionModal` component to use Delivery Promise.
-
 This component leverages the following:
 
 * **UI Components:** [`RegionModal`](https://developers.vtex.com/docs/guides/faststore/organisms-region-modal)
@@ -46,13 +49,17 @@ This component leverages the following:
 
 ### RegionBar
 
-`RegionBar` is a mobile-only component that acts as a section under the Global Sections content type in the Headless CMS.
+`RegionBar` is a mobile-only component that serves as a section under the Global Sections content type in the Headless CMS.
 
-Its behavior is context-dependent, meaning if a shopper doesn't add a postal code, a `Popover` is displayed, and the button label adjusts based on whether a default postal code is present. If a postal code is added, the button shows the location and suppresses the `Popover`. Additionally, when a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
+Its behavior is context-dependent:
+
+- If a shopper hasn't added a postal code, a `Popover` is displayed, and the button label adjusts depending on whether a default postal code is present.
+- If a postal code is set, the button shows the location and suppresses the `Popover`.
+- When a shopper sets their location, the [`RegionModal`](#regionmodal) component is triggered.
 
 ![RegionBar](https://vtexhelp.vtexassets.com/assets/docs/src/regionbar80___52615261c9d206fd8e305d92751c00b5.png)
 
-Even if you have customized the `NavBar`, you can still utilize the native `RegionBar` component to use Delivery Promise.
+Even if you have customized the `NavBar`, you can still use the native `RegionBar` component to enable Delivery Promise.
 
 This component leverages the following:
 
@@ -65,7 +72,7 @@ This component leverages the following:
 
 ![RegionPopover](https://vtexhelp.vtexassets.com/assets/docs/src/regionpopover___dedb0aad756657e71d4c8d40cb2ef5e7.png)
 
-If you have customized `RegionBar` or `RegionButton`, you must also customize the `RegionPopover` component to use Delivery Promise.
+If you have customized `RegionBar` or `RegionButton`, you can still use the native `RegionPopover` by integrating it into your custom components. However, depending on your customization, you may need to implement your own version of `RegionPopover`.
 
 This component leverages the following:
 
@@ -76,13 +83,13 @@ This component leverages the following:
 
 The `RegionSlider` component enables shoppers to manage their delivery-related location settings and pickup point filters in the Product Listing Pages (PLPs) or search pages. This component is implemented as a Global Section, making it available throughout the store. It is compatible with mobile and desktop browsers.
 
-It includes three interaction types: setting a new location (when no postal code is set), changing an existing location (when a postal code is set), and selecting a pickup point (for filtering) to refine delivery options.
+It includes three interaction types: setting a new location (when no postal code is set); changing an existing location (when a postal code is set); and selecting a pickup point (for filtering) to refine delivery options.
 
-* **No postal code set:** The user clicks the "Set location" button, then the `RegionSlider` appears, allowing them to set a postal code.
+* **No postal code set:** The user clicks the `Set location` button, and the `RegionSlider` appears, allowing the user to set a postal code.
 
 ![setLocation](https://vtexhelp.vtexassets.com/assets/docs/src/set-location___8887a7be647d76a0584e1b977233a672.png)
 
-* **Postal code set:** The user clicks the postal code link, then the `RegionSlider` appears, allowing them to change the location.
+* **Postal code set:** The user clicks the postal code link, and the `RegionSlider` appears, allowing the user to change the location.
 
 ![changeLocation](https://vtexhelp.vtexassets.com/assets/docs/src/change-location___ada68e0df1bac1e8a20abc9040dbf82f.png)
 
@@ -97,12 +104,12 @@ This component leverages the following:
 
 ### FilterDesktop
 
-`FilterDesktop` is a desktop-only component integrated into the `ProductGallery` section, under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that combines all search and PLP filters.
+`FilterDesktop` is a desktop-only component integrated into the `ProductGallery` section, under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that integrates with all search and PLP filters.
 
 ![FilterDesktop](https://vtexhelp.vtexassets.com/assets/docs/src/filter-desktop___b7c358c72f742ab91467621e4d19839a.png)
 
 ### FilterSlider
 
-`FilterSlider` is a mobile-only component integrated into the `ProductGallery` section under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that combines all search and PLP filters.
+`FilterSlider` is a mobile-only component integrated into the `ProductGallery` section under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that integrates with all search and PLP filters.
 
 ![FilterSlider](https://vtexhelp.vtexassets.com/assets/docs/src/filter-slider___f885f64836ae3bf247ab7b849575230d.png)
