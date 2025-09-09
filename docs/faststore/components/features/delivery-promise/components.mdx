@@ -3,7 +3,7 @@ title: "Understanding Delivery Promise components"
 excerpt: "Explore the core components of the Delivery Promise feature in FastStore, their functions, and how they integrate into your store."
 ---
 
->ℹ This feature is in closed beta, meaning that only selected customers can access it. If you're interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+>ℹ This feature is in closed beta, meaning only selected customers can access it. If you're interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
 This guide provides an overview of the [Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview) components for FastStore. You will understand the purpose of each component, how they function, and where they are located in the FastStore architecture. This knowledge will help you effectively implement and customize the Delivery Promise feature in your store.
 
@@ -11,7 +11,7 @@ This guide provides an overview of the [Delivery Promise](https://developers.vte
 
 ## Components
 
-Delivery Promise introduces a set of modular components and hooks. These are organized in the FastStore core and UI packages and integrated into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, for example, those found in the FastStore starter. To learn more about the packages, see [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
+Delivery Promise introduces a set of modular components and hooks. These components are organized within the FastStore's core and UI packages and integrated into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, for example, those found in the FastStore starter. To learn more about the packages, see [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
 
 Below are the core components related to the Delivery Promise feature in FastStore.
 
@@ -36,7 +36,7 @@ This component leverages the following:
 
 ### RegionModal
 
-`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, which means the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
+`RegionModal` is a component that serves as a section under the Global Sections content type in the Headless CMS. It contains logic to enforce mandatory location entry if specified in the `discovery.config.js` file, meaning the modal cannot be closed without providing a location. It checks for valid postal codes and verifies product availability for the given location.
 
 ![RegionModal](https://vtexhelp.vtexassets.com/assets/docs/src/region-modal___6352f280eeb8eb77ee4674a5caf4f328.png)
 
@@ -102,12 +102,12 @@ This component leverages the following:
 
 ### FilterDesktop
 
-`FilterDesktop` is a desktop-only component integrated into the `ProductGallery` section, under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that combines all search and PLP filters.
+`FilterDesktop` is a desktop-only component integrated into the `ProductGallery` section, under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that integrates with all search and PLP filters.
 
 ![FilterDesktop](https://vtexhelp.vtexassets.com/assets/docs/src/filter-desktop___b7c358c72f742ab91467621e4d19839a.png)
 
 ### FilterSlider
 
-`FilterSlider` is a mobile-only component integrated into the `ProductGallery` section under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that combines all search and PLP filters.
+`FilterSlider` is a mobile-only component integrated into the `ProductGallery` section under the Global Sections content type in the Headless CMS. It adds a delivery-based filter option that integrates with all search and PLP filters.
 
 ![FilterSlider](https://vtexhelp.vtexassets.com/assets/docs/src/filter-slider___f885f64836ae3bf247ab7b849575230d.png)
