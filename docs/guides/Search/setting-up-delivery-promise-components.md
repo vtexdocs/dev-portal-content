@@ -35,7 +35,7 @@ To enable Delivery Promise (Beta) in your store, the following conditions must b
 
 * The store must use [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG).
 * Check if you have installed the `0.5.0` or a later version of the [`search-session`](https://developers.vtex.com/docs/apps/vtex.search-session) app. To do this, run the `vtex list` command in your terminal and search for the app in the results. If you don’t have this app installed, run the command `vtex install vtex.search-session`.
-* Your storefront must be built with [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) to enable the components in this guide. If you use FastStore, check the [FastStore Delivery Promise implementation guide](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation). If your store is headless, check [Delivery promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores).
+* Your storefront must be built with [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) to enable the components in this guide. If you use FastStore, check the [FastStore Delivery Promise implementation guide](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation). If your store is headless, check [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores).
 * The store can't act as a marketplace for [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types) accounts or external sellers.
 
 ## Instructions
@@ -81,22 +81,22 @@ To use Delivery Promise, customers must define a delivery address early in their
    ```
 
 3. Configure the behavior with props to customize how location selection is presented. Below, we highlight some of the key uses of the available props.
- 
+
    * [Setting up a blocking modal](#setting-up-a-blocking-modal)
    * [Defining displayed delivery methods](#defining-displayed-delivery-methods)
 
-   Learn more about all the available props in [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components).
+   >ℹ️ Learn more about all the available props in [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components).
 
 When the customer provides their address, an initial selection of products is made to display only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by the Checkout. This selection impacts all subsequent product listings and filters.
 
-#### Setting up a blocking model
+#### Setting up a blocking modal
 
 To ensure location input is provided before browsing, you can configure a blocking modal that displays when the page loads and can't be dismissed until a postal code is entered.
 
 To do this, you must use both the `callToAction` and `dismissible` props:
 
 * `callToAction`: Defines which UI is displayed on load:
- 
+
   * `modal`: Displays a modal requiring postal code entry.
   * `popover-input` *(default)*: Opens a popover with a postal code input field.
   * `popover-button`: Displays a button that opens the popover when clicked.
