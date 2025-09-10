@@ -18,10 +18,19 @@ components:
   </Tab>
   <Tab>
     ```tsx
-    <Checkbox />
-    <Checkbox checked />
-    <Checkbox disabled />
-    <Checkbox checked partial />
+    import React from 'react'
+    import { Checkbox } from '@faststore/ui'
+
+    export default function CheckboxOverviewExamples() {
+      return (
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <Checkbox />
+          <Checkbox checked readOnly />
+          <Checkbox disabled />
+          <Checkbox checked partial readOnly />
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -53,7 +62,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <Checkbox />
 </OverviewSection>
 ```tsx
-<Checkbox />
+import React from 'react'
+import { Checkbox } from '@faststore/ui'
+
+export default function CheckboxBasicUsage() {
+  return <Checkbox />
+}
 ```
 
 ---
@@ -111,7 +125,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Checkbox checked />
+import React from 'react'
+import { Checkbox } from '@faststore/ui'
+
+export default function CheckboxChecked() {
+  return <Checkbox checked />
+}
 ```
 
 <TokenTable>
@@ -144,7 +163,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Checkbox disabled readOnly />
+import React from 'react'
+import { Checkbox } from '@faststore/ui'
+
+export default function CheckboxDisabled() {
+  return <Checkbox disabled readOnly />
+}
 ```
 
 <TokenTable>
@@ -175,7 +199,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <Checkbox checked partial />
 </OverviewSection>
 ```tsx
-<Checkbox checked partial />
+import React from 'react'
+import { Checkbox } from '@faststore/ui'
+
+export default function CheckboxPartial() {
+  return <Checkbox checked partial />
+}
 ```
 
 <TokenTable>
