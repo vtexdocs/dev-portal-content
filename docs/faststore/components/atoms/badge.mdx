@@ -106,17 +106,6 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-big-text-size"
-    value="var(--fs-text-size-legend)"
-  />
-  <TokenRow
-    token="--fs-badge-big-padding"
-    value="var(--fs-spacing-1) var(--fs-spacing-2)"
-  />
-  <TokenDivider />
-</TokenTable>
 
 ### Variants
 
@@ -140,25 +129,6 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-neutral-bkg-color"
-    value="var(--fs-color-neutral-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-neutral-text-color"
-    value="var(--fs-badge-text-color)"
-    globalValue="var(--fs-color-text)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-neutral-border-color"
-    value="var(--fs-color-neutral-bkg)"
-    isColor
-  />
-</TokenTable>
-
 #### Success
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
@@ -178,25 +148,6 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     ```
   </Tab>
 </Tabs>
-
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-success-bkg-color"
-    value="var(--fs-color-success-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-success-text-color"
-    value="var(--fs-badge-text-color)"
-    globalValue="var(--fs-color-text)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-success-border-color"
-    value="var(--fs-color-success-bkg)"
-    isColor
-  />
-</TokenTable>
 
 #### Highlighted
 
@@ -218,23 +169,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-highlighted-bkg-color"
-    value="var(--fs-color-highlighted-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-highlighted-text-color"
-    value="var(--fs-color-highlighted-text)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-highlighted-border-color"
-    value="var(--fs-color-highlighted-bkg)"
-    isColor
-  />
-</TokenTable>
+
 
 #### Info
 
@@ -256,24 +191,6 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-info-bkg-color"
-    value="var(--fs-color-info-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-info-text-color"
-    value="var(--fs-color-info-text)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-info-border-color"
-    value="var(--fs-color-info-bkg)"
-    isColor
-  />
-</TokenTable>
-
 #### Warning
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
@@ -294,24 +211,6 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-warning-bkg-color"
-    value="var(--fs-color-warning-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-warning-text-color"
-    value="var(--fs-color-warning-text)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-warning-border-color"
-    value="var(--fs-color-warning-bkg)"
-    isColor
-  />
-</TokenTable>
-
 #### Danger
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
@@ -331,25 +230,6 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     ```
   </Tab>
 </Tabs>
-
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-danger-bkg-color"
-    value="var(--fs-color-danger-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-danger-text-color"
-    value="var(--fs-badge-text-color)"
-    globalValue="var(--fs-color-text)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-badge-danger-border-color"
-    value="var(--fs-color-danger-bkg)"
-    isColor
-  />
-</TokenTable>
 
 ---
 
@@ -395,7 +275,116 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     token="--fs-badge-transition-timing"
     value="var(--fs-transition-timing)"
   />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-badge-big-text-size"
+    value="var(--fs-text-size-legend)"
+  />
+  <TokenRow
+    token="--fs-badge-big-padding"
+    value="var(--fs-spacing-1) var(--fs-spacing-2)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-badge-neutral-bkg-color"
+    value="var(--fs-color-neutral-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-neutral-text-color"
+    value="var(--fs-badge-text-color)"
+    globalValue="var(--fs-color-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-neutral-border-color"
+    value="var(--fs-color-neutral-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-badge-success-bkg-color"
+    value="var(--fs-color-success-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-success-text-color"
+    value="var(--fs-badge-text-color)"
+    globalValue="var(--fs-color-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-success-border-color"
+    value="var(--fs-color-success-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-badge-highlighted-bkg-color"
+    value="var(--fs-color-highlighted-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-highlighted-text-color"
+    value="var(--fs-color-highlighted-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-highlighted-border-color"
+    value="var(--fs-color-highlighted-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-badge-info-bkg-color"
+    value="var(--fs-color-info-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-info-text-color"
+    value="var(--fs-color-info-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-info-border-color"
+    value="var(--fs-color-info-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-badge-warning-bkg-color"
+    value="var(--fs-color-warning-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-warning-text-color"
+    value="var(--fs-color-warning-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-warning-border-color"
+    value="var(--fs-color-warning-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-badge-danger-bkg-color"
+    value="var(--fs-color-danger-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-danger-text-color"
+    value="var(--fs-badge-text-color)"
+    globalValue="var(--fs-color-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-badge-danger-border-color"
+    value="var(--fs-color-danger-bkg)"
+    isColor
+  />
 </TokenTable>
+
 
 ---
 
