@@ -5,7 +5,7 @@ components:
   - Checkbox.tsx
 ---
 
-## Overview
+<i class="fa-brands fa-github"></i> [Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Checkbox)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -36,49 +36,91 @@ components:
 </Tabs>
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Checkbox } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Checkbox/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Checkbox />
-</OverviewSection>
-```tsx
-import React from 'react'
-import { Checkbox } from '@faststore/ui'
+### Checked
 
-export default function CheckboxBasicUsage() {
-  return <Checkbox />
-}
-```
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox checked />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Checkbox } from '@faststore/ui'
+    
+    export default function CheckboxChecked() {
+      return <Checkbox checked />
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox disabled readOnly />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+  ```tsx
+  import React from 'react'
+  import { Checkbox } from '@faststore/ui'
+  
+  export default function CheckboxDisabled() {
+    return <Checkbox disabled readOnly />
+  }
+  ```
+  </Tab>
+</Tabs>
+
+### Partial
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox checked partial />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Checkbox } from '@faststore/ui'
+    
+    export default function CheckboxPartial() {
+      return <Checkbox checked partial />
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Props
-
-<ComponentPropsSection component="Checkbox" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-checkbox-width" value="1.25rem" />
@@ -116,24 +158,7 @@ export default function CheckboxBasicUsage() {
   />
 </TokenTable>
 
----
-
-## Examples
-
-### Checked
-
-<OverviewSection>
-  <Checkbox checked />
-</OverviewSection>
-
-```tsx
-import React from 'react'
-import { Checkbox } from '@faststore/ui'
-
-export default function CheckboxChecked() {
-  return <Checkbox checked />
-}
-```
+### Design tokens: Checked
 
 <TokenTable>
   <TokenRow
@@ -158,20 +183,7 @@ export default function CheckboxChecked() {
   />
 </TokenTable>
 
-### Disabled
-
-<OverviewSection>
-  <Checkbox disabled readOnly />
-</OverviewSection>
-
-```tsx
-import React from 'react'
-import { Checkbox } from '@faststore/ui'
-
-export default function CheckboxDisabled() {
-  return <Checkbox disabled readOnly />
-}
-```
+### Design tokens: Disabled
 
 <TokenTable>
   <TokenRow
@@ -195,19 +207,7 @@ export default function CheckboxDisabled() {
   />
 </TokenTable>
 
-### Partial
-
-<OverviewSection>
-  <Checkbox checked partial />
-</OverviewSection>
-```tsx
-import React from 'react'
-import { Checkbox } from '@faststore/ui'
-
-export default function CheckboxPartial() {
-  return <Checkbox checked partial />
-}
-```
+### Design tokens: Partial
 
 <TokenTable>
   <TokenRow
@@ -233,15 +233,21 @@ export default function CheckboxPartial() {
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Checkbox` styles using the following data attributes:
 
 `data-fs-checkbox`
 
 ---
 
-## Best Practices
+## Props
+
+<ComponentPropsSection component="Checkbox" />
+
+---
+
+## Best practices
 
 ### ✅ Do's
 
