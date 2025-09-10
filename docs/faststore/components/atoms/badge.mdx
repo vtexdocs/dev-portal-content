@@ -72,21 +72,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Usage
-
-<OverviewSection>
-  <Badge variant="info">New arrival</Badge>
-</OverviewSection>
-```tsx 
-import React from 'react' import {Badge} from '@faststore/ui'
-
-export default function BadgeBasicUsage() {
-  return <Badge variant="info">New arrival</Badge>
-}
-```
-
----
-
 ## Props
 
 <ComponentPropsSection component="Badge" />
@@ -137,11 +122,26 @@ export default function BadgeBasicUsage() {
   />
 </TokenTable>
 
-### Sizes
+---
 
-Default size is `small`. Use `size="big"` for a larger badge.
+## Default usage
 
-#### Big
+<OverviewSection>
+  <Badge variant="info">New arrival</Badge>
+</OverviewSection>
+```tsx 
+import React from 'react' import {Badge} from '@faststore/ui'
+
+export default function BadgeBasicUsage() {
+  return <Badge variant="info">New arrival</Badge>
+}
+```
+
+---
+
+## Examples
+
+### Big
 
 <OverviewSection>
   <Badge size="big">Big Badge</Badge>
