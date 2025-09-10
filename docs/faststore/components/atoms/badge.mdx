@@ -31,7 +31,7 @@ sidebar_custom_props:
     </OverviewSection>
   </Tab>
   <Tab>
-
+  
     ```tsx
     <Badge variant="neutral">Neutral</Badge>
     <Badge variant="info">Info</Badge>
@@ -57,7 +57,7 @@ sidebar_custom_props:
 Import the component from [@faststore/ui](/../docs/guides/faststore/components-index)
 
 ```tsx
-import { Badge } from '@faststore/ui'
+import { Badge } from "@faststore/ui";
 ```
 
 ### Import Styles into your FastStore project
@@ -65,7 +65,7 @@ import { Badge } from '@faststore/ui'
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/atoms/Badge/styles.scss';
+@import "@faststore/ui/src/components/atoms/Badge/styles.scss";
 ```
 
 Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
@@ -77,8 +77,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 <OverviewSection>
   <Badge variant="info">New arrival</Badge>
 </OverviewSection>
-```tsx
-<Badge variant="info">New arrival</Badge>
+```tsx 
+import React from 'react' import {Badge} from '@faststore/ui'
+
+export default function BadgeBasicUsage() {
+  return <Badge variant="info">New arrival</Badge>
+}
 ```
 
 ---
@@ -133,6 +137,37 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
+### Sizes
+
+Default size is `small`. Use `size="big"` for a larger badge.
+
+#### Big
+
+<OverviewSection>
+  <Badge size="big">Big Badge</Badge>
+</OverviewSection>
+
+```tsx
+import React from "react";
+import { Badge } from "@faststore/ui";
+
+export default function BadgeBig() {
+  return <Badge size="big">Big Badge</Badge>;
+}
+```
+
+<TokenTable>
+  <TokenRow
+    token="--fs-badge-big-text-size"
+    value="var(--fs-text-size-legend)"
+  />
+  <TokenRow
+    token="--fs-badge-big-padding"
+    value="var(--fs-spacing-1) var(--fs-spacing-2)"
+  />
+  <TokenDivider />
+</TokenTable>
+
 ### Variants
 
 #### Neutral
@@ -142,7 +177,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Badge variant="neutral">Neutral Badge</Badge>
+import React from "react";
+import { Badge } from "@faststore/ui";
+
+export default function BadgeNeutral() {
+  return <Badge variant="neutral">Neutral Badge</Badge>;
+}
 ```
 
 <TokenTable>
@@ -171,7 +211,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Badge variant="success">Success Badge</Badge>
+import React from "react";
+import { Badge } from "@faststore/ui";
+
+export default function BadgeSuccess() {
+  return <Badge variant="success">Success Badge</Badge>;
+}
 ```
 
 <TokenTable>
@@ -200,7 +245,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Badge variant="highlighted">Highlighted Badge</Badge>
+import React from "react";
+import { Badge } from "@faststore/ui";
+
+export default function BadgeHighlighted() {
+  return <Badge variant="highlighted">Highlighted Badge</Badge>;
+}
 ```
 
 <TokenTable>
@@ -228,7 +278,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Badge variant="info">Info Badge</Badge>
+import React from "react";
+import { Badge } from "@faststore/ui";
+
+export default function BadgeInfo() {
+  return <Badge variant="info">Info Badge</Badge>;
+}
 ```
 
 <TokenTable>
@@ -256,7 +311,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Badge variant="warning">Warning Badge</Badge>
+import React from "react";
+import { Badge } from "@faststore/ui";
+
+export default function BadgeWarning() {
+  return <Badge variant="warning">Warning Badge</Badge>;
+}
 ```
 
 <TokenTable>
@@ -284,7 +344,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </OverviewSection>
 
 ```tsx
-<Badge variant="danger">Danger Badge</Badge>
+import React from "react";
+import { Badge } from "@faststore/ui";
+
+export default function BadgeDanger() {
+  return <Badge variant="danger">Danger Badge</Badge>;
+}
 ```
 
 <TokenTable>
@@ -307,32 +372,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </TokenTable>
 
 ---
-
-### Sizes
-
-Default size is `small`. Use `size="big"` for a larger badge.
-
-#### Big
-
-<OverviewSection>
-  <Badge size="big">Big Badge</Badge>
-</OverviewSection>
-
-```tsx
-<Badge size="big">Big Badge</Badge>
-```
-
-<TokenTable>
-  <TokenRow
-    token="--fs-badge-big-text-size"
-    value="var(--fs-text-size-legend)"
-  />
-  <TokenRow
-    token="--fs-badge-big-padding"
-    value="var(--fs-spacing-1) var(--fs-spacing-2)"
-  />
-  <TokenDivider />
-</TokenTable>
 
 ## Use Cases
 
