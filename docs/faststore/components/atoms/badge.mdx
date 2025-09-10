@@ -12,7 +12,13 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Badge___bcedffeb307527c1606be224a7fb5ac1.png
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Badge)
+
+The `Badge` component is used to emphasize an item's state by displaying concise, non-interactive labels. Typical use cases include:
+
+- Highlighting promotional discounts
+- Indicating product features (e.g., `vegan` or `cruelty-free`).
+- Displaying availability statuses (e.g., `NEW`, `ONLY 1 LEFT`, and `OUT OF STOCK`).
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -23,8 +29,6 @@ sidebar_custom_props:
       <Badge variant="neutral" size="big">
         Neutral & Big
       </Badge>
-    </OverviewSection>
-    <OverviewSection>
       <Badge variant="success">Success</Badge>
       <Badge variant="warning">Warning</Badge>
       <Badge variant="danger">Danger</Badge>
@@ -33,52 +37,203 @@ sidebar_custom_props:
   <Tab>
   
     ```tsx
-    <Badge variant="neutral">Neutral</Badge>
-    <Badge variant="info">Info</Badge>
-    <Badge variant="highlighted">Highlighted</Badge>
-    <Badge variant="neutral" size="big">
-      Neutral & Big
-    </Badge>
-    ```
+    import React from 'react' 
+    import {Badge} from '@faststore/ui'
 
-    ```tsx
-    <Badge variant="success">Success</Badge>
-    <Badge variant="warning">Warning</Badge>
-    <Badge variant="danger">Danger</Badge>
-    ```
+    export default function BadgeBasicUsage() {
+      return(
+        <div>
+          <Badge variant="neutral">Neutral</Badge>
+          <Badge variant="info">Info</Badge>
+          <Badge variant="highlighted">Highlighted</Badge>
+          <Badge variant="neutral" size="big">
+            Neutral & Big
+          </Badge>
+          <Badge variant="success">Success</Badge>
+          <Badge variant="warning">Warning</Badge>
+          <Badge variant="danger">Danger</Badge>
+        </div>
+      )
+    }
 
+    ```
   </Tab>
 </Tabs>
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](/../docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Badge } from "@faststore/ui";
 ```
 
-### Import styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import "@faststore/ui/src/components/atoms/Badge/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Badge" />
+### Size
+
+#### Big
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge size="big">Big Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeBig() {
+      return <Badge size="big">Big Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+
+### Variants
+
+#### Neutral
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="neutral">Neutral Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeNeutral() {
+      return <Badge variant="neutral">Neutral Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Success
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="success">Success Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeSuccess() {
+      return <Badge variant="success">Success Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Highlighted
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="highlighted">Highlighted Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeHighlighted() {
+      return <Badge variant="highlighted">Highlighted Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+
+
+#### Info
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="info">Info Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeInfo() {
+      return <Badge variant="info">Info Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Warning
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="warning">Warning Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeWarning() {
+      return <Badge variant="warning">Warning Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Danger
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="danger">Danger Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeDanger() {
+      return <Badge variant="danger">Danger Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -122,51 +277,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
----
-
-## Default usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge variant="info">New arrival</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx 
-    import React from 'react' 
-    import {Badge} from '@faststore/ui'
-
-    export default function BadgeBasicUsage() {
-      return <Badge variant="info">New arrival</Badge>
-    }
-    ```
-  </Tab>
-</Tabs>
-
----
-
-## Examples
-
-### Big
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge size="big">Big Badge</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Badge } from "@faststore/ui";
-
-    export default function BadgeBig() {
-      return <Badge size="big">Big Badge</Badge>;
-    }
-    ```
-  </Tab>
-</Tabs>
+### Design tokens: Big
 
 <TokenTable>
   <TokenRow
@@ -177,30 +288,11 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     token="--fs-badge-big-padding"
     value="var(--fs-spacing-1) var(--fs-spacing-2)"
   />
-  <TokenDivider />
 </TokenTable>
 
-### Variants
+### Design tokens: Neutral
 
-#### Neutral
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge variant="neutral">Neutral Badge</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Badge } from "@faststore/ui";
-
-    export default function BadgeNeutral() {
-      return <Badge variant="neutral">Neutral Badge</Badge>;
-    }
-    ```
-  </Tab>
-</Tabs>
+Neutral badges present information in a low-contrast style, ideal for secondary statuses or default states.
 
 <TokenTable>
   <TokenRow
@@ -221,25 +313,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Success
+### Design tokens: Success
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge variant="success">Success Badge</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Badge } from "@faststore/ui";
-
-    export default function BadgeSuccess() {
-      return <Badge variant="success">Success Badge</Badge>;
-    }
-    ```
-  </Tab>
-</Tabs>
+Success badges use a green palette to confirm actions and indicate favorable outcomes.
 
 <TokenTable>
   <TokenRow
@@ -260,25 +336,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Highlighted
+### Design tokens: Highlighted
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge variant="highlighted">Highlighted Badge</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Badge } from "@faststore/ui";
-
-    export default function BadgeHighlighted() {
-      return <Badge variant="highlighted">Highlighted Badge</Badge>;
-    }
-    ```
-  </Tab>
-</Tabs>
+Highlighted badges draw attention with a high-contrast color scheme, which is ideal for promotions or featured items.
 
 <TokenTable>
   <TokenRow
@@ -298,25 +358,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Info
+### Design tokens: Info
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge variant="info">Info Badge</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Badge } from "@faststore/ui";
-
-    export default function BadgeInfo() {
-      return <Badge variant="info">Info Badge</Badge>;
-    }
-    ```
-  </Tab>
-</Tabs>
+Info badges use a blue palette to communicate neutral but helpful information, guidance, or notifications.
 
 <TokenTable>
   <TokenRow
@@ -336,25 +380,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Warning
+### Design tokens: Warning
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge variant="warning">Warning Badge</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Badge } from "@faststore/ui";
-
-    export default function BadgeWarning() {
-      return <Badge variant="warning">Warning Badge</Badge>;
-    }
-    ```
-  </Tab>
-</Tabs>
+Warning badges use an orange or yellow palette to signal caution, pending actions, or non-critical alerts.
 
 <TokenTable>
   <TokenRow
@@ -374,25 +402,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Danger
+### Design tokens: Danger
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge variant="danger">Danger Badge</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Badge } from "@faststore/ui";
-
-    export default function BadgeDanger() {
-      return <Badge variant="danger">Danger Badge</Badge>;
-    }
-    ```
-  </Tab>
-</Tabs>
+Danger badges use a red palette to warn users of critical errors, destructive actions, or important failures.
 
 <TokenTable>
   <TokenRow
@@ -415,19 +427,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Use Cases
+## Data attributes
 
-Use the Badge component to highlight:
-
-- Promotional discounts.
-- Product features (e.g., `vegan` or `cruelty-free`).
-- Product availability statuses (e.g., `NEW`, `ONLY 1 LEFT` and `OUT OF STOCK`).
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
+You can target and override `Badge` styles using the following data attributes:
 
 `data-fs-badge`
 
@@ -437,25 +439,26 @@ For further customization, you can use the following data attributes:
 
 ---
 
-## Best Practices
+## Props
+
+<ComponentPropsSection component="Badge" />
+
+---
+
+## Best practices
 
 ### ✅ Do's
 
 - Place the badge next to or on top of its related item.
 - Be cautious about the badge's positioning, writing, shape, and color to avoid any confusion with components similar in appearance.
+- Ensure sufficient text contrast against the background.
 
 ### ❌ Don'ts
 
 - Don't use long texts in badges. A reasonable character limit is 15.
 - Don't label badges with active verbs.
-- Don't use color alone to convey information. If color is needed to convey meaning, ensure there is a text alternative for that meaning as well.
-- Don't place badges next to buttons. Although badges and buttons are similar in appearance, badges are not interactive and may confuse users if not used in the proper context.
-
----
-
-## Accessibility
-
-- Text elements must have sufficient color contrast against the background.
+- Don't rely on color alone to convey meaning. Ensure there is a text alternative for that meaning as well.
+- Don't place badges next to buttons, since they are not interactive and could confuse users.
 
 ---
 
