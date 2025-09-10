@@ -11,9 +11,12 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Button___6d6b16886d5d7e2a05dba8c45c075796.png
 ---
 
-Buttons indicate actions that users can take, such as adding an item to the cart, submitting a form, and proceeding with an operation.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Button)
 
-## Overview
+Buttons indicate actions that users can take, such as adding an item to the cart, submitting a form, and proceeding with an operation. Use the `Button` component to communicate user actions for the following components:
+
+- `Buy Now` and `Add to Cart` buttons in [Product Cards](https://developers.vtex.com/docs/guides/faststore/molecules-product-card).
+- Submit or cancel actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) windows.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -46,29 +49,339 @@ Buttons indicate actions that users can take, such as adding an item to the cart
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Button } from '@faststore/ui'
 ```
 
-### Import styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Button/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Button" />
+### Button with an icon
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
+        {'Add to Cart'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button, Icon } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
+                Add to Cart
+            </Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+### Visual hierarchy
+
+#### Primary
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary">Button</Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button variant="primary">Button</Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Primary Inverse
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Button inverse variant="primary">
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button inverse variant="primary">
+                Button
+            </Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Secondary
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="secondary">Button</Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button variant="secondary">Button</Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Secondary Inverse
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Button inverse variant="secondary">
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button inverse variant="secondary">
+                Button
+            </Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Tertiary
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="tertiary">Button</Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button variant="tertiary">Button</Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Tertiary Inverse
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Button inverse variant="tertiary">
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button inverse variant="tertiary">
+                Button
+            </Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+---
+
+### Variants
+
+#### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary" disabled>
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button variant="primary" disabled>
+                Button
+            </Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Loading
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection direction="column">
+      <div data-doc-overview-group>
+        <h5 data-doc-overview-group-title>No label</h5>
+        <Button variant="primary" loading>
+          {'Buy'}
+        </Button>
+      </div>
+      <div data-doc-overview-group>
+        <h5 data-doc-overview-group-title>With label</h5>
+        <Button variant="primary" loadingLabel="Loading" loading>
+          {'Loading state'}
+        </Button>
+      </div>
+      <div data-doc-overview-group>
+        <h5 data-doc-overview-group-title>Trigger</h5>
+        <ButtonLoading />
+      </div>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+    ```tsx
+    import React, { useState } from "react";
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        const [loading, setLoading] = useState(false);
+
+        return (
+            <Button
+                variant="primary"
+                onClick={() => setLoading(true)}
+                loadingLabel="Loading"
+                loading={loading}
+            >
+                Click me to trigger loading
+            </Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Small
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary" size="small">
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button variant="primary" size="small">
+                Button
+            </Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Small with an icon
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
+        {'Button'}
+      </Button>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    
+    ```tsx
+    import { Button, Icon } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
+                Button
+            </Button>
+        );
+    }
+    ```
+
+  </Tab>
+</Tabs>
 
 ---
 
@@ -112,91 +425,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
----
-
-## Default usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Button variant="primary">Add to Cart</Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button variant="primary">Add to Cart</Button>
-
-        );
-    }
-    ```
-  </Tab>
-</Tabs>
-
----
-
-## Examples
-
-
-### Button with an icon
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
-        {'Add to Cart'}
-      </Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button, Icon } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button variant="primary" icon={<Icon name="ShoppingCart" />} iconPosition="left">
-                Add to Cart
-            </Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
-
 <TokenTable>
   <TokenRow token="--fs-button-icon-padding" value="0 var(--fs-spacing-1)" />
 </TokenTable>
-
-### Visual hierarchy
-
-
-#### Primary
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Button variant="primary">Button</Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button variant="primary">Button</Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -254,34 +485,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     value="var(--fs-button-shadow-hover)"
   />
 </TokenTable>
-
-
-#### Primary Inverse
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection dark>
-      <Button inverse variant="primary">
-        {'Button'}
-      </Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button inverse variant="primary">
-                Button
-            </Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -342,30 +545,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-
-#### Secondary
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Button variant="secondary">Button</Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button variant="secondary">Button</Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
-
 <TokenTable>
   <TokenRow
     token="--fs-button-secondary-text-color"
@@ -424,34 +603,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     value="var(--fs-button-shadow-hover)"
   />
 </TokenTable>
-
-
-#### Secondary Inverse
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection dark>
-      <Button inverse variant="secondary">
-        {'Button'}
-      </Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button inverse variant="secondary">
-                Button
-            </Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -516,30 +667,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-
-#### Tertiary
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Button variant="tertiary">Button</Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button variant="tertiary">Button</Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
-
 <TokenTable>
   <TokenRow
     token="--fs-button-tertiary-text-color"
@@ -596,34 +723,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     value="var(--fs-button-shadow-hover)"
   />
 </TokenTable>
-
-
-#### Tertiary Inverse
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection dark>
-      <Button inverse variant="tertiary">
-        {'Button'}
-      </Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button inverse variant="tertiary">
-                Button
-            </Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -686,38 +785,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
----
-
-### Variants
-
-
-#### Disabled
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Button variant="primary" disabled>
-        {'Button'}
-      </Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button variant="primary" disabled>
-                Button
-            </Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
-
 <TokenTable>
   <TokenRow
     token="--fs-button-disabled-bkg-color"
@@ -731,54 +798,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Loading
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection direction="column">
-      <div data-doc-overview-group>
-        <h5 data-doc-overview-group-title>No label</h5>
-        <Button variant="primary" loading>
-          {'Buy'}
-        </Button>
-      </div>
-      <div data-doc-overview-group>
-        <h5 data-doc-overview-group-title>With label</h5>
-        <Button variant="primary" loadingLabel="Loading" loading>
-          {'Loading state'}
-        </Button>
-      </div>
-      <div data-doc-overview-group>
-        <h5 data-doc-overview-group-title>Trigger</h5>
-        <ButtonLoading />
-      </div>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-    ```tsx
-    import React, { useState } from "react";
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        const [loading, setLoading] = useState(false);
-
-        return (
-            <Button
-                variant="primary"
-                onClick={() => setLoading(true)}
-                loadingLabel="Loading"
-                loading={loading}
-            >
-                Click me to trigger loading
-            </Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
-
 <TokenTable>
   <TokenRow
     token="--fs-button-loading-label-column-gap"
@@ -786,34 +805,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-
-#### Small
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Button variant="primary" size="small">
-        {'Button'}
-      </Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button variant="primary" size="small">
-                Button
-            </Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
-
 <TokenTable>
   <TokenRow
     token="--fs-button-small-padding"
@@ -829,34 +820,6 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-
-#### Small with an icon
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
-        {'Button'}
-      </Button>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    
-    ```tsx
-    import { Button, Icon } from "@faststore/ui";
-
-    export function Example() {
-        return (
-            <Button variant="primary" size="small" icon={<Icon name="ShoppingCart" />}>
-                Button
-            </Button>
-        );
-    }
-    ```
-
-  </Tab>
-</Tabs>
-
 <TokenTable>
   <TokenRow
     token="--fs-button-small-padding"
@@ -871,21 +834,11 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     value="var(--fs-button-small-icon-width)"
   />
 </TokenTable>
-
 ---
 
-## Use Cases
+## Data attributes
 
-Use the `Button` component to communicate user actions for the following components:
-
-- `Buy Now` and `Add to Cart` buttons in [Product Cards](https://developers.vtex.com/docs/guides/faststore/molecules-product-card).
-- Submit or cancel actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) windows.
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
+You can target and override `Checkbox` styles using the following data attributes:
 
 `data-fs-button`
 
@@ -899,6 +852,13 @@ For further customization, you can use the following data attributes:
 
 ---
 
+## Props
+
+<ComponentPropsSection component="Button" />
+
+---
+
+
 ## Best Practices
 
 ### ✅ Dos
@@ -909,7 +869,7 @@ For further customization, you can use the following data attributes:
 - Use **task-specific** words to write button labels.
 - Place the buttons in an **order that reflects a conversation between the user and the system**.
 - Provide visual or audio **feedback on interactions**. Whenever a user interacts with a button, it should change its state to indicate that an action is taking place.
-- Define a style system for your **button states** (i.e., normal, focus, hover, active, pressed, disabled).
+- Define a style system for your button states (e.g., normal, focus, hover, active, pressed, disabled).
 - Use icon-only buttons only for widespread actions with highly standardized icons, such as a cross for closing.
 - Use the `aria-label` attribute to provide a textual alternative for icon-only buttons.
 
