@@ -126,17 +126,23 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ## Default usage
 
-<OverviewSection>
-  <Badge variant="info">New arrival</Badge>
-</OverviewSection>
-```tsx 
-import React from 'react' 
-import {Badge} from '@faststore/ui'
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="info">New arrival</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx 
+    import React from 'react' 
+    import {Badge} from '@faststore/ui'
 
-export default function BadgeBasicUsage() {
-  return <Badge variant="info">New arrival</Badge>
-}
-```
+    export default function BadgeBasicUsage() {
+      return <Badge variant="info">New arrival</Badge>
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
@@ -144,18 +150,23 @@ export default function BadgeBasicUsage() {
 
 ### Big
 
-<OverviewSection>
-  <Badge size="big">Big Badge</Badge>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge size="big">Big Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
 
-```tsx
-import React from "react";
-import { Badge } from "@faststore/ui";
-
-export default function BadgeBig() {
-  return <Badge size="big">Big Badge</Badge>;
-}
-```
+    export default function BadgeBig() {
+      return <Badge size="big">Big Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -173,18 +184,23 @@ export default function BadgeBig() {
 
 #### Neutral
 
-<OverviewSection>
-  <Badge variant="neutral">Neutral Badge</Badge>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="neutral">Neutral Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
 
-```tsx
-import React from "react";
-import { Badge } from "@faststore/ui";
-
-export default function BadgeNeutral() {
-  return <Badge variant="neutral">Neutral Badge</Badge>;
-}
-```
+    export default function BadgeNeutral() {
+      return <Badge variant="neutral">Neutral Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -207,18 +223,23 @@ export default function BadgeNeutral() {
 
 #### Success
 
-<OverviewSection>
-  <Badge variant="success">Success Badge</Badge>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="success">Success Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
 
-```tsx
-import React from "react";
-import { Badge } from "@faststore/ui";
-
-export default function BadgeSuccess() {
-  return <Badge variant="success">Success Badge</Badge>;
-}
-```
+    export default function BadgeSuccess() {
+      return <Badge variant="success">Success Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -241,18 +262,23 @@ export default function BadgeSuccess() {
 
 #### Highlighted
 
-<OverviewSection>
-  <Badge variant="highlighted">Highlighted Badge</Badge>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="highlighted">Highlighted Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
 
-```tsx
-import React from "react";
-import { Badge } from "@faststore/ui";
-
-export default function BadgeHighlighted() {
-  return <Badge variant="highlighted">Highlighted Badge</Badge>;
-}
-```
+    export default function BadgeHighlighted() {
+      return <Badge variant="highlighted">Highlighted Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -274,18 +300,23 @@ export default function BadgeHighlighted() {
 
 #### Info
 
-<OverviewSection>
-  <Badge variant="info">Info Badge</Badge>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="info">Info Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
 
-```tsx
-import React from "react";
-import { Badge } from "@faststore/ui";
-
-export default function BadgeInfo() {
-  return <Badge variant="info">Info Badge</Badge>;
-}
-```
+    export default function BadgeInfo() {
+      return <Badge variant="info">Info Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -307,18 +338,23 @@ export default function BadgeInfo() {
 
 #### Warning
 
-<OverviewSection>
-  <Badge variant="warning">Warning Badge</Badge>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="warning">Warning Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
 
-```tsx
-import React from "react";
-import { Badge } from "@faststore/ui";
-
-export default function BadgeWarning() {
-  return <Badge variant="warning">Warning Badge</Badge>;
-}
-```
+    export default function BadgeWarning() {
+      return <Badge variant="warning">Warning Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
@@ -340,18 +376,23 @@ export default function BadgeWarning() {
 
 #### Danger
 
-<OverviewSection>
-  <Badge variant="danger">Danger Badge</Badge>
-</OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge variant="danger">Danger Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
 
-```tsx
-import React from "react";
-import { Badge } from "@faststore/ui";
-
-export default function BadgeDanger() {
-  return <Badge variant="danger">Danger Badge</Badge>;
-}
-```
+    export default function BadgeDanger() {
+      return <Badge variant="danger">Danger Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 <TokenTable>
   <TokenRow
