@@ -87,68 +87,95 @@ The `ProductCard` displays summarized information about a product. They usually 
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
-    ```
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
 
-    ```tsx
-    <ProductCard bordered>
-      <ProductCardImage aspectRatio={3 / 4}>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        showDiscountBadge
-      />
-    </ProductCard>
-    ```
+    export default function ProductCardOverviewExamples() {
+      const product = {
+        isVariantOf: { name: 'Basic Product' },
+        image: [
+          {},
+          {
+            url: 'https://via.placeholder.com/300',
+            alternateName: 'Product image',
+          },
+        ],
+        offers: {
+          offers: [
+            {
+              price: 59.9,
+              listPrice: 79.9,
+              availability: 'https://schema.org/InStock',
+            },
+          ],
+        },
+      }
 
-    ```tsx
-    <ProductCard variant="wide">
-      <ProductCardImage aspectRatio={3 / 2}>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        showDiscountBadge
-      />
-    </ProductCard>
+      const useFormattedPrice = (value: number) => `$${value.toFixed(2)}`
+
+      return (
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 2fr', gap: '0.5rem' }}>
+          <ProductCard>
+            <ProductCardImage>
+              <img
+                data-fs-image
+                src={product.image[1].url}
+                alt={product.image[1].alternateName}
+              />
+            </ProductCardImage>
+            <ProductCardContent
+              title={product.isVariantOf.name}
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+              ratingValue={3.5}
+              onButtonClick={() => {}}
+            />
+          </ProductCard>
+
+          <ProductCard bordered>
+            <ProductCardImage aspectRatio={3 / 4}>
+              <img
+                data-fs-image
+                src={product.image[1].url}
+                alt={product.image[1].alternateName}
+              />
+            </ProductCardImage>
+            <ProductCardContent
+              title={product.isVariantOf.name}
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+              showDiscountBadge
+            />
+          </ProductCard>
+
+          <ProductCard variant="wide">
+            <ProductCardImage aspectRatio={3 / 2}>
+              <img
+                data-fs-image
+                src={product.image[1].url}
+                alt={product.image[1].alternateName}
+              />
+            </ProductCardImage>
+            <ProductCardContent
+              title={product.isVariantOf.name}
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+              ratingValue={3.5}
+              showDiscountBadge
+            />
+          </ProductCard>
+        </div>
+      )
+    }
     ```
 
   </Tab>
@@ -210,25 +237,54 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
+
+    export default function ProductCardBasicUsage() {
+      const product = {
+        isVariantOf: { name: 'Basic Product' },
+        image: [
+          {},
+          {
+            url: 'https://via.placeholder.com/300',
+            alternateName: 'Product image',
+          },
+        ],
+        offers: {
+          offers: [
+            {
+              price: 59.9,
+              listPrice: 79.9,
+              availability: 'https://schema.org/InStock',
+            },
+          ],
+        },
+      }
+
+      const useFormattedPrice = (value: number) => `$${value.toFixed(2)}`
+
+      return (
+        <ProductCard>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            ratingValue={3.5}
+            onButtonClick={() => {}}
+          />
+        </ProductCard>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -426,25 +482,54 @@ All product card related components support all attributes also supported by the
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
+
+    export default function ProductCardDefault() {
+      const product = {
+        isVariantOf: { name: 'Basic Product' },
+        image: [
+          {},
+          {
+            url: 'https://via.placeholder.com/300',
+            alternateName: 'Product image',
+          },
+        ],
+        offers: {
+          offers: [
+            {
+              price: 59.9,
+              listPrice: 79.9,
+              availability: 'https://schema.org/InStock',
+            },
+          ],
+        },
+      }
+
+      const useFormattedPrice = (value: number) => `$${value.toFixed(2)}`
+
+      return (
+        <ProductCard>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            ratingValue={3.5}
+            onButtonClick={() => {}}
+          />
+        </ProductCard>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -480,26 +565,54 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   </Tab>
   <Tab>
     ```tsx
-    const outOfStock = product.offers.offers[0].availability !== 'https://schema.org/InStock'
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
 
-    <ProductCard outOfStock={outOfStock}>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        outOfStock={outOfStock}
-      />
-    </ProductCard>
+    export default function ProductCardOutOfStock() {
+      const product = {
+        isVariantOf: { name: 'Basic Product' },
+        image: [
+          {},
+          {
+            url: 'https://via.placeholder.com/300',
+            alternateName: 'Product image',
+          },
+        ],
+        offers: {
+          offers: [
+            {
+              price: 59.9,
+              listPrice: 79.9,
+              availability: 'https://schema.org/OutOfStock',
+            },
+          ],
+        },
+      }
+
+      const useFormattedPrice = (value: number) => `$${value.toFixed(2)}`
+      const outOfStock = product.offers.offers[0].availability !== 'https://schema.org/InStock'
+
+      return (
+        <ProductCard outOfStock={outOfStock}>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            outOfStock={outOfStock}
+          />
+        </ProductCard>
+      )
+    }
     ```
 
   </Tab>
@@ -549,25 +662,54 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard bordered>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
+
+    export default function ProductCardBordered() {
+      const product = {
+        isVariantOf: { name: 'Basic Product' },
+        image: [
+          {},
+          {
+            url: 'https://via.placeholder.com/300',
+            alternateName: 'Product image',
+          },
+        ],
+        offers: {
+          offers: [
+            {
+              price: 59.9,
+              listPrice: 79.9,
+              availability: 'https://schema.org/InStock',
+            },
+          ],
+        },
+      }
+
+      const useFormattedPrice = (value: number) => `$${value.toFixed(2)}`
+
+      return (
+        <ProductCard bordered>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            ratingValue={3.5}
+            onButtonClick={() => {}}
+          />
+        </ProductCard>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -635,48 +777,76 @@ Prefer using `buyButton` or `discountBadge`, never both.
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard variant="wide">
-    <ProductCardImage aspectRatio={2 / 1}>
-      <img
-        data-fs-image
-        src={product.image[1].url}
-        alt={product.image[1].alternateName}
-      />
-    </ProductCardImage>
-    <ProductCardContent
-      title={product.isVariantOf.name}
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      ratingValue={3.5}
-      onButtonClick={() => {}}
-    />
-  </ProductCard>
-    ```
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
 
-    ```tsx
-    <ProductCard variant="wide">
-    <ProductCardImage aspectRatio={2 / 1}>
-      <img
-        data-fs-image
-        src={product.image[1].url}
-        alt={product.image[1].alternateName}
-      />
-    </ProductCardImage>
-    <ProductCardContent
-      title={product.isVariantOf.name}
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      ratingValue={3.5}
-      showDiscountBadge
-    />
+    export default function ProductCardWideExamples() {
+      const product = {
+        isVariantOf: { name: 'Basic Product' },
+        image: [
+          {},
+          {
+            url: 'https://via.placeholder.com/300',
+            alternateName: 'Product image',
+          },
+        ],
+        offers: {
+          offers: [
+            {
+              price: 59.9,
+              listPrice: 79.9,
+              availability: 'https://schema.org/InStock',
+            },
+          ],
+        },
+      }
 
-  </ProductCard>
+      const useFormattedPrice = (value: number) => `$${value.toFixed(2)}`
+
+      return (
+        <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '0.5rem' }}>
+          <ProductCard variant="wide">
+            <ProductCardImage aspectRatio={2 / 1}>
+              <img
+                data-fs-image
+                src={product.image[1].url}
+                alt={product.image[1].alternateName}
+              />
+            </ProductCardImage>
+            <ProductCardContent
+              title={product.isVariantOf.name}
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+              ratingValue={3.5}
+              onButtonClick={() => {}}
+            />
+          </ProductCard>
+
+          <ProductCard variant="wide">
+            <ProductCardImage aspectRatio={2 / 1}>
+              <img
+                data-fs-image
+                src={product.image[1].url}
+                alt={product.image[1].alternateName}
+              />
+            </ProductCardImage>
+            <ProductCardContent
+              title={product.isVariantOf.name}
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+              ratingValue={3.5}
+              showDiscountBadge
+            />
+          </ProductCard>
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
