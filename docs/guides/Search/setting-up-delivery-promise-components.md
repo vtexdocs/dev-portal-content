@@ -80,7 +80,7 @@ To use Delivery Promise, customers must define a delivery address early in their
         },
    ```
 
-3. Configure the behavior with props to customize how location selection is presented. Below, we highlight some of the key uses of the available props.
+3. Configure the behavior with props to customize how location selection is presented. Below, we highlight key uses of the available props.
 
    * [Setting up a blocking modal](#setting-up-a-blocking-modal)
    * [Defining displayed delivery methods](#defining-displayed-delivery-methods)
