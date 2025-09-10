@@ -86,27 +86,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Size
 
-The `Badge` component can be displayed in two sizes: `small` (default) and `big`.
-
-#### Big
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Badge size="big">Big Badge</Badge>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Badge } from "@faststore/ui";
-
-    export default function BadgeBig() {
-      return <Badge size="big">Big Badge</Badge>;
-    }
-    ```
-  </Tab>
-</Tabs>
+The `Badge` component can be displayed in two sizes: [`small` (default)](#small) and [`big`](#big).
 
 #### Small (Default)
 
@@ -123,6 +103,26 @@ The `Badge` component can be displayed in two sizes: `small` (default) and `big`
 
     export default function BadgeSmall() {
       return <Badge size="small">Small Badge</Badge>;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Big
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge size="big">Big Badge</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeBig() {
+      return <Badge size="big">Big Badge</Badge>;
     }
     ```
   </Tab>
