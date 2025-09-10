@@ -5,7 +5,7 @@ components:
   - Checkbox.tsx
 ---
 
-<i class="fa-brands fa-github"></i> [Code source](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Checkbox)
+<i class="fa-brands fa-github"></i> [Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Checkbox)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -46,140 +46,77 @@ import { Checkbox } from '@faststore/ui'
 
 ### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Checkbox/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
 ## Examples
 
-<OverviewSection>
-  <Checkbox />
-</OverviewSection>
-```tsx
-import React from 'react'
-import { Checkbox } from '@faststore/ui'
-
-export default function CheckboxBasicUsage() {
-  return <Checkbox />
-}
-```
-
 ### Checked
 
-<OverviewSection>
-  <Checkbox checked />
-</OverviewSection>
-
-```tsx
-import React from 'react'
-import { Checkbox } from '@faststore/ui'
-
-export default function CheckboxChecked() {
-  return <Checkbox checked />
-}
-```
-
-<TokenTable>
-  <TokenRow
-    token="--fs-checkbox-checked-bkg-color"
-    value="var(--fs-color-primary-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-checked-bkg-color-hover"
-    value="var(--fs-color-primary-bkg-hover)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-checked-border-color-hover"
-    value="var(--fs-border-color-hover)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-checked-shadow-hover"
-    value="0 0 0 var(--fs-checkbox-border-width)
-          var(--fs-checkbox-checked-border-color-hover)"
-  />
-</TokenTable>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox checked />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Checkbox } from '@faststore/ui'
+    
+    export default function CheckboxChecked() {
+      return <Checkbox checked />
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ### Disabled
 
-<OverviewSection>
-  <Checkbox disabled readOnly />
-</OverviewSection>
-
-```tsx
-import React from 'react'
-import { Checkbox } from '@faststore/ui'
-
-export default function CheckboxDisabled() {
-  return <Checkbox disabled readOnly />
-}
-```
-
-<TokenTable>
-  <TokenRow
-    token="--fs-checkbox-disabled-bkg-color"
-    value="var(--fs-color-disabled-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-disabled-border-width"
-    value="var(--fs-checkbox-border-width)"
-  />
-  <TokenRow
-    token="--fs-checkbox-disabled-border-color"
-    value="var(--fs-border-color-disabled)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-disabled-text-color"
-    value="var(--fs-color-disabled-text)"
-    isColor
-  />
-</TokenTable>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox disabled readOnly />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+  ```tsx
+  import React from 'react'
+  import { Checkbox } from '@faststore/ui'
+  
+  export default function CheckboxDisabled() {
+    return <Checkbox disabled readOnly />
+  }
+  ```
+  </Tab>
+</Tabs>
 
 ### Partial
 
-<OverviewSection>
-  <Checkbox checked partial />
-</OverviewSection>
-```tsx
-import React from 'react'
-import { Checkbox } from '@faststore/ui'
-
-export default function CheckboxPartial() {
-  return <Checkbox checked partial />
-}
-```
-
-<TokenTable>
-  <TokenRow
-    token="--fs-checkbox-partial-bkg-color"
-    value="var(--fs-color-body-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-partial-border-width"
-    value="var(--fs-checkbox-border-width)"
-  />
-  <TokenRow
-    token="--fs-checkbox-partial-border-color"
-    value="var(--fs-color-primary-bkg)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-partial-bkg-color-hover"
-    value="var(--fs-color-primary-bkg-light)"
-    isColor
-  />
-</TokenTable>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox checked partial />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Checkbox } from '@faststore/ui'
+    
+    export default function CheckboxPartial() {
+      return <Checkbox checked partial />
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
@@ -221,11 +158,84 @@ export default function CheckboxPartial() {
   />
 </TokenTable>
 
+### Design tokens: Checked
+
+<TokenTable>
+  <TokenRow
+    token="--fs-checkbox-checked-bkg-color"
+    value="var(--fs-color-primary-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-checked-bkg-color-hover"
+    value="var(--fs-color-primary-bkg-hover)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-checked-border-color-hover"
+    value="var(--fs-border-color-hover)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-checked-shadow-hover"
+    value="0 0 0 var(--fs-checkbox-border-width)
+          var(--fs-checkbox-checked-border-color-hover)"
+  />
+</TokenTable>
+
+### Design tokens: Disabled
+
+<TokenTable>
+  <TokenRow
+    token="--fs-checkbox-disabled-bkg-color"
+    value="var(--fs-color-disabled-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-disabled-border-width"
+    value="var(--fs-checkbox-border-width)"
+  />
+  <TokenRow
+    token="--fs-checkbox-disabled-border-color"
+    value="var(--fs-border-color-disabled)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-disabled-text-color"
+    value="var(--fs-color-disabled-text)"
+    isColor
+  />
+</TokenTable>
+
+### Design tokens: Partial
+
+<TokenTable>
+  <TokenRow
+    token="--fs-checkbox-partial-bkg-color"
+    value="var(--fs-color-body-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-partial-border-width"
+    value="var(--fs-checkbox-border-width)"
+  />
+  <TokenRow
+    token="--fs-checkbox-partial-border-color"
+    value="var(--fs-color-primary-bkg)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-partial-bkg-color-hover"
+    value="var(--fs-color-primary-bkg-light)"
+    isColor
+  />
+</TokenTable>
+
 ---
 
 ## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Checkbox` styles using the following data attributes:
 
 `data-fs-checkbox`
 
