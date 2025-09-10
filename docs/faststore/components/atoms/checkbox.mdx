@@ -9,7 +9,7 @@ components:
 
 Checkboxes are interactive form controls that let users select one or more options by toggling them on or off. They are commonly used in forms, filter panels, and preference settings.
 
-The `Checkbox` component provides accessible markup, design tokens for customization, and states for `checked`, `unchecked`, `disabled`, and partially (`partial`) checked usage.
+The `Checkbox` component provides accessible markup, design tokens for customization, and states for `checked`, `disabled`, and partially (`partial`) checked usage.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -256,7 +256,12 @@ You can target and override `Checkbox` styles using the following data attribute
 
 ### ✅ Do's
 
-- Provide a [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) when using a checkbox input. Descriptive labels help users understand the purpose of a form control.
+- Always pair a Checkbox with a descriptive [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) to improve accessibility and clarify the option’s purpose.
+
+### ❌ Don’ts
+
+- Don’t use a `Checkbox` when only one option is possible. In this case, use a [Radio](https://developers.vtex.com/docs/guides/faststore/atoms-radio) instead.
+- Don’t use checkboxes for actions that happen immediately on click (e.g., submitting data)—they should only toggle state.
 
 ---
 
