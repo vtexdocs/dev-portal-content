@@ -5,7 +5,7 @@ components:
   - Checkbox.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Code source](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Checkbox)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -36,15 +36,15 @@ components:
 </Tabs>
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Checkbox } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
 To apply the styles of this component in your FastStore project, import the following into your stylesheet:
 
@@ -56,7 +56,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Usage
+## Examples
 
 <OverviewSection>
   <Checkbox />
@@ -69,56 +69,6 @@ export default function CheckboxBasicUsage() {
   return <Checkbox />
 }
 ```
-
----
-
-## Props
-
-<ComponentPropsSection component="Checkbox" />
-
----
-
-## Design Tokens
-
-<TokenTable>
-  <TokenRow token="--fs-checkbox-width" value="1.25rem" />
-  <TokenRow token="--fs-checkbox-height" value="var(--fs-checkbox-width)" />
-  <TokenDivider />
-  <TokenRow token="--fs-checkbox-border-width" value="var(--fs-border-width)" />
-  <TokenRow
-    token="--fs-checkbox-border-radius"
-    value="var(--fs-border-radius)"
-  />
-  <TokenRow
-    token="--fs-checkbox-border-color"
-    value="var(--fs-border-color)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-border-color-hover"
-    value="var(--fs-border-color-active)"
-    isColor
-  />
-  <TokenDivider />
-  <TokenRow
-    token="--fs-checkbox-transition"
-    value="border var(--fs-transition-timing) var(--fs-transition-function), background-color var(--fs-transition-timing) var(--fs-transition-function), box-shadow var(--fs-transition-timing) var(--fs-transition-function)"
-  />
-  <TokenDivider />
-  <TokenRow
-    token="--fs-checkbox-bkg-color-hover"
-    value="var(--fs-color-primary-bkg-light)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-checkbox-shadow-hover"
-    value="0 0 0 var(--fs-checkbox-border-width) var(--fs-border-color-active)"
-  />
-</TokenTable>
-
----
-
-## Examples
 
 ### Checked
 
@@ -233,7 +183,47 @@ export default function CheckboxPartial() {
 
 ---
 
-## Customization
+## Design tokens
+
+<TokenTable>
+  <TokenRow token="--fs-checkbox-width" value="1.25rem" />
+  <TokenRow token="--fs-checkbox-height" value="var(--fs-checkbox-width)" />
+  <TokenDivider />
+  <TokenRow token="--fs-checkbox-border-width" value="var(--fs-border-width)" />
+  <TokenRow
+    token="--fs-checkbox-border-radius"
+    value="var(--fs-border-radius)"
+  />
+  <TokenRow
+    token="--fs-checkbox-border-color"
+    value="var(--fs-border-color)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-border-color-hover"
+    value="var(--fs-border-color-active)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-checkbox-transition"
+    value="border var(--fs-transition-timing) var(--fs-transition-function), background-color var(--fs-transition-timing) var(--fs-transition-function), box-shadow var(--fs-transition-timing) var(--fs-transition-function)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-checkbox-bkg-color-hover"
+    value="var(--fs-color-primary-bkg-light)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-checkbox-shadow-hover"
+    value="0 0 0 var(--fs-checkbox-border-width) var(--fs-border-color-active)"
+  />
+</TokenTable>
+
+---
+
+## Data attributes
 
 For further customization, you can use the following data attributes:
 
@@ -241,7 +231,13 @@ For further customization, you can use the following data attributes:
 
 ---
 
-## Best Practices
+## Props
+
+<ComponentPropsSection component="Checkbox" />
+
+---
+
+## Best practices
 
 ### ✅ Do's
 
