@@ -8,29 +8,9 @@ components:
   - SearchAutoCompleteTerm.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/SearchAutoComplete)
+
 List of auto completing suggestions based on searched term. This component is part of the [Search](https://developers.vtex.com/docs/guides/faststore/feature-search) feature.
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { SearchAutoComplete, SearchAutoCompleteTerm } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/SearchAutoComplete/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -70,21 +50,76 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   </Tab>
 </Tabs>
 
+## Usage
+
+### Import the component
+
+```tsx
+import { SearchAutoComplete, SearchAutoCompleteTerm } from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/SearchAutoComplete/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-### SearchAutoComplete
+## Other Icons
 
-<ComponentPropsSection component="SearchAutoComplete" />
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection direction="column">
+      Searching for: <code>{searchContentAlt}</code>
+      <SearchAutoComplete>
+        {suggestionsAlt?.map((suggestion) => (
+          <SearchAutoCompleteTerm
+            key={suggestion.value}
+            term={searchContentAlt}
+            suggestion={suggestion.value}
+            icon={suggestion.icon}
+            linkProps={{ href: '#' }}
+          />
+        ))}
+      </SearchAutoComplete>
+    </OverviewSection>
+  </Tab>
+  <Tab>
 
-### SearchAutoCompleteTerm
+    ```tsx
+    const searchContent = 'So'
 
-<ComponentPropsSection component="SearchAutoCompleteTerm" />
+    const suggestions = [
+      { value: 'sony headphone', icon: <Icon name="Tag" /> },
+      { value: 'sound speaker', icon: <Icon name="FadersHorizontal" /> },
+    ]
+
+    <SearchAutoComplete>
+      {suggestions?.map((suggestion) => (
+        <SearchAutoCompleteTerm
+          key={suggestion.value}
+          term={searchContent}
+          suggestion={suggestion.value}
+          icon={suggestion.icon}
+          linkProps={{ href: '#' }}
+        />
+      ))}
+    </SearchAutoComplete>
+    ```
+
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -152,58 +187,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Variants
+## Data attributes
 
-## Other Icons
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection direction="column">
-      Searching for: <code>{searchContentAlt}</code>
-      <SearchAutoComplete>
-        {suggestionsAlt?.map((suggestion) => (
-          <SearchAutoCompleteTerm
-            key={suggestion.value}
-            term={searchContentAlt}
-            suggestion={suggestion.value}
-            icon={suggestion.icon}
-            linkProps={{ href: '#' }}
-          />
-        ))}
-      </SearchAutoComplete>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-    ```tsx
-    const searchContent = 'So'
-
-    const suggestions = [
-      { value: 'sony headphone', icon: <Icon name="Tag" /> },
-      { value: 'sound speaker', icon: <Icon name="FadersHorizontal" /> },
-    ]
-
-    <SearchAutoComplete>
-      {suggestions?.map((suggestion) => (
-        <SearchAutoCompleteTerm
-          key={suggestion.value}
-          term={searchContent}
-          suggestion={suggestion.value}
-          icon={suggestion.icon}
-          linkProps={{ href: '#' }}
-        />
-      ))}
-    </SearchAutoComplete>
-    ```
-
-  </Tab>
-</Tabs>
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
+You can target and override `SearchAutoComplete` styles using the following data attributes:
 
 `data-fs-search-auto-complete`
 
@@ -212,3 +198,15 @@ For further customization, you can use the following data attributes:
 `data-fs-search-auto-complete-item-link`
 
 `data-fs-search-auto-complete-item-icon`
+
+---
+
+## Props
+
+### SearchAutoComplete
+
+<ComponentPropsSection component="SearchAutoComplete" />
+
+### SearchAutoCompleteTerm
+
+<ComponentPropsSection component="SearchAutoCompleteTerm" />

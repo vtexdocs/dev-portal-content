@@ -10,40 +10,15 @@ components:
   - SearchProductItemContent.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/SearchProducts)
+
 List of `SearchProductItem` to show details of the suggested products. This component is part of the [Search](https://developers.vtex.com/docs/guides/faststore/feature-search) feature.
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import {
-  SearchProducts,
-  SearchProductItem,
-  SearchProductItemImage,
-  SearchProductItemContent,
-} from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/SearchProducts/styles.scss'
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <SearchProducts>
-        <SearchProductItem linkProps={{ href: '#' }}>
+        <SearchProductItem linkProps={{ href: "#" }}>
           <SearchProductItemImage>
             <img
               data-fs-image
@@ -60,7 +35,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
             }}
           />
         </SearchProductItem>
-        <SearchProductItem linkProps={{ href: '#' }}>
+        <SearchProductItem linkProps={{ href: "#" }}>
           <SearchProductItemImage>
             <img
               data-fs-image
@@ -83,7 +58,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <Tab>
     ```tsx
     <SearchProducts>
-      <SearchProductItem linkProps={{ href: '#' }}>
+      <SearchProductItem linkProps={{ href: "#" }}>
         <SearchProductItemImage>
           <img
             data-fs-image
@@ -100,7 +75,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
           }}
         />
       </SearchProductItem>
-      <SearchProductItem linkProps={{ href: '#' }}>
+      <SearchProductItem linkProps={{ href: "#" }}>
         <SearchProductItemImage>
           <img
             data-fs-image
@@ -124,35 +99,32 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Props
+## Usage
 
-All search product related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
+### Import the component
 
-### SearchProducts
+```tsx
+import {
+  SearchProducts,
+  SearchProductItem,
+  SearchProductItemImage,
+  SearchProductItemContent,
+} from "@faststore/ui";
+```
 
-<ComponentPropsSection component="SearchProducts" />
+### Import styles
 
-### SearchProductItem
+To apply styles, include the following in your stylesheet:
 
-<ComponentPropsSection component="SearchProductItem" />
+```scss
+@import "@faststore/ui/src/components/molecules/SearchProducts/styles.scss";
+```
 
-### SearchProductItemImage
-
-<ComponentPropsSection component="SearchProductItemImage" />
-
-### SearchProductItemContent
-
-<ComponentPropsSection component="SearchProductItemContent" />
-
-### Other Resources
-
-#### PriceDefinition
-
-<PropsSection propsList={propsPriceDefinition} />
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -289,9 +261,9 @@ All search product related components support all attributes also supported by t
 </TokenTable>
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `SearchProducts` styles using the following data attributes:
 
 `data-fs-search-products`
 
@@ -306,3 +278,31 @@ For further customization, you can use the following data attributes:
 `data-fs-search-product-item-image`
 
 `data-fs-search-product-item-content`
+
+---
+
+## Props
+
+All search product related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
+
+### SearchProducts
+
+<ComponentPropsSection component="SearchProducts" />
+
+### SearchProductItem
+
+<ComponentPropsSection component="SearchProductItem" />
+
+### SearchProductItemImage
+
+<ComponentPropsSection component="SearchProductItemImage" />
+
+### SearchProductItemContent
+
+<ComponentPropsSection component="SearchProductItemContent" />
+
+### Other Resources
+
+#### PriceDefinition
+
+<PropsSection propsList={propsPriceDefinition} />

@@ -9,13 +9,12 @@ components:
   - CartItemSummary.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/CartItem)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
       <CartItemExample/>
-      <CartItemExampleUnavailable/>
     </OverviewSection>
   </Tab>
   <Tab>
@@ -42,7 +41,43 @@ components:
     </CartItem>
     ```
 
-    ```tsx
+  </Tab>
+</Tabs>
+
+---
+
+## Usage
+
+### Import the component
+
+```tsx
+import { CartItem, CartItemImage, CartItemSummary } from '@faststore/ui'
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/atoms/CartItem/styles.scss';
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Examples
+
+### Unavailable
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection><
+      <CartItemExampleUnavailable/>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+     ```tsx
     <CartItem
       price={{
         value: product.offers.offers[0].price,
@@ -65,90 +100,12 @@ components:
       />
     </CartItem>
     ```
-
   </Tab>
 </Tabs>
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { CartItem, CartItemImage, CartItemSummary } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/atoms/CartItem/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection><CartItemExample/></OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-      <CartItem
-      price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-      quantity={3}
-    >
-      <CartItemImage>
-        <img
-          data-fs-image
-          src={product.image[0].url}
-          alt={product.image[0].alternateName}
-        />
-      </CartItemImage>
-      <CartItemSummary
-        title={product.isVariantOf.name}
-        activeVariations={activeVariations}
-      />
-    </CartItem>
-    ```
-
-  </Tab>
-</Tabs>
-
----
-
-## Props
-
-### CartItem
-
-<ComponentPropsSection component="CartItem" />
-
-### CartItemImage
-
-<ComponentPropsSection component="CartItemImage" />
-
-### CartItemSummary
-
-<ComponentPropsSection component="CartItemSummary" />
-
-### Other Resources
-
-#### PriceDefinition
-
-<PropsSection propsList={propsPriceDefinition} />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-cart-item-padding" value="var(--fs-spacing-3)" />
@@ -239,9 +196,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `CartItem` styles using the following data attributes:
 
 `data-fs-cart-item`
 
@@ -262,3 +219,25 @@ For further customization, you can use the following data attributes:
 `data-fs-cart-item-prices`
 
 `data-fs-cart-item-actions`
+
+---
+
+## Props
+
+### CartItem
+
+<ComponentPropsSection component="CartItem" />
+
+### CartItemImage
+
+<ComponentPropsSection component="CartItemImage" />
+
+### CartItemSummary
+
+<ComponentPropsSection component="CartItemSummary" />
+
+### Other Resources
+
+#### PriceDefinition
+
+<PropsSection propsList={propsPriceDefinition} />

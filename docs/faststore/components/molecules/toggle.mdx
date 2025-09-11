@@ -1,15 +1,15 @@
 ---
 title: "Toggle"
 excerpt: Toggle is a customized checkbox input styled to look like a switch button.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/RadioLabel___b3fc3b7a139796e4921349df5aaa270c.png
+components:
+  - Toggle.tsx
 ---
+
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Toggle)
 
 The Toggle is a customized checkbox input styled to look like a switch button.
 
-## Overview
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Toggle id="toggle-default" />
@@ -30,45 +30,77 @@ The Toggle is a customized checkbox input styled to look like a switch button.
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Toggle } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/Toggle/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<OverviewSection>
-  <Toggle id="toggle-example" />
-</OverviewSection>
+### Import the component
 
 ```tsx
-<Toggle id="toggle-example" />
+import { Toggle } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/Toggle/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Toggle" />
+### Variants
+
+#### Checked
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Toggle id="toggle-checked" label="Checked" checked readOnly />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Toggle id="toggle-checked" label="Checked" checked readOnly />
+    ```
+  </Tab>
+</Tabs>
+
+#### Disabled
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Toggle id="toggle-disabled" label="Disabled" disabled />
+      <Toggle
+        id="toggle-disabled-checked"
+        label="Disabled Checked"
+        disabled
+        checked
+        readOnly
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Toggle id="toggle-disabled" label="Disabled" disabled />
+    <Toggle
+      id="toggle-disabled-checked"
+      label="Disabled Checked"
+      disabled
+      checked
+      readOnly
+    />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -206,17 +238,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
-
-#### Checked
-
-<OverviewSection>
-  <Toggle id="toggle-checked" label="Checked" checked readOnly />
-</OverviewSection>
-
-```tsx
-<Toggle id="toggle-checked" label="Checked" checked readOnly />
-```
+### Design tokens: Checked
 
 <TokenTable>
   <TokenRow
@@ -243,29 +265,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Disabled
-
-<OverviewSection>
-  <Toggle id="toggle-disabled" label="Disabled" disabled />
-  <Toggle
-    id="toggle-disabled-checked"
-    label="Disabled Checked"
-    disabled
-    checked
-    readOnly
-  />
-</OverviewSection>
-
-```tsx
-<Toggle id="toggle-disabled" label="Disabled" disabled />
-<Toggle
-  id="toggle-disabled-checked"
-  label="Disabled Checked"
-  disabled
-  checked
-  readOnly
-/>
-```
+### Design tokens: Disabled
 
 <TokenTable>
   <TokenRow
@@ -282,9 +282,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Toggle` styles using the following data attributes:
 
 `data-fs-toggle`
 
@@ -293,6 +293,12 @@ For further customization, you can use the following data attributes:
 `data-fs-toggle-variant="vertical"`
 
 `data-fs-toggle-knob`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Toggle" />
 
 ---
 

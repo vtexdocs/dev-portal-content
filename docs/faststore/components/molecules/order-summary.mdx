@@ -11,29 +11,9 @@ components:
   - OrderSummary.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/OrderSummary)
+
 The `OrderSummary` provides a summary of the items in the cart, including the total price, related shipping tax, and discounts.
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { OrderSummary } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/OrderSummary/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -60,15 +40,27 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   </Tab>
 </Tabs>
 
+## Usage
+
+### Import the component
+
+```tsx
+import { OrderSummary } from '@faststore/ui'
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/molecules/OrderSummary/styles.scss';
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
-
-<ComponentPropsSection component="OrderSummary" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-order-summary-padding" value="var(--fs-spacing-3)" />
@@ -113,7 +105,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `OrderSummary` styles using the following data attributes:
 
 `data-fs-order-summary`
 
@@ -136,3 +130,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 `data-fs-order-summary-total-value`
 
 `data-fs-order-summary-taxes-label`
+
+---
+
+## Props
+
+<ComponentPropsSection component="OrderSummary" />

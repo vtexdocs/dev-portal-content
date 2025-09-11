@@ -6,38 +6,13 @@ components:
   - NavbarLinksList.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/NavbarLinks)
+
 The `NavbarLinks` component displays a set of navigation links that self adapts on mobile or desktop screens.
 
 This component is part of the [Navigation](https://developers.vtex.com/docs/guides/faststore/feature-navigation) feature and must be used in the [Navbar](https://developers.vtex.com/docs/guides/faststore/organisms-navbar) context.
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import {
-  NavbarLinks,
-  NavbarLinksList,
-  NavbarLinksListItem,
-} from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/NavbarLinks/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
-
-> ⚠️ The mobile version can be achieved with
-  [NavbarSlider](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider) as wrapper.
+> ⚠️ The mobile version can be achieved with [NavbarSlider](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider) as wrapper.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -74,21 +49,31 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   </Tab>
 </Tabs>
 
+## Usage
+
+### Import the component
+
+```tsx
+import {
+  NavbarLinks,
+  NavbarLinksList,
+  NavbarLinksListItem,
+} from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/NavbarLinks/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
-
-### NavbarLinks
-
-<ComponentPropsSection component="NavbarLinks" />
-
-### NavbarLinksList
-
-<ComponentPropsSection component="NavbarLinksList" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -167,15 +152,27 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `NavbarLinks` styles using the following data attributes:
 
 `data-fs-navbar-links`
 
 `data-fs-navbar-links-list`
 
 `data-fs-navbar-links-list-item`
+
+---
+
+## Props
+
+### NavbarLinks
+
+<ComponentPropsSection component="NavbarLinks" />
+
+### NavbarLinksList
+
+<ComponentPropsSection component="NavbarLinksList" />
 
 ---
 

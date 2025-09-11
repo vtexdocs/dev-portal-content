@@ -7,7 +7,7 @@ components:
   - Breadcrumb.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Breadcrumb)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -58,44 +58,27 @@ components:
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Breadcrumb } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/molecules/Breadcrumb/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<OverviewSection>
-  <Breadcrumb breadcrumbList={breadcrumbList} />
-</OverviewSection>
-```tsx
-<Breadcrumb breadcrumbList={breadcrumbList} />
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="Breadcrumb" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-breadcrumb-margin-left" value="var(--fs-spacing-0)" />
@@ -213,9 +196,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Breadcrumb` styles using the following data attributes:
 
 `data-fs-breadcrumb`
 
@@ -236,3 +219,9 @@ For further customization, you can use the following data attributes:
 `data-fs-breadcrumb-dropdown-link`
 
 `data-fs-breadcrumb-is-desktop="true | false"`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Breadcrumb" />

@@ -11,12 +11,11 @@ components:
   - RegionBar.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/RegionBar)
+
 The `RegionBar` is a custom button, usually used only on mobile devices. It should trigger the [RegionModal](https://developers.vtex.com/docs/guides/faststore/organisms-region-modal).
 
 The component is part of the [Regionalization](https://developers.vtex.com/docs/guides/faststore/feature-regionalization) feature.
-
-
-## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -60,57 +59,27 @@ The component is part of the [Regionalization](https://developers.vtex.com/docs/
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { RegionBar } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/molecules/RegionBar/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<OverviewSection>
-  <UIProvider>
-    <RegionBarUsage />
-  </UIProvider>
-</OverviewSection>
-
-```tsx
-const { modal, openModal } = useUI()
-return (
-  <>
-    <RegionBar
-      icon={<Icon name="MapPin" />}
-      postalCode={'151515'}
-      onButtonClick={() => openModal()}
-    />
-    {modal && <RegionModal fadeOutOnSubmit={true} />}
-  </>
-)
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="RegionBar" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-region-bar-width" value="100%" />
@@ -176,9 +145,9 @@ return (
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `RegionBar` styles using the following data attributes:
 
 `data-fs-region-bar`
 
@@ -199,3 +168,9 @@ For further customization, you can use the following data attributes:
 `data-fs-region-bar-location-message`
 
 `data-fs-region-bar-location-postal-code`
+
+---
+
+## Props
+
+<ComponentPropsSection component="RegionBar" />

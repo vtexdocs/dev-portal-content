@@ -5,9 +5,9 @@ components:
   - Rating.tsx
 ---
 
-The `Rating` component displays a product’s average rating based on shopper feedback and reviews. It supports customizable icons provided by the [Icon component](https://developers.vtex.com/docs/guides/faststore/reference-icons).
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Rating)
 
-## Overview
+The `Rating` component displays a product’s average rating based on shopper feedback and reviews. It supports customizable icons provided by the [Icon component](https://developers.vtex.com/docs/guides/faststore/reference-icons).
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -36,96 +36,101 @@ The `Rating` component displays a product’s average rating based on shopper fe
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Rating } from '@faststore/ui'
-```
-
-### Import styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/Rating/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<OverviewSection>
-  <Rating value={3.5} icon={<Icon name="Star" />} />
-</OverviewSection>
+### Import the component
+
 ```tsx
-<Rating value={3.5} icon={<Icon name="Star" />} />
+import { Rating } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/Rating/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Rating" />
+### Readonly
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Rating value={3.5} icon={<Icon name="Star" />} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Rating value={3.5} icon={<Icon name="Star" />} />
+    ```
+  </Tab>
+</Tabs>
+
+### Actionable
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <RatingActionable value={3} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx const [rating, setRating] = useState(3)
+    <Rating value={rating} onChange={setRating} icon={<Icon name="Star" />} />
+    ```
+  </Tab>
+</Tabs>
+
+#### Other icon
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Rating value={3.5} icon={<Icon name="Heart" />} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Rating value={3.8} icon={<Icon name="Heart" />} />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-rating-gap" value="var(--fs-spacing-0)" />
   <TokenRow token="--fs-rating-color" value="var(--fs-color-text)" isColor />
-  <TokenRow token="--fs-rating-color-empty" value="var(--fs-color-neutral-4)" isColor />
+  <TokenRow
+    token="--fs-rating-color-empty"
+    value="var(--fs-color-neutral-4)"
+    isColor
+  />
 </TokenTable>
 
-### Nested elements
-
-#### Icon
+### Design tokens: Icon
 
 <TokenTable>
   <TokenRow token="--fs-rating-icon-width" value="var(--fs-spacing-3)" />
-  <TokenRow token="--fs-rating-icon-height"  value="var(--fs-rating-icon-width)" />
+  <TokenRow
+    token="--fs-rating-icon-height"
+    value="var(--fs-rating-icon-width)"
+  />
 </TokenTable>
 
-### Variants
-
-#### Readonly
-
-<OverviewSection>
-  <Rating value={3.5} icon={<Icon name="Star" />} />
-</OverviewSection>
-```tsx
-<Rating value={3.5} icon={<Icon name="Star" />} />
-```
-
-#### Other icon
-
-<OverviewSection>
-  <Rating value={3.5} icon={<Icon name="Heart" />} />
-</OverviewSection>
-```tsx
-<Rating value={3.8} icon={<Icon name="Heart" />} />
-```
-
-#### Actionable
-
-<OverviewSection>
-  <RatingActionable value={3} />
-</OverviewSection>
-
-```tsx
-const [rating, setRating] = useState(3)
-<Rating value={rating} onChange={setRating} icon={<Icon name="Star" />} />
-```
+### Design tokens: Actionable
 
 <TokenTable>
-  <TokenRow
-    token="--fs-rating-actionable-gap"
-    value="0"
-  />
+  <TokenRow token="--fs-rating-actionable-gap" value="0" />
   <TokenRow
     token="--fs-rating-actionable-icon-width"
     value="var(--fs-rating-icon-width)"
@@ -144,17 +149,14 @@ const [rating, setRating] = useState(3)
     value="var(--fs-rating-color)"
     isColor
   />
-  <TokenRow
-    token="--fs-rating-button-min-height"
-    value="var(--fs-spacing-5)"
-  />
+  <TokenRow token="--fs-rating-button-min-height" value="var(--fs-spacing-5)" />
 </TokenTable>
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Rating` styles using the following data attributes:
 
 `data-fs-rating`
 
@@ -167,3 +169,9 @@ For further customization, you can use the following data attributes:
 `data-fs-rating-item="empty" | "partial"`
 
 `data-fs-rating-actionable="true"`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Rating" />

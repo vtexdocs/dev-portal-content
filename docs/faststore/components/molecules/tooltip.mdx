@@ -5,6 +5,8 @@ components:
   - Tooltip.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Tooltip)
+
 `Tooltip` is a component that provides contextual information when users hover over or click an element.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
@@ -32,29 +34,23 @@ components:
 </Tabs>
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Tooltip } from '@faststore/ui'
 ```
 
-### Import styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/molecules/Tooltip/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Props
-
-<ComponentPropsSection component="Tooltip" />
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
@@ -131,9 +127,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Tooltip` styles using the following data attributes:
 
 `data-fs-tooltip`
 
@@ -144,3 +140,9 @@ For further customization, you can use the following data attributes:
 `data-fs-tooltip-dismiss-button`
 
 `data-fs-tooltip-indicator`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Tooltip" />

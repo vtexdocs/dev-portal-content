@@ -8,68 +8,68 @@ components:
   - SearchTopTerm.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/SearchTop)
+
 This section displays the most searched terms by customers. This component is part of the [Search](https://developers.vtex.com/docs/guides/faststore/feature-search) feature.
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { SearchTop, SearchTopTerm } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/SearchTop/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SearchTop title="Top Search">
+        <SearchTopTerm value="Notebooks" linkProps={{ href: "#" }} index={0} />
+        <SearchTopTerm
+          value="Laser Printer"
+          linkProps={{ href: "#" }}
+          index={1}
+        />
+        <SearchTopTerm
+          value="Bluetooth Keyboard"
+          linkProps={{ href: "#" }}
+          index={2}
+        />
+      </SearchTop>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <SearchTop title="Top Search">
+      <SearchTopTerm value="Notebooks" linkProps={{ href: "#" }} index={0} />
+      <SearchTopTerm
+        value="Laser Printer"
+        linkProps={{ href: "#" }}
+        index={1}
+      />
+      <SearchTopTerm
+        value="Bluetooth Keyboard"
+        linkProps={{ href: "#" }}
+        index={2}
+      />
+    </SearchTop>
+    ```
+  </Tab>
+</Tabs>
 
 ## Usage
 
-<OverviewSection>
-  <SearchTop title="Top Search">
-    <SearchTopTerm value="Notebooks" linkProps={{ href: '#' }} index={0} />
-    <SearchTopTerm value="Laser Printer" linkProps={{ href: '#' }} index={1} />
-    <SearchTopTerm
-      value="Bluetooth Keyboard"
-      linkProps={{ href: '#' }}
-      index={2}
-    />
-  </SearchTop>
-</OverviewSection>
+### Import the component
+
 ```tsx
-<SearchTop title="Top Search">
-  <SearchTopTerm value="Notebooks" linkProps={{ href: '#' }} index={0} />
-  <SearchTopTerm value="Laser Printer" linkProps={{ href: '#' }} index={1} />
-  <SearchTopTerm
-    value="Bluetooth Keyboard"
-    linkProps={{ href: '#' }}
-    index={2}
-  />
-</SearchTop>
+import { SearchTop, SearchTopTerm } from "@faststore/ui";
 ```
 
----
+### Import styles
 
-## Props
+To apply styles, include the following in your stylesheet:
 
-### SearchTop
+```scss
+@import "@faststore/ui/src/components/molecules/SearchTop/styles.scss";
+```
 
-<ComponentPropsSection component="SearchTop" />
-
-### SearchTopTerm
-
-<ComponentPropsSection component="SearchTopTerm" />
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-search-top-padding-top" value="var(--fs-spacing-2)" />
@@ -143,9 +143,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `SearchTop` styles using the following data attributes:
 
 `data-fs-search-top`
 
@@ -158,3 +158,15 @@ For further customization, you can use the following data attributes:
 `data-fs-search-top-item-link`
 
 `data-fs-search-top-item-badge`
+
+---
+
+## Props
+
+### SearchTop
+
+<ComponentPropsSection component="SearchTop" />
+
+### SearchTopTerm
+
+<ComponentPropsSection component="SearchTopTerm" />

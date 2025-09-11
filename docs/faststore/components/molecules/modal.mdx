@@ -8,6 +8,8 @@ components:
   - ModalFooter.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Modal)
+
 `Modal` is a dialog window that sits on top of an application's main view.
 
 The `Modal` component consists of the following:
@@ -16,30 +18,6 @@ The `Modal` component consists of the following:
 - `ModalHeader`: Wraps the Modal header. It may contain a title, description, and a close button. (Optional)
 - `ModalBody`: Wraps the Modal body content. (Optional)
 - `ModalFooter`: Wraps the Modal footer that contains buttons for canceling or submitting.
-
----
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Modal, ModalHeader, ModalBody, ModalFooter } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/Modal/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -85,31 +63,27 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Props
+## Usage
 
-All modal-related components support all attributes that are also supported by the `<div>` tag.
+### Import the component
 
-The following props are also supported:
+```tsx
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "@faststore/ui";
+```
 
-### Modal
+### Import styles
 
-<ComponentPropsSection component="Modal" />
+To apply styles, include the following in your stylesheet:
 
-### ModalHeader
+```scss
+@import "@faststore/ui/src/components/molecules/Modal/styles.scss";
+```
 
-<ComponentPropsSection component="ModalHeader" />
-
-### ModalBody
-
-<ComponentPropsSection component="ModalBody" />
-
-### ModalFooter
-
-<ComponentPropsSection component="ModalFooter" />
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-modal-position-top" value="30vh" />
@@ -203,15 +177,14 @@ The following props are also supported:
     token="--fs-modal-footer-actions-padding"
     value="var(--fs-spacing-1) var(--fs-spacing-4)"
   />
-  <TokenRow
-    token="--fs-modal-footer-actions-gap"
-    value="var(--fs-spacing-3)"
-  />
+  <TokenRow token="--fs-modal-footer-actions-gap" value="var(--fs-spacing-3)" />
 </TokenTable>
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `Modal` styles using the following data attributes:
 
 `data-fs-modal`
 
@@ -234,3 +207,27 @@ The following props are also supported:
 `data-fs-modal-footer-actions-direction`
 
 `data-fs-modal-footer-actions-wrap`
+
+---
+
+## Props
+
+All modal-related components support all attributes that are also supported by the `<div>` tag.
+
+The following props are also supported:
+
+### Modal
+
+<ComponentPropsSection component="Modal" />
+
+### ModalHeader
+
+<ComponentPropsSection component="ModalHeader" />
+
+### ModalBody
+
+<ComponentPropsSection component="ModalBody" />
+
+### ModalFooter
+
+<ComponentPropsSection component="ModalFooter" />

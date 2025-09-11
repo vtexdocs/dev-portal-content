@@ -7,9 +7,9 @@ components:
   - QuantitySelector.tsx
 ---
 
-The `QuantitySelector` component allows customers to select the quantity of a given product to purchase.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/QuantitySelector)
 
-## Overview
+The `QuantitySelector` component allows customers to select the quantity of a given product to purchase.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -27,17 +27,17 @@ The `QuantitySelector` component allows customers to select the quantity of a gi
 </Tabs>
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { QuantitySelector } from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```tsx
 import "@faststore/ui/src/components/molecules/QuantitySelector/styles.scss";
@@ -45,21 +45,22 @@ import "@faststore/ui/src/components/molecules/QuantitySelector/styles.scss";
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <QuantitySelector min={1} max={10} initial={5} />
-</OverviewSection>
+### Disabled
 
-```tsx
-<QuantitySelector min={1} max={10} initial={5} />
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="QuantitySelector" />
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <QuantitySelector min={1} max={10} initial={5} disabled />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <QuantitySelector min={1} max={10} initial={5} disabled />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
@@ -145,18 +146,7 @@ import "@faststore/ui/src/components/molecules/QuantitySelector/styles.scss";
   />
 </TokenTable>
 
----
-
-### Variants
-
-#### Disabled
-
-<OverviewSection>
-  <QuantitySelector min={1} max={10} initial={5} disabled />
-</OverviewSection>
-```tsx
-<QuantitySelector min={1} max={10} initial={5} disabled />
-```
+### Design tokens: Disabled
 
 <TokenTable>
   <TokenRow
@@ -178,9 +168,9 @@ import "@faststore/ui/src/components/molecules/QuantitySelector/styles.scss";
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `QuantitySelector` styles using the following data attributes:
 
 `data-fs-quantity-selector`
 
@@ -189,3 +179,9 @@ For further customization, you can use the following data attributes:
 `data-quantity-selector-button="left" | "right"`
 
 `data-quantity-selector-input`
+
+---
+
+## Props
+
+<ComponentPropsSection component="QuantitySelector" />
