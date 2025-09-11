@@ -51,7 +51,7 @@ components:
 ### Import the component
 
 ```tsx
-import { CartItem, CartItemImage, CartItemSummary } from '@faststore/ui'
+import { CartItem, CartItemImage, CartItemSummary } from "@faststore/ui";
 ```
 
 ### Import styles
@@ -59,7 +59,7 @@ import { CartItem, CartItemImage, CartItemSummary } from '@faststore/ui'
 To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/atoms/CartItem/styles.scss';
+@import "@faststore/ui/src/components/atoms/CartItem/styles.scss";
 ```
 
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
@@ -70,14 +70,14 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Unavailable
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
-    <OverviewSection><
-      <CartItemExampleUnavailable/>
+    <OverviewSection>
+      <CartItemExampleUnavailable />
     </OverviewSection>
   </Tab>
   <Tab>
-     ```tsx
+    ```tsx
     <CartItem
       price={{
         value: product.offers.offers[0].price,
