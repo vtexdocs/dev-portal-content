@@ -13,7 +13,7 @@ sidebar_custom_props:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Link)
 
-Link performs the same behavior of a regular anchor tag (`a`), but can be used as any HTML tag and component, including specific Frameworks link components.
+The `Link` component performs the same behavior as a regular anchor tag (`a`), but can be used as any HTML tag or component, including specific framework link components.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -99,7 +99,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     </OverviewSection>
   <Tab>
   <Tab>
-    ``tsx
+    ```tsx
     <Link variant="inline">Inline Link</Link>
     ```
   </Tab>
@@ -159,7 +159,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-## Design tokens: Disabled
+## Design tokens: Inverse
 
 <TokenTable>
   <TokenRow
@@ -237,7 +237,7 @@ You can target and override `Link` styles using the following data attributes:
 ## Props
 
 The `Link` component supports all attributes supported by the tag `a`.
-If you need to use it as external link component (i.e., Next.js `Link` or Gatsby `Link`), the FastStore UI `Link` component can be used with the `as={NextLink}` prop.
+If you need to use it as an external link component (i.e., Next.js `Link` or Gatsby `Link`), the FastStore UI `Link` component can be used with the `as={NextLink}` prop.
 
 Besides those attributes, the following props are also supported:
 
