@@ -7,9 +7,9 @@ components:
   - Price.tsx
 ---
 
-Prices are used to display the price of a given product, discount and total values.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Price)
 
-## Overview
+Prices are used to display the price of a given product, discount and total values.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -34,44 +34,266 @@ Prices are used to display the price of a given product, discount and total valu
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Price } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Price/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Price value={62.5} />
-</OverviewSection>
+### Variants
+
+#### Installment
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price value={62.5} variant="installment" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+      ```tsx
+      <Price value={62.5} variant="installment" />
+      ```
+  </Tab>
+</Tabs>
+
+#### Listing
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price value={62.5} variant="listing" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+      ```tsx
+      <Price value={62.5} variant="listing" />
+      ```
+  </Tab>
+</Tabs>
+
+#### Savings
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price value={62.5} variant="savings" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+      ```tsx
+      <Price value={62.5} variant="savings" />
+      ```
+  </Tab>
+</Tabs>
+
+#### Selling
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price value={62.5} variant="selling" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+      ```tsx
+      <Price value={62.5} variant="selling" />
+      ```
+  </Tab>
+</Tabs>
+
+#### Spot
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price value={62.5} variant="spot" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+      ```tsx
+      <Price value={62.5} variant="spot" />
+      ```
+  </Tab>
+</Tabs>
+
+### INTL Formatted to parts
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price
+        formatter={function useIntlPartsFormatter(price) {
+            return useMemo(() => {
+              return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+              })
+                .formatToParts(price)
+              .map((part) => {
+                const props = {
+                  [`data-fs-price-${part.type}`]: true,
+                }
+
+                if (part.type === 'integer') {
+                  props.style = { fontWeight: 700 }
+                }
+
+                return (
+                  <span key={part.type} {...props}>
+                    {part.value}
+                  </span>
+                )
+              })
+          })
+        }}
+        value={62.5}
+        variant="selling"
+
+    />
+
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Price
+      formatter={function useIntlPartsFormatter(price) {
+        return useMemo(() => {
+          return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+          })
+            .formatToParts(price)
+            .map((part) => {
+              const props = {
+                [`data-fs-price-${part.type}`]: true,
+              }
+
+              if (part.type === 'integer') {
+                props.style = { fontWeight: 700 }
+              }
+
+              return (
+                <span key={part.type} {...props}>
+                  {part.value}
+                </span>
+              )
+            })
+        })
+      }}
+      value={62.5}
+      variant="selling"
+    />
+    ```
+  </Tab>
+</Tabs>
+
+
+### INTL Formatted
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price
+        formatter={function useIntlFormatter(price) {
+          return useMemo(() => {
+            const formattedPrice = new Intl.NumberFormat('en-GB', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(price)
+
+            return formattedPrice
+          })
+        }}
+        value={62.5}
+        variant="savings"
+
+    />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Price
+      formatter={function useIntlFormatter(price) {
+        return useMemo(() => {
+          const formattedPrice = new Intl.NumberFormat('en-GB', {
+            style: 'currency',
+            currency: 'EUR',
+          }).format(price)
+
+          return formattedPrice
+        })
+      }}
+      value={62.5}
+      variant="savings"
+    />
+    ```
+  </Tab>
+</Tabs>
+
+### Custom
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price
+        formatter={function customFormatter(price) {
+          const unformattedPrice = `${price}`
+          const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
+          return formattedPrice
+        }}
+        value={62.5}
+        variant="spot"
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Price
+      formatter={function customFormatter(price) {
+        const unformattedPrice = `${price}`
+        const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
+        return formattedPrice
+      }}
+      value={62.5}
+      variant="spot"
+    />
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Formatter function example
+
 ```tsx
-<Price value={62.5} />
+function customFormatter(price: number) {
+  const unformattedPrice = `${price}`
+  const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
+
+  return formattedPrice
+}
 ```
 
 ---
 
-## Props
-
-<ComponentPropsSection component="Price" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -91,58 +313,11 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
-
-#### Installment
-
-<OverviewSection>
-  <Price value={62.5} variant="installment" />
-</OverviewSection>
-```tsx
-<Price value={62.5} variant="installment" />
-```
-
-#### Listing
-
-<OverviewSection>
-  <Price value={62.5} variant="listing" />
-</OverviewSection>
-```tsx
-<Price value={62.5} variant="listing" />
-```
-
-#### Savings
-
-<OverviewSection>
-  <Price value={62.5} variant="savings" />
-</OverviewSection>
-```tsx
-<Price value={62.5} variant="savings" />
-```
-
-#### Selling
-
-<OverviewSection>
-  <Price value={62.5} variant="selling" />
-</OverviewSection>
-```tsx
-<Price value={62.5} variant="selling" />
-```
-
-#### Spot
-
-<OverviewSection>
-  <Price value={62.5} variant="spot" />
-</OverviewSection>
-```tsx
-<Price value={62.5} variant="spot" />
-```
-
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Price` styles using the following data attributes:
 
 `data-fs-price`
 
@@ -150,147 +325,6 @@ For further customization, you can use the following data attributes:
 
 ---
 
-## Examples
+## Props
 
-### INTL Formatted to parts
-
-<OverviewSection>
-  <Price
-    formatter={function useIntlPartsFormatter(price) {
-        return useMemo(() => {
-          return new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-          })
-            .formatToParts(price)
-          .map((part) => {
-            const props = {
-              [`data-fs-price-${part.type}`]: true,
-            }
-
-            if (part.type === 'integer') {
-              props.style = { fontWeight: 700 }
-            }
-
-            return (
-              <span key={part.type} {...props}>
-                {part.value}
-              </span>
-            )
-          })
-      })
-    }}
-    value={62.5}
-    variant="selling"
-
-/>
-
-</OverviewSection>
-
-```tsx
-<Price
-  formatter={function useIntlPartsFormatter(price) {
-    return useMemo(() => {
-      return new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-      })
-        .formatToParts(price)
-        .map((part) => {
-          const props = {
-            [`data-fs-price-${part.type}`]: true,
-          }
-
-          if (part.type === 'integer') {
-            props.style = { fontWeight: 700 }
-          }
-
-          return (
-            <span key={part.type} {...props}>
-              {part.value}
-            </span>
-          )
-        })
-    })
-  }}
-  value={62.5}
-  variant="selling"
-/>
-```
-
-### INTL Formatted
-
-<OverviewSection>
-  <Price
-    formatter={function useIntlFormatter(price) {
-      return useMemo(() => {
-        const formattedPrice = new Intl.NumberFormat('en-GB', {
-          style: 'currency',
-          currency: 'EUR',
-        }).format(price)
-
-        return formattedPrice
-      })
-    }}
-    value={62.5}
-    variant="savings"
-
-/>
-
-</OverviewSection>
-
-```tsx
-<Price
-  formatter={function useIntlFormatter(price) {
-    return useMemo(() => {
-      const formattedPrice = new Intl.NumberFormat('en-GB', {
-        style: 'currency',
-        currency: 'EUR',
-      }).format(price)
-
-      return formattedPrice
-    })
-  }}
-  value={62.5}
-  variant="savings"
-/>
-```
-
-### Custom
-
-<OverviewSection>
-  <Price
-    formatter={function customFormatter(price) {
-      const unformattedPrice = `${price}`
-      const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
-      return formattedPrice
-    }}
-    value={62.5}
-    variant="spot"
-  />
-</OverviewSection>
-
-```tsx
-<Price
-  formatter={function customFormatter(price) {
-    const unformattedPrice = `${price}`
-    const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
-    return formattedPrice
-  }}
-  value={62.5}
-  variant="spot"
-/>
-```
-
----
-
-## Formatter Function Example
-
-```tsx
-function customFormatter(price: number) {
-  const unformattedPrice = `${price}`
-  const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
-
-  return formattedPrice
-}
-```
+<ComponentPropsSection component="Price" />

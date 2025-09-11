@@ -1,17 +1,28 @@
 ---
 title: "SROnly"
-excerpt: Hides an element visually. Improve accessibility by providing text to screen readers when applied.
-keywords:
-  - UI library
-  - ecommerce
-  - react
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/Badge___bcedffeb307527c1606be224a7fb5ac1.png
+excerpt: Hides an element visually and improves accessibility by providing text to screen readers.
 ---
 
-## Import
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/SROnly)
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+The `SROnly` component hides content visually while keeping it available to screen readers. Use it to provide additional context or accessible labels without impacting the visual design.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SROnly text="visually hidden text" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <SROnly text="visually hidden text" />
+    ```
+  </Tab>
+</Tabs>
+
+## Usage
+
+### Import the component
 
 ```tsx
 import { SROnly } from '@faststore/ui'
@@ -25,32 +36,20 @@ To apply the styles of this component in your FastStore project, import the foll
 @import '@faststore/ui/src/components/atoms/SROnly/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Data attributes
 
-<OverviewSection>
-  <SROnly text="visually hidden text" />
-</OverviewSection>
+You can target and override `SROnly` styles using the following data attributes:
 
-```tsx
-<SROnly text="visually hidden text" />
-```
+`data-fs-sr-only`
+
+>⚠️ Be cautious when modifying this style, as changes may break its functionality.
 
 ---
 
 ## Props
 
 <PropsSection propsList={propsSROnly} />
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
-
-`data-fs-sr-only`
-
-(Be careful when applying changes to this style. It can stop working as expected.)

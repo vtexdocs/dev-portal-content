@@ -7,9 +7,9 @@ components:
   - Overlay.tsx
 ---
 
-Overlays provide contextual information on top of the current layer of the interface. They can be interruptive like modals or augmenting like popovers and tooltips.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Overlay)
 
-## Overview
+Overlays provide contextual information on top of the current layer of the interface. They can be interruptive like modals or augmenting like popovers and tooltips.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -54,58 +54,27 @@ function Component() {
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Overlay } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Overlay/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<OverviewSection>
-  <div
-    style={{
-      position: 'relative',
-      height: '8rem',
-      width: '100%',
-      textAlign: 'center',
-    }}
-  >
-    A content outside me
-    <Overlay style={{ position: 'absolute' }} />
-  </div>
-</OverviewSection>
-
-```tsx
-<div>
-  A content outside me
-  <Overlay/>
-</div>
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="Overlay" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-overlay-bkg-color" value="rgb(0 0 0 / 20%)" isColor />
@@ -113,8 +82,14 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Overlay` styles using the following data attributes:
 
 `data-fs-overlay`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Overlay" />

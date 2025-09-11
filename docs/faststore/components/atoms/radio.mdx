@@ -7,7 +7,7 @@ components:
   - Radio.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Radio)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -29,44 +29,63 @@ components:
 </Tabs>
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Radio } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Radio/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Radio />
-</OverviewSection>
-```tsx
-<Radio />
-```
+### Variants
+
+#### Checked
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Radio checked readOnly />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Radio checked />
+    ```
+  </Tab>
+</Tabs>
+
+#### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Radio checked disabled readOnly />
+    </OverviewSection>
+  <Tab>
+  <Tab>
+    ```tsx
+    <Radio checked disabled />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Props
-
-<ComponentPropsSection component="Radio" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-radio-width" value="1.25rem" />
@@ -104,9 +123,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
-
-#### Knob
+### Design tokens: Knob
 
 <TokenTable>
   <TokenRow token="--fs-radio-knob-width" value="var(--fs-spacing-1)" />
@@ -123,16 +140,8 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
 
-#### Checked
-
-<OverviewSection>
-  <Radio checked readOnly />
-</OverviewSection>
-```tsx
-<Radio checked />
-```
+### Design tokens: Checked
 
 <TokenTable>
   <TokenRow
@@ -147,14 +156,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Disabled
-
-<OverviewSection>
-  <Radio checked disabled readOnly />
-</OverviewSection>
-```tsx
-<Radio checked disabled />
-```
+### Design tokens: Disabled
 
 <TokenTable>
   <TokenRow
@@ -180,11 +182,17 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Radio` styles using the following data attributes:
 
 `data-fs-radio`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Radio" />
 
 ---
 

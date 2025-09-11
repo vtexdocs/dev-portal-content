@@ -7,7 +7,7 @@ components:
   - Loader.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Loader)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -19,57 +19,74 @@ components:
     </OverviewSection>
   </Tab>
   <Tab>
-
     ```tsx
     <Loader />
     ```
     ```tsx
     <Loader variant="light" />
     ```
-
   </Tab>
 </Tabs>
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Loader } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Loader/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Loader />
-</OverviewSection>
-```tsx
-<Loader />
-```
+### Variants
+
+#### Dark (Default)
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Loader />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Loader />
+    ```
+  </Tab>
+</Tabs>
+
+#### Light
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Loader variant="light" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Loader variant="light" />
+    ```
+  <Tab>
+</Tabs>
 
 ---
 
-## Props
-
-<ComponentPropsSection component="Loader" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-loader-gap" value="var(--fs-spacing-0)" />
@@ -84,9 +101,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
-
-#### Loader Item
+### Design tokens: Loader item
 
 <TokenTable>
   <TokenRow token="--fs-loader-item-width" value="var(--fs-spacing-0)" />
@@ -103,16 +118,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <TokenRow token="--fs-loader-item-initial-opacity" value=".6" />
 </TokenTable>
 
-### Variants
-
-#### Dark (Default)
-
-<OverviewSection>
-  <Loader />
-</OverviewSection>
-```tsx
-<Loader />
-```
+### Design tokens: Dark
 
 <TokenTable>
   <TokenRow
@@ -122,14 +128,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Light
-
-<OverviewSection dark>
-  <Loader variant="light" />
-</OverviewSection>
-```tsx
-<Loader variant="light" />
-```
+### Design tokens: Light
 
 <TokenTable>
   <TokenRow
@@ -141,13 +140,19 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Loader` styles using the following data attributes:
 
 `data-fs-loader`
 
 `data-fs-loader-variant="light" | "dark"`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Loader" />
 
 ---
 
