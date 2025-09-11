@@ -1,19 +1,15 @@
 ---
 title: "SkuSelector"
 excerpt: Displays all the available variants for a given product. The `SkuSelector` component is mainly used in Product Details Pages (PDPs).
-keywords:
-  - UI library
-  - ecommerce
-  - react
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/ProductCardComponent___e6502d57cf7e5bf247f86b64577d4141.png
 components:
   - SkuSelector.tsx
 ---
 
-The `SkuSelector` component is mainly used in Product Details Pages (PDPs) to display all the available variants for a given product.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/SkuSelector)
 
-## Overview
+The `SkuSelector` component is mainly used in Product Details Pages (PDPs) to display all the available variants for a given product.
 
 This is a product related component, we recommend testing it using a product mock.
 
@@ -60,27 +56,27 @@ This is a product related component, we recommend testing it using a product moc
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
-import { SkuSelector } from '@faststore/ui'
+import { SkuSelector } from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/molecules/SkuSelector/styles.scss';
+@import "@faststore/ui/src/components/molecules/SkuSelector/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -89,7 +85,10 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
     </OverviewSection>
   </Tab>
   <Tab>
+
     ```tsx
+    import { product } from '../../mocks/product'
+
     <SkuSelector
       skuPropertyName={skuPropertyName}
       availableVariations={
@@ -103,19 +102,56 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   </Tab>
 </Tabs>
 
+#### Label
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SkuSelectorLabel />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { product } from '../../mocks/product'
+
+    <SkuSelector
+      skuPropertyName="Size"
+      availableVariations={product.isVariantOf.skuVariants.availableVariations}
+      activeVariations={product.isVariantOf.skuVariants.activeVariations}
+      slugsMap={product.isVariantOf.skuVariants.slugsMap}
+    />
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Color
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SkuSelectorColor />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+    ```tsx
+    import { product } from '../../mocks/product'
+
+    <SkuSelector
+      skuPropertyName="Color"
+      availableVariations={product.isVariantOf.skuVariants.availableVariations}
+      activeVariations={product.isVariantOf.skuVariants.activeVariations}
+      slugsMap={product.isVariantOf.skuVariants.slugsMap}
+    />
+    ```
+
+  </Tab>
+</Tabs>
+
 ---
 
-## Props
-
-<ComponentPropsSection component="SkuSelector" />
-
-### SkuOptions
-
-<PropsSection propsList={propsSkuOptions} />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-sku-selector-row-gap" value="var(--fs-spacing-2)" />
@@ -210,33 +246,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
-
-#### Image
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <SkuSelectorImage />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-    ```tsx
-    import { product } from '../../mocks/product'
-
-    <SkuSelector
-      skuPropertyName={skuPropertyName}
-      availableVariations={
-        product.isVariantOf.skuVariants.availableVariations
-      }
-      activeVariations={product.isVariantOf.skuVariants.activeVariations}
-      slugsMap={product.isVariantOf.skuVariants.slugsMap}
-    />
-    ```
-
-  </Tab>
-</Tabs>
+### Design tokens: Image
 
 <TokenTable>
   <TokenRow token="--fs-sku-selector-image-width" value="var(--fs-spacing-6)" />
@@ -250,53 +260,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Label
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <SkuSelectorLabel />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-    ```tsx
-    import { product } from '../../mocks/product'
-
-    <SkuSelector
-      skuPropertyName="Size"
-      availableVariations={product.isVariantOf.skuVariants.availableVariations}
-      activeVariations={product.isVariantOf.skuVariants.activeVariations}
-      slugsMap={product.isVariantOf.skuVariants.slugsMap}
-    />
-    ```
-
-  </Tab>
-</Tabs>
-
-#### Color
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <SkuSelectorColor />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-    ```tsx
-    import { product } from '../../mocks/product'
-
-    <SkuSelector
-      skuPropertyName="Color"
-      availableVariations={product.isVariantOf.skuVariants.availableVariations}
-      activeVariations={product.isVariantOf.skuVariants.activeVariations}
-      slugsMap={product.isVariantOf.skuVariants.slugsMap}
-    />
-    ```
-
-  </Tab>
-</Tabs>
+### Design tokens: Color
 
 <TokenTable>
   <TokenRow
@@ -315,7 +279,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `SkuSelector` styles using the following data attributes:
 
 `data-fs-sku-selector`
 
@@ -334,3 +300,13 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 `data-fs-sku-selector-option-image`
 
 `data-fs-sku-selector-option-color`
+
+---
+
+## Props
+
+<ComponentPropsSection component="SkuSelector" />
+
+### SkuOptions
+
+<PropsSection propsList={propsSkuOptions} />

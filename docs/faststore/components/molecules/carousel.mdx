@@ -7,29 +7,31 @@ components:
   - Carousel.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Carousel)
+
 The `Carousel` component slides through multiple elements using custom controls.
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Carousel } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/molecules/Carousel/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
 > ⚠️ This component is a work in progress, and in some cases, it may not perform as expected.
 
@@ -141,13 +143,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   </Tab>
 </Tabs>
 
-## Props
-
-<ComponentPropsSection component="Carousel" />
-
 ---
 
-## Design Tokens
+## Design tokens
 
 ### Nested Elements
 
@@ -270,9 +268,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Carousel` styles using the following data attributes:
 
 `data-fs-carousel`
 
@@ -292,9 +290,9 @@ For further customization, you can use the following data attributes:
 
 ---
 
-## Use Cases
+## Use cases
 
-### Using `ProductCard` component
+### Using the `ProductCard` component
 
 For the mobile preview, please refresh the browser after resizing it.
 
@@ -377,6 +375,12 @@ For the mobile preview, please refresh the browser after resizing it.
 </Tabs>
 
 > ⚠️ Considering the component structure placed inside the `Carousel`, determine the ideal `itemsPerPage` number to accommodate the items and achieve the desired UI properly.
+
+---
+
+## Props
+
+<ComponentPropsSection component="Carousel" />
 
 ---
 

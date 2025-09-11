@@ -12,6 +12,8 @@ components:
   - TableCell.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Table)
+
 Tables display information in a friendly way, allowing users to scan for details quickly.The Table component is a compound of the following:
 
 - `Table` - renders a `<div>` as wrapper with a `<table>` tag inside it.
@@ -20,10 +22,6 @@ Tables display information in a friendly way, allowing users to scan for details
 - `TableRow` - renders a `<tr>` tag.
 - `TableFooter` - renders a `<tfoot>` tag.
 - `TableCell` - renders a `<th>` or `<td>` tag depending on the value of the `variant` prop.
-
----
-
-## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -197,44 +195,46 @@ Tables display information in a friendly way, allowing users to scan for details
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
-import { Table } from '@faststore/ui'
+import { Table } from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/molecules/Table/styles.scss';
+@import "@faststore/ui/src/components/molecules/Table/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+### Colored
+
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
-    <OverviewSection><UsageTableExample/></OverviewSection>
+    <OverviewSection>
+      <UsageTableColored />
+    </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
     <Table>
       <TableHead>
         <TableRow>
-          <TableCell scope="col" variant="header">
-            Installments
+          <TableCell scope="col" variant="header" align="left">
+            Colored
           </TableCell>
-          <TableCell scope="col" variant="header">
-            Monthly Payment
-          </TableCell>
-          <TableCell scope="col" variant="header">
+          <TableCell scope="col" variant="header" align="right">
             Total
           </TableCell>
         </TableRow>
@@ -242,14 +242,10 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
       <TableBody>
         {options.map((option) => (
           <TableRow key={option.numberOfInstallments}>
-            <TableCell>{option.numberOfInstallments}x</TableCell>
-            <TableCell>
-              <Price
-                formatter={useFormattedPrice}
-                value={option.monthlyPayment}
-              />
+            <TableCell variant="header" align="left">
+              {option.numberOfInstallments}x
             </TableCell>
-            <TableCell>
+            <TableCell align="right">
               <Price formatter={useFormattedPrice} value={option.total} />
             </TableCell>
           </TableRow>
@@ -260,62 +256,10 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   </Tab>
 </Tabs>
 
----
+### With footer
 
-## Props
 
-All table-related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
-
-### Table
-
-<ComponentPropsSection component="Table" />
-
-### TableBody
-
-<ComponentPropsSection component="TableBody" />
-
-### TableHead
-
-<ComponentPropsSection component="TableHead" />
-
-### TableRow
-
-<ComponentPropsSection component="TableRow" />
-
-### TableFooter
-
-<ComponentPropsSection component="TableFooter" />
-
-### TableCell
-
-<ComponentPropsSection component="TableCell" />
-
----
-
-## Design Tokens
-
-### Nested Elements
-
-#### Head
-
-<TokenTable>
-  <TokenRow token="--fs-table-head-weight" value="var(--fs-text-weight-bold)" />
-  <TokenRow token="--fs-table-head-bkg-color" value="none" />
-  <TokenRow token="--fs-table-head-padding-y" value="var(--fs-spacing-2)" />
-</TokenTable>
-
-#### Cell
-
-<TokenTable>
-  <TokenRow token="--fs-table-cell-padding-x" value="var(--fs-spacing-3)" />
-  <TokenRow token="--fs-table-cell-padding-y" value="var(--fs-spacing-1)" />
-</TokenTable>
-
-### Variants
-
-#### With Footer
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Table>
@@ -370,67 +314,13 @@ All table-related components support all attributes also supported by their resp
   </Tab>
 </Tabs>
 
-<TokenTable>
-  <TokenRow
-    token="--fs-table-footer-weight"
-    value="var(--fs-table-head-weight)"
-  />
-  <TokenRow token="--fs-table-footer-bkg-color" value="none" />
-</TokenTable>
+### Bordered
 
-#### Colored
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
-    <OverviewSection><UsageTableColored/></OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell scope="col" variant="header" align="left">
-            Colored
-          </TableCell>
-          <TableCell scope="col" variant="header" align="right">
-            Total
-          </TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {options.map((option) => (
-          <TableRow key={option.numberOfInstallments}>
-            <TableCell variant="header" align="left">
-              {option.numberOfInstallments}x
-            </TableCell>
-            <TableCell align="right">
-              <Price formatter={useFormattedPrice} value={option.total} />
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-    ```
-  </Tab>
-</Tabs>
-
-<TokenTable>
-  <TokenRow
-    token="--fs-table-colored-bkg-color"
-    value="var(--fs-color-neutral-1)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-table-colored-border-radius"
-    value="var(--fs-border-radius)"
-  />
-</TokenTable>
-
-#### Bordered
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection><UsageTableBordered/></OverviewSection>
+    <OverviewSection>
+      <UsageTableBordered />
+    </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
@@ -462,21 +352,9 @@ All table-related components support all attributes also supported by their resp
   </Tab>
 </Tabs>
 
-<TokenTable>
-  <TokenRow
-    token="--fs-table-bordered-border-width"
-    value="var(--fs-border-width)"
-  />
-  <TokenRow
-    token="- --fs-table-bordered-border-color"
-    value="var(--fs-border-color-light)"
-    isColor
-  />
-</TokenTable>
+### Horizontal Scroll
 
-#### Horizontal Scroll
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Table>
@@ -585,7 +463,68 @@ All table-related components support all attributes also supported by their resp
 
 ---
 
-## Customization
+## Design tokens
+
+### Nested Elements
+
+#### Head
+
+<TokenTable>
+  <TokenRow token="--fs-table-head-weight" value="var(--fs-text-weight-bold)" />
+  <TokenRow token="--fs-table-head-bkg-color" value="none" />
+  <TokenRow token="--fs-table-head-padding-y" value="var(--fs-spacing-2)" />
+</TokenTable>
+
+#### Cell
+
+<TokenTable>
+  <TokenRow token="--fs-table-cell-padding-x" value="var(--fs-spacing-3)" />
+  <TokenRow token="--fs-table-cell-padding-y" value="var(--fs-spacing-1)" />
+</TokenTable>
+
+### Design tokens: Footer
+
+<TokenTable>
+  <TokenRow
+    token="--fs-table-footer-weight"
+    value="var(--fs-table-head-weight)"
+  />
+  <TokenRow token="--fs-table-footer-bkg-color" value="none" />
+</TokenTable>
+
+### Design tokens: Colored
+
+<TokenTable>
+  <TokenRow
+    token="--fs-table-colored-bkg-color"
+    value="var(--fs-color-neutral-1)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-table-colored-border-radius"
+    value="var(--fs-border-radius)"
+  />
+</TokenTable>
+
+### Design tokens: Bordered
+
+<TokenTable>
+  <TokenRow
+    token="--fs-table-bordered-border-width"
+    value="var(--fs-border-width)"
+  />
+  <TokenRow
+    token="- --fs-table-bordered-border-color"
+    value="var(--fs-border-color-light)"
+    isColor
+  />
+</TokenTable>
+
+---
+
+## Data attributes
+
+You can target and override `Table` styles using the following data attributes:
 
 `data-fs-table`
 
@@ -602,3 +541,33 @@ All table-related components support all attributes also supported by their resp
 `data-fs-table-cell="head | data"`
 
 `data-fs-table-variant="colored | bordered"`
+
+---
+
+## Props
+
+All table-related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
+
+### Table
+
+<ComponentPropsSection component="Table" />
+
+### TableBody
+
+<ComponentPropsSection component="TableBody" />
+
+### TableHead
+
+<ComponentPropsSection component="TableHead" />
+
+### TableRow
+
+<ComponentPropsSection component="TableRow" />
+
+### TableFooter
+
+<ComponentPropsSection component="TableFooter" />
+
+### TableCell
+
+<ComponentPropsSection component="TableCell" />

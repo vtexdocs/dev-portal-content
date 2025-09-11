@@ -9,15 +9,13 @@ components:
   - GiftContent.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Gift)
+
 The `Gift` component is a compound of the following:
 
 - `Gift`: renders a `<div>` as wrapper with an `Icon`, `GiftImage`, and `GiftContent`.
 - `GiftImage`: renders a `<div>` as wrapper with an `Image`.
 - `GiftContent`: renders a `<div>` as wrapper with the gift information as children.
-
----
-
-## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -102,81 +100,27 @@ The `Gift` component is a compound of the following:
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Gift, GiftImage, GiftContent } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/Gift/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection><GiftTemplate/></OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <Gift icon={<Icon name="Tag" />}>
-      <GiftImage>
-        <img
-          src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
-          alt="Magicwhite"
-          width={89}
-          height={89}
-        />
-      </GiftImage>
-      <GiftContent
-        productName="Apple Magic Mouse"
-        price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
-      />
-    </Gift>
-    ```
-  </Tab>
-</Tabs>
+### Import the component
+
+```tsx
+import { Gift, GiftImage, GiftContent } from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/Gift/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Props
-
-All gift-related components support all attributes also supported by the `<div>` tag.
-
-Besides those attributes, the following props are also supported:
-
-### Gift
-
-<ComponentPropsSection component="Gift" />
-
-### GiftContent
-
-<ComponentPropsSection component="GiftContent" />
-
-### GiftImage
-
-<ComponentPropsSection component="GiftImage" />
-
-### Other Resources
-
-#### PriceDefinition
-
-<PropsSection propsList={propsPriceDefinition} />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-gift-height" value="var(--fs-spacing-12)" />
@@ -243,9 +187,9 @@ Besides those attributes, the following props are also supported:
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Gift` styles using the following data attributes:
 
 `data-fs-gift`
 
@@ -260,3 +204,29 @@ For further customization, you can use the following data attributes:
 `data-fs-gift-product-title`
 
 `data-fs-gift-product-summary`
+
+---
+
+## Props
+
+All gift-related components support all attributes also supported by the `<div>` tag.
+
+Besides those attributes, the following props are also supported:
+
+### Gift
+
+<ComponentPropsSection component="Gift" />
+
+### GiftContent
+
+<ComponentPropsSection component="GiftContent" />
+
+### GiftImage
+
+<ComponentPropsSection component="GiftImage" />
+
+### Other Resources
+
+#### PriceDefinition
+
+<PropsSection propsList={propsPriceDefinition} />

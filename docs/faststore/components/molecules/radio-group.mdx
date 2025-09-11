@@ -5,9 +5,9 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/RadioGroup___a09afdd36ab1bcf64ad0c8fa87ee8dd0.png
 ---
 
-The `RadioGroup` allows users to select a single option from a list of two or more mutually exclusive options.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/RadioGroup)
 
-## Overview
+The `RadioGroup` allows users to select a single option from a list of two or more mutually exclusive options.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -56,17 +56,17 @@ The `RadioGroup` allows users to select a single option from a list of two or mo
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { RadioGroup, RadioField } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Radio/styles.scss'
@@ -76,62 +76,18 @@ To apply the styles of this component in your FastStore project, import the foll
 @import '@faststore/ui/src/components/molecules/RadioField/styles.scss'
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Data attributes
 
-<OverviewSection>
-  <RadioGroup name="usage-radiogroup">
-    <RadioField
-      label="First option"
-      name="usage-radiogroup"
-      id="usage-radiofield-first"
-    />
-    <RadioField
-      label="Second option"
-      name="usage-radiogroup"
-      id="usage-radiofield-second"
-    />
-    <RadioField
-      label="Third option"
-      name="usage-radiogroup"
-      id="usage-radiofield-third"
-    />
-  </RadioGroup>
-</OverviewSection>
+You can target and override `RadioGroup` styles using the following data attributes:
 
-```tsx
-<RadioGroup name="usage-radiogroup">
-  <RadioField
-    label="First option"
-    name="usage-radiogroup"
-    id="usage-radiofield-first"
-  />
-  <RadioField
-    label="Second option"
-    name="usage-radiogroup"
-    id="usage-radiofield-second"
-  />
-  <RadioField
-    label="Third option"
-    name="usage-radiogroup"
-    id="usage-radiofield-third"
-  />
-</RadioGroup>
-```
+`data-fs-radio-group-option`
 
 ---
 
 ## Props
 
 <PropsSection propsList={propsRadioGroup} />
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
-
-`data-fs-radio-group-option`

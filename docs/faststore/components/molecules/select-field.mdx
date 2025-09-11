@@ -7,9 +7,9 @@ components:
   - SelectField.tsx
 ---
 
-The `SelectField` component wraps a [Select](https://developers.vtex.com/docs/guides/faststore/atoms-select) input and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label). It allows users to select one option from a set.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Alert)
 
-## Overview
+The `SelectField` component wraps a [Select](https://developers.vtex.com/docs/guides/faststore/atoms-select) input and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label). It allows users to select one option from a set.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -62,61 +62,28 @@ The `SelectField` component wraps a [Select](https://developers.vtex.com/docs/gu
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { SelectField } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/molecules/SelectField/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
 
-<OverviewSection>
-  <SelectField
-    id="select-order-by"
-    label="Order by:"
-    options={{
-      name_asc: 'Name, A-Z',
-      name_desc: 'Name, Z-A',
-      top_sales: 'Top Sales',
-    }}
-  />
-</OverviewSection>
-
-```tsx
-<SelectField
-  id="select-order-by"
-  label="Order by:"
-  options={{
-    name_asc: 'Name, A-Z',
-    name_desc: 'Name, Z-A',
-    top_sales: 'Top Sales',
-  }}
-/>
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="SelectField" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -132,10 +99,16 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `SelectField` styles using the following data attributes:
 
 `data-fs-select-field`
 
 `data-fs-select-field-label`
+
+---
+
+## Props
+
+<ComponentPropsSection component="SelectField" />

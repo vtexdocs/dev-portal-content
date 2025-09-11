@@ -10,9 +10,9 @@ components:
   - DropdownButton.tsx
 ---
 
-The `Dropdown` component Displays a set of actions/items to the user, usually used to show a menu of options.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Dropdown)
 
-## Overview
+The `Dropdown` component Displays a set of actions/items to the user, usually used to show a menu of options.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -83,9 +83,9 @@ The `Dropdown` component Displays a set of actions/items to the user, usually us
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import {
@@ -96,84 +96,19 @@ import {
 } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/molecules/Dropdown/styles.scss'
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Dropdown>
-        <DropdownButton icon={<Icon name="CaretDown" />}>{'Dropdown'}</DropdownButton>
-        <DropdownMenu>
-          <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
-            {'Dropdown Item 1'}
-          </DropdownItem>
-          <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
-            {'Dropdown Item 2'}
-          </DropdownItem>
-          <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
-            {'Dropdown Item 3'}
-          </DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <OverviewSection>
-      <Dropdown>
-        <DropdownButton icon={<Icon name="CaretDown" />}>Dropdown</DropdownButton>
-        <DropdownMenu>
-          <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
-            Dropdown Item 1
-          </DropdownItem>
-          <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
-            Dropdown Item 2
-          </DropdownItem>
-          <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
-            Dropdown Item 3
-          </DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    </OverviewSection>
-    ```
-  </Tab>
-</Tabs>
-
----
-
-## Props
-
-### Dropdown
-
-<ComponentPropsSection component="Dropdown" />
-
-### DropdownItem
-
-<ComponentPropsSection component="DropdownItem" />
-
-### DropdownMenu
-
-<ComponentPropsSection component="DropdownMenu" />
-
-### DropdownButton
-
-<ComponentPropsSection component="DropdownButton" />
-
----
-
-## Design Tokens
+## Design tokens
 
 ### Compound Components
 
@@ -245,9 +180,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
-
-#### Small
+### Design tokens: Small
 
 <TokenTable>
   <TokenRow token="--fs-dropdown-item-small-min-height" value="1.75rem" />
@@ -263,9 +196,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Dropdown` styles using the following data attributes:
 
 #### Dropdown Item
 
@@ -286,6 +219,26 @@ For further customization, you can use the following data attributes:
 `data-fs-dropdown-button`
 
 This component inherits [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) CSS selectors and styles.
+
+---
+
+## Props
+
+### Dropdown
+
+<ComponentPropsSection component="Dropdown" />
+
+### DropdownItem
+
+<ComponentPropsSection component="DropdownItem" />
+
+### DropdownMenu
+
+<ComponentPropsSection component="DropdownMenu" />
+
+### DropdownButton
+
+<ComponentPropsSection component="DropdownButton" />
 
 ---
 

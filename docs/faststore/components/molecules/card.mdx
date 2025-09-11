@@ -7,9 +7,10 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/card-component___555627b06a9b8f6dfd0056637576dc8d.png
 ---
 
-A basic card that divides the content into a header and body, making it ideal for showcasing products, messages, or any other store information.
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Card)
+
+A basic card that divides the content into a header and body, making it ideal for showcasing products, messages, or any other store information.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -39,29 +40,43 @@ A basic card that divides the content into a header and body, making it ideal fo
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Card } from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss copy
 @import "@faststore/ui/src/components/molecules/Card/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Card
+        iconName="PlusCircle"
+        title="Card with Icon"
+        style={{width: '300px'}}>
+        <h1> First Product </h1>
+        <hr/>
+        <h1> Second Product </h1>
+      </Card>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
     <Card
       iconName="PlusCircle"
       title="Card with Icon"
@@ -70,44 +85,34 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
       <hr/>
       <h1> Second Product </h1>
     </Card>
-  </OverviewSection>
+    ```
+  </Tab>
+</Tabs>
 
-  <OverviewSection>
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Card
+        title="Card without Icon"
+        style={{width: '300px'}}>
+        <h1> Message </h1>
+      </Card>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
     <Card
       title="Card without Icon"
       style={{width: '300px'}}>
       <h1> Message </h1>
     </Card>
-  </OverviewSection>
-
-```tsx
-<Card
-  iconName="PlusCircle"
-  title="Card with Icon"
-  style={{width: '300px'}}>
-  <h1> First Product </h1>
-  <hr/>
-  <h1> Second Product </h1>
-</Card>
-```
-
-```tsx
-<Card
-  title="Card without Icon"
-  style={{width: '300px'}}>
-  <h1> Message </h1>
-</Card>
-```
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Props
-
-<ComponentPropsSection component="Card" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-card-border-radius" value="var(--fs-border-radius)" />
@@ -139,9 +144,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Card` styles using the following data attributes:
 
 - `data-fs-card`
 
@@ -150,3 +155,9 @@ For further customization, you can use the following data attributes:
 - `data-fs-card-title`
 
 - `data-fs-card-body`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Card" />

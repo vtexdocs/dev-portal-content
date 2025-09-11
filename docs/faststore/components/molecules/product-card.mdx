@@ -1,26 +1,24 @@
 ---
 title: "ProductCard"
 excerpt: Displays summarized information about a product.
-keywords:
-  - UI library
-  - ecommerce
-  - react
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/ProductCardComponent___e6502d57cf7e5bf247f86b64577d4141.png
 components:
   - ProductCard.tsx
   - ProductCardImage.tsx
   - ProductCardContent.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/ProductCard)
+
 The `ProductCard` displays summarized information about a product. They usually present a call-to-action button, as well as the product's name, price, and image.The `ProductCard` is a compound of the following:
 
 - `ProductCardImage`: wraps the product's image.
 - `ProductCardContent`: wraps the content's details.
 
----
+Use the `ProductCard` to:
 
-## Overview
+- Present a product collection on the home page.
+- Present product details on PLPs.
+- Build a product slider that showcases multiple products at once, making it easier for visitors to browse your online store.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -156,36 +154,36 @@ The `ProductCard` displays summarized information about a product. They usually 
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import {
   ProductCard,
   ProductCardImage,
   ProductCardContent,
-} from '@faststore/ui'
+} from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/molecules/ProductCard/styles.scss';
+@import "@faststore/ui/src/components/molecules/ProductCard/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection
-      containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}
+      containerStyle={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}
     >
       <ProductCard>
         <ProductCardImage>
@@ -233,33 +231,268 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   </Tab>
 </Tabs>
 
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection
+      containerStyle={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}
+    >
+      <ProductCard>
+        <ProductCardImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </ProductCardImage>
+        <ProductCardContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          ratingValue={3.5}
+          onButtonClick={() => {}}
+        />
+      </ProductCard>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductCard>
+      <ProductCardImage>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.isVariantOf.name}
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        ratingValue={3.5}
+        onButtonClick={() => {}}
+      />
+    </ProductCard>
+    ```
+  </Tab>
+</Tabs>
+
+### Variants
+
+#### Wide
+
+Prefer using `buyButton` or `discountBadge`, never both.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection
+  containerStyle={{ display: 'grid', gridTemplateColumns: '2fr 2fr' }}
+>
+  <ProductCard variant="wide">
+    <ProductCardImage aspectRatio={2 / 1}>
+      <img
+        data-fs-image
+        src={product.image[1].url}
+        alt={product.image[1].alternateName}
+      />
+    </ProductCardImage>
+    <ProductCardContent
+      title={product.isVariantOf.name}
+      price={{
+        value: product.offers.offers[0].price,
+        listPrice: product.offers.offers[0].listPrice,
+        formatter: useFormattedPrice,
+      }}
+      ratingValue={3.5}
+      onButtonClick={() => {}}
+    />
+  </ProductCard>
+  <ProductCard variant="wide">
+    <ProductCardImage aspectRatio={2 / 1}>
+      <img
+        data-fs-image
+        src={product.image[1].url}
+        alt={product.image[1].alternateName}
+      />
+    </ProductCardImage>
+    <ProductCardContent
+      title={product.isVariantOf.name}
+      price={{
+        value: product.offers.offers[0].price,
+        listPrice: product.offers.offers[0].listPrice,
+        formatter: useFormattedPrice,
+      }}
+      ratingValue={3.5}
+      showDiscountBadge
+    />
+  </ProductCard>
+</OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductCard variant="wide">
+    <ProductCardImage aspectRatio={2 / 1}>
+      <img
+        data-fs-image
+        src={product.image[1].url}
+        alt={product.image[1].alternateName}
+      />
+    </ProductCardImage>
+    <ProductCardContent
+      title={product.isVariantOf.name}
+      price={{
+        value: product.offers.offers[0].price,
+        listPrice: product.offers.offers[0].listPrice,
+        formatter: useFormattedPrice,
+      }}
+      ratingValue={3.5}
+      onButtonClick={() => {}}
+    />
+  </ProductCard>
+    ```
+
+    ```tsx
+    <ProductCard variant="wide">
+    <ProductCardImage aspectRatio={2 / 1}>
+      <img
+        data-fs-image
+        src={product.image[1].url}
+        alt={product.image[1].alternateName}
+      />
+    </ProductCardImage>
+    <ProductCardContent
+      title={product.isVariantOf.name}
+      price={{
+        value: product.offers.offers[0].price,
+        listPrice: product.offers.offers[0].listPrice,
+        formatter: useFormattedPrice,
+      }}
+      ratingValue={3.5}
+      showDiscountBadge
+    />
+
+  </ProductCard>
+    ```
+  </Tab>
+</Tabs>
+
+### Out of Stock
+
+To replicate this style, add `outOfStock` prop on both `ProductCard` and `ProductCardContent`.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection
+      containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}
+    >
+      <ProductCard outOfStock={outOfStock}>
+        <ProductCardImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </ProductCardImage>
+        <ProductCardContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          outOfStock={outOfStock}
+        />
+      </ProductCard>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    const outOfStock = product.offers.offers[0].availability !== 'https://schema.org/InStock'
+
+    <ProductCard outOfStock={outOfStock}>
+      <ProductCardImage>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.isVariantOf.name}
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        outOfStock={outOfStock}
+      />
+    </ProductCard>
+    ```
+
+  </Tab>
+</Tabs>
+
+### Bordered
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection
+      containerStyle={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}
+    >
+      <ProductCard bordered>
+        <ProductCardImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </ProductCardImage>
+        <ProductCardContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          ratingValue={3.5}
+          onButtonClick={() => {}}
+        />
+      </ProductCard>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductCard bordered>
+      <ProductCardImage>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.isVariantOf.name}
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        ratingValue={3.5}
+        onButtonClick={() => {}}
+      />
+    </ProductCard>
+    ```
+  </Tab>
+</Tabs>
+
 ---
 
-## Props
-
-All product card related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
-
-### ProductCard
-
-<ComponentPropsSection component="ProductCard" />
-
-### ProductCardImage
-
-<ComponentPropsSection component="ProductCardImage" />
-
-### ProductCardContent
-
-<ComponentPropsSection component="ProductCardContent" />
-
-### Other Resources
-
-#### PriceDefinition
-
-<PropsSection propsList={propsPriceDefinition} />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -394,116 +627,7 @@ All product card related components support all attributes also supported by the
   />
 </TokenTable>
 
-### Variants
-
-#### Default
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection
-      containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}
-    >
-      <ProductCard>
-        <ProductCardImage>
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-          ratingValue={3.5}
-          onButtonClick={() => {}}
-        />
-      </ProductCard>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <ProductCard>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
-    ```
-  </Tab>
-</Tabs>
-
-#### Out of Stock
-
-To replicate this style, add `outOfStock` prop on both `ProductCard` and `ProductCardContent`.
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection
-      containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}
-    >
-      <ProductCard outOfStock={outOfStock}>
-        <ProductCardImage>
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-          outOfStock={outOfStock}
-        />
-      </ProductCard>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    const outOfStock = product.offers.offers[0].availability !== 'https://schema.org/InStock'
-
-    <ProductCard outOfStock={outOfStock}>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        outOfStock={outOfStock}
-      />
-    </ProductCard>
-    ```
-
-  </Tab>
-</Tabs>
+### Desing tokens: Out of Stock
 
 <TokenTable>
   <TokenRow
@@ -519,58 +643,7 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   <TokenRow token="--fs-product-card-out-of-stock-img-opacity" value=".5" />
 </TokenTable>
 
-#### Bordered
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection
-      containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}
-    >
-      <ProductCard bordered>
-        <ProductCardImage>
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-          ratingValue={3.5}
-          onButtonClick={() => {}}
-        />
-      </ProductCard>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <ProductCard bordered>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
-    ```
-  </Tab>
-</Tabs>
+### Desing tokens: Bordered
 
 <TokenTable>
   <TokenRow
@@ -585,101 +658,6 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
 </TokenTable>
 
 #### Wide
-
-Prefer using `buyButton` or `discountBadge`, never both.
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection
-  containerStyle={{ display: 'grid', gridTemplateColumns: '2fr 2fr' }}
->
-  <ProductCard variant="wide">
-    <ProductCardImage aspectRatio={2 / 1}>
-      <img
-        data-fs-image
-        src={product.image[1].url}
-        alt={product.image[1].alternateName}
-      />
-    </ProductCardImage>
-    <ProductCardContent
-      title={product.isVariantOf.name}
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      ratingValue={3.5}
-      onButtonClick={() => {}}
-    />
-  </ProductCard>
-  <ProductCard variant="wide">
-    <ProductCardImage aspectRatio={2 / 1}>
-      <img
-        data-fs-image
-        src={product.image[1].url}
-        alt={product.image[1].alternateName}
-      />
-    </ProductCardImage>
-    <ProductCardContent
-      title={product.isVariantOf.name}
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      ratingValue={3.5}
-      showDiscountBadge
-    />
-  </ProductCard>
-</OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <ProductCard variant="wide">
-    <ProductCardImage aspectRatio={2 / 1}>
-      <img
-        data-fs-image
-        src={product.image[1].url}
-        alt={product.image[1].alternateName}
-      />
-    </ProductCardImage>
-    <ProductCardContent
-      title={product.isVariantOf.name}
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      ratingValue={3.5}
-      onButtonClick={() => {}}
-    />
-  </ProductCard>
-    ```
-
-    ```tsx
-    <ProductCard variant="wide">
-    <ProductCardImage aspectRatio={2 / 1}>
-      <img
-        data-fs-image
-        src={product.image[1].url}
-        alt={product.image[1].alternateName}
-      />
-    </ProductCardImage>
-    <ProductCardContent
-      title={product.isVariantOf.name}
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      ratingValue={3.5}
-      showDiscountBadge
-    />
-
-  </ProductCard>
-    ```
-  </Tab>
-</Tabs>
 
 <TokenTable>
   <TokenRow token="--fs-product-card-wide-padding" value="0" />
@@ -697,17 +675,9 @@ Prefer using `buyButton` or `discountBadge`, never both.
 
 ---
 
-## Use Cases
+## Data attributes
 
-Use the `ProductCard` to:
-
-- Present a product collection on the home page.
-- Present product details on PLPs.
-- Build a product slider that showcases multiple products at once, making it easier for visitors to browse your online store.
-
----
-
-## Customization
+You can target and override `ProductCard` styles using the following data attributes:
 
 `data-fs-product-card`
 
@@ -733,6 +703,30 @@ Use the `ProductCard` to:
 
 ---
 
+## Props
+
+All product card related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
+
+### ProductCard
+
+<ComponentPropsSection component="ProductCard" />
+
+### ProductCardImage
+
+<ComponentPropsSection component="ProductCardImage" />
+
+### ProductCardContent
+
+<ComponentPropsSection component="ProductCardContent" />
+
+### Other Resources
+
+#### PriceDefinition
+
+<PropsSection propsList={propsPriceDefinition} />
+
+---
+
 ## Related components
 
 <SectionList grid="column">
@@ -742,7 +736,7 @@ Use the `ProductCard` to:
 Displays a list of products to be used as a section on the store."
     actionPath="/docs/guides/faststore/organisms-product-shelf"
   >
-    <ProductShelfUsage items={6}/>
+    <ProductShelfUsage items={6} />
   </SectionItem>
   <SectionItem
     title="ProductGrid"

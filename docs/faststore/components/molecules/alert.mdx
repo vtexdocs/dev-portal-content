@@ -5,7 +5,7 @@ components:
   - Alert.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Alert)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -54,56 +54,107 @@ components:
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Alert } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/atoms/Alert/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<OverviewSection>
-  <Alert
-    icon={<Icon name="ShoppingCart" />}
-    link={{ children: 'Buy now', href: '/', target: '_blank' }}
-    dismissible
-  >
-    Get 10% off today:&nbsp;<span>NEW10</span>
-  </Alert>
-</OverviewSection>
+### Import the component
+
 ```tsx
-<Alert
-  icon={<Icon name="ShoppingCart" />}
-  link={{ children: 'Buy now', href: '/', target: '_blank' }}
-  dismissible
->
-  Get 10% off today:&nbsp;<span>NEW10</span>
-</Alert>
+import { Alert } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/atoms/Alert/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Alert" />
+### Dismissible
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Alert dismissible>
+        Get 10% off today:&nbsp;<span>NEW10</span>
+      </Alert>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Alert dismissible>
+      Get 10% off today:&nbsp;<span>NEW10</span>
+    </Alert>
+    ```
+  </Tab>
+</Tabs>
+
+### With Link
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Alert link={{ children: "Buy now", href: "#" }}>
+        Get 10% off today:&nbsp;<span>NEW10</span>
+      </Alert>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Alert link={{ children: "Buy now", href: "#" }}>
+      Get 10% off today:&nbsp;<span>NEW10</span>
+    </Alert>
+    ```
+  </Tab>
+</Tabs>
+
+### With Icon
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Alert icon={<Icon name="ShoppingCart" />}>
+        Get 10% off today:&nbsp;<span>NEW10</span>
+      </Alert>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Alert icon={<Icon name="ShoppingCart" />}>
+      Get 10% off today:&nbsp;<span>NEW10</span>
+    </Alert>
+    ```
+  </Tab>
+</Tabs>
+
+### Plain
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Alert>
+        Get 10% off today:&nbsp;<span>NEW10</span>
+      </Alert>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Alert>
+      Get 10% off today:&nbsp;<span>NEW10</span>
+    </Alert>
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-alert-height" value="var(--fs-spacing-7)" />
@@ -127,9 +178,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <TokenRow token="--fs-alert-text-size" value="var(--fs-text-size-1)" />
 </TokenTable>
 
-### Nested Elements
-
-#### Icon
+### Desing tokens: Icon
 
 <TokenTable>
   <TokenRow token="--fs-alert-icon-width" value="var(--fs-spacing-4)" />
@@ -143,7 +192,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Link
+### Desing tokens: Link
 
 <TokenTable>
   <TokenRow
@@ -160,7 +209,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Dismissible Button
+### Design tokens: Dismissible
 
 <TokenTable>
   <TokenRow
@@ -183,65 +232,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Variants
+## Data attributes
 
-### Dismissible
-
-<OverviewSection>
-  <Alert dismissible>
-    Get 10% off today:&nbsp;<span>NEW10</span>
-  </Alert>
-</OverviewSection>
-```tsx
-<Alert dismissible>
-  Get 10% off today:&nbsp;<span>NEW10</span>
-</Alert>
-```
-
-### With Link
-
-<OverviewSection>
-  <Alert link={{ children: 'Buy now', href: '#' }}>
-    Get 10% off today:&nbsp;<span>NEW10</span>
-  </Alert>
-</OverviewSection>
-```tsx
-<Alert link={{ children: 'Buy now', href: '#' }}>
-  Get 10% off today:&nbsp;<span>NEW10</span>
-</Alert>
-```
-
-### With Icon
-
-<OverviewSection>
-  <Alert icon={<Icon name="ShoppingCart" />}>
-    Get 10% off today:&nbsp;<span>NEW10</span>
-  </Alert>
-</OverviewSection>
-```tsx
-<Alert icon={<Icon name="ShoppingCart" />}>
-  Get 10% off today:&nbsp;<span>NEW10</span>
-</Alert>
-```
-
-### Plain
-
-<OverviewSection>
-  <Alert>
-    Get 10% off today:&nbsp;<span>NEW10</span>
-  </Alert>
-</OverviewSection>
-```tsx
-<Alert>
-  Get 10% off today:&nbsp;<span>NEW10</span>
-</Alert>
-```
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
+You can target and override `Alert` styles using the following data attributes:
 
 `data-fs-alert`
 
@@ -252,6 +245,12 @@ For further customization, you can use the following data attributes:
 `data-fs-alert-button`
 
 `data-fs-alert-dismissible="true"`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Alert" />
 
 ---
 

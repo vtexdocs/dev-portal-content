@@ -9,9 +9,9 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
 ---
 
-Toasts are used to display notifications. They appear temporarily, and should contain a single line of text directly related to the operation performed.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Toast)
 
-## Overview
+Toasts are used to display notifications. They appear temporarily, and should contain a single line of text directly related to the operation performed.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -132,72 +132,27 @@ Toasts are used to display notifications. They appear temporarily, and should co
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Toast } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/Toast/styles.scss'
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<OverviewSection direction="row">
-  <UIProvider>
-    <ToastUsage title={'Hooray!'} message={'Thank for your Click.'} status={'INFO'} icon={<Icon name="SealCheck" width={30} height={30} />} btnLabel="Info Toast"/>
-  </UIProvider>
-</OverviewSection>
+### Import the component
+
 ```tsx
-  const Toast = () => {
-    const { toasts, pushToast } = useUI()
-    return (
-      <>
-        <Button
-          variant="primary"
-          onClick={() =>
-            pushToast({
-              title: 'Hooray!',
-              message: 'Thank for your Click.',
-              status: 'INFO',
-              icon: <Icon name="SealCheck" width={30} height={30} />,
-            })
-          }
-          style={{ width: '16rem' }}
-        >
-          Info Toast
-        </Button>
-        {toasts.length > 0 && <Toast />}
-      </>
-    )
-  }
+import { Toast } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/Toast/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
-
-<p style={{ marginBottom: '2rem' }}>
-  Toast's props are in the object passed as an argument by `pushToast(toast:
-  Props)` method.
-</p>
-
-<PropsSection propsList={propsToast} />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -300,7 +255,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `Toast` styles using the following data attributes:
 
 `data-fs-toast`
 
@@ -313,3 +270,11 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 `data-fs-toast-title`
 
 `data-fs-toast-message`
+
+---
+
+## Props
+
+Toast's props are in the object passed as an argument by `pushToast(toast: Props)` method.
+
+<PropsSection propsList={propsToast} />
