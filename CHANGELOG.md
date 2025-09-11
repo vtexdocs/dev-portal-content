@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.121](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.120...v1.1.121) (2025-09-11)
+
+
+### 📝 Documentation updates
+
+* organisms ([7e2b367](https://github.com/vtexdocs/dev-portal-content/commit/7e2b367b41ee62998815f9d0c78f20b151c4499a))
+
 ### [1.1.120](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.117...v1.1.120) (2025-09-11)
 
 
