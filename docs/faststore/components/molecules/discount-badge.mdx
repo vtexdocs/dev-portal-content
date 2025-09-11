@@ -11,7 +11,7 @@ components:
 
 The `DiscountBadge` displays product's discounts.
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <DiscountBadge listPrice={45} spotPrice={40} />
@@ -37,7 +37,7 @@ The `DiscountBadge` displays product's discounts.
 ### Import the component
 
 ```tsx
-import { DiscountBadge } from '@faststore/ui'
+import { DiscountBadge } from "@faststore/ui";
 ```
 
 ### Import styles
@@ -45,11 +45,62 @@ import { DiscountBadge } from '@faststore/ui'
 To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/atoms/Badge/styles.scss'
-import '@faststore/ui/src/components/molecules/DiscountBadge/styles.scss';
+@import "@faststore/ui/src/components/atoms/Badge/styles.scss" import
+  "@faststore/ui/src/components/molecules/DiscountBadge/styles.scss";
 ```
 
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Examples
+
+### Variants
+
+#### Low Discount
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <DiscountBadge listPrice={45} spotPrice={40} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <DiscountBadge listPrice={45} spotPrice={40} />
+    ```
+  </Tab>
+</Tabs>
+
+### Medium discount
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <DiscountBadge listPrice={65} spotPrice={40} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <DiscountBadge listPrice={65} spotPrice={40} />
+    ```
+  </Tab>
+</Tabs>
+
+### High discount
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <DiscountBadge listPrice={80} spotPrice={40} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <DiscountBadge listPrice={80} spotPrice={40} />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
@@ -57,16 +108,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 This component inherits [Badge](https://developers.vtex.com/docs/guides/faststore/atoms-badge) design tokens.
 
-### Variants
-
-#### Low Discount
-
-<OverviewSection>
-  <DiscountBadge listPrice={45} spotPrice={40} />
-</OverviewSection>
-```tsx
-<DiscountBadge listPrice={45} spotPrice={40} />
-```
+### Design tokens: Low discount
 
 <TokenTable>
   <TokenRow
@@ -89,15 +131,7 @@ This component inherits [Badge](https://developers.vtex.com/docs/guides/faststor
   />
 </TokenTable>
 
-#### Medium Discount
-
-<OverviewSection>
-  <DiscountBadge listPrice={65} spotPrice={40} />
-</OverviewSection>
-
-```tsx
-<DiscountBadge listPrice={65} spotPrice={40} />
-```
+### Design tokens: Medium discount
 
 <TokenTable>
   <TokenRow
@@ -120,14 +154,7 @@ This component inherits [Badge](https://developers.vtex.com/docs/guides/faststor
   />
 </TokenTable>
 
-#### High Discount
-
-<OverviewSection>
-  <DiscountBadge listPrice={80} spotPrice={40} />
-</OverviewSection>
-```tsx
-<DiscountBadge listPrice={80} spotPrice={40} />
-```
+### Design tokens: High discount
 
 <TokenTable>
   <TokenRow

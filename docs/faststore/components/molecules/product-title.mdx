@@ -11,7 +11,7 @@ components:
 
 The `ProductTitle` is a component commonly used on Product Details Page (PDP). It wraps the product name, a product label and the rating.
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <ProductTitle
@@ -21,59 +21,16 @@ The `ProductTitle` is a component commonly used on Product Details Page (PDP). I
         ratingValue={4}
       />
     </OverviewSection>
-
-    <OverviewSection>
-      <ProductTitle
-        title={<h1>Apple Magic Mouse</h1>}
-        label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-        ratingValue={4}
-      />
-    </OverviewSection>
-
-    <OverviewSection>
-      <ProductTitle
-        title={<h1>Handmade Steel Pants Gorgeous</h1>}
-        label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-      />
-    </OverviewSection>
-
-    <OverviewSection>
-      <ProductTitle
-        title={<h1>Handmade Steel Pants Gorgeous</h1>}
-        label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-        ratingValue={4.5}
-      />
-    </OverviewSection>
-
   </Tab>
   <Tab>
-
-```tsx
-  <ProductTitle
-    title={<h1>Apple Magic Mouse</h1>}
-    label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-    refNumber="99995945"
-    ratingValue={4}
-  />
-  <br/>
-  <ProductTitle
-    title={<h1>Apple Magic Mouse</h1>}
-    label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-    ratingValue={4}
-  />
-  <br/>
-  <ProductTitle
-    title={<h1>Handmade Steel Pants Gorgeous</h1>}
-    label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-  />
-  <br/>
-  <ProductTitle
-    title={<h1>Handmade Steel Pants Gorgeous</h1>}
-    label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-    ratingValue={4.5}
-  />
-```
-
+    ```tsx
+    <ProductTitle
+      title={<h1>Apple Magic Mouse</h1>}
+      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+      refNumber="99995945"
+      ratingValue={4}
+    />
+    ```
   </Tab>
 </Tabs>
 
@@ -107,8 +64,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
       <ProductTitle
         title={<h1>Apple Magic Mouse</h1>}
         label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-        refNumber="99995945"
-        ratingValue={4.5}
+        ratingValue={4}
       />
     </OverviewSection>
   </Tab>
@@ -117,7 +73,46 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     <ProductTitle
       title={<h1>Apple Magic Mouse</h1>}
       label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-      refNumber="99995945"
+      ratingValue={4}
+    />
+    ```
+  </Tab>
+</Tabs>
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <ProductTitle
+        title={<h1>Handmade Steel Pants Gorgeous</h1>}
+        label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductTitle
+      title={<h1>Handmade Steel Pants Gorgeous</h1>}
+      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+    />
+    ```
+  </Tab>
+</Tabs>
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <ProductTitle
+        title={<h1>Handmade Steel Pants Gorgeous</h1>}
+        label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+        ratingValue={4.5}
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductTitle
+      title={<h1>Handmade Steel Pants Gorgeous</h1>}
+      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
       ratingValue={4.5}
     />
     ```
@@ -142,11 +137,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   <TokenRow token="--fs-product-title-row-gap" value="var(--fs-spacing-3)" />
 </TokenTable>
 
----
-
-## Nested Elements
-
-### Addendum
+### Design tokens: Addendum
 
 <TokenTable>
   <TokenRow
