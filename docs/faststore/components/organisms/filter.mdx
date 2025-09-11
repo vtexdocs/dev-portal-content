@@ -10,6 +10,8 @@ components:
   - FilterFacetRange.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/Filter)
+
 The `Filter` component is used to filter products inside the <a href="https://starter.vtex.app/office" target="_blank">Product Listing Page (PLP)</a> and Search Page. The `Filter` component is a compound of the following:
 
 - `Filter`: wraps an `Accordion` along with the component title.
@@ -18,10 +20,6 @@ The `Filter` component is used to filter products inside the <a href="https://st
 - `FilterFacetBoolean`: wraps the list of the `FilterFacetBooleanItem`.
 - `FilterFacetBooleanItem`: wraps a `Checkbox` with its `Label` and the `Badge` that represents the child of the `FilterFacetBoolean`.
 - `FilterFacetRange`: wraps a `PriceRange` for a given Facet with the Range type.
-
----
-
-## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -139,9 +137,9 @@ The `Filter` component is used to filter products inside the <a href="https://st
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import {
@@ -150,141 +148,22 @@ import {
   FilterFacetBoolean,
   FilterFacetBooleanItem,
   FilterFacetRange,
-} from '@faststore/ui'
+} from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/organisms/Filter/styles.scss';
+@import "@faststore/ui/src/components/organisms/Filter/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection direction="row">
-      <UIProvider>
-        <SearchProvider onChange={() => ({})}>
-          <FilterUsage />
-        </SearchProvider>
-      </UIProvider>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-      function FilterUsage({
-        facets,
-        testId,
-        dispatch,
-        expanded,
-        title,
-      }: Props & ReturnType<typeof useFilter>) {
-        const { resetInfiniteScroll, state, setState } = useSearch()
-
-        return (
-          <Filter
-            testId={`desktop-${testId}`}
-            title={title}
-            indicesExpanded={expanded}
-            onAccordionChange={(idx) =>
-              dispatch({ type: 'toggleExpanded', payload: idx })
-            }
-          >
-            {facets.map((facet, index) => {
-              const { __typename: type, label } = facet
-              const isExpanded = expanded.has(index)
-              return (
-                <FilterFacets
-                  key={`${testId}-${label}-${index}`}
-                  testId={testId}
-                  index={index}
-                  type={type}
-                  label={label}
-                >
-                  {type === 'StoreFacetBoolean' && isExpanded && (
-                    <FilterFacetBoolean>
-                      {facet.values.map((item) => (
-                        <FilterFacetBooleanItem
-                          key={`${testId}-${facet.label}-${item.label}`}
-                          id={`${testId}-${facet.label}-${item.label}`}
-                          testId={testId}
-                          onFacetChange={(facet) => {
-                            setState({
-                              ...state,
-                              selectedFacets: toggleFacet(
-                                state.selectedFacets,
-                                facet
-                              ),
-                              page: 0,
-                            })
-                            resetInfiniteScroll(0)
-                          }}
-                          selected={item.selected}
-                          value={item.value}
-                          quantity={item.quantity}
-                          facetKey={facet.key}
-                          label={item.label}
-                        />
-                      ))}
-                    </FilterFacetBoolean>
-                  )}
-                  {type === 'StoreFacetRange' && isExpanded && (
-                    <FilterFacetRange
-                      facetKey={facet.key}
-                      min={facet.min}
-                      max={facet.max}
-                      formatter={useFormattedPrice}
-                      onFacetChange={(facet) => {
-                        setState({
-                          ...state,
-                          selectedFacets: setFacet(state.selectedFacets, facet, true),
-                          page: 0,
-                        })
-                        resetInfiniteScroll(0)
-                      }}
-                    />
-                  )}
-                </FilterFacets>
-              )
-            })}
-          </Filter>
-        )
-      }
-    ```
-
-  </Tab>
-</Tabs>
-
----
-
-## Props
-
-### Filter
-
-<ComponentPropsSection component="Filter" />
-
-### FilterFacets
-
-<ComponentPropsSection component="FilterFacets" />
-
-### FilterFacetBooleanItem
-
-<ComponentPropsSection component="FilterFacetBooleanItem" />
-
-### FilterFacetRange
-
-<ComponentPropsSection component="FilterFacetRange" />
-
----
-
-## Design Tokens
+## Design tokens
 
 ### Nested Elements
 
@@ -416,7 +295,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `Filter` styles using the following data attributes:
 
 `data-fs-filter`
 
@@ -437,3 +318,23 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 `data-fs-filter-list-item-badge`
 
 `data-fs-filter-facet-range`
+
+---
+
+## Props
+
+### Filter
+
+<ComponentPropsSection component="Filter" />
+
+### FilterFacets
+
+<ComponentPropsSection component="FilterFacets" />
+
+### FilterFacetBooleanItem
+
+<ComponentPropsSection component="FilterFacetBooleanItem" />
+
+### FilterFacetRange
+
+<ComponentPropsSection component="FilterFacetRange" />

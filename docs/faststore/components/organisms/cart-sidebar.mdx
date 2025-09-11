@@ -7,35 +7,13 @@ components:
   - CartSidebar.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/CartSidebar)
+
 The `CartSidebar` displays the summary of items added to the cart along with detailed information, and checkout option.The final component is a compound of the following:
 
 - `CartSidebar`: renders a `SlideOver` as wrapper with the `CartSidebarList` and `CartSidebarFooter`.
 - `CartSidebarList`: wraps a series of `CartItem`s and `Gifts`.
 - `CartSidebarFooter`: wraps an `OrdeSummary` usually along with the Checkout Button.
-
----
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { CartSidebar, CartSidebarList, CartSidebarFooter } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/CartSidebar/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -101,13 +79,27 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Props
+## Usage
 
-<ComponentPropsSection component="CartSidebar" />
+### Import the component
+
+```tsx
+import { CartSidebar, CartSidebarList, CartSidebarFooter } from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/CartSidebar/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -144,8 +136,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
+You can target and override `CartSidebar` styles using the following data attributes:
 `data-fs-cart-sidebar`
 
 `data-fs-cart-sidebar-title`
@@ -153,6 +146,12 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 `data-fs-cart-sidebar-list`
 
 `data-fs-cart-sidebar-footer`
+
+---
+
+## Props
+
+<ComponentPropsSection component="CartSidebar" />
 
 ---
 

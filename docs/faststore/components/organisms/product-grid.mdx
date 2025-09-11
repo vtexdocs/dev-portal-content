@@ -8,20 +8,57 @@ components:
   - ProductGridItem.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/ProductGrid)
+
 The `ProductGrid` is a section generally used on PLP pages to list the products available in the store.The `ProductGrid` is a compound of the following:
 
 - `ProductGrid`: wraps the product grid items.
 - `ProductGridItem`: wraps the product inside a list item.
 - `ProductCard`: the proposed child of a `ProductGridItem`.
 
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <ProductGridUsage />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductGrid>
+      {products.map(({ product }, idx) => (
+        <ProductGridItem>
+          <ProductCard>
+            <ProductCardImage>
+              <img
+                data-fs-image
+                src={product.image[0].url}
+                alt={product.image[0].alternateName}
+              />
+            </ProductCardImage>
+            <ProductCardContent
+              title={product.isVariantOf.name}
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+            />
+          </ProductCard>
+        </ProductGridItem>
+      ))}
+    </ProductGrid>
+    ```
+  </Tab>
+</Tabs>
+
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
-import { ProductGrid, ProductGridItem } from '@faststore/ui'
+import { ProductGrid, ProductGridItem } from "@faststore/ui";
 ```
 
 We highly recommend using the [ProductCard](https://developers.vtex.com/docs/guides/faststore/molecules-product-card) as the direct child of the `ProductGridItem`.
@@ -31,77 +68,22 @@ import {
   ProductCard,
   ProductCardContent,
   ProductCardImage,
-} from '@faststore/ui'
+} from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/organisms/ProductGrid/styles.scss';
+@import "@faststore/ui/src/components/organisms/ProductGrid/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-<OverviewSection>
-  <ProductGridUsage />
-</OverviewSection>
-
-  </Tab>
-  <Tab>
-  
-```tsx
-<ProductGrid>
-  {products.map(({ product }, idx) => (
-      <ProductGridItem>
-        <ProductCard>
-          <ProductCardImage>
-            <img
-              data-fs-image
-              src={product.image[0].url}
-              alt={product.image[0].alternateName}
-            />
-          </ProductCardImage>
-          <ProductCardContent
-            title={product.isVariantOf.name}
-            price={{
-              value: product.offers.offers[0].price,
-              listPrice: product.offers.offers[0].listPrice,
-              formatter: useFormattedPrice,
-            }}
-          />
-        </ProductCard>
-      </ProductGridItem>
-  ))}
-</ProductGrid>
-
-```
-
-  </Tab>
-</Tabs>
-
----
-
-## Props
-
-### ProductGrid
-
-<ComponentPropsSection component="ProductGrid" />
-
-### ProductGridItem
-
-<ComponentPropsSection component="ProductGridItem" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-product-grid-gap-mobile" value="var(--fs-grid-gap-0)" />
@@ -124,11 +106,24 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
+You can target and override `ProductGrid` styles using the following data attributes:
 `data-fs-product-grid`
 
 `data-fs-product-grid-item`
+
+---
+
+## Props
+
+### ProductGrid
+
+<ComponentPropsSection component="ProductGrid" />
+
+### ProductGridItem
+
+<ComponentPropsSection component="ProductGridItem" />
 
 ---
 

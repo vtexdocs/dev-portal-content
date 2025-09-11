@@ -8,36 +8,11 @@ components:
   - NavbarSliderFooter.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/NavbarSlider)
+
 As part of the [Navbar](https://developers.vtex.com/docs/guides/faststore/organisms-navbar), this component is its **mobile version** used to list the navigation links (through the [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-navbar-links)).
 
 This component is part of the [Navigation](https://developers.vtex.com/docs/guides/faststore/feature-navigation) feature and must be used in the [Navbar](https://developers.vtex.com/docs/guides/faststore/organisms-navbar) context.
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import {
-  NavbarSlider,
-  NavbarSliderHeader,
-  NavbarSliderContent,
-  NavbarSliderFooter,
-} from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/NavbarSlider/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 > ⚠️ This component is intended to be used only in the **mobile version**, but it can be adapted to a desktop version by customizing the component styles.
 
@@ -83,27 +58,32 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Props
+## Usage
 
-### NavbarSlider
+### Import the component
 
-<ComponentPropsSection component="NavbarSlider" />
+```tsx
+import {
+  NavbarSlider,
+  NavbarSliderHeader,
+  NavbarSliderContent,
+  NavbarSliderFooter,
+} from '@faststore/ui'
+````
 
-### NavbarSliderHeader
+### Import styles
 
-<ComponentPropsSection component="NavbarSliderHeader" />
+To apply styles, include the following in your stylesheet:
 
-### NavbarSliderContent
+```scss
+@import "@faststore/ui/src/components/organisms/NavbarSlider/styles.scss";
+```
 
-<ComponentPropsSection component="NavbarSliderContent" />
-
-### NavbarSliderFooter
-
-<ComponentPropsSection component="NavbarSliderFooter" />
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-navbar-slider-padding" value="var(--fs-spacing-3)" />
@@ -150,9 +130,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `NavbarSlider` styles using the following data attributes:
 
 `data-fs-navbar-slider`
 
@@ -161,6 +141,26 @@ For further customization, you can use the following data attributes:
 `data-fs-navbar-slider-content`
 
 `data-fs-navbar-slider-footer`
+
+---
+
+## Props
+
+### NavbarSlider
+
+<ComponentPropsSection component="NavbarSlider" />
+
+### NavbarSliderHeader
+
+<ComponentPropsSection component="NavbarSliderHeader" />
+
+### NavbarSliderContent
+
+<ComponentPropsSection component="NavbarSliderContent" />
+
+### NavbarSliderFooter
+
+<ComponentPropsSection component="NavbarSliderFooter" />
 
 ---
 

@@ -7,29 +7,9 @@ components:
   - RegionModal.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/RegionModal)
+
 The `RegionModal` is part of the [Regionalization](https://developers.vtex.com/docs/guides/faststore/feature-regionalization) feature and provides a modal interface for selecting and configuring region-specific options. It extends the functionality of the [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) component, making it adaptable for region-related settings within your FastStore application.
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { RegionModal } from '@faststore/ui'
-```
-
-### Import styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, add the following line to your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/RegionModal/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) guide.
-
----
-
-## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -65,13 +45,27 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Props
+## Usage
 
-<ComponentPropsSection component="RegionModal" />
+### Import the component
+
+```tsx
+import { RegionModal } from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/RegionModal/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -93,12 +87,18 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `RegionModal` styles using the following data attributes:
 
 `data-fs-region-modal`
 
 `data-fs-region-modal-input`
 
 `data-fs-region-modal-link`
+
+---
+
+## Props
+
+<ComponentPropsSection component="RegionModal" />

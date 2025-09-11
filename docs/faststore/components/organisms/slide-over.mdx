@@ -8,29 +8,9 @@ components:
   - SlideOverHeader.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/SlideOver)
+
 The `SlideOver` component represents an aditional session that complements the screen's information.
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { SlideOver, SlideOverHeader } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/SlideOver/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -127,19 +107,27 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Props
+## Usage
 
-### SlideOver
+### Import the component
 
-<ComponentPropsSection component="SlideOver" />
+```tsx
+import { SlideOver, SlideOverHeader } from '@faststore/ui'
+```
 
-### SlideOverHeader
+### Import styles
 
-<ComponentPropsSection component="SlideOverHeader" />
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/organisms/SlideOver/styles.scss';
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -195,7 +183,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `SlideOver` styles using the following data attributes:
 
 `data-fs-slide-over`
 
@@ -206,6 +196,18 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 `data-fs-slide-over-header`
 
 `data-fs-slide-over-header-icon`
+
+---
+
+## Props
+
+### SlideOver
+
+<ComponentPropsSection component="SlideOver" />
+
+### SlideOverHeader
+
+<ComponentPropsSection component="SlideOverHeader" />
 
 ---
 

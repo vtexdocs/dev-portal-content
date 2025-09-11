@@ -9,24 +9,63 @@ components:
   - ProductShelfItem.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/ProductShelf)
+
 The `ProductShelf` component Displays a list of products to be used as a section on the store.The `ProductShelf` is a compound of the following:
 
 - `ProductShelfItems`: the product list.
 - `ProductShelfItem`: wraps the product inside a list item.
 - `ProductCard`: the proposed child of a `ProductShelf`.
 
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: "center" }}>
+      <ProductShelfUsage items={6} id="shelf-example-1" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductShelf>
+      <ProductShelfItems>
+        {products.map(({ product }, idx) => (
+          <ProductShelfItem key={idx}>
+            <ProductCard>
+              <ProductCardImage>
+                <img
+                  data-fs-image
+                  src={product.image[0].url}
+                  alt={product.image[0].alternateName}
+                />
+              </ProductCardImage>
+              <ProductCardContent
+                title={product.isVariantOf.name}
+                price={{
+                  value: product.offers.offers[0].price,
+                  listPrice: product.offers.offers[0].listPrice,
+                  formatter: useFormattedPrice,
+                }}
+              />
+            </ProductCard>
+          </ProductShelfItem>
+        ))}
+      </ProductShelfItems>
+    </ProductShelf>
+    ```
+  </Tab>
+</Tabs>
+
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import {
   ProductShelf,
   ProductShelfItems,
   ProductShelfItem,
-} from '@faststore/ui'
+} from "@faststore/ui";
 ```
 
 We highly recommend using the [ProductCard](https://developers.vtex.com/docs/guides/faststore/molecules-product-card) as the direct child of the `ProductShelfItem`.
@@ -36,103 +75,22 @@ import {
   ProductCard,
   ProductCardContent,
   ProductCardImage,
-} from '@faststore/ui'
+} from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/organisms/ProductShelf/styles.scss';
+@import "@faststore/ui/src/components/organisms/ProductShelf/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
-      <ProductShelfUsage items={6} id="shelf-example-1"/>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-      <ProductShelf>
-        <ProductShelfItems>
-          {products.map(({ product }, idx) => (
-            <ProductShelfItem key={idx}>
-              <ProductCard>
-                <ProductCardImage>
-                  <img
-                    data-fs-image
-                    src={product.image[0].url}
-                    alt={product.image[0].alternateName}
-                  />
-                </ProductCardImage>
-                <ProductCardContent
-                  title={product.isVariantOf.name}
-                  price={{
-                    value: product.offers.offers[0].price,
-                    listPrice: product.offers.offers[0].listPrice,
-                    formatter: useFormattedPrice,
-                  }}
-                />
-              </ProductCard>
-            </ProductShelfItem>
-          ))}
-        </ProductShelfItems>
-      </ProductShelf>
-    ```
-
-  </Tab>
-</Tabs>
-
----
-
-## Props
-
-All `ProductShelf` related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
-
-### ProductShelf
-
-<ComponentPropsSection component="ProductShelf" />
-
-### ProductShelfItems
-
-<ComponentPropsSection component="ProductShelfItems" />
-
-### ProductShelfItem
-
-<ComponentPropsSection component="ProductShelfItem" />
-
----
-
-## Design Tokens
-
-### Nested Elements
-
-#### Items
-
-<TokenTable>
-  <TokenRow token="--fs-product-shelf-items-gap" value="var(--fs-grid-gap-1)" />
-  <TokenDivider />
-  <TokenRow
-    token="--fs-product-shelf-items-padding-top"
-    value="var(--fs-spacing-0)"
-  />
-  <TokenRow
-    token="--fs-product-shelf-items-padding-bottom"
-    value="var(--fs-spacing-3)"
-  />
-</TokenTable>
-
----
-
-## Variants
+## Examples
 
 You can use [ProductCard variants](https://developers.vtex.com/docs/guides/faststore/molecules-product-card#variants) to create `ProductShelf` variations.
 
@@ -308,13 +266,53 @@ You can use [ProductCard variants](https://developers.vtex.com/docs/guides/fasts
 
 ---
 
-## Customization
+## Design tokens
 
+### Nested Elements
+
+#### Items
+
+<TokenTable>
+  <TokenRow token="--fs-product-shelf-items-gap" value="var(--fs-grid-gap-1)" />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-product-shelf-items-padding-top"
+    value="var(--fs-spacing-0)"
+  />
+  <TokenRow
+    token="--fs-product-shelf-items-padding-bottom"
+    value="var(--fs-spacing-3)"
+  />
+</TokenTable>
+
+---
+
+## Data attributes
+
+You can target and override `ProductShelf` styles using the following data attributes:
 `data-fs-product-shelf`
 
 `data-fs-product-shelf-items`
 
 `data-fs-product-shelf-item`
+
+---
+
+## Props
+
+All `ProductShelf` related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
+
+### ProductShelf
+
+<ComponentPropsSection component="ProductShelf" />
+
+### ProductShelfItems
+
+<ComponentPropsSection component="ProductShelfItems" />
+
+### ProductShelfItem
+
+<ComponentPropsSection component="ProductShelfItem" />
 
 ---
 

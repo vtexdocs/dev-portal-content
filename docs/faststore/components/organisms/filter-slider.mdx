@@ -5,6 +5,8 @@ components:
   - FilterSlider.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/blob/main/packages/components/src/organisms/Filter/FilterSlider.tsx)
+
 The mobile `Filter` view that is rendered inside a `SlideOver` component.The `FilterSlider` component is a compound of the following:
 
 - `FilterSlider`: `SlideOver` that wraps the `Filter` for small screen dimensions.
@@ -13,37 +15,6 @@ The mobile `Filter` view that is rendered inside a `SlideOver` component.The `Fi
 - `FilterFacetBoolean`: wraps the list of the `FilterFacetBooleanItem`.
 - `FilterFacetBooleanItem`: wraps a `Checkbox` with its `Label` and the `Badge` that represents the child of the `FilterFacetBoolean`.
 - `FilterFacetRange`: wraps a `PriceRange` for a given Facet with the Range type.
-
----
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import {
-  FilterSlider,
-  Filter,
-  FilterFacets,
-  FilterFacetBoolean,
-  FilterFacetBooleanItem,
-  FilterFacetRange,
-} from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/FilterSlider/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -176,15 +147,34 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Props
+## Usage
 
-### FilterSlider
+### Import the component
 
-<ComponentPropsSection component="FilterSlider" />
+```tsx
+import {
+  FilterSlider,
+  Filter,
+  FilterFacets,
+  FilterFacetBoolean,
+  FilterFacetBooleanItem,
+  FilterFacetRange,
+} from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/FilterSlider/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 ### Nested Elements
 
@@ -251,7 +241,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `FilterSlider` styles using the following data attributes:
 
 `data-fs-filter-slider`
 
@@ -264,3 +256,11 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 `data-fs-filter-slider-footer-button-apply`
 
 `data-fs-filter-slider-footer-button-clear`
+
+---
+
+## Props
+
+### FilterSlider
+
+<ComponentPropsSection component="FilterSlider" />

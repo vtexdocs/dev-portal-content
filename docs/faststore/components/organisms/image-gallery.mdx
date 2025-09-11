@@ -7,35 +7,10 @@ components:
   - ImageGallery.tsx
   - ImageGallerySelector.tsx
 ---
+
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/ImageGallery)
+
 The `ImageGallery` is used when you want to display a series of photos in a gallery on a post or page.According to the quantity of `Image` to be displayed, the `ImageGallerySelector` will be displayed.
-
----
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import {
-  ImageGallery,
-  ImageGallerySelector,
-  ImageGalleryViewer,
-} from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/ImageGallery/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 > ⚠️ Add the `data-fs-image` attribute in all `<img>` tags to ensure they work as expected. You can find an example in the `Code` tab below for reference.
 
@@ -75,23 +50,111 @@ const currentImage = imagesUsage[selectedImageIdx]
 
 ---
 
-## Props
+## Usage
 
-### ImageGallery
+### Import the component
 
-<ComponentPropsSection component="ImageGallery" />
+```tsx
+import {
+  ImageGallery,
+  ImageGallerySelector,
+  ImageGalleryViewer,
+} from "@faststore/ui";
+```
 
-### ImageGallerySelector
+### Import styles
 
-<ComponentPropsSection component="ImageGallerySelector" />
+To apply styles, include the following in your stylesheet:
 
-### ImageElementData
+```scss
+@import "@faststore/ui/src/components/organisms/ImageGallery/styles.scss";
+```
 
-<PropsSection propsList={propsImageElementData} />
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Examples
+
+## Variants
+
+### With Selector (More than 1 Image)
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <ImageGalleryUsage images={imagesUsage} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+```tsx
+const ImageComponent = ({ url, alternateName }) => (
+  <img data-fs-image src={url} alt={alternateName} />
+)
+
+const [selectedImageIdx, setSelectedImageIdx] = useState(0)
+const currentImage = imagesUsage[selectedImageIdx]
+
+<ImageGallery
+  images={imagesUsage}
+  ImageComponent={ImageComponent}
+  selectedImageIdx={selectedImageIdx}
+  setSelectedImageIdx={setSelectedImageIdx}
+>
+  <ImageGalleryViewer>
+    <img
+      data-fs-image
+      src={currentImage.url}
+      alt={currentImage.alternateName}
+    />
+  </ImageGalleryViewer>
+</ImageGallery>
+```
+  </Tab>
+</Tabs>
+
+### Without Selector
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <ImageGalleryUsage images={imagesWithoutSelector} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+  ```tsx
+  const ImageComponent = ({ url, alternateName }) => (
+    <img data-fs-image src={url} alt={alternateName} />
+  )
+
+export const images = [imagesUsage[0]]
+
+const [selectedImageIdx, setSelectedImageIdx] = useState(0)
+const currentImage = images[selectedImageIdx]
+
+{" "}
+<ImageGallery
+  images={images}
+  ImageComponent={ImageComponent}
+  selectedImageIdx={selectedImageIdx}
+  setSelectedImageIdx={setSelectedImageIdx}
+>
+  <ImageGalleryViewer>
+    <img
+      data-fs-image
+      src={currentImage.url}
+      alt={currentImage.alternateName}
+    />
+  </ImageGalleryViewer>
+</ImageGallery>
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -227,87 +290,9 @@ const currentImage = imagesUsage[selectedImageIdx]
 
 ---
 
-## Variants
+## Data attributes
 
-### With Selector (More than 1 Image)
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <ImageGalleryUsage images={imagesUsage} />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-```tsx
-const ImageComponent = ({ url, alternateName }) => (
-  <img data-fs-image src={url} alt={alternateName} />
-)
-
-const [selectedImageIdx, setSelectedImageIdx] = useState(0)
-const currentImage = imagesUsage[selectedImageIdx]
-
-<ImageGallery
-  images={imagesUsage}
-  ImageComponent={ImageComponent}
-  selectedImageIdx={selectedImageIdx}
-  setSelectedImageIdx={setSelectedImageIdx}
->
-  <ImageGalleryViewer>
-    <img
-      data-fs-image
-      src={currentImage.url}
-      alt={currentImage.alternateName}
-    />
-  </ImageGalleryViewer>
-</ImageGallery>
-    ```
-
-  </Tab>
-</Tabs>
-
-### Without Selector
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <ImageGalleryUsage images={imagesWithoutSelector} />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-  ```tsx
-  const ImageComponent = ({ url, alternateName }) => (
-    <img data-fs-image src={url} alt={alternateName} />
-  )
-
-  export const images = [imagesUsage[0]]
-
-  const [selectedImageIdx, setSelectedImageIdx] = useState(0)
-  const currentImage = images[selectedImageIdx]
-
-  <ImageGallery
-    images={images}
-    ImageComponent={ImageComponent}
-    selectedImageIdx={selectedImageIdx}
-    setSelectedImageIdx={setSelectedImageIdx}
-  >
-    <ImageGalleryViewer>
-      <img
-        data-fs-image
-        src={currentImage.url}
-        alt={currentImage.alternateName}
-      />
-    </ImageGalleryViewer>
-  </ImageGallery>
-  ```
-
-  </Tab>
-</Tabs>
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
+You can target and override `ImageGallery` styles using the following data attributes:
 
 `data-fs-image-gallery`
 
@@ -322,3 +307,19 @@ For further customization, you can use the following data attributes:
 `data-fs-image-gallery-selector-elements`
 
 `data-fs-image-gallery-selector-thumbnail`
+
+---
+
+## Props
+
+### ImageGallery
+
+<ComponentPropsSection component="ImageGallery" />
+
+### ImageGallerySelector
+
+<ComponentPropsSection component="ImageGallerySelector" />
+
+### ImageElementData
+
+<PropsSection propsList={propsImageElementData} />
