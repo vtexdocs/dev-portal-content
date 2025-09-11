@@ -11,9 +11,9 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Link___ae95650d3842207e2d790446c3418086.png
 ---
 
-Link performs the same behavior of a regular anchor tag (`a`), but can be used as any HTML tag and component, including specific Frameworks link components.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Link)
 
-## Overview
+Link performs the same behavior of a regular anchor tag (`a`), but can be used as any HTML tag and component, including specific Frameworks link components.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -36,49 +36,95 @@ Link performs the same behavior of a regular anchor tag (`a`), but can be used a
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](/../components)
+### Import the component
 
 ```tsx
 import { Link } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Link/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Link href="/">A default link</Link>
-</OverviewSection>
-```tsx
-<Link href="/">A default link</Link>
-```
+### Variants
+
+#### Inverse
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Link inverse={true}>Inverse Link</Link>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Link inverse={true}>Inverse Link</Link>
+    ```
+  </Tab>
+</Tabs>
+
+#### Display
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Link variant="display">Display Link</Link>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Link variant="display">Display Link</Link>
+    ```
+  </Tab>
+</Tabs>
+
+#### Inline
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Link variant="inline">Inline Link</Link>
+    </OverviewSection>
+  <Tab>
+  <Tab>
+    ``tsx
+    <Link variant="inline">Inline Link</Link>
+    ```
+  </Tab>
+</Tabs>
+
+### Size
+
+#### Small
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Link size="small">Small Link</Link>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Link size="small">Small Link</Link>
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Props
-
-The `Link` component supports all attributes supported by the tag `a`.
-If you need to use it as external link component (i.e., Next.js `Link` or Gatsby `Link`), the FastStore UI `Link` component can be used with the `as={NextLink}` prop.
-
-Besides those attributes, the following props are also supported:
-
-<PropsSection propsList={propsLink} />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-link-min-width" value="auto" />
@@ -113,16 +159,7 @@ Besides those attributes, the following props are also supported:
   />
 </TokenTable>
 
-### Variants
-
-#### Inverse
-
-<OverviewSection dark>
-  <Link inverse={true}>Inverse Link</Link>
-</OverviewSection>
-```tsx
-<Link inverse={true}>Inverse Link</Link>
-````
+## Design tokens: Disabled
 
 <TokenTable>
   <TokenRow
@@ -138,14 +175,30 @@ Besides those attributes, the following props are also supported:
   />
 </TokenTable>
 
-#### Display
+### Design tokens: Inline
 
-<OverviewSection>
-  <Link variant="display">Display Link</Link>
-</OverviewSection>
-```tsx
-<Link variant="display">Display Link</Link>
-```
+<TokenTable>
+  <TokenRow token="--fs-link-inline-padding" value="0" />
+  <TokenRow token="--fs-link-inline-text-decoration" value="underline" />
+  <TokenRow
+    token="--fs-link-inline-text-color"
+    value="var(--fs-link-text-color)"
+    globalValue="var(--fs-color-link)"
+    isColor
+  />
+</TokenTable>
+
+### Design tokens: Small
+
+<TokenTable>
+  <TokenRow token="--fs-link-small-text-size" value="var(--fs-text-size-1)" />
+  <TokenRow
+    token="--fs-link-small-padding"
+    value="var(--fs-spacing-1) var(--fs-spacing-0)"
+  />
+</TokenTable>
+
+### Design tokens: Display
 
 <TokenTable>
   <TokenRow
@@ -165,50 +218,11 @@ Besides those attributes, the following props are also supported:
   />
 </TokenTable>
 
-#### Inline
-
-<OverviewSection>
-  <Link variant="inline">Inline Link</Link>
-</OverviewSection>
-```tsx
-<Link variant="inline">Inline Link</Link>
-```
-
-<TokenTable>
-  <TokenRow token="--fs-link-inline-padding" value="0" />
-  <TokenRow token="--fs-link-inline-text-decoration" value="underline" />
-  <TokenRow
-    token="--fs-link-inline-text-color"
-    value="var(--fs-link-text-color)"
-    globalValue="var(--fs-color-link)"
-    isColor
-  />
-</TokenTable>
-
-### Size
-
-#### Small
-
-<OverviewSection>
-  <Link size="small">Small Link</Link>
-</OverviewSection>
-```tsx
-<Link size="small">Small Link</Link>
-```
-
-<TokenTable>
-  <TokenRow token="--fs-link-small-text-size" value="var(--fs-text-size-1)" />
-  <TokenRow
-    token="--fs-link-small-padding"
-    value="var(--fs-spacing-1) var(--fs-spacing-0)"
-  />
-</TokenTable>
-
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Link` styles using the following data attributes:
 
 `data-fs-link`
 
@@ -217,3 +231,15 @@ For further customization, you can use the following data attributes:
 `data-fs-link-size="small" | "regular"`
 
 `data-fs-link-inverse="true"`
+
+---
+
+## Props
+
+The `Link` component supports all attributes supported by the tag `a`.
+If you need to use it as external link component (i.e., Next.js `Link` or Gatsby `Link`), the FastStore UI `Link` component can be used with the `as={NextLink}` prop.
+
+Besides those attributes, the following props are also supported:
+
+<PropsSection propsList={propsLink} />
+

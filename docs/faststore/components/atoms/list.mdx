@@ -7,9 +7,9 @@ components:
   - List.tsx
 ---
 
-Lists group related content. They can be ordered or unordered.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/List)
 
-## Overview
+Lists group related content. They can be ordered or unordered.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -54,35 +54,29 @@ Lists group related content. They can be ordered or unordered.
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { List } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/List/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <List marker>
-    <li>Great Unordered List</li>
-    <li>Ok Unordered List</li>
-    <li>Bad Unordered List</li>
-  </List>
-</OverviewSection>
+### Unordered
 
 ```tsx
 <List marker>
@@ -92,34 +86,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </List>
 ```
 
----
-
-## Props
-
-<ComponentPropsSection component="List" />
-
----
-
-## Design Tokens
-
-<TokenTable>
-  <TokenRow token="--fs-list-style-unordered" value="initial" />
-  <TokenRow token="--fs-list-style-ordered" value="decimal" />
-</TokenTable>
-
-### Variants
-
-#### Unordered
-
-```tsx
-<List marker>
-  <li>Great Unordered List</li>
-  <li>Ok Unordered List</li>
-  <li>Bad Unordered List</li>
-</List>
-```
-
-#### Ordered
+### Ordered
 
 ```tsx
 <List as="ol" marker>
@@ -129,7 +96,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 </List>
 ```
 
-#### Without marker
+### Without marker
 
 ```tsx
 <List as="ol">
@@ -141,10 +108,25 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Design tokens
 
-For further customization, you can use the following data attributes:
+<TokenTable>
+  <TokenRow token="--fs-list-style-unordered" value="initial" />
+  <TokenRow token="--fs-list-style-ordered" value="decimal" />
+</TokenTable>
+
+---
+
+## Data attributes
+
+You can target and override `List` styles using the following data attributes:
 
 `data-fs-list`
 
 `data-fs-list-marker="true"`
+
+---
+
+## Props
+
+<ComponentPropsSection component="List" />

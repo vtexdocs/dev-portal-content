@@ -7,6 +7,8 @@ components:
   - Skeleton.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Skeleton)
+
 This feature improves the store's experience and perceived performance through loading placeholders.
 `Skeletons` are like an element's or section's wireframe. It's a placeholder
 that simulates the layout of these elements/sections while data is being loaded.
@@ -14,8 +16,6 @@ that simulates the layout of these elements/sections while data is being loaded.
 Instead of showing a blank page, displaying `Skeletons` while loading content makes the user feel like the store is more responsive and faster.
 
 Also by using `Skeletons` the store will be less likely to experience [Cumulative Layout Shilf (or CLS)](https://web.dev/i18n/en/cls/).
-
-## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -51,9 +51,9 @@ Also by using `Skeletons` the store will be less likely to experience [Cumulativ
 </Tabs>
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Skeleton } from '@faststore/ui'
@@ -67,29 +67,11 @@ To apply the styles of this component in your FastStore project, import the foll
 @import '@faststore/ui/src/components/atoms/Skeleton/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<OverviewSection>
-  <Skeleton size={{ width: '200px', height: '80px' }} borderRadius="32px" />
-</OverviewSection>
-
-```tsx
-<Skeleton size={{ width: '200px', height: '80px' }} borderRadius="32px" />
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="Skeleton" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -103,11 +85,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
----
-
-### Nested Elements
-
-#### Shimmer
+### Design tokens: Shimmer
 
 <TokenTable>
   <TokenRow token="--fs-skeleton-shimmer-width" value="50%" />
@@ -133,10 +111,17 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Skeleton` styles using the following data attributes:
 
 `data-fs-skeleton`
 
 `data-fs-skeleton-shimmer`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Skeleton" />
+

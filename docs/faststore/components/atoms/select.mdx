@@ -11,9 +11,9 @@ components:
   - Select.tsx
 ---
 
-Select components allow users to pick an option from a predefined list. The Select component should be used when there are more than 5 options available. Otherwise, consider using the [RadioGroup](https://developers.vtex.com/docs/guides/faststore/molecules-radio-group) component.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Select)
 
-## Overview
+Select components allow users to pick an option from a predefined list. The Select component should be used when there are more than 5 options available. Otherwise, consider using the [RadioGroup](https://developers.vtex.com/docs/guides/faststore/molecules-radio-group) component.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -62,9 +62,9 @@ Select components allow users to pick an option from a predefined list. The Sele
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Select } from '@faststore/ui'
@@ -78,40 +78,48 @@ To apply the styles of this component in your FastStore project, import the foll
 @import '@faststore/ui/src/components/atoms/Select/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Select
-    options={{
-      great: 'Great',
-      ok: 'Ok',
-      bad: 'Bad',
-    }}
-  />
-</OverviewSection>
-```tsx
-<Select
-  options={{
-    great: 'Great',
-    ok: 'Ok',
-    bad: 'Bad',
-  }}
-/>
-```
+### Variants
+
+#### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Select
+        id="select-disabled"
+        options={{
+          great: 'Great',
+          ok: 'Ok',
+          bad: 'Bad',
+        }}
+        disabled
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Select
+      id="select-disabled"
+      options={{
+        great: 'Great',
+        ok: 'Ok',
+        bad: 'Bad',
+      }}
+      disabled
+    />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Props
-
-<ComponentPropsSection component="Select" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-select-height" value="var(--fs-spacing-6)" />
@@ -156,9 +164,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
-
-#### Icon
+### Design tokens: Icon
 
 <TokenTable>
   <TokenRow
@@ -177,32 +183,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
-
-#### Disabled
-
-<OverviewSection>
-  <Select
-    id="select-disabled"
-    options={{
-      great: 'Great',
-      ok: 'Ok',
-      bad: 'Bad',
-    }}
-    disabled
-  />
-</OverviewSection>
-```tsx
-<Select
-  id="select-disabled"
-  options={{
-    great: 'Great',
-    ok: 'Ok',
-    bad: 'Bad',
-  }}
-  disabled
-/>
-```
+### Design tokens: Disabled
 
 <TokenTable>
   <TokenRow
@@ -215,13 +196,19 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Select` styles using the following data attributes:
 
 `data-fs-select`
 
 `data-fs-select-icon`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Select" />
 
 ---
 
