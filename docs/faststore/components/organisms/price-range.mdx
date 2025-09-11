@@ -7,9 +7,9 @@ components:
   - PriceRange.tsx
 ---
 
-The `PriceRange` component is a [Slider](https://developers.vtex.com/docs/guides/faststore/atoms-slider) that allows users to select a maximum and minimum price from a range.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/PriceRange)
 
-## Overview
+The `PriceRange` component is a [Slider](https://developers.vtex.com/docs/guides/faststore/atoms-slider) that allows users to select a maximum and minimum price from a range.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -31,50 +31,36 @@ The `PriceRange` component is a [Slider](https://developers.vtex.com/docs/guides
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { PriceRange } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/organisms/PriceRange/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Data attributes
 
-<OverviewSection>
-  <PriceRangeUsage />
-</OverviewSection>
-```tsx
-<PriceRange
-  max={{ absolute: 500, selected: 250 }}
-  min={{ absolute: 0, selected: 100 }}
-  formatter={formatter}
-  step={1}
-/>
-```
+You can target and override `PriceRange` styles using the following data attributes:
+
+`data-fs-price-range`
+
+`data-fs-price-range-inputs`
 
 ---
 
 ## Props
 
 <ComponentPropsSection component="PriceRange" />
-
----
-
-## Customization
-
-`data-fs-price-range`
-
-`data-fs-price-range-inputs`

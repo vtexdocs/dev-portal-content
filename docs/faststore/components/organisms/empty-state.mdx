@@ -7,9 +7,9 @@ components:
   - EmptyState.tsx
 ---
 
-The `EmptyState` can be used to represent an empty state.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/EmptyState)
 
-## Overview
+The `EmptyState` can be used to represent an empty state.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -95,69 +95,27 @@ The `EmptyState` can be used to represent an empty state.
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { EmptyState } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/EmptyState/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection direction="row">
-      <EmptyState
-        title="Your Cart is empty"
-        titleIcon={
-          <Icon name="ShoppingCart" width={56} height={56} weight="thin" />
-        }
-      >
-        <Button variant="secondary">
-          Start Shopping
-        </Button>
-      </EmptyState>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-      <EmptyState
-        title="Your Cart is empty"
-        titleIcon={
-          <Icon name="ShoppingCart" width={56} height={56} weight="thin" />
-        }
-      >
-        <Button variant="secondary">
-          Start Shopping
-        </Button>
-      </EmptyState>
-    ```
+### Import the component
 
-  </Tab>
-</Tabs>
+```tsx
+import { EmptyState } from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/EmptyState/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Props
-
-<ComponentPropsSection component="EmptyState" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-empty-state-height" value="100%" />
@@ -165,9 +123,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <TokenRow token="--fs-empty-state-padding" value="0 var(--fs-spacing-8)" />
 </TokenTable>
 
-### Nested Elements
-
-#### Title
+### Design tokens: Title
 
 <TokenTable>
   <TokenRow
@@ -185,15 +141,13 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Link
+### Design tokens: Link
 
 <TokenTable>
   <TokenRow token="--fs-empty-state-link-min-width" value="11.875rem" />
 </TokenTable>
 
-### Variants
-
-#### Rounded
+### Design tokens: Rounded
 
 <TokenTable>
   <TokenRow
@@ -202,7 +156,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Default Background Color
+### Design tokens: Default background color
 
 <TokenTable>
   <TokenRow
@@ -211,7 +165,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### White Background Color
+### Design tokens: White background color
 
 <TokenTable>
   <TokenRow
@@ -222,7 +176,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `EmptyState` styles using the following data attributes:
 
 `data-fs-empty-state`
 
@@ -231,3 +187,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 `data-fs-empty-state-variant="default | rounded"`
 
 `data-fs-empty-state-bkg-color="default | white"`
+
+---
+
+## Props
+
+<ComponentPropsSection component="EmptyState" />

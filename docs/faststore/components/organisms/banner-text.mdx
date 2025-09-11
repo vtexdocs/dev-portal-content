@@ -8,38 +8,16 @@ components:
   - BannerTextContent.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/BannerText)
+
 The `BannerText` is used for advertising brands, products, and/or collections. They comprise an image, some text content, and a call-to-action button.The final `BannerText` component is a compound of the following:
 
 - `BannerText`: wraps the BannerText component.
 - `BannerTextContent`: the content of the banner, including a title, caption, and Link.
 
----
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { BannerText, BannerTextContent } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/BannerText/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
-    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+    <OverviewSection containerStyle={{ justifyContent: "center" }}>
       <BannerText>
         <BannerTextContent
           title="Explore more about our amazing products"
@@ -66,22 +44,186 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Props
+## Usage
 
-All banner text related components support all attributes also supported by the `<div>` tag.
-Besides those attributes, the following props are also supported:
+### Import the component
 
-### BannerText
+```tsx
+import { BannerText, BannerTextContent } from "@faststore/ui";
+```
 
-<ComponentPropsSection component="BannerText" />
+### Import styles
 
-### BannerTextContent
+To apply styles, include the following in your stylesheet:
 
-<ComponentPropsSection component="BannerTextContent" />
+```scss
+@import "@faststore/ui/src/components/organisms/BannerText/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Examples
+
+#### Variants
+
+#### Primary
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <BannerText variant="primary">
+        <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+      </BannerText>
+    </OverviewSection>
+
+  </Tab>
+  <Tab>
+    ```tsx
+    <BannerText variant="primary">
+      <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Secondary
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+     <BannerText variant="secondary">
+      <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+      <BannerText variant="secondary">
+        <BannerTextContent
+          title="Explore more about our amazing products"
+          caption="All the amazing products from the brands we partner with."
+          link="/"
+          linkText="See more"
+        />
+      </BannerText>
+
+    ```
+
+  </Tab>
+</Tabs>
+
+### Color variants
+
+#### Main
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <BannerText colorVariant="main">
+      <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <BannerText colorVariant="main">
+      <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Light
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
+      <BannerText colorVariant="light">
+      <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+    </OverviewSection>
+
+  </Tab>
+  <Tab>
+    ```tsx
+    <BannerText colorVariant="light">
+      <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+    ```
+  </Tab>
+</Tabs>
+
+#### Accent
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ justifyContent: "center" }}>
+      <BannerText colorVariant="accent">
+        <BannerTextContent
+          title="Explore more about our amazing products"
+          caption="All the amazing products from the brands we partner with."
+          link="/"
+          linkText="See more"
+        />
+      </BannerText>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <BannerText colorVariant="accent">
+      <BannerTextContent
+        title="Explore more about our amazing products"
+        caption="All the amazing products from the brands we partner with."
+        link="/"
+        linkText="See more"
+      />
+    </BannerText>
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -120,38 +262,7 @@ Besides those attributes, the following props are also supported:
   <TokenRow token="--fs-banner-text-line-height" value="1.2" />
 </TokenTable>
 
-### Hierarchy
-
-#### Primary
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
-      <BannerText variant="primary">
-        <BannerTextContent
-        title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-      </BannerText>
-    </OverviewSection>
-
-  </Tab>
-  <Tab>
-    ```tsx
-    <BannerText variant="primary">
-      <BannerTextContent
-        title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-    </BannerText>
-    ```
-
-  </Tab>
-</Tabs>
+### Design tokens: Primary
 
 <TokenTable>
   <TokenRow
@@ -160,36 +271,7 @@ Besides those attributes, the following props are also supported:
   />
 </TokenTable>
 
-#### Secondary
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
-     <BannerText variant="secondary">
-      <BannerTextContent
-        title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-    </BannerText>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-      <BannerText variant="secondary">
-        <BannerTextContent
-          title="Explore more about our amazing products"
-          caption="All the amazing products from the brands we partner with."
-          link="/"
-          linkText="See more"
-        />
-      </BannerText>
-
-    ```
-
-  </Tab>
-</Tabs>
+### Design tokens: Secondary
 
 <TokenTable>
   <TokenRow
@@ -210,39 +292,7 @@ Besides those attributes, the following props are also supported:
   />
 </TokenTable>
 
----
-
-### Variants
-
-#### Main
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
-      <BannerText colorVariant="main">
-      <BannerTextContent
-        title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-    </BannerText>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <BannerText colorVariant="main">
-      <BannerTextContent
-        title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-    </BannerText>
-    ```
-
-  </Tab>
-</Tabs>
+### Design tokens: Main
 
 <TokenTable>
   <TokenRow
@@ -257,35 +307,7 @@ Besides those attributes, the following props are also supported:
   />
 </TokenTable>
 
-#### Light
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
-      <BannerText colorVariant="light">
-      <BannerTextContent
-        title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-    </BannerText>
-    </OverviewSection>
-
-  </Tab>
-  <Tab>
-    ```tsx
-    <BannerText colorVariant="light">
-      <BannerTextContent
-        title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-    </BannerText>
-    ```
-  </Tab>
-</Tabs>
+### Design tokens: Light
 
 <TokenTable>
   <TokenRow
@@ -300,34 +322,7 @@ Besides those attributes, the following props are also supported:
   />
 </TokenTable>
 
-#### Accent
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ justifyContent: 'center' }}>
-      <BannerText colorVariant="accent">
-        <BannerTextContent
-          title="Explore more about our amazing products"
-          caption="All the amazing products from the brands we partner with."
-          link="/"
-          linkText="See more"
-        />
-      </BannerText>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <BannerText colorVariant="accent">
-      <BannerTextContent
-        title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-    </BannerText>
-    ```
-  </Tab>
-</Tabs>
+### Design tokens: Accent
 
 <TokenTable>
   <TokenRow
@@ -345,8 +340,9 @@ Besides those attributes, the following props are also supported:
 
 ---
 
-## Customization
+## Data attributes
 
+You can target and override `BannerText` styles using the following data attributes:
 `data-fs-banner-text`
 
 `data-fs-banner-text-variant="primary" | "secondary"`
@@ -358,3 +354,18 @@ Besides those attributes, the following props are also supported:
 `data-fs-banner-text-heading`
 
 `data-fs-banner-text-link`
+
+---
+
+## Props
+
+All banner text related components support all attributes also supported by the `<div>` tag.
+Besides those attributes, the following props are also supported:
+
+### BannerText
+
+<ComponentPropsSection component="BannerText" />
+
+### BannerTextContent
+
+<ComponentPropsSection component="BannerTextContent" />

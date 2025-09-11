@@ -8,29 +8,9 @@ components:
   - NavbarButtons.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/Navbar)
+
 The `Navbar` represents the page header and groups some features like: `Search`, `Regionalization`, `SignIn`, `CartSidebar`. This component is part of the [Navigation](https://developers.vtex.com/docs/guides/faststore/feature-navigation) feature.
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Navbar, NavbarHeader, NavbarRow, NavbarButtons } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/Navbar/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
 
 Uses `NavbarHeader`, `NavbarRow` and `NavbarButtons` as compound components.
 
@@ -93,27 +73,27 @@ The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-na
 
 ---
 
-## Props
+## Usage
 
-### Navbar
+### Import the component
 
-<ComponentPropsSection component="Navbar" />
+```tsx
+import { Navbar, NavbarHeader, NavbarRow, NavbarButtons } from '@faststore/ui'
+```
 
-### NavbarHeader
+### Import styles
 
-<ComponentPropsSection component="NavbarHeader" />
+To apply styles, include the following in your stylesheet:
 
-### NavbarRow
+```scss
+@import '@faststore/ui/src/components/organisms/Navbar/styles.scss';
+```
 
-<ComponentPropsSection component="NavbarRow" />
-
-### NavbarButtons
-
-<ComponentPropsSection component="NavbarButtons" />
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-navbar-height-mobile" value="3.5rem" />
@@ -200,7 +180,9 @@ The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-na
 
 ---
 
-## Customization
+## Data attributes
+
+You can target and override `Navbar` styles using the following data attributes:
 
 `data-fs-navbar`
 
@@ -209,6 +191,26 @@ The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-na
 `data-fs-navbar-row`
 
 `data-fs-navbar-buttons`
+
+---
+
+## Props
+
+### Navbar
+
+<ComponentPropsSection component="Navbar" />
+
+### NavbarHeader
+
+<ComponentPropsSection component="NavbarHeader" />
+
+### NavbarRow
+
+<ComponentPropsSection component="NavbarRow" />
+
+### NavbarButtons
+
+<ComponentPropsSection component="NavbarButtons" />
 
 ---
 

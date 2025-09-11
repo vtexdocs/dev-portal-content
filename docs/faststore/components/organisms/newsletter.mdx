@@ -15,33 +15,7 @@ title: Newsletter
 excerpt: The `Newsletter` component is a section with at least one input text with an action allowing users to submit their input.
 ---
 
-## Import
-
-Import the components from [@faststore/ui](/../docs/guides/faststore/components-index)
-
-```tsx
-import {
-  Newsletter,
-  NewsletterAddendum,
-  NewsletterContent,
-  NewsletterForm,
-  NewsletterHeader,
-} from "@faststore/ui";
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import "@faststore/ui/src/components/organisms/Newsletter/styles.scss";
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/Newsletter)
 
 Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound components.
 
@@ -83,73 +57,33 @@ Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound co
   </Tab>
 </Tabs>
 
+## Usage
+
+### Import the component
+
+```tsx
+import {
+  Newsletter,
+  NewsletterAddendum,
+  NewsletterContent,
+  NewsletterForm,
+  NewsletterHeader,
+} from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/Newsletter/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
-
-### Newsletter
-
-<ComponentPropsSection component="Newsletter" />
-
-### NewsletterAddendum
-
-<ComponentPropsSection component="NewsletterAddendum" />
-
-### NewsletterContent
-
-<ComponentPropsSection component="NewsletterContent" />
-
-### NewsletterForm
-
-<ComponentPropsSection component="NewsletterForm" />
-
-### NewsletterHeader
-
-<ComponentPropsSection component="NewsletterHeader" />
-
----
-
-## Design Tokens
-
-<TokenTable>
-  <TokenRow
-    token="--fs-newsletter-padding-mobile"
-    value="var(--fs-spacing-5)"
-  />
-  <TokenRow
-    token="--fs-newsletter-padding-desktop"
-    value="var(--fs-spacing-9) 10%"
-  />
-  <TokenRow
-    token="--fs-newsletter-border-radius"
-    value="var(--fs-border-radius)"
-  />
-</TokenTable>
-
-### Nested Elements
-
-#### Title
-
-<TokenTable>
-  <TokenRow
-    token="--fs-newsletter-title-size"
-    value="var(--fs-text-size-title-section)"
-  />
-  <TokenRow
-    token="--fs-newsletter-title-weight"
-    value="var(--fs-text-weight-bold)"
-  />
-</TokenTable>
-
-#### Icon
-
-<TokenTable>
-  <TokenRow token="--fs-newsletter-icon-size" value="var(--fs-spacing-5)" />
-</TokenTable>
-
-### Variants
-
-#### Card
+## Examples
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -192,12 +126,7 @@ Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound co
   </Tab>
 </Tabs>
 
-<TokenTable>
-  <TokenRow
-    token="--fs-newsletter-card-border-radius"
-    value="var(--fs-border-radius)"
-  />
-</TokenTable>
+### Color variants
 
 #### Main
 
@@ -224,18 +153,6 @@ Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound co
     ```
   </Tab>
 </Tabs>
-
-<TokenTable>
-  <TokenRow
-    token="--fs-newsletter-main-bkg-color"
-    value="var(--fs-color-primary-bkg)"
-  />
-  <TokenRow
-    token="--fs-newsletter-main-text-color"
-    value="var(--fs-color-primary-text)"
-  />
-</TokenTable>
-
 #### Light
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
@@ -261,18 +178,6 @@ Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound co
     ```
   </Tab>
 </Tabs>
-
-<TokenTable>
-  <TokenRow
-    token="--fs-newsletter-light-bkg-color"
-    value="var(--fs-color-secondary-bkg-light)"
-  />
-  <TokenRow
-    token="--fs-newsletter-light-text-color"
-    value="var(--fs-color-text-display)"
-  />
-</TokenTable>
-
 #### Accent
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
@@ -299,6 +204,85 @@ Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound co
   </Tab>
 </Tabs>
 
+---
+
+## Design tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-padding-mobile"
+    value="var(--fs-spacing-5)"
+  />
+  <TokenRow
+    token="--fs-newsletter-padding-desktop"
+    value="var(--fs-spacing-9) 10%"
+  />
+  <TokenRow
+    token="--fs-newsletter-border-radius"
+    value="var(--fs-border-radius)"
+  />
+</TokenTable>
+
+### Nested Elements
+
+#### Title
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-title-size"
+    value="var(--fs-text-size-title-section)"
+  />
+  <TokenRow
+    token="--fs-newsletter-title-weight"
+    value="var(--fs-text-weight-bold)"
+  />
+</TokenTable>
+
+#### Icon
+
+<TokenTable>
+  <TokenRow token="--fs-newsletter-icon-size" value="var(--fs-spacing-5)" />
+</TokenTable>
+
+### Variants
+
+#### Card
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-card-border-radius"
+    value="var(--fs-border-radius)"
+  />
+</TokenTable>
+
+#### Main
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-main-bkg-color"
+    value="var(--fs-color-primary-bkg)"
+  />
+  <TokenRow
+    token="--fs-newsletter-main-text-color"
+    value="var(--fs-color-primary-text)"
+  />
+</TokenTable>
+
+#### Light
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-light-bkg-color"
+    value="var(--fs-color-secondary-bkg-light)"
+  />
+  <TokenRow
+    token="--fs-newsletter-light-text-color"
+    value="var(--fs-color-text-display)"
+  />
+</TokenTable>
+
+#### Accent
+
 <TokenTable>
   <TokenRow
     token="--fs-newsletter-accent-bkg-color"
@@ -312,9 +296,9 @@ Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound co
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Newsletter` styles using the following data attributes:
 
 `data-fs-newsletter`
 
@@ -344,93 +328,102 @@ To create the `NL` entity, follow the instructions below based on the method you
 
 ### Creating via Admin
 
-1. In the VTEX Admin, go to **Store Settings > Storefront > Master Data**.
-2. In Master Data, click **Applications > Advanced Settings > Data structure**.
-3. Click the **Data Entities** tab.
-4. Click `Add new`.
-5. Complete the fields of the **Data Entity** section with the following information:
+1.  In the VTEX Admin, go to **Store Settings > Storefront > Master Data**.
+2.  In Master Data, click **Applications > Advanced Settings > Data structure**.
+3.  Click the **Data Entities** tab.
+4.  Click `Add new`.
+5.  Complete the fields of the **Data Entity** section with the following information:
 
-    | **Field name**             | **Value**              |
-    | -------------------------- | ---------------------- |
-    | **Acronym**                | `NL`                   |
-    | **Name**                   | Newsletter             |
-    | **Primary key type**       | Generate a unique GUID |
+    | **Field name**       | **Value**              |
+    | -------------------- | ---------------------- |
+    | **Acronym**          | `NL`                   |
+    | **Name**             | Newsletter             |
+    | **Primary key type** | Generate a unique GUID |
 
-6. In the **Fields** tab, create three new fields:
+6.  In the **Fields** tab, create three new fields:
 
-    <details>
-    <summary><b>Field 1</b></summary>
+          <details>
 
-    This field will store the customer's email address for newsletter subscription. 
+    <summary>
+      <b>Field 1</b>
+    </summary>
+
+    This field will store the customer's email address for newsletter subscription.
 
     1. Click `New Field` and complete the fields with the following values:
-    
-        | **Name**   | **Display Name** | **Type** |
-        | ---------- | ---------------- | -------- |
-        | email      | Email            | Email    |
+
+       | **Name** | **Display Name** | **Type** |
+       | -------- | ---------------- | -------- |
+       | email    | Email            | Email    |
 
     2. Click the gear icon (⚙️) to open the field configuration options and check all the following options:
 
-        - **Is nullable?**
-        - **Make readable without credentials**
-        - **Allow editing without credentials**
-        - **Allow filtering without credentials**
+       - **Is nullable?**
+       - **Make readable without credentials**
+       - **Allow editing without credentials**
+       - **Allow filtering without credentials**
 
     3. In the **Search and filter settings** section, check the **Is searchable?** and **Is filterable?** options.
-      
-      ![newsletter-field-1](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-1___61c595999569e52175f1de93d9ecd8f0.png)
 
-    </details>
+    ![newsletter-field-1](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-1___61c595999569e52175f1de93d9ecd8f0.png)
 
-    <details>
-    <summary><b>Field 2</b></summary>
+          </details>
+
+          <details>
+
+    <summary>
+      <b>Field 2</b>
+    </summary>
 
     This field will indicate whether the user will receive the newsletter.
 
     1. Click `New field` and complete the fields with the following values:
-        
-      | **Name** | **Display Name** | **Type** |
-      | ----------------- | ------------------- | -------- |
-      | isNewsletterOptIn | Receive newsletter? | Boolean |
+
+    | **Name**          | **Display Name**    | **Type** |
+    | ----------------- | ------------------- | -------- |
+    | isNewsletterOptIn | Receive newsletter? | Boolean  |
 
     2. Click the gear icon ⚙️ to open the field configuration options and check all the following options:
 
-      - **Make readable without credentials**
-      - **Allow editing without credentials**
-      - **Allow filtering without credentials**
+    - **Make readable without credentials**
+    - **Allow editing without credentials**
+    - **Allow filtering without credentials**
 
     3. In the **Search and filter settings** section, check the **Is searchable?** and **Is filterable?** options.
-          
-      ![newsletter-field-2](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-2___62281c88b10436ce052707080cc5173e.png)
 
-    </details>
+    ![newsletter-field-2](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-2___62281c88b10436ce052707080cc5173e.png)
 
-    <details>
-    <summary><b>Field 3</b></summary>
+          </details>
 
-    This field will store the user’s name. 
+          <details>
+
+    <summary>
+      <b>Field 3</b>
+    </summary>
+
+    This field will store the user’s name.
 
     1. Click `New Field` and complete the fields with the following values:
 
-        | **Name** | **Display Name** | **Type**     |
-        | -------- | ---------------- | ------------ |
-        | name     | Name             | Varchar 750  |
+       | **Name** | **Display Name** | **Type**    |
+       | -------- | ---------------- | ----------- |
+       | name     | Name             | Varchar 750 |
 
     2. Click the gear icon (⚙️) to open the field configuration options and check all the following options:
 
-        - **Make readable without credentials**
-        - **Allow editing without credentials**
-        - **Allow filtering without credentials**
+       - **Make readable without credentials**
+       - **Allow editing without credentials**
+       - **Allow filtering without credentials**
 
     3. In the **Search and filter settings** section, check the **Is searchable?** and **Is filterable?** options.
-      
-      ![newsletter-field-3](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-3___4e7d9fec7f0a827c5d49908df0e2f20b.png)
 
-    </details>
+    ![newsletter-field-3](https://vtexhelp.vtexassets.com/assets/docs/src/newsletter-field-3___4e7d9fec7f0a827c5d49908df0e2f20b.png)
 
-7. Click `Save` and you will be redirected back to the Data Entity tab.
-8. In the row of the new `NL` entity, click the diskette 💾 to publish the created data entity.
-9. Click `OK`.
+          </details>
+
+7.  Click `Save` and you will be redirected back to the Data Entity tab.
+8.  In the row of the new `NL` entity, click the diskette 💾 to publish the created data entity.
+9.  Click `OK`.
 10. Click the **Applications** tab to return to the Master Data homepage.
 11. Click `Reload applications`.
 
@@ -441,3 +434,27 @@ You can also create the Newsletter data entity using the [Create partial documen
 To create the three fields for the Newsletter data entity, see the [Create document with custom ID or update entire document](https://developers.vtex.com/docs/api-reference/masterdata-api#put-/api/dataentities/-acronym-/documents/-id-) endpoint reference.
 
 > ⚠️ The field information must be the same as described in [Creating via Admin](#creating-via-admin).
+
+---
+
+## Props
+
+### Newsletter
+
+<ComponentPropsSection component="Newsletter" />
+
+### NewsletterAddendum
+
+<ComponentPropsSection component="NewsletterAddendum" />
+
+### NewsletterContent
+
+<ComponentPropsSection component="NewsletterContent" />
+
+### NewsletterForm
+
+<ComponentPropsSection component="NewsletterForm" />
+
+### NewsletterHeader
+
+<ComponentPropsSection component="NewsletterHeader" />
