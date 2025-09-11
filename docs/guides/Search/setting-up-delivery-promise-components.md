@@ -18,6 +18,8 @@ The availability is displayed following these rules:
 * For pickup points selected in the header or a specific pickup point, the system displays all available pickup points within a 50 km pickup radius configured in Checkout. There is no limit to the number of pickup points displayed.
 * For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are displayed, with a maximum of 40 pickup points.
 
+>ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX Sellers, [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types), and external sellers).
+
 ![delivery-promise-components](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/delivery-promise-component.gif)
 
 If you're building your storefront with Store Framework, you can enable this experience using two key apps:
@@ -36,7 +38,6 @@ To enable Delivery Promise (Beta) in your store, the following conditions must b
 * The store must use [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG).
 * Check if you have installed the `0.5.0` or a later version of the [`search-session`](https://developers.vtex.com/docs/apps/vtex.search-session) app. To do this, run the `vtex list` command in your terminal and search for the app in the results. If you don’t have this app installed, run the command `vtex install vtex.search-session`.
 * Your storefront must be built with [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) to enable the components in this guide. If you use FastStore, check the [FastStore Delivery Promise implementation guide](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation). If your store is headless, check [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores).
-* The store can't act as a marketplace for [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types) accounts or external sellers.
 
 ## Instructions
 
