@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.120](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.117...v1.1.120) (2025-09-11)
+
+
+### 🔧 Fixes and improvements
+
+* restructure molecules docs ([11e9b17](https://github.com/vtexdocs/dev-portal-content/commit/11e9b17e79be0ea0fdda68c46c098b33e03f4d18))
+
 ### [1.1.118](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.117...v1.1.118) (2025-09-11)
 
 
