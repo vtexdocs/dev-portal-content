@@ -7,58 +7,140 @@ components:
   - Icon.tsx
 ---
 
-Icons are simplified graphics used to represent concepts and help users navigate the UI.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Icon)
 
-This project has a [set of icons](https://developers.vtex.com/docs/guides/faststore/reference-icons) that uses SVGs from [Phosphor icons](https://phosphoricons.com).
+Icons are simplified graphics used to represent concepts and help users navigate the UI. This project has a [set of icons](https://developers.vtex.com/docs/guides/faststore/reference-icons) that uses SVGs from [Phosphor icons](https://phosphoricons.com).
 
-## Overview
+Typical use cases include:
+- [TODO: Add key navigation/affordance examples relevant to your app]
+- [TODO: Add status/feedback usages that are actually supported]
+- [TODO: Add product or action-level uses grounded in your UI]
 
-<OverviewSection>
-  <Icon name="ShoppingCart" weight="thin" width={32} height={32} />
-  <Icon name="ShoppingCart" weight="light" />
-  <Icon name="ShoppingCart" weight="regular" width={16} height={16} />
-  <Icon name="ShoppingCart" weight="bold" width={20} height={20} />
-</OverviewSection>
+For the full catalog, see the [list of available icons](https://developers.vtex.com/docs/guides/faststore/reference-icons).
 
-```tsx
-  <Icon name="ShoppingCart" weight="thin" width={32} height={32} />
-  <Icon name="ShoppingCart" weight="light" />
-  <Icon name="ShoppingCart" weight="regular" width={16} height={16} />
-  <Icon name="ShoppingCart" weight="bold" width={20} height={20} />
-```
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Icon name="ShoppingCart" weight="thin" width={32} height={32} />
+      <Icon name="ShoppingCart" weight="light" />
+      <Icon name="ShoppingCart" weight="regular" width={16} height={16} />
+      <Icon name="ShoppingCart" weight="bold" width={20} height={20} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconOverviewExamples() {
+    return (
+      <div>
+        <Icon name="ShoppingCart" weight="thin" width={32} height={32} />
+        <Icon name="ShoppingCart" weight="light" />
+        <Icon name="ShoppingCart" weight="regular" width={16} height={16} />
+        <Icon name="ShoppingCart" weight="bold" width={20} height={20} />
+      </div>
+    )
+  }
+  ```
+  </Tab>
+</Tabs>
 
 > ⚠️ The default values for `width` and `height` are `24`.
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
-import { Icon } from '@faststore/ui'
+import { Icon } from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/atoms/Icon/styles.scss';
+@import "@faststore/ui/src/components/atoms/Icon/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Icon name="ShoppingCart" />
-</OverviewSection>
-```tsx
-<Icon name="ShoppingCart" />
-```
+### Weight
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Icon name="ShoppingCart" weight="thin" />
+      <Icon name="ShoppingCart" weight="light" />
+      <Icon name="ShoppingCart" weight="regular" />
+      <Icon name="ShoppingCart" weight="bold" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconWeights() {
+    return (
+      <div>
+        <Icon name="ShoppingCart" weight="thin" />
+        <Icon name="ShoppingCart" weight="light" />
+        <Icon name="ShoppingCart" weight="regular" />
+        <Icon name="ShoppingCart" weight="bold" />
+      </div>
+    )
+  }
+  ```
+  </Tab>
+</Tabs>
+
+### Size
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Icon name="ShoppingCart" width={16} height={16} />
+      <Icon name="ShoppingCart" width={24} height={24} />
+      <Icon name="ShoppingCart" width={32} height={32} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconSizes() {
+    return (
+      <div>
+        <Icon name="ShoppingCart" width={16} height={16} />
+        <Icon name="ShoppingCart" width={24} height={24} />
+        <Icon name="ShoppingCart" width={32} height={32} />
+      </div>
+    )
+  }
+  ```
+  </Tab>
+</Tabs>
+
+
+---
+
+## Data attributes
+
+You can target and override `Icon` styles using the following data attributes:
+
+`data-fs-icon`
 
 ---
 
@@ -66,10 +148,17 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 <ComponentPropsSection component="Icon" />
 
-List of available [icons](https://developers.vtex.com/docs/guides/faststore/reference-icons)
+---
 
-## Customization
+## Best practices
 
-For further customization, you can use the following data attributes:
+### ✅ Do's
+- Ensure icons are visually consistent in weight and size within the same context.
+- Provide sufficient contrast when icons convey meaning against varied backgrounds.
+- Pair icons with text when meaning may be ambiguous.
 
-`data-fs-icon`
+### ❌ Don'ts
+- Don't rely solely on color or the icon graphic to convey critical meaning.
+- Don't mix multiple icon weights within the same control or pattern.
+- [TODO: Add product-specific pitfalls to avoid, if any.]
+
