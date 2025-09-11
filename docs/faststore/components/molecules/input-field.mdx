@@ -9,9 +9,11 @@ sidebar_custom_props:
 
 The `InputField` is a text field component to get user inputs. The component wraps an [Input](https://developers.vtex.com/docs/guides/faststore/atoms-input) and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label).
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
-    <OverviewSection containerStyle={{ flexDirection:'column', alignItems: 'normal' }}>
+    <OverviewSection
+      containerStyle={{ flexDirection: "column", alignItems: "normal" }}
+    >
       <InputField label="Label" id="inputfield-default" />
       <InputField
         label="Input w/ Error Message"
@@ -55,7 +57,7 @@ The `InputField` is a text field component to get user inputs. The component wra
 ### Import the component
 
 ```tsx
-import { InputField } from '@faststore/ui'
+import { InputField } from "@faststore/ui";
 ```
 
 ### Import styles
@@ -63,10 +65,94 @@ import { InputField } from '@faststore/ui'
 To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/molecules/InputField/styles.scss';
+@import "@faststore/ui/src/components/molecules/InputField/styles.scss";
 ```
 
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Examples
+
+### Variants
+
+#### Actionable
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <InputField label="Input w/ Action" id="inputfield-action" actionable />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <InputField label="Input w/ Action" id="inputfield-action" actionable />
+    ```
+  </Tab>
+</Tabs>
+
+#### Actionable w/ Error
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <InputField
+        label="Input w/ Error Message"
+        id="inputfield-error"
+        error="Error Message"
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <InputField
+      label="Input w/ Error Message"
+      id="inputfield-error"
+      error="Error Message"
+    />
+    ```
+  </Tab>
+</Tabs>
+
+#### Error
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <InputField
+        label="Input w/ Action and Error"
+        id="inputfield-action-error"
+        actionable
+        error="Error Message"
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <InputField
+      label="Input w/ Action and Error"
+      id="inputfield-action-error"
+      actionable
+      error="Error Message"
+    />
+    ```
+  </Tab>
+</Tabs>
+
+#### Disabled
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <InputField label="Input Disabled" id="inputfield-disabled" disabled />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <InputField label="Input Disabled" id="inputfield-disabled" disabled />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
@@ -103,9 +189,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-### Nested Elements
-
-#### Label
+### Design tokens: Label
 
 <TokenTable>
   <TokenRow token="--fs-input-label-padding" value="0 var(--fs-spacing-2)" />
@@ -114,64 +198,25 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     value="var(--fs-color-text-light)"
     isColor
   />
-  <TokenRow token="--fs-input-field-label-size" value="var(--fs-text-size-tiny)" />
+  <TokenRow
+    token="--fs-input-field-label-size"
+    value="var(--fs-text-size-tiny)"
+  />
 </TokenTable>
 
-#### Button
+### Design tokens: Button
 
 <TokenTable>
-  <TokenRow token="--fs-input-field-button-height" value="var(--fs-control-tap-size)" />
+  <TokenRow
+    token="--fs-input-field-button-height"
+    value="var(--fs-control-tap-size)"
+  />
 </TokenTable>
 
-### Variants
-
-#### Actionable
-
-<OverviewSection>
-  <InputField label="Input w/ Action" id="inputfield-action" actionable />
-</OverviewSection>
-```tsx
-<InputField label="Input w/ Action" id="inputfield-action" actionable />
-```
-
-#### Actionable w/ Error
-
-<OverviewSection>
-  <InputField
-    label="Input w/ Error Message"
-    id="inputfield-error"
-    error="Error Message"
-  />
-</OverviewSection>
-```tsx
-<InputField
-  label="Input w/ Error Message"
-  id="inputfield-error"
-  error="Error Message"
-/>
-```
-
-#### Error
-
-<OverviewSection>
-  <InputField
-    label="Input w/ Action and Error"
-    id="inputfield-action-error"
-    actionable
-    error="Error Message"
-  />
-</OverviewSection>
-```tsx
-<InputField
-  label="Input w/ Action and Error"
-  id="inputfield-action-error"
-  actionable
-  error="Error Message"
-/>
-```
+### Design tokens: Error
 
 <TokenTable>
-   <TokenRow
+  <TokenRow
     token="--fs-input-error-message-margin-top"
     value="var(--fs-spacing-0)"
   />
@@ -185,7 +230,6 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     value="var(--fs-color-danger-text)"
     isColor
   />
-
   <TokenDivider />
   <TokenRow
     token="--fs-input-error-border-color"
@@ -203,14 +247,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-#### Disabled
-
-<OverviewSection>
-  <InputField label="Input Disabled" id="inputfield-disabled" disabled />
-</OverviewSection>
-```tsx
-<InputField label="Input Disabled" id="inputfield-disabled" disabled />
-```
+### Design tokens: Disabled
 
 <TokenTable>
   <TokenRow
