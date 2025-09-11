@@ -16,7 +16,7 @@ sidebar_custom_props:
 Buttons indicate actions that users can take, such as adding an item to the cart, submitting a form, and proceeding with an operation. Use the `Button` component to communicate user actions for the following components:
 
 - `Buy Now` and `Add to Cart` buttons in [Product Cards](https://developers.vtex.com/docs/guides/faststore/molecules-product-card).
-- Submit or cancel actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) windows.
+- Submit or cancel actions on [Modal](https://developers.vtex.com/docs/guides/faststore/molecules-modal) dialogs.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -435,7 +435,7 @@ Buttons with icons reserve padding and alignment for the glyph and label, improv
 
 ### Design tokens: Primary
 
-Primary buttons use high‑contrast colors and bold emphasis to highlight the main action on a page, drawing focus and encouraging completion.
+Primary buttons use high-contrast colors and bold emphasis to highlight the main action on a page, drawing focus and encouraging completion.
 
 <TokenTable>
   <TokenRow
@@ -937,14 +937,14 @@ You can target and override `Button` styles using the following data attributes:
 <SectionList grid="column">
   <SectionItem
     title="IconButton"
-    description="A button that contains only an icon"
+    description="A button that contains only an icon."
     actionPath="https://developers.vtex.com/docs/guides/faststore/molecules-icon-button"
   >
     <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" />
   </SectionItem>
   <SectionItem
     title="BuyButton"
-    description="A button with the intent of directly sending the user to the checkout/cart step."
+    description="A button with the intent of directly sending the user to the checkout or cart step."
     actionPath="https://developers.vtex.com/docs/guides/faststore/molecules-buy-button"
   >
     <BuyButton>Buy Now</BuyButton>
