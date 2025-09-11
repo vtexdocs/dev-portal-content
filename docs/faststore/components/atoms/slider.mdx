@@ -5,6 +5,10 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Slider___9fa1f5d802a9bbdc93a77db318594af7.png
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Slider)
+
+The `Slider` component provides an interactive way for users to select a single value from a defined range. It is commonly used for adjusting settings such as price, volume, or other numeric values where precision within boundaries matters.
+
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
@@ -17,11 +21,18 @@ sidebar_custom_props:
   </Tab>
   <Tab>
     ```tsx
-    <Slider
-      max={{ absolute: 500, selected: 250 }}
-      min={{ absolute: 0, selected: 100 }}
-      absoluteValuesLabel={{ min: "0", max: "500"}}
-    />
+    import React from 'react' 
+    import { Slider } from '@faststore/ui'
+    
+    export default function SliderUsage() {
+      return(
+        <Slider
+          max={{ absolute: 500, selected: 250 }}
+          min={{ absolute: 0, selected: 100 }}
+          absoluteValuesLabel={{ min: "0", max: "500"}}
+        />
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -71,20 +82,27 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Slider
-      max={{ absolute: 500, selected: 250 }}
-      min={{ absolute: 0, selected: 100 }}
-      absoluteValuesLabel={{
-        min: useFormattedPrice(0),
-        max: useFormattedPrice(500),
-      }}
-      maxValueLabelComponent={(maxValue) => {
-        return <Price formatter={useFormattedPrice} value={maxValue} />
-      }}
-      minValueLabelComponent={(minValue) => {
-        return <Price formatter={useFormattedPrice} value={minValue} />
-      }}
-    />
+    import React from 'react' 
+    import { Slider } from '@faststore/ui'
+    
+    export default function SliderUsage() {
+      return (
+        <Slider
+          max={{ absolute: 500, selected: 250 }}
+          min={{ absolute: 0, selected: 100 }}
+          absoluteValuesLabel={{
+            min: useFormattedPrice(0),
+            max: useFormattedPrice(500),
+          }}
+          maxValueLabelComponent={(maxValue) => {
+            return <Price formatter={useFormattedPrice} value={maxValue} />
+          }}
+          minValueLabelComponent={(minValue) => {
+            return <Price formatter={useFormattedPrice} value={minValue} />
+          }}
+        />
+      )
+    }
     ```
   </Tab>
 </Tabs>
