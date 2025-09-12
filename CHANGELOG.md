@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.127](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.126...v1.1.127) (2025-09-12)
+
+
+### 📝 Documentation updates
+
+* faststore components ([737ed18](https://github.com/vtexdocs/dev-portal-content/commit/737ed1834a4a6ed803a8daad7210a5d556e0bc65))
+
 ### [1.1.126](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.124...v1.1.126) (2025-09-12)
 
 ### [1.1.124](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.123...v1.1.124) (2025-09-11)
