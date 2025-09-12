@@ -13,20 +13,15 @@ The `Textarea` component allows users to enter multi-line text. It is commonly u
   <Tab>
     <OverviewSection>
       <Textarea placeholder="Label" id="textareafield-default" />
-      <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
     import React from 'react'
     import { Textarea } from '@faststore/ui'
+    
     export default function TextareaUsage() {
-      return (
-        <>
-          <Textarea placeholder="Label" id="textareafield-default" />
-          <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
-        </>
-      )
+      return <Textarea placeholder="Label" id="textareafield-default" />
     }
     ```
   </Tab>
@@ -39,7 +34,7 @@ The `Textarea` component allows users to enter multi-line text. It is commonly u
 ### Import the component
 
 ```tsx
-import { Textarea } from '@faststore/ui'
+import { Textarea } from "@faststore/ui";
 ```
 
 ### Import styles
@@ -47,7 +42,7 @@ import { Textarea } from '@faststore/ui'
 To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/atoms/Textarea/styles.scss';
+@import "@faststore/ui/src/components/atoms/Textarea/styles.scss";
 ```
 
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
@@ -55,6 +50,68 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 ---
 
 ## Examples
+
+### Resize
+
+#### Vertical
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Textarea placeholder="Vertical resize" id="textareafield-vertical-resize" resize="vertical" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Textarea } from '@faststore/ui'
+
+    export default function TextareaUsage() {
+      return <Textarea placeholder="Vertical resize" id="textareafield-vertical-resize" resize="vertical" />
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Horizontal
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Textarea placeholder="Horizontal resize" id="textareafield-horizontal-resize" resize="horizontal" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Textarea } from '@faststore/ui'
+
+    export default function TextareaUsage() {
+      return <Textarea placeholder="Horizontal resize" id="textareafield-horizontal-resize" resize="horizontal" />
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Both (default)
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Textarea placeholder="Both resize" id="textareafield-both-resize" resize="both" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Textarea } from '@faststore/ui'
+
+    export default function TextareaUsage() {
+      return <Textarea placeholder="Both resize" id="textareafield-both-resize" resize="both" />
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ### Disabled
 
@@ -68,10 +125,12 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     ```tsx
     import React from 'react'
     import { Textarea } from '@faststore/ui'
+
     export default function TextareaUsage() {
-      return <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+      return <Textarea placeholder="Disabled Textarea" id="textareafield-disabled" disabled />
     }
     ```
+
   </Tab>
 </Tabs>
 
@@ -94,10 +153,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     value="var(--fs-color-body-bkg)"
     isColor
   />
-  <TokenRow
-    token="--fs-textarea-box-shadow"
-    value="none"
-  />
+  <TokenRow token="--fs-textarea-box-shadow" value="none" />
   <TokenRow
     token="--fs-textarea-box-shadow-hover"
     value="0 0 0 var(--fs-border-width) var(--fs-border-color-active)"
@@ -107,10 +163,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     token="--fs-textarea-border-radius"
     value="var(--fs-border-radius)"
   />
-  <TokenRow
-    token="--fs-textarea-border-width"
-    value="var(--fs-border-width)"
-  />
+  <TokenRow token="--fs-textarea-border-width" value="var(--fs-border-width)" />
   <TokenRow
     token="--fs-textarea-border-color"
     value="var(--fs-border-color)"
@@ -127,15 +180,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     value="var(--fs-color-text)"
     isColor
   />
-  <TokenRow
-    token="--fs-textarea-text-size"
-    value="var(--fs-text-size-body)"
-  />
+  <TokenRow token="--fs-textarea-text-size" value="var(--fs-text-size-body)" />
   <TokenDivider />
-  <TokenRow
-    token="--fs-textarea-line-height"
-    value="1.25"
-  />
+  <TokenRow token="--fs-textarea-line-height" value="1.25" />
   <TokenDivider />
   <TokenRow
     token="--fs-textarea-transition-function"
