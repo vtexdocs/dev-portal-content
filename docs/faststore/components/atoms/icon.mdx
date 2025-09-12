@@ -132,7 +132,14 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   ```
   </Tab>
 </Tabs>
+---
 
+## Design tokens
+
+The `Icon` component does not expose dedicated design tokens. Customize its appearance using:
+
+- SVG props: `stroke`, `fill`, `width`, `height`. The visible stroke width is derived from the `weight` prop (`thin`, `light`, `regular`, `bold`).
+- CSS targeting the data attribute `[data-fs-icon]` for layout adjustments. The default theme applies only structural styles to this selector.
 
 ---
 
@@ -161,4 +168,3 @@ You can target and override `Icon` styles using the following data attributes:
 - Don't rely solely on color or the icon graphic to convey critical meaning.
 - Don't mix multiple icon weights within the same control or pattern.
 - [TODO: Add product-specific pitfalls to avoid, if any.]
-
