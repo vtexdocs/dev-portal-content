@@ -61,7 +61,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+      <Textarea placeholder="Disabled Textarea" id="textareafield-disabled" disabled />
     </OverviewSection>
   </Tab>
   <Tab>
@@ -153,6 +153,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Design tokens: Disabled
 
+Disabled textareas reduce contrast and remove interactive indicators to show a non-editable state, while maintaining layout stability and keeping content readable.
+
 <TokenTable>
   <TokenRow
     token="--fs-textarea-disabled-bkg-color"
@@ -204,10 +206,10 @@ You can target and override `Textarea` styles using the following data attribute
 - Add validation messages when specific input formats or lengths are required.
 - Make disabled or error states visually clear and accessible to screen readers.
 
-### ❌ Don’ts
+### ❌ Don'ts
 
-- Don’t overuse resizing. If resizing is enabled, ensure it doesn’t break the layout or cause accessibility issues.
-- Don’t use `Textarea` for short inputs. For single-line or brief text, such as names or emails, use the [Input](https://developers.vtex.com/docs/guides/faststore/atoms-input) component.
+- Don't overuse resizing. If resizing is enabled, ensure it doesn't break the layout or cause accessibility issues.
+- Don't use `Textarea` for short inputs. For single-line or brief text, such as names or emails, use the [Input](https://developers.vtex.com/docs/guides/faststore/atoms-input) component.
 
 ---
 
