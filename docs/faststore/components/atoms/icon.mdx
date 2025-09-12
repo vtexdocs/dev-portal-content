@@ -75,12 +75,13 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Weight
 
+Use the `weight` prop to control the visual stroke weight of the icon. Available options are `thin`, `light`, `regular` (default), and `bold`.
+
+#### Bold
+
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Icon name="ShoppingCart" weight="thin" />
-      <Icon name="ShoppingCart" weight="light" />
-      <Icon name="ShoppingCart" weight="regular" />
       <Icon name="ShoppingCart" weight="bold" />
     </OverviewSection>
   </Tab>
@@ -90,15 +91,71 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   import React from 'react'
   import { Icon } from '@faststore/ui'
 
-  export default function IconWeights() {
-    return (
-      <div>
-        <Icon name="ShoppingCart" weight="thin" />
-        <Icon name="ShoppingCart" weight="light" />
-        <Icon name="ShoppingCart" weight="regular" />
-        <Icon name="ShoppingCart" weight="bold" />
-      </div>
-    )
+  export default function IconWeightBold() {
+    return <Icon name="ShoppingCart" weight="bold" />
+  }
+  ```
+  </Tab>
+</Tabs>
+
+#### Light
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Icon name="ShoppingCart" weight="light" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconWeightLight() {
+    return <Icon name="ShoppingCart" weight="light" />
+  }
+  ```
+  </Tab>
+</Tabs>
+
+#### Regular
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Icon name="ShoppingCart" weight="regular" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconWeightRegular() {
+    return <Icon name="ShoppingCart" weight="regular" />
+  }
+  ```
+  </Tab>
+</Tabs>
+
+#### Thin
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Icon name="ShoppingCart" weight="thin" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconWeightThin() {
+    return <Icon name="ShoppingCart" weight="thin" />
   }
   ```
   </Tab>
@@ -106,11 +163,55 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Size
 
+Control icon size with the `width` and `height` props. If omitted, both default to `24`.
+
+#### Default
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Icon name="ShoppingCart" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconSizeDefault() {
+    return <Icon name="ShoppingCart" />
+  }
+  ```
+  </Tab>
+</Tabs>
+
+#### 16
+
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Icon name="ShoppingCart" width={16} height={16} />
-      <Icon name="ShoppingCart" width={24} height={24} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconSize16() {
+    return <Icon name="ShoppingCart" width={16} height={16} />
+  }
+  ```
+  </Tab>
+</Tabs>
+
+#### 32
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
       <Icon name="ShoppingCart" width={32} height={32} />
     </OverviewSection>
   </Tab>
@@ -120,14 +221,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   import React from 'react'
   import { Icon } from '@faststore/ui'
 
-  export default function IconSizes() {
-    return (
-      <div>
-        <Icon name="ShoppingCart" width={16} height={16} />
-        <Icon name="ShoppingCart" width={24} height={24} />
-        <Icon name="ShoppingCart" width={32} height={32} />
-      </div>
-    )
+  export default function IconSize32() {
+    return <Icon name="ShoppingCart" width={32} height={32} />
   }
   ```
   </Tab>
