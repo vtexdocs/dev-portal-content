@@ -11,7 +11,7 @@ components:
 
 Prices are used to display the price of a given product, discount and total values.
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Price value={62.5} variant="selling" />
@@ -23,12 +23,18 @@ Prices are used to display the price of a given product, discount and total valu
   </Tab>
   <Tab>
     ```tsx
-    <Price value={62.5} variant="selling" />
-    <Price value={62.5} variant="listing" />
-    <Price value={62.5} variant="spot" />
-    <Price value={62.5} variant="savings" />
-    <Price value={62.5} variant="installment" />
-    ````
+    import { Price } from '@faststore/ui'
+
+    export function PriceExample() {
+      return (
+        <Price value={62.5} variant="selling" />
+        <Price value={62.5} variant="listing" />
+        <Price value={62.5} variant="spot" />
+        <Price value={62.5} variant="savings" />
+        <Price value={62.5} variant="installment" />
+      )
+    }
+    ```
   </Tab>
 </Tabs>
 
@@ -39,7 +45,7 @@ Prices are used to display the price of a given product, discount and total valu
 ### Import the component
 
 ```tsx
-import { Price } from '@faststore/ui'
+import { Price } from "@faststore/ui";
 ```
 
 ### Import styles
@@ -47,7 +53,7 @@ import { Price } from '@faststore/ui'
 To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/atoms/Price/styles.scss';
+@import "@faststore/ui/src/components/atoms/Price/styles.scss";
 ```
 
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
@@ -60,76 +66,109 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 #### Installment
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Price value={62.5} variant="installment" />
     </OverviewSection>
   </Tab>
   <Tab>
-      ```tsx
-      <Price value={62.5} variant="installment" />
-      ```
+    ```tsx
+    import { Price } from '@faststore/ui'
+
+    export function PriceExample() {
+      return (
+        <Price value={62.5} variant="installment" />
+      )
+    }
+    ```
   </Tab>
 </Tabs>
 
 #### Listing
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Price value={62.5} variant="listing" />
     </OverviewSection>
   </Tab>
   <Tab>
-      ```tsx
-      <Price value={62.5} variant="listing" />
-      ```
+    ```tsx
+    import { Price } from '@faststore/ui'
+
+    export function PriceExample() {
+      return (
+        <Price value={62.5} variant="listing" />
+      )
+    }
+    ```
   </Tab>
 </Tabs>
 
 #### Savings
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Price value={62.5} variant="savings" />
     </OverviewSection>
   </Tab>
   <Tab>
-      ```tsx
-      <Price value={62.5} variant="savings" />
-      ```
+    ```tsx
+    import { Price } from '@faststore/ui'
+
+    export function PriceExample() {
+      return (
+        <Price value={62.5} variant="savings" />
+      )
+    }
+    ```
+
   </Tab>
 </Tabs>
 
 #### Selling
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Price value={62.5} variant="selling" />
     </OverviewSection>
   </Tab>
   <Tab>
-      ```tsx
-      <Price value={62.5} variant="selling" />
-      ```
+    ```tsx
+    import { Price } from '@faststore/ui'
+
+    export function PriceExample() {
+      return (
+        <Price value={62.5} variant="selling" />
+      )
+    }
+    ```
+
   </Tab>
 </Tabs>
 
 #### Spot
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Price value={62.5} variant="spot" />
     </OverviewSection>
   </Tab>
   <Tab>
-      ```tsx
-      <Price value={62.5} variant="spot" />
-      ```
+    ```tsx
+    import { Price } from '@faststore/ui'
+
+    export function PriceExample() {
+      return (
+        <Price value={62.5} variant="spot" />
+      )
+    }
+    ```
+
   </Tab>
 </Tabs>
 
@@ -167,43 +206,49 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
         variant="selling"
 
     />
-
     </OverviewSection>
+
   </Tab>
   <Tab>
     ```tsx
-    <Price
-      formatter={function useIntlPartsFormatter(price) {
-        return useMemo(() => {
-          return new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-          })
-            .formatToParts(price)
-            .map((part) => {
-              const props = {
-                [`data-fs-price-${part.type}`]: true,
-              }
+    import { Price } from '@faststore/ui'
 
-              if (part.type === 'integer') {
-                props.style = { fontWeight: 700 }
-              }
+    export function PriceExample() {
+      return (
+        <Price
+          formatter={function useIntlPartsFormatter(price) {
+            return useMemo(() => {
+              return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+              })
+                .formatToParts(price)
+                .map((part) => {
+                  const props = {
+                    [`data-fs-price-${part.type}`]: true,
+                  }
 
-              return (
-                <span key={part.type} {...props}>
-                  {part.value}
-                </span>
-              )
+                  if (part.type === 'integer') {
+                    props.style = { fontWeight: 700 }
+                  }
+
+                  return (
+                    <span key={part.type} {...props}>
+                      {part.value}
+                    </span>
+                  )
+                })
             })
-        })
-      }}
-      value={62.5}
-      variant="selling"
-    />
+          }}
+          value={62.5}
+          variant="selling"
+        />
+      )
+    }
     ```
+
   </Tab>
 </Tabs>
-
 
 ### INTL Formatted
 
@@ -226,28 +271,36 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
     />
     </OverviewSection>
+
   </Tab>
   <Tab>
     ```tsx
-    <Price
-      formatter={function useIntlFormatter(price) {
-        return useMemo(() => {
-          const formattedPrice = new Intl.NumberFormat('en-GB', {
-            style: 'currency',
-            currency: 'EUR',
-          }).format(price)
+    import { Price } from '@faststore/ui'
 
-          return formattedPrice
-        })
-      }}
-      value={62.5}
-      variant="savings"
-    />
+    export function PriceExample() {
+      return (
+        <Price
+          formatter={function useIntlFormatter(price) {
+            return useMemo(() => {
+              const formattedPrice = new Intl.NumberFormat('en-GB', {
+                style: 'currency',
+                currency: 'EUR',
+              }).format(price)
+
+              return formattedPrice
+            })
+          }}
+          value={62.5}
+          variant="savings"
+        />
+      )
+    }
     ```
+
   </Tab>
 </Tabs>
 
-### Custom
+### Custom price formatter
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -265,31 +318,28 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Price
-      formatter={function customFormatter(price) {
-        const unformattedPrice = `${price}`
-        const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
-        return formattedPrice
-      }}
-      value={62.5}
-      variant="spot"
-    />
+    import { Price } from '@faststore/ui'
+    
+    function customFormatter(price: number) {
+      const unformattedPrice = `${price}`
+      const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
+
+      return formattedPrice
+    }
+
+    export function PriceExample() {
+      return (
+        <Price
+          formatter={customFormatter}
+          value={62.5}
+          variant="spot"
+        />
+      )
+    }
     ```
+
   </Tab>
 </Tabs>
-
----
-
-## Formatter function example
-
-```tsx
-function customFormatter(price: number) {
-  const unformattedPrice = `${price}`
-  const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
-
-  return formattedPrice
-}
-```
 
 ---
 
