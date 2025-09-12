@@ -3,17 +3,17 @@ title: "Implementing Delivery Promise"
 updatedAt: "2025-08-15T14:36:33.694Z"
 ---
 
->ℹ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+>ℹ This feature is in closed beta, which means that only selected customers have access to it. If you're interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
 In this guide, you’ll learn how to configure Delivery Promise in your FastStore project.
 
-To understand how Delivery Promise operates, see the guide [Delivery Promise (Beta)](https://developers.vtex.com/docs/guides/faststore/features-delivery-promise-overview).
+To understand how Delivery Promise works, see the guide [Delivery Promise (beta)](https://developers.vtex.com/docs/guides/faststore/features-delivery-promise-overview).
 
 ## Default settings
 
 Delivery Promise is defined in the `deliveryPromise` section of the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
 
-Below are the default settings:
+The default settings are:
 
 ```js discovery.config.js
 deliveryPromise: {
@@ -22,7 +22,7 @@ deliveryPromise: {
   },
 ```
 
-* `enabled`: When set to **true**, Delivery Promise activates, allowing the store to provide delivery estimates based on the user’s location.
+* `enabled`: When set to **true**, Delivery Promise is activated, allowing the store to provide delivery estimates based on user location.
 * `mandatory`: When set to **false**, providing a postal code is optional for the user. Users can browse and add items to the cart without entering their postal code, though the accuracy of delivery information may be limited.
 
 ## Before you begin
@@ -31,10 +31,10 @@ deliveryPromise: {
 
 ### Get the `search-session` app
 
-Check if you have installed the `0.5.0` or a later version of the [`search-session`](https://developers.vtex.com/docs/apps/vtex.search-session) app.
+Check if you have version `0.5.0` or later of the [`search-session`](https://developers.vtex.com/docs/apps/vtex.search-session) app installed.
 
 1. In your terminal, run the `vtex list` command.
-2. In the retrieved results, search for the app.
+2. In the returned results, search for the app.
 3. If you don’t have this app installed, run the command `vtex install vtex.search-session`.
 
 ### Enable the VTEX Intelligent Search app
@@ -44,38 +44,38 @@ To enable the Intelligent Search app, check the version of your [Edition Store](
 In your terminal, log in to your account by running `vtex login {accountName}` and run `vtex edition get` to see the Edition app version installed. *Remember to replace the values between curly braces with your account name*.
 
 <details>
-<summary>Accounts in the `vtex.edition-store@5.x`</summary>
+<summary>Accounts with `vtex.edition-store@5.x`</summary>
 
-If your account is using the `vtex.edition-store@5.x` major, the VTEX Intelligent Search app is already included, and you need to integrate it via VTEX Admin.
+If your account is using the `vtex.edition-store@5.x` major, the VTEX Intelligent Search app is already included, and you need to integrate it via the VTEX Admin.
 
-To integrate the VTEX Intelligent Search, access **Store Settings > Intelligent Search > Integrations** in the VTEX Admin, and click `START INTEGRATION`.
+To integrate VTEX Intelligent Search, go to **Store Settings > Intelligent Search > Integrations** in the VTEX Admin, and click `START INTEGRATION`.
 
 </details>
 
 <details>
-<summary>Accounts using an edition version below `5.x`</summary>
+<summary>Accounts with an edition version older than `5.x`</summary>
 
 1. In the VTEX IO CLI, log in to your VTEX account by running `vtex login {accountName}`. *Remember to replace the values between curly braces with your account name.*
-2. If the VTEX Intelligent Search app isn't installed in your account, run the following:
+2. If the VTEX Intelligent Search app isn't installed in your account, run the following command:
 
     ```bash
     vtex install vtex.search-resolver@1.x vtex.admin-search@1.x
     ```
 
-After installing the app, integrate it by accessing **Store Settings > Intelligent Search > Integrations** in the VTEX Admin, and click `START INTEGRATION`.
+After installing the app, integrate it by going to **Store Settings > Intelligent Search > Integrations** in the VTEX Admin, and clicking `START INTEGRATION`.
 
 </details>
 
 <details>
-<summary>Accounts that want to migrate to the `5.x`</summary>
+<summary>Accounts that want to migrate to version `5.x`</summary>
 
-If you are using a different major version and want to migrate, please [open a ticket with VTEX Support](https://help.vtex.com/en/support) and request the installation of the Edition app `vtex.edition-store@5.x`.
+If you're using a different major version and want to migrate, please [open a ticket with VTEX Support](https://help.vtex.com/en/support) and request the installation of Edition app `vtex.edition-store@5.x`.
 
 </details>
 
 ### Update the `@faststore/cli` package
 
-Run the `yarn upgrade @faststore/cli` command to update the `@faststore/cli` package to its latest version.
+Run the `yarn upgrade @faststore/cli` command to update the `@faststore/cli` package to the latest version.
 
   ### Open a ticket with VTEX Support
 
@@ -98,11 +98,11 @@ Open a ticket with [VTEX Support](https://help.vtex.com/en/support) and request 
     }
     ```
 
-### Step 2 - Syncing FastStore project with Headless CMS
+### Step 2 - Syncing your FastStore project with Headless CMS
 
-Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore project with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore project with [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
-The expected response is that you receive the message `CMS synced successfully...`. The native regionalization components and sections will be automatically updated. You can check them in the VTEX Admin:
+The expected response is the message `CMS synced successfully...`. The native regionalization components and sections will be automatically updated. You can check them in the VTEX Admin:
 
 - **Regionalization component:** Go to **Storefronts > Headless CMS > Global Sections > NavBar > Navigation > Regionalization**.
 
@@ -110,11 +110,11 @@ The expected response is that you receive the message `CMS synced successfully..
 
 - **Region Modal section:** Go to **Storefronts > Headless CMS > Global Sections > Region Modal**.
 
-You only need to [add a new section](#step-3-adding-region-popover-section), the `Region Popover`.
+You only need to [add a new section](#step-3-adding-region-popover-section): `Region Popover`.
 
-### Step 3 - Adding `Region Popover` section
+### Step 3 - Adding the `Region Popover` section
 
-`RegionPopover` is a section that manages user location inputs. It's used when location data is missing or the store's default postal code is applied. Available in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson), `RegionPopover` uses the [`Popover`](https://developers.vtex.com/docs/guides/faststore/molecules-popover) component as its UI base.
+`RegionPopover` is a section that manages user location inputs. It's used when location data is missing or the store default postal code is applied. `RegionPopover` is available in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) and uses the [`Popover`](https://developers.vtex.com/docs/guides/faststore/molecules-popover) component as its UI base.
 
 ![regionpopover](https://vtexhelp.vtexassets.com/assets/docs/src/regionpopover___dedb0aad756657e71d4c8d40cb2ef5e7.png)
 
@@ -298,26 +298,26 @@ export default RegionPopover
 ```
 </details>
 
-Follow the steps below to add the `RegionPopover` section to the Headless CMS.
+Follow the steps below to add the `RegionPopover` section to Headless CMS.
 
 1. In the VTEX Admin, go to **Storefront > Headless CMS > Global Sections**.
 2. In the Sections tab, click `+` to open a modal with a list of section options.
-3. Search for the **Region Popover** section and click it to add.
-4. Set the `Title` and `Close popover aria-label` fields based on your scenario.
+3. Search for the **Region Popover** section and click it to add it.
+4. Set the `Title` and `Close popover aria-label` fields with your values.
 5. Click `Save` to save your changes.
 6. Click `Publish` to open a dropdown list with the options `Add to Release` (to schedule the update) and `Publish now` (to publish immediately).
 
-Learn more in [Adding Sections to the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)
+Learn more in [Adding sections to Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)
 
 ### Step 4 - (Optional) Defining a default postal code
 
-The default postal code is a fallback mechanism when the user doesn't provide a location, isn't logged in, or has no saved address.
+The default postal code is a fallback mechanism when users don't provide a location, aren't logged in, or have no saved address.
 
 To set a default postal code for your store, follow the steps below:
 
 1. Open your FastStore project using the code editor of your choice.
 2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
-3. In the [`session`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options#session) object, set the `postalCode` value based on your scenario. See the following example:
+3. In the [`session`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options#session) object, set your default `postalCode`. See the example below:
 
      ```js discovery.config.js mark=12
       session: {
