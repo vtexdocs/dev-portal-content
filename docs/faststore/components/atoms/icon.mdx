@@ -1,6 +1,6 @@
 ---
 title: "Icon"
-excerpt: Icons are simplified graphics that represent actions, status, and navigation, helping users navigate the UI.
+excerpt: Icons are simplified graphics that represent actions, statuses, and navigation elements, helping users navigate the UI.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Icon___9437da8db13517090534a38f4870d702.png
 components:
@@ -9,17 +9,18 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Icon)
 
-The `Icon` component is a set of icons that represent concepts and help users navigate the UI. These icons render SVGs from the FastStore [Iconography library](https://developers.vtex.com/docs/guides/faststore/reference-icons) based on [Phosphor Icons](https://phosphoricons.com). Typical use cases include:
+The `Icon` component provides SVG-based icons from the FastStore [Iconography library](https://developers.vtex.com/docs/guides/faststore/reference-icons), built on top of [Phosphor Icons](https://phosphoricons.com). 
 
-- Navigate the interface: open and close menus, back and forward, home.
-- Trigger actions: add to cart, share, favorite.
-- Indicate status and feedback: info, success, warning, error.
-- Support commerce flows: cart, account, checkout steps.
-- Assist inputs: search, clear, show or hide password, copy.
-- Guide lists and menus: dropdown indicators, breadcrumbs, pagination.
-- Illustrate empty states and onboarding messages.
+Icons are used across the interface to improve clarity and usability in different contexts, such as:
 
->ℹ️ See more available icons in the [Iconography guide](https://developers.vtex.com/docs/guides/faststore/reference-icons).
+- **Navigation:** Provide cues that help users move through menus, pages, and home.  
+- **User actions:** Represent tasks like adding items to the cart, sharing content, or saving to favorites.
+- **System feedback:** Indicate statuses such as information, success, warning, or error. 
+- **Commerce elements:** Represent the cart, account, or checkout.
+- **Form inputs:** Improve field usability with search, clearing fields, toggling password visibility, or copying content. 
+- **Menus and lists:** Indicate dropdowns, pagination, or breadcrumb trails.
+
+>ℹ️ Browse the full set of icons in [Iconography](https://developers.vtex.com/docs/guides/faststore/reference-icons).
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -122,7 +123,7 @@ Use the `weight` prop to control the visual stroke weight of the icon. Available
   </Tab>
 </Tabs>
 
-#### Regular
+#### Regular (default)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -189,7 +190,7 @@ Control icon size with the `width` and `height` props. If omitted, both default 
   </Tab>
 </Tabs>
 
-#### Medium (Default)
+#### Medium (default)
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -234,10 +235,10 @@ Control icon size with the `width` and `height` props. If omitted, both default 
 
 ## Design tokens
 
-The `Icon` component does not expose dedicated design tokens. Customize its appearance using:
+The `Icon` component does not expose specific design tokens. Customize its appearance using:
 
 - SVG props (such as `stroke`, `fill`, `width`, `height`). The visible stroke width is derived from the [`weight`](#weight) prop (`thin`, `light`, `regular`, `bold`).
-- CSS targeting the `[data-fs-icon]` data attribute for layout adjustments. The default theme applies only structural styles to this selector.
+- CSS selectors targeting the `[data-fs-icon]` data attribute for layout adjustments. The default theme applies only structural styles to this selector.
 
 ---
 
@@ -259,9 +260,10 @@ You can target and override `Icon` styles using the following data attributes:
 
 ### ✅ Do's
 - Ensure icons are visually consistent in weight and size within the same context.
-- Provide sufficient contrast when icons convey meaning against varied backgrounds.
+- Provide sufficient contrast against varied backgrounds.
 - Pair icons with text when meaning may be ambiguous.
 
 ### ❌ Don'ts
+
 - Don't rely solely on color or the icon graphic to convey critical meaning.
-- Don't mix multiple icon weights within the same control or pattern.
+- Don't mix different icon weights within the same control or pattern.
