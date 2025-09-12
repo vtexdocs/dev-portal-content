@@ -25,16 +25,17 @@ This feature introduces the following hooks as part of the regionalization and l
 ## Filter options
 
 Delivery Promise offers shoppers two product filtering options:
-- [Global filters](#global-filters): Applies to all store navigation.
-- [Product List Page (PLP) or search page](#plp-or-search-page-filters): Only applies to the current page they're navigating.
+- [Global filters](#global-filters): Apply to all store navigation.
+- [Product List Page (PLP) or search page](#plp-or-search-page-filters): Apply only to the current page the shopper is viewing.
 
->ℹ Learn more about filter usage and user flows in the [Delivery Promise Figma Community](https://www.figma.com/community/file/1514671929470875586) page.
+>ℹ Learn more about filter usage and user flows in the [Delivery Promise Figma Community](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) page.
+
 
 ### Global filters
 
 Global filters remain active across all user navigation and are applied to all product searches until they change or are cleared.
 
-Shoppers can filter available products globally using the **Filter by store**, which displays only products available for pickup at a specific store. It shows all available pickup points within a 50 km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
+Shoppers can filter available products globally using the **Filter by store**, which displays only products available for pickup at a specific store. This filter shows all available pickup points within a 50 km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
 
 ![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/by-store___745e8c3ae10a84e55f88b107e5b00218.png)
 
@@ -43,8 +44,8 @@ Shoppers can filter available products globally using the **Filter by store**, w
 In PLPs or search pages, the shopper may have the following options to filter:
 
 * **Deliver to:** Displays available products according to the shopper's location.
-* **Pickup at:** Displays the store set in the global pickup point filter, or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper may click it and select a new store in the modal that will open. It shows all available pickup points within a 50 km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
-* **Pickup nearby:** Displays products available for pickup at nearby stores. It shows up to 40 pickup points within 10 km of the shopper's location.
+* **Pickup at:** Displays the store set in the global pickup point filter, or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper can click on it and select a new store in the modal that opens. This filter shows all available pickup points within a 50 km radius for pickup configured in Checkout. The number of pickup points displayed is unlimited.
+* **Pickup nearby:** Displays products available for pickup at nearby stores. This filter shows up to 40 pickup points within 10 km of the shopper's location.
 * **Pickup anywhere:** Displays products available for pickup at any participating store within the merchant's network, rather than restricting results to a selected pickup location or geographic proximity. **It's mainly used by B2B stores**.
 
 ![plp-filters](https://vtexhelp.vtexassets.com/assets/docs/src/plp-by-shipping___e9ba4d4e3f0840c3ec53dc94ac7aafc4.png)
@@ -81,3 +82,5 @@ graph LR
 
     H -- No --> N(["Display products without using Delivery Promise"])
 ```
+
+
