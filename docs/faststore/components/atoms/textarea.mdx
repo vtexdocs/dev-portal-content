@@ -5,7 +5,9 @@ components:
   - Textarea.tsx
 ---
 
-`Textarea` enables users to input multi-line text. It's commonly used for longer user inputs, such as comments or descriptions.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Textarea)
+
+The `Textarea` component allows users to enter multi-line text. It is commonly used for longer inputs such as comments, messages, or descriptions.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -16,41 +18,66 @@ components:
   </Tab>
   <Tab>
     ```tsx
-     <Textarea placeholder="Label" id="textareafield-default" />
-     <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+    import React from 'react'
+    import { Textarea } from '@faststore/ui'
+    export default function TextareaUsage() {
+      return (
+        <>
+          <Textarea placeholder="Label" id="textareafield-default" />
+          <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+        </>
+      )
+    }
     ```
   </Tab>
 </Tabs>
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Textarea } from '@faststore/ui'
 ```
 
-### Import styles to your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following to your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Textarea/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Textarea" />
+### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Textarea placeholder="Disabled Textarea" id="textareafield-disabled" disabled />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Textarea } from '@faststore/ui'
+    export default function TextareaUsage() {
+      return <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -124,19 +151,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
----
+### Design tokens: Disabled
 
-### Variants
-
-#### Disabled
-
-<OverviewSection>
-  <Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
-</OverviewSection>
-
-```tsx
-<Textarea placeholder="Text area disabled" id="textareafield-disabled" disabled />
-```
+Disabled textareas reduce contrast and remove interactive indicators to show a non-editable state, while maintaining layout stability and keeping content readable.
 
 <TokenTable>
   <TokenRow
@@ -162,9 +179,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Textarea` styles using the following data attributes:
 
 `data-fs-textarea`
 
@@ -172,11 +189,27 @@ For further customization, you can use the following data attributes:
 
 ---
 
+## Props
+
+<ComponentPropsSection component="Textarea" />
+
+---
+
 ## Best practices
 
 ### ✅ Do's
 
-- Provide a [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) when using `Textarea`. Descriptive labels help users understand the purpose of a form control.
+- Provide a [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) to help users understand the purpose of the form control.
+- Ensure each `Textarea` has an associated `id` that matches the `for` attribute of its label.
+- Use placeholders only for examples or hints, not as replacements for labels.
+- Set a height that shows multiple lines without requiring immediate resizing.
+- Add validation messages when specific input formats or lengths are required.
+- Make disabled or error states visually clear and accessible to screen readers.
+
+### ❌ Don'ts
+
+- Don't overuse resizing. If resizing is enabled, ensure it doesn't break the layout or cause accessibility issues.
+- Don't use `Textarea` for short inputs. For single-line or brief text, such as names or emails, use the [Input](https://developers.vtex.com/docs/guides/faststore/atoms-input) component.
 
 ---
 
