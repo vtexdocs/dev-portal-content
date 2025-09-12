@@ -163,30 +163,9 @@ Use the `weight` prop to control the visual stroke weight of the icon. Available
 
 ### Size
 
-Control icon size with the `width` and `height` props. If omitted, both default to `24`.
+Control icon size with the `width` and `height` props. If omitted, both default to `24` (medium size).
 
-#### Default
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Icon name="ShoppingCart" />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-  ```tsx
-  import React from 'react'
-  import { Icon } from '@faststore/ui'
-
-  export default function IconSizeDefault() {
-    return <Icon name="ShoppingCart" />
-  }
-  ```
-  </Tab>
-</Tabs>
-
-#### 16
+#### Small
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -207,7 +186,28 @@ Control icon size with the `width` and `height` props. If omitted, both default 
   </Tab>
 </Tabs>
 
-#### 32
+#### Medium (Default)
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Icon name="ShoppingCart" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+  ```tsx
+  import React from 'react'
+  import { Icon } from '@faststore/ui'
+
+  export default function IconSizeDefault() {
+    return <Icon name="ShoppingCart" />
+  }
+  ```
+  </Tab>
+</Tabs>
+
+#### Large
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
