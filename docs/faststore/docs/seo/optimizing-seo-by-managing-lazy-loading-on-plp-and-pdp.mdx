@@ -47,7 +47,7 @@ Lazy loading can improve [Core Web Vitals](https://web.dev/articles/vitals), whi
 
 On the other hand, rendering all content upfront can speed up discovery for crawlers but can also consume crawl budget, slow down indexing for other pages on your site, and hurt user-perceived performance due to increased initial payload size.
 
-### When to use lazy loading
+## When to use lazy loading
 
 Use lazy loading strategically to avoid hiding important content from crawlers. If critical content is not present in the initial HTML, search engines may fail to index important sections like product grids on a PLP.
 
@@ -68,20 +68,6 @@ Use the following questions to help decide when to lazy load:
 * **Media-heavy:** Does the section contain many heavy images or videos below the fold?
     * **Yes:** **Safe** to lazy load.
     * **No:** **Do not** lazy load.
-
-### Quick Guide for PLPs and PDPs
-
-To simplify your decision-making, here's a quick guide:
-
-**Product List Pages (PLPs)**
-
-* **Do not lazy load:** Main category heading, product grid (names, prices, primary images), and primary filters.
-* **Safe to lazy load:** Auxiliary content blocks, secondary carousels, and user-generated content (UGC) widgets.
-
-**Product Details Pages (PDPs)**
-
-* **Do not lazy load:** Product title, price, first image/variant selector, and key product specifications.
-* **Safe to lazy load:** "Complete the Look" carousels, long review sections, and additional media galleries beyond the first image.
 
 <details>
 <summary>When to implement lazy loading ✅</summary>
