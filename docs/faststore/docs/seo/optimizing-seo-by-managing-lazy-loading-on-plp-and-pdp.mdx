@@ -10,41 +10,57 @@ This guide explains how to manage lazy loading for custom sections to balance SE
 
 ## How lazy loading works in FastStore
 
-- FastStore wraps sections with `LazyLoadingSection` and `ViewportObserver` to defer below-the-fold content until it nears the viewport.
-- Enabling "Skip lazy loading" on a section renders it in the initial HTML, making it immediately available to users and crawlers.
-- Use "Skip lazy loading" selectively. Rendering more content up front increases payload and can worsen LCP/INP if overused.
+Lazy loading is a technique that defers the loading of non-critical resources, like images or entire page sections, until they're needed. In the context of e-commerce, this usually means content below the initial viewport. FastStore uses `LazyLoadingSection` and `ViewportObserver` to implement this. This strategy significantly reduces the initial page load time, especially on slower devices and networks.
 
-## Lazy Loading and SEO
+However, be cautious: disabling lazy loading for too many elements can increase initial page load time. It should only be used for critical, **above-the-fold content**. 
 
-Lazy loading defers below-the-fold images, video, and JavaScript so the browser can prioritize visible content. It impacts SEO by influencing:
+### SEO and performance trade-Off
 
-- Page speed: Faster initial rendering improves user experience and is a ranking factor.
-- Core Web Vitals:
-  - LCP: Prioritizes above-the-fold content and the hero image.
-  - INP: Defers heavy code to reduce main‑thread contention.
-  - CLS: Reserve space or use placeholders to prevent layout shifts.
-- Crawl efficiency: Smaller initial payloads speed up fetching and can improve crawl coverage.
-- Crawling and rendering: Google can render JavaScript, but rendering may be deferred and not all content is guaranteed to load. Critical content should appear in the initial HTML.
+Search engines, like Google, use crawlers to discover and index web content. While modern crawlers can execute JavaScript to render a page, this process can be delayed or incomplete. Therefore, it's vital to ensure that **critical commerce content** is included in the initial HTML to guarantee it's indexed.
 
-On the default PDP and PLP templates, "Skip lazy loading" is enabled for all sections to ensure critical content is present in the initial HTML. Disabling lazy loading globally lets bots access all content without scrolling or scripts, but it increases payloads, can consume crawl budget, and may slow indexing and reduce the number of pages that get indexed.
+Lazy loading can improve **Core Web Vitals (CWV)**, which are important SEO ranking factors. By deferring heavy resources, lazy loading helps improve:
 
-## Deciding when to lazy load
+* **Largest Contentful Paint (LCP):** By prioritizing the hero image and other above-the-fold content, you can ensure the main content loads quickly.
+* **Interaction to Next Paint (INP):** Deferring heavy JavaScript reduces main-thread contention, making the page more responsive.
+* **Cumulative Layout Shift (CLS):** Reserving space for lazy-loaded components prevents unexpected layout shifts as new content loads.
 
-Use lazy loading strategically. If critical content is not included in the initial HTML, crawlers may miss it and fail to index important sections (for example, PLP product grids). Use this checklist to decide:
+On the other hand, rendering all content upfront can speed up discovery for crawlers but can also consume **crawl budget**, slow down indexing for other pages on your site, and hurt user-perceived performance due to increased initial payload size.
 
-- Critical for indexing: Is this required for search engines to understand the page (e.g., PLP product grid; PDP title/price)? If yes, do not lazy load.
-- Above the fold: Is it visible on initial viewport for common devices? If yes, do not lazy load.
-- Structured data dependency: Does it feed schema or in-HTML SEO signals? If yes, do not lazy load.
-- Ancillary content: Is it supportive (carousels, lookbooks, footers)? If yes, safe to lazy load.
-- Media weight: Are there many heavy images/videos below-the-fold? If yes, lazy load them.
+## When to use lazy loading
 
-PLP quick guide:
-- Do not lazy load: main category heading, product grid (name, price, primary image), primary filters if SEO‑relevant.
-- Safe to lazy load: auxiliary content blocks, secondary carousels, UGC widgets near the bottom.
+Use lazy loading strategically to avoid hiding important content from crawlers. If critical content is not present in the initial HTML, search engines may fail to index important sections like product grids on a PLP.
 
-PDP quick guide:
-- Do not lazy load: product title, price, first image/variant selector, key specs relied on by users and crawlers.
-- Safe to lazy load: "Complete the Look", long reviews section, additional media galleries beyond the first image.
+Use this checklist to decide when to lazy load:
+
+* **Critical for indexing?** Is the content essential for search engines to understand the page (e.g., PLP product grid, PDP title/price)?
+    * **Yes:** **Do not** lazy load.
+    * **No:** **Safe** to lazy load.
+* **Above the fold?** Is it visible on the initial screen for most devices?
+    * **Yes:** **Do not** lazy load.
+    * **No:** **Safe** to lazy load.
+* **Structured data dependency?** Does it contain data for Schema.org or other in-HTML SEO signals?
+    * **Yes:** **Do not** lazy load.
+    * **No:** **Safe** to lazy load.
+* **Ancillary content?** Is it supportive content like carousels, lookbooks, or footers?
+    * **Yes:** **Safe** to lazy load.
+    * **No:** **Do not** lazy load.
+* **Media-heavy?** Does the section contain many heavy images or videos below the fold?
+    * **Yes:** **Safe** to lazy load.
+    * **No:** **Do not** lazy load.
+
+### **Quick Guide for PLPs and PDPs**
+
+To simplify your decision-making, here's a quick guide:
+
+**Product List Pages (PLPs)**
+
+* **Do not lazy load:** Main category heading, product grid (names, prices, primary images), and primary filters.
+* **Safe to lazy load:** Auxiliary content blocks, secondary carousels, and user-generated content (UGC) widgets.
+
+**Product Details Pages (PDPs)**
+
+* **Do not lazy load:** Product title, price, first image/variant selector, and key product specifications.
+* **Safe to lazy load:** "Complete the Look" carousels, long review sections, and additional media galleries beyond the first image.
 
 <details>
 <summary>When to implement lazy loading ✅</summary>
@@ -69,6 +85,9 @@ PDP quick guide:
 | **Do not disable lazy loading globally** | Apply lazy loading selectively. Rendering everything up front increases payloads, exhausts crawl budget, and slows indexing. | A homepage with numerous campaign images should lazy load secondary media while keeping critical content immediately available. |
 
 </details>
+
+
+By following these guidelines, you can ensure your e-commerce pages are fast for users and fully discoverable for search engines.
 
 ## Before you begin
 
@@ -201,24 +220,36 @@ If the section is in the initial HTML, as in the example above, it means it is n
 
 After adjusting lazy loading, monitor impact and iterate. Focus on measurable outcomes and protect both crawlability and Core Web Vitals.
 
+### PLP/PDP verification checklist
+
+- PLP server HTML: Ensure the category title and first set of product tiles (name, price, primary image) are present in the initial HTML response.
+- PDP server HTML: Ensure the product title, price, first image, and variant selector render in the initial HTML.
+- Images: First visible image should not be lazy‑loaded. Use `fetchpriority="high"` on the LCP image when appropriate; add `decoding="async"` and proper `srcset`/`sizes` for responsive images.
+- Placeholders: Reserve space (via `width`/`height` or `aspect-ratio`) for deferred content to prevent CLS.
+- Controls: Filters/sort that are SEO‑relevant should be usable without JS for crawlability (progressive enhancement where feasible).
+
 ### Monitoring Core Web Vitals
 
 - Track LCP, INP, and CLS using PageSpeed Insights, Lighthouse, and Search Console’s Core Web Vitals report.
-- Do not lazy-load the hero/primary image; consider `fetchpriority="high"` for the LCP image when appropriate.
-- Set explicit `width`/`height` or `aspect-ratio` on images to avoid CLS; use placeholders/skeletons for deferred content.
-- Defer non-critical scripts and avoid heavy third-party tags above the fold that can degrade INP.
+- Identify the LCP element and confirm it is server‑rendered and not lazy‑loaded; preconnect/preload critical origins/assets when needed.
+- Defer or idle‑callback non‑critical scripts; move heavy third‑party tags out of the initial viewport to protect INP.
+- Use skeletons or low‑quality image placeholders (LQIP/blur) for deferred media; ensure reserved space to avoid shifts.
 
-### Google Search Console Analysis
+### Google Search Console analysis
 
-Use Search Console to validate crawlability and rendered output:
-
-- Use URL Inspection > Test Live URL to view rendered HTML and a screenshot of Googlebot’s view.
-- Confirm critical PLP/PDP content appears in the initial HTML and in the rendered DOM.
-- Avoid hiding src in custom attributes (e.g., `data-src`). Prefer standard `src` plus `loading="lazy"` for below-the-fold images.
-- Monitor Indexing/Coverage and Enhancements reports for templates you changed.
+- Use URL Inspection > Test Live URL to review the rendered HTML and screenshot of Googlebot’s view.
+- Verify critical PLP/PDP content is present in the initial HTML and also visible post‑render.
+- Avoid custom attributes for source URLs (e.g., `data-src`). Prefer standard `src` and apply `loading="lazy"` only to below‑the‑fold images.
+- Monitor Indexing/Coverage and CWV reports for templates you changed; compare before/after.
 
 ### Rollout and verification
 
-- Roll out changes gradually and compare Core Web Vitals, bounce rate, and indexation signals before full deployment.
-- For infinite-scroll PLPs, ensure crawlable pagination or discoverable "Load more" links to expose deeper products.
-- In DevTools Network, verify the initial document Response contains critical PLP/PDP content you expect crawlers to see.
+- Roll out gradually and compare KPIs (CWV, bounce rate, time to first interaction, indexation) before full deployment.
+- For infinite scroll, expose crawlable pagination or a discoverable “Load more” URL pattern to deeper content.
+- In DevTools Network, verify the initial document Response includes the critical PLP/PDP HTML expected by crawlers.
+
+### Common pitfalls
+
+- Intersection thresholds too strict: If `rootMargin` or thresholds are misconfigured, content may never intersect during crawler rendering.
+- Hidden sources: Libraries that keep image URLs only in `data-*` attributes can hide media from crawlers.
+- Global opt‑out: Disabling lazy loading everywhere bloats initial payloads, harms CWV, and consumes crawl budget.
