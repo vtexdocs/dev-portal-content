@@ -6,7 +6,7 @@ FastStore uses lazy loading to improve performance by deferring non-critical sec
 
 This guide explains how to manage lazy loading for custom sections to balance SEO and performance on Product List Pages (PLPs) and Product Details Pages (PDPs).
 
-> ❗ Disabling lazy loading may increase initial page load time. Apply this only for critical, above-the-fold content. To help you decide, see the [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load) sections.
+> ❗ Disabling lazy loading may increase initial page load time. Apply it only for critical, above-the-fold content. To help you decide, see the [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load) sections.
 
 ## How lazy loading works in FastStore
 
@@ -36,7 +36,7 @@ However, be cautious: disabling lazy loading for too many elements can increase 
 
 Server-side rendering outputs critical HTML in the initial document so users and crawlers can access it without running JavaScript. Sections wrapped by lazy loading do not appear in this initial HTML; they render and hydrate only when the section approaches the viewport.
 
-In FastStore, default PDP and PLP templates have **Skip Lazy Loading** turned on for all sections. Without lazy loading, bots can access all content at once without scrolling or executing scripts, which may speed up crawling. However, they must still download and process all media files, which can quickly consume crawl budget, slow the indexing of other pages, and reduce the number of indexed pages. Larger initial payloads can also impact user experience and bot-perceived site performance.
+By default, lazy loading is disabled for all sections in FastStore's PDP and PLP templates. Without lazy loading, bots can access all content at once without scrolling or executing scripts, which may speed up crawling. However, they must still download and process all media files, which can quickly consume crawl budget, slow the indexing of other pages, and reduce the number of indexed pages. Larger initial payloads can also impact user experience and bot-perceived site performance.
 
 ![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading___2a0ca0c7a90d61cda31c2ce9200e377f.png)
 
@@ -237,7 +237,7 @@ After adjusting lazy loading, monitor impact and iterate. Focus on measurable ou
 - PDP server HTML: Ensure the product title, price, first image, and variant selector render in the initial HTML.
 - Images: First visible image should not be lazy-loaded. Use `fetchpriority="high"` on the LCP image when appropriate; add `decoding="async"` and proper `srcset`/`sizes` for responsive images.
 - Placeholders: Reserve space (via `width`/`height` or `aspect-ratio`) for deferred content to prevent CLS.
-- Controls: Filters/sort that are SEO-relevant should be usable without JS for crawlability (progressive enhancement where feasible).
+- Controls: Filters and sorting that are SEO-relevant should be usable without JS for crawlability (progressive enhancement where feasible).
 
 ### Monitoring Core Web Vitals
 
