@@ -10,41 +10,41 @@ This guide explains how to manage lazy loading for custom sections to balance SE
 
 ## How lazy loading works in FastStore
 
-Lazy loading is a technique that defers the loading of non-critical resources, like images or entire page sections, until they're needed. In the context of e-commerce, this usually means content below the initial viewport. FastStore uses `LazyLoadingSection` and `ViewportObserver` to implement this. This strategy significantly reduces the initial page load time, especially on slower devices and networks.
+Lazy loading is a technique that defers the loading of non-critical resources, like images or entire page sections, until they're needed. In FastStore, `LazyLoadingSection` is a section-level React wrapper that delays rendering and hydration of non-critical blocks until they approach the viewport, and `ViewportObserver` is a small utility (based on the browser's `IntersectionObserver`) that detects when content enters the viewport. Together they implement lazy loading—that is, deferring render or hydration and resource fetching until content is near or in view—reducing the initial page load time, especially on slower devices and networks.
 
-However, be cautious: disabling lazy loading for too many elements can increase initial page load time. It should only be used for critical, **above-the-fold content**. 
+However, be cautious: disabling lazy loading for too many elements can increase initial page load time. It should only be used for critical, above-the-fold content. 
 
 ### SEO and performance trade-Off
 
 Search engines, like Google, use crawlers to discover and index web content. While modern crawlers can execute JavaScript to render a page, this process can be delayed or incomplete. Therefore, it's vital to ensure that **critical commerce content** is included in the initial HTML to guarantee it's indexed.
 
-Lazy loading can improve **Core Web Vitals (CWV)**, which are important SEO ranking factors. By deferring heavy resources, lazy loading helps improve:
+Lazy loading can improve [Core Web Vitals](https://web.dev/articles/vitals), which are important SEO ranking factors. By deferring heavy resources, lazy loading helps improve:
 
-* **Largest Contentful Paint (LCP):** By prioritizing the hero image and other above-the-fold content, you can ensure the main content loads quickly.
+* **Largest Contentful Paint (LCP):** Prioritizing the hero image and other above-the-fold content, you can ensure the main content loads quickly.
 * **Interaction to Next Paint (INP):** Deferring heavy JavaScript reduces main-thread contention, making the page more responsive.
 * **Cumulative Layout Shift (CLS):** Reserving space for lazy-loaded components prevents unexpected layout shifts as new content loads.
 
-On the other hand, rendering all content upfront can speed up discovery for crawlers but can also consume **crawl budget**, slow down indexing for other pages on your site, and hurt user-perceived performance due to increased initial payload size.
+On the other hand, rendering all content upfront can speed up discovery for crawlers but can also consume crawl budget, slow down indexing for other pages on your site, and hurt user-perceived performance due to increased initial payload size.
 
 ## When to use lazy loading
 
 Use lazy loading strategically to avoid hiding important content from crawlers. If critical content is not present in the initial HTML, search engines may fail to index important sections like product grids on a PLP.
 
-Use this checklist to decide when to lazy load:
+Use the following questions to help decide when to lazy load:
 
-* **Critical for indexing?** Is the content essential for search engines to understand the page (e.g., PLP product grid, PDP title/price)?
+* **Critical for indexing:** Is the content essential for search engines to understand the page (e.g., PLP product grid, PDP title/price)?
     * **Yes:** **Do not** lazy load.
     * **No:** **Safe** to lazy load.
-* **Above the fold?** Is it visible on the initial screen for most devices?
+* **Above the fold content:** Is it visible on the initial screen for most devices?
     * **Yes:** **Do not** lazy load.
     * **No:** **Safe** to lazy load.
-* **Structured data dependency?** Does it contain data for Schema.org or other in-HTML SEO signals?
+* **Structured data dependency:** Does it contain data for Schema.org or other in-HTML SEO signals?
     * **Yes:** **Do not** lazy load.
     * **No:** **Safe** to lazy load.
-* **Ancillary content?** Is it supportive content like carousels, lookbooks, or footers?
+* **Ancillary content:** Is it supportive content like carousels, lookbooks, or footers?
     * **Yes:** **Safe** to lazy load.
     * **No:** **Do not** lazy load.
-* **Media-heavy?** Does the section contain many heavy images or videos below the fold?
+* **Media-heavy:** Does the section contain many heavy images or videos below the fold?
     * **Yes:** **Safe** to lazy load.
     * **No:** **Do not** lazy load.
 
@@ -247,9 +247,3 @@ After adjusting lazy loading, monitor impact and iterate. Focus on measurable ou
 - Roll out gradually and compare KPIs (CWV, bounce rate, time to first interaction, indexation) before full deployment.
 - For infinite scroll, expose crawlable pagination or a discoverable “Load more” URL pattern to deeper content.
 - In DevTools Network, verify the initial document Response includes the critical PLP/PDP HTML expected by crawlers.
-
-### Common pitfalls
-
-- Intersection thresholds too strict: If `rootMargin` or thresholds are misconfigured, content may never intersect during crawler rendering.
-- Hidden sources: Libraries that keep image URLs only in `data-*` attributes can hide media from crawlers.
-- Global opt‑out: Disabling lazy loading everywhere bloats initial payloads, harms CWV, and consumes crawl budget.
