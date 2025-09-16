@@ -12,7 +12,7 @@ This guide explains how to manage lazy loading for custom sections to balance SE
 
 Lazy loading is a technique that defers the loading of non-critical resources, like images or entire page sections, until they're needed. 
 
-In FastStore, `LazyLoadingSection` is a section-level React wrapper that delays rendering and hydration of non-critical blocks until they approach the viewport, and `ViewportObserver` is a small utility (based on the browser's `IntersectionObserver`) that detects when content enters the viewport. Together, they implement lazy loading—that is, deferring render or hydration and resource fetching until content is near or in view—to reduce the initial page load time, especially on slower devices and networks.
+In FastStore, `LazyLoadingSection` is a section-level React wrapper that delays rendering and hydration of non-critical blocks until they approach the viewport, and `ViewportObserver` is a small utility (based on the browser's `IntersectionObserver`) that detects when content enters the viewport. Together, they implement lazy loading that is, deferring rendering or hydration and resource fetching until content is near or in view—to reduce the initial page load time, especially on slower devices and networks.
 
 ```mermaid
 graph LR
