@@ -27,7 +27,7 @@ graph LR
 
 However, be cautious: disabling lazy loading for too many elements can increase initial page load time. It should only be used for critical, above-the-fold content. 
 
-### Server-Side Rendering (SSR) and Lazy Loading
+### Server-Side Rendering (SSR) and lazy loading
 
 Server-side rendering outputs critical HTML in the initial document so users and crawlers can access it without running JavaScript. Sections wrapped by lazy loading do not appear in this initial HTML; they render and hydrate only when the section approaches the viewport.
 
@@ -226,7 +226,7 @@ If the section is in the initial HTML, as in the example above, it means it is n
 
 After adjusting lazy loading, monitor impact and iterate. Focus on measurable outcomes and protect both crawlability and Core Web Vitals.
 
-### PLP/PDP verification checklist
+### Verifying PLP and PDP settings
 
 - PLP server HTML: Ensure the category title and first set of product tiles (name, price, primary image) are present in the initial HTML response.
 - PDP server HTML: Ensure the product title, price, first image, and variant selector render in the initial HTML.
@@ -241,7 +241,7 @@ After adjusting lazy loading, monitor impact and iterate. Focus on measurable ou
 - Defer or idle-callback non-critical scripts; move heavy third-party tags out of the initial viewport to protect INP.
 - Use skeletons or low-quality image placeholders (LQIP/blur) for deferred media; ensure reserved space to avoid shifts.
 
-### Google Search Console analysis
+### Analyzing through Google Search Console
 
 - Use URL Inspection > Test Live URL to review the rendered HTML and screenshot of Googlebot’s view.
 - Verify critical PLP/PDP content is present in the initial HTML and also visible post-render.
