@@ -35,9 +35,6 @@ In FastStore, Default PDP and PLP templates have **Skip Lazy Loading** turned on
 
 ![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading___2a0ca0c7a90d61cda31c2ce9200e377f.png)
 
-- Use the **Skip Lazy Loading** flag to force a section to render server-side in the initial HTML.
-- Apply it to SEO-critical and above-the-fold content (e.g., PLP titles or product tiles, PDP title, price or first image).
-
 ### SEO and performance trade-Off
 
 Search engines, like Google, use crawlers to discover and index web content. While modern crawlers can execute JavaScript to render a page, this process can be delayed or incomplete. Therefore, it's vital to ensure that **critical commerce content** is included in the initial HTML to guarantee it's indexed.
@@ -49,8 +46,6 @@ Lazy loading can improve [Core Web Vitals](https://web.dev/articles/vitals), whi
 * **Cumulative Layout Shift (CLS):** Reserving space for lazy-loaded components prevents unexpected layout shifts as new content loads.
 
 On the other hand, rendering all content upfront can speed up discovery for crawlers but can also consume crawl budget, slow down indexing for other pages on your site, and hurt user-perceived performance due to increased initial payload size.
-
-Default PDP and PLP templates have **Skip Lazy Loading** turned on for all sections. Without lazy loading, the bot can access all content at once without scrolling or executing scripts, potentially making crawling faster. However, it must still download and process all media files, which can quickly consume your crawl budget and slow down the indexing of other pages and reduce the amount of indexed pages. Additionally, increases in page load time can impact both bot perception of site performance and user experience.
 
 ### When to use lazy loading
 
@@ -111,9 +106,6 @@ To simplify your decision-making, here's a quick guide:
 | **Do not disable lazy loading globally** | Apply lazy loading selectively. Rendering everything up front increases payloads, exhausts crawl budget, and slows indexing. | A homepage with numerous campaign images should lazy load secondary media while keeping critical content immediately available. |
 
 </details>
-
-
-By following these guidelines, you can ensure your e-commerce pages are fast for users and fully discoverable for search engines.
 
 ## Before you begin
 
