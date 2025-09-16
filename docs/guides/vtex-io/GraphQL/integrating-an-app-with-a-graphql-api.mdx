@@ -1,0 +1,227 @@
+---
+title: "Integrating an app with a GraphQL API"
+slug: "integrating-an-app-with-a-graphql-api"
+hidden: false
+excerpt: "Learn how to query GraphQL APIs from an app."
+createdAt: "2025-09-16T18:00:00.000Z"
+updatedAt: "2025-09-16T18:00:00.000Z"
+---
+
+When developing a VTEX IO app, you may need to interact with other apps that expose GraphQL APIs. For example, to retrieve data or trigger actions. To do this, you must [implement a custom client](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients) that handles authenticated requests to the target app.
+
+Once registered with the VTEX IO clients pattern (`IOClients`),  the client becomes available throughout your app. You can then call it directly from resolvers or middleware functions to integrate external GraphQL capabilities into your [service app](https://developers.vtex.com/docs/guides/vtex-io-documentation-service).
+
+## Before you begin
+
+Make sure you check the technical requirements to follow this guide:
+
+- The [VTEX IO CLI is installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) on your computer.
+- Access to a VTEX store with a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and the Admin environment.
+- Familiarity with GraphQL concepts, such as [queries](https://graphql.org/learn/queries/), [schema](https://graphql.org/learn/schema/), and [resolvers](https://graphql.org/learn/execution/).
+- Experience developing in the [TypeScript](https://www.typescriptlang.org/) language.
+
+## Implementation
+
+### 1. Starting with a template
+
+We recommend cloning a VTEX IO app template to your computer if you are developing an app from scratch. In this tutorial, we will use the [service-example](https://github.com/vtex-apps/service-example) template. Clone the repository using the following command in a terminal:
+
+```sh
+git clone https://github.com/vtex-apps/service-example
+```
+
+### 2. Implementing your custom client
+
+VTEX IO provides `AppGraphQLClient` as a base class for making GraphQL requests between apps. Your custom client should extend this class, specifying the target app (the one exposing the GraphQL API) in the `super` constructor. In this class, you must also define the methods you want to use in your middlewares or resolvers.
+
+In the following example, we define a client that uses the [Messages app](https://developers.vtex.com/docs/apps/vtex.messages)'s `translate` query for string translations.
+
+```typescript node/clients/translation-graphql.ts
+import { AppGraphQLClient, InstanceOptions, IOContext } from '@vtex/api'
+
+interface TranslatePayload {
+  indexedByFrom: { from: string; messages: object[] }[];
+  to: string;
+}
+
+export default class TranslationGraphQL extends AppGraphQLClient {
+  constructor(ctx: IOContext, options?: InstanceOptions) {
+    super('vtex.messages@1', ctx, options)
+  }
+
+  public translate = (args: TranslatePayload) => {
+    return this.graphql.query({
+      query: `query GetTranslation($args: TranslateArgs!) {
+        translate(args: $args)
+      }`,
+      variables: { args },
+    })
+  }
+}
+```
+
+Some details about this implementation:
+
+1. **Target app:** In the client's constructor, define the app you want to query using the format `{vendor}.{app-name}@{version}`. In this example, we use `vtex.messages@1`, specifying only the app's major. You can also specify the exact version with minor and patch values (e.g., `vtex.messages@1.0.0`). In this constructor, you can include other options in the `options` value, such as [authentication tokens in the headers](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) for [authenticated queries](https://developers.vtex.com/docs/guides/graphql-authorization-in-io-apps).
+2. **Client functions:** Create functions for each query and mutation you need. This example shows a simplified implementation to call the `translate` query. To make the query, use the function `this.graphql.query` with the following arguments:
+    - `query`: Insert the query here in a [template string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) format, surrounded by backticks (`` ` ``), which allows multi-line separation and usage of variables. In this example, we declare the [GraphQL object](https://graphql.org/learn/schema/#object-types-and-fields) `GetTranslation` and use the `$args` variable as [input](https://graphql.org/learn/schema/#input-object-types). Notice that query variables start with the `$` symbol. You must use the same names for the queries and variables as in the schema definition. Here we use the `translate` query and the `TranslateArgs!` type for the variable `$args`. You can find the type names in the app documentation (e.g., [Messages GraphQL API](https://developers.vtex.com/docs/apps/vtex.messages/messages-graphql-api)), using an [Introspection Query](https://graphql.org/learn/introspection/), or, if you have access, in the app's source code.
+    - `variables`: Insert the query variables here as an object, where the property keys are the variable names in the query. In this example, `variables.args` is used as the variable `$args` in the query.
+
+> ℹ️ If you want to use mutations, use the function `this.graphql.mutate` and insert the template string in the `mutate` argument.
+
+### 3.  Registering the client
+
+After you implement the client, register it in your app's list of clients. This step makes the client available in the context of your app's resolvers. To do this, open the `node/clients/index.ts` file, import your client, and add it to the `Clients` class, as shown in the following example:
+
+```typescript node/clients/index.ts mark=3,6:8
+import { IOClients } from '@vtex/api'
+
+import TranslationGraphQL from './translation-graphql'
+
+export class Clients extends IOClients {
+  public get translationGraphQL() {
+    return this.getOrSet('translationGraphQL', TranslationGraphQL)
+  }
+}
+```
+
+### 4. Using the client
+
+You can now use your custom client to request the target app from your app's handler functions by accessing it via context (`ctx.clients`).
+
+In this example, we implement a REST API to access the translation query from the Messages app.
+
+```typescript node/middlewares/translateMessages.ts
+import { json } from 'co-body'
+
+export async function translateMessages(ctx: Context, next: () => Promise<any>) {
+  const {
+    clients: { translationGraphQL }
+  } = ctx
+
+  const requestBody = await json(ctx.req)
+  const { from, messages, to } = requestBody
+
+  if (!from || !messages || !to) {
+    ctx.status = 400
+    ctx.body = { error: 'Missing required fields: from, messages, to' }
+    return
+  }
+
+  const translateArgs = {
+    indexedByFrom: [{ from, messages }],
+    to,
+  }
+
+  const response = await translationGraphQL.translate(translateArgs)
+  ctx.status = 200
+  ctx.body = response
+
+  await next()
+}
+```
+
+### 5. Defining the service route
+
+We need to define a route, since we are implementing a REST API to access the middleware. Go to the `node/service.json` file, define a public route with the name of the middleware function, and set the path using the format `"/_v/{app-name}/{middleware-name}"`.  For this implementation, we use:
+
+```json node/service.json mark=4:7
+{
+  ...
+  "routes": {
+    "translateMessages": {
+      "path": "/_v/graphql-integration/translateMessages",
+      "public": true
+    }
+  }
+}
+```
+
+### 6. Relating a route to a middleware
+
+Update the `node/index.ts` file to relate a route to a middleware. The routes section associates the `translateMessages` route with the `translateMessages` middleware function. The `POST` method is related to the `translateMessages` function. We use the `POST` method since we will send the content to be translated in the request body.
+
+Therefore, when a `POST` request is made to the previously defined `translateMessages` route, it triggers the `translateMessages` function, which, in turn, executes the `TranslationGraphQL` client's `translate` method.
+
+```typescript node/index.ts mark=1,6:8
+import { translateMessages } from './middlewares/translateMessages'
+
+export default new Service({
+  clients,
+  routes: {
+    translateMessages: method({
+      POST: translateMessages,
+    })
+  },
+})
+```
+
+### 7. Add the policies
+
+For your app to have permission to access any external resource, you must declare the related [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) in your app's `manifest.json` file. In the case of a GraphQL API from another app, it's a role-based policy, so you need to add the app and policy names. You can find the policy name and description in the `policies.json` file from the app's source code.
+
+Here is the role-based policy from the Messages app for its GraphQL API:
+
+```json vtex.messages/policies.json
+[
+  ...
+  {
+    "name": "graphql-translate-messages",
+    "description": "Allows access the translation API",
+    "statements": [
+      {
+        "actions": ["get", "post"],
+        "effect": "allow",
+        "resources": [
+          "vrn:vtex.messages:{{region}}:{{account}}:{{workspace}}:/_v/graphql"
+        ]
+      }
+    ]
+  },
+  ...
+]
+```
+
+Add the policy to your app using the format `"name": "{vendor}.{app-name}:{policy-name}"`. For the Messages app example, we use:
+
+```json manifest.json mark=2:4
+"policies": [
+  {
+    "name": "vtex.messages:graphql-translate-messages"
+  }
+]
+```
+
+### 8. Link your app
+
+To test your app, [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) it to the VTEX platform to run and accept requests.
+
+Open a terminal and switch to a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace). Then, use the `vtex link` command.
+
+### 9. Test your integration
+
+With your app running, you can test the implemented integration. In our example, we implement a REST API in a service app linked to a middleware function. Therefore, we will call the endpoint that executes this function, which invokes the translation query.
+
+Here is a cURL example to call the translation endpoint:
+
+```sh
+curl --request post \
+	--url 'https://{{workspace}}--{{accountname}}.myvtex.com/_v/graphql-integration/translateMessages' \
+	--header 'Accept: application/json' \
+	--header 'Content-Type: application/json' \
+	--header 'VtexIdclientAutCookie: {{vtex-cookie}}' \
+	--data '{"from": "en-US", "messages": [{"content": "shoe"}, {"content": "ball"}], "to": "pt-BR"}'
+```
+
+And we get the following response:
+
+```json
+{
+  "data": {
+    "translate": [
+      "sapato",
+      "bola"
+    ]
+  }
+}
+```
