@@ -6,7 +6,7 @@ FastStore uses lazy loading to improve performance by deferring non-critical sec
 
 This guide explains how to manage lazy loading for custom sections to balance SEO and performance on Product List Pages (PLPs) and Product Details Pages (PDPs).
 
-> ❗ Disabling lazy loading may increase initial page load time. Use it only for critical, above-the-fold content. To help you decide, see the [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load) sections.
+> ❗ Disabling lazy loading may increase initial page load time. Apply this only for critical, above-the-fold content. To help you decide, see the [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load) sections.
 
 ## How lazy loading works in FastStore
 
@@ -36,7 +36,7 @@ However, be cautious: disabling lazy loading for too many elements can increase 
 
 Server-side rendering outputs critical HTML in the initial document so users and crawlers can access it without running JavaScript. Sections wrapped by lazy loading do not appear in this initial HTML; they render and hydrate only when the section approaches the viewport.
 
-In FastStore, default PDP and PLP templates have **Skip Lazy Loading** turned on for all sections. Without lazy loading, bots can access all content at once without scrolling or executing scripts, which may speed crawling. However, they must still download and process all media files, which can quickly consume crawl budget and slow the indexing of other pages and reduce the number of indexed pages. Larger initial payloads can also impact user experience and bot-perceived site performance.
+In FastStore, default PDP and PLP templates have **Skip Lazy Loading** turned on for all sections. Without lazy loading, bots can access all content at once without scrolling or executing scripts, which may speed up crawling. However, they must still download and process all media files, which can quickly consume crawl budget, slow the indexing of other pages, and reduce the number of indexed pages. Larger initial payloads can also impact user experience and bot-perceived site performance.
 
 ![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading___2a0ca0c7a90d61cda31c2ce9200e377f.png)
 
@@ -64,7 +64,7 @@ Use the following questions to help decide when to lazy load:
 * **Above the fold content:** Is it visible on the initial screen for most devices?
     * **Yes:** **Do not** lazy load.
     * **No:** **Safe** to lazy load.
-* **Structured data dependency:** Does it contain data for Schema.org or other in-HTML SEO signals?
+* **Structured data dependency:** Does it contain data for Schema.org or other HTML-based SEO signals?
     * **Yes:** **Do not** lazy load.
     * **No:** **Safe** to lazy load.
 * **Ancillary content:** Is it supportive content like carousels, lookbooks, or footers?
@@ -91,7 +91,7 @@ Use the following questions to help decide when to lazy load:
 
 | Context | Reason to avoid | Example |
 | :--- | :--- | :--- |
-| **The store section is part of your core PLP or PDP** | Essential product details like names, prices, and descriptions must be immediately visible to users and search engines. | A "Jeans" category page where product names and thumbnails need to load instantly for indexing and shoppers do not experience delays in viewing products. |
+| **The store section is part of your core PLP or PDP** | Essential product details like names, prices, and descriptions must be immediately visible to users and search engines. | A "Jeans" category page where product names and thumbnails need to load instantly for indexing, so shoppers do not experience delays in viewing products. |
 | **All product content needs to appear for search engines** | Critical content for SEO, like size charts and availability, must be crawlable and indexable immediately. | On a product page for a best-selling jacket, size charts and availability information should load instantly. Lazy loading these elements would hide vital product data from search engines, potentially harming SEO and user conversions. |
 | **There is a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it's lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index every new product shown in this grid. |
 | **Do not disable lazy loading globally** | Apply lazy loading selectively. Rendering everything up front increases payloads, exhausts crawl budget, and slows indexing. | A homepage with numerous campaign images should lazy load secondary media while keeping critical content immediately available. |
