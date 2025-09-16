@@ -6,7 +6,7 @@ FastStore uses lazy loading to improve performance by deferring non-critical sec
 
 This guide explains how to manage lazy loading for custom sections to balance SEO and performance on Product List Pages (PLPs) and Product Details Pages (PDPs).
 
-> ❗ Disabling lazy loading may increase initial page load time. Apply it only for critical, above-the-fold content. To help you decide, see the [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load) sections.
+> ❗ Disabling lazy loading may increase initial page load time. Apply this practice only for critical, above-the-fold content. To help you decide, see the [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load) sections.
 
 ## How lazy loading works in FastStore
 
@@ -142,7 +142,7 @@ FastStore lazy loads sections to improve store performance. However, some [custo
    }
    ```
 
-Turning this on ensures the section’s content is included in the initial, server-rendered HTML (i.e., lazy loading is skipped for that section).
+Turning this on ensures the section's content is included in the initial, server-rendered HTML (i.e., lazy loading is skipped for that section).
 
 3. To display PLP data (e.g., collection names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook. For PDP data (e.g., product titles), use the [`usePDP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#hooks-for-consuming-api-extension-data) hook.
 
@@ -241,14 +241,14 @@ After adjusting lazy loading, monitor impact and iterate. Focus on measurable ou
 
 ### Monitoring Core Web Vitals
 
-- Track LCP, INP, and CLS using PageSpeed Insights, Lighthouse, and Search Console’s Core Web Vitals report.
+- Track LCP, INP, and CLS using PageSpeed Insights, Lighthouse, and Search Console's Core Web Vitals report.
 - Identify the LCP element and confirm it is server-rendered and not lazy-loaded; preconnect/preload critical origins/assets when needed.
-- Defer or idle-callback non-critical scripts; move heavy third-party tags out of the initial viewport to protect INP.
+- Defer non-critical scripts or schedule them with idle callbacks; move heavy third-party tags out of the initial viewport to protect INP.
 - Use skeletons or low-quality image placeholders (LQIP/blur) for deferred media; ensure reserved space to avoid shifts.
 
 ### Analyzing through Google Search Console
 
-- Use URL Inspection > Test Live URL to review the rendered HTML and screenshot of Googlebot’s view.
+- Use URL Inspection > Test Live URL to review the rendered HTML and screenshot of Googlebot's view.
 - Verify critical PLP/PDP content is present in the initial HTML and also visible post-render.
 - Avoid custom attributes for source URLs (e.g., `data-src`). Prefer standard `src` and apply `loading="lazy"` only to below-the-fold images.
 - Monitor Indexing/Coverage and CWV reports for templates you changed; compare before/after.
