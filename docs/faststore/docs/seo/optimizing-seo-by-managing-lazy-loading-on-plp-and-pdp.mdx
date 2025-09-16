@@ -27,6 +27,17 @@ graph LR
 
 However, be cautious: disabling lazy loading for too many elements can increase initial page load time. It should only be used for critical, above-the-fold content. 
 
+### Server-Side Rendering (SSR) and Lazy Loading
+
+Server-side rendering outputs critical HTML in the initial document so users and crawlers can access it without running JavaScript. Sections wrapped by lazy loading do not appear in this initial HTML; they render and hydrate only when the section approaches the viewport.
+
+In FastStore, Default PDP and PLP templates have **Skip Lazy Loading** turned on for all sections. Without lazy loading, bots can access all content at once without scrolling or executing scripts, which may speed crawling. However, they must still download and process all media files, which can quickly consume crawl budget and slow the indexing of other pages and reduce the amount of indexed pages. Larger initial payloads can also impact user experience and bot-perceived site performance.
+
+![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading___2a0ca0c7a90d61cda31c2ce9200e377f.png)
+
+- Use the **Skip Lazy Loading** flag to force a section to render server-side in the initial HTML.
+- Apply it to SEO-critical and above-the-fold content (e.g., PLP titles or product tiles, PDP title, price or first image).
+
 ### SEO and performance trade-Off
 
 Search engines, like Google, use crawlers to discover and index web content. While modern crawlers can execute JavaScript to render a page, this process can be delayed or incomplete. Therefore, it's vital to ensure that **critical commerce content** is included in the initial HTML to guarantee it's indexed.
@@ -39,7 +50,9 @@ Lazy loading can improve [Core Web Vitals](https://web.dev/articles/vitals), whi
 
 On the other hand, rendering all content upfront can speed up discovery for crawlers but can also consume crawl budget, slow down indexing for other pages on your site, and hurt user-perceived performance due to increased initial payload size.
 
-## When to use lazy loading
+Default PDP and PLP templates have **Skip Lazy Loading** turned on for all sections. Without lazy loading, the bot can access all content at once without scrolling or executing scripts, potentially making crawling faster. However, it must still download and process all media files, which can quickly consume your crawl budget and slow down the indexing of other pages and reduce the amount of indexed pages. Additionally, increases in page load time can impact both bot perception of site performance and user experience.
+
+### When to use lazy loading
 
 Use lazy loading strategically to avoid hiding important content from crawlers. If critical content is not present in the initial HTML, search engines may fail to index important sections like product grids on a PLP.
 
@@ -146,6 +159,8 @@ FastStore lazy loads sections to improve store performance. However, some [custo
    }
    ```
 
+Turning this on ensures the section’s content is included in the initial, server-rendered HTML (i.e., lazy loading is skipped for that section).
+
 3. To display PLP data (e.g., collection names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook. For PDP data (e.g., product titles), use the [`usePDP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#hooks-for-consuming-api-extension-data) hook.
 
 <details>
@@ -227,7 +242,7 @@ To ensure that the custom section is present in the initial HTML response, follo
 
    ![developer-tools-panel](https://vtexhelp.vtexassets.com/assets/docs/src/developer-tools-panel___9240a6f4b36ce8151f6d346e78674f2b.png)
 
-If the section is in the initial HTML, as in the example above, it means it is not lazy-loaded and is visible to search engines.
+If the section is in the initial HTML, as in the example above, it means it is not lazy-loaded and is visible to search engines—confirming it was rendered server-side (lazy loading was skipped).
 
 ## Best practices after lazy loading
 
