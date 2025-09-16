@@ -15,7 +15,7 @@ Lazy loading is a technique that defers the loading of non-critical resources, l
 `LazyLoadingSection` and `ViewportObserver` work together in FastStore to improve initial page load time.
 
 * `LazyLoadingSection`: A React wrapper that delays the rendering of content (e.g., blocks) and hydration of non-critical blocks until they approach the viewport.
-* `LazyLoadingSection` and `ViewportObserver`: a small utility that detects when content is approaching the viewport, triggering the `LazyLoadingSection` to render the content.
+* `ViewportObserver`: A small utility that detects when content is approaching the viewport, triggering the `LazyLoadingSection` to render the content.
 
 These two components work together to implement lazy loading. By deferring the rendering, hydration, and resource fetching until content is near the viewport, they significantly reduce the initial page load time, which is especially helpful for users on slower devices and networks.
 
