@@ -35,13 +35,13 @@ In FastStore, Default PDP and PLP templates have **Skip Lazy Loading** turned on
 
 ![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading___2a0ca0c7a90d61cda31c2ce9200e377f.png)
 
-### SEO and performance trade-Off
+### SEO and performance trade-off
 
 Search engines, like Google, use crawlers to discover and index web content. While modern crawlers can execute JavaScript to render a page, this process can be delayed or incomplete. Therefore, it's vital to ensure that **critical commerce content** is included in the initial HTML to guarantee it's indexed.
 
 Lazy loading can improve [Core Web Vitals](https://web.dev/articles/vitals), which are important SEO ranking factors. By deferring heavy resources, lazy loading helps improve:
 
-* **Largest Contentful Paint (LCP):** Prioritizing the hero image and other above-the-fold content, you can ensure the main content loads quickly.
+* **Largest Contentful Paint (LCP):** By prioritizing the hero image and other above-the-fold content, the main content loads quickly.
 * **Interaction to Next Paint (INP):** Deferring heavy JavaScript reduces main-thread contention, making the page more responsive.
 * **Cumulative Layout Shift (CLS):** Reserving space for lazy-loaded components prevents unexpected layout shifts as new content loads.
 
@@ -69,7 +69,7 @@ Use the following questions to help decide when to lazy load:
     * **Yes:** **Safe** to lazy load.
     * **No:** **Do not** lazy load.
 
-### **Quick Guide for PLPs and PDPs**
+### Quick Guide for PLPs and PDPs
 
 To simplify your decision-making, here's a quick guide:
 
@@ -244,22 +244,22 @@ After adjusting lazy loading, monitor impact and iterate. Focus on measurable ou
 
 - PLP server HTML: Ensure the category title and first set of product tiles (name, price, primary image) are present in the initial HTML response.
 - PDP server HTML: Ensure the product title, price, first image, and variant selector render in the initial HTML.
-- Images: First visible image should not be lazy‑loaded. Use `fetchpriority="high"` on the LCP image when appropriate; add `decoding="async"` and proper `srcset`/`sizes` for responsive images.
+- Images: First visible image should not be lazy-loaded. Use `fetchpriority="high"` on the LCP image when appropriate; add `decoding="async"` and proper `srcset`/`sizes` for responsive images.
 - Placeholders: Reserve space (via `width`/`height` or `aspect-ratio`) for deferred content to prevent CLS.
-- Controls: Filters/sort that are SEO‑relevant should be usable without JS for crawlability (progressive enhancement where feasible).
+- Controls: Filters/sort that are SEO-relevant should be usable without JS for crawlability (progressive enhancement where feasible).
 
 ### Monitoring Core Web Vitals
 
 - Track LCP, INP, and CLS using PageSpeed Insights, Lighthouse, and Search Console’s Core Web Vitals report.
-- Identify the LCP element and confirm it is server‑rendered and not lazy‑loaded; preconnect/preload critical origins/assets when needed.
-- Defer or idle‑callback non‑critical scripts; move heavy third‑party tags out of the initial viewport to protect INP.
-- Use skeletons or low‑quality image placeholders (LQIP/blur) for deferred media; ensure reserved space to avoid shifts.
+- Identify the LCP element and confirm it is server-rendered and not lazy-loaded; preconnect/preload critical origins/assets when needed.
+- Defer or idle-callback non-critical scripts; move heavy third-party tags out of the initial viewport to protect INP.
+- Use skeletons or low-quality image placeholders (LQIP/blur) for deferred media; ensure reserved space to avoid shifts.
 
 ### Google Search Console analysis
 
 - Use URL Inspection > Test Live URL to review the rendered HTML and screenshot of Googlebot’s view.
-- Verify critical PLP/PDP content is present in the initial HTML and also visible post‑render.
-- Avoid custom attributes for source URLs (e.g., `data-src`). Prefer standard `src` and apply `loading="lazy"` only to below‑the‑fold images.
+- Verify critical PLP/PDP content is present in the initial HTML and also visible post-render.
+- Avoid custom attributes for source URLs (e.g., `data-src`). Prefer standard `src` and apply `loading="lazy"` only to below-the-fold images.
 - Monitor Indexing/Coverage and CWV reports for templates you changed; compare before/after.
 
 ### Rollout and verification
