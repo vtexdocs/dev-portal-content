@@ -10,7 +10,20 @@ This guide explains how to manage lazy loading for custom sections to balance SE
 
 ## How lazy loading works in FastStore
 
-Lazy loading is a technique that defers the loading of non-critical resources, like images or entire page sections, until they're needed. In FastStore, `LazyLoadingSection` is a section-level React wrapper that delays rendering and hydration of non-critical blocks until they approach the viewport, and `ViewportObserver` is a small utility (based on the browser's `IntersectionObserver`) that detects when content enters the viewport. Together they implement lazy loading—that is, deferring render or hydration and resource fetching until content is near or in view—reducing the initial page load time, especially on slower devices and networks.
+Lazy loading is a technique that defers the loading of non-critical resources, like images or entire page sections, until they're needed. 
+
+In FastStore, `LazyLoadingSection` is a section-level React wrapper that delays rendering and hydration of non-critical blocks until they approach the viewport, and `ViewportObserver` is a small utility (based on the browser's `IntersectionObserver`) that detects when content enters the viewport. Together they implement lazy loading—that is, deferring render or hydration and resource fetching until content is near or in view—reducing the initial page load time, especially on slower devices and networks.
+
+```mermaid
+graph LR
+    A[User loads page] --> B{Is section critical or above the fold?};
+    B -- Yes --> C[Section is server-rendered];
+    B -- No --> D[Section is wrapped with LazyLoadingSection];
+    D --> E{ViewportObserver detects section approaching view};
+    E -- Yes --> F[Section is rendered and hydrated];
+    F --> G[Content becomes visible to user];
+    C --> H[Content visible to user and search engines];
+```
 
 However, be cautious: disabling lazy loading for too many elements can increase initial page load time. It should only be used for critical, above-the-fold content. 
 
