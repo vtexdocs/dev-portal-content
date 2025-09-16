@@ -12,7 +12,7 @@ This guide explains how to manage lazy loading for custom sections to balance SE
 
 Lazy loading is a technique that defers the loading of non-critical resources, like images or entire page sections, until they're needed. 
 
-In FastStore, `LazyLoadingSection` is a section-level React wrapper that delays rendering and hydration of non-critical blocks until they approach the viewport, and `ViewportObserver` is a small utility (based on the browser's `IntersectionObserver`) that detects when content enters the viewport. Together they implement lazy loading—that is, deferring render or hydration and resource fetching until content is near or in view—reducing the initial page load time, especially on slower devices and networks.
+In FastStore, `LazyLoadingSection` is a section-level React wrapper that delays rendering and hydration of non-critical blocks until they approach the viewport, and `ViewportObserver` is a small utility (based on the browser's `IntersectionObserver`) that detects when content enters the viewport. Together, they implement lazy loading—that is, deferring render or hydration and resource fetching until content is near or in view—to reduce the initial page load time, especially on slower devices and networks.
 
 ```mermaid
 graph LR
@@ -25,13 +25,13 @@ graph LR
     C --> H[Content visible to user and search engines];
 ```
 
-However, be cautious: disabling lazy loading for too many elements can increase initial page load time. It should only be used for critical, above-the-fold content. 
+However, be cautious: disabling lazy loading for too many elements can increase initial page load time. It should be used only for critical, above-the-fold content. 
 
 ### Server-Side Rendering (SSR) and lazy loading
 
 Server-side rendering outputs critical HTML in the initial document so users and crawlers can access it without running JavaScript. Sections wrapped by lazy loading do not appear in this initial HTML; they render and hydrate only when the section approaches the viewport.
 
-In FastStore, Default PDP and PLP templates have **Skip Lazy Loading** turned on for all sections. Without lazy loading, bots can access all content at once without scrolling or executing scripts, which may speed crawling. However, they must still download and process all media files, which can quickly consume crawl budget and slow the indexing of other pages and reduce the amount of indexed pages. Larger initial payloads can also impact user experience and bot-perceived site performance.
+In FastStore, default PDP and PLP templates have **Skip Lazy Loading** turned on for all sections. Without lazy loading, bots can access all content at once without scrolling or executing scripts, which may speed crawling. However, they must still download and process all media files, which can quickly consume crawl budget and slow the indexing of other pages and reduce the number of indexed pages. Larger initial payloads can also impact user experience and bot-perceived site performance.
 
 ![skip-lazy-loading-ui-option](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading___2a0ca0c7a90d61cda31c2ce9200e377f.png)
 
