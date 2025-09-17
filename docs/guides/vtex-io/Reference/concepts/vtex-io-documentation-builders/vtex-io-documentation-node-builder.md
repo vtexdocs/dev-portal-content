@@ -23,7 +23,7 @@ The Node builder versions are defined in the table below. Each builder version i
 
 >⚠️ We strongly recommend upgrading your Node app to the latest Node builder before legacy Node builder versions are deprecated. After deprecation, apps using a legacy builder version will continue to work, but you won't be able to release or publish new app **major** [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning). Follow the instructions in [Node builder 7.x migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide) to upgrade your Node app.
 
-> ⚠️ When building node apps, the builder-hub validates compatibility of external libraries. Currently, this step validates if the library is compatible with Node.js runtime 16.x. So, if you are building a Node app with a Node builder version 7.x, you will be using Node.js runtime 20.x, but you must use libraries that are compatible with Node.js runtime 16.x to prevent build errors.
+> ⚠️ When building Node apps, the builder-hub validates compatibility of external libraries. Currently, this step validates whether the library is compatible with Node.js runtime 16.x. So, if you are building a Node app with a Node builder version 7.x, you will be using Node.js runtime 20.x, but you must use libraries compatible with Node.js runtime 16.x to prevent build errors.
 
 ## Folder structure
 
