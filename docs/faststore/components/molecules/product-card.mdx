@@ -381,7 +381,7 @@ Prefer using `buyButton` or `discountBadge`, never both.
 
 ### Out of Stock
 
-To replicate this style, add `outOfStock` prop on both `ProductCard` and `ProductCardContent`.
+To replicate this style, add `outOfStock` the prop to both `ProductCard` and `ProductCardContent`.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -660,6 +660,8 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
 
 ### Design tokens: Image
 
+Controls image rounding and hover scaling to shape product visuals.
+
 <TokenTable>
   <TokenRow
     token="--fs-product-card-img-radius"
@@ -669,6 +671,8 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
 </TokenTable>
 
 ### Design tokens: Title
+
+Defines title color, size, weight, and line clamping for readability.
 
 <TokenTable>
   <TokenRow
@@ -692,6 +696,8 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
 
 ### Design tokens: Price
 
+Sets spacing and typography for price presentation and emphasis.
+
 <TokenTable>
   <TokenRow token="--fs-product-card-price-gap" value="var(--fs-spacing-1)" />
   <TokenDivider />
@@ -706,7 +712,9 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   />
 </TokenTable>
 
-### Design tokens: Tax Label
+### Design tokens: Tax label
+
+Tunes tax label color and text styles to improve legibility.
 
 <TokenTable>
   <TokenRow
@@ -726,6 +734,8 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
 
 ### Design tokens: Out of Stock
 
+Dims the card to signal unavailability by adjusting background, border, and image opacity.
+
 <TokenTable>
   <TokenRow
     token="--fs-product-card-out-of-stock-bkg-color"
@@ -741,6 +751,8 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
 </TokenTable>
 
 ### Design tokens: Bordered
+
+Adjusts the bordered variant outline via border width and color for a subtle frame.
 
 <TokenTable>
   <TokenRow
