@@ -80,7 +80,7 @@ See below which API errors can be returned when attempting to [modify an order v
 | `CHK0229` | `Workflow not found for order {0}.` | No workflow was found for the order. |
 | `CHK0289` | `Change order request {0} not found.` | The modification order request does not exist. |
 | `CHK00342` | `Change order cannot increase the value for this payment method.` | Increasing the order value is not allowed for the selected payment method. |
-| `SalesOrderSystem008` | `Cannot Change Cancelled Order.` | Changes cannot be made to orders that have already been cancelled. |
+| `SalesOrderSystem008` | `Cannot Change Cancelled Order.` | Changes cannot be made to orders that have already been canceled. |
 | `SalesOrderSystem010` | `It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.` | The specified item `id` cannot be removed from the original order. Please verify the `id` in your operation. |
 | `SalesOrderSystem011` | `It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.` | The `quantity` being removed exceeds the `quantity` available in the order. |
 | `SalesOrderSystem012` | `The logistics information couldn't be determined for the item due to the presence of multiple options.` | The order contains multiple logistics options, so the system cannot infer which one to use. |
