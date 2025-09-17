@@ -9,10 +9,10 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/ProductCard)
 
-The `ProductCard` displays summarized information about a product. It usually presents a call-to-action button, as well as the product's name, price, and image. The `ProductCard` is composed of the following components:
+The `ProductCard` displays summarized information about a product. They usually present a call-to-action button, as well as the product's name, price, and image.The `ProductCard` is a compound of the following:
 
 - `ProductCardImage`: wraps the product's image.
-- `ProductCardContent`: wraps the content details.
+- `ProductCardContent`: wraps the content's details.
 
 Use the `ProductCard` to:
 
@@ -48,95 +48,25 @@ Use the `ProductCard` to:
   </Tab>
   <Tab>
     ```tsx
-    import React from 'react'
-    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
-
-    export default function ProductCardOverviewExamples() {
-      const product = {
-        isVariantOf: { name: 'Basic Product' },
-        image: [
-          {},
-          {
-            url: 'https://via.placeholder.com/300',
-            alternateName: 'Product image',
-          },
-        ],
-        offers: {
-          offers: [
-            {
-              price: 59.9,
-              listPrice: 79.9,
-              availability: 'https://schema.org/InStock',
-            },
-          ],
-        },
-      }
-
-      const useFormattedPrice = (value: number) => `$${value.toFixed(2)}`
-
-      return (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 2fr', gap: '0.5rem' }}>
-          <ProductCard>
-            <ProductCardImage>
-              <img
-                data-fs-image
-                src={product.image[1].url}
-                alt={product.image[1].alternateName}
-              />
-            </ProductCardImage>
-            <ProductCardContent
-              title={product.isVariantOf.name}
-              price={{
-                value: product.offers.offers[0].price,
-                listPrice: product.offers.offers[0].listPrice,
-                formatter: useFormattedPrice,
-              }}
-              ratingValue={3.5}
-              onButtonClick={() => {}}
-            />
-          </ProductCard>
-
-          <ProductCard bordered>
-            <ProductCardImage aspectRatio={3 / 4}>
-              <img
-                data-fs-image
-                src={product.image[1].url}
-                alt={product.image[1].alternateName}
-              />
-            </ProductCardImage>
-            <ProductCardContent
-              title={product.isVariantOf.name}
-              price={{
-                value: product.offers.offers[0].price,
-                listPrice: product.offers.offers[0].listPrice,
-                formatter: useFormattedPrice,
-              }}
-              showDiscountBadge
-            />
-          </ProductCard>
-
-          <ProductCard variant="wide">
-            <ProductCardImage aspectRatio={3 / 2}>
-              <img
-                data-fs-image
-                src={product.image[1].url}
-                alt={product.image[1].alternateName}
-              />
-            </ProductCardImage>
-            <ProductCardContent
-              title={product.isVariantOf.name}
-              price={{
-                value: product.offers.offers[0].price,
-                listPrice: product.offers.offers[0].listPrice,
-                formatter: useFormattedPrice,
-              }}
-              ratingValue={3.5}
-              showDiscountBadge
-            />
-          </ProductCard>
-        </div>
-      )
-    }
+    <ProductCard>
+      <ProductCardImage>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.isVariantOf.name}
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        ratingValue={3.5}
+        onButtonClick={() => {}}
+      />
+    </ProductCard>
     ```
   </Tab>
 </Tabs>
@@ -203,76 +133,26 @@ Prefer using `buyButton` or `discountBadge`, never both.
   </Tab>
   <Tab>
     ```tsx
-    import { useCallback, useMemo } from "react";
-    import {
-      ProductCard,
-      ProductCardImage,
-      ProductCardContent,
-    } from "@faststore/ui";
-
-    const product = {
-      isVariantOf: { name: "Apple Mouse" },
-      image: [
-        {},
-        {
-          url: "https://vtexhelp.vtexassets.com/assets/docs/img/faststore/product-placeholder___1e7c8f8d9f38b8a0a8f8a6a8a0f5e07d.png",
-          alternateName: "Apple Mouse",
-        },
-      ],
-      offers: {
-        offers: [
-          {
-            price: 950.04,
-            listPrice: 999,
-            availability: "https://schema.org/InStock",
-          },
-        ],
-      },
-    };
-
-    interface PriceFormatterOptions {
-      decimals?: boolean;
-    }
-    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
-      return useCallback(
-        (price: number) =>
-          Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: decimals ? 2 : 0,
-          }).format(price),
-        [decimals]
-      );
-    };
-    export const useFormattedPrice = (price: number) => {
-      const formatter = usePriceFormatter();
-      return useMemo(() => formatter(price), [formatter, price]);
-    };
-
-    export function Example() {
-      return (
-        <ProductCard variant="wide">
-          <ProductCardImage aspectRatio={2 / 1}>
-            <img
-              data-fs-image
-              src={product.image[1].url}
-              alt={product.image[1].alternateName}
-            />
-          </ProductCardImage>
-          <ProductCardContent
-            title={product.isVariantOf.name}
-            price={{
-              value: product.offers.offers[0].price,
-              listPrice: product.offers.offers[0].listPrice,
-              formatter: useFormattedPrice,
-            }}
-            ratingValue={3.5}
-            onButtonClick={() => {}}
-          />
-        </ProductCard>
-      );
-    }
-    ```
+    <ProductCard variant="wide">
+      <ProductCardImage aspectRatio={2 / 1}>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.isVariantOf.name}
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        ratingValue={3.5}
+        onButtonClick={() => {}}
+      />
+    </ProductCard>
+    ``` ```
   </Tab>
 </Tabs>
 
@@ -306,82 +186,32 @@ Prefer using `buyButton` or `discountBadge`, never both.
   </Tab>
   <Tab>
     ```tsx
-    import { useCallback, useMemo } from "react";
-    import {
-      ProductCard,
-      ProductCardImage,
-      ProductCardContent,
-    } from "@faststore/ui";
-
-    const product = {
-      isVariantOf: { name: "Apple Mouse" },
-      image: [
-        {},
-        {
-          url: "https://vtexhelp.vtexassets.com/assets/docs/img/faststore/product-placeholder___1e7c8f8d9f38b8a0a8f8a6a8a0f5e07d.png",
-          alternateName: "Apple Mouse",
-        },
-      ],
-      offers: {
-        offers: [
-          {
-            price: 950.04,
-            listPrice: 999,
-            availability: "https://schema.org/InStock",
-          },
-        ],
-      },
-    };
-
-    interface PriceFormatterOptions {
-      decimals?: boolean;
-    }
-    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
-      return useCallback(
-        (price: number) =>
-          Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: decimals ? 2 : 0,
-          }).format(price),
-        [decimals]
-      );
-    };
-    export const useFormattedPrice = (price: number) => {
-      const formatter = usePriceFormatter();
-      return useMemo(() => formatter(price), [formatter, price]);
-    };
-
-    export function Example() {
-      return (
-        <ProductCard variant="wide">
-          <ProductCardImage aspectRatio={2 / 1}>
-            <img
-              data-fs-image
-              src={product.image[1].url}
-              alt={product.image[1].alternateName}
-            />
-          </ProductCardImage>
-          <ProductCardContent
-            title={product.isVariantOf.name}
-            price={{
-              value: product.offers.offers[0].price,
-              listPrice: product.offers.offers[0].listPrice,
-              formatter: useFormattedPrice,
-            }}
-            ratingValue={3.5}
-            showDiscountBadge
-          />
-        </ProductCard>
-      );
-    }
+    <ProductCard variant="wide">
+      <ProductCardImage aspectRatio={2 / 1}>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.isVariantOf.name}
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        ratingValue={3.5}
+        showDiscountBadge
+      />
+    </ProductCard>
     ```
   </Tab>
 </Tabs>
 
 ### Out of Stock
 
-To replicate this style, add the prop to both `ProductCard` and `ProductCardContent`.
+To replicate this style, add `outOfStock` prop on both `ProductCard` and `ProductCardContent`.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -410,77 +240,26 @@ To replicate this style, add the prop to both `ProductCard` and `ProductCardCont
   </Tab>
   <Tab>
     ```tsx
-    import { useCallback, useMemo } from "react";
-    import {
-      ProductCard,
-      ProductCardImage,
-      ProductCardContent,
-    } from "@faststore/ui";
+    const outOfStock = product.offers.offers[0].availability !== 'https://schema.org/InStock'
 
-    const product = {
-      isVariantOf: { name: "Apple Mouse" },
-      image: [
-        {},
-        {
-          url: "https://vtexhelp.vtexassets.com/assets/docs/img/faststore/product-placeholder___1e7c8f8d9f38b8a0a8f8a6a8a0f5e07d.png",
-          alternateName: "Apple Mouse",
-        },
-      ],
-      offers: {
-        offers: [
-          {
-            price: 950.04,
-            listPrice: 999,
-            availability: "https://schema.org/OutOfStock",
-          },
-        ],
-      },
-    };
-
-    interface PriceFormatterOptions {
-      decimals?: boolean;
-    }
-    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
-      return useCallback(
-        (price: number) =>
-          Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: decimals ? 2 : 0,
-          }).format(price),
-        [decimals]
-      );
-    };
-    export const useFormattedPrice = (price: number) => {
-      const formatter = usePriceFormatter();
-      return useMemo(() => formatter(price), [formatter, price]);
-    };
-
-    export function Example() {
-      const outOfStock =
-        product.offers.offers[0].availability !== "https://schema.org/InStock";
-
-      return (
-        <ProductCard outOfStock={outOfStock}>
-          <ProductCardImage>
-            <img
-              data-fs-image
-              src={product.image[1].url}
-              alt={product.image[1].alternateName}
-            />
-          </ProductCardImage>
-          <ProductCardContent
-            title={product.isVariantOf.name}
-            price={{
-              value: product.offers.offers[0].price,
-              listPrice: product.offers.offers[0].listPrice,
-              formatter: useFormattedPrice,
-            }}
-            outOfStock={outOfStock}
-          />
-        </ProductCard>
-      );
-    }
+    <ProductCard outOfStock={outOfStock}>
+      <ProductCardImage>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.isVariantOf.name}
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        outOfStock={outOfStock}
+      />
+    </ProductCard>
     ```
 
   </Tab>
@@ -516,75 +295,25 @@ To replicate this style, add the prop to both `ProductCard` and `ProductCardCont
   </Tab>
   <Tab>
     ```tsx
-    import { useCallback, useMemo } from "react";
-    import {
-      ProductCard,
-      ProductCardImage,
-      ProductCardContent,
-    } from "@faststore/ui";
-
-    const product = {
-      isVariantOf: { name: "Apple Mouse" },
-      image: [
-        {},
-        {
-          url: "https://vtexhelp.vtexassets.com/assets/docs/img/faststore/product-placeholder___1e7c8f8d9f38b8a0a8f8a6a8a0f5e07d.png",
-          alternateName: "Apple Mouse",
-        },
-      ],
-      offers: {
-        offers: [
-          {
-            price: 950.04,
-            listPrice: 999,
-            availability: "https://schema.org/InStock",
-          },
-        ],
-      },
-    };
-
-    interface PriceFormatterOptions {
-      decimals?: boolean;
-    }
-    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
-      return useCallback(
-        (price: number) =>
-          Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: decimals ? 2 : 0,
-          }).format(price),
-        [decimals]
-      );
-    };
-    export const useFormattedPrice = (price: number) => {
-      const formatter = usePriceFormatter();
-      return useMemo(() => formatter(price), [formatter, price]);
-    };
-
-    export function Example() {
-      return (
-        <ProductCard bordered>
-          <ProductCardImage>
-            <img
-              data-fs-image
-              src={product.image[1].url}
-              alt={product.image[1].alternateName}
-            />
-          </ProductCardImage>
-          <ProductCardContent
-            title={product.isVariantOf.name}
-            price={{
-              value: product.offers.offers[0].price,
-              listPrice: product.offers.offers[0].listPrice,
-              formatter: useFormattedPrice,
-            }}
-            ratingValue={3.5}
-            onButtonClick={() => {}}
-          />
-        </ProductCard>
-      );
-    }
+    <ProductCard bordered>
+      <ProductCardImage>
+        <img
+          data-fs-image
+          src={product.image[1].url}
+          alt={product.image[1].alternateName}
+        />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.isVariantOf.name}
+        price={{
+          value: product.offers.offers[0].price,
+          listPrice: product.offers.offers[0].listPrice,
+          formatter: useFormattedPrice,
+        }}
+        ratingValue={3.5}
+        onButtonClick={() => {}}
+      />
+    </ProductCard>
     ```
   </Tab>
 </Tabs>
@@ -658,9 +387,7 @@ To replicate this style, add the prop to both `ProductCard` and `ProductCardCont
   />
 </TokenTable>
 
-### Design tokens: Image
-
-Controls image rounding and hover scaling to shape product visuals.
+### Image
 
 <TokenTable>
   <TokenRow
@@ -670,9 +397,7 @@ Controls image rounding and hover scaling to shape product visuals.
   <TokenRow token="--fs-product-card-img-scale-hover" value="1" />
 </TokenTable>
 
-### Design tokens: Title
-
-Defines title color, size, weight, and line clamping for readability.
+### Title
 
 <TokenTable>
   <TokenRow
@@ -694,9 +419,7 @@ Defines title color, size, weight, and line clamping for readability.
   />
 </TokenTable>
 
-### Design tokens: Price
-
-Sets spacing and typography for price presentation and emphasis.
+### Price
 
 <TokenTable>
   <TokenRow token="--fs-product-card-price-gap" value="var(--fs-spacing-1)" />
@@ -712,9 +435,7 @@ Sets spacing and typography for price presentation and emphasis.
   />
 </TokenTable>
 
-### Design tokens: Tax label
-
-Tunes tax label color and text styles to improve legibility.
+### Tax Label
 
 <TokenTable>
   <TokenRow
@@ -732,9 +453,7 @@ Tunes tax label color and text styles to improve legibility.
   />
 </TokenTable>
 
-### Design tokens: Out of Stock
-
-Dims the card to signal unavailability by adjusting background, border, and image opacity.
+### Desing tokens: Out of Stock
 
 <TokenTable>
   <TokenRow
@@ -750,9 +469,7 @@ Dims the card to signal unavailability by adjusting background, border, and imag
   <TokenRow token="--fs-product-card-out-of-stock-img-opacity" value=".5" />
 </TokenTable>
 
-### Design tokens: Bordered
-
-Adjusts the bordered variant outline via border width and color for a subtle frame.
+### Desing tokens: Bordered
 
 <TokenTable>
   <TokenRow
@@ -814,7 +531,7 @@ You can target and override `ProductCard` styles using the following data attrib
 
 ## Props
 
-All product card-related components support the attributes of their respective HTML tags. Besides these attributes, the following props are also supported:
+All product card related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
 
 ### ProductCard
 
@@ -842,7 +559,7 @@ All product card-related components support the attributes of their respective H
   <SectionItem
     title="ProductShelf"
     description="
-Displays a list of products to be used as a section of the store."
+Displays a list of products to be used as a section on the store."
     actionPath="/docs/guides/faststore/organisms-product-shelf"
   >
     <ProductShelfUsage items={6} />
