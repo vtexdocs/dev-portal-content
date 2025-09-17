@@ -3,6 +3,10 @@ title: "Slider"
 excerpt: Sliders allow users to select a single value from a range.
 ---
 
+<script>
+  export const getAriaValueText = (value: number) => `${value} units`;
+</script>
+
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Slider)
 
 The `Slider` component provides an interactive way for users to select a single value from a defined range. Common use cases include adjusting prices, setting volume, or selecting values where precision within boundaries matters.
@@ -100,6 +104,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
         min={{ absolute: 0, selected: 5 }}
         max={{ absolute: 50, selected: 45 }}
         absoluteValuesLabel={{ min: "0", max: "50" }}
+        getAriaValueText={getAriaValueText}
       />
     </OverviewSection>
   </Tab>
