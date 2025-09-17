@@ -1,0 +1,48 @@
+---
+title: "Enabling refresh token on FastStore"
+---
+
+[Refresh token](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations) is a security mechanism that allows users to obtain a new, short-lived access token without requiring them to log in again.
+
+The [FastStore SDK Session](https://developers.vtex.com/docs/guides/faststore/sdk-overview#session) includes built-in support for the [refresh token](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations) flow. It automatically manages token renewal, session management, and error handling.
+As a FastStore user, you only need to enable the refresh token in your project configuration. The SDK will manage the process automatically, without requiring custom flow implementation.
+
+In this guide, you'll learn how to enable the refresh token in a FastStore store.
+
+> ℹ️ For details about how the refresh tokens work, check the [Refresh token flow for headless implementations guide](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations).
+
+## Before you begin
+
+<Steps>
+
+### Update your FastStore project
+
+Make sure your project is updated to the latest version. To do so, follow these steps:
+
+1. Open your project in a code editor.
+2. Open a terminal and run the following command to update the FastStore packages to the latest version:
+
+```bash
+yarn upgrade -L --scope @faststore
+```
+
+### Request refresh token activation
+
+Open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request refresh token activation and an expiration time (1, 7, or 30 days). Include the account name(s) in your request to enable the feature. Without this activation, you won’t be able to enable the refresh token in your account.
+
+</Steps>
+
+## Instructions
+
+1. Open your FastStore project in a code editor.
+2. In the `discovery.config.js` file, under the `experimental` section, add the `refreshToken` flag and set its value to `true`:
+
+
+    ```js discovery.config.js
+    experimental: {
+        …
+        refreshToken: true
+    }
+    ```
+
+3. Commit and push your changes to the main branch to deploy the changes to production.
