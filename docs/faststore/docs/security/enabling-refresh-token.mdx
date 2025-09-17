@@ -1,5 +1,7 @@
 ---
 title: "Enabling refresh token on FastStore"
+createdAt: "2025-08-15T14:00:00.000Z"
+updatedAt: "2025-09-17T09:00:00.000Z"
 ---
 
 [Refresh token](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations) is a security mechanism that allows users to obtain a new, short-lived access token without requiring them to log in again.
@@ -7,9 +9,9 @@ title: "Enabling refresh token on FastStore"
 The [FastStore SDK Session](https://developers.vtex.com/docs/guides/faststore/sdk-overview#session) includes built-in support for the [refresh token](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations) flow. It automatically manages token renewal, session management, and error handling.
 As a FastStore user, you only need to enable the refresh token in your project configuration. The SDK will manage the process automatically, without requiring custom flow implementation.
 
-In this guide, learn how to enable the refresh token in a FastStore store.
+In this guide, you'll learn how to enable the refresh token in a FastStore store.
 
-> ℹ️ For background on how refresh tokens work, refer to the [Refresh token flow for headless implementations guide](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations).
+> ℹ️ For details about how the refresh tokens work, check the [Refresh token flow for headless implementations guide](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations).
 
 ## Before you begin
 
@@ -35,7 +37,7 @@ Open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request r
 ## Instructions
 
 1. Open your FastStore project in a code editor.
-2. In the `discovery.config.js` file, within the `experimental` section, add the `refreshToken` flag and set its value to `true`:
+2. In the `discovery.config.js` file, under the `experimental` section, add the `refreshToken` flag and set its value to `true`:
 
 
     ```js discovery.config.js
