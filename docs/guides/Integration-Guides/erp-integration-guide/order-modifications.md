@@ -80,14 +80,21 @@ See below which API errors can be returned when attempting to [modify an order v
 | `CHK0229` | `Workflow not found for order {0}.` | No workflow was found for the order. |
 | `CHK0289` | `Change order request {0} not found.` | The modification order request does not exist. |
 | `CHK00342` | `Change order cannot increase the value for this payment method.` | Increasing the order value is not allowed for the selected payment method. |
+| `SalesOrderSystem008` | `Cannot Change Cancelled Order.` | Changes cannot be made to orders that have already been cancelled. |
 | `SalesOrderSystem010` | `It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.` | The specified item `id` cannot be removed from the original order. Please verify the `id` in your operation. |
 | `SalesOrderSystem011` | `It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.` | The `quantity` being removed exceeds the `quantity` available in the order. |
 | `SalesOrderSystem012` | `The logistics information couldn't be determined for the item due to the presence of multiple options.` | The order contains multiple logistics options, so the system cannot infer which one to use. |
 | `SalesOrderSystem013` | `The logistics information provided was not found on the order.` | The logistics details given do not match any information in the order. |
+| `SalesOrderSystem014` | `Change In Progress.` | A change operation is currently in progress for this order. |
 | `SalesOrderSystem015` | `A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.` | Only one type of order change (v1 or v2) can be applied. A v1 change already exists. |
+| `SalesOrderSystem016` | `Cannot Retry Change.` | The change operation cannot be retried. |
 | `SalesOrderSystem017` | `Change process was automatically canceled after failed retries.` | The modification was canceled by the system after several failed attempts. |
 | `SalesOrderSystem018` | `Unable to communicate with Participants Client.` | The system could not reach the Participants Client service. |
+| `SalesOrderSystem019` | `Cannot Update Change Order Settings.` | Settings are being updated by another request. Please try again later. |
 | `SalesOrderSystem026` | `Unable to match an item to the information provided. Try providing the item's uniqueId for identification.` | The item could not be identified with the given data. Try using the item's `uniqueId`. |
+| `SalesOrderSystem027` | `Change Settings Not Found.` | Change order settings could not be found for this configuration. |
+| `SalesOrderSystem028` | `Cannot Add Items Or Increment Value When Payment Details Are Set.` | Items cannot be added and/or value cannot be incremented when payment details are already configured. |
+| `SalesOrderSystem029` | `Cannot Add New Products At Change Order When Order Has Multiple Address.` | New products cannot be added to orders with multiple delivery addresses. |
 | `SalesOrderSystem035` | `The {0} is not a valid Agreement Type.` | The agreement type is not recognized or supported. |
 | `SalesOrderSystem045` | `Invalid address.` | The address is invalid. |
 | `SalesOrderSystem046` | `The order change is not allowed after the item invoice has been issued.` | The order modification is not allowed after the item invoice has been issued. |
