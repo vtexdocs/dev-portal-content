@@ -32,87 +32,32 @@ See below which API errors can be returned when attempting to [modify an order v
 
 These errors happen when there are one or more errors in the information sent in the request.
 
-<table>
-    <td><strong> Error</strong></td>
-    <td><strong> Description</strong></td>
-    <tr>
-        <td><code>The modification value needs to be greater or equal than zero</code></td>
-        <td><code>discountValue</code> or <code>incrementValue</code> is smaller than 0.</td>
-    </tr>
-    <tr>
-        <td><code>Invalid modification for order</code></td>
-        <td>All of these conditions are true: <br> - <code>incrementValue</code> is equal to <code>discountValue</code>. <br> - <code>itemsAdded</code> is empty. <br> - <code>itemsRemoved</code> is empty.</td>
-    </tr>
-    <tr>
-        <td><code>Invalid id for item</code></td>
-        <td>The request body contains either an <code>itemsAdded</code> or <code>itemsRemoved</code> object, that has an empty <code>id</code>.</td>
-    </tr>
-    <tr>
-        <td><code>Field reason not set</code></td>
-        <td>Empty <code>reason</code> field.</td>
-    </tr>
-</table>
+| Error | Description |
+|-------|-------------|
+| `The modification value needs to be greater or equal than zero` | `discountValue` or `incrementValue` is smaller than 0. |
+| `Invalid modification for order` | All of these conditions are true: <br> - `incrementValue` is equal to `discountValue`. <br> - `itemsAdded` is empty. <br> - `itemsRemoved` is empty. |
+| `Invalid id for item` | The request body contains either an `itemsAdded` or `itemsRemoved` object, that has an empty `id`. |
+| `Field reason not set` | Empty `reason` field. |
 
 #### Restriction errors
 
 These are errors returned when the request is correct but the order cannot be modified due to [order change restrictions](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190#restrictions).
 
-<table>
-    <td><strong> Error</strong></td>
-    <td><strong> Description</strong></td>
-    <tr>
-        <td><code>It is only allowed to register an order modification when the order is in handling: status = handling, waiting for fulfillment or ready for invoicing</code></td>
-        <td>The fulfillment order is not in a status that allows changes (<code>handling</code>, <code>waiting for fulfillment</code> and <code>ready-for-invoice</code>).</td>
-    </tr>
-    <tr>
-        <td><code>It is not allowed to make modifications to chain orders</code></td>
-        <td>The order has a <code>chain</code> origin.</td>
-    </tr>
-    <tr>
-        <td><code>It is only allowed to register a modification in the order when the payment is approved - status = payment-approved</code></td>
-        <td>The marketplace order is not on the status <code>payment-approved</code>.</td>
-    </tr>
-    <tr>
-        <td><code>The value of the modification exceeds the order's price</code></td>
-        <td><code>discountValue</code> is greater than the total order price.</td>
-    </tr>
-    <tr>
-        <td><code>Impossible cancel order {0} - Payment not found</code></td>
-        <td>Order is complete, but transaction <code>id</code> is empty or null.</td>
-    </tr>
-    <tr>
-        <td><code>Workflow not found for order {0}</code></td>
-        <td>Order has <code>workflowInstanceId</code> empty or null.</td>
-    </tr>
-    <tr>
-        <td><code>Max allowed modifications for order exceeded: {0}</code></td>
-        <td>More than 50 registered modification requests for a single order.</td>
-    </tr>
-    <tr>
-        <td><code>404 Not Found</code></td>
-        <td>At least one of these conditions is true: <br> - The removed item does not exist in the order. <br> - The added item does not exist in the catalog.</td>
-    </tr>
-    <tr>
-        <td><code>Invalid quantity to remove from item {0}</code></td>
-        <td>An item’s quantity would be reduced to less than 0 after the modification.</td>
-    </tr>
-    <tr>
-        <td><code>It's not allowed to make modifications in orders without a credit card payment, promissory card, cash, or credit control</code></td>
-        <td>All of these conditions are true: <br> - An attempt to increase order price was made. <br> - The payment method does not support value changes. <br> - The payment method is not credit card payment, promissory card, cash, or credit control. Consult with your payment gateway to see which methods allow for order value changes.</td>
-    </tr>
-    <tr>
-        <td><code>Modification cannot be done. Possible reason: settlement directly done by API</code></td>
-        <td>All of these conditions are true: <br> - An attempt to reduce order price. <br> - The payment method does not support value modifications. Consult with your payment gateway to see which methods allow for order value modifications.</td>
-    </tr>
-    <tr>
-        <td><code>The value of the modification exceeds the order's price</code></td>
-        <td><code>discountValue</code> is greater than the amount allowed for the order transaction.</td>
-    </tr>
-    <tr>
-        <td><code>500 Internal Server Error</code></td>
-        <td>There is an issue with the payment gateway.</td>
-    </tr>
-</table>
+| Error | Description |
+|-------|-------------|
+| `It is only allowed to register an order modification when the order is in handling: status = handling, waiting for fulfillment or ready for invoicing` | The fulfillment order is not in a status that allows changes (`handling`, `waiting for fulfillment` and `ready-for-invoice`). |
+| `It is not allowed to make modifications to chain orders` | The order has a `chain` origin. |
+| `It is only allowed to register a modification in the order when the payment is approved - status = payment-approved` | The marketplace order is not on the status `payment-approved`. |
+| `The value of the modification exceeds the order's price` | `discountValue` is greater than the total order price. |
+| `Impossible cancel order {0} - Payment not found` | Order is complete, but transaction `id` is empty or null. |
+| `Workflow not found for order {0}` | Order has `workflowInstanceId` empty or null. |
+| `Max allowed modifications for order exceeded: {0}` | More than 50 registered modification requests for a single order. |
+| `404 Not Found` | At least one of these conditions is true: <br> - The removed item does not exist in the order. <br> - The added item does not exist in the catalog. |
+| `Invalid quantity to remove from item {0}` | An item's quantity would be reduced to less than 0 after the modification. |
+| `It's not allowed to make modifications in orders without a credit card payment, promissory card, cash, or credit control` | All of these conditions are true: <br> - An attempt to increase order price was made. <br> - The payment method does not support value changes. <br> - The payment method is not credit card payment, promissory card, cash, or credit control. Consult with your payment gateway to see which methods allow for order value changes. |
+| `Modification cannot be done. Possible reason: settlement directly done by API` | All of these conditions are true: <br> - An attempt to reduce order price. <br> - The payment method does not support value modifications. Consult with your payment gateway to see which methods allow for order value modifications. |
+| `The value of the modification exceeds the order's price` | `discountValue` is greater than the amount allowed for the order transaction. |
+| `500 Internal Server Error` | There is an issue with the payment gateway. |
 
 ### Errors in Change v2
 
@@ -120,148 +65,33 @@ See below which API errors can be returned when attempting to [modify an order v
 
 #### Errors with exception codes
 
-<table>
-    <td><strong> Error code</strong></td>
-    <td><strong> Error message</strong></td>
-    <td><strong> Description</strong></td>
-    <tr>
-        <td><code>CHK0022</code></td>
-        <td><code>Invalid id for item.</code></td>
-        <td>The item <code>id</code> is not valid or does not exist.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0023</code></td>
-        <td><code>Invalid quantity for item.</code></td>
-        <td>The item <code>quantity</code> is not allowed (e.g., less than 1).</td>
-    </tr>
-    <tr>
-        <td><code>CHK0034</code></td>
-        <td><code>The value of the change exceed the order's price.</code></td>
-        <td>The modification value is greater than the total order price.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0095</code></td>
-        <td><code>Changes in chain orders are not allowed.</code></td>
-        <td>Chain orders do not support modifications.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0096</code></td>
-        <td><code>Change cannot be done. Possible reason: settlement directly done by API.</code></td>
-        <td>The change operation is not allowed, possibly due to a direct settlement.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0098</code></td>
-        <td><code>The change value needs to be greater or equal than zero.</code></td>
-        <td>The value for the change operation must not be negative.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0124</code></td>
-        <td><code>Invalid change for order.</code></td>
-        <td>The requested modification is not valid for the current order state or data.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0196</code></td>
-        <td><code>Cannot cancel order {0} - Payment not found.</code></td>
-        <td>The order cannot be canceled because no payment was found.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0199</code></td>
-        <td><code>OrderGroup {0} not found.</code></td>
-        <td>The order group does not exist.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0201</code></td>
-        <td><code>Order {0} not found.</code></td>
-        <td>The order does not exist.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0229</code></td>
-        <td><code>Workflow not found for order {0}.</code></td>
-        <td>No workflow was found for the order.</td>
-    </tr>
-    <tr>
-        <td><code>CHK0289</code></td>
-        <td><code>Change order request {0} not found.</code></td>
-        <td>The modification order request does not exist.</td>
-    </tr>
-    <tr>
-        <td><code>CHK00342</code></td>
-        <td><code>Change order cannot increase the value for this payment method.</code></td>
-        <td>Increasing the order value is not allowed for the selected payment method.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem010</code></td>
-        <td><code>It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.</code></td>
-        <td>The specified item <code>id</code> cannot be removed from the original order. Please verify the <code>id</code> in your operation.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem011</code></td>
-        <td><code>It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.</code></td>
-        <td>The <code>quantity</code> being removed exceeds the <code>quantity</code> available in the order.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem012</code></td>
-        <td><code>The logistics information couldn't be determined for the item due to the presence of multiple options.</code></td>
-        <td>The order contains multiple logistics options, so the system cannot infer which one to use.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem013</code></td>
-        <td><code>The logistics information provided was not found on the order.</code></td>
-        <td>The logistics details given do not match any information in the order.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem015</code></td>
-        <td><code>A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.</code></td>
-        <td>Only one type of order change (v1 or v2) can be applied. A v1 change already exists.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem017</code></td>
-        <td><code>Change process was automatically canceled after failed retries.</code></td>
-        <td>The modification was canceled by the system after several failed attempts.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem018</code></td>
-        <td><code>Unable to communicate with Participants Client.</code></td>
-        <td>The system could not reach the Participants Client service.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem026</code></td>
-        <td><code>Unable to match an item to the information provided. Try providing the item's uniqueId for identification.</code></td>
-        <td>The item could not be identified with the given data. Try using the item's <code>uniqueId</code>.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem035</code></td>
-        <td><code>The {0} is not a valid Agreement Type.</code></td>
-        <td>The agreement type is not recognized or supported.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem045</code></td>
-        <td><code>Invalid address.</code></td>
-        <td>The address is invalid.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem046</code></td>
-        <td><code>The order change is not allowed after the item invoice has been issued.</code></td>
-        <td>The order modification is not allowed after the item invoice has been issued.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem047</code></td>
-        <td><code>The address change is not allowed.</code></td>
-        <td>The address modification is not allowed.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem048</code></td>
-        <td><code>The address change is not allowed when there are packages associated.</code></td>
-        <td>The address change is not allowed when there are packages associated.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem051</code></td>
-        <td><code>Change order not allowed with tax hub and multiple delivery docks.</code></td>
-        <td>Order modification is not allowed with tax hub and multiple delivery docks.</td>
-    </tr>
-    <tr>
-        <td><code>SalesOrderSystem055</code></td>
-        <td><code>Item modification is not allowed when the measurement unit differs from the original.</code></td>
-        <td>Item modification is not allowed when the measurement unit differs from the original.</td>
-    </tr>
-</table>
+| Error code | Error message | Description |
+|------------|---------------|-------------|
+| `CHK0022` | `Invalid id for item.` | The item `id` is not valid or does not exist. |
+| `CHK0023` | `Invalid quantity for item.` | The item `quantity` is not allowed (e.g., less than 1). |
+| `CHK0034` | `The value of the change exceed the order's price.` | The modification value is greater than the total order price. |
+| `CHK0095` | `Changes in chain orders are not allowed.` | Chain orders do not support modifications. |
+| `CHK0096` | `Change cannot be done. Possible reason: settlement directly done by API.` | The change operation is not allowed, possibly due to a direct settlement. |
+| `CHK0098` | `The change value needs to be greater or equal than zero.` | The value for the change operation must not be negative. |
+| `CHK0124` | `Invalid change for order.` | The requested modification is not valid for the current order state or data. |
+| `CHK0196` | `Cannot cancel order {0} - Payment not found.` | The order cannot be canceled because no payment was found. |
+| `CHK0199` | `OrderGroup {0} not found.` | The order group does not exist. |
+| `CHK0201` | `Order {0} not found.` | The order does not exist. |
+| `CHK0229` | `Workflow not found for order {0}.` | No workflow was found for the order. |
+| `CHK0289` | `Change order request {0} not found.` | The modification order request does not exist. |
+| `CHK00342` | `Change order cannot increase the value for this payment method.` | Increasing the order value is not allowed for the selected payment method. |
+| `SalesOrderSystem010` | `It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.` | The specified item `id` cannot be removed from the original order. Please verify the `id` in your operation. |
+| `SalesOrderSystem011` | `It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.` | The `quantity` being removed exceeds the `quantity` available in the order. |
+| `SalesOrderSystem012` | `The logistics information couldn't be determined for the item due to the presence of multiple options.` | The order contains multiple logistics options, so the system cannot infer which one to use. |
+| `SalesOrderSystem013` | `The logistics information provided was not found on the order.` | The logistics details given do not match any information in the order. |
+| `SalesOrderSystem015` | `A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.` | Only one type of order change (v1 or v2) can be applied. A v1 change already exists. |
+| `SalesOrderSystem017` | `Change process was automatically canceled after failed retries.` | The modification was canceled by the system after several failed attempts. |
+| `SalesOrderSystem018` | `Unable to communicate with Participants Client.` | The system could not reach the Participants Client service. |
+| `SalesOrderSystem026` | `Unable to match an item to the information provided. Try providing the item's uniqueId for identification.` | The item could not be identified with the given data. Try using the item's `uniqueId`. |
+| `SalesOrderSystem035` | `The {0} is not a valid Agreement Type.` | The agreement type is not recognized or supported. |
+| `SalesOrderSystem045` | `Invalid address.` | The address is invalid. |
+| `SalesOrderSystem046` | `The order change is not allowed after the item invoice has been issued.` | The order modification is not allowed after the item invoice has been issued. |
+| `SalesOrderSystem047` | `The address change is not allowed.` | The address modification is not allowed. |
+| `SalesOrderSystem048` | `The address change is not allowed when there are packages associated.` | The address modification is not allowed when there are packages associated. |
+| `SalesOrderSystem051` | `Change order not allowed with tax hub and multiple delivery docks.` | Order modification is not allowed with tax hub and multiple delivery docks. |
+| `SalesOrderSystem055` | `Item modification is not allowed when the measurement unit differs from the original.` | Item modification is not allowed when the measurement unit differs from the original. |
