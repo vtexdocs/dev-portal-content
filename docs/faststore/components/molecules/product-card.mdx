@@ -1,218 +1,4 @@
 ﻿---
-</SectionList>
-  </SectionItem>
-### Button Click Action
-
-<Tabs items=["Example", "Code"] defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
-      <ProductCard>
-        <ProductCardImage>
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-          ratingValue={4}
-          onButtonClick={() => console.log('Product action triggered')}
-        />
-      </ProductCard>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import { useCallback, useMemo } from "react";
-    import {
-      ProductCard,
-      ProductCardImage,
-      ProductCardContent,
-    } from "@faststore/ui";
-
-    const product = {
-      isVariantOf: { name: "Apple Mouse" },
-      image: [
-        {},
-        {
-          url: "https://vtexhelp.vtexassets.com/assets/docs/img/faststore/product-placeholder___1e7c8f8d9f38b8a0a8f8a6a8a0f5e07d.png",
-          alternateName: "Apple Mouse",
-        },
-      ],
-      offers: {
-        offers: [
-          {
-            price: 950.04,
-            listPrice: 999,
-            availability: "https://schema.org/InStock",
-          },
-        ],
-      },
-    };
-
-    interface PriceFormatterOptions {
-      decimals?: boolean;
-    }
-    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
-      return useCallback(
-        (price: number) =>
-          Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: decimals ? 2 : 0,
-          }).format(price),
-        [decimals]
-      );
-    };
-    export const useFormattedPrice = (price: number) => {
-      const formatter = usePriceFormatter();
-      return useMemo(() => formatter(price), [formatter, price]);
-    };
-
-    export function Example() {
-      const handleClick = () => {
-        console.log("Product action triggered");
-      };
-
-      return (
-        <ProductCard>
-          <ProductCardImage>
-            <img
-              data-fs-image
-              src={product.image[1].url}
-              alt={product.image[1].alternateName}
-            />
-          </ProductCardImage>
-          <ProductCardContent
-            title={product.isVariantOf.name}
-            price={{
-              value: product.offers.offers[0].price,
-              listPrice: product.offers.offers[0].listPrice,
-              formatter: useFormattedPrice,
-            }}
-            ratingValue={4}
-            onButtonClick={handleClick}
-          />
-        </ProductCard>
-      );
-    }
-    ```
-  </Tab>
-</Tabs>
-
-### Delivery Promise Badges
-
-<Tabs items=["Example", "Code"] defaultIndex="0">
-  <Tab>
-    <OverviewSection containerStyle={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
-      <ProductCard>
-        <ProductCardImage>
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-          deliveryPromiseBadges={
-            <span style={{ fontSize: '0.75rem', color: 'var(--fs-color-info-text)' }}>
-              Arrives tomorrow
-            </span>
-          }
-        />
-      </ProductCard>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import { useCallback, useMemo } from "react";
-    import {
-      ProductCard,
-      ProductCardImage,
-      ProductCardContent,
-      Badge,
-    } from "@faststore/ui";
-
-    const product = {
-      isVariantOf: { name: "Apple Mouse" },
-      image: [
-        {},
-        {
-          url: "https://vtexhelp.vtexassets.com/assets/docs/img/faststore/product-placeholder___1e7c8f8d9f38b8a0a8f8a6a8a0f5e07d.png",
-          alternateName: "Apple Mouse",
-        },
-      ],
-      offers: {
-        offers: [
-          {
-            price: 950.04,
-            listPrice: 999,
-            availability: "https://schema.org/InStock",
-          },
-        ],
-      },
-    };
-
-    interface PriceFormatterOptions {
-      decimals?: boolean;
-    }
-    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
-      return useCallback(
-        (price: number) =>
-          Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: decimals ? 2 : 0,
-          }).format(price),
-        [decimals]
-      );
-    };
-    export const useFormattedPrice = (price: number) => {
-      const formatter = usePriceFormatter();
-      return useMemo(() => formatter(price), [formatter, price]);
-    };
-
-    export function Example() {
-      return (
-        <ProductCard>
-          <ProductCardImage>
-            <img
-              data-fs-image
-              src={product.image[1].url}
-              alt={product.image[1].alternateName}
-            />
-          </ProductCardImage>
-          <ProductCardContent
-            title={product.isVariantOf.name}
-            price={{
-              value: product.offers.offers[0].price,
-              listPrice: product.offers.offers[0].listPrice,
-              formatter: useFormattedPrice,
-            }}
-            deliveryPromiseBadges={
-              <Badge variant="info">Arrives tomorrow</Badge>
-            }
-          />
-        </ProductCard>
-      );
-    }
-    ```
-  </Tab>
-</Tabs>
-</SectionList>
----
 title: "ProductCard"
 excerpt: Displays summarized information about a product.
 components:
@@ -795,6 +581,217 @@ To replicate this style, add the prop to both `ProductCard` and `ProductCardCont
             }}
             ratingValue={3.5}
             onButtonClick={() => {}}
+          />
+        </ProductCard>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Button Click Action
+
+<Tabs items=["Example", "Code"] defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+      <ProductCard>
+        <ProductCardImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </ProductCardImage>
+        <ProductCardContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          ratingValue={4}
+          onButtonClick={() => console.log('Product action triggered')}
+        />
+      </ProductCard>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { useCallback, useMemo } from "react";
+    import {
+      ProductCard,
+      ProductCardImage,
+      ProductCardContent,
+    } from "@faststore/ui";
+
+    const product = {
+      isVariantOf: { name: "Apple Mouse" },
+      image: [
+        {},
+        {
+          url: "https://vtexhelp.vtexassets.com/assets/docs/img/faststore/product-placeholder___1e7c8f8d9f38b8a0a8f8a6a8a0f5e07d.png",
+          alternateName: "Apple Mouse",
+        },
+      ],
+      offers: {
+        offers: [
+          {
+            price: 950.04,
+            listPrice: 999,
+            availability: "https://schema.org/InStock",
+          },
+        ],
+      },
+    };
+
+    interface PriceFormatterOptions {
+      decimals?: boolean;
+    }
+    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
+      return useCallback(
+        (price: number) =>
+          Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: decimals ? 2 : 0,
+          }).format(price),
+        [decimals]
+      );
+    };
+    export const useFormattedPrice = (price: number) => {
+      const formatter = usePriceFormatter();
+      return useMemo(() => formatter(price), [formatter, price]);
+    };
+
+    export function Example() {
+      const handleClick = () => {
+        console.log("Product action triggered");
+      };
+
+      return (
+        <ProductCard>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            ratingValue={4}
+            onButtonClick={handleClick}
+          />
+        </ProductCard>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Delivery Promise Badges
+
+<Tabs items=["Example", "Code"] defaultIndex="0">
+  <Tab>
+    <OverviewSection containerStyle={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+      <ProductCard>
+        <ProductCardImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </ProductCardImage>
+        <ProductCardContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          deliveryPromiseBadges={
+            <span style={{ fontSize: '0.75rem', color: 'var(--fs-color-info-text)' }}>
+              Arrives tomorrow
+            </span>
+          }
+        />
+      </ProductCard>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { useCallback, useMemo } from "react";
+    import {
+      ProductCard,
+      ProductCardImage,
+      ProductCardContent,
+      Badge,
+    } from "@faststore/ui";
+
+    const product = {
+      isVariantOf: { name: "Apple Mouse" },
+      image: [
+        {},
+        {
+          url: "https://vtexhelp.vtexassets.com/assets/docs/img/faststore/product-placeholder___1e7c8f8d9f38b8a0a8f8a6a8a0f5e07d.png",
+          alternateName: "Apple Mouse",
+        },
+      ],
+      offers: {
+        offers: [
+          {
+            price: 950.04,
+            listPrice: 999,
+            availability: "https://schema.org/InStock",
+          },
+        ],
+      },
+    };
+
+    interface PriceFormatterOptions {
+      decimals?: boolean;
+    }
+    export const usePriceFormatter = ({ decimals }: PriceFormatterOptions = {}) => {
+      return useCallback(
+        (price: number) =>
+          Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: decimals ? 2 : 0,
+          }).format(price),
+        [decimals]
+      );
+    };
+    export const useFormattedPrice = (price: number) => {
+      const formatter = usePriceFormatter();
+      return useMemo(() => formatter(price), [formatter, price]);
+    };
+
+    export function Example() {
+      return (
+        <ProductCard>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            deliveryPromiseBadges={
+              <Badge variant="info">Arrives tomorrow</Badge>
+            }
           />
         </ProductCard>
       );
