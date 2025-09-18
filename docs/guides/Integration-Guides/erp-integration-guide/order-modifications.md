@@ -34,9 +34,9 @@ These errors happen when there are one or more errors in the information sent in
 
 | Error | Description |
 |-------|-------------|
-| `The modification value needs to be greater or equal than zero` | `discountValue` or `incrementValue` is smaller than 0. |
+| `The modification value needs to be greater or equal than zero` | `discountValue` or `incrementValue` is less than 0. |
 | `Invalid modification for order` | All of these conditions are true: <br> - `incrementValue` is equal to `discountValue`. <br> - `itemsAdded` is empty. <br> - `itemsRemoved` is empty. |
-| `Invalid id for item` | The request body contains either an `itemsAdded` or `itemsRemoved` object, that has an empty `id`. |
+| `Invalid id for item` | The request body contains either an `itemsAdded` or `itemsRemoved` object that has an empty `id`. |
 | `Field reason not set` | Empty `reason` field. |
 
 #### Restriction errors
@@ -47,10 +47,10 @@ These are errors returned when the request is correct but the order cannot be mo
 |-------|-------------|
 | `It is only allowed to register an order modification when the order is in handling: status = handling, waiting for fulfillment or ready for invoicing` | The fulfillment order is not in a status that allows changes (`handling`, `waiting for fulfillment` and `ready-for-invoice`). |
 | `It is not allowed to make modifications to chain orders` | The order has a `chain` origin. |
-| `It is only allowed to register a modification in the order when the payment is approved - status = payment-approved` | The marketplace order is not on the status `payment-approved`. |
+| `It is only allowed to register a modification in the order when the payment is approved - status = payment-approved` | The marketplace order is not in the status `payment-approved`. |
 | `The value of the modification exceeds the order's price` | `discountValue` is greater than the total order price. |
 | `Impossible cancel order {0} - Payment not found` | Order is complete, but transaction `id` is empty or null. |
-| `Workflow not found for order {0}` | Order has `workflowInstanceId` empty or null. |
+| `Workflow not found for order {0}` | Order has an empty or null `workflowInstanceId`. |
 | `Max allowed modifications for order exceeded: {0}` | More than 50 registered modification requests for a single order. |
 | `404 Not Found` | At least one of these conditions is true: <br> - The removed item does not exist in the order. <br> - The added item does not exist in the catalog. |
 | `Invalid quantity to remove from item {0}` | An item's quantity would be reduced to less than 0 after the modification. |
