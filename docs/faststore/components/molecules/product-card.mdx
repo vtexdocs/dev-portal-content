@@ -730,7 +730,6 @@ To replicate this style, add the prop to both `ProductCard` and `ProductCardCont
       ProductCard,
       ProductCardImage,
       ProductCardContent,
-      Badge,
     } from "@faststore/ui";
 
     const product = {
@@ -790,7 +789,9 @@ To replicate this style, add the prop to both `ProductCard` and `ProductCardCont
               formatter: useFormattedPrice,
             }}
             deliveryPromiseBadges={
-              <Badge variant="info">Arrives tomorrow</Badge>
+              <span style={{ fontSize: '0.75rem', color: 'var(--fs-color-info-text)' }}>
+                Arrives tomorrow
+              </span>
             }
           />
         </ProductCard>
