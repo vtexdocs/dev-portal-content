@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.142](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.140...v1.1.142) (2025-09-19)
+
+
+### 📝 Documentation updates
+
+* slider examples ([dbadb9a](https://github.com/vtexdocs/dev-portal-content/commit/dbadb9a29c40ac67b57620e5d94f5b0df55bf760))
+
 ### [1.1.141](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.140...v1.1.141) (2025-09-18)
 
 
