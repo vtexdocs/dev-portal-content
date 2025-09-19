@@ -3,7 +3,7 @@ title: "Interactive Marchitecture tool"
 slug: "interactive-marchitecture-tool"
 hidden: false
 createdAt: "2024-05-29T10:00:00.000Z"
-updatedAt: ""
+updatedAt: "2025-09-19T15:00:00.000Z"
 excerpt: "Learn how to use the Interactive Marchitecture tool and simulate a composable VTEX store architecture."
 ---
 
