@@ -18,7 +18,7 @@ With the refresh token, users remain logged in for longer without manually reaut
 
 ## Why did we make this change?
 
-By extending user session duration, shoppers can remain logged in for longer, resulting in a more continuous and improved shopping experience and fewer login prompts.
+By extending session duration, shoppers can remain logged in longer, resulting in a more seamless shopping experience and fewer login prompts.
 
 ## What needs to be done?
 
