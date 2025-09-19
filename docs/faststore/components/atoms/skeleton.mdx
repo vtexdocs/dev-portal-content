@@ -1,6 +1,6 @@
 ---
 title: "Skeleton"
-excerpt: Skeleton is a placeholder that simulates the layout of these elements/sections while the data is being loaded.
+excerpt: Skeleton displays a loading placeholder that mimics the shape of content while data is being fetched, improving perceived performance and reducing layout shifts.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Overlay___5ae3e4dc6b4b413cf33295d52a64fac0.png
 components:
@@ -9,13 +9,9 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Skeleton)
 
-This feature improves the store's experience and perceived performance through loading placeholders.
-`skeletons` are like an element's or section's wireframe. They're placeholders
-that simulate the layout of these elements or sections while data loads.
+Skeletons are visual placeholders that simulate the layout of content while data is loading. By displaying skeletons instead of blank spaces, you provide users with immediate visual feedback, making your store feel faster and more responsive. 
 
-Instead of showing a blank page, displaying `skeletons` while loading content makes users feel that the store is more responsive and faster.
-
-Additionally, by using `skeletons`, the store will be less likely to experience [Cumulative Layout Shift (CLS)](https://web.dev/i18n/en/cls/).
+Skeletons also help prevent [Cumulative Layout Shift (CLS)](https://web.dev/i18n/en/cls/) by reserving space for content before it loads.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -29,6 +25,7 @@ Additionally, by using `skeletons`, the store will be less likely to experience 
     ```
   </Tab>
 </Tabs>
+
 ---
 
 ## Usage
@@ -178,3 +175,20 @@ You can target and override `Skeleton` styles using the following data attribute
 ## Props
 
 <ComponentPropsSection component="Skeleton" />
+
+---
+
+## Best practices
+
+- Use Skeletons for elements that load asynchronously, such as product cards, images, or sections.
+- Match the Skeleton’s shape and size to the content it represents for a seamless transition.
+- Avoid using Skeletons for static or instantly available content.
+- Disable shimmer animation (`shimmer={false}`) for a more subtle loading effect if needed.
+
+---
+
+## Related components
+
+- [ProductCardSkeleton](https://github.com/vtex/faststore/tree/main/packages/core/src/components/skeletons/ProductCardSkeleton)
+- [ProductGridSkeleton](https://github.com/vtex/faststore/tree/main/packages/core/src/components/skeletons/ProductGridSkeleton)
+- [ProductShelfSkeleton](https://github.com/vtex/faststore/tree/main/packages/core/src/components/skeletons/ProductShelfSkeleton)
