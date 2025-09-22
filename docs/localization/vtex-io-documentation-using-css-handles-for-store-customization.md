@@ -25,13 +25,13 @@ CSS handles can overwrite a storefront's default styles, allowing for independen
 
 3. Check the CSS handles table in the documentation of the app or block that renders the HTML element. This allows you to confirm whether the inspected handle is valid and if the customization requires another add-on, such as the HTML element attribute.
 
-  >⚠️ If a handle requires an HTML element attribute for customization, inspect the page again using your browser's developer tools instead of the `?__inspect` option. Look for the desired HTML element and copy its associated attribute for the upcoming customization.
+  >⚠️ If a handle requires an HTML element attribute for customization, inspect the page again using your browser's developer tools instead of the `?__inspect` option. Find the desired HTML element and copy its associated attribute for the upcoming customization.
 
 ### Applying a general customization
 
 Follow the steps below to apply a style that affects every block instance:
 
-1. Open your Store Theme code using the code editor of your choice and navigate to the `css` folder.
+1. Open your Store Theme code using the code editor of your choice and go to the `css` folder.
 2. In the `css` folder, create a new CSS file named after the component you're targeting. For example, `vtex.menu.css`.
 3. In the new file, use one of the listed CSS handles and customize its properties. For example:
 
@@ -51,7 +51,7 @@ Follow the steps below to apply a style that affects every block instance:
 
 ### Customizing a single block
 
-To customize a single, specific block without affecting others of the same type, use the  `blockClass` property, which serves as the block's unique identifier for customization:
+To customize a single, specific block without affecting others of the same type, use the `blockClass` property, which serves as the block's unique identifier for customization:
 
 1. In the `json` file where your target block is declared, add the prop `blockClass` to the element you want to customize. Assign any unique name as its value. For example:
 
@@ -66,7 +66,7 @@ To customize a single, specific block without affecting others of the same type,
   ```
 
 2. Save the file to update the workspace you're working on.
-3. Inspect the element by following the instructions on [Identifying CSS handles](#identifying-css-handles). You'll see a new, more specific CSS handle composed of the original handle and the `blockClass` value you provided.
+3. Inspect the element by following the instructions in [Identifying CSS handles](#identifying-css-handles). You'll see a new, more specific CSS handle composed of the original handle and the `blockClass` value you provided.
 
   ![css handles with block class](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-2.png)
 
@@ -76,7 +76,7 @@ To customize a single, specific block without affecting others of the same type,
 
 ## Best practices
 
-CSS selectors are commonly used for customization, but this depends on the HTML structure. If you change the HTML, it can affect your customizations. To standardize CSS customization and avoid any potential breakdown in layout, we recommend only using CSS handles for store customizations.
+CSS selectors are commonly used for customization, but this depends on the HTML structure. If you change the HTML, it can affect your customizations. To standardize CSS customization and avoid any potential breakdown in the layout, we recommend only using CSS handles for store customizations.
 
 Customization using CSS selectors is mostly deprecated. The following selectors are the only ones allowed for store customization:
 
@@ -85,7 +85,7 @@ Customization using CSS selectors is mostly deprecated. The following selectors 
 - `:not()`
 - `:first-child` and `:last-child`
 - `:nth-child(even)`, `:nth-child(odd)`, and `:nth-child(2n)` (or any other step like `4n`, `5n`, and so on.)
-- All pseudo-elements, such as  `::before`, `::after`, and `::placeholder`
+- All pseudo-elements, such as `::before`, `::after`, and `::placeholder`
 - Space combinator (example: `.foo .bar`)
 - `[data-...]`
 - `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selecting elements that come from different apps
