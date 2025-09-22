@@ -214,4 +214,3 @@ Response codes:
 | 412 | Returned if the if-Match header value doesn’t match the promotion’s lastModified field, causing the request to fail. |
 | 404 | Returned if no non-archived promotion with the specified ID is found. |
 
->⚠️ When the first seller is added to an inactive opt-in promotion, the promotion is automatically activated. Similarly, when the last seller is removed from an active opt-in promotion, it’s automatically deactivated.
