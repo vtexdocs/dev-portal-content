@@ -12,14 +12,14 @@ The Seller opt-in promotions feature allows sellers to choose whether they want 
 
 ## Creating promotions
 
-You can create promotions manually in the VTEX Admin or via API.
+You can create promotions manually in the VTEX Admin or via the API.
 
 ### Via Admin
 
 1. In the VTEX Admin, go to Promotions.
 2. Click `Create Promotion` in the top right corner of the page.
 3. Choose the desired type of promotion.
-4. Complete the promotion details and, in the Sellers field, select the Participanting option.
+4. Complete the promotion details and, in the Sellers field, select the Participating option.
 5. Click `Create`.
 
 After creating the promotion, you must configure seller participation using the API.
@@ -107,9 +107,9 @@ Example request body without initially defined sellers:
 
 ## Querying participating sellers
 
-You can query participating sellers manually in the VTEX Admin or via API.
+You can query participating sellers manually in the VTEX Admin or via the API.
 
-### Via Admin
+### Via Admin: participating sellers
 
 1. In the VTEX Admin, go to Promotions.
 2. Click the name of the promotion you created.
@@ -117,7 +117,7 @@ You can query participating sellers manually in the VTEX Admin or via API.
 
 ![Seller-opt-in](https://images.ctfassets.net/alneenqid6w5/1YlZUUvrgcYERRM3IeJ8T2/2b2d3df08f40e071f57585c4e3af2e2b/sellers-participantes-en.png)
 
-### Via API
+### Via API: participating sellers
 
 Use the [Get promotion or tax by ID](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#get-/api/rnb/pvt/calculatorconfiguration/-idCalculatorConfiguration-) endpoint to query promotion details, including the opt-in configuration.
 
@@ -172,7 +172,7 @@ POST
 | promotionId | true | string | ID of the promotion |
 | accountName | true | string | Account that owns the promotion |
 | sellerIds | true | string\[\] | List of seller IDs |
-| lastUpdate | true | DateTime | Date and time of the promotion's last modification. Must match current value, otherwise, the request will fail. |
+| lastUpdate | true | DateTime | Date and time of the promotion's last modification. Must match the current value, otherwise, the request will fail. |
 | operation | true | OptOperation \- OptIn \- OptOut | Operation to be performed. |
 
 To add participating sellers, include their IDs in the request body.
