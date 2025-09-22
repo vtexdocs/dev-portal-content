@@ -6,7 +6,7 @@ createdAt: "2025-06-11T11:03:41.334Z"
 updatedAt: "2025-09-22T13:51:02.316Z"
 ---
 
-The Seller opt-in promotions feature allows sellers to choose whether they want to participate in promotions on the marketplace.
+The Seller Opt-in Promotions feature allows sellers to choose whether they want to participate in promotions on the marketplace.
 
 >⚠️ Adding or removing sellers is not available through the Admin interface. These actions must be performed exclusively via the [Promotions & Taxes API](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api).
 
