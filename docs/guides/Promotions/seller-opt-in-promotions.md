@@ -154,7 +154,7 @@ Example response for a promotion with opt-in and no defined sellers:
 
 ## Adding or removing participating sellers via API
 
-To add or remove sellers in an opt-in promotion, use the Seller opt-in or opt-out endpoint.
+To add or remove sellers in an opt-in promotion, use the Seller Opt-in or Opt-out endpoint.
 
 POST
 
