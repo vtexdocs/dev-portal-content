@@ -111,7 +111,7 @@ You can query participating sellers manually in the VTEX Admin or via the API.
 
 ### Via Admin participating sellers
 
-1. In the VTEX Admin, go to Promotions.
+1. In the VTEX Admin, go to **Promotions**.
 2. Click the name of the promotion you created.
 3. In the Sellers field, view the list of participating sellers.
 
