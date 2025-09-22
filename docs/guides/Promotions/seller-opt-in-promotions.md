@@ -109,7 +109,7 @@ Example request body without initially defined sellers:
 
 You can query participating sellers manually in the VTEX Admin or via the API.
 
-### Via Admin: participating sellers
+### Via Admin participating sellers
 
 1. In the VTEX Admin, go to Promotions.
 2. Click the name of the promotion you created.
@@ -117,7 +117,7 @@ You can query participating sellers manually in the VTEX Admin or via the API.
 
 ![Seller-opt-in](https://images.ctfassets.net/alneenqid6w5/1YlZUUvrgcYERRM3IeJ8T2/2b2d3df08f40e071f57585c4e3af2e2b/sellers-participantes-en.png)
 
-### Via API: participating sellers
+### Via API participating sellers
 
 Use the [Get promotion or tax by ID](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#get-/api/rnb/pvt/calculatorconfiguration/-idCalculatorConfiguration-) endpoint to query promotion details, including the opt-in configuration.
 
