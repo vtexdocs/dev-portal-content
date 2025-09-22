@@ -3,7 +3,7 @@ title: "Seller Opt-in for Promotions"
 slug: "seller-opt-in-promotions"
 hidden: false
 createdAt: "2025-06-11T11:03:41.334Z"
-updatedAt: "2025-09-22T13:51:02.316Z"
+updatedAt: "2025-09-22T13:45:17.316Z"
 ---
 
 The Seller Opt-in Promotions feature allows sellers to choose whether they want to participate in promotions on the marketplace.
