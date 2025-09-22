@@ -1,9 +1,9 @@
 ---
 title: "Seller Opt-in Promotions"
-slug: "seller Opt-in-promotions"
+slug: "seller opt-in-promotions"
 hidden: false
 createdAt: "2025-06-11T11:03:41.334Z"
-updatedAt: "2025-07-08T13:51:02.316Z"
+updatedAt: "2025-09-22T13:51:02.316Z"
 ---
 
 The Seller opt-in promotions feature allows sellers to choose whether they want to participate in promotions on the marketplace.
@@ -11,6 +11,7 @@ The Seller opt-in promotions feature allows sellers to choose whether they want 
 >⚠️ Adding or removing sellers is not available through the Admin interface. These actions must be performed exclusively via the [Promotions & Taxes API](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api).
 
 ## Creating promotions
+
 You can create promotions manually in the VTEX Admin or via API.
 
 ### Via Admin
@@ -24,6 +25,7 @@ You can create promotions manually in the VTEX Admin or via API.
 After creating the promotion, you must configure seller participation using the API.
 
 ### Via API
+
 Use the [Create or Update Promotion or Tax](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#post-/api/rnb/pvt/calculatorconfiguration) endpoint to configure promotions with opt-in.
 
 > ℹ️ To avoid conflicts with the previous seller association model, make sure to set `idSeller` and `idSellerIsInclusive` to `null`.
@@ -104,9 +106,11 @@ Example request body without initially defined sellers:
 > ℹ️ If you send invalid IDs, the promotion will still be created, but it won’t take effect, as it will be associated with non-existent participating sellers.
 
 ## Querying participating sellers
+
 You can query participating sellers manually in the VTEX Admin or via API.
 
 ### Via Admin
+
 1. In the VTEX Admin, go to Promotions.
 2. Click the name of the promotion you created.
 3. In the Sellers field, view the list of participating sellers.
@@ -114,6 +118,7 @@ You can query participating sellers manually in the VTEX Admin or via API.
 ![Seller-opt-in](https://images.ctfassets.net/alneenqid6w5/1YlZUUvrgcYERRM3IeJ8T2/2b2d3df08f40e071f57585c4e3af2e2b/sellers-participantes-en.png)
 
 ### Via API
+
 Use the [Get promotion or tax by ID](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api#get-/api/rnb/pvt/calculatorconfiguration/-idCalculatorConfiguration-) endpoint to query promotion details, including the opt-in configuration.
 
 GET
@@ -148,6 +153,7 @@ Example response for a promotion with opt-in and no defined sellers:
 ```
 
 ## Adding or removing participating sellers via API
+
 To add or remove sellers in an opt-in promotion, use the Seller opt-in or opt-out endpoint.
 
 POST
