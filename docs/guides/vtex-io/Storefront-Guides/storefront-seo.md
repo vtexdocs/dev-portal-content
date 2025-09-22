@@ -13,7 +13,7 @@ In ecommerce, a well-implemented SEO strategy enhances visibility, attracts orga
 
 To learn more about SEO strategies, refer to Google's documentation [Explore Google Search documentation to improve your site's SEO](https://developers.google.com/search/docs).
 
-VTEX offers a set of tools and settings that allow you to optimize your store for search engines, making your products more discoverable and improving site performance.
+VTEX offers a set of tools and settings that allows you to optimize your store for search engines, making your products more discoverable and improving site performance.
 
 In this guide, you will learn some best practices for implementing strategies to improve SEO in your VTEX store. It is divided into [general best practices](#general-seo-best-practices) applicable to all storefronts, followed by specific configurations for [FastStore](#faststore), [Store Framework](#store-framework), and [(Legacy) CMS Portal](#legacy-cms-portal).
 
