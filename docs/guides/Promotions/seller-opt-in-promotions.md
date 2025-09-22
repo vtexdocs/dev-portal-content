@@ -19,7 +19,7 @@ You can create promotions manually in the VTEX Admin or via the API.
 1. In the VTEX Admin, go to **Promotions**.
 2. Click `Create Promotion` in the top right corner of the page.
 3. Choose the desired type of promotion.
-4. Complete the promotion details and, in the Sellers field, select the Participating option.
+4. Complete the promotion details and, in the **Sellers** field, select the **Participating** option.
 5. Click `Create`.
 
 After creating the promotion, you must configure seller participation using the API.
