@@ -34,12 +34,12 @@ To enable the Delivery Promise functionality, you should use the following addit
 
 | Query string / Facet | Description | Example |
 | :---- | :---- | :---- |
-| `zip-code` **\[required\]** (query string) | Postal code. | `?zip-code=22250040`
-| `shipping` (facet)  | Shipping method. It must always be combined with `zip-code`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/shipping/pickup-in-point/?zip-code=22250040` |
-| `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters.| `/shipping/pickup-in-point?zip-code=22250040&pickupPoint=vtex-botafogo` |
+| `zipcode` **\[required\]** (query string) | Postal code. | `?zipcode=22250040`
+| `shipping` (facet)  | Shipping method. It must always be combined with `zipcode`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/shipping/pickup-in-point/?zipcode=22250040` |
+| `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters.| `/shipping/pickup-in-point?zipcode=22250040&pickupPoint=vtex-botafogo` |
 | `hideUnavailableItems` (query string) | If `true`, this query parameter ensures only products actually available for delivery or pickup are returned. If omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
 
->⚠️ `zip-code` is **required** to filter product availability based on the shopper’s location for all Delivery Promise requests. You must use it when filtering by shipping method and pickup point.
+>⚠️ `zipcode` is **required** to filter product availability based on the shopper’s location for all Delivery Promise requests. You must use it when filtering by shipping method and pickup point.
 
 >⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
 
@@ -48,7 +48,7 @@ To enable the Delivery Promise functionality, you should use the following addit
 Here is an example of a basic Delivery Promise search using only postal code:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?zip-code=22250040
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?zipcode=22250040
 ```
 
 ### Filtering by shipping method
@@ -72,7 +72,7 @@ Parameters: `/shipping/delivery`
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/shipping/delivery?zip-code=22250040
+https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/shipping/delivery?zipcode=22250040
 ```
 
 #### Pickup at a specific location
@@ -86,7 +86,7 @@ Parameters: `/shipping/pickup-in-point/pickupPoint/{pickupPointId}`
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-in-point/pickupPoint/vtex-botafogo?zip-code=22250040
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-in-point/pickupPoint/vtex-botafogo?zipcode=22250040
 ```
 
 #### Pickup at a nearby location
@@ -98,7 +98,7 @@ Parameters: `/shipping/pickup-in-point/pickup-nearby`
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/shipping/pickup-in-point/pickup-nearby?zip-code=22250040
+https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/shipping/pickup-in-point/pickup-nearby?zipcode=22250040
 ```
 
 ## Implementing sidebar filters
