@@ -1,5 +1,5 @@
 ---
-title: "Seller Opt-in Promotions"
+title: "Seller Opt-in for Promotions"
 slug: "seller-opt-in-promotions"
 hidden: false
 createdAt: "2025-06-11T11:03:41.334Z"
