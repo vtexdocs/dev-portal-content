@@ -1,6 +1,6 @@
 ---
 title: "Seller Opt-in Promotions"
-slug: "seller opt-in-promotions"
+slug: "seller-opt-in-promotions"
 hidden: false
 createdAt: "2025-06-11T11:03:41.334Z"
 updatedAt: "2025-09-22T13:51:02.316Z"
@@ -219,4 +219,3 @@ Response codes:
 | 401 | Returned if the user doesn’t have the "Manage External Seller Promotions" permission. |
 | 412 | Returned if the if-Match header value doesn’t match the promotion’s lastModified field, causing the request to fail. |
 | 404 | Returned if no non-archived promotion with the specified ID is found. |
-
