@@ -103,7 +103,7 @@ Example request body without initially defined sellers:
 }
 ```
 
-> ℹ️ If you send invalid IDs, the promotion will still be created, but it won’t take effect, as it will be associated with non-existent participating sellers.
+> ℹ️ If you send invalid IDs, the promotion will still be created, but it won't take effect, as it will be associated with non-existent participating sellers.
 
 ## Querying participating sellers
 
