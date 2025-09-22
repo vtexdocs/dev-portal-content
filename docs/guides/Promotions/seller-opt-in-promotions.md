@@ -217,5 +217,5 @@ Response codes:
 | 200 | Opt-in executed successfully. |
 | 400 | Returned if the IdSellerIsInclusive field of the promotion is set to false. |
 | 401 | Returned if the user doesn’t have the "Manage External Seller Promotions" permission. |
-| 412 | Returned if the if-Match header value doesn’t match the promotion’s lastModified field, causing the request to fail. |
+| 412 | Returned if the if-Match header value doesn't match the promotion's lastModified field, causing the request to fail. |
 | 404 | Returned if no non-archived promotion with the specified ID is found. |
