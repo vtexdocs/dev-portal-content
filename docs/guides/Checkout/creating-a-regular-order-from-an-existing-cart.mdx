@@ -621,7 +621,7 @@ In this final step, we will process the order.
 
 - Send a request to the [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-) endpoint, using the `orderGroup` (the `orderFormId` value) as a path parameter.
 
-> If the payment is processed without any issues, the order should be successfully placed (`204 No Content` status). Otherwise, a `500 Internal Server Error` error might occur.
+> If the payment is processed without any issues, the order should be successfully placed (`204 No Content` status). Otherwise, a `500 Internal Server Error` message might occur.
 
 > Note that this process uses the gateway connectors configured in your VTEX environment. Be careful to prevent any unwanted charges or unexpected payment denials.
 
