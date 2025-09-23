@@ -54,8 +54,8 @@ These are errors returned when the request is correct but the order cannot be mo
 | `Max allowed modifications for order exceeded: {0}` | More than 50 registered modification requests for a single order. |
 | `404 Not Found` | At least one of these conditions is true: <br> - The removed item does not exist in the order. <br> - The added item does not exist in the catalog. |
 | `Invalid quantity to remove from item {0}` | An item's quantity would be reduced to less than 0 after the modification. |
-| `It's not allowed to make modifications in orders without a credit card payment, promissory card, cash, or credit control` | All of these conditions are true: <br> - An attempt to increase order price was made. <br> - The payment method does not support value changes. <br> - The payment method is not credit card payment, promissory card, cash, or credit control. Consult with your payment gateway to see which methods allow for order value changes. |
-| `Modification cannot be done. Possible reason: settlement directly done by API` | All of these conditions are true: <br> - An attempt to reduce order price. <br> - The payment method does not support value modifications. Consult with your payment gateway to see which methods allow for order value modifications. |
+| `It's not allowed to make modifications in orders without a credit card payment, promissory card, cash, or credit control` | All of these conditions are true: <br> - An attempt to increase order price was made. <br> - The payment method does not support value changes. <br> - The payment method is not credit card payment, promissory card, cash, or credit control. Consult your payment gateway to see which methods allow for order value changes. |
+| `Modification cannot be done. Possible reason: settlement directly done by API` | All of these conditions are true: <br> - An attempt to reduce order price. <br> - The payment method does not support value modifications. Consult your payment gateway to see which methods allow for order value modifications. |
 | `The value of the modification exceeds the order's price` | `discountValue` is greater than the amount allowed for the order transaction. |
 | `500 Internal Server Error` | There is an issue with the payment gateway. |
 
@@ -73,7 +73,7 @@ See below which API errors can be returned when attempting to [modify an order v
 | `CHK0095` | `Changes in chain orders are not allowed.` | Chain orders do not support modifications. |
 | `CHK0096` | `Change cannot be done. Possible reason: settlement directly done by API.` | The change operation is not allowed, possibly due to a direct settlement. |
 | `CHK0098` | `The change value needs to be greater or equal than zero.` | The value for the change operation must not be negative. |
-| `CHK0124` | `Invalid change for order.` | The requested modification is not valid for the current order state or data. **Allowed order states for order modification:** `handling`, `waiting-for-fulfillment`and `ready for invoicing`. |
+| `CHK0124` | `Invalid change for order.` | The requested modification is not valid for the current order state or data. **Allowed order states for order modification:** `handling`, `waiting-for-fulfillment`and `ready-for-invoicing`. |
 | `CHK0196` | `Cannot cancel order {0} - Payment not found.` | The order cannot be canceled because no payment was found. |
 | `CHK0199` | `OrderGroup {0} not found.` | The order group does not exist. |
 | `CHK0201` | `Order {0} not found.` | The order does not exist. Please verify the order ID in your operation. |
@@ -81,23 +81,23 @@ See below which API errors can be returned when attempting to [modify an order v
 | `CHK0289` | `Change order request {0} not found.` | The modification order request does not exist. |
 | `CHK00342` | `Change order cannot increase the value for this payment method.` | Increasing the order value is not allowed for the selected payment method. |
 | `SalesOrderSystem008` | `Cannot Change Cancelled Order.` | Changes cannot be made to orders that have already been canceled. |
-| `SalesOrderSystem010` | `It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.` | The specified item `id` cannot be removed from the original order. Please verify the `id` in your operation. |
-| `SalesOrderSystem011` | `It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.` | The `quantity` being removed exceeds the `quantity` available in the order. Please verify the `quantity` in your operation. |
-| `SalesOrderSystem012` | `The logistics information couldn't be determined for the item due to the presence of multiple options.` | The order contains multiple logistics options, so the system cannot infer which one to use. Please verify the `logisticsInfo` in your operation.  |
-| `SalesOrderSystem013` | `The logistics information provided was not found on the order.` | The logistics details given do not match any information in the order. Please verify the `logisticsInfo` in your operation. |
+| `SalesOrderSystem010` | `It's not possible to remove the item of ID {0} from the original order. Validate your {1} operation items IDs.` | The specified item `id` cannot be removed from the original order. Please verify the item `id` in your operation. |
+| `SalesOrderSystem011` | `It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.` | The `quantity` being removed exceeds the `quantity` available in the order. Please verify the item `quantity` in your operation. |
+| `SalesOrderSystem012` | `The logistics information couldn't be determined for the item due to the presence of multiple options.` | The order contains multiple logistics options, so the system cannot infer which one to use. Please verify the `logisticsInfo` field in your operation.  |
+| `SalesOrderSystem013` | `The logistics information provided was not found on the order.` | The logistics details given do not match any information in the order. Please verify the `logisticsInfo` field in your operation. |
 | `SalesOrderSystem014` | `Change In Progress.` | A change operation is currently in progress for this order. You can try to make a new operation once the change in progress is finalized. |
 | `SalesOrderSystem015` | `A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.` | Only one type of order change (v1 or v2) can be applied. A v1 change already exists. |
 | `SalesOrderSystem016` | `Cannot Retry Change.` | The change operation cannot be retried since the workflow status is `done` or `canceled`. |
-| `SalesOrderSystem017` | `Change process was automatically canceled after failed retries.` | The modification was canceled by the system after several failed attempts. You have to use the [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes?endpoint=patch-/api/order-system/orders/-changeOrderId-/changes) endpoint. |
+| `SalesOrderSystem017` | `Change process was automatically canceled after failed retries.` | The modification was canceled by the system after several failed retry attempts. You must use the [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes?endpoint=patch-/api/order-system/orders/-changeOrderId-/changes) endpoint. |
 | `SalesOrderSystem018` | `Unable to communicate with Participants Client.` | The system could not reach the Participants Client service. |
 | `SalesOrderSystem019` | `Cannot Update Change Order Settings.` | Settings are being updated by another request. You can try again later. |
 | `SalesOrderSystem026` | `Unable to match an item to the information provided. Try providing the item's uniqueId for identification.` | The item could not be identified with the given data. Try using the item's `uniqueId`. |
 | `SalesOrderSystem027` | `Change Settings Not Found.` | Change order settings could not be found for this configuration. |
-| `SalesOrderSystem029` | `Cannot Add New Products At Change Order When Order Has Multiple Address.` | When the order has multiple delivery addresses, you can only modify the existing items, not add new items. |
-| `SalesOrderSystem035` | `The {0} is not a valid Agreement Type.` | The agreement type is not recognized or supported. **Allowed:** `Acknowledgment`or `Confirmation`. |
-| `SalesOrderSystem045` | `Invalid address.` | The address is invalid. Please verify the `addressId` in your operation. |
+| `SalesOrderSystem029` | `Cannot Add New Products At Change Order When Order Has Multiple Address.` | When the order has multiple delivery addresses, you can only modify the existing items, not add new ones. |
+| `SalesOrderSystem035` | `The {0} is not a valid Agreement Type.` | The agreement type is not recognized or supported. **Allowed:** `Acknowledgment` or `Confirmation`. |
+| `SalesOrderSystem045` | `Invalid address.` | The address is invalid. Please verify the `addressId` field in your operation. |
 | `SalesOrderSystem046` | `The order change is not allowed after the item invoice has been issued.` | Order modification is not allowed after the invoice has been issued. |
 | `SalesOrderSystem047` | `The address change is not allowed.` | The address modification is not allowed. |
 | `SalesOrderSystem048` | `The address change is not allowed when there are packages associated.` | The address modification is not allowed when there are packages associated. |
 | `SalesOrderSystem051` | `Change order not allowed with tax hub and multiple delivery docks.` | Order modification is not allowed with tax hub and multiple delivery docks. |
-| `SalesOrderSystem055` | `Item modification is not allowed when the measurement unit differs from the original.` | Item modification is not allowed when the measurement unit differs from the original. Try using the `replace` array and changing the `to` and `from` objects to change the measurement unit.|
+| `SalesOrderSystem055` | `Item modification is not allowed when the measurement unit differs from the original.` | Item modification is not allowed when the measurement unit differs from the original. To change the measurement unit, try using the `replace` array and modifying its `to` and `from` objects.|
