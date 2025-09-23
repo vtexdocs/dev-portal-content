@@ -73,7 +73,7 @@ See below which API errors can be returned when attempting to [modify an order v
 | `CHK0095` | `Changes in chain orders are not allowed.` | Chain orders do not support modifications. |
 | `CHK0096` | `Change cannot be done. Possible reason: settlement directly done by API.` | The change operation is not allowed, possibly due to a direct settlement. |
 | `CHK0098` | `The change value needs to be greater or equal than zero.` | The value for the change operation must not be negative. |
-| `CHK0124` | `Invalid change for order.` | The requested modification is not valid for the current order state or data. **Allowed order states for order modification:** `handling`, `waiting-for-fulfillment`and `ready-for-invoicing`. |
+| `CHK0124` | `Invalid change for order.` | The requested modification is not valid for the current order state or data. **Allowed order states for order modification:** `handling`, `waiting-for-fulfillment` and `ready-for-invoicing`. |
 | `CHK0196` | `Cannot cancel order {0} - Payment not found.` | The order cannot be canceled because no payment was found. |
 | `CHK0199` | `OrderGroup {0} not found.` | The order group does not exist. |
 | `CHK0201` | `Order {0} not found.` | The order does not exist. Please verify the order ID in your operation. |
@@ -85,10 +85,10 @@ See below which API errors can be returned when attempting to [modify an order v
 | `SalesOrderSystem011` | `It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.` | The `quantity` being removed exceeds the `quantity` available in the order. Please verify the item `quantity` in your operation. |
 | `SalesOrderSystem012` | `The logistics information couldn't be determined for the item due to the presence of multiple options.` | The order contains multiple logistics options, so the system cannot infer which one to use. Please verify the `logisticsInfo` field in your operation.  |
 | `SalesOrderSystem013` | `The logistics information provided was not found on the order.` | The logistics details given do not match any information in the order. Please verify the `logisticsInfo` field in your operation. |
-| `SalesOrderSystem014` | `Change In Progress.` | A change operation is currently in progress for this order. You can try to make a new operation once the change in progress is finalized. |
+| `SalesOrderSystem014` | `Change In Progress.` | A change operation is currently in progress for this order. You can try making a new operation once the change in progress is finalized. |
 | `SalesOrderSystem015` | `A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.` | Only one type of order change (v1 or v2) can be applied. A v1 change already exists. |
 | `SalesOrderSystem016` | `Cannot Retry Change.` | The change operation cannot be retried since the workflow status is `done` or `canceled`. |
-| `SalesOrderSystem017` | `Change process was automatically canceled after failed retries.` | The modification was canceled by the system after several failed retry attempts. You must use the [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes?endpoint=patch-/api/order-system/orders/-changeOrderId-/changes) endpoint. |
+| `SalesOrderSystem017` | `Change process was automatically canceled after failed retries.` | The modification was canceled by the system after several failed retry attempts. You should use the [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes?endpoint=patch-/api/order-system/orders/-changeOrderId-/changes) endpoint. |
 | `SalesOrderSystem018` | `Unable to communicate with Participants Client.` | The system could not reach the Participants Client service. |
 | `SalesOrderSystem019` | `Cannot Update Change Order Settings.` | Settings are being updated by another request. You can try again later. |
 | `SalesOrderSystem026` | `Unable to match an item to the information provided. Try providing the item's uniqueId for identification.` | The item could not be identified with the given data. Try using the item's `uniqueId`. |
