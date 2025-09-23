@@ -513,7 +513,7 @@ Now, we will communicate the necessary payment data to VTEX to finalize the orde
   - Ensure that the request body is based on the `paymentData` section of your `orderForm`.
   - In the `fields` object, you can:
      - Fill in the credit or debit card information (when applicable).
-     - Use the `addressId` field to reference an existing address, or introduce a new `address` object for an entirely new address. This type of information is only required if the user's address was not previously entered during checkout.
+     - Use the `addressId` field to reference an existing address, or provide a new `address` object for an entirely new address. This type of information is only required if the user's address was not previously entered during checkout.
 
 > This request does not return any data in the response body, only a `201 Created` success confirmation message.
 
