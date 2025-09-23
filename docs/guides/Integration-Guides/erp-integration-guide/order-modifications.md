@@ -93,7 +93,7 @@ See below which API errors can be returned when attempting to [modify an order v
 | `SalesOrderSystem019` | `Cannot Update Change Order Settings.` | Settings are being updated by another request. You can try again later. |
 | `SalesOrderSystem026` | `Unable to match an item to the information provided. Try providing the item's uniqueId for identification.` | The item could not be identified with the given data. Try using the item's `uniqueId`. |
 | `SalesOrderSystem027` | `Change Settings Not Found.` | Change order settings could not be found for this configuration. |
-| `SalesOrderSystem029` | `Cannot Add New Products At Change Order When Order Has Multiple Address.` | When the order has multiple delivery addresses, you can only modify the existing items, not add new items.
+| `SalesOrderSystem029` | `Cannot Add New Products At Change Order When Order Has Multiple Address.` | When the order has multiple delivery addresses, you can only modify the existing items, not add new items. |
 | `SalesOrderSystem035` | `The {0} is not a valid Agreement Type.` | The agreement type is not recognized or supported. **Allowed:** `Acknowledgment`or `Confirmation`. |
 | `SalesOrderSystem045` | `Invalid address.` | The address is invalid. Please verify the `addressId` in your operation. |
 | `SalesOrderSystem046` | `The order change is not allowed after the item invoice has been issued.` | Order modification is not allowed after the invoice has been issued. |
