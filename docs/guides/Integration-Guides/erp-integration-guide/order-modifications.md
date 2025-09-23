@@ -93,7 +93,6 @@ See below which API errors can be returned when attempting to [modify an order v
 | `SalesOrderSystem019` | `Cannot Update Change Order Settings.` | Settings are being updated by another request. Please try again later. |
 | `SalesOrderSystem026` | `Unable to match an item to the information provided. Try providing the item's uniqueId for identification.` | The item could not be identified with the given data. Try using the item's `uniqueId`. |
 | `SalesOrderSystem027` | `Change Settings Not Found.` | Change order settings could not be found for this configuration. |
-| `SalesOrderSystem028` | `Cannot Add Items Or Increment Value When Payment Details Are Set.` | Items cannot be added and/or value cannot be incremented when payment details are already configured. |
 | `SalesOrderSystem029` | `Cannot Add New Products At Change Order When Order Has Multiple Address.` | New products cannot be added to orders with multiple delivery addresses. |
 | `SalesOrderSystem035` | `The {0} is not a valid Agreement Type.` | The agreement type is not recognized or supported. |
 | `SalesOrderSystem045` | `Invalid address.` | The address is invalid. |
