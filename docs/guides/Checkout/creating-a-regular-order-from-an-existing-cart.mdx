@@ -384,7 +384,7 @@ Place a new order via the [Place order from an existing cart](https://developers
 - `savePersonalData`: set as `true` if the shopper’s data provided during checkout should be saved for future reference (default is `false`).
 - `optinNewsLetter`: set as `true` if the shopper opted to receive the newsletter (default is `false`).
 
-Upon receiving a `200 OK` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of the following pieces of information and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
+Upon receiving a `200 OK` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of the following details and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
 
 - `orderGroup` - ID that groups all orders related to the same purchase. For example, when an order is fulfilled by multiple sellers, each seller has its own order ID (`v71021570str-01` and `v71021570str-02`), but they share the same order group ID (`v71021570str`).
 - `transactionId` - ID of the transaction, which can be found within an object contained in the `merchantTransactions` array.
