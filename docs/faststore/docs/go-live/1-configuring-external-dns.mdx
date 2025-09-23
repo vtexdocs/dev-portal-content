@@ -50,7 +50,7 @@ You must set up your VTEX account to use the DNS records created in the previous
 6. Add the `secure` subdomain (for example, `secure.mystore.com`) to the list.
    ![host-configuration](https://vtexhelp.vtexassets.com/assets/docs/src/account-settings-new___2e13bee3041e8505922a737b94652ca6.png)
 
-7. Also, add the root domain. For example, if your domain is `www.mystore.com`, add `mystore.com`. To complete the setup, you must add these three hosts:
+7. Also add the root domain. For example, if your domain is `www.mystore.com`, add `mystore.com`. To complete the setup, you must add these three hosts:
    - `www.mystore.com`  (store domain)
    - `mystore.com` (root domain)
    - `secure.mystore.com` (checkout/myaccount subdomain)
@@ -102,7 +102,7 @@ Consider the following example of how this code block would look after configuri
    ```
 
 7. Save your changes.
-8. Open a Pull Request, commit your changes, and deploy them to `main`.
+8. Open a pull request, commit your changes, and deploy them to `main`.
 
 > ⚠️ For stores with prefixed domains, add the `subDomainPrefix` property to `discovery.config.js` to ensure product visibility in the secured environment. For more information, see the [Adding `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains) section. 
 
@@ -114,7 +114,7 @@ To complete the domain configuration, add your store domain to [FastStore WebOps
 
 1. Access your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard).
 2. Navigate to the Settings tab.
-3. In the **Host** field, choose your store’s domain (for example, `www.mystore.com`) from the dropdown list.
+3. In the **Host** field, choose your store's domain (for example, `www.mystore.com`) from the dropdown list.
 4. Click `Add`.
 
    ![adding-host-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/adding-host-webops.png)
@@ -146,7 +146,7 @@ Check if your domain is configured correctly in the FastStore WebOps environment
 
 1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting a **domain migration** for your FastStore WebOps implementation. Please include the following information:
    - VTEX account name
-   - Store’s domain (for example, `www.mystore.com`)
+   - Store's domain (for example, `www.mystore.com`)
    - Secure domain (for example, `secure.mystore.com`)
    - Confirmation that you’ve completed all previous steps in this guide.
 2. Wait for the VTEX team to process your request and complete the domain migration.
@@ -187,10 +187,10 @@ To add the `subDomainPrefix` property, follow these steps:
    > ⚠ Replace `'xxx'` from `subDomainPrefix` property with the actual subdomain prefix (for example, `['b2b']`). If you have multiple prefixes, add them as an array of strings (for example, `['b2b', 'dev']`).
 
 4. Save your changes.
-5. Open a Pull Request, commit your changes, and deploy them to `main`.
+5. Open a pull request, commit your changes, and deploy them to `main`.
 
 ## Related Resources
 
    - [Configuring the store domain](https://help.vtex.com/en/tutorial/configuring-the-store-domain--tutorials_2450)
    - [Setting up DNS pointing to VTEX](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing)
-   - [Insert a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/insert-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir)
+   - [Inserting a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/insert-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir)
