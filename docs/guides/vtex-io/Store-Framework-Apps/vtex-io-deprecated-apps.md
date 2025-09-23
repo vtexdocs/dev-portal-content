@@ -161,7 +161,6 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Adobe Launch Pixel| `vtexasia.adobe-launch-pixel`        |
 | Digioh           | `vtex.digioh-pixel`                   |
 | edrone pixel     | `vtexromania.edrone`                  |
-| Facebook         | `vtex.facebook-capi`<br><br>`vtex.facebook-fbe`<br><br>`vtex.facebook-checkout-pixel`<br><br>`vtex.facebook-fbe-webhook`<br><br>`vtex.facebook-fbe-authentication`<br><br>`vtex.facebook-fbe-redirect`<br><br>`vtex.facebook-fbe-service`<br><br>`vtex.facebook-fbe-worker`      |
 | Klaviyo          | `vtex.klaviyo-pixel`                  |
 | Listrak          | `vtex.listrak-pixel`                  |
 | newsman pixel    | `vtex.newsman`                        |
