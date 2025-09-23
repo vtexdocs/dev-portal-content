@@ -85,19 +85,19 @@ See below which API errors can be returned when attempting to [modify an order v
 | `SalesOrderSystem011` | `It's not possible to remove more than {0} quantities of the item of ID {1} from the original order. Validate your items quantities at Remove or Replace From operations.` | The `quantity` being removed exceeds the `quantity` available in the order. |
 | `SalesOrderSystem012` | `The logistics information couldn't be determined for the item due to the presence of multiple options.` | The order contains multiple logistics options, so the system cannot infer which one to use. |
 | `SalesOrderSystem013` | `The logistics information provided was not found on the order.` | The logistics details given do not match any information in the order. |
-| `SalesOrderSystem014` | `Change In Progress.` | A change operation is currently in progress for this order. |
+| `SalesOrderSystem014` | `Change In Progress.` | A change operation is currently in progress for this order. You can try to make a new change operation once this change in progress is finalized. |
 | `SalesOrderSystem015` | `A Change V1 has already been applied to this order. Orders can only contain one Change Order version at a time.` | Only one type of order change (v1 or v2) can be applied. A v1 change already exists. |
 | `SalesOrderSystem016` | `Cannot Retry Change.` | The change operation cannot be retried. |
 | `SalesOrderSystem017` | `Change process was automatically canceled after failed retries.` | The modification was canceled by the system after several failed attempts. |
 | `SalesOrderSystem018` | `Unable to communicate with Participants Client.` | The system could not reach the Participants Client service. |
-| `SalesOrderSystem019` | `Cannot Update Change Order Settings.` | Settings are being updated by another request. Please try again later. |
+| `SalesOrderSystem019` | `Cannot Update Change Order Settings.` | Settings are being updated by another request. You can try again later. |
 | `SalesOrderSystem026` | `Unable to match an item to the information provided. Try providing the item's uniqueId for identification.` | The item could not be identified with the given data. Try using the item's `uniqueId`. |
 | `SalesOrderSystem027` | `Change Settings Not Found.` | Change order settings could not be found for this configuration. |
-| `SalesOrderSystem029` | `Cannot Add New Products At Change Order When Order Has Multiple Address.` | New products cannot be added to orders with multiple delivery addresses. |
-| `SalesOrderSystem035` | `The {0} is not a valid Agreement Type.` | The agreement type is not recognized or supported. |
+| `SalesOrderSystem029` | `Cannot Add New Products At Change Order When Order Has Multiple Address.` | When the order has multiple delivery addresses, you can only modify the existing items, not add new items.
+| `SalesOrderSystem035` | `The {0} is not a valid Agreement Type.` | The agreement type is not recognized or supported. **Allowed:** `Acknowledgment`or `Confirmation`. |
 | `SalesOrderSystem045` | `Invalid address.` | The address is invalid. |
 | `SalesOrderSystem046` | `The order change is not allowed after the item invoice has been issued.` | The order modification is not allowed after the item invoice has been issued. |
 | `SalesOrderSystem047` | `The address change is not allowed.` | The address modification is not allowed. |
 | `SalesOrderSystem048` | `The address change is not allowed when there are packages associated.` | The address modification is not allowed when there are packages associated. |
 | `SalesOrderSystem051` | `Change order not allowed with tax hub and multiple delivery docks.` | Order modification is not allowed with tax hub and multiple delivery docks. |
-| `SalesOrderSystem055` | `Item modification is not allowed when the measurement unit differs from the original.` | Item modification is not allowed when the measurement unit differs from the original. |
+| `SalesOrderSystem055` | `Item modification is not allowed when the measurement unit differs from the original.` | Item modification is not allowed when the measurement unit differs from the original. Try using the `replace` array and changing the `to` and `from` objects.|
