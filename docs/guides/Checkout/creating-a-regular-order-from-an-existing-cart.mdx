@@ -508,7 +508,7 @@ Now, we will communicate the necessary payment data to VTEX for the finalization
 - Send a request to the [Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) endpoint, considering the following:
 
   - Use the `transactionId` value from the previous step as both the path parameter and the value of the field `id` within the `transaction` object.
-  - Set the merchantName field inside the transaction object to your account name.
+  - Set the `merchantName` field within the `transaction` object to your account name.
   - Use the `orderId` value as a query string parameter. This is the same `orderGroup` value obtained in the previous step.
   - Ensure that the request body is based on the `paymentData` section of your `orderForm`.
   - In the `fields` object, you can:
