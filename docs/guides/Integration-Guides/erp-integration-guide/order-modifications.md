@@ -73,7 +73,7 @@ See below which API errors can be returned when attempting to [modify an order v
 | `CHK0095` | `Changes in chain orders are not allowed.` | Chain orders do not support modifications. |
 | `CHK0096` | `Change cannot be done. Possible reason: settlement directly done by API.` | The change operation is not allowed, possibly due to a direct settlement. |
 | `CHK0098` | `The change value needs to be greater or equal than zero.` | The value for the change operation must not be negative. |
-| `CHK0124` | `Invalid change for order.` | The requested modification is not valid for the current order state or data. **Allowed order states for order modification:** `handling`, `waiting-for-fulfillment` and `ready-for-invoicing`. |
+| `CHK0124` | `Invalid change for order.` | The requested modification is not valid for the current order state or data. **Allowed order states for order modification:** `handling`, `waiting-for-fulfillment`, and `ready-for-invoicing`. |
 | `CHK0196` | `Cannot cancel order {0} - Payment not found.` | The order cannot be canceled because no payment was found. |
 | `CHK0199` | `OrderGroup {0} not found.` | The order group does not exist. |
 | `CHK0201` | `Order {0} not found.` | The order does not exist. Please verify the order ID in your operation. |
