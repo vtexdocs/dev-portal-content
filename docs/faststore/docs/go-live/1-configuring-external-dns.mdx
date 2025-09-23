@@ -50,7 +50,7 @@ You must set up your VTEX account to use the DNS records created in the previous
 6. Add the `secure` subdomain (for example, `secure.mystore.com`) to the list.
    ![host-configuration](https://vtexhelp.vtexassets.com/assets/docs/src/account-settings-new___2e13bee3041e8505922a737b94652ca6.png)
 
-7. Add the root domain as well. For example, if your domain is `www.mystore.com`, add `mystore.com`. To complete the setup, you must add three hosts for each domain:
+7. Add the root domain as well. For example, if your domain is `www.mystore.com`, add `mystore.com`. To complete the setup, you must add these three hosts:
    - `www.mystore.com`  (store domain)
    - `mystore.com` (root domain)
    - `secure.mystore.com` (checkout/myaccount subdomain)
@@ -61,7 +61,7 @@ You must set up your VTEX account to use the DNS records created in the previous
 
 ### Step 4 - Associating your custom domain with your FastStore project
 
-In to your FastStore project, you must also configure your project to point to the correct addresses and domains.
+In your FastStore project, you must also configure your project to point to the correct addresses and domains.
 
 1. Open your FastStore project in your preferred code editor.
 2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
@@ -95,7 +95,7 @@ Consider the following example of how this code block would look after configuri
 
 4. Save your changes.
 5. Open the `vtex.env` file.
-6. Add the `SITE_HOST` key with the main domain specified in [Configuring domains in VTEX Account Settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-2---configuring-domains-in-vtex-account-management) as the value.
+6. Add the `SITE_HOST` key with the main domain specified in [Configuring domains in VTEX Account Settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-3---configuring-domains-in-vtex-account-settings) as the value.
 
    ```diff /vtex.env
    + SITE_HOST=www.mystore.com
@@ -144,7 +144,7 @@ Check if your domain is configured correctly in the FastStore WebOps environment
 
 ### Step 8 - Migrating the domain
 
-1. Open a ticket to [VTEX Support](https://help.vtex.com/en/support) requesting a **domain migration** for your FastStore WebOps implementation. Please include the following information:
+1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting a **domain migration** for your FastStore WebOps implementation. Please include the following information:
    - VTEX account name
    - Store’s domain (for example, `www.mystore.com`)
    - Secure domain (for example, `secure.mystore.com`)
@@ -154,7 +154,7 @@ Check if your domain is configured correctly in the FastStore WebOps environment
 
 ## Configuring custom domain prefixes
 
-To ensure your store operates efficiently, it is important to correctly configure custom domain prefixes for checkout and secure product viewing. These are the following scenarios where you need to configure custom domain prefixes:
+To ensure your store operates efficiently, it is important to correctly configure custom domain prefixes for checkout and secure product viewing. You need to configure custom domain prefixes in the following scenarios:
 
 - Stores with multiple subdomains: [Add all the subdomains to the host list](#adding-subdomains-to-the-host-list).
 - Stores with prefixed domains: [Add `subDomainPrefix` for prefixed domains](#adding-subdomainprefix-for-prefixed-domains).
@@ -163,11 +163,11 @@ To ensure your store operates efficiently, it is important to correctly configur
 
 To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the hosts' list. 
 
-Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+Stores with custom prefixes, like `shop.mystore.com`, need to add both the prefix and main domain (`shop.mystore.com` and `mystore.com`). This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
 
 ### Adding `subDomainPrefix` for prefixed domains
 
-To ensure customers can view products in the secured environment on your stores's final domain, add the `subDomainPrefix` property to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#files) file. 
+To ensure customers can view products in the secured environment on your store's final domain, add the `subDomainPrefix` property to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#files) file. 
 The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
 
 To add the `subDomainPrefix` property, follow these steps:
