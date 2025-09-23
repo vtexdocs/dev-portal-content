@@ -166,7 +166,6 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | newsman pixel    | `vtex.newsman`                        |
 | Podium           | `vtex.podium-pixel`                   |
 | retargeting pixel| `vtex.retargeting`                    |
-| Tiktok           | `vtexbr.tiktok-tbp`                   |
 | Treasure Data    | `vtex.treasure-data-pixel`            |
 | Wordpress App    | `vtex.wordpress-integration`          |
 
