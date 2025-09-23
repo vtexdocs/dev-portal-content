@@ -7,7 +7,7 @@ updatedAt: "2023-07-18T17:08:52.219Z"
 excerpt: "Learn how to use VTEX APIs to place a regular order from an existing cart."
 ---
 
-This step-by-step guide will walk you through the process of using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) to create an order from an existing shopping cart. This process is divided into the following steps:
+This step-by-step guide will walk you through the process of using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway API](https://developers.vtex.com/docs/api-reference/payments-gateway-api) to create an order from an existing shopping cart. This process is divided into the following steps:
 
 1. **Get cart information:** The process begins with retrieving the `orderFormId` of the current shopping cart via the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint.
 2. **Place the order:** The process continues by placing the order on the VTEX platform via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint.
@@ -17,13 +17,25 @@ This step-by-step guide will walk you through the process of using the [Checkout
 
 Before proceeding any further, ensure that you have a valid `appKey` and `appToken` granted with the necessary permissions to access the [Checkout](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway](https://developers.vtex.com/docs/api-reference/payments-gateway-api) APIs. For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
 
+## Preparing the cart
+
+In addition to valid credentials, make sure that the cart you will use to create the order already contains all required information. Without these details, the steps described in this guide cannot be completed:
+
+- **Selected products**: Ensure the cart includes the desired items.
+- **Customer data and shipping address**: Confirm that the information is complete and valid.
+- **Payment method**: Define the payment option in advance. For credit cards, also include the number of installments and the card brand.
+
+All of these details can be easily verified on the checkout screen, as shown in the illustration below.
+
+![Checkout cart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout\checkout_cart.png)
+
 > ✅ Click the steps below to navigate through this article and explore specific topics. Relevant code for each phase or parameter will be highlighted on the right side of the screen.
 
 <CH.Scrollycoding>
 
 ## Step 1 - Getting cart information
 
-Send a `GET` request to the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint to retrieve the `orderFormId` of the shopping cart you intend to use to create an order. 
+Send a `GET` request to the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint to retrieve the `orderFormId` of the shopping cart you intend to use to create an order. The `orderFormId` is a unique identifier of the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) linked to a specific shopping cart.
 
 > For more information, access the [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id) guide.
 
@@ -88,7 +100,7 @@ req.end();
 
 ```json Response mark=2
 {
-  "orderFormId": "9ceee0fde6db489fbc682a0e2ab13a86",
+  "orderFormId": "9563daa04ee24ac09be80d272dcc9e72",
   "salesChannel": "1",
   "loggedIn": false,
   "isCheckedIn": false,
@@ -96,22 +108,106 @@ req.end();
   "checkedInPickupPointId": null,
   "allowManualPrice": false,
   "canEditData": true,
-  "userProfileId": null,
+  "userProfileId": "string",
   "userType": null,
   "ignoreProfileData": false,
-  "value": 0,
+  "value": 30000,
   "messages": [],
-  "items": [],
+  "items": [
+      {
+          "uniqueId": "07FA7060463B48B7A8761E72C763DCE4",
+          "id": "102",
+          "productId": "11",
+          "productRefId": "00011",
+          "refId": "00012",
+          "ean": null,
+          "name": "Adidas x South Park Forum Low “AWESOM-O” caramel 38",
+          "skuName": "Adidas x South Park Forum Low “AWESOM-O” caramel 38",
+          "modalType": null,
+          "parentItemIndex": null,
+          "parentAssemblyBinding": null,
+          "assemblies": [],
+          "priceValidUntil": "2026-09-22T22:02:39Z",
+          "tax": 0,
+          "price": 30000,
+          "listPrice": 30000,
+          "manualPrice": null,
+          "manualPriceAppliedBy": null,
+          "sellingPrice": 30000,
+          "rewardValue": 0,
+          "isGift": false,
+          "additionalInfo": {
+              "dimension": null,
+              "brandName": "VTEX Brand",
+              "brandId": "2000002",
+              "offeringInfo": null,
+              "offeringType": null,
+              "offeringTypeId": null
+          },
+          "preSaleDate": null,
+          "productCategoryIds": "/2000017/",
+          "productCategories": {
+              "2000017": "VTEX Day Hackthon"
+          },
+          "quantity": 1,
+          "seller": "1",
+          "sellerChain": [
+              "1"
+          ],
+          "imageUrl": "https://accountname.vteximg.com.br/arquivos/ids/155427-55-55/gy6475-1.jpg?v=638418000550100000",
+          "detailUrl": "/adidas-southpark-awesome/p",
+          "components": [],
+          "bundleItems": [],
+          "attachments": [],
+          "attachmentOfferings": [],
+          "offerings": [],
+          "priceTags": [],
+          "availability": "available",
+          "measurementUnit": "un",
+          "unitMultiplier": 1.0000,
+          "manufacturerCode": null,
+          "priceDefinition": {
+              "calculatedSellingPrice": 30000,
+              "total": 2200,
+              "sellingPrices": [
+                  {
+                      "value": 30000,
+                      "quantity": 1
+                  }
+              ],
+              "reason": null
+          },
+          "taxCode": ""
+      }
+  ],
   "selectableGifts": [],
-  "totalizers": [],
-  "shippingData": null,
+  "totalizers": [
+      {
+          "id": "Items",
+          "name": "Total dos Itens",
+          "value": 30000
+      },
+      {
+          "id": "Shipping",
+          "name": "Total do Frete",
+          "value": 0
+      }
+  ],
+  "shippingData": {
+      "address": {},
+      "logisticsInfo": [],
+      "selectedAddresses": [],
+      "availableAddresses": [],
+      "pickupPoints": [],
+      "contactInformation": []
+  },
   "clientProfileData": {
-    "email": null,
-    "firstName": null,
-    "lastName": null,
-    "document": null,
-    "documentType": null,
-    "phone": null,
+    "email": name.surname@test.com,
+    "firstName": "Name",
+    "lastName": "Surname",
+    "document": "5555555555",
+    "documentType": "cpf",
+    "phone": "+55125555555",
     "corporateName": null,
     "tradeName": null,
     "corporateDocument": null,
@@ -123,16 +219,109 @@ req.end();
     "customerClass": null
   },
   "paymentData": {
-    "installmentOptions": [],
-    "paymentSystems": [],
-    "payments": [],
+      "updateStatus": "updated",
+      "installmentOptions": [
+          {
+              "paymentSystem": "1",
+              "bin": null,
+              "paymentName": null,
+              "paymentGroupName": null,
+              "value": 30000,
+              "installments": [
+                  {
+                      "count": 1,
+                      "hasInterestRate": false,
+                      "interestRate": 0,
+                      "value": 30000,
+                      "total": 30000,
+                      "sellerMerchantInstallments": [
+                          {
+                              "id": "accountName",
+                              "count": 1,
+                              "hasInterestRate": false,
+                              "interestRate": 0,
+                              "value": 30000,
+                              "total": 30000
+                          }
+                      ]
+                  },
+                  {
+                      "count": 2,
+                      "hasInterestRate": true,
+                      "interestRate": 200,
+                      "value": 15451,
+                      "total": 30902,
+                      "sellerMerchantInstallments": [
+                          {
+                              "id": "accountName",
+                              "count": 2,
+                              "hasInterestRate": true,
+                              "interestRate": 200,
+                              "value": 15451,
+                              "total": 30902
+                          }
+                      ]
+                  },
+                ...
+              ]
+          }
+      ],
+    "paymentSystems": [
+      "paymentSystems": [
+            {
+                "id": 64,
+                "name": "Customer Credit",
+                "groupName": "creditControlPaymentGroup",
+                "validator": {
+                    "regex": null,
+                    "mask": null,
+                    "cardCodeRegex": null,
+                    "cardCodeMask": null,
+                    "weights": null,
+                    "useCvv": false,
+                    "useExpirationDate": false,
+                    "useCardHolderName": false,
+                    "useBillingAddress": false
+                },
+              ...
+            }
+        ]
+    ],
+    "payments": [
+            {
+                "paymentSystem": "2",
+                "bin": null,
+                "accountId": null,
+                "tokenId": null,
+                "installments": 1,
+                "referenceValue": 30000,
+                "value": 30000,
+                "merchantSellerPayments": [
+                    {
+                        "id": "accountName",
+                        "installments": 1,
+                        "referenceValue": 30000,
+                        "value": 30000,
+                        "interestRate": null,
+                        "installmentValue": 30000
+                    }
+                ]
+            }
+        ],
     "giftCards": [],
     "giftCardMessages": [],
     "availableAccounts": [],
     "availableTokens": []
   },
   "marketingData": null,
-  "sellers": [],
+  "sellers": [
+        {
+            "id": "1",
+            "name": "accountName",
+            "logo": "",
+            "minimumOrderValue": 0
+        }
+    ],
   "clientPreferencesData": {
     "locale": "pt-BR",
     "optinNewsLetter": null
@@ -157,7 +346,22 @@ req.end();
   "openTextField": null,
   "invoiceData": null,
   "customData": null,
-  "itemMetadata": null,
+  "itemMetadata": {
+        "items": [
+            {
+                "id": "102",
+                "seller": "1",
+                "name": "Adidas x South Park Forum Low “AWESOM-O” caramel 38",
+                "skuName": "Adidas x South Park Forum Low “AWESOM-O” caramel 38",
+                "productId": "11",
+                "refId": "00012",
+                "ean": null,
+                "imageUrl": "https://accountname.vteximg.com.br/arquivos/ids/155427-55-55/gy6475-1.jpg?v=638418000550100000",
+                "detailUrl": "/adidas-southpark-awesome/p",
+                "assemblyOptions": []
+            }
+        ]
+    },
   "hooksData": null,
   "ratesAndBenefitsData": null,
   "subscriptionData": null,
@@ -171,20 +375,19 @@ req.end();
 
 ## Step 2 - Placing the order
 
-Place a new order via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint, providing the following information in the request body:
+Place a new order via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint, using the shopping cart identification (`orderFormId` value) as a path parameter and providing the following information in the request body:
 
-- `referenceId`: `orderFormId` obtained in the previous step, serving as the unique identifier (ID) of the `orderForm` associated with the shopping cart from which the order will be created.
-- `savePersonalData`: set as `true` if the shopper’s data provided during checkout should be saved for future reference (default is `false`).
-- `optinNewsLetter`: set as `true` if the shopper opted to receive the newsletter (default is `false`).
+- `referenceId`: same `orderFormId` value used in the path parameter.
 - `value`: total value of the order without separating cents (e.g., $24.99 is represented by `2499`).
 - `referenceValue`: reference value of the order, without separating cents (e.g., $24.99 is represented by `2499`). This is used for calculating interest, if applicable.
 - `interestValue`: interest rate to be applied, if applicable.
+- `savePersonalData`: set as `true` if the shopper’s data provided during checkout should be saved for future reference (default is `false`).
+- `optinNewsLetter`: set as `true` if the shopper opted to receive the newsletter (default is `false`).
 
-Upon receiving a `201 Created` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of these pieces of information and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
+Upon receiving a `200 OK` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of the following pieces of information and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
 
-- `orderId` - ID of the order within VTEX’s Order Management System (OMS). You can find the `orderId` within each object in the `orders` array.
-- `transactionId` - ID of the transaction, which can be found within the objects contained in the `transactionData.merchantTransactions` array.
-- `addressId` - ID of the customer address. If you plan to use the same address for both shipping and billing, get the `addressId` from the `shippingData.address` object.
+- `orderGroup` - ID that groups all orders related to the same purchase. For example, when an order is fulfilled by multiple sellers, each seller has its own order ID (`v71021570str-01` and `v71021570str-02`), but they share the same order group ID (`v71021570str`).
+- `transactionId` - ID of the transaction, which can be found within an object contained in the `merchantTransactions` array.
 
 > ⚠️ If you face errors during the request submission, refer to [Handling HTTP response errors when placing the order](#handling-http-response-errors-when-placing-the-order) for common error scenarios when placing an order.
 
@@ -195,7 +398,7 @@ curl --request post \
      --url 'https://apiexamples.vtexcommercestable.com.br/api/checkout/pub/orderForm/{orderFormId}/transaction' \
      --header 'Accept: application/json' \
      --header 'Content-Type: application/json' \
-     --data '{"referenceId":"41a22925298a4ddca95318131a25b000","savePersonalData":false,"optinNewsLetter":false,"value":6800,"referenceValue":6800,"interestValue":0}'
+     --data '{"referenceId":"9563daa04ee24ac09be80d272dcc9e72","value":30000,"referenceValue":30000,"interestValue":0,"savePersonalData":false,"optinNewsLetter":false}'
 ```
 
 ```python Python mark=3[37:47],3[49:66],12[51:63],5
@@ -203,7 +406,7 @@ import http.client
 
 conn = http.client.HTTPSConnection("apiexamples.vtexcommercestable.com.br")
 
-payload = "{\"referenceId\":\"41a22925298a4ddca95318131a25b000\",\"savePersonalData\":false,\"optinNewsLetter\":false,\"value\":6800,\"referenceValue\":6800,\"interestValue\":0}"
+payload = "{\"referenceId\":\"9563daa04ee24ac09be80d272dcc9e72\",\"value\":30000,\"referenceValue\":30000,\"interestValue\":0,\"savePersonalData\":false,\"optinNewsLetter\":false}"
 
 headers = {
     'Accept': "application/json",
@@ -246,12 +449,12 @@ const req = http.request(options, function (res) {
 });
 
 req.write(JSON.stringify({
-  referenceId: '41a22925298a4ddca95318131a25b000',
+  referenceId: '9563daa04ee24ac09be80d272dcc9e7',
+  value: 30000,
+  referenceValue: 30000,
+  interestValue: 0,
   savePersonalData: false,
-  optinNewsLetter: false,
-  value: 6800,
-  referenceValue: 6800,
-  interestValue: 0
+  optinNewsLetter: false
 }));
 req.end();
 ```
@@ -260,134 +463,35 @@ req.end();
 
 ```json Response mark=7,28,65
 {
-  "orderForm": null,
-  "transactionData": {
+    "id": "E785435CCAAE4C45AAE547AB6D9B57CF",
     "merchantTransactions": [
-      {
-        "id": "STORE",
-        "transactionId": "62FEDE228E2144649CF67812C4E5ER79",
-        "merchantName": "STORE",
-        "payments": [
-          {
-            "paymentSystem": "6",
-            "bin": null,
-            "accountId": null,
-            "value": 15650,
-            "referenceValue": 15650,
-            "giftCardRedemptionCode": null,
-            "giftCardProvider": null,
-            "giftCardId": null
-          }
-        ]
-      }
+        {
+            "id": "accountName",
+            "transactionId": "E785435CCAAE4C45AAE547AB6D9B57CF",
+            "merchantName": "accountName",
+            "payments": [
+                {
+                    "paymentSystem": "2",
+                    "bin": "45398623",
+                    "accountId": null,
+                    "tokenId": null,
+                    "value": 30000,
+                    "referenceValue": 30000,
+                    "giftCardRedemptionCode": null,
+                    "giftCardProvider": null,
+                    "giftCardId": null
+                }
+            ]
+        }
     ],
-    "receiverUri": "https://store.vtexpayments.com.br/split/v976778amgh/payments",
-    "gatewayCallbackTemplatePath": "/checkout/gatewayCallback/v976778amgh/{messageCode}"
-  },
-  "orders": [
-    {
-      "orderId": "v976778amgh-01",
-      "orderGroup": "v976778amgh",
-      "state": "order-created",
-      "isCheckedIn": false,
-      "sellerOrderId": "00-v976778amgh-01",
-      "storeId": null,
-      "value": 15650,
-      "items": [],
-      "sellers": [],
-      "totals": [],
-      "clientProfileData": {
-        "attachmentId": "clientProfileData",
-        "email": "marcelo@vtex.com.br",
-        "firstName": "Marcelo",
-        "lastName": "Couto",
-        "document": "71279846675",
-        "documentType": "cpf",
-        "phone": "1234567890",
-        "corporateName": null,
-        "tradeName": null,
-        "corporateDocument": null,
-        "stateInscription": null,
-        "corporatePhone": null,
-        "isCorporate": false,
-        "profileCompleteOnLoading": null,
-        "profileErrorOnLoading": null
-      },
-      "ratesAndBenefitsData": {
-        "attachmentId": "ratesAndBenefitsData",
-        "rateAndBenefitsIdentifiers": [],
-        "teaser": []
-      },
-      "shippingData": {
-        "attachmentId": "shippingData",
-        "address": {
-          "addressType": "residential",
-          "receiverName": "Marcelo",
-          "addressId": "49ad09e5fba8434a8ff1e0faa4b60ceb",
-          "postalCode": "28050987",
-          "city": "Rio de Janeiro",
-          "state": "RJ",
-          "country": "BRA",
-          "street": "Rua da minha casa",
-          "number": "123",
-          "neighborhood": "Copacabana",
-          "complement": "15º andar",
-          "reference": null,
-          "geoCoordinates": []
-        },
-        "logisticsInfo": [],
-        "availableAddresses": [
-          {
-            "addressType": "residential",
-            "receiverName": "Marcelo",
-            "addressId": "49ad09e5fba8434a8ff1e0faa4b60ceb",
-            "postalCode": "28050642",
-            "city": "Rio de Janeiro",
-            "state": "RJ",
-            "country": "BRA",
-            "street": "Rua da minha casa",
-            "number": "123",
-            "neighborhood": "Copacabana",
-            "complement": "15º andar",
-            "reference": null,
-            "geoCoordinates": []
-          }
-        ]
-      },
-      "paymentData": {
-        "attachmentId": "paymentData",
-        "transactionId": "62FEDE228E2144649CF67812C4E5DD87",
-        "payments": [],
-        "giftCards": [],
-        "transactions": [
-          {
-            "isActive": true,
-            "transactionId": "62FEDE228E2144649CF67812C4E5DD87",
-            "merchantName": "STORE",
-            "payments": []
-          }
-        ],
-        "merchantName": "STORE"
-      },
-      "clientPreferencesData": {},
-      "giftRegistryData": null,
-      "marketingData": null,
-      "storePreferencesData": {},
-      "openTextField": {},
-      "changeData": null,
-      "salesChannel": "1",
-      "followUpEmail": "f1e7309d88dd4633825ce183d52a50a6@ct.vtex.com.br",
-      "creationDate": "2017-02-16T23:42:43.9605088Z",
-      "lastChange": "2017-02-16T23:42:47.62285Z",
-      "timeZoneCreationDate": "2017-02-16T21:42:43.9605088",
-      "timeZoneLastChange": "2017-02-16T21:42:47.62285",
-      "isCompleted": false,
-      "hostName": "ambienteqa",
-      "merchantName": null,
-      "userType": "",
-      "roundingError": 0
-    }
-  ]
+    "receiverUri": "https://accountName.vtexpayments.com.br/split/17700236/payments",
+    "gatewayCallbackTemplatePath": "/checkout/gatewayCallback/17700236/{messageCode}",
+    "orderGroup": "17700236",
+    "orderFormId": "9563daa04ee24ac09be80d272dcc9e72",
+    "salesChannel": "1",
+    "loggedIn": true,
+    "isCheckedIn": false,
+...
 }
 ```
 
@@ -397,16 +501,21 @@ req.end();
 
 ## Step 3 - Resolving the order payment
 
-Now, we will communicate the necessary payment data to VTEX for the finalization of the order's payment. Note that from now on, you have 5 (five) minutes to complete the payment process.
+Now, we will communicate the necessary payment data to VTEX for the finalization of the order's payment.
 
-- Send a request to the [Send payments information public](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) endpoint, considering the following:
+> ⚠️ Note that from now on (once Step 2 has been completed), you have 5 (five) minutes to submit the payment information (Step 3) and process the order (Step 4). If Steps 3 and 4 are not completed within 5 (five) minutes, the order will be automatically cancelled.
 
-  - Use the `orderFormId` value obtained in the previous step as the `orderId` query-string parameter.
-  - Use the `transactionId` value obtained in the previous step as a path parameter.
+- Send a request to the [Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) endpoint, considering the following:
+
+  - Use the `transactionId` value from the previous step as both the path parameter and the value of the field `id` within the `transaction` object.
+  - Set the merchantName field inside the transaction object to your account name.
+  - Use the `orderId` value as a query-string parameter. This is the same `orderGroup` value obtained in the previous step.
   - Ensure that the request body is based on the `paymentData` section of your `orderForm`.
-  - In the `fields` object, use the `addressId` field to reference an existing address or introduce a new `address` object for an entirely new address.
+  - In the `fields` object, you can:
+     - Fill in the credit or debit card information (when applicable).
+     - Use the `addressId` field to reference an existing address, or introduce a new `address` object for an entirely new address. This type of information is only required if the user's address was not previously entered during checkout.
 
-> If you intend to send saved credit card data, you can use the [Send payments with saved credit card](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/payments) endpoint instead.
+> This request does not return any data in the response body, only a success confirmation message `201 Created`.
 
 <CH.Code show={["Shell", "Python", "Node.js", "Response"]}>
 
@@ -417,7 +526,7 @@ curl --request post \
  --header 'Content-Type: application/json' \
  --header 'X-VTEX-API-AppKey: {appKey}' \
  --header 'X-VTEX-API-AppToken: {appToken}' \
- --data '[{"paymentSystem":4,"installments":1,"currencyCode":"BRL","value":100,"installmentsInterestRate":0,"installmentsValue":100,"referenceValue":100,"fields":{"holderName":"UserTest","cardNumber":"5378244888889174","validationCode":"231","dueDate":"10/19","document":"8041734561","accountId":"","address":null,"callbackUrl":""},"transaction":{"id":"{{transactionId}}","merchantName":"{{accountName}}"}}]'
+ --data '[{"paymentSystem":2,"installments":1,"currencyCode":"BRL","value":30000,"installmentsInterestRate":0,"installmentsValue":30000,"referenceValue":30000,"fields":{"holderName":"UserTest","cardNumber":"5378244888889174","validationCode":"231","dueDate":"10/19","document":"8041734561","accountId":"","address":null,"callbackUrl":""},"transaction":{"id":"E785435CCAAE4C45AAE547AB6D9B57CF","merchantName":"accountName"}}]'
 ```
 
 ```python Python mark=3[37:49],10[25:32],11[27:36],14[45:59],14[78:86]
@@ -425,7 +534,7 @@ import http.client
 
 conn = http.client.HTTPSConnection("{accountName}.vtexpayments.com.br")
 
-payload = "[{\"paymentSystem\":4,\"installments\":1,\"currencyCode\":\"BRL\",\"value\":100,\"installmentsInterestRate\":0,\"installmentsValue\":100,\"referenceValue\":100,\"fields\":{\"holderName\":\"UserTest\",\"cardNumber\":\"5378244888889174\",\"validationCode\":\"231\",\"dueDate\":\"10/19\",\"document\":\"8041734561\",\"accountId\":\"\",\"address\":null,\"callbackUrl\":\"\"},\"transaction\":{\"id\":\"{{transactionId}}\",\"merchantName\":\"{{accountName}}\"}}]"
+payload = "[{\"paymentSystem\":2,\"installments\":1,\"currencyCode\":\"BRL\",\"value\":30000,\"installmentsInterestRate\":0,\"installmentsValue\":30000,\"referenceValue\":30000,\"fields\":{\"holderName\":\"UserTest\",\"cardNumber\":\"5378244888889174\",\"validationCode\":\"231\",\"dueDate\":\"10/19\",\"document\":\"8041734561\",\"accountId\":\"\",\"address\":null,\"callbackUrl\":\"\"},\"transaction\":{\"id\":\"E785435CCAAE4C45AAE547AB6D9B57CF\",\"merchantName\":\"accountName\"}}]"
 
 headers = {
   'Accept': "application/json",
@@ -473,13 +582,13 @@ const req = http.request(options, function (res) {
 
 req.write(JSON.stringify([
   {
-    paymentSystem: 4,
+    paymentSystem: 2,
     installments: 1,
     currencyCode: 'BRL',
-    value: 100,
+    value: 30000,
     installmentsInterestRate: 0,
-    installmentsValue: 100,
-    referenceValue: 100,
+    installmentsValue: 30000,
+    referenceValue: 30000,
     fields: {
       holderName: 'UserTest',
       cardNumber: '5378244888889174',
@@ -490,7 +599,7 @@ req.write(JSON.stringify([
       address: null,
       callbackUrl: ''
     },
-    transaction: {id: '{{transactionId}}', merchantName: '{{accountName}}'}
+    transaction: {id: 'E785435CCAAE4C45AAE547AB6D9B57CF', merchantName: 'accountName'}
   }
 ]));
 req.end();
@@ -499,7 +608,7 @@ req.end();
 ---
 
 ```txt Response
-200 OK
+201 Created
 ```
 
 </CH.Code>
@@ -510,7 +619,9 @@ req.end();
 
 In this final step, we will process the order.
 
-- Send a request to the [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-) endpoint. If the payment is processed without any issues, the order should be successfully placed. Otherwise, a `status 500` error might occur.
+- Send a request to the [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-) endpoint, using the `orderGroup` (the `orderFormId` value) as a path parameter.
+
+> If the payment is processed without any issues, the order should be successfully placed (`status 204 - No Content`). Otherwise, a `status 500 - Internal Server Error` error might occur.
 
 > Note that this process uses the gateway connectors configured in your VTEX environment. Be careful to prevent any unwanted charges or unexpected payment denials.
 
@@ -583,7 +694,7 @@ req.end();
 ---
 
 ```txt Response
-200 OK
+204 No Content
 ```
 
 </CH.Code>
@@ -625,7 +736,7 @@ req.end();
 
 `Message error example (code CHK0016): "Payment value does not match with reference value"`
 
-- **Issue:** The `value` and `referenceValue` fields have different values even without the use of interest in the payment. 
+- **Issue:** The `value` and `referenceValue` fields have different values even without the use of interest in the payment.
 - **Troubleshooting:**
   - Confirm that the provided `value` and `referenceValue` align correctly.
   - Check if the interest rate is correctly configured.
