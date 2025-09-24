@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.161](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.159...v1.1.161) (2025-09-24)
+
 ### [1.1.159](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.157...v1.1.159) (2025-09-24)
 
 ### [1.1.157](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.155...v1.1.157) (2025-09-24)
