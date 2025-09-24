@@ -1,8 +1,9 @@
 ---
 title: "Managing URLs with redirects and rewrite paths"
+excerpt: "Learn how to configure redirects and rewrites in your FastStore project to manage user access to your content."
 ---
 
-In this guide, you will learn how to configure redirects and rewrites in your FastStore project to manage users' access to your content.
+In this guide, learn how to configure redirects and rewrites in your FastStore project to manage users' access to your content.
 
 Redirects are used to take users from one URL to another automatically. This is useful when a page has been moved, renamed, or removed. For example, if a page has been moved or renamed, the redirect ensures the user is taken to the new location.
 
@@ -14,6 +15,18 @@ In summary:
 - Rewrites keep the URL the same but change the destination internally.
 
 These two tools enhance content organization, help maintain a good user experience, and ensure search engines continue to index the correct content.
+
+## Before you begin
+
+Before you configure redirects, it's important to understand how the redirect feature behaves in FastStore and its limitations.
+
+### Native routes take precedence
+
+FastStore prioritizes native pages (e.g., product, collection, and brand pages) over redirect rules. If a redirect's source path matches a native page, the redirect will be ignored. For example, if `/fall-sale` is a live native collection page, a redirect rule from `/fall-sale` to `/fall` will not work. The collection page will render instead. To make the redirect work, you must unpublish or disable the native page (`/fall-sale`).
+
+### QueryStrings are not forwarded by default
+
+QueryString parameters (e.g., ?key=value) are not forwarded in redirects by default. For example: A rule `/from` → `/to` will redirect `/from?key=value` to `/to`, dropping the `?key=value` portion.
 
 ## Creating redirects
 
