@@ -24,9 +24,9 @@ Before you configure redirects, it's important to understand how the redirect fe
 
 FastStore prioritizes native pages (e.g., product, collection, and brand pages) over redirect rules. If a redirect's source path matches a native page, the redirect will be ignored. For example, if `/fall-sale` is a live native collection page, a redirect rule from `/fall-sale` to `/fall` will not work. The collection page will render instead. To make the redirect work, you must unpublish or disable the native page (`/fall-sale`).
 
-### QueryStrings are not forwarded by default
+### Query strings are not forwarded by default
 
-QueryString parameters (e.g., ?key=value) are not forwarded in redirects by default. For example: A rule `/from` → `/to` will redirect `/from?key=value` to `/to`, dropping the `?key=value` portion.
+Query string parameters (e.g., ?key=value) are not forwarded in redirects by default. For example: A rule `/from` → `/to` will redirect `/from?key=value` to `/to`, dropping the `?key=value` portion.
 
 ## Creating redirects
 
