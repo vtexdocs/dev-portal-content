@@ -16,9 +16,9 @@ In summary:
 
 These two tools enhance content organization, help maintain a good user experience, and ensure search engines continue to index the correct content.
 
-## Redirect-specific behaviors
+## Redirect limitations
 
-Before you configure redirects, it's important to understand how the redirect feature behaves in FastStore and its limitations.
+Before configuring redirects, it's important to understand how the redirect feature behaves in FastStore and its limitations.
 
 ### Native routes take precedence
 
@@ -26,7 +26,7 @@ FastStore prioritizes native pages (e.g., product, collection, and brand pages) 
 
 ### Query strings are not forwarded by default
 
-Query string parameters (e.g., ?key=value) are not forwarded in redirects by default. For example, a rule `/from` → `/to` will redirect `/from?key=value` to `/to`, dropping the `?key=value` portion.
+Query string parameters (e.g., `?key=value`) are not forwarded in redirects by default. For example, a rule `/from` → `/to` will redirect `/from?key=value` to `/to`, dropping the `?key=value` portion.
 
 ## Creating redirects
 
