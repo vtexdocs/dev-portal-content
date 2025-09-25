@@ -17,7 +17,7 @@ To apply contextual pricing per seller in a B2B marketplace scenario, it is nece
 
 Follow the steps below to ensure that all the prerequisites are met:
 
-1. **Activate Audience Manager:** Contact [VTEX support](https://help.vtex.com/support?/cultureInfo=pt-br) and request the activation of the Audience Manager feature toggle for the Checkout module in the marketplace and sellers accounts.
+1. **Activate Audience Manager:** Contact [VTEX support](https://help.vtex.com/support?/cultureInfo=pt-br) and request the activation of the Audience Manager feature toggle for the Checkout module for the marketplace and seller accounts.
 
 2. **Allow email sharing:**  Set the `trustPolicy` field to `AllowEmailSharing` and include the corresponding policy in the `policies` field when creating or updating a seller using the [POST Create Seller](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/seller) or [PUT Update Seller endpoints](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog_system/pvt/seller). Updating only the `trustPolicy` field is not enough both fields must be configured for email sharing to be applied correctly.
 
