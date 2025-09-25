@@ -3,7 +3,7 @@ title: "Contextual price per shopper"
 slug: "contextual-price-per-shopper"
 hidden: false
 createdAt: "2025-02-13T13:00:00.152Z"
-updatedAt: "2025-05-19T13:00:00.152Z"
+updatedAt: "2025-09-25T13:00:00.152Z"
 ---
 Contextual price allows you to define different prices for a product based on the sale context. These contexts can include criteria such as the marketplace, the seller offering the product, the buyer's geolocation, or active promotions.
 
@@ -17,9 +17,9 @@ To apply contextual pricing per seller in a B2B marketplace scenario, it is nece
 
 Follow the steps below to ensure that all the prerequisites are met:
 
-1. **Activate Audience Manager:** Contact [VTEX support](https://help.vtex.com/support?/cultureInfo=pt-br) and request the activation of the Audience Manager feature toggle for the Checkout module in the marketplace and sellers accounts.
+1. **Activate Audience Manager:** Contact [VTEX support](https://help.vtex.com/support?/cultureInfo=pt-br) and request the activation of the Audience Manager feature toggle for the Checkout module for the marketplace and seller accounts.
 
-2. **Allow email sharing:**  Set the `TrustPolicy` field to the value `AllowEmailSharing` when creating or updating a seller using the [POST Create Seller](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/seller) or [PUT Update Seller endpoints](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog_system/pvt/seller). This allows the marketplace to share customers' email addresses with the sellers.
+2. **Allow email sharing:**  Set the `trustPolicy` field to `AllowEmailSharing` and include the corresponding policy in the `policies` field when creating or updating a seller using the [POST Create Seller](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/seller) or [PUT Update Seller endpoints](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog_system/pvt/seller). Updating only the `trustPolicy` field is not enough both fields must be configured for email sharing to be applied correctly.
 
 ### Seller configuration
 
