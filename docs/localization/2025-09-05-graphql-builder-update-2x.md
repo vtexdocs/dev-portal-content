@@ -18,11 +18,11 @@ The `@auth` directive is added to queries and mutations to determine the authori
 
 In GraphQL builder `1.x`, the `@auth` directive is optional and defines a [License Manager resource and product](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). Users or apps need a [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policy](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) that includes the resource or product defined by the directive. Without the `@auth` directive, the query is public by default.
 
-> ⚠️ GraphQL builder `1.x` will be deprecated on January 7, 2026. Existing apps built with version `1.x` will continue to function. However, creating new apps or major [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps using version `1.x` will no longer be possible. After the deprecation date, apps using builder `1.x` will fail to build via [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) or [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).
+> ⚠️ GraphQL builder `1.x` will be deprecated on January 7, 2026. Existing apps built with version `1.x` will continue to work, but you won't be able to create new apps or major [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps using version `1.x`. After the deprecation date, apps using builder `1.x` will fail to build via [link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) or [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).
 
 With builder version `2.x`, the `@auth` directive is mandatory and requires the `scope` argument, which accepts the following values:
 
-- `PUBLIC`: The query is public and requires no authorization.
+- `PUBLIC`: The query is public and doesn't require authorization.
 - `PRIVATE`: The query is private and requires authorization for a specific [License Manager resource and product](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). When using `PRIVATE`, the `productCode` and `resourceCode` arguments are also mandatory.
 
 If an app is built with GraphQL builder version `2.x` and is missing the `@auth` directive, the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) will display an error message in these cases:
@@ -59,7 +59,7 @@ To use the new builder version, developers must update their apps:
     }
     ```
 
-    For private queries, include the authorization requirements:
+For private queries, include the authorization requirements:
 
     ```graphql
     type Query {
@@ -68,4 +68,4 @@ To use the new builder version, developers must update their apps:
     }
     ```
 
-For more information, refer to [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder) and [GraphQL authorization in IO apps](https://developers.vtex.com/docs/guides/graphql-authorization-in-io-apps).
+For more information, see [GraphQL builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-graphql-builder) and [GraphQL authorization in IO apps](https://developers.vtex.com/docs/guides/graphql-authorization-in-io-apps).

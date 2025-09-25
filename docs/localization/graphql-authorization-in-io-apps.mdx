@@ -6,7 +6,7 @@ excerpt: "Learn to implement and use protected GraphQL operations with IO apps."
 createdAt: "2025-06-30T14:00:00.000Z"
 updatedAt: "2025-06-30T14:00:00.000Z"
 ---
-Authenticated GraphQL requests are crucial for securing access to your VTEX IO app's data and functions. Authentication ensures that only authorized users or applications can interact with your GraphQL endpoints, protecting sensitive information and preventing unauthorized actions. Besides authentication, app developers can implement authorization to control who can access specific resources and what operations they can perform.
+Authenticated GraphQL requests are crucial for securing access to your VTEX IO app's data and functions. Authentication ensures that only authorized users or applications can interact with your GraphQL endpoints, protecting sensitive information and preventing unauthorized actions. In addition to authentication, app developers can implement authorization to control who can access specific resources and what operations they can perform.
 
 GraphQL authorization in VTEX IO apps works with auth tokens and [directives](https://graphql.org/learn/schema/#directives) within your GraphQL schema, enabling fine-grained access control based on [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). The app identifies the requester by the [auth token](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) in [apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-a-vtex-app) or the [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in API calls. These tokens have [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) or [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies) associated with VTEX resources.
 
@@ -22,7 +22,7 @@ In this guide, you will learn how to:
 
 The `@auth` directive has different implementation methods depending on the builder version.
 
-For builder version `1.x`, the directive is optional. If a query or mutation doesn't have the directive, it is considered public by default. For builder version `2.x`, the directive is mandatory.
+For the builder version `1.x`, the directive is optional. If a query or mutation doesn't have the directive, it's considered public by default. For the builder version `2.x`, the directive is mandatory.
 
 To enable authorization, you must add the `@auth` directive to the specific fields or operations in your GraphQL schema that need protection. This directive ensures that only requesters with access to the corresponding [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) are allowed to execute the operation.
 
