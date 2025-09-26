@@ -4,7 +4,7 @@ slug: "vtex-io-deprecated-apps"
 excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
-updatedAt: "2025-07-07T18:16:48.854Z"
+updatedAt: "2025-08-25T13:47:49.838Z"
 ---
 
 A deprecated app refers to an application no longer supported or maintained by VTEX, meaning that:
@@ -109,14 +109,9 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
-| Advanced seller onboarding      | `vtexromania.advanced-seller-onboarding` |
-| Google Shopping                | `vtex.google-shopping`<br><br>`vtex.google-shopping-api`   |
 | Glovo                          | `vtex.glovo-integration`               |
 | Lengow                         | `vtex.lengow-integration`              |
-| Mktplace Financial Commissions | `vtex.marketplace-financial-commission` |
-| Mktplace Mapper                | `vtex.seller-mkp-mapper`               |
 | Octopia (casino)               | `vtex.octopia-integration`             |
-| Seller Products Import         | `vtex.seller-products-import`          |
 
 ### Observability
 
