@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-graphql-builder"
 excerpt: "Learn how to use the GraphQL builder."
 hidden: false
 createdAt: "2025-05-05T12:00:00.000Z"
-updatedAt: "2025-05-05T12:00:00.000Z"
+updatedAt: "2025-09-30T11:00:00.000Z"
 category: "App Development"
 ---
 
