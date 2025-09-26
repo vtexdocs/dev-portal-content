@@ -43,6 +43,8 @@ Shoppers can filter available products globally using the **Filter by store** op
 
 On PLPs or search pages, the shopper has the following options for applying filters: [Delivery Methods](#delivery-methods-filters) and [Delivery Option](#delivery-option-filters).
 
+>⚠️ To edit the filters labels, follow the instructions on [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
+
 #### Delivery Methods filters
 
 This option displays available products according to the shopper's location. With this option, shoppers can filter using the following filters:
@@ -69,11 +71,13 @@ When Delivery Promise data is available, the ProductCard automatically displays 
 
 In the following table, see the available types of badges:
 
-| Badge name | Description |
+| Badge label | Description |
 | ---------- | ----------- |
-| Available for delivery | Indicates whether the product can be shipped to the shopper's postcode. |
-| Unavailable for pickup | Indicates that the product cannot be collected from a nearby pickup point. |
+| `Available for shipping` or `Unavailable for shipping` | Indicates whether the product can be shipped to the shopper's postcode. |
+| `Available for pickup` or `Unavailable for pickup` | Indicates that the product can be collected from a nearby pickup point. |
 | No badges available    | The product is out of stock. Delivery and pickup are unavailable. |
+
+>⚠️ To edit the badges labels or unable the badges, follow the instructions on [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 ## Understanding location priority
 
