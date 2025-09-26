@@ -1,10 +1,10 @@
 ---
 title: "GraphQL builder: Update to 2.x, 1.x deprecation"
-slug: "2025-09-05-graphql-builder-update-2x"
+slug: "2025-09-30-graphql-builder-update-2x"
 type: improved
 excerpt: "GraphQL builder 2.x enhances security with mandatory authorization directive. Version 1.x will be deprecated."
-createdAt: "2025-09-05T15:00:00.000Z"
-updatedAt: "2025-09-05T15:00:00.000Z"
+createdAt: "2025-09-30T11:00:00.000Z"
+updatedAt: "2025-09-30T11:00:00.000Z"
 hidden: false
 ---
 
