@@ -40,7 +40,7 @@ Once you are done, click on the `Save` button, as shown in the image below.
 For CSS customizations, you need to edit the  `checkout-instore-custom.css` file, which you can access by following the same steps as to open the [JavaScript customizations](#javascript-customizations) file. In the **Files** section, remember to open `checkout-instore-custom.css` instead.
 
 ![enable-product-recommendations-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/Enable_product_recommendations_-_1_-_EN.png)
-Likewise, you can modify the CSS style sheet directly in the edit box.
+Likewise, you can modify the CSS stylesheet directly in the edit box.
 
 When you have finished, make sure you click the `Save` button.
 
