@@ -19,7 +19,7 @@ You can perform JavaScript customizations on the  `checkout-instore-custom.js` f
 2. In the main menu, click on **Checkout**.
 3. Click on the store's gear symbol, as shown in the image below.
 ![sales-app-customizations-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_1_-_EN.png)
-4. Click on the **Code** tab and finally on the `checkout-instore-custom.js` file, which is in the **Files** list on the right-hand side of the screen, as illustrated in the image below.
+4. Click on the **Code** tab and then click on the `checkout-instore-custom.js` file, which is in the **Files** list on the right side of the screen, as illustrated in the image below.
    ![sales-app-customizations-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_2_-_EN.png)
 
 > ℹ️️ If you want to access the `checkout-instore-custom.js` file directly, you can enter the following URL in your browser: `https://{{AccountName}}.myvtex.com/admin/portal#/sites/default/code/files/checkout-instore-custom.js`. Make sure you replace `{{AccountName}}` with your VTEX account name.
