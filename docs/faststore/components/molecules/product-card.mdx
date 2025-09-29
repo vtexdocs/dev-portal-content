@@ -9,10 +9,10 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/ProductCard)
 
-The `ProductCard` displays summarized information about a product. They usually present a call-to-action button, as well as the product's name, price, and image.The `ProductCard` is a compound of the following:
+The `ProductCard` displays summarized information about a product. It usually present a call-to-action button, as well as the product's name, price, and image.The `ProductCard` is a compound of the following:
 
 - `ProductCardImage`: wraps the product's image.
-- `ProductCardContent`: wraps the content's details.
+- `ProductCardContent`: wraps the content details.
 
 Use the `ProductCard` to:
 
@@ -152,7 +152,7 @@ Prefer using `buyButton` or `discountBadge`, never both.
         onButtonClick={() => {}}
       />
     </ProductCard>
-    ``` ```
+    ```
   </Tab>
 </Tabs>
 
@@ -211,7 +211,7 @@ Prefer using `buyButton` or `discountBadge`, never both.
 
 ### Out of Stock
 
-To replicate this style, add `outOfStock` prop on both `ProductCard` and `ProductCardContent`.
+To replicate this style, add `outOfStock` prop to both `ProductCard` and `ProductCardContent`.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -464,19 +464,6 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   <TokenRow
     token="--fs-order-summary-taxes-text-weight"
     value="var(--fs-text-weight-regular)"
-  />
-</TokenTable>
-
-### Sponsored Label
-
-<TokenTable>
-  <TokenRow 
-    token="--fs-product-card-sponsored-label-size"
-    value="var(--fs-text-size-tiny)" 
-  />
-  <TokenRow
-    token="--fs-product-card-sponsored-label-color"
-    value="var(--fs-color-text-light)"
   />
 </TokenTable>
 
