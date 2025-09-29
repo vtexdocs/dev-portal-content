@@ -43,7 +43,7 @@ Shoppers can filter available products globally using the **Filter by store** op
 
 On PLPs or search pages, the shopper has the following options for applying filters: [Delivery Methods](#delivery-methods-filters) and [Delivery Option](#delivery-option-filters).
 
->⚠️ To edit the filters labels, follow the instructions on [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
+>⚠️ To edit the filter labels, follow the instructions on [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 #### Delivery Methods
 
@@ -56,7 +56,7 @@ This filter displays available products according to the shopper's location. Wit
 | **All delivery methods** | Displays products that match all active delivery method filters: **Shipping to**, **Pickup anywhere**, **Pickup at**, **Pickup nearby**. |
 | **Shipping to**  |  Displays products that can be shipped to the customer's specified location. |
 | **Pickup anywhere** | Displays products available for pickup at any participating store within the merchant's network, rather than restricting results to a selected pickup location or geographic proximity. This is often used by B2B stores. |
-| **Pickup at** | Displays the store set in the global pickup point filter or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper can click on it and select a new store in the modal that opens. This filter shows all available pickup points within a 50-km radius for pickup, as configured in Checkout. The number of pickup points displayed is unlimited. |
+| **Pickup at** | Displays the store specified in the global pickup point filter or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper can click on it and select a new store in the modal that opens. This filter shows all available pickup points within a 50-km radius for pickup, as configured in Checkout. The number of pickup points displayed is unlimited. |
 | **Pickup nearby** | Displays products available for pickup at the shopper's nearby stores. This filter shows up to 40 pickup points within 10 km of the shopper's location. |
 
 #### Delivery Option
@@ -80,7 +80,7 @@ This filter help shoppers refine product results based on whether items can actu
 
 ## Badges
 
-When Delivery Promise data is available, the ProductCard automatically displays badges so shoppers can quickly see shipping and pickup availability for their location.
+When Delivery Promise data is available, the `ProductCard` automatically displays badges so shoppers can quickly see shipping and pickup availability for their location.
 
 ![delivery-promise-badges](https://vtexhelp.vtexassets.com/assets/docs/src/dp-badges___4b6a40b957e4eb45da5a854e676dce77.png)
 
@@ -92,7 +92,7 @@ In the following table, see the available types of badges:
 | `Available for pickup` or `Unavailable for pickup` | Indicates that the product can be collected from a nearby pickup point. |
 | No badges available    | The product is out of stock. Delivery and pickup are unavailable. |
 
->⚠️ To edit the badges labels or unable the badges, follow the instructions on [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
+>⚠️ To edit the badge labels or disable the badges, follow the instructions on [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 ## Understanding location priority
 
