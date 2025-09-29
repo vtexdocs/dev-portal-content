@@ -33,7 +33,7 @@ To make any changes to the file, simply add or modify the lines of code directly
 Once you are done, click on the `Save` button, as shown in the image below.
 ![sales-app-customizations-3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_3_-_EN.png)
 
->⚠️ Always follow the customization instructions in this documentation and only make changes as indicated here, or VTEX Sales App may not work as expected.
+>⚠️ Always follow the customization instructions in this documentation and only make changes as indicated here, otherwise, VTEX Sales App may not work as expected.
 
 ## CSS customizations
 
