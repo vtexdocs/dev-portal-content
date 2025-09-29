@@ -435,6 +435,20 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   />
 </TokenTable>
 
+### Sponsored Label
+
+<TokenTable>
+  <TokenRow 
+    token="--fs-product-card-sponsored-label-size"
+    value="var(--fs-text-size-tiny)" 
+  />
+  <TokenRow
+    token="--fs-product-card-sponsored-label-color"
+    value="var(--fs-color-text-light)"
+  />
+</TokenTable>
+
+
 ### Tax Label
 
 <TokenTable>
@@ -453,7 +467,66 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   />
 </TokenTable>
 
-### Desing tokens: Out of Stock
+### Sponsored Label
+
+<TokenTable>
+  <TokenRow 
+    token="--fs-product-card-sponsored-label-size"
+    value="var(--fs-text-size-tiny)" 
+  />
+  <TokenRow
+    token="--fs-product-card-sponsored-label-color"
+    value="var(--fs-color-text-light)"
+  />
+</TokenTable>
+
+### Wide
+
+<TokenTable>
+  <TokenRow token="--fs-product-card-wide-padding" value="0" />
+  <TokenRow
+    token="--fs-product-card-wide-content-padding"
+    value="var(--fs-spacing-2)"
+  />
+  <TokenRow token="--fs-product-card-wide-min-width" value="9rem" />
+  <TokenRow
+    token="--fs-product-card-wide-bkg-color"
+    value="var(--fs-color-neutral-bkg)"
+    isColor
+  />
+</TokenTable>
+
+### Design tokens: Delivery Promise badges
+
+<TokenTable>
+  <TokenRow
+    token="--fs-product-card-delivery-promise-badge-text-size"
+    value="var(--fs-text-size-tiny)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-product-card-delivery-promise-badge-status-width"
+    value="var(--fs-spacing-1)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-product-card-delivery-promise-badge-status-border-radius"
+    value="var(--fs-border-radius-circle)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-product-card-delivery-promise-badge-status-available"
+    value="var(--fs-color-success-2)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-product-card-delivery-promise-badge-status-unavailable"
+    value="var(--fs-color-neutral-bkg)"
+    isColor
+  />
+</TokenTable>
+
+### Design tokens: Out of Stock
 
 <TokenTable>
   <TokenRow
@@ -469,7 +542,7 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   <TokenRow token="--fs-product-card-out-of-stock-img-opacity" value=".5" />
 </TokenTable>
 
-### Desing tokens: Bordered
+### Design tokens: Bordered
 
 <TokenTable>
   <TokenRow
@@ -479,22 +552,6 @@ To replicate this style, add `outOfStock` prop on both `ProductCard` and `Produc
   <TokenRow
     token="--fs-product-card-border-color"
     value="var(--fs-border-color-light)"
-    isColor
-  />
-</TokenTable>
-
-#### Wide
-
-<TokenTable>
-  <TokenRow token="--fs-product-card-wide-padding" value="0" />
-  <TokenRow
-    token="--fs-product-card-wide-content-padding"
-    value="var(--fs-spacing-2)"
-  />
-  <TokenRow token="--fs-product-card-wide-min-width" value="9rem" />
-  <TokenRow
-    token="--fs-product-card-wide-bkg-color"
-    value="var(--fs-color-neutral-bkg)"
     isColor
   />
 </TokenTable>
@@ -531,7 +588,7 @@ You can target and override `ProductCard` styles using the following data attrib
 
 ## Props
 
-All product card related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
+All product card-related components support all attributes also supported by their respective HTML tags. Besides those attributes, the following props are also supported:
 
 ### ProductCard
 
