@@ -48,13 +48,18 @@ When you have finished, make sure you click the `Save` button.
 
 You can make the following customizations on VTEX Sales App:
 
-- [Customize VTEX Sales App login options](https://developers.vtex.com/vtex-rest-api/docs/customize-vtex-sales-app-login-options)
 - [Change VTEX Sales App language](https://developers.vtex.com/vtex-rest-api/docs/change-vtex-sales-app-language)
+- [Hide anonymous customer option](https://developers.vtex.com/docs/guides/hide-anonymous-customer-option)
+- [Define payment methods displayed on VTEX Sales App](https://developers.vtex.com/docs/guides/define-payment-methods-displayed-on-vtex-sales-app)
 - [Enable the Observation field in the order screen](https://developers.vtex.com/vtex-rest-api/docs/enable-the-remarks-field-in-the-order-screen)
 - [Enable the sales associate code](https://developers.vtex.com/vtex-rest-api/docs/sales-associate-code)
 - [Enable cart transfer and capture between devices](https://developers.vtex.com/vtex-rest-api/docs/enable-cart-transfer-between-devices)
 - [Force stock availability](https://developers.vtex.com/vtex-rest-api/docs/force-stock-availability)
-- [Set up the order summary printing](https://developers.vtex.com/vtex-rest-api/docs/set-up-the-order-summary-printing)
-- [Define payment methods displayed on VTEX Sales App](https://developers.vtex.com/vtex-rest-api/docs/define-payment-methods-displayed-on-vtex-sales-app)
+- [Add extra text to the order summary print](https://developers.vtex.com/docs/guides/add-extra-text-to-the-order-print)
+- [Hide Print order and Reprint receipt buttons](https://developers.vtex.com/docs/guides/hide-print-order-and-reprint-receipt-buttons)
+- [Enable partial cancellation for Debit or Credit Direct sales](https://developers.vtex.com/docs/guides/enable-partial-cancellation)
+- [Hide cancellation buttons](https://developers.vtex.com/docs/guides/hide-cancellation-buttons)
+- [Allow manual prices on VTEX Sales App](https://developers.vtex.com/docs/guides/allow-manual-prices-on-vtex-sales-app)
+- [Integration VTEX Sales App Local stock sale](https://developers.vtex.com/docs/guides/integration-vtex-sales-app-local-stock-sale)
 
 You can find more information on how to set up each customization on the following guides.
