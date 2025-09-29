@@ -1,6 +1,7 @@
 ---
 title: "Enable the Observation field in the order screen"
 slug: "enable-the-remarks-field-in-the-order-screen"
+excerpt: "Learn how to enable the Observation field in the VTEX Sales App order screen to capture additional order information."
 hidden: false
 createdAt: "2021-08-11T19:48:00.546Z"
 updatedAt: "2025-09-29T15:35:52.440Z"
