@@ -62,4 +62,4 @@ You can make the following customizations on VTEX Sales App:
 - [Allow manual prices on VTEX Sales App](https://developers.vtex.com/docs/guides/allow-manual-prices-on-vtex-sales-app)
 - [Integration VTEX Sales App Local stock sale](https://developers.vtex.com/docs/guides/integration-vtex-sales-app-local-stock-sale)
 
-You can find more information on how to set up each customization on the following guides.
+You can find more information on how to set up each customization in the following guides.
