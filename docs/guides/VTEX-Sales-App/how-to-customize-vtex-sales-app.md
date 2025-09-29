@@ -15,7 +15,7 @@ You can customize the VTEX Sales App experience according to your business needs
 
 You can perform JavaScript customizations on the  `checkout-instore-custom.js` file, which you must access from the VTEX Admin home, following the steps below.
 
-1. Access `https://{{AccountName}}.myvtex.com/admin` and following the steps below. Remember to replace `{{AccountName}}` with your VTEX account name.
+1. Access `https://{{AccountName}}.myvtex.com/admin` and follow the steps below. Remember to replace `{{AccountName}}` with your VTEX account name.
 2. In the main menu, click on **Checkout**.
 3. Click on the store's gear symbol, as shown in the image below.
 ![sales-app-customizations-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_1_-_EN.png)
