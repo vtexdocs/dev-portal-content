@@ -18,9 +18,9 @@ You can perform JavaScript customizations on the  `checkout-instore-custom.js` f
 1. Access `https://{{AccountName}}.myvtex.com/admin` and following the steps below. Remember to replace `{{AccountName}}` with your VTEX account name.
 2. In the main menu, click on **Checkout**.
 3. Click on the store's gear symbol, as shown in the image below.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_1_-_EN.png)
+![sales-app-customizations-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_1_-_EN.png)
 4. Click on the **Code** tab and finally on the `checkout-instore-custom.js` file, which is in the **Files** list on the right-hand side of the screen, as illustrated in the image below.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_2_-_EN.png)
+   ![sales-app-customizations-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_2_-_EN.png)
 
 > ℹ️️ If you want to access the `checkout-instore-custom.js` file directly, you can enter the following URL in your browser: `https://{{AccountName}}.myvtex.com/admin/portal#/sites/default/code/files/checkout-instore-custom.js`. Make sure you replace `{{AccountName}}` with your VTEX account name.
 
@@ -31,7 +31,7 @@ You can perform JavaScript customizations on the  `checkout-instore-custom.js` f
 To make any changes to the file, simply add or modify the lines of code directly in the file edit box. Check out our list of possible customizations to learn more.
 
 Once you are done, click on the `Save` button, as shown in the image below.
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_3_-_EN.png)
+![sales-app-customizations-3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/inStore_Customizations_-_3_-_EN.png)
 
 >⚠️ Always follow the customization instructions in this documentation and only make changes as indicated here, or VTEX Sales App may not work as expected.
 
@@ -39,7 +39,7 @@ Once you are done, click on the `Save` button, as shown in the image below.
 
 For CSS customizations, you need to edit the  `checkout-instore-custom.css` file, which you can access by following the same steps as to open the [JavaScript customizations](#javascript-customizations) file. In the **Files** section, just remember to open `checkout-instore-custom.css` instead.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/Enable_product_recommendations_-_1_-_EN.png)
+![enable-product-recommendations-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/Enable_product_recommendations_-_1_-_EN.png)
 Likewise, you can modify the CSS style sheet directly in the edit box.
 
 When you have finished, make sure you click the `Save` button.
