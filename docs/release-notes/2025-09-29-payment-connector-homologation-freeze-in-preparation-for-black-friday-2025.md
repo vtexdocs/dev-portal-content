@@ -1,6 +1,6 @@
 ---
-title: "Apps and payment connector homologation freeze in preparation for Black Friday 2025"
-slug: "2025-09-29-apps-and-payment-connector-homologation-freeze-in-preparation-for-black-friday-2025"
+title: "Payment connector homologation freeze in preparation for Black Friday 2025"
+slug: "2025-09-29-payment-connector-homologation-freeze-in-preparation-for-black-friday-2025"
 type: "info"
 createdAt: "2025-09-29T00:00:00.661Z"
 updatedAt: "2025-09-29T00:00:00.661Z"
@@ -11,7 +11,7 @@ A homologation freeze is a behavior adopted by VTEX in the period before Black F
 
 ## How is the freeze done?
 
-We will have a deadline for receiving requests for approval and publication of apps in the App Store and payment connectors in our gateway. Therefore, tickets opened after the deadline will be queued for publishing and updating but will not be updated before Black Friday, November 28, 2025. After Cyber Monday week, our team will resume its regular schedule with periodic request updates.
+We will have a deadline for receiving requests for approval and publication of payment connectors in our gateway. Therefore, tickets opened after the deadline will be queued for publishing and updating but will not be updated before Black Friday, November 28, 2025. After Cyber Monday week, our team will resume its regular schedule with periodic request updates.
 
 > ⚠️ The homologation freeze period also applies to tickets for connector or connector template updates at checkout, requests for [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy) endpoints, and adding accounts to the IO [PPF](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework) feature flag.
 
@@ -25,8 +25,8 @@ The homologation freeze dates are:
 
 ## Additional information
 
-The commitment to homologate apps and payment connectors is only valid for official VTEX partners and their specific operating regions.
+The commitment to homologate payment connectors is only valid for official VTEX partners and their specific operating regions.
 
 If the homologation sent within the deadline needs to be changed or fixed by the partner, this adjustment must also be made respecting the limit of our freeze schedule presented above regarding **the homologation deadline** on November 13, 2025.
 
-For more information about the homologation of apps and payment connectors, visit [Submit your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store) and [Payment Provider Homologation](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-homologation).
+For more information about the homologation of payment connectors, visit [Payment Provider Homologation](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-payment-provider-homologation).
