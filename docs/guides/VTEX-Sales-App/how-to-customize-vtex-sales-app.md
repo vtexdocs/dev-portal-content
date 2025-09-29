@@ -7,7 +7,7 @@ createdAt: "2021-08-11T17:17:40.610Z"
 updatedAt: "2025-09-29T17:32:46.010Z"
 ---
 
-[VTEX Sales App](https://help.vtex.com/en/tracks/vtex-sales-app-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc) is VTEX's main product for Unified Commerce operations. It’s an app that enables your store to provide a true omnichannel experience, seamlessly integrating your online and physical channels, and placing your customers at the business core.
+[VTEX Sales App](https://help.vtex.com/en/tracks/vtex-sales-app-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc) is VTEX's main product for Unified Commerce operations. It’s an app that enables your store to provide a true omnichannel experience, seamlessly integrating your online and physical channels, and placing your customers at the core of the business.
 
 You can customize the VTEX Sales App experience according to your business needs by editing custom [JavaScript](#javascript-customizations) and [CSS](#css-customizations) files.
 
