@@ -33,22 +33,66 @@ Delivery Promise offers shoppers two product filtering options:
 
 ### Global filters
 
-Global filters remain active across all user navigation and are applied to all product searches until they change or are cleared.
+Global filters remain active across all user navigation and are applied to all product searches until they are changed or cleared.
 
-Shoppers can filter available products globally using the **Filter by store**, which displays only products available for pickup at a specific store. This filter shows all available pickup points within a 50 km pickup radius configured in Checkout. The number of pickup points displayed is unlimited.
+Shoppers can filter available products globally using the **Filter by store** option, which displays only products available for pickup at a specific store. This filter shows all available pickup points within a 50-km radius, as configured in Checkout. The number of pickup points displayed is unlimited.
 
-![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/by-store___745e8c3ae10a84e55f88b107e5b00218.png)
+![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/dp-filter-by-store___6e22784e6d6a26719d8d7fbc6dfa0e43.gif)
 
 ### PLP or search page filters
 
-In PLPs or search pages, the shopper may have the following options to filter:
+On PLPs or search pages, the shopper has the following options for applying filters: [Delivery Methods](#delivery-methods-filters) and [Delivery Option](#delivery-option-filters).
 
-* **Deliver to:** Displays available products according to the shopper's location.
-* **Pickup at:** Displays the store set in the global pickup point filter, or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper can click on it and select a new store in the modal that opens. This filter shows all available pickup points within a 50 km radius for pickup configured in Checkout. The number of pickup points displayed is unlimited.
-* **Pickup nearby:** Displays products available for pickup at nearby stores. This filter shows up to 40 pickup points within 10 km of the shopper's location.
-* **Pickup anywhere:** Displays products available for pickup at any participating store within the merchant's network, rather than restricting results to a selected pickup location or geographic proximity. **It's mainly used by B2B stores**.
+>⚠️ To edit the filter labels, follow the instructions in [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
-![plp-filters](https://vtexhelp.vtexassets.com/assets/docs/src/plp-by-shipping___e9ba4d4e3f0840c3ec53dc94ac7aafc4.png)
+#### Delivery Methods
+
+This filter displays available products according to the shopper's location. With this option, shoppers can filter using the following options:
+
+![dp-delivery-methods](https://vtexhelp.vtexassets.com/assets/docs/src/dp-filters-delivery-method___945ea013036a9ebebfc0078cb93796d9.png)
+
+| **Filter option** | **Description** |
+| ----------------- | --------------- |
+| **All delivery methods** | Displays products that match all active delivery method filters: **Shipping to**, **Pickup anywhere**, **Pickup at**, and **Pickup nearby**. |
+| **Shipping to**  |  Displays products that can be shipped to the shopper's specified location. |
+| **Pickup anywhere** | Displays products available for pickup at any participating store within the merchant's network, rather than restricting results to a selected pickup location or geographic proximity. This is often used by B2B stores. |
+| **Pickup at** | Displays the store specified in the global pickup point filter or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper can click it and select a new store in the modal that opens. This filter shows all available pickup points within a 50-km radius, as configured in Checkout. The number of pickup points displayed is unlimited. |
+| **Pickup nearby** | Displays products available for pickup at the shopper's nearby stores. This filter shows up to 40 pickup points within 10 km of the shopper's location. |
+
+#### Delivery Option
+
+This filter allows shoppers to refine search results based on the type of delivery or pickup method available for each item, helping to find products that match the shopper's preferred fulfillment method.
+
+![dp-delivery-methods](https://vtexhelp.vtexassets.com/assets/docs/src/dp-filters-delivery-option___d913a8211dbd4eacb01699349cf6860b.png)
+
+| **Filter option** | **Description** |
+| ----------------- | --------------- |
+| **All delivery options** | Displays all products, regardless of their delivery availability. |
+| **Express**  | Displays products eligible for fast delivery, in less than one hour. |
+| **Standard** | Displays products available for pickup within four to six hours. |
+| **Pickup in 1 hour** | Displays products available for pickup in one hour. |
+
+#### Availability
+
+This filter helps shoppers refine product results based on whether items can actually be purchased and fulfilled, preventing the display of products they can't immediately purchase in their preferred way and narrowing results to only what's actually in stock.
+
+![dp-delivery-methods](https://vtexhelp.vtexassets.com/assets/docs/src/dp-filters-availability___6869a2af7413b1a1e58b48cc558d03cc.gif)
+
+## Badges
+
+When Delivery Promise data is available, the `ProductCard` automatically displays badges so shoppers can quickly see shipping and pickup availability for their location.
+
+![delivery-promise-badges](https://vtexhelp.vtexassets.com/assets/docs/src/dp-badges___4b6a40b957e4eb45da5a854e676dce77.png)
+
+In the following table, see the available types of badges:
+
+| Badge label | Description |
+| ---------- | ----------- |
+| `Available for shipping` or `Unavailable for shipping` | Indicates whether the product can be shipped to the shopper's postal code. |
+| `Available for pickup` or `Unavailable for pickup` | Indicates that the product can be collected from a nearby pickup point. |
+| No badges available    | The product is out of stock. Delivery and pickup are unavailable. |
+
+>⚠️ To edit the badge labels or disable the badges, follow the instructions in [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 ## Understanding location priority
 
@@ -56,9 +100,9 @@ To provide accurate Delivery Promise estimates, FastStore projects determine use
 
 1. **Logged-in user's address:** If the user is logged in and has a saved address, this information is used.
 2. **User-provided location:** If the user is logged in but doesn't have a saved address, or isn't logged in but provides their location, like a postal code, this data is used.
-3. **Default postal code:** If the user hasn't provided a location, isn't logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
+3. **Default postal code:** If the user hasn't provided a location, isn't logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn how to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
 4. **No postal code (not required):** If no postal code is provided and not required, products are displayed without using Delivery Promise.
-5. **No postal code (required):** If no postal code is provided when required, a modal is displayed that the buyer can't close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
+5. **No postal code (required):** If no postal code is provided when required, a modal is displayed that the buyer cannot close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
 
 To better understand how this flow works, see the following diagram:
 
