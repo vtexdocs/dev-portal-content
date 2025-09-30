@@ -59,7 +59,7 @@ To use the new builder version, developers must update their apps:
     }
     ```
 
-For private queries, include the authorization requirements:
+    For private queries, include the authorization requirements:
 
     ```graphql
     type Query {
