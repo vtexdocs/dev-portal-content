@@ -110,7 +110,7 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
 {
   "codes": [
     {
-      "code": "window.INSTORE_CONFIG = {\n  noteAsVendorCode: {\n       type: 'text',\n       skipValidation: true,\n       mask: '^\\\\d{2}$',\n    \t autofil: false,\n   },\n}",
+      "code": "window.INSTORE_CONFIG = {\n  noteAsVendorCode: {\n       type: 'text',\n       skipValidation: true,\n       mask: '^\\\\d{2}$',\n    \t autofill: false,\n   },\n}",
       "language": "javascript"
     }
   ]
