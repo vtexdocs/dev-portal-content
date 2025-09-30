@@ -83,7 +83,7 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
 
 ### Use cases
 
-- <strong>Validation according to sales associate’s document ID</strong>: in this example, the regular expression applied in the mask expresses that the code has three numbers and two letters.
+- <strong>Validation according to sales associate's document ID</strong>: in this example, the regular expression applied in the mask expresses that the code has three numbers and two letters.
 [block:code]
 {
   "codes": [
