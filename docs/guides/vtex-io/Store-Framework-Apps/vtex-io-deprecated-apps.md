@@ -4,13 +4,13 @@ slug: "vtex-io-deprecated-apps"
 excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
-updatedAt: "2025-08-25T13:47:49.838Z"
+updatedAt: "2025-09-30T14:17:18.850Z"
 ---
 
 A deprecated app refers to an application no longer supported or maintained by VTEX, meaning that:
 
 - VTEX no longer provides technical support.
-- VTEX is not liable for issues arising from their use.
+- VTEX is not liable for issues arising from its use.
 - VTEX will not provide bug fixes, updates, or security patches.
 - VTEX will not develop new features.
 - The documentation will not be updated.
@@ -109,9 +109,13 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
+| Advanced seller onboarding      | `vtexromania.advanced-seller-onboarding` |
 | Glovo                          | `vtex.glovo-integration`               |
 | Lengow                         | `vtex.lengow-integration`              |
+| Mktplace Financial Commissions | `vtex.marketplace-financial-commission` |
+| Mktplace Mapper                | `vtex.seller-mkp-mapper`               |
 | Octopia (casino)               | `vtex.octopia-integration`             |
+| Seller Products Import         | `vtex.seller-products-import`          |
 
 ### Observability
 
@@ -161,7 +165,6 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | newsman pixel    | `vtex.newsman`                        |
 | Podium           | `vtex.podium-pixel`                   |
 | retargeting pixel| `vtex.retargeting`                    |
-| Tiktok           | `vtexbr.tiktok-tbp`                   |
 | Treasure Data    | `vtex.treasure-data-pixel`            |
 | Wordpress App    | `vtex.wordpress-integration`          |
 
