@@ -43,7 +43,7 @@ Shoppers can filter available products globally using the **Filter by store** op
 
 On PLPs or search pages, the shopper has the following options for applying filters: [Delivery Methods](#delivery-methods-filters) and [Delivery Option](#delivery-option-filters).
 
->⚠️ To edit the filter labels, follow the instructions on [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
+>⚠️ To edit the filter labels, follow the instructions in [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 #### Delivery Methods
 
@@ -53,7 +53,7 @@ This filter displays available products according to the shopper's location. Wit
 
 | **Filter option** | **Description** |
 | ----------------- | --------------- |
-| **All delivery methods** | Displays products that match all active delivery method filters: **Shipping to**, **Pickup anywhere**, **Pickup at**, **Pickup nearby**. |
+| **All delivery methods** | Displays products that match all active delivery method filters: **Shipping to**, **Pickup anywhere**, **Pickup at**, and **Pickup nearby**. |
 | **Shipping to**  |  Displays products that can be shipped to the shopper's specified location. |
 | **Pickup anywhere** | Displays products available for pickup at any participating store within the merchant's network, rather than restricting results to a selected pickup location or geographic proximity. This is often used by B2B stores. |
 | **Pickup at** | Displays the store specified in the global pickup point filter or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper can click it and select a new store in the modal that opens. This filter shows all available pickup points within a 50-km radius, as configured in Checkout. The number of pickup points displayed is unlimited. |
@@ -68,9 +68,9 @@ This filter allows shoppers to refine search results based on the type of delive
 | **Filter option** | **Description** |
 | ----------------- | --------------- |
 | **All delivery options** | Displays all products, regardless of their delivery availability. |
-| **Express**  | Displays products eligible for fast delivery, in less than 1 hour. |
-| **Standard** | Displays products available for pickup within 4–6 hours. |
-| **Pickup in 1 hour** | Displays products available for pickup in 1 hour. |
+| **Express**  | Displays products eligible for fast delivery, in less than one hour. |
+| **Standard** | Displays products available for pickup within four to six hours. |
+| **Pickup in 1 hour** | Displays products available for pickup in one hour. |
 
 #### Availability
 
@@ -92,7 +92,7 @@ In the following table, see the available types of badges:
 | `Available for pickup` or `Unavailable for pickup` | Indicates that the product can be collected from a nearby pickup point. |
 | No badges available    | The product is out of stock. Delivery and pickup are unavailable. |
 
->⚠️ To edit the badge labels or disable the badges, follow the instructions on [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
+>⚠️ To edit the badge labels or disable the badges, follow the instructions in [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 ## Understanding location priority
 
@@ -100,9 +100,9 @@ To provide accurate Delivery Promise estimates, FastStore projects determine use
 
 1. **Logged-in user's address:** If the user is logged in and has a saved address, this information is used.
 2. **User-provided location:** If the user is logged in but doesn't have a saved address, or isn't logged in but provides their location, like a postal code, this data is used.
-3. **Default postal code:** If the user hasn't provided a location, isn't logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
+3. **Default postal code:** If the user hasn't provided a location, isn't logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn how to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
 4. **No postal code (not required):** If no postal code is provided and not required, products are displayed without using Delivery Promise.
-5. **No postal code (required):** If no postal code is provided when required, a modal is displayed that the buyer can't close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
+5. **No postal code (required):** If no postal code is provided when required, a modal is displayed that the buyer cannot close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
 
 To better understand how this flow works, see the following diagram:
 
