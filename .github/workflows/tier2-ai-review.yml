@@ -1,0 +1,95 @@
+name: Tier 2 - AI Review
+
+on:
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  ai-review:
+    if: github.event.comment.body == '/ai-review' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        id: get-files
+        uses: tj-actions/changed-files@v44
+        with:
+          json: true
+          escape_json: false
+          files: |
+            **/*.md
+            **/*.mdx
+
+      - name: Check if there are changed files
+        id: check-files
+        run: |
+          files='${{ steps.get-files.outputs.all_modified_files }}'
+          if [ "$files" = "[]" ] || [ -z "$files" ]; then
+            echo "no-files=true" >> $GITHUB_ENV
+            echo "No markdown/MDX files changed in this PR"
+          else
+            echo "no-files=false" >> $GITHUB_ENV
+            echo "Found changed files: $files"
+          fi
+
+      # AI Grammar Review
+      - name: Run AI Grammar Review
+        if: env.no-files == 'false'
+        uses: vtexdocs/ai-grammar-reviewer-action@v0
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # AI Documentation Review
+      - name: Run AI Documentation Review
+        if: env.no-files == 'false'
+        uses: vtexdocs/ai-documentation-reviewer-action@v1.2
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          file_paths: ${{ steps.get-files.outputs.all_modified_files }}
+
+      # Summary comment
+      - name: Comment AI Review Summary
+        if: env.no-files == 'false'
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            ## 🤖 AI Review Complete
+            
+            AI-powered content review has been completed for your changes.
+            
+            **Review includes:**
+            - ✅ Grammar and language quality
+            - ✅ Content structure and clarity
+            - ✅ Writing style and tone
+            - ✅ Technical accuracy suggestions
+            
+            Please review the inline suggestions above and consider the AI feedback for improving your content.
+            
+            **Re-run AI review**: Comment `/ai-review` again to get updated feedback after making changes.
+            
+            ---
+            *This review was triggered by ${{ github.event.sender.login }}*
+          comment-tag: tier2-ai-summary
+
+      - name: Comment if no files to review
+        if: env.no-files == 'true'
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            ## 🤖 AI Review
+            
+            No markdown or MDX files were found to review in this PR.
+            
+            **To trigger AI review:**
+            - Make sure your PR includes changes to `.md` or `.mdx` files
+            - Comment `/ai-review` again after adding content changes
+          comment-tag: tier2-no-files

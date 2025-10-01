@@ -1,0 +1,155 @@
+name: Tier 1 - Technical Checks
+
+on:
+  pull_request:
+    types: [opened]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  technical-checks:
+    # Run on PR open, /basic-review comment, or manual dispatch
+    if: github.event_name == 'pull_request' || github.event.comment.body == '/basic-review' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Reviewdog
+        uses: reviewdog/action-setup@v1
+
+      - name: Get changed markdown files
+        id: changed-markdown-files
+        uses: tj-actions/changed-files@v45
+        with:
+          files: |
+            **/*.md
+            **/*.mdx
+
+      # Markdown Linting
+      - name: Run markdownlint
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        uses: reviewdog/action-markdownlint@v0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          filter_mode: file
+          markdownlint_flags: |
+            --disable MD013
+            --disable MD033
+            -- .
+
+      # Link Checking
+      - name: Install link check dependencies
+        run: |
+          npm install node-fetch
+          npm install @actions/core@1.10
+
+      - name: Check for broken links
+        id: collect-broken-link-issues
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+        run: |
+          > link_issues.txt
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "Checking for broken links in $file"
+            node .github/scripts/check-links-pr.mjs "./$file" >> link_issues.txt || true
+          done
+          if [ -s link_issues.txt ]; then
+            echo "link-issues=true" >> $GITHUB_ENV
+          fi
+
+      - name: Run Reviewdog for link issues
+        if: env.link-issues == 'true'
+        run: |
+          reviewdog -efm="%f:%l:%c:%m" -name="link-check" -reporter=github-pr-review < link_issues.txt
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Style Guide Checking
+      - name: Install style check dependencies
+        run: npm install @actions/core@1.10
+
+      - name: Run style checker
+        id: style-check
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        run: |
+          > style_issues.txt
+          for file in ${{ steps.changed-markdown-files.outputs.all_changed_files }}; do
+            echo "Running styleguide checker on $file"
+            node .github/scripts/check-styleguide.js "./$file" >> style_issues.txt || true
+          done
+          if [ -s style_issues.txt ]; then
+            echo "style-issues=true" >> $GITHUB_ENV
+          fi
+
+      - name: Run Reviewdog for style issues
+        if: env.style-issues == 'true'
+        run: |
+          reviewdog -efm="%f:%l:%c:%m" -name="style-check" -reporter=github-pr-review < style_issues.txt
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Frontmatter Validation
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          pip install PyGithub
+          pip install pyyaml
+
+      - name: Run frontmatter review
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/check_frontmatter.py
+
+      # Write Good Quality Check
+      - name: Setup textlint
+        run: |
+          npm install -g textlint
+          npm install -g textlint-rule-write-good
+
+      - name: Run textlint
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        uses: tsuyoshicho/action-textlint@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          filter_mode: file
+          textlint_flags: "--rule textlint-rule-write-good docs/**"
+
+      # Summary comment if there are issues
+      - name: Comment on PR if issues found
+        if: env.link-issues == 'true' || env.style-issues == 'true'
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            ## 🔍 Technical Checks Summary
+            
+            The following technical issues were found:
+            
+            - **Link Issues**: ${{ env.link-issues == 'true' && '❌ Found broken links' || '✅ All links working' }}
+            - **Style Issues**: ${{ env.style-issues == 'true' && '❌ Found style guide violations' || '✅ Style guide compliant' }}
+            
+            Please review the inline suggestions above and fix any issues.
+            
+            **Re-run checks**: Comment `/basic-review` to re-run these checks after making changes.
+          comment-tag: tier1-summary

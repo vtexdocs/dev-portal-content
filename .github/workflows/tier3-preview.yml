@@ -1,0 +1,154 @@
+name: Tier 3 - Preview Generation
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get branch name
+        id: get-branch-name
+        uses: tj-actions/branch-names@v7
+
+      - name: Get changed markdown files
+        id: get-changed-markdown-files
+        uses: tj-actions/changed-files@v36
+        with:
+          files: |
+            **/*.md
+            **/*.mdx
+
+      - name: Get changed navigation file
+        id: get-changed-navigation-file
+        uses: tj-actions/changed-files@v36
+        with:
+          files: |
+            navigation.json
+
+      # Fetch navigation for page previews
+      - name: Fetch navigation.json
+        run: curl -o ./navigation.json https://developers.vtex.com/navigation.json
+
+      # Map slugs to paths for page previews
+      - name: Map slugs to paths
+        id: map-slugs-to-paths
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const navigation = require('./navigation.json')
+
+            const paths = {}
+            const slugsToPaths = (slugPrefix, obj) => {
+              if (!obj || typeof obj !== 'object') return
+
+              if (obj.slug && obj.type === 'markdown') {
+                paths[obj.slug] = `${slugPrefix}${obj.slug}`
+              }
+
+              for (const key in obj) {
+                slugsToPaths(slugPrefix, obj[key])
+              }
+            }
+
+            navigation.navbar.forEach(({ slugPrefix, categories }) => slugsToPaths(slugPrefix.endsWith('/') ? slugPrefix : `${slugPrefix}/`, categories))
+            core.setOutput('slugs-to-paths', JSON.stringify(paths))
+
+      # Generate page preview links
+      - name: Get page preview links
+        id: get-preview-links
+        uses: actions/github-script@v6
+        env:
+          BRANCH: ${{ steps.get-branch-name.outputs.head_ref_branch }}
+          FILES: ${{ steps.get-changed-markdown-files.outputs.all_changed_files }}
+          PATHS: ${{ steps.map-slugs-to-paths.outputs.slugs-to-paths }}
+        with:
+          script: |
+            const branch = process.env.BRANCH
+            const paths = JSON.parse(process.env.PATHS)
+            const files = process.env.FILES.split(' ')
+              .map(file => file.trim())
+              .filter(file => file !== '')
+
+            let output = ''
+            if (files.length === 0) {
+              output += 'No changes detected in any markdown/MDX file'
+            } else {
+              output += `Open [this URL](https://developers.vtex.com/api/preview?branch=${branch}) to set up the portal with this branch changes.\n\n`
+              output += 'You can now access the edited pages with the following URLs:\n'
+
+              for (const file of files) {
+                const parts = file.split('/');
+                const category = parts[1];
+                const slug = file.split('/').pop().split('.')[0];
+                
+                if (!paths[slug]) {
+                  output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file? `;
+                  if (category === "troubleshooting") {
+                    url = `https://developers.vtex.com/docs/troubleshooting/${slug}`;
+                  } else if (category === "release-notes") {
+                    url = `https://developers.vtex.com/updates/release-notes/${slug}`;
+                  } else if (category === "faststore") {
+                    const lastFolder = parts[parts.length - 2];
+                    url = `https://developers.vtex.com/docs/guides/faststore/${lastFolder}-${slug}`;
+                  } else {
+                    url = `https://developers.vtex.com/docs/guides/${slug}`;
+                  }
+                  output += `Maybe you can find it in ${url}\n`;
+                } else {
+                  output += `* https://developers.vtex.com/${paths[slug]}\n`;
+                }
+              }
+            }
+            
+            core.setOutput('preview-links', output)
+
+      # Generate navigation preview
+      - name: Get navigation preview link
+        id: get-navigation-preview
+        uses: actions/github-script@v6
+        env:
+          BRANCH: ${{ steps.get-branch-name.outputs.head_ref_branch }}
+          FILES: ${{ steps.get-changed-navigation-file.outputs.all_changed_files }}
+          REPO: ${{ github.repository }}
+        with:
+          script: |
+            const branch = process.env.BRANCH
+            const files = process.env.FILES
+            const repo = process.env.REPO
+
+            let output = ''
+            if (files.length === 0) {
+              output += 'No changes detected in the navigation.json file'
+            } else {
+              output += `Open [this URL](https://developers.vtex.com/editor/sidebar?file=https://raw.githubusercontent.com/${repo}/${branch}/navigation.json) to see the sidebar with the updated navigation file.\n\n`
+              output += '**Note**: The preview may take a few minutes to reflect the changes made.'
+            }
+
+            core.setOutput('navigation-preview', output)
+
+      # Combined preview comment
+      - name: Comment combined preview
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            ## 🔍 Preview Links
+            
+            ### Page Previews
+            ${{ steps.get-preview-links.outputs.preview-links }}
+            
+            ### Navigation Preview
+            ${{ steps.get-navigation-preview.outputs.navigation-preview }}
+            
+            ---
+            *Preview links are generated automatically when PRs are opened*
+          comment-tag: tier3-preview
