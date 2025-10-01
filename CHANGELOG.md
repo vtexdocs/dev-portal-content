@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.180](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.179...v1.1.180) (2025-10-01)
+
+
+### 📝 Documentation updates
+
+* **vtex-io-deprecated-apps.md:** EDU-15899 ([fb493aa](https://github.com/vtexdocs/dev-portal-content/commit/fb493aa54d394f53c1f87a88363af7422ab5183d))
+
 ### [1.1.179](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.177...v1.1.179) (2025-10-01)
 
 ### [1.1.177](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.175...v1.1.177) (2025-09-30)
