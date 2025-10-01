@@ -74,6 +74,17 @@ The SLA required for the payment team to carry out the homologation is 30 days. 
 
 > ❗ Do **not** open the ticket for homologation if the Logs box presents any type of error. Redo the operation until the Logs box results are clear. If you need help in this scenario, talk to your Partner Account Manager.
 
-> ❗ It is mandatory to open a ticket to VTEX Support. Without that, the implementation will not be recognized by our system.
+> ❗ It is mandatory to open a ticket with VTEX Support. Without doing so, the implementation will not be recognized by our system.
 
-After that, the VTEX support team will inform you if the implementation was done correctly.
+After that, the VTEX support team will inform you whether the implementation was performed correctly.
+
+## When is payment provider homologation not required?
+
+A connector is exempt from the payment provider homologation process only if all of the conditions below are met simultaneously:
+
+- It is a [PPF connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework), developed using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
+- It only uses payment methods already available on the VTEX platform.
+- It is installed locally, restricted to specific accounts.
+- The target account is already using any IO/PPF connector.
+
+> ⚠️ If any of these conditions is not satisfied, the connector must follow the homologation process.

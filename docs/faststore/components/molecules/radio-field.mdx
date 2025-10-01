@@ -7,9 +7,9 @@ components:
   - RadioField.tsx
 ---
 
-The `RadioField` wraps a [Radio](https://developers.vtex.com/docs/guides/faststore/atoms-radio) input and its corresponding [Label](/componentes/atoms/label). It allows users to select one option from a set.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/RadioField)
 
-## Overview
+The `RadioField` wraps a [Radio](https://developers.vtex.com/docs/guides/faststore/atoms-radio) input and its corresponding [Label](/componentes/atoms/label). It allows users to select one option from a set.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -43,17 +43,17 @@ The `RadioField` wraps a [Radio](https://developers.vtex.com/docs/guides/faststo
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { RadioField } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Radio/styles.scss'
@@ -63,29 +63,11 @@ To apply the styles of this component in your FastStore project, import the foll
 @import '@faststore/ui/src/components/molecules/RadioField/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
-
-<OverviewSection>
-  <RadioField label="Faststore" id="faststore" />
-</OverviewSection>
-
-```tsx
-<RadioField label="Faststore" id="faststore" />
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="RadioField" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-radio-field-gap" value="var(--fs-spacing-1)" />
@@ -93,8 +75,14 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `RadioField` styles using the following data attributes:
 
 `data-fs-radio-field`
+
+---
+
+## Props
+
+<ComponentPropsSection component="RadioField" />

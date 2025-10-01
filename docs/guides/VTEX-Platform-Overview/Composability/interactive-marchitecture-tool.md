@@ -3,15 +3,15 @@ title: "Interactive Marchitecture tool"
 slug: "interactive-marchitecture-tool"
 hidden: false
 createdAt: "2024-05-29T10:00:00.000Z"
-updatedAt: ""
+updatedAt: "2025-09-19T15:00:00.000Z"
 excerpt: "Learn how to use the Interactive Marchitecture tool and simulate a composable VTEX store architecture."
 ---
 
-The [Interactive Marchitecture tool](https://assets.vtex.com/4524045/) allows you to simulate the store architecture interactively by choosing which services and add-ons will be used, along with third-party providers for integrations. For reference, see types of architectures for specific scenarios in our [Store architecture](https://developers.vtex.com/docs/guides/store-architecture) guide.
+The [Interactive Marchitecture tool](https://vtex.com/en-us/assets/interactive-architecture/) allows you to simulate the store architecture interactively by choosing which services and add-ons will be used, along with third-party providers for integrations. For reference, see types of architectures for specific scenarios in our [Store architecture](https://developers.vtex.com/docs/guides/store-architecture) guide.
 
 ![Interactive Marchitecture tool](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Composability/interactive-marchitecture-tool.png)
 
-When you open the [Interactive Marchitecture tool](https://assets.vtex.com/4524045/), you first have to choose the desired region to plan the store architecture. The region selection defines the available partners for third-party integrations.
+When you open the [Interactive Marchitecture tool](https://vtex.com/en-us/assets/interactive-architecture/), you first have to choose the desired region to plan the store architecture. The region selection defines the available partners for third-party integrations.
 
 The tool displays all the services, add-ons, and integrations described in the [VTEX Composable Components](https://developers.vtex.com/docs/guides/vtex-composable-components) guide. You can identify each component type by its color:
 

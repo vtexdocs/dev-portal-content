@@ -7,9 +7,9 @@ components:
   - SearchDropdown.tsx
 ---
 
-Combine `SearchHistory`, `SearchTop`, `SearchAutoComplete` and `SearchProducts` to show all options in `SearchInput`. This component is part of the [Search](https://developers.vtex.com/docs/guides/faststore/feature-search) feature.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/SearchDropdown)
 
-## Overview
+Combine `SearchHistory`, `SearchTop`, `SearchAutoComplete` and `SearchProducts` to show all options in `SearchInput`. This component is part of the [Search](https://developers.vtex.com/docs/guides/faststore/feature-search) feature.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -65,17 +65,17 @@ Combine `SearchHistory`, `SearchTop`, `SearchAutoComplete` and `SearchProducts` 
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { SearchDropdown } from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```tsx
 import "@faststore/ui/src/components/molecules/SearchDropdown/styles.scss";
@@ -83,48 +83,7 @@ import "@faststore/ui/src/components/molecules/SearchDropdown/styles.scss";
 
 ---
 
-## Usage
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection direction="column">
-      Searching for: <code>Appl</code>
-      <SearchDropdownUsage term="App" />
-    </OverviewSection>
-  </Tab>
-
-  <Tab>
-  ```tsx
-    <SearchDropdown
-      term="Appl"
-      terms={[
-        {
-          value: 'apple',
-        },
-        {
-          value: 'apple magic mouse',
-        },
-      ]}
-      isLoading={false}
-      products={[products]}
-      searchHistoryComponent={<SearchHistory />}
-      searchTopComponent={<SearchTop />}
-      searchAutoCompleteComponent={<SearchAutoComplete />}
-      searchProductsComponent={<SearchProducts />}
-    />
-  ```
-  </Tab>
-</Tabs>
-
----
-
-## Props
-
-<ComponentPropsSection component="SearchDropdown" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -180,10 +139,16 @@ import "@faststore/ui/src/components/molecules/SearchDropdown/styles.scss";
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `SearchDropdown` styles using the following data attributes:
 
 `data-fs-search-dropdown`
 
 `data-fs-search-dropdown-loading-text`
+
+---
+
+## Props
+
+<ComponentPropsSection component="SearchDropdown" />
