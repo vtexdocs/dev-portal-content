@@ -1,18 +1,18 @@
 ---
-title: "Working with Delivery Promise components"
+title: "Understanding Delivery Promise components"
+excerpt: "Explore the core components of the Delivery Promise feature in FastStore, their functions, and how they integrate into your store."
+updatedAt: "2025-10-01T17:28:03.333Z"
 ---
 
->ℹ This feature is in closed beta, meaning only selected customers can access it. If you're interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
-
-This guide explains the components of the [Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview) feature for FastStore. It describes the structure of these parts and highlights the customizations needed when modifying standard sections like `NavBar` and `ProductGallery`. 
-
-You'll learn which components can be reused and which require customization, showing the connection between native implementation and customization.
+This guide explains the components of the [Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview) feature for FastStore. You will understand the purpose of each component, how they function, and where they are located in the FastStore architecture. This knowledge will help you effectively implement and customize the Delivery Promise feature in your store.
 
 >⚠️ To learn how to implement Delivery Promise in your store, see the guide [Implementing Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
 
 ## Components
 
-Delivery Promise introduces a set of modular components and hooks, organized within the FastStore core and UI packages and inserted into key sections. This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in the FastStore source code, such as those found in the FastStore starter. Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
+Delivery Promise introduces modular components and hooks organized within the `@faststore/core` and `@faststore/ui` packages. 
+
+This guide focuses on the core components provided by the `@faststore/core` package, which are included by default in FastStore projects. Learn more about the packages in [Understanding the project structure](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).
 
 Below are the core components related to the Delivery Promise feature in FastStore.
 
@@ -24,7 +24,7 @@ Its behavior is context-dependent. If a shopper doesn’t enter a postal code, a
 
 ![RegionButton](https://vtexhelp.vtexassets.com/assets/docs/src/region-button___ccb03f5e9e36d837a4b03aae6a0a58ff.png)
 
-If you have customized the `NavBar`, you must also customize the `RegionButton` component to use Delivery Promise.
+If you have customized the `NavBar`, you must also customize the `RegionButton` component to use Delivery Promise. However, depending on your customization, you may need to implement your own version of `RegionButton`.
 
 This component leverages the following:
 
@@ -65,7 +65,7 @@ This component leverages the following:
 
 ![RegionPopover](https://vtexhelp.vtexassets.com/assets/docs/src/regionpopover___dedb0aad756657e71d4c8d40cb2ef5e7.png)
 
-If you have customized `RegionBar` or `RegionButton`, you must also customize the `RegionPopover` component to use Delivery Promise.
+If you have customized `RegionBar` or `RegionButton`, you can still use the native `RegionPopover` by integrating it into your custom components. However, depending on your customization, you may need to implement your own version of `RegionPopover`.
 
 This component leverages the following:
 

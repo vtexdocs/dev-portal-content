@@ -7,48 +7,43 @@ components:
   - Label.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Label)
+
 A label allows the user to understand a single element. It is often in the form of information, and can have an implied instruction. Usually used to describe the meaning of input fields.
 
-## Overview
-
-<OverviewSection>
-  <Label>Label</Label>
-</OverviewSection>
-```tsx
-<Label>Label</Label>
-```
-
----
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Label } from '@faststore/ui'
-```
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Label>Label</Label>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Label>Label</Label>
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
 ## Usage
 
-<OverviewSection>
-  <Label>Label</Label>
-</OverviewSection>
+### Import the component
+
 ```tsx
-<Label>Label</Label>
+import { Label } from "@faststore/ui";
 ```
+
+---
+
+## Data attributes
+
+You can target and override `Label` styles using the following data attributes:
+
+`data-fs-label`
 
 ---
 
 ## Props
 
 <ComponentPropsSection component="Label" />
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
-
-`data-fs-label`

@@ -2,6 +2,290 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.184](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.183...v1.1.184) (2025-10-01)
+
+### [1.1.183](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.181...v1.1.183) (2025-10-01)
+
+### [1.1.181](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.180...v1.1.181) (2025-10-01)
+
+### [1.1.180](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.179...v1.1.180) (2025-10-01)
+
+
+### 📝 Documentation updates
+
+* **vtex-io-deprecated-apps.md:** EDU-15899 ([fb493aa](https://github.com/vtexdocs/dev-portal-content/commit/fb493aa54d394f53c1f87a88363af7422ab5183d))
+
+### [1.1.179](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.177...v1.1.179) (2025-10-01)
+
+### [1.1.177](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.175...v1.1.177) (2025-09-30)
+
+### [1.1.175](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.173...v1.1.175) (2025-09-30)
+
+### [1.1.173](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.172...v1.1.173) (2025-09-30)
+
+### [1.1.172](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.170...v1.1.172) (2025-09-30)
+
+### [1.1.170](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.168...v1.1.170) (2025-09-30)
+
+### [1.1.168](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.167...v1.1.168) (2025-09-29)
+
+### [1.1.167](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.166...v1.1.167) (2025-09-29)
+
+### [1.1.166](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.165...v1.1.166) (2025-09-26)
+
+### [1.1.165](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.163...v1.1.165) (2025-09-26)
+
+### [1.1.164](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.163...v1.1.164) (2025-09-25)
+
+### [1.1.163](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.161...v1.1.163) (2025-09-24)
+
+### [1.1.161](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.159...v1.1.161) (2025-09-24)
+
+### [1.1.159](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.157...v1.1.159) (2025-09-24)
+
+### [1.1.157](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.155...v1.1.157) (2025-09-24)
+
+### [1.1.155](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.154...v1.1.155) (2025-09-23)
+
+### [1.1.154](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.152...v1.1.154) (2025-09-23)
+
+### [1.1.153](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.152...v1.1.153) (2025-09-22)
+
+### [1.1.152](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.150...v1.1.152) (2025-09-22)
+
+### [1.1.151](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.150...v1.1.151) (2025-09-22)
+
+### [1.1.150](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.148...v1.1.150) (2025-09-22)
+
+### [1.1.148](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.147...v1.1.148) (2025-09-22)
+
+### [1.1.147](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.145...v1.1.147) (2025-09-22)
+
+### [1.1.145](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.144...v1.1.145) (2025-09-19)
+
+### [1.1.144](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.143...v1.1.144) (2025-09-19)
+
+### [1.1.143](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.140...v1.1.143) (2025-09-19)
+
+
+### 📝 Documentation updates
+
+* slider examples ([dbadb9a](https://github.com/vtexdocs/dev-portal-content/commit/dbadb9a29c40ac67b57620e5d94f5b0df55bf760))
+
+### [1.1.141](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.140...v1.1.141) (2025-09-18)
+
+
+### 📝 Documentation updates
+
+* slider examples ([dbadb9a](https://github.com/vtexdocs/dev-portal-content/commit/dbadb9a29c40ac67b57620e5d94f5b0df55bf760))
+
+### [1.1.140](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.136...v1.1.140) (2025-09-17)
+
+### [1.1.137](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.136...v1.1.137) (2025-09-17)
+
+### [1.1.136](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.134...v1.1.136) (2025-09-16)
+
+### [1.1.134](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.132...v1.1.134) (2025-09-15)
+
+### [1.1.132](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.130...v1.1.132) (2025-09-15)
+
+### [1.1.130](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.128...v1.1.130) (2025-09-12)
+
+### [1.1.128](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.126...v1.1.128) (2025-09-12)
+
+
+### 📝 Documentation updates
+
+* faststore components ([737ed18](https://github.com/vtexdocs/dev-portal-content/commit/737ed1834a4a6ed803a8daad7210a5d556e0bc65))
+
+### [1.1.126](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.124...v1.1.126) (2025-09-12)
+
+### [1.1.124](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.123...v1.1.124) (2025-09-11)
+
+### [1.1.123](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.122...v1.1.123) (2025-09-11)
+
+
+### 🔧 Fixes and improvements
+
+* components ([ea7158e](https://github.com/vtexdocs/dev-portal-content/commit/ea7158e904120170b33557ba84e85879eac08236))
+
+### [1.1.122](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.120...v1.1.122) (2025-09-11)
+
+
+### 📝 Documentation updates
+
+* organisms ([7e2b367](https://github.com/vtexdocs/dev-portal-content/commit/7e2b367b41ee62998815f9d0c78f20b151c4499a))
+
+### [1.1.120](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.117...v1.1.120) (2025-09-11)
+
+
+### 🔧 Fixes and improvements
+
+* restructure molecules docs ([11e9b17](https://github.com/vtexdocs/dev-portal-content/commit/11e9b17e79be0ea0fdda68c46c098b33e03f4d18))
+
+### [1.1.118](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.117...v1.1.118) (2025-09-11)
+
+
+### 🔧 Fixes and improvements
+
+* restructure molecules docs ([11e9b17](https://github.com/vtexdocs/dev-portal-content/commit/11e9b17e79be0ea0fdda68c46c098b33e03f4d18))
+
+### [1.1.117](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.115...v1.1.117) (2025-09-11)
+
+
+### 📝 Documentation updates
+
+* restructure docs ([cbf156e](https://github.com/vtexdocs/dev-portal-content/commit/cbf156e4f9b0b711bc2840df065a1ee166a77833))
+
+### [1.1.115](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.113...v1.1.115) (2025-09-11)
+
+### [1.1.113](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.111...v1.1.113) (2025-09-11)
+
+### [1.1.111](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.110...v1.1.111) (2025-09-11)
+
+### [1.1.110](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.109...v1.1.110) (2025-09-11)
+
+### [1.1.109](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.108...v1.1.109) (2025-09-11)
+
+### [1.1.108](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.107...v1.1.108) (2025-09-11)
+
+### [1.1.107](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.106...v1.1.107) (2025-09-10)
+
+### [1.1.106](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.105...v1.1.106) (2025-09-10)
+
+### [1.1.105](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.103...v1.1.105) (2025-09-09)
+
+
+### 📝 Documentation updates
+
+* **region-bar.mdx:** design tokens ([e3a4f75](https://github.com/vtexdocs/dev-portal-content/commit/e3a4f75e1d71f385f3c1c4504f7f2a48b6ade267))
+
+### [1.1.104](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.103...v1.1.104) (2025-09-09)
+
+
+### 📝 Documentation updates
+
+* **region-bar.mdx:** design tokens ([e3a4f75](https://github.com/vtexdocs/dev-portal-content/commit/e3a4f75e1d71f385f3c1c4504f7f2a48b6ade267))
+
+### [1.1.104](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.103...v1.1.104) (2025-09-09)
+
+
+### 📝 Documentation updates
+
+* **region-bar.mdx:** design tokens ([e3a4f75](https://github.com/vtexdocs/dev-portal-content/commit/e3a4f75e1d71f385f3c1c4504f7f2a48b6ade267))
+
+### [1.1.104](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.103...v1.1.104) (2025-09-08)
+
+
+### 📝 Documentation updates
+
+* **region-bar.mdx:** design tokens ([e3a4f75](https://github.com/vtexdocs/dev-portal-content/commit/e3a4f75e1d71f385f3c1c4504f7f2a48b6ade267))
+
+### [1.1.103](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.99...v1.1.103) (2025-09-08)
+
+
+### 📝 Documentation updates
+
+* **managing-secrets.mdx:** secrets resources ([5d36eed](https://github.com/vtexdocs/dev-portal-content/commit/5d36eedd61a25bed273d90f2dff683c16ed5aae2))
+
+### [1.1.101](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.99...v1.1.101) (2025-09-08)
+
+### [1.1.100](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.99...v1.1.100) (2025-09-08)
+
+### [1.1.99](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.97...v1.1.99) (2025-09-05)
+
+
+### 🗑️ Removed content
+
+* callout about checkout on delivery promise guide ([bb6f355](https://github.com/vtexdocs/dev-portal-content/commit/bb6f35532bdcf30d4ad76015153187828a02842a))
+
+
+### 📝 Documentation updates
+
+* add explanation about checkout and catalog ([7cb8310](https://github.com/vtexdocs/dev-portal-content/commit/7cb83108c834f06c12d9c70f6aa31b85c3ed0c71))
+* apply suggestions from review - delivery promise headless guide ([f8d4bcb](https://github.com/vtexdocs/dev-portal-content/commit/f8d4bcb84343995b097af7623ac9801a74040808))
+* delivery promise headless guide params ([ed39a1d](https://github.com/vtexdocs/dev-portal-content/commit/ed39a1d7dca79de32a1465754421a6d93292cc10))
+* edit table in delivery promise headless guide ([7f18eac](https://github.com/vtexdocs/dev-portal-content/commit/7f18eacd66780f472226409b0ab961746bece38e))
+
+### [1.1.97](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.96...v1.1.97) (2025-09-04)
+
+### [1.1.96](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.94...v1.1.96) (2025-09-04)
+
+
+### 🔧 Fixes and improvements
+
+* fix seeAlso ([f2f61d7](https://github.com/vtexdocs/dev-portal-content/commit/f2f61d79dafc17b117027c31d0560aa3beb59333))
+
+### [1.1.94](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.92...v1.1.94) (2025-09-04)
+
+
+### 📝 Documentation updates
+
+* add finish endpoint to punchout login integration guide ([6e5c542](https://github.com/vtexdocs/dev-portal-content/commit/6e5c542131ec4739fb790aa7171dca8c4e475c4c))
+
+### [1.1.92](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.91...v1.1.92) (2025-09-04)
+
+### [1.1.91](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.90...v1.1.91) (2025-09-04)
+
+### [1.1.90](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.87...v1.1.90) (2025-09-03)
+
+
+### ⚙️ Repository features
+
+* add new delivery promise documentation ([d090444](https://github.com/vtexdocs/dev-portal-content/commit/d090444df997478355c48f6bcb1e05854d016ce7))
+
+
+### 🔧 Fixes and improvements
+
+* add excerpt ([7b9accb](https://github.com/vtexdocs/dev-portal-content/commit/7b9accb2ef3d2e046292ef047365dfa8287837b5))
+* fix bot suggestions ([9c4cf77](https://github.com/vtexdocs/dev-portal-content/commit/9c4cf77bf9b75bb4117c81e1114a77186b85aca0))
+* fix createdAt ([2c4ffc5](https://github.com/vtexdocs/dev-portal-content/commit/2c4ffc5c457f8cbc3dde6c143da491b141c042dc))
+* fix grammar errors ([cd4fdb9](https://github.com/vtexdocs/dev-portal-content/commit/cd4fdb9bbc569d64a5a061aa554213e492a88f87))
+* fix grammar errors ([1f060b3](https://github.com/vtexdocs/dev-portal-content/commit/1f060b3f6b8555f7051362098e2d1947c99d82f1))
+* fix reviewers suggestions ([a27bd8a](https://github.com/vtexdocs/dev-portal-content/commit/a27bd8a678f882c6b902fbb827acc1fb98d19e0c))
+* fix space ([99ebb2c](https://github.com/vtexdocs/dev-portal-content/commit/99ebb2c37768e60d2173e68af3798924843df3fe))
+* remove video ([a3f80a6](https://github.com/vtexdocs/dev-portal-content/commit/a3f80a65de994bb157ea411c2d1a6eac00eee0ad))
+
+### [1.1.88](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.87...v1.1.88) (2025-09-03)
+
+
+### ⚙️ Repository features
+
+* add new delivery promise documentation ([d090444](https://github.com/vtexdocs/dev-portal-content/commit/d090444df997478355c48f6bcb1e05854d016ce7))
+
+
+### 🔧 Fixes and improvements
+
+* add excerpt ([7b9accb](https://github.com/vtexdocs/dev-portal-content/commit/7b9accb2ef3d2e046292ef047365dfa8287837b5))
+* fix bot suggestions ([9c4cf77](https://github.com/vtexdocs/dev-portal-content/commit/9c4cf77bf9b75bb4117c81e1114a77186b85aca0))
+* fix createdAt ([2c4ffc5](https://github.com/vtexdocs/dev-portal-content/commit/2c4ffc5c457f8cbc3dde6c143da491b141c042dc))
+* fix grammar errors ([cd4fdb9](https://github.com/vtexdocs/dev-portal-content/commit/cd4fdb9bbc569d64a5a061aa554213e492a88f87))
+* fix grammar errors ([1f060b3](https://github.com/vtexdocs/dev-portal-content/commit/1f060b3f6b8555f7051362098e2d1947c99d82f1))
+* fix reviewers suggestions ([a27bd8a](https://github.com/vtexdocs/dev-portal-content/commit/a27bd8a678f882c6b902fbb827acc1fb98d19e0c))
+* fix space ([99ebb2c](https://github.com/vtexdocs/dev-portal-content/commit/99ebb2c37768e60d2173e68af3798924843df3fe))
+* remove video ([a3f80a6](https://github.com/vtexdocs/dev-portal-content/commit/a3f80a65de994bb157ea411c2d1a6eac00eee0ad))
+
+### [1.1.87](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.85...v1.1.87) (2025-09-03)
+
+
+### ⚙️ Repository features
+
+* **components.mdx:** creating doc ([2629a6b](https://github.com/vtexdocs/dev-portal-content/commit/2629a6bebb8552427dffdb4fc7bbbd364364e2f7))
+
+
+### 📝 Documentation updates
+
+* **components.mdx:** adding callout ([70b4d3c](https://github.com/vtexdocs/dev-portal-content/commit/70b4d3c5e6c20c9dccd4bb489abc19e8f2c4b951))
+* **components.mdx:** applying suggestions and updating images ([a04488b](https://github.com/vtexdocs/dev-portal-content/commit/a04488b227edfa88b705cd17592e80c7bea1ba0e))
+* **components.mdx:** updating image link ([c793711](https://github.com/vtexdocs/dev-portal-content/commit/c793711c69b195917efdb7ebb03f9baafc167118))
+
+### [1.1.85](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.83...v1.1.85) (2025-09-03)
+
+
+### 📝 Documentation updates
+
+* **overview.mdx:** reorganizing DP docs ([a568519](https://github.com/vtexdocs/dev-portal-content/commit/a56851997d186c946bb9ed1b95aa52f5f38b3732))
+
 ### [1.1.83](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.81...v1.1.83) (2025-09-03)
 
 
