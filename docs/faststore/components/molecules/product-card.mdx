@@ -25,25 +25,7 @@ Use the `ProductCard` to:
     <OverviewSection
       containerStyle={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}
     >
-      <ProductCard>
-        <ProductCardImage>
-          <img
-            data-fs-image
-            src={product.image[1].url}
-            alt={product.image[1].alternateName}
-          />
-        </ProductCardImage>
-        <ProductCardContent
-          title={product.isVariantOf.name}
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-          ratingValue={3.5}
-          onButtonClick={openCartFunction}
-        />
-      </ProductCard>
+      <ProductCardUsage />
     </OverviewSection>
   </Tab>
   <Tab>
