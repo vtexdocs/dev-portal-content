@@ -24,9 +24,10 @@ For more information, refer to [Sections](https://developers.vtex.com/docs/guide
 
 Create and display a [section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) for the Dynamic Content. For this tutorial, we’ll create a [Hero](https://developers.vtex.com/docs/guides/faststore/organisms-hero).
 
-1. Open your Faststore project, and Inside `src`, create the folder `components`.
-2. Inside `components`, create a subfolder named `sections`.
-3. Inside `sections` create a file called `ProductHero.tsx`, and paste the following code:
+1. Open your Faststore project.
+2. Inside `src`, create the folder `components`.
+3. Inside `components`, create a subfolder named `sections`.
+4. Inside `sections` create a file called `ProductHero.tsx`, and paste the following code:
 
    ```tsx src/components/sections/ProductHero.tsx
    import {
@@ -83,7 +84,7 @@ Create and display a [section](https://developers.vtex.com/docs/guides/faststore
    - The `useDynamicContent` hook holds the information in the `data` variable.
    - In return, we validate the data and display the image in the Hero and the product's name using some HTML elements.
 
-4. Create an `index.tsx` file inside the components folder and paste the following code:
+5. Create an `index.tsx` file inside the components folder and paste the following code:
 
    ```tsx
    import ProductHero from “./sections/ProductHero”

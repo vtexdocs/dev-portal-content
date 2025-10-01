@@ -7,9 +7,9 @@ components:
   - Input.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Input)
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Input placeholder="Label" id="inputfield-default" />
@@ -18,52 +18,54 @@ components:
   </Tab>
   <Tab>
     ```tsx
-     <Input placeholder="Label" id="inputfield-default" />
-     <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
+    <Input placeholder="Label" id="inputfield-default" />
+    <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
     ```
   </Tab>
 </Tabs>
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Input } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/atoms/Input/styles.scss'
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<OverviewSection>
-  <Input placeholder="Input" />
-</OverviewSection>
+### Import the component
+
 ```tsx
-<Input placeholder="Input" />
+import { Input } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/atoms/Input/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Input" />
+### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Input placeholder="Input" disabled />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Input placeholder="Input" disabled />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -102,16 +104,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
-
-#### Disabled
-
-<OverviewSection>
-  <Input placeholder="Input" disabled />
-</OverviewSection>
-```tsx
-<Input placeholder="Input" disabled />
-```
+### Design tokens: Disabled
 
 <TokenTable>
   <TokenRow
@@ -138,11 +131,17 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Input` styles using the following data attributes:
 
 `data-fs-input`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Input" />
 
 ---
 

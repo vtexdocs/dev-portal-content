@@ -5,47 +5,229 @@ sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Button___6d6b16886d5d7e2a05dba8c45c075796.png
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/LinkButton)
+
 The `LinkButton` component is similar to a button, however acts as a link to navigate users between pages.
 
-## Overview
-
-<OverviewSection>
-  <LinkButton href="#">Link Button</LinkButton>
-</OverviewSection>
-```tsx
-<LinkButton href="#">Link Button</LinkButton>
-```
-
----
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { LinkButton } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/LinkButton/styles.scss'
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <LinkButton href="#">Link Button</LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton href="#">Link Button</LinkButton>
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
 ## Usage
 
-<OverviewSection>
-  <LinkButton href="#">Link Button</LinkButton>
-</OverviewSection>
+### Import the component
+
 ```tsx
-<LinkButton href="#">Link Button</LinkButton>
+import { LinkButton } from "@faststore/ui";
 ```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/LinkButton/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Examples
+
+### Variants
+
+This component inherits [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) variants.
+
+#### Primary
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <LinkButton href="#" variant="primary">
+        Link Button
+      </LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton href="#" variant="primary">
+      Link Button
+    </LinkButton>
+    ```
+  </Tab>
+</Tabs>
+
+#### Primary Inverse
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <LinkButton href="#" variant="primary" inverse>
+        Link Button
+      </LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton href="#" variant="primary" inverse>
+      Link Button
+    </LinkButton>
+    ```
+  </Tab>
+</Tabs>
+
+#### Secondary
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <LinkButton href="#" variant="secondary">
+        Link Button
+      </LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton href="#" variant="secondary">
+      Link Button
+    </LinkButton>
+    ```
+  </Tab>
+</Tabs>
+
+### Secondary Inverse
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <LinkButton href="#" variant="secondary" inverse>
+        Link Button
+      </LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton href="#" variant="secondary" inverse>
+      Link Button
+    </LinkButton>
+    ```
+  </Tab>
+</Tabs>
+
+#### Tertiary
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <LinkButton href="#" variant="tertiary">
+        Link Button
+      </LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton href="#" variant="tertiary">
+      Link Button
+    </LinkButton>
+    ```
+  </Tab>
+</Tabs>
+
+#### Tertiary Inverse
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <LinkButton href="#" variant="tertiary" inverse>
+        Link Button
+      </LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton href="#" variant="tertiary" inverse>
+      Link Button
+    </LinkButton>
+    ```
+  </Tab>
+</Tabs>
+
+#### Disabled
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <LinkButton href="#" disabled>
+        Link Button
+      </LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton href="#" disabled>
+      Link Button
+    </LinkButton>
+    ```
+  </Tab>
+</Tabs>
+
+#### Small
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <LinkButton variant="primary" size="small">
+        Link Button
+      </LinkButton>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <LinkButton variant="primary" size="small">
+      Link Button
+    </LinkButton>
+    ```
+  </Tab>
+</Tabs>
+
+### Icon
+
+<OverviewSection>
+  <LinkButton href="#" icon={<Icon name="ShoppingCart" />} iconPosition="left">
+    {"Go to Cart"}
+  </LinkButton>
+  <LinkButton href="#" icon={<Icon name="ShoppingCart" />} iconPosition="right">
+    {"Go to Cart"}
+  </LinkButton>
+</OverviewSection>
+
+---
+
+## Design tokens
+
+This component inherits [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) design tokens.
+
+---
+
+## Data attributes
+
+You can target and override `LinkButton` styles using the following data attributes:
+
+`data-fs-link-button`
+
+This component inherits [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) CSS selectors and styles.
 
 ---
 
@@ -56,151 +238,6 @@ The `LinkButton` component supports all attributes supported by the tag `a`.
 Besides those attributes, the following props are also supported [Button Props](https://developers.vtex.com/docs/guides/faststore/atoms-button#props):
 
 <PropsSection propsList={propsLinkButton} />
-
----
-
-## Design Tokens
-
-This component inherits [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) design tokens.
-
----
-
-## Nested Elements
-
-### Icon
-
-<OverviewSection>
-  <LinkButton href="#" icon={<Icon name="ShoppingCart" />} iconPosition="left">
-    {'Go to Cart'}
-  </LinkButton>
-  <LinkButton href="#" icon={<Icon name="ShoppingCart" />} iconPosition="right">
-    {'Go to Cart'}
-  </LinkButton>
-</OverviewSection>
-
----
-
-## Variants
-
-This component inherits [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) variants.
-
-### Primary
-
-<OverviewSection>
-  <LinkButton href="#" variant="primary">
-    Link Button
-  </LinkButton>
-</OverviewSection>
-
-```tsx
-<LinkButton href="#" variant="primary">
-  Link Button
-</LinkButton>
-```
-
-### Primary Inverse
-
-<OverviewSection dark>
-  <LinkButton href="#" variant="primary" inverse>
-    Link Button
-  </LinkButton>
-</OverviewSection>
-
-```tsx
-<LinkButton href="#" variant="primary" inverse>
-  Link Button
-</LinkButton>
-```
-
-### Secondary
-
-<OverviewSection>
-  <LinkButton href="#" variant="secondary">
-    Link Button
-  </LinkButton>
-</OverviewSection>
-```tsx
-<LinkButton href="#" variant="secondary">
-  Link Button
-</LinkButton>
-```
-
-### Secondary Inverse
-
-<OverviewSection dark>
-  <LinkButton href="#" variant="secondary" inverse>
-    Link Button
-  </LinkButton>
-</OverviewSection>
-
-```tsx
-<LinkButton href="#" variant="secondary" inverse>
-  Link Button
-</LinkButton>
-```
-
-### Tertiary
-
-<OverviewSection>
-  <LinkButton href="#" variant="tertiary">
-    Link Button
-  </LinkButton>
-</OverviewSection>
-
-```tsx
-<LinkButton href="#" variant="tertiary">
-  Link Button
-</LinkButton>
-```
-
-### Tertiary Inverse
-
-<OverviewSection dark>
-  <LinkButton href="#" variant="tertiary" inverse>
-    Link Button
-  </LinkButton>
-</OverviewSection>
-```tsx
-<LinkButton href="#" variant="tertiary" inverse>
-  Link Button
-</LinkButton>
-```
-
-### Disabled
-
-<OverviewSection>
-  <LinkButton href="#" disabled>
-    Link Button
-  </LinkButton>
-</OverviewSection>
-```tsx
-<LinkButton href="#" disabled>
-  Link Button
-</LinkButton>
-```
-
-### Small
-
-<OverviewSection>
-  <LinkButton variant="primary" size="small">
-    Link Button
-  </LinkButton>
-</OverviewSection>
-```tsx
-<LinkButton variant="primary" size="small">
-  Link Button
-</LinkButton>
-```
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
-
-`data-fs-link-button`
-
-This component inherits [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) CSS selectors and styles.
 
 ---
 

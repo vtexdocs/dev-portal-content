@@ -7,89 +7,125 @@ components:
   - Skeleton.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Skeleton)
+
 This feature improves the store's experience and perceived performance through loading placeholders.
-`Skeletons` are like an element's or section's wireframe. It's a placeholder
-that simulates the layout of these elements/sections while data is being loaded.
+`skeletons` are like an element's or section's wireframe. They're placeholders
+that simulate the layout of these elements or sections while data loads.
 
-Instead of showing a blank page, displaying `Skeletons` while loading content makes the user feel like the store is more responsive and faster.
+Instead of showing a blank page, displaying `skeletons` while loading content makes users feel that the store is more responsive and faster.
 
-Also by using `Skeletons` the store will be less likely to experience [Cumulative Layout Shilf (or CLS)](https://web.dev/i18n/en/cls/).
+Additionally, by using `skeletons`, the store will be less likely to experience [Cumulative Layout Shift (CLS)](https://web.dev/i18n/en/cls/).
 
-## Overview
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection bigGap>
-      <p>With Shimmer Effect</p>
-      <Skeleton
-        size={{ width: '150px', height: '80px' }}
-        borderRadius="32px"
-      />
-    </OverviewSection>
-    <OverviewSection bigGap>
-      <p>Without Shimmer Effect</p>
-      <Skeleton size={{ width: '150px', height: '100px' }} border="regular" shimmer={false} />
-      <Skeleton size={{ width: '150px', height: '100px' }} border="pill" shimmer={false} />
-      <Skeleton size={{ width: '100px', height: '100px' }} border="circle" shimmer={false}/>
+      <Skeleton size={{ width: "150px", height: "80px" }} borderRadius="32px" />
     </OverviewSection>
   </Tab>
   <Tab>
+    ```tsx
+    <Skeleton size={{ width: "150px", height: "80px" }} borderRadius="32px" />
     ```
-    <Skeleton
-      size={{ width: '200px', height: '80px' }}
-      borderRadius="32px"
-    />
-    ```
-
-    ```
-    <Skeleton size={{ width: '150px', height: '100px' }} border="regular" shimmer={false}/>
-    <Skeleton size={{ width: '150px', height: '100px' }} border="pill" shimmer={false}/>
-    <Skeleton size={{ width: '100px', height: '100px' }} border="circle" shimmer={false}/>
-    ```
-
   </Tab>
 </Tabs>
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Skeleton } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/atoms/Skeleton/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<OverviewSection>
-  <Skeleton size={{ width: '200px', height: '80px' }} borderRadius="32px" />
-</OverviewSection>
+### Import the component
 
 ```tsx
-<Skeleton size={{ width: '200px', height: '80px' }} borderRadius="32px" />
+import { Skeleton } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/atoms/Skeleton/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Skeleton" />
+### Border
+
+#### Regular
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+    ```
+  </Tab>
+</Tabs>
+
+#### Pill
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <Skeleton size={{ width: "150px", height: "100px" }} border="pill" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Skeleton size={{ width: "150px", height: "100px" }} border="pill" />
+    ```
+  </Tab>
+</Tabs>
+
+#### Circle
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <Skeleton size={{ width: "100px", height: "100px" }} border="circle" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Skeleton size={{ width: "100px", height: "100px" }} border="circle" />
+    ```
+  </Tab>
+</Tabs>
+
+### Without shimmer effect
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <Skeleton
+        size={{ width: "150px", height: "100px" }}
+        border="regular"
+        shimmer={false}
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Skeleton
+      size={{ width: "150px", height: "100px" }}
+      border="regular"
+      shimmer={false}
+    />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -103,11 +139,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
----
-
-### Nested Elements
-
-#### Shimmer
+### Design tokens: Shimmer
 
 <TokenTable>
   <TokenRow token="--fs-skeleton-shimmer-width" value="50%" />
@@ -133,10 +165,16 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Skeleton` styles using the following data attributes:
 
 `data-fs-skeleton`
 
 `data-fs-skeleton-shimmer`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Skeleton" />
