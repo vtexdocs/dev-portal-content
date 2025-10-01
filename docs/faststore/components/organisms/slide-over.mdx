@@ -15,6 +15,93 @@ The `SlideOver` component represents an aditional session that complements the s
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection direction="column">
+      <b>Open partial</b>
+      <UIProvider>
+        <SlideOverPartialRight />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    <b>Open partial</b>
+
+    ```tsx
+      import { Button, SlideOver, SlideOverHeader, useUI } from '@faststore/ui'
+
+      const SlideOverPartialRight = () => {
+        const { modal, openModal, closeModal } = useUI()
+        return (
+          <>
+            <Button variant="primary" onClick={openModal} style={{ width: '9rem' }}>
+              Right
+            </Button>
+            {modal && (
+              <SlideOver
+                size="partial"
+                direction="rightSide"
+                isOpen={modal}
+                onDismiss={closeModal}
+              >
+                <SlideOverHeader onClose={closeModal}>
+                  <b>SlideOver</b>
+                </SlideOverHeader>
+                <main
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '1rem',
+                    height: '100%',
+                  }}
+                >
+                  <p>
+                    A generic <code>SlideOver</code> component.
+                    <br></br>
+                    size:<code>partial</code>
+                    <br></br>
+                    direction:<code>rightSide</code>
+                  </p>
+                </main>
+              </SlideOver>
+            )}
+
+          </>
+        )
+      }
+
+      export default SlideOverPartialRight
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Usage
+
+### Import the component
+
+```tsx
+import { SlideOver, SlideOverHeader } from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/SlideOver/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Examples
+
+### Open partial: Left
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection direction="column">
       <b>Open Partial</b>
       <UIProvider>
         <SlideOverPartialRight />
@@ -23,7 +110,7 @@ The `SlideOver` component represents an aditional session that complements the s
         <SlideOverPartialLeft />
       </UIProvider>
     </OverviewSection>
-     <OverviewSection direction="column">
+    <OverviewSection direction="column">
       <b>Open Full</b>
       <UIProvider>
         <SlideOverFullRight />
@@ -69,22 +156,22 @@ The `SlideOver` component represents an aditional session that complements the s
     ```
 
     <b>Open Full</b>
-  
-  ```tsx
-  export const SlideOverFullRight = () => {
-    const { modal, openModal } = useUI()
-    return (
-      <>
-        <Button variant="primary" onClick={openModal}>
-          Right
-        </Button>
-        {modal && (
-          <SlideOverUsage size="full" direction="rightSide" isOpen={modal} />
-        )}
-      </>
-    )
-  }
-  ```
+
+```tsx
+export const SlideOverFullRight = () => {
+  const { modal, openModal } = useUI();
+  return (
+    <>
+      <Button variant="primary" onClick={openModal}>
+        Right
+      </Button>
+      {modal && (
+        <SlideOverUsage size="full" direction="rightSide" isOpen={modal} />
+      )}
+    </>
+  );
+};
+```
 
     ```tsx
     export const SlideOverFullLeft = () => {
@@ -105,25 +192,9 @@ The `SlideOver` component represents an aditional session that complements the s
   </Tab>
 </Tabs>
 
----
+### Open full: right
 
-## Usage
-
-### Import the component
-
-```tsx
-import { SlideOver, SlideOverHeader } from '@faststore/ui'
-```
-
-### Import styles
-
-To apply styles, include the following in your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/organisms/SlideOver/styles.scss';
-```
-
-For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+### Open full: left
 
 ---
 
