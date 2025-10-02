@@ -1,6 +1,6 @@
 ---
 title: "SlideOver"
-excerpt: Represents an additional session that complements the screen's information.
+excerpt: Represents an additional view that complements the information on the screen.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
 components:
@@ -26,7 +26,6 @@ The `SlideOver` component presents complementary content in a panel that slides 
     </OverviewSection>
   </Tab>
   <Tab>
-    <b>Open partial</b>
 
     ```tsx
       import { Button, SlideOver, SlideOverHeader, useUI } from '@faststore/ui'
@@ -113,9 +112,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     </OverviewSection>
   </Tab>
   <Tab>
-    <b>Open Partial</b>
 
     ```tsx
+    import { SlideOver, SlideOverHeader, SlideOverProps, useFadeEffect, useUI } from '@faststore/ui'
       export const SlideOverPartialLeft = () => {
         const { modal, openModal, closeModal } = useUI()
         return (
@@ -160,6 +159,63 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 </Tabs>
 
 ### Open full: right
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection direction="column">
+      <b>Open full</b>
+      <UIProvider>
+        <SlideOverFullRight />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+    ```tsx
+      import { SlideOver, SlideOverHeader, SlideOverProps, useFadeEffect, useUI } from '@faststore/ui'
+
+      export const SlideOverFullRight = () => {
+        const { modal, openModal, closeModal } = useUI()
+        return (
+          <>
+            <Button variant="primary" onClick={openModal}>
+              Right
+            </Button>
+            {modal && (
+              <SlideOver
+                size="full"
+                direction="rightSide"
+                isOpen={modal}
+                onDismiss={closeModal}
+              >
+                <SlideOverHeader onClose={closeModal}>
+                  <b>SlideOver</b>
+                </SlideOverHeader>
+                <main
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '1rem',
+                    height: '100%',
+                  }}
+                >
+                  <p>
+                    A generic <code>SlideOver</code> component.
+                    <br></br>
+                    size:<code>full</code>
+                    <br></br>
+                    direction:<code>rightSide</code>
+                  </p>
+                </main>
+              </SlideOver>
+            )}
+          </>
+        )
+      }
+    ```
+  </Tab>
+</Tabs>
 
 ### Open full: left
 
@@ -252,7 +308,7 @@ You can target and override `SlideOver` styles using the following data attribut
 <SectionList grid="column">
   <SectionItem
     title="CartSidebar"
-    description="The CartSidebar displays the summary of items added to the cart along with detailed information, and checkout option."
+    description="The CartSidebar displays the summary of items added to the cart along with detailed information, and a checkout option."
     actionPath="/docs/guides/faststore/organisms-cart-sidebar"
   >
     <UIProvider>
