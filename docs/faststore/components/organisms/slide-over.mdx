@@ -219,6 +219,63 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Open full: left
 
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection direction="column">
+      <b>Open full</b>
+      <UIProvider>
+        <SlideOverFullLeft />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+    ```tsx
+      import { SlideOver, SlideOverHeader, SlideOverProps, useFadeEffect, useUI } from '@faststore/ui'
+
+      export const SlideOverFullLeft = () => {
+        const { modal, openModal, closeModal } = useUI()
+        return (
+          <>
+            <Button variant="primary" onClick={openModal}>
+              Right
+            </Button>
+            {modal && (
+              <SlideOver
+                size="full"
+                direction="leftSide"
+                isOpen={modal}
+                onDismiss={closeModal}
+              >
+                <SlideOverHeader onClose={closeModal}>
+                  <b>SlideOver</b>
+                </SlideOverHeader>
+                <main
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '1rem',
+                    height: '100%',
+                  }}
+                >
+                  <p>
+                    A generic <code>SlideOver</code> component.
+                    <br></br>
+                    size:<code>full</code>
+                    <br></br>
+                    direction:<code>rightSide</code>
+                  </p>
+                </main>
+              </SlideOver>
+            )}
+          </>
+        )
+      }
+    ```
+  </Tab>
+</Tabs>
+
 ---
 
 ## Design tokens
@@ -308,7 +365,7 @@ You can target and override `SlideOver` styles using the following data attribut
 <SectionList grid="column">
   <SectionItem
     title="CartSidebar"
-    description="The CartSidebar displays the summary of items added to the cart along with detailed information, and a checkout option."
+    description="The CartSidebar displays the summary of items added to the cart along with detailed information and a checkout option."
     actionPath="/docs/guides/faststore/organisms-cart-sidebar"
   >
     <UIProvider>
