@@ -1,6 +1,6 @@
 ---
 title: "SlideOver"
-excerpt: Represents an aditional session that complements the screen's information.
+excerpt: Represents an additional session that complements the screen's information.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
 components:
@@ -10,7 +10,11 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/SlideOver)
 
-The `SlideOver` component represents an aditional session that complements the screen's information.
+The `SlideOver` component presents complementary content in a panel that slides over the current view, keeping the user’s context visible while enabling focused, short-lived interactions. Typical use cases include:
+
+- Opening a cart or order summary.
+- Adjusting filters or settings in a side panel
+- Previewing product details or media.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -97,26 +101,14 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ## Examples
 
-### Open partial: Left
+### Open partial: left
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection direction="column">
-      <b>Open Partial</b>
-      <UIProvider>
-        <SlideOverPartialRight />
-      </UIProvider>
+      <b>Open partial</b>
       <UIProvider>
         <SlideOverPartialLeft />
-      </UIProvider>
-    </OverviewSection>
-    <OverviewSection direction="column">
-      <b>Open Full</b>
-      <UIProvider>
-        <SlideOverFullRight />
-      </UIProvider>
-      <UIProvider>
-        <SlideOverFullLeft />
       </UIProvider>
     </OverviewSection>
   </Tab>
@@ -124,71 +116,46 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     <b>Open Partial</b>
 
     ```tsx
-      export const SlideOverPartialRight = () => {
-        const { modal, openModal } = useUI()
-        return (
-          <>
-            <Button variant="primary" onClick={openModal}>
-              Right
-            </Button>
-            {modal && (
-              <SlideOverUsage size="partial" direction="rightSide" isOpen={modal} />
-            )}
-          </>
-        )
-      }
-    ```
-
-    ```tsx
       export const SlideOverPartialLeft = () => {
-        const { modal, openModal } = useUI()
+        const { modal, openModal, closeModal } = useUI()
         return (
           <>
             <Button variant="primary" onClick={openModal}>
               Left
             </Button>
             {modal && (
-              <SlideOverUsage size="partial" direction="leftSide" isOpen={modal} />
+              <SlideOver
+                size="partial"
+                direction="leftSide"
+                isOpen={modal}
+                onDismiss={closeModal}
+              >
+                <SlideOverHeader onClose={closeModal}>
+                  <b>SlideOver</b>
+                </SlideOverHeader>
+                <main
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '1rem',
+                    height: '100%',
+                  }}
+                >
+                  <p>
+                    A generic <code>SlideOver</code> component.
+                    <br></br>
+                    size:<code>partial</code>
+                    <br></br>
+                    direction:<code>leftSide</code>
+                  </p>
+                </main>
+              </SlideOver>
             )}
           </>
         )
       }
     ```
-
-    <b>Open Full</b>
-
-```tsx
-export const SlideOverFullRight = () => {
-  const { modal, openModal } = useUI();
-  return (
-    <>
-      <Button variant="primary" onClick={openModal}>
-        Right
-      </Button>
-      {modal && (
-        <SlideOverUsage size="full" direction="rightSide" isOpen={modal} />
-      )}
-    </>
-  );
-};
-```
-
-    ```tsx
-    export const SlideOverFullLeft = () => {
-      const { modal, openModal } = useUI()
-      return (
-        <>
-          <Button variant="primary" onClick={openModal}>
-            Left
-          </Button>
-          {modal && (
-            <SlideOverUsage size="full" direction="leftSide" isOpen={modal} />
-          )}
-        </>
-      )
-    }
-    ```
-
   </Tab>
 </Tabs>
 
