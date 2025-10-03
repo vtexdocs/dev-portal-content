@@ -203,7 +203,7 @@ In addition to the features configured in the VTEX Admin, you can apply manual o
 
 #### Improving scrolling performance
 
-Use the `__fold__` block for scrollable pages. This allows you to specify which interface components load initially(above the fold)  and which are lazy-loaded as the user scrolls.
+Use the `__fold__` block for scrollable pages. This allows you to specify which interface components load initially (above the fold)  and which are lazy-loaded as the user scrolls.
 
 You can also use the `__fold__.experimentalLazyAssets` block to define which theme blocks should load statically upon the first user interaction.
 
