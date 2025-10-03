@@ -33,7 +33,7 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 3. Using your browser, access the Admin for that workspace.
 4. In the account's Admin panel, go to **Store Settings > Storefront > Store > Advanced**.
 5. Follow the instructions in the [Store settings](#store-settings) section to activate the desired features, then save the changes.
-6. Access your store in the workspace you're using and check if the performance improvements were applied.
+6. Access your store in the workspace you're using and check whether the performance improvements were applied.
 
   >ℹ️ Changes may take some time to reflect.
 
@@ -102,7 +102,7 @@ This action concatenates a page's CSS in a single file for faster download, redu
 
 #### Enable prefetch
 
-This action prefetches pages on mouse hover over a link.
+This action prefetches pages when a user hovers over a link.
 
 When enabled, the page's content is proactively downloaded in the background when you hover over a link. This means that the page is already loaded or partially loaded when you click the link.
 
@@ -117,7 +117,7 @@ Before displaying a web page, the VTEX IO service app that renders server-side (
         __RUNTIME__ = {"account":"vtexstore","amp":false,"bindingChanged":false,"binding":{"id":"aacb04t3-a8fa-4bab-b5bd-2d654d20dcd8","canonicalBaseAddress":"vtexstore.vtex.com"},"culture":{"availableLocales":[],"country":"USA","currency":"USD","language":"en","locale":"en-US","customCurrencyDecimalDigits":null,"customCurrencySymbol":"$"},"production":true,"query":{},"settings":{....
 ```
 
-This script contains significant web page data and can be long, demanding processing from the browser. When you enable lazy runtime, the script is broken into smaller ones to prevent compromising the store website’s total blocking time. This helps to avoid lengthy tasks, leading to a faster store experience.
+This script contains significant web page data and can be long, demanding browser processing. When you enable lazy runtime, the script is broken into smaller scripts to prevent compromising the store website’s total blocking time. This helps to avoid lengthy tasks, leading to a faster store experience.
 
 >⚠️ Some apps might not work as expected when this option is enabled. Test with caution before enabling it on a production workspace. If you notice any side effects, [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
 
@@ -167,7 +167,7 @@ This action enables lazy loading of the JavaScript files of the components below
 
 #### Enable page number in meta title
 
-This option adds a `#{Number}` in the HTML title. This helps both users and search engines know exactly which page they’re viewing and avoids duplicated titles, which can harm SEO.
+This option adds a `#{Number}` to the HTML title. This helps both users and search engines know exactly which page they’re viewing and avoids duplicate titles, which can harm SEO.
 
 >⚠️ It’s best suited for stores using traditional pagination. After enabling, review your page titles to make sure they stay clear and consistent.
 
@@ -233,7 +233,7 @@ The size of images in your store directly impacts performance. To optimize image
 
 #### Improving search results
 
-To avoid performance issues on search result pages, use the `skusFilter` and `simulationBehavior` props. These props control the SKUs returned for each product in the search query, determining if the displayed search data will be current (`skusFilter`) or retrieved from the cache (`simulationBehavior`).
+To avoid performance issues on search results pages, use the `skusFilter` and `simulationBehavior` props. These props control the SKUs returned for each product in the search query, determining whether the displayed search data will be current (`skusFilter`) or retrieved from the cache (`simulationBehavior`).
 
 We recommend setting `skusFilter` to `FIRST_AVAILABLE` to return only the first available SKU for each product, and `simulationBehavior` to `skip` to display search data from the cache.
 
