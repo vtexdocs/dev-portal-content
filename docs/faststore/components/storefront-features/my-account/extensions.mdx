@@ -7,6 +7,8 @@ In this guide, you'll learn how to extend the **My Account** page in your B2B st
 
 Check if the [default My Account pages](https://developers.vtex.com/docs/guides/faststore/my-account-overview#default-my-account-pages) meet your needs. If not, you can [create a new page](#creating-new-pages) or [add a new section](#adding-new-sections) to better fit your requirements. These extensions allow you to customize the My Account experience without changing its default structure.
 
+>⚠️ All My Account routes are private and must include the `/pvt` prefix. Custom routes are validated to include this prefix, but you should declare it.
+
 ## Creating new pages
 
 To create a new page for **My Account**, follow these steps:
@@ -38,7 +40,7 @@ Next, enable this new page as a valid route:
     export default getMyAccountRoutes({
     routes: [
         {
-        route: "/account/page-test",
+        route: "pvt/account/page-test",
         title: "Page test",
         },
     ],
