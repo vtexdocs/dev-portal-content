@@ -129,7 +129,7 @@ By enabling this action, menus containing submenus automatically apply the `expe
 
 #### Enable lazy rendering of search results and facets
 
-This action enables lazy rendering for the scrollable facet box and search results pages. Content within the user’s viewport loads first, and content outside the viewport loads only as the user scrolls.
+This action enables lazy rendering for the scrollable facet box and search results pages. Content within the user's viewport loads first, and content outside the viewport loads only as the user scrolls.
 
 >⚠️ Enabling this option might cause unexpected behaviors, such as gaps while scrolling. If you notice any side effects, [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
 
