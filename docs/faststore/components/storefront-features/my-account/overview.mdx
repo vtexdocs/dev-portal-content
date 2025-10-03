@@ -33,7 +33,7 @@ Make sure you're using `@faststore/cli` version `3.0.0` or above.  If the versio
 To enable the experimental **My Account** feature in your project, follow the steps below:
 
 1. Open the `discovery.config.js` file.
-2. Under the `experimental` object, set the `enableFaststoreMyAccount` value to `true`:
+2. In the `experimental` object, set the `enableFaststoreMyAccount` value to `true`:
 
     ```js discovery.config.js mark=2
     experimental: {
@@ -43,7 +43,7 @@ To enable the experimental **My Account** feature in your project, follow the st
 
 3. Commit and push your changes to the main branch to deploy the changes to production.
 
-With the `enableFaststoreMyAccount` flag set to `true`, users accessing the `/account` path will be redirected to the `/pvt/account/profile` page.
+With the `enableFaststoreMyAccount` flag set to `true`, users accessing the `/pvt/account` path will be redirected to the `/pvt/account/profile` page.
 
 >⚠️ The `enableFaststoreMyAccount` flag overrides the URL specified in the [`accountUrl`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options#accounturl) property of the `discovery.config.js` file. If the flag isn't set or is set to `false`, users will be redirected to the URL configured in the `accountUrl` property.
 
