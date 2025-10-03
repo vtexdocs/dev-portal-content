@@ -117,7 +117,7 @@ Before displaying a web page, the VTEX IO service app that renders server-side (
         __RUNTIME__ = {"account":"vtexstore","amp":false,"bindingChanged":false,"binding":{"id":"aacb04t3-a8fa-4bab-b5bd-2d654d20dcd8","canonicalBaseAddress":"vtexstore.vtex.com"},"culture":{"availableLocales":[],"country":"USA","currency":"USD","language":"en","locale":"en-US","customCurrencyDecimalDigits":null,"customCurrencySymbol":"$"},"production":true,"query":{},"settings":{....
 ```
 
-This script contains significant web page data and can be long, which demands processing from the browser. When you enable lazy runtime, the script is broken into smaller ones to prevent compromising the store website’s total blocking time. This helps to avoid lengthy tasks, leading to a faster store experience.
+This script contains significant web page data and can be long, demanding processing from the browser. When you enable lazy runtime, the script is broken into smaller ones to prevent compromising the store website’s total blocking time. This helps to avoid lengthy tasks, leading to a faster store experience.
 
 >⚠️ Some apps might not work as expected when this option is enabled. Test with caution before enabling it on a production workspace. If you notice any side effects, [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
 
