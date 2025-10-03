@@ -19,7 +19,7 @@ This guide presents the following sections:
 
 ## Instructions
 
-### Step 1 - (Optional) Applying manual optimizations
+### Step 1 - (Optional) Testing manual optimizations
 
 If you have implemented [manual optimizations](#manual-optimizations), make sure you use a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) to test these changes before making your new app version publicly available. Learn more about this process in the guide [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
 
@@ -92,7 +92,7 @@ This optimization can be enabled for the following pages:
 * Custom pages
 * Product page
 
->⚠️ Enabling these options might cause style inconsistencies in the store layout. Test these changes carefully before enabling them on a production workspace. If you notice any side effects, [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
+>⚠️ Enabling these options might cause style inconsistencies in the store layout. Test these changes carefully before enabling them on a production workspace. If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
 
 #### Enable CSS concatenation
 
@@ -117,9 +117,9 @@ Before displaying a web page, the VTEX IO service app that renders server-side (
         __RUNTIME__ = {"account":"vtexstore","amp":false,"bindingChanged":false,"binding":{"id":"aacb04t3-a8fa-4bab-b5bd-2d654d20dcd8","canonicalBaseAddress":"vtexstore.vtex.com"},"culture":{"availableLocales":[],"country":"USA","currency":"USD","language":"en","locale":"en-US","customCurrencyDecimalDigits":null,"customCurrencySymbol":"$"},"production":true,"query":{},"settings":{....
 ```
 
-This script contains significant web page data and can be long, demanding browser processing. When you enable lazy runtime, the script is broken into smaller scripts to prevent compromising the store website’s total blocking time. This helps to avoid lengthy tasks, leading to a faster store experience.
+This script contains significant web page data and can be long, demanding browser processing. When you enable lazy runtime, the script is broken into smaller scripts to prevent compromising the store website's total blocking time. This helps to avoid lengthy tasks, leading to a faster store experience.
 
->⚠️ Some apps might not work as expected when this option is enabled. Test with caution before enabling it on a production workspace. If you notice any side effects, [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
+>⚠️ Some apps might not work as expected when this option is enabled. Test with caution before enabling it on a production workspace. If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
 
 #### Enable lazy rendering of submenu items
 
@@ -131,15 +131,15 @@ By enabling this action, menus containing submenus automatically apply the `expe
 
 This action enables lazy rendering for the scrollable facet box and search results pages. Content within the user's viewport loads first, and content outside the viewport loads only as the user scrolls.
 
->⚠️ Enabling this option might cause unexpected behaviors, such as gaps while scrolling. If you notice any side effects, [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
+>⚠️ Enabling this option might cause unexpected behaviors, such as gaps while scrolling. If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
 
 #### Enable loading scripts asynchronously
 
-This action allows the browser to load and execute scripts asynchronously. This means the browser doesn’t wait for the script to fully download and execute before continuing to parse and render the rest of the page. Instead, it can process other elements of the page concurrently while the script loads in the background.
+This action allows the browser to load and execute scripts asynchronously. This means the browser doesn't wait for the script to fully download and execute before continuing to parse and render the rest of the page. Instead, it can process other elements of the page concurrently while the script loads in the background.
 
 #### Enable concurrent React mode
 
-This action helps the store stay responsive by adjusting to the user’s device capabilities and network speed. This means rendering tasks can be prioritized and interrupted based on user interactions or current network conditions.
+This action helps the store stay responsive by adjusting to the user's device capabilities and network speed. This means rendering tasks can be prioritized and interrupted based on user interactions or current network conditions.
 
 For example, if a user begins typing in a search bar while other content is still loading, concurrent mode can pause that loading to process your input, ensuring the search bar remains responsive. Once the input is handled, rendering can resume without perceived delays.
 
@@ -167,9 +167,9 @@ This action enables lazy loading of the JavaScript files of the components below
 
 #### Enable page number in meta title
 
-This option adds a `#{Number}` to the HTML title. This helps both users and search engines know exactly which page they’re viewing and avoids duplicate titles, which can harm SEO.
+This option adds a `#{Number}` to the HTML title. This helps both users and search engines know exactly which page they're viewing and avoids duplicate titles, which can harm SEO.
 
->⚠️ It’s best suited for stores using traditional pagination. After enabling, review your page titles to make sure they stay clear and consistent.
+>⚠️ It's best suited for stores using traditional pagination. After enabling, review your page titles to make sure they stay clear and consistent.
 
 #### Canonical URL without URL parameters
 
@@ -209,7 +209,7 @@ You can also use the `__fold__.experimentalLazyAssets` block to define which the
 
 Learn more about fold blocks in the guide [Lazy loading components](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-fold-blocks).
 
->⚠️ If you notice any side effects, [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
+>⚠️ If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
 
 #### Reducing the number of menu blocks
 
@@ -223,7 +223,7 @@ However, the internal `menu-items` (Clothing, Accessories, and Eyeglasses) can b
 
 Previously, each `menu-item` was set up as an individual child/block. With the change, the `menu-items` group, declared as props, is treated as a single block, represented by a blue square.
 
-This approach reduces the number of blocks from 3 to 1, improving the store’s performance.
+This approach reduces the number of blocks from 3 to 1, improving the store's performance.
 
 Learn more about applying both configurations in the [Menu](https://developers.vtex.com/docs/apps/vtex.menu) guide.
 
@@ -241,7 +241,7 @@ Learn more about prop configuration in the [Search  Result](https://developers.v
 
 #### Using lazy loading for sliders
 
-Build your theme’s shelf and carousel blocks using the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout) component.
+Build your theme's shelf and carousel blocks using the [Slider Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout) component.
 
 Slider Layout uses lazy loading to automatically load images and product information only when users interact with shelves or carousels, reducing page load time. However, having more products in these components may negatively impact website performance.
 
