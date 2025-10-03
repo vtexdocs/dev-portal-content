@@ -139,7 +139,7 @@ This action allows the browser to load and execute scripts asynchronously. This 
 
 #### Enable concurrent React mode
 
-This action helps the store to stay responsive by adjusting to the user’s device capabilities and network speed. This means rendering tasks can be prioritized and interrupted based on your interactions or current network conditions.
+This action helps the store stay responsive by adjusting to the user’s device capabilities and network speed. This means rendering tasks can be prioritized and interrupted based on user interactions or current network conditions.
 
 For example, if you begin typing in a search bar while other content is still loading, concurrent mode can pause that loading to process your input, ensuring the search bar remains responsive. Once your input is handled, rendering can resume without perceived delays.
 
