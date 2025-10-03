@@ -12,10 +12,10 @@ This guide outlines some actions you can implement to optimize store performance
 
 This guide presents the following sections:
 
-* [Instructions](#instructions): Implementation details.
-* [Optimization options](#optimization-options): Methods to enhance store performance.
+* [Instructions](#instructions): Instructions on how to enable and deploy performance optimizations in your store, including workspace setup, Admin configurations, and promoting the changes to production.  
+* [Optimization options](#optimization-options): Methods to enhance store performance, categorized by:
   * [Store settings](#store-settings): Actions that can be performed directly in the VTEX Admin.
-  * [Manual optimizations](#manual-optimizations): Additional manual actions that can be made directly in the project source code.
+  * [Manual optimizations](#manual-optimizations): Additional manual actions for advanced performance, requiring direct code changes.
 
 ## Instructions
 
