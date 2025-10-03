@@ -28,7 +28,7 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 1. Using the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired account by running `vtex login {account}`.
 2. Run the command `vtex use {productionWorkspace} --production` to create and use a **new** [Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/).
 
-  >⚠️ Replace the values between the curly braces based on your scenario.
+    >⚠️ Replace the values between the curly braces based on your scenario.
 
 3. Using your browser, access the Admin for that workspace.
 4. In the account's Admin panel, go to **Store Settings > Storefront > Store > Advanced**.
