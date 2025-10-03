@@ -153,7 +153,7 @@ The search query won't automatically retrieve any additional facets or show them
 
 #### Enable executing all GraphQL queries on the product page
 
-This action allows the product page to fetch additional data necessary to render components positioned above the fold. It helps to ensure that product details, images, and any other components in the main view appear together without delays or missing information.
+This action allows the product page to fetch additional data necessary to render components positioned above-the-fold. It helps ensure that product details, images, and any other components in the main view appear together without delays or missing information.
 
 >⚠️ Enable this only if your product page truly requires it; otherwise, it may lead to deoptimization.
 
