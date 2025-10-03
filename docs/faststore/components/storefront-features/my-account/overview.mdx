@@ -18,11 +18,11 @@ My Account includes several default pages that are essential for managing a cust
 
 | Page path | Description |
 | --------- | ----------- |
-| `src/pages/pvt/account/orders/[id].tsx` | Displays individual order details, including items, quantities, prices, and statuses.|
-| `src/pages/pvt/account/user-details.tsx` | Displays the user’s personal information, such as name, email, and contact details.|
-| `src/pages/pvt/account/security.tsx` | Displays security settings, including password management.|
-| `src/pages/pvt/account/profile.tsx` | Displays editable profile settings, allowing users to update personal information.|
-| `src/pages/pvt/account/orders/index.tsx` | Displays a list of all past and current orders placed by the user, including summary details for each.|
+| `src/pages/pvt/account/orders/[id].tsx` | Displays individual order details, including items, quantities, prices, and statuses. |
+| `src/pages/pvt/account/user-details.tsx` | Displays the user’s personal information, such as name, email, and contact details. |
+| `src/pages/pvt/account/security.tsx` | Displays security settings, including password management. |
+| `src/pages/pvt/account/profile.tsx` | Displays editable profile settings, allowing users to update personal information. |
+| `src/pages/pvt/account/orders/index.tsx` | Displays a list of all past and current orders placed by the user, including summary details for each. |
 
 ## Before you begin
 
@@ -33,13 +33,15 @@ Make sure you're using `@faststore/cli` version `3.0.0` or above.  If the versio
 To enable the experimental **My Account** feature in your project, follow the steps below:
 
 1. Open the `discovery.config.js` file.
-2. Add the `experimental` object and set the `enableFaststoreMyAccount` value to `true`:
+2. Under the experimental object, add the `enableFaststoreMyAccount` value to `true`:
 
     ```js discovery.config.js mark=2
     experimental: {
           enableFaststoreMyAccount: true,
     }
     ```
+
+3. Commit and push your changes to the main branch to deploy the changes to production.
 
 With the `enableFaststoreMyAccount` flag set to `true`, users accessing the `/account` path will be redirected to the `/pvt/account/profile` page.
 
