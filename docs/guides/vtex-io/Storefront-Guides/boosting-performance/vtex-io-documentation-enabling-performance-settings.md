@@ -32,7 +32,7 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 
 3. Using your browser, access the Admin for that workspace.
 4. In the account's Admin panel, go to **Store Settings > Storefront > Store > Advanced**.
-5. Follow the instructions in the [Store-settings](#store-settings) section to activate the desired features, then save the changes.
+5. Follow the instructions in the [Store settings](#store-settings) section to activate the desired features, then save the changes.
 6. Access your store in the workspace you're using and check if the performance improvements were applied.
 
   >ℹ️ Changes may take some time to reflect.
