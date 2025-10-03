@@ -2,8 +2,8 @@
 title: React app dependencies 
 excerpt: "The wise VTEX IO CLI will now update an App React's dependencies (located in the app's `package.json` file) to keep them in line with Render's dependencies list."
 createdAt: "2020-03-16"
+type: 'info'
 ---
-
 App React dependencies (located in the app's `package.json` file) are now automatically updated by VTEX IO CLI and kept up-to-date with the Render Runtime dependencies. 
 
 ## What has changed

@@ -6,6 +6,8 @@ type: "fixed"
 createdAt: "2025-05-02T00:00:00.219Z"
 updatedAt: ""
 excerpt: "Store’s breadcrumb now displays only the main categories and has consistent styling on all pages."
+tags:
+  - FastStore
 ---
 
 The store [breadcrumb](https://developers.vtex.com/docs/guides/faststore/molecules-breadcrumb) navigation is now visible during scrolling, resolving the previous conflict with the [`RegionBar`](https://developers.vtex.com/docs/guides/faststore/molecules-region-bar) component. This update also removes redundant categories, ensures consistent dropdown styling, and improves display on PLP and Search pages.

@@ -6,6 +6,8 @@ excerpt: "The Pick and Pack Order Changes API now supports BIN location manageme
 createdAt: "2025-06-18T00:00:00.219Z"
 updatedAt: ""
 hidden: false
+tags:
+  - Pick and Pack
 ---
 
 The [Pick and Pack Order changes API](https://developers.vtex.com/docs/api-reference/pick-and-pack-order-changes-api) was updated to include new endpoints that manage BIN locations. The BIN location is a specific, designated storage location within a warehouse. This location isn't necessarily a physical container. Each BIN is typically assigned a unique identifier or code, facilitating precise tracking and retrieval of items within the warehouse. These endpoints allow you to manage your warehouse inventory with greater precision and control.

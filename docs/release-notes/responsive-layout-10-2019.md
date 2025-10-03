@@ -2,8 +2,8 @@
 title: Responsive Layout
 excerpt: "Should we start calling ourselves the gods of layout components? The Responsive Layout allows different layouts per breakpoint! It is so awesome and versatile that you'll think it's really godlike."
 createdAt: "2019-10-25T14:47:00.000Z"
+type: 'info'
 ---
-
 Responsive Layout allows you to set **different layouts per breakpoint**, meaning your store will have a different layout  depending on which device the user is using to access it. 
 
 ![responsive-layout-gif](https://user-images.githubusercontent.com/52087100/67564308-102a2d80-f6f9-11e9-9fcd-f3c0ea345c13.gif)

@@ -2,8 +2,8 @@
 title: accessiBe first party app 
 excerpt: "Natively integrate using the accessiBe first party app and get access to the accessiBe solution and all its functionalities."
 createdAt: '2019-08-22T18:27:49.833Z'
+type: 'info'
 ---
-
 Natively integrate using the accessiBe first party app and get access to the **accessiBe solution** and all its functionalities.
 
 > ℹ️ accessiBe is an automated web accessibility solution that analyzes websites to ensure their compliance and accessibility regardless of any updates these undergo.

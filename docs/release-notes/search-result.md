@@ -2,8 +2,8 @@
 title: Search Result 
 excerpt: "The search results page can now inform the user about the number of items displayed on the browser page, along with the total number of results found."
 createdAt: "2019-08-22T14:47:00.000Z"
+type: 'info'
 ---
-
 The search results page can now inform the user about the number of items displayed on the browser page, along with the total number of results found, all thanks to the new `showProductsCount` prop.
 
 ## What has changed

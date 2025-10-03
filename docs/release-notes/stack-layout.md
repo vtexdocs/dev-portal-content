@@ -2,8 +2,8 @@
 title: Stack Layout
 excerpt: "Components overlapping other components. If this seems like something difficult, that's because you're unfamiliar with Stack Layout."
 createdAt: "2019-11-10T14:47:00.000Z"
+type: 'info'
 ---
-
 The Stack Layout component allows display blocks to stack on top of others in a easy way.
 
 ![stack-layout](https://user-images.githubusercontent.com/52087100/66655794-1c02f380-ec13-11e9-9120-c1390d8d0df2.png)

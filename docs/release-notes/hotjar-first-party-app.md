@@ -2,8 +2,8 @@
 title: Hotjar first party app
 excerpt: 'Forget custom HTML tags and rejoice from the services the Hotjar solution provides. A native integration of the solution with IO stores is now a reality thanks to this new 1st party app.'
 createdAt: '11/11/2019'
+type: 'info'
 ---
-
 Easily **integrate your store with the** [**Hotjar**](https://www.hotjar.com/tour) **solution** by simply using the VTEX IO Hotjar first party integration app.
 
 The Hotjar is a solution aimed at giving the retailer visibility over the customer's store browsing, using heat maps, visitor recordings and conversion funnels.

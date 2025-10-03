@@ -2,8 +2,8 @@
 title: VTEX IO Highlights - Week 29/2019
 excerpt: "See what is new in VTEX IO Week 29/2019"
 createdAt: "2019-07-25T14:47:00.000Z"
+type: 'info'
 ---
-
 Welcome to the VTEX IO weekly release notes!
 
 Here's a sneak peek at key changes made in the last week:

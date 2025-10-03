@@ -2,8 +2,8 @@
 title: 'Typescript versions consistent locally'
 excerpt: 'The VTEX IO CLI now overwrites local `package.json` dependencies to match the same Typescript version as in current Builder-Hub.'
 createdAt: '2019-12-12T18:27:49.833Z'
+type: 'info'
 ---
-
 The VTEX IO CLI now overwrites local `package.json` dependencies to match the same Typescript version as in current Builder-Hub.
 
 :eyes: Builder-Hub now uses Typescript 3.5.2. It previously used version 3.4.3.

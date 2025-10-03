@@ -2,8 +2,8 @@
 title: Bazaarvoice first party app
 excerpt: "Get your hands on a first-party integration with the Bazaarvoice solution."
 createdAt: 2019-09-20T14:47:00.000Z
+type: 'info'
 ---
-
 Easily integrate your store with the [Bazaarvoice](https://www.bazaarvoice.com/) solution by simply using the VTEX IO Bazaarvoice first party integration app. 
 
 > ℹ️ The Bazaarvoice is a solution that used to highlight the customer’s buying experience to retailers, improving their understanding related to customer feedback, rating, review, Q&A, etc.

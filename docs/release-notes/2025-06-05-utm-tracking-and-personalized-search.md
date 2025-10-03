@@ -6,6 +6,8 @@ type: "improved"
 createdAt: "2025-06-05T00:00:00.219Z"
 updatedAt: ""
 excerpt: "FastStore now preserves UTM and UTMi parameters throughout the customer journey, improving campaign attribution and analytics."
+tags:
+  - FastStore
 ---
 
 FastStore now supports [UTM (Urchin Tracking Module)](https://help.vtex.com/en/tutorial/what-are-utm-source-utm-campaign-and-utm-medium--2wTz7QJ8KUG6skGAoAQuii) and [UTMi (internal UTM)](https://help.vtex.com/en/tutorial/what-are-the-internal-utms--5Pvo8ufYWs00AUeCCEY68a) parameters across the entire customer journey, from site entry to search and checkout. This update ensures accurate campaign attribution, improved analytics, and more accurate insights for merchants into campaign effectiveness and user journeys.

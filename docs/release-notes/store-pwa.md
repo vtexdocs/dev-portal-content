@@ -3,8 +3,8 @@ title: Store PWA
 excerpt: "Once on the Order Placed page, users want to follow their order’s status. A notice prompting the installation of your store’s PWA seems rather strategic at this point, wouldn’t you say? If you agree, then you will definitely like this improvement."
 createdAt: "2019-11-11T14:47:00.000Z"
 tags: ["pwa", "store-pwa"]
+type: 'info'
 ---
-
 Promote the installation of your store's PWA at the end of the user's buying experience.
 
 ** PWA (Progressive Web Apps) are web apps that make your website a sort of native app**, giving users advantages such as offline functionalities, home screen icon and others.  

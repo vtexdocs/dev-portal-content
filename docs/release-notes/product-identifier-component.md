@@ -2,8 +2,8 @@
 title: 'Product Identifier component'
 excerpt: "It is possible to now display a product identifier on your Product page, Shelf and Search Results."
 createdAt: "2019-07-10"
+type: 'info'
 ---
-
 It is possible to now display a product identifier on your Product page, Shelf and Search Results.
 
 ![](https://user-images.githubusercontent.com/52087100/60997935-62a03380-a32e-11e9-9c3b-754fdc01ec7d.png)

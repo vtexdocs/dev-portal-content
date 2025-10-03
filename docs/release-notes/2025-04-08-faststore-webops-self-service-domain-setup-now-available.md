@@ -6,6 +6,9 @@ excerpt: "FastStore WebOps now allows users to configure their store’s product
 createdAt: "2025-04-03T17:15:14.007Z"
 updatedAt: ""
 hidden: false
+tags:
+  - FastStore
+  - WebOps
 ---
 
 

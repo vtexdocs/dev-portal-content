@@ -2,8 +2,8 @@
 title: Sandbox with OrderForm
 excerpt: "The user's cart data can now be used in Sandbox components in a fast and simple way."
 createdAt: "2019-09-26T14:47:00.000Z"
+type: 'info'
 ---
-
 The [Sandbox component](https://vtex.io/docs/components/all/vtex.sandbox/) is now able to receive OrderForm context.
 
 ## What has changed
