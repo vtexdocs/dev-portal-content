@@ -145,7 +145,7 @@ For example, if a user begins typing in a search bar while other content is stil
 
 #### Enable fetching filters partially
 
-When you enable this action, search result pages display a maximum of 10 facets per filter.
+When you enable this action, search results pages display a maximum of 10 facets per filter.
 
 The search query won't automatically retrieve any additional facets or show them to the user. Instead, a `Show more` button allows users to load the remaining facets.
 
