@@ -3,12 +3,12 @@ title: "Enabling performance settings"
 slug: "vtex-io-documentation-enabling-performance-settings"
 hidden: false
 createdAt: "2024-11-18T15:26:22.439Z"
-updatedAt: "2025-08-01T21:48:50.482Z"
+updatedAt: "2025-10-03T17:29:47.366Z"
 ---
 
 For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough to convert leads if the user experience falls short. Store website performance is essential to the user experience, directly impacting sales conversion rate, user session time, and other metrics. Every millisecond counts and affects the consumer decision-making process and your store's website rank in search engine results.
 
-This guide outlines some actions you can implement to optimize store performance. These [optimization options](#optimization-options) can improve SEO score and page loading time. You can measure these improvements using tools like [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/1205784?hl=en). Learn more in the **Monitoring tools** section within the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
+This guide outlines actions you can implement to optimize store performance. These [optimization options](#optimization-options) can improve SEO score and page loading time. You can measure these improvements using tools like [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/1205784?hl=en). Learn more in the **Monitoring tools** section within the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
 
 This guide presents the following sections:
 
