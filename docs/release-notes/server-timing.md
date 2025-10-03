@@ -2,8 +2,8 @@
 title: Server timing
 excerpt: "Aiming to improve the oversight of performance issues, this new VTEX IO release offers a server timing feature running throughout the request cycle."
 createdAt: "2019-07-24T14:47:00.000Z"
+type: 'info'
 ---
-
 Aiming to improve the **oversight of performance issues**, this new VTEX IO release offers a server timing feature running throughout the request cycle.
 
 ## What has changed

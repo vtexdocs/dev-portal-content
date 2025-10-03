@@ -3,8 +3,8 @@ title: Native A/B testing
 slug: native-ab-testing
 excerpt: "Run clear and effective A/B tests natively while minimizing store losses from potential drops in conversion."
 createdAt: "2019-07-17T14:47:00.000Z"
+type: 'info'
 ---
-
 Run effective A/B tests natively while minimizing store losses from potential drops in conversion. 
 
 > ℹ️ A/B testing is a scientific marketing tool that compares two possible variations of the same page, ensuring that you don't waste time guessing which of the two would best fit your business and allowing you to make decisions based on real conversion rates. 

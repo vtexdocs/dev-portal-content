@@ -6,6 +6,9 @@ excerpt: "FastStore secrets are now managed in WebOps, improving security by dep
 createdAt: "2025-06-24T13:23:53.214Z"
 updatedAt: "2025-07-18T15:04:44.547Z"
 hidden: false
+tags:
+  - WebOps
+  - FastStore
 ---
 
 Secrets are now managed via the WebOps interface to increase the security of sensitive data and streamline deployment processes. This change centralizes sensitive information management, such as API keys, tokens, and passwords through WebOps.

@@ -3,9 +3,8 @@ slug: "vtex-io-release-notes-week-45462019"
 title: "VTEX IO Release Notes - Week 45&46/2019"
 createdAt: 2019-11-26T14:04:00.000Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-week-45462019-0.png)
 
 Hey, team! Welcome to the **Black** VTEX IO Release Notes.

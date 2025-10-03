@@ -2,8 +2,8 @@
 title: Global Messages discontinued
 excerpt: 'Seeking to ensure a greater support to multi-language stores, Web Framework will only translate and provide messages used by each component being rendered on a given page.'
 createdAt: '2019-12-12T18:27:49.833Z'
+type: 'info'
 ---
-
 Seeking to ensure a greater support to multi-language stores, Web Framework will only translate and provide messages used by each component being rendered on a given page.
 
  __A new version of the Web Framework will be released during the next week that deprecates Global Messages__ and all VTEX apps will be migrated to respect the new format. 

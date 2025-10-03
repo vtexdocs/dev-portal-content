@@ -2,8 +2,8 @@
 title: Sidecar pixel app
 excerpt: "Integrate your store with the [Sidecar solution](https://hello.getsidecar.com/) by simply using the VTEX IO Sidecar pixel app."
 createdAt: "2019-07-17T14:47:00.000Z"
+type: 'info'
 ---
-
 Integrate your store with the [Sidecar solution](https://hello.getsidecar.com/) by simply using the VTEX IO Sidecar pixel app.
 
 > ℹ️ The Sidecar solution is used to track and manage Google Shopping campaigns, as well as individual product performance.

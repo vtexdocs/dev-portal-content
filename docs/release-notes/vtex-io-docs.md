@@ -2,8 +2,8 @@
 title: VTEX IO Docs
 excerpt: "You didn't misread! The dim light at the end of the tunnel just got brighter! The new VTEX IO documentation website is up and ready for you to access."
 createdAt: "2019-09-13T14:47:00.000Z"
+type: 'info'
 ---
-
 Yes, you read it right. You're not delusional. This release is for real! The official VTEX IO documentation website is already online, merely a click away: [https://vtex.io/docs](https://vtex.io/docs)
 
 ![vtex io:docs-home](https://user-images.githubusercontent.com/52087100/64882838-496c7980-d634-11e9-8626-24a63502f329.png)

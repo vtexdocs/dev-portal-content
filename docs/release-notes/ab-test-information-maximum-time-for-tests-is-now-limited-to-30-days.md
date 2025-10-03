@@ -4,6 +4,9 @@ slug: "ab-test-information-maximum-time-for-tests-is-now-limited-to-30-days"
 type: "info"
 excerpt: "Now, every A/B test started until the publishing of this announcement may end automatically in 30 days. From now on, every new A/B test may end automatically 30 days after starting."
 createdAt: "2023-12-13T16:00:00.000Z"
+tags:
+  - Store Framework
+  - VTEX IO
 ---
 
 A/B tests compare the sales performance between a production workspace and the master workspace.

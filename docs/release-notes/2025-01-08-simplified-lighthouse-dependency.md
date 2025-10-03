@@ -5,6 +5,8 @@ hidden: false
 type: "improved"
 createdAt: "2025-01-08T10:00:00.219Z"
 excerpt: "The FastStore CLI now directly includes the '@faststore/lighthouse' package, simplifying project setup"
+tags:
+  - FastStore
 ---
 
 The `@faststore/lighthouse` package is now a core dependency for `@faststore/cli`. This change eliminates the need to manually declare `@faststore/lighthouse` in your project's `package.json` file.

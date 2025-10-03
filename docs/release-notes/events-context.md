@@ -2,8 +2,8 @@
 title: Events context
 excerpt: "Create a web app with more ease with help from Events' expanding functionalities."
 createdAt: "2019-09-13T14:47:00.000Z"
+type: 'info'
 ---
-
 An app's events context now has access to the `node-vtex-api` library's Clients.  
 
 > ℹ️ **Events are a way VTEX IO apps communicate** such as HTTP requests. While HTTP requests are a one-to-one mechanism, events are one-to-many. Apps that want to consume that information can subscribe to those events.

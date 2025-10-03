@@ -4,6 +4,9 @@ slug: "2024-10-30-webops-integration-with-headless-cms"
 type: "fixed"
 excerpt: "FastStore WebOps now fully syncs with the Headless CMS, automatically deploying updates to your store."
 createdAt: "2024-10-30T16:00:00.667Z"
+tags:
+  - WebOps
+  - FastStore
 ---
 
 Changes made in the Headless CMS on VTEX Admin, including creating new pages, adding sections, and updating fields, now automatically trigger pull requests to the store's GitHub repository and are reflected in its version history.

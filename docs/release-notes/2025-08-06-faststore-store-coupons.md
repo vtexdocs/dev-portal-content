@@ -6,6 +6,8 @@ excerpt: "Coupons remain applied after store cart updates"
 createdAt: "2025-08-06T09:50:00.214Z"
 updatedAt: "2025-08-06T10:00:00.214Z"
 hidden: false
+tags:
+  - FastStore
 ---
 
 Applied coupons now remain in the store cart after any cart interaction, such as refreshing the page or adding new items.

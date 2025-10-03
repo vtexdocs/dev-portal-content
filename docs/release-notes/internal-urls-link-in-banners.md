@@ -2,8 +2,8 @@
 title: Internal URLs link in banners 
 excerpt: "With the new 'Internal URL' field, CMS’s Storefront section now allows you to easily and swiftly link internal URLs to a banner by simply copy-pasting the desired address."
 createdAt: "2019-08-22T14:47:00.000Z"
+type: 'info'
 ---
-
 With the new `Internal URL` field, CMS’s Storefront section now allows you to easily and swiftly link internal URLs to a banner by simply copy-pasting the desired address.
 
 ## What has changed

@@ -2,8 +2,8 @@
 title: VTEX IO Closed Beta list 
 excerpt: "VTEX IO now has a new workflow to require platform development permissions! Find out more about the change and about what you need to do when accessing the VTEX IO Closed Beta list file."
 createdAt: "2020-03-16"
+type: 'info'
 ---
-
 > ⚠️ (Edited on 2023-07-07) We no longer require app developers to fill out the application form to use VTEX IO builders as stated in [this latest announcement](https://developers.vtex.com/updates/release-notes/application-form-to-access-vtex-io-builders-is-no-longer-required).
 
 As a closed beta solution, VTEX IO has a new workflow for platform development permissions: it is now required to submit a form with your project details to our product team. 
