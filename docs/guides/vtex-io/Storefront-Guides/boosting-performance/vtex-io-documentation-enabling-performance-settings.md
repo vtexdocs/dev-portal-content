@@ -57,7 +57,7 @@ Store settings are actions you can configure directly in the VTEX Admin by navig
 
 ![cms-store-advanced](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-0.png)
 
-#### orderForm optimization
+#### OrderForm optimization
 
 This action disables the legacy `orderForm` provider.
 
