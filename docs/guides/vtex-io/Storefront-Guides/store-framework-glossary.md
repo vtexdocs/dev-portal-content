@@ -103,7 +103,7 @@ Key-value pairs used to define the behavior and appearance of [components](#comp
 
 ### Routes
 
-Routes are configurations that map URL patterns and HTTP methods to specific actions, determining how an application handles incoming client requests. In the context of [Store Framework](#store-framework), routing is managed by the [Rewriter app[(https://developers.vtex.com/docs/apps/vtex.rewriter) and [Store Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder), enabling developers to focus on defining route paths and designing page templates without managing low-level routing logic directly. Learn more in [Routing](https://developers.vtex.com/docs/guides/store-framework-routing).
+Routes are configurations that map URL patterns and HTTP methods to specific actions, determining how an application handles incoming client requests. In the context of [Store Framework](#store-framework), routing is managed by the [Rewriter app](https://developers.vtex.com/docs/apps/vtex.rewriter) and [Store Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder), enabling developers to focus on defining route paths and designing page templates without managing low-level routing logic directly. Learn more in [Routing](https://developers.vtex.com/docs/guides/store-framework-routing).
 
 ---
 
