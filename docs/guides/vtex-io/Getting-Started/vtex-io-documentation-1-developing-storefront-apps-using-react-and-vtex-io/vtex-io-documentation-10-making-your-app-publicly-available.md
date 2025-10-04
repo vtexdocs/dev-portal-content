@@ -121,7 +121,7 @@ Whether you incorporate the new component into your VTEX Store Theme or not, you
 
 The [VTEX App Store](https://apps.vtex.com/) is a *marketplace* for *plug&play* solutions and can be used by any interested VTEX account that wants to make available its solutions to other accounts in the ecosystem.
 
-To make your app available, check the documentation for [Submitting an app in the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store/ ).
+To make your app available, check the documentation for [Submitting an app in the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store/).
 
 ---
 
