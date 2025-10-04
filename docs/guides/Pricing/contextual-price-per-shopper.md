@@ -91,7 +91,7 @@ To query the price table mapping of a specific audience, use the [GET price tabl
 
 `https://{accountName}.{environment}.com.br/api/price-table-mapper/pvt/mapping/{audienceId}`
 
-Replace `{audienceId}' with the ID of the audience you want to query. If the request is successful, the API will return an array containing the name of the pricing table associated with the audience ID. See the example below:
+Replace `{audienceId}` with the ID of the audience you want to query. If the request is successful, the API will return an array containing the name of the pricing table associated with the audience ID. See the example below:
 
 Response body
 
