@@ -354,3 +354,39 @@ By default, filters and badges are active once Delivery Promise is enabled and i
 4. Go to the **Delivery Promise** section and change the labels and settings to suit your scenario.
 
 ![dp-managing-filter-and-badges-labels](https://vtexhelp.vtexassets.com/assets/docs/src/dp-managing-filter-labels___8ced78ce723693085b3d8baa857ff5a6.gif)
+
+## Enabling the Availability (In-stock) filter
+
+By default the [Availability](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#plp-or-search-page-filters) filter is disabled in the Headless CMS. To enable this feature follow these steps:
+
+### Setting up `hideUnavailableItems`
+
+1. Open your FastStore project in the code editor of your preference.
+2. Open the `discovery.config.js` file.
+3. In `hideUnavailableItems`, change the value to `false`.
+
+    ```discovery.config.js mark=6
+    ...
+    api: {
+        storeId: "newstore",
+        workspace: "master",
+        environment: "vtexcommercestable",
+        hideUnavailableItems: false,
+        incrementAddress: false,
+    },
+    ...
+    ```
+
+4. Create a new branch and open a pull request to deploy the change made in the `discovery.config.js` file to production.
+
+### Enabling the filter in the Headless CMS
+
+After changing the `hideUnavailableItems` value to `false`, you can enable this filter in the Headless CMS
+
+1. Access VTEX Admin and go to **Storefront > Headless CMS**.
+2. Click on the **Global Sections** Content Type.
+3. Click the **Settings** tab.
+4. Go to the **Delivery Promise** section and check the field **Should display In Stock filter?**
+
+![dp-availability-in-stock-filter](https://vtexhelp.vtexassets.com/assets/docs/src/dp-availability-filter___2fd389aefe66a4014d8bf9828ade58b1.png)
+
