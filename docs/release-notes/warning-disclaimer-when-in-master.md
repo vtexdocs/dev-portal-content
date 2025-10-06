@@ -2,8 +2,8 @@
 title: 'Warning disclaimer when in master'
 excerpt: "With the warning disclaimer present when in a master workspace, Storefront users benefit from greater security when editing their stores."
 createdAt: "2019-07-10"
+type: 'info'
 ---
-
 With the warning disclaimer present when in a master workspace, Storefront users benefit from greater security when editing their stores.
 
 ![](https://user-images.githubusercontent.com/52087100/60997234-be69bd00-a32c-11e9-976a-91d8a21501cf.png)

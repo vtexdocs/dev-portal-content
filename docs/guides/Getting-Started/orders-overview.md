@@ -265,8 +265,7 @@ There are additional configurations available for you to manage your store order
 
 ### VTEX Sales App
 
-- [Enable order filter by sales associate](https://developers.vtex.com/docs/guides/enable-order-filter-by-sales-associate)
-- [Enable partial cancellation for Debit or Credit Direct sales](https://developers.vtex.com/docs/guides/enable-partial-cancellation)
+[Enable partial cancellation for Debit or Credit Direct sales](https://developers.vtex.com/docs/guides/enable-partial-cancellation)
 
 ### VTEX DO
 

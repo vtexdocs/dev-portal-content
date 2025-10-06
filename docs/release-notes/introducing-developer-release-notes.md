@@ -3,9 +3,8 @@ slug: "introducing-developer-release-notes"
 title: "Introducing: Developer Release Notes"
 createdAt: 2020-03-01T20:44:00.000Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![Documentation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/introducing-developer-release-notes-0.png)
 
 We now have a dedicated Release Notes page to share technical updates in our product!

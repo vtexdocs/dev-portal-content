@@ -5,6 +5,8 @@ type: "added"
 createdAt: "2022-07-18T13:14:43.462Z"
 hidden: false
 excerpt: "We have just made publicly available the Payment Provider Framework (PPF), which is an alternative way to develop payment connectors through VTEX IO. This feature is in the beta stage."
+tags:
+  - Payments
 ---
 
 ![Payments](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payment-provider-framework-develop-payment-connectors-with-vtex-io-0.png)

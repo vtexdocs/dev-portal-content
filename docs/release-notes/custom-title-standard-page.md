@@ -2,8 +2,8 @@
 title: Title of contextless routes
 excerpt: 'The field title for routes without a context (such as product, brand, category, etc) weren’t editable previously. This release enables its editing.'
 createdAt: '09/08/2019'
+type: 'info'
 ---
-
 The field title for routes without a context (such as product, brand, category, etc) weren’t editable previously. This release enables its editing.
 
 > ℹ️ Pages with context titles are defined by their context, i.e. product’s name.

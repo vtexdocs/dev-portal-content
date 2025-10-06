@@ -2,8 +2,8 @@
 title: Shelf component
 excerpt: 'The group of products shown up in a shelf can now be defined by a subcategory and specification.'
 createdAt: '2019-12-12T18:27:49.833Z'
+type: 'info'
 ---
-
 The group of products shown up in a shelf can now be defined by a subcategory and specification. 
 
 ## What has changed

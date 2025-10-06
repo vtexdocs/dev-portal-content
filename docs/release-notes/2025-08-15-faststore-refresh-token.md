@@ -6,6 +6,8 @@ type: "added"
 createdAt: "2025-08-15T00:00:00.219Z"
 updatedAt: "2025-08-15T00:00:00.219Z"
 excerpt: "FastStore now supports refresh tokens, allowing users to stay logged in longer without reauthenticating, improving the shopping experience."
+tags:
+  - FastStore
 ---
 
 FastStore storefronts now support the [refresh token flow](https://developers.vtex.com/docs/guides/faststore/security-enabling-refresh-token), ensuring users stay logged in longer without reauthenticating.

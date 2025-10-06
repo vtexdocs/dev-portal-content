@@ -2,6 +2,79 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.189](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.188...v1.1.189) (2025-10-04)
+
+### [1.1.188](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.183...v1.1.188) (2025-10-04)
+
+### [1.1.187](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.183...v1.1.187) (2025-10-03)
+
+### [1.1.186](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.183...v1.1.186) (2025-10-03)
+
+### [1.1.185](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.183...v1.1.185) (2025-10-01)
+
+### [1.1.184](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.183...v1.1.184) (2025-10-01)
+
+### [1.1.183](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.181...v1.1.183) (2025-10-01)
+
+### [1.1.181](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.180...v1.1.181) (2025-10-01)
+
+### [1.1.180](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.179...v1.1.180) (2025-10-01)
+
+
+### 📝 Documentation updates
+
+* **vtex-io-deprecated-apps.md:** EDU-15899 ([fb493aa](https://github.com/vtexdocs/dev-portal-content/commit/fb493aa54d394f53c1f87a88363af7422ab5183d))
+
+### [1.1.179](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.177...v1.1.179) (2025-10-01)
+
+### [1.1.177](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.175...v1.1.177) (2025-09-30)
+
+### [1.1.175](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.173...v1.1.175) (2025-09-30)
+
+### [1.1.173](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.172...v1.1.173) (2025-09-30)
+
+### [1.1.172](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.170...v1.1.172) (2025-09-30)
+
+### [1.1.170](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.168...v1.1.170) (2025-09-30)
+
+### [1.1.168](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.167...v1.1.168) (2025-09-29)
+
+### [1.1.167](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.166...v1.1.167) (2025-09-29)
+
+### [1.1.166](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.165...v1.1.166) (2025-09-26)
+
+### [1.1.165](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.163...v1.1.165) (2025-09-26)
+
+### [1.1.164](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.163...v1.1.164) (2025-09-25)
+
+### [1.1.163](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.161...v1.1.163) (2025-09-24)
+
+### [1.1.161](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.159...v1.1.161) (2025-09-24)
+
+### [1.1.159](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.157...v1.1.159) (2025-09-24)
+
+### [1.1.157](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.155...v1.1.157) (2025-09-24)
+
+### [1.1.155](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.154...v1.1.155) (2025-09-23)
+
+### [1.1.154](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.152...v1.1.154) (2025-09-23)
+
+### [1.1.153](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.152...v1.1.153) (2025-09-22)
+
+### [1.1.152](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.150...v1.1.152) (2025-09-22)
+
+### [1.1.151](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.150...v1.1.151) (2025-09-22)
+
+### [1.1.150](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.148...v1.1.150) (2025-09-22)
+
+### [1.1.148](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.147...v1.1.148) (2025-09-22)
+
+### [1.1.147](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.145...v1.1.147) (2025-09-22)
+
+### [1.1.145](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.144...v1.1.145) (2025-09-19)
+
+### [1.1.144](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.143...v1.1.144) (2025-09-19)
+
 ### [1.1.143](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.140...v1.1.143) (2025-09-19)
 
 

@@ -2,8 +2,8 @@
 title: Simple shelf can now hide unavailable products
 excerpt: "Adding the new prop hideUnavailableItem to a shelf will prevent out-of-stock products from appearing on it."
 createdAt: "2019-07-31T14:47:00.000Z"
+type: 'info'
 ---
-
 ## What has changed
 ​It is now possible to choose whether the shelf component will show unavailable items or not by setting a prop.
 It is used to ensure that the shelf will only show products that are in stock - available to be purchased.

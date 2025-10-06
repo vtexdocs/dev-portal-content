@@ -3,9 +3,8 @@ slug: "vtex-io-release-notes-week-45462019"
 title: "VTEX IO Release Notes - Week 45&46/2019"
 createdAt: 2019-11-26T14:04:00.000Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-week-45462019-0.png)
 
 Hey, team! Welcome to the **Black** VTEX IO Release Notes.
@@ -30,5 +29,5 @@ Whether retailer or end user, I do hope that your checklist for this black week 
 
 ### Notable bug fixes 🐛
 
-- [Filter Navigator](https://github.com/vtex-apps/search-result/pull/272) - The release of the `preventRouteChange` prop in search result pages was [announced](link Release) during the last Release Notes and, believe it or not, was already cause for uncertainty. When a category was selected and then removed from the Filter Navigator, the URL was keeping the former category, showing inaccurate data to the user. This bug was already fixed and the prop is alive and well. Booyah!
+- [Filter Navigator](https://github.com/vtex-apps/search-result/pull/272) - The release of the `preventRouteChange` prop in search result pages was [announced](https://developers.vtex.com/updates/release-notes/vtex-io-release-notes-week-43442019) during the last Release Notes and, believe it or not, was already cause for uncertainty. When a category was selected and then removed from the Filter Navigator, the URL was keeping the former category, showing inaccurate data to the user. This bug was already fixed and the prop is alive and well. Booyah!
 - [Highlight resize](https://github.com/vtex-apps/admin-pages/pull/303) - When editing a block with the admin's Site Editor, its height may change according to its new configurations, right? The problem was that the `HighlightOverlay`, responsible for highlighting the block was being edited on the Site Editor's interface, was shy and kept the original height, thereby impairing the display of the new configurations. It's now learned to be more receptive to change and adapts according to the block's new height.

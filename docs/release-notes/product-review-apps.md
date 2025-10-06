@@ -2,8 +2,8 @@
 title: Product Review apps
 excerpt: 'It is now possible to create Product Review apps using abstract interfaces in your store. Since these abstract interfaces have public extensibility, anyone is able to implement the app.'
 createdAt: '2019-12-12T18:27:49.833Z'
+type: 'info'
 ---
-
 It is now possible to create Product Review apps using abstract interfaces in your store. Since these abstract interfaces have public extensibility, anyone is able to implement the app.   
 
 You can check those interfaces [here](https://github.com/vtex-apps/product-review-interfaces)

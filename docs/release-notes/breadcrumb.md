@@ -2,8 +2,8 @@
 title: Breadcrumb
 excerpt: "If you've had a good week, Breadcrumb had a better one! The component gained two new props (`homeIconSize` and `caretIconSize`), new Handles (`homeLink` and `termArrow`) and other improvements."
 createdAt: "2019-11-25T14:47:00.000Z"
+type: 'info'
 ---
-
 The Breadcrumb component gained a series of key improvements, such as:
 
 - Two new **CSS Handles** (`homeLink` and `termArrow`).

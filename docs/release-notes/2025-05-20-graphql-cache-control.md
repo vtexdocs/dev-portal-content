@@ -6,6 +6,8 @@ type: "added"
 createdAt: "2025-05-20T00:00:00.219Z"
 updatedAt: ""
 excerpt: "Improve performance by reducing server load and speeding up page loads with the `graphqlCacheControl` flag"
+tags:
+  - FastStore
 ---
 
 FastStore projects can now configure caching for GraphQL `GET` requests using the `graphqlCacheControl` flag. This flag improves store performance by caching responses and reducing server load, ensuring faster page loads for visitors while maintaining data freshness.

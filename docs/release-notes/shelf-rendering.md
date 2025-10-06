@@ -2,8 +2,8 @@
 title: 'Shelf rendering'
 excerpt: "Our Shelf component is now rendered on the Server Side, ensuring the end user benefits from a faster component loading time."
 createdAt: "2019-07-10"
+type: 'info'
 ---
-
 Our Shelf component is now rendered on the Server Side, ensuring the end user benefits from a faster component loading time.
 
 ## What has changed

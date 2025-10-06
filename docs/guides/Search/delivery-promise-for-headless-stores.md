@@ -34,8 +34,8 @@ To enable the Delivery Promise functionality, you should use the following addit
 
 | Query string / Facet | Description | Example |
 | :---- | :---- | :---- |
-| `zip-code` **\[required\]** (query string) | Postal code. | `?zip-code=22250040`
-| `shipping` (facet)  | Shipping method. It must always be combined with `zip-code`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/shipping/pickup-in-point/?zip-code=22250040` |
+| `zip-code` **\[required\]** (query string) | Postal code without hyphens. Only numeric values are accepted. | `?zip-code=22250040`
+| `shipping` (facet)  | Shipping method. It must always be combined with `zip-code`. Possible values: `pickup-in-point`, `delivery`, `pickup-all`, `pickup-nearby` | `/shipping/pickup-in-point/?zip-code=22250040` |
 | `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters.| `/shipping/pickup-in-point?zip-code=22250040&pickupPoint=vtex-botafogo` |
 | `hideUnavailableItems` (query string) | If `true`, this query parameter ensures only products actually available for delivery or pickup are returned. If omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
 
