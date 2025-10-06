@@ -7,15 +7,15 @@ updatedAt: "2023-07-18T17:08:52.219Z"
 excerpt: "Learn how to use VTEX APIs to place a regular order from an existing cart."
 ---
 
-This step-by-step guide will walk you through the process of using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway API](https://developers.vtex.com/docs/api-reference/payments-gateway-api) to create an order from an existing shopping cart, and is divided into the following steps:
+This step-by-step guide will walk you through the process of using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway API](https://developers.vtex.com/docs/api-reference/payments-gateway-api) to create an order from an existing shopping cart. It is divided into the following steps:
 
 1. **Get cart information:** Begin by retrieving the `orderFormId` of the current shopping cart via the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint.
 2. **Place the order:** Continue by placing the order on the VTEX platform via the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint.
-3. **Handling the order payment and processing:** The process ends by [sending the necessary payment data](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) to resolve the order payment and [processing order details](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-).
+3. **Handling the order payment and processing:** The process ends by [sending the necessary payment data](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) to resolve the order payment and by [processing order details](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-).
 
 ## Before you begin
 
-Before proceeding any further, ensure that you have a valid `appKey` and `appToken` with the necessary permissions to access the [Checkout](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway](https://developers.vtex.com/docs/api-reference/payments-gateway-api) APIs. For more information, please refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
+Before proceeding any further, ensure that you have a valid `appKey` and `appToken` with the necessary permissions to access the [Checkout](https://developers.vtex.com/docs/api-reference/checkout-api) and [Payments Gateway](https://developers.vtex.com/docs/api-reference/payments-gateway-api) APIs. For more information, refer to the [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) article.
 
 ## Preparing the cart
 
@@ -384,7 +384,7 @@ Place a new order via the [Place order from an existing cart](https://developers
 - `savePersonalData`: set as `true` if the shopper's data provided during checkout should be saved for future reference (default is `false`).
 - `optinNewsLetter`: set as `true` if the shopper opted to receive the newsletter (default is `false`).
 
-Upon receiving a `200 OK` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Take note of the following details and proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
+Upon receiving a `200 OK` response, the request will provide a response body containing the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) with comprehensive details of the newly created regular order. Note the following details and then proceed to [Resolving the order payment](#step-3---resolving-the-order-payment).
 
 - `orderGroup` - ID that groups all orders related to the same purchase. For example, when an order is fulfilled by multiple sellers, each seller has its own order ID (`v71021570str-01` and `v71021570str-02`), but they share the same order group ID (`v71021570str`).
 - `transactionId` - ID of the transaction, which can be found within an object contained in the `merchantTransactions` array.
