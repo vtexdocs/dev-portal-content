@@ -69,7 +69,6 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | App                                | `vendor.app-name`    |
 | -------------------------------- | ---------------------------- |
 | Customer Management  | `vtex.admin-customers`<br><br>`vtex.admin-customers-graphql` |
-| Safe Data                        | `vtex.safedata`               |
 
 ### Multi-language and multi-currency
 
