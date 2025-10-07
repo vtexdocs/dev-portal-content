@@ -1,25 +1,33 @@
 ---
 title: "Input"
-excerpt: Inputs are fields used to get user inputs.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/Input___77d0e7a8079b7d310e8223dd9e1994f6.png
-components:
+excerpt: Inputs are fields that get user inputs.
+components: 
   - Input.tsx
+updatedAt: "2025-10-07T14:09:57.779Z"
 ---
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Input)
+
+The `Input` component renders a single-line text field that captures short user inputs.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Input placeholder="Label" id="inputfield-default" />
-      <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    <Input placeholder="Label" id="inputfield-default" />
-    <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
+    import React from 'react'
+    import {Input} from '@faststore/ui'
+
+    export default function InputOverviewExample() {
+      return(
+        <div>
+          <Input placeholder="Label" id="inputfield-default" />
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -53,12 +61,21 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Input placeholder="Input" disabled />
+      <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    <Input placeholder="Input" disabled />
+    import React from 'react'
+    import {Input} from '@faststore/ui'
+
+    export default function InputDisabled() {
+      return(
+        <div>
+          <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
