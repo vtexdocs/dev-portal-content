@@ -57,40 +57,90 @@ Explore the features of the experimental hooks and the `Image_unstable` componen
 
 Hooks provide features or statuses of native components that you can integrate into your custom components. Here's a list of available hooks:
 
+#### Authentication
+
+|Hook|Description|
+|--------|--------------|
+|`useAuth_unstable`|Accesses authentication status and actions.|
+
+#### Cart
+
 |Hook|Description|
 |--------|--------------|
 |`cartStore_unstable`|Stores and retrieves cart details.|
-|`deliveryPromiseStore_unstable`|Stores and retrieves Delivery Promise data (pickup points, default/global selection, simulation state).|
-|`getShippingSimulation_unstable`|Retrieves the shipping simulation data, which can be used to display shipping costs, options, and delivery estimates.|
-|`sessionStore_unstable`|Stores and retrieves session data.|
-|`useBuyButton_unstable`|Leverages the behavior of the native [BuyButton](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button).|
 |`useCart_unstable`|Accesses the current cart's status and actions.|
+|`useBuyButton_unstable`|Leverages the behavior of the native [BuyButton](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button).|
 |`useCartToggleButton_unstable`|Adds a cart toggle feature to custom components.|
 |`useCheckoutButton_unstable`|Leverages the behavior of the native checkout button.|
-|`useCreateUseGalleryPage_unstable`|Handles the creation of a gallery page.|
-|`useDelayedFacets_unstable`|Delays facet application to improve performance.|
-|`useDelayedPagination_unstable`|Delays pagination to improve performance.|
+|`useRemoveButton_unstable`|Leverages the behavior of the native remove button.|
+
+#### Delivery Promise
+
+|Hook|Description|
+|--------|--------------|
+|`deliveryPromiseStore_unstable`|Stores and retrieves Delivery Promise data (pickup points, default/global selection, simulation state).|
 |`useDeliveryPromise_unstable`|Accesses and manages Delivery Promise state, pickup points, delivery-related facets, labels, and badges.|
+
+
+#### GraphQL
+
+|Hook|Description|
+|--------|--------------|
+|`useLazyQuery_unstable`|Retrieves data from a GraphQL endpoint on demand.|
+|`useQuery_unstable`|Retrieves data from a GraphQL endpoint.|
+
+#### Newsletter
+
+|Hook|Description|
+|--------|--------------|
+|`useNewsletter_unstable`|Accesses the newsletter subscription feature.|
+
+#### Product
+
+|Hook|Description|
+|--------|--------------|
 |`useDiscountPercent_unstable`|Calculates the discount percentage for a given price.|
-|`useFilter_unstable`|Enables filtering for product listings.|
 |`useFormattedPrice_unstable`|Formats a price value based on the current locale.|
+|`useLocalizedVariables_unstable`|Provides localized variables for use in components.|
+|`useCreateUseGalleryPage_unstable`|Handles the creation of a gallery page.|
 |`useGalleryPage_unstable`|Manages the state and functionality of a gallery page.|
 |`UseGalleryPageContext_unstable`|Provides access to and management of the context for a gallery page.|
-|`useLazyQuery_unstable`|Retrieves data from a GraphQL endpoint on demand.|
-|`useLocalizedVariables_unstable`|Provides localized variables for use in components.|
-|`useNewsletter_unstable`|Accesses the newsletter subscription feature.|
 |`useProductGalleryQuery_unstable`|Retrieves product gallery images.|
 |`useProductLink_unstable`|Generates a product link based on the product ID.|
 |`useProductQuery_unstable`|Retrieves product details.|
 |`useProductsPrefetch_unstable`|Preloads product details for a given list of product IDs.|
-|`useQuery_unstable`|Retrieves data from a GraphQL endpoint.|
-|`useRemoveButton_unstable`|Leverages the behavior of the native remove button.|
-|`useScreenResize_unstable`|Adapts the interface to different screen sizes and devices.|
+
+#### Search
+
+|Hook|Description|
+|--------|--------------|
+|`useDelayedFacets_unstable`|Delays facet application to improve performance.|
+|`useDelayedPagination_unstable`|Delays pagination to improve performance.|
+|`useFilter_unstable`|Enables filtering for product listings.|
 |`useSearchHistory_unstable`|Accesses the user's search history.|
-|`useSession_unstable`|Accesses and manages current session information.|
 |`useSuggestions_unstable`|Provides suggestions based on the user's search query.|
 |`useTopSearch_unstable`|Retrieves the top search results.|
+
+#### Session
+
+|Hook|Description|
+|--------|--------------|
+|`sessionStore_unstable`|Stores and retrieves session data.|
+|`useSession_unstable`|Accesses and manages current session information.|
 |`validateSession_unstable`|Validates the current user session.|
+
+#### Shipping
+
+|Hook|Description|
+|--------|--------------|
+|`getShippingSimulation_unstable`|Retrieves the shipping simulation data, which can be used to display shipping costs, options, and delivery estimates.|
+|`useShippingSimulation_unstable`|Runs and manages shipping simulations to display costs, options, and delivery estimates.|
+
+#### UI
+
+|Hook|Description|
+|--------|--------------|
+|`useScreenResize_unstable`|Adapts the interface to different screen sizes and devices.|
 
 ### `Image_unstable` component
 
