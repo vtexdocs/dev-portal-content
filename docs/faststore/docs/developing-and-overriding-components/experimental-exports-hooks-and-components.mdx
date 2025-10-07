@@ -15,33 +15,33 @@ All experimental [hooks and components](#list-of-hooks-and-components) are suffi
 1. Open your store project in a code editor, then open the component or section file where you want to import the hook or component.
 2. Import the hook or component into your custom component file.
 
-    ```tsx
-    import { use{ComponentName}_unstable as use{ComponentName} } from '@faststore/core/experimental'
-    ```
+   ```tsx
+   import { use{ComponentName}_unstable as use{ComponentName} } from '@faststore/core/experimental'
+   ```
 
-    > ⚠️ Replace `{ComponentName}` with the name of the component you want to import, for example `useCartToggleButton`.
+   > ⚠️ Replace `{ComponentName}` with the name of the component you want to import, for example `useCartToggleButton`.
 
 3. Incorporate the imported hook or component into your custom component logic. In the following example, the `useCartToggleButton_unstable` hook enables toggling the cart.
 
-    ```tsx mark=3
-    import React from 'react'
-    import { Button as UIButton } from '@faststore/ui'
-    import { useCartToggleButton_unstable as useCartToggleButton } from '@faststore/core/experimental'
+   ```tsx mark=3
+   import React from "react";
+   import { Button as UIButton } from "@faststore/ui";
+   import { useCartToggleButton_unstable as useCartToggleButton } from "@faststore/core/experimental";
 
-    export default function CustomBuyButton() {
-    const { onClick: toggleCart } = useCartToggleButton()
-    return (
-        <UIButton
-        variant="primary"
-        onClick={() => {
-            toggleCart()
-        }}
-        >
-        New Buy Button
-        </UIButton>
-    )
-    }
-    ```
+   export default function CustomBuyButton() {
+     const { onClick: toggleCart } = useCartToggleButton();
+     return (
+       <UIButton
+         variant="primary"
+         onClick={() => {
+           toggleCart();
+         }}
+       >
+         New Buy Button
+       </UIButton>
+     );
+   }
+   ```
 
 4. Save your changes.
 5. Open a terminal and run `yarn dev` to test the implementation.
@@ -59,96 +59,95 @@ Hooks provide features or statuses of native components that you can integrate i
 
 #### Authentication
 
-|Hook|Description|
-|--------|--------------|
-|`useAuth_unstable`|Accesses authentication status and actions.|
+| Hook               | Description                                 |
+| ------------------ | ------------------------------------------- |
+| `useAuth_unstable` | Accesses authentication status and actions. |
 
 #### Cart
 
-|Hook|Description|
-|--------|--------------|
-|`cartStore_unstable`|Stores and retrieves cart details.|
-|`useCart_unstable`|Accesses the current cart's status and actions.|
-|`useBuyButton_unstable`|Leverages the behavior of the native [BuyButton](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button).|
-|`useCartToggleButton_unstable`|Adds a cart toggle feature to custom components.|
-|`useCheckoutButton_unstable`|Leverages the behavior of the native checkout button.|
-|`useRemoveButton_unstable`|Leverages the behavior of the native remove button.|
+| Hook                           | Description                                                                                                               |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| `cartStore_unstable`           | Stores and retrieves cart details.                                                                                        |
+| `useCart_unstable`             | Accesses the current cart's status and actions.                                                                           |
+| `useBuyButton_unstable`        | Leverages the behavior of the native [BuyButton](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button). |
+| `useCartToggleButton_unstable` | Adds a cart toggle feature to custom components.                                                                          |
+| `useCheckoutButton_unstable`   | Leverages the behavior of the native checkout button.                                                                     |
+| `useRemoveButton_unstable`     | Leverages the behavior of the native remove button.                                                                       |
 
 #### Delivery Promise
 
-|Hook|Description|
-|--------|--------------|
-|`deliveryPromiseStore_unstable`|Stores and retrieves Delivery Promise data (pickup points, default/global selection, simulation state).|
-|`useDeliveryPromise_unstable`|Accesses and manages Delivery Promise state, pickup points, delivery-related facets, labels, and badges.|
-
+| Hook                            | Description                                                                                              |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `deliveryPromiseStore_unstable` | Stores and retrieves Delivery Promise data (pickup points, default/global selection, simulation state).  |
+| `useDeliveryPromise_unstable`   | Accesses and manages Delivery Promise state, pickup points, delivery-related facets, labels, and badges. |
 
 #### GraphQL
 
-|Hook|Description|
-|--------|--------------|
-|`useLazyQuery_unstable`|Retrieves data from a GraphQL endpoint on demand.|
-|`useQuery_unstable`|Retrieves data from a GraphQL endpoint.|
+| Hook                    | Description                                       |
+| ----------------------- | ------------------------------------------------- |
+| `useLazyQuery_unstable` | Retrieves data from a GraphQL endpoint on demand. |
+| `useQuery_unstable`     | Retrieves data from a GraphQL endpoint.           |
 
 #### Newsletter
 
-|Hook|Description|
-|--------|--------------|
-|`useNewsletter_unstable`|Accesses the newsletter subscription feature.|
+| Hook                     | Description                                   |
+| ------------------------ | --------------------------------------------- |
+| `useNewsletter_unstable` | Accesses the newsletter subscription feature. |
 
 #### Product
 
-|Hook|Description|
-|--------|--------------|
-|`useDiscountPercent_unstable`|Calculates the discount percentage for a given price.|
-|`useFormattedPrice_unstable`|Formats a price value based on the current locale.|
-|`useLocalizedVariables_unstable`|Provides localized variables for use in components.|
-|`useCreateUseGalleryPage_unstable`|Handles the creation of a gallery page.|
-|`useGalleryPage_unstable`|Manages the state and functionality of a gallery page.|
-|`UseGalleryPageContext_unstable`|Provides access to and management of the context for a gallery page.|
-|`useProductGalleryQuery_unstable`|Retrieves product gallery images.|
-|`useProductLink_unstable`|Generates a product link based on the product ID.|
-|`useProductQuery_unstable`|Retrieves product details.|
-|`useProductsPrefetch_unstable`|Preloads product details for a given list of product IDs.|
+| Hook                               | Description                                                          |
+| ---------------------------------- | -------------------------------------------------------------------- |
+| `useDiscountPercent_unstable`      | Calculates the discount percentage for a given price.                |
+| `useFormattedPrice_unstable`       | Formats a price value based on the current locale.                   |
+| `useLocalizedVariables_unstable`   | Provides localized variables for use in components.                  |
+| `useCreateUseGalleryPage_unstable` | Handles the creation of a gallery page.                              |
+| `useGalleryPage_unstable`          | Manages the state and functionality of a gallery page.               |
+| `UseGalleryPageContext_unstable`   | Provides access to and management of the context for a gallery page. |
+| `useProductGalleryQuery_unstable`  | Retrieves product gallery images.                                    |
+| `useProductLink_unstable`          | Generates a product link based on the product ID.                    |
+| `useProductQuery_unstable`         | Retrieves product details.                                           |
+| `useProductsPrefetch_unstable`     | Preloads product details for a given list of product IDs.            |
 
 #### Search
 
-|Hook|Description|
-|--------|--------------|
-|`useDelayedFacets_unstable`|Delays facet application to improve performance.|
-|`useDelayedPagination_unstable`|Delays pagination to improve performance.|
-|`useFilter_unstable`|Enables filtering for product listings.|
-|`useSearchHistory_unstable`|Accesses the user's search history.|
-|`useSuggestions_unstable`|Provides suggestions based on the user's search query.|
-|`useTopSearch_unstable`|Retrieves the top search results.|
+| Hook                            | Description                                            |
+| ------------------------------- | ------------------------------------------------------ |
+| `useDelayedFacets_unstable`     | Delays facet application to improve performance.       |
+| `useDelayedPagination_unstable` | Delays pagination to improve performance.              |
+| `useFilter_unstable`            | Enables filtering for product listings.                |
+| `useSearchHistory_unstable`     | Accesses the user's search history.                    |
+| `useSuggestions_unstable`       | Provides suggestions based on the user's search query. |
+| `useTopSearch_unstable`         | Retrieves the top search results.                      |
 
 #### Session
 
-|Hook|Description|
-|--------|--------------|
-|`sessionStore_unstable`|Stores and retrieves session data.|
-|`useSession_unstable`|Accesses and manages current session information.|
-|`validateSession_unstable`|Validates the current user session.|
+| Hook                       | Description                                       |
+| -------------------------- | ------------------------------------------------- |
+| `sessionStore_unstable`    | Stores and retrieves session data.                |
+| `useSession_unstable`      | Accesses and manages current session information. |
+| `validateSession_unstable` | Validates the current user session.               |
 
 #### Shipping
 
-|Hook|Description|
-|--------|--------------|
-|`getShippingSimulation_unstable`|Retrieves the shipping simulation data, which can be used to display shipping costs, options, and delivery estimates.|
-|`useShippingSimulation_unstable`|Runs and manages shipping simulations to display costs, options, and delivery estimates.|
+| Hook                             | Description                                                                                                           |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `getShippingSimulation_unstable` | Retrieves the shipping simulation data, which can be used to display shipping costs, options, and delivery estimates. |
+| `useShippingSimulation_unstable` | Runs and manages shipping simulations to display costs, options, and delivery estimates.                              |
 
 #### UI
 
-|Hook|Description|
-|--------|--------------|
-|`useScreenResize_unstable`|Adapts the interface to different screen sizes and devices.|
+| Hook                       | Description                                                 |
+| -------------------------- | ----------------------------------------------------------- |
+| `useScreenResize_unstable` | Adapts the interface to different screen sizes and devices. |
 
 ### `Image_unstable` component
 
 Use the [`Image_unstable`](https://github.com/vtex/faststore/blob/105a8b2f69ffd8438532d7c9eb959ed26a567675/packages/core/src/components/ui/Image/Image.tsx) component to optimize image performance in your storefront. This component uses [Thumbor](https://www.thumbor.org/) for image resizing and cropping, caching the results on a Content Delivery Network (CDN). Use it whenever you need to [create a new section for the Headless CMS](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section).
 
 ```tsx mark=2
-import { HeroImage as UIHeroImage } from '@faststore/ui'
-import { Image_unstable as Image } from '@faststore/core/experimental'
+import { HeroImage as UIHeroImage } from "@faststore/ui";
+import { Image_unstable as Image } from "@faststore/core/experimental";
 
 export default function CustomHeroImage() {
   return (
@@ -161,6 +160,6 @@ export default function CustomHeroImage() {
         sizes="(max-width: 360px) 50vw, (max-width: 768px) 90vw, 50vw"
       />
     </UIHeroImage>
-  )
+  );
 }
 ```
