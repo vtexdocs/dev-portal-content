@@ -101,10 +101,13 @@ This code defines a schema for the settings UI that interacts with the Google Ta
 - `title`: App name displayed in the app settings interface. We recommend using the same app name configured in the [`title` field of the manifest.json file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest#title).
 - `type`: JSON Schema type (this must always be set as `object`).
 - `description` (optional): Description of the `settingsSchema` field.
+- `access` (optional): Defines the visibility of the app’s settings. When set to `public`, the settings become accessible through the `publicSettingsForApp` query. If omitted, the query will not return any data.
 - `properties`: Key-value pairs that define the fields that will be displayed to the app users, with their own definition within this object. Each defined key accepts the following `properties`: `title`, `description`, and `type`.
 - `gtmId`: String-type property that represents the Google Tag Manager ID. In the settings UI, this property is shown as a text box.
 - `allowCustomHtmlTags`: Boolean-type property that determines whether custom HTML tags are allowed. In the settings UI, this property is displayed as a checkbox.
 - `sendGA4Events`: Boolean-type property that indicates whether to send Google Analytics 4 events. In the settings UI, this property is displayed as a checkbox.
+
+> ⚠️ Setting `access` field to `public` makes **all configuration data publicly accessible**. Use this option only if you are certain that no sensitive information is stored in the app’s settings.
 
 ### Step 2 - Retrieving and consuming the app settings data
 
