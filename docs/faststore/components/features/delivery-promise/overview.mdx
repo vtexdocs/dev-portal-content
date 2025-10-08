@@ -5,7 +5,7 @@ updatedAt: "2025-09-03T15:35:51.192Z"
 
 >ℹ This feature is in closed beta, meaning only selected customers can access it. If you're interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
-This guide explains how Delivery Promise operates, covering:
+This guide explains how Delivery Promise operates, covering the following:
 
 * [Hooks](#hooks): Discover the hooks used to manage user location, fulfillment options, and Delivery Promise workflows.
 * [Filter options](#filter-options): Learn how shoppers can filter products by delivery or pickup methods.
@@ -18,7 +18,7 @@ This guide explains how Delivery Promise operates, covering:
 This feature introduces the following hooks as part of the regionalization and location workflow:
 
 * `useGeoLocation`: Uses the browser's geolocation API or other client-side methods to auto-detect the user's location when not provided.
-* `useRegion`: Accesses or updates the user's region information, such as a postal code or location, and manages region validation flows.
+* `useRegion`: Accesses or updates the user's region information, such as a postal code or location and manages region validation flows.
 * `useRegionModal`: Handles modal display logic for region selection, especially when the location input is mandatory.
 * [`useDeliveryPromise_unstable`](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components#list-of-hooks-and-components): Manages all logic for querying, displaying, and updating delivery availability filters and states.
 * [`deliveryPromiseStore_unstable`](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components#list-of-hooks-and-components): Stores and retrieves Delivery Promise data (pickup points, default/global selection, simulation state).
@@ -55,7 +55,7 @@ On PLPs or search pages, the shopper has the following options for applying filt
 
 #### Delivery Methods
 
-This filter displays available products according to the shopper's location. With this option, shoppers can filter by using the following options:
+This filter displays available products according to the shopper's location. With this option, shoppers can filter using the following options:
 
 ![dp-delivery-methods](https://vtexhelp.vtexassets.com/assets/docs/src/dp-filters-delivery-method___945ea013036a9ebebfc0078cb93796d9.png)
 
@@ -75,6 +75,8 @@ This filter allows shoppers to refine search results based on the type of delive
 ![dp-delivery-options](https://vtexhelp.vtexassets.com/assets/docs/src/dp-delivery-option-overview___ae1889d1ab384af14049ee26a887faa2.png)
 
 To create, configure, and manage delivery options in the VTEX Admin, see the instructions in the [Delivery Option (Beta)](https://newhelp.vtex.com/docs/tutorials/delivery-options-beta) guide.
+
+>⚠️ While following the instructions to [create the delivery options](https://newhelp.vtex.com/docs/tutorials/delivery-options-beta#creating-delivery-options) make sure to enable the option **Use option as a filter on the store product**, this will allow shoppers to products by the delivery option using [Intelligent Search filters](https://newhelp.vtex.com/en/tutorial/filters--k24mQQa9SjmhNWSwdqIMB).
 
 #### Availability (In-stock filter)
 
