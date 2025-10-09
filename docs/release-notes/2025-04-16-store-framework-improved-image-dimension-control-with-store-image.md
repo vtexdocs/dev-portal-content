@@ -7,7 +7,7 @@ createdAt: "2025-04-16T08:18:58.347Z"
 updatedAt: ""
 hidden: false
 tags:
-  - Store Framework
+    - Store Framework
 ---
 
 The [Store Image](https://developers.vtex.com/docs/apps/vtex.store-image) app has been updated to improve image dimension management. This release increases flexibility and gives users better control over custom image sizes, addressing previous issues with dimension handling.

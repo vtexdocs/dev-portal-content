@@ -6,9 +6,9 @@ createdAt: "2024-09-03T14:22:52.165Z"
 updatedAt: ""
 excerpt: "If Google Analytics 4 is not accurately traciing data, try server-side tagging and configuring a VTEX IO Pixel app."
 tags:
-  - performance
-  - analytics
-  - ga4
+    - performance
+    - analytics
+    - ga4
 ---
 
 **Keywords:** GA4 | performance | analytics

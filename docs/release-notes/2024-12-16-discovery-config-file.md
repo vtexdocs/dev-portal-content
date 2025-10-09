@@ -5,7 +5,7 @@ type: "added"
 excerpt: ""
 createdAt: "2024-12-13T10:10:15.623Z"
 tags:
-  - FastStore
+    - FastStore
 ---
 
 To improve your FastStore development experience, we've updated the configuration file name from `faststore.config.js` to `discovery.config.js`. By making this change, we aim to enhance the flexibility and maintainability of your FastStore projects with ongoing efforts to evolve FastStore.

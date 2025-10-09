@@ -6,8 +6,8 @@ excerpt: "The Calculated field and the Change field value trigger action will be
 createdAt: "2024-04-17T16:47:00.000Z"
 updatedAt: "2024-04-17T09:30:00.000Z"
 tags:
-  - Master Data
-  - Master Data v1
+    - Master Data
+    - Master Data v1
 ---
 
 On June 17, we will deprecate the following settings in [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw): **Calculated Field** and the **Change field value** trigger action.

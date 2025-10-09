@@ -6,7 +6,7 @@ createdAt: "2022-06-10T14:00:00.000Z"
 hidden: false
 excerpt: "We have released a new method for integrating orders from external marketplaces, as a part of our Marketplace Protocol. For the new method, we have developed two new endpoints."
 tags:
-  - Marketplace
+    - Marketplace
 ---
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-protocol-new-order-integration-method-0.png)

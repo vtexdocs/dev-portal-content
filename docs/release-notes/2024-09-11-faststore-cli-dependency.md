@@ -6,7 +6,7 @@ excerpt: "The new FastStore CLI version now depends on the FastStore Core packag
 createdAt: "2024-09-11T11:00:00.000Z"
 updatedAt: "2024-09-11T11:30:00.000Z"
 tags:
-  - FastStore
+    - FastStore
 ---
 
 To simplify the installation process and reduce potential version conflicts, the [FastStore CLI (`@faststore/cli`)](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli) package now directly depends on [FastStore Core (`@faststore/core`)](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson).

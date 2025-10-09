@@ -6,8 +6,8 @@ createdAt: 2024-06-10T10:00:00.000Z
 type: "improved"
 excerpt: "Site Editor content storage received an upgrade for better performance and reliability."
 tags:
-  - Site Editor
-  - Store Framework
+    - Site Editor
+    - Store Framework
 ---
 
 Starting June 10th, all accounts using [Site Editor](https://help.vtex.com/tutorial/site-editor-overview--299Dbeb9mFczUTyNQ9xPe1) will automatically receive a content storage upgrade to address the previously known issue: [Intermittent Site Editor content loss](https://help.vtex.com/en/known-issues/intermitent-site-editor-content-loss--3a5MlAoD2Z7Gu6HDS8wihD). This upgrade improves storage performance, reliability and reduces the size of your content storage.

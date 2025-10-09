@@ -7,7 +7,7 @@ createdAt: "2025-06-23T00:00:00.219Z"
 updatedAt: "2025-06-23T00:00:00.219Z"
 excerpt: "FastStore now enables B2B customer-specific pricing and promotions by automatically forwarding session cookies to Intelligent Search, ensuring personalized experiences for customers."
 tags:
-  - FastStore
+    - FastStore
 ---
 
 FastStore storefronts now integrate with [Price Tables](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S) for B2B and [Intelligent Search](https://help.vtex.com/en/tutorial/intelligent-search-overview--5o8ixTpYIxx3uJD0B1xp3z?&utm_source=autocomplete), allowing B2B sellers to:

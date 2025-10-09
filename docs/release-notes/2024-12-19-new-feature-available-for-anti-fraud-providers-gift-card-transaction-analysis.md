@@ -7,7 +7,7 @@ createdAt: "2024-12-19T00:00:00.219Z"
 updatedAt: "2024-12-19T00:00:00.219Z"
 excerpt: "Gift card transactions can now be analyzed with anti-fraud."
 tags:
-  - Gift Card
+    - Gift Card
 ---
 
 Anti-fraud providers integrated with VTEX can now analyze payment transactions made with [gift cards](https://help.vtex.com/en/tutorial/gift-card--tutorials_995).
