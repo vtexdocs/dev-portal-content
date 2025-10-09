@@ -6,7 +6,7 @@ type: "added"
 createdAt: "2025-01-06T00:00:00.219Z"
 excerpt: "Improved performance experience for FastStore stores."
 tags:
-  - FastStore
+    - FastStore
 ---
 
 > ⚠️ This feature is only available for FastStore stores that use the [VTEX Ad Network](https://help.vtex.com/en/tutorial/vtex-ad-network-beta--2cgqXcBuJmXN2livQvClur) solution. To enable it, contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ) and request the app to be installed on your VTEX account.

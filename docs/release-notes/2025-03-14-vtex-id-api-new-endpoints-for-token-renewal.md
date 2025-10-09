@@ -7,7 +7,7 @@ createdAt: "2025-03-14T00:00:00.219Z"
 updatedAt: ""
 excerpt: "VTEX ID API now allows you to renew API tokens with new secure endpoints."
 tags:
-  - VTEX ID
+    - VTEX ID
 ---
 
 We've introduced two new endpoints to the VTEX ID API to allow merchants to securely renew API tokens: `PATCH` [Initiate token renewal](https://developers.vtex.com/docs/api-reference/vtex-id-api#patch-/api/vtexid/apikey/-apiKey-/apitoken/renew) and `PATCH` [Complete token renewal](https://developers.vtex.com/docs/api-reference/vtex-id-api#patch-/api/vtexid/apikey/-apiKey-/apitoken/finish-renewal). This two-step renewal process ensures better security while maintaining service continuity.

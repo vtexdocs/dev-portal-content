@@ -7,7 +7,7 @@ updatedAt: "2024-04-15T20:17:46.410Z"
 hidden: false
 excerpt: "Design unique product and listing pages with the new Multiple Page Templates for FastStore users."
 tags:
-  - FastStore
+    - FastStore
 ---
 
 The Multiple page templates feature enhances the capabilities of FastStore with Headless CMS, allowing you to create and manage flexible layouts for Product Details Pages (PDPs) and Product Listing Pages (PLPs). These templates enable customization based on product information, user context, product type, brand specifications, and template hierarchy.

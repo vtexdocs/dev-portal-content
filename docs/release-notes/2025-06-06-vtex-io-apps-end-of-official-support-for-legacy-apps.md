@@ -7,7 +7,7 @@ createdAt: "2025-06-06T12:45:40.909Z"
 updatedAt: "2025-06-27T18:50:17.810Z"
 hidden: false
 tags:
-  - VTEX IO
+    - VTEX IO
 ---
 
 As part of our efforts to optimize platform performance and focus on core solutions, VTEX will officially end support for some legacy and third-party apps. These apps will no longer receive updates, security patches, or technical support.

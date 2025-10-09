@@ -6,7 +6,7 @@ excerpt: "Upgrade your `@faststore/core` package version to leverage enhanced AP
 createdAt: "2024-08-19T10:30:00.000Z"
 updateAt: "2024-08-20T10:30:00.000Z"
 tags:
-  - FastStore
+    - FastStore
 ---
 
 FastStore v2 users can now update the `@faststore/core` package version and benefit from enhanced API extensions, streamlined error page customization in the Headless CMS, and support for Next.js 13.

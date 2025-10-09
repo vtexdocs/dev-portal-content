@@ -6,8 +6,8 @@ excerpt: "FastStore WebOps users can now preview their pull request changes in a
 createdAt: "2024-09-05T10:00:00.000Z"
 updatedAt: "2024-09-09T16:00:00.000Z"
 tags:
-  - WebOps
-  - FastStore
+    - WebOps
+    - FastStore
 ---
 
 The [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) now includes **Deployment Previews**, a feature that allows users to preview their pull request changes in a live environment before merging them into production. This feature helps minimize the risk of introducing bugs or unexpected behaviors to the live store, safeguarding the store user experience.

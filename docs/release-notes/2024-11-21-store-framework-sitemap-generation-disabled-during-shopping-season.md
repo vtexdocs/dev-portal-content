@@ -6,7 +6,7 @@ createdAt: "2024-11-21T16:23:42.024Z"
 updatedAt: ""
 hidden: false
 tags:
-  - Store Framework
+    - Store Framework
 ---
 
 The generation of routes within the [Sitemap](https://developers.vtex.com/docs/apps/vtex.store-sitemap) will be temporarily deactivated to ensure the reliability and stability of our services during the high-demand period of the shopping season 2024.

@@ -5,8 +5,8 @@ createdAt: 2021-11-26T13:57:37.123Z
 hidden: false
 type: "deprecated"
 tags:
-  - Store Framework
-  - VTEX IO
+    - Store Framework
+    - VTEX IO
 ---
 
 ![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/styles-builder-1-x-technical-support-ends-on-february-02-2022-0.png)

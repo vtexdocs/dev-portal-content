@@ -6,8 +6,8 @@ createdAt: "2024-08-30T00:00:00.000Z"
 updatedAt: "2024-08-30T00:00:00.000Z"
 excerpt: "Price filters are not available on the product listing page (PLP)."
 tags:
-  - pricing
-  - catalog
+    - pricing
+    - catalog
 ---
 
 **Keywords:** price range |  filters |  catalog

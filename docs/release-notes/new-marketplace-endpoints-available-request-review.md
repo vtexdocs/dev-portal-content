@@ -5,7 +5,7 @@ createdAt: 2021-01-19T15:00:00.000Z
 hidden: false
 type: "added"
 tags:
-  - Marketplace
+    - Marketplace
 ---
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-marketplace-endpoints-available-request-review-0.png)

@@ -6,7 +6,7 @@ createdAt: 2023-03-14T12:00:00.000Z
 hidden: false
 type: "added"
 tags:
-  - Payments
+    - Payments
 ---
 
 VTEX now offers one of the most popular payment methods in Colombia, the PSE (Pagos Seguros en Línea). Through it, the consumer is redirected to their internet banking page after confirming the order and making the payment by online debit.
