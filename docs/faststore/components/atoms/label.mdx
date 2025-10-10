@@ -19,6 +19,8 @@ A label allows the user to understand a single element. It is often in the form 
   </Tab>
   <Tab>
     ```tsx
+    import { Label } from "@faststore/ui";
+
     <Label>Label</Label>
     ```
   </Tab>
@@ -33,6 +35,58 @@ A label allows the user to understand a single element. It is often in the form 
 ```tsx
 import { Label } from "@faststore/ui";
 ```
+
+---
+
+## Examples
+
+### Label with Input
+
+Labels are commonly used to describe input fields. Use the `htmlFor` attribute to associate the label with an input.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Label htmlFor="email-input">Email Address</Label>
+      <Input id="email-input" type="email" placeholder="Enter your email" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { Label } from "@faststore/ui";
+    import { Input } from "@faststore/ui";
+
+    <Label htmlFor="email-input">Email Address</Label>
+    <Input id="email-input" type="email" placeholder="Enter your email" />
+    ```
+  </Tab>
+</Tabs>
+
+### Label with Custom Attributes
+
+You can pass additional HTML attributes to customize the label behavior.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Label htmlFor="password-input" className="custom-label">
+        Password
+      </Label>
+      <Input id="password-input" type="password" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { Label } from "@faststore/ui";
+    import { Input } from "@faststore/ui";
+
+    <Label htmlFor="password-input" className="custom-label">
+      Password
+    </Label>
+    <Input id="password-input" type="password" />
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
