@@ -107,7 +107,7 @@ This code defines a schema for the settings UI that interacts with the Google Ta
 - `allowCustomHtmlTags`: Boolean-type property that determines whether custom HTML tags are allowed. In the settings UI, this property is displayed as a checkbox.
 - `sendGA4Events`: Boolean-type property that indicates whether to send Google Analytics 4 events. In the settings UI, this property is displayed as a checkbox.
 
-> ⚠️ Setting `access` field to `public` makes **all configuration data publicly accessible**. Use this option only if you are certain that no sensitive information is stored in the app’s settings.
+> ⚠️ Setting `access` field to `public` makes **all configuration data publicly accessible**. Use this option only if you are certain that no sensitive information is stored in the app's settings.
 
 ### Step 2 - Retrieving and consuming the app settings data
 
