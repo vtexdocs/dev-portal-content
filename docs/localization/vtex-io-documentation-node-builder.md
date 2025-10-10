@@ -51,13 +51,13 @@ node
 ```
 
 - TypeScript code files (`.ts` extension) containing the core logic of the app, organized within directories such as:
-- `clients`: Directory with [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) code files.
-- `middlewares`: Directory with middleware code files.
-- `event`: Directory with event handler code files.
-- `index.ts`: Main TypeScript code file, where the execution begins. This file contains the service's main class.
-- `package.json`: JSON file describing dependencies, script commands for building, and version details.
-- `service.json`: Service configuration file used for defining app parameters such as routes, events, time-to-live, etc. For more details, see [Service configuration parameters](https://developers.vtex.com/docs/guides/vtex-io-documentation-service#service-configuration-parameters).
-- `tsconfig.json`: JSON file containing build configuration options.
+  - `clients`: Directory with [Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients) code files.
+  - `middlewares`: Directory with middleware code files.
+  - `event`: Directory with event handler code files.
+  - `index.ts`: Main TypeScript code file, where the execution begins. This file contains the service's main class.
+  - `package.json`: JSON file describing dependencies, script commands for building, and version details.
+  - `service.json`: Service configuration file used for defining app parameters such as routes, events, time-to-live, etc. For more details, see [Service configuration parameters](https://developers.vtex.com/docs/guides/vtex-io-documentation-service#service-configuration-parameters).
+  - `tsconfig.json`: JSON file containing build configuration options.
 
 ## Usage
 
