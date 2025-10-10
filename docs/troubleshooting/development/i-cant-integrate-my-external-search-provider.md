@@ -6,9 +6,9 @@ createdAt: "2024-08-01T15:08:23.602Z"
 updatedAt: ""
 excerpt: 'Learn how to fix "Unknown errors" when integrating an external search provider with VTEX.'
 tags:
-    - integration
-    - vtex-protocol
-    - search-protocol
+    - Integration
+    - VTEX Protocol
+    - Search Protocol
   
 ---
 

@@ -3,8 +3,7 @@ title: 'Issues during extending the FastStore API schema'
 slug: "issues-during-extending-the-faststore-api-schema"
 excerpt: "Development and deployment challenges may arise while extending FastStore API schema with GraphQL."
 tags:
-    - faststore
-    - api
+    - FastStore
 ---
 
 **Keywords:** FastStore | API extension

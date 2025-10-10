@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2025-01-30T14:25:00.00Z"
 updatedAt: "2025-01-30T14:25:00.00Z"
 tags:
-    - workspace
+    - VTEX IO
+    - Store Framework
 ---
 
 **Keywords:** Workspace | Intelligent Search

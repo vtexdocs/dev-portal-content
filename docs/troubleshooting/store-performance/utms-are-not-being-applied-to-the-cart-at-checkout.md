@@ -6,9 +6,9 @@ createdAt: "2022-07-25T19:16:25.665Z"
 updatedAt: "2025-01-03T00:00:00.446Z"
 excerpt: "Verify that traffic and marketing source information is being attributed to your store's carts."
 tags:
-    - checkout
-    - cms
-    - store-framework
+    - Checkout
+    - Store Framework
+    - Legacy CMS Portal
 ---
 Keywords: utm source | utm campaign | utm medium | checkout | cart
 

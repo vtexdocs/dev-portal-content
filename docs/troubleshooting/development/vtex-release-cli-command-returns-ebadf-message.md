@@ -6,9 +6,8 @@ createdAt: "2024-09-04T13:00:00.000Z"
 updatedAt: "2024-09-04T13:00:00.000Z"
 excerpt: "Creating an app release using the VTEX IO CLI returns an EBADF error."
 tags:
-    - vtex-io
-    - cli
-    - release
+    - VTEX IO
+    - VTEX IO CLI
 ---
 
 **Keywords:** Release | CLI

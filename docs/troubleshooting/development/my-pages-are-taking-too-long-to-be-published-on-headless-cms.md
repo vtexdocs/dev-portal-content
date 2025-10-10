@@ -6,9 +6,8 @@ createdAt: "2024-06-28T14:00:00.000Z"
 updatedAt: ""
 excerpt: "Releasing or publishing a page via Headless CMS or Releases can take a long build times"
 tags:
-    - headless-cms
-    - releases
-    - faststore
+    - Headless CMS
+    - FastStore
 ---
 
 **Tags:** Headless CMS, Releases, FastStore
