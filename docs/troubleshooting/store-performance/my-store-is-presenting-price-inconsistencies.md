@@ -6,9 +6,9 @@ hidden: false
 createdAt: "2025-01-30T14:25:00.00Z"
 updatedAt: "2025-01-30T14:25:00.00Z"
 tags:
-    - catalog
-    - search
-    - pricing
+    - Catalog
+    - Search
+    - Pricing
 ---
 
 **Keywords:** Catalog | Search | Pricing

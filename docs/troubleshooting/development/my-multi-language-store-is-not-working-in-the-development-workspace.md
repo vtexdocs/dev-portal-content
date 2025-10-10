@@ -6,8 +6,8 @@ createdAt: "2024-05-29T15:45:35.508Z"
 updatedAt: "2024-05-29T15:45:35.508Z"
 excerpt: "After creating a development workspace in a multi-language store, there is an error in my website."
 tags:
-    - store-framework
-    - app-development
+    - Store Framework
+    - VTEX IO
 ---
 
 **Keywords:** Development workspace | Internationalization| Messages | Multi-language
