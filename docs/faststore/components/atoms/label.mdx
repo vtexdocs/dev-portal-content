@@ -9,7 +9,11 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Label)
 
-A label allows the user to understand a single element. It is often in the form of information, and can have an implied instruction. Usually used to describe the meaning of input fields.
+The `Label` component provides accessible text descriptions for form controls, helping users understand the purpose and expected input of each field. Typical use cases include:
+
+- Describing the purpose of input fields (e.g., `Email Address`, `Password`, or `Phone Number`).
+- Associating descriptive text with form elements for improved accessibility.
+- Providing context for user interactions in forms and surveys
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -42,7 +46,7 @@ import { Label } from "@faststore/ui";
 
 ### Label with Input
 
-Labels are commonly used to describe input fields. Use the `htmlFor` attribute to associate the label with an input.
+Labels are commonly used to describe input fields. Use the `htmlFor` attribute to associate the label with the [Input](https://developers.vtex.com/docs/guides/faststore/atoms-input) component.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -62,7 +66,7 @@ Labels are commonly used to describe input fields. Use the `htmlFor` attribute t
   </Tab>
 </Tabs>
 
-### Label with Custom Attributes
+### Label with custom attributes
 
 You can pass additional HTML attributes to customize the label behavior.
 
@@ -101,3 +105,19 @@ You can target and override `Label` styles using the following data attributes:
 ## Props
 
 <ComponentPropsSection component="Label" />
+
+---
+
+## Best practices
+
+### ✅ Do's
+
+- Use clear and concise text that accurately describes the expected input. Be specific about what information is required.
+- Ensure labels remain visible at all times and are not replaced by placeholders.
+- Keep label text short and to the point, avoiding unnecessary words.
+
+### ❌ Don'ts
+
+- Don't use placeholder text as a substitute for labels, as placeholders disappear when users start typing.
+- Don't hide labels visually while keeping them only for screen readers.
+- Don't use vague or generic text like "Enter value" or "Field".
