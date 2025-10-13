@@ -7,7 +7,7 @@ createdAt: "2020-08-31T17:18:54.238Z"
 updatedAt: "2025-10-13T14:21:06.416Z"
 ---
 
-In this guide, you'll learn how to overwrite an automatic message translation from the catalog, such as a product name or a product description, with a more specific and representative content of your store.
+In this guide, you'll learn how to overwrite an automatic message translation from the catalog, such as a product name or a product description, with more specific and representative content of your store.
 
 Catalog messages are translatable text strings related to a store catalog, stored as external data in the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview), which manages a store's sales channels, categories, brands, products, SKUs, and specifications.
 
@@ -15,7 +15,7 @@ The following list includes the translatable Catalog API settings, which can be 
 
 - **[Category](https://help.vtex.com/en/tutorial/category-registration-fields--5Z7RrvW41yumyQCmk2iqoG):** Name, keywords (similar words), page title (tag title), meta tag description, and the URL slug (cross-border stores only).
 - **[Brand](https://help.vtex.com/en/tutorial/brand-registration-fields--37Ky7lTbEkiWIAYA80EMyI):** Name, keywords (similar words), page title (tag title), meta tag description, and the URL slug (cross-border stores only).
-- **[Product](https://help.vtex.com/en/tutorial/product-registration-fields--4dYXWIK3zyS8IceKkQseke):** Name, keywords (similar words), page title (tag title), description, short description, meta tag description, and the URL slug (cross-border stores only).
+- **[Product](https://help.vtex.com/en/tutorial/product-registration-fields--4dYXWIK3zyS8IceKkQseke):** Name, keywords (similar words), page title (tag title), description, short description, meta tag description, and URL slug (cross-border stores only).
 - **[SKU](https://help.vtex.com/en/tutorial/sku-registration-fields--21DDItuEQc6mseiW8EakcY):** Name.
 - **[SKU or product specification](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP):** Name, description, and values.
 
@@ -280,4 +280,4 @@ Complete the _Query variables_ section with the desired translations for each pa
   >}
   >```
   >
-  > Where `fieldId` is the specification ID, which you can find following the guide [Products and SKU Specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en).
+  > Where `fieldId` is the specification ID, which you can find by following the guide [Products and SKU Specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en).
