@@ -1,9 +1,11 @@
 ---
 title: "Configuration options for discovery.config.js"
+updatedAt: "2025-10-13T19:30:49.674Z"
 ---
 
-The `discovery.config.js` is a configuration file for managing various settings that control store behavior, appearance, and functionality. It works as a central hub for configuring key aspects of a FastStore website, such as SEO, API connections, session management, URLs, analytics, and more.
+The `discovery.config.js` is a configuration file for managing various settings that control store behavior, appearance, and functionality. This file serves as a central hub for configuring key aspects of your FastStore website, including SEO, API connections, session management, analytics, and more.
 
+This guide outlines these configuration options for tailoring your FastStore website using the `discovery.config.js` file.
 ## Example file
 
 ```javascript
@@ -35,124 +37,147 @@ Check the full file example at [`discovery.config.js` sample code](https://githu
 Below is a description of each setting you can configure in the `discovery.config.js` file:
 
 ### `seo`
-Sets default metadata related to Search Engine Optimization (SEO).
 
-| Property        | Type   | Description                                                                 |
-|-----------------|--------|-----------------------------------------------------------------------------|
-| `title`         | `string` | Store headline displayed in search results (60 chars recommended).      |
-| `description`   | `string` | Brief description of the store (150-160 chars optimal).                |
-| `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder (e.g., `"%s \| StoreName"`).    |
-| `author`        | `string` | Content author/owner for attribution.                                        |
+Sets default metadata related to Search Engine Optimization (SEO), influencing how your store appears in search results. Learn more in [SEO](https://developers.vtex.com/docs/guides/faststore/seo-overview).
 
-Learn more in [SEO](https://developers.vtex.com/docs/guides/faststore/seo-overview).
+| Property        | Type   | Description                                                                 | Example |
+|-----------------|--------|-----------------------------------------------------------------------------|---------------|
+| `title`         | `string` | Store headline displayed in search results (60 chars recommended).      | "FastStore Starter" |
+| `description`   | `string` | Brief description of the store (150-160 chars optimal).                | "FastStore Demo Store" |
+| `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder (example: `"%s \| StoreName"`).    | "%s | FastStore" |
+| `author`        | `string` | Content author/owner for attribution.                                        | "FastStore" |
 
 ---
 
 ### `theme`
-Defines the look and feel of your FastStore project. This field is a `string` that specifies the name of the theme being used. Learn more in [Theming](https://developers.vtex.com/docs/guides/faststore/using-themes-overview).
+
+Defines the visual identity of your FastStore project, including color schemes, typography, and layout presets. This field is a `string` that specifies the name of the theme being used.
+
+Every FastStore project starts with the [Brandless theme](https://developers.vtex.com/docs/guides/faststore/using-themes-overview#brandless-and-the-theming-structure) by default. However, you can choose from available themes or develop a custom theme. Learn more in [Themes - Overview](https://developers.vtex.com/docs/guides/faststore/themes-overview).
 
 ---
-
 ### `platform`
-Describes the ecommerce platform being used, that is, `vtex`.
+
+Defines the ecommerce platform being used. You must set `vtex` as a value to enable VTEX-specific features.
+
+>❗Only `vtex` is a valid value. Any other value will cause errors.
 
 ---
 
 ### `api`
-Contains settings related to the store's API.
 
-| Property               | Type    | Description                                                                 |
-|------------------------|---------|-----------------------------------------------------------------------------|
-| `storeId`              | `string`  | VTEX account being used.                            |
-| `workspace`            | `string`  | Workspace being used.    |
-| `environment`          | `string`  | API environment (e.g., `vtexcommercestable`).        |
-| `hideUnavailableItems` | `boolean` | When `true`, hides products that are out of stock.                         |
-| `incrementAddress`     | `boolean` | Determines address handling behavior.                |
+Contains settings related to the store's APIs, which link your FastStore storefront to backend services and manage environmental behavior.
+
+| Property               | Type    | Description                                                                 | Example |
+|------------------------|---------|-----------------------------------------------------------------------------|----------------|
+| `storeId`              | `string`  | VTEX account being used.                            | "mystore" |
+| `workspace`            | `string`  | Workspace being used. Use `master` for production environment, and other names for staging.    | "master" |
+| `environment`          | `string`  | API environment.       | "vtexcommercestable" |
+| `hideUnavailableItems` | `boolean` | Controls product display. When `true`, hides out-of-stock products. Default value is `false`.                         | `false` |
+| `incrementAddress`     | `boolean` | Enables automatic completion of address details during checkout using [VTEX’s address API](https://developers.vtex.com/docs/guides/get-address-by-postal-code). When `true`, missing address fields (such as city, state, street, etc.) are automatically filled based on the provided postal code. Default value is `false`.            | `false` |
 
 ---
 
 ### `session`
-Defines the settings for the user session.
 
-| Property           | Type     | Description                                                                 |
-|--------------------|----------|-----------------------------------------------------------------------------|
-| `currency`         | `object`   | Currency information, including: `code` for ISO currency code (`string,` e.g., `USD`) and `symbol` for the currency symbol  (`string,` e.g., `$`) . |
-| `locale`           | `string`   | Language or locale setting (e.g., `en-US`).                                     |
-| `channel`          | `string`   | Trade policy, region, and seller information for the sales process.                 |
-| `country`          | `string`   | ISO country code (e.g., `US`).                                               |
-| `deliveryMode`     | `string`   | Order fulfillment method, including delivery channel, selected courier or method, and delivery window (start and end times).            |
-| `addressType`      | `string`   | Type of address.                       |
-| `postalCode`       | `string`   | User’s postal code (e.g., "10001").                                          |
-| `geoCoordinates`   | `float[]` | User’s location as [latitude, longitude] (e.g., `[40.7128, -74.0060]`).     |
-| `person`           | `object`   | Shopper data, including: `id` (`string`) for unique customer ID, `email` (`string`) for registered email, `firstName` (`string`) for first name, and `lastName` (`string`) for last name. |
+Sets up user session defaults, controlling language, currency, location, and shopper attributes.
+
+| Property           | Type     | Description                                                                 | Example |
+|--------------------|----------|-----------------------------------------------------------------------------|----------------|
+| `currency`         | `object`   | Store’s transactional currency for prices, payment, and checkout. |             |
+|&nbsp;&nbsp;├─ `code` | `string` | ISO currency code  | "USD" |
+|&nbsp;&nbsp;├─  `symbol` | `string` | Currency symbol | "$" |
+| `locale`           | `string`   | Language or locale setting for all store text, date, and numbers. Use standard locale format like `en-US` for English (US), `pt-BR` for Brazilian Portuguese, etc.                                     | "en-US" |
+| `channel`          | `object`   | Identifies the commercial and regional context for handling catalog, pricing, and logistics.        |             |
+|&nbsp;&nbsp;├─ `salesChannel` | Trade policy that handles catalog, prices, and fulfillment options (example: different regions or seller-specific rules).      | "1" |
+|&nbsp;&nbsp;├─ `regionId` | Internal identifier used to define regional segmentation based on the user’s location for services such as catalog, shipping, pickup, and other logistics-related processes. |               |
+| `country`          | `string`   | ISO country code for the current shopper’s session. This field informs VTEX services which country’s regulations, delivery logistics, and tax rules must be applied.     | "US" |
+| `deliveryMode`     | `string`   | Order fulfillment method, including delivery channel, selected courier or method, delivery window (start and end times), or pickup point.            | "delivery" |
+| `addressType`      | `string`   | Address format for fulfilment        | "residential" |
+| `postalCode`       | `string`   | User’s postal code                  | "10001" |
+| `geoCoordinates`   | `float[]` | User’s location as [latitude, longitude]     | `[40.7128, -74.0060]` |
+| `person`           | `object`   | Shopper identity attributes. |
+|&nbsp;&nbsp;├─ `id`            | `string` | Unique VTEX customer ID. VTEX Identity service may auto-populate these fields after sign-in. | "12345" |
+|&nbsp;&nbsp;├─ `email`      | `string` | Customer’s email address | "user@email.com" |
+|&nbsp;&nbsp;├─ `firstName` | `string` | Customer’s first name. | "Alex" |
+|&nbsp;&nbsp;├─ `lastName` | `string` | Customer’s last name. | "Smith" |
 
 ---
 
 ### `cart`
-Contains the settings related to the shopping cart.
 
-| Property           | Type         | Description                                                                 |
-|--------------------|--------------|-----------------------------------------------------------------------------|
-| `id`               | `string`     | Unique identifier of the cart.                                              |
-| `items`            | `array`      | Products added to the cart.                                                 |
-| `messages`         | `string[]`   | System messages associated with the cart, such as shipping changes or any other relevant information. |
-| `shouldSplitItem`  | `boolean`    | When `true`, allows cart items to be divided into separate shipments.       |
+Contains the settings to manage the shopping cart’s contents and behavior.
+
+| Property           | Type         | Description                                                                 | Example |
+|--------------------|--------------|-----------------------------------------------------------------------------|---------------|
+| `id`               | `string`     | Unique identifier of the cart.                                              | "cart-abc-123" |
+| `items`            | `array`      | Products added to the cart.                                                 | `[{"sku": "5678", "quantity": 2}]` |
+| `messages`         | `string[]`   | System messages associated with the cart, such as shipping changes or other relevant information. | `["Shipping updated"]` |
+| `shouldSplitItem`  | `boolean`    | If `true`, allows cart items from multiple sellers or differing stock locations to be shipped separately.       | `true` |
 
 ---
 
 ### `storeUrl`
-Defines the URL of the FastStore online store as a string. 
+
+Defines the primary store domain as a string. Example: `https://www.mystore.com`.
 
 ### `secureSubdomain`
-Defines the secure subdomain URL for HTTPS connections as a string.
+
+Defines the HTTPS-enabled subdomain, if used, as a string. Example: `https://secure.mystore.com`.
 
 ### `checkoutUrl`
-Defines the URL for the checkout process as a string.
+
+Defines the URL for the checkout process as a string. Example: `https://www.mystore.com/checkout`.
 
 ### `loginUrl`
-Defines the URL for the login process as a string.
+
+Defines the URL for the login process as a string. Example: `https://www.mystore.com/login`.
 
 ### `accountUrl`
-Defines the URL for the user's account section as a string.
+
+Defines the URL for the customer's account management page as a string. Example: `https://www.mystore.com/account`.
 
 Learn more about store domains in [Associating your custom domain with your FatStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
 
 ---
 
 ### `previewRedirects`
+
 Maps redirect URLs for the following page types in preview mode.
 
-| Property    | Type       | Description                                      |
-|-------------|------------|--------------------------------------------------|
-| `home`      | `string`   | Redirect URL for the homepage.                   |
-| `plp`       | `string`   | Redirect URL for product listing pages (PLP).     |
-| `search`    | `string`   | Redirect URL for search results pages.            |
-| `pdp`       | `string`   | Redirect URL for product detail pages (PDP).     |
+| Property    | Type       | Description                                      | Example |
+|-------------|------------|--------------------------------------------------|------------|
+| `home`      | `string`   | Redirect URL for the homepage.                   | "https://preview.mystore.com" |
+| `plp`       | `string`   | Redirect URL for product listing pages (PLP).     | "https://preview.mystore.com/category" |
+| `search`    | `string`   | Redirect URL for search results pages.            | "https://preview.mystore.com/search" |
+| `pdp`       | `string`   | Redirect URL for product detail pages (PDP).     | "https://preview.mystore.com/product" |
 
 Learn more in [Managing URLs with redirects and rewrite paths](https://developers.vtex.com/docs/guides/faststore/routing-managing-urls-with-redirects-and-rewrite-paths).
 
 ---
 
 ### `lighthouse`
+
 Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview), a tool for auditing and improving the quality of web pages.
 
-| Property       | Type       | Description                                     |
-|----------------|------------|-------------------------------------------------|
-| `server`       | `string`   | The server URL for running Lighthouse audits.   |
-| `pages`        | `object`   | Maps the URL of pages to be audited by Lighthouse. |
-| &nbsp;&nbsp;├─ `home`      | `string`   | URL of the homepage.                           |
-| &nbsp;&nbsp;├─ `pdp`       | `string`   | URL of a product details page.                  |
-| &nbsp;&nbsp;└─ `collection`| `string`   | URL of a collection page.                       |
+| Property       | Type       | Description                                     | Example |
+|----------------|------------|-------------------------------------------------|----------------|
+| `server`       | `string`   | The server URL for running Lighthouse audits.   | `process.env.BASE_SITE_URL || 'http://localhost:3000'` |
+| `pages`        | `object`   | Maps the URL of pages to be audited by Lighthouse. |          |
+| &nbsp;&nbsp;├─ `home`      | `string`   | URL of the homepage.                           | '/'  |
+| &nbsp;&nbsp;├─ `pdp`       | `string`   | URL of a product details page.                  | "/headphone-white-10000006/p" |
+| &nbsp;&nbsp;└─ `collection`| `string`   | URL of a collection page.                       | "/headphones" |
 
 Learn more in [Lighthouse Scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores).
 
 ---
 
 ### `cypress`
-Contains settings for [Cypress](https://docs.cypress.io/app/get-started/why-cypress), a testing tool.
 
-| Property                 | Type     | Description                                     |
-|---------------------------|----------|-------------------------------------------------|
+Defines which pages [Cypress](https://docs.cypress.io/app/get-started/why-cypress) end-to-end tests target. Map URLs under the `pages` object so test suites run reliably on deployment and updates. Example:
+
+| Property                 | Type     | Description                                     | Example |
+|---------------------------|----------|-------------------------------------------------|--------------|
 | `pages`                   | `object` | Maps the URLs of pages for end-to-end testing with Cypress, with each field defined as a string. |
 | &nbsp;&nbsp;├─ `home`               | `string` | URL of the homepage.                           |
 | &nbsp;&nbsp;├─ `pdp`                | `string` | URL of the product details page.                |
@@ -166,6 +191,7 @@ Learn more in [`enableCypressExtension`](https://developers.vtex.com/docs/guides
 ---
 
 ### `analytics`
+
 Defines the [Google Tag Manager ID](https://support.google.com/tagmanager/answer/12326985?hl=en&ref_topic=14595647&sjid=12859079805529639111-SA) being used.
 
 | Property         | Type     | Description                               |
@@ -177,6 +203,7 @@ Learn more in [Analytics](https://developers.vtex.com/docs/guides/faststore/anal
 ---
 
 ### `experimental`
+
 Contains settings for experimental features.
 
 | Property                   | Type     | Description                                     |
@@ -190,11 +217,13 @@ Contains settings for experimental features.
 ---
 
 ### `account`
+
 Specifies the name of the account as a string.
 
 ---
 
 ### `vtexHeadlessCms`
+
 Contains settings for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
 | Property         | Type     | Description                                               |
