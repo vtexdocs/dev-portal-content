@@ -4,7 +4,7 @@ excerpt: "Overwrite automatic message translations from the catalog with more re
 slug: "catalog-internationalization"
 hidden: false
 createdAt: "2020-08-31T17:18:54.238Z"
-updatedAt: "2024-11-22T17:01:18.514Z"
+updatedAt: "2025-10-13T14:21:06.416Z"
 ---
 
 In this guide, you'll learn how to overwrite an automatic message translation from the catalog, such as a product name or a product description, with a more specific and representative content of your store.
@@ -18,7 +18,6 @@ The following list includes the translatable Catalog API settings, which can be 
 - **[Product](https://help.vtex.com/en/tutorial/product-registration-fields--4dYXWIK3zyS8IceKkQseke):** Name, keywords (similar words), page title (tag title), description, short description, meta tag description, and the URL slug (cross-border stores only).
 - **[SKU](https://help.vtex.com/en/tutorial/sku-registration-fields--21DDItuEQc6mseiW8EakcY):** Name.
 - **[SKU or product specification](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP):** Name, description, and values.
-- **[Category group](https://help.vtex.com/en/tutorial/creating-category-groups--tutorials_246):** Name.
 
 Considering literal translations and cultural factors, you may want to overwrite automatic translations with content that is specific and representative of your store. This can be done through the `catalog-graphql` app, which is the GraphQL interface of the Catalog API, by following the instructions below.
 
@@ -282,46 +281,3 @@ Complete the _Query variables_ section with the desired translations for each pa
   >```
   >
   > Where `fieldId` is the specification ID, which you can find following the guide [Products and SKU Specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en).
-
-### Category group
-
-#### Mutation
-
-Complete the main text box with the following mutation command:
-
-```gql
-mutation translate($args: GroupInputTranslation, $locale:Locale) {
-  translateGroup(group: $args, locale:$locale)
-}
-```
-
-#### Query variables
-
-Complete the _Query variables_ section with the desired translations for each parameter.
-
-```json
-{
-  "args":{
-    "groupId": "14",
-    "name": "Cores"
-  },
-  "locale": "pt-BR" 
-}
-```
-
-- `groupId`: Category group ID.
-- `name`: Category group name.
-- `locale`: Target translation locale.
-
-  > You can retrieve category group IDs by running the following query:
-  >
-  >```gql
-  >query{
-  >  groupsByCategory(categoryId:1){
-  >    id
-  >    name
-  >  }
-  >}
-  >```
-  >
-  > Where `categoryId` is the ID of the category related to that group.
