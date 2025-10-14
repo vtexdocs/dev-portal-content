@@ -86,11 +86,11 @@ Sets up user session defaults, controlling language, currency, location, and sho
 |--------------------|----------|-----------------------------------------------------------------------------|----------------|
 | `currency`         | `object`   | Store’s transactional currency for prices, payment, and checkout. |          |
 |&nbsp;&nbsp;├─ `code` | `string` | ISO currency code  | "USD" |
-|&nbsp;&nbsp;├─  `symbol` | `string` | Currency symbol | "$" |
+|&nbsp;&nbsp;└─  `symbol` | `string` | Currency symbol | "$" |
 | `locale`           | `string`   | Language or locale setting for all store text, dates, and numbers. Use standard locale format like `en-US` for English (US), `pt-BR` for Brazilian Portuguese, etc.                                     | "en-US" |
 | `channel`          | `object`   | Identifies the commercial and regional context for handling catalog, pricing, and logistics.        |             |
 |&nbsp;&nbsp;├─ `salesChannel` | `string` | Trade policy that handles catalog, prices, and fulfillment options (example: different regions or seller-specific rules).      | "1" |
-|&nbsp;&nbsp;├─ `regionId` | `string` | Internal identifier used to define regional segmentation based on the user’s location for services such as catalog, shipping, pickup, and other logistics-related processes. |               |
+|&nbsp;&nbsp;└─ `regionId` | `string` | Internal identifier used to define regional segmentation based on the user’s location for services such as catalog, shipping, pickup, and other logistics-related processes. |               |
 | `country`          | `string`   | ISO country code for the current shopper’s session. This field informs VTEX services which country’s regulations, delivery logistics, and tax rules must be applied.     | "US" |
 | `deliveryMode`     | `string`   | Order fulfillment method, including delivery channel, selected courier or method, delivery window (start and end times), or pickup point.            | "delivery" |
 | `addressType`      | `string`   | Address format for fulfillment        | "residential" |
@@ -100,7 +100,7 @@ Sets up user session defaults, controlling language, currency, location, and sho
 |&nbsp;&nbsp;├─ `id`            | `string` | Unique VTEX customer ID. VTEX Identity service may auto-populate these fields after sign-in. | "12345" |
 |&nbsp;&nbsp;├─ `email`      | `string` | Customer’s email address | "user@email.com" |
 |&nbsp;&nbsp;├─ `firstName` | `string` | Customer’s first name. | "Alex" |
-|&nbsp;&nbsp;├─ `lastName` | `string` | Customer’s last name. | "Smith" |
+|&nbsp;&nbsp;└─ `lastName` | `string` | Customer’s last name. | "Smith" |
 
 ---
 
@@ -162,7 +162,7 @@ Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/
 
 | Property       | Type       | Description                                     | Example |
 |----------------|------------|-------------------------------------------------|----------------|
-| `server`       | `string`   | The server URL for running Lighthouse audits.   | `process.env.BASE_SITE_URL || 'http://localhost:3000'` |
+| `server`       | `string`   | The server URL for running Lighthouse audits.   | `process.env.BASE_SITE_URL 'http://localhost:3000'` |
 | `pages`        | `object`   | Maps the URL of pages to be audited by Lighthouse. |          |
 | &nbsp;&nbsp;├─ `home`      | `string`   | URL of the homepage.                           | '/'  |
 | &nbsp;&nbsp;├─ `pdp`       | `string`   | URL of a product detail page.                  | "/headphone-white-10000006/p" |
