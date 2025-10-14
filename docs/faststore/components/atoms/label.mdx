@@ -23,9 +23,12 @@ The `Label` component provides accessible text descriptions for form controls, h
   </Tab>
   <Tab>
     ```tsx
+    import React from "react";
     import { Label } from "@faststore/ui";
 
-    <Label>Label</Label>
+    export default function LabelBasicUsage() {
+      return <Label>Label</Label>;
+    }
     ```
   </Tab>
 </Tabs>
@@ -57,11 +60,18 @@ Labels are commonly used to describe input fields. Use the `htmlFor` attribute t
   </Tab>
   <Tab>
     ```tsx
+    import React from "react";
     import { Label } from "@faststore/ui";
     import { Input } from "@faststore/ui";
 
-    <Label htmlFor="email-input">Email Address</Label>
-    <Input id="email-input" type="email" placeholder="Enter your email" />
+    export default function LabelWithInput() {
+      return (
+        <>
+          <Label htmlFor="email-input">Email Address</Label>
+          <Input id="email-input" type="email" placeholder="Enter your email" />
+        </>
+      );
+    }
     ```
   </Tab>
 </Tabs>
@@ -81,13 +91,20 @@ You can pass additional HTML attributes to customize the label behavior.
   </Tab>
   <Tab>
     ```tsx
+    import React from "react";
     import { Label } from "@faststore/ui";
     import { Input } from "@faststore/ui";
 
-    <Label htmlFor="password-input" className="custom-label">
-      Password
-    </Label>
-    <Input id="password-input" type="password" />
+    export default function LabelWithCustomAttributes() {
+      return (
+        <>
+          <Label htmlFor="password-input" className="custom-label">
+            Password
+          </Label>
+          <Input id="password-input" type="password" />
+        </>
+      );
+    }
     ```
   </Tab>
 </Tabs>
