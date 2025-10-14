@@ -174,17 +174,17 @@ Learn more in [Lighthouse Scores](https://developers.vtex.com/docs/guides/fastst
 
 ### `cypress`
 
-Defines which pages [Cypress](https://docs.cypress.io/app/get-started/why-cypress) end-to-end tests target. Map URLs under the `pages` object so test suites run reliably on deployment and updates. Example:
+Defines which pages [Cypress](https://docs.cypress.io/app/get-started/why-cypress) should visit in end-to-end tests, ensuring predictable routes for the CI pipeline. Prefer relative URLs (for example, `"/"`, `/headphones`) and deterministic scenarios with consistent data across runs.
 
 | Property                 | Type     | Description                                     | Example |
 |---------------------------|----------|-------------------------------------------------|--------------|
-| `pages`                   | `object` | Maps the URLs of pages for end-to-end testing with Cypress, with each field defined as a string. |
-| &nbsp;&nbsp;├─ `home`               | `string` | URL of the homepage.                           |
-| &nbsp;&nbsp;├─ `pdp`                | `string` | URL of the product details page.                |
-| &nbsp;&nbsp;├─ `collection`         | `string` | URL of a collection page.                       |
-| &nbsp;&nbsp;├─ `collection_2`       | `string` | URL of a secondary collection page.             |
-| &nbsp;&nbsp;├─ `collection_filtered`| `string` | URL of a filtered collection page.              |
-| &nbsp;&nbsp;└─ `search`             | `string` | URL of a search results page.                   |
+| `pages`                   | `object` | Maps the URLs of pages for end-to-end testing with Cypress, with each field defined as a string. | `{ home: "/", pdp: "/headphone-white-10000006/p", collection: "/headphones", collection_2: "/audio", collection_filtered: "/headphones?priceRange=100-200", search: "/s?q=headphone" }`
+| &nbsp;&nbsp;├─ `home`               | `string` | URL of the homepage.                           | `"/"` |
+| &nbsp;&nbsp;├─ `pdp`                | `string` | URL of the product details page.                | `"/headphone-white-10000006/p"` |
+| &nbsp;&nbsp;├─ `collection`         | `string` | URL of a collection page.                       | `"/headphones"` |
+| &nbsp;&nbsp;├─ `collection_2`       | `string` | URL of a secondary collection page.             | `"/audio"` |
+| &nbsp;&nbsp;├─ `collection_filtered`| `string` | URL of a filtered collection page.              | `"/headphones?priceRange=100-200"` |
+| &nbsp;&nbsp;└─ `search`             | `string` | URL of a search results page.                   | `"/s?q=headphone"` |
 
 Learn more in [`enableCypressExtension`](https://developers.vtex.com/docs/guides/faststore/project-structure-custom-cypress).
 
@@ -192,11 +192,11 @@ Learn more in [`enableCypressExtension`](https://developers.vtex.com/docs/guides
 
 ### `analytics`
 
-Defines the [Google Tag Manager ID](https://support.google.com/tagmanager/answer/12326985?hl=en&ref_topic=14595647&sjid=12859079805529639111-SA) being used.
+Defines the [Google Tag Manager ID](https://support.google.com/tagmanager/answer/12326985?hl=en&ref_topic=14595647&sjid=12859079805529639111-SA) used by the site to collect events and trigger tags, allowing you to measure interactions, funnels, and conversions.
 
-| Property         | Type     | Description                               |
-|------------------|----------|-------------------------------------------|
-| `gtmContainerId` | `string` | The Google Tag Manager container ID.      |
+| Property         | Type     | Description                               | Example |
+|------------------|----------|-------------------------------------------|------------|
+| `gtmContainerId` | `string` | The Google Tag Manager container ID.      | `"GTM-1234567"` |
 
 Learn more in [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview).
 
@@ -206,26 +206,26 @@ Learn more in [Analytics](https://developers.vtex.com/docs/guides/faststore/anal
 
 Contains settings for experimental features.
 
-| Property                   | Type     | Description                                     |
-|-----------------------------|----------|-------------------------------------------------|
-| `nodeVersion`               | `string` | The Node.js version.                            |
-| `cypressVersion`            | `string` | The Cypress version.                            |
-| `graphqlCacheControl`       | `object` | Settings for GraphQL responses. |
-| &nbsp;&nbsp;├─ `maxAge`                | `number` | Maximum time (in seconds) that the response can be cached. |
-| &nbsp;&nbsp;└─ `staleWhileRevalidate`  | `number` | Time (in seconds) during which stale responses can be served while revalidating. |
+| Property                   | Type     | Description                                     | Example |
+|-----------------------------|----------|-------------------------------------------------|---------|
+| `nodeVersion`               | `string` | The Node.js version.                            | `"20"` |
+| `cypressVersion`            | `string` | The Cypress version.                            | `"13"` |
+| `graphqlCacheControl`       | `object` | Settings for GraphQL responses. | `{ "maxAge": 300, "staleWhileRevalidate": 60 }` |
+| &nbsp;&nbsp;├─ `maxAge`                | `number` | Maximum time (in seconds) that the response can be cached. | `300` |
+| &nbsp;&nbsp;└─ `staleWhileRevalidate`  | `number` | Time (in seconds) during which stale responses can be served while revalidating. | `60` |
 
 ---
 
 ### `account`
 
-Specifies the name of the account as a string.
+Specifies the VTEX account name used by the project as a string. Example: `mystore`.
 
 ---
 
 ### `vtexHeadlessCms`
 
-Contains settings for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+Configures webhook endpoints for [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to trigger publishing, cache invalidation, or content preview whenever changes occur in the CMS.
 
-| Property         | Type     | Description                                               |
-|------------------|----------|-----------------------------------------------------------|
-| `webhookUrls`    | `object` | An object of strings that defines the webhook URLs used to interact with the Headless CMS. |
+| Property         | Type     | Description                                               | Example |
+|------------------|----------|-----------------------------------------------------------|---------|
+| `webhookUrls`    | `object` | An object of strings that defines the webhook URLs used to interact with the Headless CMS. | ["https://mystore.myvtex.com/cms-releases/webhook-releases"]
