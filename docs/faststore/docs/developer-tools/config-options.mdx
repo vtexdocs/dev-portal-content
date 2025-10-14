@@ -5,7 +5,7 @@ updatedAt: "2025-10-13T19:30:49.674Z"
 
 The `discovery.config.js` is a configuration file for managing various settings that control store behavior, appearance, and functionality. This file serves as a central hub for configuring key aspects of your FastStore website, including SEO, API connections, session management, analytics, and more.
 
-This guide outlines these configuration options for tailoring your FastStore website using the `discovery.config.js` file.
+This guide outlines the configuration options for tailoring your FastStore website using the `discovery.config.js` file.
 ## Example file
 
 ```javascript
@@ -42,8 +42,8 @@ Sets default metadata related to Search Engine Optimization (SEO), influencing h
 
 | Property        | Type   | Description                                                                 | Example |
 |-----------------|--------|-----------------------------------------------------------------------------|---------------|
-| `title`         | `string` | Store headline displayed in search results (60 chars recommended).      | "FastStore Starter" |
-| `description`   | `string` | Brief description of the store (150-160 chars optimal).                | "FastStore Demo Store" |
+| `title`         | `string` | Store headline displayed in search results (60 characters recommended).      | "FastStore Starter" |
+| `description`   | `string` | Brief description of the store (150-160 characters optimal).                | "FastStore Demo Store" |
 | `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder (example: `"%s \| StoreName"`).    | "%s | FastStore" |
 | `author`        | `string` | Content author/owner for attribution.                                        | "FastStore" |
 
@@ -66,7 +66,7 @@ Defines the ecommerce platform being used. You must set `vtex` as a value to ena
 
 ### `api`
 
-Contains settings related to the store's APIs, which link your FastStore storefront to backend services and manage environmental behavior.
+Contains settings related to the store's APIs, which link your FastStore storefront to backend services and manage environment-specific behavior.
 
 | Property               | Type    | Description                                                                 | Example |
 |------------------------|---------|-----------------------------------------------------------------------------|----------------|
@@ -87,13 +87,13 @@ Sets up user session defaults, controlling language, currency, location, and sho
 | `currency`         | `object`   | Store’s transactional currency for prices, payment, and checkout. |             |
 |&nbsp;&nbsp;├─ `code` | `string` | ISO currency code  | "USD" |
 |&nbsp;&nbsp;├─  `symbol` | `string` | Currency symbol | "$" |
-| `locale`           | `string`   | Language or locale setting for all store text, date, and numbers. Use standard locale format like `en-US` for English (US), `pt-BR` for Brazilian Portuguese, etc.                                     | "en-US" |
+| `locale`           | `string`   | Language or locale setting for all store text, dates, and numbers. Use standard locale format like `en-US` for English (US), `pt-BR` for Brazilian Portuguese, etc.                                     | "en-US" |
 | `channel`          | `object`   | Identifies the commercial and regional context for handling catalog, pricing, and logistics.        |             |
 |&nbsp;&nbsp;├─ `salesChannel` | Trade policy that handles catalog, prices, and fulfillment options (example: different regions or seller-specific rules).      | "1" |
 |&nbsp;&nbsp;├─ `regionId` | Internal identifier used to define regional segmentation based on the user’s location for services such as catalog, shipping, pickup, and other logistics-related processes. |               |
 | `country`          | `string`   | ISO country code for the current shopper’s session. This field informs VTEX services which country’s regulations, delivery logistics, and tax rules must be applied.     | "US" |
 | `deliveryMode`     | `string`   | Order fulfillment method, including delivery channel, selected courier or method, delivery window (start and end times), or pickup point.            | "delivery" |
-| `addressType`      | `string`   | Address format for fulfilment        | "residential" |
+| `addressType`      | `string`   | Address format for fulfillment        | "residential" |
 | `postalCode`       | `string`   | User’s postal code                  | "10001" |
 | `geoCoordinates`   | `float[]` | User’s location as [latitude, longitude]     | `[40.7128, -74.0060]` |
 | `person`           | `object`   | Shopper identity attributes. |
@@ -137,7 +137,7 @@ Defines the URL for the login process as a string. Example: `https://www.mystore
 
 Defines the URL for the customer's account management page as a string. Example: `https://www.mystore.com/account`.
 
-Learn more about store domains in [Associating your custom domain with your FatStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
+Learn more about store domains in [Associating your custom domain with your FastStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
 
 ---
 
@@ -165,7 +165,7 @@ Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/
 | `server`       | `string`   | The server URL for running Lighthouse audits.   | `process.env.BASE_SITE_URL || 'http://localhost:3000'` |
 | `pages`        | `object`   | Maps the URL of pages to be audited by Lighthouse. |          |
 | &nbsp;&nbsp;├─ `home`      | `string`   | URL of the homepage.                           | '/'  |
-| &nbsp;&nbsp;├─ `pdp`       | `string`   | URL of a product details page.                  | "/headphone-white-10000006/p" |
+| &nbsp;&nbsp;├─ `pdp`       | `string`   | URL of a product detail page.                  | "/headphone-white-10000006/p" |
 | &nbsp;&nbsp;└─ `collection`| `string`   | URL of a collection page.                       | "/headphones" |
 
 Learn more in [Lighthouse Scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores).
@@ -180,7 +180,7 @@ Defines which pages [Cypress](https://docs.cypress.io/app/get-started/why-cypres
 |---------------------------|----------|-------------------------------------------------|--------------|
 | `pages`                   | `object` | Maps the URLs of pages for end-to-end testing with Cypress, with each field defined as a string. | `{ home: "/", pdp: "/headphone-white-10000006/p", collection: "/headphones", collection_2: "/audio", collection_filtered: "/headphones?priceRange=100-200", search: "/s?q=headphone" }`
 | &nbsp;&nbsp;├─ `home`               | `string` | URL of the homepage.                           | `"/"` |
-| &nbsp;&nbsp;├─ `pdp`                | `string` | URL of the product details page.                | `"/headphone-white-10000006/p"` |
+| &nbsp;&nbsp;├─ `pdp`                | `string` | URL of the product detail page.                | `"/headphone-white-10000006/p"` |
 | &nbsp;&nbsp;├─ `collection`         | `string` | URL of a collection page.                       | `"/headphones"` |
 | &nbsp;&nbsp;├─ `collection_2`       | `string` | URL of a secondary collection page.             | `"/audio"` |
 | &nbsp;&nbsp;├─ `collection_filtered`| `string` | URL of a filtered collection page.              | `"/headphones?priceRange=100-200"` |
@@ -228,4 +228,4 @@ Configures webhook endpoints for [VTEX Headless CMS](https://developers.vtex.com
 
 | Property         | Type     | Description                                               | Example |
 |------------------|----------|-----------------------------------------------------------|---------|
-| `webhookUrls`    | `object` | An object of strings that defines the webhook URLs used to interact with the Headless CMS. | ["https://mystore.myvtex.com/cms-releases/webhook-releases"]
+| `webhookUrls`    | `object` | An array of strings that defines the webhook URLs used to interact with the Headless CMS. | ["https://mystore.myvtex.com/cms-releases/webhook-releases"]
