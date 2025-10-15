@@ -1,6 +1,6 @@
 ---
 title: "Skeleton"
-excerpt: Skeleton is a placeholder that simulates the layout of these elements/sections while the data is being loaded.
+excerpt: Skeleton displays a loading placeholder that mimics the shape of content while data is being fetched, improving perceived performance and reducing layout shifts.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Overlay___5ae3e4dc6b4b413cf33295d52a64fac0.png
 components:
@@ -9,13 +9,9 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Skeleton)
 
-This feature improves the store's experience and perceived performance through loading placeholders.
-`skeletons` are like an element's or section's wireframe. They're placeholders
-that simulate the layout of these elements or sections while data loads.
+Skeletons are visual placeholders that simulate the layout of content while data is loading. By displaying skeletons instead of blank spaces, you provide users with immediate visual feedback, making your store feel faster and more responsive. 
 
-Instead of showing a blank page, displaying `skeletons` while loading content makes users feel that the store is more responsive and faster.
-
-Additionally, by using `skeletons`, the store will be less likely to experience [Cumulative Layout Shift (CLS)](https://web.dev/i18n/en/cls/).
+Skeletons also help prevent [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls) by reserving space for content before it loads, ensuring a smooth user experience during data fetching operations.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -25,10 +21,18 @@ Additionally, by using `skeletons`, the store will be less likely to experience 
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton size={{ width: "150px", height: "80px" }} borderRadius="32px" />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "80px" }} borderRadius="32px" />
+      )
+    }
     ```
   </Tab>
 </Tabs>
+
 ---
 
 ## Usage
@@ -65,7 +69,14 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -80,7 +91,14 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton size={{ width: "150px", height: "100px" }} border="pill" />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "100px" }} border="pill" />
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -95,12 +113,65 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton size={{ width: "100px", height: "100px" }} border="circle" />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "100px", height: "100px" }} border="circle" />
+      )
+    }
     ```
   </Tab>
 </Tabs>
 
-### Without shimmer effect
+### Custom border radius
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <Skeleton size={{ width: "150px", height: "100px" }} borderRadius="20px" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "100px" }} borderRadius="20px" />
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Shimmer effect
+
+#### With shimmer (default)
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Without shimmer effect
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -114,14 +185,49 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton
-      size={{ width: "150px", height: "100px" }}
-      border="regular"
-      shimmer={false}
-    />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton
+          size={{ width: "150px", height: "100px" }}
+          border="regular"
+          shimmer={false}
+        />
+      )
+    }
     ```
   </Tab>
 </Tabs>
+
+### Loading state control
+
+```tsx
+import React from 'react'
+import { Skeleton } from '@faststore/ui'
+
+export default function SkeletonExample() {
+  const isLoading = true
+
+  return (
+    <div>
+      {isLoading ? (
+        // Loading state
+        <Skeleton
+          style={{ width: '150px', height: '100px' }}
+          border="regular"
+        />
+      ) : (
+        // Content loaded
+        <div style={{ padding: '20px', background: '#f0f0f0', borderRadius: '8px' }}>
+          Content loaded
+        </div>
+      )}
+    </div>
+  )
+}
+```
 
 ---
 
@@ -178,3 +284,20 @@ You can target and override `Skeleton` styles using the following data attribute
 ## Props
 
 <ComponentPropsSection component="Skeleton" />
+
+---
+
+## Best practices
+
+- Use Skeletons for elements that load asynchronously, such as product cards, images, or sections.
+- Match the Skeleton’s shape and size to the content it represents for a seamless transition.
+- Avoid using Skeletons for static or instantly available content.
+- Disable shimmer animation (`shimmer={false}`) for a more subtle loading effect, especially in contexts where animation might be distracting.
+
+---
+
+## Related components
+
+- [ProductCardSkeleton](https://github.com/vtex/faststore/tree/main/packages/core/src/components/skeletons/ProductCardSkeleton)
+- [ProductGridSkeleton](https://github.com/vtex/faststore/tree/main/packages/core/src/components/skeletons/ProductGridSkeleton)
+- [ProductShelfSkeleton](https://github.com/vtex/faststore/tree/main/packages/core/src/components/skeletons/ProductShelfSkeleton)
