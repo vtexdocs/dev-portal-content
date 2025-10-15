@@ -11,7 +11,7 @@ components:
 
 Skeletons are visual placeholders that simulate the layout of content while data is loading. By displaying skeletons instead of blank spaces, you provide users with immediate visual feedback, making your store feel faster and more responsive. 
 
-Skeletons also help prevent [Cumulative Layout Shift (CLS)](https://web.dev/i18n/en/cls/) by reserving space for content before it loads.
+Skeletons also help prevent [Cumulative Layout Shift (CLS)](https://web.dev/i18n/en/cls/) by reserving space for content before it loads, ensuring a smooth user experience during data fetching operations.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -21,7 +21,14 @@ Skeletons also help prevent [Cumulative Layout Shift (CLS)](https://web.dev/i18n
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton size={{ width: "150px", height: "80px" }} borderRadius="32px" />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "80px" }} borderRadius="32px" />
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -62,7 +69,14 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -77,7 +91,14 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton size={{ width: "150px", height: "100px" }} border="pill" />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "100px" }} border="pill" />
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -92,12 +113,65 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton size={{ width: "100px", height: "100px" }} border="circle" />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "100px", height: "100px" }} border="circle" />
+      )
+    }
     ```
   </Tab>
 </Tabs>
 
-### Without shimmer effect
+### Custom border radius
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <Skeleton size={{ width: "150px", height: "100px" }} borderRadius="20px" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "100px" }} borderRadius="20px" />
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Shimmer effect
+
+#### With shimmer (default)
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton size={{ width: "150px", height: "100px" }} border="regular" />
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Without shimmer effect
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -111,11 +185,73 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Skeleton
-      size={{ width: "150px", height: "100px" }}
-      border="regular"
-      shimmer={false}
-    />
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <Skeleton
+          size={{ width: "150px", height: "100px" }}
+          border="regular"
+          shimmer={false}
+        />
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Loading state control
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection bigGap>
+      <div>
+        <Skeleton 
+          size={{ width: "150px", height: "100px" }} 
+          border="regular" 
+          loading={true}
+        />
+        <Skeleton 
+          size={{ width: "150px", height: "100px" }} 
+          border="regular" 
+          loading={false}
+        >
+          <div style={{ padding: "20px", background: "#f0f0f0", borderRadius: "8px" }}>
+            Content loaded
+          </div>
+        </Skeleton>
+      </div>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Skeleton } from '@faststore/ui'
+
+    export default function SkeletonExample() {
+      return (
+        <div>
+          {/* Loading state */}
+          <Skeleton 
+            size={{ width: "150px", height: "100px" }} 
+            border="regular" 
+            loading={true}
+          />
+          
+          {/* Content state */}
+          <Skeleton 
+            size={{ width: "150px", height: "100px" }} 
+            border="regular" 
+            loading={false}
+          >
+            <div style={{ padding: "20px", background: "#f0f0f0", borderRadius: "8px" }}>
+              Content loaded
+            </div>
+          </Skeleton>
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -183,7 +319,7 @@ You can target and override `Skeleton` styles using the following data attribute
 - Use Skeletons for elements that load asynchronously, such as product cards, images, or sections.
 - Match the Skeleton’s shape and size to the content it represents for a seamless transition.
 - Avoid using Skeletons for static or instantly available content.
-- Disable shimmer animation (`shimmer={false}`) for a more subtle loading effect if needed.
+- Disable shimmer animation (`shimmer={false}`) for a more subtle loading effect, especially in contexts where animation might be distracting.
 
 ---
 
