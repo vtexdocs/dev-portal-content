@@ -1,25 +1,37 @@
 ---
 title: "Input"
-excerpt: Inputs are fields used to get user inputs.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/Input___77d0e7a8079b7d310e8223dd9e1994f6.png
-components:
+excerpt: Inputs are fields that capture user input.
+components: 
   - Input.tsx
+updatedAt: "2025-10-07T14:09:57.779Z"
 ---
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Input)
+
+The `Input` component renders a single-line text field for capturing short user input. Typical use cases include:
+
+- Collecting user information (e.g., name, email, phone number).
+- Search queries and filters.
+- Form submissions and data entry.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Input placeholder="Label" id="inputfield-default" />
-      <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    <Input placeholder="Label" id="inputfield-default" />
-    <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
+    import React from 'react'
+    import {Input} from '@faststore/ui'
+
+    export default function InputOverviewExample() {
+      return(
+        <div>
+          <Input placeholder="Label" id="inputfield-default" />
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -53,12 +65,21 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Input placeholder="Input" disabled />
+      <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    <Input placeholder="Input" disabled />
+    import React from 'react'
+    import {Input} from '@faststore/ui'
+
+    export default function InputDisabled() {
+      return(
+        <div>
+          <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -106,6 +127,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Design tokens: Disabled
 
+Disabled inputs use reduced opacity and distinct styling to indicate when an input field is temporarily unavailable for interaction, preventing user input while maintaining visual context.
+
 <TokenTable>
   <TokenRow
     token="--fs-input-disabled-bkg-color"
@@ -150,6 +173,15 @@ You can target and override `Input` styles using the following data attributes:
 ### ✅ Do's
 
 - Provide a [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) when using input. Descriptive labels help users understand the purpose of a form control.
+- Use placeholder text as a hint or example of the expected input format, not as a replacement for labels.
+- Ensure sufficient color contrast between text and background for accessibility.
+- Use appropriate input types (e.g., email, name, phone number) to trigger the correct keyboard on mobile devices.
+
+### ❌ Don'ts
+
+- Don't use vague or ambiguous labels that leave users uncertain about what information to provide.
+- Don't use inputs for long-form text entry. Use a [textarea](https://developers.vtex.com/docs/guides/faststore/atoms-textarea) component instead.
+- Don't disable inputs without providing a clear reason why they're unavailable.
 
 ---
 
