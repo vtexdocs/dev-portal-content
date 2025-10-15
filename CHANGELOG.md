@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.219](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.217...v1.1.219) (2025-10-15)
+
+
+### 🔧 Fixes and improvements
+
+* **input.mdx:** EDU-16060 ([0389346](https://github.com/vtexdocs/dev-portal-content/commit/0389346efd795df99b66319d7b1a940eb972a8db))
+
 ### [1.1.218](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.217...v1.1.218) (2025-10-14)
 
 ### [1.1.217](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.215...v1.1.217) (2025-10-14)
