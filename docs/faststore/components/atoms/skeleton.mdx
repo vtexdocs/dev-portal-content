@@ -203,58 +203,31 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Loading state control
 
-<Tabs items={["Example", "Code"]} defaultIndex="0">
-  <Tab>
-    <OverviewSection bigGap>
-      <div>
-        <Skeleton 
-          size={{ width: "150px", height: "100px" }} 
-          border="regular" 
-          loading={true}
-        />
-        <Skeleton 
-          size={{ width: "150px", height: "100px" }} 
-          border="regular" 
-          loading={false}
-        >
-          <div style={{ padding: "20px", background: "#f0f0f0", borderRadius: "8px" }}>
-            Content loaded
-          </div>
-        </Skeleton>
-      </div>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from 'react'
-    import { Skeleton } from '@faststore/ui'
+```tsx
+import React from 'react'
+import { Skeleton } from '@faststore/ui'
 
-    export default function SkeletonExample() {
-      return (
-        <div>
-          {/* Loading state */}
-          <Skeleton 
-            size={{ width: "150px", height: "100px" }} 
-            border="regular" 
-            loading={true}
-          />
-          
-          {/* Content state */}
-          <Skeleton 
-            size={{ width: "150px", height: "100px" }} 
-            border="regular" 
-            loading={false}
-          >
-            <div style={{ padding: "20px", background: "#f0f0f0", borderRadius: "8px" }}>
-              Content loaded
-            </div>
-          </Skeleton>
+export default function SkeletonExample() {
+  const isLoading = true
+
+  return (
+    <div>
+      {isLoading ? (
+        // Loading state
+        <Skeleton
+          style={{ width: '150px', height: '100px' }}
+          border="regular"
+        />
+      ) : (
+        // Content loaded
+        <div style={{ padding: '20px', background: '#f0f0f0', borderRadius: '8px' }}>
+          Content loaded
         </div>
-      )
-    }
-    ```
-  </Tab>
-</Tabs>
+      )}
+    </div>
+  )
+}
+```
 
 ---
 
