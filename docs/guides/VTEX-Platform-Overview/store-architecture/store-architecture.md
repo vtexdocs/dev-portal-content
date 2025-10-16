@@ -23,6 +23,8 @@ These are the main use cases for common scenarios:
 - [Multi-language and multi-currency](#multi-language-and-multi-currency)
   - [Single account, multi-bindings](#single-account-multi-bindings)
   - [Multi-account](#multi-account)
+     - [Multi-account, shared back-office](#multi-account-shared-back-office-systems)
+     - [Multi-account, independent back-office](#multi-account-independent-back-office-systems)
 
 >ℹ️ Except for the [Headless](#headless) architecture, the following diagrams consider the client is using [Store Framework](https://developers.vtex.com/docs/guides/store-framework) as a storefront solution.
 
