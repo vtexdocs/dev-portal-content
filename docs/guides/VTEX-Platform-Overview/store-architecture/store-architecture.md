@@ -3,7 +3,7 @@ title: "Store architecture"
 slug: "store-architecture"
 hidden: false
 createdAt: "2024-05-23T13:08:55.338Z"
-updatedAt: "2024-10-28T14:22:32.885Z"
+updatedAt: "2025-10-16T18:23:22.662Z"
 excerpt: "Learn how our store architecture models are tailored to meet different business needs."
 seeAlso:
  - "/docs/guides/understanding-vtex-reference-architectures"
@@ -112,7 +112,7 @@ In this architecture, a single VTEX account is configured to support multiple la
 
 The reference architecture below exemplifies its main characteristics:
 
-- **Separate website**: A si-gle account, but each store with its own domain, bound to different [trade policies](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4EPwTXx5oFdSG1dA3zIchz#trade-policy) by [bindings](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W).
+- **Separate website**: A single account, but each store with its own domain, bound to different [trade policies](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4EPwTXx5oFdSG1dA3zIchz#trade-policy) by [bindings](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W).
 - **Search**: Same [search settings](https://developers.vtex.com/docs/guides/search-overview) for all websites.
 - **CMS**: Shared access to the [Content Management System (CMS)](https://developers.vtex.com/docs/guides/vtex-io-documentation-cms) between websites.
 - **Customer data storage**: A single [Master Data](https://developers.vtex.com/docs/guides/master-data) for all stores.
@@ -136,28 +136,54 @@ This model is easier to set up, integrate, and maintain compared to the [multi-a
 
 ### Multi-account
 
-In this architecture, a main account acts as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520).
+In a multi-account architecture, a brand operates multiple VTEX accounts (typically one per country or market), allowing each to be independently localized and operated. It's recommended for operations across multiple countries that require configuring different languages and currencies, where different teams manage each localized store.
 
-The reference architecture below highlights its main characteristics:
+There are two variants, depending on how back-office systems like ERP, PIM, and WMS are integrated: 
+* [Shared back-office systems](#multi-account-shared-back-office-systems)
+* [Independent-back-office-systems](#multi-account-independent-back-office-systems)
+
+#### Multi-account, shared back-office systems
+
+In this model, a main account acts as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520). 
+
+The reference architecture below exemplifies its main characteristics:
 
 - **Separate VTEX account**: Each store operates with its own VTEX account.
 - **Separate website**: Each store has its own website and can customize a different frontend style.
 - **Customer data storage**: Customer data is segregated by marketplace account. No customer information is stored within the main account's [Master Data](https://developers.vtex.com/docs/guides/master-data).
-- **Promotions**: Promotions from the main account have limited capabilities because the main account can't access customer data from the marketplace. For example, if you want to create promotions for a customer cluster in the main account, it won't work because the account doesn't have access to the marketplace Master Data.
+- **Promotions**: Promotions from the main account have limited capabilities because the main account can't access customer data from the marketplace. For example, if you want to create promotions for a customer cluster in the main account, it will not work because the account doesn't have access to the marketplace Master Data. Additionally, promotions configured in the marketplace based on a seller's [payment methods](https://newhelp.vtex.com/en/docs/tutorials/difference-between-payment-methods-and-payment-conditions) don't work. Learn more in [Configuring promotions for marketplaces](https://newhelp.vtex.com/en/docs/tutorials/configuring-promotions-for-marketplaces).
 - **Checkout, Order Management System (OMS), Payments, and Message Center**: Each store manages these modules independently in its own Admin, without relying on the main account.
 - **Catalog, Pricing, and Logistics**: The main account is the source of truth for these [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), but management is independent, as each account has its own Admin. The product assortment can vary between accounts, but it's always based on the main account's catalog, as the main account is the owner.
 
->⚠ [Assembly options](https://developers.vtex.com/docs/guides/assembly-options-app), [attachments](https://help.vtex.com/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm), and [services](https://help.vtex.com/en/tutorial/what-is-a-service--46Ha8CEEQoC6Y40i6akG0y) aren't supported.
+>⚠ [Assembly options](https://developers.vtex.com/docs/guides/assembly-options-app) and [services](https://help.vtex.com/en/tutorial/what-is-a-service--46Ha8CEEQoC6Y40i6akG0y) are not supported. [Attachments](https://help.vtex.com/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm) only work if configured in the seller account.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-multi-account.png)
 
-This architecture is recommended for operations across multiple countries that require configuring different languages and currencies, where different teams manage each localized store.
-
-#### Why choose this architecture?
+##### Why choose this architecture?
 
 - Supports both single fulfillment (all items shipped from one account) and multiple fulfillment (items shipped from different accounts within the same purchase), ensuring efficiency by optimizing logistics based on item availability and proximity to the customer.
 - Having the seller (main account) act as catalog owner and the accounts for each country act as marketplaces enables a multi-language solution. This allows each store to manage its language and currency locally within its own environment.
-- Support better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you don’t need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
+- Support better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you don't need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
+- The catalog can be translated in the marketplace after the seller sends the item.
+
+#### Multi-account, independent back-office systems
+
+In this model, each country/region operates with its own back-office, resulting in greater operational and integration autonomy.
+
+The reference architecture below exemplifies its main characteristics:
+
+- **Separate VTEX account**: Each store operates with its own VTEX account.
+- **Separate website**: Each store has its own website and can customize a different frontend style.
+- **Customer data storage**: Customer data is segregated by account. No customer information is shared between accounts, as each has its own [Master Data](https://developers.vtex.com/docs/guides/master-data).
+- **Promotions**: Different promotions can be configured for each store. If any individual account runs a [marketplace with external sellers](https://developers.vtex.com/docs/guides/external-seller-integration-architecture), the seller-marketplace limitations are applied within that specific relation, but that's separate from the cross-country independence model. Learn more about these restrictions in [Configuring promotions for marketplaces](https://newhelp.vtex.com/en/docs/tutorials/configuring-promotions-for-marketplaces).
+- **Checkout, Order Management System (OMS), Payments, and Message Center**: Each store manages these modules independently in its own Admin.
+- **Catalog, Pricing, and Logistics**: Each store manages these [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services) independently. Integrations are not shared between accounts.
+
+##### Why choose this architecture?
+
+- Supports both single fulfillment (all items shipped from one account) and multiple fulfillment (items shipped from different accounts within the same purchase), ensuring efficiency by optimizing logistics based on item availability and proximity to the customer.
+- Having the seller (main account) act as catalog owner and the accounts for each country act as marketplaces enables a multi-language solution. This allows each store to manage its language and currency locally within its own environment.
+- Support better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you don't need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
 
 #### Learn more
 
