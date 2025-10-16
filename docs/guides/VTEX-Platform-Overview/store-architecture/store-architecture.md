@@ -140,7 +140,7 @@ In a multi-account architecture, a brand operates multiple VTEX accounts (typica
 
 There are two variants, depending on how back-office systems like ERP, PIM, and WMS are integrated: 
 * [Shared back-office systems](#multi-account-shared-back-office-systems)
-* [Independent-back-office-systems](#multi-account-independent-back-office-systems)
+* [Independent back-office systems](#multi-account-independent-back-office-systems)
 
 #### Multi-account, shared back-office systems
 
