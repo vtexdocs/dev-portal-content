@@ -144,7 +144,7 @@ There are two variants, depending on how back-office systems like ERP, PIM, and 
 
 #### Multi-account, shared back-office systems
 
-In this model, a main account acts as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520). 
+In this model, a main account acts as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520).
 
 The reference architecture below exemplifies its main characteristics:
 
