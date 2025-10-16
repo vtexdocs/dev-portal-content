@@ -142,6 +142,12 @@ There are two variants, depending on how back-office systems like ERP, PIM, and 
 * [Shared back-office systems](#multi-account-shared-back-office-systems)
 * [Independent back-office systems](#multi-account-independent-back-office-systems)
 
+#### Why choose this architecture?
+
+- Supports both single fulfillment (all items shipped from one account) and multiple fulfillment (items shipped from different accounts within the same purchase), ensuring efficiency by optimizing logistics based on item availability and proximity to the customer.
+- Having the seller (main account) act as catalog owner and the accounts for each country act as marketplaces enables a multi-language solution. This allows each store to manage its language and currency locally within its own environment.
+- Support better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you don't need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
+
 #### Multi-account, shared back-office systems
 
 In this model, a main account acts as a [seller](https://help.vtex.com/en/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) in secondary accounts that act as [marketplaces](https://help.vtex.com/en/tutorial/configuring-the-marketplace-between-vtex-stores--tutorials_6520).
@@ -154,17 +160,11 @@ The reference architecture below exemplifies its main characteristics:
 - **Promotions**: Promotions from the main account have limited capabilities because the main account can't access customer data from the marketplace. For example, if you want to create promotions for a customer cluster in the main account, it will not work because the account doesn't have access to the marketplace Master Data. Additionally, promotions configured in the marketplace based on a seller's [payment methods](https://newhelp.vtex.com/en/docs/tutorials/difference-between-payment-methods-and-payment-conditions) don't work. Learn more in [Configuring promotions for marketplaces](https://newhelp.vtex.com/en/docs/tutorials/configuring-promotions-for-marketplaces).
 - **Checkout, Order Management System (OMS), Payments, and Message Center**: Each store manages these modules independently in its own Admin, without relying on the main account.
 - **Catalog, Pricing, and Logistics**: The main account is the source of truth for these [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services), but management is independent, as each account has its own Admin. The product assortment can vary between accounts, but it's always based on the main account's catalog, as the main account is the owner.
+- **Localization**: The catalog can be translated in the marketplace after the seller sends the item.
 
 >⚠ [Assembly options](https://developers.vtex.com/docs/guides/assembly-options-app) and [services](https://help.vtex.com/en/tutorial/what-is-a-service--46Ha8CEEQoC6Y40i6akG0y) are not supported. [Attachments](https://help.vtex.com/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm) only work if configured in the seller account.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-multi-account.png)
-
-##### Why choose this architecture?
-
-- Supports both single fulfillment (all items shipped from one account) and multiple fulfillment (items shipped from different accounts within the same purchase), ensuring efficiency by optimizing logistics based on item availability and proximity to the customer.
-- Having the seller (main account) act as catalog owner and the accounts for each country act as marketplaces enables a multi-language solution. This allows each store to manage its language and currency locally within its own environment.
-- Supports better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you don't need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
-- The catalog can be translated in the marketplace after the seller sends the item.
 
 #### Multi-account, independent back-office systems
 
@@ -179,11 +179,7 @@ The reference architecture below exemplifies its main characteristics:
 - **Checkout, Order Management System (OMS), Payments, and Message Center**: Each store manages these modules independently in its own Admin.
 - **Catalog, Pricing, and Logistics**: Each store manages these [VTEX Core services](https://developers.vtex.com/docs/guides/getting-started#vtex-core-services) independently. Integrations are not shared between accounts.
 
-##### Why choose this architecture?
-
-- Supports both single fulfillment (all items shipped from one account) and multiple fulfillment (items shipped from different accounts within the same purchase), ensuring efficiency by optimizing logistics based on item availability and proximity to the customer.
-- Having the seller (main account) act as catalog owner and the accounts for each country act as marketplaces enables a multi-language solution. This allows each store to manage its language and currency locally within its own environment.
-- Support better translations compared to the [single account, multi-binding](#single-account-multi-binding) model, as there is an **independent catalog translation**. Therefore, you don't need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization).
+![image](https://vtexhelp.vtexassets.com/assets/docs/src/multi-account-independent-back-office___09c2a122cc7fe7178540c9a9275570bb.png)
 
 #### Learn more
 
