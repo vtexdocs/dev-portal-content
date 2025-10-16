@@ -48,25 +48,58 @@ Use the `ProductCard` to:
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
+
+    const product = {
+      image: [
+        {},
+        {
+          url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000',
+          alternateName: 'Magic Mouse'
+        }
+      ],
+      isVariantOf: {
+        name: 'Apple Magic Mouse'
+      },
+      offers: {
+        offers: [{
+          price: 950.00,
+          listPrice: 999.00
+        }]
+      }
+    }
+
+    const useFormattedPrice = (price) => {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }).format(price)
+    }
+
+    export default function ProductCardExample() {
+      return (
+        <ProductCard>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            ratingValue={3.5}
+            onButtonClick={() => {}}
+          />
+        </ProductCard>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -133,25 +166,58 @@ Prefer using `buyButton` or `discountBadge`, but never both.
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard variant="wide">
-      <ProductCardImage aspectRatio={2 / 1}>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
+
+    const product = {
+      image: [
+        {},
+        {
+          url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000',
+          alternateName: 'Magic Mouse'
+        }
+      ],
+      isVariantOf: {
+        name: 'Apple Magic Mouse'
+      },
+      offers: {
+        offers: [{
+          price: 950.00,
+          listPrice: 999.00
+        }]
+      }
+    }
+
+    const useFormattedPrice = (price) => {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }).format(price)
+    }
+
+    export default function ProductCardWideWithButton() {
+      return (
+        <ProductCard variant="wide">
+          <ProductCardImage aspectRatio={2 / 1}>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            ratingValue={3.5}
+            onButtonClick={() => {}}
+          />
+        </ProductCard>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -186,25 +252,58 @@ Prefer using `buyButton` or `discountBadge`, but never both.
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard variant="wide">
-      <ProductCardImage aspectRatio={2 / 1}>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        showDiscountBadge
-      />
-    </ProductCard>
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
+
+    const product = {
+      image: [
+        {},
+        {
+          url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000',
+          alternateName: 'Magic Mouse'
+        }
+      ],
+      isVariantOf: {
+        name: 'Apple Magic Mouse'
+      },
+      offers: {
+        offers: [{
+          price: 950.00,
+          listPrice: 999.00
+        }]
+      }
+    }
+
+    const useFormattedPrice = (price) => {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }).format(price)
+    }
+
+    export default function ProductCardWideWithBadge() {
+      return (
+        <ProductCard variant="wide">
+          <ProductCardImage aspectRatio={2 / 1}>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            ratingValue={3.5}
+            showDiscountBadge
+          />
+        </ProductCard>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -240,26 +339,60 @@ To replicate this style, add the `outOfStock` prop to both `ProductCard` and `Pr
   </Tab>
   <Tab>
     ```tsx
-    const outOfStock = product.offers.offers[0].availability !== 'https://schema.org/InStock'
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
 
-    <ProductCard outOfStock={outOfStock}>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        outOfStock={outOfStock}
-      />
-    </ProductCard>
+    const product = {
+      image: [
+        {},
+        {
+          url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000',
+          alternateName: 'Magic Mouse'
+        }
+      ],
+      isVariantOf: {
+        name: 'Apple Magic Mouse'
+      },
+      offers: {
+        offers: [{
+          price: 950.00,
+          listPrice: 999.00,
+          availability: 'https://schema.org/OutOfStock'
+        }]
+      }
+    }
+
+    const useFormattedPrice = (price) => {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }).format(price)
+    }
+
+    export default function ProductCardOutOfStock() {
+      const outOfStock = product.offers.offers[0].availability !== 'https://schema.org/InStock'
+
+      return (
+        <ProductCard outOfStock={outOfStock}>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            outOfStock={outOfStock}
+          />
+        </ProductCard>
+      )
+    }
     ```
 
   </Tab>
@@ -295,25 +428,58 @@ To replicate this style, add the `outOfStock` prop to both `ProductCard` and `Pr
   </Tab>
   <Tab>
     ```tsx
-    <ProductCard bordered>
-      <ProductCardImage>
-        <img
-          data-fs-image
-          src={product.image[1].url}
-          alt={product.image[1].alternateName}
-        />
-      </ProductCardImage>
-      <ProductCardContent
-        title={product.isVariantOf.name}
-        price={{
-          value: product.offers.offers[0].price,
-          listPrice: product.offers.offers[0].listPrice,
-          formatter: useFormattedPrice,
-        }}
-        ratingValue={3.5}
-        onButtonClick={() => {}}
-      />
-    </ProductCard>
+    import React from 'react'
+    import { ProductCard, ProductCardImage, ProductCardContent } from '@faststore/ui'
+
+    const product = {
+      image: [
+        {},
+        {
+          url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000',
+          alternateName: 'Magic Mouse'
+        }
+      ],
+      isVariantOf: {
+        name: 'Apple Magic Mouse'
+      },
+      offers: {
+        offers: [{
+          price: 950.00,
+          listPrice: 999.00
+        }]
+      }
+    }
+
+    const useFormattedPrice = (price) => {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }).format(price)
+    }
+
+    export default function ProductCardBordered() {
+      return (
+        <ProductCard bordered>
+          <ProductCardImage>
+            <img
+              data-fs-image
+              src={product.image[1].url}
+              alt={product.image[1].alternateName}
+            />
+          </ProductCardImage>
+          <ProductCardContent
+            title={product.isVariantOf.name}
+            price={{
+              value: product.offers.offers[0].price,
+              listPrice: product.offers.offers[0].listPrice,
+              formatter: useFormattedPrice,
+            }}
+            ratingValue={3.5}
+            onButtonClick={() => {}}
+          />
+        </ProductCard>
+      )
+    }
     ```
   </Tab>
 </Tabs>
