@@ -15,10 +15,25 @@ By the end of this guide, your FastStore website will be accessible via a custom
 
 ## Before you begin
 
-   - Develop your FastStore project by following the [Getting Started track](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
-   - Deploy your FastStore project.
-   - Buy the desired domain.
-   - [Redirect the **root domain** to the `www` subdomain.](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www)
+<Steps>
+
+### Have your FastStore project
+
+Ensure your FastStore project is created, set up, and customized to meet your business's needs. To begin the FastStore project, follow the [Getting Started track](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
+
+### Purchase the store domain
+
+Buy the desired domain you want to use for your store from a trusted domain registrar.
+
+### Redirect your root domain
+
+To ensure store visitors who access your store without `www` are automatically redirected to the correct address, redirect the root domain to the `www` subdomain. To do this step, follow the instructions in the [Best practices for accessing the store without www](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www) guide.
+
+### Plan your setup in advance 
+
+Some steps in this guide, particularly those involving [CDN workflow configuration](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-6-configuring-the-cdn-workflow-only-for-new-go-lives) and [domain migration](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-8-migrating-the-domain), require assistance from [VTEX Support](https://help.vtex.com/en/support). Processing these requests typically takes up to three business days, followed by approximately five additional days to complete DNS pointing. We recommend planning these steps well in advance to avoid delays in your store’s go-live schedule.
+
+</Steps>
 
 ## Instructions
 
@@ -154,7 +169,7 @@ Check if your domain is configured correctly in the FastStore WebOps environment
 
 2. Wait for the VTEX team to process your request and complete the domain migration.
 
-3. Once the migration is complete, test your store to ensure everything is working properly.
+3. Once the migration is complete, test your store to ensure everything is working correctly.
 
 ## Configuring custom domain prefixes
 
@@ -167,7 +182,7 @@ To ensure your store operates efficiently, it is important to correctly configur
 
 To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the hosts' list. 
 
-Stores with custom prefixes, like `shop.mystore.com`, need to add both the prefix and main domain (`shop.mystore.com` and `mystore.com`). This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+Stores with custom prefixes, such as `shop.mystore.com`, need to add both the prefix and the main domain (`shop.mystore.com` and `mystore.com`). This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
 
 ### Adding `subDomainPrefix` for prefixed domains
 
