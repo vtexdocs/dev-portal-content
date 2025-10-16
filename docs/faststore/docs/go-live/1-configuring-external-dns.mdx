@@ -7,7 +7,7 @@ updatedAt: '2025-09-23T00:00:00Z'
 
 In this guide, you will learn how to point your custom domain to your **FastStore** website and configure it in VTEX for a complete setup. The process involves the following steps:
 
-   - Setting up your external DNS provider to point your custom domain to your VTEX website. You can buy custom domains from any **domain registration platform**.
+   - Setting up your external DNS provider to point your custom domain to your VTEX website. You can buy custom domains from any domain registrar.
    - Configuring your custom domains in **VTEX Account Settings**.
    - Associating your custom domains with your **FastStore** project.
 
@@ -53,7 +53,7 @@ To proceed, make sure your store is active and in production by following the st
 
 ### Step 3 - Configuring domains in VTEX Account Settings
 
-You must set up your VTEX account to use the DNS records created in the previous step.
+You must configure your VTEX account to use the DNS records created in the previous step.
 
 >ℹ️ For more information about store domain configuration, see the [Configuring the store domain](https://help.vtex.com/en/tutorial/configuring-the-store-domain--tutorials_2450) guide.
 
@@ -80,7 +80,7 @@ In your FastStore project, you must also configure your project to point to the 
 
 1. Open your FastStore project in your preferred code editor.
 2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
-3. Update the `storeUrl`, `secureSubdomain`, `checkoutUrl`, `loginUrl`, and `accountUrl` properties as follows, replacing the values between curly brackets according to your scenario:
+3. Update the `storeUrl`, `secureSubdomain`, `checkoutUrl`, `loginUrl`, and `accountUrl` properties as follows, replacing the values in curly brackets according to your scenario:
 
    - **`storeUrl`**: `https://{subdomain}.{rootDomain}`
    - **`secureSubdomain`**: `https://{subdomain}.{rootDomain}`
@@ -119,7 +119,7 @@ Consider the following example of how this code block would look after configuri
 7. Save your changes.
 8. Open a pull request, commit your changes, and deploy them to `main`.
 
-> ⚠️ For stores with prefixed domains, add the `subDomainPrefix` property to `discovery.config.js` to ensure product visibility in the secured environment. For more information, see the [Adding `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains) section. 
+> ⚠️ For stores with prefixed domains, add the `subDomainPrefix` property to `discovery.config.js` to ensure product visibility in the secure environment. For more information, see the [Adding `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains) section. 
 
 ### Step 5 - Adding your store domain to FastStore WebOps
 
