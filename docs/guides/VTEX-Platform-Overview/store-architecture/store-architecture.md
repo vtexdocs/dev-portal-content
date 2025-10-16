@@ -114,7 +114,7 @@ The reference architecture below exemplifies its main characteristics:
 
 - **Separate website**: A single account, but each store with its own domain, bound to different [trade policies](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4EPwTXx5oFdSG1dA3zIchz#trade-policy) by [bindings](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W).
 - **Search**: Same [search settings](https://developers.vtex.com/docs/guides/search-overview) for all websites.
-- **CMS**: Shared access to the [Content Management System (CMS)](https://developers.vtex.com/docs/guides/vtex-io-documentation-cms) between websites.
+- **CMS**: Shared access to the [Content Management System (CMS)](https://developers.vtex.com/docs/guides/vtex-io-documentation-cms) across websites.
 - **Customer data storage**: A single [Master Data](https://developers.vtex.com/docs/guides/master-data) for all stores.
 - **Catalog**: A single catalog segmented by trade policies.
 - **Logistics**: Each store manages its logistics through different warehouses in the same logistics panel.
