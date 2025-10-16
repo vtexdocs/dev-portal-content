@@ -7,7 +7,7 @@ updatedAt: '2025-09-23T00:00:00Z'
 
 In this guide, you will learn how to point your custom domain to your **FastStore** website and configure it in VTEX for a complete setup. The process involves the following steps:
 
-   - Setting up your external DNS provider to point your custom domain to your VTEX website. You can buy custom domains from any **domain registration platform**.
+   - Setting up your external DNS provider to point your custom domain to your VTEX website. You can buy custom domains from any domain registrar.
    - Configuring your custom domains in **VTEX Account Settings**.
    - Associating your custom domains with your **FastStore** project.
 
@@ -15,10 +15,25 @@ By the end of this guide, your FastStore website will be accessible via a custom
 
 ## Before you begin
 
-   - Develop your FastStore project by following the [Getting Started track](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
-   - Deploy your FastStore project.
-   - Buy the desired domain.
-   - [Redirect the **root domain** to the `www` subdomain.](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www)
+<Steps>
+
+### Have your FastStore project
+
+Ensure your FastStore project is created, set up, and customized to meet your business's needs. To start your FastStore project, follow the [Getting Started track](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
+
+### Purchase the store domain
+
+Purchase the desired domain for your store from a trusted domain registrar.
+
+### Redirect your root domain
+
+To ensure store visitors who access your store without `www` are automatically redirected to the correct address, redirect the root domain to the `www` subdomain. To complete this step, follow the instructions in the [Best practices for accessing the store without www](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www) guide.
+
+### Plan your setup in advance
+
+Some steps in this guide, particularly those involving [CDN workflow configuration](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-6-configuring-the-cdn-workflow-only-for-new-go-lives) and [domain migration](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-8-migrating-the-domain), require assistance from [VTEX Support](https://help.vtex.com/en/support). Processing these requests typically takes up to three business days, followed by approximately five additional days to complete DNS pointing. We recommend planning these steps well in advance to avoid delays in your store's go-live schedule.
+
+</Steps>
 
 ## Instructions
 
@@ -38,7 +53,7 @@ To proceed, make sure your store is active and in production by following the st
 
 ### Step 3 - Configuring domains in VTEX Account Settings
 
-You must set up your VTEX account to use the DNS records created in the previous step.
+You must configure your VTEX account to use the DNS records created in the previous step.
 
 >ℹ️ For more information about store domain configuration, see the [Configuring the store domain](https://help.vtex.com/en/tutorial/configuring-the-store-domain--tutorials_2450) guide.
 
@@ -65,7 +80,7 @@ In your FastStore project, you must also configure your project to point to the 
 
 1. Open your FastStore project in your preferred code editor.
 2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
-3. Update the `storeUrl`, `secureSubdomain`, `checkoutUrl`, `loginUrl`, and `accountUrl` properties as follows, replacing the values between curly brackets according to your scenario:
+3. Update the `storeUrl`, `secureSubdomain`, `checkoutUrl`, `loginUrl`, and `accountUrl` properties as follows, replacing the values in curly brackets according to your scenario:
 
    - **`storeUrl`**: `https://{subdomain}.{rootDomain}`
    - **`secureSubdomain`**: `https://{subdomain}.{rootDomain}`
@@ -104,7 +119,7 @@ Consider the following example of how this code block would look after configuri
 7. Save your changes.
 8. Open a pull request, commit your changes, and deploy them to `main`.
 
-> ⚠️ For stores with prefixed domains, add the `subDomainPrefix` property to `discovery.config.js` to ensure product visibility in the secured environment. For more information, see the [Adding `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains) section. 
+> ⚠️ For stores with prefixed domains, add the `subDomainPrefix` property to `discovery.config.js` to ensure product visibility in the secure environment. For more information, see the [Adding `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains) section. 
 
 ### Step 5 - Adding your store domain to FastStore WebOps
 
@@ -148,9 +163,13 @@ Check if your domain is configured correctly in the FastStore WebOps environment
    - VTEX account name
    - Store's domain (for example, `www.mystore.com`)
    - Secure domain (for example, `secure.mystore.com`)
-   - Confirmation that you’ve completed all previous steps in this guide.
+   - Confirmation that you have completed all previous steps in this guide.
+
+>⚠️ Open the CDN workflow configuration or domain migration ticket well in advance. We recommend submitting your request at least five business days before the planned go-live date. VTEX Support typically takes up to three business days to process the request, and you will have five additional days to complete the DNS configuration after receiving a successful response.
+
 2. Wait for the VTEX team to process your request and complete the domain migration.
-3. Once the migration is complete, test your store to ensure everything is working properly.
+
+3. Once the migration is complete, test your store to ensure everything is working correctly.
 
 ## Configuring custom domain prefixes
 
@@ -161,9 +180,9 @@ To ensure your store operates efficiently, it is important to correctly configur
 
 ### Adding subdomains to the host list
 
-To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the hosts' list. 
+To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the host list. 
 
-Stores with custom prefixes, like `shop.mystore.com`, need to add both the prefix and main domain (`shop.mystore.com` and `mystore.com`). This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+Stores with custom prefixes, such as `shop.mystore.com`, need to add both the prefix and the main domain (`shop.mystore.com` and `mystore.com`). This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
 
 ### Adding `subDomainPrefix` for prefixed domains
 
