@@ -168,7 +168,7 @@ The reference architecture below exemplifies its main characteristics:
 
 #### Multi-account, independent back-office systems
 
-In this model, each country/region operates with its own back-office, resulting in greater operational and integration autonomy.
+In this model, each country or region operates with its own back-office, resulting in greater operational and integration autonomy.
 
 The reference architecture below exemplifies its main characteristics:
 
