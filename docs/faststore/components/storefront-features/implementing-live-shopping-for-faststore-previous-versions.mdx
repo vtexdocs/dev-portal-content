@@ -88,12 +88,11 @@ src/
            └── LiveShopping/
                ├── index.tsx
                └── LiveShopping.tsx
-
 ```
 
 ### Connecting the component to the CMS
 
-Once the [CMS is configured](#cms-configuration), follow the steps below:
+To connect the component to the CMS, follow the steps below:
 
 1. Locate the CMS renderer file (usually `RenderCMS.tsx`).
 2. Import the previously created component:
@@ -151,7 +150,7 @@ The first step is to [create an event](https://help.vtex.com/en/tracks/vtex-live
 * **Start the event:** Place the component to show the player on the storefront.
 * **End the event:** Delete the component to remove the player.
 
->❗Be aware that not all **Live Shopping** configurations are available for previous FastStore versions, as explained in the section [Feature restrictions](#feature-restrictions).
+>❗Be aware that not all **Live Shopping** configurations are available for previous versions of FastStore, as explained in the section [Feature restrictions](#feature-restrictions).
 
 ### Placing the component
 
@@ -169,7 +168,7 @@ To place the component on your project, follow the steps below:
 7. Save changes.
 8. Publish the page.
 
-After that, you will be able to [transmit](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/69PX90vv4oDWQ34nnBkiQt) a **Live Shopping** event. If you don't have the expected result, check [Troubleshooting script not rendering](#Troubleshooting script not rendering).
+After that, you will be able to [transmit](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/69PX90vv4oDWQ34nnBkiQt) a **Live Shopping** event. If you don't have the expected result, check [Troubleshooting script not rendering](#troubleshooting-script-not-rendering).
 
 ### Removing the component
 
@@ -188,10 +187,10 @@ Since the **Live Shopping Player** isn't a native solution for FastStore previou
 
 >❗ Make sure to follow our recommendations on CMS and Settings configurations, as misconfiguration can compromise the transmission of the **Live Shopping** event.
 
-* **❌ UTM configuration:** Not supported as a native solution, so data tracking isn't available.
-* **❌ Add to Cart configuration:** Not supported as a native solution, but can be used while presenting a different behavior. When the customer clicks `Add to Cart` on the Live Shopping event, instead of adding the product to the cart, it will open the product details page (PDP) in a new tab, from where the customer can add the item to the cart.
-* **❌ Quick View configuration:** Not supported as a native solution and mustn't be activated on the CMS section of the [events page](https://help.vtex.com/en/tutorial/live-shopping-events--6aGLiqoKG1UoS30f3FFWch). Otherwise the customer might have cart errors while using the Add to Cart configuration.
-* **❌ Popup transmission configuration:** Not supported as a native solution and mustn't be activated on the [events page](https://help.vtex.com/en/tutorial/live-shopping-events--6aGLiqoKG1UoS30f3FFWch). Otherwise it may delete the live event itself. It can be found under the Player configuration on the Settings section.
+* ❌ **UTM configuration:** Not supported as a native solution, so data tracking isn't available.
+* ❌ **Add to Cart configuration:** Not supported as a native solution, but can be used while presenting a different behavior. When the customer clicks `Add to Cart` on the Live Shopping event, instead of adding the product to the cart, it will open the product details page (PDP) in a new tab, from where the customer can add the item to the cart.
+* ❌ **Quick View configuration:** Not supported as a native solution and mustn't be activated on the CMS section of the [events page](https://help.vtex.com/en/tutorial/live-shopping-events--6aGLiqoKG1UoS30f3FFWch). Otherwise the customer might have cart errors while using the Add to Cart configuration.
+* ❌ **Popup transmission configuration:** Not supported as a native solution and mustn't be activated on the [events page](https://help.vtex.com/en/tutorial/live-shopping-events--6aGLiqoKG1UoS30f3FFWch). Otherwise it may delete the live event itself. It can be found under the Player configuration on the Settings section.
 
 ## Troubleshooting script not rendering
 
@@ -202,5 +201,3 @@ After [placing the Live Shopping component](https://help.vtex.com/en/tracks/vtex
 After doing so, when inspecting the elements you should see something like the following example:
 
 ![live-shopping-faststore-inspect-elements](images/live-shopping-faststore-inspect-elements.png)
-
-
