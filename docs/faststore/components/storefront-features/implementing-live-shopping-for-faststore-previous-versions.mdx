@@ -1,0 +1,206 @@
+---
+title: "Implementing Live Shopping for FastStore previous versions"
+---
+
+>⚠️ This is an experimental feature.
+
+**Live Shopping for FastStore** adds a customizable player on your storefront to transmit [Live Shopping](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U) events. This guide explains how to integrate the **Live Shopping** into a [FastStore v1 or v2](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels) project. After the implementation, you will be able to [configure and manage](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/125yr6jAfwiiz84JP4ppfO) event transmissions via VTEX Admin.
+
+>ℹ️ If you use the latest version of [FastStore](https://developers.vtex.com/docs/guides/faststore), refer to the guide [Implementing Live Shopping for FastStore](https://developers.vtex.com/docs/guides/faststore/implementing-live-shopping-for-faststore).
+
+## Before you begin
+
+Before installing **Live Shopping** for [FastStore previous versions](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels), make sure you've installed the Headless CMS on your page to be able to customize it via VTEX Admin, as described in the [FastStore documentation](https://www.faststore.dev/how-to-guides/cms/vtex).
+
+## Getting the Live Shopping app
+
+Follow the steps below:
+
+1. Access [VTEX Live Shopping](https://apps.vtex.com/vtexventures-livestreaming/p) on VTEX App Store. You can also access it via the VTEX Admin through **Apps > App Store > VTEX Live Shopping**.
+2. Click `Get app` to install the app. Log in to your VTEX account if necessary.
+3. Click `Place order`.
+4. Click `Go to install page`.
+5. Click `Install`.
+6. Agree to the Terms of Service by clicking `Install`.
+
+## Configuring the Live Shopping component
+
+Once you have the **Live Shopping** app on your store project, follow the instructions to integrate the component:
+
+1. [Create the component](#creating-the-component)
+2. [Connect the component to the CMS](#connecting-the-component-to-the-cms)
+3. [Configure CMS sections](#configuring-cms-sections)
+
+### Creating the component
+
+To create the **Live Shopping** component, follow the steps below:
+
+1. In your FastStore project, go to `src/components/sections`.
+2. Create a new folder named `LiveShopping`.
+3. Inside this folder, create the following files:
+
+`index.tsx`
+
+```javascript
+export { default } from './LiveShopping'
+export type { LiveShoppingProps } from './LiveShopping'
+```
+
+`LiveShopping.tsx`
+
+```javascript
+import Section from '../Section'
+
+
+export interface LiveShoppingProps {
+  script: string
+}
+
+
+function LiveShopping(section: LiveShoppingProps) {
+  return (
+    section?.script && (
+      <Section className="liveshopping__section">
+        <div id="nz-player" />
+
+
+        <script
+          key="nz-player-script"
+          id="nz-player-script"
+          type="module"
+          async
+          src={`${section?.script}&originOfProducts=faststore`}
+        />
+      </Section>
+    )
+  )
+}
+
+export default LiveShopping
+```
+
+Once you're done, your directory structure should look like the one below:
+
+```
+src/
+ └── components/
+      └── sections/
+           └── LiveShopping/
+               ├── index.tsx
+               └── LiveShopping.tsx
+
+```
+
+### Connecting the component to the CMS
+
+Once the [CMS is configured](#cms-configuration), follow the steps below:
+
+1. Locate the CMS renderer file (usually `RenderCMS.tsx`).
+2. Import the previously created component:
+
+```javascript
+import LiveShopping from 'src/components/sections/LiveShopping'
+```
+
+3. Add it to the `COMPONENTS` constant, which contains an object with the components related to sections added to the CMS.
+
+```javascript
+const COMPONENTS: Record<string, ComponentType<any>> = {
+  LiveShopping,
+}
+```
+
+### Configuring CMS sections
+
+1. Go to `cms/faststore/sections.json`.
+2. Edit the `sections.json` file by adding the following schema:
+
+```
+{
+    "name": "LiveShopping",
+    "schema": {
+      "title": "LiveShopping",
+      "description": "Setting LiveShopping",
+      "type": "object",
+      "required": ["script"],
+      "properties": {
+        "script": {
+          "type": "string",
+          "title": "Script"
+        }
+      }
+    }
+  }
+```
+
+3. Save changes.
+4. For the **Live Shopping** section to be available on your VTEX Admin, sync your CMS by running the command below:
+
+```
+vtex cms sync
+```
+
+You will be able to add the **Live Shopping** section to the store's CMS:
+
+![add-live-shopping-section-cms](XXX.png)
+
+## First Live Shopping event
+
+The first step is to [create an event](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/5WLXGbOSFmxN7QlzOnfGrv) on VTEX Admin. After that, there will be two other moments that will require configuring the CMS:
+
+* **Start the event:** Place the component to show the player on the storefront.
+* **End the event:** Delete the component to remove the player.
+
+>❗Be aware that not all **Live Shopping** configurations are available for previous FastStore versions, as explained in the section [Feature restrictions](#feature-restrictions).
+
+### Placing the component
+
+To place the component on your project, follow the steps below:
+
+1. In the VTEX Admin, go to **Apps > Live Shopping > Events**, or type **Events** in the search bar at the top of the page.
+2. In the **Action** column, click the arrow button to go to the [Event page](https://help.vtex.com/en/tutorial/live-shopping-events--6aGLiqoKG1UoS30f3FFWch).
+3. In the **CMS Configuration** section, select the `External template` option in **Script for template**.
+4. Copy the `src` attribute value from the `<script>` tag, without the quotation marks.
+ 
+![alt_text](XXX.png)
+
+5. Go to **Storefront > Headless CMS** and add the LiveShopping section to a page.
+6. On that page, paste the `src` value you've copied on the **LiveShopping** field.
+7. Save changes.
+8. Publish the page.
+
+After that, you will be able to [transmit](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/69PX90vv4oDWQ34nnBkiQt) a **Live Shopping** event. If you don't have the expected result, check [Troubleshooting script not rendering](#Troubleshooting script not rendering).
+
+### Removing the component
+
+To delete the component from your store, follow the steps below:
+
+1. In the VTEX Admin, go to **Storefront > Headless CMS**, or type **Headless CMS** in the search bar at the top of the page.
+2. Select the page where you've added the **Live Shopping** Player.
+3. On the `Sections` tab, in the **Live Shopping Player** section, click <i class="fas fa-ellipsis-v" aria-hidden="true"></i> **More > Delete**.
+4. Click `Save`.
+5. Click **Publish > Publish Now**.
+6. (Optional) If the page version had been published before and the **Overwrite Published Version** window opens, click `Overwrite`.
+
+## Feature restrictions
+
+Since the **Live Shopping Player** isn't a native solution for FastStore previous versions, there will be some feature limitations. The recommendations you must follow while [configuring a Live Shopping event](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/125yr6jAfwiiz84JP4ppfO) are listed below:
+
+>❗ Make sure to follow our recommendations on CMS and Settings configurations, as misconfiguration can compromise the transmission of the **Live Shopping** event.
+
+* **❌ UTM configuration:** Not supported as a native solution, so data tracking isn't available.
+* **❌ Add to Cart configuration:** Not supported as a native solution, but can be used while presenting a different behavior. When the customer clicks `Add to Cart` on the Live Shopping event, instead of adding the product to the cart, it will open the product details page (PDP) in a new tab, from where the customer can add the item to the cart.
+* **❌ Quick View configuration:** Not supported as a native solution and mustn't be activated on the CMS section of the [events page](https://help.vtex.com/en/tutorial/live-shopping-events--6aGLiqoKG1UoS30f3FFWch). Otherwise the customer might have cart errors while using the Add to Cart configuration.
+* **❌ Popup transmission configuration:** Not supported as a native solution and mustn't be activated on the [events page](https://help.vtex.com/en/tutorial/live-shopping-events--6aGLiqoKG1UoS30f3FFWch). Otherwise it may delete the live event itself. It can be found under the Player configuration on the Settings section.
+
+## Troubleshooting script not rendering
+
+After [placing the Live Shopping component](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/4r5uk6XHxdYlOGMr11GFWR) on your FastStore project, if the **Live Shopping** application does not render or display on the storefront, even though the script appears when inspecting elements, try wrapping the **Live Shopping** script in an iframe instead.
+
+### Alternative `LiveShopping.tsx` (with iframe)
+
+After doing so, when inspecting the elements you should see something like the following example:
+
+![alt_text](images/image3.png "image_tooltip")
+
+
