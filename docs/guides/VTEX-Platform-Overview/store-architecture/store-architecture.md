@@ -23,8 +23,8 @@ These are the main use cases for common scenarios:
 - [Multi-language and multi-currency](#multi-language-and-multi-currency)
   - [Single account, multi-bindings](#single-account-multi-bindings)
   - [Multi-account](#multi-account)
-     - [Multi-account, shared back-office](#multi-account-shared-back-office-systems)
-     - [Multi-account, independent back-office](#multi-account-independent-back-office-systems)
+    - [Multi-account, shared back-office](#multi-account-shared-back-office-systems)
+    - [Multi-account, independent back-office](#multi-account-independent-back-office-systems)
 
 >ℹ️ Except for the [Headless](#headless) architecture, the following diagrams consider the client is using [Store Framework](https://developers.vtex.com/docs/guides/store-framework) as a storefront solution.
 
@@ -141,6 +141,7 @@ This model is easier to set up, integrate, and maintain compared to the [multi-a
 In a multi-account architecture, a brand operates multiple VTEX accounts (typically one per country or market), allowing each to be independently localized and operated. This architecture is recommended for operations across multiple countries that require configuring different languages and currencies, where different teams manage each localized store.
 
 There are two variants, depending on how back-office systems like ERP, PIM, and WMS are integrated:
+
 - [Shared back-office systems](#multi-account-shared-back-office-systems)
 - [Independent back-office systems](#multi-account-independent-back-office-systems)
 
