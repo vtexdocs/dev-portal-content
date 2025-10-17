@@ -3,9 +3,9 @@ title: "2. Setting up the Headless CMS"
 sidebar_label: "Integrating your storefront with Headless CMS"
 ---
 
-Now that you are familiar with the core concepts of the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) and have set it up in your VTEX account, let's get back to our **FastStore** project to define our own **Content Types** and **Sections**.
+Now that you are familiar with the core concepts of the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) and have set it up in your VTEX account, let's go back to our **FastStore** project to define our own **Content Types** and **Sections**.
 
-By the end of this part of this tutorial, you will be able to see your first definition of a content type available for use in the Headless CMS app. Next, we will dive deeper into how to create these definitions in a smoother way.
+By the end of this part of tutorial, you will be able to see your first definition of a Content Type available for use in the Headless CMS app. Next, we will dive deeper into how to create these definitions.
 
 ---
 
@@ -15,7 +15,7 @@ By the end of this part of this tutorial, you will be able to see your first def
 
 ### Integrate the store with the Headless CMS
 
-To add and manage sections on your store's pages, all sections must be available in the Headless CMS. To integrate your FastStore project, please refer to the [Headless CMS integration track](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+To add and manage sections on your store's pages, all sections must be available in the Headless CMS. To integrate your FastStore project, refer to the [Headless CMS integration track](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
 ### Install the FastStore CLI
 
@@ -35,7 +35,7 @@ If your project already includes any of the following files: `content-types.json
 ### Step 1 - Creating the CMS folder
 
 1. Open the terminal and change to the root directory of your FastStore project.
-2. Create a new folder named `cms` at the root of your FastStore project and a subfolder named `faststore` inside the `cms`. Run the following command to create them:
+2. Create a new folder named `cms` at the root of your FastStore project and a subfolder named `faststore` inside the `cms` folder. Run the following command to create them:
 
 <Tabs items={["macOs and Linux", "Windows"]} defaultIndex="0">
   <Tab>
@@ -72,8 +72,8 @@ If your project already includes any of the following files: `content-types.json
 
 | File name            | Description                                                                                                                                               |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `content-types.json` | An array of JSON objects that describes the **Content Types** available for customization at the Headless CMS app.                                        |
-| `sections.json`      | An array of JSON objects that describes the content structure of the frontend **Section** components available for customization at the Headless CMS app. |
+| `content-types.json` | An array of JSON objects that describes the **Content Types** available for customization in the Headless CMS app.                                        |
+| `sections.json`      | An array of JSON objects that describes the content structure of the frontend **Section** components available for customization in the Headless CMS app. |
 
 5. Update the `sections.json` file with an empty array:
 
@@ -173,7 +173,7 @@ Once your changes are synced with the Headless CMS, the terminal will show the f
 
 ### Step 3 - Checking your changes
 
-1. Access the VTEX Admin using the workspace you created in [Step 2 -Syncing your changes](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms#step-2-syncing-your-changes) by navigating to the following path: `https://{workspace}--{account}.myvtex.com/admin`. Make sure to replace `{workspace}` with the designated workspace name and `{account}` with your VTEX account.
+1. Access the VTEX Admin using the workspace you created in [Step 2 - Syncing your changes](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms#step-2-syncing-your-changes) by navigating to the following path: `https://{workspace}--{account}.myvtex.com/admin`. Make sure to replace `{workspace}` with the designated workspace name and `{account}` with your VTEX account.
 2. Go to **Storefront > Headless CMS**.
 3. Click on **Create New**.
 
