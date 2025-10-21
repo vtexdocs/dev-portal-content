@@ -9,9 +9,9 @@ seeAlso:
  - "/docs/guides/understanding-vtex-reference-architectures"
 ---
 
-Store architecture diagrams represent the fundamental structure of a particular project, providing a unified vision to all stakeholders and translating business needs into software components and project requirements. In this guide, we present an overview of basic store architecture models on VTEX.
+Store architecture diagrams represent the fundamental structure of a particular project, providing a unified vision for all stakeholders and translating business needs into software components and project requirements. In this guide, we present an overview of basic store architecture models on VTEX.
 
-There are different types and levels of architecture, but they generally work as a reference for technical and business teams. Additionally, store architectures define the roles and responsibilities of each player for all stakeholders while explaining how different systems interoperate and how data is transmitted between them.
+There are different types and levels of architecture, but they generally work as a reference for technical and business teams. Additionally, store architectures define the roles and responsibilities among all stakeholders and explain how different systems interoperate and how data is transmitted between them.
 
 To demonstrate how VTEX integrates with the ecosystem, we have created VTEX reference architecture models based on common digital commerce strategies. These blueprints illustrate interactions between VTEX modules and the business, serving as a starting point for projects. Learn more about the structure of these models in [Understanding VTEX reference architectures](https://developers.vtex.com/docs/guides/understanding-vtex-reference-architectures).
 
@@ -52,7 +52,7 @@ The diagram below presents an example of a B2B business model using [B2B Suite](
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2b.png)
 
-B2B Suite is a set of VTEX IO apps tailored to streamline B2B store management. This collection of apps enables the store to manage organizations (the companies enabled to make purchases in the store) and other functions and permissions for storefront and checkout. For instance, the store can offer specific price tables, collections, and custom payment methods for organizations. Besides, clients can have different user roles within organizations, among other features.
+B2B Suite is a set of VTEX IO apps tailored to streamline B2B store management. This collection of apps enables the store to manage organizations (the companies enabled to make purchases in the store) and other functions and permissions for storefront and checkout. For instance, the store can offer specific price tables, collections, and custom payment methods for organizations. Additionally, clients can have different user roles within organizations, among other features.
 
 The main account has access to more modules than the sellers, sharing only some of them, such as the [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview) and [Catalog](https://developers.vtex.com/docs/guides/catalog-overview) modules, as you can see in the diagram below.
 
@@ -87,12 +87,12 @@ A franchise account is linked to a main account and has the following characteri
 - **Seller type**: Each franchise account automatically operates as a [white-label seller](https://help.vtex.com/en/tutorial/seller-white-label--5orlGHyDHGAYciQ64oEgKa) within the main account.
 - **Catalog**: Franchise accounts inherit their [catalog](https://developers.vtex.com/docs/guides/catalog-overview) from the main account.
 - **Logistics and OMS**: Each franchise account has its own [logistics](https://developers.vtex.com/docs/guides/fulfillment) settings and performs its own [order management](https://developers.vtex.com/docs/guides/orders-overview).
-- **Prices and payments**: Each franchise can have its own [pricing](https://developers.vtex.com/docs/guides/pricing-overview) and [payment](https://developers.vtex.com/docs/guides/payments-overview) methods, or they can inherit these from the main account.
+- **Prices and payments**: Each franchise can have its own [pricing](https://developers.vtex.com/docs/guides/pricing-overview) and [payment](https://developers.vtex.com/docs/guides/payments-overview) methods, or it can inherit these from the main account.
 - **Promotions**: [Promotions](https://developers.vtex.com/docs/guides/promotions-overview) can be created for each franchise account and for the main account.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/franchises-omni.png)
 
-This architecture model works well for brands with multiple physical stores, franchises, or representatives. In these cases, each physical store/franchise/representative can have a franchise account on VTEX integrated with the brand's main account. This allows them to deliver the products sold through the brand's ecommerce site from an omnichannel perspective.
+This architecture model works well for brands with multiple physical stores, franchises, or representatives. In these cases, each physical store/franchise/representative can have a franchise account on VTEX integrated with the brand's main account. This allows it to deliver the products sold through the brand's ecommerce site from an omnichannel perspective.
 
 ### Why choose this architecture?
 
@@ -106,7 +106,7 @@ This architecture model works well for brands with multiple physical stores, fra
 
 ## Multi-language and multi-currency
 
-Some of our clients operate in multiple countries and want to have each local store running on VTEX. We provide a multi-language and multi-currency architecture for this scenario, which is explained in the following sections.
+Some of our clients operate in multiple countries and want each local store to run on VTEX. We provide a multi-language and multi-currency architecture for this scenario, which is explained in the following sections.
 
 ### Single account, multi-binding
 
@@ -122,7 +122,7 @@ The reference architecture below exemplifies its main characteristics:
 - **Logistics**: Each store manages its logistics through different warehouses in the same logistics panel.
 - **Order Management System (OMS)**: A unified OMS panel for all stores.
 - **Payments**: Shared payment settings across all stores.
-- **Prices and promotions**: Different prices and promotions can be configured for each store, segmented by trade policy. Still, prices and promotions for all stores are managed in the same panel.
+- **Prices and promotions**: Different prices and promotions can be configured for each store, segmented by trade policy. However, prices and promotions for all stores are managed in the same panel.
 - **Message Center**: A single [Message Center](https://help.vtex.com/en/tutorial/understanding-the-message-center--tutorials_84) for all stores.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/multi-currency-language-single-account.png)
@@ -193,7 +193,7 @@ The reference architecture below exemplifies its main characteristics:
 
 In a headless architecture, the frontend (or "head") is decoupled from the backend. This allows the user interface to be built with any technology while the backend supplies the data and functionality, providing greater flexibility and scalability.
 
-The frontend layer includes font type, colors, styles, images, buttons, etc. The backend manages the ecommerce functionality, pricing, infrastructure, security, checkout, and more. This architecture allows stores to fully control the user experience on the storefront while customizing backend to meet their specific needs.
+The frontend layer includes font type, colors, styles, images, buttons, etc. The backend manages the ecommerce functionality, pricing, infrastructure, security, checkout, and more. This architecture allows stores to fully control the user experience on the storefront while customizing the backend to meet their specific needs.
 
 ![headless](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/headless.png)
 
