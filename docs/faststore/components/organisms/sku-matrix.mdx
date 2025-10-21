@@ -1,0 +1,684 @@
+---
+title: "SKUMatrix"
+excerpt: "Bulk order interface that lets shoppers review, edit, and add multiple SKU variations to the cart from a single slide-over."
+keywords:
+  - UI library
+  - ecommerce
+  - b2b
+components:
+  - SKUMatrix.tsx
+  - SKUMatrixTrigger.tsx
+  - SKUMatrixSidebar.tsx
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/sku-matrix-search___3f50c2b048b3d65ae18e4613bfcbc3c7.gif
+---
+
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/SKUMatrix)
+
+The `SKUMatrix` compound surfaces complex product variations in a single, high-density view. Typical use cases include:
+
+- Ordering multiple SKU combinations such as workwear jackets across sizes and colors without hopping between PDPs.
+- Offering quick actions relevant for B2B procurement (bulk discounts, pack sizes) next to the Add to Cart summary.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SKUMatrix>
+        <LifestyleSkuMatrix />
+      </SKUMatrix>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import React, { useEffect, useMemo } from "react";
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
+
+function LifestyleSkuMatrix() {
+  const { setAllVariantProducts } = useSKUMatrix();
+
+  const variants = useMemo(
+    () => [
+      {
+        id: "jacket-black-s",
+        name: "Black · Size S",
+        image: {
+          url: "https://store.example.com/jacket-black-s.jpg",
+          alternateName: "Softshell jacket — black, size small",
+        },
+        inventory: 12,
+        availability: "inStock",
+        price: 98,
+        listPrice: 118,
+        priceWithTaxes: 98,
+        listPriceWithTaxes: 118,
+        specifications: { color: "Black", size: "S", fabric: "Ripstop" },
+        selectedCount: 0,
+        offers: {
+          highPrice: 118,
+          lowPrice: 98,
+          lowPriceWithTaxes: 98,
+          offerCount: 1,
+          priceCurrency: "USD",
+          offers: [
+            {
+              listPrice: 118,
+              listPriceWithTaxes: 118,
+              sellingPrice: 98,
+              priceCurrency: "USD",
+              price: 98,
+              priceWithTaxes: 98,
+              priceValidUntil: "2025-12-31",
+              itemCondition: "https://schema.org/NewCondition",
+              availability: "https://schema.org/InStock",
+              quantity: 12,
+            },
+          ],
+        },
+      },
+      {
+        id: "jacket-black-m",
+        name: "Black · Size M",
+        image: {
+          url: "https://store.example.com/jacket-black-m.jpg",
+          alternateName: "Softshell jacket — black, size medium",
+        },
+        inventory: 0,
+        availability: "outOfStock",
+        price: 98,
+        listPrice: 118,
+        priceWithTaxes: 98,
+        listPriceWithTaxes: 118,
+        specifications: { color: "Black", size: "M", fabric: "Ripstop" },
+        selectedCount: 0,
+        offers: {
+          highPrice: 118,
+          lowPrice: 98,
+          lowPriceWithTaxes: 98,
+          offerCount: 1,
+          priceCurrency: "USD",
+          offers: [
+            {
+              listPrice: 118,
+              listPriceWithTaxes: 118,
+              sellingPrice: 98,
+              priceCurrency: "USD",
+              price: 98,
+              priceWithTaxes: 98,
+              priceValidUntil: "2025-12-31",
+              itemCondition: "https://schema.org/NewCondition",
+              availability: "https://schema.org/OutOfStock",
+              quantity: 0,
+            },
+          ],
+        },
+      },
+    ],
+    []
+  );
+
+  useEffect(() => {
+    setAllVariantProducts(variants);
+  }, [variants, setAllVariantProducts]);
+
+  return (
+    <>
+      <SKUMatrixTrigger data-testid="open-sku-matrix">
+        Bulk order jackets
+      </SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Bulk order — Softshell Jacket"
+        columns={{
+          name: "Variation",
+          additionalColumns: [
+            { label: "Color", value: "color" },
+            { label: "Size", value: "size" },
+          ],
+          availability: {
+            label: "Availability",
+            stockDisplaySettings: "showAvailability",
+          },
+          price: "Unit price",
+          quantitySelector: "Qty",
+        }}
+        buyProps={{
+          "data-testid": "sku-matrix-add-to-cart",
+          "data-sku": "softshell-jacket",
+          "data-seller": "1",
+          onClick: () => {
+            // send analytics event before the provider closes the sidebar
+            console.log("Add selected SKUs to cart");
+          },
+        }}
+      />
+    </>
+  );
+}
+
+export default function SKUMatrixOverview() {
+  return (
+    <SKUMatrix>
+      <LifestyleSkuMatrix />
+    </SKUMatrix>
+  );
+}
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the compound from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index).
+
+```tsx
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
+```
+
+### Import styles
+
+Add the sidebar styling tokens and layout rules to your theme stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/SKUMatrix/styles.scss";
+```
+
+Follow the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) instructions. The quantity selector, badges, and table also rely on their respective partials.
+
+---
+
+## Usage
+
+The matrix relies on context state managed by `SKUMatrix`. Make sure your app is wrapped with `UIProvider` (for toasts) and provide the variant data before rendering the sidebar.
+
+```tsx
+import React, { useEffect } from "react";
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
+
+const warehouseVariants = [
+  {
+    id: "sku-45",
+    name: "Navy · Size 40",
+    image: {
+      url: "/img/navy-40.png",
+      alternateName: "Safety boot navy size 40",
+    },
+    inventory: 24,
+    availability: "inStock",
+    price: 75,
+    listPrice: 90,
+    priceWithTaxes: 75,
+    listPriceWithTaxes: 90,
+    specifications: { color: "Navy", size: "40", safetyrating: "S3" },
+    selectedCount: 0,
+    offers: {
+      /* ...commerce data omitted for brevity... */
+    },
+  },
+  // other variant products...
+];
+
+function SKUMatrixContent() {
+  const { setAllVariantProducts } = useSKUMatrix();
+
+  useEffect(() => {
+    setAllVariantProducts(warehouseVariants);
+  }, []);
+
+  return (
+    <>
+      <SKUMatrixTrigger variant="secondary">Plan restock</SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Select safety boot quantities"
+        direction="rightSide"
+        size="partial"
+        loading={false}
+        columns={{
+          name: "Variation",
+          additionalColumns: [
+            { label: "Color", value: "color" },
+            { label: "Size (EU)", value: "size" },
+            { label: "Safety rating", value: "safetyrating" },
+          ],
+          availability: {
+            label: "Availability",
+            stockDisplaySettings: "showStockQuantity",
+          },
+          price: "Price",
+          quantitySelector: "Quantity",
+        }}
+        buyProps={{
+          "data-testid": "bulk-add",
+          "data-sku": "safety-boot",
+          "data-seller": "seller-1",
+          onClick: () => {
+            /* call cart mutation */
+          },
+        }}
+        overlayProps={{ "aria-label": "SKU matrix overlay" }}
+      />
+    </>
+  );
+}
+
+export default function ProductPageSkuMatrix() {
+  return (
+    <SKUMatrix data-testid="sku-matrix">
+      <SKUMatrixContent />
+    </SKUMatrix>
+  );
+}
+```
+
+---
+
+## Examples
+
+### Availability display modes
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SKUMatrix>
+        <AvailabilityShowcase />
+      </SKUMatrix>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import React, { useEffect } from "react";
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
+
+function AvailabilityShowcaseContent() {
+  const { setAllVariantProducts } = useSKUMatrix();
+
+  useEffect(() => {
+    setAllVariantProducts([
+      {
+        id: "sku-green-12",
+        name: "Green · 12-pack",
+        image: {
+          url: "/img/bulk-green.png",
+          alternateName: "Green cleaning cloth pack",
+        },
+        inventory: 48,
+        availability: "inStock",
+        price: 35,
+        listPrice: 42,
+        priceWithTaxes: 35,
+        listPriceWithTaxes: 42,
+        specifications: { color: "Green", packsize: "12" },
+        selectedCount: 0,
+        offers: {
+          /* ... */
+        },
+      },
+      {
+        id: "sku-red-12",
+        name: "Red · 12-pack",
+        image: {
+          url: "/img/bulk-red.png",
+          alternateName: "Red cleaning cloth pack",
+        },
+        inventory: 0,
+        availability: "outOfStock",
+        price: 35,
+        listPrice: 42,
+        priceWithTaxes: 35,
+        listPriceWithTaxes: 42,
+        specifications: { color: "Red", packsize: "12" },
+        selectedCount: 0,
+        offers: {
+          /* ... */
+        },
+      },
+    ]);
+  }, []);
+
+  return (
+    <>
+      <SKUMatrixTrigger>Check stock by color</SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Cleaning cloth packs"
+        columns={{
+          name: "Variation",
+          additionalColumns: [{ label: "Color", value: "color" }],
+          availability: {
+            label: "Availability",
+            stockDisplaySettings: "showAvailability",
+          },
+          price: "Unit price",
+          quantitySelector: "Qty",
+        }}
+        buyProps={{
+          "data-testid": "bulk-add-cloths",
+          "data-sku": "cloth-pack",
+          "data-seller": "b2b-seller",
+          onClick: () => {},
+        }}
+      />
+    </>
+  );
+}
+
+export default function AvailabilityShowcase() {
+  return (
+    <SKUMatrix>
+      <AvailabilityShowcaseContent />
+    </SKUMatrix>
+  );
+}
+```
+
+  </Tab>
+</Tabs>
+
+### Loading state skeleton
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SKUMatrix>
+        <LoadingSkuMatrix />
+      </SKUMatrix>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import React from "react";
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from "@faststore/ui";
+
+export default function LoadingSkuMatrix() {
+  return (
+    <SKUMatrix>
+      <SKUMatrixTrigger disabled>Fetching supplier inventory…</SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Bulk order catalog"
+        loading
+        columns={{
+          name: "SKU",
+          additionalColumns: [
+            { label: "Supplier", value: "supplier" },
+            { label: "MOQ", value: "moq" },
+          ],
+          availability: {
+            label: "Status",
+            stockDisplaySettings: "showAvailability",
+          },
+          price: "Net price",
+          quantitySelector: "Qty",
+        }}
+        buyProps={{
+          "data-testid": "loading-matrix-add",
+          "data-sku": "supplier-feed",
+          "data-seller": "default",
+          onClick: () => {},
+        }}
+      >
+        <p style={{ padding: "1rem" }}>
+          Load warehouse data to unlock quantity entry.
+        </p>
+      </SKUMatrixSidebar>
+    </SKUMatrix>
+  );
+}
+```
+
+  </Tab>
+</Tabs>
+
+### Custom image renderer
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SKUMatrix>
+        <ImageOverrideSkuMatrix />
+      </SKUMatrix>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import React, { useEffect } from "react";
+import NextImage from "next/image";
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
+
+function ImageOverrideContent() {
+  const { setAllVariantProducts } = useSKUMatrix();
+
+  useEffect(() => {
+    setAllVariantProducts([
+      {
+        id: "sku-protein-vanilla",
+        name: "Vanilla · 1kg",
+        image: {
+          url: "https://cdn.example.com/protein-vanilla.webp",
+          alternateName: "Vanilla whey protein powder 1kg",
+        },
+        inventory: 28,
+        availability: "inStock",
+        price: 39.9,
+        listPrice: 45,
+        priceWithTaxes: 39.9,
+        listPriceWithTaxes: 45,
+        specifications: { flavor: "Vanilla", size: "1kg" },
+        selectedCount: 0,
+        offers: {
+          /* ... */
+        },
+      },
+    ]);
+  }, []);
+
+  return (
+    <>
+      <SKUMatrixTrigger variant="primary">
+        Create nutrition bundles
+      </SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Sports nutrition packs"
+        ImageComponent={({ src, alt }) => (
+          <NextImage src={src} alt={alt} width={48} height={48} />
+        )}
+        columns={{
+          name: "Product",
+          additionalColumns: [{ label: "Flavor", value: "flavor" }],
+          availability: {
+            label: "Warehouse stock",
+            stockDisplaySettings: "showStockQuantity",
+          },
+          price: "Contract price",
+          quantitySelector: "Cases",
+        }}
+        buyProps={{
+          "data-testid": "nutrition-add-cart",
+          "data-sku": "nutrition-pack",
+          "data-seller": "distribution",
+          onClick: () => {},
+        }}
+      />
+    </>
+  );
+}
+
+export default function ImageOverrideSkuMatrix() {
+  return (
+    <SKUMatrix>
+      <ImageOverrideContent />
+    </SKUMatrix>
+  );
+}
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Design tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-bkg-color"
+    value="var(--fs-color-body-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-size"
+    value="var(--fs-text-size-6)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-text-weight"
+    value="var(--fs-text-weight-semibold)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-font-size"
+    value="var(--fs-text-size-tiny)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-text-weight"
+    value="var(--fs-text-weight-medium)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-image-width"
+    value="var(--fs-spacing-7)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-image-border-radius"
+    value="var(--fs-border-radius)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-slide-over-partial-gap"
+    value="calc(2 * var(--fs-grid-padding))"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-slide-over-partial-width-mobile"
+    value="calc(100vw - var(--fs-sku-matrix-slide-over-partial-gap))"
+  />
+</TokenTable>
+
+---
+
+## Data attributes
+
+Use these selectors to customize styles or attach test logic:
+
+- `data-fs-sku-matrix`
+- `data-testid="fs-sku-matrix"` (default test id; override via `testId`)
+- `data-fs-sku-matrix-sidebar`
+- `data-fs-sku-matrix-sidebar-title`
+- `data-fs-sku-matrix-sidebar-cell-image`
+- `data-fs-sku-matrix-sidebar-table-price`
+- `data-fs-sku-matrix-sidebar-table-cell-quantity-selector`
+- `data-fs-sku-matrix-sidebar-table-action`
+- `data-fs-sku-matrix-sidebar-footer`
+- SlideOver attributes propagated to the sidebar: `data-fs-slide-over`, `data-fs-slide-over-direction`, `data-fs-slide-over-size`, `data-fs-slide-over-state`
+
+---
+
+## Props
+
+<ComponentPropsSection component="SKUMatrix" />
+<ComponentPropsSection component="SKUMatrixTrigger" />
+<ComponentPropsSection component="SKUMatrixSidebar" />
+
+---
+
+## Best practices
+
+### ✅ Do's
+
+- Use concise variation labels (e.g., "Black - 42") so the table stays scannable on partial-width slide-overs.
+- Keep price and availability in sync with your store OMS; show a toast when quantity adjustments are coerced.
+- Localize both column headers and toast messages for multinational catalogs.
+
+### ❌ Don'ts
+
+- Don't expose the matrix when a product is single-SKU; it adds unnecessary friction.
+- Don't rely on color alone for stock communication pair badge colors with descriptive text.
+- Don't allow quantities beyond available stock; the component exposes validation hooks for this reason.
+- Don't hardcode dimensions; merchants should be able to adjust columns per category via Headless CMS.
+
+---
+
+## Related components
+
+<SectionList>
+  <SectionItem
+    title="QuantitySelector"
+    description="Lets shoppers adjust quantities with validation and toast feedback—embedded inside the matrix rows."
+    actionPath="/docs/guides/faststore/molecules-quantity-selector"
+  >
+    <QuantitySelector min={0} max={10} initial={2} />
+  </SectionItem>
+
+{" "}
+
+<SectionItem
+  title="SlideOver"
+  description="The responsive container that powers the SKU Matrix sidebar layout."
+  actionPath="/docs/guides/faststore/organisms-slide-over"
+>
+  <SlideOver isOpen size="partial" direction="rightSide" fade="in">
+    <SlideOverHeader>SlideOver preview</SlideOverHeader>
+  </SlideOver>
+</SectionItem>
+
+  <SectionItem
+    title="Table"
+    description="Displays the variant grid inside the sidebar with column and header semantics."
+    actionPath="/docs/guides/faststore/molecules-table"
+  >
+    <Table variant="bordered">
+      <TableHead>
+        <TableRow>
+          <TableCell scope="col" variant="header">
+            Variation
+          </TableCell>
+          <TableCell scope="col" variant="header">
+            Availability
+          </TableCell>
+        </TableRow>
+      </TableHead>
+    </Table>
+  </SectionItem>
+</SectionList>
