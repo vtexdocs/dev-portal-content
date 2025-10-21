@@ -21,7 +21,7 @@ These are the main use cases for common scenarios:
 - [Business-to-business (B2B)](#business-to-business-b2b)
 - [Franchise accounts (Omnichannel)](#franchise-accounts-omnichannel)
 - [Multi-language and multi-currency](#multi-language-and-multi-currency)
-  - [Single account, multi-bindings](#single-account-multi-bindings)
+  - [Single account, multi-binding](#single-account-multi-binding)
   - [Multi-account](#multi-account)
     - [Multi-account, shared back-office](#multi-account-shared-back-office-systems)
     - [Multi-account, independent back-office](#multi-account-independent-back-office-systems)
