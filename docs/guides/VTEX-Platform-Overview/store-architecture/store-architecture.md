@@ -140,7 +140,7 @@ This model is easier to set up, integrate, and maintain compared to the [multi-a
 
 In a multi-account architecture, a brand operates multiple VTEX accounts, typically one per country or market, so that each can be localized and managed independently. This architecture is recommended for businesses operating in multiple countries that need to configure different languages and currencies, with different teams managing each localized store.
 
-There are two variants, depending on how back-office systems like ERP, PIM, and WMS are integrated:
+There are two architectural variants, depending on how back-office systems like ERP, PIM, and WMS are integrated:
 
 - [Shared back-office systems](#multi-account-shared-back-office-systems)
 - [Independent back-office systems](#multi-account-independent-back-office-systems)
