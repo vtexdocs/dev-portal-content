@@ -1,5 +1,5 @@
 ---
-title: "FastStore: Theme switching no Longer requires local server restart" 
+title: "FastStore: Theme switching no longer requires local server restart" 
 slug: "2025-10-27-faststore-theme-switch-fix" 
 type: "fixed"
 createdAt: "2025-10-24T00:00:00.000Z"
