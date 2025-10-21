@@ -18,7 +18,7 @@ To demonstrate how VTEX integrates with the ecosystem, we have created VTEX refe
 These are the main use cases for common scenarios:
 
 - [Business-to-customer (B2C)](#business-to-customer-b2c)
-- [Business-to-business (B2B)](#business-to-business-b2b)
+- [Business-to-business (B2B) with B2B Suite](#business-to-business-b2b-with-b2b-suite)
 - [Franchise accounts (Omnichannel)](#franchise-accounts-omnichannel)
 - [Multi-language and multi-currency](#multi-language-and-multi-currency)
   - [Single account, multi-binding](#single-account-multi-binding)
