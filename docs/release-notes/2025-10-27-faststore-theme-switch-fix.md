@@ -13,7 +13,7 @@ Developers working with FastStore can now switch [themes](https://developers.vte
 
 ## What has changed?
 
-Previously, when you changed the theme in the [discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options#theme) file, if you were already running a local server, you had to restart the local server for the changes to take effect and to preview them. With this fix, the [FastStore CLI](https://developers.vtex.com/docs/guides/faststore/developer-tools-faststore-cli) clears the cache, ensuring that theme changes are applied immediately during development.
+Previously, if you changed the theme in the [discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options#theme) file while running a local server, you had to restart it for the changes to take effect. With this fix, the [FastStore CLI](https://developers.vtex.com/docs/guides/faststore/developer-tools-faststore-cli) clears the cache, ensuring that theme changes are applied immediately during development.
 
 ## Why did we make this change?
 
