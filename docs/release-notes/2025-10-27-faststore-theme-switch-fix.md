@@ -4,7 +4,7 @@ slug: "2025-10-27-faststore-theme-switch-fix"
 type: "fixed"
 createdAt: "2025-10-24T00:00:00.000Z"
 updatedAt: "2025-10-24T00:00:00.000Z"
-excerpt: "FastStore store code theme changes are applied immediately, eliminating the need to restart the development server after modifying the theme configuration."
+excerpt: "FastStore theme changes are applied immediately, eliminating the need to restart the development server after modifying the theme configuration."
 tags:
     - FastStore
 ---
