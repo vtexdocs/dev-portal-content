@@ -1,5 +1,5 @@
 ---
-title: "FastStore: Theme switching no longer requires local server restart" 
+title: "FastStore: Theme switching without server restart" 
 slug: "2025-10-27-faststore-theme-switch-fix" 
 type: "fixed"
 createdAt: "2025-10-24T00:00:00.000Z"
@@ -17,7 +17,7 @@ Previously, when you changed the theme in the [discovery.config.js](https://deve
 
 ## Why did we make this change?
 
-Automatically applying theme changes without restarting the server for those already running improves the development experience.
+Automatically applying theme changes without restarting the server improves the development experience.
 
 ## What needs to be done?
 
