@@ -1,7 +1,7 @@
 ---
 title: "VTEX Activity Flow"
 slug: "vtex-activity-flow"
-excerpt: ""
+excerpt: "Get started with Activity Flow, VTEX's Real User Monitoring (RUM) solution."
 hidden: false
 createdAt: "2025-10-23T13:37:06.246Z"
 ---
