@@ -14,7 +14,7 @@ The tool tracks page views and sessions, offering a real-time view of the user j
 
 The Activity Flow architecture is designed to have a minimal performance impact due to efficient data handling and task scheduling. It consists of the following stages:
 
-![af_architecture](https://vtexhelp.vtexassets.com/assets/docs/src/af_architecture___1a075898a8a3950cd0c158179d0286a0.png) 
+![af_architecture](https://vtexhelp.vtexassets.com/assets/docs/src/af_architecture___ff70fefc25ce9a918e06a4d7af67b5ba.png) 
 
 1. **Capture user interactions:** Records real-time shopper actions in the storefront or app and packages them into structured client payloads. It runs alongside the user interface, applying consent rules and basic context tagging so events can be reliably attributed later.
 2. **Collect events:** Collects client signals at a backend endpoint, validates them, and routes valid items to durable queues while logging or rejecting malformed submissions.
