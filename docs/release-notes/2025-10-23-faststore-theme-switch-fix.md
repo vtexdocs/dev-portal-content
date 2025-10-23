@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Theme switching without server restart" 
-slug: "2025-10-27-faststore-theme-switch-fix" 
+slug: "2025-10-23-faststore-theme-switch-fix" 
 type: "fixed"
-createdAt: "2025-10-27T00:00:00.000Z"
-updatedAt: "2025-10-27T00:00:00.000Z"
+createdAt: "2025-10-23T11:00:00.000Z"
+updatedAt: "2025-10-23T11:05:00.000Z"
 excerpt: "FastStore theme changes are applied immediately, eliminating the need to restart the development server after modifying the theme configuration."
 tags:
     - FastStore
