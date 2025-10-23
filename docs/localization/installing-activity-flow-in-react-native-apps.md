@@ -24,10 +24,10 @@ To install the library, follow these steps:
 
 1. In your project directory, run:
 
-	<Tabs items={['yarn', 'npm']}>
-    	<Tab>```bash yarn add @vtex/activity-flow @react-native-async-storage/async-storage```</Tab>
-    	<Tab>```bash npm install @vtex/activity-flow @react-native-async-storage/async-storage```</Tab>
-	</Tabs>
+ <Tabs items={['yarn', 'npm']}>
+     <Tab>```bash yarn add @vtex/activity-flow @react-native-async-storage/async-storage```</Tab>
+     <Tab>```bash npm install @vtex/activity-flow @react-native-async-storage/async-storage```</Tab>
+ </Tabs>
 
 2. For iOS, sync native dependencies:
 
