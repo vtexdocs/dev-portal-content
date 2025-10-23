@@ -31,9 +31,8 @@ To install the library, follow these steps:
 
 2. For iOS, sync native dependencies:
 
-	```bash
-	cd ios && pod install && cd ../
-	```
+ ```bash
+ cd ios && pod install && cd ../
 
 This process installs the Activity Flow script in your app by adding a new dependency in the package.json file.
 
