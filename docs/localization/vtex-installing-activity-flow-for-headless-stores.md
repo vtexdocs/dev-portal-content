@@ -10,7 +10,6 @@ In this guide, you'll learn how to install and configure the Activity Flow scrip
 
 ## Before you begin
 
-
 ## Intructions
 
 ### Step 1 - Adding the Activity Flow script asynchronously
