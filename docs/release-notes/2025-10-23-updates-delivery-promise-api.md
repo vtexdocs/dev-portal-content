@@ -1,5 +1,5 @@
 ---
-title: "Delivery Promise Notification API: Update delivery promises for an external seller’s item"
+title: "Delivery Promise Notification API: New endpoint to update delivery promises for external sellers"
 slug: "2025-10-23-updates-delivery-promise-api"
 type: added
 excerpt: "A new endpoint lets marketplaces update delivery promises (SLAs) for an external seller's item via the Delivery Promise Notification API."
