@@ -1,6 +1,7 @@
 ---
 title: "Installing Activity Flow in React Native apps"
 slug: "installing-activity-flow-in-react-native-apps"
+excerpt: "Learn how to install Activity Flow in your React Native app."
 hidden: false
 createdAt: "2025-10-23T17:07:05.899Z"
 ---
@@ -24,13 +25,9 @@ To install the library, follow these steps:
 1. In your project directory, run:
 
 	<Tabs items={['yarn', 'npm']}>
-    <Tab>
-    ```bash yarn add @vtex/activity-flow @react-native-async-storage/async-storage ```
-    </Tab>
-    <Tab>
-    ```bash npm install @vtex/activity-flow @react-native-async-storage/async-storage ```
-    </Tab>
-  </Tabs>
+    	<Tab>```bash yarn add @vtex/activity-flow @react-native-async-storage/async-storage```</Tab>
+    	<Tab>```bash npm install @vtex/activity-flow @react-native-async-storage/async-storage```</Tab>
+	</Tabs>
 
 2. For iOS, sync native dependencies:
 
