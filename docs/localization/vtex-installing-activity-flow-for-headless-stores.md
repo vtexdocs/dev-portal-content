@@ -79,4 +79,6 @@ To validate if the script is installed in your store, follow the steps below:
 4. In the **Header** tab, confirm if the **Request URL** is `https://activity-flow.vtex.com/af/af.js`.
 5. Check in the console if there are errors. You can also trigger a monitorable action to see events.
 
-If the `af.js` file doesn't appear in the Network tab, confirm that the snippet is in the `<head>` of the page and that there are no script blockers. If the setup is correct and the problem persists, open a ticket with [VTEX Support]().
+![dev_tools_af](https://vtexhelp.vtexassets.com/assets/docs/src/dev_tools_af___1d5b729dddb7926ba5678e8a1a1541e2.png)
+
+If the `af.js` file doesn't appear in the Network tab, confirm that the snippet is in the `<head>` of the page and that there are no script blockers. If the setup is correct and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
