@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.246](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.245...v1.1.246) (2025-10-24)
+
+
+### ✨ New documentation
+
+* storefront permissions guide ([c7a3691](https://github.com/vtexdocs/dev-portal-content/commit/c7a369131cebcacf3d8a2a9e076e0aa1c00b8d37))
+
+
+### 🔧 Fixes and improvements
+
+* remove trailing space ([f914b7d](https://github.com/vtexdocs/dev-portal-content/commit/f914b7d89eb17a46d5cad7e8182d5d0e8e0c4431))
+
+
+### 📝 Documentation updates
+
+* move file ([176129f](https://github.com/vtexdocs/dev-portal-content/commit/176129f54cdd6b9d6942216fe6fd314eb7855384))
+
 ### [1.1.245](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.244...v1.1.245) (2025-10-23)
 
 
