@@ -3,7 +3,7 @@ title: "Store architecture"
 slug: "store-architecture"
 hidden: false
 createdAt: "2024-05-23T13:08:55.338Z"
-updatedAt: "2025-10-16T18:23:22.662Z"
+updatedAt: "2025-10-21T12:45:43.716Z"
 excerpt: "Learn how our store architecture models are tailored to meet different business needs."
 seeAlso:
  - "/docs/guides/understanding-vtex-reference-architectures"
