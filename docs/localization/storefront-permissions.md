@@ -28,13 +28,13 @@ This functionality is particularly relevant in B2B contexts, where multiple user
 
 The Storefront Permissions API supports a wide range of business scenarios by enabling control over user access, such as:
 
-Granting buyers permission to place orders while restricting order approvals to designated approvers.
+* Granting buyers permission to place orders while restricting order approvals to designated approvers.
 * Allowing managers to oversee all orders within their organizational unit.
 * Enabling administrators to configure organizational structures, contracts, and user access.
 
 ## Before you begin
 
-All endpoints require the Storefront Permissions feature to be enabled on your account. Requests sent to accounts without this feature enabled return a “Feature not enabled for this account” error.
+* All endpoints require the Storefront Permissions feature to be enabled on your account. Requests sent to accounts without this feature enabled return a “Feature not enabled for this account” error.
 
 * Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to be able to successfully run requests to the License Manager API as listed in the table below. Otherwise, they will receive a status code 403 error.
 
