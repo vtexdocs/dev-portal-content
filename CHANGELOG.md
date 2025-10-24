@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.254](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.252...v1.1.254) (2025-10-24)
+
+
+### 📝 Documentation updates
+
+* **getting-started-with-storefront-solutions.md:** EDU-15679 ([7bbec50](https://github.com/vtexdocs/dev-portal-content/commit/7bbec50034587299b22e1bd4afd28812f19d670d))
+
 ### [1.1.253](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.252...v1.1.253) (2025-10-24)
 
 
