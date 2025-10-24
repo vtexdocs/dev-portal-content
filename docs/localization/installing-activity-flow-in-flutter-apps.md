@@ -103,3 +103,116 @@ yourAdWidget.addAdsListener({Map<String, String> adMetadata);
 
 - `yourAdWidget`: The ad widget you want to monitor.
 - `adMetadata`: A Map containing specific details about the ad, which will be sent to your analytics service upon a click.
+
+## Flutter automated tests
+
+To ensure your Flutter test runs work correctly when the Activity Flow is installed, run tests with a test environment flag using a `--dart-define` flag.
+
+The `--dart-define` flag lets you pass compile-time key=value pairs into your Flutter app as Dart environment declarations. Follow the steps below:
+
+1. In your terminal, run `flutter test  --dart-define=ACTIVITY_FLOW_TEST_ENV=true`.
+2. In a code editor, open your project.
+3. In the code editor settings, search for `dart.flutterTestAdditionalArgs`.
+4. Add to it the value `--dart-define=ACTIVITY_FLOW_TEST_ENV=true`.
+5. Open the `settings.json` file of your project.
+6. Add the following: `"dart.flutterTestAdditionalArgs": ["--dart-define=ACTIVITY_FLOW_TEST_ENV=true"]`
+
+## Use case example
+
+Below is an example that contains an app with some pages and navigation through them:
+
+```java
+import 'package:activity_flow/activity_flow.dart';
+import 'package:flutter/material.dart';
+import 'package:example/screens/favorite.dart';
+import 'package:example/screens/products.dart';
+import 'package:example/screens/profile.dart';
+
+void main() {
+   runApp(const ExampleApp());
+}
+/// A MaterialApp with a custom theme and routes.
+/// The routes are defined in the [routes] property.
+/// The theme is defined in the [theme] property.
+class ExampleApp extends StatelessWidget {
+   const ExampleApp({super.key});
+
+   @override
+   Widget build(BuildContext context) {
+      initActivityFlow(accountName: appAccountName);
+
+      return MaterialApp(
+         title: 'Example App',
+         theme: ThemeData(
+           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+           useMaterial3: true,
+         ),
+         routes: {
+           '/': (context) => const MyHomePage(),
+           '/products': (context) => const ProductsScreen(),
+           '/profile': (context) => const ProfileScreen(),
+           '/favorites': (context) => const FavoriteScreen(),
+         },
+         initialRoute: '/',
+         navigatorObservers: [PageViewObserver()],
+
+/// A home screen with buttons to navigate to other screens.
+class MyHomePage extends StatelessWidget {
+   const MyHomePage({super.key});
+
+   final List<Map> _routes = const [
+      {
+        'name': 'Products',
+        'route': '/products',
+      },
+      {
+        'name': 'Profile',
+        'route': '/profile',
+      }
+    ];
+
+   @override
+   Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: const Text('Home Screen'),
+        ),
+        body: Center(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            const AdBanner().addAdsListener({
+              'productName': 'Sneakers',
+              'productPrice': '59.99',
+              'adID': '1123',
+            }),
+            ..._routes.map((route) => ButtonTemplate(
+                  title: route['name'],
+                  route: route['route'],
+               )),
+        ])),
+      );
+   }
+}
+
+/// A template for creating buttons.
+/// Receives a [title], [icon], and [route] to navigate to.
+/// Returns an [ElevatedButton.icon] with the given parameters.
+class ButtonTemplate extends StatelessWidget {
+   const ButtonTemplate({
+      super.key,
+      required this.title,
+      required this.route,
+   });
+
+   final String title;
+   final String route;
+
+   @override
+   Widget build(BuildContext context) {
+      return ElevatedButton(
+        onPressed: () => Navigator.pushNamed(context, route),
+        child: Text(title),
+      );
+   }
+}
+```
