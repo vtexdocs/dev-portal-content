@@ -23,151 +23,38 @@ The `SKUMatrix` compound surfaces complex product variations in a single, high-d
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <SKUMatrix>
-        <LifestyleSkuMatrix />
-      </SKUMatrix>
+      <UIProvider>
+        <SKUMatrixBasicUsage />
+      </UIProvider>
     </OverviewSection>
   </Tab>
   <Tab>
 
 ```tsx
-import React, { useEffect, useMemo } from "react";
-import {
-  SKUMatrix,
-  SKUMatrixTrigger,
-  SKUMatrixSidebar,
-  useSKUMatrix,
-} from "@faststore/ui";
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
 
-function LifestyleSkuMatrix() {
-  const { setAllVariantProducts } = useSKUMatrix();
-
-  const variants = useMemo(
-    () => [
-      {
-        id: "jacket-black-s",
-        name: "Black · Size S",
-        image: {
-          url: "https://store.example.com/jacket-black-s.jpg",
-          alternateName: "Softshell jacket — black, size small",
-        },
-        inventory: 12,
-        availability: "inStock",
-        price: 98,
-        listPrice: 118,
-        priceWithTaxes: 98,
-        listPriceWithTaxes: 118,
-        specifications: { color: "Black", size: "S", fabric: "Ripstop" },
-        selectedCount: 0,
-        offers: {
-          highPrice: 118,
-          lowPrice: 98,
-          lowPriceWithTaxes: 98,
-          offerCount: 1,
-          priceCurrency: "USD",
-          offers: [
-            {
-              listPrice: 118,
-              listPriceWithTaxes: 118,
-              sellingPrice: 98,
-              priceCurrency: "USD",
-              price: 98,
-              priceWithTaxes: 98,
-              priceValidUntil: "2025-12-31",
-              itemCondition: "https://schema.org/NewCondition",
-              availability: "https://schema.org/InStock",
-              quantity: 12,
-            },
-          ],
-        },
-      },
-      {
-        id: "jacket-black-m",
-        name: "Black · Size M",
-        image: {
-          url: "https://store.example.com/jacket-black-m.jpg",
-          alternateName: "Softshell jacket — black, size medium",
-        },
-        inventory: 0,
-        availability: "outOfStock",
-        price: 98,
-        listPrice: 118,
-        priceWithTaxes: 98,
-        listPriceWithTaxes: 118,
-        specifications: { color: "Black", size: "M", fabric: "Ripstop" },
-        selectedCount: 0,
-        offers: {
-          highPrice: 118,
-          lowPrice: 98,
-          lowPriceWithTaxes: 98,
-          offerCount: 1,
-          priceCurrency: "USD",
-          offers: [
-            {
-              listPrice: 118,
-              listPriceWithTaxes: 118,
-              sellingPrice: 98,
-              priceCurrency: "USD",
-              price: 98,
-              priceWithTaxes: 98,
-              priceValidUntil: "2025-12-31",
-              itemCondition: "https://schema.org/NewCondition",
-              availability: "https://schema.org/OutOfStock",
-              quantity: 0,
-            },
-          ],
-        },
-      },
-    ],
-    []
-  );
-
-  useEffect(() => {
-    setAllVariantProducts(variants);
-  }, [variants, setAllVariantProducts]);
+const SKUMatrixBasicUsage = () => {
+  const { columns, buyProps, formatter, ImageComponent } = useMockSKUMatrix()
 
   return (
-    <>
-      <SKUMatrixTrigger data-testid="open-sku-matrix">
-        Bulk order jackets
+    <SKUMatrix>
+      <SKUMatrixTrigger style={{ width: '15rem' }}>
+        Buy Multiple Sizes
       </SKUMatrixTrigger>
 
       <SKUMatrixSidebar
-        title="Bulk order — Softshell Jacket"
-        columns={{
-          name: "Variation",
-          additionalColumns: [
-            { label: "Color", value: "color" },
-            { label: "Size", value: "size" },
-          ],
-          availability: {
-            label: "Availability",
-            stockDisplaySettings: "showAvailability",
-          },
-          price: "Unit price",
-          quantitySelector: "Qty",
-        }}
-        buyProps={{
-          "data-testid": "sku-matrix-add-to-cart",
-          "data-sku": "softshell-jacket",
-          "data-seller": "1",
-          onClick: () => {
-            // send analytics event before the provider closes the sidebar
-            console.log("Add selected SKUs to cart");
-          },
-        }}
+        title="T-Shirt Variants"
+        columns={columns}
+        formatter={formatter}
+        buyProps={buyProps}
+        ImageComponent={ImageComponent}
       />
-    </>
-  );
+    </SKUMatrix>
+  )
 }
 
-export default function SKUMatrixOverview() {
-  return (
-    <SKUMatrix>
-      <LifestyleSkuMatrix />
-    </SKUMatrix>
-  );
-}
+export default SKUMatrixBasicUsage
 ```
 
   </Tab>
@@ -293,256 +180,400 @@ export default function ProductPageSkuMatrix() {
 
 ## Examples
 
-### Availability display modes
+### Multiple Specification Columns
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <SKUMatrix>
-        <AvailabilityShowcase />
-      </SKUMatrix>
+      <UIProvider>
+        <SKUMatrixMultiColumn />
+      </UIProvider>
     </OverviewSection>
   </Tab>
   <Tab>
 
 ```tsx
-import React, { useEffect } from "react";
-import {
-  SKUMatrix,
-  SKUMatrixTrigger,
-  SKUMatrixSidebar,
-  useSKUMatrix,
-} from "@faststore/ui";
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
 
-function AvailabilityShowcaseContent() {
-  const { setAllVariantProducts } = useSKUMatrix();
+const SKUMatrixMultiColumn = () => {
+  const { buyProps, formatter, ImageComponent } = useMockSKUMatrix()
 
-  useEffect(() => {
-    setAllVariantProducts([
-      {
-        id: "sku-green-12",
-        name: "Green · 12-pack",
-        image: {
-          url: "/img/bulk-green.png",
-          alternateName: "Green cleaning cloth pack",
-        },
-        inventory: 48,
-        availability: "inStock",
-        price: 35,
-        listPrice: 42,
-        priceWithTaxes: 35,
-        listPriceWithTaxes: 42,
-        specifications: { color: "Green", packsize: "12" },
-        selectedCount: 0,
-        offers: {
-          /* ... */
-        },
-      },
-      {
-        id: "sku-red-12",
-        name: "Red · 12-pack",
-        image: {
-          url: "/img/bulk-red.png",
-          alternateName: "Red cleaning cloth pack",
-        },
-        inventory: 0,
-        availability: "outOfStock",
-        price: 35,
-        listPrice: 42,
-        priceWithTaxes: 35,
-        listPriceWithTaxes: 42,
-        specifications: { color: "Red", packsize: "12" },
-        selectedCount: 0,
-        offers: {
-          /* ... */
-        },
-      },
-    ]);
-  }, []);
+  const columns = {
+    name: 'Product',
+    additionalColumns: [
+      { label: 'Size', value: 'size' },
+      { label: 'Color', value: 'color' },
+      { label: 'Material', value: 'material' },
+    ],
+    availability: {
+      label: 'Availability',
+      stockDisplaySettings: 'showAvailability' as const,
+    },
+    price: 'Unit Price',
+    quantitySelector: 'Quantity',
+  }
 
-  return (
-    <>
-      <SKUMatrixTrigger>Check stock by color</SKUMatrixTrigger>
-
-      <SKUMatrixSidebar
-        title="Cleaning cloth packs"
-        columns={{
-          name: "Variation",
-          additionalColumns: [{ label: "Color", value: "color" }],
-          availability: {
-            label: "Availability",
-            stockDisplaySettings: "showAvailability",
-          },
-          price: "Unit price",
-          quantitySelector: "Qty",
-        }}
-        buyProps={{
-          "data-testid": "bulk-add-cloths",
-          "data-sku": "cloth-pack",
-          "data-seller": "b2b-seller",
-          onClick: () => {},
-        }}
-      />
-    </>
-  );
-}
-
-export default function AvailabilityShowcase() {
   return (
     <SKUMatrix>
-      <AvailabilityShowcaseContent />
-    </SKUMatrix>
-  );
-}
-```
-
-  </Tab>
-</Tabs>
-
-### Loading state skeleton
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <SKUMatrix>
-        <LoadingSkuMatrix />
-      </SKUMatrix>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-```tsx
-import React from "react";
-import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from "@faststore/ui";
-
-export default function LoadingSkuMatrix() {
-  return (
-    <SKUMatrix>
-      <SKUMatrixTrigger disabled>Fetching supplier inventory…</SKUMatrixTrigger>
-
-      <SKUMatrixSidebar
-        title="Bulk order catalog"
-        loading
-        columns={{
-          name: "SKU",
-          additionalColumns: [
-            { label: "Supplier", value: "supplier" },
-            { label: "MOQ", value: "moq" },
-          ],
-          availability: {
-            label: "Status",
-            stockDisplaySettings: "showAvailability",
-          },
-          price: "Net price",
-          quantitySelector: "Qty",
-        }}
-        buyProps={{
-          "data-testid": "loading-matrix-add",
-          "data-sku": "supplier-feed",
-          "data-seller": "default",
-          onClick: () => {},
-        }}
-      >
-        <p style={{ padding: "1rem" }}>
-          Load warehouse data to unlock quantity entry.
-        </p>
-      </SKUMatrixSidebar>
-    </SKUMatrix>
-  );
-}
-```
-
-  </Tab>
-</Tabs>
-
-### Custom image renderer
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <SKUMatrix>
-        <ImageOverrideSkuMatrix />
-      </SKUMatrix>
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-```tsx
-import React, { useEffect } from "react";
-import NextImage from "next/image";
-import {
-  SKUMatrix,
-  SKUMatrixTrigger,
-  SKUMatrixSidebar,
-  useSKUMatrix,
-} from "@faststore/ui";
-
-function ImageOverrideContent() {
-  const { setAllVariantProducts } = useSKUMatrix();
-
-  useEffect(() => {
-    setAllVariantProducts([
-      {
-        id: "sku-protein-vanilla",
-        name: "Vanilla · 1kg",
-        image: {
-          url: "https://cdn.example.com/protein-vanilla.webp",
-          alternateName: "Vanilla whey protein powder 1kg",
-        },
-        inventory: 28,
-        availability: "inStock",
-        price: 39.9,
-        listPrice: 45,
-        priceWithTaxes: 39.9,
-        listPriceWithTaxes: 45,
-        specifications: { flavor: "Vanilla", size: "1kg" },
-        selectedCount: 0,
-        offers: {
-          /* ... */
-        },
-      },
-    ]);
-  }, []);
-
-  return (
-    <>
-      <SKUMatrixTrigger variant="primary">
-        Create nutrition bundles
+      <SKUMatrixTrigger variant="primary" style={{ width: '15rem' }}>
+        Order Multiple Variants
       </SKUMatrixTrigger>
 
       <SKUMatrixSidebar
-        title="Sports nutrition packs"
-        ImageComponent={({ src, alt }) => (
-          <NextImage src={src} alt={alt} width={48} height={48} />
-        )}
-        columns={{
-          name: "Product",
-          additionalColumns: [{ label: "Flavor", value: "flavor" }],
-          availability: {
-            label: "Warehouse stock",
-            stockDisplaySettings: "showStockQuantity",
-          },
-          price: "Contract price",
-          quantitySelector: "Cases",
-        }}
-        buyProps={{
-          "data-testid": "nutrition-add-cart",
-          "data-sku": "nutrition-pack",
-          "data-seller": "distribution",
-          onClick: () => {},
-        }}
+        title="Premium Polo Shirts - Select Variants"
+        columns={columns}
+        formatter={formatter}
+        buyProps={buyProps}
+        ImageComponent={ImageComponent}
       />
-    </>
-  );
+    </SKUMatrix>
+  )
 }
 
-export default function ImageOverrideSkuMatrix() {
+export default SKUMatrixMultiColumn
+```
+
+  </Tab>
+</Tabs>
+
+### Stock Quantity Display
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixStockQuantity />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+const SKUMatrixStockQuantity = () => {
+  const { buyProps, formatter, ImageComponent } = useMockSKUMatrix()
+
+  const columns = {
+    name: 'Product',
+    additionalColumns: [{ label: 'Size', value: 'size' }],
+    availability: {
+      label: 'In Stock',
+      stockDisplaySettings: 'showStockQuantity' as const,
+    },
+    price: 'Price',
+    quantitySelector: 'Order Qty',
+  }
+
   return (
     <SKUMatrix>
-      <ImageOverrideContent />
+      <SKUMatrixTrigger style={{ width: '15rem' }}>
+        View All Sizes
+      </SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Shoes - All Sizes"
+        columns={columns}
+        formatter={formatter}
+        buyProps={buyProps}
+        ImageComponent={ImageComponent}
+      />
     </SKUMatrix>
-  );
+  )
 }
+
+export default SKUMatrixStockQuantity
+```
+
+  </Tab>
+</Tabs>
+
+### Loading State
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixLoading />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { useState, useEffect } from 'react'
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+const SKUMatrixLoading = () => {
+  const [loading, setLoading] = useState(true)
+  const { columns, buyProps, formatter, ImageComponent } = useMockSKUMatrix()
+
+  useEffect(() => {
+    // Simulate API call
+    const timer = setTimeout(() => setLoading(false), 2000)
+    return () => clearTimeout(timer)
+  }, [])
+
+  return (
+    <SKUMatrix>
+      <SKUMatrixTrigger style={{ width: '15rem' }}>
+        Select Variants
+      </SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Product Variants"
+        columns={columns}
+        loading={loading}
+        formatter={formatter}
+        buyProps={buyProps}
+        ImageComponent={ImageComponent}
+      />
+    </SKUMatrix>
+  )
+}
+
+export default SKUMatrixLoading
+```
+
+  </Tab>
+</Tabs>
+
+### E-commerce Apparel Store
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixEcommerce />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { useState } from 'react'
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import Image from 'next/image'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+interface ImageProps {
+  src: string
+  alt: string
+  width?: number
+  height?: number
+}
+
+const SKUMatrixEcommerce = () => {
+  const [loading, setLoading] = useState(false)
+  const { formatter } = useMockSKUMatrix()
+
+  const columns = {
+    name: 'Variant',
+    additionalColumns: [
+      { label: 'Size', value: 'size' },
+      { label: 'Color', value: 'color' },
+    ],
+    availability: {
+      label: 'Availability',
+      stockDisplaySettings: 'showAvailability' as const,
+    },
+    price: 'Price',
+    quantitySelector: 'Qty',
+  }
+
+  const handleAddToCart = async () => {
+    setLoading(true)
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      console.log('Items successfully added to cart!')
+    } catch (error) {
+      console.error('Failed to add items:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const buyProps = {
+    'data-testid': 'sku-matrix-add-to-cart',
+    'data-sku': 't-shirt-classic-cotton',
+    'data-seller': 'default-seller',
+    onClick: handleAddToCart,
+  }
+
+  const CustomImage = ({ src, alt }: ImageProps) => (
+    <Image
+      src={src}
+      alt={alt}
+      width={48}
+      height={48}
+      style={{
+        borderRadius: '8px',
+        objectFit: 'cover',
+        border: '1px solid #e0e0e0',
+      }}
+    />
+  )
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <SKUMatrix>
+        <SKUMatrixTrigger variant="secondary" style={{ width: '18rem' }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 3h14a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v10h12V5H4zm2 2h8v2H6V7zm0 4h8v2H6v-2z" />
+            </svg>
+            Buy Multiple Sizes & Colors
+          </span>
+        </SKUMatrixTrigger>
+
+        <SKUMatrixSidebar
+          title="Classic Cotton T-Shirt - Select Variants"
+          columns={columns}
+          loading={loading}
+          formatter={formatter}
+          direction="rightSide"
+          size="partial"
+          buyProps={buyProps}
+          ImageComponent={CustomImage}
+        >
+          <div
+            style={{
+              padding: '16px 24px',
+              backgroundColor: '#f5f5f5',
+              borderBottom: '1px solid #e0e0e0',
+            }}
+          >
+            <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>
+              Select the quantities you need for each variant. Available in
+              multiple sizes and colors.
+            </p>
+          </div>
+        </SKUMatrixSidebar>
+      </SKUMatrix>
+    </div>
+  )
+}
+
+export default SKUMatrixEcommerce
+```
+
+  </Tab>
+</Tabs>
+
+### B2B Wholesale Ordering
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixWholesale />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+const SKUMatrixWholesale = () => {
+  const { ImageComponent } = useMockSKUMatrix()
+
+  const columns = {
+    name: 'SKU',
+    additionalColumns: [
+      { label: 'Size', value: 'size' },
+      { label: 'Pack Size', value: 'packSize' },
+    ],
+    availability: {
+      label: 'Stock Units',
+      stockDisplaySettings: 'showStockQuantity' as const,
+    },
+    price: 'Unit Price',
+    quantitySelector: 'Units',
+  }
+
+  const handleWholesaleOrder = () => {
+    console.log('Wholesale order submitted')
+  }
+
+  const formatWholesalePrice = (price: number) => {
+    const formattedPrice = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(price)
+    return `${formattedPrice}/unit`
+  }
+
+  const buyProps = {
+    'data-testid': 'wholesale-order-submit',
+    'data-sku': 'office-paper-bulk',
+    'data-seller': 'wholesale-supplier',
+    onClick: handleWholesaleOrder,
+  }
+
+  return (
+    <div
+      style={{
+        padding: '24px',
+        backgroundColor: '#fff',
+        borderRadius: '8px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+      }}
+    >
+      <div style={{ marginBottom: '16px' }}>
+        <h3 style={{ margin: '0 0 8px 0' }}>Wholesale Office Supplies</h3>
+        <p style={{ margin: 0, color: '#666', fontSize: '14px' }}>
+          Order multiple variants at wholesale prices
+        </p>
+      </div>
+
+      <SKUMatrix>
+        <SKUMatrixTrigger variant="primary" style={{ width: '100%' }}>
+          Open Bulk Order Form
+        </SKUMatrixTrigger>
+
+        <SKUMatrixSidebar
+          title="Bulk Order - Office Paper"
+          columns={columns}
+          formatter={formatWholesalePrice}
+          direction="rightSide"
+          size="full"
+          buyProps={buyProps}
+          ImageComponent={ImageComponent}
+        >
+          <div
+            style={{
+              padding: '20px 24px',
+              backgroundColor: '#e3f2fd',
+              borderBottom: '1px solid #90caf9',
+            }}
+          >
+            <h4
+              style={{
+                margin: '0 0 8px 0',
+                fontSize: '16px',
+                color: '#1565c0',
+              }}
+            >
+              Wholesale Pricing Active
+            </h4>
+            <p style={{ margin: 0, fontSize: '14px', color: '##424242' }}>
+              Minimum order: 10 units per SKU. Volume discounts applied
+              automatically.
+            </p>
+          </div>
+        </SKUMatrixSidebar>
+      </SKUMatrix>
+    </div>
+  )
+}
+
+export default SKUMatrixWholesale
 ```
 
   </Tab>
