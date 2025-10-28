@@ -81,9 +81,11 @@ Before starting the migration, verify your project’s FastStore version and pre
 
 Confirm that your project is running on FastStore v1. You can check it as follows:
 
-#### 1. Inspect the configuration file
+- In your project root, check for one of these files:
+   - `store.config.js`: used by FastStore v1
+   - `discovery.config.js`: used by FastStore v3
+   If `store.config.js` is present, your project is likely running on FastStore v1.
 
-Open the project root and look for a file named `store.config.js`. FastStore v1 projects keep their main configuration in `store.config.js`. FastStore v3 uses the `discovery.config.js` file. If you find `store.config.js`, you are very likely working with FastStore v1.
 
 #### 2. Review installed packages
 
