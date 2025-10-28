@@ -11,6 +11,7 @@ To take advantage of its latest updates, stores using FastStore v1 should migrat
 The migration process involves running two VTEX accounts in parallel. Your main account (FastStore v1) remains live while you create a subaccount (FastStore v3) for development, validation, and gradual rollout.
 
 The following diagram illustrates the process:
+
 ```mermaid
 flowchart LR
 
@@ -25,21 +26,21 @@ done[[Go live on v3]]
 
 subgraph L1[Account on FastStore v1]
 direction LR
-v1_s1[Keep live store on v1] --> v1_s2[No code changes in v1 for new dev]
-v1_s2 --> v1_s3[CMS stays as is on v1]
-v1_s3 --> v1_s4[Provide data for Master Data unification]
-v1_s4 --> v1_s5[Map IO apps in use and document settings]
-v1_s5 --> v1_s6[Search settings will not migrate to v3]
+v1_s1[Keep live store on v1] --> v1_s2[Live store remains on v1, no changes]
+v1_s2 --> v1_s3[Map IO apps in use and document settings]
+v1_s3 --> v1_s4[CMS stays as is on v1]
+v1_s4 --> v1_s5[Search settings will not migrate to v3]
+v1_s5 --> v1_s6[Provide data for Master Data unification]
 v1_s6 --> v1_s7[Participate in traffic split and monitoring]
 end
 
 subgraph L2[Subaccount on FastStore v3]
 direction LR 
 v3_s1[Create subaccount with separate domain and CMS] --> v3_s2[Start v3 project and repository via getting started and WebOps]
-v3_s2 --> v3_s3[Recreate pages and content in v3 CMS]
-v3_s3 --> v3_s4[Open support ticket and unify Master Data into v3]
-v3_s4 --> v3_s5[Review and install IO apps for v3 and update pointers]
-v3_s5 --> v3_s6[Recreate Intelligent Search configuration in v3]
+v3_s2 --> v3_s3[Review and install IO apps for v3 and update pointers]
+v3_s3 --> v3_s4[Recreate pages and content in v3 CMS]
+v3_s4 --> v3_s5[Recreate Intelligent Search configuration in v3]
+v3_s5 --> v3_s6[Open support ticket and unify Master Data into v3]
 v3_s6 --> v3_s7[Split traffic to v3 and measure key metrics]
 end
 
@@ -64,14 +65,15 @@ v3_s7 --> done
 | --- | --- | --- |
 | **1. Subaccount setup** | Live store remains on v1. No changes made here. | Create a new subaccount with its own domain and Headless CMS. |
 | **2. Start development** | No new development in v1. | Set up the v3 project and repository. |
-| **3. Headless CMS** | Headless CMS content stays as-is. | Recreate pages and content in the new v3 Headless CMS (migration not supported). |
-| **4. Master Data** | Provide source data for unification. | Open a support ticket to configure and unify Master Data from v1 into v3. |
-| **5. VTEX IO apps** | Map installed apps and document settings. | Review app compatibility, reinstall or replace in v3, update pointers, and reapply settings. |
-| **6. Intelligent Search** | Existing search configuration remains unchanged. | Rebuild Intelligent Search settings manually in v3. |
+| **3. VTEX IO apps** | Map installed apps and document settings. | Review app compatibility, reinstall or replace in v3, update pointers, and reapply settings. |
+| **4. Headless CMS** | Headless CMS content stays as-is. | Recreate pages and content in the new v3 Headless CMS (migration not supported). |
+| **5. Intelligent Search** | Existing search configuration remains unchanged. | Rebuild Intelligent Search settings manually in v3. |
+| **6. Master Data** | Provide source data for unification. | Open a support ticket to configure and unify Master Data from v1 into v3. |
 | **7. Traffic splitting** | Share live traffic with v3 during the transition. | Gradually receive traffic, measure key metrics, and tune until stable. |
 | **Final** | Eventually retired after migration. | Becomes the live store (Go live on v3). |
 
 ## Before you begin
+
 This guide is for VTEX accounts currently using FastStore v1 that need to migrate to FastStore v3.
 
 Before starting the migration, verify your project’s FastStore version and prepare the required GitHub setup.
@@ -82,20 +84,21 @@ Before starting the migration, verify your project’s FastStore version and pre
 Confirm that your project is running on FastStore v1. You can check it as follows:
 
 - In your project root, check for one of these files:
-   - `store.config.js`: used by FastStore v1
-   - `discovery.config.js`: used by FastStore v3
+   - `store.config.js`: used by FastStore v1.
+   - `discovery.config.js`: used by FastStore v3.
+
    If `store.config.js` is present, your project is likely running on FastStore v1.
 
 - Open the `package.json` file and review the dependencies:
 
-| Package name        | FastStore v1 | FastStore v2+ |
-| ------------------- | ------------ | ------------- |
-| `@faststore/core`   | ❌           | ✅            |
-| `@faststore/styles` | ✅           | ❌            |
+  | Package name        | FastStore v1 | FastStore v2+ |
+  | ------------------- | :------------: | :-------------: |
+  | `@faststore/core`   | ❌           | ✅            |
+  | `@faststore/styles` | ✅           | ❌            |
 
-If `@faststore/styles` is present and `@faststore/core` is missing, your project is running on FastStore v1.
+  If `@faststore/styles` is present and `@faststore/core` is missing, your project is running on FastStore v1.
 
->ℹ️ See the key differences between FastStore versions in the guide [FastStore versions and support levels](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels#key-differences-between-faststore-versions)
+  >ℹ️ See the key differences between FastStore versions in the guide [FastStore versions and support levels](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels#key-differences-between-faststore-versions)
 
 ### Have a GitHub account
 
