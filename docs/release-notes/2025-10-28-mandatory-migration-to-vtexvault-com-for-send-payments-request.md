@@ -2,7 +2,7 @@
 title: "Mandatory migration to vtexvault.com for “Send Payments” request"
 slug: "2025-10-28-mandatory-migration-to-vtexvault-com-for-send-payments-request"
 hidden: false
-type: "added"
+type: "improved"
 createdAt: "2025-10-28T00:00:00.219Z"
 updatedAt: "2025-10-28T00:00:00.219Z"
 excerpt: "The current routes for sending payment information will be replaced with the new route vtexvault.com."
