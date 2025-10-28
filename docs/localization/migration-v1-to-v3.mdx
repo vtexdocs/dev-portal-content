@@ -86,10 +86,7 @@ Confirm that your project is running on FastStore v1. You can check it as follow
    - `discovery.config.js`: used by FastStore v3
    If `store.config.js` is present, your project is likely running on FastStore v1.
 
-
-#### 2. Review installed packages
-
-Open the `package.json` file and verify if the project depends on the legacy `@faststore/styles` package and whether the `@faststore/core` package is absent. The presence of `styles` along with the absence of `core` indicates that FastStore v1 is in use. The latest version of FastStore includes the `core` package and has removed the `styles` package.
+- Open the `package.json` file and review the dependencies:
 
 | Package name        | FastStore v1 | FastStore v2+ |
 | ------------------- | ------------ | ------------- |
