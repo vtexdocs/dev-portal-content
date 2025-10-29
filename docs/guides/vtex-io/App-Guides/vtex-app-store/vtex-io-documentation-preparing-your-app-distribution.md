@@ -8,9 +8,9 @@ updatedAt: "2025-10-29T12:20:00.000Z"
 category: "App Development"
 ---
 
-This guide will teach you how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution.
+This guide will teach you how to prepare your app for distribution in the VTEX App Store and allow merchants to benefit from your solution.
 
-Notice that every app goes through a homologation process before being available at the VTEX App Store. During this process, our team can reject apps that are not following the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Hence, be sure to review these guidelines while you develop and prepare your app for distribution.
+Note that every app goes through a homologation process before being available in the VTEX App Store. During this process, our team can reject apps that are not following the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Therefore, be sure to review these guidelines as you develop and prepare your app for distribution.
 
 ## Before you begin
 
@@ -34,7 +34,7 @@ After establishing your app's billing model, you must set up the marketing asset
 
 1. Create a new folder named `public` in the root directory of your project.
 2. Inside the `public` folder, create the `metadata` folder. Also, create the `images`, `licenses`, and `messages` folders inside `metadata`.
-3. Create the following folders and files for the respective directories.
+3. Create the following folders and files within the respective directories.
 
     ```plaintext
     ┗ 📂 public
@@ -54,11 +54,11 @@ After establishing your app's billing model, you must set up the marketing asset
         ┗ 📄 pt-BR.json
     ```
 
-4. Create the files and folders needed to compose your App Page according to the following:
+4. Create the files and folders needed to compose your App Page as follows:
 
 #### `images` folder
 
-The `images` folder stores the images of your app's page. They may include the app’s icon and screenshots showing how the application behaves in the Admin or the storefront. Inside this folder, you must have:
+The `images` folder stores the images of your app's page. They may include the app's icon and screenshots showing how the application behaves in the Admin or the storefront. Inside this folder, you must have:
 
 ```plaintext
 ┗ 📂 images
@@ -72,7 +72,7 @@ The `images` folder stores the images of your app's page. They may include the a
       ┗ 📄 {add-a-file}.png
 ```
 
-- `icon.png` - A file of the app icon.
+- `icon.png` - The app icon file.
 - `screenshots` - A folder containing the images that will be presented in the carousel of the App Page.
 
 Notice that you can use the `desktop` and `mobile` subfolders to store device-specific images. For example: `public/metadata/images/screenshots/mobile` and `public/metadata/images/screenshots/desktop`.

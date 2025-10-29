@@ -25,7 +25,7 @@ Learn how to successfully submit your app for distribution in the VTEX App Store
 
 To complete this guide, you will need:
 
-- **[GitHub](https://github.com/) account:** The app homologation is conducted via GitHub and Pull Requests (PR). Ensure you have a GitHub account.
+- **[GitHub](https://github.com/) account:** The app homologation is conducted via GitHub and Pull Requests (PRs). Ensure you have a GitHub account.
 - **VTEX IO CLI `3.x`:** Ensure that the VTEX IO CLI is updated to version `3.x`. For instructions, refer to [Updating VTEX IO'S CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-update).
 
 ### App prerequisites
@@ -61,22 +61,22 @@ Finally, before submitting your app to the VTEX App Store, ensure you've complet
    vtex submit
    ```
 
-5. When prompted, enter the GitHub username that will manage the homologation process. In the following, provide the workspace URL the VTEX team can use to test your app.
+5. When prompted, enter the GitHub username that will manage the homologation process. Next, provide the workspace URL the VTEX team can use to test your app.
 
 ![submitting-github-terminal](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store-0.png)
 
 ### Step 2 - Managing the homologation process
 
-After completing these steps above, a GitHub repository will be automatically created for your app, and you will be prompted with a PR link in the terminal (e.g., `https://github.com/vtex-reviews/{vendorAccount}.{appName}`). The specified GitHub account will be added to the repository with read-only permissions to follow your app's review process. Comments and adjustments can be made in the same repository.
+After completing these steps, a GitHub repository will be automatically created for your app, and you will be prompted with a PR link in the terminal (e.g., `https://github.com/vtex-reviews/{vendorAccount}.{appName}`). The specified GitHub account will be added to the repository with read-only permissions to follow your app's review process. Comments and adjustments can be made in the same repository.
 
-> ℹ️ The homologation process applies to both new apps and new major versions of apps. A new branch will be created in the repository for each new app version.
+> ℹ️ The homologation process applies to both new apps and new major app versions. A new branch will be created in the repository for each new app version.
 
-You can work on improvements in a new branch. When the branch has the necessary adjustments, open a PR to the VTEX team for review.
+You can work on improvements in a new branch. When the branch has the necessary adjustments, open a PR for the VTEX team for review.
 
 ![submitting-github-pr](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store-1.png)
 
 ### Step 3 - Waiting for the app homologation
 
-After opening the PR, the VTEX team will validate it for approval and merging, and the new app version will be ready to be released and made available in the VTEX App Store.
+After opening the PR, the VTEX team will validate it for approval and merging. The new app version will then be ready to be released and made available in the VTEX App Store.
 
-> ⚠️ Please note that after the homologation process is completed, a product will be automatically created in your store catalog. Do not remove or modify it, as this product is what integrates your app with the VTEX App Store marketplace.
+> ⚠️ After the homologation process is completed, a product will be automatically created in your store catalog. Do not remove or modify it, as this product integrates your app with the VTEX App Store marketplace.
