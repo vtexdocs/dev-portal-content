@@ -24,7 +24,7 @@ Before proceeding, ensure you have:
 
 ### Step 1 - Preparing your app billing options
 
-After developing your app, you must establish whether your app will be charged and whether it will be public or private on the VTEX IO platform. To set up these options, refer to the [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model) guide. Also, check the [App Monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization) guidelines for more information on this topic.
+After developing your app, you must establish whether it will be charged and if it will be public or private on the VTEX IO platform. To set up these options, refer to the [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model) guide. Also, check the [App Monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization) guidelines for more information on this topic.
 
 ### Step 2 - Setting the `public` folder
 
@@ -33,7 +33,7 @@ After establishing your app's billing model, you must set up the marketing asset
 ![App Page on the VTEX App Store](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Perks/vtex-io-documentation-homologation-requirements-for-vtex-app-store/app-store-page-example.png?raw=true)
 
 1. Create a new folder named `public` in the root directory of your project.
-2. Inside the `public` folder, create the `metadata` folder. Also, create the `images`, `licenses`, and `messages` folders inside `metadata`.
+2. Inside the `public` folder, create the `metadata` folder. Also, create the `images`, `licenses`, and `messages` folders within `metadata`.
 3. Create the following folders and files as shown:
 
     ```plaintext
@@ -58,7 +58,7 @@ After establishing your app's billing model, you must set up the marketing asset
 
 #### `images` folder
 
-The `images` folder stores the images for your app's page. They may include the app's icon and screenshots showing how the application behaves in the Admin or the storefront. Inside this folder, you must have:
+The `images` folder stores the images for your app's page. They may include the app's icon and screenshots showing how the application behaves in the Admin or the storefront. This folder must contain:
 
 ```plaintext
 ┗ 📂 images
