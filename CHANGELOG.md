@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.261](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.260...v1.1.261) (2025-10-29)
+
+
+### 📝 Documentation updates
+
+* add closed beta callout to storefront permissions guide ([adbf1ba](https://github.com/vtexdocs/dev-portal-content/commit/adbf1ba77a6fba09aa7d233542f6bd7e82afc252))
+
 ### [1.1.260](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.259...v1.1.260) (2025-10-28)
 
 ### [1.1.259](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.257...v1.1.259) (2025-10-28)
