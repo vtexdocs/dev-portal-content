@@ -26,10 +26,18 @@ The `Link` component behaves like a regular anchor tag (`a`), but it can be rend
   </Tab>
   <Tab>
     ```tsx
-    <Link variant="default">Default</Link>
-    <Link variant="display">Display</Link>
-    <Link variant="inline">Inline</Link>
-    <Link size="small">Small</Link>
+    import { Link } from '@faststore/ui'
+
+    export default function Component() {
+      return (
+        <>
+          <Link variant="default">Default</Link>
+          <Link variant="display">Display</Link>
+          <Link variant="inline">Inline</Link>
+          <Link size="small">Small</Link>
+        </>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -70,7 +78,11 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Link inverse={true}>Inverse Link</Link>
+    import { Link } from '@faststore/ui'
+
+    export default function Component() {
+      return <Link inverse={true}>Inverse Link</Link>
+    }
     ```
   </Tab>
 </Tabs>
@@ -85,7 +97,11 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Link variant="display">Display Link</Link>
+    import { Link } from '@faststore/ui'
+
+    export default function Component() {
+      return <Link variant="display">Display Link</Link>
+    }
     ```
   </Tab>
 </Tabs>
@@ -100,7 +116,11 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Link variant="inline">Inline Link</Link>
+    import { Link } from '@faststore/ui'
+
+    export default function Component() {
+      return <Link variant="inline">Inline Link</Link>
+    }
     ```
   </Tab>
 </Tabs>
@@ -117,7 +137,11 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Link size="small">Small Link</Link>
+    import { Link } from '@faststore/ui'
+
+    export default function Component() {
+      return <Link size="small">Small Link</Link>
+    }
     ```
   </Tab>
 </Tabs>
