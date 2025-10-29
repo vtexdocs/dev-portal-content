@@ -13,7 +13,7 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-engineering-guidelines"
 ---
 
-Learn how to successfully submit your app for distribution in the VTEX App Store by following this guide. The VTEX App Store is a marketplace where VTEX clients can discover and install applications that enhance their ecommerce experience. Before your app can be featured in the VTEX App Store, it must pass the homologation process, which involves evaluation in three key areas: business, user experience (UX), and security/performance. This process applies to all apps, regardless of their functionality, such as storefront, admin, backend, or pixel.
+Learn how to successfully submit your app for distribution in the VTEX App Store by following this guide. The VTEX App Store is a marketplace where VTEX clients can discover and install applications that enhance their ecommerce experience. Before your app can be featured in the VTEX App Store, it must pass the homologation process, which involves evaluation in three key areas: business, user experience (UX), and security/performance. This process applies to all apps, regardless of their functionality, e.g., storefront, admin, backend, or pixel.
 
 > ⚠️ Keep in mind that the homologation process may take 45 days from [the moment the app data is sent for validation](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store#step-2-managing-the-homologation-process).
 
@@ -26,14 +26,14 @@ Learn how to successfully submit your app for distribution in the VTEX App Store
 To complete this guide, you will need:
 
 - **[GitHub](https://github.com/) account:** The app homologation is conducted via GitHub and Pull Requests (PRs). Ensure you have a GitHub account.
-- **VTEX IO CLI `3.x`:** Ensure that the VTEX IO CLI is updated to version `3.x`. For instructions, refer to [Updating VTEX IO'S CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-update).
+- **VTEX IO CLI `3.x`:** Ensure that the VTEX IO CLI is updated to version `3.x`. For instructions, refer to [Updating VTEX IO's CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-update).
 
 ### App prerequisites
 
 Before proceeding with the homologation process, ensure your app meets these prerequisites:
 
 - [**Set up your app's billing model**](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model): To be eligible for publication in the App Store, your app must have a billing model set up. This allows it to be publicly available for all VTEX accounts. If you want your app to be private to your organization and installed on a single account, you do not need to go through the process detailed in this guide and can [install it](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) directly in your account.
-- [**Publish your app on the VTEX IO development platform**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/): Publish your app using the VTEX account corresponding to your  `vendor` account and in a [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/) that the VTEX team can test.
+- [**Publish your app on the VTEX IO development platform**](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/): Publish your app using the VTEX account corresponding to your `vendor` account and in a [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/) that the VTEX team can test.
 - [**Deploy your app on the VTEX IO development platform.**](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version)
 
 ### App Store prerequisites
@@ -41,7 +41,7 @@ Before proceeding with the homologation process, ensure your app meets these pre
 Finally, before submitting your app to the VTEX App Store, ensure you've completed the following steps:
 
 - [**Become a registered VTEX App Store developer**](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer): To submit an app to the VTEX App Store, you need to be a registered VTEX App Store developer.
-- [**Prepared your app for distribution**](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution): Ensure your app adheres to VTEX's [business](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-vtex-app-store), [design](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines), [marketing](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets), and [engineering](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines) guidelines. These guidelines guarantee the standard of quality, viability, and usability of all apps made available through the VTEX App Store, so you must be aware of them before submitting your extension for the homologation process.
+- [**Prepare your app for distribution**](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution): Ensure your app adheres to VTEX's [business](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-vtex-app-store), [design](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines), [marketing](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets), and [engineering](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines) guidelines. These guidelines guarantee the standard of quality, viability, and usability of all apps made available through the VTEX App Store, so you must be aware of them before submitting your extension for the homologation process.
 
 ## Instructions
 
@@ -61,7 +61,7 @@ Finally, before submitting your app to the VTEX App Store, ensure you've complet
    vtex submit
    ```
 
-5. When prompted, enter the GitHub username that will manage the homologation process. Next, provide the workspace URL the VTEX team can use to test your app.
+5. When prompted, enter the GitHub username that will manage the homologation process. Next, provide the workspace URL that the VTEX team can use to test your app.
 
 ![submitting-github-terminal](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store-0.png)
 
@@ -71,7 +71,7 @@ After completing these steps, a GitHub repository will be automatically created 
 
 > ℹ️ The homologation process applies to both new apps and new major app versions. A new branch will be created in the repository for each new app version.
 
-You can work on improvements in a new branch. When the branch has the necessary adjustments, open a PR for the VTEX team for review.
+You can work on improvements in a new branch. When the branch has the necessary adjustments, open a PR for the VTEX team's review.
 
 ![submitting-github-pr](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store-1.png)
 
