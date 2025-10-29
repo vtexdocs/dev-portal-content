@@ -41,7 +41,7 @@ Before proceeding with the homologation process, ensure your app meets these pre
 Finally, before submitting your app to the VTEX App Store, ensure you've completed the following steps:
 
 - [**Become a registered VTEX App Store developer**](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer): To submit an app to the VTEX App Store, you need to be a registered VTEX App Store developer.
-- [**Prepare your app for distribution**](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution): Ensure your app adheres to VTEX's [business](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-vtex-app-store), [design](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines), [marketing](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets), and [engineering](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines) guidelines. These guidelines guarantee the standard of quality, viability, and usability of all apps made available through the VTEX App Store, so you must be aware of them before submitting your extension for the homologation process.
+- [**Prepare your app for distribution**](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution): Ensure your app adheres to VTEX's [business](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-vtex-app-store), [design](https://developers.vtex.com/docs/guides/vtex-io-documentation-design-guidelines), [marketing](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-marketing-assets), and [engineering](https://developers.vtex.com/docs/guides/vtex-io-documentation-engineering-guidelines) guidelines. These guidelines guarantee the standards of quality, viability, and usability of all apps made available through the VTEX App Store, so you must be aware of them before submitting your app for the homologation process.
 
 ## Instructions
 
@@ -67,7 +67,7 @@ Finally, before submitting your app to the VTEX App Store, ensure you've complet
 
 ### Step 2 - Managing the homologation process
 
-After completing these steps, a GitHub repository will be automatically created for your app, and you will be prompted with a PR link in the terminal (e.g., `https://github.com/vtex-reviews/{vendorAccount}.{appName}`). The specified GitHub account will be added to the repository with read-only permissions to follow your app's review process. Comments and adjustments can be made in the same repository.
+After completing these steps, a GitHub repository will be automatically created for your app, and you will be provided with a PR link in the terminal (e.g., `https://github.com/vtex-reviews/{vendorAccount}.{appName}`). The specified GitHub account will be added to the repository with read-only permissions to follow your app's review process. Comments and adjustments can be made in the same repository.
 
 > ℹ️ The homologation process applies to both new apps and new major app versions. A new branch will be created in the repository for each new app version.
 

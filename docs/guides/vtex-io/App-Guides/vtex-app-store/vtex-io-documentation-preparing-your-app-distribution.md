@@ -8,23 +8,23 @@ updatedAt: "2025-10-29T12:20:00.000Z"
 category: "App Development"
 ---
 
-This guide will teach you how to prepare your app for distribution in the VTEX App Store and allow merchants to benefit from your solution.
+This guide will teach you how to prepare your app for distribution in the VTEX App Store and enable merchants to benefit from your solution.
 
 Note that every app goes through a homologation process before being available in the VTEX App Store. During this process, our team can reject apps that do not follow the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Therefore, be sure to review these guidelines as you develop and prepare your app for distribution.
 
 ## Before you begin
 
-Before proceeding, make sure you have already:
+Before proceeding, ensure you have:
 
 1. Developed your app. Refer to the [Developing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app) guide for more information.
 
-2. Registered as [VTEX App Store developer](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer).
+2. Registered as a [VTEX App Store developer](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer).
 
 ## Instructions
 
 ### Step 1 - Preparing your app billing options
 
-After developing your app, you must establish if your app will be charged and whether it will be public or private on the VTEX IO platform. To set up these options, refer to the [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model) guide. Also, check the [App Monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization) guidelines for more information on this topic.
+After developing your app, you must establish whether your app will be charged and whether it will be public or private on the VTEX IO platform. To set up these options, refer to the [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model) guide. Also, check the [App Monetization](https://developers.vtex.com/docs/guides/vtex-io-documentation-business-guidelines-app-monetization) guidelines for more information on this topic.
 
 ### Step 2 - Setting the `public` folder
 
@@ -58,7 +58,7 @@ After establishing your app's billing model, you must set up the marketing asset
 
 #### `images` folder
 
-The `images` folder stores the images of your app's page. They may include the app's icon and screenshots showing how the application behaves in the Admin or the storefront. Inside this folder, you must have:
+The `images` folder stores the images for your app's page. They may include the app's icon and screenshots showing how the application behaves in the Admin or the storefront. Inside this folder, you must have:
 
 ```plaintext
 ┗ 📂 images
@@ -122,9 +122,9 @@ See the base template for structuring this file below:
 - **`support`:** Link to the support channel. This can be an email address, a ticket portal, or a phone number.
 - **`additionalinformation`:** Additional details and disclaimers related to your app.
 - **`video`:** URL of a video featuring the app's behavior.
-- **`metricDescription`:** Billing options' metrics (declared in the app's `manifest.json` file). **This field is required only for apps whose pricing is based on one or more metrics. Do not fill in this field if this is not the case.**
+- **`metricDescription`:** Billing options' metrics (declared in the app's `manifest.json` file). **This field is required only for apps whose pricing is based on one or more metrics. Do not fill in this field if this is not applicable.**
 
-The files in this folder must be available in English, Spanish, and Portuguese in the following paths: `public/metadata/messages/en-US.json`, `public/metadata/messages/es-AR.json` and `public/metadata/messages/pt-BR.json`, respectively.
+The files in this folder must be available in English, Spanish, and Portuguese, in the following paths: `public/metadata/messages/en-US.json`, `public/metadata/messages/es-AR.json` and `public/metadata/messages/pt-BR.json`, respectively.
 
 ### Step 3 - Publishing and deploying your app on the VTEX IO development platform
 
