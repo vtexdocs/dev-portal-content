@@ -78,33 +78,90 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Unordered
 
-```tsx
-<List marker>
-  <li>Great Unordered List</li>
-  <li>Ok Unordered List</li>
-  <li>Bad Unordered List</li>
-</List>
-```
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <List marker>
+        <li>Great Unordered List</li>
+        <li>Ok Unordered List</li>
+        <li>Bad Unordered List</li>
+      </List>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { List } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <List marker>
+              <li>Great Unordered List</li>
+              <li>Ok Unordered List</li>
+              <li>Bad Unordered List</li>
+            </List>
+        );
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ### Ordered
 
-```tsx
-<List as="ol" marker>
-  <li>Great Ordered List</li>
-  <li>Ok Ordered List</li>
-  <li>Bad Ordered List</li>
-</List>
-```
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <List as="ol" marker>
+        <li>Great Ordered List</li>
+        <li>Ok Ordered List</li>
+        <li>Bad Ordered List</li>
+      </List>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { List } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <List as="ol" marker>
+              <li>Great Ordered List</li>
+              <li>Ok Ordered List</li>
+              <li>Bad Ordered List</li>
+            </List>
+        );
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ### Without marker
 
-```tsx
-<List as="ol">
-  <li>Great</li>
-  <li>Ok</li>
-  <li>Bad</li>
-</List>
-```
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <List as="ol">
+        <li>Great</li>
+        <li>Ok</li>
+        <li>Bad</li>
+      </List>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { List } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <List as="ol">
+              <li>Great</li>
+              <li>Ok</li>
+              <li>Bad</li>
+            </List>
+        );
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
