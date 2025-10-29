@@ -7,6 +7,8 @@ createdAt: "2025-10-09T00:00:00.000Z"
 updatedAt: "2025-10-09T00:00:00.000Z"
 ---
 
+> ⚠️ This feature is in closed beta, meaning only specific customers can access it now. If you want to implement it in the future, please contact [our Support](https://support.vtex.com/hc/en-us/).
+
 The [Storefront Permissions API](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#overview) provides a structured way to manage user access and roles within the storefront. It enables organizations to define and enforce authorization policies by controlling which actions users can perform.
 
 The Storefront Permissions API allows you to:
