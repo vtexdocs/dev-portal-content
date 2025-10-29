@@ -1,6 +1,7 @@
 ---
 title: "Preparing your app for distribution"
 slug: "vtex-io-documentation-preparing-your-app-distribution"
+excerpt: "Learn how to prepare your app for distribution in the VTEX App Store."
 hidden: false
 createdAt: "2022-03-04T20:09:05.195Z"
 updatedAt: "2025-10-29T12:20:00.000Z"
