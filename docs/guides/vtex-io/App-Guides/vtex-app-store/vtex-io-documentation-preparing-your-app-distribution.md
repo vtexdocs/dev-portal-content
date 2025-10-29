@@ -3,13 +3,13 @@ title: "Preparing your app for distribution"
 slug: "vtex-io-documentation-preparing-your-app-distribution"
 hidden: false
 createdAt: "2022-03-04T20:09:05.195Z"
-updatedAt: "2022-12-13T20:17:44.658Z"
+updatedAt: "2025-10-29T12:20:00.000Z"
 category: "App Development"
 ---
 
 This guide will teach you how to prepare your app for distribution in the VTEX App Store and let merchants benefit from your solution.
 
-Notice that every app goes through a homologation process before being available at the VTEX App Store. During this process, our team ensures the apps follow the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Hence, be sure to review these guidelines while you develop and prepare your app for distribution.
+Notice that every app goes through a homologation process before being available at the VTEX App Store. During this process, our team can reject apps that are not following the quality, viability, and usability standards presented in the [App Store Guidelines](https://developers.vtex.com/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store). Hence, be sure to review these guidelines while you develop and prepare your app for distribution.
 
 ## Before you begin
 
@@ -35,24 +35,23 @@ After establishing your app's billing model, you must set up the marketing asset
 2. Inside the `public` folder, create the `metadata` folder. Also, create the `images`, `licenses`, and `messages` folders inside `metadata`.
 3. Create the following folders and files for the respective directories.
 
-```
-public
- metadata
-  images
-   icon.png
-   screenshots
-    desktop
-
-    mobile
- licenses
-  en-US.md
-  es-AR.md
-  pt-BR.md
- messages
-  en-US.json
-  es-AR.json
-  pt-BR.json
-```
+    ```plaintext
+    ┗ 📂 public
+      ┣ 📂 metadata
+        ┣ 📂 images
+          ┣ 📄 icon.png
+          ┗ 📂 screenshots
+            ┣ 📂 desktop
+            ┗ 📂 mobile
+      ┣ 📂 licenses
+        ┣ 📄 en-US.md
+        ┣ 📄 es-AR.md
+        ┗ 📄 pt-BR.md
+      ┗ 📂 messages
+        ┣ 📄 en-US.json
+        ┣ 📄 es-AR.json
+        ┗ 📄 pt-BR.json
+    ```
 
 4. Create the files and folders needed to compose your App Page according to the following:
 
@@ -60,18 +59,16 @@ public
 
 The `images` folder stores the images of your app's page. They may include the app’s icon and screenshots showing how the application behaves in the Admin or the storefront. Inside this folder, you must have:
 
-```
-images
- icon.png 
- screenshots
-  desktop
-   {add-a-file}.png
-   {add-a-file}.png
-
-  mobile
-   {add-a-file}.png
-   {add-a-file}.png
-
+```plaintext
+┗ 📂 images
+  ┣ 📄 icon.png
+  ┗ 📂 screenshots
+    ┣ 📂 desktop
+      ┣ 📄 {add-a-file}.png
+      ┗ 📄 {add-a-file}.png
+    ┗ 📂 mobile
+      ┣ 📄 {add-a-file}.png
+      ┗ 📄 {add-a-file}.png
 ```
 
 - `icon.png` - A file of the app icon.
@@ -130,6 +127,6 @@ The files in this folder must be available in English, Spanish, and Portuguese i
 
 ### Step 3 - Publishing and deploying your app on the VTEX IO development platform
 
-If you are comfortable with your new app and marketing content, follow the [Making your new app version publicly available](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide to deploy your changes.
+If you are comfortable with your new app and marketing content, follow the [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available) guide to deploy your changes.
 
 After deploying your app's latest version, follow the [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store) guide.
