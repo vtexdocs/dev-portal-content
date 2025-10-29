@@ -1,0 +1,715 @@
+---
+title: "SKUMatrix"
+excerpt: "Bulk order interface that lets shoppers review, edit, and add multiple SKU variations to the cart from a single slide-over."
+keywords:
+  - UI library
+  - ecommerce
+  - b2b
+components:
+  - SKUMatrix.tsx
+  - SKUMatrixTrigger.tsx
+  - SKUMatrixSidebar.tsx
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/sku-matrix-search___3f50c2b048b3d65ae18e4613bfcbc3c7.gif
+---
+
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/SKUMatrix)
+
+The `SKUMatrix` compound surfaces complex product variations in a single, high-density view. Typical use cases include:
+
+- Ordering multiple SKU combinations such as workwear jackets across sizes and colors without hopping between PDPs.
+- Offering quick actions relevant for B2B procurement (bulk discounts, pack sizes) next to the Add to Cart summary.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixBasicUsage />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+const SKUMatrixBasicUsage = () => {
+  const { columns, buyProps, formatter, ImageComponent } = useMockSKUMatrix()
+
+  return (
+    <SKUMatrix>
+      <SKUMatrixTrigger style={{ width: '15rem' }}>
+        Buy Multiple Sizes
+      </SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="T-Shirt Variants"
+        columns={columns}
+        formatter={formatter}
+        buyProps={buyProps}
+        ImageComponent={ImageComponent}
+      />
+    </SKUMatrix>
+  )
+}
+
+export default SKUMatrixBasicUsage
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the compound from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index).
+
+```tsx
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
+```
+
+### Import styles
+
+Add the sidebar styling tokens and layout rules to your theme stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/SKUMatrix/styles.scss";
+```
+
+Follow the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) instructions. The quantity selector, badges, and table also rely on their respective partials.
+
+---
+
+## Usage
+
+The matrix relies on context state managed by `SKUMatrix`. Make sure your app is wrapped with `UIProvider` (for toasts) and provide the variant data before rendering the sidebar.
+
+```tsx
+import React, { useEffect } from "react";
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
+
+const warehouseVariants = [
+  {
+    id: "sku-45",
+    name: "Navy · Size 40",
+    image: {
+      url: "/img/navy-40.png",
+      alternateName: "Safety boot navy size 40",
+    },
+    inventory: 24,
+    availability: "inStock",
+    price: 75,
+    listPrice: 90,
+    priceWithTaxes: 75,
+    listPriceWithTaxes: 90,
+    specifications: { color: "Navy", size: "40", safetyrating: "S3" },
+    selectedCount: 0,
+    offers: {
+      /* ...commerce data omitted for brevity... */
+    },
+  },
+  // other variant products...
+];
+
+function SKUMatrixContent() {
+  const { setAllVariantProducts } = useSKUMatrix();
+
+  useEffect(() => {
+    setAllVariantProducts(warehouseVariants);
+  }, []);
+
+  return (
+    <>
+      <SKUMatrixTrigger variant="secondary">Plan restock</SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Select safety boot quantities"
+        direction="rightSide"
+        size="partial"
+        loading={false}
+        columns={{
+          name: "Variation",
+          additionalColumns: [
+            { label: "Color", value: "color" },
+            { label: "Size (EU)", value: "size" },
+            { label: "Safety rating", value: "safetyrating" },
+          ],
+          availability: {
+            label: "Availability",
+            stockDisplaySettings: "showStockQuantity",
+          },
+          price: "Price",
+          quantitySelector: "Quantity",
+        }}
+        buyProps={{
+          "data-testid": "bulk-add",
+          "data-sku": "safety-boot",
+          "data-seller": "seller-1",
+          onClick: () => {
+            /* call cart mutation */
+          },
+        }}
+        overlayProps={{ "aria-label": "SKU matrix overlay" }}
+      />
+    </>
+  );
+}
+
+export default function ProductPageSkuMatrix() {
+  return (
+    <SKUMatrix data-testid="sku-matrix">
+      <SKUMatrixContent />
+    </SKUMatrix>
+  );
+}
+```
+
+---
+
+## Examples
+
+### Multiple Specification Columns
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixMultiColumn />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+const SKUMatrixMultiColumn = () => {
+  const { buyProps, formatter, ImageComponent } = useMockSKUMatrix()
+
+  const columns = {
+    name: 'Product',
+    additionalColumns: [
+      { label: 'Size', value: 'size' },
+      { label: 'Color', value: 'color' },
+      { label: 'Material', value: 'material' },
+    ],
+    availability: {
+      label: 'Availability',
+      stockDisplaySettings: 'showAvailability' as const,
+    },
+    price: 'Unit Price',
+    quantitySelector: 'Quantity',
+  }
+
+  return (
+    <SKUMatrix>
+      <SKUMatrixTrigger variant="primary" style={{ width: '15rem' }}>
+        Order Multiple Variants
+      </SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Premium Polo Shirts - Select Variants"
+        columns={columns}
+        formatter={formatter}
+        buyProps={buyProps}
+        ImageComponent={ImageComponent}
+      />
+    </SKUMatrix>
+  )
+}
+
+export default SKUMatrixMultiColumn
+```
+
+  </Tab>
+</Tabs>
+
+### Stock Quantity Display
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixStockQuantity />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+const SKUMatrixStockQuantity = () => {
+  const { buyProps, formatter, ImageComponent } = useMockSKUMatrix()
+
+  const columns = {
+    name: 'Product',
+    additionalColumns: [{ label: 'Size', value: 'size' }],
+    availability: {
+      label: 'In Stock',
+      stockDisplaySettings: 'showStockQuantity' as const,
+    },
+    price: 'Price',
+    quantitySelector: 'Order Qty',
+  }
+
+  return (
+    <SKUMatrix>
+      <SKUMatrixTrigger style={{ width: '15rem' }}>
+        View All Sizes
+      </SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Shoes - All Sizes"
+        columns={columns}
+        formatter={formatter}
+        buyProps={buyProps}
+        ImageComponent={ImageComponent}
+      />
+    </SKUMatrix>
+  )
+}
+
+export default SKUMatrixStockQuantity
+```
+
+  </Tab>
+</Tabs>
+
+### Loading State
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixLoading />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { useState, useEffect } from 'react'
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+const SKUMatrixLoading = () => {
+  const [loading, setLoading] = useState(true)
+  const { columns, buyProps, formatter, ImageComponent } = useMockSKUMatrix()
+
+  useEffect(() => {
+    // Simulate API call
+    const timer = setTimeout(() => setLoading(false), 2000)
+    return () => clearTimeout(timer)
+  }, [])
+
+  return (
+    <SKUMatrix>
+      <SKUMatrixTrigger style={{ width: '15rem' }}>
+        Select Variants
+      </SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Product Variants"
+        columns={columns}
+        loading={loading}
+        formatter={formatter}
+        buyProps={buyProps}
+        ImageComponent={ImageComponent}
+      />
+    </SKUMatrix>
+  )
+}
+
+export default SKUMatrixLoading
+```
+
+  </Tab>
+</Tabs>
+
+### E-commerce Apparel Store
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixEcommerce />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { useState } from 'react'
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import Image from 'next/image'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+interface ImageProps {
+  src: string
+  alt: string
+  width?: number
+  height?: number
+}
+
+const SKUMatrixEcommerce = () => {
+  const [loading, setLoading] = useState(false)
+  const { formatter } = useMockSKUMatrix()
+
+  const columns = {
+    name: 'Variant',
+    additionalColumns: [
+      { label: 'Size', value: 'size' },
+      { label: 'Color', value: 'color' },
+    ],
+    availability: {
+      label: 'Availability',
+      stockDisplaySettings: 'showAvailability' as const,
+    },
+    price: 'Price',
+    quantitySelector: 'Qty',
+  }
+
+  const handleAddToCart = async () => {
+    setLoading(true)
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      console.log('Items successfully added to cart!')
+    } catch (error) {
+      console.error('Failed to add items:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const buyProps = {
+    'data-testid': 'sku-matrix-add-to-cart',
+    'data-sku': 't-shirt-classic-cotton',
+    'data-seller': 'default-seller',
+    onClick: handleAddToCart,
+  }
+
+  const CustomImage = ({ src, alt }: ImageProps) => (
+    <Image
+      src={src}
+      alt={alt}
+      width={48}
+      height={48}
+      style={{
+        borderRadius: '8px',
+        objectFit: 'cover',
+        border: '1px solid #e0e0e0',
+      }}
+    />
+  )
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <SKUMatrix>
+        <SKUMatrixTrigger variant="secondary" style={{ width: '18rem' }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 3h14a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v10h12V5H4zm2 2h8v2H6V7zm0 4h8v2H6v-2z" />
+            </svg>
+            Buy Multiple Sizes & Colors
+          </span>
+        </SKUMatrixTrigger>
+
+        <SKUMatrixSidebar
+          title="Classic Cotton T-Shirt - Select Variants"
+          columns={columns}
+          loading={loading}
+          formatter={formatter}
+          direction="rightSide"
+          size="partial"
+          buyProps={buyProps}
+          ImageComponent={CustomImage}
+        >
+          <div
+            style={{
+              padding: '16px 24px',
+              backgroundColor: '#f5f5f5',
+              borderBottom: '1px solid #e0e0e0',
+            }}
+          >
+            <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>
+              Select the quantities you need for each variant. Available in
+              multiple sizes and colors.
+            </p>
+          </div>
+        </SKUMatrixSidebar>
+      </SKUMatrix>
+    </div>
+  )
+}
+
+export default SKUMatrixEcommerce
+```
+
+  </Tab>
+</Tabs>
+
+### B2B Wholesale Ordering
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrixWholesale />
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import { useMockSKUMatrix } from './useMockSKUMatrix'
+
+const SKUMatrixWholesale = () => {
+  const { ImageComponent } = useMockSKUMatrix()
+
+  const columns = {
+    name: 'SKU',
+    additionalColumns: [
+      { label: 'Size', value: 'size' },
+      { label: 'Pack Size', value: 'packSize' },
+    ],
+    availability: {
+      label: 'Stock Units',
+      stockDisplaySettings: 'showStockQuantity' as const,
+    },
+    price: 'Unit Price',
+    quantitySelector: 'Units',
+  }
+
+  const handleWholesaleOrder = () => {
+    console.log('Wholesale order submitted')
+  }
+
+  const formatWholesalePrice = (price: number) => {
+    const formattedPrice = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(price)
+    return `${formattedPrice}/unit`
+  }
+
+  const buyProps = {
+    'data-testid': 'wholesale-order-submit',
+    'data-sku': 'office-paper-bulk',
+    'data-seller': 'wholesale-supplier',
+    onClick: handleWholesaleOrder,
+  }
+
+  return (
+    <div
+      style={{
+        padding: '24px',
+        backgroundColor: '#fff',
+        borderRadius: '8px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+      }}
+    >
+      <div style={{ marginBottom: '16px' }}>
+        <h3 style={{ margin: '0 0 8px 0' }}>Wholesale Office Supplies</h3>
+        <p style={{ margin: 0, color: '#666', fontSize: '14px' }}>
+          Order multiple variants at wholesale prices
+        </p>
+      </div>
+
+      <SKUMatrix>
+        <SKUMatrixTrigger variant="primary" style={{ width: '100%' }}>
+          Open Bulk Order Form
+        </SKUMatrixTrigger>
+
+        <SKUMatrixSidebar
+          title="Bulk Order - Office Paper"
+          columns={columns}
+          formatter={formatWholesalePrice}
+          direction="rightSide"
+          size="full"
+          buyProps={buyProps}
+          ImageComponent={ImageComponent}
+        >
+          <div
+            style={{
+              padding: '20px 24px',
+              backgroundColor: '#e3f2fd',
+              borderBottom: '1px solid #90caf9',
+            }}
+          >
+            <h4
+              style={{
+                margin: '0 0 8px 0',
+                fontSize: '16px',
+                color: '#1565c0',
+              }}
+            >
+              Wholesale Pricing Active
+            </h4>
+            <p style={{ margin: 0, fontSize: '14px', color: '##424242' }}>
+              Minimum order: 10 units per SKU. Volume discounts applied
+              automatically.
+            </p>
+          </div>
+        </SKUMatrixSidebar>
+      </SKUMatrix>
+    </div>
+  )
+}
+
+export default SKUMatrixWholesale
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Design tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-bkg-color"
+    value="var(--fs-color-body-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-size"
+    value="var(--fs-text-size-6)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-text-weight"
+    value="var(--fs-text-weight-semibold)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-font-size"
+    value="var(--fs-text-size-tiny)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-text-weight"
+    value="var(--fs-text-weight-medium)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-image-width"
+    value="var(--fs-spacing-7)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-image-border-radius"
+    value="var(--fs-border-radius)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-slide-over-partial-gap"
+    value="calc(2 * var(--fs-grid-padding))"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-slide-over-partial-width-mobile"
+    value="calc(100vw - var(--fs-sku-matrix-slide-over-partial-gap))"
+  />
+</TokenTable>
+
+---
+
+## Data attributes
+
+Use these selectors to customize styles or attach test logic:
+
+- `data-fs-sku-matrix`
+- `data-testid="fs-sku-matrix"` (default test id; override via `testId`)
+- `data-fs-sku-matrix-sidebar`
+- `data-fs-sku-matrix-sidebar-title`
+- `data-fs-sku-matrix-sidebar-cell-image`
+- `data-fs-sku-matrix-sidebar-table-price`
+- `data-fs-sku-matrix-sidebar-table-cell-quantity-selector`
+- `data-fs-sku-matrix-sidebar-table-action`
+- `data-fs-sku-matrix-sidebar-footer`
+- SlideOver attributes propagated to the sidebar: `data-fs-slide-over`, `data-fs-slide-over-direction`, `data-fs-slide-over-size`, `data-fs-slide-over-state`
+
+---
+
+## Props
+
+<ComponentPropsSection component="SKUMatrix" />
+<ComponentPropsSection component="SKUMatrixTrigger" />
+<ComponentPropsSection component="SKUMatrixSidebar" />
+
+---
+
+## Best practices
+
+### ✅ Do's
+
+- Use concise variation labels (e.g., "Black - 42") so the table stays scannable on partial-width slide-overs.
+- Keep price and availability in sync with your store OMS; show a toast when quantity adjustments are coerced.
+- Localize both column headers and toast messages for multinational catalogs.
+
+### ❌ Don'ts
+
+- Don't expose the matrix when a product is single-SKU; it adds unnecessary friction.
+- Don't rely on color alone for stock communication pair badge colors with descriptive text.
+- Don't allow quantities beyond available stock; the component exposes validation hooks for this reason.
+- Don't hardcode dimensions; merchants should be able to adjust columns per category via Headless CMS.
+
+---
+
+## Related components
+
+<SectionList>
+  <SectionItem
+    title="QuantitySelector"
+    description="Lets shoppers adjust quantities with validation and toast feedback—embedded inside the matrix rows."
+    actionPath="/docs/guides/faststore/molecules-quantity-selector"
+  >
+    <QuantitySelector min={0} max={10} initial={2} />
+  </SectionItem>
+
+{" "}
+
+<SectionItem
+  title="SlideOver"
+  description="The responsive container that powers the SKU Matrix sidebar layout."
+  actionPath="/docs/guides/faststore/organisms-slide-over"
+>
+  <SlideOver isOpen size="partial" direction="rightSide" fade="in">
+    <SlideOverHeader>SlideOver preview</SlideOverHeader>
+  </SlideOver>
+</SectionItem>
+
+  <SectionItem
+    title="Table"
+    description="Displays the variant grid inside the sidebar with column and header semantics."
+    actionPath="/docs/guides/faststore/molecules-table"
+  >
+    <Table variant="bordered">
+      <TableHead>
+        <TableRow>
+          <TableCell scope="col" variant="header">
+            Variation
+          </TableCell>
+          <TableCell scope="col" variant="header">
+            Availability
+          </TableCell>
+        </TableRow>
+      </TableHead>
+    </Table>
+  </SectionItem>
+</SectionList>
