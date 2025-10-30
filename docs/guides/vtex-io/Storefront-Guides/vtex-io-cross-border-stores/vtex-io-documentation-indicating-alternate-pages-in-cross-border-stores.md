@@ -1,91 +1,93 @@
 ---
-title: "Indicating alternate versions of localized pages in cross border stores"
+title: "Indicating alternate versions of localized pages in cross-border stores"
 slug: "vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores"
 hidden: false
+excerpt: "Learn how to indicate alternate versions of localized pages."
 createdAt: "2020-11-23T14:49:49.171Z"
-category: "Storefront Development"
-updatedAt: "2022-12-13T20:17:44.702Z"
+updatedAt: "2025-10-30T16:07:14.409Z"
 ---
 
-If you have different versions of a [landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) for each region your store is present, we recommend that you save them as `alternate` versions.
+In this guide, you'll learn how to indicate alternative versions of localized landing pages in cross-border stores to improve SEO and ensure search engines display the correct content for each region.
 
-This way, search engines will be aware of the different versions of your page and able to provide the right content to the right audience.
+If your store operates in multiple regions and you have different versions of a [landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) for each, you should link them as alternate versions. This practice helps search engines understand the relationship between your localized pages, ensuring they serve the right content to the right audience and improving your store's SEO.
 
-> ℹ️ Notice that this is especially useful for improving your store's SEO.
-
-Keep in mind that when indicating alternate versions of a page, you must do it in pairs. For example, if you point the USA version of a page to a Brazilian variant, then the Brazilian page must point to the USA version as well.
-
-By doing that, search engines are capable of understanding the relationship between those two pages, avoiding issues such as indicating the incorrect title for a given page or wrong indexing.
+When you indicate alternate versions, you must do so in pairs. For example, if you point the US version of a page to a Brazilian one, the Brazilian page must also point back to the US version. This reciprocal linking enables search engines to accurately map the relationship between them, thereby preventing indexing errors.
 
 ![Frame 15](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores-0.png)
 
-Hence, be aware that you'll need to perform the following step by step for each localized version of your landing page.
-
-> ℹ️ It's important for search engines that each version of a page indicates itself as well as the other localized versions as `alternates`. However, **you don't need to worry about self-referencing** since we already do that for you.
+Follow the steps below for each localized version of your landing page.
 
 ## Instructions
 
-1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
-2. In your browser, access your account's admin and go to the GraphQL IDE section.
-3. From the GraphQL IDE dropdown list, choose the `vtex.rewriter` app.
-4. Run the following query to get the internal data related to the specified page `path`.
+### Step 1 - Getting the route information
 
-```graphql
-{
-  internal {
-    get(path: "/{URL}") {
-      from
-      declarer
-      type
-      id
-      binding
+1. In your terminal, [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app.
+2. In the Admin, go to **Store Settings > Store > GraphQL IDE**.
+3. From the GraphQL IDE dropdown list, choose the `vtex.rewriter` app.
+4. Run the following query to get the internal data for the page path you want to update:
+
+  ```graphql
+  {
+    internal {
+      get(path: "/{URL}") {
+        from
+        declarer
+        type
+        id
+        binding
+      }
     }
   }
-}
-```
+  ```
 
-> ⚠️ Remember to replace the values between the curly brackets according to your scenario.
+⚠️ Replace the values between the curly brackets according to your scenario.
 
 5. Save the returned data.
-6. Erase the previous query and fill in the main text box with the following mutation command.
 
-```graphql
-mutation saveInternal($args: InternalInput!) {
-  internal {
-    save(route: $args) {
-      id
+### Step 2 - Updating the route
+
+1. Erase the previous query and use the following mutation command
+
+  ```graphql
+  mutation saveInternal($args: InternalInput!) {
+    internal {
+      save(route: $args) {
+        id
+      }
     }
   }
-}
-```
+  ```
 
-7. Click on _Query Variables_ at the bottom of the page and, according to the following example and the following explanations, fill in the _Query Variables_ section.
+2. At the bottom of the page, click Query Variables.
+3. Fill in the Query Variables section with the data from the [previous step](#getting-the-route-information) and the information for your alternate pages. See the example below:
 
-```json
-{
-  "args": {
-    "from": "/US/about-us",
-    "declarer": "vtex.store@2.x",
-    "type": "userRoute",
-    "id": "vtex.store@2.x:store.custom::us-about-us",
-    "binding": "748aafcf-3572-456d-5dec-6ddb3f26e43f",
-    "alternates": [
-      {
-        "binding": "7cf37a3b-efc0-4e47-8201-d8b58kd4d3fd",
-        "path": "/BR/sobre-nos"
-      },
-      {
-        "binding": "8cf37a3b-edc0-4a47-8241-d8b58kfsd3fd",
-        "path": "/UK/about-us"
-      }
-    ]
+  ```json
+  {
+    "args": {
+      "from": "/US/about-us",
+      "declarer": "vtex.store@2.x",
+      "type": "userRoute",
+      "id": "vtex.store@2.x:store.custom::us-about-us",
+      "binding": "748aafcf-3572-456d-5dec-6ddb3f26e43f",
+      "alternates": [
+        {
+          "binding": "7cf37a3b-efc0-4e47-8201-d8b58kd4d3fd",
+          "path": "/BR/sobre-nos"
+        },
+        {
+          "binding": "8cf37a3b-edc0-4a47-8241-d8b58kfsd3fd",
+          "path": "/UK/about-us"
+        }
+      ]
+    }
   }
-}
-```
+  ```
 
-- Replace the `from`, `declarer`, `type`, `id`, and `binding` values with the information obtained in step 4.
-- Regarding the `alternates` field, fill in the `binding` and `path` values according to the alternate landing page's data.
+- For the `from`, `declarer`, `type`, `id`, and `binding` fields, use the information you obtained in the [previous section](#getting-the-route-information).
+- In the `alternates` field, provide the `binding` and `path` for each alternate landing page.
 
-> ⚠️ If you don't know the `binding` values of your stores, follow [this step by step on checking your account's `binding` ids](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id).
+  >⚠️ If you don't know the `binding` values of your stores, follow [this step-by-step on checking your account's `binding` ids](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id).
 
-Once you perform these changes, remember to repeat the process from step 4 as many times as the number of existing versions of that landing page, using each `alternate` page as the `path`.
+4. Click `Run` to apply the changes.
+
+Repeat this entire process for each alternate version of the landing page, updating the path in the initial query each time.
