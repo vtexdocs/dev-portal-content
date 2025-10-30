@@ -26,7 +26,7 @@ After **January 31, 2026**, it will be mandatory to send all payment information
 
 > ⚠️ If you send payment data to any route other than `https://api.vtexvault.com/api/payments/transactions/{transactionId}/payments?an={accountName}`, the system will block the request, return a `404 - Not Found` status code, and interrupt the purchase order flow.
 
-> ℹ️ We renamed the endpoint [2.1 Send payments information public](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) to "**Send payments information**" and updated its path route. We will also deprecate the [2.2 Send payments with saved credit card](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/payments) endpoint.
+> ℹ️ We renamed the endpoint **2.1 Send payments information public** to [**Send payments information**](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments) and updated its path route. We will also deprecated the **2.2 Send payments with saved credit card** endpoint.
 
 ## What needs to be done?
 
