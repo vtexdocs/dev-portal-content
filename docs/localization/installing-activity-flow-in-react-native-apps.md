@@ -67,7 +67,9 @@ function App() {
 }
 ```
 
-### Step 3 - Tracking page views automatically
+## Usage
+
+### Tracking page views automatically
 
 To track navigation state changes, integrate the `usePageViewObserver` hook with the `NavigationContainer`, the root component of React Navigation, in your app's main file. To do so, follow these steps:
 
@@ -97,7 +99,40 @@ const navigationRef = useRef(null);
 usePageViewObserver({ navigationRef });
 ```
 
-### Step 4 - Tracking ad events
+### Tracking order group
+
+To enhance the quality of pageview capture, the Activity Flow SDK can record `orderGroup` (or `orderPlaced`) and any query parameters from the navigator stack. These parameters are crucial for validating data and confirming order placements.
+
+To activate this feature, include the necessary parameter in your page redirect configuration. See the example below:
+
+```ts //checkout_screen.tsx
+<TouchableOpacity
+  onPress={() =>
+    navigation.navigate('/purchase_success', {
+        orderGroup: '1234567890',
+        orderId: '1234',
+        ...
+    })
+  }
+  >
+  <Text>Confirm Purchase</Text>
+</TouchableOpacity>
+
+### Tracking deep links
+
+The Activity Flow SDK automatically captures deep links' query parameters from the `usePageViewObserver` hook and includes them in page view events. To enable this feature, configure deep linking in your app for each platform: [Android](#android) or [iOS](ios).
+
+#### Android
+
+To enable deep link handling in your Android app, add intent filters to your `AndroidManifest.xml` file.
+
+
+#### iOS
+
+
+
+
+### Tracking ad events
 
 >ℹ️ The ads tracking is available only for accounts that use [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads). If you're interested in this feature, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
 
@@ -156,26 +191,26 @@ type NavProps = { navigation: any };
 
 const HomeScreen = ({ navigation }: NavProps) => {
   return (
-    <View style={styles.screen}>
-      <Text style={styles.title}>Home</Text>
+    <View>
+      <Text>Home</Text>
       <Button title="Go to Profile" onPress={() => navigation.navigate('Profile')} />
-      <View style={styles.spacer} />
+      <View />
       <Button title="Go to Ads" onPress={() => navigation.navigate('Ads')} />
     </View>
   );
 };
 
 const ProfileScreen = ({ navigation }: NavProps) => (
-  <View style={styles.screen}>
-    <Text style={styles.title}>Profile</Text>
+  <View>
+    <Text>Profile</Text>
     <Button title="Go to Details" onPress={() => navigation.navigate('Details')} />
   </View>
 );
 
 const DetailsScreen = ({ navigation }: NavProps) => {
   return (
-    <View style={styles.screen}>
-      <Text style={styles.title}>Details</Text>
+    <View>
+      <Text>Details</Text>
       <Button title="Go Back" onPress={() => navigation.goBack()} />
     </View>
   );
@@ -190,21 +225,19 @@ const AdsScreen = () => {
   };
 
   return (
-    <View style={styles.screen}>
-      <Text style={styles.title}>Ads</Text>
-
+    <View>
+      <Text>Ads</Text>
       {/* Wrap your ad with AFAdsTracker. The wrapper wires impression/view/click. */}
       <AFAdsTracker params={adParams}>
         <TouchableOpacity
-          style={styles.adCard}
           onPress={() => {
             // Your CTA action goes here (e.g., navigate, open link)
             console.log('Ad clicked — navigate or handle CTA');
           }}
         >
-          <Text style={styles.adTitle}>Sponsored Ad</Text>
+          <Text>Sponsored Ad</Text>
           <Text>Check out our new campaign!</Text>
-          <Text style={styles.cta}>Buy now</Text>
+          <Text>Buy now</Text>
         </TouchableOpacity>
       </AFAdsTracker>
     </View>
@@ -240,26 +273,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    padding: 16,
-    gap: 16,
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: '700',
-  },
-  spacer: { height: 16 },
-  adCard: {
-    padding: 16,
-    borderRadius: 8,
-    backgroundColor: '#f0f3f7',
-  },
-  adTitle: { fontWeight: '700', marginBottom: 4 },
-  cta: { marginTop: 8, color: '#0a6cff', fontWeight: '600' },
-});
 ```
 
 The app initializes tracking via `initActivityFlow` with your VTEX account name, and enables automatic page view tracking by calling `usePageViewObserver` with a `NavigationContainer` ref.
