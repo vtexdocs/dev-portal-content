@@ -58,8 +58,8 @@ Follow the steps below for each localized version of your landing page.
   }
   ```
 
-2. At the bottom of the page, click Query Variables.
-3. Fill in the Query Variables section with the data from the [previous step](#getting-the-route-information) and the information for your alternate pages. See the example below:
+2. At the bottom of the page, click **Query Variables**.
+3. Fill in the Query Variables section following the example below:
 
   ```json
   {
@@ -83,7 +83,8 @@ Follow the steps below for each localized version of your landing page.
   }
   ```
 
-- For the `from`, `declarer`, `type`, `id`, and `binding` fields, use the information you obtained in the [previous section](#getting-the-route-information).
+- For the `from`, `declarer`, `type`, and `binding` fields, use the information you obtained in the [previous section](#getting-the-route-information).
+- In the `id` field, always set its value from the main binding, even if you're updating the secondary binding's route. This keeps a single canonical reference and prevents duplicate or conflicting entries across bindings. For example, if the main binding has the About Us page at `/US/about-us` with the id `vtex.store@2.x:store.custom::us-about-us`, use that same id for the secondary binding's route like `/BR/sobre-nos` to ensure consistency.
 - In the `alternates` field, provide the `binding` and `path` for each alternate landing page.
 
   >⚠️ If you don't know the `binding` values of your stores, follow [this step-by-step on checking your account's `binding` ids](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id).
