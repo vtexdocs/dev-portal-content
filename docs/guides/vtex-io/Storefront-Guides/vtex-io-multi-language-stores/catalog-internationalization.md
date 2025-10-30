@@ -1,10 +1,10 @@
 ---
 title: "Translating Catalog content"
-excerpt: "Overwrite automatic message translations from the catalog with more representative content from your store."
+excerpt: "Learn how to overwrite automatic message translations from the catalog."
 slug: "catalog-internationalization"
 hidden: false
 createdAt: "2020-08-31T17:18:54.238Z"
-updatedAt: "2025-10-13T14:21:06.416Z"
+updatedAt: "2025-10-29T19:24:24.450Z"
 ---
 
 In this guide, you'll learn how to overwrite an automatic message translation from the catalog, such as a product name or a product description, with more specific and representative content of your store.
@@ -281,3 +281,58 @@ Complete the _Query variables_ section with the desired translations for each pa
   >```
   >
   > Where `fieldId` is the specification ID, which you can find by following the guide [Products and SKU Specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/6UjLHdAT5YLuflki10SXLr?locale=en).
+
+## Checking your changes
+
+If you have already performed the desired mutations, you can check your changes through a query in the GraphQL IDE:
+
+1. In the **GraphQL admin IDE**, after choosing the `vtex.messages` app, write the following query command in the text box that is displayed:
+
+```json
+query GetTranslation($args2: TranslateArgs!) {
+  translate(args: $args2) 
+} 
+```
+
+2. Then, to fill in the `Query Variables` box, you must provide the following parameters:
+
+- `from`: source message locale.
+- `messages`: a list of the messages you want to check translations, containing the following parameters:
+  - `content`: source message string.
+  - `context`: ID of the product/brand/category you want to check the translation. IDs can be found in your store's registration on the admin under Product > Catalog.
+- `to`: target translation locale.
+
+Take the following example:
+
+```json
+{
+  "args2": {
+    "indexedByFrom": [
+      {
+       "from": "en-US",
+       "messages": [
+          {
+            "content": "Original product name in English",
+            "context": "543123"
+          }
+        ]
+      }
+    ],
+    "to": "pt-BR"
+  }
+}
+```
+
+3. After adjusting your query, click the play button to run it. The expected response is the translated message in the target locale.
+
+For the given example, the expected response is as follows:
+
+```json
+{
+  "data": {
+    "translate": [
+      "Nome do produto em português"
+    ]
+  }
+}
+```
