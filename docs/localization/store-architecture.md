@@ -21,10 +21,10 @@ These are the main use cases:
 - [Business-to-business (B2B) with B2B Suite](#business-to-business-b2b-with-b2b-suite)
 - [Franchise accounts (omnichannel)](#franchise-accounts-omnichannel)
 - [Multi-language and multi-currency](#multi-language-and-multi-currency)
-- [Single account, multi-binding](#single-account-multi-binding)
-- [Multi-account](#multi-account)
-- [Multi-account, shared back-office](#multi-account-shared-back-office-systems)
-- [Multi-account, independent back-office](#multi-account-independent-back-office-systems)
+  - [Single account, multi-binding](#single-account-multi-binding)
+  - [Multi-account](#multi-account)
+    - [Multi-account, shared back-office](#multi-account-shared-back-office-systems)
+    - [Multi-account, independent back-office](#multi-account-independent-back-office-systems)
 
 >ℹ️ Except for the [Headless](#headless) architecture, the following diagrams consider [Store Framework](https://developers.vtex.com/docs/guides/store-framework) as the storefront solution.
 
