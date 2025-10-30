@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.266](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.264...v1.1.266) (2025-10-30)
+
+
+### ⚙️ Repository features
+
+* update Cleaning cart data on log out docs ([39f2bf6](https://github.com/vtexdocs/dev-portal-content/commit/39f2bf60af3f66f7506f3e017f08bcfcc8dda61f))
+
 ### [1.1.264](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.262...v1.1.264) (2025-10-29)
 
 ### [1.1.262](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.261...v1.1.262) (2025-10-29)
