@@ -6,13 +6,20 @@ slug: 3-adding-content-types-and-sections
 
 Now that you have created your `cms` folder and have an overall understanding of how you'll use it, let's learn how to structure the Content Type and Section files so you can create any integrations you desire.
 
----
+## What you'll accomplish
 
-## Instructions
+By the end of this step, you will have:
 
-### Step 1 - Automatically syncing your changes
+- Learned how to structure Content Types with configuration schema sets
+- Understood how to define Sections with JSON Schema for editor forms
+- Gained knowledge of widgets and UI schemas for rich content editing
+- Developed the skills to create complex Content Types and Sections independently
 
-1. Before we start creating more complex definitions of Content Types and Sections, go to the root of your FastStore project and run `yarn dev` command to enable the watch mode for the FastStore CLI.  _Remember to use a development workspace._
+This knowledge enables you to build custom content management workflows tailored to your store's needs.
+
+## Step 1: Automatically syncing your changes
+
+1. Before creating more complex definitions of Content Types and Sections, go to the root of your FastStore project and run `yarn dev` to enable the FastStore CLI watch mode.  Make sure to use a development workspace.
 
 > ℹ️ This command will monitor any changes in the project, including the new section you have created, and automatically merge it with the default sections available in [`faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview).
 
@@ -20,7 +27,7 @@ Now that you have created your `cms` folder and have an overall understanding of
 
 2. Open the **VTEX Admin**, access **Storefront > Headless CMS** and keep it next to your code to see your changes while editing the `cms` folder. Refreshing the Admin may be necessary to see your changes.
 
-### Step 2 - Adding Content Types to the Headless CMS
+## Step 2: Adding Content Types to the Headless CMS
 
 The `content-types.json` file is an array of JSON objects that describes the types of pages available for customization at the Headless CMS. Therefore, to create new Content Types, we need to declare a new JSON object for each of our Content Types in the `content-types.json` file. However, we still need to discover which props these objects expect. So let's get back to our previous example.
 
@@ -97,7 +104,7 @@ Notice that, to declare a new Content Type, you must specify at least the follow
 | `name` | The name presented at the Headless CMS app.  |
 | **(optional)** `configurationSchemaSets` | Creates a new tab on the page of that Content Type with advanced settings. In our example, the **Landing Page** includes a new tab called **Settings** with custom SEO settings. Check the [following section](#the-configurationschemasets-property) for more information. |
 
-#### The `configurationSchemaSets` property
+### The `configurationSchemaSets` property
 
 Back to our example, notice that the **Landing Page** Content Type has the `configurationSchemaSets` definition. 
 The `configurationSchemaSets` prop creates a new tab at the Headless CMS for that Content Type with advanced settings.
@@ -116,7 +123,7 @@ After editing the `cms/content-types.json` file, remember to save your changes a
 2. Click on **Create New** and check the available Content Type options. 
 3. Click on **Landing Page** to create a new page and check the Settings tab.
 
-### Step 3: Adding Sections to the Headless CMS
+## Step 3: Adding Sections to the Headless CMS
 
 Now, let's make some of our frontend components available for editing at the Headless CMS by writing the content schemas that represent them.
 
@@ -124,7 +131,7 @@ These components are referred to as **Sections**, and to create them,
 you can follow the instructions provided in the guide [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section). 
 The guide offers detailed information on the process of creating Sections and integrating them into the Headless CMS for easy editing and management.
 
-#### The `schema` property
+### The `schema` property
 
 The `schema` will always be unique for each of your Sections as they create the form that editors will use to submit data and change the content of a given React component.
 
@@ -140,14 +147,16 @@ Depending on the `type` of your schema, you may need to define particular fields
 
 > ℹ️ For more information on each property of a `schema`, check the [`JSON Schema Reference`](https://json-schema.org/understanding-json-schema).
 
-#### Using widgets
+### Using widgets
 
 When defining your Section `schema`, you can also use the [`uiSchema`](https://react-jsonschema-form.readthedocs.io/en/docs/api-reference/uiSchema/) along with [`widgets`](https://react-jsonschema-form.readthedocs.io/en/docs/usage/widgets/) to specify which UI widget should be used to render a given field of your schema. Common widgets are `draftjs-rich-text`, `image-uploader`, and `block-select`.
 Refer to the [Widgets](https://developers.vtex.com/docs/guides/faststore/headless-cms-widgets) guide for more information.
 
 {/* TODO: Check the following example of the `draftjs-rich-text` component being used. */}
 
----
+## Next step
+
+Once you're satisfied with your Content Types and Sections, promote them to production: [Promoting your changes](https://developers.vtex.com/docs/guides/faststore/headless-cms-4-promoting-your-changes)
 
 ## Related resources
 
