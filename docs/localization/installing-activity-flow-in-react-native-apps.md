@@ -117,6 +117,7 @@ To activate this feature, include the necessary parameter in your page redirect 
   >
   <Text>Confirm Purchase</Text>
 </TouchableOpacity>
+```
 
 ### Tracking deep links
 
