@@ -109,12 +109,12 @@ To activate this feature, include the necessary parameter in your page redirect 
 <TouchableOpacity
   onPress={() =>
     navigation.navigate('/purchase_success', {
-        orderGroup: '1234567890',
-        orderId: '1234',
-        ...
+      orderGroup: '1234567890',
+      orderId: '1234',
+      // ...other params
     })
   }
-  >
+>
   <Text>Confirm Purchase</Text>
 </TouchableOpacity>
 ```
@@ -125,12 +125,21 @@ The Activity Flow SDK automatically captures deep links' query parameters from t
 
 #### Android
 
-To enable deep link handling in your Android app, add intent filters to your `AndroidManifest.xml` file.
+To enable deep link handling in your Android app, add intent filters to your `AndroidManifest.xml` file for each route that can be accessed via deep link. See the example below:
 
+<intent-filter>
+  <action android:name="android.intent.action.VIEW" />
+  <category android:name="android.intent.category.DEFAULT" />
+  <category android:name="android.intent.category.BROWSABLE" />
+  <data
+    android:scheme="https"
+    android:host="example.com"
+    android:pathPrefix="/product" />
+</intent-filter>
 
 #### iOS
 
-
+To enable deep link handling in your iOS app, configure `Info.plist` and `AppDelegate` to handle custom URL schemes and Universal Links. For example, add your URL scheme to Info.plist and handle incoming URLs in AppDelegate.
 
 
 ### Tracking ad events
