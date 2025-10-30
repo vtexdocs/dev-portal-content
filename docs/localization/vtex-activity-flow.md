@@ -16,12 +16,11 @@ This guide provides an overview of the Activity Flow architecture and how to get
 
 The Activity Flow architecture is designed to have a minimal performance impact due to efficient data handling and task scheduling. It consists of the following stages:
 
-![af_architecture](https://vtexhelp.vtexassets.com/assets/docs/src/af_architecture___9b087c8725f7ed72a1c08142c17eaec1.png)
+![af_architecture](https://vtexhelp.vtexassets.com/assets/docs/src/af_architecture___c8a37d3ebe11d9bfaf290c0b4d1d9b1b.png)
 
-1. **Capture user interactions:** Records shopper actions in the storefront or app and packages them into structured client payloads. It runs alongside the user interface, applying consent rules and basic context tagging so events can be reliably attributed later.
-2. **Collect events:** Collects client signals at a backend endpoint, validates them, and routes valid items to durable queues while logging or rejecting malformed submissions.
-3. **Buffer events:** Buffers incoming events to smooth traffic spikes and keep processing steady, grouping or streaming items so consumers can read them in order without overload.
-4. **Process and store events:** Processes buffered data by cleansing, enriching, and deduplicating it, then stores the results in persistent systems to produce query-ready datasets for analysis.
+1. **Collect events:** Collects client signals at a backend endpoint, validates them, and routes valid items to durable queues while logging or rejecting malformed submissions.
+2. **Buffer events:** Buffers incoming events to smooth traffic spikes and keep processing steady, grouping or streaming items so consumers can read them in order without overload.
+3. **Process and store events:** Processes buffered data by cleansing, enriching, and deduplicating it, then stores the results in persistent systems to produce query-ready datasets for analysis.
 
 ## Next steps
 
