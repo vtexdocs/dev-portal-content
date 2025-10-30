@@ -6,36 +6,20 @@ seeAlso:
   - "/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference"
 ---
 
-Let's set up all the tools you need to integrate the Headless CMS with your FastStore project. First, we will install the **VTEX IO CLI**.
-The VTEX IO CLI will assist you during your development process by enabling you to perform various actions within the VTEX platform. In the following, we will install and configure the Headless CMS app in your VTEX account.
+In this step, you'll connect your FastStore project to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview)  so editors can create, preview, and publish content. You'll also configure the webhooks that keep builds and previews in sync—without this integration, CMS changes won't reach your storefront.
 
----
+## What you'll accomplish
 
-## Before you begin
+By the end of this step, you will have:
 
-Before you proceed with setting up the Headless CMS in your account, make sure you:
+- Configured Headless CMS webhooks to trigger builds when content is published
+- Set up preview URLs for content editors to see changes before going live
+- Configured WebOps to communicate CMS updates back to your Git repository
+- Established a complete content workflow where CMS changes automatically sync with your codebase
 
-<Steps>
+This integration enables your content team to manage store content independently while keeping everything in sync with your development workflow.
 
-### Install the Headless CMS, its dependencies and plugins
-
-Make sure that you have installed the `vtex.admin-cms@1.x`, its dependencies and plugins as described in the [FastStore requirements](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements#install-headless-cms-and-its-dependencies).
-
-### Have a FastStore project
-
-Ensure you have a FastStore project after completing the process through FastStore WebOps. For detailed instructions, please refer to the [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project) guide.
-
-### Install the VTEX IO CLI
-
-Make sure that you have installed the VTEX IO CLI on your machine. This CLI is required to install the Headless CMS plugins and CMS dependencies. For more information, please refer to the [Installing VTEX IO CLI](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-install) guide.
-
-</Steps>
-
----
-
-## Instructions
-
-### Step 1 - Configuring the Headless CMS
+## Step 1: Configuring the Headless CMS
 
 Configure the URLs of the webhooks used by the Headless CMS app.
 
@@ -55,7 +39,7 @@ Configure the URLs of the webhooks used by the Headless CMS app.
 
 7. Fill in the **Preview URL** field with your production URL. This URL activates the button on the Headless CMS, allowing you to preview the changes made to a page. _Replace the values between curly brackets according to your scenario._
 
-### Step 2 - Communicating WebOps updates to the Headless CMS
+## Step 2: Communicating WebOps updates to the Headless CMS
 
 If you are developing your FastStore project with CI/CD and Headless CMS, you must ensure that CI/CD is aware of every CMS update performed via the VTEX Admin. To do so, you must configure the WebOps webhooks responsible for communicating with the Headless CMS as follows.
 
@@ -77,3 +61,9 @@ If you are developing your FastStore project with CI/CD and Headless CMS, you mu
 Now you can make changes to the Headless CMS and check if commits are being created in the project. In the following example, the `Hero` title was modified to `10% off on first purchase`, and we can see that it generated a commit in the repository.
 
 ![cms-commits](https://vtexhelp.vtexassets.com/assets/docs/src/cms-example-commits___7bb21be1504033098122feb013667b49.png)
+
+---
+
+## Next step
+
+Now that Headless CMS is integrated, set up content types and sections for your editors: [Setting up the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms)
