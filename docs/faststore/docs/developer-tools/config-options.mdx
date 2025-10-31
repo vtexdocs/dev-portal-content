@@ -1,9 +1,9 @@
 ---
 title: "Configuration options for discovery.config.js"
-updatedAt: "2025-10-13T19:30:49.674Z"
+updatedAt: "2025-10-31T13:23:44.263Z"
 ---
 
-The `discovery.config.js` is a configuration file for managing various settings that control store behavior, appearance, and functionality. This file serves as a central hub for configuring key aspects of your FastStore website, including SEO, API connections, session management, analytics, and more.
+The `discovery.config.js` is a configuration file for managing settings that control store behavior, appearance, and functionality. This file serves as a central hub for configuring key aspects of your FastStore website, including SEO, API connections, session management, analytics, and more.
 
 This guide outlines the configuration options for tailoring your FastStore website using the `discovery.config.js` file.
 ## Example file
@@ -30,7 +30,7 @@ module.exports = {
 
 Check the full file example at [`discovery.config.js` sample code](https://github.com/vtex-sites/starter.store/blob/main/discovery.config.js).
 
->⚠️ As of December 16, 2024, `discovery.config.js` is the new filename for the legacy `faststore.config.js` file. If you're still using the legacy name, please check [this release note](https://developers.vtex.com/updates/release-notes/2024-12-16-discovery-config-file) to update it.
+>⚠️ As of December 16, 2024, `discovery.config.js` is the new filename for the legacy `faststore.config.js` file. If you're still using the legacy name, see [this release note](https://developers.vtex.com/updates/release-notes/2024-12-16-discovery-config-file) to update it.
 
 ## Configuration options
 
@@ -228,4 +228,4 @@ Configures webhook endpoints for [VTEX Headless CMS](https://developers.vtex.com
 
 | Property         | Type     | Description                                               | Example |
 |------------------|----------|-----------------------------------------------------------|---------|
-| `webhookUrls`    | `object` | An array of strings that defines the webhook URLs used to interact with the Headless CMS. | ["https://mystore.myvtex.com/cms-releases/webhook-releases"]
+| `webhookUrls`    | `array of strings` | An array of strings that defines the webhook URLs used to interact with the Headless CMS. | ["https://mystore.myvtex.com/cms-releases/webhook-releases"]
