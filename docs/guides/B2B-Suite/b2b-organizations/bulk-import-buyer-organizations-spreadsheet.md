@@ -108,3 +108,11 @@ Check the default columns present in the Cost Centers tab in the table below. Ma
 | Email* | String  | Email address of the member serving as a primary point of contact for communication. |
 | Role Id* | GUID | Unique identifier denoting the member's role within the organization. |
 | Can Impersonate | Boolean | Indicates if the member can impersonate another user within the system. |
+
+## Custom fields
+
+To include custom fields in your spreadsheet:
+1. Add them as the last columns in your tab.
+2. Use the prefix `CF_` followed by the exact name of the custom field as registered in the system.
+   - Example: if you have a custom field named `DeliveryNote`, the column should be `CF_DeliveryNote`.
+3. Fill in the values according to the data type.
