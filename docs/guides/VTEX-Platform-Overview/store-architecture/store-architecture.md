@@ -58,7 +58,7 @@ The main account has access to more modules than the sellers, sharing only some 
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/basic-b2b-suite.png)
 
-Declaring these modules in the architecture not only makes the process clearer, it also makes it easier to understand the responsibilities of each player. In this case, for example, [Master Data](https://developers.vtex.com/docs/guides/master-data) remains with the sellers because customer approvals are handled at the seller level.
+Declaring these modules in the architecture not only makes the process clearer, but also makes it easier to understand the responsibilities of each player. In this case, for example, [Master Data](https://developers.vtex.com/docs/guides/master-data) remains with the sellers because customer approvals are handled at the seller level.
 
 In B2B scenarios, real-time communication between the B2B Suite and sellers is common, as the information is always up-to-date. This is also crucial for surcharge and tax calculations at checkout to ensure a smooth purchasing experience for the end customer.
 
