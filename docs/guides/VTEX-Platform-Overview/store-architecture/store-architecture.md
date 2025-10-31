@@ -147,7 +147,7 @@ There are two architectural variants, depending on how back-office systems like 
 
 #### Why choose this architecture?
 
-- Supports both single fulfillment (all items shipped from one account) and multiple fulfillment (items shipped from different accounts within the same purchase), optimizing logistics based on item availability and proximity to the customer.
+- Supports both single-fulfillment (all items shipped from one account) and multi-fulfillment (items shipped from different accounts within the same purchase), optimizing logistics based on item availability and proximity to the customer.
 - Facilitates multi-language and multi-currency operations by designating the seller (main account) as the catalog owner and using the accounts for each country as marketplaces, allowing each store to manage its language and currency locally within its own environment.
 - Supports independent catalog translations, eliminating the need to rely on [Messages](https://developers.vtex.com/docs/guides/storefront-content-internationalization) or the [Catalog translation app](https://developers.vtex.com/docs/guides/catalog-internationalization), unlike the [single account, multi-binding](#single-account-multi-binding) model.
 
