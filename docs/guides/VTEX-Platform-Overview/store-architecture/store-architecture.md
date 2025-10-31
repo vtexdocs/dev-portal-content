@@ -203,7 +203,7 @@ The diagram above represents an account implemented with [FastStore](https://dev
 
 ### Why choose this architecture?
 
-- **Flexibility:** A headless approach allows complete ownership over website architecture.
+- **Flexibility:** A headless approach allows complete ownership of website architecture.
 - **Faster websites:** A headless ecommerce platform houses content centrally and can deliver it anywhere via APIs, allowing faster delivery compared to traditional ecommerce architecture.
 - **Personalized experiences:** Stores can create customizable experiences and adapt them to achieve the desired look and feel.
 - **Low-risk experimentation:** Decoupling the backend from the frontend makes it simpler and less risky to make changes to the frontend, knowing that it won't impact the site's underlying backend architecture.
