@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.280](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.275...v1.1.280) (2025-10-31)
+
+
+### ⚙️ Repository features
+
+* excerpt ([33f8a0a](https://github.com/vtexdocs/dev-portal-content/commit/33f8a0af09652a0ce9c7438c9a2c06a1c6a0a70b))
+
+
+### 🔧 Fixes and improvements
+
+* update links in fs getting started overview ([38ba658](https://github.com/vtexdocs/dev-portal-content/commit/38ba65837c551ae3d51e27df9eb7526bc460d7f0))
+
+
+### 🖼️ Media updates
+
+* update cdn diagram ([51759ed](https://github.com/vtexdocs/dev-portal-content/commit/51759ed3da29f688b3201ee938b4755ca76a6d2e))
+
+
+### 📝 Documentation updates
+
+* edit cloud infrastructure guide ([a050799](https://github.com/vtexdocs/dev-portal-content/commit/a0507991afb3c12120c6eb6a493484b29d950df7))
+
 ### [1.1.279](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.275...v1.1.279) (2025-10-31)
 
 
