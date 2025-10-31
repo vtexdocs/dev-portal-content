@@ -59,7 +59,7 @@ Within the VPC, [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-docume
 
 New features and fixes are introduced daily, in a smooth and seamless way. Over 12,000 upgrades are rolled out annually with minimal disruption to customer operations. There is an automatic update for all clients for patch and minor updates that do not impact backward compatibility. In case of major feature changes, we ensure transparent communication by providing notifications, [documentation](https://developers.vtex.com/updates/release-notes) and timelines before the release.
 
-Our deployment capacity is made possible by a robust architecture of [microservices](#microservices), each having its own independent life cycle but operating within a unified, automated, Continuous Delivery framework. Our CI/CD pipeline ensures seamless integration, testing, and deployment of code changes, enabling us to deliver features and updates efficiently and with minimal disruption.
+Our deployment capacity is made possible by a robust architecture of [microservices](#microservices), each having its own independent lifecycle but operating within a unified, automated Continuous Delivery framework. Our CI/CD pipeline ensures seamless integration, testing, and deployment of code changes, enabling us to deliver features and updates efficiently and with minimal disruption.
 
 Releases primarily focus on adding new features or addressing bugs. Major releases are typically confined to specific platform services. Major versions follow the same development and deployment processes and coexist with the previous version, allowing tenants ample time for adjustment if needed.
 
@@ -97,7 +97,7 @@ Check the diagram and the following explanation to learn more about our resilien
 
 1. VTEX maintains [CDN](#cdn) servers across multiple global regions. These servers deliver cached content from the closest location to the user, significantly reducing load times.
 2. In scenarios with no [cache](#cache) in the CDN or during actions like placing an order, requests are directed to the [router](#router). The routers, distributed across multiple AWS Availability Zones, enhance our resilience. These Availability Zones are not fallbacks; they operate concurrently, bolstering our resilience.
-3. There is a [caching layer](#cache) after the router, which relieves the underlying application from reprocessing the same data. When handling numerous requests, only necessary ones reach the application, ensuring availability. These strategies minimize the need to scale applications, ensuring platform resilience and capacity.
+3. There is a [caching layer](#cache) after the router, which relieves the underlying application of reprocessing the same data. When handling numerous requests, only necessary ones reach the application, ensuring availability. These strategies minimize the need to scale applications, ensuring platform resilience and capacity.
 4. Applications run on multiple servers, ensuring redundancy. We operate multiple replicas simultaneously, enhancing reliability.
 
 This strategy ensures the platform swiftly recovers and maintains the capacity to process required tasks, embodying resilience.
@@ -122,7 +122,7 @@ Our cache layers follow the best practices and are continuously improved to prov
 
 Leveraging cloud technology and microservices enables us to efficiently manage and scale our resources based on demand, thanks to built-in features like autoscaling.
 
-Our multi-tenant architecture ensures elastic scalability, allowing stores to easily adapt to changing business requirements and handle traffic peaks on events like Black Friday. As your operation grows, our platform accommodates increased demand while maintaining performance.
+Our multi-tenant architecture ensures elastic scalability, allowing stores to easily adapt to changing business requirements and handle traffic peaks during events like Black Friday. As your operation grows, our platform accommodates increased demand while maintaining performance.
 
 ![Scalability](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/Cloud-infrastructure/scalability.jpg)
 
