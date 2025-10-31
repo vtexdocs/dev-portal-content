@@ -162,7 +162,7 @@ Includes settings for [Lighthouse](https://developer.chrome.com/docs/lighthouse/
 
 | Property       | Type       | Description                                     | Example |
 |----------------|------------|-------------------------------------------------|----------------|
-| `server`       | `string`   | The server URL for running Lighthouse audits.   | `process.env.BASE_SITE_URL 'http://localhost:3000'` |
+| `server`       | `string`   | The server URL for running Lighthouse audits.   | `process.env.BASE_SITE_URL \| 'http://localhost:3000'` |
 | `pages`        | `object`   | Maps the URL of pages to be audited by Lighthouse. |          |
 | &nbsp;&nbsp;├─ `home`      | `string`   | URL of the homepage.                           | `'/'`  |
 | &nbsp;&nbsp;├─ `pdp`       | `string`   | URL of a product detail page.                  | `"/headphone-white-10000006/p"` |
