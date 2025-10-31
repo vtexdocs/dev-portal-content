@@ -7,7 +7,7 @@ createdAt: "2020-11-23T14:49:49.171Z"
 updatedAt: "2025-10-30T16:07:14.409Z"
 ---
 
-In this guide, you'll learn how to indicate alternative versions of localized landing pages in cross-border stores to improve SEO and ensure search engines display the correct content for each region.
+In this guide, you'll learn how to indicate alternate versions of localized landing pages in cross-border stores to improve SEO and ensure search engines display the correct content for each region.
 
 If your store operates in multiple regions and you have different versions of a [landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) for each, you should link them as alternate versions. This practice helps search engines understand the relationship between your localized pages, ensuring they serve the right content to the right audience and improving your store's SEO.
 
