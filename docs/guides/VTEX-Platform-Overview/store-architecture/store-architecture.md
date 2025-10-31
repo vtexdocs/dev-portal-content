@@ -197,7 +197,7 @@ The frontend layer includes font type, colors, styles, images, buttons, etc. The
 
 ![headless](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/headless.png)
 
-The diagram above represents an account implemented with [FastStore](https://developers.vtex.com/docs/guides/faststore), the VTEX native solution that allows developers to build headless storefronts. It outlines the main components of a headless implementation, providing an overview that can be expanded to address specific business needs.
+The diagram above represents an account implemented with [FastStore](https://developers.vtex.com/docs/guides/faststore), the VTEX-native solution that allows developers to build headless storefronts. It outlines the main components of a headless implementation, providing an overview that can be expanded to address specific business needs.
 
 >ℹ️ If your store uses a third-party CMS instead of VTEX storefront solutions, you can leverage VTEX APIs to build a headless shopping experience. Learn more in the [Headless Commerce](https://developers.vtex.com/docs/guides/headless-commerce) guide and the Pragmatic Composability section in the [Composability](https://developers.vtex.com/docs/guides/composability#pragmatic-composability) guide.
 
