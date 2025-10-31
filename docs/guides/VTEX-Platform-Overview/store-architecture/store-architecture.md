@@ -40,7 +40,7 @@ Below is an integration flow diagram in a B2C architecture, where asynchronous c
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-Platform-Overview/store-architecture/b2c-integration-flow.png)
 
-An example of an asynchronous call is the stock update, represented by a black arrow pointing from the ERP to the Inventory module. A real-time update of payment rates is represented by a blue arrow, with information exchanged between the blocks. This last scenario is synchronous because it occurs in a critical stage of the customer purchase flow.
+An example of an asynchronous call is the stock update, represented by a black arrow pointing from the ERP to the Inventory module. A real-time update of payment rates is represented by a blue arrow, indicating information exchange between the blocks. This last scenario is synchronous because it occurs in a critical stage of the customer purchase flow.
 
 The architecture suggested here extends beyond B2C, as you will see in the following sections.
 
