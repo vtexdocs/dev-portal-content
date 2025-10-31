@@ -103,7 +103,7 @@ usePageViewObserver({ navigationRef });
 
 To enhance the quality of pageview capture, the Activity Flow SDK can record `orderGroup` (or `orderPlaced`) and any query parameters from the navigator stack. These parameters are crucial for validating data and confirming order placements.
 
-To activate this feature, include the necessary parameter in your page redirect configuration. See the example below:
+To enable this feature, include the necessary parameter in your page redirect configuration. See the example below:
 
 ```ts //checkout_screen.tsx
 <TouchableOpacity
@@ -121,26 +121,131 @@ To activate this feature, include the necessary parameter in your page redirect 
 
 ### Tracking deep links
 
-The Activity Flow SDK automatically captures deep links' query parameters from the `usePageViewObserver` hook and includes them in page view events. To enable this feature, configure deep linking in your app for each platform: [Android](#android) or [iOS](ios).
+The Activity Flow SDK automatically captures deep links' query parameters from the `usePageViewObserver` hook and includes them in page view events. To enable this feature, configure deep linking in your app according to its platform: [Android](#android) or [iOS](#ios).
 
 #### Android
 
-To enable deep link handling in your Android app, add intent filters to your `AndroidManifest.xml` file for each route that can be accessed via deep link. See the example below:
+To enable deep link handling in your Android app, add intent filters to the `AndroidManifest.xml` file for each route that can be accessed via deep link. See the example below:
 
+```xml AndroidManifest.xml
+<!-- Deep link via HTTPS -->
 <intent-filter>
   <action android:name="android.intent.action.VIEW" />
   <category android:name="android.intent.category.DEFAULT" />
   <category android:name="android.intent.category.BROWSABLE" />
   <data
     android:scheme="https"
-    android:host="example.com"
-    android:pathPrefix="/product" />
+    android:host="mystore.com"
+    android:pathPrefix="{APP_ROUTE}"
+  />
 </intent-filter>
+<!-- Deep link via custom scheme -->
+<intent-filter>
+  <action android:name="android.intent.action.VIEW" />
+  <category android:name="android.intent.category.DEFAULT" />
+  <category android:name="android.intent.category.BROWSABLE" />
+  <data android:scheme="{YOUR_CUSTOM_SCHEME}" />
+</intent-filter>
+```
+
+This `AndroidManifest` adds two intent filters for deep linking: one for HTTPS URLs starting with `"https://example.com/{APP_ROUTE}"` and another for a custom scheme `"{YOUR_CUSTOM_SCHEME}"`. Both use `action.VIEW`, `category_DEFAULT`, and `category_BROWSABLE`, enabling the Activity Flow to launch from browsers or other apps.
+The data tag for deep link via HTTP specifies the `scheme`, `host`, and an optional `pathPrefix`, matching any path that begins with that prefix (for example, **"/products/42"** if `{APP_ROUTE}` is **"/products"**). The main difference between intent filters for different routes is the `android:pathPrefix` attribute, which specifies the app route.
+For a deep link via a custom scheme, the data tag sets the scheme, matching any URL that starts with that scheme (for example, **myapp://...** if `{YOUR_CUSTOM_SCHEME}` is **myapp**). 
 
 #### iOS
 
-To enable deep link handling in your iOS app, configure `Info.plist` and `AppDelegate` to handle custom URL schemes and Universal Links. For example, add your URL scheme to Info.plist and handle incoming URLs in AppDelegate.
+To enable deep link handling in your iOS app, add your URL scheme to the `Info.plist` file and handle incoming URLs in the `AppDelegate` file:
 
+1. Configure `info.plist`
+
+To register your custom URL scheme, add the following configuration to your `Info.plist` file:
+
+```ts info.plist
+<key>CFBundleURLTypes</key>
+<array>
+ <dict>
+  <key>CFBundleURLSchemes</key>
+  <array>
+   <string>{YOUR_BUNDLE_URL_SCHEME}</string>
+  </array>
+  <key>CFBundleURLName</key>
+   <string>{YOUR_BUNDLE_URL_NAME}</string>
+ </dict>
+</array>
+```
+
+In the `info.plist` configuration, `{YOUR_BUNDLE_URL_SCHEME}` is the custom URL scheme your app will handle, that is, the prefix before `://` in deep links. For example, setting it to `myapp` makes links like `myapp://path` open your app. Enter only the scheme name, without `://`. The `{YOUR_BUNDLE_URL_NAME}` label is a unique identifier for this URL type entry, typically in reverse-DNS format, used to distinguish the configuration and not to affect routing. For example, `com.example.appname`.
+
+2. Configure `AppDelegate`
+
+To handle incoming deep links, modify your `AppDelegate.swift` (or `AppDelegate.mm`) file. The following example handles deep links for cold starts, when the app is not running, and warm starts, when the app is already running.
+
+```ts AppDelegate.swift
+import UIKit
+import React
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+  ) -> Bool {
+    // ... your existing setup code ...
+    // Capture initial URL if app was launched with a deep link (cold start)
+    if let initialURL = launchOptions?[UIApplication.LaunchOptionsKey.url] as? URL {
+      NotificationCenter.default.post(
+        name: NSNotification.Name("RCTOpenURLNotification"),
+        object: nil,
+        userInfo: ["url": initialURL]
+      )
+    }
+    return true
+  }
+
+  * Handles incoming URLs from Custom URL Schemes (e.g., myapp://path)
+  func application(
+    _ app: UIApplication,
+    open url: URL,
+    options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+  ) -> Bool {
+    // Post notification for Activity Flow's CaptureDeepLinkModule
+    NotificationCenter.default.post(
+      name: NSNotification.Name("RCTOpenURLNotification"),
+      object: nil,
+      userInfo: ["url": url]
+    )
+    // Pass the URL to React Native's standard linking manager
+    return RCTLinkingManager.application(app, open: url, options: options)
+  }
+
+  * Handles incoming URLs from Universal Links (e.g., https://mystore.com/product)
+  func application(
+    _ application: UIApplication,
+    continue userActivity: NSUserActivity,
+    restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void
+  ) -> Bool {
+    // Check if the activity is a web browsing activity (Universal Link)
+    if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+      // Post notification for Activity Flow's CaptureDeepLinkModule
+      if let url = userActivity.webpageURL {
+        NotificationCenter.default.post(
+          name: NSNotification.Name("RCTOpenURLNotification"),
+          object: nil,
+          userInfo: ["url": url]
+        )
+      }
+    }
+    // Pass the user activity to React Native's standard linking manager
+    return RCTLinkingManager.application(
+      application,
+      continue: userActivity,
+      restorationHandler: restorationHandler
+    )
+  }
+
+  return false
+}
+```
 
 ### Tracking ad events
 
