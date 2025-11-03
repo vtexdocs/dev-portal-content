@@ -20,7 +20,7 @@ We've implemented the new **Access Control List (ACL)** feature in the B2B Suite
 - Cost centers
 - Members linked to an organization
 
-If the user doesn't have the required permissions, the **Buyer Organizations** section won't be displayed in the Admin.
+If the user doesn't have the required permissions, the **Buyer Organizations** section won't be displayed in the VTEX Admin.
 
 ## What needs to be done?
 
