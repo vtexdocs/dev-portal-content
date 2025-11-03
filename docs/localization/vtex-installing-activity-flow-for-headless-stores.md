@@ -58,29 +58,9 @@ window.vtexafenv = {
 
 >ℹ️ Replace the values between the curly brackets with your account, environment, and workspace names.
 
-### Step 3 - (Optional) Merging scripts
+If you prefer, you can combine both the script loader and the parameter definition into a single script block.
 
-You can combine both the script loader and the parameter definition into a single script block. Add the following code to the <head> tag:
-
-```js
-<script>
-     (function(v,t,e,x,a,f,s){
-
-f=v.vtexaf=v.vtexaf||function(){(f.q=f.q||[]).push(arguments)};
-          f.l=+new Date;s=t.createElement(e);s.async=!0;
-          s.src=x;a=t.getElementsByTagName(e)[0];
-          a.parentNode.insertBefore(s,a)
-
-})(window,document,'script','https://activity-flow.vtex.com/af/af.js');
-window.vtexafenv = {
-   account: '<ACCOUNT NAME>',
-   env: '<ENVIRONMENT TYPE>',
-   workspace: '<WORKSPACE TYPE>'
-};
-</script>
-```
-
-### Step 4 - Validate the installation
+### Step 3 - Validate the installation
 
 To validate if the script is installed in your store, follow the steps below:
 
