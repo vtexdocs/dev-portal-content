@@ -36,7 +36,11 @@ f=v.vtexaf=v.vtexaf||function(){(f.q=f.q||[]).push(arguments)};
 
 ### Step 2 - Defining default parameters
 
-To distinguish the origin of events, define the script parameters. Add a new script in the <head> tag, after the Activity Flow script, with the following structure:
+Next, configure your store’s identification parameters.
+
+These settings allow Activity Flow to recognize which account, environment, and workspace the events belong to.
+
+1. Add a new script in the `<head>` tag, right after the Activity Flow script, with the following structure:
 
 ```js
 <script>
