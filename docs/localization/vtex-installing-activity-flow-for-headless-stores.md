@@ -6,7 +6,9 @@ hidden: false
 createdAt: "2025-10-23T13:37:06.246Z"
 ---
 
-In this guide, you'll learn how to install and configure the Activity Flow script in your Headless store.
+In this guide, you'll learn how to install and configure the [Activity Flow](LINK) script in your Headless store.
+
+This setup allows Activity Flow to capture real user interactions and send them to VTEX for analysis, enabling insights into performance, engagement, and shopper behavior.
 
 ## Intructions
 
