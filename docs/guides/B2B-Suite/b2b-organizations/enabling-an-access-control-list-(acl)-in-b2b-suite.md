@@ -50,7 +50,7 @@ vtex install vtex.b2bstore@5.0.0
 vtex install vtex.b2b-suite@2.0.0
 ```
 
-> ℹ️ If any of the apps above isn't installed in your store, update only the ones you have.
+> ℹ️ If any of the apps above is not installed in your store, update only the ones you have.
 
 3. Run the command below to check if there are any dependencies on older versions.
 
@@ -58,7 +58,7 @@ vtex install vtex.b2b-suite@2.0.0
 vtex deps list | grep <app-name-without-version>
 ```
 
-4. If there are any apps with an older version, update them as described in step 1
+4. If there are any apps with an older version, update them as described in step 2
 
 >⚠️ To revert to the previous version, install the previous versions of each app.
 
@@ -66,7 +66,7 @@ vtex deps list | grep <app-name-without-version>
 
 If your account uses custom apps that depend on the **b2b-organizations-graphql** or **storefront-permissions** apps, you need to update the `manifest.json` file to include the permission policies.
 
-The `manifest.json` file is located at the **root of the app repository**.  
+The `manifest.json` file is located at the **root of the app repository**. 
 Open the file in a code editor and add the following policies in the `policies` section:
 
 ```json
