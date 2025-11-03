@@ -18,7 +18,7 @@ Activity Flow relies on a client-side script to collect navigation data.
 
 To ensure that it doesn’t delay page rendering, you must load the script asynchronously.
 
-1. Open your headless storefront project. 
+1. Open your headless storefront project.
 2. Inside the `<head>` tag of each page you want to monitor, add the following snippet:
 
 ```js
