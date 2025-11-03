@@ -8,7 +8,7 @@ createdAt: "2025-10-23T13:37:06.246Z"
 
 Activity Flow is VTEX's Real User Monitoring (RUM) solution that captures and analyzes shoppers' navigation actions to generate metrics and insights that help improve the user experience.
 
-The tool tracks page views and sessions, offering a real-time view of the shopper's journey. It captures clicks, views and impressions to evaluate engagement in the products. Additionally, it assesses Web Vitals performance metrics and analyzes HTTP requests to identify failures that may impact the user experience. When integrated with [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads), it captures ad events, including impressions and clicks, for a comprehensive overview.
+The tool tracks page views and sessions, offering a real-time view of the shopper's journey. It captures clicks, views and impressions to evaluate engagement in the products. Additionally, it assesses Web Vitals performance metrics and analyzes HTTP requests to identify failures that may impact the user experience. When integrated with [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads), Activity Flow also captures ad events, such as impressions and clicks.
 
 This guide provides an overview of the Activity Flow architecture and how to get started with its tracking capabilities.
 
