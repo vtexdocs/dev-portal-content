@@ -50,7 +50,7 @@ If the user doesn't have the required permissions, the **Buyer Organizations** s
 
    If there are any apps with an older version, update them as described in step 1.
 
-3. Add the necessary permissions to roles in the Admin, within the Buyer Organizations/Management resource:
+3. Add the following [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to [custom roles](https://help.vtex.com/en/tutorial/creating-roles) associated to users that need to manage Buyer Organizations:
 
 4. If you use custom apps that depend on the b2b-organizations-graphql and storefront-permissions apps, update the `manifest.json` file to include permission policies:
 
