@@ -56,7 +56,7 @@ vtex deps list | grep <app-name-without-version>
 | **buyer_organization_view** | Allows viewing organizations, cost centers, and users.          |
 | **buyer_organization_edit** | Allows creating, editing, and deleting organizations, cost centers, and users. |
 
-5. If you use custom apps that depend on the b2b-organizations-graphql and storefront-permissions apps, update the `manifest.json`file to include permission policies:
+5. If you use custom apps that depend on the b2b-organizations-graphql and storefront-permissions apps, update the `manifest.json` file to include permission policies:
 
 ```json
 "policies": [
