@@ -14,7 +14,7 @@ This setup allows Activity Flow to capture real user interactions and send them 
 
 ### Step 1 - Adding the Activity Flow script asynchronously
 
-Activity Flow relies on a client-side script to collect navigation data. 
+Activity Flow relies on a client-side script to collect navigation data.
 
 To ensure that it doesn’t delay page rendering, you must load the script asynchronously.
 
