@@ -10,7 +10,7 @@ tags:
     - B2B Suite
 ---
 
-The [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) now allows you to configure specific permissions to control user access to buyer organizations, cost centers, and members in the VTEX Admin. This feature ensures security and control, allowing only authorized users to view and edit this information.
+The [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) now allows you to configure specific permissions to control user access to buyer organizations, cost centers, and members in the VTEX Admin. This feature provides more security and control, allowing only authorized users to view and edit this information.
 
 ## What has changed?
 
