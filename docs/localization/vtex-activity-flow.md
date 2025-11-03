@@ -12,6 +12,10 @@ The tool tracks page views and sessions, offering a real-time view of the shoppe
 
 This guide provides an overview of the Activity Flow architecture and how to get started with its tracking capabilities.
 
+> ℹ️ Manual configuration of Activity Flow is only required for headless stores or mobile apps. For setup instructions, see [Next steps](#next-steps)
+>
+> If your store uses VTEX’s native storefront solutions (FastStore, Store Framework, or the Legacy CMS Portal), no additional configuration is needed. 
+
 ## Activity Flow architecture
 
 The Activity Flow architecture is designed to have a minimal performance impact due to efficient data handling and task scheduling. It consists of the following stages:
