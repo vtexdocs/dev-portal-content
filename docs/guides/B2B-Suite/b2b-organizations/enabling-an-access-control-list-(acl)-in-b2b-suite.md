@@ -8,13 +8,13 @@ updatedAt: "2025-11-03T09:00:09.698Z"
 
 The **Access Control List (ACL)** feature in B2B Suite allows you to restrict access to resources such as **buyer organizations**, **cost centers**, and **members** in the VTEX Admin. You need to set up specific permissions to allow the users to view or manage these resources.
 
-If a user doesn't have the required permissions, they won't be able to access the **Buyer organizations** section in the Admin.
+If a user doesn't have the required permissions, they won't be able to access the **Buyer organizations** section in the VTEX Admin.
 
 ## Required permissions
 
-To allow access to the apps related to B2B Organizations in the Admin, you need to add the following roles:
+To allow access to the apps related to B2B Organizations in the VTEX Admin, you need to add the following roles:
 
-| Nome da permissão           | Descrição                                                                 |
+| Permission Name           | Description                                                                 |
 |------------------------------|---------------------------------------------------------------------------|
 | **buyer_organization_view** | Allows viewing organizations, cost centers, and users.             |
 | **buyer_organization_edit** | Allows creating, editing, and deleting organizations, cost centers, and users. |
@@ -66,7 +66,7 @@ vtex deps list | grep <app-name-without-version>
 
 If your account uses custom apps that depend on the **b2b-organizations-graphql** or **storefront-permissions** apps, you need to update the `manifest.json` file to include the permission policies.
 
-The `manifest.json` file is located at the root of the app repository. 
+The `manifest.json` file is located at the root of the app repository.
 Open the file in a code editor and add the following policies in the `policies` section:
 
 ```json
