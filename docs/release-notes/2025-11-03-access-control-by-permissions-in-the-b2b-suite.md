@@ -14,7 +14,7 @@ The [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) now allows
 
 ## What has changed?
 
-We've implemented the new **Access Control List (ACL)** feature in the B2B Suite,  allowing administrators to define which users can view or edit:
+We've implemented the new **Access Control List (ACL)** feature in the B2B Suite, allowing administrators to define which users can view or edit:
 
 - Buyer organizations
 - Cost centers
