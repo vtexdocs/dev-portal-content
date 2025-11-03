@@ -26,43 +26,44 @@ If the user doesn't have the required permissions, the **Buyer Organizations** s
 
 1. Update the B2B Suite apps to the latest major versions using the commands below in the terminal:
 
-```json
-vtex install vtex.storefront-permissions@3.0.0 --force
-vtex install vtex.b2b-organizations-graphql@2.0.1 --force
-vtex install vtex.b2b-quotes-graphql@4.0.1 --force
-vtex install vtex.b2b-orders-history@2.0.1
-vtex install vtex.storefront-permissions-ui@3.0.1
-vtex install vtex.b2b-organizations@3.0.1
-vtex install vtex.b2b-quotes@3.0.1
-vtex install vtex.storefront-permissions-components@2.0.1
-vtex install vtex.b2b-admin-customers@2.0.1
-vtex install vtex.b2b-my-account@2.0.0
-vtex install vtex.b2b-checkout-settings@3.0.1 --force
-vtex install vtex.b2bstore@5.0.0
-vtex install vtex.b2b-suite@2.0.0
-```
+    ```json
+    vtex install vtex.storefront-permissions@3.0.0 --force
+    vtex install vtex.b2b-organizations-graphql@2.0.1 --force
+    vtex install vtex.b2b-quotes-graphql@4.0.1 --force
+    vtex install vtex.b2b-orders-history@2.0.1
+    vtex install vtex.storefront-permissions-ui@3.0.1
+    vtex install vtex.b2b-organizations@3.0.1
+    vtex install vtex.b2b-quotes@3.0.1
+    vtex install vtex.storefront-permissions-components@2.0.1
+    vtex install vtex.b2b-admin-customers@2.0.1
+    vtex install vtex.b2b-my-account@2.0.0
+    vtex install vtex.b2b-checkout-settings@3.0.1 --force
+    vtex install vtex.b2bstore@5.0.0
+    vtex install vtex.b2b-suite@2.0.0
+    ```
 
 2. Check legacy dependencies using the command:
 
-```json
-vtex deps list | grep <app-name-without-version>
-```
+    ```json
+    vtex deps list | grep <app-name-without-version>
+    ```
 
-3. Update all apps that are still using legacy versions.
-4. Add the necessary permissions to roles in the Admin, within the Buyer Organizations/Management resource:
+   If there are any apps with an older version, update them as described in step 1.
 
-| Permission                | Description                                                     |
-|----------------------------|-----------------------------------------------------------------|
-| **buyer_organization_view** | Allows viewing organizations, cost centers, and users.          |
-| **buyer_organization_edit** | Allows creating, editing, and deleting organizations, cost centers, and users. |
+3. Add the necessary permissions to roles in the Admin, within the Buyer Organizations/Management resource:
 
-5. If you use custom apps that depend on the b2b-organizations-graphql and storefront-permissions apps, update the `manifest.json`file to include permission policies:
+    | Permission                | Description                                                     |
+    |----------------------------|-----------------------------------------------------------------|
+    | **buyer_organization_view** | Allows viewing organizations, cost centers, and users.          |
+    | **buyer_organization_edit** | Allows creating, editing, and deleting organizations, cost centers, and users. |
 
-```json
-"policies": [
-  { "name": "buyer_organization_view" },
-  { "name": "buyer_organization_edit" }
-]
-```
+4. If you use custom apps that depend on `b2b-organizations-graphql` and `storefront-permissions`, update the `manifest.json`file to include permission [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies):
+
+    ```json
+    "policies": [
+    { "name": "buyer_organization_view" },
+    { "name": "buyer_organization_edit" }
+    ]
+    ```
 
 > ℹ️ For more information, see the [Enabling an access control list (ACL) in B2B Suite](https://developers.vtex.com/docs/guides/enabling-an-access-control-list-acl-in-b2b-suite) documentation.
