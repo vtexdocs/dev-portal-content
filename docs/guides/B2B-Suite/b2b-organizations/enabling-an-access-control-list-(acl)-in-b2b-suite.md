@@ -1,6 +1,6 @@
 ---
 title: "Enabling an access control list (ACL) in B2B Suite"
-slug: "enabling-an-access-control-list-(acl)-in-b2b-suite"
+slug: "enabling-an-access-control-list-acl-in-b2b-suite"
 hidden: false
 createdAt: "2025-11-03t09:00:09.698z"
 updatedAt: "2025-11-03t09:00:09.698z"
