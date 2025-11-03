@@ -46,7 +46,7 @@ Follow the steps below for each localized version of your landing page.
 
 ### Step 2 - Updating the route
 
-1. Erase the previous query and use the following mutation command
+1. Clear the previous query and use the following mutation
 
   ```graphql
   mutation saveInternal($args: InternalInput!) {
