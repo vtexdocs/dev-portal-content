@@ -80,7 +80,7 @@ window.vtexafenv = {
 </script>
 ```
 
-### Step 4 - Check the script
+### Step 4 - Validate the installation
 
 To validate if the script is installed in your store, follow the steps below:
 
