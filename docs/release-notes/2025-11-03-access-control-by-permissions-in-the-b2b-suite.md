@@ -54,7 +54,7 @@ If the user doesn't have the required permissions, the **Buyer Organizations** s
 
 4. If you use custom apps that depend on the b2b-organizations-graphql and storefront-permissions apps, update the `manifest.json` file to include permission policies:
 
-5. If you use custom apps that depend on `b2b-organizations-graphql` and `storefront-permissions`, update the `manifest.json`file to include permission [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies):
+5. If you use custom apps that depend on `b2b-organizations-graphql` and `storefront-permissions`, update the `manifest.json` file to include permission [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies):
 
     ```json
     "policies": [
