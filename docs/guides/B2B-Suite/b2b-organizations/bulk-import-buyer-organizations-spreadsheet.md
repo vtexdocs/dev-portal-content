@@ -106,7 +106,7 @@ Check the default columns present in the Cost Centers tab in the table below. Ma
 | Cost Center ID* | String  | Identifier linking the member to a specific cost center within the organization. |
 | Name* | String  | Member's full name used for identification and communication. |
 | Email* | String  | Email address of the member serving as a primary point of contact for communication. |
-| Role Id* | GUID | Unique identifier denoting the member's role within the organization. |
+| Role ID* | GUID | Unique identifier denoting the member's role within the organization. |
 | Can Impersonate | Boolean | Indicates if the member can impersonate another user within the system. |
 
 ## Custom fields
