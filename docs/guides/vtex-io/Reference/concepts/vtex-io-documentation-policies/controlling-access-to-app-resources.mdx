@@ -68,7 +68,7 @@ Recommendations to use role-based policies:
 
 To declare a role-based policy for an app, create a `policies.json` file in the app's root folder. The basic structure of this file is as follows:
 
-```json
+```json policies.json
 {
   {
     "name": "resolve-graphql",
@@ -119,7 +119,7 @@ To create a resource-based policy, the resource itself must list who it trusts. 
 
 The `service.json` file must have something similar to the following:
 
-```json
+```json node/service.json mark=6:12
 {
   "routes": {
     "new-order": {
@@ -176,7 +176,7 @@ To include other apps in `principals`, use the following VRN syntax:
 
 The example below illustrates two policies with intersecting principals that use wildcards. The first policy allows all apps to use the `POST` method in a route. The second policy denies access to the same route and method, but for all versions of two specific apps.
 
-```json
+```json node/service.json mark=4,7,11,14:15
 {
   ...
   "policies": [{

@@ -25,13 +25,13 @@ Apps need to declare policies to gain access to external resources, which includ
 - Access to VTEX APIs
 - Access to resources exposed through role-based policies
 
-> ℹ️Declaring policies is not required for resources exposed through [resource-based policies](?tab=t.0#heading=h.sszd0hc2sxz), since these policies already define which apps are allowed.
+> ℹ️ Declaring policies is not required for resources exposed through [resource-based policies](?tab=t.0#heading=h.sszd0hc2sxz), since these policies already define which apps are allowed.
 
 ### Policies from License Manager
 
 These policies have predefined names and are related to native VTEX resources. To declare a policy of this type in the manifest, use the policy name in the `"name”` field. See the example below:
 
-```json
+```json manifest.json mark=3:5
 {
   "policies": [
     {
@@ -47,7 +47,7 @@ You can find all available policy names in the **Key** column of the [License Ma
 
 These policies grant access to app routes exposed with [role-based policies](?tab=t.0#heading=h.a8px17wrz58r). This policy type is used to access [GraphQL queries exposed by IO apps](https://developers.vtex.com/docs/guides/developing-a-graphql-api-in-service-apps). To declare a policy of this type in the manifest, use the format `{vendor}.{app-name}:{policy-name}` in the `"name"` field. See the example below:
 
-```json
+```json manifest.json mark=3:5
 {
   "policies": [
     {
@@ -80,7 +80,7 @@ Consider an app that needs access to the following resources:
 
 For the app to gain access to these resources, declare the outbound-access policies as in the example below:
 
-```json
+```json manifest.json mark=3:23
 {
   "policies": [
     {
