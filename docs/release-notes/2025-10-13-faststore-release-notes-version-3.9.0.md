@@ -9,7 +9,7 @@ tags:
     - FastStore
 ---
 
-Starting with **version 3.90.0**, FastStore is adopting a **new release cadence**. From now on, every new **minor version** will include a **dedicated release note** highlighting key improvements, fixes, and notable changes.
+Starting with [**version 3.90.0**](https://github.com/vtex/faststore/releases/tag/v3.90.0), FastStore is adopting a **new release cadence**. From now on, every new **minor version** will include a **dedicated release note** highlighting key improvements, fixes, and notable changes.
 
 Version 3.90.0 focuses on improving analytics tracking, fixing authentication issues for Master Data requests, enhancing UI responsiveness, and refining B2B components. Check out the highlights below.
 
