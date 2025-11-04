@@ -77,7 +77,7 @@ v3_s7 --> done
 
 This guide is for VTEX accounts currently using FastStore v1 that need to migrate to FastStore v3.
 
-Before starting the migration, verify your project’s FastStore version and prepare the required GitHub setup.
+Before starting the migration, verify your project's FastStore version and prepare the required GitHub setup.
 <Steps>
   
 ### Check your FastStore version
@@ -129,14 +129,14 @@ Each VTEX account or subaccount manages its own VTEX IO app installations, permi
 
 Audit all VTEX IO apps from your v1 store to identify compatibility issues and prepare them for migration.
 
-|  Step   |  Description   |
+| Step | Description |
 | --- | --- |
-| **1.  Map the store apps** | Map all apps (`vendor.name`, current version) used by the v1 store. |
-| **2.  Check v3 compatibility** | For each app, confirm whether it’s compatible with FastStore v3.<br><br>* If incompatible: choose a path of custom integration, replace with an alternative, or defer/removal.<br>* If compatible: continue to read the steps in this table. |
-| **3.  Decide the cross‑account install strategy** | Determine whether the app can be installed in account v3. If it’s currently tied to account v1, choose one:<br><br>* Public app: Publish so it can be installed in other accounts.<br>* [Sponsor account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) \+ edition: Use a sponsor account to distribute the app to target accounts via an edition.<br>* Private/single‑account: Rebuild/republish under the vendor for account Y or adjust distribution so Y can install. |
-| **4.  Update account‑specific pointers** | Audit the app for hard‑coded account or workspace references and change them from v1 to v3.<br><br>* Search for absolute URLs and paths like: `[https://{account}.myvtex.com/_v/](https://{account}.myvtex.com/_v/)...`, `…?an={account}`, or Internal routes or endpoints that include the account or workspace name.<br>* Replace with the v3 account values. Where possible, externalize pointers into configuration (env vars/app settings) to avoid future hardcoding. |
-| **5.  Plan for app data and settings** | You cannot transfer app data or app settings from one account to another.<br><br>* Export or document all current app settings (including secrets, API keys, and toggles).<br>* Recreate them manually in the v3 account after installation.<br>* Record any one‑time data seeding steps required by the app. |
-| **6.  Permissions and policies** | Review and update required policies for the app. Confirm any store or admin permissions needed in v3. |
+| **1. Map the store apps** | Map all apps (`vendor.name`, current version) used by the v1 store. |
+| **2. Check v3 compatibility** | For each app, confirm whether it’s compatible with FastStore v3.<ul><li>If incompatible: choose a path of custom integration, replace with an alternative, or defer/removal.</li><li>If compatible: continue to read the steps in this table.</li></ul> |
+| **3. Decide the cross-account install strategy** | Determine whether the app can be installed in account v3. If it’s currently tied to account v1, choose one:<ul><li>Public app: Publish so it can be installed in other accounts.</li><li><a href="https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account">Sponsor account</a> + edition: Use a sponsor account to distribute the app to target accounts via an edition.</li><li>Private/single-account: Rebuild/republish under the vendor for account Y or adjust distribution so Y can install.</li></ul> |
+| **4. Update account-specific pointers** | Audit the app for hard-coded account or workspace references and change them from v1 to v3.<ul><li>Search for absolute URLs and paths like `https://{account}.myvtex.com/_v/...`, `…?an={account}`, or internal routes or endpoints that include the account or workspace name.</li><li>Replace with the v3 account values. Where possible, externalize pointers into configuration (env vars/app settings) to avoid future hardcoding.</li></ul> |
+| **5. Plan for app data and settings** | You cannot transfer app data or app settings from one account to another.<ul><li>Export or document all current app settings (including secrets, API keys, and toggles).</li><li>Recreate them manually in the v3 account after installation.</li><li>Record any one-time data seeding steps required by the app.</li></ul> |
+| **6. Permissions and policies** | Review and update required policies for the app. Confirm any store or admin permissions needed in v3. |
 
 ### Step 4 - Recreate the Headless CMS content
 
