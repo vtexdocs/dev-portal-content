@@ -37,7 +37,7 @@ Introduced new `MyAccountTable` and `MyAccountHeader` components to standardize 
 In B2B stores, the Organization Drawer now displays the organization’s `corporateName`, ensuring consistency with the experimental **My Account B2B** menu. This change updates the `useOrganizations` hook in the FastStore SDK to fetch and return the `corporateName` alongside the organization name.
 
 **B2B: contract name source updated (PR: [\#3051](https://github.com/vtex/faststore/pull/3051))**  
-The B2B contract name is now sourced from the `corporateName` field in the user's session data (`session.person.corporateName`), which is retrieved from the Master Data CL entity. This change removes the `accountName` field from the `StoreSession` GraphQL type. 
+The B2B contract name is now sourced from the `corporateName` field in the user's session data (`session.person.corporateName`), which is retrieved from the Master Data CL entity. This change removes the `accountName` field from the `StoreSession` GraphQL type.
 
 >⚠️ Developers should update any custom components previously using `session.accountName` to use `session.person.corporateName`.
 
@@ -53,4 +53,4 @@ A new utility automatically adds the `X-VTEX-API-AppKey` and `X-VTEX-API-AppToke
 Fixed an issue where the Badge in the experimental My Account for B2B did not display when the count was `0`. The Badge now correctly appears in all cases, ensuring consistent UI behavior.
 
 **Table component responsiveness (**PR: [\#3066](https://github.com/vtex/faststore/pull/3066)**)**  
-Fixed an issue where the `Table` component from `@faststore/ui` would overflow and break the page layout on smaller viewports. The component now includes horizontal scrolling for wide tables (e.g., the experimental **My Account for B2B** orders page), ensuring a responsive and user-friendly experience across all screen sizes.  
+Fixed an issue where the `Table` component from `@faststore/ui` would overflow and break the page layout on smaller viewports. The component now includes horizontal scrolling for wide tables (e.g., the experimental **My Account for B2B** orders page), ensuring a responsive and user-friendly experience across all screen sizes
