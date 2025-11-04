@@ -14,11 +14,11 @@ hidePaginationNext: false
 Weni by VTEX CLI is a solution that helps you improve your customer service by using personalized AI-powered agents. This command-line tool simplifies the creation and management of multiple AI agents. Integrated with the Weni platform, it enables the development and deployment of high-performance agents across various communication channels, such as WhatsApp, Instagram, Facebook, and more.
 
 With the CLI, you can:
-- Create, deploy and manage multiple AI agents
+- Create, deploy, and manage multiple AI agents
 - Add custom tools to the agents
 - Update agent configuration and behavior
 
-> ⚠️ In order to use the Weni by VTEX CLI, you must have: a Weni Platform account; an account at [weni.ai](https://weni.ai/en); and at least one project in your account.
+> ⚠️ To use the Weni by VTEX CLI, you must have: a Weni Platform account; an account at [weni.ai](https://weni.ai/en); and at least one project in your account.
 
 The content is organized as follows:
 - [Installing the CLI](#installing-the-cli)
@@ -27,10 +27,11 @@ The content is organized as follows:
 ## Installing the CLI
 
 There are two installation methods:
+
 - A [quick installation](#install-via-pip) with `pip`.
 - A [manual installation](#install-via-poetry) with `Poetry`, for development purposes.
 
-#### Install via PIP
+#### Install via pip
 
 To install the CLI using `pip`, open the terminal and run the following command:
 
@@ -40,16 +41,16 @@ pip install weni-cli
 
 #### Install via Poetry
 
-To install the CLI manually, follow this step by step:
+To install the CLI manually, follow these steps:
 
-1. Clone the repository running the following command:
+1. Clone the repository by running the following command:
 
 ```bash
 git clone https://github.com/weni-ai/weni-cli.git
 cd weni-cli
 ```
 
-2. Install dependencies and make the CLI executable running the following command:
+2. Install dependencies and make the CLI executable by running the following command:
 
 ```bash
 poetry shell
@@ -79,9 +80,9 @@ If you encounter any issues:
    - Error message
    - Steps to reproduce
 
-#### Getting started
+#### Getting Started
 
-To start your first , follow the steps below:
+To start your first agent, follow the steps below:
 
 1. Open the terminal and run the following command:
 
@@ -89,10 +90,10 @@ To start your first , follow the steps below:
 weni login
 ```
 
-This should open your browser on the login page for authentication. If that does not happen, you can open the URL showed in the terminal.
+This should open your browser on the login page for authentication. If that does not happen, you can open the URL shown in the terminal.
 
 2. Log in using your Weni by VTEX account and password.
-3. List your projects running the following command:
+3. List your projects by running the following command:
 
 ```bash
 weni project list
@@ -114,9 +115,9 @@ Replace `your-project-uuid` with the UUID from the project list.
 weni project current
 ```
 
-You will see the project's UUID in the terminal's answer.
+You will see the project's UUID in the terminal output.
 
-6. To use create an agent, run the following command:
+6. To create an agent, run the following command:
 
 ```bash
 weni init
@@ -133,9 +134,9 @@ agents:
     description: "Weni's CEP agent"
     instructions:
       - "You are an expert in providing addresses to the user based on a postal code provided by the user"
-      - "The user will send a ZIP code (postal code) and you must provide the address corresponding to this code."
+      - "The user will send a ZIP code (postal code) and you must provide the address for this code."
     guardrails:
-      - "Don't talk about politics, religion or any other sensitive topic. Keep it neutral."
+      - "Don't talk about politics, religion, or any other sensitive topic. Keep it neutral."
     tools:
       - get_address:
           name: "Get Address"
@@ -145,7 +146,7 @@ agents:
           description: "Function to get the address from the postal code"
           parameters:
             - cep:
-                description: "postal code of a place"
+                description: "postal code"
                 type: "string"
                 required: true
 ```
