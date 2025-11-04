@@ -56,7 +56,6 @@ If the user doesn't have the required permissions, the **Buyer Organizations** s
 | `buyer_organization_view` | Allows viewing organizations, cost centers, and users. |
 | `buyer_organization_edit` | Allows creating, editing, and deleting organizations, cost centers, and users. |
 
-
 4. If you use custom apps that depend on `b2b-organizations-graphql` and `storefront-permissions`, update the `manifest.json` file to include permission [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies):
 
     ```json
