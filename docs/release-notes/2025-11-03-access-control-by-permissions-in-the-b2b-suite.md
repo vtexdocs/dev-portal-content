@@ -4,10 +4,9 @@ slug: "2025-11-03-access-control-by-permissions-in-the-b2b-suite"
 hidden: false
 type: "improved"
 createdAt: "2025-11-03T00:00:00.219Z"
-updatedAt: "2025-11-03T00:00:00.219Z"
+updatedAt: "2025-11-04T00:00:00.219Z"
 excerpt: "The B2B Suite now includes an Access Control List (ACL) to manage user permissions for buyer organizations, cost centers, and members."
-tags:
-    - B2B Suite
+
 ---
 
 The [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) now allows you to configure specific permissions to control user access to buyer organizations, cost centers, and members in the VTEX Admin. This feature provides more security and control, allowing only authorized users to view and edit this information.
@@ -52,9 +51,13 @@ If the user doesn't have the required permissions, the **Buyer Organizations** s
 
 3. Add the following [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to [custom roles](https://help.vtex.com/en/tutorial/creating-roles) associated to users that need to manage Buyer Organizations:
 
-4. If you use custom apps that depend on the b2b-organizations-graphql and storefront-permissions apps, update the `manifest.json` file to include permission policies:
+| Permission Name | Description |
+| ----------- | ------------ |
+| `buyer_organization_view` | Allows viewing organizations, cost centers, and users. |
+| `buyer_organization_edit` | Allows creating, editing, and deleting organizations, cost centers, and users. |
 
-5. If you use custom apps that depend on `b2b-organizations-graphql` and `storefront-permissions`, update the `manifest.json` file to include permission [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies):
+
+4. If you use custom apps that depend on `b2b-organizations-graphql` and `storefront-permissions`, update the `manifest.json` file to include permission [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies):
 
     ```json
     "policies": [
