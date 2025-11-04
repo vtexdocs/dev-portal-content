@@ -1,12 +1,11 @@
 ---
-title: Access control by permissions in the B2B Suite
+title: "Access control by permissions in the B2B Suite"
 slug: "2025-11-03-access-control-by-permissions-in-the-b2b-suite"
 hidden: false
 type: "improved"
 createdAt: "2025-11-03T00:00:00.219Z"
 updatedAt: "2025-11-04T00:00:00.219Z"
 excerpt: "The B2B Suite now includes an Access Control List (ACL) to manage user permissions for buyer organizations, cost centers, and members."
-
 ---
 
 The [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite) now allows you to configure specific permissions to control user access to buyer organizations, cost centers, and members in the VTEX Admin. This feature provides more security and control, allowing only authorized users to view and edit this information.
