@@ -17,4 +17,4 @@ Previously, if you changed the theme in the [discovery.config.js](https://develo
 
 ## What needs to be done?
 
-To change your store's theme and see the updates immediately without restarting the server, you need to update your FastStore CLI to the latest version. Follow the instructions in the [Updating the '@faststore/cli' package](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) guide.
+To change the store theme and see the updates immediately without restarting the server, you need to update your FastStore CLI to the latest version. Follow the instructions in the [Updating the '@faststore/cli' package](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) guide.
