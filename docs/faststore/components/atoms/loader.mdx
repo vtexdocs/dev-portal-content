@@ -9,6 +9,12 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Loader)
 
+The `Loader` component provides visual feedback to users during processing or loading states, helping maintain engagement and communicate that the system is working. Typical use cases include:
+
+- Indicating content or data is being loaded (e.g., product listings, search results).
+- Showing processing status during form submissions or checkout.
+- Displaying loading state within buttons during async actions (e.g., `Add to Cart`).
+
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
@@ -17,9 +23,11 @@ components:
   </Tab>
   <Tab>
     ```tsx
-    <Loader />
-    ``` ```tsx
-    <Loader />
+    import { Loader } from "@faststore/ui";
+
+    export default function Component() {
+      return <Loader />;
+    }
     ```
   </Tab>
 </Tabs>
@@ -60,7 +68,11 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Loader />
+    import { Loader } from "@faststore/ui";
+
+    export default function Component() {
+      return <Loader />;
+    }
     ```
   </Tab>
 </Tabs>
@@ -75,7 +87,11 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Loader variant="light" />
+    import { Loader } from "@faststore/ui";
+
+    export default function Component() {
+      return <Loader variant="light" />;
+    }
     ```
   </Tab>
 </Tabs>
@@ -99,6 +115,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Design tokens: Loader item
 
+Loader item tokens control the appearance of the individual animated dots that make up the loader, including their size, shape, and initial opacity.
+
 <TokenTable>
   <TokenRow token="--fs-loader-item-width" value="var(--fs-spacing-0)" />
   <TokenRow
@@ -116,6 +134,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Design tokens: Dark
 
+The dark variant (default) uses a darker color scheme, making it suitable for use on light backgrounds and most standard interface contexts.
+
 <TokenTable>
   <TokenRow
     token="--fs-loader-dark-item-bkg-color"
@@ -125,6 +145,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 </TokenTable>
 
 ### Design tokens: Light
+
+The light variant uses a lighter color scheme, ideal for displaying loaders on dark backgrounds or in high-contrast scenarios.
 
 <TokenTable>
   <TokenRow

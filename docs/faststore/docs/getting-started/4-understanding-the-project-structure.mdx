@@ -1,10 +1,9 @@
 ---
-title: '3. Understanding the project structure'
+title: '4. Understanding the project structure'
+excerpt: "Learn how the FastStore project is organized, including its main directories, configurations, and code architecture."
 ---
 
-In the previous guide of this track, you started your first FastStore project, learned how to run a local server, and made your first changes to the storefront. Now, it is time to understand how a FastStore project is structured.
-
-Understanding the structure of a FastStore project can help you navigate the codebase and customize it to fit your specific needs.
+In this step, you'll learn how a FastStore project is organized and why it matters. Understanding the folder layout and key files helps you navigate the codebase, make targeted changes, and avoid misconfigurations as you customize your store.
 
 Here's the structure that represents the source code of a FastStore project:
 
@@ -25,8 +24,6 @@ Here's the structure that represents the source code of a FastStore project:
 |-- yarn.lock
 ```
 
----
-
 ## Folders
 
 - `/.faststore` - Manages and coordinates the FastStore project to deliver a functional starter store. This folder, also known as [@faststore/core](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson), provides the core functionality of the FastStore starter.
@@ -34,8 +31,6 @@ Here's the structure that represents the source code of a FastStore project:
 - `/src` - Contains all of your store's customizations, including your custom components and theme.
 
 - [`/themes`](https://developers.vtex.com/docs/guides/faststore/themes-overview#available-themes) - Keeps your store's theme, such as [midnight](https://developers.vtex.com/docs/guides/faststore/themes-midnight).
-
----
 
 ## Files
 
@@ -56,11 +51,11 @@ For more information on configuration options for this file, refer to [Configura
 
 ## `package.json`
 
-Defines the project's metadata and handles dependencies and scripts using [Yarn](https://yarnpkg.com/migration/overview). Let's take a closer look at five important packages declared in this file:
+Defines the project metadata and manages dependencies and scripts with [Yarn](https://yarnpkg.com/migration/overview). Key packages include:
 
 ### `@faststore/core`
 
-Bundles FastStore source code, including the FatsStore starter: `starter store`. It contains four sub-packages, `Components`, `SDK`, `UI` and `API`, which handle the starter.
+Bundles FastStore source code, including the starter store. It contains four sub-packages: `components`, `sdk`, `ui`, and `api`.
 
 ### `@faststore/sdk`
 
@@ -77,7 +72,7 @@ The SDKs also provide GA4-compatible analytics functions to help you create powe
 
 ### `@faststore/ui`
 
-Gathers the design system based on FastStore components, using [Sass](https://sass-lang.com/) for styling. For more information, refer to the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) guide.
+Provides the design system used by FastStore components, using [Sass](https://sass-lang.com/) for styling. For more information, refer to the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) guide.
 
 > ℹ️ Although the components use [Sass](https://sass-lang.com/), you can style them using the desired tool for styling.
 
@@ -88,3 +83,9 @@ Connects your project to your favorite ecommerce provider by creating interfaces
 ### `@faststore/cli`
 
 Provides scripts for building, running, debugging, and deploying your FastStore project. This package helps with debugging and differentiating between VTEX code and customizations. To learn more, refer to the [FastStore CLI documentation](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-cli).
+
+---
+
+## Next step
+
+Now that you understand your project structure, connect it to Headless CMS for content management: [5. Integrating your project with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/getting-started-5-integrating-with-the-headless-cms)
