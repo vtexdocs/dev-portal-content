@@ -672,7 +672,7 @@ If the `orderForm` was created for an existing customer who already has a custom
 
 Place a new order via the [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) endpoint using the `orderForm` you built as the request body.
 
-Upon receiving a `201 Created` response, take note of these four pieces of information:
+Upon receiving a `201 Created` response, take note of these five pieces of information:
 
 - `transactionId` - ID of the transaction, which can be found within an object contained in the `merchantTransactions` array.
 - `orderId` - ID of the order within VTEX’s Order Management System (OMS). You can find the `orderId` within each object in the `orders` array.
