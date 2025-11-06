@@ -428,11 +428,11 @@ When your agent is deployed on the Weni Platform, credentials are securely manag
 > After running the command `weni project push agent_definition.yaml` to upload your agent to your project on the Weni Platform, you'll find your agent in the Agent Builder gallery. When you select and assign this agent, you'll be prompted to enter the actual values for the credentials you defined (in this case, the API Key).
 
 
-> ![Agents Gallery](../assets/agent-builder-gallery.png)
+> ![Agents Gallery](assets/agent-builder-gallery.png)
 
 > Enter you credentials:
 
-> ![Assign Agent](../assets/agent-builder-assign.png)
+> ![Assign Agent](assets/agent-builder-assign.png)
 ### Security in Production
 
 In the Weni Platform, credentials are:

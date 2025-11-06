@@ -3,7 +3,7 @@ This article contains examples of agents you can use.
 - [Book Agent](#book-agent): Searches for book information, including title, author, description, and other details.
 - [CEP Agent](#cep-agent): Provides an address based on its Brazilian postal code.
 - [Movie Agent](#movie-agent): Searches for movie information, with automatic translation of titles and descriptions.
-- [News Agent](#news-agent): Retrieves updated news about various topics through a news API.
+- [News Agent](#news-agent): Retrieves up-to-date news about various topics through a news API.
 
 # Book Agent
 

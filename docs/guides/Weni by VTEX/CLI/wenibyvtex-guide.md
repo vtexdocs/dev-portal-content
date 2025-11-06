@@ -125,6 +125,7 @@ weni init
 ```
 
 This will:
+
 - Create the necessary folder structure.
 - Set up a pre-built CEP tool.
 - Create a file named `agent_definition.yaml` with the configuration below. You can edit this at any point.
@@ -154,14 +155,15 @@ agents:
 ```
 
 ##### Understanding the source configuration
-In the YAML above, there are two fields nested inside the `source` field:
+
+In the YAML above, there are two fields nested within the `source` field:
 
 - `path`: This field specifies the directory containing your tool implementation.
-  - The command automatically creates a `tools` directory and a folder called `get_address` nested inside.
-  - In this path, you can find the files `main.py`, `requirements.txt` and `test_definition.yaml`.
+  - The command automatically creates a `tools` directory and a folder called `get_address` nested within it.
+  - In this path, you can find the files `main.py`, `requirements.txt`, and `test_definition.yaml`.
 
 - `entrypoint`: This field informs the system which class to use.
-  - Using `main.GetAddress` determines that the system finds the file named `main.py`, uses the `GetAddress` class inside of the file and that the calss must inherit from the `tools` base class.
+  - Using `main.GetAddress` indicates that the system finds the file named `main.py`, uses the `GetAddress` class inside the file and that the class must inherit from the `Tools` base class.
 
 Your project structure should look like this:
 
@@ -290,17 +292,20 @@ Thank you for your interest in contributing to Weni CLI! This guide will help yo
 1. Fork the repository on GitHub
 
 2. Clone your fork:
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/weni-cli.git
    cd weni-cli
    ```
 
 3. Install dependencies:
+
    ```bash
    poetry install
    ```
 
 4. Create a new branch:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -317,6 +322,7 @@ Thank you for your interest in contributing to Weni CLI! This guide will help yo
 #### Testing
 
 1. Write tests for new features:
+
    ```python
    def test_your_feature():
        # Your test code here
@@ -324,11 +330,13 @@ Thank you for your interest in contributing to Weni CLI! This guide will help yo
    ```
 
 2. Run tests:
+
    ```bash
    poetry run pytest
    ```
 
 3. Check coverage:
+
    ```bash
    poetry run pytest --cov
    ```
@@ -364,6 +372,7 @@ Follow conventional commits:
 - `chore:` Maintenance tasks
 
 Example:
+
 ```bash
 git commit -m "feat: add support for custom headers in requests"
 ```
@@ -450,4 +459,3 @@ poetry run mkdocs serve
 - Help others when possible
 - Share knowledge
 - Follow our Code of Conduct
-
