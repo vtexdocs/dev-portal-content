@@ -143,7 +143,7 @@ This page describes Passive Agents, which are AI-powered workers designed to ope
 
 ### Overview
 
-Passive Agents are AI-powered workers designed to operate autonomously within specific contexts, using generative AI to make decisions based on given problems. In the context of Weni by VTEX CLI, these agents are specifically optimized for customer service operations, serving as the frontline communication interface between companies and their customers by responding to inquiries and executing tasks based on their configured skills.
+Passive Agents are AI-powered workers designed to operate autonomously within specific contexts, using generative AI to make decisions based on specified problems. In the context of Weni by VTEX CLI, these agents are specifically optimized for customer service operations, serving as the frontline communication interface between companies and their customers by responding to inquiries and executing tasks based on their configured skills.
 
 Key features:
 
@@ -279,6 +279,7 @@ agents:
 ```
 
 Your project should have the following structure:
+
 ```
 your-project-name/
 ├── tools/
