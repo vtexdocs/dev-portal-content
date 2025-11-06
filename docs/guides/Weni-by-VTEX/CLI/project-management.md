@@ -1,3 +1,11 @@
+---
+title: "Weni by VTEX - Project Management"
+slug: "wenibyvtex-cli-projectmanagement"
+hidden: false
+createdAt: "2025-11-06T13:05:20.961Z"
+updatedAt: "2025-11-06T13:05:57.445Z"
+---
+
 # Project Management
 
 Learn how to manage your Weni projects using the CLI.

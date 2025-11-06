@@ -1,3 +1,11 @@
+---
+title: "Weni by VTEX - Logs"
+slug: "wenibyvtex-cli-logs"
+hidden: false
+createdAt: "2025-11-06T13:05:20.961Z"
+updatedAt: "2025-11-06T13:05:57.445Z"
+---
+
 # Logs
 
 Fetch and filter execution logs for a specific agent tool.

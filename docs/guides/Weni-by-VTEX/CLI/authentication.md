@@ -1,3 +1,11 @@
+---
+title: "Weni by VTEX - Authentication"
+slug: "wenibyvtex-cli-authentication"
+hidden: false
+createdAt: "2025-11-06T13:05:20.961Z"
+updatedAt: "2025-11-06T13:05:57.445Z"
+---
+
 # Authentication
 
 Learn how to authenticate with Weni CLI and manage your credentials.

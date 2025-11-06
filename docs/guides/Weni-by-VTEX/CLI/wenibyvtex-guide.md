@@ -1,6 +1,6 @@
 ---
 title: "Weni by VTEX Guide"
-slug: "weni-by-vtex-guide"
+slug: "wenibyvtex-guide"
 hidden: false
 createdAt: "2025-10-23T17:08:52.219Z"
 updatedAt: "2025-10-23T14:33:45.242Z"

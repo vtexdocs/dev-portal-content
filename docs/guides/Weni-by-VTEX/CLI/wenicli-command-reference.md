@@ -1,3 +1,11 @@
+---
+title: "Weni by VTEX - CLI Command Reference"
+slug: "wenibyvtex-cli-clicommandreference"
+hidden: false
+createdAt: "2025-11-06T13:05:20.961Z"
+updatedAt: "2025-11-06T13:05:57.445Z"
+---
+
 # Weni CLI command reference
 
 This documentation includes the default commands available in [Weni by VTEX CLI](weni-byvtex-guide.md).

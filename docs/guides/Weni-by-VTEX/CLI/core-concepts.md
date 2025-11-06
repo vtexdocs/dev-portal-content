@@ -1,3 +1,11 @@
+---
+title: "Weni by VTEX - Core Concepts"
+slug: "wenibyvtex-cli-coreconcepts"
+hidden: false
+createdAt: "2025-11-06T13:05:20.961Z"
+updatedAt: "2025-11-06T13:05:57.445Z"
+---
+
 This article contains the core concepts for the Weni by VTEX CLI.
 
 - [Active Agents](#active-agents)

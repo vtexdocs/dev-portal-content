@@ -1,3 +1,11 @@
+---
+title: "Weni by VTEX - Agent Examples"
+slug: "wenibyvtex-cli-agentexamples"
+hidden: false
+createdAt: "2025-11-06T13:05:20.961Z"
+updatedAt: "2025-11-06T13:05:57.445Z"
+---
+
 This article contains examples of agents you can use.
 
 - [Book Agent](#book-agent): Searches for book information, including title, author, description, and other details.

@@ -1,3 +1,11 @@
+---
+title: "Weni by VTEX - Working with Agents"
+slug: "wenibyvtex-cli-workingwithagents"
+hidden: false
+createdAt: "2025-11-06T13:05:20.961Z"
+updatedAt: "2025-11-06T13:05:57.445Z"
+---
+
 # Working with Agents
 
 Learn how to create, configure, and deploy AI agents using Weni CLI.
