@@ -7,11 +7,11 @@ updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Learn how to authenticate with Weni by VTEX CLI."
 ---
 
-# Authentication
+## Authentication
 
 Learn how to authenticate with Weni by VTEX CLI and manage your credentials.
 
-## Login Process
+### Login Process
 
 Weni by VTEX CLI uses OAuth2 for authentication. When you run the login command:
 
@@ -28,15 +28,15 @@ The following happens:
 
 By default, the local server listens on `http://localhost:50051/sso-callback`.
 
-## Token Storage
+### Token Storage
 
 Your authentication token is stored securely in your home directory. Never share or expose your authentication information.
 
-## Token Refresh
+### Token Refresh
 
 If an API request returns an authentication error, the CLI will prompt you to log in again. Run `weni login` to obtain a new token or to authenticate with a different account.
 
-## Logout
+### Logout
 
 To log out and remove your authentication:
 
@@ -44,9 +44,9 @@ To log out and remove your authentication:
 
 Then, run `weni login` again to authenticate with different credentials
 
-## Troubleshooting
+### Troubleshooting
 
-### Common Issues
+#### Common Issues
 
 1. **Browser Doesn't Open**
    - Use the URL displayed in the terminal
@@ -56,7 +56,7 @@ Then, run `weni login` again to authenticate with different credentials
    - Verify your internet connection
    - Check if your account has the necessary permissions
 
-### Security Best Practices
+#### Security Best Practices
 
 1. **Keep Your Token Safe**
    - Don't share your configuration file
