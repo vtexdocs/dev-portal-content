@@ -38,7 +38,7 @@ If an API request returns an authentication error, the CLI will prompt you to lo
 
 ## Logout
 
-To logout and remove your authentication:
+To log out and remove your authentication:
 
 1. Delete your configuration file
 2. Run `weni login` again to authenticate with different credentials
