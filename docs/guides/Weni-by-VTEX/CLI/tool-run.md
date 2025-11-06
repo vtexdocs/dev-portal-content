@@ -7,11 +7,11 @@ updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Learn how to use the Tool Run feature."
 ---
 
-# Tool Test Run
+## Tool Test Run
 
 Tool Run is a scalable way to build your tool and test it in real-time. With this feature, it's simple to debug problems and create a tool that is both scalable and performant at the same time.
 
-## What is required to run a tool?
+### What is required to run a tool?
 
 First, you need to have your tool. If you don't know how to create a tool or still have questions about this subject, you can read the tools page [Tools](../core-concepts/tools.md).
 
@@ -57,7 +57,7 @@ Make sure that `path_test` corresponds to the correct path of your tool test.
 
 It's also important to note that if your tool uses any external libraries, you must include a `requirements.txt` file in the same directory as your tool code. This file should list all the dependencies needed for your tool to run properly.
 
-## How to run a test?
+### How to run a test
 
 Following the previous steps, we can now run a test, but how?
 
@@ -81,14 +81,15 @@ There is also a variation of this command in case you need to include ways to de
 
 ```
 weni run agent_definition.yaml cep_agent get_address -v
-``` 
-### Choosing a test file
+```
+
+#### Choosing a test file
 
 - Use `-f/--file` to specify a test definition YAML located in the tool folder.
 - If `-f` is omitted, the CLI looks for `test_definition.yaml` in the tool's `source.path` directory.
 - You can also set `source.path_test` in your agent definition to point to a custom test file; when present, the CLI uses that path by default.
 
-### Credentials and globals discovery
+#### Credentials and globals discovery
 
 For development, the CLI will read optional files from the tool directory:
 
@@ -101,11 +102,11 @@ Result:
 
 ![Run with logs](assets/run-with-v.png)
 
-## Running Tools That Require Credentials
+### Running Tools That Require Credentials
 
 When your tool needs to interact with external services that require authentication, you'll need to provide credentials during testing. The official method for handling credentials with `weni run` is using your agent definition and a `.env` file.
 
-### Using Agent Definition and .env File
+#### Using Agent Definition and .env File
 
 This approach mimics how credentials work in production, making your local development environment consistent with deployment.
 
@@ -155,7 +156,7 @@ weni run agent_definition.yaml cep_agent get_address
 
 The CLI will automatically pick up the credentials from the tool folder `.env` file and make them available to your tool during execution.
 
-### Accessing Credentials in Your Tool Code
+#### Accessing Credentials in Your Tool Code
 
 Your tool code should access credentials through the `Context` object as shown below:
 

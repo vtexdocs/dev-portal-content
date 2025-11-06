@@ -12,6 +12,7 @@ excerpt: "Learn the command reference for the Weni by VTEX CLI."
 This documentation includes the default commands available in [Weni by VTEX CLI](weni-byvtex-guide.md).
 
 ## Default commands
+
 Below is a brief description of the default commands available in Weni by VTEX CLI. For detailed information about each command, click on the respective command name. You can also get this information in your terminal by adding `--help` or `-h` after the command name.
 
 | Command name | Description  |

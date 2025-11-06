@@ -23,7 +23,8 @@ With the CLI, you can:
 
 The content is organized as follows:
 
-- [Installing the CLI](#installing-the-cli)
+- [Installing the CLI](#step-1---installing-the-cli)
+- [Getting started with your project](#getting-started-with-your-project)
 - [Troubleshooting](#troubleshooting)
 - [Contributing to Weni by VTEX CLI](#contributing-to-weni-cli)
 
@@ -34,7 +35,7 @@ There are two installation methods:
 - A [quick installation](#install-via-pip) with `pip`.
 - A [manual installation](#install-via-poetry) with `Poetry`, for development purposes.
 
-#### Install via pip
+### Install via pip
 
 To install the CLI using `pip`, open the terminal and run the following command:
 
@@ -42,7 +43,7 @@ To install the CLI using `pip`, open the terminal and run the following command:
 pip install weni-cli
 ```
 
-#### Install via Poetry
+### Install via Poetry
 
 To install the CLI manually, follow these steps:
 
@@ -60,7 +61,7 @@ poetry shell
 poetry install
 ```
 
-### Step 2 - Verifying Installation
+## Step 2 - Verifying Installation
 
 To verify that Weni by VTEX CLI is installed, type the following command in your terminal:
 
@@ -72,7 +73,7 @@ If the installation was successful, your terminal should display something like 
 
 ![Weni Verification](assets/weni-installation-verification.png)
 
-## Troubleshooting
+### Troubleshooting
 
 If you encounter any issues:
 
@@ -83,7 +84,7 @@ If you encounter any issues:
    - Error message
    - Steps to reproduce
 
-### Getting Started
+### Getting started with your project
 
 #### Step 1 - Log in to your Weni by VTEX account
 
@@ -137,9 +138,9 @@ weni init
 
 This command performs the following actions:
 
-*   Creates the necessary folder structure for your agent.
-*   Sets up a pre-built CEP (Complex Event Processing) tool.
-*   Creates an `agent_definition.yaml` file with the initial configuration. You can edit this file to customize your agent's behavior.
+- Creates the necessary folder structure for your agent.
+- Sets up a pre-built CEP (Complex Event Processing) tool.
+- Creates an `agent_definition.yaml` file with the initial configuration. You can edit this file to customize your agent's behavior.
 
 ```bash
 agents:

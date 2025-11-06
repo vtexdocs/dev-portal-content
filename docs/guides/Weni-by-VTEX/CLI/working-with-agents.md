@@ -85,6 +85,7 @@ source:
     - This class must inherit from the `Tool` class
 
 Your directory structure should look like:
+
 ```
 project/
 ├── agents.yaml
@@ -121,6 +122,7 @@ class ToolName(Tool):
 ```
 
 #### Important Requirements
+
 - The class **must** inherit from `Tool`
 - The class **must** implement the `execute` method
 - The class name **must** match the class name in your entrypoint
@@ -136,6 +138,7 @@ weni project push agents.yaml
 ```
 
 The command:
+
 1. Validates your YAML
 2. Uploads tools
 3. Creates/updates the agent
@@ -161,6 +164,7 @@ The command:
 ### Parameter Types
 
 Available parameter types:
+
 - `string`
 - `number`
 - `integer`
@@ -170,6 +174,7 @@ Available parameter types:
 ### Response Formats
 
 Tools can return:
+
 - Text responses via `TextResponse`
 - Structured data 
 - Error messages
@@ -177,9 +182,10 @@ Tools can return:
 ### Error Handling
 
 Your tools should:
-1. Validate inputs
-2. Handle exceptions gracefully
-3. Return meaningful error messages
+
+- Validate inputs
+- Handle exceptions gracefully
+- Return meaningful error messages
 
 ## Troubleshooting
 
@@ -369,9 +375,10 @@ The verbose output will show you more details about the execution process, helpi
 ### Deployment Steps
 
 1. Deploy the agent:
-   ```bash
+
+```bash
    weni project push agent_definition.yaml
-   ```
+```
 
 ### Testing
 
@@ -485,9 +492,10 @@ This will run the test cases defined in `test_definition.yaml` and show you the 
 ### Deployment Steps
 
 1. Deploy the agent:
-   ```bash
+
+```bash
    weni project push agents.yaml
-   ```
+```
 
 ### Testing
 
@@ -672,9 +680,10 @@ The verbose output will show you more details about the execution process, inclu
 ### Deployment Steps
 
 1. Deploy the agent:
-   ```bash
+
+```bash
    weni project push agent_definition.yaml
-   ```
+```
 
 ### Testing
 
@@ -844,9 +853,10 @@ The verbose output will show you more details about the execution process, helpi
 ### Deployment Steps
 
 1. Deploy the agent:
-   ```bash
+
+```bash
    weni project push agent_definition.yaml
-   ```
+```
 
 ### Testing
 

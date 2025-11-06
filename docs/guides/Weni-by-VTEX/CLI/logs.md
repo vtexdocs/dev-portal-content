@@ -7,17 +7,17 @@ updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Fetch and filter execution logs."
 ---
 
-# Logs
+## Logs
 
 Fetch and filter execution logs for a specific agent tool.
 
-## Usage
+### Usage
 
 ```bash
 weni logs --agent <agent_key> --tool <tool_key> [--start-time ISO8601] [--end-time ISO8601] [--pattern TEXT]
 ```
 
-### Options
+#### Options
 
 - `--agent, -a` (required): Agent key in your definition (e.g. `cep_agent`).
 - `--tool, -t` (required): Tool key (e.g. `get_address`).
@@ -33,11 +33,11 @@ Supported datetime formats include:
 - `YYYY-MM-DDTHH:MM:SS.sss`
 - With timezone suffix: `Z`, `+00:00`, etc.
 
-### Pagination
+#### Pagination
 
 If more logs are available, you'll be prompted to fetch more. Choose `p` to continue or `q` to stop.
 
-### Examples
+#### Examples
 
 ```bash
 # Basic

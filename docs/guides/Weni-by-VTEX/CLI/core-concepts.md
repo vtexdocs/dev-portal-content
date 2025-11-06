@@ -7,7 +7,7 @@ updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Learn the core concepts of the Weni by VTEX CLI."
 ---
 
-This article contains the core concepts for the Weni by VTEX CLI.
+This article contains the core concepts of the Weni by VTEX CLI.
 
 - [Active Agents](#active-agents)
 - [Passive Agents](#passive-agents)
@@ -15,20 +15,20 @@ This article contains the core concepts for the Weni by VTEX CLI.
 - [Credentials](#credentials)
 - [Tools](#tools)
 
-# Active Agents
+## Active Agents
 
-## Overview
+### Overview
 
-Active Agents are designed to proactively engage based on predefined rules and conditions. Unlike Passive Agents that primarily react to user input, Active Agents can initiate actions or communications when specific criteria are met, often triggered by changes in data or system events.
+Active Agents are designed to proactively engage based on predefined rules and conditions. Unlike Passive Agents, which primarily react to user input, Active Agents can initiate actions or communications when specific criteria are met, often triggered by changes in data or system events.
 
 The command to deploy an Active Agent remains the same:
 `weni project push agent_definition.yaml`
 
 However, the structure of the `agent_definition.yaml` is different to accommodate the rule-based behavior and pre-processing capabilities.
 
-## Creating an Active Agent
+### Creating an Active Agent
 
-An Active Agent's definition is also done using a YAML file. Here's an example of the structure for an Active Agent:
+An Active Agent is also defined using a YAML file. Here's an example of the structure for an Active Agent:
 
 ```yaml title="agent_definition.yaml"
 agents:
@@ -46,7 +46,7 @@ agents:
       status_invoiced:
         display_name: "Status Invoiced"
         template: "template_status_invoiced"
-        start_condition: "Quanto o status estiver 'invoiced'"
+        start_condition: "Quando o status estiver 'invoiced'"
         source:
           entrypoint: "main.StatusInvoiced"
           path: "rules/status_invoiced"
@@ -57,50 +57,34 @@ agents:
       result_examples_file: "result_example.json"
 ```
 
-### YAML Elements
+#### YAML Elements
 
-Below are the key elements specific to or different in Active Agent definitions:
+Below are the key elements specific to or different for Active Agent definitions:
 
-`agents.<agent_id>`
-:    The unique identifier for your agent.
+`agents.<agent_id>`: The unique identifier for your agent.
 
-    `name`
-    :   The display name of your agent.  
-        **Limit**: :octicons-alert-24: Maximum of 55 characters.
+`name`: The display name of your agent.
 
-    `description`
-    :   A description of the agent's purpose and capabilities.
+> Limit: Can have up to 55 characters.
 
-    `rules`
-    :   A dictionary defining the rules that trigger the agent's actions. Each key within `rules` is a unique rule ID.
+`description`: A description of the agent's purpose and capabilities.
 
-        `rules.<rule_id>.display_name`
-        :   The human-readable name for the rule.
+`rules`: A dictionary defining the rules that trigger the agent's actions. Each key within `rules` is a unique rule ID.
 
-        `rules.<rule_id>.template`
-        :   The template to be used when this rule is triggered. (Further details on templates might be needed here or in a separate section).
+- `rules.<rule_id>.display_name`: The human-readable name for the rule.
+- `rules.<rule_id>.template`: The template to be used when this rule is triggered. (Further details on templates might be needed here or in a separate section).
+- `rules.<rule_id>.start_condition`: A description of the condition that must be met for this rule to activate.
+- `rules.<rule_id>.source`: Defines the code to be executed when the rule is triggered.
+  -`entrypoint`: The specific class and method (e.g., `main.StatusAprovado`) that will be executed.
+  - `path`: The directory path where the rule's code is located (e.g., `rules/status_aprovado`).
 
-        `rules.<rule_id>.start_condition`
-        :   A description of the condition that must be met for this rule to activate.
+`pre_processing`: Defines a pre-processing step that can transform or prepare data before rules are evaluated.
+  - `pre_processing.source`: Defines the code for the pre-processing logic.
+    -`entrypoint`: The class and method for pre-processing (e.g., `processing.PreProcessor`).
+    - `path`: The directory path for the pre-processing code (e.g., `pre_processors/processor`).
+  - `pre_processing.result_examples_file`: Required. Path to a JSON file containing examples of the data output from pre-processing. The format is an array of objects.
 
-        `rules.<rule_id>.source`
-        :   Defines the code to be executed when the rule is triggered.
-            `entrypoint`: The specific class and method (e.g., `main.StatusAprovado`) that will be executed.
-            `path`: The directory path where the rule's code is located (e.g., `rules/status_aprovado`).
-
-    `pre_processing`
-    :   Defines a pre-processing step that can transform or prepare data before rules are evaluated.
-
-        `pre_processing.source`
-        :   Defines the code for the pre-processing logic.
-            `entrypoint`: The class and method for pre-processing (e.g., `processing.PreProcessor`).
-            `path`: The directory path for the pre-processing code (e.g., `pre_processors/processor`).
-
-        `pre_processing.result_examples_file`
-        :   Required. Path to a JSON file containing examples of the data output from pre-processing. The format is an array of objects.
-
-
-### Result Example JSON Format
+#### Result Example JSON Format
 
 The `result_example.json` file should follow this structure:
 
@@ -124,11 +108,13 @@ The `result_example.json` file should follow this structure:
     // ... more examples
 ]
 ```
+
 Each object in the array represents a test case or an example scenario.
+
 - `urn`: A unique identifier for the contact (e.g., a phone number, user ID).
 - `data`: An object containing the data relevant to this specific example. The structure of this `data` object will depend on your agent's specific needs and the information it processes.
 
-## Basic Structure
+### Basic Structure
 
 The project structure for an Active Agent might look like this, incorporating rules and pre-processing logic:
 
@@ -151,11 +137,11 @@ your-project-name/
 
 This structure helps organize the different components of your Active Agent.
 
-# Passive Agents
+## Passive Agents
 
 This page describes Passive Agents, which are AI-powered workers designed to operate autonomously by reacting to user input or specific triggers within a defined context.
 
-## Overview
+### Overview
 
 Passive Agents are AI-powered workers designed to operate autonomously within specific contexts, using generative AI to make decisions based on given problems. In the context of Weni by VTEX CLI, these agents are specifically optimized for customer service operations, serving as the frontline communication interface between companies and their customers by responding to inquiries and executing tasks based on their configured skills.
 
@@ -168,7 +154,7 @@ Key features:
 
 With Weni by VTEX CLI, you can define and deploy multiple agents that work together to solve real-world problems with precision, quality, and security. These agents can be equipped with various tools that enable them to interact with the external world within defined boundaries.
 
-## Creating a Passive Agent
+### Creating a Passive Agent
 
 A Passive Agent consists of an agent definition. In Weni by VTEX CLI, this definition is made using a YAML file, where you can specify its behavior, instructions, and skills.
 
@@ -200,7 +186,7 @@ agents:
                 contact_field: true
 ```
 
-### YAML Elements
+#### YAML Elements
 
 === "Agent"
 
@@ -260,7 +246,7 @@ agents:
         
         - `contact_field`: Specifies if the parameter should be stored as a contact field in the user's profile for future reference. If set to true, the respective parameter will become information that persists for the user integrated with the Weni by VTEX Platform. This brings benefits to the user experience because in future interactions, your agent may not need to request this information from the user again. Read more about contact fields in [Contact Fields](./contact-fields.md).
 
-## Basic Structure
+### Basic Structure
 
 The basic structure of your project should consist of your agent definition written in YAML and your agent's tools organized into directories. It is not mandatory to organize your tools in a 'tools' directory, but it is highly recommended as a best practice.
 
@@ -300,13 +286,13 @@ your-project-name/
 └── agent_definition.yaml
 ```
 
-# Contact Fields
+## Contact Fields
 
-## Overview
+### Overview
 
 Contact fields are persistent information about contacts who interact with your agents. By enabling contact fields in your tools, you elevate the user experience to a new level, as your agents can interact with the Weni by VTEX Platform to accurately obtain information about the contact.
 
-## How Contact Fields Work
+### How Contact Fields Work
 
 When you mark a parameter as a contact field in your tool definition, that information becomes persistent in the user's profile within the Weni by VTEXPlatform. This creates several advantages:
 
@@ -314,7 +300,7 @@ When you mark a parameter as a contact field in your tool definition, that infor
 2. **Personalized Interactions**: Agents can address users with personalized information from previous conversations
 3. **Streamlined Conversations**: Reduces the number of questions agents need to ask, making interactions more efficient
 
-## Implementing Contact Fields
+### Implementing Contact Fields
 
 To implement a contact field in your tool, you need to set the `contact_field` parameter to `true` in your agent definition YAML file:
 
@@ -333,7 +319,7 @@ When this parameter is processed during a conversation, the information provided
 - [x] Available for retrieval and update in future interactions
 - [x] Accessible to all agents that have permission to view this contact field
 
-## Best Practices
+### Best Practices
 
 When implementing contact fields, consider the following best practices:
 
@@ -341,7 +327,7 @@ When implementing contact fields, consider the following best practices:
 - **Use descriptive parameter names**: This helps maintain organization when multiple contact fields are in use
 - **Validate data before storing**: Ensure the information is in the correct format before saving it as a contact field
 
-## Example Use Cases
+### Example Use Cases
 
 Contact fields are particularly useful for:
 
@@ -352,7 +338,7 @@ Contact fields are particularly useful for:
 
 By effectively utilizing contact fields, you can create more intelligent, context-aware agents that provide a seamless experience for your users.
 
-# Credentials
+## Credentials
 
 Credentials are confidential information that your agents can use when invoking a specific tool. To fully understand how to incorporate credentials into your agents, we recommend reading this entire content and the following complementary resources: [Agents](./agents.md) and [tools](./tools.md).
 
@@ -361,7 +347,7 @@ Credentials are extremely important at two stages of your agents' development cy
 - [x] For local testing of tools during development
 - [x] For your agent to be used in production on channels integrated with the Weni by VTEX platform, such as WhatsApp or any other
 
-## Credential Structure
+### Credential Structure
 
 In your agent definition file (YAML), credentials are defined in the `credentials` section and follow this structure:
 
@@ -388,11 +374,11 @@ Each credential has the following attributes:
 - **placeholder**: Example text or hint about what should be entered
 - **is_confidential**: Indicates whether the credential contains sensitive information (defaults to `true` if not specified)
 
-## Credentials in Production Environment
+### Credentials in Production Environment
 
 When your agent is deployed on the Weni by VTEX Platform, credentials are securely managed by the system. This ensures that sensitive information, such as API keys and access tokens, is stored and transmitted securely.
 
-### How to Configure Credentials for Production
+#### How to Configure Credentials for Production
 
 1. **Define credentials in the YAML file**: Specify all necessary credentials in the `credentials` section of your agent definition file.
 
@@ -443,18 +429,18 @@ When your agent is deployed on the Weni by VTEX Platform, credentials are secure
 
 > ![Assign Agent](assets/agent-builder-assign.png)
 
-### Security in Production
+#### Security in Production
 
 In the Weni by VTEX Platform, credentials are:
 
 - Stored in encrypted form
 - Never exposed in logs or user interfaces
 
-## Credentials for Local Testing
+### Credentials for Local Testing
 
 During development and local testing of your tools, you'll need to provide credentials for your tools to work correctly without depending on the Weni by VTEX Platform infrastructure.
 
-### Configuring Credentials for Local Development
+#### Configuring Credentials for Local Development
 
 For local testing, the CLI reads a `.env` file located in the tool's `source.path` directory. Define the same credential names that are declared in your agent definition. This mirrors how credentials are injected in production.
 
@@ -476,13 +462,13 @@ Create a `.env` file inside the tool folder (e.g. `tools/get_address/.env`) with
 api_key=your-development-api-key
 ```
 
-# Tools
+## Tools
 
-## What Are Tools?
+### What Are Tools?
 
 Tools are powerful tools available to your agent that enable it to interact with the external environment and the real world. Think of tools as superpowers for your agent - you can create virtually any capability your agent needs by writing Python code that implements your specific business logic!
 
-## Why Tools Matter
+### Why Tools Matter
 
 Tools transform your agent from a simple conversational interface into a powerful tool that can:
 
@@ -493,13 +479,13 @@ Tools transform your agent from a simple conversational interface into a powerfu
 - Integrate with third-party services and platforms
 - Automate tasks and workflows
 
-## Using Tools in Your Agent
+### Using Tools in Your Agent
 
 Once you've created a tool, you can relate it to your agent by defining it in your agent's YAML configuration file, as demonstrated in the [Agents](./agents.md) documentation page. The agent will automatically detect when to use the tool based on the context of the conversation.
 
 By creating custom tools, you can extend your agent's capabilities to handle specific tasks relevant to your use case, making your agent truly tailored to your business needs.
 
-## Tool Example: Address Lookup
+### Tool Example: Address Lookup
 
 Here's an example of a tool that allows an agent to interact with the real world to precisely obtain information about a postal code (CEP in Brazil):
 
@@ -530,7 +516,7 @@ class GetAddress(Tool):
         return response.json()
 ```
 
-## Code Explanation
+### Code Explanation
 
 === "For Beginners"
 
@@ -580,7 +566,7 @@ class GetAddress(Tool):
 
     This implementation follows a simple separation of concerns pattern but could be enhanced with error handling, input validation, response formatting, and proper logging for production use.
 
-## Creating Your Own Tools
+### Creating Your Own Tools
 
 To create your own tool:
 
@@ -592,11 +578,11 @@ To create your own tool:
 6. **Write Tests**: Create comprehensive test cases using the test file specified in `path_test`
 7. **Configure Your Tool**: Add your tool to your agent's YAML configuration with appropriate parameters and any credentials required by your tool.
 
-## Tools with Credentials
+### Tools with Credentials
 
 When your tool needs to interact with external services that require authentication, you'll need to use credentials or secrets. The Weni by VTEX framework provides a secure way to manage these credentials through the `Context` object.
 
-### How to Access Credentials
+#### How to Access Credentials
 
 Credentials are accessed through the `Context` object that is passed to your tool's `execute` method. This ensures that sensitive information is handled securely and isn't hardcoded in your tool's code.
 
@@ -630,7 +616,7 @@ class GetAddressWithAuth(Tool):
         return response.json()
 ```
 
-### Configuring Credentials in Your Agent Definition
+#### Configuring Credentials in Your Agent Definition
 
 To make credentials available to your tool, you need to define them in your agent's YAML configuration file. Here's an example:
 
@@ -666,7 +652,7 @@ agents:
 
 > **Highly Recommended**: For a comprehensive understanding of how credentials work in production environments and local testing, please read the [Credentials](./credentials.md) documentation page. This will help you properly manage sensitive information and understand the different approaches for development and production environments.
 
-### Best Practices for Handling Credentials
+#### Best Practices for Handling Credentials
 
 When working with credentials in your tools:
 
@@ -677,7 +663,7 @@ When working with credentials in your tools:
 
 By following these practices, you can create secure tools that interact with authenticated services while keeping sensitive information protected.
 
-## Best Practices for Tools
+### Best Practices for Tools
 
 When creating tools, follow these best practices:
 

@@ -34,14 +34,15 @@ Your authentication token is stored securely in your home directory. Never share
 
 ## Token Refresh
 
-If an API request returns an authentication error, the CLI will prompt you to login again. Run `weni login` to obtain a new token, or set a different account.
+If an API request returns an authentication error, the CLI will prompt you to log in again. Run `weni login` to obtain a new token or to authenticate with a different account.
 
 ## Logout
 
 To log out and remove your authentication:
 
 1. Delete your configuration file
-2. Run `weni login` again to authenticate with different credentials
+
+Then, run `weni login` again to authenticate with different credentials
 
 ## Troubleshooting
 
@@ -62,6 +63,7 @@ To log out and remove your authentication:
    - Use appropriate file permissions
    - Don't expose the token in scripts or logs
 
-2. **Regular Validation**
+2. **Regular Authentication Checks**
    - Periodically verify your authentication status
    - Update your credentials if you suspect any security issues
+   
