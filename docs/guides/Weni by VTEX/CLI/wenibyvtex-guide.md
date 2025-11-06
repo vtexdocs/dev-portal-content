@@ -22,7 +22,8 @@ With the CLI, you can:
 
 The content is organized as follows:
 - [Installing the CLI](#installing-the-cli)
-- [Contributing]
+- [Troubleshooting](#troubleshooting)
+- [Contributing to Weni by VTEX CLI](#contributing-to-weni-cli)
 
 ## Installing the CLI
 
@@ -67,7 +68,7 @@ weni
 
 If the installation was successful, your terminal should display something like this:
 
-![Weni Verification](weni-installation-verification.png)
+![Weni Verification](assets/weni-installation-verification.png)
 
 ## Troubleshooting
 
