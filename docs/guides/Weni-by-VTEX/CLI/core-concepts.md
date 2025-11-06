@@ -65,7 +65,7 @@ Below are the key elements specific to or different for Active Agent definitions
 
 `name`: The display name of your agent.
 
-> Limit: Can have up to 55 characters.
+> Can have up to 55 characters.
 
 `description`: A description of the agent's purpose and capabilities.
 
@@ -190,61 +190,42 @@ agents:
 
 === "Agent"
 
-    `Name`
+`Name`: The name of your agent that will be displayed in the Weni by VTEX Platform.
 
-    :   The name of your agent that will be displayed in the Weni by VTEX Platform.  
-        **Limit**: :octicons-alert-24: Maximum of 55 characters
+> Can have up to 55 characters.
 
-    `Credentials`
+`Credentials`: The credentials used in the tools you define for your agent. For more detailed information about this definition, see [Authenticating with your Weni by VTEX account](authentication.md).
 
-    :   The credentials used in the tools you define for your agent. For more detailed information about this definition, see [Credentials](./credentials.md).
+`Description`: Important information about your agent, where you can describe its purpose, capabilities, and other relevant details.
 
-    `Description`
+`Instructions`: Here you can define rules and guidelines that your agent should follow.  
 
-    :   Important information about your agent, where you can describe its purpose, capabilities, and other relevant details.
+> Must have a minimum of 40 characters.
 
-    `Instructions`
+`Guardrails`: You can list boundaries and limitations for your agent, such as topics it should not discuss.  
 
-    :   Here you can define rules and guidelines that your agent should follow.  
-        **Limit**: :octicons-alert-24: Minimum of 40 characters.
-
-    `Guardrails`
-
-    :   You can list boundaries and limitations for your agent, such as topics it should not discuss.  
-        **Limit**: :octicons-alert-24: Minimum of 40 characters.
+> Must have a minimum of 40 characters.
 
 === "Tool"
 
-    `Name`
+`Name`: The name of the tool that will be associated with the agent in the Weni by VTEX Platform.  
 
-    :   The name of the tool that will be associated with the agent in the Weni by VTEX Platform.  
-        **Limit**: :octicons-alert-24: Maximum of 40 characters
+> Can have up to 40 characters.
 
-    `Source`
+`Source`: The location or path where the tool can be found. It contains three important elements:
+        
+- `path`: The directory path where your tool's code is located. This is typically a relative path from the root of your project.
+- `entrypoint`: The specific class that will be executed when the tool is called. It follows the format "file_name.ClassName". You can see a practical example of the tool implementation for this entrypoint in the [Tools section](#tools), where the GetAddress class from this example is implemented.        
+- `path_test`: The location of the test file for your tool, which contains test cases to validate the tool's functionality.
 
-    :   The location or path where the tool can be found. It contains three important elements:
-        
-        - `path`: The directory path where your tool's code is located. This is typically a relative path from the root of your project.
-        
-        - `entrypoint`: The specific class that will be executed when the tool is called. It follows the format "file_name.ClassName". You can see a practical example of the tool implementation for this entrypoint in the [example](/core-concepts/tools) page, where the GetAddress class from this example is implemented.
-        
-        - `path_test`: The location of the test file for your tool, which contains test cases to validate the tool's functionality.
+`Description`: Information about the tool, including its purpose and objectives.
 
-    `Description`
-
-    :   Information about the tool, including its purpose and objectives.
-
-    `Parameters`
-
-    :   The parameters or variables used in your agent's tool.
+`Parameters`: The parameters or variables used in your agent's tool.
         
-        - `description`: A clear explanation of what the parameter is used for and what kind of data it expects.
-        
-        - `type`: The data type of the parameter (one of: string, number, integer, boolean, array).
-        
-        - `required`: A boolean value (true/false) indicating whether the parameter must be provided for the tool to function properly. If set to true, the agent will ask the user for this information if it's not available before proceeding with the request.
-        
-        - `contact_field`: Specifies if the parameter should be stored as a contact field in the user's profile for future reference. If set to true, the respective parameter will become information that persists for the user integrated with the Weni by VTEX Platform. This brings benefits to the user experience because in future interactions, your agent may not need to request this information from the user again. Read more about contact fields in [Contact Fields](./contact-fields.md).
+- `description`: A clear explanation of what the parameter is used for and what kind of data it expects.        
+- `type`: The data type of the parameter (one of: string, number, integer, boolean, array).        
+- `required`: A boolean value (`true` or `false`) indicating whether the parameter must be provided for the tool to function properly. If set to true, the agent will ask the user for this information if it's not available before proceeding with the request.        
+- `contact_field`: Specifies if the parameter should be stored as a contact field in the user's profile for future reference. If set to true, the respective parameter will become information that persists for the user integrated with the Weni by VTEX Platform. This brings benefits to the user experience because in future interactions, your agent may not need to request this information from the user again. Read more about contact fields in [Contact Fields](./contact-fields.md).
 
 ### Basic Structure
 
