@@ -1,9 +1,10 @@
 ---
 title: "Weni by VTEX - Agent Examples"
-slug: "wenibyvtex-cli-agentexamples"
+slug: "agent-examples"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
+excerpt: "See some examples for agents you can use."
 ---
 
 This article contains examples of agents you can use.
@@ -13,11 +14,11 @@ This article contains examples of agents you can use.
 - [Movie Agent](#movie-agent): Searches for movie information, with automatic translation of titles and descriptions.
 - [News Agent](#news-agent): Retrieves up-to-date news about various topics through a news API.
 
-# Book Agent
+## Book Agent
 
 This example shows how to create an agent that provides detailed information about books based on the title provided by the user.
 
-## Agent Definition
+### Agent Definition
 
 Create a file called `agent_definition.yaml`:
 
@@ -56,7 +57,7 @@ agents:
                 contact_field: true
 ```
 
-## Tool Implementation
+### Tool Implementation
 
 Create a file `tools/get_books/books.py`:
 
@@ -132,7 +133,7 @@ tests:
             book_title: "The Hobbit"
 ```
 
-## Testing the Tool Locally
+### Testing the Tool Locally
 
 Before deploying your agent, you can test the tool locally using the `weni run` command. This allows you to verify that your tool works correctly and debug any issues.
 
@@ -152,29 +153,29 @@ weni run agent_definition.yaml book_agent get_books -v
 
 The verbose output will show you more details about the execution process, helping you identify and fix any issues with your tool.
 
-## Deployment Steps
+### Deployment Steps
 
 1. Deploy the agent:
    ```bash
    weni project push agent_definition.yaml
    ```
 
-## Testing
+### Testing
 
 After deployment, you can test the agent:
 
-1. Open your project in the Weni platform
+1. Open your project in the Weni by VTEX platform
 2. Find the Book Agent in your agents list
 3. Start a conversation
 4. Send a book title (e.g., "Pride and Prejudice" or "Harry Potter")
 
 The agent will respond with detailed information about the book, including title, authors, publisher, publication date, page count, and ratings when available. The book description will be automatically translated to Portuguese. 
 
-# CEP Agent
+## CEP Agent
 
 This example shows how to create an agent that can provide address information based on Brazilian postal codes (CEP).
 
-## Agent Definition
+### Agent Definition
 
 Create a file named `agents.yaml`:
 
@@ -204,7 +205,7 @@ agents:
                 contact_field: true
 ```
 
-## Tool Implementation
+### Tool Implementation
 
 Create a file `tools/get_address/main.py`:
 
@@ -248,7 +249,7 @@ tests:
             cep: "20050-090"
 ```
 
-## Testing the Tool Locally
+### Testing the Tool Locally
 
 Before deploying your agent, you can test the tool locally using the `weni run` command. This allows you to verify that your tool works correctly and debug any issues.
 
@@ -268,27 +269,27 @@ weni run agent_definition.yaml cep_agent get_address -v
 
 This will run the test cases defined in `test_definition.yaml` and show you the output, helping you identify and fix any issues with your tool.
 
-## Deployment Steps
+### Deployment Steps
 
 1. Deploy the agent:
    ```bash
    weni project push agents.yaml
    ```
 
-## Testing
+### Testing
 
 After deployment, you can test the agent by:
 
-1. Opening your project in the Weni platform
+1. Opening your project in the Weni by VTEX platform
 2. Finding the CEP Agent in your agents list
 3. Starting a conversation
 4. Sending a valid Brazilian postal code (e.g., "01311-000")
 
-# Movie Agent
+## Movie Agent
 
 This example shows how to create an agent that provides detailed information about movies, including title, synopsis, cast, ratings, and other relevant data.
 
-## Agent Definition
+### Agent Definition
 
 Create a file called `agent_definition.yaml`:
 
@@ -333,7 +334,7 @@ agents:
                 contact_field: true
 ```
 
-## Tool Implementation
+### Tool Implementation
 
 Create a file `tools/get_movies/main.py`:
 
@@ -419,7 +420,7 @@ tests:
             movie_title: "The Matrix"
 ```
 
-## Getting Credentials
+### Getting Credentials
 
 For this agent to work properly, you'll need to get an API key from The Movie Database (TMDB):
 
@@ -429,7 +430,7 @@ For this agent to work properly, you'll need to get an API key from The Movie Da
 4. Copy your API key
 5. When deploying the agent, you'll need to provide this key as a credential
 
-## Testing the Tool Locally
+### Testing the Tool Locally
 
 Before deploying your agent, you can test the tool locally using the `weni run` command. This allows you to verify that your tool works correctly and debug any issues.
 
@@ -455,18 +456,18 @@ weni run agent_definition.yaml movie_agent get_movies -v
 
 The verbose output will show you more details about the execution process, including API requests and responses, helping you identify and fix any issues with your tool.
 
-## Deployment Steps
+### Deployment Steps
 
 1. Deploy the agent:
    ```bash
    weni project push agent_definition.yaml
    ```
 
-## Testing
+### Testing
 
 After deployment, you can test the agent:
 
-1. Open your project in the Weni platform
+1. Open your project in the Weni by VTEX platform
 2. Find the Movie Agent in your agents list
 3. Provide the TMDB API key in the credential settings
 4. Start a conversation
@@ -474,11 +475,11 @@ After deployment, you can test the agent:
 
 The agent will respond with detailed information about the movie, including title, synopsis (translated to Portuguese), release date, runtime, genres, ratings, and links to posters. If the title is provided in Portuguese, the agent will automatically translate it to perform the search. 
 
-# News Agent
+## News Agent
 
 This example shows how to create an agent that provides up-to-date news on various topics through a news API.
 
-## Agent Definition
+### Agent Definition
 
 Create a file called `agent_definition.yaml`:
 
@@ -517,7 +518,7 @@ agents:
                     contact_field: true
 ```
 
-## Tool Implementation
+### Tool Implementation
 
 Create a file `tools/get_news/main.py`:
 
@@ -592,7 +593,7 @@ tests:
             topic: "technology"
 ```
 
-## Getting Credentials
+### Getting Credentials
 
 For this agent to work properly, you'll need to get an API key from News API:
 
@@ -601,7 +602,7 @@ For this agent to work properly, you'll need to get an API key from News API:
 3. Copy your API key from your account
 4. When deploying the agent, you'll need to provide this key as a credential
 
-## Testing the Tool Locally
+### Testing the Tool Locally
 
 Before deploying your agent, you can test the tool locally using the `weni run` command. This allows you to verify that your tool works correctly and debug any issues.
 
@@ -627,18 +628,18 @@ weni run agent_definition.yaml news_agent get_news -v
 
 The verbose output will show you more details about the execution process, helping you identify and fix any issues with your tool.
 
-## Deployment Steps
+### Deployment Steps
 
 1. Deploy the agent:
    ```bash
    weni project push agent_definition.yaml
    ```
 
-## Testing
+### Testing
 
 After deployment, you can test the agent:
 
-1. Open your project in the Weni platform
+1. Open your project in the Weni by VTEX platform
 2. Find the News Agent in your agents list
 3. Provide the News API key in the credential settings
 4. Start a conversation

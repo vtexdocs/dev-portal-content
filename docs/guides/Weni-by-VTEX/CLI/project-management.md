@@ -1,14 +1,15 @@
 ---
 title: "Weni by VTEX - Project Management"
-slug: "wenibyvtex-cli-projectmanagement"
+slug: "projectmanagement"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
+excerpt: "Manage your Weni by VTEX projects with the CLI."
 ---
 
 # Project Management
 
-Learn how to manage your Weni projects using the CLI.
+Learn how to manage your Weni by VTEX projects using the CLI.
 
 ## Project Commands
 
@@ -90,7 +91,7 @@ The CLI maintains a "current project" context, which is used by other commands l
 
 ### Starting a New Project
 
-1. Create project in Weni platform
+1. Create project in Weni by VTEX platform
 2. List projects to get UUID:
    ```bash
    weni project list

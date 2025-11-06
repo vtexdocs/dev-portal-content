@@ -1,9 +1,10 @@
 ---
 title: "Weni by VTEX - Core Concepts"
-slug: "wenibyvtex-cli-coreconcepts"
+slug: "core-concepts"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
+excerpt: "Learn the core concepts of the Weni by VTEX CLI."
 ---
 
 This article contains the core concepts for the Weni by VTEX CLI.
@@ -156,7 +157,7 @@ This page describes Passive Agents, which are AI-powered workers designed to ope
 
 ## Overview
 
-Passive Agents are AI-powered workers designed to operate autonomously within specific contexts, using generative AI to make decisions based on given problems. In the context of Weni CLI, these agents are specifically optimized for customer service operations, serving as the frontline communication interface between companies and their customers by responding to inquiries and executing tasks based on their configured skills.
+Passive Agents are AI-powered workers designed to operate autonomously within specific contexts, using generative AI to make decisions based on given problems. In the context of Weni by VTEX CLI, these agents are specifically optimized for customer service operations, serving as the frontline communication interface between companies and their customers by responding to inquiries and executing tasks based on their configured skills.
 
 Key features:
 
@@ -165,11 +166,11 @@ Key features:
 - [x] Built-in generative AI processing
 - [x] Customer service optimization
 
-With Weni CLI, you can define and deploy multiple agents that work together to solve real-world problems with precision, quality, and security. These agents can be equipped with various tools that enable them to interact with the external world within defined boundaries.
+With Weni by VTEX CLI, you can define and deploy multiple agents that work together to solve real-world problems with precision, quality, and security. These agents can be equipped with various tools that enable them to interact with the external world within defined boundaries.
 
 ## Creating a Passive Agent
 
-A Passive Agent consists of an agent definition. In Weni CLI, this definition is made using a YAML file, where you can specify its behavior, instructions, and skills.
+A Passive Agent consists of an agent definition. In Weni by VTEX CLI, this definition is made using a YAML file, where you can specify its behavior, instructions, and skills.
 
 Here is an example of how you can define your agent in a YAML file:
 
@@ -205,7 +206,7 @@ agents:
 
     `Name`
 
-    :   The name of your agent that will be displayed in the Weni Platform.  
+    :   The name of your agent that will be displayed in the Weni by VTEX Platform.  
         **Limit**: :octicons-alert-24: Maximum of 55 characters
 
     `Credentials`
@@ -230,7 +231,7 @@ agents:
 
     `Name`
 
-    :   The name of the tool that will be associated with the agent in the Weni Platform.  
+    :   The name of the tool that will be associated with the agent in the Weni by VTEX Platform.  
         **Limit**: :octicons-alert-24: Maximum of 40 characters
 
     `Source`
@@ -257,7 +258,7 @@ agents:
         
         - `required`: A boolean value (true/false) indicating whether the parameter must be provided for the tool to function properly. If set to true, the agent will ask the user for this information if it's not available before proceeding with the request.
         
-        - `contact_field`: Specifies if the parameter should be stored as a contact field in the user's profile for future reference. If set to true, the respective parameter will become information that persists for the user integrated with the Weni Platform. This brings benefits to the user experience because in future interactions, your agent may not need to request this information from the user again. Read more about contact fields in [Contact Fields](./contact-fields.md).
+        - `contact_field`: Specifies if the parameter should be stored as a contact field in the user's profile for future reference. If set to true, the respective parameter will become information that persists for the user integrated with the Weni by VTEX Platform. This brings benefits to the user experience because in future interactions, your agent may not need to request this information from the user again. Read more about contact fields in [Contact Fields](./contact-fields.md).
 
 ## Basic Structure
 
@@ -303,11 +304,11 @@ your-project-name/
 
 ## Overview
 
-Contact fields are persistent information about contacts who interact with your agents. By enabling contact fields in your tools, you elevate the user experience to a new level, as your agents can interact with the Weni Platform to accurately obtain information about the contact.
+Contact fields are persistent information about contacts who interact with your agents. By enabling contact fields in your tools, you elevate the user experience to a new level, as your agents can interact with the Weni by VTEX Platform to accurately obtain information about the contact.
 
 ## How Contact Fields Work
 
-When you mark a parameter as a contact field in your tool definition, that information becomes persistent in the user's profile within the Weni Platform. This creates several advantages:
+When you mark a parameter as a contact field in your tool definition, that information becomes persistent in the user's profile within the Weni by VTEXPlatform. This creates several advantages:
 
 1. **Improved User Experience**: Users don't need to repeatedly provide the same information in future interactions
 2. **Personalized Interactions**: Agents can address users with personalized information from previous conversations
@@ -328,7 +329,7 @@ parameters:
 
 When this parameter is processed during a conversation, the information provided by the user will be:
 
-- [x] Stored in the Weni Platform associated with that specific contact
+- [x] Stored in the Weni by VTEX Platform associated with that specific contact
 - [x] Available for retrieval and update in future interactions
 - [x] Accessible to all agents that have permission to view this contact field
 
@@ -358,7 +359,7 @@ Credentials are confidential information that your agents can use when invoking 
 Credentials are extremely important at two stages of your agents' development cycle:
 
 - [x] For local testing of tools during development
-- [x] For your agent to be used in production on channels integrated with the Weni platform, such as WhatsApp or any other
+- [x] For your agent to be used in production on channels integrated with the Weni by VTEX platform, such as WhatsApp or any other
 
 ## Credential Structure
 
@@ -383,25 +384,25 @@ agents:
 
 Each credential has the following attributes:
 
-- **label**: Human-readable name that will be displayed in the Weni Platform interface
+- **label**: Human-readable name that will be displayed in the Weni by VTEX Platform interface
 - **placeholder**: Example text or hint about what should be entered
 - **is_confidential**: Indicates whether the credential contains sensitive information (defaults to `true` if not specified)
 
 ## Credentials in Production Environment
 
-When your agent is deployed on the Weni Platform, credentials are securely managed by the system. This ensures that sensitive information, such as API keys and access tokens, is stored and transmitted securely.
+When your agent is deployed on the Weni by VTEX Platform, credentials are securely managed by the system. This ensures that sensitive information, such as API keys and access tokens, is stored and transmitted securely.
 
 ### How to Configure Credentials for Production
 
 1. **Define credentials in the YAML file**: Specify all necessary credentials in the `credentials` section of your agent definition file.
 
-2. **Deploy your agent**: When pushing your agent to the Weni Platform using the CLI, the system will automatically detect the credentials defined in your YAML file.
+2. **Deploy your agent**: When pushing your agent to the Weni by VTEX Platform using the CLI, the system will automatically detect the credentials defined in your YAML file.
 
-3. **Configure values in the interface**: Administrators will be able to configure the actual credential values through the Weni Platform interface, without needing to modify the code.
+3. **Configure values in the interface**: Administrators will be able to configure the actual credential values through the Weni by VTEX Platform interface, without needing to modify the code.
 
 4. **Associate credentials with tools**: Ensure that each tool that needs credentials is correctly configured to access them through the `context.credentials` object.
 
-> **Note**: When you assign your agent in the Weni Platform, the credentials defined in your YAML file will be displayed in the interface for configuration. For example, if you have the following agent definition:
+> **Note**: When you assign your agent in the Weni by VTEX Platform, the credentials defined in your YAML file will be displayed in the interface for configuration. For example, if you have the following agent definition:
 > 
 > ```yaml
 > agents:
@@ -433,7 +434,7 @@ When your agent is deployed on the Weni Platform, credentials are securely manag
 >                     contact_field: true
 > ```
 > 
-> After running the command `weni project push agent_definition.yaml` to upload your agent to your project on the Weni Platform, you'll find your agent in the Agent Builder gallery. When you select and assign this agent, you'll be prompted to enter the actual values for the credentials you defined (in this case, the API Key).
+> After running the command `weni project push agent_definition.yaml` to upload your agent to your project on the Weni by VTEX Platform, you'll find your agent in the Agent Builder gallery. When you select and assign this agent, you'll be prompted to enter the actual values for the credentials you defined (in this case, the API Key).
 
 
 > ![Agents Gallery](assets/agent-builder-gallery.png)
@@ -444,14 +445,14 @@ When your agent is deployed on the Weni Platform, credentials are securely manag
 
 ### Security in Production
 
-In the Weni Platform, credentials are:
+In the Weni by VTEX Platform, credentials are:
 
 - Stored in encrypted form
 - Never exposed in logs or user interfaces
 
 ## Credentials for Local Testing
 
-During development and local testing of your tools, you'll need to provide credentials for your tools to work correctly without depending on the Weni Platform infrastructure.
+During development and local testing of your tools, you'll need to provide credentials for your tools to work correctly without depending on the Weni by VTEX Platform infrastructure.
 
 ### Configuring Credentials for Local Development
 
@@ -561,11 +562,11 @@ class GetAddress(Tool):
 
     For those familiar with Python and API development:
 
-    1. **Imports**: We import the necessary Weni framework classes (`Tool`, `Context`, `TextResponse`) and the `requests` library for HTTP operations.
+    1. **Imports**: We import the necessary Weni by VTEX framework classes (`Tool`, `Context`, `TextResponse`) and the `requests` library for HTTP operations.
 
     2. **Class Definition**: We define a `GetAddress` class that inherits from the base `Tool` class, which provides the framework integration.
 
-    3. **Execute Method**: This is the entry point that the Weni framework calls:
+    3. **Execute Method**: This is the entry point that the Weni by VTEX framework calls:
        - It extracts the "cep" parameter from the context object using a get() with a default empty string
        - It includes debug print statements for logging
        - It delegates the actual API call to a separate method for better separation of concerns
@@ -593,7 +594,7 @@ To create your own tool:
 
 ## Tools with Credentials
 
-When your tool needs to interact with external services that require authentication, you'll need to use credentials or secrets. The Weni framework provides a secure way to manage these credentials through the `Context` object.
+When your tool needs to interact with external services that require authentication, you'll need to use credentials or secrets. The Weni by VTEX framework provides a secure way to manage these credentials through the `Context` object.
 
 ### How to Access Credentials
 

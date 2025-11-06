@@ -11,14 +11,14 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-Weni by VTEX CLI is a solution that helps you improve your customer service by using personalized AI-powered agents. This command-line tool simplifies the creation and management of multiple AI agents. Integrated with the Weni platform, it enables the development and deployment of high-performance agents across various communication channels, such as WhatsApp, Instagram, Facebook, and more.
+Weni by VTEX CLI is a solution that helps you improve your customer service by using personalized AI-powered agents. This command-line tool simplifies the creation and management of multiple AI agents. Integrated with the Weni by VTEX platform, it enables the development and deployment of high-performance agents across various communication channels, such as WhatsApp, Instagram, Facebook, and more.
 
 With the CLI, you can:
 - Create, deploy, and manage multiple AI agents
 - Add custom tools to the agents
 - Update agent configuration and behavior
 
-> ⚠️ To use the Weni by VTEX CLI, you must have: a Weni Platform account; an account at [weni.ai](https://weni.ai/en); and at least one project in your account.
+> ⚠️ To use the Weni by VTEX CLI, you must have: a Weni by VTEX Platform account; an account at [weni.ai](https://weni.ai/en); and at least one project in your account.
 
 The content is organized as follows:
 - [Installing the CLI](#installing-the-cli)
@@ -60,7 +60,7 @@ poetry install
 
 ### Verifying Installation
 
-To verify that Weni CLI is installed, type the following command in your terminal:
+To verify that Weni by VTEX CLI is installed, type the following command in your terminal:
 
 ```bash
 weni
@@ -275,9 +275,9 @@ tools:
       # another tool definition
 ```
 
-## Contributing to Weni CLI
+## Contributing to Weni by VTEX CLI
 
-Thank you for your interest in contributing to Weni CLI! This guide will help you get started with contributing to the project.
+Thank you for your interest in contributing to Weni by VTEX CLI! This guide will help you get started with contributing to the project.
 
 ### Development Setup
 

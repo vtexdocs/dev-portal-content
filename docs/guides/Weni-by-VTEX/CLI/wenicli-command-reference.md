@@ -1,12 +1,13 @@
 ---
 title: "Weni by VTEX - CLI Command Reference"
-slug: "wenibyvtex-cli-clicommandreference"
+slug: "wenicli-command-reference"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
+excerpt: "Learn the command reference for the Weni by VTEX CLI."
 ---
 
-# Weni CLI command reference
+# Weni by VTEX CLI command reference
 
 This documentation includes the default commands available in [Weni by VTEX CLI](weni-byvtex-guide.md).
 
@@ -17,7 +18,7 @@ Below is a brief description of the default commands available in Weni by VTEX C
 | --- | --- |
 | `weni` | Displays the main features and available commands directly in the terminal. |
 | `weni --version` | Displays the current version of the Weni by VTEX CLI installed on your system. |
-| `weni init` | Creates an initial setup ready for use and learning with Weni. |
+| `weni init` | Creates an initial setup ready for use and learning with Weni by VTEX. |
 | `weni login` | Authenticates with your Weni by VTEX platform account. |
 | `weni project list` | Lists existing projects in your account. |
 | `weni project list --org <org_uuid>` | Lists only projects from the specified organization UUID. |

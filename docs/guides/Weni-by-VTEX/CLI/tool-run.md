@@ -1,9 +1,10 @@
 ---
 title: "Weni by VTEX - Tool Run"
-slug: "wenibyvtex-cli-toolrun"
+slug: "tool-run"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
+excerpt: "Learn how to use the Tool Run feature."
 ---
 
 # Tool Test Run
@@ -102,7 +103,7 @@ Result:
 
 ## Running Tools That Require Credentials
 
-When your tool needs to interact with external services that require authentication, you'll need to provide credentials during testing. The official method for handling credentials with weni run is using your agent definition and a .env file.
+When your tool needs to interact with external services that require authentication, you'll need to provide credentials during testing. The official method for handling credentials with `weni run` is using your agent definition and a `.env` file.
 
 ### Using Agent Definition and .env File
 

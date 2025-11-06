@@ -1,18 +1,19 @@
 ---
 title: "Weni by VTEX - Authentication"
-slug: "wenibyvtex-cli-authentication"
+slug: "authentication"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
+excerpt: "Learn how to authenticate with Weni by VTEX CLI."
 ---
 
 # Authentication
 
-Learn how to authenticate with Weni CLI and manage your credentials.
+Learn how to authenticate with Weni by VTEX CLI and manage your credentials.
 
 ## Login Process
 
-Weni CLI uses OAuth2 for authentication. When you run the login command:
+Weni by VTEX CLI uses OAuth2 for authentication. When you run the login command:
 
 ```bash
 weni login
@@ -21,7 +22,7 @@ weni login
 The following happens:
 
 1. A local web server starts on your machine
-2. Your default browser opens to the Weni login page
+2. Your default browser opens to the Weni by VTEX login page
 3. After successful login, you're redirected back to the local server
 4. The CLI receives and stores your authentication token
 
