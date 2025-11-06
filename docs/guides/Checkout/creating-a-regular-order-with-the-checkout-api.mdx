@@ -12,7 +12,7 @@ This step-by-step guide will walk you through the process of using the [Checkout
 
 1. **Assess cart requirements:** Begin by simulating a cart to assess available delivery and payment options. This step also involves checking whether the email address provided is already associated with an existing customer, as it is required to place an order.
 2. **Assemble the cart:** Continue by building the cart, ensuring that all essential order details are properly structured according to the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields) data structure.
-3. **Handle the order:** Place the order on the VTEX platform and send all required payment data to resolve the order payment.
+3. **Handle the order:** Place the order on the VTEX platform and send all required payment data to process the order payment.
 4. **Process and validate the order:** The process ends by processing order details and conducting a verification procedure to confirm the successful placement of the order.
 
 ## Before you begin
@@ -29,14 +29,14 @@ In this step, we will verify that your store can fulfill the cart requirements a
 
 ### Simulating a cart
 
-Use the [Cart simulation](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation) endpoint to obtain the available delivery and payment options for the current cart configuration. In this request you must provide the following information in the request body:
+Use the [Cart simulation](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation) endpoint to obtain the available delivery and payment options for the current cart configuration. In this request, you must provide the following information in the request body:
  - `items.id`:  SKU ID.
  - `items.quantity`: The number of items in the cart.
  - `items.seller`: Seller's ID.
- - `country`: Three letter ISO code of the country of the shipping address.
- - `postalCode` or `geoCoordinates`: Shipping address's postal code or geocoordinates information.
+ - `country`: Three-letter ISO code of the country of the shipping address.
+ - `postalCode` or `geoCoordinates`: Shipping address's postal code or geocoordinates.
 
-Upon receiving a `200 OK` response, the request will provide a response body containing all information about the cart. Take a note of the following information, as it will be used in the following steps:
+Upon receiving a `200 OK` response, the request will provide a response body containing all information about the cart. Take note of the following information, as it will be used in the following steps:
 
 - `items`
 - `paymentData`
@@ -147,7 +147,7 @@ req.end();
 
 Send a request to the [Get client by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles) endpoint to ensure that there is a customer profile in your database associated with the email to be used in the order.
 
-Upon receiving a `200 OK` response, the request will provide a response body containing all information about the customer profile. Take a note of the following information, as it will be used in the following steps:
+Upon receiving a `200 OK` response, the request will provide a response body containing all information about the customer profile. Take note of the following information, as it will be used in the following steps:
 
 - `availableAddresses`
 - `userProfile`
@@ -548,7 +548,7 @@ For more complex examples, see the [Place order](https://developers.vtex.com/doc
 
 ## Step 3 - Handling the order
 
-Before creating the new order, it is necessary to verify that the `orderform` created in the previous steps has the appropriate structure in a valid JSON format.
+Before creating the new order, it is necessary to verify that the `orderForm` created in the previous steps has the appropriate structure in a valid JSON format.
 
 ### New customer `orderForm`
 
@@ -622,7 +622,7 @@ If the `orderForm` was created for a new customer (not yet registered in the sto
 
 ### Existing customer `orderForm`
 
-If the `orderForm` was created for a existing , who already has a customer profile registered in the store's database, it should follow this structure.
+If the `orderForm` was created for an existing customer who already has a customer profile registered in the store's database, it should follow this structure.
 
 <CH.Code show={["orderForm.json"]}>
 
@@ -676,7 +676,7 @@ Upon receiving a `201 Created` response, take note of these four pieces of infor
 
 - `transactionId` - ID of the transaction, which can be found within an object contained in the `merchantTransactions` array.
 - `orderId` - ID of the order within VTEX’s Order Management System (OMS). You can find the `orderId` within each object in the `orders` array.
-- `orderGroup`- ID that groups all orders related to the same purchase. For example, when an order is fulfilled by multiple sellers, each seller has its own order ID (`v71021570str-01` and `v71021570str-02`), but they share the same order group ID (`v71021570str`).
+- `orderGroup` - ID that groups all orders related to the same purchase. For example, when an order is fulfilled by multiple sellers, each seller has its own order ID (`v71021570str-01` and `v71021570str-02`), but they share the same order group ID (`v71021570str`).
 - `addressId` - ID of the customer address. If you plan to use the same address for both shipping and billing, get the `addressId` from the `orders[].shippingData.address` object.
 - `Vtex_CHKO_Auth` - authentication cookie provided in the response.
 
