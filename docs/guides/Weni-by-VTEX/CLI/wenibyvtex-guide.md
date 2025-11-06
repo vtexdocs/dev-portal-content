@@ -1,5 +1,5 @@
 ---
-title: "Weni by VTEX Guide"
+title: "Using the Weni by VTEX CLI"
 slug: "wenibyvtex-guide"
 hidden: false
 createdAt: "2025-10-23T17:08:52.219Z"
@@ -11,9 +11,10 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-Weni by VTEX CLI is a solution that helps you improve your customer service by using personalized AI-powered agents. This command-line tool simplifies the creation and management of multiple AI agents. Integrated with the Weni by VTEX platform, it enables the development and deployment of high-performance agents across various communication channels, such as WhatsApp, Instagram, Facebook, and more.
+This guide will walk you through using the Weni by VTEX CLI to create, deploy, and manage AI-powered agents, enhancing your customer service capabilities. By the end of this guide, you will be able to install the CLI, configure your project, and deploy your first agent.
 
 With the CLI, you can:
+
 - Create, deploy, and manage multiple AI agents
 - Add custom tools to the agents
 - Update agent configuration and behavior
@@ -21,11 +22,12 @@ With the CLI, you can:
 > ⚠️ To use the Weni by VTEX CLI, you must have: a Weni by VTEX Platform account; an account at [weni.ai](https://weni.ai/en); and at least one project in your account.
 
 The content is organized as follows:
+
 - [Installing the CLI](#installing-the-cli)
 - [Troubleshooting](#troubleshooting)
 - [Contributing to Weni by VTEX CLI](#contributing-to-weni-cli)
 
-## Installing the CLI
+## Step 1 - Installing the CLI
 
 There are two installation methods:
 
@@ -58,7 +60,7 @@ poetry shell
 poetry install
 ```
 
-### Verifying Installation
+### Step 2 - Verifying Installation
 
 To verify that Weni by VTEX CLI is installed, type the following command in your terminal:
 
@@ -81,9 +83,9 @@ If you encounter any issues:
    - Error message
    - Steps to reproduce
 
-#### Getting Started
+### Getting Started
 
-To start your first agent, follow the steps below:
+#### Step 1 - Log in to your Weni by VTEX account
 
 1. Open the terminal and run the following command:
 
@@ -94,7 +96,10 @@ weni login
 This should open your browser on the login page for authentication. If that does not happen, you can open the URL shown in the terminal.
 
 2. Log in using your Weni by VTEX account and password.
-3. List your projects by running the following command:
+
+#### Step 2 - List your projects
+
+List your projects by running the following command:
 
 ```bash
 weni project list
@@ -102,7 +107,9 @@ weni project list
 
 This will show all projects you have access to and, next to each of them, its universally unique identifier (UUID).
 
-4. Select the project you want to work on by running the following command:
+#### Step 3 - Select a project
+
+Select the project you want to work on by running the following command:
 
 ```bash
 weni project use your-project-uuid
@@ -110,7 +117,9 @@ weni project use your-project-uuid
 
 Replace `your-project-uuid` with the UUID from the project list.
 
-5. To verify you're working on the correct project, you can run the following command:
+#### Step 4 - Verify the current project
+
+To verify you're working on the correct project, you can run the following command:
 
 ```bash
 weni project current
@@ -118,17 +127,19 @@ weni project current
 
 You will see the project's UUID in the terminal output.
 
-6. To create an agent, run the following command:
+#### Step 5 - Initialize a new agent
+
+To create an agent, run the following command:
 
 ```bash
 weni init
 ```
 
-This will:
+This command performs the following actions:
 
-- Create the necessary folder structure.
-- Set up a pre-built CEP tool.
-- Create a file named `agent_definition.yaml` with the configuration below. You can edit this at any point.
+*   Creates the necessary folder structure for your agent.
+*   Sets up a pre-built CEP (Complex Event Processing) tool.
+*   Creates an `agent_definition.yaml` file with the initial configuration. You can edit this file to customize your agent's behavior.
 
 ```bash
 agents:
@@ -176,16 +187,18 @@ my-agent-project/
         └── requirements.txt    # Dependencies
 ```
 
+#### Step 6 - Implement the tool manually (if `weni init` fails)
+
 If the command doesn't work, you can implement this tool manually following the next steps:
 
-6.1 Create the tool directory
+1. Create the tool directory
 
 ```bash
    mkdir -p tools/get_address
    cd tools/get_address
 ```
 
-6.2 Create the file `tools/get_address/main.py` and insert the following: 
+2. Create the file `tools/get_address/main.py` and insert the following: 
 
 ```python
    from weni import Tool
@@ -210,11 +223,13 @@ If the command doesn't work, you can implement this tool manually following the 
 - The file name `main.py` must match the file name in the entrypoint
 - The class must inherit from `Tool` and implement the `execute` method
 
-6.3 Create the `requirements.txt` file
+3. Create the `requirements.txt` file
 
 ```txt
    requests==2.32.3
 ```
+
+#### Step 7 - Add credentials and global files (optional)
 
 If you have credentials and global files, place these files in `tools/get_address` during local runs:
 
@@ -228,29 +243,17 @@ api_key=your-development-api-key
 BASE_URL=https://api.example.com
 ```
 
-7. **(Optional) Add credentials and globals files**
+#### Step 7 - Deploy the agent
 
-Place these files in `tools/get_address/` if needed during local runs:
-
-```ini
-# .env
-api_key=your-development-api-key
-```
-
-```ini
-# .globals
-BASE_URL=https://api.example.com
-```
-
-8. Deploy Agent
+Deploy your agent by running the following command:
 
 ```bash
 weni project push agent_definition.yaml
 ```
 
-#### Advanced Configuration
+## Advanced Configuration
 
-##### Custom Parameters
+#### Custom Parameters
 
 You can add more parameters to your tools:
 
@@ -263,7 +266,7 @@ parameters:
       default: "json"
 ```
 
-##### Multiple Tools
+#### Multiple Tools
 
 Agents can have multiple tools:
 
@@ -277,7 +280,7 @@ tools:
 
 ## Contributing to Weni by VTEX CLI
 
-Thank you for your interest in contributing to Weni by VTEX CLI! This guide will help you get started with contributing to the project.
+This guide will help you get started with contributing to the project.
 
 ### Development Setup
 

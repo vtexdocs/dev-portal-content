@@ -1,5 +1,5 @@
 ---
-title: "Weni by VTEX - Logs"
+title: "Fetching and filtering logs"
 slug: "logs"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"

@@ -1,5 +1,5 @@
 ---
-title: "Weni by VTEX - Core Concepts"
+title: "Understanding the core concepts"
 slug: "core-concepts"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"

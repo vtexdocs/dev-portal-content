@@ -1,6 +1,6 @@
 ---
-title: "Weni by VTEX - Project Management"
-slug: "projectmanagement"
+title: "Managing your Weni by VTEX projects"
+slug: "project-management"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"

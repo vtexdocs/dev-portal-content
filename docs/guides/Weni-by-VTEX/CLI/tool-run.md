@@ -1,5 +1,5 @@
 ---
-title: "Weni by VTEX - Tool Run"
+title: "Testing the Tool Run feature"
 slug: "tool-run"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"

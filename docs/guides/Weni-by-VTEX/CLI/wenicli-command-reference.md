@@ -1,5 +1,5 @@
 ---
-title: "Weni by VTEX - CLI Command Reference"
+title: "Weni by VTEX CLI Command Reference"
 slug: "wenicli-command-reference"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
