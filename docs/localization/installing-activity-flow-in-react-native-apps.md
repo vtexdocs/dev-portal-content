@@ -26,12 +26,12 @@ To install the library, follow these steps:
 
     <Tabs items={['yarn', 'npm']}>
         <Tab>
-            ```bash 
+            ```bash
             yarn add @vtex/activity-flow @react-native-async-storage/async-storage
             ```
         </Tab>
         <Tab>
-            ```bash 
+            ```bash
             npm install @vtex/activity-flow @react-native-async-storage/async-storage
             ```
         </Tab>
@@ -120,6 +120,7 @@ To enable this feature, include the necessary parameter in your page redirect co
   <Text>Confirm Purchase</Text>
 </TouchableOpacity>
 ```
+
 When the user completes a purchase, Activity Flow automatically captures orderGroup and other query parameters during the screen transition.
 
 ### Tracking deep links
@@ -151,7 +152,7 @@ To enable deep link handling in your Android app, add intent filters to the `And
 </intent-filter>
 ```
 
-This `AndroidManifest` adds two intent filters for deep linking: 
+This `AndroidManifest` adds two intent filters for deep linking:
 
 - One for HTTPS URLs starting with `"https://example.com/{APP_ROUTE}"`.
 - One for a custom scheme `"{YOUR_CUSTOM_SCHEME}"`. Both use `action.VIEW`, `category_DEFAULT`, and `category_BROWSABLE`, enabling the Activity Flow to launch from browsers or other apps.
