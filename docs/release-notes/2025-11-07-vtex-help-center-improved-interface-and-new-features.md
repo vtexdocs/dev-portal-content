@@ -20,4 +20,4 @@ The goal is to improve your experience with our documentation, combining the sam
 * New features for known issues and troubleshooting articles
 * New button `Copy to AI`
 
-For more information on these and other improvements, see the [announcement](XXX) in the new Help Center.
+For more information on these and other improvements, see the [announcement](https://help.vtex.com/en/announcements/vtex-help-center-now-with-enhanced-interface-and-new-features--2Wu2YLkuSMAd0tnDd9iBK5) in the new Help Center.
