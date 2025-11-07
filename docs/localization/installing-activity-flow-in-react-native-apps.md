@@ -14,11 +14,11 @@ In this guide, you'll learn how to install and use the Activity Flow SDK in Reac
   
 ### Use React Navigation or Expo Router in your project
 
-You must use [React Navigation](https://reactnavigation.org/) or [Expo Router](https://docs.expo.dev/router/introduction/) to manage navigation between different screens of your app, as Activity Flow relies on the useFocusEffect hook from React Navigation to detect page changes. Learn more in the React guide [React Navigation](https://reactnavigation.org/docs/getting-started).
+To manage navigation between different screens of your app, you must use either [React Navigation](https://reactnavigation.org/) or [Expo Router](https://docs.expo.dev/router/introduction/). This is important because Activity Flow relies on the `useFocusEffect` hook from React Navigation to detect changes in pages. For more information, refer to the [React Navigation guide](https://reactnavigation.org/docs/getting-started).
 
 ### Install the Activity Flow package
 
-The `@react-native-async-storage/async-storage` library is required because it provides a persistent key-value storage system that is essential for tracking and storing user navigation data locally. This ensures that the Activity Flow plugin can function correctly, even in scenarios where network connectivity is temporarily unavailable. Installing it directly ensures that the native dependencies are correctly linked and available in your app.
+Activity Flow depends on `[@react-native-async-storage/async-storage](https://github.com/react-native-async-storage/async-storage)` to store navigation data locally. This ensures events are captured even when the device is offline. To install the library, follow these steps:
 
 To install the library, follow these steps:
 
@@ -26,20 +26,22 @@ To install the library, follow these steps:
 
     <Tabs items={['yarn', 'npm']}>
         <Tab>
-            ```bash yarn add @vtex/activity-flow @react-native-async-storage/async-storage```
+            ```bash 
+            yarn add @vtex/activity-flow @react-native-async-storage/async-storage
+            ```
         </Tab>
         <Tab>
-            ```bash npm install @vtex/activity-flow @react-native-async-storage/async-storage```
+            ```bash 
+            npm install @vtex/activity-flow @react-native-async-storage/async-storage
+            ```
         </Tab>
     </Tabs>
 
 2. For iOS, sync native dependencies:
 
- ```bash
+```bash
  cd ios && pod install && cd ../
-```
-
-This process installs the Activity Flow script in your app by adding a new dependency in the package.json file.
+This process installs the Activity Flow script in your app by adding a new dependency in the `package.json` file.
 
 </Steps>
 
@@ -47,7 +49,7 @@ This process installs the Activity Flow script in your app by adding a new depen
 
 ### Step 1 - Importing the Activity Flow plugin
 
-In your app's main file (for example, App.js or App.tsx), import the plugin as follows:
+In your app's main file (for example, `App.js` or `App.tsx`), import the plugin as follows:
 
 ```js
 import { initActivityFlow } from '@vtex/activity-flow';
@@ -75,23 +77,23 @@ To track navigation state changes, integrate the `usePageViewObserver` hook with
 
 1. Import the observer hook:
 
-```js
-import { usePageViewObserver } from '@vtex/activity-flow';
-```
+    ```js
+    import { usePageViewObserver } from '@vtex/activity-flow';
+    ```
 
 2. Create a reference for the `NavigationContainer`:
 
-```js
-const navigationRef = useRef(null);
-```
+    ```js
+    const navigationRef = useRef(null);
+    ```
 
 3. Pass the reference to `NavigationContainer`:
 
-```js
-<NavigationContainer ref={navigationRef}>
-  {/* Stack configurations */}
-</NavigationContainer>
-```
+    ```js
+    <NavigationContainer ref={navigationRef}>
+      {/* Stack configurations */}
+    </NavigationContainer>
+    ```
 
 4. Use the observer hook to track page views:
 
@@ -101,7 +103,7 @@ usePageViewObserver({ navigationRef });
 
 ### Tracking order group
 
-To enhance the quality of pageview capture, the Activity Flow SDK can record `orderGroup` (or `orderPlaced`) and any query parameters from the navigator stack. These parameters are crucial for validating data and confirming order placements.
+The Activity Flow SDK can automatically capture order details from navigation parameters, such as `orderGroup` or `orderPlaced`, and any query parameters from the navigator stack. These parameters help validate checkout events and confirm successful purchases.
 
 To enable this feature, include the necessary parameter in your page redirect configuration. See the example below:
 
@@ -118,6 +120,7 @@ To enable this feature, include the necessary parameter in your page redirect co
   <Text>Confirm Purchase</Text>
 </TouchableOpacity>
 ```
+When the user completes a purchase, Activity Flow automatically captures orderGroup and other query parameters during the screen transition.
 
 ### Tracking deep links
 
@@ -148,17 +151,18 @@ To enable deep link handling in your Android app, add intent filters to the `And
 </intent-filter>
 ```
 
-This `AndroidManifest` adds two intent filters for deep linking: one for HTTPS URLs starting with `"https://example.com/{APP_ROUTE}"` and another for a custom scheme `"{YOUR_CUSTOM_SCHEME}"`. Both use `action.VIEW`, `category_DEFAULT`, and `category_BROWSABLE`, enabling the Activity Flow to launch from browsers or other apps.
+This `AndroidManifest` adds two intent filters for deep linking: 
+
+- One for HTTPS URLs starting with `"https://example.com/{APP_ROUTE}"`.
+- One for a custom scheme `"{YOUR_CUSTOM_SCHEME}"`. Both use `action.VIEW`, `category_DEFAULT`, and `category_BROWSABLE`, enabling the Activity Flow to launch from browsers or other apps.
 The data tag for deep link via HTTP specifies the `scheme`, `host`, and an optional `pathPrefix`, matching any path that begins with that prefix (for example, **"/products/42"** if `{APP_ROUTE}` is **"/products"**). The main difference between intent filters for different routes is the `android:pathPrefix` attribute, which specifies the app route.
-For a deep link via a custom scheme, the data tag sets the scheme, matching any URL that starts with that scheme (for example, **myapp://...** if `{YOUR_CUSTOM_SCHEME}` is **myapp**). 
+For a deep link via a custom scheme, the data tag sets the scheme, matching any URL that starts with that scheme (for example, **myapp://...** if `{YOUR_CUSTOM_SCHEME}` is **myapp**).
 
 #### iOS
 
 To enable deep link handling in your iOS app, add your URL scheme to the `Info.plist` file and handle incoming URLs in the `AppDelegate` file:
 
-1. Configure `info.plist`
-
-To register your custom URL scheme, add the following configuration to your `Info.plist` file:
+1. Register your custom URL scheme by adding the following configuration to your `Info.plist` file:
 
 ```ts info.plist
 <key>CFBundleURLTypes</key>
@@ -176,9 +180,7 @@ To register your custom URL scheme, add the following configuration to your `Inf
 
 In the `info.plist` configuration, `{YOUR_BUNDLE_URL_SCHEME}` is the custom URL scheme your app will handle, that is, the prefix before `://` in deep links. For example, setting it to `myapp` makes links like `myapp://path` open your app. Enter only the scheme name, without `://`. The `{YOUR_BUNDLE_URL_NAME}` label is a unique identifier for this URL type entry, typically in reverse-DNS format, used to distinguish the configuration and not to affect routing. For example, `com.example.appname`.
 
-2. Configure `AppDelegate`
-
-To handle incoming deep links, modify your `AppDelegate.swift` (or `AppDelegate.mm`) file. The following example handles deep links for cold starts, when the app is not running, and warm starts, when the app is already running.
+2. Handle incoming deep links by modifying your `AppDelegate.swift` (or `AppDelegate.mm`) file. The following example handles deep links for cold starts, when the app is not running, and warm starts, when the app is already running.
 
 ```ts AppDelegate.swift
 import UIKit
@@ -246,6 +248,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   return false
 }
 ```
+
+Your Android app can now be launched from both web links (`https://mystore.com/products/42`) and custom scheme links: (`myapp://products/42`).
 
 ### Tracking ad events
 
@@ -396,9 +400,9 @@ On the Ads screen, ad parameters (including the mandatory `accountName`) are pas
 
 The wrapper detects clicks via `onTouchEndCapture`. If your ad interaction isn’t based on it or cannot be wrapped, [use the `useAdsTracker` hook](#using-the-useadstracker-hook) instead.
 
->⚠️ To use this example in your project, remember to replace accountName according to your scenario.
+>⚠️ To use this example in your project, remember to replace `accountName` according to your scenario.
 
-#### Using the useAdsTracker hook
+#### Using the `useAdsTracker` hook
 
 The `useAdsTracker` hook provides more control over how events are attached. It returns handlers and a ref that you must apply manually to your components.
 
