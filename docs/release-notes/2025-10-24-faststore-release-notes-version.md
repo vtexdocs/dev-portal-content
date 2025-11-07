@@ -4,7 +4,7 @@ slug: "2025-10-24-faststore-release-notes-version"
 type: "added"
 createdAt: "2025-10-24T11:00:00.000Z"
 updatedAt: "2025-10-24T11:05:00.000Z"
-excerpt: "Version 3.91.0 improves authentication stability via centralized GraphQL validation and fixes facets for ProductShelf and ProductTiles to respect Headless CMS filters and Delivery Promise."
+excerpt: "Version 3.91.0 improves authentication stability via centralized GraphQL validation and fixes facets in ProductShelf and ProductTiles to respect Headless CMS filters and Delivery Promise."
 tags:
     - FastStore
 ---
