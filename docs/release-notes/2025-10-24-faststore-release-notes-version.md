@@ -17,6 +17,7 @@ We've enhanced the authentication flow by improving user session validation and 
 For developers, session validation has been centralized at the GraphQL layer using the `@auth` directive. This refactoring consolidates security checks, simplifies query protection, and enhances the robustness and maintainability of the overall authentication process.
 
 **Fixed `ProductShelf` and `ProductTiles` facet handling** (PR: [\#3073](https://github.com/vtex/faststore/pull/3073))
+
 We've fixed issues in the `ProductShelf` and `ProductTiles` components where `selectedFacets` were being incorrectly applied. Facets configured in the CMS, such as `productClusterIds (collections)`, are now correctly respected.
 
 Additionally, for stores using [Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation), these components now rely on the global pickup point facet rather than inheriting shipping method filters from the Product Listing Page (PLP).
