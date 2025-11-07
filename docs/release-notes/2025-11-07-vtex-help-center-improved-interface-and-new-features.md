@@ -9,7 +9,7 @@ excerpt: "Discover our redesigned documentation portal, built to make finding an
 
 VTEX has launched a new [Help Center](https://newhelp.vtex.com/en) with a cleaner interface design, enhanced search, and other updates.
 
-[INSERT GIF]
+![new_help_center_home_EN](https://images.ctfassets.net/alneenqid6w5/1mXINHb81xdhEnYBkXxhLj/00071a3102641ca74ef1a9b99538d89d/new_help_center_start_here_view_PT.png)
 
 The goal is to improve your experience with our documentation, combining the same high-quality content with a refreshed look and a portal that offers more functionality. Some of the main improvements include:
 
@@ -18,5 +18,6 @@ The goal is to improve your experience with our documentation, combining the sam
 * Fast and smart search
 * Mobile version improvements
 * New features for known issues and troubleshooting articles
+* New button `Copy to AI`
 
 For more information on these and other improvements, see the [announcement](XXX) in the new Help Center.
