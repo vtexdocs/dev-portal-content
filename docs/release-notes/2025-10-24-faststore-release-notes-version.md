@@ -1,5 +1,5 @@
 ﻿---
-title: "FastStore Release Notes — Version 3.91.0" 
+title: "FastStore Release Notes — Version 3.91.0"
 slug: "2025-10-24-faststore-release-notes-version"
 type: "added"
 createdAt: "2025-10-24T11:00:00.000Z"
