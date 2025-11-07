@@ -2,7 +2,7 @@
 title: "Optimizing SEO by managing lazy loading on PLPs and PDPs"
 ---
 
-Lazy loading is a method that delays the loading of non-essential resources, such as images or sections of a page, until they are actually needed. FastStore uses lazy loading for all native store sections that are out of the viewport by default. Each section is wrapped in a component that checks if it is within the viewport. If it is not, it loads lazily.
+Lazy loading is a method that delays the loading of non-essential resources, such as images or sections of a page, until they are actually needed. FastStore uses lazy loading for all native store sections that are out of the viewport by default. Each section is wrapped in a component that checks if it is within the viewport. If it is not, it is loaded lazily.
 
 This approach reduces initial page load time and improves the browsing experience, especially on slower devices and networks. However, since sections outside the viewport are not included in the initial HTML, there can be SEO implications, such as search engines not indexing them immediately.
 
@@ -12,7 +12,7 @@ This guide explains how to manage lazy loading for custom sections to balance SE
 
 `LazyLoadingSection` and `ViewportObserver` work together in FastStore to improve initial page load speed.
 
-* `LazyLoadingSection`: A React wrapper that delays the rendering of content (e.g., blocks) and hydration of non-critical blocks until they approach the viewport.  
+* `LazyLoadingSection`: A React wrapper that delays the rendering of content (e.g., blocks) and hydration of non-critical blocks until the content and non-critical blocks approach the viewport.  
 * `ViewportObserver`: A small utility that detects when content is approaching the viewport, triggering the `LazyLoadingSection` to render the content.
 
 These two components work together to enable lazy loading. By delaying the rendering, hydration, and resource fetching until content is near the viewport, they greatly decrease the initial page load time, which is especially beneficial for users on slower devices and networks.
@@ -28,19 +28,19 @@ F --> G[Content becomes visible to user];
 C --> H[Content visible to user and search engines];
 ```
 
-> ⚠️ Disabling lazy loading for too many elements will increase initial page load time, which impacts performance score – search engines penalize low performance. This practice should be applied only to critical, above-the-fold content. To help you decide on when to disable lazy load, see the [Deciding when to lazy load](?tab=t.t9r5zcseuwe4#heading=h.696ir3oal5ef) section.
+> ⚠️ Disabling lazy loading for too many elements will increase initial page load time, which impacts performance score – search engines penalize low performance. This practice should be applied only to critical, above-the-fold content. To help you decide when to disable lazy loading, see the [Deciding when to lazy load](?tab=t.t9r5zcseuwe4#heading=h.696ir3oal5ef) section.
 
 ### Server-Side Rendering (SSR) and lazy loading
 
-Server-side rendering provides crucial HTML in the initial document, allowing users and crawlers to access content without executing JavaScript. **Sections wrapped with lazy loading are not included in this initial HTML.** They are only rendered and hydrated when the section is near the viewport.
+Server-side rendering provides crucial HTML in the initial document, allowing users and crawlers to access content without executing JavaScript. **Sections wrapped with lazy loading are not included in this initial HTML.** They are only rendered and hydrated when the sections are near the viewport.
 
-When creating custom sections, you can add the \*\*Skip lazy loading\*\* flag to enable skipping sections. Which means lazy loading is disabled for all sections in FastStore's PDP and PLP templates. Without lazy loading, bots can access all content immediately without scrolling or running scripts, which might speed up crawling. However, they still need to download and process every media file, which can quickly consume crawl budget, slow down the indexing of other pages, and reduce the number of pages indexed. Larger initial payloads can also negatively impact user experience and make the site seem slower to bots.
+When creating custom sections, you can add the \*\*Skip lazy loading\*\* flag to enable skipping sections. This means lazy loading is disabled for all sections in FastStore's PDP and PLP templates. Without lazy loading, bots can access all content immediately without scrolling or running scripts, which might speed up crawling. However, they still need to download and process all media files, which can quickly consume crawl budget, slow down the indexing of other pages, and reduce the number of pages indexed. Larger initial payloads can also negatively impact user experience and make the site seem slower to bots.
 
 ![skip-lazy-lozading-flag](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading-sectio___2a0ca0c7a90d61cda31c2ce9200e377fn)
 
 ### SEO and performance trade-off
 
-Search engines, such as Google, use crawlers to find and index web content. Although modern crawlers can run JavaScript to render pages, this process can be slow or incomplete. Therefore, it is important to ensure that key commerce content is included in the initial HTML so that it gets indexed.
+Search engines, such as Google, use crawlers to find and index web content. Although modern crawlers can run JavaScript to render pages, this process can be slow or incomplete. Therefore, it is important to ensure that key commerce content is included in the initial HTML so that it is indexed.
 
 Lazy loading can improve Largest Contentful Paint (LCP) and Interaction to Next Paint (INP), which are important SEO ranking factors. By deferring heavy resources, lazy loading helps improve:
 
@@ -51,7 +51,7 @@ On the other hand, rendering all content upfront can speed up discovery for craw
 
 ## Deciding when to lazy load
 
-Use lazy loading strategically to prioritize the most important content from crawlers. If essential content is not present in the initial HTML, search engines may consume more crawl budget to execute \`js\` scripts, such as product grids on a PLP.
+Use lazy loading strategically to prioritize the most important content for crawlers. If essential content is not present in the initial HTML, search engines may consume more crawl budget to execute \`js\` scripts, such as product grids on a PLP.
 
 ### When to implement lazy loading ✅
 
@@ -60,14 +60,14 @@ Use lazy loading strategically to prioritize the most important content from cra
 | :---- | :---- | :---- |
 | **To load content that isn't immediately visible** | Improves initial page load speed by delaying non-critical assets that are below the fold. | A homepage with promotional banners and lookbooks that load as the user scrolls down the page. |
 | **To improve page speed for a media-heavy page** | Optimizes resource usage and ensures the most important content is prioritized and loads first. | A PDP includes a "Complete the Look" carousel at the bottom. Since this is a supplementary suggestion, lazy loading ensures the main product details are prioritized and the carousel images load only when the user scrolls to that section. |
-| **The content doesn't affect SEO or crawling** | It won't negatively impact search engine visibility since the content isn't critical for SEO or structured data. | A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured data for SEO, lazy loading it will not negatively affect search engine visibility. |
-| **To balance server load during high traffic** | It reduces server spikes by loading only images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, which reduces server spikes and keeps the browsing experience fast. |
+| **The content doesn't affect SEO or crawling** | It will not negatively impact search engine visibility since the content isn't critical for SEO or structured data. | A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured data for SEO, lazy loading it will not negatively affect search engine visibility. |
+| **To balance server load during high traffic** | It reduces server spikes by loading only the images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, which reduces server spikes and keeps the browsing experience fast. |
 
 ### When to skip lazy loading ❌ 
 
 | Context | Reason to avoid | Example |
 | :---- | :---- | :---- |
-| **There is a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it's lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index all new products shown in this grid. |
+| **There is a risk of hiding critical page elements from crawlers** | Search engines might not see all content if it is lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index all new products shown in this grid. |
 | **Do not disable lazy loading globally** | Apply lazy loading selectively. Rendering everything upfront increases payloads, exhausts crawl budget, and slows indexing. | A homepage with numerous campaign images should lazy load secondary media while keeping critical content immediately available. |
 
 ## Before you begin
@@ -205,8 +205,8 @@ After adjusting lazy loading, monitor its impact and iterate. Focus on measurabl
 
 ### Verifying PLP and PDP settings
 
-- PLP server HTML: Ensure the category title and first set of product tiles (name, price, primary image) are present in the initial HTML response.  
-- PDP server HTML: Ensure the product title, price, first image, and variant selector renders in the initial HTML.  
+- PLP server-side HTML: Ensure the category title and first set of product tiles (name, price, primary image) are present in the initial HTML response.  
+- PDP server-side HTML: Ensure the product title, price, first image, and variant selector renders in the initial HTML.  
 - Images: The first visible image should not be lazy-loaded. Use `fetchpriority="high"` on the LCP image when appropriate; add `decoding="async"` and proper `srcset`/`sizes` for responsive images.  
 - Placeholders: Reserve space (via `width`/`height` or `aspect-ratio`) for deferred content to prevent CLS.  
 - Controls: Filters and sorting that are SEO-relevant should be usable without JavaScript for crawlability (progressive enhancement where feasible).
@@ -229,4 +229,4 @@ After adjusting lazy loading, monitor its impact and iterate. Focus on measurabl
 
 - Roll out gradually and compare KPIs (CWV, bounce rate, time to first interaction, indexing) before full deployment.  
 - For infinite scroll, expose crawlable pagination or a discoverable "Load more" URL pattern to deeper content.  
-- In DevTools Network, verify the initial document Response includes the critical PLP/PDP HTML expected by crawlers.
+- In the Developer Tools' Network tab, verify the initial document Response includes the critical PLP/PDP HTML expected by crawlers.
