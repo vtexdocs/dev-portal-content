@@ -18,6 +18,6 @@ The goal is to improve your experience with our documentation, combining the sam
 * Fast and smart search
 * Mobile version improvements
 * New features for known issues and troubleshooting articles
-* New button `Copy to AI`
+* New button `Copy for AI`
 
 For more information on these and other improvements, see the [announcement](https://help.vtex.com/en/announcements/vtex-help-center-now-with-enhanced-interface-and-new-features--2Wu2YLkuSMAd0tnDd9iBK5) in the new Help Center.
