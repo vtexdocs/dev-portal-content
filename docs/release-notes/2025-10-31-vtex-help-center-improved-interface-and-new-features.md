@@ -1,6 +1,6 @@
 ---
 title: "VTEX Help Center: Improved interface and new features" 
-slug: "2025-10-31-vtex-help-center-improved-interface-and-new-features" 
+slug: "2025-11-07-vtex-help-center-improved-interface-and-new-features" 
 type: "Information"
 createdAt: "2025-10-31T11:00:00.000Z"
 updatedAt: "2025-10-31T11:00:00.000Z"
