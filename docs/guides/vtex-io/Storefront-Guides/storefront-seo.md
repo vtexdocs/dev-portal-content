@@ -15,13 +15,13 @@ To learn more about SEO strategies, check Google’s documentation resource [Exp
 
 VTEX offers a set of tools and settings that allow you to optimize your store for search engines, making your products more discoverable and improving site performance.
 
-In this guide, you will learn some best practices for implementing strategies to improve SEO in your VTEX store and it is divided into [general best practices](#general-seo-best-practices) applicable to all storefronts, followed by specific configurations for [FastStore](#faststore), [Store Framework](#store-framework), and [(Legacy) CMS Portal](#legacy-cms-portal).
+In this guide, you will learn some best practices for implementing strategies to improve SEO in your VTEX store. It is divided into [general best practices](#general-seo-best-practices) applicable to all storefronts, followed by specific configurations for [FastStore](#faststore), [Store Framework](#store-framework), and [(Legacy) CMS Portal](#legacy-cms-portal).
 
 ## General SEO best practices
 
 ### Store settings
 
-Properly configuring the elements of your ecommerce store, such as titles, descriptions, media, and URLs, may significantly impact how search engines index and rank your pages.
+Properly configuring the elements of your ecommerce store, such as titles, descriptions, media, and URLs, can significantly impact how search engines index and rank your pages.
 
 #### Titles and descriptions
 
@@ -69,7 +69,7 @@ For stores developed with [FastStore](https://developers.vtex.com/docs/guides/fa
 
 - **Configuration and setup:** Configure fundamental SEO settings during the project onboarding and after in the `discovery.config.js` file. Learn more in [SEO guide overview for FastStore](https://developers.vtex.com/docs/guides/faststore/seo-overview).
 
-- **Canonical Tags:** Ensure canonical tags are correctly implemented on all pages, especially on Product Listing Pages (PLPs) that use URL parameters for functionality. Products accessible via multiple URLs must specify a canonical version to avoid duplicate content.
+- **Canonical tags:** Ensure canonical tags are correctly implemented on all pages, especially on Product Listing Pages (PLPs) that use URL parameters for functionality. Products accessible via multiple URLs must specify a canonical version to avoid duplicate content.
 
 - **Structured Data (Schema):**
   - Use global identifiers like GTIN or UPC codes in your product schema. If catalog data is incomplete, you may need to customize the schema client-side.
@@ -79,7 +79,7 @@ For stores developed with [FastStore](https://developers.vtex.com/docs/guides/fa
   - Remove deprecated Offer schema fields such as `listPriceWithTaxes` and `priceWithTaxes`.
 
 - **Performance and Crawlability:**
-  - **Lazy Loading:** Apply lazy loading strategically. Avoid using it on critical content sections of PLPs and PDPs to ensure search engine bots can crawl all content. Disabling it entirely can increase crawl budget and harm performance. Learn more in [Optimizing SEO by managing lazy loading on PLPs and PDPs](https://developers.vtex.com/docs/guides/faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp).
+  - **Lazy Loading:** Apply lazy loading strategically. Avoid using it on critical content sections of PLPs and PDPs to ensure search engine bots can crawl all content. Disabling it entirely can make all content immediately available for crawling, but it can also harm overall performance. Learn more in [Optimizing SEO by managing lazy loading on PLPs and PDPs](https://developers.vtex.com/docs/guides/faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp).
   - **Caching:** Use `GET` requests (not `POST`) for custom queries to improve caching, which benefits performance and SEO. Learn more in [Configuring GraphQL cache control for `GET` requests](https://developers.vtex.com/docs/guides/faststore/faststore-api-configuring-graphql-cache-control).
   - **Page Types:** When building department pages, favor the Product List Page (PLP) template over a Landing Page (LP). PLPs support better caching and automate structured data for breadcrumbs.
 
@@ -91,7 +91,7 @@ For stores developed with [FastStore](https://developers.vtex.com/docs/guides/fa
 
 For stores developed with [Store Framework](https://developers.vtex.com/docs/guides/store-framework), follow these specific practices:
 
-- **Store SEO settings:** Configure basic SEO settings for the home page through VTEX Admin accessing **Store Settings > Storefront > Store**. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/pt/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR).
+- **Store SEO settings:** Configure basic SEO settings for the home page through VTEX Admin by accessing **Store Settings > Storefront > Store**. Learn more in [Configuring SEO in your Store Framework store](https://help.vtex.com/pt/tutorial/configuring-seo-in-your-store--1sKskEsjUSvgHyqM8oknVR).
 
 - **Intelligent Search for Categories:** Use the [VTEX Intelligent Search app](https://developers.vtex.com/docs/apps/vtex.search@1.0.8) to customize titles and meta descriptions for Department, Category, and Subcategory pages within the search navigation bar. Learn more in [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search).
 
