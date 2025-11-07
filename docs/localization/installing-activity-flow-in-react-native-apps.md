@@ -101,6 +101,8 @@ To track navigation state changes, integrate the `usePageViewObserver` hook with
 usePageViewObserver({ navigationRef });
 ```
 
+Activity Flow now automatically tracks page transitions. When you navigate between screens, it records each page view and sends event data.
+
 ### Tracking order group
 
 The Activity Flow SDK can automatically capture order details from navigation parameters, such as `orderGroup` or `orderPlaced`, and any query parameters from the navigator stack. These parameters help validate checkout events and confirm successful purchases.
