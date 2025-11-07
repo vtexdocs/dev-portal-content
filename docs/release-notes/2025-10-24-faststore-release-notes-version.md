@@ -12,6 +12,7 @@ tags:
 This FastStore release focuses on improving stability and developer experience across authentication and product component handling. It enhances user session reliability, simplifies GraphQL security validation, and ensures accurate behavior for Headless CMS-configured facets.
 
 **Improved user session and authentication handling** (PR: [\#3065](https://github.com/vtex/faststore/pull/3065))  
+
 We've enhanced the authentication flow by improving user session validation and fixing server-side refresh token issues. This update resolves inconsistencies in cookie handling and data types, resulting in a more stable and predictable login experience for shoppers.
 
 For developers, session validation has been centralized at the GraphQL layer using the `@auth` directive. This refactoring consolidates security checks, simplifies query protection, and enhances the robustness and maintainability of the overall authentication process.
