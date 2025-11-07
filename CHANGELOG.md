@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.1.311](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.310...v1.1.311) (2025-11-07)
 
+### [1.1.311](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.310...v1.1.311) (2025-11-07)
+
 ### [1.1.310](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.308...v1.1.310) (2025-11-06)
 
 ### [1.1.308](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.306...v1.1.308) (2025-11-05)
