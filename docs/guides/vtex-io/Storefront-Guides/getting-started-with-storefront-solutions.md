@@ -63,7 +63,7 @@ Explore below the features and functionalities available for each storefront tec
 | [**Gift Card**](https://developers.vtex.com/docs/guides/gift-card-integration-guide) **integration** | ✅ | ✅ | ✅ |
 | [**GTM - Google Analytics 4**](https://help.vtex.com/en/tutorial/how-to-setup-google-analytics-in-vtex-store--G2P0rmSrEiqCcmUMyUUwG) | ✅ | ✅ | ✅ |
 | [**Intelligent Search**](https://help.vtex.com/tracks/vtex-intelligent-search) **integration** | ✅ | ✅ | ❌ |
-| [**Live Shopping**](https://developers.vtex.com/docs/apps/vtexventures.livestreaming) | ⚠️ | ✅ | ✅ |
+| [**Live Shopping**](https://developers.vtex.com/docs/apps/vtexventures.livestreaming) | ✅ (experimental feature) | ✅ | ✅ |
 | [**Master Data**](https://developers.vtex.com/docs/guides/master-data) **integration** | ⚠️ | ✅ | ✅ |
 | [**Newsletter integration with Master Data**](https://developers.vtex.com/docs/guides/implementing-newsletter-opt-in-with-master-data-v1) | ✅ | ✅ | ✅ |
 | [**Price table**](https://help.vtex.com/en/tutorial/creating-price-tables--58YmY2Iwggyw4WeSCGg24S) | ✅ | ✅ | ✅ |
