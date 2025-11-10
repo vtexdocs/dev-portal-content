@@ -111,7 +111,7 @@ Check the default columns present in the Cost Centers tab in the table below. Ma
 
 ## Custom fields
 
-To include custom fields in your spreadsheet:
+To include custom fields in your spreadsheet, follow the steps below:
 
 1. Add the desired custom fields as the last columns in your tab.
 2. Use the prefix `CF_` followed by the exact name of the custom field as registered in the system.
