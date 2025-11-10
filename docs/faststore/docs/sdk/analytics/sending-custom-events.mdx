@@ -22,8 +22,8 @@ To create a custom event interface, use the `sendAnalyticsEvent` function. This 
 
 | Property name | Type | Description | Default |
 | ------------------- |-------- |---------------- |---------|
-| `name`            | `string` | The name of the event that appears in Analytics reports. The `name` doesn't need to follow any event name conventions related to natively supported events. | Required |
-| `params` | `any` | Any type and value your custom event uses. | Required |
+| `name`            | `string` | The name of the event that appears in Analytics reports. The `name` does not need to follow any event name conventions related to natively supported events. | Required |
+| `params` | `any` | Any type and value for your custom event. | Required |
 | `isEcommerceEvent` | `boolean` | When `true`, wraps `params` in an `ecommerce` object following the GA4 ecommerce data model. When `false`, sends `params` at the top level for [custom non-ecommerce events](https://support.google.com/analytics/answer/14240153?hl=en). | `true` |
 
 In the following example, we define a custom event called `WishlistEvent` to track when a user adds a product to their wishlist. Since this is not a standard ecommerce event, we set `isEcommerceEvent: false`:
@@ -54,7 +54,7 @@ In the following example, we define a custom event called `WishlistEvent` to tra
     })
     ```
 
-This custom event interface captures when a user adds a product to their wishlist, logging details like `productId`, `productName`, and whether the user is logged in (`isLoggedIn`). By setting `isEcommerceEvent: false`, the parameters are sent at the top level of the event payload, following the [Google Analytics 4 custom events format](https://support.google.com/analytics/answer/14240153?hl=en).
+This custom event interface captures when a user adds a product to their wishlist, logging details like `productId`, `productName`, and whether the user is logged in (`isLoggedIn`). By setting `isEcommerceEvent: false`, the parameters are sent at the top level of the event payload, following the [Google Analytics 4 format for custom events](https://support.google.com/analytics/answer/14240153?hl=en).
 
 #### Extending existing types from the Analytics module
 
