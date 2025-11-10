@@ -77,7 +77,7 @@ The following example extends the `AddToCartEvent` interface to include the `cou
 
 #### Overriding multiple types
 
-If you have multiple custom events, such as adding/removing items from the cart or viewing products, you can define a unified type to handle them all. This approach simplifies firing multiple events from the same interface.
+If you have multiple custom events, such as adding/removing items using the cart or viewing products, you can define a unified type to handle them all. This approach simplifies firing multiple events from the same interface.
 
     ```ts
     /* types.ts */
@@ -130,7 +130,7 @@ After defining the event interface, you'll need to intercept these events using 
     }
     ```
 
-Note that to target extended properties of events, you'll also need to configure the types of your [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) callback function to expect an event of such type.
+Note that to target extended properties of events, you'll also need to configure the types of your [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) callback function to expect an event of that type.
 
     ```ts
     import { useAnalyticsEvent } from '@faststore/sdk'
@@ -149,7 +149,7 @@ Note that to target extended properties of events, you'll also need to configure
     }
     ```
 
-> ℹ By typing the callback function with the extended types, you can reference properties not natively offered by the analytics module.
+>ℹ By typing the callback function with the extended types, you can reference properties not natively offered by the Analytics module.
 
 ### Step 3 - Firing custom events
 
