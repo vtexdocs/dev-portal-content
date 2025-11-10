@@ -58,7 +58,7 @@ This custom event interface captures when a user adds a product to their wishlis
 
 #### Extending existing types from the Analytics module
 
-If your event is related to an existing one, you can extend relevant types from the Analytics module. You can do this by using the [TypeScript's generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) with the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
+If your event is related to an existing one, you can extend relevant types from the Analytics module. You can do this by using the [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) with the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
 
 The following example extends the `AddToCartEvent` interface to include the `couponCode` property, which is useful for tracking if a customer applied a coupon code when adding an item to the cart:
 

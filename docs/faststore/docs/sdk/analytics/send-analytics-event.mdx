@@ -132,7 +132,7 @@ interface CustomEvent {
 }
 
 /**
- * By passing CustomEvent as a generic type to sendAnalyticsEvent, you will receive code hints for all properties of this type, including params subfields.
+ * By passing `CustomEvent` as a generic type to `sendAnalyticsEvent`, you will receive code suggestions for all properties of this type, including nested properties within `params`.
  */
 sendAnalyticsEvent<CustomEvent>(/* ... */)
 ```
