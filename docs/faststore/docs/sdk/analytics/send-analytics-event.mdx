@@ -48,6 +48,75 @@ const MyComponent = () => {
 
 Check the list of [available types](https://developers.vtex.com/docs/guides/faststore/analytics-overview#list-of-native-event-types).
 
+## Parameters
+
+The `sendAnalyticsEvent` function accepts an event object with the following properties:
+
+| Property | Type | Description | Default |
+|----------|------|-------------|---------|
+| `name` | `string` | The name of the event that appears in Analytics reports. | Required |
+| `params` | `object` | Event-specific parameters and data. | Required |
+| `isEcommerceEvent` | `boolean` | Determines event structure. When `true`, wraps `params` in an `ecommerce` object following the GA4 ecommerce data model. When `false`, sends `params` at the top level for custom non-ecommerce events. | `true` |
+
+### Using custom events without ecommerce structure
+
+By default, `sendAnalyticsEvent` wraps event parameters in an `ecommerce` object to follow the [Google Analytics 4 ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en) structure. However, for custom events that don't represent ecommerce actions, you should set `isEcommerceEvent: false` to send parameters at the top level, following the [GA4 custom events format](https://support.google.com/analytics/answer/14240153?hl=en).
+
+#### Example: Custom event with `isEcommerceEvent: false`
+
+```tsx
+import { sendAnalyticsEvent } from '@faststore/sdk'
+
+sendAnalyticsEvent({
+  name: 'newsletter_signup',
+  isEcommerceEvent: false,
+  params: {
+    method: 'footer_form',
+    user_type: 'new_visitor',
+    email_preference: 'weekly'
+  }
+})
+```
+
+This sends the event as:
+
+```json
+{
+  "event": "newsletter_signup",
+  "method": "footer_form",
+  "user_type": "new_visitor",
+  "email_preference": "weekly"
+}
+```
+
+#### Example: Ecommerce event (default behavior)
+
+```tsx
+import { sendAnalyticsEvent } from '@faststore/sdk'
+
+sendAnalyticsEvent({
+  name: 'add_to_cart',
+  params: {
+    currency: 'USD',
+    value: 29.99,
+    items: [{ item_id: '12345', item_name: 'Product Name' }]
+  }
+})
+```
+
+This sends the event as:
+
+```json
+{
+  "event": "add_to_cart",
+  "ecommerce": {
+    "currency": "USD",
+    "value": 29.99,
+    "items": [{ "item_id": "12345", "item_name": "Product Name" }]
+  }
+}
+```
+
 ## Exporting custom event types with generics
 
 The `sendAnalyticsEvent` function supports generics, enabling you to extend default types or modify existing ones. This approach provides type-checking and code suggestions for your custom event properties.
