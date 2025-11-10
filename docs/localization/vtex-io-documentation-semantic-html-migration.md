@@ -34,7 +34,7 @@ To implement semantic HTML in other components, follow the next steps.
 
 ### Step 2: Implementing semantic HTML in your components
 
-In your component, read the flag value using `useRuntime → getSettings('vtex.store') and check `advancedSettings.a11ySemanticHtmlMigration`. See below a use case example of implementation in the `ProductQuantity` component:
+In your component, read the flag value using `useRuntime → getSettings('vtex.store')` and check `advancedSettings.a11ySemanticHtmlMigration`. See below a use case example of implementation in the `ProductQuantity` component:
 
 ```tsx BaseProductQuantity.tsx
 import React from 'react'
