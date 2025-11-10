@@ -58,7 +58,7 @@ This custom event interface captures when a user adds a product to their wishlis
 
 #### Extending existing types from the Analytics module
 
-If your event is related to an existing one, you can extend relevant types from the Analytics module. You can do this by using the [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) with the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
+If your event is related to an existing one, you can extend relevant types from the Analytics module. You can do this by using the [TypeScript's generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) with the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
 
 The following example extends the `AddToCartEvent` interface to include the `couponCode` property, which is useful for tracking if a customer applied a coupon code when adding an item to the cart:
 
@@ -77,7 +77,7 @@ The following example extends the `AddToCartEvent` interface to include the `cou
 
 #### Overriding multiple types
 
-If you have multiple custom events, such as adding/removing items using the cart or viewing products, you can define a unified type to handle them all. This approach simplifies firing multiple events from the same interface.
+If you have multiple custom events, such as adding/removing items from the cart or viewing products, you can define a unified type to handle them all. This approach simplifies firing multiple events from the same interface.
 
     ```ts
     /* types.ts */
@@ -149,7 +149,7 @@ Note that to target extended properties of events, you'll also need to configure
     }
     ```
 
->ℹ By typing the callback function with the extended types, you can reference properties not natively offered by the Analytics module.
+>ℹ️ By typing the callback function with the extended types, you can reference properties not natively provided by the Analytics module.
 
 ### Step 3 - Firing custom events
 
