@@ -8,7 +8,7 @@ updatedAt: "2025-10-23T11:00:00.000Z"
 hidden: false
 ---
 
-We updated the [Delivery Promise Notification API](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api) with a new `PATCH` endpoint that lets marketplaces update delivery promises (SLAs) for an external seller’s item in near real time. This keeps shipping estimates accurate across the storefront and reduces customer friction caused by outdated delivery information.  
+We updated the [Delivery Promise Notification API](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api) with a new `PATCH` endpoint that lets marketplaces update delivery promises (SLAs) for an external seller’s item in near real time. This keeps shipping estimates accurate across the storefront and reduces customer friction caused by outdated delivery information.
 
 ## What has changed?
 
