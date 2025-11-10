@@ -13,7 +13,7 @@ We updated the [Delivery Promise Notification API](https://developers.vtex.com/d
 ## What has changed?
 
 - New endpoint: `PATCH` [Update delivery promises for an external seller’s item](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api#patch-/delivery-promises/external-sellers/-sellerId-/items/-itemId-).
-- New `deliveryZoneIds`: Added new `deliveryZoneIds` values to the `PUT` [Update product availability endpoint](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api#put-/delivery-promises/external-sellers/-sellerId-/products).  
+- New `deliveryZoneIds`: Added new `deliveryZoneIds` values to the `PUT` [Update product availability endpoint](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api#put-/delivery-promises/external-sellers/-sellerId-/products).
 
 ## Why did we make this change?
 
