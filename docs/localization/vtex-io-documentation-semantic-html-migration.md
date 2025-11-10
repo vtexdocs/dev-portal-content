@@ -78,6 +78,6 @@ After enabling the flag and updating your components, validate the updated marku
 
 Check the browser console for JavaScript errors that may relate to DOM queries or event listeners targeting outdated selectors.
 
-## Step 4: Making your changes publicly available
+### Step 4: Making your changes publicly available
 
 After testing the settings in your development workspace, make your changes publicly available for all users by following the guide [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
