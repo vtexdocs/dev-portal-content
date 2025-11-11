@@ -2,8 +2,8 @@
 title: Platform performance
 excerpt: "Understand last week's VTEX IO performance improvement key points."
 createdAt: "2019-08-29T14:47:00.000Z"
+type: 'info'
 ---
-
 Check out our latest releases on promoting an  **optimal VTEX IO infra performance**, ensuring a better, faster and more stable platform experience:
 
 > No action for the releases below is warranted on your side. The performance improvement is already available to all VTEX IO users!

@@ -15,6 +15,8 @@ The protocol has the following features:
 - Processing of synchronous and asynchronous risk analysis.
 - Webhook for status notification.
 
+> ⚠️ The Anti-fraud Provider Protocol can be used at VTEX only for payment transactions carried out with credit, [debit](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions), and gift cards.
+
 ## Concepts
 
 **Provider**: system or provider that offers the anti-fraud risk analysis service.
@@ -62,8 +64,8 @@ In the Anti-fraud Provider Tester app environment, fill in the fields as indicat
 
 - **Connector Name**: name you want to give to your connector within VTEX.
 - **Service URL**: URL of your provider service. This URL will be the base address of the protocol and must follow the format determined by it. For example, if the service URL is `http://10.10.10.10`, the full URL for the endpoint *transactions* will be `http://10.10.10.10/transactions`.
-- **Application Key**: "X-PROVIDER-API-AppKey" value of your provider's request header for testing purposes.
-- **Application Token**: "X-PROVIDER-API-AppToken" value of your provider's request header for testing purposes.
+- **API key**: "X-PROVIDER-API-AppKey" value of your provider's request header for testing purposes.
+- **API token**: "X-PROVIDER-API-AppToken" value of your provider's request header for testing purposes.
 
 ![Anti-fraud test suite](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/how-the-integration-protocol-between-vtex-and-antifraud-companies-works-2_53.png)
 
@@ -148,7 +150,7 @@ The SLA required for the VTEX payments team to carry out the homologation is 30 
 
 When calling `CallbackURL`, you must specify the authentication headers, which in VTEX are **X-VTEX-API-AppKey** and **X-VTEX-API-AppToken**. You can find these credentials in VTEX License Manager. These credentials are used by the Anti-fraud Provider only.
 
-Use the `https://{{AccountName}}.myvtex.com/admin/license-manager/#/home` URL, replacing `{{AccountName}}` with your account name. Then follow the instructions of [this tutorial](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) to learn how to create appKeys and appTokens on our platform.
+Use the `https://{{AccountName}}.myvtex.com/admin/license-manager/#/home` URL, replacing `{{AccountName}}` with your account name. Then follow the instructions of [this tutorial](https://help.vtex.com/en/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) to learn how to create appKeys and appTokens on our platform.
 
 ## Settings in VTEX stores
 

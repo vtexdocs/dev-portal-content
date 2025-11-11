@@ -6,6 +6,8 @@ excerpt: "Two routes used to send payment information will be deprecated."
 createdAt: "2025-02-18T00:00:00.000Z"
 updatedAt: ""
 hidden: false
+tags:
+    - Payments
 ---
 To improve payment information management in the VTEX Payments Gateway API, the following routes will be deprecated on **April 1, 2025**:
 

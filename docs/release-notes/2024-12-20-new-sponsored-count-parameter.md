@@ -5,6 +5,8 @@ hidden: false
 type: "added"
 createdAt: "2024-12-20T00:00:00.219Z"
 excerpt: "FastStore projects now include a new parameter to improve the management of sponsored product search results."
+tags:
+    - FastStore
 ---
 
 We've added a new parameter, `sponsoredCount`, to FastStore's search query. This new parameter allows you to control the number of sponsored products displayed in your store’s search results, providing more flexibility in managing search relevance and sponsored content.

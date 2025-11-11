@@ -32,4 +32,18 @@ linkTo="https://developers.vtex.com/docs/guides/vtex-io-graphql-api-list"
 linkTitle="See more"
 />
 
+<WhatsNextCard
+title="GraphQL authorization in IO apps"
+description="Learn to implement and use protected GraphQL operations with IO apps."
+linkTo="https://developers.vtex.com/docs/guides/graphql-authorization-in-io-apps"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Admin GraphQL IDE"
+description="Learn how to make GraphQL queries in the Admin and use the IDE features."
+linkTo="https://developers.vtex.com/docs/guides/graphql-ide"
+linkTitle="See more"
+/>
+
 </Flex>

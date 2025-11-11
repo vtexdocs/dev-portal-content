@@ -3,9 +3,8 @@ slug: "custom-oauth-easy-implementation"
 title: "Custom OAuth easy implementation"
 createdAt: 2022-05-18T19:12:45.972Z
 hidden: true
-type: ""
+type: "info"
 ---
-
 ![Integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-oauth-easy-implementation-0.png)
 
 Aside from the default options to use [Google and Facebook as identity providers](https://help.vtex.com/en/tutorial/configuring-login-with-facebook-and-google--tutorials_513#) for your store, VTEX allows you to implement a custom OAuth connection, in case you have another **identity provider** you wish to make available for your customers.

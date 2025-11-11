@@ -7,7 +7,7 @@ updatedAt: "2022-09-08T14:23:40.396Z"
 ---
 This feature lets you create a shopping list in the online store, which can be associated with an event such as a wedding, bridal shower, birthday, baby shower or simply a wish list. For this to work properly, your agency or the team responsible for the frontend must create the appropriate templates on the Portal module.
 
-The types of list to be created, and their special features, are chosen by the storekeeper from the platform, as explained in the article [How to create a type of list](http://help.vtex.com/en/tutorial/creating-a-type-of-list "How to create a type of list").
+The types of list to be created, and their special features, are chosen by the storekeeper from the platform, as explained in the article [How to create a type of list](http://help.vtex.com/en/tutorial/creating-a-type-of-list).
 
 Each different list created will have its own uses, but the key objective is for consumers to add the products they want to buy, and to be able to do so by logging in to their account with the store.
 

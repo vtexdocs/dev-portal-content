@@ -2,8 +2,8 @@
 title: Minicart Sandbox blocks
 excerpt: "You're now able to customize your Minicart footer using Sandbox blocks."
 createdAt: "2019-09-13T14:47:00.000Z"
+type: 'info'
 ---
-
 Sandbox blocks can now be declared in your store's Minicart and be rendered in the component's lower side.
 
 > ℹ️ To understand more about what Sandbox blocks are and how to use them, access our [documentation](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-sandbox-blocks).

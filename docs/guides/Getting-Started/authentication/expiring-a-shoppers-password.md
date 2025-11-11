@@ -16,7 +16,7 @@ To maximize security and improve the shopper experience, we recommend that you f
 2. [Expire shopper password](#expiring-a-password-by-email)
 3. [Notify the shopper](#notifying-the-shopper)
 
->ℹ️ Any user or [application key](https://developers.vtex.com/docs/guides/authentication-overview) that wishes to perform password expiration must have a [License Manager role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that includes the `Expire User Password` [resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
+>ℹ️ Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview) that wishes to perform password expiration must have a [License Manager role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) that includes the `Expire User Password` [resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
 
 ## Preventing repeated passwords
 

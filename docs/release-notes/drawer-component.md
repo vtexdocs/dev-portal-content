@@ -2,8 +2,8 @@
 title: Drawer component 
 excerpt: "Your store Drawer’s behavior and appearance can be customized for mobile users thanks to the component’s 3 new props and CSS handles."
 createdAt: "2019-08-22T14:47:00.000Z"
+type: 'info'
 ---
-
 Your store Drawer’s behavior and appearance can be customized for mobile users thanks to the component’s **3 new props and CSS handles**.
 
 ## What has changed

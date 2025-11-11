@@ -2,8 +2,8 @@
 title: Image
 excerpt: "Similar to the Menu, uploading Image component content can also be done using the Site Editor. Am I hearing fireworks?"
 createdAt: "2019-11-11T14:47:00.000Z"
+type: 'info'
 ---
-
 Uploading content that is used by the Image component can now be done directly through **Site Editor**, in the admin's CMS.
 
 ![image-component-siteeditor-upload](https://user-images.githubusercontent.com/52087100/68603781-c3c84700-0487-11ea-82cc-bd6c94ac5752.png)

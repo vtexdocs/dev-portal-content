@@ -7,7 +7,7 @@ category: "Storefront Development"
 updatedAt: "2022-12-13T20:17:44.702Z"
 ---
 
-If you have different versions of a [landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page ) for each region your store is present, we recommend that you save them as `alternate` versions.
+If you have different versions of a [landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) for each region your store is present, we recommend that you save them as `alternate` versions.
 
 This way, search engines will be aware of the different versions of your page and able to provide the right content to the right audience.
 
@@ -59,27 +59,27 @@ mutation saveInternal($args: InternalInput!) {
 }
 ```
 
-7. Click on *Query Variables* at the bottom of the page and, according to the following example and the following explanations, fill in the *Query Variables* section.
+7. Click on _Query Variables_ at the bottom of the page and, according to the following example and the following explanations, fill in the _Query Variables_ section.
 
 ```json
 {
-    "args": {
-        "from": "/US/about-us",
-        "declarer": "vtex.store@2.x",
-        "type": "userRoute",
-        "id": "vtex.store@2.x:store.custom::us-about-us",
-        "binding": "748aafcf-3572-456d-5dec-6ddb3f26e43f",
-        "alternates": [
-            {
-                "binding": "7cf37a3b-efc0-4e47-8201-d8b58kd4d3fd",
-                "path": "/BR/sobre-nos"
-            },
-            {
-                "binding": "8cf37a3b-edc0-4a47-8241-d8b58kfsd3fd",
-                "path": "/UK/about-us"
-            }
-        ]
-    }
+  "args": {
+    "from": "/US/about-us",
+    "declarer": "vtex.store@2.x",
+    "type": "userRoute",
+    "id": "vtex.store@2.x:store.custom::us-about-us",
+    "binding": "748aafcf-3572-456d-5dec-6ddb3f26e43f",
+    "alternates": [
+      {
+        "binding": "7cf37a3b-efc0-4e47-8201-d8b58kd4d3fd",
+        "path": "/BR/sobre-nos"
+      },
+      {
+        "binding": "8cf37a3b-edc0-4a47-8241-d8b58kfsd3fd",
+        "path": "/UK/about-us"
+      }
+    ]
+  }
 }
 ```
 

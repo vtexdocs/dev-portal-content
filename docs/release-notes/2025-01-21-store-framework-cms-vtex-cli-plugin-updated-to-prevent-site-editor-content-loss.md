@@ -6,6 +6,9 @@ excerpt: "The VTEX IO CLI workspace plugin has been updated to address the issue
 createdAt: "2025-01-21T17:55:27.100Z"
 updatedAt: ""
 hidden: false
+tags:
+    - Site Editor
+    - Store Framework
 ---
 
 Some customers may experience content loss in Site Editor when promoting a production workspace to master due to workspace conflicts.

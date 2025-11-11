@@ -2,8 +2,8 @@
 title: Price internationalization
 excerpt: "Currency codes and decimal places can now be easily internationalized by defining their values and behavior in your admin’s Sales Policies section."
 createdAt: "2019-07-24T14:47:00.000Z"
+type: 'info'
 ---
-
 Currency codes and decimal places can now be easily internationalized by defining their values and behavior in your admin’s Sales Policies section.
 
 ## What has changed

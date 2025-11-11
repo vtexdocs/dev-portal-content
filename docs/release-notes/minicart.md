@@ -3,8 +3,8 @@ title: Minicart
 excerpt: "If there is one thing that a store can always improve upon, it's user experience. The new Minicart `openOnHover` prop is here to make that point."
 createdAt: "2019-12-19T14:47:00.000Z"
 git: "https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-47-48-49-50-51/minicart.md"
+type: 'info'
 ---
-
 The Minicart just gained the `openOnHover` **prop** that controls whether the block may be opened or not, having the cart information displayed solely, according to the user's hover. 
 
 > ⚠️ **This prop only works properly on desktop mode**. For mobile devices, the behavior continues to be the default one (that is, the Minicart information is only displayed when clicking on it).

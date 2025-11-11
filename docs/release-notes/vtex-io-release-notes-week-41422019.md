@@ -3,9 +3,8 @@ slug: "vtex-io-release-notes-week-41422019"
 title: "VTEX IO Release Notes - Week 41&42/2019"
 createdAt: 2019-10-25T20:10:00.000Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-week-41422019-0.png)
 
 Hey team! One more VTEX IO Release Notes coming your way.
@@ -36,7 +35,7 @@ Therefore, take a deep breath, relax and banish your fears, because we have a ne
 
 - [Price Range loading](https://github.com/vtex-apps/search-result/pull/253) - Any change to the Price Range by the user now triggers a reload symbol, providing a better UX. In addition, the search result pagination now resets when any change to the component is performed. Before this bug fix, these two scenarios were not a reality... how awful!
 
-- [`mailto` and `tel` tags in Menu Item]() - When editing your store's content with Site Editor, you might have come across the `tel:` and `mailto:` tags that could not be read as `href` in a menu item. Now, they are working as originally intended! At long last!
+- `mailto` and `tel` tags in Menu Item - When editing your store's content with Site Editor, you might have come across the `tel:` and `mailto:` tags that could not be read as `href` in a menu item. Now, they are working as originally intended! At long last!
 
 - [Tablet layout grid](https://github.com/vtex-apps/search-result/pull/255) - The Search Result component layout dimensions were not responsive to Tablet devices. They took on mobile dimensions, leading to content decentralization and very weird blank columns on the screen. This layout bug has been fixed.
 

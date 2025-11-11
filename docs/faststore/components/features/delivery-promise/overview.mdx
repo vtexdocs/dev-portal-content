@@ -1,0 +1,145 @@
+---
+title: "Understanding Delivery Promise operation"
+updatedAt: "2025-09-03T15:35:51.192Z"
+---
+
+>ℹ This feature is in closed beta, meaning only selected customers can access it. If you're interested in implementing it, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+
+This guide explains how Delivery Promise operates, covering the following:
+
+* [Hooks](#hooks): Discover the hooks used to manage user location, fulfillment options, and Delivery Promise workflows.
+* [Filter options](#filter-options): Learn how shoppers can filter products by delivery or pickup methods.
+* [Location priority](#location-priority): Understand the order and logic used to determine the shopper's location for accurate delivery estimates.
+
+>⚠️ To learn how to implement Delivery Promise in your store, see the guide [Implementing Delivery Promise](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
+
+## Hooks
+
+This feature introduces the following hooks as part of the regionalization and location workflow:
+
+* `useGeoLocation`: Uses the browser's geolocation API or other client-side methods to auto-detect the user's location when not provided.
+* `useRegion`: Accesses or updates the user's region information, such as a postal code or location and manages region validation flows.
+* `useRegionModal`: Handles modal display logic for region selection, especially when the location input is mandatory.
+* [`useDeliveryPromise_unstable`](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components#list-of-hooks-and-components): Manages all logic for querying, displaying, and updating delivery availability filters and states.
+* [`deliveryPromiseStore_unstable`](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components#list-of-hooks-and-components): Stores and retrieves Delivery Promise data (pickup points, default/global selection, simulation state).
+
+## Filter options
+
+Delivery Promise offers shoppers two product filtering options:
+- [Global filters](#global-filters): Apply to all store navigation.
+- [Product List Page (PLP) or search page](#plp-or-search-page-filters): Apply only to the current page the shopper is viewing.
+
+>ℹ Learn more about filter usage and user flows on the [Delivery Promise Figma Community](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) page.
+
+
+### Global filters
+
+Global filters remain active across all user navigation and are applied to all product searches until they are changed or cleared.
+
+Shoppers can filter available products globally using the **Filter by store** option, which displays only products available for pickup at a specific store. This filter shows all available pickup points within a 50-km radius, as configured in Checkout. The number of pickup points displayed is unlimited.
+
+![filter-by-store](https://vtexhelp.vtexassets.com/assets/docs/src/dp-new-filter-by-store___45ee62209fa8bca8a13431615ab2c4e4.gif)
+
+### PLP or search page filters
+
+On PLPs or search pages, shoppers have the following options for applying filters: [Delivery Methods](#delivery-methods-filters), [Delivery Option](#delivery-option-filters), and [Availability](#availability).
+
+
+>⚠️ To edit the filter labels, follow the instructions in [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
+
+{/*
+#### SLA (WIP)
+
+![sla-filter](https://vtexhelp.vtexassets.com/assets/docs/src/dp-sla-filter___35a00e0ed883cb9ce23cdb08dffd51ad.gif)
+*/}
+
+#### Delivery Methods
+
+This filter displays available products according to the shopper's location, allowing them to filter using the following options:
+
+
+![dp-delivery-methods](https://vtexhelp.vtexassets.com/assets/docs/src/dp-filters-delivery-method___945ea013036a9ebebfc0078cb93796d9.png)
+
+| **Filter option** | **Description** |
+| ----------------- | --------------- |
+| **All delivery methods** | Displays products that match all active delivery method filters: **Shipping to**, **Pickup anywhere**, **Pickup at**, and **Pickup nearby**. |
+| **Shipping to**  |  Displays products that can be shipped to the shopper's specified location. |
+| **Pickup anywhere** | Displays products available for pickup at any participating store within the merchant's network, rather than restricting results to a selected pickup location or geographic proximity. This is often used by B2B stores, and this filter is deactivated in Headless CMS by default. |
+| **Pickup at** | Displays the store specified in the global pickup point filter or the one closest to the shopper's location. To change the store set in `Pickup at {storeName}`, the shopper can click on it and select a new store in the slideover that opens. This slideover shows all available pickup points within a 50-km radius, as configured in Checkout. |
+| **Pickup nearby** | Displays products available for pickup at the shopper's nearby stores. This filter considers up to 40 pickup points within 10 km of the shopper's location. |
+
+
+#### Delivery Option
+
+This filter allows shoppers to refine search results based on the type of delivery or pickup method available for each item, helping to find products that match the shopper's preferred fulfillment method.
+
+![dp-delivery-options](https://vtexhelp.vtexassets.com/assets/docs/src/dp-delivery-option-overview___ae1889d1ab384af14049ee26a887faa2.png)
+
+To create, configure, and manage delivery options in the VTEX Admin, see the instructions in the [Delivery Option (Beta)](https://newhelp.vtex.com/docs/tutorials/delivery-options-beta) guide.
+
+>⚠️ While following the instructions to [create the delivery options](https://newhelp.vtex.com/docs/tutorials/delivery-options-beta#creating-delivery-options), make sure to enable the option **Use option as a filter on the store product**. This will allow shoppers to filter products by the delivery option using [Intelligent Search filters](https://newhelp.vtex.com/en/tutorial/filters--k24mQQa9SjmhNWSwdqIMB).
+
+#### Availability (In-stock filter)
+
+
+This filter helps shoppers refine product results based on whether items are available for purchase and fulfillment, preventing the display of products they can't immediately buy in their preferred fulfillment method and narrowing results to only what’s actually in stock.
+
+![dp-delivery-methods](https://vtexhelp.vtexassets.com/assets/docs/src/dp-filters-availability___6869a2af7413b1a1e58b48cc558d03cc.gif)
+
+The Availability filter is disabled by default in the Headless CMS. This filter is helpful for stores where the `discovery.config.js` file has `hideUnavailableItems` set to `false`. Otherwise, when this setting is `true`, unavailable products are already hidden by default, so the Availability filter would have no functionality in this scenario.
+
+To enable this filter in your store, follow the instructions in [Enabling the Availability filter](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation#enabling-the-availability-filter).
+
+
+## Badges
+
+When Delivery Promise data is available, the `ProductCard` automatically displays badges so shoppers can quickly see shipping and pickup availability for their location.
+
+![delivery-promise-badges](https://vtexhelp.vtexassets.com/assets/docs/src/dp-badges___4b6a40b957e4eb45da5a854e676dce77.png)
+
+In the following table, see the available types of badges:
+
+| Badge label | Description |
+| ---------- | ----------- |
+| `Available for shipping` or `Unavailable for shipping` | Indicates whether the product can be shipped to the shopper's postal code. |
+| `Available for pickup` or `Unavailable for pickup` | Indicates that the product can be collected from a nearby pickup point. |
+| No badges available    | The product is out of stock. Delivery and pickup are unavailable. |
+
+>⚠️ To edit the badge labels or disable the badges, follow the instructions in [Managing filters and badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-implementation).
+
+## Understanding location priority
+
+To provide accurate Delivery Promise estimates, FastStore projects determine the user's location based on the following priority:
+
+1. **Logged-in user's address:** If the user is logged in and has a saved address, this information is used.
+2. **User-provided location:** If the user is logged in but doesn't have a saved address, or isn't logged in but provides their location (like a postal code), this data is used.
+3. **Default postal code:** If the user hasn't provided a location, isn't logged in, or has no saved address, we check if the merchant has configured a default postal code for all buyers. Learn how to do so in [Defining a default postal code](#step-4-optional-defining-a-default-postal-code).
+4. **No postal code (optional):** If no postal code is provided and not required, products are displayed without using Delivery Promise.
+
+5. **No postal code (required):** If no postal code is provided when required, a modal is displayed that the buyer cannot close until a postal code is entered. To make the postal code required, open your `discovery.config.js` file and change the `mandatory` field in the `deliveryPromise` object to `true`, as shown in the [Default settings](#default-settings) section.
+
+To better understand how this flow works, see the following diagram:
+
+```mermaid
+graph LR
+    S{"Is the user logged in?"} -- Yes --> C{"Logged-in user's address available?"}
+    S -- No --> A{"Location provided?"}
+
+    C -- Yes --> D(["Use the logged-in user's address"])
+    C -- No --> A
+
+    A -- Yes --> B(["Use the provided location"])
+    A -- No --> E{"Default postal code configured?"}
+
+    E -- Yes --> F(["Use the default postal code"])
+    E -- No --> H{"Postal code mandatory?"}
+
+    H -- Yes --> K(["Display mandatory postal code modal"])
+    K --> L["User inputs postal code"]
+    L --> M(["Use the provided postal code"])
+
+    H -- No --> N(["Display products without using Delivery Promise"])
+```
+
+
+

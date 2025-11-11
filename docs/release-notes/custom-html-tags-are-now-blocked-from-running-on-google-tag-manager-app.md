@@ -2,8 +2,8 @@
 title: Custom HTML tags are now blocked from running on Google Tag Manager app
 excerpt: 'Scripts placed in a page might interfere with other apps, eventually breaking the store. In order to avoid that, Google Tag Manager app now blocks Custom HTML (also called Custom Scripts) tags from running.'
 createdAt: '2019-12-12T18:27:49.833Z'
+type: 'info'
 ---
-
 Scripts placed in a page might interfere with other apps, eventually breaking the store. In order to avoid that, Google Tag Manager app now blocks Custom HTML (also called Custom Scripts) tags from running. 
 
 ## Why we are taking this action

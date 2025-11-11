@@ -8,7 +8,7 @@ createdAt: "2023-07-05T15:54:00.000Z"
 updatedAt: "2023-08-10T10:21:36.446Z"
 ---
 
-To further protect our customers, VTEX will now enforce the reCAPTCHA orderForm configuration set in each account for all Checkout API requests, regardless of the roles associated with the user or application key.
+To further protect our customers, VTEX will now enforce the reCAPTCHA orderForm configuration set in each account for all Checkout API requests, regardless of the roles associated with the user or API key.
 
 Merchants that use the Checkout API to place orders from mobile apps, headless storefronts and similar applications must [review](#review-your-integrations) and [adjust](#adjust-your-integrations) their integrations before **September 1, 2023**.
 
@@ -35,7 +35,7 @@ The diagram below can help you assess whether an integration needs to be adjuste
 
   Your store uses reCAPTCHA at Checkout and is ready to display it correctly in the user interface. Congratulations for following best practices in security!
 
-You must make sure that the [application key](https://help.vtex.com/en/tutorial/application-keys--2iffYzlvvz4BDMr6WGUtet) used to make the requests to the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) ("Transaction") / [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) ("PlaceOrder") endpoints of the Checkout API has one of these [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) in their [roles](https://help.vtex.com/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc):
+You must make sure that the [API key](https://help.vtex.com/en/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) used to make the requests to the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) ("Transaction") / [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) ("PlaceOrder") endpoints of the Checkout API has one of these [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) in their [roles](https://help.vtex.com/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc):
 
 - Checkout > CheckoutResources > Shopping Cart Full Access
 - Catalog > Telesales > Assisted Sales

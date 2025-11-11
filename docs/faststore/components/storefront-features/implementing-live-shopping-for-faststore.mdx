@@ -1,0 +1,67 @@
+---
+title: "Implementing Live Shopping for FastStore"
+---
+
+>⚠️ This is an experimental feature.
+
+**Live Shopping for FastStore** is a solution to add a customizable player to your storefront to transmit [Live Shopping](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U) events. Once you've implemented the feature, you will be able to [configure and manage](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/125yr6jAfwiiz84JP4ppfO) the event transmission through the VTEX Admin.
+
+This guide explains how to integrate **Live Shopping** into a project using [FastStore](https://developers.vtex.com/docs/guides/faststore).
+
+>ℹ️ This feature is available as a native solution for the latest version of FastStore. If your storefront technology is [FastStore v1 or v2](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels), see the guide [Implementing Live Shopping for FastStore previous versions](https://developers.vtex.com/docs/guides/faststore/storefront-features-implementing-live-shopping-for-faststore-previous-versions).
+
+## Before you begin
+
+Before implementing **Live Shopping for FastStore**, make sure you have onboarded your FastStore project through [WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project).
+
+## Live Shopping app
+
+The first step is to get the **Live Shopping** app by following the steps below:
+
+1. Access [VTEX Live Shopping](https://apps.vtex.com/vtexventures-livestreaming/p) on VTEX App Store. You can also access it via the VTEX Admin by going to **Apps > App Store > VTEX Live Shopping**.
+2. Click `Get app` to install the app. Log in to your VTEX account if necessary.
+3. Click `Place order`.
+4. Click `Go to install page`.
+5. Click `Install`.
+6. Agree to the Terms of Service by clicking `Install`.
+
+## Installation
+
+Once you have the app on your store project, install the **Live Shopping** plugin package and its dependencies by running the following command:
+
+```bash
+yarn add @vtex/faststore-plugin-live-shopping object-hash@3.0.0 p-queue@8.1.0
+```
+
+## Configuration
+
+Next, add the plugin reference below to your `discovery.config.js` file:
+
+```javascript
+ plugins: ["@vtex/faststore-plugin-live-shopping"]
+```	
+
+## CMS sections sync
+
+Once you've added the plugin, synchronize your CMS sections with the following command:
+
+```bash	
+yarn faststore cms-sync
+```
+
+You will be able to add the **Live Shopping** section to the store's CMS:
+
+![live-shopping-faststore-adding-cms-section-v3](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/refs/heads/main/images/live-shopping-faststore-adding-cms-section-v3.png)
+
+>ℹ️ For information about customizing the **Live Shopping** player, see [Live Shopping: Events](https://help.vtex.com/en/tutorial/live-shopping-events--6aGLiqoKG1UoS30f3FFWch#customizing-the-live-shopping-video-player).
+
+
+## First Live Shopping event
+
+The first step is [creating an event](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/5WLXGbOSFmxN7QlzOnfGrv) in the VTEX Admin. After that, you will need to place the component to start the event and delete the component to end the event. Learn more:
+
+* **Start the event:** [Place the component](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/4r5uk6XHxdYlOGMr11GFWR) to show the player on the storefront.
+* **End the event:** [Delete the component](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/7e3bP6LjFgxXC210jSpl59) to remove the player.
+
+>ℹ️ For information about transmitting a **Live Shopping** event, check [VTEX Live Shopping - Getting started](https://help.vtex.com/en/tracks/vtex-live-shopping-getting-started--3eCHNCIx8XhZOSmX0sQT3U/17HV0OAaCIB46tW9O1rVEJ).
+

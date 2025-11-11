@@ -2,8 +2,8 @@
 title: Product Summary
 excerpt: "These past two weeks were not special just for the SKU Selector: the Product Summary didn't just gain a blockClass prop, but also a CSS Handle. Now that's rad right?"
 createdAt: "2019-11-11T14:47:00.000Z"
+type: 'info'
 ---
-
 The Product Summary component now has its own **CSS Handles** and **blockClass**. 
 
 CSS Handles are **HTML element identifiers** and can therefore be used to customize store components that use Product Summary by simply using CSS classes in the Store Theme's code.  

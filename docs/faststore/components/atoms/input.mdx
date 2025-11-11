@@ -1,69 +1,92 @@
 ---
 title: "Input"
-excerpt: Inputs are fields used to get user inputs.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/Input___77d0e7a8079b7d310e8223dd9e1994f6.png
-components:
+excerpt: Inputs are fields that capture user input.
+components: 
   - Input.tsx
+updatedAt: "2025-10-07T14:09:57.779Z"
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Input)
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+The `Input` component renders a single-line text field for capturing short user input. Typical use cases include:
+
+- Collecting user information (e.g., name, email, phone number).
+- Search queries and filters.
+- Form submissions and data entry.
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Input placeholder="Label" id="inputfield-default" />
-      <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-     <Input placeholder="Label" id="inputfield-default" />
-     <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
+    import React from 'react'
+    import {Input} from '@faststore/ui'
+
+    export default function InputOverviewExample() {
+      return(
+        <div>
+          <Input placeholder="Label" id="inputfield-default" />
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Input } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/atoms/Input/styles.scss'
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<OverviewSection>
-  <Input placeholder="Input" />
-</OverviewSection>
+### Import the component
+
 ```tsx
-<Input placeholder="Input" />
+import { Input } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/atoms/Input/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Input" />
+### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import {Input} from '@faststore/ui'
+
+    export default function InputDisabled() {
+      return(
+        <div>
+          <Input placeholder="Input Disabled" id="inputfield-disabled" disabled />
+        </div>
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -102,16 +125,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
+### Design tokens: Disabled
 
-#### Disabled
-
-<OverviewSection>
-  <Input placeholder="Input" disabled />
-</OverviewSection>
-```tsx
-<Input placeholder="Input" disabled />
-```
+Disabled inputs use reduced opacity and distinct styling to indicate when an input field is temporarily unavailable for interaction, preventing user input while maintaining visual context.
 
 <TokenTable>
   <TokenRow
@@ -138,11 +154,17 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Input` styles using the following data attributes:
 
 `data-fs-input`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Input" />
 
 ---
 
@@ -151,6 +173,15 @@ For further customization, you can use the following data attributes:
 ### ✅ Do's
 
 - Provide a [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) when using input. Descriptive labels help users understand the purpose of a form control.
+- Use placeholder text as a hint or example of the expected input format, not as a replacement for labels.
+- Ensure sufficient color contrast between text and background for accessibility.
+- Use appropriate input types (e.g., email, name, phone number) to trigger the correct keyboard on mobile devices.
+
+### ❌ Don'ts
+
+- Don't use vague or ambiguous labels that leave users uncertain about what information to provide.
+- Don't use inputs for long-form text entry. Use a [textarea](https://developers.vtex.com/docs/guides/faststore/atoms-textarea) component instead.
+- Don't disable inputs without providing a clear reason why they're unavailable.
 
 ---
 

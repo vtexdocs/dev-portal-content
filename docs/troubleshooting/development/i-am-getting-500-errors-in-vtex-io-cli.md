@@ -6,8 +6,8 @@ createdAt: "2024-06-28T14:00:00.000Z"
 updatedAt: ""
 excerpt: "Running VTEX IO CLI commands returns a 500 internal server error"
 tags:
-    - vtex-io
-    - cli
+    - VTEX IO
+    - VTEX IO CLI
 ---
 
 When running VTEX IO CLI commands, e.g., `vtex link`, the following message may be displayed in the terminal:

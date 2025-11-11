@@ -3,9 +3,8 @@ slug: "vtex-io-release-notes-novemberdecember-2020"
 title: "VTEX IO Release Notes - November&December 2020"
 createdAt: 2021-01-15T15:00:00.000Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 Weep no more, team: here we (_finally_) are 🎉
 
 Let's make room for the VTEX IO Release Notes, this time around bringing you double the excitement from last November and December!

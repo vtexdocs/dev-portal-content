@@ -2,8 +2,8 @@
 title: Storefront Language selector
 excerpt: 'A language selector has been added to the admin’s Storefront.'
 createdAt: '09/08/2019'
+type: 'info'
 ---
-
 A language selector has been added to the admin’s Storefront. The selector takes a user’s location into account.
 
 ## What has changed

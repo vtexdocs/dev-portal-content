@@ -1,5 +1,5 @@
 ---
-title: "Changelog test"
+title: "Changelog Test"
 slug: "test-changelog"
 hidden: true
 createdAt: "2025-06-11t09:00:09.698z"

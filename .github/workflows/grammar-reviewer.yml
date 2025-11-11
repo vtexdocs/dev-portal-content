@@ -1,0 +1,22 @@
+name: VTEX AI Grammar Reviewer
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'docs/**/*.mdx'
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  grammar-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vtexdocs/ai-grammar-reviewer-action@v0
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}

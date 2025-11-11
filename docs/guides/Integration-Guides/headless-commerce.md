@@ -51,7 +51,7 @@ There are different [machine authentication methods](https://developers.vtex.com
 
 For the purpose of headless stores, we recommend using [user tokens](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#user-token) whenever possible. You can obtain this token as indicated in the section [Authenticating shoppers' identity](#authenticating-shopper-identity).
 
-You can also use [application keys](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#application-keys) in contexts where shoppers authentication is not necessary, such as product search.
+You can also use [application keys](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication#api-keys) in contexts where shoppers authentication is not necessary, such as product search.
 
 ## Shopping experience
 

@@ -6,6 +6,9 @@ excerpt: "FastStore WebOps now displays detailed content publishing information 
 createdAt: "2025-04-15T13:44:15.362Z"
 updatedAt: ""
 hidden: false
+tags:
+    - WebOps
+    - FastStore
 ---
 
 We've improved how FastStore WebOps displays deployment details for content published through the Headless CMS. FastStore WebOps now accurately reflects publications made via the Headless CMS, making content updates clearer and easier to track.

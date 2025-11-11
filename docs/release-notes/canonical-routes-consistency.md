@@ -2,8 +2,8 @@
 title: Canonical routes consistency
 excerpt: 'Seeking to achieve more consistent route mapping, a new portal API was developed to discover the system counterpart of a canonical route.'
 createdAt: '2019-12-12T18:27:49.833Z'
+type: 'info'
 ---
- 
 Seeking to achieve more consistent route mapping, a new portal API was developed to discover the system counterpart of a canonical route.
 
 ## What has changed 

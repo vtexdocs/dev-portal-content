@@ -11,6 +11,8 @@ The refresh token flow is a security mechanism in authentication systems that al
 
 This guide explains how to implement the refresh token flow in [headless](https://developers.vtex.com/docs/guides/headless-commerce) scenarios using native VTEX Login.
 
+>ℹ️ If you are using FastStore, the [FastStore SDK Session](https://developers.vtex.com/docs/guides/faststore/sdk-overview#session) automatically handles token renewal, session management, and error handling. You only need to follow the instructions in [Enabling refresh token on FastStore](https://developers.vtex.com/docs/guides/faststore/security-enabling-refresh-token).
+
 ## Authentication tokens
 
 The refresh token flow operates with two types of tokens:

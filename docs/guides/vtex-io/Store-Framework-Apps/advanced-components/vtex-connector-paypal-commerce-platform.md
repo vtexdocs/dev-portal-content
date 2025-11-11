@@ -43,7 +43,7 @@ An app integrating PayPal Checkout with Smart Payment Buttons with a VTEX IO sto
    - Choose `PayPalCP` from the list of connectors.
    - Enter a name of your choice for the affiliation.
    - If the Test/Live toggle is set to Test mode, a `workspace` input field will appear, allowing you to test the PayPal app in a non-production workspace. Note that you may need to save the affiliation and then edit it before the field will appear. After testing is complete, make sure to set this back to "master". Do not erase the contents of this field.
-   - `Application Key` and `Application Token` should be left blank.
+   - `API key` and `API token` should be left blank.
    - The `Payment Capture` dropdown allows you to control (or disable) VTEX's auto-settle behavior. If you choose the default `Use Behavior Recommended By The Payment Processor` option, payments will be automatically settled 24 hours after authorization.
    - When selecting the `Deactivated: Not Automatically Captured` option, the payment will be captured at the moment the Order associated with that payment is `invoiced`.
    - After configuring the above options, click `Save`.

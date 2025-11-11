@@ -3,8 +3,8 @@ title: Reviews and Ratings
 excerpt: "Finally! A product review and rating solution to call our own!!! Say goodbye to the old third-party solution you were using and cast your eyes on this new release."
 createdAt: "2019-12-19T14:47:00.000Z"
 git: "https://github.com/vtex-apps/release-notes/blob/master/docs/2019-week-47-48-49-50-51/reviews-and-ratings.md"
+type: 'info'
 ---
-
 The new Reviews and Ratings app provides a **VTEX native solution for product reviews and ratings**, including an admin interface for the management of reviews.
 
 ![reviews-and-ratings-app](https://user-images.githubusercontent.com/52087100/71026526-31e7d580-20e8-11ea-93d8-094c1e8af7cd.png)

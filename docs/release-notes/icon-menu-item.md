@@ -2,8 +2,8 @@
 title: "Menu-item component now supports icon"
 excerpt: "​It is now possible to add an icon next to each menu-item text and create customized menus."
 createdAt: "2019-07-31T14:47:00.000Z"
+type: 'info'
 ---
-
 ## What has changed
 ​It is now possible to add an icon next to each menu-item text and create customized menus. It is not necessary to add custom CSS to each menu-item to make that happen.
 ​

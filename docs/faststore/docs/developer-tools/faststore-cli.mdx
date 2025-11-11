@@ -1,0 +1,126 @@
+---
+title: 'FastStore CLI'
+---
+
+The FastStore Command Line Interface (CLI) provides pre-configured scripts for starting, building, and developing FastStore projects. It also helps keep FastStore projects up to date with the [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) package.
+
+## Before you begin
+
+To ensure the FastStore CLI commands related to the Headless CMS run correctly, make sure to install the Headless CMS, its dependencies and plugins as described in the [FastStore requirements](https://developers.vtex.com/docs/guides/faststore/getting-started-requirements).
+
+## Running FastStore CLI on the project
+
+The CLI is automatically added as a dependency in your project's `package.json` file, so once you run `yarn install` during the [project setup](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project), you can start using it in the project.
+
+## Installing FastStore CLI globally
+
+To use FastStore CLI commands globally on your machine, install the [`@faststore/cli`](https://developers.vtex.com/docs/guides/faststore/getting-started-3-faststore-project-structure#faststorecli) package:
+
+<Tabs items={["yarn", "npm"]} defaultIndex="0">
+  <Tab>
+    ```bash
+    yarn global add @faststore/cli
+    ```
+  </Tab>
+  <Tab>
+    ```bash
+    npm install -g @faststore/cli
+    ```
+  </Tab>
+</Tabs>
+
+
+
+## Default commands
+Below is a brief description of the default commands available in the FastStore CLI. To view detailed information about each command, click the respective command name.
+
+> ⚠️ Running commands via `yarn` is sufficient for developing your store. However, to set up your project with the Headless CMS and create new sections, you must install the FastStore CLI globally and use its commands.
+
+| Command name | Description |
+| ------------ | ----------- |
+| [`build`](#build) | Generates a production-ready storefront. It compiles the project and optimizes it for production usage. |
+| [`cms-sync`](#cms-sync) | Syncs the `cms` folder of your FastStore project with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
+| [`dev`](#dev) | Starts the project in the development environment and uses `http://localhost:3000` as the default server. It allows you to make changes to the project and see the results locally in real time without affecting the production environment. |
+| [`generate`](#generate) | Optimizes the schema and regenerates TypeScript types so that recent changes take effect without restarting the development server. |
+| [`help`](#help) | Displays help for FastStore CLI commands. |
+| [`start`](#start) | Executes the FastStore project in the root directory and uses `http://localhost:3000` as the default server. |
+
+### `dev`
+
+Starts the project in the development environment and uses `http://localhost:3000` as the default server. This allows you to make changes to the project and see the results locally in real time without affecting the production environment.
+
+#### Usage
+
+```bash 
+  yarn dev
+```
+
+```bash 
+  faststore dev
+```
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+
+### `build`
+
+Generates a production-ready storefront. It compiles the project and optimizes it for production usage.
+
+#### Usage
+
+```bash 
+  yarn build
+```
+
+```bash 
+  faststore build
+```
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+
+### `start`
+
+Executes the FastStore project in the root directory and uses `http://localhost:3000` as the default server.
+
+#### Usage
+
+```bash 
+  yarn start
+```
+
+```bash 
+  faststore start
+```
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+
+### `cms-sync`
+
+Syncs the `cms` folder of your FastStore project with the Headless CMS.
+
+#### Usage
+
+```bash 
+  yarn cms-sync
+```
+
+```bash 
+  faststore cms-sync
+```
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+
+### `help`
+
+Displays help for FastStore CLI commands.
+
+#### Usage
+
+```bash 
+  yarn faststore help
+```
+
+```bash 
+  faststore help [COMMAND] [-n]
+```
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
