@@ -29,7 +29,7 @@ When setting up your store, consider how title tags and descriptions affect your
 
 - **Title tags:** Use primary keywords at the beginning of the title and ensure titles are concise (50-60 characters). The value assigned to this tag is displayed at the top of the browser's title bar when someone visits your website. It can be configured for home, [product](https://help.vtex.com/en/tutorial/product-registration-fields--4dYXWIK3zyS8IceKkQseke), [category](https://help.vtex.com/en/tutorial/category-registration-fields--5Z7RrvW41yumyQCmk2iqoG), and [brand](https://help.vtex.com/en/tutorial/brand-registration-fields--37Ky7lTbEkiWIAYA80EMyI) pages.
 
-> ℹ️ For stores developed with Store Framework, you can customize Department, Category, and Subcategory titles using [VTEX Intelligent Search app](https://developers.vtex.com/docs/apps/vtex.search@1.0.8). This allows your store to display different titles for each category level within the search navigation bar. Learn more in [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search).
+
 
 - **Meta descriptions:** Include relevant keywords, limit them to 140-160 characters, and provide a compelling reason for users to click, which will help improve organic traffic. Meta descriptions are crucial for SEO because they appear in search engine results pages (SERPs) as snippets under the page title, giving users an idea of what they can find on the site. They can be configured for home, product, category, and brand pages on the same setup page where you configure the title tags directly in the VTEX Admin.
 - **Unique content:** Avoid duplication across pages. Make sure titles and descriptions are unique for each page to improve search visibility and prevent keyword cannibalization, where multiple pages compete for the same search terms.
@@ -103,7 +103,7 @@ For stores using the (Legacy) CMS Portal, configure SEO settings as follows:
 
 - **Home page SEO:** Configure the home page `meta tag description` and `robots.txt` file through **Store Settings > Storefront > Settings** in the VTEX Admin. Learn more in [Settings](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj#settings).
 
-- **Meta tags control:** To improve SEO on other pages (product, category, etc.), use the meta tags control feature. Learn more in [How to use the meta tags control](https://help.vtex.com/en/tutorial/how-to-use-the-meta-tags-control--2OPiSPubgcEqIikAWsCouk).
+- **Meta tags control:** Use the meta tags control feature to improve SEO on other pages (product, category, etc.). Learn more in [How to use the meta tags control](https://help.vtex.com/en/tutorial/how-to-use-the-meta-tags-control--2OPiSPubgcEqIikAWsCouk).
 
 - **Titles and URLs:** Configure title tags and URLs for products, categories, and brands in their respective registration fields in the Admin:
   - [Product registration fields](https://help.vtex.com/en/tutorial/product-registration-fields--4dYXWIK3zyS8IceKkQseke)
