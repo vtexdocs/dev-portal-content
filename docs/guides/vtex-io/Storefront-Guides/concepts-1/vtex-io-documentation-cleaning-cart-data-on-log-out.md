@@ -230,4 +230,4 @@ To link the app, run this command:
 vtex link
 ```
 
-If you wish, you can [download this complete example](https://drive.google.com/file/d/18Lr6-H5nm8ljPrS1945WNQAAkvFtQPYs/view?usp=sharing)
+If you wish, you can [download this complete example](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/refs/heads/main/files/vtex-io/session-watcher-cart-cleanup.zip).

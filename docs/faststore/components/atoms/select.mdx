@@ -15,6 +15,12 @@ components:
 
 Select components allow users to pick an option from a predefined list. The Select component should be used when there are more than five options available. Otherwise, consider using the [RadioGroup](https://developers.vtex.com/docs/guides/faststore/molecules-radio-group) component.
 
+Typical use cases include:
+
+- Filtering product listings (e.g., sorting by price, name, or popularity).
+- Choosing shipping methods or delivery options.
+- Selecting product variants (e.g., size, color, or quantity).
+
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
@@ -26,36 +32,29 @@ Select components allow users to pick an option from a predefined list. The Sele
           bad: 'Bad',
         }}
       />
-      <Select
-        id="select-overview-disabled"
-        options={{
-          great: 'Great',
-          ok: 'Ok',
-          bad: 'Bad',
-        }}
-        disabled
-      />
     </OverviewSection>
   </Tab>
   <Tab>
+
     ```tsx
-    <Select
-      id="select-overview-default"
-      options={{
-        great: 'Great',
-        ok: 'Ok',
-        bad: 'Bad',
-      }}
-    />
-    <Select
-      id="select-overview-disabled"
-      options={{
-        great: 'Great',
-        ok: 'Ok',
-        bad: 'Bad',
-      }}
-      disabled
-    />
+    import React from 'react'
+    import { Select } from '@faststore/ui'
+
+    export default function SelectBasicUsage() {
+      return (
+        <div>
+          <Select
+            id="select-overview-default"
+            options={{
+              great: 'Great',
+              ok: 'Ok',
+              bad: 'Bad',
+            }}
+          />
+        </div>
+      )
+    }
+
     ```
   </Tab>
 </Tabs>
@@ -104,15 +103,22 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Select
-      id="select-disabled"
-      options={{
-        great: 'Great',
-        ok: 'Ok',
-        bad: 'Bad',
-      }}
-      disabled
-    />
+    import React from 'react'
+    import { Select } from '@faststore/ui'
+
+    export default function SelectDisabled() {
+      return (
+        <Select
+          id="select-disabled"
+          options={{
+            great: 'Great',
+            ok: 'Ok',
+            bad: 'Bad',
+          }}
+          disabled
+        />
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -166,6 +172,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Design tokens: Icon
 
+The Select component includes a dropdown icon to indicate the interactive nature of the field and to provide a visual cue for user interaction.
+
 <TokenTable>
   <TokenRow
     token="--fs-select-icon-color"
@@ -184,6 +192,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 </TokenTable>
 
 ### Design tokens: Disabled
+
+Disabled selects use reduced opacity and alternative text colors to communicate that the field is not currently interactive.
 
 <TokenTable>
   <TokenRow
