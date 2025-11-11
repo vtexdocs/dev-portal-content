@@ -97,8 +97,8 @@ It supports integration with [Headless CMS](https://developers.vtex.com/docs/gui
 The diagram above shows a FastStore architectural flow, which includes the following components:
 
 - **Codebase:** Source code of the FastStore project hosted on GitHub.
-- **Build process:** Process of converting the source code into a deployable project through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview).
-- **Deployment:** Process of deploying the project to a production environment through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) and quality assurance bots.
+- **Build process:** Process of converting the source code into a deployable project through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project).
+- **Deployment:** Process of deploying the project to a production environment through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project) and quality assurance bots.
 - **Business user touchpoint:** Environment where admin users interact with storefront settings on VTEX Headless CMS.
 - **Customer touchpoint:** Environment where customers interact with the storefront, in this case, the store website.
 
@@ -146,7 +146,7 @@ Before starting the project, make sure you have the necessary tools and apps ins
 
 After you have prepared your machine with the initial settings, you can start your project by following the steps below:
 
-  1. [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview): Start the onboarding of your project with the FastStore WebOps app. This app streamlines the process, saving you the trouble of complex configurations and getting your project up and running quickly.
+  1. [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project): Start the onboarding of your project with the FastStore WebOps app. This app streamlines the process, saving you the trouble of complex configurations and getting your project up and running quickly.
 
   2. [Local Development](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project): After onboarding, start working on your store locally, making the initial changes and adjustments to your storefront.
 
