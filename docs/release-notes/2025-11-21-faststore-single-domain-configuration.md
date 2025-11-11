@@ -1,10 +1,10 @@
 ---
 title: "FastStore: Simplified domain configuration"
-slug: "2025-07-01-faststore-single-domain-configuration"
+slug: "2025-11-21-faststore-single-domain-configuration"
 hidden: false
-type: "added"
-createdAt: "2025-07-01T10:00:00.000Z"  
-excerpt: "FastStore now defaults to a single domain for Checkout and My Account pages for stores, simplifying domain management."
+type: "improved"
+createdAt: "2025-11-21T10:00:00.000Z"  
+excerpt: "FastStore now defaults to a single domain for Checkout and My Account pages for stores, simplifying domain management for stores."
 ---
 
 FastStore now routes Checkout and My Account pages through the store's primary domain (e.g., `www.domain.com`), removing the need for a separate `secure.domain.com` subdomain. This reduces configuration steps and avoids cross-domain redirects.
@@ -41,7 +41,7 @@ The single-domain feature simplifies domain management for FastStore stores, red
 
 To enable the single-domain feature, request the account configuration from VTEX. This ensures proper routing and security settings for your store.
 
-1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting that the account be configured for a single-domain setup. Please include the following information in the ticket:
+1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting the account be configured for a single-domain setup. Please include the following information in the ticket:
 
    - Account name
    - FastStore version
