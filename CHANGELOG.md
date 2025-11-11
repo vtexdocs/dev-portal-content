@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.318](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.317...v1.1.318) (2025-11-11)
+
+
+### ⚙️ Repository features
+
+* add new delivery promise api release note ([4810647](https://github.com/vtexdocs/dev-portal-content/commit/48106474eb6e6b0b31f9a0e157d2ed69bcbd320e))
+
+
+### 🔧 Fixes and improvements
+
+* add bot suggestion to title ([c8d51e1](https://github.com/vtexdocs/dev-portal-content/commit/c8d51e1f894104cb68e7b15875856e62bf9c3626))
+* fix link ([24227d9](https://github.com/vtexdocs/dev-portal-content/commit/24227d9ae673b2bb02948272871c73befc4d9b7c))
+* fix reviewer comments ([dac511f](https://github.com/vtexdocs/dev-portal-content/commit/dac511f24645590a6ccabede0a079941dbc422bf))
+* fix suggestions ([341214c](https://github.com/vtexdocs/dev-portal-content/commit/341214cdefe73ca712c5c9f6043e95efde53f0df))
+
 ### [1.1.317](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.316...v1.1.317) (2025-11-11)
 
 ### [1.1.317](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.316...v1.1.317) (2025-11-10)
