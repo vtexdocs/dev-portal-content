@@ -3,8 +3,8 @@ title: "Delivery Promise Notification API: New endpoint to update delivery promi
 slug: "2025-10-23-updates-delivery-promise-api"
 type: added
 excerpt: "A new endpoint lets marketplaces update delivery promises (SLAs) for an external seller's item via the Delivery Promise Notification API."
-createdAt: "2025-10-23T11:00:00.000Z"
-updatedAt: "2025-10-23T11:00:00.000Z"
+createdAt: "2025-11-11T11:00:00.000Z"
+updatedAt: "2025-11-11T11:00:00.000Z"
 hidden: false
 ---
 
