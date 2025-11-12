@@ -33,9 +33,9 @@ The One-tap flow requires the store to have Google OAuth login set up. Learn mor
 1. In the [Google Developers Console](https://console.developers.google.com/), go to the Google OAuth 2.0 configuration page.
 2. Add all store domains to the **Authorized domains** list. Learn more in Google's guide [Authorized Domains](https://support.google.com/cloud/answer/15549257?visit_id=638985718078812310-3040234660&rd=1#authorized-domains).
 
- >ℹ️ Include both the website domain and the `{{accountName}}.myvtex.com` domain. The restricted `.myvtex.com` domain may be used for testing purposes.
+  ![authorized-domains](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-1.png)
 
-    ![authorized-domains](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-1.png)
+  >ℹ️ Include both the website domain and the `{{accountName}}.myvtex.com` domain. The restricted `.myvtex.com` domain may be used for testing purposes.
 
 For more details on how to set up the Google OAuth app, refer to Google's documentation: [Configure your OAuth Consent Screen](https://developers.google.com/identity/one-tap/web/guides/get-google-api-clientid#configure_your_oauth_consent_screen) and [Setting up OAuth 2.0](https://support.google.com/cloud/answer/6158849).
 
@@ -45,8 +45,8 @@ For more details on how to set up the Google OAuth app, refer to Google's docume
 2. In the side menu, click the **Login** block. A new section for Google One-tap will be displayed.
 3. Check the **Enable Google One-tap** on your store box.
 4. Configure the following settings:
-    - **Google One-tap alignment:** Choose which side of the page the pop-up appears on.
-    - **Google One-tap top margin:** Set the top margin for the pop-up. This field accepts standard CSS [`top`](https://developer.mozilla.org/pt-PT/docs/Web/CSS/top) values (for example, `10px`, `2%`).
+    - **Google One-tap alignment:** Choose which side of the page the pop-up appears on. Possible values: `Right` or `Left`.
+    - **Google One-tap top margin:** Set the top margin for the pop-up. This field accepts standard CSS [`top`](https://developer.mozilla.org/pt-PT/docs/Web/CSS/top) values (for example: `10px`, `4rem`).
 5. Click `Save`.
 
     ![one-tap-wiki-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-2.gif)
