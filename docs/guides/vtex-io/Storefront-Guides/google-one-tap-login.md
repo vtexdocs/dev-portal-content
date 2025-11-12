@@ -20,6 +20,11 @@ Google One-tap authenticates users through a pop-up, creating a streamlined logi
 
 Ensure your store has a Store Theme developed following the Storefront guide.
 
+### Install the `vtex.login` app
+
+1. In your terminal, log in to your account by running the `vtex login {{accountName}}` command. Replace the curly brackets with your account name.
+2. Run the `vtex install vtex.login@2.x` to install the `vtex.login` app in your store.
+
 ### Configure the Google OAuth 2.0 integration
 
 The One-tap flow requires the store to have Google OAuth login set up. Learn more in the guide [Adding a Client Id and a Client Secret to log in with Google](https://help.vtex.com/docs/tutorials/adding-a-client-id-and-a-client-secret-to-log-in-with-google?locale=en).
@@ -43,7 +48,7 @@ For more details on how to set up the Google OAuth app, refer to Google's docume
 
 1. In the VTEX Admin, go to **Storefront > Site Editor**.
 2. In the side menu, click the **Login** block. A new section for Google One-tap will be displayed.
-3. Check the **Enable Google One-tap** on your store box.
+3. Check the **Enable Google One-tap sign up** toggle to enable the feature in your store's Site Editor.
 4. Configure the following settings:
     - **Google One-tap alignment:** Choose which side of the page the pop-up appears on. Possible values: `Right` or `Left`.
     - **Google One-tap top margin:** Set the top margin for the pop-up. This field accepts standard CSS [`top`](https://developer.mozilla.org/pt-PT/docs/Web/CSS/top) values (for example: `10px`, `4rem`).
