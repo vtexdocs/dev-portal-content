@@ -1,10 +1,10 @@
 ---
 title: "Configuring Shopper entity access"
 hidden: true
-excerpt: "Learn how to configure API credentials to enable Shopper entity information in your B2B FastStore My Account pages."
+excerpt: "Learn how to configure API credentials to enable Shopper entity data in your B2B FastStore My Account pages."
 ---
 
-To enable access to Shopper information in My Account pages, such as the data displayed in the **Ordered by** card on the order details page and the shopper filters on the order list page, you need to configure the appropriate permissions and API credentials.
+To enable access to shopper information in My Account pages, such as the data displayed in the **Ordered by** card on the order details page and the shopper filters on the order list page, you need to configure the appropriate permissions and API credentials.
 
 ## Before you begin
 
@@ -13,7 +13,7 @@ Make sure you have [enabled the My Account feature](https://developers.vtex.com/
 ## Step 1: Creating a Role with Dynamic Storage permissions
 
 1. Access the VTEX Admin, go to **Account Settings > User Roles**.
-2. Create a new Role or edit an existing one by adding the **Dynamic Storage** product to the role.
+2. Create a new role or edit an existing one by adding the **Dynamic Storage** product to the role.
 
     ![my-account-shopper-entity](https://vtexhelp.vtexassets.com/assets/docs/src/my-account-shopper-entity___c5d21f97626fb82a3077eabfc304e785.gif)
 
@@ -22,11 +22,11 @@ Make sure you have [enabled the My Account feature](https://developers.vtex.com/
 
 ## Step 2: Generating an API Key
 
-After creating the role, you need to generate an API Key to authenticate FastStore's server-side requests to VTEX services. This API Key will be used by your FastStore project to securely fetch Shopper entity data from Dynamic Storage.
+After creating the role, you need to generate an API key to authenticate FastStore's server-side requests to VTEX services. This API key will be used by your FastStore project to securely fetch Shopper entity data from Dynamic Storage.
 
 1. In the VTEX Admin, go to **Account > API Keys**.
 2. In the **Generated** tab, click `Generate Key`.
-3. Fill the fields with the following:
+3. Complete the fields with the following:
 
     |Field name | Description | Value example |
     | --------- | ----------- | ----- |
@@ -39,7 +39,7 @@ After creating the role, you need to generate an API Key to authenticate FastSto
 
 ## Step 3: Adding credentials to your project
 
-You need to add the API credentials to your project using environment variables. You can add them by [using WebOps secrets](#using-webops-secrets) or testing them locally [using `vtex.env` file](#using-env-file-for-local-development).
+You need to add the API credentials to your project using environment variables. You can add them by [using WebOps secrets](#using-webops-secrets) or, for local development, by [using the `vtex.env` file](#using-env-file-for-local-development).
 
 ### Using WebOps secrets
 
@@ -66,4 +66,4 @@ For local testing, you can use the `vtex.env` file as described in the [local de
 
 >❗ Never commit your `.env` file or expose your API credentials in public repositories.
 
-Once configured, your My Account pages will have access to Shopper entity information, enabling features like displaying who placed an order and filtering orders by shopper.
+Once configured, your My Account pages will have access to Shopper entity data, enabling features like displaying who placed an order and filtering orders by shopper.
