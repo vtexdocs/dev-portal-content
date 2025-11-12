@@ -43,12 +43,9 @@ You need to add the API credentials to your project using environment variables.
 
 ### Using WebOps secrets
 
-For projects using WebOps, use the secrets feature to securely store your credentials:
+Follow the [Managing Secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) guide to securely store your credentials to your project:
 
-1. Follow the guide [Managing Secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets).
-2. Add the following secrets:
-
-    | Key | Value |
+    | Key       | Value       |
     | --------- | ----------- |
     | `FS_DISCOVERY_APP_KEY` | `YOUR_APP_KEY` |
     | `FS_DISCOVERY_APP_TOKEN` | `YOUR_APP_TOKEN` |
@@ -57,16 +54,16 @@ For projects using WebOps, use the secrets feature to securely store your creden
 
 ### Using `.env` file for local development
 
-If you want to test the App key and App token locally, you can the `vtex.env` file as described in the instruction for [local development](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets#local-development):
+For local testing, you can use the `vtex.env` file as described in the [local development](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets#local-development) guide.
 
 1. Create or open the `vtex.env` file in your project root.
-2. Add the following environment variables, replacing `YOUR_APP_KEY` and `YOUR_APP_TOKEN` with the **App Key** and **App Token** credentials you saved in Step 2:
+2. Add the following environment variables using the credentials from Step 2:
 
    ```env
    FS_DISCOVERY_APP_KEY=YOUR_APP_KEY
    FS_DISCOVERY_APP_TOKEN=YOUR_APP_TOKEN
    ```
 
->⚠️ Never commit your `.env` file or expose your API credentials in public repositories.
+>❗ Never commit your `.env` file or expose your API credentials in public repositories.
 
 Once configured, your My Account pages will have access to Shopper entity information, enabling features like displaying who placed an order and filtering orders by shopper.
