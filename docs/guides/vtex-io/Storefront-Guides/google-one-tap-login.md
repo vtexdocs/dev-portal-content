@@ -26,20 +26,6 @@ The One-tap flow requires the store to have Google OAuth login set up. Learn mor
 
 </Steps>
 
-## Google One-tap flow
-
-Google One-tap flow is implemented by the [`vtex.login`](https://developers.vtex.com/docs/apps/vtex.login) app. The process is described below:
-
-1. `vtex.login` checks if the user is logged in. The One-tap flow only starts for logged-out users.
-2. `vtex.login` calls the [VTEX ID API](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#vtex-id) to get the store's OAuth `clientId`.
-3. `vtex.login` triggers the One-tap pop-up. 
-4. User clicks the **Continue as** button.
-5. Google checks the user's identity and returns a JSON Web Token (JWT)  to `vtex.login`.
-6. `vtex.login` POSTs a form containing the JWT and redirects the user to an endpoint at the VTEX ID API.
-7. The API validates the JWT and redirects the user back to the website.
-
-    ![google-one-tap](https://vtexhelp.vtexassets.com/assets/docs/src/google-one-tap___033c5242b3695b9dff2fa9aea304b959.png)
-
 ## Instructions
 
 ### Step 1 - Setting up the Google OAuth 2.0 app
@@ -66,3 +52,17 @@ For more details on how to set up the Google OAuth app, refer to Google's docume
     ![one-tap-wiki-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-2.gif)
 
 After following these steps, the Google One-tap feature will be active, and the pop-up will appear for signed-out users browsing your store.
+
+## Google One-tap flow
+
+Google One-tap flow is implemented by the [`vtex.login`](https://developers.vtex.com/docs/apps/vtex.login) app. The process is described below:
+
+1. `vtex.login` checks if the user is logged in. The One-tap flow only starts for logged-out users.
+2. `vtex.login` calls the [VTEX ID API](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#vtex-id) to get the store's OAuth `clientId`.
+3. `vtex.login` triggers the One-tap pop-up. 
+4. User clicks the **Continue as** button.
+5. Google checks the user's identity and returns a JSON Web Token (JWT)  to `vtex.login`.
+6. `vtex.login` POSTs a form containing the JWT and redirects the user to an endpoint at the VTEX ID API.
+7. The API validates the JWT and redirects the user back to the website.
+
+    ![google-one-tap](https://vtexhelp.vtexassets.com/assets/docs/src/google-one-tap___033c5242b3695b9dff2fa9aea304b959.png)
