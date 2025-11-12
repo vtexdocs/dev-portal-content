@@ -33,7 +33,7 @@ The One-tap flow requires the store to have Google OAuth login set up. Learn mor
 1. In the [Google Developers Console](https://console.developers.google.com/), go to the Google OAuth 2.0 configuration page.
 2. Add all store domains to the **Authorized domains** list. Learn more in Google's guide [Authorized Domains](https://support.google.com/cloud/answer/15549257?visit_id=638985718078812310-3040234660&rd=1#authorized-domains).
 
-	>ℹ️ Include both the website domain and the `{{accountName}}.myvtex.com` domain. The restricted `.myvtex.com` domain may be used for testing purposes.
+ >ℹ️ Include both the website domain and the `{{accountName}}.myvtex.com` domain. The restricted `.myvtex.com` domain may be used for testing purposes.
 
     ![authorized-domains](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-1.png)
 
@@ -47,7 +47,7 @@ For more details on how to set up the Google OAuth app, refer to Google's docume
 4. Configure the following settings:
     - **Google One-tap alignment:** Choose which side of the page the pop-up appears on.
     - **Google One-tap top margin:** Set the top margin for the pop-up. This field accepts standard CSS [`top`](https://developer.mozilla.org/pt-PT/docs/Web/CSS/top) values (for example, `10px`, `2%`).
-7. Click `Save`.
+5. Click `Save`.
 
     ![one-tap-wiki-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/google-one-tap-login-2.gif)
 
@@ -59,8 +59,8 @@ Google One-tap flow is implemented by the [`vtex.login`](https://developers.vtex
 
 1. `vtex.login` checks if the user is logged in. The One-tap flow only starts for logged-out users.
 2. `vtex.login` calls the [VTEX ID API](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2#vtex-id) to get the store's OAuth `clientId`.
-3. `vtex.login` triggers the One-tap pop-up. 
-4. User clicks the **Continue as** button.
+3. `vtex.login` triggers the One-tap pop-up.
+4. The user clicks the **Continue as** button.
 5. Google checks the user's identity and returns a JSON Web Token (JWT)  to `vtex.login`.
 6. `vtex.login` POSTs a form containing the JWT and redirects the user to an endpoint at the VTEX ID API.
 7. The API validates the JWT and redirects the user back to the website.
