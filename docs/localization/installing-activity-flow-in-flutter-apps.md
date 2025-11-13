@@ -82,7 +82,7 @@ BottomNavigationBar(
       final label = items[index].label ?? 'Tab-$index';
 
       // Manually calling the `screenViewChange` with the label
-      screenViewChange(label);
+      trackPageView(label);
    },
 )
 ```
