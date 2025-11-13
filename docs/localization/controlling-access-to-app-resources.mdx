@@ -7,7 +7,7 @@ createdAt: "2025-11-04T12:00:00.000Z"
 updatedAt: "2025-11-04T12:00:00.000Z"
 ---
 
-When developers implement [service apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-service), they must choose how the app's routes can be accessed. There are two kinds of policies: **role-based** and **resource-based**. The following table summarizes how each policy kind works.
+When developers implement [service apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-service), they must choose how the app's routes can be accessed. There are two kinds of policies: **role-based** and **resource-based**. The following table summarizes how each policy type works.
 
 <table>
   <thead>
@@ -50,7 +50,7 @@ When developers implement [service apps](https://developers.vtex.com/docs/guides
     </tr>
 </table>
 
-Policies control access only for the owner of the authentication token. In scenarios where an IO app makes an API call to another app and uses an authentication token in the `VtexIdclientAutCookie` header, the policy will only have an allow or deny effect for the token owner, whether they are a third app, a user, or an API key. Policies won't affect access control for the app making the API call in these scenarios.
+Policies control access only for the owner of the authentication token. In scenarios where an IO app makes an API call to another app and uses an authentication token in the `VtexIdclientAutCookie` header, the policy will only have an allow or deny effect for the token owner, regardless of whether they are a third-party app, a user, or an API key. Policies won't affect access control for the app making the API call in these scenarios.
 
 ## Defining role-based policies
 
@@ -61,7 +61,7 @@ If you are developing an app that requires access to resources with these polici
 Recommendations to use role-based policies:
 
 - The requesters are only apps that make requests independently or [on behalf of other apps](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens). Don't use role-based policies when requesters are users, integrations, or other [apps making requests on behalf of users](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens).
-- Mandatory for exposing GraphQL endpoints and optional for REST endpoints.
+- Required for exposing GraphQL endpoints and optional for REST endpoints.
 - Compared to [resource-based policies](#defining-resource-based-policies), apps that want to access exposed resources must declare the necessary permissions in the `manifest.json`.
 
 > ℹ️ To define access control for users and integrations, use [resource-based policies](#defining-resource-based-policies) for REST APIs and the [`@auth` directive](https://developers.vtex.com/docs/guides/graphql-authorization-in-io-apps) for GraphQL APIs.
@@ -86,7 +86,7 @@ To declare a role-based policy for an app, create a `policies.json` file in the 
 }
 ```
 
-Notice that, in this example, a policy named `resolve-graphql` was declared, allowing access to an app to resolve a GraphQL request.
+Note that, in this example, a policy named `resolve-graphql` was declared, allowing access to an app to resolve a GraphQL request.
 
 Besides a `name` and a `description`, this policy contains the `statements` prop.
 
@@ -99,7 +99,7 @@ The keys that compose a statement are:
 - `effect`: Describes the effect of allowing (`allow`) or denying (`deny`) a resource to be accessed.
 - `actions`: Describes the actions (HTTP methods) related to a given effect and resource.
 
-    > ℹ️ Depending on the resource, different actions could be performed on it. For RESTful APIs, this could map to HTTP verbs. However, actions are not restricted to them, and the service may accept any string as an action.
+    > ℹ️ Depending on the resource, different actions could be performed on it. For RESTful APIs, this could map to HTTP verbs. However, actions aren't restricted to them, and the service may accept any string as an action.
 
 - `resources`: contains the list of resources expressed by a [VTEX Resource Name (VRN)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vrn) to which the statement refers.
 
@@ -111,7 +111,7 @@ Apps must declare resource-based policies to securely expose their private resou
 
 Recommendations to use resource-based policies:
 
-- Mandatory when the requesters are users, integrations, or other [apps making requests on behalf of users](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens). Optional for other apps that make requests by themselves or on [behalf of other apps](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens).
+- Required when the requesters are users, integrations, or other [apps making requests on behalf of users](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens). Optional for other apps that make requests by themselves or on [behalf of other apps](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens).
 - Optional for exposing REST endpoints. Incompatible with GraphQL endpoints.
 - Compared to [role-based policies](#defining-role-based-policies), apps exposing resources can control which other apps can access private routes through source-based policies.
 
@@ -137,7 +137,7 @@ The `service.json` file must have something similar to the following:
 }
 ```
 
-Notice that, in this example, a resource-based policy related to the `/orders` route was declared. The `effect`, `actions`, and `principals` props under `policies` can be translated as: "**allow/do not allow** these **actions** to be performed by these **principals** in this **route**", where principals can be understood as the applications able to make requests to a given resource.
+Note that, in this example, a resource-based policy related to the `/orders` route was declared. The `effect`, `actions`, and `principals` props under `policies` can be translated as: "**allow/do not allow** these **actions** to be performed by these **principals** in this **route**", where principals can be understood as the applications able to make requests to a given resource.
 
 Hence, for the given example, a policy related to the `/orders` resource allows the `example.marketplace` app to perform a `POST` request in its route.
 
@@ -163,7 +163,7 @@ The following sections show how VRNs are used for each type of principal, with e
 
 #### Other apps
 
-By default, other apps are not allowed to access private resources exposed through resource-based policies unless they are included in the `principals` list of a policy allowing it (`"effect": "allow"`).
+By default, other apps aren't allowed to access private resources exposed through resource-based policies unless they are included in the `principals` list of a policy allowing it (`"effect": "allow"`).
 
 To include other apps in `principals`, use the following VRN syntax:
 
@@ -199,12 +199,12 @@ The example below illustrates two policies with intersecting principals that use
 
 #### Users and integrations
 
-By default, users and integrations (API keys) are not allowed to access private resources exposed through resource-based policies unless they are included in the `principals` list of a policy allowing it (`"effect": "allow"`).
+By default, users and integrations (API keys) aren't allowed to access private resources exposed through resource-based policies unless they are included in the `principals` list of a policy allowing it (`"effect": "allow"`).
 
 To include users and integrations in a principal, use the following VRN syntax:
 
 - Set the `service` element of the VRN as `vtex.vtex-id`.
-- The `path` element uses the format `user/{username}`. `{username}` can be the user email or the `appkey` of the integration in the format `vtexappkey-{account}-{hash}`.  It is possible to use the `*` wildcard. For instance:
+- The `path` element uses the format `user/{username}`. `{username}` can be the user email or the `appkey` of the integration in the format `vtexappkey-{account}-{hash}`.  You can use the `*` wildcard. For example:
 - `user/*` covers all users and appkeys
 - `user/*@*` covers all users
 - `user/*@gmail.com` covers all users with the email domain `gmail.com`
