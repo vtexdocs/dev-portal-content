@@ -1,9 +1,9 @@
 ---
 title: "FastStore Release Notes — Version 3.92.0"
-slug: "2025-11-14-faststore-release-notes-version"
+slug: "2025-11-03-faststore-release-notes-version"
 type: "added"
-createdAt: "2025-11-14T11:00:00.000Z"
-updatedAt: "2025-11-14T11:05:00.000Z"
+createdAt: "2025-11-03T11:00:00.000Z"
+updatedAt: "2025-11-03T11:05:00.000Z"
 excerpt: "This release introduces right-to-left (RTL) language support, improves search page metadata for better discoverability, and delivers UI refinements and stability for components."
 tags:
     - FastStore
