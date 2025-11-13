@@ -182,3 +182,17 @@ Punchout login flows use the following security mechanisms to protect credential
 * **Secure credential handling**: Credentials are validated directly against the VTEX user database (VTEX user flow) or the request is made with secure API credentials (pre-authenticated flow).
 
 * **Redirect protection**: The `returnURL` is validated against authorized hosts to avoid open redirects.
+
+### Store Framework Content-Security-Policy requirements
+
+>ℹ️ This requirement only applies to [Store Framework](https://developers.vtex.com/docs/guides/store-framework) stores.
+
+If your store uses Store Framework, you must configure the `Content-Security-Policy` header with the `frame-ancestors` directive to allow your store to be embedded in procurement system iframes. Follow the instructions in [Adding custom headers to your Store Framework store](https://developers.vtex.com/docs/guides/vtex-io-documentation-adding-custom-headers-to-your-store-framework-store) and set the header as follows:
+
+```txt
+Content-Security-Policy: frame-ancestors 'self' https://procurement-system-a.com https://*.procurement-system-b.com
+```
+
+Replace the example domains with the actual domains of your procurement systems.
+
+>⚠️ Modern browsers (released in the last 10 years) fully support `frame-ancestors` and will ignore the older `X-Frame-Options` header. Legacy browsers such as Internet Explorer 10 and 11 do not support `frame-ancestors` and may experience issues with Punchout integration. For more information, see [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) and [frame-ancestors browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility).
