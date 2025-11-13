@@ -41,12 +41,12 @@ The single-domain feature simplifies domain management for FastStore stores, red
 
 To enable the single-domain feature, request the account configuration from VTEX. This ensures proper routing and security settings for your store.
 
-1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting that the account be configured for a single-domain setup. Please include the following information in the ticket:
+1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting the account be configured for a single-domain setup. Please include the following information in the ticket:
 
    - Account name
    - FastStore version
 
-    > ⚠️ For existing stores that set up the single domain before June 26, 2025, you must open a new ticket to request re-implementation, as the feature has been improved since then.
+    > ⚠️ For existing stores that set up the single-domain feature before June 26, 2025, you must open a new ticket to request re-implementation, as the feature has been improved since then.
 
 2. After receiving confirmation that the single-domain setup is configured, update the `Production URLs` section in the `discovery.config.js` file to ensure all URLs are consistent. For more information, see [Step 4 - Associating your custom domain with your FastStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
 
