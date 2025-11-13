@@ -395,7 +395,7 @@ The request body used in this step is based on the order's `paymentData` attachm
 ```
 </CH.Code>
 
-> ❗ Make sure that all value-related fields match the information sent when [placing the order](#place-order) to create a successful request.
+> ❗ Make sure that all value-related fields match the information sent when [placing the order](#place-order) to create a successful request. If incorrect payment details are provided, the system cannot redirect the user to the Order Confirmation page, thereby interrupting the checkout flow and preventing purchase completion.
 
 ---
 
