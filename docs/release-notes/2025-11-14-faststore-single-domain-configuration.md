@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Simplified domain configuration"
-slug: "2025-11-21-faststore-single-domain-configuration"
+slug: "2025-11-14-faststore-single-domain-configuration"
 hidden: false
 type: "improved"
-createdAt: "2025-11-21T10:00:00.000Z"  
+createdAt: "2025-11-14T10:00:00.000Z"  
 excerpt: "FastStore now defaults to a single domain for Checkout and My Account pages, simplifying domain management for stores."
 ---
 
