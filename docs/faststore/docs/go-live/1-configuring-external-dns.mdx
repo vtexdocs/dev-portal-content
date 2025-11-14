@@ -44,7 +44,7 @@ Hostname | Type | Points to
 www.mystore.com | CNAME | www.mystore.com.cdn.vtex.com
 
 
-> ⚠️ If your strategy requires additional subdomains (e.g., `b2b.mystore.com`), add them as separate CNAMEs and ensure they are [listed under Hosts](#step3--configuring-domains-in-vtex-account-settings).  
+> ⚠️ If your strategy requires additional subdomains (e.g., `b2b.mystore.com`), add them as separate CNAMEs and ensure they are [listed under Hosts](#step-3-configuring-domains-in-vtex-account-settings).  
 
 ### Step 2 - Putting your account into production
 
@@ -67,7 +67,45 @@ VTEX must know which domains belong to your store so it can recognize incoming r
 6. Add the root domain as well (e.g., `mystore.com`).
 7. Click the **Save** button.
 
-> ⚠️ Checkout and secure flows will not work if any used domain or subdomain is missing. For more information, see [Adding subdomains to the host list](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#adding-subdomains-to-the-host-list).
+> ⚠️ Checkout and secure flows will not work if any used domain or subdomain is missing. If your store uses multiple subdomains or custom prefixes, see [For stores with custom domain prefixes](#for-stores-with-custom-domain-prefixes) section.
+
+#### For stores with custom domain prefixes
+
+To ensure your store operates efficiently, it's important to correctly configure custom domain prefixes for checkout and secure product viewing. Custom domain prefixes must be configured in the following scenarios:
+
+- Stores with multiple subdomains: Add all the subdomains to the host list.
+- Stores with prefixed domains: Add `subDomainPrefix` for prefixed domains.
+
+##### Adding subdomains to the host list
+
+To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the host list. 
+
+Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+
+##### Adding `subDomainPrefix` for prefixed domains
+
+To ensure customers can view products in the secured environment on your store's final domain, add the `subDomainPrefix` property to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#files) file. 
+The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
+
+To add the `subDomainPrefix` property, follow these steps:
+
+1. Open your FastStore project in a code editor of your preference.
+2. Open the `discovery.config.js` file.
+3. Navigate to the `api` object and add the following:
+
+   ```js
+   // Platform specific configs for API
+   api: {
+    ...
+    subDomainPrefix: ['xxx']
+   },
+   ```
+
+   > ⚠ Replace `'xxx'` in the `subDomainPrefix` property with the actual subdomain prefix (example: `['b2b']`). If you have multiple prefixes, add them as an array of strings (example: `['b2b', 'dev']`).
+
+4. Save your changes.
+
+> ℹ️ You will commit and deploy these changes later in [Step 4](#step-4-associating-your-custom-domain-with-your-faststore-project).
 
 ### Step 4 - Associating your custom domain with your FastStore project
 
@@ -94,7 +132,7 @@ Up to this stage, your FastStore build continues to reference the default WebOps
 
 4. Save your changes.
 5. Open the `vtex.env` file.
-6. Add the `SITE_HOST` key with the main store domain as the value specified in [Step 3 - Configuring domains in VTEX Account Settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-3-configuring-domains-in-vtex-account-settings), for example, `SITE_HOST=www.yourstore.com`
+6. Add the `SITE_HOST` key with the main store domain as the value specified in [Step 3](#step-3-configuring-domains-in-vtex-account-settings), for example, `SITE_HOST=www.yourstore.com`
 7. Save your changes.
 8. Open a Pull Request, commit your changes, and deploy them to `main`.
 
@@ -138,48 +176,11 @@ This final step asks VTEX to fully migrate your WebOps project so the custom dom
 
 1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting a **domain migration** for your FastStore WebOps implementation. Include the following information:
    - VTEX account name
-   - Store's domain (example: `www.mystore.com`)
+   - Store's main domain (example: `www.mystore.com`)
    - Store's root domain (example: `mystore.com`)
    - Confirmation that you’ve completed all previous steps in this guide.
 2. Wait for the VTEX team to process your request and complete the domain migration.
 3. Once the migration is complete, test your store to ensure everything is working properly.
-
-## Configuring custom domain prefixes
-
-To ensure your store operates efficiently, it's important to correctly configure custom domain prefixes for checkout and secure product viewing. Custom domain prefixes must be configured in the following scenarios:
-
-- Stores with multiple subdomains: [Add all the subdomains to the host list](#adding-subdomains-to-the-host-list).
-- Stores with prefixed domains: [Add `subDomainPrefix` for prefixed domains](#adding-subdomainprefix-for-prefixed-domains).
-
-### Adding subdomains to the host list
-
-To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the host list. 
-
-Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
-
-### Adding `subDomainPrefix` for prefixed domains
-
-To ensure customers can view products in the secured environment on your store's final domain, add the `subDomainPrefix` property to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#files) file. 
-The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
-
-To add the `subDomainPrefix` property, follow these steps:
-
-1. Open your FastStore project in a code editor of your preference.
-2. Open the `discovery.config.js` file.
-3. Navigate to the `api` object and add the following:
-
-   ```js
-   // Platform specific configs for API
-   api: {
-    ...
-    subDomainPrefix: ['xxx']
-   },
-   ```
-
-   > ⚠ Replace `'xxx'` in the `subDomainPrefix` property with the actual subdomain prefix (example: `['b2b']`). If you have multiple prefixes, add them as an array of strings (example: `['b2b', 'dev']`).
-
-4. Save your changes.
-5. Open a Pull Request, commit your changes, and deploy them to `main`.
 
 ## Related Resources
 
