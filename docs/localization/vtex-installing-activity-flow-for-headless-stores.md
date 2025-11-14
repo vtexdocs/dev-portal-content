@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2025-10-23T13:37:06.246Z"
 ---
 
-In this guide, you'll learn how to install and configure the [Activity Flow](LINK) script in your Headless store.
+In this guide, you'll learn how to install and configure the [Activity Flow](LINK) script in your headless store.
 
 This setup allows Activity Flow to capture real user interactions and send them to VTEX for analysis, enabling insights into performance, engagement, and shopper behavior.
 
@@ -36,9 +36,9 @@ f=v.vtexaf=v.vtexaf||function(){(f.q=f.q||[]).push(arguments)};
 
 ### Step 2 - Defining default parameters
 
-Next, configure your store’s identification parameters.
+Next, configure the identification parameters of your store.
 
-These settings allow Activity Flow to recognize which account, environment, and workspace the events belong to.
+These settings allow Activity Flow to recognize the account, environment, and workspace the events belong to.
 
 1. Add a new script in the `<head>` tag, right after the Activity Flow script, with the following structure:
 
@@ -65,11 +65,11 @@ If you prefer, you can combine both the script loader and the parameter definiti
 To validate if the script is installed in your store, follow the steps below:
 
 1. Open the page where you set up the script.
-2. Open the **DevTools** and go to **Network** tab.
+2. Open **DevTools** and go to the **Network** tab.
 3. Search for `af.js` and click it.
 4. In the **Header** tab, confirm if the **Request URL** is `https://activity-flow.vtex.com/af/af.js`.
-5. Check in the console if there are errors. You can also trigger a monitorable action to see events.
+5. Check if there are errors in the console. You can also trigger a monitorable action to see events.
 
 ![dev_tools_af](https://vtexhelp.vtexassets.com/assets/docs/src/dev_tools_af___1d5b729dddb7926ba5678e8a1a1541e2.png)
 
-If the `af.js` file doesn't appear in the Network tab, confirm that the snippet is in the `<head>` of the page and that there are no script blockers. If the setup is correct and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+If the `af.js` file doesn't show in the Network tab, make sure that the snippet is in the `<head>` of the page and that there are no script blockers. If the setup is correct and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
