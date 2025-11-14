@@ -6,11 +6,11 @@ hidden: false
 createdAt: "2025-11-14T16:14:30.407Z"
 ---
 
-In this guide, you'll learn how to install and configure the [Activity Flow](LINK) script in your headless store.
+In this guide, you'll learn how to install and configure the [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) script in your headless store.
 
 This setup allows Activity Flow to capture real user interactions, enabling insights into performance, engagement, and shopper behavior.
 
-## Intructions
+## Instructions
 
 ### Step 1 - Adding the Activity Flow script asynchronously
 
@@ -38,7 +38,7 @@ f=v.vtexaf=v.vtexaf||function(){(f.q=f.q||[]).push(arguments)};
 
 Next, configure the identification parameters of your store.
 
-These settings allow Activity Flow to recognize the account, environment, and workspace the events belong to.
+These settings allow Activity Flow to recognize the account, environment, and workspace to which the events belong.
 
 1. Add a new script in the `<head>` tag, right after the Activity Flow script, with the following structure:
 
@@ -62,13 +62,13 @@ If you prefer, you can combine both the script loader and the parameter definiti
 
 ### Step 3 - Validate the installation
 
-To validate if the script is installed in your store, follow the steps below:
+To validate whether the script is installed in your store, follow the steps below:
 
 1. Open the page where you set up the script.
 2. Open **DevTools** and go to the **Network** tab.
 3. Search for `af.js` and click it.
-4. In the **Header** tab, confirm if the **Request URL** is `https://activity-flow.vtex.com/af/af.js`.
-5. Check if there are errors in the console. You can also trigger a monitorable action to see events.
+4. In the **Header** tab, confirm whether the **Request URL** is `https://activity-flow.vtex.com/af/af.js`.
+5. Check whether there are errors in the console. You can also trigger a monitorable action to see events.
 
 ![dev_tools_af](https://vtexhelp.vtexassets.com/assets/docs/src/dev_tools_af___1d5b729dddb7926ba5678e8a1a1541e2.png)
 
