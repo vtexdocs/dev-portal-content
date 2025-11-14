@@ -48,7 +48,7 @@ To enable the single-domain feature, request the account configuration from VTEX
 
     > ⚠️ Stores that enabled the single-domain setup before **June 26, 2025** should open a new support ticket to receive the most up-to-date version of this functionality.
 
-2. After receiving confirmation that the single-domain setup is configured, update the `Production URLs` section in the `discovery.config.js` file to ensure all URLs are consistent. For more information, see [Step 4 - Associating your custom domain with your FastStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
+2. After receiving confirmation from VTEX, update the `Production URLs` section in the `discovery.config.js` file to ensure all URLs are consistent. For more information, see [Step 4 - Associating your custom domain with your FastStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
 
 ### Verifying the single-domain configuration for `/checkout`
 
