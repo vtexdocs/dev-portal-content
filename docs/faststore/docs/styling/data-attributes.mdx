@@ -1,0 +1,533 @@
+---
+title: "Using Data Attributes with FastStore UI"
+excerpt: "Learn how to use data attributes to customize and style FastStore UI components."
+keywords:
+  - data attributes
+  - styling
+  - customization
+  - CSS
+  - FastStore UI
+---
+
+Data attributes in FastStore UI is a way to target and customize component styles using CSS. All FastStore UI components use a consistent `data-fs-` prefix for their data attributes, making it easy to identify and style components.
+
+## What are Data Attributes?
+
+Data attributes are HTML attributes that start with `data-` and allow you to store custom data on HTML elements. FastStore UI uses these attributes to:
+
+- **Target components for styling** - Apply custom CSS to specific components
+- **Handle component variants** - Style different states and variations
+- **Enable theme customization** - Override default component styles
+- **Support responsive design** - Apply different styles based on component properties
+
+## FastStore UI Data Attribute Convention
+
+All FastStore UI components follow a consistent naming pattern:
+
+```
+data-fs-{component-name}
+data-fs-{component-name}-{variant}
+data-fs-{component-name}-{property}
+```
+
+### Examples:
+
+- `data-fs-button` - Targets the Button component
+- `data-fs-button-variant="primary"` - Targets primary variant buttons
+- `data-fs-product-card` - Targets the ProductCard component
+- `data-fs-product-card-image` - Targets the image within a ProductCard
+
+## How to Use Data Attributes
+
+### 1. Basic Component Targeting
+
+To style a specific component, use its main data attribute:
+
+```scss
+// Target all Button components
+[data-fs-button] {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+// Target all Input components
+[data-fs-input] {
+  border: 2px solid #e0e0e0;
+  padding: 12px;
+}
+```
+
+### 2. Component Variants
+
+Many components support variants that you can target with specific data attributes:
+
+```scss
+// Target primary buttons
+[data-fs-button-variant="primary"] {
+  background-color: #007bff;
+  color: white;
+}
+
+// Target secondary buttons
+[data-fs-button-variant="secondary"] {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+// Target small buttons
+[data-fs-button-size="small"] {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+```
+
+### 3. Component States
+
+Target different states of components:
+
+```scss
+// Target loading buttons
+[data-fs-button-loading="true"] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+// Target disabled inputs
+[data-fs-input]:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+}
+```
+
+### 4. Nested Elements
+
+Target specific parts of complex components:
+
+```scss
+// Target the image within ProductCard
+[data-fs-product-card-image] {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+// Target the content area of ProductCard
+[data-fs-product-card-content] {
+  padding: 16px;
+}
+
+// Target the title within ProductCard
+[data-fs-product-card-title] {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+```
+
+## Common Data Attributes by Component Type
+
+### Atoms
+
+#### Button
+- `data-fs-button` - Main button element
+- `data-fs-button-variant="primary | secondary | tertiary"` - Button variant
+- `data-fs-button-size="small | regular"` - Button size
+- `data-fs-button-inverse` - Inverse color scheme
+- `data-fs-button-loading="true"` - Loading state
+
+#### Input
+- `data-fs-input` - Main input element
+
+#### Badge
+- `data-fs-badge` - Main badge element
+- `data-fs-badge-variant="highlighted | warning"` - Badge variant
+- `data-fs-badge-size="big | small"` - Badge size
+
+#### Icon
+- `data-fs-icon` - Main icon element
+
+### Molecules
+
+#### ProductCard
+- `data-fs-product-card` - Main card container
+- `data-fs-product-card-variant="default | wide"` - Card variant
+- `data-fs-product-card-bordered="true"` - Bordered variant
+- `data-fs-product-card-image` - Product image
+- `data-fs-product-card-content` - Card content area
+- `data-fs-product-card-title` - Product title
+- `data-fs-product-card-prices` - Price section
+- `data-fs-product-card-actions` - Action buttons area
+
+#### Table
+- `data-fs-table` - Main table element
+- `data-fs-table-variant="colored | bordered"` - Table variant
+- `data-fs-table-head` - Table header
+- `data-fs-table-body` - Table body
+- `data-fs-table-row` - Table row
+- `data-fs-table-cell="head | data"` - Table cell type
+
+#### Modal
+- `data-fs-modal` - Main modal element
+- `data-fs-modal-overlay` - Modal overlay
+- `data-fs-modal-content` - Modal content area
+- `data-fs-modal-header` - Modal header
+- `data-fs-modal-body` - Modal body
+
+### Organisms
+
+#### Tiles
+- `data-fs-tiles` - Main tiles container
+- `data-fs-tiles-variant="expanded-first | expanded-first-two"` - Layout variant
+- `data-fs-tile` - Individual tile element
+- `data-fs-content="tiles"` - Content identifier
+
+#### Navbar
+- `data-fs-navbar` - Main navbar element
+- `data-fs-navbar-brand` - Brand/logo area
+- `data-fs-navbar-links` - Navigation links
+- `data-fs-navbar-actions` - Action buttons area
+
+## Advanced Usage Patterns
+
+### 1. Combining Multiple Attributes
+
+You can combine multiple data attributes for more specific targeting:
+
+```scss
+// Target only primary small buttons
+[data-fs-button-variant="primary"][data-fs-button-size="small"] {
+  background-color: #0056b3;
+  padding: 6px 12px;
+}
+
+// Target product cards with bordered variant
+[data-fs-product-card][data-fs-product-card-bordered="true"] {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+```
+
+### 2. Responsive Design
+
+Use data attributes with media queries for responsive styling:
+
+```scss
+// Mobile-first approach
+[data-fs-product-card] {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  [data-fs-product-card] {
+    width: calc(50% - 8px);
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-fs-product-card] {
+    width: calc(33.333% - 12px);
+  }
+}
+```
+
+### 3. Theme Customization
+
+Create theme variations using data attributes:
+
+```scss
+// Dark theme
+[data-theme="dark"] {
+  [data-fs-button-variant="primary"] {
+    background-color: #4a90e2;
+    color: #ffffff;
+  }
+  
+  [data-fs-input] {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-color: #555555;
+  }
+}
+
+// High contrast theme
+[data-theme="high-contrast"] {
+  [data-fs-button-variant="primary"] {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
+}
+```
+
+### 4. Component State Management
+
+Use data attributes to manage component states:
+
+```scss
+// Loading state
+[data-fs-button-loading="true"] {
+  position: relative;
+  color: transparent;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+```
+
+## Best Practices
+
+### ✅ Do's
+
+- **Use semantic data attributes** - Choose meaningful attribute names that describe the component's purpose
+- **Follow the `data-fs-` convention** - Always use the FastStore UI prefix for consistency
+- **Target specific variants** - Use variant attributes to style different component states
+- **Combine attributes strategically** - Use multiple attributes for precise targeting
+- **Test across components** - Ensure your styles work with all component variants
+- **Use CSS custom properties** - Leverage CSS variables for maintainable theming
+- **Document your customizations** - Keep track of custom data attributes you create
+
+### ❌ Don'ts
+
+- **Don't modify core data attributes** - Avoid changing the built-in `data-fs-` attributes
+- **Don't use generic selectors** - Avoid overly broad selectors that might affect unintended components
+- **Don't ignore component variants** - Consider all component states when styling
+- **Don't hardcode values** - Use CSS custom properties for maintainable theming
+- **Don't break accessibility** - Ensure your custom styles maintain component accessibility
+
+## Debugging Data Attributes
+
+### 1. Inspect Elements
+
+Use browser developer tools to inspect data attributes:
+
+```javascript
+// Find all elements with FastStore UI data attributes
+document.querySelectorAll('[data-fs-]');
+
+// Find specific component
+document.querySelectorAll('[data-fs-button]');
+
+// Find specific variant
+document.querySelectorAll('[data-fs-button-variant="primary"]');
+```
+
+### 2. CSS Debugging
+
+Add temporary styles to visualize data attributes:
+
+```scss
+// Highlight all FastStore UI components
+[data-fs-] {
+  outline: 2px solid red !important;
+}
+
+// Highlight specific components
+[data-fs-button] {
+  outline: 2px solid blue !important;
+}
+```
+
+### 3. Console Testing
+
+Test data attribute selectors in the browser console:
+
+```javascript
+// Test if selector works
+document.querySelector('[data-fs-button-variant="primary"]');
+
+// Count matching elements
+document.querySelectorAll('[data-fs-product-card]').length;
+```
+
+## Examples
+
+### Custom Button Styling
+
+```scss
+// Custom primary button with gradient
+[data-fs-button-variant="primary"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  }
+}
+```
+
+### Custom Product Card Layout
+
+```scss
+// Custom product card with hover effects
+[data-fs-product-card] {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+}
+
+[data-fs-product-card-image] {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+[data-fs-product-card]:hover [data-fs-product-card-image] {
+  transform: scale(1.05);
+}
+```
+
+### Responsive Table Styling
+
+```scss
+// Responsive table with horizontal scroll on mobile
+[data-fs-table] {
+  width: 100%;
+  border-collapse: collapse;
+  
+  @media (max-width: 768px) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+[data-fs-table-cell="head"] {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+}
+
+[data-fs-table-cell="data"] {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+}
+```
+
+---
+
+## Testing with Data Attributes
+
+### Test Selectors
+
+Use data attributes for reliable test selectors:
+
+```javascript
+// Jest/Testing Library examples
+const button = screen.getByTestId('store-button');
+const productCard = screen.getByTestId('store-product-card');
+
+// Cypress examples
+cy.get('[data-fs-button]').click();
+cy.get('[data-fs-product-card]').should('be.visible');
+cy.get('[data-fs-button-variant="primary"]').should('have.class', 'active');
+```
+
+### Test ID Pattern
+
+FastStore UI components also include `data-testid` attributes:
+
+```tsx
+<button
+  data-fs-button
+  data-testid="store-button"
+  data-fs-button-variant="primary"
+>
+  Click me
+</button>
+```
+
+---
+
+## Best Practices
+
+### 1. Use Semantic Data Attributes
+
+Always use the provided data attributes rather than creating custom ones:
+
+```tsx
+// ✅ Good
+<button data-fs-button data-fs-button-variant="primary">Click me</button>
+
+// ❌ Avoid
+<button data-custom-button data-custom-variant="primary">Click me</button>
+```
+
+### 2. Maintain Consistency
+
+Follow the established naming patterns when extending components:
+
+```tsx
+// ✅ Good - follows FastStore pattern
+<div data-fs-custom-component data-fs-custom-component-variant="special">
+
+// ❌ Avoid - inconsistent naming
+<div data-fs-custom-component data-custom-variant="special">
+```
+
+### 3. Use Boolean Attributes Correctly
+
+For boolean data attributes, use string values:
+
+```tsx
+// ✅ Good
+<button data-fs-button-disabled="true">Disabled Button</button>
+<button data-fs-button-loading="false">Normal Button</button>
+
+// ❌ Avoid
+<button data-fs-button-disabled>Disabled Button</button>
+<button data-fs-button-loading={false}>Normal Button</button>
+```
+
+### 4. Leverage CSS Custom Properties
+
+Override component styles using CSS custom properties rather than direct CSS:
+
+```scss
+// ✅ Good - uses design tokens
+[data-fs-button] {
+  --fs-button-primary-bkg-color: #your-brand-color;
+}
+
+// ❌ Avoid - hardcoded values
+[data-fs-button] {
+  background-color: #your-brand-color;
+}
+```
+
+### 5. Test with Data Attributes
+
+Use data attributes for reliable testing:
+
+```javascript
+// ✅ Good - uses data attributes
+cy.get('[data-fs-button-variant="primary"]').click();
+
+// ❌ Avoid - uses classes that might change
+cy.get('.btn-primary').click();
+```
