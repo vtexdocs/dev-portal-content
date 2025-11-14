@@ -5,188 +5,87 @@ createdAt: '2024-01-01T00:00:00Z'
 updatedAt: '2025-09-23T00:00:00Z'
 ---
 
-In this guide, you will learn how to point your custom domain to your **FastStore** website and configure it in VTEX for a complete setup. The process involves the following steps:
+In this guide, you will configure your custom domain so it correctly points to your FastStore website hosted on [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) (`https://{accountName}.vtex.app/`).
+Once the configuration is complete, customers will access your store using your final domain (e.g., `www.mystore.com`) instead of the default WebOps URL.
 
-   - Setting up your external DNS provider to point your custom domain to your VTEX website. You can buy custom domains from any domain registrar.
-   - Configuring your custom domains in **VTEX Account Settings**.
-   - Associating your custom domains with your **FastStore** project.
 
-By the end of this guide, your FastStore website will be accessible via a custom domain, and **VTEX Checkout** will be operational. You will then be ready to configure other VTEX solutions, such as **Order Placed**, **Login**, and **My Account**.
+This process includes:
+- Creating DNS records that point your domain to VTEX’s CDN infrastructure
+- Registering your domains in VTEX Account Settings
+- Associating your domain with your FastStore WebOps project
+- Migrating your store to the final HTTPS domain
+
+As soon as you complete this guide, your FastStore website will be accessible via a custom domain, and **VTEX Checkout** will also be operational. You will then be ready to continue configuring other VTEX solutions, such as **Order Placed**, **Login**, and **My Account**.
+
+> ⚠️ **Plan ahead:** Because several steps in this guide depend on DNS changes becoming fully available worldwide, we strongly recommend planning your go-live schedule accordingly. Avoid making last-minute updates that may delay your deployment or cause temporary domain resolution issues.
 
 ## Before you begin
 
-<Steps>
-
-### Have your FastStore project
-
-Ensure your FastStore project is created, set up, and customized to meet your business's needs. To start your FastStore project, follow the [Getting Started track](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
-
-### Purchase the store domain
-
-Purchase the desired domain for your store from a trusted domain registrar.
-
-### Redirect your root domain
-
-To ensure store visitors who access your store without `www` are automatically redirected to the correct address, redirect the root domain to the `www` subdomain. To complete this step, follow the instructions in the [Best practices for accessing the store without www](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www) guide.
-
-### Plan your setup in advance
-
-Some steps in this guide, particularly those involving [CDN workflow configuration](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-6-configuring-the-cdn-workflow-only-for-new-go-lives) and [domain migration](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-8-migrating-the-domain), require assistance from [VTEX Support](https://help.vtex.com/en/support). Processing these requests typically takes up to three business days, followed by approximately five additional days to complete DNS pointing. We recommend planning these steps well in advance to avoid delays in your store's go-live schedule.
-
-</Steps>
+   - Develop your FastStore project by following the [Getting Started track](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
+   - Deploy your FastStore project.
+   - Purchase the domain you want to use.
+   - [Configure a root-domain redirect to the `www` subdomain.](https://help.vtex.com/en/tutorial/configuring-access-without-www--tutorials_4278#root-domain-redirect-without-www)
 
 ## Instructions
 
-> ⚠️ If you still need to configure other VTEX solutions, please **use a fictitious domain name** while following the steps. Once you have set up all the desired integrations, repeat the instructions using your final domain to make your website publicly available to end users.
+> ⚠️ If you still need to configure other VTEX solutions, **use a fictitious domain name** while following the steps. Once you have set up all the desired integrations, repeat the instructions using your final domain to make your website publicly available to end users.
 
 ### Step 1 - Creating DNS records
 
-1. Access your domain provider's website.
-2. Create a **CNAME** DNS record for your `www` domain (for example, `www.mystore.com`) pointing to `www.{rootDomain}.cdn.vtex.com` (for example, `www.mystore.com.cdn.vtex.com`). Check your domain provider's documentation for more information.
-3. Now, create a **CNAME** record for the `secure` subdomain (for example, `secure.mystore.com`) pointing to `secure.{rootDomain}.cdn.vtex.com` (for example, `secure.mystore.com.cdn.vtex.com`). This subdomain will be used by the **Checkout**, **Order Placed**, **Login**, and **My Account** pages.
+VTEX uses a CDN to serve FastStore websites. To make your domain reachable, you must create DNS CNAME records pointing your domain to VTEX’s CDN endpoints. Without this step, VTEX cannot validate or route traffic for your domain.
 
->ℹ️ The configured addresses may not be immediately available to everyone due to DNS propagation, which can take 24–48 hours to complete.
+
+1. Access your domain provider's website.
+2. Create a **CNAME** DNS record for your `www` domain (e.g., `www.mystore.com`) pointing to `www.{rootDomain}.cdn.vtex.com` (example: `www.mystore.com.cdn.vtex.com`). Check your domain provider's documentation for more information. The configured addresses may not be immediately available to everyone due to DNS propagation, which can take 24-48 hours to complete. For example:
+
+
+Hostname | Type | Points to
+-- | -- | --
+www.mystore.com | CNAME | www.mystore.com.cdn.vtex.com
+
+
+> ⚠️ If your strategy requires additional subdomains (e.g., `b2b.mystore.com`), add them as separate CNAMEs and ensure they are [listed under Hosts](#step-3-configuring-domains-in-vtex-account-settings).  
 
 ### Step 2 - Putting your account into production
 
-To proceed, make sure your store is active and in production by following the steps in the guide [Putting your account into production](https://help.vtex.com/en/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/7wFsbWgN4rnZsbjhv8IItX#putting-your-account-into-production).
+Before VTEX can serve your website on a custom domain, your account must be configured as a production-ready environment. See [Putting your account into production](https://help.vtex.com/en/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/7wFsbWgN4rnZsbjhv8IItX#putting-your-account-into-production) for more information.
 
 ### Step 3 - Configuring domains in VTEX Account Settings
 
-You must configure your VTEX account to use the DNS records created in the previous step.
+VTEX must know which domains belong to your store so it can recognize incoming requests and serve the appropriate environment. Adding your domains here ensures My Account, Checkout, Login, and other VTEX services can operate correctly.
 
->ℹ️ For more information about store domain configuration, see the [Configuring the store domain](https://help.vtex.com/en/tutorial/configuring-the-store-domain--tutorials_2450) guide.
+> ℹ For more information about store domain configuration, see the [Configuring the store domain](https://help.vtex.com/en/tutorial/configuring-the-store-domain--tutorials_2450) guide.
 
 1. In the VTEX Admin, click your profile avatar, identified by the first letter of your email address.
 2. Access **Account Settings > Account**.
 3. Go to the **Stores** tab and in the **Hosts** table, click the menu (**⋮**) and choose **Edit**.
-4. In the **Hosts** field, add your main domain (for example, `www.mystore.com`) to the list.
+4. In the **Hosts** field, enter your main store domain (e.g., `www.mystore.com`) into the list.
 5. Click `Add`.
-6. Add the `secure` subdomain (for example, `secure.mystore.com`) to the list.
-   ![host-configuration](https://vtexhelp.vtexassets.com/assets/docs/src/account-settings-new___2e13bee3041e8505922a737b94652ca6.png)
+6. Add the root domain as well (e.g., `mystore.com`).
+7. Click the **Save** button.
 
-7. Also add the root domain. For example, if your domain is `www.mystore.com`, add `mystore.com`. To complete the setup, you must add these three hosts:
-   - `www.mystore.com`  (store domain)
-   - `mystore.com` (root domain)
-   - `secure.mystore.com` (checkout/myaccount subdomain)
+> ⚠️ Checkout and secure flows will not work if any used domain or subdomain is missing. If your store uses multiple subdomains or custom prefixes, see [For stores with custom domain prefixes](#for-stores-with-custom-domain-prefixes) section.
 
-> ⚠️ To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. For more information, see the [Adding subdomains to the host list](#adding-subdomains-to-the-host-list) section.
+#### For stores with custom domain prefixes
 
-8. Click the **Save** button.
+To ensure your store operates efficiently, it's important to correctly configure custom domain prefixes for checkout and secure product viewing. Custom domain prefixes must be configured in the following scenarios:
 
-### Step 4 - Associating your custom domain with your FastStore project
+- Stores with multiple subdomains: Add all the subdomains to the host list.
+- Stores with prefixed domains: Add `subDomainPrefix` for prefixed domains.
 
-In your FastStore project, you must also configure your project to point to the correct addresses and domains.
-
-1. Open your FastStore project in your preferred code editor.
-2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
-3. Update the `storeUrl`, `secureSubdomain`, `checkoutUrl`, `loginUrl`, and `accountUrl` properties as follows, replacing the values in curly brackets according to your scenario:
-
-   - **`storeUrl`**: `https://{subdomain}.{rootDomain}`
-   - **`secureSubdomain`**: `https://{subdomain}.{rootDomain}`
-   - **`checkoutUrl`**: `https://{subdomain}.{rootDomain}/checkout`
-   - **`loginUrl`**: `https://{subdomain}.{rootDomain}/api/io/login`
-   - **`accountUrl`**: `https://{subdomain}.{rootDomain}/api/io/account`
-
-Consider the following example of how this code block would look after configuring a store with the `www.mystore.com` domain and `secure` subdomain:
-
-   ```diff /discovery.config.js
-   ...
-   
-   // Default channel
-   channel: '1',
-   
-   +  // Production URLs
-   +  storeUrl: 'https://www.mystore.com',
-   +  secureSubdomain: 'https://secure.mystore.com',
-   +  checkoutUrl: 'https://secure.mystore.com/checkout',
-   +  loginUrl: 'https://secure.mystore.com/api/io/login',
-   +  accountUrl: 'https://secure.mystore.com/api/io/account',
-   
-   // Lighthouse CI
-   lighthouse: {
-   ...
-   ```
-
-4. Save your changes.
-5. Open the `vtex.env` file.
-6. Add the `SITE_HOST` key with the main domain specified in [Configuring domains in VTEX Account Settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-3---configuring-domains-in-vtex-account-settings) as the value.
-
-   ```diff /vtex.env
-   + SITE_HOST=www.mystore.com
-   ```
-
-7. Save your changes.
-8. Open a pull request, commit your changes, and deploy them to `main`.
-
-> ⚠️ For stores with prefixed domains, add the `subDomainPrefix` property to `discovery.config.js` to ensure product visibility in the secure environment. For more information, see the [Adding `subDomainPrefix` for prefixed domains](#adding-subDomainPrefix-for-prefixed-domains) section. 
-
-### Step 5 - Adding your store domain to FastStore WebOps
-
-To complete the domain configuration, add your store domain to [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project).
-
-> ⚠️ FastStore WebOps domain configuration always takes priority over any settings in `discovery.config.js`. We recommend managing all domain configurations through FastStore WebOps to centralize all domain settings in a single source.
-
-1. Access your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard).
-2. Navigate to the Settings tab.
-3. In the **Host** field, choose your store's domain (for example, `www.mystore.com`) from the dropdown list.
-4. Click `Add`.
-
-   ![adding-host-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/adding-host-webops.png)
-
-### Step 6 - Configuring the CDN workflow (Only for new go-lives)
-
-If your FastStore website is going live for the first time, [open a ticket with VTEX Support](https://help.vtex.com/en/support) and specify that you need to configure the CDN workflow for your store's secure and main domains.
-
-Include the following information in your ticket:
-
-   - Your VTEX **account name**.
-   - The **secure** and **main** domains of your store.
-
-The VTEX team will evaluate your request and take the necessary actions to configure your account's CDN workflow.
-
-### Step 7 - Monitoring the new deployment
-
-After adding your domain to FastStore WebOps, a new deployment will be triggered automatically. Before proceeding to the next step, monitor the deployment progress in the FastStore WebOps dashboard until it is complete.
-
-Check if your domain is configured correctly in the FastStore WebOps environment:
-
-1. Access your FastStore WebOps dashboard.
-2. Navigate to the Settings tab.
-3. Confirm your domain appears in the **Current Domains** list.
-
-   ![currrent-domains](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/current-domains.png)
-
-### Step 8 - Migrating the domain
-
-1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting a **domain migration** for your FastStore WebOps implementation. Please include the following information:
-   - VTEX account name
-   - Store's domain (for example, `www.mystore.com`)
-   - Secure domain (for example, `secure.mystore.com`)
-   - Confirmation that you have completed all previous steps in this guide.
-
->⚠️ Open the CDN workflow configuration or domain migration ticket well in advance. We recommend submitting your request at least five business days before the planned go-live date. VTEX Support typically takes up to three business days to process the request, and you will have five additional days to complete the DNS configuration after receiving a successful response.
-
-2. Wait for the VTEX team to process your request and complete the domain migration.
-
-3. Once the migration is complete, test your store to ensure everything is working correctly.
-
-## Configuring custom domain prefixes
-
-To ensure your store operates efficiently, it is important to correctly configure custom domain prefixes for checkout and secure product viewing. You need to configure custom domain prefixes in the following scenarios:
-
-- Stores with multiple subdomains: [Add all the subdomains to the host list](#adding-subdomains-to-the-host-list).
-- Stores with prefixed domains: [Add `subDomainPrefix` for prefixed domains](#adding-subdomainprefix-for-prefixed-domains).
-
-### Adding subdomains to the host list
+<details>
+<summary><b>Adding subdomains to the host list</b></summary>
 
 To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the host list. 
 
-Stores with custom prefixes, such as `shop.mystore.com`, need to add both the prefix and the main domain (`shop.mystore.com` and `mystore.com`). This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
+Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
 
-### Adding `subDomainPrefix` for prefixed domains
+</details>
 
-To ensure customers can view products in the secured environment on your store's final domain, add the `subDomainPrefix` property to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#files) file. 
+<details>
+<summary><b>Adding `subDomainPrefix` for prefixed domains</b></summary>
+
+To ensure customers can view products in the secured environment on your store's final domain, add the `subDomainPrefix` property to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#files) file. 
 The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
 
 To add the `subDomainPrefix` property, follow these steps:
@@ -203,13 +102,91 @@ To add the `subDomainPrefix` property, follow these steps:
    },
    ```
 
-   > ⚠ Replace `'xxx'` from `subDomainPrefix` property with the actual subdomain prefix (for example, `['b2b']`). If you have multiple prefixes, add them as an array of strings (for example, `['b2b', 'dev']`).
+   > ⚠ Replace `'xxx'` in the `subDomainPrefix` property with the actual subdomain prefix (example: `['b2b']`). If you have multiple prefixes, add them as an array of strings (example: `['b2b', 'dev']`).
 
 4. Save your changes.
-5. Open a pull request, commit your changes, and deploy them to `main`.
+
+> ℹ️ You will commit and deploy these changes later in [Step 4](#step-4-associating-your-custom-domain-with-your-faststore-project).
+
+</details>
+
+### Step 4 - Associating your custom domain with your FastStore project
+
+
+Up to this stage, your FastStore build continues to reference the default WebOps URL. Complete the steps below to update your storefront configuration and environment variables to point to your final production domain.
+
+1. Open your FastStore project in any code editor of your preference.
+2. Open the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
+3. In the `discovery.config.js` file, update the `Production URLs` field with the new URLs, and replace the `rootDomain` value with your store root domain name. See the example below:
+    
+   ```js
+   ...
+
+   // Production URLs
+   storeUrl: "https://www.mystore.com",
+   checkoutUrl: "https://www.mystore.com/checkout",
+   loginUrl: "https://www.mystore.com/api/io/login",
+   accountUrl: "https://www.mystore.com/api/io/account",
+
+   ...
+   ```
+
+   > ⚠️ Remove any references to `secureSubdomain` and `secure` host.
+
+4. Save your changes.
+5. Open the `vtex.env` file.
+6. Add the `SITE_HOST` key with the main store domain as the value specified in [Step 3](#step-3-configuring-domains-in-vtex-account-settings), for example, `SITE_HOST=www.yourstore.com`
+7. Save your changes.
+8. Open a Pull Request, commit your changes, and deploy them to `main`.
+
+### Step 5 - Configuring the CDN workflow (Only for new go-lives)
+
+If your FastStore website is going live for the first time, VTEX must activate the CDN workflow for your account. [Open a ticket with VTEX Support](https://help.vtex.com/en/support) and specify that you need to configure the CDN workflow for your store's secure and main domains.
+
+Include the following information in your ticket:
+
+   - Your VTEX **account name**.
+   - The store's main domain (e.g., `www.mystore.com`).
+
+The VTEX team will evaluate your request and take the necessary actions to configure your account's CDN workflow.
+
+### Step 6 - Adding your store domain to FastStore WebOps
+
+To finish the domain configuration, add your store domain to [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
+
+> ⚠️ FastStore WebOps domain configuration always takes priority over any settings in `discovery.config.js`. 
+
+1. Access your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
+2. Navigate to the **Settings** tab.
+3. In the **Host** field, choose your store's domain (example: `www.mystore.com`) from the dropdown list.
+4. Click `Add`.
+
+   ![adding-host-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/adding-host-webops.png)
+
+### Step 7 - Monitoring the new deployment
+
+After you add your domain to FastStore WebOps, an automatic deployment is triggered to update the CDN and routing configuration. This deployment must finish successfully before your store becomes accessible under your custom domain.
+
+1. Access your FastStore WebOps dashboard.
+2. Navigate to the Settings tab.
+3. Confirm your domain appears in the **Current Domains** list.
+
+   ![currrent-domains](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/current-domains.png)
+
+### Step 8 - Migrating the domain
+
+This final step asks VTEX to fully migrate your WebOps project so the custom domain becomes the primary URL instead of the default `{accountName}.vtex.app`. This is required for HTTPS, secure flows, and production routing.
+
+1. Open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting a **domain migration** for your FastStore WebOps implementation. Include the following information:
+   - VTEX account name
+   - Store's main domain (example: `www.mystore.com`)
+   - Store's root domain (example: `mystore.com`)
+   - Confirmation that you’ve completed all previous steps in this guide.
+2. Wait for the VTEX team to process your request and complete the domain migration.
+3. Once the migration is complete, test your store to ensure everything is working properly.
 
 ## Related Resources
 
    - [Configuring the store domain](https://help.vtex.com/en/tutorial/configuring-the-store-domain--tutorials_2450)
    - [Setting up DNS pointing to VTEX](https://help.vtex.com/tracks/go-live-your-store--4Ns5FxIiksmjsdX2yOTduM/12bQlMbJ68Ot0LIaO6Btkj#setting-up-dns-pointing)
-   - [Inserting a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/insert-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir)
+   - [Insert a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/insert-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir)
