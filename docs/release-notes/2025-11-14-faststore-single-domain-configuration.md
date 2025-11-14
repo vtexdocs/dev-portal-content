@@ -48,10 +48,12 @@ To enable the single-domain feature, request the account configuration from VTEX
 
     > ⚠️ Stores that enabled the single-domain setup before **June 26, 2025** should open a new support ticket to receive the most up-to-date version of this functionality.
 
-2. After receiving confirmation from VTEX, update the `Production URLs` section in the `discovery.config.js` file to ensure all URLs are consistent. For more information, see [Step 4 - Associating your custom domain with your FastStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
+2. After receiving confirmation that the single-domain setup is configured:
+   - Update the `Production URLs` section in the `discovery.config.js` file to ensure all URLs are consistent. For more information, see [Step 4 - Associating your custom domain with your FastStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
+   - Configure your production domain in the **Settings** tab of the [FastStore WebOps Dashboard](https://developers.vtex.com/docs/guides/faststore/webops-dashboard#settings). For more information, see [Step 6 - Adding your store domain to FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-6-adding-your-store-domain-to-faststore-webops).
 
 ### Verifying the single-domain configuration for `/checkout`
 
-To confirm that your store is using single-domain routing for Checkout, open an incognito/private browsing window and navigate to your store’s domain (for example, `https://www.yourstore.com/checkout`). 
+To confirm that your store is using single-domain routing for Checkout, open an incognito/private browsing window and navigate to your store’s domain (for example, `https://www.yourstore.com/checkout`).
 
 The VTEX Checkout should load under the same main domain, without redirecting to any secure subdomain. You can also test by adding a product to the cart and proceeding to checkout, ensuring that the URL remains on your main domain throughout the process. If `/checkout` fails to load correctly or you are redirected to a different domain, open a ticket with [VTEX Support](https://help.vtex.com/en/support). In the ticket, indicate that you are enabling the single-domain configuration for Checkout and include your VTEX account name.
