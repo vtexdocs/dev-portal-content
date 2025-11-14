@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.322](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.320...v1.1.322) (2025-11-14)
+
+
+### 📝 Documentation updates
+
+* add punchout header info ([46da5f0](https://github.com/vtexdocs/dev-portal-content/commit/46da5f0a360bfce831dcc48ff071c16ced7f20ac))
+
 ### [1.1.321](https://github.com/vtexdocs/dev-portal-content/compare/v1.1.320...v1.1.321) (2025-11-14)
 
 
