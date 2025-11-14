@@ -61,9 +61,6 @@ VTEX must know which domains belong to your store so it can recognize incoming r
 3. Go to the **Stores** tab and in the **Hosts** table, click the menu (**⋮**) and choose **Edit**.
 4. In the **Hosts** field, enter your main store domain (e.g., `www.mystore.com`) into the list.
 5. Click `Add`.
-   
-   ![host-configuration](https://vtexhelp.vtexassets.com/assets/docs/src/account-settings-new___2e13bee3041e8505922a737b94652ca6.png)
-
 6. Add the root domain as well (e.g., `mystore.com`).
 7. Click the **Save** button.
 
@@ -76,13 +73,17 @@ To ensure your store operates efficiently, it's important to correctly configure
 - Stores with multiple subdomains: Add all the subdomains to the host list.
 - Stores with prefixed domains: Add `subDomainPrefix` for prefixed domains.
 
-##### Adding subdomains to the host list
+<details>
+<summary><b>Adding subdomains to the host list</b></summary>
 
 To ensure a seamless checkout experience, all subdomains used by your store must be added to the host list. If the store operates without the `www.` domain, you must include both the `www.` and non-`www.` domains in the host list. 
 
 Stores with custom prefixes, like `shop.mystore.com`, need both the prefix and main domain (`shop.mystore.com` and `mystore.com`) added. This guarantees that the checkout process works seamlessly when customers access the store with or without `www.` or any other custom prefix.
 
-##### Adding `subDomainPrefix` for prefixed domains
+</details>
+
+<details>
+<summary><b>Adding `subDomainPrefix` for prefixed domains</b></summary>
 
 To ensure customers can view products in the secured environment on your store's final domain, add the `subDomainPrefix` property to the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#files) file. 
 The `subDomainPrefix` property maintains compatibility between cookies set in the storefront and the secure environment.
@@ -106,6 +107,8 @@ To add the `subDomainPrefix` property, follow these steps:
 4. Save your changes.
 
 > ℹ️ You will commit and deploy these changes later in [Step 4](#step-4-associating-your-custom-domain-with-your-faststore-project).
+
+</details>
 
 ### Step 4 - Associating your custom domain with your FastStore project
 
