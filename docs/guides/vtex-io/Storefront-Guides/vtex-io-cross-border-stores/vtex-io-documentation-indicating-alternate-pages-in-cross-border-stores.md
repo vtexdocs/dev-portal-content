@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-indicating-alternate-pages-in-cross-border-stores"
 hidden: false
 excerpt: "Learn how to indicate alternate versions of localized pages."
 createdAt: "2020-11-23T14:49:49.171Z"
-updatedAt: "2025-10-30T16:07:14.409Z"
+updatedAt: "2025-11-14T16:14:30.407Z"
 ---
 
 In this guide, you'll learn how to indicate alternate versions of localized landing pages in cross-border stores to improve SEO and ensure search engines display the correct content for each region.
