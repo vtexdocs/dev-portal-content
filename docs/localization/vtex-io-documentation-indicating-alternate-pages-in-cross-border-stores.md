@@ -9,7 +9,7 @@ updatedAt: "2025-10-30T16:07:14.409Z"
 
 In this guide, you'll learn how to indicate alternate versions of localized landing pages in cross-border stores to improve SEO and ensure search engines display the correct content for each region.
 
-If your store operates in multiple regions and you have different versions of a [landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) for each, you should link them as alternate versions. This practice helps search engines understand the relationship between your localized pages, ensuring they serve the right content to the right audience and improving your store's SEO.
+If your store operates in multiple regions and you have different versions of a [landing page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) for each, you should link them as alternate versions. This practice helps search engines understand the relationship between your localized pages, ensuring they serve the right content to the right audience and improving your store SEO.
 
 When you indicate alternate versions, you must do so in pairs. For example, if you point the US version of a page to a Brazilian one, the Brazilian page must also point back to the US version. This reciprocal linking enables search engines to accurately map the relationship between them, thereby preventing indexing errors.
 
@@ -40,13 +40,13 @@ Follow the steps below for each localized version of your landing page.
   }
   ```
 
-⚠️ Replace the values between the curly brackets according to your scenario.
+⚠️ Replace the values inside the curly brackets based on your scenario.
 
 5. Save the returned data.
 
 ### Step 2 - Updating the route
 
-1. Clear the previous query and use the following mutation
+1. Clear the previous query and use the following mutation.
 
   ```graphql
   mutation saveInternal($args: InternalInput!) {
@@ -59,7 +59,7 @@ Follow the steps below for each localized version of your landing page.
   ```
 
 2. At the bottom of the page, click **Query Variables**.
-3. Fill in the Query Variables section following the example below:
+3. Complete the Query Variables section following the example below:
 
   ```json
   {
@@ -87,7 +87,7 @@ Follow the steps below for each localized version of your landing page.
 - In the `id` field, always set its value from the main binding, even if you're updating the secondary binding's route. This keeps a single canonical reference and prevents duplicate or conflicting entries across bindings. For example, if the main binding has the About Us page at `/US/about-us` with the id `vtex.store@2.x:store.custom::us-about-us`, use that same id for the secondary binding's route like `/BR/sobre-nos` to ensure consistency.
 - In the `alternates` field, provide the `binding` and `path` for each alternate landing page.
 
-  >⚠️ If you don't know the `binding` values of your stores, follow [this step-by-step guide on checking your account's `binding` IDs](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id).
+  >⚠️ If you don't know the `binding` values of your stores, follow [this instruction guide on checking your account's `binding` IDs](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id).
 
 4. Click `Run` to apply the changes.
 
