@@ -61,7 +61,7 @@ Store settings are actions you can configure directly in the VTEX Admin by navig
 
 This action disables the legacy `orderForm` provider.
 
-The `orderForm` is an object that stores and retrieves data from a user orders, including each item added to the cart. To give other Store Theme blocks access to the data stored in the `orderForm` and allow them to render it, Store Framework runs the `OrderFormProvider` object on each store page. This object exports all the necessary `orderForm` information to these blocks.
+The `orderForm` is an object that stores and retrieves data from user orders, including each item added to the cart. To give other Store Theme blocks access to the data stored in the `orderForm` and allow them to render it, Store Framework runs the `OrderFormProvider` object on each store page. This object exports all the necessary `orderForm` information to these blocks.
 
 However, all stores using VTEX IO Store Framework currently have two `OrderFormProviders`: a legacy version, still consumed by native blocks such as `minicart` and `buy-button`, and a newer version, better suited for replacement.
 
