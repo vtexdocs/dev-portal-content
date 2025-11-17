@@ -3,7 +3,7 @@ title: "Enabling performance settings"
 slug: "vtex-io-documentation-enabling-performance-settings"
 hidden: false
 createdAt: "2024-11-18T15:26:22.439Z"
-updatedAt: "2025-11-07T15:33:45.086Z"
+updatedAt: "2025-11-17T19:07:23.731Z"
 ---
 
 For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough to convert leads if the user experience falls short. Store website performance is essential to the user experience, directly impacting sales conversion rate, user session time, and other metrics. Every millisecond counts and affects the consumer decision-making process and website ranking in search engine results.
