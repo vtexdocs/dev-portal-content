@@ -41,7 +41,7 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 
 1. Review and test all main pages, ensuring the changes didn't cause any side effects, such as style inconsistencies or undesired behaviors.
 2. Access [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights).
-3. Using the following URL pattern: `https://{account}.myvtex.com/?workspace={productionWorkspace}`, check store performance in the production workspace you're currently working in.
+3. Using the following URL pattern: `https://{account}.myvtex.com/?workspace={productionWorkspace}`, check store performance in the production workspace where you're currently working.
 
   >⚠️ Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show the store performance score in the specified workspace. To analyze performance in a workspace, **you must use the `?workspace={productionWorkspace}` query string** as shown in Step 3.3.
 
