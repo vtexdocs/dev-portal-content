@@ -45,7 +45,7 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 
   >⚠️ Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show the store performance score in the specified workspace. To analyze performance in a workspace, **you must use the `?workspace={productionWorkspace}` query string** as shown in Step 3.3.
 
-### Step 4: Making your changes publicly available
+### Step 4 - Making your changes publicly available
 
 If you're satisfied with the results, run `vtex promote` to promote your workspace and benefit from a faster store. Before promoting your workspace to master, measure the performance improvements by comparing the performance scores in the production and master workspaces.
 
