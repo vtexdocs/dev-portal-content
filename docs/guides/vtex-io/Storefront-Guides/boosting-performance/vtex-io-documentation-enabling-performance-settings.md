@@ -21,7 +21,7 @@ This guide is divided into the following sections:
 
 ### Step 1 - (Optional) Testing manual optimizations
 
-If you have implemented [manual optimizations](#manual-optimizations), make sure you use a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) to test them before making your new app version publicly available. Learn more about this process in the guide [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
+If you have implemented [manual optimizations](#manual-optimizations), make sure to use a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) to test them before making your new app version publicly available. Learn more about this process in the guide [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
 
 ### Step 2 - Applying changes in a production workspace
 
