@@ -83,7 +83,7 @@ This action enables CSS optimizations on your pages to boost performance and imp
 
 ![critical](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-1.png)
 
-However, by default, the browser initiates the rendering of a web page after it is done loading, parsing, and executing all related CSS files. Consequently, the more extensive the CSS code, the longer it takes to render the critical part of the page.
+However, by default, the browser initiates the rendering of a web page after it finishes loading, parsing, and executing all related CSS files. Consequently, the more extensive the CSS code, the longer it takes to render the critical part of the page.
 
 This optimization can be enabled for the following pages:
 
