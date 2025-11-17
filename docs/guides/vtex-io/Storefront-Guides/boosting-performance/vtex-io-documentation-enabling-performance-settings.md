@@ -123,7 +123,7 @@ This script contains significant web page data and can be long, demanding signif
 
 #### Enable lazy rendering of submenu items
 
-By enabling this action, menus containing submenus automatically apply the `experimentalOptimizeRendering` prop. This configuration prevents the entire chain of `submenus` from loading unnecessarily, as `submenus` only load when the user interacts with the parent menu where the prop is set.
+By enabling this action, menus containing submenus automatically apply the `experimentalOptimizeRendering` prop. This configuration prevents the entire set of `submenus` from loading unnecessarily, as `submenus` only load when the user interacts with the parent menu where the prop is set.
 
 >⚠️ Google won't be able to track the hidden submenu items for SEO, as their content only loads with user interaction. Make sure your SEO strategy is covered by the store sitemap or the first meaningfully painted content.
 
