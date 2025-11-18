@@ -71,7 +71,7 @@ weni
 
 If the installation was successful, your terminal should display something like this:
 
-![Weni Verification](assets/weni-installation-verification.png)
+![Weni Verification](https://github.com/vtexdocs/dev-portal-content/blob/c07d1f84de06ad4e2829087627468c70cd73b0b6/docs/guides/Weni-by-VTEX/CLI/assets/weni-installation-verification.png)
 
 ### Troubleshooting
 

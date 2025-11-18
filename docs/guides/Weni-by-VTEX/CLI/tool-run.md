@@ -75,7 +75,7 @@ weni run agent_definition.yaml cep_agent get_address
 
 Result:
 
-![Run Default](assets/run-no-v.png)
+![Run Default](https://github.com/vtexdocs/dev-portal-content/blob/c07d1f84de06ad4e2829087627468c70cd73b0b6/docs/guides/Weni-by-VTEX/CLI/assets/run-no-v.png)
 
 There is also a variation of this command in case you need to include ways to debug the code. You can add the `-v` argument at the end of the command to get more detailed logs of your tool, like this:
 
@@ -100,7 +100,7 @@ Both files follow a simple `KEY=VALUE` per line format.
 
 Result:
 
-![Run with logs](assets/run-with-v.png)
+![Run with logs](https://github.com/vtexdocs/dev-portal-content/blob/c07d1f84de06ad4e2829087627468c70cd73b0b6/docs/guides/Weni-by-VTEX/CLI/assets/run-with-v.png)
 
 ### Running Tools That Require Credentials
 
