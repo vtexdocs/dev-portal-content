@@ -9,7 +9,7 @@ excerpt: "Weni by VTEX CLI documentation is now available in the Developers Port
 
 To provide a unified and accessible documentation experience, we integrated the CLI documentation for Weni by VTEX into the VTEX Developers Portal.
 
-Weni by VTEX offers post-sales support solutions powered by data, artificial intelligence, and agents, with a comprehensive platform to enhance customer experience (CX). The Weni by VTEX CLI allows you to create customized AI multi-agents, enabling developers to build, deploy, and manage AI agents with tailored tools and functionalities across various communication channels. 
+Weni by VTEX offers post-sales support solutions powered by data, artificial intelligence, and agents, with a comprehensive platform to enhance customer experience (CX). The Weni by VTEX CLI allows you to create customized AI multi-agents, enabling developers to build, deploy, and manage AI agents with tailored tools and functionalities across various communication channels.
 
 ### What has changed
 
