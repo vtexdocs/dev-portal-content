@@ -1,6 +1,7 @@
 ---
 title: "Weni by VTEX: CLI documentation now in the Developers Portal"
-slug: "2025-11-21-wenibyvtex-cli-documentation-available-in-the-developers-portal"
+slug: "2025-11-21-wenibyvtex-cli-in-devportal"
+hidden: false
 type: "added"
 createdAt: "2025-11-10T17:08:52.219Z"
 updatedAt: "2025-11-19T13:58:45.242Z"
