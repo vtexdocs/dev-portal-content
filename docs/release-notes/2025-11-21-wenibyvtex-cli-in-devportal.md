@@ -16,6 +16,7 @@ Weni by VTEX offers post-sales support solutions powered by data, artificial int
 Previously, this documentation was available through the Weni portal. However, this portal is being deprecated, and the CLI documentation is only available in the VTEX Developers Portal.
 
 Now, there's a Weni by VTEX category in our Guides, including the following articles for the CLI:
+
 - [Using the Weni by VTEX CLI](https://developers.vtex.com/docs/guides/wenibyvtex-guide)
 - [Weni by VTEX CLI Command Reference](https://developers.vtex.com/docs/guides/wenicli-command-reference)
 - [Authenticating with your Weni by VTEX account](https://developers.vtex.com/docs/guides/authentication)
