@@ -407,11 +407,11 @@ When your agent is deployed on the Weni by VTEX Platform, credentials are secure
 
 > ![Agents Gallery](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-gallery.png)
 ```suggestion
-> ![Agents Gallery](https://github.com/vtexdocs/dev-portal-content/blob/c07d1f84de06ad4e2829087627468c70cd73b0b6/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-gallery.png)
+> ![Agents Gallery](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-gallery.png)
 
 > Enter you credentials:
 
-> ![Assign Agent](https://github.com/vtexdocs/dev-portal-content/blob/c07d1f84de06ad4e2829087627468c70cd73b0b6/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-assign.png)
+> ![Assign Agent](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-assign.png)
 
 #### Security in Production
 
