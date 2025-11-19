@@ -27,4 +27,4 @@ Now, there's a Weni by VTEX category in our Guides, including the following arti
 
 ### What needs to be done
 
-To access the CLI documentation, go to [Weni by VTEX CLI](https://developers.vtex.com/docs/guides/weni-by-vtex-cli) in the VTEX Developers Portal instead of the legacy Weni docs portal.
+To access the CLI documentation, go to [Weni by VTEX CLI](https://developers.vtex.com/docs/guides/weni-by-vtex-cli) in the VTEX Developers Portal instead of the legacy Weni documentation portal.
