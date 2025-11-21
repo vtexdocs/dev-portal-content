@@ -10,7 +10,7 @@ tags:
     - FastStore
 ---
 
-The [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function in FastStore now supports a new `isEcommerceEvent` parameter, giving developers more flexibility when sending custom analytics events to Google Analytics 4.
+The [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function in FastStore now supports the new `isEcommerceEvent` parameter, giving developers more flexibility when sending custom analytics events to Google Analytics 4.
 
 ## What has changed?
 
@@ -18,7 +18,6 @@ Previously, all events sent via `sendAnalyticsEvent` were automatically wrapped 
 
 While this approach worked well for commerce-related events such as add-to-cart and purchase, it wasn’t suitable for custom events that track non-commerce activities like newsletter interactions, user actions, or feature usage.
 
-With the new `isEcommerceEvent` parameter, developers can now:
 The new `isEcommerceEvent` parameter lets developers choose how events are structured:
 - **Custom events:** Set `isEcommerceEvent: false` to send parameters at the top level, following the GA4 custom events format..
 - **Ecommerce events:** Keep the default `isEcommerceEvent: true` to send data inside the `ecommerce` object.
