@@ -16,11 +16,11 @@ The [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/ana
 
 Previously, all events sent via `sendAnalyticsEvent` were automatically wrapped in an `ecommerce` object. This structure follows the Google Analytics 4 ecommerce events format.
 
-While this was ideal for commerce-related events (add to cart, purchase, etc.), it wasn't suitable for custom events tracking non-commerce activities like newsletter, user interactions, or feature usage.
+While this approach worked well for commerce-related events such as add-to-cart and purchase, it wasn’t suitable for custom events that track non-commerce activities like newsletter interactions, user actions, or feature usage.
 
 With the new `isEcommerceEvent` parameter, developers can now:
-
-- **Set `isEcommerceEvent: false`** for custom events to send parameters at the top level, following the GA4 custom events format.
+The new `isEcommerceEvent` parameter lets developers choose how events are structured:
+- **Custom events:** Set `isEcommerceEvent: false` to send parameters at the top level, following the GA4 custom events format..
 - **Keep the default `isEcommerceEvent: true`** (or omit the parameter) for ecommerce events to maintain the nested `ecommerce` object structure.
 
 ### Event structure comparison
@@ -76,9 +76,9 @@ Sends to dataLayer as:
 
 ## Why did we make this change?
 
-This change improves the Analytics module's flexibility by allowing developers to send custom events that properly align with Google Analytics 4 event structures.
+This update enhances the flexibility of the Analytics module, enabling developers to send custom events that align with the recommended Google Analytics 4 event formats.
 
-Custom events tracking non-commerce activities (like user preferences, content interactions, or feature usage) now follow the recommended GA4 format, improving data accuracy and reporting capabilities.
+Custom events tracking non-commerce activities, such as user preferences, content interactions, or feature usage, now follow the appropriate GA4 structure, resulting in more accurate data and clearer reporting.
 
 ## What needs to be done?
 
