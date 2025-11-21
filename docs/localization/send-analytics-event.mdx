@@ -1,0 +1,142 @@
+---
+title: "sendAnalyticsEvent"
+---
+
+The `sendAnalyticsEvent` function triggers events in the browser, following the [Google Analytics 4 (GA4) data model](https://developers.google.com/analytics/devguides/collection/ga4/reference/events). This function is primarily used for ecommerce tracking but also supports custom events, serving as a centralized point for managing events.
+
+> ⚠️ `sendAnalyticsEvent` doesn't send events to any analytics provider. To intercept events triggered by this function, use the [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) hook.
+
+## Import
+
+```tsx
+import { sendAnalyticsEvent } from '@faststore/sdk'
+```
+
+## Usage
+
+In the event-related component, define a callback function that creates an event object with the desired type (for example, `add_to_cart`) and calls `sendAnalyticsEvent`, passing the event as an argument. Then, trigger the callback function in the corresponding event handler (such as `onClick`).
+
+Consider the following example of an `add_to_cart` event triggered by the `button` component:
+
+```tsx
+import { useCallback } from 'react'
+import { sendAnalyticsEvent } from '@faststore/sdk'
+
+const MyComponent = () => {
+  const addToCartCallback = useCallback(() => {
+   import('@faststore/sdk').then(({ sendAnalyticsEvent }) => {
+    /* ... */
+
+    const addToCartEvent = {
+      name: 'add_to_cart',
+      params: {
+        items: [
+          /* ... */
+        ],
+      },
+    }
+
+    sendAnalyticsEvent(addToCartEvent)
+    })
+  }, [])
+
+  return <button onClick={addToCartCallback}>Add to cart</button>
+}
+```
+
+Check the list of [available types](https://developers.vtex.com/docs/guides/faststore/analytics-overview#list-of-native-event-types).
+
+## Parameters
+
+The `sendAnalyticsEvent` function accepts an event object with the following properties:
+
+| Property | Type | Description | Default |
+|----------|------|-------------|---------|
+| `name` | `string` | The name of the event that appears in Analytics reports. | Required |
+| `params` | `object` | Event-specific parameters and data. | Required |
+| `isEcommerceEvent` | `boolean` | Determines event structure. When `true`, wraps `params` in an `ecommerce` object following the GA4 ecommerce data model. When `false`, sends `params` at the top level for custom non-ecommerce events. | `true` |
+
+### `isEcommerceEvent`
+
+By default, `sendAnalyticsEvent` wraps event parameters in an `ecommerce` object to follow the [Google Analytics 4 ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en) structure. However, for custom events that don't represent ecommerce actions, you should set `isEcommerceEvent: false` to send parameters at the top level, following the [GA4 custom events format](https://support.google.com/analytics/answer/14240153?hl=en).
+
+#### Custom events without GA4 `ecommerce` (`isEcommerceEvent: false`)
+
+```tsx
+import { sendAnalyticsEvent } from '@faststore/sdk'
+
+sendAnalyticsEvent({
+  name: 'newsletter_signup',
+  isEcommerceEvent: false,
+  params: {
+    method: 'footer_form',
+    user_type: 'new_visitor',
+    email_preference: 'weekly'
+  }
+})
+```
+
+This sends the event as:
+
+```json
+{
+  "event": "newsletter_signup",
+  "method": "footer_form",
+  "user_type": "new_visitor",
+  "email_preference": "weekly"
+}
+```
+
+#### GA4 ecommerce event (`isEcommerceEvent: true`)
+
+Use `isEcommerceEvent: true` (default) to format the event according to the GA4 ecommerce data model, wrapping all parameters inside the ecommerce object. Take the following example
+
+```tsx
+import { sendAnalyticsEvent } from '@faststore/sdk'
+
+sendAnalyticsEvent({
+  name: 'add_to_cart',
+  params: {
+    currency: 'USD',
+    value: 29.99,
+    items: [{ item_id: '12345', item_name: 'Product Name' }]
+  }
+})
+```
+
+This sends the event as:
+
+```json
+{
+  "event": "add_to_cart",
+  "ecommerce": {
+    "currency": "USD",
+    "value": 29.99,
+    "items": [{ "item_id": "12345", "item_name": "Product Name" }]
+  }
+}
+```
+
+## Typed custom events
+
+The `sendAnalyticsEvent` function supports generics, enabling you to extend default types or modify existing ones. This approach provides type-checking and code suggestions for your custom event properties.
+
+This typing is independent of how the event is packaged by `isEcommerceEvent`. You can use generics for both GA4 ecommerce events and non-ecommerce custom events.
+
+Consider the following example of providing a custom type reference for `sendAnalyticsEvent`:
+
+```tsx
+import { sendAnalyticsEvent } from '@faststore/sdk'
+
+interface CustomEvent {
+  name: 'custom_event'
+  params: {
+    customProperty?: string
+  }
+}
+
+/**
+ * By passing `CustomEvent` as a generic type to `sendAnalyticsEvent`, you will receive code suggestions for all properties of this type, including nested properties within `params`.
+ */
+sendAnalyticsEvent<CustomEvent>(/* ... */)
+```
