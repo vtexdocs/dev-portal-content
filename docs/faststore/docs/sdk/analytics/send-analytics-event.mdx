@@ -56,7 +56,7 @@ The `sendAnalyticsEvent` function accepts an event object with the following pro
 | `params` | `object` | Event-specific parameters and data. | Required |
 | `isEcommerceEvent` | `boolean` | Determines event structure. When `true`, wraps `params` in an `ecommerce` object following the GA4 ecommerce data model. When `false`, sends `params` at the top level for custom non-ecommerce events. | `true` |
 
-### Using custom events without ecommerce structure
+### `isEcommerceEvent`
 
 By default, `sendAnalyticsEvent` wraps event parameters in an `ecommerce` object to follow the [Google Analytics 4 ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en) structure. However, for custom events that don't represent ecommerce actions, you should set `isEcommerceEvent: false` to send parameters at the top level, following the [GA4 custom events format](https://support.google.com/analytics/answer/14240153?hl=en).
 
