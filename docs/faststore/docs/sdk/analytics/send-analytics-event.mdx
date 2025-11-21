@@ -121,6 +121,8 @@ This sends the event as:
 
 The `sendAnalyticsEvent` function supports generics, enabling you to extend default types or modify existing ones. This approach provides type-checking and code suggestions for your custom event properties.
 
+This typing is independent of how the event is packaged by `isEcommerceEvent`. You can use generics for both GA4 ecommerce events and non-ecommerce custom events.
+
 Consider the following example of providing a custom type reference for `sendAnalyticsEvent`:
 
 ```tsx
