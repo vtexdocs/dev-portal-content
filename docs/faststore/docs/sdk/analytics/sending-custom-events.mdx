@@ -18,13 +18,7 @@ To trigger a custom event, you must define an interface that describes the struc
 
 #### Creating a new event interface
 
-To create a custom event interface, use the `sendAnalyticsEvent` function. This function requires the event to include the following properties:
-
-| Property name | Type | Description | Default |
-| ------------------- |-------- |---------------- |---------|
-| `name`            | `string` | The name of the event that appears in Analytics reports. The `name` does not need to follow any event name conventions related to natively supported events. | Required |
-| `params` | `any` | Any type and value for your custom event. | Required |
-| `isEcommerceEvent` | `boolean` | When `true`, wraps `params` in an `ecommerce` object following the GA4 ecommerce data model. When `false`, sends `params` at the top level for [custom non-ecommerce events](https://support.google.com/analytics/answer/14240153?hl=en). | `true` |
+To create a custom event interface, use the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
 
 In the following example, we define a custom event called `WishlistEvent` to track when a user adds a product to their wishlist. Since this is not a standard ecommerce event, we set `isEcommerceEvent: false`:
 
