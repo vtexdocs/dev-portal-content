@@ -60,7 +60,7 @@ The `sendAnalyticsEvent` function accepts an event object with the following pro
 
 By default, `sendAnalyticsEvent` wraps event parameters in an `ecommerce` object to follow the [Google Analytics 4 ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en) structure. However, for custom events that don't represent ecommerce actions, you should set `isEcommerceEvent: false` to send parameters at the top level, following the [GA4 custom events format](https://support.google.com/analytics/answer/14240153?hl=en).
 
-#### Example: Custom event with `isEcommerceEvent: false`
+#### Custom events without GA4 `ecommerce` (`isEcommerceEvent: false`)
 
 ```tsx
 import { sendAnalyticsEvent } from '@faststore/sdk'
