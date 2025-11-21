@@ -26,6 +26,8 @@ This tutorial will guide you through the steps required to develop, test, and se
 - [Implementing a Payment App](#implementing-a-payment-app): A step-by-step guide with the basic information needed to develop a Payment App.
 - [Operational Mode](#operational-mode): After having deployed the Payment App, check more information about the checkout response. Also, learn how to handle an order payload and how to inject external scripts.
 
+> ⚠️ IO apps do not work in headless environments. If you want to process payments in this type of scenario, you must use a checkout [webview](https://developer.chrome.com/docs/webview) or implement a fully headless integration directly between your system and the acquirer/connector, sending the information via custom payments or promissory notes.
+
 ## Understanding the Payment App flow
 
 Our Payment App model applies to a large variety of payment methods thanks to its interaction with the Checkout API, as shown in the following sequence diagram:
