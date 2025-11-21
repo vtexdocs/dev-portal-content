@@ -34,7 +34,9 @@ C --> H[Content visible to user and search engines];
 
 Server-side rendering provides crucial HTML in the initial document, allowing users and crawlers to access content without executing JavaScript. **Sections wrapped with lazy loading are not included in this initial HTML.** They are only rendered and hydrated when the sections are near the viewport.
 
-When creating custom sections, you can add the \*\*Skip lazy loading\*\* flag to enable skipping sections. This means lazy loading is disabled for all sections in FastStore's PDP and PLP templates. Without lazy loading, bots can access all content immediately without scrolling or running scripts, which might speed up crawling. However, they still need to download and process all media files, which can quickly consume crawl budget, slow down the indexing of other pages, and reduce the number of pages indexed. Larger initial payloads can also negatively impact user experience and make the site seem slower to bots.
+When creating custom sections, you can add the **Skip lazy loading** flag to a section to disable lazy loading for that section only in FastStore's PDP and PLP templates. With lazy loading disabled, bots can access all content immediately without needing to scroll or run scripts, which may speed up the crawling process.
+
+However, they still need to download and process all media files, which can quickly consume crawl budget, slow down the indexing of other pages, and reduce the number of pages indexed. Larger initial payloads can also negatively impact user experience and make the site seem slower to bots.
 
 ![skip-lazy-lozading-flag](https://vtexhelp.vtexassets.com/assets/docs/src/skip-lazy-loading-sectio___2a0ca0c7a90d61cda31c2ce9200e377fn)
 
