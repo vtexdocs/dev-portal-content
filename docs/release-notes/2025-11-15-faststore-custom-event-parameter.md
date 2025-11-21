@@ -21,7 +21,7 @@ While this approach worked well for commerce-related events such as add-to-cart 
 With the new `isEcommerceEvent` parameter, developers can now:
 The new `isEcommerceEvent` parameter lets developers choose how events are structured:
 - **Custom events:** Set `isEcommerceEvent: false` to send parameters at the top level, following the GA4 custom events format..
-- **Keep the default `isEcommerceEvent: true`** (or omit the parameter) for ecommerce events to maintain the nested `ecommerce` object structure.
+- **Ecommerce events:** Keep the default `isEcommerceEvent: true` to send data inside the `ecommerce` object.
 
 ### Event structure comparison
 
