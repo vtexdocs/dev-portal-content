@@ -1,0 +1,429 @@
+---
+title: "FastStore Hooks"
+excerpt: "Guide for all FastStore hooks, including their types, use cases, and impact on your store customization."
+---
+
+FastStore provides a collection of React hooks that enable you to build customized storefronts with minimal boilerplate code. This guide covers all available hooks, their categories, implementation patterns, and impact on your store.
+
+FastStore hooks are reusable React functions that provide access to FastStore's built-in features and state management. They follow React's hooks conventions and allow you to:
+
+- **Access store state**: Retrieve and manage cart, session, and UI state
+- **Implement analytics**: Track user behavior with GA4-compatible events
+- **Build interactive UI**: Create carousels, modals, search interfaces, and more
+- **Enhance accessibility**: Implement focus management, keyboard navigation, and ARIA attributes
+- **Optimize performance**: Lazy-load data, prefetch resources, and manage rendering
+
+## How hooks impact your store
+
+### Benefits
+
+1. **Faster development**: Pre-built functionality reduces implementation time
+2. **Consistency**: Standardized patterns across your store
+3. **Maintainability**: Updates to core hooks automatically benefit your custom components
+4. **Accessibility**: Built-in accessibility features ensure compliance with WCAG standards
+5. **Analytics integration**: Seamless GA4 event tracking without manual instrumentation
+6. **Type safety**: Full TypeScript support with type definitions
+
+### Impact on customization
+
+- **Component overrides**: Hooks enable you to override native components while maintaining core functionality
+- **Custom sections**: Build new CMS sections with full access to store data and features
+- **Extended behavior**: Add custom logic on top of existing features without breaking core functionality
+- **State management**: Access global state without additional state management libraries
+
+## Hook categories
+
+FastStore hooks are organized into the following categories:
+
+### 1. UI and Interaction Hooks
+Available from `@faststore/components` package. These hooks manage user interface state and interactions.
+
+### 2. Analytics Hooks
+Available from `@faststore/core` package. These hooks enable tracking and analytics integration.
+
+### 3. Experimental Hooks
+Available from `@faststore/core/experimental` package. These hooks provide advanced features but are suffixed with `_unstable` as they may change in future releases.
+
+---
+
+## Available Hooks
+
+### UI and Interaction Hooks
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `UIProvider` | Context provider that manages global UI state for cart sidebar, modals, navigation, filters, toasts, popovers, and region selection. | Wrap your application root to enable UI state management. Required by other UI hooks. |
+| `useUI` | Access global UI state and actions managed by UIProvider. | Control cart sidebar, modals, navigation menu, filters, toasts, popovers, and region selection from any component. |
+| `useSearch` | Manages search interface state within SearchProvider context. | Building custom search components, managing search input state, implementing search suggestions. |
+| `useSlider` | Manages carousel/slider state including current page, navigation, and swipe gestures. | Creating product carousels, image galleries, testimonial sliders, or any multi-item navigation component. |
+| `useSlideVisibility` | Determines visibility state for slider items based on current index. | Lazy-loading carousel images, applying visibility-based animations, optimizing render performance. |
+| `useOnClickOutside` | Detects clicks outside a referenced element and triggers a callback. | Closing modals when clicking backdrop, dismissing dropdowns, hiding popovers on outside interaction. |
+| `useTrapFocus` | Traps keyboard focus within a container element for accessibility. | Modal dialogs, slide-out panels, any overlay that should constrain focus for keyboard navigation. |
+| `useScrollDirection` | Detects scroll direction (up/down) for responsive header behavior. | Hide/show sticky headers on scroll, trigger animations based on scroll direction, optimize mobile screen space. |
+| `useFadeEffect` | Creates progressive fade-in effect based on scroll position or distance. | Subtle entrance animations, progressive content reveal, enhancing visual hierarchy. |
+| `useSKUMatrix` | Manages SKU/variant selection logic within SKUMatrixProvider context. | Building custom variant selectors, product configuration interfaces, size/color pickers. |
+| `useProductComparison` | Manages product comparison list within ProductComparisonProvider. | Product comparison features, "Compare" buttons on product cards, comparison page implementation. |
+
+### Analytics Hooks
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `usePageViewEvent` | Sends GA4 page view events automatically on route changes. | Track page navigation, monitor user journey, required for GA4 analytics dashboards. |
+| `useViewItemListEvent` | Sends GA4 product list impression events for PLP/search results. | Product listing pages, search results, category pages, recommendation carousels to track product impressions. |
+
+### Experimental Hooks (Unstable)
+
+> **Note**: All experimental hooks are suffixed with `_unstable`. They are available for use but may change in future releases. Always test thoroughly before production deployment.
+
+#### Authentication
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `useAuth_unstable` | Manages user authentication state and actions. | Login/logout functionality, protected routes, personalized content. |
+
+#### Cart
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `cartStore_unstable` | Store instance for cart state management (not a hook, but a store object). | Direct cart state manipulation, accessing cart data outside React components. |
+| `useCart_unstable` | Access current cart state reactively. | Display cart summary, show item count, calculate totals in any component. |
+| `useBuyButton_unstable` | Provides buy button functionality with cart integration and analytics. | Creating custom "Add to Cart" buttons with automatic analytics tracking and cart sidebar integration. |
+| `useCartToggleButton_unstable` | Toggles cart sidebar visibility. | Cart icon buttons, mini-cart toggles in header/navigation. |
+| `useCheckoutButton_unstable` | Provides checkout button functionality with validation and navigation. | Cart page checkout buttons, mini-cart proceed to checkout, custom checkout flows. |
+| `useRemoveButton_unstable` | Removes items from cart with analytics tracking. | Cart item removal, mini-cart management, order review pages. |
+
+#### Delivery Promise
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `deliveryPromiseStore_unstable` | Store for delivery promise data including pickup points and delivery options. | Accessing delivery data across components without prop drilling. |
+| `useDeliveryPromise_unstable` | Access and manage delivery promise state, pickup points, and delivery options. | Shipping calculators, delivery date displays, pickup point selectors, store locators. |
+
+#### GraphQL
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `useQuery_unstable` | Execute GraphQL queries with automatic caching and error handling. | Fetching product data, custom data requirements, extending FastStore API. |
+| `useLazyQuery_unstable` | Execute GraphQL queries on-demand (e.g., on button click). | Search suggestions on input, load-more pagination, conditional data fetching. |
+
+#### Newsletter
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `useNewsletter_unstable` | Newsletter subscription functionality. | Newsletter signup forms, email capture modals, footer subscription widgets. |
+
+#### Product
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `useDiscountPercent_unstable` | Calculate discount percentage from price and list price. | Display discount badges, savings indicators, promotional information. |
+| `useFormattedPrice_unstable` | Format price values according to current locale and currency. | Display prices consistently across the store with proper currency symbols and formatting. |
+| `useLocalizedVariables_unstable` | Provides localized variables for queries based on current session. | Multi-locale stores, currency conversion, region-specific content. |
+| `useProductQuery_unstable` | Fetch detailed product data by ID or slug. | Product detail pages, quick view modals, product preview cards. |
+| `useProductLink_unstable` | Generate SEO-friendly product URLs. | Product card links, navigation to PDPs, breadcrumbs. |
+| `useProductsPrefetch_unstable` | Preload product data for faster navigation. | Hover intent on product cards, carousel pre-loading, performance optimization. |
+| `useProductGalleryQuery_unstable` | Fetch product gallery images with optimization. | Product image galleries, zoom functionality, image carousels. |
+| `useGalleryPage_unstable` | Manage gallery pagination and navigation. | Product image galleries, media viewers, image sliders. |
+| `useCreateUseGalleryPage_unstable` | Create custom gallery page hooks with specific configurations. | Advanced gallery implementations, custom pagination logic. |
+
+#### Search
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `useFilter_unstable` | Manage search filters and facets. | Product listing filters, search result refinement, faceted navigation. |
+| `useDelayedFacets_unstable` | Debounce facet updates to improve performance. | High-traffic PLPs, complex filter combinations, performance optimization. |
+| `useDelayedPagination_unstable` | Debounce pagination to improve performance. | Large product catalogs, infinite scroll implementations, performance-critical pages. |
+| `useSearchHistory_unstable` | Access user's recent search queries. | Search autocomplete, recent searches display, search suggestions. |
+| `useSuggestions_unstable` | Provide search term suggestions. | Autocomplete dropdowns, search as you type, query assistance. |
+| `useTopSearch_unstable` | Retrieve popular search terms. | Trending searches, search landing page, discovery features. |
+
+#### Session
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `sessionStore_unstable` | Store instance for session data (locale, currency, user info). | Direct session manipulation, accessing session data outside React components. |
+| `useSession_unstable` | Access current session data reactively. | Personalized content, currency display, shipping calculations, user-specific features. |
+| `validateSession_unstable` | Validate and refresh session data. | Session management, token refresh flows, authentication state sync. |
+
+#### Shipping
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `getShippingSimulation_unstable` | Get shipping simulation data (function, not a hook). | Server-side shipping calculations, initial page load data, static generation. |
+| `useShippingSimulation_unstable` | Run shipping simulations client-side. | Shipping calculators, delivery estimate displays, cart shipping options, postal code input. |
+
+#### UI
+
+| Hook | Description | When to Use |
+|------|-------------|-------------|
+| `useScreenResize_unstable` | Detect screen size changes and breakpoints. | Responsive behavior, mobile/desktop switching, conditional rendering based on screen size. |
+
+---
+
+## Best Practices
+
+### 1. Use the right hook for the job
+
+- **UI state**: Use `@faststore/components` hooks for interface interactions
+- **Business logic**: Use `@faststore/core/experimental` hooks for store features
+- **Analytics**: Use analytics hooks for tracking
+- **Data fetching**: Use GraphQL hooks for custom queries
+
+### 2. Test experimental hooks thoroughly
+
+Since experimental hooks are marked `_unstable`, always:
+
+- Test in development environment first.
+- Monitor for console warnings
+- Check changelog for breaking changes
+- Have fallback behavior
+
+---
+
+## Common Use Cases
+
+### Building a custom Buy Button
+
+```tsx
+import { useBuyButton_unstable as useBuyButton } from '@faststore/core/experimental'
+import { useUI } from '@faststore/components'
+
+function CustomBuyButton({ product, quantity = 1 }) {
+  const { pushToast } = useUI()
+  
+  const cartItem = {
+    itemOffered: product,
+    quantity,
+    price: product.offers.offers[0].price,
+    listPrice: product.offers.offers[0].listPrice,
+    seller: product.offers.offers[0].seller
+  }
+  
+  const buyProps = useBuyButton(cartItem, true)
+  
+  const handleClick = (e) => {
+    buyProps.onClick(e)
+    pushToast({
+      message: `${product.name} added to cart!`,
+      status: 'INFO'
+    })
+  }
+  
+  return (
+    <button {...buyProps} onClick={handleClick} className="custom-buy-button">
+      Add {quantity} to Cart
+    </button>
+  )
+}
+```
+
+### Creating an accessible search modal
+
+```tsx
+import { useRef, useState } from 'react'
+import { useOnClickOutside, useTrapFocus, useUI } from '@faststore/components'
+import { useSuggestions_unstable as useSuggestions } from '@faststore/core/experimental'
+
+function SearchModal() {
+  const { modal, closeModal } = useUI()
+  const [query, setQuery] = useState('')
+  const ref = useRef(null)
+  const suggestions = useSuggestions({ query })
+  
+  useOnClickOutside(ref, closeModal)
+  useTrapFocus(ref, { active: modal })
+  
+  if (!modal) return null
+  
+  return (
+    <div role="dialog" aria-modal="true" aria-label="Search">
+      <div ref={ref}>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search products..."
+          autoFocus
+        />
+        {suggestions.length > 0 && (
+          <ul role="listbox">
+            {suggestions.map(item => (
+              <li key={item.id} role="option">{item.name}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  )
+}
+```
+
+### Implementing a product carousel with analytics
+
+```tsx
+import { useSlider, useSlideVisibility } from '@faststore/components'
+import { useViewItemListEvent } from '@faststore/core'
+import { useEffect } from 'react'
+
+function ProductCarousel({ products, listName }) {
+  const { handlers, sliderState, slide } = useSlider({
+    totalItems: products.length,
+    itemsPerPage: 4,
+    infiniteMode: true
+  })
+  
+  const isVisible = useSlideVisibility(sliderState.currentItem, products.length)
+  const viewItemList = useViewItemListEvent()
+  
+  useEffect(() => {
+    const visibleProducts = products.filter((_, i) => isVisible(i))
+    
+    if (visibleProducts.length > 0) {
+      viewItemList({
+        item_list_name: listName,
+        items: visibleProducts.map((p, index) => ({
+          item_id: p.id,
+          item_name: p.name,
+          index: sliderState.currentItem + index,
+          price: p.price
+        }))
+      })
+    }
+  }, [sliderState.currentItem, products, listName])
+  
+  return (
+    <div {...handlers} className="carousel">
+      <button onClick={() => slide('previous')} aria-label="Previous products">
+        ←
+      </button>
+      
+      <div className="carousel-track">
+        {products.map((product, i) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            visible={isVisible(i)}
+          />
+        ))}
+      </div>
+      
+      <button onClick={() => slide('next')} aria-label="Next products">
+        →
+      </button>
+    </div>
+  )
+}
+```
+
+### Building a shipping calculator
+
+```tsx
+import { useState } from 'react'
+import { useShippingSimulation_unstable as useShippingSimulation } from '@faststore/core/experimental'
+import { useFormattedPrice_unstable as useFormattedPrice } from '@faststore/core/experimental'
+
+function ShippingCalculator({ items }) {
+  const [postalCode, setPostalCode] = useState('')
+  const { simulate, data, loading, error } = useShippingSimulation()
+  const formatPrice = useFormattedPrice
+  
+  const handleCalculate = () => {
+    if (postalCode.length >= 5) {
+      simulate({
+        postalCode,
+        items: items.map(item => ({
+          id: item.id,
+          quantity: item.quantity,
+          seller: item.seller
+        }))
+      })
+    }
+  }
+  
+  return (
+    <div className="shipping-calculator">
+      <input
+        type="text"
+        value={postalCode}
+        onChange={(e) => setPostalCode(e.target.value)}
+        placeholder="Enter postal code"
+        maxLength={9}
+      />
+      <button onClick={handleCalculate} disabled={loading}>
+        {loading ? 'Calculating...' : 'Calculate Shipping'}
+      </button>
+      
+      {error && <p className="error">Unable to calculate shipping</p>}
+      
+      {data?.logisticsInfo && (
+        <div className="shipping-options">
+          {data.logisticsInfo[0].slas.map(sla => (
+            <div key={sla.id} className="shipping-option">
+              <span>{sla.name}</span>
+              <span>{formatPrice(sla.price)}</span>
+              <span>{sla.shippingEstimate}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+```
+
+---
+
+## Troubleshooting
+
+### Hook not available
+
+**Problem**: Import error or hook returns undefined
+
+**Solutions**:
+1. Verify package installation: `@faststore/components` or `@faststore/core`
+2. Check package version compatibility
+3. Ensure UIProvider wraps your app (for UI hooks)
+4. Verify you're importing from correct package
+
+### Context errors
+
+**Problem**: "Hook must be used within Provider" error
+
+**Solutions**:
+1. Wrap component tree with required provider:
+   - `UIProvider` for `useUI`, `useSearch`
+   - `SKUMatrixProvider` for `useSKUMatrix`
+   - `ProductComparisonProvider` for `useProductComparison`
+2. Check provider placement in component tree
+3. Ensure provider isn't conditionally rendered
+
+### Stale data
+
+**Problem**: Hook returns outdated information
+
+**Solutions**:
+1. Check useEffect dependencies
+2. Verify store subscriptions
+3. Clear cache if using GraphQL hooks
+4. Check for memo/callback issues
+
+### Performance issues
+
+**Problem**: Hooks causing re-renders or slowness
+
+**Solutions**:
+1. Use `useMemo` for expensive computations
+2. Use `useCallback` for event handlers
+3. Implement debouncing for search/filter hooks
+4. Use `useDelayedFacets_unstable` and `useDelayedPagination_unstable`
+5. Lazy-load with visibility hooks
+
+### TypeScript errors
+
+**Problem**: Type mismatches or missing types
+
+**Solutions**:
+1. Install `@types` packages if available
+2. Import types from hook packages
+3. Use type assertions carefully
+4. Check FastStore version for type updates
