@@ -362,7 +362,7 @@ With the correct ownership cookie, both client profile data and address data are
 
 ## Complete order
 
-After placing an order using either of the methods presented above, you will receive an `orderId` and `transactionId` in the response body, along with some login values. Your integration must use this information to complete the purchase process within 5 (five) minutes. This involves [sending payment information](#send-payment-information) and then [requesting order processing](#process-order).
+After placing an order using either of the methods presented above, you will receive an `orderId` and `transactionId` in the response body, along with some login values. Your integration must use this information to complete the purchase process within 5 minutes. This involves [sending payment information](#send-payment-information) and then [requesting order processing](#process-order).
 
 > ❗ Failing to perform these steps within 5 (five) minutes will cause the order to be automatically canceled and tagged as [`incomplete`](https://help.vtex.com/en/docs/tutorials/understanding-incomplete-orders).
 
