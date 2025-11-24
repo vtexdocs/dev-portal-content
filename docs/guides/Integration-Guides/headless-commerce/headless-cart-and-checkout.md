@@ -19,7 +19,7 @@ The `orderForm` is a complex data structure with many customization possibilitie
 
 For a customer to make a purchase, the store must have a shopping cart containing an `orderForm`. When you use the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint, you get an `orderFormId` in the response.
 
-> ⚠️ If your headless storefront is not browser-based (e.g., native app), it is important that you save the `orderFormId` and use it to manage the cart's information with the requests below. Otherwise, VTEX cookies will automatically manage this information in the customer's browser.
+> ⚠️ If your headless storefront is not browser-based (e.g., native app), it is important to save the `orderFormId` and use it to manage the cart's information using the requests below. Otherwise, VTEX cookies will automatically manage this information in the customer's browser.
 
 <CH.Scrollycoding>
 
