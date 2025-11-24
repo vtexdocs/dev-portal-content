@@ -459,7 +459,7 @@ You can also use the [Get order](https://developers.vtex.com/docs/api-reference/
 
 ## Checkout interface
 
-When a customer goes to your store checkout, your [frontend implementation](https://help.vtex.com/docs/tracks/vtex-store-overview) must handle several tasks. Follow the sections below to implement these tasks effectively.
+When a customer goes to your store's checkout, your [frontend implementation](https://help.vtex.com/docs/tracks/vtex-store-overview) must handle several tasks. Follow the sections below to implement these tasks effectively.
 
 ### Order details
 
