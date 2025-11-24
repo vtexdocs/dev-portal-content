@@ -127,7 +127,7 @@ There are two ways of placing orders with the Checkout API:
 
 To place a new order without any shopping cart data previously stored on the VTEX platform, use the [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) endpoint.
 
-For a tutorial of this method, check the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
+For a tutorial on this method, check the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
 
 ---
 
