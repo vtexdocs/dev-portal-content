@@ -482,7 +482,7 @@ Shipping information is added to the order as [`orderForm` attachments](#order-d
 
 - [`GET` List pickup points by location](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/pickup-points)
 
->❗️ [reCAPTCHA integration](https://help.vtex.com/docs/tutorials/using-recaptcha-at-checkout) does not work in Headless checkout. It only works with stores using [Checkout v6](https://help.vtex.com/docs/tutorials/enable-checkout-v6).
+>❗️ [reCAPTCHA integration](https://help.vtex.com/docs/tutorials/using-recaptcha-at-checkout) doesn't work with Headless checkout. It only works with stores using [Checkout v6](https://help.vtex.com/docs/tutorials/enable-checkout-v6).
 
 
 ## Learn more
