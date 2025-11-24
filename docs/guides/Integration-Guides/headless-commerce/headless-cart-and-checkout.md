@@ -15,7 +15,7 @@ A [headless](https://developers.vtex.com/docs/guides/headless-commerce) store ha
 
 In the Checkout API, the VTEX shopping cart information is organized using the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields), an object containing all information relevant to the purchase, including products, shipping, and payment information.
 
-The `orderForm` is a complex data structure with many customization possibilities. The essential section for placing an order is divided into [`items`](#cart-items) and [`attachments`](#cart-attachments).
+The `orderForm` is a complex data structure with many customization possibilities. The `orderForm`'s essential sections for placing an order are [`items`](#cart-items) and [`attachments`](#cart-attachments).
 
 For a customer to make a purchase, the store must have a shopping cart that contains an `orderForm` for them. When you use the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint, you get an `orderFormId` in the response.
 
