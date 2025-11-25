@@ -466,35 +466,8 @@ You can target and override `CartItem` styles using the following data attribute
     description="CartSidebar displays a sidebar with cart items and summary information."
     actionPath="/docs/guides/faststore/organisms-cart-sidebar"
   >
-    <CartSidebar totalItems={1}>
-      <CartSidebarList>
-        <CartItem
-          price={{
-            value: product.offers.offers[0].price,
-            listPrice: product.offers.offers[0].listPrice,
-            formatter: useFormattedPrice,
-          }}
-          quantity={1}
-        >
-          <CartItemImage>
-            <img
-              data-fs-image
-              src={product.image[0].url}
-              alt={product.image[0].alternateName}
-            />
-          </CartItemImage>
-          <CartItemSummary
-            title={product.isVariantOf.name}
-          />
-        </CartItem>
-      </CartSidebarList>
-      <CartSidebarFooter>
-        <OrderSummary
-          subtotalLabel="Subtotal (1 product)"
-          subtotalValue="$100"
-          totalValue="$100"
-        />
-      </CartSidebarFooter>
-    </CartSidebar>
+    <UIProvider>
+      <CartSidebarUsage />
+    </UIProvider>
   </SectionItem>
 </SectionList>
