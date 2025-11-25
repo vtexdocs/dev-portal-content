@@ -1,8 +1,6 @@
 ---
 title: "CartItem"
 excerpt: Displays the summarized information of a product inside the Cart.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/Button___6d6b16886d5d7e2a05dba8c45c075796.png
 components:
   - CartItem.tsx
   - CartItemImage.tsx
@@ -10,6 +8,13 @@ components:
 ---
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/CartItem)
+
+The `CartItem` component displays the summarized information of a product inside the cart. It's a compound component that combines product image, summary details, pricing, and quantity controls. Typical use cases include:
+
+- Displaying items in shopping cart sidebars and drawers.
+- Showing cart contents in checkout flows.
+- Listing items in minicart dropdowns.
+- Presenting cart items in cart pages.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -19,26 +24,33 @@ components:
   </Tab>
   <Tab>
     ```tsx
-    <CartItem
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      quantity={3}
-    >
-      <CartItemImage>
-        <img
-          data-fs-image
-          src={product.image[0].url}
-          alt={product.image[0].alternateName}
-        />
-      </CartItemImage>
-      <CartItemSummary
-        title={product.isVariantOf.name}
-        activeVariations={activeVariations}
-      />
-    </CartItem>
+    import React from 'react';
+    import { CartItem, CartItemImage, CartItemSummary } from "@faststore/ui";
+
+    export default function CartItemBasic() {
+      return (
+        <CartItem
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          quantity={3}
+        >
+          <CartItemImage>
+            <img
+              data-fs-image
+              src={product.image[0].url}
+              alt={product.image[0].alternateName}
+            />
+          </CartItemImage>
+          <CartItemSummary
+            title={product.isVariantOf.name}
+            activeVariations={activeVariations}
+          />
+        </CartItem>
+      );
+    }
     ```
   </Tab>
 </Tabs>
@@ -58,7 +70,7 @@ import { CartItem, CartItemImage, CartItemSummary } from "@faststore/ui";
 To apply styles, include the following in your stylesheet:
 
 ```scss
-@import "@faststore/ui/src/components/atoms/CartItem/styles.scss";
+@import "@faststore/ui/src/components/molecules/CartItem/styles.scss";
 ```
 
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
@@ -77,27 +89,203 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <CartItem
-      price={{
-        value: product.offers.offers[0].price,
-        listPrice: product.offers.offers[0].listPrice,
-        formatter: useFormattedPrice,
-      }}
-      quantity={3}
-      unavailable
-    >
-      <CartItemImage>
-        <img
-          data-fs-image
-          src={product.image[0].url}
-          alt={product.image[0].alternateName}
-        />
-      </CartItemImage>
-      <CartItemSummary
-        title={product.isVariantOf.name}
-        activeVariations={activeVariations}
-      />
-    </CartItem>
+    import React from 'react';
+    import { CartItem, CartItemImage, CartItemSummary } from "@faststore/ui";
+
+    export default function CartItemUnavailable() {
+      return (
+        <CartItem
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          quantity={3}
+          unavailable
+        >
+          <CartItemImage>
+            <img
+              data-fs-image
+              src={product.image[0].url}
+              alt={product.image[0].alternateName}
+            />
+          </CartItemImage>
+          <CartItemSummary
+            title={product.isVariantOf.name}
+            activeVariations={activeVariations}
+          />
+        </CartItem>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### With discount
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <CartItemExample />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react';
+    import { CartItem, CartItemImage, CartItemSummary } from "@faststore/ui";
+
+    export default function CartItemWithDiscount() {
+      return (
+        <CartItem
+          price={{
+            value: 79.99,
+            listPrice: 99.99,
+            formatter: useFormattedPrice,
+          }}
+          quantity={1}
+        >
+          <CartItemImage>
+            <img
+              data-fs-image
+              src={product.image[0].url}
+              alt={product.image[0].alternateName}
+            />
+          </CartItemImage>
+          <CartItemSummary
+            title={product.isVariantOf.name}
+            activeVariations={activeVariations}
+          />
+        </CartItem>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Single quantity
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <CartItemExample />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react';
+    import { CartItem, CartItemImage, CartItemSummary } from "@faststore/ui";
+
+    export default function CartItemSingleQuantity() {
+      return (
+        <CartItem
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          quantity={1}
+        >
+          <CartItemImage>
+            <img
+              data-fs-image
+              src={product.image[0].url}
+              alt={product.image[0].alternateName}
+            />
+          </CartItemImage>
+          <CartItemSummary
+            title={product.isVariantOf.name}
+            activeVariations={activeVariations}
+          />
+        </CartItem>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### With multiple variations
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <CartItemExample />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react';
+    import { CartItem, CartItemImage, CartItemSummary } from "@faststore/ui";
+
+    export default function CartItemWithVariations() {
+      const activeVariations = [
+        { label: "Color", values: ["Blue"] },
+        { label: "Size", values: ["Large"] },
+        { label: "Material", values: ["Cotton"] },
+      ];
+
+      return (
+        <CartItem
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          quantity={2}
+        >
+          <CartItemImage>
+            <img
+              data-fs-image
+              src={product.image[0].url}
+              alt={product.image[0].alternateName}
+            />
+          </CartItemImage>
+          <CartItemSummary
+            title={product.isVariantOf.name}
+            activeVariations={activeVariations}
+          />
+        </CartItem>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Without variations
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <CartItemExample />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react';
+    import { CartItem, CartItemImage, CartItemSummary } from "@faststore/ui";
+
+    export default function CartItemWithoutVariations() {
+      return (
+        <CartItem
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          quantity={1}
+        >
+          <CartItemImage>
+            <img
+              data-fs-image
+              src={product.image[0].url}
+              alt={product.image[0].alternateName}
+            />
+          </CartItemImage>
+          <CartItemSummary
+            title={product.isVariantOf.name}
+          />
+        </CartItem>
+      );
+    }
     ```
   </Tab>
 </Tabs>
@@ -129,7 +317,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-### Image
+### Design tokens: Image
+
+Cart item images use consistent sizing and border radius to maintain visual consistency and alignment within the cart item layout.
 
 <TokenTable>
   <TokenRow
@@ -143,7 +333,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-### Title
+### Design tokens: Title
+
+Title tokens control typography and spacing for the product name, ensuring clear readability and proper visual hierarchy within the cart item.
 
 <TokenTable>
   <TokenRow
@@ -158,7 +350,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-### SKUs
+### Design tokens: SKUs
+
+SKU tokens manage the display of product variations (size, color, etc.), using compact typography and spacing to present multiple attributes without overwhelming the cart item layout.
 
 <TokenTable>
   <TokenRow
@@ -185,7 +379,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   <TokenRow token="--fs-cart-item-skus-row-gap" value="var(--fs-spacing-0)" />
 </TokenTable>
 
-### Prices
+### Design tokens: Prices
+
+Price tokens control spacing between price elements, ensuring clear presentation of current and list prices when discounts are applied.
 
 <TokenTable>
   <TokenRow token="--fs-cart-item-price-gap" value="var(--fs-spacing-1)" />
@@ -238,3 +434,67 @@ You can target and override `CartItem` styles using the following data attribute
 #### PriceDefinition
 
 <PropsSection propsList={propsPriceDefinition} />
+
+---
+
+## Best Practices
+
+### ✅ Do's
+
+- Always include a product image using `CartItemImage` to help users identify items in their cart.
+- Display clear pricing information, including both current price and list price when applicable.
+- Show product variations (size, color, etc.) using `activeVariations` in `CartItemSummary` to help users distinguish between similar items.
+- Use the `unavailable` prop to clearly indicate when an item is no longer available for purchase.
+- Ensure product images have descriptive `alt` text for accessibility.
+- Display accurate quantity information to help users track their cart contents.
+
+### ❌ Don'ts
+
+- Don't omit essential product information such as title, price, or image.
+- Don't use generic placeholder images when product images are available.
+- Don't hide quantity controls or make them difficult to access.
+- Avoid displaying cart items without proper spacing or visual separation between items.
+- Don't forget to handle unavailable items appropriately—either remove them or clearly mark them as unavailable.
+
+---
+
+## Related components
+
+<SectionList>
+  <SectionItem
+    title="CartSidebar"
+    description="CartSidebar displays a sidebar with cart items and summary information."
+    actionPath="/docs/guides/faststore/organisms-cart-sidebar"
+  >
+    <CartSidebar totalItems={1}>
+      <CartSidebarList>
+        <CartItem
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+          quantity={1}
+        >
+          <CartItemImage>
+            <img
+              data-fs-image
+              src={product.image[0].url}
+              alt={product.image[0].alternateName}
+            />
+          </CartItemImage>
+          <CartItemSummary
+            title={product.isVariantOf.name}
+          />
+        </CartItem>
+      </CartSidebarList>
+      <CartSidebarFooter>
+        <OrderSummary
+          subtotalLabel="Subtotal (1 product)"
+          subtotalValue="$100"
+          totalValue="$100"
+        />
+      </CartSidebarFooter>
+    </CartSidebar>
+  </SectionItem>
+</SectionList>

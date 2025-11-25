@@ -1,79 +1,89 @@
 ---
 title: "CartSidebar"
 excerpt: Displays the summary of items added to the cart along with detailed information, and checkout option.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/CartSidebar___5863b0eb4a4a8ce9a98da5c760461e61.png
 components:
   - CartSidebar.tsx
 ---
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/CartSidebar)
 
-The `CartSidebar` displays the summary of items added to the cart along with detailed information, and checkout option.The final component is a compound of the following:
+The `CartSidebar` component displays the summary of items added to the cart along with detailed information and checkout options. It's a compound component that combines cart items, order summary, and checkout functionality. The final component is composed of the following:
 
 - `CartSidebar`: renders a `SlideOver` as wrapper with the `CartSidebarList` and `CartSidebarFooter`.
 - `CartSidebarList`: wraps a series of `CartItem`s and `Gifts`.
-- `CartSidebarFooter`: wraps an `OrdeSummary` usually along with the Checkout Button.
+- `CartSidebarFooter`: wraps an `OrderSummary` usually along with the Checkout Button.
+
+Typical use cases include:
+
+- Displaying a slide-out cart sidebar from the header navigation.
+- Showing cart contents with order summary in checkout flows.
+- Presenting cart items with pricing and shipping information.
+- Providing quick access to cart management without leaving the current page.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <OverviewSection containerStyle={{display: 'block'}}>
+    <OverviewSection containerStyle={{ display: 'block' }}>
       <UIProvider>
         <CartSidebarUsage />
       </UIProvider>
     </OverviewSection>
-
   </Tab>
   <Tab>
     ```tsx
-      <CartSidebar totalItems={0} alertIcon={<Icon name="Truck" />} alertText="Free shipping starts at $300" >
-        <CartSidebarList>
-          <CartItem
-            price={{
-              value: product.offers.offers[0].price,
-              listPrice: product.offers.offers[0].listPrice,
-              formatter: useFormattedPrice,
-            }}
-            quantity={3}
-          >
-          <CartItemImage>
-            <img
-              data-fs-image
-              src={product.image[0].url}
-              alt={product.image[0].alternateName}
-            />
-          </CartItemImage>
-          <CartItemSummary
-            title={product.isVariantOf.name}
-            activeVariations={activeVariations}
-          />
-          </CartItem>
-          <Gift icon={<Icon name="Tag" />}>
-            <GiftImage>
-              <img
-                src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
-                alt="Magicwhite"
-                width={89}
-                height={89}
-              />
-            </GiftImage>
-            <GiftContent
-              productName="Apple Magic Mouse"
-              price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
-            />
-          </Gift>
-        </CartSidebarList>
-        <CartSidebarFooter>
-          <OrderSummary
-            subtotalLabel="Subtotal (3 products)"
-            subtotalValue="$1,200"
-            discountValue="-$100"
-            totalValue="$1,100"
-          />
-        </CartSidebarFooter>
-      </CartSidebar>
-    ```
+    import React from 'react';
+    import { CartSidebar, CartSidebarList, CartSidebarFooter, CartItem, CartItemImage, CartItemSummary, OrderSummary, Gift, GiftImage, GiftContent, Icon } from "@faststore/ui";
 
+    export default function CartSidebarBasic() {
+      return (
+        <CartSidebar totalItems={0} alertIcon={<Icon name="Truck" />} alertText="Free shipping starts at $300">
+          <CartSidebarList>
+            <CartItem
+              price={{
+                value: product.offers.offers[0].price,
+                listPrice: product.offers.offers[0].listPrice,
+                formatter: useFormattedPrice,
+              }}
+              quantity={3}
+            >
+              <CartItemImage>
+                <img
+                  data-fs-image
+                  src={product.image[0].url}
+                  alt={product.image[0].alternateName}
+                />
+              </CartItemImage>
+              <CartItemSummary
+                title={product.isVariantOf.name}
+                activeVariations={activeVariations}
+              />
+            </CartItem>
+            <Gift icon={<Icon name="Tag" />}>
+              <GiftImage>
+                <img
+                  src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
+                  alt="Magicwhite"
+                  width={89}
+                  height={89}
+                />
+              </GiftImage>
+              <GiftContent
+                productName="Apple Magic Mouse"
+                price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
+              />
+            </Gift>
+          </CartSidebarList>
+          <CartSidebarFooter>
+            <OrderSummary
+              subtotalLabel="Subtotal (3 products)"
+              subtotalValue="$1,200"
+              discountValue="-$100"
+              totalValue="$1,100"
+            />
+          </CartSidebarFooter>
+        </CartSidebar>
+      );
+    }
+    ```
   </Tab>
 </Tabs>
 
@@ -109,7 +119,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-### List
+### Design tokens: List
+
+The list section contains cart items and gifts, using padding to create comfortable spacing between items and maintain visual hierarchy.
 
 <TokenTable>
   <TokenRow
@@ -118,7 +130,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-### Footer
+### Design tokens: Footer
+
+The footer section displays the order summary and checkout button, using background color and box shadow to create visual separation from the list and emphasize the checkout action.
 
 <TokenTable>
   <TokenRow
@@ -153,12 +167,34 @@ You can target and override `CartSidebar` styles using the following data attrib
 
 ---
 
+## Best Practices
+
+### ✅ Do's
+
+- Always include `CartSidebarList` and `CartSidebarFooter` to provide a complete cart experience.
+- Display accurate item counts using the `totalItems` prop to help users understand their cart contents.
+- Use the `alertIcon` and `alertText` props to communicate shipping thresholds or promotional messages.
+- Include an `OrderSummary` component in the footer to show pricing breakdown and total.
+- Ensure the sidebar can be easily closed and doesn't block critical page content.
+- Display cart items using `CartItem` components for consistent presentation.
+
+### ❌ Don'ts
+
+- Don't omit the order summary or checkout button from the footer.
+- Don't display incorrect item counts or pricing information.
+- Avoid cluttering the sidebar with too many promotional messages or alerts.
+- Don't make the sidebar too narrow or too wide—ensure it's comfortable for viewing cart contents.
+- Avoid blocking important page content when the sidebar is open.
+- Don't forget to handle empty cart states appropriately.
+
+---
+
 ## Related components
 
-<SectionList grid="row">
+<SectionList grid="column">
   <SectionItem
     title="OrderSummary"
-    description="This component provide a summary of the items in the cart, including the total price, related shipping tax, and discounts."
+    description="This component provides a summary of the items in the cart, including the total price, related shipping tax, and discounts."
     actionPath="/docs/guides/faststore/molecules-order-summary"
     fullWidth
   >
@@ -168,5 +204,30 @@ You can target and override `CartSidebar` styles using the following data attrib
       discountValue="-$100"
       totalValue="$1,100"
     />
+  </SectionItem>
+  <SectionItem
+    title="CartItem"
+    description="CartItem displays the summarized information of a product inside the Cart."
+    actionPath="/docs/guides/faststore/molecules-cart-item"
+  >
+    <CartItem
+      price={{
+        value: product.offers.offers[0].price,
+        listPrice: product.offers.offers[0].listPrice,
+        formatter: useFormattedPrice,
+      }}
+      quantity={1}
+    >
+      <CartItemImage>
+        <img
+          data-fs-image
+          src={product.image[0].url}
+          alt={product.image[0].alternateName}
+        />
+      </CartItemImage>
+      <CartItemSummary
+        title={product.isVariantOf.name}
+      />
+    </CartItem>
   </SectionItem>
 </SectionList>
