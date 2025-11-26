@@ -25,7 +25,7 @@ Apps need to declare policies to gain access to external resources, which includ
 - Access to [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference)
 - Access to resources exposed through role-based policies
 
-> ℹ️ Declaring policies is not required for resources exposed through [resource-based policies](?tab=t.0#heading=h.sszd0hc2sxz), since these policies already define which apps are allowed.
+> ℹ️ Declaring policies is not required for resources exposed through [resource-based policies](https://developers.vtex.com/docs/guides/controlling-access-to-app-resources#defining-resource-based-policies), since these policies already define which apps are allowed.
 
 ## Accessing external resources by policy type
 
@@ -41,7 +41,7 @@ Each type is declared differently and applies to specific use cases, as describe
 
 License Manager policies refer to native VTEX resources and have predefined names.
 
-To declare a policy of this type in the `manifest.json`, use the policy name in the `"name”` field. See the example below:
+To declare a policy of this type in the `manifest.json`, use the policy name in the `"name"` field. See the example below:
 
 ```json manifest.json mark=3:5
 {
@@ -57,7 +57,7 @@ You can find all available policy names in the **Key** column of the [License Ma
 
 ### Policies from VTEX IO apps (role-based)
 
-These policies grant access to app routes exposed with [role-based policies](?tab=t.0#heading=h.a8px17wrz58r). This policy type is used to access [GraphQL queries exposed by IO apps](https://developers.vtex.com/docs/guides/developing-a-graphql-api-in-service-apps). To declare a policy of this type in the manifest, use the format `{vendor}.{app-name}:{policy-name}` in the `"name"` field. See the example below:
+These policies grant access to app routes exposed with [role-based policies](https://developers.vtex.com/docs/guides/controlling-access-to-app-resources#defining-role-based-policies). This policy type is used to access [GraphQL queries exposed by IO apps](https://developers.vtex.com/docs/guides/developing-a-graphql-api-in-service-apps). To declare a policy of this type in the manifest, use the format `{vendor}.{app-name}:{policy-name}` in the `"name"` field. See the example below:
 
 ```json manifest.json mark=3:5
 {

@@ -13,8 +13,8 @@ Policies are a set of permissions granted to a resource ([VRN](https://developer
 
 In VTEX IO, apps interact with policies in two ways:
 
-- Apps that want [access to an **external resource**](https://developers.vtex.com/docs/guides/accessing-external-resources-within-a-vtex-io-app), such as an endpoint from another VTEX IO app.
-- Apps that [securely expose their own resources and define how to access them](https://developers.vtex.com/docs/guides/controlling-access-to-app-resources).
+- Using policies to [access to an **external resource**](https://developers.vtex.com/docs/guides/accessing-external-resources-within-a-vtex-io-app), such as an endpoint exposed by another VTEX IO app.
+- [Exposing policies to define how other apps, users, or services can securely access the resources they provide](https://developers.vtex.com/docs/guides/controlling-access-to-app-resources).
 
 ## Types of policies
 

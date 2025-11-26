@@ -19,7 +19,7 @@ When developers implement [service apps](https://developers.vtex.com/docs/guides
   </thead>
     <tr>
       <td>Who can make the request?</td>
-      <td>Only other IO apps (acting on their own or <a href="https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens" target="_blank">behalf of other apps</a>).</td>
+      <td>Only other IO apps (acting on their own or <a href="https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens" target="_blank">on behalf of other apps</a>).</td>
       <td>
         <ul>
           <li>Another IO app (by itself or <a href="https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens" target="_blank">on behalf of users and other apps</a>)</li>
@@ -107,7 +107,7 @@ The keys that compose a statement are:
 
 Resource-based policies are applied to routes defined in the `service.json` file. Routes can be public or private. Public routes are always accessible to everyone and don't require an [authentication token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens). Private routes require authentication, and their policies define which actions (HTTP methods) are permitted by whom. If a private route has no policies, no one is allowed to perform any action on this route.
 
-Apps must declare resource-based policies to securely expose their private resources (routes) for specific requesters (users, integrations, or other apps). Apps accessing the exposed resources don’t need to declare policies in the `manifest.json` file.
+Apps must declare resource-based policies to securely expose their private resources (routes) for specific requesters (users, integrations, or other apps). Apps accessing the exposed resources don't need to declare policies in the `manifest.json` file.
 
 Recommendations for using resource-based policies:
 
@@ -145,7 +145,7 @@ The keys that compose this kind of policy are:
 
 - `effect`: Describes the effect of allowing (`allow`) or denying (`deny`) a principal to perform a set of actions on a route.
 - `actions`: Describes the actions related to a given effect, principal, and route.
-- `principals`: Contains the list of principals able to perform requests to a given route or not. Like resources, `principals` are also expressed by a [VTEX Resource Name (VRN)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vrn).
+- `principals`: Lists the principals allowed or denied to perform requests to a given route. Like resources, `principals` are also expressed by a [VTEX Resource Name (VRN)](https://developers.vtex.com/docs/guides/vtex-io-documentation-vrn).
 
 > ⚠️ Policies denying access have priority over those allowing access. If actions and principals intersect across different policies for a route, this subset of principals will be denied access for these actions.
 
