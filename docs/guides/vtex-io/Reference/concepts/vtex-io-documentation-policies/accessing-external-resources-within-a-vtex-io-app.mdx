@@ -9,27 +9,39 @@ updatedAt: "2025-11-04T12:00:00.000Z"
 
 Apps may need to access resources that are external to the app itself. An external resource could be:
 
-- An endpoint from another VTEX IO app (REST or GraphQL)
-- A VTEX API
-- An endpoint external to VTEX (e.g., a payment provider, an external marketplace, etc.)
+- Endpoints exposed by other VTEX IO apps (REST or GraphQL)
+- [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference)
+- Third-party endpoints outside VTEX, such as a payment provider or an external marketplace.
 
-To have access, apps must declare policies in the `policies` list of the [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+To access these resources, apps must declare policies in the `policies` list of the [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
 
-The sections below show the types of policies an app can have to access external resources.
+This article explains when policies are required and how each policy type should be declared.
 
 ## When to declare policies
 
 Apps need to declare policies to gain access to external resources, which include:
 
 - Access to specific content (file, image, etc.)
-- Access to VTEX APIs
+- Access to [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference)
 - Access to resources exposed through role-based policies
 
 > ℹ️ Declaring policies is not required for resources exposed through [resource-based policies](?tab=t.0#heading=h.sszd0hc2sxz), since these policies already define which apps are allowed.
 
+## Accessing external resources by policy type
+
+VTEX IO supports three types of access policies when interacting with external resources:
+
+- License Manager policies
+- Policies exposed by VTEX IO apps (role-based)
+- Outbound-access policies
+
+Each type is declared differently and applies to specific use cases, as described below.
+
 ### Policies from License Manager
 
-These policies have predefined names and are related to native VTEX resources. To declare a policy of this type in the manifest, use the policy name in the `"name”` field. See the example below:
+License Manager policies refer to native VTEX resources and have predefined names.
+
+To declare a policy of this type in the `manifest.json`, use the policy name in the `"name”` field. See the example below:
 
 ```json manifest.json mark=3:5
 {
@@ -57,11 +69,12 @@ These policies grant access to app routes exposed with [role-based policies](?ta
 }
 ```
 
-To find out the names of the policies available in an app, you can see the app documentation or the `policies.json` file. Example: [Policies in the search-graph app](https://github.com/vtex-apps/search-graphql/blob/master/policies.json).
+To find the names of the policies available in an app, you can see the app documentation or the `policies.json` file. Example: [Policies in the search-graph app](https://github.com/vtex-apps/search-graphql/blob/master/policies.json).
 
 ### Outbound-access policies
 
-These policies should be used when none of the other types apply, with an explicit URL to the resource. Outbound-access policies are used to access resources external to VTEX.
+Outbound-access policies should be used only when the other two types do not apply.
+They grant access to explicit URLs, often for external (non-VTEX) services.
 
 To declare a policy of this type, use an object with the following structure:
 
@@ -71,6 +84,8 @@ To declare a policy of this type, use an object with the following structure:
     - `"path"`: String with the last part of the URL, usually containing the path inside the domain name.
 
 > ℹ️ `"host"` and `"path"` accept `{{account}}` as a variable and the `*` character as a wildcard.
+
+#### Example
 
 Consider an app that needs access to the following resources:
 
