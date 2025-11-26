@@ -7,11 +7,11 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/CartSidebar)
 
-The `CartSidebar` component displays the summary of items added to the cart, along with detailed information and checkout options. The final component is a compound of the following:
+The `CartSidebar` component displays the summary of items added to the cart, along with detailed information and checkout options. The component is composed of the following:
 
-- `CartSidebar`: renders a `SlideOver` as a wrapper with `CartSidebarList` and `CartSidebarFooter`.
-- `CartSidebarList`: wraps a series of `CartItem`s and `Gifts`.
-- `CartSidebarFooter`: wraps an `OrderSummary` usually along with the Checkout button.
+- `CartSidebar`: renders a `SlideOver` wrapper containing `CartSidebarList` and `CartSidebarFooter`.
+- `CartSidebarList`: wraps a series of `CartItems` and `Gifts`.
+- `CartSidebarFooter`: wraps an `OrderSummary` usually with the Checkout button.
 
 Typical use cases include:
 
@@ -207,7 +207,7 @@ You can target and override `CartSidebar` styles using the following data attrib
   </SectionItem>
   <SectionItem
     title="CartItem"
-    description="CartItem displays the summarized information of a product inside the Cart."
+    description="CartItem displays the summarized information of a product in the cart."
     actionPath="/docs/guides/faststore/molecules-cart-item"
   >
     <CartItem
