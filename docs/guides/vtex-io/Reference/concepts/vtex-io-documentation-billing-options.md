@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T20:17:44.507Z"
 
 The `billingOptions` field is part of the `manifest.json` file of an app and is used to define all the necessary metadata for distributing an app on the VTEX ecosystem. The `billingOptions` field allows you to charge for an app, make it public, and determine its pricing settings.
 
-Please notice that apps without `billingOptions` in the `manifest.json` file are **private**, meaning that they are only visible and available for installation in the account where they were published.
+Please note that apps without `billingOptions` in the `manifest.json` file are **private**, meaning they are only visible and available for installation in the account where they were published.
 
 > ℹ️ Setting your app's billing model is a necessary step to distribute your app on the VTEX ecosystem. Without the `billingOptions` definition, the visibility of your app is restricted to the account where it was published. Learn how to configure the `billingOptions` field in [Setting your app's billing model](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-your-apps-billing-model) according to your scenario.
 
