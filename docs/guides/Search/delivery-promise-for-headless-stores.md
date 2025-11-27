@@ -36,11 +36,11 @@ To enable the Delivery Promise functionality, you should use the following addit
 | `zip-code` **\[required\]** (query string) | Postal code. | **`?zip-code=22250040`** |
 | `shipping` (facet) | Shipping method. It must always be combined with `zip-code`. Possible values: `pickup-in-point delivery pickup-all pickup-nearby` | `/shipping/pickup-in-point/?zip-code=22250040` |
 | `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters. |  `/shipping/pickup-in-point?zip-code=22250040&pickupPoint=vtex-botafogo`  |
-| `delivery-options` (facet) | [Delivery Option](https://help.vtex.com/en/tutorial/delivery-options-beta--1fRDJFcHCtpTnk7GNyaRDY) ID or IDs to be filtered. The ID can be obtained In the VTEX Admin, at **Shipping > Delivery Options**. It must always be combined with `zip-code`. Multiple entries of this filter can be used in the request to search for multiple Delivery Options. | **`/delivery-options/express-option-id`**`?zip-code=22250040` |
-| `dynamic-estimate` (facet) | The Dynamic Estimate filter selects Delivery Options that can meet the requested delivery or pickup timeframe. It must always be used together with `zip-code` and `shipping`. Possible values: `same-day next-day` It dynamically identifies which Delivery Options for the given `zip-code` and `shipping` facet can meet the requested timeframe, and then filters the search as if those Delivery Options had been manually passed as filters. | `/shipping/delivery/dynamic-estimate/same-day?zip-code=22250040` |
+| `delivery-options` (facet) | [Delivery Option](https://help.vtex.com/en/tutorial/delivery-options-beta--1fRDJFcHCtpTnk7GNyaRDY) ID or IDs to be filtered. The ID can be obtained in the VTEX Admin, at **Shipping > Delivery Options**. It must always be combined with `zip-code`. Multiple entries of this filter can be used in the request to search for multiple Delivery Options. | **`/delivery-options/express-option-id`**`?zip-code=22250040` |
+| `dynamic-estimate` (facet) | The Dynamic Estimate filter selects Delivery Options that can meet the requested delivery or pickup timeframe. It must always be used together with `zip-code` and `shipping`. Possible values: `same-day next-day`. It dynamically identifies which Delivery Options for the given `zip-code` and `shipping` facet can meet the requested timeframe, and then filters the search as if those Delivery Options had been manually passed as filters. | `/shipping/delivery/dynamic-estimate/same-day?zip-code=22250040` |
 | `hideUnavailableItems` (query string) | Controls whether the search returns only available products or both available and unavailable ones. When set to `true`, only products with stock are returned; when set to `false`, the API includes unavailable products as well. A product is considered unavailable when `availableQuantity = 0`, while `availableQuantity = 10000` indicates that the product is available. Retailers may choose to show unavailable items for commercial reasons (for example, to signal that they carry those products even if temporarily out of stock), while the recommended default is `true`. This facet also allows merchants to expose a shopper-facing filter such as "show only in-stock products."<br><br> If `hideUnavailableItems` is omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
 
->⚠️  `zip-code` is **required** to filter product availability according to the shopper’s location and is integral to any request using Delivery Promise functionality. This means you must use it when filtering by shipping method and pickup point.
+>⚠️ `zip-code` is **required** to filter product availability according to the shopper’s location and is integral to any request using Delivery Promise functionality. This means you must use it when filtering by shipping method and pickup point.
 
 >⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
 
@@ -57,7 +57,6 @@ This results in the following behavior when using Delivery Options and Dynamic E
 
 * **Multiple Delivery Options → OR (union):** the API returns all products that match any of the delivery options selected by the shopper.  
 * **Dynamic Estimate \+ Delivery Option → AND (intersection):** the API returns only the products that satisfy both the selected dynamic estimate and the chosen delivery option.
-
 
 ### Filtering by location
 
@@ -124,7 +123,7 @@ Delivery Options  are the set of choices a merchant provides to shoppers, descri
 Before you can display Delivery Option filters, it is necessary to:
 
 * Enable the Delivery Options feature by contacting [our Support](https://help.vtex.com/en/support).  
-* Create the Delivery Options for your store on VTEX Admin following the instructions in the [Delivery Options](https://help.vtex.com/docs/tutorials/delivery-options-beta) guide.
+* Create the Delivery Options for your store in the VTEX Admin following the instructions in the [Delivery Options](https://help.vtex.com/docs/tutorials/delivery-options-beta) guide.
 
 To filter by a Delivery Option, use the `delivery-options` parameter. Its value must be the ID for one of the Delivery Options configured on your store.
 
