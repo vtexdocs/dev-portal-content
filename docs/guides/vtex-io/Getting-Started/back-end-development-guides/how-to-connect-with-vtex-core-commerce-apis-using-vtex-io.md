@@ -63,8 +63,8 @@ Ensure a smooth development process by having the following prerequisites in pla
 2. Create a client that represents the module you want to access. It will be a class that extends `JanusClient`.
    
     ```ts ./node/clients/myClient.ts mark=2,4:8
-    import type { InstanceOptions, IOContext } from ‘@’vtex/api’
-    import { JanusClient } from ‘@vtex/api’
+    import type { InstanceOptions, IOContext } from '@vtex/api'
+    import { JanusClient } from '@vtex/api'
     
     export default class MyClient extends JanusClient {
         constructor(context: IOContext, options?: InstanceOptions) {
