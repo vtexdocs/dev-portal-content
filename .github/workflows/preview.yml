@@ -1,9 +1,9 @@
-name: Preview content changes
+name: Preview Content Changes
 on: 
   pull_request:
     paths:
-      - '**/*.md'
-      - '**/*.mdx'
+      - 'docs/**/*.md'
+      - 'docs/**/*.mdx'
       - 'images/**'
 jobs:
   preview:
