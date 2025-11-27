@@ -1,51 +1,55 @@
 ---
 title: "Using the Assets Builder"
 slug: "vtex-io-documentation-using-the-assets-builder"
+excerpt: "Learn how to use the Assets Builder to manage and reference images and other assets within your VTEX IO Store Theme."
 hidden: false
 createdAt: "2020-06-03T16:02:44.305Z"
 updatedAt: "2022-12-13T20:17:44.494Z"
 ---
 
-The [Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-assets-builder) is responsible for handling assets within Store Theme  `blocks` and CSS classes by getting all asset paths used and uploading them in the **File Manager** service.
+This guide explains how to use the [Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-assets-builder) to handle assets, such as images, within your Store Theme. By following these steps, you can simplify asset management by letting the builder automatically handle file paths and uploads to the VTEX File Manager, making your theme's code lighter and more efficient.
 
-As its name implies, the File Manager manages all of your store files and their respective URLs. It can translate the asset paths and then export the immutable URLs of the assets, ensuring that all block assets can be properly rendered.
+Before you begin, keep the following points in mind:
 
-The Assets Builder has two main advantages:
-
-- You won't need to declare URLs for assets in each block, making your code lighter;
-- You can use it whenever you want, with no prerequisites.
-
-- The Assets Builder is not responsible for URL caching; File Manager is.
-- It is not possible to reference assets through React or other apps.
-- Avoid long file names or unnecessarily heavy assets. This will negatively affect the request payload size and Builder optimization.
-- Any image extension is allowed, such as **JPEG**, **PNG** and **GIF**. Videos are not allowed yet.
-
-Check out the instructions to use it below:
+- **Caching:** The Assets Builder is not responsible for URL caching; the File Manager handles this.
+- **Scope:** You can only reference assets from your theme's `blocks` and CSS. It is not possible to reference them from React components or other apps.
+- **File optimization:** Avoid long file names or unnecessarily large assets, as this can negatively affect request payload size and builder performance.
+- **Supported formats:** You can use any image extension, such as `.jpeg`, `.png`, and `.gif`. Video files are not supported.
 
 ## Instructions
 
-1. Add the  `assets-builder`  to your theme's builder list in the  `manifest.json`  file. For example:
+### Step 1 - Add the Assets Builder
 
-  ```JSON
-  "builders": {
-    "assets": "0.x"
-  },
-  ```
+1. Open your theme's `manifest.json` file.
+2. Add the `assets` builder to the `builders` list:
+   ```json
+   "builders": {
+     "assets": "0.x"
+   },
+   ```
 
-2. In the `store`  root directory of your app, create an  `assets` folder to manage your store's assets, such as images.
-3. Then, add the desired asset files to the  `assets` folder. Notice that you can create subfolders within the  `assets`  folder to organize better the assets used by the theme blocks, as shown below:
+### Step 2 - Create the assets folder
 
-  ![assets-folder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-the-assets-builder-0.png)
-  
-  > ⚠️ If you created subfolders inside the Assets folder, remember to include the folder hierarchy in the asset path, such as:  `assets/events/vtex-day.jpg`.
+In the `store` root directory of your theme, create a new folder named `assets`. This folder will store all your theme's assets.
 
-4. Use the asset path (`assets/{imageFileName}.{jpg/png/gif}`) as the value of a given block's prop, such as `src`, or CSS class for media rendering:
-  ```JSON
-  "image": {  
-      "props": {  
-        "src": "assets/myimage.png"  
-      }  
-  }
-  ```
+### Step 3 - Add asset files
 
-Once the asset path is added and you save the changes, the Assets Builder will automatically save it in the VTEX IO File Manager and then generate a URL for it, which the platform will consider during theme rendering.
+Add your asset files to the `assets` folder. You can create subfolders within `assets` to better organize your files.
+
+ ![assets-folder](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-the-assets-builder-0.png)
+
+ > ⚠️ If you use subfolders, remember to include the full path when referencing the asset, such as `assets/events/vtex-day.jpg`.
+
+### Step 4 - Reference the assets
+
+Use the asset path (e.g., `assets/{fileName}.{extension}`) as the value for a block's prop, such as `src`, or a CSS class to render your media.
+
+   ```json
+   "image": {
+     "props": {
+       "src": "assets/myimage.png"
+     }
+   }
+   ```
+
+Once you save the changes, the Assets Builder automatically uploads the file to the VTEX File Manager and generates an immutable URL, which the platform will use when rendering the theme.
