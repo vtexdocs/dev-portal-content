@@ -30,7 +30,7 @@ Ensure a smooth development process by having the following prerequisites in pla
    yarn add @vtex/api
    ```
 
-4. Update the app's `manifest.json` to include the appropriate `outbound-access` policy for the requested URL. Here's a hypothetical example:
+3. Update the app's `manifest.json` to include the appropriate `outbound-access` policy for the requested URL. Here's a hypothetical example:
     
     ```json manifest.json mark=13:21
     {
@@ -137,7 +137,7 @@ In your Client TypeScript file, implement the desired methods using the [`HttpCl
   }
   ```
   
-    In the provided example, the `newOrderForm` method is implemented to make HTTP requests using `this.http`. It facilitates the creation of a new order form by sending a POST request (`postRaw`) to the specified endpoint. The method includes additional configurations, such as defining the metric for tracking and handling potential errors in the response.
+   In the provided example, the `newOrderForm` method is implemented to make HTTP requests using `this.http`. It facilitates the creation of a new order form by sending a POST request (`postRaw`) to the specified endpoint. The method includes additional configurations, such as defining the metric for tracking and handling potential errors in the response.
 
 ### Step 4 - Exporting custom clients
 
