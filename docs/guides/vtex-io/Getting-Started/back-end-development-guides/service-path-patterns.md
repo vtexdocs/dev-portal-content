@@ -51,4 +51,4 @@ Check the table below for a comprehensive overview of the behavior of different 
 
 ### Unavailable cookies with CloudFront CDN
 
-If your store uses CloudFront as a CDN and you encounter difficulties in obtaining the desirable cookies from the app’s service context, [open a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) with the VTEX support team reporting the issue.
+If your store uses CloudFront as a CDN and you encounter difficulties in obtaining the expected cookies from the app’s service context, [open a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) with the VTEX support team to report the issue.
