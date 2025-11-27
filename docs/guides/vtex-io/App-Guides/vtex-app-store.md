@@ -19,7 +19,7 @@ Every app in the VTEX App Store must go through the [homologation process](https
 
 <WhatsNextCard
 title="Becoming a registered VTEX App Store developer"
-description="Become a VTEX App Store Developer and share your own solutions with other VTEX users in the VTEX App Store."
+description="Become a VTEX App Store developer and share your own solutions with other VTEX users in the VTEX App Store."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-registered-vtex-app-store-developer"
 linkTitle="See more"
 />
