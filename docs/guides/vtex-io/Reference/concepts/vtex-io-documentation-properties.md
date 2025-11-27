@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-11-23T13:33:26.418Z"
 updatedAt: "2022-12-13T20:17:44.194Z"
 ---
-Every JSON is defined between `{ }` by keys and values that together determine its properties, i.e., its inherent characteristics.
+Every JSON object is defined by keys and values within `{}` that together determine its properties, i.e., its inherent characteristics.
 
 ```json
 {
@@ -22,15 +22,15 @@ The `key + value` set constitutes what we call the property (or *prop*) of the J
 
 In the block context, the properties (`props`) ultimately determine the performance and visual identity of the component rendered in the interface. The more props a block has, the more flexible its configuration is for the end user.
 
-The list of properties a JSON accepts is separated by a comma (`,`), and the values can vary according to their type:
+The list of properties a JSON object accepts is separated by a comma (`,`), and the values can vary according to their type:
 
 - `string` - A prop of the `string` type has its value in quotation marks, being a text composed of alphabetic characters.
-- `number` - A prop of the type `number` has its value without quotation marks, whether it is an integral or real number. When it is the real type, the `.` (dot) character should be used to separate the integral part from the decimal places. E.g.: `1` (integer) or `23.454` (real).
-- `boolean` - A prop of the `boolean` type has its value without quotes, being necessarily `true` or `false`.
-- `object` - A prop of the 'object' type has its value between curly brackets `{}`, being a list with various data types, that is, a new object.
-- `array` - A prop of the `array` type has its value between brackets `[]`, being a list with only one data type.
+- `number` - A prop of the type `number` has its value without quotation marks, whether it is an integral or real number. When it is a real number, the `.` (dot) character should be used to separate the integral part from the decimal places. E.g.: `1` (integer) or `23.454` (real).
+- `boolean` - A prop of the `boolean` type has its value without quotes and is necessarily `true` or `false`.
+- `object` - A prop of the `object` type has its value between curly brackets `{}`, and is a list with various data types, that is, a new object.
+- `array` - A prop of the `array` type has its value between brackets `[]` and is a list with only one data type.
 
-There are two other types also used by the Store Framework blocks properties:
+There are two other types also used by the Store Framework block properties:
 
 - `enum` - A prop of the `enum` type has its value between quotation marks and predefined by the React component to which the correspondent block.
 - `block` - A prop of the type `block` has its value quotes, being it the name of a block and its app's version. This property will be responsible for rendering the block as its value. E.g.: `icon-cart` (from the [Store Icons](https://developers.vtex.com/docs/guides/vtex-store-icons) app).
