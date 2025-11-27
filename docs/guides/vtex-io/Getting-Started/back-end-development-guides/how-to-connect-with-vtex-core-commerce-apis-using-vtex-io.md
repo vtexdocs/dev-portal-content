@@ -7,7 +7,7 @@ createdAt: "2020-10-08T02:47:14.995Z"
 updatedAt: "2021-03-25T14:40:29.493Z"
 ---
 
-VTEX IO apps are designed designed to seamlessly interface with [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference). These APIs provide a set of functionalities and data access points for managing and interacting with the VTEX ecommerce platform, enabling developers to perform various operations, such as managing orders, products, and customer data.
+VTEX IO apps are designed to seamlessly interface with [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference). These APIs provide a set of functionalities and data access points for managing and interacting with the VTEX ecommerce platform, enabling developers to perform various operations, such as managing orders, products, and customer data.
 
 In this guide, you will learn how to create a custom client that can handle HTTP requests to these VTEX Core Commerce APIs, allowing your application to retrieve and manipulate data within the VTEX ecosystem.
 
@@ -30,7 +30,7 @@ Ensure a smooth development process by having the following prerequisites in pla
    yarn add @vtex/api
    ```
 
-4. Update the app's `manifest.json` to include the appropriate `outbound-access` policy for the requested URL. Here's a hypothetical example:
+3. Update the app's `manifest.json` to include the appropriate `outbound-access` policy for the requested URL. Here's a hypothetical example:
     
     ```json manifest.json mark=13:21
     {
@@ -63,8 +63,8 @@ Ensure a smooth development process by having the following prerequisites in pla
 2. Create a client that represents the module you want to access. It will be a class that extends `JanusClient`.
    
     ```ts ./node/clients/myClient.ts mark=2,4:8
-    import type { InstanceOptions, IOContext } from ‘@’vtex/api’
-    import { JanusClient } from ‘@vtex/api’
+    import type { InstanceOptions, IOContext } from '@vtex/api'
+    import { JanusClient } from '@vtex/api'
     
     export default class MyClient extends JanusClient {
         constructor(context: IOContext, options?: InstanceOptions) {
@@ -73,12 +73,11 @@ Ensure a smooth development process by having the following prerequisites in pla
     }
     ```
 
-3. In the constructor, set the `VtexIdclientAutCookie` header with the required token for authorization. Use `ctx.authToken` for the app's token, or `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken` for requests from VTEX Admin or VTEX Storefront, respectively. Refer to [App authentication using auth tokens
-](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) for more information.
+3. In the constructor, set the `VtexIdclientAutCookie` header with the required token for authorization. Use `ctx.authToken` for the app's token, or `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken` for requests from VTEX Admin or VTEX Storefront, respectively. Refer to [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) for more information.
 
     ```ts ./node/clients/myClient.ts mark=10
-    import type { InstanceOptions, IOContext } from ‘@’vtex/api’
-    import { JanusClient } from ‘@vtex/api’
+    import type { InstanceOptions, IOContext } from '@vtex/api'
+    import { JanusClient } from '@vtex/api'
     
     export default class MyClient extends JanusClient {
         constructor(context: IOContext, options?: InstanceOptions) {
@@ -100,10 +99,9 @@ Ensure a smooth development process by having the following prerequisites in pla
 ### Step 3 - Implementing the Client methods
 
 In your Client TypeScript file, implement the desired methods using the [`HttpClient`](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients#httpclient-methods) for targeted HTTP calls.
-   
   ```ts ./node/clients/myClient.ts mark=17:23
-  import type { InstanceOptions, IOContext } from ‘@’vtex/api’
-  import { JanusClient } from ‘@vtex/api’
+  import type { InstanceOptions, IOContext } from '@vtex/api'
+  import { JanusClient } from '@vtex/api'
   
   export default class MyClient extends JanusClient {
       constructor(context: IOContext, options?: InstanceOptions) {
@@ -138,7 +136,7 @@ In your Client TypeScript file, implement the desired methods using the [`HttpCl
   }
   ```
   
-    In the provided example, the `newOrderForm` method is implemented to make HTTP requests using `this.http`. It facilitates the creation of a new order form by sending a POST request (`postRaw`) to the specified endpoint. The method includes additional configurations such as defining the metric for tracking and handling potential errors in the response.
+   In the provided example, the `newOrderForm` method is implemented to make HTTP requests using `this.http`. It facilitates the creation of a new order form by sending a POST request (`postRaw`) to the specified endpoint. The method includes additional configurations, such as defining the metric for tracking and handling potential errors in the response.
 
 ### Step 4 - Exporting custom clients
 
