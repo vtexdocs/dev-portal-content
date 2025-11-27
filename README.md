@@ -12,7 +12,7 @@ This repository contains all the files for the guides featured in the [VTEX Deve
   - [Was this helpful?](#was-this-helpful)
   - [Suggest edits (GitHub)](#suggest-edits-github)
 - [GitHub Actions](#github-actions)
-  - [Preview Modified Pages](#preview-modified-pages)
+  - [Preview Content Changes](#preview-content-changes)
   - [Write Good](#write-good)
   - [Check Links](#check-links)
   - [Links Issues](#links-issues)
@@ -105,7 +105,7 @@ Once you create a pull request, our team will review your changes as soon as pos
 
 This repository uses several GitHub Actions to ensure documentation quality and provide helpful previews. Here's a detailed overview of each action:
 
-### Preview Modified Pages
+### Preview Content Changes
 **Trigger**: Pull requests  
 **Purpose**: Generates preview links for modified markdown/MDX files.  
 **Dependencies**:
@@ -122,13 +122,6 @@ This repository uses several GitHub Actions to ensure documentation quality and 
 - `actions/checkout@v2`: Checks out the repository
 - `actions/setup-node@v1`: Sets up Node.js environment
 - `tsuyoshicho/action-textlint@v3`: Runs textlint checks and reports issues
-
-### Check Links
-**Trigger**: Pull requests  
-**Purpose**: Validates links in modified markdown files.  
-**Dependencies**:
-- `actions/checkout@master`: Checks out the repository
-- `gaurav-nelson/github-action-markdown-link-check@v1`: Performs link checking
 
 ### Links Issues
 **Trigger**: Repository dispatch, manual workflow, or daily at 17:00 UTC  
