@@ -1,7 +1,7 @@
 ---
 title: "Service path patterns"
 slug: "service-path-patterns"
-excerpt: "Learn how to define the path of your VTEX IO service."
+excerpt: "Learn how to define the path for your VTEX IO service route to manage caching and session data effectively."
 hidden: false
 ---
 
