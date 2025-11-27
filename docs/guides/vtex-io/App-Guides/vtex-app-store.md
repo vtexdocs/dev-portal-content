@@ -4,6 +4,7 @@ slug: "vtex-app-store"
 hidden: false
 createdAt: "2021-10-26T23:00:18.640Z"
 updatedAt: "2022-03-04T21:41:10.287Z"
+excerpt: "Get to know the VTEX App Store, a marketplace of plug-and-play apps built on VTEX IO, where merchants can discover, install, and purchase solutions developed by VTEX and third-party partners."
 ---
 
 The [VTEX App Store](https://apps.vtex.com/) is a marketplace for VTEX IO plug-and-play solutions. It is where both first-party and third-party apps are published for download by clients and partners.
