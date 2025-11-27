@@ -21,13 +21,13 @@ To be eligible to become a Sponsor Account, make sure you have:
 - Access to three or more accounts related to the same group or holding.
 - An Edition App published by `vtex` installed on your account (`vtex.edition-business@0.x` or `vtex.edition-store@2.x`).
 
-  > ℹ️ You can check the Edition App installed on your account by running `vtex edition get` in your terminal. If you see the following error `Message: Edition not set`, [open a support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) requesting the installation of either the `vtex.edition-business@0.x` or `vtex.edition-store@2.x`. See [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) for more information.
+  > ℹ️ You can check the Edition App installed on your account by running `vtex edition get` in your terminal. If you see the following error `Message: Edition not set`, [open a support ticket](https://help.vtex.com/support) requesting the installation of either the `vtex.edition-business@0.x` or `vtex.edition-store@2.x`. See [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) for more information.
 
 ## Instructions
 
 If your account meets the prerequisites described in the previous section, take the following steps to become a Sponsor Account.  
 
-1. [Open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to the VTEX Support team expressing your desire to become a Sponsor Account and develop your own Edition Apps. Remember to include the following information in your ticket:
+1. [Open a ticket](https://help.vtex.com/support) to the VTEX Support team expressing your desire to become a Sponsor Account and develop your own Edition Apps. Remember to include the following information in your ticket:
     - The name of the main account.
     - The names of the accounts that the main account will sponsor.
 
