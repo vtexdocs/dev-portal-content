@@ -101,8 +101,8 @@ Ensure a smooth development process by having the following prerequisites in pla
 In your Client TypeScript file, implement the desired methods using the [`HttpClient`](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients#httpclient-methods) for targeted HTTP calls.
    
   ```ts ./node/clients/myClient.ts mark=17:23
-  import type { InstanceOptions, IOContext } from ‘@’vtex/api’
-  import { JanusClient } from ‘@vtex/api’
+  import type { InstanceOptions, IOContext } from '@vtex/api'
+  import { JanusClient } from '@vtex/api'
   
   export default class MyClient extends JanusClient {
       constructor(context: IOContext, options?: InstanceOptions) {
