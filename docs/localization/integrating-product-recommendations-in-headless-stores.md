@@ -1,7 +1,7 @@
 ---
 title: "Integrating product recommendations in headless stores (Beta)"
 slug: "integrating-product-recommendations-in-headless-stores"
-hidden: false  
+hidden: false
 excerpt: "Learn how to integrate product recommendations in headless stores."
 createdAt: "2025-10-23T12:00:00.000Z"
 updatedAt: "2025-10-23T12:00:00.000Z"
