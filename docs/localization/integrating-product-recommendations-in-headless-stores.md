@@ -1,10 +1,10 @@
----  
-title: "Integrating product recommendations in headless stores (Beta)"  
-slug: "integrating-product-recommendations-in-headless-stores"  
+---
+title: "Integrating product recommendations in headless stores (Beta)"
+slug: "integrating-product-recommendations-in-headless-stores"
 hidden: false  
-excerpt: "Learn how to integrate product recommendations in headless stores."  
-createdAt: "2025-10-23T12:00:00.000Z"  
-updatedAt: "2025-10-23T12:00:00.000Z"  
+excerpt: "Learn how to integrate product recommendations in headless stores."
+createdAt: "2025-10-23T12:00:00.000Z"
+updatedAt: "2025-10-23T12:00:00.000Z"
 ---
 
 > ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
@@ -15,16 +15,16 @@ This guide describes how to integrate [product recommendations](https://help.vte
 
 Before implementing headless recommendations, make sure you have:
 
-* A front-end capable of adding third-party scripts and making authenticated HTTPS requests.  
+* A front-end capable of adding third-party scripts and making authenticated HTTPS requests
 * Requested and received approval for the product recommendations feature setup from [VTEX Support](https://help.vtex.com/support).
 
 ## Step 1: Initial setup
 
 After you request and receive approval for using the product recommendations feature, the [VTEX Support](https://help.vtex.com/support) team will prepare your environment by:
 
-* Creating a workspace for recommendations.  
-* Synchronizing your product catalog with the recommendation service.  
-* Setting up API keys for secure access.  
+* Creating a workspace for recommendations
+* Synchronizing your product catalog with the recommendation service
+* Setting up API keys for secure access
 * Generating a custom integration script for your store.
 
 Once these configurations are complete, you can proceed with the implementation steps below.
@@ -33,20 +33,17 @@ Once these configurations are complete, you can proceed with the implementation 
 
 After receiving the integration script from VTEX Support, implement it in your headless store:
 
-1. Create a dedicated component or module in your codebase for third-party integrations.  
-     
-2. Implement the script according to your framework's best practices for third-party script management. Check an example of implementation in [FastStore: Third-party Scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts).  
-     
-3. Ensure the script runs on all pages where you want to enable recommendations or track user behavior.  
-     
-   The script handles:  
-     
-* User tracking initialization.  
-* Browsing and behavioral data collection.  
-* Model training data gathering.
+1. Create a dedicated component or module in your codebase for third-party integrations.
+2. Implement the script according to your framework's best practices for third-party script management. Check an example of implementation in [FastStore: Third-party Scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts)
+3. Ensure the script runs on all pages where you want to enable recommendations or track user behavior.
 
-4. Save the `_snrs_uuid` in the user's order form, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation.  
-     
+   The script handles:
+    * User tracking initialization
+    * Browsing and behavioral data collection
+    * Model training data gathering.
+
+4. Save the `_snrs_uuid` in the user's order form, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation
+
    When the ID is generated, it is necessary to save the user's ID in the orderForm during navigation using `PUT` [Set multiple custom field values](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-) as shown below:  
 
    ```javascript
@@ -84,7 +81,7 @@ After the models are trained, they will be available for API-based recommendatio
 
 To implement product recommendations in your headless store, follow these steps in sequence:
 
-1. [Start a user session to get a unique identifier](#starting-the-user-session).  
+1. [Start a user session to get a unique identifier](#starting-the-user-session)
 2. [Fetch recommendations for your shelves](#implementing-recommendation-shelves). 
 3. [Track user interactions with the recommendations](#tracking-recommendation-events).
 
@@ -94,9 +91,9 @@ To implement product recommendations in your headless store, follow these steps 
 
 Use the `POST` [Start Session](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/users/start-session/v2) endpoint to create a unique user ID for recommendations. This endpoint:
 
-* Creates a unique user ID (`recommendationsUserId`) for the session.  
-* Links it to the provided order form ID.  
-* Stores the ID in the `vtex-rec-user-id` cookie for session continuity.  
+* Creates a unique user ID (`recommendationsUserId`) for the session
+* Links it to the provided order form ID
+* Stores the ID in the `vtex-rec-user-id` cookie for session continuity
 * Initializes recommendation tracking and personalization.
 
 > ℹ️ Call this endpoint on the first page view of each visit, before displaying any recommendations, and only if the `_snrs_uuid` is not already present. If `orderFormId` is not provided in the request body, the API attempts to retrieve it from the `checkout.vtex.com` cookie.
@@ -132,24 +129,23 @@ The campaign determines the type of recommendations returned, such as personaliz
 
 This endpoint retrieves a list of recommended products based on:
 
-* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [our Support](https://help.vtex.com/en/support) to obtain the `campaignId`.  
-    
-  Available campaign types:  
-    
-  * `rec-top-items-v2`: Best sellers  
-  * `rec-persona-v2`: Personalized recommendations  
-  * `rec-similar-v2`: Similar items  
-  * `rec-cross-v2`: Cross-sell  
-  * `rec-cart-v2`: Cart-based recommendations  
-  * `rec-last-v2`: Last seen  
-  * `rec-interactions-v2`: Recent interactions  
-  * `rec-visual-v2`: Visual similarity  
-  * `rec-search-v2`: Search-based recommendations  
+* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [our Support](https://help.vtex.com/en/support) to obtain the `campaignId`
+
+  Available campaign types:
+
+  * `rec-top-items-v2`: Best sellers
+  * `rec-persona-v2`: Personalized recommendations
+  * `rec-similar-v2`: Similar items
+  * `rec-cross-v2`: Cross-sell
+  * `rec-cart-v2`: Cart-based recommendations
+  * `rec-last-v2`: Last seen
+  * `rec-interactions-v2`: Recent interactions
+  * `rec-visual-v2`: Visual similarity
+  * `rec-search-v2`: Search-based recommendations
   * `rec-next-v2`: Next interaction
 
 
-* User context (from `recommendationsUserId`).  
-    
+* User context (from `recommendationsUserId`)
 * Page context (product ID, cart items, etc.).
 
 **Request example**:
@@ -185,23 +181,23 @@ Render the returned items as product cards on the shelf. After rendering, procee
 
 To improve recommendation accuracy and measure effectiveness, you need to track how users interact with the recommended products. There are three types of events to track:
 
-* [Recommendation views](#recommendation-views): When recommendation shelves become visible to users.  
-* [Recommendation clicks](#recommendation-clicks): When users click on recommended products.  
+* [Recommendation views](#recommendation-views): When recommendation shelves become visible to users
+* [Recommendation clicks](#recommendation-clicks): When users click on recommended products
 * [Product views](#product-views): When users visit product detail pages.
 
 ⚠️ For accurate tracking, ensure that:
 
-* All events include the same `recommendationsUserId`.  
-* Events are properly debounced to prevent duplicates.  
+* All events include the same `recommendationsUserId`
+* Events are properly debounced to prevent duplicates
 * View events are triggered only when shelves enter the viewport.
 
 #### Recommendation views
 
 Use the `POST` [Recommendation view](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/recommendation-view/v2) endpoint when a recommendation shelf becomes visible. This endpoint:
 
-* Records when recommendations are shown to users.  
-* Provides data for click-through rate (CTR) analysis.  
-* Helps train and improve recommendation models.  
+* Records when recommendations are shown to users
+* Provides data for click-through rate (CTR) analysis
+* Helps train and improve recommendation models
 * Should be called when shelves enter the viewport.
 
 **Request example**:
@@ -245,5 +241,5 @@ curl --request post \
 
 ## Learn more
 
-* [Recommendations BFF API Reference](https://developers.vtex.com/docs/api-reference/recommendations-bff-api)  
+* [Recommendations BFF API Reference](https://developers.vtex.com/docs/api-reference/recommendations-bff-api)
 * [Product Recommendations Overview](https://help.vtex.com/tutorial/product-recommendations-beta--2QIexbD2FSXBxELUnFtg7g)
