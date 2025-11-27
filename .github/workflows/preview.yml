@@ -1,5 +1,10 @@
-name: Preview modified pages
-on: [pull_request]
+name: Preview Content Changes
+on: 
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'docs/**/*.mdx'
+      - 'images/**'
 jobs:
   preview:
     runs-on: ubuntu-latest
@@ -55,36 +60,46 @@ jobs:
               .map(file => file.trim())
               .filter(file => file !== '')
 
-            let output = '# Preview Links\n\n'
+            let output = '### 👁️‍🗨️ Preview changes on Developer Portal\n\n'
             if (files.length === 0) {
-              output += 'No changes detected in any markdown/MDX file'
+              output += `👉 [Open preview environment](https://developers.vtex.com/api/preview?branch=${branch})\n\n`
+              output += '> Note: No Markdown or MDX changes were detected in this pull request.'
             } else {
-              output += `Open [this URL](https://developers.vtex.com/api/preview?branch=${branch}) to set up the portal with this branch changes.\n\n`
-              output += 'You can now access the edited pages with the following URLs:\n'
+              output += 'You can use the link below to load the Developer Portal in preview mode with the changes from this branch:\n\n'
+              output += `👉 [Open preview environment](https://developers.vtex.com/api/preview?branch=${branch})\n\n`
+              output += 'Below is the list of modified pages and their corresponding preview URLs:\n\n'
+
+              output += `| File | Preview URL | Sidebar |\n`
+              output += `|------|-------------|--------|\n`
 
               for (const file of files) {
                 const parts = file.split('/');
                 const category = parts[1];
                 const slug = file.split('/').pop().split('.')[0];
                 console.log(`Processing file: ${file}, category: ${category}, slug: ${slug}, path: ${paths[slug] || 'not found'}`)
+
+                let previewUrl = ''
+                let status = ''
                 
                 if (!paths[slug]) {
-                  output += `* Couldn't find the corresponding page for \`${file}\`. Have you added \`${slug}\` to the navigation.json file? `;
+                  status = '⚠️ Missing from navigation.json'
                   if (category === "troubleshooting") {
-                    url = `https://developers.vtex.com/docs/troubleshooting/${slug}`;
+                    previewUrl = `https://developers.vtex.com/docs/troubleshooting/${slug}`;
                   } else if (category === "release-notes") {
-                    url = `https://developers.vtex.com/updates/release-notes/${slug}`;
+                    previewUrl = `https://developers.vtex.com/updates/release-notes/${slug}`;
                   } else if (category === "faststore") {
                     const lastFolder = parts[parts.length - 2];
-                    url = `https://developers.vtex.com/docs/guides/faststore/${lastFolder}-${slug}`;
+                    previewUrl = `https://developers.vtex.com/docs/guides/faststore/${lastFolder}-${slug}`;
                   } else {
-                    url = `https://developers.vtex.com/docs/guides/${slug}`;
+                    previewUrl = `https://developers.vtex.com/docs/guides/${slug}`;
                   }
-                  console.log(url)
-                  output += `Maybe you can find it in ${url}\n`;
+                  console.log(previewUrl)
                 } else {
-                  output += `* https://developers.vtex.com/${paths[slug]}\n`;
+                  status = '✅ Listed'
+                  previewUrl += `* https://developers.vtex.com/${paths[slug]}\n`;
                 }
+
+                output += `| \`${file}\` | ${previewUrl} | ${status} |\n`
               }
             }
             

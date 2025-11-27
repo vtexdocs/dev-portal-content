@@ -1,4 +1,4 @@
-name: VTEX AI Grammar Reviewer
+name: Review Grammar with AI
 
 on:
   pull_request:
