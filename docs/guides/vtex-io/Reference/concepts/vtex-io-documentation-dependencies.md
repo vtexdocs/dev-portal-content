@@ -36,10 +36,10 @@ An example of the `dependencies` object in an app's `manifest.json` file is show
 
 Declaring dependencies is necessary for many common development scenarios, including:
 
-- Using blocks from the [VTEX Store Framework](https://developers.vtex.com/docs/guides/vtex-store-framework).
+- Using blocks from [VTEX Store Framework](https://developers.vtex.com/docs/guides/store-framework).
 - Importing React components from another app.
 - Importing TypeScript types from a service app.
-- Consuming [GraphQL](https://developers.vtex.com/docs/guides/graphql-ide) or [REST](https://developers.vtex.com/docs/api-reference) definitions declared in another app.
+- Consuming [GraphQL](https://developers.vtex.com/docs/guides/graphql-in-vtex-io) or [REST](https://developers.vtex.com/docs/api-reference) definitions declared in another app.
 - Implementing a GraphQL schema interface from another app.
 
 >⚠️ When you install a VTEX IO app, its dependencies are also installed on the account, but they are treated as indirect dependencies. This means they cannot declare public [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes) or receive public traffic directly.
