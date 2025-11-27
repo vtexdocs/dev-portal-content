@@ -6,13 +6,14 @@ createdAt: "2020-07-21T13:18:17.212Z"
 updatedAt: "2022-12-13T20:17:44.566Z"
 category: "App Development"
 ---
+
 The dependencies property is a JSON object field (`dependencies`) in the app's `manifest.json` file.  
 
-This field **specifies which VTEX IO apps your app relies on to properly work**. Its semantics resembles [`package.json`'s `dependencies`](https://docs.npmjs.com/files/package.json#dependencies) property on Javascript apps.
+This field specifies which VTEX IO apps your app relies on to work. Its semantics resemble [`package.json`'s `dependencies`](https://docs.npmjs.com/files/package.json#dependencies) property on JavaScript apps.
 
 In practice, when an app is installed on a VTEX account, every app included in its manifest's `dependencies` field is automatically installed on the account.
 
-Therefore, if your app needs to interact with another IO app, such as a VTEX API or a store framework block, you may declare it in the `manifest.json` file under `dependencies`, according to the following structure `"{account}.{appName}": "{majorVersion}.x"`.
+Therefore, if your app needs to interact with another IO app, such as a VTEX API or a store framework block, you may declare it in the `manifest.json` file under `dependencies`, according to the following structure: `"{account}.{appName}": "{majorVersion}.x"`.
 
 The `dependencies` object of your app's `manifest.json` file may look something like this:
 
@@ -30,7 +31,7 @@ The `dependencies` object of your app's `manifest.json` file may look something 
   }
 ```
 
-The most recurrent use of VTEX IO apps as dependencies are for:
+The most recurrent uses of VTEX IO apps as dependencies are for:
 
 - Using [VTEX Store Framework blocks](https://developers.vtex.com/docs/vtex-io-apps).
 - Importing React components from another app.
