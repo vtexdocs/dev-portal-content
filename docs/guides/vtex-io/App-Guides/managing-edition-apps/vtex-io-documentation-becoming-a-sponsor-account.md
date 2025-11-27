@@ -10,7 +10,7 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-edition-app"
  - "/docs/guides/vtex-io-documentation-sponsor-account"
 ---
-To become a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) and be able to manage apps and configurations across multiple accounts with [Edition Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app), you must first check if your account meets the conditions described in the [Prerequisites](#prerequisites) section.
+To become a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) and be able to manage apps and configurations across multiple accounts using [Edition Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app), you must first check whether your account meets the conditions described in the [Prerequisites](#prerequisites) section.
 
 If your account is qualified to become a Sponsor Account, follow the [Instructions](#instructions) section to activate this feature for your account.
 
