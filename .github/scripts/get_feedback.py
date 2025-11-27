@@ -6,7 +6,7 @@ user = os.getenv('USER')
 comment_url = os.getenv('COMMENT_URL')
 pr_number = os.getenv('PR_NUMBER')
 
-if "<h2 id=\"ai-feedback\">Was this feedback useful?</h2>" in comment_body:
+if "<h3 id=\"ai-feedback\">Was this feedback useful?</h3>" in comment_body:
     if "- [x] Yes" in comment_body:
         response = "Yes"
     elif "- [x] No" in comment_body:
