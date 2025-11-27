@@ -138,7 +138,7 @@ for f in changed_files:
                     error_found = True
             else:
                 if 'type' in fm_dict:
-                    fieldErrors.append({"field": "type", "message": "'type' should not be present for non-release notes.")
+                    fieldErrors.append({"field": "type", "message": "'type' should not be present for non-release notes."})
                     error_found = True
 
             if f.filename.startswith('docs/guides'):
