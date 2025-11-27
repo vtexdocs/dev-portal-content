@@ -175,7 +175,7 @@ if file_errors:
         generic = issues["generic"]
         fields = issues["fields"]
 
-        comment_body = f"#### `{filename}`\n\n"
+        comment_body = comment_body + f"#### `{filename}`\n\n"
 
         # Lista de erros gerais
         if generic:
