@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2025-10-31T17:07:05.899Z"
 ---
 
-In this guide, you'll learn how to install and use the Activity Flow SDK in React Native apps for Android and iOS. By following these steps, you'll be able to track user navigation, order placements, deep links, and ad events in your application.
+In this guide, you'll learn how to install and use the Activity Flow SDK in React Native apps for Android and iOS. By following these steps, you'll be able to track user navigation, order events, deep links, and ad events in your app.
 
 ## Before you begin
 
@@ -106,7 +106,7 @@ Activity Flow now automatically tracks page transitions. When you navigate betwe
 
 The Activity Flow SDK can automatically capture order details from navigation parameters, such as `orderGroup` or `orderPlaced`, and any query parameters from the navigator stack. These parameters help validate checkout events and confirm successful purchases.
 
-To enable this feature, include the necessary parameter in your page redirect configuration. See the example below:
+To enable this feature, include the required parameter in your page redirect configuration. See the example below:
 
 ```ts //checkout_screen.tsx
 <TouchableOpacity
@@ -122,15 +122,15 @@ To enable this feature, include the necessary parameter in your page redirect co
 </TouchableOpacity>
 ```
 
-When the user completes a purchase, Activity Flow automatically captures orderGroup and other query parameters during the screen transition.
+When a user completes a purchase, Activity Flow automatically captures orderGroup and other query parameters during the screen transition.
 
 ### Tracking deep links
 
-The Activity Flow SDK automatically captures deep links' query parameters from the `usePageViewObserver` hook and includes them in page view events. To enable this feature, configure deep linking in your app according to its platform: [Android](#android) or [iOS](#ios).
+The Activity Flow SDK automatically captures deep-link query parameters from the `usePageViewObserver` hook and includes them in page view events. To enable this feature, configure deep linking in your app according to its platform: [Android](#android) or [iOS](#ios).
 
 #### Android
 
-To enable deep link handling in your Android app, add intent filters to the `AndroidManifest.xml` file for each route that can be accessed via deep link. See the example below:
+To enable deep-link handling in your Android app, add intent filters to the `AndroidManifest.xml` file for each route that can be accessed via a deep link. See the example below:
 
 ```xml AndroidManifest.xml
 <!-- Deep link via HTTPS -->
@@ -156,13 +156,13 @@ To enable deep link handling in your Android app, add intent filters to the `And
 This `AndroidManifest` adds two intent filters for deep linking:
 
 - One for HTTPS URLs starting with `"https://example.com/{APP_ROUTE}"`.
-- One for a custom scheme `"{YOUR_CUSTOM_SCHEME}"`. Both use `action.VIEW`, `category_DEFAULT`, and `category_BROWSABLE`, enabling the Activity Flow to launch from browsers or other apps.
+- One for a custom scheme `"{YOUR_CUSTOM_SCHEME}"`. Both use `action.VIEW`, `category_DEFAULT`, and `category_BROWSABLE`, allowing the Activity Flow to launch from browsers or other apps.
 The data tag for deep link via HTTP specifies the `scheme`, `host`, and an optional `pathPrefix`, matching any path that begins with that prefix (for example, **"/products/42"** if `{APP_ROUTE}` is **"/products"**). The main difference between intent filters for different routes is the `android:pathPrefix` attribute, which specifies the app route.
 For a deep link via a custom scheme, the data tag sets the scheme, matching any URL that starts with that scheme (for example, **myapp://...** if `{YOUR_CUSTOM_SCHEME}` is **myapp**).
 
 #### iOS
 
-To enable deep link handling in your iOS app, add your URL scheme to the `Info.plist` file and handle incoming URLs in the `AppDelegate` file:
+To enable deep-link handling in your iOS app, add your URL scheme to the `Info.plist` file and handle incoming URLs in the `AppDelegate` file:
 
 1. Register your custom URL scheme by adding the following configuration to your `Info.plist` file:
 
@@ -180,9 +180,9 @@ To enable deep link handling in your iOS app, add your URL scheme to the `Info.p
 </array>
 ```
 
-In the `info.plist` configuration, `{YOUR_BUNDLE_URL_SCHEME}` is the custom URL scheme your app will handle, that is, the prefix before `://` in deep links. For example, setting it to `myapp` makes links like `myapp://path` open your app. Enter only the scheme name, without `://`. The `{YOUR_BUNDLE_URL_NAME}` label is a unique identifier for this URL type entry, typically in reverse-DNS format, used to distinguish the configuration and not to affect routing. For example, `com.example.appname`.
+In the `info.plist` configuration, `{YOUR_BUNDLE_URL_SCHEME}` is the custom URL scheme your app will handle, that is, the prefix before `://` in deep links. For example, setting it to `myapp` makes links like `myapp://path` open your app. Enter only the scheme name, without `://`. The `{YOUR_BUNDLE_URL_NAME}` label is a unique identifier for this URL type entry, typically in reverse-DNS format, used to distinguish the configuration and doesn't affect routing. For example, `com.example.appname`.
 
-2. Handle incoming deep links by modifying your `AppDelegate.swift` (or `AppDelegate.mm`) file. The following example handles deep links for cold starts, when the app is not running, and warm starts, when the app is already running.
+2. Handle incoming deep links by modifying your `AppDelegate.swift` (or `AppDelegate.mm`) file. The following example handles deep links for cold starts, when the app isn't running, and warm starts, when the app is already running.
 
 ```ts AppDelegate.swift
 import UIKit
@@ -255,13 +255,13 @@ Your Android app can now be launched from both web links (`https://mystore.com/p
 
 ### Tracking ad events
 
->ℹ️ The ads tracking is available only for accounts that use [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads). If you're interested in this feature, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
+>ℹ️ Ad tracking is available only for accounts that use [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads). If you're interested in this feature, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
 
-To configure the ads tracking, follow these steps:
+To configure ad tracking, follow these steps:
 
-1. Create the ads object
+1. Create the ad object
 
-To track events, provide an object containing all information relevant to the ad event. The accountName field is mandatory; if omitted, events are not sent. See the example below.
+To track events, provide an object containing all information relevant to the ad event. The accountName field is mandatory.
 
 ```ts
 const adParams = {
@@ -294,7 +294,7 @@ Use this method when your entire child component represents a clickable ad. See 
 </AFAdsTracker>
 ```
 
-Below is an implementation example of a React Native app using @vtex/activity-flow with React Navigation to track navigation through multiple screens and ad events in a single location.
+The example below shows a React Native app that uses @vtex/activity-flow with React Navigation to track navigation across multiple screens and ad events from a single location.
 
 ```ts
 // App.tsx
@@ -398,11 +398,11 @@ export default function App() {
 
 The app initializes tracking via `initActivityFlow` with your VTEX account name, and enables automatic page view tracking by calling `usePageViewObserver` with a `NavigationContainer` ref.
 
-On the Ads screen, ad parameters (including the mandatory `accountName`) are passed to the AFAdsTracker wrapper, which surrounds a fully clickable child to automatically fire impression, view, and click events without manual handler wiring.
+On the Ads screen, ad parameters (including the required `accountName`) are passed to the AFAdsTracker wrapper, which wraps a fully clickable child to automatically fire impression, view, and click events without manual handler wiring.
 
-The wrapper detects clicks via `onTouchEndCapture`. If your ad interaction isn’t based on it or cannot be wrapped, [use the `useAdsTracker` hook](#using-the-useadstracker-hook) instead.
+The wrapper detects clicks via `onTouchEndCapture`. If your ad interaction isn't based on it or can't be wrapped, [use the `useAdsTracker` hook](#using-the-useadstracker-hook) instead.
 
->⚠️ To use this example in your project, remember to replace `accountName` according to your scenario.
+>⚠️ To use this example in your project, remember to replace `accountName` based on your scenario.
 
 #### Using the `useAdsTracker` hook
 
@@ -410,7 +410,7 @@ The `useAdsTracker` hook provides more control over how events are attached. It 
 
 Use this method when:
 
-- You cannot use an extra `<View>` to wrap your component.
+- You can't use an extra `<View>` to wrap your component.
 - The component that receives events (for example, a `TouchableOpacity`) is different from the component that defines the visibility area.
 - You integrate with third-party component libraries that don’t allow a generic wrapper.
 - The click property isn't `onTouchEnd`, since the **AFAdsTracker** wrapper uses `onTouchEndCapture`.
@@ -472,4 +472,4 @@ onPress={handlePress} // Attach the click handler (click)
 };
 ```
 
-The component's purpose is to render an advertisement within a touchable container and report three key events to the tracking system: **impression**, **view**, and **click**.
+The component's purpose is to render an ad inside a touchable container and report three key events to the tracking system: **impression**, **view**, and **click**.
