@@ -96,7 +96,7 @@ If you are developing a GraphQL app, add the `@settings` directive to all querie
 
 A [GraphQL Directive](https://graphql.org/learn/queries/#directives) is a way of changing how the query will be performed. When you add the `settings` directive, the system knows it must search for configurations for that service. Under the hood, this directive includes an additional step in the query, which is responsible for finding all configurations and adding them to the context.
 
-Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app as an example. In this app's root directory, you'll see the following file `grapqhl/schema.graphql`. Now, if you open it and add the `@settings` directive to the query `book`, you'll have something like:
+Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app as an example. In this app's root directory, you'll see the following file `graphql/schema.graphql`. Now, if you open it and add the `@settings` directive to the query `book`, you'll have something like:
 
 ```diff
  type Query {
