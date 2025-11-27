@@ -1,4 +1,4 @@
-### **Summary**
+### Summary
 
 Provide a concise description of the change introduced by this PR.
 *Example: “Updates the Checkout overview to include new webhook behavior.”*
