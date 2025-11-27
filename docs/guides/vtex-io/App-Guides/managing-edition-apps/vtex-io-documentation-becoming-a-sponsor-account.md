@@ -14,7 +14,7 @@ To become a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-do
 
 If your account is qualified to be a Sponsor Account, follow the [Instructions](#instructions) section to activate this behavior on your account.
 
-## Prerequisites
+## Before you begin
 
 To be eligible to become a Sponsor account, make sure you have:
 
@@ -32,7 +32,7 @@ If your account meets the prerequisites described in the previous section, take 
     - The names of the accounts that the main account will sponsor.
 
     The VTEX team will evaluate your request and take the necessary measures to allow your main account to sponsor others.
-2. Once you receive a successful reply from the support ticket, you must [create, deploy and release your Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-configuring-an-edition-app).
+2. Once you receive a successful reply from the support ticket, you must [create, deploy, and release your Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-configuring-an-edition-app).
 3. [Open a new ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to the VTEX Support team asking for the installation of your new Edition App on the desired accounts.
 
 Once you receive a successful reply from your support ticket, you'll be able to have child accounts sponsored by the account you just used to develop and release your new Edition App.
