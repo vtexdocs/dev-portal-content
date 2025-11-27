@@ -17,7 +17,7 @@ To do this, follow the walk-through below:
 1. Open the Edition App folder and access the `apps.json` file using the code editor of your preference.
 2. Make the desired apps and settings changes in the file.
     >⚠️ In a scenario in which an app that is already installed on the account is added to the Edition, the type of installation of that app will become `edition` and it can no longer be removed from the accounts or undergo any changes in major version since the Edition now enforces it. Similarly, removing apps from `apps.json` will automatically uninstall them from all child accounts with this Edition. If a removed app is still needed in some of the child accounts, it must be manually and individually reinstalled in each desired child account.
-3. Save and commit your changes;
+3. Save and commit your changes.
 4. [Publish and deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) the new Edition version.
 
 After the new version is published, the Edition is automatically updated in all accounts. This automatic update is done asynchronously, periodically, and individually in each child account.
