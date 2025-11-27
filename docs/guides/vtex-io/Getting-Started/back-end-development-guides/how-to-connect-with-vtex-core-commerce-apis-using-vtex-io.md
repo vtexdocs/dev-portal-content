@@ -77,7 +77,7 @@ Ensure a smooth development process by having the following prerequisites in pla
 
     ```ts ./node/clients/myClient.ts mark=10
     import type { InstanceOptions, IOContext } from '@vtex/api'
-    import { JanusClient } from ‘@vtex/api’
+    import { JanusClient } from '@vtex/api'
     
     export default class MyClient extends JanusClient {
         constructor(context: IOContext, options?: InstanceOptions) {
