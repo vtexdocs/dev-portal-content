@@ -152,7 +152,7 @@ for f in changed_files:
                 missing_fields = not_present_keys(ts_mandatory_fields, fm_dict)
                 if missing_fields:
                     for mf in missing_fields:
-                        fieldErrors.append({"field": `{mf}`, "message": `Missing required field: {mf}`})
+                        fieldErrors.append({"field": mf, "message": f"Missing required field: '{mf}'"})
                     error_found = True
 
         else:
