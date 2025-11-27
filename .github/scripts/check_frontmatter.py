@@ -47,7 +47,7 @@ for f in changed_files:
     content = repo.get_contents(f.filename, ref=pr.head.ref)
     text = content.decoded_content.decode('utf-8')
     generic_errors = []
-    fieldErrors = []
+    field_errors = []
 
     # Extract frontmatter
     if text.startswith('---'):
@@ -75,51 +75,51 @@ for f in changed_files:
             for key, value in fm_dict.items():
                 if key == 'title':
                     if not isinstance(value, str) or not value:
-                        fieldErrors.append({"field": "title", "message": "'title' must be a non-empty string"})
+                        field_errors.append({"field": "title", "message": "'title' must be a non-empty string"})
                         error_found = True
                     continue
                 if key == 'excerpt':
                     if not isinstance(value, str):
-                        fieldErrors.append({"field": "excerpt", "message": "'excerpt' must be a string"})
+                        field_errors.append({"field": "excerpt", "message": "'excerpt' must be a string"})
                         error_found = True
                     continue
                 if key == 'slug':
                     if not (isinstance(value, str) and re.fullmatch(r'[a-z0-9\-]+', value)):
-                        fieldErrors.append({"field": "slug", "message": "'slug' must contain only lowercase letters, numbers, and hyphens"})
+                        field_errors.append({"field": "slug", "message": "'slug' must contain only lowercase letters, numbers, and hyphens"})
                         error_found = True
                     if value != f.filename.split('/')[-1].replace('.mdx', '').replace('.md', ''):
-                        fieldErrors.append({"field": "slug", "message": "'slug' must match the filename without extension"})
+                        field_errors.append({"field": "slug", "message": "'slug' must match the filename without extension"})
                         error_found = True
                     continue
                 if key == 'hidden':
                     if not isinstance(value, bool):
-                        fieldErrors.append({"field": "hidden", "message": "'hidden' must be a boolean"})
+                        field_errors.append({"field": "hidden", "message": "'hidden' must be a boolean"})
                         error_found = True
                     continue
                 if key == 'createdAt':
                     if not (isinstance(value, str) and iso8601_regex.match(value)):
-                        fieldErrors.append({"field": "createdAt", "message": "'createdAt' must be in ISO 8601 format (YYYY-MM-DDThh:mm:ss.sssZ)."})
+                        field_errors.append({"field": "createdAt", "message": "'createdAt' must be in ISO 8601 format (YYYY-MM-DDThh:mm:ss.sssZ)."})
                         error_found = True
                     continue
                 if key == 'updatedAt':
                     if not (isinstance(value, str) and iso8601_regex.match(value)):
-                        fieldErrors.append({"field": "updatedAt", "message": "'updatedAt' must be in ISO 8601 format (YYYY-MM-DDThh:mm:ss.sssZ)."})
+                        field_errors.append({"field": "updatedAt", "message": "'updatedAt' must be in ISO 8601 format (YYYY-MM-DDThh:mm:ss.sssZ)."})
                         error_found = True
                     continue
                 if key == 'tags':
                     if not (isinstance(value, list)):
-                        fieldErrors.append({"field": "tags", "message": "'tags' must be a list"})
+                        field_errors.append({"field": "tags", "message": "'tags' must be a list"})
                         error_found = True
                     continue
                 if key == 'type':
                     allowed_types = {"added", "deprecated", "fixed", "improved", "info", "removed"}
                     if not (isinstance(value, str) and value in allowed_types):
-                        fieldErrors.append({"field": "type", "message": "'type' must be one of: added, deprecated, fixed, improved, info, removed"})
+                        field_errors.append({"field": "type", "message": "'type' must be one of: added, deprecated, fixed, improved, info, removed"})
                         error_found = True
 
             # Validate mandatory fields for all doc types
             if 'title' not in fm_dict:
-                fieldErrors.append({"field": "title", "message": "Missing required field: 'title'"})
+                field_errors.append({"field": "title", "message": "Missing required field: 'title'"})
                 error_found = True
 
             # Validate fields by doc type using folder structure
@@ -134,25 +134,25 @@ for f in changed_files:
                 missing_fields = not_present_keys(rn_mandatory_fields, fm_dict)
                 if missing_fields:
                     for mf in missing_fields:
-                        fieldErrors.append({"field": mf, "message": f"Missing required field: '{mf}'"})
+                        field_errors.append({"field": mf, "message": f"Missing required field: '{mf}'"})
                     error_found = True
             else:
                 if 'type' in fm_dict:
-                    fieldErrors.append({"field": "type", "message": "'type' should not be present for non-release notes."})
+                    field_errors.append({"field": "type", "message": "'type' should not be present for non-release notes."})
                     error_found = True
 
             if f.filename.startswith('docs/guides'):
                 missing_fields = not_present_keys(guides_mandatory_fields, fm_dict)
                 if missing_fields:
                     for mf in missing_fields:
-                        fieldErrors.append({"field": mf, "message": f"Missing required field: '{mf}'"})
+                        field_errors.append({"field": mf, "message": f"Missing required field: '{mf}'"})
                     error_found = True
 
             if f.filename.startswith('docs/troubleshooting'):
                 missing_fields = not_present_keys(ts_mandatory_fields, fm_dict)
                 if missing_fields:
                     for mf in missing_fields:
-                        fieldErrors.append({"field": mf, "message": f"Missing required field: '{mf}'"})
+                        field_errors.append({"field": mf, "message": f"Missing required field: '{mf}'"})
                     error_found = True
 
         else:
