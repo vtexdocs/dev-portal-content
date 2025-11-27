@@ -76,7 +76,7 @@ Ensure a smooth development process by having the following prerequisites in pla
 3. In the constructor, set the `VtexIdclientAutCookie` header with the required token for authorization. Use `ctx.authToken` for the app's token, or `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken` for requests from VTEX Admin or VTEX Storefront, respectively. Refer to [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) for more information.
 
     ```ts ./node/clients/myClient.ts mark=10
-    import type { InstanceOptions, IOContext } from ‘@’vtex/api’
+    import type { InstanceOptions, IOContext } from '@vtex/api'
     import { JanusClient } from ‘@vtex/api’
     
     export default class MyClient extends JanusClient {
