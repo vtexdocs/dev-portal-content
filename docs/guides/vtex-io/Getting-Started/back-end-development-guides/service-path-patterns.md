@@ -34,7 +34,7 @@ There are three possible path formats, each influencing the behavior of your ser
 Let's delve into these patterns using an illustrative example of implementing the service `/examplepath/123`. You can change how VTEX handles requests to this service by appending `/_v/segment` or `/_v/private` to the beginning of your path. This means you have three possible paths in this example:
 
 - **Public:** `/examplepath/123`
-- **Segment dependant:** `/_v/segment/examplepath/123`
+- **Segment dependent:** `/_v/segment/examplepath/123`
 - **Private:** `/_v/private/examplepath/123`
 
 VTEX has an edge layer that handles all requests to the platform, including those related to VTEX IO apps. Given this architecture, each of these possible paths is handled differently in terms of caching and cookie management. Refer to the [Sessions System](https://developers.vtex.com/docs/guides/sessions-system-overview) guide to learn more about how VTEX handles cookies.
@@ -49,6 +49,6 @@ Check the table below for a comprehensive overview of the behavior of different 
 
 ## Troubleshooting
 
-### Unavailable cookies with Cloudfront CDN
+### Unavailable cookies with CloudFront CDN
 
-If your store uses Cloudfront as a CDN and you encounter difficulties in obtaining the desirable cookies from the app’s service context, [open a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) with the VTEX support team reporting the issue.
+If your store uses CloudFront as a CDN and you encounter difficulties in obtaining the desirable cookies from the app’s service context, [open a ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) with the VTEX support team reporting the issue.
