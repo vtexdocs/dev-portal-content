@@ -14,7 +14,7 @@ To become a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-do
 
 If your account is qualified to become a Sponsor Account, follow the [Instructions](#instructions) section to activate this feature for your account.
 
-## Before you begin
+## Prerequisites
 
 To be eligible to become a Sponsor Account, ensure you have the following:
 
