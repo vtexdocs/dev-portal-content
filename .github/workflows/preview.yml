@@ -96,7 +96,7 @@ jobs:
                   console.log(previewUrl)
                 } else {
                   status = '✅ Listed'
-                  previewUrl += `* https://developers.vtex.com/${paths[slug]}\n`;
+                  previewUrl += `https://developers.vtex.com/${paths[slug]}`;
                 }
 
                 output += `| \`${file}\` | ${previewUrl} | ${status} |\n`
