@@ -170,11 +170,12 @@ for f in changed_files:
 
 # Post a comment per file with errors
 if file_errors:
+    comment_body = f"### 🏷️ Frontmatter errors\n\n"
     for filename, issues in file_errors.items():
         generic = issues["generic"]
         fields = issues["fields"]
 
-        comment_body = f"### 🏷️ Frontmatter errors in `{filename}`\n\n"
+        comment_body = f"#### `{filename}`\n\n"
 
         # Lista de erros gerais
         if generic:
