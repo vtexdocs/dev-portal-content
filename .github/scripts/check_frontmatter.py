@@ -127,8 +127,8 @@ for f in changed_files:
                 return [key for key in keys if key not in dict]
 
             rn_mandatory_fields = ['type', 'slug', 'excerpt', 'createdAt']
-            guides_mandatory_fields = ['slug', 'excerpt', 'createdAt']
-            ts_mandatory_fields = ['tags', 'slug', 'excerpt', 'createdAt']
+            guides_mandatory_fields = ['slug', 'excerpt']
+            ts_mandatory_fields = ['tags', 'slug', 'excerpt']
 
             if f.filename.startswith('docs/release-notes'):
                 missing_fields = not_present_keys(rn_mandatory_fields, fm_dict)
