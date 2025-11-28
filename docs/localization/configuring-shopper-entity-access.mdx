@@ -4,7 +4,7 @@ hidden: true
 excerpt: "Learn how to configure API credentials to enable Shopper entity data in your B2B FastStore My Account pages."
 ---
 
-To enable access to shopper information in My Account pages, such as the data displayed in the **Ordered by** card on the order details page, you need to configure the appropriate permissions and API credentials.
+To display shopper information on My Account pages, such as the details shown in the **Ordered by** card on the order details page, you must configure the required permissions and API credentials.
 
 ## Before you begin
 
@@ -15,7 +15,7 @@ Make sure you have [enabled the My Account feature](https://developers.vtex.com/
 1. Access the VTEX Admin, go to **Account Settings > User Roles**.
 2. Create a new role or edit an existing one by adding the **Dynamic Storage** product to the role.
 
-    ![my-account-shopper-entity](https://vtexhelp.vtexassets.com/assets/docs/src/my-account-shopper-entity___c5d21f97626fb82a3077eabfc304e785.gif)
+![my-account-shopper-entity](https://vtexhelp.vtexassets.com/assets/docs/src/my-account-shopper-entity___c5d21f97626fb82a3077eabfc304e785.gif)
 
 3. Under **Resources**, select the **Read only documents** permission.
 4. Save the role.
@@ -28,10 +28,10 @@ After creating the role, you need to generate an API key to authenticate FastSto
 2. In the **Generated** tab, click `Generate Key`.
 3. Complete the fields with the following:
 
-    |Field name | Description | Value example |
-    | --------- | ----------- | ----- |
-    | Key identification | Name that identifies the key | `FS SHOPPER API KEY` |
-    | Roles | Select one or more roles for the key | Select the role created in Step 1, `FS shopper entity` |
+|Field name | Description | Value example |
+| --------- | ----------- | ----- |
+| Key identification | Name that identifies the key | `FS SHOPPER API KEY` |
+| Roles | Select one or more roles for the key | Select the role created in Step 1, `FS shopper entity` |
 
 4. Click `Generate`.
 
@@ -45,10 +45,10 @@ You need to add the API credentials to your project using environment variables.
 
 Follow the [Managing Secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) guide to securely store your credentials to your project:
 
-    | Key       | Value       |
-    | --------- | ----------- |
-    | `FS_DISCOVERY_APP_KEY` | `YOUR_APP_KEY` |
-    | `FS_DISCOVERY_APP_TOKEN` | `YOUR_APP_TOKEN` |
+| Key | Value |
+| --------- | ----------- |
+| `FS_DISCOVERY_APP_KEY` | `YOUR_APP_KEY` |
+| `FS_DISCOVERY_APP_TOKEN` | `YOUR_APP_TOKEN` |
 
 >⚠️ Replace `YOUR_APP_KEY` and `YOUR_APP_TOKEN` with the **App Key** and **App Token** credentials you saved in the [previous step](#step-2-generating-an-api-key).
 
