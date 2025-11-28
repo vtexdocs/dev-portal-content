@@ -1,5 +1,5 @@
 ---  
-title: "Upgrading from FastStore v2 to v3"  
+title:"Upgrading from FastStore v2 to v3"  
 ---
 
 Stores using FastStore v2 hosted in the account's GitHub organization must upgrade to v3. In this guide, you'll learn the process for keeping your FastStore project up to date, avoiding breaking changes to your storefront.
@@ -13,7 +13,7 @@ Stores using FastStore v2 hosted in the account's GitHub organization must upgra
 1. Open your store project in the code editor of your choice.
 2. Open the terminal and run `yarn upgrade @faststore/cli` to update the `@faststore/cli` package to the latest version.
 
-### Step 2 - Rename the [`faststore.config.js`](http://faststore.config.js) file
+### Step 2 - Rename the `faststore.config.js` file
 
 1. In your store project, go to the [`faststore.config.js`](http://faststore.config.js) file and rename it to [`discovery.config.js`](http://discovery.config.js).
 2. Update any references pointing to [`faststore.config.js`](http://faststore.config.js) to use [`discovery.config.js`](http://discovery.config.js) instead.
