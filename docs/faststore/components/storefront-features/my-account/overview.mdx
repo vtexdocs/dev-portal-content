@@ -24,6 +24,16 @@ My Account includes several default pages that are essential for managing a cust
 | `src/pages/pvt/account/profile.tsx` | Displays editable profile settings, allowing users to update personal information. |
 | `src/pages/pvt/account/orders/index.tsx` | Displays a list of all past and current orders placed by the user, including summary details for each. |
 
+### Orders page filtering
+
+The orders page features filtering capabilities that enable users to locate specific orders quickly. By default, the following filter options are available:
+
+- **Pending my approval:** Toggle filter that shows only orders requiring user approval. When active, the filter state is reflected in the URL as `?pendingApproval=true`, and a `Pending my approval` tag appears below the search bar.
+
+- **Status:** Filter orders by their current status, such as Order Placed, Payment Pending, Invoiced, etc.
+
+- **Order date:** Filter orders by creation date using date initial and date final parameters.
+
 ## Before you begin
 
 Make sure you're using the latest version of `@faststore/cli`.  If the version is not updated, see [Updating the `@faststore/cli` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
