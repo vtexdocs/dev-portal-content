@@ -62,7 +62,7 @@ In this guide, we will create a custom Client example for communicating with Git
 
 4. Open the app's `manifest.json` file and add the necessary [Policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies). Policies are a set of permissions granted to an app, allowing or forbidding it to execute a given set of actions, such as making requests to an external resource. For this example, we will use the `outbound-access` policy to communicate with GitHub APIs (`api.github.com`).
 
-    ```json
+    ```json manifest.json
     "policies": [
       {
         "name": "outbound-access",
@@ -83,8 +83,7 @@ In this guide, we will create a custom Client example for communicating with Git
 3. Implement the TypeScript class that extends the appropriate [Client type](#client-types) from `@vtex/api`. In this example, we will create the `GithubClient`. Also, since we are communicating with GitHub's external APIs, we will use `ExternalClient`.
 4. Use [`InstanceOptions`](#instanceoptions) as needed, configuring options such as authentication, timeout, caching, and more based on your requirements.
 
-```ts
-//node/clients/github.ts
+```ts node/clients/github.ts
 import type { IOContext, InstanceOptions } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
 
@@ -103,14 +102,13 @@ export default class GithubClient extends ExternalClient {
 }
 ```
 
-Ensure to export the Client from its module (either [default or named export](https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910)).
+Ensure to export the Client from its module, either [default or named export](https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910).
 
 ### Step 3 - Implementing Client methods
 
 Within your Client TypeScript file, implement the methods for your Client. You can leverage the methods provided by the [HttpClient](#httpclient-methods) to build your own methods. For example:
 
-```ts
-//node/clients/github.ts
+```ts node/clients/github.ts
 import type { RestEndpointMethodTypes } from '@octokit/rest'
 
 ...
@@ -131,9 +129,10 @@ import type { RestEndpointMethodTypes } from '@octokit/rest'
 
 Below we have the complete code example:
 
-```ts
-//node//github.ts
-// VTEX API core types
+<CH.Scrollycoding>
+
+<CH.Code>
+```ts node/github.ts focus=1:2
 import type { IOContext, InstanceOptions } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
 import type { RestEndpointMethodTypes } from '@octokit/rest'
@@ -143,9 +142,7 @@ interface GitRepo {
   repo: string
 }
 
-// Type of the Client, used to connect with external APIs
 export default class GithubClient extends ExternalClient {
-  // Routes map (not mandatory to do it like this)
   private routes = {
     repo: ({ owner, repo }: GitRepo) => `/repos/${owner}/${repo}`,
     user: ({ username }: { username: string }) => `/users/${username}`,
@@ -153,7 +150,6 @@ export default class GithubClient extends ExternalClient {
     searchRepos: () => '/search/repositories',
   }
 
-  // Configuration options to each request of this Client. It extends AxiosRequestConfig adding some IO-specific options
   constructor(context: IOContext, options?: InstanceOptions) {
     super('https://api.github.com', context, {
       ...options,
@@ -168,7 +164,6 @@ export default class GithubClient extends ExternalClient {
     return this.http.get<RestEndpointMethodTypes['repos']['get']['response']>(
       this.routes.repo({ owner, repo }),
       {
-        // The metric parameter gives a name to identify each HTTP call
         metric: 'git-repo-get',
         headers: {
           Accept: 'application/vnd.github.nebula-preview+json',
@@ -179,7 +174,6 @@ export default class GithubClient extends ExternalClient {
   }
 
   public async getUser({ username }: { username: string }) {
-    // Using getRaw method is useful for  retrieving other info about the response, such as headers. The get method retrieves just the body.
     const response = await this.http.getRaw<
       RestEndpointMethodTypes['users']['getByUsername']['response']
     >(this.routes.user({ username }), { metric: 'git-user-get' })
@@ -215,12 +209,58 @@ export default class GithubClient extends ExternalClient {
       RestEndpointMethodTypes['search']['repos']['response']
     >(this.routes.searchRepos(), {
       metric: 'git-search-repos',
-      // The query parameters are passed using this format, resulting in ?q={{query}} being appended to the request's URL
       params: { q: query },
     })
   }
 }
 ```
+</CH.Code>
+
+VTEX API core types.
+
+---
+
+Type of the Client, used to connect with external APIs.
+
+```ts node/github.ts focus=10:10 mark=10:10[43:56]
+```
+
+---
+
+Routes map. It is not mandatory to do it this way.
+
+```ts node/github.ts focus=11:16
+```
+
+---
+
+Configuration options to each request of this Client. It extends `AxiosRequestConfig` adding some IO-specific options.
+
+```ts node/github.ts focus=21:24
+```
+
+---
+
+The metric parameter gives a name to identify each HTTP call.
+
+```ts node/github.ts focus=32:32
+```
+
+---
+
+The `getRaw` method retrieves additional information about the response, such as headers. The `get` method retrieves only the response body.
+
+```ts node/github.ts focus=42:45 mark=42[38:43]
+```
+
+---
+
+The query parameters are passed using this format, resulting in `?q={{query}}` being appended to the request's URL.
+
+```ts node/github.ts focus=77:77
+```
+
+</CH.Scrollycoding>
 
 ### Step 4 - Exporting custom clients
 
