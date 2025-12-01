@@ -5,7 +5,9 @@ excerpt: "Learn how to implement semantic HTML updates across your Store Framewo
 createdAt: "2025-12-01T20:18:43.466Z"
 ---
 
-In this guide, you'll learn how to enable the `a11ySemanticHtmlMigration` flag, which allows you to implement semantic HTML updates across Store Framework components progressively. This feature allows your store to adhere to accessibility best practices, benefiting shoppers who use assistive technologies, while maintaining your existing customizations.
+In this guide, you'll learn how to enable the `a11ySemanticHtmlMigration` flag, which allows you to implement semantic HTML updates across Store Framework components progressively.
+
+This feature allows your store to adhere to accessibility best practices, benefiting shoppers who use assistive technologies, while maintaining your existing customizations.
 
 ## Before you begin
 
@@ -23,7 +25,7 @@ Create a [development workspace](https://developers.vtex.com/docs/guides/vtex-io
 
 ![semantic-html](https://vtexhelp.vtexassets.com/assets/docs/src/semantic-html___3f810f66cd47bd76760fe3f56783a779.gif)
 
-When this flag is enabled, the following native components automatically render using proper semantic HTML elements, such as <label>, <main>, and <nav>:
+When this flag is enabled, the following native components automatically render using proper semantic HTML elements, such as `<label>`, `<main>`, and `<nav>`:
 
 - [`product-quantity`](https://developers.vtex.com/docs/apps/vtex.product-quantity)
 - [`product-summary`](https://developers.vtex.com/docs/apps/vtex.product-summary)
