@@ -89,14 +89,60 @@ const extractLinks = (content) => {
   return links;
 };
 
+const BROWSER_UA =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(url, {
+      redirect: "follow",
+      headers: {
+        "User-Agent": BROWSER_UA,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        ...options.headers,
+      },
+      signal: controller.signal,
+      ...options,
+    });
+
+    return response;
+  } finally {
+    clearTimeout(id);
+  }
+}
+
 // Check if a link is broken (404 or other errors)
+// states: "valid" | "invalid" | "unknown" 
 async function checkLink(url) {
   try {
-    const response = await fetch(url);
-    return { isValid: response.ok, statusCode: response.status }; 
+    let response = await fetchWithTimeout(url, { method: "HEAD" });
+
+    if (!response.ok && [405, 501].includes(response.status)) {
+      response = await fetchWithTimeout(url, { method: "GET" });
+    }
+
+    const status = response.status;
+
+    // likely auth / rate limit
+    const ambiguous = [401, 403, 429];
+    if (ambiguous.includes(status) || status >= 500 ) {
+      return { state: "unknown", statusCode: status };
+    }
+
+    if (response.ok) {
+      return { state: "valid", statusCode: status };
+    }
+
+    // e.g. 404, 410, 500, etc.
+    return { state: "invalid", statusCode: status };
   } catch (error) {
-    console.error(`Error checking link ${url}: ${error.message}`);
-    return false;
+    console.log(`Error checking link ${url}: ${error.message}`);
+
+    return { state: "unknown", statusCode: null, error };
   }
 }
 
@@ -106,12 +152,14 @@ async function checkLinksInFile(content) {
   const issues = [];
 
   for (const link of links) {
-    const { isValid, statusCode } = await checkLink(link.url);
-    if (!isValid) {
+    const { state, statusCode } = await checkLink(link.url);
+    if (state === "invalid") {
       // Format the issue message with line and column numbers
       const issue = `${filePath}:${link.lineNumber}:${link.columnNumber}:🚨 **Found a broken link in a ${link.type} (Error ${statusCode}):**<br> ${link.url}<br><br><blockquote>👉 Please review this link before merging your Pull Request.</blockquote>`;
       issues.push(issue);
-    }
+    } else if (state === "unknown") {
+      console.log(`Could not reliably check link: ${link.url}`);
+    } 
   }
 
   return issues;
