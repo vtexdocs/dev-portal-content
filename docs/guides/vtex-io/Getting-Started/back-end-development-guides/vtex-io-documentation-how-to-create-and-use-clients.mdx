@@ -216,32 +216,36 @@ export default class GithubClient extends ExternalClient {
 ```
 </CH.Code>
 
-VTEX API core types.
+VTEX API core types:
+
+- `IOContext`: Contains the VTEX IO context data, such as account, workspace, locale, authentication token, etc.
+- [`InstanceOptions`](#instanceoptions): The options for configuring your `HttpClient` instance.
+- `ExternalClient`: The base Client class for communicating with external APIs.
 
 ---
 
-Type of the Client, used to connect with external APIs.
+Type of the base Client that the custom Client extends from. Used to connect with external APIs.
 
 ```ts node/github.ts focus=10:10 mark=10:10[43:56]
 ```
 
 ---
 
-Routes map. It is not mandatory to do it this way.
+A variable to store a map of routes for each method implemented in the Client. This structure is not mandatory, but it makes the code more readable when calling the `HttpClient` methods.
 
 ```ts node/github.ts focus=11:16
 ```
 
 ---
 
-Configuration options to each request of this Client. It extends `AxiosRequestConfig` adding some IO-specific options.
+Configuration options to each request of this Client. It extends `AxiosRequestConfig` adding some IO-specific options. In this example, we are setting the number of retries and the `Accept` header to indicate the desired format to receive.
 
 ```ts node/github.ts focus=21:24
 ```
 
 ---
 
-The metric parameter gives a name to identify each HTTP call.
+The `metric` parameter gives a name to identify each HTTP call for analytics purposes.
 
 ```ts node/github.ts focus=32:32
 ```
