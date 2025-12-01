@@ -3,7 +3,7 @@ title: "Google One-tap login"
 slug: "google-one-tap-login"
 hidden: false
 createdAt: "2020-07-30T19:58:25.203Z"
-updatedAt: "2025-11-12T20:00:32.997Z"
+updatedAt: "2025-12-01T20:00:32.997Z"
 ---
 
 In this guide, you'll learn how to set up the Google One-tap login feature in your store.
