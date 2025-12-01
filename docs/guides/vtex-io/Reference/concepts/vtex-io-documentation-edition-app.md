@@ -27,9 +27,9 @@ There are currently four versions of the Edition Store available. Next, you can 
 | 4.x | ❌ | ✅ | ✅ | ❌ |
 | 5.x | ❌ | ✅ | ✅ | ✅ |
 
->⚠️ If you are [migrating from Legacy CMS Portal to Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io) or are using the 2.x version and want to update, it is not necessary to install the 5.x version **if your store already has the Search apps installed**. You can install either the 3.x or 4.x versions, depending on your specific needs. If you are not sure which version to set in your store, please [open a ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) to the VTEX Support team.
+>⚠️ If you are [migrating from Legacy CMS Portal to Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io) or are using the 2.x version and want to update, it is not necessary to install the 5.x version **if your store already has the Search apps installed**. You can install either the 3.x or 4.x versions, depending on your specific needs. If you are not sure which version to set in your store, please [open a ticket](https://help.vtex.com/support) to the VTEX Support team.
 
-If you are interested in creating your own Edition App, please refer to the [Developing an Edition app](#developing-an-edition-app) section.
+If you are interested in creating your own Edition App, please refer to the [Developing an Edition App](#developing-an-edition-app) section.
 
 ## Changing the Edition App of an account
 
