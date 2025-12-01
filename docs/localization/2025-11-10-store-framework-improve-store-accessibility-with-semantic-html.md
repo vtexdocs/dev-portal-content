@@ -7,7 +7,7 @@ createdAt: "2025-10-xxT00:00:00.219Z"
 excerpt: "Enable the new a11ySemanticHtmlMigration flag to improve accessibility."
 ---
 
-Store Framework now supports enhanced accessibility through the new `a11ySemanticHtmlMigration` flag. When enabled, this flag updates the markup of Store Framework components to use semantic HTML elements, providing improved accessibility support without causing breaking changes to existing storefronts.
+Store Framework now supports enhanced accessibility through the new `a11ySemanticHtmlMigration` flag. When enabled, this flag updates the markup of Store Framework components to use semantic HTML elements, improving accessibility without introducing breaking changes to existing storefronts.
 
 ## What has changed?
 
@@ -23,7 +23,7 @@ When the new accessibility flag is enabled and implemented in your Store Framewo
 
 This change ensures that all shoppers can successfully navigate and purchase from your store, regardless of the assistive technologies they use, including:
 
-- **Improved customer experience:** Shoppers using screen readers, voice control software, or keyboard navigation can more easily browse products, fill out forms, and complete purchases.
+- **Improved customer experience:** Shoppers using screen readers, voice control software, or keyboard navigation can more easily browse products, complete forms, and make purchases.
 - **Compliance readiness:** Helps your store align with WCAG 2.1 accessibility standards and legal requirements.
 - **Better SEO:** Semantic HTML also improves how search engines understand and index your content.
 
