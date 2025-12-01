@@ -5,7 +5,7 @@ excerpt: "Learn how to implement semantic HTML updates across your Store Framewo
 createdAt: ""
 ---
 
-In this guide, you'll learn how to enable the `a11ySemanticHtmlMigration` flag, which allows you to implement semantic HTML updates across Store Framework components progressively. This feature allows your store to adhere to accessibility best practices, benefiting shoppers who use assistive technologies while maintaining your existing customizations.
+In this guide, you'll learn how to enable the `a11ySemanticHtmlMigration` flag, which allows you to implement semantic HTML updates across Store Framework components progressively. This feature allows your store to adhere to accessibility best practices, benefiting shoppers who use assistive technologies, while maintaining your existing customizations.
 
 ## Before you begin
 
@@ -18,10 +18,10 @@ Create a [development workspace](https://developers.vtex.com/docs/guides/vtex-io
 ### Step 1: Enabling the flag in VTEX Admin
 
 1. In the VTEX Admin, go to **Apps > My Apps**.
-2. Search for the **VTEX Store** app and click on it.
+2. Search for the **VTEX Store** app and click it.
 3. Check the **Enable accessibility semantic HTML migration** checkbox. By default, this option is disabled.
 
-  ![semantic-html](https://vtexhelp.vtexassets.com/assets/docs/src/semantic-html___3f810f66cd47bd76760fe3f56783a779.gif)
+![semantic-html](https://vtexhelp.vtexassets.com/assets/docs/src/semantic-html___3f810f66cd47bd76760fe3f56783a779.gif)
 
 When this flag is enabled, the following native components automatically render using proper semantic HTML elements, such as <label>, <main>, and <nav>:
 
@@ -30,11 +30,11 @@ When this flag is enabled, the following native components automatically render 
 
 To implement semantic HTML in other components, follow the next steps.
 
->⚠️ If the CSS in the components is configured improperly, such as tying styles to the tag path (for example, `div > span > p`) instead of using fixed selectors like `id` or `class`, changing tags may break the layout. That's why the flag comes disabled by default, requiring you to enable it and ensure compatibility with semantic HTML.
+>⚠️ If the CSS in the components is configured improperly, such as tying styles to the tag path (for example, `div > span > p`) instead of using fixed selectors like `id` or `class`, changing tags may break the layout. That's why the flag is disabled by default, requiring you to enable it and ensure compatibility with semantic HTML.
 
 ### Step 2: Implementing semantic HTML in your components
 
-In your component, read the flag value using `useRuntime → getSettings('vtex.store')` and check `advancedSettings.a11ySemanticHtmlMigration`. See below a use case example of implementation in the `ProductQuantity` component:
+In your component, read the flag value using `useRuntime → getSettings('vtex.store')` and check `advancedSettings.a11ySemanticHtmlMigration`. Below is a use case example of implementation in the `ProductQuantity` component:
 
 ```tsx BaseProductQuantity.tsx
 import React from 'react'
