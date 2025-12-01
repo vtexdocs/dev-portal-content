@@ -2,7 +2,7 @@
 title: "Improving store accessibility with semantic HTML migration"
 slug: "vtex-io-documentation-semantic-html-migration"
 excerpt: "Learn how to implement semantic HTML updates across your Store Framework components to improve accessibility."
-createdAt: ""
+createdAt: "2025-12-01T20:18:43.466Z"
 ---
 
 In this guide, you'll learn how to enable the `a11ySemanticHtmlMigration` flag, which allows you to implement semantic HTML updates across Store Framework components progressively. This feature allows your store to adhere to accessibility best practices, benefiting shoppers who use assistive technologies, while maintaining your existing customizations.
