@@ -58,7 +58,7 @@ For a complete list of store deployments and their details, check the [Deploys](
 
 ### Preview deploys
 
-This section lists all the deploy previews created for GitHub branches in your project repository. These previews are automatically available for each pull request opened in its corresponding branch.
+This section lists all the deploy previews created for GitHub branches in your project repository. These previews are automatically available for each pull request opened in its corresponding branch. You can [configure which branches generate preview deployments](https://developers.vtex.com/docs/guides/faststore/faststore-webops-configure-branches#configuring-preview-branch-filters) in the Integrations tab.
 
 ## Deploys
 
@@ -86,11 +86,31 @@ In the **Deploy Steps** section, select a step (example: **Build - Discovery**) 
 
 ## Integrations
 
-The **Integrations** tab allows you to configure store pages for Lighthouse tests. You can specify the URLs for a product listing page (PLP) and a product details page (PDP) to undergo automatic Lighthouse score testing during deployments, ensuring a consistent testing experience.
+The **Integrations** tab allows you to configure branch settings and store pages for Lighthouse tests. The tab contains the following sections in order:
 
-![integrations-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/integrations-webops.png)
+1. **[Production branch](#production-branch):** Configures which Git branch generates production builds for your account.
+2. **[Preview branches](#preview-branches):** Controls which branches generate preview deployments.
+3. **[Lighthouse scores](lighthouse-scores):** Configures store pages for Lighthouse testing.
 
-### Configuring pages for Lighthouse testing
+![integrations-webops](https://vtexhelp.vtexassets.com/assets/docs/src/customizing-branches-integrations___ae60f6b2b7c97b7200d8b8295fe7c755.gif)
+
+### Production branch
+
+The **Production branch** section allows you to configure which Git branch generates production builds for your account.
+
+### Preview branches
+
+The **Preview branches** section allows you to control which branches generate preview deployments by including or excluding patterns.
+
+#### Rules
+
+In the **Rules** subsection, you can manage your rules, by editing or removing them.
+
+> ℹ️ For detailed instructions on branch configuration, see the guide [Configuring branches in FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/faststore-webops-configuring-branches).
+
+### Lighthouse scores
+
+The **Lighthouse scores** section allows you to configure store pages for Lighthouse testing. You can specify the URLs for a product listing page (PLP) and a product details page (PDP) to undergo automatic Lighthouse score testing during deployments, ensuring a consistent testing experience.
 
 To set the pages you want to test with Lighthouse, follow these steps:
 
