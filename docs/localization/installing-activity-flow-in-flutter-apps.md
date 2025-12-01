@@ -68,9 +68,9 @@ This setup enables automatic screen view tracking for standard route navigation.
 
 ### Step 4 – Tracking page views manually (for custom navigation)
 
-For navigation widgets like **Bottom Navigation** or **Tab Navigation**, which do not trigger route changes, use the `screenViewChange` function to track screen views manually.
+For navigation widgets like `BottomNavigationBar` or `TabBar`, which do not trigger route changes, use the `trackPageView` function to track screen views manually.
 
-For example, using the `onTap` callback within a Bottom Navigation bar widget allows for capturing a new route each time the user taps on a different tab:
+For example, using the `onTap` callback within a `BottomNavigationBar` widget allows for capturing a new route each time the user taps on a different tab:
 
 ```java
 BottomNavigationBar(
@@ -81,7 +81,7 @@ BottomNavigationBar(
       _onItemTapped(index);
       final label = items[index].label ?? 'Tab-$index';
 
-      // Manually calling the `screenViewChange` with the label
+      // Manually calling the `trackPageView` with the label
       trackPageView(label);
    },
 )
@@ -89,7 +89,7 @@ BottomNavigationBar(
 
 ### Step 5 – (Optional) Tracking ad events
 
->ℹ️ The ads tracking is available only for accounts that use [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads). If you're interested in this feature, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
+>ℹ️ Ads tracking is available only for accounts using [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads). If you're interested in this feature, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
 
 To start tracking your ad events, follow these steps:
 
@@ -102,7 +102,7 @@ yourAdWidget.addAdsListener({Map<String, String> adMetadata);
 ```
 
 - `yourAdWidget`: The ad widget you want to monitor.
-- `adMetadata`: A Map containing specific details about the ad, which will be sent to your analytics service upon a click.
+- `adMetadata`: A map containing specific details about the ad, which will be sent to your analytics service upon a click.
 
 ## Flutter automated tests
 
