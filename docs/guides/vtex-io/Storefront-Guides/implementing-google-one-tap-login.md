@@ -1,6 +1,6 @@
 ---
-title: "Google One-tap login"
-slug: "google-one-tap-login"
+title: "Implementing Google One-tap login"
+slug: "implementing-google-one-tap-login"
 hidden: false
 createdAt: "2020-07-30T19:58:25.203Z"
 updatedAt: "2025-12-01T20:00:32.997Z"
