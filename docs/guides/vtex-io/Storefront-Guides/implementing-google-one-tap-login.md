@@ -2,6 +2,7 @@
 title: "Implementing Google One-tap login"
 slug: "implementing-google-one-tap-login"
 hidden: false
+excerpt: "Learn how to implement the Google One-tap login in your Store Framework store."
 createdAt: "2020-07-30T19:58:25.203Z"
 updatedAt: "2025-12-01T20:00:32.997Z"
 ---
