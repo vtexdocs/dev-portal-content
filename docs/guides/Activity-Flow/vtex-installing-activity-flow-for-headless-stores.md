@@ -3,7 +3,7 @@ title: "Installing Activity Flow for Headless stores"
 slug: "vtex-installing-activity-flow-for-headless-stores"
 excerpt: "Learn how to install Activity Flow in your Headless store."
 hidden: false
-createdAt: "2025-11-14T16:14:30.407Z"
+createdAt: "2025-12-02T12:37:39.964Z"
 ---
 
 In this guide, you'll learn how to install and configure the [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) script in your headless store.
@@ -16,7 +16,7 @@ This setup allows Activity Flow to capture real user interactions, enabling insi
 
 Activity Flow relies on a client-side script to collect navigation data.
 
-To ensure that it doesn’t delay page rendering, you must load the script asynchronously.
+To ensure that it doesn't delay page rendering, you must load the script asynchronously.
 
 1. Open your headless storefront project.
 2. Inside the `<head>` tag of each page you want to monitor, add the following snippet:
