@@ -2,7 +2,7 @@
 title: "Installing Activity Flow in mobile apps"
 ---
 
-Activity Flow SDK can be installed in mobile apps developed using React Native or Flutter.
+You can install [Activity Flow SDK](https://developers.vtex.com/docs/guides/activity-flow) in mobile apps developed using React Native or Flutter.
 
 Follow the instructions specific to the technology you used to develop your app to capture real user interactions and send them to VTEX for analysis. This provides insights into performance, engagement, and shopper behavior.
 
@@ -16,7 +16,7 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Synchronizing the Catalog with VTEX Ads"
+title="Installing Activity Flow in Flutter apps"
 description="Learn how to install Activity Flow in your Flutter app."
 linkTo="/docs/guides/installing-activity-flow-in-flutter-apps"
 linkTitle="See more"
