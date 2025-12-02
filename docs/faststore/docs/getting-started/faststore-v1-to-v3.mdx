@@ -1,11 +1,12 @@
 ---
 title: "Migrating from FastStore v1 to v3"
 hidden: true
+updatedAt: "2025-12-02T19:48:17.734Z"
 ---
 
 FastStore v3 is the latest version of the framework and the only one supported for creating a storefront with FastStore technology.
 
-To take advantage of its latest updates, stores using FastStore v1 should migrate to v3. This guide explains the migration process, how it works, and the steps to complete.
+To take advantage of its latest updates, stores using FastStore v1 should migrate to v3. This guide explains the migration process, how it works, and the steps that need to be completed.
 
 ## Migration overview
 
@@ -29,8 +30,8 @@ subgraph L1[Account on FastStore v1]
 direction LR
 v1_s1[Keep live store on v1] --> v1_s2[Live store remains on v1, no changes]
 v1_s2 --> v1_s3[Map IO apps in use and document settings]
-v1_s3 --> v1_s4[CMS stays as-is on v1]
-v1_s4 --> v1_s5[Search settings will not be migrated to v3.]
+v1_s3 --> v1_s4[CMS stays as is on v1]
+v1_s4 --> v1_s5[Search settings will not migrate to v3]
 v1_s5 --> v1_s6[Provide data for Master Data unification]
 v1_s6 --> v1_s7[Participate in traffic split and monitoring]
 end
@@ -39,7 +40,7 @@ subgraph L2[Subaccount on FastStore v3]
 direction LR 
 v3_s1[Create subaccount with separate domain and CMS] --> v3_s2[Start v3 project and repository via getting started and WebOps]
 v3_s2 --> v3_s3[Review and install IO apps for v3 and update pointers]
-v3_s3 --> v3_s4[Recreate pages and content in the v3 CMS.]
+v3_s3 --> v3_s4[Recreate pages and content in v3 CMS]
 v3_s4 --> v3_s5[Recreate Intelligent Search configuration in v3]
 v3_s5 --> v3_s6[Open support ticket and unify Master Data into v3]
 v3_s6 --> v3_s7[Split traffic to v3 and measure key metrics]
@@ -65,26 +66,26 @@ v3_s7 --> done
 | **Step** | **FastStore v1 (Main account)** | **FastStore v3 (Subaccount)** |
 | --- | --- | --- |
 | **1. Subaccount setup** | Live store remains on v1. No changes made here. | Create a new subaccount with its own domain and Headless CMS. |
-| **2. Start development** | No new development in v1. | Set up the v3 project and repository. |
+| **2. Development start** | No new development in v1. | Set up the v3 project and repository. |
 | **3. VTEX IO apps** | Map installed apps and document settings. | Review app compatibility, reinstall or replace in v3, update pointers, and reapply settings. |
 | **4. Headless CMS** | Headless CMS content stays as-is. | Recreate pages and content in the new v3 Headless CMS (migration not supported). |
 | **5. Intelligent Search** | Existing search configuration remains unchanged. | Rebuild Intelligent Search settings manually in v3. |
 | **6. Master Data** | Provide source data for unification. | Open a support ticket to configure and unify Master Data from v1 into v3. |
-| **7. Traffic splitting** | Share live traffic with v3 during the transition. | Gradually receive traffic, measure key metrics, and optimize until stable. |
-| **Final** | Eventually retired after migration. | Becomes the live store (Go live on v3). |
+| **7. Traffic splitting** | Share live traffic with v3 during the transition. | Gradually receive traffic, measure key metrics, and tune until stable. |
+| **Completion** | Eventually retired after migration. | Becomes the live store (go live on v3). |
 
 ## Before you begin
 
 This guide is for VTEX accounts currently using FastStore v1 that need to migrate to FastStore v3.
 
-Before starting the migration, verify your project's FastStore version and prepare the required GitHub setup.
+Before starting the migration, check the version of your FastStore project and prepare the required GitHub setup.
 <Steps>
   
 ### Check your FastStore version
 
 Confirm that your project is running on FastStore v1. You can check it as follows:
 
-- In your project's root, check for one of these files:
+- In your project root, check for one of these files:
    - `store.config.js`: used by FastStore v1.
    - `discovery.config.js`: used by FastStore v3.
 
@@ -113,7 +114,7 @@ You'll need a GitHub account to set up your FastStore v3 project. You can use ei
 
 To begin developing in v3, create a subaccount linked to your main VTEX account by following the [Managing a multistore](https://help.vtex.com/en/tutorial/managing-a-multistore--4S0lFVBPylRS5KpVgdyDhJ) article.
 
-This subaccount is a dedicated, isolated environment that ensures all v3 development and deployments do not affect your live FastStore v1 store. It has its own domain, which prevents redirect conflicts, and an independent Headless CMS, which avoids any data or content cross-contamination between environments.
+This subaccount is a dedicated, isolated environment that ensures all v3 development and deployments don't affect your live FastStore v1 store. It will have its own domain, which prevents redirect conflicts, and an independent Headless CMS, which avoids any data or content cross-contamination between environments.
 
 >❗ Don't start developing directly in the main account (live store) without using a subaccount. Doing so can result in the deletion of your Headless CMS live content during the WebOps onboarding process for FastStore v3.
 
@@ -125,30 +126,30 @@ Once you complete these steps, you'll have a repository linked to your subaccoun
 
 ### Step 3 - Audit VTEX IO apps for compatibility
 
-Each VTEX account or subaccount manages its own VTEX IO app installations, permissions, and URLs. Some apps that work in FastStore v1 may not function out of the box in v3 and may require a custom integration or an alternative distribution method.
+Each VTEX account or subaccount manages its own VTEX IO app installations, permissions, and URLs. Some apps that work in FastStore v1 may not work out of the box in v3 and may require a custom integration or an alternative distribution method.
 
 Audit all VTEX IO apps from your v1 store to identify compatibility issues and prepare them for migration.
 
-| Step | Description |
+|  Step   |  Description   |
 | --- | --- |
-| **1. Map the store apps** | Map all apps (`vendor.name`, current version) used by the v1 store. |
-| **2. Check v3 compatibility** | For each app, confirm whether it’s compatible with FastStore v3.<ul><li>If incompatible: choose a path of custom integration, replace with an alternative, or defer/removal.</li><li>If compatible: continue to read the steps in this table.</li></ul> |
-| **3. Decide the cross-account install strategy** | Determine whether the app can be installed in account v3. If it’s currently tied to account v1, choose one:<ul><li>Public app: Publish so it can be installed in other accounts.</li><li><a href="https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account">Sponsor account</a> + edition: Use a sponsor account to distribute the app to target accounts via an edition.</li><li>Private/single-account: Rebuild/republish under the vendor for account Y or adjust distribution so Y can install.</li></ul> |
-| **4. Update account-specific pointers** | Audit the app for hard-coded account or workspace references and change them from v1 to v3.<ul><li>Search for absolute URLs and paths like `https://{account}.myvtex.com/_v/...`, `…?an={account}`, or internal routes or endpoints that include the account or workspace name.</li><li>Replace with the v3 account values. Where possible, externalize pointers into configuration (env vars/app settings) to avoid future hardcoding.</li></ul> |
-| **5. Plan for app data and settings** | You cannot transfer app data or app settings from one account to another.<ul><li>Export or document all current app settings (including secrets, API keys, and toggles).</li><li>Recreate them manually in the v3 account after installation.</li><li>Record any one-time data seeding steps required by the app.</li></ul> |
-| **6. Permissions and policies** | Review and update required policies for the app. Confirm any store or admin permissions needed in v3. |
+| **1.  Map the store apps** | Map all apps (`vendor.name`, current version) used by the v1 store. |
+| **2.  Check v3 compatibility** | Check the compatibility of each with FastStore v3.<br /><br />* If an app is incompatible, you can choose between custom integration, replacing it with an alternative, or deferring/removing.<br />* If the app is compatible, continue to read the steps in this table. |
+| **3.  Decide the cross‑account install strategy** | Determine whether the app can be installed in the v3 account. If it's currently tied to the v1 account, you can do one of the following:<br /><br />* Public app: Publish it so it can be installed in other accounts.<br />* [Sponsor account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) \+ edition: Use a sponsor account to distribute the app to target accounts via an edition.<br />* Private/single‑account: Rebuild/republish under the vendor for account Y or adjust distribution so Y can install. |
+| **4.  Update account‑specific pointers** | Audit the app for hard‑coded account or workspace references and change them from v1 to v3.<br /><br />* Search for absolute URLs and paths like: `[https://{account}.myvtex.com/_v/](https://{account}.myvtex.com/_v/)...`, `…?an={account}` or internal routes or endpoints that include the account or workspace name.<br />* Replace with the v3 account values. Where possible, externalize pointers into configuration (env vars/app settings) to avoid future hard-coding. |
+| **5.  Plan for app data and settings** | You can't transfer app data or app settings from one account to another.<br /><br />* Export or document all current app settings (including secrets, API keys, and toggles).<br />* Recreate them manually in the v3 account after installation.<br />* Record any one‑time data seeding steps required by the app. |
+| **6.  Permissions and policies** | Review and update required policies for the app. Confirm any store or admin permissions needed in v3. |
 
 ### Step 4 - Recreate the Headless CMS content
 
-Recreate all necessary pages, components, and content manually in the Headless CMS for your v3 project. For more information, refer to [Working with Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+Recreate all necessary pages, components, and content manually in the Headless CMS for your v3 project. For more information, check [Working with Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
-> ℹ️ Content migration between v1 and v3 Headless CMS instances is not supported.
+> ℹ️ Content migration between v1 and v3 Headless CMS instances isn't supported.
 
 ### Step 5 - Recreate Intelligent Search settings
 
 Rebuild your Intelligent Search configuration manually in the v3 environment, and plan enough time to reproduce and test all search settings in your [subaccount](#step-1--create-a-subaccount). Learn more in [Intelligent Search - Overview](https://newhelp.vtex.com/docs/tutorials/intelligent-search-overview).
 
-> ℹ️ Migrating Intelligent Search settings from a v1 project to v3 is not supported.
+> ℹ️ Migrating Intelligent Search settings from a v1 project to v3 isn't supported.
 
 ### Step 6 - Unify Master Data 
 
@@ -160,13 +161,13 @@ This process ensures that all customer information, including profiles, login cr
 
 ### Step 7 - Traffic splitting between v1 and v3
 
-Once you have completed all previous steps, [open a ticket with VTEX Support](https://help.vtex.com/support?cultureInfo=en-us) at least five days before your planned migration date to request traffic splitting between your main account (FastStore v1) and subaccount (FastStore v3). 
+Once you've completed all previous steps, [open a ticket with VTEX Support](https://help.vtex.com/support?cultureInfo=en-us) at least five days before your planned migration date to request traffic splitting between your main account (FastStore v1) and subaccount (FastStore v3).
 
-This gradual rollout allows you to gradually redirect users from the old store to the new one, monitor performance, and ensure stability before going fully live on v3.
+This gradual rollout allows you to slowly redirect users from the old store to the new one, monitor performance, and ensure stability before going fully live on v3.
 
 Consider the following during the process:
 
 - **Traffic splitting vs A/B testing:** FastStore uses traffic splitting to gradually transition users between v1 and v3. You can also use this setup to run A/B tests with your analytics or testing tools to compare performance between both versions while the split is active.
 - **Measure key metrics:** Track and compare metrics such as conversion rates, engagement, and SEO performance across both versions. Use this data to optimize your configuration and adjust traffic allocation as needed.
 
-Once v3 performance is validated, make v3 your live store and retire FastStore v1.
+Once v3 performance is validated, make it your live store and retire FastStore v1.
