@@ -1,5 +1,7 @@
 ---
 title: "Installing Activity Flow in Flutter apps"
+slug: "installing-activity-flow-in-flutter-apps"
+createdAt: "2025-12-02T20:38:03.864Z"
 ---
 
 This guide explains how to install and configure the [VTEX Activity Flow SDK](https://developers.vtex.com/docs/guides/activity-flow) in Flutter apps for Android and iOS.
