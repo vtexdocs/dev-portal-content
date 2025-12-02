@@ -216,4 +216,8 @@ class ButtonTemplate extends StatelessWidget {
 }
 ```
 
-The example demonstrates the integration of Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to automatically capture page-view events. It outlines a `MyHomePage` that incorporates an `AdBanner`, which utilizes `addAdsListener` to pass ad metadata such as product name, price, and ID. Additionally, it features navigation buttons sourced from a routes list. The reusable `ButtonTemplate` facilitates navigation through `Navigator.pushNamed`, showcasing a standard configuration for automatic screen tracking, as well as ad impression and click tracking, in a Flutter application.
+The example demonstrates the integration of Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to automatically capture page-view events.
+
+It outlines a `MyHomePage` that incorporates an `AdBanner`, which utilizes `addAdsListener` to pass ad metadata such as product name, price, and ID. Additionally, it features navigation buttons sourced from a routes list.
+
+The reusable `ButtonTemplate` facilitates navigation through `Navigator.pushNamed`, showcasing a standard configuration for automatic screen tracking, as well as ad impression and click tracking, in a Flutter application.
