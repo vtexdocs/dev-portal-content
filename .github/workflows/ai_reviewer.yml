@@ -1,4 +1,4 @@
-name: VTEX AI Documentation Reviewer
+name: Review Documentation with AI
 
 on:
   pull_request:
@@ -51,10 +51,10 @@ jobs:
       uses: thollander/actions-comment-pull-request@v3
       with:
         message: |
-          ## Documentation feedback for ${{ matrix.file }}
+          ### 🔍 Documentation feedback for ${{ matrix.file }}
           ${{ steps.generate-feedback.outputs.response }}
           
-          <hr><h2 id="ai-feedback">Was this feedback useful?</h2>
+          <hr><h3 id="ai-feedback">Was this feedback useful?</h3>
 
           - [ ] Yes
           - [ ] No

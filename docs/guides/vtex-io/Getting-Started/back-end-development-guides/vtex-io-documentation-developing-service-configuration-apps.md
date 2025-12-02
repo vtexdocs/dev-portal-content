@@ -75,7 +75,7 @@ In the `node/service.json` file, add `"settingsType": "workspace"` to define whi
 }
 ```
 
-It is also possible to define your configurations through event listening. In this case, you should add in the `node/service.json` file something similar to the example below, replacing the values according to your needs:
+It is also possible to define your configurations through event listening. In this case, you should add to the `node/service.json` file something similar to the example below, replacing the values according to your needs:
 
 ```json
 "events": {
@@ -94,9 +94,9 @@ It is also possible to define your configurations through event listening. In th
 
 If you are developing a GraphQL app, add the `@settings` directive to all queries that can receive configurations.
 
-A [GraphQL Directive](https://graphql.org/learn/queries/#directives) is a way of changing how the query will be performed. When you add the `settings` directive, the system knows it must search for configurations for that service. Under the hood, this directive includes one extra step to the query, which is responsible for finding all the configurations and adding them to the context.
+A [GraphQL Directive](https://graphql.org/learn/queries/#directives) is a way of changing how the query will be performed. When you add the `settings` directive, the system knows it must search for configurations for that service. Under the hood, this directive includes an additional step in the query, which is responsible for finding all configurations and adding them to the context.
 
-Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app as an example. In this app's root directory, you'll see the following file `grapqhl/schema.graphql`. Now, if you open it and add the `@settings` directive to the query `book`, you'll have something like:
+Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app as an example. In this app's root directory, you'll see the following file `graphql/schema.graphql`. Now, if you open it and add the `@settings` directive to the query `book`, you'll have something like:
 
 ```diff
  type Query {

@@ -3,7 +3,7 @@ title: "Bulk Import Buyer Organizations Spreadsheet"
 slug: "bulk-import-buyer-organizations-spreadsheet"
 hidden: false
 createdAt: "2024-03-26t09:00:09.698z"
-updatedAt: "2025-04-28t09:00:09.698z"
+updatedAt: "2025-11-04t09:00:09.698z"
 ---
 
 This guide will walk you through the process of filling out the bulk import spreadsheet for use with the [Bulk Import API](https://developers.vtex.com/docs/api-reference/buyer-organizations) to efficiently manage Buyer Organizations, Cost Centers, and Members through bulk import functionality.
@@ -106,5 +106,14 @@ Check the default columns present in the Cost Centers tab in the table below. Ma
 | Cost Center ID* | String  | Identifier linking the member to a specific cost center within the organization. |
 | Name* | String  | Member's full name used for identification and communication. |
 | Email* | String  | Email address of the member serving as a primary point of contact for communication. |
-| Role Id* | GUID | Unique identifier denoting the member's role within the organization. |
+| Role ID* | GUID | Unique identifier denoting the member's role within the organization. |
 | Can Impersonate | Boolean | Indicates if the member can impersonate another user within the system. |
+
+## Custom fields
+
+To include custom fields in your spreadsheet, follow the steps below:
+
+1. Add the desired custom fields as the last columns in your tab.
+2. Use the prefix `CF_` followed by the exact name of the custom field as registered in the system.
+   - Example: If you have a custom field named `DeliveryNote`, the column should be `CF_DeliveryNote`.
+3. Fill in the values according to the data type.
