@@ -14,7 +14,7 @@ To manage navigation between different screens of your app, you must use either 
 
 ### Install the Activity Flow package
 
-Activity Flow depends on `[@react-native-async-storage/async-storage](https://github.com/react-native-async-storage/async-storage)` to store navigation data locally. This ensures events are captured even when the device is offline.
+Activity Flow depends on [`@react-native-async-storage/async-storage`](https://github.com/react-native-async-storage/async-storage) to store navigation data locally. This ensures events are captured even when the device is offline.
 
 To install the library, follow these steps:
 
