@@ -1,6 +1,6 @@
 ---
-title: "Installing Activity Flow for Headless stores"
-slug: "vtex-installing-activity-flow-for-headless-stores"
+title: "Installing Activity Flow in Headless stores"
+slug: "installing-activity-flow-in-headless-stores"
 excerpt: "Learn how to install Activity Flow in your Headless store."
 hidden: false
 createdAt: "2025-12-02T12:37:39.964Z"
