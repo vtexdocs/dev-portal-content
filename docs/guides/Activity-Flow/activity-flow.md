@@ -16,7 +16,6 @@ This guide provides an overview of the Activity Flow architecture and how to get
 >
 > If your store uses VTEX’s native storefront solutions (FastStore, Store Framework, or the Legacy CMS Portal), no additional configuration is needed. 
 
-
 ## Activity Flow architecture
 
 The Activity Flow architecture is designed to have minimal impact on performance thanks to efficient data handling and task scheduling. It consists of the following stages:
