@@ -12,14 +12,14 @@ Follow the instructions for the technology you used to develop your app to captu
 title="Installing Activity Flow in React Native apps"
 description="Learn how to install Activity Flow in your React Native app."
 linkTo="/docs/guides/installing-activity-flow-in-react-native-apps"
-linkTitle="Learn more"
+linkTitle="See more"
 />
 
 <WhatsNextCard
 title="Installing Activity Flow in Flutter apps"
 description="Learn how to install Activity Flow in your Flutter app."
 linkTo="/docs/guides/installing-activity-flow-in-flutter-apps"
-linkTitle="Learn more"
+linkTitle="See more"
 />
 
 </Flex>
