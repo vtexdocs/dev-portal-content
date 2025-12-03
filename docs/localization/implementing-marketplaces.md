@@ -1,5 +1,5 @@
 ---
-title: "Implementing Marketplaces"
+title: "Implementing marketplaces"
 slug: "implementing-marketplaces"
 hidden: false
 excerpt: "Learn the initial steps for implementing a marketplace operation."
