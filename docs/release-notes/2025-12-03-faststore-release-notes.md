@@ -23,10 +23,6 @@ Introduced a new direction property to the `UIProvider` context, enabling suppor
 
 The Footer component will no longer fail to render if a logo image is not provided. Previously, removing the logo would cause the entire component to disappear from the page. Now, the footer will be displayed correctly without the logo image.
 
-**Build process for different modules** (PR: [#3119](https://github.com/vtex/faststore/pull/3119))
-
-Internal module export paths were refactored to resolve issues in our build pipeline. This change has no external impact on developers.
-
 **Prevent product price flickering on PDP** (PR: [#3112](https://github.com/vtex/faststore/pull/3112))
 
 Introduced a loading skeleton that now displays on the Product Details Page (PDP) while the product's price is being validated. This change improves the user experience by preventing the price from flickering during load times. The `<Price>` component now accepts a loading component as a child to manage this state.
