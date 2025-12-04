@@ -25,9 +25,27 @@ All ad requests require:
 
 Learn more about each field in the [API Reference](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/rma/-publisher_id-).
 
+## Request best practices
+
+- **HTTP persistence:** Prefer persistent connections (`Connection: keep-alive`).
+- **Timeout:** Apply a 500–600 ms timeout to the ad query.
+
+## Context and ad eligibility rules
+
+>⚠️ It's not possible to filter by specific `placement`. Ad selection is based on `context` and request parameters.
+
+Understanding which ad types are eligible for each context is crucial for setting up your ad requests correctly.
+
 ### Search context
 
 Used when retrieving ads for search results pages.
+
+Eligible ad types:
+
+- **Banner/Video/Sponsored Brands Ads** that are **keyword-based**.
+- **Sponsored Products** (any product campaign).
+
+>⚠️ Keyword matching in the `search` context is exact (no stemming/synonyms). This means the advertiser must specify exactly which keywords they want to use in Banner/Video/Sponsored Brands campaigns. If a user searches for "nike shoes", the ad will only be eligible if the advertiser registered exactly the keyword "nike shoes". There is no approximate matching or similar word matching.
 
 ```json
 {
@@ -47,6 +65,11 @@ Used when retrieving ads for search results pages.
 
 Used for category pages.
 
+Eligible ad types:
+
+- **Banner/Video/Sponsored Brands Ads** that use the corresponding **category**.
+- **Sponsored Products** from the category.
+
 ```json
 {
     "context": "category",
@@ -64,6 +87,11 @@ Used for category pages.
 
 Used for brand-specific pages.
 
+Eligible ad types:
+
+- **Banner/Video/Sponsored Brands Ads** for the brand.
+- **Sponsored Products** from the brand.
+
 ```json
 {
     "context": "brand",
@@ -80,6 +108,10 @@ Used for brand-specific pages.
 ### Product context (PDP)
 
 Used on product detail pages.
+
+Eligible ad types:
+
+- **Sponsored Products** related to the viewed product.
 
 ```json
 {
@@ -101,6 +133,11 @@ Used on product detail pages.
 ### Home context
 
 Used for homepage or non-targeted contexts. Shows ads most relevant to the user based on their history.
+
+Eligible ad types:
+
+- **Banner/Video/Sponsored Brands Ads** that use **category** as a targeting criterion.
+- **Sponsored Products**.
 
 ```json
 {
@@ -198,3 +235,94 @@ Response example:
     ]
 }
 ```
+
+## Best practices
+
+### Placement naming
+
+Adopt a clear standard, such as `{channel}_{context}_{position}_{type}` (e.g., `msite_search_top-shelf_product`).
+
+Examples:
+
+- `site_home_middle_banner`
+- `msite_product_top-shelf_product`
+- `app_search_top-shelf_product`
+- `site_category_bottom-shelf_banner`
+
+### IAB standard image sizes
+
+For banner-type ads, use images in the standard formats defined by the IAB (Interactive Advertising Bureau) to ensure compatibility and a better visual experience:
+
+- **Medium Rectangle:** 300x250 pixels
+- **Leaderboard:** 728x90 pixels
+- **Wide Skyscraper:** 160x600 pixels
+- **Mobile Leaderboard:** 320x50 pixels
+- **Billboard:** 970x250 pixels
+- **Half Page:** 300x600 pixels
+
+### Video size options
+
+For video ad requests, specify the size parameter to filter by video resolution:
+
+- **1080p** (1920x1080 pixels) - Recommended only for full-screen videos
+- **720p** (1280x720 pixels) - Recommended only for full-screen videos
+- **480p** (854x480 pixels)
+- **360p** (640x360 pixels)
+- **320p** (568x320 pixels) - Recommended for mobile devices
+
+>⚠️ Use only the resolution identifier (e.g., `"720p"`) in the size parameter, not the full dimensions.
+
+## Ad targeting
+
+Target ads to specific audiences to increase relevance by sending demographic or audience data directly in the body of the ad query using the `segmentation` field.
+
+The `segmentation` field is an array of objects, where each object contains:
+
+- `key`: The type of segmentation (e.g., "STATE", "CITY", "GENDER").
+- `values`: Array of values for the segmentation.
+
+### Segmentation example
+
+```json
+{
+  "context": "search",
+  "term": "smartphone",
+  "segmentation": [
+    {
+      "key": "STATE",
+      "values": ["CA"]
+    },
+    {
+      "key": "CITY",
+      "values": ["San Francisco"]
+    },
+    {
+      "key": "GENDER",
+      "values": ["M"]
+    }
+  ],
+  "placements": {
+    "site_search_top_product": {
+      "quantity": 5,
+      "types": ["product"]
+    }
+  }
+}
+```
+
+**Available segmentation types:**
+
+- `STATE` - User's state (e.g., "CA", "NY", "TX").
+- `CITY` - User's city (e.g., "San Francisco", "New York").
+- `GENDER` - User's gender (e.g., "M", "F").
+- `AGE` - User's age (e.g., "22", "35").
+- `AUDIENCES` - Custom audience (e.g., "high_value_customers", "cart_abandoners").
+- `NBO_CATEGORIES` - Possible categories the user intends to buy (e.g., "Electronics", "Books").
+
+## Response codes and errors
+
+- **200 OK:** Query processed successfully (returns JSON per placement).
+- **422 Unprocessable Entity:** Field validation error.
+- **400 Bad Request / 404 Not Found:** Invalid request or resource not found.
+- **429 Too Many Requests:** Rate limit exceeded.
+- **5xx:** Internal errors.
