@@ -59,20 +59,20 @@ Use a path prefix for every locale on the same host or use separate domains for 
 
 - Example with paths for all locales on the same host:
     
-**en-US:** `https://store.com/en`
-**en-BR:** `https://store.com/pt`
+  **en-US:** `https://store.com/en`
+  **pt-BR:** `https://store.com/pt`
     
 - Example with different domains per locale:
     
-`https://en.store.com`
-**en-BR:** `https://pt.store.com`
+  **en-US:** `https://en.store.com`
+  **pt-BR:** `https://pt.store.com`
 
 ❌ Don't
 
 Avoid mixing a root URL for one locale with a path prefix for another:
 
-**en-US:** `https://store.com/`
-**en-BR:** `https://store.com/pt`
+  **en-US:** `https://store.com/`
+  **pt-BR:** `https://store.com/pt`
 
 ## Fundamental apps
 
@@ -82,9 +82,9 @@ The apps listed below are essential for enabling multi-language operation in you
 - [Locale Switcher](https://developers.vtex.com/docs/guides/vtex-locale-switcher): Allows switching languages on the site.
 - [Admin Catalog Translation](https://developers.vtex.com/docs/apps/vtex.admin-catalog-translation): Enables the admin UI to translate catalog information (category, product, SKU, brand, specifications, and collections), overriding the automatic translation.
 
-You can also override the automatic translation using the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). Additionally, you can translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) by adding the "**Accept-Language**" header with the desired target language. This is especially relevant for Headless stores.
+  You can also override the automatic translation using the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). Additionally, you can translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) by adding the "**Accept-Language**" header with the desired target language. This is especially relevant for Headless stores.
 
->ℹ️ Product information on the **Order Placed** pages and in transactional emails is automatically translated. However, on the **My Account** page, product information is not translated automatically. You need to implement customizations that make the above-mentioned GraphQL calls to perform these translations.
+  >ℹ️ Product information on the **Order Placed** pages and in transactional emails is automatically translated. However, on the **My Account** page, product information is not translated automatically. You need to implement customizations that make the above-mentioned GraphQL calls to perform these translations.
 
 ## Next steps
 
