@@ -45,7 +45,7 @@ Eligible ad types:
 - **Banner/Video/Sponsored Brands Ads** that are **keyword-based**.
 - **Sponsored Products** (any product campaign).
 
->⚠️ Keyword matching in the `search` context is exact (no stemming/synonyms). This means the advertiser must specify exactly which keywords they want to use in Banner/Video/Sponsored Brands campaigns. If a user searches for "nike shoes", the ad will only be eligible if the advertiser registered exactly the keyword "nike shoes". There is no approximate matching or similar words matching.
+>⚠️ Keyword matching in the `search` context is exact (no stemming/synonyms). This means the advertiser must specify exactly which keywords they want to use in Banner/Video/Sponsored Brands campaigns. If a user searches for "nike shoes", the ad will only be eligible if the advertiser registered exactly the keyword "nike shoes". There is no approximate matching or similar word matching.
 
 ```json
 {
@@ -243,6 +243,7 @@ Response example:
 Adopt a clear standard, such as `{channel}_{context}_{position}_{type}` (e.g., `msite_search_top-shelf_product`).
 
 Examples:
+
 - `site_home_middle_banner`
 - `msite_product_top-shelf_product`
 - `app_search_top-shelf_product`
@@ -276,6 +277,7 @@ For video ad requests, specify the size parameter to filter by video resolution:
 Target ads to specific audiences to increase relevance by sending demographic or audience data directly in the body of the ad query using the `segmentation` field.
 
 The `segmentation` field is an array of objects, where each object contains:
+
 - `key`: The type of segmentation (e.g., "STATE", "CITY", "GENDER").
 - `values`: Array of values for the segmentation.
 
@@ -309,6 +311,7 @@ The `segmentation` field is an array of objects, where each object contains:
 ```
 
 **Available segmentation types:**
+
 - `STATE` - User's state (e.g., "CA", "NY", "TX").
 - `CITY` - User's city (e.g., "San Francisco", "New York").
 - `GENDER` - User's gender (e.g., "M", "F").
