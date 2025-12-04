@@ -7,7 +7,7 @@ createdAt: "2025-12-02T00:00:00.000Z"
 updatedAt: "2025-12-02T00:00:00.000Z"
 ---
 
-The VTEX Ads SDK are JavaScript libraries designed to integrate VTEX's advertising platform into your storefront. It provides tools to request, fetch, and display sponsored products and banners with minimal effort.
+The VTEX Ads SDK is a set of JavaScript libraries designed to integrate VTEX's advertising platform into your storefront. It provides tools to request, fetch, and display sponsored products and banners with minimal effort.
 
 The VTEX Ads SDK consists of two main packages:
 
@@ -38,7 +38,7 @@ Placements define where ads appear in your storefront:
 
 A key concept in the VTEX Ads SDK is **hydration**, the process of enriching ad data with complete product information.
 
-**Raw Ads** contain minimal information, such as product SKU, seller ID and advertisement metadata.
+**Raw Ads** contain minimal information, such as product SKU, seller ID, and advertisement metadata.
 
 **Hydrated Ads** contain complete product data, such as:
 

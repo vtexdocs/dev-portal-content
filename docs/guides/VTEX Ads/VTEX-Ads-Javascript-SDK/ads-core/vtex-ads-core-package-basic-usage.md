@@ -59,7 +59,7 @@ const adRequest = {
 };
 ```
 
-## Fetching raw or hydrated Ads
+## Fetching raw or hydrated ads
 
 You can choose to fetch either **raw ads** or **hydrated ads**, depending on your needs:
 

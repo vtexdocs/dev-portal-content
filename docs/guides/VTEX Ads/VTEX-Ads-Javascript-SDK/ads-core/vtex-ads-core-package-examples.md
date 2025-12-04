@@ -52,7 +52,7 @@ const searchAds = await getSearchAds("smartphone", "user-123", "session-456");
 
 ## Category page ads
 
-This example will fetch ads for a specific category, such as "electronics", for two placements: `category_top_product`, which represents sponsored products at the top of the result, and `category_shelf`, which is an additional shelf included at the category page.
+This example will fetch ads for a specific category, such as "electronics", for two placements: `category_top_product`, which represents sponsored products at the top of the results, and `category_shelf`, which is an additional shelf included on the category page.
 
 ```javascript
 async function getCategoryAds(categoryId, userId, sessionId) {

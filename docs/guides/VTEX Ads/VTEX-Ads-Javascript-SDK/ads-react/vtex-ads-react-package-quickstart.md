@@ -23,7 +23,7 @@ The `@vtex/ads-react` package automatically includes `@vtex/ads-core` as a depen
 
 ## Basic Usage
 
-### Seting up the AdsProvider
+### Setting up the AdsProvider
 
 Before requesting any ads, wrap your app or page component tree with the `<AdsProvider>`. This provider is responsible for managing ad requests and distributing results to child components.
 
@@ -81,8 +81,7 @@ The ads hooks will return an object with the following properties:
 - `isLoading`, which is `true` while the request is in progress.
 - `error`, that will be populated if the request fails.
 
-You can call `useAds()` multiple times within the same component to request
-different placements.
+You can call `useAds()` multiple times within the same component to request different placements.
 
 ```ts
 const { ads: searchAds, isLoading: isSearchAdsLoading } = useAds({
