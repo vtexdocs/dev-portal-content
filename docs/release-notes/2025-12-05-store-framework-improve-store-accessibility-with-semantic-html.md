@@ -4,7 +4,7 @@ slug: "2025-12-05-store-framework-improve-store-accessibility-with-semantic-html
 hidden: false
 type: "added"
 createdAt: "2025-12-05T00:00:00.219Z"
-excerpt: "Enable the new a11ySemanticHtmlMigration flag to improve accessibility."
+excerpt: "Store Framework components can now be rendered with semantic HTML via a new migration flag."
 ---
 
 Store Framework now supports enhanced accessibility through the new `a11ySemanticHtmlMigration` flag. When enabled, this flag updates the markup of Store Framework components to use semantic HTML elements, improving accessibility without introducing breaking changes to existing storefronts.
