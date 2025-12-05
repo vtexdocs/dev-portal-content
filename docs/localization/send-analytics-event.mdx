@@ -16,7 +16,7 @@ import { sendAnalyticsEvent } from '@faststore/sdk'
 
 In the event-related component, define a callback function that creates an event object with the desired type (for example, `add_to_cart`) and calls `sendAnalyticsEvent`, passing the event as an argument. Then, trigger the callback function in the corresponding event handler (such as `onClick`).
 
-Consider the following example of an `add_to_cart` event triggered by the `button` component:
+The example below shows an `add_to_cart` event triggered by the `button` component:
 
 ```tsx
 import { useCallback } from 'react'
@@ -52,7 +52,7 @@ The `sendAnalyticsEvent` function accepts an event object with the following pro
 
 | Property | Type | Description | Default |
 |----------|------|-------------|---------|
-| `name` | `string` | The name of the event that appears in Analytics reports. | Required |
+| `name` | `string` | The name of the event in Analytics reports. | Required |
 | `params` | `object` | Event-specific parameters and data. | Required |
 | `isEcommerceEvent` | `boolean` | Determines event structure. When `true`, wraps `params` in an `ecommerce` object following the GA4 ecommerce data model. When `false`, sends `params` at the top level for custom non-ecommerce events. | `true` |
 
@@ -89,7 +89,7 @@ This sends the event as:
 
 #### GA4 ecommerce event (`isEcommerceEvent: true`)
 
-Use `isEcommerceEvent: true` (default) to format the event according to the GA4 ecommerce data model, wrapping all parameters inside the ecommerce object. Take the following example
+Use `isEcommerceEvent: true` (default) to format the event according to the GA4 ecommerce data model, wrapping all parameters inside the ecommerce object. See the following example:
 
 ```tsx
 import { sendAnalyticsEvent } from '@faststore/sdk'
@@ -119,7 +119,7 @@ This sends the event as:
 
 ## Typed custom events
 
-The `sendAnalyticsEvent` function supports generics, enabling you to extend default types or modify existing ones. This approach provides type-checking and code suggestions for your custom event properties.
+The `sendAnalyticsEvent` function supports generics, enabling you to extend default types or modify existing ones. This approach provides type checking and code suggestions for your custom event properties.
 
 This typing is independent of how the event is packaged by `isEcommerceEvent`. You can use generics for both GA4 ecommerce events and non-ecommerce custom events.
 
