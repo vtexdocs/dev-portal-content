@@ -12,6 +12,8 @@ tags:
 
 [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) now supports custom branch configuration for both production builds and preview deployments. This change gives you more control over how your Git branching strategy aligns with your VTEX accounts, particularly when you maintain separate production and QA environments. It also helps you avoid unnecessary preview builds by filtering which branches should generate previews.
 
+> ℹ️ This feature is in closed beta, which means that only selected customers have access to it. If you're interested in implementing it in the future, please contact our [Support team](https://support.vtex.com/hc/en-us).
+
 ![customizing-branches-integrations](https://vtexhelp.vtexassets.com/assets/docs/src/customizing-branches-integrations___ae60f6b2b7c97b7200d8b8295fe7c755.gif)
 
 ## What has changed?
