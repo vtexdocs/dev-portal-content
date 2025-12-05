@@ -1,5 +1,5 @@
 ---
-title: "FastStore WebOps: Custom branch configuration"
+title: "FastStore WebOps: Custom branch configuration for production and preview"
 slug: "2025-12-05-faststore-webops-custom-branch-configuration"
 type: "added"
 createdAt: "2025-12-05T10:00:00.000Z"
@@ -42,4 +42,4 @@ To configure a custom branch, access your FastStore WebOps dashboard and navigat
 2. Use the Preview branch filters to include or exclude branches for preview deployments.
 3. Manage filter rules as needed to match your team's workflow.
 
-> ℹ️ For detailed instructions, see the guide [Configuring branches in FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/configuring-branches)
+> ℹ️ For detailed instructions, see the guide [Configuring production and preview branches in WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches)
