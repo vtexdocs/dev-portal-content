@@ -29,4 +29,4 @@ This change ensures that all shoppers can successfully navigate and purchase fro
 
 ## What needs to be done?
 
-For detailed implementation instructions, see the [Improving store accessibility with semantic HTML migration](https://developers.vtex.com/docs/guides/vtex-io-documentation-accessibility-semantic-html-migration) guide.
+For detailed implementation instructions, see the [Improving store accessibility with semantic HTML migration](https://developers.vtex.com/docs/guides/vtex-io-documentation-semantic-html-migration) guide.
