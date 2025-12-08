@@ -2,13 +2,13 @@
 title: "Optimizing SEO by managing lazy loading on PLPs and PDPs"
 ---
 
-Lazy loading is a method that delays the loading of non-essential resources, such as images or sections of a page, until they are actually needed. FastStore uses lazy loading for all native store sections that are out of the viewport by default. Each section is wrapped in a component that checks if it is within the viewport. If it is not, it is loaded lazily.
+Lazy loading is a method that delays the loading of non-essential resources, such as images or sections of a page, until they are actually needed. FastStore uses lazy loading for all native store sections that are out of the viewport by default. Each section is wrapped in a component that checks if it is within the viewport. Otherwise, it is loaded lazily.
 
 This approach reduces initial page load time and improves the browsing experience, especially on slower devices and networks. However, since sections outside the viewport are not included in the initial HTML, there can be SEO implications, such as search engines not indexing them immediately.
 
 This guide explains how to manage lazy loading for custom sections to balance SEO and performance.
 
-> ❗ Disabling lazy loading will most likely increase initial page load time. Apply this practice only to critical, above-the-fold content or to sections with SEO-relevant content that must render on the initial page load. To help you decide, see [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load).
+> ❗ Disabling lazy loading will most likely increase initial page load time. Apply this practice only to critical, above-the-fold content or sections with SEO-relevant content that must render on the initial page load. To help you decide, see [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load).
 
 `LazyLoadingSection` and `ViewportObserver` work together in FastStore to improve initial page load speed.
 
@@ -28,7 +28,7 @@ F --> G[Content becomes visible to user];
 C --> H[Content visible to user and search engines];
 ```
 
-> ⚠️ Disabling lazy loading for too many elements will increase initial page load time, which impacts performance score; search engines penalize low performance. This practice should be applied only to critical, above-the-fold content or SEO-relevant sections that must render on initial page load. To help you decide when to disable lazy loading, see the [Deciding when to lazy load](?tab=t.t9r5zcseuwe4#heading=h.696ir3oal5ef) section.
+> ⚠️ Disabling lazy loading for too many elements will increase initial page load time, which impacts performance score, as search engines penalize low performance. This practice should be applied only to critical, above-the-fold content or SEO-relevant sections that must render on initial page load. To help you decide when to disable lazy loading, see the [Deciding when to lazy load](?tab=t.t9r5zcseuwe4#heading=h.696ir3oal5ef) section.
 
 ### Server-Side Rendering (SSR) and lazy loading
 
