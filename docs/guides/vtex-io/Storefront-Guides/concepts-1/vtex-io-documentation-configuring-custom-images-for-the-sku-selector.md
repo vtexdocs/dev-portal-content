@@ -8,7 +8,7 @@ updatedAt: "2025-12-04T17:55:04.654Z"
 
 In this guide, you'll learn how to configure custom images for the [SKU selector](https://developers.vtex.com/docs/guides/vtex-store-components-skuselector) component. By following these steps, you can display a specific image for each SKU in the selector, different from the default thumbnail.
 
-By default, the SKU selector component uses thumbnail images of the SKU when rendered, as show below. The component uses images from the SKU's information in the Admin Catalog:
+By default, the SKU selector component uses thumbnail images of the SKU when rendered, as shown below. The component uses images from the SKU's information in the Admin Catalog:
 
 ![sku-selector-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-0.png)
 
