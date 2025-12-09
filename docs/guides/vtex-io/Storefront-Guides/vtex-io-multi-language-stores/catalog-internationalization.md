@@ -266,7 +266,7 @@ Complete the _Query variables_ section with the desired translations for each pa
 ```
 
 - `fieldId`: The ID for a product or SKU specification. Every product or SKU specification in your store has a unique ID, which can be found following the instructions for [SKU specifications](https://help.vtex.com/docs/tutorials/adding-sku-specifications-or-fields) or [product specifications](https://help.vtex.com/docs/tutorials/adding-specifications-or-product-fields).
-- `fieldValuesNames`: An object containing:
+- `fieldValuesNames`: An array of objects, where each object contains:
 - `id`: Specification value ID.
 - `name`: Specification value name.
 - `locale`: Target translation locale.
