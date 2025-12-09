@@ -20,7 +20,7 @@ However, you can configure the SKU selector to display a custom image, meaning a
 
 ### Step 1 - Adding an image to an SKU
 
-To display a custom imagem in the SKU Selector, first you need to upload the image and associate it with the desired SKU:
+To display a custom image in the SKU Selector, first, you need to upload the image and associate it with the desired SKU:
 
 1. In the VTEX Admin, go to **Catalog > Products & SKUs**.
 2. Find the desired product and click the down arrow to see its SKUs.
