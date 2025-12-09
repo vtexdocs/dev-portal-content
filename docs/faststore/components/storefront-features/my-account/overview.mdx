@@ -19,14 +19,16 @@ My Account includes several default pages that are essential for managing a cust
 | Page path | Description |
 | --------- | ----------- |
 | `src/pages/pvt/account/orders/[id].tsx` | Displays individual order details, including items, quantities, prices, and statuses. |
-| `src/pages/pvt/account/user-details.tsx` | Displays the user’s personal information, such as name, email, and contact details. |
+| `src/pages/pvt/account/user-details.tsx` | Displays the user's personal information, such as name, email, and contact details. |
 | `src/pages/pvt/account/security.tsx` | Displays security settings, including password management. |
 | `src/pages/pvt/account/profile.tsx` | Displays editable profile settings, allowing users to update personal information. |
 | `src/pages/pvt/account/orders/index.tsx` | Displays a list of all past and current orders placed by the user, including summary details for each. |
 
-### Orders page filtering
+### Orders
 
-The orders page features filtering capabilities that enable users to locate specific orders quickly. By default, the following filter options are available:
+#### Orders page filtering
+
+The orders page features filtering capabilities that enable users to quickly locate specific orders. By default, the following filter options are available:
 
 - **Pending my approval:** Toggle filter that shows only orders requiring user approval. When active, the filter state is reflected in the URL as `?pendingApproval=true`, and a `Pending my approval` tag appears below the search bar.
 
