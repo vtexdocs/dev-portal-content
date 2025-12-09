@@ -12,7 +12,7 @@ By default, the SKU selector component uses thumbnail images of the SKU when ren
 
 ![sku-selector-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-0.png)
 
-However, you can configure the SKU selector to display a custom image, meaning an image different than the default one used by the SKU. For example:
+However, you can configure the SKU selector to display a custom image, meaning an image different from the default one used by the SKU. For example:
 
 ![sku-selector-image-custom](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-configuring-custom-images-for-the-sku-selector-1.png)
 
