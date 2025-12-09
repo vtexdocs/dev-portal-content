@@ -1,6 +1,6 @@
 ---
 title: "Translating Catalog content"
-excerpt: "Learn how to overwrite automatic message translations from the catalog."
+excerpt: "Learn how to overwrite automatic message translations from the Catalog."
 slug: "catalog-internationalization"
 hidden: false
 createdAt: "2020-08-31T17:18:54.238Z"
