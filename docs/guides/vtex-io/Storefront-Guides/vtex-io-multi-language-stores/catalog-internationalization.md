@@ -19,7 +19,7 @@ Below is a list of Catalog API settings that automatically translate based on th
 - **[SKU](https://help.vtex.com/en/tutorial/sku-registration-fields--21DDItuEQc6mseiW8EakcY):** Name.
 - **[SKU or product specification](https://help.vtex.com/en/docs/tracks/specifications-concept-definition):** Name, description, and values.
 
-To ensure accuracy and brand consistency, you can customize VTEX's automatic translations to reflect cultural nuances or specific terminology that align with your brand. This process is done by following the [instructions](#instructions) provided below, using the `catalog-graphql` app, which serves as the GraphQL interface for the Catalog API. through the `catalog-graphql` app, which serves as the GraphQL interface for the Catalog API.
+To ensure accuracy and brand consistency, you can customize VTEX's automatic translations to reflect cultural nuances or specific terminology that align with your brand. This process involves following the [instructions](#instructions) provided below, using the `catalog-graphql` app, which serves as the GraphQL interface for the Catalog API.
 
 >ℹ️ If your store uses catalog translation overrides via Messages service (`vtex.messages`), you can check if a manual translation exists by running a query in Messages GraphQL. Learn more in the section [Checking catalog message translations](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app#checking-catalog-message-translations) of the Overwriting the Messages app guide. 
 
