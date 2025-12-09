@@ -7,7 +7,7 @@ createdAt: "2020-08-31T17:18:54.238Z"
 updatedAt: "2025-11-18T18:56:38.330Z"
 ---
 
-In this guide, you'll learn how to overwrite an automatic message translation from your store's catalog, such as product names and descriptions. By following these instructions, you can provide more specific content in different languages.
+In this guide, you'll learn how to overwrite an automatic message translation from your store's Catalog, such as product names and descriptions. By following these instructions, you can provide more specific content in different languages.
 
 Catalog messages are translatable text strings associated with your store's catalog. These messages are stored externally within the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview), which manages your store's sales channels, categories, brands, products, SKUs, and specifications.
 
