@@ -21,20 +21,20 @@ Below is a list of Catalog API settings that automatically translate based on th
 
 To ensure accuracy and brand consistency, you can customize VTEX's automatic translations to reflect cultural nuances or specific terminology that align with your brand. This process involves following the [instructions](#instructions) provided below, using the `catalog-graphql` app, which serves as the GraphQL interface for the Catalog API.
 
->ℹ️ If your store uses catalog translation overrides via Messages service (`vtex.messages`), you can check if a manual translation exists by running a query in Messages GraphQL. Learn more in the section [Checking catalog message translations](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app#checking-catalog-message-translations) of the Overwriting the Messages app guide. 
+>ℹ️ If your store uses catalog translation overrides via Messages service (`vtex.messages`), you can check if a manual translation exists by running a query in Messages GraphQL. Learn more in the section [Checking catalog message translations](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app#checking-catalog-message-translations) of the Overwriting the Messages app guide.
 
 ## Instructions
 
-To translate text messages from your store catalog, follow these steps:
+To translate text messages from your store's catalog, follow these steps:
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
-2. In the Admin VTEX, go to **Store Settings > Storefront > GraphQL IDE**.
+2. In the VTEX Admin VTEX, go to **Store Settings > Storefront > GraphQL IDE**.
 3. From the dropdown list, choose the `vtex.catalog-graphql` app.
 4. Click _Query variables_ at the bottom of the page.
 
 ![graphql-ide](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/vtex-io/Storefront-Guides/images/graphql-ide.gif)
 
-5. Based on your scenario, check the sections ([category](#category), [brand](#brand), [product](#product), [SKU](#sku), [SKU or product specification](#sku-or-product-specification), [specification values](#specification-values)) for orientations on how to complete the main text box and the _Query variables_ section.
+5. Based on your scenario, check the sections ([category](#category), [brand](#brand), [product](#product), [SKU](#sku), [SKU or product specification](#sku-or-product-specification), [specification values](#specification-values)) for guidance on how to complete the main text box and the _Query variables_ section.
 6. After adjusting your query, click the play button to run the declared mutation. The expected response is a boolean value indicating `true`.
 
 Below is an example of the complete process of the automatic translation of a product name:
@@ -74,7 +74,7 @@ Complete the _Query variables_ section with the desired translations for each pa
     ],
     "linkId": "eletronicos"
   },
-  "locale": "pt-BR" 
+  "locale": "pt-BR"
 }
 ```
 
@@ -86,7 +86,7 @@ Complete the _Query variables_ section with the desired translations for each pa
 - `linkId`: The `textLink` (must **not** be translated unless your store is cross-border).
 - `locale`: Target translation locale.
 
-  > ℹ️ If you have a cross-border store, the `linkId` serves as the category URL slug. The [Rewriter](https://developers.vtex.com/docs/guides/rewriter) app will automatically create an alias using the translated slug for each target locale and store it in the `resolveAs` field for that locale's internal route. For example, a category with the slug `eletronics` at `http://{storename}.com/us/eletronics/d` could have the translated slug `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
+  > ℹ️ If you have a cross-border store, the `linkId` serves as the category URL slug. The [Rewriter](https://developers.vtex.com/docs/guides/rewriter) app will automatically create an alias using the translated slug for each target locale and store it in the `resolveAs` field for that locale's internal route. For example, a category with the slug `electronics` at `http://{storename}.com/us/electronics/d` could have the translated slug `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
 
 ### Brand
 
@@ -111,7 +111,7 @@ Complete the _Query variables_ section with the desired translations for each pa
     "name": "Calvin Klein",
     "text": "Esta é uma descrição da marca.",
     "siteTitle": "Calvin Klein",
-    "keywords": "calvin klain"
+    "keywords": "calvin klein"
   },
   "locale": "pt-BR" 
 }
@@ -154,7 +154,7 @@ Complete the _Query variables_ section with the desired translations for each pa
       "lomografia",
       "vintage"]
  },
-  "locale": "pt-BR" 
+  "locale": "pt-BR"
 }
 ```
 
@@ -222,7 +222,7 @@ Complete the _Query variables_ section with the desired translations for each pa
     "fieldId": "31",
     "name": "Cor"
   },
-  "locale": "pt-BR" 
+  "locale": "pt-BR"
 }
 ```
 
