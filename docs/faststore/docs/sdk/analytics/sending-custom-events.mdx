@@ -2,56 +2,57 @@
 title: "Sending custom events"
 ---
 
-Even though the [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview) module natively supports [Google Analytics ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en), you may need to track customer activity not covered by default events. In such cases, you can trigger and intercept custom events using the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) and [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) functions. In this guide, learn how to define and send custom events.
+Even though the [Analytics](https://developers.vtex.com/docs/guides/faststore/analytics-overview) module natively supports [Google Analytics ecommerce events](https://support.google.com/analytics/answer/14434488?hl=en), you may need to track customer activity not covered by default events. In such cases, you can trigger and intercept custom events using the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) and [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) functions. In this guide, you'll learn how to define and send custom events.
 
-{/* > ℹ️ For a practical example of sending custom events, see the [Implementing custom newsletter analytics events](https://developers.vtex.com/docs/guides/faststore/analytics-implementing-custom-newsletter-analytics-events) guide. */}
+> ℹ️ For a practical example of sending custom events, see the [Implementing custom newsletter analytics events](https://developers.vtex.com/docs/guides/faststore/analytics-implementing-custom-newsletter-analytics-events) guide.
 
 ## Instructions
 
 ### Step 1 - Declaring an interface for your custom event
 
-To trigger a custom event, you must define an interface that describes the structure of your event object, including its properties and types. There are three approaches to doing this:
+To trigger a custom event, you must define an interface that describes the structure of your event object, including its properties and types. You can do this in three ways:
 
 - [Creating a new event interface](#creating-a-new-event-interface)
-- [Extending existing types from the Analytics Module](#extending-existing-types-from-the-analytics-module)
-- [Overriding Multiple Types](#overriding-multiple-types)
+- [Extending existing types from the Analytics module](#extending-existing-types-from-the-analytics-module)
+- [Overriding multiple types](#overriding-multiple-types)
 
 #### Creating a new event interface
 
-To create a custom event interface, use the `sendAnalyticsEvent` function. This function requires the event to include two properties:
+To create a custom event interface, use the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
 
-| Property name | Type | Description |
-| ------------------- |-------- |---------------- |
-| `name`            | `string` | The name of the event that appears in Analytics reports. The `name` doesn't need to follow any event name conventions related to natively supported events. |
-| `params` | `any` | Any type and value your custom event uses. |
-
-##### Example
-
-In the following example, we define a custom event called `WishlistEvent` to track when a user adds a product to their wishlist:
+In the following example, we define a custom event called `WishlistEvent` to track when a user adds a product to their wishlist. Since this is not a standard ecommerce event, we set `isEcommerceEvent: false`:
 
     ```ts
     import { sendAnalyticsEvent } from '@faststore/sdk'
 
     interface WishlistEvent {
-        name: 'wishlist-event',
+        name: 'wishlist_event'
+        isEcommerceEvent: false
         params: {
-        productId: string
-        productName: string
+            productId: string
+            productName: string
+            userId: string
+            isLoggedIn: boolean
         }
-        userId: string
-        isLoggedIn: boolean
     }
 
-    sendAnalyticsEvent<WishlistEvent>({ name, params, userId, isLoggedIn })
+    sendAnalyticsEvent<WishlistEvent>({
+        name: 'wishlist_event',
+        isEcommerceEvent: false,
+        params: {
+            productId: '12345',
+            productName: 'Example Product',
+            userId: 'user-abc',
+            isLoggedIn: true
+        }
+    })
     ```
 
-This custom event interface captures when a user adds a product to their wishlist, logging details like `productId`, `productName`, and whether the user is logged in (`isLoggedIn`). This data can then be sent to your analytics tool to better understand customer behavior, such as which products are popular on wishlists and how engagement varies between logged-in and anonymous users.
+This custom event interface captures when a user adds a product to their wishlist, logging details like `productId`, `productName`, and whether the user is logged in (`isLoggedIn`). By setting `isEcommerceEvent: false`, the parameters are sent at the top level of the event payload, following the [Google Analytics 4 format for custom events](https://support.google.com/analytics/answer/14240153?hl=en).
 
 #### Extending existing types from the Analytics module
 
 If your event is related to an existing one, you can extend relevant types from the Analytics module. You can do this by using the [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) with the [`sendAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) function.
-
-##### Example
 
 The following example extends the `AddToCartEvent` interface to include the `couponCode` property, which is useful for tracking if a customer applied a coupon code when adding an item to the cart:
 
@@ -123,7 +124,7 @@ After defining the event interface, you'll need to intercept these events using 
     }
     ```
 
-Note that to target extended properties of events, you'll also need to configure the types of your [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) callback function to expect an event of such type.
+Note that to target extended properties of events, you'll also need to configure the types of your [`useAnalyticsEvent`](https://developers.vtex.com/docs/guides/faststore/analytics-use-analytics-event) callback function to expect an event of that type.
 
     ```ts
     import { useAnalyticsEvent } from '@faststore/sdk'
@@ -142,32 +143,31 @@ Note that to target extended properties of events, you'll also need to configure
     }
     ```
 
-> ℹ By typing the callback function with the extended types, you can reference properties not natively offered by the analytics module.
+> ℹ️ By typing the callback function with the extended types, you can reference properties not natively provided by the Analytics module.
 
 ### Step 3 - Firing custom events
 
-Now that you have declared your event interface and intercepted it with the `useAnalyticsEvent` hook, you can implement it in your components to fire the event.
+Now that you've declared your event interface and intercepted it with the `useAnalyticsEvent` hook, you can implement it in your components to fire the event.
 
     ```ts
     import { useCallback } from 'react'
     import { sendAnalyticsEvent } from '@faststore/sdk'
 
     const MyComponent = () => {
-    const arbitraryEvent = useCallback(() => {
-        /* ... */
-
-        const arbitraryEvent = {
-        type: 'arbitrary-event',
-        data: {
-            items: [
-            /* ... */
-            ],
-        },
+    const handleCustomEvent = useCallback(() => {
+        sendAnalyticsEvent({
+        name: 'custom_action',
+        isEcommerceEvent: false,
+        params: {
+            action_type: 'button_click',
+            component_name: 'MyComponent',
+            timestamp: new Date().toISOString()
         }
-
-        sendAnalyticsEvent(arbitraryEvent)
+        })
     }, [])
 
-    return <button onClick={arbitraryEvent}>Arbitrary button</button>
+    return <button onClick={handleCustomEvent}>Trigger Custom Event</button>
     }
     ```
+
+> ℹ️ Use `isEcommerceEvent: false` for custom events that track user interactions, feature usage, or other non-commerce activities. Reserve the default `isEcommerceEvent: true` (or omit it) for events related to the shopping funnel (add to cart, purchase, etc.).
