@@ -8,7 +8,9 @@ This approach reduces initial page load time and improves the browsing experienc
 
 This guide explains how to manage lazy loading for custom sections to balance SEO and performance.
 
-> ❗ Disabling lazy loading will most likely increase initial page load time. Apply this practice only to critical, above-the-fold content or sections with SEO-relevant content that must render on the initial page load. To help you decide, see [How lazy loading works in FastStore](#how-lazy-loading-works-in-faststore) and [Deciding when to lazy load](#deciding-when-to-lazy-load).
+> ❗ Disabling lazy loading will most likely increase initial page load time. Apply this practice only to critical, above-the-fold content or sections with SEO-relevant content that must render on the initial page load. To help you decide, see [Key concepts before implementation](#key-concepts-before-implementation) and [Deciding when to lazy load](#step-1--deciding-when-to-lazy-load).
+
+## Key concepts before implementation
 
 `LazyLoadingSection` and `ViewportObserver` work together in FastStore to improve initial page load speed.
 
@@ -51,27 +53,6 @@ Lazy loading can improve Largest Contentful Paint (LCP) and Interaction to Next 
 
 On the other hand, rendering all content upfront can speed up discovery for crawlers, but it can also consume crawl budget, slow down the indexing of other pages on your site, and negatively impact user-perceived performance due to the increased initial payload size.
 
-## Deciding when to lazy load
-
-Use lazy loading strategically to prioritize the most important content for crawlers. If essential content is not present in the initial HTML, search engines may consume more crawl budget to execute \`js\` scripts, such as product grids on a PLP.
-
-### When to implement lazy loading ✅
-
-
-| Context | Benefit | Example |
-| :---- | :---- | :---- |
-| **To load content that isn't immediately visible** | Improves initial page load speed by delaying non-critical assets that are below the fold. | A homepage with promotional banners and lookbooks that load as the user scrolls down the page. |
-| **To improve page speed for a media-heavy page** | Optimizes resource usage and ensures the most important content is prioritized and loads first. | A PDP includes a "Complete the Look" carousel at the bottom. Since this is a supplementary suggestion, lazy loading ensures the main product details are prioritized and the carousel images load only when the user scrolls to that section. |
-| **The content doesn't affect SEO or crawling** | It will not negatively impact search engine visibility since the content isn't critical for SEO or structured data. | A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured data for SEO, lazy loading it will not negatively affect search engine visibility. |
-| **To balance server load during high traffic** | It reduces server spikes by loading only the images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, which reduces server spikes and keeps the browsing experience fast. |
-
-### When to skip lazy loading ❌ 
-
-| Context | Reason to avoid | Example |
-| :---- | :---- | :---- |
-| **Hiding critical page elements from crawlers** | Search engines might not see all content if it is lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index all new products shown in this grid. |
-| **Disabling lazy loading globally** | Apply lazy loading selectively. Rendering everything upfront increases payloads, exhausts crawl budget, and slows indexing. | A homepage with numerous campaign images should lazy load secondary media while keeping critical content immediately available. |
-
 ## Before you begin
 
 <Steps>
@@ -89,7 +70,27 @@ For instructions, see the [Configuring SEO for PLPs and PDPs](https://developers
 
 ## Instructions
 
-### Step 1: Controlling lazy loading for custom sections
+### Step 1: Deciding when to lazy load
+
+Use lazy loading strategically to prioritize the most important content for crawlers. If essential content is not present in the initial HTML, search engines may consume more crawl budget to execute \`js\` scripts, such as product grids on a PLP.
+
+### When to implement lazy loading ✅
+
+| Context | Benefit | Example |
+| :---- | :---- | :---- |
+| **To load content that isn't immediately visible** | Improves initial page load speed by delaying non-critical assets that are below the fold. | A homepage with promotional banners and lookbooks that load as the user scrolls down the page. |
+| **To improve page speed for a media-heavy page** | Optimizes resource usage and ensures the most important content is prioritized and loads first. | A PDP includes a "Complete the Look" carousel at the bottom. Since this is a supplementary suggestion, lazy loading ensures the main product details are prioritized and the carousel images load only when the user scrolls to that section. |
+| **The content doesn't affect SEO or crawling** | It will not negatively impact search engine visibility since the content isn't critical for SEO or structured data. | A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured data for SEO, lazy loading it will not negatively affect search engine visibility. |
+| **To balance server load during high traffic** | It reduces server spikes by loading only the images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, which reduces server spikes and keeps the browsing experience fast. |
+
+### When to skip lazy loading ❌ 
+
+| Context | Reason to avoid | Example |
+| :---- | :---- | :---- |
+| **Hiding critical page elements from crawlers** | Search engines might not see all content if it is lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index all new products shown in this grid. |
+| **Disabling lazy loading globally** | Apply lazy loading selectively. Rendering everything upfront increases payloads, exhausts crawl budget, and slows indexing. | A homepage with numerous campaign images should lazy load secondary media while keeping critical content immediately available. |
+
+### Step 2: Controlling lazy loading for custom sections
 
 FastStore lazy-loads sections to improve store performance. However, some [custom sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section), such as those containing H1 headers, may need to appear in the initial HTML for SEO purposes. To disable lazy loading for these sections, consider the following:
 
@@ -116,7 +117,7 @@ FastStore lazy-loads sections to improve store performance. However, some [custo
    }
    ```
 
-Turning this on ensures the section's content is included in the initial, server-rendered HTML (i.e., lazy loading is skipped for that section).
+Enabling this feature ensures that the section's content is included in the initial, server-rendered HTML (i.e., lazy loading is skipped for that section).
 
 3. To display PLP data (e.g., collection names) in a custom section, use the [`usePLP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#consuming-api-extensions-data-from-custom-sections) hook. For PDP data (e.g., product titles), use the [`usePDP()`](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions#hooks-for-consuming-api-extension-data) hook.
 
@@ -158,7 +159,7 @@ Turning this on ensures the section's content is included in the initial, server
 
 </details>
 
-### Step 2: Sending the changes to the Headless CMS
+### Step 3: Sending the changes to the Headless CMS
 
 1. Open the terminal and run `yarn cms-sync` to synchronize your local changes with the Headless CMS.
 2. Go to the VTEX Admin and access **Storefront > Headless CMS**.
@@ -183,7 +184,7 @@ Turning this on ensures the section's content is included in the initial, server
 
     </details>
 
-### Step 3: Checking if the custom section is visible to search engines
+### Step 4: Checking if the custom section is visible to search engines
 
 To ensure that the custom section is present in the initial HTML response, follow these steps:
 
