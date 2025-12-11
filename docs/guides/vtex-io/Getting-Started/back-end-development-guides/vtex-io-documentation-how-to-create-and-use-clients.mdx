@@ -120,6 +120,7 @@ import type { RestEndpointMethodTypes } from '@octokit/rest'
       {
         metric: 'git-repo-get',
         headers: {
+          ...this.options?.headers,
           Accept: 'application/vnd.github.nebula-preview+json',
           ...(token && { Authorization: `token ${token}` }),
         },
@@ -168,6 +169,7 @@ export default class GithubClient extends ExternalClient {
       {
         metric: 'git-repo-get',
         headers: {
+          ...this.options?.headers,
           Accept: 'application/vnd.github.nebula-preview+json',
           ...(token && { Authorization: `token ${token}` }),
         },
@@ -201,7 +203,10 @@ export default class GithubClient extends ExternalClient {
       tagData,
       {
         metric: 'git-create-tag',
-        headers: { ...(token && { Authorization: `token ${token}` }) },
+        headers: {
+          ...this.options?.headers,
+          ...(token && { Authorization: `token ${token}` })
+        },
       }
     )
   }
