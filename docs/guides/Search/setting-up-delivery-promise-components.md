@@ -118,7 +118,7 @@ This configuration ensures the page is filtered for delivery availability from t
 
 #### Defining displayed delivery methods
 
-The `shippingSelection` prop controls which delivery methods are displayed:
+The `deliveryMethodSelection` prop controls which delivery methods are displayed:
 
 * `delivery-and-pickup`: Enables both delivery and pickup location options.
 * `only-pickup`: Displays only the pickup selector (for example, in stores focusing on in-store pickup).
@@ -128,7 +128,7 @@ Configure the prop as shown in the example below:
 ```json
 "shipping-option-location-selector": {
   "props": {
-    "shippingSelection": "delivery-and-pickup"
+    "deliveryMethodSelection": "delivery-and-pickup"
   }
 }
 ```
