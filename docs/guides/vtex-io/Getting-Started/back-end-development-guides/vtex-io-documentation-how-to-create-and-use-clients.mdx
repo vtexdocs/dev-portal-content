@@ -89,11 +89,12 @@ import { ExternalClient } from '@vtex/api'
 
 export default class GithubClient extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
-    super("<https://api.github.com>", context, {
+    super('http://api.github.com', context, {
     ...options,
     retries: 2,
     headers: {
-      Accept: 'application/vnd.github.machine-man-preview+json'
+      Accept: 'application/vnd.github.machine-man-preview+json',
+      'x-vtex-use-https': 'true'
     }
     });
   }
@@ -119,6 +120,7 @@ import type { RestEndpointMethodTypes } from '@octokit/rest'
       {
         metric: 'git-repo-get',
         headers: {
+          ...this.options?.headers,
           Accept: 'application/vnd.github.nebula-preview+json',
           ...(token && { Authorization: `token ${token}` }),
         },
@@ -151,11 +153,12 @@ export default class GithubClient extends ExternalClient {
   }
 
   constructor(context: IOContext, options?: InstanceOptions) {
-    super('https://api.github.com', context, {
+    super('http://api.github.com', context, {
       ...options,
       retries: 2,
       headers: {
         Accept: 'application/vnd.github.machine-man-preview+json',
+        'x-vtex-use-https': 'true',
       },
     })
   }
@@ -166,6 +169,7 @@ export default class GithubClient extends ExternalClient {
       {
         metric: 'git-repo-get',
         headers: {
+          ...this.options?.headers,
           Accept: 'application/vnd.github.nebula-preview+json',
           ...(token && { Authorization: `token ${token}` }),
         },
@@ -199,7 +203,10 @@ export default class GithubClient extends ExternalClient {
       tagData,
       {
         metric: 'git-create-tag',
-        headers: { ...(token && { Authorization: `token ${token}` }) },
+        headers: {
+          ...this.options?.headers,
+          ...(token && { Authorization: `token ${token}` })
+        },
       }
     )
   }
@@ -238,30 +245,37 @@ A variable to store a map of routes for each method implemented in the Client. T
 
 ---
 
-Configuration options to each request of this Client. It extends `AxiosRequestConfig` adding some IO-specific options. In this example, we are setting the number of retries and the `Accept` header to indicate the desired format to receive.
+The `baseUrl` argument in `super` must be a URL starting with `http://`. For a secure connection, set the header `'x-vtex-use-https'` to `'true'`. This header changes the request to HTTPS when it leaves the VTEX infrastructure.
 
-```ts node/github.ts focus=21:24
+```ts node/github.ts focus=19[11:33],24
+```
+
+---
+
+Configuration options for each request of this Client. It extends `AxiosRequestConfig`, adding some IO-specific options. In this example, we are setting the number of retries, the `Accept` header to indicate the desired format, and the `x-vtex-use-https` header to force the use of HTTPS.
+
+```ts node/github.ts focus=21:25
 ```
 
 ---
 
 The `metric` parameter gives a name to identify each HTTP call for analytics purposes.
 
-```ts node/github.ts focus=32:32
+```ts node/github.ts focus=33
 ```
 
 ---
 
 The `getRaw` method retrieves additional information about the response, such as headers. The `get` method retrieves only the response body.
 
-```ts node/github.ts focus=42:45 mark=42[38:43]
+```ts node/github.ts focus=44:46 mark=44[38:43]
 ```
 
 ---
 
 The query parameters are passed using this format, resulting in `?q={{query}}` being appended to the request's URL.
 
-```ts node/github.ts focus=77:77
+```ts node/github.ts focus=82
 ```
 
 </CH.Scrollycoding>
