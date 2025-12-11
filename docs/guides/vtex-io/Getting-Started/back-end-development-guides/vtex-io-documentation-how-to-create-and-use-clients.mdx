@@ -252,7 +252,7 @@ The `baseUrl` argument in `super` must be a URL starting with `http://`. For a s
 
 ---
 
-Configuration options to each request of this Client. It extends `AxiosRequestConfig` adding some IO-specific options. In this example, we are setting the number of retries and the `Accept` header to indicate the desired format to receive, and the `x-vtex-use-https` header to force the use of HTTP instead of HTTPS.
+Configuration options for each request of this Client. It extends `AxiosRequestConfig`, adding some IO-specific options. In this example, we are setting the number of retries, the `Accept` header to indicate the desired format, and the `x-vtex-use-https` header to force the use of HTTPS.
 
 ```ts node/github.ts focus=21:25
 ```
