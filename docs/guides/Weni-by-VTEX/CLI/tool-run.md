@@ -7,8 +7,6 @@ updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Learn how to use the Tool Run feature."
 ---
 
-## Tool Test Run
-
 Tool Run is a scalable way to build your tool and test it in real-time. With this feature, it's simple to debug problems and create a tool that is both scalable and performant at the same time.
 
 ### What is required to run a tool?
