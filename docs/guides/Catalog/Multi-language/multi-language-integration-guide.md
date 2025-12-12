@@ -13,7 +13,7 @@ Learn how to integrate localized catalog content using the multi-language endpoi
 
 ## Overview
 
-The multi-language endpints for managing language-specific information for catalog entities. These endpoints enable you to:
+The multi-language endpoints for managing language-specific information for catalog entities. These endpoints enable you to:
 
 - Store and retrieve translations for products, SKUs, categories, brands, specifications, collections, and services.
 - Integrate with Translation Management Systems (TMS) for automated translation workflows.
