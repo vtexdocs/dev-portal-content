@@ -44,7 +44,7 @@ To enable the Delivery Promise functionality, you should use the following addit
 
 >⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
 
-For more information on facet options apart from the ones directly related to Delivery Promises, go to `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-).
+For more information on facet options apart from the ones directly related to Delivery Promise, go to `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-).
 
 ### Filter combinations
 
