@@ -1,6 +1,6 @@
 ---
 title: "Activity Flow: Test Monitoring Headless stores and mobile apps"
-slug: "2025-12-11-activity-flow-monitoring-headless-stores-and-mobile-apps"
+slug: "2025-12-11-activity-flow-test-monitoring-headless-stores-and-mobile-apps"
 hidden: false
 type: "added"
 createdAt: "2025-12-11T14:42:11.739Z"
