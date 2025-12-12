@@ -2,7 +2,7 @@
 title: "Managing tokenized cards"
 slug: "managing-tokenized-cards"
 hidden: false
-createdAt: "2025-12-12T00:00:00.00Z"
+createdAt: "2025-12-12T01:00:00.00Z"
 ---
 
 A gestão de cartões tokenizados é um componente essencial em integrações de pagamento que exigem migração, verificação ou sincronização de dados entre sistemas. Para atender a esses cenários, a VTEX oferece os seguintes recursos:
