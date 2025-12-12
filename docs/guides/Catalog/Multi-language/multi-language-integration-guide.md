@@ -1,26 +1,19 @@
 ---
-title: 'Multi-Language integration guide'
-id: catalog-multi-language-integration-guide
-status: DRAFT
-createdAt: 2025-12-12T00:00:00.000Z
-updatedAt: 2025-12-12T00:00:00.000Z
-publishedAt: 
-firstPublishedAt: 
-contentType: tutorial
-productTeam: Marketing & Merchandising
-author: 
-slugEN: catalog-multi-language-integration-guide-beta
-locale: en
-subcategoryId: 6riYYNZCpO8wyksi8Ksgyq
+title: "Multi-language integration guide"
+slug: "multi-language-integration-guide"
+hidden: false
+excerpt: "Learn how to integrate localized content."
+createdAt: "2025-12-12T00:00:00.000Z"
+updatedAt: "2025-12-12T00:00:00.000Z"
 ---
-
-This guide describes how to integrate localized catalog content using the Catalog Multi-Language API endpoints. Learn how to create translations for catalog entities and consume them across different storefront implementations.
 
 > ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
 
+This guide describes how to integrate localized catalog content using the multi-language endpoints, which allows you to create translations for catalog entities and consume them across different storefront implementations.
+
 ## Overview
 
-The Catalog Multi-Language API provides endpoints for managing language-specific information for catalog entities. These endpoints enable you to:
+The multi-language API provides endpoints for managing language-specific information for catalog entities. These endpoints enable you to:
 
 - Store and retrieve translations for products, SKUs, categories, brands, specifications, collections, and services.
 - Integrate with Translation Management Systems (TMS) for automated translation workflows.
