@@ -1,13 +1,11 @@
 ---
-title: "Fetching and filtering logs"
-slug: "logs"
+title: "Fetching and filtering agent logs"
+slug: "weni-by-vtex-fetching-and-filtering-logs"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Fetch and filter execution logs."
 ---
-
-## Logs
 
 Fetch and filter execution logs for a specific agent tool.
 

@@ -7,8 +7,6 @@ updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Learn the command reference for the Weni by VTEX CLI."
 ---
 
-# Weni by VTEX CLI command reference
-
 This documentation includes the default commands available in [Weni by VTEX CLI](weni-byvtex-guide.md).
 
 ## Default commands
