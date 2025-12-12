@@ -1,6 +1,6 @@
 ---
 title: "Implementing Google One-tap login"
-slug: "implementing-google-one-tap-login"
+slug: "vtex-io-documentation-implementing-google-one-tap-login"
 hidden: false
 excerpt: "Learn how to implement the Google One-tap login in your Store Framework store."
 createdAt: "2020-07-30T19:58:25.203Z"
