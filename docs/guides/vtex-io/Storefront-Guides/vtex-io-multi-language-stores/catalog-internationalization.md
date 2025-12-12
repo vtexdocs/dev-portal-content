@@ -4,7 +4,7 @@ excerpt: "Learn how to overwrite automatic message translations from the Catalog
 slug: "catalog-internationalization"
 hidden: false
 createdAt: "2020-08-31T17:18:54.238Z"
-updatedAt: "2025-11-18T18:56:38.330Z"
+updatedAt: "2025-12-12T18:12:12.318Z"
 ---
 
 In this guide, you'll learn how to overwrite an automatic message translation from your store's Catalog, such as product names and descriptions. By following these instructions, you can provide more specific content in different languages.
