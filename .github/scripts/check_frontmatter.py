@@ -71,6 +71,9 @@ for f in changed_files:
             # Regular expression for ISO 8601 date format (YYYY-MM-DDThh:mm:ss.sssZ)
             iso8601_regex = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$")
 
+            # Regular expression for date format (YYYY-MM-DD)
+            date_regex = re.compile(r"^\d{4}-\d{2}-\d{2}-")
+
             # Validate formatting in present fields
             for key, value in fm_dict.items():
                 if key == 'title':
@@ -89,6 +92,9 @@ for f in changed_files:
                         error_found = True
                     if value != f.filename.split('/')[-1].replace('.mdx', '').replace('.md', ''):
                         field_errors.append({"field": "slug", "message": "'slug' must match the filename without extension"})
+                        error_found = True
+                    if f.filename.startswith('docs/release-notes') and not date_regex.match(value):
+                        field_errors.append({"field": "slug", "message": "'slug' in release notes must start with date in format YYYY-MM-DD"})
                         error_found = True
                     continue
                 if key == 'hidden':
@@ -193,7 +199,6 @@ if file_errors:
                 message = err.get("message", "")
                 comment_body += f"| `{field}` | {message} |\n"
 
-       
         pr.create_issue_comment(comment_body)
     print(' \n')
     print("Frontmatter errors found. Failing the action.")

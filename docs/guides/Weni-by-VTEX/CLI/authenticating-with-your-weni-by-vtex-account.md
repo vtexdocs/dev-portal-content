@@ -1,13 +1,11 @@
 ---
 title: "Authenticating with your Weni by VTEX account"
-slug: "authentication"
+slug: "authenticating-with-your-weni-by-vtex-account"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Learn how to authenticate with Weni by VTEX CLI."
 ---
-
-## Authentication
 
 Learn how to authenticate with Weni by VTEX CLI and manage your credentials.
 
