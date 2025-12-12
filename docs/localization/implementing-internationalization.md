@@ -1,9 +1,9 @@
 ---  
-title: "Implementing internationalization"  
-slug: "implementing-internationalization"  
-hidden: false  
-createdAt: ""  
-excerpt: "Learn how "  
+title: "Implementing internationalization"
+slug: "implementing-internationalization"
+hidden: false
+createdAt: ""
+excerpt: "Learn how "
 ---
 
 **Internationalization** prepares your store to operate in multiple languages by translating storefront content and catalog data and applying regional formatting. When your business requires multiple currencies, prices, or logistics per market, pair internationalization with a [cross-border setup](https://developers.vtex.com/docs/guides/implementing-cross-border-stores) that uses different trade policies.
