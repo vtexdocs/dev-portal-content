@@ -94,7 +94,7 @@ for f in changed_files:
                         field_errors.append({"field": "slug", "message": "'slug' must match the filename without extension"})
                         error_found = True
                     if f.filename.startswith('docs/release-notes') and not date_regex.match(value):
-                        field_errors.append({"field": "slug", "message": "'slug' must start with date in format YYYY-MM-DD"})
+                        field_errors.append({"field": "slug", "message": "'slug' in release notes must start with date in format YYYY-MM-DD"})
                         error_found = True
                     continue
                 if key == 'hidden':
@@ -198,7 +198,6 @@ if file_errors:
                 field = err.get("field", "") or ""
                 message = err.get("message", "")
                 comment_body += f"| `{field}` | {message} |\n"
-
 
         pr.create_issue_comment(comment_body)
     print(' \n')
