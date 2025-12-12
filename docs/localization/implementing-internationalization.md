@@ -1,4 +1,4 @@
----  
+---
 title: "Implementing internationalization"
 slug: "implementing-internationalization"
 hidden: false
