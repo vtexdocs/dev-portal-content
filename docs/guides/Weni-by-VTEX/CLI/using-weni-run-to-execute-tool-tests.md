@@ -1,6 +1,6 @@
 ---
 title: "Using Weni Run to execute tool tests"
-slug: "tool-run"
+slug: "using-weni-run-to-execute-tool-tests"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"

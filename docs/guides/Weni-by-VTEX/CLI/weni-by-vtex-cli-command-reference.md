@@ -1,6 +1,6 @@
 ---
 title: "Weni by VTEX CLI Command Reference"
-slug: "wenicli-command-reference"
+slug: "weni-by-vtex-cli-command-reference"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
