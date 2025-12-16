@@ -3,7 +3,7 @@ title: "Engineering best practices"
 slug: "vtex-io-documentation-engineering-guidelines"
 hidden: false
 createdAt: "2021-07-22T14:20:04.345Z"
-updatedAt: "2022-12-13T20:17:44.370Z"
+updatedAt: "2025-12-16T14:30:0.000Z"
 ---
 Refer to the following guidelines to guarantee the quality and usability of your VTEX IO app during development.
 
@@ -85,7 +85,7 @@ Single-tenant external systems should be used carefully. Data from one tenant mu
 
 ### Persisting PII within VTEX
 
-If using Master Data or VBase to store Personal Identifiable Information (PII), a mechanism must be in place to ensure compliance with the [Right to be Forgotten](https://en.wikipedia.org/wiki/Right_to_be_forgotten) or other similar data-protection practices. Possible solutions are to provide an option or endpoint in the app that erases the data, for instance, by using a delete operation with our Clients ([Master Data](https://developers.vtex.com/docs/guides/create-master-data-crud-app#delete), [VBase](https://github.com/vtex/node-vtex-api/blob/1b3c54976aa974619d0728fae4ed2fe076dbb551/src/clients/infra/VBase.ts#L178)) or through the API ([Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-), [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)).
+If using Master Data to store Personal Identifiable Information (PII), a mechanism must be in place to ensure compliance with the [Right to be Forgotten](https://en.wikipedia.org/wiki/Right_to_be_forgotten) or other similar data-protection practices. Possible solutions are to provide an option or endpoint in the app that erases the data, for instance, by using a delete operation with our [Master Data Client](https://developers.vtex.com/docs/guides/create-master-data-crud-app) or through the API ([Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-), [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)).
 
 ### Sending PII to external service
 
