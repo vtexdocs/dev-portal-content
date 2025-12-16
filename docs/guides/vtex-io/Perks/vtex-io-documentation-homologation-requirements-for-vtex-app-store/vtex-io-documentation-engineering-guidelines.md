@@ -3,7 +3,7 @@ title: "Engineering best practices"
 slug: "vtex-io-documentation-engineering-guidelines"
 hidden: false
 createdAt: "2021-07-22T14:20:04.345Z"
-updatedAt: "2025-12-16T14:30:0.000Z"
+updatedAt: "2025-12-16T14:30:00.000Z"
 ---
 Refer to the following guidelines to guarantee the quality and usability of your VTEX IO app during development.
 
