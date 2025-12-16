@@ -25,22 +25,30 @@ In situations other than API requests to VTEX, you may need to check whether the
 
 ### Sending the request to verify user authentication
 
-To check the authenticated user, send a request to the indicated API endpoint, replacing `VtexIdclientAutCookie` with the user's authorization token.
+To check the authenticated user, send a request to the indicated API endpoint, replacing the example account name, API key / token pair and user token.
 
 <CH.Code>
 
-```bash Request
-GET
-https://{accountName}.{environment}.com.br/api/vtexid/pub/authenticated/user?authToken={VtexIdclientAutCookie}
+```curl Request
+curl --request post \
+	--url 'https://apiexamples.vtexcommercestable.com.br/api/vtexid/credential/validate?an=exampleAccount' \
+	--header 'Accept: application/json' \
+	--header 'Content-Type: application/json' \
+	--header 'X-VTEX-API-AppKey: 123' \
+	--header 'X-VTEX-API-AppToken: 123' \
+	--data '{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"}'
 ```
 
 ---
 
 ```json 200-Response
 {
-    "userId": "88888888-8888-8888-8888-888888888888",
-    "user": "user@mail.com",
-    "userType": "F"
+  "authStatus": "Success",
+  "id": "1f6c17e5-06f9-44a9-a459-b3686e03fa9d",
+  "user": "john@mail.com",
+  "account": "apiexamples",
+  "audience": "admin",
+  "tokenType": "user"
 }
 ```
 
