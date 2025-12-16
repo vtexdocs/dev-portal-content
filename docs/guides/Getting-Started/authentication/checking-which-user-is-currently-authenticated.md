@@ -25,7 +25,7 @@ In situations other than API requests to VTEX, you may need to check whether the
 
 ### Sending the request to verify user authentication
 
-To check the authenticated user, send a request to the indicated API endpoint, replacing the example account name, API key / token pair and user token.
+To check the authenticated user, send a request to the `POST` [Check authenticated user](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/credential/validate) endpoint, replacing the example account name, API key / token pair and user token.
 
 <CH.Code>
 
@@ -62,9 +62,12 @@ curl --request post \
 
 If the user is authenticated, the API will return a JSON object with the following structure:
 
-- `userId`: The unique user ID within VTEX services.
+- `authStatus`: The authentication status (e.g., `Success`).
+- `id`: The unique user ID within VTEX services.
 - `user`: The user's email address.
-- `userType`: Internal VTEX user type identifier (for VTEX use only).
+- `account`: The account name associated with the request.
+- `audience`: The audience scope of the token (e.g., `admin`).
+- `tokenType`: The type of token used for authentication (e.g., `user`).
 
 <CH.Code>
 
@@ -73,27 +76,12 @@ If the user is authenticated, the API will return a JSON object with the followi
 
 ---
 
-```json 200-Response mark=2:4
+```json 200-Response mark=2:7
 ```
 </CH.Code>
 
----
+</CH.Scrollycoding>
 
 #### Non-authenticated user
 
-If the user is not authenticated, the response body will be empty (`null`), and the HTTP status will be either `200 (OK)` or `401 (Unauthorized)`.
-
-<CH.Code>
-
-```json Request
-```
-
----
-
-```json 200-Response
- null
-```
-</CH.Code>
-
-
-</CH.Scrollycoding>
+If the user is not authenticated, the HTTP status will be `401 (Unauthorized)`.
