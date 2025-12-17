@@ -20,7 +20,7 @@ We've added support for `.svg` files in the `public` folder. Now, any SVG files 
 
 ### Fixes
 
-**Improved Cart Synchronization Across Multiple Sessions** (PR:  [#3091](https://github.com/vtex/faststore/pull/3091))  
+**Improved Cart Synchronization Across Multiple Sessions** (PR: [#3091](https://github.com/vtex/faststore/pull/3091))  
 
 Fixed a bug where using the same shopping cart across different devices or browsers could cause conflicting updates, leading to items being incorrectly removed. The validateCart mutation now includes session data when checking for `orderForm` changes, ensuring cart state is synchronized correctly between different user sessions.
 
