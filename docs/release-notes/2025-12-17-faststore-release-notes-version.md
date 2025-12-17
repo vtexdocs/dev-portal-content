@@ -30,4 +30,4 @@ Corrected an issue where the `validateSession` GraphQL mutation would fail, part
 
 **Fixed Meta Description on Search Results Page** (PR:  [\#3128](https://github.com/vtex/faststore/pull/3128))  
 
-Corrected an issue where the meta description for search result pages would display the term undefined in the page's source code. This change ensures the meta tag is correctly formatted at build time, improving SEO by preventing incorrect content from being shown to web crawlers.
+Corrected an issue where the meta description for search result pages would display the term `undefined` in the page's source code. This change ensures the meta tag is correctly formatted at build time, improving SEO by preventing incorrect content from being shown to web crawlers.
