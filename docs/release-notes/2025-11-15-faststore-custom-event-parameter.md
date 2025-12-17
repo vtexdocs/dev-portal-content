@@ -19,6 +19,7 @@ Previously, all events sent via `sendAnalyticsEvent` were automatically wrapped 
 While this approach worked well for commerce-related events such as add-to-cart and purchase, it wasn’t suitable for custom events that track non-commerce activities like newsletter interactions, user actions, or feature usage.
 
 The new `isEcommerceEvent` parameter lets developers choose how events are structured:
+
 - **Custom events:** Set `isEcommerceEvent: false` to send parameters at the top level, following the GA4 custom events format.
 - **Ecommerce events:** Keep the default `isEcommerceEvent: true` to send data inside the `ecommerce` object.
 
