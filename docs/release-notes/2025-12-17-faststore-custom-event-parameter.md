@@ -1,10 +1,10 @@
 ---
 title: "FastStore: New parameter for custom analytics events"
-slug: "2025-12-18-faststore-custom-event-parameter"
+slug: "2025-12-17-faststore-custom-event-parameter"
 type: improved
 excerpt: "The sendAnalyticsEvent function now supports the isEcommerceEvent parameter, allowing developers to send custom analytics events without the GA4 ecommerce structure."
-createdAt: "2025-12-18T00:00:00.219Z"
-updatedAt: "2025-12-18T00:00:00.219Z"
+createdAt: "2025-12-17T00:00:00.219Z"
+updatedAt: "2025-12-17T00:00:00.219Z"
 hidden: false
 tags:
     - FastStore
