@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-09-01T13:47:40.310Z"
 updatedAt: "2022-09-30T16:51:08.972Z"
 ---
-The seller integration flow comprises eight different API requests. Four of these are calls that the seller should make to the marketplace. The other four are requests that the marketplace will need to make to the seller. So, for these, you will need to implement endpoints that are prepared to receive specific request bodies and respond with specific objects.
+The seller integration flow comprises 12 different API requests. Four of these are calls that the seller should make to the marketplace. Seven are requests that the marketplace will need to make to the seller. Only one endpoint is a request made both from the seller and from the marketplace. So, for these, you will need to implement endpoints that are prepared to receive specific request bodies and respond with specific objects.
 
 In the table below, you will find every API request needed for each step of the integration. Each one of them links to their specific API Reference documentation, where you can find the request URLs, methods, headers, the explanation of every field, and examples of requests and responses.
 
@@ -24,6 +24,7 @@ In the table below, you will find every API request needed for each step of the 
 | [Order invoicing](#order-invoicing)                   | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice">Send invoice</a>                     | ➡ Marketplace  |
 | [Send tracking information](#order-tracking)       | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-">Send tracking information</a>     | ➡ Marketplace  |
 | [Update tracking status](#order-tracking)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking">Update tracking status</a>         | ➡ Marketplace  |
+| [Send agreement for order modifications](#order-modifications)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-//api/order-system/orders/{orderId}/changes/{changeId}/send-agreement">Send agreement for order modifications</a>         | ➡ Marketplace <br> ⬅ Seller  |
 
 >ℹ️ To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.\n\n[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/external-seller-integration-guide/button_32.svg)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-connector-0.png)
 
@@ -167,6 +168,10 @@ The same endpoint called by the seller to send the invoice is used to send the o
 - Tracking URL
 
 In this case, the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice">Order Invoice Notification</a></span> should happen once the seller delivers the package to the carrier and receives the tracking data from it.
+
+## Order modifications
+
+If the
 
 ## Cancellation by the marketplace
 
