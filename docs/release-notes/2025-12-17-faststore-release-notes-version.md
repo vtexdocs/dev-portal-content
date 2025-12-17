@@ -24,7 +24,7 @@ We've added support for `.svg` files in the `public` folder. Now, any SVG files 
 
 Fixed a bug where using the same shopping cart across different devices or browsers could cause conflicting updates, leading to items being incorrectly removed. The validateCart mutation now includes session data when checking for `orderForm` changes, ensuring cart state is synchronized correctly between different user sessions.
 
-**Address session validation errors after postal code updates** (PR:  [#3124](https://github.com/vtex/faststore/pull/3124))
+**Address session validation errors after postal code updates** (PR: [#3124](https://github.com/vtex/faststore/pull/3124))
 
 Corrected an issue where the `validateSession` GraphQL mutation would fail, particularly after a user updated their postal code. The mutation payload was being sent with unnecessary fields, which have now been removed to ensure the request is processed successfully. This improves the stability of user session updates.
 
