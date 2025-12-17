@@ -1,4 +1,15 @@
-Version 3.95.0 introduces SVG support in the `public` folder and includes fixes for cart synchronization, session validation, and SEO improvements for search results.
+---
+title: "FastStore Release Notes — Version 3.95.0" 
+slug: "2025-12-17-faststore-release-notes-version"
+type: "added"
+createdAt: "2025-12-17T11:00:00.000Z"
+excerpt: "Version 3.95.0 introduces SVG support in the `public` folder and includes fixes for cart synchronization, session validation, and SEO improvements for search results."
+tags:
+    - FastStore
+---
+
+
+FastStore version 3.95.0 introduces SVG support in the `public` folder and includes fixes for cart synchronization, session validation, and SEO improvements for search results.
 
 ## General
 
