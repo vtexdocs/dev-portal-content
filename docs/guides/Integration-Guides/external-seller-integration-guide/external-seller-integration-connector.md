@@ -26,7 +26,7 @@ In the table below, you will find every API request needed for each step of the 
 | [Update tracking status](#order-tracking)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking">Update tracking status</a>         | ⮕ Marketplace  |
 | [Send agreement for order modifications](#order-modifications)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-//api/order-system/orders/{orderId}/changes/{changeId}/send-agreement">Send agreement for order modifications</a>         | ⬅ Seller  |
 
->ℹ️ To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.\n\n[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/external-seller-integration-guide/button_32.svg)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-connector-0.png)
+>ℹ️ To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/external-seller-integration-guide/button_32.svg)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-connector-0.png)
 
 Let’s walk through each of the steps in the integration.
 
@@ -171,11 +171,13 @@ In this case, the <span class="pg-type type-post">post</span><span class="api"><
 
 ## Order modifications
 
-In the event of modifications made to an order, the seller is automatically 
+In the event of modifications made to an order, the seller must be nofitied to acknowledge the request for modifications and confirm the modifications were applied to the order.
 
 ### Endpoint implementation
 
+This notification is done through a request to the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/order-system/orders/{orderId}/changes/{changeId}/send-agreement">Send agreement for order modifications</a></span> endpoint, which needs to be implemented by the seller or marketplace.
 
+The body of this request contains only one information: the `agreementType`, which has two possible . The seller should use this ID to trigger the fulfillment process.
 
 ## Cancellation by the marketplace
 
