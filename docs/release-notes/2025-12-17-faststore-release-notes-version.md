@@ -14,7 +14,7 @@ FastStore version 3.95.0 introduces SVG support in the `public` folder and inclu
 
 ### Improvements
 
-**Support for SVG files in the `public` folder** (PR:  [#3123](https://github.com/vtex/faststore/pull/3123))
+**Support for SVG files in the `public` folder** (PR: [#3123](https://github.com/vtex/faststore/pull/3123))
 
 We've added support for `.svg` files in the `public` folder. Now, any SVG files placed in this directory will be correctly copied to the `/.faststore/public` folder during the build process, preventing them from being overwritten or deleted.
 
