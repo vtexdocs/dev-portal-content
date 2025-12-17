@@ -33,6 +33,6 @@ Custom events tracking non-commerce activities, such as user preferences, conten
 To use the `isEcommerceEvent`, follow these steps:
 
 1. Add the `isEcommerceEvent: false` parameter to your `sendAnalyticsEvent` calls for custom events.
-2. Structure your event parameters according to your analytics requirements.
+2. Structure your event parameters to match your analytics requirements.
 
-For detailed examples and implementation guidance, refer to the [sendAnalyticsEvent](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) and the [Sending custom events](https://developers.vtex.com/docs/guides/faststore/analytics-sending-custom-events) guides.
+For detailed examples and implementation guidance, check the [sendAnalyticsEvent](https://developers.vtex.com/docs/guides/faststore/analytics-send-analytics-event) and the [Sending custom events](https://developers.vtex.com/docs/guides/faststore/analytics-sending-custom-events) guides.
