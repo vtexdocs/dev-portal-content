@@ -8,7 +8,6 @@ tags:
     - FastStore
 ---
 
-
 FastStore version 3.95.0 introduces SVG support in the `public` folder and includes fixes for cart synchronization, session validation, and SEO improvements for search results.
 
 ## General
