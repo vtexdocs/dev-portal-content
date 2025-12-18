@@ -171,13 +171,15 @@ In this case, the <span class="pg-type type-post">post</span><span class="api"><
 
 ## Order modifications
 
-In the event of modifications made to an order, the seller must be nofitied to acknowledge the request for modifications and confirm the modifications were applied to the order.
+In the event of modifications made to an order, the seller must notify the marketplace, acknowledging and then confirming that the order was modified.
 
 ### Endpoint implementation
 
-This notification is done through a request to the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/order-system/orders/{orderId}/changes/{changeId}/send-agreement">Send agreement for order modifications</a></span> endpoint, which needs to be implemented by the seller or marketplace.
+This notification is done through a request to the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/order-system/orders/{orderId}/changes/{changeId}/send-agreement">Send agreement for order modifications</a></span> endpoint, which needs to be implemented by the seller or the marketplace.
 
-The body of this request contains only one information: the `agreementType`, which has two possible . The seller should use this ID to trigger the fulfillment process.
+The body of this request contains only one information: the `agreementType`, which has two possible values:
+- `Acknowledgment`: This indicates the seller recognizes the request for modifications to the order. 
+- `Confirmation`: This indicates the seller has applied the modifications to the order and the order flow can proceed.
 
 ## Cancellation by the marketplace
 
