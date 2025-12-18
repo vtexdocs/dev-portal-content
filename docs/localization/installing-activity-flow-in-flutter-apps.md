@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2025-10-23T17:07:05.899Z"
 ---
 
-In this guide, you'll learn how to install and configure the [VTEX Activity Flow SDK](https://developers.vtex.com/docs/guides/activity-flow) in Flutter apps for Android and iOS. By following these steps, you'll be able to track user navigation, handle deep links, and collect ad events from your app. 
+In this guide, you'll learn how to install and configure the [VTEX Activity Flow SDK](https://developers.vtex.com/docs/guides/activity-flow) in Flutter apps for Android and iOS. By following these steps, you'll be able to track user navigation, handle deep links, and collect ad events from your app.
 
 ## Before you begin
 
@@ -70,7 +70,7 @@ This setup enables automatic screen view tracking for standard route navigation.
 
 ### Tracking page views manually (for custom navigation)
 
-For navigation widgets like `BottomNavigationBar` or `TabBar`, which do not trigger route changes, use the `trackPageView` function to track screen views manually.
+For navigation widgets like `BottomNavigationBar` or `TabBar`, which do not trigger route changes, use the `trackPageView` function to manually track screen views.
 
 For example, using the `onTap` callback within a `BottomNavigationBar` widget allows for capturing a new route each time the user taps on a different tab:
 
@@ -181,7 +181,7 @@ import activity_flow
 }
 ```
 
-3. Configure `SceneDelegate`
+3. Configure `SceneDelegate`.
 
 If your project uses a `SceneDelegate`, also forward deep links there:
 
@@ -243,7 +243,7 @@ To start tracking your ad events, follow these steps:
 
 1. Call the `addAdsListener`
 
-To enable tracking, call the `addAdsListener` extension method on any Flutter widget that represents an ad: 
+To enable tracking, call the `addAdsListener` extension method on any Flutter widget that represents an ad:
 
 ```java
 yourAdWidget.addAdsListener({Map<String, String> adMetadata);
@@ -312,9 +312,9 @@ This instrumentation enables the automatic tracking of impressions, viewability,
 
 To ensure your Flutter test runs work correctly when the Activity Flow is installed, run tests with a test environment flag using a `--dart-define` flag.
 
-The `--dart-define` flag lets you pass compile-time key=value pairs into your Flutter app as Dart environment declarations. Follow the steps below:
+The `--dart-define` flag allows you to pass compile-time key=value pairs into your Flutter app as Dart environment declarations. To do so, follow the steps below:
 
-1. In your terminal, run `flutter test  --dart-define=ACTIVITY_FLOW_TEST_ENV=true`.
+1. In your terminal, run `flutter test --dart-define=ACTIVITY_FLOW_TEST_ENV=true`.
 2. In a code editor, open your project.
 3. In the code editor settings, search for `dart.flutterTestAdditionalArgs`.
 4. Add to it the value `--dart-define=ACTIVITY_FLOW_TEST_ENV=true`.
@@ -423,6 +423,6 @@ class ButtonTemplate extends StatelessWidget {
 
 The example demonstrates the integration of Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to automatically capture page-view events.
 
-It outlines a `MyHomePage` that incorporates an `AdBanner`, which utilizes `addAdsListener` to pass ad metadata such as product name, price, and ID. Additionally, it features navigation buttons sourced from a routes list.
+It outlines a `MyHomePage` that incorporates an `AdBanner`, which uses `addAdsListener` to pass ad metadata such as product name, price, and ID. Additionally, it features navigation buttons sourced from a routes list.
 
 The reusable `ButtonTemplate` facilitates navigation through `Navigator.pushNamed`, showcasing a standard configuration for automatic screen tracking, as well as ad impression and click tracking, in a Flutter application.
