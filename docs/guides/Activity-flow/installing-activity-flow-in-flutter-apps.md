@@ -2,7 +2,7 @@
 title: "Installing Activity Flow in Flutter apps"
 slug: "installing-activity-flow-in-flutter-apps"
 hidden: false
-createdAt: "2025-10-23T17:07:05.899Z"
+createdAt: "2025-12-18T16:30:39.842Z"
 ---
 
 In this guide, you'll learn how to install and configure the [VTEX Activity Flow SDK](https://developers.vtex.com/docs/guides/activity-flow) in Flutter apps for Android and iOS. By following these steps, you'll be able to track user navigation, handle deep links, and collect ad events from your app.
