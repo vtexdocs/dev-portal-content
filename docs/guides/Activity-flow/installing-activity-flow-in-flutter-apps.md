@@ -98,7 +98,6 @@ The Activity Flow SDK automatically captures deep link query parameters and incl
 Add intent filters to `AndroidManifest.xml` for each route that can be accessed via deep link:
 
 ``` android/app/src/main/AndroidManifest.xml
-<!-- Deep link via HTTPS -->
 <intent-filter>
   <action android:name="android.intent.action.VIEW" />
   <category android:name="android.intent.category.DEFAULT" />
@@ -108,7 +107,7 @@ Add intent filters to `AndroidManifest.xml` for each route that can be accessed 
     android:host="example.com"
     android:pathPrefix="{APP_ROUTE}" />
 </intent-filter>
-<!-- Deep link via Custom Scheme -->
+
 <intent-filter>
   <action android:name="android.intent.action.VIEW" />
   <category android:name="android.intent.category.DEFAULT" />
