@@ -2,7 +2,7 @@
 title: "PPP Versioning"
 slug: "ppp-versioning"
 hidden: false
-createdAt: "2025-12-01T00:00:00.00Z"
+createdAt: "2025-12-18T00:00:00.00Z"
 ---
 
 The [Payment Provider Protocol (PPP)](https://help.vtex.com/docs/tutorials/payment-provider-protocol) is the integration protocol between VTEX and payment processing partners. To enable new features without impacting existing operations, VTEX offers PPP versioning, giving providers flexibility to configure their connectors according to the solutions they want to offer.
