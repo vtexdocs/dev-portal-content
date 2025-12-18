@@ -26,10 +26,8 @@ To display a custom image in the SKU selector, first, you need to upload the ima
 2. Find the desired product and click the down arrow to see its SKUs.
 3. Click the desired SKU to edit it.
 4. In the **Media > Images** section, click `Add` and choose one of the options to upload an image:
-
-- **Choose files:** Upload images stored on your computer.
-- **Add links:** Upload images using a URL.
-
+   - **Choose files:** Upload images stored on your computer.
+   - **Add links:** Upload images using a URL.
 5. Hover over the uploaded image, click the menu icon (`⋮`), and then click `Edit Metadata`.
 6. In the **Label** field, enter a unique ID for the image. This label will be used to identify the custom image.
 7. Click **Save** to save your changes.
@@ -96,10 +94,10 @@ Follow these steps to configure SKU color variations:
 
 >⚠️ Once created, SKU fields can't be deleted, and required fields must be completed for all SKUs in that category, or they may become inactive.
 
-8. In the row of the field you just created, click the down arrow <i class="fas fa-angle-down"></i> next to the `Edit` button and select `Values`.
-9. Create a `New value` or `Edit` a previously defined value.
-10. In the **Name** field, enter each color value on a new line (for example, Off-white, Blue, Black).
-11. Click `Save` to save your changes.
+6. In the row of the field you just created, click the down arrow <i class="fas fa-angle-down"></i> next to the `Edit` button and select `Values`.
+7. Create a `New value` or `Edit` a previously defined value.
+8. In the **Name** field, enter each color value on a new line (for example, Off-white, Blue, Black).
+9. Click `Save` to save your changes.
 
 >ℹ️ Learn more about this process in the guide [Adding SKU specifications or fields](https://help.vtex.com/docs/tutorials/adding-sku-specifications-or-fields#creating-an-sku-field).
 
