@@ -26,6 +26,7 @@ To display a custom image in the SKU selector, first, you need to upload the ima
 2. Find the desired product and click the down arrow to see its SKUs.
 3. Click the desired SKU to edit it.
 4. In the **Media > Images** section, click `Add` and choose one of the options to upload an image:
+
 - **Choose files:** Upload images stored on your computer.
 - **Add links:** Upload images using a URL.
 
