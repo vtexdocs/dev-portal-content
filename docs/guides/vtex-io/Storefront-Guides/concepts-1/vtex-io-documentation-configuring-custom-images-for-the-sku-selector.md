@@ -48,6 +48,7 @@ Now, you must configure your theme to use the custom image in the SKU selector c
    }
  },
  ```
+
 > ⚠️ Replace `LabelId` with the exact label you set for your custom image.
 
 After completing this step, your SKU selector will display the new custom image.
