@@ -73,9 +73,9 @@ Below are examples of requests and responses for each payment transaction scenar
 
 - Payment Gateway ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
 
-     - **Request body:** Doesn't send specific fields for tokenization.
+  - **Request body:** Doesn't send specific fields for tokenization.
 
-     - **Request body:** Received fields about tokenization.
+  - **Request body:** Received fields about tokenization.
 
 ```json
 [
@@ -83,7 +83,7 @@ Below are examples of requests and responses for each payment transaction scenar
 "fields": [{
     "name": "accountId",
     "value": "string"
-	}
+ }
      …
     ]
 …
@@ -92,7 +92,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 - Payment Provider Protocol ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
 
-     - **Request body:** Fields sent for tokenization.
+  - **Request body:** Fields sent for tokenization.
 
 ```json
 {
@@ -128,7 +128,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 - Payment Gateway ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
 
-     - **Request body:** Fields sent for tokenization.
+  - **Request body:** Fields sent for tokenization.
 
 ```json
 [
@@ -148,7 +148,7 @@ Below are examples of requests and responses for each payment transaction scenar
 "fields": {
     "name": "accountId",
     "value": "string"
-	}
+ }
      …
     ]
 …
@@ -157,7 +157,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 - Payment Provider Protocol ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
 
-     - **Request body:** Fields sent for tokenization.
+  - **Request body:** Fields sent for tokenization.
 
 ```json
 {
@@ -191,7 +191,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 - Payment Gateway ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
 
-     - **Request body:** Fields sent for tokenization.
+  - **Request body:** Fields sent for tokenization.
 
 ```json
 [
@@ -222,11 +222,11 @@ Below are examples of requests and responses for each payment transaction scenar
 "fields": [{
     "name": "isCardToken",
     "value": "true"
-	},
+ },
     {
     "name": "accountId",
     "value": "string"
-	}
+ }
      …
     ]
 …
@@ -235,7 +235,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 - Payment Provider Protocol ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
 
-     - **Request body:** Fields sent for tokenization.
+  - **Request body:** Fields sent for tokenization.
 
 ```json
 {
@@ -280,7 +280,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 - Payment Gateway ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
 
-     - **Request body:** Fields sent for tokenization.
+  - **Request body:** Fields sent for tokenization.
 
 ```json
 [
@@ -317,11 +317,11 @@ Below are examples of requests and responses for each payment transaction scenar
 "fields": [{
     "name": "isCardToken",
     "value": "true"
-	},
+ },
     {
     "name": "accountId",
     "value": "string"
-	}
+ }
      …
 ]
 …
@@ -331,7 +331,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 - Payment Provider Protocol ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
 
-     - **Request body:** Fields sent for tokenization.
+  - **Request body:** Fields sent for tokenization.
 
 ```json
 {
