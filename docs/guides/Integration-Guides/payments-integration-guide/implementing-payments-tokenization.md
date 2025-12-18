@@ -26,8 +26,8 @@ To make the tokenization feature available to your customers, the payment provid
 
 1. [Update the connector manifest](#updating-the-connector-manifest)
 2. [Configure the sending of tokenized information](#configuring-the-sending-of-tokenized-information)
-3. [Integrate with the Card Token Vault (CTV)](#integrating-with-the-card-token-vault-ctv)
-4. [Validate the tokenization implementation](#validating-the-tokenization-implementation)
+3. [Integrate with the Card Token Vault (CTV)](#integrating-the-card-token-vault-ctv-system)
+4. [Validate the tokenization implementation](#validating-the-deployment-of-payment-tokenization)
 
 ### Updating the connector manifest
 
@@ -45,14 +45,14 @@ Example of a manifest with tokenization enabled:
 
 ```json
 {
-…
+...
   "version": "2.0.0",
   "cardToken": {
     "canAcceptCardToken": true,
     "cardTokenAcceptedTypes": ["TOKEN_VALUE"],
     "canGenerateCardToken": true
   }
-…
+...
 }
 ```
 
@@ -79,14 +79,14 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-…
+...
 "fields": [{
     "name": "accountId",
     "value": "string"
  }
      …
     ]
-…
+...
 ]
 ```
 
@@ -96,18 +96,18 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-…
+...
     "saveCreditCard": true,
     "useCardToken": true
-…
+...
 }
 ```
 
-     - **Response body:** eived fields about tokenization.
+  - **Response body:** eived fields about tokenization.
 
 ```json
 {
-…
+...
     "isNewTokenization": true,
     "generatedCardToken": {
         "cardTokenType": "TOKEN_VALUE",
@@ -118,7 +118,7 @@ Below are examples of requests and responses for each payment transaction scenar
        },
        "useCvvForAuthorization": true
    }
-…
+...
 }
 ```
 
@@ -132,26 +132,26 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-…
+...
 "fields": {
       "accountId": "string"
     }
-…
+...
 ]
 ```
 
-     - **Response body:** Received fields about tokenization.
+  - **Response body:** Received fields about tokenization.
 
 ```json
 [
-…
+...
 "fields": {
     "name": "accountId",
     "value": "string"
  }
-     …
+     ...
     ]
-…
+...
 ]
 ```
 
@@ -161,18 +161,18 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-…
+...
     "saveCreditCard": false,
     "useCardToken": true
-…
+...
 }
 ```
 
-     - **Response body:** Received fields about tokenization.
+  - **Response body:** Received fields about tokenization.
 
 ```json
 {
-…
+...
     "isNewTokenization": false,
     "generatedCardToken": {
         "cardTokenType": "TOKEN_VALUE",
@@ -183,7 +183,7 @@ Below are examples of requests and responses for each payment transaction scenar
        }
      "useCvvForAuthorization": true
    }
-…
+...
 }
 ```
 
@@ -195,7 +195,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-…
+...
 "fields": [{
     "accountId": "null",
     "cardTokenData": {
@@ -210,15 +210,15 @@ Below are examples of requests and responses for each payment transaction scenar
         "cardTokenCvv": "string",
 }
     }]
-…
+...
 ]
 ```
 
-     - **Response body:** Received fields about tokenization.
+  - **Response body:** Received fields about tokenization.
 
 ```json
 [
-…
+...
 "fields": [{
     "name": "isCardToken",
     "value": "true"
@@ -229,7 +229,7 @@ Below are examples of requests and responses for each payment transaction scenar
  }
      …
     ]
-…
+...
 ]
 ```
 
@@ -239,7 +239,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-…
+...
     "saveCreditCard": false,
     "useCardToken": true,
     "cardTokenData": {
@@ -253,15 +253,15 @@ Below are examples of requests and responses for each payment transaction scenar
         "cardTokenCvv": "string"
     },
     "shopperInteration": "string",
-…
+...
 }
 ```
 
-     - **Response body:** Received fields about tokenization.
+  - **Response body:** Received fields about tokenization.
 
 ```json
 {
-…
+...
     "isNewTokenization": true,
     "generatedCardToken": {
         "cardTokenType": "TOKEN_VALUE",
@@ -272,7 +272,7 @@ Below are examples of requests and responses for each payment transaction scenar
         },
         "useCvvForAuthorization": true
    }
-…
+...
 }
 ```
 
@@ -284,7 +284,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-…
+...
 "fields": {
     "accountId": "null",
     "savePaymentData": true,
@@ -306,14 +306,14 @@ Below are examples of requests and responses for each payment transaction scenar
         "cardTokenCvv": "string",
     }
 }
-…
+...
 ```
 
-     - **Response body:** Received fields about tokenization.
+  - **Response body:** Received fields about tokenization.
 
 ```json
 [
-…
+...
 "fields": [{
     "name": "isCardToken",
     "value": "true"
@@ -322,9 +322,9 @@ Below are examples of requests and responses for each payment transaction scenar
     "name": "accountId",
     "value": "string"
  }
-     …
+     ...
 ]
-…
+...
 ]
 
 ```
@@ -335,7 +335,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-…
+...
     "saveCreditCard": true,
     "useCardToken": true,
     "cardTokenData": {
@@ -349,15 +349,15 @@ Below are examples of requests and responses for each payment transaction scenar
         "cardTokenCvv": "string"
     },
     "shopperInteration": "string",
-…
+...
 }
 ```
 
-     - **Response body:** Received fields about tokenization.
+  - **Response body:** Received fields about tokenization.
 
 ```json
 {
-…
+...
     "isNewTokenization": true,
     "generatedCardToken": {
         "cardTokenType": "TOKEN_VALUE",
@@ -368,7 +368,7 @@ Below are examples of requests and responses for each payment transaction scenar
        },
         "useCvvForAuthorization": true
    }
-…
+...
 }
 ```
 
@@ -457,7 +457,6 @@ Make a purchase using your credit card as described below:
 2. Send the payment information via the [Send Payments](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments) endpoint (as described in the **Resolving the order payment** section), including the `savePaymentData` field in the request.
 
 ```json
-
 [
     {
         ...
