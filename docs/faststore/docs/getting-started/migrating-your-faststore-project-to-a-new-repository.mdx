@@ -35,7 +35,11 @@ You'll need this information during the migration process. To identify the repos
 
 1. Access the GitHub repository page where you want to host your FastStore project. The URL follows this pattern: `https://github.com/{organizationName}/{repositoryName}`. Replace the curly brackets according to your scenario.
 2. Open the console in your browser.
-3. Run `$("meta[name=octolytics-dimension-repository_id]").getAttribute('content')`. The response is the repository ID.
+3. Run the following command in the console. The response is the repository ID.
+
+    ```javascript
+    $("meta[name=octolytics-dimension-repository_id]").getAttribute('content')
+    ```
 
 </Steps>
 
