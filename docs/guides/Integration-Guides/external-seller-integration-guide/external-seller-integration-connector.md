@@ -3,7 +3,7 @@ title: "External seller connector"
 slug: "external-seller-integration-connector"
 hidden: false
 createdAt: "2020-09-01T13:47:40.310Z"
-updatedAt: "2022-09-30T16:51:08.972Z"
+updatedAt: "2025-12-18T14:25:08.972Z"
 ---
 The seller integration flow comprises 12 different API requests. Four of these are calls that the seller should make to the marketplace. Seven are requests that the marketplace will need to make to the seller. Only one endpoint is a request made both from the seller and from the marketplace. So, for these, you will need to implement endpoints that are prepared to receive specific request bodies and respond with specific objects.
 
