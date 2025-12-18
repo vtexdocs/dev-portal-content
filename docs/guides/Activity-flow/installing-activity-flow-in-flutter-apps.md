@@ -304,7 +304,7 @@ class HomeScreen extends StatelessWidget {
 }
 ```
 
-This Flutter screen, constructed as a `StatelessWidget` that lists products and displays an ad banner. The banner's Container is wrapped with Activity Flow's `addAdsListener`, which attaches an ad-event listener and sends the provided metadata map with each event.
+This Flutter screen is constructed as a `StatelessWidget` that lists products and displays an ad banner. The banner's Container is wrapped with Activity Flow's `addAdsListener`, which attaches an ad-event listener and sends the provided metadata map with each event.
 
 This instrumentation enables the automatic tracking of impressions, viewability, and clicks, allowing for comprehensive analytics tied to `adId`, `creativeId`, `position`, and `campaignName`.
 
