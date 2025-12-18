@@ -5,20 +5,20 @@ hidden: false
 createdAt: "2025-12-01T00:00:00.00Z"
 ---
 
-O [Payment Provider Protocol (PPP)](https://newhelp.vtex.com/pt/docs/tutorials/payment-provider-protocol) é o protocolo de integração entre a VTEX e parceiros que realizam o processamento de pagamentos. Para permitir a adoção de novas funcionalidades sem impactar os padrões operacionais existentes, a VTEX oferece o versionamento do PPP, garantindo aos provedores de pagamento flexibilidade para configurar seus conectores de acordo com as soluções que desejam disponibilizar aos clientes.
+The [Payment Provider Protocol (PPP)](https://help.vtex.com/docs/tutorials/payment-provider-protocol) is the integration protocol between VTEX and payment processing partners. To enable new features without impacting existing operations, VTEX offers PPP versioning, giving providers flexibility to configure their connectors according to the solutions they want to offer.
 
-> ⚠️ Esta funcionalidade está em fase de testes (Closed Beta), o que significa que apenas clientes específicos podem acessá-la agora. Caso queira implementá-lo no futuro, entre em contato com nosso [Suporte](https://support.vtex.com/hc/pt-br/).
+> ⚠️ This feature is currently in the testing phase (Closed Beta), which means that only select clients can access it. If you'd like to implement it in the future, contact our [Support](https://support.vtex.com/hc/en-us/).
 
-## Configurando o PPP Versioning
+## Configuring PPP Versioning
 
-Siga as etapas abaixo para definir a versão do PPP utilizada nas transações do conector de pagamento:
+Follow the steps below to define the PPP version used for payment connector transactions:
 
-1. Atualize o manifesto do conector, adicionando o campo `version` com o número da versão desejada, por exemplo, `2.0.0`.
-2. Solicite a atualização do manifesto na VTEX junto ao [Suporte Técnico da VTEX](https://help.vtex.com/pt/docs/tutorials/abrir-chamados-para-o-suporte-vtex).
+1. Update the connector manifest by adding the `version` field with the desired version number (example: `2.0.0`).
+2. Ask [VTEX Technical Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) to update the manifest on VTEX.
 
-> ⚠️ Antes de atualizar o manifesto para uma nova versão do PPP, verifique os requisitos adicionais associados à versão. Algumas versões podem exigir a inclusão de novos campos em endpoints específicos para suportar funcionalidades extras.
+> ⚠️ Before updating the manifest to a new version of PPP, check the additional requirements for that version. Some versions may require new fields in specific endpoints to support extra features.
 
-Exemplo de manifesto configurado para a versão `2.0.0`:
+Example manifest configured for version `2.0.0`:
 
 ```json
 {
@@ -28,12 +28,12 @@ Exemplo de manifesto configurado para a versão `2.0.0`:
 }
 ```
 
-> ⚠️ Todos os conectores de pagamento são homologados automaticamente na VTEX utilizando a  versão `1.0.0` do PPP. Se o provedor de pagamento não tiver interesse em oferecer funcionalidades adicionais, não é necessário incluir o campo `version` no manifesto. Caso o conector já tenha sido atualizado (por exemplo, para a versão: `2.0.0`) e o provedor deseje retornar ao comportamento padrão do PPP, basta alterar o valor do campo `version` para `1.0.0` e solicitar ao suporte técnico da VTEX uma nova atualização do conector.
+> ⚠️ All payment connectors are automatically approved by VTEX using PPP version `1.0.0`. If the payment provider isn't interested in offering additional features, there's no need to include the `version` field in the manifest. If the connector has already been updated (for example, to version `2.0.0`) and the provider wants to return to the standard PPP behavior, change the `version` field back to `1.0.0` and ask VTEX Technical Support for a new connector update.
 
-## Configurando o PPP Versioning
+## Configuring PPP Versioning
 
-A tabela abaixo apresenta as funcionalidades adicionais disponíveis em cada versão do PPP configurada no conector de pagamento:
+The table below shows the additional features available in each PPP version configured in the payment connector:
 
-| **PPP Versioning** | **Funcionalidade** | **Descrição** |
-| --- | --- | --- |
-| 2.0.0 | [Tokenização de pagamentos](TBD) | Permite gerenciar informações de tokens de cartões de crédito, aumentando a segurança no armazenamento e na transmissão de dados sensíveis de pagamento. |
+| **PPP versioning** | **Feature** | **Description** |
+| --- | --- | --- | --- |
+| 2.0.0 | [Payment tokenization](TBD) | Allows you to manage credit card token information, increasing security in the storage and transmission of sensitive payment data. |
