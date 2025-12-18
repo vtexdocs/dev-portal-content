@@ -1,17 +1,18 @@
 ---
 title: "Configuring production and preview branches in WebOps"
+updatedAt: "2025-12-18T15:06:33.040Z"
 ---
 
 In this guide, you'll learn how to configure custom branches for production builds and preview deployments in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard), enabling you to use different branches for production and QA accounts from the same repository.
 
-FastStore WebOps allows you to customize which branch generates production builds and configure which branches generate preview deployments through the **Integrations** tab. This feature is particularly useful for merchants who maintain separate production and QA accounts, enabling you to manage both environments from a single repository without code duplication.
+FastStore WebOps allows you to customize the branch that generates production builds and configure the branches that generate preview deployments through the **Integrations** tab. This feature is particularly useful for merchants who maintain separate production and QA accounts, enabling you to manage both environments from a single repository without code duplication.
 
 With branch customization, you can:
 
 - **[Configure a custom production branch](#configuring-the-production-branch):** Choose any branch from your repository to generate production builds for your account.
 - **[Filter preview deployments](#configuring-preview-branch-filters):** Control which branches generate preview builds using include and exclude patterns.
 
-> ℹ️ If you don't configure a custom production branch, WebOps will use your repository's default branch (typically `main`). This maintains backward compatibility with existing projects.
+> ℹ️ If you don't configure a custom production branch, WebOps will use the repository's default branch (typically `main`). This maintains backward compatibility with existing projects.
 
 ## Use cases
 
@@ -34,7 +35,7 @@ When working with multiple feature branches, you may want to control which branc
 
 - **Include only active development branches:** Configure include patterns (for example, `feature/*`) to generate previews only for feature branches, excluding experimental or abandoned branches.
 - **Exclude release branches:** Use exclude patterns (for example, `release/*`) to prevent release branches from generating preview builds, as these are typically merged directly to production.
-- **Focus on specific workflows:** Combine include and exclude patterns to create a focused preview workflow that matches your team's development process.
+- **Focus on specific workflows:** Combine include and exclude patterns to create a focused preview workflow that matches the development process of your team.
 
 ### Using non-default branches for production
 
@@ -42,7 +43,7 @@ If your team follows a branching strategy where production code lives in a branc
 
 **Example scenario:**
 
-- Your repository's default branch is `develop`, where ongoing development occurs.
+- The default branch of your repository is `develop`, where ongoing development occurs.
 - Production-ready code is merged into the `production` branch.
 - Configure WebOps to use the `production` branch for production builds, ensuring that only tested and approved code reaches your live store.
 
@@ -66,7 +67,7 @@ To customize which branch generates production builds:
 
 Preview branch filters allow you to control which branches generate preview deployments. If no filters are configured, all branches (except the production branch) will generate preview deployments by default.
 
-You can use include and exclude patterns to fine-tune which branches should create preview builds by following these steps:
+You can use include and exclude patterns to fine-tune the branches that create preview builds by following these steps:
 
 1. In the **Integrations** tab of your FastStore WebOps dashboard, go to the **Preview branch filters** section.
 2. Toggle the filter activation switch to enable branch filtering.
@@ -87,13 +88,13 @@ In the **Rules** section, you can edit or delete a rule.
 #### Editing a rule
 
 1. Go to the **Rules** section.
-2. Next to the rule you need to update, click `⋮` then click `Edit`.
-3. A modal will open, where you can make your changes.
+2. Next to the rule you need to update, click `⋮` and then click `Edit`.
+3. A modal will open where you can make your changes.
 4. Click `Update` to apply the changes.
 
 #### Deleting a rule
 
 1. Go to the **Rules** section.
-2. Next to the rule you need to delete, click `⋮` then click `Delete`.
-3. A modal will open, with the message `Are you sure you want to delete this rule?`.
+2. Next to the rule you need to delete, click `⋮` and then click `Delete`.
+3. A modal will open with the message `Are you sure you want to delete this rule?`.
 4. If you're sure, click `Delete` to remove the rule.
