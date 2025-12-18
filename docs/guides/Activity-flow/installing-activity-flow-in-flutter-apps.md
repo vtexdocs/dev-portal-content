@@ -241,7 +241,7 @@ When you apply the listener to a widget, the SDK automatically tracks three even
 
 To start tracking your ad events, follow these steps:
 
-1. Call the `addAdsListener`
+1. Call the `addAdsListener` method
 
 To enable tracking, call the `addAdsListener` extension method on any Flutter widget that represents an ad:
 
