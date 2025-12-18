@@ -71,11 +71,10 @@ Below are examples of requests and responses for each payment transaction scenar
 
 #### Scenario 1: Transaction using credit card with PAN
 
-- Payment Gateway ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
+**Payment Gateway** ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
 
-  - **Request body:** Doesn't send specific fields for tokenization.
-
-  - **Request body:** Received fields about tokenization.
+- **Request body:** Doesn't send specific fields for tokenization.
+- **Response body:** Received fields about tokenization.
 
 ```json
 [
@@ -90,9 +89,9 @@ Below are examples of requests and responses for each payment transaction scenar
 ]
 ```
 
-- Payment Provider Protocol ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
+**Payment Provider Protocol** ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
 
-  - **Request body:** Fields sent for tokenization.
+- **Request body:** Fields sent for tokenization.
 
 ```json
 {
@@ -103,7 +102,7 @@ Below are examples of requests and responses for each payment transaction scenar
 }
 ```
 
-  - **Response body:** eived fields about tokenization.
+- **Response body:** Received fields about tokenization.
 
 ```json
 {
@@ -126,9 +125,9 @@ Below are examples of requests and responses for each payment transaction scenar
 
 #### Scenario 2: Transaction using tokenized credit card stored in VTEX
 
-- Payment Gateway ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
+**Payment Gateway** ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
 
-  - **Request body:** Fields sent for tokenization.
+- **Request body:** Fields sent for tokenization.
 
 ```json
 [
@@ -140,7 +139,7 @@ Below are examples of requests and responses for each payment transaction scenar
 ]
 ```
 
-  - **Response body:** Received fields about tokenization.
+- **Response body:** Received fields about tokenization.
 
 ```json
 [
@@ -155,9 +154,9 @@ Below are examples of requests and responses for each payment transaction scenar
 ]
 ```
 
-- Payment Provider Protocol ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
+**Payment Provider Protocol** ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
 
-  - **Request body:** Fields sent for tokenization.
+- **Request body:** Fields sent for tokenization.
 
 ```json
 {
@@ -168,7 +167,7 @@ Below are examples of requests and responses for each payment transaction scenar
 }
 ```
 
-  - **Response body:** Received fields about tokenization.
+- **Response body:** Received fields about tokenization.
 
 ```json
 {
@@ -180,18 +179,18 @@ Below are examples of requests and responses for each payment transaction scenar
         "tokenExtraData": {
             "extraData1": "string",
             "extraData2": "string"
-       }
-     "useCvvForAuthorization": true
+       },
+       "useCvvForAuthorization": true
    }
 ...
 }
 ```
 
-#### Scenario 3: transaction using external tokenized credit card (not to be saved in VTEX)
+#### Scenario 3: Transaction using external tokenized credit card (not to be saved in VTEX)
 
-- Payment Gateway ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
+**Payment Gateway** ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
 
-  - **Request body:** Fields sent for tokenization.
+- **Request body:** Fields sent for tokenization.
 
 ```json
 [
@@ -200,21 +199,20 @@ Below are examples of requests and responses for each payment transaction scenar
     "accountId": "null",
     "cardTokenData": {
         "cardTokenType": "TOKEN_FILE",
-        "cardTokenHref":
-            "https://linktothetokenfile.com",
+        "cardTokenHref": "https://linktothetokenfile.com",
         "tokenExtraData": {
             "extraData1": "string",
             "extraData2": "string"
         },
         "useCvvForAuthorization": "boolean",
-        "cardTokenCvv": "string",
-}
-    }]
+        "cardTokenCvv": "string"
+    }
+}]
 ...
 ]
 ```
 
-  - **Response body:** Received fields about tokenization.
+- **Response body:** Received fields about tokenization.
 
 ```json
 [
@@ -233,9 +231,9 @@ Below are examples of requests and responses for each payment transaction scenar
 ]
 ```
 
-- Payment Provider Protocol ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
+**Payment Provider Protocol** ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
 
-  - **Request body:** Fields sent for tokenization.
+- **Request body:** Fields sent for tokenization.
 
 ```json
 {
@@ -257,7 +255,7 @@ Below are examples of requests and responses for each payment transaction scenar
 }
 ```
 
-  - **Response body:** Received fields about tokenization.
+- **Response body:** Received fields about tokenization.
 
 ```json
 {
@@ -278,9 +276,9 @@ Below are examples of requests and responses for each payment transaction scenar
 
 #### Scenario 4: Transaction with external tokenized credit card (to be saved in VTEX)
 
-- Payment Gateway ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
+**Payment Gateway** ([Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments))
 
-  - **Request body:** Fields sent for tokenization.
+- **Request body:** Fields sent for tokenization.
 
 ```json
 [
@@ -292,24 +290,24 @@ Below are examples of requests and responses for each payment transaction scenar
         "cardLabel": "string",
         "paymentName": "enum",
         "bin": "string",
-        "lastDigits": "string",
+        "lastDigits": "string"
     },
     "cardTokenData": {
         "cardTokenType": "TOKEN_FILE",
-        "cardTokenHref":
-            "https://linktothetokenfile.com",
+        "cardTokenHref": "https://linktothetokenfile.com",
         "tokenExtraData": {
             "extraData1": "string",
             "extraData2": "string"
         },
         "useCvvForAuthorization": "boolean",
-        "cardTokenCvv": "string",
+        "cardTokenCvv": "string"
     }
 }
 ...
+]
 ```
 
-  - **Response body:** Received fields about tokenization.
+- **Response body:** Received fields about tokenization.
 
 ```json
 [
@@ -326,12 +324,11 @@ Below are examples of requests and responses for each payment transaction scenar
 ]
 ...
 ]
-
 ```
 
-- Payment Provider Protocol ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
+**Payment Provider Protocol** ([Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments))
 
-  - **Request body:** Fields sent for tokenization.
+- **Request body:** Fields sent for tokenization.
 
 ```json
 {
@@ -353,7 +350,7 @@ Below are examples of requests and responses for each payment transaction scenar
 }
 ```
 
-  - **Response body:** Received fields about tokenization.
+- **Response body:** Received fields about tokenization.
 
 ```json
 {
