@@ -17,8 +17,8 @@ sidebar_custom_props:
 
 The `SKUMatrix` compound surfaces complex product variations in a single, high-density view. Typical use cases include:
 
-- Ordering multiple SKU combinations such as workwear jackets across sizes and colors without hopping between PDPs.
-- Offering quick actions relevant for B2B procurement (bulk discounts, pack sizes) next to the Add to Cart summary.
+- Ordering multiple SKU combinations such as workwear jackets across sizes and colors without navigating between PDPs.
+- Offering quick actions relevant for B2B procurement (bulk discounts, pack sizes) alongside the Add to Cart summary.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -83,7 +83,7 @@ Add the sidebar styling tokens and layout rules to your theme stylesheet:
 @import "@faststore/ui/src/components/organisms/SKUMatrix/styles.scss";
 ```
 
-Follow the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) instructions. The quantity selector, badges, and table also rely on their respective partials.
+Follow the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) instructions. Additionally, the quantity selector, badges, and table components also rely on their respective partials.
 
 ---
 
@@ -658,8 +658,8 @@ Use these selectors to customize styles or attach test logic:
 
 ### ✅ Do's
 
-- Use concise variation labels (e.g., "Black - 42") so the table stays scannable on partial-width slide-overs.
-- Keep price and availability in sync with your store OMS; show a toast when quantity adjustments are coerced.
+- Use concise variation labels (e.g., "Black - 42") to ensure the table remains scannable on partial-width slide-overs.
+- Keep price and availability in sync with your store OMS; display a toast message when quantity adjustments are coerced.
 - Localize both column headers and toast messages for multinational catalogs.
 
 ### ❌ Don'ts
@@ -676,7 +676,7 @@ Use these selectors to customize styles or attach test logic:
 <SectionList>
   <SectionItem
     title="QuantitySelector"
-    description="Lets shoppers adjust quantities with validation and toast feedback—embedded inside the matrix rows."
+    description="Allows shoppers to adjust quantities with validation and toast feedback. It is embedded inside the matrix rows."
     actionPath="/docs/guides/faststore/molecules-quantity-selector"
   >
     <QuantitySelector min={0} max={10} initial={2} />
@@ -686,7 +686,7 @@ Use these selectors to customize styles or attach test logic:
 
 <SectionItem
   title="SlideOver"
-  description="The responsive container that powers the SKU Matrix sidebar layout."
+  description="The responsive container that drives the SKU Matrix sidebar layout."
   actionPath="/docs/guides/faststore/organisms-slide-over"
 >
   <SlideOver isOpen size="partial" direction="rightSide" fade="in">
