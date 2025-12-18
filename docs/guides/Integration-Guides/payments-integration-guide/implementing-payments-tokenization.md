@@ -56,7 +56,7 @@ Example of a manifest with tokenization enabled:
 }
 ```
 
-> ⚠️ After reviewing the manifest, [open a ticket](https://newhelp.vtex.com/pt/docs/tutorials/abrir-chamados-para-o-suporte-vtex) with VTEX Technical Support to request the connector update.
+> ⚠️ After reviewing the manifest, [open a ticket](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) with VTEX Technical Support to request the connector update.
 
 ### Configuring the sending of tokenized information
 
@@ -122,7 +122,7 @@ Below are examples of requests and responses for each payment transaction scenar
 }
 ```
 
-> ℹ️ When the `saveCreditCard` field is sent with the value `false` in the request body of the [Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments?endpoint=post-/payments) endpoint, VTEX won't store the credit card and the response body won't return tokenization data.
+> ℹ️ When the `saveCreditCard` field is sent with the value `false` in the request body of the [Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) endpoint, VTEX won't store the credit card and the response body won't return tokenization data.
 
 #### Scenario 2: Transaction using tokenized credit card stored in VTEX
 
@@ -372,7 +372,7 @@ Below are examples of requests and responses for each payment transaction scenar
 }
 ```
 
-> ⚠️ For more information on the full payload of the requests, see the documentation for the [Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments) and [Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments?endpoint=post-/payments) endpoints.
+> ⚠️ For more information on the full payload of the requests, see the documentation for the [Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments) and [Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) endpoints.
 
 ### Integrating the Card Token Vault (CTV) system
 
@@ -420,7 +420,7 @@ The CTV stores the following types of information for each token:
 
 Integrate with CTV using the [Card Token Vault API](https://developers.vtex.com/docs/api-reference/card-token-vault-api), available in the Developer Portal.
 
-For more details on importing tokens, see the guide [Importing tokens into the Card Token Vault](TBD).
+See the [Managing tokenized cards](https://developers.vtex.com/docs/guides/managing-tokenized-cards) guide for details on token management.
 
 ### Validating the deployment of payment tokenization
 
@@ -454,7 +454,7 @@ Enable tokenization on the headless account following the steps below:
 Make a purchase using your credit card as described below:
 
 1. Follow the purchase steps up to the **Placing the order** in the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
-2. Send the payment information via the [Send Payments](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments) endpoint (as described in the **Resolving the order payment** section), including the `savePaymentData` field in the request.
+2. Send the payment information via the [Send Payments](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments) endpoint (as described in the **Resolving the order payment** section), including the `savePaymentData` field in the request.
 
 ```json
 
