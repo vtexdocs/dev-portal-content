@@ -181,7 +181,7 @@ import activity_flow
 }
 ```
 
-3. Configure `SceneDelegate`.
+3. Configure `SceneDelegate`
 
 If your project uses a `SceneDelegate`, also forward deep links there:
 
