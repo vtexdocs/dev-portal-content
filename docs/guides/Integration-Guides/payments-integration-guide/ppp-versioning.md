@@ -22,9 +22,9 @@ Example manifest configured for version `2.0.0`:
 
 ```json
 {
-…
+...
   "version": "2.0.0",
-…
+...
 }
 ```
 
@@ -36,4 +36,4 @@ The table below shows the additional features available in each PPP version conf
 
 | **PPP versioning** | **Feature** | **Description** |
 | --- | --- | --- | --- |
-| 2.0.0 | [Payment tokenization](TBD) | Allows you to manage credit card token information, increasing security in the storage and transmission of sensitive payment data. |
+| `2.0.0` | [Payment tokenization](https://developers.vtex.com/docs/guides/implementing-payments-tokenization) | Allows you to manage credit card token information, increasing security in the storage and transmission of sensitive payment data. |
