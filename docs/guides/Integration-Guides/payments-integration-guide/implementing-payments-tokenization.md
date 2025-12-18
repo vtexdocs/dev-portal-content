@@ -45,14 +45,14 @@ Example of a manifest with tokenization enabled:
 
 ```json
 {
-...
-  "version": "2.0.0",
-  "cardToken": {
-    "canAcceptCardToken": true,
-    "cardTokenAcceptedTypes": ["TOKEN_VALUE"],
-    "canGenerateCardToken": true
-  }
-...
+    ...
+    "version": "2.0.0",
+    "cardToken": {
+        "canAcceptCardToken": true,
+        "cardTokenAcceptedTypes": ["TOKEN_VALUE"],
+        "canGenerateCardToken": true
+    }
+    ...
 }
 ```
 
@@ -78,14 +78,14 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-...
-"fields": [{
-    "name": "accountId",
-    "value": "string"
- }
-     …
+    ...
+    "fields": [
+        {
+            "name": "accountId",
+            "value": "string"
+        }
     ]
-...
+    ...
 ]
 ```
 
@@ -95,10 +95,10 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-...
+    ...
     "saveCreditCard": true,
     "useCardToken": true
-...
+    ...
 }
 ```
 
@@ -106,7 +106,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-...
+    ...
     "isNewTokenization": true,
     "generatedCardToken": {
         "cardTokenType": "TOKEN_VALUE",
@@ -114,10 +114,10 @@ Below are examples of requests and responses for each payment transaction scenar
         "tokenExtraData": {
             "extraData1": "string",
             "extraData2": "string"
-       },
-       "useCvvForAuthorization": true
-   }
-...
+        },
+        "useCvvForAuthorization": true
+    }
+    ...
 }
 ```
 
@@ -131,11 +131,11 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-...
-"fields": {
-      "accountId": "string"
+    ...
+    "fields": {
+        "accountId": "string"
     }
-...
+    ...
 ]
 ```
 
@@ -143,14 +143,14 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-...
-"fields": {
-    "name": "accountId",
-    "value": "string"
- }
-     ...
+    ...
+    "fields": [
+        {
+            "name": "accountId",
+            "value": "string"
+        }
     ]
-...
+    ...
 ]
 ```
 
@@ -160,10 +160,10 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-...
+    ...
     "saveCreditCard": false,
     "useCardToken": true
-...
+    ...
 }
 ```
 
@@ -171,7 +171,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-...
+    ...
     "isNewTokenization": false,
     "generatedCardToken": {
         "cardTokenType": "TOKEN_VALUE",
@@ -179,10 +179,10 @@ Below are examples of requests and responses for each payment transaction scenar
         "tokenExtraData": {
             "extraData1": "string",
             "extraData2": "string"
-       },
-       "useCvvForAuthorization": true
-   }
-...
+        },
+        "useCvvForAuthorization": true
+    }
+    ...
 }
 ```
 
@@ -194,21 +194,23 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-...
-"fields": [{
-    "accountId": "null",
-    "cardTokenData": {
-        "cardTokenType": "TOKEN_FILE",
-        "cardTokenHref": "https://linktothetokenfile.com",
-        "tokenExtraData": {
-            "extraData1": "string",
-            "extraData2": "string"
-        },
-        "useCvvForAuthorization": "boolean",
-        "cardTokenCvv": "string"
-    }
-}]
-...
+    ...
+    "fields": [
+        {
+            "accountId": "null",
+            "cardTokenData": {
+                "cardTokenType": "TOKEN_FILE",
+                "cardTokenHref": "https://linktothetokenfile.com",
+                "tokenExtraData": {
+                    "extraData1": "string",
+                    "extraData2": "string"
+                },
+                "useCvvForAuthorization": "boolean",
+                "cardTokenCvv": "string"
+            }
+        }
+    ]
+    ...
 ]
 ```
 
@@ -216,18 +218,18 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-...
-"fields": [{
-    "name": "isCardToken",
-    "value": "true"
- },
-    {
-    "name": "accountId",
-    "value": "string"
- }
-     …
+    ...
+    "fields": [
+        {
+            "name": "isCardToken",
+            "value": "true"
+        },
+        {
+            "name": "accountId",
+            "value": "string"
+        }
     ]
-...
+    ...
 ]
 ```
 
@@ -237,21 +239,21 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-...
+    ...
     "saveCreditCard": false,
     "useCardToken": true,
     "cardTokenData": {
         "cardTokenType": "TOKEN_VALUE",
         "cardTokenValue": "string",
         "tokenExtraData": {
-           "extraData1": "string",
-           "extraData2": "string"
+            "extraData1": "string",
+            "extraData2": "string"
         },
         "useCvvForAuthorization": true,
         "cardTokenCvv": "string"
     },
-    "shopperInteration": "string",
-...
+    "shopperInteration": "string"
+    ...
 }
 ```
 
@@ -259,7 +261,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-...
+    ...
     "isNewTokenization": true,
     "generatedCardToken": {
         "cardTokenType": "TOKEN_VALUE",
@@ -269,8 +271,8 @@ Below are examples of requests and responses for each payment transaction scenar
             "extraData2": "string"
         },
         "useCvvForAuthorization": true
-   }
-...
+    }
+    ...
 }
 ```
 
@@ -282,28 +284,28 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-...
-"fields": {
-    "accountId": "null",
-    "savePaymentData": true,
-    "cardData": {
-        "cardLabel": "string",
-        "paymentName": "enum",
-        "bin": "string",
-        "lastDigits": "string"
-    },
-    "cardTokenData": {
-        "cardTokenType": "TOKEN_FILE",
-        "cardTokenHref": "https://linktothetokenfile.com",
-        "tokenExtraData": {
-            "extraData1": "string",
-            "extraData2": "string"
+    ...
+    "fields": {
+        "accountId": "null",
+        "savePaymentData": true,
+        "cardData": {
+            "cardLabel": "string",
+            "paymentName": "enum",
+            "bin": "string",
+            "lastDigits": "string"
         },
-        "useCvvForAuthorization": "boolean",
-        "cardTokenCvv": "string"
+        "cardTokenData": {
+            "cardTokenType": "TOKEN_FILE",
+            "cardTokenHref": "https://linktothetokenfile.com",
+            "tokenExtraData": {
+                "extraData1": "string",
+                "extraData2": "string"
+            },
+            "useCvvForAuthorization": "boolean",
+            "cardTokenCvv": "string"
+        }
     }
-}
-...
+    ...
 ]
 ```
 
@@ -311,18 +313,18 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 [
-...
-"fields": [{
-    "name": "isCardToken",
-    "value": "true"
- },
-    {
-    "name": "accountId",
-    "value": "string"
- }
-     ...
-]
-...
+    ...
+    "fields": [
+        {
+            "name": "isCardToken",
+            "value": "true"
+        },
+        {
+            "name": "accountId",
+            "value": "string"
+        }
+    ]
+    ...
 ]
 ```
 
@@ -332,7 +334,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-...
+    ...
     "saveCreditCard": true,
     "useCardToken": true,
     "cardTokenData": {
@@ -345,8 +347,8 @@ Below are examples of requests and responses for each payment transaction scenar
         "useCvvForAuthorization": true,
         "cardTokenCvv": "string"
     },
-    "shopperInteration": "string",
-...
+    "shopperInteration": "string"
+    ...
 }
 ```
 
@@ -354,7 +356,7 @@ Below are examples of requests and responses for each payment transaction scenar
 
 ```json
 {
-...
+    ...
     "isNewTokenization": true,
     "generatedCardToken": {
         "cardTokenType": "TOKEN_VALUE",
@@ -362,10 +364,10 @@ Below are examples of requests and responses for each payment transaction scenar
         "tokenExtraData": {
             "extraData1": "string",
             "extraData2": "string"
-       },
+        },
         "useCvvForAuthorization": true
-   }
-...
+    }
+    ...
 }
 ```
 
@@ -460,8 +462,9 @@ Make a purchase using your credit card as described below:
         "fields": {
             "savePaymentData": true,
             "holderName": "John Doe",
-        ...
+            ...
         }
+        ...
     }
 ]
 ```
@@ -494,7 +497,7 @@ Authorization response received: [200 OK] {"status":"approved","authorizationId"
             ...
         }
     ],
-    "availableAddresses": ...
+    "availableAddresses": {}
 }
 ```
 
