@@ -13,7 +13,7 @@ The integration supports three main operations:
 
 * **[Custom field settings](#create-custom-field-settings):** Define the structure and behavior of custom fields for a contract.
 * **[Custom field values](#create-custom-field-value):** Create predefined values for fields of type `option`.
-* **[OrderForm application](#apply-custom-field-to-orderform):** Apply custom field values to shopping carts during checkout.
+* **[orderForm application](#apply-custom-field-to-orderform):** Apply custom field values to shopping carts during checkout.
 
 >⚠️ The Custom Fields API is only available for B2B Buyer Portal. Authorization from the Commerce Engineer of the account is required for usage.
 
@@ -337,8 +337,8 @@ The following License Manager resources are required:
 | Operation | Required resources |
 | :--- | :--- |
 | Create/Update settings or values | Insert or update document (not remove), Full access to all documents, or Master Data administrator |
-| Read settings or values | Read only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
+| Read settings or values | Read-only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
 | Delete settings or values | Full access to all documents or Master Data administrator |
-| OrderForm operations | Read Shopping Cart |
+| orderForm operations | Read Shopping Cart |
 
-All resources belong to the **Dynamic Storage** product, except OrderForm operations which belong to the **Checkout** product.
+All resources belong to the **Dynamic Storage** product, except orderForm operations which belong to the **Checkout** product.
