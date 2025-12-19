@@ -214,7 +214,9 @@ Below are examples of requests and responses for each payment transaction scenar
 ]
 ```
 
-```````` **Response body:** Received fields about tokenizati```json
+- **Response body:** Received fields about tokenization.
+
+```json
 [
     ...
     "fields": [
