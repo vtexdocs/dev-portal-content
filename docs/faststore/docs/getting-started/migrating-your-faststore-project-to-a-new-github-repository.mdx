@@ -1,11 +1,11 @@
 ---
-title: "Migrating your FastStore project to a new GitHub repository"
+title: "Moving your FastStore project to a new GitHub repository"
 ---
 
-In this guide, you'll learn how to migrate your FastStore project from one repository to another. This works for the following cases:
+In this guide, you'll learn how to move your FastStore project from one repository to another. This works for the following cases:
 
-* FastStore projects hosted in the `vtex-sites` organization using WebOps that you want to migrate to the GitHub organization of the account.
-* FastStore projects hosted in their own organization on GitHub using WebOps that you want to migrate to a new organization or repository.
+* FastStore projects hosted in the `vtex-sites` organization using WebOps that you want to move to the GitHub organization of the account.
+* FastStore projects hosted in their own organization on GitHub using WebOps that you want to move to a new organization or repository.
 
 > ⚠️ For FastStore projects hosted in the `vtex-sites` organization and not using WebOps ([FastStore v1](https://v1.faststore.dev/docs)), open a ticket with the [VTEX Support](https://supporticket.vtex.com/support) to move your project to your account's GitHub organization.
 
@@ -15,7 +15,7 @@ In this guide, you'll learn how to migrate your FastStore project from one repos
 
 ### Have a FastStore project using WebOps
 
-Make sure the FastStore project you want to migrate uses [WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
+Make sure the FastStore project you want to move uses [WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
 
 ### Upgrade `@faststore/cli` package
 
@@ -23,11 +23,11 @@ Update the `@faststore/cli` package in your project to the latest version. To do
 
 ### Have a GitHub organization
 
-Make sure you have created a GitHub organization where you want to migrate your project. Learn how to do so in the GitHub guide [Creating a new organization from scratch](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch).
+Make sure you have created a GitHub organization where you want to move your project. Learn how to do so in the GitHub guide [Creating a new organization from scratch](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch).
 
 ### Have a GitHub repository
 
-Make sure you have created the GitHub repository where you want to migrate your FastStore project. Learn how to do so in the GitHub guide [Creating a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository).
+Make sure you have created the GitHub repository where you want to move your FastStore project. Learn how to do so in the GitHub guide [Creating a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository).
 
 ### Identify the repository ID
 
@@ -45,12 +45,12 @@ You'll need this information during the migration process. To identify the repos
 
 ## Instructions
 
-### Migrate the store code
+### Move the store code
 
-Move the store code to the new repository:
+Move the store code to the new GitHub repository:
 
 1. Clone the current repository to your local environment.
-2. Push the codebase to the new repository.
+2. Push the codebase to the new GitHub repository.
 
 ### Install FastStore WebOps app
 
@@ -77,8 +77,6 @@ To install the app, follow these steps.
     ```
 
 Your account now has the FastStore WebOps app installed.
-
-> ❗ Make sure you have granted WebOps the requested permissions in the correct repository.
 
 ### Identify the app installation ID
 
