@@ -13,13 +13,13 @@ The integration supports three main operations:
 
 * **[Custom field settings](#create-custom-field-settings):** Define the structure and behavior of custom fields for a contract.
 * **[Custom field values](#create-custom-field-value):** Create predefined values for fields of type `option`.
-* **[orderForm application](#apply-custom-field-to-orderform):** Apply custom field values to shopping carts during checkout.
+* **[OrderForm application](#apply-custom-field-to-orderform):** Apply custom field values to shopping carts during checkout.
 
 >⚠️ The Custom Fields API is only available for B2B Buyer Portal. Authorization from the Commerce Engineer of the account is required for usage.
 
 ## How it works
 
-The custom fields integration works in three phases: configuration, value assignment, and checkout application.
+The Custom Fields integration works in three phases: configuration, value assignment, and checkout application.
 
 Example flow:
 
@@ -35,7 +35,7 @@ Example flow:
    POST /api/dataentities/customFieldValues/documents?_schema=v2
    ```
 
-3. Apply the custom field to an orderForm during checkout:
+3. Apply the custom field to an OrderForm during checkout:
 
    ```txt
    PUT /api/checkout/pub/orderForm/{orderFormId}/customFields/{entityType}/{entityId}
@@ -209,11 +209,11 @@ curl -X GET "https://{{accountName}}.myvtex.com/api/dataentities/customFieldValu
 ]
 ```
 
-## Apply custom field to orderForm
+## Apply custom field to OrderForm
 
-This endpoint applies a custom field value to an orderForm during checkout. The `linkedEntity.type` determines the level (`order`, `item`, or `address`) and `linkedEntity.id` identifies the specific entity.
+This endpoint applies a custom field value to an OrderForm during checkout. The `linkedEntity.type` determines the level (`order`, `item`, or `address`) and `linkedEntity.id` identifies the specific entity.
 
->ℹ️ Find more details about this endpoint in `PUT` [Create or update custom field in orderForm](https://developers.vtex.com/docs/api-reference/custom-fields-api#put-/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-).
+>ℹ️ Find more details about this endpoint in `PUT` [Create or update custom field in OrderForm](https://developers.vtex.com/docs/api-reference/custom-fields-api#put-/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-).
 
 ### Request example
 
@@ -254,9 +254,9 @@ curl -X PUT "https://{{accountName}}.myvtex.com/api/checkout/pub/orderForm/{{ord
 
 ## Apply custom fields in batch
 
-This endpoint applies multiple custom fields to an orderForm in a single request. Use this when you need to set fields at different levels simultaneously.
+This endpoint applies multiple custom fields to an OrderForm in a single request. Use this when you need to set fields at different levels simultaneously.
 
->ℹ️ Find more details about this endpoint in `PUT` [Create or update custom fields in orderForm (batch)](https://developers.vtex.com/docs/api-reference/custom-fields-api#put-/api/checkout/pub/orderForm/-orderFormId-/customFields).
+>ℹ️ Find more details about this endpoint in `PUT` [Create or update custom fields in OrderForm (batch)](https://developers.vtex.com/docs/api-reference/custom-fields-api#put-/api/checkout/pub/orderForm/-orderFormId-/customFields).
 
 ### Request example
 
@@ -276,11 +276,11 @@ curl -X PUT "https://{{accountName}}.myvtex.com/api/checkout/pub/orderForm/{{ord
   ]'
 ```
 
-## Delete custom field from orderForm
+## Delete custom field from OrderForm
 
-This endpoint removes a specific custom field from an orderForm.
+This endpoint removes a specific custom field from an OrderForm.
 
->ℹ️ Find more details about this endpoint in `DELETE` [Delete custom field from orderForm](https://developers.vtex.com/docs/api-reference/custom-fields-api#delete-/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-).
+>ℹ️ Find more details about this endpoint in `DELETE` [Delete custom field from OrderForm](https://developers.vtex.com/docs/api-reference/custom-fields-api#delete-/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-).
 
 ### Request example
 
@@ -303,7 +303,7 @@ Custom fields support different levels and types to accommodate various business
 | :--- | :--- | :--- |
 | `text` | Free-form text input | Notes, reference numbers |
 | `number` | Numeric values only | Quantities, numeric codes |
-| `option` | Predefined list of values | Cost centers, departments |
+| `option` | Predefined list of values | Cost Centers, departments |
 
 >⚠️ For **Budgets** integration, only custom fields of type `option` are supported. This allows using the value ID for matching, enabling value renaming without breaking budget configurations.
 
@@ -336,9 +336,9 @@ The following License Manager resources are required:
 
 | Operation | Required resources |
 | :--- | :--- |
-| Create/Update settings or values | Insert or update document (not remove), Full access to all documents, or Master Data administrator |
-| Read settings or values | Read-only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
-| Delete settings or values | Full access to all documents or Master Data administrator |
-| orderForm operations | Read Shopping Cart |
+| Create/Update settings or values | Insert or update document (not remove), Full access to all documents, or Master Data Administrator |
+| Read settings or values | Read-only documents, Insert or update document (not remove), Full access to all documents, or Master Data Administrator |
+| Delete settings or values | Full access to all documents or Master Data Administrator |
+| OrderForm operations | Read Shopping Cart |
 
-All resources belong to the **Dynamic Storage** product, except orderForm operations which belong to the **Checkout** product.
+All resources belong to the **Dynamic Storage** product, except OrderForm operations which belong to the **Checkout** product.
