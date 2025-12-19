@@ -9,8 +9,6 @@ components:
   - SKUMatrix.tsx
   - SKUMatrixTrigger.tsx
   - SKUMatrixSidebar.tsx
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/sku-matrix-search___3f50c2b048b3d65ae18e4613bfcbc3c7.gif
 ---
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/SKUMatrix)
@@ -152,90 +150,7 @@ Follow the [Importing FastStore UI component styles](https://developers.vtex.com
 
 The matrix relies on the context state managed by `SKUMatrix`. Make sure your app is wrapped with `UIProvider` (for toasts) and provide the variant data before rendering the sidebar.
 
-```tsx
-import React, { useEffect } from "react";
-import {
-  SKUMatrix,
-  SKUMatrixTrigger,
-  SKUMatrixSidebar,
-  useSKUMatrix,
-} from "@faststore/ui";
 
-const warehouseVariants = [
-  {
-    id: "sku-45",
-    name: "Navy · Size 40",
-    image: {
-      url: "/img/navy-40.png",
-      alternateName: "Safety boot navy size 40",
-    },
-    inventory: 24,
-    availability: "inStock",
-    price: 75,
-    listPrice: 90,
-    priceWithTaxes: 75,
-    listPriceWithTaxes: 90,
-    specifications: { color: "Navy", size: "40", safetyrating: "S3" },
-    selectedCount: 0,
-    offers: {
-      /* ...commerce data omitted for brevity... */
-    },
-  },
-  // other variant products...
-];
-
-function SKUMatrixContent() {
-  const { setAllVariantProducts } = useSKUMatrix();
-
-  useEffect(() => {
-    setAllVariantProducts(warehouseVariants);
-  }, []);
-
-  return (
-    <>
-      <SKUMatrixTrigger variant="secondary">Plan restock</SKUMatrixTrigger>
-
-      <SKUMatrixSidebar
-        title="Select safety boot quantities."
-        direction="rightSide"
-        size="partial"
-        loading={false}
-        columns={{
-          name: "Variation",
-          additionalColumns: [
-            { label: "Color", value: "color" },
-            { label: "Size (EU)", value: "size" },
-            { label: "Safety rating", value: "safetyrating" },
-          ],
-          availability: {
-            label: "Availability",
-            stockDisplaySettings: "showStockQuantity",
-          },
-          price: "Price",
-          quantitySelector: "Quantity",
-        }}
-        buyProps={{
-          "data-testid": "bulk-add",
-          "data-sku": "safety-boot",
-          "data-seller": "seller-1",
-          onClick: () => {
-            /* call cart mutation */
-          },
-        }}
-        overlayProps={{ "aria-label": "SKU matrix overlay" }}
-      />
-    </>
-  );
-}
-
-export default function ProductPageSkuMatrix() {
-  return (
-    <SKUMatrix data-testid="sku-matrix">
-      <SKUMatrixContent />
-    </SKUMatrix>
-  );
-}
-```
 
 ---
 
