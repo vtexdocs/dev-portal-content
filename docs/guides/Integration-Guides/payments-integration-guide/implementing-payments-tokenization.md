@@ -415,7 +415,7 @@ The CTV stores the following types of information for each token:
 | `cardTokenData.providerCardTokenId` | No | string | Client ID used to retrieve the token from the provider. |
 | `cardTokenData.useCvvForAuthorization` | No | boolean | Flag indicating if CVV is required (default: true). |
 | `cardTokenData.href` | No | string | URL of the token file stored by the provider. |
-| `extraData` | No | object | Dictionary <string, string> for additional data. |
+| `extraData` | No | object | Dictionary `<string, string>` for additional data. |
 
 Integrate with CTV using the [Card Token Vault API](https://developers.vtex.com/docs/api-reference/card-token-vault-api), available in the Developer Portal.
 
