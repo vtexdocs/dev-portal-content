@@ -212,7 +212,7 @@ The matrix relies on the context state managed by `SKUMatrix`. Make sure your ap
 Use these selectors to customize styles or attach test logic:
 
 - `data-fs-sku-matrix`
-- `data-testid="fs-sku-matrix"` (default test id; override via `testId`)
+- `data-testid="fs-sku-matrix"`
 - `data-fs-sku-matrix-sidebar`
 - `data-fs-sku-matrix-sidebar-title`
 - `data-fs-sku-matrix-sidebar-cell-image`
@@ -234,13 +234,13 @@ Use these selectors to customize styles or attach test logic:
 
 ## Best practices
 
-### :white_check_mark: Do's
+### ✅ Do's
 
 - Use concise variation labels (e.g., "Black - 42") to ensure the table remains scannable on partial-width slide-overs.
 - Keep price and availability in sync with your store OMS; display a toast message when quantity adjustments are coerced.
 - Localize both column headers and toast messages for multinational catalogs.
 
-### :x: Don'ts
+### ❌ Don'ts
 
 - Don't expose the matrix when a product is single-SKU; it adds unnecessary friction.
 - Don't rely on color alone for stock communication pair badge colors with descriptive text.
