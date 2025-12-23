@@ -39,10 +39,10 @@ Although the structure of a Store Theme project may vary depending on its specif
 
 Some of these files and folders are essential for the theme to function properly:
 
-- **`/public` folder (optional):** Contains the app's public marketing and metadata assets (such as icons, screenshots, licenses, and localized descriptions) used when distributing the Store Theme as a VTEX IO app in the VTEX App Store. This folder is optional and can be omitted if you do not plan to publish the Store Theme publicly. Learn more in [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution).
 - **`/store` folder:** Contains the blocks, interfaces, and routes necessary to build the storefront.
 - **`/styles` folder:** Contains the store’s visual elements, such as colors, typography, and other style-related settings.
 - **`manifest.json` file:** Contains the metadata about the app, including vendor, name, version, [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies/), and [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/).
+- **`/public` folder (optional):** Contains the app's public marketing and metadata assets (such as icons, screenshots, licenses, and localized descriptions) used when distributing the Store Theme as a VTEX IO app in the VTEX App Store. This folder is optional and can be omitted if you do not plan to publish the Store Theme publicly. Learn more in [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution). For assets that are actually used by your Store Theme blocks and styles at runtime, use the [Assets builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-assets-builder) and the `/assets` folder instead. Learn more in [Using the Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder).
 
 >⚠ You must have at least the `store` and `styles` builders configured within the `manifest.json` file for your project to work properly.
 
