@@ -1,0 +1,177 @@
+---
+title: "SKUMatrix"
+excerpt: Displays a table of product variations with quantity selectors for bulk purchasing.
+components:
+  - SKUMatrix.tsx
+  - SKUMatrixTrigger.tsx
+  - SKUMatrixSidebar.tsx
+---
+
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/SKUMatrix)
+
+The `SKUMatrix` component displays a table of product variations with quantity selectors, enabling customers to add multiple SKUs to the cart at once. This component is ideal for B2B scenarios or bulk purchasing.
+
+The final component is a compound of the following:
+
+- `SKUMatrix`: the main wrapper component that provides context and state management.
+- `SKUMatrixTrigger`: a button component that opens the SKU Matrix sidebar.
+- `SKUMatrixSidebar`: renders a `SlideOver` with a table displaying product variations, prices, availability, and quantity selectors.
+
+---
+
+## Usage
+
+### Import the component
+
+```tsx
+import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/organisms/SKUMatrix/styles.scss';
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Design tokens
+
+### Sidebar
+
+<TokenTable>
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-bkg-color"
+    value="var(--fs-color-body-bkg)"
+    isColor
+  />
+</TokenTable>
+
+### Title
+
+<TokenTable>
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-size"
+    value="var(--fs-text-size-4)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-weight"
+    value="var(--fs-text-weight-bold)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-line-height"
+    value="1.2"
+  />
+</TokenTable>
+
+### Table
+
+<TokenTable>
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-padding"
+    value="var(--fs-spacing-3)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-cell-image-width"
+    value="3.5rem"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-cell-image-height"
+    value="3.5rem"
+  />
+</TokenTable>
+
+### Footer
+
+<TokenTable>
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-footer-padding"
+    value="var(--fs-spacing-3)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-footer-bkg-color"
+    value="var(--fs-color-neutral-0)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-footer-box-shadow"
+    value="0 0 6px rgb(0 0 0 / 20%)"
+  />
+</TokenTable>
+
+---
+
+## Data attributes
+
+You can target and override `SKUMatrix` styles using the following data attributes:
+
+### SKUMatrix
+
+`data-fs-sku-matrix`
+
+### SKUMatrixSidebar
+
+`data-fs-sku-matrix-sidebar`
+
+`data-fs-sku-matrix-sidebar-title`
+
+`data-fs-sku-matrix-sidebar-cell-image`
+
+`data-fs-sku-matrix-sidebar-table-price`
+
+`data-fs-sku-matrix-sidebar-table-cell-quantity-selector`
+
+`data-fs-sku-matrix-sidebar-table-action`
+
+`data-fs-sku-matrix-sidebar-footer`
+
+---
+
+## Props
+
+### SKUMatrix
+
+<ComponentPropsSection component="SKUMatrix" />
+
+### SKUMatrixTrigger
+
+<ComponentPropsSection component="SKUMatrixTrigger" />
+
+### SKUMatrixSidebar
+
+<ComponentPropsSection component="SKUMatrixSidebar" />
+
+---
+
+## Related components
+
+<SectionList grid="column">
+  <SectionItem
+    title="SlideOver"
+    description="The SlideOver component represents an additional session that complements the screen's information."
+    actionPath="/docs/guides/faststore/organisms-slide-over"
+  >
+    <UIProvider>
+      <SlideOverPartialRight />
+    </UIProvider>
+  </SectionItem>
+  <SectionItem
+    title="Table"
+    description="Tables display information in a friendly way, allowing users to scan for details quickly."
+    actionPath="/docs/guides/faststore/molecules-table"
+  >
+    <TableUsage />
+  </SectionItem>
+  <SectionItem
+    title="QuantitySelector"
+    description="Allows customers to select the quantity of a given product."
+    actionPath="/docs/guides/faststore/molecules-quantity-selector"
+  >
+    <QuantitySelector min={1} max={10} initial={5} />
+  </SectionItem>
+</SectionList>
+
