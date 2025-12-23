@@ -17,31 +17,149 @@ The final component is a compound of the following:
 - `SKUMatrixTrigger`: a button component that opens the SKU Matrix sidebar.
 - `SKUMatrixSidebar`: renders a `SlideOver` with a table displaying product variations, prices, availability, and quantity selectors.
 
----
-
-## Usage
-
-### Import the component
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SKUMatrixUsage />
+    </OverviewSection>
+  </Tab>
+  <Tab>
 
 ```tsx
-import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
+import React, { useEffect } from 'react'
+import Image from 'next/image'
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+  UIProvider,
+} from '@faststore/ui'
+import { skus } from 'components/faststore-components/mocks/skus'
+
+const ImageComponent = ({
+  src,
+  alt,
+  width = 64,
+  height = 64,
+}: {
+  src: string
+  alt: string
+  width?: number
+  height?: number
+}) => (
+  <Image
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    style={{ objectFit: 'contain' }}
+  />
+)
+
+function SKUMatrixContent() {
+  const { setAllVariantProducts } = useSKUMatrix()
+
+  useEffect(() => {
+    setAllVariantProducts(skus)
+  }, [])
+
+  return (
+    <>
+      <SKUMatrixTrigger variant="secondary">Plan restock</SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Philips Monitor"
+        direction="rightSide"
+        size="partial"
+        loading={false}
+        columns={{
+          name: 'Variation',
+          additionalColumns: [
+            { label: 'Color', value: 'color' },
+            { label: 'Screen sizes', value: 'size' },
+            { label: 'Safety rating', value: 'safetyrating' },
+          ],
+          availability: {
+            label: 'Availability',
+            stockDisplaySettings: 'showStockQuantity',
+          },
+          price: 'Price',
+          quantitySelector: 'Quantity',
+        }}
+        buyProps={{
+          'data-testid': 'bulk-add',
+          'data-sku': 'safety-boot',
+          'data-seller': 'seller-1',
+          onClick: () => {
+            /* call cart mutation */
+          },
+        }}
+        overlayProps={{ 'aria-label': 'SKU matrix overlay' }}
+        ImageComponent={ImageComponent}
+      >
+        {null}
+      </SKUMatrixSidebar>
+    </>
+  )
+}
+
+export default function ProductPageSkuMatrix() {
+  return (
+    <UIProvider>
+      <SKUMatrix data-testid="sku-matrix">
+        <SKUMatrixContent />
+      </SKUMatrix>
+    </UIProvider>
+  )
+}
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Import
+
+Import the compound from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index).
+
+```tsx
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
 ```
 
 ### Import styles
 
-To apply styles, include the following in your stylesheet:
+Add the sidebar styling tokens and layout rules to your theme stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/organisms/SKUMatrix/styles.scss';
+@import "@faststore/ui/src/components/organisms/SKUMatrix/styles.scss";
 ```
 
-For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+Follow the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) instructions. Additionally, the quantity selector, badges, and table components also rely on their respective partials.
+
+---
+
+## Usage
+
+The matrix relies on the context state managed by `SKUMatrix`. Make sure your app is wrapped with `UIProvider` (for toasts) and provide the variant data before rendering the sidebar.
+
+
+
+---
+
+## Examples
+
+
 
 ---
 
 ## Design tokens
-
-### Sidebar
 
 <TokenTable>
   <TokenRow
@@ -49,57 +167,41 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     value="var(--fs-color-body-bkg)"
     isColor
   />
-</TokenTable>
-
-### Title
-
-<TokenTable>
+  <TokenDivider />
   <TokenRow
     token="--fs-sku-matrix-sidebar-title-size"
-    value="var(--fs-text-size-4)"
+    value="var(--fs-text-size-6)"
   />
   <TokenRow
-    token="--fs-sku-matrix-sidebar-title-weight"
-    value="var(--fs-text-weight-bold)"
+    token="--fs-sku-matrix-sidebar-title-text-weight"
+    value="var(--fs-text-weight-semibold)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-font-size"
+    value="var(--fs-text-size-tiny)"
   />
   <TokenRow
-    token="--fs-sku-matrix-sidebar-title-line-height"
-    value="1.2"
+    token="--fs-sku-matrix-sidebar-table-cell-text-weight"
+    value="var(--fs-text-weight-medium)"
   />
-</TokenTable>
-
-### Table
-
-<TokenTable>
+  <TokenDivider />
   <TokenRow
-    token="--fs-sku-matrix-sidebar-table-padding"
-    value="var(--fs-spacing-3)"
+    token="--fs-sku-matrix-sidebar-table-cell-image-width"
+    value="var(--fs-spacing-7)"
   />
   <TokenRow
-    token="--fs-sku-matrix-sidebar-cell-image-width"
-    value="3.5rem"
+    token="--fs-sku-matrix-sidebar-table-cell-image-border-radius"
+    value="var(--fs-border-radius)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-slide-over-partial-gap"
+    value="calc(2 * var(--fs-grid-padding))"
   />
   <TokenRow
-    token="--fs-sku-matrix-sidebar-cell-image-height"
-    value="3.5rem"
-  />
-</TokenTable>
-
-### Footer
-
-<TokenTable>
-  <TokenRow
-    token="--fs-sku-matrix-sidebar-footer-padding"
-    value="var(--fs-spacing-3)"
-  />
-  <TokenRow
-    token="--fs-sku-matrix-sidebar-footer-bkg-color"
-    value="var(--fs-color-neutral-0)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-sku-matrix-sidebar-footer-box-shadow"
-    value="0 0 6px rgb(0 0 0 / 20%)"
+    token="--fs-sku-matrix-slide-over-partial-width-mobile"
+    value="calc(100vw - var(--fs-sku-matrix-slide-over-partial-gap))"
   />
 </TokenTable>
 
@@ -107,43 +209,43 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ## Data attributes
 
-You can target and override `SKUMatrix` styles using the following data attributes:
+Use these selectors to customize styles or attach test logic:
 
-### SKUMatrix
-
-`data-fs-sku-matrix`
-
-### SKUMatrixSidebar
-
-`data-fs-sku-matrix-sidebar`
-
-`data-fs-sku-matrix-sidebar-title`
-
-`data-fs-sku-matrix-sidebar-cell-image`
-
-`data-fs-sku-matrix-sidebar-table-price`
-
-`data-fs-sku-matrix-sidebar-table-cell-quantity-selector`
-
-`data-fs-sku-matrix-sidebar-table-action`
-
-`data-fs-sku-matrix-sidebar-footer`
+- `data-fs-sku-matrix`
+- `data-testid="fs-sku-matrix"` (default test id; override via `testId`)
+- `data-fs-sku-matrix-sidebar`
+- `data-fs-sku-matrix-sidebar-title`
+- `data-fs-sku-matrix-sidebar-cell-image`
+- `data-fs-sku-matrix-sidebar-table-price`
+- `data-fs-sku-matrix-sidebar-table-cell-quantity-selector`
+- `data-fs-sku-matrix-sidebar-table-action`
+- `data-fs-sku-matrix-sidebar-footer`
+- SlideOver attributes propagated to the sidebar: `data-fs-slide-over`, `data-fs-slide-over-direction`, `data-fs-slide-over-size`, `data-fs-slide-over-state`
 
 ---
 
 ## Props
 
-### SKUMatrix
-
 <ComponentPropsSection component="SKUMatrix" />
-
-### SKUMatrixTrigger
-
 <ComponentPropsSection component="SKUMatrixTrigger" />
-
-### SKUMatrixSidebar
-
 <ComponentPropsSection component="SKUMatrixSidebar" />
+
+---
+
+## Best practices
+
+### :white_check_mark: Do's
+
+- Use concise variation labels (e.g., "Black - 42") to ensure the table remains scannable on partial-width slide-overs.
+- Keep price and availability in sync with your store OMS; display a toast message when quantity adjustments are coerced.
+- Localize both column headers and toast messages for multinational catalogs.
+
+### :x: Don'ts
+
+- Don't expose the matrix when a product is single-SKU; it adds unnecessary friction.
+- Don't rely on color alone for stock communication pair badge colors with descriptive text.
+- Don't allow quantities beyond available stock; the component exposes validation hooks for this reason.
+- Don't hardcode dimensions; merchants should be able to adjust columns per category via Headless CMS.
 
 ---
 
