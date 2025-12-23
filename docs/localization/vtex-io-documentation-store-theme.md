@@ -3,7 +3,7 @@ title: "Store Theme"
 slug: "vtex-io-documentation-store-theme"
 hidden: false
 createdAt: "2024-07-24T13:48:10.752Z"
-updatedAt: "2025-01-21T15:07:44.619Z"
+updatedAt: "2025-12-23T13:09:58.384Z"
 category: "Storefront development"
 seeAlso:
   - "/docs/guides/vtex-io-documentation-manifest"
