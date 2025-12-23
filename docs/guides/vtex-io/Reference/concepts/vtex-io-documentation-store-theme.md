@@ -39,7 +39,7 @@ Although the structure of a Store Theme project may vary depending on its specif
 
 Some of these files and folders are essential for the theme to function properly:
 
-- **`/public` folder:** Contains the app's public marketing and metadata assets (such as icons, screenshots, licenses, and localized descriptions) used when distributing the Store Theme as a VTEX IO app in the VTEX App Store. Learn more in [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution).
+- **`/public` folder (optional):** Contains the app's public marketing and metadata assets (such as icons, screenshots, licenses, and localized descriptions) used when distributing the Store Theme as a VTEX IO app in the VTEX App Store. This folder is optional and can be omitted if you do not plan to publish the Store Theme publicly. Learn more in [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution).
 - **`/store` folder:** Contains the blocks, interfaces, and routes necessary to build the storefront.
 - **`/styles` folder:** Contains the store’s visual elements, such as colors, typography, and other style-related settings.
 - **`manifest.json` file:** Contains the metadata about the app, including vendor, name, version, [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies/), and [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/).
