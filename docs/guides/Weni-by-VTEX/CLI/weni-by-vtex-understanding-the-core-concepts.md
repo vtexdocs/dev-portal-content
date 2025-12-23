@@ -1,6 +1,6 @@
 ---
 title: "Understanding the core concepts"
-slug: "core-concepts"
+slug: "weni-by-vtex-understanding-the-core-concepts"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"

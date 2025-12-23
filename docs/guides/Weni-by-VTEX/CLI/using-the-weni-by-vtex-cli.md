@@ -1,6 +1,6 @@
 ---
 title: "Using the Weni by VTEX CLI"
-slug: "wenibyvtex-guide"
+slug: "using-the-weni-by-vtex-cli"
 hidden: false
 createdAt: "2025-10-23T17:08:52.219Z"
 updatedAt: "2025-10-23T14:33:45.242Z"
