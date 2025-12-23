@@ -1,19 +1,17 @@
 ---
-title: "Testing the Tool Run feature"
-slug: "tool-run"
+title: "Using Weni Run to execute tool tests"
+slug: "using-weni-run-to-execute-tool-tests"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Learn how to use the Tool Run feature."
 ---
 
-## Tool Test Run
-
-Tool Run is a scalable way to build your tool and test it in real-time. With this feature, it's simple to debug problems and create a tool that is both scalable and performant at the same time.
+Weni Run is a scalable way to build your tool and test it in real-time. With this feature, it's simple to debug problems and create a tool that is both scalable and performant at the same time.
 
 ### What is required to run a tool?
 
-First, you need to have your tool. If you don't know how to create a tool or still have questions about this subject, you can read the tools page [Tools](../core-concepts/tools.md).
+First, you need to have your tool. If you don't know how to create a tool or still have questions about this subject, you can read the [Tools](https://developers.vtex.com/docs/guides/core-concepts#tools) page.
 
 Next, you need to write your test. Let's take the following tool as an example:
 
