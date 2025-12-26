@@ -453,7 +453,7 @@ Enable tokenization on the headless account following the steps below:
 Make a purchase using your credit card as described below:
 
 1. Follow the purchase steps up to the **Placing the order** in the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
-2. Send the payment information via the [Send Payments](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments) endpoint (as described in the **Resolving the order payment** section), including the `savePaymentData` field in the request.
+2. Send the payment data via the [Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments) endpoint (as described in the **Resolving the order payment** section of the guide), including the `savePaymentData` field in the request.
 
 ```json
 [
@@ -474,7 +474,7 @@ Make a purchase using your credit card as described below:
 
 To confirm the card data was tokenized and saved correctly, follow the steps below:
 
-1. In the VTEX Admin, go to **Orders > Transactions**, or type **Providers** in the search bar at the top of the page.
+1. In the VTEX Admin, go to **Orders > Transactions**, or type **Transactions** in the search bar at the top of the page.
 2. Click the payment transaction for the purchase made in the previous section.
 3. On the **Transaction events** page, find the connector authorization response event and confirm that the `generatedCardToken` dataset is present, as shown in the following example:
 
