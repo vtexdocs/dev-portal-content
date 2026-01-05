@@ -24,25 +24,25 @@ To choose the most appropriate architecture that meets your business needs, addr
 
 Before implementing your cross-border store, make sure you have the following information ready:
 
-- **Target regions:** Identify the countries/regions where your store will operate.
-- **Currencies and Languages:** Determine accepted payment currencies and supported site languages.
-- **Inventory management:** Decide if inventory will be managed from Brazil or locally in each country/region.
-- **Tax and Export partner:** If using fulfillment from Brazil, choose a partner for handling export taxes and fees. To find your partner, check out the [Partners](https://vtex.com/en-us/partners/) page on the VTEX website.
-- **Catalog translation:** Check if your catalog is translated or needs localization for each country/region.
-- **Promotions:** Plan the types of promotions for each store. Learn about the types available in [Promotions](https://help.vtex.com/subcategory/benefits--1yTYB5p4b6iwMsUg8uieyq) guides.
-- **Operations:** Consider any existing physical stores, sellers, or other operations abroad. Learn more in [VTEX account types](https://help.vtex.com/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types)
-- **Teams:** Identify if different teams will manage each country/region’s ecommerce operations.
-- **ERP Systems:** Confirm if each country/region has its own ERP or a centralized system.
-- **Payment gateway:** Ensure you have a gateway that supports multiple currencies.
-- **Domains:** Define the primary and secondary domains for your stores. Learn more in [Rules for main hosts](https://help.vtex.com/pt/tutorial/configuring-the-store-domain--tutorials_2450#rules-for-main-host).
+* **Target regions:** Identify the countries/regions where your store will operate.
+* **Currencies and Languages:** Determine accepted payment currencies and supported site languages.
+* **Inventory management:** Decide if inventory will be managed from Brazil or locally in each country/region.
+* **Tax and Export partner:** If using fulfillment from Brazil, choose a partner for handling export taxes and fees. To find your partner, check out the [Partners](https://vtex.com/en-us/partners/) page on the VTEX website.
+* **Catalog translation:** Check if your catalog is translated or needs localization for each country/region.
+* **Promotions:** Plan the types of promotions for each store. Learn about the types available in [Promotions](https://help.vtex.com/subcategory/benefits--1yTYB5p4b6iwMsUg8uieyq) guides.
+* **Operations:** Consider any existing physical stores, sellers, or other operations abroad. Learn more in [VTEX account types](https://help.vtex.com/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types)
+* **Teams:** Identify if different teams will manage each country/region’s ecommerce operations.
+* **ERP Systems:** Confirm if each country/region has its own ERP or a centralized system.
+* **Payment gateway:** Ensure you have a gateway that supports multiple currencies.
+* **Domains:** Define the primary and secondary domains for your stores. Learn more in [Rules for main hosts](https://help.vtex.com/pt/tutorial/configuring-the-store-domain--tutorials_2450#rules-for-main-host).
 
 ### Choosing the store architecture
 
 After defining your operation based on the topics above, choose the architecture for your cross-border store. 
 
-- Single account, multi-binding
-- Multi-account, shared back office systems
-- Multi-account, independent back office systems
+* Single account, multi-binding
+* Multi-account, shared back office systems
+* Multi-account, independent back office systems
 
 See below the main differences between them:
 
