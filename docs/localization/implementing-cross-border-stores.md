@@ -38,7 +38,7 @@ Before implementing your cross-border store, make sure you have the following in
 
 ### Choosing the store architecture
 
-After defining your operation based on the topics above, choose the architecture for your cross-border store. 
+After defining your operation based on the topics above, choose the architecture for your cross-border store.
 
 * Single account, multi-binding
 * Multi-account, shared back office systems
