@@ -37,14 +37,14 @@ After receiving the integration script from VTEX Support, implement it in your h
 2. Implement the script based on your framework's best practices for third-party script management. Check an example of implementation in [FastStore: Third-party Scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts)
 3. Ensure the script runs on all pages where you want to enable recommendations or track user behavior.
 
-The script handles:
-* User tracking initialization
-* Browsing and behavioral data collection
-* Model training data gathering.
+  The script handles:
+    * User tracking initialization
+    * Browsing and behavioral data collection
+    * Model training data gathering.
 
 4. Save the `_snrs_uuid` in the user's order form, so that when the order is placed, you can associate that sale with the user identified during navigation.
 
-When the ID is generated, you must save the user's ID in the orderForm during navigation using `PUT` [Set multiple custom field values](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-) as shown below:
+  When the ID is generated, you must save the user's ID in the orderForm during navigation using `PUT` [Set multiple custom field values](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-) as shown below:
 
    ```javascript
    fetch(`/api/checkout/pub/orderForm/${orderForm.id}/customData/synerise`, {
@@ -56,7 +56,7 @@ When the ID is generated, you must save the user's ID in the orderForm during na
    })
    ```
 
-To validate that it worked, request to retrieve the orderForm using `GET` [Get current cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm). The `customData` field returned should contain the added information.
+  To validate that it worked, request to retrieve the orderForm using `GET` [Get current cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm). The `customData` field returned should contain the added information.
 
 5. Send the `POST` [Product View](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/product-view/v2) event following the API reference.
 
@@ -131,18 +131,18 @@ This endpoint retrieves a list of recommended products based on:
 
 * Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [our Support](https://help.vtex.com/en/support) to obtain the `campaignId`
 
-Available campaign types:
+  Available campaign types:
 
-* `rec-top-items-v2`: Best sellers
-* `rec-persona-v2`: Personalized recommendations
-* `rec-similar-v2`: Similar items
-* `rec-cross-v2`: Cross-sell
-* `rec-cart-v2`: Cart-based recommendations
-* `rec-last-v2`: Last seen
-* `rec-interactions-v2`: Recent interactions
-* `rec-visual-v2`: Visual similarity
-* `rec-search-v2`: Search-based recommendations
-* `rec-next-v2`: Next interaction
+  * `rec-top-items-v2`: Best sellers
+  * `rec-persona-v2`: Personalized recommendations
+  * `rec-similar-v2`: Similar items
+  * `rec-cross-v2`: Cross-sell
+  * `rec-cart-v2`: Cart-based recommendations
+  * `rec-last-v2`: Last seen
+  * `rec-interactions-v2`: Recent interactions
+  * `rec-visual-v2`: Visual similarity
+  * `rec-search-v2`: Search-based recommendations
+  * `rec-next-v2`: Next interaction
 
 * User context (from `recommendationsUserId`)
 * Page context (product ID, cart items, etc.).
