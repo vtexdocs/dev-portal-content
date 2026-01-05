@@ -74,7 +74,7 @@ To request a new trade policy, open a ticket with [VTEX Support](https://help.vt
 
 When configuring trade policies, ensure that the currency code and symbol, as well as the country code and cultural information, are adjusted correctly.
 
-![trade-policies]()
+![trade-policies](https://vtexhelp.vtexassets.com/assets/docs/src/trade-policies___afbb9f10a7643e5547754c47cc53a063.png)
 
 ### Step 2 - Create a new binding
 
@@ -103,7 +103,7 @@ Or following the instructions in the guide [Checking your store's binding id](ht
 
   >ℹ️ Use the currency symbol field defined in the trade policy.
 
-  ![currency-symbol]()
+  ![currency-symbol](https://vtexhelp.vtexassets.com/assets/docs/src/currency-symbol___9ba20d1b1cd02454841854781d7acc73.gif)
 
 ## Fundamental apps
 
