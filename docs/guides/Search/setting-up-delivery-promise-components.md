@@ -4,7 +4,7 @@ slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
-updatedAt: "2025-12-15T14:37:34.185Z"
+updatedAt: "2026-01-05T19:11:26.116Z"
 seeAlso:
  - "/docs/apps/vtex.shipping-option-components"
 ---
@@ -20,7 +20,7 @@ The availability is displayed following these rules:
 
 >ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX Sellers, [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types), and external sellers).
 
-![delivery-promise-components](https://vtexhelp.vtexassets.com/assets/docs/src/delivery-promise-sf1___8c1a07a12de405e3c022d682284c8427.png)
+![delivery-promise-components](https://vtexhelp.vtexassets.com/assets/docs/src/shipping-option-components___c5a1d86b0ebf692a3eb9ca49f79b55f8.png)
 
 If you're building your storefront with Store Framework, you can enable this experience using two key apps:
 
