@@ -126,7 +126,7 @@ Once you've set the pages for testing and after a new deployment, go to the **Ov
 The **Settings** tab is where you manage the following configurations:
 
 * [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
-* [**Secrets**](#secrets): Stores and allows secure management of sensitive information, such as API keys and passwords, required during FastStore deployment.
+* [**Variables and secrets**](#variables-and-secrets): Stores and allows secure management of sensitive information, such as API keys and passwords, required during FastStore deployment.
 
 ![settings-webops](https://vtexhelp.vtexassets.com/assets/docs/src/secrets-webops___2869e469b5a613f389f19cc555f4c3c5.png)
 
@@ -144,11 +144,15 @@ The **Current domains** section displays the default and primary domains configu
 
 > ⚠️ If your domain isn't listed, there might be an issue with the configuration or DNS settings that you need to address before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly, and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
 
-### Secrets
+### Variables and secrets
 
-Secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing secret management via WebOps enhances security and consistency across deployment providers.
+Variables and secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing variables and secrets management via WebOps enhances security and consistency across deployment providers.
 
-In the **Secrets** section, define the **Key** and **Value** in their respective fields and click `Add` to set up the secret.
+In the **Variables and Secrets** section, fill in the following fields and click `Add`:
+
+* **Type:** Choose `text` for non-sensitive values that can be viewed later (for example, public URLs), or `secret` for sensitive values that must be hidden after saving (for example, API tokens and passwords).
+* **Key:** Define the name of the variable or secret, used as its unique identifier in the environment (for example, `VTEX_API_TOKEN` or `NEXT_PUBLIC_SITE_URL`).
+* **Value:** Define the content associated with the key, such as the actual token, password, or configuration string used by your application.
 
 >ℹ Learn more about Secrets in [Managing secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets).
 
