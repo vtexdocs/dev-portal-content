@@ -89,10 +89,13 @@ In the **Deploy Steps** section, select a step (for example, **Build - Discovery
 
 If a deployment fails due to issues unrelated to your code, such as environment variables or temporary network problems, you can rerun the build job directly in WebOps without pushing a new commit to the repository. To do so, follow the instructions below:
 
-1. In the **Deploys** tab, click the entry you want to redeploy.
-2. In the top-right corner of the page, click `⋮`, then click **Rerun this deployment**.
+1. Fix the related issue, if needed.
+2. In the **Deploys** tab, click the entry you want to redeploy.
+3. In the top-right corner of the page, click `⋮`, then click **Rerun this deployment**.
 
   ![rerun-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-16950/images/rerun-webops.png)
+
+> ℹ️ If the logs indicate problems in your code (for example, syntax errors and failing tests), update the code in your local environment and push a new commit. WebOps will automatically trigger a new deploy for that commit.
 
 ## Integrations
 
