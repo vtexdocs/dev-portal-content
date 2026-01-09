@@ -28,7 +28,7 @@ This change reduces the risk of accidental exposure. The terminology update from
 
 To manage variables and secrets, go to your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) and navigate to the **Settings** tab.
 
-In the [Variables and Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) section, you'll find the following fields:
+In the **Variables and Secrets** section, you'll find the following fields:
 
 * **Type:** Choose `text` for non-sensitive values that can be viewed later (for example, public URLs), or `secret` for sensitive values that must be hidden after saving (for example, API tokens and passwords).
 * **Key:** Define the name of the variable or secret, used as its unique identifier in the environment (for example, `VTEX_API_TOKEN` or `NEXT_PUBLIC_SITE_URL`).
