@@ -36,9 +36,9 @@ After you receive the approval to use the product recommendations feature, the V
 
 To collect shopper product interaction events for training and delivering recommendations, implement the script provided by VTEX Support as a third-party script in your FastStore project. To do this, follow these instructions:
 
-1. Add a new section that can fetch products, track views, and click events. One example is creating a `RecommendationShelf` that displays products in a carousel. For instructions on how to create this component, refer to the [Creating a RecommendationShelf section](/TBD).
+1. Add a [new section](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section) that can fetch products, track views, and click events.
 
-	> ⚠️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
+	> ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
 
 2. Add the script provided by VTEX Support as a third-party script in your FastStore project. To add the script, follow the instructions in the [Adding third-party scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts) guide.  
 3. Save the `_snrs_uuid` in the user's order form, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation. When the ID is generated, it is necessary to save the user's ID in the orderForm during navigation using `PUT` Set multiple custom field values as shown below:
