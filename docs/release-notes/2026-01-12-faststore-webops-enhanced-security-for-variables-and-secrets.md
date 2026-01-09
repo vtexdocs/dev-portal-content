@@ -1,0 +1,37 @@
+---
+title: "FastStore WebOps: Enhanced security for variables and secrets"
+slug: "2026-01-12-faststore-webops-enhanced-security-for-variables-and-secrets"
+type: "improved"
+createdAt: "2026-01-12T11:00:00.000Z"
+excerpt: ""
+tags:
+    - "FastStore"
+---
+
+We enhanced FastStore WebOps to provide a more secure method for managing both sensitive and non-sensitive configuration data for FastStore deployments.
+
+The feature, previously known as **Secrets**, is now **Variables and Secrets**, and you can choose to save each entry as either text (non-sensitive) or secret (sensitive). Secret values are hidden after saving, further protecting your credentials and API keys.
+
+![variables-secrets-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17149/images/variables-secrets-webops.png)
+
+## What has changed?
+
+Previously, all values in WebOps dashboard were managed as **Secrets**, and every value was treated as sensitive. The interface didn't distinguish between types, and secret values remained visible after saving, increasing the risk of accidental exposure.
+
+Now, the **Settings** tab in the WebOps dashboard has a **Variables and Secrets** section, where you can choose between `text` (non-sensitive, visible after saving) and `secret` (sensitive, hidden after saving) for each entry.
+
+## Why did we make this change?
+
+This change reduces the risk of accidental exposure. The terminology update from **Secrets** to **Variables and Secrets** reflects this approach.
+
+## What needs to be done?
+
+To manage variables and secrets, go to your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) and navigate to the **Settings** tab.
+
+In the [Variables and Secrets](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#secrets) section, you'll find the following fields:
+
+* **Type:** Choose `text` for non-sensitive values that can be viewed later (for example, public URLs), or `secret` for sensitive values that must be hidden after saving (for example, API tokens and passwords).
+* **Key:** Define the name of the variable or secret, used as its unique identifier in the environment (for example, `VTEX_API_TOKEN` or `NEXT_PUBLIC_SITE_URL`).
+* **Value:** Define the content associated with the key, such as the actual token, password, or configuration string used by your application.
+
+For detailed instructions, see the guide [Managing variables and secrets](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets).
