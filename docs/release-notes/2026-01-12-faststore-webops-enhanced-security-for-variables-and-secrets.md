@@ -8,11 +8,11 @@ tags:
     - "FastStore"
 ---
 
-We enhanced FastStore WebOps to provide a more secure method for managing both sensitive and non-sensitive configuration data for FastStore deployments.
+We enhanced [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) to provide a more secure method for managing both sensitive and non-sensitive configuration data for FastStore deployments.
 
 The feature, previously known as **Secrets**, is now **Variables and Secrets**, and you can choose to save each entry as either text (non-sensitive) or secret (sensitive). Secret values are hidden after saving, further protecting your credentials and API keys.
 
-![variables-secrets-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17149/images/variables-secrets-webops.png)
+![variables-secrets-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/variables-secrets-webops.png)
 
 ## What has changed?
 
