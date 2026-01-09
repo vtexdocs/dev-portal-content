@@ -16,7 +16,7 @@ With this update, you can save each entry as either **text** (non-sensitive) or 
 
 ## What has changed?
 
-Previously, all values in WebOps dashboard were managed as **Secrets**, and every value was treated as sensitive. The interface didn't distinguish between types, and secret values remained visible after saving, increasing the risk of accidental exposure.
+Previously, all values in the WebOps dashboard were managed as **Secrets**, and every value was treated as sensitive. The interface didn't distinguish between types, and secret values remained visible after saving, increasing the risk of accidental exposure.
 
 Now, the **Settings** tab in the WebOps dashboard has a **Variables and Secrets** section, where you can choose between `text` (non-sensitive, visible after saving) and `secret` (sensitive, hidden after saving) for each entry.
 
