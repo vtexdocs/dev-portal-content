@@ -36,7 +36,7 @@ After you receive the approval to use the product recommendations feature, the V
 
 To collect shopper product interaction events for training and delivering recommendations, implement the script provided by VTEX Support as a third-party script in your FastStore project. To do this, follow these instructions:
 
-1. Add a [new section](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section) that can fetch products, track views, and click events.
+1. Add a [new section](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section) that fetches products and tracks views and click events, similar to a [carousel](https://developers.vtex.com/docs/guides/faststore/molecules-carousel).
 
 	> ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
 
@@ -181,9 +181,9 @@ To improve recommendation accuracy and measure effectiveness, you need to track 
 
 * [Recommendation views](#recommendation-views): When recommendation shelves become visible to users.  
 * [Recommendation clicks](#recommendation-clicks): When users click on recommended products.  
-* [Product views](\#product-views): When users visit product detail pages.
+* [Product views](#product-views): When users visit product detail pages.
 
-⚠️ For accurate tracking, ensure that:
+For accurate tracking, ensure that:
 
 * All events include the same `recommendationsUserId`.  
 * Events are properly debounced to prevent duplicates.  
