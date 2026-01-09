@@ -3,7 +3,7 @@ title: "FastStore WebOps: Enhanced security for variables and secrets"
 slug: "2026-01-12-faststore-webops-enhanced-security-for-variables-and-secrets"
 type: "improved"
 createdAt: "2026-01-12T11:00:00.000Z"
-excerpt: ""
+excerpt: "WebOps now separates text variables from secrets, enhancing security for sensitive data."
 tags:
     - "FastStore"
 ---
