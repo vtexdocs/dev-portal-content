@@ -16,18 +16,19 @@ The approval process is hierarchical and uses a priority-based evaluation system
 
 ## Organization unit evaluation (dimension priority)
 
-- Each organization unit has one dimension containing its buying policies.
-- Dimensions are evaluated in ascending priority order (lower numbers first).
+The following are the main characteristics of organization unit evaluation:
+
+- Each organization unit has one dimension, a container that groups its buying policies.
+- Dimensions are checked in ascending priority order (lower numbers first).
 - To enforce policies from lowest to highest hierarchy levels, assign descending priorities by hierarchy:
   - Top-level unit = 9999 (evaluated last)
   - Child units = 9998 (evaluated second)
   - Grandchild units = 9997 (evaluated first)
 - Sibling units share the same priority.
-- System checks lower-level org units first, then moves up the hierarchy.
 
 ## Policy type evaluation (rule priority)
 
-Within each org unit's dimension, rules are evaluated in ascending priority order with fixed assignments:
+Within each organization unit's dimension, rules are evaluated in ascending priority order with fixed assignments:
 
 - Priority `1` = bypass (`effectType: 0`) - checked first, approves and stops evaluation.
 - Priority `2` = deny (`effectType: 1`) - checked second, denies and stops evaluation.
@@ -36,6 +37,8 @@ Within each org unit's dimension, rules are evaluated in ascending priority orde
 >❗ The dimension must have `requireAllRulesAcceptance: false` so the first matching rule executes and stops further evaluation, enabling bypass functionality.
 
 ## Authorization dynamics and score fields
+
+The following sections explain the flow of rule evaluation and the score system.
 
 ### Rule evaluation flow
 
@@ -56,14 +59,16 @@ When an order is submitted, authorization rules are evaluated in two stages.
 
 Rules with `effectType: 2` require manual approval/denial via the [Accept or deny rule](https://developers.vtex.com/docs/api-reference/buying-policies-api#post-/commercial-authorizations/-orderAuthId-/callback) endpoint.
 
-### The score system
+### Score system
 
 The `scoreInterval` object defines decision thresholds:
 
 ```json
-"scoreInterval": {
+{
+  "scoreInterval": {
     "accept": 10,
     "deny": 5
+  }
 }
 ```
 
@@ -81,7 +86,7 @@ When calling the approval and denial endpoints, you provide a score value that d
 
 - Sending `score: 100` → Rule accepted.
 - Sending `score: 0` → Rule denied.
-- Sending `score: 8` → Rule bypassed (doesn't affect authorization).
+- Sending `score: 8` → Rule bypassed (authorization continues to the next rule or dimension).
 
 ## Permissions
 
@@ -94,5 +99,3 @@ Each endpoint will require a different resource, which will be one of the follow
 | Manage Buying Policies | OMS | ManageBuyingPolicies |
 | View Buying Policies | OMS | ViewBuyingPolicies |
 | Approve Orders | My Account / OMS | ApproveOrders |
-
-There are no applicable [predefined roles](https://help.vtex.com/en/tutorial/predefined-roles--jGDurZKJHvHJS13LnO7Dy) for this resource list, and you habe to [create a custom role](https://help.vtex.com/en/tutorial/predefined-roles--jGDurZKJHvHJS13LnO7Dy).
