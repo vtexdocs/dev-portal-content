@@ -24,7 +24,7 @@ Now, you can rerun the build job from the WebOps interface itself, enabling you 
 
 ## What needs to be done?
 
-To use this feature, follow the instructions below:
+This feature is available for all WebOps users, and no additional configuration is required. To use it, follow the instructions below:
 
 1. In the **Deploys** tab of [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard#deploys), click the entry you want to redeploy.
 2. In the top-right corner of the page, click `⋮`, then click **Rerun this deployment**.
