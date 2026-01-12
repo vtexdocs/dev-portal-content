@@ -4,7 +4,7 @@ slug: "buying-policies-overview"
 hidden: false
 createdAt: "2026-01-12T17:53:09.698Z"
 updatedAt: "2026-01-12T17:53:09.698Z"
-excerpt: "With Buying Policies, merchants can configure dynamic rules and custom expressions for flexible authorization processes in B2B organizations."
+excerpt: "With Buying Policies, buyer organizations can configure dynamic rules and custom expressions for flexible order authorization processes in B2B organizations."
 
 ---
 
