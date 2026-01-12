@@ -26,6 +26,8 @@ This change reduces the risk of accidental exposure. The terminology update from
 
 ## What needs to be done?
 
+All existing secrets remain secure and functional. No action is required for existing configurations.
+
 To manage variables and secrets, go to your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) and navigate to the **Settings** tab.
 
 In the **Variables and Secrets** section, you'll find the following fields:
