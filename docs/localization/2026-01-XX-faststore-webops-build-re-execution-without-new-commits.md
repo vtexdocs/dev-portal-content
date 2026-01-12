@@ -1,5 +1,5 @@
 ---
-title: "FastStore WebOps: Build re-execution without new commits"
+title: "FastStore WebOps: Rerun failed builds without new commits"
 slug: "2026-01-XX-faststore-webops-build-re-execution-without-new-commits"
 type: "added"
 createdAt: "2026-10-XXT10:00:00.000Z"
