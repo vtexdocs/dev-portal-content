@@ -29,5 +29,5 @@ This feature is available for all WebOps users, and no additional configuration 
 1. In the **Deploys** tab of [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard#deploys), click the entry you want to redeploy.
 2. In the top-right corner of the page, click `⋮`, then click **Rerun this deployment**.
 
-  ![rerun-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-16950/images/rerun-webops.png)
+  ![rerun-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/rerun-webops.png)
 
