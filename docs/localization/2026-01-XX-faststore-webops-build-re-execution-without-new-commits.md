@@ -31,4 +31,3 @@ This feature is available for all WebOps users, and no additional configuration 
 
   ![rerun-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-16950/images/rerun-webops.png)
 
-This update is available for all WebOps users, and no additional configuration is required.
