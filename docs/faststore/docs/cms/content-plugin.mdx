@@ -81,9 +81,9 @@ vtex content:generate-schema [COMPONENT_SCHEMAS_PATH] [CONTENT_TYPES_PATH]
 | Option            | Alias | Description                                                                                                                                                                                |
 | :---------------- | :---- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `--help`          | `-h`  | Displays help information for the command.                                                                                                                                                 |
-| `--out=<path>`    | `-o`  | Outputs file path for the generated schema. This option is required to get an output, and without it, the command will only display a success message but won't save or output the schema. |
-| `--local=<path>`  | `-l`  | Uses a local schema file as the base schema instead of fetching the latest FastStore schema from remote.                                                                                   |
-| `--remote=<path>` | `-r`  | Specifies a remote URL to fetch a custom base schema instead of FastStore's default. Must be publicly accessible and return a valid JSON.                                                  |
+| `--out=<path>`    | `-o`  | Output file path for the generated schema. This option is required to produce an output, and without it, the command will only display a success message but won't save or output the schema. |
+| `--local=<path>`  | `-l`  | Uses a local schema file as the base schema instead of fetching the latest FastStore schema from a remote source.                                                                                   |
+| `--remote=<path>` | `-r`  | Specifies a remote URL to fetch a custom base schema instead of FastStore's default. Must be publicly accessible and return valid JSON.                                                  |
 | `--beta`          | `-b`  | Uses the beta registry instead of the stable one when fetching the default base schema.                                                                                                    |
 
 #### Examples
@@ -119,7 +119,7 @@ vtex content:generate-schema --beta --out schema.json
 
 ### `split-components`
 
-Splits a `sections.json` file into separate component files. Use this command when migrating component definitions from the legacy [Headless CMS]() to the new CMS, helping organize your store components by creating a separate file for each component.
+Splits a `sections.json` file into separate component files. Use this command when migrating component definitions from the legacy [Headless CMS]() to the new CMS to help organize your store components by creating a separate file for each component.
 
 #### Usage
 
@@ -156,7 +156,7 @@ vtex content:split-components --input ./cms/sections.json --output ./cms/compone
 
 ### `split-content-types`
 
-Splits CMS Content Type definitions from the `content-types.json` file into separate Content Type files. Use this command when migrating custom Content Types from the legacy [Headless CMS]() to the new CMS, organizing your Content Types into separate files for easier management.
+Splits CMS Content Type definitions from the `content-types.json` file into separate Content Type files. Use this command when migrating custom Content Types from the legacy [Headless CMS]() to the new CMS to organize your Content Types into separate files for easier management.
 
 #### Usage
 
@@ -194,7 +194,7 @@ vtex content:split-content-types --input ./cms/content-types.json --output ./cms
 
 ### `upload-schema`
 
-Uploads a local schema file to the Schema Registry. This command publishes your consolidated CMS schema to the CMS, making it available to use in your store.
+Uploads a local schema file to the Schema Registry. This command publishes your consolidated CMS schema to the CMS, making it available for use in your store.
 
 #### Usage
 
