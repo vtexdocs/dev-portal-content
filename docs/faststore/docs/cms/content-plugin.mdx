@@ -1,5 +1,6 @@
 ---
 title: "Content plugin"
+hidde: "true"
 ---
 
 The Content plugin is a [VTEX CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#plugins) that allows you to manage your store's content and CMS configurations directly from the terminal. Use this plugin to manage CMS schemas, organize components, and define Content Types.
@@ -119,7 +120,7 @@ vtex content:generate-schema --beta --out schema.json
 
 ### `split-components`
 
-Splits a `sections.json` file into separate component files. Use this command when migrating component definitions from the legacy [Headless CMS]() to the new CMS to help organize your store components by creating a separate file for each component.
+Splits a `sections.json` file into separate component files. Use this command when migrating component definitions from the legacy [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to help organize your store components by creating a separate file for each component.
 
 #### Usage
 
@@ -156,7 +157,7 @@ vtex content:split-components --input ./cms/sections.json --output ./cms/compone
 
 ### `split-content-types`
 
-Splits CMS Content Type definitions from the `content-types.json` file into separate Content Type files. Use this command when migrating custom Content Types from the legacy [Headless CMS]() to the new CMS to organize your Content Types into separate files for easier management.
+Splits CMS Content Type definitions from the `content-types.json` file into separate Content Type files. Use this command when migrating custom Content Types from the legacy [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to organize your Content Types into separate files for easier management.
 
 #### Usage
 
