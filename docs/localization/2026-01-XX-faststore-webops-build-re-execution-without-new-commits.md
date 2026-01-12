@@ -13,7 +13,6 @@ FastStore WebOps now includes a rerun feature for failed builds. This allows you
 
 With this feature, you can quickly resolve issues that are not related to code, such as misconfigurations of environment variables or network interruptions, without having to create a new commit in your repository.
 
-As a result, you can resolve operational problems more quickly and maintain a clean commit history.
 
 > ℹ️ If the build failed due to problems in your code (for example, syntax errors or failing tests), update the code in your local environment and push a new commit. WebOps will automatically trigger a new deploy for that commit.
 
