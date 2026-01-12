@@ -15,7 +15,7 @@ The integration supports three main operations:
 * **[Custom field values](#create-custom-field-value):** Create predefined values for fields of type `option`.
 * **[OrderForm application](#apply-custom-field-to-orderform):** Apply custom field values to shopping carts during checkout.
 
->⚠️ The Custom Fields API is only available for B2B Buyer Portal. Authorization from the Commerce Engineer of the account is required for usage.
+>⚠️ The Custom Fields API is only available for B2B Buyer Portal. Authorization from the Commerce Engineer of the account is required for use.
 
 ## How it works
 
@@ -465,7 +465,7 @@ The following License Manager permissions are required for Default Values operat
 | Operation | Required resources |
 | :--- | :--- |
 | Create default values | Insert or update document (not remove), Full access to all documents, or Master Data administrator |
-| Read default values | Read only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
+| Read default values | Read-only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
 | Update default values | Insert or update document (not remove), Full access to all documents, or Master Data administrator |
 | Delete default values | Full access to all documents or Master Data administrator |
 
@@ -480,7 +480,7 @@ The following License Manager resources are required:
 | Operation | Required resources |
 | :--- | :--- |
 | Create/Update settings or values | Insert or update document (not remove), Full access to all documents, or Master Data administrator |
-| Read settings or values | Read only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
+| Read settings or values | Read-only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
 | Delete settings or values | Full access to all documents or Master Data administrator |
 | OrderForm operations | Read Shopping Cart |
 
