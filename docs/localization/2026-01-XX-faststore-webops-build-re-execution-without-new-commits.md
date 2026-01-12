@@ -9,7 +9,9 @@ tags:
   - FastStore
 ---
 
-We introduced the ability to re-execute a build directly from the WebOps interface. This enhancement allows you to quickly address issues unrelated to code, such as environment variable misconfigurations or network interruptions, without needing to create a new commit in your repository.
+FastStore WebOps now includes a rerun feature for failed builds. This allows you to directly execute a failed build from the dashboard.
+
+With this feature, you can quickly resolve issues that are not related to code, such as misconfigurations of environment variables or network interruptions, without having to create a new commit in your repository.
 
 As a result, you can resolve operational problems more quickly and maintain a clean commit history.
 
