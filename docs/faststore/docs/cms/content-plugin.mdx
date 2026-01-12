@@ -1,6 +1,6 @@
 ---
 title: "Content plugin"
-hidde: "true"
+hidden: "true"
 ---
 
 The Content plugin is a [VTEX CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#plugins) that allows you to manage your store's content and CMS configurations directly from the terminal. Use this plugin to manage CMS schemas, organize components, and define Content Types.
@@ -72,17 +72,17 @@ vtex content:generate-schema [COMPONENT_SCHEMAS_PATH] [CONTENT_TYPES_PATH]
 
 #### Arguments
 
-| Argument                 | Default                    | Description                                                           |
-| :----------------------- | :------------------------- | :-------------------------------------------------------------------- |
-| `COMPONENT_SCHEMAS_PATH` | `cms/faststore/components` | Path to the directory containing all custom component schemas.        |
-| `CONTENT_TYPES_PATH`     | `cms/faststore/pages`      | Path to the directory containing all custom Content Type definitions. |
+| Argument                 | Default                    | Description                                                                |
+| :----------------------- | :------------------------- | :------------------------------------------------------------------------- |
+| `COMPONENT_SCHEMAS_PATH` | `cms/faststore/components` | Specifies the path to the directory containing all custom component schemas. |
+| `CONTENT_TYPES_PATH`     | `cms/faststore/pages`      | Specifies the path to the directory containing all custom Content Type definitions. |
 
 #### Options
 
 | Option            | Alias | Description                                                                                                                                                                                |
 | :---------------- | :---- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `--help`          | `-h`  | Displays help information for the command.                                                                                                                                                 |
-| `--out=<path>`    | `-o`  | Output file path for the generated schema. This option is required to produce an output, and without it, the command will only display a success message but won't save or output the schema. |
+| `--out=<path>`    | `-o`  | Specifies the output file path for the generated schema. This option is required to produce an output, and without it, the command will only display a success message but won't save or output the schema. |
 | `--local=<path>`  | `-l`  | Uses a local schema file as the base schema instead of fetching the latest FastStore schema from a remote source.                                                                                   |
 | `--remote=<path>` | `-r`  | Specifies a remote URL to fetch a custom base schema instead of FastStore's default. Must be publicly accessible and return valid JSON.                                                  |
 | `--beta`          | `-b`  | Uses the beta registry instead of the stable one when fetching the default base schema.                                                                                                    |
@@ -133,8 +133,8 @@ vtex content:split-components
 | Option            | Alias | Description                                                                                             |
 | :---------------- | :---- | :------------------------------------------------------------------------------------------------------ |
 | `--help`          | `-h`  | Displays help information for the command.                                                              |
-| `--input=<path>`  | `-i`  | Path to the `sections.json` file to split. Default: `cms/faststore/sections.json`                       |
-| `--output=<path>` | `-o`  | Path to the output directory where component files will be created. Default: `cms/faststore/components` |
+| `--input=<path>`  | `-i`  | Specifies the path to the `sections.json` file to split. Default: `cms/faststore/sections.json`          |
+| `--output=<path>` | `-o`  | Specifies the path to the output directory where component files will be created. Default: `cms/faststore/components` |
 
 #### Examples
 
@@ -170,9 +170,9 @@ vtex content:split-content-types
 | Option              | Alias | Description                                                                                                            |
 | :------------------ | :---- | :--------------------------------------------------------------------------------------------------------------------- |
 | `--help`            | `-h`  | Displays help information for the command.                                                                             |
-| `--input=<path>`    | `-i`  | Path to the `content-types.json` file to split. Default: `cms/faststore/content-types.json`                            |
-| `--output=<path>`   | `-o`  | Path to the output directory where Content Type files will be created. Default: `cms/faststore/pages`                  |
-| `--sections=<path>` | `-s`  | Path to the `sections.json` file used to filter components by `requiredScopes`. Default: `cms/faststore/sections.json` |
+| `--input=<path>`    | `-i`  | Specifies the path to the `content-types.json` file to split. Default: `cms/faststore/content-types.json`               |
+| `--output=<path>`   | `-o`  | Specifies the path to the output directory where Content Type files will be created. Default: `cms/faststore/pages`     |
+| `--sections=<path>` | `-s`  | Specifies the path to the `sections.json` file used to filter components by `requiredScopes`. Default: `cms/faststore/sections.json` |
 
 #### Examples
 
@@ -205,9 +205,9 @@ vtex content:upload-schema [SCHEMA_PATH]
 
 #### Arguments
 
-| Argument      | Default       | Description                        |
-| :------------ | :------------ | :--------------------------------- |
-| `SCHEMA_PATH` | `schema.json` | Path to the schema file to upload. |
+| Argument      | Default       | Description                                 |
+| :------------ | :------------ | :------------------------------------------- |
+| `SCHEMA_PATH` | `schema.json` | Specifies the path to the schema file to upload. |
 
 #### Options
 
