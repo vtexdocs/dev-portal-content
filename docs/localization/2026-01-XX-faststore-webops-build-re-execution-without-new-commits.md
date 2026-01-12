@@ -20,7 +20,7 @@ With this feature, you can quickly resolve issues that are not related to code, 
 
 Previously, if a build failed due to non-code issues, you had to make a new commit to the repository to trigger a rebuild.
 
-Now, you can re-execute the build job from the WebOps interface itself, enabling you to retry builds and fix issues without modifying your codebase or affecting your commit history.
+Now, you can rerun the build job from the WebOps interface itself, enabling you to resolve operational problems more quickly without modifying your codebase or affecting your commit history.
 
 ## What needs to be done?
 
