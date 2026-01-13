@@ -1008,11 +1008,11 @@ Below is a brief description of the commands provided by VTEX plugins. For detai
 | [`test e2e`](#test-e2e) | Runs E2E integration tests for the app in the current directory. |
 | [`test unit`](#test-unit) | Runs unit tests for the app in the current directory. |
 | [`url`](#url) | Prints the base URL for the current account and workspace. |
-| [`content:init`](https://developers.vtex.com/docs/guides/faststore/content-plugin#init) | Initializes the CMS folder structure in your project with sample files. |
-| [`content:generate-schema`](https://developers.vtex.com/docs/guides/faststore/content-plugin#generate-schema) | Generates a consolidated CMS schema file from your components and Content Types. |
-| [`content:split-components`](https://developers.vtex.com/docs/guides/faststore/content-plugin#split-components) | Splits `sections.json` into one file per component. See [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/content-plugin#split-components). |
-| [`content:split-content-types`](https://developers.vtex.com/docs/guides/faststore/content-plugin#split-content-types) | Splits `content-types.json` into one file per Content Type. See [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/content-plugin#split-content-types). |
-| [`content:upload-schema`](https://developers.vtex.com/docs/guides/faststore/content-plugin#upload-schema) | Uploads a local schema file to the Schema Registry. See [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/content-plugin#upload-schema). |
+| [`content:init`](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#init) | Initializes the CMS folder structure in your project with sample files. For more information, see the [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#init). |
+| [`content:generate-schema`](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#generate-schema) | Generates a consolidated CMS schema file from your components and Content Types. For more information, see the [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#generate-schema). |
+| [`content:split-components`](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#split-components) | Splits `sections.json` into one file per component. For more information, see the [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#split-components). |
+| [`content:split-content-types`](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#split-content-types) | Splits `content-types.json` into one file per Content Type. For more information, see the [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#split-content-types). |
+| [`content:upload-schema`](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#upload-schema) | Uploads a local schema file to the Schema Registry. For more information, see the [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/cms-content-plugin#upload-schema). |
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
