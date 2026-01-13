@@ -38,9 +38,9 @@ The multi-language feature supports various integration scenarios:
 | :--- | :--- |
 | Multilingual storefront | Displays translated product names, descriptions, and specifications based on the customer's locale identified by the storefront. |
 | TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview). |
-| Market expansion | Seamlessly adapts your catalog for new geographic markets without duplicating products. |
+| Business expansion | Seamlessly adapts your catalog for new geographic markets without duplicating products. |
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
-| Headless commerce | Fetches translated catalog data directly for custom frontend applications. |
+| Headless commerce | Fetches translated catalog data for headless storefront applications. |
 
 ## Activation
 
