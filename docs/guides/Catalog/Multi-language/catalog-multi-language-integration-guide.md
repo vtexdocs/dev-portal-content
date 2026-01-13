@@ -56,24 +56,22 @@ To successfully use the multi-language feature, the user or [API key](https://de
 | :--- | :--- | :--- |
 | Catalog | Content | Categories Management |
 
-## Translation flow: from API to storefront
+## How the multi-language feature works
 
-When you send translated content to the Catalog via the Multi-Language API, the data flows through a complete pipeline:
+When you send translated content using the multi-language feature, the information flow works as follows:
 
 ```mermaid
-┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
-│  1. API Ingestion   │────▶│  2. Search Indexing │────▶│  3. Storefront      │
-│                     │     │                     │     │     Display         │
-│  PUT /language      │     │  Intelligent Search │     │  Automatic locale   │
-│  endpoints          │     │  reindexes content  │     │  rendering          │
-└─────────────────────┘     └─────────────────────┘     └─────────────────────┘
+┌──────────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
+│  1. Translation ingestion │────▶│  2. Search indexing │────▶│  3. Storefront      │
+│                            │     │                     │     │     display         │
+│  PUT /language endpoints   │     │  Intelligent Search │     │  Automatic locale   │
+│                            │     │  reindexes content  │     │  rendering          │
+└────────────────────────────┘     └─────────────────────┘     └─────────────────────┘
 ```
 
-### Step 1: Catalog translation ingestion
+### Step 1: Translation ingestion
 
-The merchant or an integrated TMS sends translations using the `PUT /language` endpoints, specifying the entity (product, SKU, category, brand, or collection) and the target locale.
-
-The Catalog validates and stores the translated fields per locale, then emits an update event to downstream services.
+The merchant or an integrated TMS makes a request to create or update the translation of a catalog entity, such as a [product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/language) or [category](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/category/-categoryId-/language). They specify the [locale](#locale-format), for example: `es-ES`. The VTEX platform then validates and stores the translated fields per locale, emit an update event to downstream services.
 
 ### Step 2: Intelligent Search indexing
 
