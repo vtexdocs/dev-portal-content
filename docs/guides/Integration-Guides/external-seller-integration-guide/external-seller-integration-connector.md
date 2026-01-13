@@ -177,7 +177,7 @@ In the event of modifications made to an order, the seller must notify the marke
 
 This notification is done through a request to the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/api/order-system/orders/-participantOrderId-/changes/-changeRequestId-/send-agreement">Send agreement for order modifications</a></span> endpoint, which needs to be implemented by the seller or the marketplace.
 
-The body of this request contains only one information: the `agreementType`, which has two possible values:
+The body of this request contains only one piece of information: the `agreementType`, which has two possible values:
 
 - `Acknowledgment`: This indicates the seller recognizes the request for modifications to the order.
 - `Confirmation`: This indicates the seller has applied the modifications to the order and the order flow can proceed.
