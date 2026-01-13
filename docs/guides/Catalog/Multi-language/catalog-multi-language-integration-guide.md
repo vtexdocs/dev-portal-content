@@ -1,10 +1,10 @@
 ---
-title: "Multi-language integration guide"
-slug: "multi-language-integration-guide"
+title: "Catalog multi-language integration guide"
+slug: "catalog-multi-language-integration-guide"
 hidden: false
-excerpt: "Manage language-specific information for catalog entities."
-createdAt: "2025-12-12T00:00:00.000Z"
-updatedAt: "2025-12-12T00:00:00.000Z"
+excerpt: "Manage different languages for catalog entities."
+createdAt: "2026-01-13T00:00:00.000Z"
+updatedAt: "2026-01-13T00:00:00.000Z"
 ---
 
 > ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
