@@ -31,13 +31,13 @@ vtex plugins install @vtex/cli-plugin-content
 
 Below is a description of the default commands available in the Content plugin. To view detailed information about each command, click the respective command name.
 
-| Command name                                  | Description                                                                                                                                                           |
-| :-------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`init`](#init)                               | Creates the CMS folder structure with sample files.                                                                                                                   |
-| [`generate-schema`](#generate-schema)         | Creates a unified schema file from your store components, Content Types, and the FastStore base schema.                                                               |
-| [`split-components`](#split-components)       | Splits `sections.json` into one file per component.                                                                                                                   |
-| [`split-content-types`](#split-content-types) | Splits `content-types.json` into one file per Content Type for improved Content Type management.                                                                      |
-| [`upload-schema`](#upload-schema)             | Uploads the unified schema file created by the [`generate-schema`](#generate-schema) command to the Schema Registry, making it available for use in your store's CMS. |
+| Command name | Description |
+| --- | --- |
+| [`init`](#init) | Creates the CMS folder structure with sample files. |
+| [`generate-schema`](#generate-schema) | Creates a unified schema file from your store components, Content Types, and the FastStore base schema. |
+| [`split-components`](#split-components) | Splits `sections.json` into one file per component. |
+| [`split-content-types`](#split-content-types) | Splits `content-types.json` into one file per Content Type for improved Content Type management. |
+| [`upload-schema`](#upload-schema) | Uploads the unified schema file created by the [`generate-schema`](#generate-schema) command to the Schema Registry, making it available for use in your store's CMS. |
 
 ### `init`
 
@@ -51,9 +51,9 @@ vtex content:init
 
 #### Options
 
-| Option   | Alias | Description                                |
-| :------- | :---- | :----------------------------------------- |
-| `--help` | `-h`  | Displays help information for the command. |
+| Option | Alias | Description |
+| --- | --- | --- |
+| `--help` | `-h` | Displays help information for the command. |
 
 <div align="right">
   {" "}
@@ -72,20 +72,20 @@ vtex content:generate-schema [COMPONENT_SCHEMAS_PATH] [CONTENT_TYPES_PATH]
 
 #### Arguments
 
-| Argument                 | Default                    | Description                                                                |
-| :----------------------- | :------------------------- | :------------------------------------------------------------------------- |
+| Argument | Default | Description |
+| --- | --- | --- |
 | `COMPONENT_SCHEMAS_PATH` | `cms/faststore/components` | Specifies the path to the directory containing all custom component schemas. |
-| `CONTENT_TYPES_PATH`     | `cms/faststore/pages`      | Specifies the path to the directory containing all custom Content Type definitions. |
+| `CONTENT_TYPES_PATH` | `cms/faststore/pages` | Specifies the path to the directory containing all custom Content Type definitions. |
 
 #### Options
 
-| Option            | Alias | Description                                                                                                                                                                                |
-| :---------------- | :---- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--help`          | `-h`  | Displays help information for the command.                                                                                                                                                 |
-| `--out=<path>`    | `-o`  | Specifies the output file path for the generated schema. This option is required to produce an output, and without it, the command will only display a success message but won't save or output the schema. |
-| `--local=<path>`  | `-l`  | Uses a local schema file as the base schema instead of fetching the latest FastStore schema from a remote source.                                                                                   |
-| `--remote=<path>` | `-r`  | Specifies a remote URL to fetch a custom base schema instead of FastStore's default. Must be publicly accessible and return valid JSON.                                                  |
-| `--beta`          | `-b`  | Uses the beta registry instead of the stable one when fetching the default base schema.                                                                                                    |
+| Option | Alias | Description |
+| --- | --- | --- |
+| `--help` | `-h` | Displays help information for the command. |
+| `--out=<path>` | `-o` | Specifies the output file path for the generated schema. This option is required to produce an output, and without it, the command will only display a success message but won't save or output the schema. |
+| `--local=<path>` | `-l` | Uses a local schema file as the base schema instead of fetching the latest FastStore schema from a remote source. |
+| `--remote=<path>` | `-r` | Specifies a remote URL to fetch a custom base schema instead of FastStore's default. Must be publicly accessible and return valid JSON. |
+| `--beta` | `-b` | Uses the beta registry instead of the stable one when fetching the default base schema. |
 
 #### Examples
 
@@ -130,11 +130,11 @@ vtex content:split-components
 
 #### Options
 
-| Option            | Alias | Description                                                                                             |
-| :---------------- | :---- | :------------------------------------------------------------------------------------------------------ |
-| `--help`          | `-h`  | Displays help information for the command.                                                              |
-| `--input=<path>`  | `-i`  | Specifies the path to the `sections.json` file to split. Default: `cms/faststore/sections.json`          |
-| `--output=<path>` | `-o`  | Specifies the path to the output directory where component files will be created. Default: `cms/faststore/components` |
+| Option | Alias | Description |
+| --- | --- | --- |
+| `--help` | `-h` | Displays help information for the command. |
+| `--input=<path>` | `-i` | Specifies the path to the `sections.json` file to split. Default: `cms/faststore/sections.json` |
+| `--output=<path>` | `-o` | Specifies the path to the output directory where component files will be created. Default: `cms/faststore/components` |
 
 #### Examples
 
@@ -167,12 +167,12 @@ vtex content:split-content-types
 
 #### Options
 
-| Option              | Alias | Description                                                                                                            |
-| :------------------ | :---- | :--------------------------------------------------------------------------------------------------------------------- |
-| `--help`            | `-h`  | Displays help information for the command.                                                                             |
-| `--input=<path>`    | `-i`  | Specifies the path to the `content-types.json` file to split. Default: `cms/faststore/content-types.json`               |
-| `--output=<path>`   | `-o`  | Specifies the path to the output directory where Content Type files will be created. Default: `cms/faststore/pages`     |
-| `--sections=<path>` | `-s`  | Specifies the path to the `sections.json` file used to filter components by `requiredScopes`. Default: `cms/faststore/sections.json` |
+| Option | Alias | Description |
+| --- | --- | --- |
+| `--help` | `-h` | Displays help information for the command. |
+| `--input=<path>` | `-i` | Specifies the path to the `content-types.json` file to split. Default: `cms/faststore/content-types.json` |
+| `--output=<path>` | `-o` | Specifies the path to the output directory where Content Type files will be created. Default: `cms/faststore/pages` |
+| `--sections=<path>` | `-s` | Specifies the path to the `sections.json` file used to filter components by `requiredScopes`. Default: `cms/faststore/sections.json` |
 
 #### Examples
 
@@ -205,16 +205,16 @@ vtex content:upload-schema [SCHEMA_PATH]
 
 #### Arguments
 
-| Argument      | Default       | Description                                 |
-| :------------ | :------------ | :------------------------------------------- |
+| Argument | Default | Description |
+| --- | --- | --- |
 | `SCHEMA_PATH` | `schema.json` | Specifies the path to the schema file to upload. |
 
 #### Options
 
-| Option   | Alias | Description                                                        |
-| :------- | :---- | :----------------------------------------------------------------- |
-| `--help` | `-h`  | Displays help information for the command.                         |
-| `--beta` | `-b`  | Uploads the schema to the beta registry instead of the stable one. |
+| Option | Alias | Description |
+| --- | --- | --- |
+| `--help` | `-h` | Displays help information for the command. |
+| `--beta` | `-b` | Uploads the schema to the beta registry instead of the stable one. |
 
 #### Examples
 
