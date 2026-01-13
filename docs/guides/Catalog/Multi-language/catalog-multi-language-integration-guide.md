@@ -2,7 +2,7 @@
 title: "Catalog multi-language integration guide"
 slug: "catalog-multi-language-integration-guide"
 hidden: false
-excerpt: "Manage different languages for catalog entities."
+excerpt: "Manage multiple languages for catalog entities."
 createdAt: "2026-01-13T00:00:00.000Z"
 updatedAt: "2026-01-13T00:00:00.000Z"
 ---
@@ -15,11 +15,11 @@ Learn how to integrate localized catalog content using the multi-language endpoi
 
 The [multi-language endpoints](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enable you to:
 
-- Store and retrieve translations for products, SKUs, categories, brands, specifications, collections, and services.
+- Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
 - Integrate with Translation Management Systems (TMS) for automated translation workflows.
-- Deliver localized shopping experiences across multiple markets.
+- Provide to customers localized shopping experiences across multiple markets.
 
-## Use cases
+### Use cases
 
 The multi-language feature supports various integration scenarios:
 
@@ -76,7 +76,7 @@ All locale codes follow the IETF BCP 47 standard. Examples:
 
 When you send translated content to the Catalog via the Multi-Language API, the data flows through a complete pipeline:
 
-```
+```mermaid
 ┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
 │  1. API Ingestion   │────▶│  2. Search Indexing │────▶│  3. Storefront      │
 │                     │     │                     │     │     Display         │
