@@ -9,17 +9,18 @@ updatedAt: "2026-01-13T00:00:00.000Z"
 
 > ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
 
-Learn how to integrate localized catalog content using the multi-language endpoints, and create translations for catalog entities. You can also consume them across different storefront implementations.
+Learn how to integrate localized catalog content using the multi-language endpoints, and create translations for catalog entities.
 
 ## Overview
 
 The [multi-language endpoints](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enable you to:
 
-- Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
-- Integrate with Translation Management Systems (TMS) for automated translation workflows.
-- Provide to customers localized shopping experiences across multiple markets.
+- **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
+- **Automated translation workflows:** Integrate with Translation Management Systems (TMS) for automated translation.
+- **Multiple storefront technologies:** Consume translations across different storefront implementations, such as Store Framework, FastStore, and headless implementations.
+- **Localized experience:** Provide to customers localized shopping experiences across multiple markets.
 
-### Use cases
+## Use cases
 
 The multi-language feature supports various integration scenarios:
 
@@ -31,9 +32,7 @@ The multi-language feature supports various integration scenarios:
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
 | Headless commerce | Fetches translated catalog data directly for custom frontend applications. |
 
-## Before you begin
-
-### Activation
+## Activating the feature
 
 The Catalog Multi-Language feature requires manual activation by VTEX:
 
