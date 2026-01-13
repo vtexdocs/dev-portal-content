@@ -62,8 +62,8 @@ When you send translated content using the multi-language feature, the informati
 
 ```mermaid
 ┌────────────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
-│  1. VTEX system            │────▶│  2. Intelligent Search  │────▶│  3. Storefront │
-│     translation ingestion  │     │     indexing         │   │             display │
+│  1. translation ingestion  │────▶│  2. Intelligent Search  │────▶│  3. Storefront │
+│                            │     │     indexing         │   │             display │
 │                            │     │                      │   │                     │
 └────────────────────────────┘     └─────────────────────┘    └─────────────────────┘
 ```
@@ -76,7 +76,7 @@ The merchant or an integrated TMS makes a request to create or update the transl
 
 Intelligent Search indexes or reindexes the entity translated content to make it searchable and filterable in the storefront by the selected locale. This process runs asynchronously and usually completes within a few minutes. Larger amounts of data may take longer.
 
-### Step 3: Storefront consumption and display
+### Step 3: Storefront display
 
 Storefront solutions (Store Framework, FastStore, Checkout, and headless implementations) query Intelligent Search or Catalog at render time, automatically retrieving and displaying the translated content for the shopper's selected locale.
 
