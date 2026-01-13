@@ -32,34 +32,19 @@ The multi-language feature supports various integration scenarios:
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
 | Headless commerce | Fetches translated catalog data directly for custom frontend applications. |
 
-## Activating the feature
+## Activation
 
-The Catalog Multi-Language feature requires manual activation by VTEX:
+Open a [support ticket](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they will contact you to inform that you can start using the feature.
 
-1. Open a [support ticket](https://help.vtex.com/en/support) requesting activation of the Multilanguage APIs for your account.
-2. VTEX will enable the feature for your store.
-3. Once activated, the new Catalog Multi-Language APIs become available and the legacy Messages APIs (GraphQL) will stop working for catalog entities.
+>❗ The simultaneous use of both the multi-Language APIs and Messages APIs (GraphQL) is not supported for catalog entities. Therefore, once the new feature is activated, you will no longer be able to manage translations using GraphQL.
 
->⚠️ Using both the new Catalog Multi-Language APIs and Messages APIs simultaneously is not supported for catalog entities. After migration, use only the Catalog Multi-Language API for managing translations.
+## Permissions
 
-### Permissions
-
-Any user or [application key](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys) must have at least one of the appropriate [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to be able to successfully run these requests. Otherwise, they will receive a status code `403` error.
+To successfully use the multi-language feature, the user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) below, otherwise they will receive a 403 error:
 
 | Product | Category | Resource |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Catalog | Content | Categories Management |
-
-### Authentication
-
-All API requests require authentication using VTEX [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys). Include these headers in every request:
-
-| Header | Description | Required |
-| --- | --- | --- |
-| `Content-Type` | Type of the content being sent. Use `application/json`. | Yes |
-| `Accept` | HTTP Client Negotiation Accept Header. Use `application/json`. | Yes |
-| `X-VTEX-API-AppKey` | Your VTEX application key. | Yes |
-| `X-VTEX-API-AppToken` | Your VTEX application token. | Yes |
 
 ### Locale format
 
