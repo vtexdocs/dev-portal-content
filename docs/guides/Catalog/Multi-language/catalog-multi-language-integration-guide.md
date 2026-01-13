@@ -62,10 +62,10 @@ When you send translated content using the multi-language feature, the informati
 
 ```mermaid
 ┌──────────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
-│  1. Translation ingestion │────▶│  2. Search indexing │────▶│  3. Storefront      │
-│                            │     │                     │     │     display         │
-│  PUT /language endpoints   │     │  Intelligent Search │     │  Automatic locale   │
-│                            │     │  reindexes content  │     │  rendering          │
+│  1. Translation ingestion │────▶│  2. Intelligent Search  │────▶│  3. Storefront      │
+│                            │     │     reindexing content                │     │     display         │
+│                            │     │                      │     │  Automatic locale   │
+│                            │     │                      │     │  rendering          │
 └────────────────────────────┘     └─────────────────────┘     └─────────────────────┘
 ```
 
@@ -75,7 +75,7 @@ The merchant or an integrated TMS makes a request to create or update the transl
 
 ### Step 2: Intelligent Search indexing
 
-Intelligent Search reindexes the entity translated content to make it searchable and filterable in the storefront by the selected locale. The indexing process runs asynchronously and, by default, completes within a few minutes. Larger amounts of data may take longer to index, depending on the volume of data.
+Intelligent Search indexes or reindexes the entity translated content to make it searchable and filterable in the storefront by the selected locale. This process runs asynchronously and usually completes within a few minutes, but larger amounts of data may take longer.
 
 ### Step 3: Storefront consumption and display
 
