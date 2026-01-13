@@ -90,7 +90,7 @@ When calling the approval and denial endpoints, you provide a score value that d
 
 ## Permissions
 
-Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have at least one of the appropriate [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to be able to successfully use the [Buying Policies API](https://developers.vtex.com/docs/api-reference/buying-policies-api), otherwise they will receive a status code 403 error.
+Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have at least one of the appropriate [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to be able to successfully use the [Buying Policies API](https://developers.vtex.com/docs/api-reference/buying-policies-api), otherwise they will receive a 403 error.
 
 Each endpoint will require a different resource, which will be one of the following:
 
