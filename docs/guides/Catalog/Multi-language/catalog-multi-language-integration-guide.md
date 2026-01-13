@@ -13,7 +13,7 @@ Learn how to integrate localized catalog content using the multi-language endpoi
 
 ## Overview
 
-The multi-language endpoints for managing language-specific information for catalog entities. These endpoints enable you to:
+The [multi-language endpoints](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enable you to:
 
 - Store and retrieve translations for products, SKUs, categories, brands, specifications, collections, and services.
 - Integrate with Translation Management Systems (TMS) for automated translation workflows.
@@ -25,11 +25,11 @@ The multi-language feature supports various integration scenarios:
 
 | Use case | Description |
 | :--- | :--- |
-| Multilingual storefront | Display translated product names, descriptions, and specifications based on the customer's locale. |
-| TMS integration | Connect your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview). |
-| Market expansion | Quickly adapt your catalog for new geographic markets without duplicating products. |
-| SEO optimization | Provide localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
-| Headless commerce | Fetch translated catalog data directly for custom frontend applications. |
+| Multilingual storefront | Displays translated product names, descriptions, and specifications based on the customer's locale identified by the storefront. |
+| TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview). |
+| Market expansion | Seamlessly adapts your catalog for new geographic markets without duplicating products. |
+| SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
+| Headless commerce | Fetches translated catalog data directly for custom frontend applications. |
 
 ## Before you begin
 
