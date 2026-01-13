@@ -58,11 +58,11 @@ To successfully use the multi-language feature, the user or [API key](https://de
 
 ## How the multi-language feature works
 
-When you send translated content using the multi-language feature, the information flow works as follows:
+When you send translated content using the multi-language feature, the workflow is as follows:
 
 ```mermaid
 ┌────────────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
-│  1. translation ingestion  │────▶│  2. Intelligent Search  │────▶│  3. Storefront │
+│  1. Translation ingestion  │────▶│  2. Intelligent Search  │────▶│  3. Storefront │
 │                            │     │     indexing         │   │             display │
 │                            │     │                      │   │                     │
 └────────────────────────────┘     └─────────────────────┘    └─────────────────────┘
