@@ -75,7 +75,7 @@ The merchant or an integrated TMS makes a request to create or update the transl
 
 ### Step 2: Intelligent Search indexing
 
-Intelligent Search indexes or reindexes the entity translated content to make it searchable and filterable in the storefront by the selected locale. This process runs asynchronously and usually completes within a few minutes, but larger amounts of data may take longer.
+Intelligent Search indexes or reindexes the entity translated content to make it searchable and filterable in the storefront by the selected locale. This process runs asynchronously and usually completes within a few minutes. Larger amounts of data may take longer.
 
 ### Step 3: Storefront consumption and display
 
