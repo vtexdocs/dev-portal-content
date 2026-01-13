@@ -9,7 +9,7 @@ updatedAt: "2026-01-13T00:00:00.000Z"
 
 > ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
 
-Learn how to integrate localized catalog content using the multi-language endpoints, which allows you to create translations for catalog entities and consume them across different storefront implementations.
+Learn how to integrate localized catalog content using the multi-language endpoints, and create translations for catalog entities. You can also consume them across different storefront implementations.
 
 ## Overview
 
@@ -21,15 +21,15 @@ The multi-language endpoints for managing language-specific information for cata
 
 ## Use cases
 
-The Catalog Multi-Language API supports various integration scenarios:
+The multi-language feature supports various integration scenarios:
 
 | Use case | Description |
 | --- | --- |
-| **Multilingual storefront** | Display translated product names, descriptions, and specifications based on the shopper's locale. |
-| **TMS integration** | Connect your Translation Management System to automatically push and pull translations via API. |
-| **Market expansion** | Quickly adapt your catalog for new geographic markets without duplicating products. |
-| **SEO optimization** | Provide localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
-| **Headless commerce** | Fetch translated catalog data directly for custom frontend applications. |
+| Multilingual storefront | Display translated product names, descriptions, and specifications based on the shopper's locale. |
+| TMS integration | Connect your Translation Management System to automatically push and pull translations via API. |
+| Market expansion | Quickly adapt your catalog for new geographic markets without duplicating products. |
+| SEO optimization | Provide localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
+| Headless commerce | Fetch translated catalog data directly for custom frontend applications. |
 
 ## Before you begin
 
