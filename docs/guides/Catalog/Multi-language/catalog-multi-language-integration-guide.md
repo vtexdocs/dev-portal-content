@@ -61,12 +61,11 @@ To successfully use the multi-language feature, the user or [API key](https://de
 When you send translated content using the multi-language feature, the information flow works as follows:
 
 ```mermaid
-┌──────────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
-│  1. Translation ingestion │────▶│  2. Intelligent Search  │────▶│  3. Storefront      │
-│                            │     │     reindexing content                │     │     display         │
-│                            │     │                      │     │  Automatic locale   │
-│                            │     │                      │     │  rendering          │
-└────────────────────────────┘     └─────────────────────┘     └─────────────────────┘
+┌────────────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
+│  1. VTEX system            │────▶│  2. Intelligent Search  │────▶│  3. Storefront │
+│     translation ingestion  │     │     indexing         │   │             display │
+│                            │     │                      │   │                     │
+└────────────────────────────┘     └─────────────────────┘    └─────────────────────┘
 ```
 
 ### Step 1: Translation ingestion
