@@ -71,13 +71,11 @@ When you send translated content using the multi-language feature, the informati
 
 ### Step 1: Translation ingestion
 
-The merchant or an integrated TMS makes a request to create or update the translation of a catalog entity, such as a [product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/language) or [category](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/category/-categoryId-/language). They specify the [locale](#locale-format), for example: `es-ES`. The VTEX platform then validates and stores the translated fields per locale, emit an update event to downstream services.
+The merchant or an integrated TMS makes a request to create or update the translation of a catalog entity, such as [product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/language) or [category](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/category/-categoryId-/language). The VTEX system validates and stores the translated fields per [locale](#locale-format), and triggers an update event to Intelligent Search.
 
 ### Step 2: Intelligent Search indexing
 
-Intelligent Search receives the update event from the Catalog and reindexes the affected entities to make translated content searchable and filterable in that locale.
-
-The indexing process runs asynchronously and typically completes within a few minutes.
+Intelligent Search reindexes the entity translated content to make it searchable and filterable in the storefront by the selected locale. The indexing process runs asynchronously and, by default, completes within a few minutes. Larger amounts of data may take longer to index, depending on the volume of data.
 
 ### Step 3: Storefront consumption and display
 
