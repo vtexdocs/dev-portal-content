@@ -42,19 +42,6 @@ The multi-language feature supports various integration scenarios:
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
 | Headless commerce | Fetches translated catalog data for headless storefront applications. |
 
-## Activation
-
-Open a [support ticket](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they will contact you to inform that you can start using the feature.
-
->❗ The simultaneous use of both the multi-Language APIs and Messages APIs (GraphQL) is not supported for catalog entities. Therefore, once the new feature is activated, you will no longer be able to manage translations using GraphQL.
-
-## Permissions
-
-To successfully use the multi-language feature, the user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) below, otherwise they will receive a 403 error:
-
-| Product | Category | Resource |
-| :--- | :--- | :--- |
-| Catalog | Content | Categories Management |
 
 ## How the multi-language feature works
 
@@ -81,6 +68,20 @@ Intelligent Search indexes or reindexes the entity translated content to make it
 The storefront queries Intelligent Search and Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
 
 >ℹ️ Valid for all storefront solutions, including Store Framework, FastStore, and headless implementations.
+
+## Activation
+
+Open a [support ticket](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they will contact you to inform that you can start using the feature.
+
+>❗ The simultaneous use of both the multi-Language APIs and Messages APIs (GraphQL) is not supported for catalog entities. Therefore, once the new feature is activated, you will no longer be able to manage translations using GraphQL.
+
+## Permissions
+
+To successfully use the multi-language feature, the user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) below, otherwise they will receive a 403 error:
+
+| Product | Category | Resource |
+| :--- | :--- | :--- |
+| Catalog | Content | Categories Management |
 
 ## Creating localized content
 
