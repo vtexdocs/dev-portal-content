@@ -1,6 +1,6 @@
 ---
-title: "Buying Policies overview"
-slug: "buying-policies-overview"
+title: "Buying Policies"
+slug: "buying-policies"
 hidden: false
 createdAt: "2026-01-12T17:53:09.698Z"
 updatedAt: "2026-01-12T17:53:09.698Z"
