@@ -978,36 +978,41 @@ Below is a brief description of the commands provided by VTEX plugins. For detai
 
 > ℹ️ Access [VTEX IO CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
-| Plugin command                            | Description                                                                     |
-| ----------------------------------------- | --------------------------------------------------------------------------------------- |
-| [`add`](#add)                             | Adds the specified app(s) to the manifest dependencies.                                 |
-| [`config get`](#-config-get)              | Prints the value of the requested configuration key.                                    |
-| [`config reset`](#-config-reset)          | Resets the specified configuration to its default value.                                |
-| [`config set`](#-config-set)              | Sets the value of a configuration key.                                                  |
-| [`debug dotnet`](#debug-donet)            | Debugs .NET applications (IDEs only).                                                   |
-| [`infra install`](#infra-install)         | Installs an infra service.                                                              |
-| [`infra list`](#infra-list)               | Lists installed infra services.                                                         |
-| [`infra update`](#infra-update)           | Updates all installed infra services.                                                   |
-| [`lighthouse audit`](#lighthouse-audit)   | Runs a Lighthouse audit over the specified URL.                                         |
-| [`lighthouse show`](#lighthouse-show)     | Shows a previous audit report, filtered by app and/or URL.                              |
-| [`logs`](#logs)                           | Shows logs of an app (only apps in production).                                         |
-| [`plugins install`](#plugins-install)     | Installs a plugin on CLI.                                                               |
-| [`plugins link`](#plugins-link)           | Links a plugin to CLI for development.                                                  |
-| [`plugins:list`](#plugins-list)           | Lists all plugins installed on your machine.                                            |
-| [`plugins source`](#plugins-source)       | Lists all plugins supported by VTEX.                                                    |
-| [`plugins uninstall`](#plugins-uninstall) | Removes a plugin from CLI.                                                              |
-| [`plugins:update`](#plugins-update)       | Updates all plugins installed on your machine.                                          |
-| [`redirects delete`](#redirects-delete)   | Deletes redirects from the current account and workspace.                               |
-| [`redirects export`](#redirects-export)   | Exports all redirects defined in the current account and workspace to a CSV file.       |
-| [`redirects import`](#redirects-import)   | Imports redirects from a CSV file to the current account and workspace.                 |
-| [`settings get`](#settings-get)           | Prints the settings of the specified app.                                               |
-| [`settings set`](#settings-set)           | Sets value to the specified setting of an app.                                          |
-| [`settings unset`](#settings-unset)       | Disables the specified setting of an app.                                               |
-| [`submit`](#submit)                       | Submits the current app, or a specified one, for validation by the VTEX App Store team. |
-| [`support`](#support)                     | Logs in as support to another VTEX account.                                             |
-| [`test e2e`](#test-e2e)                   | Runs E2E integration tests for the app in the current directory.                        |
-| [`test unit`](#test-unit)                 | Runs unit tests for the app in the current directory.                                   |
-| [`url`](#url)                             | Prints the base URL for the current account and workspace.                              |
+| Plugin command | Description |
+| --- | --- |
+| [`add`](#add) | Adds the specified app(s) to the manifest dependencies. |
+| [`config get`](#-config-get) | Prints the value of the requested configuration key. |
+| [`config reset`](#-config-reset) | Resets the specified configuration to its default value. |
+| [`config set`](#-config-set) | Sets the value of a configuration key. |
+| [`debug dotnet`](#debug-donet) | Debugs .NET applications (IDEs only). |
+| [`infra install`](#infra-install) | Installs an infra service. |
+| [`infra list`](#infra-list) | Lists installed infra services. |
+| [`infra update`](#infra-update) | Updates all installed infra services. |
+| [`lighthouse audit`](#lighthouse-audit) | Runs a Lighthouse audit over the specified URL. |
+| [`lighthouse show`](#lighthouse-show) | Shows a previous audit report, filtered by app and/or URL. |
+| [`logs`](#logs) | Shows logs of an app (only apps in production). |
+| [`plugins install`](#plugins-install) | Installs a plugin on CLI. |
+| [`plugins link`](#plugins-link) | Links a plugin to CLI for development. |
+| [`plugins:list`](#plugins-list) | Lists all plugins installed on your machine. |
+| [`plugins source`](#plugins-source) | Lists all plugins supported by VTEX. |
+| [`plugins uninstall`](#plugins-uninstall) | Removes a plugin from CLI. |
+| [`plugins:update`](#plugins-update) | Updates all plugins installed on your machine. |
+| [`redirects delete`](#redirects-delete) | Deletes redirects from the current account and workspace. |
+| [`redirects export`](#redirects-export) | Exports all redirects defined in the current account and workspace to a CSV file. |
+| [`redirects import`](#redirects-import) | Imports redirects from a CSV file to the current account and workspace. |
+| [`settings get`](#settings-get) | Prints the settings of the specified app. |
+| [`settings set`](#settings-set) | Sets value to the specified setting of an app. |
+| [`settings unset`](#settings-unset) | Disables the specified setting of an app. |
+| [`submit`](#submit) | Submits the current app, or a specified one, for validation by the VTEX App Store team. |
+| [`support`](#support) | Logs in as support to another VTEX account. |
+| [`test e2e`](#test-e2e) | Runs E2E integration tests for the app in the current directory. |
+| [`test unit`](#test-unit) | Runs unit tests for the app in the current directory. |
+| [`url`](#url) | Prints the base URL for the current account and workspace. |
+| [`content:init`](https://developers.vtex.com/docs/guides/faststore/content-plugin#init) | Initializes the CMS folder structure in your project with sample files. |
+| [`content:generate-schema`](https://developers.vtex.com/docs/guides/faststore/content-plugin#generate-schema) | Generates a consolidated CMS schema file from your components and Content Types. |
+| [`content:split-components`](https://developers.vtex.com/docs/guides/faststore/content-plugin#split-components) | Splits `sections.json` into one file per component. See [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/content-plugin#split-components). |
+| [`content:split-content-types`](https://developers.vtex.com/docs/guides/faststore/content-plugin#split-content-types) | Splits `content-types.json` into one file per Content Type. See [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/content-plugin#split-content-types). |
+| [`content:upload-schema`](https://developers.vtex.com/docs/guides/faststore/content-plugin#upload-schema) | Uploads a local schema file to the Schema Registry. See [Content plugin documentation](https://developers.vtex.com/docs/guides/faststore/content-plugin#upload-schema). |
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
