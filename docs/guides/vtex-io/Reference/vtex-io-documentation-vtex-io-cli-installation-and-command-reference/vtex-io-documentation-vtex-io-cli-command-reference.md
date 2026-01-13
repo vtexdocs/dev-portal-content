@@ -981,10 +981,10 @@ Below is a brief description of the commands provided by VTEX plugins. For detai
 | Plugin command | Description |
 | --- | --- |
 | [`add`](#add) | Adds the specified app(s) to the manifest dependencies. |
-| [`config get`](#-config-get) | Prints the value of the requested configuration key. |
-| [`config reset`](#-config-reset) | Resets the specified configuration to its default value. |
-| [`config set`](#-config-set) | Sets the value of a configuration key. |
-| [`debug dotnet`](#debug-donet) | Debugs .NET applications (IDEs only). |
+| [`config get`](#config-get) | Prints the value of the requested configuration key. |
+| [`config reset`](#config-reset) | Resets the specified configuration to its default value. |
+| [`config set`](#config-set) | Sets the value of a configuration key. |
+| [`debug dotnet`](#debug-dotnet) | Debugs .NET applications (IDEs only). |
 | [`infra install`](#infra-install) | Installs an infra service. |
 | [`infra list`](#infra-list) | Lists installed infra services. |
 | [`infra update`](#infra-update) | Updates all installed infra services. |
@@ -1135,7 +1135,7 @@ vtex config set CONFIGNAME VALUE
 
 <div align="right"> 🔼 <a href="#plugins">Back</a></div>
 
-### debug donet
+### debug dotnet
 
 Debugs .NET applications (IDEs only).
 
