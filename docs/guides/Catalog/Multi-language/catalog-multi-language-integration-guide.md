@@ -42,7 +42,6 @@ The multi-language feature supports various integration scenarios:
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
 | Headless commerce | Fetches translated catalog data for headless storefront applications. |
 
-
 ## How the multi-language feature works
 
 When you send translated content using the multi-language feature, the workflow is as follows:
