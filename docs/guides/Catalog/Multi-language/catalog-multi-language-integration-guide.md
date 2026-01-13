@@ -24,8 +24,8 @@ The multi-language endpoints for managing language-specific information for cata
 The multi-language feature supports various integration scenarios:
 
 | Use case | Description |
-| --- | --- |
-| Multilingual storefront | Display translated product names, descriptions, and specifications based on the shopper's locale. |
+| :--- | :--- |
+| Multilingual storefront | Display translated product names, descriptions, and specifications based on the client's locale. |
 | TMS integration | Connect your Translation Management System to automatically push and pull translations via API. |
 | Market expansion | Quickly adapt your catalog for new geographic markets without duplicating products. |
 | SEO optimization | Provide localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
