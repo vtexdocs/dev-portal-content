@@ -78,7 +78,7 @@ Intelligent Search indexes or reindexes the entity translated content to make it
 
 ### Step 3: Storefront display
 
-Storefront solutions (Store Framework, FastStore, Checkout, and headless implementations) query Intelligent Search or Catalog at render time, automatically retrieving and displaying the translated content for the shopper's selected locale.
+Whether the store uses Store Framework, FastStore, or a headless implementation, the storefront query Intelligent Search or Catalog at render time, automatically retrieving and displaying the translated content for the customer's selected locale.
 
 No manual configuration or synchronization is required—translations flow seamlessly from API ingestion to storefront display.
 
