@@ -20,6 +20,16 @@ The [multi-language endpoints](https://developers.vtex.com/docs/api-reference/ca
 - **Multiple storefront technologies:** Consume translations across different storefront implementations, such as Store Framework, FastStore, and headless implementations.
 - **Localized experience:** Provide to customers localized shopping experiences across multiple markets.
 
+### Locale format
+
+All locale codes follow the IETF BCP 47 standard, for example:
+
+- `en-US`: English (United States)
+- `es-ES`: Spanish (Spain)
+- `pt-BR`: Portuguese (Brazil)
+- `fr-FR`: French (France)
+- `de-DE`: German (Germany)
+
 ## Use cases
 
 The multi-language feature supports various integration scenarios:
@@ -45,16 +55,6 @@ To successfully use the multi-language feature, the user or [API key](https://de
 | Product | Category | Resource |
 | :--- | :--- | :--- |
 | Catalog | Content | Categories Management |
-
-### Locale format
-
-All locale codes follow the IETF BCP 47 standard. Examples:
-
-- `en-US` — English (United States)
-- `es-ES` — Spanish (Spain)
-- `pt-BR` — Portuguese (Brazil)
-- `fr-FR` — French (France)
-- `de-DE` — German (Germany)
 
 ## Translation flow: from API to storefront
 
