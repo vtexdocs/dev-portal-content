@@ -61,16 +61,16 @@ To successfully use the multi-language feature, the user or [API key](https://de
 When you send translated content using the multi-language feature, the workflow is as follows:
 
 ```mermaid
-┌────────────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
-│  1. Translation ingestion  │────▶│  2. Intelligent Search  │────▶│  3. Storefront │
-│                            │     │     indexing         │   │             display │
-│                            │     │                      │   │                     │
-└────────────────────────────┘     └─────────────────────┘    └─────────────────────┘
+┌────────────────────────────┐      ┌─────────────────────┐     ┌─────────────────────┐
+│  1. Translation ingestion  │────▶│  2. Intelligent     │────▶│  3. Storefront      │
+│                            │      │  Search indexing    │     │      display        │
+│                            │      │                     │     │                     │
+└────────────────────────────┘      └─────────────────────┘     └─────────────────────┘
 ```
 
 ### Step 1: Translation ingestion
 
-The merchant or an integrated TMS makes a request to create or update the translation of a catalog entity, such as [product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/language) or [category](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/category/-categoryId-/language). The VTEX system validates and stores the translated fields per [locale](#locale-format), and triggers an update event to Intelligent Search.
+The merchant or an integrated TMS makes a request to create or update the translation of a catalog entity, such as [product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/language) or [category](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/category/-categoryId-/language). The Catalog system validates and stores the translated fields per [locale](#locale-format), then triggers an update event to Intelligent Search.
 
 ### Step 2: Intelligent Search indexing
 
@@ -78,9 +78,9 @@ Intelligent Search indexes or reindexes the entity translated content to make it
 
 ### Step 3: Storefront display
 
-Whether the store uses Store Framework, FastStore, or a headless implementation, the storefront query Intelligent Search or Catalog at render time, automatically retrieving and displaying the translated content for the customer's selected locale.
+The storefront queries Intelligent Search and Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
 
-No manual configuration or synchronization is required—translations flow seamlessly from API ingestion to storefront display.
+>ℹ️ Valid for all storefront solutions, including Store Framework, FastStore, and headless implementations.
 
 ## Creating localized content
 
