@@ -13,12 +13,12 @@ The initial [installation step](#installing-vtex-ads) is the same for all stores
 
 ## Before you begin
 
-Ensure your store is built with Store Framework to follow the steps in this guide. For other types of storefront technologies, check [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads) documentation. 
+Ensure your store is built with Store Framework to follow the steps in this guide. For other types of storefront technologies, see the [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads) documentation.
 
 Ensure the following apps are correctly installed:
 
-* `vtex.store@2.x`  
-* `vtex.search-result@3.x`  
+* vtex.store@2.x
+* `vtex.search-result@3.x`
 * `vtex.product-summary@2.x`
 
 You can run `vtex list` on the VTEX IO CLI to check if they are installed and their version. If not, run `vtex install vtex.{appName}@{version}`.
@@ -27,8 +27,8 @@ You can run `vtex list` on the VTEX IO CLI to check if they are installed and th
 
 To start using VTEX Ads, you need to install the app through the VTEX IO CLI and complete the setup in your store's Admin panel. Follow these steps:
 
-1. Run `vtex install vtex.ads-install@1.x` to install the app that adds the VTEX Ads setup page to VTEX Admin.  
-2. On VTEX Admin, go to the  **Ad Network** section in the left menu.  
+1. Run `vtex install vtex.ads-install@1.x` to install the app that adds the VTEX Ads setup page to the VTEX Admin.
+2. In the VTEX Admin, go to the **Ad Network** section in the left menu.
 3. Click `Install`.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20Ads/getting-started-with-vtex-ads-in-store-framework-1.png)
@@ -39,10 +39,10 @@ After installing the app, you need to configure your store environment to start 
 
 There are two setup paths, depending on whether your store uses [Intelligent Search](https://help.vtex.com/docs/tracks/overview-intelligent-search):
 
-* If your store uses Intelligent Search, follow [Setting up VTEX Ads with Intelligent Search](#setting-up-vtex-ads-with-intelligent-search).  
-* If your store doesn't use Intelligent Search, follow [Setting up VTEX Ads with other search engines](#setting-up-vtex-ads-with-other-search-engines).
+* If your store uses Intelligent Search, follow the instructions in [Setting up VTEX Ads with Intelligent Search](#setting-up-vtex-ads-with-intelligent-search).
+* If your store doesn't use Intelligent Search, follow the instructions in [Setting up VTEX Ads with other search engines](#setting-up-vtex-ads-with-other-search-engines).
 
-Choose the appropriate guide based on your store's configuration to ensure proper ad display functionality.
+Choose the appropriate guide based on your store configuration to ensure proper ad display functionality.
 
 ### Setting up VTEX Ads with Intelligent Search
 
@@ -54,7 +54,7 @@ Once the Ads app is installed correctly, your store is ready to display sponsore
 
 You can configure the number of sponsored products displayed by navigating to **Storefront > Site Editor** in the left menu.
 
-Locate the component responsible for handling the **Search Result** component and adjust the `Sponsored Count` field. The default value is **3**.
+Locate the component that handles the **Search Result** component and adjust the `Sponsored Count` field. The default value is **3**.
 
 Learn more about [Site Editor](https://developers.vtex.com/docs/guides/store-framework-working-with-site-editor).
 
@@ -64,9 +64,9 @@ You can create [collections](https://help.vtex.com/docs/tutorials/creating-colle
 
 Navigate to **Storefront > Site Editor** in the left menu. Locate the desired section where the product collection they want to display ads in is located. The following fields can be edited:
 
-* **Collection:** Must contain the ID corresponding to the collection where sponsored products should be displayed.  
-* **Show contextual sponsored products:** Enable or disable the display of sponsored products that are contextually relevant to the collection.  
-* **Maximum amount of sponsored products:** Define the maximum number of sponsored products to be shown.  
+* **Collection:** Must contain the ID corresponding to the collection where sponsored products should be displayed.
+* **Show contextual sponsored products:** Enable or disable the display of sponsored products that are contextually relevant to the collection.
+* **Maximum amount of sponsored products:** Define the maximum number of sponsored products to be shown.
 * **Repeat sponsored and regular products:** Enable or disable the repetition of sponsored and regular products within the collection display.
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20Ads/getting-started-with-vtex-ads-in-store-framework-2.png)
@@ -75,6 +75,6 @@ Navigate to **Storefront > Site Editor** in the left menu. Locate the desired se
 
 If your store doesn’t use Intelligent Search, you need to implement the ad request flow yourself. There are two options available: using the **API** or the **SDK**. For implementation details, please refer to the respective documentation:
 
-* [API documentation](https://developers.vtex.com/docs/guides/retrieving-ads)  
-* [SDK Documentation](https://developers.vtex.com/docs/guides/vtex-ads-javascript-sdk)  
+* [API documentation](https://developers.vtex.com/docs/guides/retrieving-ads)
+* [SDK Documentation](https://developers.vtex.com/docs/guides/vtex-ads-javascript-sdk)
 * [General VTEX Ads documentation](https://developers.vtex.com/docs/guides/vtex-ads)
