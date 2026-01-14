@@ -17,7 +17,7 @@ The [multi-language feature](https://developers.vtex.com/docs/api-reference/cata
 
 - **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
 - **Automated translation workflows:** Integrate with Translation Management Systems (TMS) for automated translation.
-- **Multiple storefront technologies:** Consume translations across different storefront implementations, such as Store Framework, FastStore, and headless implementations.
+- **Multiple storefront technologies:** Consume translations across Store Framework and headless implementations.
 - **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
 
 The supported catalog entities are:
@@ -67,7 +67,7 @@ Intelligent Search indexes or reindexes the translated entity content to make it
 
 The storefront queries Intelligent Search and the Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
 
-> ℹ️ Valid for all storefront solutions, including Store Framework, FastStore, and headless implementations.
+> ℹ️ The valid storefront solutions for the multi-language feature are Store Framework and headless implementations.
 
 ### Locale format
 
