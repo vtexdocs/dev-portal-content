@@ -82,9 +82,9 @@ To successfully use the multi-language feature, the user or [API key](https://de
 | :--- | :--- | :--- |
 | Catalog | Content | Categories Management |
 
-## Recommendations
+## Best practices
 
-Some best practices to follow when using the multi-language feature are:
+Some of our recommendations when using the multi-language feature are:
 
 - **Start with high-impact entities:** Prioritize translating products, categories, and brands before moving to specifications and attachments.
 - **Batch translations:** When integrating with a TMS, batch multiple translation updates to reduce API calls.
