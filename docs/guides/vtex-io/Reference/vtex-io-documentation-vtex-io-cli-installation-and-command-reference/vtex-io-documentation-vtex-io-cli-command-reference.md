@@ -976,7 +976,7 @@ Creates and switches to a new workspace or simply switches to an existing one.
 
 Below is a brief description of the commands provided by VTEX plugins. For detailed information about each command, click its respective name. After installing the corresponding plugin, you can also access this information in your terminal by adding `--help` or `-h` after the command name.
 
-> ℹ️ Access [VTEX IO CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
+> ℹ️ Access [VTEX IO CLI plugins](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-plugins) to learn more about the available plugins.
 
 | Plugin command | Description |
 | --- | --- |
@@ -993,10 +993,10 @@ Below is a brief description of the commands provided by VTEX plugins. For detai
 | [`logs`](#logs) | Shows logs of an app (only apps in production). |
 | [`plugins install`](#plugins-install) | Installs a plugin on CLI. |
 | [`plugins link`](#plugins-link) | Links a plugin to CLI for development. |
-| [`plugins:list`](#plugins-list) | Lists all plugins installed on your machine. |
+| [`plugins list`](#plugins-list) | Lists all plugins installed on your machine. |
 | [`plugins source`](#plugins-source) | Lists all plugins supported by VTEX. |
 | [`plugins uninstall`](#plugins-uninstall) | Removes a plugin from CLI. |
-| [`plugins:update`](#plugins-update) | Updates all plugins installed on your machine. |
+| [`plugins update`](#plugins-update) | Updates all plugins installed on your machine. |
 | [`redirects delete`](#redirects-delete) | Deletes redirects from the current account and workspace. |
 | [`redirects export`](#redirects-export) | Exports all redirects defined in the current account and workspace to a CSV file. |
 | [`redirects import`](#redirects-import) | Imports redirects from a CSV file to the current account and workspace. |

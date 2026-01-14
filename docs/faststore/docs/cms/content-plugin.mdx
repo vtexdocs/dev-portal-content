@@ -46,7 +46,7 @@ Initializes the CMS folder structure in your project with sample files. This com
 #### Usage
 
 ```shell
-vtex content:init
+vtex content init
 ```
 
 #### Options
@@ -56,7 +56,6 @@ vtex content:init
 | `--help` | `-h` | Displays help information for the command. |
 
 <div align="right">
-  {" "}
   🔼 <a href="#default-commands">Back</a>
 </div>
 
@@ -67,7 +66,7 @@ Generates a single consolidated schema file for CMS by combining component schem
 #### Usage
 
 ```shell
-vtex content:generate-schema [COMPONENT_SCHEMAS_PATH] [CONTENT_TYPES_PATH]
+vtex content generate-schema [COMPONENT_SCHEMAS_PATH] [CONTENT_TYPES_PATH]
 ```
 
 #### Arguments
@@ -92,29 +91,28 @@ vtex content:generate-schema [COMPONENT_SCHEMAS_PATH] [CONTENT_TYPES_PATH]
 Generate a schema with default paths and save to a file:
 
 ```shell
-vtex content:generate-schema --out schema.json
+vtex content generate-schema --out schema.json
 ```
 
 Generate a schema using custom directories:
 
 ```shell
-vtex content:generate-schema cms/components cms/pages --out custom-schema.json
+vtex content generate-schema cms/components cms/pages --out custom-schema.json
 ```
 
 Generate a schema using a local base schema:
 
 ```shell
-vtex content:generate-schema --local ./base-schema.json --out final-schema.json
+vtex content generate-schema --local ./base-schema.json --out final-schema.json
 ```
 
 Use the beta registry for the base schema:
 
 ```shell
-vtex content:generate-schema --beta --out schema.json
+vtex content generate-schema --beta --out schema.json
 ```
 
 <div align="right">
-  {" "}
   🔼 <a href="#default-commands">Back</a>
 </div>
 
@@ -125,7 +123,7 @@ Splits a `sections.json` file into separate component files. Use this command wh
 #### Usage
 
 ```shell
-vtex content:split-components
+vtex content split-components
 ```
 
 #### Options
@@ -141,17 +139,16 @@ vtex content:split-components
 Split components using default paths:
 
 ```shell
-vtex content:split-components
+vtex content split-components
 ```
 
 Split components with custom input and output paths:
 
 ```shell
-vtex content:split-components --input ./cms/sections.json --output ./cms/components
+vtex content split-components --input ./cms/sections.json --output ./cms/components
 ```
 
 <div align="right">
-  {" "}
   🔼 <a href="#default-commands">Back</a>
 </div>
 
@@ -162,7 +159,7 @@ Splits CMS Content Type definitions from the `content-types.json` file into sepa
 #### Usage
 
 ```shell
-vtex content:split-content-types
+vtex content split-content-types
 ```
 
 #### Options
@@ -179,17 +176,16 @@ vtex content:split-content-types
 Split Content Types using default paths:
 
 ```shell
-vtex content:split-content-types
+vtex content split-content-types
 ```
 
 Split Content Types with custom paths:
 
 ```shell
-vtex content:split-content-types --input ./cms/content-types.json --output ./cms/pages --sections ./cms/sections.json
+vtex content split-content-types --input ./cms/content-types.json --output ./cms/pages --sections ./cms/sections.json
 ```
 
 <div align="right">
-  {" "}
   🔼 <a href="#default-commands">Back</a>
 </div>
 
@@ -200,7 +196,7 @@ Uploads a local schema file to the Schema Registry. This command publishes your 
 #### Usage
 
 ```shell
-vtex content:upload-schema [SCHEMA_PATH]
+vtex content upload-schema [SCHEMA_PATH]
 ```
 
 #### Arguments
@@ -221,22 +217,21 @@ vtex content:upload-schema [SCHEMA_PATH]
 Upload a schema file with the default path:
 
 ```shell
-vtex content:upload-schema
+vtex content upload-schema
 ```
 
 Upload a custom schema file:
 
 ```shell
-vtex content:upload-schema ./custom-schema.json
+vtex content upload-schema ./custom-schema.json
 ```
 
 Upload to the beta registry:
 
 ```shell
-vtex content:upload-schema schema.json --beta
+vtex content upload-schema schema.json --beta
 ```
 
 <div align="right">
-  {" "}
   🔼 <a href="#default-commands">Back</a>
 </div>
