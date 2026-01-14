@@ -51,11 +51,11 @@ When you send translated content using the multi-language feature, the workflow 
 
 ```mermaid
 flowchart LR
-    A[1. Translation ingestion] --> B[2. Intelligent Search indexing]
+    A[1. Catalog system translation ingestion] --> B[2. Intelligent Search indexing]
     B --> C[3. Storefront display]
 ```
 
-### Step 1: Translation ingestion
+### Step 1: Catalog system translation ingestion
 
 The merchant or an integrated TMS makes a request to create or update the translation of a catalog entity, such as [product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/language) or [category](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/category/-categoryId-/language). The Catalog system validates and stores the translated fields per [locale](#locale-format), then triggers an update event to Intelligent Search.
 
