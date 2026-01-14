@@ -9,11 +9,11 @@ updatedAt: "2026-01-13T00:00:00.000Z"
 
 > ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
 
-Learn how to integrate localized catalog content using the multi-language endpoints, and create translations for catalog entities.
+Learn how to create translations and integrate localized content for catalog entities with the multi-language endpoints.
 
 ## Overview
 
-The [multi-language endpoints](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enable you to:
+The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) provides the following capabilities:
 
 - **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
 - **Automated translation workflows:** Integrate with Translation Management Systems (TMS) for automated translation.
