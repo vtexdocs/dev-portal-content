@@ -50,11 +50,9 @@ The multi-language feature supports various integration scenarios:
 When you send translated content using the multi-language feature, the workflow is as follows:
 
 ```mermaid
-┌────────────────────────────┐      ┌─────────────────────┐     ┌─────────────────────┐
-│  1. Translation ingestion  │────▶│  2. Intelligent     │────▶│  3. Storefront      │
-│                            │      │  Search indexing    │     │      display        │
-│                            │      │                     │     │                     │
-└────────────────────────────┘      └─────────────────────┘     └─────────────────────┘
+flowchart LR
+    A[1. Translation ingestion] --> B[2. Intelligent Search indexing]
+    B --> C[3. Storefront display]
 ```
 
 ### Step 1: Translation ingestion
