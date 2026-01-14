@@ -17,7 +17,7 @@ Ensure your store is built with Store Framework to follow the steps in this guid
 
 Ensure the following apps are correctly installed:
 
-* vtex.store@2.x
+* `vtex.store@2.x`
 * `vtex.search-result@3.x`
 * `vtex.product-summary@2.x`
 
