@@ -46,7 +46,7 @@ After defining your operation based on the topics above, choose the architecture
 
 See below the main differences between them:
 
-| | Single account, multi-binding | Multi-account, shared back-office systems | Multi-account, independent back-office systems |
+|                       | Single account, multi-binding | Multi-account, shared back-office systems | Multi-account, independent back-office systems |
 | --------------------- | ----------------------------- | ----------------------------------------- | ---------------------------------------------- |
 | **VTEX accounts** | One account serves multiple countries via bindings/sales channels. | Multiple accounts (usually one per country or region). A main account acts as the seller, and the others act as marketplaces. | Fully separate accounts, each operating independently. |
 | **Storefront/websites** | Separate websites or domains bound to different sales channels within the same account. | Separate websites per account. | Separate websites per account. |
@@ -101,9 +101,9 @@ Alternatively, follow the instructions in the [Checking your store's binding ID]
 2. Click the `Advanced` tab.
 3. Enable the `Enable custom currency symbol` option.
 
->ℹ️ Use the currency symbol field defined in the sales channel.
+  >ℹ️ Use the currency symbol field defined in the sales channel.
 
-![currency-symbol](https://vtexhelp.vtexassets.com/assets/docs/src/currency-symbol___9ba20d1b1cd02454841854781d7acc73.gif)
+  ![currency-symbol](https://vtexhelp.vtexassets.com/assets/docs/src/currency-symbol___9ba20d1b1cd02454841854781d7acc73.gif)
 
 ## Fundamental apps
 
@@ -114,9 +114,9 @@ The apps below are essential to enable your cross-border operation on VTEX:
 * **[Messages](https://developers.vtex.com/docs/apps/vtex.messages):** In VTEX IO, translations for store components are stored in a "/messages" folder located within the app's root directory. Thus, the translation of the content involves declaring the translated content for each language (binding) and for each element to be rendered via GraphQL. In this case, especially for specifications, breadcrumbs, and filters, the translation must be done using the Messages app. Learn more in the guides [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and [Overwriting the Messages app](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app).
 * **[Admin Catalog Translation](https://developers.vtex.com/docs/apps/vtex.admin-catalog-translation):** Enables the Admin UI to translate catalog information (category, product, SKU, brand, specifications, and collections), overriding automatic translation.
 
-You can also override the automatic translation using the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). Additionally, you can translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) but adding the "Accept-Language" header with the language into which you want to translate the information. This is especially relevant for headless stores.
+  You can also override the automatic translation using the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). Additionally, you can translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) but adding the "Accept-Language" header with the language into which you want to translate the information. This is especially relevant for headless stores.
 
->ℹ️ Product information on the **Order Placed** pages and in transactional emails is translated automatically. However, on the **My Account** page, it is not. To translate it, you must add customizations that run the GraphQL calls above.
+  >ℹ️ Product information on the **Order Placed** pages and in transactional emails is translated automatically. However, on the **My Account** page, it is not. To translate it, you must add customizations that run the GraphQL calls above.
 
 ## Next steps
 
