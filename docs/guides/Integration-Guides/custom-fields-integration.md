@@ -85,9 +85,8 @@ sequenceDiagram
 
 ## Create custom field settings
 
-This endpoint creates the configuration for a custom field associated with a specific contract. You define the field name, type, level, and whether it's required.
+Use the `POST` [Create custom field settings](https://developers.vtex.com/docs/api-reference/custom-fields-api#post-/api/dataentities/customFieldSettings/documents) endpoint to create the configuration for a custom field associated with a specific contract. You define the field name, type, level, and whether it's required.
 
->ℹ️ Find more details about this endpoint in `POST` [Create custom field settings](https://developers.vtex.com/docs/api-reference/custom-fields-api#post-/api/dataentities/customFieldSettings/documents).
 
 ### Request example
 
@@ -117,9 +116,7 @@ curl -X POST "https://{{accountName}}.myvtex.com/api/dataentities/customFieldSet
 
 ## Get custom field settings
 
-This endpoint retrieves all custom field settings configured for a specific contract. Use the `_where` parameter to filter by `contractId`.
-
->ℹ️ Find more details about this endpoint in `GET` [Get custom field settings](https://developers.vtex.com/docs/api-reference/custom-fields-api#get-/api/dataentities/customFieldSettings/search).
+Use the `GET` [Get custom field settings](https://developers.vtex.com/docs/api-reference/custom-fields-api#get-/api/dataentities/customFieldSettings/search) endpoint to retrieve all custom field settings configured for a specific contract. Use the `_where` parameter to filter by `contractId`.
 
 ### Request example
 
@@ -147,9 +144,7 @@ curl -X GET "https://{{accountName}}.myvtex.com/api/dataentities/customFieldSett
 
 ## Create custom field value
 
-This endpoint creates a value for custom fields of type `option`. Each value is associated with a specific custom field and contract.
-
->ℹ️ Find more details about this endpoint in `POST` [Create custom field value](https://developers.vtex.com/docs/api-reference/custom-fields-api#post-/api/dataentities/customFieldValues/documents).
+Use the `POST` [Create custom field value](https://developers.vtex.com/docs/api-reference/custom-fields-api#post-/api/dataentities/customFieldValues/documents) endpoint to create a value for custom fields of type `option`. Each value is associated with a specific custom field and contract.
 
 ### Request example
 
@@ -177,9 +172,7 @@ curl -X POST "https://{{accountName}}.myvtex.com/api/dataentities/customFieldVal
 
 ## Search custom field values
 
-This endpoint retrieves all values for a specific custom field. Use the `_where` parameter to filter by `contractId` and `customFieldId`.
-
->ℹ️ Find more details about this endpoint in `GET` [Search custom field values](https://developers.vtex.com/docs/api-reference/custom-fields-api#get-/api/dataentities/customFieldValues/search).
+Use the `GET` [Search custom field values](https://developers.vtex.com/docs/api-reference/custom-fields-api#get-/api/dataentities/customFieldValues/search) to retrieve all values for a specific custom field. Use the `_where` parameter to filter by `contractId` and `customFieldId`.
 
 ### Request example
 
@@ -211,9 +204,7 @@ curl -X GET "https://{{accountName}}.myvtex.com/api/dataentities/customFieldValu
 
 ## Apply custom field to orderForm
 
-This endpoint applies a custom field value to an orderForm during checkout. The `linkedEntity.type` determines the level (`order`, `item`, or `address`) and `linkedEntity.id` identifies the specific entity.
-
->ℹ️ Find more details about this endpoint in `PUT` [Create or update custom field in orderForm](https://developers.vtex.com/docs/api-reference/custom-fields-api#put-/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-).
+Use the `PUT` [Create or update custom field in orderForm](https://developers.vtex.com/docs/api-reference/custom-fields-api#put-/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-) endpoint to apply a custom field value to an orderForm during checkout. The `linkedEntity.type` determines the level (`order`, `item`, or `address`) and `linkedEntity.id` identifies the specific entity.
 
 ### Request example
 
@@ -254,9 +245,7 @@ curl -X PUT "https://{{accountName}}.myvtex.com/api/checkout/pub/orderForm/{{ord
 
 ## Apply custom fields in batch
 
-This endpoint applies multiple custom fields to an orderForm in a single request. Use this when you need to set fields at different levels simultaneously.
-
->ℹ️ Find more details about this endpoint in `PUT` [Create or update custom fields in orderForm (batch)](https://developers.vtex.com/docs/api-reference/custom-fields-api#put-/api/checkout/pub/orderForm/-orderFormId-/customFields).
+Use the `PUT` [Create or update custom fields in orderForm (batch)](https://developers.vtex.com/docs/api-reference/custom-fields-api#put-/api/checkout/pub/orderForm/-orderFormId-/customFields) endpoint to apply multiple custom fields to an orderForm in a single request. Use this when you need to set fields at different levels simultaneously.
 
 ### Request example
 
@@ -278,9 +267,7 @@ curl -X PUT "https://{{accountName}}.myvtex.com/api/checkout/pub/orderForm/{{ord
 
 ## Delete custom field from orderForm
 
-This endpoint removes a specific custom field from an orderForm.
-
->ℹ️ Find more details about this endpoint in `DELETE` [Delete custom field from orderForm](https://developers.vtex.com/docs/api-reference/custom-fields-api#delete-/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-).
+Use the `DELETE` [Delete custom field from orderForm](https://developers.vtex.com/docs/api-reference/custom-fields-api#delete-/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-) endpoint to remove a specific custom field from an orderForm.
 
 ### Request example
 
@@ -326,7 +313,6 @@ The Default Values integration allows you to pre-configure which custom field va
 The integration works in two phases:
 
 1. **Configuration phase:** The organization administrator defines which custom field values should be used as defaults for each organizational unit (org unit, contract, or user).
-
 2. **Consumption phase:** At buyer login, the shopper-session app fetches the configured default values and automatically applies them to checkout.
 
 #### Entity format
@@ -464,9 +450,9 @@ The following License Manager permissions are required for Default Values operat
 
 | Operation | Required resources |
 | :--- | :--- |
-| Create default values | Insert or update document (not remove), Full access to all documents, or Master Data administrator |
+| Create default values | Insert or update documents (not remove), Full access to all documents, or Master Data administrator |
 | Read default values | Read-only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
-| Update default values | Insert or update document (not remove), Full access to all documents, or Master Data administrator |
+| Update default values | Insert or update documents (not remove), Full access to all documents, or Master Data administrator |
 | Delete default values | Full access to all documents or Master Data administrator |
 
 >⚠️ Only custom fields of type `option` are supported for default value configuration. This ensures that the value ID is used for matching, allowing values to be renamed without breaking configurations.
@@ -479,8 +465,8 @@ The following License Manager resources are required:
 
 | Operation | Required resources |
 | :--- | :--- |
-| Create/Update settings or values | Insert or update document (not remove), Full access to all documents, or Master Data administrator |
-| Read settings or values | Read-only documents, Insert or update document (not remove), Full access to all documents, or Master Data administrator |
+| Create/Update settings or values | Insert or update documents (not remove), Full access to all documents, or Master Data administrator |
+| Read settings or values | Read-only documents, Insert or update documents (not remove), Full access to all documents, or Master Data administrator |
 | Delete settings or values | Full access to all documents or Master Data administrator |
 | OrderForm operations | Read Shopping Cart |
 
