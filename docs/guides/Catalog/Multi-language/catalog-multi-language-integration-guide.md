@@ -18,7 +18,7 @@ The [multi-language feature](https://developers.vtex.com/docs/api-reference/cata
 - **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
 - **Automated translation workflows:** Integrate with Translation Management Systems (TMS) for automated translation.
 - **Multiple storefront technologies:** Consume translations across different storefront implementations, such as Store Framework, FastStore, and headless implementations.
-- **Localized experience:** Provide to customers localized shopping experiences across multiple markets.
+- **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
 
 The supported catalog entities are:
 
@@ -39,7 +39,7 @@ The multi-language feature supports various integration scenarios:
 
 | Use case | Description |
 | :--- | :--- |
-| Multilingual storefront | Displays translated product names, descriptions, and specifications based on the customer's locale identified by the storefront. |
+| Multilingual storefront | Displays translated product names, descriptions, and specifications based on the customer's locale as identified by the storefront. |
 | TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview). |
 | Business expansion | Seamlessly adapts your catalog for new geographic markets without duplicating products. |
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
@@ -63,13 +63,13 @@ The merchant or an integrated TMS makes a request to create or update the transl
 
 ### Step 2: Intelligent Search indexing
 
-Intelligent Search indexes or reindexes the entity translated content to make it searchable and filterable in the storefront by the selected locale. This process runs asynchronously and usually completes within a few minutes. Larger amounts of data may take longer.
+Intelligent Search indexes or reindexes the translated entity content to make it searchable and filterable in the storefront by the selected locale. This process runs asynchronously and usually completes within a few minutes. Larger amounts of data may take longer.
 
 ### Step 3: Storefront display
 
-The storefront queries Intelligent Search and Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
+The storefront queries Intelligent Search and the Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
 
->ℹ️ Valid for all storefront solutions, including Store Framework, FastStore, and headless implementations.
+> ℹ️ Valid for all storefront solutions, including Store Framework, FastStore, and headless implementations.
 
 ### Locale format
 
@@ -85,7 +85,7 @@ All locale codes follow the IETF BCP 47 standard, for example:
 
 Open a [support ticket](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they will contact you to inform that you can start using the feature.
 
->❗ The simultaneous use of both the multi-Language APIs and Messages APIs (GraphQL) is not supported for catalog entities. Therefore, once the new feature is activated, you will no longer be able to manage translations using GraphQL.
+> ❗ The simultaneous use of both the multi-language APIs and Messages APIs (GraphQL) is not supported for catalog entities. Therefore, once the new feature is activated, you will no longer be able to manage translations using GraphQL.
 
 ## Permissions
 
@@ -99,13 +99,13 @@ To successfully use the multi-language feature, the user or [API key](https://de
 
 Some of our recommendations when using the multi-language feature are:
 
-- **Start with high-impact entities:** Prioritize translating products, categories, and brands before moving to specifications and attachments. This will help you to create a more complete and accurate translation.
+- **Start with high-impact entities:** Prioritize translating products, categories, and brands before moving to specifications and attachments. This approach helps you create a more complete and accurate translation.
 - **Batch translations:** When integrating with a TMS, batch multiple translation updates to reduce API calls, optimizing performance and reducing time to market.
-- **Validate before publishing:** Use the `GET` endpoints to verify translations before they go live, preventing errors and ensuring the quality of the translations.
+- **Validate before publishing:** Use the `GET` endpoints to verify translations before they go live, preventing errors and ensuring translation quality.
 
 ## Troubleshooting
 
-See below the most common issues and their respective solutions when using the multi-language feature:
+See below the most common issues and their respective solutions for the multi-language feature:
 
 | Issue | Solution |
 | :--- | :--- |
