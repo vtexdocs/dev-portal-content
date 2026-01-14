@@ -81,7 +81,7 @@ All locale codes follow the IETF BCP 47 standard, for example:
 
 ## Activation
 
-Open a [support ticket](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they will contact you to inform that you can start using the feature.
+Open a [support ticket](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they will contact you to inform you that you can start using the feature.
 
 > ❗ The simultaneous use of both the multi-language APIs and Messages APIs (GraphQL) is not supported for catalog entities. Therefore, once the new feature is activated, you will no longer be able to manage translations using GraphQL.
 
