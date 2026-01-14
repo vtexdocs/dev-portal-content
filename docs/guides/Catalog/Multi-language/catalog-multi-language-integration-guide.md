@@ -71,7 +71,7 @@ The storefront queries Intelligent Search and the Catalog system at render time,
 
 ### Locale format
 
-All locale codes follow the IETF BCP 47 standard, for example:
+All locale codes follow the IETF BCP 47, for example:
 
 - `en-US`: English (United States)
 - `es-ES`: Spanish (Spain)
