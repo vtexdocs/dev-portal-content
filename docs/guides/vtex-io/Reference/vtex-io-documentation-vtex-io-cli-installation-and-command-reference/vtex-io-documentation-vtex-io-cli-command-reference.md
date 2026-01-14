@@ -3,7 +3,7 @@ title: "Command reference"
 slug: "vtex-io-documentation-vtex-io-cli-command-reference"
 hidden: false
 createdAt: "2021-04-04t22:02:14.325z"
-updatedAt: "2022-12-13T20:17:44.857Z"
+updatedAt: "2026-01-14T12:26:00.857Z"
 ---
 
 This documentation is a reference for:
