@@ -90,21 +90,6 @@ To successfully use the multi-language feature, the user or [API key](https://de
 2. **Batch translations:** When integrating with a TMS, batch multiple translation updates to reduce API calls.
 3. **Validate before publishing:** Use the `GET` endpoints to verify translations before they go live.
 
-### Handling missing translations
-
-When a translation is not available for a requested locale:
-
-- **Intelligent Search:** Returns content in the store's default language.
-- **Catalog API:** Returns only entities that have translations in the requested locale.
-
-Consider implementing fallback logic in headless implementations to handle missing translations gracefully.
-
-### Performance considerations
-
-- **Cache translations:** For headless implementations, cache translated content to reduce API calls.
-- **Use Intelligent Search:** Whenever possible, prefer Intelligent Search over direct Catalog API calls for better performance and caching.
-- **Monitor indexing:** After bulk translation updates, allow a few minutes for Intelligent Search to reindex before validating changes on the storefront.
-
 ## Troubleshooting
 
 | Issue | Solution |
@@ -113,10 +98,3 @@ Consider implementing fallback logic in headless implementations to handle missi
 | `403 Forbidden` error | Verify that your application key has the `Categories Management` resource enabled. |
 | `404 Not Found` error | Confirm that the entity ID (product, SKU, category, etc.) exists in the Catalog. |
 | `409 Conflict` error | The translation may already exist. Use `GET` to retrieve current translations before updating. |
-
-## Related resources
-
-- [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api)
-- [VTEX Intelligent Search: Multilanguage settings (Beta)](/en/tutorials/beta/intelligent-search-beta/vtex-intelligent-search-multilanguage-settings-beta)
-- [API authentication using application keys](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys)
-- [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)
