@@ -13,7 +13,7 @@ Learn how to create translations and integrate localized content for catalog ent
 
 ## Overview
 
-The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) provides the following capabilities:
+The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enables the following capabilities:
 
 - **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
 - **Automated translation workflows:** Integrate with Translation Management Systems (TMS) for automated translation.
