@@ -86,9 +86,9 @@ To successfully use the multi-language feature, the user or [API key](https://de
 
 Some of our recommendations when using the multi-language feature are:
 
-- **Start with high-impact entities:** Prioritize translating products, categories, and brands before moving to specifications and attachments.
-- **Batch translations:** When integrating with a TMS, batch multiple translation updates to reduce API calls.
-- **Validate before publishing:** Use the `GET` endpoints to verify translations before they go live.
+- **Start with high-impact entities:** Prioritize translating products, categories, and brands before moving to specifications and attachments. This will help you to create a more complete and accurate translation.
+- **Batch translations:** When integrating with a TMS, batch multiple translation updates to reduce API calls, optimizing performance and reducing time to market.
+- **Validate before publishing:** Use the `GET` endpoints to verify translations before they go live, preventing errors and ensuring the quality of the translations.
 
 ## Troubleshooting
 
