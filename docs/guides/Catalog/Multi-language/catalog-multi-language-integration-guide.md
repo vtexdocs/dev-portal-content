@@ -100,3 +100,5 @@ See below the most common issues and their respective solutions when using the m
 | `403 Forbidden` error | Verify that your application key has the `Categories Management` resource enabled. |
 | `404 Not Found` error | Confirm that the entity ID (product, SKU, category, etc.) exists in the Catalog. |
 | `409 Conflict` error | The translation may already exist. Use `GET` to retrieve current translations before updating. |
+
+> ℹ️ If the issue persists, contact our [Support](https://support.vtex.com/hc/en-us/requests).
