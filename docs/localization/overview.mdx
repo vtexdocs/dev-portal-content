@@ -1,0 +1,39 @@
+---
+title: "My Account for B2B stores"
+---
+
+>⚠️ This is an experimental feature available only for B2B stores. B2C stores should continue using the [previous version](https://developers.vtex.com/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account).
+
+**My Account** is a crucial component for any ecommerce website, as it allows customers to manage their personal information, track order history, update security settings, and perform other account-related actions.
+
+## Default My Account pages
+
+My Account includes several default pages that are essential for managing a customer's account.
+
+| Page path | Description |
+| --------- | ----------- |
+| `src/pages/pvt/account/orders/[id].tsx` | Displays individual order details, including items, quantities, prices, and statuses. |
+| `src/pages/pvt/account/user-details.tsx` | Displays the user's personal information, such as name, email, and contact details. |
+| `src/pages/pvt/account/security.tsx` | Displays security settings, including password management. |
+| `src/pages/pvt/account/profile.tsx` | Displays editable profile settings, allowing users to update personal information. |
+| `src/pages/pvt/account/orders/index.tsx` | Displays a list of all past and current orders placed by the user, including summary details for each. |
+
+### Orders
+
+The orders page lists past and current orders with key details, filters, and links to full order information.
+
+#### Orders page filtering
+
+The orders page features filtering capabilities that enable users to quickly locate specific orders. By default, the following filter options are available:
+
+- **Pending my approval:** Toggle filter that shows only orders requiring user approval. When active, the filter state is reflected in the URL as `?pendingApproval=true`, and a `Pending my approval` tag appears below the search bar.
+
+- **Status:** Filter orders by their current status, such as Order Placed, Payment Pending, Invoiced, etc.
+
+- **Order date:** Filter orders by creation date using initial date and final date parameters.
+
+![my-account-orders](https://vtexhelp.vtexassets.com/assets/docs/src/my-account-orders___b21052581495103c46a166e6695ca8a4.png)
+
+## Next steps
+
+ To enable the experimental My Account feature in your B2B FastStore store, follow the instructions in the guide [Enabling My Account for B2B stores](https://developers.vtex.com/docs/guides/faststore/my-account-enablement).
