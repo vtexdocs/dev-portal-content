@@ -20,16 +20,6 @@ The [multi-language feature](https://developers.vtex.com/docs/api-reference/cata
 - **Multiple storefront technologies:** Consume translations across different storefront implementations, such as Store Framework, FastStore, and headless implementations.
 - **Localized experience:** Provide to customers localized shopping experiences across multiple markets.
 
-### Locale format
-
-All locale codes follow the IETF BCP 47 standard, for example:
-
-- `en-US`: English (United States)
-- `es-ES`: Spanish (Spain)
-- `pt-BR`: Portuguese (Brazil)
-- `fr-FR`: French (France)
-- `de-DE`: German (Germany)
-
 ## Use cases
 
 The multi-language feature supports various integration scenarios:
@@ -68,6 +58,16 @@ The storefront queries Intelligent Search and Catalog system at render time, so 
 
 >ℹ️ Valid for all storefront solutions, including Store Framework, FastStore, and headless implementations.
 
+### Locale format
+
+All locale codes follow the IETF BCP 47 standard, for example:
+
+- `en-US`: English (United States)
+- `es-ES`: Spanish (Spain)
+- `pt-BR`: Portuguese (Brazil)
+- `fr-FR`: French (France)
+- `de-DE`: German (Germany)
+
 ## Activation
 
 Open a [support ticket](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they will contact you to inform that you can start using the feature.
@@ -92,8 +92,10 @@ To successfully use the multi-language feature, the user or [API key](https://de
 
 ## Troubleshooting
 
+See below the most common issues and their respective solutions when using the multi-language feature:
+
 | Issue | Solution |
-| --- | --- |
+| :--- | :--- |
 | Translations not appearing on storefront | Wait a few minutes for Intelligent Search to reindex. Check that the locale matches your store binding configuration. |
 | `403 Forbidden` error | Verify that your application key has the `Categories Management` resource enabled. |
 | `404 Not Found` error | Confirm that the entity ID (product, SKU, category, etc.) exists in the Catalog. |
