@@ -20,6 +20,19 @@ The [multi-language feature](https://developers.vtex.com/docs/api-reference/cata
 - **Multiple storefront technologies:** Consume translations across different storefront implementations, such as Store Framework, FastStore, and headless implementations.
 - **Localized experience:** Provide to customers localized shopping experiences across multiple markets.
 
+The supported catalog entities are:
+
+- Products
+- SKUs
+- Specifications
+- Categories
+- Brands
+- Attachments
+- Collections
+- Services
+
+> ℹ️ To see the complete documentation of the multi-language endpoints, check the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
+
 ## Use cases
 
 The multi-language feature supports various integration scenarios:
