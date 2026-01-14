@@ -82,13 +82,13 @@ To successfully use the multi-language feature, the user or [API key](https://de
 | :--- | :--- | :--- |
 | Catalog | Content | Categories Management |
 
-## Best practices
+## Recommendations
 
-### Translation workflow
+Some best practices to follow when using the multi-language feature are:
 
-1. **Start with high-impact entities:** Prioritize translating products, categories, and brands before moving to specifications and attachments.
-2. **Batch translations:** When integrating with a TMS, batch multiple translation updates to reduce API calls.
-3. **Validate before publishing:** Use the `GET` endpoints to verify translations before they go live.
+- **Start with high-impact entities:** Prioritize translating products, categories, and brands before moving to specifications and attachments.
+- **Batch translations:** When integrating with a TMS, batch multiple translation updates to reduce API calls.
+- **Validate before publishing:** Use the `GET` endpoints to verify translations before they go live.
 
 ## Troubleshooting
 
@@ -97,7 +97,7 @@ See below the most common issues and their respective solutions when using the m
 | Issue | Solution |
 | :--- | :--- |
 | Translations not appearing on storefront | Wait a few minutes for Intelligent Search to reindex. Check that the locale matches your store binding configuration. |
-| `403 Forbidden` error | Verify that your application key has the `Categories Management` resource enabled. |
+| `403 Forbidden` error | Verify that your user or application key has the `Categories Management` resource enabled. |
 | `404 Not Found` error | Confirm that the entity ID (product, SKU, category, etc.) exists in the Catalog. |
 | `409 Conflict` error | The translation may already exist. Use `GET` to retrieve current translations before updating. |
 
