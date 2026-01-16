@@ -6,7 +6,7 @@ createdAt: "2026-01-16T10:00:00.000Z"
 updatedAt: "2026-01-16T18:00:00.000Z"
 excerpt: "FastStore now accurately populates the Global Trade Item Number (GTIN) field in product structured data using the European Article Number (EAN), leading to improved SEO compliance and data reliability."
 tags:
-    - FastStore
+  - FastStore
 ---
 
 FastStore has improved how the Global Trade Item Number (GTIN) field is populated in product structured data. This update ensures that product pages display standardized product identifiers, helping search engines better index your products and potentially qualify for rich results in Google Search.
