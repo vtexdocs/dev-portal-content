@@ -1,8 +1,8 @@
 ---
 title: "FastStore WebOps: Rerun failed builds without new commits"
-slug: "2026-01-XX-faststore-webops-build-re-execution-without-new-commits"
+slug: "2026-01-16-faststore-webops-build-re-execution-without-new-commits"
 type: "added"
-createdAt: "2026-10-XXT10:00:00.000Z"
+createdAt: "2026-01-16T10:00:00.000Z"
 hidden: false
 excerpt: "FastStore WebOps now lets you redeploy failed builds from the dashboard without creating new commits, helping you fix operational issues faster while keeping your repository history clean."
 tags:
