@@ -10,7 +10,7 @@ seeAlso:
   - "/docs/apps/vtex.store-sitemap"
 ---
 
-In [Store Framerwork](https://developers.vtex.com/docs/guides/store-framework), a Store Theme is a storefront template that shapes your store's appearance and functionality. It determines how each element of your store will appear on the storefront.
+In [Store Framework](https://developers.vtex.com/docs/guides/store-framework), a Store Theme is a storefront template that shapes your store's appearance and functionality. It determines how each element of your store will be displayed on the storefront.
 
 ## Project structure
 
@@ -37,26 +37,26 @@ Although the structure of a Store Theme project may vary depending on its specif
 └── 📄 README.md
 ```
 
-Some of these files and folders are essential for the theme to function properly:
+Some of these files and folders are essential for the theme to function correctly:
 
 - **`/store` folder:** Contains the blocks, interfaces, and routes necessary to build the storefront.
-- **`/styles` folder:** Contains the store’s visual elements, such as colors, typography, and other style-related settings.
-- **`manifest.json` file:** Contains the metadata about the app, including vendor, name, version, [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies/), and [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/).
-- **`/public` folder (optional):** Contains the app's public marketing and metadata assets (such as icons, screenshots, licenses, and localized descriptions) used when distributing the Store Theme as a VTEX IO app in the VTEX App Store. This folder is optional and can be omitted if you do not plan to publish the Store Theme publicly. Learn more in [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution). For assets that are actually used by your Store Theme blocks and styles at runtime, use the [Assets builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-assets-builder) and the `/assets` folder instead. Learn more in [Using the Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder).
+- **`/styles` folder:** Contains the store visual elements, such as colors, typography, and other style-related settings.
+- **`manifest.json` file:** Contains metadata about the app, including vendor, name, version, [dependencies](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies/), and [builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders/).
+- **`/public` folder (optional):** Contains the app's public marketing and metadata assets (such as icons, screenshots, licenses, and localized descriptions) used when distributing the Store Theme as a VTEX IO app in the VTEX App Store. This folder is optional and can be omitted if you don't plan to publish the Store Theme publicly. Learn more in [Preparing your app for distribution](https://developers.vtex.com/docs/guides/vtex-io-documentation-preparing-your-app-distribution). For assets that are actually used by your Store Theme blocks and styles at runtime, use the [Assets builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-assets-builder) and the `/assets` folder instead. Learn more in [Using the Assets Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-assets-builder).
 
->⚠ You must have at least the `store` and `styles` builders configured within the `manifest.json` file for your project to work properly.
+>⚠ For your project to work properly, you must have at least the `store` and `styles` builders configured within the `manifest.json` file.
 
-Store Themes are [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io) apps that inherently use the [`store` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder). This builder allows you to link routes to templates, which are composed of a series of other reusable [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) and layout [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition), contained in the `/store` folder.
+Store Themes are [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io) apps that inherently use the [`store` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder). This builder allows you to link routes to templates, which consist of other reusable [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) and layout [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition) organized in the `/store` folder.
 
-To export the CSS configurations contained in the `/styles` folder for your Store Framework blocks, Store Themes leverage the [`styles` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-styles-builder). This builder helps set a cohesive style for all components in your Store Theme app.
+To export the CSS configurations in the `/styles` folder for your Store Framework blocks, Store Themes leverage the [`styles` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-styles-builder). This builder helps set a cohesive style for all components in your Store Theme app.
 
-For more information about available builders, check this [List of Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders#list-of-builders).
+For more information about available builders, see this [list of builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders#list-of-builders).
 
 ## Development tools
 
 The VTEX IO platform facilitates the development of Store Themes by providing tools such as [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) and [workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) for developers, as well as content management with [Site Editor](https://developers.vtex.com/docs/guides/vtex-io-documentation-site-editor) for business users.
 
-Store Themes can be customized by adding native [VTEX IO Apps](https://developers.vtex.com/docs/vtex-io-apps) or developing [custom React components](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) to meet business needs and enhance user experience.
+Store Themes can be customized by adding native [VTEX IO apps](https://developers.vtex.com/docs/vtex-io-apps) or developing [custom React components](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) to meet business needs and enhance user experience.
 
 Below are some available themes to get started:
 
@@ -67,9 +67,9 @@ Below are some available themes to get started:
 
 ### Minimum Boilerplate Theme
 
-The [Minimum Boilerplate Theme](https://github.com/vtex-apps/minimum-boilerplate-theme)  serves as a basic starting point for developers to create new storefronts on the VTEX IO platform. It offers a basic and functional structure that can be customized and expanded based on the specific needs of the project.
+The [Minimum Boilerplate Theme](https://github.com/vtex-apps/minimum-boilerplate-theme) serves as a basic starting point for developers to create new storefronts on the VTEX IO platform. It offers a basic and functional structure that can be customized and expanded based on the project's specific needs.
 
-The Minimum Boilerplate Theme should be used only when you want to start a new store theme without any pre-set configurations, as is the case with the [Store Theme](#store-theme).
+The Minimum Boilerplate Theme should be used only when you want to start a new store theme without any pre-set configurations.
 
 >ℹ️ Learn how to set this boilerplate in the [Minimum Boilerplate Theme](https://developers.vtex.com/docs/apps/vtex.minimumtheme) documentation.
 
@@ -82,7 +82,7 @@ The [**Store Theme**](https://github.com/vtex-apps/store-theme) is a boilerplate
 This boilerplate gives you a ready-to-go default storefront structure, including:
 
 - **Pre-configured layouts:** A variety of files organized in different folders within the `/store/blocks` folder. These files combine our native [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) to create templates for different parts of the store, such as the homepage, product details page, and order-placed page.
-- **Default styles:** A customizable set of styles that helps you achieve a professional look and feel without extensive custom styling.
+- **Default styles:** A customizable set of styles to achieve a professional look and feel without extensive custom styling.
 - **Sitemap:** An example of a [Sitemap](https://github.com/vtex-apps/store-theme/blob/master/sitemap/sitemap.json) use case.
 
 >ℹ️ Learn how to start a project with this boilerplate in the [Getting started](https://developers.vtex.com/docs/guides/getting-started-3) section.
