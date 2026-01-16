@@ -5,6 +5,7 @@ on:
     paths:
       - '**/*.md'
       - '**/*.mdx'
+      - '!docs/localization/**'
     types: [opened, synchronize, ready_for_review]
 
 permissions:
