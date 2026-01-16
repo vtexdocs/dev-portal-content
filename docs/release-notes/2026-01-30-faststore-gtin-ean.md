@@ -1,13 +1,12 @@
 ---  
 title: "FastStore: Improved SEO and data reliability with EAN-based GTIN in product structured data"   
-slug: "2025-10-08-faststore-gtin-ean"   
+slug: "2026-01-30-faststore-gtin-ean"   
 type: "fixed"   
-createdAt: "2025-10-08T00:00:00.000Z"   
+createdAt: "2026-01-16T00:00:00.000Z"   
 updatedAt: ""   
 excerpt: "FastStore now accurately populates the Global Trade Item Number (GTIN) field in product structured data using the European Article Number (EAN), leading to improved SEO compliance and data reliability."  
 tags:  
     - FastStore
-
 ---
 
 FastStore has improved how the Global Trade Item Number (GTIN) field is populated in product structured data. This update ensures that product pages display standardized product identifiers, helping search engines better index your products and potentially qualify for rich results in Google Search.
@@ -40,10 +39,10 @@ To confirm that the GTIN field is using EAN values correctly, follow these steps
 1. Open a product page in your store.  
 2. Right-click on the page and select **Inspect** (or press `F12`).  
 3. In the **Elements** tab, press `Ctrl+F` (or `Cmd+F` on Mac) and search for `"gtin"`.  
-4. Verify the value matches the EAN configured in your [Catalog](https://help.vtex.com/en/docs/tutorials/adding-or-editing-skus\#identifiers).
+4. Verify the value matches the EAN configured in your [Catalog](https://help.vtex.com/en/docs/tutorials/adding-or-editing-skus#identifiers).
 
 The structured data should look like this:
 
 ![gtin-field](https://vtexhelp.vtexassets.com/assets/docs/src/image2-gtin___11bcb80e6f143229a4fe3c13b42c5f89.png)
 
-> ⚠️ Products without EAN will fall back to using the Reference code. You can create an EAN for a SKU by following the [Create SKU EAN API reference](https://developers.vtex.com/docs/api-reference/catalog-api\#post-/api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-).
+> ⚠️ Products without EAN will fall back to using the Reference code. You can create an EAN for a SKU by following the [Create SKU EAN API reference](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-).
