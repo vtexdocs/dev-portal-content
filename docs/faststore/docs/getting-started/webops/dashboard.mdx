@@ -71,7 +71,7 @@ The **Deploys** tab provides insights into store deployments, including their st
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1 - Search bar       | Allows you to search by deploy ID, commit, message, or author.                                                                                                                                                                                                                                                                                                                                                    |
 | 2 - Pagination       | Allows you to navigate through pages of deployment data.                                                                                                                                                                                                                                                                                                                                                          |
-| 3 - Environment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with. </li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                    |
+| 3 - Environment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with.</li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                    |
 | 4 - Branch           | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                           |
 | 5 - Status           | Filters deployments by status: <ol><li>Queued: The deployment is waiting to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment was completed successfully.</li><li>Failed: The deployment encountered an error and didn't complete as expected.</li></ol>                                                                                                        |
 | 6 - Sort by          | Filters deployments by **Latest first** or **Oldest first**.                                                                                                                                                                                                                                                                                                                                                      |
@@ -81,9 +81,21 @@ The **Deploys** tab provides insights into store deployments, including their st
 
 For more information, click any entry in the deployment table.
 
-![deployment-details](https://vtexhelp.vtexassets.com/assets/docs/src/deployment-details___011bb7391157ad21eb965d8bcfc75b03.gif)
+![deployment-details](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/webops-deploys.gif)
 
-In the **Deploy Steps** section, select a step (example: **Build - Discovery**) to view logs. The logs show on the right and help diagnose failed deployments.
+In the **Deploy Steps** section, select a step (for example, **Build - Discovery**) to view logs. The logs, shown on the right, help diagnose failed deployments.
+
+#### Rerunning a build
+
+If a deployment fails due to issues unrelated to your code, such as environment variables or temporary network problems, you can rerun the build job directly in WebOps without pushing a new commit to the repository. To do so, follow the instructions below:
+
+1. Fix the related issue, if needed.
+2. In the **Deploys** tab, click the entry you want to redeploy.
+3. In the top-right corner of the page, click `⋮`, then click **Rerun this deployment**.
+
+  ![rerun-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/rerun-webops.png)
+
+> ℹ️ If the logs indicate problems in your code (for example, syntax errors and failing tests), update the code in your local environment and push a new commit. WebOps will automatically trigger a new deployment for that commit.
 
 ## Integrations
 
