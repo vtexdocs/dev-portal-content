@@ -81,7 +81,7 @@ The [**Store Theme**](https://github.com/vtex-apps/store-theme) is a boilerplate
 
 This boilerplate gives you a ready-to-go default storefront structure, including:
 
-- **Pre-configured layouts:** A variety of files organized in different folders within the `/store/blocks` folder. These files combine our native [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) to create templates for different parts of the store, such as the homepage, product details page, and order-placed page.
+- **Pre-configured layouts:** A variety of files organized in different folders within the `/store/blocks` folder. These files combine our native [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) to create templates for different parts of the store, such as the homepage, product details page, and order placed page.
 - **Default styles:** A customizable set of styles to achieve a professional look and feel without extensive custom styling.
 - **Sitemap:** An example of a [Sitemap](https://github.com/vtex-apps/store-theme/blob/master/sitemap/sitemap.json) use case.
 
