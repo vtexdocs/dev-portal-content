@@ -13,7 +13,7 @@ FastStore has improved how the Global Trade Item Number (GTIN) field is populate
 
 ## What has changed?
 
-Previously, the GTIN field in product structured data was populated using the product's Reference code from [the Catalog](https://help.vtex.com/docs/tutorials/adding-or-editing-skus#identifiers). With this update, FastStore now prioritizes the European Article Number (EAN) for the GTIN field whenever an EAN value is available. If no EAN exists, the system falls back to using the Reference code.
+Previously, the GTIN field in product structured data was populated using the product's Reference Code from [the Catalog](https://help.vtex.com/docs/tutorials/adding-or-editing-skus#identifiers). With this update, FastStore now prioritizes the European Article Number (EAN) for the GTIN field whenever an EAN value is available. If no EAN exists, the system falls back to using the Reference Code.
 
 ![ean-and-reference-code-admin](https://vtexhelp.vtexassets.com/assets/docs/src/image1-ean___3314df0c0e9088ddb97cf770b7d75847.gif)
 
@@ -45,4 +45,4 @@ The structured data should look like this:
 
 ![gtin-field](https://vtexhelp.vtexassets.com/assets/docs/src/image2-gtin___11bcb80e6f143229a4fe3c13b42c5f89.png)
 
-> ⚠️ Products without EAN will fall back to using the Reference code. You can create an EAN for a SKU by following the [Create SKU EAN API reference](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-).
+> ⚠️ Products without EAN will fall back to using the Reference Code. You can create an EAN for a SKU by following the [Create SKU EAN API reference](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-).
