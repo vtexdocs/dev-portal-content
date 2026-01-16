@@ -71,7 +71,7 @@ The **Deploys** tab provides insights into store deployments, including their st
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1 - Search bar       | Allows you to search by deploy ID, commit, message, or author.                                                                                                                                                                                                                                                                                                                                                    |
 | 2 - Pagination       | Allows you to navigate through pages of deployment data.                                                                                                                                                                                                                                                                                                                                                          |
-| 3 - Environment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with. </li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                    |
+| 3 - Environment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with.</li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                    |
 | 4 - Branch           | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                           |
 | 5 - Status           | Filters deployments by status: <ol><li>Queued: The deployment is waiting to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment was completed successfully.</li><li>Failed: The deployment encountered an error and didn't complete as expected.</li></ol>                                                                                                        |
 | 6 - Sort by          | Filters deployments by **Latest first** or **Oldest first**.                                                                                                                                                                                                                                                                                                                                                      |
@@ -138,9 +138,9 @@ Once you've set the pages for testing and after a new deployment, go to the **Ov
 The **Settings** tab is where you manage the following configurations:
 
 * [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
-* [**Secrets**](#secrets): Stores and allows secure management of sensitive information, such as API keys and passwords, required during FastStore deployment.
+* [**Variables and secrets**](#variables-and-secrets): Stores and allows secure management of sensitive information, such as API keys and passwords, required during FastStore deployment.
 
-![settings-webops](https://vtexhelp.vtexassets.com/assets/docs/src/secrets-webops___2869e469b5a613f389f19cc555f4c3c5.png)
+![settings-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/webops-settings.gif)
 
 ### Production domain
 
@@ -156,13 +156,17 @@ The **Current domains** section displays the default and primary domains configu
 
 > ⚠️ If your domain isn't listed, there might be an issue with the configuration or DNS settings that you need to address before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly, and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
 
-### Secrets
+### Variables and secrets
 
-Secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing secret management via WebOps enhances security and consistency across deployment providers.
+Variables and secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing variables and secrets management via WebOps enhances security and consistency across deployment providers.
 
-In the **Secrets** section, define the **Key** and **Value** in their respective fields and click `Add` to set up the secret.
+In the **Variables and Secrets** section, fill in the following fields and click `Add`:
 
->ℹ Learn more about Secrets in [Managing secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets).
+* **Type:** Choose `text` for non-sensitive values that can be viewed later (for example, public URLs), or `secret` for sensitive values that must be hidden after saving (for example, API tokens and passwords).
+* **Key:** Define the name of the variable or secret, used as its unique identifier in the environment (for example, `VTEX_API_TOKEN` or `NEXT_PUBLIC_SITE_URL`).
+* **Value:** Define the content associated with the key, such as the actual token, password, or configuration string used by your application.
+
+> ℹ Learn more in [Managing variables and secrets](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets).
 
 #### Current keys
 
