@@ -80,7 +80,7 @@ When calling the approval and denial endpoints, you provide a score value that d
 | score ≤ `scoreInterval.deny` | score ≤ 5 | Denied |
 | Between thresholds | 5 < score < 10 | Bypassed |
 
->⚠️ The score is not the result of the rule's expression. It's a separate value you send when manually authorizing/denying a pending rule.
+>⚠️ The score is not the result of the rule's expression. It's a separate value you send when manually authorizing or denying a pending rule.
 
 **Example:** With `accept: 10` and `deny: 5`:
 
