@@ -28,7 +28,7 @@ The following are the main characteristics of organization unit evaluation:
 
 ## Policy type evaluation (rule priority)
 
-Within each organization unit's dimension, rules are evaluated in ascending priority order with fixed assignments:
+Within each organization unit's dimension, rules are evaluated in ascending priority order with fixed behaviors according to the value assigned:
 
 - Priority `1` = bypass (`effectType: 0`) - checked first, approves and stops evaluation.
 - Priority `2` = deny (`effectType: 1`) - checked second, denies and stops evaluation.
