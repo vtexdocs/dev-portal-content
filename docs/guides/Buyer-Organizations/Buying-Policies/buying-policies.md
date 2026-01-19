@@ -34,7 +34,7 @@ Within each organization unit's dimension, rules are evaluated in ascending prio
 - Priority `2` = deny (`effectType: 1`) - checked second, denies and stops evaluation.
 - Priority `3` = sequential workflow (`effectType: 2`) - checked last, requires approval.
 
->❗ The dimension must have `requireAllRulesAcceptance: false` so the first matching rule executes and stops further evaluation, enabling bypass functionality.
+>❗ If you wish to enable bypass, the dimension must have `requireAllRulesAcceptance: false` so the first matching rule executes and stops further evaluation.
 
 ## Authorization dynamics and score fields
 
