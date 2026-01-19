@@ -5,7 +5,7 @@ type: "fixed"
 createdAt: "2026-01-30T10:00:00.000Z"
 excerpt: "FastStore now accurately populates the Global Trade Item Number (GTIN) field in product structured data using the European Article Number (EAN), leading to improved SEO compliance and data reliability."
 tags:
-  - FastStore
+    - FastStore
 ---
 
 FastStore has improved how the Global Trade Item Number (GTIN) field is populated in product structured data. This update ensures that product pages display standardized product identifiers, helping search engines better index your products and potentially qualify for rich results in Google Search.
@@ -45,3 +45,4 @@ The structured data should look like this:
 ![gtin-field](https://vtexhelp.vtexassets.com/assets/docs/src/image2-gtin___11bcb80e6f143229a4fe3c13b42c5f89.png)
 
 > ⚠️ Products without EAN will fall back to using the Reference Code. You can create an EAN for a SKU by following the [Create SKU EAN API reference](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-).
+
