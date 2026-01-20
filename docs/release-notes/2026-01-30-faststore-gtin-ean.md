@@ -38,9 +38,3 @@ The structured data should look like this:
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/2026-01-30-faststore-gtin-ean-2.webp)
 
 > ⚠️ Products without EAN will fall back to using the Reference Code. You can create an EAN for a SKU by following the [Create SKU EAN API reference](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-).
-
-
-
-
-
-
