@@ -1,0 +1,474 @@
+---
+title: "SKUMatrix"
+excerpt: Displays a table of product variations with quantity selectors for bulk purchasing.
+components:
+  - SKUMatrix.tsx
+  - SKUMatrixTrigger.tsx
+  - SKUMatrixSidebar.tsx
+---
+
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/SKUMatrix)
+
+The `SKUMatrix` component displays a table of product variations with quantity selectors, enabling customers to add multiple SKUs to the cart at once. This component is ideal for B2B scenarios or bulk purchasing.
+
+The final component is a compound of the following:
+
+- `SKUMatrix`: the main wrapper component that provides context and state management.
+- `SKUMatrixTrigger`: a button component that opens the SKU Matrix sidebar.
+- `SKUMatrixSidebar`: renders a `SlideOver` with a table displaying product variations, prices, availability, and quantity selectors.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SKUMatrixUsage />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+import React, { useEffect } from 'react'
+import Image from 'next/image'
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+  UIProvider,
+} from '@faststore/ui'
+import { skus } from 'components/faststore-components/mocks/skus'
+
+const ImageComponent = ({
+  src,
+  alt,
+  width = 64,
+  height = 64,
+}: {
+  src: string
+  alt: string
+  width?: number
+  height?: number
+}) => (
+  <Image
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    style={{ objectFit: 'contain' }}
+  />
+)
+
+function SKUMatrixContent() {
+  const { setAllVariantProducts } = useSKUMatrix()
+
+  useEffect(() => {
+    setAllVariantProducts(skus)
+  }, [])
+
+  return (
+    <>
+      <SKUMatrixTrigger variant="secondary">Plan restock</SKUMatrixTrigger>
+
+      <SKUMatrixSidebar
+        title="Philips Monitor"
+        direction="rightSide"
+        size="partial"
+        loading={false}
+        columns={{
+          name: 'Variation',
+          additionalColumns: [
+            { label: 'Color', value: 'color' },
+            { label: 'Screen sizes', value: 'size' },
+            { label: 'Safety rating', value: 'safetyrating' },
+          ],
+          availability: {
+            label: 'Availability',
+            stockDisplaySettings: 'showStockQuantity',
+          },
+          price: 'Price',
+          quantitySelector: 'Quantity',
+        }}
+        buyProps={{
+          'data-testid': 'bulk-add',
+          'data-sku': 'safety-boot',
+          'data-seller': 'seller-1',
+          onClick: () => {
+            /* call cart mutation */
+          },
+        }}
+        overlayProps={{ 'aria-label': 'SKU matrix overlay' }}
+        ImageComponent={ImageComponent}
+      >
+        {null}
+      </SKUMatrixSidebar>
+    </>
+  )
+}
+
+export default function ProductPageSkuMatrix() {
+  return (
+    <UIProvider>
+      <SKUMatrix data-testid="sku-matrix">
+        <SKUMatrixContent />
+      </SKUMatrix>
+    </UIProvider>
+  )
+}
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+## Usage
+
+### Import the component
+
+Import the compound from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index).
+
+```tsx
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  useSKUMatrix,
+} from "@faststore/ui";
+```
+
+### Import styles
+
+Add the sidebar styling tokens and layout rules to your theme stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/SKUMatrix/styles.scss";
+```
+
+Follow the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) instructions. Additionally, the quantity selector, badges, and table components also rely on their respective partials.
+
+---
+
+## Examples
+
+### Loading State
+
+While fetching product variants, display skeleton loaders to improve perceived performance.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrix>
+          <SKUMatrixTrigger variant="secondary">View variants</SKUMatrixTrigger>
+          <SKUMatrixSidebar
+            title="Loading variants..."
+            direction="rightSide"
+            size="partial"
+            loading={true}
+            columns={{
+              name: 'Variation',
+              additionalColumns: [{ label: 'Size', value: 'size' }],
+              availability: { label: 'Stock', stockDisplaySettings: 'showStockQuantity' },
+              price: 'Price',
+              quantitySelector: 'Quantity',
+            }}
+            buyProps={{
+              'data-testid': 'bulk-add',
+              'data-sku': 'loading',
+              'data-seller': 'seller-1',
+              onClick: () => {},
+            }}
+            ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
+          />
+        </SKUMatrix>
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+<SKUMatrixSidebar
+  title="Loading variants..."
+  loading={true}
+  columns={{
+    name: 'Variation',
+    additionalColumns: [{ label: 'Size', value: 'size' }],
+    availability: { label: 'Stock', stockDisplaySettings: 'showStockQuantity' },
+    price: 'Price',
+    quantitySelector: 'Quantity',
+  }}
+  buyProps={{
+    'data-testid': 'bulk-add',
+    'data-sku': 'product',
+    'data-seller': 'seller-1',
+    onClick: handleAddToCart,
+  }}
+  ImageComponent={ImageComponent}
+/>
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### Availability Badge Display
+
+Show availability status using badges instead of numeric stock quantities.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SKUMatrixUsage />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+<SKUMatrixSidebar
+  title="Product Variants"
+  columns={{
+    name: 'Variation',
+    additionalColumns: [{ label: 'Color', value: 'color' }],
+    availability: {
+      label: 'Availability',
+      stockDisplaySettings: 'showAvailability', // Shows "Available" or "Out of stock" badges
+    },
+    price: 'Price',
+    quantitySelector: 'Quantity',
+  }}
+  // ... other props
+/>
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### Full Width Sidebar
+
+Display the matrix in a full-width slide-over for complex product catalogs with many columns.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrix>
+          <SKUMatrixTrigger variant="secondary">View all options</SKUMatrixTrigger>
+          <SKUMatrixSidebar
+            title="Select your products"
+            direction="rightSide"
+            size="full"
+            loading={false}
+            columns={{
+              name: 'Product',
+              additionalColumns: [
+                { label: 'Color', value: 'color' },
+                { label: 'Size', value: 'size' },
+                { label: 'Material', value: 'material' },
+              ],
+              availability: { label: 'Stock', stockDisplaySettings: 'showStockQuantity' },
+              price: 'Unit Price',
+              quantitySelector: 'Qty',
+            }}
+            buyProps={{
+              'data-testid': 'bulk-add',
+              'data-sku': 'full-width',
+              'data-seller': 'seller-1',
+              onClick: () => {},
+            }}
+            ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
+          />
+        </SKUMatrix>
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+<SKUMatrixSidebar
+  title="Select your products"
+  size="full"  // Full width instead of partial
+  direction="rightSide"
+  columns={{
+    name: 'Product',
+    additionalColumns: [
+      { label: 'Color', value: 'color' },
+      { label: 'Size', value: 'size' },
+      { label: 'Material', value: 'material' },
+    ],
+    availability: { label: 'Stock', stockDisplaySettings: 'showStockQuantity' },
+    price: 'Unit Price',
+    quantitySelector: 'Qty',
+  }}
+  // ... other props
+/>
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+### Left Side Direction
+
+Open the sidebar from the left side of the screen.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <UIProvider>
+        <SKUMatrix>
+          <SKUMatrixTrigger variant="secondary">Open from left</SKUMatrixTrigger>
+          <SKUMatrixSidebar
+            title="Product Selection"
+            direction="leftSide"
+            size="partial"
+            loading={false}
+            columns={{
+              name: 'Item',
+              additionalColumns: [],
+              availability: { label: 'Available', stockDisplaySettings: 'showStockQuantity' },
+              price: 'Price',
+              quantitySelector: 'Quantity',
+            }}
+            buyProps={{
+              'data-testid': 'bulk-add',
+              'data-sku': 'left-side',
+              'data-seller': 'seller-1',
+              onClick: () => {},
+            }}
+            ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
+          />
+        </SKUMatrix>
+      </UIProvider>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+
+```tsx
+<SKUMatrixSidebar
+  title="Product Selection"
+  direction="leftSide"  // Opens from left instead of right
+  size="partial"
+  // ... other props
+/>
+```
+
+  </Tab>
+</Tabs>
+
+---
+
+
+---
+
+## Design tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-bkg-color"
+    value="var(--fs-color-body-bkg)"
+    isColor
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-size"
+    value="var(--fs-text-size-6)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-title-text-weight"
+    value="var(--fs-text-weight-semibold)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-font-size"
+    value="var(--fs-text-size-tiny)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-text-weight"
+    value="var(--fs-text-weight-medium)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-image-width"
+    value="var(--fs-spacing-7)"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-sidebar-table-cell-image-border-radius"
+    value="var(--fs-border-radius)"
+  />
+  <TokenDivider />
+  <TokenRow
+    token="--fs-sku-matrix-slide-over-partial-gap"
+    value="calc(2 * var(--fs-grid-padding))"
+  />
+  <TokenRow
+    token="--fs-sku-matrix-slide-over-partial-width-mobile"
+    value="calc(100vw - var(--fs-sku-matrix-slide-over-partial-gap))"
+  />
+</TokenTable>
+
+---
+
+## Data attributes
+
+Use these selectors to customize styles or attach test logic:
+
+- `data-fs-sku-matrix`
+- `data-testid="fs-sku-matrix"`
+- `data-fs-sku-matrix-sidebar`
+- `data-fs-sku-matrix-sidebar-title`
+- `data-fs-sku-matrix-sidebar-cell-image`
+- `data-fs-sku-matrix-sidebar-table-price`
+- `data-fs-sku-matrix-sidebar-table-cell-quantity-selector`
+- `data-fs-sku-matrix-sidebar-table-action`
+- `data-fs-sku-matrix-sidebar-footer`
+- SlideOver attributes propagated to the sidebar: `data-fs-slide-over`, `data-fs-slide-over-direction`, `data-fs-slide-over-size`, `data-fs-slide-over-state`
+
+---
+
+## Props
+
+<ComponentPropsSection component="SKUMatrix" />
+<ComponentPropsSection component="SKUMatrixTrigger" />
+<ComponentPropsSection component="SKUMatrixSidebar" />
+
+---
+
+## Best practices
+
+### ✅ Do's
+
+- Use concise variation labels (e.g., "Black - 42") to ensure the table remains scannable on partial-width slide-overs.
+- Keep price and availability in sync with your store OMS; display a toast message when quantity adjustments are coerced.
+- Localize both column headers and toast messages for multinational catalogs.
+
+### ❌ Don'ts
+
+- Don't expose the matrix when a product is single-SKU; it adds unnecessary friction.
+- Don't rely on color alone for stock communication; pair badge colors with descriptive text.
+- Don't allow quantities beyond available stock; the component exposes validation hooks for this reason.
+- Don't hardcode dimensions; merchants should be able to adjust columns per category via Headless CMS.
+
+---
+
+## Related components
+
+<SectionList grid="column">
+  <SectionItem
+    title="SlideOver"
+    description="The SlideOver component represents an additional session that complements the screen's information."
+    actionPath="/docs/guides/faststore/organisms-slide-over"
+  />
+  <SectionItem
+    title="Table"
+    description="Tables display information in a friendly way, allowing users to scan for details quickly."
+    actionPath="/docs/guides/faststore/molecules-table"
+  />
+  <SectionItem
+    title="QuantitySelector"
+    description="Allows customers to select the quantity of a given product."
+    actionPath="/docs/guides/faststore/molecules-quantity-selector"
+  />
+</SectionList>
