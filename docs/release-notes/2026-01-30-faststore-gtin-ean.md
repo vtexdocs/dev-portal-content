@@ -18,7 +18,7 @@ This change affects the [JSON-LD structured data](https://developers.google.com/
 
 ## Why did we make this change?
 
-Using EAN values for GTIN aligns your product data with search engine best practices and industry standards. This enables your products to qualify for [Google's rich results](https://developers.google.com/search/docs/appearance/structured-data/product), which display enhanced product information directly in search results, and helps search engines accurately index and match your products across multiple sources, improving organic visibility and discoverability.
+Using EAN values for GTIN aligns your product data with search engine best practices and industry standards. This enables your products to qualify for [Google's rich results](https://developers.google.com/search/docs/appearance/structured-data/product), which display enhanced product information directly in search results and helps search engines accurately index and match your products across multiple sources, improving organic visibility and discoverability.
 
 ## What needs to be done?
 
