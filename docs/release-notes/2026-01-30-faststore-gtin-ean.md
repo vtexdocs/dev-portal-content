@@ -3,7 +3,7 @@ title: "FastStore: Improved SEO and data reliability with EAN-based GTIN in prod
 slug: "2026-01-30-faststore-gtin-ean"
 type: "fixed"
 createdAt: "2026-01-30T10:00:00.000Z"
-excerpt: "FastStore now accurately populates the Global Trade Item Number (GTIN) field in product structured data using the European Article Number (EAN), leading to improved SEO compliance and data reliability."
+excerpt: "FastStore now uses European Article Number (EAN) values to populate the GTIN field in product structured data, improving SEO compliance and product discoverability in search engines."
 ---
 
 FastStore has improved how the Global Trade Item Number (GTIN) field is populated in product structured data. This update ensures that product pages display standardized product identifiers, helping search engines better index your products and potentially qualify for rich results in Google Search.
@@ -18,18 +18,13 @@ This change affects the [JSON-LD structured data](https://developers.google.com/
 
 ## Why did we make this change?
 
-The previous implementation didn't use the standardized EAN code for GTIN, which could affect:  
-**SEO performance**: Search engines prefer standardized product identifiers.  
-**Product discoverability**: Accurate GTINs help search engines match products across sources.  
-**Rich results eligibility**: Google requires valid GTINs for [product rich results](https://developers.google.com/search/docs/appearance/structured-data/product).
-
-Using EAN values makes your product structured data more accurate and compliant with search engine requirements.
+Using EAN values for GTIN aligns your product data with search engine best practices and industry standards. This enables your products to qualify for [Google's rich results](https://developers.google.com/search/docs/appearance/structured-data/product), which display enhanced product information directly in search results, and helps search engines accurately index and match your products across multiple sources, improving organic visibility and discoverability.
 
 ## What needs to be done?
 
-No migration is required. This update is automatically applied to all FastStore projects.
+This update is automatically applied to all FastStore projects. No action is required for standard implementations.
 
-> ⚠️ If you rely on custom logic or integrations for structured data, review your storefront implementation to ensure EAN values are correctly populated for SKUs where GTIN is critical.
+> ⚠️ If your store uses custom integrations to handle structured data, review your implementation to ensure EAN values are correctly populated for SKUs where GTIN is critical.
 
 To confirm that the GTIN field is using EAN values correctly, follow these steps:
 
