@@ -28,13 +28,13 @@ This update is automatically applied to all FastStore projects. No action is req
 
 To confirm that the GTIN field is using EAN values correctly, follow these steps:
 
-1. Open a product page in your store.  
-2. Right-click on the page and select **Inspect** (or press `F12`).  
-3. In the **Elements** tab, press `Ctrl+F` (or `Cmd+F` on Mac) and search for `"gtin"`.  
+1. Open a product page in your store.
+2. Right-click on the page and select **Inspect** (or press `F12`).
+3. In the **Elements** tab, press `Ctrl+F` (or `Cmd+F` on Mac) and search for `"gtin"`.
 4. Verify the value matches the EAN configured in your [Catalog](https://help.vtex.com/en/docs/tutorials/adding-or-editing-skus#identifiers).
 
 The structured data should look like this:
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/2026-01-30-faststore-gtin-ean-2.webp)
+![gtin-field-dev-tools](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/2026-01-30-faststore-gtin-ean-2.webp)
 
 > ⚠️ Products without EAN will fall back to using the Reference Code. You can create an EAN for a SKU by following the [Create SKU EAN API reference](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/ean/-ean-).
