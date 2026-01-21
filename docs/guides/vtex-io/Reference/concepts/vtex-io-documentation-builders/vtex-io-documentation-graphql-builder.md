@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-graphql-builder"
 excerpt: "Learn how to use the GraphQL builder."
 hidden: false
 createdAt: "2025-05-05T12:00:00.000Z"
-updatedAt: "2025-09-30T11:00:00.000Z"
+updatedAt: "2026-01-12T12:00:00.000Z"
 category: "App Development"
 ---
 
@@ -18,16 +18,16 @@ The `graphql` builder is available in the following versions:
 
 | Builder version | Mandatory `@auth` directive\* | Status |
 | :- | :- | :- |
-| `1.x` | No | Unavailable for new apps and new major versions of existing apps. Available for linking apps and publishing new minor and patch [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps until January 7, 2026. |
+| `1.x` | No | Deprecated |
 | `2.x` | Yes | Active |
 
 \* The `@auth` directive adds an authorization step to GraphQL queries and mutations. For more details, see [GraphQL authorization in IO apps](https://developers.vtex.com/docs/guides/graphql-authorization-in-io-apps).
 
-> ⚠️ Apps using deprecated builder versions can still run on the VTEX platform, but developers can't build or create new app versions using these builder versions.
+> ⚠️ Apps using deprecated builder versions can still run on the VTEX platform, but developers can't build or create new [app versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) using these builder versions.
 
 ## Folder structure
 
-The `graphql` builder uses a `graphql` folder in the app's root folder. This folder contains `.graphql` files with the schema definitions. Developers can structure the whole schema in a single file or split it into multiple files and subfolders.
+The `graphql` builder uses a `graphql` folder at the app's root folder. This folder contains `.graphql` files with the schema definitions. Developers can structure the whole schema in a single file or split it into multiple files and subfolders.
 
 We recommend you to:
 
