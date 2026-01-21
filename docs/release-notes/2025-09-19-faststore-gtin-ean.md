@@ -1,8 +1,9 @@
 ---
 title: "FastStore: Improved SEO and data reliability with EAN-based GTIN in product structured data"
-slug: "2026-01-21-faststore-gtin-ean"
+slug: "2025-09-19-faststore-gtin-ean"
 type: "fixed"
-createdAt: "2026-01-30T10:00:00.000Z"
+createdAt: "2025-09-19T10:00:00.000Z"
+updatedAt: "2026-01-21T10:00:00.000Z"
 excerpt: "FastStore now uses European Article Number (EAN) values to populate the GTIN field in product structured data, improving SEO compliance and product discoverability in search engines."
 ---
 
