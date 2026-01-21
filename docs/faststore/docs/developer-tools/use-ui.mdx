@@ -1,0 +1,497 @@
+---
+title: useUI Hook
+description: Learn how to use the useUI hook to manage UI state across your FastStore application
+---
+
+The `useUI` hook is a state management solution provided by the FastStore Components package that centralizes the control of various UI elements in your application. It manages the state of modals, sidebars, toasts, popovers, and region sliders through a single context.
+
+## Overview
+
+The `useUI` hook provides a centralized way to manage UI state across your application. It uses React Context and useReducer to maintain the state of various UI components, ensuring consistent behavior and preventing conflicts between different UI elements.
+
+## Prerequisites
+
+Before using the `useUI` hook, you need to wrap your application with the `UIProvider` component:
+
+```tsx
+import { UIProvider } from '@faststore/components'
+
+function App() {
+  return (
+    <UIProvider>
+      {/* Your application components */}
+    </UIProvider>
+  )
+}
+```
+
+## Hook interface
+
+The `useUI` hook returns an object containing both state values and action functions:
+
+```tsx
+interface UIState {
+  // State values
+  cart: boolean
+  modal: boolean
+  navbar: boolean
+  filter: boolean
+  toasts: Toast[]
+  popover: Popover
+  regionSlider: RegionSlider
+  
+  // Action functions
+  closeNavbar: () => void
+  openNavbar: () => void
+  closeFilter: () => void
+  openFilter: () => void
+  openCart: () => void
+  closeCart: () => void
+  openModal: () => void
+  closeModal: () => void
+  pushToast: (data: Toast) => void
+  popToast: () => void
+  openPopover: (popover: Popover) => void
+  closePopover: () => void
+  openRegionSlider: (type: RegionSliderType) => void
+  closeRegionSlider: () => void
+}
+```
+
+## State Properties
+
+### UI Elements State
+
+- **`cart`**: Controls the cart sidebar visibility
+- **`modal`**: Controls modal visibility
+- **`navbar`**: Controls navigation menu visibility
+- **`filter`**: Controls filter slider visibility
+
+### Toast Management
+
+- **`toasts`**: Array of active toast notifications
+
+```tsx
+interface Toast {
+  message: string
+  status: 'ERROR' | 'WARNING' | 'INFO'
+  title?: string
+  icon?: ReactNode
+}
+```
+
+### Popover Management
+
+- **`popover`**: Controls popover state and trigger reference
+
+```tsx
+interface Popover {
+  isOpen: boolean
+  triggerRef?: RefObject<HTMLElement>
+}
+```
+
+### Region Slider Management
+
+- **`regionSlider`**: Controls region slider state and type
+
+```tsx
+interface RegionSlider {
+  type: RegionSliderType | 'none'
+  isOpen: boolean
+}
+```
+
+## Usage Examples
+
+### Basic Usage
+
+```tsx
+import { useUI } from '@faststore/components'
+
+function MyComponent() {
+  const { modal, openModal, closeModal } = useUI()
+
+  return (
+    <div>
+      <button onClick={openModal}>Open Modal</button>
+      {modal && (
+        <div>
+          <h2>Modal Content</h2>
+          <button onClick={closeModal}>Close</button>
+        </div>
+      )}
+    </div>
+  )
+}
+```
+
+### Cart Sidebar Management
+
+```tsx
+import { useUI } from '@faststore/components'
+
+function CartButton() {
+  const { cart, openCart, closeCart } = useUI()
+
+  return (
+    <div>
+      <button onClick={openCart}>
+        View Cart
+      </button>
+      {cart && (
+        <div className="cart-sidebar">
+          <button onClick={closeCart}>Close Cart</button>
+          {/* Cart content */}
+        </div>
+      )}
+    </div>
+  )
+}
+```
+
+### Toast Notifications
+
+```tsx
+import { useUI } from '@faststore/components'
+
+function NotificationButton() {
+  const { pushToast, popToast } = useUI()
+
+  const showSuccessToast = () => {
+    pushToast({
+      message: 'Item added to cart successfully!',
+      status: 'INFO',
+      title: 'Success',
+      icon: <CheckIcon />
+    })
+  }
+
+  const showErrorToast = () => {
+    pushToast({
+      message: 'Something went wrong. Please try again.',
+      status: 'ERROR',
+      title: 'Error'
+    })
+  }
+
+  return (
+    <div>
+      <button onClick={showSuccessToast}>Show Success</button>
+      <button onClick={showErrorToast}>Show Error</button>
+    </div>
+  )
+}
+```
+
+### Popover Management
+
+```tsx
+import { useUI } from '@faststore/components'
+import { useRef } from 'react'
+
+function PopoverTrigger() {
+  const { popover, openPopover, closePopover } = useUI()
+  const triggerRef = useRef<HTMLButtonElement>(null)
+
+  const handleClick = () => {
+    if (popover.isOpen) {
+      closePopover()
+    } else {
+      openPopover({
+        isOpen: true,
+        triggerRef
+      })
+    }
+  }
+
+  return (
+    <div>
+      <button ref={triggerRef} onClick={handleClick}>
+        Toggle Popover
+      </button>
+      {popover.isOpen && (
+        <div className="popover">
+          Popover content
+        </div>
+      )}
+    </div>
+  )
+}
+```
+
+### Filter Slider Management
+
+```tsx
+import { useUI } from '@faststore/components'
+
+function FilterButton() {
+  const { filter, openFilter, closeFilter } = useUI()
+
+  return (
+    <div>
+      <button onClick={openFilter}>
+        Open Filters
+      </button>
+      {filter && (
+        <div className="filter-slider">
+          <button onClick={closeFilter}>Close Filters</button>
+          {/* Filter content */}
+        </div>
+      )}
+    </div>
+  )
+}
+```
+
+### Region Slider Management
+
+```tsx
+import { useUI, regionSliderTypes } from '@faststore/components'
+
+function LocationButton() {
+  const { regionSlider, openRegionSlider, closeRegionSlider } = useUI()
+
+  const handleLocationChange = () => {
+    openRegionSlider(regionSliderTypes.setLocation)
+  }
+
+  return (
+    <div>
+      <button onClick={handleLocationChange}>
+        Change Location
+      </button>
+      {regionSlider.isOpen && (
+        <div className="region-slider">
+          <button onClick={closeRegionSlider}>Close</button>
+          {/* Region slider content */}
+        </div>
+      )}
+    </div>
+  )
+}
+```
+
+## Advanced Usage Patterns
+
+### Custom Hook Wrapper
+
+You can create custom hooks that wrap `useUI` for specific use cases:
+
+```tsx
+import { useUI } from '@faststore/components'
+
+export function useCart() {
+  const { cart, openCart, closeCart } = useUI()
+  
+  return {
+    isCartOpen: cart,
+    openCart,
+    closeCart,
+    toggleCart: () => cart ? closeCart() : openCart()
+  }
+}
+
+export function useNotifications() {
+  const { pushToast, popToast, toasts } = useUI()
+  
+  const notify = (message: string, type: 'success' | 'error' | 'warning') => {
+    pushToast({
+      message,
+      status: type.toUpperCase() as 'INFO' | 'ERROR' | 'WARNING',
+      title: type === 'success' ? 'Success' : type === 'error' ? 'Error' : 'Warning'
+    })
+  }
+  
+  return {
+    notify,
+    clearNotification: popToast,
+    hasNotifications: toasts.length > 0
+  }
+}
+```
+
+### Conditional UI Rendering
+
+```tsx
+import { useUI } from '@faststore/components'
+
+function ConditionalComponent() {
+  const { modal, cart, filter } = useUI()
+  
+  // Only render when no other UI elements are open
+  const canShowContent = !modal && !cart && !filter
+  
+  return (
+    <div>
+      {canShowContent && (
+        <div>Main content is visible</div>
+      )}
+    </div>
+  )
+}
+```
+
+## Best Practices
+
+### 1. Single Source of Truth
+
+Always use the `useUI` hook for managing UI state instead of local component state for these specific UI elements:
+
+```tsx
+// ✅ Good - Using useUI
+const { modal, openModal, closeModal } = useUI()
+
+// ❌ Avoid - Local state for UI elements managed by useUI
+const [isModalOpen, setIsModalOpen] = useState(false)
+```
+
+### 2. Consistent Toast Usage
+
+Use consistent toast patterns across your application:
+
+```tsx
+const showToast = (message: string, type: 'success' | 'error' | 'info') => {
+  pushToast({
+    message,
+    status: type.toUpperCase() as 'INFO' | 'ERROR' | 'WARNING',
+    title: type === 'success' ? 'Success' : 
+           type === 'error' ? 'Error' : 'Information'
+  })
+}
+```
+
+### 3. Proper Cleanup
+
+The hook automatically handles cleanup (like removing scroll locks), but ensure you're using the provided action functions:
+
+```tsx
+// ✅ Good - Using provided actions
+const { closeModal } = useUI()
+closeModal()
+
+// ❌ Avoid - Direct state manipulation
+// This won't trigger proper cleanup
+```
+
+### 4. Error Handling
+
+The hook will throw an error if used outside the `UIProvider`:
+
+```tsx
+function MyComponent() {
+  try {
+    const ui = useUI()
+    return <div>Content</div>
+  } catch (error) {
+    // Handle missing UIProvider
+    return <div>Error: Missing UIProvider</div>
+  }
+}
+```
+
+## Integration with FastStore Components
+
+The `useUI` hook is designed to work seamlessly with FastStore components:
+
+- **Modal**: Automatically uses `closeModal` when transitions complete
+- **CartSidebar**: Uses `closeCart` for proper cleanup
+- **FilterSlider**: Uses `closeFilter` and `closeRegionSlider`
+- **Toast**: Uses `popToast` for automatic dismissal
+- **Popover**: Uses popover state for positioning and visibility
+
+## Troubleshooting
+
+### Common Issues
+
+1. **"Missing UI context on React tree" error**
+   - Ensure your component is wrapped with `UIProvider`
+   - Check that you're importing `useUI` from the correct package
+
+2. **UI elements not responding to state changes**
+   - Verify you're using the action functions, not direct state manipulation
+   - Check that the component is within the `UIProvider` tree
+
+3. **Multiple UI elements opening simultaneously**
+   - The hook manages conflicts automatically by adding scroll locks
+   - Use the provided action functions to ensure proper state management
+
+### Debug Tips
+
+```tsx
+function DebugComponent() {
+  const ui = useUI()
+  
+  console.log('UI State:', {
+    cart: ui.cart,
+    modal: ui.modal,
+    navbar: ui.navbar,
+    filter: ui.filter,
+    toasts: ui.toasts.length,
+    popover: ui.popover.isOpen,
+    regionSlider: ui.regionSlider
+  })
+  
+  return <div>Debug info in console</div>
+}
+```
+
+## API Reference
+
+### State Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `cart` | `boolean` | Cart sidebar visibility state |
+| `modal` | `boolean` | Modal visibility state |
+| `navbar` | `boolean` | Navigation menu visibility state |
+| `filter` | `boolean` | Filter slider visibility state |
+| `toasts` | `Toast[]` | Array of active toast notifications |
+| `popover` | `Popover` | Popover state and trigger reference |
+| `regionSlider` | `RegionSlider` | Region slider state and type |
+
+### Action Functions
+
+| Function | Parameters | Description |
+|----------|------------|-------------|
+| `openCart` | - | Opens the cart sidebar |
+| `closeCart` | - | Closes the cart sidebar |
+| `openModal` | - | Opens a modal |
+| `closeModal` | - | Closes a modal |
+| `openNavbar` | - | Opens the navigation menu |
+| `closeNavbar` | - | Closes the navigation menu |
+| `openFilter` | - | Opens the filter slider |
+| `closeFilter` | - | Closes the filter slider |
+| `pushToast` | `Toast` | Adds a new toast notification |
+| `popToast` | - | Removes the first toast notification |
+| `openPopover` | `Popover` | Opens a popover with optional trigger reference |
+| `closePopover` | - | Closes the current popover |
+| `openRegionSlider` | `RegionSliderType` | Opens region slider with specified type |
+| `closeRegionSlider` | - | Closes the region slider |
+
+### Types
+
+```tsx
+interface Toast {
+  message: string
+  status: 'ERROR' | 'WARNING' | 'INFO'
+  title?: string
+  icon?: ReactNode
+}
+
+interface Popover {
+  isOpen: boolean
+  triggerRef?: RefObject<HTMLElement>
+}
+
+interface RegionSlider {
+  type: RegionSliderType | 'none'
+  isOpen: boolean
+}
+
+type RegionSliderType = 
+  | 'setLocation'
+  | 'changeLocation'
+  | 'changePickupPoint'
+  | 'globalChangePickupPoint'
+```
