@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-graphql-builder"
 excerpt: "Learn how to use the GraphQL builder."
 hidden: false
 createdAt: "2025-05-05T12:00:00.000Z"
-updatedAt: "2025-09-30T11:00:00.000Z"
+updatedAt: "2026-01-12T12:00:00.000Z"
 category: "App Development"
 ---
 
@@ -27,7 +27,7 @@ The `graphql` builder is available in the following versions:
 
 ## Folder structure
 
-The `graphql` builder uses a `graphql` folder in the app's root folder. This folder contains `.graphql` files with the schema definitions. Developers can structure the whole schema in a single file or split it into multiple files and subfolders.
+The `graphql` builder uses a `graphql` folder at the app's root folder. This folder contains `.graphql` files with the schema definitions. Developers can structure the whole schema in a single file or split it into multiple files and subfolders.
 
 We recommend you to:
 
