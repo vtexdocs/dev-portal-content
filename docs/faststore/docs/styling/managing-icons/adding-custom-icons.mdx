@@ -1,0 +1,134 @@
+---
+title: "Adding custom icons"
+excerpt: "Learn how to add new custom icons to your FastStore project."
+---
+
+This guide explains how to add new custom icons to your FastStore project. This is useful when you need icons that are not included in the [default FastStore icon set](https://developers.vtex.com/docs/guides/faststore/styling-icons).
+
+## Before you begin
+
+- Make sure you have a FastStore project set up and running locally.
+- Have your custom icon in SVG format ready.
+
+## Context
+
+You want to add a custom icon (e.g., a "WhatsApp" icon for customer support) that is not available in the default FastStore icon set.
+
+## Instructions
+
+### Step 1: Create the public folder
+
+If your project doesn't have a `/public` folder at the root level, create one:
+
+```
+your-store/
+├── src/
+├── discovery.config.js
+├── package.json
+└── public/           ← Create this folder
+```
+
+### Step 2: Copy the base icons.svg file
+
+You need to copy the existing `icons.svg` file to preserve all default icons:
+
+1. Run `yarn dev` or `yarn build` at least once to generate the `.faststore` folder
+2. Copy the file from `/.faststore/public/icons.svg`
+3. Paste it into your `/public` folder
+
+```
+your-store/
+├── src/
+├── discovery.config.js
+├── package.json
+└── public/
+    └── icons.svg     ← Paste the file here
+```
+
+> ⚠️ **Important**: If you create a new `icons.svg` without copying the base file, all default icons will stop working because your file completely replaces the core file.
+
+### Step 3: Add your custom icon
+
+Open the `/public/icons.svg` file and add your new icon as a `<symbol>` element with a unique `id`.
+
+**Before adding your icon, prepare the SVG:**
+
+1. Change the `<svg>` tag to `<symbol>`
+2. Add a unique `id` attribute
+3. Remove unnecessary properties like `fill`, `stroke-width`, `width`, `height` to allow CSS styling
+4. Use `stroke="currentColor"` or `fill="currentColor"` to inherit colors from CSS
+
+**Example: Adding a WhatsApp icon**
+
+```svg
+<svg style="display:none">
+  <!-- ... existing icons ... -->
+
+  <!-- Add your custom icon at the end -->
+  <symbol id="WhatsApp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+    <path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-4-1.08,7.85,7.85,0,0,0-2.53.42L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z" fill="currentColor"/>
+    <path d="M152,136H136a8,8,0,0,1,0-16h16a8,8,0,0,0,0-16H136a24,24,0,0,0,0,48h16a8,8,0,0,0,0-16Z" fill="currentColor"/>
+    <path d="M104,136H88a8,8,0,0,1,0-16h16a8,8,0,0,0,0-16H88a24,24,0,0,0,0,48h16a8,8,0,0,0,0-16Z" fill="currentColor"/>
+  </symbol>
+
+</svg>
+```
+
+### Step 4: Use your custom icon
+
+Import and use the `Icon` component with your custom icon's `id`:
+
+```tsx
+import { Icon } from '@faststore/ui'
+
+function CustomerSupport() {
+  return (
+    <a href="https://wa.me/yourphonenumber" className="whatsapp-button">
+      <Icon name="WhatsApp" width={24} height={24} />
+      <span>Contact us on WhatsApp</span>
+    </a>
+  )
+}
+
+export default CustomerSupport
+```
+
+### Step 5: Rebuild your project
+
+Run `yarn dev` to see your changes. The build process will copy your custom `/public/icons.svg` and overwrite the default one.
+
+## Best practices
+
+| Practice | Description |
+|----------|-------------|
+| **Use unique IDs** | Ensure your custom icon `id` doesn't conflict with existing icons |
+| **Use `currentColor`** | Use `stroke="currentColor"` or `fill="currentColor"` to allow CSS color inheritance |
+| **Remove hardcoded styles** | Remove `fill`, `stroke-width`, `width`, `height` attributes to allow flexible styling |
+| **Keep viewBox** | Always include the `viewBox` attribute for proper scaling |
+| **Document your icons** | Keep a list of custom icons added to your project for team reference |
+
+## Troubleshooting
+
+### Icon not showing
+
+- Verify the `id` in your `<symbol>` matches the `name` prop in the `Icon` component
+- Check if the `icons.svg` file is in the correct location (`/public/icons.svg`)
+- Run `yarn dev` or `yarn build` to ensure the file is copied
+
+### Icon appears broken or distorted
+
+- Ensure the `viewBox` attribute is correctly set
+- Check if paths in the SVG are valid
+- Remove any transforms or clip paths that might cause issues
+
+### Default icons stopped working
+
+- You likely created a new `icons.svg` instead of copying the base file
+- Copy the complete `icons.svg` from `/.faststore/public/icons.svg` and add your custom icons to it
+
+## Related resources
+
+- [Icons reference](https://developers.vtex.com/docs/guides/faststore/styling-icons)
+- [Overriding native icons](https://developers.vtex.com/docs/guides/faststore/icons-overriding-native-icons)
+- [Phosphor Icons](https://phosphoricons.com/) - Source of FastStore's default icons
+

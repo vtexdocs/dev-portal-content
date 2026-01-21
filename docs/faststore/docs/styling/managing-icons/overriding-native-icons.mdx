@@ -1,0 +1,152 @@
+---
+title: "Overriding native icons"
+excerpt: "Learn how to replace existing FastStore icons with custom designs."
+---
+
+This guide explains how to override existing icons in your FastStore project. This is useful when you want to replace the default icon designs with custom ones that match your brand identity.
+
+## Before you begin
+
+- Make sure you have a FastStore project set up and running locally.
+- Have your replacement icon in SVG format ready.
+
+## Context
+
+Your brand has a specific shopping cart icon design, and you want to replace the default `ShoppingCart` icon used throughout your FastStore storefront with your custom design.
+
+## Instructions
+
+### Step 1: Create the public folder
+
+If your project doesn't have a `/public` folder at the root level, create one:
+
+```
+your-store/
+├── src/
+├── discovery.config.js
+├── package.json
+└── public/           ← Create this folder
+```
+
+### Step 2: Copy the base icons.svg file
+
+Copy the existing `icons.svg` file to have all default icons as a starting point:
+
+1. Run `yarn dev` or `yarn build` at least once to generate the `.faststore` folder
+2. Copy the file from `/.faststore/public/icons.svg`
+3. Paste it into your `/public` folder
+
+```
+your-store/
+├── src/
+├── discovery.config.js
+├── package.json
+└── public/
+    └── icons.svg     ← Paste the file here
+```
+
+### Step 3: Find and replace the icon
+
+Open the `/public/icons.svg` file and locate the icon you want to override by searching for its `id`.
+
+**Example: Overriding the ShoppingCart icon**
+
+Find the existing `ShoppingCart` symbol:
+
+```svg
+<symbol id="ShoppingCart" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="none"></rect>
+  <path d="M184,184H69.81818L41.92162,30.56892A8,8,0,0,0,34.05066,24H16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+  <!-- ... more paths ... -->
+</symbol>
+```
+
+Replace it with your custom design, **keeping the same `id`**:
+
+```svg
+<symbol id="ShoppingCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Your custom cart icon paths here -->
+  <path d="M..." fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol>
+```
+
+> ⚠️ **Important**: Keep the `id` exactly the same (`ShoppingCart`) to ensure all components using this icon will display your custom version.
+
+### Step 4: Rebuild your project
+
+Run `yarn dev` to see your changes. The build process will:
+
+1. Copy core files to `.faststore/public/`
+2. Copy **your** `/public/icons.svg` with `overwrite: true`
+3. Your custom icon replaces the default one
+
+## Example: Replacing the Heart icon
+
+Here's a complete example of replacing the default Heart icon with a filled heart design:
+
+**Default Heart icon (outline style):**
+
+```svg
+<symbol id="Heart" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="none"></rect>
+  <path d="M128,216S28,160,28,92A52,52,0,0,1,128,72h0A52,52,0,0,1,228,92C228,160,128,216,128,216Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol>
+```
+
+**Custom Heart icon (filled style):**
+
+```svg
+<symbol id="Heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <path d="M240,94c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,220.66,16,164,16,94A62.07,62.07,0,0,1,78,32c20.65,0,38.73,8.88,50,23.89C139.27,40.88,157.35,32,178,32A62.07,62.07,0,0,1,240,94Z" fill="currentColor"></path>
+</symbol>
+```
+
+## Common icons to override
+
+Here are some commonly overridden icons and their IDs:
+
+| Icon ID | Usage |
+|---------|-------|
+| `ShoppingCart` | Cart button, minicart |
+| `Heart` | Wishlist, favorites |
+| `User` | Account, sign-in button |
+| `MagnifyingGlass` | Search bar |
+| `House` | Home navigation |
+| `MapPin` | Store locator, address |
+| `Truck` | Shipping information |
+
+## Best practices
+
+| Practice | Description |
+|----------|-------------|
+| **Keep the same ID** | The `id` must match exactly for the override to work |
+| **Match the viewBox** | Try to use the same `viewBox` dimensions for consistent sizing |
+| **Use currentColor** | Maintain `stroke="currentColor"` or `fill="currentColor"` for theme compatibility |
+| **Test all usages** | Check all pages where the icon appears to ensure it looks correct |
+| **Document changes** | Keep track of which icons you've customized |
+
+## Troubleshooting
+
+### Override not working
+
+- Verify the `id` matches exactly (case-sensitive)
+- Ensure the file is saved in `/public/icons.svg` (not a subfolder)
+- Run `yarn dev` or `yarn build` to trigger the copy process
+- Clear your browser cache
+
+### Icon looks different sizes in different places
+
+- Check if your custom icon has different `viewBox` dimensions
+- Ensure you're not setting fixed `width` or `height` in the SVG that would override component styling
+
+### Colors not applying correctly
+
+- Make sure you're using `currentColor` instead of hardcoded colors
+- Remove any `fill` or `stroke` attributes with specific colors
+
+## Related resources
+
+- [Icons reference](https://developers.vtex.com/docs/guides/faststore/styling-icons)
+- [Adding custom icons](https://developers.vtex.com/docs/guides/faststore/icons-adding-custom-icons)
+- [Phosphor Icons](https://phosphoricons.com/) - Find replacement icons
+
