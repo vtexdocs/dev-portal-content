@@ -18,12 +18,12 @@ The `graphql` builder is available in the following versions:
 
 | Builder version | Mandatory `@auth` directive\* | Status |
 | :- | :- | :- |
-| `1.x` | No | Unavailable for new apps and new major versions of existing apps. Available for linking apps and publishing new minor and patch [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps until January 7, 2026. |
+| `1.x` | No | Deprecated |
 | `2.x` | Yes | Active |
 
 \* The `@auth` directive adds an authorization step to GraphQL queries and mutations. For more details, see [GraphQL authorization in IO apps](https://developers.vtex.com/docs/guides/graphql-authorization-in-io-apps).
 
-> ⚠️ Apps using deprecated builder versions can still run on the VTEX platform, but developers can't build or create new app versions using these builder versions.
+> ⚠️ Apps using deprecated builder versions can still run on the VTEX platform, but developers can't build or create new [app versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) using these builder versions.
 
 ## Folder structure
 
