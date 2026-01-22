@@ -1,0 +1,658 @@
+# useQuery
+
+`useQuery` is a React hook for executing GraphQL queries with automatic data fetching, caching, and revalidation in FastStore applications. Built on top of SWR (stale-while-revalidate), it provides a declarative approach to data fetching that executes queries on component mount and manages the entire lifecycle automatically.
+
+## Core Concepts
+
+### Lifecycle
+
+```
+Component Mount → Query Execution → Cache Check → Network Request → Data Response → Re-renders → Background Revalidation
+```
+
+1. **Mount**: Query automatically executes when component mounts
+2. **Cache First**: Returns cached data if available (stale-while-revalidate)
+3. **Network Request**: Fetches fresh data in background
+4. **Auto Updates**: Component re-renders with fresh data
+5. **Revalidation**: Periodic background updates based on configuration
+
+### Key Features
+
+- **Automatic Execution**: Queries run immediately on mount
+- **Cache Management**: Built-in caching with SWR
+- **Request Deduplication**: Multiple components using same query share single request
+- **Background Revalidation**: Keeps data fresh automatically
+- **Error Recovery**: Automatic retry with exponential backoff
+- **Optimistic UI**: Show cached data while fetching updates
+
+## API Reference
+
+### Signature
+
+```typescript
+const response = useQuery<Data, Variables>(
+  operation: Operation,
+  variables: Variables,
+  options?: QueryOptions
+)
+```
+
+### Parameters
+
+- **operation**: GraphQL query defined using `gql` template literal
+- **variables**: Query variables object
+- **options**: Optional configuration object
+  - `doNotRun`: Boolean to conditionally skip query execution
+  - `errorRetryCount`: Number of retry attempts (default: 3)
+  - `refreshWhenHidden`: Revalidate when tab is hidden (default: false)
+  - `refreshWhenOffline`: Revalidate when offline (default: false)
+  - `revalidateOnFocus`: Revalidate on window focus (default: false)
+  - `revalidateOnReconnect`: Revalidate on reconnect (default: false)
+  - `shouldRetryOnError`: Enable error retry (default: true)
+
+### Returns
+
+SWR response object containing:
+- `data`: Query result data (undefined until loaded)
+- `error`: Error object if query fails
+- `isValidating`: Boolean indicating if query is fetching
+- `isLoading`: Boolean for initial load (no cached data)
+- `mutate`: Function to manually update cache
+
+## Usage Patterns
+
+### 1. Basic Product Query
+
+```typescript
+import { useQuery } from '@faststore/core/sdk/graphql/useQuery'
+import { gql } from '@faststore/core/api'
+
+const productQuery = gql(`
+  query GetProduct($id: String!) {
+    product(id: $id) {
+      id
+      name
+      price
+      image {
+        url
+        alt
+      }
+    }
+  }
+`)
+
+export const ProductDetails = ({ productId }) => {
+  const { data, error, isLoading } = useQuery(
+    productQuery,
+    { id: productId }
+  )
+
+  if (isLoading) return <Skeleton />
+  if (error) return <ErrorMessage error={error} />
+
+  return (
+    <div>
+      <h1>{data.product.name}</h1>
+      <img src={data.product.image.url} alt={data.product.image.alt} />
+      <p>${data.product.price}</p>
+    </div>
+  )
+}
+```
+
+### 2. User Session Data
+
+```typescript
+// Automatically load user data on mount
+const UserProfile = () => {
+  const { data, error, isValidating } = useQuery(
+    getCurrentUserQuery,
+    {} // Empty variables for session-based queries
+  )
+
+  // Data loads automatically
+  if (!data && !error) {
+    return <ProfileSkeleton />
+  }
+
+  if (error) {
+    return <LoginPrompt />
+  }
+
+  return (
+    <div>
+      <Avatar src={data.user.avatar} />
+      <h2>Welcome, {data.user.name}</h2>
+      <p>{data.user.email}</p>
+      {isValidating && <RefreshIndicator />}
+    </div>
+  )
+}
+```
+
+### 3. Search Results with Filters
+
+```typescript
+const SearchResults = ({ searchTerm, filters }) => {
+  const { data, error, isValidating } = useQuery(
+    searchQuery,
+    {
+      term: searchTerm,
+      filters: filters,
+      limit: 20
+    }
+  )
+
+  // Query automatically re-runs when variables change
+  return (
+    <div>
+      {isValidating && <LoadingOverlay />}
+
+      <ResultsCount count={data?.results?.length || 0} />
+
+      <ProductGrid>
+        {data?.results?.map(product => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </ProductGrid>
+
+      {data?.results?.length === 0 && (
+        <EmptyState message="No products found" />
+      )}
+    </div>
+  )
+}
+```
+
+### 4. Conditional Query Execution
+
+```typescript
+const ConditionalData = ({ userId, shouldFetch }) => {
+  // Use doNotRun option to conditionally skip
+  const { data, error } = useQuery(
+    userOrdersQuery,
+    { userId },
+    {
+      doNotRun: !shouldFetch || !userId,
+      revalidateOnFocus: true // Refresh when user returns to tab
+    }
+  )
+
+  if (!shouldFetch) {
+    return <div>Please enable order history</div>
+  }
+
+  if (!userId) {
+    return <div>Please log in to view orders</div>
+  }
+
+  return <OrdersList orders={data?.orders} />
+}
+```
+
+### 5. Real-time Data with Polling
+
+```typescript
+const LiveInventory = ({ productId }) => {
+  const { data, mutate } = useQuery(
+    inventoryQuery,
+    { productId },
+    {
+      refreshInterval: 5000, // Poll every 5 seconds
+      revalidateOnFocus: true,
+      refreshWhenHidden: false // Pause when tab is hidden
+    }
+  )
+
+  // Manual refresh button
+  const handleRefresh = () => {
+    mutate() // Trigger revalidation
+  }
+
+  return (
+    <div>
+      <StockLevel count={data?.inventory?.available} />
+      <Button onClick={handleRefresh}>Refresh Stock</Button>
+      <LastUpdated time={data?.timestamp} />
+    </div>
+  )
+}
+```
+
+### 6. Dependent Queries
+
+```typescript
+const UserDashboard = () => {
+  // First query: Get user
+  const { data: userData } = useQuery(
+    getUserQuery,
+    {}
+  )
+
+  // Second query: Get user's organization (depends on first)
+  const { data: orgData } = useQuery(
+    getOrganizationQuery,
+    { orgId: userData?.user?.organizationId || '' },
+    { doNotRun: !userData?.user?.organizationId }
+  )
+
+  // Third query: Get organization members
+  const { data: membersData } = useQuery(
+    getMembersQuery,
+    { orgId: userData?.user?.organizationId || '' },
+    { doNotRun: !orgData }
+  )
+
+  return (
+    <Dashboard
+      user={userData?.user}
+      organization={orgData?.organization}
+      members={membersData?.members}
+    />
+  )
+}
+```
+
+## Best Practices
+
+### 1. Loading States
+
+```typescript
+const Component = () => {
+  const { data, error, isLoading, isValidating } = useQuery(query, variables)
+
+  // Initial load (no cached data)
+  if (isLoading) {
+    return <FullPageSkeleton />
+  }
+
+  // Error state
+  if (error && !data) {
+    return <ErrorBoundary error={error} />
+  }
+
+  // Show stale data with refresh indicator
+  return (
+    <>
+      {isValidating && <RefreshIndicator />}
+      <Content data={data} />
+    </>
+  )
+}
+```
+
+### 2. Error Handling
+
+```typescript
+const ResilientComponent = () => {
+  const { data, error, mutate } = useQuery(
+    criticalDataQuery,
+    {},
+    {
+      errorRetryCount: 5,
+      onError: (err) => {
+        console.error('Query failed:', err)
+        // Send to error tracking
+        trackError(err)
+      }
+    }
+  )
+
+  const handleRetry = () => {
+    // Manual retry
+    mutate()
+  }
+
+  if (error) {
+    return (
+      <ErrorFallback
+        error={error}
+        onRetry={handleRetry}
+        showRetry={!isValidating}
+      />
+    )
+  }
+
+  return <DataDisplay data={data} />
+}
+```
+
+### 3. Optimistic Updates
+
+```typescript
+const TodoList = () => {
+  const { data, mutate } = useQuery(todosQuery, {})
+
+  const handleAddTodo = async (newTodo) => {
+    // Optimistically update UI
+    const optimisticData = {
+      todos: [...(data?.todos || []), newTodo]
+    }
+
+    // Update cache immediately
+    mutate(optimisticData, false)
+
+    try {
+      // Send to server
+      await createTodo(newTodo)
+
+      // Revalidate to get server state
+      mutate()
+    } catch (error) {
+      // Revert on error
+      mutate(data, false)
+      showError('Failed to add todo')
+    }
+  }
+
+  return <TodoInterface todos={data?.todos} onAdd={handleAddTodo} />
+}
+```
+
+### 4. Cache Strategies
+
+```typescript
+// Static data - cache heavily
+const { data: staticContent } = useQuery(
+  staticContentQuery,
+  {},
+  {
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    refreshInterval: 3600000 // 1 hour
+  }
+)
+
+// Dynamic data - revalidate frequently
+const { data: liveData } = useQuery(
+  liveDataQuery,
+  {},
+  {
+    revalidateOnFocus: true,
+    revalidateOnReconnect: true,
+    refreshInterval: 10000 // 10 seconds
+  }
+)
+
+// User-specific - revalidate on interaction
+const { data: userData } = useQuery(
+  userDataQuery,
+  {},
+  {
+    revalidateOnFocus: true,
+    refreshWhenHidden: false,
+    revalidateOnMount: true
+  }
+)
+```
+
+### 5. Performance Optimization
+
+```typescript
+// Prefetch critical data
+const HomePage = () => {
+  // Prefetch next likely navigation
+  const prefetchProduct = (productId) => {
+    // Trigger query without using result
+    mutate(
+      getKey('GetProduct', { id: productId }),
+      fetchProduct(productId),
+      false
+    )
+  }
+
+  const { data } = useQuery(homePageQuery, {})
+
+  return (
+    <div>
+      {data?.featuredProducts?.map(product => (
+        <ProductCard
+          key={product.id}
+          product={product}
+          onHover={() => prefetchProduct(product.id)}
+        />
+      ))}
+    </div>
+  )
+}
+```
+
+## Common Patterns
+
+### 1. Pagination
+
+```typescript
+const PaginatedList = () => {
+  const [page, setPage] = useState(1)
+
+  const { data, isValidating } = useQuery(
+    paginatedQuery,
+    { page, limit: 10 }
+  )
+
+  return (
+    <>
+      <ItemList items={data?.items} loading={isValidating} />
+      <Pagination
+        currentPage={page}
+        totalPages={data?.totalPages}
+        onPageChange={setPage}
+      />
+    </>
+  )
+}
+```
+
+### 2. Search with Debounce
+
+```typescript
+const SearchComponent = () => {
+  const [search, setSearch] = useState('')
+  const [debouncedSearch, setDebouncedSearch] = useState('')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search)
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [search])
+
+  const { data, isValidating } = useQuery(
+    searchQuery,
+    { term: debouncedSearch },
+    { doNotRun: debouncedSearch.length < 3 }
+  )
+
+  return (
+    <div>
+      <SearchInput value={search} onChange={setSearch} />
+      {isValidating && <SearchingIndicator />}
+      <SearchResults results={data?.results} />
+    </div>
+  )
+}
+```
+
+### 3. Infinite Scrolling
+
+```typescript
+const InfiniteList = () => {
+  const [pages, setPages] = useState([1])
+
+  // Multiple queries for different pages
+  const results = pages.map(page =>
+    useQuery(itemsQuery, { page, limit: 20 })
+  )
+
+  const allItems = results.flatMap(r => r.data?.items || [])
+  const hasMore = results[results.length - 1]?.data?.hasNextPage
+
+  const loadMore = () => {
+    if (hasMore) {
+      setPages([...pages, pages.length + 1])
+    }
+  }
+
+  return (
+    <InfiniteScroll
+      items={allItems}
+      onLoadMore={loadMore}
+      hasMore={hasMore}
+    />
+  )
+}
+```
+
+## TypeScript Usage
+
+### Type-Safe Queries
+
+```typescript
+interface ProductData {
+  product: {
+    id: string
+    name: string
+    price: number
+    variants: Array<{
+      id: string
+      color: string
+      size: string
+    }>
+  }
+}
+
+interface ProductVariables {
+  id: string
+  includeVariants?: boolean
+}
+
+const useProduct = (productId: string) => {
+  const { data, error, isLoading } = useQuery<ProductData, ProductVariables>(
+    productQuery,
+    {
+      id: productId,
+      includeVariants: true
+    }
+  )
+
+  return {
+    product: data?.product,
+    variants: data?.product?.variants || [],
+    error,
+    isLoading
+  }
+}
+```
+
+## Comparison with useLazyQuery
+
+| Feature | useQuery | useLazyQuery |
+|---------|----------|--------------|
+| Execution | Automatic on mount | Manual trigger |
+| Use Case | Data needed immediately | User-triggered actions |
+| Caching | Same SWR cache | Same SWR cache |
+| Loading State | Initial isLoading | No initial loading |
+| Best For | Page data, user profiles | Forms, search, actions |
+
+## Performance Considerations
+
+1. **Request Deduplication**: Multiple components using same query share single request
+2. **Cache Sharing**: All instances share same cache key
+3. **Background Updates**: Stale data shown while revalidating
+4. **Network Efficiency**: Configurable retry and polling strategies
+5. **Memory Management**: SWR handles cache size and garbage collection
+
+## Testing
+
+```typescript
+import { renderHook, waitFor } from '@testing-library/react'
+import { SWRConfig } from 'swr'
+
+const wrapper = ({ children }) => (
+  <SWRConfig value={{ dedupingInterval: 0 }}>
+    {children}
+  </SWRConfig>
+)
+
+test('should fetch data on mount', async () => {
+  const { result } = renderHook(
+    () => useQuery(testQuery, { id: '123' }),
+    { wrapper }
+  )
+
+  expect(result.current.isLoading).toBe(true)
+
+  await waitFor(() => {
+    expect(result.current.data).toBeDefined()
+    expect(result.current.data.product.id).toBe('123')
+  })
+})
+```
+
+## Migration Guide
+
+### From REST to GraphQL
+
+```typescript
+// Before: REST API with fetch
+useEffect(() => {
+  fetch(`/api/products/${id}`)
+    .then(res => res.json())
+    .then(setData)
+    .catch(setError)
+}, [id])
+
+// After: GraphQL with useQuery
+const { data, error } = useQuery(
+  productQuery,
+  { id }
+)
+```
+
+### From useLazyQuery to useQuery
+
+```typescript
+// Before: Manual execution
+const [execute, { data }] = useLazyQuery(query, variables)
+useEffect(() => {
+  execute(variables)
+}, [])
+
+// After: Automatic execution
+const { data } = useQuery(query, variables)
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Query Not Executing**
+   - Check `doNotRun` option
+   - Verify variables are defined
+   - Ensure component is mounted
+
+2. **Stale Data**
+   - Adjust revalidation settings
+   - Use `mutate()` for manual refresh
+   - Check cache key uniqueness
+
+3. **Infinite Loops**
+   - Stable variable references
+   - Avoid creating objects in render
+
+4. **Performance Issues**
+   - Reduce polling frequency
+   - Implement pagination
+   - Use proper cache strategies
+
+## Related Hooks
+
+- `useLazyQuery`: Manual query execution
+- `useMutation`: Data modifications
+- `useSWR`: Direct SWR usage for custom fetching
+- `useCart`: Specialized cart state management
+
+## Summary
+
+`useQuery` is the primary data fetching hook in FastStore, providing automatic query execution with intelligent caching and revalidation. It excels at loading data on component mount, maintaining fresh data through background updates, and sharing cache across components. Use it for page data, user profiles, product information, and any data needed immediately when a component renders.
