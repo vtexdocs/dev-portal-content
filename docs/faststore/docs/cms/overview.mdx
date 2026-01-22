@@ -1,0 +1,47 @@
+---
+title: "Upgrading from Headless CMS to CMS"
+hidden: true
+---
+
+The CMS is the VTEX content management system designed to provide a set for managing storefront content. It helps the creation, collaboration, and distribution of content and introduces the following improvements:
+
+- **Performance**: Dedicated read-optimized Data Plane for faster content delivery during store builds.  
+- **Reliability**: Event-driven architecture with message queues ensuring no content updates are lost.  
+- **Scalability**: Independent scaling of content management (Control Plane) and content delivery (Data Plane).  
+- **Developer experience**: Modular schema files, improved CLI tooling, and better alignment with version control workflows.  
+- **Reduced platform dependency**: Core services operate independently of the VTEX IO infrastructure.
+
+In this track, learn about the architectural and code-level changes when upgrading from the Headless CMS to the CMS. Use this track to evaluate and plan the necessary modifications to your store's codebase during the migration.
+
+
+## Next steps
+
+<WhatsNextCard
+  linkTo="feature-comparison"
+  title="Comparing Headless CMS and CMS features"
+  description="High-level differences between the CMS and Headless CMS, covering content modeling, editing, and technical infrastructure."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="architecture-and-schemas"
+  title="Understanding CMS architecture and schema declarations"
+  description="Deep dive into CQRS architecture, schema declarations, and folder structure changes."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="apis-and-webhooks"
+  title="APIs and Webhooks"
+  description="API changes from GraphQL to REST, data fetching patterns, and build trigger differences."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="faq"
+  title="Frequently Asked Questions"
+  description="Common questions about headless support, migration paths, and content reusability."
+  linkTitle="See more"
+/>
+
+</Flex>
