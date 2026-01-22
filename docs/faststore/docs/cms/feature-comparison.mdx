@@ -10,7 +10,7 @@ Before diving into the technical details, it's important to understand the high-
 - [Additional Platform Capabilities](#additional-platform-capabilities): New features are included in the CMS.  
 - [Technical infrastructure](#technical-infrastructure): Architecture patterns, APIs, and platform dependencies.
 
-### Content modeling
+## Content modeling
 
 Content modeling defines how content is structured and reused across your storefront. Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology, but the CMS introduces schema reusability and content relationships, allowing the same content to be reused across multiple pages or components without duplication.
 
@@ -32,7 +32,7 @@ Content modeling defines how content is structured and reused across your storef
     
 - **Schema extension**: While Headless CMS supports basic schema definitions, the CMS introduces the `$extends` keyword for schema inheritance. Components can inherit properties from base schemas (e.g., `#/$defs/base-component`). This reduces duplication, makes shared fields easier to maintain, and helps ensure consistent structure across components.
 
-### Content editing and publishing
+## Content editing and publishing
 
 Content editing capabilities determine how content editors interact with the CMS interface.
 
@@ -48,7 +48,7 @@ Content editing capabilities determine how content editors interact with the CMS
     
 - **Entry (CRUD)**: Both content management platforms support full Create, Read, Update, and Delete operations for content entries. The CMS adds branching capabilities, allowing changes to be made on separate branches before merging to production.
 
-### Additional platform capabilities
+## Additional platform capabilities
 
 Beyond the core features, the CMS introduces several capabilities that were not available or were limited in Headless CMS. These represent significant enhancements to the content management workflow.
 
@@ -70,7 +70,7 @@ Beyond the core features, the CMS introduces several capabilities that were not 
   - **Image and video support**: Upload images (PNG, JPG, JPEG, GIF, SVG, WEBP) or embed videos from YouTube, Vimeo, or cloud services.  
   - **Centralized asset management**: All media assets are stored in a central gallery, making them reusable across multiple entries.
 
-### Technical infrastructure
+## Technical infrastructure
 
 The technical architecture differs significantly between the Headless CMS and CMS. These architectural differences affect how you approach CMS integration.
 
