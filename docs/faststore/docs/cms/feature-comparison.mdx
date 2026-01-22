@@ -1,0 +1,91 @@
+---
+title: "Comparing Headless CMS and CMS features"
+hidden: true
+---
+
+Before diving into the technical details, it's important to understand the high-level differences between the CMS and Headless CMS:
+
+- [Content modeling](#content-modeling): How content schemas are defined and structured, including Content Types, components, and capabilities such as referencing and extension.  
+- [Content editing and publishing](#content-editing-and-publishing): The authoring experience for content editors, including the Admin interface, search capabilities, and content lifecycle management.  
+- [Additional Platform Capabilities](#additional-platform-capabilities): New features are included in the CMS.  
+- [Technical infrastructure](#technical-infrastructure): Architecture patterns, APIs, and platform dependencies.
+
+### Content modeling
+
+Content modeling defines how content is structured and reused across your storefront. Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology, but the CMS introduces schema reusability and content relationships, allowing the same content to be reused across multiple pages or components without duplication.
+
+| Feature | Headless CMS | CMS |
+| :---- | :---- | :---- |
+| **Content Types** | ✅ Supported | ✅ Supported |
+| **Components** | ✅ Supported | ✅ Supported |
+| **Schema technology** | JSON Schema | JSON Schema |
+| **Content referencing** | ❌ Not supported | ✅ Supported |
+| **Schema extension** | ✅ Supported | ✅ Supported |
+
+- **Content Types**: Define the page structures in a store (e.g., `home`, `pdp`, `plp`, `landingPage`). Both content management platforms support creating and managing Content Types, but the CMS stores them in individual `.jsonc` files under cms/pages/, rather than in a single `content-types.json` file.  
+    
+- **Components**: Define the building blocks of pages. Both content management platforms support component definitions, but the CMS uses individual `.jsonc` files in `cms/components/` with enhanced metadata like `$componentKey` and `$componentTitle`.  
+    
+- **Schema technology**: Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology for defining content structure and validation rules. This ensures compatibility and allows you to reuse your existing schema knowledge.  
+    
+- **Content referencing**: The CMS allows content entries to reference other entries, enabling reusable content blocks across multiple pages. For example, a "Footer" component can be defined once and referenced by multiple pages. In Headless CMS, each page's content is isolated and must be duplicated if reused.  
+    
+- **Schema extension**: While Headless CMS supports basic schema definitions, the CMS introduces the `$extends` keyword for schema inheritance. Components can inherit properties from base schemas (e.g., `#/$defs/base-component`). This reduces duplication, makes shared fields easier to maintain, and helps ensure consistent structure across components.
+
+### Content editing and publishing
+
+Content editing capabilities determine how content editors interact with the CMS interface.
+
+| Feature | Headless CMS | CMS |
+| :---- | :---- | :---- |
+| **Content management (Admin)** | ✅ Supported | ✅ Supported |
+| **Content search and filtering** | ✅ Supported | ✅ Supported |
+| **Entry (CRUD)** | ✅ Supported | ✅ Supported |
+
+- **Content Management (Admin)**: Both content management platforms provide a full-featured admin interface for creating, editing, and publishing content. The CMS uses a modern React/Next.js stack with improved performance, better accessibility, and a more intuitive user experience. Content editors can manage entries, preview changes, and publish content through a visual interface.  
+    
+- **Content Search and filtering**: Both content management platforms support searching and filtering content entries by name, Content Type, and other attributes. The CMS enhances this with slug-based indexing, enabling faster lookups when retrieving content by URL path (e.g., `/summer-sale`).  
+    
+- **Entry (CRUD)**: Both content management platforms support full Create, Read, Update, and Delete operations for content entries. The CMS adds branching capabilities, allowing changes to be made on separate branches before merging to production.
+
+### Additional platform capabilities
+
+Beyond the core features, the CMS introduces several capabilities that were not available or were limited in Headless CMS. These represent significant enhancements to the content management workflow.
+
+| Feature | Headless CMS | CMS |
+| :---- | :---- | :---- |
+| **Branching workflow** | ❌ Not supported | ✅ Git-like branching |
+| **Media Gallery** | ✅ Basic image upload | ✅ Enhanced with type restrictions |
+
+- **Branching workflow**: The CMS introduces Git-like branching for content changes. Content editors can create branches in the Admin, make changes, preview them, and merge to publish, similar to how developers work with code. This workflow enables:  
+    
+  - **Safer content updates**: Changes are isolated on branches until ready to publish.  
+  - **Collaboration**: Multiple editors can work on different branches simultaneously.  
+  - **Preview before publish**: Full preview of changes before they go live.  
+  - **Rollback capability**: If something goes wrong, previous versions are preserved.
+
+
+- **Media Gallery**: Provides media management capabilities:  
+    
+  - **Image and video support**: Upload images (PNG, JPG, JPEG, GIF, SVG, WEBP) or embed videos from YouTube, Vimeo, or cloud services.  
+  - **Centralized asset management**: All media assets are stored in a central gallery, making them reusable across multiple entries.
+
+### Technical infrastructure
+
+The technical architecture differs significantly between the Headless CMS and CMS. These architectural differences affect how you approach CMS integration.
+
+| Aspect | Headless CMS | CMS |
+| :---- | :---- | :---- |
+| **API type** |  |  |
+| **Data storage** | VBase \+ Master Data | PostgreSQL |
+| **Build triggers** | Direct webhooks | Event-driven (SNS/SQS) |
+| **Platform dependency** | VTEX IO dependent | Platform-agnostic |
+| **Caching** | Limited | ETag support |
+| **Architecture pattern** | Monolithic | CQRS (Control/Data Plane) |
+
+- **API type**:   
+- **Data Storage**: Content in Headless CMS is stored in VBase buckets and Master Data. The new CMS uses PostgreSQL databases optimized for read/write separation.  
+- **Build Triggers**: Headless CMS triggers builds via direct HTTP webhooks that may fail silently. The CMS uses an event-driven architecture with SNS/SQS, providing built-in retries and dead-letter queues for reliability.  
+- **Platform Dependency**: Headless CMS requires the VTEX IO infrastructure. The new CMS services are platform-agnostic.  
+- **Caching**: The new CMS Data Plane API supports ETag-based caching, allowing efficient cache validation and reduced bandwidth.  
+- **Architecture Pattern**: The new CMS follows CQRS (Command Query Responsibility Segregation), separating content management (Control Plane) from content delivery (Data Plane) for independent scaling and optimization.
