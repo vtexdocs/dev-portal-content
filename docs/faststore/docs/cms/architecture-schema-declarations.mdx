@@ -20,48 +20,48 @@ The following diagram shows the three main components of the CMS architecture:
 ```mermaid
 flowchart LR
 
-%% Styles (subtle, readable)
-classDef ui fill:#ffffff,stroke:#333,stroke-width:1px;
-classDef svc fill:#ffffff,stroke:#333,stroke-width:1px;
-classDef db fill:#ffffff,stroke:#333,stroke-width:1px;
-classDef bus fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 3 3;
+    %% Styles (subtle, readable)
+    classDef ui fill:#ffffff,stroke:#333,stroke-width:1px;
+    classDef svc fill:#ffffff,stroke:#333,stroke-width:1px;
+    classDef db fill:#ffffff,stroke:#333,stroke-width:1px;
+    classDef bus fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 3 3;
 
-%% -------------------------
-%% COMMAND SIDE (CONTROL PLANE)
-%% -------------------------
-subgraph CP["Control Plane (Commands)"]
-direction TB
-Admin["Admin UI"]:::ui
-CmdAPI["Content Management API"]:::svc
-WriteDB[("Write Database")]:::db
+    %% -------------------------
+    %% COMMAND SIDE (CONTROL PLANE)
+    %% -------------------------
+    subgraph CP["Control Plane (Commands)"]
+    direction TB
+    Admin["Admin UI"]:::ui
+    CmdAPI["Content Management API"]:::svc
+    WriteDB[("Write Database")]:::db
 
-Admin -->|Create / Update / Delete| CmdAPI
-CmdAPI -->|Validate & persist| WriteDB
-end
+    Admin -->|Create / Update / Delete| CmdAPI
+    CmdAPI -->|Validate & persist| WriteDB
+    end
 
-%% -------------------------
-%% EVENTING / SYNC
-%% -------------------------
-Events["Event Bus / Queue"]:::bus
-Projector["Projection Worker\n(creates read model)"]:::svc
+    %% -------------------------
+    %% EVENTING / SYNC
+    %% -------------------------
+    Events["Event Bus / Queue"]:::bus
+    Projector["Projection Worker\n(creates read model)"]:::svc
 
-CmdAPI -->|Publish change events| Events
-Events .>|Async events| Projector
+    CmdAPI -->|Publish change events| Events
+    Events .>|Async events| Projector
 
-%% -------------------------
-%% QUERY SIDE (DATA PLANE)
-%% -------------------------
-subgraph DP["Data Plane (Queries)"]
-direction TB
-Store["Storefront / Build"]:::ui
-QueryAPI["Content Delivery API"]:::svc
-ReadDB[("Read-Optimized Store / Cache")]:::db
+    %% -------------------------
+    %% QUERY SIDE (DATA PLANE)
+    %% -------------------------
+    subgraph DP["Data Plane (Queries)"]
+    direction TB
+    Store["Storefront / Build"]:::ui
+    QueryAPI["Content Delivery API"]:::svc
+    ReadDB[("Read-Optimized Store / Cache")]:::db
 
-Store -->|Read content| QueryAPI
-QueryAPI -->|Fetch optimized content| ReadDB
-end
+    Store -->|Read content| QueryAPI
+    QueryAPI -->|Fetch optimized content| ReadDB
+    end
 
-Projector -->|Update read model| ReadDB
+    Projector -->|Update read model| ReadDB
 ```
 
 Each component in the architecture serves a specific purpose:
