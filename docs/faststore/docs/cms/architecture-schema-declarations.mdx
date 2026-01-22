@@ -66,7 +66,7 @@ flowchart LR
 
 Each component in the architecture serves a specific purpose:
 
-### Control Plane (Content Management)
+## Control Plane (Content Management)
 
 The Control Plane handles all content authoring and management operations and has the key operations:
 
@@ -82,7 +82,7 @@ The Control Plane handles all content authoring and management operations and ha
 | **Database** | Stores content entries, branches, commits, and user data. |
 | **Message Bus** | Publishes events when content is published (triggers builds, syncs to Data Plane). |
 
-### Data Plane (Content Delivery)
+## Data Plane (Content Delivery)
 
 The Data Plane is optimized for high-performance content delivery to storefronts and has the key characteristics:
 
@@ -96,7 +96,7 @@ The Data Plane is optimized for high-performance content delivery to storefronts
 | **Data Plane API** | Read-only RESTful API optimized for fast content retrieval. |
 | **Database** | Stores published content in a format optimized for queries. |
 
-### Schema Registry
+## Schema Registry
 
 The Schema Registry manages component schemas and Content Type definitions and has the key operations:
 
@@ -110,7 +110,7 @@ The Schema Registry manages component schemas and Content Type definitions and h
 | **Registry API** | Stores and serves schema definitions. |
 | **Schema Store** | Persists schema versions and metadata. |
 
-### Content data management through the architecture
+## Content data management through the architecture
 
 1. **Schema upload** (development time):  
      
@@ -142,8 +142,6 @@ The Schema Registry manages component schemas and Content Type definitions and h
    - FastStore build fetches content from Data Plane API.  
    - Data Plane returns published content with ETag headers.  
    - Content is rendered into static pages.
-
-## 
 
 ## Schema declarations
 
