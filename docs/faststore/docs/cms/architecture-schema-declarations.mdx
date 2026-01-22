@@ -8,7 +8,7 @@ The new CMS is built on the **CQRS (Command Query Responsibility Segregation)** 
 - **Command side (Control Plane)**: Handles all write operations by creating, updating, and deleting content. Optimized for data validation, business logic, and consistency.  
 - **Query side (Data Plane)**: Handles all read operations by fetching content for display. Optimized for fast retrieval and caching.
 
-With CQRS, content editors get a responsive editing experience while your store gets fast content delivery, without either affecting the other, cover ing the following aspects:
+With CQRS, content editors get a responsive editing experience while your store gets fast content delivery, without either affecting the other, covering the following aspects:
 
 - **Performance under load**: Read and write operations scale independently.  
 - **Optimization trade-offs**: Each plane is optimized for its specific purpose.  
@@ -170,7 +170,7 @@ The table below summarizes the key differences between schema declarations in th
 | **Base component** | N/A | Extends `#/$defs/base-component`. |
 | **Image widget** | `"ui:widget": "image-uploader"` | `"ui:widget": "media-gallery"` |
 | **File extension** | `.json` | `.jsonc` |
-| **Deployment** | Synced via `cms-sync`. | Uploaded via \[`vtex content upload-schema](/tbd)`. |
+| **Deployment** | Synced via `cms-sync`. | Uploaded via [`vtex content upload-schema`](/tbd). |
 
 ### Schema format comparison
 
@@ -314,7 +314,7 @@ The `$extends` property allows sections to inherit properties from one or more b
 
 The CMS introduces a modular folder structure that aligns with modern development practices. Instead of consolidating all schemas into a single file, the new structure separates components and Content Types into individual files, making it easier to manage, review, and version-control your content definitions.
 
-The shift from monolithic files, as in the Headless CMS, to individual files addresses the following approach:
+The shift from monolithic files, as in the Headless CMS, to individual files addresses the following issues:
 
 - **Version control conflicts**: With a single `sections.json` file, multiple developers editing different components often caused merge conflicts. Individual files mean each component can be edited independently.  
 - **Code review clarity**: Reviewing changes to a single component is straightforward when each component has its own file, rather than searching through a large JSON array.  
