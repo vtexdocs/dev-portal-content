@@ -46,7 +46,7 @@ flowchart LR
     Projector["Projection Worker\n(creates read model)"]:::svc
 
     CmdAPI -->|Publish change events| Events
-    Events .>|Async events| Projector
+    Events -.->|Async events| Projector
 
     %% -------------------------
     %% QUERY SIDE (DATA PLANE)
