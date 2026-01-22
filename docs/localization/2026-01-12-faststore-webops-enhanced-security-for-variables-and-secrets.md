@@ -8,7 +8,7 @@ tags:
     - "FastStore"
 ---
 
-FastStore WebOps users can now better protect their store's sensitive data while keeping non-sensitive configuration values easily accessible. The **Secrets** feature has been enhanced and renamed to **Variables and Secrets**, allowing you to distinguish between credentials that need protection and public values that should remain visible.
+FastStore WebOps users can now better protect the sensitive data of their stores while keeping non-sensitive configuration values easily accessible. The **Secrets** feature has been enhanced and renamed to **Variables and Secrets**, allowing you to distinguish between credentials that need protection and public values that should remain visible.
 
 With this update, you can save each entry as either **text** (non-sensitive) or **secret** (sensitive), providing enhanced security for API keys and tokens while maintaining easy access to public configuration values.
 
@@ -22,7 +22,7 @@ Now, the **Settings** tab in the WebOps dashboard has a **Variables and Secrets*
 
 ## Why did we make this change?
 
-This change reduces the risk of accidental exposure. The terminology update from **Secrets** to **Variables and Secrets** reflects this approach.
+This change reduces the risk of accidental exposure. The term update from **Secrets** to **Variables and Secrets** reflects this approach.
 
 ## What needs to be done?
 
