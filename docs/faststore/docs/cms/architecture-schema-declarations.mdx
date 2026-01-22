@@ -233,7 +233,7 @@ In the CMS, each component is defined in its own `.jsonc` file. The schema is fl
 - Display name specified by `$componentTitle`.  
 - Inherits from base schema via `$extends`.
 
-```
+```jsonc
 // cms/components/cms_component__Banner.jsonc
 {
   "$extends": ["#/$defs/base-component"],
@@ -291,7 +291,7 @@ The `$extends` property allows sections to inherit properties from one or more b
 
 **Example: Inheriting from multiple schemas**
 
-```
+```jsonc
 {
   "$extends": [
     "#/$defs/base-component",
@@ -325,7 +325,7 @@ The shift from monolithic files, as in the Headless CMS, to individual files add
 
 In the Headless CMS, all schema definitions are consolidated into two main files within a subdirectory, for example, `faststore`:
 
-```
+```sh
 your-faststore-project/
 ├── cms/
 │   └── faststore/
@@ -344,7 +344,7 @@ your-faststore-project/
 
 The CMS organizes schemas by type, with dedicated directories for components and Content Types (pages):
 
-```
+```sh
 your-faststore-project/
 ├── cms/
 │   ├── components/                              # Individual component schemas
