@@ -22,11 +22,11 @@ Content modeling defines how content is structured and reused across your storef
 | **Content referencing** | ❌ Not supported | ✅ Supported |
 | **Schema extension** | ✅ Supported | ✅ Supported |
 
-- **Content Types**: Define the page structures in a store (e.g., `home`, `pdp`, `plp`, `landingPage`). Both content management platforms support creating and managing Content Types, but the CMS stores them in individual `.jsonc` files under cms/pages/, rather than in a single `content-types.json` file.  
+- **Content Types**: Define the page structures in a store (e.g., `home`, `pdp`, `plp`, `landingPage`). Both content management platforms support creating and managing Content Types, but the CMS stores them in individual `.jsonc` files, rather than in a single `content-types.json` file.  
     
-- **Components**: Define the building blocks of pages. Both content management platforms support component definitions, but the CMS uses individual `.jsonc` files in `cms/components/` with enhanced metadata like `$componentKey` and `$componentTitle`.  
+- **Components**: Define the building blocks of pages. Both content management platforms support component definitions, but the CMS uses individual `.jsonc` files with enhanced metadata like `$componentKey` and `$componentTitle`.  
     
-- **Schema technology**: Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology for defining content structure and validation rules. This ensures compatibility and allows you to reuse your existing schema knowledge.  
+- **Schema technology**: Both content management platforms use [JSON Schema](https://json-schema.org/) as the technology for defining content structure and validation rules. This ensures compatibility and allows you to reuse existing schema knowledge.  
     
 - **Content referencing**: The CMS allows content entries to reference other entries, enabling reusable content blocks across multiple pages. For example, a "Footer" component can be defined once and referenced by multiple pages. In Headless CMS, each page's content is isolated and must be duplicated if reused.  
     
@@ -50,12 +50,12 @@ Content editing capabilities determine how content editors interact with the CMS
 
 ## Content workflow and media
 
-Beyond the core features, the CMS introduces several capabilities that were not available or were limited in Headless CMS. These represent significant enhancements to the content management workflow.
+Content workflow and media define how content changes are created, reviewed, and published in the CMS, with differences from the Headless CMS.
 
 | Feature | Headless CMS | CMS |
 | :---- | :---- | :---- |
 | **Branching workflow** | ❌ Not supported | ✅ Git-like branching |
-| **Media Gallery** | ✅ Basic image upload | ✅ Enhanced with type restrictions |
+| **Media Gallery** | ✅ | ✅ |
 
 - **Branching workflow**: The CMS introduces Git-like branching for content changes. Content editors can create branches in the Admin, make changes, preview them, and merge to publish, similar to how developers work with code. This workflow enables:  
     
@@ -72,20 +72,16 @@ Beyond the core features, the CMS introduces several capabilities that were not 
 
 ## Technical infrastructure
 
-The technical architecture differs significantly between Headless CMS and the CMS. These architectural differences affect how you approach CMS integration.
+Technical infrastructure describes the architectural components and design patterns of the CMS and Headless CMS, including differences in APIs, event handling, caching, and system architecture.
 
 | Aspect | Headless CMS | CMS |
 | :---- | :---- | :---- |
 | **API type** |  |  |
-| **Data storage** | VBase \+ Master Data | PostgreSQL |
 | **Build triggers** | Direct webhooks | Event-driven (SNS/SQS) |
-| **Platform dependency** | VTEX IO dependent | Platform-agnostic |
 | **Caching** | Limited | ETag support |
 | **Architecture pattern** | Monolithic | CQRS (Control/Data Plane) |
 
 - **API type**:   
-- **Data Storage**: Content in Headless CMS is stored in VBase buckets and Master Data. The new CMS uses PostgreSQL databases optimized for read/write separation.  
-- **Build Triggers**: Headless CMS triggers builds via direct HTTP webhooks that may fail silently. The CMS uses an event-driven architecture with SNS/SQS, providing built-in retries and dead-letter queues for reliability.  
-- **Platform Dependency**: Headless CMS requires the VTEX IO infrastructure. The new CMS services are platform-agnostic.  
+- **Build Triggers**: Headless CMS triggers builds via direct HTTP webhooks that may fail silently. The CMS uses an event-driven architecture with SNS/SQS, providing built-in retries and dead-letter queues for reliability.
 - **Caching**: The new CMS Data Plane API supports ETag-based caching, allowing efficient cache validation and reduced bandwidth.  
 - **Architecture Pattern**: The new CMS follows CQRS (Command Query Responsibility Segregation), separating content management (Control Plane) from content delivery (Data Plane) for independent scaling and optimization.
