@@ -130,7 +130,7 @@ The campaign determines the type of recommendations returned, such as personaliz
 
 This endpoint retrieves a list of recommended products based on:
 
-* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [our Support](https://help.vtex.com/en/support) to obtain the `campaignId`.
+* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [VTEX Support](https://help.vtex.com/en/support) to obtain the `campaignId`.
 
   Available campaign types:
 
