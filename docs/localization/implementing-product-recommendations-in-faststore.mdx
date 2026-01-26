@@ -2,9 +2,9 @@
 title: "Implementing product recommendations in Faststore"
 ---
 
-> ⚠️ This feature is in close beta. If you're a VTEX client and want to adopt this feature for your business, please contact [VTEX Support](https://support.vtex.com/hc/en-us).
+> ⚠️ This feature is in close beta. If you're a VTEX client and want to use this feature in your business, contact [VTEX Support](https://support.vtex.com/hc/en-us).
 
-The product recommendation feature in FastStore displays a curated selection of products based on personalized recommendation strategies.
+The product recommendation feature in FastStore displays a curated selection of products based on custom recommendation strategies.
 
 ![shelf-recommendation](https://vtexhelp.vtexassets.com/assets/docs/src/shelf-recommendation___403f15739cf14318a5b9ad8f16582d71.gif)
 
@@ -12,24 +12,24 @@ The product recommendation feature in FastStore displays a curated selection of 
 
 ### Install Intelligent Search
 
-Make sure you have Intelligent Search installed, enabled, and integrated with the catalog in your account. To do this, follow the instructions in the following guides:
+Make sure Intelligent Search is installed, enabled, and integrated with the catalog in your account. To do this, follow the instructions in these guides:
 
-* [Installing Intelligent Search](https://newhelp.vtex.com/docs/tracks/installing-intelligent-search)   
+* [Installing Intelligent Search](https://newhelp.vtex.com/docs/tracks/installing-intelligent-search)
 * [Starting the integration with Catalog](https://newhelp.vtex.com/docs/tracks/starting-the-integration-with-catalog)
 
 ### Receive approval for the product recommendations feature
 
-Open a ticket to [VTEX Support](https://support.vtex.com/hc/en-us), requesting the use of the product recommendations feature for your FastStore account.
+Open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us) to request the use of the product recommendations feature for your FastStore account.
 
 ## Instructions
 
 ### Step 1 - Set up your account environment
 
-After you receive the approval to use the product recommendations feature, the VTEX support team will prepare your account environment by: 
+After you receive the approval to use the product recommendations feature, the VTEX support team will prepare your account environment by:
 
-* Creating a Synerise workspace for recommendations.  
-* Synchronizing your product catalog with the recommendation service.  
-* Setting up API keys for secure access.  
+* Creating a Synerise workspace for recommendations.
+* Synchronizing your product catalog with the recommendation service.
+* Setting up API keys for secure access.
 * Generating a custom integration script for your store.
 
 ### Step 2 - Implement the script in the FastStore project
@@ -38,9 +38,9 @@ To collect shopper product interaction events for training and delivering recomm
 
 1. Add a [new section](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section) that fetches products and tracks views and click events, similar to a [carousel](https://developers.vtex.com/docs/guides/faststore/molecules-carousel).
 
-	> ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
+    > ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
 
-2. Add the script provided by VTEX Support as a third-party script in your FastStore project. To add the script, follow the instructions in the [Adding third-party scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts) guide.  
+2. Add the script provided by VTEX Support as a third-party script in your FastStore project. To add the script, follow the instructions in the [Adding third-party scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts) guide.
 3. Save the `_snrs_uuid` in the user's order form, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation. When the ID is generated, it is necessary to save the user's ID in the orderForm during navigation using `PUT` Set multiple custom field values as shown below:
 
 
@@ -61,7 +61,7 @@ To validate that it worked, make a request to retrieve the `orderForm` using `GE
 
 ### Step 3 - Train the models
 
-Once the tracking script collects enough browser data, the VTEX team will train and configure the recommendation models for each strategy.  
+Once the tracking script collects enough browser data, the VTEX team will train and configure the recommendation models for each strategy.
 The available strategies are:
 
 | Name | Description |
@@ -79,19 +79,19 @@ After the models are trained, they will be available for API-based recommendatio
 
 ### Step 4 - Integrate product recommendations
 
-Once models for each selected strategy are trained, you can integrate product recommendations into your store and display them during shopper interactions by following these steps in order:
+Once models for each selected strategy are trained, you can integrate product recommendations into your store and display them during shopper interactions by following these steps:
 
-1. [Managing user session](#managing-user-sessiosn)  
-2. [Implementing recommendation strategy](#implementing-recommendation-strategy)  
+1. [Managing user session](#managing-user-sessiosn)
+2. [Implementing recommendation strategy](#implementing-recommendation-strategy)
 3. [Tracking user interactions with the recommendations](#tracking-recommendation-events).
 
 #### Managing user session
 
 Use the `POST` [Start Session](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/users/start-session/v2) endpoint to create a unique user ID for recommendations. This endpoint:
 
-* Generates a unique user ID (`recommendationsUserId`) for the session.  
-* Links it to the provided order form ID.  
-* Stores the ID in the `vtex-rec-user-id` cookie for session continuity.  
+* Generates a unique user ID (`recommendationsUserId`) for the session.
+* Links it to the provided order form ID.
+* Stores the ID in the `vtex-rec-user-id` cookie for session continuity.
 * Initializes recommendation tracking and personalization.
 
 >ℹ️ Call this endpoint on the first page view of each visit, before displaying any recommendations, and only if the `_snrs_uuid` is not already present. If `orderFormId` is not provided in the request body, the API attempts to retrieve it from the `checkout.vtex.com` cookie.
@@ -127,7 +127,7 @@ The campaign determines the type of recommendations returned, such as personaliz
 
 This endpoint retrieves a list of recommended products based on:
 
-* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [our Support](https://help.vtex.com/en/support) to obtain the `campaignId`.  
+* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [our Support](https://help.vtex.com/en/support) to obtain the `campaignId`.
     
   Available campaign types:
 
@@ -142,7 +142,7 @@ This endpoint retrieves a list of recommended products based on:
   * `rec-search-v2`: Search-based recommendations
   * `rec-next-v2`: Next interaction
 
-* User context (from `recommendationsUserId`).  
+* User context (from `recommendationsUserId`).
     
 * Page context (product ID, cart items, etc.).
 
@@ -179,23 +179,23 @@ Render the returned items as product cards on the shelf. After rendering, procee
 
 To improve recommendation accuracy and measure effectiveness, you need to track how users interact with the recommended products. There are three types of events to track:
 
-* [Recommendation views](#recommendation-views): When recommendation shelves become visible to users.  
-* [Recommendation clicks](#recommendation-clicks): When users click on recommended products.  
+* [Recommendation views](#recommendation-views): When recommendation shelves become visible to users.
+* [Recommendation clicks](#recommendation-clicks): When users click the recommended products.
 * [Product views](#product-views): When users visit product detail pages.
 
 For accurate tracking, ensure that:
 
-* All events include the same `recommendationsUserId`.  
-* Events are properly debounced to prevent duplicates.  
+* All events include the same `recommendationsUserId`.
+* Events are properly debounced to prevent duplicates.
 * View events are triggered only when shelves enter the viewport.
 
 #### Recommendation views
 
 Use the `POST` [Recommendation view](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/recommendation-view/v2) endpoint when a recommendation shelf becomes visible. This endpoint:
 
-* Records when recommendations are shown to users.  
-* Provides data for click-through rate (CTR) analysis.  
-* Helps train and improve recommendation models.  
+* Records when recommendations are shown to users.
+* Provides data for click-through rate (CTR) analysis.
+* Helps train and improve recommendation models.
 * Should be called when shelves enter the viewport.
 
 **Request example**:
@@ -210,7 +210,7 @@ curl --request post \
 
 #### Recommendation clicks
 
-Use the `POST` [Recommendation click](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/recommendation-click/v2) endpoint when users interact with recommended products. This endpoint tracks user engagement with recommendations and should be called for each product card click.
+Use the `POST` [Recommendation click](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/recommendation-click/v2) endpoint when users interact with recommended products. This endpoint tracks user engagement with recommendations and should be called for each click on a product card.
 
 **Request example**:
 
@@ -225,7 +225,7 @@ curl --request post \
 
 Use the `POST` [Product View](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/product-view/v2) endpoint when users view product details. This endpoint tracks all product detail page views.
 
->⚠️ VTEX automatically tracks product views once the Recommendations feature is set up in your store’s website as instructed in [Step 2](https://docs.google.com/document/d/1eMNtYe0GPiWpRiS6A_R9PbTcTeubKQk0Y5mKR-hTxvc/edit#step-2-script-implementation-in-the-store). This event is only required for app implementations or other channels. Track product views for all sources to ensure comprehensive data collection for the recommendation models.
+>⚠️ VTEX automatically tracks product views once the Recommendations feature is set up in your store’s website, as instructed in [Step 2](https://docs.google.com/document/d/1eMNtYe0GPiWpRiS6A_R9PbTcTeubKQk0Y5mKR-hTxvc/edit#step-2-script-implementation-in-the-store). This event is only required for app implementations or other channels. Track product views for all sources to ensure comprehensive data collection for the recommendation models.
 
 **Request example**:
 
