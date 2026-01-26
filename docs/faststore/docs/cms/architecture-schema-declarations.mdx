@@ -167,8 +167,8 @@ The table below summarizes the key differences between schema declarations in th
 | **Inheritance** | Not supported. | `$extends` for schema inheritance. |
 | **Base component** | N/A | Extends `#/$defs/base-component`. |
 | **Image widget** | `"ui:widget": "image-uploader"` | `"ui:widget": "media-gallery"` |
-| **File extension** | `.json` | `.jsonc` |
-| **Deployment** | Synced via `cms-sync`. | Uploaded via [`vtex content upload-schema`](/tbd). |
+| **File extension** | `.json` | `json` or `.jsonc` |
+| **Deployment** | Synced via `vtex cms sync`. | Uploaded via `vtex content upload-schema`. |
 
 ### Schema format comparison
 
@@ -274,8 +274,6 @@ The CMS introduces additional schema keywords for a more modular, reusable, and 
 | `$extends` | Inherit properties from base schemas. | `"$extends": ["#/$defs/base-component"]` |
 | `$componentKey` | Unique identifier for the component. | `"$componentKey": "Banner"` |
 | `$componentTitle` | Display name shown in CMS interface. | `"$componentTitle": "Promotional Banner"` |
-| `$abstract` | Marks component as template-only (cannot be instantiated). | `"$abstract": true` |
-| `$singleton` | Limits Content Type to a single instance. | `"$singleton": true` |
 | `$ref` | Reference another schema definition. | `"$ref": "#/components/SEO"` |
 
 #### Schema inheritance with `$extends`
@@ -345,15 +343,16 @@ The CMS organizes schemas by type, with dedicated directories for components and
 ```sh
 your-faststore-project/
 ├── cms/
-│   ├── components/                              # Individual component schemas
-│   │   ├── cms_component__Banner.jsonc
-│   │   ├── cms_component__MegaMenu.jsonc
-│   │   ├── cms_component__ProductShelf.jsonc
-│   │   └── cms_component__RecommendationShelf.jsonc
-│   └── pages/                                   # Content type definitions
-│       ├── cms_content_type__landingPage.jsonc
-│       ├── cms_content_type__home.jsonc
-│       └── cms_content_type__pdp.jsonc
+    └── faststore/ # Individual component schemas for your store
+        ├── components/ 
+        │   ├── cms_component__Banner.jsonc
+        │   ├── cms_component__MegaMenu.jsonc
+        │   ├── cms_component__ProductShelf.jsonc
+        │   └── cms_component__RecommendationShelf.jsonc
+        └──  pages/  # Content type definitions
+            ├── cms_content_type__landingPage.jsonc
+            ├── cms_content_type__home.jsonc
+            └── cms_content_type__pdp.jsonc
 ├── src/
 │   └── components/
 │       ├── Banner/

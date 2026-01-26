@@ -20,7 +20,7 @@ Content modeling defines how content is structured and reused across your storef
 | **Components** | ✅ Supported | ✅ Supported |
 | **Schema technology** | JSON Schema | JSON Schema |
 | **Content referencing** | ❌ Not supported | ✅ Supported |
-| **Schema extension** | ✅ Supported | ✅ Supported |
+| **Schema extension** | ❌ Not supported | ✅ Supported |
 
 - **Content Types**: Define the page structures in a store (e.g., `home`, `pdp`, `plp`, `landingPage`). Both content management platforms support creating and managing Content Types, but the CMS stores them in individual `.jsonc` files, rather than in a single `content-types.json` file.  
     
@@ -76,12 +76,12 @@ Technical infrastructure describes the architectural components and design patte
 
 | Aspect | Headless CMS | CMS |
 | :---- | :---- | :---- |
-| **API type** |  |  |
-| **Build triggers** | Direct webhooks | Event-driven (SNS/SQS) |
+| **API type** | REST | REST |
+| **Build triggers** | Direct webhooks | Event-driven |
 | **Caching** | Limited | ETag support |
 | **Architecture pattern** | Monolithic | CQRS (Control/Data Plane) |
 
 - **API type**: [Add a description of the API types for Headless CMS and CMS]  
-- **Build Triggers**: Headless CMS triggers builds via direct HTTP webhooks that may fail silently. The CMS uses an event-driven architecture with SNS/SQS, providing built-in retries and dead-letter queues for reliability.
+- **Build Triggers**: Headless CMS triggers builds via direct HTTP webhooks that may fail silently. The CMS uses an event-driven architecture, providing built-in retries and dead-letter queues for reliability.
 - **Caching**: The new CMS Data Plane API supports ETag-based caching, allowing efficient cache validation and reduced bandwidth.  
 - **Architecture Pattern**: The new CMS follows CQRS (Command Query Responsibility Segregation), separating content management (Control Plane) from content delivery (Data Plane) for independent scaling and optimization.
