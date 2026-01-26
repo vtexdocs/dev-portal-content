@@ -1,8 +1,12 @@
 ---
 title: "Implementing product recommendations in Faststore"
+hidden: false
+excerpt: "Learn how to integrate product recommendations in FastStore stores."
+createdAt: "2026-01-05T12:00:00.000Z"
+updatedAt: "2026-01-26T12:00:00.000Z"
 ---
 
-> ⚠️ This feature is in close beta. If you're a VTEX client and want to use this feature in your business, contact [VTEX Support](https://support.vtex.com/hc/en-us).
+> ⚠️ This feature is in beta. If you're a VTEX client and want to use this feature in your business, contact [VTEX Support](https://support.vtex.com/hc/en-us).
 
 The product recommendation feature in FastStore displays a curated selection of products based on custom recommendation strategies.
 
@@ -41,7 +45,7 @@ To collect shopper product interaction events for training and delivering recomm
     > ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
 
 2. Add the script provided by VTEX Support as a third-party script in your FastStore project. To add the script, follow the instructions in the [Adding third-party scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts) guide.
-3. Save the `_snrs_uuid` in the user's order form, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation. When the ID is generated, it is necessary to save the user's ID in the orderForm during navigation using `PUT` Set multiple custom field values as shown below:
+3. Save the `_snrs_uuid` in the user's `orderForm`, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation. When the ID is generated, it is necessary to save the user's ID in the orderForm during navigation using `PUT` Set multiple custom field values as shown below:
 
 
     ```
@@ -81,7 +85,7 @@ After the models are trained, they will be available for API-based recommendatio
 
 Once models for each selected strategy are trained, you can integrate product recommendations into your store and display them during shopper interactions by following these steps:
 
-1. [Managing user session](#managing-user-sessiosn)
+1. [Managing user session](#managing-user-session)
 2. [Implementing recommendation strategy](#implementing-recommendation-strategy)
 3. [Tracking user interactions with the recommendations](#tracking-recommendation-events).
 
