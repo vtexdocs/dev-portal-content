@@ -114,13 +114,13 @@ Now that everything is as expected, you need to make your changes publicly avail
     vtex release major stable
     ```
 
-3. Publish your app as a candidate version.
+4. Publish your app as a candidate version.
 
     ```bash
     vtex publish
     ```
 
-4. Install the candidate version indicating the app's version as in the following:
+5. Install the candidate version indicating the app's version as in the following:
 
     ```bash
     vtex install {vendor}.{name}@{version}
@@ -134,7 +134,7 @@ Now that everything is as expected, you need to make your changes publicly avail
     vtex deploy {vendor}.{appname}@{appversion}
     ```
 
-6. Promote your Production workspace to master to make your changes publicly available to your store shoppers.
+7. Promote your Production workspace to master to make your changes publicly available to your store shoppers.
 
     ```bash
     vtex workspace promote
