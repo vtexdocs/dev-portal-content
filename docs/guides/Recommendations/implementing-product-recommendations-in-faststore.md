@@ -45,7 +45,7 @@ To collect shopper product interaction events for training and delivering recomm
     > ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
 
 2. Add the script provided by VTEX Support as a third-party script in your FastStore project. To add the script, follow the instructions in the [Adding third-party scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts) guide.
-3. Save the `_snrs_uuid` in the user's `orderForm`, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation. When the ID is generated, it is necessary to save the user's ID in the orderForm during navigation using `PUT` Set multiple custom field values as shown below:
+3. Save the `_snrs_uuid` in the user's `orderForm`, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation. When the ID is generated, it is necessary to save the user's ID in the `orderForm` during navigation using `PUT` to set multiple custom field values as shown below:
 
     ```javascript
     fetch(`/api/checkout/pub/orderForm/${orderForm.id}/customData/synerise`, {
