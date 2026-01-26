@@ -1,5 +1,6 @@
 ---
 title: "Implementing product recommendations in Faststore"
+slug: "implementing-product-recommendations-in-faststore"
 hidden: false
 excerpt: "Learn how to implement product recommendations in FastStore stores."
 createdAt: "2026-01-05T12:00:00.000Z"
