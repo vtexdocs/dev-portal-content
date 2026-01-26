@@ -1,0 +1,243 @@
+---
+title: "Implementing product recommendations in Faststore"
+slug: "implementing-product-recommendations-in-faststore"
+hidden: false
+excerpt: "Learn how to implement product recommendations in FastStore stores."
+createdAt: "2026-01-05T12:00:00.000Z"
+updatedAt: "2026-01-26T12:00:00.000Z"
+---
+
+> ⚠️ This feature is in beta. If you're a VTEX client and want to use this feature in your business, contact [VTEX Support](https://support.vtex.com/hc/en-us).
+
+The product recommendation feature in FastStore displays a curated selection of products based on custom recommendation strategies.
+
+![shelf-recommendation](https://vtexhelp.vtexassets.com/assets/docs/src/shelf-recommendation___403f15739cf14318a5b9ad8f16582d71.gif)
+
+## Before you begin
+
+### Install Intelligent Search
+
+Make sure Intelligent Search is installed, enabled, and integrated with the catalog in your account. To do this, follow the instructions in these guides:
+
+* [Installing Intelligent Search](https://help.vtex.com/docs/tracks/installing-intelligent-search)
+* [Starting the integration with Catalog](https://help.vtex.com/docs/tracks/starting-the-integration-with-catalog)
+
+### Receive approval for the product recommendations feature
+
+Open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us) to request the use of the product recommendations feature for your FastStore account.
+
+## Instructions
+
+### Step 1 - Set up your account environment
+
+After you receive the approval to use the product recommendations feature, the VTEX support team will prepare your account environment by:
+
+* Creating a Synerise workspace for recommendations.
+* Synchronizing your product catalog with the recommendation service.
+* Setting up API keys for secure access.
+* Generating a custom integration script for your store.
+
+### Step 2 - Implement the script in the FastStore project
+
+To collect shopper product interaction events for training and delivering recommendations, implement the script provided by VTEX Support as a third-party script in your FastStore project. To do this, follow these instructions:
+
+1. Add a [new section](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section) that fetches products and tracks views and click events, similar to a [carousel](https://developers.vtex.com/docs/guides/faststore/molecules-carousel).
+
+    > ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
+
+2. Add the script provided by VTEX Support as a third-party script in your FastStore project. To add the script, follow the instructions in the [Adding third-party scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts) guide.
+3. Save the `_snrs_uuid` in the user's `orderForm`, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation. When the ID is generated, it is necessary to save the user's ID in the `orderForm` during navigation using `PUT` to set multiple custom field values as shown below:
+
+    ```javascript
+    fetch(`/api/checkout/pub/orderForm/${orderForm.id}/customData/synerise`, {
+        method: 'PUT',
+        body: JSON.stringify({
+        uuid: snrsUuidCookie,
+        source: isMobile() ? 'WEB_MOBILE' : 'WEB_DESKTOP',
+        }),
+    })
+
+    ```
+
+4. Validate that the `_snrs_uuid` was saved in the `orderForm` by retrieving the `orderForm` using `GET` [Get current cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm). The `customData` field returned should contain the added information.
+
+5. Send the `POST` [Product View](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/product-view/v2) event following the API reference.
+
+### Step 3 - Train the models
+
+Once the tracking script collects enough browser data, the VTEX team will train and configure the recommendation models for each strategy.
+The available strategies are:
+
+| Name | Description |
+| ---- | ---- |
+| Best sellers | Returns the top-selling or most popular items in the store. |
+| Recommended for you | Provides recommendations tailored to the user's profile and behavior. |
+| Similar products | Returns items similar to a specified product. |
+| Buy together | Suggests complementary items to a specified product. |
+| Recently viewed | Returns the most recently viewed products for the given user. |
+| Visually similar products | Returns visually similar items to a specified product. |
+| Manual collection | Returns recommendations from a collection defined manually. |
+| Next interaction | Predicts and suggests products the user is likely to interact with next. |
+
+After the models are trained, they will be available for API-based recommendation displays in your store.
+
+### Step 4 - Integrate product recommendations
+
+Once models for each selected strategy are trained, you can integrate product recommendations into your store and display them during shopper interactions by following these steps:
+
+1. [Managing user session](#managing-user-session)
+2. [Fetching products for the recommendation component](#fetching-products-for-the-recommendation-component)
+3. [Tracking event interactions](#tracking-event-interactions).
+
+#### Managing user session
+
+Use the `POST` [Start Session](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/users/start-session/v2) endpoint to create a unique user ID for recommendations. This endpoint:
+
+* Generates a unique user ID (`recommendationsUserId`) for the session.
+* Links it to the provided order form ID.
+* Stores the ID in the `vtex-rec-user-id` cookie for session continuity.
+* Initializes recommendation tracking and personalization.
+
+>ℹ️ Call this endpoint on the first page view of each visit, before displaying any recommendations, and only if the `_snrs_uuid` is not already present. If `orderFormId` is not provided in the request body, the API attempts to retrieve it from the `checkout.vtex.com` cookie.
+
+**Request example**:
+
+```curl
+curl --request post \
+  --url https://api.vtexcommercestable.com.br/api/recommend-bff/v2/users/start-session \
+  --header 'Accept: application/json' \
+  --header 'Content-Type: application/json' \
+  --header 'host: apiexamples.vtexcommercestable.com.br' \
+  --header 'x-forwarded-host: www.apixamples.com' \
+  --header 'x-vtex-rec-origin: apiexamples/storefront/vtex.recommendation-shelf@2.x' \
+  --data '{"orderFormId":"d761924de4254f6883a8ec2e9a28597d"}'
+```
+
+**Response example**:
+
+```json
+{
+  "recommendationsUserId": "198e0f50-acf8-42f7-998a-5cd125464749"
+}
+```
+
+Persist the returned `recommendationsUserId` as `_snrs_uuid` and include it in all subsequent requests.
+
+#### Fetching products for the recommendation component
+
+Use the `GET` [Fetch recommendations](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#get-/api/recommend-bff/recommendations/v2) endpoint to fetch products for each shelf whenever a page contains a recommendation component (homepage, PDP, cart, PLP, etc.).
+
+The campaign determines the type of recommendations returned, such as personalized recommendations, similar items, cross-sell, and others.
+
+This endpoint retrieves a list of recommended products based on:
+
+* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [VTEX Support](https://help.vtex.com/en/support) to obtain the `campaignId`.
+
+  Available campaign types:
+
+  * `rec-top-items-v2`: Best sellers
+  * `rec-persona-v2`: Personalized recommendations
+  * `rec-similar-v2`: Similar items
+  * `rec-cross-v2`: Cross-sell
+  * `rec-cart-v2`: Cart-based recommendations
+  * `rec-last-v2`: Last seen
+  * `rec-interactions-v2`: Recent interactions
+  * `rec-visual-v2`: Visual similarity
+  * `rec-search-v2`: Search-based recommendations
+  * `rec-next-v2`: Next interaction
+
+* User context (from `recommendationsUserId`).
+
+* Page context (product ID, cart items, etc.).
+
+**Request example**:
+
+```curl
+curl --request get \
+ --url 'https://api.vtexcommercestable.com.br/api/recommend-bff/v2/recommendations?an=apiexamples&campaignVrn=vrn%3Arecommendations%3Aapiexamples%3Arec-top-items-v2%3A123e4567-e89b-12d3-a456-426614174000&userId=198e0f50-acf8-42f7-998a-5cd125464749&products=product-id-1%2Cproduct-id-2%2Cproduct-id-3&salesChannel=1&locale=en-US' \
+ --header 'Accept: application/json' \
+ --header 'x-vtex-rec-origin: apiexamples/storefront/vtex.recommendation-shelf@2.x'
+```
+
+**Response example**:
+
+```json
+{
+  "products": [
+    "1234",
+    "5678",
+    "91011"
+  ],
+  "correlationId": "rec-123e4567-e89b-12d3-a456-426614174000",
+  "campaign": {
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "title": "Most Popular Items",
+    "type": "TOP_ITEMS"
+  }
+}
+```
+
+Render the returned items as product cards on the shelf. After rendering, proceed to event tracking.
+
+#### Tracking event interactions
+
+To improve recommendation accuracy and measure effectiveness, you need to track how users interact with the recommended products. There are three types of events to track:
+
+* [Recommendation views](#recommendation-views): When recommendation shelves become visible to users.
+* [Recommendation clicks](#recommendation-clicks): When users click the recommended products.
+* [Product views](#product-views): When users visit product detail pages.
+
+For accurate tracking, ensure that:
+
+* All events include the same `recommendationsUserId`.
+* Events are properly debounced to prevent duplicates.
+* View events are triggered only when shelves enter the viewport.
+
+#### Recommendation views
+
+Use the `POST` [Recommendation view](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/recommendation-view/v2) endpoint when a recommendation shelf becomes visible. This endpoint:
+
+* Records when recommendations are shown to users.
+* Provides data for click-through rate (CTR) analysis.
+* Helps train and improve recommendation models.
+* Should be called when shelves enter the viewport.
+
+**Request example**:
+
+```curl
+curl --request post \
+ --url 'https://api.vtexcommercestable.com.br/api/recommend-bff/v2/events/recommendation-view?an=apiexamples' \
+ --header 'Content-Type: application/json' \
+ --data '{"userId":"user-id","correlationId":"correlation-id--from-recommendation-request","products":["product-id-1","product-id-2","product-id-3"]}'
+
+```
+
+#### Recommendation clicks
+
+Use the `POST` [Recommendation click](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/recommendation-click/v2) endpoint when users interact with recommended products. This endpoint tracks user engagement with recommendations and should be called for each click on a product card.
+
+**Request example**:
+
+```curl
+curl --request post \
+ --url 'https://api.vtexcommercestable.com.br/api/recommend-bff/v2/events/recommendation-click?an=apiexamples' \
+ --header 'Content-Type: application/json' \
+ --data '{"userId":"user-id","correlationId":"correlation-id--from-recommendation-request","product":"product-id"}'
+```
+
+#### Product views
+
+Use the `POST` [Product View](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/product-view/v2) endpoint when users view product details. This endpoint tracks all product detail page views.
+
+>⚠️ VTEX automatically tracks product views once the Recommendations feature is set up in your store’s website, as instructed in [Step 2](#step-2---implement-the-script-in-the-faststore-project). This event is only required for app implementations or other channels. Track product views for all sources to ensure comprehensive data collection for the recommendation models.
+
+**Request example**:
+
+```curl
+curl --request post \
+ --url 'https://api.vtexcommercestable.com.br/api/recommend-bff/v2/events/product-view?an=apiexamples' \
+ --header 'Content-Type: application/json' \
+ --header 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \
+ --header 'x-vtex-rec-origin: apiexamples/storefront/vtex.recommendation-shelf@2.x' \
+ --data '{"userId":"user-id","product":"product-id-1","source":"WEB_DESKTOP"}'
+```
