@@ -38,7 +38,7 @@ To collect shopper product interaction events for training and delivering recomm
 
 1. Add a [new section](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section) that fetches products and tracks views and click events, similar to a [carousel](https://developers.vtex.com/docs/guides/faststore/molecules-carousel).
 
-> ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
+    > ℹ️ After creating this new section, you can add it to any part of the store, including Home, PDP, and PLP.
 
 2. Add the script provided by VTEX Support as a third-party script in your FastStore project. To add the script, follow the instructions in the [Adding third-party scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts) guide.
 3. Save the `_snrs_uuid` in the user's order form, so that when the order is placed, it is possible to attribute that sale to the user identified during navigation. When the ID is generated, it is necessary to save the user's ID in the orderForm during navigation using `PUT` Set multiple custom field values as shown below:
@@ -129,18 +129,18 @@ This endpoint retrieves a list of recommended products based on:
 
 * Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [our Support](https://help.vtex.com/en/support) to obtain the `campaignId`.
     
-Available campaign types:
+  Available campaign types:
 
-* `rec-top-items-v2`: Best sellers
-* `rec-persona-v2`: Personalized recommendations
-* `rec-similar-v2`: Similar items
-* `rec-cross-v2`: Cross-sell
-* `rec-cart-v2`: Cart-based recommendations
-* `rec-last-v2`: Last seen
-* `rec-interactions-v2`: Recent interactions
-* `rec-visual-v2`: Visual similarity
-* `rec-search-v2`: Search-based recommendations
-* `rec-next-v2`: Next interaction
+  * `rec-top-items-v2`: Best sellers
+  * `rec-persona-v2`: Personalized recommendations
+  * `rec-similar-v2`: Similar items
+  * `rec-cross-v2`: Cross-sell
+  * `rec-cart-v2`: Cart-based recommendations
+  * `rec-last-v2`: Last seen
+  * `rec-interactions-v2`: Recent interactions
+  * `rec-visual-v2`: Visual similarity
+  * `rec-search-v2`: Search-based recommendations
+  * `rec-next-v2`: Next interaction
 
 * User context (from `recommendationsUserId`).
     
