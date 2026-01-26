@@ -228,7 +228,7 @@ curl --request post \
 
 Use the `POST` [Product View](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/events/product-view/v2) endpoint when users view product details. This endpoint tracks all product detail page views.
 
->⚠️ VTEX automatically tracks product views once the Recommendations feature is set up in your store’s website, as instructed in [Step 2](https://docs.google.com/document/d/1eMNtYe0GPiWpRiS6A_R9PbTcTeubKQk0Y5mKR-hTxvc/edit#step-2-script-implementation-in-the-store). This event is only required for app implementations or other channels. Track product views for all sources to ensure comprehensive data collection for the recommendation models.
+>⚠️ VTEX automatically tracks product views once the Recommendations feature is set up in your store’s website, as instructed in [Step 2](#step-2---implement-the-script-in-the-faststore-project). This event is only required for app implementations or other channels. Track product views for all sources to ensure comprehensive data collection for the recommendation models.
 
 **Request example**:
 
