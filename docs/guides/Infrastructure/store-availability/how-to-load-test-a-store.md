@@ -107,6 +107,8 @@ If an application is returning too many errors in a short period of time, the ci
     
 A request that was handled by a circuit breaker will return a `503 Service Unavailable` response status code.
 
-## Schedule a load test
+## Notify VTEX about an upcoming load test
 
-If you wish to load test your store, contact [VTEX support](https://help.vtex.com/en/support) to let us know when to expect increased requests from your store.
+If you plan to run a load test on your store, contact [VTEX support](https://help.vtex.com/en/support) to notify VTEX of the test window and expected traffic volume.
+
+This communication is for awareness purposes only, so our teams know that an intentional traffic increase is expected. VTEX does not plan, execute, or provide support for customer load tests, and the responsibility for designing and running the test remains entirely with the customer.
