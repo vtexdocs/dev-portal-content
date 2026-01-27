@@ -4,108 +4,109 @@ slug: "how-to-load-test-a-store"
 hidden: false
 createdAt: "2022-03-28T19:18:32.969Z"
 updatedAt: "2022-03-28T19:18:59.970Z"
+excerpt: "Learn best practices for load testing your VTEX store, including how to simulate real user behavior and interpret test results effectively."
 ---
-Load testing is the practice of determining whether a service is able to handle the expected capacity with the use of artificial load.
+Load testing is the practice of determining whether a service can handle expected capacity using artificial load.
 
-VTEX engineers load test the platform regularly to ensure it matches the expectations for heavy load. Therefore, you do not need to load test the VTEX platform on your own.
+VTEX engineers regularly load test the platform to ensure it meets expectations for heavy traffic. Therefore, you do not need to load test the VTEX platform on your own.
 
-However, if you still feel the need to load test specific scenarios, we recommend you follow some principles in order to guarantee a safe test and meaningful results:
+However, if you need to load test specific scenarios, follow these principles to ensure safe testing and meaningful results:
 
 - [Simulate real user behavior](#simulate-real-user-behavior)
 - [Ensure your test is not the bottleneck](#ensure-your-test-is-not-the-bottleneck)
 - [Understand how to interpret results from the test](#understand-how-to-interpret-results-from-the-test)
 
-These principles are especially relevant when your test includes services that integrate or interact with the VTEX platform, such as Google Tag Manager or Facebook Pixel. Below you can learn more about them, as well as [How VTEX protects the platform against traffic attacks](#how-vtex-protects-the-platform-against-traffic-attacks) and [Schedule a load test](#schedule-a-load-test).
+These principles are especially relevant when your test includes services that integrate or interact with the VTEX platform, such as Google Tag Manager or Facebook Pixel. Learn more about them below, including [How VTEX protects the platform against traffic attacks](#how-vtex-protects-the-platform-against-traffic-attacks) and [Notify VTEX about an upcoming load test](#notify-vtex-about-an-upcoming-load-test).
 
 ## Simulate real user behavior
 
-Simulating real user behavior is key to obtaining statistically meaningful results to your test. Below are some points to consider when building your load test scenario:
+Simulating real user behavior is essential for obtaining statistically meaningful results. Consider the following points when building your load test scenario:
 
 ### Customers shop for different products
 
-In most cases, customers browse stores going through different searches and products. Make sure your test automation is not always picking the first product on the page, or always searching for the same term in the search bar.
+In most cases, customers browse stores through different searches and products. Ensure your test automation doesn't always select the first product on the page or always search for the same term.
 
-Instead, try to model the probability of a user picking products based on real user metrics from your store. If you do not have such data, we recommend using uniformly random variations of requests to VTEX APIs and pages.
+Instead, model the probability of users selecting products based on real user metrics from your store. If you don't have such data, we recommend using uniformly random variations of requests to VTEX APIs and pages.
 
-The main reason for this is that picking the same product over and over does not test the platform’s infrastructure. It mostly tests our caching layer.
+The main reason for this is that selecting the same product repeatedly doesn't test the platform's infrastructure—it primarily tests the caching layer.
 
 ### Customers shop with different emails
 
-When conducting load tests, ensure that you perform tests using a variety of customer emails. Each customer in your store has their own email address, so it is important to simulate purchases from multiple customers as would happen in a real-world scenario.
+When conducting load tests, ensure you test using a variety of customer emails. Each customer in your store has a unique email address, so it's important to simulate purchases from multiple customers as in real-world scenarios.
 
 This realistic simulation contributes to more accurate load testing results, providing insights into how the platform performs under different user circumstances.
 
-We recommend that you incorporate a randomized selection of email addresses when configuring your load test scenarios.
+We recommend incorporating a randomized selection of email addresses when configuring your load test scenarios.
 
 ### Customers shop from different regions
 
-Even if the load test is focused on a specific country, state, or region, customers will still shop from a range of IP addresses and locations.
+Even if the load test focuses on a specific country, state, or region, customers will still shop from a range of IP addresses and locations.
 
-Because of this, we recommend you use various source IP addresses on your test and that it spreads the load over various destination IP addresses.
+Because of this, we recommend using various source IP addresses in your test and spreading the load over multiple destination IP addresses.
 
-Our edge services have protective measures from increased load from a single IP address or region, and they may be triggered if requests are way above the standard or even expected values. This may cause an outage in the load test, or worse, a localized outage of the store.
+Our edge services have protective measures against increased load from a single IP address or region, which may be triggered if requests are significantly above standard or expected values. This may cause an outage in the load test, or worse, a localized outage of the store.
 
-To make sure that you are using various destination IP addresses, use tools such as [WhatsMyDns](https://www.whatsmydns.net/#A/). This allows you to check the domain for different regions close to your testing site. Run it multiple times so that you get different IPs for the same region as well.
+To ensure you're using various destination IP addresses, use tools such as [WhatsMyDns](https://www.whatsmydns.net/#A/). This allows you to check the domain for different regions close to your testing site. Run it multiple times to get different IPs for the same region as well.
 
 ### Customers shop at different times
 
-Your customers’ activities naturally spread through intervals of time, even in the case of flash sales. A click on one client may happen seconds after one in another client. This difference is small for shopping behavior, but a big one when computing results in less than a second.
+Your customers' activities naturally spread through intervals of time, even during flash sales. A click from one customer may happen seconds after another customer's click. This difference is small for shopping behavior but significant when computing results in less than a second.
 
-Make sure your load test is spreading requests randomly over time. Also make sure that your load test has ramp-up and ramp-down configurations. These numbers depend heavily on what you are testing. Flash sales may ramp up in around five minutes and ramp down almost as fast, while Black Week and Cyber Monday sales may have a ramp up and down spread out over hours.
+Ensure your load test spreads requests randomly over time and includes ramp-up and ramp-down configurations. These numbers depend heavily on what you're testing. Flash sales may ramp up in around five minutes and ramp down almost as fast, while Black Week and Cyber Monday sales may have ramp-up and ramp-down periods spread over hours.
 
-Configuring a spread of requests will allow the VTEX platform to smoothly scale up the services according to the new demand for resources. 
+Configuring a spread of requests allows the VTEX platform to smoothly scale up services according to new demand for resources.
 
-To learn more about different behaviors you may encounter in case the increase of requests is too sudden, see [How VTEX protects the platform against traffic attacks](#how-vtex-protects-the-platform-against-traffic-attacks) below. 
+To learn more about different behaviors you may encounter if the increase in requests is too sudden, see [How VTEX protects the platform against traffic attacks](#how-vtex-protects-the-platform-against-traffic-attacks) below.
 
 ## Ensure your test is not the bottleneck
 
-In order to achieve the intended load, your testing infrastructure must be able to issue the rate and amount of requests that the VTEX platform will receive. Therefore, a big amount of requests requires a matching size infrastructure. See below the bottlenecks your test could face.
+To achieve the intended load, your testing infrastructure must be able to issue the rate and volume of requests that the VTEX platform will receive. Therefore, a large volume of requests requires matching infrastructure capacity. See below the bottlenecks your test could face.
 
 ### Network bandwidth
 
-Your test will issue many requests and receive many responses from VTEX. Make sure that your testing infrastructure has enough bandwidth to transmit all the necessary requests and responses.
+Your test will issue many requests and receive many responses from VTEX. Ensure your testing infrastructure has enough bandwidth to transmit all necessary requests and responses.
 
-If you are doing your test on the cloud, be careful when choosing which types of compute instances you will use, as network bandwidth is often overlooked.
+If you're conducting your test on the cloud, be careful when choosing compute instance types, as network bandwidth is often overlooked.
 
 ### Compute capacity
 
-Though making requests is mostly an I/O-bound operation, meaning that the bottleneck of a system would often be the bandwidth and latency of the network, you can also have systems that are not prepared to handle as many requests because of lack of CPU and RAM resources.
+Though making requests is mostly an I/O-bound operation (meaning the bottleneck is often network bandwidth and latency), you can also have systems that aren't prepared to handle many requests due to lack of CPU and RAM resources.
 
-Remember to monitor the resource usage on your test to ensure your CPU and RAM are running below performance degradation levels. As a rule of thumb, keep CPU and RAM usage under 80%.
+Monitor resource usage in your test to ensure CPU and RAM are running below performance degradation levels. As a rule of thumb, keep CPU and RAM usage under 80%.
 
 ## Understand how to interpret results from the test
 
-With the test simulating real user behavior, you should be able to look at the test results and understand the outcomes and necessary actions. A failed test may not mean that the platform will not handle the requested load, just as a successful test could still bring some points to consider.
+With the test simulating real user behavior, you should be able to interpret the test results and understand the outcomes and necessary actions. A failed test may not mean the platform can't handle the requested load, just as a successful test could still reveal points to consider.
 
 ### Understand the errors from the log
 
-The main way to understand what went wrong with a test is to look at the most common errors from test runs. You can query a search engine for error messages and see the most common reasons. But remember that they may not apply to your case.
+The primary way to understand what went wrong with a test is to examine the most common errors from test runs. You can query a search engine for error messages to see common reasons. However, remember they may not apply to your specific case.
 
 ### Check if the error comes from a third-party service
 
-Depending on how you programmed your test, you may be querying third-party resources, for images, ads, fonts, scripts, pixels, and more, in addition to VTEX’s.
+Depending on how you programmed your test, you may be querying third-party resources for images, ads, fonts, scripts, pixels, and more, in addition to VTEX resources.
 
-Check if the requested URL matches a third-party source. If so, investigate with them on the cause of errors as well. Keep in mind that a third party can have more restrictive limits on resource usage than the VTEX platform.
+Check if the requested URL matches a third-party source. If so, investigate the cause of errors with them as well. Keep in mind that third parties can have more restrictive limits on resource usage than the VTEX platform.
 
 ## How VTEX protects the platform against traffic attacks
 
-Load tests are not and should not be tagged as “special requests” in our platform, as that would further separate the tests from reality. Therefore, requests from load tests receive the same treatment as any other, which includes defensive measures due to increased load.
+Load tests should not be tagged as "special requests" in our platform, as that would separate the tests from reality. Therefore, requests from load tests receive the same treatment as any other requests, which includes defensive measures against increased load.
 
-Because we’re a multi-tenant platform, we have measures that our systems take to prevent a surge of load in a single store from affecting the whole platform. Here are the most relevant measures:
+Because we're a [multi-tenant platform](https://developers.vtex.com/docs/guides/cloud-infrastructure), we have measures to prevent a surge of load in a single store from affecting the entire platform. Here are the most relevant measures:
 
 ### Rate Limiting
 
-Our platform has limits of requests per IP, per Account, per API route, and per other components of a request. These limits vary throughout the day and are not disclosed by VTEX. However, you can know whether you reached the limit by analyzing the response of a given request.
+Our platform has limits on requests per IP, per account, per API route, and per other components of a request. These limits vary throughout the day and are not disclosed by VTEX. However, you can determine whether you reached the limit by analyzing the response of a given request.
 
-A request that was rate-limited will get a response of `429 Too Many Requests` and contain a `Retry-After` header indicating when the client should try to issue another request. This is what is defined in [RFC6585](https://httpstatuses.com/429).
+A request that was rate-limited will receive a `429 Too Many Requests` response and contain a `Retry-After` header indicating when the client should try to issue another request. This is defined in [RFC6585](https://httpstatuses.com/429).
 
 ### Circuit Breaking
 
-Some parts of our platform have circuit breakers. Meaning a feature that stops requests from reaching applications that are having trouble returning successful responses. 
+Some parts of our platform have circuit breakers—a feature that stops requests from reaching applications that are having trouble returning successful responses.
 
-If an application is returning too many errors in a short period of time, the circuit breaker is activated and requests stop flowing to that application in hopes that less requests will give it time to recover back to healthy behavior.
-    
-A request that was handled by a circuit breaker will return a `503 Service Unavailable` response status code.
+If an application returns too many errors in a short period of time, the circuit breaker is activated and requests stop flowing to that application, giving it time to recover to healthy behavior.
+
+A request handled by a circuit breaker will return a `503 Service Unavailable` response status code.
 
 ## Notify VTEX about an upcoming load test
 
