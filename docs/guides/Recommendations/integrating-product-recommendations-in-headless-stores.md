@@ -64,16 +64,17 @@ After receiving the integration script from VTEX Support, implement it in your h
 
 Once the tracking script collects enough browsing data, the VTEX Support team will train and configure the recommendation models. The available strategies are:
 
-| Name | Description |
-| :---- | :---- |
-| Best sellers | Returns the top-selling or most popular items in the store. |
-| Recommended for you | Provides recommendations tailored to the user's profile and behavior. |
-| Similar products | Returns items similar to a specified product. |
-| Buy together | Suggests complementary items to a specified product. |
-| Recently viewed | Returns the most recently viewed products for the given user. |
-| Visually similar products | Returns visually similar items to a specified product. |
-| Manual collection | Returns recommendations from a collection defined manually. |
-| Next interaction | Predicts and suggests products the user is likely to interact with next. |
+| Name                      | Description                                                                                     |
+| ------------------------- | ----------------------------------------------------------------------------------------------- |
+| Most popular              | Products with the highest number of views                                                       |
+| Recommended for you       | Custom recommendations based on user profile and behavior                                       |
+| Similar products          | Products similar to a specific one                                                              |
+| Cross-sell                | Complementary products for a specific one that are commonly purchased together.                 |
+| Best sellers              | The store's best-selling products                                                               |
+| Last seen                 | Products recently viewed by the user                                                            |
+| Recent interactions       | Products most likely to engage the user in the future                                           |
+| Visually similar products | Products visually similar to a specific one                                                     |
+| Manual collection         | Recommendations from a collection created manually                                              |
 
 After the models are trained, they will be available for API-based recommendation displays in your store.
 
