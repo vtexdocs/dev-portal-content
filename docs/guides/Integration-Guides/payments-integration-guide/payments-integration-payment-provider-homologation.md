@@ -1,6 +1,7 @@
 ---
 title: "Payment Provider Homologation"
 slug: "payments-integration-payment-provider-homologation"
+excerpt: "Validate your payment provider integration and complete the homologation process using the Payment Provider Test Suite."
 hidden: false
 createdAt: "2020-10-27T15:19:20.313Z"
 updatedAt: "2022-11-03T14:26:34.287Z"
@@ -40,8 +41,8 @@ To start, fulfill each field according to the instructions below:
 
 - Service URL: The provider’s endpoint. VTEX will use this URL to contact the provider system.
 - Connector Name: How your connector will be named in VTEX. The connector name has necessarily to be related to your brand. Also, the Connector Name is case-sensitive. That means that it considers uppercase and lowercase.
-- X-VTEX-API-AppKey: fulfill it with the value `X-VTEX-API-AppKey`.
-- X-VTEX-API-AppToken: fulfill it with the value `X-VTEX-API-AppToken`.
+- X-VTEX-API-AppKey: Fulfill it with the value `X-VTEX-API-AppKey`.
+- X-VTEX-API-AppToken: Fulfill it with the value `X-VTEX-API-AppToken`.
 
 >❗ Once you define the connector name, it can not be changed.
 
@@ -55,20 +56,20 @@ Check if the right options were activated. Then, click the **Run Tests** button.
 
 ### Logs
 
-All of the operations realized in the test phase will be exposed in the Logs box, including the ones that may present some error in the integration.
+All the operations performed in the test phase will be exposed in the Logs box, including the ones that may present some errors in the integration.
 
-If errors happen, make all the adjustments necessary to adapt your connector to the Payment Provider Protocol rules and try to run the test again.
+If errors occur, make all the adjustments necessary to adapt your connector to the Payment Provider Protocol rules and try to run the test again.
 
 If everything is ok, you need to [open a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en) informing them that the integration was completed. However, before opening the ticket, make sure you have the following information:
 
-- **Connector Name**: a description of the provider. Use max. 16 alphanumeric characters. This name can not be modified after being published.
-- **Partner contact**: partner email address in case we need to communicate changes and new features of our protocol.
-- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g. `https://vtex.pagseguro.com>` It has to respond to the route `{{serviceUrl}}/manifest`. This endpoint must be publicly available.
-- **Sandbox Service Provider Endpoint**: the base path that will be used in test mode for API calls to the provider. E.g. `https://sandboxserviceproviderendpoint.com`.
-- **Owner account**: the VTEX account name which will be used in callback requests. This account must be available at *[account].myvtex.com*.
-- **Allowed Accounts**: describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
-- **New Payment Method**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.
-- **New Payment method purchase flow**: if a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
+- **Connector Name**: A description of the provider. Use max. 16 alphanumeric characters. This name cannot be modified after being published.
+- **Partner contact**: Partner email address in case we need to communicate changes and new features of our protocol.
+- **Production Service Provider Endpoint**: The base path that will be used for API calls to the provider, e.g. `https://vtex.pagseguro.com>`. It has to respond to the route `{{serviceUrl}}/manifest`. This endpoint must be publicly available.
+- **Sandbox Service Provider Endpoint**: The base path that will be used in test mode for API calls to the provider (e.g. `https://sandboxserviceproviderendpoint.com`).
+- **Owner account**: The VTEX account name which will be used in callback requests. This account must be available at *[account].myvtex.com*.
+- **Allowed Accounts**: Describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
+- **New Payment Method**: Inform if this connector supports a payment method that is not yet available in the VTEX Admin.
+- **New Payment method purchase flow**: If a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
 
 > ⚠️ If the connector processes payments with credit, debit, or cobranded cards, it will also be necessary to send the [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) submitted with the homologation request ticket.
 
@@ -87,6 +88,6 @@ A connector is exempt from the payment provider homologation process only if all
 - It is a [PPF connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework), developed using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
 - It only uses payment methods already available on the VTEX platform.
 - It is installed locally, restricted to specific accounts.
-- The target account is already using any IO/PPF connector.
+- The target account is already using an IO/PPF connector.
 
 > ⚠️ If any of these conditions is not satisfied, the connector must follow the homologation process.
