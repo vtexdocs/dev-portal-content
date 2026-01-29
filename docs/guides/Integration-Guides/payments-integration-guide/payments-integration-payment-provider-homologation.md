@@ -25,7 +25,7 @@ Considering that you want to download the app through the Admin, proceed as foll
    ![Test\_suite\_1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-0.png)
 6. After that, you will be redirected to the VTEX App Store. Click the **GET APP** button at the top right corner of the page.
    ![Test\_suite\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-1.png)
-7. Then, on the popup screen, type your account's name - with lowercase and no space in between - and click the **CONFIRM** button.
+7. Then, on the popup screen, type your account's name in lowercase, with no spaces, and click the **CONFIRM** button.
    ![Test\_suite\_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-2.png)
 8. Click **INSTALL** to complete the installation process.
    ![Test\_suite\_4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-3.png)
@@ -33,20 +33,20 @@ Considering that you want to download the app through the Admin, proceed as foll
 
 ## Run the tests
 
-After having proceeded with the Homologation process you can start running tests to validate the integration.
+After having proceeded with the Homologation process, you can start running tests to validate the integration.
 
 ### Service information
 
-To start, fulfill each field according to the instructions below:
+To start, fill in each field according to the instructions below:
 
 - Service URL: The provider’s endpoint. VTEX will use this URL to contact the provider system.
-- Connector Name: How your connector will be named in VTEX. The connector name has necessarily to be related to your brand. Also, the Connector Name is case-sensitive. That means that it considers uppercase and lowercase.
-- X-VTEX-API-AppKey: Fulfill it with the value `X-VTEX-API-AppKey`.
-- X-VTEX-API-AppToken: Fulfill it with the value `X-VTEX-API-AppToken`.
+- Connector Name: How your connector will be named in VTEX. The connector name has to be necessarily related to your brand. Also, the Connector Name is case-sensitive. That means that it considers uppercase and lowercase.
+- X-VTEX-API-AppKey: Fill it in with the value `X-VTEX-API-AppKey`.
+- X-VTEX-API-AppToken: Fill it in with the value `X-VTEX-API-AppToken`.
 
 >❗ Once you define the connector name, it can not be changed.
 
-Then, click the **Check URL** button. This action will call the [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint. The response will indicate which payment methods will be able to be analyzed in the next step (Tests form).
+Then, click the **Check URL** button. This action will call the [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint. The response will indicate which payment methods can be analyzed in the next step (Tests form).
 
 ### Tests
 
@@ -64,12 +64,12 @@ If everything is ok, you need to [open a ticket to the VTEX support team](https:
 
 - **Connector Name**: A description of the provider. Use max. 16 alphanumeric characters. This name cannot be modified after being published.
 - **Partner contact**: Partner email address in case we need to communicate changes and new features of our protocol.
-- **Production Service Provider Endpoint**: The base path that will be used for API calls to the provider, e.g. `https://vtex.pagseguro.com>`. It has to respond to the route `{{serviceUrl}}/manifest`. This endpoint must be publicly available.
+- **Production Service Provider Endpoint**: The base path that will be used for API calls to the provider, e.g., `https://vtex.pagseguro.com>`. It has to respond to the route `{{serviceUrl}}/manifest`. This endpoint must be publicly available.
 - **Sandbox Service Provider Endpoint**: The base path that will be used in test mode for API calls to the provider (e.g. `https://sandboxserviceproviderendpoint.com`).
-- **Owner account**: The VTEX account name which will be used in callback requests. This account must be available at *[account].myvtex.com*.
+- **Owner account**: The VTEX account name which will be used in callback requests. This account must be available at `*[account].myvtex.com*`.
 - **Allowed Accounts**: Describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
-- **New Payment Method**: Inform if this connector supports a payment method that is not yet available in the VTEX Admin.
-- **New Payment method purchase flow**: If a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
+- **New Payment Method**: Inform whether this connector supports a payment method that is not yet available in the VTEX Admin.
+- **New Payment Method purchase flow**: If a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
 
 > ⚠️ If the connector processes payments with credit, debit, or cobranded cards, it will also be necessary to send the [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) submitted with the homologation request ticket.
 
