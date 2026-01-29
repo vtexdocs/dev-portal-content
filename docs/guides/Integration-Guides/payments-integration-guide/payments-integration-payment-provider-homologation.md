@@ -70,6 +70,8 @@ If everything is ok, you need to [open a ticket to the VTEX support team](https:
 - **New Payment methods**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.
 - **New Payment method purchase flow**: if a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
 
+> ⚠️ If the connector processes payments with credit or debit cards, it will also be necessary to send the [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) filled out in the homologation request ticket.
+
 The SLA required for the payment team to carry out the homologation is 30 days. This term will start only after the submission of the document **Master Partner Agreement for Financial Services (MPA)**. For homologation requests without using the MPA, the SLA term may be extended due to the need for additional analysis by the payment team.
 
 > ❗ Do **not** open the ticket for homologation if the Logs box presents any type of error. Redo the operation until the Logs box results are clear. If you need help in this scenario, talk to your Partner Account Manager.
