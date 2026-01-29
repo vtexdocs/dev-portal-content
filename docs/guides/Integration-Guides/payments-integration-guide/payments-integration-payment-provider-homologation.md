@@ -67,10 +67,10 @@ If everything is ok, you need to [open a ticket to the VTEX support team](https:
 - **Sandbox Service Provider Endpoint**: the base path that will be used in test mode for API calls to the provider. E.g. `https://sandboxserviceproviderendpoint.com`.
 - **Owner account**: the VTEX account name which will be used in callback requests. This account must be available at *[account].myvtex.com*.
 - **Allowed Accounts**: describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
-- **New Payment methods**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.
+- **New Payment Method**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.
 - **New Payment method purchase flow**: if a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
 
-> ⚠️ If the connector processes payments with credit, debit or cobranded cards, it will also be necessary to send the [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) filled out in the homologation request ticket.
+> ⚠️ If the connector processes payments with credit, debit, or cobranded cards, it will also be necessary to send the [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) submitted with the homologation request ticket.
 
 The SLA required for the payment team to carry out the homologation is 30 days. This term will start only after the submission of the document **Master Partner Agreement for Financial Services (MPA)**. For homologation requests without using the MPA, the SLA term may be extended due to the need for additional analysis by the payment team.
 
