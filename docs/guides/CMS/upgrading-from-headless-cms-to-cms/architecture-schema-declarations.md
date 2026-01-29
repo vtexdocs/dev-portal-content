@@ -106,7 +106,7 @@ To understand the practical differences, let's compare how the same Banner compo
 In the Headless CMS, all sections are defined in a single `sections.json` file. Each section has a `name` and a nested `schema` object.
 
 - All components are defined in a single array within one file.  
-- Component identified by the `name` field.  
+- Components are identified by the `name` field.  
 - Display name comes from `schema.title`.  
 - No inheritance between components.
 
@@ -153,10 +153,10 @@ In the Headless CMS, all sections are defined in a single `sections.json` file. 
 
 In the CMS, each component is defined in its own `.jsonc` file. The schema is flatter and includes additional metadata fields for identification, display, and inheritance.
 
-- Each component in its own file (`cms_component__ComponentName.jsonc`).  
-- Component identified by `$componentKey` field.  
-- Display name specified by `$componentTitle`.  
-- Inherits from base schema via `$extends`.
+- Each component is in its own file (`cms_component__ComponentName.jsonc`).  
+- Components are identified by the `$componentKey` field.  
+- Display name is specified by `$componentTitle`.  
+- It inherits from base schema via `$extends`.
 
 ```jsonc
 // cms/components/cms_component__Banner.jsonc

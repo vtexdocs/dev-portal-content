@@ -162,7 +162,7 @@ Development tools and access controls determine how developers work with the CMS
 
 ## Technical infrastructure and development tools
 
-Technical infrastructure describes the architectural components and design patterns of the CMS and Headless CMS, including differences in APIs, event handling, caching, and system architecture. Understanding.
+Technical infrastructure describes the architectural components and design patterns of the CMS and Headless CMS, including differences in APIs, event handling, caching, and system architecture. 
 
 | Aspect | Headless CMS | CMS |
 | :---- | :---- | :---- |
