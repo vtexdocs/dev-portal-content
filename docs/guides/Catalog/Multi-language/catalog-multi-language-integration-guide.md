@@ -58,15 +58,42 @@ The storefront queries Intelligent Search and the Catalog system at render time,
 
 > ℹ️ The valid storefront solutions for the multi-language feature are Store Framework and headless implementations.
 
-### Locale format
+## Consuming localized content
 
-All locale codes follow the IETF BCP 47, for example:
+There are two main approaches to consuming translated catalog data, depending on your storefront implementation.
 
-- `en-US`: English (United States)
-- `es-ES`: Spanish (Spain)
-- `pt-BR`: Portuguese (Brazil)
-- `fr-FR`: French (France)
-- `de-DE`: German (Germany)
+### Option 1: Via Intelligent Search (recommended)
+
+For most storefront implementations, **Intelligent Search is the recommended approach** for consuming translated content. When using Intelligent Search:
+
+- Translations are automatically indexed after being saved using the multi-language endpoints.
+- Search results, filters, and facets display translated content based on the customer's locale.
+- No additional API calls are required, since the storefront receives translated data automatically.
+
+**When to use Intelligent Search:**
+
+| Implementation | Intelligent Search usage |
+| --- | --- |
+| Store Framework | ✅ Yes (default behavior) |
+| Headless with IS | ✅ Yes |
+| Legacy CMS | ⚠️ May require additional configuration |
+
+### Option 2: Via Catalog API (direct fetch)
+
+When to use the direct Catalog API:
+
+- You need specific entity translations not available in search results.
+- You're building VTEX Admin tools or back-office integrations.
+- You need to fetch translations for validation or synchronization.
+
+### Handling missing translations
+
+When a translation is not available for a requested locale:
+
+- **Intelligent Search:** Returns content in the store's default language.
+- **Catalog API:** Returns only entities that have translations in the requested locale.
+
+Consider implementing fallback logic in headless implementations to handle missing translations gracefully.
 
 ## Activation
 
@@ -87,7 +114,7 @@ To successfully use the multi-language feature, the user or [API key](https://de
 The solution is composed of a combination of two methods:
 
 - **PUT**: Creates or updates translations for catalog entities.
-- **GET:** Retrieves translations previously created using the `PUT` method.
+- **GET:** Retrieves translations previously created using the `PUT` method. By default, it returns all existing translations for the entity, but you can filter results for a specific language using the `locale` query parameter.
 
 They are supported for the following catalog entities:
 
@@ -99,6 +126,18 @@ They are supported for the following catalog entities:
 - Attachments
 - Collections
 - Services
+
+### Locale format
+
+All locale codes follow the IETF BCP 47, for example:
+
+| Locale | Description |
+| :--- | :--- |
+| `en-US` | English (United States) |
+| `es-ES` | Spanish (Spain) |
+| `pt-BR` | Portuguese (Brazil) |
+| `fr-FR` | French (France) |
+| `de-DE` | German (Germany) |
 
 ### Creating or updating translations for a product
 
