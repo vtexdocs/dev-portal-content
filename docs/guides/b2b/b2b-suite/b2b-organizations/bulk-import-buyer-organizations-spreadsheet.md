@@ -1,9 +1,10 @@
 ---
 title: "Bulk Import Buyer Organizations Spreadsheet"
 slug: "bulk-import-buyer-organizations-spreadsheet"
+excerpt: "Learn how to fill out the bulk import spreadsheet to efficiently manage Buyer Organizations, Cost Centers, and Members through the Bulk Import API."
 hidden: false
-createdAt: "2024-03-26t09:00:09.698z"
-updatedAt: "2025-11-04t09:00:09.698z"
+createdAt: "2024-03-26T09:00:09.698Z"
+updatedAt: "2025-11-04T09:00:09.698Z"
 ---
 
 This guide will walk you through the process of filling out the bulk import spreadsheet for use with the [Bulk Import API](https://developers.vtex.com/docs/api-reference/buyer-organizations) to efficiently manage Buyer Organizations, Cost Centers, and Members through bulk import functionality.

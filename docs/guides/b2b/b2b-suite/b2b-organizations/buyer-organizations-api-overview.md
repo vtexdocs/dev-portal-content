@@ -1,9 +1,10 @@
 ---
 title: "Buyer Organizations API - Overview"
 slug: "buyer-organizations-api-overview"
+excerpt: "Overview of the Buyer Organizations API endpoints for managing buyer organizations and their associated users."
 hidden: true
-createdAt: "2021-10-08t17:53:09.698z"
-updatedAt: "2022-05-10t14:52:20.752z"
+createdAt: "2021-10-08T17:53:09.698Z"
+updatedAt: "2022-05-10T14:52:20.752Z"
 ---
 
 The Buyer Organizations API allows you to manage buyer organizations and their associated users.
