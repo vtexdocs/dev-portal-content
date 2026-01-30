@@ -97,7 +97,7 @@ See below the implementation by storefront type for consuming localized content:
 
 For stores built with [Store Framework](https://developers.vtex.com/docs/guides/store-framework), localized content is consumed automatically:
 
-1. **Locale detection:** The store detects the consumer''s locale from the URL binding (e.g., `store.com/es-ES/`) or browser settings.
+1. **Locale detection:** The store detects the consumer's locale from the URL binding (e.g., `store.com/es-ES/`) or browser settings.
 2. **Automatic translation:** Intelligent Search returns translated content for the detected locale.
 3. **Component rendering:** Store Framework components (product shelf, product details, search results) display the translated content without additional configuration.
 
@@ -227,7 +227,7 @@ See below an example of how the multi-language feature [works for a product](htt
 
 ### Retrieving translations for a product
 
-After creating tranlations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/products/-productId-/specification/-specificationId-/language).
+After creating translations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/products/-productId-/specification/-specificationId-/language).
 
 **Method:** `GET`
 
@@ -235,7 +235,7 @@ After creating tranlations for an entity, you can use the `GET` endpoint to retr
 
 **Query parameters:** `locale=en-US` (Optional)
 
-> ℹ️ If you wish to retrieve translations for a specific language, use the query parameter `locale`, as described in the [Locale format](#locale-format) section. Oherwise, you will receive all translations for the entity.
+> ℹ️ If you wish to retrieve translations for a specific language, use the query parameter `locale`, as described in the [Locale format](#locale-format) section. Otherwise, you will receive all translations for the entity.
 
 **Response body example:** `200 OK`
 
