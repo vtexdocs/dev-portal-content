@@ -7,6 +7,8 @@ createdAt: "2026-01-30T00:00:00.000Z"
 updatedAt: "2026-01-30T00:00:00.000Z"
 ---
 
+>⚠️ The Custom Fields API is only available for B2B Buyer Portal. Authorization from the Commerce Engineer of the account is required for use.
+
 Default values are purchase details, such as addresses, and B2B custom fields that you configure for an organizational unit so that checkout forms can be completed automatically. This integration guide explains how to use the [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api) to store and manage these preferences and how they participate in the end-to-end checkout experience.
 
 In typical B2B scenarios, a buyer organization administrator defines which shipping address, billing address, credit card, and custom fields, such as cost center or PO number, should be used by default for each organizational unit. These defaults are stored in VTEX Dynamic Storage and later consumed by session and checkout services to automatically complete orders.
