@@ -4,7 +4,7 @@ slug: "catalog-multi-language-integration-guide"
 hidden: false
 excerpt: "Manage multiple languages for catalog entities."
 createdAt: "2026-01-13T00:00:00.000Z"
-updatedAt: "2026-01-13T00:00:00.000Z"
+updatedAt: "2026-01-30T00:00:00.000Z"
 ---
 
 > ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
@@ -19,17 +19,6 @@ The [multi-language feature](https://developers.vtex.com/docs/api-reference/cata
 - **Automated translation workflows:** Integrate with Translation Management Systems (TMS) for automated translation.
 - **Multiple storefront technologies:** Consume translations across Store Framework and headless implementations.
 - **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
-
-The supported catalog entities are:
-
-- Products
-- SKUs
-- Specifications
-- Categories
-- Brands
-- Attachments
-- Collections
-- Services
 
 > ℹ️ To see the complete documentation of the multi-language endpoints, check the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
 
@@ -93,13 +82,232 @@ To successfully use the multi-language feature, the user or [API key](https://de
 | :--- | :--- | :--- |
 | Catalog | Content | Categories Management |
 
-## Best practices
+## Using the multi-language feature
 
-Some of our recommendations when using the multi-language feature are:
+The solution is composed of a combination of two methods:
 
-- **Start with high-impact entities:** Prioritize translating products, categories, and brands before moving to specifications and attachments. This approach helps you create a more complete and accurate translation.
-- **Batch translations:** When integrating with a TMS, batch multiple translation updates to reduce API calls, optimizing performance and reducing time to market.
-- **Validate before publishing:** Use the `GET` endpoints to verify translations before they go live, preventing errors and ensuring translation quality.
+- **PUT**: Creates or updates translations for catalog entities.
+- **GET:** Retrieves translations previously created using the `PUT` method.
+
+They are supported for the following catalog entities:
+
+- Products
+- SKUs
+- Specifications
+- Categories
+- Brands
+- Attachments
+- Collections
+- Services
+
+### Creating or updating translations for a product
+
+See below an example of how the multi-language feature [works for a product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/language):
+
+**Method:** `PUT`
+
+**Endpoint:** `https://{accountName}.{environment}.com.br/api/catalog/pvt/product/{productId}/language`
+
+**Request body example:**
+
+```json
+{
+  "Locale": "en-US",
+  "Name": "Classic Blue T-Shirt",
+  "Title": "Classic Blue Tshirt",
+  "Description": "A comfortable cotton t-shirt in classic blue color",
+  "MetaTagDescription": "Buy the best classic blue t-shirt made with premium cotton",
+  "DescriptionShort": "Comfortable cotton t-shirt",
+  "Keywords": "t-shirt, blue, cotton, casual",
+  "LinkId": "classic-blue-tshirt"
+}
+```
+
+**Responses:**
+
+- `201 Created`: The translation was created or updated successfully.
+- `400 Bad Request`: The request body is invalid.
+- `403 Forbidden`: The user or API key does not have the required [permissions](#permissions).
+- `404 Not Found`: The product ID does not exist.
+- `409 Conflict`: The translation already exists with the same fields.
+
+> ℹ️ For information about how to handle errors, see the [Troubleshooting](#troubleshooting) section.
+
+### Retrieving translations for a product
+
+After creating tranlations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/products/-productId-/specification/-specificationId-/language).
+
+**Method:** `GET`
+
+**Endpoint:** `https://{accountName}.{environment}.com.br/api/catalog/pvt/product/{productId}/language`
+
+**Query parameters:** `locale=en-US` (Optional)
+
+> ℹ️ If you wish to retrieve translations for a specific language, use the query parameter `locale`, as described in the [Locale format](#locale-format) section. Oherwise, you will receive all translations for the entity.
+
+**Response body example:** `200 OK`
+
+```json
+[
+  {
+    "Id": 2,
+    "Locale": "en-US",
+    "Name": "Men's Red T-Shirt",
+    "Description": "The <strong>Men's Basic Red T-Shirt</strong> is the perfect piece for those who value both style and comfort in their everyday look. Made from <strong>soft, breathable cotton fabric</strong>, it offers a lightweight fit and a smooth touch on the skin. Its <strong>minimalist design</strong> makes it easy to match with different styles — from casual to modern — perfect to wear with jeans, shorts, or layered under a jacket.<ul><li><strong>Color:</strong> Red</li><li><strong>Fit:</strong> Regular</li><li><strong>Neckline:</strong> Crew neck</li><li><strong>Fabric:</strong> 100% cotton</li><li><strong>Ideal for:</strong> Casual wear, work, or leisure</li></ul>A versatile and essential piece in the modern man's wardrobe, combining practicality and good taste in one product.",
+    "Title": "Men's Red T-Shirt",
+    "MetaTagDescription": null,
+    "DescriptionShort": null,
+    "Keywords": "shirt, red, basic, cotton",
+    "LinkId": null,
+    "Category": {
+      "Id": 18,
+      "Locale": "en-US",
+      "Name": "New Clothes",
+      "Title": "New Clothes",
+      "Description": "New Clothes for men",
+      "Keywords": "New, Clothes",
+      "LinkId": "new-clothes"
+    },
+    "Categories": [
+      {
+        "Id": 18,
+        "Locale": "en-US",
+        "Name": "New Clothes",
+        "Title": "New Clothes",
+        "Description": "New Clothes for men casual",
+        "Keywords": "New, Clothes",
+        "LinkId": "new-clothes-for-men-casual"
+      },
+      {
+        "Id": 15,
+        "Locale": "en-US",
+        "Name": "Accessories",
+        "Title": "Accessories",
+        "Description": "Accessories for men",
+        "Keywords": "fashion",
+        "LinkId": null
+      }
+    ],
+    "SimilarCategories": null,
+    "Brand": {
+      "Id": 1,
+      "Locale": "en-US",
+      "Name": "Casual clothes",
+      "Text": "The best casual clothes for your everyday life.",
+      "Keywords": "casual, clothes, everyday life",
+      "SiteTitle": "Casual clothes",
+      "LinkId": "casual-clothes"
+    },
+    "Skus": [
+      {
+        "Id": 33,
+        "Locale": "en-US",
+        "Name": "Men's Red T-Shirt",
+        "MeasurementUnit": "un",
+        "Attributes": [
+          {
+            "Id": 17,
+            "Locale": "en-US",
+            "AttributeName": "Color",
+            "AttributeValue": "Red"
+          }
+        ],
+        "Attachments": [
+          {
+            "Id": 4,
+            "Locale": "en-US",
+            "Name": "Customization",
+            "Domains": [
+              {
+                "OriginalFieldName": "Customização",
+                "FieldName": "Customization",
+                "DomainValues": "Special"
+              }
+            ]
+          }
+        ],
+        "Services": [
+          {
+            "Id": 8,
+            "Locale": "en-US",
+            "Name": "Packaging",
+            "Text": "Packaging for giving as a gift",
+            "SkuServiceType": {
+              "Id": 34,
+              "Locale": "en-US",
+              "Name": "Small box",
+              "Values": [
+                {
+                  "Id": 1,
+                  "Locale": "en-US",
+                  "Name": "Premium box"
+                }
+              ],
+              "Attachments": [
+                {
+                  "Id": 4,
+                  "Locale": "en-US",
+                  "Name": "Custom writing on gift card",
+                  "Domains": [
+                    {
+                      "OriginalFieldName": "Tipografia moderna",
+                      "FieldName": "Modern font",
+                      "DomainValues": "helvetica"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "SpecificationGroups": [],
+        "Files": [
+          {
+            "Id": 8,
+            "FileId": 197,
+            "Locale": "en-US",
+            "Label": "frontal-view",
+            "Name": "Frontal view of the product",
+            "Text": null
+          }
+        ]
+      }
+    ],
+    "SpecificationGroups": [
+      {
+        "Id": 8,
+        "Locale": "en-US",
+        "Name": "Masculine clothes",
+        "Specifications": [
+          {
+            "Id": 36,
+            "Locale": "en-US",
+            "Name": "Fabric type",
+            "Description": "Fabric types of which the product is made.",
+            "Values": [
+              {
+                "Id": 146,
+                "Locale": "en-US",
+                "Name": "Woll, cotton and synthetic fabrics",
+                "IsCustomValue": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Collections": [
+      {
+        "Id": 1139,
+        "Locale": "en-US",
+        "Name": "Shirts Collection",
+        "Description": "Shirts Collection description in English",
+        "LinkId": "shirts-collection"
+      }
+    ]
+  }
+]
+```
 
 ## Troubleshooting
 
