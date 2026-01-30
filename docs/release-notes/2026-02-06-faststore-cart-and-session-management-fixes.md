@@ -17,7 +17,7 @@ Stores using FastStore now benefit from fixes to cart and session management tha
 
 The cart now automatically clears after an order is successfully placed. If the checkout cookie is missing or invalid, FastStore creates a new cart instead of reusing stale data.
 
-This prevents purchased items from remaining in the cart and ensures a clean post-checkout experience and avoiding items left in the cart between orders.
+This prevents purchased items from remaining in the cart and ensures a clean post-checkout experience and avoids items left in the cart between orders.
 
 ### Complete logout storage cleanup
 
@@ -41,9 +41,9 @@ This improves security by ensuring no cart, session, or shopper data remains aft
 The cart validation logic was updated to prevent infinite revalidation loops when:
 
 - A user is logged in.
-- Regionalization (`postalCode`) is .
+- Regionalization (`postalCode`) is active.
 
-The fix updates the cart only when changes affect totals or shipping (for example, changing item quantity) and refreshes shipping simulation only when needed. This reduces errors, prevents interface flicker for logged-in users in regionalized stores.
+The fix updates the cart only when changes affect totals or shipping (for example, changing item quantity) and refreshes shipping simulation only when needed. This reduces errors and prevents interface flicker for logged-in users in regionalized stores.
 
 ## Why did we make these changes?
 
@@ -51,7 +51,7 @@ These updates improve security, data consistency, and developer experience by ke
 
 ## What needs to be done?
 
-These fixes should not break existing setups. To apply receive these fixes, update the FastStore packages to the latest version by running `yarn upgrade -L --scope @faststore`.
+These fixes should not break existing setups. To receive these fixes, update the FastStore packages to the latest version by running `yarn upgrade -L --scope @faststore`.
 
 If your store has customizations, review the following:
 
