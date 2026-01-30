@@ -9,7 +9,7 @@ tags:
     - FastStore
 ---
 
-Store using FastStore now receives improvements to cart and session management with fixes that enhance security and data consistency. These updates ensure carts are properly cleared after checkout, logout removes all browser storage and cookies, and cart validation no longer causes infinite loops when using regionalization with logged-in users.
+Stores using FastStore now receive improvements to cart and session management with fixes that enhance security and data consistency. These updates ensure carts are properly cleared after checkout, logout removes all browser storage and cookies, and cart validation no longer causes infinite loops when using regionalization with logged-in users.
 
 ## What has changed?
 
