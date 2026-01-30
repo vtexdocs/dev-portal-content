@@ -86,14 +86,58 @@ When to use the direct Catalog API:
 - You're building VTEX Admin tools or back-office integrations.
 - You need to fetch translations for validation or synchronization.
 
-### Handling missing translations
+## Implementation by storefront type
 
-When a translation is not available for a requested locale:
+See below the implementation by storefront type for consuming localized content:
 
-- **Intelligent Search:** Returns content in the store's default language.
-- **Catalog API:** Returns only entities that have translations in the requested locale.
+- [Store Framework](#store-framework-implementation)
+- [Headless](#headless-implementation)
 
-Consider implementing fallback logic in headless implementations to handle missing translations gracefully.
+### Store Framework implementation
+
+For stores built with [Store Framework](https://developers.vtex.com/docs/guides/store-framework), localized content is consumed automatically:
+
+1. **Locale detection:** The store detects the consumer''s locale from the URL binding (e.g., `store.com/es-ES/`) or browser settings.
+2. **Automatic translation:** Intelligent Search returns translated content for the detected locale.
+3. **Component rendering:** Store Framework components (product shelf, product details, search results) display the translated content without additional configuration.
+
+> ℹ️ **No code changes are required**: Once you submit translations via the multi-language feature, they appear automatically in your Store Framework storefront.
+
+### Headless implementation
+
+For headless storefronts, you either use the Intelligent Search API or the Catalog API directly, depending on your needs.
+
+#### Using Intelligent Search API
+
+Query Intelligent Search with the desired locale to receive translated results:
+
+```bash
+curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search?locale=es-ES&query=camiseta" \
+  -H "Accept: application/json"
+```
+
+**Advantages:**
+
+- Full search functionality (filters, facets, relevance)
+- Cached and optimized for performance
+- Consistent with other storefront implementations
+
+#### Option B: Use Catalog API directly
+
+Query the Catalog API with the `Accept-Language` header:
+
+```bash
+curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/catalog_system/pvt/sku/stockkeepingunitbyid/456" \
+  -H "Accept-Language: es-ES" \
+  -H "X-VTEX-API-AppKey: {appKey}" \
+  -H "X-VTEX-API-AppToken: {appToken}"
+```
+
+**When to use direct Catalog API:**
+
+- You need specific entity translations not available in search results.
+- You're building admin tools or back-office integrations.
+- You need to fetch translations for validation or synchronization.
 
 ## Activation
 
@@ -108,6 +152,15 @@ To successfully use the multi-language feature, the user or [API key](https://de
 | Product | Category | Resource |
 | :--- | :--- | :--- |
 | Catalog | Content | Categories Management |
+
+### Handling missing translations
+
+When a translation is not available for a requested locale:
+
+- **Intelligent Search:** Returns content in the store's default language.
+- **Catalog API:** Returns only entities that have translations in the requested locale.
+
+> ℹ️ Consider implementing fallback logic in headless implementations to handle missing translations gracefully.
 
 ## Using the multi-language feature
 
