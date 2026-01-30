@@ -107,9 +107,9 @@ Use this flow when:
 
 ### Step-by-step
 
-* Identify the unit to clean up  
-* Call the [Delete default values](http://replace-by-correct-link.delete-default-values-document.com/delete/api/dataentities/defaultValues/documents/-unitId-) endpoint to remove the document  
-* Coordinate with session and checkout components so defaults are no longer applied
+- Identify the unit to clean up  
+- Call the [Delete default values](http://replace-by-correct-link.delete-default-values-document.com/delete/api/dataentities/defaultValues/documents/-unitId-) endpoint to remove the document  
+- Coordinate with session and checkout components so defaults are no longer applied
 
 ### Request example \- Delete Default Values
 
