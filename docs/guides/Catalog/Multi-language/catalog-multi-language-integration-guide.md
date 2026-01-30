@@ -136,7 +136,7 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/catalog_system/
 **When to use direct Catalog API:**
 
 - You need specific entity translations not available in search results.
-- You're building VTEX Admin tools or back-office integrations.
+- You're building Admin tools or back-office integrations.
 - You need to fetch translations for validation or synchronization.
 
 ## Activation
