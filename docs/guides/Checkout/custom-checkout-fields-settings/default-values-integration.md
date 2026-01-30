@@ -130,4 +130,3 @@ The following License Manager resources are required depending on the operation:
 | **GET Get default values** | - Read-only documents<br>- Insert or update document, not remove<br>- Full access to all documents<br>- Master Data administrator |
 | **PATCH Update default values** | - Insert or update document, not remove<br>- Full access to all documents<br>- Master Data administrator |
 | **DELETE Delete default values** | - Full access to all documents<br>- Master Data administrator |
-
