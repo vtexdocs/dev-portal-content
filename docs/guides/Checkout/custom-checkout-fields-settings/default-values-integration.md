@@ -103,7 +103,7 @@ Use this flow when:
 
 ### Main endpoint
 
-* [DELETE Delete default values](http://replace-by-correct-link.delete-default-values-document.com/delete/api/dataentities/defaultValues/documents/-unitId-)
+- [DELETE Delete default values](http://replace-by-correct-link.delete-default-values-document.com/delete/api/dataentities/defaultValues/documents/-unitId-)
 
 ### Step-by-step
 
