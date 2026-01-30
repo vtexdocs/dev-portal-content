@@ -97,9 +97,9 @@ curl -X POST "https://{{accountName}}.{{environment}}.com.br/api/dataentities/de
 
 Use this flow when:
 
-* An organizational unit is removed, and its defaults should no longer be used  
-* You must reset all defaults for testing or reconfiguration  
-* You are cleaning up deprecated data
+- An organizational unit is removed, and its defaults should no longer be used  
+- You must reset all defaults for testing or reconfiguration  
+- You are cleaning up deprecated data
 
 ### Main endpoint
 
