@@ -107,7 +107,7 @@ For stores built with [Store Framework](https://developers.vtex.com/docs/guides/
 
 For headless storefronts, you either use the Intelligent Search API or the Catalog API directly, depending on your needs.
 
-#### Using Intelligent Search API
+#### Option A: Using Intelligent Search API
 
 Query Intelligent Search with the desired locale to receive translated results:
 
@@ -166,7 +166,7 @@ When a translation is not available for a requested locale:
 
 The solution is composed of a combination of two methods:
 
-- **PUT**: Creates or updates translations for catalog entities.
+- **PUT:** Creates or updates translations for catalog entities.
 - **GET:** Retrieves translations previously created using the `PUT` method. By default, it returns all existing translations for the entity, but you can filter results for a specific language using the `locale` query parameter.
 
 They are supported for the following catalog entities:
@@ -227,7 +227,7 @@ See below an example of how the multi-language feature [works for a product](htt
 
 ### Retrieving translations for a product
 
-After creating translations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/products/-productId-/specification/-specificationId-/language).
+After creating translations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
 
 **Method:** `GET`
 
@@ -380,7 +380,7 @@ After creating translations for an entity, you can use the `GET` endpoint to ret
               {
                 "Id": 146,
                 "Locale": "en-US",
-                "Name": "Woll, cotton and synthetic fabrics",
+                "Name": "Wool, cotton and synthetic fabrics",
                 "IsCustomValue": false
               }
             ]
