@@ -9,7 +9,7 @@ updatedAt: "2026-01-30T00:00:00.000Z"
 
 > ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
 
-Learn how to create translations and integrate localized content for catalog entities with the multi-language endpoints.
+Learn how to create translations and integrate localized content for catalog entities with the multi-language feature.
 
 ## Overview
 
@@ -40,7 +40,7 @@ When you send translated content using the multi-language feature, the workflow 
 
 ```mermaid
 flowchart LR
-    A[1. Catalog system translation ingestion] --> B[2. Intelligent Search indexing]
+    A[1. Catalog system translation ingestion] --> B[2. Indexing]
     B --> C[3. Storefront display]
 ```
 
@@ -48,7 +48,7 @@ flowchart LR
 
 The merchant or an integrated TMS makes a request to create or update the translation of a catalog entity, such as [product](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/product/-productId-/language) or [category](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/category/-categoryId-/language). The Catalog system validates and stores the translated fields per [locale](#locale-format), then triggers an update event to Intelligent Search.
 
-### Step 2: Intelligent Search indexing
+### Step 2: Indexing
 
 Intelligent Search indexes or reindexes the translated entity content to make it searchable and filterable in the storefront by the selected locale. This process runs asynchronously and usually completes within a few minutes. Larger amounts of data may take longer.
 
@@ -64,7 +64,7 @@ There are two main approaches to consuming translated catalog data, depending on
 
 ### Option 1: Via Intelligent Search (recommended)
 
-For most storefront implementations, **Intelligent Search is the recommended approach** for consuming translated content. When using Intelligent Search:
+For most storefront implementations, Intelligent Search is the recommended approach for consuming translated content. When using Intelligent Search:
 
 - Translations are automatically indexed after being saved using the multi-language endpoints.
 - Search results, filters, and facets display translated content based on the customer's locale.
