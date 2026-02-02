@@ -8,7 +8,6 @@ The CMS is built on the **CQRS (Command Query Responsibility Segregation)** arch
 - **Command side (Control Plane)**: Handles all write operations by creating, updating, and deleting content. Optimized for data validation, business logic, and consistency.  
 - **Query side (Data Plane)**: Handles all read operations by fetching content for display. Optimized for fast retrieval and caching.
 
-With CQRS, content editors get a responsive editing experience while your store gets fast content delivery, without either affecting the other, covering the following aspects:
 
 - **Performance under load**: Read and write operations scale independently.  
 - **Optimization trade-offs**: Each plane is optimized for its specific purpose.  
@@ -132,7 +131,6 @@ The Schema Registry manages component schemas and Content Type definitions and h
 3. **Content publishing** (publish time):  
      
    - Editor merges branch to main.  
-   - Control Plane publishes `BranchMerged` event.  
    - Event triggers sync to Data Plane and build webhook.
 
    
