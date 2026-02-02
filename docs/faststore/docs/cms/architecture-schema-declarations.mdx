@@ -1,85 +1,19 @@
 ---
 title: "Understanding CMS architecture and schema declarations"
-hidden: true
+hidden: false
+slug: "architecture-schema-declarations"
+createdAt: "2026-01-26T12:50:00.813Z"
+updatedAt: "2026-02-02T12:50:00.813Z"
 ---
 
-The CMS is built on the **CQRS (Command Query Responsibility Segregation)** architectural pattern, which separates read operations (queries) from write operations (commands) into different models or services. Instead of using a single API and database for both reading and writing data, CQRS uses specialized systems for each:
+The CMS is built on the **CQRS (Command Query Responsibility Segregation)** architectural pattern, which separates read operations (queries) from write operations (commands) into different models or services.
 
-- **Command side (Control Plane)**: Handles all write operations by creating, updating, and deleting content. Optimized for data validation, business logic, and consistency.  
-- **Query side (Data Plane)**: Handles all read operations by fetching content for display. Optimized for fast retrieval and caching.
-
+With CQRS, content editors get a responsive editing experience while your store gets fast content delivery, without either affecting the other, covering the following aspects:
 
 - **Performance under load**: Read and write operations scale independently.  
 - **Optimization trade-offs**: Each plane is optimized for its specific purpose.  
-- **Reliability**: Failures in one plane don't affect the other.  
+- **Reliability**: Failures in one plane don't affect the other.
 - **Technology choices**: Best technology for each plane's requirements.
-
-The following diagram shows the three main components of the CMS architecture:  
-
-```mermaid
-flowchart LR
-
-    %% Styles (subtle, readable)
-    classDef ui fill:#ffffff,stroke:#333,stroke-width:1px;
-    classDef svc fill:#ffffff,stroke:#333,stroke-width:1px;
-    classDef db fill:#ffffff,stroke:#333,stroke-width:1px;
-    classDef bus fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 3 3;
-
-    %% -------------------------
-    %% COMMAND SIDE (CONTROL PLANE)
-    %% -------------------------
-    subgraph CP["Control Plane (Commands)"]
-    direction TB
-    Admin["Admin UI"]:::ui
-    CmdAPI["Content Management API"]:::svc
-    WriteDB[("Write Database")]:::db
-
-    Admin -->|Create / Update / Delete| CmdAPI
-    CmdAPI -->|Validate & persist| WriteDB
-    end
-
-    %% -------------------------
-    %% EVENTING / SYNC
-    %% -------------------------
-    Events["Event Bus / Queue"]:::bus
-    Projector["Projection Worker\n(creates read model)"]:::svc
-
-    CmdAPI -->|Publish change events| Events
-    Events -.->|Async events| Projector
-
-    %% -------------------------
-    %% QUERY SIDE (DATA PLANE)
-    %% -------------------------
-    subgraph DP["Data Plane (Queries)"]
-    direction TB
-    Store["Storefront / Build"]:::ui
-    QueryAPI["Content Delivery API"]:::svc
-    ReadDB[("Read-Optimized Store / Cache")]:::db
-
-    Store -->|Read content| QueryAPI
-    QueryAPI -->|Fetch optimized content| ReadDB
-    end
-
-    Projector -->|Update read model| ReadDB
-```
-
-Each component in the architecture serves a specific purpose:
-
-## Control Plane (Content Management)
-
-The Control Plane handles all content authoring and management operations and has the key operations:
-
-- Create, update, and delete content entries.  
-- Manage branches and commits.  
-- Preview content before publishing.  
-- Merge branches to publish content.
-
-| Component | Purpose |
-| :---- | :---- |
-| **CMS interface (Admin UI)** | Visual interface for content editors to create, edit, and publish content. |
-| **Control Plane API** | RESTful API for content management operations (CRUD, branching, merging). |
-| **Database** | Stores content entries, branches, commits, and user data. |
-| **Message Bus** | Publishes events when content is published (triggers builds, syncs to Data Plane). |
 
 ## Data Plane (Content Delivery)
 
@@ -117,8 +51,6 @@ The Schema Registry manages component schemas and Content Type definitions and h
    - CLI sends schema to Schema Registry API.  
    - Schema is stored and made available to Control Plane and Data Plane.
 
-   
-
 2. **Content editing** (authoring time):  
      
    - Editor creates/edits content in the CMS Admin interface.  
@@ -126,18 +58,14 @@ The Schema Registry manages component schemas and Content Type definitions and h
    - Content is saved to Control Plane database.  
    - Changes are isolated on a branch until merged.
 
-   
-
 3. **Content publishing** (publish time):  
-     
+
    - Editor merges branch to main.  
    - Event triggers sync to Data Plane and build webhook.
 
-   
-
 4. **Content delivery** (runtime):  
-     
-   - FastStore build fetches content from Data Plane API.  
+
+   - Content is fetched from the Data Plane API.   
    - Data Plane returns published content with ETag headers.  
    - Content is rendered into static pages.
 
