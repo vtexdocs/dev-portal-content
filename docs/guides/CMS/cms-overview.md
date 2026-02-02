@@ -1,5 +1,5 @@
 ---
-title: "CMS (Content Platform) overview"
+title: "CMS overview"
 hidden: false
 slug: "cms-overview"
 createdAt: "2026-01-26T12:50:00.813Z"

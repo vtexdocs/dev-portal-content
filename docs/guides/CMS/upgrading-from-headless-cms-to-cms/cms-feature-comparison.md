@@ -3,7 +3,7 @@ title: "Comparing Headless CMS and CMS features"
 hidden: false
 slug: "comparing-headless-cms-and-cms-features"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-01-28T12:50:00.813Z"
+updatedAt: "2026-02-02T12:50:00.813Z"
 ---
 
 Before diving into the technical details, it's important to understand the high-level differences between the CMS and Headless CMS:
