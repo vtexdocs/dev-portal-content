@@ -29,4 +29,4 @@ Each item in the delivery accordion now shows its own tax amount and total, so c
 
 **Payment surcharge visibility in the summary (PR: [#3144](https://github.com/vtex/faststore/pull/3144))**
 
-If a payment method includes interest or surcharge, the Summary card now adds an "Interest" line item before the Total, so the final amount is transparent.
+If a payment method includes interest or a surcharge, the Summary card now adds an `Interest` line item before the Total, so the final amount is transparent.
