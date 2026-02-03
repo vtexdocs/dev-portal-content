@@ -4,7 +4,7 @@ slug: "2026-02-13-faststore-release-notes-version"
 type: "added"
 createdAt: "2026-02-03T11:00:00.000Z"
 updatedAt: "2026-02-03T11:00:00.000Z"
-excerpt: "This release aligns product price formatting in SEO meta tags, improving consistency for crawlers and social previews."
+excerpt: "This release lets you align product price formatting in SEO meta tags, improving consistency for crawlers and social previews."
 tags:
     - FastStore
 ---
@@ -18,16 +18,16 @@ You can now configure fixed fraction digits for the `product:price:amount` meta 
 1. Open your FastStore project and locate the `discovery.config.js` file.
 2. In the `pdp` section, add the `minPriceAmountFractionDigits` field with the desired number of decimal places. For example:
 
-    ```js
-    seo: {
-    // ...
-    pdp: {
-        titleTemplate: '%s | FastStore PDP',
-        descriptionTemplate: '%s products on FastStore Product Detail Page',
-        minPriceAmountFractionDigits: 2,
-    },
-    }
-    ```
+        ```js
+        seo: {
+        // ...
+        pdp: {
+            titleTemplate: '%s | FastStore PDP',
+            descriptionTemplate: '%s products on FastStore Product Detail Page',
+            minPriceAmountFractionDigits: 2,
+        },
+        }
+        ```
 
 3. Deploy the change above.
 4. Open a PDP, open DevTools (or View Page Source), search for `product:price:amount`, and check if the `<meta>` tag now uses the configured number of decimal places.
