@@ -9,11 +9,9 @@ tags:
     - FastStore
 ---
 
-FastStore version `3.97.0` adds a new SEO configuration for product price formatting.
-
 **Fixed fraction digits for the SEO product price meta tag** (PR: [#3179](https://github.com/vtex/faststore/pull/3179))
 
-You can now configure fixed fraction digits for the `product:price:amount` meta tag through PDP SEO settings, ensuring consistent price formatting for crawlers and social previews. To configure it:
+FastStore version `3.97.0` adds a new SEO configuration for product price formatting. You can now configure fixed fraction digits for the `product:price:amount` meta tag through PDP SEO settings, ensuring consistent price formatting for crawlers and social previews. To configure it:
 
 1. Open your FastStore project and locate the `discovery.config.js` file.
 2. In the `pdp` section, add the `minPriceAmountFractionDigits` field with the desired number of decimal places. For example:
