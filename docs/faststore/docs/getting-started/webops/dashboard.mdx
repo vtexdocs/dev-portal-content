@@ -1,11 +1,11 @@
 ---
 title: 'FastStore WebOps - Dashboard'
-updatedAt: "2026-01-12T16:53:36.569Z"
+updatedAt: "22026-02-03T13:16:12.258Z"
 ---
 
-Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project) or if you're already working on customizing it, you can use the WebOps dashboard to see an overview of website deployments and performance.
+Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project) or if you're already working on customizing it, you can use the WebOps dashboard to view website deployments and performance.
 
-The WebOps dashboard provides a comprehensive overview of website builds and deploy previews and offers suggestions on how to improve storefront performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
+The WebOps dashboard provides an overview of website builds and deploy previews and offers suggestions to improve storefront performance based on [Lighthouse scores](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
 
 ![dashboard-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/dashboard-overview.png)
 
@@ -15,7 +15,7 @@ To access the WebOps dashboard, go to **Storefront > FastStore WebOps** in the V
 
 ## Overview
 
-The **Overview** tab provides a quick snapshot of key website details, including the live store URL, CMS information, and latest deployment.
+The **Overview** tab shows key store details, including the live store URL, CMS information, and the latest deployment.
 
 ### Production overview
 
@@ -40,11 +40,11 @@ This section also displays the status of the live deployment:
 
 ### Lighthouse scores
 
-When your store goes live (in production), ensuring optimal performance and a good user experience is crucial. The Lighthouse scores section offers insights into four key areas, which help you understand their impact on store performance.
+When your store goes live (in production), ensuring optimal performance and a good user experience is crucial. The Lighthouse scores section offers insights into four key areas, helping you understand their impact on store performance.
 
 * **Performance:** Indicates how fast your pages load.
 * **Accessibility:** Reflects how usable your pages are for people with disabilities.
-* **Best practices:** Indicates how well your pages adhere to coding best practices.
+* **Best practices:** Indicates how well your pages follow coding best practices.
 * **SEO:** Reflects how well your pages are optimized for search engines.
 
 These scores are based on the pages defined for testing in the [Integrations](#integrations) tab.
@@ -67,14 +67,14 @@ The **Deploys** tab provides insights into store deployments, including their st
 
 ![deploys-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/deploys-webops.png)
 
-| **Feature**          | Description                                                                                                                                                                                                                                                                                                                                                                                                       |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1 - Search bar       | Allows you to search by deploy ID, commit, message, or author.                                                                                                                                                                                                                                                                                                                                                    |
-| 2 - Pagination       | Allows you to navigate through pages of deployment data.                                                                                                                                                                                                                                                                                                                                                          |
-| 3 - Environment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with.</li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                    |
-| 4 - Branch           | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                           |
-| 5 - Status           | Filters deployments by status: <ol><li>Queued: The deployment is waiting to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment was completed successfully.</li><li>Failed: The deployment encountered an error and didn't complete as expected.</li></ol>                                                                                                        |
-| 6 - Sort by          | Filters deployments by **Latest first** or **Oldest first**.                                                                                                                                                                                                                                                                                                                                                      |
+| **Feature**          | Description                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 - Search bar       | Allows you to search by deploy ID, commit, message, or author.                                                                                                                                                                                                                                                                                                                                                        |
+| 2 - Pagination       | Allows you to navigate through pages of deployment data.                                                                                                                                                                                                                                                                                                                                                              |
+| 3 - Environment      | Filters deployments by environment: <ol><li>Production: The live store customers can interact with.</li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                         |
+| 4 - Branch           | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                               |
+| 5 - Status           | Filters deployments by status: <ol><li>Queued: The deployment is waiting to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment was completed successfully.</li><li>Failed: The deployment encountered an error and didn't complete as expected.</li></ol>                                                                                                            |
+| 6 - Sort by          | Filters deployments by **Latest first** or **Oldest first**.                                                                                                                                                                                                                                                                                                                                                          |
 | 7 - Deployment table | Lists all store deployments with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deployment author and the date and time of the deployment.</li><li>Environment: The environment that was changed, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deployment status.</li></ol> |
 
 ### Deployment details
@@ -83,7 +83,7 @@ For more information, click any entry in the deployment table.
 
 ![deployment-details](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/webops-deploys.gif)
 
-In the **Deploy Steps** section, select a step (for example, **Build - Discovery**) to view logs. The logs, shown on the right, help diagnose failed deployments.
+In the **Deploy steps** section, select a step (for example, **Build - Discovery**) to view logs. The logs, shown on the right, help diagnose failed deployments.
 
 #### Rerunning a build
 
@@ -93,7 +93,7 @@ If a deployment fails due to issues unrelated to your code, such as environment 
 2. In the **Deploys** tab, click the entry you want to redeploy.
 3. In the top-right corner of the page, click `⋮`, then click **Rerun this deployment**.
 
-  ![rerun-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/rerun-webops.png)
+![rerun-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/rerun-webops.png)
 
 > ℹ️ If the logs indicate problems in your code (for example, syntax errors and failing tests), update the code in your local environment and push a new commit. WebOps will automatically trigger a new deployment for that commit.
 
@@ -152,7 +152,7 @@ In the **Production domain** section, select the store domain from the dropdown 
 
 #### Current domains
 
-The **Current domains** section displays the default and primary domains configured for your store. This section is a reference point to ensure your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment.
+The **Current domains** section displays the default and primary domains configured for your store. This section serves as a reference to verify that your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment.
 
 > ⚠️ If your domain isn't listed, there might be an issue with the configuration or DNS settings that you need to address before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly, and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
 
@@ -160,7 +160,7 @@ The **Current domains** section displays the default and primary domains configu
 
 Variables and secrets are encrypted credentials, like API keys and passwords, that require secure management during FastStore deployment. Standardizing variables and secrets management via WebOps enhances security and consistency across deployment providers.
 
-In the **Variables and Secrets** section, fill in the following fields and click `Add`:
+In the **Variables and secrets** section, complete the following fields and click `Add`:
 
 * **Type:** Choose `text` for non-sensitive values that can be viewed later (for example, public URLs), or `secret` for sensitive values that must be hidden after saving (for example, API tokens and passwords).
 * **Key:** Define the name of the variable or secret, used as its unique identifier in the environment (for example, `VTEX_API_TOKEN` or `NEXT_PUBLIC_SITE_URL`).
@@ -170,14 +170,14 @@ In the **Variables and Secrets** section, fill in the following fields and click
 
 #### Current keys
 
-The **Current keys** section lists all secrets configured for your store. This list shows each secret’s key (the identifier), while the value is hidden by default for security reasons. You can toggle the visibility of a secret’s value if needed.
+The **Current keys** section lists all secrets configured for your store. This list shows each secret's key (identifier). The value is hidden by default for security. You can toggle visibility if needed.
 
 In this section, you can update or delete an existing secret by clicking `⋮` and selecting the corresponding option, `Edit` or `Delete`.
 
 ## Deleting the project
 
-To delete your FastStore project, click the **More actions menu** (`⋮`). Then, click **Delete project**.
+To delete your FastStore project, click **More actions** (`⋮`). Then, click **Delete project**.
 
 A modal to confirm your action will open.
 
-> ⚠️ Proceed with caution. Deleting the project can't be undone, and all deployments and associated domains will be permanently removed.
+> ⚠️ Proceed with caution. Deleting the project can't be undone. All deployments and associated domains will be permanently removed.
