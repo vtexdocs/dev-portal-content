@@ -4,6 +4,8 @@ slug: "tax-services-specification"
 hidden: false
 createdAt: "2020-09-01T16:35:02.523Z"
 updatedAt: "2022-02-11T15:38:54.137Z"
+excerpt: ""
+
 ---
 
 In synchronous integration, VTEX’s [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) triggers and sends a request to the external tax service API whenever there are changes to a shopper’s cart, such as adding or removing items.
