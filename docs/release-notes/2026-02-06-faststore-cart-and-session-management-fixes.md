@@ -9,7 +9,7 @@ tags:
     - FastStore
 ---
 
-Stores using FastStore now benefit from fixes to cart and session management that improve security and data consistency. These updates ensure carts are properly cleared after checkout, logout removes all browser storage and cookies, and cart validation no longer causes infinite loops when using regionalization with logged-in users.
+Stores using FastStore now benefit from fixes to cart and session management that improve security and data consistency. These updates ensure carts are properly cleared after checkout, logout removes all browser storage and cookies, and cart validation no longer causes infinite loops when using the location-based behavior for logged-in users.
 
 ## What has changed?
 
@@ -38,9 +38,9 @@ This improves security by ensuring no cart, session, or shopper data remains aft
 The cart validation logic was updated to prevent infinite revalidation loops when:
 
 - A user is logged in.
-- Regionalization (`postalCode`) is active.
+- Location-based behavior using `postalCode` is active.
 
-The fix updates the cart only when changes affect totals or shipping (for example, changing item quantity) and refreshes shipping simulation only when needed. This reduces errors and prevents interface flicker for logged-in users in regionalized stores.
+The fix updates the cart only when changes affect totals or shipping (for example, changing item quantity) and refreshes shipping simulation only when needed. This reduces errors and prevents interface flicker for logged-in users in stores that base cart and shipping information on the shopper's postal code.
 
 ## Why did we make these changes?
 
@@ -54,11 +54,11 @@ If your store has customizations, review the following:
 
 ### Cart and checkout integrations
 
-If your custom code reads cart data from IndexedDB or sessionStorage after checkout, assumes the cart will persist after order placement, or has tests that expect cart items to remain after checkout:
+If your custom code reads cart data from `IndexedDB` or `sessionStorage` after checkout, assumes the cart will persist after order placement, or has tests that expect cart items to remain after checkout:
 
 - Update your logic to expect an empty cart after order placement.
 - Update tests to reflect the new cart clearing behavior.
-- Verify that your checkout success page does not rely on cart data.
+- Verify that your checkout success page doesn't rely on cart data.
 
 ### Custom logout flows
 
