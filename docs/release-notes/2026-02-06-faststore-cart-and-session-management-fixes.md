@@ -29,10 +29,7 @@ Logging out now clears all client-side and server-side storage:
   - `IndexedDB`
   - All VTEX-related cookies via JavaScript.
 
-- **Server-side cookies:**
-  - All `HttpOnly` cookies containing "vtex".
-  - `CheckoutOrderFormOwnership` cookie.
-  - `vid_rt` cookie.
+- **Server-side cookies:** All relevant server-side cookies.
 
 This improves security by ensuring no cart, session, or shopper data remains after logout, preventing data from carrying between sessions.
 
