@@ -46,13 +46,11 @@ The Schema Registry manages component schemas and Content Type definitions and h
 ## Content data management through the architecture
 
 1. **Schema upload** (development time):  
-     
    - Developer runs `vtex content upload-schema`.  
    - CLI sends schema to Schema Registry API.  
    - Schema is stored and made available to Control Plane and Data Plane.
 
 2. **Content editing** (authoring time):  
-     
    - Editor creates/edits content in the CMS Admin interface.  
    - CMS interface (Admin UI) calls Control Plane API.  
    - Content is saved to Control Plane database.  
@@ -66,7 +64,7 @@ The Schema Registry manages component schemas and Content Type definitions and h
 4. **Content delivery** (runtime):  
 
    - Content is fetched from the Data Plane API.
-   - Data Plane returns published content with ETag headers. 
+   - Data Plane returns published content with ETag headers.
 
 ## Schema declarations
 

@@ -64,7 +64,7 @@ Content editing capabilities determine how content editors interact with the CMS
 
 - **Entry (CRUD)**: Both content management platforms support full Create, Read, Update, and Delete operations for content entries. The CMS adds branching capabilities, allowing changes to be made on separate branches before merging to production.
 
-- **AI content generation**: The CMS integrates with AI services to help content editors generate and improve content directly within the editing interface like product descriptions, marketing copy, and other text content.
+- **AI content generation**: The CMS integrates with AI services to help content editors generate and improve content directly within the editing interface, such as product descriptions, marketing copy, and other text content.
 
 - **Versioning**: Both platforms support content versioning, allowing editors to track changes over time. The CMS extends versioning capabilities with Git-like branching, providing more granular control over content revisions and the ability to work on multiple versions simultaneously.
 
@@ -162,7 +162,7 @@ Development tools and access controls determine how developers work with the CMS
 
 ## Technical infrastructure and development tools
 
-Technical infrastructure describes the architectural components and design patterns of the CMS and Headless CMS, including differences in APIs, event handling, caching, and system architecture. 
+Technical infrastructure describes the architectural components and design patterns of the CMS and Headless CMS, including differences in APIs, event handling, caching, and system architecture.
 
 | Aspect | Headless CMS | CMS |
 | :---- | :---- | :---- |
