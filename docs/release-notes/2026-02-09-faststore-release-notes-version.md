@@ -21,6 +21,8 @@ GraphQL requests now add a cache-busting token when the auth cookie changes. Thi
 
 Signing out now clears client-side storage used by session-aware features, preventing leftover data from affecting the next session.
 
+> ℹ️ For more details on this fix, see the [FastStore: Cart and session management fixes](https://developers.vtex.com/updates/release-notes/2026-02-04-faststore-cart-and-session-management-fixes) Release Notes. 
+
 ## My Account for B2B
 
 **Item-level taxes and totals (PR: [#3144](https://github.com/vtex/faststore/pull/3144))**
