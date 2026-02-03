@@ -61,16 +61,16 @@ Build and manage schemas with:
 <Flex>
 
 <WhatsNextCard
-  linkTo="upgrading-from-headless-cms-to-cms"
-  title="Upgrading from Headless CMS to CMS"
-  description="Learn about the architectural and code-level changes when migrating from Headless CMS to the CMS."
+  linkTo="integrations/faststore"
+  title="FastStore integration"
+  description="Learn how to connect the CMS with FastStore"
   linkTitle="See more"
 />
 
 <WhatsNextCard
-  linkTo="comparing-headless-cms-and-cms-features"
-  title="Comparing Headless CMS and CMS features"
-  description="Detailed comparison of features between Headless CMS and the CMS."
+  linkTo="upgrading-from-headless-cms-to-cms"
+  title="Upgrading from Headless CMS to CMS"
+  description="Learn about the architectural and code-level changes when migrating from Headless CMS to the CMS."
   linkTitle="See more"
 />
 
