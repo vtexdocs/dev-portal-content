@@ -18,14 +18,14 @@ You can now configure fixed fraction digits for the `product:price:amount` meta 
 1. Open your FastStore project and locate the `discovery.config.js` file.
 2. In the `pdp` section, add the `minPriceAmountFractionDigits` field with the desired number of decimal places. For example:
 
-        ```
+        ```js
         seo: {
-        // ...
-        pdp: {
-            titleTemplate: '%s | FastStore PDP',
-            descriptionTemplate: '%s products on FastStore Product Detail Page',
-            minPriceAmountFractionDigits: 2,
-        },
+            // ...
+            pdp: {
+                titleTemplate: '%s | FastStore PDP',
+                descriptionTemplate: '%s products on FastStore Product Detail Page',
+                minPriceAmountFractionDigits: 2,
+            },
         }
         ```
 
