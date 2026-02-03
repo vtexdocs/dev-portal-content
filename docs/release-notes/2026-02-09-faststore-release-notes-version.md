@@ -4,7 +4,7 @@ slug: "2026-02-09-faststore-release-notes-version-3-96-0"
 type: "added"
 createdAt: "2026-02-06T11:00:00.000Z"
 updatedAt: "2026-02-06T11:00:00.000Z"
-excerpt: "This release improves My Account order details for B2B with clearer delivery grouping, item-level taxes and totals, and more accurate order summaries. It also reduces stale data after login/logout."
+excerpt: "This release improves My Account order details for B2B with item-level taxes and totals plus clearer order summaries. It also reduces stale data after login/logout."
 tags:
   - FastStore
 ---
@@ -23,18 +23,10 @@ Signing out now clears client-side storage used by session-aware features, preve
 
 ## My Account for B2B
 
-**Richer order details with delivery grouping (PR: [#3161](https://github.com/vtex/faststore/pull/3161))**
-
-Order details now group items by delivery option and display clearer delivery labels (channel + estimate), including neighborhood when available. Each group shows a summary total for that delivery option.
-
-**Item-level taxes and totals (PR: [#3161](https://github.com/vtex/faststore/pull/3161))**
+**Item-level taxes and totals (PR: [#3144](https://github.com/vtex/faststore/pull/3144))**
 
 Each item in the delivery accordion now shows its own tax amount and total, so customers can understand how taxes contribute to the final price.
 
-**Recipient and delivery address details (PR: [#3161](https://github.com/vtex/faststore/pull/3161))**
-
-Delivery sections now include recipient info and address details (or store address for pickup), helping customers confirm shipment information quickly.
-
-**Payment surcharge visibility in the summary (PR: [#3161](https://github.com/vtex/faststore/pull/3161))**
+**Payment surcharge visibility in the summary (PR: [#3144](https://github.com/vtex/faststore/pull/3144))**
 
 If a payment method includes interest or surcharge, the Summary card now adds an "Interest" line item before the Total, so the final amount is transparent.
