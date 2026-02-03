@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Cart and session management fixes"
-slug: "2026-02-06-faststore-cart-and-session-management-fixes"
+slug: "2026-02-04-faststore-cart-and-session-management-fixes"
 type: "fixed"
-createdAt: "2026-01-30T00:00:00.000Z"
-updatedAt: "2026-01-30T00:00:00.000Z"
+createdAt: "2026-02-04T00:00:00.000Z"
+updatedAt: "2026-02-04T00:00:00.000Z"
 excerpt: "FastStore clears carts after checkout, fully removes storage and cookies on logout, and fixes cart validation."
 tags:
     - FastStore
