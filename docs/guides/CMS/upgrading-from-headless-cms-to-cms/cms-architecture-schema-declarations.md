@@ -190,14 +190,16 @@ In the CMS, each component is defined in its own `.jsonc` file. The schema is fl
 
 ### CMS schema keywords
 
-The CMS introduces additional schema keywords for a more modular, reusable, and maintainable schema definition.
+The CMS introduces additional schema keywords for a more modular, reusable, and maintainable schema definition. 
 
 | Keyword | Purpose | Example |
 | :---- | :---- | :---- |
 | `$extends` | Inherit properties from base schemas. | `"$extends": ["#/$defs/base-component"]` |
 | `$componentKey` | Unique identifier for the component. | `"$componentKey": "Banner"` |
 | `$componentTitle` | Display name shown in CMS interface. | `"$componentTitle": "Promotional Banner"` |
-| `$ref` | Reference another schema definition. | `"$ref": "#/components/SEO"` |
+| [`$ref`](https://json-schema.org/understanding-json-schema/structuring#dollarref) | Reference another schema definition. | `"$ref": "#/components/SEO"` |
+
+> ℹ️ For standard JSON Schema terms, see the [JSON Schema keywords](https://json-schema.org/understanding-json-schema/keywords) reference.
 
 #### Schema inheritance with `$extends`
 
