@@ -35,7 +35,6 @@ In the endpoint response, the `taxConfiguration` object has the tax information 
             "authorizationHeader": "99b9935b048dfd86893d0bf9gas628849",
             "appId": "tradeincart",
             "isMarketplaceResponsibleForTaxes": false,
-            "destinationAddresses": [...]
        ...
 }
     
@@ -52,7 +51,6 @@ In the `taxConfiguration` object, it is important to update the following fields
 | `url`                              | String of external API endpoint of the tax provider that the Checkout will query to receive the calculated taxes. |
 | `authorizationHeader`              | String that the Checkout will use in the `Authorization` header of calls to the external tax calculation API. This field can be used to define the access credentials for this API. |
 | `isMarketplaceResponsibleForTaxes` | Boolean that indicates whether the marketplace is responsible for calculating taxes for the products (`true`) or if the responsibility lies with the seller (`false`). |
-| `destinationAddresses` | Array of objects that contains multiple destination addresses information. |
 
 >⚠️ The `isMarketplaceResponsibleForTaxes` feature is not compatible with stores that have [Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) implemented.
 
@@ -65,24 +63,6 @@ Here is an example of the `taxConfiguration` object with the expected informatio
             "authorizationHeader": "99b9935b048dfd86893d0bf9gas628849",
             "appId": "tradeincart",
             "isMarketplaceResponsibleForTaxes": true,
-            "destinationAddresses": [
-              {
-                "country": "USA",
-                "state": "NY",
-                "city": "New York",
-                "neighborhood": "Midtown",
-                "postalCode": "10117",
-                "street": "123 Fake St"
-              },
-              {
-                "country": "USA",
-                "state": "NY",
-                "city": "Rochester",
-                "neighborhood": "Oakgrove",
-                "postalCode": "14617",
-                "street": "456 Fake Blvd"
-              }
-            ]
        ...
 }
 ```
@@ -122,27 +102,7 @@ Here is an example of that body sent by Checkout API:
          "brandId": "2000002",
          "taxCode": "PC040210",
          "sellerId": "1",
-         "destinationAddressIndex": 1
-       },
-       {
-         "id": "1",
-         "sku": "32",
-         "productId": "54",
-         "ean": "32145678909123",
-         "refId": "5232",
-	       "categoryId": "4",
-         "unitMultiplier": 1,
-         "measurementUnit": "un",
-         "targetPrice": 8.2,
-         "itemPrice": 8.2,
-         "quantity": 1,
-         "discountPrice": 0,
-         "dockId": "1125a08",
-         "freightPrice": 0,
-         "brandId": "1000003",
-         "taxCode": "PC050210",
-         "sellerId": "1",
-         "destinationAddressIndex": 0
+         "shippingDestinationId": 1
        }
      ],
      "totals": [
@@ -168,14 +128,26 @@ Here is an example of that body sent by Checkout API:
        }
      ],
      "clientEmail": "client@email.com",
-     "shippingDestination": {
-       "country": "BRA",
-       "state": "RJ",
-       "city": "Rio de Janeiro",
-       "neighborhood": "Botafogo",
-       "postalCode": "22250-905",
-       "street": "Praia Botafogo"
-     },
+     "shippingDestinations": [
+      {
+        "id": 1,
+        "country": "BRA",
+        "state": "RJ",
+        "city": "Rio de Janeiro",
+        "neighborhood": "Botafogo",
+        "postalCode": "22250-905",
+        "street": "Praia Botafogo"
+      },
+      {
+        "id": 2,
+        "country": "BRA",
+        "state": "SP",
+        "city": "São Paulo",
+        "neighborhood": "Moema",
+        "postalCode": "04514-000",
+        "street": "Rua Tuim"
+      }
+     ],
      "clientData": {
        "email": "client@email.com",
        "document": "12345678909",
