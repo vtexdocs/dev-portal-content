@@ -6,7 +6,7 @@ createdAt: "2026-01-26T12:50:00.813Z"
 updatedAt: "2026-01-28T12:50:00.813Z"
 ---
 
-Learn about the architectural and code-level changes when upgrading from the Headless CMS to the CMS. Use this track to evaluate and plan the necessary modifications to your store's codebase during the migration.
+Learn about the architectural and code-level changes when upgrading from the Headless CMS (legacy) to the CMS. Use this track to evaluate and plan the necessary modifications to your store's codebase during the migration.
 
 ## Next steps
 
