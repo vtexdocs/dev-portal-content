@@ -76,13 +76,13 @@ When a content editor creates or edits content in the CMS interface in the Admin
 - **Validate content**: Ensure required fields are filled, and data types are correct.  
 - **Define relationships**: Schemas determine which sections can be used within specific Content Types.
 
-Both the Headless CMS and the CMS rely on [JSON Schema](https://json-schema.org/) to define schemas. However, they differ in how schemas are organized, authored, and deployed.
+Both the Headless CMS (legacy) and the CMS rely on [JSON Schema](https://json-schema.org/) to define schemas. However, they differ in how schemas are organized, authored, and deployed.
 
-### Schema declarations between CMS and Headless CMS
+### Schema declarations between CMS and Headless CMS (legacy)
 
-The table below summarizes the key differences between schema declarations in the Headless CMS and the CMS:
+The table below summarizes the key differences between schema declarations in the Headless CMS (legacy) and the CMS:
 
-| Aspect | Headless CMS | CMS |
+| Aspect | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
 | **File organization** | Single `sections.json` file. | Individual `.jsonc` files per component. |
 | **Section identifier** | `name` field. | `$componentKey` field. |
@@ -95,11 +95,11 @@ The table below summarizes the key differences between schema declarations in th
 
 ### Schema format comparison
 
-To understand the practical differences, let's compare how the same Banner component is defined in the CMS and the Headless CMS.
+To understand the practical differences, let's compare how the same Banner component is defined in the CMS and the Headless CMS (legacy).
 
-#### Headless CMS format
+#### Headless CMS (legacy) format
 
-In the Headless CMS, all sections are defined in a single `sections.json` file. Each section has a `name` and a nested `schema` object.
+In the Headless CMS (legacy), all sections are defined in a single `sections.json` file. Each section has a `name` and a nested `schema` object.
 
 - All components are defined in a single array within one file.  
 - Component identified by the `name` field.  
@@ -233,16 +233,16 @@ The `$extends` property allows sections to inherit properties from one or more b
 
 The CMS introduces a modular folder structure that aligns with modern development practices. Instead of consolidating all schemas into a single file, the new structure separates components and Content Types into individual files, making it easier to manage, review, and version-control your content definitions.
 
-The shift from monolithic files, as in the Headless CMS, to individual files addresses the following issues:
+The shift from monolithic files, as in the Headless CMS (legacy), to individual files addresses the following issues:
 
 - **Version control conflicts**: With a single `sections.json` file, multiple developers editing different components often caused merge conflicts. Individual files mean each component can be edited independently.  
 - **Code review clarity**: Reviewing changes to a single component is straightforward when each component has its own file, rather than searching through a large JSON array.  
 - **Maintainability**: Finding and updating a specific component is faster when you can navigate directly to `cms_component__Banner.jsonc` instead of scrolling through hundreds of lines in `sections.json`.  
 - **Comments and documentation**: The `.jsonc` format allows inline comments, enabling developers to document schema decisions directly in the file.
 
-### Headless CMS folder structure
+### Headless CMS (legacy) folder structure
 
-In the Headless CMS, all schema definitions are consolidated into two main files within a subdirectory, for example, `faststore`:
+In the Headless CMS (legacy), all schema definitions are consolidated into two main files within a subdirectory, for example, `faststore`:
 
 ```sh
 your-faststore-project/
@@ -314,7 +314,7 @@ your-store/
 
 The CMS uses a consistent naming pattern that makes file purposes immediately clear:
 
-| Item | Headless CMS | CMS |
+| Item | Headless CMS (legacy) | CMS |
 |------|------|---------|
 | **Component schemas** | All in `sections.json` | `cms_component__ComponentName.jsonc` |
 | **Content types** | All in `content-types.json` | `cms_content_type__typeName.jsonc` |
