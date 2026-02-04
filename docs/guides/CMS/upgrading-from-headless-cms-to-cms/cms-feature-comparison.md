@@ -1,12 +1,12 @@
 ---
-title: "Comparing Headless CMS and CMS features"
+title: "Comparing  (legacy) and CMS features"
 hidden: false
 slug: "comparing-headless-cms-and-cms-features"
 createdAt: "2026-01-26T12:50:00.813Z"
 updatedAt: "2026-02-02T12:50:00.813Z"
 ---
 
-Before diving into the technical details, it's important to understand the high-level differences between the CMS and Headless CMS:
+Before diving into the technical details, it's important to understand the high-level differences between the CMS and Headless CMS (legacy):
 
 - [Content modeling](#content-modeling): How content schemas are defined and structured, including Content Types, components, and capabilities such as referencing and extension.  
 - [Content editing and publishing](#content-editing-and-publishing): The authoring experience for content editors, including the CMS interface in the Admin, search capabilities, and content lifecycle management.  
@@ -20,7 +20,7 @@ Before diving into the technical details, it's important to understand the high-
 
 Content modeling defines how content is structured and reused across your storefront. Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology, but the CMS introduces schema reusability and content relationships, allowing the same content to be reused across multiple pages or components without duplication.
 
-| Feature | Headless CMS | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
 | **Content Types** | ✅ | ✅ |
 | **Components** | ✅ | ✅ |
@@ -34,15 +34,15 @@ Content modeling defines how content is structured and reused across your storef
 
 - **Schema technology**: Both content management platforms use [JSON Schema](https://json-schema.org/) as the technology for defining content structure and validation rules. This ensures compatibility and allows you to reuse existing schema knowledge.  
 
-- **Content referencing**: The CMS allows content entries to reference other entries, enabling reusable content blocks across multiple pages. For example, a "Footer" component can be defined once and referenced by multiple pages. In Headless CMS, each page's content is isolated and must be duplicated if reused.  
+- **Content referencing**: The CMS allows content entries to reference other entries, enabling reusable content blocks across multiple pages. For example, a "Footer" component can be defined once and referenced by multiple pages. In Headless CMS (legacy), each page's content is isolated and must be duplicated if reused.  
 
-- **Schema extension**: While Headless CMS supports basic schema definitions, the CMS introduces the `$extends` keyword for schema inheritance. Components can inherit properties from base schemas (e.g., `#/$defs/base-component`). This reduces duplication, makes shared fields easier to maintain, and helps ensure consistent structure across components.
+- **Schema extension**: While Headless CMS (legacy) supports basic schema definitions, the CMS introduces the `$extends` keyword for schema inheritance. Components can inherit properties from base schemas (e.g., `#/$defs/base-component`). This reduces duplication, makes shared fields easier to maintain, and helps ensure consistent structure across components.
 
 ## Content editing and publishing
 
 Content editing capabilities determine how content editors interact with the CMS interface.
 
-| Feature | Headless CMS | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
 | **Content management (Admin)** | ✅ | ✅ |
 | **Content search and filtering** | ✅ | ✅ |
@@ -93,7 +93,7 @@ Content editing capabilities determine how content editors interact with the CMS
 
 Localization capabilities determine how content is adapted for different languages and regions. The CMS provides multi-language support with locale management, fallback rules, and character encoding for international content.
 
-| Feature | Headless CMS | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
 | **Locales** | ❌ | ✅ |
 | **Default and automatic language fallback rules** | ❌ | ✅ |
@@ -112,7 +112,7 @@ Localization capabilities determine how content is adapted for different languag
 
 Media management capabilities define how images, videos, and other assets are stored, organized, and used across content. Both platforms provide media galleries with support for common image formats and external video embedding.
 
-| Feature | Headless CMS | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
 | **Media Gallery** | ✅ | ✅ |
 | **Image support** | ✅ PNG, JPG, JPEG, GIF, SVG, and WebP | ✅ PNG, JPG, JPEG, GIF, SVG, and WebP |
@@ -131,7 +131,7 @@ Media management capabilities define how images, videos, and other assets are st
 
 Storefront integration capabilities determine which frontend frameworks and technologies can consume content from the CMS.
 
-| Feature | Headless CMS | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
 | **Headless** | ✅ | ⚒️ *Coming soon* |
 | **Store Framework** | ❌ | ❌ |
@@ -142,7 +142,7 @@ Storefront integration capabilities determine which frontend frameworks and tech
 
 Development tools and access controls determine how developers work with the CMS and how user permissions are managed. Both platforms provide CLI tools for schema management and support access permissions, with the CMS adding role-based permission controls.
 
-| Aspect | Headless CMS | CMS |
+| Aspect | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
 | **Developer CLI** | ✅ | ✅ |
 | **Access permissions** | ✅ | ✅ |
@@ -150,11 +150,11 @@ Development tools and access controls determine how developers work with the CMS
 | **IO workspace compatibility** | Code-only | Code-only |
 | **Sub-account inheritance** | ❌ | ❌ |
 
-- **Developer CLI**: Both platforms provide command-line tools for managing content schemas. Headless CMS uses the `yarn cms sync` command for syncing schemas, while the CMS introduces the VTEX Content CLI (`@vtex/cli-plugin-content`).
+- **Developer CLI**: Both platforms provide command-line tools for managing content schemas. Headless CMS (legacy) uses the `yarn cms sync` command for syncing schemas, while the CMS introduces the VTEX Content CLI (`@vtex/cli-plugin-content`).
 
 - **Access permissions**: Both platforms support controlling who can access and manage content. Access permissions can be configured to restrict content management capabilities to authorized users.
 
-- **Role-based permissions**: The CMS supports role-based access control (RBAC), allowing administrators to define granular permissions based on user roles. This enables different permission levels for content editors, reviewers, and administrators. Headless CMS does not include built-in role-based permission controls.
+- **Role-based permissions**: The CMS supports role-based access control (RBAC), allowing administrators to define granular permissions based on user roles. This enables different permission levels for content editors, reviewers, and administrators. Headless CMS (legacy) does not include built-in role-based permission controls.
 
 - **IO workspace compatibility**: Both platforms support code-only workspace compatibility for VTEX IO. Content definitions and schemas are managed through code repositories rather than through IO workspaces.
 
@@ -162,9 +162,9 @@ Development tools and access controls determine how developers work with the CMS
 
 ## Technical infrastructure and development tools
 
-Technical infrastructure describes the architectural components and design patterns of the CMS and Headless CMS, including differences in APIs, event handling, caching, and system architecture.
+Technical infrastructure describes the architectural components and design patterns of the CMS and Headless CMS (legacy), including differences in APIs, event handling, caching, and system architecture.
 
-| Aspect | Headless CMS | CMS |
+| Aspect | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
 | **API type** | REST | REST |
 | **Build triggers** | Direct webhooks | Event-driven |
@@ -173,7 +173,7 @@ Technical infrastructure describes the architectural components and design patte
 
 - **API type**: Both platforms expose REST APIs for content retrieval.
 
-- **Build triggers**: Headless CMS triggers builds via direct HTTP webhooks that may fail silently. The CMS uses an event-driven architecture, providing built-in retries and dead-letter queues for reliability. When a branch is merged, the Control Plane emits integration events that downstream systems consume to trigger builds and deployments.
+- **Build triggers**: Headless CMS (legacy) triggers builds via direct HTTP webhooks that may fail silently. The CMS uses an event-driven architecture, providing built-in retries and dead-letter queues for reliability. When a branch is merged, the Control Plane emits integration events that downstream systems consume to trigger builds and deployments.
 
 - **Caching**: The CMS Data Plane API supports ETag-based caching, allowing efficient cache validation and reduced bandwidth.
 
