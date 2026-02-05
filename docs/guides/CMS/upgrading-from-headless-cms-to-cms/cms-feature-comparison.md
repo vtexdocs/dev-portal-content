@@ -72,7 +72,7 @@ Content editing capabilities determine how content editors interact with the CMS
 
   - **Safer content updates**: Changes are isolated on branches until ready to publish.  
   - **Collaboration**: Multiple editors can work on different branches simultaneously.  
-  - **Preview before publish**: Full preview of changes before they go live.  
+  - **Preview before publish (FastStore only)**: Full preview of changes before they go live.  
   - **Rollback capability**: If something goes wrong, previous versions are preserved.
 
 - **Version history**: The CMS maintains a complete history of all content changes through its branching model. Editors can view previous versions, compare changes between branches, and restore earlier versions if needed.
@@ -136,7 +136,7 @@ Storefront integration capabilities determine which frontend frameworks and tech
 | **Headless** | ✅ | ⚒️ *Coming soon* |
 | **Store Framework** | ❌ | ❌ |
 | **FastStore v1 and v2** | ✅ | ❌ |
-| **FastStore v3** | ✅ | ✅ |
+| **FastStore v3 and v4** | ✅ | ✅ |
 
 ## Development tools and permissions
 
