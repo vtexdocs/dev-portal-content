@@ -71,7 +71,7 @@ Here is an example of the `taxConfiguration` object with the expected informatio
 
 After successfully submitting the request, the Tax API integration becomes active in synchronous mode.
 
->⚠️ When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa) are part of an order, tax configuration for the marketplace (`seller 1`) is not taken into account for those items. Each seller must have its own tax service configuration in order for this type of integration function properly.
+>⚠️ When a purchase is made in a store, the location from which the order is shipped matters for tax calculation purposes. Because of this, when items from [White Label Sellers](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa) are part of an order, tax configuration for the marketplace (`seller 1`) is not taken into account for those items. Each seller must have its own tax service configuration in order to this type of integration function properly.
 
 ## Tax calculation request
 
@@ -188,12 +188,12 @@ This body has the main fields:
 
 | Field                 | Type   | Description                                                                                                                                                                 |
 | --------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `orderFormId`         | string | `orderform` ID.                                                                                                                                                             |
+| `orderFormId`         | string | `orderForm` ID.                                                                                                                                                             |
 | `salesChannel`        | string | Trade policy ID.                                                                                                                                                      |
 | `items`               | array  | List of objects which are the order products, where `dockId` is a field that refers to its identification on the Logistics system that contains information of its address. |
 | `totals`              | array  | Total amount of the `orderForm`, divided into taxes, shipping, discounts, and the items prices.                                                                           |
-| `clientEmail`         | string | Client's email. address.                                                                                                                                                     |
-| `shippingDestination` | object | Shipping information. Mandatory. field.                                                                                                                                      |
+| `clientEmail`         | string | Client's email address.                                                                                                                                                     |
+| `shippingDestinations` | array of objects | List of shipping information. Mandatory field.                                                                                                                                      |
 | `clientData`          | object | Information regarding the client that placed the order.                                                                                                                     |
 | `paymentData`         | object | Contains an array of payments, where there is information regarding the order payment.                                                                                      |
 | `taxApp`              | object | Contains an object with custom fields specific to the tax application.                                                                                                      |
@@ -226,8 +226,8 @@ The following JSON represents a list of taxes associated with a particular item,
 
 | Field         | Type   | Description                                                                                       |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------- |
-| `id`          | string | Request item index, which means the SKU's position on the `items` array sent by the request body. |
-| `taxes`       | array  | List of all the taxes types for an SKU.|
+| `id`          | string | Request item index, which means the SKU's position in the `items` array sent by the request body. |
+| `taxes`       | array  | List of all the tax types for an SKU.|
 | `name`        | string | Tax name that will appear on the checkout.|
 | `description` | string | Informative field, which does not appear on the storefront.|
 | `value`       | number | Absolute numeric value that will be added to the original price.|
