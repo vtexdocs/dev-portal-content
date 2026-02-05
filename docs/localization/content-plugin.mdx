@@ -5,7 +5,7 @@ createdAt: "2026-01-12T18:00:00.325z"
 updatedAt: "2026-02-05T12:26:00.857Z"
 ---
 
-The Content plugin is a [VTEX CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#plugins) that allows you to manage your store's content and CMS configurations directly from the terminal. Use this plugin to manage CMS schemas, organize components, and define [Content Types](/TBD).
+The Content plugin is a [VTEX CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#plugins) that allows you to manage your store's content and CMS settings from the terminal. Use this plugin to manage CMS schemas, organize components, and define [Content Types](/TBD).
 
 ## Before you begin
 
@@ -37,13 +37,13 @@ Below is a description of the default commands available in the Content plugin. 
 | --- | --- |
 | [`init`](#init) | Creates the CMS folder structure with sample files. |
 | [`generate-schema`](#generate-schema) | Creates a unified schema file from your store components, Content Types, and the FastStore base schema. |
-| [`split-components`](#split-components) | Splits `sections.json` into one file per component. |
-| [`split-content-types`](#split-content-types) | Splits `content-types.json` into one file per Content Type for improved Content Type management. |
+| [`split-components`](#split-components) | Splits `sections.json` into separate files, one per component. |
+| [`split-content-types`](#split-content-types) | Splits `content-types.json` into separate files, one per Content Type, for improved Content Type management. |
 | [`upload-schema`](#upload-schema) | Uploads the unified schema file created by the [`generate-schema`](#generate-schema) command to the Schema Registry, making it available for use in your store's CMS. |
 
 ### `init`
 
-Initializes the CMS folder structure in your project with sample files. This command sets up the basic directory structure and creates sample files to help you get started with CMS customization.
+Initializes the CMS folder structure in your project with sample files. This command creates the basic directory and sample files to help you start customizing the CMS.
 
 #### Usage
 
@@ -63,7 +63,7 @@ vtex content init
 
 ### `generate-schema`
 
-Generates a single consolidated schema file for CMS by combining component schemas, Content Type definitions, and the FastStore base schema. This command merges your custom component schemas with the default FastStore schema to create a complete schema ready for upload.
+Generates a single schema file for the CMS by combining component schemas, Content Type definitions, and the FastStore base schema. This command merges your custom component schemas with the FastStore base schema to create a complete schema ready to upload.
 
 #### Usage
 
@@ -127,7 +127,7 @@ vtex content split-components
 | --- | --- | --- |
 | `--help` | `-h` | Displays help information for the command. |
 | `--input=<path>` | `-i` | Specifies the path to the `sections.json` file to split. Default: `cms/faststore/sections.json` |
-| `--output=<path>` | `-o` | Specifies the path to the output directory where component files will be created. Default: `cms/faststore/components` |
+| `--output=<path>` | `-o` | Specifies the output directory for component files. Default: `cms/faststore/components` |
 
 #### Examples
 
@@ -149,7 +149,7 @@ vtex content split-components --input ./cms/sections.json --output ./cms/compone
 
 ### `split-content-types`
 
-Splits CMS Content Type definitions from the `content-types.json` file into separate Content Type files. Use this command when migrating custom Content Types from the legacy [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to organize your Content Types into separate files for easier management.
+Splits CMS Content Type definitions from `content-types.json` into separate files, one per Content Type. Use this command when migrating custom Content Types from the legacy [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to organize your Content Types into separate files for easier management.
 
 #### Usage
 
@@ -163,8 +163,8 @@ vtex content split-content-types
 | --- | --- | --- |
 | `--help` | `-h` | Displays help information for the command. |
 | `--input=<path>` | `-i` | Specifies the path to the `content-types.json` file to split. Default: `cms/faststore/content-types.json` |
-| `--output=<path>` | `-o` | Specifies the path to the output directory where Content Type files will be created. Default: `cms/faststore/pages` |
-| `--sections=<path>` | `-s` | Specifies the path to the `sections.json` file used to filter components by `requiredScopes`. Default: `cms/faststore/sections.json` |
+| `--output=<path>` | `-o` | Specifies the output directory for Content Type files. Default: `cms/faststore/pages` |
+| `--sections=<path>` | `-s` | Specifies the path to `sections.json` used to filter components by `requiredScopes`. Default: `cms/faststore/sections.json` |
 
 #### Examples
 
