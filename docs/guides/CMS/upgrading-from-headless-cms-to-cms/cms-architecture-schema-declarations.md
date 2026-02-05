@@ -17,7 +17,7 @@ With CQRS, content editors get a responsive editing experience while your store 
 
 ## Data Plane (Content Delivery)
 
-The Data Plane is optimized for high-performance content delivery to storefronts and has the key characteristics:
+The Data Plane is optimized for high-performance content delivery to storefronts and has the following key characteristics:
 
 - **Read-only**: Only serves published content, no write operations.  
 - **ETag caching**: Supports efficient cache validation.  
@@ -31,7 +31,7 @@ The Data Plane is optimized for high-performance content delivery to storefronts
 
 ## Schema Registry
 
-The Schema Registry manages component schemas and Content Type definitions and has the key operations:
+The Schema Registry manages component schemas and Content Type definitions and has the following key operations:
 
 - Upload and store schema bundles.  
 - Validate content against schemas.  
@@ -190,7 +190,7 @@ In the CMS, each component is defined in its own `.jsonc` file. The schema is fl
 
 ### CMS schema keywords
 
-The CMS introduces additional schema keywords for a more modular, reusable, and maintainable schema definition. 
+The CMS introduces additional schema keywords for a more modular, reusable, and maintainable schema definition.
 
 | Keyword | Purpose | Example |
 | :---- | :---- | :---- |

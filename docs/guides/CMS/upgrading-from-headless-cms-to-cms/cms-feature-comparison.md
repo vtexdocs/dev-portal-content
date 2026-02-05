@@ -1,5 +1,5 @@
 ---
-title: "Comparing  (legacy) and CMS features"
+title: "Comparing (legacy) and CMS features"
 hidden: false
 slug: "comparing-headless-cms-and-cms-features"
 createdAt: "2026-01-26T12:50:00.813Z"

@@ -14,7 +14,7 @@ Learn about the architectural and code-level changes when upgrading from the Hea
 
 <WhatsNextCard
   linkTo="feature-comparison"
-  title="Comparing Headless CMS and CMS features"
+  title="Comparing Headless CMS (legacy) and CMS features"
   description="High-level differences between the CMS and Headless CMS, covering content modeling, editing, and technical infrastructure."
   linkTitle="See more"
 />
