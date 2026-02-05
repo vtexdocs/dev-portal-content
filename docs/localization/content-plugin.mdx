@@ -1,8 +1,8 @@
 ---
 title: "Content plugin"
 hidden: "true"
-createdAt: "2026-01-12t18:00:00.325z"
-updatedAt: "2026-01-14T12:26:00.857Z"
+createdAt: "2026-01-12T18:00:00.325z"
+updatedAt: "2026-02-05T12:26:00.857Z"
 ---
 
 The Content plugin is a [VTEX CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#plugins) that allows you to manage your store's content and CMS configurations directly from the terminal. Use this plugin to manage CMS schemas, organize components, and define [Content Types](/TBD).
@@ -83,10 +83,9 @@ vtex content generate-schema [COMPONENT_SCHEMAS_PATH] [CONTENT_TYPES_PATH]
 | Option | Alias | Description |
 | --- | --- | --- |
 | `--help` | `-h` | Displays help information for the command. |
-| `--out=<path>` | `-o` | Specifies the output file path for the generated schema. This option is required to produce an output, and without it, the command will only display a success message but won't save or output the schema. |
+| `--out=<path>` | `-o` | Specifies the output file path for the generated schema. This option is required to produce an output, and without it, the command will only display a success message but won't save or output the schema. Default value: `cms_schema.json`. |
 | `--local=<path>` | `-l` | Uses a local schema file as the base schema instead of fetching the latest FastStore schema from a remote source. |
-| `--remote=<path>` | `-r` | Specifies a remote URL to fetch a custom base schema instead of FastStore's default. Must be publicly accessible and return valid JSON. |
-| `--beta` | `-b` | Uses the beta registry instead of the stable one when fetching the default base schema. |
+| `--base=<schemaId>` | `-b` | Specifies a `schemaId` (`$id` property in a schema) to be used as a custom base schema instead of FastStores default. |
 
 #### Examples
 
@@ -106,12 +105,6 @@ Generate a schema using a local base schema:
 
 ```shell
 vtex content generate-schema --local ./base-schema.json --out final-schema.json
-```
-
-Use the beta registry for the base schema:
-
-```shell
-vtex content generate-schema --beta --out schema.json
 ```
 
 <div align="right">
@@ -212,7 +205,6 @@ vtex content upload-schema [SCHEMA_PATH]
 | Option | Alias | Description |
 | --- | --- | --- |
 | `--help` | `-h` | Displays help information for the command. |
-| `--beta` | `-b` | Uploads the schema to the beta registry instead of the stable one. |
 
 #### Examples
 
@@ -226,12 +218,6 @@ Upload a custom schema file:
 
 ```shell
 vtex content upload-schema ./custom-schema.json
-```
-
-Upload to the beta registry:
-
-```shell
-vtex content upload-schema schema.json --beta
 ```
 
 <div align="right">
