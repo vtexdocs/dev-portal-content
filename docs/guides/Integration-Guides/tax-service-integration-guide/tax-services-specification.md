@@ -250,7 +250,7 @@ If you use [Avalara](https://www.avalara.com/us/en/index.html) as your tax calcu
 
 These fields are also read by Checkout and added to the `priceTag`.
 
-Below is an example of values that may be contained in these fields, and you can [download all of the jurisdictions and respective codes used by Avalara](https://help.avalara.com/Avalara_AvaTax_Update/Download_jurisdiction_codes).
+Below is an example of values that may be contained in these fields, and you can [download all the jurisdictions and respective codes used by Avalara](https://help.avalara.com/Avalara_AvaTax_Update/Download_jurisdiction_codes).
 
 ```json
 {
