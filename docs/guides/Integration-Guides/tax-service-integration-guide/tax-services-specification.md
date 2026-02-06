@@ -67,7 +67,7 @@ Here is an example of the `taxConfiguration` object with the expected informatio
 }
 ```
 
->⚠️ You must send the entire `orderForm` in the request body in the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
+>⚠️ You must send the entire `orderForm` in the request body for the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.
 
 After successfully submitting the request, the Tax API integration becomes active in synchronous mode.
 
@@ -75,7 +75,7 @@ After successfully submitting the request, the Tax API integration becomes activ
 
 ## Tax calculation request
 
-The external tax calculation service must provide an endpoint, as the `https://sandbox-rest.avatax.com/api/v2/transactions/create` example, that will receive a `POST` request. In this request, Checkout provides a body in a specific format. This means that either the endpoint must be prepared to receive this body format, or the integration must contain a parser to adapt it to the correct format.  
+The external tax calculation service must provide an endpoint, such as the `https://sandbox-rest.avatax.com/api/v2/transactions/create` example, that will receive a `POST` request. In this request, Checkout provides a body in a specific format. This means that either the endpoint must be prepared to receive this body format, or the integration must contain a parser to adapt it to the correct format.  
 
 Here is an example of that body sent by Checkout API:
 
@@ -250,7 +250,7 @@ If you use [Avalara](https://www.avalara.com/us/en/index.html) as your tax calcu
 
 These fields are also read by Checkout and added to the `priceTag`.
 
-Below is an example for values that may be contained in these fields, and you can [download all of the jurisdictions and respective codes used by Avalara](https://help.avalara.com/Avalara_AvaTax_Update/Download_jurisdiction_codes).
+Below is an example of values that may be contained in these fields, and you can [download all of the jurisdictions and respective codes used by Avalara](https://help.avalara.com/Avalara_AvaTax_Update/Download_jurisdiction_codes).
 
 ```json
 {
