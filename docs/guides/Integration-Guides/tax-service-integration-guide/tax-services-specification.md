@@ -4,7 +4,7 @@ slug: "tax-services-specification"
 hidden: false
 createdAt: "2020-09-01T16:35:02.523Z"
 updatedAt: "2022-02-11T15:38:54.137Z"
-excerpt: ""
+excerpt: "Understand the required request and response format for integrating external tax calculation services with Checkout, including field specifications and practical examples."
 
 ---
 
