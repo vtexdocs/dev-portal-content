@@ -228,7 +228,7 @@ The following JSON represents a list of taxes associated with a particular item,
 | ------------- | ------ | ------------------------------------------------------------------------------------------------- |
 | `id`          | string | Request item index, which means the SKU's position in the `items` array sent by the request body. |
 | `taxes`       | array  | List of all the tax types for an SKU.|
-| `name`        | string | Tax name that will appear on the checkout.|
+| `name`        | string | Tax name that will appear in the checkout.|
 | `description` | string | Informative field, which does not appear on the storefront.|
 | `value`       | number | Absolute numeric value that will be added to the original price.|
 
