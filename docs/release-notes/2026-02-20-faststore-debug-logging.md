@@ -14,14 +14,9 @@ FastStore now supports the experimental `enableScriptsLogs` flag to help develop
 
 ## What has changed?
 
-You can now enable `experimental.enableScriptsLogs` in your `discovery.config.js` file.
+You can now enable `enableScriptsLogs` in your [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options) file.
 
-When this flag is set to `true`, FastStore enables additional debugging capabilities, such as:
-
-- **Partytown debug logs:** Enables Partytown `debug` and `logCalls`.
-- **Google Tag Manager observability:** Adds debug logs for `dataLayer.push` calls.
-- **VTEX scripts observability:** Adds debug logs for VTEX scripts (for example, RC `sendrc` and Activity Flow calls).
-- **VTEX Search Events observability:** Logs payloads sent to VTEX Search Events.
+When this flag is set to `true`, FastStore enables additional debugging capabilities to improve observability of [Partytown](https://partytown.qwik.dev/), Search Events, Google Tag Manager (GTM) and [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow).
 
 ## Why did we make this change?
 
