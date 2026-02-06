@@ -42,7 +42,7 @@ In the endpoint response, the `taxConfiguration` object has the tax information 
 
 ### Update `orderForm`
 
-Then, Checkout settings must be updated using the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.  
+Then, the Checkout settings must be updated using the [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) endpoint.  
 
 In the `taxConfiguration` object, it is important to update the following fields.
 
@@ -236,7 +236,7 @@ In the example above, the only item in the items array has a cost of `10`, and, 
 
 >ℹ️ If no taxes apply to the items in the order, the expected response is an empty array (`[]`).
 
-For the Checkout API to interpret the request body, the `Content-type` must be set to `application/vnd.vtex.checkout.minicart.v1+json`.  
+For the Checkout API to interpret the request body, the `Content-Type` must be set to `application/vnd.vtex.checkout.minicart.v1+json`.  
 
 #### Jurisdiction fields
 
@@ -244,7 +244,7 @@ If you use [Avalara](https://www.avalara.com/us/en/index.html) as your tax calcu
 
 | Field       | Type   | Description|
 | ----------- | ------ | --------------------------------------------------------- |
-| `jurisType` | string | Type of jurisdiction that applies to calculation.         |
+| `jurisType` | string | Type of jurisdiction that applies to the calculation.         |
 | `jurisCode` | string | Unique code that identifies the appropriate jurisdiction. |
 | `jurisName` | string | Name of the jurisdiction that applies to the calculation. |
 
