@@ -6,16 +6,21 @@ createdAt: "2026-01-26T12:50:00.813Z"
 updatedAt: "2026-02-09T10:25:00.813Z"
 ---
 
-The CMS is the VTEX content management system designed to provide a set of tools for managing storefront content. It enables teams to create, collaborate on, and distribute content while offering a modern architecture optimized for performance and reliability.
+The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
 
-The CMS introduces the following improvements:
+The system follows a decoupled architecture that separates content authoring from content consumption. This separation allows content management workflows and content delivery workloads to evolve and scale independently.
 
-| Benefit | Description |
+
+> ⚠️ The CMS is currently available only for FastStore storefronts.
+
+## Technical overview  
+
+| Aspect | Description |
 | :---- | :---- |
 | **Performance** | Dedicated read-optimized Data Plane for faster content delivery during store builds. |
 | **Reliability** | Event-driven architecture with message queues ensuring no content updates are lost. |
-| **Scalability** | Independent scaling of content management and content delivery through CQRS architecture. |
-| **Developer experience** | Modular schema files, improved CLI tooling, and better alignment with version control workflows. |
+| **Scalability** | Independent scaling of content authoring (write) and content delivery (read) workloads, enabled by a command–query separation (CQRS) model. |
+| **Developer experience** | Schema-first configuration, CLI-based operations, and compatibility with source control systems. |
 | **Collaboration** | Git-like branching workflows, multi-user awareness, and content approval processes. |
 | **Localization** | Built-in support for multiple locales with automatic language fallback rules. |
 
