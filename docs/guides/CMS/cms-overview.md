@@ -52,7 +52,7 @@ Organize and reuse media assets with:
 
 Build and manage schemas with:
 
-- **VTEX Content CLI**: Commands for schema generation, splitting, and uploading (`@vtex/cli-plugin-content`).
+- [**VTEX Content CLI**](/TBD): Commands for schema generation, splitting, and uploading (`@vtex/cli-plugin-content`).
 - **Modular schemas**: Individual `.jsonc` files for components and Content Types.
 - **Role-based permissions**: Granular access control for editors, reviewers, and administrators.
 
@@ -61,14 +61,14 @@ Build and manage schemas with:
 <Flex>
 
 <WhatsNextCard
-  linkTo="integrations/faststore"
+  linkTo="/TBD"
   title="FastStore integration"
   description="Learn how to connect the CMS with FastStore"
   linkTitle="See more"
 />
 
 <WhatsNextCard
-  linkTo="upgrading-from-headless-cms-to-cms"
+  linkTo="/TBD"
   title="Upgrading from Headless CMS to CMS"
   description="Learn about the architectural and code-level changes when migrating from Headless CMS to the CMS."
   linkTitle="See more"
