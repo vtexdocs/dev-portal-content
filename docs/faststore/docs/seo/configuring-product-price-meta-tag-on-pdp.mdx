@@ -7,13 +7,15 @@ FastStore lets you control how the `product:price:amount` meta tag is formatted 
 ## Step 1 - Review recommendations
 
 - Use this setting only if you need fixed decimal precision in SEO metadata.
-- Choose a value that matches your store's currency and pricing strategy.
-- Validate more than one PDP after deployment to confirm consistent formatting.
+- If you customize decimal places, keep the `product:price:amount` meta tag aligned with the product price format shown on the PDP. For example, if the displayed product price is `5,20`, the meta tag value should be `5.20`. Mismatches can trigger Google Merchant Center issues related to [price mismatch with structured data](https://support.google.com/merchants/answer/9773429#reasons&zippy=%2Ccommon-reasons-for-price-mismatch).
+- Choose a value that matches your store currency format and pricing strategy.
+- Keep the value in `product:price:amount` consistent with the product price displayed on the PDP.
+- Validate more than one PDP after deployment to confirm consistent formatting and avoid price mismatch issues.
 
 ## Step 2 - Update `discovery.config.js`
 
 1. Open your FastStore project and locate the `discovery.config.js` file.
-2.In the `seo.pdp` section, add `minPriceAmountFractionDigits` with the number of decimal places you want to enforce.
+2. In the `seo` section, add `minPriceAmountFractionDigits` with the number of decimal places you want to enforce.
 
     ```js
     seo: {
@@ -34,3 +36,4 @@ FastStore lets you control how the `product:price:amount` meta tag is formatted 
 2. Open DevTools (or View Page Source).
 3. Search for `product:price:amount`.
 4. Confirm the `<meta>` tag value uses the configured number of decimal places.
+5. Confirm the meta tag format is aligned with the product price shown on the PDP.
