@@ -1,7 +1,7 @@
 ---
-title: "FastStore: Cookie domain normalization fix"
-slug: "2026-02-12-faststore-cookie-domain-normalization-fix"
-type: "fixed"
+title: "Improved cookie handling for session and cart persistence in preview environments"
+slug: "2026-02-12-improved-cookie-handling-session-and-cart-persistence-preview-environments"
+type: "improved"
 createdAt: "2026-02-12T00:00:00.000Z"
 updatedAt: "2026-02-12T00:00:00.000Z"
 excerpt: "FastStore now normalizes Set-Cookie domains to the current host, preventing session cookies from being dropped on preview and localhost environments."
@@ -9,11 +9,11 @@ tags:
     - FastStore
 ---
 
-Stores using FastStore now benefit from improved cookie handling across preview, localhost, and production environments. This fix ensures `Set-Cookie` headers, the response headers that store session cookies, use a domain that matches the current host, preventing session and cart issues caused by cookies being rejected by the browser.
+FastStore stores now benefit from improved cookie handling across preview and localhost environments. This fix ensures `Set-Cookie` headers, the response headers that store session cookies, use a domain that matches the current host, preventing session and cart issues caused by cookies being rejected by the browser.
 
 ## What has changed?
 
-### Set-Cookie domain normalization
+### `Set-Cookie` domain normalization
 
 FastStore now rewrites the cookie domain in GraphQL responses to match the request host for allowed environments (such as `localhost` and `vtex.app`). This makes sure browsers accept and store the cookie.
 
@@ -27,4 +27,4 @@ This update improves reliability when developing and testing with FastStore by e
 
 ## What needs to be done?
 
-To apply this fix in your store, update the FastStore packages to their latest version by running `yarn upgrade -L --scope @faststore` in your terminal.
+To apply this improvement in your store, update the FastStore packages to their latest version by running `yarn upgrade -L --scope @faststore` in your terminal.
