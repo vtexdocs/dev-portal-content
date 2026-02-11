@@ -1,9 +1,9 @@
 ---
 title: "FastStore Release Notes — Version 3.96.0"
-slug: "2026-02-09-faststore-release-notes-version-3-96-0"
+slug: "2026-02-13-faststore-release-notes-version"
 type: "added"
-createdAt: "2026-02-06T11:00:00.000Z"
-updatedAt: "2026-02-06T11:00:00.000Z"
+createdAt: "2026-02-13T11:00:00.000Z"
+updatedAt: "2026-02-13T11:00:00.000Z"
 excerpt: "This release improves My Account order details for B2B with item-level taxes and totals plus clearer order summaries. It also reduces stale data after login/logout."
 tags:
   - FastStore
