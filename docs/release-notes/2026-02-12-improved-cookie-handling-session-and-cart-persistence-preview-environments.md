@@ -1,5 +1,5 @@
 ---
-title: "Improved cookie handling for session and cart persistence in preview environments"
+title: "Faststore: Improved cookie handling for session and cart persistence in preview environments"
 slug: "2026-02-12-improved-cookie-handling-session-and-cart-persistence-preview-environments"
 type: "improved"
 createdAt: "2026-02-12T00:00:00.000Z"
