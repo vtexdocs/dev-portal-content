@@ -5,7 +5,7 @@ type: improved
 createdAt: "2026-02-20T11:00:00.000Z"
 updatedAt: "2026-02-20T11:00:00.000Z"
 hidden: false
-excerpt: "FastStore now supports the experimental enableScriptsLogs flag, improving troubleshooting for third-party scripts and analytics."
+excerpt: "FastStore now supports the experimental `enableScriptsLogs` flag, improving troubleshooting for third-party scripts and analytics."
 tags:
     - FastStore
 ---
@@ -16,7 +16,7 @@ FastStore now supports the experimental `enableScriptsLogs` flag to help develop
 
 You can now enable `enableScriptsLogs` in your [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options) file.
 
-When this flag is set to `true`, FastStore enables additional debugging capabilities to improve observability of [Partytown](https://partytown.qwik.dev/), Search Events, Google Tag Manager (GTM) and [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow).
+When this flag is set to `true`, FastStore enables additional debugging capabilities to improve observability of [Partytown](https://partytown.qwik.dev/), Search Events, Google Tag Manager (GTM), and [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow).
 
 ## Why did we make this change?
 
