@@ -9,7 +9,7 @@ tags:
     - FastStore
 ---
 
-Stores using FastStore now benefit from improved cookie handling across preview, localhost, and production environments. This fix ensures `Set-Cookie` headers, the response header that stores session cookies, use a domain that matches the current host, preventing session and cart issues caused by cookies being rejected by the browser.
+Stores using FastStore now benefit from improved cookie handling across preview, localhost, and production environments. This fix ensures `Set-Cookie` headers, the response headers that store session cookies, use a domain that matches the current host, preventing session and cart issues caused by cookies being rejected by the browser.
 
 ## What has changed?
 
