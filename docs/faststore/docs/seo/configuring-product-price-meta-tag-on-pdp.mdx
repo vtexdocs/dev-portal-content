@@ -1,0 +1,36 @@
+---
+title: "Configuring product price meta tag formatting on PDP"
+---
+
+FastStore lets you control how the `product:price:amount` meta tag is formatted on Product Detail Pages (PDPs). Use `minPriceAmountFractionDigits` in `discovery.config.js` to set the minimum number of decimal places for this meta tag. This helps keep a consistent value format for crawlers and link previews when PDP URLs are shared.
+
+## Step 1 - Review recommendations
+
+- Use this setting only if you need fixed decimal precision in SEO metadata.
+- Choose a value that matches your store's currency and pricing strategy.
+- Validate more than one PDP after deployment to confirm consistent formatting.
+
+## Step 2 - Update `discovery.config.js`
+
+1. Open your FastStore project and locate the `discovery.config.js` file.
+2.In the `seo.pdp` section, add `minPriceAmountFractionDigits` with the number of decimal places you want to enforce.
+
+    ```js
+    seo: {
+    // ...
+    pdp: {
+      titleTemplate: '%s | FastStore PDP',
+      descriptionTemplate: '%s products on FastStore Product Detail Page',
+      minPriceAmountFractionDigits: 2,
+    },
+    },
+    ```
+
+3. Deploy the change above.
+
+## Step 3 - Validate the result
+
+1. Open a PDP in your store.
+2. Open DevTools (or View Page Source).
+3. Search for `product:price:amount`.
+4. Confirm the `<meta>` tag value uses the configured number of decimal places.
