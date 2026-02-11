@@ -27,4 +27,4 @@ This update improves reliability when developing and testing with FastStore by e
 
 ## What needs to be done?
 
-These fixes should not break existing setups. To receive these fixes, update the FastStore packages to the latest version by running `yarn upgrade -L --scope @faststore` in your terminal.
+To apply this fix in your store, update the FastStore packages to their latest version by running `yarn upgrade -L --scope @faststore` in your terminal.
