@@ -15,7 +15,7 @@ Stores using FastStore now benefit from improved cookie handling across preview,
 
 ### Set-Cookie domain normalization
 
-FastStore now rewrites the cookie domain in GraphQL responses to match the request host for allowed environments (such as `localhost` and `.vtex.app`). This makes sure browsers accept and store the cookie.
+FastStore now rewrites the cookie domain in GraphQL responses to match the request host for allowed environments (such as `localhost` and `vtex.app`). This makes sure browsers accept and store the cookie.
 
 ### Prevented `validateCartMutation` loops
 
