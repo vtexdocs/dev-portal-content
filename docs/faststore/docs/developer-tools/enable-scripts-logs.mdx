@@ -1,0 +1,55 @@
+---
+title: "Debug logging for third-party scripts"
+---
+
+> ⚠️ This is an experimental feature.
+
+The `enableScriptsLogs` flag helps you troubleshoot third-party scripts and analytics behavior in FastStore by adding debug logs to the browser console.
+
+Use this feature when you need more visibility into script execution and event payloads during development or staging validation.
+
+## Before you begin
+
+We recommend enabling this flag only in development or staging environments. This feature increases browser console output and may make debugging noisier if left enabled all the time.
+
+## Step 1: Update FastStore packages
+
+Update the FastStore packages to the latest version:
+
+```sh
+yarn upgrade -L --scope @faststore
+```
+
+## Step 2: Enable `enableScriptsLogs`
+
+1. Open your `discovery.config.js` file.
+2. In the `experimental` object, set `enableScriptsLogs` to `true`.
+
+```js discovery.config.js mark=1:3
+experimental: {
+  enableScriptsLogs: true,
+}
+```
+
+## Step 3: Validate logs in the browser
+
+1. Open your store in a development or staging environment.
+2. Open browser Developer Tools and go to the **Console** tab.
+3. Filter logs by `vtex` to quickly locate FastStore script logs.
+4. Navigate through key storefront flows, such as:
+   - Search for a product and open a product page.
+   - Trigger actions that send analytics events.
+   - Validate GTM events during debugging sessions.
+5. Confirm logs are being emitted with expected payload structure.
+
+With this flag enabled, you should see logs related to:
+
+- Partytown debug and forwarded calls.
+- Google Tag Manager (GTM) `dataLayer.push` events.
+- VTEX Request Capture (`sendrc`) and Activity Flow calls.
+- Intelligent Search Events payloads.
+
+## Related guides
+
+- [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options)
+- [Analytics - Overview](https://developers.vtex.com/docs/guides/faststore/analytics-overview)
