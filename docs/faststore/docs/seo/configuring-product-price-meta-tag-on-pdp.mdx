@@ -2,17 +2,23 @@
 title: "Configuring product price meta tag formatting on PDP"
 ---
 
-FastStore lets you control how the `product:price:amount` meta tag is formatted on Product Detail Pages (PDPs). Use `minPriceAmountFractionDigits` in `discovery.config.js` to set the minimum number of decimal places for this meta tag. This helps keep a consistent value format for crawlers and link previews when PDP URLs are shared.
+FastStore lets you control how the `product:price:amount` meta tag is formatted on Product Detail Pages (PDPs). Use the `minPriceAmountFractionDigits` setting in `discovery.config.js` to define the minimum number of decimal places displayed in this meta tag. This is useful to ensure consistency between:
 
-## Step 1 - Review recommendations
+- The Open Graph meta tag (`product:price:amount`).
+- The structured data included in the PDP HTML (JSON-LD schema).
+- External integrations such as [Google Merchant Center](https://support.google.com/merchants/answer/9773429).
 
-- Use this setting only if you need fixed decimal precision in SEO metadata.
-- If you customize decimal places, keep the `product:price:amount` meta tag aligned with the product price format shown on the PDP. For example, if the displayed product price is `5,20`, the meta tag value should be `5.20`. Mismatches can trigger Google Merchant Center issues related to [price mismatch with structured data](https://support.google.com/merchants/answer/9773429#reasons&zippy=%2Ccommon-reasons-for-price-mismatch).
-- Choose a value that matches your store currency format and pricing strategy.
-- Keep the value in `product:price:amount` consistent with the product price used in the schema on the PDP.
-- Validate more than one PDP after deployment to confirm consistent formatting and avoid price mismatch issues.
+## Step 1: Review recommendations
 
-## Step 2 - Update `discovery.config.js`
+Before applying this setting, make sure you actually need to enforce a fixed number of decimal places in your SEO metadata. This configuration directly affects how the `product:price:amount` meta tag is rendered, and its value must be consistent with the price format defined in your PDP JSON-LD schema (`<script type="application/ld+json">`). 
+If the number of decimal places differs between the meta tag and the structured data, platforms such as Google Merchant Center may flag a price mismatch issue. To avoid this, choose a value that aligns with your store's currency format and pricing strategy.
+
+For example:
+
+- ✅ Schema price: `3.20` → Meta tag: `3.20`
+- ❌ Schema price: `3.20` → Meta tag: `3.2`
+
+## Step 2: Update `discovery.config.js`
 
 1. Open your FastStore project and locate the `discovery.config.js` file.
 2. In the `seo` section, add `minPriceAmountFractionDigits` with the number of decimal places you want to enforce.
@@ -30,10 +36,14 @@ FastStore lets you control how the `product:price:amount` meta tag is formatted 
 
 3. Deploy the change above.
 
-## Step 3 - Validate the result
+## Step 3: Validate the result
 
 1. Open a PDP in your store.
-2. Open DevTools (or View Page Source).
-3. Search for `product:price:amount`.
-4. Confirm the `<meta>` tag value uses the configured number of decimal places.
-5. Confirm the meta tag format is aligned with the product price shown on the PDP.
+2. Open your browser's DevTools (or use View Page Source).
+3. Confirm that the `<meta property="product:price:amount">` value uses the configured number of decimal places. For example:
+
+```HTML
+<meta property="product:price:amount" content="3.20" />
+```
+
+> ⚠️ Validate more than one PDP after deployment to confirm consistent formatting between the meta tag and schema values.
