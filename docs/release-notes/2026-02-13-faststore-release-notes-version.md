@@ -21,7 +21,7 @@ GraphQL requests now add a cache-busting token when the auth cookie changes. Thi
 
 Signing out now clears client-side storage used by session-aware features, preventing leftover data from affecting the next session. For more details on this fix, see the [FastStore: Cart and session management fixes](https://developers.vtex.com/updates/release-notes/2026-02-04-faststore-cart-and-session-management-fixes) Release Notes.
 
-> ⚠️ After releasing `3.96.0`, an issue with cookie domain handling was identified and resolved in version 3.96.5 (hotfix). See the [FastStore: Cookie domain normalization fix](https://developers.vtex.com/updates/release-notes/docs/release-notes/2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments) release notes for more information.
+> ⚠️ After releasing `3.96.0`, an issue with cookie domain handling was identified and resolved in version 3.96.5 (hotfix). See the [FastStore: Cookie domain normalization fix](https://developers.vtex.com/updates/release-notes/2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments) release notes for more information.
 
 ## My Account for B2B
 
