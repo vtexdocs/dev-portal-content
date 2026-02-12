@@ -1,0 +1,752 @@
+# Mutations and Store Patterns
+
+FastStore handles mutations through specialized store patterns rather than a traditional `useMutation` hook. This approach combines local state management with server synchronization, providing optimistic updates, automatic validation, and seamless cache management. The primary mutation patterns involve cart operations, session management, and form submissions.
+
+## Core Concepts
+
+### Architecture
+
+```
+User Action → Store Method → Optimistic Update → Server Validation → Final State → UI Update
+```
+
+1. **Store Pattern**: Centralized state management for mutations
+2. **Optimistic Updates**: Immediate UI feedback before server confirmation
+3. **Validation**: Automatic server-side validation of mutations
+4. **Event Driven**: Analytics and side effects triggered automatically
+5. **Cache Synchronization**: Automatic cache updates across components
+
+## Mutation Patterns
+
+### 1. Cart Store Pattern
+
+The cart store is the primary example of mutation handling in FastStore:
+
+```typescript
+import { cartStore, useCart } from '@faststore/core/sdk/cart'
+
+// Store provides mutation methods
+cartStore.addItem(item)      // Add to cart
+cartStore.removeItem(id)      // Remove from cart
+cartStore.updateItem(item)    // Update quantity
+cartStore.clearCart()         // Clear all items
+
+// Hook provides reactive state
+const cart = useCart()        // Subscribe to cart state
+```
+
+### 2. Form Submission Pattern (useLazyQuery)
+
+For form-based mutations, FastStore uses `useLazyQuery`:
+
+```typescript
+import { useLazyQuery } from '@faststore/core/sdk/graphql/useLazyQuery'
+import { gql } from '@faststore/core/api'
+
+const mutation = gql(`
+  mutation UpdateProfile($data: ProfileInput!) {
+    updateProfile(data: $data) {
+      id
+      success
+    }
+  }
+`)
+
+const ProfileForm = () => {
+  const [updateProfile, { data, error, isValidating }] = useLazyQuery(
+    mutation,
+    { data: { name: '', email: '' } }
+  )
+
+  const handleSubmit = async (formData) => {
+    const result = await updateProfile({ data: formData })
+    if (result?.success) {
+      showSuccess()
+    }
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      {/* Form fields */}
+      <button disabled={isValidating}>
+        {isValidating ? 'Saving...' : 'Save'}
+      </button>
+    </form>
+  )
+}
+```
+
+## Implementation Examples
+
+### 1. Add to Cart with Analytics
+
+```typescript
+import { useBuyButton } from '@faststore/core/sdk/cart/useBuyButton'
+import { sendAnalyticsEvent } from '@faststore/sdk'
+
+const ProductCard = ({ product }) => {
+  const buyButtonProps = useBuyButton({
+    id: product.id,
+    price: product.price,
+    listPrice: product.listPrice,
+    quantity: 1,
+    seller: product.seller,
+    itemOffered: {
+      sku: product.sku,
+      name: product.name,
+      image: product.image,
+      brand: product.brand,
+      isVariantOf: product.isVariantOf
+    }
+  })
+
+  return (
+    <button {...buyButtonProps}>
+      Add to Cart
+    </button>
+  )
+}
+
+// useBuyButton internally handles:
+// 1. Cart store update
+// 2. Analytics event
+// 3. Cart drawer opening
+// 4. Optimistic UI update
+```
+
+### 2. Remove from Cart
+
+```typescript
+import { useRemoveButton } from '@faststore/core/sdk/cart/useRemoveButton'
+
+const CartItem = ({ item }) => {
+  const removeButtonProps = useRemoveButton(item)
+
+  return (
+    <div>
+      <ProductInfo item={item} />
+      <button {...removeButtonProps}>
+        Remove
+      </button>
+    </div>
+  )
+}
+
+// Automatically handles:
+// - Optimistic removal
+// - Server validation
+// - Analytics tracking
+// - Cart total recalculation
+```
+
+### 3. Update Cart Quantity
+
+```typescript
+import { cartStore, useCart } from '@faststore/core/sdk/cart'
+
+const QuantitySelector = ({ item }) => {
+  const cart = useCart()
+
+  const updateQuantity = (newQuantity) => {
+    // Optimistic update
+    const updatedItem = {
+      ...item,
+      quantity: newQuantity
+    }
+
+    // Update store
+    cartStore.updateItem(updatedItem)
+
+    // Analytics event
+    sendAnalyticsEvent({
+      name: 'update_quantity',
+      params: {
+        item_id: item.id,
+        old_quantity: item.quantity,
+        new_quantity: newQuantity
+      }
+    })
+  }
+
+  return (
+    <div>
+      <button onClick={() => updateQuantity(item.quantity - 1)}>-</button>
+      <span>{item.quantity}</span>
+      <button onClick={() => updateQuantity(item.quantity + 1)}>+</button>
+    </div>
+  )
+}
+```
+
+### 4. Newsletter Subscription
+
+```typescript
+import { useNewsletter } from '@faststore/core/sdk/newsletter/useNewsletter'
+
+const NewsletterForm = () => {
+  const { subscribeUser, data, error, loading } = useNewsletter()
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+      const result = await subscribeUser({
+        data: {
+          email,
+          name: ''
+        }
+      })
+
+      if (result?.subscribeToNewsletter?.id) {
+        setSubscribed(true)
+        setEmail('')
+      }
+    } catch (err) {
+      console.error('Subscription failed:', err)
+    }
+  }
+
+  if (subscribed) {
+    return <SuccessMessage />
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <button type="submit" disabled={loading}>
+        {loading ? 'Subscribing...' : 'Subscribe'}
+      </button>
+      {error && <ErrorMessage error={error} />}
+    </form>
+  )
+}
+```
+
+### 5. Complex Cart Operations
+
+```typescript
+// Buy Together - Multiple items at once
+const BuyTogetherButton = ({ products }) => {
+  const { openCart } = useUI()
+
+  const handleBuyTogether = () => {
+    // Add multiple items in batch
+    products.forEach(product => {
+      cartStore.addItem({
+        id: product.id,
+        price: product.price,
+        quantity: 1,
+        seller: product.seller,
+        itemOffered: product
+      })
+    })
+
+    // Track bundle purchase
+    sendAnalyticsEvent({
+      name: 'add_bundle_to_cart',
+      params: {
+        bundle_id: 'buy-together',
+        items: products.map(p => p.id),
+        total_value: products.reduce((sum, p) => sum + p.price, 0)
+      }
+    })
+
+    openCart()
+  }
+
+  return (
+    <button onClick={handleBuyTogether}>
+      Buy All Together
+    </button>
+  )
+}
+```
+
+## Store Creation Pattern
+
+### Creating Custom Stores
+
+```typescript
+import { createStore } from '@faststore/sdk'
+import { useStore } from '@faststore/core/sdk/useStore'
+
+// 1. Define store interface
+interface WishlistStore {
+  items: WishlistItem[]
+  addItem: (item: WishlistItem) => void
+  removeItem: (id: string) => void
+  clearWishlist: () => void
+}
+
+// 2. Create store with mutations
+const wishlistStore = createStore<WishlistStore>({
+  items: [],
+
+  addItem: (store, item) => {
+    // Optimistic update
+    const newItems = [...store.items, item]
+
+    // Persist to localStorage
+    localStorage.setItem('wishlist', JSON.stringify(newItems))
+
+    // Update store
+    return { ...store, items: newItems }
+  },
+
+  removeItem: (store, id) => {
+    const newItems = store.items.filter(item => item.id !== id)
+    localStorage.setItem('wishlist', JSON.stringify(newItems))
+    return { ...store, items: newItems }
+  },
+
+  clearWishlist: (store) => {
+    localStorage.removeItem('wishlist')
+    return { ...store, items: [] }
+  }
+})
+
+// 3. Create hook for components
+export const useWishlist = () => {
+  const wishlist = useStore(wishlistStore)
+
+  return {
+    ...wishlist,
+    totalItems: wishlist.items.length,
+    isInWishlist: (id: string) =>
+      wishlist.items.some(item => item.id === id)
+  }
+}
+```
+
+## Validation Pattern
+
+### Server Validation with Optimistic Updates
+
+```typescript
+const ValidatedCartStore = () => {
+  const [validationStore, onValidate] = createValidationStore(async (cart) => {
+    // Validate with server
+    const response = await validateCart(cart)
+
+    if (response.errors) {
+      // Revert optimistic update
+      throw new Error(response.errors[0].message)
+    }
+
+    return response.validatedCart
+  })
+
+  const cartStore = createCartStore(config, onValidate)
+
+  return {
+    ...cartStore,
+    addItem: async (item) => {
+      // Optimistic update
+      cartStore.addItem(item)
+
+      try {
+        // Trigger validation
+        await onValidate()
+      } catch (error) {
+        // Revert on validation failure
+        cartStore.removeItem(item.id)
+        throw error
+      }
+    }
+  }
+}
+```
+
+## Best Practices
+
+### 1. Error Handling
+
+```typescript
+const RobustMutation = () => {
+  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(false)
+
+  const executeMutation = async (data) => {
+    setLoading(true)
+    setError(null)
+
+    try {
+      // Optimistic update
+      updateUIOptimistically(data)
+
+      // Server mutation
+      const result = await serverMutation(data)
+
+      if (!result.success) {
+        throw new Error(result.error)
+      }
+
+      // Confirm update
+      confirmUIUpdate(result.data)
+    } catch (err) {
+      // Revert optimistic update
+      revertUIUpdate()
+      setError(err.message)
+
+      // Log to error tracking
+      trackError(err)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return { executeMutation, error, loading }
+}
+```
+
+### 2. Loading States
+
+```typescript
+const MutationButton = ({ mutation, optimisticUpdate }) => {
+  const [localLoading, setLocalLoading] = useState(false)
+
+  const handleClick = async () => {
+    setLocalLoading(true)
+
+    // Show optimistic state immediately
+    optimisticUpdate()
+
+    try {
+      await mutation()
+    } catch (error) {
+      // Revert optimistic update
+      console.error('Mutation failed:', error)
+    } finally {
+      setLocalLoading(false)
+    }
+  }
+
+  return (
+    <button onClick={handleClick} disabled={localLoading}>
+      {localLoading ? <Spinner /> : 'Submit'}
+    </button>
+  )
+}
+```
+
+### 3. Batch Operations
+
+```typescript
+const BatchOperations = () => {
+  const processBatch = async (items) => {
+    // Start batch indicator
+    setProcessing(true)
+
+    const results = []
+    const errors = []
+
+    for (const item of items) {
+      try {
+        // Process each item
+        const result = await processItem(item)
+        results.push(result)
+
+        // Update progress
+        setProgress((prev) => prev + 1)
+      } catch (error) {
+        errors.push({ item, error })
+      }
+    }
+
+    setProcessing(false)
+
+    // Handle results
+    if (errors.length > 0) {
+      showBatchErrors(errors)
+    }
+
+    return { results, errors }
+  }
+
+  return { processBatch }
+}
+```
+
+### 4. Optimistic Updates with Rollback
+
+```typescript
+const OptimisticMutation = () => {
+  const [optimisticState, setOptimisticState] = useState(null)
+  const [previousState, setPreviousState] = useState(null)
+
+  const executeMutation = async (data) => {
+    // Save current state for rollback
+    setPreviousState(currentState)
+
+    // Apply optimistic update
+    setOptimisticState(data)
+
+    try {
+      const result = await serverMutation(data)
+
+      // Replace optimistic with server state
+      setOptimisticState(null)
+      updateState(result)
+    } catch (error) {
+      // Rollback to previous state
+      setOptimisticState(null)
+      updateState(previousState)
+
+      throw error
+    }
+  }
+
+  // Merge optimistic state with actual state
+  const displayState = optimisticState || currentState
+
+  return { executeMutation, displayState }
+}
+```
+
+### 5. Conflict Resolution
+
+```typescript
+const ConflictResolution = () => {
+  const handleConflict = async (localData, serverData) => {
+    // Detect conflicts
+    if (localData.version !== serverData.version) {
+      // Strategy 1: Server wins
+      return serverData
+
+      // Strategy 2: Client wins
+      // return localData
+
+      // Strategy 3: Merge
+      // return mergeData(localData, serverData)
+
+      // Strategy 4: User chooses
+      // const choice = await showConflictDialog(localData, serverData)
+      // return choice
+    }
+
+    return localData
+  }
+
+  const executeMutation = async (data) => {
+    try {
+      const serverState = await fetchCurrentState()
+      const resolved = await handleConflict(data, serverState)
+      return await submitMutation(resolved)
+    } catch (error) {
+      console.error('Mutation conflict:', error)
+      throw error
+    }
+  }
+
+  return { executeMutation }
+}
+```
+
+## Testing Mutations
+
+```typescript
+import { renderHook, act } from '@testing-library/react-hooks'
+import { cartStore } from '@faststore/core/sdk/cart'
+
+describe('Cart Mutations', () => {
+  beforeEach(() => {
+    cartStore.clearCart()
+  })
+
+  test('should add item to cart', async () => {
+    const { result } = renderHook(() => useCart())
+
+    await act(async () => {
+      cartStore.addItem({
+        id: 'test-item',
+        price: 10,
+        quantity: 1,
+        // ... other properties
+      })
+    })
+
+    expect(result.current.items).toHaveLength(1)
+    expect(result.current.items[0].id).toBe('test-item')
+  })
+
+  test('should handle validation errors', async () => {
+    const { result } = renderHook(() => useCart())
+
+    await act(async () => {
+      // Add invalid item
+      cartStore.addItem({
+        id: 'invalid-item',
+        price: -10, // Invalid price
+        quantity: 0, // Invalid quantity
+      })
+    })
+
+    // Validation should reject the item
+    expect(result.current.messages).toContainEqual(
+      expect.objectContaining({
+        status: 'ERROR',
+        text: expect.any(String)
+      })
+    )
+  })
+})
+```
+
+## Performance Optimization
+
+### 1. Debounced Mutations
+
+```typescript
+const DebouncedUpdate = () => {
+  const debouncedUpdate = useMemo(
+    () => debounce((value) => {
+      cartStore.updateItem(value)
+    }, 500),
+    []
+  )
+
+  const handleChange = (newValue) => {
+    // Update UI immediately
+    setLocalValue(newValue)
+
+    // Debounce server update
+    debouncedUpdate(newValue)
+  }
+
+  return <input onChange={handleChange} />
+}
+```
+
+### 2. Mutation Queue
+
+```typescript
+class MutationQueue {
+  private queue: Mutation[] = []
+  private processing = false
+
+  async add(mutation: Mutation) {
+    this.queue.push(mutation)
+
+    if (!this.processing) {
+      await this.process()
+    }
+  }
+
+  private async process() {
+    this.processing = true
+
+    while (this.queue.length > 0) {
+      const mutation = this.queue.shift()
+
+      try {
+        await mutation.execute()
+      } catch (error) {
+        // Handle error, maybe retry
+        console.error('Mutation failed:', error)
+      }
+    }
+
+    this.processing = false
+  }
+}
+
+const mutationQueue = new MutationQueue()
+```
+
+### 3. Optimistic Cache Updates
+
+```typescript
+const CachedMutation = () => {
+  const { mutate } = useSWRConfig()
+
+  const updateWithCache = async (data) => {
+    // Update all related cache keys
+    mutate(
+      key => key.startsWith('product'),
+      async (currentData) => {
+        // Optimistically update cache
+        return {
+          ...currentData,
+          ...data
+        }
+      },
+      false // Don't revalidate immediately
+    )
+
+    try {
+      // Execute mutation
+      const result = await serverMutation(data)
+
+      // Revalidate with server data
+      mutate(key => key.startsWith('product'))
+
+      return result
+    } catch (error) {
+      // Revert cache on error
+      mutate(key => key.startsWith('product'))
+      throw error
+    }
+  }
+
+  return { updateWithCache }
+}
+```
+
+## Migration Guide
+
+### From Traditional useMutation to Store Pattern
+
+```typescript
+// Before: Traditional useMutation
+const { mutate, loading, error } = useMutation(UPDATE_CART)
+
+const handleAdd = () => {
+  mutate({
+    variables: { item }
+  })
+}
+
+// After: Store Pattern
+const handleAdd = () => {
+  cartStore.addItem(item) // Automatic optimistic update & validation
+}
+const cart = useCart() // Reactive state
+```
+
+## Common Pitfalls & Solutions
+
+### 1. Race Conditions
+
+**Problem**: Multiple rapid mutations causing inconsistent state
+
+**Solution**: Implement mutation queue or debouncing
+
+### 2. Stale Closures
+
+**Problem**: Using outdated state in callbacks
+
+**Solution**: Use refs or latest state from store
+
+### 3. Memory Leaks
+
+**Problem**: Subscriptions not cleaned up
+
+**Solution**: Proper cleanup in useEffect
+
+## Related Patterns
+
+- `useQuery`: For data fetching
+- `useLazyQuery`: For on-demand queries and mutations
+- `useStore`: For subscribing to store state
+- `createStore`: For creating custom stores
+
+## Summary
+
+FastStore's mutation patterns provide a robust solution for state management and server synchronization. By using stores for local state and validation, combined with `useLazyQuery` for form submissions, you get optimistic updates, automatic validation, and seamless cache management. This approach ensures consistent user experience with immediate feedback while maintaining data integrity through server validation.
