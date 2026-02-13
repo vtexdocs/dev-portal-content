@@ -1,9 +1,9 @@
 ---
 title: "FastStore Release Notes — Version 3.97.0"
-slug: "2026-02-19-faststore-release-notes-version"
+slug: "2026-02-20-faststore-release-notes-version"
 type: "added"
-createdAt: "2026-02-19T11:00:00.000Z"
-updatedAt: "2026-02-19T11:00:00.000Z"
+createdAt: "2026-02-20T11:00:00.000Z"
+updatedAt: "2026-02-20T11:00:00.000Z"
 excerpt: "This release lets you align product price formatting in SEO meta tags, improving consistency for crawlers and social previews."
 tags:
     - FastStore
