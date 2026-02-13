@@ -10,7 +10,7 @@ category: "App Development"
 
 The `react` builder is used to develop apps with [React](https://react.dev/) when your project requires customized frontend solutions beyond our native components.
 
-This builder interprets the `/react` directory, where you must place the app’s React code using [Typescript](https://www.typescriptlang.org/). When you run your app, this code is transformed into compiled bundles, ready for use in frontend apps.
+This builder interprets the `/react` directory, where you must place the app’s React code using [TypeScript](https://www.typescriptlang.org/). When you run your app, this code is transformed into compiled bundles, ready for use in frontend apps.
 
 To learn how to implement apps using this builder, check our [Storefront apps guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io).
 
@@ -66,7 +66,7 @@ The [VTEX Store Components](https://developers.vtex.com/docs/apps/vtex.store-com
 
 >ℹ️ An app using the `react` builder can export a single or multiple components.
 
-This collection is composed by some components, such as [Availability Subscriber](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-availabilitysubscriber), [Buy Button](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-buybutton), [SKU Selector](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-skuselector), [Search Bar](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-searchbar), among others.
+This collection is composed of some components, such as [Availability Subscriber](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-availabilitysubscriber), [Buy Button](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-buybutton), [SKU Selector](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-skuselector), [Search Bar](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-searchbar), among others.
 
 The app's file structure includes folders and files that enable the use of the collection’s React components. You can check some of them below:
 
