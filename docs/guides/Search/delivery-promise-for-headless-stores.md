@@ -80,7 +80,7 @@ Learn more about each of them in the following sections.
 
 >ℹ️ **Retrieving available pickup points**
 >
-> To retrieve the list of available pickup points with their IDs, distances, addresses, and business hours, use the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. It endpoint returns pickup points based on product availability (product cluster/collection), sorted by distance from the provided coordinates.
+> To retrieve the list of available pickup points with their IDs, distances, addresses, and business hours, use the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. This endpoint returns pickup points based on product availability (product cluster/collection), sorted by distance from the provided coordinates.
 >
 > You can call this endpoint in two ways:
 >
