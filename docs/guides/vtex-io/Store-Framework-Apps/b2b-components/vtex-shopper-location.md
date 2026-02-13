@@ -3,16 +3,18 @@ title: "Shopper Location"
 slug: "vtex-shopper-location"
 hidden: false
 createdAt: "2020-09-03T21:01:54.967Z"
-updatedAt: "2022-11-11T12:33:47.603Z"
+updatedAt: "2026-02-13T15:52:23.906Z"
 ---
 
-This app attempts to determine the user's location if not already known, first by requesting permission to use their browser's geolocation feature, then by looking up their location based on their IP address as a fallback. The location is stored in the `shippingData` section of the `orderForm` and can then be used by other apps, such as [Location Availability](https://developers.vtex.com/docs/guides/vtex-location-availability).
+>⚠️ This app is no longer maintained by VTEX. This means support and maintenance are no longer provided.
 
-A block is also provided which renders a form allowing the user to manually change their location.
+This app attempts to determine the user's location if it is not already known, first by requesting permission to use their browser's geolocation feature, then by looking up their location using their IP address as a fallback. The location is stored in the `shippingData` section of the `orderForm` and can then be used by other apps, such as [Location Availability](https://developers.vtex.com/docs/guides/vtex-location-availability).
 
-Shopper Location also supports redirecting a user to a URL based off their location determined by the app. See the [Client Redirect](#client-redirect) section.
+A block is also provided, which renders a form allowing the user to manually change their location.
 
-This app also supports white label sellers selection, allowing shoppers to select one or more sellers available in their location. Shoppers will then be able to search and view products from those select sellers. See the [Region Seller Selection](#region-seller-selection) section.
+Shopper Location also supports redirecting a user to a URL based on their location, determined by the app. See the [Client Redirect](#client-redirect) section.
+
+This app also supports white label sellers' selection, allowing shoppers to select one or more sellers available in their location. Shoppers will then be able to search and view products from those select sellers. See the [Region Seller Selection](#region-seller-selection) section.
 
 > ℹ️ The Google Geolocation API key in your **Inventory & Shipping** settings is required for the geolocation feature.
 
@@ -24,7 +26,7 @@ This app also supports white label sellers selection, allowing shoppers to selec
 
 2. In your account's admin dashboard, go to **Apps > My Apps** and click the `Settings` button for Shopper Location.
 
-3. Enter your API key for https://ip-geolocation.whoisxmlapi.com in the provided field and click `Save`. If you plan to use the `Client Redirect` feature, it is also configured here.
+3. Enter your API key for https://ip-geolocation.whoisxmlapi.com in the provided field and click `Save`. If you plan to use the `Client Redirect` feature, it's configured here as well.
 
 4. Modify your `store-theme` as follows:
 
@@ -88,7 +90,7 @@ This app also supports white label sellers selection, allowing shoppers to selec
   },
 ```
 
-   - Also in one of the JSON files, place the `shopper-location` block in your layout. For example, to place the block in the header:
+   - Also, in one of the JSON files, place the `shopper-location` block in your layout. For example, to place the block in the header:
 
 ```json
 "flex-layout.row#header-desktop": {
@@ -115,17 +117,17 @@ This app also supports white label sellers selection, allowing shoppers to selec
 
 ### Client Redirect
 
-You have the option to redirect the user to a country specific URL, based on the user's location. In the **App Settings**, enter the [alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Officially_assigned_code_elements) and URL for each supported country.
+You can redirect the user to a country-specific URL based on their location. In the **App Settings**, enter the [alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Officially_assigned_code_elements) and URL for each supported country.
 
-On their first visit, if a user is not on their country's website, a modal will display an option to be redirected to their country specific website. For users located in a country that does not have an entry in the App Settings, no option is displayed.
+On their first visit, if a user is not on their country's website, a modal will display an option to redirect to their country's website. For users in a country without an entry in the App Settings, no option is displayed.
 
-Additionally, there is an `Automatic Redirect` option, that will redirect the user automatically, without displaying the modal.
+Additionally, there is an `Automatic Redirect` option that redirects the user without displaying the modal.
 
 ### Region Sellers Selection
 
-Allow users to select one or more sellers serving their location from a list of options and display only products carried by those sellers in the search results.
+Allow users to select one or more sellers serving their location from a list, and display only products carried by those sellers in search results.
 
-> ℹ️️ For this feature to work properly, the item cannot have inventory in seller "1". If there's stock in seller "1", then the item will always appear in the search results, regardless of inventory in whichever sellers are selected.
+> ℹ️️ For this feature to work properly, the item cannot have inventory in seller "1". If there's stock in seller "1", the item will always appear in the search results, regardless of the inventory in the sellers selected.
 
 Add the `region-sellers` block as a child of the `shopper-location` block to get started:
 
