@@ -14,7 +14,7 @@ This builder interprets the `/react` directory, where you must place the app’s
 
 To learn how to implement apps using this builder, check our [Storefront apps guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io).
 
-> ℹ️ The `react` builder runs on **React 16.x** by default. This means that any custom components, design systems, or third‑party libraries you use in your VTEX IO apps must be compatible with React 16.x.
+> ℹ️ The `react` builder runs on `React v16` by default. This means that any custom components, design systems, or third‑party libraries you use in your VTEX IO apps must be compatible with `React v16`. Learn more about this version in the [React documentation](https://16.reactjs.org/).
 
 ## Folder structure
 
