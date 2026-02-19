@@ -19,7 +19,7 @@ The system follows a decoupled architecture that separates content authoring fro
 | :---- | :---- |
 | **Performance** | Read-optimized data access for content consumption during storefront builds. |
 | **Reliability** | Event-driven architecture with message queues ensuring no content updates are lost. |
-| **Scalability** | Independent scaling of content authoring (write) and content delivery (read) workloads, enabled by a command–query separation (CQRS) model. |
+| **Scalability** | Independent scaling of content authoring (write) and content delivery (read) workloads, enabled by a command-query separation (CQRS) model. |
 | **Developer experience** | Schema-first configuration, CLI-based operations, and compatibility with source control systems. |
 | **Collaboration** | Git-like branching workflows, multi-user awareness, and content approval processes. |
 | **Localization** | Built-in support for multiple locales with automatic language fallback rules. |
