@@ -3,7 +3,7 @@ title: "CMS overview"
 hidden: false
 slug: "cms-overview"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-02-09T10:25:00.813Z"
+updatedAt: "2026-02-19T11:48:00.813Z"
 ---
 
 The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
@@ -74,8 +74,8 @@ Build and manage schemas with:
 
 <WhatsNextCard
   linkTo="/TBD"
-  title="Upgrading from Headless CMS to CMS"
-  description="Learn about the architectural and code-level changes when migrating from Headless CMS to the CMS."
+  title="Upgrading from Headless CMS (legacy) to CMS"
+  description="Learn about the architectural and code-level changes when migrating from Headless CMS (legacy) to the CMS."
   linkTitle="See more"
 />
 
