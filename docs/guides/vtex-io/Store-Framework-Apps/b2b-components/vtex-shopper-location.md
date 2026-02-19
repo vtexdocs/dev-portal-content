@@ -8,7 +8,7 @@ updatedAt: "2026-02-13T15:52:23.906Z"
 
 >⚠️ This app is no longer maintained by VTEX. This means support and maintenance are no longer provided.
 
-This app attempts to determine the user's location if it is not already known, first by requesting permission to use their browser's geolocation feature, then by looking up their location using their IP address as a fallback. The location is stored in the `shippingData` section of the `orderForm` and can then be used by other apps, such as [Location Availability](https://developers.vtex.com/docs/guides/vtex-location-availability).
+This app attempts to determine the user's location if it is not already known, first by requesting permission to use their browser's geolocation feature, then by looking up their location using their IP address as a fallback. The location is stored in the `shippingData` section of the `orderForm` and can then be used by other apps, such as [Location Availability](https://developers.vtex.com/docs/apps/vtex.location-availability).
 
 A block is also provided, which renders a form allowing the user to manually change their location.
 
