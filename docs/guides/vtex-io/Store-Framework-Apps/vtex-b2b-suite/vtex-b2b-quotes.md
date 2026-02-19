@@ -1,6 +1,7 @@
 ---
 title: "B2B Quotes & Carts (B2B Suite)"
 slug: "vtex-b2b-quotes"
+excerpt: "Learn how B2B customers can request quotes, save carts, and negotiate prices with sales representatives using the B2B Quotes & Carts app."
 hidden: false
 createdAt: "2021-10-19T20:10:51.309Z"
 updatedAt: "2022-12-02T14:51:23.888Z"

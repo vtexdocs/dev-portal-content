@@ -1,6 +1,7 @@
 ---
 title: "Storefront Permissions (B2B Suite)"
 slug: "vtex-storefront-permissions"
+excerpt: "Learn how to manage storefront roles and permissions for B2B users, allowing you to control what actions users can perform based on their role in an organization."
 hidden: false
 createdAt: "2021-07-20T17:06:30.143Z"
 updatedAt: "2022-12-09T21:28:45.069Z"

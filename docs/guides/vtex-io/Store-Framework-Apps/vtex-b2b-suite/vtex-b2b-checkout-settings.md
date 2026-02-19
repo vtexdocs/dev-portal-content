@@ -1,6 +1,7 @@
 ---
 title: "B2B Checkout Settings (B2B Suite)"
 slug: "vtex-b2b-checkout-settings"
+excerpt: "Learn how to customize checkout options for B2B organizations, including payment methods, addresses, purchase orders, and quote creation."
 hidden: false
 createdAt: "2021-11-10T15:03:55.029Z"
 updatedAt: "2022-09-15T21:01:11.033Z"

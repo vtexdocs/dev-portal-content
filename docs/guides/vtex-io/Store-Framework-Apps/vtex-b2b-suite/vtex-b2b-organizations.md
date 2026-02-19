@@ -1,8 +1,9 @@
 ---
 title: "B2B Organizations (B2B Suite)"
 slug: "vtex-b2b-organizations"
+excerpt: "Learn how to group B2B users into organizations, assign payment methods, price tables, and product collections, and manage cost centers and users."
 hidden: false
-createdAt: "2021-10-26t13:12:33.521Z"
+createdAt: "2021-10-26T13:12:33.521Z"
 updatedAt: "2022-12-08T18:41:35.402Z"
 ---
 

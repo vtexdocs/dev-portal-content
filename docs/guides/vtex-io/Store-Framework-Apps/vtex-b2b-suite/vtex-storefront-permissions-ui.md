@@ -1,6 +1,7 @@
 ---
 title: "Storefront Permissions UI (B2B Suite)"
 slug: "vtex-storefront-permissions-ui"
+excerpt: "Learn how to use the Storefront Permissions UI app to manage B2B roles and permissions through the VTEX Admin interface."
 hidden: false
 createdAt: "2021-08-12T01:05:10.534Z"
 updatedAt: "2022-11-14T14:14:48.952Z"

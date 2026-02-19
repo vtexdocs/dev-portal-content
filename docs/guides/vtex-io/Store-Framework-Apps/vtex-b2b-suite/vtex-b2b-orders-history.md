@@ -1,6 +1,7 @@
 ---
 title: "B2B Orders History (B2B Suite)"
 slug: "vtex-b2b-orders-history"
+excerpt: "Learn how the B2B Orders History app replaces the default Orders page with an adapted version for B2B scenarios, allowing organization members to view orders from their organization or cost center."
 hidden: false
 createdAt: "2022-03-29T04:30:06.314Z"
 updatedAt: "2022-08-16T16:18:50.580Z"
