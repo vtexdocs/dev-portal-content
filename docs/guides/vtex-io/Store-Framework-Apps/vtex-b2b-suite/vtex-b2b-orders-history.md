@@ -1,10 +1,13 @@
 ---
-title: "B2B Orders History"
+title: "B2B Orders History (B2B Suite)"
 slug: "vtex-b2b-orders-history"
 hidden: false
 createdAt: "2022-03-29T04:30:06.314Z"
 updatedAt: "2022-08-16T16:18:50.580Z"
 ---
+
+> ⚠️ This documentation applies to B2B Suite only.
+
 > ℹ️ The **B2B Orders History** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
 When navigating a store, B2B customers who are members of organizations often need to view past orders placed by other users in their organization or cost center.

@@ -1,10 +1,12 @@
 ---
-title: "B2B Organizations"
+title: "B2B Organizations (B2B Suite)"
 slug: "vtex-b2b-organizations"
 hidden: false
 createdAt: "2021-10-26t13:12:33.521Z"
 updatedAt: "2022-12-08T18:41:35.402Z"
 ---
+
+> ⚠️ This documentation applies to B2B Suite only.
 
 > ℹ️️ The **B2B Organizations** app is part of the VTEX [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend using it alongside the other apps in this suite to ensure that all features work as expected.
 

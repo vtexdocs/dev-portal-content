@@ -1,10 +1,12 @@
 ---
-title: "Storefront Permissions UI"
+title: "Storefront Permissions UI (B2B Suite)"
 slug: "vtex-storefront-permissions-ui"
 hidden: false
 createdAt: "2021-08-12T01:05:10.534Z"
 updatedAt: "2022-11-14T14:14:48.952Z"
 ---
+
+> ⚠️ This documentation applies to B2B Suite only.
 
 **Storefront Permissions UI** provides an interface for the [Storefront Permissions](https://developers.vtex.com/docs/guides/vtex-storefront-permissions) app, which is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships.
 

@@ -1,10 +1,12 @@
 ---
-title: "B2B Checkout Settings"
+title: "B2B Checkout Settings (B2B Suite)"
 slug: "vtex-b2b-checkout-settings"
 hidden: false
 createdAt: "2021-11-10T15:03:55.029Z"
 updatedAt: "2022-09-15T21:01:11.033Z"
 ---
+
+> ⚠️ This documentation applies to B2B Suite only.
 
 > ℹ️ The **B2B Checkout Settings** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
