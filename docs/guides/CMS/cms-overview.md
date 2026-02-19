@@ -13,11 +13,11 @@ The system follows a decoupled architecture that separates content authoring fro
 
 > ⚠️ The CMS is currently available only for FastStore storefronts.
 
-## Technical overview  
+## Technical overview
 
 | Aspect | Description |
 | :---- | :---- |
-| **Performance** | Dedicated read-optimized Data Plane for faster content delivery during store builds. |
+| **Performance** | Read-optimized data access for content consumption during storefront builds. |
 | **Reliability** | Event-driven architecture with message queues ensuring no content updates are lost. |
 | **Scalability** | Independent scaling of content authoring (write) and content delivery (read) workloads, enabled by a command–query separation (CQRS) model. |
 | **Developer experience** | Schema-first configuration, CLI-based operations, and compatibility with source control systems. |
