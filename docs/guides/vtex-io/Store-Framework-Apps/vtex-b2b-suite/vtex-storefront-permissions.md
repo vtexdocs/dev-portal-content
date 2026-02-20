@@ -1,10 +1,13 @@
 ---
-title: "Storefront Permissions"
+title: "Storefront Permissions (B2B Suite)"
 slug: "vtex-storefront-permissions"
+excerpt: "Learn how to manage storefront roles and permissions for B2B users, allowing you to control what actions users can perform based on their role in an organization."
 hidden: false
 createdAt: "2021-07-20T17:06:30.143Z"
 updatedAt: "2022-12-09T21:28:45.069Z"
 ---
+
+> ⚠️ This documentation applies to B2B Suite only.
 
 > ℹ️ The **Storefront Permissions** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution, which is a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 
