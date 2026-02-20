@@ -7,7 +7,7 @@ createdAt: "2026-01-30T00:00:00.000Z"
 updatedAt: "2026-01-30T00:00:00.000Z"
 ---
 
->⚠️ The Budgets feature is only available for B2B Buyer Portal. Authorization from the Commerce Engineer of the account is required for usage.
+> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
 
 The [Budgets API](https://developers.vtex.com/docs/api-reference/budgets-api) allows buyers to track spending across different parts of your organization by creating **budgets** and subdividing them into **allocations** that are attached to specific entities, such as users, addresses, or business accounting fields like cost center or purchase order number.
 

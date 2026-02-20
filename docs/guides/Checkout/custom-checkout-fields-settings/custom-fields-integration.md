@@ -7,7 +7,7 @@ createdAt: "2026-01-12T00:00:00.000Z"
 updatedAt: "2026-01-12T00:00:00.000Z"
 ---
 
->⚠️ The Custom Fields API is only available for B2B Buyer Portal. Authorization from the Commerce Engineer of the account is required for use.
+> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
 
 The Custom Fields integration enables B2B stores to capture additional business-specific information during checkout. This guide explains how to use the [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api) to define, manage, and apply custom fields such as Cost Center, PO Number, or Location to orders.
 
