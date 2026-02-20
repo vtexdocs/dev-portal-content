@@ -44,9 +44,9 @@ Sets default metadata related to Search Engine Optimization (SEO), influencing h
 |-----------------|--------|-----------------------------------------------------------------------------|---------------|
 | `title`         | `string` | Store headline displayed in search results (60 characters recommended).     | `"FastStore Starter"` |
 | `description`   | `string` | Brief description of the store (150-160 characters optimal).                | `"FastStore Demo Store"` |
-| `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder.                      | `"%s \| FastStore"` |
+| `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder.                      | `%s` | FastStore"` |
 | `author`        | `string` | Content author/owner for attribution.                                       | `"FastStore"` |
-| [`minPriceAmountFractionDigits`](/docs/guides/faststore/seo-configuring-product-price-meta-tag-on-pdp) | `number` | Minimum fraction digits used in the PDP `product:price:amount` meta tag. | `2` |
+| [`minPriceAmountFractionDigits`](https://developers.vtex.com/docs/guides/faststore/seo-configuring-product-price-meta-tag-on-pdp) | `number` | Minimum fraction digits used in the PDP `product:price:amount` meta tag. | `2` |
 
 ---
 
@@ -90,7 +90,7 @@ Sets up user session defaults, controlling language, currency, location, and sho
 |&nbsp;&nbsp;└─  `symbol` | `string` | Currency symbol | `"$"` |
 | `locale`           | `string`   | Language or locale setting for all store text, dates, and numbers. Use standard locale format like `en-US` for English (US), `pt-BR` for Brazilian Portuguese, etc.                                     | `"en-US"` |
 | `channel`          | `object`   | Identifies the commercial and regional context for handling catalog, pricing, and logistics.        |             |
-|&nbsp;&nbsp;├─ `salesChannel` | `string` | Trade policy that handles catalog, prices, and fulfillment options (example: different regions or seller-specific rules).      | `"1"` |
+|&nbsp;&nbsp;├─ `salesChannel` | `string` | Trade policy that handles catalog, prices, and fulfillment options (e.g.: different regions or seller-specific rules).      | `"1"` |
 |&nbsp;&nbsp;└─ `regionId` | `string` | Internal identifier used to define regional segmentation based on the user’s location for services such as catalog, shipping, pickup, and other logistics-related processes. |               |
 | `country`          | `string`   | ISO country code for the current shopper’s session. This field informs VTEX services which country’s regulations, delivery logistics, and tax rules must be applied.     | `"US"` |
 | `deliveryMode`     | `string`   | Order fulfillment method, including delivery channel, selected courier or method, delivery window (start and end times), or pickup point.            | `"delivery"` |
