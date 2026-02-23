@@ -1,7 +1,7 @@
 ---
 title: "Understanding CMS architecture and schema declarations"
 hidden: false
-slug: "architecture-schema-declarations"
+slug: "understanding-cms-architecture-and-schema-declarations"
 createdAt: "2026-01-26T12:50:00.813Z"
 updatedAt: "2026-02-23T09:00:00.813Z"
 excerpt: "Learn how the CMS separates read and write operations with CQRS, defines component schemas using modular files, and organizes project folders differently from the Headless CMS (legacy)."
