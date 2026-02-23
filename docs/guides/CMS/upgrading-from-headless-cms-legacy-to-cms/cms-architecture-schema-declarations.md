@@ -246,7 +246,8 @@ The `$extends` property allows sections to inherit properties from one or more b
 - **Reusability** via domain-specific base schemas (for example, promotional or navigational components).  
 - **Type safety** through schema-compatibility validation.
 
-**Example: Inheriting from multiple schemas**
+<details>
+<summary><bold>Example: Inheriting from multiple schemas</bold></summary>
 
 ```jsonc
 {
@@ -266,6 +267,8 @@ The `$extends` property allows sections to inherit properties from one or more b
   }
 }
 ```
+
+</details>
 
 ## Folder structure
 
@@ -301,7 +304,7 @@ your-faststore-project/
 
 The CMS organizes schemas into individual files. Below are two common approaches:
 
-**Option 1: Centralized schemas**
+#### Option 1: Centralized schemas
 
 Keep component schemas in a dedicated `cms/components/` directory:
 
@@ -326,7 +329,7 @@ your-store/
 └── ...
 ```
 
-**Option 2: Co-located schemas**
+#### Option 2: Co-located schemas
 
 Place component schemas alongside their implementation files:
 
