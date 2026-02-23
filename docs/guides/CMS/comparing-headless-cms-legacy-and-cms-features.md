@@ -137,7 +137,7 @@ Storefront integration capabilities determine which frontend frameworks and tech
 | **Headless** | ✅ | ⚒️ *Coming soon* |
 | **Store Framework** | ❌ | ❌ |
 | **FastStore v1 and v2** | ✅ | ❌ |
-| **FastStore v3 and v4** | ✅ | ✅ |
+| **FastStore v3 and above** | ✅ | ✅ |
 
 ## Development tools and permissions
 
