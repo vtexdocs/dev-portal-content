@@ -46,6 +46,41 @@ The Schema Registry manages component schemas and Content Type definitions and h
 
 ## Content data management through the architecture
 
+```mermaid
+sequenceDiagram
+  autonumber
+
+  participant Dev as Developer
+  participant CLI as CLI
+  participant Registry as Schema Registry API
+  participant CMS as CMS Admin UI
+  participant CP as Control Plane API
+  participant CPDB as Control Plane DB
+  participant DP as Data Plane API
+  participant Build as Build Webhook
+  participant Runtime as Runtime App
+
+  %% 1. Schema upload
+  Dev->>CLI: vtex content upload-schema
+  CLI->>Registry: Upload schema bundle
+  Registry-->>CP: Schema available
+  Registry-->>DP: Schema available
+
+  %% 2. Content editing
+  CMS->>CP: Create/Edit content
+  CP->>CPDB: Save content (branch)
+  CPDB-->>CP: Stored
+
+  %% 3. Publishing
+  CMS->>CP: Merge branch to main
+  CP->>DP: Sync published content
+  CP->>Build: Trigger build webhook
+
+  %% 4. Delivery
+  Runtime->>DP: Fetch published content
+  DP-->>Runtime: Content + ETag headers
+  ```
+
 1. **Schema upload** (development time):  
    - Developer runs `vtex content upload-schema`.  
    - CLI sends schema to Schema Registry API.  
