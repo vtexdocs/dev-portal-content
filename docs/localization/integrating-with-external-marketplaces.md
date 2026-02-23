@@ -1,12 +1,8 @@
 ---
-title: 'Integrating to an external marketplace'
-id: [to-be-assigned]
-status: DRAFT
+title: 'Integrating with external marketplaces'
+hidden: false
+excerpt: ""
 createdAt: 2026-02-20T00:00:00.000Z
-updatedAt: 2026-02-20T00:00:00.000Z
-contentType: guide
-productTeam: Channels
-locale: en
 ---
 
 Integrating your VTEX store with external marketplaces enables you to expand your sales channels, reach new customers, and increase brand visibility. This guide shows you how to connect your VTEX store as a seller to external marketplaces—those not hosted on the VTEX platform—through connectors, APIs, or custom integrations.
