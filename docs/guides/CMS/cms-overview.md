@@ -12,7 +12,6 @@ The CMS is a VTEX content management system for defining, storing, and deliverin
 
 The system follows a decoupled architecture that separates content authoring from content consumption. This separation allows content management workflows and content delivery workloads to evolve and scale independently.
 
-
 > ⚠️ The CMS is currently available only for FastStore storefronts.
 
 ## Technical overview
