@@ -66,7 +66,7 @@ The [VTEX Store Components](https://developers.vtex.com/docs/apps/vtex.store-com
 
 >ℹ️ An app using the `react` builder can export a single or multiple components.
 
-This collection is composed of some components, such as [Availability Subscriber](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-availabilitysubscriber), [Buy Button](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-buybutton), [SKU Selector](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-skuselector), [Search Bar](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-searchbar), among others.
+This collection is composed of some components, such as [Availability Subscriber](https://developers.vtex.com/docs/apps/vtex.store-components/availabilitysubscriber), [Back To Top Button](https://developers.vtex.com/docs/apps/vtex.store-components/backtotopbutton), [SKU Selector](https://developers.vtex.com/docs/apps/vtex.store-components/skuselector), [Search Bar](https://developers.vtex.com/docs/apps/vtex.store-components/searchbar), among others.
 
 The app's file structure includes folders and files that enable the use of the collection’s React components. You can check some of them below:
 
