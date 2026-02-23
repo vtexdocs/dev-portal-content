@@ -13,12 +13,12 @@ Learn about the architectural and code-level changes when upgrading from the Hea
 
 <Flex>
 
-<WhatsNextCard
+{/* <WhatsNextCard
   linkTo="/TBD"
   title="Comparing Headless CMS (legacy) and CMS features"
   description="Differences between the CMS and Headless CMS (legacy), covering content modeling, editing, and technical infrastructure."
   linkTitle="See more"
-/>
+/>*/}
 
 <WhatsNextCard
   linkTo="understanding-cms-architecture-and-schema-declarations"
