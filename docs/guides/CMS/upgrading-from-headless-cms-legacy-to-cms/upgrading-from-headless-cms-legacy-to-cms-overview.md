@@ -21,7 +21,7 @@ Learn about the architectural and code-level changes when upgrading from the Hea
 />
 
 <WhatsNextCard
-  linkTo="architecture-schema-declarations"
+  linkTo="understanding-cms-architecture-and-schema-declarations"
   title="Understanding CMS architecture and schema declarations"
   description="Deep dive into CQRS architecture, schema declarations, and folder structure changes."
   linkTitle="See more"
