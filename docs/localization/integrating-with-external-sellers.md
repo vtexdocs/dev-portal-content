@@ -1,12 +1,8 @@
 ---
-title: 'Integrating to an external seller'
-id: [to-be-assigned]
-status: DRAFT
+title: 'Integrating with external sellers'
+hidden: false
+excerpt: ""
 createdAt: 2026-02-20T00:00:00.000Z
-updatedAt: 2026-02-20T00:00:00.000Z
-contentType: guide
-productTeam: Channels
-locale: en
 ---
 
 Integrating external sellers into your VTEX marketplace allows you to expand your product catalog and offer customers a wider variety of products without managing additional inventory. This guide shows you how to connect external sellers—those not hosted on the VTEX platform—to your VTEX marketplace through API integration or custom connectors.
