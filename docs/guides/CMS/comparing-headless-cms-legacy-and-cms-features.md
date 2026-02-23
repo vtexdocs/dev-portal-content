@@ -4,6 +4,7 @@ hidden: false
 slug: "comparing-headless-cms-legacy-and-cms-features"
 createdAt: "2026-01-26T12:50:00.813Z"
 updatedAt: "2026-02-23T11:20:00.813Z"
+excerpt: "Understand the differences between the legacy Headless CMS and the CMS, including content modeling, editing workflows, localization, media management, and technical infrastructure"
 ---
 
 Before diving into the technical details, it's important to understand the high-level differences between the CMS and Headless CMS (legacy):
