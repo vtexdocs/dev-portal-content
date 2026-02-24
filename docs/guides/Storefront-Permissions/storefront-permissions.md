@@ -42,8 +42,8 @@ The Storefront Permissions API supports a wide range of business scenarios by en
 
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
-| License Manager | Services access control | View Storefront User Permissions | `GET` [Check storefront user resource access](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/resources/-resourceKey-/granted) <br/> `GET` [Fetch storefront user roles by ID](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/roles) <br/>  `GET` [Fetch storefront user roles by email](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-email-/roles) <br/> `GET` [Fetch storefront user details](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-) |
-| License Manager | Services access control | Edit Storefront User Permissions | `POST` [Create storefront user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users/) <br/> `POST` [Assign storefront role to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/roles/assign) <br/> `DELETE` [Revoke storefront role from user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#delete-/api/license-manager/storefront/roles/revoke) <br/> `DELETE` [Remove storefront user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#delete-/api/license-manager/storefront/remove/users/-userId-) |
+| License Manager | Services access control | View Storefront User Permissions | `GET` [Check storefront user resource access](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/resources/-resourceKey-/granted) <br/> `GET` [Get storefront user roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/roles) <br/>  `GET` [Fetch storefront user roles by email](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-email-/roles) <br/> `GET` [Fetch storefront user details](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-) |
+| License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/user/roles) <br/> `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/roles/assign) <br/> `DELETE` [Revoke storefront roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#delete-/api/license-manager/storefront/user/roles) <br/> `DELETE` [Remove storefront user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#delete-/api/license-manager/storefront/remove/users/-userId-) |
 
 To learn more about machine authentication at VTEX, see [Authentication overview](https://developers.vtex.com/docs/guides/authentication-overview#machine-authentication).
 
@@ -54,18 +54,26 @@ The following resource keys are available in the system:
 | Resource Key | Description |
 | :---- | :---- |
 | ManageOrganizationAndContract | Allows management of the organization's structure, contracts, and related settings. |
+| ManageOrganizationHierarchy | Allows creation, editing, and restructuring of Organization Units within the buyer organization hierarchy. |
+| ManageUsers | Allows creation, editing, and removal of users within the buyer organization. |
+| ManageBuyingPolicies | Allows creation and configuration of buying policies within the organization. |
+| ViewBuyingPolicies | Allows viewing existing buying policies without editing permissions. |
+| ManageBudgets | Allows creation and management of budgets and budget allocations. |
+| ViewBudgets | Allows viewing budget information without editing permissions. |
+| ManageAccountingFields | Allows configuration and management of accounting or custom financial fields. |
+| ManageQuotes | Allows management of quote requests and related negotiation flows. |
 | PlaceOrders | Grants the ability to create and submit orders within the system. |
 | ViewMyContractOrders | Enables users to see orders placed under their assigned contract. |
 | ViewMyOrgUnitOrders | Allows users to view all orders within their organizational unit. |
 | ModifyOrders | Provides permission to use the change order feature for all orders that the user has access to. |
 | ApproveOrders | Grants the ability to approve or reject orders based on predefined workflows. |
-| ManageAddresses | Add the address during checkout and save it for that contract/organization unit. |
+| ManageAddresses | Allows adding a new address during checkout and saving it for the contract or organization unit. |
 | UseAdHocCard | Grants permission to use a new credit card at checkout. |
-| SavePrivateCard | Grants permission to save a new card for the user's use only. |
-| ViewProfile | Allows access to view the profile information. |
+| SavePrivateCard | Grants permission to save a new card for the user's personal use only. |
+| ViewProfile | Allows access to view profile information. |
 | ManageAuthentication | Provides access to authentication settings. |
-| ViewMyCards | Enables users to view their payment cards. |
-| ViewAddresses | Allows users to manage and update their saved addresses. |
+| ViewMyCards | Enables users to view their saved payment cards. |
+| ViewAddresses | Allows users to view and update their saved addresses. |
 
 ## Predefined storefront roles
 
@@ -73,7 +81,7 @@ The system comes with these predefined storefront roles, each with specific perm
 
 | Predefined storefront role | Storefront role ID | Description | Associated resources |
 | :---- | :---- | :---- | :---- |
-| Organizational Unit Admin | 1 | Manages the organization's structure, contracts, and related settings. | ManageOrganizationAndContract |
+| Organizational Unit Admin | 1 | Manages the organization's structure, contracts, and related settings. | ManageOrganizationAndContract, ManageUsers, ManageBuyingPolicies, ViewBuyingPolicies, ManageBudgets, ViewBudgets, ManageAccountingFields, ManageQuotes, ManageOrganizationHierarchy |
 | Order Approver | 2 | Can approve or reject orders based on predefined workflows. | ApproveOrders |
 | Order Modifier | 3 | Can use the change order feature for all orders they have access to. | ModifyOrders |
 | Buyer | 4 | Can create and submit orders within the system. | PlaceOrders |
@@ -81,4 +89,5 @@ The system comes with these predefined storefront roles, each with specific perm
 | Contract Manager | 6 | Can view orders placed under their assigned contract. | ViewMyContractOrders |
 | Buyer Organization Manager | 7 | Can view all orders within their organizational unit. | ViewMyOrgUnitOrders |
 | Contract Viewer | 8 | Can view profiles, payment cards, and addresses. | ViewProfile, ViewMyCards, ViewAddresses |
-| Address Manager | 9 | Can add and manage addresses during checkout. | ManageAddresses |
+| Address Manager | 9 | Can add and manage addresses during checkout. | ManageAddresses, ViewAddresses |
+| Super Buyer Admin | 16 | Has full administrative control over the buyer organization structure, including management of Organization Units and hierarchical configuration. | ManageOrganizationHierarchy |
