@@ -6,7 +6,7 @@ title: "Troubleshooting"
 
 Tags: GraphQL, FastStore, API Extensions, Development
 
-Keywords: GraphQL, API extensions, schema extensions, resolvers, fragments, type generation, yarn generate, deploy preview, production
+Keywords: GraphQL, API Extensions, schema extensions, resolvers, fragments, type generation, yarn generate, deploy preview, production
 
 When working with FastStore API Extensions, you may face issues such as local GraphQL changes not appearing, schema differences between environments, or generation errors.
 
@@ -39,7 +39,7 @@ Issue | Description | Solutions
 --- | --- | ---
 `error Failed to run 'yarn generate:schema'. Please check your setup.` | Schema generation failed, usually because of invalid schema extension files. | Review `.graphql` files in `src/graphql/vtex/typeDefs` and `src/graphql/thirdParty/typeDefs` for syntax and schema definition issues.
 `error GraphQL was not optimized and TS files were not updated. Changes in the GraphQL layer did not take effect` | GraphQL optimization failed, usually due to invalid schema, resolvers, queries, or fragments. | Validate schema files, resolver files in `src/graphql/(vtex or thirdParty)/resolvers`, and query or fragment declarations in `.ts` and `.tsx` files.
-`warn Failed to format generated files. 'yarn format:generated' thrown errors` | Formatting step failed after generation. | Treat as non-blocking for GraphQL generation and fix formatting separately. Artifacts are still generated and this error does not block schema/type updates.
+`warn Failed to format generated files. 'yarn format:generated' threw errors` | Formatting step failed after generation. | Treat as non-blocking for GraphQL generation and fix formatting separately. Artifacts are still generated and this error does not block schema/type updates.
 
 ### Error details
 
