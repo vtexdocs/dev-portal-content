@@ -117,11 +117,6 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intel
   -H "Accept: application/json"
 ```
 
-**Advantages:**
-
-- Full search functionality (filters, facets, relevance)
-- Consistent with other storefront implementations
-
 #### Option B: Use Catalog API directly
 
 Query the Catalog API with the `Accept-Language` header:
