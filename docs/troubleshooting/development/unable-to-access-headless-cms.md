@@ -25,7 +25,7 @@ To solve your issue, follow one of the paths below based on the error message di
 
 Use this path when the error is related to authorization or permissions in License Manager.
 
-1. Open the VTEX Admin and go to **Account Settings > User Roles.**
+1. Open the VTEX Admin and go to **Account Settings > User Roles**.
 
    ![license-manager-cms](https://vtexhelp.vtexassets.com/assets/docs/src/cms-license-manager___57f69d96f44f3d29413f2651df7d98c8.png)
 
