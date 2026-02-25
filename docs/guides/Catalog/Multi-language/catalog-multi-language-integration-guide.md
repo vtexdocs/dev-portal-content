@@ -131,13 +131,7 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/catalog_system/
   -H "Accept-Language: es-ES" \
   -H "X-VTEX-API-AppKey: {appKey}" \
   -H "X-VTEX-API-AppToken: {appToken}"
-```
 
-**When to use direct Catalog API:**
-
-- You need specific entity translations not available in search results.
-- You're building Admin tools or back-office integrations.
-- You need to fetch translations for validation or synchronization.
 
 ## Activation
 
