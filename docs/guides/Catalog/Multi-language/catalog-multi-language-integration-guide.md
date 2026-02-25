@@ -16,7 +16,7 @@ Learn how to create translations and integrate localized content for catalog ent
 The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enables the following capabilities:
 
 - **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
-- **Automated translation workflows:** Integrate with Translation Management Systems (TMS) for automated translation.
+- **Integrated translation workflows:** Habilitate automated translations with a Translation Management Systems (TMS).
 - **Multiple storefront technologies:** Consume translations across Store Framework and headless implementations.
 - **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
 
@@ -56,7 +56,7 @@ Intelligent Search indexes or reindexes the translated entity content to make it
 
 The storefront queries Intelligent Search and the Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
 
-> ℹ️ The valid storefront solutions for the multi-language feature are Store Framework and headless implementations.
+> ℹ️ The available storefront solutions for the multi-language feature are Store Framework and headless implementations.
 
 ## Consuming localized content
 
