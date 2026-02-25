@@ -4,7 +4,7 @@ hidden: false
 slug: "comparing-headless-cms-legacy-and-cms-features"
 createdAt: "2026-01-26T12:50:00.813Z"
 updatedAt: "2026-02-23T11:20:00.813Z"
-excerpt: "Understand the differences between the legacy Headless CMS and the CMS, including content modeling, editing workflows, localization, media management, and technical infrastructure"
+excerpt: "Understand the differences between the legacy Headless CMS and the CMS, including content modeling, editing workflows, localization, media management, and technical infrastructure."
 ---
 
 Before diving into the technical details, it's important to understand the high-level differences between the CMS and Headless CMS (legacy):
@@ -19,7 +19,7 @@ Before diving into the technical details, it's important to understand the high-
 
 ## Content modeling
 
-Content modeling defines how content is structured and reused across your storefront. Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology, but the CMS introduces schema reusability and content relationships, allowing the same content to be reused across multiple pages or components without duplication.
+Content modeling defines how content is structured and reused across your storefront. Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology, but the CMS introduces schema reusability and content relationships, allowing you to reuse the same content across multiple pages or components without duplication.
 
 | Feature | Headless CMS (legacy) | CMS |
 | :---- | :---- | :---- |
@@ -29,15 +29,15 @@ Content modeling defines how content is structured and reused across your storef
 | **Content referencing** | ❌ | ✅ |
 | **Schema extension** | ❌ | ✅ |
 
-- **Content Types**: Define the page structures in a store (e.g., `home`, `pdp`, `plp`, `landingPage`). Both content management platforms support creating and managing Content Types, but the CMS stores them in individual `.jsonc` files, rather than in a single `content-types.json` file.  
+- **Content Types**: Define the page structures in a store (for example, `home`, `pdp`, `plp`, `landingPage`). Both content management platforms support creating and managing Content Types, but the CMS stores them in individual `.jsonc` files, rather than in a single `content-types.json` file.  
 
 - **Components**: Define the building blocks of pages. Both content management platforms support component definitions, but the CMS uses individual `.jsonc` files with enhanced metadata like `$componentKey` and `$componentTitle`.  
 
 - **Schema technology**: Both content management platforms use [JSON Schema](https://json-schema.org/) as the technology for defining content structure and validation rules. This ensures compatibility and allows you to reuse existing schema knowledge.  
 
-- **Content referencing**: The CMS allows content entries to reference other entries, enabling reusable content blocks across multiple pages. For example, a "Footer" component can be defined once and referenced by multiple pages. In Headless CMS (legacy), each page's content is isolated and must be duplicated if reused.  
+- **Content referencing**: The CMS allows content entries to reference other entries, enabling reusable content blocks across multiple pages. For example, you can define a "Footer" component once and reference it on multiple pages. In Headless CMS (legacy), each page's content is isolated and must be duplicated if reused.
 
-- **Schema extension**: While Headless CMS (legacy) supports basic schema definitions, the CMS introduces the `$extends` keyword for schema inheritance. Components can inherit properties from base schemas (e.g., `#/$defs/base-component`). This reduces duplication, makes shared fields easier to maintain, and helps ensure consistent structure across components.
+- **Schema extension**: While Headless CMS (legacy) supports basic schema definitions, the CMS introduces the `$extends` keyword for schema inheritance. Components can inherit properties from base schemas (for example, `#/$defs/base-component`). This reduces duplication, makes shared fields easier to maintain, and helps ensure consistent structure across components.
 
 ## Content editing and publishing
 
@@ -61,9 +61,9 @@ Content editing capabilities determine how content editors interact with the CMS
 
 - **Content management (Admin)**: Both content management platforms provide a full-featured admin interface for creating, editing, and publishing content. The CMS uses a modern React/Next.js stack with improved performance, better accessibility, and a more intuitive user experience. Content editors can manage entries, preview changes, and publish content through a visual interface.  
 
-- **Content search and filtering**: Both content management platforms support searching and filtering content entries by name, Content Type, and other attributes. The CMS enhances this with slug-based indexing, enabling faster lookups when retrieving content by URL path (e.g., `/summer-sale`).  
+- **Content search and filtering**: Both content management platforms support searching and filtering content entries by name, Content Type, and other attributes. The CMS enhances this with slug-based indexing, enabling faster lookups when retrieving content by URL path (for example, `/summer-sale`).  
 
-- **Entry (CRUD)**: Both content management platforms support full Create, Read, Update, and Delete operations for content entries. The CMS adds branching capabilities, allowing changes to be made on separate branches before merging to production.
+- **Entry (CRUD)**: Both content management platforms support full create, read, update, and delete operations for content entries. The CMS adds branching capabilities, allowing you to make changes on separate branches before merging to production.
 
 - **AI content generation**: The CMS integrates with AI services to help content editors generate and improve content directly within the editing interface, such as product descriptions, marketing copy, and other text content.
 
@@ -101,7 +101,7 @@ Localization capabilities determine how content is adapted for different languag
 | **Language character encoding support** | ❌ | ✅ |
 | **Language direction support** | ❌ | ✅ |
 
-- **Locales**: The CMS supports defining and managing multiple locales, allowing content to be created and maintained in different language and region combinations (e.g., `en-US`, `pt-BR`, `es-MX`). Content editors can manage translations for each locale directly within the Admin interface.
+- **Locales**: The CMS supports defining and managing multiple locales, allowing you to create and maintain content in different language and region combinations (for example, `en-US`, `pt-BR`, `es-MX`). Content editors can manage translations for each locale directly within the Admin interface.
 
 - **Default and automatic language fallback rules**: The CMS allows configuring fallback rules that determine which content to display when a specific locale's content is not available. For example, if content is missing for `pt-BR`, the system can automatically fall back to `pt` or `en`. This ensures users always see relevant content even when translations are incomplete.
 
@@ -153,7 +153,7 @@ Development tools and access controls determine how developers work with the CMS
 
 - **Developer CLI**: Both platforms provide command-line tools for managing content schemas. Headless CMS (legacy) uses the `yarn cms sync` command for syncing schemas, while the CMS introduces the VTEX Content CLI (`@vtex/cli-plugin-content`).
 
-- **Access permissions**: Both platforms support controlling who can access and manage content. Access permissions can be configured to restrict content management capabilities to authorized users.
+- **Access permissions**: Both platforms support controlling who can access and manage content. You can configure access permissions to restrict content management capabilities to authorized users.
 
 - **Role-based permissions**: The CMS supports role-based access control (RBAC), allowing administrators to define granular permissions based on user roles. This enables different permission levels for content editors, reviewers, and administrators. Headless CMS (legacy) does not include built-in role-based permission controls.
 
