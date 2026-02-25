@@ -120,7 +120,6 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intel
 **Advantages:**
 
 - Full search functionality (filters, facets, relevance)
-- Cached and optimized for performance
 - Consistent with other storefront implementations
 
 #### Option B: Use Catalog API directly
