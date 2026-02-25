@@ -1,7 +1,7 @@
 ---
 title: "I can't access the Headless CMS"
 slug: "unable-to-access-headless-cms"
-excerpt: "Permission denied error in faststore cms-sync or vtex cms sync indicates user access issues."
+excerpt: "Troubleshoot Headless CMS access errors caused by permissions, authorization, or VTEX IO CLI environment configuration issues."
 tags:
     - Headless CMS
     - License Manager
