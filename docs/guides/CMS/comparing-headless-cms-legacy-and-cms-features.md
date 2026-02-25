@@ -159,7 +159,7 @@ Development tools and access controls determine how developers work with the CMS
 
 - **IO workspace compatibility**: Both platforms support code-only workspace compatibility for VTEX IO. Content definitions and schemas are managed through code repositories rather than through IO workspaces.
 
-- **Sub-account inheritance**: Neither platform currently supports automatic inheritance of content or schemas from parent accounts to sub-accounts. Content must be managed separately for each account.
+- **Subaccount inheritance**: Neither platform currently supports automatic inheritance of content or schemas from parent accounts to subaccounts. Content must be managed separately for each account.
 
 ## Technical infrastructure and development tools
 
