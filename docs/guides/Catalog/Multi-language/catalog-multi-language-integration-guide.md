@@ -7,7 +7,7 @@ createdAt: "2026-01-13T00:00:00.000Z"
 updatedAt: "2026-01-30T00:00:00.000Z"
 ---
 
-> ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
+> ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions or feedback, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
 
 Learn how to create translations and integrate localized content for catalog entities with the multi-language feature.
 
