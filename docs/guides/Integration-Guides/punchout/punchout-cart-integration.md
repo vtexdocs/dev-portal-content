@@ -49,7 +49,7 @@ To implement the Punchout cart flow, you must enable Checkout extension points i
 
 ### Enable and implement extension points
 
-After enabling the extension points, create a [storefront monorepo](https://beta.fast.store/reference/monorepo/) to customize it. Once you have set up your storefront monorepo, you’re ready to [set up Checkout extension points](https://beta.fast.store/checkout/setting-up). 
+After enabling the extension points, create a [storefront monorepo](https://beta.fast.store/reference/monorepo/) to customize it. Once you have set up your storefront monorepo, you’re ready to [set up Checkout extension points](https://beta.fast.store/checkout/setting-up).
 
 To implement the Punchout cart flow, you must use the `punchout.order-summary.cta` extension point to send the cart data to the eprocurement system and redirect to its URL (e.g., via a “Transfer cart” or “Checkout” button).
 
