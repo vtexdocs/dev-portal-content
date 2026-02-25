@@ -7,7 +7,7 @@ updatedAt: "2026-02-23T11:20:00.813Z"
 excerpt: "Understand the differences between the legacy Headless CMS and the CMS, including content modeling, editing workflows, localization, media management, and technical infrastructure."
 ---
 
-Before diving into the technical details, it's important to understand the high-level differences between the CMS and Headless CMS (legacy):
+Before diving into the technical details, it's important to understand the high-level differences between the [CMS](https://developers.vtex.com/docs/guides/cms-overview) and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview):
 
 - [Content modeling](#content-modeling): How content schemas are defined and structured, including Content Types, components, and capabilities such as referencing and extension.  
 - [Content editing and publishing](#content-editing-and-publishing): The authoring experience for content editors, including the CMS interface in the Admin, search capabilities, and content lifecycle management.  
