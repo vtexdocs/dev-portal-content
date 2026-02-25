@@ -35,7 +35,6 @@ The Data Plane is optimized for high-performance content delivery to storefronts
 The Schema Registry manages component schemas and Content Type definitions and has the following key operations:
 
 - Upload and store schema bundles.  
-- Validate content against schemas.  
 - Provide schema definitions to CMS interface for form rendering.
 
 | Component | Purpose |
