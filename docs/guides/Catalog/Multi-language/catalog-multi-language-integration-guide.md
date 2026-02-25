@@ -69,6 +69,7 @@ For most storefront implementations, Intelligent Search is the recommended appro
 - Translations are automatically indexed after being saved using the multi-language endpoints.
 - Search results, filters, and facets display translated content based on the customer's locale.
 - No additional API calls are required, since the storefront receives translated data automatically.
+- Performance is optimized for navigation via native cache strategies.
 
 **When to use Intelligent Search:**
 
