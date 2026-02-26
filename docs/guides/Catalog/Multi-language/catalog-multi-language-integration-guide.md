@@ -54,7 +54,7 @@ Intelligent Search indexes or reindexes the translated entity content to make it
 
 ### Step 3: Storefront display
 
-The storefront queries Intelligent Search and the Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
+The storefront components (in this case, Store Framework and Checkout) queries Intelligent Search and the Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
 
 > ℹ️ The available storefront solutions for the multi-language feature are Store Framework and headless implementations.
 
@@ -126,7 +126,7 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/catalog_system/
   -H "Accept-Language: es-ES" \
   -H "X-VTEX-API-AppKey: {appKey}" \
   -H "X-VTEX-API-AppToken: {appToken}"
-
+```
 
 ## Activation
 
