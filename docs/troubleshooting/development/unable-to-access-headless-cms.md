@@ -64,3 +64,6 @@ Use this path when the error points to CLI execution or environment configuratio
 
 1. After adjusting the environment, run `vtex cms sync` command.
 2. If the error persists, run `vtex cms sync --verbose` to get more details about the sync error.
+
+> ⚠️ If the issue continues after that, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
+
