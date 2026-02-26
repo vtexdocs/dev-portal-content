@@ -59,7 +59,7 @@ The following resource keys are available in the system:
 | ManageBuyingPolicies | Allows creation and configuration of buying policies within the organization. |
 | ViewBuyingPolicies | Allows viewing existing buying policies without editing permissions. |
 | ManageBudgets | Allows creation and management of budgets and budget allocations. |
-| ViewBudgets | Allows viewing budget information without editing permissions. |
+| ViewBudget | Allows viewing budget information without editing permissions. |
 | ManageAccountingFields | Allows configuration and management of accounting or custom financial fields. |
 | ManageQuotes | Allows management of quote requests and related negotiation flows. |
 | PlaceOrders | Grants the ability to create and submit orders within the system. |
