@@ -1,6 +1,6 @@
 ---
 title: "Register modifications on order: deprecated"
-slug: "2026-02-28-register-modifications-on-order-deprecated"
+slug: "2026-02-26-register-modifications-on-order-deprecated"
 hidden: false
 type: "deprecated"
 createdAt: "2026-02-10T17:10:52.219Z"
