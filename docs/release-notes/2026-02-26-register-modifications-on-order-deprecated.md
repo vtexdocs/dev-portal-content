@@ -5,7 +5,7 @@ hidden: false
 type: "deprecated"
 createdAt: "2026-02-10T17:10:52.219Z"
 updatedAt: "2026-02-26T12:42:45.242Z"
-excerpt: "The Register change on order endpoint will be deprecated."
+excerpt: "The Register modifications on order endpoint will be deprecated."
 ---
 
 On March 1, 2026, the [Register modifications on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) endpoint will be deprecated. We stopped providing support for this API on December 31, 2025.
