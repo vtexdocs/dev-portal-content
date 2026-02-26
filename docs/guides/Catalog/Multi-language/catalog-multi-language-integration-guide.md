@@ -16,7 +16,7 @@ Learn how to create translations and integrate localized content for catalog ent
 The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enables the following capabilities:
 
 - **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
-- **Integrated translation workflows:** Habilitate automated translations with a Translation Management Systems (TMS).
+- **Integrated translation workflows:** It enables automated translations with a Translation Management Systems (TMS).
 - **Multiple storefront technologies:** Consume translations across Store Framework and headless implementations.
 - **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
 
