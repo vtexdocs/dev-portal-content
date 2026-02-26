@@ -136,7 +136,7 @@ Open a [support ticket](https://help.vtex.com/en/support) requesting the activat
 
 ## Permissions
 
-To successfully use the multi-language feature, the user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the [License Manager resource](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) below; otherwise, they will receive a 403 error:
+To successfully use the multi-language feature, the user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) below; otherwise, they will receive a 403 error:
 
 | Product | Category | Resource |
 | :--- | :--- | :--- |
