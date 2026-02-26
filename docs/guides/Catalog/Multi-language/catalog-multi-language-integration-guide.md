@@ -77,7 +77,7 @@ For most storefront implementations, Intelligent Search is the recommended appro
 | --- | --- |
 | Store Framework | ✅ Yes (default behavior) |
 | Headless with IS | ✅ Yes |
-| Legacy CMS | ⚠️ May require additional configuration |
+| CMS Portal (Legacy) | ⚠️ May require additional configuration |
 
 ### Option 2: Via Catalog API (direct fetch)
 
