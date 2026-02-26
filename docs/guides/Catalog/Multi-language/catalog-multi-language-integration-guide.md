@@ -96,13 +96,15 @@ See below the implementation by storefront type for consuming localized content:
 
 ### Store Framework implementation
 
+> ⚠️ To enable the multi-language feature for Store Framework in your store, submit a request via [Support](https://help.vtex.com/en/support).
+
 For stores built with [Store Framework](https://developers.vtex.com/docs/guides/store-framework), localized content is consumed automatically:
 
 1. **Locale detection:** The store detects the consumer's locale from the URL binding (e.g., `store.com/es-ES/`) or browser settings.
 2. **Automatic translation:** Intelligent Search returns translated content for the detected locale.
 3. **Component rendering:** Store Framework components (product shelf, product details, search results) display the translated content without additional configuration.
 
-> ℹ️ **No code changes are required**: Once you submit translations via the multi-language feature, they appear automatically in your Store Framework storefront.
+No code changes are required: Once you submit translations via the multi-language feature, they appear automatically in your Store Framework storefront.
 
 ### Headless implementation
 
