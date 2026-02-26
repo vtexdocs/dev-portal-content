@@ -4,7 +4,7 @@ slug: "punchout-cart-integration"
 excerpt: "Learn how to enable and customize the Punchout cart screen, allowing users to transfer their cart back to the eprocurement system and add per-item options or attachments."
 hidden: false
 createdAt: "2026-02-20T00:00:00.000Z"
-updatedAt: ""
+updatedAt: "2026-02-20T00:00:00.000Z"
 ---
 
 > ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
