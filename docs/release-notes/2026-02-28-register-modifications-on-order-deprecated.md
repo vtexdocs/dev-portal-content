@@ -4,7 +4,7 @@ slug: "2026-02-28-register-modifications-on-order-deprecated"
 hidden: false
 type: "deprecated"
 createdAt: "2026-02-10T17:10:52.219Z"
-updatedAt: "2026-02-12T14:33:45.242Z"
+updatedAt: "2026-02-26T12:42:45.242Z"
 excerpt: "The Register change on order endpoint will be deprecated."
 ---
 
