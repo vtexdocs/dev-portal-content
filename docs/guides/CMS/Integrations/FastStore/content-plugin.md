@@ -86,7 +86,7 @@ vtex content generate-schema [COMPONENT_SCHEMAS_PATH] [CONTENT_TYPES_PATH]
 | `--help` | `-h` | Displays help information for the command. |
 | `--out=<path>` | `-o` | Specifies the output file path for the generated schema. This option is required to produce an output, and without it, the command will only display a success message but won't save or output the schema. Default value: `cms_schema.json`. |
 | `--local=<path>` | `-l` | Uses a local schema file as the base schema instead of fetching the latest FastStore schema from a remote source. |
-| `--base=<schemaId>` | `-b` | Specifies a `schemaId` (`$id` property in a schema) to be used as a custom base schema instead of FastStores default. |
+| `--base=<schemaId>` | `-b` | Specifies a `schemaId` (`$id` property in a schema) to be used as a custom base schema instead of FastStore's default. |
 
 #### Examples
 
