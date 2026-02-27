@@ -1,8 +1,9 @@
 ---
 title: "Content plugin"
-hidden: "true"
+slug: "content-plugin"
+hidden: "false"
 createdAt: "2026-01-12T18:00:00.325z"
-updatedAt: "2026-02-05T12:26:00.857Z"
+updatedAt: "2026-02-27T12:26:00.857Z"
 ---
 
 The Content plugin is a [VTEX CLI plugin](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#plugins) that allows you to manage your store's content and CMS settings from the terminal. Use this plugin to manage CMS schemas, organize components, and define [Content Types](/TBD).
