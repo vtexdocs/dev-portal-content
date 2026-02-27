@@ -9,7 +9,6 @@ tags:
     - VTEX IO
     - Store Framework
     - Apps
-
 ---
 
 **Keywords:** Dependency | App | Theme | Publish | VTEX IO CLI
