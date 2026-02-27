@@ -7,6 +7,30 @@ createdAt: 2026-02-27T00:00:00.000Z
 
 Integrating VTEX stores enables collaborative commerce, where stores can act as both marketplaces and sellers within the VTEX ecosystem. This guide shows you how to establish connections between VTEX stores, configure the necessary settings, and manage the integration to expand your sales channels or product assortment.
 
+The following diagram illustrates the process:
+
+```
+sequenceDiagram
+  autonumber
+  participant S as Seller
+  participant M as Marketplace
+
+  S->>S: Define sales channel + catalog/price/promotions/payment/logistics setup
+  S->>M: Create and share Affiliate ID
+
+  M->>M: Define marketplace sales channel + setup
+
+  M->>M: Add VTEX sellers
+  M->>M: Configure storefront
+  M->>M: Configure payments + connectors/conditions
+
+  S->>M: Run Reindex to send catalog/price/inventory
+
+  M->>M: Map catalog architecture
+  M->>M: Manage received SKUs
+  M->>M: Verify availability on storefront
+```
+
 The following table provides an overview of the required steps and who is responsible for each:
 
 | Step | Responsible | Description |
