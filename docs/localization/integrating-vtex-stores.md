@@ -7,15 +7,9 @@ createdAt: 2026-02-27T00:00:00.000Z
 
 Integrating VTEX stores enables collaborative commerce, where stores can act as both marketplaces and sellers within the VTEX ecosystem. This guide shows you how to establish connections between VTEX stores, configure the necessary settings, and manage the integration to expand your sales channels or product assortment.
 
-In this guide, you'll learn how to:
+The following table provides an overview of the required steps and who is responsible for each:
 
-* Configure a VTEX marketplace to receive products from VTEX sellers.
-* Set up a VTEX seller to sell products on VTEX marketplaces.
-* Manage catalog mapping and product synchronization.
-* Handle order fulfillment and payment processing.
-
-
-| Step | Responsable | Description |
+| Step | Responsible | Description |
 |------|-------------|-------------|
 | [Define sales channels for marketplace integration](#define-sales-channels-for-marketplace-integration) | Seller | Decide whether to use an existing or new **sales channel (trade policy)** for marketplace sales, and configure catalog, pricing, promotions, payments, and logistics as needed. |
 | [Create affiliate ID](#create-an-affiliate-id) | Seller | Create an **affiliate** that uniquely identifies the marketplace, associating it with the correct trade policy and notification endpoint, and share the affiliate ID with the marketplace. |
