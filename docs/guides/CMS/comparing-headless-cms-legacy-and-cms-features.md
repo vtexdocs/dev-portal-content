@@ -1,4 +1,4 @@
----
+﻿---
 title: "Comparing Headless CMS (legacy) and CMS features"
 hidden: false
 slug: "comparing-headless-cms-legacy-and-cms-features"
@@ -7,7 +7,9 @@ updatedAt: "2026-02-23T11:20:00.813Z"
 excerpt: "Understand the differences between the legacy Headless CMS and the CMS, including content modeling, editing workflows, localization, media management, and technical infrastructure."
 ---
 
-Before diving into the technical details, it's important to understand the high-level differences between the [CMS](https://developers.vtex.com/docs/guides/cms-overview) and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview):
+The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
+
+Before diving into the technical details, it's important to understand the high-level differences between the CMS and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview):
 
 - [Content modeling](#content-modeling): How content schemas are defined and structured, including Content Types, components, and capabilities such as referencing and extension.  
 - [Content editing and publishing](#content-editing-and-publishing): The authoring experience for content editors, including the CMS interface in the Admin, search capabilities, and content lifecycle management.  
@@ -137,7 +139,9 @@ Storefront integration capabilities determine which frontend frameworks and tech
 | **Headless** | ✅ | ⚒️ *Coming soon* |
 | **Store Framework** | ❌ | ❌ |
 | **FastStore v1 and v2** | ✅ | ❌ |
-| **FastStore v3 and above** | ✅ | ✅ |
+| **FastStore v3** | ✅ | ✅ |
+
+<!-- TODO: Once FastStore v4 is available, add a row for it in this table. -->
 
 ## Development tools and permissions
 
