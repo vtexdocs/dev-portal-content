@@ -27,11 +27,4 @@ Learn about the architectural and code-level changes when upgrading from the [He
   linkTitle="See more"
 />
 
-<WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations"
-  title="Understanding CMS architecture and schema declarations"
-  description="Deep dive into CQRS architecture, schema declarations, and folder structure changes."
-  linkTitle="See more"
-/>
-
 </Flex>
