@@ -12,13 +12,13 @@ Builders play a pivotal role in streamlining app development. They are the orche
 
 ## Understanding Builders
 
-In practical terms, a Builder acts like a bridge that allows different parts of your app to work together by configuring and connecting to the necessary services. Each Builder operates under its unique set of rules and validation processes, acting as gateways to an IO app's functionalities.
+In practical terms, a Builder functions as an interface that allows different parts of your app to work together by configuring and connecting to the necessary services. Each Builder operates under its unique set of rules and validation processes, acting as gateways to an IO app's functionalities.
 
 By having very well-defined and minimal responsibilities, a Builder can evolve independently, allowing for rapid development with minimal disruptive changes.
 
 ## Using Builders
 
-Builders are specified in an app's `manifest.json` file, and the app itself is neatly structured with folders bearing the Builder's names. This organization ensures that each Builder knows precisely which code to process.
+Builders are specified in an app's `manifest.json` file, and the app itself is structured with folders bearing the Builder's names. This organization ensures that each Builder knows precisely which code to process.
 
 ![example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-builders.png)
 
