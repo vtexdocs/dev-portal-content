@@ -9,7 +9,7 @@ Integrating VTEX stores enables collaborative commerce, where stores can act as 
 
 The following diagram illustrates the process:
 
-```
+```mermaid
 sequenceDiagram
   autonumber
   participant S as Seller
