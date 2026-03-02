@@ -13,9 +13,9 @@ tags:
 
 **Keywords:** Dependency | App | Theme | Publish | VTEX IO CLI
 
-When attempting to install a new store theme or publish an app in VTEX IO, you may encounter a dependency validation error.
+When attempting to [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) a new [store theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) or [publish an app in VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app), you may encounter a [dependency](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies) validation error.
 
-This issue occurs when an app dependency is deprecated, a release candidate, or a pre-release version. In this scenario, VTEX IO blocks theme installation or app publishing and displays an error similar to the following:
+This issue occurs when an app dependency is [deprecated](https://developers.vtex.com/docs/guides/vtex-io-documentation-deprecating-an-app), a release candidate, or a pre-release [version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version). In this scenario, VTEX IO blocks theme installation or app publishing and displays an error similar to the following:
 
 `Error validating app dependencies: error with dependency {appvendor}.{appname}@{appversion}: app cannot be deprecated, a release candidate version, or a pre-release version: {appvendor}.{appname}@{appversion}`
 
@@ -23,7 +23,7 @@ This issue occurs when an app dependency is deprecated, a release candidate, or 
 
 To solve this issue, follow the steps below:
 
-1. In the error message, identify the vendor (`{appvendor}`), app name (`{appname}`), and version (`{appversion}`) causing the issue. For example: `template.mygiftcard@0.x`.
+1. In the error message, identify the specific app causing the issue with the format `{appvendor}.{appname}@{appversion}`. For example: `template.mygiftcard@0.x`.
 2. If the dependent app version is deprecated, a release candidate, or a pre-release, deprecate it so the system can use a stable version. Run:
 
    ```sh
