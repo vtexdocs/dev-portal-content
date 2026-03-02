@@ -1,18 +1,18 @@
 ---
-title: "CMS overview"
+title: "CMS for FastStore storefronts"
 hidden: false
-slug: "cms-overview"
+slug: "cms-for-faststore-storefronts"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-02-19T11:48:00.813Z"
+updatedAt: "2026-03-02T11:48:00.813Z"
 ---
 
-> ⚠️ For information about the legacy version of this CMS, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
+> ⚠️ For documentation about the legacy Headless CMS used with FastStore, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
 
 The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
 
 The system follows a decoupled architecture that separates content authoring from content consumption. This separation allows content management workflows and content delivery workloads to evolve and scale independently.
 
-> ⚠️ The CMS is currently available only for FastStore storefronts.
+> ℹ️ This guide covers the VTEX CMS in the context of FastStore. If you are using another storefront technology, see the content management documentation specific to that storefront
 
 ## Technical overview
 
@@ -58,7 +58,7 @@ Organize and reuse media assets with:
 
 Build and manage schemas with:
 
-- [**VTEX Content CLI**](/TBD): Commands for schema generation, splitting, and uploading (`@vtex/cli-plugin-content`).
+- [**Content plugin**](https://developers.vtex.com/docs/guides/content-plugin): Commands for schema generation, splitting, and uploading (`@vtex/cli-plugin-content`).
 - **Modular schemas**: Individual `.jsonc` files for components and Content Types.
 - **Role-based permissions**: Granular access control for editors, reviewers, and administrators.
 
@@ -66,12 +66,12 @@ Build and manage schemas with:
 
 <Flex>
 
-<WhatsNextCard
+<!-- <WhatsNextCard
   linkTo="/TBD"
   title="FastStore integration"
   description="Learn how to connect the CMS with FastStore"
   linkTitle="See more"
-/>
+/> -->
 
 <WhatsNextCard
   linkTo="/TBD"
