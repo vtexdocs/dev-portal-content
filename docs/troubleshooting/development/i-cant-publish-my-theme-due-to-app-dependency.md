@@ -17,7 +17,7 @@ When attempting to [install](https://developers.vtex.com/docs/guides/vtex-io-doc
 
 This issue occurs when an app dependency is [deprecated](https://developers.vtex.com/docs/guides/vtex-io-documentation-deprecating-an-app), a release candidate, or a pre-release [version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version). In this scenario, VTEX IO blocks theme installation or app publishing and displays an error similar to the following:
 
-`Error validating app dependencies: error with dependency {appvendor}.{appname}@{appversion}: app cannot be deprecated, a release candidate version, or a pre-release version: {appvendor}.{appname}@{appversion}`
+`Error validating app dependencies: Error with dependency {appvendor}.{appname}@{appversion}: App cannot be deprecated, a release candidate version or a prerelease version: {appvendor}.{appname}@{appversion}`
 
 ## Solution
 
