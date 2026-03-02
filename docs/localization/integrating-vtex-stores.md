@@ -57,7 +57,7 @@ Determine the sales channel configuration for your marketplace integration:
 1. Evaluate if you need specific configurations for the marketplace integration or if you can use your default sales channel.
 2. If necessary, [configure a marketplace sales channel](https://help.vtex.com/docs/tutorials/configuring-a-marketplace-trade-policy) with the appropriate settings for product assortment, pricing, promotions, and logistics.
 
-> ℹ️ You can use the same sales channel to integrate with multiple marketplaces. [Requesting additional sales channel](/en/docs/tutorials/requesting-an-additional-trade-policy) to integrate with other VTEX stores is free of charge.
+> ℹ️ You can use the same sales channel to integrate with multiple marketplaces. [Requesting additional sales channel](https://help.vtex.com/docs/tutorials/requesting-an-additional-trade-policy) to integrate with other VTEX stores is free of charge.
 
 **Catalog settings:**
 
@@ -67,7 +67,7 @@ Determine the sales channel configuration for your marketplace integration:
 **Promotions settings:**
 
 * You don't need a marketplace-specific sales channel just for promotions. Segment promotions using the [affiliate](https://help.vtex.com/docs/tutorials/what-is-an-affiliate).
-* See [Configuring promotions for marketplaces](/en/docs/tutorials/configuring-promotions-for-marketplaces) for more information.
+* See [Configuring promotions for marketplaces](https://help.vtex.com/docs/tutorials/configuring-promotions-for-marketplaces) for more information.
 
 ### Create an affiliate ID
 
@@ -147,7 +147,7 @@ Add the following controls to your ecommerce templates:
 * `<vtex.cmc:SellerOptions />`: Shows sellers offering the product, prices, and installment options.
 * `<vtex.cmc:sellerInfo />`: Displays detailed seller information on the seller details page.
 
-Learn more in the [List of template controls]https://developers.vtex.com/docs/guides/list-of-controls-for-templates) guide.
+Learn more in the [List of template controls](https://developers.vtex.com/docs/guides/list-of-controls-for-templates) guide.
 
 **For VTEX IO stores:**
 
