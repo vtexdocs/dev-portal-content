@@ -15,13 +15,13 @@ FastStore version `3.96.0` focuses on a clearer My Account order experience for 
 
 **Fresher data after login/logout (PR: [#3152](https://github.com/vtex/faststore/pull/3152))**
 
-GraphQL requests now add a cache-busting token when the auth cookie changes. This reduces stale data right after sign-in or sign-out, so storefront content updates more consistently.
+GraphQL requests now include a cache-busting token when the auth cookie changes. This reduces stale data right after signing in or out, so storefront content updates more consistently.
 
 **Logout clears client storage (PR: [#3163](https://github.com/vtex/faststore/pull/3163))**
 
-Signing out now clears client-side storage used by session-aware features, preventing leftover data from affecting the next session. For more details on this fix, see the [FastStore: Cart and session management fixes](https://developers.vtex.com/updates/release-notes/2026-02-04-faststore-cart-and-session-management-fixes) Release Notes.
+Signing out now clears client-side storage used by session-aware features, which prevents leftover data from affecting the next session. For more details on this fix, see the [FastStore: Cart and session management fixes](https://developers.vtex.com/updates/release-notes/2026-02-04-faststore-cart-and-session-management-fixes) release notes.
 
-> ⚠️ After releasing `3.96.0`, an issue with cookie domain handling was identified and resolved in version 3.96.5 (hotfix). See the [FastStore: Cookie domain normalization fix](https://developers.vtex.com/updates/release-notes/2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments) release notes for more information.
+> ⚠️ After the release of `3.96.0`, an issue with cookie domain handling was identified and resolved in version 3.96.5 (hotfix). See the [FastStore: Cookie domain normalization fix](https://developers.vtex.com/updates/release-notes/2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments) release notes for more information.
 
 ## My Account for B2B
 
