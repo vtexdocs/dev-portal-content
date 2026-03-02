@@ -5,9 +5,16 @@ excerpt: "Learn the initial steps to integrate VTEX stores to act as marketplace
 createdAt: 2026-03-02T00:00:00.000Z
 ---
 
-Integrating VTEX stores enables collaborative commerce, where stores can act as both marketplaces and sellers within the VTEX ecosystem. This guide shows you how to establish connections between VTEX stores, configure the necessary settings, and manage the integration to expand your sales channels or product assortment.
+The VTEX architecture allows stores to operate both as marketplaces and sellers, creating a collaborative commerce model within the VTEX ecosystem. This guide shows you how to establish connections between VTEX stores, configure the necessary settings, and manage the integration to expand your sales channels or product assortment.
 
-The following diagram illustrates the process:
+You'll learn how to set your store to:
+
+* [Act as seller](#acting-as-seller)
+* [Act as marketplace](#acting-as-marketplace)
+
+## Understanding the integration flow
+
+The integration between VTEX stores involves bidirectional communication. The following diagram illustrates the process:
 
 ```mermaid
 sequenceDiagram
