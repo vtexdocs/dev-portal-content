@@ -1,0 +1,187 @@
+---
+title: "FastStore monorepo"
+createdAt: 2026-03-05T15:20:27.439Z
+---
+
+**FastStore monorepo** is the unified, monolithic repository that centralizes the storefront development experience within VTEX.
+
+This architecture centralizes code, dependencies, and configuration for multiple storefronts in a single repository, enabling consistent customization, streamlined collaboration, and efficient code reuse across projects.
+
+>ℹ If your FastStore project uses [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) and is hosted in the `vtex-sites` or in your own GitHub organization, and you want to move to the FastStore monorepo, follow the instructions in the guide [Moving your FastStore project to a new GitHub repository](https://developers.vtex.com/docs/guides/faststore/webops-moving-your-faststore-project-to-a-new-github-repository#instructions).
+
+The storefront is organized into modules, which are sets of pages that comprise the storefront. Each module represents a primary functional area of the ecommerce storefront experience within VTEX.
+
+We support three modules:
+
+* **Product discovery experience:** Covers the main customer-facing browsing flows, such as homepage, product list pages (PLPs), search, product detail pages (PDPs), and custom content pages. It enables shoppers to efficiently explore and discover products.
+* **Checkout:** Handles the purchase and payment process and provides customization for checkout logic, UI, and integration points to ensure a seamless buying experience. 
+* **Sales app:** Designed for assisted sales and in-store experiences. It supports use cases where sales representatives interact with shoppers (for example, in physical stores), helping them complete purchases on behalf of customers.
+
+## Monorepo structure
+
+FastStore monorepo doesn't require a rigid folder structure, allowing you to organize your code flexibly. The only requirement is a `faststore.json` file in the root of the monorepo. This file guides both local development and production deployments.
+
+In local development, the `faststore.json` file acts as a configuration entry point. It consolidates definitions and settings necessary for the unified repository and its storefront modules. 
+
+For production deployment, the `faststore.json` file guides the deployment process via [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview). It ensures that the correct settings and configurations are applied when deploying storefront customizations to live environments. This file facilitates the transition from a local development setup to a production-ready application by supporting necessary parameters, such as paths and ports for each module.
+
+### `faststore.json`
+
+The root of the `faststore.json` object contains just a `stores` key. Inside the `stores` object, each key should be an account name. 
+
+Each account object has at least one of the following keys: `discovery`, `checkout`, and `sales-app`, each mapped to an object named module configuration, which has the following keys:
+
+| **Key** | **Semantic** | **Usage** | **Required** |
+| --- | --- | --- | --- |
+| `path` | Path where the given module customization is | local development, production build | true |
+| `port` | Port where the module will be available | local development | true |
+| `cli` | An argument to override the module CLI being used | local development, production build | false |
+
+See examples of `faststore.json` configuration in the [next section](#monorepo-use-cases).
+
+## Monorepo use cases
+
+This section shows common ways to structure a FastStore monorepo using the `faststore.json` file, including:
+
+* [**Single account with multiple modules](#single-account-with-multiple-modules):** One VTEX account that uses more than one storefront module.
+* [**Multiple brands or stores sharing code](#multiple-brands-or-stores-sharing-code):** One monorepo with separate directories for each brand or store.
+* [**Multiple brands with multiple modules](#multiple-brands-with-multiple-modules):** One monorepo where each brand or store can use several storefront modules.
+
+### Single account with multiple modules
+
+In this scenario, you have one VTEX account that uses multiple storefront modules, such as Product Discovery Experience, Checkout, and Sales App. Each module has its own directory inside the monorepo.
+
+**Basic directory structure**
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages/
+│   ├── 📂 discovery/
+│   ├── 📂 checkout/
+│   └── 📂 sales-app/
+├── 📂 faststore.json
+├── 📂 package.json
+│  
+```
+
+**`faststore.json` configuration example**
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3001
+      }
+    },
+      "checkout": {
+        "path": "package/checkout",
+        "port": 3002
+      },
+      "sales-app": {
+        "path": "package/sales-app",
+        "port": 3003
+      }
+    }
+  }
+}
+```
+
+### Multiple brands or stores sharing code
+
+In this scenario, a merchant has multiple brands or stores, each mapped to a different account or subaccount, yet all share the same FastStore monorepo.
+
+With separate repositories, sharing code between brands usually depends on publishing `npm` packages or copying files between projects. In a FastStore monorepo, each brand has its own directory within a single repository, and shared code lives in dedicated folders that can be imported wherever needed.
+
+**Basic directory structure**
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages/
+│   ├── 📂 store1
+│   └── 📂 store2
+├── 📂 faststore.json
+├── 📂 package.json
+│  
+```
+
+**`faststore.json` configuration example**
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3001
+      }
+    }
+    "account2": {
+      "discovery": {
+        "path": "packages/store2",
+        "port": 3002
+      },
+    }
+  }
+}
+```
+
+### Multiple brands with multiple modules
+
+In this scenario, a merchant has multiple brands or stores, and each one can use more than one storefront module, such as Product Discovery Experience, Checkout, and Sales App.
+
+All brands or stores share the same FastStore monorepo, but each has its own directory and its own module configuration.
+
+**Basic directory structure**
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages/
+│   └── 📂 store1
+│	    ├── 📂 discovery
+│       └── 📂 checkout
+│   └── 📂 store2
+│    	├── 📂 discovery
+│       └── 📂 checkout
+├── 📂 faststore.json
+├── 📂 package.json
+│  
+```
+
+**`faststore.json` configuration example**
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3001
+      },
+      "checkout": {
+        "path": "packages/checkout",
+        "port": 3002
+      }
+    },
+    "account2": {
+      "discovery": {
+        "path": "package/store2",
+        "port": 3001
+      },
+      "checkout": {
+        "path": "package/checkout",
+        "port": 3002
+      }
+    }
+  }
+}
+```
+
+
