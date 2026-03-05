@@ -1,8 +1,9 @@
 ---
 title: "Implementing payments tokenization"
 slug: "implementing-payments-tokenization"
+excerpt: "Learn how to implement payment tokenization in your VTEX store to enhance security and improve the customer experience."
 hidden: false
-createdAt: "2025-12-01T00:00:00.00Z"
+createdAt: "2025-12-01T00:00:00.000Z"
 ---
 
 Payment tokenization is the VTEX solution that allows providers to process payment transactions using [tokens](https://help.vtex.com/docs/tutorials/dpan-and-fpan-understanding-security-in-the-online-tokenized-payment-flow) instead of real credit card data. This approach adds a layer of security to the process, reducing the exposure of sensitive information and the risk of fraud or attacks.
