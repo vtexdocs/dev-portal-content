@@ -159,6 +159,8 @@ This flow enables the merchant to authenticate in your connector through the VTE
 
 Depending on the payment method or features that your connector offers, you might need to meet specific requirements or configure additional settings.
 
+> ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
+
 - __Payment methods (ecommerce website)__
 
   - __Debit, credit, or co-branded cards__: Make sure that your connector has the [PCI - DSS Compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) certification. If you don't have or don't want to use that certification in your connector, you can implement [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
