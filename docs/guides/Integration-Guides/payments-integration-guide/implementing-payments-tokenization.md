@@ -97,7 +97,7 @@ Below are examples of requests and responses for each payment transaction scenar
 {
     ...
     "saveCreditCard": true,
-    "useCardToken": true
+    "useCardToken": false
     ...
 }
 ```
@@ -195,21 +195,33 @@ Below are examples of requests and responses for each payment transaction scenar
 ```json
 [
     ...
-    "fields": [
-        {
-            "accountId": "null",
+    "fields": {
+        "isCardToken": "true",
+        "savePaymentData": "false",
+        "accountId": "account-guid",
+        "cardTokenData": {
+            "accountName": "cea",
+            "providerId": "connector-id",
+            "card": {
+                "firstDigits": "411111",
+                "lastDigits": "1111",
+                "holderName": "NOME",
+                "paymentSystemId": 2,
+                "paymentSystemName": "Visa"
+            },
             "cardTokenData": {
-                "cardTokenType": "TOKEN_FILE",
-                "cardTokenHref": "https://linktothetokenfile.com",
-                "tokenExtraData": {
-                    "extraData1": "string",
-                    "extraData2": "string"
-                },
-                "useCvvForAuthorization": "boolean",
-                "cardTokenCvv": "string"
+                "cardLabel": "My card",
+                "type": "TOKEN_VALUE",
+                "value": "tok_xxx",
+                "expiration": "2032-04",
+                "useCvvForAuthorization": true
+            },
+            "tokenExtraData": {
+            "extraData1": "string",
+            "extraData2": "string"
             }
         }
-    ]
+    }
     ...
 ]
 ```
@@ -286,23 +298,30 @@ Below are examples of requests and responses for each payment transaction scenar
 [
     ...
     "fields": {
-        "accountId": "null",
-        "savePaymentData": true,
-        "cardData": {
-            "cardLabel": "string",
-            "paymentName": "enum",
-            "bin": "string",
-            "lastDigits": "string"
-        },
+        "isCardToken": "true",
+        "savePaymentData": "true",
+        "accountId": "account-guid",
         "cardTokenData": {
-            "cardTokenType": "TOKEN_FILE",
-            "cardTokenHref": "https://linktothetokenfile.com",
-            "tokenExtraData": {
-                "extraData1": "string",
-                "extraData2": "string"
+            "accountName": "cea",
+            "providerId": "connector-id",
+            "card": {
+                "firstDigits": "411111",
+                "lastDigits": "1111",
+                "holderName": "NOME",
+                "paymentSystemId": 2,
+                "paymentSystemName": "Visa"
             },
-            "useCvvForAuthorization": "boolean",
-            "cardTokenCvv": "string"
+            "cardTokenData": {
+                "cardLabel": "My card",
+                "type": "TOKEN_VALUE",
+                "value": "tok_xxx",
+                "expiration": "2032-04",
+                "useCvvForAuthorization": true
+            },
+            "tokenExtraData": {
+            "extraData1": "string",
+            "extraData2": "string"
+            }
         }
     }
     ...
