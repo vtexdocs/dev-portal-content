@@ -99,7 +99,7 @@ paymentProvider
 manifest.json
 ```
 
-3. Declare the payment methods accepted by your payment provider. This allows them to be implemented automatically by the builder, without the need to declare them in the `/manifest` route.
+3. Declare the payment methods accepted by your payment provider. This allows them to be automatically implemented by the builder, without the need to declare them in the `/manifest` route.
 
 > ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
 
