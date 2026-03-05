@@ -163,7 +163,7 @@ Depending on the payment method or features that your connector offers, you migh
 
 - __Payment methods (ecommerce website)__
 
-  - __Debit, credit, or co-branded cards__: Make sure that your connector has the [PCI - DSS Compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) certification. If you don't have or don't want to use that certification in your connector, you can implement [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
+  - __Debit, credit, or co-branded cards__: Make sure that your connector has the [PCI DSS Compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) certification. If you don't have or don't want to use that certification in your connector, you can implement [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 - __Payment methods (physical store)__
 
   - __Direct credit sale and direct debit sale__: Make sure that both these payment methods were configured as described in [Payment Provider Protocol applied to payments with POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos#payment-connector-pre-requisites).
