@@ -13,7 +13,7 @@ The storefront is organized into modules, which are sets of pages that comprise 
 
 We support three modules:
 
-* **Product discovery experience:** Covers the main customer-facing browsing flows, such as homepage, product list pages (PLPs), search, product detail pages (PDPs), and custom content pages. It enables shoppers to efficiently explore and discover products.
+* **Product Discovery Experience:** Covers the main customer-facing browsing flows, such as homepage, product list pages (PLPs), search, product detail pages (PDPs), and custom content pages. It enables shoppers to efficiently explore and discover products.
 * **Checkout:** Handles the purchase and payment process and provides customization for checkout logic, UI, and integration points to ensure a seamless buying experience. 
 * **Sales app:** Designed for assisted sales and in-store experiences. It supports use cases where sales representatives interact with shoppers (for example, in physical stores), helping them complete purchases on behalf of customers.
 
@@ -43,9 +43,9 @@ See examples of `faststore.json` configuration in the [next section](#monorepo-u
 
 This section shows common ways to structure a FastStore monorepo using the `faststore.json` file, including:
 
-* [**Single account with multiple modules](#single-account-with-multiple-modules):** One VTEX account that uses more than one storefront module.
-* [**Multiple brands or stores sharing code](#multiple-brands-or-stores-sharing-code):** One monorepo with separate directories for each brand or store.
-* [**Multiple brands with multiple modules](#multiple-brands-with-multiple-modules):** One monorepo where each brand or store can use several storefront modules.
+* **[Single account with multiple modules](#single-account-with-multiple-modules):** One VTEX account that uses more than one storefront module.
+* **[Multiple brands or stores sharing code](#multiple-brands-or-stores-sharing-code):** One monorepo with separate directories for each brand or store.
+* **[Multiple brands with multiple modules](#multiple-brands-with-multiple-modules):** One monorepo where each brand or store can use several storefront modules.
 
 ### Single account with multiple modules
 
@@ -144,11 +144,11 @@ All brands or stores share the same FastStore monorepo, but each has its own dir
 │
 ├── 📂 packages/
 │   └── 📂 store1
-│	    ├── 📂 discovery
-│       └── 📂 checkout
+│      ├── 📂 discovery
+│      └── 📂 checkout
 │   └── 📂 store2
-│    	├── 📂 discovery
-│       └── 📂 checkout
+│      ├── 📂 discovery
+│      └── 📂 checkout
 ├── 📂 faststore.json
 ├── 📂 package.json
 │  
