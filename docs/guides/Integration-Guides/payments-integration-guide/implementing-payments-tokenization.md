@@ -520,4 +520,4 @@ Authorization response received: [200 OK] {"status":"approved","authorizationId"
 }
 ```
 
-> ℹ️ The presence of the `generatedCardToken` dataset and the `accountId` field confirms the connector processed tokenization correctly and the token has been assigned to the buyer's profile.
+> ℹ️ The presence of the `generatedCardToken` dataset and the `accountId` field confirms that the connector has processed the tokenization correctly and the token has been assigned to the buyer's profile.
