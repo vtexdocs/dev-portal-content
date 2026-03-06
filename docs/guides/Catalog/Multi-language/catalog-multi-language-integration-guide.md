@@ -17,7 +17,7 @@ The [multi-language feature](https://developers.vtex.com/docs/api-reference/cata
 
 - **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
 - **Integrated translation workflows:** It enables automated translations with a Translation Management System (TMS).
-- **Multiple storefront technologies:** Consume translations across Store Framework and headless implementations.
+- **Multiple storefront technologies:** Consume translations across [Store Framework](https://developers.vtex.com/docs/guides/store-framework) and [headless](https://developers.vtex.com/docs/guides/store-architecture#headless) implementations.
 - **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
 
 > ℹ️ To see the complete documentation of the multi-language endpoints, check the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
@@ -81,7 +81,7 @@ For most storefront implementations, Intelligent Search is the recommended appro
 
 ### Option 2: Via Catalog API (direct fetch)
 
-When to use the direct Catalog API:
+When to use the direct [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api):
 
 - You need specific entity translations not available in search results.
 - You're building VTEX Admin tools or back-office integrations.
@@ -108,7 +108,7 @@ No code changes are required: Once you submit translations via the multi-languag
 
 ### Headless implementation
 
-For headless storefronts, you either use the Intelligent Search API or the Catalog API directly, depending on your needs.
+For headless storefronts, you either use the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) or the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api) directly, depending on your needs.
 
 #### Option A: Using Intelligent Search API
 
@@ -138,7 +138,7 @@ Open a [support ticket](https://help.vtex.com/en/support) requesting the activat
 
 ## Permissions
 
-To successfully use the multi-language feature, the user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) below; otherwise, they will receive a 403 error:
+To successfully use the multi-language feature, the user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) below; otherwise, they will receive a `403 Forbidden` error message:
 
 | Product | Category | Resource |
 | :--- | :--- | :--- |
@@ -403,4 +403,4 @@ See below the most common issues and their respective solutions for the multi-la
 | `404 Not Found` error | Confirm that the entity ID (product, SKU, category, etc.) exists in the Catalog. |
 | `409 Conflict` error | The translation may already exist. Use `GET` to retrieve current translations before updating. |
 
-> ℹ️ If the issue persists, contact our [Support](https://support.vtex.com/hc/en-us/requests).
+> ℹ️ If the issue persists, contact our [Support](https://help.vtex.com/en/support).
