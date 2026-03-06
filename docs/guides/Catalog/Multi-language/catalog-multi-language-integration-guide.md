@@ -40,7 +40,7 @@ When you send translated content using the multi-language feature, the workflow 
 
 ```mermaid
 flowchart LR
-    A[1. Catalog system translation ingestion] --> B[2. Indexing]
+    A[1. Catalog system <br> translation ingestion] --> B[2. Indexing]
     B --> C[3. Storefront display]
 ```
 
