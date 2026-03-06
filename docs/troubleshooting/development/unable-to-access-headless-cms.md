@@ -48,11 +48,11 @@ Use this path when the error points to CLI execution or environment configuratio
 
 1. Open the terminal and run the `vtex whoami` command.
 2. Confirm that the displayed account and workspace are the ones expected for CMS sync.
-3. If you're not logged in, or if the account or workspace is incorrect, run vtex login and authenticate with the correct account and workspace.
+3. If you're not logged in, or if the account or workspace is incorrect, run `vtex login` and authenticate with the correct account and workspace.
 
 #### Update VTEX IO CLI
 
-1. Run the `vtex autoupdate` command in Windows Terminal.
+1. Run the `vtex autoupdate` command in your terminal.
 2. Run the `vtex -v` command to check if the VTEX IO CLI and Node versions are updated.
 
 #### Verify the workspace
