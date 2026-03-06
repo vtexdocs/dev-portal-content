@@ -189,6 +189,11 @@ In the CMS, each component is defined in its own `.jsonc` file. The schema is fl
 - Display name specified by `$componentTitle`.  
 - Inherits from base schema via `$extends`.
 
+> ⚠️ Prefixes are mandatory in schema file names:
+>
+> - Component schemas must start with `cms_component__`.
+> - Content Type schemas must start with `cms_content_type__`.
+
 ```jsonc
 // cms/components/cms_component__Banner.jsonc
 {
