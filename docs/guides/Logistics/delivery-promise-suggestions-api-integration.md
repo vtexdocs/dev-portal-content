@@ -180,7 +180,7 @@ Use the following table to map pickup SLAs to suggested badges:
 | Nearest location | Distance data must be available in the response | "Store at Y km from you" |
 | Store name | Store name must be available in the response | "Pickup at Downtown Store" |
 
-### Interpretation of slaTimeTarget
+### Interpretation of `slaTimeTarget`
 
 The `slaTimeTarget` defines a relative fulfillment window. Specifically, it indicates the latest calendar day (or hour) by which delivery or pickup must occur. The system already considers weekends, holidays, and logistics rules when calculating this deadline.
 
