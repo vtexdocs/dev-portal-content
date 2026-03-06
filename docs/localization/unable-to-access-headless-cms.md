@@ -27,12 +27,12 @@ Use this path when the error is related to authorization or permissions in Licen
 
 1. Open the VTEX Admin and go to **Account Settings > User Roles**.
 
-![license-manager-cms](https://vtexhelp.vtexassets.com/assets/docs/src/cms-license-manager___57f69d96f44f3d29413f2651df7d98c8.png)
+   ![license-manager-cms](https://vtexhelp.vtexassets.com/assets/docs/src/cms-license-manager___57f69d96f44f3d29413f2651df7d98c8.png)
 
 2. Under **Roles**, select the role associated with the user requesting CMS permissions. For example, **Owner (Admin Super)**.
 3. In **Products and Resources**, click **CMS**.
 
-![role-permission](https://vtexhelp.vtexassets.com/assets/docs/src/cms-license-manager-role___f67a8717b5411664dd29cfa9de1764bc.gif)
+   ![role-permission](https://vtexhelp.vtexassets.com/assets/docs/src/cms-license-manager-role___f67a8717b5411664dd29cfa9de1764bc.gif)
 
 4. Make sure both **See CMS menu on the top-bar** and **Settings** are checked.
 5. Go to the **Users** section and add the email of the user who needs CMS access.
