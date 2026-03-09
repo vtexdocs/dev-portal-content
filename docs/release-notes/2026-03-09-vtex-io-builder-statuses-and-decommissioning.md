@@ -31,7 +31,7 @@ Defining clear statuses for Builder versions allows VTEX IO to systematically ma
 
 ## What needs to be done?
 
-App Developers should adhere to the following guidelines:
+App developers should adhere to the following guidelines:
 
 - **Prefer Stable Versions:** When developing new apps or major versions, always use **Stable** Builder versions.
 - **Update Apps:** Developers must prioritize updating existing applications that rely on **Deprecated, Decommissioned, or Non-functional** Builder versions to a currently **Stable** version.
