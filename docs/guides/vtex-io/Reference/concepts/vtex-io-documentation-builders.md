@@ -46,7 +46,7 @@ When you run your app, the `react` Builder will transform the React code within 
 
 This is a non-exhaustive list of VTEX IO Builders:
 
->⚠️ Each builder version has one of the following statuses: Beta, Stable, Deprecated, Decommissioned, and Non-functional. Verify Builder version statuses before using a builder.
+>⚠️ Each builder version has one of the following statuses: Beta, Stable, Deprecated, Decommissioned, and Non-functional. Verify [Builder version statuses](https://developers.vtex.com/docs/guides/vtex-io-documentation-builder-version-statuses) before using a builder.
 
 | Name | Functionality |
 | - | - |
