@@ -3,7 +3,7 @@ title: "FAQ: ERP Integration"
 slug: "faq-erp-integration"
 hidden: false
 createdAt: "2020-09-21T22:45:41.805Z"
-updatedAt: "2021-06-21T13:53:23.523Z"
+updatedAt: "2026-02-05T13:53:23.523Z"
 ---
 
 ## 1. How should you treat order cancelations in the integration?
@@ -28,6 +28,6 @@ Also, there are cases in which an order can receive the same status twice in reg
 
 See our [Feed v3 API guide](https://developers.vtex.com/docs/guides/orders-feed).
 
-## 5. Order is locked in `Ready for Handling`. What do I do?
+## 5. Order is locked in `Ready for Handling` status. What should I do?
 
-Access our this [article on how to solve orders locked in `Ready for Handling`](https://help.vtex.com/faq/meus-pedidos-estao-travados-em-pronto-para-manuseio--frequentlyAskedQuestions_771#).
+Access our article [Why has my order stopped on "Ready for Handling"?](https://help.vtex.com/faq/why-has-my-order-stopped-on-ready-for-handling).

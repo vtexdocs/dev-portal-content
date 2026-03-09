@@ -1,10 +1,13 @@
 ---
-title: "B2B Quotes & Carts"
+title: "B2B Quotes & Carts (B2B Suite)"
 slug: "vtex-b2b-quotes"
+excerpt: "Learn how B2B customers can request quotes, save carts, and negotiate prices with sales representatives using the B2B Quotes & Carts app."
 hidden: false
 createdAt: "2021-10-19T20:10:51.309Z"
 updatedAt: "2022-12-02T14:51:23.888Z"
 ---
+
+> ⚠️ This documentation applies to B2B Suite only.
 
 > ℹ️ The **B2B Quotes & Carts** app is part of VTEX’s [B2B Suite](https://developers.vtex.com/docs/guides/vtex-b2b-suite) solution: a collection of apps that allow stores to manage organizations, storefront roles and permissions, and checkout settings for B2B commerce relationships. We recommend that you use it alongside the other apps in this suite for all functionalities to work as expected.
 

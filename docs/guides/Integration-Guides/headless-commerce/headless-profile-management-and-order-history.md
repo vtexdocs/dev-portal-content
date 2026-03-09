@@ -26,20 +26,39 @@ By default, this endpoint returns only complete profiles, but you may use the bo
 
 ### Editing profile information
 
-VTEX uses [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) to store and manage shopper information. So in order to manage profile data from your storefront, you must use the Master Data v1 API.
+VTEX uses [Master Data v1](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) to store and manage shopper information. To manage profile data from your headless storefront, you must use the [SafeData app](https://developers.vtex.com/docs/apps/vtex.safedata), which provides a secure middleware layer for retrieving and storing Master Data information directly from the frontend.
 
 >ℹ️ Learn more about [Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#versions-available) and its [basic components](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#basic-components).
 
-In Master Data v1, shopper profiles are documents in the `CL` data entity, while addresses are documents in the `AD` data entity. See below the endpoints for managing Master Data v1 documents:
+>⚠️ **Before you begin**: Install the SafeData app in your VTEX account. SafeData acts as a validation layer on top of Master Data API to ensure the data being queried or modified belongs to the user executing the action. For more information, refer to the [SafeData documentation](https://developers.vtex.com/docs/apps/vtex.safedata).
 
-- [Create new document](https://developers.vtex.com/docs/api-reference/masterdata-api#post-/api/dataentities/-acronym-/documents)
-- [Update partial document](https://developers.vtex.com/docs/api-reference/masterdata-api#patch-/api/dataentities/-acronym-/documents/-id-)
-- [Get document by ID](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/documents/-id-)
-- [Delete document](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-)
+In Master Data v1, shopper profiles are documents in the `CL` data entity, while addresses are documents in the `AD` data entity. The SafeData app provides endpoints similar to Master Data endpoints, but with built-in security validation. See below the SafeData endpoints for managing documents:
 
-If you prefer to search shopper information by other information, such as email address, instead of the document ID, use the search endpoint:
+- **Update partial document**: `PATCH /api/io/safedata/{entity}/documents/{id}`
+- **Get document by ID**: `GET /api/io/safedata/{entity}/documents/{id}`
 
-- [Search documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search)
+>ℹ️ The SafeData API uses the pattern `/api/io/safedata/{entity}/documents/{id}`, where `{entity}` is the data entity acronym (e.g., `CL` for customer profiles, `AD` for addresses) and `{id}` is the document ID.
+
+**Example request to update a user profile:**
+
+**Method:** `PATCH`
+
+**Path:**
+```
+https://{{accountName}}.vtexcommercestable.com.br/api/io/safedata/CL/documents/{{documentId}}
+```
+
+**Body:**
+```json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "phone": "+5511999999999"
+}
+```
+
+If you prefer to search shopper information by other information, such as email address, instead of the document ID, you can use the Checkout API endpoint mentioned in the [Accessing profile information](#accessing-profile-information) section above.
 
 ### Password
 
