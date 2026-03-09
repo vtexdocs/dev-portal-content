@@ -1,6 +1,7 @@
 ---
 title: "Builder version statuses"
 slug: "vtex-io-documentation-builder-version-statuses"
+excerpt: Learn what are builder version statuses and the status of each builder version
 hidden: false
 createdAt: "2026-03-09T14:00:00.000Z"
 updatedAt: "2026-03-09T14:00:00.000Z"
