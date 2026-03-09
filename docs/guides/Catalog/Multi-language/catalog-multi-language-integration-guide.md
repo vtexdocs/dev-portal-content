@@ -41,7 +41,7 @@ When you send translated content using the multi-language feature, the workflow 
 ```mermaid
 flowchart LR
     A[1. Catalog system <br> translation ingestion] --> B[2. Indexing]
-    B --> C[3. Storefront display]
+    B --> C[3. Storefront <br> display]
 ```
 
 ### Step 1: Catalog system translation ingestion
@@ -78,6 +78,7 @@ For most storefront implementations, Intelligent Search is the recommended appro
 | Store Framework | ✅ Yes (default behavior) |
 | Headless with IS | ✅ Yes |
 | CMS Portal (Legacy) | ⚠️ May require additional configuration |
+| FastStore | ❌ Not available |
 
 ### Option 2: Via Catalog API (direct fetch)
 
@@ -93,6 +94,8 @@ See below the implementation by storefront type for consuming localized content:
 
 - [Store Framework](#store-framework-implementation)
 - [Headless](#headless-implementation)
+
+> ℹ️ The multi-language feature is not available for FastStore.
 
 ### Store Framework implementation
 
