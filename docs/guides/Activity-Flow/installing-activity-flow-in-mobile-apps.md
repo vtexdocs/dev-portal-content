@@ -1,5 +1,8 @@
 ---
 title: "Installing Activity Flow in mobile apps"
+slug: "installing-activity-flow-in-mobile-apps"
+hidden: false
+createdAt: "2025-12-18T16:30:39.842Z"
 ---
 
 You can install [Activity Flow SDK](https://developers.vtex.com/docs/guides/activity-flow) in mobile apps developed using React Native or Flutter.
