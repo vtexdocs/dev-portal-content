@@ -22,7 +22,7 @@ For a detailed explanation of each status and the current status of each Builder
 
 If you try to use a non-supported Builder, you will receive an error message in the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), such as the one below:
 
-![Node Builder 4.x error](../../images/node-builder-4x-error.jpg)
+![Node Builder 4.x error](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/node-builder-4x-error.jpg)
 *Error after trying to link an app with the deprecated Node `4.x` Builder.*
 
 ## Why did we make this change?

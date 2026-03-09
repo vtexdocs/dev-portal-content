@@ -35,10 +35,10 @@ The table below summarizes what can be done for each status.
 
 If you try to use a non-supported Builder, you will receive an error message in the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), such as the ones below:
 
-![GraphQL Builder 1.x warning](../../../../../../images/graphql-1x-builder-warn.jpg)
+![GraphQL Builder 1.x warning](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/graphql-1x-builder-warn.jpg)
 *Warning after trying to link an app (major published) with the deprecated GraphQL `1.x` Builder.*
 
-![Node Builder 4.x error](../../../../../../images/node-builder-4x-error.jpg)
+![Node Builder 4.x error](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/node-builder-4x-error.jpg)
 *Error after trying to link an app (major published) with the deprecated Node `4.x` Builder.*
 
 ## Current statuses
