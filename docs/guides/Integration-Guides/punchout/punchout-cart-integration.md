@@ -2,7 +2,7 @@
 title: "Punchout cart integration"
 slug: "punchout-cart-integration"
 excerpt: "Learn how to enable and customize the Punchout cart screen, allowing users to transfer their cart back to the eprocurement system and add per-item options or attachments."
-hidden: false
+hidden: true
 createdAt: "2026-02-20T00:00:00.000Z"
 updatedAt: "2026-02-20T00:00:00.000Z"
 ---
@@ -45,9 +45,9 @@ flowchart LR
 
 ### Prerequisites
 
-To implement the Punchout cart flow, you must enable Checkout extension points in FastCheckout. Contact our [Support team](https://supporticket.vtex.com/support) to request activation.
+To implement the Punchout cart flow, you must contact our [Support team](https://supporticket.vtex.com/support) to enable Checkout extension points in FastCheckout.
 
-### Enable and implement extension points
+### Implementing extension points
 
 After enabling the extension points, create a [storefront monorepo](https://beta.fast.store/reference/monorepo/) to customize it. Once you have set up your storefront monorepo, you’re ready to [set up Checkout extension points](https://beta.fast.store/checkout/setting-up).
 
@@ -63,7 +63,7 @@ The following extension point lets you implement this behavior:
 
 The `punchout.order-summary.cta` extension point is rendered in the Punchout screen sidebar (order summary). Use it to add a primary action button that sends the user back to the eprocurement system with the cart.
 
-The [`useRedirect` hook](https://beta.fast.store/checkout/reference/use-redirect) provides a **redirect** method that navigates the user to the eprocurement system using the target URL (e.g., the eprocurement system’s cart or checkout URL) during the “transfer cart” step.
+The [`useRedirect` hook](https://beta.fast.store/checkout/reference/use-redirect) provides a **redirect** method that navigates the user to the eprocurement system using the target URL (for example, the eprocurement system’s cart or checkout URL) during the “transfer cart” step.
 
 #### Example: Transfer cart button
 
@@ -182,8 +182,8 @@ The `punchout.cart-item.after` extension point is optional and renders below eac
 
 The following hooks provide the necessary actions for the extension points:
 
-* [`useCartPunchout` hook](https://beta.fast.store/checkout/reference/use-cart-punchout) – Access cart data and perform mutations that are reflected in other entities within the checkout data layer.
-* [`useCartItem` hook](https://beta.fast.store/checkout/reference/use-cart-item) – Access detailed information about an individual cart item.
+* [`useCartPunchout` hook](https://beta.fast.store/checkout/reference/use-cart-punchout): Access cart data and perform mutations that are reflected in other entities within the checkout data layer.
+* [`useCartItem` hook](https://beta.fast.store/checkout/reference/use-cart-item): Access detailed information about an individual cart item.
 
 #### Example: Add protection plan (per-item checkbox)
 
@@ -262,7 +262,7 @@ export const AddProtectionPlan = () => {
 };
 ```
 
-If the Info button triggers asynchronous work (e.g., opening a modal or fetching details), you can add a loading state and a spinner using the same pattern as the Transfer cart example (e.g., `data-loading`, `.spinner` class, and matching CSS).
+If the **Info** button triggers asynchronous work (for example, opening a modal or fetching details), you can add a loading state and a spinner using the same pattern as the **Transfer cart** example (`data-loading`, `.spinner` class, and matching CSS). The snippet below defines a simple `.hide` utility and adjusts the styles so the UI clearly reflects loading and disabled states.
 
 ```css
 /* add-protection-plan.module.css */
@@ -358,3 +358,11 @@ If the Info button triggers asynchronous work (e.g., opening a modal or fetching
 .hide {
   display: none;
 }
+```
+
+You've now configured the Punchout cart integration to transfer cart data back to eprocurement systems and buyers can seamlessly send their cart to platforms for approval workflows.
+
+## Learn more
+
+* [Punchout](https://developers.vtex.com/docs/guides/punchout)
+* [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration)
