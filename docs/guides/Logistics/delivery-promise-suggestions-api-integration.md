@@ -5,6 +5,10 @@ hidden: false
 createdAt: "2026-03-05T00:00:00.000Z"
 updatedAt: "2026-03-05T00:00:00.000Z"
 excerpt: "This guide explains how to integrate the Delivery Promise Suggestions API into a headless storefront to display delivery promises and pickup options, creating meaningful visual indicators for shoppers."
+seeAlso:
+- "/docs/guides/setting-up-delivery-promise-components"
+- "/docs/guides/delivery-promise-for-headless-stores"
+- "/docs/guides/faststore/features-delivery-promise"
 ---
 
 >ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
@@ -240,10 +244,3 @@ Use the following table to determine when to call the API based on the shopper�
 | PDP (Product Detail Page) | On page load, or when the shopper’s location changes. | Request suggestions for the current product (and optionally its variants). |
 
 >⚠️ Failing to refresh the fulfillment context when the shopper's location changes will result in inaccurate delivery and pickup recommendations.
-
-## Learn more
-
-* [Delivery Promise: FAQ](https://help.vtex.com/en/docs/tutorials/delivery-promise-faq)
-* [Setting up Delivery Promise components (Beta)](https://developers.vtex.com/docs/guides/setting-up-delivery-promise-components)
-* [Delivery promise for headless stores (Beta)](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores)
-* [Delivery Promise for FastStore](https://developers.vtex.com/docs/guides/faststore/features-delivery-promise)
