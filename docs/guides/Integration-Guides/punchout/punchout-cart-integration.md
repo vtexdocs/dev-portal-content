@@ -5,6 +5,9 @@ excerpt: "Learn how to enable and customize the Punchout cart screen, allowing u
 hidden: true
 createdAt: "2026-02-20T00:00:00.000Z"
 updatedAt: "2026-02-20T00:00:00.000Z"
+seeAlso:
+ - "/docs/guides/punchout"
+ - "/docs/guides/punchout-login-integration"
 ---
 
 > ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
@@ -360,9 +363,4 @@ If the **Info** button triggers asynchronous work (for example, opening a modal 
 }
 ```
 
-You've now configured the Punchout cart integration to transfer cart data back to eprocurement systems and buyers can seamlessly send their cart to platforms for approval workflows.
-
-## Learn more
-
-* [Punchout](https://developers.vtex.com/docs/guides/punchout)
-* [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration)
+You've now configured the Punchout cart integration to transfer cart data back to eprocurement systems and buyers can seamlessly send their carts to platforms for approval workflows.
