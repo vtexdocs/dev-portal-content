@@ -2,12 +2,12 @@
 title: "B2B user provisioning"
 slug: "b2b-user-provisioning"
 hidden: false
-excerpt: "Learn how to migrate B2B users from external platforms to VTEX by registering users, creating organization units, and managing roles and permissions."
+excerpt: "Learn how to migrate B2B users from external platforms to VTEX by registering users, creating organizational units, and managing roles and permissions."
 createdAt: "2026-02-20T00:00:00.000Z"
 updatedAt: "2026-02-20T00:00:00.000Z"
 ---
 
->⚠️ This feature is in closed beta, which means that only specific clients can access it now. If you want to implement it in the future, contact [VTEX Support](https://support.vtex.com/hc/en-us/).
+> ⚠️ This feature is available only for stores using B2B Buyer Portal, currently available for selected accounts.
 
 This guide explains how merchants can migrate their B2B user base from external platforms to VTEX in a secure way, including how to:
 
@@ -59,7 +59,7 @@ Register a new user in VTEX ID. You must create this user with a required `usern
 
 Optionally, you may also register a login email for the user. When provided, the user can use this email address as an alternative login identifier to authenticate using either their `username` or their login email address. This same login email will also be used for password recovery.
 
->⚠️ The login email address defined in this step is different from the email address collected in [Step 5](#step-5-save-shopper-data), which is used exclusively for transactional communications and does not affect authentication or password recovery.
+>⚠️ The login email address defined in this step is different from the email address collected in [Step 5](#step-5---save-shopper-data), which is used exclusively for transactional communications and does not affect authentication or password recovery.
 
 At this stage, the created user is not yet linked to an organizational unit, nor do they have storefront permissions.
 
