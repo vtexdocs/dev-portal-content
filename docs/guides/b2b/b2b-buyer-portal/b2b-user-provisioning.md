@@ -31,11 +31,11 @@ Before provisioning B2B users in VTEX, make sure the required features are enabl
 | License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users) |
 | Dynamic Storage | Dynamic storage generic resources | Insert or update document (not remove) | `POST` [Create new document](https://developers.vtex.com/docs/api-reference/masterdata-api#post-/api/dataentities/-acronym-/documents) |
 
-### B2B shopper requirements
+### B2B buyer requirements
 
-For effective authentication, every B2B shopper must comply with the following:
+For effective authentication, every B2B buyer must comply with the following:
 
-* The username must be unique within the tenant.
+* The username must be unique within the store.
 * The user must be linked to an organizational unit.
 * The user's organizational unit must be linked with at least one valid contract.
 * The user must be registered in the Shopper entity in Master Data v2.
@@ -49,7 +49,7 @@ The user provisioning process follows these main steps:
 2. [Create organizational unit](#step-2---create-organizational-unit): Create organizational units where storefront users will be assigned.
 3. [Assign user to organizational unit](#step-3---assign-user-to-organizational-unit): Link storefront users to their respective organizational units.
 4. [Assign storefront roles to user](#step-4---assign-storefront-roles-to-user): Assign storefront roles and permissions to users.
-5. [Save shopper data](#step-5---save-shopper-data): Register detailed user information in the Shopper entity.
+5. [Save buyer data](#step-5---save-buyer-data): Register detailed user information in the Shopper entity.
 
 At this stage, the created user is not yet linked to an organizational unit, nor do they have storefront permissions.
 
@@ -59,7 +59,7 @@ Register a new user in VTEX ID. You must create this user with a required `usern
 
 Optionally, you may also register a login email for the user. When provided, the user can use this email address as an alternative login identifier to authenticate using either their `username` or their login email address. This same login email will also be used for password recovery.
 
->⚠️ The login email address defined in this step is different from the email address collected in [Step 5](#step-5---save-shopper-data), which is used exclusively for transactional communications and does not affect authentication or password recovery.
+>⚠️ The login email address defined in this step is different from the email address collected in [Step 5](#step-5---save-buyer-data), which is used exclusively for transactional communications and does not affect authentication or password recovery.
 
 At this stage, the created user is not yet linked to an organizational unit, nor do they have storefront permissions.
 
@@ -106,13 +106,13 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
 }
 ```
 
-## Step 2 - Create organization unit
+## Step 2 - Create organizational unit
 
->⚠️ This step is required only if the storefront user's organizational unit does not exist yet. If it already exists, proceed to [Step 3 - Assign user to organizational unit](#step-3--assign-user-to-organizational-unit).
+>⚠️ This step is required only if the storefront user's organizational unit does not exist yet. If it already exists, proceed to [Step 3 - Assign user to organizational unit](#step-3---assign-user-to-organizational-unit).
 
-Organizational units identify the organizations that buyer users are part of. All new units are created at the root level. To create child-level units, see the [Move organizational unit](#move-organizational-unit) section.
+Organizational units identify the organizations that buyer users are part of. All new units are created at the root level. To create child-level units, see `POST` [Move organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/path).
 
->ℹ️ For more information, see `POST` [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1).
+>ℹ️ For more information, see `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1).
 
 ### Request example
 
@@ -145,7 +145,7 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/organization
 
 ```
 
-## Step 3 - Assign user to organization unit
+## Step 3 - Assign user to organizational unit
 
 Links a user to an organizational unit, establishing their organizational membership.
 
@@ -232,13 +232,13 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/license-mana
 }
 ```
 
-## Step 5 - Save shopper data
+## Step 5 - Save buyer data
 
-Shopper data is the source of truth for enriched profile information, such as first and last name, document, phone number, email, and other details. This endpoint allows you to save enriched user information.
+Buyer data is the source of truth for enriched profile information, such as first and last name, document, phone number, email, and other details. This endpoint allows you to save enriched user information.
 
-In this context, the email address saved in Shopper Data is used exclusively for operational and transactional account actions, such as account activity, transaction status updates, and other order-lifecycle messages.
+In this context, the email address saved in buyer data is used exclusively for operational and transactional account actions, such as account activity, transaction status updates, and other order-lifecycle messages.
 
-This transactional email is different from the login email defined in [Step 1](#step-1-create-storefront-user-with-username), which is used for authentication and password recovery.
+This transactional email is different from the login email defined in [Step 1](#step-1---create-storefront-user-with-username), which is used for authentication and password recovery.
 
 >ℹ️ For more information, see `POST` [Create new document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents).
 
@@ -280,8 +280,8 @@ For additional user and organizational management operations, see the following 
 * `GET` [Get organizational units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1)
 * `GET` [Get users from organizational unit](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/organization-units/-organizationUnit-/users)
 * `GET` [Verify user roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/roles)
-* `GET` [Get shopper data](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search)
+* `GET` [Get buyer data](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search)
 * `PATCH` [Edit organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#patch-/api/organization-units/v1/-unitId-)
-* `PUT` [Move organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-unitId-/path)
+* `POST` [Move organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/path)
 * `DELETE` [Delete organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-unitId-)
 * `DELETE` [Remove users from organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-unitId-/users)
