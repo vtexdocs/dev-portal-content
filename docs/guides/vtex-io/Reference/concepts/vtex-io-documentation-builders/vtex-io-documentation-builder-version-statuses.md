@@ -7,7 +7,7 @@ createdAt: "2026-03-09T14:00:00.000Z"
 updatedAt: "2026-03-09T14:00:00.000Z"
 ---
 
-The [VTEX IO platform](https://developers.vtex.com/docs/guides/vtex-io-overview) uses a set of statuses to manage the lifecycle of its [Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) versions. A **status** defines the level of support and usability assigned to a specific version of a Builder.
+The [VTEX IO platform](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) uses a set of statuses to manage the lifecycle of its [Builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) versions. A **status** defines the level of support and usability assigned to a specific version of a Builder.
 
 The primary purpose of defining these statuses is to ensure the platform's long-term efficiency, security, and stability. By guiding developers and merchants toward the most up-to-date and recommended versions, we can systematically retire outdated or vulnerable components. The statuses provide a roadmap and a necessary transition period, allowing developers enough time to update their applications whenever a status change is announced.
 

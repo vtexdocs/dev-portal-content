@@ -15,8 +15,8 @@ We are implementing two main updates:
 
 1. **Defined Builder version statuses:** Every VTEX IO Builder version now has a defined status that communicates its lifecycle stage and level of support. The statuses are: **Beta, Stable, Deprecated, Decommissioned, and Non-functional**.
 2. **Builder decommissioning:** The following outdated Builder versions have been moved to the **Decommissioned** status and are no longer supported for new development or updates:
-    - **Node**:  versions `3.x` and `4.x`.
-    - **Dotnet**: versions `0.x` and `1.x`.
+    - **Node:**  versions `3.x` and `4.x`.
+    - **Dotnet:** versions `0.x` and `1.x`.
 
 For a detailed explanation of each status and the current status of each Builder version, please refer to the [Builder version statuses](https://developers.vtex.com/docs/guides/vtex-io-documentation-builder-version-statuses) documentation.
 
