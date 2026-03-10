@@ -360,7 +360,7 @@ If the **Info** button triggers asynchronous work (for example, opening a modal 
 }
 ```
 
-You've now configured the Punchout cart integration to transfer cart data back to eprocurement systems and buyers can seamlessly send their cart to platforms for approval workflows.
+You've now configured the Punchout cart integration to transfer cart data back to eprocurement systems, and buyers can seamlessly send their carts to platforms for approval workflows.
 
 ## Learn more
 
