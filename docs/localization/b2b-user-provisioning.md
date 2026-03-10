@@ -27,7 +27,7 @@ Before provisioning B2B users in VTEX, make sure the required features are enabl
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
 | VTEX ID | User Management | Create User | `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/storefront/users) |
-| Organizational Units | Units | Edit Organizational Unit | `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/buyer-organizations-api#post-/api/organization-units/v1) <br/><br/>`POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/organization-units/-organizationUnit-/users) |
+| Organization Units | Units | Edit Organization Unit | `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/buyer-organizations-api#post-/api/organization-units/v1) <br/><br/>`POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/organization-units/-organizationUnit-/users) |
 | License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users) |
 | Dynamic Storage | Dynamic storage generic resources | Insert or update document (not remove) | `POST` [Create new document](https://developers.vtex.com/docs/api-reference/masterdata-api#post-/api/dataentities/-acronym-/documents) |
 
