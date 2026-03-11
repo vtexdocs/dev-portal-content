@@ -12,7 +12,9 @@ tags:
 
 **Keywords:** Partytown | Google Tag Manager | Google Analytics | Tag Assistant | jQuery
 
-Partytown improves website performance by offloading third-party script execution to a web worker. However, this can introduce challenges when debugging analytics tools like Google Tag Manager (GTM) and Google Analytics (GA), or when scripts have specific dependencies. This article provides solutions for common issues, such as Google Tag Assistant not working and "jQuery is not defined" errors.
+> ⚠️ This troubleshooting is specif for [FastStore](https://developers.vtex.com/docs/guides/faststore) projects.
+
+[Partytown](https://partytown.qwik.dev/) improves website performance by offloading third-party script execution to a web worker. However, this can introduce challenges when debugging analytics tools like Google Tag Manager (GTM) and Google Analytics (GA), or when scripts have specific dependencies. This article provides solutions for common issues, such as Google Tag Assistant not working and "jQuery is not defined" errors.
 
 ## Solutions
 
