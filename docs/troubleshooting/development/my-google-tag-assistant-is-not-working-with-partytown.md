@@ -49,7 +49,7 @@ When Partytown is enabled, you cannot directly read the `dataLayer` variable fro
 
 ### Resolve "jQuery is not defined" or "$ is not defined" errors
 
-If scripts running inside Partytown encounter **"jQuery is not defined"** or **"$ is not defined"** errors, Partytown cannot access jQuery from the Web Worker environment. After identifying the script causing the jQuery-related error, you can try the solutions below:
+If scripts running inside Partytown encounter **"jQuery is not defined"** or **"$ is not defined"** errors, Partytown cannot access jQuery from the web worker environment. After identifying the script causing the jQuery-related error, you can try the solutions below:
 
 - **Remove jQuery dependency (Recommended):** The most robust solution is to refactor your script to use vanilla JavaScript instead of relying on jQuery. This eliminates the dependency and ensures compatibility across different environments.
 - **Break down the script:** If a full refactor is not immediately possible, identify parts of your script that do not depend on jQuery and ensure they run as expected. Then, address the jQuery-dependent parts separately using other solutions.
