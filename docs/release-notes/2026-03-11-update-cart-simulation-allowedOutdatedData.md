@@ -1,6 +1,6 @@
 ---
 title: "Cart simulation: New allowedOutdatedData parameter"
-slug: "2026-03-11-update-cart-simulation-allowedOutdatedData"
+slug: "2026-03-11-cart-simulation-new-allowedoutdateddata-parameter"
 type: "added"
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
