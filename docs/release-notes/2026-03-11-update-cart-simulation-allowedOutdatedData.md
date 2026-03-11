@@ -11,7 +11,7 @@ The [Cart simulation](https://developers.vtex.com/docs/api-reference/checkout-ap
 
 ## What has changed?
 
-The `allowedOutdatedData` parameter is an array of strings that allows you to specify which data types can use cached or slightly outdated information during cart simulation, potentially improving response times for cart operations. The possible data that can be skipped are `inventoryData`, `deliveryData`, `promotionData`, `paymentData`and `taxData`.
+The `allowedOutdatedData` parameter is an array of strings that allows you to specify which data types can use cached or slightly outdated information during cart simulation, potentially improving response times for cart operations. The possible data that can be skipped are `inventoryData`, `deliveryData`, `promotionData`, `paymentData`, and `taxData`.
 
 ## Why did we make this change?
 
