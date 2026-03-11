@@ -53,4 +53,4 @@ If scripts running inside Partytown encounter **"jQuery is not defined"** or **"
 
 - **Remove jQuery dependency (Recommended):** The most robust solution is to refactor your script to use vanilla JavaScript instead of relying on jQuery. This eliminates the dependency and ensures compatibility across different environments.
 - **Break down the script:** If a full refactor is not immediately possible, identify parts of your script that do not depend on jQuery and ensure they run as expected. Then, address the jQuery-dependent parts separately using other solutions.
-- **Define jQuery locally within the script:** Inside the problematic script, add the line `$ = jQuery = window.jQuery`. This explicitly defines these variables locally within the script's scope, which may allow Partytown to recognize and use jQuery from the Web Worker.
+- **Define jQuery locally within the script:** Inside the problematic script, add the line `$ = jQuery = window.jQuery`. This explicitly defines these variables locally within the script's scope, which may allow Partytown to recognize and use jQuery from the web worker.
