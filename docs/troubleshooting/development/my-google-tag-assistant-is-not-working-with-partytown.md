@@ -25,7 +25,7 @@ Google Tag Assistant cannot debug GTM and GA tags when Partytown is enabled. To 
 
 ![enable-gtm-debug-query-string](https://vtexhelp.vtexassets.com/assets/docs/src/enable-gtm-debug-query-string___a500fcb42a88127e93fb8c5e44ce119c.png)
 
-3. If you use Google Analytics 4 (GA4), debug events directly within Google Analytics. Refer to the [Google official documentation](https://support.google.com/analytics/answer/7201382?hl=pt-BR#zippy=%2Cgerenciador-de-tags-do-google-sites) for instructions.
+3. If you use Google Analytics 4 (GA4), debug events directly within Google Analytics. Refer to the [Google official documentation](https://support.google.com/analytics/answer/7201382?sjid=4242037245115072180-SA) for instructions.
 
 ### See events pushed to dataLayer
 
