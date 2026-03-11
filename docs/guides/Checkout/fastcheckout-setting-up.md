@@ -2,8 +2,8 @@
 title: "Setting up FastCheckout"
 slug: "fastcheckout-setting-up"
 hidden: true
-createdAt: ""
-updatedAt: ""
+createdAt: "2026-03-11T17:08:52.219Z"
+updatedAt: "2026-03-11T17:08:52.219Z"
 ---
 
 After setting up your storefront monorepo, you can create a Checkout extensions project. First, add the VTEX Checkout modules to your monorepo:
