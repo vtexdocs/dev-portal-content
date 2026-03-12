@@ -3,7 +3,7 @@ title: "FastStore monorepo"
 createdAt: 2026-03-12T13:18:54.245Z
 ---
 
-**FastStore monorepo** is the unified repository model that centralizes the storefront development experience within VTEX.
+**FastStore monorepo** is the unified repository model that centralizes the storefront development within VTEX.
 
 This architecture centralizes code, dependencies, and configuration for multiple storefronts in a single repository, enabling consistent customization, streamlined collaboration, and efficient code reuse across projects.
 
@@ -67,7 +67,7 @@ To set up your monorepo, follow the steps below:
 
 ### Step 1 - Migrating from Discovery
 
-If your FastStore project uses [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) and is hosted in the `vtex-sites` or in your own GitHub organization, and you want to move to a FastStore monorepo, follow the instructions in the guide [Moving your FastStore project to a new GitHub repository](https://developers.vtex.com/docs/guides/faststore/webops-moving-your-faststore-project-to-a-new-github-repository).
+If your FastStore project uses [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) and is hosted in `vtex-sites` or in your own GitHub organization, and you want to move to a FastStore monorepo, follow the instructions in the guide [Moving your FastStore project to a new GitHub repository](https://developers.vtex.com/docs/guides/faststore/webops-moving-your-faststore-project-to-a-new-github-repository).
 
 ### Step 2 - Initializing your monorepo
 
@@ -76,8 +76,8 @@ After moving your project to the new repository, run `@vtex/fsp-cli` to generate
 1. Open a terminal.
 2. Navigate to your monorepo project folder.
 3. Run `npx @vtex/fsp-cli init --from-discovery` to initialize your FastStore monorepo.
-4. Run `yarn install` to update the package in the project.
+4. Run `yarn install` to install and update the project dependencies.
 5. Open your FastStore monorepo project in any code editor of your choice and validate if it's working.
-3. Then, commit your changes and push.
+3. Commit your changes and push them to the repository.
 
-If you encounter errors during the process, open a ticket to [VTEX Support](https://help.vtex.com/en/support).
+If you encounter errors during the process, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
