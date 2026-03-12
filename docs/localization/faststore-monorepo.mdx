@@ -17,7 +17,7 @@ In this guide, you'll learn how to set up a FastStore monorepo.
 
 ## Monorepo structure
 
-A FastStore monorepo doesn't require a rigid folder structure. You can organize your code as needed, as long as you keep a `faststore.json` file at the root of the repository. This file guides both local development and production deployments. See how to initialize a monorepo with `@vtex/fsp-cli` in the [Instructions](#instructions) section.
+A FastStore monorepo doesn't require a rigid folder structure. You can organize your code as needed, as long as you keep a `faststore.json` file at the root of the repository. This file guides both local development and production deployments. See how to initialize a monorepo with `@vtex/fsp-cli` in the [Setting up your monorepo](#setting-up-your-monorepo) section.
 
 In local development, the `faststore.json` file acts as a configuration entry point. It consolidates the definitions and settings necessary for the unified repository and its storefront modules. 
 
@@ -35,9 +35,7 @@ Each account object has at least one of the following keys: `discovery`, `checko
 | `port` | Port where the module will be available | Local development | ✅ |
 | `cli` | An argument to override the module CLI being used | Local development, production build | ❌ |
 
-See examples of `faststore.json` configuration in the [Monorepo use cases](/tbd) guide.
-
-## Instructions
+## Setting up your monorepo
 
 To set up your monorepo, follow the steps below:
 
@@ -51,6 +49,9 @@ After moving your project to the new repository, run `@vtex/fsp-cli` to generate
 
 1. Open a terminal.
 2. Navigate to your monorepo project folder.
-3. Run `npx @vtex/fsp-cli init --from-discovery`.
-2. Run `yarn install`.
-3. Commit your changes and push to ensure that everything is working.
+3. Run `npx @vtex/fsp-cli init --from-discovery` to initialize your FastStore monorepo.
+4. Run `yarn install` to update the package in the project.
+5. Open your FastStore monorepo project in any code editor of your choice and validate if it's working.
+3. Then, commit your changes and push.
+
+If you encounter errors during the process, open a ticket to [VTEX Support](https://help.vtex.com/en/support).
