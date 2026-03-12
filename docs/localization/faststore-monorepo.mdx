@@ -35,7 +35,7 @@ Each account object has at least one of the following keys: `discovery`, `checko
 | `port` | `number` | Port where the module will be available | `3001` | Local development | ✅ |
 | `cli` | `string` | Argument to override the module CLI being used | `"custom-cli"` | Local development, production build | ❌ |
 
-The following example shows a `faststore.json` file set up for one store using multiple modules:
+The following example shows a `faststore.json` file set up for a single store using multiple modules:
 
 ```json faststore.json
 {
@@ -59,6 +59,8 @@ The following example shows a `faststore.json` file set up for one store using m
 }
 ```
 
+>ℹ️ See more examples of `faststore.json` configuration in the [Monorepo use cases](https://developers.vtex.com/docs/guides/faststore/monorepo-use-cases) guide.
+
 ## Setting up your monorepo
 
 To set up your monorepo, follow the steps below:
@@ -79,4 +81,5 @@ After moving your project to the new repository, run `@vtex/fsp-cli` to generate
 3. Then, commit your changes and push.
 
 If you encounter errors during the process, open a ticket to [VTEX Support](https://help.vtex.com/en/support).
+
 
