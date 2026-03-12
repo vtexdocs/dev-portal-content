@@ -90,7 +90,6 @@ The system comes with these predefined storefront roles, each with specific perm
 | Buyer Organization Manager | 7 | Can view all orders within their organizational unit. | ViewMyOrgUnitOrders | UI and API |
 | Contract Viewer | 8 | Can view profiles, payment cards, and addresses. | ViewMyCards, ViewAddresses | UI and API |
 | Address Manager | 9 | Can add and manage addresses during checkout. | ManageAddresses, ViewAddresses | UI and API |
-| User Manager | 10 | Can create, edit, and remove users within the buyer organization. | ManageUsers | API only |
 | Buying Policy Manager | 11 | Can create, edit, and delete buying policies and approval workflows, and view buying policies. | ManageBuyingPolicies, ViewBuyingPolicies | API only |
 | Budget Manager | 12 | Can create, edit, allocate, and delete budgets, and view budget details, allocations, limits, and spending history. | ManageBudgets, ViewBudget | API only |
 | Accounting Field Manager | 13 | Can create, edit, and delete accounting fields. | ManageAccountingFields | API only |
