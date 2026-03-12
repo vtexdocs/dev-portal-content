@@ -53,21 +53,21 @@ The following resource keys are available in the system:
 
 | Resource Key | Description |
 | :---- | :---- |
-| ManageOrganizationAndContract | Allows management of the organization's structure, contracts, and related settings. |
-| ManageOrganizationHierarchy | Allows creation, editing, and restructuring of Organization Units within the buyer organization hierarchy. |
-| ManageUsers | Allows creation, editing, and removal of users within the buyer organization. |
-| ManageBuyingPolicies | Allows creation and configuration of buying policies within the organization. |
-| ViewBuyingPolicies | Allows viewing existing buying policies without editing permissions. |
-| ManageBudgets | Allows creation and management of budgets and budget allocations. |
-| ViewBudget | Allows viewing budget information without editing permissions. |
-| ManageAccountingFields | Allows configuration and management of accounting or custom financial fields. |
-| ManageQuotes | Allows management of quote requests and related negotiation flows. |
+| ManageOrganizationAndContract | Allows management of the organization structure, contracts, and related settings. |
+| ManageOrganizationHierarchy | Allows the user to bypass organizational unit boundaries and manage entities at the root organization level, including access and administration across all organizational units. |
+| ManageUsers | Allows creation, modification, and deletion of users. |
+| ManageBuyingPolicies | Allows creation, modification, and deletion of buying policies and approval workflows. |
+| ViewBuyingPolicies | Grants permission to view configured buying policies, including approval rules and spending restrictions. |
+| ManageBudgets | Allows full control over budget creation, editing, allocation, and deletion. |
+| ViewBudget | Grants read-only access to view budget details, including allocations, limits, and spending history. |
+| ManageAccountingFields | Allows creation, modification, and deletion of accounting fields. |
+| ManageQuotes | Allows creation, modification, and deletion of quotes. |
 | PlaceOrders | Grants the ability to create and submit orders within the system. |
 | ViewMyContractOrders | Enables users to see orders placed under their assigned contract. |
 | ViewMyOrgUnitOrders | Allows users to view all orders within their organizational unit. |
 | ModifyOrders | Provides permission to use the change order feature for all orders that the user has access to. |
 | ApproveOrders | Grants the ability to approve or reject orders based on predefined workflows. |
-| ManageAddresses | Allows adding a new address during checkout and saving it for the contract or organization unit. |
+| ManageAddresses | Allows adding a new address during checkout and saving it for the contract or organization unit. It also allows users to change address information at checkout. |
 | UseAdHocCard | Grants permission to use a new credit card at checkout. |
 | SavePrivateCard | Grants permission to save a new card for the user's personal use only. |
 | ViewProfile | Allows access to view profile information. |
@@ -79,15 +79,22 @@ The following resource keys are available in the system:
 
 The system comes with these predefined storefront roles, each with specific permissions:
 
-| Predefined storefront role | Storefront role ID | Description | Associated resources |
-| :---- | :---- | :---- | :---- |
-| Organizational Unit Admin | 1 | Manages the organization's structure, contracts, and related settings. | ManageOrganizationAndContract, ManageUsers, ManageBuyingPolicies, ViewBuyingPolicies, ManageBudgets, ViewBudgets, ManageAccountingFields, ManageQuotes, ManageOrganizationHierarchy |
-| Order Approver | 2 | Can approve or reject orders based on predefined workflows. | ApproveOrders |
-| Order Modifier | 3 | Can use the change order feature for all orders they have access to. | ModifyOrders |
-| Buyer | 4 | Can create and submit orders within the system. | PlaceOrders |
-| Personal Cards User | 5 | Can use a new credit card at checkout and save cards for personal use only. | UseAdHocCard, SavePrivateCard |
-| Contract Manager | 6 | Can view orders placed under their assigned contract. | ViewMyContractOrders |
-| Buyer Organization Manager | 7 | Can view all orders within their organizational unit. | ViewMyOrgUnitOrders |
-| Contract Viewer | 8 | Can view profiles, payment cards, and addresses. | ViewProfile, ViewMyCards, ViewAddresses |
-| Address Manager | 9 | Can add and manage addresses during checkout. | ManageAddresses, ViewAddresses |
-| Super Buyer Admin | 16 | Has full administrative control over the buyer organization structure, including management of Organization Units and hierarchical configuration. | ManageOrganizationHierarchy |
+| Predefined storefront role | Storefront role ID | Description | Associated resources | Availability |
+| :---- | :---- | :---- | :---- | :---- |
+| Organizational Unit Admin | 1 | Manages the organization's structure, contracts, and related settings. | ManageOrganizationAndContract, ManageUsers, ManageBuyingPolicies, ViewBuyingPolicies, ManageBudgets, ViewBudget, ManageAccountingFields, ManageQuotes, ManageOrganizationHierarchy | UI and API |
+| Order Approver | 2 | Can approve or reject orders based on predefined workflows. | ApproveOrders | UI and API |
+| Order Modifier | 3 | Can use the change order feature for all orders they have access to. | ModifyOrders | UI and API |
+| Buyer | 4 | Can create and submit orders within the system. | PlaceOrders | UI and API |
+| Personal Cards User | 5 | Can use a new credit card at checkout and save cards for personal use only. | UseAdHocCard, SavePrivateCard | UI and API |
+| Contract Manager | 6 | Can view orders placed under their assigned contract. | ViewMyContractOrders | UI and API |
+| Buyer Organization Manager | 7 | Can view all orders within their organizational unit. | ViewMyOrgUnitOrders | UI and API |
+| Contract Viewer | 8 | Can view profiles, payment cards, and addresses. | ViewMyCards, ViewAddresses | UI and API |
+| Address Manager | 9 | Can add and manage addresses during checkout. | ManageAddresses, ViewAddresses | UI and API |
+| User Manager | 10 | Can create, edit, and remove users within the buyer organization. | ManageUsers | API only |
+| Buying Policy Manager | 11 | Can create, edit, and delete purchase policies and approval workflows, and view purchase policies. | ManageBuyingPolicies, ViewBuyingPolicies | API only |
+| Budget Manager | 12 | Can create, edit, allocate, and delete budgets, and view budget details, allocations, limits, and spending history. | ManageBudgets, ViewBudget | API only |
+| Accounting Field Manager | 13 | Can create, edit, and delete accounting fields. | ManageAccountingFields | API only |
+| Quote Manager | 14 | Can create, edit, and delete quotes. | ManageQuotes | API only |
+| Super Buyer Admin | 16 | Has full administrative control over the buyer organization structure, including management of Organization Units and hierarchical configuration. | ManageOrganizationHierarchy | UI and API |
+
+> ℹ️ Roles marked as "API only" can only be assigned to users via the `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/user/roles) or `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/roles/assign) endpoints.
