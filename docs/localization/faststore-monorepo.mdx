@@ -1,6 +1,6 @@
 ---
 title: "FastStore monorepo"
-createdAt: 2026-03-05T15:20:27.439Z
+createdAt: 2026-03-12T15:20:27.439Z
 ---
 
 **FastStore monorepo** is the unified repository model that centralizes the storefront development experience within VTEX.
@@ -13,7 +13,7 @@ The storefront is organized into modules, which are sets of pages that comprise 
 * **Checkout:** Handles the purchase and payment process and provides customization for checkout logic, UI, and integration points to ensure a seamless buying experience. 
 * **Sales app:** Designed for assisted sales and in-store experiences. It supports use cases where sales representatives interact with shoppers (for example, in physical stores), helping them complete purchases on behalf of customers.
 
-In this guide, you'll learn how to set up a FastStore monorepo.
+In this guide, learn how to set up a FastStore monorepo.
 
 ## Monorepo structure
 
@@ -29,11 +29,35 @@ The root of the `faststore.json` object contains a `stores` key. Inside `stores`
 
 Each account object has at least one of the following keys: `discovery`, `checkout`, and `sales-app`. Each of these keys maps to a module configuration object with the following fields:
 
-| **Field** | **Description** | **Usage** | **Required** |
-| --- | --- | --- | :-: |
-| `path` | Path to the given module customization | Local development, production build | ✅ |
-| `port` | Port where the module will be available | Local development | ✅ |
-| `cli` | An argument to override the module CLI being used | Local development, production build | ❌ |
+| **Field** | **Type** | **Description** | **Example** | **Usage** | **Required** |
+| --- | --- | --- | --- | --- | :-: |
+| `path` | `string` | Path to the given module customization | `"packages/store1"` | Local development, production build | ✅ |
+| `port` | `number` | Port where the module will be available | `3001` | Local development | ✅ |
+| `cli` | `string` | Argument to override the module CLI being used | `"custom-cli"` | Local development, production build | ❌ |
+
+The following example shows a `faststore.json` file set up for one store using multiple modules:
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3000
+      },
+      "checkout": {
+        "path": "packages/checkout",
+        "port": 3001
+      },
+      "sales-app": {
+        "path": "packages/sales-app",
+        "port": 3002
+      }
+    }
+  }
+}
+```
 
 ## Setting up your monorepo
 
@@ -55,3 +79,4 @@ After moving your project to the new repository, run `@vtex/fsp-cli` to generate
 3. Then, commit your changes and push.
 
 If you encounter errors during the process, open a ticket to [VTEX Support](https://help.vtex.com/en/support).
+
