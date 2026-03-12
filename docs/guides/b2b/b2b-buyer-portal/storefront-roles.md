@@ -53,7 +53,7 @@ The following resource keys are available in the system:
 
 | Resource Key | Description |
 | :---- | :---- |
-| ManageOrganizationAndContract | Allows management of the organization structure, contracts, and related settings. |
+| ManageOrganizationAndContract | Allows management of the organization's structure, contracts, and related settings. |
 | ManageOrganizationHierarchy | Allows the user to bypass organizational unit boundaries and manage entities at the root organization level, including access and administration across all organizational units. |
 | ManageUsers | Allows creation, modification, and deletion of users. |
 | ManageBuyingPolicies | Allows creation, modification, and deletion of buying policies and approval workflows. |
@@ -91,10 +91,10 @@ The system comes with these predefined storefront roles, each with specific perm
 | Contract Viewer | 8 | Can view profiles, payment cards, and addresses. | ViewMyCards, ViewAddresses | UI and API |
 | Address Manager | 9 | Can add and manage addresses during checkout. | ManageAddresses, ViewAddresses | UI and API |
 | User Manager | 10 | Can create, edit, and remove users within the buyer organization. | ManageUsers | API only |
-| Buying Policy Manager | 11 | Can create, edit, and delete purchase policies and approval workflows, and view purchase policies. | ManageBuyingPolicies, ViewBuyingPolicies | API only |
+| Buying Policy Manager | 11 | Can create, edit, and delete buying policies and approval workflows, and view buying policies. | ManageBuyingPolicies, ViewBuyingPolicies | API only |
 | Budget Manager | 12 | Can create, edit, allocate, and delete budgets, and view budget details, allocations, limits, and spending history. | ManageBudgets, ViewBudget | API only |
 | Accounting Field Manager | 13 | Can create, edit, and delete accounting fields. | ManageAccountingFields | API only |
 | Quote Manager | 14 | Can create, edit, and delete quotes. | ManageQuotes | API only |
-| Super Buyer Admin | 16 | Has full administrative control over the buyer organization structure, including management of Organization Units and hierarchical configuration. | ManageOrganizationHierarchy | UI and API |
+| Super Buyer Admin | 16 | Has full administrative control over the buyer organization's structure, including management of Organizational Units and hierarchical configuration. | ManageOrganizationHierarchy | UI and API |
 
 > ℹ️ Roles marked as "API only" can only be assigned to users via the `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles) or `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/roles/assign) endpoints.
