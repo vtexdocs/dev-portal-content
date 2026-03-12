@@ -35,7 +35,7 @@ Each account object has at least one of the following keys: `discovery`, `checko
 | --- | --- | --- | --- | --- | :-: |
 | `path` | `string` | Path to the given module customization | `"packages/store1"` | Local development, production build | ✅ |
 | `port` | `number` | Port where the module will be available | `3001` | Local development | ✅ |
-| `cli` | `string` | Argument to override the module CLI being used | `"custom-cli"` | Local development, production build | ❌ |
+| `cli` | `string` | Optional CLI command or package name used to override the default module CLI (`@vtex/fsp-cli`) | `"faststore-cli"` | Local development, production build | ❌ |
 
 The following example shows a `faststore.json` file set up for a single store using multiple modules:
 
