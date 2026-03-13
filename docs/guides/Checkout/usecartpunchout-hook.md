@@ -84,7 +84,7 @@ The `useCartPunchout` hook does not accept any parameters.
 
 ## Returns
 
-The `useCartPunchout` hook returns an object with the following property:
+The `useCartPunchout` hook returns an object with the following properties:
 
 ### items
 
