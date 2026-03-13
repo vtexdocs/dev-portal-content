@@ -132,7 +132,7 @@ The table below summarizes the key differences between schema declarations in th
 
 ### Schema format comparison
 
-To understand the practical differences, let's compare how the same Banner component is defined in the CMS and the Headless CMS (Legacy).
+To understand the practical differences, let's compare how the same Banner component is defined in the CMS and the Headless CMS (legacy).
 
 #### Headless CMS (legacy) format
 
