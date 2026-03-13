@@ -120,7 +120,7 @@ type RemoveItemData = {
 
 ### sync
 
-type: `sync: () => Promise<void>`
+- `sync: () => Promise<void>`
 
 ## Extension Points
 
