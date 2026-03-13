@@ -4,9 +4,10 @@ slug: "fastcheckout-setting-up"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
+except: ""
 ---
 
-After setting up your storefront monorepo, you can create a Checkout extensions project. First, add the VTEX Checkout modules to your monorepo:
+After setting up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you can create a Checkout extensions project. First, add the VTEX Checkout modules to your monorepo:
 
 ```yarn
 yarn add @vtex/checkout -D -W
@@ -24,7 +25,7 @@ After installation, create a Checkout project in your monorepo. To do this, you 
 * The module for which you want to initialize a project (in this case, `checkout`)
 * The path where you want to initialize the project
 
-Run the following command in your terminal:
+Run the following commands in your terminal:
 
 ```yarn
 yarn fsp create
@@ -48,7 +49,7 @@ After running the command, the folder is created at the root of your monorepo ba
 
 ## Updating or creating your monorepo configuration
 
-FastStore is compatible with different monorepo tools, from simple workspace setups with npm or yarn to more advanced tools such as Turbo and Nx. However, you are responsible for managing your monorepo and workspace configuration.
+FastStore is compatible with different monorepo tools, from simple workspace setups with [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/) to more advanced tools such as [Turborepo](https://turborepo.dev/) and [Nx](https://nx.dev/). You are responsible for managing your monorepo and workspace configuration.
 
 Whenever you create a new project or change your workspace configuration, update the `workspaces` field in the root `package.json`.
 

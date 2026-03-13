@@ -4,6 +4,7 @@ slug: "useredirect-hook"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
+except: ""
 ---
 
 The `useRedirect` hook allows an extension to redirect the user to another page.

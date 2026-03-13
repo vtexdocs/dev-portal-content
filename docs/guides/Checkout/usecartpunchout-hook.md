@@ -4,6 +4,7 @@ slug: "usecartpunchout-hook"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
+except: ""
 ---
 
 The `useCartPunchout` hook allows you to access cart data and perform mutations that are reflected across the Checkout data layer.
