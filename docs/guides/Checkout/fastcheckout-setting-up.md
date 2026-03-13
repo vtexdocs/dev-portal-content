@@ -7,6 +7,8 @@ updatedAt: "2026-03-11T17:08:52.219Z"
 excerpt: ""
 ---
 
+> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
+
 After setting up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you can create a Checkout extensions project. First, add the VTEX Checkout modules to your monorepo:
 
 ```yarn

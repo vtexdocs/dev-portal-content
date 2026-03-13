@@ -7,6 +7,8 @@ updatedAt: "2026-03-11T17:08:52.219Z"
 excerpt: ""
 ---
 
+> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
+
 The `useCartPunchout` hook allows you to access cart data and perform mutations that are reflected across the Checkout data layer.
 
 > ℹ️ This hook is only available in some extension points.
