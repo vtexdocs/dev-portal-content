@@ -4,7 +4,7 @@ slug: "fastcheckout-setting-up"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
-except: ""
+excerpt: ""
 ---
 
 After setting up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you can create a Checkout extensions project. First, add the VTEX Checkout modules to your monorepo:

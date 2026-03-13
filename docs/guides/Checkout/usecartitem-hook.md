@@ -4,7 +4,7 @@ slug: "usecartitem-hook"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
-except: ""
+excerpt: ""
 ---
 
 The `useCartItem` hook allows you to access detailed information about an individual cart item. This is particularly useful when you need to retrieve or display specific data related to a single item in the cart.
