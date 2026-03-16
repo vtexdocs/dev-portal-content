@@ -52,7 +52,7 @@ To implement the Punchout cart flow, you must contact our [Support team](https:/
 
 ### Implementing extension points
 
-After enabling the extension points, create a [storefront monorepo](https://beta.fast.store/reference/monorepo/) to customize it. Once you have set up your storefront monorepo, you’re ready to [set up Checkout extension points](https://beta.fast.store/checkout/setting-up).
+After enabling the extension points, create a [storefront monorepo](https://beta.fast.store/reference/monorepo/) to customize it. Once you have set up your storefront monorepo, you’re ready to [set up Checkout extension points](https://developers.vtex.com/docs/guides/fastcheckout-setting-up).
 
 To implement the Punchout cart flow, you must use the `punchout.order-summary.cta` extension point to send the cart data to the eprocurement system and redirect to its URL (e.g., via a “Transfer cart” or “Checkout” button).
 
@@ -66,7 +66,7 @@ The following extension point lets you implement this behavior:
 
 The `punchout.order-summary.cta` extension point is rendered in the Punchout screen sidebar (order summary). Use it to add a primary action button that sends the user back to the eprocurement system with the cart.
 
-The [`useRedirect` hook](https://beta.fast.store/checkout/reference/use-redirect) provides a **redirect** method that navigates the user to the eprocurement system using the target URL (for example, the eprocurement system’s cart or checkout URL) during the “transfer cart” step.
+The [`useRedirect` hook](https://developers.vtex.com/docs/guides/useredirect-hook) provides a **redirect** method that navigates the user to the eprocurement system using the target URL (for example, the eprocurement system’s cart or checkout URL) during the “transfer cart” step.
 
 #### Example: Transfer cart button
 
@@ -185,8 +185,8 @@ The `punchout.cart-item.after` extension point is optional and renders below eac
 
 The following hooks provide the necessary actions for the extension points:
 
-* [`useCartPunchout` hook](https://beta.fast.store/checkout/reference/use-cart-punchout): Access cart data and perform mutations that are reflected in other entities within the checkout data layer.
-* [`useCartItem` hook](https://beta.fast.store/checkout/reference/use-cart-item): Access detailed information about an individual cart item.
+* [`useCartPunchout` hook](https://developers.vtex.com/docs/guides/usecartpunchout-hook): Access cart data and perform mutations that are reflected in other entities within the checkout data layer.
+* [`useCartItem` hook](https://developers.vtex.com/docs/guides/usecartitem-hook): Access detailed information about an individual cart item.
 
 #### Example: Add protection plan (per-item checkbox)
 
