@@ -241,6 +241,7 @@ Punchout enables integration between external eprocurement systems and the VTEX 
 | :--- | :--- |
 | Seamless login | Authenticate procurement users into the store via one-time tokens, without manual credential input. |
 | Pre-authenticated flow | Support delegated login for users who don't exist in VTEX, trusting the integrator for authorization. |
+| Cart transfer | Customize the Punchout cart screen so buyers can transfer their cart back to the eprocurement system for approval, with optional per-item extensions. |
 
 ### Key APIs
 
@@ -248,7 +249,7 @@ Punchout enables integration between external eprocurement systems and the VTEX 
 | :--- | :--- |
 | [Punchout API](https://developers.vtex.com/docs/api-reference/punchout-api) | Start and finish punchout login flows using one-time tokens. |
 
-> ℹ️ For the full login integration, see [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration). For a conceptual overview, see [Punchout](https://developers.vtex.com/docs/guides/punchout).
+> ℹ️ For the full login integration, see [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration). For cart transfer customization, see [Punchout cart integration](https://developers.vtex.com/docs/guides/punchout-cart-integration). For a conceptual overview, see [Punchout](https://developers.vtex.com/docs/guides/punchout).
 
 ## Permissions
 
