@@ -4,7 +4,7 @@ slug: "b2b-buyer-portal-integration-overview"
 hidden: false
 createdAt: "2026-03-13T00:00:00.000Z"
 updatedAt: "2026-03-13T00:00:00.000Z"
-excerpt: "Explore the integration capabilities of B2B Buyer Portal, including organization management, budgets, buying policies, custom checkout fields, and punchout."
+excerpt: "Explore the integration capabilities of B2B Buyer Portal, including organization management, budgets, buying policies, accounting fields, and punchout."
 ---
 
 > ⚠️ B2B Buyer Portal is currently available to select accounts.
@@ -27,7 +27,7 @@ This guide provides an overview of the integration capabilities available in B2B
 - [Buying policies](#buying-policies)
   - [Capabilities](#capabilities-1)
   - [Key APIs](#key-apis-1)
-- [Custom checkout fields](#custom-checkout-fields)
+- [Accounting fields](#accounting-fields)
   - [Capabilities](#capabilities-2)
   - [Key APIs](#key-apis-2)
   - [Default values](#default-values)
@@ -67,7 +67,7 @@ flowchart TB
             BP["Buying Policies"]
         end
         subgraph CC["Commerce & Checkout"]
-            CF["Custom Fields<br/>& Default Values"]
+            CF["Accounting Fields<br/>& Default Values"]
             PO["Punchout"]
         end
     end
@@ -195,18 +195,20 @@ Buying policies enable buyer organizations to define dynamic authorization rules
 
 > ℹ️ For details on rule evaluation, score thresholds, and required permissions, see [Buying Policies](https://developers.vtex.com/docs/guides/buying-policies).
 
-## Custom checkout fields
+## Accounting fields
 
-Custom checkout fields allow B2B stores to capture additional business-specific information during checkout, such as Cost Center, PO Number, or Location. Fields can be applied at the order, item, or address level and support predefined option lists or free-form input.
+Accounting fields is the B2B Buyer Portal feature that allows stores to capture additional business-specific information during checkout, such as Cost Center, PO Number, or Location. Fields can be applied at the order, item, or address level and support predefined option lists or free-form input.
+
+Under the hood, accounting fields are powered by two APIs: the [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api), which handles field configuration, value management, and orderForm application, and the [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api), which handles pre-configured checkout defaults.
 
 ### Capabilities
 
 | Capability | Description |
 | :--- | :--- |
-| Field configuration | Define custom field structure, type, level, and requirements per contract. |
+| Field configuration | Define field structure, type, level, and requirements per contract. |
 | Value management | Create predefined values for option-type fields. |
-| OrderForm application | Apply custom field values to shopping carts during checkout, individually or in batch. |
-| Integration with budgets and policies | Use custom field value IDs as matching criteria in budget allocations and buying policy expressions. |
+| OrderForm application | Apply field values to shopping carts during checkout, individually or in batch. |
+| Integration with budgets and policies | Use field value IDs as matching criteria in budget allocations and buying policy expressions. |
 
 ### Key APIs
 
@@ -218,11 +220,11 @@ Custom checkout fields allow B2B stores to capture additional business-specific 
 
 ### Default values
 
-Default values allow buyer organization administrators to pre-configure checkout preferences for each organizational unit, such as the default shipping address, billing address, credit card, and custom field selections. When a buyer logs in, the system automatically loads these defaults, reducing manual input at checkout.
+Default values allow buyer organization administrators to pre-configure checkout preferences for each organizational unit, such as the default shipping address, billing address, credit card, and accounting field selections. When a buyer logs in, the system automatically loads these defaults, reducing manual input at checkout.
 
 | Capability | Description |
 | :--- | :--- |
-| Default configuration | Define default addresses, credit cards, and custom fields per organizational unit. |
+| Default configuration | Define default addresses, credit cards, and accounting fields per organizational unit. |
 | Automatic application | Defaults are resolved and applied to the shopper session at login. |
 
 | API | Purpose |
