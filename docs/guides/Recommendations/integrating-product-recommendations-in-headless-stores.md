@@ -192,7 +192,7 @@ This endpoint retrieves a list of recommended products based on:
 
 * Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. You can obtain the `campaignId` from:
   * The [recommendation list details page](https://help.vtex.com/en/tutorial/recommendations-dashboard#copying-shelf-id) in the VTEX Admin (copy the list ID).
-  * The confirmation page [after creating a new recommendation list](https://help.vtex.com/en/tutorial/creating-a-recommendation-list#copying-list-id) (copy the list ID). 
+  * The confirmation page [after creating a new recommendation list](https://help.vtex.com/en/tutorial/creating-a-recommendation-list#copying-list-id) (copy the list ID).
 
   Available campaign types:
 
