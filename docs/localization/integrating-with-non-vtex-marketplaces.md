@@ -68,8 +68,8 @@ To define sales channels for your marketplace:
 1. Evaluate if you need different configurations for each marketplace. If all of them use the same configurations, use your default sales channel.
 
    The same sales channel can be used to integrate with multiple marketplaces. [Requesting additional trade policies](https://help.vtex.com/docs/tutorials/requesting-an-additional-trade-policy) for marketplace integrations may incur a monthly fee.
-3. If you need specific settings, [create a new trade policy](https://help.vtex.com/docs/tutorials/creating-a-trade-policy) for your operations.
-4. Configure the sales channel with the appropriate settings for catalog, pricing, promotions, and logistics. For detailed configuration instructions, see [Configuring a marketplace trade policy](https://help.vtex.com/docs/tutorials/configuring-a-marketplace-trade-policy).
+2. If you need specific settings, [create a new trade policy](https://help.vtex.com/docs/tutorials/creating-a-trade-policy) for your operations.
+3. Configure the sales channel with the appropriate settings for catalog, pricing, promotions, and logistics. For detailed configuration instructions, see [Configuring a marketplace trade policy](https://help.vtex.com/docs/tutorials/configuring-a-marketplace-trade-policy).
 
 ### Creating an affiliate
 
