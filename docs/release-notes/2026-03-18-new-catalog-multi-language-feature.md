@@ -24,10 +24,10 @@ Merchants and B2B business models can now benefit from:
 
 ## Why did we make this change?
 
-Now, VTEX stores have a flexible, scalable way to manage catalog content across multiple channels and markets, which contributes to business expansion. Besides, having localized meta descriptions, keywords, and URL slugs optimizes SEO.
+Now, VTEX stores have a flexible, scalable way to manage catalog content across multiple markets, which contributes to business expansion. Besides, having localized meta descriptions, keywords, and URL slugs optimizes SEO.
 
 ## What needs to be done?
 
 To activate the multi-language feature for your account, contact [VTEX Support](https://help.vtex.com/en/support).
 
-> ⚠️ Once the multi-language API is activated, GraphQL-based translation management will no longer be supported.
+> ⚠️ Once the feature is activated, GraphQL-based translation management will no longer be supported.
