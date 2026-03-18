@@ -126,7 +126,7 @@ All operations on the platform are automatically logged. Platform errors are log
 
 VTEX actively monitors application and infrastructure logs for patterns indicative of potential security risks, issuing alerts and implementing countermeasures upon detection. To maintain the privacy and security of our customers and ensure compliance with regulations, VTEX does not grant access to its internal systems.
 
-For merchant access, our services record various operations, including their authors and timestamps, in [Audit](https://help.vtex.com/docs/tutorials/searching-for-events-on-audit), a tool available in the VTEX Admin for searching and investigating store history using filters.
+For merchant access, our services record various operations, including their authors and timestamps, in [Audit](https://help.vtex.com/en/docs/tutorials/audit), a tool available in the VTEX Admin for searching and investigating store history using filters.
 
 Explore the [list of events available in Audit](https://help.vtex.com/docs/tutorials/events-available-in-audit). If necessary, merchants can also request specific event logs from [Support](https://help.vtex.com/en/support).
 
