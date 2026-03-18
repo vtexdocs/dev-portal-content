@@ -20,7 +20,7 @@ Merchants and B2B business models can now benefit from:
 - **Integrated translation workflows:** Have automated translations with a Translation Management System (TMS).
 - **Localized experience:** Provide customers with localized shopping experiences across multiple channels.
 
-> ℹ️ The multi-language feature is available for all VTEX accounts. It is in general availability for headless CMS, and in beta for Store Framework.
+> ℹ️ The multi-language feature is available for all VTEX accounts, and it is in general availability for headless CMS, and in beta for Store Framework.
 
 ## Why did we make this change?
 
