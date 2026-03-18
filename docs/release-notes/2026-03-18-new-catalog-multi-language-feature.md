@@ -19,7 +19,7 @@ The feature enables the following capabilities:
 - **Multiple storefront technologies:** Consume translations across Store Framework and headless implementations.
 - **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
 
-> ℹ️ To see the complete documentation of the multi-language endpoints, check the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
+> ℹ️ To see the complete documentation, check the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide), and the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language),
 
 ## Why did we make this change?
 
