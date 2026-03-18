@@ -104,6 +104,7 @@ For VTEX native connectors or partner solutions:
 For native connectors or partner solutions, products associated with the corresponding sales channel are sent automatically.
 
 In custom integrations, you should:
+
 * Implement product export using VTEX APIs.
 * Handle Change Notification and SKU Suggestion flows.
 * Process responses and retry failed products.
