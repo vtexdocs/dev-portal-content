@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-react-builder"
 excerpt: "Learn how to use the VTEX IO React builder."
 hidden: false
 createdAt: "2024-04-19T16:14:00.000Z"
-updatedAt: "2026-02-11T21:52:32.623Z"
+updatedAt: "2026-03-18T13:45:38.269Z"
 category: "App Development"
 ---
 
