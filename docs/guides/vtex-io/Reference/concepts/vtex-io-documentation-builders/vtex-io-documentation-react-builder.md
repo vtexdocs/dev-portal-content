@@ -43,7 +43,6 @@ To use the `react` builder, follow these steps:
 
 1. Clone the React [boilerplate app](https://github.com/vtex-apps/react-app-template/tree/master/react) to your local files.
 2. Modify the `manifest.json` file in the React example app to include your app's metadata, such as its name, version, vendor, and dependencies. The `react` builder must also be declared in the app's `manifest.json` file as follows:
-    
     ```json
     "builders": {
         "react": "3.x"
