@@ -128,6 +128,6 @@ To configure acceptable price variance, follow these instructions:
 3. Click `Create rule`.
 4. In the **Authorization Rules** panel, click `CREATE RULES` to set a new rule.
 5. Set the interval and define what should happen in this interval: `Automatically authorize`, `Automatically deny`, or `Create a VTEX DO task for approval`.
-5. Click `SAVE RULES` to save the rule.
+6. Click `SAVE RULES` to save the rule.
 
 > ℹ️ For detailed information, see [Price Divergence rule](https://help.vtex.com/en/docs/tutorials/price-divergence-rule).
