@@ -14,7 +14,7 @@ The [multi-language feature](https://developers.vtex.com/docs/guides/catalog-mul
 
 ## What has changed?
 
-With the feature, merchants and B2B business models can benefit from:
+Merchants and B2B business models now can benefit from:
 
 - **Granular content management:** Create, retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
 - **Integrated translation workflows:** Enables automated translations with a Translation Management System (TMS).
@@ -23,12 +23,12 @@ With the feature, merchants and B2B business models can benefit from:
 
 ## Why did we make this change?
 
-Now, multiple business models can benefit from a flexible, scalable way to manage catalog content across multiple channels and markets. It is worth highlighting the SEO improvements and facilitated business expansion.
+Now, VTEX stores have a flexible, scalable way to manage catalog content across multiple channels and markets, which contributes to business expansion. Besides, having localized meta descriptions, keywords, and URL slugs optimizes SEO.
+
+> ℹ️ The multi-language feature is in general availability (GA) for headless CMS, and in beta for Store Framework, and is available for all VTEX accounts.
 
 ## What needs to be done?
 
-The multi-language feature is in general availability (GA) for headless CMS, and in beta for Store Framework, and is available for all VTEX accounts.
-
-If you wish to activate it for your account, contact [VTEX Support](https://help.vtex.com/en/support).
+To activate the multi-language feature for your account, contact [VTEX Support](https://help.vtex.com/en/support).
 
 > ⚠️ Once the multi-language API is activated, GraphQL-based translation management will no longer be supported.
