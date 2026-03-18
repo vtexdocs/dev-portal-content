@@ -12,17 +12,18 @@ The [multi-language feature](https://developers.vtex.com/docs/guides/catalog-mul
 
 ## What has changed?
 
-With the new feature merchants and B2B customers can:
+The feature enables the following capabilities:
 
-- **Manage translations:** Create localized content for all catalog entities per locale (IETF BCP 47 format).
-- **Automatic indexing:** Intelligent Search automatically indexes translated content for fast retrieval and filtering.
-- **Multi-storefront support:** Consume translations across Store Framework and headless implementations.
-- **Integrate with TMS:** Connect your Translation Management System to automate translation workflows.
-- **Scale globally:** Expand your catalog to new markets without duplicating products.
+- **Granular content management:** Create, retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
+- **Integrated translation workflows:** It enables automated translations with a Translation Management System (TMS).
+- **Multiple storefront technologies:** Consume translations across Store Framework and headless implementations.
+- **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
+
+> ℹ️ To see the complete documentation of the multi-language endpoints, check the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
 
 ## Why did we make this change?
 
-Now merchants and B2B business models can benefit from a flexible, scalable way to manage catalog content across multiple languages and markets, which improves SEO and enables business expansion.
+Now, merchants and B2B business models can benefit from a flexible, scalable way to manage catalog content across multiple languages and markets. Besides, it contributes to SEO improvements and facilitates business expansion.
 
 ## What needs to be done?
 
