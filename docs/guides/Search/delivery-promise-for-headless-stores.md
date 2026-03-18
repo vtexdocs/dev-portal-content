@@ -78,24 +78,6 @@ The possible filters are:
 
 Learn more about each of them in the following sections.
 
->ℹ️ **Retrieving available pickup points**
->
-> To retrieve the list of available pickup points with their IDs, distances, addresses, and business hours, use the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. This endpoint returns pickup points based on product availability (product cluster/collection), sorted by distance from the provided coordinates.
->
-> You can call this endpoint in two ways:
->
-> - **With country and ZIP code:** Provide the country and ZIP code to retrieve pickup points based on location.
->
->   ```txt
->   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
->   ```
->
-> - **With delivery zones and pickups hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupsHash`) for faster lookup.
->
->   ```txt
->   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?deliveryZonesHash={deliveryZonesHash}&pickupsHash={pickupsHash}&an={accountName}
->   ```
-
 #### Delivery to the shopper’s ZIP code
 
 Filters the search for products that can be delivered to the zip code entered by the buyer.
@@ -131,6 +113,24 @@ Example:
 ```txt
 https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-in-point/pickup-nearby?zip-code=22250040 
 ```
+
+### Retrieving available pickup points
+
+To retrieve the list of available pickup points with their IDs, distances, addresses, and business hours, use the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. This endpoint returns pickup points based on product availability (product cluster/collection), sorted by distance from the provided coordinates.
+
+You can call this endpoint in two ways:
+
+- **With country and ZIP code:** Provide the country and ZIP code to retrieve pickup points based on location.
+
+   ```txt
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
+   ```
+
+ - **With delivery zones and pickups hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupsHash`) for faster lookup.
+
+   ```txt
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?deliveryZonesHash={deliveryZonesHash}&pickupsHash={pickupsHash}&an={accountName}
+   ```
 
 ### Filtering by Delivery Options
 
