@@ -14,7 +14,7 @@ The [multi-language feature](https://developers.vtex.com/docs/guides/catalog-mul
 
 ## What has changed?
 
-Merchants and B2B business models now can benefit from:
+Merchants and B2B business models can now benefit from:
 
 - **Granular content management:** Create, retrieve and store translations for catalog entities.
 - **Integrated translation workflows:** Have automated translations with a Translation Management System (TMS).
