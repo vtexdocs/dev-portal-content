@@ -2,8 +2,8 @@
 title: "Bulk pricing import integration"
 slug: "bulk-pricing-import-integration"
 hidden: false
-createdAt: "2026-03-16T13:00:00.152Z"
-updatedAt: "2026-03-16T13:00:00.152Z"
+createdAt: "2026-03-19T13:00:00.152Z"
+updatedAt: "2026-03-19T13:00:00.152Z"
 ---
 
 The Bulk Pricing API enables high-throughput, asynchronous processing of large-scale pricing updates via CSV file uploads. Instead of updating prices one SKU at a time through individual API calls, you can submit a single CSV file containing hundreds or thousands of price updates and let the platform process them in the background.
