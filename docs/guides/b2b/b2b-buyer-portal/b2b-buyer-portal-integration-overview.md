@@ -4,7 +4,7 @@ slug: "b2b-buyer-portal-integration-overview"
 hidden: false
 createdAt: "2026-03-13T00:00:00.000Z"
 updatedAt: "2026-03-13T00:00:00.000Z"
-excerpt: "Explore the integration capabilities of B2B Buyer Portal, including organization management, budgets, buying policies, accounting fields, and punchout."
+excerpt: "Explore the integration capabilities of B2B Buyer Portal, including organization management, Budgets, Buying policies, Accounting fields, and Punchout."
 ---
 
 > ⚠️ B2B Buyer Portal is currently available to select accounts.
