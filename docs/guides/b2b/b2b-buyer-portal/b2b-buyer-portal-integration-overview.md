@@ -40,7 +40,7 @@ This guide provides an overview of the integration capabilities available in B2B
 
 B2B Buyer Portal integrations are built around the following core concepts:
 
-- **Organizational units** represent the hierarchical structure of a buyer organization, such as departments, divisions, or subsidiaries. They are the central entity that scopes most buyer portal features.
+- **[Organizational Units](https://help.vtex.com/en/docs/tutorials/organization-units)** represent the hierarchical structure of a buyer organization, such as departments, divisions, or subsidiaries. They are the central entity that allows users to scope most buyer portal features.
 - **Contracts** bind organizational units to commercial conditions, including product assortments, payment methods, and addresses.
 - **Storefront users** are members of the buyer organization who interact with the store, each assigned specific roles and permissions.
 - **Storefront roles** control what actions each user can perform, from placing orders to managing budgets.
