@@ -18,7 +18,7 @@ The main actors involved are:
 
 This guide covers the following integration flows:
 
-- [Bulk import flow (base & fixed)](#bulk-import-flow-base-fixed)  
+- [Bulk import flow (base & fixed)](#bulk-import-flow)  
 - [Batch monitoring and error handling flow](#batch-monitoring-and-error-handling-flow)
 
 This guide is intended for developers and integrators responsible for implementing bulk pricing update flows against the VTEX platform.
@@ -69,7 +69,7 @@ Each endpoint requires specific License Manager resources. Requests made without
 
 ℹ️ To prevent integrations from having excessive permissions, follow the [best practices for managing API keys](https://help.vtex.com/en/tutorial/best-practices-api-keys--7b6nD1VMHa49aI5brlOvJm) when assigning License Manager roles to integrations.
 
-## Bulk import flow 
+## Bulk import flow
 
 Use this unified flow to import either base prices or fixed prices. The high-level process is identical for both import types; differences are noted inline where they matter.
 
@@ -85,7 +85,7 @@ Use this unified flow to import either base prices or fixed prices. The high-lev
 - `GET /api/price-importer/pvt/batches/{batchId}` – Poll batch status and progress.  
 - `GET /api/price-importer/pvt/batches/{batchId}/errors` – Retrieve a pre-signed URL to download a CSV with row-level errors.
 
-### Step-by-step 
+### Step-by-step
 
 1. Prepare a CSV file following the schema for the import type (see CSV schemas below). Ensure UTF-8 encoding, comma delimiter and a header row.  
 2. Call `POST /api/price-importer/pvt/import/{importType}` with a JSON body containing `contentType` and `contentLengthBytes`. Optionally set `output=email` for email notifications.  
@@ -197,7 +197,7 @@ SKU ID,Trade Policy,Price,List Price,Min Quantity,Date From,Date To,Child Accoun
 26,gold,15.00,17.00,,,,
 ```
 
-### Error handling 
+### Error handling
 
 | HTTP Status | Meaning | Action |
 | :---- | :---- | :---- |
@@ -344,5 +344,4 @@ The `upload.url` returned by the Import prices endpoint is a pre-signed URL that
 - Use the exact URL as returned. Do not modify it or replace it with the API base URL.  
 - Use the `PUT` HTTP method.  
 - Include all headers specified in the `upload.headers` object.  
-- Complete the upload before the `expiresAt` timestamp.  
-
+- Complete the upload before the `expiresAt` timestamp.
