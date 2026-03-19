@@ -86,13 +86,13 @@ flowchart TB
 
 Organization management covers the structure, identity, and access control of a buyer organization. It includes creating and managing organizational units, provisioning users, assigning roles, and storing enriched buyer data.
 
-These capabilities form the foundation of every B2B Buyer Portal integration since most other features (budgets, buying policies, custom fields) operate within the context of organizational units and depend on users having the right storefront roles.
+These capabilities form the foundation of every B2B Buyer Portal integration since most other features (Budgets, Buying policies, custom fields) operate within the context of organizational units and depend on users having the right storefront roles.
 
 ### Organizational units and scopes
 
 Organizational units represent the hierarchical structure of a buyer organization. A unit can be a department, division, regional office, or any other grouping that reflects how the company organizes its purchasing operations.
 
-Each organizational unit also supports **scopes**, which allow administrators to restrict which attributes, such as contracts, payment methods, addresses, credit cards, collections, and accounting fields, are visible and available to users within that unit.
+Each organizational unit also supports **scopes**, which allow administrators to restrict which attributes, such as contracts, payment methods, addresses, credit cards, collections, and [accounting fields](https://help.vtex.com/en/docs/tutorials/accounting-fields), are visible and available to users within that unit.
 
 > ℹ️ For more information about scopes, see [Scopes overview](https://help.vtex.com/en/docs/tutorials/scopes-overview).
 
