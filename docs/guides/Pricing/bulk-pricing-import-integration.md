@@ -88,7 +88,7 @@ Use this unified flow to import either base prices or fixed prices. The high-lev
 ### Step-by-step 
 
 1. Prepare a CSV file following the schema for the import type (see CSV schemas below). Ensure UTF-8 encoding, comma delimiter and a header row.  
-2. Call `POST /api/price-importer/pvt/import/{importType}` with a JSON body containing `contentType` and `contentLengthBytes`. Optionally set `output=email` or `output=webhook`.  
+2. Call `POST /api/price-importer/pvt/import/{importType}` with a JSON body containing `contentType` and `contentLengthBytes`. Optionally set `output=email` for email notifications.  
    - Example `importType` values:  
      - `base-prices` — base price import.  
      - `fixed-prices` — fixed price import.  
@@ -120,7 +120,7 @@ Start a fixed price import:
 
 ```shell
 curl -X POST \
-  "https://{accountName}.vtexcommercestable.com.br/api/price-importer/pvt/import/fixed-prices?output=webhook" \
+  "https://{accountName}.vtexcommercestable.com.br/api/price-importer/pvt/import/fixed-prices?output=email" \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -H "X-VTEX-API-AppKey: {appKey}" \
@@ -274,7 +274,6 @@ curl -X GET \
   "type": "base",
   "status": "COMPLETED_WITH_ERRORS",
   "outputs": [
-    "webhook:https://www.example.com/callback",
     "email:user@example.com"
   ],
   "bytesProcessed": 13800000,
@@ -330,15 +329,13 @@ The maximum file size is **500 MB**. If your data exceeds this limit, split it i
 
 ### Output notifications
 
-Use the `output` query parameter in the Import prices request to configure how you want to be notified when the job finishes:
+Use the `output` query parameter in the Import prices request to configure email notifications when the job finishes:
 
 | Value | Description |
 | :---- | :---- |
-| `none` | No notification (default). You must poll the status endpoint. |
 | `email` | Sends an email notification when processing completes. |
-| `webhook` | Sends a webhook notification when processing completes. |
 
-ℹ️ The target email address or webhook URL is configured separately in the platform settings.
+ℹ️ The target email address is configured separately in the platform settings.
 
 ### Pre-signed URL usage
 
