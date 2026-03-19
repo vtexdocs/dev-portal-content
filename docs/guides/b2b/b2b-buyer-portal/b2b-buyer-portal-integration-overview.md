@@ -17,7 +17,7 @@ This guide provides an overview of the integration capabilities available in B2B
 
 - [Architecture overview](#architecture-overview)
 - [Organization management](#organization-management)
-  - [Organizational units and scopes](#organizational-units-and-scopes)
+  - [Organizational Units and scopes](#organizational-units-and-scopes)
   - [User provisioning](#user-provisioning)
   - [Storefront roles and permissions](#storefront-roles-and-permissions)
   - [Buyer data and contact information](#buyer-data-and-contact-information)
