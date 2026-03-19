@@ -22,25 +22,17 @@ This guide provides an overview of the integration capabilities available in B2B
   - [Storefront roles and permissions](#storefront-roles-and-permissions)
   - [Buyer data and contact information](#buyer-data-and-contact-information)
 - [Budgets and allocations](#budgets-and-allocations)
-  - [Capabilities](#capabilities)
-  - [Key APIs](#key-apis)
 - [Buying policies](#buying-policies)
-  - [Capabilities](#capabilities-1)
-  - [Key APIs](#key-apis-1)
 - [Accounting fields](#accounting-fields)
-  - [Capabilities](#capabilities-2)
-  - [Key APIs](#key-apis-2)
   - [Default values](#default-values)
 - [Punchout](#punchout)
-  - [Capabilities](#capabilities-3)
-  - [Key APIs](#key-apis-3)
 - [Permissions](#permissions)
 
 ## Architecture overview
 
 B2B Buyer Portal integrations are built around the following core concepts:
 
-- **[Organizational Units](https://help.vtex.com/en/docs/tutorials/organization-units)** represent the hierarchical structure of a buyer organization, such as departments, divisions, or subsidiaries. They are the central entity that allows users to scope most buyer portal features.
+- [Organizational Units](https://help.vtex.com/en/docs/tutorials/organization-units) represent the hierarchical structure of a buyer organization, such as departments, divisions, or subsidiaries. They are the central entity that allows users to scope most buyer portal features.
 - **Contracts** bind organizational units to commercial conditions, including product assortments, payment methods, and addresses.
 - **Storefront users** are members of the buyer organization who interact with the store, each assigned specific roles and permissions.
 - **Storefront roles** control what actions each user can perform, from placing orders to managing budgets.
@@ -86,7 +78,7 @@ flowchart TB
 
 Organization management covers the structure, identity, and access control of a buyer organization. It includes creating and managing organizational units, provisioning users, assigning roles, and storing enriched buyer data.
 
-These capabilities form the foundation of every B2B Buyer Portal integration since most other features (Budgets, Buying policies, custom fields) operate within the context of organizational units and depend on users having the right storefront roles.
+These capabilities form the foundation of every B2B Buyer Portal integration since most other features (Budgets, Buying policies, accounting fields) operate within the context of organizational units and depend on users having the right storefront roles.
 
 ### Organizational units and scopes
 
@@ -103,9 +95,7 @@ Each organizational unit also supports **scopes**, which allow administrators to
 | Scope configuration | Restrict which contracts, payment methods, addresses, and other attributes are available per unit. |
 | User assignment | Link storefront users to their respective organizational units. |
 
-| API | Purpose |
-| :--- | :--- |
-| [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) | Create, list, move, edit, delete organizational units, and manage scopes. |
+Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) to create, list, move, edit, and delete organizational units and to manage scopes.
 
 ### User provisioning
 
@@ -119,10 +109,11 @@ The provisioning flow includes registering storefront credentials in VTEX ID, as
 | Assign users to units | Link storefront users to their respective organizational units. |
 | Assign storefront roles | Grant role-based permissions that control what each user can do. |
 
-| API | Purpose |
-| :--- | :--- |
-| [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api) | Create storefront users and manage authentication identifiers. |
-| [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) | Allocate users to organizational units. |
+
+The key APIs related to user provisioning are:
+
+- [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api) — Create storefront users and manage authentication identifiers.
+- [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) — Allocate users to organizational units.
 
 > ℹ️ For the full step-by-step integration, see [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning).
 
@@ -138,9 +129,7 @@ The system ships with predefined roles (such as Buyer, Order Approver, and Organ
 | Permission verification | Check whether a user has access to a specific storefront resource. |
 | Role revocation | Remove roles from users when their responsibilities change. |
 
-| API | Purpose |
-| :--- | :--- |
-| [Storefront Roles API](https://developers.vtex.com/docs/api-reference/storefront-roles-api) | Assign, revoke, and query storefront roles and resource permissions. |
+Use the [Storefront Roles API](https://developers.vtex.com/docs/api-reference/storefront-roles-api) to assign, revoke, and query storefront roles and resource permissions.
 
 > ℹ️ For the full list of available roles, resources, and required permissions, see [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles).
 
@@ -148,17 +137,15 @@ The system ships with predefined roles (such as Buyer, Order Approver, and Organ
 
 VTEX provides dedicated APIs for managing enriched buyer profiles and contact information associated with B2B organizations. These APIs support scenarios where merchants need to store, query, or update buyer-specific data beyond what is captured during user provisioning, such as managing tokenized payment cards or organizational contact details.
 
-| API | Purpose |
-| :--- | :--- |
-| [B2B Buyer Data API](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api) | Manage enriched buyer profile data. |
-| [B2B Contact Information API](https://developers.vtex.com/docs/api-reference/b2b-contact-information-api) | Manage contact details associated with buyer organizations. |
-| [Card Token Vault API](https://developers.vtex.com/docs/api-reference/card-token-vault-api) | Store and manage tokenized payment card data for B2B buyers. |
+The key APIs for managing buyers and contact information are:
+
+- [B2B Buyer Data API](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api) — Manage enriched buyer profile data.
+- [B2B Contact Information API](https://developers.vtex.com/docs/api-reference/b2b-contact-information-api) — Manage contact details associated with buyer organizations.
+- [Card Token Vault API](https://developers.vtex.com/docs/api-reference/card-token-vault-api) — Store and manage tokenized payment card data for B2B buyers.
 
 ## Budgets and allocations
 
 Budgets allow buyer organizations to define spending envelopes and distribute them across allocations tied to specific entities such as cost centers, users, or addresses. During checkout, the system queries applicable allocations so that orders can be funded according to the organization's financial rules.
-
-### Capabilities
 
 | Capability | Description |
 | :--- | :--- |
@@ -167,11 +154,7 @@ Budgets allow buyer organizations to define spending envelopes and distribute th
 | Checkout lookup | Query applicable allocations at checkout to determine how an order should be funded. |
 | Balance tracking | Track remaining balances and spending history through transactions and statements. |
 
-### Key APIs
-
-| API | Purpose |
-| :--- | :--- |
-| [Budgets API](https://developers.vtex.com/docs/api-reference/budgets-api) | Create, update, query, and delete budgets and allocations. |
+Use the [Budgets API](https://developers.vtex.com/docs/api-reference/budgets-api) to create, update, query, and delete budgets and allocations.
 
 > ℹ️ For the complete integration flow, see [Budgets and allocations](https://developers.vtex.com/docs/guides/budgets-and-allocations).
 
@@ -179,29 +162,19 @@ Budgets allow buyer organizations to define spending envelopes and distribute th
 
 Buying policies enable buyer organizations to define dynamic authorization rules that control whether orders are automatically approved, denied, or sent for manual review. The system evaluates rules hierarchically across organizational units, using a priority-based mechanism.
 
-### Capabilities
-
 | Capability | Description |
 | :--- | :--- |
 | Rule configuration | Register custom rule expressions with bypass, deny, or sequential workflow behaviors. |
 | Hierarchical evaluation | Evaluate rules across organizational unit dimensions in priority order. |
 | Manual authorization | Support approval or denial workflows through score-based callbacks. |
 
-### Key APIs
-
-| API | Purpose |
-| :--- | :--- |
-| [Buying Policies API](https://developers.vtex.com/docs/api-reference/buying-policies-api) | Create and manage authorization rules and process order approval callbacks. |
+Use the [Buying Policies API](https://developers.vtex.com/docs/api-reference/buying-policies-api) to create and manage authorization rules and process order approval callbacks.
 
 > ℹ️ For details on rule evaluation, score thresholds, and required permissions, see [Buying Policies](https://developers.vtex.com/docs/guides/buying-policies).
 
 ## Accounting fields
 
 Accounting fields is the B2B Buyer Portal feature that allows stores to capture additional business-specific information during checkout, such as Cost Center, PO Number, or Location. Fields can be applied at the order, item, or address level and support predefined option lists or free-form input.
-
-Under the hood, accounting fields are powered by two APIs: the [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api), which handles field configuration, value management, and orderForm application, and the [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api), which handles pre-configured checkout defaults.
-
-### Capabilities
 
 | Capability | Description |
 | :--- | :--- |
@@ -210,11 +183,9 @@ Under the hood, accounting fields are powered by two APIs: the [Custom Fields AP
 | OrderForm application | Apply field values to shopping carts during checkout, individually or in batch. |
 | Integration with budgets and policies | Use field value IDs as matching criteria in budget allocations and buying policy expressions. |
 
-### Key APIs
-
-| API | Purpose |
-| :--- | :--- |
-| [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api) | Create field settings, manage values, and apply fields to orderForms. |
+The key APIs for managing Accounting Fields are:
+ 
+- [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api)- Define field configuration, value management, and orderForm application, - [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api) - Set up and manage pre-configured checkout defaults.
 
 > ℹ️ For the full integration flow, see [Custom Fields integration](https://developers.vtex.com/docs/guides/custom-fields-integration).
 
@@ -227,9 +198,7 @@ Default values allow buyer organization administrators to pre-configure checkout
 | Default configuration | Define default addresses, credit cards, and accounting fields per organizational unit. |
 | Automatic application | Defaults are resolved and applied to the shopper session at login. |
 
-| API | Purpose |
-| :--- | :--- |
-| [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api) | Create, update, retrieve, and delete default value configurations. |
+Use the [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api) to create, update, retrieve, and delete default value configurations.
 
 > ℹ️ For the complete integration flow, see [Default Values integration](https://developers.vtex.com/docs/guides/default-values-integration).
 
@@ -237,19 +206,13 @@ Default values allow buyer organization administrators to pre-configure checkout
 
 Punchout enables integration between external eprocurement systems and the VTEX store, allowing procurement users to authenticate and browse the supplier's catalog directly from their procurement platform. The integration supports two authentication flows: one for users who already exist in VTEX and one for pre-authenticated users managed by the integrator.
 
-### Capabilities
-
 | Capability | Description |
 | :--- | :--- |
 | Seamless login | Authenticate procurement users into the store via one-time tokens, without manual credential input. |
 | Pre-authenticated flow | Support delegated login for users who don't exist in VTEX, trusting the integrator for authorization. |
 | Cart transfer | Customize the Punchout cart screen so buyers can transfer their cart back to the eprocurement system for approval, with optional per-item extensions. |
 
-### Key APIs
-
-| API | Purpose |
-| :--- | :--- |
-| [Punchout API](https://developers.vtex.com/docs/api-reference/punchout-api) | Start and finish punchout login flows using one-time tokens. |
+Use the [Punchout API](https://developers.vtex.com/docs/api-reference/punchout-api) to start and finish punchout login flows using one-time tokens.
 
 > ℹ️ For the full login integration, see [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration). For cart transfer customization, see [Punchout cart integration](https://developers.vtex.com/docs/guides/punchout-cart-integration). For a conceptual overview, see [Punchout](https://developers.vtex.com/docs/guides/punchout).
 
