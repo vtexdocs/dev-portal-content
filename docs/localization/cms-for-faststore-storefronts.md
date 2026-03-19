@@ -12,7 +12,7 @@ The CMS is a VTEX content management system for defining, storing, and deliverin
 
 The system follows a decoupled architecture that separates content authoring from content consumption. This separation allows content management workflows and content delivery workloads to evolve and scale independently.
 
-> ℹ️ This guide covers the VTEX CMS in the context of FastStore. If you are using another storefront technology, see the content management documentation specific to that storefront.
+> ℹ️ This guide covers the VTEX CMS in the context of FastStore. If you're using another storefront technology, see the content management documentation specific to that storefront.
 
 ## Technical overview
 
@@ -38,7 +38,7 @@ Define content structures using [JSON Schema](https://json-schema.org/) with sup
 
 ### Content editing
 
-Manage content through the VTEX Admin with:
+Manage content through the VTEX Admin using:
 
 - **AI content generation**: Generate and improve content with integrated AI services.
 - **Branching workflow**: Create isolated branches, preview changes, and merge to publish.
