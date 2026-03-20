@@ -1,0 +1,28 @@
+name: Review Orchestrator
+
+on:
+  pull_request:
+    types: [opened, ready_for_review]
+    paths:
+      - 'docs/**/*.md'
+      - 'docs/**/*.mdx'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  post-initial-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create orchestrator comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-id: review-orchestrator
+          edit-mode: replace
+          body: |
+            This repository has AI-based reviews for Markdown files. To run a review, apply the labels to this PR corresponding to the desired review type. The available labels are: `AI style review` and `AI grammar review`.
+
+            <!-- review-orchestrator -->
