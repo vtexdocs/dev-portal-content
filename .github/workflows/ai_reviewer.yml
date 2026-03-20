@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'AI style review'
     outputs:
-      files: ${{ steps.get-files.outputs.all_modified_files }}
+      files: ${{ steps.get-files.outputs.files }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -28,18 +28,18 @@ jobs:
           json: true
           escape_json: false
           files: |
-            docs/**/*.md
-            docs/**/*.mdx
+            **/*.md
+            **/*.mdx
       - name: Check output
-        run: echo "${{ steps.get-files.outputs.all_modified_files }}"
+        run: echo "${{ steps.get-files.outputs.files }}"
 
   ai-reviewer:
     needs: get-changed-files
     runs-on: ubuntu-latest
     if: |
       needs.get-changed-files.result == 'success' &&
-      needs.get-changed-files.outputs.all_modified_files != '[]' &&
-      needs.get-changed-files.outputs.all_modified_files != ''
+      needs.get-changed-files.outputs.files != '[]' &&
+      needs.get-changed-files.outputs.files != ''
     strategy:
       fail-fast: false
       matrix:
