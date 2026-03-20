@@ -35,7 +35,7 @@ App developers should adhere to the following guidelines:
 
 - **Prefer Stable Versions:** When developing new apps or major versions, always use **Stable** Builder versions.
 - **Update Apps:** Developers must prioritize updating existing applications that rely on **Deprecated, Decommissioned, or Non-functional** Builder versions to a currently **Stable** version.
-    - Apps running on **Decommissioned** versions will continue to run, but you can't link new workspaces or publish any new versions (minor, patch, or major).
-    - Apps on **Non-functional** versions will cease to operate on the platform.
+  - Apps running on **Decommissioned** versions will continue to run, but you can't link new workspaces or publish any new versions (minor, patch, or major).
+  - Apps on **Non-functional** versions will cease to operate on the platform.
 
 Review the [Builder version statuses](https://developers.vtex.com/docs/guides/vtex-io-documentation-builder-version-statuses) documentation to verify the status of the Builders used in your applications.
