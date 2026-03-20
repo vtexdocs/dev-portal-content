@@ -15,16 +15,16 @@ tags:
 
 When attempting to [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) a new [store theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) or [publish an app in VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app), you may encounter a [dependency](https://developers.vtex.com/docs/guides/vtex-io-documentation-dependencies) validation error.
 
-This issue occurs when an app dependency is [deprecated](https://developers.vtex.com/docs/guides/vtex-io-documentation-deprecating-an-app), a release candidate, or a pre-release [version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version). In this scenario, VTEX IO blocks theme installation or app publishing and displays an error similar to the following:
+This issue occurs when an app dependency is [deprecated](https://developers.vtex.com/docs/guides/vtex-io-documentation-deprecating-an-app), or is a release candidate or pre-release [version](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version). In these cases, VTEX IO blocks installation or publishing and displays an error similar to the following:
 
-`Error validating app dependencies: Error with dependency {appvendor}.{appname}@{appversion}: App cannot be deprecated, a release candidate version or a prerelease version: {appvendor}.{appname}@{appversion}`
+`Error validating app dependencies: Error with dependency {appvendor}.{appname}@{appversion}: App cannot be deprecated, a release candidate version, or a pre-release version: {appvendor}.{appname}@{appversion}`
 
 ## Solution
 
 To solve this issue, follow the steps below:
 
 1. In the error message, identify the specific app causing the issue with the format `{appvendor}.{appname}@{appversion}`. For example: `template.mygiftcard@0.x`.
-2. If the dependent app version is deprecated, a release candidate, or a pre-release, deprecate it so the system can use a stable version. Run:
+2. If the dependent app version is deprecated, a release candidate, or a pre-release, disable it so the system can use a stable version. Run:
 
    ```sh
    vtex deprecate {appvendor}.{appname}@{appversion}
@@ -36,7 +36,7 @@ To solve this issue, follow the steps below:
    vtex update {appvendor}.{appname}
    ```
 
-4. If deprecation is not needed and you want to republish that specific version, run:
+4. If deprecation isn't needed and you want to republish that specific version, run:
 
    ```sh
    vtex undeprecate {appvendor}.{appname}@{appversion}
