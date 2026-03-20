@@ -2,8 +2,8 @@
 title: "I can't publish my theme due to app dependency"
 slug: "i-cant-publish-my-theme-due-to-app-dependency"
 hidden: false
-createdAt: "2026-02-27T00:00:00.000Z"
-updatedAt: "2026-02-27T00:00:00.000Z"
+createdAt: "2026-03-20T00:00:00.000Z"
+updatedAt: "2026-03-20T00:00:00.000Z"
 excerpt: "Learn how to fix app dependency validation errors when publishing a theme or app in VTEX IO."
 tags:
     - VTEX IO
