@@ -1,7 +1,7 @@
 ---
 title: "Processing DPAN cards in external connectors"
 slug: "processing-dpan-cards-in-external-connectors"
-excerpt: "Learn how to implement payment tokenization in your VTEX store to enhance security and improve the customer experience."
+excerpt: "Understand how external connectors must support DPAN-specific fields, Secure Proxy flows, and acquirer forwarding in VTEX payment requests."
 hidden: false
 createdAt: "2026-03-23T00:00:00.000Z"
 ---
