@@ -256,7 +256,7 @@ A batch job progresses through the following statuses:
 5. If the final status is `COMPLETED_WITH_ERRORS`, call the Get batch errors endpoint to download the error report. The `errorCount` field tells you how many rows failed.  
 6. If the final status is `FAILED`, the entire batch failed. Review the batch metadata and your CSV file for issues.
 
-⚠️ Implement a polling interval with exponential backoff to avoid excessive API calls. A reasonable starting interval is 5 seconds, increasing gradually for long-running imports.
+> ⚠️ Implement a polling interval with exponential backoff to avoid excessive API calls. A reasonable starting interval is 5 seconds, increasing gradually for long-running imports.
 
 ### Request example – Get batch status
 
