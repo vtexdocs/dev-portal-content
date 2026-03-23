@@ -24,7 +24,6 @@ This guide covers the following integration flows:
 - [Bulk import flow (base & fixed)](#bulk-import-flow)  
 - [Batch monitoring and error handling flow](#batch-monitoring-and-error-handling-flow)
 
-This guide is intended for developers and integrators responsible for implementing bulk pricing update flows against the VTEX platform.
 
 ## How it works
 
