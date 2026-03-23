@@ -18,7 +18,7 @@ Stores are made up of several pages, each with a different layout and content. W
 
 > ℹ️ You can manage each page's title and template in the Pages section, within the admin's CMS.
 
-However, you can develop custom pages to meet your store's specific needs. For example, you can create landing pages for special campaigns or institutional pages, such as a custom **About us** page.
+However, you can develop custom pages to meet your store's specific needs. For example, you can create landing pages for special campaigns or institutional pages.
 
 In this guide, learn how to create a new custom page for your Store Framework store.
 
@@ -30,7 +30,7 @@ As an example, consider that you want to create a custom **About us** page for y
 
 ### Step 1 - Creating the new template
 
-To create a custom page for your store, first define the template the new page will use. There are three template types:
+First, define the template the new page will use. There are three template types:
 
 * **Product:** For pages that must deal with the content of a single product, such as a product details page. Adding any new product automatically generates a new product page.
 * **Product collections:** For pages containing a group of products, such as the Search Result page.
@@ -132,13 +132,13 @@ A template only defines the page layout. Therefore, any new template can be appl
 
 ### Step 3 - Adding the content
 
-You can define your page content by either making changes directly in the Store Theme app or using the admin's [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview).
+You can define your page content either by making changes directly in the Store Theme app or by using the admin's [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview).
 
 When editing directly in the Store Theme app, you can visualize your changes by linking the theme to your development workspace.
 
 To edit by using the Site Editor, you can browse to your custom page or simply write its URL in the `Page URL` field.
 
-![custom-pages-siteeditor]()
+![custom-pages-siteeditor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-page-site-editor.png)
 
 ### Making your theme content publicly available
 
