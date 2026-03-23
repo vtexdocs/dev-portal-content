@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+      <g id="mpa-list-items">
+        <path d="M6 0H1C0.4 0 0 0.4 0 1V6C0 6.6 0.4 7 1 7H6C6.6 7 7 6.6 7 6V1C7 0.4 6.6 0 6 0Z" fill="#000000"></path>
+      <rect x="9" width="7" height="3" rx="1" fill="#000000"></rect>
+      <rect x="9" y="4" width="4" height="3" rx="1" fill="#000000"></rect>
+      <rect x="9" y="9" width="7" height="3" rx="1" fill="#000000"></rect>
+      <rect x="9" y="13" width="4" height="3" rx="1" fill="#000000"></rect>
+      <path d="M6 9H1C0.4 9 0 9.4 0 10V15C0 15.6 0.4 16 1 16H6C6.6 16 7 15.6 7 15V10C7 9.4 6.6 9 6 9Z" fill="#000000"></path>
+      </g>
+    </svg>
