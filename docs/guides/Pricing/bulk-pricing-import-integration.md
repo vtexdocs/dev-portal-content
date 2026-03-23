@@ -325,7 +325,6 @@ All CSV files must follow these formatting rules:
 | Delimiter | Comma (`,`) |
 | Quote character | Double quote (`"`) |
 
-### File size limit
 
 The maximum file size is **500 MB**. If your data exceeds this limit, split it into multiple CSV files and submit each one as a separate import job.
 
