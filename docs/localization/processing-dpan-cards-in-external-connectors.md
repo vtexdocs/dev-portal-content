@@ -1,7 +1,7 @@
 ---
 title: "Processing DPAN cards in external connectors"
 slug: "processing-dpan-cards-in-external-connectors"
-excerpt: "Understand how external connectors must support DPAN-specific fields, Secure Proxy flows, and acquirer forwarding in VTEX payment requests."
+excerpt: "Configure your external payment connector to correctly process DPAN card transactions, ensuring secure and compliant payment flows."
 hidden: false
 createdAt: "2026-03-23T00:00:00.000Z"
 ---
