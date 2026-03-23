@@ -140,6 +140,6 @@ To edit by using the Site Editor, you can browse to your custom page or simply w
 
 ![custom-pages-siteeditor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-page-site-editor.png)
 
-### Making your theme content publicly available
+### Step 4 - Making your theme content publicly available
 
 If you're satisfied with the changes to your Store Theme, make your new page publicly available. For detailed instructions, see the guide [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/).
