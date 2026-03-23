@@ -55,7 +55,7 @@ The following prefixes help in understanding the meaning of a specific icon.
 
 | Icon                                    | ID                         |
 | --------------------------------------- | -------------------------- |
-| ![bnd-logo](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/bnd-logo.svg)  | bnd-logo |
+| ![bnd-logo](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17713/docs/guides/vtex-io/Store-Framework-Apps/advanced-components/bnd-logo.svg)  | bnd-logo |
 | ![mpa-expand](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/mpa-expand.svg)  | mpa-expand |
 | ![hpa-arrow-back](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-arrow-back.svg)  | hpa-arrow-back |
 | ![hpa-arrow-from-bottom](https://raw.githubusercontent.com/vtex-apps/store-icons/bb60df29809a4edbc13b3e0febd6a3d9eb996ab4/docs/hpa-arrow-from-bottom.svg)  | hpa-arrow-from-bottom |
