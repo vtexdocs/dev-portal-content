@@ -211,7 +211,7 @@ SKU ID,Trade Policy,Price,List Price,Min Quantity,Date From,Date To,Child Accoun
 | 429 | Rate limit exceeded. | Wait and retry the request after a delay. |
 | 503 | Service unavailable. | Retry with exponential backoff. |
 
-⛔ If you receive a `413` error, do not retry with the same file. Split the CSV into multiple files under 500 MB each and submit them as separate import jobs.
+> ⛔ If you receive a `413` error, check if the file is up to 500MB; if necessary, split it into several smaller files of up to 500MB each and submit them as individual import jobs.
 
 ⚠️ For fixed-price imports: ensure that `Date From` is earlier than `Date To`. Rows with invalid date ranges will fail during processing and appear in the error report.
 
