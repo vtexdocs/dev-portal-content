@@ -9,7 +9,7 @@ updatedAt: "2026-03-19T13:00:00.152Z"
 The Bulk Pricing API allows for asynchronous processing of large-scale price updates by sending a single CSV file containing the price updates and letting the platform process them in the background. 
 This guide is intended for developers and integrators responsible for implementing bulk pricing update flows against the VTEX platform.
 
-To update the price of only one SKU, use the API []
+To update the price of only one SKU, use the [API](https://developers.vtex.com/docs/api-reference/pricing-api)
 
 This API supports two types of pricing updates: **base prices** (cost price, base price, and list price per SKU) and **fixed prices** (price-table-specific prices with optional date ranges and minimum quantities). The workflow follows an async pattern where you start an import job, upload your CSV to a pre-signed URL, and then poll for status until processing completes.
 
@@ -21,7 +21,7 @@ The main actors involved are:
 
 This guide covers the following integration flows:
 
-- [Bulk import flow (base & fixed)](#bulk-import-flow)  
+- [Bulk import flow](#bulk-import-flow)  
 - [Batch monitoring and error handling flow](#batch-monitoring-and-error-handling-flow)
 
 
@@ -29,9 +29,9 @@ This guide covers the following integration flows:
 
 Every bulk pricing import follows the same three-step async pattern, regardless of whether you are importing base prices or fixed prices:
 
-1. Your system sends a `POST` request to the Import prices endpoint, specifying the import type (`base-prices` or `fixed-prices`) and the file metadata (content type and size in bytes). The API returns a unique `batchId` and a pre-signed upload URL.  
+1. Your system sends a `POST` request to the [Import prices endpoint](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#post-/api/price-importer/pvt/import/-importType-), specifying the import type (`base-prices` or `fixed-prices`) and the file metadata (content type and size in bytes). The API returns a unique `batchId` and a pre-signed upload URL.  
 2. Your system uploads the CSV file directly to the pre-signed URL using a `PUT` request with the headers provided in the response.  
-3. Your system polls the Get batch status endpoint using the `batchId` to monitor processing progress. If errors occur, you retrieve the error details via the Get batch errors endpoint.
+3. Your system polls the [Get batch status endpoint](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#get-/api/price-importer/pvt/batches/-batchId-) using the `batchId` to monitor processing progress. If errors occur, you retrieve the error details via the [Get batch errors endpoint](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#get-/api/price-importer/pvt/batches/-batchId-/errors).
 
 ⚠️ The pre-signed upload URL has an expiration timestamp (`expiresAt`). You must complete the file upload before this time. If the URL expires, you need to start a new import job.
 
@@ -312,8 +312,6 @@ curl -X GET \
 
 The `url` field contains a pre-signed URL to download a CSV file with error details. This CSV has the same format as your original import file, with two additional columns: `Error Code` and `Error Message`. Download the file, review the errors, fix the affected rows, and re-submit them in a new import job.
 
-## Additional configuration
-
 ### CSV format requirements
 
 All CSV files must follow these formatting rules:
@@ -333,15 +331,4 @@ Use the `output` query parameter in the Import prices request to configure email
 
 | Value | Description |
 | :---- | :---- |
-| `email` | Sends an email notification when processing completes. |
-
-ℹ️ The target email address is configured separately in the platform settings.
-
-### Pre-signed URL usage
-
-The `upload.url` returned by the Import prices endpoint is a pre-signed URL that points directly to cloud storage. When uploading your CSV file:
-
-- Use the exact URL as returned. Do not modify it or replace it with the API base URL.  
-- Use the `PUT` HTTP method.  
-- Include all headers specified in the `upload.headers` object.  
-- Complete the upload before the `expiresAt` timestamp.
+| `email` | Sends an email notification when processing completes. The target email address is configured separately in the platform settings. |
