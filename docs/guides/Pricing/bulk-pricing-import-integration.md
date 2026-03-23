@@ -6,7 +6,10 @@ createdAt: "2026-03-19T13:00:00.152Z"
 updatedAt: "2026-03-19T13:00:00.152Z"
 ---
 
-The Bulk Pricing API enables high-throughput, asynchronous processing of large-scale pricing updates via CSV file uploads. Instead of updating prices one SKU at a time through individual API calls, you can submit a single CSV file containing hundreds or thousands of price updates and let the platform process them in the background.
+The Bulk Pricing API allows for asynchronous processing of large-scale price updates by sending a single CSV file containing the price updates and letting the platform process them in the background. 
+This guide is intended for developers and integrators responsible for implementing bulk pricing update flows against the VTEX platform.
+
+To update the price of only one SKU, use the API []
 
 This API supports two types of pricing updates: **base prices** (cost price, base price, and list price per SKU) and **fixed prices** (price-table-specific prices with optional date ranges and minimum quantities). The workflow follows an async pattern where you start an import job, upload your CSV to a pre-signed URL, and then poll for status until processing completes.
 
