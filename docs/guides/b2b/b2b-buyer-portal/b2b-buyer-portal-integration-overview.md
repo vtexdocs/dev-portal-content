@@ -49,7 +49,7 @@ B2B Buyer Portal integrations are built around the following core concepts:
 | Agreement alignment | Define organization-wide conditions: assortment, pricing, and payment rules—that organizational units inherit. |
 | Contract lifecycle | Create, update, and manage buyer contracts and keep commercial conditions aligned with negotiated agreements. |
 
-Use the [B2B Contracts API](https://developers.vtex.com/docs/api-reference/b2b-contracts-api) to 
+Use the [B2B Contracts API](https://developers.vtex.com/docs/api-reference/b2b-contracts-api) to
 create, update, and manage contracts and their corresponding commercial conditions.
 
 ## Organization management
