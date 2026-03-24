@@ -25,5 +25,5 @@ TESTE DO CALLOUT
 > - **With delivery zones and pickups hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupsHash`) for faster lookup.
 >
 >   ```txt
->   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?deliveryZonesHash={deliveryZonesHash}&pickupsHash={pickupsHash}&an={accountName}
+>   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/productClusterIds/trade-policy/tradePolicy?deliveryZonesHash=deliveryZonesHash&pickupsHash=pickupsHash&an=accountName
 >   ```
