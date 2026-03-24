@@ -6,6 +6,9 @@ excerpt: "Learn how to implement the delivery promise feature in headless stores
 createdAt: "2025-05-14T22:18:24.684Z"
 ---
 
+TESTE DO CALLOUT
+
+
 >ℹ️ **Retrieving available pickup points**
 >
 > To retrieve the list of available pickup points with their IDs, distances, addresses, and business hours, use the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. This endpoint returns pickup points based on product availability (product cluster/collection), sorted by distance from the provided coordinates.
