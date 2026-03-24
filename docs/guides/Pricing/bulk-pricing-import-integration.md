@@ -211,9 +211,8 @@ SKU ID,Trade Policy,Price,List Price,Min Quantity,Date From,Date To,Child Accoun
 | 429 | Rate limit exceeded. | Wait and retry the request after a delay. |
 | 503 | Service unavailable. | Retry with exponential backoff. |
 
-⛔ If you receive a `413` error, do not retry with the same file. Split the CSV into multiple files under 500 MB each and submit them as separate import jobs.
+> ⛔ If you receive a `413` error, check if the file is up to 500MB; if necessary, split it into several smaller files of up to 500MB each and submit them as individual import jobs.
 
-⚠️ For fixed-price imports: ensure that `Date From` is earlier than `Date To`. Rows with invalid date ranges will fail during processing and appear in the error report.
 
 ## Batch monitoring and error handling flow
 
@@ -256,7 +255,7 @@ A batch job progresses through the following statuses:
 5. If the final status is `COMPLETED_WITH_ERRORS`, call the Get batch errors endpoint to download the error report. The `errorCount` field tells you how many rows failed.  
 6. If the final status is `FAILED`, the entire batch failed. Review the batch metadata and your CSV file for issues.
 
-⚠️ Implement a polling interval with exponential backoff to avoid excessive API calls. A reasonable starting interval is 5 seconds, increasing gradually for long-running imports.
+> ⚠️ Implement a polling interval with exponential backoff to avoid excessive API calls. A reasonable starting interval is 5 seconds, increasing gradually for long-running imports.
 
 ### Request example – Get batch status
 
