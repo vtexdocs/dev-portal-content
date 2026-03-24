@@ -223,4 +223,3 @@ Punchout enables integration between external eprocurement systems and the VTEX 
 Use the [Punchout API](https://developers.vtex.com/docs/api-reference/punchout-api) to start and finish punchout login flows using one-time tokens.
 
 > ℹ️ For the full login integration, see [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration). For cart transfer customization, see [Punchout cart integration](https://developers.vtex.com/docs/guides/punchout-cart-integration). For a conceptual overview, see [Punchout](https://developers.vtex.com/docs/guides/punchout).
-
