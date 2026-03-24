@@ -29,7 +29,6 @@ This guide provides an overview of the integration capabilities available in B2B
 - [Accounting fields](#accounting-fields)
   - [Default values](#default-values)
 - [Punchout](#punchout)
-- [Permissions](#permissions)
 
 ## Architecture overview
 
