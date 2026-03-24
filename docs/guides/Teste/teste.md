@@ -4,6 +4,7 @@ slug: "teste"
 hidden: true
 excerpt: "Learn how to implement the delivery promise feature in headless stores."
 createdAt: "2025-05-14T22:18:24.684Z"
+updatedAt: "2025-05-14T22:18:24.684Z"
 ---
 
 TESTE DO CALLOUT
