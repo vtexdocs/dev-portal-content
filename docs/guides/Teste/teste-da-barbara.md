@@ -1,6 +1,6 @@
 ---
-title: "Teste"
-slug: "teste"
+title: "Teste da Bárbara"
+slug: "teste-da-barbara"
 hidden: true
 excerpt: "Testando callout"
 createdAt: "2026-03-24T17:50:09.696Z"
