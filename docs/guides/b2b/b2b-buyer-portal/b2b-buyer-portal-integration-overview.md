@@ -142,7 +142,7 @@ Shipping destinations, internal delivery points, and contacts support checkout a
 | Physical addresses | Create, search, update, and manage shipping and billing addresses for buyer organizations. |
 | Checkout and account usage | Supply address data consumed in checkout, default values, and the Organization Account. |
 | Delivery locations | Register internal delivery points (docks, departments, areas). |
-| Contact information | Manage people who can be selected as shipment recipients at organization level. |
+| Contact information | Manage people who can be selected as shipment recipients at the organization level. |
 
 **Addresses** represent shipping and billing destinations. Integrations typically use the Addresses endpoints in the [Master Data API v1](https://developers.vtex.com/docs/api-reference/masterdata-api) to create, search, update, and manage addresses used in checkout and the Organization Account.
 
