@@ -2,9 +2,9 @@
 title: "Teste"
 slug: "teste"
 hidden: true
-excerpt: "Learn how to implement the delivery promise feature in headless stores."
-createdAt: "2025-05-14T22:18:24.684Z"
-updatedAt: "2025-05-14T22:18:24.684Z"
+excerpt: "Testando callout"
+createdAt: "2026-03-24T17:50:09.696Z"
+updatedAt: "2026-03-24T17:50:09.696Z"
 ---
 
 TESTE DO CALLOUT
