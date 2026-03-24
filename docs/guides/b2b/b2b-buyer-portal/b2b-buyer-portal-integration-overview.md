@@ -4,7 +4,7 @@ slug: "b2b-buyer-portal-integration-overview"
 hidden: false
 createdAt: "2026-03-13T00:00:00.000Z"
 updatedAt: "2026-03-13T00:00:00.000Z"
-excerpt: "Explore the integration capabilities of B2B Buyer Portal, including organization management, Budgets, Buying policies, Accounting fields, and Punchout."
+excerpt: "Explore the integration capabilities of B2B Buyer Portal, including contracts, organization management, payment cards, addresses, Budgets, Buying policies, Accounting fields, and Punchout."
 ---
 
 > ⚠️ B2B Buyer Portal is currently available to select accounts.
@@ -16,11 +16,14 @@ This guide provides an overview of the integration capabilities available in B2B
 ## Table of contents
 
 - [Architecture overview](#architecture-overview)
+- [Contracts](#contracts)
 - [Organization management](#organization-management)
   - [Organizational Units and scopes](#organizational-units-and-scopes)
   - [User provisioning](#user-provisioning)
   - [Storefront roles and permissions](#storefront-roles-and-permissions)
-  - [Buyer data and contact information](#buyer-data-and-contact-information)
+  - [Buyer data](#buyer-data)
+- [Payment cards](#payment-cards)
+- [Addresses](#addresses)
 - [Budgets and allocations](#budgets-and-allocations)
 - [Buying policies](#buying-policies)
 - [Accounting fields](#accounting-fields)
@@ -32,47 +35,22 @@ This guide provides an overview of the integration capabilities available in B2B
 
 B2B Buyer Portal integrations are built around the following core concepts:
 
-- [Organizational Units](https://help.vtex.com/en/docs/tutorials/organization-units) represent the hierarchical structure of a buyer organization, such as departments, divisions, or subsidiaries. They are the central entity that allows users to scope most buyer portal features.
-- **Contracts** bind organizational units to commercial conditions, including product assortments, payment methods, and addresses.
+- **Contracts** sit at the **root** of the buyer organization. They define the commercial conditions that apply to the whole organization, such as product assortment, prices, and payment methods.
+- [Organizational Units](https://help.vtex.com/en/docs/tutorials/organization-units) represent the hierarchical structure under that root, such as departments, divisions, or subsidiaries. They are the central entity for scoping many buyer portal features.
 - **Storefront users** are members of the buyer organization who interact with the store, each assigned specific roles and permissions.
 - **Storefront roles** control what actions each user can perform, from placing orders to managing budgets.
 
-The diagram below illustrates how these concepts relate to each other and to the key integration areas.
+## Contracts
 
-```mermaid
-flowchart TB
-    subgraph External["External Systems"]
-        ERP["ERP / Back-office"]
-        PROC["Eprocurement"]
-    end
+**Contracts** establish the commercial conditions between a B2B customer and your store. They centralize purchase agreement management by defining the products buyers can access, the prices that apply to them, and the payment methods they can use.
 
-    subgraph APIs["VTEX B2B Buyer Portal"]
-        direction LR
-        subgraph OM["Organization Management"]
-            OU["Org Units & Scopes"]
-            UP["User Provisioning"]
-            SR["Storefront Roles"]
-            BD["Buyer Data"]
-        end
-        subgraph FG["Finance & Governance"]
-            BU["Budgets &<br/>Allocations"]
-            BP["Buying Policies"]
-        end
-        subgraph CC["Commerce & Checkout"]
-            CF["Accounting Fields<br/>& Default Values"]
-            PO["Punchout"]
-        end
-    end
+| Capability | Description |
+| :--- | :--- |
+| Agreement alignment | Define organization-wide conditions: assortment, pricing, and payment rules—that organizational units inherit. |
+| Contract lifecycle | Create, update, and manage buyer contracts and keep commercial conditions aligned with negotiated agreements. |
 
-    subgraph Org["Buyer Organization"]
-        direction LR
-        Units["Organizational Units"] --- Users["Users"] --- Contracts["Contracts"]
-    end
-
-    ERP ---> APIs
-    PROC ---> PO
-    APIs ---> Org
-```
+Use the [B2B Contracts API](https://developers.vtex.com/docs/api-reference/b2b-contracts-api) to 
+create, update, and manage contracts and their corresponding commercial conditions.
 
 ## Organization management
 
@@ -133,24 +111,53 @@ Use the [Storefront Roles API](https://developers.vtex.com/docs/api-reference/st
 
 > ℹ️ For the full list of available roles, resources, and required permissions, see [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles).
 
-### Buyer data and contact information
+### Buyer data
 
-VTEX provides dedicated APIs for managing enriched buyer profiles and contact information associated with B2B organizations. These APIs support scenarios where merchants need to store, query, or update buyer-specific data beyond what is captured during user provisioning, such as managing tokenized payment cards or organizational contact details.
+VTEX provides a dedicated API for managing enriched buyer profile data associated with B2B storefront users. Use it when you need to store, query, or update buyer-specific attributes beyond what is captured during user provisioning.
 
-The key APIs for managing buyers and contact information are:
+| Capability | Description |
+| :--- | :--- |
+| Enriched profiles | Persist and maintain buyer attributes (such as name, document, and email) beyond minimal provisioning data. |
+| Read and update | Query and change buyer profile records as your integration or back office requires. |
 
-- [B2B Buyer Data API](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api) — Manage enriched buyer profile data.
-- [B2B Contact Information API](https://developers.vtex.com/docs/api-reference/b2b-contact-information-api) — Manage contact details associated with buyer organizations.
-- [Card Token Vault API](https://developers.vtex.com/docs/api-reference/card-token-vault-api) — Store and manage tokenized payment card data for B2B buyers.
+Use the [B2B Buyer Data API](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api) to manage enriched buyer profile data.
+
+## Payment cards
+
+Saved payment cards are first-class data in B2B Buyer Portal: they can be tied to a **contract** (shared payment methods for the organization or unit) or to a **shopper** (personal cards for individual buyers), similar to how other entities such as budgets or users are scoped. Tokenized card data is managed through the Card Token Vault API.
+
+| Capability | Description |
+| :--- | :--- |
+| Tokenized storage | Store and reference payment cards securely without handling raw card data in your integration. |
+| Lifecycle management | Add, update, list, or retire saved cards according to your checkout and Organization Account flows. |
+
+Use the [Card Token Vault API](https://developers.vtex.com/docs/api-reference/card-token-vault-api) to store and manage tokenized payment card data for contract- or shopper-scoped cards.
+
+## Addresses
+
+Shipping destinations, internal delivery points, and contacts support checkout and fulfillment for buyer organizations.
+
+| Capability | Description |
+| :--- | :--- |
+| Physical addresses | Create, search, update, and manage shipping and billing addresses for buyer organizations. |
+| Checkout and account usage | Supply address data consumed in checkout, default values, and the Organization Account. |
+| Delivery locations | Register internal delivery points (docks, departments, areas). |
+| Contact information | Manage people who can be selected as shipment recipients at organization level. |
+
+**Addresses** represent shipping and billing destinations. Integrations typically use the Addresses endpoints in the [Master Data API v1](https://developers.vtex.com/docs/api-reference/masterdata-api) to create, search, update, and manage addresses used in checkout and the Organization Account.
+
+A **location** is a specific delivery point within a site, such as a dock, department, or internal area. For example, freight may be consigned to the company’s street address while the actual delivery is to **Dock 3456**. Locations are managed through the [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api). See [Custom Fields integration](https://developers.vtex.com/docs/guides/custom-fields-integration) to learn more.
+
+**Contacts** are the people who can be chosen as **order recipients**, who will receive the shipment. At checkout, the buyer selects the recipient for the order. That person may be different from the user placing the order. Contact records are maintained at the **organization** level and can be **associated with addresses**, so choosing a shipping address can narrow which recipients are offered. Use the [B2B Contact Information API](https://developers.vtex.com/docs/api-reference/b2b-contact-information-api) to manage contacts in B2B scenarios.
 
 ## Budgets and allocations
 
-Budgets allow buyer organizations to define spending envelopes and distribute them across allocations tied to specific entities such as cost centers, users, or addresses. During checkout, the system queries applicable allocations so that orders can be funded according to the organization's financial rules.
+Budgets allow buyer organizations to define spending envelopes and distribute them across allocations tied to specific entities such as accounting fields, users, or addresses. During checkout, the system queries applicable allocations so that orders can be funded according to the organization's financial rules.
 
 | Capability | Description |
 | :--- | :--- |
 | Budget provisioning | Create and manage budgets with total amounts, validity periods, auto-reset, and carry-over settings. |
-| Allocation management | Subdivide budgets into allocations linked to specific entities (cost centers, users, PO numbers). |
+| Allocation management | Subdivide budgets into allocations linked to specific entities (accounting fields, users, addresses). |
 | Checkout lookup | Query applicable allocations at checkout to determine how an order should be funded. |
 | Balance tracking | Track remaining balances and spending history through transactions and statements. |
 
@@ -174,7 +181,7 @@ Use the [Buying Policies API](https://developers.vtex.com/docs/api-reference/buy
 
 ## Accounting fields
 
-Accounting fields is the B2B Buyer Portal feature that allows stores to capture additional business-specific information during checkout, such as Cost Center, PO Number, or Location. Fields can be applied at the order, item, or address level and support predefined option lists or free-form input.
+**Accounting fields** is the B2B Buyer Portal feature that allows stores to capture additional business-specific information during checkout, such as Cost Center or PO Number. Fields can be applied at the order, item, or address level and support predefined option lists or free-form input.
 
 | Capability | Description |
 | :--- | :--- |
@@ -183,9 +190,10 @@ Accounting fields is the B2B Buyer Portal feature that allows stores to capture 
 | OrderForm application | Apply field values to shopping carts during checkout, individually or in batch. |
 | Integration with budgets and policies | Use field value IDs as matching criteria in budget allocations and buying policy expressions. |
 
-The key APIs for managing Accounting Fields are:
- 
-- [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api)- Define field configuration, value management, and orderForm application, - [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api) - Set up and manage pre-configured checkout defaults.
+The key APIs for managing accounting fields are:
+
+- [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api) — Field configuration, value management, and orderForm application.
+- [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api) — Pre-configured checkout defaults.
 
 > ℹ️ For the full integration flow, see [Custom Fields integration](https://developers.vtex.com/docs/guides/custom-fields-integration).
 
@@ -216,8 +224,3 @@ Use the [Punchout API](https://developers.vtex.com/docs/api-reference/punchout-a
 
 > ℹ️ For the full login integration, see [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration). For cart transfer customization, see [Punchout cart integration](https://developers.vtex.com/docs/guides/punchout-cart-integration). For a conceptual overview, see [Punchout](https://developers.vtex.com/docs/guides/punchout).
 
-## Permissions
-
-All B2B Buyer Portal integrations require appropriate [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3). Each feature has specific permission requirements documented in its respective integration guide. Make sure to assign these permissions to dedicated integration roles rather than shared roles for secure, auditable access.
-
-For machine authentication, see [Authentication overview](https://developers.vtex.com/docs/guides/authentication-overview).
