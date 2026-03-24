@@ -19,7 +19,7 @@ TESTE DO CALLOUT
 > - **With country and ZIP code:** Provide the country and ZIP code to retrieve pickup points based on location.
 >
 >   ```txt
->   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
+>   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/productClusterIds}trade-policy/tradePolicy?zip-code=zipCode&an=accountName&coordinates=coordinates&country=country
 >   ```
 >
 > - **With delivery zones and pickups hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupsHash`) for faster lookup.
