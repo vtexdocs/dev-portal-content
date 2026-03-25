@@ -148,7 +148,7 @@ Storefront integration capabilities determine which frontend frameworks and tech
 Development tools and access controls determine how developers work with the CMS and how user permissions are managed. Both platforms provide CLI tools for schema management and support access permissions, with the CMS adding role-based permission controls.
 
 | Aspect | Headless CMS (legacy) | CMS |
-| :---- | :---- | :---- |
+| :---- | :----: | :----: |
 | **Developer CLI** | ✅ | ✅ |
 | **Access permissions** | ✅ | ✅ |
 | **Role-based permissions** | ❌ | ✅ |
