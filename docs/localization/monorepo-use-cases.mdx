@@ -11,7 +11,7 @@ This guide outlines common repository structures for these scenarios and provide
 The following sections cover:
 
 * **[Single account with multiple modules](#single-account-with-multiple-modules):** A single VTEX account using more than one storefront module.
-* **[Multiple brands or stores sharing code](#multiple-brands-or-stores-sharing-code):** Multiple accounts or subaccounts using the same monorepo while sharing common code.
+* **[Multiple brands or stores sharing code](#multiple-brands-or-stores-sharing-code):** Multiple accounts or [subaccounts](https://help.vtex.com/docs/tutorials/managing-a-multistore) using the same monorepo while sharing common code.
 * **[Multiple brands or stores with multiple modules](#multiple-brands-or-stores-with-multiple-modules):** A monorepo where each account or subaccount can use multiple storefront modules with its own configuration.
 
 ## Single account with multiple modules
@@ -23,12 +23,12 @@ In this scenario, one VTEX account uses multiple storefront modules, each with i
 ```txt
 📂 Account monorepo
 │
-├── 📂 packages/
-│   ├── 📂 discovery/
-│   ├── 📂 checkout/
-│   └── 📂 sales-app/
-├── 📂 faststore.json
-├── 📂 package.json
+├── 📂 packages
+│   ├── 📂 discovery
+│   ├── 📂 checkout
+│   └── 📂 sales-app
+├── 📄 faststore.json
+├── 📄 package.json
 │  
 ```
 
@@ -68,11 +68,11 @@ With separate repositories, sharing code between brands or stores usually depend
 ```txt
 📂 Account monorepo
 │
-├── 📂 packages/
+├── 📂 packages
 │   ├── 📂 store1
 │   └── 📂 store2
-├── 📂 faststore.json
-├── 📂 package.json
+├── 📄 faststore.json
+├── 📄 package.json
 │  
 ```
 
@@ -107,15 +107,15 @@ In this scenario, a merchant has multiple brands or stores, and each of them can
 ```txt
 📂 Account monorepo
 │
-├── 📂 packages/
+├── 📂 packages
 │   └── 📂 store1
 │      ├── 📂 discovery
 │      └── 📂 checkout
 │   └── 📂 store2
 │      ├── 📂 discovery
 │      └── 📂 checkout
-├── 📂 faststore.json
-├── 📂 package.json
+├── 📄 faststore.json
+├── 📄 package.json
 │  
 ```
 
