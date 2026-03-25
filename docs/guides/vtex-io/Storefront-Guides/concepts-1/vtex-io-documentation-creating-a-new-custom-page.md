@@ -10,7 +10,7 @@ category: "Storefront Development"
 Stores are made up of several pages, each with a different layout and content. When creating a store from scratch in VTEX IO, some default pages with predefined URLs are already available to you, such as:
 
 - `store.home` - Home page
-- `store.product`- Product page
+- `store.product` - Product page
 - `store.search` - Search Results page
 - `store.account` - Client Account page
 - `store.login` - Login page
@@ -32,9 +32,9 @@ As an example, consider that you want to create a custom **About us** page for y
 
 First, define the template the new page will use. There are three template types:
 
-* **Product:** For pages that must deal with the content of a single product, such as a product details page. Adding any new product automatically generates a new product page.
-* **Product collections:** For pages containing a group of products, such as the Search Result page.
-* **Standard:** For pages with no specific product content. For instance, the Home page.
+- **Product:** For pages that must deal with the content of a single product, such as a product details page. Adding any new product automatically generates a new product page.
+- **Product collections:** For pages containing a group of products, such as the Search Result page.
+- **Standard:** For pages with no specific product content. For instance, the Home page.
 
 > ℹ️ Even though `Standard` pages aren't directly linked to any specific product, they may display shelves or lists of any chosen group of products. The main difference is that the group of products shown on such a page does not depend on the URL query but only on the shelf's settings.
 
@@ -132,7 +132,7 @@ A template only defines the page layout. Therefore, any new template can be appl
 
 ### Step 3 - Adding the content
 
-You can define your page content either by making changes directly in the Store Theme app or by using the admin's [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview).
+You can define your page content either by making changes directly in the [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app or by using the admin's [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview).
 
 When editing directly in the Store Theme app, you can visualize your changes by linking the theme to your development workspace.
 
