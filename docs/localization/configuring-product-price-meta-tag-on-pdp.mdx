@@ -2,13 +2,13 @@
 title: "Configuring product price meta tag formatting on PDP"
 ---
 
-FastStore allows you to control how the `product:price:amount` meta tag is formatted on Product Detail Pages (PDPs). Use the `minPriceAmountFractionDigits` setting in `discovery.config.js` to define the minimum number of decimal places displayed in this meta tag. This is useful to ensure consistency between:
+FastStore allows you to control how the `product:price:amount` meta tag is formatted on Product Detail Pages (PDPs). Use the `minPriceAmountFractionDigits` setting in [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options) to define the minimum number of decimal places displayed in this meta tag. This is useful to ensure consistency between:
 
 - The Open Graph meta tag (`product:price:amount`).
 - The structured data included in the PDP HTML (`ProductJsonLd` schema).
 - External integrations such as [Google Merchant Center](https://support.google.com/merchants/answer/12159157?hl=en&ref_topic=15302229&sjid=17079996474061819089-SA).
 
-## Step 1: Review recommendations
+## Step 1 - Review recommendations
 
 Before applying this setting, make sure you actually need to enforce a fixed number of decimal places in your SEO metadata. This configuration directly affects how the `product:price:amount` meta tag is rendered, and its value must be consistent with the product price used in the schema on the PDP (`<script type="application/ld+json">`).
 If the number of decimal places differs between the meta tag and the structured data, platforms such as Google Merchant Center may flag a price mismatch issue. To avoid this, choose a value that aligns with your store's currency format and pricing strategy.
@@ -18,7 +18,7 @@ For example:
 - ✅ Schema price: `3.20` → Meta tag: `3.20`
 - ❌ Schema price: `3.20` → Meta tag: `3.2`
 
-## Step 2: Update `discovery.config.js`
+## Step 2 - Update `discovery.config.js`
 
 1. Open your FastStore project and locate the `discovery.config.js` file.
 2. In the `seo` section, add `minPriceAmountFractionDigits` with the number of decimal places you want to enforce:
@@ -36,7 +36,7 @@ For example:
 
 3. Deploy the changes.
 
-## Step 3: Validate the result
+## Step 3 - Validate the result
 
 1. Open a PDP in your store.
 2. Open your browser's DevTools (or use View Page Source).
