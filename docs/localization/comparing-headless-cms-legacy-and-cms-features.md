@@ -24,7 +24,7 @@ Before diving into the technical details, it's important to understand the high-
 Content modeling defines how content is structured and reused across your storefront. Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology, but the CMS introduces schema reusability and content relationships, allowing you to reuse the same content across multiple pages or components without duplication.
 
 | Feature | Headless CMS (Legacy) | CMS |
-| :---- | :---- | :---- |
+| :---- | :----: | :----: |
 | **Content Types** | ✅ | ✅ |
 | **Components** | ✅ | ✅ |
 | **Schema technology** | JSON Schema | JSON Schema |
@@ -46,7 +46,7 @@ Content modeling defines how content is structured and reused across your storef
 Content editing capabilities determine how content editors interact with the CMS interface.
 
 | Feature | Headless CMS (Legacy) | CMS |
-| :---- | :---- | :---- |
+| :---- | :----: | :----: |
 | **Content management (Admin)** | ✅ | ✅ |
 | **Content search and filtering** | ✅ | ✅ |
 | **Entry (CRUD)** | ✅ | ✅ |
@@ -97,7 +97,7 @@ Content editing capabilities determine how content editors interact with the CMS
 Localization capabilities determine how content is adapted for different languages and regions. The CMS provides multi-language support with locale management, fallback rules, and character encoding for international content.
 
 | Feature | Headless CMS (Legacy) | CMS |
-| :---- | :---- | :---- |
+| :---- | :----: | :----: |
 | **Locales** | ❌ | ✅ |
 | **Default and automatic language fallback rules** | ❌ | ✅ |
 | **Language character encoding support** | ❌ | ✅ |
@@ -116,7 +116,7 @@ Localization capabilities determine how content is adapted for different languag
 Media management capabilities define how images, videos, and other assets are stored, organized, and used across content. Both platforms support media galleries for common image formats and for embedding external videos.
 
 | Feature | Headless CMS (Legacy) | CMS |
-| :---- | :---- | :---- |
+| :---- | :----: | :----: |
 | **Media Gallery** | ✅ | ✅ |
 | **Image support** | ✅ PNG, JPG, JPEG, GIF, SVG, and WebP | ✅ PNG, JPG, JPEG, GIF, SVG, and WebP |
 | **Video support** | ✅ External URL only | ✅ External URL only |
@@ -135,7 +135,7 @@ Media management capabilities define how images, videos, and other assets are st
 Storefront integration capabilities determine which frontend frameworks and technologies can consume content from the CMS.
 
 | Feature | Headless CMS (Legacy) | CMS |
-| :---- | :---- | :---- |
+| :---- | :----: | :----: |
 | **Headless** | ✅ | ⚒️ *Coming soon* |
 | **Store Framework** | ❌ | ❌ |
 | **FastStore v1 and v2** | ✅ | ❌ |
@@ -170,7 +170,7 @@ Development tools and access controls determine how developers work with the CMS
 Technical infrastructure describes the architectural components and design patterns of the CMS and Headless CMS (legacy), including differences in APIs, event handling, caching, and system architecture.
 
 | Aspect | Headless CMS (legacy) | CMS |
-| :---- | :---- | :---- |
+| :---- | :----: | :----: |
 | **API type** | REST | REST |
 | **Build triggers** | Direct webhooks | Event-driven |
 | **Caching** | Limited | ETag support |
