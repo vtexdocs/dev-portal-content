@@ -100,8 +100,8 @@ sequenceDiagram
 
 4. **Content delivery** (runtime):
 
-- Content is fetched from the Data Plane API.
-- Data Plane returns published content with ETag headers.
+  - Content is fetched from the Data Plane API.
+  - Data Plane returns published content with ETag headers.
 
 ## Schema declarations
 
