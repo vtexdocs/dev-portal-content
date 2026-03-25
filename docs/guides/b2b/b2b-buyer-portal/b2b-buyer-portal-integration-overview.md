@@ -9,7 +9,7 @@ excerpt: "Explore the integration capabilities of B2B Buyer Portal, including co
 
 > ⚠️ B2B Buyer Portal is currently available to select accounts.
 
-B2B Buyer Portal is a set of features that enables merchants to offer B2B ecommerce experiences on top of their existing B2C store setup. It provides buyer organizations with the [Organization Account](https://help.vtex.com/docs/tutorials/organization-account), a self-service admin panel. In this panel they can manage users, organizational structure, budgets, purchasing rules, and checkout configurations.
+VTEX B2B Buyer Portal provides a robust [self-service interface for corporate buyers](https://help.vtex.com/docs/tutorials/organization-account). It simplifies B2B complexity by allowing organizations to autonomously manage their accounts, procurement workflows, and spending limits, enhancing operational efficiency for both merchants and customers.
 
 This guide provides an overview of the integration capabilities available in B2B Buyer Portal and the APIs that support them. Each section introduces a feature area, explains its purpose, and links to the detailed integration guide or API reference.
 
