@@ -1,6 +1,7 @@
 ---
 title: '2. Starting a new FastStore project'
 excerpt: "Create and set up your FastStore project with WebOps."
+updatedAt: "2026-03-26T13:43:12.305Z"
 ---
 
 In this step, you'll use the [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) to create your FastStore project, connect it to GitHub, and deploy a live preview.  
@@ -51,8 +52,8 @@ For more information, refer to the [Catalog documentation](https://help.vtex.com
 
 ### Have a GitHub account
 
-To complete the FastStore WebOps onboarding, you’ll need a GitHub account to host your project. You can use either a [personal account](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github) or a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations).  
-If you use a GitHub organization, ensure you have **admin access** to it.
+To complete the FastStore WebOps onboarding, you’ll need a GitHub account to host your project. You can use either a [personal account](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github), a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations), or a [GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/get-started/onboarding/getting-started-with-github-enterprise-cloud) instance.
+If you use a GitHub organization or GitHub Enterprise, ensure you have **admin access** to it.
 
 </Steps>
 
@@ -111,23 +112,31 @@ Configure the native [Headless CMS](https://developers.vtex.com/docs/guides/fast
 
 ### Git Provider
 
-Connect with a GitHub personal account or organization of your choice to host the source code of your FastStore project. 
+Connect with a GitHub personal account, organization, or GitHub Enterprise instance of your choice to host the source code of your FastStore project.
 
-    > ⚠️ If you choose to install the app in a GitHub organization, make sure you have admin access to an organization.
+    > ⚠️ If you choose to install the app in a GitHub organization or GitHub Enterprise, make sure you have admin access.
 
 To connect to the FastStore WebOps app, follow these steps:
 
-1. Click `Connect with GitHub`. A new browser tab will open on the side for you to integrate the app with GitHub.
+1. In the **Git Provider** section, you'll see two options:
+   - **Default (github.com):** Select this to connect to a standard GitHub personal or organization account.
+   - **Custom Domain:** Select this to connect to a GitHub Enterprise instance with a custom domain. For example, `enterpriseName.ghe.com`, where `{enterpriseName}` is the name of your GitHub Enterprise account.
 
-    > ⚠️ If you are not logged in to your GitHub account, in the new tab, you will be asked to log in. Then, you can continue to the next step.
+2. Click `Connect with GitHub`. A new browser tab will open on the side for you to integrate the app with GitHub.
 
-2. Once you are logged in to your GitHub account, choose the organization or your personal account you want to install the app. You will be redirected to the **Settings** page on GitHub.
+    > ⚠️ If you are not logged in to your GitHub account, you will be prompted to log in in a new tab. Then, you can continue to the next step.
 
-    > ⚠️ Once you define the GitHub organization, you cannot change it later.
+3. **Complete the GitHub app installation:**
 
-3. In **Repository access**, choose one of the following options: **All repositories from the organization** or **Only select repositories**.
+   - **For Default (github.com):** Once logged in to your GitHub account, choose the organization or personal account where you want to install the app. You'll be redirected to the **Settings** page on GitHub.
 
-4. Click `Install`.
+     > ⚠️ Once you define the GitHub organization, you cannot change it later.
+
+   - **For Custom Domain (GitHub Enterprise):** Once you have entered the domain of your GitHub Enterprise instance (for example, `{enterpriseName}.ghe.com`) and clicked `Connect with GitHub`, you'll be redirected to the app creation page for your custom domain. On the page, click `Create GitHub App for Organization` to complete the app creation process.
+
+4. In **Repository access**, choose one of the following options: **All repositories from the organization** or **Only select repositories**.
+
+5. Click `Install`.
 
 The following successful message will appear on the page:
 
@@ -137,13 +146,13 @@ The following successful message will appear on the page:
 
 After seeing the success message, close the browser tab and continue the onboarding process in the VTEX Admin.
 
-5. Now that the app is integrated with GitHub, select which repository you want to start the project:
+6. Now that the app is integrated with GitHub, select which repository you want to start the project:
 
     - **New repository:** Create a repository from scratch, in this option, you only need to type a name for the repository, and after clicking `Create`, it will create the repository for you.
 
     - **Existing repository:** Select an existing repository from the organization to start the project.
 
-6. Click `Create`. The deployment process will begin, and once it is complete, you will be redirected to the [Deploy Summary](#step-3--deploying-the-project) page.
+7. Click `Create`. The deployment process will begin, and once it is complete, you will be redirected to the [Deploy Summary](#step-3--deploying-the-project) page.
 
 ## Step 3: Deploying the project
 
