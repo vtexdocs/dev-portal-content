@@ -6,13 +6,13 @@ createdAt: "2026-01-26T12:50:00.813Z"
 updatedAt: "2026-03-02T11:48:00.813Z"
 ---
 
-> ⚠️ For documentation about the legacy Headless CMS used with FastStore, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
+> ⚠️ For documentation about the legacy Headless CMS used with FastStore versions earlier than `3`, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
 
 The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
 
 The system follows a decoupled architecture that separates content authoring from content consumption. This separation allows content management workflows and content delivery workloads to evolve and scale independently.
 
-> ℹ️ This guide covers the VTEX CMS in the context of FastStore. If you're using another storefront technology, see the content management documentation specific to that storefront.
+{/*> ℹ️ This guide covers the VTEX CMS in the context of FastStore. If you're using another storefront technology, see the content management documentation specific to that storefront.*/}
 
 ## Technical overview
 
