@@ -74,7 +74,7 @@ Build and manage schemas with:
 /> -->
 
 <WhatsNextCard
-  linkTo="/TBD"
+  linkTo="https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview"
   title="Upgrading from Headless CMS (legacy) to CMS"
   description="Learn about the architectural and code-level changes when migrating from Headless CMS (legacy) to the CMS."
   linkTitle="See more"
