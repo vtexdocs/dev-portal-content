@@ -126,6 +126,8 @@ After starting the authentication process, the next step is to proceed with the 
 * Social logins (Google, Facebook)
 * Custom OAuth providers
 
+>⚠️ When using custom OAuth providers via the [OAuth exchange endpoint](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange), the VTEX refresh token is not generated. Token refresh must be managed by the external Identity Provider. See [Headless authentication](https://developers.vtex.com/docs/guides/headless-authentication) for more information.
+
 Each store can enable one or more of these options, and all of which follow the same general flow at this stage: the client uses the `authenticationToken` from the previous step to complete the login process.
 
 If the store uses **access key** as the login method, you must send a login code to the user's email using a `POST` request to the [Send access key](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/pub/authentication/accesskey/send) endpoint.

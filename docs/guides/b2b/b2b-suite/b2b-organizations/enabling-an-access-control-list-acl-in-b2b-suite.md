@@ -1,11 +1,13 @@
 ---
-title: "Enabling an access control list ACL in B2B Suite"
+title: "Enabling an access control list ACL in B2B Suite (B2B Suite)"
 slug: "enabling-an-access-control-list-acl-in-b2b-suite"
 excerpt: "Learn how to enable and configure Access Control List (ACL) permissions to restrict access to buyer organizations, cost centers, and members in the VTEX Admin."
 hidden: false
 createdAt: "2025-11-03T09:00:09.698Z"
 updatedAt: "2025-11-03T09:00:09.698Z"
 ---
+
+> ⚠️ This documentation applies to B2B Suite only.
 
 The **Access Control List (ACL)** feature in B2B Suite allows you to restrict access to resources such as **buyer organizations**, **cost centers**, and **members** in the VTEX Admin. You need to set up specific permissions to allow the users to view or manage these resources.
 

@@ -30,7 +30,7 @@ Example manifest configured for version `2.0.0`:
 
 > ⚠️ All payment connectors are automatically approved by VTEX using PPP version `1.0.0`. If the payment provider isn't interested in offering additional features, there's no need to include the `version` field in the manifest. If the connector has already been updated (for example, to version `2.0.0`) and the provider wants to return to the standard PPP behavior, change the `version` field back to `1.0.0` and ask VTEX Technical Support for a new connector update.
 
-## Configuring PPP Versioning
+## Features of PPP versions
 
 The table below shows the additional features available in each PPP version configured in the payment connector:
 

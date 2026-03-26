@@ -7,7 +7,7 @@ createdAt: "2026-01-30T00:00:00.000Z"
 updatedAt: "2026-01-30T00:00:00.000Z"
 ---
 
->⚠️ The Default Values API is only available for B2B Buyer Portal. Authorization from the Commerce Engineer of the account is required for use.
+> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
 
 Default values are purchase details, such as addresses, and B2B custom fields that you configure for an organizational unit so that checkout forms can be completed automatically. This integration guide explains how to use the [Default Values API](https://developers.vtex.com/docs/api-reference/default-values-api) to store and manage these preferences and how they participate in the end-to-end checkout experience.
 

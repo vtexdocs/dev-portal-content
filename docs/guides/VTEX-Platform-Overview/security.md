@@ -20,7 +20,7 @@ At the application layer, VTEX has the following accreditations:
 * SOC 2 – Type 2: Reports covering security, availability, integrity, confidentiality, and privacy
 * PCI – Validation of controls around cardholder data to reduce credit card fraud
 
-See our [Certifications](https://vtex.com/us-en/compliance/certifications) for more details.
+See our [Certifications](https://vtex.com/en-us/trust/) for more details.
 
 At the data storage layer, AWS has several certifications for its data centers, including ISO 27001, FedRAMP authorization, PCI certification, and SOC reporting. For more information on AWS's commitment to data protection, go to [Data Protection and Privacy at AWS](https://aws.amazon.com/compliance/data-protection/?nc1=h_ls).
 
@@ -28,7 +28,7 @@ At the data storage layer, AWS has several certifications for its data centers, 
 
 To access information within a VTEX account, authentication is required, along with the [necessary permissions](#authorization-and-access-control). The authentication flow ensures verified and authorized access by requiring valid credentials in the following scenarios:
 
-* [Logging in to the VTEX Admin or to the store website](https://help.vtex.com/en/tutorial/authentication--21CkKHLKP1o41lUpGhuRUs#login)
+* [Logging in to the VTEX Admin or to the store website](https://help.vtex.com/docs/tutorials/authentication#login)
 * [Developing apps or integrations](https://developers.vtex.com/docs/guides/authentication)
 
 By default, VTEX adopts logical segregation for each account's data, isolating it from other accounts. This means there is no integrated method for accessing data that crosses account boundaries, even for internal VTEX use. For more details, see the [Logical separation](https://developers.vtex.com/docs/guides/cloud-infrastructure#logical-separation) section of our [Cloud infrastructure](https://developers.vtex.com/docs/guides/cloud-infrastructure) guide.
@@ -42,7 +42,7 @@ Two-factor authentication (2FA) is mandatory for users to access the VTEX Admin 
 
 If an Admin user has not set up 2FA, when they try to access the Admin using their email and password, a prompt requiring 2FA configuration will be displayed.
 
-This requirement only applies to email and password logins, not to other login methods such as Google, Facebook, or access code. Learn more in [Enabling two-factor authentication login](https://help.vtex.com/en/tutorial/enabling-2-factor-authentication-login--4Ae1fcQi12g8u4SkQKCqWQ).
+This requirement only applies to email and password logins, not to other login methods such as Google, Facebook, or access code. Learn more in [Enabling two-factor authentication login](https://help.vtex.com/docs/tutorials/enabling-2-factor-authentication-login).
 
 ### Password rules
 
@@ -53,15 +53,15 @@ VTEX Admin and store passwords must have at least:
 * 1 uppercase letter
 * 1 lowercase letter
 
-Merchants can choose to [enforce password expiration](https://help.vtex.com/en/tutorial/authentication--21CkKHLKP1o41lUpGhuRUs#enforcing-password-expiration) after a specific period, which can be 15, 30, or 90 days.
+Merchants can choose to [enforce password expiration](https://help.vtex.com/docs/tutorials/authentication#enforcing-password-expiration) after a specific period, which can be 15, 30, or 90 days.
 
 Merchants can also choose to integrate an external identity provider, allowing them to define their own customized password policies. See [Login integrations](#login-integrations) for more information.
 
-In the event of account lockout due to multiple incorrect password attempts, legitimate users can still log in using other methods, such as receiving a token via email or using an [integrated social login](https://help.vtex.com/en/tutorial/configuring-login-with-facebook-and-google--tutorials_513) (Google or Facebook), thus avoiding possible brute force exploits of weak passwords.
+In the event of account lockout due to multiple incorrect password attempts, legitimate users can still log in using other methods, such as receiving a token via email or using an [integrated social login](https://help.vtex.com/docs/tutorials/configuring-login-with-facebook-and-google) (Google or Facebook), thus avoiding possible brute force exploits of weak passwords.
 
 ### Login integrations
 
-Native login integrations are available for Facebook (webstore) and Google (webstore and VTEX Admin). Learn more in the [Configuring login with Facebook and Google](https://help.vtex.com/en/tutorial/configuring-login-with-facebook-and-google--tutorials_513) documentation.
+Native login integrations are available for Facebook (webstore) and Google (webstore and VTEX Admin). Learn more in the [Configuring login with Facebook and Google](https://help.vtex.com/docs/tutorials/configuring-login-with-facebook-and-google) documentation.
 
 [Single sign-on (SSO)](https://developers.vtex.com/docs/guides/login-integration-guide) is supported with integration options for external identity providers on both the Admin and store website.
 
@@ -75,9 +75,9 @@ VTEX efficiently manages logical access, ensuring precise control and monitoring
 
 Every interaction with our platform, whether it is accessing a page in the Admin or making an API call, involves a request to our infrastructure. **License Manager** is the system that ensures the security of these operations by verifying that a user or API key has the necessary permissions to perform actions on the platform. To simplify permission management, it is based on **roles** and **resources**.
 
-A resource is an entity associated with an action or information within our infrastructure. For example, the _View order_ resource allows a user to view the Order Details page in the Orders module. For details on each available resource, see [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3).
+A resource is an entity associated with an action or information within our infrastructure. For example, the _View order_ resource allows a user to view the Order Details page in the Orders module. For details on each available resource, see [License Manager resources](https://help.vtex.com/docs/tutorials/license-manager-resources).
 
-A [role](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) determines the set of resources that a group of users can access on VTEX. Each administrative user can be associated with one or more roles. When creating a new role, you have the option of using one of the [predefined roles](https://help.vtex.com/en/tutorial/predefined-roles--jGDurZKJHvHJS13LnO7Dy) provided by VTEX or [creating a customized one](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) by selecting each required resource.
+A [role](https://help.vtex.com/docs/tutorials/roles) determines the set of resources that a group of users can access on VTEX. Each administrative user can be associated with one or more roles. When creating a new role, you have the option of using one of the [predefined roles](https://help.vtex.com/docs/tutorials/predefined-roles) provided by VTEX or [creating a customized one](https://help.vtex.com/docs/tutorials/roles) by selecting each required resource.
 
 See below an example access control structure:
 
@@ -118,7 +118,7 @@ F --> J
 F --> K
 ```
 
-Learn more about how to effectively manage user roles and permissions in [Best practices for secure user management](https://help.vtex.com/faq/security-measures-for-creating-a-store-user-profiles--15YDwC9jGgqWi3rvcDaiGM).
+Learn more about how to effectively manage user roles and permissions in [Best practices for store access management](https://help.vtex.com/en/docs/tutorials/best-practices-for-store-access-management).
 
 ## Logs
 
@@ -126,13 +126,13 @@ All operations on the platform are automatically logged. Platform errors are log
 
 VTEX actively monitors application and infrastructure logs for patterns indicative of potential security risks, issuing alerts and implementing countermeasures upon detection. To maintain the privacy and security of our customers and ensure compliance with regulations, VTEX does not grant access to its internal systems.
 
-For merchant access, our services record various operations, including their authors and timestamps, in [Audit](https://help.vtex.com/en/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA), a tool available in the VTEX Admin for searching and investigating store history using filters.
+For merchant access, our services record various operations, including their authors and timestamps, in [Audit](https://help.vtex.com/en/docs/tutorials/audit), a tool available in the VTEX Admin for searching and investigating store history using filters.
 
-Explore the [list of events available in Audit](https://help.vtex.com/en/tutorial/events-available-in-audit--6r1Mzcu5NmkmmDLJlz9CCZ). If necessary, merchants can also request specific event logs from [Support](https://help.vtex.com/en/support).
+Explore the [list of events available in Audit](https://help.vtex.com/docs/tutorials/events-available-in-audit). If necessary, merchants can also request specific event logs from [Support](https://help.vtex.com/en/support).
 
 ## Attack protection
 
-VTEX uses a comprehensive approach to mitigate ransomware attacks, employing measures such as advanced antivirus, firewalls, and content filters to block malware. Our platform includes protection against DDoS (Distributed Denial of Service) attacks and other threats. Learn more in our [Security FAQ](https://help.vtex.com/en/tutorial/risk-assessment--4K97IpqkpCpDYsZOSxtfkX).
+VTEX uses a comprehensive approach to mitigate ransomware attacks, employing measures such as advanced antivirus, firewalls, and content filters to block malware. Our platform includes protection against DDoS (Distributed Denial of Service) attacks and other threats. Learn more in our [Security FAQ](https://help.vtex.com/docs/tutorials/risk-assessment).
 
 We maintain regular backups of critical data, ensuring the ability to restore information without having to accept criminal demands. Security updates and awareness training for employees are priorities, along with constant monitoring of activities for suspicious behavior. These measures combined form a robust defense against the growing threat of ransomware.
 
@@ -144,15 +144,15 @@ In addition to the standard protection measures implemented by VTEX, clients hav
 
 Secure Sockets Layer (SSL) is a protocol designed to increase the security of data transmitted over the internet. SSL connections are particularly recommended for sending information such as credit card numbers, passwords, and any other sensitive information over the internet.
 
-VTEX generates an SSL certificate for your store and guarantees its automatic renewal – there is no need to request the purchase of an SSL certificate for the store. The certificate is issued via [Let's Encrypt](https://letsencrypt.org/) and its creation is VTEX's responsibility at the time of the store's go-live. Learn more in [Security certificate (SSL)](https://help.vtex.com/pt/tutorial/security-certificate-ssl--tutorials_1308).
+VTEX generates an SSL certificate for your store and guarantees its automatic renewal – there is no need to request the purchase of an SSL certificate for the store. The certificate is issued via [Let's Encrypt](https://letsencrypt.org/) and its creation is VTEX's responsibility at the time of the store's go-live. Learn more in [Security certificate (SSL)](https://help.vtex.com/docs/tutorials/security-certificate-ssl).
 
 ## Penetration tests and vulnerability reports
 
-Our Security team regularly performs vulnerability checks, including recurring scans and penetration tests.  Upon request to our [Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/2Ik9CGbPeZIHHaYFsuyId3), merchants may have access to the **Attestation of Penetration Testing** report for the latest penetration tests performed on our behalf by an independent, reputable and technically competent third-party security consultancy. Learn more at [Penetration tests](https://help.vtex.com/en/tutorial/penetration-tests--6jodF6s1I50Fg84ZwutOCb).
+Our Security team regularly performs vulnerability checks, including recurring scans and penetration tests.  Upon request to our [Support](https://help.vtex.com/docs/tracks/how-vtex-support-works), merchants may have access to the **Attestation of Penetration Testing** report for the latest penetration tests performed on our behalf by an independent, reputable and technically competent third-party security consultancy. Learn more at [Penetration tests](https://help.vtex.com/docs/tutorials/penetration-tests).
 
-Vulnerabilities will be assessed as long as they are reported in accordance with the procedures outlined in [Reporting vulnerabilities](https://help.vtex.com/en/tutorial/reporting-vulnerabilities--2veBKt7ZGkjdqlMU3F0JYC).
+Vulnerabilities will be assessed as long as they are reported in accordance with the procedures outlined in [Reporting vulnerabilities](https://help.vtex.com/docs/tutorials/reporting-vulnerabilities).
 
->⚠️ Our [Master Services Agreement (MSA)](https://vtex.com/us-en/privacy-and-agreements/agreements/) expressly forbids performing penetration tests against the VTEX platform without our prior written consent. Doing so without our authorization would constitute a breach of contract by the customer.
+>⚠️ Our [Master Services Agreement (MSA)](https://vtex.com/us-en/trust/agreements/) expressly forbids performing penetration tests against the VTEX platform without our prior written consent. Doing so without our authorization would constitute a breach of contract by the customer.
 
 ## Security incident response
 
@@ -164,7 +164,7 @@ VTEX has a disaster recovery plan focused on ensuring operational continuity and
 
 We incorporate crucial recovery steps, including defining our standard RPO (Recovery Point Objective) and RTO (Recovery Time Objective) objectives, as well as carrying out backup tests, ensuring the plan's effectiveness and readiness in real scenarios.
 
-Learn more about our standard RPO and RTO in the [Security FAQ](https://help.vtex.com/en/tutorial/risk-assessment--4K97IpqkpCpDYsZOSxtfkX) – you must have access to an account’s Admin to view this information.
+Learn more about our standard RPO and RTO in the [Security FAQ](https://help.vtex.com/docs/tutorials/risk-assessment) – you must have access to an account’s Admin to view this information.
 
 ### Business continuity plan
 
@@ -172,6 +172,6 @@ With a business continuity plan, we address challenges arising from emergencies,
 
 ## VTEX Shield
 
-[VTEX Shield](https://help.vtex.com/en/tutorial/vtex-shield--2CVk6H9eY2CBtHjtDI7BFh) is an add-on product that offers supplementary, customizable protection layers for stores that prioritize platform resilience and the security standards guaranteed by VTEX's existing security [certifications and practices](https://vtex.com/br-pt/security/security-practices/).
+[VTEX Shield](https://help.vtex.com/docs/tutorials/vtex-shield) is an add-on product that offers supplementary, customizable protection layers for stores that prioritize platform resilience and the security standards guaranteed by VTEX's existing security [certifications and practices](https://vtex.com/br-pt/security/security-practices/).
 
->ℹ If you are an existing VTEX client and want to get VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ). Additional fees may apply. If you are not a VTEX client but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
+>ℹ If you are an existing VTEX client and want to get VTEX Shield for your business, please contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. If you are not a VTEX client but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/).
