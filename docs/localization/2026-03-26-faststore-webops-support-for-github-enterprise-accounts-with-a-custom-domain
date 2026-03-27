@@ -4,7 +4,7 @@ slug: "2026-03-26-faststore-webops-support-for-github-enterprise-accounts-with-a
 createdAt: "2026-03-26T10:00:00.388Z"
 ---
 
-We enhanced the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) onboarding to include support for GitHub Enterprise, so you can connect your storefront to enterprise GitHub instances with custom domains.
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) onboarding now includes support for GitHub Enterprise, so you can connect your storefront to enterprise GitHub instances with custom domains.
 
 ## What has changed?
 
