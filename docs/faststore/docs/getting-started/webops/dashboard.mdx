@@ -138,6 +138,7 @@ Once you've set the pages for testing and after a new deployment, go to the **Ov
 The **Settings** tab is where you manage the following configurations:
 
 * [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
+* [**Password protection**](#password-protection): Restricts access to preview environments and production domains with username and password authentication.
 * [**Variables and secrets**](#variables-and-secrets): Stores and allows secure management of sensitive information, such as API keys and passwords, required during FastStore deployment.
 
 ![settings-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/webops-settings.gif)
@@ -155,6 +156,21 @@ In the **Production domain** section, select the store domain from the dropdown 
 The **Current domains** section displays the default and primary domains configured for your store. This section serves as a reference to verify that your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment.
 
 > ⚠️ If your domain isn't listed, there might be an issue with the configuration or DNS settings that you need to address before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly, and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+
+### Password protection
+
+The **Password protection** section allows you to restrict access to your preview environments and production domain by requiring username and password authentication. This is useful for protecting internal testing environments, staging builds, or production domains from unauthorized access during development or initial launch phases.
+
+In the **Password protection** section, you can:
+
+* Enable password protection for preview deployments by toggling the switch
+* Enable password protection for your production domain by toggling the switch
+* Define a **Username** that will be required to access the protected environment
+* Define a **Password** that will be required to access the protected environment
+
+When password protection is enabled, users will be prompted with a basic authentication dialog when accessing the protected environment's URL. They must enter the configured username and password to proceed.
+
+> ℹ️ Password protection settings are applied immediately to all deployments in the selected environment. Ensure you share the username and password with authorized users through a secure channel.
 
 ### Variables and secrets
 
