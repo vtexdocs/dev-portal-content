@@ -19,6 +19,7 @@ Previously, preview deployments and production domains were publicly accessible 
 ## Why did we make this change?
 
 This feature enhances security by allowing you to:
+
 * Protect preview environments during development and testing phases.
 * Control access to production domains before official launch.
 * Prevent unauthorized or accidental access to staging and QA environments.
