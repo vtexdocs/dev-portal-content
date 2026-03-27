@@ -31,9 +31,8 @@ To enable password protection:
 1. Go to your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) and navigate to the **Settings** tab.
 2. Locate the **Password protection** section.
 3. Enable password protection for preview deployments or your production domain by toggling the corresponding switch.
-4. Enter a **Username** that users will need to authenticate with.
-5. Enter a **Password** that users will need to authenticate with.
-6. Save your settings.
+4. Enter a **Password** that users will need to authenticate with.
+5. Save your settings.
 
 When password protection is enabled, users will see a basic authentication dialog when accessing the protected environment's URL. They must enter the configured username and password to proceed.
 
