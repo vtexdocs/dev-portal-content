@@ -11,10 +11,10 @@ This establishes your project’s source of truth and CI/CD path — the foundat
 
 By the end of this step, you will have:
 
-- Created your FastStore project with basic configuration (project name, SEO tags, GTM, catalog)
-- Connected your project to a GitHub repository for version control
-- Set up the Headless CMS integration for content management
-- Deployed your project and generated a live preview of your storefront
+- Created your FastStore project with basic configuration (project name, SEO tags, GTM, catalog).
+- Connected your project to a GitHub repository for version control.
+- Set up the CMS integration for content management.
+- Deployed your project and generated a live preview of your storefront.
 
 Your project will be accessible at `https://{accountName}.vtex.app/` and ready for local development in the next step.
 
@@ -93,21 +93,25 @@ This helps us understand what you're trying to achieve with FastStore and improv
 | ----------- | ------------------------------------------------------ |
 | **Catalog** | Choose which catalog your store should be linked with. |
 
-### Terms of use
-
-If you already have content created in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), be aware that it will be automatically deleted during FastStore WebOps onboarding to avoid content duplication.
-
-To proceed, please confirm that you understand by checking the Terms of use box.
-
-After setting up the basic configuration for your store and reviewing it, click `Continue` to proceed to the next page.
-
 ## Step 2: Setting up integrations
 
-On this page, you will set up the native Headless CMS integration and connect to a GitHub organization.
+On this page, you will set up the native CMS integration and connect to a GitHub organization.
 
 ### CMS Integration
 
-Configure the native [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) integration and connect to GitHub.
+Configure the native [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) integration and connect to GitHub.
+
+![cms-setup-fields](/tbd)
+
+| Field | Description |
+| ----- | ----------- |
+| Store ID | Unique identifies for the store. |
+| Store name | Display name for the store |
+| Build type | Choose between the following optios <ul><li><b>FastStore WebOps</b> (default): Specifies that store builds will be performed by FastStore WebOps.</li><li><b>No build:</b> specifies that the store will not trigger builds on any system.</li><li><b>External build system:</b> specifies that the store build will be performed by an external system. For more details of this option see [Integrating the store build with an external build system](integrating-the-store-build-with-an-external-build-system).</li></ul> |
+
+#### Integrating the store build with an external build system
+
+<!-- add section description -->
 
 ### Git Provider
 
