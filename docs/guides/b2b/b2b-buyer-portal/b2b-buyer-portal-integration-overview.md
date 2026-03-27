@@ -134,20 +134,20 @@ Use the [Card Token Vault API](https://developers.vtex.com/docs/api-reference/ca
 
 ## Addresses
 
-Shipping destinations, internal delivery points, and contacts support checkout and fulfillment for buyer organizations.
+Shipping destinations, internal delivery points, and recipients support checkout and fulfillment for buyer organizations.
 
 | Capability | Description |
 | :--- | :--- |
 | Physical addresses | Create, search, update, and manage shipping and billing addresses for buyer organizations. |
 | Checkout and account usage | Supply address data consumed in checkout, default values, and the Organization Account. |
 | Delivery locations | Register internal delivery points (docks, departments, areas). |
-| Contact information | Manage people who can be selected as shipment recipients at the organization level. |
+| Recipients | Manage people who can be selected as shipment recipients at the organization level. |
 
 **Addresses** represent shipping and billing destinations. Integrations typically use the Addresses endpoints in the [Master Data API v1](https://developers.vtex.com/docs/api-reference/masterdata-api) to create, search, update, and manage addresses used in checkout and the Organization Account.
 
 A **location** is a specific delivery point within a site, such as a dock, department, or internal area. For example, freight may be consigned to the company's street address while the actual delivery is to **Dock 3456**. Locations are managed through the [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api). See [Custom Fields integration](https://developers.vtex.com/docs/guides/custom-fields-integration) to learn more.
 
-**Contacts** are the people who can be chosen as **order recipients**, who will receive the shipment. At checkout, the buyer selects the recipient for the order. That person may be different from the user placing the order. Contact records are maintained at the **organization** level and can be **associated with addresses**, so choosing a shipping address can narrow which recipients are offered. Use the [B2B Contact Information API](https://developers.vtex.com/docs/api-reference/b2b-contact-information-api) to manage contacts in B2B scenarios.
+**Recipients** are the people who can be chosen as **order recipients**, who will receive the shipment. At checkout, the buyer selects the recipient for the order. That person may be different from the user placing the order. Recipient records are maintained at the **organization** level and can be **associated with addresses**, so choosing a shipping address can narrow which recipients are offered. Use the [B2B Recipients API](https://developers.vtex.com/docs/api-reference/b2b-recipients-api) to manage recipients in B2B scenarios.
 
 ## Budgets and allocations
 
