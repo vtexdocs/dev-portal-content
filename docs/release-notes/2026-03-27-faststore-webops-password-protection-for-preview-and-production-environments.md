@@ -38,4 +38,4 @@ When password protection is enabled, users will see a basic authentication dialo
 
 For detailed instructions, see the [Password protection](https://developers.vtex.com/docs/guides/faststore/webops-dashboard#password-protection) section in the WebOps Dashboard guide.
 
-> ⚠️ Remember to share the username and password with authorized users through a secure channel.
+> ⚠️ Remember to share the password with authorized users through a secure channel.
