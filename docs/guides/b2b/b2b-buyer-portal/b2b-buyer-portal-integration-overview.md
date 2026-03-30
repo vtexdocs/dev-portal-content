@@ -7,7 +7,7 @@ updatedAt: "2026-03-13T00:00:00.000Z"
 excerpt: "Explore the integration capabilities of B2B Buyer Portal, including contracts, organization management, payment cards, addresses, Budgets, Buying policies, Accounting fields, and Punchout."
 ---
 
-> ⚠️ B2B Buyer Portal is currently available to select accounts.
+> ⚠️ B2B Buyer Portal is currently available to selected accounts.
 
 VTEX B2B Buyer Portal provides a robust [self-service interface for corporate buyers](https://help.vtex.com/docs/tutorials/organization-account). It simplifies B2B complexity by allowing organizations to autonomously manage their accounts, procurement workflows, and spending limits, enhancing operational efficiency for both merchants and customers.
 
