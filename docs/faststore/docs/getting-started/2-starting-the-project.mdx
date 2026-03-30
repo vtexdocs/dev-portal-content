@@ -99,19 +99,27 @@ On this page, you will set up the native CMS integration and connect to a GitHub
 
 ### CMS Integration
 
-Configure the native [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) integration and connect to GitHub.
+Configure the native [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) integration for your store.
 
-![cms-setup-fields](/tbd)
+**Select a store**
 
-| Field | Description |
-| ----- | ----------- |
-| Store ID | Unique identifies for the store. |
-| Store name | Display name for the store |
-| Build type | Choose between the following optios <ul><li><b>FastStore WebOps</b> (default): Specifies that store builds will be performed by FastStore WebOps.</li><li><b>No build:</b> specifies that the store will not trigger builds on any system.</li><li><b>External build system:</b> specifies that the store build will be performed by an external system. For more details of this option see [Integrating the store build with an external build system](integrating-the-store-build-with-an-external-build-system).</li></ul> |
+Choose whether to create a new CMS store or connect to an existing one:
 
-#### Integrating the store build with an external build system
+- **New store** (default): Creates a new CMS store for your FastStore project. Fill in the following fields:
 
-{/* add section description */}
+  ![new-store-cms](https://vtexhelp.vtexassets.com/assets/docs/src/cms-integrations-new___52da60694ecf236cffa8630c2ab45c17.png)
+
+  | Field | Description |
+  | ----- | ----------- |
+  | **Store ID** | Unique identifier for the store (e.g., `my-store`). |
+  | **Store name** | Display name for the store (e.g., `My Store`). |
+  | **Build type** | Choose between the following options: <ul><li><b>FastStore WebOps</b> (default): Specifies that store builds will be performed by FastStore WebOps.</li><li><b>No build:</b> Specifies that the store will not trigger builds on any system.</li><li><b>External build system:</b> Specifies that the store build will be performed by an external system. When choosing this type, a new field becomes visible to specify the Webhook URL (required for this build type), which will be the endpoint to be called to perform the store build.</li></ul> |
+
+- **Existing store**: Connects your FastStore project to a CMS store that already exists in your account. When this option is selected, a dropdown lists all available CMS stores for your account. Select the store you want to use from the dropdown.
+
+  ![existing-store-cms](https://vtexhelp.vtexassets.com/assets/docs/src/cms-integrations-new-2___ef95c8033e8c050d572b34a89aa1957e.png)
+
+  > ⚠️ Use this option if you previously deleted a WebOps project and are going through the onboarding flow again without erasing existing CMS content.
 
 ### Git Provider
 
