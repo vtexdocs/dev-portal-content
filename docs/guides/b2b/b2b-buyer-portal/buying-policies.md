@@ -8,7 +8,7 @@ excerpt: "With Buying Policies, buyer organizations can configure dynamic rules 
 
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
+> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
 
 The [Buying Policies](https://developers.vtex.com/docs/api-reference/buying-policies-api) system supports dynamic rules that buyer organizations can configure to suit their specific order authorization processes. It provides a mechanism for users to register custom rule expressions, offering greater flexibility and extensibility.
 
