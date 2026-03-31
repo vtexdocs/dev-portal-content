@@ -6,14 +6,18 @@ createdAt: "2026-03-05T00:00:00.000Z"
 updatedAt: "2026-03-05T00:00:00.000Z"
 excerpt: "This guide explains how to integrate the Delivery Promise Suggestions API into a headless storefront to display delivery promises and pickup options, creating meaningful visual indicators for shoppers."
 seeAlso:
+- "/docs/guides/delivery-promise"
 - "/docs/guides/setting-up-delivery-promise-components"
 - "/docs/guides/delivery-promise-for-headless-stores"
 - "/docs/guides/faststore/features-delivery-promise"
+- "https://help.vtex.com/docs/tutorials/delivery-promise-faq"
 ---
 
 >ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
 
-[**Delivery Promise**](https://developers.vtex.com/docs/guides/delivery-promise) is a VTEX solution that provides accurate and reliable delivery estimates for available products based on the customer's location. In this guide, you will learn how to integrate the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api) to display delivery promises and pickup options to shoppers in your [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront.
+[**Delivery Promise**](https://developers.vtex.com/docs/guides/delivery-promise) is VTEX's new solution that allows customers to view only the products they can buy in their shopping experience, considering both the product availability and valid shipping methods for their delivery address. To further enhance this experience, the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api) allows you to highlight the most relevant delivery options directly in the storefront. In this guide, you will learn how to integrate the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api) to display delivery promises and pickup options to shoppers in your [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront.
+
+![delivery-promise](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/docs/guides/Logistics/delivery-promise-suggestions-api-integration_1.png)
 
 ## Gathering delivery promise information
 
@@ -21,7 +25,7 @@ Before you implement the storefront components, gather the delivery information 
 
 ### Delivery zones and pickup points
 
-First, identify the delivery zones and pickup points available for the shopper’s location.
+Before implementing storefront components, you must first gather the delivery information that will be shown to the shopper by identifying the delivery zones and pickup points available for their location. This fulfillment context is then represented by two hashes (the delivery zones hash and the pickups hash), which serve as a compact, precomputed snapshot of all relevant logistics configurations. Rather than recalculating these options on every request, these hashes make it possible to retrieve accurate suggestions more quickly, with lower latency and greater consistency across the shopping experience.
 
 Use the [`POST` Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api#post-/api/logistics-shipping/delivery-zones/_search/v2) endpoint to retrieve the following information:
 
@@ -104,7 +108,7 @@ Use the `pickupPointsHash`  value when you search for delivery suggestions.
 
 ### Delivery suggestions
 
-Use the [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api#post-/api/delivery-promise-suggestions/_search) endpoint with the `deliveryZonesHash` and `pickupPointsHash` values in the request body to gather the delivery promise suggestions that will be presented in your storefront.
+Use the [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api#post-/api/delivery-promise-suggestions/_search) endpoint with the `deliveryZonesHash` and `pickupPointsHash` values in the request body to gather the delivery promise suggestions that will be presented in your storefront. You can use this endpoint for batch processing and for scenarios that involve multiple products.
 
 The following example response illustrates the data you can expect:
 
@@ -158,9 +162,9 @@ The following example response illustrates the data you can expect:
 }
 ```
 
-## Generating UI tags and badges
+## Generating UI elements
 
-Your storefront must translate the API response into user-facing visual indicators (tags and badges). This section explains how to map response fields into shopper-friendly messages.
+Your storefront must translate the API response into user-facing visual indicators. This section explains how to map response fields into shopper-friendly messages.
 
 ### Mapping delivery tags
 
@@ -198,7 +202,7 @@ Use different display strategies depending on where the shopper sees this inform
 
 | Context | Display recommendation |
 |---|---|
-| PLP (Product Listing Page) | Display the single best option (fastest delivery or fastest pickup). |
+| PLP (Product Listing Page) | Display the best option for delivery and for pickup. |
 | PDP (Product Detail Page) | Display all relevant delivery and pickup options. |
 
 ## End-to-end workflow example
