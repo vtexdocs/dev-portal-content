@@ -229,10 +229,10 @@ flowchart LR
 2. **Context update**: Create or refresh the fulfillment context whenever the location changes. Keep the context active by refreshing it before it becomes stale.
 3. **Products fetch**: The storefront identifies the relevant product IDs (for example, from a search results page).
 4. **API request**: Storefront calls [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api#post-/api/delivery-promise-suggestions/_search) with product IDs and the `deliveryZonesHash` and `pickupsHash`.
-5. **API response**: The API returns recommendations, for example::
+5. **API response**: The API returns recommendations, for example:
    - Delivery: `slaTimeTarget: {to: 2, unit: "d"}`, `name: "Express Delivery"`
    - Pickup: `slaTimeTarget: {to: 2, unit: "h"}`, `name: "Downtown Store"`
-6. **Storefront render**: The storefront renders UI components, for example::
+6. **Storefront render**: The storefront renders UI components, for example:
    - "Express Delivery (1–2 days)"
    - "Pickup Today at Downtown Store"
 
