@@ -40,7 +40,9 @@ To enable the Delivery Promise functionality, you should use the following addit
 | `dynamic-estimate` (facet) | The Dynamic Estimate filter selects Delivery Options that can meet the requested delivery or pickup timeframe. It must always be used together with `zip-code` and `shipping`. Possible values: `same-day`, `next-day`. It dynamically identifies which Delivery Options for the given `zip-code` and `shipping` facet can meet the requested timeframe, and then filters the search as if those Delivery Options had been manually passed as filters. | `/shipping/delivery/dynamic-estimate/same-day?zip-code=22250040` |
 | `hideUnavailableItems` (query string) | Controls whether the search returns only available products or both available and unavailable ones. When set to `true`, only products with stock are returned; when set to `false`, the API includes unavailable products as well. A product is considered unavailable when `availableQuantity = 0`, while `availableQuantity = 10000` indicates that the product is available.<br><br>**When filtering by shipping method (`shipping`), Delivery Options (`delivery-options`), or Dynamic Estimates (`dynamic-estimate`), this parameter must be set to `true`.** Otherwise, products that are unavailable for the selected filter may be displayed.<br><br>When filtering only by ZIP code (`zip-code`) without any of the above filters, retailers may choose to show unavailable items for commercial reasons (for example, to signal that they carry those products even if temporarily out of stock). This facet also allows merchants to expose a shopper-facing filter such as "show only in-stock products."<br><br> If `hideUnavailableItems` is omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
 
->⚠️ `zip-code` is **required** to filter product availability according to the shopper’s location and is integral to any request using Delivery Promise functionality. This means you must use it when filtering by shipping method and pickup point.
+>⚠️ For stores using Delivery Promise, the `zip-code` parameter is **mandatory** in all Intelligent Search API requests to filter product availability according to the shopper's location. This applies to both Product Listing Pages (PLP) and Product Detail Pages (PDP), and is integral to any request using Delivery Promise functionality, including when filtering by shipping method and pickup point.
+>
+> For stores not using Delivery Promise, the `zip-code` parameter is not required and can be omitted from Intelligent Search API requests.
 
 >⚠️ When filtering by shipping method (`shipping`), Delivery Options (`delivery-options`), or Dynamic Estimates (`dynamic-estimate`), you **must** include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for the selected filter. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
 
@@ -221,3 +223,76 @@ GET https://{{accountName}}.myvtex.com/_v/api/intelligent-search/facets/?query=m
   ]
 }
 ```
+
+## Implementing Product Detail Pages (PDP)
+
+>⚠️ To ensure consistent Delivery Promise information between Product Listing Pages (PLP) and Product Detail Pages (PDP), you must use the Intelligent Search API for both. Using different APIs (such as Catalog API for PDP and Intelligent Search for PLP) may result in inconsistent delivery information.
+
+When implementing Product Detail Pages (PDP) in headless stores using Delivery Promise, use the Intelligent Search API to ensure:
+
+* **Consistent delivery information:** Delivery estimates and availability shown on the PLP match those on the PDP.
+* **Accurate pickup point data:** Pickup points and their availability remain consistent across the shopping experience.
+* **Real-time availability:** Product availability is always calculated based on the shopper's location.
+
+To retrieve a specific product with Delivery Promise data for the PDP, use the `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) endpoint with the `query` (or `q`) parameter using specific product or SKU identifiers.
+
+The Intelligent Search API supports the following ID types in the `query` parameter:
+
+**Search by Product ID:**
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:{productId}&zip-code=22250040
+```
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.id:{productId}&zip-code=22250040
+```
+
+**Search by SKU ID:**
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku:{skuId}&zip-code=22250040
+```
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.id:{skuId}&zip-code=22250040
+```
+
+**Search by SKU EAN:**
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.ean:{ean}&zip-code=22250040
+```
+
+**Search by SKU Reference ID:**
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.reference:{refId}&zip-code=22250040
+```
+
+**Search by product slug (linkText):**
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:{slug}&zip-code=22250040
+```
+
+**Examples:**
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234&zip-code=22250040&hideUnavailableItems=true
+```
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?q=sku:5678&zip-code=22250040&hideUnavailableItems=true
+```
+
+```txt
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:apple-magic-mouse&zip-code=22250040&hideUnavailableItems=true
+```
+
+### Required parameters for PDP
+
+When implementing PDP with Delivery Promise:
+
+* **`query` or `q` (required):** Use one of the supported ID formats: `product:{id}`, `product.id:{id}`, `sku:{id}`, `sku.id:{id}`, `sku.ean:{ean}`, `sku.reference:{refId}`, or `product.link:{slug}`.
+* **`zip-code` (required):** Must be included to ensure accurate delivery estimates and product availability.
