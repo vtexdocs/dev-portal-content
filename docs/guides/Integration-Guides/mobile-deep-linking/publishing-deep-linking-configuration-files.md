@@ -27,7 +27,7 @@ Before getting started, ensure that:
 
 * Your **public domain** is already correctly pointing to VTEX, for example:
   `https://www.yourstore.com`
-* You have a valid API key and API token for your VTEX account with permission for public API calls. Learn more in [API authentication using API keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys).
+* You have a valid [API key and API token](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) for your VTEX account with permission for public API calls. No specific License Manager resource is required for this endpoint.
 * You have the file provided by Apple or Google without any content modifications.
 
 Always use HTTPS and the exact domain that will be configured with Apple or Google (including `www.` when applicable).
@@ -135,3 +135,26 @@ Verify that:
 * The header includes `Content-Type: application/json`.
 * The body contains the expected JSON.
 * There are no redirects in the response.
+
+## Updating configuration files
+
+To update any configuration file (for example, due to changes in Bundle ID, Team ID, certificate renewal, or path modifications), use the same `POST` request to `/.well-known/raw/{filename}?persistent=true` with the updated file content.
+
+The previous content will be automatically overwritten. For example, to update the iOS Universal Links configuration:
+
+```shell
+curl --location --request POST \
+  'https://www.yourstore.com/.well-known/raw/apple-app-site-association?persistent=true' \
+  --header 'X-VTEX-API-AppKey: {YOUR_API_KEY}' \
+  --header 'X-VTEX-API-AppToken: {YOUR_API_TOKEN}' \
+  --header 'Content-Type: application/json' \
+  --data-binary '@apple-app-site-association'
+```
+
+After updating, validate the endpoint using `GET` to confirm the new content is published correctly:
+
+```shell
+curl -i 'https://www.yourstore.com/.well-known/apple-app-site-association'
+```
+
+>⚠️ The `POST` method is the only supported way to publish or update these configuration files.
