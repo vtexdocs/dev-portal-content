@@ -121,11 +121,11 @@ https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search
 **Examples:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234
 ```
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?q=product.link:apple-magic-mouse
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?q=product.link:apple-magic-mouse
 ```
 
 >⚠️ **For stores using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise):** You must include the `zip-code` parameter in all Intelligent Search API requests to ensure accurate delivery estimates and product availability. See the [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide for implementation details.
@@ -133,7 +133,7 @@ https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_sear
 **Example with ZIP code (required for Delivery Promise):**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234&zip-code=22250040&hideUnavailableItems=true
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234&zip-code=22250040&hideUnavailableItems=true
 ```
 
 >ℹ️ The `query` parameter accepts specific filters like `product:{id}`, `sku:{id}`, `product.link:{slug}`, and other ID types to retrieve individual products. For more details, see the [Intelligent Search API reference](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-).
