@@ -245,49 +245,49 @@ https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search
 ```
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.id:{productId}&zip-code=22250040
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.id:{productId}&zip-code=22250040
 ```
 
 **Search by SKU ID:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku:{skuId}&zip-code=22250040
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku:{skuId}&zip-code=22250040
 ```
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.id:{skuId}&zip-code=22250040
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.id:{skuId}&zip-code=22250040
 ```
 
 **Search by SKU EAN:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.ean:{ean}&zip-code=22250040
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.ean:{ean}&zip-code=22250040
 ```
 
 **Search by SKU Reference ID:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.reference:{refId}&zip-code=22250040
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.reference:{refId}&zip-code=22250040
 ```
 
 **Search by product slug (linkText):**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:{slug}&zip-code=22250040
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:{slug}&zip-code=22250040
 ```
 
 **Examples:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234&zip-code=22250040&hideUnavailableItems=true
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234&zip-code=22250040&hideUnavailableItems=true
 ```
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?q=sku:5678&zip-code=22250040&hideUnavailableItems=true
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?q=sku:5678&zip-code=22250040&hideUnavailableItems=true
 ```
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:apple-magic-mouse&zip-code=22250040&hideUnavailableItems=true
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:apple-magic-mouse&zip-code=22250040&hideUnavailableItems=true
 ```
 
 ### Required parameters for PDP
