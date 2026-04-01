@@ -38,7 +38,7 @@ The `apple-app-site-association` file is used for **Universal Links** (deep link
 
 ### Example file
 
-Save a file named `apple-app-site-association` (without extension) with valid JSON content, for example:
+The file provided by Apple should be named `apple-app-site-association` (without extension) and contain valid JSON content similar to this:
 
 ```json
 {
@@ -54,10 +54,11 @@ Save a file named `apple-app-site-association` (without extension) with valid JS
 }
 ```
 
-Adjust:
 
-* `TEAMID.com.yourcompany.app` to your iOS app's Team ID + Bundle ID.
-* `paths` to cover the URLs that should open the app.
+* `TEAMID.com.yourcompany.app` should contain your iOS app's Team ID + Bundle ID.
+* `paths` must cover the URLs that should open the app.
+
+>ℹ️ Use the file provided by Apple without modifications. The example above is for reference only to help you understand the expected format.
 
 ### Upload via cURL
 
@@ -91,7 +92,7 @@ The `assetlinks.json` file is used for **Android App Links**, allowing you to as
 
 ### Example file
 
-Save a file named `assetlinks.json` with content similar to the example below (adjust for your app):
+The file provided by Google should be named `assetlinks.json` and contain valid JSON content similar to this:
 
 ```json
 [
@@ -108,7 +109,9 @@ Save a file named `assetlinks.json` with content similar to the example below (a
 ]
 ```
 
-Update `package_name` and `sha256_cert_fingerprints` with your Android app's values.
+The `package_name` and `sha256_cert_fingerprints` values must contain your Android app's values.
+
+>ℹ️ Use the file provided by Google without modifications. The example above is for reference only to help you understand the expected format.
 
 ### Upload via cURL
 
