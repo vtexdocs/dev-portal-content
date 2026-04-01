@@ -96,19 +96,19 @@ Use the [Get list of products for a query](https://developers.vtex.com/docs/api-
 **Search by Product ID:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:{productId}
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:{productId}
 ```
 
 **Search by SKU ID:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku:{skuId}
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku:{skuId}
 ```
 
 **Search by product slug:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:{slug}
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:{slug}
 ```
 
 **Other supported ID types:**

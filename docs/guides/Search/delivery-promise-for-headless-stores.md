@@ -241,7 +241,7 @@ The Intelligent Search API supports the following ID types in the `query` parame
 **Search by Product ID:**
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:{productId}&zip-code=22250040
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:{productId}&zip-code=22250040
 ```
 
 ```txt
