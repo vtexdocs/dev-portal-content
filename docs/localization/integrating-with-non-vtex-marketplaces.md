@@ -23,7 +23,7 @@ We have the following marketplace integration types:
 
 **Certified partner connectors:**
 
-* Integrations developed by certified VTEX partners.
+* Integrations developed by VTEX partners.
 * Specialized solutions for specific marketplaces.
 * Support provided by partner companies.
 * May include additional features or customizations.
