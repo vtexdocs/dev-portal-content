@@ -6,8 +6,8 @@ createdAt: "2026-03-19T13:00:00.152Z"
 updatedAt: "2026-03-19T13:00:00.152Z"
 ---
 
-The Bulk Pricing API allows for asynchronous processing of large-scale price updates by sending a single CSV file containing the price updates and letting the platform process them in the background. 
-This guide is intended for developers and integrators responsible for implementing bulk pricing update flows against the VTEX platform.
+The Bulk Pricing API allows for asynchronous processing of large-scale price updates by sending a single CSV file containing the price updates and letting the platform process them in the background.
+This guide is intended for developers and integrators who implement bulk pricing update flows on the VTEX platform.
 
 To update the price of only one SKU, use the [API](https://developers.vtex.com/docs/api-reference/pricing-api)
 
@@ -15,22 +15,22 @@ This API supports two types of pricing updates: **base prices** (cost price, bas
 
 The main actors involved are:
 
-- **External pricing system** (ERP or custom integration): prepares the CSV file and orchestrates the import workflow.  
-- **Bulk Pricing API**: receives the import request, provides the upload URL, and processes the pricing data.  
-- **Cloud storage**: hosts the pre-signed URL where the CSV file is uploaded directly.
+- **External pricing system** (ERP or custom integration): Prepares the CSV file and orchestrates the import workflow.
+- **Bulk Pricing API**: Receives the import request, provides the upload URL, and processes the pricing data.
+- **Cloud storage**: Hosts the pre-signed URL where the CSV file is uploaded directly.
 
 This guide covers the following integration flows:
 
-- [Bulk import flow](#bulk-import-flow)  
+- [Bulk import flow](#bulk-import-flow)
 - [Batch monitoring and error handling flow](#batch-monitoring-and-error-handling-flow)
 
 
 ## How it works
 
-Every bulk pricing import follows the same three-step async pattern, regardless of whether you are importing base prices or fixed prices:
+Every bulk pricing import follows the same three-step async pattern, regardless of whether you are importing base or fixed prices:
 
-1. Your system sends a `POST` request to the [Import prices endpoint](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#post-/api/price-importer/pvt/import/-importType-), specifying the import type (`base-prices` or `fixed-prices`) and the file metadata (content type and size in bytes). The API returns a unique `batchId` and a pre-signed upload URL.  
-2. Your system uploads the CSV file directly to the pre-signed URL using a `PUT` request with the headers provided in the response.  
+1. Your system sends a `POST` request to the [Import prices endpoint](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#post-/api/price-importer/pvt/import/-importType-), specifying the import type (`base-prices` or `fixed-prices`) and the file metadata (content type and size in bytes). The API returns a unique `batchId` and a pre-signed upload URL.
+2. Your system uploads the CSV file directly to the pre-signed URL using a `PUT` request with the headers provided in the response.
 3. Your system polls the [Get batch status endpoint](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#get-/api/price-importer/pvt/batches/-batchId-) using the `batchId` to monitor processing progress. If errors occur, you retrieve the error details via the [Get batch errors endpoint](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#get-/api/price-importer/pvt/batches/-batchId-/errors).
 
 ⚠️ The pre-signed upload URL has an expiration timestamp (`expiresAt`). You must complete the file upload before this time. If the URL expires, you need to start a new import job.
@@ -73,31 +73,31 @@ Each endpoint requires specific License Manager resources. Requests made without
 
 ## Bulk import flow
 
-Use this unified flow to import either base prices or fixed prices. The high-level process is identical for both import types; differences are noted inline where they matter.
+Use this unified flow to import either base or fixed prices. The high-level process is the same for both import types; differences are noted inline where relevant.
 
 ### When to use this flow
 
-- Use this flow when you need to update pricing data for many SKUs at once.  
-- Use base-price imports when you need to update cost, base and optional list prices for SKUs.  
-- Use fixed-price imports when you need to update trade-policy-specific prices, time-bound prices (Date From / Date To), or quantity-based rules (Min Quantity).
+- Use this flow when you need to update pricing data for many SKUs at once.
+- Use base-price imports when you need to update cost, base, and optional list prices for SKUs.
+- Use fixed-price imports when you need to update sales-channel-specific prices, time-bound prices (Date From / Date To), or quantity-based rules (Min Quantity).
 
 ### Main endpoints involved
 
-- `POST /api/price-importer/pvt/import/{importType}` – Start an import job. `importType` must be `base-prices` or `fixed-prices`. The response includes `batchId` and pre-signed upload details.  
-- `GET /api/price-importer/pvt/batches/{batchId}` – Poll batch status and progress.  
+- `POST /api/price-importer/pvt/import/{importType}` – Start an import job. `importType` must be `base-prices` or `fixed-prices`. The response includes `batchId` and pre-signed upload details.
+- `GET /api/price-importer/pvt/batches/{batchId}` – Poll batch status and progress.
 - `GET /api/price-importer/pvt/batches/{batchId}/errors` – Retrieve a pre-signed URL to download a CSV with row-level errors.
 
 ### Step-by-step
 
-1. Prepare a CSV file following the schema for the import type (see CSV schemas below). Ensure UTF-8 encoding, comma delimiter and a header row.  
-2. Call `POST /api/price-importer/pvt/import/{importType}` with a JSON body containing `contentType` and `contentLengthBytes`. Optionally set `output=email` for email notifications.  
-   - Example `importType` values:  
-     - `base-prices` — base price import.  
-     - `fixed-prices` — fixed price import.  
-3. Extract `batchId` and `upload.url` from the response.  
-4. Upload the CSV to `upload.url` with `PUT`. Include `Content-Type: text/csv` and any headers in `upload.headers`.  
-5. Poll `GET /api/price-importer/pvt/batches/{batchId}` until status is a terminal state (`COMPLETED`, `COMPLETED_WITH_ERRORS`, `FAILED`).  
-6. If `COMPLETED_WITH_ERRORS`, call the errors endpoint to download a CSV with `Error Code` and `Error Message` columns, fix failing rows and re-submit them as needed.
+1. Prepare a CSV file following the schema for the import type (see CSV schemas below). Ensure UTF-8 encoding, a comma delimiter, and a header row.
+2. Call `POST /api/price-importer/pvt/import/{importType}` with a JSON body containing `contentType` and `contentLengthBytes`. Optionally set `output=email` for email notifications.
+- Example `importType` values:
+- `base-prices` — base price import.
+- `fixed-prices` — fixed price import.
+3. Extract `batchId` and `upload.url` from the response.
+4. Upload the CSV to `upload.url` with `PUT`. Include `Content-Type: text/csv` and any headers in `upload.headers`.
+5. Poll `GET /api/price-importer/pvt/batches/{batchId}` until status is a terminal state (`COMPLETED`, `COMPLETED_WITH_ERRORS`, `FAILED`).
+6. If `COMPLETED_WITH_ERRORS`, call the errors endpoint to download a CSV with `Error Code` and `Error Message` columns, fix failing rows, and re-submit them as needed.
 
 ℹ️ The upload URL expires at `upload.expiresAt`. If it expires before you upload, start a new import job.
 
@@ -187,7 +187,7 @@ SKU ID,Cost Price,Base Price,List Price,Child Account
 | Price | Decimal | Yes | The fixed price of the item in the price table. | 25.00 |
 | List Price | Decimal | No | List price of the item in the price table. | 30.00 |
 | Min Quantity | Integer | No | Minimum quantity required to start applying this price. | 2 |
-| Date From | String | No | Date from which the price starts being applied, in ISO 8601 UTC. | 2025-07-29T18:20:37Z |
+| Date From | String | No | Date from which the price applies, in ISO 8601 UTC. | 2025-07-29T18:20:37Z |
 | Date To | String | No | End date for the fixed price, in ISO 8601 UTC. | 2025-08-29T18:20:37Z |
 
 CSV example (fixed prices):
@@ -211,9 +211,9 @@ SKU ID,Trade Policy,Price,List Price,Min Quantity,Date From,Date To,Child Accoun
 | 429 | Rate limit exceeded. | Wait and retry the request after a delay. |
 | 503 | Service unavailable. | Retry with exponential backoff. |
 
-⛔ If you receive a `413` error, do not retry with the same file. Split the CSV into multiple files under 500 MB each and submit them as separate import jobs.
+⛔ If you receive a `413` error, do not retry with the same file. Split the CSV into multiple files, each under 500 MB, and submit them as separate import jobs.
 
-⚠️ For fixed-price imports: ensure that `Date From` is earlier than `Date To`. Rows with invalid date ranges will fail during processing and appear in the error report.
+⚠️ For fixed-price imports: Ensure that `Date From` is earlier than `Date To`. Rows with invalid date ranges will fail during processing and appear in the error report.
 
 ## Batch monitoring and error handling flow
 
@@ -221,13 +221,13 @@ After uploading a CSV file, use this flow to track the import progress and retri
 
 ### When to use this flow
 
-- Use this flow after uploading a CSV file to monitor the batch processing status.  
-- Use this flow to determine when the import has completed and whether it succeeded or had errors.  
+- Use this flow after uploading a CSV file to monitor the batch processing status.
+- Use this flow to determine when the import has completed and whether it succeeded or had errors.
 - Use this flow to download a detailed error report when the batch finishes with the `COMPLETED_WITH_ERRORS` status.
 
 ### Main endpoints involved
 
-- [`GET /api/price-importer/pvt/batches/{batchId}`](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#get-/api/price-importer/pvt/batches/-batchId-) – Retrieves the current status and progress of a batch job.  
+- [`GET /api/price-importer/pvt/batches/{batchId}`](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#get-/api/price-importer/pvt/batches/-batchId-) – Retrieves the current status and progress of a batch job.
 - [`GET /api/price-importer/pvt/batches/{batchId}/errors`](https://developers.vtex.com/docs/api-reference/bulk-pricing-api#get-/api/price-importer/pvt/batches/-batchId-/errors) – Retrieves a pre-signed URL to download the error CSV.
 
 ### Status lifecycle
@@ -249,11 +249,11 @@ A batch job progresses through the following statuses:
 
 ### Step-by-step
 
-1. After uploading the CSV file, start polling the batch status endpoint using the `batchId` from the import response.  
-2. Check the `status` field in each response. Continue polling until the status reaches a terminal state.  
-3. Use the `bytesProcessed` and `bytesTotal` fields to calculate progress during the `PROCESSING` stage.  
-4. If the final status is `COMPLETED`, all rows were imported successfully.  
-5. If the final status is `COMPLETED_WITH_ERRORS`, call the Get batch errors endpoint to download the error report. The `errorCount` field tells you how many rows failed.  
+1. After uploading the CSV file, start polling the batch status endpoint using the `batchId` from the import response.
+2. Check the `status` field in each response. Continue polling until the status reaches a terminal state.
+3. Use the `bytesProcessed` and `bytesTotal` fields to calculate progress during the `PROCESSING` stage.
+4. If the final status is `COMPLETED`, all rows were imported successfully.
+5. If the final status is `COMPLETED_WITH_ERRORS`, call the Get batch errors endpoint to download the error report. The `errorCount` field tells you how many rows failed.
 6. If the final status is `FAILED`, the entire batch failed. Review the batch metadata and your CSV file for issues.
 
 ⚠️ Implement a polling interval with exponential backoff to avoid excessive API calls. A reasonable starting interval is 5 seconds, increasing gradually for long-running imports.
@@ -286,11 +286,11 @@ curl -X GET \
 }
 ```
 
-- `type`: indicates the import type (`base` for base prices, `fixed` for fixed prices).  
-- `status`: current processing status. Here, `COMPLETED_WITH_ERRORS` means some rows failed.  
-- `bytesProcessed` / `bytesTotal`: track upload and processing progress.  
-- `errorCount`: number of rows that failed. Use this to decide whether to retrieve the error report.  
-- `outputs`: configured notification channels for when the job finishes.
+- `type`: Indicates the import type (`base` for base prices, `fixed` for fixed prices).
+- `status`: Current processing status. Here, `COMPLETED_WITH_ERRORS` means some rows failed.
+- `bytesProcessed` / `bytesTotal`: Track upload and processing progress.
+- `errorCount`: Number of rows that failed. Use this to decide whether to retrieve the error report.
+- `outputs`: Configured notification channels for when the job finishes.
 
 ### Request example – Get batch errors
 
