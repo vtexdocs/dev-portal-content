@@ -6,6 +6,8 @@ createdAt: "2026-03-26T10:00:00.388Z"
 
 [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) onboarding now includes support for GitHub Enterprise, so you can connect your storefront to enterprise GitHub instances with custom domains.
 
+> ℹ️ **GitHub Enterprise support is currently in open beta.** If you want to use a GitHub Enterprise instance for your FastStore project, please contact [VTEX Support](https://help.vtex.com/support).
+
 ## What has changed?
 
 The FastStore WebOps onboarding guide previously supported only GitHub personal and organization accounts. Now, you have the option to connect to [GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud) instances with custom domains (for example, `mycompany.ghe.com`), in addition to the default GitHub.com options.
