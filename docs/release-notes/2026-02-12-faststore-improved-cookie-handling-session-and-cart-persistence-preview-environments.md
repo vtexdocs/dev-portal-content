@@ -9,7 +9,7 @@ tags:
     - FastStore
 ---
 
-FastStore stores now benefit from improved cookie handling across preview and localhost environments. This fix ensures `Set-Cookie` headers, the response headers that store session cookies, use a domain that matches the current host, preventing session and cart issues caused by cookies being rejected by the browser.
+FastStore stores now benefit from improved cookie handling across preview and localhost environments. This fix ensures `Set-Cookie` headers, the response headers that store session cookies, use a domain that matches the current host. This prevents session and cart issues caused by browsers rejecting cookies.
 
 ## What has changed?
 
@@ -19,7 +19,7 @@ FastStore now rewrites the cookie domain in GraphQL responses to match the reque
 
 ### Prevented `validateCartMutation` loops
 
-When cookies were rejected on preview or localhost, the cart validation flow could not persist state and kept retrying. With the normalized domain, the cookie is saved correctly and the validation flow stops as expected.
+When cookies were rejected on preview or localhost, the cart validation flow couldn't persist state and kept retrying. With the normalized domain, the cookie is saved correctly, and the validation flow stops as expected.
 
 ## Why did we make these changes?
 
@@ -27,4 +27,4 @@ This update improves reliability when developing and testing with FastStore by e
 
 ## What needs to be done?
 
-To apply this improvement in your store, update the FastStore packages to their latest version by running `yarn upgrade -L --scope @faststore` in your terminal.
+To apply this improvement to your store, update the FastStore packages to the latest version by running `yarn upgrade -L --scope @faststore` in your terminal.

@@ -3,7 +3,7 @@ title: "Understanding CMS architecture and schema declarations"
 hidden: false
 slug: "understanding-cms-architecture-and-schema-declarations"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-02-23T09:00:00.813Z"
+updatedAt: "2026-03-13T09:00:00.813Z"
 excerpt: "Learn how the CMS separates read and write operations with CQRS, defines component schemas using modular files, and organizes project folders differently from the Headless CMS (legacy)."
 ---
 
@@ -11,8 +11,8 @@ The CMS is built on the **CQRS (Command Query Responsibility Segregation)** arch
 
 With CQRS, content editors get a responsive editing experience while your store gets fast content delivery, without either affecting the other, covering the following aspects:
 
-- **Performance under load**: Read and write operations scale independently.  
-- **Optimization trade-offs**: Each plane is optimized for its specific purpose.  
+- **Performance under load**: Read and write operations scale independently.
+- **Optimization trade-offs**: Each plane is optimized for its specific purpose.
 - **Reliability**: Failures in one plane don't affect the other.
 - **Technology choices**: Best technology for each plane's requirements.
 
@@ -20,9 +20,9 @@ With CQRS, content editors get a responsive editing experience while your store 
 
 The Data Plane is optimized for high-performance content delivery to storefronts and has the following key characteristics:
 
-- **Read-only**: Only serves published content, no write operations.  
-- **ETag caching**: Supports efficient cache validation.  
-- **Slug-based lookups**: Retrieve content by URL path.  
+- **Read-only**: Only serves published content, no write operations.
+- **ETag caching**: Supports efficient cache validation.
+- **Slug-based lookups**: Retrieve content by URL path.
 - **Context filtering**: Filter content by locale or other contexts.
 
 | Component | Purpose |
@@ -34,8 +34,8 @@ The Data Plane is optimized for high-performance content delivery to storefronts
 
 The Schema Registry manages component schemas and Content Type definitions and has the following key operations:
 
-- Upload and store schema bundles.  
-- Provide schema definitions to CMS interface for form rendering.
+- Upload and store schema bundles.
+- Provide schema definitions to the CMS interface for form rendering.
 
 | Component | Purpose |
 | :---- | :---- |
@@ -80,26 +80,28 @@ sequenceDiagram
   DP-->>Runtime: Content + ETag headers
   ```
 
-1. **Schema upload** (development time):  
-   - Developer runs `vtex content upload-schema`.  
-   - CLI sends schema to Schema Registry API.  
+1. **Schema upload** (development time):
+
+   - Developer runs `vtex content upload-schema`.
+   - CLI sends schema to Schema Registry API.
    - Schema is stored and made available to Control Plane and Data Plane.
 
-2. **Content editing** (authoring time):  
-   - Editor creates/edits content in the CMS Admin interface.  
-   - CMS interface (Admin UI) calls Control Plane API.  
-   - Content is saved to Control Plane database.  
+2. **Content editing** (authoring time):
+
+   - Editor creates/edits content in the CMS Admin interface.
+   - CMS interface (Admin UI) calls Control Plane API.
+   - Content is saved to the Control Plane database.
    - Changes are isolated on a branch until merged.
 
-3. **Content publishing** (publish time):  
+3. **Content publishing** (publish time):
 
-   - Editor merges branch to main.  
+   - Editor merges branch to main.
    - Event triggers sync to Data Plane and build webhook.
 
-4. **Content delivery** (runtime):  
+4. **Content delivery** (runtime):
 
-   - Content is fetched from the Data Plane API.
-   - Data Plane returns published content with ETag headers.
+  - Content is fetched from the Data Plane API.
+  - Data Plane returns published content with ETag headers.
 
 ## Schema declarations
 
@@ -107,9 +109,9 @@ Schemas define the structure of content in the CMS. They specify which fields a 
 
 When a content editor creates or edits content in the CMS interface in the Admin, schemas are used to:
 
-- **Render the editing form**: Each field in the schema becomes an input field in the interface.  
-- **Validate content**: Ensure required fields are filled, and data types are correct.  
-- **Define relationships**: Schemas determine which sections can be used within specific Content Types.
+- **Render the editing form**: Each field in the schema becomes an input field in the interface.
+- **Validate content**: Ensure required fields are completed, and data types are correct.
+- **Define relationships**: Schemas determine which sections can be used within specific content types.
 
 Both the Headless CMS (legacy) and the CMS rely on [JSON Schema](https://json-schema.org/) to define schemas. However, they differ in how schemas are organized, authored, and deployed.
 
@@ -136,9 +138,9 @@ To understand the practical differences, let's compare how the same Banner compo
 
 In the Headless CMS (legacy), all sections are defined in a single `sections.json` file. Each section has a `name` and a nested `schema` object.
 
-- All components are defined in a single array within one file.  
-- Component identified by the `name` field.  
-- Display name comes from `schema.title`.  
+- All components are defined in a single array within one file.
+- Component identified by the `name` field.
+- Display name comes from `schema.title`.
 - No inheritance between components.
 
 ```json
@@ -184,10 +186,15 @@ In the Headless CMS (legacy), all sections are defined in a single `sections.jso
 
 In the CMS, each component is defined in its own `.jsonc` file. The schema is flatter and includes additional metadata fields for identification, display, and inheritance.
 
-- Each component in its own file (`cms_component__ComponentName.jsonc`).  
-- Component identified by `$componentKey` field.  
-- Display name specified by `$componentTitle`.  
+- Each component in its own file (`cms_component__ComponentName.jsonc`).
+- Component identified by `$componentKey` field.
+- Display name specified by `$componentTitle`.
 - Inherits from base schema via `$extends`.
+
+> ⚠️ Prefixes are mandatory in schema file names:
+>
+> - Component schemas must start with `cms_component__`.
+> - Content Type schemas must start with `cms_content_type__`.
 
 ```jsonc
 // cms/components/cms_component__Banner.jsonc
@@ -240,9 +247,9 @@ The CMS introduces additional schema keywords for a more modular, reusable, and 
 
 The `$extends` property allows sections to inherit properties from one or more base schemas, promoting code reuse and consistency. Schema inheritance provides benefits for content modeling, including:
 
-- **Consistency** through a shared base structure across components.  
-- **Maintainability** by propagating changes from base schemas.  
-- **Reusability** via domain-specific base schemas (for example, promotional or navigational components).  
+- **Consistency** through a shared base structure across components.
+- **Maintainability** by propagating changes from base schemas.
+- **Reusability** via domain-specific base schemas (for example, promotional or navigational components).
 - **Type safety** through schema-compatibility validation.
 
 <details>
@@ -355,7 +362,7 @@ your-store/
 The CMS uses a consistent naming pattern that makes file purposes immediately clear:
 
 | Item | Headless CMS (legacy) | CMS |
-|------|------|---------|
+| --- | --- | --- |
 | **Component schemas** | All in `sections.json` | `cms_component__ComponentName.jsonc` |
 | **Content types** | All in `content-types.json` | `cms_content_type__typeName.jsonc` |
 | **File extension** | `.json` | `.jsonc` (allows comments) |
