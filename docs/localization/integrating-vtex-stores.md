@@ -203,7 +203,7 @@ Then, to approve SKUs to make them available on your marketplace:
 2. Click `Approve` to add them to your marketplace catalog.
 3. The approved SKUs will be associated with the mapped categories, brands, and specifications.
 
-> ℹ️ You can set up automatic approval for trusted sellers to streamline cataloging. For more information, see [Cataloging received SKUs](https://help.vtex.com/docs/tutorials/manual-sku-cataloging).
+> ℹ️ You can set up automatic approval for trusted sellers to streamline cataloging. This can only be done through Rest API. For more information, see [Save seller's approval settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration/seller/-sellerId-).
 
 ### Verify product availability
 
