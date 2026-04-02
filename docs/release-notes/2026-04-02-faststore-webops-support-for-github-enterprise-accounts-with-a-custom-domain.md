@@ -10,7 +10,7 @@ createdAt: "2026-04-02T13:48:24.227Z"
 
 ## What has changed?
 
-The FastStore WebOps onboarding guide previously supported only GitHub personal and organization accounts. Now, you have the option to connect to [GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud) instances with custom domains (for example, `mycompany.ghe.com`), in addition to the default GitHub.com options.
+The FastStore WebOps onboarding guide previously supported only GitHub personal and organization accounts. Now, you have the option to connect to [GitHub Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud) instances with custom domains (for example, `mycompany.ghe.com`), in addition to the default GitHub.com options.
 
 ## Why did we make this change?
 
