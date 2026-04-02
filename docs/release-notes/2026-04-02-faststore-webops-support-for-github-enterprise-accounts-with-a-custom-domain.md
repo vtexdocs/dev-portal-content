@@ -15,11 +15,11 @@ tags:
 
 ## What has changed?
 
-The FastStore WebOps onboarding guide previously supported only GitHub personal and organization accounts. Now, you have the option to connect to [GitHub Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud) instances with custom domains (for example, `mycompany.ghe.com`), in addition to the default GitHub.com options.
+Previously, the FastStore WebOps supported only GitHub personal and organization accounts. Now, you can also connect to [GitHub Enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud) instances with custom domains (for example, `mycompany.ghe.com`), in addition to the default options.
 
 ## Why did we make this change?
 
-Many enterprise customers use GitHub Enterprise with custom domains for enhanced security, compliance, and governance. By supporting this setup, we enable enterprise teams to seamlessly integrate their FastStore projects with their existing GitHub infrastructure. This reduces setup friction and ensures that all organizations can leverage FastStore WebOps regardless of their GitHub deployment model.
+Many enterprise customers use GitHub Enterprise with custom domains for enhanced security, compliance, and governance. By supporting this setup, we enable enterprise teams to integrate their FastStore projects with their existing GitHub infrastructure. This reduces setup friction and ensures that all organizations can leverage FastStore WebOps regardless of their GitHub deployment model.
 
 ## What needs to be done?
 
