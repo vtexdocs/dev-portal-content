@@ -52,7 +52,7 @@ For unsupported marketplaces, consider developing a custom connector.
 
 **When to develop custom connectors:**
 
-* No native or certified connector exists.
+* No native or partner connector exists.
 * Marketplace has specific technical requirements.
 * Integration requires unique business logic.
 * Volume justifies development investment.
@@ -62,6 +62,8 @@ For unsupported marketplaces, consider developing a custom connector.
 ### Defining sales channels
 
 [Sales channels](https://help.vtex.com/docs/tutorials/how-trade-policies-work) control which products, prices, and conditions apply to each channel, including marketplaces.
+
+> ℹ️ For each additional commercial policy, a monthly fee is charged, whether used for integration with VTEX, partner or external marketplaces.
 
 To define sales channels for your marketplace:
 
