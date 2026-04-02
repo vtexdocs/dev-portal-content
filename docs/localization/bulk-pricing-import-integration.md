@@ -91,9 +91,9 @@ Use this unified flow to import either base or fixed prices. The high-level proc
 
 1. Prepare a CSV file following the schema for the import type (see CSV schemas below). Ensure UTF-8 encoding, a comma delimiter, and a header row.
 2. Call `POST /api/price-importer/pvt/import/{importType}` with a JSON body containing `contentType` and `contentLengthBytes`. Optionally set `output=email` for email notifications.
-- Example `importType` values:
-- `base-prices` — base price import.
-- `fixed-prices` — fixed price import.
+   - Example `importType` values:
+     - `base-prices` — base price import.
+     - `fixed-prices` — fixed price import.
 3. Extract `batchId` and `upload.url` from the response.
 4. Upload the CSV to `upload.url` with `PUT`. Include `Content-Type: text/csv` and any headers in `upload.headers`.
 5. Poll `GET /api/price-importer/pvt/batches/{batchId}` until status is a terminal state (`COMPLETED`, `COMPLETED_WITH_ERRORS`, `FAILED`).
