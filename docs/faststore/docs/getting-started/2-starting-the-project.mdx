@@ -55,6 +55,8 @@ For more information, refer to the [Catalog documentation](https://help.vtex.com
 To complete the FastStore WebOps onboarding, you'll need a GitHub account to host your project. You can use either a [personal account](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github), a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations), or a [GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/get-started/onboarding/getting-started-with-github-enterprise-cloud) instance.
 If you use a GitHub organization or GitHub Enterprise, ensure you have **admin access** to it.
 
+> ℹ️ **GitHub Enterprise support is currently in open beta.** If you want to use a GitHub Enterprise instance for your FastStore project, please contact [VTEX Support](https://help.vtex.com/support).
+
 </Steps>
 
 ## Step 1 - Setting up the project
@@ -114,9 +116,43 @@ Configure the native [Headless CMS](https://developers.vtex.com/docs/guides/fast
 
 Connect with a GitHub personal account, organization, or GitHub Enterprise instance of your choice to host the source code of your FastStore project.
 
-    > ⚠️ If you choose to install the app in a GitHub organization or GitHub Enterprise, make sure you have admin access.
+> ⚠️ If you choose to install the app in a GitHub organization or GitHub Enterprise, make sure you have admin access.
 
-To connect to the FastStore WebOps app, follow these steps:
+#### GitHub personal account or organization
+
+To connect a GitHub personal account or organization to the FastStore WebOps app, follow these steps:
+
+1. Click `Connect with GitHub`. A new browser tab will open on the side for you to integrate the app with GitHub.
+
+    > ⚠️ If you are not logged in to your GitHub account, in the new tab, you will be asked to log in. Then, you can continue to the next step.
+
+2. Once you are logged in to your GitHub account, choose the organization or your personal account you want to install the app. You will be redirected to the **Settings** page on GitHub.
+
+    > ⚠️ Once you define the GitHub organization, you cannot change it later.
+
+3. In **Repository access**, choose one of the following options: **All repositories from the organization** or **Only select repositories**.
+
+4. Click `Install`.
+
+The following successful message will appear on the page:
+
+    ```
+    Success! You can now close this page and proceed with the onboarding process.
+    ```
+
+After seeing the success message, close the browser tab and continue the onboarding process in the VTEX Admin.
+
+5. Now that the app is integrated with GitHub, select which repository you want to start the project:
+
+    - **New repository:** Create a repository from scratch, in this option, you only need to type a name for the repository, and after clicking `Create`, it will create the repository for you.
+
+    - **Existing repository:** Select an existing repository from the organization to start the project.
+
+6. Click `Create`. The deployment process will begin, and once it is complete, you will be redirected to the [Deploy Summary](#step-3-deploying-the-project) page.
+
+#### GitHub Enterprise
+
+> ℹ️ **GitHub Enterprise support is currently in open beta.** If you want to use a GitHub Enterprise instance for your FastStore project, please contact [VTEX Support](https://help.vtex.com/support). Once enabled, follow the instructions below.
 
 1. In the **Git Provider** section of the Integrations tab, you'll see two options:
    - **Default (github.com):** Select this to connect to a standard GitHub personal or organization account.
@@ -154,7 +190,7 @@ After seeing the success message, close the browser tab and continue the onboard
 
     - **Existing repository:** Select an existing repository from the organization to start the project.
 
-7. Click `Create`. The deployment process will begin, and once it's complete, you'll be redirected to the [Deploy Summary](#step-3--deploying-the-project) page.
+7. Click `Create`. The deployment process will begin, and once it's complete, you'll be redirected to the [Deploy Summary](#step-3-deploying-the-project) page.
 
 ## Step 3 - Deploying the project
 
