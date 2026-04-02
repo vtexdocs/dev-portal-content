@@ -1,7 +1,7 @@
 ---
 title: "FastStore WebOps: Support for GitHub Enterprise accounts with a custom domain"
 slug: "2026-03-26-faststore-webops-support-for-github-enterprise-accounts-with-a-custom-domain"
-createdAt: "2026-03-26T10:00:00.388Z"
+createdAt: "2026-04-02T13:48:24.227Z"
 ---
 
 [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) onboarding now includes support for GitHub Enterprise, so you can connect your storefront to enterprise GitHub instances with custom domains.
@@ -18,7 +18,9 @@ Many enterprise customers use GitHub Enterprise with custom domains for enhanced
 
 ## What needs to be done?
 
-To set up FastStore WebOps with GitHub Enterprise, follow these steps:
+If you want to use a GitHub Enterprise instance for your FastStore project, please contact [VTEX Support](https://help.vtex.com/support).
+
+Once enabled, follow these steps to set up FastStore WebOps with GitHub Enterprise:
 
 1. In the **Git Provider** section of the onboarding process, select **Custom Domain** to connect to a GitHub Enterprise instance.
 
