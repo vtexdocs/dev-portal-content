@@ -21,7 +21,7 @@ We have the following marketplace integration types:
 * Available for major marketplaces (Amazon, Mercado Libre, etc.).
 * Maintained and updated by VTEX.
 
-**Certified partner connectors:**
+**Partner connectors:**
 
 * Integrations developed by VTEX partners.
 * Specialized solutions for specific marketplaces.
