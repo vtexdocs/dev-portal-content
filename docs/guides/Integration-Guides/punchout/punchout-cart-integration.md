@@ -10,7 +10,7 @@ seeAlso:
  - "/docs/guides/punchout-login-integration"
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
+> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
 
 In a Punchout scenario, buyers must transfer their cart back to their organization’s eprocurement system for approval and compliance validation before completing the purchase.
 

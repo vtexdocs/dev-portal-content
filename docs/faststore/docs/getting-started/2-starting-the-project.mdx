@@ -1,11 +1,12 @@
 ---
 title: '2. Starting a new FastStore project'
 excerpt: "Create and set up your FastStore project with WebOps."
+updatedAt: "2026-04-02T13:48:24.227Z"
 ---
 
 In this step, you'll use the [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) to create your FastStore project, connect it to GitHub, and deploy a live preview.  
 
-This establishes your project’s source of truth and CI/CD path — the foundation for all later steps in this track.
+This establishes your project's source of truth and CI/CD path — the foundation for all later steps in this track.
 
 ## What you'll accomplish
 
@@ -20,17 +21,17 @@ Your project will be accessible at `https://{accountName}.vtex.app/` and ready f
 
 ## Getting to know the WebOps app
 
-[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) is the **control plane** for FastStore projects. It manages every stage of your storefront’s lifecycle, from creation to deployment, and integrates with your GitHub repository and VTEX account to facilitate collaboration and automation.
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) is the **control plane** for FastStore projects. It manages every stage of your storefront's lifecycle, from creation to deployment, and integrates with your GitHub repository and VTEX account to facilitate collaboration and automation.
 
     ![dashboard-overview](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/dashboard-overview.png)
 
 WebOps connects your storefront code (GitHub) with your VTEX infrastructure, enabling a branch-based workflow for development and production. Keep the following in mind:
 
-- **Environment requirement:** WebOps operates exclusively in the production environment. Install it only in your account’s `master` environment.
+- **Environment requirement:** WebOps operates exclusively in the production environment. Install it only in your account's `master` environment.
 - **Development workflow:** FastStore uses a [Git branching model](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) for development and testing:
   - The app is installed in the `master` environment of your VTEX account.
   - Development and testing occur on Git branches.
-  - Approved changes are merged into the repository’s `main` branch and automatically deployed to production.
+  - Approved changes are merged into the repository's `main` branch and automatically deployed to production.
 
 > ℹ️ Unlike [VTEX IO workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace), FastStore uses a Git-based branching workflow.
 
@@ -51,8 +52,10 @@ For more information, refer to the [Catalog documentation](https://help.vtex.com
 
 ### Have a GitHub account
 
-To complete the FastStore WebOps onboarding, you’ll need a GitHub account to host your project. You can use either a [personal account](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github) or a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations).  
-If you use a GitHub organization, ensure you have **admin access** to it.
+To complete the FastStore WebOps onboarding, you'll need a GitHub account to host your project. You can use either a [personal account](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github), a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations), or a [GitHub Enterprise](https://docs.github.com/en/enterprise-cloud@latest/get-started/onboarding/getting-started-with-github-enterprise-cloud) instance.
+If you use a GitHub organization or GitHub Enterprise, ensure you have **admin access** to it.
+
+> ℹ️ **GitHub Enterprise support is currently in open beta.** If you want to use a GitHub Enterprise instance for your FastStore project, please contact [VTEX Support](https://help.vtex.com/support).
 
 </Steps>
 
@@ -67,17 +70,17 @@ If you use a GitHub organization, ensure you have **admin access** to it.
 Choose the option that best fits your project's purpose. 
 This helps us understand what you're trying to achieve with FastStore and improve your experience.
 
-| Field                                                     | Description                                                    |
-| --------------------------------------------------------- | -------------------------------------------------------------- |
-| **Project name**                                          | Enter your FastStore project's name, e.g., `Marcio Car store`. |
-| **Which option best describes the goal of your project?** | Choose the option that best fits your project’s purpose.       |
+| Field                                                     | Description                                                           |
+| --------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Project name**                                          | Enter your FastStore project's name, for example, `Marcio Car store`. |
+| **Which option best describes the goal of your project?** | Choose the option that best fits your project's purpose.              |
 
 ### SEO Tags
 
 | Field               | Description                                                                                                                                                                                                                                                     |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Title Tag**       | Enter a keyword-optimized title for your store. For example: `Buy Online with the Best Game Store - GameStore`. In this example, we used the length limit of around 50-60 characters to ensure it is fully displayed in search results without being truncated. |
-| **Description Tag** | Enter a brief description of your store, for example, `Shop online at GameStore, the best game store for PC, Xbox, PS4 and Headphones. Explore our wide selection and buy your favorite games today!`                                                            |
+| **Title Tag**       | Enter a keyword-optimized title for your store. For example: `Buy Online with the Best Game Store - GameStore`. In this example, we used a length limit of 50-60 characters to ensure it is fully displayed in search results without truncation. |
+| **Description Tag** | Enter a brief description of your store, for example, `Shop online at GameStore, the best game store for PC, Xbox, PS4, and Headphones. Explore our wide selection and buy your favorite games today!`                                                            |
 | **Title Template**  | Enter a page title that helps search engines and users better understand the content of your store. For example, `The best game store - GameStore`.                                                                                                              |
 | **Site Author**     | Enter the name of the agency or person responsible for the development of the storefront.                                                                                                                                                                       |
 
@@ -85,7 +88,7 @@ This helps us understand what you're trying to achieve with FastStore and improv
 
 | Field      | Description                                                                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **GTM ID** | Enter the Google Tag Manager ID (GTM ID) associated with the GTM container responsible for managing and organizing the tags of your store. |
+| **GTM ID** | Enter the Google Tag Manager ID (GTM ID) for the GTM container that manages and organizes the tags for your store. |
 
 ### Catalog
 
@@ -123,11 +126,16 @@ Choose whether to create a new CMS store or connect to an existing one:
 
 ### Git Provider
 
-Connect with a GitHub personal account or organization of your choice to host the source code of your FastStore project. 
+To host the source code of your FastStore project, you can connect with a:
 
-    > ⚠️ If you choose to install the app in a GitHub organization, make sure you have admin access to an organization.
+* [GitHub personal account or organization](#github-personal-account-or-organization)
+* [GitHub Enterprise](#github-enterprise)
 
-To connect to the FastStore WebOps app, follow these steps:
+> ⚠️ If you choose to install the app in a GitHub organization or GitHub Enterprise, make sure you have admin access.
+
+#### GitHub personal account or organization
+
+To connect a GitHub personal account or organization to the FastStore WebOps app, follow these steps:
 
 1. Click `Connect with GitHub`. A new browser tab will open on the side for you to integrate the app with GitHub.
 
@@ -155,9 +163,51 @@ After seeing the success message, close the browser tab and continue the onboard
 
     - **Existing repository:** Select an existing repository from the organization to start the project.
 
-6. Click `Create`. The deployment process will begin, and once it is complete, you will be redirected to the [Deploy Summary](#step-3--deploying-the-project) page.
+6. Click `Create`. The deployment process will begin, and once it is complete, you will be redirected to the [Deploy Summary](#step-3-deploying-the-project) page.
 
-## Step 3: Deploying the project
+#### GitHub Enterprise
+
+> ℹ️ **GitHub Enterprise support is currently in open beta.** If you want to use a GitHub Enterprise instance for your FastStore project, please contact [VTEX Support](https://help.vtex.com/support). Once enabled, follow the instructions below.
+
+1. In the **Git Provider** section of the Integrations tab, you'll see two options:
+   - **Default (github.com):** Select this to connect to a standard GitHub personal or organization account.
+   - **Custom Domain:** Select this to connect to a GitHub Enterprise instance with a custom domain. For example, `{enterpriseName}.ghe.com`, where `{enterpriseName}` is the name of your GitHub Enterprise account.
+
+    > ⚠️ Once you define the Git Provider, you cannot change it later.
+
+    ![git-provider](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/git-provider.png)
+
+2. Click `Connect with GitHub`. A new browser tab will open on the side for you to integrate the app with GitHub.
+
+    > ⚠️ If you're not logged in to your GitHub account, you'll be prompted to log in in a new tab. Then, you can continue to the next step.
+
+3. Complete the GitHub app installation:
+
+   - **For Default (github.com):** Once logged in to your GitHub account, choose the organization or personal account where you want to install the app. You'll be redirected to the **Settings** page on GitHub.
+
+   - **For Custom Domain (GitHub Enterprise):** Once logged in to your GitHub Enterprise account, you'll be redirected to the app creation page for your custom domain. On the page, click `Create GitHub App for Organization` to complete the app creation process.
+
+4. In **Repository access**, choose one of the following options: **All repositories from the organization** or **Only select repositories**.
+
+5. Click `Install`.
+
+The following success message will appear on the page:
+
+    ```
+    Success! You can now close this page and proceed with the onboarding process.
+    ```
+
+After seeing the success message, close the browser tab and continue the onboarding process in the VTEX Admin.
+
+6. Now that the app is integrated with GitHub, select which repository you want to start the project:
+
+    - **New repository:** Create a repository from scratch. In this option, you only need to type a repository name and click `Create` to create the repository.
+
+    - **Existing repository:** Select an existing repository from the organization to start the project.
+
+7. Click `Create`. The deployment process will begin, and once it's complete, you'll be redirected to the [Deploy Summary](#step-3-deploying-the-project) page.
+
+## Step 3 - Deploying the project
 
 After completing the setup for your store, the deployment process will begin. This process involves creating a GitHub repository and a default domain for your project. Once the deployment process is complete, you should see the following:
 
@@ -167,7 +217,7 @@ After completing the setup for your store, the deployment process will begin. Th
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Your Repository**      | Access the store's GitHub repository and start setting up and customizing your store.                                                                                                                                                                                                                                                       |
 | **Documentation**        | Access the FastStore Portal Documentation.                                                                                                                                                                                                                                                                                                  |
-| **Customization**        | Access the documentation on how to customize your store.                                                                                                                                                                                                                                                                                    |
+| **Customization**        | Access the documentation for customizing your store.                                                                                                                                                                                                                                                                                    |
 | **View Dashboard**       | Access the Dashboard with the current status of your store, including its domains, deployed versions, store preview, and Lighthouse scores. For more information, please refer to the [Dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) guide. |
 
 > ⚠️ If repository creation fails and no live preview is generated, click **Retry** to redeploy.
