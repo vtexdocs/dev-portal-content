@@ -37,7 +37,7 @@ To run reviews on this PR, add at least one of the following labels:
 
 Once at least one label is added, the review(s) will run automatically.
 
-After the review is completed, the corresponding label will be removed an the label `AI reviewed` will be added to the PR.
+After the review is completed, the corresponding label will be removed and the label `AI reviewed` will be added to the PR.
 
 > [!NOTE]
-> To rerun a review, add the label again.
+> To rerun a review, remove and add the desired label again.
