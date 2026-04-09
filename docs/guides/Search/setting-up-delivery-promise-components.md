@@ -4,19 +4,19 @@ slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
-updatedAt: "2026-01-05T19:11:26.116Z"
+updatedAt: "2026-04-07T12:00:00.000Z"
 seeAlso:
- - "/docs/apps/vtex.shipping-option-components"
+ - "/docs/apps/vtex.delivery-promise-components"
 ---
 
->ℹ️ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+> ℹ️ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
 The [Delivery Promise (Beta)](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products that can be delivered to the provided address or picked up at available locations.
 
 The availability is displayed following these rules:
 
-* For pickup points selected in the header or a specific pickup point, the system displays all available pickup points within a 50 km pickup radius configured in Checkout. There is no limit to the number of pickup points displayed.
-* For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are displayed, with a maximum of 40 pickup points.
+- For pickup points selected in the header or a specific pickup point, the system displays all available pickup points within a 50 km pickup radius configured in Checkout. There is no limit to the number of pickup points displayed.
+- For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are displayed, with a maximum of 40 pickup points.
 
 >ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX Sellers, [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types), and external sellers).
 
@@ -24,7 +24,7 @@ The availability is displayed following these rules:
 
 If you're building your storefront with Store Framework, you can enable this experience using two key apps:
 
-* [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components): Used to display a location selector.
+* [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components): Used to display blocks for postal code, delivery versus pickup, and pickup point selection.
 * [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result): Used to implement sidebar filters.
 
 This guide walks you through the basic setup needed to implement these components in your store.
@@ -47,95 +47,135 @@ Contact our [Support](https://support.vtex.com/hc/en-us) team to request the act
 
 ### Step 2 - Displaying a location selector
 
-To use Delivery Promise, customers must define a delivery address early in their shopping journey. The [`Shipping Option Components`](https://developers.vtex.com/docs/apps/vtex.shipping-option-components) app provides blocks that allow users to select a location and display delivery options accordingly.
+To use Delivery Promise, customers must provide a delivery address early in their shopping journey. The [`delivery-promise-components`](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app exposes Store Framework blocks that collect the location and, optionally, the fulfillment method (delivery vs. pickup or a specific pickup point).
 
-1. Add the `shipping-option-components` app to your theme dependencies in the `manifest.json` as shown below:
+1. Add the `delivery-promise-components` app to your theme dependencies in `manifest.json` as shown below:
 
    ```json
       "dependencies": {
-        "vtex.shipping-option-components": "1.x"
+        "vtex.delivery-promise-components": "1.x"
       }
    ```
 
-2. Declare the `shipping-option-location-selector` block as a child block of your [header](https://developers.vtex.com/docs/apps/vtex.store-header) block, exported by the `store-header` app. Example:
+2. Declare the blocks in your theme header (or another layout that should show the controls). The app exposes three header blocks.
 
-   ```json mark=15:17
-        "header.full": {
-           "blocks": ["header-layout.desktop", "header-layout.mobile"]
-         },
-        
-         "header-layout.desktop": {
-           "children": [
-             "header-row#1-desktop",
-           ]
-         },
-        
-         "header-row#1-desktop": {
-           "children": ["shipping-option-location-selector"],
-         },
-        
-        "shipping-option-location-selector": {
-          "props": {
-            "compactMode": true,
-          }
-        },
-   ```
+| Block                      | Description                                                                                           |
+| -------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `shopper-location-setter`  | **Required.** Collects the shopper’s location (postal code or equivalent). This value drives all Delivery Promise subsequent availability calculations and filters.|
+| `shipping-method-selector` | Optional. A control for choosing between delivery and pickup after a location is set. |
+| `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after a location is set.  |
 
-3. Configure the behavior with props to customize how location selection is presented. Below, we highlight key uses of the available props.
+> The `shopper-location-setter` block is required and must always be included in the header. `shipping-method-selector` and `pickup-point-selector` are optional. They complement the location setter but do not replace it, since both depend on the location already set in the session. Add them only if you want to expose additional controls in the UI. Otherwise, keep the header simple: either `shopper-location-setter` alone, or `shopper-location-setter` paired with one of the selectors. Using all three together is possible but uncommon.
 
-   * [Setting up a blocking modal](#setting-up-a-blocking-modal)
-   * [Defining displayed delivery methods](#defining-displayed-delivery-methods)
+Choose the configuration that matches your use case:
 
-   >ℹ️ Learn more about all the available props in [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components).
+##### Location only
 
-When the customer provides their address, an initial selection of products is made to display only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by the Checkout. This selection impacts all subsequent product listings and filters.
+Use the `shopper-location-setter` block when you only need the shopper to provide their location, without separate header controls for shipping method or store.
 
-#### Setting up a blocking modal
-
-To ensure location input is provided before browsing, you can configure a blocking modal that displays when the page loads and can't be dismissed until a postal code is entered.
-
-To do this, you must use both the `callToAction` and `dismissible` props:
-
-* `callToAction`: Defines which UI is displayed on load:
-
-  * `modal`: Displays a modal requiring postal code entry.
-  * `popover-input` *(default)*: Opens a popover with a postal code input field.
-  * `popover-button`: Displays a button that opens the popover when clicked.
-* `dismissible`: When set to `false`, the modal can't be closed until a valid postal code is entered.
-
-Configure the props as shown in the example below:
+**Example** 
 
 ```json
-"shipping-option-location-selector": {
-  "props": {
-    "dismissible": false,
-    "callToAction": "modal"
-  }
-}
+    "header-row#1-desktop": {
+      "children": ["shopper-location-setter"]
+    },
+
+    "shopper-location-setter": {
+      "props": {
+        "required": false,
+        "mode": "default",
+        "showLocationDetectorButton": false
+      }
+    }
 ```
 
-This configuration ensures the page is filtered for delivery availability from the first interaction, improving performance and relevance.
+##### Location + shipping method
 
-#### Defining displayed delivery methods
+Use `shopper-location-setter` and `shipping-method-selector` when you want the header to make the delivery or pickup choice explicit right after the shopper enters a location.
 
-The `shippingSelection` prop controls which delivery methods are displayed:
-
-* `delivery-and-pickup`: Enables both delivery and pickup location options.
-* `only-pickup`: Displays only the pickup selector (for example, in stores focusing on in-store pickup).
-
-Configure the prop as shown in the example below:
+**Example** 
 
 ```json
-"shipping-option-location-selector": {
-  "props": {
-    "shippingSelection": "delivery-and-pickup"
-  }
-}
+    "header-row#1-desktop": {
+      "children": [
+        "shopper-location-setter",
+        "shipping-method-selector"
+      ]
+    },
+
+    "shopper-location-setter": {
+      "props": {
+        "required": false,
+        "mode": "default",
+        "showLocationDetectorButton": false
+      }
+    },
+
+    "shipping-method-selector": {
+      "props": {
+        "required": false,
+        "mode": "default"
+      }
+    }
 ```
+
+##### Location + pickup point
+
+Use `shopper-location-setter` and `pickup-point-selector` when pickup is a central part of your experience, and you want both "where am I?" and "which store?" visible in the header.
+
+**Example** 
+
+```json
+    "header-row#1-desktop": {
+      "children": [
+        "shopper-location-setter",
+        "pickup-point-selector"
+      ]
+    },
+
+    "shopper-location-setter": {
+      "props": {
+        "required": false,
+        "mode": "default",
+        "showLocationDetectorButton": false
+      }
+    },
+
+    "pickup-point-selector": {
+      "props": {
+        "mode": "default"
+      }
+    }
+```
+
+3. Configure the behavior with props to customize the blocks. Below are the available props.
+
+#### `shopper-location-setter`
+
+| Prop                         | Type      | Default     | Description                                                                                                            |
+| ---------------------------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `required`                   | `boolean` | `false`     | When `true`, opens a non-dismissible postal code modal until a valid code is set. When `false`, uses the popover flow. |
+| `mode`                       | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                     |
+| `showLocationDetectorButton` | `boolean` | `false`     | Shows the control that uses the browser geolocation API to suggest the postal code. Available only on this block.      |
+
+#### `shipping-method-selector`
+
+| Prop       | Type      | Default     | Description                                                                                                       |
+| ---------- | --------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
+| `required` | `boolean` | `false`     | When `true`, the shipping method modal cannot be dismissed until a method is selected (after a postal code is entered). |
+| `mode`     | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                |
+
+#### `pickup-point-selector`
+
+| Prop   | Type     | Default     | Description                        |
+| ------ | -------- | ----------- | ---------------------------------- |
+| `mode` | `string` | `"default"` | Display mode: `default` or `icon`. |
 
 ### Step 3 - Implementing sidebar filters
 
-To display available delivery filters in the search sidebar, follow the steps below using the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) component. It automatically renders facets, including those related to delivery and pickup availability.
+To display Delivery Promise filters in the search sidebar, configure the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app as described below.
+
+> ⚠️ Delivery Promise filters are a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can handle future updates.
 
 1. In your theme's `manifest.json`, add the `search-result` app as a dependency:
 
@@ -145,22 +185,54 @@ To display available delivery filters in the search sidebar, follow the steps be
     }
    ```
 
-2. Ensure your theme includes the `search-result-layout.desktop` or `search-result-layout.mobile` block, depending on the layout.
+2. Ensure your theme uses either the `search-result-layout.desktop` or `search-result-layout.mobile` blocks, depending on the layout. Inside these layouts, include the `filter-navigator.v3` block so the sidebar can render filters:
 
-Within this layout, make sure the sidebar block includes `filter-navigator.v3`:
+```json store/search.json
+{
+  "store.search#default": {
+    "blocks": ["search-result-layout"]
+  },
+  "search-result-layout": {
+    "children": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile"
+    ]
+  },
+  "search-result-layout.desktop": {
+    "children": ["filter-navigator.v3", "search-content"],
+    "props": {
+      "showShippingMethodFacet": true
+    }
+  },
+  "search-result-layout.mobile": {
+    "children": ["filter-navigator.v3", "search-content"],
+    "props": {
+      "showShippingMethodFacet": true
+    }
+  }
+}
+```
+
+3. Enable the Delivery Promise filters by setting the `showShippingMethodFacet` to `true` in each flexible search layout where the facet should appear. This property is disabled by default, so the shipping method filter remains hidden unless explicitly enabled. The example above enables it on both desktop and mobile layouts.
+
+5. Optionally, define which shipping options should be displayed using the `availableShippingValues` prop in the same layout blocks. When this prop is not defined, or when it is set to an empty array, the default options are used: `delivery`, `pickup-in-point`, and `pickup-nearby`. When you provide a non-empty array, it replaces the default entirely and only the specified values are shown. Supported values correspond to the search API facet names and include: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
+
+   Example with an explicit list (same as the default) plus `pickup-all` on desktop and mobile:
 
    ```json
-    // store/search.json
-    {
-      "store.search#default": {
-        "blocks": ["search-result-layout.desktop"]
-      },
-      "search-result-layout.desktop": {
-        "children": ["filter-navigator.v3", "search-content"]
-      }
-    }
+   "search-result-layout.desktop": {
+     "children": ["filter-navigator.v3", "search-content"],
+     "props": {
+       "showShippingMethodFacet": true,
+       "availableShippingValues": [
+         "delivery",
+         "pickup-in-point",
+         "pickup-nearby",
+         "pickup-all"
+       ]
+     }
+   }
    ```
 
-These blocks will display all applicable filters automatically. If a customer has selected a location using the Shipping Option component, delivery filters will reflect real-time availability based on that address.
+The shipping method facet appears only when `showShippingMethodFacet` is enabled. The options listed match `availableShippingValues` when you set it, or fall back to the default set when the prop is not provided. Other Delivery Promise-related facets continue to behave as usual.
 
->⚠️ The delivery promise filters are a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can adapt to updates.
