@@ -11,6 +11,37 @@ updatedAt: "2025-10-23T12:00:00.000Z"
 
 This guide describes how to integrate [product recommendations](https://help.vtex.com/tutorial/product-recommendations-beta--2QIexbD2FSXBxELUnFtg7g) to headless stores using the VTEX [Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api).
 
+>⚠️ If you already have product recommendations configured in your Store Framework or FastStore website and are building a mobile app or other headless channel, you can skip Steps 1-3 and start directly at [Step 4: Product recommendations implementation flow](#step-4-product-recommendations-implementation-flow). Your environment is already set up, models are trained, and the tracking script is running on your website.
+
+## Implementation overview
+
+The implementation path depends on whether you're starting from scratch or extending an existing VTEX store:
+
+```mermaid
+flowchart LR
+    Start([Start Implementation]) --> Question{Already using<br/>Store Framework<br/>or FastStore?}
+    
+    Question -->|No - New headless store| Step1[Step 1: Initial Setup<br/>VTEX Support configures environment]
+    Question -->|Yes - Adding new channel| Skip[Skip to Step 4<br/>Environment already configured]
+    
+    Step1 --> Step2[Step 2: Script Implementation<br/>Add tracking script to website]
+    Step2 --> Step3[Step 3: Model Training<br/>VTEX Support trains models]
+    Step3 --> Step4[Step 4: API Implementation<br/>Implement recommendation flow]
+    
+    Skip --> Step4
+    
+    Step4 --> Flow1[1. Start user session<br/>POST /users/start-session]
+    Flow1 --> Flow2[2. Fetch recommendations<br/>GET /recommendations]
+    Flow2 --> Flow3[3. Track interactions<br/>POST /events/*]
+    
+    Flow3 --> End([Recommendations Active])
+    
+    style Question fill:#e1f5ff
+    style Skip fill:#c8e6c9
+    style Step4 fill:#fff9c4
+    style End fill:#c8e6c9
+```
+
 ## Before you begin
 
 Before implementing headless recommendations, make sure you have:
@@ -80,6 +111,35 @@ After the models are trained, they will be available for API-based recommendatio
 
 ## Step 4: Product recommendations implementation flow
 
+The following diagram illustrates the complete recommendation flow, from session initialization to tracking user interactions:
+
+```mermaid
+sequenceDiagram
+    participant User as User Device
+    participant API as Recommendations BFF API
+
+    Note over User,API: Session Initialization
+    User->>API: POST /users/start-session<br/>(orderFormId)
+    API-->>User: recommendationsUserId<br/>(stored as _snrs_uuid)
+
+    Note over User,API: Fetching Recommendations
+    User->>API: GET /recommendations<br/>(userId, campaignVrn, context)
+    API-->>User: Recommended products<br/>(IDs, correlationId)
+    
+    Note over User,API: User Interaction Tracking
+    User->>User: Shelf enters viewport
+    User->>API: POST /events/recommendation-view<br/>(userId, correlationId, products)
+    API-->>User: 200 OK
+    
+    User->>User: Clicks product card
+    User->>API: POST /events/recommendation-click<br/>(userId, correlationId, product)
+    API-->>User: 200 OK
+    
+    User->>User: Views product page
+    User->>API: POST /events/product-view<br/>(userId, product, source)
+    API-->>User: 200 OK
+```
+
 To implement product recommendations in your headless store, follow these steps:
 
 1. [Start a user session to get a unique identifier](#starting-the-user-session)
@@ -130,7 +190,9 @@ The campaign determines the type of recommendations returned, such as personaliz
 
 This endpoint retrieves a list of recommended products based on:
 
-* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. Contact [our Support](https://help.vtex.com/en/support) to obtain the `campaignId`
+* Campaign VRN (Virtual Resource Name) identifying the recommendation strategy. The VRN follows the pattern `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. You can obtain the `campaignId` from:
+  * The [recommendation list details page](https://help.vtex.com/en/tutorial/recommendations-dashboard#copying-shelf-id) in the VTEX Admin (copy the list ID).
+  * The confirmation page [after creating a new recommendation list](https://help.vtex.com/en/tutorial/creating-a-recommendation-list#copying-list-id) (copy the list ID).
 
   Available campaign types:
 
@@ -185,11 +247,11 @@ To improve recommendation accuracy and measure effectiveness, you need to track 
 * [Recommendation clicks](#recommendation-clicks): When users click recommended products.
 * [Product views](#product-views): When users visit product detail pages.
 
-⚠️ For accurate tracking, ensure that:
-
-* All events include the same `recommendationsUserId`.
-* Events are properly debounced to prevent duplicates.
-* View events are triggered only when shelves enter the viewport.
+> ⚠️ For accurate tracking, ensure that:
+> 
+> * All events include the same `recommendationsUserId`.
+> * Events are properly debounced to prevent duplicates.
+> * View events are triggered only when shelves enter the viewport.
 
 #### Recommendation views
 
