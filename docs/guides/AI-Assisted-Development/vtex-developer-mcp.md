@@ -96,7 +96,7 @@ Or add a `.mcp.json` file at your project root:
 }
 ```
 
-4. Quit and reopen Claude Desktop.
+1. Quit and reopen Claude Desktop.
 
 ## Available tools
 
@@ -120,7 +120,7 @@ A few tips on how to combine them:
 You can ask your AI assistant things like:
 
 - "Search VTEX documentation for payment provider integration"
-- "Fetch the full guide at https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol"
+- "Fetch the full guide at <https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol>"
 - "Find documentation about the catalog API"
 - "Search for API endpoints related to order placement"
 - "Get the full specification for the Create Order endpoint"

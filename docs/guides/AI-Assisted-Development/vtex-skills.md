@@ -94,8 +94,11 @@ curl -sL https://github.com/vtex/skills/releases/latest/download/opencode-skills
 
 ### Kiro
 
+Clone the repository and copy the Kiro export files:
+
 ```bash
-curl -sL https://github.com/vtex/skills/releases/latest/download/kiro-power.tar.gz | tar xz -C your-project/
+git clone https://github.com/vtex/skills.git
+cp -r skills/exports/kiro/. your-project/
 ```
 
 ## Tracks and skills
