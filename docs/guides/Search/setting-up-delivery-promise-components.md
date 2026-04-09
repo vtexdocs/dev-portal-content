@@ -47,7 +47,7 @@ Contact our [Support](https://support.vtex.com/hc/en-us) team to request the act
 
 ### Step 2 - Displaying a location selector
 
-To use Delivery Promise, customers must define a delivery address early in their shopping journey. The [`delivery-promise-components`](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app exposes Store Framework blocks that collect that location and, optionally, how the order should be fulfilled (delivery vs pickup, or a specific pickup point).
+To use Delivery Promise, customers must provide a delivery address early in their shopping journey. The [`delivery-promise-components`](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app exposes Store Framework blocks that collect the location and, optionally, the fulfillment method (delivery vs. pickup or a specific pickup point).
 
 1. Add the `delivery-promise-components` app to your theme dependencies in `manifest.json` as shown below:
 
@@ -57,25 +57,23 @@ To use Delivery Promise, customers must define a delivery address early in their
       }
    ```
 
-2. Declare the blocks in your theme header (or another layout that should show the controls). Start from one of the combinations below; adjust block IDs and `children` to match your `header` structure.
+2. Declare the blocks in your theme header (or another layout that should show the controls). The app exposes three header blocks.
 
-#### Blocks you can add to the header
-
-The app exposes three header blocks. **`shopper-location-setter` is the one you always include** when using Delivery Promise in the header: it is where the shopper informs a postal code (or equivalent location), and that value is what the rest of the feature uses for availability and filters.
-
-**`shipping-method-selector`** and **`pickup-point-selector`** are optional. They do not replace the location setter. They assume a location already exists in the session (the same state the shopper-location-setter writes). Use them when you want an extra control in the header after the postal code is set; omit them if a single location field is enough for your UX.
-
-You can place all three blocks in the same page, but most implementations keep the header lighter: **`shopper-location-setter` alone**, or **`shopper-location-setter` plus one** of the selectors.
-
-| Block                      | In practice                                                                                           |
+| Block                      | Description                                                                                           |
 | -------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `shopper-location-setter`  | The postal-code / location entry point; establishes where Delivery Promise should calculate from.     |
-| `shipping-method-selector` | A dedicated control for choosing **delivery** versus **pickup** after the shopper has set a location. |
-| `pickup-point-selector`    | A dedicated control for choosing **which pickup point** to use after the shopper has set a location.  |
+| `shopper-location-setter`  | **Required.** Collects the shopper’s location (postal code or equivalent). This value drives all Delivery Promise subsequent availability calculations and filters.|
+| `shipping-method-selector` | Optional. A control for choosing between delivery and pickup after a location is set. |
+| `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after a location is set.  |
 
-##### Example: location only
+> The `shopper-location-setter` block is required and must always be included in the header. `shipping-method-selector` and `pickup-point-selector` are optional. They complement the location setter but do not replace it, since both depend on the location already set in the session. Add them only if you want to expose additional controls in the UI. Otherwise, keep the header simple: either `shopper-location-setter` alone, or `shopper-location-setter` paired with one of the selectors. Using all three together is possible but uncommon.
 
-Use this when you only need the shopper to inform where they are, without separate header controls for method or store.
+Choose the configuration that matches your use case:
+
+##### Location only
+
+Use the `shopper-location-setter` block when you only need the shopper to provide their location, without separate header controls for shipping method or store.
+
+**Example** 
 
 ```json
     "header-row#1-desktop": {
@@ -91,9 +89,11 @@ Use this when you only need the shopper to inform where they are, without separa
     }
 ```
 
-##### Example: location + shipping method
+##### Location + shipping method
 
-Use this when you want the header to make the delivery vs pickup choice explicit right after the location exists.
+Use `shopper-location-setter` and `shipping-method-selector` when you want the header to make the delivery or pickup choice explicit right after the shopper enters a location.
+
+**Example** 
 
 ```json
     "header-row#1-desktop": {
@@ -119,9 +119,11 @@ Use this when you want the header to make the delivery vs pickup choice explicit
     }
 ```
 
-##### Example: location + pickup point
+##### Location + pickup point
 
-Use this when pickup-in-point is central and you want both “where am I?” and “which store?” visible in the header.
+Use `shopper-location-setter` and `pickup-point-selector` when pickup is a central part of your experience, and you want both "where am I?" and "which store?" visible in the header.
+
+**Example** 
 
 ```json
     "header-row#1-desktop": {
@@ -146,9 +148,9 @@ Use this when pickup-in-point is central and you want both “where am I?” and
     }
 ```
 
-3. Configure the behavior with props to customize the blocks. Below, the available props.
+3. Configure the behavior with props to customize the blocks. Below are the available props.
 
-**`shopper-location-setter`**
+#### `shopper-location-setter`
 
 | Prop                         | Type      | Default     | Description                                                                                                            |
 | ---------------------------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -156,14 +158,14 @@ Use this when pickup-in-point is central and you want both “where am I?” and
 | `mode`                       | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                     |
 | `showLocationDetectorButton` | `boolean` | `false`     | Shows the control that uses the browser geolocation API to suggest the postal code. Available only on this block.      |
 
-**`shipping-method-selector`**
+#### `shipping-method-selector`
 
 | Prop       | Type      | Default     | Description                                                                                                       |
 | ---------- | --------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
-| `required` | `boolean` | `false`     | When `true`, the shipping method modal cannot be dismissed until a method is chosen (after a postal code exists). |
+| `required` | `boolean` | `false`     | When `true`, the shipping method modal cannot be dismissed until a method is selected (after a postal code is entered). |
 | `mode`     | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                |
 
-**`pickup-point-selector`**
+#### `pickup-point-selector`
 
 | Prop   | Type     | Default     | Description                        |
 | ------ | -------- | ----------- | ---------------------------------- |
@@ -171,7 +173,9 @@ Use this when pickup-in-point is central and you want both “where am I?” and
 
 ### Step 3 - Implementing sidebar filters
 
-To display filters in the search sidebar, follow the steps below using the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app.
+To display Delivery Promise filters in the search sidebar, follow the steps below using the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app.
+
+> ⚠️ Delivery Promise filters are a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can adapt to updates.
 
 1. In your theme's `manifest.json`, add the `search-result` app as a dependency:
 
@@ -212,11 +216,11 @@ Within each layout, make sure the sidebar includes `filter-navigator.v3`:
 }
 ```
 
-3. Set **`showShippingMethodFacet`** to **`true`** on each flexible search layout block where you want the **shipping method** facet. The default is `false`, so that filter group stays hidden until you opt in. The example above enables it on both **desktop** and **mobile** layouts.
+3. Set `showShippingMethodFacet` to `true` on each flexible search layout block where you want the shipping method facet. The default is `false`, so that filter group stays hidden until you opt in. The example above enables it on both desktop and mobile layouts.
 
-4. Optionally set **`availableShippingValues`** on the same layout blocks to control **which** shipping options appear inside that facet. Omit the prop or use an empty array `[]` to keep the default set: **`delivery`**, **`pickup-in-point`**, and **`pickup-nearby`**. If you pass a **non-empty** array, it **replaces** that default entirely—only values you list are shown (for example add **`pickup-all`** when you want that option on the PLP). Allowed values match the search API shipping facet names: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
+4. Optionally, set `availableShippingValues` on the same layout blocks to control **which** shipping options appear inside that facet. Omit the prop or use an empty array `[]` to keep the default set: `delivery`, `pickup-in-point`, and `pickup-nearby`. If you pass a non-empty array, it replaces that default entirely—only values you list are shown (for example, add `pickup-all` when you want that option on the PLP). Allowed values match the search API shipping facet names: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
 
-   Example with an explicit list (same as the default) plus **`pickup-all`** on desktop and mobile:
+   Example with an explicit list (same as the default) plus `pickup-all` on desktop and mobile:
 
    ```json
    "search-result-layout.desktop": {
@@ -233,6 +237,5 @@ Within each layout, make sure the sidebar includes `filter-navigator.v3`:
    }
    ```
 
-The shipping method facet only appears when `showShippingMethodFacet` is enabled; which options are listed there follows `availableShippingValues` when you set it, or the default trio when you do not. Other facets related to delivery promise still render as usual.
+The shipping method facet appears only when `showShippingMethodFacet` is enabled. The options listed match `availableShippingValues` when you set it, or the default trio when you do not. Other facets related to delivery promise still render as usual.
 
->⚠️ The delivery promise filters are a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can adapt to updates.
