@@ -173,9 +173,9 @@ Use `shopper-location-setter` and `pickup-point-selector` when pickup is a centr
 
 ### Step 3 - Implementing sidebar filters
 
-To display Delivery Promise filters in the search sidebar, follow the steps below using the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app.
+To display Delivery Promise filters in the search sidebar, configure the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app as described below.
 
-> ⚠️ Delivery Promise filters are a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can adapt to updates.
+> ⚠️ Delivery Promise filters are a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can handle future updates.
 
 1. In your theme's `manifest.json`, add the `search-result` app as a dependency:
 
@@ -185,9 +185,7 @@ To display Delivery Promise filters in the search sidebar, follow the steps belo
     }
    ```
 
-2. Ensure your theme includes the `search-result-layout.desktop` or `search-result-layout.mobile` block, depending on the layout.
-
-Within each layout, make sure the sidebar includes `filter-navigator.v3`:
+2. Ensure your theme uses either the `search-result-layout.desktop` or `search-result-layout.mobile` blocks, depending on the layout. Inside these layouts, include the `filter-navigator.v3` block so the sidebar can render filters:
 
 ```json
 // store/search.json
@@ -216,9 +214,9 @@ Within each layout, make sure the sidebar includes `filter-navigator.v3`:
 }
 ```
 
-3. Set `showShippingMethodFacet` to `true` on each flexible search layout block where you want the shipping method facet. The default is `false`, so that filter group stays hidden until you opt in. The example above enables it on both desktop and mobile layouts.
+3. Enable the Delivery Promise filters by setting the `showShippingMethodFacet` to `true` in each flexible search layout where the facet should appear. This property is disabled by default, so the shipping method filter remains hidden unless explicitly enabled. The example above enables it on both desktop and mobile layouts.
 
-4. Optionally, set `availableShippingValues` on the same layout blocks to control **which** shipping options appear inside that facet. Omit the prop or use an empty array `[]` to keep the default set: `delivery`, `pickup-in-point`, and `pickup-nearby`. If you pass a non-empty array, it replaces that default entirely—only values you list are shown (for example, add `pickup-all` when you want that option on the PLP). Allowed values match the search API shipping facet names: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
+5. Optionally, define which shipping options should be displayed using the `availableShippingValues` prop in the same layout blocks. When this prop is not defined, or when it is set to an empty array, the default options are used: `delivery`, `pickup-in-point`, and `pickup-nearby`. When you provide a non-empty array, it replaces the default entirely and only the specified values are shown. Supported values correspond to the search API facet names and include: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
 
    Example with an explicit list (same as the default) plus `pickup-all` on desktop and mobile:
 
@@ -237,5 +235,5 @@ Within each layout, make sure the sidebar includes `filter-navigator.v3`:
    }
    ```
 
-The shipping method facet appears only when `showShippingMethodFacet` is enabled. The options listed match `availableShippingValues` when you set it, or the default trio when you do not. Other facets related to delivery promise still render as usual.
+The shipping method facet appears only when `showShippingMethodFacet` is enabled. The options listed match `availableShippingValues` when you set it, or fall back to the default set when the prop is not provided. Other Delivery Promise-related facets continue to behave as usual.
 
