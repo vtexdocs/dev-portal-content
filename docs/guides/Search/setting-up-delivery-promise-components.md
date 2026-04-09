@@ -187,8 +187,7 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
 
 2. Ensure your theme uses either the `search-result-layout.desktop` or `search-result-layout.mobile` blocks, depending on the layout. Inside these layouts, include the `filter-navigator.v3` block so the sidebar can render filters:
 
-```json
-// store/search.json
+```json store/search.json
 {
   "store.search#default": {
     "blocks": ["search-result-layout"]
