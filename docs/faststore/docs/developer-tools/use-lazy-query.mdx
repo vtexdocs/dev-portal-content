@@ -1,0 +1,512 @@
+# useLazyQuery
+
+`useLazyQuery` is a React hook for executing GraphQL queries on-demand in FastStore applications. Unlike traditional query hooks that execute immediately on mount, `useLazyQuery` provides manual control over when queries are executed, making it ideal for user-triggered actions, conditional data fetching, and form submissions.
+
+## Core Concepts
+
+### Lifecycle
+
+```
+Component Mount → Hook Initialization → User Action → Execute Query → Data/Error Response → Update UI
+```
+
+1. **Initialization**: Hook is initialized with null data and returns an execute function
+2. **Idle State**: Query remains unexecuted until explicitly triggered
+3. **Execution**: Query runs when execute function is called with variables
+4. **Response Handling**: Data is cached via SWR and component re-renders with results
+
+## API Reference
+
+### Signature
+
+```typescript
+const [execute, response] = useLazyQuery<Data, Variables>(
+  operation: Operation,
+  variables: Variables,
+  options?: QueryOptions
+)
+```
+
+### Parameters
+
+- **operation**: GraphQL query/mutation defined using `gql` template literal
+- **variables**: Initial variables object (used as default shape, actual values passed during execution)
+- **options**: Optional query configuration (cache, revalidation settings)
+
+### Returns
+
+Tuple with two elements:
+1. **execute**: Function to trigger the query with variables
+2. **response**: SWR response object containing:
+   - `data`: Query result data (null until executed)
+   - `error`: Error object if query fails
+   - `isValidating`: Loading state boolean
+   - `mutate`: Function to manually update cache
+
+## Usage Patterns
+
+### 1. Form Submissions
+
+```typescript
+// Newsletter subscription example
+import { useLazyQuery } from '@faststore/core/sdk/graphql/useLazyQuery'
+import { gql } from '@faststore/core/api'
+
+const newsletterMutation = gql(`
+  mutation SubscribeToNewsletter($data: IPersonNewsletter!) {
+    subscribeToNewsletter(data: $data) {
+      id
+    }
+  }
+`)
+
+export const NewsletterForm = () => {
+  const [subscribeUser, { data, error, isValidating }] = useLazyQuery(
+    newsletterMutation,
+    { data: { name: '', email: '' } } // Shape definition
+  )
+
+  const handleSubmit = async (formData) => {
+    const result = await subscribeUser({
+      data: {
+        name: formData.name,
+        email: formData.email
+      }
+    })
+
+    if (result?.subscribeToNewsletter?.id) {
+      // Handle success
+    }
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      {/* Form fields */}
+      <button disabled={isValidating}>
+        {isValidating ? 'Subscribing...' : 'Subscribe'}
+      </button>
+    </form>
+  )
+}
+```
+
+### 2. User Authentication & Session Management
+
+```typescript
+// Load user data on demand
+const LoginArea = () => {
+  const [loadLogin, { data: currentUserData }] = useLazyQuery(
+    getCurrentUserName,
+    {}
+  )
+
+  useEffect(() => {
+    // Check if user should be logged in
+    const token = localStorage.getItem('authToken')
+    if (token) {
+      loadLogin({}) // Execute query
+    }
+  }, [])
+
+  return currentUserData ? (
+    <div>Welcome, {currentUserData.name}</div>
+  ) : (
+    <button onClick={() => loadLogin({})}>Load Profile</button>
+  )
+}
+```
+
+### 3. Product Availability Notifications
+
+```typescript
+// Notify when product is available
+const ProductUnavailable = () => {
+  const [sendNotification, { data, error }] = useLazyQuery(
+    productAvailabilityMutation,
+    {
+      input: {
+        email: '',
+        name: '',
+        sku: ''
+      }
+    }
+  )
+
+  const handleNotifyMe = async (customerData) => {
+    try {
+      const result = await sendNotification({
+        input: {
+          email: customerData.email,
+          name: customerData.name,
+          sku: product.sku
+        }
+      })
+
+      if (result?.success) {
+        showSuccessMessage()
+      }
+    } catch (err) {
+      handleError(err)
+    }
+  }
+
+  return (
+    <button onClick={() => setDrawerOpen(true)}>
+      Notify When Available
+    </button>
+  )
+}
+```
+
+### 4. Conditional Data Loading
+
+```typescript
+// Load orders only when drawer opens
+const OrderHistory = () => {
+  const [isDrawerOpen, setDrawerOpen] = useState(false)
+  const [loadOrders, { data: ordersData, isValidating }] = useLazyQuery(
+    ordersQuery,
+    { userId: '' }
+  )
+
+  const handleOpenDrawer = async () => {
+    setDrawerOpen(true)
+    await loadOrders({ userId: currentUser.id })
+  }
+
+  return (
+    <>
+      <button onClick={handleOpenDrawer}>View Orders</button>
+      {isDrawerOpen && (
+        <Drawer>
+          {isValidating ? (
+            <Spinner />
+          ) : (
+            <OrdersList orders={ordersData?.orders} />
+          )}
+        </Drawer>
+      )}
+    </>
+  )
+}
+```
+
+### 5. Multiple Sequential Queries
+
+```typescript
+// Chain dependent queries
+const UserDashboard = () => {
+  const [loadUser, { data: userData }] = useLazyQuery(getUserQuery, {})
+  const [loadAddress, { data: addressData }] = useLazyQuery(
+    getAddressQuery,
+    { id: '' }
+  )
+
+  const initializeDashboard = async () => {
+    // First load user
+    const user = await loadUser({})
+
+    if (user?.id) {
+      // Then load address based on user
+      await loadAddress({ id: user.addressId })
+    }
+  }
+
+  useEffect(() => {
+    initializeDashboard()
+  }, [])
+
+  return (
+    <div>
+      {userData && addressData && (
+        <UserProfile user={userData} address={addressData} />
+      )}
+    </div>
+  )
+}
+```
+
+## Best Practices
+
+### 1. Error Handling
+
+```typescript
+const [execute, { data, error, isValidating }] = useLazyQuery(mutation, {})
+
+const handleAction = async () => {
+  try {
+    const result = await execute(variables)
+
+    // Check for GraphQL errors in response
+    if (result?.errors) {
+      throw new Error(result.errors[0].message)
+    }
+
+    // Handle success
+    handleSuccess(result)
+  } catch (err) {
+    // Handle network or execution errors
+    console.error('Query failed:', error || err)
+    showErrorToast('Something went wrong')
+  }
+}
+```
+
+### 2. Loading States
+
+```typescript
+const FormComponent = () => {
+  const [localLoading, setLocalLoading] = useState(false)
+  const [execute, { isValidating }] = useLazyQuery(mutation, {})
+
+  const handleSubmit = async (data) => {
+    setLocalLoading(true)
+
+    try {
+      await execute(data)
+    } finally {
+      setLocalLoading(false)
+    }
+  }
+
+  // Use combined loading state
+  const isLoading = localLoading || isValidating
+
+  return (
+    <button disabled={isLoading}>
+      {isLoading ? <Spinner /> : 'Submit'}
+    </button>
+  )
+}
+```
+
+### 3. Variable Initialization
+
+```typescript
+// DO: Provide complete shape for TypeScript
+const [execute] = useLazyQuery(mutation, {
+  data: {
+    email: '',    // Define all required fields
+    name: '',
+    optional: undefined
+  }
+})
+
+// DON'T: Use incomplete initial variables
+const [execute] = useLazyQuery(mutation, {})  // Missing shape
+```
+
+### 4. Cleanup and Memory Management
+
+```typescript
+const Component = () => {
+  const [execute, { data, mutate }] = useLazyQuery(query, {})
+
+  useEffect(() => {
+    return () => {
+      // Clear cache on unmount if needed
+      mutate(null, false)
+    }
+  }, [])
+
+  return <div>{/* Component content */}</div>
+}
+```
+
+### 5. Optimistic Updates
+
+```typescript
+const [updateCart, { data, mutate }] = useLazyQuery(updateCartMutation, {})
+
+const handleAddToCart = async (product) => {
+  // Optimistically update UI
+  mutate(
+    { cart: [...currentCart, product] },
+    false // Don't revalidate immediately
+  )
+
+  try {
+    // Execute actual mutation
+    const result = await updateCart({ productId: product.id })
+
+    // Update with server response
+    mutate(result, false)
+  } catch (error) {
+    // Revert optimistic update
+    mutate(currentCart, false)
+  }
+}
+```
+
+## Common Pitfalls & Solutions
+
+### 1. Stale Closures
+
+**Problem**: Using outdated state in execute callback
+
+```typescript
+// WRONG
+const [count, setCount] = useState(0)
+const [execute] = useLazyQuery(query, {})
+
+const handleClick = async () => {
+  await execute({ value: count }) // May use stale count
+  setCount(count + 1)
+}
+```
+
+**Solution**: Use function updates or refs
+
+```typescript
+// CORRECT
+const handleClick = async () => {
+  setCount(prev => {
+    execute({ value: prev })
+    return prev + 1
+  })
+}
+```
+
+### 2. Race Conditions
+
+**Problem**: Multiple rapid executions causing inconsistent state
+
+**Solution**: Implement debouncing or disable during execution
+
+```typescript
+const [execute, { isValidating }] = useLazyQuery(query, {})
+const debouncedExecute = useMemo(
+  () => debounce(execute, 500),
+  [execute]
+)
+
+// Prevent double-clicks
+<button
+  onClick={handleClick}
+  disabled={isValidating}
+>
+  Submit
+</button>
+```
+
+### 3. Memory Leaks
+
+**Problem**: Setting state after component unmount
+
+**Solution**: Track mount status
+
+```typescript
+const useSafeQuery = () => {
+  const isMounted = useRef(true)
+  const [execute, response] = useLazyQuery(query, {})
+
+  useEffect(() => {
+    return () => {
+      isMounted.current = false
+    }
+  }, [])
+
+  const safeExecute = async (variables) => {
+    const result = await execute(variables)
+
+    if (isMounted.current) {
+      // Safe to update state
+      return result
+    }
+  }
+
+  return [safeExecute, response]
+}
+```
+
+## TypeScript Usage
+
+### Type-Safe Implementation
+
+```typescript
+interface NewsletterData {
+  subscribeToNewsletter: {
+    id: string
+  }
+}
+
+interface NewsletterVariables {
+  data: {
+    email: string
+    name: string
+  }
+}
+
+const useNewsletter = () => {
+  const [subscribe, { data, error, isValidating }] = useLazyQuery<
+    NewsletterData,
+    NewsletterVariables
+  >(newsletterMutation, {
+    data: { email: '', name: '' }
+  })
+
+  return {
+    subscribe: async (email: string, name: string) => {
+      return subscribe({ data: { email, name } })
+    },
+    data,
+    error,
+    loading: isValidating
+  }
+}
+```
+
+## Migration Guide
+
+### From useQuery to useLazyQuery
+
+```typescript
+// Before: Automatic execution
+const { data, loading } = useQuery(query, { id: userId })
+
+// After: Manual execution
+const [execute, { data, isValidating }] = useLazyQuery(query, { id: '' })
+
+useEffect(() => {
+  if (userId) {
+    execute({ id: userId })
+  }
+}, [userId])
+```
+
+## Performance Considerations
+
+1. **Cache Management**: Results are cached via SWR, subsequent calls with same variables return cached data
+2. **Request Deduplication**: Multiple components calling same query share single network request
+3. **Revalidation**: Configure SWR options for background revalidation strategies
+4. **Bundle Size**: Only import when manual query control is needed
+
+## Testing
+
+```typescript
+import { renderHook, act } from '@testing-library/react-hooks'
+
+test('should execute query on demand', async () => {
+  const { result } = renderHook(() =>
+    useLazyQuery(testQuery, { id: '' })
+  )
+
+  expect(result.current[1].data).toBeNull()
+
+  await act(async () => {
+    await result.current[0]({ id: '123' })
+  })
+
+  expect(result.current[1].data).toBeDefined()
+})
+```
+
+## Related Hooks
+
+- `useQuery`: For automatic query execution on mount
+- `useMutation`: For data modifications with automatic cache updates
+- `useSWR`: Underlying caching mechanism used by useLazyQuery
+
+## Summary
+
+`useLazyQuery` provides fine-grained control over GraphQL query execution in FastStore applications. It's particularly useful for user-triggered actions, conditional data fetching, and complex workflows requiring manual query orchestration. By following the patterns and best practices outlined above, you can build responsive, efficient data fetching logic that enhances user experience while maintaining clean, maintainable code.
