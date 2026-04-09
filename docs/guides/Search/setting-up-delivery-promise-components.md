@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
 updatedAt: "2026-04-07T12:00:00.000Z"
 seeAlso:
-  - "/docs/apps/vtex.delivery-promise-components"
+ - "/docs/apps/vtex.delivery-promise-components"
 ---
 
 > ℹ️ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
