@@ -10,7 +10,7 @@ tags:
   - FastStore  
 ---
 
-FastStore v4 is now available, introducing important updates to how storefronts are built and managed. This release brings architectural improvements, performance optimizations, and new capabilities such as native localization (beta), along with a new standard for project dependencies, including the Next.js upgrade, enabling a more modern and consistent development environment.
+FastStore v4 is now available, introducing important updates to how storefronts are built and managed. This release brings architectural improvements, performance optimizations, and new capabilities such as native localization (beta), along with a new standard for project dependencies, which includes a Next.js upgrade that enables a more modern and consistent development environment.
 
 ## What has changed?
 
@@ -18,7 +18,7 @@ FastStore v4 is now available, introducing important updates to how storefronts 
 
 FastStore v4 centralizes the management of core dependencies such as Next.js within `@faststore/cli`. to ensure consistency across projects, reduce dependency conflicts, and improve long-term maintainability.
 
-* Next.js is now internally managed and updated to version \`16\`.  
+* Next.js is now internally managed and updated to version \`16\`.
 * Node.js runtime updated (Node 20+).
 
 ### GraphQL performance improvements
@@ -31,11 +31,11 @@ FastStore v4 introduces native localization integrated with the \[CMS\](). This 
 
 Key capabilities include:
 
-* Multi-locale content management.  
-* Multi-locale catalog and support for multiple currencies (Trade policies/sales channels).  
+* Multi-locale content management.
+* Multi-locale catalog and support for multiple currencies (trade policies/sales channels).
 * Default locale fallback behavior.
 
-> ⚠️ This feature is currently in Closed Beta. If you're interested in using this feature in your store, contact the [VTEX Support team](https://support.vtex.com/hc/en-us).
+> ⚠️ This feature is currently in closed beta. If you're interested in using this feature in your store, contact the [VTEX Support team](https://support.vtex.com/hc/en-us).
 
 ## Why did we make this change?
 
