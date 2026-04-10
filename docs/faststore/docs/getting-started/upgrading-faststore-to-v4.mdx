@@ -1,0 +1,154 @@
+---
+title: 'Upgrading FastStore to v4'
+---
+
+In this guide, you'll learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities.
+
+> ⚠️ Follow the instructions that match your current FastStore version to ensure a smooth and consistent migration.
+
+## Upgrading from v3 to v4
+
+### Change the `@faststore/cli` version
+
+Make sure your project is up to date with the version provided by the VTEX team. To do so, follow these steps:
+
+1. Open your project in a code editor.
+2. Open the `package.json` file and change the `@faststore/cli` to the following:
+ 
+
+
+```json
+"dependencies": {
+    "@faststore/cli": "https://pkg.csb.dev/vtex/faststore/commit/eb2cca6e/@faststore/cli",
+    ...
+  },
+```
+
+### Update `package.json`
+
+Open your `package.json` and apply the following changes:
+
+|  | Description |
+| :---- | :---- |
+| **Add `graphql`** to `^16.11.0` | **GraphQL** must now be explicitly declared as a dependency in your `package.json` file. It should be version `^16.11.0` or higher. Previously, this was managed internally by `@faststore/cli`. |
+| **Remove the `next` entry** from `dependencies` | Next.js is now managed internally by `@faststore/cli`, and declaring it separately causes version conflicts. |
+| **Update `TypeScript` version** | To ensure correct TypeScript typing, update the TypeScript version to `^5.9.3`. |
+
+```json
+{
+  ...
+  "dependencies": {
+    "@faststore/cli": "https://pkg.csb.dev/vtex/faststore/commit/85d2a096/@faststore/cli",
+    "graphql": "^16.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+
+}
+```
+
+```json
+{
+  ...
+  "devDependencies": {
+	...
+	"typescript": "^5.9.3"
+	...
+  },
+}
+```
+
+> ⚠️ The example above shows only the entries relevant to this change. Keep the rest of your `package.json` intact.
+
+#### Update `package.json` for stores using the monorepo
+
+For stores using the [monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), in addition to the updates described in [Update package.json](#update-package-json), you must also add `@inquirer/type` to the `resolutions` field.
+
+This is required to ensure consistent dependency resolution across the monorepo and to avoid version conflicts related to the `inquirer` package.
+
+```json
+{
+  ...
+  "resolutions": {
+    ...
+    "@inquirer/type": "^1.5.5"
+  }
+}
+```
+
+### Update the Node.js version in discovery.config.js
+
+In your `discovery.config.js`, ensure the `experimental` object includes `nodeVersion: 24`:
+
+```javascript
+experimental: {
+  nodeVersion: 24,
+},
+```
+
+### Update the SCSS utilities import
+
+> ⚠️ Only applies if you have custom SCSS files using FastStore utility mixins.
+
+In previous versions, FastStore utility mixins were imported globally. This meant you could use mixins like `media` or `layout-content` without explicitly importing them in your file.
+
+With FastStore v4, utilities are no longer globally available. You must explicitly import them in each SCSS file where they are used. This improves traceability and avoids conflicts between mixins.
+
+* **Before (global import, no namespace):**
+
+```
+@import "~@faststore/ui/src/styles/base/utilities";
+
+/* Usage without namespace */
+@include media("<tablet") { ... }
+@include layout-content;
+```
+
+* **After (explicit import at the top of the file):**
+
+```
+@use "@faststore/ui/src/styles/base/utilities" as u;
+
+/* Usage with namespace */
+@include u.media("<tablet") { ... }
+@include u.layout-content;
+```
+
+By using `@use`, you explicitly declare dependencies and access the mixins through a namespace (`u` in this case), making the origin of each utility clear and easier to maintain.
+
+> ⚠️ Any file with custom mixins needs to be updated to adapt to the [Sass library](https://sass-lang.com/) update, which no longer allows `@import;` only `@use` is supported.
+
+### Update imports to use `@faststore/core/api`
+
+`@faststore/graphql-utils` is deprecated in FastStore v4. The gql tag used for GraphQL documents should no longer be imported from that package. Update imports to use `@faststore/core/api` instead. For example, replace import `{ gql }` from '@faststore/graphql-utils' with import { gql } from '@faststore/core/api'.
+
+### Sync the change with CMS
+
+After that, a CMS sync is necessary.
+
+|  | Instructions |
+| :---- | :---- |
+| For stores using [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), run the following command | Run the command `yarn cms sync.`  |
+| For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with custom components | Run the following commands: `vtex login` `vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore4` `vtex content upload-schema cms/faststore/schema.json` |
+| For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) without custom components | `vtex login` `vtex content upload-schema node_modules/@faststore/core/cms/faststore/schema.json` |
+
+### Update Node.js runtime version in WebOps (existing projects only)
+
+To ensure compatibility with FastStore v4, update your project to use Node.js `v24` in the runtime environment.
+
+1. **Test locally with Node.js `v24`**
+
+Build and run your project locally using Node.js `v24`. Identify and fix any compatibility issues that may arise during the process.
+
+2. **Update Node.js version in WebOps and deploy**
+
+After validating locally, update the Node.js version to `v24` in WebOps and deploy your changes:
+
+1. Open the VTEX Admin and access **Storefront > FastStore WebOps**.
+2. Go to the **Settings** tab and in the **Node.js version** configuration, set it to `v24`.
+3. Click `Save`.
+4. Trigger a new deployment to apply the changes.
+
+## Upgrading from v2 to v4
+
+To upgrade your project from v2 to v4, first follow the instructions in [Upgrading from FastStore v2 to v3](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v2-to-v3). Once completed, proceed with the steps in [Upgrading from v3 to v4](#upgrading-from-v3-to-v4).
