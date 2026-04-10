@@ -1,6 +1,6 @@
 # Upgrading FastStore to v4
 
-In this guide, learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities.
+In this guide, you'll learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities.
 
 > ⚠️ Follow the instructions that match your current FastStore version to ensure a smooth and consistent migration.
 
@@ -10,8 +10,8 @@ In this guide, learn how to upgrade your FastStore project to the v4 major versi
 
 Make sure your project is up to date with the version provided by the VTEX team. To do so, follow these steps:
 
-1. Open your project in a code editor.  
-2. Open the `package.json` file and change the `@faststore/cli` to the following:  
+1. Open your project in a code editor.
+2. Open the `package.json` file and change the `@faststore/cli` to the following:
  
 
 
@@ -74,7 +74,7 @@ This is required to ensure consistent dependency resolution across the monorepo 
 }
 ```
 
-### 
+###
 
 ### Update the Node.js version in discovery.config.js
 
@@ -120,7 +120,7 @@ By using `@use`, you explicitly declare dependencies and access the mixins throu
 
 ### Update imports to use `@faststore/core/api`
 
-`@faststore/graphql-utils` is deprecated in FastStore v4. The gql tag used for GraphQL documents should no longer be imported from that package. Update imports to use `@faststore/core/api` instead, for example, replace import `{ gql }` from '@faststore/graphql-utils' with import { gql } from '@faststore/core/api'
+`@faststore/graphql-utils` is deprecated in FastStore v4. The gql tag used for GraphQL documents should no longer be imported from that package. Update imports to use `@faststore/core/api` instead. For example, replace import `{ gql }` from '@faststore/graphql-utils' with import { gql } from '@faststore/core/api'.
 
 ### Sync the change with CMS
 
@@ -144,9 +144,9 @@ Build and run your project locally using Node.js `v24`. Identify and fix any com
 
 After validating locally, update the Node.js version to `v24` in WebOps and deploy your changes:
 
-1. Open the VTEX Admin and access **Storefront \> FastStore WebOps**.  
-2. Go to the **Settings** tab and in the **Node.js version** configuration, set it to `v24`.  
-3. Click `Save`.  
+1. Open the VTEX Admin and access **Storefront \> FastStore WebOps**.
+2. Go to the **Settings** tab and in the **Node.js version** configuration, set it to `v24`.
+3. Click `Save`.
 4. Trigger a new deployment to apply the changes.
 
 ## Upgrading from v2 to v4
