@@ -16,7 +16,7 @@ The [multi-language feature](https://developers.vtex.com/docs/guides/catalog-mul
 
 Merchants and B2B business models can now benefit from:
 
-- **Granular content management:** Create, retrieve and store translations for catalog entities.
+- **Granular content management:** Create, retrieve, and store translations for catalog entities.
 - **Integrated translation workflows:** Have automated translations with a Translation Management System (TMS).
 - **Localized experience:** Provide customers with localized shopping experiences across multiple channels.
 
@@ -24,7 +24,7 @@ Merchants and B2B business models can now benefit from:
 
 ## Why did we make this change?
 
-Now, VTEX stores have a flexible, scalable way to manage catalog content across multiple markets, which contributes to business expansion. Besides, having localized meta descriptions, keywords, and URL slugs optimizes SEO.
+VTEX stores now offer a flexible, scalable way to manage catalog content across multiple markets, helping drive business expansion. Additionally, localized meta descriptions, keywords, and URL slugs improve SEO.
 
 ## What needs to be done?
 
