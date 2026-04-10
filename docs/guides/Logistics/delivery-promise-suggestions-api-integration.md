@@ -1,33 +1,39 @@
 ---
-title: "Delivery Promise Suggestions API integration"
+title: "Delivery Promise Suggestions API headless integration"
 slug: "delivery-promise-suggestions-api-integration"
 hidden: false
 createdAt: "2026-03-05T00:00:00.000Z"
 updatedAt: "2026-03-05T00:00:00.000Z"
 excerpt: "This guide explains how to integrate the Delivery Promise Suggestions API into a headless storefront to display delivery promises and pickup options, creating meaningful visual indicators for shoppers."
 seeAlso:
-- "/docs/guides/delivery-promise"
-- "/docs/guides/setting-up-delivery-promise-components"
-- "/docs/guides/delivery-promise-for-headless-stores"
-- "/docs/guides/faststore/features-delivery-promise"
-- "https://help.vtex.com/docs/tutorials/delivery-promise-faq"
+ - "/docs/guides/delivery-promise"
+ - "/docs/guides/setting-up-delivery-promise-components"
+ - "/docs/guides/delivery-promise-for-headless-stores"
+ - "/docs/guides/faststore/features-delivery-promise"
+ - "https://help.vtex.com/docs/tutorials/delivery-promise-faq"
 ---
 
 >ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
 
-[**Delivery Promise**](https://developers.vtex.com/docs/guides/delivery-promise) is VTEX's new solution that allows customers to view only the products they can buy in their shopping experience, considering both the product availability and valid shipping methods for their delivery address. To further enhance this experience, the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api) allows you to highlight the most relevant delivery options directly in the storefront. In this guide, you will learn how to integrate the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api) to display delivery promises and pickup options to shoppers in your [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront.
+[**Delivery Promise**](https://developers.vtex.com/docs/guides/delivery-promise) is VTEX's new solution that allows customers to view only the products they can buy in their shopping experience, considering both the product availability and valid shipping methods for their delivery address. To further enhance this experience, the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) allows you to highlight the most relevant delivery options directly in the storefront.
+
+In this guide, you will learn how to integrate the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) to display delivery promises and pickup options to shoppers in your [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront.
 
 ![delivery-promise](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/docs/guides/Logistics/delivery-promise-suggestions-api-integration_1.png)
 
 ## Gathering delivery promise information
 
-Before you implement the storefront components, gather the delivery information that will be available to the shopper.
+Before you implement the storefront components, gather the delivery information that will be available to the shopper. You must gather the delivery information that will be shown to the shopper by identifying the delivery zones and pickup points available for their location. This fulfillment context is then represented by two hashes (the delivery zones hash and the pickup points hash), which serve as a compact, precomputed snapshot of all relevant logistics configurations. Rather than recalculating these options on every request, these hashes make it possible to retrieve accurate suggestions more quickly, with lower latency and greater consistency across the shopping experience.
 
-### Delivery zones and pickup points
+### Delivery zones
 
-Before implementing storefront components, you must first gather the delivery information that will be shown to the shopper by identifying the delivery zones and pickup points available for their location. This fulfillment context is then represented by two hashes (the delivery zones hash and the pickups hash), which serve as a compact, precomputed snapshot of all relevant logistics configurations. Rather than recalculating these options on every request, these hashes make it possible to retrieve accurate suggestions more quickly, with lower latency and greater consistency across the shopping experience.
+Use the [`POST` Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) endpoint to retrieve the following information:
 
-Use the [`POST` Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api#post-/api/logistics-shipping/delivery-zones/_search/v2) endpoint to retrieve the following information:
+- Delivery zone IDs
+- Delivery zones hash
+- Country code
+
+Response example:
 
 ```json
 {
@@ -43,7 +49,11 @@ Use the [`POST` Search delivery zones](https://developers.vtex.com/docs/api-refe
 
 Use the `deliveryZonesHash` value when you search for delivery suggestions.
 
-To retrieve the available pickup points for the shopper, use the [`POST` Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api#post-/api/logistics-shipping/pickuppoints/_search) endpoint.
+### Delivery pickup points
+
+To retrieve the available pickup points for the shopper, use the [`POST` Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search) endpoint.
+
+Response example:
 
 ```json
 {
@@ -104,11 +114,11 @@ To retrieve the available pickup points for the shopper, use the [`POST` Search 
 }
 ```
 
-Use the `pickupPointsHash`  value when you search for delivery suggestions.
+Use the `pickupPointsHash` value when you search for delivery suggestions.
 
 ### Delivery suggestions
 
-Use the [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api#post-/api/delivery-promise-suggestions/_search) endpoint with the `deliveryZonesHash` and `pickupPointsHash` values in the request body to gather the delivery promise suggestions that will be presented in your storefront. You can use this endpoint for batch processing and for scenarios that involve multiple products.
+Use the [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/delivery-promise-suggestions/_search) endpoint with the `deliveryZonesHash` and `pickupPointsHash` values in the request body to gather the delivery promise suggestions that will be presented in your storefront. You can use this endpoint for batch processing and for scenarios that involve multiple products.
 
 The following example response illustrates the data you can expect:
 
@@ -196,55 +206,47 @@ If you need to apply additional business rules outside the logistics configurati
 
 The target date is always calculated relative to when the API is called. For example, `{ "to": 2, "unit": "d" }` means fulfillment must occur within the next two calendar days.
 
-### Display recommendations by context
+### Display suggestions by context
 
 Use different display strategies depending on where the shopper sees this information:
 
 | Context | Display recommendation |
 |---|---|
-| PLP (Product Listing Page) | Display the best option for delivery and for pickup. |
-| PDP (Product Detail Page) | Display all relevant delivery and pickup options. |
+| PLP (Product Listing Page) | Show the top delivery and pickup suggestions for each product. Trigger display after Intelligent Search results have loaded. |
+| PDP (Product Detail Page) | Show all available delivery and pickup options. Trigger display when the page loads or whenever the shopper’s location is updated. |
+
+> ⚠️ If you do not refresh the fulfillment context when the shopper's location changes, the delivery and pickup suggestions may become outdated or inaccurate. To ensure recommendations are always correct, refresh the context on every location change, make a batch request for all visible product IDs, and request suggestions for the currently displayed product (including its variants, if relevant).
+
 
 ## End-to-end workflow example
 
 This example illustrates the flow from shopper input to UI display:
 
 ```mermaid
-flowchart LR
-    A[Shopper Input<br/>ZIP code or geo-detection] --> B[Context Update<br/>Create/refresh fulfillment context<br/>deliveryZonesHash + pickupsHash]
-    B --> C[Products Fetch<br/>Identify product IDs<br/>from search results]
-    C --> D[API Request<br/>POST /api/delivery-promise-suggestions/_search<br/>with product IDs and context hashes]
-    D --> E[API Response<br/>Delivery: slaTimeTarget + name<br/>Pickup: slaTimeTarget + name]
-    E --> F[Storefront Render<br/>Display badges:<br/>'Express Delivery 1-2 days'<br/>'Pickup Today at Downtown Store']
+sequenceDiagram
+    participant Shopper
+    participant Storefront
+    participant Delivery Promise Suggestions API
+
     
-    style A fill:#FFC4DD,stroke:#F71963,stroke-width:2px,color:#142032
-    style B fill:#FFE0EF,stroke:#F71963,stroke-width:2px,color:#142032
-    style C fill:#FFF3F6,stroke:#5B6E84,stroke-width:2px,color:#142032
-    style D fill:#E7E9EE,stroke:#5B6E84,stroke-width:2px,color:#142032
-    style E fill:#FFE0EF,stroke:#F71963,stroke-width:2px,color:#142032
-    style F fill:#F71963,stroke:#142032,stroke-width:3px,color:#FFFFFF
+    Shopper->>Storefront: Provide ZIP code or geo-location
+    Storefront->>Delivery Promise Suggestions API: POST Search delivery zones
+    Delivery Promise Suggestions API-->>Storefront: deliveryZonesHash
+    Storefront->>Delivery Promise Suggestions API: POST Search pickup points
+    Delivery Promise Suggestions API-->>Storefront: pickupPointsHash
+    Note over Storefront: Identify product IDs<br/>from search results
+    Storefront->>Delivery Promise Suggestions API: POST Search delivery suggestions<br/>(product IDs + hashes)
+    Delivery Promise Suggestions API-->>Storefront: Delivery & pickup suggestions<br/>(slaTimeTarget + name)
+    Storefront->>Shopper: Display badges:<br/>'Express Delivery 1-2 days'<br/>'Pickup Today at Downtown Store'
 ```
 
 1. **Input**: The shopper provides a ZIP code, or the storefront detects their location.
 2. **Context update**: Create or refresh the fulfillment context whenever the location changes. Keep the context active by refreshing it before it becomes stale.
 3. **Products fetch**: The storefront identifies the relevant product IDs (for example, from a search results page).
-4. **API request**: Storefront calls [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestionss-api#post-/api/delivery-promise-suggestions/_search) with product IDs and the `deliveryZonesHash` and `pickupsHash`.
+4. **API request**: Storefront calls [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/delivery-promise-suggestions/_search) with product IDs and the `deliveryZonesHash` and `pickupsHash`.
 5. **API response**: The API returns recommendations, for example:
    - Delivery: `slaTimeTarget: {to: 2, unit: "d"}`, `name: "Express Delivery"`
    - Pickup: `slaTimeTarget: {to: 2, unit: "h"}`, `name: "Downtown Store"`
 6. **Storefront render**: The storefront renders UI components, for example:
    - "Express Delivery (1–2 days)"
    - "Pickup Today at Downtown Store"
-
-## Headless integration guidelines
-
-This section provides best practices for integrating the Delivery Promise Suggestions API into a custom storefront.
-
-Use the following table to determine when to call the API based on the shopper’s context:
-
-| Context | Trigger | Notes |
-| --- | --- | --- |
-| PLP (Product Listing Page) | After Intelligent Search results render. | Make a batch request for all visible product IDs. |
-| PDP (Product Detail Page) | On page load, or when the shopper’s location changes. | Request suggestions for the current product (and optionally its variants). |
-
->⚠️ Failing to refresh the fulfillment context when the shopper's location changes will result in inaccurate delivery and pickup recommendations.
