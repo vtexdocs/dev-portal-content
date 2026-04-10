@@ -1,0 +1,150 @@
+---
+title: "Monorepo use cases"
+hidden: true
+createdAt: "2026-03-12T14:47:26.933Z"
+---
+
+A [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview) can support different storefront modules, such as Product Discovery Experience, Checkout, and Sales App, depending on the merchant's needs.
+
+This guide outlines common repository structures for these scenarios and provides example `faststore.json` configurations for each one. These examples can help to organize your monorepo based on your implementation requirements.
+
+The following sections cover:
+
+* **[Single account with multiple modules](#single-account-with-multiple-modules):** A single VTEX account using more than one storefront module.
+* **[Multiple brands or stores sharing code](#multiple-brands-or-stores-sharing-code):** Multiple accounts or [subaccounts](https://help.vtex.com/docs/tutorials/managing-a-multistore) using the same monorepo while sharing common code.
+* **[Multiple brands or stores with multiple modules](#multiple-brands-or-stores-with-multiple-modules):** A monorepo where each account or subaccount can use multiple storefront modules with its own configuration.
+
+## Single account with multiple modules
+
+In this scenario, one VTEX account uses multiple storefront modules, each with its own directory within the monorepo.
+
+### Basic directory structure
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages
+│   ├── 📂 discovery
+│   ├── 📂 checkout
+│   └── 📂 sales-app
+├── 📄 faststore.json
+├── 📄 package.json
+│  
+```
+
+### `faststore.json` configuration example
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3001
+      }
+    },
+      "checkout": {
+        "path": "package/checkout",
+        "port": 3002
+      },
+      "sales-app": {
+        "path": "package/sales-app",
+        "port": 3003
+      }
+    }
+  }
+}
+```
+
+## Multiple brands or stores sharing code
+
+In this scenario, a merchant has multiple brands or stores, each mapped to a different account or subaccount, yet all share the same FastStore monorepo.
+
+With separate repositories, sharing code between brands or stores usually depends on publishing `npm` packages or copying files between projects. In a FastStore monorepo, each brand or store has its own directory within a single repository, and shared code lives in dedicated folders that can be imported wherever needed. This setup avoids duplicating code across repositories and makes it easier to maintain consistent implementations across storefronts.
+
+### Basic directory structure
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages
+│   ├── 📂 store1
+│   └── 📂 store2
+├── 📄 faststore.json
+├── 📄 package.json
+│  
+```
+
+### `faststore.json` configuration example
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3001
+      }
+    }
+    "account2": {
+      "discovery": {
+        "path": "packages/store2",
+        "port": 3002
+      },
+    }
+  }
+}
+```
+
+## Multiple brands or stores with multiple modules
+
+In this scenario, a merchant has multiple brands or stores, and each of them can use more than one storefront module. All brands or stores share the same FastStore monorepo, but each has its own directory and module configuration.
+
+### Basic directory structure
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages
+│   └── 📂 store1
+│      ├── 📂 discovery
+│      └── 📂 checkout
+│   └── 📂 store2
+│      ├── 📂 discovery
+│      └── 📂 checkout
+├── 📄 faststore.json
+├── 📄 package.json
+│  
+```
+
+### `faststore.json` configuration example
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3001
+      },
+      "checkout": {
+        "path": "packages/checkout",
+        "port": 3002
+      }
+    },
+    "account2": {
+      "discovery": {
+        "path": "package/store2",
+        "port": 3001
+      },
+      "checkout": {
+        "path": "package/checkout",
+        "port": 3002
+      }
+    }
+  }
+}
+```
