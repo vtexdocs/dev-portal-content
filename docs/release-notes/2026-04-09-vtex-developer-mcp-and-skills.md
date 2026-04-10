@@ -1,5 +1,5 @@
 ---
-title: "VTEX Developer MCP and Skills"
+title: "Introducing VTEX Developer MCP and Skills for AI-assisted development"
 slug: "2026-04-09-vtex-developer-mcp-and-skills"
 type: "added"
 createdAt: "2026-04-09T19:00:00.000Z"
