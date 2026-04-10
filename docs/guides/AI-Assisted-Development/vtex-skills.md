@@ -12,43 +12,47 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-VTEX Skills is a collection of 42 AI agent skills for VTEX platform development. One source, six export formats. Skills encode VTEX-specific patterns, constraints, and best practices into your AI coding assistant, giving it domain expertise that goes beyond generic LLM knowledge.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/skills)
 
-## Why use VTEX Skills
+VTEX Skills is a collection of AI agent skills for VTEX platform development. It provides a single source of VTEX-specific guidance.
 
-AI assistants don't know VTEX-specific patterns out of the box. The Overrides API, PPP endpoints, BFF requirements, and MasterData schema limits aren't in any LLM's training data at the depth you need. Skills fill that gap with real constraints, not generic advice.
+Skills encode platform-specific patterns, constraints, and best practices into your AI coding assistant, giving it context that goes beyond generic model knowledge.
 
-- **Platform-specific constraints**: PCI compliance via the Secure Proxy, idempotency requirements on payment endpoints, the 2.5s fulfillment simulation timeout, the 60-schema MasterData limit. These are the details that prevent costly mistakes in production.
-- **One source, six platforms**: Skills are authored once and exported automatically. No manual sync, no drift between tools.
-- **Built from official VTEX documentation**: Content comes from the same source your team already trusts.
-- **Works with your existing tools**: Cursor, GitHub Copilot, Claude, OpenCode, Kiro, and 38+ other agents are supported.
-- **No configuration required**: The `npx` installer detects your tools and places files in the right locations. Install once and your agent has the context it needs.
-- **Versioned and maintained**: Skills are updated when VTEX documentation changes, so your agent's knowledge stays current.
+Generic AI assistants do not reliably know VTEX-specific implementation details. Topics such as Overrides APIs, Payment Provider Protocol (PPP) endpoints, BFF requirements, and Master Data limits often require more context than a general-purpose model can provide on its own. VTEX Skills helps fill that gap with practical guidance grounded in VTEX platform knowledge.
 
-## How it works
+- **Platform-specific constraints**: Give your assistant access to details such as Secure Proxy usage for PCI-sensitive flows, idempotency requirements for payment endpoints, the 2.5-second fulfillment simulation timeout, and the 60-schema Master Data limit.
+- **One source, multiple platforms**: Skills are authored once and exported automatically to six supported formats.
+- **Based on VTEX documentation**: Skill content is derived from official VTEX documentation.
+- **Compatible with existing tools**: Works with Cursor, GitHub Copilot, Claude, OpenCode, Kiro, and many other agent-based development tools.
+- **No configuration required**: The `npx` installer detects your supported tools and places files in the appropriate locations.
+- **Versioned and maintained**: Skills are versioned and updated as the underlying documentation evolves.
 
-Skills are plain text files your AI agent reads before generating code. When you install VTEX Skills, your agent gets context about:
+## Behavior
+
+Skills are plain-text files that AI agents can load as a persistent working context before generating code.
+
+When you install VTEX Skills, your agent gets guidance on:
 
 - Which APIs to call for a given use case and what parameters they expect
 - Platform constraints that aren't obvious from API docs alone (rate limits, schema caps, timeout windows)
 - Correct patterns for common tasks like setting up a FastStore override, implementing a PPP endpoint, or configuring a MasterData entity
 - Security requirements specific to VTEX, including PCI scope boundaries and Secure Proxy usage
 
-The skills CLI detects which AI tools you have installed and places files in the right locations automatically. You don't need to configure anything manually.
+The VTEX Skills CLI detects supported AI tools installed in your environment and places the exported files in the correct locations automatically.
 
 ### VTEX Skills vs. VTEX Developer MCP
 
-These two tools are complementary, not alternatives.
+VTEX Skills and [VTEX Developer MCP](/docs/guides/vtex-developer-mcp) serve different purposes and can be used together.
 
-The [VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-developer-mcp) gives your AI assistant real-time access to VTEX documentation and API references. It's useful when your agent needs to look something up during a task.
+The [VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-developer-mcp) gives your AI assistant access to VTEX documentation and API references during a task. This is useful when the agent needs to look up information dynamically.
 
-VTEX Skills encodes that knowledge as standing context. Your agent doesn't need to search for it. Skills are loaded once and stay active throughout your session, so your agent already knows the patterns before you ask your first question.
+VTEX Skills provides a standing context. Instead of retrieving documentation at runtime, the agent starts with prepackaged guidance about common VTEX patterns and constraints.
 
-Use both together for the best results: Skills for domain expertise, MCP for live documentation lookup.
+For the best results, use both the **VTEX Skills** for persistent platform context and **VTEX Developer MCP** for live documentation lookup.
 
-## Quick start
+## Installation
 
-The fastest way to get started is with `npx`. It detects your installed AI tools and places skill files in the right locations. If you prefer manual installation or need to target a specific platform, use the platform-specific commands below.
+The fastest way to get started is with `npx`. It detects the AI tools you have installed and places skill files in the appropriate locations. If you prefer manual installation or need to target a specific platform, use the platform-specific commands below.
 
 ### npx (Recommended)
 
@@ -103,14 +107,14 @@ cp -r skills/exports/kiro/. your-project/
 
 ## Tracks and skills
 
-Skills are organized into six tracks covering the main VTEX development surfaces. Each track groups related skills so your agent gets focused context for the work at hand. You can install all tracks at once or pick only the ones relevant to your project.
+Skills are organized into six tracks covering the main VTEX development surfaces. Each track group relates skills, so your agent gets focused context for the work at hand. You can install all tracks at once or pick only the ones relevant to your project.
 
 | Track | Skills | Description |
 |---|---|---|
 | Well-Architected Commerce | 1 | Cross-cutting architecture guidance and solution design |
 | FastStore Implementation | 4 | Overrides, theming, SDK hooks, and data fetching for FastStore storefronts |
 | Payment Connector Development | 5 | Payment Provider Protocol endpoints, framework lifecycle, idempotency, async flows, and PCI compliance |
-| Custom VTEX IO Apps | 24 | Foundations, API exposure, frontend, data and config, security and operations for IO app development |
+| Custom VTEX IO Apps | 24 | Foundations, API exposure, frontend, data and config, security, and operations for IO app development |
 | Marketplace Integration | 4 | SKU catalog sync, order hooks, fulfillment simulation, and rate limiting |
 | Headless Front-End Development | 4 | BFF architecture, Intelligent Search API, checkout proxy patterns, and caching strategy |
 
@@ -129,7 +133,7 @@ Skills are available in six formats, one for each major AI development platform.
 | OpenCode | `SKILL.md` | Yes (auto-discovered) |
 | Kiro | `POWER.md` + steering | Yes (auto-discovered) |
 
-The `npx` installer handles placement automatically for all detected tools. For platforms not detected automatically (like Claude Projects), use the manual install commands above.
+The `npx` installer handles placement automatically for all detected tools. For platforms that are not detected automatically such as Claude Projects, use the manual install commands above.
 
 ## Keeping skills up to date
 

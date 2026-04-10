@@ -12,18 +12,29 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-`@vtex/developer-mcp` is a [Model Context Protocol](https://modelcontextprotocol.io) server that gives AI coding assistants direct access to VTEX documentation and API references. Your AI assistant can search documentation, retrieve full articles, and look up API endpoint specifications — all from within your editor. No API key or authentication required.
+[<i class="fa-brands fa-github"></i> Source code](https://www.npmjs.com/package/@vtex/developer-mcp)
+
+`@vtex/developer-mcp` is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that enables AI coding assistants to access VTEX documentation and API references. It provides a standardized interface for retrieving documentation content and API specifications directly from development tools such as editors or AI assistants.
+
+Once connected, your AI assistant can:
+
+- Search VTEX documentation
+- Retrieve full documentation articles
+- Search API endpoints based on OpenAPI definitions
+- Retrieve detailed endpoint specifications
+
+These capabilities allow AI assistants to generate responses based on up-to-date VTEX content.
 
 ## Before you begin
 
 Make sure you have the following:
 
-- **Node.js 18 or later** — check your version with `node --version`
-- **An MCP-compatible AI development tool** — Cursor, VS Code with GitHub Copilot, Claude Code, or Claude Desktop
+- **Node.js 18 or later**: Run `node --version` to check your installed version.
+- **An MCP-compatible AI development tool**, such as [Cursor](https://www.cursor.com/), [VS Code](https://code.visualstudio.com/) with GitHub Copilot, [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview), or [Claude Desktop](https://claude.ai/download).
 
-## Platform setup
+## Configuring the MCP server
 
-Choose your editor below and follow the setup steps.
+Follow the instructions for your development environment.
 
 ### Cursor
 
@@ -60,7 +71,7 @@ Add the server to `.vscode/mcp.json` in your project root:
 
 ### Claude Code
 
-Run this command in your terminal:
+Run the following command in your terminal:
 
 ```bash
 claude mcp add vtex-developer -- npx -y @vtex/developer-mcp
@@ -96,7 +107,7 @@ Or add a `.mcp.json` file at your project root:
 }
 ```
 
-1. Quit and reopen Claude Desktop.
+4. Quit and reopen Claude Desktop.
 
 ## Available tools
 
@@ -104,10 +115,10 @@ Once connected, your AI assistant has access to four tools:
 
 | Tool | Description | Key parameters |
 |---|---|---|
-| `search_documentation` | Hybrid semantic + keyword search across VTEX Help Center and Developer Portal | `query` (required), `locale` (en, es, pt — required), `limit` (1–50), `format` |
-| `fetch_document` | Retrieve the full content of a VTEX documentation article by URL | `url` (required), `format` |
-| `search_endpoints` | Search VTEX API endpoints by query over OpenAPI definitions | `query` (required), `limit` (1–50), `method` (GET, POST, etc.), `format` |
-| `get_endpoint_details` | Get the full OpenAPI specification for a specific endpoint | `endpoint_id` (required), `format` |
+| `search_documentation` | Searches VTEX Help Center and Developer Portal content (provides hybrid semantic and keyword search across VTEX Help Center and Developer Portal) | `query` (required), `locale` (en, es, pt — required), `limit` (1–50), `format` |
+| `fetch_document` | Retrieves the full content of a VTEX documentation article by URL | `url` (required), `format` |
+| `search_endpoints` | Searches VTEX API endpoints by query over OpenAPI definitions | `query` (required), `limit` (1–50), `method` (GET, POST, etc.), `format` |
+| `get_endpoint_details` | Retrieves the full OpenAPI specification of a given endpoint | `endpoint_id` (required), `format` |
 
 A few tips on how to combine them:
 
@@ -117,11 +128,11 @@ A few tips on how to combine them:
 
 ## Usage examples
 
-You can ask your AI assistant things like:
+The following prompts illustrate how to use your AI assistant with the VTEX Developer MCP:
 
 - "Search VTEX documentation for payment provider integration"
 - "Fetch the full guide at <https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol>"
-- "Find documentation about the catalog API"
+- "Find documentation about the Catalog API"
 - "Search for API endpoints related to order placement"
 - "Get the full specification for the Create Order endpoint"
 
@@ -142,6 +153,4 @@ Restart your editor. Claude Desktop requires a full quit and reopen, not just a 
 **VS Code: tools not appearing**
 Make sure you're using `"servers"` (not `"mcpServers"`) as the top-level key in `.vscode/mcp.json`.
 
----
 
-For more details, see the [@vtex/developer-mcp](https://www.npmjs.com/package/@vtex/developer-mcp) npm package.
