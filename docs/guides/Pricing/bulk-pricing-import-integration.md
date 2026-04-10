@@ -163,12 +163,13 @@ curl -X PUT \
 
 #### Base prices CSV schema
 
-| Field | Type | Required | Description | Example |
-| :---- | :---- | :---- | :---- | :---- |
-| SKU ID | String | Yes | SKU identifier. | SKU-12345 |
-| Cost Price | Decimal | Yes | Cost price of the item. | 10.00 |
-| Base Price | Decimal | Yes | Base price of the item. | 25.00 |
-| List Price | Decimal | No | List price of the item. | 30.00 |
+| Field         | Type    | Required | Description                                                                                                                                                                                                 | Example            |
+|--------------|---------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
+| SKU ID       | String  | Yes      | SKU identifier.                                                                                                                                                                                             | SKU-12345          |
+| Cost Price   | Decimal | Yes      | Cost price of the item.                                                                                                                                                                                     | 10                 |
+| Base Price   | Decimal | Yes      | Base price of the item.                                                                                                                                                                                     | 25.03              |
+| List Price   | Decimal | No       | List price of the item.                                                                                                                                                                                     | 30                 |
+| Child Account| String  | No       | Name of a child account under the account that started the import process. When this field is filled in, the price update in that row is applied to the specified [child account](https://help.vtex.com/docs/tutorials/what-is-a-franchise-account#franchise-account-configuration) instead of the account that initiated the import. If the value is invalid, that row fails processing and is listed in the error report. | ChildAccountValue  |
 
 CSV example (base prices):
 
@@ -180,15 +181,16 @@ SKU ID,Cost Price,Base Price,List Price,Child Account
 
 #### Fixed prices CSV schema
 
-| Field | Type | Required | Description | Example |
-| :---- | :---- | :---- | :---- | :---- |
-| SKU ID | String | Yes | SKU identifier. | SKU-12345 |
-| Trade Policy | String | Yes | The price table to modify. | gold |
-| Price | Decimal | Yes | The fixed price of the item in the price table. | 25.00 |
-| List Price | Decimal | No | List price of the item in the price table. | 30.00 |
-| Min Quantity | Integer | No | Minimum quantity required to start applying this price. | 2 |
-| Date From | String | No | Date from which the price starts being applied, in ISO 8601 UTC. | 2025-07-29T18:20:37Z |
-| Date To | String | No | End date for the fixed price, in ISO 8601 UTC. | 2025-08-29T18:20:37Z |
+| Field          | Type    | Required | Description                                                                                                                                                                                                 | Example              |
+|----------------|---------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| SKU ID         | String  | Yes      | SKU identifier.                                                                                                                                                                                             | SKU-12345            |
+| Trade Policy   | String  | Yes      | The price table to modify.                                                                                                                                                                                  | gold                 |
+| Price          | Decimal | Yes      | The fixed price of the item in the price table.                                                                                                                                                             | 25                   |
+| List Price     | Decimal | No       | List price of the item in the price table.                                                                                                                                                                  | 30.03                |
+| Min Quantity   | Integer | No       | Minimum quantity required to start applying this price.                                                                                                                                                     | 2                    |
+| Date From      | String  | No       | Date from which the price starts being applied, in ISO 8601 UTC.                                                                                                                                            | 2025-07-29T18:20:37Z |
+| Date To        | String  | No       | End date for the fixed price, in ISO 8601 UTC.                                                                                                                                                              | 2025-08-29T18:20:37Z |
+| Child Account  | String  | No       | Name of a [child account](https://help.vtex.com/docs/tutorials/what-is-a-franchise-account#franchise-account-configuration) under the account that started the import process. When this field is filled in, the price update in that row is applied to the specified child account instead of the account that initiated the import. If the value is invalid, that row fails processing and is listed in the error report. | ChildAccountValue    |
 
 CSV example (fixed prices):
 
