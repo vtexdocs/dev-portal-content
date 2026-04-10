@@ -13,11 +13,11 @@ seeAlso:
 
 To become a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) and be able to manage apps and configurations across multiple accounts using [Edition Apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app), you must first check whether your account meets the conditions described in the [Prerequisites](#prerequisites) section.
 
-If your account is qualified to become a Sponsor Account, follow the [Instructions](#instructions) section to activate this feature for your account.
+If your acount is qualified to become a Sponsor Account, follow the [Instructions](#instructions) section to activate this feature for your account.
 
 ## Prerequisites
 
-To be eligible to become a Sponsor Account, ensure you have the following:
+To be eligible to becme a Sponsor Account, ensure you have the following:
 
 - Access to three or more accounts related to the same group or holding.
 - An Edition App published by `vtex` installed on your account (`vtex.edition-business@0.x` or `vtex.edition-store@2.x`).
