@@ -14,8 +14,6 @@ Make sure your project is up to date with the version provided by the VTEX team.
 
 1. Open your project in a code editor.
 2. Open the `package.json` file and change the `@faststore/cli` to the following:
- 
-
 
 ```json
 "dependencies": {
@@ -51,9 +49,9 @@ Open your `package.json` and apply the following changes:
 {
   ...
   "devDependencies": {
-	...
-	"typescript": "^5.9.3"
-	...
+    ...
+    "typescript": "^5.9.3"
+    ...
   },
 }
 ```
@@ -116,11 +114,11 @@ With FastStore v4, utilities are no longer globally available. You must explicit
 
 By using `@use`, you explicitly declare dependencies and access the mixins through a namespace (`u` in this case), making the origin of each utility clear and easier to maintain.
 
-> ⚠️ Any file with custom mixins needs to be updated to adapt to the [Sass library](https://sass-lang.com/) update, which no longer allows `@import;` only `@use` is supported.
+> ⚠️ Any file with custom mixins needs to be updated to adapt to the [Sass library](https://sass-lang.com/) update, which no longer allows `@import`; only `@use` is supported.
 
 ### Update imports to use `@faststore/core/api`
 
-`@faststore/graphql-utils` is deprecated in FastStore v4. The gql tag used for GraphQL documents should no longer be imported from that package. Update imports to use `@faststore/core/api` instead. For example, replace import `{ gql }` from '@faststore/graphql-utils' with import { gql } from '@faststore/core/api'.
+`@faststore/graphql-utils` is deprecated in FastStore v4. The gql tag used for GraphQL documents should no longer be imported from that package. Update imports to use `@faststore/core/api` instead. For example, replace `import { gql } from '@faststore/graphql-utils'` with `import { gql } from '@faststore/core/api'`.
 
 ### Sync the change with CMS
 
@@ -128,7 +126,7 @@ After that, a CMS sync is necessary.
 
 |  | Instructions |
 | :---- | :---- |
-| For stores using [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), run the following command | Run the command `yarn cms sync.`  |
+| For stores using [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), run the following command | Run the command `yarn cms-sync`. |
 | For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with custom components | Run the following commands: `vtex login` `vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore4` `vtex content upload-schema cms/faststore/schema.json` |
 | For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) without custom components | `vtex login` `vtex content upload-schema node_modules/@faststore/core/cms/faststore/schema.json` |
 
