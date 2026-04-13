@@ -4,7 +4,7 @@ slug: "publishing-deep-linking-configuration-files"
 hidden: false
 excerpt: "Learn how to publish apple-app-site-association and assetlinks.json files in the /.well-known/ path for Universal Links and App Links."
 createdAt: "2026-03-31T12:00:00.000Z"
-updatedAt: "2026-03-31T12:00:00.000Z"
+updatedAt: "2026-04-13T12:00:00.000Z"
 ---
 
 This guide describes how to publish the files required by Apple and Google in the **/.well-known/** path of your store's public domain using the VTEX API.
@@ -54,7 +54,6 @@ The file provided by Apple should be named `apple-app-site-association` (without
 }
 ```
 
-
 * `TEAMID.com.yourcompany.app` should contain your iOS app's Team ID + Bundle ID.
 * `paths` must cover the URLs that should open the app.
 
@@ -62,14 +61,18 @@ The file provided by Apple should be named `apple-app-site-association` (without
 
 ### Upload via cURL
 
+The request body must be raw JSON (the same text as in your configuration file), with `Content-Type: application/json`.
+
 ```shell
 curl --location --request POST \
   'https://www.yourstore.com/.well-known/raw/apple-app-site-association?persistent=true' \
   --header 'X-VTEX-API-AppKey: {YOUR_API_KEY}' \
   --header 'X-VTEX-API-AppToken: {YOUR_API_TOKEN}' \
   --header 'Content-Type: application/json' \
-  --data-binary '@apple-app-site-association'
+  --data 'YOUR_JSON_FILE_CONTENT_HERE'
 ```
+
+Replace `YOUR_JSON_FILE_CONTENT_HERE` with the exact JSON from your `apple-app-site-association` file (a single JSON object), pasted as the raw body.
 
 The `?persistent=true` parameter indicates that the file should remain stored permanently.
 
@@ -115,14 +118,18 @@ The `package_name` and `sha256_cert_fingerprints` values must contain your Andro
 
 ### Upload via cURL
 
+The request body must be raw JSON (the same text as in your `assetlinks.json` file), with `Content-Type: application/json`.
+
 ```shell
 curl --location --request POST \
   'https://www.yourstore.com/.well-known/raw/assetlinks.json?persistent=true' \
   --header 'X-VTEX-API-AppKey: {YOUR_API_KEY}' \
   --header 'X-VTEX-API-AppToken: {YOUR_API_TOKEN}' \
   --header 'Content-Type: application/json' \
-  --data-binary '@assetlinks.json'
+  --data 'YOUR_JSON_FILE_CONTENT_HERE'
 ```
+
+Replace `YOUR_JSON_FILE_CONTENT_HERE` with the exact JSON from your `assetlinks.json` file, pasted as the raw body.
 
 The `?persistent=true` parameter indicates that the file should remain stored permanently.
 
@@ -141,7 +148,7 @@ Verify that:
 
 ## Updating configuration files
 
-To update any configuration file (for example, due to changes in Bundle ID, Team ID, certificate renewal, or path modifications), use the same `POST` request to `/.well-known/raw/{filename}?persistent=true` with the updated file content.
+To update any configuration file (for example, due to changes in Bundle ID, Team ID, certificate renewal, or path modifications), use the same `POST` request to `/.well-known/raw/{filename}?persistent=true` with the updated JSON in the request body, as described above.
 
 The previous content will be automatically overwritten. For example, to update the iOS Universal Links configuration:
 
@@ -151,7 +158,7 @@ curl --location --request POST \
   --header 'X-VTEX-API-AppKey: {YOUR_API_KEY}' \
   --header 'X-VTEX-API-AppToken: {YOUR_API_TOKEN}' \
   --header 'Content-Type: application/json' \
-  --data-binary '@apple-app-site-association'
+  --data 'YOUR_JSON_FILE_CONTENT_HERE'
 ```
 
 After updating, validate the endpoint using `GET` to confirm the new content is published correctly:
