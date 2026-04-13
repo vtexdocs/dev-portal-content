@@ -73,7 +73,7 @@ Example:
 To enable the localization feature, add the `localization` flag in the `[discovery.config.js](http://discovery.config.js)` file.
 
 1. Open your FastStore project in a code editor of your preference.  
-2. Open the \`discovery.config.js\` file and add the following:  
+2. Open the `discovery.config.js` file and add the following:  
 
     ```javascript
     ...
