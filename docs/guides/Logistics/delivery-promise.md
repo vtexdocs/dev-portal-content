@@ -3,7 +3,7 @@ title: "Delivery Promise"
 slug: "delivery-promise"
 hidden: false
 createdAt: "2025-09-01T16:53:51.8Z"
-updatedAt: ""
+updatedAt: "2026-04-13T15:35:32.755Z"
 excerpt: "Delivery Promise helps your store show only products that can be delivered or picked up based on the customer’s location. It improves shopping experience, reduces cart abandonment, and increases product assortment visibility."
 seeAlso: 
     - "https://help.vtex.com/en/tutorial/delivery-promise-faq--2frHHK5uPsQrLK5XbYHALN"
@@ -71,7 +71,7 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 
 ## Delivery Promise for Store Framework
 
-When building your storefront with Store Framework, you can enable Delivery Promise components using the [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components) and [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) apps.
+When building your storefront with Store Framework, you can enable Delivery Promise components using the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) and [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) apps.
 
 Learn how to configure these components in the [Setting up Delivery Promise components (Beta)](https://developers.vtex.com/docs/guides/setting-up-delivery-promise-components) guide.
 
