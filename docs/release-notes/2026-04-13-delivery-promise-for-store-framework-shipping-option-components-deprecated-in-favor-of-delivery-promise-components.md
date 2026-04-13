@@ -1,6 +1,6 @@
 ---
-title: "Delivery Promise for Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components"
-slug: "2026-04-13-delivery-promise-for-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components"
+title: "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components"
+slug: "2026-04-13-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components"
 hidden: false
 type: "deprecated"
 createdAt: "2026-04-13T12:00:00.000Z"
