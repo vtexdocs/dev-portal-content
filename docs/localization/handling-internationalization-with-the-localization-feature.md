@@ -1,0 +1,150 @@
+---  
+title: "Handling internationalization with the Localization feature"  
+hidden: true 
+slug: "handling-internationalization-with-the-localization-feature"  
+createdAt: "2026-02-19T12:50:00.813Z"  
+updatedAt: "2026-04-13T10:00:00.813Z"  
+---
+
+> ⚠️ This feature is currently in Closed Beta. If you're interested in using this feature in your store, contact the [VTEX Support team](https://support.vtex.com/hc/en-us).
+
+The Localization feature allows stores to provide a tailored shopping experience for their global market. By focusing on language, region, and currency, this feature enables shoppers to build a localized store ready for international sales with multiple languages and currencies.
+
+In this guide, learn how to implement the localization feature in your FastStore project.
+
+## Before you begin
+
+### Enable the CMS
+
+The Localization feature works in combination with the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). Make sure it's installed and enabled in your account.
+
+> ⚠️ This feature is not available for [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+
+### Using the Catalog Multi-Language API for Intelligent Search translation
+
+To retrieve translated catalog data, FastStore uses the Intelligent Search to fetch localized content. To ensure you use a complete catalog translation solution, update your store to use the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
+
+For detailed instructions on consuming localized data, implementing the feature, and activating it for your store, please refer to the [Implementation by Storefront type](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide#implementation-by-storefront-type) guide.
+
+### Upgrade to FastStore V4
+
+After enabling the CMS, you must upgrade your FastStore version to v4. To do so, follow the [Upgrading FastStore to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4) guide.
+
+## Instructions
+
+### Step 1 - Setting up secrets on WebOps
+
+To allow the platform to access your store's bindings, you must configure some WebOps secrets:
+
+1. Create the following keys by following the instructions on [Managing API keys](https://help.vtex.com/docs/tutorials/api-keys#managing-api-keys):
+
+   * `VTEX_ACCOUNT={accountName}`  
+   * `FS_DISCOVERY_APP_KEY={appKey}`  
+   * `FS_DISCOVERY_APP_TOKEN={appToken}`
+
+2. Add the keys created in WebOps by following the instructions in [Creating variables and secrets](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets#creating-variables-and-secrets).
+
+### Step 2 - Setting up the store binding
+
+Binding is the association between a specific domain URL and its locale and currency. The currency is defined by the sales channel associated with the binding. The sales channels will also define different catalog and pricing for each binding. Content settings are applied when a user accesses a particular domain. Setting up your store’s binding ensures a localized experience.
+
+Open a ticket for the VTEX Support to have your bindings set up. In the ticket, add the following information:
+
+* Account name  
+* Domains  
+  * Domain URL  
+    * Associated Sales Channels and Currency  
+    * Associated Locale
+
+Example:
+
+* Account name: storename  
+* Domain URLs  
+  * www.storename.com/pt-br  
+    * Associated Sales Channels and Currency: Sales Channel 1, Currency: Real
+  * www.storename.com/en-us  
+    * Associated Sales Channels and Currency: Sales Channel 2, Currency: Dollar
+    * Associated Locale: en-US
+
+    > ⚠️ Changes to bindings only take effect after the next store build, and even if a binding is configured with multiple locales, FastStore considers only the default locale.
+
+### Step 3 - Enabling the `localization` flag in `discovery.config.js`
+
+To enable the localization feature, add the `localization` flag in the `[discovery.config.js](http://discovery.config.js)` file.
+
+1. Open your FastStore project in a code editor of your preference.  
+2. Open the \`discovery.config.js\` file and add the following:  
+
+    ```javascript
+    ...
+    localization: {
+        enabled: true,
+    },
+    ...
+    ```
+
+3. Add the `contentSource` object to make sure your project will sync with the CMS:  
+
+    ```javascript
+    ...
+    contentSource: {
+    type: "CP",
+    },
+    ...
+    ```
+
+    > ⚠️ Make sure you have enabled the [CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview).
+
+### Step 4 - Enable the flag in the CMS
+
+1. Open the VTEX Admin and access **Storefront > All content**.  
+2. Click on the **Global Section** Content Type.  
+3. In the **Navbar** section, in **Navigation** > **Localization Button**, activate the field **“Should display localization button?”**
+
+### Step 5 - Testing the feature locally
+
+Before pushing the changes you made in the previous steps to production, test the Localization feature locally.
+
+1. In your FastStore root project, create the `.vtex.env` file and add the keys created in [Step 1: Setting up secrets on WebOps](#step-1---setting-up-secrets-on-webops):
+
+    ```.env
+    VTEX_ACCOUNT={accountName}
+    FS_DISCOVERY_APP_KEY={appKey}
+    FS_DISCOVERY_APP_TOKEN={appToken}
+    ```
+
+2. Run `yarn dev`.  
+3. Open the localhost and test if the locales are working.  
+4. Deploy the changes above.
+
+#### Testing locally with subdomains
+
+To test subdomain-based locales locally, you need to map the domains to your machine's `hosts` file.
+
+1. Open the hosts file in your terminal:  
+
+    <Tabs items={['macOS and Linux', 'Windows']}>
+        <Tab>```bash sudo vi /etc/hosts```</Tab>
+        <Tab>```bash notepad C:\Windows\System32\drivers\etc\hosts```</Tab>
+    </Tabs>
+    Mac/Linux
+
+2. Add new lines at the end of the file, mapping each domain to `127.0.0.1`. For example:  
+
+    ```bash
+    127.0.0.1  brandless.fast.store.com.br
+    127.0.0.1  pt.brandless.fast.store
+    127.0.0.1  brandless.fast.store.com.br/pt-BR
+    ```
+
+    Each line follows the format: `<IP address>  <domain>`. In the example above, we have:
+
+    * `127.0.0.1` points to your local machine.
+    * The domains are the subdomains you want to test locally.
+
+3. Save the file.  
+4. Start your FastStore project locally.  
+5. Open one of the configured domains in your browser, for example, [`http://pt.brandless.fast.store:3000`](http://pt.brandless.fast.store:3000). This will resolve to your local environment.  
+6. Once you finish testing, you can remove these entries from the hosts.
+
+Once you finish, you can enable your store locales by following the instructions on [Configuring store locales](https://help.vtex.com/en/docs/tutorials/configuring-locales).
