@@ -48,7 +48,7 @@ To allow the platform to access your store's bindings, you must configure some W
 
 Binding is the association between a specific domain URL and its locale and currency. The currency is defined by the sales channel associated with the binding. The sales channels will also define different catalog and pricing for each binding. Content settings are applied when a user accesses a particular domain. Setting up your store’s binding ensures a localized experience.
 
-Open a ticket for the VTEX Support to have your bindings set up. In the ticket, add the following information:
+Open a ticket for VTEX Support to have your bindings set up. In the ticket, add the following information:
 
 * Account name  
 * Domains  
@@ -145,6 +145,6 @@ To test subdomain-based locales locally, you need to map the domains to your mac
 3. Save the file.  
 4. Start your FastStore project locally.  
 5. Open one of the configured domains in your browser, for example, [`http://pt.brandless.fast.store:3000`](http://pt.brandless.fast.store:3000). This will resolve to your local environment.  
-6. Once you finish testing, you can remove these entries from the hosts.
+6. Once you finish testing, you can remove these entries from the hosts file.
 
 Once you finish, you can enable your store locales by following the instructions on [Configuring store locales](https://help.vtex.com/en/docs/tutorials/configuring-locales).
