@@ -1,9 +1,9 @@
 ---
 title: "Processing DPAN cards in external connectors"
 slug: "processing-dpan-cards-in-external-connectors"
-excerpt: "Configure your external payment connector to correctly process DPAN card transactions, ensuring secure and compliant payment flows."
 hidden: false
 createdAt: "2026-04-14T00:00:00.000Z"
+updatedAt: "2026-04-14T00:00:00.000Z"
 ---
 
 This guide explains how external connectors integrated with the VTEX [Payment Provider Protocol (PPP)](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol) must handle [DPAN](https://help.vtex.com/docs/tutorials/dpan-and-fpan-understanding-security-in-the-online-tokenized-payment-flow) card transactions via a `POST` request to the connector's route (`https://{providerServiceUrl}/payments`). See the [Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) endpoint documentation for more information.
