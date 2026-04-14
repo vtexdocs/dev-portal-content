@@ -94,8 +94,6 @@ See below the implementation by storefront type for consuming localized content:
 - [Headless](#headless-implementation)
 - [FastStore](#faststore-implementation)
 
-> ℹ️ The multi-language feature is not available for FastStore.
-
 ### Store Framework implementation
 
 > ⚠️ To enable the multi-language feature for Store Framework in your store, submit a request via [Support](https://help.vtex.com/en/support).
