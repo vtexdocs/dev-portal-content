@@ -1,6 +1,6 @@
 ---
 title: 'FastStore WebOps - Dashboard'
-updatedAt: "22026-02-03T13:16:12.258Z"
+updatedAt: "2026-04-14T12:00:00.000Z"
 ---
 
 Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project) or if you're already working on customizing it, you can use the WebOps dashboard to view website deployments and performance.
@@ -137,10 +137,19 @@ Once you've set the pages for testing and after a new deployment, go to the **Ov
 
 The **Settings** tab is where you manage the following configurations:
 
+* [**Node.js version**](#nodejs-version): Chooses which Node.js release WebOps uses for storefront builds.
 * [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
 * [**Variables and secrets**](#variables-and-secrets): Stores and allows secure management of sensitive information, such as API keys and passwords, required during FastStore deployment.
 
-![settings-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/webops-settings.gif)
+![settings-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17950/images/settings-webops.gif)
+
+### Node.js version
+
+The **Node.js version** configuration defines which Node.js runtime version WebOps uses when it builds your storefront. It doesn't change the Node.js version on your local machine.
+
+When no version has been saved for the project yet, WebOps selects **Node.js v24** for this setting, as this is the default version. After you choose a version and save, WebOps uses that value for builds until you change it and save again. If the field shows `v22`, `v20`, or another supported release, that is the version stored for the project. You should update the field and save when you want builds to run on a different Node.js release.
+
+> ℹ️ **FastStore v4** requires **Node.js v24** in WebOps. If you're upgrading from an earlier FastStore major, follow [Upgrading FastStore to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4), including the WebOps steps after you update your repository and configuration.
 
 ### Production domain
 
