@@ -76,7 +76,7 @@ For most storefront implementations, Intelligent Search is the recommended appro
 | Store Framework | ✅ Yes (default behavior) |
 | Headless with IS | ✅ Yes |
 | CMS Portal (Legacy) | ⚠️ May require additional configuration |
-| FastStore | ❌ Not available |
+| FastStore | ✅ Yes |
 
 ### Option 2: Via Catalog API (direct fetch)
 
@@ -92,6 +92,7 @@ See below the implementation by storefront type for consuming localized content:
 
 - [Store Framework](#store-framework-implementation)
 - [Headless](#headless-implementation)
+- [FastStore](#faststore-implementation)
 
 > ℹ️ The multi-language feature is not available for FastStore.
 
@@ -130,6 +131,10 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/catalog_system/
   -H "X-VTEX-API-AppKey: {appKey}" \
   -H "X-VTEX-API-AppToken: {appToken}"
 ```
+
+### FastStore implementation
+
+
 
 ## Activation
 
