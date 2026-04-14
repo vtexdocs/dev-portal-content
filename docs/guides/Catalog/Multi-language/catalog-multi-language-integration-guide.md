@@ -4,7 +4,7 @@ slug: "catalog-multi-language-integration-guide"
 hidden: false
 excerpt: "Manage multiple languages for catalog entities."
 createdAt: "2026-01-13T00:00:00.000Z"
-updatedAt: "2026-01-30T00:00:00.000Z"
+updatedAt: "2026-04-14T00:00:00.000Z"
 ---
 
 > ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions or feedback, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
