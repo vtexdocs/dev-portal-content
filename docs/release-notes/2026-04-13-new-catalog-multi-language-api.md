@@ -20,7 +20,7 @@ Merchants and B2B business models can now benefit from:
 - **Integrated translation workflows:** Have automated translations with a Translation Management System (TMS).
 - **Localized experience:** Provide customers with localized shopping experiences across multiple channels.
 
-> ℹ️ The multi-language API is in general availability for headless storefronts, and in beta for Store Framework.
+> ℹ️ The multi-language API is in general availability for headless storefronts, in open beta for Store Framework, and closed beta for FastStore.
 
 ## Why did we make this change?
 
