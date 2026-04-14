@@ -27,7 +27,7 @@ Before getting started, ensure that:
 
 * Your **public domain** is already correctly pointing to VTEX, for example:
   `https://www.yourstore.com`
-* You have a valid [API key and API token](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) for your VTEX account with permission for public API calls.
+* You have a valid [API key and API token](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) for your VTEX account with permission.
 * You have the file provided by Apple or Google without any content modifications.
 
 Always use HTTPS and the exact domain that will be configured with Apple or Google (including `www.` when applicable).
