@@ -45,50 +45,40 @@ Add the server to `.cursor/mcp.json` in your project root (or `~/.cursor/mcp.jso
 }
 ```
 
-### Claude Code
+After you add the connector, you will be redirected to VTEX CX Platform. To complete the configuration, follow the steps below:
 
-Add a `.mcp.json` file at your project root:
+1. Authorize access to your data by clicking in `Allow access`.
+2. Sign in with your VTEX CX Platform account.
 
-```json
-{
-  "mcpServers": {
-    "vtex-cx-platform": {
-      "url": "https://mcp.weni.ai/mcp"
-    }
-  }
-}
-```
+### Claude
 
-### Claude Desktop
-
-1. Open Claude Desktop, then go to **Claude** menu → **Settings...** → **Developer** tab.
-2. Click **Edit Config** to open `claude_desktop_config.json`.
-3. Add the following configuration:
-
-```json
-{
-  "mcpServers": {
-    "vtex-cx-platform": {
-      "url": "https://mcp.weni.ai/mcp"
-    }
-  }
-}
-```
-
-4. Quit and reopen Claude Desktop.
+1. Open Claude, then go to **Settings...** → **Connectors** tab.
+2. Click `Add custom connector`.
+3. Choose any name for the MCP.
+4. Paste this URL in the **Remote MCP server URL** box: `https://mcp.weni.ai/mcp`.
+5. Click `Add`.
+6. In your connector's menu, look for the VTEX CX Platform MCP and click `Connect`.
+7. Authorize access to your data by clicking in `Allow access`.
+8. Sign in with your VTEX CX Platform account.
 
 ### ChatGPT
 
+1. Open ChatGPT, then go to **Settings...** → **Apps** tab.
+2. Click `Create app`.
+3. Choose a name for the MCP.
+4. Paste this URL in the MCP server URL box: `https://mcp.weni.ai/mcp`.
+5. Under **Authentication**, choose `OAuth`.
+6. Accept the terms and conditions.
+7. Click in `Create`.
 
+### Sign in and authorize
 
+After you add the connector, you will be redirected to VTEX CX Platform.
 
-### Step 2 — Sign in and authorize
+To complete the configuration, follow the steps below:
 
-After you add the connector:
-
-1. Complete the redirect to VTEX CX Platform.
-2. Sign in with your account.
-3. Authorize access to your data.
+1. Sign in with your VTEX CX Platform account.
+3. Authorize access to your data by clicking in `Allow access`.
 
 ## Usage examples
 
