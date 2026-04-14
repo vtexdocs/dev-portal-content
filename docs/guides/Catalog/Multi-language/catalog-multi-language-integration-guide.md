@@ -134,7 +134,9 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/catalog_system/
 
 ### FastStore implementation
 
+> ⚠️ To enable the multi-language feature for FastStore in your store, submit a request via [Support](https://help.vtex.com/en/support).
 
+The complete implementation for FastStore is described in the [Handling internationalization with the Localization feature](https://developers.vtex.com/docs/guides/faststore/components/storefront-features/handling-internationalization-with-the-localization-feature) guide.
 
 ## Activation
 
