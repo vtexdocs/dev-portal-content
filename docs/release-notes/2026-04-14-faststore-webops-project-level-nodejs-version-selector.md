@@ -9,7 +9,7 @@ tags:
   - WebOps
 ---
 
-The [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) **Settings** tab now includes the **Node.js version** section, so you can control which Node.js runtime is used in your FastStore project builds and ensure compatibility with **FastStore v4**, as this version is based on Next.js v16 and requires a more recent Node.js runtime.
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard) now includes the **Node.js version** section, so you can control which Node.js runtime is used in your FastStore project builds and ensure compatibility with **FastStore v4**, as this version is based on Next.js v16 and requires a more recent Node.js runtime.
 
 ![node-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17950/images/node-webops.png)
 
@@ -30,4 +30,17 @@ By adding a Node.js version selector in WebOps, we give you more control over yo
 
 ## What needs to be done?
 
-If you're on **FastStore v4** (or planning to upgrade), open **Storefront > FastStore WebOps** in the VTEX Admin, go to the **Settings** tab, and confirm that **Node.js version** is set to **v24** for WebOps builds. If you're upgrading from an earlier major, follow [Upgrading FastStore to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4), including the WebOps steps after you update your repository and configuration.
+**Check the Node.js version of existing projects**
+
+1. In the VTEX Admin, go to **Storefront > FastStore WebOps** and navigate to the **Settings** tab.
+2. In the **Node.js version** section, confirm which version your project is using (`v20` or `v22`).
+
+> ℹ️ Existing projects continue using their current Node.js version until you update it.
+
+**Update the Node.js version when upgrading to FastStore v4**
+
+FastStore v4 requires Node.js v24 in WebOps. If you're upgrading from an earlier FastStore major, follow the instructions in the guide [Upgrading FastStore to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4), including the WebOps steps after you update your repository and configuration.
+
+**Review new projects**
+
+New FastStore projects created in WebOps already use Node.js `v24` by default. Only change this value if you have a specific reason to keep an older Node.js version.
