@@ -21,7 +21,7 @@ Make sure you have the following:
 
 - **An MCP-compatible AI development tool**, such as [Cursor](https://www.cursor.com/), [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview), [Claude Desktop](https://claude.ai/download), or [ChatGPT](https://chatgpt.com/).
 
-> ChatGPT can only be connected to the MCP where connector support is available.
+> The MCP connection to ChatGPT is only available on paid plans.
 
 - A valid [VTEX CX Platform account](https://dash.weni.ai/orgs) for the projects you want to analyze.
 - An active VTEX CX Platform subscription for your organization.
