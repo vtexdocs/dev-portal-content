@@ -19,7 +19,7 @@ Once connected, you can:
 
 Make sure you have the following:
 
-- **An MCP-compatible AI development tool**, such as [Cursor](https://www.cursor.com/), [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview), [Claude Desktop](https://claude.ai/download), or [ChatGPT](https://chatgpt.com/).
+- **An MCP-compatible AI development tool**, such as [Claude](https://claude.ai/), [Cursor](https://www.cursor.com/), or [ChatGPT](https://chatgpt.com/).
 
 > The MCP connection to ChatGPT is only available on paid plans.
 
@@ -30,6 +30,17 @@ Make sure you have the following:
 ## Configuring the VTEX CX Platform MCP server
 
 Follow the instructions for your development environment.
+
+### Claude
+
+1. Open Claude, then go to **Settings...** → **Connectors** tab.
+2. Click `Add custom connector`.
+3. Choose any name for the MCP.
+4. Paste this URL in the **Remote MCP server URL** box: `https://mcp.weni.ai/mcp`.
+5. Click `Add`.
+6. In your connector's menu, look for the VTEX CX Platform MCP and click `Connect`.
+7. Authorize access to your data by clicking `Allow access`.
+8. Sign in with your VTEX CX Platform account.
 
 ### Cursor
 
@@ -50,17 +61,6 @@ After you add the connector, you will be redirected to VTEX CX Platform. To comp
 1. Authorize access to your data by clicking `Allow access`.
 2. Sign in with your VTEX CX Platform account.
 
-### Claude
-
-1. Open Claude, then go to **Settings...** → **Connectors** tab.
-2. Click `Add custom connector`.
-3. Choose any name for the MCP.
-4. Paste this URL in the **Remote MCP server URL** box: `https://mcp.weni.ai/mcp`.
-5. Click `Add`.
-6. In your connector's menu, look for the VTEX CX Platform MCP and click `Connect`.
-7. Authorize access to your data by clicking `Allow access`.
-8. Sign in with your VTEX CX Platform account.
-
 ### ChatGPT
 
 1. Open ChatGPT, then go to **Settings...** → **Apps** tab.
@@ -77,8 +77,8 @@ After you add the connector, you will be redirected to VTEX CX Platform.
 
 To complete the configuration, follow the steps below:
 
-1. Sign in with your VTEX CX Platform account.
-2. Authorize access to your data by clicking `Allow access`.
+1. Authorize access to your data by clicking `Allow access`. 
+2. Sign in with your VTEX CX Platform account.
 
 ## Usage examples
 
@@ -87,3 +87,7 @@ The following prompts illustrate how to use your AI assistant with the VTEX CX P
 - “How many conversations were resolved by the AI last month?”
 - “What was the average CSAT last week?”
 - “Which topics drove the most transfers to human support?”
+
+## Privacy policy and terms of use
+
+If you want to know about how your data is being handled, you can read the [Terms of use](https://mcp.weni.ai/terms) and the [Privacy policy](https://mcp.weni.ai/privacy).
