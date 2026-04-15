@@ -1,17 +1,17 @@
 ---
-title: "Using the Weni by VTEX CLI"
+title: "Using the VTEX CX Platform (Weni) CLI"
 slug: "using-the-weni-by-vtex-cli"
 hidden: false
 createdAt: "2025-10-23T17:08:52.219Z"
 updatedAt: "2025-10-23T14:33:45.242Z"
-excerpt: "Learn how to use Weni by VTEX CLI"
+excerpt: "Learn how to use VTEX CX Platform (Weni) CLI"
 seeAlso:
  - "weni-by-vtex-cli"
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-This guide will walk you through using the Weni by VTEX CLI to create, deploy, and manage AI-powered agents, enhancing your customer service capabilities. By the end of this guide, you will be able to install the CLI, configure your project, and deploy your first agent.
+This guide will walk you through using the VTEX CX Platform (Weni) CLI to create, deploy, and manage AI-powered agents, enhancing your customer service capabilities. By the end of this guide, you will be able to install the CLI, configure your project, and deploy your first agent.
 
 With the CLI, you can:
 
@@ -19,14 +19,14 @@ With the CLI, you can:
 - Add custom tools to the agents
 - Update agent configuration and behavior
 
-> ⚠️ To use the Weni by VTEX CLI, you must have: a Weni by VTEX Platform account; an account at [weni.ai](https://weni.ai/en); and at least one project in your account.
+> ⚠️ To use the VTEX CX Platform (Weni) CLI, you must have: a VTEX CX Platform (Weni) account; an account at [weni.ai](https://weni.ai/en); and at least one project in your account.
 
 The content is organized as follows:
 
 - [Installing the CLI](#step-1---installing-the-cli)
 - [Getting started with your project](#getting-started-with-your-project)
 - [Troubleshooting](#troubleshooting)
-- [Contributing to Weni by VTEX CLI](#contributing-to-weni-cli)
+- [Contributing to VTEX CX Platform (Weni) CLI](#contributing-to-weni-cli)
 
 ## Step 1 - Installing the CLI
 
@@ -63,7 +63,7 @@ poetry install
 
 ## Step 2 - Verifying Installation
 
-To verify that Weni by VTEX CLI is installed, type the following command in your terminal:
+To verify that VTEX CX Platform (Weni) CLI is installed, type the following command in your terminal:
 
 ```bash
 weni
@@ -86,7 +86,7 @@ If you encounter any issues:
 
 ### Getting started with your project
 
-#### Step 1 - Log in to your Weni by VTEX account
+#### Step 1 - Log in to your VTEX CX Platform (Weni) account
 
 1. Open the terminal and run the following command:
 
@@ -96,7 +96,7 @@ weni login
 
 This should open your browser on the login page for authentication. If that does not happen, you can open the URL shown in the terminal.
 
-2. Log in using your Weni by VTEX account and password.
+2. Log in using your VTEX CX Platform (Weni) account and password.
 
 #### Step 2 - List your projects
 
@@ -279,7 +279,7 @@ tools:
       # another tool definition
 ```
 
-## Contributing to Weni by VTEX CLI
+## Contributing to VTEX CX Platform (Weni) CLI
 
 This guide will help you get started with contributing to the project.
 
