@@ -78,7 +78,7 @@ After you add the connector, you will be redirected to VTEX CX Platform.
 To complete the configuration, follow the steps below:
 
 1. Sign in with your VTEX CX Platform account.
-3. Authorize access to your data by clicking in `Allow access`.
+2. Authorize access to your data by clicking `Allow access`.
 
 ## Usage examples
 
