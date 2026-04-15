@@ -47,7 +47,7 @@ Add the server to `.cursor/mcp.json` in your project root (or `~/.cursor/mcp.jso
 
 After you add the connector, you will be redirected to VTEX CX Platform. To complete the configuration, follow the steps below:
 
-1. Authorize access to your data by clicking in `Allow access`.
+1. Authorize access to your data by clicking `Allow access`.
 2. Sign in with your VTEX CX Platform account.
 
 ### Claude
