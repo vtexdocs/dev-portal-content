@@ -58,7 +58,7 @@ After you add the connector, you will be redirected to VTEX CX Platform. To comp
 4. Paste this URL in the **Remote MCP server URL** box: `https://mcp.weni.ai/mcp`.
 5. Click `Add`.
 6. In your connector's menu, look for the VTEX CX Platform MCP and click `Connect`.
-7. Authorize access to your data by clicking in `Allow access`.
+7. Authorize access to your data by clicking `Allow access`.
 8. Sign in with your VTEX CX Platform account.
 
 ### ChatGPT
