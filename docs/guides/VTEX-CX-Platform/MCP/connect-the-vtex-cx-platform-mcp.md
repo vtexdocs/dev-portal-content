@@ -7,7 +7,9 @@ updatedAt: "2026-04-14T13:05:57.445Z"
 excerpt: "Learn how to connect VTEX CX Platform Model Context Protocol (MCP) to an AI tool."
 ---
 
-This guide explains how to use [VTEX CX Platform's Model Context Protocol (MCP)](https://modelcontextprotocol.io/) to access your data inside the platform. It provides a standardized and secure way to access your information.
+This guide shows how to connect the [VTEX CX Platform's Model Context Protocol (MCP)](https://modelcontextprotocol.io/) to an AI tool. 
+
+MCP provides a standardized and secure way for AI assistants to access your **VTEX CX Platform** data. Once connected, your AI tool can query and analyze your customer support data directly.
 
 Once connected, you can:
 
@@ -21,7 +23,7 @@ Make sure you have the following:
 
 - **An MCP-compatible AI development tool**, such as [Claude](https://claude.ai/), [Cursor](https://www.cursor.com/), or [ChatGPT](https://chatgpt.com/).
 
-> The MCP connection to ChatGPT is only available on paid plans.
+  > The MCP connection to ChatGPT is only available on paid plans.
 
 - A valid [VTEX CX Platform account](https://dash.weni.ai/orgs) for the projects you want to analyze.
 - An active VTEX CX Platform subscription for your organization.
@@ -77,7 +79,7 @@ After you add the connector, you will be redirected to VTEX CX Platform.
 
 To complete the configuration, follow the steps below:
 
-1. Authorize access to your data by clicking `Allow access`. 
+1. Authorize access to your data by clicking `Allow access`.
 2. Sign in with your VTEX CX Platform account.
 
 ## Usage examples
