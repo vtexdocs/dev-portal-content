@@ -1,24 +1,29 @@
 ---
-title: "VTEX CX Platform: Connect the MCP to your AI tool"
+title: "VTEX CX Platform: New MCP server for AI-powered customer support insights"
 slug: "2026-04-15-vtex-cx-platform-mcp-connection-guide"
 type: "added"
 createdAt: "2026-04-15T13:00:00.000Z"
 updatedAt: "2026-04-15T13:00:00.000Z"
-excerpt: "Connect the VTEX CX Platform MCP to AI tools such as Claude, Cursor, and ChatGPT."
+excerpt: "Use the VTEX CX Platform MCP server to connect customer support analytics to AI tools such as Claude, Cursor, and ChatGPT"
 ---
 
-Now, the VTEX CX Platform offers a [Model Context Protocol (MCP) server](https://developers.vtex.com/docs/guides/connect-the-vtex-cx-platform-mcp) that can connect your data in the VTEX CX Platform to an AI tool.
+The **VTEX CX Platform (Weni)** now provides a [Model Context Protocol (MCP) server](https://developers.vtex.com/docs/guides/connect-the-vtex-cx-platform-mcp)that allows AI tools to securely access customer support analytics.
 
-MCP provides as a standardized and secure way for AI assistants to access your **VTEX CX Platform** data, so you can query and analyze customer support information directly from your preferred AI tool.
+With the **VTEX CX Platform MCP** server, AI assistants can securely access **VTEX CX Platform** data based on your permissions, allowing you to query interactions, analyze conversations, and generate insights from customer support analytics directly from your preferred AI tool.
 
 ## What has changed?
 
-With the VTEX CX Platform MCP, developers and support teams can:
+With the **VTEX CX Platform MCP**, developers and support teams can:
 
-- Explore customer support data.
-- Run interaction analyses.
+- Access customer support analytics from AI tools.
+- Analyze customer interactions and conversations.
 - Generate insights about interactions with customers.
 
 ## What needs to be done?
 
-To connect the VTEX CX Platform MCP to your AI tool, follow the instructions in the [Connect the VTEX CX Platform MCP](https://developers.vtex.com/docs/guides/connect-the-vtex-cx-platform-mcp) guide.
+To start using the **VTEX CX Platform MCP**, follow the instructions in the [Connect the VTEX CX Platform MCP](https://developers.vtex.com/docs/guides/connect-the-vtex-cx-platform-mcp) guide.
+
+For details on how your data is handled when using the **VTEX CX Platform MCP** server, see:
+
+- [Terms of use](https://mcp.weni.ai/terms)
+- [Privacy policy](https://mcp.weni.ai/privacy)
