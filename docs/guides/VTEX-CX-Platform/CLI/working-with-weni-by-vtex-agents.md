@@ -1,13 +1,13 @@
 ---
-title: "Working with Weni by VTEX agents"
+title: "Working with VTEX CX Platform (Weni) agents"
 slug: "working-with-weni-by-vtex-agents"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
-excerpt: "Learn how to create, configure, and deploy agents using the Weni by VTEX CLI, with some examples of agents."
+excerpt: "Learn how to create, configure, and deploy agents using the VTEX CX Platform (Weni) CLI, with some examples of agents."
 ---
 
-Learn how to create, configure, and deploy AI agents using Weni by VTEX CLI.
+Learn how to create, configure, and deploy AI agents using VTEX CX Platform (Weni) CLI.
 
 ## Agent Definition File
 
@@ -59,7 +59,7 @@ agents:
 
 5. **Tools**
    - Custom functionalities
-   - Implemented as Python classes using the Weni by VTEX SDK
+   - Implemented as Python classes using the VTEX CX Platform (Weni) SDK
 
 ### Tool Source Configuration
 
@@ -382,7 +382,7 @@ The verbose output will show you more details about the execution process, helpi
 
 After deployment, you can test the agent:
 
-1. Open your project in the Weni by VTEX platform
+1. Open your project in the VTEX CX Platform (Weni)
 2. Find the Book Agent in your agents list
 3. Start a conversation
 4. Send a book title (e.g., "Pride and Prejudice" or "Harry Potter")
@@ -499,7 +499,7 @@ This will run the test cases defined in `test_definition.yaml` and show you the 
 
 After deployment, you can test the agent by:
 
-1. Opening your project in the Weni by VTEX platform
+1. Opening your project in the VTEX CX Platform (Weni)
 2. Finding the CEP Agent in your agents list
 3. Starting a conversation
 4. Sending a valid Brazilian postal code (e.g., "01311-000")
@@ -687,7 +687,7 @@ The verbose output will show you more details about the execution process, inclu
 
 After deployment, you can test the agent:
 
-1. Open your project in the Weni by VTEX platform
+1. Open your project in the VTEX CX Platform (Weni)
 2. Find the Movie Agent in your agents list
 3. Provide the TMDB API key in the credential settings
 4. Start a conversation
@@ -860,7 +860,7 @@ The verbose output will show you more details about the execution process, helpi
 
 After deployment, you can test the agent:
 
-1. Open your project in the Weni by VTEX platform
+1. Open your project in the VTEX CX Platform (Weni)
 2. Find the News Agent in your agents list
 3. Provide the News API key in the credential settings
 4. Start a conversation

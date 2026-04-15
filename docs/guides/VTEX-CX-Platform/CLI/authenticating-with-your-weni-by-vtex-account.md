@@ -1,17 +1,17 @@
 ---
-title: "Authenticating with your Weni by VTEX account"
+title: "Authenticating with your VTEX CX Platform (Weni) account"
 slug: "authenticating-with-your-weni-by-vtex-account"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
-excerpt: "Learn how to authenticate with Weni by VTEX CLI."
+excerpt: "Learn how to authenticate with VTEX CX Platform (Weni) CLI."
 ---
 
-Learn how to authenticate with Weni by VTEX CLI and manage your credentials.
+Learn how to authenticate with VTEX CX Platform (Weni) CLI and manage your credentials.
 
 ### Login Process
 
-Weni by VTEX CLI uses OAuth2 for authentication. When you run the login command:
+VTEX CX Platform (Weni) CLI uses OAuth2 for authentication. When you run the login command:
 
 ```bash
 weni login
@@ -20,7 +20,7 @@ weni login
 The following happens:
 
 1. A local web server starts on your machine
-2. Your default browser opens to the Weni by VTEX login page
+2. Your default browser opens to the VTEX CX Platform (Weni) login page
 3. After successful login, you're redirected back to the local server
 4. The CLI receives and stores your authentication token
 
