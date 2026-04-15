@@ -17,7 +17,7 @@ With the **VTEX CX Platform MCP**, developers and support teams can:
 
 - Access customer support analytics from AI tools.
 - Analyze customer interactions and conversations.
-- Generate insights about interactions with customers.
+- Generate insights about AI and human support interactions with customers.
 
 ## What needs to be done?
 
