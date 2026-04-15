@@ -51,15 +51,15 @@ Follow the instructions for your development environment.
    - Project-level: `.cursor/mcp.json`
    - Global: `~/.cursor/mcp.json`
 
-```json
-{
-  "mcpServers": {
-    "vtex-cx-platform": {
-      "url": "https://mcp.weni.ai/mcp"
+    ```json
+    {
+      "mcpServers": {
+        "vtex-cx-platform": {
+          "url": "https://mcp.weni.ai/mcp"
+        }
+      }
     }
-  }
-}
-```
+    ```
 
 3. Save the file. After adding the connector, you will be redirected to VTEX CX Platform to complete the setup.
 4. Click `Allow access` to authorize the connection.
