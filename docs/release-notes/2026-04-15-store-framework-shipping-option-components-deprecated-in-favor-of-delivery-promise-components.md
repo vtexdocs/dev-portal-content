@@ -1,9 +1,9 @@
 ---
 title: "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components"
-slug: "2026-04-13-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components"
+slug: "2026-04-15-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components"
 hidden: false
 type: "deprecated"
-createdAt: "2026-04-13T12:00:00.000Z"
+createdAt: "2026-04-15T12:00:00.000Z"
 excerpt: "The Shipping Option Components app is deprecated. Stores using Delivery Promise on Store Framework should migrate to Delivery Promise Components, which introduces a new block model and theme configuration."
 ---
 
@@ -28,7 +28,7 @@ Migrating from `vtex.shipping-option-components` to `vtex.delivery-promise-compo
 | **Theme dependency** | `vtex.shipping-option-components` | `vtex.delivery-promise-components` |
 | **Blocks** | Single block: `shipping-option-location-selector`. | Separate blocks: `shopper-location-setter`, `shipping-method-selector`, and `pickup-point-selector`. |
 | **Block props** | Props like `callToAction`, `compactMode`, and `dismissible` on one block. | Props are split across the new blocks, such as `required`, `mode`, and `shippingSelection`. |
-| **CSS handles** | Handles such as `buttonLabel`, `deliveryPopover`, and `shippingOptionButton`. | New set of handles, including `shopperLocationSetterContainer` and `shippingMethodSelector`. |
+| **CSS handles** | Handles such as `buttonLabel`, `deliveryPopover`, and `shippingOptionButton`. | New set of handles, including `shopperLocationSetterContainer` and `shippingMethodSelector`. Find the full updated list of CSS handles in the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app documentation. |
 
 ## What needs to be done?
 
