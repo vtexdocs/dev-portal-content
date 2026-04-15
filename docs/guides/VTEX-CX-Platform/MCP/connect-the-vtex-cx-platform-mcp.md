@@ -13,9 +13,9 @@ MCP provides a standardized and secure way for AI assistants to access your **VT
 
 With the VTEX CX Platform MCP, you can:
 
-- Explore information about your store's customer support.
-- Run interaction analyses without switching between dashboards.
-- Create visualizations and insights about your store.
+- Access customer support analytics from AI tools.
+- Analyze customer interactions and conversations.
+- Generate insights about AI and human support interactions with customers.
 
 ## Before you begin
 
