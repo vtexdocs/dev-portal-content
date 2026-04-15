@@ -69,7 +69,7 @@ After you add the connector, you will be redirected to VTEX CX Platform. To comp
 4. Paste this URL in the MCP server URL box: `https://mcp.weni.ai/mcp`.
 5. Under **Authentication**, choose `OAuth`.
 6. Accept the terms and conditions.
-7. Click in `Create`.
+7. Click `Create`.
 
 ### Sign in and authorize
 
