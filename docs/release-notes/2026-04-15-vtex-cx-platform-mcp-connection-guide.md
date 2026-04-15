@@ -7,7 +7,7 @@ updatedAt: "2026-04-15T13:00:00.000Z"
 excerpt: "Use the VTEX CX Platform MCP server to connect customer support analytics to AI tools such as Claude, Cursor, and ChatGPT"
 ---
 
-The **VTEX CX Platform (Weni)** now provides a [Model Context Protocol (MCP) server](https://developers.vtex.com/docs/guides/connect-the-vtex-cx-platform-mcp)that allows AI tools to securely access customer support analytics.
+The **VTEX CX Platform (Weni)** now provides a [Model Context Protocol (MCP) server](https://developers.vtex.com/docs/guides/connect-the-vtex-cx-platform-mcp) that allows AI tools to access and analyze your customer support analytics.
 
 With the **VTEX CX Platform MCP** server, AI assistants can securely access **VTEX CX Platform** data based on your permissions, allowing you to query interactions, analyze conversations, and generate insights from customer support analytics directly from your preferred AI tool.
 
