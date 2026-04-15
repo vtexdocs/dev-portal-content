@@ -12,7 +12,7 @@ This guide explains how to use [VTEX CX Platform's Model Context Protocol (MCP)]
 Once connected, you can:
 
 - Explore information about your store's customer support.
-- Run interactions analyses without switching between dashboards.
+- Run interaction analyses without switching between dashboards.
 - Create visualizations and insights about your store.
 
 ## Before you begin
