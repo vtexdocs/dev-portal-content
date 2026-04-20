@@ -19,8 +19,8 @@ Previously, WebOps used a predefined Node.js version managed by the platform, an
 
 Now, WebOps provides a Node.js version setting at the project level. In this setting:
 
-* New FastStore projects created in WebOps are configured to use Node.js v24 by default.
-* Existing projects continue to use their current Node.js version (v22 or v20), and you can update them when you're ready.
+* New FastStore projects created in WebOps are configured to use [Node.js v24](https://nodejs.org/en/blog/release/v24.0.0) by default.
+* Existing projects continue to use their current Node.js version ([v22](https://nodejs.org/en/blog/release/v22.0.0) or [v20](https://nodejs.org/en/blog/release/v20.0.0)), and you can update them when you're ready.
 * When you update a storefront to FastStore (Next.js 16), you can switch the WebOps project to Node.js v24 directly in the WebOps project settings, avoiding build and runtime incompatibility issues.
 
 For more details about this feature, see the Settings section in the guide [FastStore WebOps - Dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard).
@@ -40,7 +40,7 @@ By adding a Node.js version selector in WebOps, we give you more control over yo
 
 **Update the Node.js version when upgrading to FastStore v4**
 
-FastStore v4 requires Node.js v24 in WebOps. If you're upgrading from an earlier FastStore major, follow the instructions in the guide [Upgrading FastStore to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4), including the WebOps steps after you update your repository and configuration.
+FastStore v4 requires Node.js v24 in WebOps. If you're upgrading from an earlier [FastStore major](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels), follow the instructions in the guide [Upgrading FastStore to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4), including the WebOps steps after you update your repository and configuration.
 
 **Review new projects**
 
