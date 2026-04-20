@@ -11,7 +11,7 @@ tags:
 
 [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) now includes the **Node.js version** section. This allows you to specify which Node.js runtime to use in your FastStore project builds, and ensure compatibility with [**FastStore v4**](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4), which is based on [Next.js v16](https://nextjs.org/blog/next-16) and requires a more recent Node.js version.
 
-![node-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17950/images/node-webops.png)
+![node-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/node-webops.png)
 
 ## What has changed?
 
@@ -23,7 +23,7 @@ Now, WebOps provides a Node.js version setting at the project level. In this set
 * Existing projects continue to use their current Node.js version ([v22](https://nodejs.org/en/blog/release/v22.0.0) or [v20](https://nodejs.org/en/blog/release/v20.0.0)), and you can update them when you're ready.
 * When you update a storefront to FastStore (Next.js 16), you can switch the WebOps project to Node.js v24 directly in the WebOps project settings, avoiding build and runtime incompatibility issues.
 
-For more details about this feature, see the Settings section in the guide [FastStore WebOps - Dashboard](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard).
+For more details about this feature, see the Settings section in the guide [FastStore WebOps - Dashboard](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
 
 ## Why did we make this change?
 
