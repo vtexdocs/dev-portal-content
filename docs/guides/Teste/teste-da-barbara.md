@@ -27,3 +27,8 @@ TESTE DO CALLOUT
 >   ```txt
 >   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/productClusterIds/trade-policy/tradePolicy?deliveryZonesHash=deliveryZonesHash&pickupsHash=pickupsHash&an=accountName
 >   ```
+
+
+```txt
+GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/productClusterIds}trade-policy/tradePolicy?zip-code=zipCode&an=accountName&coordinates=coordinates&country=country
+```
