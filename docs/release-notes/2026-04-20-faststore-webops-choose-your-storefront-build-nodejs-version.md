@@ -9,7 +9,7 @@ tags:
   - WebOps
 ---
 
-[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) now includes the **Node.js version** section. This allows you to specify which Node.js runtime to use in your FastStore project builds, and ensure compatibility with [**FastStore v4**](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4). FastStore v4 is based on [Next.js v16](https://nextjs.org/blog/next-16) and requires a more recent version of Node.js.
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) now includes the **Node.js version** section. This allows you to specify which Node.js runtime to use in your FastStore project builds, and ensure compatibility with [**FastStore v4**](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4), which is based on [Next.js v16](https://nextjs.org/blog/next-16) and requires a more recent Node.js version.
 
 ![node-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17950/images/node-webops.png)
 
