@@ -15,7 +15,7 @@ Previously, the Delivery Promise experience relied on the `vtex.shipping-option-
 
 Now, the header experience is powered by the `vtex.delivery-promise-components` app, which provides three separate Store Framework blocks you can use:
 
-- `shopper-location-setter` (required): Collects the shopper's location, such as postal code, to determine Delivery Promise availability and filters.
+- `shopper-location-setter` (required): Collects the shopper's location data, such as postal code, to determine Delivery Promise availability and filters.
 - `shipping-method-selector` (optional): Allows shoppers to choose between delivery and pickup after setting their location.
 - `pickup-point-selector` (optional): Allows shoppers to choose a specific pickup point after setting their location.
 
@@ -36,11 +36,7 @@ To adapt to this change and continue using Delivery Promise in your Store Framew
 
 1. In your theme's [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file, replace the dependency `vtex.shipping-option-components` with `vtex.delivery-promise-components`:
 
-  ```manifest.json
-  "dependencies": {
-    "vtex.delivery-promise-components": "1.x"
-  }
-  ```
+  
 
 2. Remove any usage of the `shipping-option-location-selector` block from your header layout configuration.
 
@@ -51,7 +47,7 @@ To adapt to this change and continue using Delivery Promise in your Store Framew
     - `pickup-point-selector` to allow shoppers to choose a specific pickup point.
 
 4. Validate the storefront behavior by confirming that:
-- The header collects the shopper's location.
-- Delivery Promise availability and filters respond correctly to the chosen location, shipping method, and pickup point.
+    - The header collects the shopper's location.
+    - Delivery Promise availability and filters respond correctly to the chosen location, shipping method, and pickup point.
 
 To learn more about configuring Delivery Promise in Store Framework, see the [Setting up Delivery Promise components (Beta)](https://developers.vtex.com/docs/guides/setting-up-delivery-promise-components) guide and the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app documentation.
