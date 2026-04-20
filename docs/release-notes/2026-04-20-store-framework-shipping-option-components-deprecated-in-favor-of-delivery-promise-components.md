@@ -39,10 +39,11 @@ To adapt to this change and continue using Delivery Promise in your Store Framew
 2. Remove any usage of the `shipping-option-location-selector` block from your header layout configuration.
 
 3. Add and configure the new blocks:
-  - Add the `shopper-location-setter` block to your header (Required).
-  - Optionally, add the following blocks depending on your needs:
-    - `shipping-method-selector` to allow shoppers to choose between delivery and pickup.
-    - `pickup-point-selector` to allow shoppers to choose a specific pickup point.
+
+- Add the `shopper-location-setter` block to your header (Required).
+- Optionally, add the following blocks depending on your needs:
+  - `shipping-method-selector` to allow shoppers to choose between delivery and pickup.
+  - `pickup-point-selector` to allow shoppers to choose a specific pickup point.
 
 4. Validate the storefront behavior by confirming that:
   - The header collects the shopper's location.
