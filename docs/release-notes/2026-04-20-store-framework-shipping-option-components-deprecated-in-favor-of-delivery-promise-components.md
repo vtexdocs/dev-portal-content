@@ -36,11 +36,10 @@ To adapt to this change and continue using Delivery Promise in your Store Framew
 
 1. In your theme's [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file, replace the dependency `vtex.shipping-option-components` with `vtex.delivery-promise-components`:
 
-  
-
 2. Remove any usage of the `shipping-option-location-selector` block from your header layout configuration.
 
 3. Add and configure the new blocks:
+
 - Add the `shopper-location-setter` block to your header (Required).
 - Optionally, add the following blocks depending on your needs:
     - `shipping-method-selector` to allow shoppers to choose between delivery and pickup.
