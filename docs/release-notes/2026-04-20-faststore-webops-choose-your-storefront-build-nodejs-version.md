@@ -21,7 +21,6 @@ Now, WebOps provides a Node.js version setting at the project level. In this set
 
 * New FastStore projects created in WebOps are configured to use [Node.js v24](https://nodejs.org/en/blog/release/v24.0.0) by default.
 * Existing projects continue to use their current Node.js version ([v22](https://nodejs.org/en/blog/release/v22.0.0) or [v20](https://nodejs.org/en/blog/release/v20.0.0)), and you can update them when you're ready.
-* When you update a storefront to FastStore (Next.js 16), you can switch the WebOps project to Node.js v24 directly in the WebOps project settings, avoiding build and runtime incompatibility issues.
 
 For more details about this feature, see the Settings section in the guide [FastStore WebOps - Dashboard](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
 
