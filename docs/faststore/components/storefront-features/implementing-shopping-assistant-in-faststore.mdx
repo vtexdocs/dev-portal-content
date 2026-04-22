@@ -1,0 +1,98 @@
+---
+title: "Implementing Shopping Assistant in FastStore"
+---
+
+In this guide, you will learn how to implement the Shopping Assistant in a FastStore project.
+
+Shopping Assistant is a conversational assistant embedded in the storefront that helps shoppers with product- and post-purchase-related questions without leaving the store experience.
+
+For shoppers, this brings a more guided buying journey: they can get answers in context while browsing, reduce friction during product discovery, and receive support in the same interface where they are making purchase decisions. For merchants, this creates an opportunity to offer a more assistive and responsive storefront experience that can improve self-service during the shopping journey.
+
+FastStore already includes support for the Shopping Assistant integration through a dedicated `ShoppingAssistant` section in the CMS and a third-party script that loads the VTEX CX Platform's experience.
+
+## Before you begin
+
+The Shopping Assistant is available for FastStore projects running `v3.98.0` or later. If your project is not up to date, follow the instructions in [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
+
+## Instructions
+
+### Step 1 - Sync the `ShoppingAssistant` section with CMS
+
+<details>
+<summary>For stores using <a href="https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts">CMS</a></summary>
+
+1. Open your FastStore project in a code editor.  
+2. Open a terminal and log in to your VTEX account by running `vtex login {accountName}`.
+
+   > ⚠️ Change `{accountName}` to your store account, for example, `vtex login mystore`.  
+
+3. Generate and upload the CMS schema by running the following commands:
+
+> ⚠️ If needed, install the VTEX Content plugin by running vtex plugins install @vtex/cli-plugin-content.
+
+```shell
+
+vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json && vtex content upload-schema cms/faststore/schema.json
+
+```
+
+</details>
+
+<details>
+<summary>For stores using <a href="https://developers.vtex.com/docs/guides/faststore/headless-cms-overview">Headless CMS (legacy)</a></summary>
+
+1. Open your FastStore project in a code editor.  
+2. Open a terminal and log in to your VTEX account by running `vtex login {accountName}`.
+
+   > ⚠️ Change `{accountName}` to your store account, for example, `vtex login mystore`.
+
+3. Run the following command to add and sync the `ShoppingAssistant` section to your project.
+
+   ```shell
+   yarn cms-sync
+   ```
+
+</details>
+
+### Step 2 - Shopping Assistant setup flow in VTEX CX Platform
+
+To set up the Shopping Assistant flow, you must onboard your account in the VTEX CX Platform. To onboard, follow these instructions:
+
+1. Open the Admin, go to **Storefront > Agentic CX > Dashboard**.  
+2. In the **Dashboard** page, click the **Scale Support and Efficiency** card.  
+3. Choose a store URL to connect the store data.  
+4. Click `Confirm` to begin the onboarding.
+
+   ![shopping-assistant-onboarding-overview](https://vtexhelp.vtexassets.com/assets/docs/src/1-shopping-assistant-onboarding___206165d6874fdd97ee7f8fcfbcafb939.gif)
+
+5. Once the AI team is ready, click `Activate in Store` to complete the onboarding process.
+
+![shopping-assistant-onboarding-complete](https://vtexhelp.vtexassets.com/assets/docs/src/2-shopping-assistant-onboarding___e9ac90652a41f5581d0c4151f0d4a92a.png)
+
+### Step 3 - Enable the section in the CMS interface
+
+The `Shopping Assistant` section is available on all store pages, so it should be added to the [Global Sections Content Type](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview#content-types).
+
+<details>
+<summary>For stores using <a href="https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts">CMS</a></summary>
+
+1. Open the VTEX Admin and go to **Storefront > Content > All content**.  
+2. Open the **Global Sections** Content Type.  
+3. Click the `+`, and add the `Shopping Assistant` section.  
+4. Click `Save`.  
+
+![enable-cms](https://vtexhelp.vtexassets.com/assets/docs/src/shopping-assistant-cms___81c0bf127a61d54c710f2748125037c5.gif)
+
+</details>
+
+<details>
+<summary>For stores using <a href="https://developers.vtex.com/docs/guides/faststore/headless-cms-overview">Headless CMS (legacy)</a></summary>
+
+1. Open the VTEX Admin and go to **Storefront > Headless CMS**.  
+2. Open the **Global Sections** Content Type.  
+3. Click the `+`, and add the `Shopping Assistant` section.  
+4. Click `Save`.
+
+![enable-hcms](https://vtexhelp.vtexassets.com/assets/docs/src/shopping-assistant-hcms___1224dded8d2b7de941e7c00aef1e204f.gif)
+
+</details>

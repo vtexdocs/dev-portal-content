@@ -14,7 +14,7 @@ This guide details how to use the [Delivery Promise](https://help.vtex.com/en/tu
 Only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
 
 * The system displays all available pickup points within the 50 km radius configured in Checkout. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed. To enable this functionality, you must fetch the complete list of pickup points using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/pickup-points). Retrieving this list is a mandatory dependency for the Delivery Promise feature in headless stores.
-* For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are shown, with a maximum of 40 pickup points.
+* For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are shown.
 
 ## Before you begin
 
@@ -38,11 +38,13 @@ To enable the Delivery Promise functionality, you should use the following addit
 | `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters. |  `/shipping/pickup-in-point?zip-code=22250040&pickupPoint=vtex-botafogo`  |
 | `delivery-options` (facet) | [Delivery Option](https://help.vtex.com/en/tutorial/delivery-options-beta--1fRDJFcHCtpTnk7GNyaRDY) ID or IDs to be filtered. The ID can be obtained in the VTEX Admin, at **Shipping > Delivery Options**. It must always be combined with `zip-code`. Multiple entries of this filter can be used in the request to search for multiple Delivery Options. | **`/delivery-options/express-option-id`**`?zip-code=22250040` |
 | `dynamic-estimate` (facet) | The Dynamic Estimate filter selects Delivery Options that can meet the requested delivery or pickup timeframe. It must always be used together with `zip-code` and `shipping`. Possible values: `same-day`, `next-day`. It dynamically identifies which Delivery Options for the given `zip-code` and `shipping` facet can meet the requested timeframe, and then filters the search as if those Delivery Options had been manually passed as filters. | `/shipping/delivery/dynamic-estimate/same-day?zip-code=22250040` |
-| `hideUnavailableItems` (query string) | Controls whether the search returns only available products or both available and unavailable ones. When set to `true`, only products with stock are returned; when set to `false`, the API includes unavailable products as well. A product is considered unavailable when `availableQuantity = 0`, while `availableQuantity = 10000` indicates that the product is available. Retailers may choose to show unavailable items for commercial reasons (for example, to signal that they carry those products even if temporarily out of stock), while the recommended default is `true`. This facet also allows merchants to expose a shopper-facing filter such as "show only in-stock products."<br><br> If `hideUnavailableItems` is omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
+| `hideUnavailableItems` (query string) | Controls whether the search returns only available products or both available and unavailable ones. When set to `true`, only products with stock are returned; when set to `false`, the API includes unavailable products as well. A product is considered unavailable when `availableQuantity = 0`, while `availableQuantity = 10000` indicates that the product is available.<br><br>**When filtering by shipping method (`shipping`), Delivery Options (`delivery-options`), or Dynamic Estimates (`dynamic-estimate`), this parameter must be set to `true`.** Otherwise, products that are unavailable for the selected filter may be displayed.<br><br>When filtering only by ZIP code (`zip-code`) without any of the above filters, retailers may choose to show unavailable items for commercial reasons (for example, to signal that they carry those products even if temporarily out of stock). This facet also allows merchants to expose a shopper-facing filter such as "show only in-stock products."<br><br> If `hideUnavailableItems` is omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
 
->⚠️ `zip-code` is **required** to filter product availability according to the shopper’s location and is integral to any request using Delivery Promise functionality. This means you must use it when filtering by shipping method and pickup point.
+>⚠️ For stores using Delivery Promise, the `zip-code` parameter is **mandatory** in all Intelligent Search API requests to filter product availability according to the shopper's location. This applies to both Product Listing Pages (PLP) and Product Detail Pages (PDP), and is integral to any request using Delivery Promise functionality, including when filtering by shipping method and pickup point.
+>
+> For stores not using Delivery Promise, the `zip-code` parameter is not required and can be omitted from Intelligent Search API requests.
 
->⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
+>⚠️ When filtering by shipping method (`shipping`), Delivery Options (`delivery-options`), or Dynamic Estimates (`dynamic-estimate`), you **must** include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for the selected filter. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
 
 For more information on facet options apart from the ones directly related to Delivery Promise, go to `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-).
 
@@ -56,7 +58,7 @@ When shoppers apply filters, the API combines them according to the following ru
 This results in the following behavior when using Delivery Options and Dynamic Estimates:
 
 * **Multiple Delivery Options → OR (union):** the API returns all products that match any of the delivery options selected by the shopper.  
-* **Dynamic Estimate \+ Delivery Option → AND (intersection):** the API returns only the products that satisfy both the selected dynamic estimate and the chosen delivery option.
+* **Dynamic Estimate + Delivery Option → AND (intersection):** the API returns only the products that satisfy both the selected dynamic estimate and the chosen delivery option.
 
 ### Filtering by location
 
@@ -72,7 +74,7 @@ To filter the search by a shipping method, you must use the `shipping` parameter
 
 The possible filters are:
 
-* [Delivery to the shopper’s ZIP code](#delivery-to-the-shopper's-zip-code)
+* [Delivery to the shopper's ZIP code](#delivery-to-the-shopper's-zip-code)
 * [Pickup at a specific location](#pickup-at-a-specific-location)
 * [Pickup at a nearby location](#pickup-at-a-nearby-location)
 
@@ -96,8 +98,6 @@ Filters the search for products that can be picked up at a specific pickup point
 
 Parameters: `/shipping/pickup-in-point/pickupPoint/{pickupPointId}`
 
->ℹ️ We are working on an endpoint that will simplify retrieving pickup points directly. For now, to fetch the list of pickup points for the store and their IDs, follow the [List pickup points by location](https://developers.vtex.com/docs/guides/list-pickup-points-by-location) guide and [API reference](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/pickup-points).
-
 Example:
 
 ```txt
@@ -108,13 +108,31 @@ https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_sear
 
 Filters the search for products that can be picked up at pickup points located within a radius of up to 50 km from the shopper, within the same pickup radius limit as the Checkout.
 
-Parameters: `/shipping/pickup-in-point/pickup-nearby`
+Parameters: `/shipping/pickup-nearby`
 
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-in-point/pickup-nearby?zip-code=22250040 
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-nearby?zip-code=22250040
 ```
+
+### Retrieving available pickup points
+
+To retrieve the list of available pickup points with their IDs, distances, addresses, and business hours, use the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. This endpoint returns pickup points based on product availability (product cluster/collection), sorted by distance from the provided coordinates.
+
+You can call this endpoint in two ways:
+
+- **With country and ZIP code:** Provide the country and ZIP code to retrieve pickup points based on location.
+
+   ```txt
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
+   ```
+
+ - **With delivery zones and pickups hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupsHash`) for faster lookup.
+
+   ```txt
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?deliveryZonesHash={deliveryZonesHash}&pickupsHash={pickupsHash}&an={accountName}
+   ```
 
 ### Filtering by Delivery Options
 
@@ -205,3 +223,76 @@ GET https://{{accountName}}.myvtex.com/_v/api/intelligent-search/facets/?query=m
   ]
 }
 ```
+
+## Implementing Product Detail Pages (PDP)
+
+>⚠️ To ensure consistent Delivery Promise information between Product Listing Pages (PLP) and Product Detail Pages (PDP), you must use the Intelligent Search API for both. Using different APIs (such as Catalog API for PDP and Intelligent Search for PLP) may result in inconsistent delivery information.
+
+When implementing Product Detail Pages (PDP) in headless stores using Delivery Promise, use the Intelligent Search API to ensure:
+
+* **Consistent delivery information:** Delivery estimates and availability shown on the PLP match those on the PDP.
+* **Accurate pickup point data:** Pickup points and their availability remain consistent across the shopping experience.
+* **Real-time availability:** Product availability is always calculated based on the shopper's location.
+
+To retrieve a specific product with Delivery Promise data for the PDP, use the `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) endpoint with the `query` (or `q`) parameter using specific product or SKU identifiers.
+
+The Intelligent Search API supports the following ID types in the `query` parameter:
+
+**Search by Product ID:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:{productId}&zip-code=22250040
+```
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.id:{productId}&zip-code=22250040
+```
+
+**Search by SKU ID:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku:{skuId}&zip-code=22250040
+```
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.id:{skuId}&zip-code=22250040
+```
+
+**Search by SKU EAN:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.ean:{ean}&zip-code=22250040
+```
+
+**Search by SKU Reference ID:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku.reference:{refId}&zip-code=22250040
+```
+
+**Search by product slug (linkText):**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:{slug}&zip-code=22250040
+```
+
+**Examples:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234&zip-code=22250040&hideUnavailableItems=true
+```
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?q=sku:5678&zip-code=22250040&hideUnavailableItems=true
+```
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:apple-magic-mouse&zip-code=22250040&hideUnavailableItems=true
+```
+
+### Required parameters for PDP
+
+When implementing PDP with Delivery Promise:
+
+* **`query` or `q` (required):** Use one of the supported ID formats: `product:{id}`, `product.id:{id}`, `sku:{id}`, `sku.id:{id}`, `sku.ean:{ean}`, `sku.reference:{refId}`, or `product.link:{slug}`.
+* **`zip-code` (required):** Must be included to ensure accurate delivery estimates and product availability.
