@@ -1,6 +1,6 @@
 ---
 title: "FastStore: Debug logging for third-party scripts"
-slug: "2026-02-12-faststore-debug-logging"
+slug: "2026-02-11-faststore-debug-logging"
 type: improved
 createdAt: "2026-02-11T11:00:00.000Z"
 updatedAt: "2026-04-22T11:00:00.000Z"
