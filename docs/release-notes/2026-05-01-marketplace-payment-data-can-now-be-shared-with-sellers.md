@@ -1,9 +1,9 @@
 ---
-title: "Marketplace payment data sharing with sellers"
-slug: "2026-04-20-marketplace-payment-data-sharing-with-sellers"
+title: "Marketplace payment data can now be shared with sellers"
+slug: "2026-05-01-marketplace-payment-data-can-now-be-shared-with-sellers"
 type: "improved"
-createdAt: "2026-04-20T00:00:00.000Z"
-updatedAt: "2026-04-20T00:00:00.000Z"
+createdAt: "2026-05-01T00:00:00.000Z"
+updatedAt: "2026-05-01T00:00:00.000Z"
 excerpt: "VTEX Marketplaces can now share native payment data with sellers, with details like payment method, card brand, and acquirer responses."
 tags:
   - Orders
@@ -18,7 +18,7 @@ The new approach uses native VTEX payment fields, ensuring data (`tid`, `authId`
 
 Previously, seller orders created from marketplace sales contained placeholder payment information. Now, VTEX sellers receive native `paymentData`, which includes the actual payment details from the marketplace transaction. The `paymentData` field is returned by the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) endpoint.
 
-External sellers integrated through the Fulfillment flow now receive payment information in the [Authorize fulfillment](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill) endpoint payload:
+External sellers integrated through the Fulfillment flow now receive payment information in the [Authorize fulfillment](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill) endpoint payload.
 
 This feature also has backward compatibility. Therefore, integrations that rely on the previous seller `paymentData` behavior can detect marketplace-assumed payments by checking for `transactionId = "PAYMENT-FROM-AFFILIATE"`. This allows gradual migration without breaking existing flows.
 
