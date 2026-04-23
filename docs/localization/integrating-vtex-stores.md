@@ -9,8 +9,8 @@ The VTEX architecture allows stores to operate both as marketplaces and sellers,
 
 You'll learn how to set your store to:
 
-- [Act as seller](#acting-as-seller)
-- [Act as marketplace](#acting-as-marketplace)
+* [Act as seller](#acting-as-seller)
+* [Act as marketplace](#acting-as-marketplace)
 
 ## Understanding the integration flow
 
@@ -40,8 +40,8 @@ sequenceDiagram
 
 The following table provides an overview of the required steps and who is responsible for each:
 
-| Step                                                                                                            | Responsibility | Description                                                                                                                                                                                                        |
-| --------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Step | Responsibility | Description |
+|------|----------------|-------------|
 | [Define sales channels for marketplace integration](#define-sales-channels-for-marketplace-integration)         | Seller         | Decide whether to use an existing or new **sales channel (trade policy)** for marketplace sales and configure catalog, pricing, promotions, payments, and logistics as needed.  |
 | [Create affiliate ID](#create-an-affiliate-id)                                                                  | Seller         | Create an **affiliate** that uniquely identifies the marketplace, that links it to the correct sales channel and notification endpoint, and share the affiliate ID with the marketplace.           |
 | [Define sales channels for sellers in your marketplace](#define-sales-channels-for-sellers-in-your-marketplace) | Marketplace    | Decide whether to use the default or a dedicated **sales channel** for marketplace operations and configure catalog, pricing, promotions, payments, and logistics for seller sales.                |
@@ -68,13 +68,13 @@ Determine the sales channel configuration for your marketplace integration:
 
 **Catalog settings:**
 
-- Use sales channels to control the products you want to send to the marketplace.
-- Avoid using [collections](https://help.vtex.com/docs/tutorials/creating-a-product-collection) as the main control mechanism, as they are designed for storefront merchandising, not for core catalog logic.
+* Use sales channels to control the products you want to send to the marketplace.
+* Avoid using [collections](https://help.vtex.com/docs/tutorials/creating-a-product-collection) as the main control mechanism, as they are designed for storefront merchandising, not for core catalog logic.
 
 **Promotions settings:**
 
-- You don't need a marketplace-specific sales channel dedicated to promotions. Segment promotions using the [affiliate](https://help.vtex.com/docs/tutorials/what-is-an-affiliate) configuration.
-- See [Configuring promotions for marketplaces](https://help.vtex.com/docs/tutorials/configuring-promotions-for-marketplaces) for more information.
+* You don't need a marketplace-specific sales channel dedicated to promotions. Segment promotions using the [affiliate](https://help.vtex.com/docs/tutorials/what-is-an-affiliate) configuration.
+* See [Configuring promotions for marketplaces](https://help.vtex.com/docs/tutorials/configuring-promotions-for-marketplaces) for more information.
 
 ### Create an affiliate ID
 
@@ -150,9 +150,9 @@ Configure your marketplace storefront to display seller information during the s
 
 Add the following controls to your ecommerce templates:
 
-- `<vtex.cmc:sellerDescription />`: Displays the seller name and logo for the product.
-- `<vtex.cmc:SellerOptions />`: Shows sellers offering the product, prices, and installment options.
-- `<vtex.cmc:sellerInfo />`: Displays detailed seller information on the seller details page.
+* `<vtex.cmc:sellerDescription />`: Displays the seller name and logo for the product.
+* `<vtex.cmc:SellerOptions />`: Shows sellers offering the product, prices, and installment options.
+* `<vtex.cmc:sellerInfo />`: Displays detailed seller information on the seller details page.
 
 Learn more in the [List of template controls](https://developers.vtex.com/docs/guides/list-of-controls-for-templates) guide.
 
@@ -160,17 +160,17 @@ Learn more in the [List of template controls](https://developers.vtex.com/docs/g
 
 Install the [Seller Selector](https://developers.vtex.com/docs/apps/vtex.seller-selector) app to:
 
-- Display the number of sellers offering each product.
-- Allow customers to compare prices from different sellers.
-- Enable customers to add products from their preferred seller to the cart.
+* Display the number of sellers offering each product.
+* Allow customers to compare prices from different sellers.
+* Enable customers to add products from their preferred seller to the cart.
 
 ### Configure payments
 
 Configure payment processing for your marketplace. There are different scenarios for payment processing in VTEX marketplaces:
 
-- **Marketplace processes payments:** The marketplace receives payments and distributes the amounts to sellers based on commission agreements.
-- **Seller processes payments:** Each seller receives payments directly for their orders.
-- **Split payment:** Payment is divided between the marketplace and the seller based on predefined rules.
+* **Marketplace processes payments:** The marketplace receives payments and distributes the amounts to sellers based on commission agreements.
+* **Seller processes payments:** Each seller receives payments directly for their orders.
+* **Split payment:** Payment is divided between the marketplace and the seller based on predefined rules.
 
 For detailed information about payment settings, see [Payments in VTEX Marketplace](https://help.vtex.com/docs/tutorials/payments-in-vtex-marketplaces).
 
