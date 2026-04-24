@@ -4,7 +4,7 @@ slug: "delivery-promise-suggestions-api-integration"
 hidden: false
 createdAt: "2026-03-05T00:00:00.000Z"
 updatedAt: "2026-03-05T00:00:00.000Z"
-excerpt: "This guide explains how to integrate the Delivery Promise Suggestions API into a headless storefront to display delivery promises and pickup options, creating meaningful visual indicators for shoppers."
+excerpt: "This guide explains how to integrate the Delivery Promise Suggestions API into any storefront to display delivery promises and pickup options, creating meaningful visual indicators for shoppers."
 seeAlso:
  - "/docs/guides/delivery-promise"
  - "/docs/guides/setting-up-delivery-promise-components"
@@ -23,7 +23,7 @@ In this guide, you will learn how to integrate the [Delivery Promise Suggestions
 
 ## Gathering delivery promise information
 
-Before you implement the storefront components, gather the delivery information that will be available to the shopper. You must gather the delivery information that will be shown to the shopper by identifying the delivery zones and pickup points available for their location. This fulfillment context is then represented by two hashes (the delivery zones hash and the pickup points hash), which serve as a compact, precomputed snapshot of all relevant logistics configurations. Rather than recalculating these options on every request, these hashes make it possible to retrieve accurate suggestions more quickly, with lower latency and greater consistency across the shopping experience.
+Before you implement the storefront components, you must gather the delivery information that will be shown to the shopper by identifying the delivery zones and pickup points available for their location. This fulfillment context is then represented by two hashes (the delivery zones hash and the pickup points hash), which serve as a compact, precomputed snapshot of all relevant logistics configurations. Rather than recalculating these options on every request, these hashes make it possible to retrieve accurate suggestions more quickly, with lower latency and greater consistency across the shopping experience.
 
 ### Delivery zones
 
@@ -176,6 +176,14 @@ The following example response illustrates the data you can expect:
 
 Your storefront must translate the API response into user-facing visual indicators. This section explains how to map response fields into shopper-friendly messages.
 
+### Interpretation of `slaTimeTarget`
+
+The `slaTimeTarget` defines a relative fulfillment window. Specifically, it indicates the latest calendar day (or hour) by which delivery or pickup must occur. The system already considers weekends, holidays, and logistics rules when calculating this deadline.
+
+If you need to apply additional business rules outside the logistics configuration (for example, special events or campaign-specific promises), implement that logic in your storefront. Using the computed deadline, you can generate contextual messaging such as “Receive before Christmas” when applicable.
+
+The target date is always calculated relative to when the API is called. For example, `{ "to": 2, "unit": "d" }` means fulfillment must occur within the next two calendar days.
+
 ### Mapping delivery tags
 
 Use the following table to map delivery SLAs to suggested tags:
@@ -198,14 +206,6 @@ Use the following table to map pickup SLAs to suggested badges:
 | Nearest location | Distance data must be available in the response | "Store at Y km from you" |
 | Store name | Store name must be available in the response | "Pickup at Downtown Store" |
 
-### Interpretation of `slaTimeTarget`
-
-The `slaTimeTarget` defines a relative fulfillment window. Specifically, it indicates the latest calendar day (or hour) by which delivery or pickup must occur. The system already considers weekends, holidays, and logistics rules when calculating this deadline.
-
-If you need to apply additional business rules outside the logistics configuration (for example, special events or campaign-specific promises), implement that logic in your storefront. Using the computed deadline, you can generate contextual messaging such as “Receive before Christmas” when applicable.
-
-The target date is always calculated relative to when the API is called. For example, `{ "to": 2, "unit": "d" }` means fulfillment must occur within the next two calendar days.
-
 ### Display suggestions by context
 
 Use different display strategies depending on where the shopper sees this information:
@@ -216,7 +216,6 @@ Use different display strategies depending on where the shopper sees this inform
 | PDP (Product Detail Page) | Show all available delivery and pickup options. Trigger display when the page loads or whenever the shopper’s location is updated. |
 
 > ⚠️ If you do not refresh the fulfillment context when the shopper's location changes, the delivery and pickup suggestions may become outdated or inaccurate. To ensure recommendations are always correct, refresh the context on every location change, make a batch request for all visible product IDs, and request suggestions for the currently displayed product (including its variants, if relevant).
-
 
 ## End-to-end workflow example
 
