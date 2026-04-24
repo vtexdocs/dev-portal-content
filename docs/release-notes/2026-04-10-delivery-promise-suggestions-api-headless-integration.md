@@ -19,7 +19,7 @@ The [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-refe
 **Logistics Shipping:**
 
 - `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2): Retrieves available delivery zones based on location information (postal code, coordinates, and country).
-- `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search): Finds available pickup points near a given address with distance constraints.
+- `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search): For each product, retrieves the quickest delivery option and nearest pickup point, empowering merchants to display this information dynamically on store pages.
 
 **Delivery Promise Suggestions:**
 
@@ -31,6 +31,7 @@ The [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-refe
 This API extends the [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise) solution to headless storefronts, enabling you to:
 
 - Display only products available for the shopper's location with valid shipping methods.
+- Show customers the quickest and closest delivery and pickup options available for the storefront.
 - Highlight the most relevant delivery and pickup options directly on the storefront.
 - Provide accurate delivery time estimates using precomputed fulfillment contexts for better performance.
 - Enhance the shopping experience with clear, contextual delivery promises.
