@@ -20,7 +20,7 @@ Previously, seller orders created from marketplace sales contained placeholder p
 
 External sellers integrated through the Fulfillment flow now receive payment information in the [Authorize fulfillment](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill) endpoint payload.
 
-This feature also has backward compatibility. Therefore, integrations that rely on the previous seller `paymentData` behavior can detect marketplace-assumed payments by checking for `transactionId = "PAYMENT-FROM-AFFILIATE"`. This allows gradual migration without breaking existing flows.
+This feature also has backward compatibility. Therefore, integrations that relied on the previous `paymentSystemName = "Assumed value by affiliate 00"` behavior can now detect marketplace-assumed payments with `transactionId = "PAYMENT-FROM-AFFILIATE"`. This allows gradual migration without breaking existing flows.
 
 ## What needs to be done?
 
