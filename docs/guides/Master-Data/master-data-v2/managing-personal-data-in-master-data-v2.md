@@ -25,7 +25,7 @@ Every document containing personal data must be linked to a **data subject,** th
 
 Use the [Configure personal data fields](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/personalData) endpoint to declare which fields contain personal data and which field identifies the data subject.
 
-```
+```bash
 POST https://{accountName}.{environment}.com.br/api/dataentities/{dataEntityName}/personalData
 ```
 
@@ -57,7 +57,7 @@ Use the standard document creation and update endpoints to save documents with p
 - [Create document with custom ID or update entire document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-)
 - [Update partial document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#patch-/api/dataentities/-dataEntityName-/documents/-id-)
 
-```
+```bash
 POST https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/documents
 ```
 
@@ -83,7 +83,7 @@ Use the standard document retrieval endpoints to read documents:
 
 By default, personal data fields are returned with masked values:
 
-```
+```bash
 GET https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/documents/{id}?_fields=email,firstName,categories
 ```
 
@@ -101,7 +101,7 @@ Non-personal fields are returned normally. The masking format preserves the firs
 
 To retrieve the original values of personal data fields, add `unmasked=true` and a mandatory `reason` parameter to the query string:
 
-```
+```bash
 GET https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/documents/{id}?_fields=email,firstName,categories&unmasked=true&reason=customer+support+request
 ```
 
@@ -130,7 +130,7 @@ Personal data fields can be used as search filters, but they must be indexed and
 
 Add the personal data field to the `v-indexed` array in the schema, like any other searchable field:
 
-```
+```bash
 PUT https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/schemas/schema1
 ```
 
@@ -147,7 +147,7 @@ PUT https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/schem
 
 ### Search with exact match
 
-```
+```bash
 GET https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/search?email=john@example.com&_fields=email,categories
 ```
 
