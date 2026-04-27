@@ -1,13 +1,13 @@
 ---
-title: "Managing your Weni by VTEX projects"
+title: "Managing your VTEX CX Platform (Weni) projects"
 slug: "managing-your-weni-by-vtex-projects"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
-excerpt: "Manage your Weni by VTEX projects with the CLI."
+excerpt: "Manage your VTEX CX Platform (Weni) projects with the CLI."
 ---
 
-Learn how to manage your Weni by VTEX projects using the CLI.
+Learn how to manage your VTEX CX Platform (Weni) projects using the CLI.
 
 ### Project Commands
 
@@ -90,7 +90,7 @@ The CLI maintains a "current project" context, which is used by other commands l
 
 #### Starting a New Project
 
-1. Create project in Weni by VTEX platform
+1. Create project in VTEX CX Platform (Weni)
 2. List projects to get UUID:
 
    ```bash
