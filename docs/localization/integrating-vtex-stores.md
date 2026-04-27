@@ -103,7 +103,7 @@ To reindex the database:
 
 1. Open your browser and access the following URL, replacing `{storename}` with the account name of your store:
 
-`{storename}.vtexcommercestable.com.br/admin/Site/FullCleanUp.aspx`
+   `{storename}.vtexcommercestable.com.br/admin/Site/FullCleanUp.aspx`
 
 2. Click the `Reindex database` button to start the process.
 3. Track the reindexing progress in the VTEX Admin through **Catalog > Reports**.
