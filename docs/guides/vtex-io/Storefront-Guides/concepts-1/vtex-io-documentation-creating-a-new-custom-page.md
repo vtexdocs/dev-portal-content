@@ -10,12 +10,12 @@ category: "Storefront Development"
 
 Stores consist of several pages, each with a unique layout and content. When you create a store in VTEX IO, several default pages with predefined URLs are available, such as:
 
-- `store.home` - Homepage
-- `store.product` - Product page
-- `store.search` - Search results page
-- `store.account` - Client account page
-- `store.login` - Login page
-- `store.orderplaced` - Order placed page
+- `store.home`: Homepage
+- `store.product`: Product page
+- `store.search`: Search results page
+- `store.account`: Client account page
+- `store.login`: Login page
+- `store.orderplaced`: Order placed page
 
 > ℹ️ You can manage the title and template of each page in the Pages section of the CMS in the VTEX Admin.
 
