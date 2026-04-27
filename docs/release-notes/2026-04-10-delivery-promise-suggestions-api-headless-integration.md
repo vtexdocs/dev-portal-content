@@ -38,7 +38,7 @@ This API extends the [Delivery Promise](https://developers.vtex.com/docs/guides/
 
 ## What needs to be done?
 
-If you manage a headless storefront and want to integrate delivery promise suggestions, follow the [headless integration guide](https://developers.vtex.com/docs/guides/delivery-promise-suggestions-api-integration) to implement the API endpoints.
+If you manage a headless storefront and want to integrate delivery promise suggestions, follow the [headless integration guide](https://developers.vtex.com/docs/guides/delivery-promise-suggestions-api-headless-integration) to implement the API endpoints.
 
 For more information about Delivery Promise, see:
 

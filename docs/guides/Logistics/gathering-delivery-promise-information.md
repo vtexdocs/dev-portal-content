@@ -7,7 +7,7 @@ updatedAt: "2026-03-05T00:00:00.000Z"
 excerpt: "Learn how to retrieve the delivery zones, pickup points, and delivery suggestions needed to display delivery promise information in your storefront."
 seeAlso:
  - "/docs/guides/delivery-promise"
- - "/docs/guides/Logistics/delivery-promise-suggestions-api-integration"
+ - "/docs/guides/delivery-promise-suggestions-api-headless-integration"
  - "/docs/guides/setting-up-delivery-promise-components"
  - "/docs/guides/delivery-promise-for-headless-stores"
  - "/docs/guides/faststore/features-delivery-promise"
