@@ -4,6 +4,7 @@ slug: "2026-04-02-faststore-webops-support-for-github-enterprise-accounts-with-a
 excerpt: "FastStore WebOps now supports GitHub Enterprise accounts with custom domains, so you can connect your FastStore project to an existing GitHub Enterprise infrastructure."
 type: "added"
 createdAt: "2026-04-02T13:48:24.227Z"
+updatedAt: "2026-04-27T14:48:52.586Z"
 tags:
   - FastStore
   - WebOps
