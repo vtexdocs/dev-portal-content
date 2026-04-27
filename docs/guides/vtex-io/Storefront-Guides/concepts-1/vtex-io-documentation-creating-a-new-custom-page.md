@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-creating-a-new-custom-page"
 hidden: false
 createdAt: "2020-06-03T16:02:44.295Z"
 updatedAt: "2026-04-27T14:48:52.586Z"
+excerpt: "Learn how to create a new custom page for your store developed using Store Framework."
 category: "Storefront Development"
 ---
 
