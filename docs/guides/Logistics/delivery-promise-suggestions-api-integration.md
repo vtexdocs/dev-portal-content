@@ -1,6 +1,6 @@
 ---
 title: "Delivery Promise Suggestions API headless integration"
-slug: "delivery-promise-suggestions-api-integration"
+slug: "delivery-promise-suggestions-api-headless-integration"
 hidden: false
 createdAt: "2026-03-05T00:00:00.000Z"
 updatedAt: "2026-03-05T00:00:00.000Z"
