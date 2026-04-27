@@ -13,7 +13,7 @@ This guide details how to use the [Delivery Promise](https://help.vtex.com/en/tu
 
 Only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
 
-* The system displays all available pickup points within the default 50 km radius configured in Checkout. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed. To enable this functionality, you must fetch the complete list of pickup points using the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/pickup-points). Retrieving this list is a mandatory dependency for the Delivery Promise feature in headless stores.
+* The system displays all available pickup points within the same radius configured in Checkout, which defaults to 50 km. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed. To enable this functionality, you must fetch the complete list of pickup points using the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. Retrieving this list is a mandatory dependency for the Delivery Promise feature in headless stores.
 * For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are shown.
 
 ## Before you begin
@@ -44,7 +44,7 @@ The delivery promise information parameters are **required** to filter product a
 
 **Example:**
 
-```
+```txt
 ?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
@@ -80,7 +80,7 @@ This results in the following behavior when using Delivery Options and Dynamic E
 
 Here is an example of a basic Delivery Promise search using the delivery promise information:
 
-```
+```txt
 https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
 
 ```
