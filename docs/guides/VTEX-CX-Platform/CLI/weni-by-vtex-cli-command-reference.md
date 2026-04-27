@@ -1,24 +1,24 @@
 ---
-title: "Weni by VTEX CLI Command Reference"
+title: "VTEX CX Platform (Weni) CLI Command Reference"
 slug: "weni-by-vtex-cli-command-reference"
 hidden: false
 createdAt: "2025-11-06T13:05:20.961Z"
 updatedAt: "2025-11-06T13:05:57.445Z"
-excerpt: "Learn the command reference for the Weni by VTEX CLI."
+excerpt: "Learn the command reference for the VTEX CX Platform (Weni) CLI."
 ---
 
-This documentation includes the default commands available in [Weni by VTEX CLI](weni-byvtex-guide.md).
+This documentation includes the default commands available in [VTEX CX Platform (Weni) CLI](weni-by-vtex-understanding-the-core-concepts.md).
 
 ## Default commands
 
-Below is a brief description of the default commands available in Weni by VTEX CLI. For detailed information about each command, click on the respective command name. You can also get this information in your terminal by adding `--help` or `-h` after the command name.
+Below is a brief description of the default commands available in VTEX CX Platform (Weni) CLI. For detailed information about each command, click on the respective command name. You can also get this information in your terminal by adding `--help` or `-h` after the command name.
 
 | Command name | Description  |
 | --- | --- |
 | `weni` | Displays the main features and available commands directly in the terminal. |
-| `weni --version` | Displays the current version of the Weni by VTEX CLI installed on your system. |
-| `weni init` | Creates an initial setup ready for use and learning with Weni by VTEX. |
-| `weni login` | Authenticates with your Weni by VTEX platform account. |
+| `weni --version` | Displays the current version of the VTEX CX Platform (Weni) CLI installed on your system. |
+| `weni init` | Creates an initial setup ready for use and learning with VTEX CX Platform (Weni). |
+| `weni login` | Authenticates with your VTEX CX Platform (Weni) account. |
 | `weni project list` | Lists existing projects in your account. |
 | `weni project list --org <org_uuid>` | Lists only projects from the specified organization UUID. |
 | `weni project use [project_uuid]` | Sets the active project by providing its UUID. |

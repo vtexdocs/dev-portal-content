@@ -7,7 +7,7 @@ updatedAt: "2026-03-11T17:08:52.219Z"
 excerpt: ""
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to select accounts.
+> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
 
 The `useCartItem` hook allows you to access detailed information about an individual cart item. This is particularly useful when you need to retrieve or display specific data related to a single item in the cart.
 
