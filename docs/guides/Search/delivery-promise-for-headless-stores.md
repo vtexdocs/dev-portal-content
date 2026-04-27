@@ -13,7 +13,7 @@ This guide details how to use the [Delivery Promise](https://help.vtex.com/en/tu
 
 Only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
 
-* The system displays all available pickup points within the same radius configured in Checkout, which defaults to 50 km. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed. To enable this functionality, you must fetch the complete list of pickup points using the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. Retrieving this list is a mandatory dependency for the Delivery Promise feature in headless stores.
+* The system displays all available pickup points within the same radius configured in Checkout, which defaults to 50 km. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed. To enable this functionality, you must fetch the complete list of pickup points using the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) endpoint from Intelligent Search API. Retrieving this list is a mandatory dependency for the Delivery Promise feature in headless stores.
 * For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are shown.
 
 ## Before you begin
@@ -135,7 +135,7 @@ https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_sear
 
 ### Retrieving available pickup points
 
-To retrieve the list of available pickup points with their IDs, distances, addresses, and business hours, use the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/api/intelligent-search/v0/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-) endpoint from Intelligent Search API. This endpoint returns pickup points based on product availability (product cluster/collection), sorted by distance from the provided coordinates.
+To retrieve the list of available pickup points with their IDs, distances, addresses, and business hours, use the `GET` [Get pickup point availability](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) endpoint from Intelligent Search API. This endpoint returns pickup points based on product availability (product cluster/collection), sorted by distance from the provided coordinates.
 
 You can call this endpoint in two ways:
 
