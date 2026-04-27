@@ -95,9 +95,9 @@ To create an affiliate ID:
 
 After the marketplace adds the seller, it's time to send their product catalog by reindexing the database. This process:
 
-- Prepares SKU and product information.
-- Sends catalog, price, and inventory information to the marketplace.
-- Updates the marketplace with the current product assortment.
+* Prepares SKU and product information.
+* Sends catalog, price, and inventory information to the marketplace.
+* Updates the marketplace with the current product assortment.
 
 To reindex the database:
 
