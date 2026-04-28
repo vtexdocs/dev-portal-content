@@ -38,4 +38,4 @@ Once enabled, follow these steps to set up FastStore WebOps with GitHub Enterpri
 
 5. Click **Install** to complete the integration, then proceed with repository selection (create new or select existing).
 
-For detailed instructions, see the guide [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project).
+For detailed instructions, see the guide [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project#step-2-setting-up-integrations).
