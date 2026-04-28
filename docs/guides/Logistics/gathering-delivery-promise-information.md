@@ -111,7 +111,7 @@ Response example:
 
 Use the `pickupPointsHash` value when you search for delivery suggestions.
 
-## Delivery suggestions
+## Delivery Promise suggestions
 
 Use the [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/delivery-promise-suggestions/_search) endpoint with the `deliveryZonesHash` and `pickupPointsHash` values in the request body to gather the delivery promise suggestions that will be presented in your storefront. You can use this endpoint for batch processing and for scenarios that involve multiple products.
 
