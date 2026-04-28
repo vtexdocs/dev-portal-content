@@ -165,12 +165,12 @@ The **Password protection** section allows you to restrict access to your previe
 
 ![password-protection](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17770/images/password-protection-01.png)
 
-In the **Require password for** section, there are the following:
+In the **Require password for** section, you can configure the following:
 
-* **Default domains (*.vtex.app):** Applies password protection to testing URLs that use VTEX's default `vtex.app` domain. Select this option to restrict access to internal preview environments, branch previews, and other non-public links generated during development.
-* **Custom domains (e.g. www.mystore.com):** Applies password protection to your public-facing store domain configured in FastStore (for example, www.mystore.com). Select this option when you want to temporarily gate access to your production site or a custom staging domain during soft launches, QA, or controlled rollouts.
-
-  > ℹ️ Password protection for custom domains isn't enabled by default. If you want to restrict access for your store domains configured in FastStore, you must open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+| Domain type | Description | Availability |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Default domains (*.vtex.app)**          | Applies password protection to testing URLs that use VTEX's default `vtex.app` domain. Select this option to restrict access to internal preview environments, branch previews, and other non-public links generated during development. | ✅ Available by default. |
+| **Custom domains (e.g. www.mystore.com)** | Applies password protection to your public-facing store domain configured in FastStore (for example, www.mystore.com). Select this option when you want to temporarily gate access to your production site or a custom staging domain during soft launches, QA, or controlled rollouts. | ⚠️ Not enabled by default. You must open a ticket with [VTEX Support](https://help.vtex.com/en/support). |
 
 Password protection settings are applied to all **testing domains** (your store's `vtex.app` URLs) and/or your **custom domain** selected in the **Require password for** section. Changes take effect on those URLs in about 10 minutes.
 
