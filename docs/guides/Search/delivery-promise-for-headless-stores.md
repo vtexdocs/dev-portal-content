@@ -37,8 +37,8 @@ The delivery promise information parameters are **required** to filter product a
 
 | Query string | Description | Example |
 | :---- | :---- | :---- |
-| `deliveryZonesHash` **\[required\]** | Hash representing the user's Delivery Context, which is a part of the delivery promise information. | `?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9` |
-| `pickupsHash` **\[required\]** | Hash representing the user's Pickup Context, which is a part of the delivery promise information. | `?pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
+| `deliveryZonesHash` [required] | Hash representing the user's Delivery Context, which is a part of the delivery promise information. | `?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9` |
+| `pickupsHash` [required] | Hash representing the user's Pickup Context, which is a part of the delivery promise information. | `?pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
 
 > ℹ️ To obtain the delivery promise information, check [Gathering delivery promise information](https://developers.vtex.com/docs/guides/gathering-delivery-promise-information).
 
