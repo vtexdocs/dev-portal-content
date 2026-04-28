@@ -8,66 +8,62 @@ Based on the analysis of **28 articles** in `docs/troubleshooting`, this strateg
 
 - **6 primary categories** (journey/topic navigation)
 - **10 symptom filters** (problem-type navigation)
-- **22 domain filters** (product/technology navigation)
+- **18 domain filters** (product/technology navigation)
 
 ---
 
-## 1. Primary categories (6 options)
+## 1. Primary categories (navigation sidebar)
 
-| Category                        | Description                                                                                     |
-| ------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **API and Integrations**        | API usage, payload issues, resource updates, integration contracts, and external provider flows |
-| **VTEX IO and App Development** | VTEX IO app lifecycle, CLI usage, dependencies, workspaces, installation, and publishing        |
-| **Storefront and FastStore**    | Storefront behavior, rendering, FastStore implementation, routes, schema usage, and components  |
-| **CMS and Content Delivery**    | Headless CMS access, releases, page publishing, overrides, and content delivery workflows       |
-| **Checkout and Sessions**       | Checkout completion, cart/session propagation, and purchase-blocking storefront issues          |
-| **Analytics and Tracking**      | Analytics behavior, GTM, GA, dataLayer, and tracking consistency                               |
-
----
-
-## 2. Symptom filters (10 options)
-
-| Symptom filter            | Description                                                                        |
-| ------------------------- | ---------------------------------------------------------------------------------- |
-| **Access restriction**    | Permission, authorization, authentication, or access-related failures              |
-| **Misconfiguration**      | Incorrect setup, environment mismatch, dependency setup, or missing configuration  |
-| **Installation failure**  | Installation, linking, plugin, or dependency installation failures                 |
-| **Loading failure**       | Content, feature, or resource not loading or not becoming available                |
-| **Performance degradation** | Slow behavior, delayed publishing, degraded performance, or timeouts             |
-| **Publishing failure**    | Publish, release, deploy, or availability-after-publish failures                   |
-| **Rendering mismatch**    | Wrong storefront output, missing visual behavior, display inconsistency            |
-| **Runtime error**         | Explicit CLI, app, GraphQL, or runtime execution errors                            |
-| **Tracking mismatch**     | Analytics, GTM, GA, UTM, or dataLayer inconsistency                                |
-| **Validation error**      | Schema, API, dependency, version, or payload validation failures                   |
+| Menu | Description |
+| --- | --- |
+| **API and integrations** | API usage, payload issues, resource updates, integration contracts, external provider flows, and related Admin configuration for integrations |
+| **VTEX IO and app development** | VTEX IO app lifecycle, CLI usage, dependencies, workspaces, installation, publishing, and Admin settings related to app behavior and configuration |
+| **Storefront** | Storefront behavior, rendering, customization of components and blocks, FastStore implementation, routes, overrides, schema usage, and Admin settings that affect storefront behavior |
+| **Content Management (CMS)** | Issues related to accessing and using VTEX CMS tools, including CMS, Headless CMS (Legacy), Site Editor, and Layout, such as permissions and login, finding and editing content, publishing updates to the storefront, previewing changes where supported, and understanding how content changes propagate |
+| **Checkout and shopping experience** | Checkout completion, cart behavior, purchase blockers, storefront issues that affect the shopping experience, and Admin settings related to checkout behavior |
+| **Analytics and data collection** | Analytics behavior, GTM, GA, dataLayer, event collection, measurement consistency, and Admin settings related to analytics configuration |
 
 ---
 
-## 3. Domain filters (22 options)
+## 2. Symptom filters (tags)
 
-| Domain filter            | Troubleshooting usage                                                            |
-| ------------------------ | -------------------------------------------------------------------------------- |
-| **Analytics**            | General analytics behavior, tracking setup, and event consistency                |
-| **Apps**                 | App install, dependency, and publish issues                                      |
-| **Catalog**              | Catalog data, SKU configuration, and product-related behavior                    |
-| **Catalog API**          | API-based SKU and catalog operations                                             |
-| **Checkout**             | Checkout flow, purchase completion, and cart behavior                            |
-| **DNS**                  | DNS, hostname, SSL, and domain pointing issues                                   |
-| **FastStore**            | FastStore storefront, performance, schema, and publishing topics                 |
-| **Google Analytics**     | GA and GA4 tracking behavior                                                     |
-| **Google Tag Manager**   | GTM setup, debugging, and event collection                                       |
-| **GraphQL**              | GraphQL schema, queries, generated types, and extension issues                   |
-| **Headless CMS**         | CMS access, plugins, pages, and content publishing                               |
-| **License Manager**      | Roles, permissions, and CMS-related access control                               |
-| **Pricing**              | Price rendering, price range, and price inconsistency topics                     |
-| **Promotions**           | Promotion rendering and promotion-related storefront behavior                     |
-| **Releases**             | Releases module, build status, and deployment delivery                           |
-| **Routes/Rewriter**      | Routes, redirects, and rewrite behavior                                          |
-| **Search**               | Search provider integration, result rendering, and search-driven storefront data |
-| **Sessions**             | Session propagation, UTM forwarding, and checkout session behavior                |
-| **Store Framework**      | VTEX IO Store Framework storefront implementation and behavior                    |
-| **VTEX IO**              | VTEX IO platform, apps, workspaces, and account-level app behavior               |
-| **VTEX IO CLI**          | CLI installation, execution, update, and command failures                        |
-| **Workspace**            | Development workspace creation and behavior                                      |
+| Symptom filter | Description |
+| --- | --- |
+| **Access restriction** | Permission, authorization, authentication, or access-related failures |
+| **Setup issue** | Incorrect setup, environment mismatch, dependency setup, or missing configuration |
+| **Installation failure** | Installation, linking, plugin, or dependency installation failures |
+| **Loading failure** | Content, feature, or resource not loading or not becoming available |
+| **Performance degradation** | Slow behavior, delayed publishing, degraded performance, or timeouts |
+| **Publishing failure** | Publish, release, deploy, or availability-after-publish failures |
+| **Rendering mismatch** | Wrong storefront output, missing visual behavior, display inconsistency |
+| **Runtime error** | Explicit CLI, app, GraphQL, or runtime execution errors |
+| **Measurement inconsistency** | Analytics, GTM, GA, UTM, or dataLayer inconsistency |
+| **Validation error** | Schema, API, dependency, version, or payload validation failures |
+
+---
+
+## 3. Domain filters (tags)
+
+| Domain filter | Troubleshooting usage |
+| --- | --- |
+| **Analytics** | General analytics behavior, tracking setup, and event consistency |
+| **Apps** | App install, dependency, and publish issues |
+| **Catalog** | Catalog data, SKU configuration, and product-related behavior |
+| **Checkout** | Checkout flow, cart behavior, purchase completion, and session-related storefront behavior |
+| **CMS** | CMS access, plugins, pages, and content publishing |
+| **DNS** | DNS, hostname, SSL, and domain pointing issues |
+| **FastStore** | FastStore storefront, performance, schema, and publishing topics |
+| **Google Analytics** | GA and GA4 tracking behavior |
+| **Google Tag Manager** | GTM setup, debugging, and event collection |
+| **Headless CMS (Legacy)** | Legacy Headless CMS access, content modeling, page publishing, plugin usage, and legacy content delivery behavior |
+| **License Manager** | User roles, permissions, and resource access management |
+| **Pricing and Promotions** | Price display, price configuration, discount behavior, promotional rules, and offer inconsistencies |
+| **Releases** | Releases module, build status, and deployment delivery |
+| **Routes/Rewriter** | Routes, redirects, and rewrite behavior |
+| **Search** | Search provider integration, result rendering, and search-driven storefront data |
+| **Site Editor** | Site Editor access, block-level content editing, storefront customization, preview, and publishing behavior |
+| **Store Framework** | VTEX IO Store Framework storefront implementation and behavior |
+| **VTEX IO** | VTEX IO platform, CLI usage, workspaces, app lifecycle, and account-level app behavior |
 
 ---
 
@@ -98,60 +94,30 @@ For each troubleshooting article, the following taxonomy structure is recommende
 
 Examples of recommended assignments:
 
-1. `dev-portal-content/docs/troubleshooting/development/i-cant-install-vtex-io-cli.md`
+1. `dev-portal-content/docs/troubleshooting/vtex-io-and-app-development/i-cant-install-vtex-io-cli.md`
+   - Primary category: **VTEX IO and app development**
+   - Symptom filters: **Installation failure**, **Setup issue**
+   - Domain filters: **VTEX IO**
 
-   - Primary category: **VTEX IO and App Development**
-   - Symptom filters: **Installation failure**, **Misconfiguration**
-   - Domain filters: **VTEX IO CLI**, **VTEX IO**
+2. `dev-portal-content/docs/troubleshooting/content-management-cms/unable-to-access-headless-cms.md`
+   - Primary category: **Content Management (CMS)**
+   - Symptom filters: **Access restriction**, **Setup issue**
+   - Domain filters: **CMS**, **License Manager**, **VTEX IO**
 
-2. `dev-portal-content/docs/troubleshooting/development/unable-to-access-headless-cms.md`
-
-   - Primary category: **CMS and Content Delivery**
-   - Symptom filters: **Access restriction**, **Misconfiguration**
-   - Domain filters: **Headless CMS**, **License Manager**, **VTEX IO CLI**
-
-3. `dev-portal-content/docs/troubleshooting/store-performance/i-cant-complete-a-purchase-on-a-faststore-website.md`
-
-   - Primary category: **Checkout and Sessions**
-   - Symptom filters: **Access restriction**, **Misconfiguration**
+3. `dev-portal-content/docs/troubleshooting/checkout-and-shopping-experience/i-cant-complete-a-purchase-on-a-faststore-website.md`
+   - Primary category: **Checkout and shopping experience**
+   - Symptom filters: **Access restriction**, **Setup issue**
    - Domain filters: **Checkout**, **FastStore**, **DNS**
 
-4. `dev-portal-content/docs/troubleshooting/store-performance/google-analytics-4-is-tracking-inconsistent-data-from-my-store.md`
-
-   - Primary category: **Analytics and Tracking**
-   - Symptom filters: **Tracking mismatch**, **Misconfiguration**
+4. `dev-portal-content/docs/troubleshooting/analytics-and-data-collection/google-analytics-4-is-tracking-inconsistent-data-from-my-store.md`
+   - Primary category: **Analytics and data collection**
+   - Symptom filters: **Measurement inconsistency**, **Setup issue**
    - Domain filters: **Google Analytics**, **Google Tag Manager**, **Analytics**
 
 ### 5.2 Editorial decision guidelines
 
 When classifying troubleshooting content, consider the following guidelines:
 
-1. Prioritize the developer's likely entry point rather than internal team ownership.
-2. For cross-product issues, use the dominant user-visible symptom as a tie-breaker.
-3. Use domain filters to identify the product or technical area involved, and use symptom filters to describe the type of problem. Both should work together, since domain filters do not replace symptom filters.
-4. Prefer symptom-first, user-language titles such as:
-   - `I can't ...`
-   - `My ... is not ...`
-   - `... returns ... error`
-
-### 5.3 When to add a new primary category
-
-- Add a new primary category only when:
-  - it would meaningfully group a recurring class of articles, and
-  - existing categories are becoming too broad or ambiguous.
-- As a working threshold, prefer adding a category only when it would cover at least **8 active articles** or when the current grouping is harming findability.
-
-### 5.4 When to add or change filters
-
-- Add a new domain filter only when a product or technical area recurs frequently enough to improve discovery.
-- Add a new symptom filter only when the existing problem-type vocabulary no longer describes a recurring failure mode.
-- Avoid one-off filters.
-
-### 5.5 Review cadence
-
-- Review the taxonomy **quarterly**.
-- Check:
-  - article distribution by primary category
-  - overused or underused filters
-  - duplicated troubleshooting topics
-  - content gaps that should become new troubleshooting articles
+1. Prioritize the user's mental model over internal team ownership or root-cause attribution.
+2. Write and classify articles based on the context in which users are most likely to look for the issue.
+3. Apply the filter governance rules defined in Section 4 for domain, symptom, and hybrid-article decisions.
