@@ -20,7 +20,7 @@ seeAlso:
 
 In this guide, you will learn how to integrate the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) to display delivery promises and pickup options to shoppers in your [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront.
 
-![delivery-promise](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/docs/guides/Logistics/delivery-promise-suggestions-api-integration_1.png)
+![delivery-promise](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Logistics/delivery-promise-suggestions-api-integration_1.png)
 
 Before you implement the storefront components, you must gather the delivery information that will be shown to the shopper by identifying the delivery zones and pickup points available for their location. This fulfillment context is then represented by two hashes (the delivery zones hash and the pickup points hash), which serve as a compact, precomputed snapshot of all relevant logistics configurations. Rather than recalculating these options on every request, these hashes make it possible to retrieve accurate suggestions more quickly, with lower latency and greater consistency across the shopping experience.
 
