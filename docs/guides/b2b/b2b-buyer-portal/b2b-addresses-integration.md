@@ -71,7 +71,7 @@ A B2B address represents a shipping or billing destination owned by a buyer orga
 
 ### Field constraints
 
-Below are constraints that apply to the requests [Create B2B address](https://developers.vtex.com/docs/api-reference/b2b-addresses#post-/api/dataentities/AD/documents) and [Update B2B address](https://developers.vtex.com/docs/api-reference/b2b-addresses#patch-/api/dataentities/AD/documents/-addressId-). 
+Below are constraints that apply to the requests [Create B2B address](https://developers.vtex.com/docs/api-reference/b2b-addresses#post-/api/dataentities/AD/documents) and [Update B2B address](https://developers.vtex.com/docs/api-reference/b2b-addresses#patch-/api/dataentities/AD/documents/-addressId-).
 
 > ⚠️ Sending invalid values can break checkout autofill.
 
