@@ -15,7 +15,7 @@ Before, custom data attached to orders in OMS, including store custom fields (`c
 
 ## Why did we make this change?
 
-In order to give merchants and store operators a complete view of order information without leaving the VTEX Admin, we developed custom data visibility in in the order details page and print view. The data is only rendered if the order contains `customData`.
+In order to give merchants and store operators a complete view of order information without leaving the VTEX Admin, we developed custom data visibility in the order details page and print view. The data is only rendered if the order contains `customData`.
 
 ## What needs to be done?
 
