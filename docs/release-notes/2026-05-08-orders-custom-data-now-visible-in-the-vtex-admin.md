@@ -1,10 +1,10 @@
 ---
-title: "Orders: custom data now visible in the VTEX Admin"
+title: "Orders: Custom data now visible in the VTEX Admin"
 slug: "2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin"
 type: "added"
 createdAt: "2026-05-08T13:00:00.000Z"
 updatedAt: "2026-05-08T13:00:00.000Z"
-excerpt: "VTEX Admin now shows information about custom fields and apps"
+excerpt: "VTEX Admin now shows information about custom fields and apps."
 ---
 
 We added support for displaying custom order data inside the VTEX Admin so you can view store-level custom fields and app-specific information directly from the order details page.
