@@ -1,4 +1,4 @@
----  
+---
 title: "Extending a component"  
 hidden: false  
 slug: "cms-extending-a-component"  
