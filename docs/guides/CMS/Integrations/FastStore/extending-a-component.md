@@ -12,6 +12,8 @@ To reuse an existing layout or behavior (such as a banner, hero, or product shel
 
 In this guide, you will learn how to extend the **CallToAction** section in your FastStore project.
 
+![call-to-action](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation-admin___39afe92cbcd5c59606b7fa1db4ceb492.png)
+
 > ℹ️ In FastStore and CMS, a **section** is a type of component that contains other components and acts as a dynamic container in page layouts. For more details, see [Understanding Components and Sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections).
 
 ## Before you begin
@@ -132,7 +134,23 @@ After installing the CMS into your store account, install the Content plugin on 
     …  
     ```
 
-### Step 2 - Sync the changes with the CMS
+### Step 2 - Verify the component locally
+
+Before syncing your changes with the CMS, run the storefront locally to confirm your new component compiles without errors. This catches typos, missing imports, and invalid schemas before involving the CMS.
+
+1. In the project root, start the FastStore development server:
+
+    ```bash
+    yarn dev
+    ```
+
+2. Open the development server in your browser and check the terminal output for compilation errors related to `CallToAction`.
+
+> ℹ️ The section will not render visually yet because it has not been added to any page in the CMS, which is done in [Step 4](#step-4---add-the-component-to-the-cms). At this point, you are only verifying that the dev server starts and that your component code, schema, and registration are valid.
+
+If the dev server starts successfully and reports no compilation errors, you are ready to sync your changes with the CMS.
+
+### Step 3 - Sync the changes with the CMS
 
 Push the changes to sync with the CMS. Before doing it, make sure you are logged in to your VTEX account by running in the terminal the `vtex login {accountName}` command. Change the `{accountName}` to your store account, for example, `vtex login mystore`.
 
@@ -142,8 +160,9 @@ Push the schema generated to the CMS to reflect in the Admin. To do this, run th
 vtex content upload-schema cms/faststore/schema.json
 ```
 
-### Step 3 - Add the component to the CMS
+### Step 4 - Add the component to the CMS
 
 1. Go to the Admin, open **Storefront > Content**, and click a Content-Type, such as **Home**, to check whether the component was added.  
 2. Add the component and fill in its fields.  
 3. Click `Save`.
+4. With the FastStore development server still running from [Step 2](#step-2---verify-the-component-locally), refresh the server to preview the **CallToAction** section rendered with the values you just configured.
