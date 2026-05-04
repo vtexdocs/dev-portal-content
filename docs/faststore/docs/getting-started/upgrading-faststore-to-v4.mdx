@@ -11,17 +11,7 @@ In this guide, you'll learn how to upgrade your FastStore project to the v4 majo
 
 ### Change the `@faststore/cli` version
 
-Make sure your project is up to date with the version provided by the VTEX team. To do so, follow these steps:
-
-1. Open your project in a code editor.
-2. Open the `package.json` file and change the `@faststore/cli` to the following:
-
-```json
-"dependencies": {
-    "@faststore/cli": "https://pkg.csb.dev/vtex/faststore/commit/eb2cca6e/@faststore/cli",
-    ...
-  },
-```
+Make sure your project is up to date with FastStore v4 or the latest version. To do so, follow the steps in [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
 
 ### Update `package.json`
 
@@ -37,7 +27,7 @@ Open your `package.json` and apply the following changes:
 {
   ...
   "dependencies": {
-    "@faststore/cli": "https://pkg.csb.dev/vtex/faststore/commit/85d2a096/@faststore/cli",
+    "@faststore/cli": "^4.0.0",
     "graphql": "^16.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -128,8 +118,8 @@ After that, a CMS sync is necessary.
 |  | Instructions |
 | :---- | :---- |
 | For stores using [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), run the following command | Run the command `yarn cms-sync`. |
-| For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with custom components | Run the following commands: `vtex login` `vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore4` `vtex content upload-schema cms/faststore/schema.json` |
-| For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) without custom components | `vtex login` `vtex content upload-schema node_modules/@faststore/core/cms/faststore/schema.json` |
+| For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with custom components | Run the following commands: <ol><li>`vtex login`</li> <li>`vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore`</li> <li>`vtex content upload-schema cms/faststore/schema.json`</li></ol>|
+| For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) without custom components | <ol><li>`vtex login`</li> <li>`vtex content upload-schema node_modules/@faststore/core/cms/faststore/schema.json`</li></ol> |
 
 ### Update Node.js runtime version in WebOps (existing projects only)
 
