@@ -12,7 +12,7 @@ To reuse an existing layout or behavior (such as a banner, hero, or product shel
 
 In this guide, you will learn how to extend the **CallToAction** section in your FastStore project.
 
-![call-to-action](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation-admin___39afe92cbcd5c59606b7fa1db4ceb492.png)
+![call-to-action](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation___e74ef106c68c9e8d1e99edb2e9840d7b.png)
 
 > ℹ️ In FastStore and CMS, a **section** is a type of component that contains other components and acts as a dynamic container in page layouts. For more details, see [Understanding Components and Sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections).
 
@@ -162,7 +162,10 @@ vtex content upload-schema cms/faststore/schema.json
 
 ### Step 4 - Add the component to the CMS
 
-1. Go to the Admin, open **Storefront > Content**, and click a Content-Type, such as **Home**, to check whether the component was added.  
+1. Go to the Admin, open **Storefront > Content**, and click a Content-Type, such as **Home**, to check whether the component was added.
+
+    ![call-to-action-admin](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation-admin___39afe92cbcd5c59606b7fa1db4ceb492.png)
+
 2. Add the component and fill in its fields.  
 3. Click `Save`.
 4. With the FastStore development server still running from [Step 2](#step-2---verify-the-component-locally), refresh the server to preview the **CallToAction** section rendered with the values you just configured.
