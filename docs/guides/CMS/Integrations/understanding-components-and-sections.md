@@ -9,7 +9,7 @@ excerpt: "Understand what Components and Sections are in the CMS, how they diffe
 
 **Components** and **Sections** are the building blocks editors and developers use to assemble storefront pages through the CMS. Understanding the difference between them is key to deciding what to create when you want to expose new content for editing in VTEX Admin and where it should live in your project.
 
-This guide explains both concepts, shows how they relate to **Content Types**, and uses **FastStore** as an example of how Components and Sections are implemented in a specific storefront integration.
+This guide explains both concepts, shows how they relate to [Content Types](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations)**, and lists common Section examples shipped with FastStore.
 
 ## Content hierarchy
 
@@ -166,11 +166,9 @@ FastStore ships with several native Sections you can reuse or override before cr
 
 Some examples:
 
-- [`Hero`](https://developers.vtex.com/docs/guides/faststore/organisms-hero) — full-width banner used above the fold.
-- [`ProductGrid`](https://developers.vtex.com/docs/guides/faststore/organisms-product-grid) — product list typically used on PLP pages.
-- [`Navbar`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar) — top navigation bar.
-- `RegionPopover` — manages user location inputs for delivery features.
-- `Banner`, `MegaMenu`, `ProductShelf`, `RecommendationShelf`, `CallToAction` — additional building blocks referenced across the FastStore documentation.
+- [`Hero`](https://developers.vtex.com/docs/guides/faststore/organisms-hero): Full-width banner used above the fold.
+- [`ProductGrid`](https://developers.vtex.com/docs/guides/faststore/organisms-product-grid): Product list typically used on PLP pages.
+- [`Navbar`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar): Top navigation bar.
 
 ## Next steps
 
