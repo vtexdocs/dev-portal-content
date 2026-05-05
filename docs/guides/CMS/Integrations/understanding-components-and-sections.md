@@ -4,7 +4,7 @@ hidden: false
 slug: "understanding-components-and-sections"
 createdAt: "2026-05-04T12:00:00.813Z"
 updatedAt: "2026-05-05T18:00:00.813Z"
-excerpt: "Understand what Components and Sections are in the CMS, how they differ, and how they fit together to build pages in storefronts integrated with CMS."
+excerpt: "Understand what Components and Sections are in the CMS, how they differ, and how they fit together to build pages in storefronts integrated with the CMS."
 ---
 
 **Components** and **Sections** are the building blocks editors and developers use to assemble storefront pages through the CMS. Understanding the difference between them is key to deciding what to create when you want to expose new content for editing in VTEX Admin and where it should live in your project.
@@ -90,7 +90,7 @@ Conceptually, a Section:
 
 - Uses the same JSON Schema mechanics as a regular Component.
 - Is referenced from a **Content Type**, so it becomes available in the page editor.
-- Encapsulates a meaningful chunk of the page (for example, "Hero", "Footer", "Product shelf").
+- Encapsulates a part of the page (for example, "Hero", "Footer", "Product shelf").
 
 ### Rendering Sections in storefronts
 
