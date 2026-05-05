@@ -3,6 +3,13 @@ name: Check Broken Links
 on:
   pull_request:
     types: [opened, synchronize]
+    paths:
+      - 'docs/**/*.md'
+      - 'docs/**/*.mdx'
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   check-broken-links:
@@ -11,23 +18,20 @@ jobs:
     steps:
       # Step 1: Check out the repository
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0  # Ensure all branches are accessible
 
       # Step 2: Set up Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: '18'
-          
+          node-version: '24'
+
       # Step 3: Install necessary dependencies
       - name: Install dependencies
         run: npm install node-fetch
-      
-      - name: Install dependencies
-        run: npm install @actions/core@1.10
-        
+
       - name: Install Reviewdog
         uses: reviewdog/action-setup@v1
 
@@ -54,18 +58,20 @@ jobs:
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+          LINK_ISSUES_FILE: link_issues.txt
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             echo "Checking for broken links in $file"
-            node .github/scripts/check-links-pr.mjs "./$file" >> link_issues.txt
+            node .github/scripts/check-links-pr.mjs "$file"
           done
-          
-      # Step 6: Run Reviewdog
+          if [ -f "$LINK_ISSUES_FILE" ] && [ -s "$LINK_ISSUES_FILE" ]; then
+            echo "has_issues=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Run Reviewdog
-        if: steps.collect-broken-link-issues.outputs.link-issues != ''
+        if: steps.collect-broken-link-issues.outputs.has_issues == 'true'
         run: |
           echo "Running Reviewdog with the following style issues:"
-          cat link_issues.txt
-          reviewdog -efm="%f:%l:%c:%m" -name="link-check" -reporter=github-pr-review < link_issues.txt
+          reviewdog -efm="%f:%l:%c:%m" -name="link-check" -reporter=github-pr-review -filter-mode=nofilter < link_issues.txt
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
