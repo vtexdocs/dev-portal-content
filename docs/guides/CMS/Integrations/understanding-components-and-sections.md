@@ -162,13 +162,34 @@ For a deeper dive into how schemas are organized, validated, and deployed, see [
 
 ## Native Sections in FastStore
 
-FastStore ships with several native Sections you can reuse or override before creating new ones. These examples apply specifically to FastStore projects, but the underlying concepts (page-placeable Sections composed of Components) apply to any storefront.
+FastStore ships with several native Sections you can reuse or override before creating new ones. The examples below apply specifically to FastStore projects, but the underlying concepts (page-placeable Sections composed of Components) apply to any storefront.
 
-Some examples:
+<Flex>
 
-- [`Hero`](https://developers.vtex.com/docs/guides/faststore/organisms-hero): Full-width banner used above the fold.
-- [`ProductGrid`](https://developers.vtex.com/docs/guides/faststore/organisms-product-grid): Product list typically used on PLP pages.
-- [`Navbar`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar): Top navigation bar.
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/organisms-hero"
+  title="Hero"
+  description="Full-width banner presented on the above-the-fold section of a web page."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/organisms-product-grid"
+  title="ProductGrid"
+  description="A section generally used on PLP pages to list the products available in the store."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/organisms-navbar"
+  title="Navbar"
+  description="Represents the page header and groups features like Search and Regionalization."
+  linkTitle="See more"
+/>
+
+</Flex>
+
+For the complete catalog of native FastStore Sections, see the [Organisms overview](https://developers.vtex.com/docs/guides/faststore/organisms-overview).
 
 ## Next steps
 
