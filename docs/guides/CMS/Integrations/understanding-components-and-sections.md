@@ -9,7 +9,7 @@ excerpt: "Understand what Components and Sections are in the CMS, how they diffe
 
 **Components** and **Sections** are the building blocks editors and developers use to assemble storefront pages through the CMS. Understanding the difference between them is key to deciding what to create when you want to expose new content for editing in VTEX Admin and where it should live in your project.
 
-This guide explains both concepts, shows how they relate to [Content Types](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations)**, and lists common Section examples shipped with FastStore.
+This guide explains both concepts, shows how they relate to [Content Types](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations), and lists common Section examples shipped with FastStore.
 
 ## Content hierarchy
 
