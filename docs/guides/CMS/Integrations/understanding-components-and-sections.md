@@ -162,57 +162,13 @@ For a deeper dive into how schemas are organized, validated, and deployed, see [
 
 ## Native Sections in FastStore
 
-FastStore ships with several native Sections you can reuse or override before creating new ones. The examples below apply specifically to FastStore projects, but the underlying concepts (page-placeable Sections composed of Components) apply to any storefront.
+FastStore ships with several native Sections you can reuse or override before creating new ones. These examples apply specifically to FastStore projects, but the underlying concepts (page-placeable Sections composed of Components) apply to any storefront.
 
-<CardList columns={3}>
-  <CardItem
-    title="Hero"
-    description="Full-width banner presented on the above-the-fold section of a web page."
-    actionPath="/docs/guides/faststore/organisms-hero"
-    zoomOut
-  >
-    <Hero>
-      <HeroImage>
-        <img
-          alt="Controller on a table"
-          src="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
-        />
-      </HeroImage>
-      <HeroHeader
-        title="Explore our products"
-        subtitle="All the amazing products from the brands we partner with."
-        link="/"
-        linkText="See more"
-      />
-    </Hero>
-  </CardItem>
-  <CardItem
-    title="ProductGrid"
-    description="A section generally used on PLP pages to list the products available in the store."
-    actionPath="/docs/guides/faststore/organisms-product-grid"
-    zoomOut
-  >
-    <ProductGridUsage />
-  </CardItem>
-  <CardItem
-    title="Navbar"
-    description="Represents the page header and groups features like Search and Regionalization."
-    actionPath="/docs/guides/faststore/organisms-navbar"
-    zoomOut
-  >
-    <UIProvider>
-      <NavbarUsage />
-    </UIProvider>
-  </CardItem>
-  <CardItem
-    title="Navbar Slider"
-    description="As part of the `Navbar`, this component is its **mobile version** used to list the navigation links through the `NavbarLinks`."
-    actionPath="/docs/guides/faststore/organisms-navbar-slider"
-  >
-    <UIProvider>
-      <NavbarSliderUsage />
-    </UIProvider>
-  </CardItem>
+Some examples:
+
+- [`Hero`](https://developers.vtex.com/docs/guides/faststore/organisms-hero): Full-width banner used above the fold.
+- [`ProductGrid`](https://developers.vtex.com/docs/guides/faststore/organisms-product-grid): Product list typically used on PLP pages.
+- [`Navbar`](https://developers.vtex.com/docs/guides/faststore/organisms-navbar): Top navigation bar.
 
 ## Next steps
 
