@@ -14,7 +14,7 @@ In this guide, you will learn how to extend the **CallToAction** section in your
 
 ![call-to-action](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation___e74ef106c68c9e8d1e99edb2e9840d7b.png)
 
-> ℹ️ In FastStore and CMS, a **section** is a type of component that contains other components and acts as a dynamic container in page layouts. For more details, see [Understanding Components and Sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections).
+> ℹ️ A **section** is a type of component that contains other components and acts as a dynamic container in page layouts. For more details, see [Understanding Components and Sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections).
 
 ## Before you begin
 
