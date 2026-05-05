@@ -1,15 +1,15 @@
 ---
 title: "FastStore v4: New major version with performance, localization, and architectural updates"  
-slug: "2026-xx-xx-faststore-v4"  
+slug: "2026-05-05-faststore-v4"  
 type: "added"  
-createdAt: "2026-xx-xxT11:00:00.000Z"  
-updatedAt: "2026-xx-xxT11:00:00.000Z"  
+createdAt: "2026-05-05T11:00:00.000Z"  
+updatedAt: "2026-05-05T11:00:00.000Z"  
 excerpt: "FastStore v4 is here with improved performance, built-in localization feature, and a more robust architecture for scalable storefronts."  
 tags:  
   - FastStore  
 ---
 
-FastStore v4 is now available, introducing important updates to how storefronts are built and managed. This release brings architectural improvements, performance optimizations, and new capabilities such as native localization (beta), along with a new standard for project dependencies, which includes a Next.js upgrade that enables a more modern and consistent development environment.
+FastStore v4 is now available, introducing important updates to how storefronts are built and managed. This release brings architectural improvements, performance optimizations, and new capabilities such as native localization (beta), along with a new standard for project dependencies, including the Next.js upgrade, enabling a more modern and consistent development environment.
 
 ## What has changed?
 
@@ -17,8 +17,8 @@ FastStore v4 is now available, introducing important updates to how storefronts 
 
 FastStore v4 centralizes the management of core dependencies such as Next.js within `@faststore/cli`. to ensure consistency across projects, reduce dependency conflicts, and improve long-term maintainability.
 
-* Next.js is now internally managed and updated to version \`16\`.
-* Node.js runtime updated (Node 20+).
+* Next.js is now internally managed and updated to version `16`.  
+* Node.js runtime updated (Node 24).
 
 ### GraphQL performance improvements
 
