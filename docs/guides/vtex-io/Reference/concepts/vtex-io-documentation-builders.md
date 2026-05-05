@@ -8,17 +8,17 @@ updatedAt: "2026-03-09T14:00:00.000Z"
 category: "App Development"
 ---
 
-Builders play a pivotal role in streamlining app development. They are the orchestrators of VTEX IO apps, responsible for processing, validating, and passing on a specific block of code to a runtime or framework capable of executing it. This article will teach you what Builders are and how to use them effectively.
+Builders play a pivotal role in streamlining app development. They are the orchestrators of VTEX IO apps, responsible for processing, validating, and passing a specific block of code to a runtime or framework for execution. This article will teach you what Builders are and how to use them effectively.
 
 ## Understanding Builders
 
 In practical terms, a Builder functions as an interface that allows different parts of your app to work together by configuring and connecting to the necessary services. Each Builder operates under its unique set of rules and validation processes, acting as gateways to an IO app's functionalities.
 
-By having very well-defined and minimal responsibilities, a Builder can evolve independently, allowing for rapid development with minimal disruptive changes.
+By having very well-defined, minimal responsibilities, a Builder can evolve independently, enabling rapid development with minimal disruptive changes.
 
 ## Using Builders
 
-Builders are specified in an app's `manifest.json` file, and the app itself is structured with folders bearing the Builder's names. This organization ensures that each Builder knows precisely which code to process.
+Builders are specified in an app's `manifest.json` file, and the app itself is structured with folders named after the Builders. This organization ensures that each Builder knows precisely which code to process.
 
 ![example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-builders.png)
 
@@ -26,7 +26,7 @@ When you run a VTEX IO app, each Builder converts the files included in its corr
 
 For more information on the available Builders, see the [List of Builders](#list-of-builders) section.
 
-> To use Builders, ensure that you have at least `vtex.builder-hub@0.293.4` version [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app) in your account.
+> ℹ️ To use Builders, ensure that you have at least version `vtex.builder-hub@0.293.4` [installed](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app) in your account.
 
 ## Example
 
@@ -40,13 +40,13 @@ Suppose you want to develop a React frontend component with VTEX IO. For this, y
 
 Then, in your app's root directory, you must create a folder named after the Builder (e.g., `/react`) and place your React code inside it.
 
-When you run your app, the `react` Builder will transform the React code within the `/react` folder into compiled bundles, ready to be imported into frontend apps.
+When you run your app, the `react` Builder transforms the React code in the `/react` folder into compiled bundles, ready to be imported into frontend apps.
 
 ## List of Builders
 
 This is a non-exhaustive list of VTEX IO Builders:
 
->⚠️ Each builder version has one of the following statuses: Beta, Stable, Deprecated, Decommissioned, and Non-functional. Verify [Builder version statuses](https://developers.vtex.com/docs/guides/vtex-io-documentation-builder-version-statuses) before using a builder.
+>⚠️ Each Builder version has one of the following statuses: Beta, Stable, Deprecated, Decommissioned, and Non-functional. Verify [Builder version statuses](https://developers.vtex.com/docs/guides/vtex-io-documentation-builder-version-statuses) before using a Builder.
 
 | Name | Functionality |
 | - | - |
@@ -62,6 +62,6 @@ This is a non-exhaustive list of VTEX IO Builders:
 | `messages` | Exports localized string messages, empowering _VTEX IO internationalization_. It reads `.json` files associated with different locales within the app's `/messages` directory and makes them available for frontend applications to use via `react-intl`. |
 | `masterdata` | Allows declaration of the data entities used in the app with [JSON schema](https://json-schema.org/) format. You can define the complete data entity structure and behavior, including field rules, triggers, and indexing. For more information, refer to [Creating a Master Data v2 CRUD app](https://developers.vtex.com/docs/guides/create-master-data-crud-app). |
 | `node` | Interprets the `/node` directory, empowering the development of custom backend services using TypeScript. For more information, refer to the [Services](https://developers.vtex.com/docs/guides/vtex-io-documentation-service) guides. |
-| `paymentProvider` | Allows the implementation of payment connectors using the [Payment Provider Framework (PPF)](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework). The framework natively provides access to the [Payment Provider Protocol (PPP) API endpoints](https://developers.vtex.com/docs/api-reference/payment-provider-protocol) within predefined classes. The framework also allows the configuration of [payment methods](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) and uses the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy) for card transactions. |
+| `paymentProvider` | Allows the implementation of payment connectors using the [Payment Provider Framework (PPF)](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework). The framework provides native access to the [Payment Provider Protocol (PPP) API endpoints](https://developers.vtex.com/docs/api-reference/payment-provider-protocol) through predefined classes. The framework also allows configuring [payment methods](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) and uses the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy) for card transactions. |
 | `pixel` | Processes the source code and configuration of [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) in VTEX IO. The files picked up by this Builder are located in the app's `/pixel` directory. For more information, refer to the [Developing Pixel apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developnativeintegrationswithpixelapps) guide. |
 | `react` | Interprets the `/react` directory, empowering the development of React components using TypeScript. For more information, refer to the [Developing frontend apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io) guide. |
