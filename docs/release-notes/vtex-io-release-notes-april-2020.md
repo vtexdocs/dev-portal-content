@@ -3,9 +3,8 @@ slug: "vtex-io-release-notes-april-2020"
 title: "VTEX IO Release Notes - April 2020"
 createdAt: 2020-05-28T11:44:02.202Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-april-2020-0.png)
 
 The VTEX IO Release Notes is here, team!

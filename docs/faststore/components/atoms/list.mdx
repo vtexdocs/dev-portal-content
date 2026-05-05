@@ -1,150 +1,229 @@
 ---
 title: "List"
-excerpt: Lists group related content. They can be ordered or unordered.
+excerpt: Lists group-related content. They can be ordered or unordered.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Lists___30f86e23fa668d02441cd1173fc000a9.png
 components:
   - List.tsx
 ---
 
-Lists group related content. They can be ordered or unordered.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/List)
 
-## Overview
+The `List` component groups related content in an organized manner, supporting both ordered and unordered formats. Typical use cases include:
+
+- Displaying product features or specifications.
+- Listing store benefits or policies (e.g., `Free shipping`, `Easy returns`, `Secure checkout`).
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection bigGap>
       <List marker>
-        <li>Great Unordered List</li>
-        <li>Ok Unordered List</li>
-        <li>Bad Unordered List</li>
+        <li>First item unordered list</li>
+        <li>Second item unordered list</li>
+        <li>Third item unordered list</li>
       </List>
       <List as="ol" marker>
-        <li>Great Ordered List</li>
-        <li>Ok Ordered List</li>
-        <li>Bad Ordered List</li>
+        <li>First item ordered list</li>
+        <li>Second item ordered list</li>
+        <li>Third item ordered list</li>
       </List>
       <List>
-        <li>Great</li>
-        <li>Ok</li>
-        <li>Bad</li>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
       </List>
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    <List marker>
-      <li>Great Unordered List</li>
-      <li>Ok Unordered List</li>
-      <li>Bad Unordered List</li>
-    </List>
-    <List as="ol" marker>
-      <li>Great Ordered List</li>
-      <li>Ok Ordered List</li>
-      <li>Bad Ordered List</li>
-    </List>
-    <List>
-      <li>Great</li>
-      <li>Ok</li>
-      <li>Bad</li>
-    </List>
+    import { List } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <>
+              <List marker>
+                <li>First item unordered List</li>
+                <li>Second item unordered List</li>
+                <li>Third item unordered List</li>
+              </List>
+              <List as="ol" marker>
+                <li>First item ordered List</li>
+                <li>Second item ordered List</li>
+                <li>Third item ordered List</li>
+              </List>
+              <List>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+              </List>
+            </>
+        );
+    }
     ```
   </Tab>
 </Tabs>
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { List } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/List/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <List marker>
-    <li>Great Unordered List</li>
-    <li>Ok Unordered List</li>
-    <li>Bad Unordered List</li>
-  </List>
-</OverviewSection>
+### Unordered list
 
-```tsx
-<List marker>
-  <li>Great Unordered List</li>
-  <li>Ok Unordered List</li>
-  <li>Bad Unordered List</li>
-</List>
-```
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <List marker>
+        <li>First item unordered list</li>
+        <li>Second item unordered list</li>
+        <li>Third item unordered list</li>
+      </List>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { List } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <List marker>
+              <li>First item unordered list</li>
+              <li>Second item unordered list</li>
+              <li>Third item unordered list</li>
+            </List>
+        );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Ordered list
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <List as="ol" marker>
+        <li>First item ordered list</li>
+        <li>Second item ordered list</li>
+        <li>Third item ordered list</li>
+      </List>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { List } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <List as="ol" marker>
+              <li>First item ordered List</li>
+              <li>Second item ordered List</li>
+              <li>Third item ordered List</li>
+            </List>
+        );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Unordered list without marker
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <List>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </List>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { List } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <List>
+              <li>First item</li>
+              <li>Second item</li>
+              <li>Third item</li>
+            </List>
+        );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Ordered list without marker
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <List as="ol">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </List>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { List } from "@faststore/ui";
+
+    export function Example() {
+        return (
+            <List as="ol">
+              <li>First item</li>
+              <li>Second item</li>
+              <li>Third item</li>
+            </List>
+        );
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Props
-
-<ComponentPropsSection component="List" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-list-style-unordered" value="initial" />
   <TokenRow token="--fs-list-style-ordered" value="decimal" />
 </TokenTable>
 
-### Variants
-
-#### Unordered
-
-```tsx
-<List marker>
-  <li>Great Unordered List</li>
-  <li>Ok Unordered List</li>
-  <li>Bad Unordered List</li>
-</List>
-```
-
-#### Ordered
-
-```tsx
-<List as="ol" marker>
-  <li>Great Ordered List</li>
-  <li>Ok Ordered List</li>
-  <li>Bad Ordered List</li>
-</List>
-```
-
-#### Without marker
-
-```tsx
-<List as="ol">
-  <li>Great</li>
-  <li>Ok</li>
-  <li>Bad</li>
-</List>
-```
-
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `List` styles using the following data attributes:
 
 `data-fs-list`
 
 `data-fs-list-marker="true"`
+
+---
+
+## Props
+
+<ComponentPropsSection component="List" />

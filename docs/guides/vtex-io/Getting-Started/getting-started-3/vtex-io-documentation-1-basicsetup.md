@@ -44,8 +44,7 @@ On VTEX IO, all the interactions with your account occur within a specific [work
 
 By default, when you log in to a VTEX store using VTEX IO, you're in the `master` workspace, which reflects the version accessible to your shoppers.
 
-To keep your work isolated from `master`, create a [development workspace](
-https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) by using the command below, and replace `{exampleName}` with your desired workspace name:
+To keep your work isolated from `master`, create a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) by using the command below, and replace `{exampleName}` with your desired workspace name:
 
 ```sh
 vtex use {exampleName}

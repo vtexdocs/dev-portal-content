@@ -2,8 +2,8 @@
 title: Typography customization
 excerpt: "Storefront now allows you to customize your store's typography in a faster and easier way using admin."
 createdAt: "2019-07-17T14:47:00.000Z"
+type: 'info'
 ---
-
 Storefront now allows you to customize your store's typography in a faster and easier way using admin.
 
 ## What has changed

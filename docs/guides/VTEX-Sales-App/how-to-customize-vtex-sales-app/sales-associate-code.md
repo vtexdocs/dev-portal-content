@@ -1,10 +1,13 @@
 ---
 title: "Enable the sales associate code"
 slug: "sales-associate-code"
+excerpt: "Learn how to enable the sales associate code."
 hidden: false
 createdAt: "2021-03-26T16:37:08.694Z"
-updatedAt: "2022-02-24T20:37:12.126Z"
+updatedAt: "2025-09-30T15:21:12.126Z"
 ---
+
+>⚠️ The sales associate code is enabled by default for stores that start using the VTEX Sales App. This article is intended for stores that may have disabled this field due to customizations. To retrieve the sales associate code, use the [Get order](https://developers.vtex.com/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-) endpoint and check the `salesAssociateId` value inside the `merchantContextData` object.
 
 The sales associate code field is an additional customization of the [**Observation** field](https://developers.vtex.com/vtex-rest-api/docs/enable-the-remarks-field-in-the-order-screen) that turns this component into a field where vendors should insert their code during the purchase flow.
 
@@ -80,7 +83,7 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
 
 ### Use cases
 
-- <strong>Validation according to sales associate’s document ID</strong>: in this example, the regular expression applied in the mask expresses that the code has three numbers and two letters.
+- <strong>Validation according to sales associate's document ID</strong>: in this example, the regular expression applied in the mask expresses that the code has three numbers and two letters.
 [block:code]
 {
   "codes": [
@@ -107,7 +110,7 @@ In VTEX, the JavaScript regular expressions follow the ECMAScript flavor. Check 
 {
   "codes": [
     {
-      "code": "window.INSTORE_CONFIG = {\n  noteAsVendorCode: {\n       type: 'text',\n       skipValidation: true,\n       mask: '^\\\\d{2}$',\n    \t autofil: false,\n   },\n}",
+      "code": "window.INSTORE_CONFIG = {\n  noteAsVendorCode: {\n       type: 'text',\n       skipValidation: true,\n       mask: '^\\\\d{2}$',\n    \t autofill: false,\n   },\n}",
       "language": "javascript"
     }
   ]

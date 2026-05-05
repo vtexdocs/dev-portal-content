@@ -1,8 +1,8 @@
 ---
 title: 'Product Description component'
 createdAt: "2019-07-03T14:47:00.000Z"
+type: 'info'
 ---
-
 With the prop `collapseContent`, our [Product Description](https://github.com/vtex-apps/store-components/blob/master/react/components/ProductDescription/README.md) component now can be configured to either display a whole product description or a description preview with a call to action button to show the whole content.
 
 ## What has changed

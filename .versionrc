@@ -1,0 +1,46 @@
+{
+    "skip": {
+        "bump": false,
+        "commit": false,
+        "tag": false
+    },
+    "types": [
+        {
+            "type": "new",
+            "section": "✨ New documentation"
+        },
+        {
+            "type": "update",
+            "section": "📝 Documentation updates"
+        },
+        {
+            "type": "fix",
+            "section": "🔧 Fixes and improvements"
+        },
+        {
+            "type": "remove",
+            "section": "🗑️ Removed content"
+        },
+        {
+            "type": "loc",
+            "section": "🌐 Translation updates"
+        },
+        {
+            "type": "media",
+            "section": "🖼️ Media updates"
+        },
+        {
+            "type": "docs",
+            "section": "📄 Repository documentation"
+        },
+        {
+            "type": "test",
+            "section": "🧪 Tests",
+            "hidden": true
+        },
+        {
+            "type": "feat",
+            "section": "⚙️ Repository features"
+        }
+    ]
+}

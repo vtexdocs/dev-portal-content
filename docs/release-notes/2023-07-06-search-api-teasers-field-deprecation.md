@@ -5,6 +5,8 @@ excerpt: "From September 2023, the Teasers field in Search API requests will be 
 hidden: false
 createdAt: "2023-07-06T15:54:00.000Z"
 type: "deprecated"
+tags:
+    - Search
 ---
 
 From September 2023, the `Teasers` field in [Search API requests](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search) will be deprecated. While some VTEX stores may use this entity to create integrations, we recommend using the new `PromotionTeasers` field as it provides more straightforward information. We encourage all users to update their integrations accordingly to ensure a seamless transition.

@@ -8,60 +8,93 @@ components:
   - SearchHistoryTerm.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/SearchHistory)
+
 Responsible for showing the latest terms searched by a user. This component is part of the [Search](https://developers.vtex.com/docs/guides/faststore/feature-search) feature.
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { SearchHistory, SearchHistoryTerm } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/SearchHistory/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SearchHistory title="History">
+        <SearchHistoryTerm value="Headphone" linkProps={{ href: "#" }} />
+        <SearchHistoryTerm value="Audio & Video" linkProps={{ href: "#" }} />
+        <SearchHistoryTerm value="mh-7000" linkProps={{ href: "#" }} />
+      </SearchHistory>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <SearchHistory title="History">
+      <SearchHistoryTerm value="Headphone" linkProps={{ href: "#" }} />
+      <SearchHistoryTerm value="Audio & Video" linkProps={{ href: "#" }} />
+      <SearchHistoryTerm value="mh-7000" linkProps={{ href: "#" }} />
+    </SearchHistory>
+    ```
+  </Tab>
+</Tabs>
 
 ## Usage
 
-<OverviewSection>
-  <SearchHistory title="History">
-    <SearchHistoryTerm value="Headphone" linkProps={{ href: '#' }} />
-    <SearchHistoryTerm value="Audio & Video" linkProps={{ href: '#' }} />
-    <SearchHistoryTerm value="mh-7000" linkProps={{ href: '#' }} />
-  </SearchHistory>
-</OverviewSection>
+### Import the component
+
 ```tsx
-<SearchHistory title="History">
-  <SearchHistoryTerm value="Headphone" linkProps={{ href: '#' }} />
-  <SearchHistoryTerm value="Audio & Video" linkProps={{ href: '#' }} />
-  <SearchHistoryTerm value="mh-7000" linkProps={{ href: '#' }} />
-</SearchHistory>
+import { SearchHistory, SearchHistoryTerm } from "@faststore/ui";
 ```
 
----
+### Import styles
 
-## Props
+To apply styles, include the following in your stylesheet:
 
-### SearchHistory
+```scss
+@import "@faststore/ui/src/components/molecules/SearchHistory/styles.scss";
+```
 
-<ComponentPropsSection component="SearchHistory" />
-
-### SearchHistoryTerm
-
-<ComponentPropsSection component="SearchHistoryTerm" />
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Design Tokens
+## Examples
+
+## Other Icons
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SearchHistory title="History">
+        <SearchHistoryTerm
+          value="Headphone"
+          linkProps={{ href: "#" }}
+          icon={<Icon name="Star" />}
+        />
+        <SearchHistoryTerm
+          value="Audio & Video"
+          linkProps={{ href: "#" }}
+          icon={<Icon name="Heart" />}
+        />
+      </SearchHistory>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <SearchHistory title="History">
+      <SearchHistoryTerm
+        value="Headphone"
+        linkProps={{ href: "#" }}
+        icon={<Icon name="Star" />}
+      />
+      <SearchHistoryTerm
+        value="Audio & Video"
+        linkProps={{ href: "#" }}
+        icon={<Icon name="Heart" />}
+      />
+    </SearchHistory>
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -95,9 +128,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
-
-#### Header
+### Design tokens: Header
 
 <TokenTable>
   <TokenRow
@@ -110,7 +141,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Title
+### Design tokens: Title
 
 <TokenTable>
   <TokenRow
@@ -120,7 +151,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <TokenRow token="--fs-search-history-title-line-height" value="1.5" />
 </TokenTable>
 
-#### Item
+### Design tokens: Item
 
 <TokenTable>
   <TokenRow
@@ -139,7 +170,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Icon
+### Design tokens: Icon
 
 <TokenTable>
   <TokenRow
@@ -152,44 +183,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Variants
+## Data attributes
 
-## Other Icons
-
-<OverviewSection>
-  <SearchHistory title="History">
-    <SearchHistoryTerm
-      value="Headphone"
-      linkProps={{ href: '#' }}
-      icon={<Icon name="Star" />}
-    />
-    <SearchHistoryTerm
-      value="Audio & Video"
-      linkProps={{ href: '#' }}
-      icon={<Icon name="Heart" />}
-    />
-  </SearchHistory>
-</OverviewSection>
-```tsx
-<SearchHistory title="History">
-  <SearchHistoryTerm
-    value="Headphone"
-    linkProps={{ href: '#' }}
-    icon={<Icon name="Star" />}
-  />
-  <SearchHistoryTerm
-    value="Audio & Video"
-    linkProps={{ href: '#' }}
-    icon={<Icon name="Heart" />}
-  />
-</SearchHistory>
-```
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
+You can target and override `SearchHistory` styles using the following data attributes:
 
 `data-fs-search-history`
 
@@ -202,3 +198,15 @@ For further customization, you can use the following data attributes:
 `data-fs-search-history-item-link`
 
 `data-fs-search-history-item-icon`
+
+---
+
+## Props
+
+### SearchHistory
+
+<ComponentPropsSection component="SearchHistory" />
+
+### SearchHistoryTerm
+
+<ComponentPropsSection component="SearchHistoryTerm" />

@@ -115,7 +115,7 @@ The following errors may appear as messages in the response body:
 
 ### 401 - Unauthorized
 
-- **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (Application Key and Application Token) used in this request are incorrect or not authorized to access this information.
+- **Message error example (code ORD062)**: `"Unauthorized"`. The credentials (API key and API token) used in this request are incorrect or not authorized to access this information.
 
 ```json
 {

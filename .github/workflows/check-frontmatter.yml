@@ -1,0 +1,32 @@
+name: Check frontmatter
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'docs/guides/**/*.md'
+      - 'docs/guides/**/*.mdx'
+      - 'docs/release-notes/**/*.md'
+      - 'docs/release-notes/**/*.mdx'
+      - 'docs/troubleshooting/**/*.md'
+      - 'docs/troubleshooting/**/*.mdx'
+      - 'docs/faststore/**/*.md'
+      - 'docs/faststore/**/*.mdx'
+
+jobs:
+  review-frontmatter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install PyGithub
+        run: pip install PyGithub
+      - name: Install PyYAML
+        run: pip install pyyaml
+      - name: Run frontmatter review script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/check_frontmatter.py

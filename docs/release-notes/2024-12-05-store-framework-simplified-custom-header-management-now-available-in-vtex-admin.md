@@ -5,6 +5,8 @@ type: improved
 createdAt: "2024-12-05T13:06:54.507Z"
 updatedAt: ""
 hidden: false
+tags:
+    - Store Framework
 ---
 
 You can now manage headers in stores built with Store Framework directly in the VTEX Admin without contacting our support team.

@@ -2,8 +2,8 @@
 title: Search Results Page URL
 excerpt: "The `preventRouteChange` prop expanded and what was valid only for custom pages is now valid for custom-less Search Results pages. Apply any filters without worrying about changes to the page's path."
 createdAt: "2019-11-11T14:47:00.000Z"
+type: 'info'
 ---
-
 All Search Results pages, whether custom or not, can now **keep their path unaltered** even when users apply filters.
 
 ## What has changed

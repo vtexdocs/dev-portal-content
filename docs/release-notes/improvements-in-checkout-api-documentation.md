@@ -3,9 +3,8 @@ slug: "improvements-in-checkout-api-documentation"
 title: "Improvements in Checkout API documentation"
 createdAt: 2021-08-09T20:00:50.206Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/improvements-in-checkout-api-documentation-0.png)
 
 We have made new Checkout endpoints available in our API documentation:

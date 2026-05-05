@@ -6,7 +6,8 @@ hidden: false
 createdAt: "2025-01-30T14:25:00.00Z"
 updatedAt: "2025-01-30T14:25:00.00Z"
 tags:
-    - apps
+    - VTEX IO
+    - Edition App
 ---
 
 **Keywords:** Apps | Edition App

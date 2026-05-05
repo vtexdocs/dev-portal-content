@@ -12,7 +12,7 @@ This repository contains all the files for the guides featured in the [VTEX Deve
   - [Was this helpful?](#was-this-helpful)
   - [Suggest edits (GitHub)](#suggest-edits-github)
 - [GitHub Actions](#github-actions)
-  - [Preview Modified Pages](#preview-modified-pages)
+  - [Preview Content Changes](#preview-content-changes)
   - [Write Good](#write-good)
   - [Check Links](#check-links)
   - [Links Issues](#links-issues)
@@ -21,6 +21,7 @@ This repository contains all the files for the guides featured in the [VTEX Deve
   - [Check VTEX Styleguide](#check-vtex-styleguide)
   - [Navigation Preview](#navigation-preview)
   - [Markdown Lint](#markdown-lint)
+  - [Index Documents](#index-documents)
 
 ## Contributing to the documentation
 
@@ -105,7 +106,7 @@ Once you create a pull request, our team will review your changes as soon as pos
 
 This repository uses several GitHub Actions to ensure documentation quality and provide helpful previews. Here's a detailed overview of each action:
 
-### Preview Modified Pages
+### Preview Content Changes
 **Trigger**: Pull requests  
 **Purpose**: Generates preview links for modified markdown/MDX files.  
 **Dependencies**:
@@ -122,13 +123,6 @@ This repository uses several GitHub Actions to ensure documentation quality and 
 - `actions/checkout@v2`: Checks out the repository
 - `actions/setup-node@v1`: Sets up Node.js environment
 - `tsuyoshicho/action-textlint@v3`: Runs textlint checks and reports issues
-
-### Check Links
-**Trigger**: Pull requests  
-**Purpose**: Validates links in modified markdown files.  
-**Dependencies**:
-- `actions/checkout@master`: Checks out the repository
-- `gaurav-nelson/github-action-markdown-link-check@v1`: Performs link checking
 
 ### Links Issues
 **Trigger**: Repository dispatch, manual workflow, or daily at 17:00 UTC  
@@ -167,6 +161,23 @@ This repository uses several GitHub Actions to ensure documentation quality and 
 - `reviewdog/action-setup@v1`: Sets up Reviewdog
 - Node.js packages: `@actions/core`
 
+### Changelog Generation
+**Trigger**: Push to main branch or merged pull requests  
+**Purpose**: Automatically generates changelog entries based on commit messages.  
+**Dependencies**:
+- `actions/checkout@v4`: Checks out the repository
+- `actions/setup-node@v4`: Sets up Node.js environment
+Commit types supported:
+- new: New guides, troubleshooting articles, or release notes
+- fix: Bug fixes for typos, broken links, or markdown
+- media: Media asset updates
+- update: Content updates
+- remove: File removals
+- loc: Localization changes
+- docs: README documentation updates
+- feat: New features
+- test: Test updates
+
 ### Navigation Preview
 **Trigger**: Pull requests  
 **Purpose**: Provides preview links for navigation changes.  
@@ -183,3 +194,15 @@ This repository uses several GitHub Actions to ensure documentation quality and 
 **Dependencies**:
 - `actions/checkout@v1`: Checks out the repository
 - `reviewdog/action-markdownlint@v0`: Runs markdown linting with reviewdog integration
+
+### Index Documents
+**Trigger**: Push to `main`/`master` (when `docs/**/*.md` files change), or manual `workflow_dispatch`  
+**Purpose**: Indexes changed documentation files into the VTEX Docs search system for hybrid search (BM25 + vector similarity). Uses content-hash-based skip optimization to avoid re-indexing unchanged files. Supports manual `full_reindex` mode to reprocess all documents.  
+**Dependencies**:
+- `actions/checkout@v4`: Checks out the repository with `fetch-depth: 2` for diff comparison
+- `jq` (pre-installed): JSON processing for file lists and API responses
+- `curl` (pre-installed): HTTP requests to the indexing API
+
+**Required Secrets**:
+- `INDEXING_URL`: Base URL of the VTEX Docs API
+- `INTERNAL_ACCESS_KEY`: API consumer key with `index-documents` permission

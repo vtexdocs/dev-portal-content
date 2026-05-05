@@ -9,15 +9,13 @@ components:
   - GiftContent.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/Gift)
+
 The `Gift` component is a compound of the following:
 
 - `Gift`: renders a `<div>` as wrapper with an `Icon`, `GiftImage`, and `GiftContent`.
 - `GiftImage`: renders a `<div>` as wrapper with an `Image`.
 - `GiftContent`: renders a `<div>` as wrapper with the gift information as children.
-
----
-
-## Overview
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -102,51 +100,108 @@ The `Gift` component is a compound of the following:
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
-import { Gift, GiftImage, GiftContent } from '@faststore/ui'
+import { Gift, GiftImage, GiftContent } from "@faststore/ui";
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/molecules/Gift/styles.scss';
+@import "@faststore/ui/src/components/molecules/Gift/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Design tokens
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection><GiftTemplate/></OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    <Gift icon={<Icon name="Tag" />}>
-      <GiftImage>
-        <img
-          src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
-          alt="Magicwhite"
-          width={89}
-          height={89}
-        />
-      </GiftImage>
-      <GiftContent
-        productName="Apple Magic Mouse"
-        price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
-      />
-    </Gift>
-    ```
-  </Tab>
-</Tabs>
+<TokenTable>
+  <TokenRow token="--fs-gift-height" value="var(--fs-spacing-12)" />
+  <TokenRow token="--fs-gift-bkg-color" value="var(--fs-control-bkg)" isColor />
+  <TokenDivider />
+  <TokenRow token="--fs-gift-border-width" value="var(--fs-border-width)" />
+  <TokenRow
+    token="--fs-gift-border-color"
+    value="var(--fs-border-color-light)"
+    isColor
+  />
+  <TokenRow token="--fs-gift-border-radius" value="var(--fs-border-radius)" />
+</TokenTable>
+
+---
+
+### Content
+
+<TokenTable>
+  <TokenRow
+    token="--fs-gift-content-padding"
+    value="var(--fs-gift-gap) var(--fs-gift-gap) var(--fs-gift-gap) 0"
+  />
+  <TokenRow token="--fs-gift-content-row-gap" value="var(--fs-spacing-0)" />
+</TokenTable>
+
+### Title
+
+<TokenTable>
+  <TokenRow token="--fs-gift-title-line-height" value="1.25" />
+  <TokenRow token="--fs-gift-title-size" value="var(--fs-text-size-body)" />
+  <TokenRow
+    token="--fs-gift-title-color"
+    value="var(--fs-color-text)"
+    isColor
+  />
+</TokenTable>
+
+### Icon
+
+<TokenTable>
+  <TokenRow token="--fs-gift-icon-size" value="1.75rem" />
+  <TokenRow token="--fs-gift-icon-padding" value="var(--fs-spacing-0)" />
+  <TokenRow
+    token="--fs-gift-icon-color"
+    value="var(--fs-gift-title-color)"
+    globalValue="var(--fs-color-text)"
+    isColor
+  />
+  <TokenRow
+    token="--fs-gift-icon-bkg-color"
+    value="var(--fs-color-body-bkg)"
+    isColor
+  />
+</TokenTable>
+
+### Price
+
+<TokenTable>
+  <TokenRow token="--fs-gift-price-size" value="var(--fs-text-size-legend)" />
+</TokenTable>
+
+---
+
+## Data attributes
+
+You can target and override `Gift` styles using the following data attributes:
+
+`data-fs-gift`
+
+`data-fs-gift-icon`
+
+`data-fs-gift-wrapper`
+
+`data-fs-gift-image`
+
+`data-fs-gift-content`
+
+`data-fs-gift-product-title`
+
+`data-fs-gift-product-summary`
 
 ---
 
@@ -173,90 +228,3 @@ Besides those attributes, the following props are also supported:
 #### PriceDefinition
 
 <PropsSection propsList={propsPriceDefinition} />
-
----
-
-## Design Tokens
-
-<TokenTable>
-  <TokenRow token="--fs-gift-height" value="var(--fs-spacing-12)" />
-  <TokenRow token="--fs-gift-bkg-color" value="var(--fs-control-bkg)" isColor />
-  <TokenDivider />
-  <TokenRow token="--fs-gift-border-width" value="var(--fs-border-width)" />
-  <TokenRow
-    token="--fs-gift-border-color"
-    value="var(--fs-border-color-light)"
-    isColor
-  />
-  <TokenRow token="--fs-gift-border-radius" value="var(--fs-border-radius)" />
-</TokenTable>
-
----
-
-### Nested Elements
-
-#### Content
-
-<TokenTable>
-  <TokenRow
-    token="--fs-gift-content-padding"
-    value="var(--fs-gift-gap) var(--fs-gift-gap) var(--fs-gift-gap) 0"
-  />
-  <TokenRow token="--fs-gift-content-row-gap" value="var(--fs-spacing-0)" />
-</TokenTable>
-
-#### Title
-
-<TokenTable>
-  <TokenRow token="--fs-gift-title-line-height" value="1.25" />
-  <TokenRow token="--fs-gift-title-size" value="var(--fs-text-size-body)" />
-  <TokenRow
-    token="--fs-gift-title-color"
-    value="var(--fs-color-text)"
-    isColor
-  />
-</TokenTable>
-
-#### Icon
-
-<TokenTable>
-  <TokenRow token="--fs-gift-icon-size" value="1.75rem" />
-  <TokenRow token="--fs-gift-icon-padding" value="var(--fs-spacing-0)" />
-  <TokenRow
-    token="--fs-gift-icon-color"
-    value="var(--fs-gift-title-color)"
-    globalValue="var(--fs-color-text)"
-    isColor
-  />
-  <TokenRow
-    token="--fs-gift-icon-bkg-color"
-    value="var(--fs-color-body-bkg)"
-    isColor
-  />
-</TokenTable>
-
-#### Price
-
-<TokenTable>
-  <TokenRow token="--fs-gift-price-size" value="var(--fs-text-size-legend)" />
-</TokenTable>
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
-
-`data-fs-gift`
-
-`data-fs-gift-icon`
-
-`data-fs-gift-wrapper`
-
-`data-fs-gift-image`
-
-`data-fs-gift-content`
-
-`data-fs-gift-product-title`
-
-`data-fs-gift-product-summary`

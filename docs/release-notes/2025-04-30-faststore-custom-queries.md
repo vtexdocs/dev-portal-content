@@ -6,6 +6,8 @@ excerpt: "Ensure proper caching by using GET requests for custom queries in Fast
 createdAt: "2025-04-30T00:00:00.007Z"
 updatedAt: "2025-05-19T00:00:00.007Z"
 hidden: false
+tags:
+    - FastStore
 ---
 
 To ensure proper caching behavior when navigating store pages (such as Home, PDP, and PLP), use `GET` instead of `POST` for API requests in custom queries. `GET` requests are cacheable by default, while `POST` requests bypass caching.

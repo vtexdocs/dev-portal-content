@@ -4,9 +4,11 @@ slug: "2023-10-20-faststore-now-supports-node-18"
 type: "added"
 excerpt: "Stores using FastStore can now take advantage of Node.js 18 capabilities"
 createdAt: "2023-10-20T00:00:00.000Z"
+tags:
+   - FastStore
 ---
 
-FastStore has introduced support for [Node.js 18](https://nodejs.org/en/blog/announcements/v18-release-announce), and **by December 13th, 2023, all stores will automatically transition to Node.js 18**. To prepare for this transition, you can enable this feature in your store and conduct initial testing.
+FastStore has introduced support for [Node.js 18](https://nodejs.org/en/blog/announcements/v18-release-announce), and **by December 13, 2023, all stores will automatically transition to Node.js 18**. To prepare for this transition, you can enable this feature in your store and conduct initial testing.
 
    > ⚠️ We strongly recommend trying this out before the Black Friday season, ideally by November 13th, 2023, to ensure a seamless experience during the season.
 

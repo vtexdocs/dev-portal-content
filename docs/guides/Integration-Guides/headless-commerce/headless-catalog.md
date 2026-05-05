@@ -81,12 +81,73 @@ You can also implement an autocomplete feature to your store’s search bar usin
 
 ## Product details
 
-On product pages and maybe other sections of your headless store, you will need to get information on specific products. To do this, you can use one of these endpoints:
+On product pages and in other sections of your headless store, you will need to retrieve information about specific products.
+
+### Recommended approach (Intelligent Search)
+
+We recommend using the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) for Product Detail Pages (PDP), as it provides:
+
+* **Better search performance:** Optimized for faster response times.
+* **Consistent user experience:** When using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), using Intelligent Search ensures delivery estimates and availability match between Product Listing Pages (PLP) and Product Detail Pages (PDP).
+* **Location-based availability:** Supports filtering by ZIP code for accurate product availability.
+
+Use the [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) endpoint with the `query` (or `q`) parameter to retrieve a specific product by ID. The Intelligent Search API supports the following ID types:
+
+**Search by Product ID:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:{productId}
+```
+
+**Search by SKU ID:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku:{skuId}
+```
+
+**Search by product slug:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:{slug}
+```
+
+**Other supported ID types:**
+
+- `query=product.id:{id}` - Product ID (alternative syntax)
+- `query=sku.id:{id}` - SKU ID (alternative syntax)
+- `query=sku.ean:{ean}` - SKU EAN
+- `query=sku.reference:{refId}` - SKU Reference ID
+
+**Examples:**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234
+```
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?q=product.link:apple-magic-mouse
+```
+
+>⚠️ **For stores using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise):** You must include the `zip-code` parameter in all Intelligent Search API requests to ensure accurate delivery estimates and product availability. See the [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide for implementation details.
+
+**Example with ZIP code (required for Delivery Promise):**
+
+```txt
+https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234&zip-code=22250040&hideUnavailableItems=true
+```
+
+>ℹ️ The `query` parameter accepts specific filters like `product:{id}`, `sku:{id}`, `product.link:{slug}`, and other ID types to retrieve individual products. For more details, see the [Intelligent Search API reference](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-).
+
+### Alternative approach (Legacy Search)
+
+Alternatively, you can use the Legacy Search API endpoints to retrieve product information:
 
 - [Search Product by Product URL](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search/-product-text-link-/p)
 - [Search for Products with Filter, Order and Pagination](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search)
   - Filter by product ID: `fq=productId:{productId}`
   - Filter by SKU ID: `fq=skuId:{skuId}`
+
+>⚠️ Legacy Search endpoints do not support Delivery Promise features. If your store uses [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), you must use the Intelligent Search API as described above.
 
 ### Cross selling
 

@@ -2,8 +2,8 @@
 title: VTEX IO CLI apps installation inspection
 excerpt: "Automatically check whether route conflicts can occur in your workspace as a result of installing an app."
 createdAt: "2019-08-29T14:47:00.000Z"
+type: 'info'
 ---
-
 VTEX IO CLI now inspects if route conflicts can occur in your workspace as a result of installing a new app.
 
 ## How it works

@@ -11,6 +11,8 @@ The refresh token flow is a security mechanism in authentication systems that al
 
 This guide explains how to implement the refresh token flow in [headless](https://developers.vtex.com/docs/guides/headless-commerce) scenarios using native VTEX Login.
 
+>ℹ️ If you are using FastStore, the [FastStore SDK Session](https://developers.vtex.com/docs/guides/faststore/sdk-overview#session) automatically handles token renewal, session management, and error handling. You only need to follow the instructions in [Enabling refresh token on FastStore](https://developers.vtex.com/docs/guides/faststore/security-enabling-refresh-token).
+
 ## Authentication tokens
 
 The refresh token flow operates with two types of tokens:
@@ -123,6 +125,8 @@ After starting the authentication process, the next step is to proceed with the 
 * Email and password
 * Social logins (Google, Facebook)
 * Custom OAuth providers
+
+>⚠️ When using custom OAuth providers via the [OAuth exchange endpoint](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/audience/webstore/provider/oauth/exchange), the VTEX refresh token is not generated. Token refresh must be managed by the external Identity Provider. See [Headless authentication](https://developers.vtex.com/docs/guides/headless-authentication) for more information.
 
 Each store can enable one or more of these options, and all of which follow the same general flow at this stage: the client uses the `authenticationToken` from the previous step to complete the login process.
 

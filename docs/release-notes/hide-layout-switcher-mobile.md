@@ -2,8 +2,8 @@
 title: Search Result layout on mobile mode 
 excerpt: "It is now possible to choose which layout mode you want your Search Result to be displayed in."
 createdAt: "2019-09-08T14:47:00.000Z"
+type: 'info'
 ---
-
 By setting the prop `mobileLayout` in the Search Result component, it is now possible to choose which layout mode you want your Search Result to be displayed in.
 
 ## How it works

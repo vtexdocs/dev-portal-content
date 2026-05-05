@@ -1,12 +1,15 @@
-name: Markdown Reviewer
-on: [pull_request]
+name: Review Markdown Formatting
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '**/*.mdx'
 jobs:
   markdownlint:
-    name: runner / markdownlint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: markdownlint
+      - name: Comment Markdown formatting issues
         uses: reviewdog/action-markdownlint@v0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

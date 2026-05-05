@@ -7,66 +7,129 @@ components:
   - Radio.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Radio)
+
+The `Radio` component allows users to select a single option from a set of mutually exclusive choices. Typical use cases include:
+
+- Selecting a shipping method (e.g., `Standard`, `Express`, or `Next-day delivery`).
+- Choosing payment options (e.g., `Credit card`, `PayPal`, or `Bank transfer`).
+- Selecting product variants or configurations (e.g., size or subscription frequency).
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Radio />
-      <Radio checked readOnly />
-      <Radio disabled />
-      <Radio checked disabled readOnly />
     </OverviewSection>
   </Tab>
   <Tab>
+
     ```tsx
-    <Radio />
-    <Radio checked />
-    <Radio disabled />
-    <Radio checked disabled />
+    import React from 'react'
+    import { Radio } from '@faststore/ui'
+
+    export default function RadioBasicUsage() {
+      return (
+        <div>
+          <Radio />
+          <Radio checked />
+          <Radio disabled />
+          <Radio checked disabled />
+        </div>
+      )
+    }
+
     ```
   </Tab>
 </Tabs>
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { Radio } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/atoms/Radio/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Radio />
-</OverviewSection>
-```tsx
-<Radio />
-```
+### Variants
+
+#### Checked
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Radio checked />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Radio } from '@faststore/ui'
+
+    export default function RadioChecked() {
+      return <Radio checked />
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Radio disabled />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Radio } from '@faststore/ui'
+
+    export default function RadioDisabled() {
+      return <Radio disabled />
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Checked and Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Radio checked disabled />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Radio } from '@faststore/ui'
+
+    export default function RadioCheckedDisabled() {
+      return <Radio checked disabled />
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Props
-
-<ComponentPropsSection component="Radio" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-radio-width" value="1.25rem" />
@@ -104,9 +167,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
+### Design tokens: Knob
 
-#### Knob
+The knob is the inner circle that appears when the radio is checked, providing visual feedback for the selected state.
 
 <TokenTable>
   <TokenRow token="--fs-radio-knob-width" value="var(--fs-spacing-1)" />
@@ -123,16 +186,10 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
 
-#### Checked
+### Design tokens: Checked
 
-<OverviewSection>
-  <Radio checked readOnly />
-</OverviewSection>
-```tsx
-<Radio checked />
-```
+Checked radio buttons use a distinct background color to indicate the selected option, ensuring users can easily identify their choice.
 
 <TokenTable>
   <TokenRow
@@ -147,14 +204,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Disabled
+### Design tokens: Disabled
 
-<OverviewSection>
-  <Radio checked disabled readOnly />
-</OverviewSection>
-```tsx
-<Radio checked disabled />
-```
+Disabled radio buttons use muted colors and reduced contrast to visually communicate that the option is unavailable for interaction.
 
 <TokenTable>
   <TokenRow
@@ -180,11 +232,17 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Radio` styles using the following data attributes:
 
 `data-fs-radio`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Radio" />
 
 ---
 

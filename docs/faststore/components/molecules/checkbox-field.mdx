@@ -7,9 +7,9 @@ components:
   - CheckboxField.tsx
 ---
 
-The `CheckboxField` wraps a [Checkbox](https://developers.vtex.com/docs/guides/faststore/atoms-checkbox) input and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label). It allows users to select one option from a set.
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/CheckboxField)
 
-## Overview
+The `CheckboxField` wraps a [Checkbox](https://developers.vtex.com/docs/guides/faststore/atoms-checkbox) input and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label). It allows users to select one option from a set.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -48,44 +48,28 @@ The `CheckboxField` wraps a [Checkbox](https://developers.vtex.com/docs/guides/f
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { CheckboxField } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/molecules/CheckboxField/styles.scss'
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 
 ---
 
-## Usage
-
-<OverviewSection>
-  <CheckboxField label="Faststore" id="faststore" />
-</OverviewSection>
-```tsx
-<CheckboxField label="Faststore" id="faststore" />
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="CheckboxField" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-checkbox-field-gap" value="var(--fs-spacing-1)" />
@@ -93,8 +77,14 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `CheckboxField` styles using the following data attributes:
 
 `data-fs-checkbox-field`
+
+---
+
+## Props
+
+<ComponentPropsSection component="CheckboxField" />

@@ -7,69 +7,98 @@ components:
   - Loader.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Loader)
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+The `Loader` component provides visual feedback to users during processing or loading states, helping maintain engagement and communicate that the system is working. Typical use cases include:
+
+- Indicating content or data is being loaded (e.g., product listings, search results).
+- Showing processing status during form submissions or checkout.
+- Displaying loading state within buttons during async actions (e.g., `Add to Cart`).
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Loader />
     </OverviewSection>
-    <OverviewSection dark>
-      <Loader variant="light" />
-    </OverviewSection>
   </Tab>
   <Tab>
-
     ```tsx
-    <Loader />
-    ```
-    ```tsx
-    <Loader variant="light" />
-    ```
+    import { Loader } from "@faststore/ui";
 
+    export default function Component() {
+      return <Loader />;
+    }
+    ```
   </Tab>
 </Tabs>
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Loader } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/atoms/Loader/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
 ## Usage
 
-<OverviewSection>
-  <Loader />
-</OverviewSection>
+### Import the component
+
 ```tsx
-<Loader />
+import { Loader } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/atoms/Loader/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Loader" />
+### Variants
+
+#### Dark (Default)
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Loader />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { Loader } from "@faststore/ui";
+
+    export default function Component() {
+      return <Loader />;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+#### Light
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection dark>
+      <Loader variant="light" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { Loader } from "@faststore/ui";
+
+    export default function Component() {
+      return <Loader variant="light" />;
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-loader-gap" value="var(--fs-spacing-0)" />
@@ -84,9 +113,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
+### Design tokens: Loader item
 
-#### Loader Item
+Loader item tokens control the appearance of the individual animated dots that make up the loader, including their size, shape, and initial opacity.
 
 <TokenTable>
   <TokenRow token="--fs-loader-item-width" value="var(--fs-spacing-0)" />
@@ -103,16 +132,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <TokenRow token="--fs-loader-item-initial-opacity" value=".6" />
 </TokenTable>
 
-### Variants
+### Design tokens: Dark
 
-#### Dark (Default)
-
-<OverviewSection>
-  <Loader />
-</OverviewSection>
-```tsx
-<Loader />
-```
+The dark variant (default) uses a darker color scheme, making it suitable for use on light backgrounds and most standard interface contexts.
 
 <TokenTable>
   <TokenRow
@@ -122,14 +144,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Light
+### Design tokens: Light
 
-<OverviewSection dark>
-  <Loader variant="light" />
-</OverviewSection>
-```tsx
-<Loader variant="light" />
-```
+The light variant uses a lighter color scheme, ideal for displaying loaders on dark backgrounds or in high-contrast scenarios.
 
 <TokenTable>
   <TokenRow
@@ -141,13 +158,19 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Loader` styles using the following data attributes:
 
 `data-fs-loader`
 
 `data-fs-loader-variant="light" | "dark"`
+
+---
+
+## Props
+
+<ComponentPropsSection component="Loader" />
 
 ---
 
@@ -160,7 +183,7 @@ For further customization, you can use the following data attributes:
     actionPath="/docs/guides/faststore/atoms-button#loading"
   >
     <Button variant="primary" loadingLabel="Loading" loading>
-      {'Add to Cart'}
+      {"Add to Cart"}
     </Button>
   </SectionItem>
 </SectionList>

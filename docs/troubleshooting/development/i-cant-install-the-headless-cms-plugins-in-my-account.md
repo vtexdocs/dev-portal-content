@@ -4,8 +4,8 @@ excerpt: "Users may encounter errors related to symbolic links and node version 
 slug: "error-installing-headless-cms-plugins-on-windows"
 updatedAt: "2025-02-12T14:56:25.977Z"
 tags:
-    - headless-cms
-    - faststore
+    - Headless CMS
+    - FastStore
 ---
 
 FastStore users may encounter the following errors after [installing the Headless CMS plugin](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account#step-1-setting-up-the-command-line-environment).

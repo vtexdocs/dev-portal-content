@@ -2,8 +2,8 @@
 title: Paging the Search Results
 excerpt: "Gain more agility with a URL for each of the loaded search results page!"
 createdAt: "2019-11-10T14:47:00.000Z"
+type: 'info'
 ---
-
 The Search Results page URL now reflects the exact page loaded by the user. 
 
 ![search-result-pagination-als](https://user-images.githubusercontent.com/52087100/66756478-7ea4fb00-ee70-11e9-8ba3-305f8e3bac83.gif)

@@ -11,7 +11,7 @@ This guide will walk you through the process of creating standalone apps dedicat
 
 To complete this guide, we will develop apps with two distinct purposes:
 
-- **Service apps:** These applications provide specific functionalities to other apps or users within the VTEX platform. They are what other apps configure to leverage particular features or services. Service apps are developed using either the `node`, `dotnet` or `graphql` builder.
+- **Service apps:** These applications provide specific functionalities to other apps or users within the VTEX platform. They are what other apps configure to leverage particular features or services. Service apps are developed using either the `node`, `dotnet`, or `graphql` builder.
 - **Configuration apps:** These independent applications are designed to configure Service apps. Their primary role is to define how a service app should behave, specifying settings and adapting its functionality to meet the needs of other apps or users. Configuration apps use the `configuration` builder, which separates service configuration code into an independent app, decoupled from the platform.
 
 In the diagram below, you can see how Service and Configuration apps interact with each other. Service apps expose their schema configurations via the `schema.json` file, and Configuration apps utilize this information to manage and deliver configurations via the `configuration.json` file. This separation of concerns enhances organization and modularity in application development, especially in the context of configuration management.
@@ -75,7 +75,7 @@ In the `node/service.json` file, add `"settingsType": "workspace"` to define whi
 }
 ```
 
-It is also possible to define your configurations through event listening. In this case, you should add in the `node/service.json` file something similar to the example below, replacing the values according to your needs:
+It is also possible to define your configurations through event listening. In this case, you should add to the `node/service.json` file something similar to the example below, replacing the values according to your needs:
 
 ```json
 "events": {
@@ -94,9 +94,9 @@ It is also possible to define your configurations through event listening. In th
 
 If you are developing a GraphQL app, add the `@settings` directive to all queries that can receive configurations.
 
-A [GraphQL Directive](https://graphql.org/learn/queries/#directives) is a way of changing how the query will be performed. When you add the `settings` directive, the system knows it must search for configurations for that service. Under the hood, this directive includes one extra step to the query, which is responsible for finding all the configurations and adding them to the context.
+A [GraphQL Directive](https://graphql.org/learn/queries/#directives) is a way of changing how the query will be performed. When you add the `settings` directive, the system knows it must search for configurations for that service. Under the hood, this directive includes an additional step in the query, which is responsible for finding all configurations and adding them to the context.
 
-Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app as an example. In this app's root directory, you'll see the following file `grapqhl/schema.graphql`. Now, if you open it and add the `@settings` directive to the query `book`, you'll have something like:
+Take the [`graphql-example`](https://github.com/vtex-apps/graphql-example) app as an example. In this app's root directory, you'll see the following file `graphql/schema.graphql`. Now, if you open it and add the `@settings` directive to the query `book`, you'll have something like:
 
 ```diff
  type Query {
@@ -174,8 +174,9 @@ Once your Service app is deployed, it is ready to receive configurations from ot
    ```
 
   Ensure that the builder's name matches the Service you want your app to configure and that its version matches the desired Service app version.
-2. Create a new folder named after your Service app and create a new file named `configuration.json` within it (e.g., `vtex.most-amazing-service-ever/configuration.json`).
-3. In the `configuration.json`, define which service configurations are expected according to the JSON schema structure previously defined in the Service app. For example:
+  
+3. Create a new folder named after your Service app and create a new file named `configuration.json` within it (e.g., `vtex.most-amazing-service-ever/configuration.json`).
+4. In the `configuration.json`, define the expected service configurations according to the JSON schema structure previously defined in the Service app. For example:
 
    ```json
    {
@@ -184,7 +185,7 @@ Once your Service app is deployed, it is ready to receive configurations from ot
    }
    ```
 
-4. Save your changes and then [publish your new Configuration app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/).
+5. Save your changes and then [publish your new Configuration app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app/).
 
 ## Reading the received Service app configurations
 

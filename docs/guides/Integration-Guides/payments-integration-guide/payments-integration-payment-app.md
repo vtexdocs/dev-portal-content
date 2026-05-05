@@ -26,6 +26,8 @@ This tutorial will guide you through the steps required to develop, test, and se
 - [Implementing a Payment App](#implementing-a-payment-app): A step-by-step guide with the basic information needed to develop a Payment App.
 - [Operational Mode](#operational-mode): After having deployed the Payment App, check more information about the checkout response. Also, learn how to handle an order payload and how to inject external scripts.
 
+> ⚠️ IO apps do not work in headless environments. If you want to process payments in this type of scenario, you must use a checkout [webview](https://developer.chrome.com/docs/webview) or implement a fully headless integration directly between your system and the acquirer/connector, sending the information via custom payments or promissory notes.
+
 ## Understanding the Payment App flow
 
 Our Payment App model applies to a large variety of payment methods thanks to its interaction with the Checkout API, as shown in the following sequence diagram:
@@ -186,6 +188,8 @@ The best way to create a new payment method is by developing a Payment App, once
 The [3D Secure 2](https://3dsecure2.com/) is a protocol that allows a website’s checkout process to comply with the [Strong Customer Authentication (SCA)](https://3dsecure2.com/glossary/#what-is-strong-customer-authentication-sca) requirements by performing risk-based authentication to approve an online card transaction. It was created to attend to the [Revised Payment Service Directive 2 (PSD2)](https://3dsecure2.com/glossary/#what-is-payment-service-directive-2) regulations in Europe.
 
 The 3D Secure 2 (3DS2) is an evolution of the 3D Secure 1 (3DS1). It introduces the [frictionless authentication flow](https://3dsecure2.com/glossary/#what-is-frictionless-flow) and improves the purchase experience compared to 3DS1. More details about the differences between 3DS1 and 3DS2 can be found in the [3D Secure 2 FAQ](https://3dsecure2.com/frequently-asked-questions/#what-are-the-main-changes-in-3d-secure-2).
+
+> ⚠️ On VTEX, [3D Secure 2](https://3dsecure2.com/) can only be implemented through the Payment App, as the platform doesn't support alternative methods such as redirect URLs for this protocol.
 
 #### 3DS2 flow
 

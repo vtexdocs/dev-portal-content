@@ -2,8 +2,8 @@
 title: Platform performance
 excerpt: "Understand what the VTEX IO performance improvement key points were for week 39 and 40 of 2019."
 createdAt: "2019-11-10T14:47:00.000Z"
+type: 'info'
 ---
-
 Check our latest releases for week 39 & 40 of 2019 about promoting an **optimal VTEX IO infra performance**, ensuring a better, faster and stabler platform experience:
 
 :eyes: No action for the releases below is warranted on your side. The performance improvement is already available to all VTEX IO users!

@@ -5,7 +5,11 @@ components:
   - Checkbox.tsx
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Checkbox)
+
+Checkboxes are interactive form controls that let users select one or more options by toggling them on or off. They are commonly used in forms, filter panels, and preference settings.
+
+The `Checkbox` component provides accessible markup, design tokens for customization, and states for `checked`, `disabled`, and `partial` (partially checked).
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -18,53 +22,110 @@ components:
   </Tab>
   <Tab>
     ```tsx
-    <Checkbox />
-    <Checkbox checked />
-    <Checkbox disabled />
-    <Checkbox checked partial />
+    import React from 'react'
+    import { Checkbox } from '@faststore/ui'
+
+    export default function CheckboxOverviewExamples() {
+      return (
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <Checkbox />
+          <Checkbox checked readOnly />
+          <Checkbox disabled />
+          <Checkbox checked partial readOnly />
+        </div>
+      )
+    }
     ```
   </Tab>
 </Tabs>
----
-
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { Checkbox } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/atoms/Checkbox/styles.scss';
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
 
 ---
 
 ## Usage
 
-<OverviewSection>
-  <Checkbox />
-</OverviewSection>
+### Import the component
+
 ```tsx
-<Checkbox />
+import { Checkbox } from '@faststore/ui'
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import '@faststore/ui/src/components/atoms/Checkbox/styles.scss';
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
+## Examples
 
-<ComponentPropsSection component="Checkbox" />
+### Checked
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox checked />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Checkbox } from '@faststore/ui'
+    
+    export default function CheckboxChecked() {
+      return <Checkbox checked />
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Disabled
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox disabled readOnly />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+  ```tsx
+  import React from 'react'
+  import { Checkbox } from '@faststore/ui'
+  
+  export default function CheckboxDisabled() {
+    return <Checkbox disabled readOnly />
+  }
+  ```
+  </Tab>
+</Tabs>
+
+### Partial
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Checkbox checked partial />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Checkbox } from '@faststore/ui'
+    
+    export default function CheckboxPartial() {
+      return <Checkbox checked partial />
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-checkbox-width" value="1.25rem" />
@@ -102,17 +163,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Variants
+### Design tokens: Checked
 
-#### Checked
-
-<OverviewSection>
-  <Checkbox checked />
-</OverviewSection>
-
-```tsx
-<Checkbox checked />
-```
+Checked checkboxes use a filled primary background and focused hover accents to clearly indicate selection while maintaining accessible contrast and feedback.
 
 <TokenTable>
   <TokenRow
@@ -127,7 +180,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
   <TokenRow
     token="--fs-checkbox-checked-border-color-hover"
-    value="var((--fs-border-color-hover)"
+    value="var(--fs-border-color-hover)"
     isColor
   />
   <TokenRow
@@ -137,15 +190,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Disabled
+### Design tokens: Disabled
 
-<OverviewSection>
-  <Checkbox disabled readOnly />
-</OverviewSection>
-
-```tsx
-<Checkbox disabled readOnly />
-```
+Disabled checkboxes lower contrast and remove interactive feedback, preserving layout without suggesting availability.
 
 <TokenTable>
   <TokenRow
@@ -169,14 +216,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Partial
+### Design tokens: Partial
 
-<OverviewSection>
-  <Checkbox checked partial />
-</OverviewSection>
-```tsx
-<Checkbox checked partial />
-```
+Partial checkboxes present a neutral surface with a primary accent to convey a mixed selection state, useful for parent options of grouped items.
 
 <TokenTable>
   <TokenRow
@@ -202,19 +244,30 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `Checkbox` styles using the following data attributes:
 
 `data-fs-checkbox`
 
 ---
 
-## Best Practices
+## Props
+
+<ComponentPropsSection component="Checkbox" />
+
+---
+
+## Best practices
 
 ### ✅ Do's
 
-- Provide a [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) when using checkbox input. Descriptive labels help users understand the purpose of a form control.
+- Always pair a Checkbox with a descriptive [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label) to improve accessibility and clarify the option’s purpose.
+
+### ❌ Don’ts
+
+- Don’t use a `Checkbox` when only one option is possible. In that case, use a [Radio](https://developers.vtex.com/docs/guides/faststore/atoms-radio) instead.
+- Don’t use checkboxes to trigger immediate actions such as submitting data.
 
 ---
 

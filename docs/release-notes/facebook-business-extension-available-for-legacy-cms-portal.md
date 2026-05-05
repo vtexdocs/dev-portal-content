@@ -3,6 +3,7 @@ title: "Facebook Business Extension Available for Legacy CMS Portal"
 slug: "facebook-business-extension-available-for-legacy-cms-portal"
 createdAt: "2022-10-28T20:45:28.931Z"
 hidden: true
+type: 'info'
 ---
 [Facebook Business Extension (FBE)](https://developers.facebook.com/products/business-apps/?locale=en_US) is an app that provides a streamlined way to integrate with Facebook services and features. The integration offers different features, including:
 

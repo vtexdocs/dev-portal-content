@@ -6,8 +6,8 @@ createdAt: "2024-06-04T11:15:35.508Z"
 updatedAt: "2024-06-04T11:15:35.508Z"
 excerpt: "When using Product Summary within a storefront modal, the modal closes when you click a SKU."
 tags:
-    - store-framework
-    - catalog
+    - Store Framework
+    - Catalog
 
 ---
 

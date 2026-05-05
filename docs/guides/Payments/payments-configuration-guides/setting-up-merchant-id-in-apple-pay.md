@@ -50,7 +50,7 @@ You will have created your **Merchant ID**.
 
 Now you've created your Merchant ID, you'll need a certificate to activate it.
 
-This certificate is created by VTEX. Therefore, the retailer needs to [open a ticket](https://help.vtex.com/en/tutorial/open-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) with support for the team responsible for integrations to send you the file.
+This certificate is created by VTEX. Therefore, the retailer needs to [open a ticket](https://supporticket.vtex.com/support) with support for the team responsible for integrations to send you the file.
 
 Thereafter, the retailer can submit the file to Apple Pay's system.
 
@@ -127,7 +127,7 @@ Thereafter, to upload the`.txt` file by API, follow these instructions:
 
 Then, start a Postman session. You perform a call to VTEX's CDN using the POST method:
 
-1. Configure the route **POST** `https://{{yourdomainhere}}/.well-known/raw/apple-developer-merchantid-domain-association.txt?persistent=true`.
+1. Configure the route **POST** `https://{{yourdomainhere}}/.well-known/raw/apple-developer-merchantid-domain-association.txt`.
 2. Paste the content of the .txt file in the request body. Ensure that all contents of the file are:
    - Inside quotations marks.
    - In JSON format, as in `"{token_content}"`.

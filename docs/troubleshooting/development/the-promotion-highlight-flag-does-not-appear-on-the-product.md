@@ -6,9 +6,9 @@ createdAt: "2024-09-10T12:08:37.773Z"
 updatedAt: ""
 excerpt: "When creating a promotion and enabling the highlight option, the product does not display the highlight flag in the store."
 tags:
-    - store-framework
-    - product-highlights
-    - promotions
+    - Store Framework
+    - Product Highlights
+    - Promotions
 ---
 
 In stores developed with VTEX IO Store Framework, when creating a promotion and [enabling the highlight option](https://help.vtex.com/en/tutorial/configurando-promocao-com-destaque-flag--tutorials_2295#configuring-the-promotion), the corresponding flag may not appear on the product.

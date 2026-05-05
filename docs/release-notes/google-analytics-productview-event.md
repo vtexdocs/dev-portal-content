@@ -2,8 +2,8 @@
 title: Google Analytics `productView` event
 excerpt: "Get more insight into your store's user behavior by tracking their navigation between SKUs."
 createdAt: "2019-09-13T14:47:00.000Z"
+type: 'info'
 ---
-
 The GTM `productView` event got a new feature, being able to also track user browsing between SKUs. 
 
 > ℹ️ The `productView` event follows the Google Enhanced Commerce pattern and allows retailers to use it to track their users navigation through Google Analytics.
