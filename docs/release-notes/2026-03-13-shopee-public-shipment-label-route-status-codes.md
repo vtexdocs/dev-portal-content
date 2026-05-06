@@ -29,3 +29,4 @@ This update requires action only if your integration depends on the previous beh
 - **Operations and monitoring teams:** Review alerting and observability rules that currently interpret all non-success responses as `500`.
 
 > ⚠️ Treat this as a breaking change if you rely on the previous status-code behavior.
+
