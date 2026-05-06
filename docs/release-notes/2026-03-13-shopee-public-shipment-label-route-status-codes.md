@@ -11,23 +11,13 @@ We have updated the Shopee shipment label flow to align with the new public rout
 
 ## What has changed?
 
-- The shipment label generation flow has been unified across legacy and new APIs. This ensures that both routes now follow the same processing logic and response patterns.
-- Previously, any non-success response was incorrectly mapped to HTTP 500, masking the real cause of the issue. This fallback behavior has been removed.
-- Requests now return the real status code from the integration (for example, `404` when a PLP is not ready yet), instead of incorrectly signaling an internal server failure.
-- The rollout is controlled by a feature flag, allowing a safer migration between versions.
+The shipping label generation flow has been unified between legacy and new APIs. This ensures that both routes now follow the same processing logic and response patterns.
 
-## Why did we make this change?
-
-The previous implementation generated false-positive internal server errors in monitoring and operations. By returning the actual HTTP status code, sellers and integrators can distinguish expected business integration scenarios from real platform failures.
+Previously, any failure response was incorrectly mapped to HTTP 500, masking the real cause of the problem.
+Now, they return the actual integration status code (e.g., `404` when a PLP is not yet ready), instead of incorrectly signaling an internal server failure.
 
 ## What needs to be done?
 
-This update requires action only if your integration depends on the previous behavior (always returning `500` for errors).
+If your Shopee integration is only returning the `500` error code for all labels, you need to update your error handling logic to correctly interpret the different HTTP status codes.
 
-> ⚠️ If your integration already handles different HTTP status codes correctly, no action is required.
-
-- **Sellers using Shopee integration:** Verify your ERP assumes all error responses return `500`, and update the error-handling logic to interpret different HTTP status codes correctly.
-- **Operations and monitoring teams:** Review alerting and observability rules that currently interpret all non-success responses as `500`.
-
-> ⚠️ Treat this as a breaking change if you rely on the previous status-code behavior.
-
+To update your integration, access the [VTEX Shopee Integration API](link) documentation.
