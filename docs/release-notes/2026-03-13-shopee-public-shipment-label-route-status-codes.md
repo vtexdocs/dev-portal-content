@@ -14,13 +14,14 @@ We have updated the Shopee shipment label flow to align with the new public rout
 - The shipment label generation flow has been unified across legacy and new APIs. This ensures that both routes now follow the same processing logic and response patterns.
 - Previously, any non-success response was incorrectly mapped to HTTP 500, masking the real cause of the issue. This fallback behavior has been removed.
 - Requests now return the real status code from the integration (for example, `404` when a PLP is not ready yet), instead of incorrectly signaling an internal server failure.
-- The rollout is controlled by feature flag, allowing a safer migration between versions.
+- The rollout is controlled by a feature flag, allowing a safer migration between versions.
 
 ## Why did we make this change?
 
 The previous implementation generated false-positive internal server errors in monitoring and operations. By returning the actual HTTP status code, sellers and integrators can distinguish expected business integration scenarios from real platform failures.
 
 ## What needs to be done?
+
 This update requires action only if your integration depends on the previous behavior (always returning `500` for errors).
 
 > ⚠️ If your integration already handles different HTTP status codes correctly, no action is required.
