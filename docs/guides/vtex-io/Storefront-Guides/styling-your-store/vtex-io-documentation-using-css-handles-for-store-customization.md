@@ -4,12 +4,12 @@ excerpt: "Learn how to customize your storefront using CSS handles."
 slug: "vtex-io-documentation-using-css-handles-for-store-customization"
 hidden: false
 createdAt: "2020-06-03T16:02:45.024Z"
-updatedAt: "2025-10-01T14:09:21.665Z"
+updatedAt: "2026-05-07T15:41:30.641Z"
 ---
 
 In this guide, you'll learn how to customize your storefront using CSS handles. These unique identifiers assigned to HTML elements allow you to target and add CSS classes to a component within your [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme).
 
-CSS handles can overwrite a storefront's default styles, allowing for independent customization of specific blocks within a Store Theme. For example, consider you want to customize the `menu-item` blocks of the [Menu](https://developers.vtex.com/docs/apps/vtex.menu) component. You can apply a [general customization](#applying-a-general-customization) or [customize a single block](#customizing-a-single-block).
+CSS handles can override a storefront's default styles, enabling independent customization of specific blocks within a Store Theme. For example, consider you want to customize the `menu-item` blocks of the [Menu](https://developers.vtex.com/docs/apps/vtex.menu) component. You can apply a [general customization](#applying-a-general-customization) or [customize a single block](#customizing-a-single-block).
 
 ## Instructions
 
@@ -17,7 +17,7 @@ CSS handles can overwrite a storefront's default styles, allowing for independen
 
 1. Open your browser and go to your store's development workspace using this URL: `https://{workspace}--{account}.myvtex.com?__inspect`. Replace the values inside curly braces with your specific workspace and account names.
 
-  >⚠️ Always use a development workspace and make sure your store domain is under `myvtex.com`.
+  >⚠️ Always use a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and make sure your store domain is under `myvtex.com`.
 
 2. Hover your mouse over the page element you want to customize. A box will appear displaying its available CSS handles (names starting with `.`), CSS file names, and related information.
 
@@ -91,4 +91,4 @@ Customization using CSS selectors is mostly deprecated. The following selectors 
 - `:global()` for selection of global CSS classes (example: `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selecting elements from different apps, `:global(.tachyons-class)` for Tachyons utilities, or any other global CSS class)
 - Media queries, such as `@media (max-width: 768px)` (responsive override for screens up to 768px wide) and `@media (prefers-reduced-motion: reduce)` (remove transitions if user prefers reduced motion).
 
->⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, aren't supported. Using them can cause issues like app linking failure.
+>⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, aren't supported. Using them can cause issues such as app linking failures.
