@@ -7,13 +7,13 @@ updatedAt: "2026-05-05T18:00:00.813Z"
 excerpt: "Understand what Components and Sections are in the CMS, how they differ, and how they fit together to build pages in storefronts integrated with the CMS."
 ---
 
-**Components** and **Sections** are the building blocks editors and developers use to assemble storefront pages through the CMS. Understanding the difference between them is key to deciding what to create when you want to expose new content for editing in VTEX Admin and where it should live in your project.
+**Components** and **Sections** are the building blocks that editors and developers use to assemble storefront pages through the CMS. Understanding the difference between them is key to deciding what to create when you want to expose new content for editing in VTEX Admin and where it should live in your project.
 
 This guide explains both concepts, shows how they relate to [Content Types](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations), and lists common Section examples shipped with FastStore.
 
 ## Content hierarchy
 
-In the CMS, content is organized in a hierarchy: a **Content Type** declares which **Sections** are available on a page, and each Section is composed of one or more **Components** (groups of fields).
+In the CMS, content is organized in a hierarchy: A **Content Type** declares which **Sections** are available on a page, and each Section is composed of one or more **Components** (groups of fields).
 
 ```mermaid
 flowchart TD
@@ -42,7 +42,7 @@ Regardless of the storefront technology you use, a Component:
 
 - Declares which fields exist and their data types.
 - Controls how fields appear in Admin (labels, descriptions, validation).
-- Is reused across different Sections and Content Types.
+- Can be reused across different Sections and Content Types.
 
 ### Schema files for Components
 
@@ -80,7 +80,7 @@ The schema below declares a reusable `Link` Component made of two fields (`text`
 }
 ```
 
-> ℹ️ A plain Component is not directly placed on a page on its own. It is meant to be reused **inside** a Section or composed into another Component as a field.
+> ℹ️ A plain Component cannot be placed directly on a page. It's designed for reuse **inside** a Section or as a field nested within another Component.
 
 ## Sections
 
@@ -96,7 +96,7 @@ Conceptually, a Section:
 
 How a Section is rendered depends on the storefront:
 
-- In **FastStore projects**, each Section has a corresponding React component in `src/components/`, exported through `src/components/index.tsx`, that renders the data editors configure in Admin.
+- In **FastStore projects**, each Section has a corresponding React component in `src/components/`. These components are exported via `src/components/index.tsx` to render the data that editors configure in Admin.
 - In **other headless storefronts**, you can map Section identifiers (for example, `$componentKey: "Hero"`) to your own Vue, React, or server-side templates, following the same principle.
 
 ### `CallToAction` Section example
@@ -144,7 +144,7 @@ The schema below declares a `CallToAction` Section in a FastStore project, compo
 | :---- | :---- | :---- |
 | **Purpose** | Defines a reusable data shape (for example, a link, badge, or media block). | Page-placeable container of Components that represents a full page block (for example, hero, shelf, footer). |
 | **Scope** | Reused inside Sections or other Components. | Exposed in the CMS page editor for editors to add to a page. |
-| **Schema file** | Stored as a component schema file (for example, `cms_component__*.jsonc` in FastStore projects). | Also stored as a component schema file; Sections are distinguished by how they are used (referenced by Content Types and rendered as page blocks). |
+| **Schema file** | Stored as a component schema file (for example, `cms_component__*.jsonc` in FastStore projects). | Also stored as a component schema file; Sections are distinguished by how they're used (referenced by Content Types and rendered as page blocks). |
 | **Referenced from a Content Type** | Typically **no**. Used as nested objects or arrays inside Sections and other Components. | **Yes.** Listed in one or more Content Type schemas so editors can add them to pages. |
 | **Rendering** | Data is consumed by a parent component or template. | Maps directly to a storefront component or template that renders an entire page block. |
 
