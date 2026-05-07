@@ -139,8 +139,8 @@ To test subdomain-based locales locally, you need to map the domains to your mac
 
    Each line follows the format: `<IP address>  <domain>`. In the example above:
 
-   - `127.0.0.1` points to your local machine.
-   - The domains are the subdomains you want to test locally.
+   * `127.0.0.1` points to your local machine.
+   * The domains are the subdomains you want to test locally.
 
 3. Save the file.
 
