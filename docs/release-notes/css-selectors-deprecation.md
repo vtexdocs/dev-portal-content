@@ -24,15 +24,15 @@ Below, find the full CSS Selectors list that will **continue to be allowed** for
 - `:nth-child(even)` and `:nth-child(odd)`
 - Space combinator (e.g. `.foo .bar`)
 - `[data-...]`
-- `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selection of elements that come from different apps.
+- `:global()` for selection of global CSS classes (e.g. `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for elements from different apps, `:global(.tachyons-class)` for Tachyons utilities, or any other global CSS class)
 
 We are deprecating all selectors and combinators not mentioned on the list above, such as:
 
 - Type/tag selectors (e.g. `div`, `span`)
 - Combinators such as `>`, `+` and `~`
 - `:nth-child` with numbers
-- Attribute selectors excepting `[data-...]` (e.g. `[class~="mb8 b--red"]`
-- `:global` selector for classes that are not CSS Handles from other apps (i.e., that do not begin with, for example, `vtex-...`);
+- Attribute selectors excepting `[data-...]` (e.g. `[class~="mb8 b--red"]`)
+- Arbitrary `:global()` selectors that target non-global CSS classes
 
   This CSS Selector whitelist is flexible because this deprecation aims to encourage robust CSS customization without risking breakdowns in store layout. If the deprecation of CSS Selectors not on this list causes any unintended harm to your store, let us know immediately through [Store Discussion](https://github.com/vtex-apps/store-discussion/issues).
 
