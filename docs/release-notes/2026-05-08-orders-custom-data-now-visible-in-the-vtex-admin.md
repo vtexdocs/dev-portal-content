@@ -9,13 +9,15 @@ excerpt: "VTEX Admin now shows information about custom fields and apps."
 
 We added support for displaying custom order data inside the VTEX Admin so you can view store-level custom fields and app-specific information directly from the order details page.
 
+![Order custom data inside the VTEX Admin](https://cdn.statically.io/gh/vtexdocs/dev-portal-content/images/2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin.png)
+
 ## What has changed?
 
-Before, custom data attached to orders in OMS, including store custom fields (`customFields`) and per-app payloads (`customApps`), was only accessible through API calls. Now, when custom data exists on an order, both the order details page and print view inside the VTEX Admin display the information in collapsible groups, one for custom fields and one for app payloads.
+Before, custom data attached to orders in OMS, including store custom fields (`customFields`) and per-app payloads (`customApps`), was only accessible through API calls. Now, when custom data exists on an order, both the order details page and print view inside the VTEX Admin display the information in collapsible groups, one for custom fields and one for app payloads. The data is only rendered if the order contains `customData`.
 
 ## Why did we make this change?
 
-In order to give merchants and store operators a complete view of order information without leaving the VTEX Admin, we developed custom data visibility in the order details page and print view. The data is only rendered if the order contains `customData`.
+In order to give merchants and store operators a complete view of order information without leaving the VTEX Admin, we developed custom data visibility in the order details page and print view.
 
 ## What needs to be done?
 
