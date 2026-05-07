@@ -122,9 +122,10 @@ After updating the imports, you must sync the changes with the CMS. The steps de
 1. Run `yarn cms-sync` to sync the schema changes with the Headless CMS.
 2. Review the breaking changes below, configure the new fields in the relevant sections, and republish the affected pages.
 
-##### Breaking changes affecting Headless CMS sections
+<details>
+<summary><b>Breaking changes affecting Headless CMS (legacy) sections</b></summary
 
-The following components had hardcoded labels removed in v4. Each one now exposes new fields in the corresponding CMS section that must be configured after the sync.
+The following components had hardcoded labels removed in v4. Each one now exposes new fields in the corresponding Headless CMS (legacy) section that must be configured after the sync.
 
 - **Breadcrumb** ([PR #3099](https://github.com/vtex/faststore/pull/3099)): The `"All products"` label, previously fixed in code for pages without a breadcrumb list (such as Search), is now configurable through the `Fallback label` field in the Breadcrumb section. After syncing, configure this field and republish pages that include the Breadcrumb section.
 - **Sort** ([PR #3100](https://github.com/vtex/faststore/pull/3100)): Sort option labels are no longer hardcoded. They are now configured through the `sortBySelector` field in the ProductGallery section. After syncing, configure the labels and republish pages that include the ProductGallery section.
@@ -140,6 +141,8 @@ The following components had hardcoded labels removed in v4. Each one now expose
     - `EmptyGallery`
     - Hooks: `useDeliveryPromise`, `useShippingSimulation`
     - `PickupPointCards`
+
+</details>
 
 #### Stores using CMS with custom components
 
