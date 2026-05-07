@@ -38,9 +38,9 @@ To allow the platform to access your store's bindings, you must configure WebOps
 
 1. Create the following keys by following the instructions in [Managing API keys](https://help.vtex.com/docs/tutorials/api-keys#managing-api-keys):
 
-   - `VTEX_ACCOUNT={accountName}`
-   - `FS_DISCOVERY_APP_KEY={appKey}`
-   - `FS_DISCOVERY_APP_TOKEN={appToken}`
+   * `VTEX_ACCOUNT={accountName}`
+   * `FS_DISCOVERY_APP_KEY={appKey}`
+   * `FS_DISCOVERY_APP_TOKEN={appToken}`
 
 2. Add the created keys to WebOps by following the instructions in [Creating variables and secrets](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets#creating-variables-and-secrets).
 
@@ -50,11 +50,11 @@ A binding is the association between a specific domain URL and its locale and cu
 
 Open a ticket with VTEX Support to set up your bindings. In the ticket, include the following information:
 
-- Account name
-- Domains
-  - Domain URL
-    - Associated sales channels and currency
-    - Associated locale
+* Account name
+* Domains
+  * Domain URL
+    * Associated sales channels and currency
+    * Associated locale
 
 Example:
 
