@@ -2,8 +2,8 @@
 title: "FastStore v4: New major version with performance, localization, and architectural updates"  
 slug: "2026-05-05-faststore-v4"  
 type: "added"  
-createdAt: "2026-05-05T11:00:00.000Z"  
-updatedAt: "2026-05-05T11:00:00.000Z"  
+createdAt: "2026-05-07T11:00:00.000Z"  
+updatedAt: "2026-05-07T11:00:00.000Z"  
 excerpt: "FastStore v4 is here with improved performance, built-in localization feature, and a more robust architecture for scalable storefronts."  
 tags:  
   - FastStore  
