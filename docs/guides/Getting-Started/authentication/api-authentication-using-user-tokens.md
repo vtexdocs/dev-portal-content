@@ -3,19 +3,19 @@ title: "API authentication using user tokens"
 slug: "api-authentication-using-user-tokens"
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
-updatedAt: "2022-12-13T18:43:56.137Z"
+updatedAt: "2026-05-07T12:00:00.000Z"
 ---
 
-Whenever a user successfully logs in to your VTEX store, VTEX ID generates a [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) user token and sets it as the `VtexIdclientAutCookie` cookie.
+When a user successfully logs in to a VTEX store, VTEX ID issues a [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) user token and stores it in an HTTP-only cookie. For **Admin** sessions, the cookie name is `VtexIdclientAutCookie`. For **webstore** (shopper) sessions, the cookie name is `VtexIdclientAutCookie_{accountName}` or `VtexIdclientAutCookie_{accountId}`.
 
-For a period of 24 hours after its creation, the user token can be used to authenticate requests to VTEX APIs. To do this, send it as a header named `VtexIdclientAutCookie`.
+For a period of 24 hours after its creation, the user token can be used to authenticate requests to VTEX APIs. Send it in an HTTP header whose name matches that cookie (same pattern as above, depending on audience).
 
 User tokens allow for actions limited to their scope, which is defined according to the user who logged in:
 
 * **Shopper:** Shoppers' tokens have permission to perform actions related to the shopping experience, such as viewing active products' information, placing orders, and viewing information of orders made under that same shopper profile. This token scope does not allow users to access the VTEX Admin panel or change logistics settings, for example.
-* **Admin:** Administrative users' tokens allow for actions based on [License Manager roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) attributed to them. This may include access to different Admin panel pages or the ability to edit different configurations, for example.
+* **Admin:** Administrative users' tokens allow for actions based on [License Manager roles](https://help.vtex.com/en/docs/tutorials/roles) attributed to them. This may include access to different Admin panel pages or the ability to edit different configurations, for example.
 
-As described above, user tokens and associated permissions are tied to the user who logged in. However, they are not store-exclusive. This means, for example, that administrative users with access to different accounts can perform actions in all of those stores with the same token.
+User tokens and associated permissions are tied to the user who logged in. Each request must use credentials valid for the VTEX account where that operation runs. The account in the API hostname must align with the account the token was issued for.
 
 ## Generating user tokens
 

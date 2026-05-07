@@ -4,7 +4,7 @@ slug: "how-to-connect-with-vtex-core-commerce-apis-using-vtex-io"
 excerpt: "Learn how to enable seamless HTTP communication with VTEX Core Commerce APIs within your VTEX IO app."
 hidden: false
 createdAt: "2020-10-08T02:47:14.995Z"
-updatedAt: "2021-03-25T14:40:29.493Z"
+updatedAt: "2026-05-07T12:00:00.000Z"
 ---
 
 VTEX IO apps are designed to seamlessly interface with [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference). These APIs provide a set of functionalities and data access points for managing and interacting with the VTEX ecommerce platform, enabling developers to perform various operations, such as managing orders, products, and customer data.
@@ -73,7 +73,15 @@ Ensure a smooth development process by having the following prerequisites in pla
     }
     ```
 
-3. In the constructor, set the `VtexIdclientAutCookie` header with the required token for authorization. Use `ctx.authToken` for the app's token, or `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken` for requests from VTEX Admin or VTEX Storefront, respectively. Refer to [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) for more information.
+3. In the constructor, set the VTEX ID authentication header for the request:
+
+   - **App token:** Use header name `VtexIdclientAutCookie`.
+   - **Admin user requests:** Use `adminUserAuthToken` with header `VtexIdclientAutCookie`.
+   - **Storefront requests:** Use `storeUserAuthToken` with the suffixed header `VtexIdclientAutCookie_{account}`, where `account` matches `context.account` (or the equivalent field on your `IOContext`).
+
+   Refer to [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens) for more information.
+
+   The snippet below shows headers for a **storefront** request (shopper session): it uses `storeUserAuthToken` and the account-suffixed cookie header.
 
     ```ts ./node/clients/myClient.ts mark=10
     import type { InstanceOptions, IOContext } from '@vtex/api'
@@ -85,8 +93,8 @@ Ensure a smooth development process by having the following prerequisites in pla
             ...options,
             headers: {
               Accept: 'application/json',
-              VtexIdclientAutCookie: ctx.storeUserAuthToken,
-              'x-vtex-user-agent': ctx.userAgent,
+              VtexIdclientAutCookie_{{account}}: context.vtex.storeUserAuthToken,
+              'x-vtex-user-agent': context.userAgent,
               ...options?.headers,
             },
           })
@@ -98,7 +106,8 @@ Ensure a smooth development process by having the following prerequisites in pla
     
 ### Step 3 - Implementing the Client methods
 
-In your Client TypeScript file, implement the desired methods using the [`HttpClient`](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients#httpclient-methods) for targeted HTTP calls.
+In your Client TypeScript file, implement the desired methods using the [`HttpClient`](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients#httpclient-methods) for targeted HTTP calls. This extended example also targets **storefront** traffic (same shopper headers as above):
+
   ```ts ./node/clients/myClient.ts mark=17:23
   import type { InstanceOptions, IOContext } from '@vtex/api'
   import { JanusClient } from '@vtex/api'
@@ -109,8 +118,8 @@ In your Client TypeScript file, implement the desired methods using the [`HttpCl
           ...options,
           headers: {
             Accept: 'application/json',
-            VtexIdclientAutCookie: ctx.storeUserAuthToken,
-            'x-vtex-user-agent': ctx.userAgent,
+            VtexIdclientAutCookie_{{account}}: context.vtex.storeUserAuthToken,
+            'x-vtex-user-agent': context.userAgent,
             ...options?.headers,
           },
         })
@@ -167,7 +176,7 @@ Now that you have developed and exported your custom Client to communicate with 
 ## Key considerations
 
 - **GraphQL apps:** Some Core Commerce modules already feature a GraphQL app that abstracts their endpoints. Check if the desired data is available via one of our GraphQL apps. Utilize the [GraphQL IDE](https://developers.vtex.com/docs/guides/graphql-ide) app on the Admin for exploration.
-- **Authentication:** IO apps do not require an appKey/appToken pair to make requests to VTEX Core Commerce APIs. Every app has its own rotating token that can be used on the app's code. In scenarios where using the app's token is not ideal (e.g., authorization depends on the calling user), opt to use the user's token instead, using  `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken`. Refer to [Authentication](https://developers.vtex.com/docs/guides/authentication) for more information.
+- **Authentication:** IO apps do not require an appKey/appToken pair to make requests to VTEX Core Commerce APIs. Every app has its own rotating token that can be used on the app's code. In scenarios where using the app's token is not ideal (e.g., authorization depends on the calling user), opt to use the user's token instead: `storeUserAuthToken` with header `VtexIdclientAutCookie_{account}`, or `adminUserAuthToken` with header `VtexIdclientAutCookie`, under `ctx.vtex` or the equivalent fields on your `IOContext`. Refer to [Authentication](https://developers.vtex.com/docs/guides/authentication) for more information.
 
 ## Example
 

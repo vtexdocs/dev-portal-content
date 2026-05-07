@@ -4,7 +4,7 @@ slug: "refresh-token-flow-for-headless-implementations"
 hidden: false
 excerpt: "Learn how to implement refresh token in headless stores."
 createdAt: "2025-04-04T22:18:24.684Z"
-updatedAt: "2025-04-16T22:08:16.684Z"
+updatedAt: "2026-05-07T12:00:00.000Z"
 ---
 
 The refresh token flow is a security mechanism in authentication systems that allows clients to obtain new access tokens without requiring users to reauthenticate.
@@ -19,6 +19,8 @@ The refresh token flow operates with two types of tokens:
 
 * **Access token (`VtexIdclientAutCookie_{{accountName}}`)**: Short-lived token (24h), the primary credential used to authenticate API requests. It has a short expiration time to minimize security risks.
 * **Refresh token (`vid_rt`)**: Token with configurable expiration, always with a longer duration when compared to the access token (1, 7, or 30 days). Used to renew access tokens.
+
+>⚠️ `VtexIdclientAutCookie_{account}` cookies use the **webstore** (shopper) audience naming. They apply to login flows on the storefront described in this guide. Don't treat them as generic credentials for VTEX Admin APIs or for integrations that expect application keys or Admin user tokens.
 
 >ℹ️ Contact VTEX [Support](https://support.vtex.com/hc/en-us/requests) to request the refresh token activation and expiration time configuration.
 

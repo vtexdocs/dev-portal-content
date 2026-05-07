@@ -3,7 +3,7 @@ title: "Session data available from VTEX apps"
 slug: "session-data-available-from-vtex-apps"
 hidden: false
 createdAt: "2022-08-04T21:11:03.131Z"
-updatedAt: "2022-08-04T21:24:24.490Z"
+updatedAt: "2026-05-07T12:00:00.000Z"
 ---
 Below you can see all data from VTEX apps that is made available in **Session Manager**
 
@@ -27,10 +27,12 @@ The `locale` and `cultureInfo` input parameters are used to overwrite the `cultu
 |     |     |
 | --- | --- |
 | **RunOnCreate** | false |
-| **Inputs**        | `cookie`: VtexIdclientAutCookie, VtexIdclientAutCookie_.* |
+| **Inputs**        | `cookie`: VtexIdclientAutCookie, VtexIdclientAutCookie_{accountName}, VtexIdclientAutCookie_{accountId} |
 | **Outputs**       | `authentication`: adminUserId, adminUserEmail, storeUserId, storeUserEmail |
 
-This app is our primary authentication method, taking the VTEXID cookie from the request, validating it, and extracting the user or admin IDs.
+This app is our primary authentication method, taking the VTEX ID authentication cookie from the request, validating it, and extracting the user or admin IDs.
+
+The cookie name matches the token audience: **`VtexIdclientAutCookie`** for Admin sessions, and **`VtexIdclientAutCookie_{accountName}`** or **`VtexIdclientAutCookie_{accountId}`** for storefront (webstore) sessions. The `{accountName}` or `{accountId}` suffix identifies the account bound to that shopper token. Storefront cookies are not interchangeable with Admin credentials for administrative APIs.
 
 ## Profile (vtex.profile-session)
 
