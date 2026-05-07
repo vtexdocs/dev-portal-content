@@ -1,6 +1,5 @@
 ---
 title: 'Upgrading FastStore to v4'
-hidden: true
 ---
 
 In this guide, you'll learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities.
@@ -146,7 +145,29 @@ The following components had hardcoded labels removed in v4. Each one now expose
 
 #### Stores using CMS with custom components
 
-Run the following commands:
+#### Stores using CMS with custom components
+
+If your store has already migrated its CMS files to the new Content plugin format (with the `cms/faststore/components` and `cms/faststore/pages` folders containing `.jsonc` files), you can skip directly to the [Generate and upload the schema](#generate-and-upload-the-schema) step below.
+
+If your store still uses the legacy `sections.json` and `content-types.json` files, you must first split them into the new format before generating the schema. To do so, run the following commands, adjusting the input and output paths to match your project structure:
+
+1. If `sections.json` is still in the legacy format:
+
+  ```
+  vtex content split-components -i cms/faststore/sections.json -o cms/faststore/components
+  ```
+
+2. If `content-types.json` is still in the legacy format:
+
+  ```
+  vtex content split-content-types -i cms/faststore/content-types.json -s cms/faststore/sections.json -o cms/faststore/pages
+  ```
+
+> ℹ️ For more details on these commands, see [Splitting components and content types](https://developers.vtex.com/docs/guides/content-plugin#split-components).
+
+##### Generate and upload the schema
+
+After ensuring your CMS files are in the new format, run the following commands:
 
 1. `vtex login`
 2. `vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore`
