@@ -80,7 +80,7 @@ The schema below declares a reusable `Link` Component made of two fields (`text`
 }
 ```
 
-> ℹ️ A plain Component cannot be placed directly on a page. It's designed for reuse **inside** a Section or as a field nested within another Component.
+> ℹ️ A plain Component can't be placed directly on a page. It's designed for reuse inside a Section or as a field nested within another Component.
 
 ## Sections
 
