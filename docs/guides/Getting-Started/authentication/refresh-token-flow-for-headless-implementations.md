@@ -1,8 +1,8 @@
 ---
 title: "Refresh token flow for headless implementations"
 slug: "refresh-token-flow-for-headless-implementations"
+excerpt: "Learn how to implement the VTEX Login refresh token flow in headless storefronts using webstore cookies and the refresh token endpoint."
 hidden: false
-excerpt: "Learn how to implement refresh token in headless stores."
 createdAt: "2025-04-04T22:18:24.684Z"
 updatedAt: "2026-05-07T12:00:00.000Z"
 ---
@@ -67,7 +67,7 @@ The following steps detail the refresh token flow shown in the diagram:
 
    This happens automatically when stores use [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj). For [headless](https://developers.vtex.com/docs/guides/headless-commerce) stores, it needs to be manually implemented following the instructions on this guide.
 
-1. **VTEX ID issues new tokens**
+4. **VTEX ID issues new tokens**
 
    VTEX ID validates the refresh token and, if it's still valid:
 

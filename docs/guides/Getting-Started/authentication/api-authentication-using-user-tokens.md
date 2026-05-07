@@ -1,6 +1,7 @@
 ---
 title: "API authentication using user tokens"
 slug: "api-authentication-using-user-tokens"
+excerpt: "Learn how to authenticate VTEX API requests with user tokens and match cookie and header names to Admin or storefront audiences."
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2026-05-07T12:00:00.000Z"
@@ -21,16 +22,16 @@ User tokens and associated permissions are tied to the user who logged in. Each 
 
 Developers working with VTEX can generate authentication tokens without having to simulate a shopper’s login. This can be useful to run tests or even to generate tokens programmatically if your integration depends on an API that can not be authenticated with [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys). There are two methods you can use:
 
-- [Generating user tokens](#generating-user-tokens)
-  - [Generating a user token with the VTEX IO CLI](#generating-a-user-token-with-the-vtex-io-cli)
-  - [Generating an authentication token with the VTEX ID API](#generating-an-authentication-token-with-the-vtex-id-api)
+* [Generating user tokens](#generating-user-tokens)
+  * [Generating a user token with the VTEX IO CLI](#generating-a-user-token-with-the-vtex-io-cli)
+  * [Generating an authentication token with the VTEX ID API](#generating-an-authentication-token-with-the-vtex-id-api)
 
 ### Generating a user token with the VTEX IO CLI
 
 1. Install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 2. Log in to VTEX by running the following command on your terminal.
    Remember to replace the `{accountName}` value with your VTEX account name.
-   
+
    ```bash
    vtex login {accountName}
    ```

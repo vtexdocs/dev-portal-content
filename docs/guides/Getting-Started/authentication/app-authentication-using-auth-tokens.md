@@ -1,7 +1,7 @@
 ---
 title: "App authentication using auth tokens"
 slug: "app-authentication-using-auth-tokens"
-excerpt: "Learn how to use app auth tokens in each context"
+excerpt: "Learn how to use app, storefront, and Admin authentication tokens in VTEX IO clients with the correct VTEX ID cookie headers."
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2026-05-07T12:00:00.000Z"

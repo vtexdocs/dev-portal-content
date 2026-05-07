@@ -1,7 +1,7 @@
 ---
 title: "Connecting to VTEX Core Commerce APIs"
 slug: "how-to-connect-with-vtex-core-commerce-apis-using-vtex-io"
-excerpt: "Learn how to enable seamless HTTP communication with VTEX Core Commerce APIs within your VTEX IO app."
+excerpt: "Learn how to connect your VTEX IO app to Core Commerce APIs using JanusClient and VTEX ID headers for app, Admin, or storefront requests."
 hidden: false
 createdAt: "2020-10-08T02:47:14.995Z"
 updatedAt: "2026-05-07T12:00:00.000Z"
@@ -31,7 +31,7 @@ Ensure a smooth development process by having the following prerequisites in pla
    ```
 
 3. Update the app's `manifest.json` to include the appropriate `outbound-access` policy for the requested URL. Here's a hypothetical example:
-    
+
     ```json manifest.json mark=13:21
     {
       "name": "your-app",
@@ -56,12 +56,12 @@ Ensure a smooth development process by having the following prerequisites in pla
       ]
     }
     ```
-    
+
 ### Step 2 - Creating a Client for connecting to VTEX Core Commerce APIs
 
 1. Create a TypeScript file for your Client in the `node/clients` directory. Choose a name that easily identifies your Client (e.g., `myClient.ts`).
 2. Create a client that represents the module you want to access. It will be a class that extends `JanusClient`.
-   
+
     ```ts ./node/clients/myClient.ts mark=2,4:8
     import type { InstanceOptions, IOContext } from '@vtex/api'
     import { JanusClient } from '@vtex/api'
@@ -101,9 +101,9 @@ Ensure a smooth development process by having the following prerequisites in pla
         }
     }
     ```
-    
+
     > Ensure to export the Client from its module using either [default or named export](https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910).
-    
+
 ### Step 3 - Implementing the Client methods
 
 In your Client TypeScript file, implement the desired methods using the [`HttpClient`](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients#httpclient-methods) for targeted HTTP calls. This extended example also targets **storefront** traffic (same shopper headers as above):
@@ -144,7 +144,7 @@ In your Client TypeScript file, implement the desired methods using the [`HttpCl
 
   }
   ```
-  
+
    In the provided example, the `newOrderForm` method is implemented to make HTTP requests using `this.http`. It facilitates the creation of a new order form by sending a POST request (`postRaw`) to the specified endpoint. The method includes additional configurations, such as defining the metric for tracking and handling potential errors in the response.
 
 ### Step 4 - Exporting custom clients
