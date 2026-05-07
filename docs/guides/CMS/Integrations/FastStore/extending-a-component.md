@@ -10,7 +10,7 @@ updatedAt: "2026-04-30T11:48:00.813Z"
 
 To reuse an existing layout or behavior (such as a banner, hero, or product shelf), you can extend a component and adapt it to your store brand or business rules without rewriting everything from scratch. By extending rather than creating components from scratch, you maintain visual and technical consistency and reduce maintenance.
 
-In this guide, you will learn how to extend the **CallToAction** section in your FastStore project.
+In this guide, you'll learn how to extend the **CallToAction** section in your FastStore project.
 
 ![call-to-action](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation___e74ef106c68c9e8d1e99edb2e9840d7b.png)
 
@@ -126,7 +126,7 @@ After installing the CMS into your store account, install the Content plugin on 
     vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore  
     ```
 
-8. Open the `schema.json` file and check if the section was added to the section list. It will probably be like that:
+8. Open the `schema.json` file and check if the section was added to the section list. It'll probably be like that:
 
     ```json  
     …  
@@ -148,13 +148,13 @@ Before syncing your changes with the CMS, run the storefront locally to confirm 
 
 2. Open the development server in your browser and check the terminal output for compilation errors related to `CallToAction`.
 
-> ℹ️ The section will not render visually yet because it has not been added to any page in the CMS, which is done in [Step 4](#step-4---add-the-component-to-the-cms). At this point, you are only verifying that the dev server starts and that your component code, schema, and registration are valid.
+> ℹ️ The section will not render visually yet because it has not been added to any page in the CMS, which is done in [Step 4](#step-4---add-the-component-to-the-cms). At this point, you're only verifying that the development server starts and that your component code, schema, and registration are valid.
 
-If the dev server starts successfully and reports no compilation errors, you are ready to sync your changes with the CMS.
+If the development server starts successfully and reports no compilation errors, you're ready to sync your changes with the CMS.
 
 ### Step 3 - Sync the changes with the CMS
 
-Push the changes to sync with the CMS. Before doing it, make sure you are logged in to your VTEX account by running in the terminal the `vtex login {accountName}` command. Change the `{accountName}` to your store account, for example, `vtex login mystore`.
+Push the changes to sync with the CMS. Before doing it, make sure you're logged in to your VTEX account by running in the terminal the `vtex login {accountName}` command. Change the `{accountName}` to your store account, for example, `vtex login mystore`.
 
 Push the schema generated to the CMS to reflect in the Admin. To do this, run the following command:
 
