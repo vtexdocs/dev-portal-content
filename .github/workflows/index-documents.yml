@@ -35,7 +35,7 @@ jobs:
           if [ "${{ github.event.inputs.full_reindex }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" -a "${{ github.event.inputs.full_reindex }}" = "true" ]; then
             FILES=$(find docs -name '*.md' -type f | jq -R -s -c 'split("\n") | map(select(length > 0))')
           else
-            FILES=$(git diff --name-only --diff-filter=ACMR HEAD~1 HEAD -- 'docs/**/*.md' | jq -R -s -c 'split("\n") | map(select(length > 0))')
+            FILES=$(git -c core.quotepath=false diff --name-only --diff-filter=ACMR HEAD~1 HEAD -- 'docs/**/*.md' | jq -R -s -c 'split("\n") | map(select(length > 0))')
           fi
           echo "files=$FILES" >> $GITHUB_OUTPUT
           echo "count=$(echo $FILES | jq length)" >> $GITHUB_OUTPUT
