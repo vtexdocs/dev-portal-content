@@ -1,6 +1,6 @@
 ---
 title: "FastStore v4: New major version with performance, localization, and architectural updates"  
-slug: "2026-05-05-faststore-v4"  
+slug: "2026-05-07-faststore-v4"  
 type: "added"  
 createdAt: "2026-05-07T11:00:00.000Z"  
 updatedAt: "2026-05-07T11:00:00.000Z"  
