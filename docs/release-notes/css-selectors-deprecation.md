@@ -1,7 +1,8 @@
 ---
 title: CSS Selectors deprecation
 excerpt: 'Starting December 18, 2019, **CSS customization will be done exclusively via CSS Handles**. Selectors based on HTML structure will be blocked for new stores.'
-createdAt: '11/11/2019'
+createdAt: "2019-11-11T00:00:00.000Z"
+updatedAt: "2026-05-07T15:41:30.641Z"
 type: 'info'
 ---
 Starting December 18, 2019, **CSS customization will be done exclusively via CSS Handles** (e.g. `.foo`). Selectors based on HTML structure (e.g. `div > div > span[foo="bar"]`) will be blocked for new stores.
@@ -12,7 +13,7 @@ Previously, many VTEX IO store components didn't have their own **CSS Handles**.
 
 > Handles allow you to select and customize a specific store component using CSS classes.
 
-Without Handles, a component's CSS customization was necessarily done based on the HTML structure.
+Without Handles, a component's CSS customization had to be based on the HTML structure.
 
 **Since most components now have their own CSS Handles, the usage of some CSS selectors will be discontinued.**
 
@@ -24,7 +25,7 @@ Below, find the full CSS Selectors list that will **continue to be allowed** for
 - `:nth-child(even)` and `:nth-child(odd)`
 - Space combinator (e.g. `.foo .bar`)
 - `[data-...]`
-- `:global()` for selection of global CSS classes (e.g. `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for elements from different apps, `:global(.tachyons-class)` for Tachyons utilities, or any other global CSS class)
+- `:global()` for selection of global CSS classes (for example, `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for elements from different apps, `:global(.tachyons-class)` for Tachyons utilities, or any other global CSS class)
 
 We are deprecating all selectors and combinators not mentioned on the list above, such as:
 
@@ -32,9 +33,8 @@ We are deprecating all selectors and combinators not mentioned on the list above
 - Combinators such as `>`, `+` and `~`
 - `:nth-child` with numbers
 - Attribute selectors excepting `[data-...]` (e.g. `[class~="mb8 b--red"]`)
-- Arbitrary `:global()` selectors that target non-global CSS classes
 
-  This CSS Selector whitelist is flexible because this deprecation aims to encourage robust CSS customization without risking breakdowns in store layout. If the deprecation of CSS Selectors not on this list causes any unintended harm to your store, let us know immediately through [Store Discussion](https://github.com/vtex-apps/store-discussion/issues).
+  This CSS Selector whitelist is flexible because the deprecation aims to encourage robust CSS customization without risking store layout breakdowns. If the deprecation of CSS Selectors not on this list causes any unintended harm to your store, let us know immediately by opening a ticket with [VTEX Support](https://supporticket.vtex.com/support).
 
 ## Why this action is being taken
 
