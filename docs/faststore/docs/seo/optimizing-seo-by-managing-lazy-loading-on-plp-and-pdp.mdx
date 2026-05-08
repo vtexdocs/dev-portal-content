@@ -75,19 +75,54 @@ Because of these trade-offs, deciding when to apply or skip lazy loading require
 
 #### When to use lazy loading 
 
-| Context | Benefit | Example |
-| :---- | :---- | :---- |
-| **To load content that isn't immediately visible** | Improves initial page load speed by delaying non-critical assets that are below the fold. | A homepage with promotional banners and lookbooks that load as the user scrolls down the page. |
-| **To improve page speed for a media-heavy page** | Optimizes resource usage and ensures the most important content is prioritized and loads first. | A PDP includes a "Complete the Look" carousel at the bottom. Since this is a supplementary suggestion, lazy loading ensures the main product details are prioritized and the carousel images load only when the user scrolls to that section. |
-| **The content doesn't affect SEO or crawling** | It will not negatively impact search engine visibility since the content isn't critical for SEO or structured data. | A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured data for SEO, lazy loading it will not negatively affect search engine visibility. |
-| **To balance server load during high traffic** | It reduces server spikes by loading only the images visible on the screen, keeping the browsing experience fast. | Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, which reduces server spikes and keeps the browsing experience fast. |
+<details>
+<summary>To load content that isn't immediately visible</summary>
+
+Improves initial page load speed by delaying non-critical assets that are below the fold.
+
+**Example:** A homepage with promotional banners and lookbooks that load as the user scrolls down the page.
+
+</details>
+
+<details>
+<summary>To improve page speed for a media-heavy page</summary>
+
+Optimizes resource usage and ensures the most important content is prioritized and loads first.
+
+**Example:** A PDP includes a "Complete the Look" carousel at the bottom. Since this is a supplementary suggestion, lazy loading ensures the main product details are prioritized and the carousel images load only when the user scrolls to that section.
+
+</details>
+
+<details>
+<summary>The content doesn't affect SEO or crawling</summary>
+
+It will not negatively impact search engine visibility since the content isn't critical for SEO or structured data.
+
+**Example:** A store's homepage has a "Fashion Trends" slider in the footer with inspirational videos. Since this content does not impact structured data for SEO, lazy loading it will not negatively affect search engine visibility.
+
+</details>
+
+<details>
+<summary>To balance server load during high traffic</summary>
+
+It reduces server spikes by loading only the images visible on the screen, keeping the browsing experience fast.
+
+**Example:** Category pages like "Dresses" or "Jeans" may have hundreds of product image previews. With lazy loading, only the images visible above the fold load immediately, which reduces server spikes and keeps the browsing experience fast.
+
+</details>
 
 #### When not to use lazy loading 
 
-| Context | Reason to avoid | Example |
-| :---- | :---- | :---- |
-| **Hiding critical page elements from crawlers** | Search engines might not see all content if it is lazy-loaded, potentially harming your site's SEO. | A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index all new products shown in this grid. |
-| **Disabling lazy loading globally** | Apply lazy loading selectively. Rendering everything upfront increases payloads, exhausts crawl budget, and slows indexing. | A homepage with numerous campaign images should lazy load secondary media while keeping critical content immediately available. |
+<details>
+<summary>When critical page elements need to be accessible to crawlers</summary>
+
+Search engines might not see all content if it is lazy-loaded, potentially harming your site's SEO.
+
+**Example:** A "New Arrivals" grid on your homepage displays featured items from several categories. Lazy loading is skipped here to ensure search engines can index all new products shown in this grid.
+
+</details>
+
+> ⚠ Avoid disabling lazy loading globally. Apply lazy loading selectively rather than rendering everything upfront, as this increases payloads, exhausts crawl budget, and slows indexing. For example, a homepage with numerous campaign images should lazy load secondary media while keeping critical content immediately available.
 
 ### Step 2: Controlling lazy loading for custom sections
 
