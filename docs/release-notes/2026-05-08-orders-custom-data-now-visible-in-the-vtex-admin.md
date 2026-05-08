@@ -9,7 +9,7 @@ excerpt: "VTEX Admin now shows information about custom fields and apps."
 
 We added support for displaying custom order data inside the VTEX Admin so you can view store-level custom fields and app-specific information directly from the order details page.
 
-![Order custom data inside the VTEX Admin](https://cdn.statically.io/gh/vtexdocs/dev-portal-content/images/2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin.png)
+![Order custom data inside the VTEX Admin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin.png)
 
 ## What has changed?
 
