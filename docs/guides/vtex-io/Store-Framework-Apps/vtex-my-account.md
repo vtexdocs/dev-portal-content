@@ -5,9 +5,10 @@ hidden: false
 createdAt: "2020-06-03T15:19:19.057Z"
 updatedAt: "2022-05-05T12:32:35.766Z"
 ---
+
 > Notice: React: 3.x | Store: 0.x
 
-[Portal](https://github.com/vtex-apps/my-account/tree/master 'Portal version')
+[Portal](https://github.com/vtex-apps/my-account/tree/master)
 
 ## Intro
 
@@ -137,11 +138,11 @@ Lastly, create a `store/plugins.json` file like so:
 Now create a new file in the root of the "react" folder with the name "MyAppPage.js".
 
 ```js
-import React, { Fragment } from 'react'
-import { Route } from 'vtex.my-account-commons/Router'
+import React, { Fragment } from "react";
+import { Route } from "vtex.my-account-commons/Router";
 // Your component pages
-import UserSupport from './components/UserSupport'
-import UserPoints from './components/UserPoints'
+import UserSupport from "./components/UserSupport";
+import UserPoints from "./components/UserPoints";
 
 const MyAppPage = () => (
   <Fragment>
@@ -149,9 +150,9 @@ const MyAppPage = () => (
     <Route path="/support" exact component={UserSupport} />
     <Route path="/points" exact component={UserPoints} />
   </Fragment>
-)
+);
 
-export default MyAppPage
+export default MyAppPage;
 ```
 
 In this example you will have two new pages `/account/#/support` and `/account/#/points`, rendering the UserSupport and UserPoints components respectively.
@@ -163,28 +164,28 @@ This component will receive a prop called `render`. You **must** call it with an
 Example of an MyAppLink implementation:
 
 ```jsx
-import PropTypes from 'prop-types'
-import { intlShape, injectIntl } from 'react-intl'
+import PropTypes from "prop-types";
+import { intlShape, injectIntl } from "react-intl";
 
 const MyAppLink = ({ render, intl }) => {
   return render([
     {
-      name: intl.formatMessage({ id: 'userPoints.link' }),
-      path: '/points',
+      name: intl.formatMessage({ id: "userPoints.link" }),
+      path: "/points",
     },
     {
-      name: intl.formatMessage({ id: 'userSupport.link' }),
-      path: '/support',
+      name: intl.formatMessage({ id: "userSupport.link" }),
+      path: "/support",
     },
-  ])
-}
+  ]);
+};
 
 MyAppLink.propTypes = {
   render: PropTypes.func.isRequired,
   intl: intlShape.isRequired,
-}
+};
 
-export default injectIntl(MyAppLink)
+export default injectIntl(MyAppLink);
 ```
 
 ### Defining the default home page of My Account
@@ -210,15 +211,15 @@ Inside the Profile page, right above the `edit` button, there is another extensi
 const BeautyData = ({ render }) => {
   return render([
     {
-      label: 'Hair color',
-      value: 'Red',
+      label: "Hair color",
+      value: "Red",
     },
     {
-      label: 'Skin color',
-      value: 'White',
+      label: "Skin color",
+      value: "White",
     },
-  ])
-}
+  ]);
+};
 ```
 
 ### Edit personal info
@@ -230,43 +231,43 @@ If you are going to display tailored data inside your customer's profile, you pr
 **Example**
 
 ```js
-import React, { Component } from 'react'
-import { Input } from 'vtex.styleguide'
+import React, { Component } from "react";
+import { Input } from "vtex.styleguide";
 
 class FavColor extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      color: '',
+      color: "",
       error: null,
-    }
+    };
   }
 
   componentDidMount() {
-    this.props.registerValidator(this.validate)
-    this.props.registerSubmitter(this.submit)
+    this.props.registerValidator(this.validate);
+    this.props.registerSubmitter(this.submit);
   }
 
-  onChange = e => {
-    this.setState({ color: e.target.value })
-  }
+  onChange = (e) => {
+    this.setState({ color: e.target.value });
+  };
 
   validate = () => {
-    const { color } = this.state
-    this.setState({ error: null })
-    if (color !== 'yellow') {
-      this.setState({ error: 'Your favorite color must be yellow.' })
-      return false
+    const { color } = this.state;
+    this.setState({ error: null });
+    if (color !== "yellow") {
+      this.setState({ error: "Your favorite color must be yellow." });
+      return false;
     }
-    return true
-  }
+    return true;
+  };
 
   submit = () => {
-    console.log('Success! Your information is saved.')
-  }
+    console.log("Success! Your information is saved.");
+  };
 
   render() {
-    const { error, color } = this.state
+    const { error, color } = this.state;
     return (
       <div className="mb8">
         <Input
@@ -277,9 +278,9 @@ class FavColor extends Component {
           onChange={this.onChange}
         />
       </div>
-    )
+    );
   }
 }
 
-export default FavColor
+export default FavColor;
 ```

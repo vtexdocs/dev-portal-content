@@ -2,8 +2,8 @@
 title: 'Search query'
 excerpt: "Due to an adaption of our Search component to use more performant APIs, our searches now take __50% less time__ to display results to the user."
 createdAt: "2019-07-10"
+type: 'info'
 ---
-
 Due to an adaption of our Search component to use more performant APIs, our searches now take __50% less time__ to display results to the user.
 
 ## What has changed

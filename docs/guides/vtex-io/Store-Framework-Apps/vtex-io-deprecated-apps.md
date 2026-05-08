@@ -4,13 +4,13 @@ slug: "vtex-io-deprecated-apps"
 excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
-updatedAt: "2025-07-07T18:16:48.854Z"
+updatedAt: "2026-01-26T16:16:14.190Z"
 ---
 
 A deprecated app refers to an application no longer supported or maintained by VTEX, meaning that:
 
 - VTEX no longer provides technical support.
-- VTEX is not liable for issues arising from their use.
+- VTEX is not liable for issues arising from its use.
 - VTEX will not provide bug fixes, updates, or security patches.
 - VTEX will not develop new features.
 - The documentation will not be updated.
@@ -69,7 +69,6 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | App                                | `vendor.app-name`    |
 | -------------------------------- | ---------------------------- |
 | Customer Management  | `vtex.admin-customers`<br><br>`vtex.admin-customers-graphql` |
-| Safe Data                        | `vtex.safedata`               |
 
 ### Multi-language and multi-currency
 
@@ -91,6 +90,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Massive Stock Update                     | `vtexarg.massive-stock-update`         |
 | Package Optimizer (FedEx Shipping)       | `vtex.packing-optimization`           |
 | Return App                              | `vtex.return-app`                     |
+| Shipping Option Components              | `vtex.shipping-option-components`     |
 | ShipStation                             | `vtex.ship-station`                   |
 | Shopper Location (Inventory Locator)     | `vtex.shopper-location`      |
 | Store Locator                           | `vtex.store-locator`                  |
@@ -110,7 +110,6 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
 | Advanced seller onboarding      | `vtexromania.advanced-seller-onboarding` |
-| Google Shopping                | `vtex.google-shopping`<br><br>`vtex.google-shopping-api`   |
 | Glovo                          | `vtex.glovo-integration`               |
 | Lengow                         | `vtex.lengow-integration`              |
 | Mktplace Financial Commissions | `vtex.marketplace-financial-commission` |
@@ -140,6 +139,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
+| Affirm payment                  | `vtex.affirm-payment`                      |
 | Bizum (PPP)                     | `vtex.integration-bizum`                   |
 | Cetelem (PPP)                   | `vtex.integration-cetelem`                 |
 | Digital River                   | `vtexus.connector-digital-river`           |
@@ -161,13 +161,11 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Adobe Launch Pixel| `vtexasia.adobe-launch-pixel`        |
 | Digioh           | `vtex.digioh-pixel`                   |
 | edrone pixel     | `vtexromania.edrone`                  |
-| Facebook         | `vtex.facebook-capi`<br><br>`vtex.facebook-fbe`<br><br>`vtex.facebook-checkout-pixel`<br><br>`vtex.facebook-fbe-webhook`<br><br>`vtex.facebook-fbe-authentication`<br><br>`vtex.facebook-fbe-redirect`<br><br>`vtex.facebook-fbe-service`<br><br>`vtex.facebook-fbe-worker`      |
 | Klaviyo          | `vtex.klaviyo-pixel`                  |
 | Listrak          | `vtex.listrak-pixel`                  |
 | newsman pixel    | `vtex.newsman`                        |
 | Podium           | `vtex.podium-pixel`                   |
 | retargeting pixel| `vtex.retargeting`                    |
-| Tiktok           | `vtexbr.tiktok-tbp`                   |
 | Treasure Data    | `vtex.treasure-data-pixel`            |
 | Wordpress App    | `vtex.wordpress-integration`          |
 

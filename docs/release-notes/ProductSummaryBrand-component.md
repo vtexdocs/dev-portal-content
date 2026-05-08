@@ -2,8 +2,8 @@
 title: ProductSummaryBrand component
 excerpt: "Render brand data with your own customizations in your Shelf component."
 createdAt: '2019-08-29T18:27:49.833Z'
+type: 'info'
 ---
-
 The new `ProductSummaryBrand` component make it possible to include brand data in the Shelf, as well as in other store components that use the Product Summary context. 
 
 ## What has changed

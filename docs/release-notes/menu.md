@@ -2,8 +2,8 @@
 title: Menu
 excerpt: "A new configuration of the Menu block allows its content to be edited with Site Editor! If there's something that retailers like, it's code independence. And if there's something we like, it's to see happy retailers!"
 createdAt: "2019-11-11T14:47:00.000Z"
+type: 'info'
 ---
-
 Edit Menu items using the **admin's Site Editor** with the help of a new and simple Menu component configuration. 
 
 ## What has changed

@@ -2,8 +2,8 @@
 title: Tab Layout
 excerpt: "What's better than one layout release? Two of them. The Tab layout allow the construction of different layouts for your store's tabs."
 createdAt: "2019-11-10T14:47:00.000Z"
+type: 'info'
 ---
-
 Tab Layout is a layout structure that allows the construction of custom layouts within each tab present in your store. 
 
 ![tab-layout](https://user-images.githubusercontent.com/52087100/66661201-fc70c880-ec1c-11e9-8387-3fea98f59e3c.png)

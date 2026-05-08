@@ -6,9 +6,9 @@ createdAt: "2024-06-06T10:17:18.615Z"
 updatedAt: "2024-06-06T14:00:00.615Z"
 excerpt: "While trying to checkout on a FastStore website, you might see a 'This Connection Is Not Private' error."
 tags:
-    - faststore
-    - checkout
-    - dns
+    - FastStore
+    - Checkout
+    - DNS
 ---
 
 **Keywords:** FastStore | Checkout | DNS | SSL

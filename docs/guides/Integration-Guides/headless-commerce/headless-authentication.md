@@ -21,11 +21,13 @@ To ensure a secure shopping experience, shopper authentication for headless VTEX
 
 Below you can learn more details on each of these steps.
 
->❗ Note that, when building a headless store, you are opting to use a frontend application different from VTEX's native frontend. Hence, you must adhere to the guidelines provided below and be aware of your [application's responsibilities](#authentication-responsibilities-of-headless-applications) in order to ensure a smooth and secure shopping experience for your customers.
+>❗ When building a headless store, you are opting to use a frontend application different from VTEX's native frontend. Hence, you must adhere to the guidelines provided below and be aware of your [application's responsibilities](#authentication-responsibilities-of-headless-applications) in order to ensure a smooth and secure shopping experience for your customers.
 
 ### OAuth log in
 
-Shopper authentication in your headless store must happen through an external identity provider. To do this, you must [set up an OAuth login integration](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2).
+Shopper authentication in your headless store must happen through an external identity provider. To do this, you must [set up a custom OAuth login integration](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2).
+
+>❗ Headless authentication scenarios require using a [custom OAuth login integration](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2). The native social authentication settings described in the [Configuring login with Facebook and Google](https://help.vtex.com/en/tutorial/configuring-login-with-facebook-and-google--tutorials_513) guide don't apply to headless authentication.
 
 After you have configured your [OAuth](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2) connection in the VTEX Admin panel, you can implement the OAuth login on your frontend, according to your store's needs and [responsibilities](#authentication-responsibilities-of-headless-applications).
 

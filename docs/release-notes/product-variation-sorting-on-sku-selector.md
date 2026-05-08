@@ -6,8 +6,6 @@ hidden: false
 type: "fixed"
 ---
 
-![Store Framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/product-variation-sorting-on-sku-selector-0.png)
-
 Previously, the SKU Selector rendered in a Product Summary Component ([product-summary-sku-selector block](https://developers.vtex.com/docs/apps/vtex.product-summary/ProductSummarySKUSelector/)) did not respect the Catalog data when displaying product variations.
 
 As a result, the product variations didn't have a specific sorting when displayed to users, leading to a poor UX.

@@ -3,9 +3,8 @@ slug: "vtex-io-release-notes-december-2019"
 title: "VTEX IO Release Notes - December 2019"
 createdAt: 2019-12-19T18:00:00.000Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-release-notes-december-2019-0.png)
 
 You better watch out, you better not cry, you better not pout and I'm telling you why: **Release Notes** (once again) **is coming to town**!

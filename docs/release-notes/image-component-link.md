@@ -2,8 +2,8 @@
 title: Image component now has href prop
 excerpt: "Our image component now supports the prop link."
 createdAt: "2019-07-31T14:47:00.000Z"
+type: 'info'
 ---
-
 Our image component - https://github.com/vtex-apps/store-components/blob/master/react/components/Image/README.md now supports the prop link. It is now possible to make the image clickable, and to set the url to where the user will be redirected both on storefront and in the block files.
 
 ## What has changed

@@ -7,46 +7,44 @@ components:
   - SearchInputField.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/SearchInputField)
+
 An [InputField](https://developers.vtex.com/docs/guides/faststore/molecules-input-field) with a search button. This component is part of the [Search](https://developers.vtex.com/docs/guides/faststore/feature-search) feature.
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { SearchInputField } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/SearchInputField/styles.scss'
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SearchInputField onSubmit={() => {}} />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <SearchInputField onSubmit={() => {}} />
+    ```
+  </Tab>
+</Tabs>
 
 ## Usage
 
-<OverviewSection>
-  <SearchInputField onSubmit={() => {}} />
-</OverviewSection>
+### Import the component
+
 ```tsx
-<SearchInputField onSubmit={() => {}} />
+import { SearchInputField } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/SearchInputField/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
 ---
 
-## Props
-
-<ComponentPropsSection component="SearchInputField" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -65,9 +63,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <TokenRow token="--fs-search-input-field-transition-function" value="ease" />
 </TokenTable>
 
-### Nested Elements
-
-#### Button
+### Design tokens: Button
 
 <TokenTable>
   <TokenRow
@@ -85,7 +81,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Input
+### Design tokens: Input
 
 <TokenTable>
   <TokenRow
@@ -101,10 +97,16 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `SearchInputField` styles using the following data attributes:
 
 `data-fs-search-input-field`
 
 `data-fs-search-input-field-input`
+
+---
+
+## Props
+
+<ComponentPropsSection component="SearchInputField" />

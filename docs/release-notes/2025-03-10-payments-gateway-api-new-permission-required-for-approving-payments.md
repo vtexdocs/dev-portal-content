@@ -6,6 +6,8 @@ createdAt: "2025-03-10T17:08:52.219Z"
 updatedAt: ""
 hidden: false
 excerpt: "From April 1, 2025, a new permission is required to access payment notification endpoints in the Payments Gateway API."
+tags:
+    - Payments
 ---
 
 We're introducing a new permission model for the payment notification endpoints in the Payments Gateway API, used exclusively for manual approval of payments:

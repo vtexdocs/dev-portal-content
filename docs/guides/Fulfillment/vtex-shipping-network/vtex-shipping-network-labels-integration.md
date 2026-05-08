@@ -52,7 +52,7 @@ Order with another origin:
 
 **POST** - `https://api.vtex.com/api/transportation/deliverylabels/{sellerOrderId}`
 
-The [authentication](https://developers.vtex.com/docs/guides/authentication-overview#application-keys) headers must be used to call this endpoint:
+The [authentication](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) headers must be used to call this endpoint:
 
 - X-VTEX-API-AppKey
 - X-VTEX-API-AppToken
@@ -85,7 +85,7 @@ This endpoint can return other status codes in the following scenarios:
 | **Code** | **Message** | **Description** |
 | ---------- | ---------- | ---------- |
 | 400 | `Package {packageId} has an invalid state!` | One or more packages associated with the `orderId` have an invalid status. This might happen if the carrier app has not been notified about the package yet. Retry the operation in a few minutes. |
-| 401 | `Unauthorized` | [Authentication](https://developers.vtex.com/docs/guides/authentication-overview#application-keys) credentials are missing. Make sure to include the headers `X-VTEX-API-AppToken` and `X-VTEX-API-AppKey`. |
+| 401 | `Unauthorized` | [Authentication](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) credentials are missing. Make sure to include the headers `X-VTEX-API-AppToken` and `X-VTEX-API-AppKey`. |
 | 403 | `reason: User does not have access to the resources [TransportationAdmin]` | Forbidden response status code indicates that the request has not been completed because it lacks valid authentication credentials for the requested resource. In this case, the header values `X-VTEX-API-AppToken` or `X-VTEX-API-AppKey` are invalid. |
 | 404 | `Not Found` | The `orderId` provided does not belong to any existing order. This might happen if the `orderId` does not contain the correct prefix. |
 | 500 | `Internal Server Error` | Unexpected error. |

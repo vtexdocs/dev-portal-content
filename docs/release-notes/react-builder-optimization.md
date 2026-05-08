@@ -2,8 +2,8 @@
 title: 'React builder optimization'
 excerpt: "The React builder optimization improves webpack logic by having more and smaller javascript bundles."
 createdAt: "2019-07-03T14:47:00.000Z"
+type: 'info'
 ---
-
 ## What has changed
 
 Previously, a lot of unnecessary code was being sent to the browser due to the way React builder was implemented, directly impacting the user experience when accessing a page.  

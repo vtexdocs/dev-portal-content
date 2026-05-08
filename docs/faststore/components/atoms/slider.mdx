@@ -1,15 +1,14 @@
 ---
 title: "Slider"
 excerpt: Sliders allow users to select a single value from a range.
-sidebar_custom_props:
-  image: https://vtexhelp.vtexassets.com/assets/docs/src/Slider___9fa1f5d802a9bbdc93a77db318594af7.png
 ---
 
-## Overview
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Slider)
+
+The `Slider` component provides an interactive way for users to select a single value from a defined range. Common use cases include adjusting prices, setting volume, or selecting values where precision within boundaries matters.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
-    <p>Default Version</p>
     <OverviewSection>
       <Slider
         max={{ absolute: 500, selected: 250 }}
@@ -17,114 +16,156 @@ sidebar_custom_props:
         absoluteValuesLabel={{ min: "0", max: "500"}}
       />
     </OverviewSection>
-    <p>Show Labels on Hover</p>
-    <OverviewSection>
-      <Slider
-        max={{ absolute: 500, selected: 250 }}
-        min={{ absolute: 0, selected: 100 }}
-        absoluteValuesLabel={{ min: "0", max: "500"}}
-        maxValueLabelComponent={(maxValue) => {return <span>{maxValue}</span>}}
-        minValueLabelComponent={(minValue) => {return <span>{minValue}</span>}}
-      />
-    </OverviewSection>
-
   </Tab>
   <Tab>
-    <p>Default Version</p>
     ```tsx
-    <Slider
-      max={{ absolute: 500, selected: 250 }}
-      min={{ absolute: 0, selected: 100 }}
-      absoluteValuesLabel={{ min: "0", max: "500"}}
-    />
-    ```
-    <p>Show Labels on Hover</p>
-    ```tsx
-    <Slider
-      max={{ absolute: 500, selected: 250 }}
-      min={{ absolute: 0, selected: 100 }}
-      absoluteValuesLabel={{ min: "0", max: "500"}}
-      maxValueLabelComponent={(maxValue) => {return <span>{maxValue}</span>}}
-      minValueLabelComponent={(minValue) => {return <span>{minValue}</span>}}
-    />
+    import React from 'react' 
+    import { Slider } from '@faststore/ui'
+    
+    export default function SliderUsage() {
+      return(
+        <Slider
+          max={{ absolute: 500, selected: 250 }}
+          min={{ absolute: 0, selected: 100 }}
+          absoluteValuesLabel={{ min: "0", max: "500"}}
+        />
+      )
+    }
     ```
   </Tab>
 </Tabs>
 
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
-import { Slider } from '@faststore/ui'
+import { Slider } from "@faststore/ui";
 ```
 
 ### Import Styles into your FastStore project
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
-@import '@faststore/ui/src/components/atoms/Slider/styles.scss';
+@import "@faststore/ui/src/components/atoms/Slider/styles.scss";
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Examples
 
-<OverviewSection>
-  <Slider
-    max={{ absolute: 500, selected: 250 }}
-    min={{ absolute: 0, selected: 100 }}
-    absoluteValuesLabel={{
-      min: useFormattedPrice(0),
-      max: useFormattedPrice(500),
-    }}
-    maxValueLabelComponent={(maxValue) => {
-      return <Price formatter={useFormattedPrice} value={maxValue} />
-    }}
-    minValueLabelComponent={(minValue) => {
-      return <Price formatter={useFormattedPrice} value={minValue} />
-    }}
-  />
-</OverviewSection>
-```tsx
-<Slider
-  max={{ absolute: 500, selected: 250 }}
-  min={{ absolute: 0, selected: 100 }}
-  absoluteValuesLabel={{
-    min: useFormattedPrice(0),
-    max: useFormattedPrice(500),
-  }}
-  maxValueLabelComponent={(maxValue) => {
-    return <Price formatter={useFormattedPrice} value={maxValue} />
-  }}
-  minValueLabelComponent={(minValue) => {
-    return <Price formatter={useFormattedPrice} value={minValue} />
-  }}
-/>
-```
+### Slider with custom step
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Slider
+        min={{ absolute: 0, selected: 10 }}
+        max={{ absolute: 50, selected: 40 }}
+        absoluteValuesLabel={{ min: '0', max: '50' }}
+        step={5}
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Slider } from '@faststore/ui'
+
+    export default function SliderExample() {
+      return (
+        <Slider
+          min={{ absolute: 0, selected: 10 }}
+          max={{ absolute: 50, selected: 40 }}
+          absoluteValuesLabel={{ min: '0', max: '50' }}
+          step={5}
+        />
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Accessible Slider with `aria-value-text`
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Slider
+        min={{ absolute: 0, selected: 5 }}
+        max={{ absolute: 50, selected: 45 }}
+        absoluteValuesLabel={{ min: "0", max: "50" }}
+        getAriaValueText={(value) => `${value} units`}
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Slider } from "@faststore/ui";
+
+    export default function AccessibleSlider() {
+      const getAriaValueText = (value: number) => `${value} units`;
+
+      return (
+        <Slider
+          min={{ absolute: 0, selected: 5 }}
+          max={{ absolute: 50, selected: 45 }}
+          absoluteValuesLabel={{ min: "0", max: "50" }}
+          getAriaValueText={getAriaValueText}
+        />
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Slider with custom value labels
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Slider
+        min={{ absolute: 0, selected: 10 }}
+        max={{ absolute: 100, selected: 90 }}
+        absoluteValuesLabel={{ min: '0', max: '100' }}
+        minValueLabelComponent={(min) => <span>{min} kg</span>}
+        maxValueLabelComponent={(max) => <span>{max} kg</span>}
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Slider } from "@faststore/ui";
+
+    function CustomLabel({ value }: { value: number }) {
+      return <span>{value} kg</span>;
+    }
+
+    export default function CustomLabelSlider() {
+      return (
+        <Slider
+          min={{ absolute: 0, selected: 10 }}
+          max={{ absolute: 100, selected: 90 }}
+          absoluteValuesLabel={{ min: "0", max: "100" }}
+          minValueLabelComponent={(min) => <CustomLabel value={min} />}
+          maxValueLabelComponent={(max) => <CustomLabel value={max} />}
+        />
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
-## Props
-
-<ComponentPropsSection component="Slider" />
-
-### Range
-
-<PropsSection propsList={propsRange} />
-
-### RangeLabel
-
-<PropsSection propsList={propsRangeLabel} />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow token="--fs-slider-height" value="var(--fs-spacing-2)" />
@@ -159,9 +200,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-### Nested Elements
+### Design tokens: Thumb
 
-#### Thumb
+Thumb tokens control the appearance of the slider's draggable handle, including its size, color, border, and hover states.
 
 <TokenTable>
   <TokenRow token="--fs-slider-thumb-size" value="var(--fs-spacing-4)" />
@@ -196,7 +237,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Absolute Values
+### Design tokens: Absolute values
+
+Absolute value tokens define the color for the labels showing the minimum and maximum values on the slider.
 
 <TokenTable>
   <TokenRow
@@ -206,7 +249,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   />
 </TokenTable>
 
-#### Value Label
+### Design tokens: Value label
+
+Value label tokens set the position and background color for the labels displaying the current slider value.
 
 <TokenTable>
   <TokenRow
@@ -222,9 +267,9 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override Slider styles using the following data attributes:
 
 `data-fs-slider`
 
@@ -238,13 +283,27 @@ For further customization, you can use the following data attributes:
 
 ---
 
+## Props
+
+<ComponentPropsSection component="Slider" />
+
+### Range
+
+<PropsSection propsList={propsRange} />
+
+### RangeLabel
+
+<PropsSection propsList={propsRangeLabel} />
+
+---
+
 ## Related components
 
 <SectionList>
   <SectionItem
     title="PriceRange"
     description="
-Price Ranges are sliders that allows users to select a maximum and minimum price."
+Price Ranges are sliders that allow users to select a maximum and minimum price."
     actionPath="/docs/guides/faststore/organisms-price-range"
   >
     <PriceRangeUsage />

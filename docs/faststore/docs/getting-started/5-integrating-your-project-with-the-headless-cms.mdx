@@ -1,0 +1,66 @@
+---
+title: '5. Integrating your project with the Headless CMS'
+excerpt: "Connect your FastStore project with the Headless CMS to manage and publish your store’s content efficiently."
+seeAlso: 
+  - "/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference"
+---
+
+In this step, you'll connect your FastStore project to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview)  so editors can create, preview, and publish content. You'll also configure the webhooks that keep builds and previews in sync—without this integration, CMS changes won't reach your storefront.
+
+## What you'll accomplish
+
+By the end of this step, you will have:
+
+- Configured Headless CMS webhooks to trigger builds when content is published
+- Set up preview URLs for content editors to see changes before going live
+- Configured WebOps to communicate CMS updates back to your Git repository
+- Established a complete content workflow where CMS changes automatically sync with your codebase
+
+This integration enables your content team to manage store content independently while keeping everything in sync with your development workflow.
+
+## Step 1: Configuring the Headless CMS
+
+Configure the URLs of the webhooks used by the Headless CMS app.
+
+1. In the VTEX Admin, access **Storefront > Headless CMS**. 
+2. In the FastStore project interface, click on `Settings` (⚙️).
+3. In **Settings**, click the `Build` tab.
+4. In **Build Webhook URL**, click `Add`.
+5. Enter the following value. _Replace the values between curly brackets according to your scenario._
+
+    ```bash
+    https://app.io.vtex.com/vtex.cms-builder-sf-jamstack/v1/{account}/master/build-releases
+    ```
+
+6. Click **SAVE**.
+    
+  > ℹ️ When an editor clicks to publish a page using the Headless CMS interface, the CMS calls the **Build Webhook URL**, which changes the page's status to `published`. The CMS then waits for the content to be built in the background.
+
+7. Fill in the **Preview URL** field with your production URL. This URL activates the button on the Headless CMS, allowing you to preview the changes made to a page. _Replace the values between curly brackets according to your scenario._
+
+## Step 2: Communicating WebOps updates to the Headless CMS
+
+If you are developing your FastStore project with CI/CD and Headless CMS, you must ensure that CI/CD is aware of every CMS update performed via the VTEX Admin. To do so, you must configure the WebOps webhooks responsible for communicating with the Headless CMS as follows.
+
+1. Open your FastStore project in any code editor of your preference.
+2. Edit the `discovery.config.js` file in the root directory of your project.
+3. In the Headless CMS configuration, add the `webhookUrls` property corresponding to your store website as follows:
+
+    ```js discovery.config.js
+    "vtexHeadlessCms": {
+      webhookUrls: [
+        "https://{account}.myvtex.com/cms-releases/webhook-releases"
+      ]
+    }
+    ```
+
+4. Open a Pull Request in your project, including the previous changes.
+5. Merge the Pull Request.
+
+Now you can make changes to the Headless CMS and check if commits are being created in the project. In the following example, the `Hero` title was modified to `10% off on first purchase`, and we can see that it generated a commit in the repository.
+
+![cms-commits](https://vtexhelp.vtexassets.com/assets/docs/src/cms-example-commits___7bb21be1504033098122feb013667b49.png)
+
+## Next step
+
+Now that Headless CMS is integrated, set up content types and sections for your editors: [Setting up the Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms)

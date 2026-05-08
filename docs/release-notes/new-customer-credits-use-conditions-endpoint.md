@@ -12,4 +12,4 @@ Each Customer Credit account has a set of use conditions configured specifically
 
 With that, the Checkout displays a personalized scenario every time that a client chooses the Customer Credit as a payment method to make a purchase.
 
-Now, using [this new endpoint] (link), you can retrieve an account's use conditions all at once. In addition to the payment conditions, the payload also retrieves the quantity of available credit and the account identifier.
+Now, using [this new endpoint](link), you can retrieve an account's use conditions all at once. In addition to the payment conditions, the payload also retrieves the quantity of available credit and the account identifier.

@@ -2,8 +2,8 @@
 title: CSS Handles component development
 excerpt: "Devs, celebrate with me: this release is about a more advantageous, easy and brand new way to create CSS Handles for store components."
 createdAt: "2019-10-25T14:47:00.000Z"
+type: 'info'
 ---
-
 Create CSS Handles for a store's component in a **faster**, **simpler** and **more resilient** way. 
 
 ## What has changed

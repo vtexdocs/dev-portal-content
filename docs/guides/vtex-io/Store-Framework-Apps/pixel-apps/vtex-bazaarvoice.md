@@ -27,8 +27,7 @@ This is a Bazaarvoice first party integration app that is responsible for showin
 
 ## Usage
 
-To use the bazaarvoice components add the [product reviews](https://github.com/vtex-apps/product-review-interfaces/tree/master/example
-) blocks into your theme as you would with any other block.
+To use the bazaarvoice components add the [product reviews](https://github.com/vtex-apps/product-review-interfaces/tree/master/example) blocks into your theme as you would with any other block.
 
 #### Configuration
 

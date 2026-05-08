@@ -2,8 +2,8 @@
 title: Minimum items on Shelf 
 excerpt: "The minimum number of items that can be displayed on a Shelf component can now be set regardless of the display mode (mobile, tablet or desktop)."
 createdAt: "2019-09-08T14:47:00.000Z"
+type: 'info'
 ---
-
 The minimum number of items that can be displayed on a Shelf component can now be set regardless of the display mode (mobile, tablet or desktop).
 
 ## What has changed

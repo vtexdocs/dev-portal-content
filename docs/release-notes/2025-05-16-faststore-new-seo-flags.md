@@ -6,6 +6,8 @@ excerpt: "Control search engine behavior with three new experimental flags: `noR
 createdAt: "2025-05-16T00:00:00.000Z"
 updatedAt: ""
 hidden: false
+tags:
+    - FastStore
 ---
 
 FastStore projects can now use new experimental flags to manage how search engines interact with and categorize store content:

@@ -2,8 +2,8 @@
 title: Navigation arrows on Product image thumbnails 
 excerpt: "Users may now navigate on product images thumbnails by clicking on arrows"
 createdAt: 2019-07-31T14:47:00.000Z
+type: 'info'
 ---
-
 Our product-image component now supports navigation arrows on image thumbnails. It is used to improve the PDP UX . Users now receive a hint that the product has more thumbnails to navigate through and are able to navigate through them easily.
 
 ## What has changed

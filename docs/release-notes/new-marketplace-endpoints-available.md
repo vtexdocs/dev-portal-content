@@ -3,9 +3,8 @@ slug: "new-marketplace-endpoints-available"
 title: "New marketplace endpoints available"
 createdAt: 2020-12-18T21:59:39.778Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/new-marketplace-endpoints-available-0.png)
 
 We have just launched new endpoints in our Marketplace API, so marketplace operators have more agility when approving received SKUs. The new endpoints represent more ways of setting up your auto approve rules, for received SKUs.

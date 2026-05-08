@@ -6,9 +6,8 @@ createdAt: "2024-06-28T14:00:00.000Z"
 updatedAt: ""
 excerpt: "Releasing or publishing a page via Headless CMS or Releases can take a long build times"
 tags:
-    - headless-cms
-    - releases
-    - faststore
+    - Headless CMS
+    - FastStore
 ---
 
 **Tags:** Headless CMS, Releases, FastStore
@@ -41,7 +40,7 @@ After [getting the Release identifier](#step-1-check-the-release-status), follow
 | ---------- | ----------- |
 | ✓ | The build was successful. If this status doesn't match what you see in the Admin, the communication between the Releases module and WebOps must have failed. No action is required, as this error is related to a communication issue on our end. |
 | ● | The build is queued, waiting for other builds to complete. If queued for longer than 45 minutes, please [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk). |
-| ⨯ | The build failed. For more details, proceed to [Step 3 - Identifying the build error](#step-3 -identifying the build error). |
+| ⨯ | The build failed. For more details, proceed to [Step 3 - Identifying the build error](#step-3-identifying-the-build-error). |
 
 ### Step 3 - Identify the build error
 

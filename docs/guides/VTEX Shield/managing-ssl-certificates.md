@@ -160,7 +160,7 @@ curl 'https://myaccountname.vtexcommercestable.com.br/api/edge/certificates' \
 
 ## Getting an SSL certificate by its ID
 
-To get a specific certificate, you can use the [Get SSL certificate by ID](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates/-certificateId-) GET` request. Remember to replace the `accountName` and `VtexIdclientAutCookie` placeholders.
+To get a specific certificate, you can use the [Get SSL certificate by ID](https://developers.vtex.com/docs/api-reference/ssl-certificates-api#get-/api/edge/certificates/-certificateId-) `GET` request. Remember to replace the `accountName` and `VtexIdclientAutCookie` placeholders.
 
 ### Request example
 

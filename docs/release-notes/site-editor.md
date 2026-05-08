@@ -2,8 +2,8 @@
 title: Site Editor
 excerpt: "They say 1 is few, 2 is good and 3 is a party. If a release for the Site Editor is already incredible, picture 3? Check out the new Topbar, complete with tooltips and new modal texts for the admin section."
 createdAt: "2019-11-25T14:47:00.000Z"
+type: 'info'
 ---
-
 The admin's Site Editor section gained three key releases that improve user experience when editing blocks. These improvements are as follows:
 
 - **Topbar redesign**

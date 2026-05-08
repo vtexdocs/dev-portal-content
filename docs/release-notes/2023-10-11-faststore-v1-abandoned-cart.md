@@ -4,6 +4,8 @@ slug: "2023-10-11-faststore-v1-abandoned-cart"
 type: "fixed"
 excerpt: "Introducing a solution for precise abandoned cart tracking and analytics data on FastStorev1"
 createdAt: "2023-10-11T00:00:00.000Z"
+tags:
+    - FastStore
 ---
 
 We have implemented a solution to ensure correct tracking and monitoring of abandoned carts and analytics data for stores currently on [FastStorev1](https://v1.faststore.dev/docs). Stores using this version of FastStore must update their project code with the new `VTEX_METADATA` object.

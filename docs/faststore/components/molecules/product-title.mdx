@@ -7,11 +7,11 @@ components:
   - ProductTitle.tsx
 ---
 
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/ProductTitle)
+
 The `ProductTitle` is a component commonly used on Product Details Page (PDP). It wraps the product name, a product label and the rating.
 
-## Overview
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
+<Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <ProductTitle
@@ -21,7 +21,45 @@ The `ProductTitle` is a component commonly used on Product Details Page (PDP). I
         ratingValue={4}
       />
     </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductTitle
+      title={<h1>Apple Magic Mouse</h1>}
+      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+      refNumber="99995945"
+      ratingValue={4}
+    />
+    ```
+  </Tab>
+</Tabs>
 
+---
+
+## Usage
+
+### Import the component
+
+```tsx
+import { ProductTitle } from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/molecules/ProductTitle/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Examples
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
     <OverviewSection>
       <ProductTitle
         title={<h1>Apple Magic Mouse</h1>}
@@ -29,14 +67,39 @@ The `ProductTitle` is a component commonly used on Product Details Page (PDP). I
         ratingValue={4}
       />
     </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductTitle
+      title={<h1>Apple Magic Mouse</h1>}
+      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+      ratingValue={4}
+    />
+    ```
+  </Tab>
+</Tabs>
 
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
     <OverviewSection>
       <ProductTitle
         title={<h1>Handmade Steel Pants Gorgeous</h1>}
         label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
       />
     </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <ProductTitle
+      title={<h1>Handmade Steel Pants Gorgeous</h1>}
+      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
+    />
+    ```
+  </Tab>
+</Tabs>
 
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
     <OverviewSection>
       <ProductTitle
         title={<h1>Handmade Steel Pants Gorgeous</h1>}
@@ -46,86 +109,19 @@ The `ProductTitle` is a component commonly used on Product Details Page (PDP). I
     </OverviewSection>
   </Tab>
   <Tab>
-
-  ```tsx
-    <ProductTitle
-      title={<h1>Apple Magic Mouse</h1>}
-      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-      refNumber="99995945"
-      ratingValue={4}
-    />
-    <br/>
-    <ProductTitle
-      title={<h1>Apple Magic Mouse</h1>}
-      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-      ratingValue={4}
-    />
-    <br/>
-    <ProductTitle
-      title={<h1>Handmade Steel Pants Gorgeous</h1>}
-      label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-    />
-    <br/>
+    ```tsx
     <ProductTitle
       title={<h1>Handmade Steel Pants Gorgeous</h1>}
       label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
       ratingValue={4.5}
     />
-  ```
-
+    ```
   </Tab>
 </Tabs>
 
 ---
 
-## Import
-
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
-
-```tsx
-import { ProductTitle } from '@faststore/ui'
-```
-
-### Import Styles into your FastStore project
-
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
-
-```scss
-@import '@faststore/ui/src/components/molecules/ProductTitle/styles.scss'
-```
-
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
-
----
-
-## Usage
-
-<OverviewSection>
-  <ProductTitle
-    title={<h1>Apple Magic Mouse</h1>}
-    label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-    refNumber="99995945"
-    ratingValue={4.5}
-  />
-</OverviewSection>
-```tsx
-<ProductTitle
-  title={<h1>Apple Magic Mouse</h1>}
-  label={<DiscountBadge size="big" listPrice={100} spotPrice={90} />}
-  refNumber="99995945"
-  ratingValue={4.5}
-/>
-```
-
----
-
-## Props
-
-<ComponentPropsSection component="ProductTitle" />
-
----
-
-## Design Tokens
+## Design tokens
 
 <TokenTable>
   <TokenRow
@@ -141,11 +137,7 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
   <TokenRow token="--fs-product-title-row-gap" value="var(--fs-spacing-3)" />
 </TokenTable>
 
----
-
-## Nested Elements
-
-### Addendum
+### Design tokens: Addendum
 
 <TokenTable>
   <TokenRow
@@ -162,12 +154,18 @@ Follow the instructions in the [Importing FastStore UI component styles](https:/
 
 ---
 
-## Customization
+## Data attributes
 
-For further customization, you can use the following data attributes:
+You can target and override `ProductTitle` styles using the following data attributes:
 
 `data-fs-product-title`
 
 `data-fs-product-title-header`
 
 `data-fs-product-title-addendum`
+
+---
+
+## Props
+
+<ComponentPropsSection component="ProductTitle" />

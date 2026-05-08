@@ -1,0 +1,124 @@
+---
+title: "Accessing external resources within a VTEX IO app"
+slug: "accessing-external-resources-within-a-vtex-io-app"
+excerpt: "Learn how apps gain access to external resources with policies."
+hidden: false
+createdAt: "2025-11-04T12:00:00.000Z"
+updatedAt: "2025-11-04T12:00:00.000Z"
+---
+
+Apps may need to access resources that are external to the app itself. An external resource could be:
+
+- Endpoints exposed by other VTEX IO apps (REST or GraphQL)
+- [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference)
+- Third-party endpoints outside VTEX, such as a payment provider or an external marketplace.
+
+To access these resources, apps must declare policies in the `policies` list of the [`manifest.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest).
+
+This article explains when policies are required and how each policy type should be declared.
+
+## When to declare policies
+
+Apps need to declare policies to gain access to external resources, which include:
+
+- Access to specific content (file, image, etc.)
+- Access to [VTEX Core Commerce APIs](https://developers.vtex.com/docs/api-reference)
+- Access to resources exposed through role-based policies
+
+> ℹ️ Declaring policies is not required for resources exposed through [resource-based policies](https://developers.vtex.com/docs/guides/controlling-access-to-app-resources#defining-resource-based-policies), since these policies already define which apps are allowed.
+
+## Accessing external resources by policy type
+
+VTEX IO supports three types of access policies when interacting with external resources:
+
+- License Manager policies
+- Policies exposed by VTEX IO apps (role-based)
+- Outbound-access policies
+
+Each type is declared differently and applies to specific use cases, as described below.
+
+### Policies from License Manager
+
+License Manager policies refer to native VTEX resources and have predefined names.
+
+To declare a policy of this type in the `manifest.json`, use the policy name in the `"name"` field. See the example below:
+
+```json manifest.json mark=3:5
+{
+  "policies": [
+    {
+      "name": "Sku.aspx"
+    }
+  ]
+}
+```
+
+You can find all available policy names in the **Key** column of the [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) table. For more details, see the [Policies from License Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies-from-license-manager) article.
+
+### Policies from VTEX IO apps (role-based)
+
+These policies grant access to app routes exposed with [role-based policies](https://developers.vtex.com/docs/guides/controlling-access-to-app-resources#defining-role-based-policies). This policy type is used to access [GraphQL queries exposed by IO apps](https://developers.vtex.com/docs/guides/developing-a-graphql-api-in-service-apps). To declare a policy of this type in the manifest, use the format `{vendor}.{app-name}:{policy-name}` in the `"name"` field. See the example below:
+
+```json manifest.json mark=3:5
+{
+  "policies": [
+    {
+      "name": "vtex.messages:graphql-translate-messages"
+    }
+  ]
+}
+```
+
+To find the names of the policies available in an app, you can see the app documentation or the `policies.json` file. Example: [Policies in the search-graphql app](https://github.com/vtex-apps/search-graphql/blob/master/policies.json).
+
+### Outbound-access policies
+
+Outbound-access policies should be used only when the other two types do not apply.
+They grant access to explicit URLs, often for external (non-VTEX) services.
+
+To declare a policy of this type, use an object with the following structure:
+
+- `"name"`: `"outbound-access"`.
+- `"attrs"`: An object with two fields.
+    - `"host"`: String with the first part of the URL, usually containing the host or domain name.
+    - `"path"`: String with the last part of the URL, usually containing the path inside the domain name.
+
+> ℹ️ `"host"` and `"path"` accept `{{account}}` as a variable and the `*` character as a wildcard.
+
+#### Example
+
+Consider an app that needs access to the following resources:
+
+- A VTEX API from the URL `{{account}}.vtexcommercestable.com.br/api/catalog_system/*`.
+- The store's sitemap from the URL `{{account}}.vtexcommercestable.com.br/sitemap.xml`.
+- An external resource from the URL `api.crowdin.com/api/project/*`.
+
+For the app to gain access to these resources, declare the outbound-access policies as in the example below:
+
+```json manifest.json mark=3:23
+{
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/catalog_system/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/sitemap.xml"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.crowdin.com",
+        "path": "/api/project/*"
+      }
+    }
+  ]
+}
+```

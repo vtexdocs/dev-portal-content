@@ -6,10 +6,10 @@ createdAt: "2024-06-04T11:15:35.508Z"
 updatedAt: "2024-06-04T11:15:35.508Z"
 excerpt: "Inconsistent pricing when comparing shelves or search results with product pages in stores using Intelligent Search."
 tags:
-  - intelligent-search
-  - store-framework
-  - pricing
-  - promotions
+    - Intelligent Search
+    - Store Framework
+    - Pricing
+    - Promotions
 ---
 
 **Keywords:** Price | PDP | Product | SKU | Shelf | Search | Search Result | Promotion

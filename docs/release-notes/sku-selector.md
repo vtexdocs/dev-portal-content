@@ -1,8 +1,8 @@
 ---
 title: Sku Selector
 createdAt: "2019-12-19T14:47:00.000Z"
+type: 'info'
 ---
-
 The Sku Selector block was given two new props: 
 
 - `displayMode`: responsible for defining whether the block will be displayed in **buttons** by default (as the product variation images are) or by dropdown-list. 

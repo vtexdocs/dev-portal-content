@@ -2,8 +2,8 @@
 title: Breadcrumb on mobile mode 
 excerpt: "The Breadcrumb component’s new 'showOnMobile' prop makes it available for mobile."
 createdAt: "2019-08-22T14:47:00.000Z"
+type: 'info'
 ---
-
 The Breadcrumb component’s new `showOnMobile` prop makes it available for mobile.
 
 ## What has changed

@@ -7,9 +7,9 @@ components:
   - ToggleField.tsx
 ---
 
-The `ToggleField` component wraps a [Toggle](https://developers.vtex.com/docs/guides/faststore/molecules-toggle) input and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label).
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/molecules/ToggleField)
 
-## Overview
+The `ToggleField` component wraps a [Toggle](https://developers.vtex.com/docs/guides/faststore/molecules-toggle) input and its corresponding [Label](https://developers.vtex.com/docs/guides/faststore/atoms-label).
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -39,47 +39,36 @@ The `ToggleField` component wraps a [Toggle](https://developers.vtex.com/docs/gu
 </Tabs>
 ---
 
-## Import
+## Usage
 
-Import the component from [@faststore/ui](https://developers.vtex.com/docs/guides/faststore/components-index)
+### Import the component
 
 ```tsx
 import { ToggleField } from '@faststore/ui'
 ```
 
-### Import Styles into your FastStore project
+### Import styles
 
-To apply the styles of this component in your FastStore project, import the following into your stylesheet:
+To apply styles, include the following in your stylesheet:
 
 ```scss
 @import '@faststore/ui/src/components/molecules/ToggleField/styles.scss';
 ```
 
-Follow the instructions in the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) tutorial.
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
 
-## Usage
+## Data attributes
 
-<OverviewSection>
-  <ToggleField id="toggle-field-example" label="Toggle Label" />
-</OverviewSection>
-```tsx
-<ToggleField id="toggle-field-example" label="Toggle Label" />
-```
+You can target and override `ToggleField` styles using the following data attributes:
+
+`data-fs-toggle-field`
+
+`data-fs-toggle-field-label`
 
 ---
 
 ## Props
 
 <ComponentPropsSection component="ToggleField" />
-
----
-
-## Customization
-
-For further customization, you can use the following data attributes:
-
-`data-fs-toggle-field`
-
-`data-fs-toggle-field-label`

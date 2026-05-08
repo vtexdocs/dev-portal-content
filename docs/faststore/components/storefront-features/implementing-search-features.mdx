@@ -1,0 +1,143 @@
+---
+title: "Implementing search features"
+excerpt: "This feature enables customers to find their search easier."
+---
+
+The Search feature is based on the Autocomplete functionality to enhance user search experiences. Autocomplete dynamically displays relevant search suggestions based on current and past search queries. The feature includes four different lists, which can be presented collectively or individually based on user interaction preferences. The existing sections within Autocomplete are as follows:
+
+- **Last Searches:** Displays a list of the user's most recent search queries.
+- **Search Suggestions:* Offers real-time suggestions based on the user's current input.*
+- **Product suggestion:**  Provides relevant product recommendations based on the search query.
+- **Most searched terms:** Highlights popular and frequently searched terms.
+
+Refer to the [Autocomplete in VTEX Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4gXFsEWjF7QF7UtI2GAvhL) for more information.
+
+---
+
+## Usage
+
+To integrate the `<SearchInput />` component, refer to the provided example in the [FastStore Core](https://github.com/vtex/faststore/tree/main/packages/core/src/components/search/SearchInput).
+
+> ℹ️ You can add this component to your store where you need it, with the Navbar being a recommended location.
+
+---
+
+## Components
+
+<SectionList grid="column" columns={2}>
+  <SectionItem
+    title="Search History"
+    description="Responsible for showing the latest terms searched by a user."
+    actionPath="/docs/guides/faststore/molecules-search-history"
+  >
+    <SearchHistory title="History">
+      <SearchHistoryTerm value="Headphone" linkProps={{ href: '#' }} />
+      <SearchHistoryTerm value="Audio & Video" linkProps={{ href: '#' }} />
+      <SearchHistoryTerm value="mh-7000" linkProps={{ href: '#' }} />
+    </SearchHistory>
+  </SectionItem>
+  <SectionItem
+    title="Search Top"
+    description="Displays the most searched terms by customers."
+    actionPath="/docs/guides/faststore/molecules-search-top"
+  >
+    <SearchTop title="Top Search">
+      <SearchTopTerm value="Notebooks" linkProps={{ href: '#' }} index={0} />
+      <SearchTopTerm
+        value="Laser Printer"
+        linkProps={{ href: '#' }}
+        index={1}
+      />
+      <SearchTopTerm
+        value="Bluetooth Keyboard"
+        linkProps={{ href: '#' }}
+        index={2}
+      />
+    </SearchTop>
+  </SectionItem>
+  <SectionItem
+    title="Search Auto Complete"
+    description="List of auto completing suggestions based on the searched term."
+    actionPath="/docs/guides/faststore/molecules-search-auto-complete"
+  >
+    <SearchAutoComplete>
+      {suggestions?.map((suggestion) => (
+        <SearchAutoCompleteTerm
+          key={suggestion.value}
+          term={searchContent}
+          suggestion={suggestion.value}
+          linkProps={{ href: '#' }}
+        />
+      ))}
+    </SearchAutoComplete>
+  </SectionItem>
+  <SectionItem
+    title="Search Products"
+    description="List of `SearchProductItem` to show details of the suggested products."
+    actionPath="/docs/guides/faststore/molecules-search-products"
+  >
+    <SearchProducts>
+      <SearchProductItem linkProps={{ href: '#' }}>
+        <SearchProductItemImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </SearchProductItemImage>
+        <SearchProductItemContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+        />
+      </SearchProductItem>
+      <SearchProductItem linkProps={{ href: '#' }}>
+        <SearchProductItemImage>
+          <img
+            data-fs-image
+            src={product.image[1].url}
+            alt={product.image[1].alternateName}
+          />
+        </SearchProductItemImage>
+        <SearchProductItemContent
+          title={product.isVariantOf.name}
+          price={{
+            value: product.offers.offers[0].price,
+            listPrice: product.offers.offers[0].listPrice,
+            formatter: useFormattedPrice,
+          }}
+        />
+      </SearchProductItem>
+    </SearchProducts>
+  </SectionItem>
+  <SectionItem
+    title="Search Dropdown"
+    description="Combine `SearchHistory`, `SearchTop` `SearchAutoComplete` and `SearchProducts` to show all options in `SearchInput`."
+    actionPath="/docs/guides/faststore/molecules-search-dropdown"
+    containerStyle={{
+      alignItems: 'start',
+    }}
+  >
+    <SearchDropdownUsage />
+  </SectionItem>
+  <SectionItem
+    title="Search Input Field"
+    description="An `InputField` with a search button."
+    actionPath="/docs/guides/faststore/molecules-search-input-field"
+  >
+    <SearchInputField onSubmit={() => {}} />
+  </SectionItem>
+  <SectionItem
+    title="Search Input"
+    description="The `SearchInput` is responsible for receiving, searching and displaying suggestions."
+    actionPath="/docs/guides/faststore/organisms-search-input"
+    containerStyle={{
+      alignItems: 'start',
+    }}
+  >
+    <SearchInputUsage />
+  </SectionItem>
+</SectionList>
