@@ -61,7 +61,6 @@ QuickOrder in a B2B context supports two interaction patterns:
     };
     export { override };
 
-    
     The code above overrides the `SearchProductItemContent` component to enable QuickOrder with the following settings:
     - `maxQuantity`: Sets the upper limit for the quantity selector. Adjust this value to meet your store's requirements.
     - `outOfStockLabel`: Defines the label displayed when a product is out of stock.
@@ -88,7 +87,6 @@ For products with multiple SKUs, you can extend QuickOrder with the **SKU Matrix
     };
     export { override };
 
-    
     The `__experimentalSKUMatrixSidebar` override registers the SKU selection sidebar in the Navbar. This allows buyers to view and select all available SKU combinations for a product from a drawer panel, without leaving the search results page.
 
 2. Update your `SearchProductItem.tsx` override to enable the SKU Matrix:
@@ -119,7 +117,6 @@ For products with multiple SKUs, you can extend QuickOrder with the **SKU Matrix
     };
     export { override };
 
-    
     With `skuMatrix.enabled` set to `true`, the add-to-cart button in search results opens the SKU Matrix sidebar for products with multiple variants, allowing buyers to pick variant combinations and quantities before adding everything to the cart.
 
 3. Run `yarn dev` to apply the changes locally.
@@ -133,4 +130,5 @@ After testing locally, follow these steps to deploy the changes to production:
 2. Push the changes to the new branch and publish it.
 3. Open a pull request in the store repository.
 4. If the checks and reviews are all good, merge the branch with the main one.
+
 >ℹ️ For more details on customizing components in FastStore, see [Section Override](https://developers.vtex.com/docs/guides/faststore/overrides-overview). For information about the Search components used in QuickOrder, see [SearchProducts](https://developers.vtex.com/docs/guides/faststore/molecules-search-products).
