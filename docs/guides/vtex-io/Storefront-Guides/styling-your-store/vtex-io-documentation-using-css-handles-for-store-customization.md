@@ -43,7 +43,7 @@ Follow the steps below to apply a style that affects every block instance:
   }
   ```
 
-  >⚠️ If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon)`.
+  >⚠️ If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon}`.
 
 4. [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to see the changes. Once linked, the new style applies to all `menu-item` blocks in the workspace you're working on.
 
@@ -70,7 +70,7 @@ To customize a single, specific block without affecting others of the same type,
 
   ![css handles with block class](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-2.png)
 
-4. In your CSS file, you can now use this new class (for example: `.menu-Item--header`) to target only the block with that specific `blockClass`.
+4. In your CSS file, you can now use this new class (for example: `.menu-item--header`) to target only the block with that specific `blockClass`.
 
   ![specific menu items with css handles applied using blockClass](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-3.png)
 
@@ -84,7 +84,7 @@ Customization using CSS selectors is mostly deprecated. The following selectors 
 - Pseudo-selectors `:hover`, `:visited`, `:active`, `:disabled`, `:focus`, `:local`, `:empty`, and `:target`
 - `:not()`
 - `:first-child` and `:last-child`
-- `:nth-child(even)`, `:nth-child(odd)`, and `:nth-child(2n)` (or any other step like `4n`, `5n`, and so on.)
+- `:nth-child(even)`, `:nth-child(odd)`, and `:nth-child(2n)`, or any other step like `4n`, `5n`, and so on.
 - All pseudo-elements, such as `::before`, `::after`, and `::placeholder`
 - Space combinator (example: `.foo .bar`)
 - `[data-...]`
