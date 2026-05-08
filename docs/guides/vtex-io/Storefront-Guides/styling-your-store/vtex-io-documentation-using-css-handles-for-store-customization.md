@@ -88,7 +88,9 @@ Customization using CSS selectors is mostly deprecated. The following selectors 
 - All pseudo-elements, such as `::before`, `::after`, and `::placeholder`
 - Space combinator (example: `.foo .bar`)
 - `[data-...]`
-- `:global()` for selection of global CSS classes (example: `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selecting elements from different apps, `:global(.tachyons-class)` for Tachyons utilities, or any other global CSS class)
+- `:global()` for selection of global CSS classes, such as:
+  - `:global(vtex-{AppName}-{AppVersion}-{ComponentName})` for selecting elements from different apps.
+  - `:global(.tachyons-class)` for Tachyons utilities.
 - Media queries, such as `@media (max-width: 768px)` (responsive override for screens up to 768px wide) and `@media (prefers-reduced-motion: reduce)` (remove transitions if user prefers reduced motion).
 
 >⚠️ CSS selectors that are not included in this list, such as `:nth-child(2)`, `foo > bar`, and `[alt="bar"]`, aren't supported. Using them can cause issues such as app linking failures.
