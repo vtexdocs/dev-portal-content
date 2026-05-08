@@ -23,12 +23,12 @@ Now, the header experience is powered by the `vtex.delivery-promise-components` 
 
 Migrating from `vtex.shipping-option-components` to `vtex.delivery-promise-components` requires more than changing the dependency name. The following table highlights the main breaking changes:
 
-| Area                 | Before (`vtex.shipping-option-components`)                                 | Now (`vtex.delivery-promise-components`)                                                                                                                                                                                                                                           |
-| -------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Theme dependency** | `vtex.shipping-option-components`                                                             | `vtex.delivery-promise-components`                                                                                                                                                                                                                                                                    |
-| **Blocks**           | Single block: `shipping-option-location-selector`.            | Separate blocks: `shopper-location-setter`, `shipping-method-selector`, and `pickup-point-selector`.                                                                                                                                                                  |
-| **Block props**      | Props like `callToAction`, `compactMode`, and `dismissible` in one block.     | Props split across the new blocks, such as `required`, `mode`, and `shippingSelection`.                                                                                                                                                                                               |
-| **CSS handles**      | Handles such as `buttonLabel`, `deliveryPopover`, and `shippingOptionButton`. | New set of handles, including `shopperLocationSetterContainer` and `shippingMethodSelector`. See the full updated list of CSS handles in the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app documentation. |
+| Area | Before (`vtex.shipping-option-components`) | Now (`vtex.delivery-promise-components`) |
+| --- | --- | --- |
+| **Theme dependency** | `vtex.shipping-option-components` | `vtex.delivery-promise-components` |
+| **Blocks** | Single block: `shipping-option-location-selector`. | Separate blocks: `shopper-location-setter`, `shipping-method-selector`, and `pickup-point-selector`. |
+| **Block props** | Props like `callToAction`, `compactMode`, and `dismissible` in one block. | Props split across the new blocks, such as `required`, `mode`, and `shippingSelection`. |
+| **CSS handles** | Handles such as `buttonLabel`, `deliveryPopover`, and `shippingOptionButton`. | New set of handles, including `shopperLocationSetterContainer` and `shippingMethodSelector`. See the full updated list of CSS handles in the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app documentation. |
 
 ## What needs to be done?
 
