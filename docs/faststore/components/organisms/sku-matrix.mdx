@@ -151,7 +151,7 @@ Follow the [Importing FastStore UI component styles](https://developers.vtex.com
 
 ### Loading State
 
-While fetching product variants, display skeleton loaders to improve perceived performance.
+While fetching product variants, display skeleton loaders to improve perceived performance by setting `loading={true}` on `SKUMatrixSidebar`.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -161,8 +161,6 @@ While fetching product variants, display skeleton loaders to improve perceived p
           <SKUMatrixTrigger variant="secondary">View variants</SKUMatrixTrigger>
           <SKUMatrixSidebar
             title="Loading variants..."
-            direction="rightSide"
-            size="partial"
             loading={true}
             columns={{
               name: 'Variation',
@@ -186,24 +184,42 @@ While fetching product variants, display skeleton loaders to improve perceived p
   <Tab>
 
 ```tsx
-<SKUMatrixSidebar
-  title="Loading variants..."
-  loading={true}
-  columns={{
-    name: 'Variation',
-    additionalColumns: [{ label: 'Size', value: 'size' }],
-    availability: { label: 'Stock', stockDisplaySettings: 'showStockQuantity' },
-    price: 'Price',
-    quantitySelector: 'Quantity',
-  }}
-  buyProps={{
-    'data-testid': 'bulk-add',
-    'data-sku': 'product',
-    'data-seller': 'seller-1',
-    onClick: handleAddToCart,
-  }}
-  ImageComponent={ImageComponent}
-/>
+import {
+  SKUMatrix,
+  SKUMatrixTrigger,
+  SKUMatrixSidebar,
+  UIProvider,
+} from '@faststore/ui'
+
+export default function LoadingExample() {
+  return (
+    <UIProvider>
+      <SKUMatrix>
+        <SKUMatrixTrigger variant="secondary">View variants</SKUMatrixTrigger>
+        <SKUMatrixSidebar
+          title="Loading variants..."
+          loading={true}
+          columns={{
+            name: 'Variation',
+            additionalColumns: [{ label: 'Size', value: 'size' }],
+            availability: { label: 'Stock', stockDisplaySettings: 'showStockQuantity' },
+            price: 'Price',
+            quantitySelector: 'Quantity',
+          }}
+          buyProps={{
+            'data-testid': 'bulk-add',
+            'data-sku': 'product',
+            'data-seller': 'seller-1',
+            onClick: () => {
+              /* call cart mutation */
+            },
+          }}
+          ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
+        />
+      </SKUMatrix>
+    </UIProvider>
+  )
+}
 ```
 
   </Tab>
@@ -213,12 +229,36 @@ While fetching product variants, display skeleton loaders to improve perceived p
 
 ### Availability Badge Display
 
-Show availability status using badges instead of numeric stock quantities.
+Show availability status using badges instead of numeric stock quantities by setting `availability.stockDisplaySettings` to `'showAvailability'`. The component renders an `Available` or `Out of stock` badge based on each variant's availability.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <SKUMatrixUsage />
+      <UIProvider>
+        <SKUMatrix>
+          <SKUMatrixTrigger variant="secondary">View variants</SKUMatrixTrigger>
+          <SKUMatrixSidebar
+            title="Product Variants"
+            columns={{
+              name: 'Variation',
+              additionalColumns: [{ label: 'Color', value: 'color' }],
+              availability: {
+                label: 'Availability',
+                stockDisplaySettings: 'showAvailability',
+              },
+              price: 'Price',
+              quantitySelector: 'Quantity',
+            }}
+            buyProps={{
+              'data-testid': 'bulk-add',
+              'data-sku': 'availability',
+              'data-seller': 'seller-1',
+              onClick: () => {},
+            }}
+            ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
+          />
+        </SKUMatrix>
+      </UIProvider>
     </OverviewSection>
   </Tab>
   <Tab>
@@ -231,12 +271,18 @@ Show availability status using badges instead of numeric stock quantities.
     additionalColumns: [{ label: 'Color', value: 'color' }],
     availability: {
       label: 'Availability',
-      stockDisplaySettings: 'showAvailability', // Shows "Available" or "Out of stock" badges
+      stockDisplaySettings: 'showAvailability',
     },
     price: 'Price',
     quantitySelector: 'Quantity',
   }}
-  // ... other props
+  buyProps={{
+    'data-testid': 'bulk-add',
+    'data-sku': 'availability',
+    'data-seller': 'seller-1',
+    onClick: () => {},
+  }}
+  ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
 />
 ```
 
@@ -247,7 +293,7 @@ Show availability status using badges instead of numeric stock quantities.
 
 ### Full Width Sidebar
 
-Display the matrix in a full-width slide-over for complex product catalogs with many columns.
+Display the matrix in a full-width slide-over for complex product catalogs with many columns by setting `size="full"`.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -257,9 +303,7 @@ Display the matrix in a full-width slide-over for complex product catalogs with 
           <SKUMatrixTrigger variant="secondary">View all options</SKUMatrixTrigger>
           <SKUMatrixSidebar
             title="Select your products"
-            direction="rightSide"
             size="full"
-            loading={false}
             columns={{
               name: 'Product',
               additionalColumns: [
@@ -288,8 +332,7 @@ Display the matrix in a full-width slide-over for complex product catalogs with 
 ```tsx
 <SKUMatrixSidebar
   title="Select your products"
-  size="full"  // Full width instead of partial
-  direction="rightSide"
+  size="full"
   columns={{
     name: 'Product',
     additionalColumns: [
@@ -301,7 +344,13 @@ Display the matrix in a full-width slide-over for complex product catalogs with 
     price: 'Unit Price',
     quantitySelector: 'Qty',
   }}
-  // ... other props
+  buyProps={{
+    'data-testid': 'bulk-add',
+    'data-sku': 'full-width',
+    'data-seller': 'seller-1',
+    onClick: () => {},
+  }}
+  ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
 />
 ```
 
@@ -312,7 +361,7 @@ Display the matrix in a full-width slide-over for complex product catalogs with 
 
 ### Left Side Direction
 
-Open the sidebar from the left side of the screen.
+Open the sidebar from the left side of the screen by setting `direction="leftSide"`.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -323,8 +372,6 @@ Open the sidebar from the left side of the screen.
           <SKUMatrixSidebar
             title="Product Selection"
             direction="leftSide"
-            size="partial"
-            loading={false}
             columns={{
               name: 'Item',
               additionalColumns: [],
@@ -349,17 +396,26 @@ Open the sidebar from the left side of the screen.
 ```tsx
 <SKUMatrixSidebar
   title="Product Selection"
-  direction="leftSide"  // Opens from left instead of right
-  size="partial"
-  // ... other props
+  direction="leftSide"
+  columns={{
+    name: 'Item',
+    additionalColumns: [],
+    availability: { label: 'Available', stockDisplaySettings: 'showStockQuantity' },
+    price: 'Price',
+    quantitySelector: 'Quantity',
+  }}
+  buyProps={{
+    'data-testid': 'bulk-add',
+    'data-sku': 'left-side',
+    'data-seller': 'seller-1',
+    onClick: () => {},
+  }}
+  ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
 />
 ```
 
   </Tab>
 </Tabs>
-
----
-
 
 ---
 
