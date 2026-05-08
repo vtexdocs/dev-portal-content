@@ -16,7 +16,7 @@ User tokens allow for actions limited to their scope, which is defined according
 * **Shopper:** Shoppers' tokens have permission to perform actions related to the shopping experience, such as viewing active products' information, placing orders, and viewing information of orders made under that same shopper profile. This token scope does not allow users to access the VTEX Admin panel or change logistics settings, for example.
 * **Admin:** Administrative users' tokens allow for actions based on [License Manager roles](https://help.vtex.com/en/docs/tutorials/roles) attributed to them. This may include access to different Admin panel pages or the ability to edit different configurations, for example.
 
-User tokens and associated permissions are tied to the user who logged in. Each request must use credentials valid for the VTEX account where that operation runs. The account in the API hostname must align with the account the token was issued for.
+User tokens and associated permissions are tied to the user who logged in. Each request must use credentials valid for the VTEX account where that operation runs. The account in the API hostname must be the same as the account the token was issued for.
 
 ## Generating user tokens
 
