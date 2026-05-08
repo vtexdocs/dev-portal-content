@@ -1,6 +1,5 @@
 ---
 title: 'Upgrading FastStore to v4'
-hidden: true
 ---
 
 In this guide, you'll learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities.
@@ -11,17 +10,7 @@ In this guide, you'll learn how to upgrade your FastStore project to the v4 majo
 
 ### Change the `@faststore/cli` version
 
-Make sure your project is up to date with the version provided by the VTEX team. To do so, follow these steps:
-
-1. Open your project in a code editor.
-2. Open the `package.json` file and change the `@faststore/cli` to the following:
-
-```json
-"dependencies": {
-    "@faststore/cli": "https://pkg.csb.dev/vtex/faststore/commit/eb2cca6e/@faststore/cli",
-    ...
-  },
-```
+Make sure your project is up to date with FastStore v4 or the latest version. To do so, follow the steps in [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
 
 ### Update `package.json`
 
@@ -37,7 +26,7 @@ Open your `package.json` and apply the following changes:
 {
   ...
   "dependencies": {
-    "@faststore/cli": "https://pkg.csb.dev/vtex/faststore/commit/85d2a096/@faststore/cli",
+    "@faststore/cli": "^4.0.0",
     "graphql": "^16.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -123,13 +112,73 @@ By using `@use`, you explicitly declare dependencies and access the mixins throu
 
 ### Sync the change with CMS
 
-After that, a CMS sync is necessary.
+After updating the imports, you must sync the changes with the CMS. The steps depend on which CMS your store uses.
 
-|  | Instructions |
-| :---- | :---- |
-| For stores using [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), run the following command | Run the command `yarn cms-sync`. |
-| For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with custom components | Run the following commands: `vtex login` `vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore4` `vtex content upload-schema cms/faststore/schema.json` |
-| For stores using [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) without custom components | `vtex login` `vtex content upload-schema node_modules/@faststore/core/cms/faststore/schema.json` |
+#### Stores using Headless CMS (legacy)
+
+> ⚠️ FastStore v4 introduces breaking changes that move several previously hardcoded labels and messages into the CMS. Before publishing, you must sync the CMS, configure the new fields in the affected sections, and republish any pages that use them.
+
+1. Run `yarn cms-sync` to sync the schema changes with the Headless CMS.
+2. Review the breaking changes below, configure the new fields in the relevant sections, and republish the affected pages.
+
+<details>
+<summary><b>Breaking changes affecting Headless CMS (legacy) sections</b></summary>
+
+The following components had hardcoded labels removed in v4. Each one now exposes new fields in the corresponding Headless CMS (legacy) section that must be configured after the sync.
+
+- **Breadcrumb** ([PR #3099](https://github.com/vtex/faststore/pull/3099)): The `"All products"` label, previously fixed in code for pages without a breadcrumb list (such as Search), is now configurable through the `Fallback label` field in the Breadcrumb section. After syncing, configure this field and republish pages that include the Breadcrumb section.
+- **Sort** ([PR #3100](https://github.com/vtex/faststore/pull/3100)): Sort option labels are no longer hardcoded. They are now configured through the `sortBySelector` field in the ProductGallery section. After syncing, configure the labels and republish pages that include the ProductGallery section.
+- **Invalid quantity toast** ([PR #3102](https://github.com/vtex/faststore/pull/3102)): The toast message shown when an invalid quantity is entered (in the PDP quantity selector, the Navbar search suggestions with quick order enabled, or the SKU matrix sidebar) is no longer hardcoded. It is now configured through the `invalidQuantityToast` field, available in both the Navbar and ProductDetails sections. After syncing, configure the labels in both sections and republish the affected pages.
+- **ScrollToTopButton**: Removed from the ProductListing template. It must now be added manually through the Headless CMS on PLP and Search pages.
+- **Other components with hardcoded messages removed** ([PR #3192](https://github.com/vtex/faststore/pull/3192)): Hardcoded labels were also removed from the components listed below. After syncing the CMS, review the corresponding sections and configure the new fields as needed:
+    - Filter: `FilterSlider`, `FilterDesktop`, `FilterDeliveryMethodFacet`
+    - Region: `RegionSlider`, `RegionPopover`
+    - Cart: `EmptyCart` (`title`, `buttonLabel`)
+    - Product: `ProductCard`, `ProductCardContent` (`buttonLabel`, `outOfStockLabel`, `includeTaxesLabel`, `sponsoredLabel`), `ProductDetailsSettings` (`buyButtonTitle`)
+    - Common: `Breadcrumb` (`alt`, `icon`), `Footer` (`logoLink` defaults), `Navbar` (`collapseSearchAriaLabel`)
+    - Search: `SearchProductItem` (`outOfStockLabel` in `quickOrderSettings`), `SearchInput`, `SearchTop`, `SearchHistory`
+    - `EmptyGallery`
+    - Hooks: `useDeliveryPromise`, `useShippingSimulation`
+    - `PickupPointCards`
+
+</details>
+
+#### Stores using CMS with custom components
+
+#### Stores using CMS with custom components
+
+If your store has already migrated its CMS files to the new Content plugin format (with the `cms/faststore/components` and `cms/faststore/pages` folders containing `.jsonc` files), you can skip directly to the [Generate and upload the schema](#generate-and-upload-the-schema) step below.
+
+If your store still uses the legacy `sections.json` and `content-types.json` files, you must first split them into the new format before generating the schema. To do so, run the following commands, adjusting the input and output paths to match your project structure:
+
+1. If `sections.json` is still in the legacy format:
+
+  ```
+  vtex content split-components -i cms/faststore/sections.json -o cms/faststore/components
+  ```
+
+2. If `content-types.json` is still in the legacy format:
+
+  ```
+  vtex content split-content-types -i cms/faststore/content-types.json -s cms/faststore/sections.json -o cms/faststore/pages
+  ```
+
+> ℹ️ For more details on these commands, see [Splitting components and content types](https://developers.vtex.com/docs/guides/content-plugin#split-components).
+
+##### Generate and upload the schema
+
+After ensuring your CMS files are in the new format, run the following commands:
+
+1. `vtex login`
+2. `vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore`
+3. `vtex content upload-schema cms/faststore/schema.json`
+
+#### Stores using CMS without custom components
+
+Run the following commands:
+
+1. `vtex login`
+2. `vtex content upload-schema node_modules/@faststore/core/cms/faststore/schema.json`
 
 ### Update Node.js runtime version in WebOps (existing projects only)
 
