@@ -9,7 +9,7 @@ updatedAt: "2026-05-07T12:00:00.000Z"
 
 When a user successfully logs in to a VTEX store, VTEX ID issues a [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) user token and stores it in an HTTP-only cookie. For **Admin** sessions, the cookie name is `VtexIdclientAutCookie`. For **webstore** (shopper) sessions, the cookie name is `VtexIdclientAutCookie_{accountName}` or `VtexIdclientAutCookie_{accountId}`.
 
-For a period of 24 hours after its creation, the user token can be used to authenticate requests to VTEX APIs. Send it in an HTTP header whose name matches that cookie (same pattern as above, depending on audience).
+For a period of 24 hours after its creation, the user token can be used to authenticate requests to VTEX APIs. Send it in an HTTP header as cookies whose name matches that cookie (same pattern as above, depending on audience).
 
 User tokens allow for actions limited to their scope, which is defined according to the user who logged in:
 
