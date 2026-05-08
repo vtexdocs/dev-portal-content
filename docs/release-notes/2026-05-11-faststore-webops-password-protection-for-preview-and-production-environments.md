@@ -1,9 +1,9 @@
 ---
 title: "FastStore WebOps: Password protection for preview and production environments"
-slug: "2026-04-28-faststore-webops-password-protection-for-preview-and-production-environments"
+slug: "2026-05-11-faststore-webops-password-protection-for-preview-and-production-environments"
 hidden: false
 type: "added"
-createdAt: "2026-04-28T15:00:00.000Z"
+createdAt: "2026-05-11T15:00:00.000Z"
 excerpt: "WebOps now allows you to restrict access to preview environments and production domains with username and password authentication."
 tags:
   - FastStore
