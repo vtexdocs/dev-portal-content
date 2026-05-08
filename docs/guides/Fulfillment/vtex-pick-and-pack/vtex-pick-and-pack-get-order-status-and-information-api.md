@@ -45,9 +45,10 @@ In order to authorize the [API request](#get-order-status-and-information-api), 
 
 The first step is to create a token of authentication with the endpoint below. No authentication is required:
 
-| Method | URL                                      |
-| ------ | ---------------------------------------- |
-| POST   | `https://auth.pickingnpacking.com/prod/token` |
+| Environment | Method | URL                                           |
+|-------------|--------|-----------------------------------------------|
+| Production  | POST   | `https://auth.pickingnpacking.com/prod/token` |
+| Development | POST   | `https://auth.pickingnpacking.com/dev/token`  |
 
 #### Request body example
 

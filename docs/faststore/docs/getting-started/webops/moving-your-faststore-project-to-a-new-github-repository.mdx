@@ -1,0 +1,125 @@
+---
+title: "Moving your FastStore project to a new GitHub repository"
+---
+
+In this guide, you'll learn how to move your FastStore project from one repository to another. This works for the following cases:
+
+* FastStore projects hosted in the `vtex-sites` organization using WebOps that you want to move to the GitHub organization of the account.
+* FastStore projects hosted in their own organization on GitHub using WebOps that you want to move to a new organization or repository.
+
+> ⚠️ For FastStore projects hosted in the `vtex-sites` organization and not using WebOps ([FastStore v1](https://v1.faststore.dev/docs)), open a ticket with [VTEX Support](https://help.vtex.com/en/support) to move your project to your account's GitHub organization.
+
+## Before you begin
+
+<Steps>
+
+### Have a FastStore project using WebOps
+
+Make sure the FastStore project you want to move uses [WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
+
+### Upgrade `@faststore/cli` package
+
+Update the `@faststore/cli` package in your project to the latest version. To do so, follow the instructions in [Updating the `@faststore/cli` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
+
+### Have a GitHub organization
+
+Make sure you have created a GitHub organization where you want to move your project. Learn how to do so in the GitHub guide [Creating a new organization from scratch](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch).
+
+### Have a GitHub repository
+
+Make sure you have created the GitHub repository where you want to move your FastStore project. Learn how to do so in the GitHub guide [Creating a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository).
+
+</Steps>
+
+## Instructions
+
+### Step 1 - Moving your store code to the new GitHub organization
+
+To move your store code to the new GitHub organization, follow these steps:
+
+> ⚠️ Remember to replace the curly brackets according to your scenario.
+
+1. Clone the **current** repository to your local environment:
+
+    ```bash
+    git clone https://github.com/{oldOrganizationName}/{oldRepositoryName}.git
+    cd {oldRepositoryName}
+    ```
+
+2. Add the **new** repository to your local environment:
+
+    ```bash
+    git remote set-url origin https://github.com/{newOrganizationName}/{newRepositoryName}.git
+    ```
+
+3. Verify your remote configuration:
+
+    ```bash
+    git remote -v
+    ```
+    You should see your remote listed with the new URL.
+
+4. Push the codebase to the new GitHub organization:
+
+    ```bash
+    git push -u origin main
+    ```
+
+After completing these steps, you should see your code, files, and commit history in the new repository when you visit it on GitHub.
+
+### Step 2 - Installing the FastStore WebOps in the new GitHub organization
+
+You already have FastStore WebOps installed in your account, but the app has not been installed in your new GitHub organization yet.
+
+To install the FastStore WebOps in the new GitHub organization, follow the steps below:
+
+1. Access the [FastStore WebOps installation page](https://github.com/apps/faststore-webops) on GitHub.
+2. Click `Configure`.
+3. Click the organization where you want to move your project.
+4. Specify whether WebOps should be enabled for **all repositories** in the new GitHub organization or **only selected repositories**.
+5. Click `Installing & Authorizing` to install the FastStore WebOps in your new GitHub organization.
+    
+    You'll see the message `{"status":"pending","message":"Could not find installation intent. If you started this installation outside FastStore WebOps, follow the FastStore Cloud migration guide to finish linking your project."}`, which means the migration process is not complete yet.
+
+    ![installing-webops](https://vtexhelp.vtexassets.com/assets/docs/src/installing-webops3___7e1f833fed717f2c42e1700727b7a421.gif)
+
+### Step 3 - Identifying the FastStore WebOps installation ID
+
+> ⚠️ This step is performed in the GitHub organization where you want to move your project. For example, if you're moving your FastStore project from `current-org` to `new-org`, you must follow this step in the `new-org` organization on GitHub.
+
+To identify the installation ID of the app you set up in the previous step, follow the steps below:
+
+1. Go to the settings of the GitHub organization.
+2. Click `GitHub Apps` under `Third-party Access`.
+3. Search for **FastStore WebOps**, then click `Configure` next to the app name.
+4. Check the URL to get the app installation ID. The URL follows this pattern: `https://github.com/organizations/{organizationName}/settings/installations/{installationId}`, where `{organizationName}` is the name of your organization and `{installationId}` is the app installation ID.
+
+    ![app-installation-id](https://vtexhelp.vtexassets.com/assets/docs/src/app-installation-id___4088942cf7166f278e856d656f29e4ea.gif)
+
+### Step 4 - Identifying the repository ID
+
+> ⚠️ This step is performed in the repository hosted in the **new** GitHub organization.
+
+To identify the ID of the repository where you want to move your project, follow these instructions:
+
+1. Access the GitHub repository page where you want to host your FastStore project. The URL follows this pattern: `https://github.com/{newOrganizationName}/{newRepositoryName}`. Replace the curly brackets according to your scenario.
+2. Open the console in your browser.
+3. Run the following command in the console. The response is the repository ID.
+
+    ```javascript
+    $("meta[name=octolytics-dimension-repository_id]").getAttribute('content')
+    ```
+
+### Step 5 - Opening a ticket with VTEX Support
+
+Open a ticket with [VTEX Support](https://help.vtex.com/en/support) and share the following information:
+
+* **Account:** Name of your account.
+* **Link to the old repository:** URL of the repository where your project is currently hosted.
+* **Link to the new repository:** URL of the repository where you want to move your project.
+* **Repository ID:** The unique identifier of the repository you want to migrate. See how to get this ID in [Identifying the repository ID](#step-4-identifying-the-repository-id) section.
+* **App installation ID (`installationId`):** The unique identifier of the FastStore WebOps installation on GitHub. See how to get this ID in [Identifying the app installation ID](#step-3-identifying-the-app-installation-id).
+
+The Support team will work on your request and notify you when the process is complete.
+
+>❗ Don't publish or make changes to the code in the new repository before the process is complete.
