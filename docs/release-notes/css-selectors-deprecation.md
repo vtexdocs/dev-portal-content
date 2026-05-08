@@ -3,6 +3,7 @@ title: CSS Selectors deprecation
 excerpt: 'Starting December 18, 2019, **CSS customization will be done exclusively via CSS Handles**. Selectors based on HTML structure will be blocked for new stores.'
 createdAt: "2019-11-11T00:00:00.000Z"
 updatedAt: "2026-05-07T15:41:30.641Z"
+hidden: true
 type: 'info'
 ---
 Starting December 18, 2019, **CSS customization will be done exclusively via CSS Handles** (e.g. `.foo`). Selectors based on HTML structure (e.g. `div > div > span[foo="bar"]`) will be blocked for new stores.
