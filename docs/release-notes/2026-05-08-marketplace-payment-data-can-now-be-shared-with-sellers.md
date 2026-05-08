@@ -1,9 +1,9 @@
 ---
 title: "Marketplace payment data can now be shared with sellers"
-slug: "2026-05-01-marketplace-payment-data-can-now-be-shared-with-sellers"
+slug: "2026-05-08-marketplace-payment-data-can-now-be-shared-with-sellers"
 type: "improved"
-createdAt: "2026-05-01T00:00:00.000Z"
-updatedAt: "2026-05-01T00:00:00.000Z"
+createdAt: "2026-05-08T00:00:00.000Z"
+updatedAt: "2026-05-08T00:00:00.000Z"
 excerpt: "VTEX marketplaces can now share native payment data with sellers, including details such as payment method, card brand, and acquirer responses."
 tags:
   - Orders
