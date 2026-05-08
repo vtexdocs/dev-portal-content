@@ -25,11 +25,12 @@ The B2B store use case is optimized for business buyers who need to add large qu
 QuickOrder in a B2B context supports two interaction patterns:
 
 - **Simple quantity input**: The buyer sets the desired quantity next to each search result and adds it to the cart directly.
+
+ ![quick-order-quantity-selector](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-b2b-search-results___2e7fec0b94420c3014a48c1fec6ce813.png)
+  
 - **SKU Matrix (bulk variant selection)**: For products with multiple variants (e.g., sizes, colors), clicking the add-to-cart button opens a sidebar panel where the buyer can select combinations and quantities across all SKUs at once, then add everything to the cart in a single action.
-**Simple quantity input**
-![quick-order-quantity-selector](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-b2b-search-results___2e7fec0b94420c3014a48c1fec6ce813.png)
-**SKU Matrix sidebar**
-![quick-order-sku-matrix-right-sidebar](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-sku-matrix___79ff33859a20bd179905ac6298541d2b.png)
+
+ ![quick-order-sku-matrix-right-sidebar](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-sku-matrix___79ff33859a20bd179905ac6298541d2b.png)
 
 ### Instructions
 
