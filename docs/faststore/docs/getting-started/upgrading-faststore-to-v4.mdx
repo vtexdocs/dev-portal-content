@@ -197,7 +197,7 @@ For more details on these commands, see [Content plugin](https://developers.vtex
 
 #### Stores using CMS without custom components
 
-If your store does not have any custom CMS schema files yet and should use only the default FastStore schema, you do not need to run `generate-schema`. Instead, create a `schema.json` file and add the following content:
+If your store **does not have any custom CMS schema files** yet and should use only the default FastStore schema, you do not need to run `generate-schema`. Instead, create a `schema.json` file and add the following content:
 
   ```json
   {
@@ -213,7 +213,7 @@ Upload this content by running the following command in the terminal:
 
 This creates a schema for your store in CMS that points to the FastStore base schema.
 
-> ℹ️ You can also use `"vtex.faststore@4.0.0"` as the `$base` value if you want to pin the version explicitly, otherwise "vtex.faststore" for the latest version.
+> ℹ️ You can also use `"vtex.faststore@4.0.0"` as the `$base` value if you want to pin the version explicitly. Otherwise, use `"vtex.faststore"` to get the latest version.
 
 After uploading the file, you can safely delete the local `cms/faststore/schema.json` file.
 
