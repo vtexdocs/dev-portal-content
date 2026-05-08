@@ -227,48 +227,6 @@ export default function LoadingExample() {
 
 ---
 
-### Availability Badge Display
-
-Show availability status using badges instead of numeric stock quantities by setting `availability.stockDisplaySettings` to `'showAvailability'`. The component renders an `Available` or `Out of stock` badge based on each variant's availability.
-
-> ℹ️ The live demo below uses the default `'showStockQuantity'` setting to illustrate the matrix populated with real product data. Refer to the **Code** tab to see how to switch to the badge-based rendering.
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <SKUMatrixUsage />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
-```tsx
-<SKUMatrixSidebar
-  title="Product Variants"
-  columns={{
-    name: 'Variation',
-    additionalColumns: [{ label: 'Color', value: 'color' }],
-    availability: {
-      label: 'Availability',
-      stockDisplaySettings: 'showAvailability',
-    },
-    price: 'Price',
-    quantitySelector: 'Quantity',
-  }}
-  buyProps={{
-    'data-testid': 'bulk-add',
-    'data-sku': 'availability',
-    'data-seller': 'seller-1',
-    onClick: () => {},
-  }}
-  ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
-/>
-```
-
-  </Tab>
-</Tabs>
-
----
-
 ### Full Width Sidebar
 
 Display the matrix in a full-width slide-over for complex product catalogs with many columns by setting `size="full"`.
