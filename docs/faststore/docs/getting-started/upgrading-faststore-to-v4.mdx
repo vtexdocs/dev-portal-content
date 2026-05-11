@@ -1,6 +1,5 @@
 ---
 title: 'Upgrading FastStore to v4'
-hidden: true
 ---
 
 In this guide, you'll learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities.
@@ -146,18 +145,77 @@ The following components had hardcoded labels removed in v4. Each one now expose
 
 #### Stores using CMS with custom components
 
-Run the following commands:
+If your store already uses the new [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) format, with component schemas and Content Type schemas stored in separate `.jsonc` files, you can skip the migration steps in this section and follow the instructions in [Generate and upload the schema below](#generate-and-upload-the-schema).
 
-1. `vtex login`
-2. `vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore`
-3. `vtex content upload-schema cms/faststore/schema.json`
+If your store still uses the legacy `sections.json` and `content-types.json` files, you must first split them into the new format before generating the schema.
+
+1. If `sections.json` is still in the legacy format, run the following command:
+
+  ```shell
+  vtex content split-components -i cms/faststore/sections.json -o cms/faststore/components
+  ```
+
+2. If `content-types.json` is still in the legacy format, run:
+
+  ```shell
+  vtex content split-content-types -i cms/faststore/content-types.json -s cms/faststore/sections.json -o cms/faststore/pages
+  ```
+
+  > ℹ️ The paths above are examples based on the default FastStore project structure. If your project stores component schemas and Content Type schemas in different locations, adjust the input and output paths accordingly.
+
+#### Generate and upload the schema
+
+After ensuring your CMS files are in the new format, generate and upload the schema:
+
+1. Log in to your VTEX account:
+
+  ```shell
+  vtex login {accountName}
+  ```
+
+2. Generate the schema:
+
+  ```shell
+  vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json
+  ```
+
+3. Upload the schema:
+
+  ```shell
+  vtex content upload-schema cms/faststore/schema.json
+  ```
+
+The table below explains the command arguments:
+
+| Argument | Description |
+| -------- | ----------- |
+| `cms/faststore/components` | Directory containing your component schema files. |
+| `cms/faststore/pages` | Directory containing your Content Type schema files. |
+| `-o cms/faststore/schema.json` | Local output path for the generated schema file before upload. |
+
+For more details on these commands, see [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
 
 #### Stores using CMS without custom components
 
-Run the following commands:
+If your store **does not have any custom CMS schema files** yet and should use only the default FastStore schema, you do not need to run `generate-schema`. Instead, create a `schema.json` file in `cms/faststore` and add the following content:
 
-1. `vtex login`
-2. `vtex content upload-schema node_modules/@faststore/core/cms/faststore/schema.json`
+  ```json
+  {
+    "$base": "vtex.faststore"
+  }
+  ```
+
+Upload this content by running the following command in the terminal:
+
+  ```shell
+  vtex content upload-schema cms/faststore/schema.json
+  ```
+
+This creates a schema for your store in CMS that points to the FastStore base schema.
+
+> ℹ️ You can also use `"vtex.faststore@4.0.0"` as the `$base` value if you want to pin the version explicitly. Otherwise, use `"vtex.faststore"` to get the latest version.
+
+After uploading the file, you can safely delete the local `cms/faststore/schema.json` file.
 
 ### Update Node.js runtime version in WebOps (existing projects only)
 
