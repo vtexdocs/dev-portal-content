@@ -20,4 +20,4 @@ Now, they return the actual integration status code (e.g., `404` when a PLP is n
 
 If your Shopee integration is only returning the `500` error code for all labels, you need to update your error handling logic to correctly interpret the different HTTP status codes.
 
-To update your integration, access the [VTEX Shopee Integration API](link) documentation.
+To update your integration, access the [VTEX Shopee Integration API](https://developers.vtex.com/docs/api-reference/vtex-shopee-integration-api/) documentation.
