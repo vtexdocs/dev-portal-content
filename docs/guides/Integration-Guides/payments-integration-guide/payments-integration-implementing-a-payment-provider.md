@@ -1,6 +1,7 @@
 ---
 title: "Implementing a Payment Provider"
 slug: "payments-integration-implementing-a-payment-provider"
+excerpt: "Learn how to build payment provider middleware that implements the Payment Provider Protocol endpoints for VTEX integrations."
 hidden: false
 createdAt: "2021-03-26T17:05:15.623Z"
 updatedAt: "2026-05-12T00:00:00.000Z"
