@@ -3,6 +3,8 @@ title: "Implementing product recommendations in Faststore"
 slug: "implementing-product-recommendations-in-faststore"
 hidden: false
 excerpt: "Learn how to implement product recommendations in FastStore stores."
+seeAlso:
+  - "/docs/guides/product-recommendations"
 createdAt: "2026-01-05T12:00:00.000Z"
 updatedAt: "2026-01-26T12:00:00.000Z"
 ---
