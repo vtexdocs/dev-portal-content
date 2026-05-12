@@ -1,0 +1,89 @@
+---
+title: "Creating new projects in your FastStore monorepo"
+excerpt: "Learn how to create new projects in your FastStore monorepo."
+hidden: true
+createdAt: "2026-05-12T14:47:17.858Z"
+---
+
+After you have set up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you can create new projects for additional stores, brands, or modules using the `fsp create` command. This is useful when you need to add a new storefront, extend your monorepo with additional modules (Checkout, Sales App), or create projects for different brand variants within your organization.
+
+The `fsp create` command automatically creates the project directory with the necessary structure and updates your `faststore.json` configuration file with the new project settings, including the path and port allocation.
+
+## Instructions
+
+Run the following command in your terminal at the root of your monorepo:
+
+```bash
+yarn fsp create
+```
+
+Or using npm:
+
+```bash
+npx fsp create
+```
+
+## Use case example
+
+Consider you want to create a new Discovery project for a different brand. The `fsp create` command will guide you through an interactive setup by asking for:
+
+1. **Account name**: The VTEX account for which you're creating the project (for example, `store-a`, `brand-store-1`).
+2. **Module type**: The module you want to initialize (`discovery`, `checkout`, or `sales-app`).
+3. **Project path**: The directory path where the project will be created (for example, `./packages/store-a`, `./store-a/checkout`)
+
+In your terminal, you should answer the questions as follows to create a new Discovery project for a different brand:
+
+```text
+? What's the account name? brand-store-1
+? Which module do you want to initialize? discovery
+? What should be the path to initialize discovery? ./packages/brand-store-1
+```
+
+You can also include all parameters directly in your command:
+
+```text
+yarn fsp create brand-store-1 discovery ./packages/brand-store-1
+```
+
+or using npm:
+
+```text
+npx fsp create brand-store-1 discovery ./packages/brand-store-1
+```
+
+After running the command, your monorepo structure will be updated with:
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages
+│   └── 📂 store-a
+│      ├── 📂 discovery
+│   └── 📂 brand-store-1
+│      ├── 📂 discovery
+├── 📄 faststore.json
+├── 📄 package.json
+│  
+```
+
+And your `faststore.json` will be automatically updated with the new configuration:
+
+```json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "store-a": {
+      "discovery": {
+        "path": "packages/store-a",
+        "port": 3000
+      }
+    },
+    "brand-store-1": {
+      "discovery": {
+        "path": "packages/brand-store-1",
+        "port": 3001
+      }
+    }
+  }
+}
+```
