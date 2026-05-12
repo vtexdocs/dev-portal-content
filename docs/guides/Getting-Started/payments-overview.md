@@ -3,8 +3,8 @@ title: "Payments"
 slug: "payments-overview"
 excerpt: "Understand how VTEX Payments connects merchants to providers and supports payment provider, anti-fraud, and gift card integrations."
 hidden: false
-createdAt: "2022-04-28t21:34:56.911Z"
-updatedAt: "2024-06-28T00:00:00.444Z"
+createdAt: "2022-04-28T21:34:56.911Z"
+updatedAt: "2026-05-12T00:00:00.000Z"
 ---
 > ℹ️ **Help us improve our documentation!** Tell us about your experience with this article by completing [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
 
