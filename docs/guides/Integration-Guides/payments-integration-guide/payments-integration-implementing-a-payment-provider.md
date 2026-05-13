@@ -66,7 +66,7 @@ This endpoint returns the provider's manifest, which contains metadata settings 
    }
 ```
 
-> ⚠️ If you support any type of [custom payment](https://help.vtex.com/en/tutorial/how-to-configure-a-custom-payment--tutorials_451), use only the supported method type (`Cobranded`, `Privatelabels`, or `Promissories`) in the `"name"` field. Do not include the specific name of the custom payment (for example, "Colombian Bank Promissory").
+> ⚠️ If you support any type of [custom payment](https://help.vtex.com/docs/tutorials/how-to-configure-a-custom-payment), use only the supported method type (`Cobranded`, `Privatelabels`, or `Promissories`) in the `"name"` field. Do not include the specific name of the custom payment (for example, "Colombian Bank Promissory").
 
 For more information, see the [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint documentation.
 
@@ -318,7 +318,7 @@ For more details, see the [Inbound Request (BETA)](https://developers.vtex.com/d
 
 ## Configuration Flow
 
-On VTEX, merchants enable connectors through the VTEX Admin. The setup process is similar for all partners. For instructions, see the [Register payment and anti-fraud providers](https://help.vtex.com/en/tutorial/afiliacoes-de-gateway--tutorials_444) article on the Help Center.
+On VTEX, merchants enable connectors through the VTEX Admin. The setup process is similar for all partners. For instructions, see the [Register payment and anti-fraud providers](https://help.vtex.com/docs/tutorials/registering-gateway-affiliations) article on the Help Center.
 
 The Configuration Flow implements an authentication mechanism that allows the provider to recognize and authorize the merchant's request. The endpoints below generate three credentials — `appKey`, `appToken`, and `applicationId` — that are stored by VTEX, allowing the merchant to enable the connector without manually copying credentials.
 
