@@ -324,7 +324,7 @@ The Configuration Flow implements an authentication mechanism that allows the pr
 
 > ℹ️ This flow is optional and does not affect the integration with VTEX. If you do not plan to implement it, skip to the [Homologation](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) section.
 
-## 1. POST Create Authorization Token
+### 1. POST Create Authorization Token
 
 The request body for this endpoint is:
 
