@@ -34,6 +34,8 @@ Payment providers build connectors using the [Payment Provider Protocol (PPP)](h
 
 After development, connectors must pass a [homologation process](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) and meet [PCI DSS compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) requirements (when applicable), or use the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy) as an alternative before going live.
 
+See the following resources to implement and publish your connector:
+
 - [Implementing a Payment Provider](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider)
 - [Integrating a new payment provider on VTEX](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex)
 - [Payment Provider Protocol API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol)
@@ -42,6 +44,8 @@ After development, connectors must pass a [homologation process](https://develop
 
 Anti-fraud providers integrate risk analysis into the payment flow through the [Anti-fraud Provider Protocol](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works). This protocol defines endpoints for sending transaction data, receiving risk assessments, and updating analysis status.
 
+To get started with your anti-fraud integration:
+
 - [Pre-analysis anti-fraud flow for debit card transactions](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions)
 - [Anti-fraud Provider Protocol API](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol)
 
@@ -49,11 +53,15 @@ Anti-fraud providers integrate risk analysis into the payment flow through the [
 
 On VTEX, gift cards are a payment method processed at Checkout. External providers can integrate their gift card services using the Giftcard Provider Protocol and connect with the [Giftcard Hub](https://developers.vtex.com/docs/api-reference/giftcard-hub-api), which aggregates multiple providers. VTEX also provides a [native gift card system](https://developers.vtex.com/docs/api-reference/giftcard-api).
 
+Related articles:
+
 - [Gift Card integration guide](https://developers.vtex.com/docs/guides/gift-card-integration-guide)
 - [Managing VTEX gift cards](https://developers.vtex.com/docs/guides/managing-vtex-gift-cards)
 - [Giftcard Provider Protocol API](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol)
 
 ## Key APIs
+
+Use these APIs to manage payment transactions, connectors, and related services:
 
 | API | Description |
 | --- | --- |
