@@ -8,7 +8,7 @@ updatedAt: "2026-05-12T00:00:00.000Z"
 ---
 > ℹ️ **Help us improve our documentation!** Tell us about your experience with this article by completing [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
 
-VTEX connects merchants to payment providers through a gateway-based architecture. The [VTEX Payment Gateway](https://help.vtex.com/tutorial/what-is-a-payment-gateway--2KH9Wdi7F6swOU4amECSOk) communicates with external providers via connectors built on standardized protocols, supporting credit and debit cards, digital wallets, Pix, boleto, gift cards, customer credit, and other payment methods.
+VTEX connects merchants to payment providers through a gateway-based architecture. The [VTEX Payment Gateway](https://help.vtex.com/tutorial/what-is-a-payment-gateway--2KH9Wdi7F6swOU4amECSOk) communicates with external providers via connectors built on standardized protocols, supporting credit and debit cards, digital wallets, [Pix](https://help.vtex.com/pt/docs/tutorials/pix-faq), [boleto](https://help.vtex.com/docs/tutorials/registered-ticket-flow), gift cards, customer credit, and other payment methods.
 
 For the complete payments documentation — including implementation guides, payment methods, tokenization, testing, security, and configuration — see the [Payments category](https://developers.vtex.com/docs/guides/payments-integration-guide).
 
