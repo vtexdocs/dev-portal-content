@@ -16,4 +16,4 @@ VTEX supports custom payment interfaces through two approaches:
 | Article | Description |
 | --- | --- |
 | [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app) | How to build a Payment App on VTEX IO for custom payment experiences at checkout. |
-| [Layout Development Guide for payment methods in Smart Checkout VTEX](https://developers.vtex.com/docs/guides/layout-development-guide-for-payment-methods-in-smart-checkout-vtex) | How to develop custom layouts for payment methods in Smart Checkout. |
+| [Layout Development Guide for payment methods in SmartCheckout VTEX](https://developers.vtex.com/docs/guides/layout-development-guide-for-payment-methods-in-smart-checkout-vtex) | How to develop custom layouts for payment methods in SmartCheckout. |
