@@ -20,7 +20,7 @@ On VTEX, only partners with **PCI DSS Level 1** certification (processing more t
 
 Partners that use [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy) in the development environment of the connector do not need PCI DSS certification.
 
-If your provider only processes boleto, promissory notes, or other redirect-based payment methods, PCI DSS certification is not required. Contact the VTEX Sales Team directly to start the integration.
+If your provider only processes [boleto](http://help.vtex.com/docs/tutorials/registered-ticket-flow), promissory notes, or other redirect-based payment methods, PCI DSS certification is not required. Contact the VTEX Sales Team directly to start the integration.
 
 
 ## Self-Assessment Questionnaire (SAQ)
