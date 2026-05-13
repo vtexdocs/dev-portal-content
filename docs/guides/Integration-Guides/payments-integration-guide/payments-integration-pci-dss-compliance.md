@@ -12,7 +12,7 @@ Partners that process credit, debit, or co-branded card transactions must hold a
 >
 > PCI DSS certification is **only** required for partners that process **credit**, **debit**, or **co-branded** card payments and do not use the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy) in their integrations.
 >
-> The certification requirement applies to the entity that receives and processes transactions. If a tech service develops the connector infrastructure but a separate partner processes the transactions, only the **partner processing the transactions** must be PCI DSS certified.
+> The certification requirement applies to the entity that receives and processes transactions. If a tech service develops the connector infrastructure but a separate partner processes the transactions, only the partner processing the transactions must be PCI DSS certified.
 
 ## Requirements
 
