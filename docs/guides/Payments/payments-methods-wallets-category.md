@@ -17,4 +17,3 @@ VTEX supports a wide range of payment methods and digital wallets. This section 
 | [Processing DPAN cards in external connectors](https://developers.vtex.com/docs/guides/processing-dpan-cards-in-external-connectors) | How to handle Device Primary Account Number (DPAN) cards in external connectors. |
 | [PSE Payment Method](https://developers.vtex.com/docs/guides/pse-payment-method) | How to implement PSE (Pagos Seguros en Línea) for Colombian bank transfers. |
 | [Setting up Merchant ID in Apple Pay](https://developers.vtex.com/docs/guides/setting-up-merchant-id-in-apple-pay) | How to configure the Merchant ID for Apple Pay integration. |
-

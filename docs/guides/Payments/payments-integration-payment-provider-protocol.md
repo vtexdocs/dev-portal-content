@@ -13,7 +13,7 @@ There are two ways to build a payment connector:
 - **External middleware:** develop your own backend service that implements the PPP endpoints.
 - **VTEX IO (Payment Provider Framework):** use a VTEX IO boilerplate that provides the endpoint structure out of the box.
 
-> ℹ️ Before starting, you need a [partnership agreement for financial services](https://vtex.com/us-en/partners) and access to a VTEX environment. Providers processing credit, debit, or co-branded cards must also meet [PCI DSS compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) requirements or use [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
+> ℹ️ Before starting, you need a [partnership agreement for financial services](https://www.vtex.com/en-us/partners) and access to a VTEX environment. Providers processing credit, debit, or co-branded cards must also meet [PCI DSS compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) requirements or use [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
 ## In this section
 
@@ -27,4 +27,3 @@ There are two ways to build a payment connector:
 | [Split Payouts on Payment Provider Protocol](https://developers.vtex.com/docs/guides/split-payouts-on-payment-provider-protocol) | How to configure split payouts for marketplace transactions. |
 
 Learn more about the protocol flow in the [Help Center tutorial](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m) and the [Payment Provider Protocol API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol).
-
