@@ -26,4 +26,4 @@ There are two ways to build a payment connector:
 | [PPP applied to POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos) | How to use PPP for physical store payments with VTEX Sales App. |
 | [Split Payouts on Payment Provider Protocol](https://developers.vtex.com/docs/guides/split-payouts-on-payment-provider-protocol) | How to configure split payouts for marketplace transactions. |
 
-Learn more about the protocol flow in the [Help Center tutorial](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m) and the [Payment Provider Protocol API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol).
+Learn more about the protocol flow in the [Help Center tutorial](https://help.vtex.com/docs/tutorials/payment-provider-protocol) and the [Payment Provider Protocol API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol).
