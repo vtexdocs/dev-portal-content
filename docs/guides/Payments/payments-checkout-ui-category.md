@@ -4,7 +4,7 @@ slug: "payments-checkout-ui-category"
 hidden: false
 createdAt: "2026-05-13T00:00:00.000Z"
 updatedAt: "2026-05-13T00:00:00.000Z"
-excerpt: "Build custom payment experiences using Payment Apps and customize the Smart Checkout payment layout."
+excerpt: "Build custom payment experiences using Payment Apps and customize the SmartCheckout payment layout."
 ---
 VTEX supports custom payment interfaces through two approaches:
 
