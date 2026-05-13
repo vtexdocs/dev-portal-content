@@ -8,7 +8,7 @@ excerpt: "Enable credit payments through the checkout and manage invoices and cr
 ---
 Customer Credit allows stores to offer credit as a payment method at checkout. Through this feature, you can manage customer credit accounts, set credit limits, and control invoices programmatically using the [Customer Credit API](https://developers.vtex.com/docs/api-reference/customer-credit-api).
 
-Learn more about Customer Credit in the [Help Center track](https://help.vtex.com/en/tracks/customer-credit-getting-started--1hCRg21lXYy2seOKgqQ2CC).
+Learn more about Customer Credit in the [Help Center track](https://help.vtex.com/docs/tracks/installing-customer-credit).
 
 ## In this section
 
