@@ -1,6 +1,6 @@
 ---
 title: "Intelligent Search: Negative filters (NOT operator)"
-slug: "2026-04-22-intelligent-search-negative-filters-not-operator"
+slug: "2026-05-14-intelligent-search-negative-filters-not-operator"
 hidden: false
 type: "added"
 createdAt: "2026-04-22T20:30:00.000Z"
