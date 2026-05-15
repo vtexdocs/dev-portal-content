@@ -120,7 +120,7 @@ Main parameters:
 **Request example**:
 
 ```curl
-curl --request get \
+curl --request GET \
   --url 'https://api.vtexcommercestable.com.br/api/recommend-bff/v2/recommendations?an=apiexamples&campaignVrn=vrn%3Arecommendations%3Aapiexamples%3Arec-top-items-v2%3A123e4567-e89b-12d3-a456-426614174000&userId=198e0f50-acf8-42f7-998a-5cd125464749&salesChannel=1&locale=en-US' \
   --header 'Accept: application/json' \
   --header 'x-vtex-rec-origin: apiexamples/storefront/vtex.recommendation-shelf@2.x'

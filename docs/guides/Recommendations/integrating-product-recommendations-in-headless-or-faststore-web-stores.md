@@ -45,7 +45,7 @@ Your headless or FastStore web store must call the `POST` [Start session](https:
 
 This endpoint starts or updates the user's recommendations session. It associates the `userId` used during browsing with the current `orderFormId`, saves this identifier in the orderForm custom data, and returns the `recommendationsUserId` that must be used in subsequent requests.
 
-> ℹ️ Sending `orderFormId` in the JSON body is optional for web storefronts when the request forwards the `checkout.vtex.com` cookie: the API can resolve the order form from that cookie when it isn't in the body. If the client cannot send cookies (for example, some server-only calls), include `orderFormId` in the body manually. For FastStore, the recommended approach is to forward cookies on the `start-session` request.
+> ℹ️ Sending `orderFormId` in the JSON body is optional for web storefronts when the request forwards the `checkout.vtex.com` cookie: the API can resolve the order form from that cookie when it isn't in the body. If the client can't send cookies (for example, some server-only calls), include `orderFormId` in the body manually. For FastStore, the recommended approach is to forward cookies on the `start-session` request.
 
 Call `POST` [Start session](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/v2/users/start-session):
 
@@ -241,7 +241,7 @@ Use the `POST` [Product view](https://developers.vtex.com/docs/api-reference/rec
 **Request example**:
 
 ```curl
-curl --request post \
+curl --request POST \
   --url 'https://api.vtexcommercestable.com.br/api/recommend-bff/v2/events/product-view?an=apiexamples' \
   --header 'Content-Type: application/json' \
   --header 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \
