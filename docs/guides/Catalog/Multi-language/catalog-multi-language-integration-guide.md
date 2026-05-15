@@ -4,10 +4,8 @@ slug: "catalog-multi-language-integration-guide"
 hidden: false
 excerpt: "Manage multiple languages for catalog entities."
 createdAt: "2026-01-13T00:00:00.000Z"
-updatedAt: "2026-01-30T00:00:00.000Z"
+updatedAt: "2026-04-14T00:00:00.000Z"
 ---
-
-> ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions or feedback, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
 
 Learn how to create translations and integrate localized content for catalog entities with the multi-language feature.
 
@@ -78,7 +76,7 @@ For most storefront implementations, Intelligent Search is the recommended appro
 | Store Framework | ✅ Yes (default behavior) |
 | Headless with IS | ✅ Yes |
 | CMS Portal (Legacy) | ⚠️ May require additional configuration |
-| FastStore | ❌ Not available |
+| FastStore | ✅ Yes (Closed Beta) |
 
 ### Option 2: Via Catalog API (direct fetch)
 
@@ -94,8 +92,7 @@ See below the implementation by storefront type for consuming localized content:
 
 - [Store Framework](#store-framework-implementation)
 - [Headless](#headless-implementation)
-
-> ℹ️ The multi-language feature is not available for FastStore.
+- [FastStore](#faststore-implementation)
 
 ### Store Framework implementation
 
@@ -132,6 +129,12 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/catalog_system/
   -H "X-VTEX-API-AppKey: {appKey}" \
   -H "X-VTEX-API-AppToken: {appToken}"
 ```
+
+### FastStore implementation
+
+> ⚠️ To enable the multi-language feature for FastStore in your store, submit a request via [Support](https://help.vtex.com/en/support).
+
+The complete implementation for FastStore is described in the [Handling internationalization with the Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature) guide.
 
 ## Activation
 
