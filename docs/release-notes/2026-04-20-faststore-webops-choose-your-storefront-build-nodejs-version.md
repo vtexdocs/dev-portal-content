@@ -3,6 +3,7 @@ title: "FastStore WebOps: Choose your storefront build Node.js version"
 slug: "2026-04-20-faststore-webops-choose-your-storefront-build-nodejs-version"
 type: "added"
 createdAt: "2026-04-20T12:00:00.000Z"
+updatedAt: "2026-05-18T17:04:07.148Z"
 excerpt: "FastStore WebOps now allows you to choose the Node.js version used for storefront builds."
 tags:
   - FastStore
