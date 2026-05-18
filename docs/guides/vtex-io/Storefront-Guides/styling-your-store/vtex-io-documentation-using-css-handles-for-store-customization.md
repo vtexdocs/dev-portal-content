@@ -76,7 +76,7 @@ To customize a single, specific block without affecting others of the same type,
 
 ## Best practices
 
-CSS selectors are commonly used for customization, but this depends on the HTML structure. If you change the HTML, it can affect your customizations. To standardize CSS customization and avoid any potential breakdown in the layout, we recommend only using CSS handles for store customizations.
+CSS selectors are commonly used for customization, but this depends on the HTML structure. If you change the HTML, it can affect your customizations. To standardize CSS customization and avoid potential layout issues, we recommend using CSS handles only for store customizations.
 
 Customization using CSS selectors is mostly deprecated. The following selectors are the only ones allowed for store customization:
 
