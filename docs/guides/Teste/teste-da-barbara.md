@@ -16,6 +16,10 @@ TESTE DO CALLOUT
 >
 > You can call this endpoint in two ways:
 >
+>   ```txt
+>   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/productClusterIds}trade-policy/tradePolicy?zip-code=zipCode&an=accountName&coordinates=coordinates&country=country
+>   ```
+>
 > - **With country and ZIP code:** Provide the country and ZIP code to retrieve pickup points based on location.
 >
 >   ```txt

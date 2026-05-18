@@ -23,11 +23,11 @@ Once published, the files are accessible at the standard **/.well-known/{filenam
 
 ## Before you begin
 
-Before getting started, ensure that:
+Before getting started, make sure that:
 
-* Your **public domain** is already correctly pointing to VTEX, for example:
-  `https://www.yourstore.com`
-* You have a valid [API key and API token](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) for your VTEX account with permission for public API calls. No specific License Manager resource is required for this endpoint.
+* Your **public domain** is already correctly pointing to VTEX. Example:
+  `https://www.yourstore.com`.
+* You have a valid [API key and API token](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) for your VTEX account with permission.
 * You have the file provided by Apple or Google without any content modifications.
 
 Always use HTTPS and the exact domain that will be configured with Apple or Google (including `www.` when applicable).
@@ -54,7 +54,7 @@ The file provided by Apple should be named `apple-app-site-association` (without
 }
 ```
 
-* `TEAMID.com.yourcompany.app` should contain your iOS app's Team ID + Bundle ID.
+* `TEAMID.com.yourcompany.app` must contain your iOS app's Team ID + Bundle ID.
 * `paths` must cover the URLs that should open the app.
 
 >ℹ️ Use the file provided by Apple without modifications. The example above is for reference only to help you understand the expected format.
@@ -150,7 +150,7 @@ Verify that:
 
 To update any configuration file (for example, due to changes in Bundle ID, Team ID, certificate renewal, or path modifications), use the same `POST` request to `/.well-known/raw/{filename}?persistent=true` with the updated JSON in the request body, as described above.
 
-The previous content will be automatically overwritten. For example, to update the iOS Universal Links configuration:
+The previous content will be automatically overwritten. Example for updating the iOS Universal Links configuration:
 
 ```shell
 curl --location --request POST \
@@ -167,4 +167,4 @@ After updating, validate the endpoint using `GET` to confirm the new content is 
 curl -i 'https://www.yourstore.com/.well-known/apple-app-site-association'
 ```
 
->⚠️ The `POST` method is the only supported way to publish or update these configuration files.
+>⚠️You must use the `POST` method to publish or update these configuration files. Other methods are not supported.
