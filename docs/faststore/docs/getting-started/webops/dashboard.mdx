@@ -1,7 +1,7 @@
 ---
 title: 'FastStore WebOps - Dashboard'
 createdAt: "2023-08-14T17:31:00.000Z"
-updatedAt: "2026-04-20T12:00:00.000Z"
+updatedAt: "2026-05-15T20:19:39.310Z"
 ---
 
 Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project), or are already working on customizing it, you can use the WebOps dashboard to view website deployments and performance.
@@ -27,8 +27,8 @@ The **Production overview** section provides the following information about the
 | **Live store**   | URL of your production environment, accessible to shoppers.                                      |
 | **Repository**   | GitHub repository associated with the project.                                                   |
 | **Source**       | Commit for the current deployment, including date, time, and author.                             |
-| **CMS provider** | Link to [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
-| **CMS project**  | Link to the FastStore project in Headless CMS.                                                   |
+| **CMS provider** | Link to [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). |
+| **CMS project**  | Link to the FastStore project in CMS.                                                   |
 
 #### Live deployment statuses
 
@@ -128,7 +128,7 @@ The **Lighthouse scores** section allows you to configure store pages for Lighth
 
 To set the pages you want to test with Lighthouse, follow these steps:
 
-1. In the **Path for a PLP** field, enter the [category](https://help.vtex.com/en/tutorial/what-is-a-category--6HV4Q3E2FauUoOQoiCCgCg) slug defined in the Catalog.
+1. In the **Path for a PLP** field, enter the [category](https://help.vtex.com/en/docs/tutorials/what-is-a-category) slug defined in the Catalog.
 2. In the **Path for a PDP** field, enter the slug for the specific PDP you want to test.
 3. Click `Save`.
 
@@ -140,6 +140,7 @@ The **Settings** tab is where you manage the following configurations:
 
 * [**Node.js version**](#nodejs-version): Chooses which Node.js release WebOps uses for storefront builds.
 * [**Production domain**](#production-domain): Sets the primary URL customers use to access the live store.
+* [**Password protection**](#password-protection): Restricts access to preview environments and production domains with password authentication.
 * [**Variables and secrets**](#variables-and-secrets): Stores and allows secure management of sensitive information, such as API keys and passwords, required during FastStore deployment.
 
 ![settings-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/settings-webops.gif)
@@ -167,6 +168,27 @@ In the **Production domain** section, select the store domain from the dropdown 
 The **Current domains** section displays the default and primary domains configured for your store. This section serves as a reference to verify that your domains are correctly set up in WebOps. By checking this list, you can confirm whether your domains have been successfully added and are ready for use in the FastStore environment.
 
 > ⚠️ If your domain isn't listed, there might be an issue with the configuration or DNS settings that you need to address before proceeding with the go-live. If you follow the [external DNS settings](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns) guide correctly, and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+
+### Password protection
+
+> ℹ️ Password protection is in closed beta, which means that only selected customers can access it. If you're interested in implementing it in the future, contact our [Support](https://support.vtex.com/hc/en-us) team.
+
+The **Password protection** section allows you to restrict access to your preview environments and production domain by requiring password authentication. This is useful for protecting internal testing environments, staging builds, or production domains from unauthorized access during development or initial launch phases.
+
+![password-protection](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/password-protection-01.png)
+
+In the **Require password for** section, you can configure the following:
+
+| Domain type | Description | Availability |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Default domains (\*.vtex.app)**         | Applies password protection to testing URLs that use VTEX's default `vtex.app` domain. Select this option to restrict access to internal preview environments, branch previews, and other non-public links generated during development. | ✅ Available by default. |
+| **Custom domains (for example, `www.mystore.com`)** | Applies password protection to your public-facing store domain configured in FastStore (for example, `www.mystore.com`). Select this option to temporarily restrict access to your production site or a custom staging domain during soft launches, QA, or controlled rollouts. | ⚠️ Not enabled by default. You must open a ticket with [VTEX Support](https://help.vtex.com/en/support). |
+
+Password protection settings apply to all **testing domains** (your store's `vtex.app` URLs) and/or your **custom domain** selected in the **Require password for** section. Changes take effect on those URLs in about 10 minutes.
+
+> ⚠️ Make sure you share the password with authorized users through a secure channel.
+
+When password protection is enabled, users will be prompted to enter a password when accessing the protected URL. They must enter the configured password to proceed.
 
 ### Variables and secrets
 
