@@ -3,7 +3,7 @@ title: "Integration VTEX Sales App Local stock sale"
 slug: "integration-vtex-sales-app-local-stock-sale"
 hidden: false
 createdAt: "2023-05-25T17:00:00.000Z"
-updatedAt: "2023-05-25T17:00:00.000Z"
+updatedAt: "2026-05-18T17:00:00.000Z"
 excerpt: "Learn how to integrate the VTEX Sales App Local stock sale"
 seeAlso:
 hidePaginationPrevious: false
