@@ -2,14 +2,13 @@
 title: "Integration VTEX Sales App Local stock sale"
 slug: "integration-vtex-sales-app-local-stock-sale"
 hidden: false
-createdAt: ""
-updatedAt: ""
+createdAt: "2023-05-25T17:00:00.000Z"
+updatedAt: "2023-05-25T17:00:00.000Z"
 excerpt: "Learn how to integrate the VTEX Sales App Local stock sale"
 seeAlso:
 hidePaginationPrevious: false
 hidePaginationNext: false
 ---
-## Integration VTEX Sales App Local stock sale
 
 To first identify Local stock sale sales the first thing to do is to look for [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf) sales. VTEX Sales App sales can be filtered by a specific OMS filter called "VTEX Sales App", this filter looks for user agent information that sets a specific user agent that can be used to track VTEX Sales App sales. This tag is not available at the Order Payload or databases (redshift), but it can be used at [list orders API](https://developers.vtex.com/vtex-rest-api/reference/listorders) to filter VTEX Sales App Sales. Another field that can be used for this is `marketingData.marketingTags`, if the array contains an "VTEX Sales App" tag the order was made by VTEX Sales App application. This field can be found at the Order Payload and Redshift databases.
 
@@ -102,5 +101,3 @@ Regardless of the solution adopted to emit the invoice, one important thing is t
    "invoiceValue": 9508
 }
 ```
-
-
