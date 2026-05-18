@@ -48,14 +48,14 @@ To adapt to this change and continue using Delivery Promise in your Store Framew
 
 3. Add and configure the new blocks:
 
-  - Add the `shopper-location-setter` block to your header (required).
-  - Optionally, add the following blocks depending on your needs:
-    - `shipping-method-selector` to allow buyers to choose between delivery and pickup.
-    - `pickup-point-selector` to allow buyers to select a specific pickup point.
+- Add the `shopper-location-setter` block to your header (required).
+- Optionally, add the following blocks depending on your needs:
+  - `shipping-method-selector` to allow buyers to choose between delivery and pickup.
+  - `pickup-point-selector` to allow buyers to select a specific pickup point.
 
 4. Validate the storefront behavior by confirming that:
 
-  - The header collects the buyer's location.
-  - Delivery Promise availability and filters respond correctly to the selected location, shipping method, and pickup point.
+- The header collects the buyer's location.
+- Delivery Promise availability and filters respond correctly to the selected location, shipping method, and pickup point.
 
 To learn more about configuring Delivery Promise in Store Framework, see the [Setting up Delivery Promise components (Beta)](https://developers.vtex.com/docs/guides/setting-up-delivery-promise-components) guide and the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app documentation.
