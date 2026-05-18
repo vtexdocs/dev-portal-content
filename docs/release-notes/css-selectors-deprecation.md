@@ -66,4 +66,4 @@ Although each project scenario can be evaluated individually, it is expected tha
 
 Regardless of whether your app is published or not, **it's essential to review every CSS customization for store elements** to ensure that all deprecated selectors are replaced with CSS Handles.
 
-For more on this topic, access our recipe [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
+Learn more in the guide [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
