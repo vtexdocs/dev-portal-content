@@ -1,5 +1,4 @@
 ﻿---
-
 title: "My store translation is not behaving as expected"
 slug: "my-store-translation-is-not-behaving-as-expected"
 excerpt: "My store is being translated when it shouldn't."

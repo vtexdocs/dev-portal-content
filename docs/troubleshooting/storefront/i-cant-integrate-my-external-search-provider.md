@@ -1,5 +1,4 @@
 ﻿---
-
 title: "I can’t integrate my external Search Provider"
 slug: "i-cant-integrate-my-external-search-provider"
 hidden: false

@@ -1,5 +1,4 @@
 ﻿---
-
 title: "The Price in the shelf or in the search results is different from the product page"
 slug: "the-price-in-the-shelf-or-in-the-search-results-is-different-from-the-product-page"
 hidden: false

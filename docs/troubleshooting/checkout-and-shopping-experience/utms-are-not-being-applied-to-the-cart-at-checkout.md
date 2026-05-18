@@ -1,5 +1,4 @@
 ﻿---
-
 title: "UTMs are not being applied to the cart at Checkout"
 slug: "utms-are-not-being-applied-to-the-cart-at-checkout"
 hidden: false

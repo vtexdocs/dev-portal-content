@@ -1,5 +1,4 @@
 ﻿---
-
 title: "I can't create a new workspace"
 slug: "i-cant-create-a-new-workspace"
 excerpt: "New workspaces can only be created if the Intelligent Search integration is enabled."

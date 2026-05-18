@@ -1,5 +1,4 @@
 ﻿---
-
 title: "I am getting 500 errors in VTEX IO CLI"
 slug: "i-am-getting-500-errors-in-vtex-io-cli"
 hidden: false

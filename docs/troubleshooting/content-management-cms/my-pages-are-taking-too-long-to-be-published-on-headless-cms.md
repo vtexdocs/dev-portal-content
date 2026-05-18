@@ -1,5 +1,4 @@
 ﻿---
-
 title: "My pages are taking too long to be published on Headless CMS"
 slug: "my-pages-are-taking-too-long-to-be-published-on-headless-cms"
 hidden: false

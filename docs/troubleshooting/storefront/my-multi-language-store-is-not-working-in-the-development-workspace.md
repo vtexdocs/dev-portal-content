@@ -1,5 +1,4 @@
 ﻿---
-
 title: "My multi-language store is not working in the development workspace"
 slug: "my-multi-language-store-is-not-working-in-the-development-workspace"
 hidden: false

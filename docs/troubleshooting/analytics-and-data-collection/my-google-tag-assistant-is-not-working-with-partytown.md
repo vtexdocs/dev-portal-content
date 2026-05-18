@@ -1,5 +1,4 @@
 ﻿---
-
 title: "My Google Tag Assistant is not working with Partytown"
 slug: "my-google-tag-assistant-is-not-working-with-partytown"
 excerpt: "Learn how to debug GTM and GA when Partytown is enabled and how to handle common jQuery-related errors."
