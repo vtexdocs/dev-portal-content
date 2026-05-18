@@ -45,4 +45,3 @@ To see your changes, the [version](https://developers.vtex.com/docs/guides/vtex-
 2. [List the apps installed on your account](https://developers.vtex.com/docs/guides/vtex-io-documentation-listing-an-accounts-apps) by running `vtex ls`.
 3. Check if the major of the Store Theme app installed is different from the one you're developing.
 4. Check if there's another Store Theme app installed on your VTEX account. If there is, uninstall it.
-

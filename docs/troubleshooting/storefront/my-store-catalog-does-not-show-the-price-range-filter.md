@@ -105,4 +105,3 @@ Access your [Search Result](https://developers.vtex.com/docs/apps/vtex.search-re
     }
 …
 ```
-

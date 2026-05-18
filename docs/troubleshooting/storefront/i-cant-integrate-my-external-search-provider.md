@@ -58,4 +58,3 @@ vtex link
 ```
 
 If the issue persists, please open a ticket with [VTEX Support](https://help.vtex.com/support).
-

@@ -59,4 +59,3 @@ Access the Admin, go to **Storefront** > **Pages** > **Redirects**, and save the
 ### If the query returns the redirect path
 
 Check if your Store Theme or another app has defined a route with the same path you are attempting to save as a redirect. If the route already exists, the redirect will be ignored.
-

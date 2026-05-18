@@ -52,4 +52,3 @@ To solve this issue, you must replace the [SKU Selector](https://developers.vtex
 You should then be able to see and interact with the component without the modal closing, as illustrated below:
 
 ![product-summary-sku-selector](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/storefront/product-summary-sku-selector.gif)
-

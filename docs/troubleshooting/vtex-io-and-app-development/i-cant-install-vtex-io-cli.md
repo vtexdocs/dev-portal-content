@@ -84,4 +84,3 @@ To solve this problem, follow these steps:
      ![new-variable](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/troubleshooting/vtex-io-and-app-development/new-variable-2-en.png)
 
   If the error persists, [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk).
-

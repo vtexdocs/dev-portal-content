@@ -21,4 +21,3 @@ This issue is related to the store's default locale. If store translation is not
 > ℹ️ Replace the `{accountName}` with your VTEX account name.
 
 2. If the `defaultLocale` value doesn't match your store locale, [open a support ticket](https://support.vtex.com/hc/en-us/requests) to report the issue.
-

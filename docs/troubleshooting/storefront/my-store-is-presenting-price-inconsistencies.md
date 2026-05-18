@@ -28,4 +28,3 @@ To correct the inconsistencies:
 2. Check the value set for the `simulationBehavior` property of the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app. If it's set to `skip`, change it to `default`.
 
 >ℹ️ When the `simulationBehavior` is set to `skip`, the Search Results page displays the old price based on the user cache. To fetch and display the latest price in Catalog, change it to `default`.
-

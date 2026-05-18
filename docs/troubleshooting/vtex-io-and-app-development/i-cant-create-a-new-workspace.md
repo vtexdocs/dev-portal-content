@@ -32,4 +32,3 @@ The indexing process will start and you will see a link to the Indexing Status s
 > ℹ️ The [Integrations page](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/6wKQgKmu2FT6084BJT7z5V) runs the initial Catalog indexing with VTEX Intelligent Search. After installing the application, this will be the first step for integrating it with Catalog.
 
 ![start-integration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/development-1.png)
-

@@ -58,4 +58,3 @@ To publish your configuration app without installing the service in the master w
     ```
 
     The `-w` flag allows you to choose the workspace of the app you are publishing.
-

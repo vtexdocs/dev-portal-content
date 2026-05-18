@@ -79,4 +79,3 @@ Consider removing default values to ensure your overrides work.
 If the style you created is not being applied, make sure that the `className` added to the section matches the one declared in the stylesheet. For instance, if you declared `className: styles.simpleAlert` in the section, ensure that the corresponding style declaration in the stylesheet is `.simpleAlert`.
 
 For more information, see the [Override section styles](https://developers.vtex.com/docs/guides/faststore/overrides-section-styles) article.
-

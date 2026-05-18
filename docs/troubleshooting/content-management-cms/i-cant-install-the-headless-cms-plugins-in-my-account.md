@@ -77,4 +77,3 @@ USAGE
 COMMANDS
      cms sync Syncs CMS schemas with the current workspace in use.
 ```
-

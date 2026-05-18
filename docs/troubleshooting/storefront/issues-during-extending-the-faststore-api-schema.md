@@ -52,4 +52,3 @@ If the issue isn't clear from the messages above, run the generation command wit
 
 1. Run `yarn generate --debug`.
 2. Use the verbose output to identify the failing file or operation.
-
