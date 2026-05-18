@@ -3,7 +3,7 @@ title: "VTEX Skills"
 slug: "vtex-skills"
 hidden: false
 createdAt: "2026-04-09T19:00:00.000Z"
-updatedAt: "2026-04-09T19:00:00.000Z"
+updatedAt: "2026-05-18T19:00:00.000Z"
 excerpt: "Install AI agent skills that encode VTEX-specific patterns, constraints, and best practices into your AI coding assistant."
 seeAlso:
  - "/docs/guides/ai-assisted-development-overview"
