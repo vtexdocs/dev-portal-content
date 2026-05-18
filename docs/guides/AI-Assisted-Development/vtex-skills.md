@@ -107,7 +107,7 @@ cp -r skills/exports/kiro/. your-project/
 
 ## Tracks and skills
 
-Skills are organized into six tracks covering the main VTEX development surfaces. Each track group relates skills, so your agent gets focused context for the work at hand. You can install all tracks at once or pick only the ones relevant to your project.
+Skills are organized into seven tracks covering the main VTEX development surfaces. Each track group relates skills, so your agent gets focused context for the work at hand. You can install all tracks at once or pick only the ones relevant to your project.
 
 | Track | Skills | Description |
 |---|---|---|
@@ -117,6 +117,7 @@ Skills are organized into six tracks covering the main VTEX development surfaces
 | Custom VTEX IO Apps | 24 | Foundations, API exposure, frontend, data and config, security, and operations for IO app development |
 | Marketplace Integration | 4 | SKU catalog sync, order hooks, fulfillment simulation, and rate limiting |
 | Headless Front-End Development | 4 | BFF architecture, Intelligent Search API, checkout proxy patterns, and caching strategy |
+| Sales App Extension Development | 1 | VTEX Sales App extension points (cart, PDP, menu), React hooks (useCart, usePDP, useCartItem, useCurrentUser, useExtension), TypeScript types, secure API integration patterns, code generation, validation, and deployment |
 
 The Custom VTEX IO Apps track is the largest, with 24 skills covering the full lifecycle of IO app development. If you're building a new IO app, install that track first.
 
