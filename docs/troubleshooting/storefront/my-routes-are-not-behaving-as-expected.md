@@ -3,8 +3,8 @@ title: "My routes are not behaving as expected"
 slug: "my-routes-are-not-behaving-as-expected"
 excerpt: "Troubleshooting steps for issues with routes."
 hidden: false
-createdAt: "2025-01-30T14:25:00.00Z"
-updatedAt: "2025-01-30T14:25:00.00Z"
+createdAt: "2025-01-30T14:25:00.000Z"
+updatedAt: "2025-01-30T14:25:00.000Z"
 domainFilters:
   - Routes/Rewriter
   - Store Framework

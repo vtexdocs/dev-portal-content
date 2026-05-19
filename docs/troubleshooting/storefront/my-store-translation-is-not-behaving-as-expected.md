@@ -3,8 +3,8 @@ title: "My store translation is not behaving as expected"
 slug: "my-store-translation-is-not-behaving-as-expected"
 excerpt: "My store is being translated when it shouldn't."
 hidden: false
-createdAt: "2025-01-30T14:25:00.00Z"
-updatedAt: "2025-01-30T14:25:00.00Z"
+createdAt: "2025-01-30T14:25:00.000Z"
+updatedAt: "2025-01-30T14:25:00.000Z"
 domainFilters:
   - Store Framework
 symptomFilters:

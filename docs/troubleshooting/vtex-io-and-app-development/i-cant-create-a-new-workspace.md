@@ -3,8 +3,8 @@ title: "I can't create a new workspace"
 slug: "i-cant-create-a-new-workspace"
 excerpt: "New workspaces can only be created if the Intelligent Search integration is enabled."
 hidden: false
-createdAt: "2025-01-30T14:25:00.00Z"
-updatedAt: "2025-01-30T14:25:00.00Z"
+createdAt: "2025-01-30T14:25:00.000Z"
+updatedAt: "2025-01-30T14:25:00.000Z"
 domainFilters:
   - VTEX IO
   - Search

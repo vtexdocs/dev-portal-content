@@ -3,8 +3,8 @@ title: "My store is presenting price inconsistencies"
 slug: "my-store-is-presenting-price-inconsistencies"
 excerpt: "Product price is different on Search Results and Product Detail pages."
 hidden: false
-createdAt: "2025-01-30T14:25:00.00Z"
-updatedAt: "2025-01-30T14:25:00.00Z"
+createdAt: "2025-01-30T14:25:00.000Z"
+updatedAt: "2025-01-30T14:25:00.000Z"
 domainFilters:
   - Search
   - Catalog

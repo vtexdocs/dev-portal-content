@@ -3,7 +3,7 @@ title: "My pages are taking too long to be published on Headless CMS"
 slug: "my-pages-are-taking-too-long-to-be-published-on-headless-cms"
 hidden: false
 createdAt: "2024-06-28T14:00:00.000Z"
-updatedAt: ""
+updatedAt: "2024-06-28T14:00:00.000Z"
 excerpt: "Releasing or publishing a page via Headless CMS or Releases can take a long build times"
 domainFilters:
   - CMS

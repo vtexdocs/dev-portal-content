@@ -3,8 +3,8 @@ title: "I can't install an app with a major other than 0.x"
 slug: "i-cant-install-an-app-with-a-major-other-than-0x"
 excerpt: "The app major conflicts with the installed Edition App."
 hidden: false
-createdAt: "2025-01-30T14:25:00.00Z"
-updatedAt: "2025-01-30T14:25:00.00Z"
+createdAt: "2025-01-30T14:25:00.000Z"
+updatedAt: "2025-01-30T14:25:00.000Z"
 domainFilters:
   - VTEX IO
   - Apps

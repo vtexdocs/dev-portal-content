@@ -3,7 +3,7 @@ title: "I am getting 500 errors in VTEX IO CLI"
 slug: "i-am-getting-500-errors-in-vtex-io-cli"
 hidden: false
 createdAt: "2024-06-28T14:00:00.000Z"
-updatedAt: ""
+updatedAt: "2024-06-28T14:00:00.000Z"
 excerpt: "Running VTEX IO CLI commands returns a 500 internal server error"
 domainFilters:
   - VTEX IO

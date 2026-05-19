@@ -3,8 +3,8 @@ title: "My Google Tag Assistant is not working with Partytown"
 slug: "my-google-tag-assistant-is-not-working-with-partytown"
 excerpt: "Learn how to debug GTM and GA when Partytown is enabled and how to handle common jQuery-related errors."
 hidden: false
-createdAt: "2023-09-14T00:00:00.00Z"
-updatedAt: "2026-03-11T00:00:00.00Z"
+createdAt: "2023-09-14T00:00:00.000Z"
+updatedAt: "2026-03-11T00:00:00.000Z"
 domainFilters:
   - Analytics
   - Google Tag Manager

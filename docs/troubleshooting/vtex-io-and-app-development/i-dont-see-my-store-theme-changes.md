@@ -3,8 +3,8 @@ title: "I don't see my Store Theme changes"
 slug: "i-dont-see-my-store-theme-changes"
 excerpt: "After linking your Store Theme app, the changes are not reflected in the workspace."
 hidden: false
-createdAt: "2025-01-30T14:25:00.00Z"
-updatedAt: "2025-01-30T14:25:00.00Z"
+createdAt: "2025-01-30T14:25:00.000Z"
+updatedAt: "2025-01-30T14:25:00.000Z"
 domainFilters:
   - VTEX IO
   - Store Framework
