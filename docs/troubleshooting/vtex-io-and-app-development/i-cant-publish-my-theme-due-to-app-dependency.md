@@ -47,4 +47,4 @@ To solve this issue, follow the steps below:
 
 5. After adjusting dependencies, try installing the theme or publishing the app again.
 
-> ⚠️ If the issue persists, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us). 
+> ⚠️ If the issue persists, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).

@@ -57,4 +57,4 @@ After installing the updated dependencies, re-link the app to apply the changes.
 vtex link
 ```
 
-If the issue persists, please open a ticket with [VTEX Support](https://help.vtex.com/support). 
+If the issue persists, please open a ticket with [VTEX Support](https://help.vtex.com/support).

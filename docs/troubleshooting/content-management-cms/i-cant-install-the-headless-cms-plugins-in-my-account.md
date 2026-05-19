@@ -76,4 +76,3 @@ USAGE
      $ vtex cms COMMAND
 COMMANDS
      cms sync Syncs CMS schemas with the current workspace in use.
-``` 

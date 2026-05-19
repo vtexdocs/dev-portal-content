@@ -74,4 +74,4 @@ If the desired language is available and correct, follow the steps below:
 
 The expected behavior is for the multi-language store website to work properly in the development workspace.
 
-After following these steps, if you keep receiving the same error message, open a ticket to VTEX Support. 
+After following these steps, if you keep receiving the same error message, open a ticket to VTEX Support.
