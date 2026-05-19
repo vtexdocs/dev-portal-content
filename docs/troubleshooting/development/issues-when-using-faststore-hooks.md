@@ -17,11 +17,11 @@ Use the table below to identify your issue and follow the corresponding solution
 
 | Issue | Troubleshooting instructions |
 | ----- | ---------------------------- |
-| Import error, or the hook returns `undefined` when used in a component. | [Hook not available](#hook-not-available). |
-| The error `Hook must be used within Provider` is displayed when calling the hook. | [Context errors](#context-errors). |
-| A hook returns outdated information that doesn't reflect the latest state. | [Stale data](#stale-data). |
-| Hooks cause unnecessary re-renders or noticeably slow down your store. | [Performance issues](#performance-issues). |
-| Type mismatches or missing type definitions when using a hook. | [TypeScript errors](#typescript-errors). |
+| Import error, or the hook returns `undefined` when used in a component. | [Hook not available](#hook-not-available) |
+| The error `Hook must be used within Provider` is displayed when calling the hook. | [Context errors](#context-errors) |
+| A hook returns outdated information that doesn't reflect the latest state. | [Stale data](#stale-data) |
+| Hooks cause unnecessary re-renders or noticeably slow down your store. | [Performance issues](#performance-issues) |
+| Type mismatches or missing type definitions when using a hook. | [TypeScript errors](#typescript-errors) |
 
 ## Solutions
 
