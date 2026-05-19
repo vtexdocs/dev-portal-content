@@ -1,4 +1,4 @@
-﻿---
+---
 title: "I can't install VTEX IO CLI"
 slug: "i-cant-install-vtex-io-cli"
 hidden: false

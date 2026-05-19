@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Issues during extending the FastStore API schema'
 slug: "issues-during-extending-the-faststore-api-schema"
 hidden: false

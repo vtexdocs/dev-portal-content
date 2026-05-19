@@ -1,4 +1,4 @@
-﻿---
+---
 title: "My routes are not behaving as expected"
 slug: "my-routes-are-not-behaving-as-expected"
 excerpt: "Troubleshooting steps for issues with routes."

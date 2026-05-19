@@ -1,4 +1,4 @@
-﻿---
+---
 title: "I can't complete a purchase on a FastStore website"
 slug: "i-cant-complete-a-purchase-on-a-faststore-website"
 hidden: false

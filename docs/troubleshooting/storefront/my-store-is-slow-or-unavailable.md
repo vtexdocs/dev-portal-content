@@ -1,4 +1,4 @@
-﻿---
+---
 title: "My store is slow or unavailable"
 slug: "my-store-is-slow-or-unavailable"
 hidden: false

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "`vtex release` CLI command returns an EBADF message"
 slug: "vtex-release-cli-command-returns-ebadf-message"
 hidden: false

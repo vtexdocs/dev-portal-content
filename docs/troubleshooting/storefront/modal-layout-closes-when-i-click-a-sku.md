@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Modal Layout closes when I click a SKU"
 slug: "modal-layout-closes-when-i-click-a-sku"
 hidden: false

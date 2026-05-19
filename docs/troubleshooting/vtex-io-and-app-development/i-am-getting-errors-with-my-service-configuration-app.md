@@ -1,4 +1,4 @@
-﻿---
+---
 title: "I am getting errors with my service configuration app"
 slug: "i-am-getting-errors-with-my-service-configuration-app"
 hidden: false

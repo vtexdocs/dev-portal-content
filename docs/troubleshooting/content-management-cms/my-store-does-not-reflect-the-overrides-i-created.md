@@ -1,4 +1,4 @@
-﻿---
+---
 title: "My store does not reflect the overrides I created"
 slug: "my-store-does-not-reflect-the-overrides-i-created"
 hidden: false

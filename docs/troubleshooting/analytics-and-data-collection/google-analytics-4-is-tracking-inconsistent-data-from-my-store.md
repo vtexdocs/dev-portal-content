@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Google Analytics 4 is tracking inconsistent data from my store"
 slug: "google-analytics-4-is-tracking-inconsistent-data-from-my-store"
 hidden: false

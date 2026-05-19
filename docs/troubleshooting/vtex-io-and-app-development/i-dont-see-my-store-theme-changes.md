@@ -1,4 +1,4 @@
-﻿---
+---
 title: "I don't see my Store Theme changes"
 slug: "i-dont-see-my-store-theme-changes"
 excerpt: "After linking your Store Theme app, the changes are not reflected in the workspace."

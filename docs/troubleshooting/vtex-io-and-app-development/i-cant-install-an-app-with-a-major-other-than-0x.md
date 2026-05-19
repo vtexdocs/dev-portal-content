@@ -1,4 +1,4 @@
-﻿---
+---
 title: "I can't install an app with a major other than 0.x"
 slug: "i-cant-install-an-app-with-a-major-other-than-0x"
 excerpt: "The app major conflicts with the installed Edition App."

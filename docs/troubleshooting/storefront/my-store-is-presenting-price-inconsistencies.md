@@ -1,4 +1,4 @@
-﻿---
+---
 title: "My store is presenting price inconsistencies"
 slug: "my-store-is-presenting-price-inconsistencies"
 excerpt: "Product price is different on Search Results and Product Detail pages."

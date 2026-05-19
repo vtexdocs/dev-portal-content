@@ -1,4 +1,4 @@
-﻿---
+---
 title: "I can't publish my theme due to app dependency"
 slug: "i-cant-publish-my-theme-due-to-app-dependency"
 hidden: false

@@ -1,7 +1,7 @@
-﻿---
+---
 title: "I can’t install the Headless CMS plugins in my account"
 excerpt: "Users may encounter errors related to symbolic links and node version incompatibility."
-slug: "error-installing-headless-cms-plugins-on-windows"
+slug: "i-cant-install-the-headless-cms-plugins-in-my-account"
 updatedAt: "2025-02-12T14:56:25.977Z"
 domainFilters:
   - Headless CMS (Legacy)

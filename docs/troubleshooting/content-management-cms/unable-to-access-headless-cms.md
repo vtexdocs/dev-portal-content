@@ -1,4 +1,4 @@
-﻿---
+---
 title: "I can't access the Headless CMS"
 slug: "unable-to-access-headless-cms"
 excerpt: "Troubleshoot Headless CMS access errors caused by permissions, authorization, or VTEX IO CLI environment configuration issues."
