@@ -23,4 +23,4 @@ If you're unable to install an app with a major [version](https://developers.vte
 
 Run `vtex ls` to check which apps are included on the [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) installed on your account. If you see the app you're trying to install with another major, there might be an issue with the Edition App installed on your account.
 
-If this is the case, consider [opening a support ticket](https://support.vtex.com/hc/en-us/requests) to request a change to the Edition App installed on your account. See the [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) article to learn more about the available Edition Apps. 
+If this is the case, consider [opening a support ticket](https://support.vtex.com/hc/en-us/requests) to request a change to the Edition App installed on your account. See the [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) article to learn more about the available Edition Apps.
