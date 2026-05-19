@@ -87,4 +87,4 @@ Legacy Search allows you to query, search and sort products in the catalog using
 
 - [Legacy Search API](https://developers.vtex.com/docs/api-reference/search-api#overview)
 - [How search parameters work](https://developers.vtex.com/vtex-rest-api/docs/how-search-parameters-work)
-- [Search Control](https://developers.vtex.com/vtex-rest-api/docs/search-control-fulltextsearchbox)
+- [Search Control](https://developers.vtex.com/docs/guides/search-control-fulltextsearchbox)
