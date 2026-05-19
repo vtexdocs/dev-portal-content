@@ -58,4 +58,4 @@ If the Release's build failed, follow these instructions to identify the root ca
 
     > ⚠️ If the **Re-run checks** button is not available, you might not have _write access_ to the repository. In this case, contact the repository's Admin.
 
-3. If the error persists, review the build log, check the error, and [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) with a description of the issue.
+3. If the error persists, review the build log, check the error, and [open a ticket with VTEX Support](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) with a description of the issue. 

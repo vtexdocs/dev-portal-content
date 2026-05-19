@@ -65,4 +65,4 @@ After following these steps, if the error continues, open a [support ticket](htt
 ## Learn more
 
 - [Configuring Google Tag Manager](https://help.vtex.com/tutorial/integration-with-google-tag-manager--frequentlyAskedQuestions_616)
-- [How to customize the Checkout UI Custom in the Admin](https://help.vtex.com/tutorial/how-to-customize-the-checkout-ui-custom-in-the-admin--548aDBJciQu97Vh0BhEiWx)
+- [How to customize the Checkout UI Custom in the Admin](https://help.vtex.com/tutorial/how-to-customize-the-checkout-ui-custom-in-the-admin--548aDBJciQu97Vh0BhEiWx) 

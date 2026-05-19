@@ -103,4 +103,4 @@ If your store uses [FastStore](https://developers.vtex.com/docs/guides/faststore
 
 * **Third-party scripts**
 
-   [Third-party scripts](https://developers.vtex.com/docs/guides/faststore/project-structure-handling-third-party-scripts) on FastStore may also cause your site to be slow. See this article to learn [how to handle the impact of third-party scripts](https://developers.vtex.com/docs/guides/faststore/project-structure-handling-third-party-scripts) on your FastStore project.
+   [Third-party scripts](https://developers.vtex.com/docs/guides/faststore/project-structure-handling-third-party-scripts) on FastStore may also cause your site to be slow. See this article to learn [how to handle the impact of third-party scripts](https://developers.vtex.com/docs/guides/faststore/project-structure-handling-third-party-scripts) on your FastStore project. 

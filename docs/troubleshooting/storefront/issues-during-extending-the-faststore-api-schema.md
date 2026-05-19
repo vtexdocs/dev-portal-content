@@ -51,4 +51,4 @@ Issue | Description | Solutions
 If the issue isn't clear from the messages above, run the generation command with debug output to identify exactly where the failure occurs.
 
 1. Run `yarn generate --debug`.
-2. Use the verbose output to identify the failing file or operation.
+2. Use the verbose output to identify the failing file or operation. 

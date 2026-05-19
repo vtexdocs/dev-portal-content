@@ -47,4 +47,4 @@ Using the [Get promotion or tax by ID](https://developers.vtex.com/docs/api-refe
 
 4. If a product highlight block is not declared, follow the [Product Highlights](https://developers.vtex.com/docs/apps/vtex.product-highlights) documentation to set it up.
 
-If the problem continues, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+If the problem continues, open a ticket with [VTEX Support](https://help.vtex.com/en/support). 

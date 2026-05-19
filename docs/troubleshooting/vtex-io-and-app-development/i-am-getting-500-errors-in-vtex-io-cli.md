@@ -38,4 +38,4 @@ If the error is related to a platform incident, it will be published on the [VTE
 
 ### Contact VTEX Support
 
-If the error persists after some time, contact [VTEX Support](https://help.vtex.com/en/support).
+If the error persists after some time, contact [VTEX Support](https://help.vtex.com/en/support). 

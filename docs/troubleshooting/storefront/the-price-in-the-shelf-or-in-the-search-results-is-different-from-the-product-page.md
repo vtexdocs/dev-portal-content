@@ -60,4 +60,4 @@ To ensure consistent and up-to-date pricing across your store, follow the instru
 
 4. Run `vtex link` to see your changes reflected in the workspace.
 
-Make sure this change is applied consistently across all instances of the Search Result component used throughout your store's theme.
+Make sure this change is applied consistently across all instances of the Search Result component used throughout your store's theme. 

@@ -53,4 +53,4 @@ Consider your app was at version `0.1.0` and a new version `0.1.1` was created o
 
 4. Open a terminal in the root folder of your app.
 
-5. Run the [`vtex publish` command](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#publish). This command creates a release candidate version of the app and makes it available for installation using the [`vtex install` command](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#install). For more details, see [Publishing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app).
+5. Run the [`vtex publish` command](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#publish). This command creates a release candidate version of the app and makes it available for installation using the [`vtex install` command](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference#install). For more details, see [Publishing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app). 
