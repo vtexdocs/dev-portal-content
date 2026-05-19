@@ -1,0 +1,42 @@
+---
+title: "Enabling My Account for B2B stores"
+hidden: true
+excerpt: "Learn how to enable the experimental My Account feature in your B2B FastStore store."
+updatedAt: "2026-02-03T14:14:16.412Z"
+---
+
+>⚠️ This is an experimental feature available only for B2B stores. B2C stores should continue using the [standard integration guide](https://developers.vtex.com/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account).
+
+In this guide, you'll learn how to enable the experimental [My Account](https://developers.vtex.com/docs/guides/faststore/my-account-overview) feature in your B2B FastStore store. By the end of this guide, you will have configured your store to use the new My Account experience, allowing your customers to manage their accounts directly within FastStore.
+
+>⚠️ Unlike the standard integration of My Account, which was based on the [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) platform and accessed through a subdomain configured in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file, this version uses a FastStore-based setup that allows you to enable and manage **My Account** directly within FastStore. This feature is available only for B2B stores. B2C stores should continue using the standard version by following the [Integrating VTEX Order Placed and My Account](https://developers.vtex.com/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account) guide. While this article discusses the Order Placed page, the experimental feature covered in this guide is solely related to the My Account section.
+
+## Before you begin
+
+Make sure you're using the latest version of `@faststore/cli`.  If the version is not updated, see [Updating the `@faststore/cli` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
+
+## Instructions
+
+To enable the experimental **My Account** feature in your project, follow the steps below:
+
+1. Open the `discovery.config.js` file.
+2. In the `experimental` object, set the `enableFaststoreMyAccount` value to `true`:
+
+    ```js discovery.config.js mark=2
+    experimental: {
+          enableFaststoreMyAccount: true,
+    }
+    ```
+
+3. Commit and push your changes to the main branch to deploy the changes to production.
+
+With the `enableFaststoreMyAccount` flag set to `true`, users accessing the `/pvt/account` path will be redirected to the `/pvt/account/profile` page.
+
+>⚠️ The `enableFaststoreMyAccount` flag overrides the URL specified in the [`accountUrl`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options#accounturl) property of the `discovery.config.js` file. If the flag isn't set or is set to `false`, users will be redirected to the URL configured in the `accountUrl` property.
+
+## Next steps
+
+Now that the experimental **My Account** feature is enabled in your project, you can:
+
+- **Extend My Account**: Create custom pages or add new sections to the default pages by following the guide [Extending My Account](https://developers.vtex.com/docs/guides/faststore/my-account-extensions).
+- **Configure Shopper entity access**: Enable access to Shopper information (such as the "Ordered by" card) by following the guide [Configuring Shopper entity access](https://developers.vtex.com/docs/guides/faststore/my-account-configuring-shopper-entity-access).

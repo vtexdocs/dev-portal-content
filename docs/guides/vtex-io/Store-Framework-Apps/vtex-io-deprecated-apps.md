@@ -4,7 +4,7 @@ slug: "vtex-io-deprecated-apps"
 excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
-updatedAt: "2025-09-30T14:17:18.850Z"
+updatedAt: "2026-01-26T16:16:14.190Z"
 ---
 
 A deprecated app refers to an application no longer supported or maintained by VTEX, meaning that:
@@ -90,6 +90,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Massive Stock Update                     | `vtexarg.massive-stock-update`         |
 | Package Optimizer (FedEx Shipping)       | `vtex.packing-optimization`           |
 | Return App                              | `vtex.return-app`                     |
+| Shipping Option Components              | `vtex.shipping-option-components`     |
 | ShipStation                             | `vtex.ship-station`                   |
 | Shopper Location (Inventory Locator)     | `vtex.shopper-location`      |
 | Store Locator                           | `vtex.store-locator`                  |
@@ -138,6 +139,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 | App                             | `vendor.app-name`    |
 | ----------------------------- | ---------------------------- |
+| Affirm payment                  | `vtex.affirm-payment`                      |
 | Bizum (PPP)                     | `vtex.integration-bizum`                   |
 | Cetelem (PPP)                   | `vtex.integration-cetelem`                 |
 | Digital River                   | `vtexus.connector-digital-river`           |

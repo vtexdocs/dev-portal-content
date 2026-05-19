@@ -176,4 +176,4 @@ The response might look like this:
 
 > The `vtex.session` builder may take a few minutes to initialize after linking the app. If logs don’t appear immediately, please wait a few minutes.
 
-For a complete example, [download the code](https://drive.google.com/file/d/1ISNE6MhYz5pQEWmqjOmfpsUJ7ApBrwXw/view?usp=sharing).
+For a complete example, [download the code](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/refs/heads/main/files/vtex-io/session-watcher.zip).
