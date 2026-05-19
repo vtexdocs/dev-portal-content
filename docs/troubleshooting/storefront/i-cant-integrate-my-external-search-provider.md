@@ -1,5 +1,5 @@
 ﻿---
-title: "I can’t integrate my external Search Provider"
+title: "I can't integrate my external Search Provider"
 slug: "i-cant-integrate-my-external-search-provider"
 hidden: false
 createdAt: "2024-08-01T15:08:23.602Z"
