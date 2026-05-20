@@ -7,7 +7,7 @@ createdAt: "2025-12-11T14:42:11.739Z"
 excerpt: "Activity Flow now supports headless storefronts and mobile apps (Flutter and React Native), enabling consistent, real user data across channels."
 ---
 
-We expanded [**Activity Flow**](https://developers.vtex.com/docs/guides/activity-flow) to reliably track shopper behavior and performance across headless storefronts and mobile apps (Flutter and React Native), in addition to VTEX native storefronts.
+We expanded [**Activity Flow**](https://developers.vtex.com/docs/guides/activity-flow) to reliably track shopper behavior and performance across headless storefronts, mobile apps (Flutter and React Native), and VTEX native storefronts.
 
 ## What has changed?
 
@@ -17,7 +17,7 @@ Now, you can install Activity Flow in headless stores and mobile apps built with
 
 ## Why did we make this change?
 
-By extending Activity Flow beyond VTEX native storefronts, we ensure consistent, real user data collection across web and mobile channels. This extension provides insights into traffic, engagement, and performance across your channels.
+By extending Activity Flow beyond VTEX native storefronts, we enable consistent, real user data collection across web and mobile channels, providing insights into traffic, engagement, and performance across your channels.
 
 ## What needs to be done?
 

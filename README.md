@@ -21,6 +21,7 @@ This repository contains all the files for the guides featured in the [VTEX Deve
   - [Check VTEX Styleguide](#check-vtex-styleguide)
   - [Navigation Preview](#navigation-preview)
   - [Markdown Lint](#markdown-lint)
+  - [Index Documents](#index-documents)
 
 ## Contributing to the documentation
 
@@ -193,3 +194,15 @@ Commit types supported:
 **Dependencies**:
 - `actions/checkout@v1`: Checks out the repository
 - `reviewdog/action-markdownlint@v0`: Runs markdown linting with reviewdog integration
+
+### Index Documents
+**Trigger**: Push to `main`/`master` (when `docs/**/*.md` files change), or manual `workflow_dispatch`  
+**Purpose**: Indexes changed documentation files into the VTEX Docs search system for hybrid search (BM25 + vector similarity). Uses content-hash-based skip optimization to avoid re-indexing unchanged files. Supports manual `full_reindex` mode to reprocess all documents.  
+**Dependencies**:
+- `actions/checkout@v4`: Checks out the repository with `fetch-depth: 2` for diff comparison
+- `jq` (pre-installed): JSON processing for file lists and API responses
+- `curl` (pre-installed): HTTP requests to the indexing API
+
+**Required Secrets**:
+- `INDEXING_URL`: Base URL of the VTEX Docs API
+- `INTERNAL_ACCESS_KEY`: API consumer key with `index-documents` permission
