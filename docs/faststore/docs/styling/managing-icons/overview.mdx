@@ -1,90 +1,75 @@
 ---
 title: "Managing icons"
-excerpt: "Learn how FastStore manages store icons and how to customize them."
+excerpt: "Learn how FastStore manages SVG icons and the options available to customize them in your store."
 ---
 
-Icons help build web pages by illustrating concepts and improving website navigation. FastStore uses a centralized approach to manage SVG icons for optimal performance.
-
-## How FastStore manages icons
-
-FastStore consolidates all SVG icons into a **single file** (`icons.svg`) located in the `/public` folder. This approach offers several benefits:
-
-- **Performance**: Loading icons from a single file reduces HTTP requests
-- **Consistency**: All icons share the same styling capabilities
-- **Maintainability**: Centralized icon management makes updates easier
-
-The icons are defined as SVG `<symbol>` elements with unique IDs, which are then referenced throughout the application using the `<use>` element.
-
-### The Icon component
-
-FastStore provides an `Icon` component from `@faststore/ui` that makes it easy to use icons:
-
+Icons help build web pages by illustrating concepts and improving navigation. FastStore manages icons through a single SVG file, which keeps the storefront fast and consistent while still letting you customize the icon set for your brand.
+ 
+This guide explains how the icon system works and the customization paths available to you.
+ 
+All FastStore icons are consolidated in a **single SVG file** (`icons.svg`) shipped with FastStore. This approach offers three main benefits:
+ 
+| Benefit | Description |
+|---------|-------------|
+| **Performance** | A single file means a single HTTP request for all icons, instead of one request per icon. |
+| **Consistency** | All icons share the same styling behavior and can be themed via CSS. |
+| **Maintainability** | Centralized icon management makes it easier to audit, add, or replace icons across the storefront. |
+ 
+Each icon is defined as a `<symbol>` element with a unique `id` inside `icons.svg`. To render an icon in your storefront, use the `Icon` component from `@faststore/ui` and reference the symbol by name:
+ 
 ```tsx
 import { Icon } from '@faststore/ui'
-
+ 
 function MyComponent() {
   return <Icon name="ShoppingCart" weight="regular" />
 }
 ```
-
-The component references the icon by its `id` in the `icons.svg` file:
-
-```tsx
-<svg>
-  <use href={`/icons.svg#${name}`} />
-</svg>
-```
+ 
+For the full component API (props, weights, sizes, and data attributes), see the [Icon component reference](https://developers.vtex.com/docs/guides/faststore/atoms-icon).
 
 ## Default icon set
 
-FastStore includes a comprehensive set of icons from [Phosphor Icons](https://phosphoricons.com/), including:
+FastStore ships with a curated set of icons from [Phosphor Icons](https://phosphoricons.com/), covering the most common storefront needs:
 
-- **UI Actions**: arrows, carets, plus/minus, search, filters
-- **Payment Flags**: Visa, Mastercard, PayPal, Pix, and more
-- **Social Media**: Facebook, Instagram, Twitter, Pinterest
-- **E-commerce**: shopping cart, heart, star, tags, shipping
+- **UI actions:** arrows, carets, plus/minus, search, filters.
+- **Payment flags:** Visa, Mastercard, PayPal, Pix, Apple Pay, Google Pay, and others.
+- **Social media:** Facebook, Instagram, Twitter, Pinterest.
+- **E-commerce:** shopping cart, heart, star, tag, shipping, map pin.
 
-For a complete list of available icons, see the [Icons reference](https://developers.vtex.com/docs/guides/faststore/styling-icons).
+For the complete list of icons available out of the box, see the [Iconography reference](https://developers.vtex.com/docs/guides/faststore/styling-icons).
 
-## Customizing icons
+## Customizing icons in your store
 
-You can customize icons in your FastStore project by:
+There are two ways to customize the icon set in your FastStore project, depending on what you need:
 
-- **[Adding custom icons](https://developers.vtex.com/docs/guides/faststore/icons-adding-custom-icons)**: Add new icons that don't exist in the default set
-- **[Overriding native icons](https://developers.vtex.com/docs/guides/faststore/icons-overriding-native-icons)**: Replace existing icons with your own designs
+| Scenario | Use this guide |
+|----------|----------------|
+| You need an icon that doesn't exist in the default set (for example, a WhatsApp icon). | [Adding custom icons](https://developers.vtex.com/docs/guides/faststore/managing-icons-adding-custom-icons) |
+| You want to replace an existing icon with your own design (for example, a custom shopping cart icon that matches your brand). | [Overriding native icons](https://developers.vtex.com/docs/guides/faststore/managing-icons-overriding-native-icons) |
 
-## Public folder file extensions
+Both approaches rely on the same underlying mechanism: a custom `icons.svg` placed in your store's `/public` folder, which the build process uses to overwrite the default file.
 
-When customizing your store's `/public` folder, FastStore only copies files with specific extensions during the build process:
+> ⚠️ If you create an `icons.svg` file in your `/public` folder, it **completely replaces** the default one. Always start from the base file to avoid breaking icons used by FastStore components. The next sections explain the safe workflow in detail.
 
-| Extension | Description | Example |
-|-----------|-------------|---------|
-| `svg` | SVG files (icons, logos) | `icons.svg`, `logo.svg` |
-| `json` | JSON configuration files | `manifest.json` |
-| `txt` | Text files | `robots.txt` |
-| `xml` | XML files | `sitemap.xml` |
-| `ico` | Icon files | `favicon.ico` |
-
-> ⚠️ Files with other extensions (like `.png`, `.jpg`, `.webp`) in the `/public` folder will **not** be copied to the build. For images, use the appropriate image optimization solutions provided by FastStore.
+## Next steps
 
 <Flex>
   <WhatsNextCard
-    title="Icons Reference"
-    description="See the complete list of available icons in FastStore."
+    title="Adding custom icons"
+    description="Add new icons that aren't part of the default FastStore set."
+    linkTo="https://developers.vtex.com/docs/guides/faststore/managing-icons-adding-custom-icons"
+    linkTitle="See more"
+  />
+  <WhatsNextCard
+    title="Overriding native icons"
+    description="Replace existing icons with custom designs that match your brand."
+    linkTo="https://developers.vtex.com/docs/guides/faststore/managing-icons-overriding-native-icons"
+    linkTitle="See more"
+  />
+  <WhatsNextCard
+    title="Iconography reference"
+    description="Browse the complete list of icons available out of the box."
     linkTo="https://developers.vtex.com/docs/guides/faststore/styling-icons"
     linkTitle="See more"
   />
-  <WhatsNextCard
-    title="Adding Custom Icons"
-    description="Learn how to add new icons to your FastStore project."
-    linkTo="https://developers.vtex.com/docs/guides/faststore/icons-adding-custom-icons"
-    linkTitle="See more"
-  />
-  <WhatsNextCard
-    title="Overriding Native Icons"
-    description="Learn how to replace existing icons with custom designs."
-    linkTo="https://developers.vtex.com/docs/guides/faststore/icons-overriding-native-icons"
-    linkTitle="See more"
-  />
 </Flex>
-
