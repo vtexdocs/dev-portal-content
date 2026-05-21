@@ -54,7 +54,7 @@ npx fsp create
 
 As an example, consider the account `store-a` and the path `./store-a/sales-app`. Remember to fill in the prompts according to your project requirements:
 
-```
+```text
 > ? What's the account name? store-a
 > ? Which module do you want to initialize? sales-app
 > ? What should be the path to initialize sales-app? ./store-a/sales-app
