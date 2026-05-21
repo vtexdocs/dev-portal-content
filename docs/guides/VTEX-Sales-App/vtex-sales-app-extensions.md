@@ -69,7 +69,7 @@ After running the command, the folder is created at the root of your monorepo ba
 │   └── 📂 sales-app
 │      └── 📂 src
 │         ├── 📄 index.tsx
-│         ├── 📄 HelloWord.tsx
+│         ├── 📄 HelloWorld.tsx
 │         ├── 📄 hello-word.css
 │         └── 📄 package.json
 │  
