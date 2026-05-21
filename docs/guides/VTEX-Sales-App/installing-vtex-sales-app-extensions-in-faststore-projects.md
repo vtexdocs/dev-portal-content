@@ -1,6 +1,6 @@
 ---
-title: "VTEX Sales App extensions"
-slug: "vtex-sales-app-extensions"
+title: "Installing VTEX Sales App extensions in FastStore projects"
+slug: "installing-vtex-sales-app-extensions-in-faststore-projects"
 excerpt: "Learn how to set up VTEX Sales App extensions in your FastStore project."
 hidden: false
 createdAt: "2026-05-21T15:59:53.407Z"
@@ -133,32 +133,3 @@ The VTEX Sales App is available at the `/sales-app/checkout/cart` path on the UR
 ![sales-app-ui](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17928-sales-app-extension-setting-up/images/sales-app-extensions-1.webp)
 
 You can also access the VTEX Sales App locally using the `path` and `port` values defined in `faststore.json`. For example, if the file specifies port `3002`, open `http://localhost:3002/sales-app/checkout/cart`.
-
-## Next steps
-
-<Flex>
-
-<WhatsNextCard
-title=""
-description=""
-linkTo=""
-linkTitle="See more"
-/>
-
-<Flex>
-
-<WhatsNextCard
-title=""
-description=""
-linkTo=""
-linkTitle="See more"
-/>
-
-<Flex>
-
-<WhatsNextCard
-title=""
-description=""
-linkTo=""
-linkTitle="See more"
-/>
