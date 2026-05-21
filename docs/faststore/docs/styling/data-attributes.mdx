@@ -216,17 +216,13 @@ Use data attributes with media queries for responsive styling:
 [data-fs-product-card] {
   width: 100%;
   margin-bottom: 16px;
-}
-
-@media (min-width: 768px) {
-  [data-fs-product-card] {
+  
+  @media (min-width: 768px) {
     width: calc(50% - 8px);
     display: inline-block;
   }
-}
-
-@media (min-width: 1024px) {
-  [data-fs-product-card] {
+  
+  @media (min-width: 1024px) {
     width: calc(33.333% - 12px);
   }
 }
@@ -377,28 +373,6 @@ document.querySelectorAll('[data-fs-product-card]').length;
 
 ### Custom Product Card Layout
 
-```scss
-// Custom product card with hover effects
-[data-fs-product-card] {
-  transition: all 0.3s ease;
-  border-radius: 12px;
-  overflow: hidden;
-  
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  }
-}
-
-[data-fs-product-card-image] {
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-[data-fs-product-card]:hover [data-fs-product-card-image] {
-  transform: scale(1.05);
-}
 ```
 
 ### Responsive Table Styling
