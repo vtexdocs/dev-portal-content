@@ -13,13 +13,13 @@ hidePaginationNext: false
 
 > ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
-[VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/extensibility-in-vtex-sales-app) is a native capability that lets stores extend the default in-store sales journey in [Sales App](https://help.vtex.com/docs/tracks/vtex-sales-app-getting-started-and-setting-up). For example, by integrating with external APIs, connecting VTEX solutions outside the standard flow, or centralizing sales associates tasks in one app. Extensions run at seven extension points across the cart and checkout, menu, side drawer, and product detail page (PDP).
+VTEX Sales App Extensions Skill is an AI-powered skill with embedded knowledge of [Sales App](https://help.vtex.com/docs/tracks/vtex-sales-app-getting-started-and-setting-up) and [FastStore](https://developers.vtex.com/docs/guides/faststore) that supports you during the development lifecycle of extensions, which are called [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/extensibility-in-vtex-sales-app).
 
 > ℹ️ For business context, extension point locations, and use case examples, see the article [Extensibility in VTEX Sales App](https://help.vtex.com/en/tutorial/extensibility-in-vtex-sales-app). For technical information, see our [developer extensibility documentation](link).
 
-The VTEX Sales App Extensions Skill is an AI-powered skill with embedded knowledge of VTEX Sales App and [FastStore](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore). You can install it before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks instead of generic web defaults.
+The VTEX Sales App Extensions Skill is identified as the `sales-app-extensibility` and is part of the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection. You can install it before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks instead of generic web defaults.
 
-## Full lifecycle coverage
+## Skill full lifecycle coverage
 
 The skill mirrors the implementation workflow for Sales App extensions described in the [extensibility tutorial](https://help.vtex.com/en/tutorial/extensibility-in-vtex-sales-app) and supports every stage from setup to production.
 
