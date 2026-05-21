@@ -88,7 +88,7 @@ In the `faststore.json` file, check if your account includes a `sales-app` entry
 }
 ```
 
->ℹ️ The `fsp create` command updates `faststore.json` automatically. Review the generated values to make sure the account name, path, and port match your project.
+> ℹ️ The `fsp create` command updates `faststore.json` automatically. Review the generated values to make sure the account name, path, and port match your project.
 
 ### Step 3 - Configuring the project as a workspace
 
