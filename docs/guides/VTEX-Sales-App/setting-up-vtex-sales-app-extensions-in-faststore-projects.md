@@ -1,6 +1,6 @@
 ---
-title: "Installing VTEX Sales App extensions in FastStore projects"
-slug: "installing-vtex-sales-app-extensions-in-faststore-projects"
+title: "Setting up VTEX Sales App extensions in FastStore projects"
+slug: "setting-up-vtex-sales-app-extensions-in-faststore-projects"
 excerpt: "Learn how to set up VTEX Sales App extensions in your FastStore project."
 hidden: false
 createdAt: "2026-05-21T15:59:53.407Z"
@@ -22,7 +22,7 @@ In this guide, you'll learn how to set up the VTEX Sales App extension points in
 
 ## Instructions
 
-### Step 1 - Install the VTEX Sales App package
+### Step 1 - Installing the Sales App package
 
 Add the VTEX Sales App modules to your monorepo:
 
@@ -36,7 +36,7 @@ npm add @vtex/sales-app -D
 
 ### Step 2 - Creating a Sales App project
 
-After installation, create a VTEX Sales App project in your monorepo. To do this, you need the following information:
+To create a Sales App project in your monorepo, you need the following information:
 
 * The store account name for which you're creating extensions.
 * The module you want to initialize a project. In this case, it's `sales-app`.
