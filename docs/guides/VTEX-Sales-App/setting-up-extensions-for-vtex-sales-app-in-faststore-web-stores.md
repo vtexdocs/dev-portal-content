@@ -1,6 +1,6 @@
 ---
-title: "Setting up VTEX Sales App extensions in FastStore projects"
-slug: "setting-up-vtex-sales-app-extensions-in-faststore-projects"
+title: "Setting up extensions for VTEX Sales App in FastStore web stores"
+slug: "setting-up-extensions-for-vtex-sales-app-in-faststore-web-stores"
 excerpt: "Learn how to set up VTEX Sales App extensions in your FastStore project."
 hidden: false
 createdAt: "2026-05-21T15:59:53.407Z"
@@ -12,7 +12,7 @@ createdAt: "2026-05-21T15:59:53.407Z"
 
 By using predefined extension points, you can integrate external APIs, use VTEX data, and add custom experiences to areas such as cart and checkout, the side menu, and the product details page.
 
-In this guide, you'll learn how to set up the VTEX Sales App extension points in your FastStore project.
+In this guide, you'll learn how to set up extension points for VTEX Sales App in your FastStore project.
 
 ## Before you begin
 
@@ -24,7 +24,7 @@ In this guide, you'll learn how to set up the VTEX Sales App extension points in
 
 ### Step 1 - Installing the Sales App package
 
-Add the VTEX Sales App modules to your monorepo:
+Add the Sales App modules to your monorepo:
 
 ```yarn
 yarn add @vtex/sales-app -D -W
