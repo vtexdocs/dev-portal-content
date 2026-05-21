@@ -2,8 +2,9 @@
 title: "Checkout error codes"
 slug: "checkout-error-codes"
 hidden: false
-createdAt: ""
-updatedAt: ""
+createdAt: "2026-05-21T17:34:00.000Z"
+updatedAt: "2026-05-21T17:34:00.000Z"
+excerpt: "Reference of error codes returned by the Checkout API and orderForm, including their messages and meanings."
 ---
 In this guide, you will see information about errors that occurred in the Checkout [APIs](https://developers.vtex.com/docs/guides/checkout-error-codes#api-checkout-error-codes) and [orderForm](https://developers.vtex.com/docs/guides/checkout-error-codes#orderform-checkout-error-codes).
 
