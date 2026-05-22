@@ -3,7 +3,7 @@ title: "New batch inventory endpoints (Beta) in the Logistics API "
 slug: "2026-05-19-logistics-api-new-batch-inventory-endpoints"
 hidden: false
 type: "added"
-createdAt: "2026-05-19T20:00:00.000Z"
+createdAt: "2026-05-22T20:00:00.000Z"
 excerpt: "Update large volumes of inventory data asynchronously through CSV file uploads with the new Batch operations endpoints."
 ---
 
