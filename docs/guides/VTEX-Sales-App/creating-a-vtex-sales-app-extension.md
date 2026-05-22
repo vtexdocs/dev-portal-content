@@ -18,8 +18,6 @@ Complete the [Setting up extensions for VTEX Sales App in FastStore web stores](
 
 Consider you want to create a custom counter for your VTEX Sales App. Based on the sample folder generated in your monorepo when creating the project, follow the steps below.
 
-> ℹ️ Replace example values such as `store-a` and folder paths with the values from your own project.
-
 ### Step 1 - Creating the component
 
 To create a new component, add the following content to your TypeScript file (for example, `src/components/CustomMessage.tsx`):
