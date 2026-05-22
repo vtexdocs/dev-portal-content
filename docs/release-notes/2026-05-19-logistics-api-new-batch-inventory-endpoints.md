@@ -1,5 +1,5 @@
 ---
-title: "New batch inventory endpoints [Beta] in the Logistics API "
+title: "New batch inventory endpoints (Beta) in the Logistics API "
 slug: "2026-05-19-logistics-api-new-batch-inventory-endpoints"
 hidden: false
 type: "added"
