@@ -56,8 +56,8 @@ Use the Extensions Skill during definition and implementation, as recommended in
 3. **Check technical feasibility** — Confirm that mapped requirements are supported by the target extension points before coding.
 4. **Implement and validate** — Build the extension, test locally, then deploy for store users.
 
-## Skill installation
+## Extensions Skill installation
 
-The complete information about the installation is available in the [VTEX Skills repository](https://github.com/vtex/skills).
+Since the `sales-app-extensibility` skill is part of the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection, the complete information about the installation is available in the [VTEX Skills source code](https://github.com/vtex/skills).
 
-> ℹ️ For technical specifications and more information about the extension points, see the [developer extensibility documentation](link).
+> ℹ️ For technical information about VTEX Sales App Extensibility, see our [developer documentation](link).
