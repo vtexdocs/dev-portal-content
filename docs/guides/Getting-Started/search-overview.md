@@ -8,7 +8,7 @@ updatedAt: "2022-09-13T20:26:18.916Z"
 
 > **Help us improve our documentation!** Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
 
-Intelligent Search is a [VTEX IO](https://vtex.com/us-en/store-framework/) alternative to VTEX Search (Legacy). It assists the customer in their purchase journey and presents results from the first interaction with the search bar. The tool displays search and product suggestions that may interest the user. Intelligent Search also corrects spelling errors and understands words not contained in the product information.
+Intelligent Search is a [VTEX IO](https://developers.vtex.com/docs/guides/store-framework) alternative to VTEX Search (Legacy). It assists the customer in their purchase journey and presents results from the first interaction with the search bar. The tool displays search and product suggestions that may interest the user. Intelligent Search also corrects spelling errors and understands words not contained in the product information.
 
 ## Setting up the Intelligent Search
 
