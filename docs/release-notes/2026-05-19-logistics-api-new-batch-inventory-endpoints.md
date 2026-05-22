@@ -32,6 +32,6 @@ With this new capability, you can:
 
 ## What needs to be done?
 
-No changes are required for existing integrations. The previous [inventory endpoints](https://developers.vtex.com/docs/api-reference/logistics-api#tag/Inventory) remain fully supported and operational.
+No changes are required for existing integrations. The previous [inventory endpoints](https://developers.vtex.com/docs/api-reference/logistics-api#put-/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-) remain fully supported and operational.
 
 If you would like to start using the new batch operations endpoints, please see our comprehensive [Batch inventory updates guide](https://developers.vtex.com/docs/guides/batch-inventory-updates) for step-by-step instructions. You can also refer to the [Logistics API reference](https://developers.vtex.com/docs/api-reference/logistics-api) for detailed endpoint information. Early access is available — contact our [Support Center](https://support.vtex.com/hc/en-us/requests) to get started.
