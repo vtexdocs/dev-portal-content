@@ -6,7 +6,7 @@ createdAt: "2022-09-12t20:50:49.238z"
 updatedAt: "2022-09-15t18:56:45.172z"
 ---
 
-> ⚠️ VTEX has two search options: Legacy Search and Intelligent Search. This article is about Legacy Search. To learn more about the Intelligent Search application, see [this track](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb).
+> ⚠️ VTEX has two search options: VTEX Search (Legacy) and Intelligent Search. This article is about VTEX Search (Legacy). To learn more about the Intelligent Search application, see [this track](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb).
 
 When making a search on VTEX, there are different options for URLs. The URLs of departments and categories are formatted according to the category tree.
 

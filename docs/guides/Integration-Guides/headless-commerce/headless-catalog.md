@@ -22,7 +22,7 @@ Use the following endpoint to fetch category information:
 
 ## Search
 
-Instead of browsing categories, shoppers may prefer to type a keyword into your store’s search bar to find what they want. VTEX provides two different search solutions for your store. We recommend that you use [Intelligent Search](#intelligent-search), but you have the option to use the [Legacy CMS Portal search](#legacy-search) if you wish.
+Instead of browsing categories, shoppers may prefer to type a keyword into your store’s search bar to find what they want. VTEX provides two different search solutions for your store. We recommend that you use [Intelligent Search](#intelligent-search), but you have the option to use the [VTEX Search (Legacy)](#vtex-search-legacy) if you wish.
 
 >ℹ️ Learn more about [VTEX Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG).
 
@@ -59,9 +59,9 @@ You can also get the most searched terms on your site:
 
 - [Get list of the 10 most searched terms](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/top_searches)
 
-### Legacy Search
+### VTEX Search (Legacy)
 
-To retrieve products with the Legacy Search, use this endpoint:
+To retrieve products with the VTEX Search (Legacy), use this endpoint:
 
 - [Search for Products with Filter, Order and Pagination](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search)
 
@@ -73,7 +73,7 @@ Note that this endpoint provides multiple filtering and ordering options that ca
 
 >ℹ️ See the [Search endpoint documentation](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search) to learn about all filtering and sorting options.
 
-#### Legacy Search autocomplete
+#### VTEX Search (Legacy) autocomplete
 
 You can also implement an autocomplete feature to your store’s search bar using Legacu Search. To do this, use this endpoint:
 
@@ -138,16 +138,16 @@ https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search
 
 >ℹ️ The `query` parameter accepts specific filters like `product:{id}`, `sku:{id}`, `product.link:{slug}`, and other ID types to retrieve individual products. For more details, see the [Intelligent Search API reference](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-).
 
-### Alternative approach (Legacy Search)
+### Alternative approach (VTEX Search (Legacy))
 
-Alternatively, you can use the Legacy Search API endpoints to retrieve product information:
+Alternatively, you can use the VTEX Search (Legacy) API endpoints to retrieve product information:
 
 - [Search Product by Product URL](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search/-product-text-link-/p)
 - [Search for Products with Filter, Order and Pagination](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search)
   - Filter by product ID: `fq=productId:{productId}`
   - Filter by SKU ID: `fq=skuId:{skuId}`
 
->⚠️ Legacy Search endpoints do not support Delivery Promise features. If your store uses [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), you must use the Intelligent Search API as described above.
+>⚠️ VTEX Search (Legacy) endpoints do not support Delivery Promise features. If your store uses [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), you must use the Intelligent Search API as described above.
 
 ### Cross selling
 

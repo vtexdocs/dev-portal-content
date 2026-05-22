@@ -2,12 +2,12 @@
 title: "Change to the availableQuantity field in the search API"
 slug: "2024-09-10-change-available-quantity-field-search-api"
 type: "improved"
-excerpt: "VTEX changed how the `availableQuantity` field works, which is returned by the API routes of the legacy search. This change may impact existing integrations."
+excerpt: "VTEX changed how the `availableQuantity` field works, which is returned by the API routes of the VTEX Search (Legacy). This change may impact existing integrations."
 createdAt: "2024-09-10T11:00:00.000Z"
 updatedAt: "2024-09-10T11:30:00.000Z"
 ---
 
-VTEX changed how the `availableQuantity` field works, which is returned by the API routes of the legacy search. This change may impact existing integrations.
+VTEX changed how the `availableQuantity` field works, which is returned by the API routes of the VTEX Search (Legacy). This change may impact existing integrations.
 
 > Stores that use VTEX Intelligent Search are not affected.
 

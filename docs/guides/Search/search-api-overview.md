@@ -1,5 +1,5 @@
 ---
-title: "Legacy Search API - Overview"
+title: "VTEX Search (Legacy) API - Overview"
 slug: "search-api-overview"
 hidden: false
 createdAt: "2020-01-15T00:07:22.367Z"
