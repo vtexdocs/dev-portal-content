@@ -3,7 +3,8 @@ title: "Configuring an external gift card provider"
 slug: "configuring-an-external-gift-card-provider"
 hidden: false
 createdAt: "2026-05-22T00:00:00.000Z"
-updatedAt: ""
+updatedAt: "2026-05-22T00:00:00.000Z"
+excerpt: "Learn how to register an external gift card provider and implement the integration flows used by VTEX Gift Card Hub."
 ---
 This guide provides a high-level overview of how to register an external gift card provider on VTEX and implement the endpoints used for gift card creation, checkout, settlement, and cancellation. For endpoint schemas, required fields, and complete request and response examples, see the [Gift Card Hub API](https://developers.vtex.com/docs/api-reference/giftcard-hub-api) and the [Gift Card Provider Protocol API](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol).
 

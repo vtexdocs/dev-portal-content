@@ -4,6 +4,7 @@ slug: "gift-card-integration-guide-provider-protocol"
 hidden: true
 createdAt: "2020-07-01T02:25:50.803Z"
 updatedAt: "2020-09-29T23:09:46.033Z"
+excerpt: "Learn how to integrate a new gift card provider with VTEX using the Gift Card Provider Protocol."
 ---
 
 ## Linking the boilerplate code

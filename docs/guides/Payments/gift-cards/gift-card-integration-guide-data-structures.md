@@ -4,6 +4,7 @@ slug: "gift-card-integration-guide-data-structures"
 hidden: true
 createdAt: "2020-07-01T02:24:37.898Z"
 updatedAt: "2020-10-16T02:29:18.408Z"
+excerpt: "Understand the gift card provider data structures and behaviors expected by VTEX Gift Card Hub."
 ---
 
 Before developing your gift card provider implementation, it's important to clearly understand the data structures and the behaviors expected by Gift Card Hub. In most cases, developers will need to map the data structures and behaviors exhibited by external gift card providers and create parsing routines in their middleware to switch back and forth between standards.

@@ -3,7 +3,8 @@ title: "Managing VTEX gift cards"
 slug: "managing-vtex-gift-cards"
 hidden: false
 createdAt: "2023-10-26T00:00:00.000Z"
-updatedAt: ""
+updatedAt: "2023-10-26T00:00:00.000Z"
+excerpt: "Learn how to manage VTEX native gift cards using the GiftCard API."
 ---
 This guide describes how to manage VTEX native gift cards from the VTEX gift card provider through the [GiftCard API](https://developers.vtex.com/docs/api-reference/giftcard-api#overview). With this API, you can perform the following actions:
 
