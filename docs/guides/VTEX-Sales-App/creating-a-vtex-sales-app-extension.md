@@ -1,6 +1,6 @@
 ---
 title: "Creating a VTEX Sales App extension"
-slug: creating-a-vtex-sales-app-extension
+slug: "creating-a-vtex-sales-app-extension"
 hidden: false
 excerpt: "Learn how to create a VTEX Sales App extension in your FastStore project and render it in a predefined extension point."
 createdAt: "2026-05-22T16:10:21.214Z"
