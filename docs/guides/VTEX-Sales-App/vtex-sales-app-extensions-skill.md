@@ -30,6 +30,7 @@ Use this skill when building, customizing, or deploying extensions for VTEX Sale
 - ✅ Generating, scaffolding, or validating extension code for Sales App.
 
 Don't use this skill for:
+
 - ❌ Regular FastStore storefront customization (use `faststore-storefront` instead).
 - ❌ Building VTEX IO apps (use `vtex-io-*` skills instead).
 - ❌ Sales App core development or framework modifications.
