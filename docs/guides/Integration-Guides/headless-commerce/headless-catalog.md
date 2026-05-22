@@ -75,7 +75,7 @@ Note that this endpoint provides multiple filtering and ordering options that ca
 
 #### VTEX Search (Legacy) autocomplete
 
-You can also implement an autocomplete feature to your store’s search bar using Legacu Search. To do this, use this endpoint:
+You can also implement an autocomplete feature to your store’s search bar using VTEX Search (Legacy). To do this, use this endpoint:
 
 - [Product Search Autocomplete](https://developers.vtex.com/docs/api-reference/search-api#get-/buscaautocomplete)
 
