@@ -21,18 +21,16 @@ The VTEX Sales App Extensions Skill is identified as the `sales-app-extensibilit
 
 ## Skill full lifecycle coverage
 
-You can the extensions skill before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks.
-
-The skill mirrors the implementation workflow for Sales App extensions described in the [extensibility tutorial](https://help.vtex.com/en/tutorial/extensibility-in-vtex-sales-app) and supports every stage from setup to production.
+You can install the extensions skill before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks. The skill supports every stage from setup to production, as shown in the table below:
 
 | Phase | What the skill does |
 | :--- | :--- |
-| **Install** | Sets up your environment, validates dependencies, and resolves setup issues before development. |
-| **Define** | Helps delimit project scope—what to build, which extension point to use, and whether the project involves VTEX IO apps, external integrations, or UX changes. |
-| **Analysis** | Reviews requirements for gaps or ambiguities in user flows, integrations, or technical details, and prompts for missing information. |
-| **Plan** | Produces an implementation plan aligned with Sales App capabilities and validates feasibility against extension point specifications. |
-| **Code** | Generates extension code using Sales App hooks and platform patterns, keeping UX consistent with ecommerce when the feature already exists online. |
-| **Deploy** | Guides you through local previews, builds, and deployment to production, including validation before release. |
+| Install | Sets up your environment, validates dependencies, and resolves setup issues before development. |
+| Define | Helps delimit project scope—what to build, which extension point to use, and whether the project involves VTEX IO apps, external integrations, or UX changes. |
+| Analysis | Reviews requirements for gaps or ambiguities in user flows, integrations, or technical details, and prompts for missing information. |
+| Plan | Produces an implementation plan aligned with Sales App capabilities and validates feasibility against extension point specifications. |
+| Code | Generates extension code using Sales App hooks and platform patterns, keeping UX consistent with ecommerce when the feature already exists online. |
+| Deploy | Guides you through local previews, builds, and deployment to production, including validation before release. |
 
 ## When to use the skill
 
