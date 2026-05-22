@@ -1,5 +1,5 @@
 ---
-title: "Batch inventory updates"
+title: "Batch inventory updates (Beta)"
 slug: "batch-inventory-updates"
 hidden: false
 createdAt: "2026-05-20T00:00:00.000Z"
