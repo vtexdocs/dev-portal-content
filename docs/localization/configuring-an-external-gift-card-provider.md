@@ -145,7 +145,7 @@ Before you start, make sure the provider:
 
 Use the [Create or update gift card provider](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#put-/api/giftcardproviders/-giftCardProviderId-) endpoint to register or update a provider on VTEX.
 
-__PUT - Update gift card provider__
+**PUT - Update gift card provider**
 
 `https://{accountName}.vtexcommercestable.com.br/api/giftcardproviders/{giftCardProviderId}`
 
@@ -205,7 +205,7 @@ The provider must validate these headers in every endpoint:
 
 After registering the provider, use the [List all gift card providers](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#get-/api/giftcardproviders) endpoint to confirm that the configuration is available in the VTEX account.
 
-__GET - List all gift card providers__
+**GET - List all gift card providers**
 
 `https://{accountName}.vtexcommercestable.com.br/api/giftcardproviders`
 
