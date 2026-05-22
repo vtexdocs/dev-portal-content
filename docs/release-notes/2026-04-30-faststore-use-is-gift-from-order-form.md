@@ -5,7 +5,7 @@ type: added
 createdAt: "2026-04-23T00:00:00.000Z"
 updatedAt: "2026-04-24T00:00:00.000Z"
 hidden: false
-excerpt: "FastStore now supports the experimental `useIsGiftFromOrderForm` flag, allowing stores to detect gift items using the Order Form's `isGift` field instead of relying on a zero-price check."
+excerpt: "FastStore now supports the experimental `useIsGiftFromOrderForm` flag, allowing stores to detect gift items using the Order Form `isGift` field instead of relying on a zero-price check."
 tags:
   - FastStore
 ---
@@ -22,7 +22,7 @@ Previously, FastStore determined whether a cart item was a gift by checking if i
 
 ## Why did we make this change?
 
-Some stores configure gift items in the VTEX Order Form directly, without setting their price to zero. In these cases, the price-based detection would fail to identify the items as gifts, causing them to be displayed and totaled incorrectly in the cart. This flag provides a more accurate alternative for stores that rely on the Order Form's `isGift` field.
+Some stores configure gift items in the VTEX Order Form directly without setting their price to zero. In these cases, the price-based detection would fail to identify the items as gifts, causing them to be displayed and totaled incorrectly in the cart. This flag provides a more accurate alternative for stores that rely on the Order Form's `isGift` field.
 
 ## What needs to be done?
 
