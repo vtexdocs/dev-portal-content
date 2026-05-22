@@ -37,7 +37,7 @@ Don't use this skill for:
 
 ## Skill lifecycle coverage
 
-You can install the extensions skill before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks.
+You can install the Extensions Skill before you start an extensibility project so your AI coding assistant can follow Sales App patterns, and established hooks.
 
 The Extensions Skill supports every stage from setup to production, and follows a seven step workflow in the following order:
 
