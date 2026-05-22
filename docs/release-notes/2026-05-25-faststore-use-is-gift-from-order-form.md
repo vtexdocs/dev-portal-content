@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Gift detection with useIsGiftFromOrderForm"
-slug: "2026-04-23-faststore-use-is-gift-from-order-form"
+slug: "2026-05-25-faststore-use-is-gift-from-order-form"
 type: added
-createdAt: "2026-04-23T00:00:00.000Z"
-updatedAt: "2026-04-24T00:00:00.000Z"
+createdAt: "2026-05-25T00:00:00.000Z"
+updatedAt: "2026-05-25T00:00:00.000Z"
 hidden: false
 excerpt: "FastStore now supports the experimental `useIsGiftFromOrderForm` flag, allowing stores to detect gift items using the Order Form `isGift` field instead of relying on a zero-price check."
 tags:
