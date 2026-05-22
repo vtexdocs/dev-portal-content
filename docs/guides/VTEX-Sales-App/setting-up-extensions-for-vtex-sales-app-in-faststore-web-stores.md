@@ -108,7 +108,7 @@ The `faststore.json` file should include a `sales-app` entry like the following:
 }
 ```
 
-> ℹ️ The `fsp create` command updates `faststore.json` automatically. Review the generated values to make sure the account name, path, and port match your project.
+> ℹ️ The `fsp create` command updates `faststore.json` automatically. Review the generated values to make sure the account name, `path`, and `port` match your project.
 
 ### Step 3 - Configuring the project as a workspace
 
@@ -150,6 +150,6 @@ npx fsp dev store-a
 
 The VTEX Sales App is available at the `/sales-app/checkout/cart` path on the URL provided by the FastStore CLI. You should see a screen similar to this:
 
-![sales-app-ui](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17928-sales-app-extension-setting-up/images/sales-app-extensions-1.webp)
+![Sales App Extensions tab listing available apps with name, description, and enable toggles](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17928-sales-app-extension-setting-up/images/sales-app-extensions-1.webp)
 
 You can also access the VTEX Sales App locally using the `path` and `port` values defined in `faststore.json`. For example, if the file specifies port `3002`, open `http://localhost:3002/sales-app/checkout/cart`.
