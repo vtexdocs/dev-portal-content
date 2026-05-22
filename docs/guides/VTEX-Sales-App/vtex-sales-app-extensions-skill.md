@@ -37,25 +37,19 @@ Don't use this skill for:
 
 ## Extensions Skill full lifecycle coverage
 
-You can install the extensions skill before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks. The skill supports every stage from setup to production, as shown in the table below:
+You can install the extensions skill before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks.
 
-| Phase | What the skill does |
+The Extensions Skill supports every stage from setup to production, and follows a seven step workflow in the following order:
+
+| Step | What the skill does |
 | :--- | :--- |
-| Install | Sets up your environment, validates dependencies, and resolves setup issues before development. |
-| Define | Helps delimit project scope—what to build, which extension point to use, and whether the project involves VTEX IO apps, external integrations, or UX changes. |
-| Analysis | Reviews requirements for gaps or ambiguities in user flows, integrations, or technical details, and prompts for missing information. |
-| Plan | Produces an implementation plan aligned with Sales App capabilities and validates feasibility against extension point specifications. |
-| Code | Generates extension code using Sales App hooks and platform patterns, keeping UX consistent with ecommerce when the feature already exists online. |
-| Deploy | Guides you through local previews, builds, and deployment to production, including validation before release. |
-
-## When to use the skill
-
-Use the Extensions Skill during definition and implementation, as recommended in the extensibility tutorial:
-
-1. **Plan project scope** — Clarify what the extension should deliver and where it fits in the sales journey.
-2. **Map UX and technical requirements** — Detail user flows, UI behavior, and how the extension connects to Checkout, Catalog, Inventory, or external systems.
-3. **Check technical feasibility** — Confirm that mapped requirements are supported by the target extension points before coding.
-4. **Implement and validate** — Build the extension, test locally, then deploy for store users.
+| Check prerequisites | Checks if the prerequisites are met to start the project, as described in the [Extensibility technical documentation](link). If not, stops the workflow. |
+| Discovery | Understands what the user wants to build. |
+| Requirements & Plan | Maps requirements, generates an implementation plan. It also helps delimit project scope—what to build, which extension point to use, and whether the project involves VTEX IO apps, external integrations, or UX changes.  At the end, waits for user approval. |
+| Code Generation & Validation | Generates extension code using Sales App hooks and platform patterns, keeping UX consistent with ecommerce when the feature already exists online. Reviews requirements for gaps or ambiguities in user flows, integrations, or technical details, and prompts for missing information. |
+| Documentation | Generates `docs/<ExtensionName>.md` explaining the extension. |
+| Local Testing | Provides dev commands and URLs to test the extension locally. |
+| Build & Deploy | Guides you through local previews, builds, and deployment to production, including validation before release. |
 
 ## Extensions Skill installation
 
