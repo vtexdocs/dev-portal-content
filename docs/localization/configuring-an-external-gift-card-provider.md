@@ -1,18 +1,18 @@
 ---
-title: "Configuring an external Gift Card Provider"
+title: "Configuring an external gift card provider"
 slug: "configuring-an-external-gift-card-provider"
 hidden: false
 createdAt: "2026-04-24T00:00:00.000Z"
 updatedAt: ""
 ---
-This guide provides a high-level overview of how to register an external Gift Card Provider in VTEX and implement the endpoints used in gift card creation, checkout, settlement, and cancellation. For endpoint schemas, required fields, and complete request and response examples, see the [Gift Card Hub API](https://developers.vtex.com/docs/api-reference/giftcard-hub-api) and the [Gift Card Provider Protocol API](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol).
+This guide provides a high-level overview of how to register an external gift card provider on VTEX and implement the endpoints used for gift card creation, checkout, settlement, and cancellation. For endpoint schemas, required fields, and complete request and response examples, see the [Gift Card Hub API](https://developers.vtex.com/docs/api-reference/giftcard-hub-api) and the [Gift Card Provider Protocol API](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol).
 
 ## How the integration works
 
 This integration includes three flows:
 
-- **Checkout:** VTEX lists the configured providers, requests the customer's available gift cards, retrieves the selected gift card details, and creates the transaction.
-- **Settlement:** VTEX checks existing settlements for the transaction and confirms the capture when needed.
+- **Checkout:** VTEX lists the configured providers, requests the customer's available gift cards, retrieves details of the selected gift card, and creates the transaction.
+- **Settlement:** VTEX checks existing settlements for the transaction and confirms the settlement when needed.
 - **Cancellation:** VTEX checks existing cancellations for the transaction and confirms the cancellation or refund when needed.
 
 > ℹ️ VTEX orchestrates these flows through the Gift Card Hub. The provider is responsible only for the external protocol endpoints called through `serviceUrl`.
@@ -85,8 +85,8 @@ sequenceDiagram
 
 |    Step    | Interaction                                    | Endpoint                                                                                                                                                                                                                                                                                                                                                                                  | Description                                                                        |
 | :---------: | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| **8** | **Gateway >> Gift Card Hub** (Internal)  | [Settle a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#post-/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/settlements) (Gift Card Hub API)                                                                                                                                                                 | Gift Card Hub receives the settlement request and forwards it internally.          |
-| **9** | **Gift Card Hub >> Provider** (External) | [List all gift card transactions settlements](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#get-/giftcards/-giftCardId-/transactions/-tId-/settlements) + [Settle a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions/-tId-/settlements) (Gift Card Provider Protocol API) | The `GET` checks existing settlements, and the `POST` confirms the settlement. |
+| **8** | **Gateway >> Gift Card Hub** (Internal)  | [Settle a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#post-/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/settlements) (Gift Card Hub API)                                                                                                                                                                    | Gift Card Hub receives the settlement request and forwards it internally.          |
+| **9** | **Gift Card Hub >> Provider** (External) | [List all gift card transactions settlements](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#get-/giftcards/-giftCardId-/transactions/-tId-/settlements) + [Settle a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions/-tId-/settlements) (Gift Card Provider Protocol API) | `GET` checks existing settlements, and `POST` confirms the settlement. |
 
 ### Cancellation flow
 
@@ -108,10 +108,10 @@ sequenceDiagram
 
 |     Step     | Interaction                                    | Endpoint                                                                                                                                                                                                                                                                                                                                                                                                            | Description                                                                            |
 | :----------: | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| **10** | **Gateway >> Gift Card Hub** (Internal)  | [Cancel a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#post-/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/cancellations) (Gift Card Hub API)                                                                                                                                                                                         | Gift Card Hub receives the cancellation request and forwards it internally.            |
-| **11** | **Gift Card Hub >> Provider** (External) | [List all gift card transactions cancellations](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#get-/giftcards/-giftCardId-/transactions/-transactionId-/cancellations) + [Cancel a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions/-transactionId-/cancellations) (Gift Card Provider Protocol API) | The `GET` checks existing cancellations, and the `POST` performs the cancellation. |
+| **10** | **Gateway >> Gift Card Hub** (Internal)  | [Cancel a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#post-/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/cancellations) (Gift Card Hub API)                                                                                                                                                                                            | Gift Card Hub receives the cancellation request and forwards it internally.            |
+| **11** | **Gift Card Hub >> Provider** (External) | [List all gift card transactions cancellations](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#get-/giftcards/-giftCardId-/transactions/-transactionId-/cancellations) + [Cancel a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions/-transactionId-/cancellations) (Gift Card Provider Protocol API) | `GET` checks existing cancellations, and `POST` performs the cancellation.  |
 
-## What a provider must already handle
+## What a provider must handle
 
 Before integrating with VTEX, the provider system must already:
 
@@ -122,13 +122,13 @@ Before integrating with VTEX, the provider system must already:
 
 > ⚠️ The provider remains the source of truth for balances, expiration dates, and transaction history.
 
-For example, if the provider returns a balance of `500.00` in `GET /giftcards/{giftCardId}`, VTEX uses that value in the purchase flow. The provider remains responsible for the accuracy of the balance returned.
+For example, if the provider returns a balance of `500.00` in `GET /giftcards/{giftCardId}`, VTEX uses that value in the purchase flow. The provider remains responsible for the accuracy of the returned balance.
 
 > ℹ️ After the provider is configured and the endpoints are available, VTEX automatically orchestrates the calls required during checkout, settlement, and cancellation.
 
-In this guide, you will learn how to:
+In this guide, you'll learn how to:
 
-- [Register the Gift Card Provider in VTEX](#step-1-register-the-gift-card-provider-in-vtex)
+- [Register the gift card provider on VTEX](#step-1-register-the-gift-card-provider-in-vtex)
 - [Confirm the provider registration](#step-2-confirm-the-provider-registration)
 - [Implement the provider protocol endpoints](#step-3-implement-the-provider-protocol-endpoints)
 - [Handle authentication and required responses](#expected-authentication-behavior)
@@ -137,13 +137,13 @@ In this guide, you will learn how to:
 
 Before you start, make sure the provider:
 
-- Provides a base URL that VTEX can use to call the Gift Card Provider protocol endpoints.
+- Provides a base URL that VTEX can use to call the gift card provider protocol endpoints.
 - Validates provider authentication headers in every request.
 - Responds within 15 seconds.
 
-## Register the Gift Card Provider in VTEX
+## Register the gift card provider on VTEX
 
-Use the [Create or update gift card provider](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#put-/api/giftcardproviders/-giftCardProviderId-) endpoint to register or update a provider in VTEX.
+Use the [Create or update gift card provider](https://developers.vtex.com/docs/api-reference/giftcard-hub-api#put-/api/giftcardproviders/-giftCardProviderId-) endpoint to register or update a provider on VTEX.
 
 __PUT - Update gift card provider__
 
@@ -176,14 +176,14 @@ Request body
 
 When configuring `serviceUrl`, follow these recommendations:
 
-- Include at least one path segment. Do not use only the root domain.
-- Do not add a trailing slash to `serviceUrl`. Otherwise, VTEX may generate a URL with a double slash (`//`), which can cause routing failures depending on your server implementation.
+- Include at least one path segment. Don't use only the root domain.
+- Don't add a trailing slash to `serviceUrl`. Otherwise, VTEX may generate a URL with a double slash (`//`), which can cause routing failures depending on your server implementation.
 
 VTEX integrates protocol paths directly to `serviceUrl`, without adding separators. The final URL structure is:
 
 `serviceUrl + protocol path`
 
-For example:
+Example:
 
 - `serviceUrl`: `https://api.example.com/v1/giftcard`
 - Protocol path: `/giftcards/_search`
@@ -191,7 +191,7 @@ For example:
 
 ### Provider authentication
 
-The `appKey` and `appToken` configured in the provider registration are the credentials that VTEX sends in all protocol calls through the following headers:
+The `appKey` and `appToken` configured during provider registration are the credentials that VTEX sends in all protocol calls through the following headers:
 
 - `X-PROVIDER-API-AppKey`
 - `X-PROVIDER-API-AppToken`
@@ -226,9 +226,9 @@ VTEX calls the following endpoints relative to `serviceUrl` (`providerApiEndpoin
 
 > ⚠️ The provider server must also accept additional VTEX headers, such as `<ul>` `<li>` `content-length`: body size in bytes (only in POSTs)`</li>` `<li>` `x-vtex-operation-id`: Internal operation UUID `</li>` `<li>` `x-vtex-debug-id`: Debug ID (may have an empty value) `</li>` `<li>` `traceparent`: W3C distributed tracing header `</li>` `<li>` `baggage`: tracking metadata `</li>` `</li>` `accept-encoding`: gzip `</li>` `</ul>`.
 
-> ℹ️ Do not reject requests because of unknown headers.
+> ℹ️ Don't reject requests because of unknown headers.
 
-In settlement and cancellation flows, VTEX always calls the `GET` endpoint before sending a `POST`. VTEX sums the values already processed and sends a new `POST` only when there is an amount left to capture or cancel. This behavior helps ensure unchanged data ([idempotence](https://en.wikipedia.org/wiki/Idempotence)) and avoids reprocessing operations during retries.
+In settlement and cancellation flows, VTEX always calls the `GET` endpoint before sending a `POST` request. VTEX sums the amounts already processed and sends a new `POST` request only when there is an amount left to settle or cancel. This behavior helps ensure unchanged data ([idempotence](https://en.wikipedia.org/wiki/Idempotence)) and avoids reprocessing operations during retries.
 
 ### Creating a gift card
 
@@ -240,7 +240,7 @@ Return the created gift card data, including the generated `id`. VTEX uses this 
 
 Use the [List all gift cards](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/_search) endpoint to return the gift cards available for the current customer and cart. This endpoint may be called multiple times during the same checkout session and returns only gift cards with available balance.
 
-> ⚠️ Always return an empty array `[]` when the customer has no gift card or when the gift card balance is zero. Do not return a gift card object with `"balance": 0`, because this can break the gift card flow in VTEX.
+> ⚠️ Always return an empty array `[]` when the customer has no gift cards or when the gift card balance is zero. Don't return a gift card object with `"balance": 0`, because this can break the gift card flow on VTEX.
 
 For B2B scenarios, define a consistent identifier strategy:
 
@@ -279,7 +279,7 @@ Example response. For the complete schema, see the API reference.
 
 ### Creating a transaction
 
-Use the [Create a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions) endpoint when the shopper places the order.
+Use the [Create a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions) endpoint when the buyer places an order.
 
 This request creates the transaction that reserves or debits the gift card amount. In the response, return a unique transaction `id`.
 
@@ -298,7 +298,7 @@ The endpoint should return:
 - An empty array `[]` when no settlements exist.
 - An array of settlement objects when settlements already exist.
 
-VTEX sums the returned settlement values. If the total is equal to or greater than the transaction amount, VTEX does not send a new [Settle a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions/-tId-/settlements) call.
+VTEX sums the returned settlement values. If the total is equal to or greater than the transaction amount, VTEX doesn't send a new [Settle a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions/-tId-/settlements) call.
 
 ### Creating a settlement
 
@@ -314,7 +314,7 @@ The endpoint should return:
 
 Use the [List all gift card transactions cancellations](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#get-/giftcards/-giftCardId-/transactions/-transactionId-/cancellations) endpoint to list previously processed cancellations.
 
-> ⚠️ This endpoint is also mandatory. VTEX always calls it before sending a new cancellation request.
+> ⚠️ This endpoint is mandatory. VTEX always calls it before sending a new cancellation request.
 
 The endpoint should return:
 
@@ -325,7 +325,7 @@ VTEX sums the returned cancellation values to decide whether another cancellatio
 
 ### Creating a cancellation
 
-Use the [Cancel a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions/-transactionId-/cancellations) endpoint to cancel or refund a transaction and restore the amount to the shopper's gift card.
+Use the [Cancel a gift card transaction](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#post-/giftcards/-giftCardId-/transactions/-transactionId-/cancellations) endpoint to cancel or refund a transaction and restore the amount to the buyer's gift card.
 
 The endpoint should return:
 
