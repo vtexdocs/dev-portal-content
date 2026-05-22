@@ -4,6 +4,7 @@ slug: "search-api-overview"
 hidden: false
 createdAt: "2020-01-15T00:07:22.367Z"
 updatedAt: "2022-12-01T21:52:29.635Z"
+excerpt: "Search and sort catalog products using fulltext, category, and brand search terms to create custom searches and product shelves."
 ---
 [block:callout]
 {

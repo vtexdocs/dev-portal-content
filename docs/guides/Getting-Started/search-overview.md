@@ -4,6 +4,7 @@ slug: "search-overview"
 hidden: false
 createdAt: "2022-04-28T19:54:24.451Z"
 updatedAt: "2022-09-13T20:26:18.916Z"
+excerpt: "Learn how to implement Intelligent Search in your VTEX store, including search components, autocomplete, banners, and integrations with external search providers."
 ---
 
 > **Help us improve our documentation!** Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).

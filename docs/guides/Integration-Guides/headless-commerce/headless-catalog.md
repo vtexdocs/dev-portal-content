@@ -4,6 +4,7 @@ slug: "headless-catalog"
 hidden: true
 createdAt: "2021-03-31T21:16:55.757Z"
 updatedAt: "2021-03-31T21:16:55.757Z"
+excerpt: "Explore API endpoints for retrieving product information, categories, and search results to build headless commerce experiences with VTEX."
 ---
 
 Be it through category menus, keyword searches, or product pages, shoppers accessing your headless store will need to browse through your products' information.

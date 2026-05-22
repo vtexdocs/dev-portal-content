@@ -2,8 +2,9 @@
 title: "How search parameters work"
 slug: "how-search-parameters-work"
 hidden: false
-createdAt: "2022-09-12t20:50:49.238z"
-updatedAt: "2022-09-15t18:56:45.172z"
+createdAt: "2022-09-12T20:50:49.238Z"
+updatedAt: "2022-09-15T18:56:45.172Z"
+excerpt: "Understand URL structure and search parameters for filtering products by category, brand, collection, and specifications in VTEX Search (Legacy)."
 ---
 
 > ⚠️ VTEX has two search options: VTEX Search (Legacy) and Intelligent Search. This article is about VTEX Search (Legacy). To learn more about  Intelligent Search, see [this track](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb).
