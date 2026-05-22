@@ -8,7 +8,7 @@ createdAt: "2026-05-21T15:59:53.407Z"
 
 > ℹ️ This feature is currently in beta, which means we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/pt/support).
 
-[VTEX Sales App extensibility](https://help.vtex.com/docs/tutorials/extensibility-in-vtex-sales-app) lets you customize the default assisted-sales journey with features that support your business requirements.
+[VTEX Sales App Extensibility](https://help.vtex.com/docs/tutorials/extensibility-in-vtex-sales-app) lets you customize the default assisted-sales journey with features that support your business requirements.
 
 By using predefined extension points, you can integrate external APIs, use VTEX data, and add custom experiences to areas such as cart and checkout, the side menu, and the product details page.
 
