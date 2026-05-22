@@ -3,7 +3,8 @@ title: "Payments"
 slug: "payments-integration-guide"
 hidden: false
 createdAt: "2020-10-27T00:24:27.500Z"
-updatedAt: "2026-04-17T00:00:00.000Z"
+updatedAt: "2026-05-22T00:00:00.000Z"
+excerpt: "Explore VTEX payments documentation, including payment providers, anti-fraud, gift cards, configuration, and testing."
 ---
 Communication between systems and services of stores, partners and platform is carried out through integration protocols. At VTEX, we use the Payment Provider Protocol (PPP), a protocol created to assist companies that carry out financial transaction operations.
 
