@@ -31,7 +31,7 @@ Use this skill when building, customizing, or deploying extensions for VTEX Sale
 
 Don't use this skill for:
 
-- ❌ Regular FastStore storefront customization (use `faststore-storefront` instead).
+- ❌ Regular FastStore storefront customization (use `faststore-storefront` skill instead).
 - ❌ Building VTEX IO apps (use `vtex-io-*` skills instead).
 - ❌ Sales App core development or framework modifications.
 
