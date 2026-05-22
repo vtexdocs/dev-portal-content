@@ -1,0 +1,82 @@
+---
+title: "VTEX Sales App Extension Points"
+slug: "vtex-sales-app-extension-points"
+hidden: false
+createdAt: "2026-05-22T07:00:00.000Z"
+excerpt: ""
+---
+
+> ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
+
+VTEX Sales App provides extension points in the cart that let you customize the user interface and user experience according to your store's requirements.
+
+Below are the available extension points for VTEX Sales App:
+
+| Extension Point | Category | Available Hooks | Layout Shift |
+|----------------|----------|----------------|--------------|
+| `cart.cart-list.after` | Cart | useCart, useExtension | No |
+| `cart.cart-item.after` | Cart | useCart, useCartItem, useExtension | Yes |
+| `cart.order-summary.after` | Cart | useCart, useExtension | Yes |
+| `pdp.sidebar.before` | PDP | usePDP, useCart, useExtension | Yes |
+| `pdp.sidebar.after` | PDP | usePDP, useCart, useExtension | Yes |
+| `pdp.content.after` | PDP | usePDP, useCart, useExtension | Yes |
+| `menu.item` | Menu | useExtension | No |
+| `menu.drawer-content` | Menu | useCurrentUser, useExtension | No |
+
+> ⚠️ Some extension points may trigger layout shifts, as shown in the table above. If your extension fetches data, allocate space for dynamic content. We recommend always implementing skeletons or loading states to enhance both the user experience and the interface, especially for extension points that may cause a layout shift.
+>
+>Static extensions and those using only data-layer hooks should not trigger layout shifts, since the VTEX Sales App consistently renders them within the layout.
+
+## Extension points
+
+### Cart
+
+#### `cart.cart-list.after`
+
+![Shopping cart page with one item and order summary, highlighting the full cart list area below the main cart content.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/cart.cart-list.after.webp)
+
+#### `cart.cart-item.after` <Badge text="❕Potential Layout Shift" variant="caution" />
+
+![Shopping cart page showing one MacBook Pro item with delivery details, quantity selector, remove button, and a highlighted placeholder area for the cart item component below the product row.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/cart.cart-item.after.webp)
+
+#### `cart.order-summary.after` <Badge text="❕Potential Layout Shift" variant="caution" />
+
+![Shopping cart page with subtotal, discount, total, and Continue button, highlighting the order summary component in the right sidebar.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/cart.order-summary.after.webp)
+
+### Product Detail Page (PDP)
+
+#### `pdp.sidebar.before` <Badge text="❕Potential Layout Shift" variant="caution" />
+
+![Product details page showing product image, price, voltage selector, purchase options, add to cart button, and shipping information, with the PDP sidebar area highlighted before the content section.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/pdp.sidebar.before.webp)
+
+#### `pdp.sidebar.after` <Badge text="❕Potential Layout Shift" variant="caution" />
+
+![Product details page showing delivery, withdrawal, and in-store availability options in the right sidebar, with the PDP sidebar component highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/pdp.sidebar.after.webp)
+
+#### `pdp.content.after` <Badge text="❕Potential Layout Shift" variant="caution" />
+
+![Product details page showing related products and frequently bought together sections, with the main PDP content area highlighted below the product information.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/pdp.content.after.webp)
+
+### Menu
+
+#### `menu.item`
+
+![Open side menu showing navigation tiles, with the menu item component highlighted near the bottom of the drawer.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/menu.item.webp)
+
+Create a simple component that returns a string within HTML tags, such as `div` or `p`.
+
+```javascript
+import React from "react";
+
+export function MenuItem() {
+  return <div>Extension</div>;
+}
+```
+
+> ℹ️ This component is optional. If you don't create it, a default menu labeled Extension Point will be shown. The menu will only be visible if you define the `menu.drawer-content` extension.
+
+#### `menu.drawer-content`
+
+![Open left-side drawer overlay on top of the cart page, with the background dimmed and the drawer content area highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/menu.drawer-content.webp)
+
+This drawer is opened by clicking on `menu.item` extension.
