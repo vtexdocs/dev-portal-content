@@ -22,7 +22,7 @@ Four new endpoints are now available in the Logistics API, under the **Batch ope
 
 ## Why did we make this change?
 
-The existing inventory endpoints remain optimized for low-latency, per-SKU updates—ideal for real-time or incremental inventory changes. However, for scenarios that involve millions of SKUs or require full inventory synchronizations, the new batch endpoints offer a scalable, asynchronous alternative. Importantly, you do not need to choose between them: both methods can be used together within the same account, depending on the context and business needs.
+The existing inventory endpoints remain optimized for low-latency, per-SKU updates, ideal for real-time or incremental inventory changes. However, for scenarios that involve millions of SKUs or require full inventory synchronizations, the new batch endpoints offer a scalable, asynchronous alternative. You do not need to choose between them: both methods can be used together within the same account, depending on the context and business needs.
 
 With this new capability, you can:
 
