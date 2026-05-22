@@ -86,7 +86,6 @@ export const CustomMessage = () => {
 
 After saving the file, return to the browser to preview the styled extension.
 
-![VTEX cart page with empty cart and Extension example area styled as a black bar at the bottom
-](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-18419-creating-extension-point/images/creating-extensions-example-with-css.webp)
+![VTEX cart page with empty cart and Extension example area styled as a black bar at the bottom](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-18419-creating-extension-point/images/creating-extensions-example-with-css.webp)
 
 ## Next steps
