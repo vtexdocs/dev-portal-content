@@ -21,7 +21,7 @@ The VTEX Sales App Extensions Skill is identified as the `sales-app-extensibilit
 
 ## When Extensions Skill applies
 
-Use Extensions Skill when building, customizing, or deploying extensions for VTEX Sales App, as shown in the list below:
+Use this skill when building, customizing, or deploying extensions for VTEX Sales App, such as when:
 
 - ✅ Adding features to the cart page (promotions, loyalty, services).
 - ✅ Adding features to the Product Detail Pages (badges, recommendations, warranties).
