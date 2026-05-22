@@ -19,6 +19,21 @@ VTEX Sales App Extensions Skill is an AI-powered skill with embedded knowledge o
 
 The VTEX Sales App Extensions Skill is identified as the `sales-app-extensibility` skill that's part of the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection.
 
+## When Extensions Skill applies
+
+Use Extensions Skill when building, customizing, or deploying extensions for VTEX Sales App, as shown in the list below:
+
+- ✅ Adding features to the cart page (promotions, loyalty, services).
+- ✅ Adding features to the Product Detail Pages (badges, recommendations, warranties).
+- ✅ Adding features to the menu (user profile, navigation, metrics).
+- ✅ Integrating external APIs into Sales App extensions.
+- ✅ Generating, scaffolding, or validating extension code for Sales App.
+
+Don't use this skill for:
+- ❌ Regular FastStore storefront customization (use `faststore-storefront` instead).
+- ❌ Building VTEX IO apps (use `vtex-io-*` skills instead).
+- ❌ Sales App core development or framework modifications.
+
 ## Skill full lifecycle coverage
 
 You can install the extensions skill before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks. The skill supports every stage from setup to production, as shown in the table below:
