@@ -16,7 +16,7 @@ In this guide, you'll learn how to set up extension points for VTEX Sales App in
 
 ## Before you begin
 
-* Set up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview).
+* Set up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview). The monorepo uses a `faststore.json` file at the repository root to define module settings such as `paths` and `ports` for local development and production.
 
 * Install the VTEX Sales App on your account, complete the onboarding in VTEX Admin, and add a sales associate linked to a store. For detailed instructions, see the guide [VTEX Sales App - Basic settings](https://help.vtex.com/docs/tracks/vtex-sales-app-basic-settings).
 
@@ -63,19 +63,39 @@ As an example, consider the account `store-a` and the path `./store-a/sales-app`
 After running the command, the folder is created at the root of your monorepo based on the path you provided. Your monorepo structure should look similar to this:
 
 ```txt
-📂 Account monorepo
+📂 account-monorepo
 │
-├── 📂 store-a
-│   └── 📂 sales-app
-│      └── 📂 src
-│         ├── 📄 index.tsx
-│         ├── 📄 HelloWorld.tsx
-│         ├── 📄 hello-world.css
-│         └── 📄 package.json
-│  
+├──📂 store-a
+│   └──📂 sales-app
+│      └──📂 src
+│         └── 📂 components
+│         │  └──📄 Example.tsx
+│         ├──📄 Example.css
+│         ├──📄 index.tsx
+│         └──📄 package.json
+└──📄faststore.json
 ```
 
-In the `faststore.json` file, check if your account includes a `sales-app` entry similar to the following:
+#### Project structure
+
+The `src/index.tsx` file at the root of your project is the entry point for all VTEX Sales App extensions you create. It looks like this:
+
+```tsx
+import { defineExtensions } from '@vtex/sales-app'
+import { Example } from './components/Example'
+
+export default defineExtensions({
+  'cart.cart-list.after': Example,
+})
+```
+
+The `defineExtensions` function connects the extensions you create to the extension point where they should appear. You can create your extensions in separate files and then import them into `index.tsx` to keep your project organized.
+
+This function also helps during development by showing available extension points with autocomplete and type-checking, making the setup easier and less error-prone. To build your extension, use the hooks, types, and helper functions available in the `@vtex/sales-app` package. For more information, see the [VTEX Sales App extension points](#LINK) guide.
+
+The `src/components/Example.tsx` file includes a sample extension point. You can import CSS files, such as `Example.css`, to define classes and make them available globally. Organize your code however best fits your project, either by separating implementation and styling into different files or by keeping everything in a single file.
+
+The `faststore.json` file should include a `sales-app` entry like the following:
 
 ```json
 {
