@@ -34,7 +34,7 @@ Don't use this skill for:
 - ❌ Building VTEX IO apps (use `vtex-io-*` skills instead).
 - ❌ Sales App core development or framework modifications.
 
-## Skill full lifecycle coverage
+## Extensions Skill full lifecycle coverage
 
 You can install the extensions skill before you start an extensibility project so your AI coding assistant can follow Sales App patterns, extension point specifications, and established hooks. The skill supports every stage from setup to production, as shown in the table below:
 
