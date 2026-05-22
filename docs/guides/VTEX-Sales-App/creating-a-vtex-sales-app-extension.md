@@ -86,4 +86,28 @@ After saving the file, return to the browser to preview the styled extension.
 
 ![VTEX cart page with empty cart and Extension example area styled as a black bar at the bottom](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-18419-creating-extension-point/images/creating-extensions-example-with-css.webp)
 
-## Next steps
+### Step 4 - Deploying your changes
+
+A deployment starts whenever you push a commit to the `main` branch. When pushing to `main`, [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) starts the production deployment flow. In about 10 minutes, the changes will be applied to your Sales App.
+
+> ⚠️ VTEX Sales App extensions support only production deployments. Once a commit and push are made to the `main` branch, your changes will be applied to production. To revert this change, create a new commit that reverses the previous changes, then push it to `main`.
+
+#### Handling build failures
+
+If the build fails, the issue is usually in your extension code or configuration. Common causes include type-checking errors and typos.
+
+FastStore Webops shows when a build fails, but Sales App build logs aren't available there. To inspect the logs, check the GitHub Checks for the failed commit:
+
+![GitHub checks notification showing failed check for commit 'Added missing totalizer validations' in a VTEX app repository](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-18419-creating-extension-point/images/deploying-extensions-github-checks.webp)
+
+You can also run the following command. Remember to replace `{account-name}` with the name of your account.
+
+```yarn
+yarn fsp build {account-name} sales-app
+```
+
+```npm
+npx fsp build {account-name} sales-app
+```
+
+This command builds the VTEX Sales App extension for the specified account and displays any local build errors. If the command succeeds locally, check your GitHub repository for issues in the build workflow.
