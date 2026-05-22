@@ -61,7 +61,7 @@ You can also get the most searched terms on your site:
 
 ### VTEX Search (Legacy)
 
-To retrieve products with the VTEX Search (Legacy), use this endpoint:
+To retrieve products with VTEX Search (Legacy), use this endpoint:
 
 - [Search for Products with Filter, Order and Pagination](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search)
 
@@ -140,7 +140,7 @@ https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search
 
 ### Alternative approach (VTEX Search (Legacy))
 
-Alternatively, you can use the VTEX Search (Legacy) API endpoints to retrieve product information:
+Alternatively, you can use VTEX Search (Legacy) API endpoints to retrieve product information:
 
 - [Search Product by Product URL](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search/-product-text-link-/p)
 - [Search for Products with Filter, Order and Pagination](https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search)
