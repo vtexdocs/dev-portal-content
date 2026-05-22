@@ -56,6 +56,7 @@ The articles listed below present the characteristics and mode of operation of o
 | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Gift Card system architecture](https://developers.vtex.com/docs/guides/gift-card-integration-guide-system-architecture) | Overview of the Gift Card Hub, Provider Protocol, and native provider architecture. |
 | [Managing VTEX gift cards](https://developers.vtex.com/docs/guides/managing-vtex-gift-cards)                             | How to create, update, and manage native VTEX gift cards via API.                   |
+| [Configuring an external gift card provider](https://developers.vtex.com/docs/guides/configuring-an-external-gift-card-provider) | How to register an external gift card provider and implement the integration flows used by VTEX Gift Card Hub. |
 
 ### Operations & Configuration
 

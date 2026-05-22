@@ -25,6 +25,7 @@ To integrate with an external gift card provider, however, you must develop a mi
 | - | - |
 | [Gift Card system architecture](https://developers.vtex.com/docs/guides/gift-card-integration-guide-system-architecture) | How to identify the payment methods' ID and set up the interest rate type using the Payments Gateway API. |
 | [Managing VTEX gift cards](https://developers.vtex.com/docs/guides/managing-vtex-gift-cards) | How to manage VTEX native gift cards from the VTEX gift card provider through the GiftCard API. |
+| [Configuring an external gift card provider](https://developers.vtex.com/docs/guides/configuring-an-external-gift-card-provider) | How to register an external gift card provider and implement the integration flows used by VTEX Gift Card Hub. |
 
 
 > ⚠️ This guide is currently being written and published as content become available.
