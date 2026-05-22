@@ -1,5 +1,5 @@
 ---
-title: "VTEX Sales App Extension Points"
+title: "VTEX Sales App extension points"
 slug: "vtex-sales-app-extension-points"
 hidden: false
 createdAt: "2026-05-22T07:00:00.000Z"
@@ -8,24 +8,24 @@ excerpt: ""
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
-VTEX Sales App provides extension points in the cart that let you customize the user interface and user experience according to your store's requirements.
+VTEX Sales App provides extension points in the cart that let you customize the user experience and interface according to your store's requirements.
 
 Below are the available extension points for VTEX Sales App:
 
-| Extension Point | Category | Available Hooks | Layout Shift |
-|----------------|----------|----------------|--------------|
-| `cart.cart-list.after` | Cart | useCart, useExtension | No |
-| `cart.cart-item.after` | Cart | useCart, useCartItem, useExtension | Yes |
-| `cart.order-summary.after` | Cart | useCart, useExtension | Yes |
-| `pdp.sidebar.before` | PDP | usePDP, useCart, useExtension | Yes |
-| `pdp.sidebar.after` | PDP | usePDP, useCart, useExtension | Yes |
-| `pdp.content.after` | PDP | usePDP, useCart, useExtension | Yes |
-| `menu.item` | Menu | useExtension | No |
-| `menu.drawer-content` | Menu | useCurrentUser, useExtension | No |
+| Extension Point | Category | Description |
+| -------------------------- | --- | --- |
+| `cart.cart-list.after`     | Cart | Render content after the full cart item list and before the bottom of the cart page. |
+| `cart.cart-item.after`     | Cart | Render content below each cart item row. |
+| `cart.order-summary.after` | Cart | Add components below the order summary on the cart page. |
+| `pdp.sidebar.before`       | PDP | Render content at the top of the product details page sidebar, before the default purchase and shipping content. |
+| `pdp.sidebar.after`        | PDP | Render content after the product details page sidebar. |
+| `pdp.content.after`        | PDP | Render content below the main product details page content, after sections such as related products or frequently bought together. |
+| `menu.item`                | Menu | Add a custom tile to the Sales App side menu. |
+| `menu.drawer-content`      | Menu | Define the content shown in the drawer opened from your `menu.item` tile. |
 
-> ⚠️ Some extension points may trigger layout shifts, as shown in the table above. If your extension fetches data, allocate space for dynamic content. We recommend always implementing skeletons or loading states to enhance the user experience and interface, especially at extension points that may cause a layout shift.
+> ⚠️ Some extension points may trigger layout shifts. If your extension fetches data, reserve space in the area where the extension renders so the layout remains stable while the content loads. Use skeletons or loading states to improve the user experience, especially in extension points where layout shifts may occur.
 >
->Static extensions and those using only data-layer hooks should not trigger layout shifts, since the VTEX Sales App consistently renders them within the layout.
+> Static extensions and extensions that use only data-layer hooks shouldn't cause layout shifts, because the VTEX Sales App renders them consistently within the layout.
 
 ## Extension points
 
