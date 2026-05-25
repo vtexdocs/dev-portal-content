@@ -1,7 +1,7 @@
 ---
-title: "Setting up extensions for VTEX Sales App in FastStore web stores"
-slug: "setting-up-extensions-for-vtex-sales-app-in-faststore-web-stores"
-excerpt: "Learn how to set up extensions for VTEX Sales App in your FastStore project."
+title: "Setting up extensions for VTEX Sales App"
+slug: "setting-up-extensions-for-vtex-sales-app"
+excerpt: "Learn how to set up extensions for VTEX Sales App in your store."
 hidden: false
 createdAt: "2026-05-21T15:59:53.407Z"
 ---
