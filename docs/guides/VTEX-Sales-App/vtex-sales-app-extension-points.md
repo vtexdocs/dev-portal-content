@@ -108,7 +108,7 @@ export function MenuItem() {
 }
 ```
 
-> ℹ️ This component is optional. If you don't create it, a default menu labeled "Extension Point" will be displayed. The menu will only be visible if you define the `menu.drawer-content` extension.
+> ℹ️ This component is optional. If you don't create it, a default menu labeled `Extension Point` will be displayed. The menu will only be visible if you define the `menu.drawer-content` extension.
 
 #### `menu.drawer-content`
 
