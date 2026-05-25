@@ -3,7 +3,7 @@ title: "VTEX Sales App extension points"
 slug: "vtex-sales-app-extension-points"
 hidden: false
 createdAt: "2026-05-22T07:00:00.000Z"
-excerpt: ""
+excerpt: "Customize VTEX Sales App with extension points in the cart, product detail page, and menu."
 ---
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
