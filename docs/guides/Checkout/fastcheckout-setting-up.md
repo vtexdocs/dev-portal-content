@@ -47,7 +47,7 @@ In this example, use the account `store-a` and the path `./store-a/checkout`. Fi
 
 After running the command, the folder is created at the root of your monorepo based on the path you provided. The project has the following structure:
 
-![dir](/docs/guides/Checkout/monorepo-dir.png)
+![dir](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/monorepo-dir.png)
 
 ## Updating or creating your monorepo configuration
 
@@ -114,7 +114,7 @@ npx fsp dev store-a
 
 Checkout is available at the `/checkout/cart` path on the URL provided by the FastStore CLI. To access it, open your store’s homepage, add products to the cart, and proceed to the cart. You should see a screen similar to this:
 
-![cart](/docs/guides/Checkout/fastcheckout-cart.png)
+![cart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/fastcheckout-cart.png)
 
 You can also access Checkout directly by using the local URL and port defined in `faststore.json`. To find it, check the `port` value in the store and project configuration that was added when you ran `yarn fsp create`:
 

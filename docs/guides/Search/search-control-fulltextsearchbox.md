@@ -10,7 +10,7 @@ The `<vtex.cmc:fullTextSearchBox />` control is responsible for generating the 
 
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Search/controle-busca-cru.png)
 
-> ⚠️ VTEX offers two search solutions: VTEX Search and VTEX Intelligent Search. This guide specifically covers VTEX Search. For more information on VTEX Intelligent Search, refer to [this track](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb).
+> ⚠️ VTEX offers two search solutions: Legacy Search and VTEX Intelligent Search. This guide specifically covers Legacy Search. For more information on VTEX Intelligent Search, refer to [this track](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb).
 
 Search functionality is a crucial feature that should be accessible on all store pages. As a best practice, include this control in a [subtemplate](https://help.vtex.com/en/tutorial/subtemplates--tutorials_577) within the store's header.
 
