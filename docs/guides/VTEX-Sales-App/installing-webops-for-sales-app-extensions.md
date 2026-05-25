@@ -2,7 +2,7 @@
 title: "Installing WebOps for Sales App extensions"
 slug: "installing-webops-for-sales-app-extensions"
 hidden: false
-excerpt: ""
+excerpt: "Learn how to install FastStore WebOps and connect your repository to deploy VTEX Sales App extensions."
 createdAt: "2026-05-25T16:10:21.214Z"
 ---
 
