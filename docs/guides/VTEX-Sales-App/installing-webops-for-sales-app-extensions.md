@@ -25,7 +25,7 @@ Before starting, have the following information:
 ### Step 1 - Checking existing WebOps installation
 
 1. In your VTEX Admin, go to **Storefront > FastStore WebOps**.
-2. If the WebOps page loads and shows your project and repository, it means WebOps is already installed and configured. In this case, skip to [step 8](#step-8--) to confirm extensions build and run.
+2. If the WebOps page loads and shows your project and repository, it means WebOps is already installed and configured. In this case, you don't need to follow these instructions.
 3. If you don't see WebOps or the page indicates no project is linked, go to [step 2](#step-2--installing-faststore-webops-in-your-account).
 
 ### Step 2 - Installing FastStore Webops in your account
@@ -56,7 +56,7 @@ To start the onboarding process on WebOps, follow these steps:
 4. When prompted during onboarding, create a new repository or select an existing one. WebOps automatically stores the organization, repository, and installation IDs.
 5. After onboarding, run `npx @vtex/fsp-cli init --from-discovery` in your repository to sync the configuration.
 
->❗ The full store onboarding in WebOps can **overwrite or remove existing content** in Headless CMS (hCMS). If your storefront already has relevant content in hCMS, keep this in mind before running the onboarding. If that is not a concern (for example, if you're setting up a new project or only a `sales-app` module with no FastStore project in hCMS), proceed with the onboarding as usual, then run the `npx @vtex/fsp-cli init --from-discovery` command. If you cannot complete the WebOps onboarding, for example, if you already have a FastStore project or existing content in the Headless CMS that must not be overwritten, follow all the next steps. Otherwise, you have finished the process, and WebOps is already installed and configured in your account.
+>❗ The full store onboarding in WebOps can **overwrite or remove existing content** in Headless CMS (hCMS). If your storefront already has relevant content in hCMS, keep this in mind before running the onboarding. If that is not a concern (for example, if you're setting up a new project or only a `sales-app` module with no FastStore project in hCMS), proceed with the onboarding as usual, then run the `npx @vtex/fsp-cli init --from-discovery` command. If you cannot run the WebOps onboarding because you already have a FastStore project or existing Headless CMS content that must not be overwritten, follow the next steps. If you have any questions, open a ticket with our [Support](https://help.vtex.com/en/support).
 
 ### Step 4 - Installing FastStore WebOps in your GitHub organization
 
@@ -71,8 +71,6 @@ If you cannot complete the WebOps onboarding after installing it in your account
 > ⚠️ Make sure the app has access to the correct organization and repository. Without the necessary permissions, WebOps will not receive push events, and builds will not run.
  
 ### Step 5 - Identifying the FastStore WebOps installation ID
-
-> ⚠️ This step is performed in the GitHub organization where you want to move your project. For example, if you're moving your FastStore project from `current-org` to `new-org`, you must follow this step in the `new-org` organization on GitHub.
 
 To identify the installation ID of the app you set up in the previous step, follow these steps:
 
