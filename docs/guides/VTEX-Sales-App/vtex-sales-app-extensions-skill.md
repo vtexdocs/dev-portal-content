@@ -43,7 +43,7 @@ The Extensions Skill supports every stage from setup to production, and follows 
 
 | Step | What the skill does |
 | :--- | :--- |
-| Check prerequisites | Checks if the prerequisites are met to start the project, as described in the [extensibility technical documentation](link). If not, stops the workflow. |
+| Check prerequisites | Checks whether the project prerequisites defined in the [extensibility technical documentation](link) are satisfied before proceeding with the workflow. If any prerequisite is missing, the workflow provides the required commands for manual execution and waits for user confirmation before continuing to the next steps. |
 | Discovery | Understands what the user wants to build. |
 | Requirements & Plan | Maps requirements and generates an implementation plan. Helps delimit project scope—what to build, which extension point to use, and whether the project involves VTEX IO apps, external integrations, or UX changes. |
 | Code Generation & Validation | Generates extension code using Sales App hooks and platform patterns, keeping UX consistent with ecommerce when the feature already exists online. Reviews requirements for gaps or ambiguities in user flows, integrations, or technical details, and prompts for missing information. |
