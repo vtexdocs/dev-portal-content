@@ -15,7 +15,7 @@ hidePaginationNext: false
 
 VTEX Sales App Extensions Skill is an AI-powered skill with embedded knowledge of [Sales App](https://help.vtex.com/docs/tracks/vtex-sales-app-getting-started-and-setting-up) and [FastStore](https://developers.vtex.com/docs/guides/faststore) that supports you during the development lifecycle of extensions, which are called [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility).
 
-> ℹ️ For business context, extension point locations, and use case examples, see the article [VTEX Sales App Extensibility](link). For technical information, see our [developer extensibility documentation](link).
+> ℹ️ For business context, extension point locations, and use case examples, see the article [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility). For technical information, see our [developer extensibility documentation](link).
 
 The VTEX Sales App Extensions Skill is identified as the `sales-app-extensibility` skill that's part of the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection.
 
