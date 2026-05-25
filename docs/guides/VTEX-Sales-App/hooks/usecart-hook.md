@@ -9,12 +9,12 @@ The `useCart` hook allows you to access cart data and perform mutations that wil
 
 This hook is available in the following extension points:
 
-- `cart.cart-list.after`
-- `cart.cart-item.after`
-- `cart.order-summary.after`
-- `pdp.sidebar.before`
-- `pdp.sidebar.after`
-- `pdp.content.after`
+* `cart.cart-list.after`
+* `cart.cart-item.after`
+* `cart.order-summary.after`
+* `pdp.sidebar.before`
+* `pdp.sidebar.after`
+* `pdp.content.after`
 
 See all available extension points in the guide [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
 
@@ -60,33 +60,33 @@ The `useCart` hook returns an object with the following properties:
 
 ### `orderFormId`
 
-- type `orderFormId: string | undefined`
+* **type:** `orderFormId: string | undefined`
 
 ### `value`
 
-- type `value: number`
+* **type:** `value: number`
 
 ### `items`
 
-- type: [`CartItem[]`](https://developers.vtex.com/docs/guides/cartitem-type)
+* **type:** [`CartItem[]`](https://developers.vtex.com/docs/guides/cartitem-type)
 
 ### `totalizers`
 
-- type [`Totalizers[]`](https://developers.vtex.com/docs/guides/totalizers-type)
+* **type:** [`Totalizers[]`](https://developers.vtex.com/docs/guides/totalizers-type)
 
 ### `clientProfileData`
 
-- type: [`ClientProfileData`](https://developers.vtex.com/docs/guides/clientprofiledata-type)
+* **type:** [`ClientProfileData`](https://developers.vtex.com/docs/guides/clientprofiledata-type)
 
 ### `giftCards`
 
-- type: `GiftCard[]`
+* **type:** `GiftCard[]`
 
 Gift cards currently attached to the cart.
 
 ### `addItem`
 
-- type: `addItem: (data: UseCartAddItemData) => Promise<void>`
+* **type:** `addItem: (data: UseCartAddItemData) => Promise<void>`
 
 The `UseCartAddItemData` type is an object with the following structure:
 
@@ -101,20 +101,20 @@ type UseCartAddItemData = {
 
 ### `removeItem`
 
-- type `removeItem: (id: string, index: number) => Promise<void>`
+* **type:** `removeItem: (id: string, index: number) => Promise<void>`
 
 ### `addCoupon`
 
-- type `addCoupon: (coupon: string) => Promise<void>`
+* **type:** `addCoupon: (coupon: string) => Promise<void>`
 
 ### `addGiftCard`
 
-- type: `addGiftCard: (redemptionCodeOrGiftCard: string | GiftCard, provider?: string) => Promise<void>`
+* **type:** `addGiftCard: (redemptionCodeOrGiftCard: string | GiftCard, provider?: string) => Promise<void>`
 
 Adds a gift card to the cart payment data. You can pass either:
 
-- a **redemption code** (`string`) and optionally a `provider`, or
-- a **GiftCard object** (when you already have the gift card data).
+* a **redemption code** (`string`) and optionally a `provider`, or
+* a **GiftCard object** (when you already have the gift card data).
 
 The `GiftCard` type follows this structure:
 
@@ -154,4 +154,4 @@ return <button onClick={add}>Add gift card</button>
 
 Syncs the cart with the latest data from the Order Form. This is useful to ensure that the cart reflects any changes made outside Sales App.
 
-- type `sync: () => Promise<void>`
+* **type:** `sync: () => Promise<void>`
