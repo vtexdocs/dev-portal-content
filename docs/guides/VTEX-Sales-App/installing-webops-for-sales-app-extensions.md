@@ -28,7 +28,7 @@ Before starting, have the following information:
 2. If the WebOps page loads and shows your project and repository, it means WebOps is already installed and configured. In this case, you don't need to follow these instructions.
 3. If you don't see WebOps or the page indicates no project is linked, go to [step 2](#step-2--installing-faststore-webops-in-your-account).
 
-### Step 2 - Installing FastStore Webops in your account
+### Step 2 - Installing FastStore WebOps in your account
 
 1. In your terminal, log in to the VTEX account where you want to deploy extensions by running the following command. Replace the {account-name} with your VTEX account name.
 
