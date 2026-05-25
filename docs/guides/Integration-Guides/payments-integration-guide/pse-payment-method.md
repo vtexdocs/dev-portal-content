@@ -1,7 +1,7 @@
 ---
 title: "PSE Payment Method"
 slug: "pse-payment-method"
-hidden: true
+hidden: false
 createdAt: "2022-05-18T19:17:21.588Z"
 updatedAt: "2022-09-01T19:53:36.514Z"
 ---
