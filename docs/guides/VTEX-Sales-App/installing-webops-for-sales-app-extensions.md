@@ -69,6 +69,7 @@ If you cannot complete the WebOps onboarding after installing it in your account
 5. Click `Installing & Authorizing` to install the FastStore WebOps in your new GitHub organization.
 
 > ⚠️ Make sure the app has access to the correct organization and repository. Without the necessary permissions, WebOps will not receive push events, and builds will not run.
+
 ### Step 5 - Identifying the FastStore WebOps installation ID
 
 To identify the installation ID of the app you set up in the previous step, follow these steps:
@@ -92,7 +93,7 @@ Open a ticket with [VTEX Support](https://help.vtex.com/en/support) and share th
 
 * **Account:** Name of your account.
 * **Link to the repository:** URL of the repository where you want to install WebOps.
-* **Repository ID:** The unique identifier of the repository you want to migrate. See how to get this ID in [Identifying the repository ID](#step-4-identifying-the-repository-id) section.
-* **App installation ID (`installationId`):** The unique identifier of the FastStore WebOps installation on GitHub. See how to get this ID in [Identifying the app installation ID](#step-3-identifying-the-app-installation-id).
+* **App installation ID (`installationId`):** The unique identifier of the FastStore WebOps installation on GitHub. See how to get this ID in [Identifying the app installation ID](#step-5--identifying-the-app-installation-id).
+* **Repository ID:** The unique identifier of the repository you want to migrate. See how to get this ID in [Identifying the repository ID](#step-6--identifying-the-repository-id) section.
 
 The Support team will work on your request and notify you when the process is complete.
