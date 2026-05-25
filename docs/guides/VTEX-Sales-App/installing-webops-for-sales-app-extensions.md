@@ -69,7 +69,6 @@ If you cannot complete the WebOps onboarding after installing it in your account
 5. Click `Installing & Authorizing` to install the FastStore WebOps in your new GitHub organization.
 
 > ⚠️ Make sure the app has access to the correct organization and repository. Without the necessary permissions, WebOps will not receive push events, and builds will not run.
- 
 ### Step 5 - Identifying the FastStore WebOps installation ID
 
 To identify the installation ID of the app you set up in the previous step, follow these steps:
