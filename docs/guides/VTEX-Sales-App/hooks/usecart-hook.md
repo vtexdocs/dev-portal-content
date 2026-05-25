@@ -58,33 +58,33 @@ The `useCart` hook doesn't accept any parameters.
 
 The `useCart` hook returns an object with the following properties:
 
-#### `orderFormId`
+### `orderFormId`
 
 - type `orderFormId: string | undefined`
 
-#### `value`
+### `value`
 
 - type `value: number`
 
-#### `items`
+### `items`
 
 - type: [`CartItem[]`](https://developers.vtex.com/docs/guides/cartitem-type)
 
-#### `totalizers`
+### `totalizers`
 
 - type [`Totalizers[]`](https://developers.vtex.com/docs/guides/totalizers-type)
 
-#### `clientProfileData`
+### `clientProfileData`
 
 - type: [`ClientProfileData`](https://developers.vtex.com/docs/guides/clientprofiledata-type)
 
-#### `giftCards`
+### `giftCards`
 
 - type: `GiftCard[]`
 
 Gift cards currently attached to the cart.
 
-#### `addItem`
+### `addItem`
 
 - type: `addItem: (data: UseCartAddItemData) => Promise<void>`
 
@@ -99,15 +99,15 @@ type UseCartAddItemData = {
 };
 ```
 
-#### `removeItem`
+### `removeItem`
 
 - type `removeItem: (id: string, index: number) => Promise<void>`
 
-#### `addCoupon`
+### `addCoupon`
 
 - type `addCoupon: (coupon: string) => Promise<void>`
 
-#### `addGiftCard`
+### `addGiftCard`
 
 - type: `addGiftCard: (redemptionCodeOrGiftCard: string | GiftCard, provider?: string) => Promise<void>`
 
@@ -150,7 +150,7 @@ return <button onClick={add}>Add gift card</button>
 }
 ```
 
-#### `sync`
+### `sync`
 
 Syncs the cart with the latest data from the Order Form. This is useful to ensure that the cart reflects any changes made outside Sales App.
 
