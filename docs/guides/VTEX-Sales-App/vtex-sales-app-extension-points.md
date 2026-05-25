@@ -36,7 +36,7 @@ Below are the available extension points for VTEX Sales App:
 Use this extension point to render content after the entire cart item list and before the bottom of the cart page. It's ideal for cart-level messaging such as cross-sell components, store policies, or trust and security notices that apply to the whole order.
 
 * **Available hooks:** `useCart`, `useExtension`
-* **Layout shift:** No. The VTEX Sales App reserves this area in the layout, so static and data-layer–only components render without moving surrounding content.
+* **Layout shift:** No. VTEX Sales App reserves this area in the layout, so static and data-layer–only components render without moving surrounding content.
 
 ![Shopping cart page with one item and order summary, highlighting the full cart list area below the main cart content.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/cart.cart-list.after.webp)
 
