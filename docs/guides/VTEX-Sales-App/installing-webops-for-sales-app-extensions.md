@@ -1,6 +1,6 @@
 ---
-title: "Installing FastStore WebOps"
-slug: "installing-faststore-webops."
+title: "Installing WebOps for Sales App extensions"
+slug: "installing-webops-for-sales-app-extensions"
 hidden: false
 excerpt: ""
 createdAt: "2026-05-25T16:10:21.214Z"
@@ -25,7 +25,7 @@ Before starting, have the following information:
 ### Step 1 - Checking existing WebOps installation
 
 1. In your VTEX Admin, go to **Storefront > FastStore WebOps**.
-2. If the WebOps page loads and shows your project and repository, it means WebOps is already installed and configured. In this case, skip to [step 4](##step-4--verifying-COMPLETE) to confirm extensions build and run.
+2. If the WebOps page loads and shows your project and repository, it means WebOps is already installed and configured. In this case, skip to [step 8](#step-8--) to confirm extensions build and run.
 3. If you don't see WebOps or the page indicates no project is linked, go to [step 2](#step-2--installing-faststore-webops-in-your-account).
 
 ### Step 2 - Installing FastStore Webops in your account
@@ -48,7 +48,7 @@ Before starting, have the following information:
 
 The repository is linked to WebOps through the WebOps onboarding in the dashboard. This process installs the FastStore WebOps GitHub App, lets you create a new repository or select an existing one, and automatically stores the organization, repository, and installation IDs.
 
-To start the onboarding process on WebOps:
+To start the onboarding process on WebOps, follow these steps:
 
 1. Open the VTEX Admin and access **Storefront > FastStore WebOps**.
 2. Click `Start Project` to start the onboarding flow.
