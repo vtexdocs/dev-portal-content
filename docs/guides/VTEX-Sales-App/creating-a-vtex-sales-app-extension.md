@@ -93,9 +93,9 @@ After saving the file, return to the browser to preview the styled extension.
 
 ### Step 4 - Deploying your changes
 
-A deployment starts whenever you push a commit to the `main` branch. When pushing to `main`, [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) starts the production deployment flow. In about 10 minutes, the changes will be applied to your Sales App.
+A deployment starts when you push a commit to the configured production branch, typically `main`. If FastStore WebOps detects changes in the `sales-app` module, it automatically builds and deploys the extension to VTEX. No separate manual build step is required. In about 10 minutes, the changes are usually applied to your Sales App.
 
-> ⚠️ VTEX Sales App extensions support only production deployments. Once a commit and push are made to the `main` branch, your changes will be applied to production. To revert this change, create a new commit that reverses the previous changes, then push it to `main`.
+> ⚠️ VTEX Sales App extensions support only production deployments. Once a commit is pushed to the configured production branch, your changes are applied to production. To revert a change, create a new commit that reverses the previous changes, then push it to the same branch.
 
 #### Handling build failures
 
