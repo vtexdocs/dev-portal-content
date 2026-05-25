@@ -17,7 +17,7 @@ In this guide, you'll learn how to create a basic extension, connect it to an ex
 ## Before you begin
 
 * Complete the [Setting up extensions for VTEX Sales App](https://developers.vtex.com/docs/guides/setting-up-extensions-for-vtex-sales-app) guide.
-* Make sure you have installed the FastStore WebOps. For detailed instructions, see the guide [Installing FastStore WebOps](https://developers.vtex.com/docs/guides/installing-faststore-webops).
+* Make sure you have installed the FastStore WebOps. For detailed instructions, see the guide [Installing FastStore WebOps](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions).
 
 ## Instructions
 
