@@ -66,7 +66,7 @@ If you cannot complete the WebOps onboarding after installing it in your account
 2. Click `Configure` (or `Install`, if you haven't installed it before).
 3. Click the organization where your repository lives.
 4. Specify whether WebOps should be enabled for **all repositories** or **only selected repositories**.
-5. Click `Installing & Authorizing` to install the FastStore WebOps in your new GitHub organization.
+5. Click `Installing & Authorizing` to install FastStore WebOps in your new GitHub organization.
 
 > ⚠️ Make sure the app has access to the correct organization and repository. Without the necessary permissions, WebOps will not receive push events, and builds will not run.
 
