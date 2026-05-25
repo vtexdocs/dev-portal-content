@@ -94,6 +94,6 @@ Open a ticket with [VTEX Support](https://help.vtex.com/en/support) and share th
 * **Account:** Name of your account.
 * **Link to the repository:** URL of the repository where you want to install WebOps.
 * **App installation ID (`installationId`):** The unique identifier of the FastStore WebOps installation on GitHub. See how to get this ID in [Identifying the app installation ID](#step-5--identifying-the-app-installation-id).
-* **Repository ID:** The unique identifier of the repository you want to migrate. See how to get this ID in [Identifying the repository ID](#step-6--identifying-the-repository-id) section.
+* **Repository ID:** The unique identifier of the repository you want to migrate. See how to get this ID in the [Identifying the repository ID](#step-6--identifying-the-repository-id) section.
 
 The Support team will work on your request and notify you when the process is complete.
