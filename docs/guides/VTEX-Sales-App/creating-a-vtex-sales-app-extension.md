@@ -3,14 +3,12 @@ title: "Creating a VTEX Sales App extension"
 slug: "creating-a-vtex-sales-app-extension"
 hidden: false
 excerpt: "Learn how to create a VTEX Sales App extension in your FastStore project and render it in a predefined extension point."
-createdAt: "2026-05-22T16:10:21.214Z"
+createdAt: "2026-05-25T16:10:21.214Z"
 ---
 
 After setting up a VTEX Sales App extensions project in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you're ready to create custom experiences by rendering React components in predefined extension points.
 
-To create a VTEX Sales App extension, you don't need to configure the `discovery` module. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the `sales-app` module contains the extension code.
-
-As a result, you can deploy a Sales App extension with WebOps without using FastStore Discovery in production. The production storefront can use another technology, as long as the account is configured to use the Sales App module.
+> ℹ️ To create a VTEX Sales App extension, it's not mandatory to configure the `discovery` module. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the `sales-app` module contains the extension code.
 
 In this guide, you'll learn how to create a basic extension, connect it to an extension point, style it with CSS, and understand how the deployment flow works.
 
@@ -94,6 +92,8 @@ After saving the file, return to the browser to preview the styled extension.
 ### Step 4 - Deploying your changes
 
 A deployment starts when you push a commit to the configured production branch, typically `main`. If FastStore WebOps detects changes in the `sales-app` module, it automatically builds and deploys the extension to VTEX. No separate manual build step is required. In about 10 minutes, the changes are usually applied to your Sales App.
+
+Deploying a VTEX Sales App extension with WebOps doesn't require the `discovery` module. The storefront can use another technology, as long as the account is configured to use the `sales-app` module.
 
 > ⚠️ VTEX Sales App extensions support only production deployments. Once a commit is pushed to the configured production branch, your changes are applied to production. To revert a change, create a new commit that reverses the previous changes, then push it to the same branch.
 
