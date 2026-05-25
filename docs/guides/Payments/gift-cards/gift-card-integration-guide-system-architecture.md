@@ -4,6 +4,7 @@ slug: "gift-card-integration-guide-system-architecture"
 hidden: false
 createdAt: "2020-07-01T02:20:23.146Z"
 updatedAt: "2020-10-14T23:59:34.329Z"
+excerpt: "Understand the Gift Card Hub architecture and how VTEX connects stores with gift card providers."
 ---
 
 Our Gift Card system provides stores with the flexibility to plug in multiple gift card providers and offer these different options to their customers. This is possible thanks to a layer of interaction between gift card providers and the store, which we call **Gift Card Hub**, and the communication standards defined in our **Gift Card Provider Protocol**.
