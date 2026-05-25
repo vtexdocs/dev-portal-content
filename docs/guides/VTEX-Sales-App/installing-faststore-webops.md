@@ -3,21 +3,21 @@ title: "Installing FastStore WebOps"
 slug: "installing-faststore-webops."
 hidden: false
 excerpt: ""
-createdAt: "2026-05-22T16:10:21.214Z"
+createdAt: "2026-05-25T16:10:21.214Z"
 ---
 
 In this guide, you'll learn how to install and configure **FastStore WebOps** so you can deploy [VTEX Sales App extensions](#LINK).
 
-> ℹ️If you already have a FastStore project and only need to connect it to WebOps, you don't need to follow these instructions. You should only run the following command in your project directory: `npx @vtex/fsp-cli init --from-discovery`. Learn more in the **Setting up your monorepo** section of the [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview) guide.
->
-> For a brand-new setup, continue with the steps below.
+Use this guide if your project uses the FastStore monorepo and the `sales-app` module for VTEX Sales App extensions, but doesn't use the `discovery` module in production. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the storefront uses another technology stack.
+
+> ℹ️ If you already have a FastStore project that uses the `discovery` module and only need to connect it to WebOps, you don't need to follow these instructions. Instead, run `npx @vtex/fsp-cli init --from-discovery` in your project directory. Learn more in the **Setting up your monorepo** section of the [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview) guide.
 
 ## Before you begin
 
 Before starting, have the following information:
 
 * **VTEX account:** The name of your VTEX account (for example, `store-a`).
-* **GitHub organization:** The GitHub organization where your repository lives (or where you will create it).
+* **GitHub organization:** The GitHub organization where your repository lives (or where you'll create it).
 * **GitHub repository:** An existing GitHub repository with your extension code, or you can create a new one during the onboarding.
 
 ## Instructions
@@ -44,59 +44,57 @@ Before starting, have the following information:
 
 3. After installing, go to **Storefront > FastStore WebOps** in the VTEX Admin. You should see the [WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
 
-### Step 3 - Installing FastStore WebOps in your GitHub organization
+### Step 3 - Configuring the repository in WebOps
 
-You already have FastStore WebOps installed in your account, but the app has not been installed in your new GitHub organization yet.
+The repository is linked to WebOps through the WebOps onboarding in the dashboard. This process installs the FastStore WebOps GitHub App, lets you create a new repository or select an existing one, and automatically stores the organization, repository, and installation IDs.
 
-To install the FastStore WebOps in the new GitHub organization, follow the steps below:
+To start the onboarding process on WebOps:
+
+1. Open the VTEX Admin and access **Storefront > FastStore WebOps**.
+2. Click `Start Project` to start the onboarding flow.
+3. Authenticate with GitHub and install the FastStore WebOps GitHub App for your organization (or account).
+4. When prompted during onboarding, create a new repository or select an existing one. WebOps automatically stores the organization, repository, and installation IDs.
+5. After onboarding, run `npx @vtex/fsp-cli init --from-discovery` in your repository to sync the configuration.
+
+>❗ The full store onboarding in WebOps can **overwrite or remove existing content** in Headless CMS (hCMS). If your storefront already has relevant content in hCMS, keep this in mind before running the onboarding. If that is not a concern (for example, if you're setting up a new project or only a `sales-app` module with no FastStore project in hCMS), proceed with the onboarding as usual, then run the `npx @vtex/fsp-cli init --from-discovery` command. If you cannot complete the WebOps onboarding, for example, if you already have a FastStore project or existing content in the Headless CMS that must not be overwritten, follow all the next steps. Otherwise, you have finished the process, and WebOps is already installed and configured in your account.
+
+### Step 4 - Installing FastStore WebOps in your GitHub organization
+
+If you cannot complete the WebOps onboarding after installing it in your account, you still need to install it in your GitHub organization. To do so, follow these steps:
 
 1. Access the [FastStore WebOps installation page](https://github.com/apps/faststore-webops) on GitHub.
-2. Click `Configure`.
+2. Click `Configure` (or `Install`, if you haven't installed it before).
 3. Click the organization where your repository lives.
 4. Specify whether WebOps should be enabled for **all repositories** or **only selected repositories**.
 5. Click `Installing & Authorizing` to install the FastStore WebOps in your new GitHub organization.
 
-> ⚠️ Grant the app access to the correct organization and repository. Without the required permissions, WebOps will not receive push events, and builds will not run.
-
-### Step 4 - Configuring the repository in WebOps
-
-The repository is linked to WebOps through the WebOps onboarding in the dashboard. After you authenticate with GitHub, the onboarding process installs the FastStore WebOps GitHub App, lets you create a new repository or select an existing one, and automatically stores the organization, repository, and installation ID.
-
-    
-### Step 4 - Identifying the FastStore WebOps installation ID
+> ⚠️ Make sure the app has access to the correct organization and repository. Without the necessary permissions, WebOps will not receive push events, and builds will not run.
+ 
+### Step 5 - Identifying the FastStore WebOps installation ID
 
 > ⚠️ This step is performed in the GitHub organization where you want to move your project. For example, if you're moving your FastStore project from `current-org` to `new-org`, you must follow this step in the `new-org` organization on GitHub.
 
-To identify the installation ID of the app you set up in the previous step, follow the steps below:
+To identify the installation ID of the app you set up in the previous step, follow these steps:
 
-1. Go to the settings of the GitHub organization.
+1. Go to the **Settings** of your GitHub organization.
 2. Click `GitHub Apps` under `Third-party Access`.
 3. Search for **FastStore WebOps**, then click `Configure` next to the app name.
 4. Check the URL to get the app installation ID. The URL follows this pattern: `https://github.com/organizations/{organizationName}/settings/installations/{installationId}`, where `{organizationName}` is the name of your organization and `{installationId}` is the app installation ID.
 
     ![app-installation-id](https://vtexhelp.vtexassets.com/assets/docs/src/app-installation-id___4088942cf7166f278e856d656f29e4ea.gif)
 
-### Step 5 - Identifying the repository ID
+### Step 6 - Identifying the repository ID
 
-> ⚠️ This step is performed in the repository hosted in the **new** GitHub organization.
+To identify the ID of the repository you want to link to WebOps, paste the following in your browser: `https://api.github.com/repos/{organizationName}/{repositoryName}`, replacing the values in curly brackets according to your scenario.
 
-To identify the ID of the repository where you want to move your project, follow these instructions:
+The `id` field in the JSON response is your repository ID.
 
-1. Access the GitHub repository page where you want to host your FastStore project. The URL follows this pattern: `https://github.com/{newOrganizationName}/{newRepositoryName}`. Replace the curly brackets according to your scenario.
-2. Open the console in your browser.
-3. Run the following command in the console. The response is the repository ID.
-
-    ```javascript
-    $("meta[name=octolytics-dimension-repository_id]").getAttribute('content')
-    ```
-
-### Step 5 - Opening a ticket with VTEX Support
+### Step 7 - Opening a ticket with VTEX Support
 
 Open a ticket with [VTEX Support](https://help.vtex.com/en/support) and share the following information:
 
 * **Account:** Name of your account.
-* **Link to the old repository:** URL of the repository where your project is currently hosted.
-* **Link to the new repository:** URL of the repository where you want to move your project.
+* **Link to the repository:** URL of the repository where you want to install WebOps.
 * **Repository ID:** The unique identifier of the repository you want to migrate. See how to get this ID in [Identifying the repository ID](#step-4-identifying-the-repository-id) section.
 * **App installation ID (`installationId`):** The unique identifier of the FastStore WebOps installation on GitHub. See how to get this ID in [Identifying the app installation ID](#step-3-identifying-the-app-installation-id).
 
