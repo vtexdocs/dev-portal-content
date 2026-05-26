@@ -51,7 +51,7 @@ export default defineExtensions({
 });
 ```
 
-In this example, the component is rendered in the `cart.cart-list.after` extension point. Learn more about the available extension points in the [VTEX Sales App extension points](#LINK) guide.
+In this example, the component is rendered in the `cart.cart-list.after` extension point. Learn more about the available extension points in the [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points) guide.
 
 After saving the file, open the cart page again. The custom message should appear below the cart item list.
 
