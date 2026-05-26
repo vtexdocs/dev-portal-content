@@ -16,7 +16,7 @@ A deployment starts when you push a commit to the configured production branch, 
 
 Make sure you have installed the FastStore WebOps. For detailed instructions, see the guide [Installing FastStore WebOps](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions).
 
-> ℹ️ Deploying VTEX Sales App extension with WebOps doesn't require the `discovery` module. The storefront can use another technology, as long as the account is configured to use the `sales-app` module.
+> ℹ️ Deploying VTEX Sales App extensions with WebOps doesn't require the `discovery` module. The storefront can use another technology, as long as the account is configured to use the `sales-app` module.
 
 ## Handling build failures
 
