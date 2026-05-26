@@ -43,7 +43,7 @@ The `useCartItem` hook returns an object with the following properties:
 
 ### `item`
 
-* **type:** [`CartItem[]`](https://developers.vtex.com/docs/guides/cartitem-type)| undefined`.
+* **type:** `[CartItem[]](https://developers.vtex.com/docs/guides/cartitem-type)| undefined`.
 
 ### `itemIndex`
 
