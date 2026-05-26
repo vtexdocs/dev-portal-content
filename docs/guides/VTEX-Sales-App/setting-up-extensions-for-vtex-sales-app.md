@@ -3,7 +3,11 @@ title: "Setting up extensions for VTEX Sales App"
 slug: "setting-up-extensions-for-vtex-sales-app"
 excerpt: "Learn how to set up extensions for VTEX Sales App in your store."
 hidden: false
-createdAt: "2026-05-21T15:59:53.407Z"
+createdAt: "2026-05-26T15:59:53.407Z"
+seeAlso:
+  - "/docs/guides/creating-a-vtex-sales-app-extension"
+  - "/docs/guides/vtex-sales-app-extension-points"
+  - "/docs/guides/defineextensions-function"
 ---
 
 > ℹ️ This feature is currently in beta, which means we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/pt/support).
