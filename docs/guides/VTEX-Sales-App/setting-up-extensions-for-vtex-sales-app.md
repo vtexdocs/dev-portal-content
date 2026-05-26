@@ -84,7 +84,7 @@ After running the command, the folder is created at the root of your monorepo ba
 
 The `src/index.tsx` file at the root of your project is the entry point for all VTEX Sales App extensions you create. It looks like this:
 
-```tsx
+```typescript src/index.tsx
 import { defineExtensions } from '@vtex/sales-app'
 import { Example } from './components/Example'
 
