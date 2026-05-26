@@ -41,7 +41,7 @@ This component renders a simple custom message in the VTEX Sales App interface.
 
 Import the new component into `src/index.tsx`. Then, connect it to an extension point.
 
-```tsx
+```typescript src/index.tsx
 import { defineExtensions } from '@vtex/sales-app';
 import { Example } from './components/Example';
 import { CustomMessage } from './components/CustomMessage';
