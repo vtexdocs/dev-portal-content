@@ -93,7 +93,7 @@ export default defineExtensions({
 })
 ```
 
-The `defineExtensions` function connects the extensions you create to the extension point where they should appear. You can create your extensions in separate files and then import them into `index.tsx` to keep your project organized.
+The [`defineExtensions`](https://developers.vtex.com/docs/guides/defineextensions-function) function connects the extensions you create to the extension point where they should appear. You can create your extensions in separate files and then import them into `index.tsx` to keep your project organized.
 
 This function also helps during development by showing available extension points with autocomplete and type-checking, making the setup easier and less error-prone. To build your extension, use the hooks, types, and helper functions available in the `@vtex/sales-app` package. For more information, see the [VTEX Sales App extension points](#LINK) guide.
 
