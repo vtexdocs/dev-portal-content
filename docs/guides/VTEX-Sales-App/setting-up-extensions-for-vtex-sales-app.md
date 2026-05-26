@@ -16,7 +16,7 @@ seeAlso:
 
 By using predefined extension points, you can integrate external APIs, use VTEX data, and add custom experiences to areas such as cart and checkout, the side menu, and the product details page.
 
-In this guide, you'll learn how to set up extension points for the VTEX Sales App of your store.
+In this guide, you'll learn how to set up extensions for the VTEX Sales App of your store.
 
 ## Before you begin
 
