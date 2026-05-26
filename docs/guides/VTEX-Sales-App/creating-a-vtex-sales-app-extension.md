@@ -25,7 +25,7 @@ Suppose you want to create a custom message for your VTEX Sales App. Based on th
 
 To create a new component, add the following content to your TypeScript file (for example, `src/components/CustomMessage.tsx`):
 
-```tsx
+```typescript src/components/CustomMessage.tsx
 export const CustomMessage = () => {
   return (
       <p>
