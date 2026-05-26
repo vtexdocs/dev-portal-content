@@ -25,7 +25,7 @@ From an architectural perspective, the main actors are:
 At a high level, the default values integration works in two phases: configuration and consumption.
 
 1. **Configuration phase**  
-     
+
    - An org admin application identifies the organizational unit, for example, an org unit, contract, or user scope  
    - The application decides which entities should be selected by default  
      - Shipping and billing addresses  
@@ -36,10 +36,8 @@ At a high level, the default values integration works in two phases: configurati
        - entity: the type of entity, for example, address/shipping, creditCard  
        - entityValueId: the ID of the chosen default value
 
-   
-
 2. **Consumption phase**  
-     
+
    - At login, the shopper-session app fetches the default values for the shopper’s context and resolves the final default per field based on priority.  
    - The shopper-session app writes the resolved defaults to the shopper session.
 
@@ -47,22 +45,22 @@ At a high level, the default values integration works in two phases: configurati
 
 ### When to use this flow
 
-* You must define or change default addresses and custom fields for a given organizational unit.  
-* You are building a B2B admin experience that allows buyer administrators to manage checkout defaults.  
-* You are migrating default values from an external system into VTEX Dynamic Storage.
+- You must define or change default addresses and custom fields for a given organizational unit.  
+- You are building a B2B admin experience that allows buyer administrators to manage checkout defaults.  
+- You are migrating default values from an external system into VTEX Dynamic Storage.
 
 ### Main endpoints involved
 
-* [POST Create default values](https://developers.vtex.com/docs/api-reference/default-values-api#post-/api/dataentities/defaultValues/documents)  
-* [PATCH Update default values](https://developers.vtex.com/docs/api-reference/default-values-api#patch-/api/dataentities/defaultValues/documents/-unitId-)
+- [POST Create default values](https://developers.vtex.com/docs/api-reference/default-values-api#post-/api/dataentities/defaultValues/documents)  
+- [PATCH Update default values](https://developers.vtex.com/docs/api-reference/default-values-api#patch-/api/dataentities/defaultValues/documents/-unitId-)
 
 ### Step-by-step
 
-* Identify the organizational unit and define the id value used to store defaults  
-* Collect the default entity IDs for addresses, credit cards, and custom fields  
-* Build the request body using the DefaultValuesRequest schema  
-* Create or update the document using the [Create default values](https://developers.vtex.com/docs/api-reference/default-values-api#post-/api/dataentities/defaultValues/documents) or [Update default values](https://developers.vtex.com/docs/api-reference/default-values-api#patch-/api/dataentities/defaultValues/documents/-unitId-) endpoints  
-* Validate the output and update any dependent session logic
+- Identify the organizational unit and define the id value used to store defaults  
+- Collect the default entity IDs for addresses, credit cards, and custom fields  
+- Build the request body using the DefaultValuesRequest schema  
+- Create or update the document using the [Create default values](https://developers.vtex.com/docs/api-reference/default-values-api#post-/api/dataentities/defaultValues/documents) or [Update default values](https://developers.vtex.com/docs/api-reference/default-values-api#patch-/api/dataentities/defaultValues/documents/-unitId-) endpoints  
+- Validate the output and update any dependent session logic
 
 ### Request example \- Create default values document
 
