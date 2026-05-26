@@ -4,6 +4,10 @@ slug: "vtex-sales-app-extension-points"
 hidden: false
 createdAt: "2026-05-22T07:00:00.000Z"
 excerpt: "Customize VTEX Sales App with extension points in the cart, product detail page, and menu."
+see also:
+  - "/docs/guides/setting-up-extensions-for-vtex-sales-app"
+  - "/docs/guides/creating-a-vtex-sales-app-extension"
+  - "/docs/guides/defineextensions-function"
 ---
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
@@ -12,16 +16,16 @@ VTEX Sales App provides extension points in the cart that let you customize the 
 
 Below are the available extension points for VTEX Sales App:
 
-| Extension Point | Category | Description |
-| -------------------------- | --- | --- |
-| `cart.cart-list.after`     | Cart | Render content after the full cart item list and before the bottom of the cart page. |
-| `cart.cart-item.after`     | Cart | Render content below each cart item row. |
-| `cart.order-summary.after` | Cart | Add components below the order summary on the cart page. |
-| `pdp.sidebar.before`       | PDP | Render content at the top of the product details page sidebar, before the default purchase and shipping content. |
-| `pdp.sidebar.after`        | PDP | Render content after the product details page sidebar. |
-| `pdp.content.after`        | PDP | Render content below the main product details page content, after sections such as related products or frequently bought together. |
-| `menu.item`                | Menu | Add a custom tile to the Sales App side menu. |
-| `menu.drawer-content`      | Menu | Define the content shown in the drawer opened from your `menu.item` tile. |
+| Extension Point | Category | Description | Layout shift |
+| -------------------------- | --- | --- | --- |
+| `cart.cart-list.after`     | Cart | Render content after the full cart item list and before the bottom of the cart page. | No |
+| `cart.cart-item.after`     | Cart | Render content below each cart item row. | Yes ⚠️ |
+| `cart.order-summary.after` | Cart | Add components below the order summary on the cart page. | Yes ⚠️ |
+| `pdp.sidebar.before`       | PDP | Render content at the top of the product details page sidebar, before the default purchase and shipping content. | Yes ⚠️ |
+| `pdp.sidebar.after`        | PDP | Render content after the product details page sidebar. | Yes ⚠️ |
+| `pdp.content.after`        | PDP | Render content below the main product details page content, after sections such as related products or frequently bought together. | Yes ⚠️ |
+| `menu.item`                | Menu | Add a custom tile to the Sales App side menu. | No |
+| `menu.drawer-content`      | Menu | Define the content shown in the drawer opened from your `menu.item` tile. | No |
 
 > ⚠️ Some extension points may trigger layout shifts. If your extension fetches data, reserve space in the area where the extension renders so the layout remains stable while the content loads. Use skeletons or loading states to improve the user experience, especially in extension points where layout shifts may occur.
 >
