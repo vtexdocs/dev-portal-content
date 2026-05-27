@@ -6,9 +6,9 @@ excerpt: "Explore the APIs and core types available for building VTEX Sales App 
 createdAt: "2026-05-27T00:00:00.000Z"
 ---
 
-This guide presents the VTEX Sales App APIs and core types for building extensions.
+This guide introduces the VTEX Sales App APIs and core types used to build extensions.
 
-Below are the available APIs:
+The following APIs are available:
 
 | API                                     | Category | Use case                                                                                                 |
 | --------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ Use this function in your extension entry point file, such as `src/index.tsx`.
 
 #### Usage
 
-In the following example, `Recommendations` is rendered in the `cart.cart-list.after` extension point, which is located below the cart items list.
+In the following example, `Recommendations` is rendered at the `cart.cart-list.after` extension point, which appears below the cart items list.
 
 ```tsx src/index.tsx
 import { defineExtensions } from '@vtex/sales-app';
