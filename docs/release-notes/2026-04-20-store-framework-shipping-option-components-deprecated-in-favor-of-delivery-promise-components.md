@@ -37,8 +37,8 @@ To adapt to this change and continue using Delivery Promise in your Store Framew
 
 1. In your theme's [`manifest.json`](https://developers.vtex.com/docs/guides/vtex-io-documentation-manifest) file, replace the dependency `vtex.shipping-option-components` with `vtex.delivery-promise-components`:
 
-  ```diff manifest.json
-  "dependencies": {
+    ```diff manifest.json
+    "dependencies": {
   -  "vtex.shipping-option-components": "2.x"
   +  "vtex.delivery-promise-components": "1.x"
   }
