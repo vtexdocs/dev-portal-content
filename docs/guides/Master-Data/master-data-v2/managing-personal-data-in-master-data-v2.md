@@ -31,7 +31,7 @@ PUT https://{accountName}.{environment}.com.br/api/dataentities/{dataEntityName}
 
 > ℹ️ To inspect the current personal data configuration for an entity before changing it, use the [Get personal data configuration](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/personalData) endpoint. Inspecting first is recommended because saving a new configuration locks the endpoint for up to 12 hours (see [What happens after configuration](#what-happens-after-configuration)).
 
-### Request body example
+### Personal data request body
 
 ```json
 {
@@ -69,7 +69,7 @@ POST https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/docu
 }
 ```
 
-Master Data automatically checks the personal data configuration for the entity. The values of personal data fields (`email` and `firstName` in this example) are stored separately with encryption and special data residency, while non-personal fields (`categories`) are stored normally.
+Master Data v2 automatically checks the personal data configuration for the entity. The values of personal data fields (`email` and `firstName` in this example) are stored separately with encryption and special data residency, while non-personal fields (`categories`) are stored normally.
 
 > ⚠️ Every document saved in an entity with personal data configuration must contain the field declared in `SubjectIdField`.
 
@@ -152,9 +152,9 @@ The response follows the same masking rules. Personal data fields are masked by 
 
 > ⚠️ Only exact match filters are supported for personal data fields. Range filters, partial matches, and full-text search on these fields are not supported.
 
-## Considerations
+## Restrictions
 
-Keep the following considerations in mind when working with personal data in Master Data v2:
+Keep the following restrictions in mind when working with personal data in Master Data v2:
 
 - **Master Data v1:** Not supported. Only v2 entities are compatible.
 - **Search operators:** Personal data fields only support exact match. Range, contains, and full-text operators are not available.
