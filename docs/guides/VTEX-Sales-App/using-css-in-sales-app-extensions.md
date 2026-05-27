@@ -13,7 +13,9 @@ Once you have implemented a [VTEX Sales App Extensibility](link-placeholder) pro
 
 ## Scope and limitations
 
-Using CSS is recommended exclusively for styling your extensions. CSS files have access to the global scope where they are loaded, meaning they can technically target and style other elements of the Sales App core. However, using global CSS to style elements outside of your extension, relying on selectors like `tag`, `class`, `id`, or any other combination not specific to the extension, is discouraged for the following reasons:
+Using CSS is recommended exclusively for styling your extensions. CSS files have access to the global scope where they are loaded, meaning they can technically target and style other elements of the Sales App core.
+
+However, using global CSS to style elements outside of your extension, relying on selectors like `tag`, `class`, `id`, or any other combination not specific to the extension, is discouraged for the following reasons:
 
 - Future releases may include sandboxing mechanisms that isolate CSS and/or extensions from the core application's global context (e.g., DOM).
 - Using selectors like classes or IDs on core Sales App elements (e.g., the "Continue" button, the cart list, header, logo) is not feasible, as Sales App generates unique IDs for classes applied to its elements.
