@@ -1,0 +1,406 @@
+---
+title: "VTEX Sales App API and types reference"
+slug: "vtex-sales-app-api-and-types-reference"
+hidden: false
+excerpt: "Explore the APIs and core types available for building VTEX Sales App extensions.
+createdAt: "2026-05-27T00:00:00.000Z"
+---
+
+This guide presents the VTEX Sales App APIs and core types for building extensions.
+
+Below are the available APIs:
+
+| API                                     | Category | Use case                                                                                                 |
+| --------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------- |
+| [`defineExtensions`](#defineExtensions) | Function | Register components in extension points.                                                                 |
+| [`useCart`](#usecart)                   | Hook     | Read cart-level data or perform cart mutations, such as adding items, coupons, or gift cards.            |
+| [`useCartItem`](#usecartitem)           | Hook     | Read data or perform mutations for a single cart item, such as changing quantity, attachments, or price. |
+| [`useCurrentUser`](#usecurrentuser)     | Hook     | Access authenticated user data.                                                                          |
+| [`useExtension`](#useextension)         | Hook     | Access runtime context, such as the current account or the current extension point.                      |
+| [`usePDP`](#usepdp)                     | Hook     | Access Product Detail Page data, specifically the current `productSku`                                   |
+
+Below are the available types and their corresponding hooks:
+
+| Types                                     | Used by                 | Description                                                                         |
+| ----------------------------------------- | ----------------------- | ----------------------------------------------------------------------------------- |
+| [`CartItem`](#cartitem)                   | `useCart, `useCartItem` | An item in the cart, including product, quantity, seller, pricing, and attachments. |
+| [`ClientProfileData`](#clientprofiledata) | `useCart`               | Client data returned from the cart context.                                         |
+| [`ProductSku`](#productsku)               | `usePDP`                | A product SKU, including identifying, quantity, and pricing fields.                 |
+| [`Totalizers`](#totalizers)               | `useCart`               | Summary totals from an orderForm or cart, such as shipping, taxes, or discounts     |
+
+## API reference
+
+### `defineExtensions`
+
+The `defineExtensions` function registers one or more React components by associating them with the [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
+
+Use this function in your extension entry point file, such as `src/index.tsx`.
+
+#### Usage
+
+In the following example, `Recomendations` is rendered in the `cart.cart-list.after` extension point, which is located below the cart items list.
+
+```tsx src/index.tsx
+import { defineExtensions } from '@vtex/sales-app';
+import { Recommendations } from './Recommendations';
+
+export default defineExtensions({
+  'cart.cart-list.after': Recommendations
+});
+```
+
+#### Parameters
+
+The `defineExtensions` function accepts a single parameter, `Record<ExtensionPoints, () => ReactNode>`. The `ExtensionPoints` type represents the list of [valid extension points available in VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
+
+### `useCart`
+
+The `useCart` hook allows you to access cart data and perform mutations that will reflect on other entities within the Sales App data layer.
+
+This hook is available in the following extension points:
+
+* `cart.cart-list.after`
+* `cart.cart-item.after`
+* `cart.order-summary.after`
+* `pdp.sidebar.before`
+* `pdp.sidebar.after`
+* `pdp.content.after`
+
+See all available extension points in the guide [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
+
+#### Usage
+
+```tsx src/index.tsx
+import { useCart } from '@vtex/sales-app'
+
+const TotalItems = () => {
+const cart = useCart()
+
+  return <div>Items: {cart.items.length}</div>
+
+}
+```
+
+You can also use `useCart` to interact with the Sales App data layer by mutating the cart items list:
+
+```tsx src/index.tsx
+import { useCart } from '@vtex/sales-app'
+
+const TotalItems = () => {
+const cart = useCart()
+
+  const addItem = () => cart.addItem({
+    quantity: 1,
+    seller: '1',
+    id: '8392'
+  })
+
+  return <button onClick={addItem}>Add to cart</button>
+
+}
+```
+
+#### Parameters
+
+The `useCart` hook doesn't accept any parameters.
+
+#### Returns
+
+The `useCart` hook returns an object with the following properties:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `orderFormId` | `string \| undefined` | Order Form identifier for the current cart. |
+| `value` | `number` | Total cart value. |
+| `items` | `CartItem[]` | Items currently in the cart. |
+| `totalizers` | `Totalizers[]` | Aggregated cart totals. |
+| `clientProfileData` | `ClientProfileData` | Customer profile data associated with the cart. |
+| `giftCards` | `GiftCard[]` | Gift cards currently attached to the cart. |
+| `addItem` | `(data: UseCartAddItemData => Promise<void>` | Adds an item to the cart. |
+| `removeItem` | `(id: string, index: number) => Promise<void>` | Removes an item from the cart. |
+| `addCoupon` | `(coupon: string) => Promise<void>` | Applies a coupon to the cart. |
+| `addGiftCard` | `(redemptionCodeOrGiftCard: string \| GiftCard, provider?: string) => Promise<void>` | Adds a gift card to the cart payment data. You can pass either:<br>* a redemption code (`string`) and optionally a `provider`, or<br>* a [GiftCard object](#giftcard), when you already have the gift card data. |
+| `sync` | `() => Promise<void>` | Syncs the cart with the latest Order Form data. |
+
+##### `addItem`
+
+In the `addItem` property, the `UseCartAddItemData` type is an object with the following structure:
+
+```typescript
+type UseCartAddItemData = {
+  id: string;
+  quantity: number;
+  seller: string;
+  attachments?: Attachment[];
+};
+```
+
+##### `addGiftCard`
+
+In the `addGiftCard` property, the `GiftCart` type is an object with the following structure:
+
+```typescript
+export type GiftCard = {
+  id: string
+  redemptionCode?: string | null
+  name: string
+  caption: string
+  value: number
+  balance: number
+  provider: string
+  groupName?: string | null
+  inUse: boolean
+  isSpecialCard: boolean
+}
+```
+
+Example using a redemption code:
+
+```tsx src/index.tsx
+import { useCart } from '@vtex/sales-app'
+
+const AddGiftCard = () => {
+const cart = useCart()
+
+const add = async () => {
+  await cart.addGiftCard('ABC-123', 'my-giftcard-provider')
+  await cart.sync()
+}
+
+return <button onClick={add}>Add gift card</button>
+}
+```
+
+### `useCartItem`
+
+The `useCartItem` hook provides access to detailed information about an individual cart item. This is useful when you need to retrieve or display specific data related to a single item in the cart.
+
+This hook is available in the following extension point:
+
+* `cart.cart-item.after`
+
+See all available extension points in the guide [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
+
+#### Usage
+
+```tsx src/index.tsx
+import { useCartItem } from '@vtex/sales-app';
+
+const CartItemDetails = () => {
+  const { item } = useCartItem();
+
+  return (
+    <div>
+      <p>Product: {item.id}</p>
+      <p>Quantity: {item.quantity}</p>
+      <img src={item.imageUrl} alt="Product image" />
+    </div>
+  );
+};
+```
+
+#### Parameters
+
+The `useCartItem` hook doesn't accept any parameters.
+
+#### Returns
+
+The `useCartItem` hook returns an object with the following properties:
+
+| Property | Type | Description |
+|---|---|---|
+| `item` | `CartItem[] \| undefined` | Cart item data for the current item. |
+| `itemIndex` | `number \| undefined` | Index of the current item in the cart. |
+| `changeItem` | `(data: UseCartItemChangeItemData) => Promise<void>` | Updates the item data. |
+| `changePrice` | `(price: number) => Promise<void>` | Changes the item price when manual price is enabled.<br>To check whether the manual price is active, use [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm). To enable it, use [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) and set `allowManualPrice` to `true`. |
+
+##### `changeItem`
+
+In the `changeItem` property, the `UseCartItemChangeItemData` type is an object with the following structure:
+
+```typescript
+type UseCartItemChangeItemData = {
+  quantity?: number
+  attachments?: Attachment[]
+}
+```
+
+### `useCurrentUser`
+
+The `useCurrentUser` hook allows you to access current authenticated user data, like name and email.
+
+This hook is available in the following extension point:
+
+* `menu.drawer-content`
+
+See all available extension points in the guide [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
+
+#### Usage
+
+```tsx src/index.tsx
+import { useCurrentUser } from '@vtex/sales-app'
+
+const CurrentUser = () => {
+  const { name, email } = useCurrentUser()
+
+  return <div>Current User: {name} - {email}</div>
+}
+```
+
+#### Parameters
+
+The `useCurrentUser` hook doesn't accept any parameters.
+
+#### Returns
+
+The `useCurrentUser` hook returns an object with the following properties:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `name` | `string` | Name of the current user. |
+| `email` | `string` | Email address of the current user. |
+
+### `useExtension`
+
+The `useExtension` hook allows you to access information about the current account and the extension point in which your extension is running.
+
+This hook is available for all extension points. See the full list in the guide [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
+
+#### Usage
+
+```tsx src/index.tsx
+import { useExtension } from '@vtex/sales-app';
+
+const ExtensionInfo = () => {
+  const { account, extensionPoint } = useExtension();
+
+  return (
+    <div>
+      <p>Account: {account}</p>
+      <p>Extension Point: {extensionPoint}</p>
+    </div>
+  );
+};
+```
+
+#### Parameters
+
+The `useExtension` hook doesn't accept any parameters.
+
+#### Returns
+
+The `useExtension` hook returns an object with the following structure:
+
+
+| Property         | Type                   | Description                                                            |
+| ---------------- | ---------------------- | ---------------------------------------------------------------------- |
+| `account`        | `string`               | The current account name where the extension is running.               |
+| `extensionPoint` | `ExtensionPointsType`  | The name of the extension point where your extension is hooked into.   |
+
+### `usePDP`
+
+The `usePDP` hook allows you to access Product Detail Page (PDP) data and perform mutations that will reflect on other entities within the Sales App data layer.
+
+This hook is available in the following extension points:
+
+* `pdp.sidebar.before`
+* `pdp.sidebar.after`
+* `pdp.content.after`
+
+See all available extension points in the guide [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
+
+#### Usage
+
+```tsx src/index.tsx
+import { usePDP } from '@vtex/sales-app'
+
+const Product= () => {
+  const { productSku } = usePDP()
+
+  return <div>Product name: {productSku?.name}</div>
+}
+```
+
+#### Parameters
+
+The `usePDP` hook doesn't accept any parameters.
+
+#### Returns
+
+The `usePDP` hook returns an object with the following property:
+
+| Property         | Type                   | Description                                                     |
+| ---------------- | ---------------------- | --------------------------------------------------------------- |
+| `productSku`     | `ProductSku`           | Product SKU data for the current product detail page.           |
+
+## Types
+
+### `CartItem`
+
+The `CartItem` type represents the possible item types within a cart. Its signature and the types used follow this contract:
+
+```typescript
+ type CartItem = {
+  id: string
+  name: string
+  quantity: number
+  seller: string
+  sellingPrice: number
+  listPrice: number
+  manualPrice?: number
+  price: number
+  imageUrl: string
+  productRefId?: string
+  attachments?: Attachment[]
+};
+```
+
+#### Attachment
+
+The `Attachment` type is defined as:
+
+```typescript
+type Attachment = {
+   name: string;
+   content: Record<string, string>;
+};
+```
+
+### `ClientProfileData`
+
+The `ClientProfileData` type represents the structure of the data returned for a client. Its signature and the types used follow this contract:
+
+```typescript
+type ClientProfileData = {
+  email: string | null;
+  document: string | null;
+  phone: string | null;
+};
+```
+
+### `productSku`
+
+The `ProductSku` type represents the structure of a product SKU, including quantity and pricing details. Its signature and the types used follow this contract:
+
+```typescript
+type ProductSku = {
+  id: string;
+  name: string;
+  quantity: number;
+  price: number;
+  listPrice: number;
+  sellingPrice?: number;
+};
+```
+
+### `Totalizers`
+
+The `Totalizers` type represents the structure of the summary totals returned in an orderForm or cart, such as shipping, taxes, or discounts. Its signature and the types used follow this contract:
+
+```typescript
+type Totalizers = {
+  id: string
+  name: string
+  value: number
+};
+```
