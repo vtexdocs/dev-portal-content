@@ -52,7 +52,7 @@ custom-message.module.css example:
     background-color: black;
     color: white;
   }
-  ```
+```
 
 > ℹ️ When using CSS Modules, the bundler automatically creates unique class names, so there's no risk of name conflicts between classes.
 
@@ -66,7 +66,7 @@ Single CSS file example:
   // src/index.tsx
   import { defineExtensions } from '@vtex/sales-app'
   import './styles.css'
-  ```
+```
 
 Multiple CSS files examples:
 
@@ -74,12 +74,12 @@ Multiple CSS files examples:
   // CustomMessage.tsx
   import './custom-message.css'
   const CustomMessage = () => {...}
-  ```
+```
 
-  ```typescript
+```typescript
   // CustomTotalizer.tsx
   import './custom-totalizer.css'
   const CustomTotalizer = () => {...}
-  ```
+```
 
 > ⚠️ Sales App generates classes with unique IDs, so there's no conflict with the core, but globally scoped CSS class names might generate conflict with other extensions you're styling.
