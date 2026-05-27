@@ -9,7 +9,7 @@ updatedAt: "2026-05-27T17:32:46.010Z"
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
-[VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility) lets you extend the default assisted-sales journey with capabilities aligned to your business model, such as external integrations and VTEX data. Follow the articles below in order to implement, deploy, and reference VTEX Sales App extensions:
+[VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility) lets you extend the default assisted-sales journey with capabilities aligned to your business model, such as external integrations and VTEX data. Follow the articles below to implement, deploy, and reference VTEX Sales App extensions:
 
 - [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points) — Explore predefined slots in the Sales App UI (cart, PDP, menu), the hooks available at each point, and layout-shift guidance.
 
@@ -27,6 +27,7 @@ updatedAt: "2026-05-27T17:32:46.010Z"
 
 ## Additional resources
 
-- [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill)
 - [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility)
 - [Data layer and data fetching in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/data-layer-and-data-fetching-in-vtex-sales-app-extensibility)
+- [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill)
+- [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility)
