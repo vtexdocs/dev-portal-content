@@ -12,7 +12,7 @@ Below are the available APIs:
 
 | API                                     | Category | Use case                                                                                                 |
 | --------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------- |
-| [`defineExtensions`](#defineExtensions) | Function | Register components in extension points.                                                                 |
+| [`defineExtensions`](#defineextensions) | Function | Register components in extension points.                                                                 |
 | [`useCart`](#usecart)                   | Hook     | Read cart-level data or perform cart mutations, such as adding items, coupons, or gift cards.            |
 | [`useCartItem`](#usecartitem)           | Hook     | Read data or perform mutations for a single cart item, such as changing quantity, attachments, or price. |
 | [`useCurrentUser`](#usecurrentuser)     | Hook     | Access authenticated user data.                                                                          |
@@ -21,12 +21,12 @@ Below are the available APIs:
 
 Below are the available types and their corresponding hooks:
 
-| Types                                     | Used by                 | Description                                                                         |
-| ----------------------------------------- | ----------------------- | ----------------------------------------------------------------------------------- |
-| [`CartItem`](#cartitem)                   | `useCart, `useCartItem` | An item in the cart, including product, quantity, seller, pricing, and attachments. |
-| [`ClientProfileData`](#clientprofiledata) | `useCart`               | Client data returned from the cart context.                                         |
-| [`ProductSku`](#productsku)               | `usePDP`                | A product SKU, including identifying, quantity, and pricing fields.                 |
-| [`Totalizers`](#totalizers)               | `useCart`               | Summary totals from an orderForm or cart, such as shipping, taxes, or discounts     |
+| Types                                     | Used by                  | Description                                                                         |
+| ----------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------- |
+| [`CartItem`](#cartitem)                   | `useCart`, `useCartItem` | An item in the cart, including product, quantity, seller, pricing, and attachments. |
+| [`ClientProfileData`](#clientprofiledata) | `useCart`                | Client data returned from the cart context.                                         |
+| [`ProductSku`](#productsku)               | `usePDP`                 | A product SKU, including identifying, quantity, and pricing fields.                 |
+| [`Totalizers`](#totalizers)               | `useCart`                | Summary totals from an orderForm or cart, such as shipping, taxes, or discounts     |
 
 ## API reference
 
@@ -290,7 +290,6 @@ The `useExtension` hook doesn't accept any parameters.
 #### Returns
 
 The `useExtension` hook returns an object with the following structure:
-
 
 | Property         | Type                   | Description                                                            |
 | ---------------- | ---------------------- | ---------------------------------------------------------------------- |
