@@ -2,7 +2,7 @@
 title: "VTEX Sales App API and types reference"
 slug: "vtex-sales-app-api-and-types-reference"
 hidden: false
-excerpt: "Explore the APIs and core types available for building VTEX Sales App extensions.
+excerpt: "Explore the APIs and core types available for building VTEX Sales App extensions."
 createdAt: "2026-05-27T00:00:00.000Z"
 ---
 
