@@ -2,7 +2,7 @@
 title: "Using CSS in Sales App extensions"
 slug: "using-css-in-vtex-sales-app-extensions"
 hidden: false
-excerpt: "Learn how about CSS in VTEX Sales App Extensibility."
+excerpt: "Style extensions using CSS in VTEX Sales App Extensibility."
 createdAt: "2026-05-25T00:00:00.000Z"
 ---
 
