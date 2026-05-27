@@ -53,6 +53,8 @@ export default defineExtensions({
 
 The `defineExtensions` function accepts a single parameter, `Record<ExtensionPoints, () => ReactNode>`. The `ExtensionPoints` type represents the list of [valid extension points available in VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points).
 
+---
+
 ### `useCart`
 
 The `useCart` hook allows you to access cart data and perform mutations that will reflect on other entities within the Sales App data layer.
@@ -171,6 +173,8 @@ return <button onClick={add}>Add gift card</button>
 }
 ```
 
+---
+
 ### `useCartItem`
 
 The `useCartItem` hook provides access to detailed information about an individual cart item. This is useful when you need to retrieve or display specific data related to a single item in the cart.
@@ -225,6 +229,8 @@ type UseCartItemChangeItemData = {
 }
 ```
 
+---
+
 ### `useCurrentUser`
 
 The `useCurrentUser` hook allows you to access current authenticated user data, like name and email.
@@ -259,6 +265,8 @@ The `useCurrentUser` hook returns an object with the following properties:
 | --- | --- | --- |
 | `name` | `string` | Name of the current user. |
 | `email` | `string` | Email address of the current user. |
+
+---
 
 ### `useExtension`
 
@@ -296,6 +304,8 @@ The `useExtension` hook returns an object with the following structure:
 | `account`        | `string`               | The current account name where the extension is running.               |
 | `extensionPoint` | `ExtensionPointsType`  | The name of the extension point where your extension is hooked into.   |
 
+---
+
 ### `usePDP`
 
 The `usePDP` hook allows you to access Product Detail Page (PDP) data and perform mutations that will reflect on other entities within the Sales App data layer.
@@ -332,6 +342,8 @@ The `usePDP` hook returns an object with the following property:
 | ---------------- | ---------------------- | --------------------------------------------------------------- |
 | `productSku`     | `ProductSku`           | Product SKU data for the current product detail page.           |
 
+---
+
 ## Types
 
 ### `CartItem`
@@ -365,6 +377,8 @@ type Attachment = {
 };
 ```
 
+---
+
 ### `ClientProfileData`
 
 The `ClientProfileData` type represents the structure of the data returned for a client. Its signature and the types used follow this contract:
@@ -376,6 +390,8 @@ type ClientProfileData = {
   phone: string | null;
 };
 ```
+
+---
 
 ### `ProductSku`
 
@@ -391,6 +407,8 @@ type ProductSku = {
   sellingPrice?: number;
 };
 ```
+
+---
 
 ### `Totalizers`
 
