@@ -4,7 +4,7 @@ slug: "2026-04-20-store-framework-shipping-option-components-deprecated-in-favor
 hidden: false
 type: "deprecated"
 createdAt: "2026-04-20T12:00:00.000Z"
-updatedAt: "2026-05-15T20:19:39.310Z"
+updatedAt: "2026-05-27T20:19:39.310Z"
 excerpt: "The Shipping Option Components app is deprecated. Stores using Delivery Promise in Store Framework should migrate to Delivery Promise Components, which introduces a new block model and theme configuration."
 ---
 
