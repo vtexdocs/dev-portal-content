@@ -3,10 +3,14 @@ title: 'Issues when using FastStore hooks'
 slug: "issues-when-using-faststore-hooks"
 hidden: false
 createdAt: "2026-05-19T00:00:00.000Z"
-updatedAt: "2026-05-19T00:00:00.000Z"
+updatedAt: "2026-05-27T00:00:00.000Z"
 excerpt: "Common issues when using FastStore hooks in your store project, including import errors, context errors, stale data, performance issues, and TypeScript errors."
-tags:
-    - FastStore
+domainFilters:
+  - FastStore
+symptomFilters:
+  - Performance degradation
+  - Publishing failure
+  - Rendering mismatch
 ---
 
 Keywords: FastStore | hooks | React | context errors | performance | TypeScript
