@@ -1,6 +1,6 @@
 ---
-title: "CSS style in VTEX Sales App Extensibility"
-slug: "css-style-in-vtex-sales-app-extensibility"
+title: "CSS styling in VTEX Sales App Extensibility"
+slug: "css-styling-in-vtex-sales-app-extensibility"
 hidden: false
 excerpt: "Learn how to style extensions using CSS in VTEX Sales App Extensibility."
 createdAt: "2026-05-25T00:00:00.000Z"
