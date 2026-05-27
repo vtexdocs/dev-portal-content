@@ -12,14 +12,14 @@ When using [VTEX Sales App Extensibility](link-placeholder), you may need to pre
 
 In extension points, there are two ways to interact with data:
 
-- Data-layer resources, such as the `useCart` hook or `useCartItem`.
-- Data-fetching from VTEX APIs or external APIs.
+- Data layer resources, such as the `useCart` hook or `useCartItem`.
+- Data fetching from VTEX APIs or external APIs.
 
-## Data-layer in extensions
+## Data layer in extensions
 
-All interactions with the Sales App data-layer happen through functions and hooks provided by the `@vtex/sales-app` package.
+All interactions with the Sales App data layer happen through functions and hooks provided by the `@vtex/sales-app` package.
 
-> ℹ️ Whenever possible, we recommend using the Sales App data-layer, because this data is already cached in the core data-layer. By doing so, you won’t trigger additional requests, which improves application performance and benefits your extensions.
+> ℹ️ Whenever possible, we recommend using the Sales App data layer, because this data is already cached in the core data layer. By doing so, you won’t trigger additional requests, which improves application performance and benefits your extensions.
 
 For example, if you need to access cart item data while using the `cart.cart-item.after` extension point, you can use the `useCartItem` hook:
 
@@ -35,7 +35,7 @@ const MyComponent = () => {
 
 > ℹ️ For detailed information about hooks and utilities for extensions, see the [API Reference](link-placeholder).
 
-## Data-fetching in extensions
+## Data fetching in extensions
 
 When you need to fetch data from VTEX APIs (e.g., Intelligent Search) or external APIs, you can use the browser's Fetch API to make requests, as shown in the example below:
 
@@ -65,4 +65,4 @@ function MyCustomData() {
 }
 ```
 
-> ⚠️ When performing data-fetching, it’s important to handle loading states to ensure a good user experience. Additionally, allocate space in advance to avoid layout shift. Read more about [Dealing with Layout Shift](link-placeholder).
+> ⚠️ When performing data fetching, it’s important to handle loading states to ensure a good user experience. Additionally, allocate space in advance to avoid layout shift. Read more about [Dealing with Layout Shift](link-placeholder).
