@@ -39,9 +39,9 @@ To adapt to this change and continue using Delivery Promise in your Store Framew
 
     ```diff manifest.json
     "dependencies": {
-  -  "vtex.shipping-option-components": "2.x"
-  +  "vtex.delivery-promise-components": "1.x"
-  }
+    -  "vtex.shipping-option-components": "2.x"
+    +  "vtex.delivery-promise-components": "1.x"
+    }
   ```
 
 2. Remove any usage of the `shipping-option-location-selector` block from your header layout configuration.
