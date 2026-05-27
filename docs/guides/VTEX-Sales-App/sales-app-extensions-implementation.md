@@ -9,13 +9,7 @@ updatedAt: "2026-05-27T17:32:46.010Z"
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
-[VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility) lets you add custom React UI to predefined extension points in the assisted-sales journey (cart, product details page, side menu). You build extensions in a FastStore monorepo with the `@vtex/sales-app` package, connect the repository to FastStore WebOps for deployment, and use hooks from the package to read and update Sales App data.
-
-> ℹ️ Use the [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill) (`sales-app-extensibility`) in your AI coding assistant for guidance while building, customizing, and deploying extensions. Install it from the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection.
-
-## Implementation overview
-
-Follow the articles below in order to implement, deploy, and reference VTEX Sales App extensions:
+[VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility) lets you extend the default assisted-sales journey with capabilities aligned to your business model, such as external integrations and VTEX data. Follow the articles below in order to implement, deploy, and reference VTEX Sales App extensions:
 
 - [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points) — Explore predefined slots in the Sales App UI (cart, PDP, menu), the hooks available at each point, and layout-shift guidance.
 
@@ -29,7 +23,9 @@ Follow the articles below in order to implement, deploy, and reference VTEX Sale
 
 - [API Reference](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-api-reference) — Consult hooks, `defineExtensions`, and types from `@vtex/sales-app` (for example, `useCart`, `usePDP`, and `useExtension`) to interact with the Sales App data layer.
 
-### Additional resources
+> ℹ️ Use the [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill) (`sales-app-extensibility`) with your AI coding assistant when building, customizing, or deploying extensions. Install it from the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection.
+
+## Additional resources
 
 - [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill)
 - [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility)
