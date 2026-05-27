@@ -5,8 +5,12 @@ hidden: false
 createdAt: "2026-05-19T00:00:00.000Z"
 updatedAt: "2026-05-19T13:00:00.000Z"
 excerpt: "Troubleshoot common issues when adding custom icons or overriding native icons in a FastStore project."
-tags:
-    - FastStore
+domainFilters:
+  - FastStore
+symptomFilters:
+  - Loading failure
+  - Rendering mismatch
+---
 ---
 
 FastStore users may encounter issues when customizing the icon set in their store, either by [adding a custom icon](https://developers.vtex.com/docs/guides/faststore/managing-icons-adding-custom-icons) or [overriding a native icon](https://developers.vtex.com/docs/guides/faststore/managing-icons-overriding-native-icons). The icon may not appear, look distorted, ignore the theme colors, or the default FastStore icons may stop rendering after the change.
