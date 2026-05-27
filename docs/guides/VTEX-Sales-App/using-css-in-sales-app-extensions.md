@@ -58,7 +58,7 @@ custom-message.module.css example:
 
 > ℹ️ When using CSS Modules, the bundler automatically creates unique class names, so there's no risk of name conflicts between classes.
 
-## Styling extensions using `imports` (not recommended)
+## Styling extensions with plain CSS imports
 
 In this approach, you will include `.css` files in the relevant TypeScript file. You can either create a single file and import it once in `src/index.tsx`, or create component-specific files and import them in the component's file.
 
