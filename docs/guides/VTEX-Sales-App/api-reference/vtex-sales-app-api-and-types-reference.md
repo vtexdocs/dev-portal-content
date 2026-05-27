@@ -17,7 +17,7 @@ Below are the available APIs:
 | [`useCartItem`](#usecartitem)           | Hook     | Read data or perform mutations for a single cart item, such as changing quantity, attachments, or price. |
 | [`useCurrentUser`](#usecurrentuser)     | Hook     | Access authenticated user data.                                                                          |
 | [`useExtension`](#useextension)         | Hook     | Access runtime context, such as the current account or the current extension point.                      |
-| [`usePDP`](#usepdp)                     | Hook     | Access Product Detail Page data, specifically the current `productSku`                                   |
+| [`usePDP`](#usepdp)                     | Hook     | Access Product Detail Page data, specifically the current `productSku`.                                   |
 
 Below are the available types and their corresponding hooks:
 
@@ -26,7 +26,7 @@ Below are the available types and their corresponding hooks:
 | [`CartItem`](#cartitem)                   | `useCart`, `useCartItem` | An item in the cart, including product, quantity, seller, pricing, and attachments. |
 | [`ClientProfileData`](#clientprofiledata) | `useCart`                | Client data returned from the cart context.                                         |
 | [`ProductSku`](#productsku)               | `usePDP`                 | A product SKU, including identifying, quantity, and pricing fields.                 |
-| [`Totalizers`](#totalizers)               | `useCart`                | Summary totals from an orderForm or cart, such as shipping, taxes, or discounts     |
+| [`Totalizers`](#totalizers)               | `useCart`                | Summary totals from an orderForm or cart, such as shipping, taxes, or discounts.     |
 
 ## API reference
 
@@ -38,7 +38,7 @@ Use this function in your extension entry point file, such as `src/index.tsx`.
 
 #### Usage
 
-In the following example, `Recomendations` is rendered in the `cart.cart-list.after` extension point, which is located below the cart items list.
+In the following example, `Recommendations` is rendered in the `cart.cart-list.after` extension point, which is located below the cart items list.
 
 ```tsx src/index.tsx
 import { defineExtensions } from '@vtex/sales-app';
@@ -377,7 +377,7 @@ type ClientProfileData = {
 };
 ```
 
-### `productSku`
+### `ProductSku`
 
 The `ProductSku` type represents the structure of a product SKU, including quantity and pricing details. Its signature and the types used follow this contract:
 
