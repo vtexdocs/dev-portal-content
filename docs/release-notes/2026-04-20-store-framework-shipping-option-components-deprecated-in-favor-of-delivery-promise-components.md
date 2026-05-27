@@ -48,8 +48,8 @@ To adapt to this change and continue using Delivery Promise in your Store Framew
 
 3. Add and configure the new blocks:
 
-- Add the `shopper-location-setter` block to your header (required).
-- Optionally, add the following blocks depending on your needs:
+    - Add the `shopper-location-setter` block to your header (required).
+    - Optionally, add the following blocks depending on your needs:
   - `shipping-method-selector` to allow buyers to choose between delivery and pickup.
   - `pickup-point-selector` to allow buyers to select a specific pickup point.
 
