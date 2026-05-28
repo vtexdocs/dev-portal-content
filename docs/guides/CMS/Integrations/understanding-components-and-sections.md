@@ -48,11 +48,11 @@ Regardless of the storefront technology you use, a Component:
 
 Each component resides in its own `.jsonc` file, named following the convention `cms_component__ComponentName.jsonc`. The schema relies on a few CMS-specific keywords:
 
-| Keyword           | Purpose                                                                                                           |
-| :---------------- | :---------------------------------------------------------------------------------------------------------------- |
-| `$componentKey`   | Unique identifier for the component.                                                              |
-| `$componentTitle` | Display name displayed in the CMS interface.                                                      |
-| `$extends`        | Inherits properties from base schemas (for example, `#/$defs/base-component`). |
+| Keyword | Purpose |
+| :---- | :---- |
+| `$componentKey` | Unique identifier for the component. |
+| `$componentTitle` | Display name displayed in the CMS interface. |
+| `$extends` | Inherits properties from base schemas (for example, `#/$defs/base-component`). |
 
 For more details on schema declarations, see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
 
@@ -141,13 +141,13 @@ The schema below declares a `CallToAction` section in a FastStore project, compo
 
 ## Differences between components and sections
 
-| Criteria                           | Component                                                                                                                           | Section                                                                                                                                                      |
-| :--------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Purpose**                        | Defines a reusable data shape (for example, a link, badge, or media block).                      | Page-placeable container of components that represents a full page block (for example, hero, shelf, footer).              |
-| **Scope**                          | Reused inside sections or other components.                                                                         | Exposed in the CMS page editor for editors to add to a page.                                                                                 |
-| **Schema file**                    | Stored as a component schema file (for example, `cms_component__*.jsonc` in FastStore projects). | Also stored as a component schema file; sections are distinguished by their usage, referenced by Content Types, and rendered as page blocks. |
-| **Referenced from a content type** | Typically **no**. Used as nested objects or arrays inside sections and other components.            | **Yes.** Listed in one or more content type schemas so editors can add them to pages.                                        |
-| **Rendering**                      | Data is consumed by a parent component or template.                                                                 | Maps directly to a storefront component or template that renders an entire page block.                                                       |
+| Criteria | Component | Section |
+| :---- | :---- | :---- |
+| **Purpose** | Defines a reusable data shape (for example, a link, badge, or media block). | Page-placeable container of components that represents a full page block (for example, hero, shelf, footer). |
+| **Scope** | Reused inside sections or other components. | Exposed in the CMS page editor for editors to add to a page. |
+| **Schema file** | Stored as a component schema file (for example, `cms_component__*.jsonc` in FastStore projects). | Also stored as a component schema file; sections are distinguished by their usage, referenced by Content Types, and rendered as page blocks. |
+| **Referenced from a content type** | Typically **no**. Used as nested objects or arrays inside sections and other components. | **Yes.** Listed in one or more content type schemas so editors can add them to pages. |
+| **Rendering** | Data is consumed by a parent component or template. | Maps directly to a storefront component or template that renders an entire page block. |
 
 ## Relationship with content types
 
@@ -176,17 +176,17 @@ Some examples:
 <Flex>
 
 <WhatsNextCard
-linkTo="https://developers.vtex.com/docs/guides/cms-extending-a-component"
-title="Extending a component"
-description="Learn how to extend an existing component, such as the CallToAction Section, in your FastStore project."
-linkTitle="See more"
+ linkTo="https://developers.vtex.com/docs/guides/cms-extending-a-component"
+ title="Extending a component"
+ description="Learn how to extend an existing component, such as the CallToAction Section, in your FastStore project."
+ linkTitle="See more"
 />
 
 <WhatsNextCard
-linkTo="https://developers.vtex.com/docs/guides/content-plugin"
-title="Content plugin"
-description="Manage CMS schemas, organize components, and define Content Types from the terminal using the Content plugin."
-linkTitle="See more"
+ linkTo="https://developers.vtex.com/docs/guides/content-plugin"
+ title="Content plugin"
+ description="Manage CMS schemas, organize components, and define Content Types from the terminal using the Content plugin."
+ linkTitle="See more"
 />
 
 </Flex>
