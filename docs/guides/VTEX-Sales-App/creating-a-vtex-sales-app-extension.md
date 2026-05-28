@@ -2,29 +2,29 @@
 title: "Creating a VTEX Sales App extension"
 slug: "creating-a-vtex-sales-app-extension"
 hidden: false
-excerpt: "Learn how to create a VTEX Sales App extension in your FastStore project and render it in a predefined extension point."
-createdAt: "2026-05-25T16:10:21.214Z"
+excerpt: "Learn how to create a Sales App extension and render it in a predefined extension point."
+createdAt: "2026-05-28T00:00:00.000Z"
 ---
 
-After setting up a VTEX Sales App extensions project in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you're ready to create custom experiences by rendering React components in predefined extension points.
+After setting up a Sales App extension project in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you're ready to create custom experiences by rendering React components in predefined extension points.
 
-> ℹ️ To create a VTEX Sales App extension, it's not mandatory to configure the `discovery` module. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the `sales-app` module contains the extension code.
+> ℹ️ To create a Sales App extension, it's not mandatory to configure the `discovery` module. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the `sales-app` module contains the extension code.
 
-In this guide, you'll learn how to create a basic extension, connect it to an extension point, style it with CSS, and understand how the deployment flow works.
+In this guide, you'll learn how to create a basic extension, connect it to an extension point, and style it with CSS.
 
 ## Before you begin
 
-* Complete the [Setting up extensions for VTEX Sales App](https://developers.vtex.com/docs/guides/setting-up-extensions-for-vtex-sales-app) guide.
+* Complete the [Setting up extensions for VTEX Sales App](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) guide.
 
 ## Instructions
 
-Suppose you want to create a custom message for your VTEX Sales App. Based on the sample folder generated in your monorepo when creating the project, follow the steps.
+Suppose you want to create a custom message for your Sales App. Based on the sample folder generated in your monorepo when creating the project, follow the steps.
 
 ### Step 1 - Creating the component
 
-To create a new component, add the following content to your TypeScript file (for example, `src/components/CustomMessage.tsx`):
+To create a new component, add the following content to your TypeScript JSX file (for example, `src/components/CustomMessage.tsx`):
 
-```typescript src/components/CustomMessage.tsx
+```tsx src/components/CustomMessage.tsx
 export const CustomMessage = () => {
   return (
       <p>
@@ -40,7 +40,7 @@ This component renders a simple custom message in the VTEX Sales App interface.
 
 Import the new component into `src/index.tsx`. Then, connect it to an extension point.
 
-```typescript src/index.tsx
+```tsx src/index.tsx
 import { defineExtensions } from '@vtex/sales-app';
 import { Example } from './components/Example';
 import { CustomMessage } from './components/CustomMessage';
@@ -50,7 +50,7 @@ export default defineExtensions({
 });
 ```
 
-In this example, the component is rendered in the `cart.cart-list.after` extension point. Learn more about the available extension points in the [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points) guide.
+In this example, the component is rendered in the `cart.cart-list.after` extension point. Learn more about the available extension points in the [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions) guide.
 
 After saving the file, open the cart page again. The custom message should appear below the cart item list.
 
@@ -70,7 +70,7 @@ To style your component, create a CSS file in the same folder as the component. 
 
 Then update `CustomMessage.tsx` to import the stylesheet and apply the class.
 
-```tsx
+```tsx src/components/CustomMessage.tsx
 import { useSettings } from "@vtex/sales-app"
 import './custom-message.css'
 
