@@ -16,15 +16,15 @@ The technical aspects of Sales App extensions are covered in the following artic
 - [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill) — AI skill with Sales App and FastStore knowledge to support you in scaffolding, validating, and deploying extensions across the development lifecycle of an extension project.
 
 - [Sales App extensions implementation](https://developers.vtex.com/docs/guides/sales-app-extensions-implementation) — Know which articles to consult throughout the implementation:
-  - [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions) — Explore the predefined slots in the Sales App interface to place your extension.
-  - [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) — Add `@vtex/sales-app` to your FastStore monorepo, create a `sales-app` project with the FSP CLI, register the workspace, and preview locally.
-  - [Installing WebOps for Sales App extensions](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions) — Install and configure FastStore WebOps in your VTEX account and GitHub repository so the `sales-app` module can be built and deployed.
-  - [Creating Sales App extensions](https://developers.vtex.com/docs/guides/creating-sales-app-extensions) — Build a React component, register it with `defineExtensions`, and optionally style it with CSS and `useSettings`.
-  - [Deploying Sales App extensions](https://developers.vtex.com/docs/guides/deploying-sales-app-extensions) — Push to your production branch to trigger a WebOps build of the `sales-app` module, and troubleshoot failures with GitHub Checks or `fsp build`.
-  - [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types) — Consult hooks and types to interact with the Sales App data layer.
+  - [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions) — Explore the predefined slots in the Sales App interface.
+  - [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) — Configure the required dependencies and settings.
+  - [Installing WebOps for Sales App extensions](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions) — Install and configure FastStore WebOps.
+  - [Creating Sales App extensions](https://developers.vtex.com/docs/guides/creating-sales-app-extensions) — Learn about building a component and registation.
+  - [Deploying Sales App extensions](https://developers.vtex.com/docs/guides/deploying-sales-app-extensions) — Deploy an extension to your VTEX account.
+  - [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types) — Consult the hooks and types required for the implementation.
 
-- [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility) — Style extensions with CSS Modules (recommended) or plain CSS imports; limit styles to your extension and avoid overriding core Sales App UI
+- [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility) — Style your extensions using CSS.
 
-- [Data layer and data fetching in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/data-layer-and-data-fetching-in-vtex-sales-app-extensibility) — Read Sales App state through `@vtex/sales-app` hooks, or fetch data from VTEX and external APIs when needed.
+- [Data layer and data fetching in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/data-layer-and-data-fetching-in-vtex-sales-app-extensibility) — Learn how to access the data layer and fetch data from VTEX and external APIs.
 
 > ℹ️ For business context, extension point locations, and use case examples, see [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility) on Help Center.
