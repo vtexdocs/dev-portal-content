@@ -21,14 +21,13 @@ The available extension points for VTEX Sales App are:
 | `cart.cart-list.after`     | Cart     | Render content after the full cart item list and before the bottom of the cart page.                                        | No           |
 | `cart.cart-item.after`     | Cart     | Render content below each cart item row.                                                                                     | Yes ⚠️       |
 | `cart.order-summary.after` | Cart     | Add components below the order summary on the cart page.                                                                     | Yes ⚠️       |
-| `pdp.sidebar.before`       | PDP      | Render content at the top of the product details page sidebar, before the default purchase and shipping content.            | Yes ⚠️       |
+| `pdp.sidebar.before`       | PDP      | Render content at the top of the product detail page sidebar, before the default purchase and shipping content.            | Yes ⚠️       |
 | `pdp.sidebar.after`        | PDP      | Render content after the product details page sidebar.                                                                       | Yes ⚠️       |
-| `pdp.content.after`        | PDP      | Render content below the main product details page content, after sections such as related products or frequently bought together. | Yes ⚠️       |
+| `pdp.content.after`        | PDP      | Render content below the main product detail page content, after sections such as related products or frequently bought together. | Yes ⚠️       |
 | `menu.item`                | Menu     | Add a custom tile to the Sales App side menu.                                                                                | No           |
 | `menu.drawer-content`      | Menu     | Define the content shown in the drawer opened from your `menu.item` tile.                                                    | No           |
 
 > ⚠️ Some extension points may trigger layout shifts. If your extension fetches data, reserve space in the area where the extension renders so the layout remains stable while the content loads. Use skeletons or loading states to improve the user experience, especially in extension points where layout shifts may occur.
->
 > Static extensions and extensions that use only data-layer hooks shouldn't cause layout shifts, because the VTEX Sales App renders them consistently within the layout.
 
 ## Extension points
