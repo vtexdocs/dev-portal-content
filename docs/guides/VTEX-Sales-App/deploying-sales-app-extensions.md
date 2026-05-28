@@ -14,7 +14,7 @@ After creating extensions for your Sales App, publish them during deployment to 
 
 A deployment starts when you push a commit to the configured production branch, typically `main`. If WebOps detects changes in the `sales-app` module, it automatically builds and deploys the extension to VTEX. No separate manual build step is required. In about 10 minutes, the changes are usually applied to your store.
 
-> ⚠️ Sales App extensions support only production deployments. Once a commit is pushed to the configured production branch, your changes are applied to production. To revert a change, create a new commit that reverses the previous changes, then push it to the same branch.
+> ⚠️ Since sales App extensions support only production deployments, to revert a change, create a new commit that reverses the previous one, then push it to the same branch.
 
 ## Requirements
 
