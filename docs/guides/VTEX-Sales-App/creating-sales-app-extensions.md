@@ -20,7 +20,7 @@ In this guide, you'll learn how to create a basic extension, connect it to an ex
 
 ## Instructions
 
-Suppose you want to create a custom message for your Sales App. Based on the sample folder generated in your monorepo when creating the project, follow the steps.
+Suppose you want to create a custom message for your Sales App. Based on the sample folder generated in your monorepo when creating the project, follow the steps below.
 
 ### Step 1 - Creating the component
 
