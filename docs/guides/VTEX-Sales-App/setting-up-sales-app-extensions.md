@@ -40,7 +40,7 @@ npm add @vtex/sales-app -D
 
 ### Step 2 - Creating a Sales App project
 
-To create a Sales App project in your monorepo, you need the following information:
+Ensure the following information is available:
 
 * The store account name for which you're creating extensions.
 * The module you want to initialize a project. In this case, it's `sales-app`.
