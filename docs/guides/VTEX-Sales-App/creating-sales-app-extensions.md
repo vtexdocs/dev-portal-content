@@ -12,7 +12,7 @@ After setting up a Sales App extension project in your [FastStore monorepo](http
 
 > ℹ️ To create a Sales App extension, it's not mandatory to configure the `discovery` module. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the `sales-app` module contains the extension code.
 
-In this guide, you'll learn how to create a basic extension, connect it to an extension point, and style it with CSS.
+In this guide, you'll learn how to create a basic extension and connect it to an extension point.
 
 ## Before you begin
 
@@ -56,36 +56,6 @@ In this example, the component is rendered in the `cart.cart-list.after` extensi
 
 After saving the file, open the cart page again. The custom message should appear below the cart item list.
 
-![VTEX cart page with empty cart and Extension example area displayed without custom styling](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-18419-creating-extension-point/images/creating-extensions-example-without-css.webp)
+![VTEX cart page with empty cart and Extension example area displayed without custom styling](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/creating-extensions-example-without-css.webp)
 
-### Step 3 - (Optional) Styling the extension
-
-To style your component, create a CSS file in the same folder as the component. For example:
-
-```css
-.custom-message {
-  background: #000;
-  color: #fafafa;
-  padding: 16px;
-}
-```
-
-Then update `CustomMessage.tsx` to import the stylesheet and apply the class.
-
-```tsx src/components/CustomMessage.tsx
-import { useSettings } from "@vtex/sales-app"
-import './custom-message.css'
-
-export const CustomMessage = () => {
-  const { branding } = useSettings()
-  return (
-    <p className='custom-message'>
-      Extension example
-    </p>
-  )
-}
-```
-
-After saving the file, return to the browser to preview the styled extension.
-
-![VTEX cart page with empty cart and Extension example area styled as a black bar at the bottom](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-18419-creating-extension-point/images/creating-extensions-example-with-css.webp)
+Once you have created an extension and connected it to an extension point, you can customize your component's styling. For detailed instructions, see the guide [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility).
