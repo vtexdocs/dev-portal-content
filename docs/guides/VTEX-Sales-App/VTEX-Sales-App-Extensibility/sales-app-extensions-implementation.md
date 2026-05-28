@@ -16,6 +16,8 @@ seeAlso:
 
 [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility) lets you extend the default assisted-sales journey with capabilities aligned to your business model, such as external integrations and VTEX data. Follow the articles below to implement, deploy, and reference VTEX Sales App extensions.
 
+> ℹ️ Use the [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill) (`sales-app-extensibility`) with your AI coding assistant when building, customizing, or deploying extensions. Install it from the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection.
+
 ## Guides in this section
 
 <Flex>
@@ -63,12 +65,3 @@ linkTitle="See more"
 />
 
 </Flex>
-
-> ℹ️ Use the [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill) (`sales-app-extensibility`) with your AI coding assistant when building, customizing, or deploying extensions. Install it from the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection.
-
-## Additional resources
-
-- [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility)
-- [Data layer and data fetching in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/data-layer-and-data-fetching-in-vtex-sales-app-extensibility)
-- [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill)
-- [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility)
