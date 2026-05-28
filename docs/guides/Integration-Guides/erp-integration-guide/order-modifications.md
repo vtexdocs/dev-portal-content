@@ -24,11 +24,11 @@ Modifications made this way can be confirmed using the `changesAttachment` field
 
 ### Errors in Change v1
 
-The [Register modifications on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) endpoint was the first solution to modifying ongoing orders through API. For this reason, we can sometimes refer to it as **Change v1**.
+The [Register modifications on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) endpoint was the first solution to modifying ongoing orders through the API. For this reason, we can sometimes refer to it as **Change v1**.
 
 > ❗ The Register modifications on order endpoint is being deprecated and no longer receives updates.
 
-See below which API errors can be returned when attempting to [modify an order via Change v1 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
+See below which API errors can be returned when attempting to [modify an order via the Change v1 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
 
 #### Request errors
 
@@ -65,7 +65,7 @@ These are errors returned when the request is correct but the order cannot be mo
 
 The [Order modifications](https://developers.vtex.com/docs/api-reference/orders-api#:~:text=modifications%20on%20order-,Order%20modifications,-PATCH%20Create%20order) feature is our latest solution to modifying ongoing orders. Since it is also our second, we can sometimes refer to it as **Change v2**.
 
-See below which API errors can be returned when attempting to [modify an order via Change v2 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
+See below which API errors can be returned when attempting to [modify an order via the Change v2 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
 
 #### Errors with exception codes
 
