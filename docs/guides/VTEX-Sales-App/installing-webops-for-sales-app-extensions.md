@@ -20,9 +20,9 @@ Use this guide if your project is based on the [**FastStore monorepo**](https://
 
 Before starting, have the following information:
 
-  * **VTEX account:** The name of your VTEX account (for example, `store-a`).
-  * **GitHub organization:** The GitHub organization where your repository lives (or where you'll create it).
-  * **GitHub repository:** An existing GitHub repository with your extension code, or you can create a new one during the onboarding.
+* **VTEX account:** The name of your VTEX account (for example, `store-a`).
+* **GitHub organization:** The GitHub organization where your repository lives (or where you'll create it).
+* **GitHub repository:** An existing GitHub repository with your extension code, or you can create a new one during the onboarding.
 
 Also, note that full store onboarding in WebOps can **overwrite or remove existing content** in Headless CMS (hCMS).
 
