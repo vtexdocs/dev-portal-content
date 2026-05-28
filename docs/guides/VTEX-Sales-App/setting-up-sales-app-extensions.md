@@ -116,7 +116,7 @@ The `faststore.json` file should include a `sales-app` entry like the following:
 
 ### Step 3 - Configuring the project as a workspace
 
-Now, you need to register the new project as a `workspace` in the root `package.json` file so the package manager can discover it and install dependencies correctly.
+Register the new project as a `workspace` in the root `package.json` file so the package manager can discover it and install dependencies correctly.
 
 For example, if you're using Yarn, your `package.json` should include:
 
