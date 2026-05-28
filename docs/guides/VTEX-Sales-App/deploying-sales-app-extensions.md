@@ -8,6 +8,8 @@ seeAlso:
   - "/docs/guides/installing-webops-for-sales-app-extensions"
 ---
 
+> ⚠️ [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility) is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
+
 After creating extensions for your Sales App, publish them during deployment to make them publicly available.
 
 A deployment starts when you push a commit to the configured production branch, typically `main`. If WebOps detects changes in the `sales-app` module, it automatically builds and deploys the extension to VTEX. No separate manual build step is required. In about 10 minutes, the changes are usually applied to your Sales App.
