@@ -15,7 +15,7 @@ The technical aspects of Sales App extensions are covered in the following artic
 
 - [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill) — AI skill with Sales App and FastStore knowledge to support you in scaffolding, validating, and deploying extensions across the development lifecycle of an extension project.
 
-- [Sales App extensions implementation](https://developers.vtex.com/docs/guides/sales-app-extensions-implementation) — Know which content to read to implement, deploy, and reference VTEX Sales App extensions:
+- [Sales App extensions implementation](https://developers.vtex.com/docs/guides/sales-app-extensions-implementation) — Know which articles to consult throughout the implementation:
   - [VTEX Sales App extension points](https://developers.vtex.com/docs/guides/vtex-sales-app-extension-points) — Explore predefined slots in the Sales App UI (cart, PDP, menu), the hooks available at each point, and layout-shift guidance.
   - [Setting up extensions for VTEX Sales App](https://developers.vtex.com/docs/guides/setting-up-extensions-for-vtex-sales-app) — Add `@vtex/sales-app` to your FastStore monorepo, create a `sales-app` project with the FSP CLI, register the workspace, and preview locally.
   - [Installing WebOps for Sales App extensions](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions) — Install and configure FastStore WebOps in your VTEX account and GitHub repository so the `sales-app` module can be built and deployed.
