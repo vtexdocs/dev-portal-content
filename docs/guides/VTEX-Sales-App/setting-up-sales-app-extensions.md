@@ -1,22 +1,22 @@
 ---
-title: "Setting up extensions for VTEX Sales App"
-slug: "setting-up-extensions-for-vtex-sales-app"
-excerpt: "Learn how to set up extensions for VTEX Sales App in your store."
+title: "Setting up Sales App extensions"
+slug: "setting-up-sales-app-extensions"
+excerpt: "Learn how to set up extensions for Sales App in your store."
 hidden: false
-createdAt: "2026-05-26T15:59:53.407Z"
+createdAt: "2026-05-28T00:00:00.000Z"
 seeAlso:
-  - "/docs/guides/creating-a-vtex-sales-app-extension"
-  - "/docs/guides/vtex-sales-app-extension-points"
-  - "/docs/guides/defineextensions-function"
+  - "/docs/guides/exploring-sales-app-extensions"
+  - "/docs/guides/creating-sales-app-extensions"
+  - "/docs/guides/sales-app-extension-hooks-and-types"
 ---
 
-> ℹ️ This feature is currently in beta, which means we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/pt/support).
+> ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
 [VTEX Sales App Extensibility](https://help.vtex.com/docs/tutorials/extensibility-in-vtex-sales-app) lets you customize the default assisted-sales journey with features that support your business requirements.
 
 By using predefined extension points, you can integrate external APIs, use VTEX data, and add custom experiences to areas such as cart and checkout, the side menu, and the product details page.
 
-In this guide, you'll learn how to set up extensions for the VTEX Sales App of your store.
+In this guide, you'll learn how to set up extensions for your stores' Sales App.
 
 ## Before you begin
 
@@ -93,9 +93,9 @@ export default defineExtensions({
 })
 ```
 
-The [`defineExtensions`](https://developers.vtex.com/docs/guides/defineextensions-function) function connects the extensions you create to the extension point where they should appear. You can create your extensions in separate files and then import them into `index.tsx` to keep your project organized.
+The [`defineExtensions`](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types#defineextensions) function connects the extensions you create to the extension point where they should appear. You can create your extensions in separate files and then import them into `index.tsx` to keep your project organized.
 
-This function also helps during development by showing available extension points with autocomplete and type-checking, making the setup easier and less error-prone. To build your extension, use the hooks, types, and helper functions available in the `@vtex/sales-app` package. For more information, see the [VTEX Sales App extension points](#LINK) guide.
+This function also helps during development by showing available extension points with autocomplete and type-checking, making the setup easier and less error-prone. To build your extension, use the hooks, types, and helper functions available in the `@vtex/sales-app` package. For more information, see the [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types) guide.
 
 The `src/components/Example.tsx` file includes a sample extension point. You can import CSS files, such as `Example.css`, to define classes and make them available globally. Organize your code however best fits your project, either by separating implementation and styling into different files or by keeping everything in a single file.
 
