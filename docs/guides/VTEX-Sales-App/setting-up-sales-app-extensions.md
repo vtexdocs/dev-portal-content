@@ -154,6 +154,6 @@ npx fsp dev store-a
 
 The VTEX Sales App is available at the `/sales-app/checkout/cart` path on the URL provided by the FastStore CLI. You should see a screen similar to this:
 
-![Sales App Extensions tab listing available apps with name, description, and enable toggles](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-17928-sales-app-extension-setting-up/images/sales-app-extensions-1.webp)
+![Sales App Extensions tab listing available apps with name, description, and enable toggles](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/sales-app-extensions-1.webp)
 
 You can also access the VTEX Sales App locally using the `path` and `port` values defined in `faststore.json`. For example, if the file specifies port `3002`, open `http://localhost:3002/sales-app/checkout/cart`.
