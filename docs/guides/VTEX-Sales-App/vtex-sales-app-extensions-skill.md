@@ -55,6 +55,6 @@ The Extensions Skill supports every stage from setup to production, and follows 
 
 ## Extensions Skill installation
 
-Since the `sales-app-extensibility` skill is part of the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection, the complete information about the installation is available in the [VTEX Skills source code](https://github.com/vtex/skills).
+Since the `sales-app-extensibility` skill is part of the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection, see the [VTEX Skills source code](https://github.com/vtex/skills) for installation instructions.
 
 > ℹ️ For technical information about VTEX Sales App Extensibility, see our [developer documentation](link).
