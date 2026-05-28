@@ -32,7 +32,7 @@ The system follows a decoupled architecture that separates content authoring fro
 Define content structures using [JSON Schema](https://json-schema.org/) with support for:
 
 - **Content Types**: Page structures like `home`, `pdp`, `plp`, and `landingPage`.
-- **Components**: Reusable building blocks with metadata like `$componentKey` and `$componentTitle`. See [Understanding Components and Sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections) for details.
+- **Components**: Reusable building blocks with metadata like `$componentKey` and `$componentTitle`. See [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections) for details.
 - **Content referencing**: Reference entries across multiple pages without duplication.
 - **Schema extension**: Inherit properties from base schemas using the `$extends` keyword.
 

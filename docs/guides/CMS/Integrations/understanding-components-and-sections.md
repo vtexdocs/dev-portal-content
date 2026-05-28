@@ -3,7 +3,7 @@ title: "Understanding components and sections"
 hidden: false
 slug: "understanding-components-and-sections"
 createdAt: "2026-05-04T12:00:00.813Z"
-updatedAt: "2026-05-05T18:00:00.813Z"
+updatedAt: "2026-05-28T12:00:00.813Z"
 excerpt: "Understand what components and sections are in the CMS, how they differ, and how they work together to build pages in storefronts integrated with the CMS."
 ---
 
