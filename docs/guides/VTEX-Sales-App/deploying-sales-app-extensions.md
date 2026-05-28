@@ -28,7 +28,7 @@ If the build fails, the issue is usually in your extension code or configuration
 
 FastStore WebOps shows when a build fails, but Sales App build logs aren't available there. To inspect the logs, check the GitHub Checks for the failed commit:
 
-![GitHub checks notification showing failed check for commit 'Added missing totalizer validations' in a VTEX app repository](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-18419-creating-extension-point/images/deploying-extensions-github-checks.webp)
+![GitHub checks notification showing failed check for commit 'Added missing totalizer validations' in a VTEX app repository](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/deploying-extensions-github-checks.webp)
 
 You can also run the following command. Remember to replace `{account-name}` with the name of your account.
 
