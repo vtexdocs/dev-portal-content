@@ -13,7 +13,9 @@ hidePaginationNext: false
 
 > ℹ️ This feature is in beta, and we're actively working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
-VTEX Sales App Extensions Skill is an AI-powered skill with embedded knowledge of [Sales App](https://help.vtex.com/docs/tracks/vtex-sales-app-getting-started-and-setting-up) and [FastStore](https://developers.vtex.com/docs/guides/faststore) that supports you during the development lifecycle of extensions, which are called [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility).
+VTEX Sales App Extensions Skill is an AI-powered skill with embedded knowledge of [Sales App](https://help.vtex.com/docs/tracks/vtex-sales-app-getting-started-and-setting-up) and [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview). It supports you throughout the development lifecycle of extensions, known as [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility).
+
+In the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection, the VTEX Sales App Extension Skill is identified as `sales-app-extensibility`.
 
 > ℹ️ For business context, extension point locations, and use case examples, see the article [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility). For technical information, see our [developer extensibility documentation](link).
 
