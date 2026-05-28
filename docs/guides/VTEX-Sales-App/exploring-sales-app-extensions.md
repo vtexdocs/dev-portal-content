@@ -3,7 +3,7 @@ title: "Exploring Sales App extensions"
 slug: "exploring-sales-app-extensions"
 hidden: false
 createdAt: "2026-05-28T00:00:00.000Z"
-excerpt: "Customize VTEX Sales App with extension points in the cart, product detail page, and menu."
+excerpt: "Customize Sales App with extension points in the cart, product detail page, and menu."
 seeAlso:
   - "/docs/guides/setting-up-sales-app-extensions"
   - "/docs/guides/creating-sales-app-extensions"
@@ -30,7 +30,7 @@ The available extension points for Sales App are:
 > ⚠️ Some extension points may trigger layout shifts. If your extension fetches data, reserve space in the area where the extension renders so the layout remains stable while the content loads. Use skeletons or loading states to improve the user experience, especially in extension points where layout shifts may occur.
 > Static extensions and extensions that use only data-layer hooks shouldn't cause layout shifts, because the VTEX Sales App renders them consistently within the layout.
 
-The following sections describe each extension point in more detail. For the full list of available hooks and types for building your extensions, see [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types)
+The following sections describe each extension point in more detail. For the full list of available hooks and types for building your extensions, see [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types).
 
 ## Cart extension points
 
