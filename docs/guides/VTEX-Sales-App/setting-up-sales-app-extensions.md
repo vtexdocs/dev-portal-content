@@ -97,7 +97,7 @@ The [`defineExtensions`](https://developers.vtex.com/docs/guides/sales-app-exten
 
 This function also helps during development by showing available extension points with autocomplete and type-checking, making the setup easier and less error-prone. To build your extension, use the hooks, types, and helper functions available in the `@vtex/sales-app` package. For more information, see the [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types) guide.
 
-The `src/components/Example.tsx` file includes a sample extension point. You can import CSS files, such as `Example.css`, to define classes and make them available globally. Organize your code however best fits your project, either by separating implementation and styling into different files or by keeping everything in a single file.
+The `src/components/Example.tsx` file includes a sample extension point. You can import CSS files, such as `Example.css`, to define classes and make them available globally. Organize your code however best fits your project, either by separating implementation and styling into different files or by keeping everything in a single file. For additional information about CSS, refer to [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility)
 
 The `faststore.json` file should include a `sales-app` entry like the following:
 
