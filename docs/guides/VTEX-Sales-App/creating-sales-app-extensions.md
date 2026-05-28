@@ -1,10 +1,12 @@
 ---
-title: "Creating a VTEX Sales App extension"
-slug: "creating-a-vtex-sales-app-extension"
+title: "Creating Sales App extensions"
+slug: "creating-sales-app-extensions"
 hidden: false
 excerpt: "Learn how to create a Sales App extension and render it in a predefined extension point."
 createdAt: "2026-05-28T00:00:00.000Z"
 ---
+
+> ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
 After setting up a Sales App extension project in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you're ready to create custom experiences by rendering React components in predefined extension points.
 
