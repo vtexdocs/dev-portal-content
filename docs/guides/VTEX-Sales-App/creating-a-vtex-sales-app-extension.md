@@ -14,7 +14,7 @@ In this guide, you'll learn how to create a basic extension, connect it to an ex
 
 ## Before you begin
 
-* Complete the [Setting up extensions for VTEX Sales App](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) guide.
+* Complete the [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) guide.
 
 ## Instructions
 
