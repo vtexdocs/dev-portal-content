@@ -2,7 +2,7 @@
 title: "Exploring Sales App extensions"
 slug: "exploring-sales-app-extensions"
 hidden: false
-createdAt: "2026-05-22T07:00:00.000Z"
+createdAt: "2026-05-28T00:00:00.000Z"
 excerpt: "Customize VTEX Sales App with extension points in the cart, product detail page, and menu."
 seeAlso:
   - "/docs/guides/setting-up-sales-app-extensions"
@@ -14,7 +14,7 @@ seeAlso:
 
 VTEX Sales App provides extension points in the cart that let you customize the user experience and interface according to your store's requirements.
 
-The available extension points for VTEX Sales App are:
+The available extension points for Sales App are:
 
 | Extension Point            | Category | Description                                                                                                                  | Layout shift |
 | -------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------ |
@@ -30,11 +30,13 @@ The available extension points for VTEX Sales App are:
 > ⚠️ Some extension points may trigger layout shifts. If your extension fetches data, reserve space in the area where the extension renders so the layout remains stable while the content loads. Use skeletons or loading states to improve the user experience, especially in extension points where layout shifts may occur.
 > Static extensions and extensions that use only data-layer hooks shouldn't cause layout shifts, because the VTEX Sales App renders them consistently within the layout.
 
-## Extension points
+The following sections describe each extension point in more detail. For the full list of available hooks and types for building your extensions, see [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types)
 
-### Cart
+## Cart extension points
 
-#### `cart.cart-list.after`
+Use the following cart extension points to customize different areas of the cart experience.
+
+### `cart.cart-list.after`
 
 Use this extension point to render content after the entire cart item list and before the bottom of the cart page. It's ideal for cart-level messaging such as cross-sell components, store policies, or trust and security notices that apply to the whole order.
 
@@ -43,7 +45,7 @@ Use this extension point to render content after the entire cart item list and b
 
 ![Shopping cart page with one item and order summary, highlighting the full cart list area below the main cart content.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/cart.cart-list.after.webp)
 
-#### `cart.cart-item.after`
+### `cart.cart-item.after`
 
 This extension point renders immediately below each cart item row, allowing you to attach item-specific content such as warranties, services, item badges, or custom delivery details for that product.
 
@@ -52,7 +54,7 @@ This extension point renders immediately below each cart item row, allowing you 
 
 ![Shopping cart page showing one MacBook Pro item with delivery details, quantity selector, remove button, and a highlighted placeholder area for the cart item component below the product row.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/cart.cart-item.after.webp)
 
-#### `cart.order-summary.after`
+### `cart.order-summary.after`
 
 Use this extension point to append components under the order summary on the cart page, such as financing simulators, loyalty messages, or upsell suggestions based on the current totals.
 
@@ -61,9 +63,11 @@ Use this extension point to append components under the order summary on the car
 
 ![Shopping cart page with subtotal, discount, total, and Continue button, highlighting the order summary component in the right sidebar.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/cart.order-summary.after.webp)
 
-### Product Detail Page (PDP)
+## Product Detail Page (PDP) extension points
 
-#### `pdp.sidebar.before`
+Use the following PDP extension points to customize key areas of the product detail page.
+
+### `pdp.sidebar.before`
 
 This extension point appears at the top of the PDP sidebar, before the standard purchase and shipping content. It's useful for badges, membership highlights, or store-specific information that should appear near the main buying actions.
 
@@ -72,7 +76,7 @@ This extension point appears at the top of the PDP sidebar, before the standard 
 
 ![Product details page showing product image, price, voltage selector, purchase options, add to cart button, and shipping information, with the PDP sidebar area highlighted before the content section.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/pdp.sidebar.before.webp)
 
-#### `pdp.sidebar.after`
+### `pdp.sidebar.after`
 
 Use this extension point to render content after the PDP sidebar, such as additional services, store pickup programs, or fulfillment-related contextual recommendations.
 
@@ -81,7 +85,7 @@ Use this extension point to render content after the PDP sidebar, such as additi
 
 ![Product details page showing delivery, withdrawal, and in-store availability options in the right sidebar, with the PDP sidebar component highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/pdp.sidebar.after.webp)
 
-#### `pdp.content.after`
+### `pdp.content.after`
 
 This extension point is located below the main PDP content area, after sections like related products or "frequently bought together". It's recommended for long-form or secondary content, such as recommendations, promotions, or informational blocks, that don't need to appear near the Buy button.
 
@@ -90,9 +94,11 @@ This extension point is located below the main PDP content area, after sections 
 
 ![Product details page showing related products and frequently bought together sections, with the main PDP content area highlighted below the product information.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-15011-sales-app-extensions-points/images/pdp.content.after.webp)
 
-### Menu
+## Menu extension points
 
-#### `menu.item`
+Use the following menu extension points to add custom entry points and flows to the Sales App menu.
+
+### `menu.item`
 
 This extension point adds a custom tile to the Sales App side menu, providing an entry point to your own flow (for example, a loyalty dashboard, financing calculator, or partner app).
 
@@ -113,7 +119,7 @@ export function MenuItem() {
 
 > ℹ️ This component is optional. If you don't create it, a default menu labeled `Extension Point` will be displayed. The menu will only be visible if you define the `menu.drawer-content` extension.
 
-#### `menu.drawer-content`
+### `menu.drawer-content`
 
 This extension point defines the content of the drawer opened from your `menu.item` tile, allowing you to build full-screen flows such as forms, dashboards, or multi-step tasks without leaving the VTEX Sales App.
 
