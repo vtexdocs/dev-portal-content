@@ -16,12 +16,12 @@ The technical aspects of Sales App extensions are covered in the following artic
 - [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill) — AI skill with Sales App and FastStore knowledge to support you in scaffolding, validating, and deploying extensions across the development lifecycle of an extension project.
 
 - [Sales App extensions implementation](https://developers.vtex.com/docs/guides/sales-app-extensions-implementation) — Know which articles to consult throughout the implementation:
-  - [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions) — Explore the predefined slots in the Sales App interface.
+  - [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions) — Explore the predefined slots in the Sales App interface to place your extension.
   - [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) — Configure the required dependencies and settings.
-  - [Installing WebOps for Sales App extensions](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions) — Install and configure FastStore WebOps.
-  - [Creating Sales App extensions](https://developers.vtex.com/docs/guides/creating-sales-app-extensions) — Learn about building a component and registation.
+  - [Installing WebOps for Sales App extensions](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions) — Install FastStore WebOps.
+  - [Creating Sales App extensions](https://developers.vtex.com/docs/guides/creating-sales-app-extensions) — Build a component and create an extension.
   - [Deploying Sales App extensions](https://developers.vtex.com/docs/guides/deploying-sales-app-extensions) — Deploy an extension to your VTEX account.
-  - [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types) — Consult the hooks and types required for the implementation.
+  - [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types) — Consult the hooks and types required throughout the implementation.
 
 - [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility) — Style your extensions using CSS.
 
