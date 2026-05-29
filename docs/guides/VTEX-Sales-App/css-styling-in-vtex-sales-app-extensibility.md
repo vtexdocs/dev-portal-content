@@ -74,7 +74,7 @@ Single CSS file example:
 
 Multiple CSS files examples:
 
-```typescript
+```tsx
   // CustomMessage.tsx
   import './custom-message.css'
   const CustomMessage = () => {...}
