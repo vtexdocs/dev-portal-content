@@ -19,7 +19,7 @@ There are two ways for enabling your extensions to interact with data:
 
 All interactions with the Sales App data layer happen through functions and hooks provided by the `@vtex/sales-app` package.
 
-> ℹ️ Whenever possible, we recommend using the Sales App data layer, because this data is already cached in the core data layer. By doing so, you won’t trigger additional requests, which improves application performance and benefits your extensions.
+> ℹ️ Whenever possible, use the Sales App data layer, because this data is already cached in the core data layer. This approach prevents additional requests, enhancing application performance and benefiting your extensions.
 
 For example, if you need to access cart item data while using the `cart.cart-item.after` extension point, you can use the `useCartItem` hook:
 
