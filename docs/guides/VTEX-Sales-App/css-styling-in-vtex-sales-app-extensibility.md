@@ -66,7 +66,7 @@ In this approach, you'll include `.css` files in the relevant `.tsx` file. You c
 
 Single CSS file example:
 
-```typescript
+```tsx
   // src/index.tsx
   import { defineExtensions } from '@vtex/sales-app'
   import './styles.css'
