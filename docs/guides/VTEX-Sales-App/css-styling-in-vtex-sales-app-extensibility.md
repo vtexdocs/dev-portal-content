@@ -21,9 +21,9 @@ Using CSS is recommended exclusively for styling your extensions. CSS files have
 
 Avoid using global CSS to target elements outside your extension, such as with `tag`, `class`, or `id` selectors, for the following reasons:
 
-- Future releases may include sandboxing mechanisms that isolate CSS and/or extensions from the core application's global context (e.g., DOM).
-- Using selectors like classes or IDs on core Sales App elements (e.g., the "Continue" button, the cart list, header, logo) is not supported, as Sales App generates unique IDs for classes applied to its elements.
-- Relying on the markup to create selectors with the goal of customizing the core Sales App is risky, as the markup may change with core updates (e.g., adding or removing elements in the DOM).
+- Future releases may include sandboxing mechanisms that isolate CSS and/or extensions from the core application's global context (for example, DOM).
+- Using selectors like classes or IDs on core Sales App elements (for example, the "Continue" button, the cart list, header, logo) is not supported, as Sales App generates unique IDs for classes applied to its elements.
+- Relying on the markup to create selectors with the goal of customizing the core Sales App is risky, as the markup may change with core updates (for example, adding or removing elements in the DOM).
 
 With that in mind, CSS should only be used for styling the extension itself. Any styling applied to core elements is subject to breaking changes due to bug fixes, new features, and other updates.
 
