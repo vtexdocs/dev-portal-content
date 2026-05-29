@@ -23,10 +23,6 @@ In this guide, you'll learn how to extend the **CallToAction** section in your F
 
 Before extending a component, make sure the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) is enabled in your VTEX account. The CMS provides the Admin interface to configure and publish the **CallToAction** section you build in this guide.
 
-To check whether the CMS is available in your account, log in to your VTEX Admin and go to **Storefront > Content**.
-
-- If the **Content** option appears, the CMS is already enabled and you can proceed to the [next section](#install-the-content-plugin).
-- If the **Content** option is not available, [open a ticket with VTEX Support](https://help.vtex.com/en/support) requesting the CMS to be enabled in your account.
 
 > ⚠️ The CMS is currently available for stores running Faststore v3 and [FastStore v4](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version). If your store uses the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), see the [Upgrading from Headless CMS (legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview) track first.
 
