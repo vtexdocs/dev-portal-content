@@ -25,8 +25,6 @@ Avoid using global CSS to target elements outside your extension, such as with `
 - Using selectors like classes or IDs on core Sales App elements (for example, the "Continue" button, the cart list, header, logo) is not supported, as Sales App generates unique IDs for classes applied to its elements.
 - Relying on the markup to create selectors with the goal of customizing the core Sales App is risky, as the markup may change with core updates (for example, adding or removing elements in the DOM).
 
-With that in mind, CSS should only be used for styling the extension itself. Any styling applied to core elements is subject to breaking changes due to bug fixes, new features, and other updates.
-
 > ℹ️ Visual changes, such as the primary brand color, are currently done through configuration. Other visual customizations (like fonts, borders, etc.) will be possible in future releases.
 
 ## Styling extensions using CSS modules (recommended)
