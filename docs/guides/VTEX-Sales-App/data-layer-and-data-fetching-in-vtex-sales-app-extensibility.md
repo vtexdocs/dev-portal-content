@@ -65,4 +65,4 @@ function MyCustomData() {
 }
 ```
 
-> ⚠️ When performing data fetching, it’s important to handle loading states to ensure a good user experience. Additionally, allocate space in advance to avoid layout shift. Read more about [Dealing with Layout Shift](link-placeholder).
+> ⚠️ When fetching data, handle loading states to ensure a better user experience. Additionally, allocate space in advance to avoid layout shift. Learn more in the guide [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions).
