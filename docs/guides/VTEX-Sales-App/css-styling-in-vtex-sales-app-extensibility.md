@@ -62,7 +62,7 @@ custom-message.module.css example:
 
 ## Styling extensions with plain CSS imports
 
-In this approach, you will include `.css` files in the relevant TypeScript file. You can either create a single file and import it once in `src/index.tsx`, or create component-specific files and import them in the component's file.
+In this approach, you'll include `.css` files in the relevant `.tsx` file. You can either create a single file and import it once in `src/index.tsx`, or create component-specific files and import them in the component's file.
 
 Single CSS file example:
 
