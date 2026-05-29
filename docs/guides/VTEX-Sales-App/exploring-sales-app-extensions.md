@@ -126,4 +126,4 @@ This extension point defines the content of the drawer opened from your `menu.it
 * **Available hooks:** `useCurrentUser`, `useExtension`
 * **Layout shift:** No. The drawer area is fully reserved in advance, so rendering dynamic content inside it does not move elements on the underlying page. Focus on performance and responsiveness rather than reserving extra height.
 
-![Open left-side drawer overlay on top of the cart page, with the background dimmed and the drawer content area highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@/images/menu.drawer-content.webp)
+![Open left-side drawer overlay on top of the cart page, with the background dimmed and the drawer content area highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/menu.drawer-content.webp)
