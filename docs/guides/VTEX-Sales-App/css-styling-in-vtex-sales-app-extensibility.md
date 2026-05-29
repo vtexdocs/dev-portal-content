@@ -15,9 +15,11 @@ Once you have [created a Sales App extension](https://developers.vtex.com/docs/g
 
 ## Scope and limitations
 
-Using CSS is recommended exclusively for styling your extensions. CSS files have access to the global scope where they are loaded, meaning they can technically target and style other elements of the Sales App core.
+Using CSS is recommended exclusively for styling your extensions. CSS files have access to the global scope where they're loaded, meaning they can technically target and style other elements of the Sales App core.
 
-However, using global CSS to style elements outside of your extension, relying on selectors like `tag`, `class`, `id`, or any other combination not specific to the extension, is discouraged for the following reasons:
+> ⚠️ Any styling applied to core elements is subject to breaking changes due to bug fixes, new features, and other updates.
+
+Avoid using global CSS to target elements outside your extension, such as with `tag`, `class`, or `id` selectors, for the following reasons:
 
 - Future releases may include sandboxing mechanisms that isolate CSS and/or extensions from the core application's global context (e.g., DOM).
 - Using selectors like classes or IDs on core Sales App elements (e.g., the "Continue" button, the cart list, header, logo) is not supported, as Sales App generates unique IDs for classes applied to its elements.
