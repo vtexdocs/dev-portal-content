@@ -30,16 +30,16 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Setting up Sales App extensions"
-description="Configure the required dependencies and settings."
-linkTo="https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions"
+title="Installing WebOps for Sales App extensions"
+description="Install FastStore WebOps."
+linkTo="https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions"
 linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Installing WebOps for Sales App extensions"
-description="Install FastStore WebOps."
-linkTo="https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions"
+title="Setting up Sales App extensions"
+description="Configure the required dependencies and settings."
+linkTo="https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions"
 linkTitle="See more"
 />
 
