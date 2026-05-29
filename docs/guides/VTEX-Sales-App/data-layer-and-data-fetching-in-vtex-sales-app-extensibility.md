@@ -33,7 +33,7 @@ const MyComponent = () => {
 }
 ```
 
-> ℹ️ For detailed information about hooks and utilities for extensions, see the [API Reference](link-placeholder).
+> ℹ️ For detailed information about hooks and types for extensions, see the guide [Sales App extensions hooks and types](https://developers.vtex.com/docs/guides/sales-app-extensions-hooks-and-types).
 
 ## Data fetching in extensions
 
