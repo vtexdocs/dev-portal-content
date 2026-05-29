@@ -37,7 +37,7 @@ const MyComponent = () => {
 
 ## Data fetching in extensions
 
-When you need to fetch data from VTEX APIs (e.g., Intelligent Search) or external APIs, you can use the browser's Fetch API to make requests, as shown in the example below:
+When you need to fetch data from VTEX APIs (for example, Intelligent Search) or external APIs, you can use the browser's Fetch API to make requests, as shown in the example below:
 
 ```tsx
 import React, { useState, useEffect } from 'react';
