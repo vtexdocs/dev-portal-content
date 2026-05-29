@@ -17,8 +17,8 @@ The technical aspects of Sales App extensions are covered in the following artic
 
 - [Sales App extensions implementation](https://developers.vtex.com/docs/guides/sales-app-extensions-implementation) — Know which articles to consult throughout the implementation:
   - [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions) — Explore the predefined slots in the Sales App interface to place your extension.
-  - [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) — Configure the required dependencies and settings.
   - [Installing WebOps for Sales App extensions](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions) — Install FastStore WebOps.
+  - [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) — Configure the required dependencies and settings.
   - [Creating Sales App extensions](https://developers.vtex.com/docs/guides/creating-sales-app-extensions) — Build a component and create an extension.
   - [Deploying Sales App extensions](https://developers.vtex.com/docs/guides/deploying-sales-app-extensions) — Deploy an extension to your VTEX account.
   - [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types) — Consult the hooks and types required throughout the implementation.
