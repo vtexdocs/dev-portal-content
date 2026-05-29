@@ -6,7 +6,7 @@ createdAt: "2026-02-19T12:50:00.813Z"
 updatedAt: "2026-04-30T11:48:00.813Z"  
 ---
 
-> ⚠️ This guide is valid only for [FastStore stores running v4](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) or higher and using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For stores using a FastStore version below v4, refer to [this guide](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section).
+> ⚠️ This guide is valid only for [FastStore stores running v4](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) or higher and using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For stores using a FastStore version below v4, see [this guide](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section).
 
 To reuse an existing layout or behavior (such as a banner, hero, or product shelf), you can extend a component and adapt it to your store brand or business rules without rewriting everything from scratch. By extending rather than creating components from scratch, you maintain visual and technical consistency and reduce maintenance.
 
@@ -28,7 +28,7 @@ To check whether the CMS is available in your account, log in to your VTEX Admin
 - If the **Content** option appears, the CMS is already enabled and you can proceed to the [next section](#install-the-content-plugin).
 - If the **Content** option is not available, [open a ticket with VTEX Support](https://help.vtex.com/en/support) requesting the CMS to be enabled in your account.
 
-> ⚠️ The CMS is currently available for stores running [FastStore v4](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) or higher. If your store uses the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), refer to the [Upgrading from Headless CMS (legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview) track first.
+> ⚠️ The CMS is currently available for stores running [FastStore v4](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) or higher. If your store uses the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), see the [Upgrading from Headless CMS (legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview) track first.
 
 ### Install the Content plugin
 
@@ -39,11 +39,11 @@ After installing the CMS into your store account, install the Content plugin on 
 
 ### Step 1 - Creating the component
 
-1. Open your store project in a code editor.  
-2. In the folder `src/components`, create the file `CallToAction.tsx`.  
-3. Add the following code to the `CallToAction.tsx` file:  
+1. Open your store project in a code editor.
+2. In the folder `src/components`, create the `CallToAction.tsx` file.
+3. Add the following code to the `CallToAction.tsx` file:
 
-   ```tsx  
+   ```tsx
    import React from "react";  
 
    export interface CallToActionProps {  
@@ -64,9 +64,9 @@ After installing the CMS into your store account, install the Content plugin on 
    }  
    ```
 
-4. Export the `CallToAction` component in the `index.tsx` file.  
+4. Export the `CallToAction` component in the `index.tsx` file.
 
-   ```tsx  
+   ```tsx
    …  
    import CallToAction from './CallToAction'  
      
@@ -76,10 +76,10 @@ After installing the CMS into your store account, install the Content plugin on 
    }  
    ```
 
-5. Create the file for the component that will be a section. In `cms/faststore/components`, create the `cms_component__CallToAction.jsonc` file.  
-6. In the `cms_component__CallToAction.jsonc` file, add the following:  
+5. Create the file for the component that will be a section. In `cms/faststore/components`, create the `cms_component__CallToAction.jsonc` file.
+6. In the `cms_component__CallToAction.jsonc` file, add the following:
 
-   ```jsonc  
+   ```jsonc
    {  
      "$extends": [  
        "#/$defs/base-component"  
@@ -122,13 +122,13 @@ After installing the CMS into your store account, install the Content plugin on 
 
 7. Generate the final schema to add the new section. To do this, run the following command in a terminal:
 
-    ```bash  
+    ```bash
     vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore  
     ```
 
-8. Open the `schema.json` file and check if the section was added to the section list. It'll probably be like that:
+8. Open the `schema.json` file and check if the section was added to the section list. It should look similar to this:
 
-    ```json  
+    ```json
     …  
     {  
         "$ref": "#/components/CallToAction"  
@@ -138,7 +138,7 @@ After installing the CMS into your store account, install the Content plugin on 
 
 ### Step 2 - Verify the component locally
 
-Before syncing your changes with the CMS, run the storefront locally to confirm your new component compiles without errors. This catches typos, missing imports, and invalid schemas before involving the CMS.
+Before syncing your changes with the CMS, run the storefront locally to confirm your new component compiles without errors. This catches typos, missing imports, and invalid schemas before you sync with the CMS.
 
 1. In the project root, start the FastStore development server:
 
@@ -148,7 +148,7 @@ Before syncing your changes with the CMS, run the storefront locally to confirm 
 
 2. Open the development server in your browser and check the terminal output for compilation errors related to `CallToAction`.
 
-> ℹ️ The section will not render visually yet because it has not been added to any page in the CMS, which is done in [Step 4](#step-4---add-the-component-to-the-cms). At this point, you're only verifying that the development server starts and that your component code, schema, and registration are valid.
+> ℹ️ The section won't render visually yet because it hasn't been added to any page in the CMS. This is done in [Step 4](#step-4---add-the-component-to-the-cms). At this point, you're only verifying that the development server starts and that your component code, schema, and registration are valid.
 
 If the development server starts successfully and reports no compilation errors, you're ready to sync your changes with the CMS.
 
@@ -164,10 +164,10 @@ vtex content upload-schema cms/faststore/schema.json
 
 ### Step 4 - Add the component to the CMS
 
-1. Go to the Admin, open **Storefront > Content**, and click a Content-Type, such as **Home**, to check whether the component was added.
+1. In the Admin, open **Storefront > Content**, and click a Content-Type, such as **Home**, to check whether the component was added.
 
-    ![call-to-action-admin](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation-admin___39afe92cbcd5c59606b7fa1db4ceb492.png)
+   ![call-to-action-admin](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation-admin___39afe92cbcd5c59606b7fa1db4ceb492.png)
 
-2. Add the component and fill in its fields.  
+2. Add the component and complete its fields.
 3. Click `Save`.
-4. With the FastStore development server still running from [Step 2](#step-2---verify-the-component-locally), refresh the server to preview the **CallToAction** section rendered with the values you just configured.
+4. With the FastStore development server still running from [Step 2](#step-2---verify-the-component-locally), refresh to preview the **CallToAction** section rendered with the values you just configured.
