@@ -28,7 +28,7 @@ To check whether the CMS is available in your account, log in to your VTEX Admin
 - If the **Content** option appears, the CMS is already enabled and you can proceed to the [next section](#install-the-content-plugin).
 - If the **Content** option is not available, [open a ticket with VTEX Support](https://help.vtex.com/en/support) requesting the CMS to be enabled in your account.
 
-> ⚠️ The CMS is currently available for stores running [FastStore v4](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) or higher. If your store uses the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), see the [Upgrading from Headless CMS (legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview) track first.
+> ⚠️ The CMS is currently available for stores running Faststore v3 and [FastStore v4](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version). If your store uses the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), see the [Upgrading from Headless CMS (legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview) track first.
 
 ### Install the Content plugin
 
@@ -164,7 +164,7 @@ vtex content upload-schema cms/faststore/schema.json
 
 ### Step 4 - Add the component to the CMS
 
-1. In the Admin, open **Storefront > Content**, and click a Content-Type, such as **Home**, to check whether the component was added.
+1. In the Admin, open **Storefront > Content**, and click an Entry, such as **Home**, to check whether the component was added.
 
    ![call-to-action-admin](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation-admin___39afe92cbcd5c59606b7fa1db4ceb492.png)
 
