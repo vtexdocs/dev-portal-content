@@ -3,10 +3,14 @@ title: "Marketplace"
 slug: "marketplace-overview"
 hidden: false
 createdAt: "2023-07-19T17:08:52.219Z"
-updatedAt: "2023-07-19T17:08:52.219Z"
+updatedAt: "2026-05-29T00:00:00.000Z"
 excerpt: "Integration guide for VTEX or external Marketplaces and Sellers"
 hidePaginationPrevious: false
 hidePaginationNext: false
+seeAlso:
+ - "/docs/guides/getting-started-with-storefront-solutions"
+ - "/docs/guides/multilevel-omnichannel-inventory"
+ - "/docs/guides/orders-overview"
 ---
 
 >ℹ️ Help us improve our documentation! Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
@@ -32,8 +36,29 @@ The actions that can be performed via API are the following:
 
 - [Adding seller](#1-marketplace-adding-sellers)
 - [Configuring seller selection at checkout](https://developers.vtex.com/docs/guides/checkout-overview)
-- [Configure storefront](https://developers.vtex.com/docs/guides/getting-started-3)
+- [Customizing the marketplace storefront](#customizing-the-marketplace-storefront)
 - [Configure payments](https://developers.vtex.com/docs/guides/payments-integration-guide)
+
+## Customizing the marketplace storefront
+
+As a VTEX marketplace, your storefront is where approved seller offers are displayed and where shoppers complete checkout. After integrating sellers and cataloging offers, you can customize how products and seller information appear to customers.
+
+The customization approach depends on your storefront technology. See [Getting started with storefront solutions](https://developers.vtex.com/docs/guides/getting-started-with-storefront-solutions) to compare FastStore, Store Framework, and Legacy CMS Portal, including marketplace support for each option.
+
+### Store Framework
+
+- [Store Framework](https://developers.vtex.com/docs/guides/store-framework)
+- [Using CSS handles for store customizations](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization)
+- [Working with Site Editor](https://developers.vtex.com/docs/guides/store-framework-working-with-site-editor)
+
+### FastStore
+
+- [Overrides overview](https://developers.vtex.com/docs/guides/faststore/overrides-overview)
+- [Using themes overview](https://developers.vtex.com/docs/guides/faststore/using-themes-overview)
+
+### Checkout and seller display
+
+To configure how sellers are selected and displayed during checkout, see [Checkout overview](https://developers.vtex.com/docs/guides/checkout-overview).
 
 ## Integrating External Marketplaces or External Sellers
 
@@ -41,6 +66,15 @@ The Marketplace Protocol is a set of API requests and definitions to help you in
 
 - **External seller protocol:** If you are a VTEX marketplace and want to integrate offers from an external seller into your catalog, see our [External Seller Integration Guide](https://developers.vtex.com/docs/guides/external-seller-integration-guide).
 - **External marketplace protocol:** If you are an external marketplace that wants to integrate with a VTEX seller, see [External Marketplace Integration Guide](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide) to learn how to develop a custom connector to integrate with the architecture and catalog of VTEX sellers.
+
+### Phase overview
+
+| Phase | Section | Main actors |
+| --- | --- | --- |
+| Seller onboarding | [1. Marketplace: Adding Sellers](#1-marketplace-adding-sellers) | Marketplace, Seller |
+| Suggestions | [2. Sending and managing suggestions](#2-sending-and-managing-suggestions) | Seller |
+| Cataloging | [3. Marketplace: Cataloging offers](#3-marketplace-cataloging-offers) | Marketplace |
+| Ongoing sync | [4. Managing Catalog](#4-managing-catalog) | Seller, Marketplace |
 
 ## 1. Marketplace: Adding Sellers
 
@@ -105,6 +139,24 @@ The query and management of applied commission rules will be performed through t
 - DELETE - [Remove Seller Commission by Category ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#delete-/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-): Removes a previously defined commission for a category of a seller.
 
 When completing the steps listed above, the marketplace will have completed the integration of a seller into its store.
+
+## Multilevel Omnichannel Inventory (MOI)
+
+[Multilevel Omnichannel Inventory (MOI)](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory) is a VTEX setting that allows franchise accounts or white label sellers' inventory to be sold in marketplaces connected to the main seller account — without integrating each franchise individually with the marketplace.
+
+In a three-level architecture, the marketplace (level 1) sells products fulfilled by franchise accounts or white label sellers (level 3) through a direct seller (level 2). Orders follow the [chain order flow](https://developers.vtex.com/docs/guides/orders-overview#chain-flow).
+
+> ⚠️ MOI is available only for integrations between VTEX marketplaces and VTEX sellers. The feature has been [discontinued for external marketplaces](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory-api-integration).
+
+### Configuring MOI via API
+
+When adding or updating a seller, configure MOI through the [Configure Seller Account](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/seller-register/pvt/sellers) endpoint by setting the `fulfillmentEndpoint` field. See [Setup for VTEX marketplaces](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory#setup-for-vtex-marketplaces) for the required format and parameters.
+
+For a complete integration guide, see:
+
+- [Multilevel Omnichannel Inventory](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory)
+- [Multilevel Omnichannel Inventory API integration](https://developers.vtex.com/docs/guides/multilevel-omnichannel-inventory-api-integration)
+- [Integrating with the Multilevel Omnichannel Inventory](https://developers.vtex.com/docs/guides/orders-overview#integrating-with-the-multilevel-omnichannel-inventory) (Orders overview)
 
 ## 2. Sending and managing suggestions
 
