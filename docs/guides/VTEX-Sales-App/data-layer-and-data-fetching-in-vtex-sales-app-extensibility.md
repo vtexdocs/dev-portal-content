@@ -10,7 +10,7 @@ createdAt: "2026-05-27T00:00:00.000Z"
 
 When [creating a Sales App extension](https://developers.vtex.com/docs/guides/creating-sales-app-extensions), you may need to present data to the user, whether it's from the Sales App flow, VTEX APIs, or third-party APIs.
 
-In extension points, there are two ways to interact with data:
+There are two ways for enabling your extensions to interact with data:
 
 - Data layer resources, such as the `useCart` hook or `useCartItem`.
 - Data fetching from VTEX APIs or external APIs.
