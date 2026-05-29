@@ -17,7 +17,7 @@ VTEX Sales App Extensions Skill is an AI-powered skill with embedded knowledge o
 
 In the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection, the VTEX Sales App Extension Skill is identified as `sales-app-extensibility`.
 
-> ℹ️ For business context, extension point locations, and use case examples, see the article [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility). For technical information, see our [developer extensibility documentation](link).
+> ℹ️ For business context, extension point locations, and use case examples, see the article [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility). For technical information, see our [developer extensibility documentation](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility).
 
 The VTEX Sales App Extensions Skill is identified as the `sales-app-extensibility` skill that's part of the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection.
 
@@ -45,7 +45,7 @@ The Extensions Skill supports every stage from setup to production, and follows 
 
 | Step | What the skill does |
 | :--- | :--- |
-| Check prerequisites | Checks whether the project prerequisites defined in the [extensibility technical documentation](link) are satisfied before proceeding with the workflow. If any prerequisite is missing, the workflow provides the required commands for manual execution and waits for confirmation before moving to the next step. |
+| Check prerequisites | Checks whether the project prerequisites defined in the [Extensibility technical documentation](https://developers.vtex.com/docs/guides/sales-app-extensions-implementation) are satisfied before proceeding with the workflow. If any prerequisite is missing, the workflow provides the required commands for manual execution and waits for confirmation before moving to the next step. |
 | Discovery | Understands what you want to build. |
 | Requirements and plan | Maps requirements and generates an implementation plan. Helps delimit project scope—what to build, which extension point to use, and whether the project involves VTEX IO apps, external integrations, or UX changes. |
 | Code generation and validation | Generates extension code using Sales App hooks and platform patterns, keeping UX consistent with ecommerce when the feature already exists online. Reviews requirements for gaps or ambiguities in user flows, integrations, or technical details, and prompts for missing information. |
@@ -57,4 +57,4 @@ The Extensions Skill supports every stage from setup to production, and follows 
 
 Since the `sales-app-extensibility` skill is part of the [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) collection, see the [VTEX Skills source code](https://github.com/vtex/skills) for installation instructions.
 
-> ℹ️ For technical information about VTEX Sales App Extensibility, see our [developer documentation](link).
+> ℹ️ For technical information about VTEX Sales App Extensibility, see our [developer documentation](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility).
