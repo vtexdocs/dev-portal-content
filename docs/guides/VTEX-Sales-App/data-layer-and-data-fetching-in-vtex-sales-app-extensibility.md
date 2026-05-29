@@ -39,6 +39,8 @@ const MyComponent = () => {
 
 When you need to fetch data from VTEX APIs (for example, Intelligent Search) or external APIs, you can use the browser's Fetch API to make requests, as shown in the example below:
 
+> ⚠️ Extensions run in the browser, so authentication tokens and API keys included in requests can be exposed to users. The example below uses a public endpoint that does not require credentials. If your API requires authentication, create a [VTEX IO app](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-creating-the-new-app) to proxy the request and handle authentication on the server.
+
 ```tsx
 import React, { useState, useEffect } from 'react';
 
