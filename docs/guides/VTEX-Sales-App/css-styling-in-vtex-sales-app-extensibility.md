@@ -80,7 +80,7 @@ Multiple CSS files examples:
   const CustomMessage = () => {...}
 ```
 
-```typescript
+```tsx
   // CustomTotalizer.tsx
   import './custom-totalizer.css'
   const CustomTotalizer = () => {...}
