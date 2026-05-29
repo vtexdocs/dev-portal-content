@@ -23,7 +23,7 @@ All interactions with the Sales App data layer happen through functions and hook
 
 For example, if you need to access cart item data while using the `cart.cart-item.after` extension point, you can use the `useCartItem` hook:
 
-```typescript
+```tsx
 import { useCartItem } from '@vtex/sales-app'
 
 const MyComponent = () => {
