@@ -3,15 +3,15 @@ title: "FastStore hooks"
 excerpt: "Guide for all FastStore hooks, including their types, use cases, and impact on your store customization."
 ---
 
-FastStore provides a collection of React hooks that give you direct access to built-in store features and state, so you can build customized storefronts faster. This guide covers all available hooks, their categories, implementation patterns, and impact on your store.
+FastStore provides React hooks that give you access to built-in store features and state management, so you can build customized storefronts faster. This guide covers all available hooks, their categories, implementation patterns, and impact on your store.
 
-FastStore hooks are reusable React functions that provide access to FastStore's built-in features and state management. They follow React's hooks conventions and allow you to:
+FastStore hooks let you:
 
-- **Access store state**: Retrieve and manage cart, session, and UI state
-- **Implement analytics**: Track user behavior with GA4-compatible events
-- **Build interactive UI**: Create carousels, modals, search interfaces, and more
-- **Enhance accessibility**: Implement focus management, keyboard navigation, and ARIA attributes
-- **Optimize performance**: Lazy-load data, prefetch resources, and manage rendering
+- **Access store state**: Retrieve and manage cart, session, and UI state.
+- **Implement analytics**: Track user behavior with GA4-compatible events.
+- **Build interactive user interface (UI)**: Create carousels, modals, search interfaces, and more.
+- **Enhance accessibility**: Implement focus management, keyboard navigation, and ARIA attributes.
+- **Optimize performance**: Lazy-load data, prefetch resources, and manage rendering.
 
 ## Benefits of using FastStore hooks
 
@@ -45,23 +45,23 @@ FastStore hooks are organized into the following categories:
 | Hook | Description | Use cases |
 |------|-------------|-------------|
 | `UIProvider` | Context provider that manages global UI state for cart sidebar, modals, navigation, filters, toasts, popovers, and region selection. | Wrap your application root to enable UI state management. Required by other UI hooks. |
-| `useUI` | Access global UI state and actions managed by UIProvider. | Control cart sidebar, modals, navigation menu, filters, toasts, popovers, and region selection from any component. |
-| `useSearch` | Manages search interface state within SearchProvider context. | Building custom search components, managing search input state, implementing search suggestions. |
+| `useUI` | Access global UI state and actions managed by `UIProvider`. | Control cart sidebar, modals, navigation menu, filters, toasts, popovers, and region selection from any component. |
+| `useSearch` | Manages search interface state within `SearchProvider` context. | Building custom search components, managing search input state, implementing search suggestions. |
 | `useSlider` | Manages carousel/slider state including current page, navigation, and swipe gestures. | Creating product carousels, image galleries, testimonial sliders, or any multi-item navigation component. |
 | `useSlideVisibility` | Determines visibility state for slider items based on current index. | Lazy-loading carousel images, applying visibility-based animations, optimizing render performance. |
 | `useOnClickOutside` | Detects clicks outside a referenced element and triggers a callback. | Closing modals when clicking backdrop, dismissing dropdowns, hiding popovers on outside interaction. |
 | `useTrapFocus` | Traps keyboard focus within a container element for accessibility. | Modal dialogs, slide-out panels, any overlay that should constrain focus for keyboard navigation. |
 | `useScrollDirection` | Detects scroll direction (up/down) for responsive header behavior. | Hide/show sticky headers on scroll, trigger animations based on scroll direction, optimize mobile screen space. |
 | `useFadeEffect` | Creates progressive fade-in effect based on scroll position or distance. | Subtle entrance animations, progressive content reveal, enhancing visual hierarchy. |
-| `useSKUMatrix` | Manages SKU/variant selection logic within SKUMatrixProvider context. | Building custom variant selectors, product configuration interfaces, size/color pickers. |
-| `useProductComparison` | Manages product comparison list within ProductComparisonProvider. | Product comparison features, "Compare" buttons on product cards, comparison page implementation. |
+| `useSKUMatrix` | Manages SKU/variant selection logic within `SKUMatrixProvider` context. | Building custom variant selectors, product configuration interfaces, size/color pickers. |
+| `useProductComparison` | Manages product comparison list within `ProductComparisonProvider`. | Product comparison features, "Compare" buttons on product cards, comparison page implementation. |
 
 ### Analytics hooks
 
 | Hook | Description | Use cases |
 |------|-------------|-------------|
 | `usePageViewEvent` | Sends GA4 page view events automatically on route changes. | Track page navigation, monitor user journey, required for GA4 analytics dashboards. |
-| `useViewItemListEvent` | Sends GA4 product list impression events for PLP/search results. | Product listing pages, search results, category pages, recommendation carousels to track product impressions. |
+| `useViewItemListEvent` | Sends GA4 product list impression events for Product Listing Page (PLP)/search results. | Product listing pages, search results, category pages, recommendation carousels to track product impressions. |
 
 ### Experimental hooks (unstable)
 
