@@ -8,7 +8,7 @@ createdAt: "2026-05-27T00:00:00.000Z"
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
-When using [VTEX Sales App Extensibility](link-placeholder), you may need to present data to the user, whether it’s data from the Sales App flow itself, VTEX APIs, or third-party APIs.
+When [creating a Sales App extension](https://developers.vtex.com/docs/guides/creating-sales-app-extensions), you may need to present data to the user, whether it's from the Sales App flow, VTEX APIs, or third-party APIs.
 
 In extension points, there are two ways to interact with data:
 
