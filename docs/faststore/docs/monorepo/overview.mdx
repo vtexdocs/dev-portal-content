@@ -6,11 +6,11 @@ createdAt: "2026-03-12T14:47:26.933Z"
 updatedAt: "2026-05-12T14:47:17.858Z"
 ---
 
-**FastStore monorepo** is the unified repository model that centralizes the storefront development within VTEX.
+**FastStore monorepo** is the unified repository model that centralizes storefront development on VTEX.
 
 This architecture centralizes code, dependencies, and configuration for multiple storefronts in a single repository, enabling consistent customization, streamlined collaboration, and efficient code reuse across projects.
 
-The storefront is organized into modules, which are sets of pages that comprise the storefront. Each module represents a primary functional area of the ecommerce storefront experience within VTEX. We support three modules:
+The storefront is organized into modules, which are sets of pages that comprise the storefront. Each module represents a primary functional area of the ecommerce storefront experience on VTEX. We support three modules:
 
 * **Product Discovery Experience:** Covers the main customer-facing browsing flows, such as homepage, product listing pages (PLPs), search, product detail pages (PDPs), and custom content pages. It enables buyers to efficiently explore and discover products.
 * **Checkout:** Handles the purchase and payment process and provides customization for checkout logic, UI, and integration points to ensure a seamless buying experience.
@@ -28,7 +28,7 @@ For production deployments, the `faststore.json` file guides the deployment proc
 
 ### `faststore.json` file
 
-The root of the `faststore.json` object contains a `stores` key. Inside `stores`, each key should be an account name.
+The root of the `faststore.json` object contains a `stores` key. In `stores`, each key should be an account name.
 
 Each account object has at least one of the following keys: `discovery`, `checkout`, and `sales-app`. Each of these keys maps to a module configuration object with the following fields:
 
@@ -74,7 +74,7 @@ To set up your monorepo, run `@vtex/fsp-cli` to generate the required monorepo c
 2. Navigate to your monorepo project folder.
 3. Run `npx @vtex/fsp-cli init --from-discovery` to initialize your FastStore monorepo.
 4. Run `yarn install` to install and update the project dependencies.
-5. Open your FastStore monorepo project in any code editor of your choice and check that it's working.
+5. Open your FastStore monorepo project in a code editor and check that it's working.
 6. Commit your changes and push them to the repository.
 
 If you encounter errors during the process, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
