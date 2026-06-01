@@ -32,9 +32,9 @@ QuickOrder in a B2B context supports two interaction patterns:
 
  ![quick-order-sku-matrix-right-sidebar](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-sku-matrix___79ff33859a20bd179905ac6298541d2b.png)
 
-### Instructions
+## Instructions
 
-#### Step 1 - Override the `SearchProductItem` component
+### Step 1 - Override the `SearchProductItem` component
 
 1. In your FastStore project, navigate to `src/components/overrides` and create a `SearchProductItem.tsx` file.
 2. Add the following code to the file:
@@ -74,7 +74,7 @@ QuickOrder in a B2B context supports two interaction patterns:
 3. Open the terminal and run `yarn dev` to sync the changes locally.
 4. Access the local development URL of your store to check if the search results now display a quantity selector and an add-to-cart button next to each product.
 
-#### Step 2 - Enable the SKU Matrix sidebar for bulk variant selection
+### Step 2 - Enable the SKU Matrix sidebar for bulk variant selection
 
 For products with multiple SKUs, you can extend QuickOrder with the **SKU Matrix** sidebar, which lets buyers choose variants and quantities in a single interaction.
 >⚠️ The SKU Matrix sidebar (`__experimentalSKUMatrixSidebar`) is an experimental feature. Its API and behavior may change in future releases.
@@ -139,7 +139,7 @@ For products with multiple SKUs, you can extend QuickOrder with the **SKU Matrix
 3. Run `yarn dev` to apply the changes locally.
 4. Do a search and click the add-to-cart button on a product with multiple SKUs. The SKU Matrix panel should open.
 
-#### Step 3 - Promote your changes
+### Step 3 - Promote your changes
 
 After testing locally, follow these steps to deploy the changes to production:
 
