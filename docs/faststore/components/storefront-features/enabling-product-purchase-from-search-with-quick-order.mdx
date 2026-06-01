@@ -2,7 +2,7 @@
 title: "Enabling product purchase from search with QuickOrder"
 excerpt: "This feature allows customers to add products directly to their cart from search results, simplifying the purchase process."
 ---
-
+ 
 **QuickOrder** is a feature that allows customers to add products directly to their cart from search results, simplifying the purchase process. It reduces the number of steps required to complete a purchase, making it especially useful for B2B stores that involve bulk and frequent orders.
 QuickOrder can help in the following scenarios:
 
@@ -26,11 +26,11 @@ QuickOrder in a B2B context supports two interaction patterns:
 
 - **Simple quantity input**: The buyer sets the desired quantity next to each search result and adds it to the cart directly.
 
-![quick-order-quantity-selector](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-b2b-search-results___2e7fec0b94420c3014a48c1fec6ce813.png)
-
+ ![quick-order-quantity-selector](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-b2b-search-results___2e7fec0b94420c3014a48c1fec6ce813.png)
+  
 - **SKU Matrix (bulk variant selection)**: For products with multiple variants (example: sizes, colors), clicking the add-to-cart button opens a sidebar panel where the buyer can select combinations and quantities across all SKUs at once, then add everything to the cart in a single action.
 
-![quick-order-sku-matrix-right-sidebar](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-sku-matrix___79ff33859a20bd179905ac6298541d2b.png)
+ ![quick-order-sku-matrix-right-sidebar](https://vtexhelp.vtexassets.com/assets/docs/src/quickorder-sku-matrix___79ff33859a20bd179905ac6298541d2b.png)
 
 ### Instructions
 
@@ -39,35 +39,35 @@ QuickOrder in a B2B context supports two interaction patterns:
 1. In your FastStore project, navigate to `src/components/overrides` and create a `SearchProductItem.tsx` file.
 2. Add the following code to the file:
 
-   ```tsx
-   import { SectionOverride } from "@faststore/core";
-   import { SearchProductItemContent_unstable } from "@faststore/core/experimental";
+    ```tsx
+    import { SectionOverride } from "@faststore/core";
+    import { SearchProductItemContent_unstable } from "@faststore/core/experimental";
+    
+    const SECTION = "SearchInput" as const;
+    
+    const override: SectionOverride = {
+      section: SECTION,
+      components: {
+        SearchProductItemContent: {
+          Component: (props) => (
+            <SearchProductItemContent_unstable
+              {...props}
+              quickOrderSettings={{
+                quantitySelector: {
+                  maxQuantity: 999,
+                },
+                outOfStockLabel: "Out of stock",
+              }}
+            />
+          ),
+        },
+      },
+    };
+    
+    export { override };
+    ```
 
-   const SECTION = "SearchInput" as const;
-
-   const override: SectionOverride = {
-     section: SECTION,
-     components: {
-       SearchProductItemContent: {
-         Component: (props) => (
-           <SearchProductItemContent_unstable
-             {...props}
-             quickOrderSettings={{
-               quantitySelector: {
-                 maxQuantity: 999,
-               },
-               outOfStockLabel: "Out of stock",
-             }}
-           />
-         ),
-       },
-     },
-   };
-
-   export { override };
-   ```
-
-   The code above overrides the `SearchProductItemContent` component to enable QuickOrder with the following settings:
+    The code above overrides the `SearchProductItemContent` component to enable QuickOrder with the following settings:
       - `maxQuantity`: Sets the upper limit for the quantity selector. Adjust this value to meet the requirements of your store.
       - `outOfStockLabel`: Defines the label displayed when a product is out of stock.
 
@@ -81,59 +81,60 @@ For products with multiple SKUs, you can extend QuickOrder with the **SKU Matrix
 
 1. In `src/components/overrides`, create a `Navbar.tsx` file and add the following:
 
+
     ```tsx
-   import { SectionOverride } from "@faststore/core";
+    import { SectionOverride } from "@faststore/core";
+    
+    const SECTION = "Navbar" as const;
+    
+    const override: SectionOverride = {
+      section: SECTION,
+      components: {
+        __experimentalSKUMatrixSidebar: {
+          Component: () => null,
+        },
+      },
+    };
+    
+    export { override };
+    ```
 
-   const SECTION = "Navbar" as const;
-
-   const override: SectionOverride = {
-     section: SECTION,
-     components: {
-       __experimentalSKUMatrixSidebar: {
-         Component: () => null,
-       },
-     },
-   };
-
-   export { override };
-   ```
-
-   The `__experimentalSKUMatrixSidebar` override registers the SKU selection sidebar in the Navbar. This allows buyers to view and select all available SKU combinations for a product from a drawer panel without leaving the search results page.
+    The `__experimentalSKUMatrixSidebar` override registers the SKU selection sidebar in the Navbar. This allows buyers to view and select all available SKU combinations for a product from a drawer panel without leaving the search results page.
 
 2. Update your `SearchProductItem.tsx` override to enable the SKU Matrix:
 
-   ```tsx
-   import { SectionOverride } from "@faststore/core";
-   import { SearchProductItemContent_unstable } from "@faststore/core/experimental";
+    ```tsx
+    import { SectionOverride } from "@faststore/core";
+    import { SearchProductItemContent_unstable } from "@faststore/core/experimental";
+    
+    const SECTION = "SearchInput" as const;
+    
+    const override: SectionOverride = {
+      section: SECTION,
+      components: {
+        SearchProductItemContent: {
+          Component: (props) => (
+            <SearchProductItemContent_unstable
+              {...props}
+              quickOrderSettings={{
+                skuMatrix: {
+                  enabled: true,
+                },
+                quantitySelector: {
+                  maxQuantity: 999,
+                },
+                outOfStockLabel: "Out of stock",
+              }}
+            />
+          ),
+        },
+      },
+    };
+    
+    export { override };
+    ```
 
-   const SECTION = "SearchInput" as const;
-
-   const override: SectionOverride = {
-     section: SECTION,
-     components: {
-       SearchProductItemContent: {
-         Component: (props) => (
-           <SearchProductItemContent_unstable
-             {...props}
-             quickOrderSettings={{
-               skuMatrix: {
-                 enabled: true,
-               },
-               quantitySelector: {
-                 maxQuantity: 999,
-               },
-               outOfStockLabel: "Out of stock",
-             }}
-           />
-         ),
-       },
-     },
-   };
-
-   export { override };
-   ```
-
-   With `skuMatrix.enabled` set to `true`, the add-to-cart button in search results opens the SKU Matrix sidebar for products with multiple variants, allowing buyers to pick variant combinations and quantities before adding everything to the cart.
+    With `skuMatrix.enabled` set to `true`, the add-to-cart button in search results opens the SKU Matrix sidebar for products with multiple variants, allowing buyers to pick variant combinations and quantities before adding everything to the cart.
 
 3. Run `yarn dev` to apply the changes locally.
 4. Do a search and click the add-to-cart button on a product with multiple SKUs. The SKU Matrix panel should open.
