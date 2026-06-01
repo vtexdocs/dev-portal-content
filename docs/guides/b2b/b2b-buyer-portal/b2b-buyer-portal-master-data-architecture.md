@@ -9,7 +9,7 @@ excerpt: "Map the Master Data entities and logical relationships that underpin B
 
 > ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
 
-**B2B Buyer Portal** persists buyer organization data across several [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) entities. Understanding how those entities relate to each other is essential for building reliable integrations, particularly when orchestrating multi-step operations such as contract creation, address provisioning, or user onboarding.
+**[B2B Buyer Portal](https://help.vtex.com/docs/tutorials/b2b-buyer-portal)** persists buyer organization data across several [Master Data](https://help.vtex.com/en/docs/tutorials/master-data) entities. Understanding how those entities relate to each other is essential for building reliable integrations, particularly when orchestrating multi-step operations such as contract creation, address provisioning, or user onboarding.
 
 This guide maps all seven Master Data entities used by B2B Buyer Portal, their fields, logical relationships, and common integration patterns. For the full operation set, parameters, and payload schemas, see the API reference linked in each section.
 
@@ -34,7 +34,7 @@ B2B Buyer Portal uses seven Master Data entities, each covering a distinct domai
 
 ## Entity relationships
 
-The diagram shows logical references between entities. Edge labels are the field names used as foreign keys in the child record. 
+The diagram shows logical references between entities. Edge labels are the field names used as foreign keys in the child record.
 
 [`OrgUnit`](https://developers.vtex.com/docs/guides/b2b-buyer-portal-integration-overview#organizational-units-and-scopes) and storefront [`User`](https://developers.vtex.com/docs/guides/b2b-buyer-portal-integration-overview#user-provisioning) records are not Master Data entities. They appear here because several Master Data entities reference organizational unit IDs or VTEX user IDs.
 
@@ -76,9 +76,9 @@ Use this table when orchestrating multi-step flows. It lists only the fields tha
 
 ## Common integration patterns
 
-- **Contract-first provisioning:** Create or resolve a contract (`CL`) before addresses, custom fields, or recipients. Child records reference `CL.id` through `userId`, `contractId`, or `profileId`.
-- **Address and destination setup:** Create addresses (`AD`), then optionally attach recipients (`contact_information`) and locations (`customFieldValues` through `auxId` and a location-type custom field setting).
-- **User onboarding:** Create the storefront user in VTEX ID, assign [organizational units and roles](https://developers.vtex.com/docs/guides/b2b-user-provisioning), then persist buyer data in `shopper` linked by `userId`.
+- **Contract-first provisioning:** Involves creating or resolving a contract (`CL`) before addresses, custom fields, or recipients. Child records reference `CL.id` through `userId`, `contractId`, or `profileId`.
+- **Address and destination setup:** Consists of creating addresses (`AD`), then optionally attaching recipients (`contact_information`) and locations (`customFieldValues` through `auxId` and a location-type custom field setting).
+- **User onboarding:** Requires creating the storefront user in VTEX ID, assigning [organizational units and roles](https://developers.vtex.com/docs/guides/b2b-user-provisioning), then persisting buyer data in `shopper` linked by `userId`.
 
 ## Entities by domain
 
