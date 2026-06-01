@@ -25,7 +25,7 @@ From an architectural perspective, the main actors are:
 At a high level, the default values integration works in two phases: configuration and consumption.
 
 1. **Configuration phase**  
-     
+
    - An org admin application identifies the organizational unit, for example, an org unit, contract, or user scope  
    - The application decides which entities should be selected by default  
      - Shipping and billing addresses  
@@ -36,10 +36,8 @@ At a high level, the default values integration works in two phases: configurati
        - entity: the type of entity, for example, address/shipping, creditCard  
        - entityValueId: the ID of the chosen default value
 
-   
-
 2. **Consumption phase**  
-     
+
    - At login, the shopper-session app fetches the default values for the shopper’s context and resolves the final default per field based on priority.  
    - The shopper-session app writes the resolved defaults to the shopper session.
 
@@ -47,22 +45,22 @@ At a high level, the default values integration works in two phases: configurati
 
 ### When to use this flow
 
-* You must define or change default addresses and custom fields for a given organizational unit.  
-* You are building a B2B admin experience that allows buyer administrators to manage checkout defaults.  
-* You are migrating default values from an external system into VTEX Dynamic Storage.
+- You must define or change default addresses and custom fields for a given organizational unit.  
+- You are building a B2B admin experience that allows buyer administrators to manage checkout defaults.  
+- You are migrating default values from an external system into VTEX Dynamic Storage.
 
 ### Main endpoints involved
 
-* [POST Create default values](http://replace-by-correct-link.create-default-values-document.com/post/api/dataentities/defaultValues/documents)  
-* [PATCH Update default values](http://replace-by-correct-link.update-default-values-document.com/patch/api/dataentities/defaultValues/documents/-unitId-)
+- [POST Create default values](https://developers.vtex.com/docs/api-reference/default-values-api#post-/api/dataentities/defaultValues/documents)  
+- [PATCH Update default values](https://developers.vtex.com/docs/api-reference/default-values-api#patch-/api/dataentities/defaultValues/documents/-unitId-)
 
 ### Step-by-step
 
-* Identify the organizational unit and define the id value used to store defaults  
-* Collect the default entity IDs for addresses, credit cards, and custom fields  
-* Build the request body using the DefaultValuesRequest schema  
-* Create or update the document using the [Create default values](http://replace-by-correct-link.create-default-values-document.com/post/api/dataentities/defaultValues/documents) or [Update default values](http://replace-by-correct-link.update-default-values-document.com/patch/api/dataentities/defaultValues/documents/-unitId-) endpoints  
-* Validate the output and update any dependent session logic
+- Identify the organizational unit and define the id value used to store defaults  
+- Collect the default entity IDs for addresses, credit cards, and custom fields  
+- Build the request body using the DefaultValuesRequest schema  
+- Create or update the document using the [Create default values](https://developers.vtex.com/docs/api-reference/default-values-api#post-/api/dataentities/defaultValues/documents) or [Update default values](https://developers.vtex.com/docs/api-reference/default-values-api#patch-/api/dataentities/defaultValues/documents/-unitId-) endpoints  
+- Validate the output and update any dependent session logic
 
 ### Request example \- Create default values document
 
@@ -105,12 +103,12 @@ Use this flow when:
 
 ### Main endpoint
 
-- [DELETE Delete default values](http://replace-by-correct-link.delete-default-values-document.com/delete/api/dataentities/defaultValues/documents/-unitId-)
+- [DELETE Delete default values](https://developers.vtex.com/docs/api-reference/default-values-api#delete-/api/dataentities/defaultValues/documents/-unitId-)
 
 ### Step-by-step
 
 - Identify the unit to clean up  
-- Call the [Delete default values](http://replace-by-correct-link.delete-default-values-document.com/delete/api/dataentities/defaultValues/documents/-unitId-) endpoint to remove the document  
+- Call the [Delete default values](https://developers.vtex.com/docs/api-reference/default-values-api#delete-/api/dataentities/defaultValues/documents/-unitId-) endpoint to remove the document  
 - Coordinate with session and checkout components so defaults are no longer applied
 
 ### Request example \- Delete Default Values
@@ -128,7 +126,7 @@ The following License Manager resources are required depending on the operation:
 
 | Endpoint | Required resources (any of) |
 | :---- | :---- |
-| **POST Create default values** | - Insert or update document not remove<br>- Full access to all documents<br>- Master Data administrator |
-| **GET Get default values** | - Read-only documents<br>- Insert or update document, not remove<br>- Full access to all documents<br>- Master Data administrator |
-| **PATCH Update default values** | - Insert or update document, not remove<br>- Full access to all documents<br>- Master Data administrator |
-| **DELETE Delete default values** | - Full access to all documents<br>- Master Data administrator |
+| [POST Create default values](https://developers.vtex.com/docs/api-reference/default-values-api#post-/api/dataentities/defaultValues/documents) | - Insert or update document not remove<br>- Full access to all documents<br>- Master Data administrator |
+| [GET Get default values](https://developers.vtex.com/docs/api-reference/default-values-api#get-/api/dataentities/defaultValues/documents/-unitId-) | - Read-only documents<br>- Insert or update document, not remove<br>- Full access to all documents<br>- Master Data administrator |
+| [PATCH Update default values](https://developers.vtex.com/docs/api-reference/default-values-api#patch-/api/dataentities/defaultValues/documents/-unitId-) | - Insert or update document, not remove<br>- Full access to all documents<br>- Master Data administrator |
+| [DELETE Delete default values](https://developers.vtex.com/docs/api-reference/default-values-api#delete-/api/dataentities/defaultValues/documents/-unitId-) | - Full access to all documents<br>- Master Data administrator |

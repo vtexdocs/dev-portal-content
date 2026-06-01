@@ -140,8 +140,7 @@ Storefront integration capabilities determine which frontend frameworks and tech
 | **Store Framework** | ❌ | ❌ |
 | **FastStore v1 and v2** | ✅ | ❌ |
 | **FastStore v3** | ✅ | ✅ |
-
-<!-- TODO: Once FastStore v4 is available, add a row for it in this table. -->
+| **FastStore v4** | ❌ | ✅ |
 
 ## Development tools and permissions
 
