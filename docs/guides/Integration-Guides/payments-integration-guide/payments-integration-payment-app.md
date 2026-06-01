@@ -49,7 +49,6 @@ The numbered steps below correspond to the diagram. Steps 1–4 are common to ev
      3. The connector responds with a **`paymentAppData`** field containing:
         - **`appName`**: The Payment App identifier in the format `"{vendor}.{appName}"`.
         - **`payload`**: The data required to complete the transaction (for example, the Pix QR code content).
-
         The Gateway forwards this response through the Checkout API back to the Checkout UI.
 6. The Checkout UI instantiates the Payment App identified by `paymentAppData.appName` and injects `paymentAppData.payload` into the app's `appPayload` property. The app then executes its logic, for example, rendering a 3DS2 authentication challenge, displaying a Pix QR code, or simulating a redirect within the Payment App frame. At this point, the transaction enters the **Authorizing** state. Learn more in [Transaction flow in Payments](https://help.vtex.com/en/tutorial/transaction-flow-in-payments--Er2oWmqPIWWyeIy4IoEoQ).
 7. When the user completes the interaction, the Payment App closes and triggers transaction validation. The Checkout UI [queries the transaction status](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/transactions/-transactionId-) from the Gateway API through the Checkout API:
@@ -69,6 +68,7 @@ This section walks through setting up the development environment, cloning the b
 ### Step 2: Developing your Payment App
 
 Make the following changes to the boilerplate to create your own app. You also need to add the business logic of your payment system.
+
 > ⚠️ Before you start editing the Payment App, you must have [Git](https://git-scm.com/downloads) installed on your computer.
 
 1. Using your terminal, clone the repository that contains a Payment App model to your local files by running:
@@ -78,7 +78,6 @@ git clone https://github.com/vtex-apps/example-payment-authorization-app.git
 ```
 
 2. Open the cloned project in a code editor.
-
 3. Open `manifest.json` and update the fields for your scenario. Key requirements:
    - **`name`**: Must match the `appName` property of `paymentAppData` in the connector's [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) response body.
    - **`billingOptions`**: Set `type` to `free`. See [Billing Options](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
@@ -108,7 +107,6 @@ Follow the steps below to display the Payment App on the checkout screen and tes
 1. Verify that your connector is installed and configured with the Payment App and payment method you want to test. The connector must return the `paymentAppData` field in the [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) response body with the following properties:
    - `"appName": "{vendor}.{appName}"`
    - `"payload": "{payload information}"`
-
    If the connector is not installed yet, contact the [VTEX Support Team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support) for help with installation. See [Implementing a Payment Provider](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider) for endpoint implementation details.
 2. Select the payment condition associated with your connector in the checkout and finish the purchase to test the flow.
 
