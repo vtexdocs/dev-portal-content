@@ -1,9 +1,10 @@
 ---
 title: "PSE Payment Method"
 slug: "pse-payment-method"
-hidden: true
+hidden: false
 createdAt: "2022-05-18T19:17:21.588Z"
 updatedAt: "2022-09-01T19:53:36.514Z"
+excerpt: "Learn how payment providers can offer the PSE payment method in VTEX stores."
 ---
 This is a guide intended for payment providers that want to offer [PSE payment method](https://help.vtex.com/en/tutorial/setting-up-payments-with-pse--7dRChubn7TqdEyWrHQEQp6) in a VTEX store. As part of the order transaction flow, it is necessary to inform the connector that will process the payment which bank was selected by the customer.
 
