@@ -1,6 +1,6 @@
 ---
 title: "SKUMatrix"
-excerpt: "Displays a table of product variations with quantity selectors for bulk purchasing."
+excerpt: "Displays a table of product variations with quantity selectors for bulk purchases."
 components:
   - SKUMatrix.tsx
   - SKUMatrixTrigger.tsx
@@ -143,7 +143,7 @@ Add the sidebar styling tokens and layout rules to your theme stylesheet:
 @import "@faststore/ui/src/components/organisms/SKUMatrix/styles.scss";
 ```
 
-Follow the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) instructions. Additionally, the quantity selector, badges, and table components also rely on their respective partials.
+Follow the [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles) instructions. Additionally, the quantity selector, badges, and table components rely on their respective partials.
 
 ---
 
@@ -430,9 +430,9 @@ Use these selectors to customize styles or attach test logic:
 
 ## Best practices
 
-### ✅ Do's
+### ✅ Dos
 
-- Use concise variation labels (e.g., "Black - 42") to ensure the table remains scannable on partial-width slide-overs.
+- Use concise variation labels (example: "Black - 42") to ensure the table remains scannable on partial-width slide-overs.
 - Keep price and availability in sync with your store OMS; display a toast message when quantity adjustments are coerced.
 - Localize both column headers and toast messages for multinational catalogs.
 
