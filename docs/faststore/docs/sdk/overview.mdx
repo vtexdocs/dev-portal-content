@@ -18,13 +18,15 @@ The SDK is organized into four modules with specific properties and behaviors. T
 
 The Cart module controls the state of the shopping cart data structure in the shopper's browser. You can use it to add items to the cart, remove items, and clear the cart, among other tasks. To learn more about this module, see the [Cart](https://developers.vtex.com/docs/guides/faststore/cart-overview) guide.
 
-> ℹ️ Learn more about validating the cart in the shopper browser against the information in the platform with [FastStore API mutations](https://developers.vtex.com/docs/guides/faststore/schema-mutations#cart).
+For standard cart management in FastStore projects, the recommended approach is to use the [`useCart_unstable`](https://developers.vtex.com/docs/guides/faststore/cart-use-cart) hook and the `cartStore_unstable` store. See [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components) for the full list of available hooks. The `@faststore/sdk` Cart module is intended for cases where you need to implement your own custom state manager.
+
+> ℹ️ Learn more about validating the cart in the shopper's browser against the information in the platform with [FastStore API mutations](https://developers.vtex.com/docs/guides/faststore/schema-mutations#cart).
 
 ## Session
 
-The Session module manages the state of session information in the shopper browser. This includes currency, channel, localization, and shopper information. To learn more about this module, see the [Session](https://developers.vtex.com/docs/guides/faststore/sdk-session) data structure and usage.
+The Session module manages the state of session information in the shopper's browser. This includes currency, channel, localization, and shopper information. To learn more about this module, see the [Session](https://developers.vtex.com/docs/guides/faststore/sdk-session) data structure and usage.
 
-> ℹ️ Learn more about validating the cart in the shopper browser against the information in the platform with [FastStore API mutations](https://developers.vtex.com/docs/guides/faststore/schema-mutations#session).
+> ℹ️ Learn more about validating the cart in the shopper's browser against the information in the platform with [FastStore API mutations](https://developers.vtex.com/docs/guides/faststore/schema-mutations#session).
 
 ## Search
 
@@ -38,7 +40,7 @@ The Analytics module helps you create a simple, extensive event system to feed y
 
 ## Getting started with the FastStore SDK
 
-Install [`@faststore/sdk`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) as a dependency of your FastStore project via the command line:
+Install [`@faststore/sdk`](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#packagejson) as a dependency of your FastStore project via the command line:
 
 <CH.Code>
 
@@ -60,7 +62,7 @@ The following example demonstrates how to manage a shopping cart using the `useC
 
 ```tsx
 import React from 'react'
-import { useCart } from '@faststore/sdk'
+import { useCart_unstable as useCart } from '@faststore/core/experimental'
 
 const NewComponent = () => {
   const { addItem, items } = useCart()

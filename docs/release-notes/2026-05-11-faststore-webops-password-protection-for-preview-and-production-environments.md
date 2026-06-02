@@ -4,13 +4,14 @@ slug: "2026-05-11-faststore-webops-password-protection-for-preview-and-productio
 hidden: false
 type: "added"
 createdAt: "2026-05-11T15:00:00.000Z"
+updatedAt: "2026-05-15T20:19:39.310Z"
 excerpt: "WebOps now allows you to restrict access to preview environments and production domains with username and password authentication."
 tags:
   - FastStore
   - WebOps
 ---
 
-> ℹ️ Password protection is in closed beta, which means that only selected customers can access it. If you're interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+> ℹ️ Password protection is in closed beta, which means that only selected customers can access it. If you're interested in implementing it in the future, contact our [Support](https://support.vtex.com/hc/en-us) team.
 
 [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) now includes password protection, allowing you to restrict access to your preview environments and the production domain using basic authentication. This feature enables merchants to protect internal testing environments, staging builds, and production domains from unauthorized access during development or initial launch phases.
 
@@ -31,8 +32,8 @@ This feature enhances security by allowing you to:
 
 To enable password protection:
 
-1. Go to your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) and navigate to the **Settings** tab.
-2. Locate the **Password protection** section.
+1. Access your [FastStore WebOps dashboard](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) and navigate to the **Settings** tab.
+2. Find the **Password protection** section.
 3. Enable password protection for preview environments or your production domain by toggling the corresponding switch.
 4. Enter a **Password** that users will need to authenticate with.
 5. Save your settings.
