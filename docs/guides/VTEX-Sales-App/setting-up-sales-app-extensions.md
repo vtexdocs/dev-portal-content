@@ -4,6 +4,7 @@ slug: "setting-up-sales-app-extensions"
 excerpt: "Learn how to set up extensions for Sales App in your store."
 hidden: false
 createdAt: "2026-05-28T00:00:00.000Z"
+updatedAt: "2026-06-02T00:00:00.000Z"
 seeAlso:
   - "/docs/guides/exploring-sales-app-extensions"
   - "/docs/guides/creating-sales-app-extensions"
