@@ -43,7 +43,7 @@ The actions that can be performed via API are the following:
 
 As a VTEX marketplace, your storefront is where approved seller offers are displayed and where shoppers complete checkout. After integrating sellers and cataloging offers, you can customize how products and seller information appear to customers.
 
-The customization approach depends on your storefront technology. See [Getting started with storefront solutions](https://developers.vtex.com/docs/guides/getting-started-with-storefront-solutions) to compare FastStore, Store Framework, and Legacy CMS Portal, including marketplace support for each option.
+The customization approach depends on your storefront technology. See [Getting started with storefront solutions](https://developers.vtex.com/docs/guides/getting-started-with-storefront-solutions) to compare FastStore, Store Framework, and CMS Portal (Legacy), including marketplace support for each option.
 
 ### Store Framework
 
@@ -68,6 +68,8 @@ The Marketplace Protocol is a set of API requests and definitions to help you in
 - **External marketplace protocol:** If you are an external marketplace that wants to integrate with a VTEX seller, see [External Marketplace Integration Guide](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide) to learn how to develop a custom connector to integrate with the architecture and catalog of VTEX sellers.
 
 ### Phase overview
+
+After choosing the appropriate integration model, the marketplace workflow can be broken down into four main phases.
 
 | Phase | Section | Main actors |
 | --- | --- | --- |
