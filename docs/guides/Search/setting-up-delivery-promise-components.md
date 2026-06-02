@@ -237,7 +237,7 @@ The shipping method facet appears only when `showShippingMethodFacet` is enabled
 
 ### Step 4 - Displaying availability badges on product shelves
 
-To display availability badges on product cards in shelves and search results, configure the [Availability Badges](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components/AvailabilityBadges) component as follows. These badges show delivery and pickup availability for each product based on the buyer's location.
+To display availability badges on product cards on shelves and search results, configure the [Availability Badges](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components/AvailabilityBadges) component as follows. These badges show delivery and pickup availability for each product based on the buyer's location.
 
 Since you have already added the `delivery-promise-components` app to your theme dependencies in the `manifest.json`, as described in the [step 2](#step-2---displaying-a-location-selector), declare the `availability-badges` block as a child in your product summary component.
 
