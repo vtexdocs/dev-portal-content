@@ -4,7 +4,7 @@ slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
-updatedAt: "2026-04-07T12:00:00.000Z"
+updatedAt: "2026-06-02T17:03:26.293Z"
 seeAlso:
  - "/docs/apps/vtex.delivery-promise-components"
 ---
@@ -235,3 +235,26 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
 
 The shipping method facet appears only when `showShippingMethodFacet` is enabled. The options listed match `availableShippingValues` when you set it, or fall back to the default set when the prop is not provided. Other Delivery Promise-related facets continue to behave as usual.
 
+### Step 4 - Displaying availability badges on product shelves
+
+To display availability badges on product cards in shelves and search results, configure the [Availability Badges](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components/AvailabilityBadges) component as follows. These badges show delivery and pickup availability for each product based on the buyer's location.
+
+Since you have already added the `delivery-promise-components` app to your theme dependencies in the `manifest.json`, as described in the [step 2](#step-2---displaying-a-location-selector), declare the `availability-badges` block as a child in your product summary component.
+
+**Example**
+
+```json mark=6
+"product-summary.shelf": {
+  "children": [
+    "product-summary-image",
+    "product-summary-name",
+    "product-summary-price",
+    "availability-badges", // Add this block
+    "add-to-cart-button"
+  ]
+}
+```
+
+The `availability-badges` block automatically displays badges when Delivery Promise data is available, helping shoppers quickly identify which products can be shipped to their address or picked up at nearby stores.
+
+> ℹ️ The badges are hidden when no postal code is set or when Delivery Promise data is unavailable for the product. This ensures a clean interface when the information cannot be determined.
