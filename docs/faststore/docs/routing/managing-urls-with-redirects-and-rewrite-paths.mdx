@@ -1,11 +1,12 @@
 ---
 title: "Managing URLs with redirects and rewrite paths"
 excerpt: "Learn how to configure redirects and rewrites in your FastStore project to manage user access to your content."
+updatedAt: "2026-06-02T14:38:58.465Z"
 ---
 
-In this guide, you will learn how to configure redirects and rewrites in your FastStore project. These tools help you manage user access to your content by automatically directing users from one URL to another or mapping custom URLs to existing page templates.
+In this guide, you'll learn how to configure redirects and rewrites in your FastStore project. These tools help you manage user access to your content by automatically directing users from one URL to another or mapping custom URLs to existing page templates.
 
-Redirects automatically take users from one URL to another. They are useful when pages have been moved, renamed, or removed. For example, if a page has been moved or renamed, the redirect ensures the user is taken to the new location.
+Redirects automatically take users from one URL to another. They are useful when pages have been moved, renamed, or removed. For example, if a page has been moved or renamed, the redirect takes users to the new location.
 
 Rewrites allow you to map custom URLs to existing page templates without changing the URL in the browser. This is useful when you want to hide complex or dynamic URL structures from users while maintaining clean and SEO-friendly URLs. For example, you can map a custom URL, such as `/sale`, to an existing Product Listing Page (PLP) template.
 
@@ -22,7 +23,7 @@ Before configuring redirects, it's important to understand how they behave in Fa
 
 ### Native routes take precedence
 
-FastStore prioritizes native pages (e.g., product, collection, and brand pages) over redirect rules. If a redirect's source path matches a native page, the redirect will be ignored. For example, if `/fall-sale` is a live native collection page, a redirect rule from `/fall-sale` to `/fall` will not work. The collection page will render instead. To make the redirect work, you must unpublish or disable the native page (`/fall-sale`). 
+FastStore prioritizes native pages (for example, product, collection, and brand pages) over redirect rules. If a redirect's source path matches a native page, the redirect will be ignored. For example, if `/fall-sale` is a live native collection page, a redirect rule from `/fall-sale` to `/fall` will not work. The collection page will render instead. To make the redirect work, you must unpublish or disable the native page (`/fall-sale`). 
 To disable a collection page, follow these steps:
 
 1. Access the Admin and go to **Catalog > Collections**. 
@@ -46,10 +47,6 @@ If the source path of this native page is published by the Headless CMS, you mus
 
 >ℹ️ For more information on how to manage a page in the Headless CMS, see the [Managing pages in the Headless CMS](https://newhelp.vtex.com/en/docs/tutorials/managing-pages) guides.
 
-### Query strings are not forwarded by default
-
-Query string parameters (e.g., `?key=value`) are not forwarded in redirects by default. For example, a rule `/from` → `/to` will redirect `/from?key=value` to `/to`, dropping the `?key=value` portion.
-
 ## Creating redirects
 
 FastStore allows you to configure redirects through the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
@@ -68,7 +65,7 @@ FastStore allows you to configure redirects through the [`discovery.config.js`](
     },
     ```
 
-    >ℹ️ The `redirects` function requires the `redirects.json` file, which you will create in the next step. This file contains the redirect definitions.
+    >ℹ️ The `redirects` function requires the `redirects.json` file, which you'll create in the next step. This file contains the redirect definitions.
 
 3. Go to the `src` folder, create the `redirects.json` file, and add the following:
 
@@ -91,7 +88,7 @@ FastStore allows you to configure redirects through the [`discovery.config.js`](
     >ℹ️ For more information about each property, refer to the [Next.js](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects) documentation.
 
 4. Run `yarn dev` to start your project in development mode.
-5. Open a browser and go to the old URL (e.g., `/office`). If the redirect is set up correctly, you should be automatically redirected to the new URL (e.g., `/about`).
+5. Open a browser and go to the old URL (example: `/office`). If the redirect is set up correctly, you should be automatically redirected to the new URL (example: `/about`).
 
 ## (Beta) Enabling redirects using the `enableRedirects` flag
 
@@ -121,6 +118,8 @@ For projects requiring more than 1,024 redirects, you can enable the `enableRedi
 
 5. Run `yarn dev` to check for and address any errors before deploying this change to production.
 6. Create a new branch and open a pull request to deploy the changes made in the `discovery.config.js` file to production.
+
+>⚠️ After deploying this change, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request the CDN-side configuration required to forward query string parameters. Otherwise,  if you configure a redirect using rules such as `/from` → `/to`, a request to `from?key=value` will be redirected to `/to` rather than `/to?key=value`, so the query string parameter is not preserved.
 
 Once the change is live, you can manage the store's redirects in VTEX Admin by following the instructions in [Managing URL redirects](https://help.vtex.com/tutorial/managing-url-redirects--3UJuFrU8imSVWg134mkvJV).
 
