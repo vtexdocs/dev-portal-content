@@ -119,7 +119,7 @@ For projects requiring more than 1,024 redirects, you can enable the `enableRedi
 5. Run `yarn dev` to check for and address any errors before deploying this change to production.
 6. Create a new branch and open a pull request to deploy the changes made in the `discovery.config.js` file to production.
 
->⚠️ After deploying this change, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request the CDN-side configuration required to forward query string parameters. Otherwise,  if you configure a redirect using rules such as `/from` → `/to`, a request to `from?key=value` will be redirected to `/to` rather than `/to?key=value`, so the query string parameter is not preserved.
+> ⚠️ After deploying this change, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request the CDN-side configuration required to forward query string parameters. Otherwise, if you configure a redirect using rules such as `/from` → `/to`, a request to `from?key=value` will be redirected to `/to` rather than `/to?key=value`, so the query string parameter is not preserved.
 
 Once the change is live, you can manage the store's redirects in VTEX Admin by following the instructions in [Managing URL redirects](https://help.vtex.com/tutorial/managing-url-redirects--3UJuFrU8imSVWg134mkvJV).
 
