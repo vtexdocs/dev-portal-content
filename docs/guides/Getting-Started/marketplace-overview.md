@@ -47,18 +47,59 @@ The customization approach depends on your storefront technology. See [Getting s
 
 ### Store Framework
 
+With Store Framework, you customize the storefront by composing blocks exported by VTEX apps in your theme. For marketplace specific use cases, see [Displaying sellers and approved offers](#displaying-sellers-and-approved-offers).
+
 - [Store Framework](https://developers.vtex.com/docs/guides/store-framework)
+- [Seller Selector](https://developers.vtex.com/docs/guides/vtex-seller-selector)
 - [Using CSS handles for store customizations](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization)
 - [Working with Site Editor](https://developers.vtex.com/docs/guides/store-framework-working-with-site-editor)
 
 ### FastStore
 
+FastStore does not provide a native seller selector component. To display seller information or offers in a custom way, you can override existing components or create a new section to build the storefront content your marketplace needs.
+
 - [Overrides overview](https://developers.vtex.com/docs/guides/faststore/overrides-overview)
+- [Creating a new section](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section)
 - [Using themes overview](https://developers.vtex.com/docs/guides/faststore/using-themes-overview)
 
-### Checkout and seller display
+### Common marketplace storefront customizations
 
-To configure how sellers are selected and displayed during checkout, see [Checkout overview](https://developers.vtex.com/docs/guides/checkout-overview).
+Beyond the storefront technology guides above, there are marketplace-specific behaviors that affect what shoppers see, regardless of your storefront stack. These are driven by catalog and seller settings rather than by the theme alone, as described in the sections below.
+
+#### Displaying sellers and approved offers
+
+When more than one seller offers the same SKU, you can let shoppers compare offers and choose where to buy. In Store Framework, the [Seller Selector](https://developers.vtex.com/docs/guides/vtex-seller-selector) app renders the available sellers for a product, including price, shipping, and a buy button per seller.
+
+To enable it, add the `link-seller` block to your product page (`store.product`) template. It displays a link with the number of sellers for the product and opens the Seller Selector page:
+
+```json
+"flex-layout.col#right-col": {
+  "props": {
+    "preventVerticalStretch": true,
+    "rowGap": 0
+  },
+  "children": [
+    "product-name",
+    "link-seller",
+    "product-price#product-details",
+    "flex-layout.row#buy-button"
+  ]
+}
+```
+
+Keep in mind that an approved offer is only displayed in the storefront if the seller is mapped to the [Sales channel](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV) used by that store. If an offer is approved but does not appear in the storefront, the trade policy mapping is the first thing to check.
+
+#### Controlling price and availability before the shopper sets a location
+
+During navigation stages where the store does not yet know the shopper's location (such as the home page, category pages, and shelves), the storefront cannot evaluate every seller's delivery area. In this context, VTEX shows price and availability based only on the main seller and on comprehensive sellers.
+
+A seller is comprehensive when its `isBetterScope` property is set to `true`, which tells VTEX that its products can be shown in navigation contexts without a defined location. This behavior also applies in the cart until the shopper informs a delivery ZIP code.
+
+Set a seller as comprehensive only when its delivery area is relevant to most of your customer base. If you set a seller with restricted coverage as comprehensive, shoppers may see price and availability that do not apply to their region, and they will only find out after entering the ZIP code, hurting the experience.
+
+#### Seller selection at checkout
+
+When multiple sellers offer the same SKU, the [white label seller selection algorithm](https://help.vtex.com/en/tutorial/white-label-sellers-selection-algorithm--3MemNQ4pKkWCpMdzI27AHa) determines which seller fulfills the item, considering criteria such as price and delivery conditions for the shopper's address. To configure how sellers are selected and displayed during checkout, see [Checkout overview](https://developers.vtex.com/docs/guides/checkout-overview).
 
 ## Integrating External Marketplaces or External Sellers
 
