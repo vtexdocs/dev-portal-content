@@ -4,6 +4,7 @@ slug: "deploying-sales-app-extensions"
 hidden: false
 excerpt: "Learn how to make Sales App extensions publicly available."
 createdAt: "2026-05-28T00:00:00.000Z"
+updatedAt: "2026-06-02T00:00:00.000Z"
 seeAlso:
   - "/docs/guides/installing-webops-for-sales-app-extensions"
 ---
