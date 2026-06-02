@@ -4,6 +4,7 @@ slug: "installing-webops-for-sales-app-extensions"
 hidden: false
 excerpt: "Learn how to install WebOps and connect your repository to deploy Sales App extensions."
 createdAt: "2026-05-28T00:00:00.000Z"
+updatedAt: "2026-06-02T00:00:00.000Z"
 seeAlso:
  - "/docs/guides/deploying-sales-app-extensions"
 ---
