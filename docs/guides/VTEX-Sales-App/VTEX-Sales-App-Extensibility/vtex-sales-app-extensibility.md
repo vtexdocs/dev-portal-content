@@ -4,7 +4,7 @@ slug: "vtex-sales-app-extensibility"
 excerpt: "Learn about Sales App extensions, how to build and style them, and how to access the data layer."
 hidden: false
 createdAt: "2026-05-27T17:17:40.610Z"
-updatedAt: "2026-05-27T17:32:46.010Z"
+updatedAt: "2026-06-02T17:32:46.010Z"
 ---
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
