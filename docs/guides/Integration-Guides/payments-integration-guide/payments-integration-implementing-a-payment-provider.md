@@ -19,10 +19,10 @@ The Payment Provider Protocol consists of nine endpoints, divided into two secti
 
 The middleware can be developed in any programming language. The following requirements apply:
 
-- The endpoint must be served over HTTPS on port 443 with TLS 1.2 support. Endpoints served over HTTP are not accepted.
-- The API must be publicly accessible. Restricted APIs are not accepted during the homologation process.
-- The endpoint must use a subdomain or domain name. IP addresses are not accepted.
-- The endpoint must respond in less than 5 seconds during homologation tests and less than 20 seconds for any other call.
+* The endpoint must be served over HTTPS on port 443 with TLS 1.2 support. Endpoints served over HTTP are not accepted.
+* The API must be publicly accessible. Restricted APIs are not accepted during the homologation process.
+* The endpoint must use a subdomain or domain name. IP addresses are not accepted.
+* The endpoint must respond in less than 5 seconds during homologation tests and less than 20 seconds for any other call.
 
 ## Payment Flow
 
@@ -218,8 +218,8 @@ After a transaction is authorized successfully, the provider can capture the pay
 
 A payment can be settled in two scenarios:
 
-- When the store invoices the order.
-- After the period defined in `delayToAutoSettle` or `delayToAutoSettleAfterAntifraud` times out.
+* When the store invoices the order.
+* After the period defined in `delayToAutoSettle` or `delayToAutoSettleAfterAntifraud` times out.
 
 The `value` field is required for the settlement operation.
 
