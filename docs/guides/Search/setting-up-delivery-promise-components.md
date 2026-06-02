@@ -18,7 +18,7 @@ The availability is displayed following these rules:
 - For pickup points selected in the header or a specific pickup point, the system displays all available pickup points within a 50 km pickup radius configured in Checkout. There is no limit to the number of pickup points displayed.
 - For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are displayed, with a maximum of 40 pickup points.
 
->ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX Sellers, [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types), and external sellers).
+> ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX Sellers, [Seller Portal](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types), and external sellers).
 
 ![delivery-promise-components](https://vtexhelp.vtexassets.com/assets/docs/src/shipping-option-components___c5a1d86b0ebf692a3eb9ca49f79b55f8.png)
 
@@ -29,7 +29,7 @@ If you're building your storefront with Store Framework, you can enable this exp
 
 This guide walks you through the basic setup needed to implement these components in your store.
 
->ℹ️ Explore the [Delivery Promise Figma library](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) to learn more about component specs, usage guidelines, reference use cases, and behavioral patterns.
+> ℹ️ Explore the [Delivery Promise Figma library](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) to learn more about component specs, usage guidelines, reference use cases, and behavioral patterns.
 
 ## Before you begin
 
@@ -61,7 +61,7 @@ To use Delivery Promise, customers must provide a delivery address early in thei
 
 | Block                      | Description                                                                                           |
 | -------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `shopper-location-setter`  | **Required.** Collects the shopper’s location (postal code or equivalent). This value drives all Delivery Promise subsequent availability calculations and filters.|
+| `shopper-location-setter`  | **Required.** Collects the shopper’s location (postal code or equivalent). This value drives all subsequent Delivery Promise availability calculations and filters.|
 | `shipping-method-selector` | Optional. A control for choosing between delivery and pickup after a location is set. |
 | `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after a location is set.  |
 
