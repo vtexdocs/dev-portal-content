@@ -4,6 +4,7 @@ slug: "data-layer-and-data-fetching-in-vtex-sales-app-extensibility"
 hidden: false
 excerpt: "Learn how to use the data layer and data fetching for Sales App extensions."
 createdAt: "2026-05-27T00:00:00.000Z"
+updatedAt: "2026-06-02T00:00:00.000Z"
 ---
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
