@@ -4,6 +4,7 @@ slug: "css-styling-in-vtex-sales-app-extensibility"
 hidden: false
 excerpt: "Learn how to style extensions using CSS in VTEX Sales App Extensibility."
 createdAt: "2026-05-25T00:00:00.000Z"
+updatedAt: "2026-06-02T00:00:00.000Z"
 ---
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
