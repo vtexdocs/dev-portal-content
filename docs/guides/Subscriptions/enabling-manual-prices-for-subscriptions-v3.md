@@ -79,7 +79,7 @@ You can manually modify the price when:
 
 Read the following sections for details on the endpoints you must use and their request body examples.
 
-> 🚧 You can only apply a manual price to a subscription item if the `manualPriceAllowed` configuration is set to `true`, as described in the [Configuration](#configuration) section.
+> ⚠️ You can only apply a manual price to a subscription item if the `manualPriceAllowed` configuration is set to `true`, as described in the [Configuration](#configuration) section.
 
 
 ### Adding an item to a subscription 

@@ -9,7 +9,7 @@ updatedAt: "2025-05-21T22:18:24.684Z"
 
 Campaign targeting allows meta-information to be provided during an ad query, which can be used in real time to prioritize campaigns aimed at that specific audience.
 
-> 🚧 Campaigns with targeting will have higher priority during the query process, meaning they are considered more relevant to the audience they were directed to. However, the presence of targeting does not prevent non-targeted campaigns from also being displayed.
+> ⚠️ Campaigns with targeting will have higher priority during the query process, meaning they are considered more relevant to the audience they were directed to. However, the presence of targeting does not prevent non-targeted campaigns from also being displayed.
 
 ## Targeting attributes
 
@@ -56,7 +56,7 @@ Content-Type: application/json
 
 In this approach, targeting information is obtained based on the audiences associated with the `user_id`. These audiences must have been previously imported into the system.
 
-> 🚧 When using this approach, don't send data in the `segmentation` field, since this field would take priority over `user_id`. The system will automatically fetch the audiences associated with the `user_id`.
+> ⚠️ When using this approach, don't send data in the `segmentation` field, since this field would take priority over `user_id`. The system will automatically fetch the audiences associated with the `user_id`.
 
 Request example:
 

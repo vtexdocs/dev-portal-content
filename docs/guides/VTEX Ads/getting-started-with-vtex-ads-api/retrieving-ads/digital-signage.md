@@ -13,7 +13,7 @@ The Digital Signage integration uses the `POST` [Get ads](https://developers.vte
 
 All ads that should be displayed will be returned. Once all ads have been displayed, the API must be called again to retrieve the next batch of items to be shown.
 
->🚧 Don't display the same items twice, as display metrics will only be counted once.
+> ⚠️ Don't display the same items twice, as display metrics will only be counted once.
 
 Request example:
 
@@ -60,7 +60,7 @@ In some cases, it is possible to identify the user making a purchase, typically 
 
 Once the user is identified, you can request a personalized ad for that user.
 
->🚧 For segmented campaigns, an audience integration is required.
+> ⚠️ For segmented campaigns, an audience integration is required.
 
 Request example:
 

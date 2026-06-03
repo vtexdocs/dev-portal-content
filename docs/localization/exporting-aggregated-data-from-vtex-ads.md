@@ -24,7 +24,7 @@ See more about the connection in [Exporting data from VTEX Ads](https://develope
 
 ## Data to be exported
 
-> 📘 File examples
+> ℹ️ File examples
 > 
 > Examples of files that will be sent:
 > 

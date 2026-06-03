@@ -11,7 +11,7 @@ Inventory information defines the price, promotional price, and "stock." Regardi
 
 Learn more about each field on `POST` [Synchronize inventory information](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/product/bulk/inventories).
 
-> 🚧 Batch Insert / Update
+> ⚠️ Batch Insert / Update
 > 
 > For each batch insert/update, a maximum of 500 objects per request and 3 simultaneous requests are allowed.
 > 

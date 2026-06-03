@@ -15,7 +15,7 @@ Learn more about each field on `POST` [Synchronize product information](https://
 
 To update the basic product data, the following endpoint must be used:
 
-> 🚧 Batch Insert / Update
+> ⚠️ Batch Insert / Update
 > 
 > For each batch insert/update, a maximum of 500 objects per request and 3 simultaneous requests are allowed.
 > 

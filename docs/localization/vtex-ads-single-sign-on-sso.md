@@ -8,7 +8,7 @@ updatedAt: "2025-10-13T00:00:00.000Z"
 ---
 The purpose of Single Sign On is to allow users to switch between environments without having to log in again.
 
-> 📘 API Authentication
+> ℹ️ API Authentication
 > 
 > <https://dash.readme.com/project/newtail-media/v1.0/refs/autenticacao>
 

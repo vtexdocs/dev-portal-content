@@ -35,9 +35,9 @@ Confidential data must be encrypted before being sent using the SHA256 algorithm
 - FIRST_NAME_HASHED
 - LAST_NAME_HASHED
 
-> 📘 Before generating data hash, you must remove all SPACES and convert values to **LOWERCASE**.
+> ℹ️ Before generating data hash, you must remove all SPACES and convert values to **LOWERCASE**.
 
-> 🚧 For the PHONE_HASHED attribute, you must format it to the E.164 standard and include the country calling code.
+> ⚠️ For the PHONE_HASHED attribute, you must format it to the E.164 standard and include the country calling code.
 
 #### E.164 format
 

@@ -146,7 +146,7 @@ The response is a dictionary where:
 
 Sponsored brands campaigns have a different response format that includes brand information and related products.
 
-> 🚧 All events must be triggered for both the ad and its products.
+> ⚠️ All events must be triggered for both the ad and its products.
 
 Request example:
 

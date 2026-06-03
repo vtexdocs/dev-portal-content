@@ -18,7 +18,7 @@ See more about the connection in [Exporting data from VTEX Ads](https://develope
 - Files are in [Parquet](https://parquet.apache.org/docs/overview/) format with [Snappy](https://parquet.apache.org/docs/file-format/data-pages/compression/) compression
 - Files are always sent in a daily path format: `TYPE_REPORT/YYYY/MM/DD/TIMESTAMP_NS/RANDOM_FILE_NAMES.snappy.parquet` (one or more files may be sent)
 
-> 🚧 Event deduplication
+> ⚠️ Event deduplication
 > 
 > All events are guaranteed to be sent, but there is no guarantee that an event will be sent only once. Therefore, events must always be deduplicated.
 
