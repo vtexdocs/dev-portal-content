@@ -18,9 +18,9 @@ When a customer places an order, the checkout sends the payment request to the V
 
 The key components are:
 
-- **Payment Gateway:** the VTEX system that processes all payment transactions and routes them to the correct provider.
-- **Connector:** a provider affiliation that bridges the gateway and the external provider. Connectors are built using integration protocols.
-- **Provider:** the external service (PSP, acquirer, anti-fraud, or gift card provider) that processes the transaction.
+- **Payment Gateway:** VTEX system that processes all payment transactions and routes them to the correct provider.
+- **Connector:** Provider affiliation that bridges the gateway and the external provider. Connectors are built using integration protocols.
+- **Provider:** External service (PSP, acquirer, anti-fraud, or gift card provider) that processes the transaction.
 
 There are three [purchase flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows) available: **Transparent** (the shopper stays on the VTEX checkout), **Redirect** (the shopper is sent to the provider's page), and **Payment App** (custom payment UX built with VTEX IO).
 
