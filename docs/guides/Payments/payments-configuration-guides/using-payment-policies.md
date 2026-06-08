@@ -7,11 +7,11 @@ updatedAt: "2026-06-08T00:00:00.000Z"
 excerpt: "Create and test payment policies to control payment method eligibility by item collection and delivery state."
 ---
 
-Payment policies allow merchants to control payment method availability in Checkout based on purchase context, such as item collection and shipping state. They complement payment conditions: conditions define how a payment method is configured, including installments, interest, and affiliation, while policies define whether a configured payment method is displayed for each cart item.
+Payment policies allow merchants to control which payment methods are available in Checkout based on purchase context, such as item collection and shipping state. They complement payment conditions: conditions define how a payment method is configured, including installments, interest, and affiliation, while policies define whether a configured payment method is displayed for each cart item.
 
 > ⚠️ This feature is in closed beta, meaning only specific customers can access it now. If you want to implement it in the future, please contact [our Support](https://support.vtex.com/hc/en-us/)
 
-> ℹ️ VTEX is developing a Payment Policies version with an Admin configuration interface and support for additional purchase context variables. In the current version, use the API and the `collectionIds` and `shippingState` variables described in this guide.
+> ℹ️ VTEX is developing a Payment Policies version with support for Agents/LLM models and additional purchase context variables. In the current version, use the API and the `collectionIds` and `shippingState` variables described in this guide.
 
 ## Before you begin
 
