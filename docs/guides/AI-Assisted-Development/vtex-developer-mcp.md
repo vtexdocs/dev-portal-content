@@ -6,7 +6,7 @@ createdAt: "2026-04-09T19:00:00.000Z"
 updatedAt: "2026-04-09T19:00:00.000Z"
 excerpt: "Connect your AI coding assistant to VTEX documentation and API references using the Model Context Protocol (MCP)."
 seeAlso:
- - "/docs/guides/ai-assisted-development-overview"
+ - "/docs/guides/vtex-ai-developer-toolkit-overview"
  - "/docs/guides/vtex-skills"
 hidePaginationPrevious: false
 hidePaginationNext: false
