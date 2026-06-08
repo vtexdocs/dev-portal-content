@@ -39,6 +39,7 @@ The diagram shows logical references between entities. Edge labels are the field
 [`OrgUnit`](https://developers.vtex.com/docs/guides/b2b-buyer-portal-integration-overview#organizational-units-and-scopes) and storefront [`User`](https://developers.vtex.com/docs/guides/b2b-buyer-portal-integration-overview#user-provisioning) records are not Master Data entities. They appear here because several Master Data entities reference organizational unit IDs or VTEX user IDs.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "linear", "useMaxWidth": true}}}%%
 flowchart TB
     CL --> OrgUnit
     CL -->|"userId"| AD

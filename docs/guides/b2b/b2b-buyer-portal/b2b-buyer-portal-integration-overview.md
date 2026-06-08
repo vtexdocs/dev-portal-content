@@ -3,7 +3,7 @@ title: "B2B Buyer Portal integration overview"
 slug: "b2b-buyer-portal-integration-overview"
 hidden: false
 createdAt: "2026-03-13T00:00:00.000Z"
-updatedAt: "2026-03-13T00:00:00.000Z"
+updatedAt: "2026-06-08T00:00:00.000Z"
 excerpt: "Explore the integration capabilities of B2B Buyer Portal, including contracts, organization management, payment cards, addresses, Budgets, Buying policies, Accounting fields, and Punchout."
 ---
 
@@ -38,6 +38,8 @@ B2B Buyer Portal integrations are built around the following core concepts:
 - [Organizational Units](https://help.vtex.com/en/docs/tutorials/organization-units) represent the hierarchical structure under that root, such as departments, divisions, or subsidiaries. They are the central entity for scoping many buyer portal features.
 - **Storefront users** are members of the buyer organization who interact with the store, each assigned specific roles and permissions.
 - **Storefront roles** control what actions each user can perform, from placing orders to managing budgets.
+
+> ℹ️ For how buyer organization data maps to Master Data entities and their relationships, see [B2B Buyer Portal Master Data architecture](https://developers.vtex.com/docs/guides/b2b-buyer-portal-master-data-architecture).
 
 ## Contracts
 
