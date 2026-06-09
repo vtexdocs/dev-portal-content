@@ -39,20 +39,28 @@ The diagram shows logical references between entities. Edge labels are the field
 [`OrgUnit`](https://developers.vtex.com/docs/guides/b2b-buyer-portal-integration-overview#organizational-units-and-scopes) and storefront [`User`](https://developers.vtex.com/docs/guides/b2b-buyer-portal-integration-overview#user-provisioning) records are not Master Data entities. They appear here because several Master Data entities reference organizational unit IDs or VTEX user IDs.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true}}}%%
 flowchart TB
-    CL --> OrgUnit
+    %% Contract references: the foreign key lives on each child record
     CL -->|"userId"| AD
+    CL -->|"profileId"| contact_information
     CL -->|"contractId"| customFieldSettings
     CL -->|"contractId"| customFieldValues
-    CL -->|"profileId"| contact_information
+    CL --> OrgUnit
+
+    %% Addresses, recipients, and locations
     AD -->|"addressIds"| contact_information
     AD -->|"auxId"| customFieldValues
     customFieldSettings -->|"customFieldId"| customFieldValues
+
+    %% Organizational units and storefront users
+    OrgUnit -->|"userId"| User
+    User -->|"userId"| shopper
+
+    %% Checkout defaults reference an org unit and target records
     OrgUnit -->|"id"| defaultValues
     AD -->|"entityValueId"| defaultValues
     customFieldValues -->|"entityValueId"| defaultValues
-    OrgUnit -->|"userId"| User
-    User -->|"userId"| shopper
 ```
 
 > ℹ️ All relationships are logical references managed at the application layer. Master Data does not enforce referential integrity, so deleting a parent document does not cascade to its children.
