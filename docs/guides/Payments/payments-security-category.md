@@ -11,7 +11,7 @@ Payment providers that process credit, debit, or co-branded card transactions mu
 
 ## In this section
 
-| Article                                                                                               | Description                                                                                                |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [PCI DSS Compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) | Certification requirements for providers that process card transactions.                   |
-| [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy)             | Alternative for providers without PCI DSS certification to process card payments securely. |
+| Article | Description |
+| --- | --- |
+| [PCI DSS Compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) | Certification requirements for providers that process card transactions. |
+| [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy) | Alternative for providers without PCI DSS certification to process card payments securely. |

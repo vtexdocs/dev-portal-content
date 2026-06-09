@@ -11,6 +11,6 @@ Before a payment connector can be made available to merchants, it must pass the 
 
 ## In this section
 
-| Article                                                                                                                     | Description                                                                                        |
-| --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Article                                                                                                                  | Description                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
 | [Payment Provider Homologation](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) | How to test and certify a payment connector using the Payment Provider Test Suite. |

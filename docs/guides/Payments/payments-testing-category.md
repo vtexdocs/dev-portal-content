@@ -13,7 +13,7 @@ Learn more about the available endpoints in the [Card Token Vault API](https://d
 
 ## In this section
 
-| Article                                                                                                          | Description                                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [Implementing payments tokenization](https://developers.vtex.com/docs/guides/implementing-payments-tokenization) | How to implement card tokenization in a payment integration.    |
-| [Managing tokenized cards](https://developers.vtex.com/docs/guides/managing-tokenized-cards)                     | How to manage tokenized cards through the Card Token Vault API. |
+| Article | Description |
+| --- | --- |
+| [Implementing payments tokenization](https://developers.vtex.com/docs/guides/implementing-payments-tokenization) | How to implement card tokenization in a payment integration. |
+| [Managing tokenized cards](https://developers.vtex.com/docs/guides/managing-tokenized-cards) | How to manage tokenized cards through the Card Token Vault API. |

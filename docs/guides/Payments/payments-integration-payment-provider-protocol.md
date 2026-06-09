@@ -18,13 +18,13 @@ There are two ways to build a payment connector:
 
 ## In this section
 
-| Article                                                                                                                          | Description                                                                         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Integrating a new payment provider on VTEX](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex) | End-to-end overview of the steps to integrate a payment provider.   |
-| [Implementing a Payment Provider](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider)  | How to develop the middleware that implements the PPP endpoints.    |
-| [Payment Provider Framework](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework)            | How to build a connector on VTEX IO using the PPP boilerplate.      |
-| [PPP Versioning](https://developers.vtex.com/docs/guides/ppp-versioning)                                                         | Protocol version history and migration notes.                       |
-| [PPP applied to POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos)                            | How to use the PPP for physical store payments with VTEX Sales App. |
-| [Split Payouts on Payment Provider Protocol](https://developers.vtex.com/docs/guides/split-payouts-on-payment-provider-protocol) | How to configure split payouts for marketplace transactions.        |
+| Article | Description |
+| --- | --- |
+| [Integrating a new payment provider on VTEX](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex) | End-to-end overview of the steps to integrate a payment provider. |
+| [Implementing a Payment Provider](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider) | How to develop the middleware that implements the PPP endpoints. |
+| [Payment Provider Framework](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework) | How to build a connector on VTEX IO using the PPP boilerplate. |
+| [PPP Versioning](https://developers.vtex.com/docs/guides/ppp-versioning) | Protocol version history and migration notes. |
+| [PPP applied to POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos) | How to use the PPP for physical store payments with VTEX Sales App. |
+| [Split Payouts on Payment Provider Protocol](https://developers.vtex.com/docs/guides/split-payouts-on-payment-provider-protocol) | How to configure split payouts for marketplace transactions. |
 
 Learn more about the protocol flow in the [Help Center tutorial](https://help.vtex.com/docs/tutorials/payment-provider-protocol) and the [Payment Provider Protocol API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol).

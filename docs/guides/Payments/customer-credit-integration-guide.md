@@ -13,7 +13,7 @@ Learn more about Customer Credit in the [Help Center track](https://help.vtex.co
 
 ## In this section
 
-| Article                                                                                                          | Description                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Article | Description |
+| --- | --- |
 | [Managing a Customer Credit account](https://developers.vtex.com/docs/guides/managing-a-customer-credit-account) | How to manage Customer Credit accounts through the Customer Credit API. |
 | [Managing a Customer Credit invoice](https://developers.vtex.com/docs/guides/managing-a-customer-credit-invoice) | How to manage Customer Credit invoices through the Customer Credit API. |

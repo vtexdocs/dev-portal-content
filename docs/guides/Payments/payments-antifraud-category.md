@@ -13,8 +13,8 @@ Each anti-fraud integration must implement the endpoints defined in the [Anti-fr
 
 ## In this section
 
-| Article                                                                                                                                                                                   | Description                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [Anti-fraud Provider Protocol](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works)                                           | How the integration protocol between VTEX and anti-fraud providers works. |
-| [Cardholder document configuration](https://developers.vtex.com/docs/guides/cardholder-document-configuration)                                                                            | How to configure cardholder document fields for anti-fraud analysis.      |
-| [Implementing a pre-analysis anti-fraud flow for debit card transactions](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions) | How to implement a pre-analysis flow for debit card transactions.         |
+| Article | Description |
+| --- | --- |
+| [Anti-fraud Provider Protocol](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works) | How the integration protocol between VTEX and anti-fraud providers works. |
+| [Cardholder document configuration](https://developers.vtex.com/docs/guides/cardholder-document-configuration) | How to configure cardholder document fields for anti-fraud analysis. |
+| [Implementing a pre-analysis anti-fraud flow for debit card transactions](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions) | How to implement a pre-analysis flow for debit card transactions. |

@@ -16,7 +16,7 @@ On VTEX, gift cards are a payment method processed at checkout. Stores can offer
 
 ## In this section
 
-| Article                                                                                                                  | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| Article | Description |
+| --- | --- |
 | [Gift Card system architecture](https://developers.vtex.com/docs/guides/gift-card-integration-guide-system-architecture) | Overview of the gift card system architecture and how providers connect to VTEX. |
-| [Managing VTEX gift cards](https://developers.vtex.com/docs/guides/managing-vtex-gift-cards)                             | How to manage native VTEX gift cards through the GiftCard API.                   |
+| [Managing VTEX gift cards](https://developers.vtex.com/docs/guides/managing-vtex-gift-cards) | How to manage native VTEX gift cards through the GiftCard API. |
