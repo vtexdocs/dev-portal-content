@@ -3,8 +3,8 @@ slug: 2026-06-12-orders-custom-data-now-generally-available
 type: added
 title: "Orders: Custom data in the VTEX Admin is now generally available"
 excerpt: "Custom order data, including custom fields and app payloads, is now visible in the VTEX Admin for all stores."
-createdAt: 2026-06-08T00:00:00.000Z
-updatedAt: 2026-06-08T00:00:00.000Z
+createdAt: 2026-06-12T15:00:00.000Z
+updatedAt: 2026-06-12T15:00:00.000Z
 ---
 
 The VTEX Admin order details page now displays custom order data for all stores. Merchants and store operators can view store-level custom fields (`customFields`) and per-app payloads (`customApps`) directly from the order details page and print view, with no additional setup required.
