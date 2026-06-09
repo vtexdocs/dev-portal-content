@@ -10,8 +10,8 @@ The Payment Provider Protocol (PPP) is the integration standard that defines how
 
 There are two ways to build a payment connector:
 
-- **External middleware:** develop your own backend service that implements the PPP endpoints.
-- **VTEX IO (Payment Provider Framework):** use a VTEX IO boilerplate that provides the endpoint structure out of the box.
+- **External middleware:** Develop your own backend service that implements the PPP endpoints.
+- **VTEX IO (Payment Provider Framework):** Use a VTEX IO boilerplate that provides the endpoint structure out of the box.
 
 > ℹ️ Before starting, you need a [partnership agreement for financial services](https://www.vtex.com/en-us/partners) and access to a VTEX environment. Providers processing credit, debit, or co-branded cards must also meet [PCI DSS compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) requirements or use [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
@@ -23,7 +23,7 @@ There are two ways to build a payment connector:
 | [Implementing a Payment Provider](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider) | How to develop the middleware that implements the PPP endpoints. |
 | [Payment Provider Framework](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework) | How to build a connector on VTEX IO using the PPP boilerplate. |
 | [PPP Versioning](https://developers.vtex.com/docs/guides/ppp-versioning) | Protocol version history and migration notes. |
-| [PPP applied to POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos) | How to use PPP for physical store payments with VTEX Sales App. |
+| [PPP applied to POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos) | How to use the PPP for physical store payments with VTEX Sales App. |
 | [Split Payouts on Payment Provider Protocol](https://developers.vtex.com/docs/guides/split-payouts-on-payment-provider-protocol) | How to configure split payouts for marketplace transactions. |
 
 Learn more about the protocol flow in the [Help Center tutorial](https://help.vtex.com/docs/tutorials/payment-provider-protocol) and the [Payment Provider Protocol API](https://developers.vtex.com/docs/api-reference/payment-provider-protocol).

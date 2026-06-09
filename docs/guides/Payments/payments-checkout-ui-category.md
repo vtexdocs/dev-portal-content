@@ -8,8 +8,8 @@ excerpt: "Build custom payment experiences using Payment Apps and customize the 
 ---
 VTEX supports custom payment interfaces through two approaches:
 
-- **Payment App:** build a custom payment UX using VTEX IO that runs within the checkout. This enables providers to offer payment experiences beyond the standard transparent or redirect flows.
-- **Checkout UI customization:** customize the layout and display of payment methods in the VTEX SmartCheckout.
+- **Payment App:** Build a custom payment UX using VTEX IO that runs on the checkout page. This enables providers to offer payment experiences beyond the standard transparent or redirect flows.
+- **Checkout UI customization:** Customize the layout and display of payment methods on VTEX SmartCheckout.
 
 ## In this section
 
