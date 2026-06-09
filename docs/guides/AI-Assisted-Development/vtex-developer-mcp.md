@@ -123,7 +123,7 @@ Alternatively, add a `.mcp.json` file at your project root:
 
 ### Claude Desktop
 
-1. Open Claude Desktop, then go to **Claude** menu → **Settings...** → **Developer** tab.
+1. Open Claude Desktop, then go to the **Claude** menu → **Settings...** → **Developer** tab.
 2. Click **Edit Config** to open `claude_desktop_config.json`.
 3. Add the following configuration:
 
