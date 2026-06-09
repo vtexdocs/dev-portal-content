@@ -3,7 +3,7 @@ title: "Gift Cards"
 slug: "gift-card-integration-guide"
 hidden: false
 createdAt: "2020-07-01T02:17:41.385Z"
-updatedAt: "2026-05-13T00:00:00.000Z"
+updatedAt: "2026-05-22T00:00:00.000Z"
 excerpt: "Manage loyalty programs, create refund vouchers, and accept physical gift cards in online storefronts."
 ---
 On VTEX, gift cards are a payment method processed at checkout. Stores can offer gift cards to customers in two ways:
@@ -19,3 +19,4 @@ On VTEX, gift cards are a payment method processed at checkout. Stores can offer
 | --- | --- |
 | [Gift Card system architecture](https://developers.vtex.com/docs/guides/gift-card-integration-guide-system-architecture) | Overview of the gift card system architecture and how providers connect to VTEX. |
 | [Managing VTEX gift cards](https://developers.vtex.com/docs/guides/managing-vtex-gift-cards) | How to manage native VTEX gift cards through the GiftCard API. |
+| [Configuring an external gift card provider](https://developers.vtex.com/docs/guides/configuring-an-external-gift-card-provider) | How to register an external gift card provider and implement the integration flows used by VTEX Gift Card Hub. |
