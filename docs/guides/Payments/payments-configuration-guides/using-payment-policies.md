@@ -11,7 +11,7 @@ Payment policies allow merchants to control which payment methods are available 
 
 > ⚠️ This feature is in closed beta, meaning only specific customers can access it now. If you want to implement it in the future, please contact [our Support](https://support.vtex.com/hc/en-us/)
 
-> ℹ️ VTEX is developing a Payment Policies version with support for Agents/LLM models and additional purchase context variables. In the current version, use the API and the `collectionIds` and `shippingState` variables described in this guide.
+> ℹ️ VTEX is developing a Payment Policies version with support for agents or LLM models and additional purchase context variables. In the current version, use the API and the `collectionIds` and `shippingState` variables described in this guide.
 
 ## Before you begin
 
@@ -175,7 +175,7 @@ In this example, payment system `2` must not appear in `paymentSystemAssignments
 
 After validating the rule with the search endpoint, test the behavior in Checkout:
 
-1. Create a cart with `POST /api/checkout/pub/orderForm`.
+1. Create a cart with [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint.
 2. Add an item from the collection configured in the policy rule.
 3. Add a delivery address with the state configured in the policy rule.
 4. Inspect `paymentData.availableAssociations` in the `orderForm` response.
