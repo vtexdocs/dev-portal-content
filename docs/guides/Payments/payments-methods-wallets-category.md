@@ -6,7 +6,6 @@ createdAt: "2026-05-13T00:00:00.000Z"
 updatedAt: "2026-05-13T00:00:00.000Z"
 excerpt: "Integration guides for specific payment methods and digital wallets on VTEX."
 ---
-
 VTEX supports a wide range of payment methods and digital wallets. This section covers implementation details for specific methods that require additional configuration or processing logic from the payment provider.
 
 ## In this section

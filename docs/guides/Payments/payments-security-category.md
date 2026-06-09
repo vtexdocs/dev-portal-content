@@ -6,7 +6,6 @@ createdAt: "2026-05-13T00:00:00.000Z"
 updatedAt: "2026-05-13T00:00:00.000Z"
 excerpt: "Security requirements and solutions for payment providers integrating with VTEX."
 ---
-
 Payment providers that process credit, debit, or co-branded card transactions must meet specific security requirements before going live on VTEX. Providers can either obtain a PCI DSS certification or use the Secure Proxy alternative.
 
 ## In this section

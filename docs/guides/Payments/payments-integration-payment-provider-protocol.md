@@ -6,7 +6,6 @@ createdAt: "2020-10-27T17:56:02.690Z"
 updatedAt: "2026-05-13T00:00:00.000Z"
 excerpt: "The integration standard that defines how payment providers connect to the VTEX Gateway."
 ---
-
 The Payment Provider Protocol (PPP) is the integration standard that defines how payment providers connect to the VTEX Gateway. Through the PPP, providers can authorize, settle, refund, and cancel transactions on the VTEX platform.
 
 There are two ways to build a payment connector:

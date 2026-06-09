@@ -6,7 +6,6 @@ createdAt: "2020-07-01T02:17:41.385Z"
 updatedAt: "2026-05-13T00:00:00.00Z"
 excerpt: "Manage loyalty programs, create refund vouchers, and accept physical gift cards in online storefronts."
 ---
-
 On VTEX, gift cards are a payment method processed at checkout. Stores can offer gift cards to customers in two ways:
 
 - **Native gift card provider:** Set up VTEX gift cards as a payment method. Gift cards are created and managed in the VTEX Admin.

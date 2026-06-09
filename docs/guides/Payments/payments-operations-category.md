@@ -6,7 +6,6 @@ createdAt: "2026-05-13T00:00:00.000Z"
 updatedAt: "2026-05-13T00:00:00.000Z"
 excerpt: "Configure payment settings, capture behavior, interest rates, and transaction metadata."
 ---
-
 After a payment connector is live, merchants and providers can manage transaction settings, capture (settlement) behavior, and payment rules through the VTEX Gateway.
 
 ## In this section
