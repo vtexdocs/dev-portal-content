@@ -124,7 +124,7 @@ type RemoveItemData = {
 
 ## Extension Points
 
-This hook is available in the following extension points:
+This hook is available in the following [Checkout extension points](https://developers.vtex.com/docs/guides/checkout-extension-points):
 
 - `punchout.cart-item.after`
 - `punchout.order-summary.cta`

@@ -45,6 +45,6 @@ The `url` is the destination URL. It must be a complete URL, such as `https://ww
 
 ## Extension Points
 
-This hook is available in the following extension point:
+This hook is available in the following [Checkout extension point](https://developers.vtex.com/docs/guides/checkout-extension-points):
 
 - `punchout.order-summary.cta`

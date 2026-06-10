@@ -42,7 +42,7 @@ The `useCartItem` returns a `CartItem` object for the current cart item context.
 
 ## Extension Points
 
-This hook is available in the following extension points:
+This hook is available in the following [Checkout extension points](https://developers.vtex.com/docs/guides/checkout-extension-points):
 
 - `cart.cart-item.after`
 - `punchout.cart-item.after`
