@@ -26,11 +26,11 @@ To override an icon, you ship your own `icons.svg` from your store's `/public` f
 If your project doesn't already have a `/public` folder at the root level, create one:
 
 ```
-your-store/
-├── src/
-├── discovery.config.js
-├── package.json
-└── public/         ←
+📂 your-store
+├── 📂 src
+├── 📄 discovery.config.js
+├── 📄 package.json
+└── 📂 public         ←  Create this folder
 
 ### Step 2 - Copy the base `icons.svg` file
 
@@ -40,12 +40,12 @@ To preserve every default icon, copy the existing file as your starting point:
 2. Copy `.faststore/public/icons.svg` into your store's `/public` folder.
 
 ```
-your-store/
-├── src/
-├── discovery.config.js
-├── package.json
-└── public/
-    └── icons.svg   ←
+📂 your-store
+├── 📂 src
+├── 📄 discovery.config.js
+├── 📄 package.json
+└── 📂 public
+    └── 📄 icons.svg   ← Paste the base file here
 ```
 
 > ⚠️ If you create an empty `icons.svg` instead of copying the base file, your file completely replaces the default one, and FastStore components will stop rendering their icons.
@@ -72,7 +72,7 @@ Replace the paths inside the `<symbol>` with your custom design. Keep the same `
 </symbol>
 ```
 
-> ⚠️ Any difference in the `id`, including capitalization, will break the override and FastStore will keep rendering the default icon.
+> ⚠️ Any difference in the `id`, including capitalization, will break the override, and FastStore will keep rendering the default icon.
 
 ### Step 5 - Rebuild your project
 
