@@ -25,11 +25,11 @@ To add a custom icon, you ship your own `icons.svg` from your store's `/public` 
 If your project doesn't already have a `/public` folder at the root level, create one:
 
 ```
-your-store/
-├── src/
-├── discovery.config.js
-├── package.json
-└── public/         ← Create this folder
+📂 your-store
+├── 📂 src
+├── 📄 discovery.config.js
+├── 📄 package.json
+└── 📂 public         ← Create this folder
 ```
 
 ### Step 2 - Copy the base `icons.svg` file
@@ -41,12 +41,12 @@ To preserve every default icon, copy the existing file as your starting point:
 3. Paste it into your store's `/public` folder.
 
 ```
-your-store/
-├── src/
-├── discovery.config.js
-├── package.json
-└── public/
-    └── icons.svg   ← Paste the base file here
+📂 your-store
+├── 📂 src
+├── 📄 discovery.config.js
+├── 📄 package.json
+└── 📂 public
+    └── 📄 icons.svg   ← Paste the base file here
 ```
 
 > ⚠️ If you create an empty `icons.svg` without copying the base file first, your file completely replaces the default one, and FastStore components will stop rendering their icons.
