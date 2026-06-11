@@ -47,33 +47,59 @@ Custom storefront resources define new permission keys that your account can use
 
 ### Creating a custom storefront resource
 
-Send a `POST` request to [`/api/license-manager/storefront/resource`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/resource) with the fields described below.
+Use `POST` [Create custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/resource) to create a new resource key for your account.
 
-| Field | Type | Required | Description |
-| :---- | :---- | :---- | :---- |
-| `Key` | string | Yes | Unique permission key for the resource. Must be 5–80 characters and must not match any native VTEX resource key. Immutable after creation. |
-| `Name` | string | No | Human-readable label for the resource. Maximum 100 characters. |
-| `Description` | string | No | Description of what this resource controls. |
+> ℹ️ Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) before creating a resource to verify that your intended key does not conflict with any existing native or custom resource key.
 
 **Example request body:**
 
 ```json
 {
-  "Key": "ViewAnalyticsDashboard",
-  "Name": "View analytics dashboard",
-  "Description": "Allows users to view the analytics dashboard."
+  "Key": "report_viewer",
+  "Name": "Report Viewer",
+  "Description": "Allows access to reporting"
 }
 ```
 
-> ℹ️ Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) before creating a resource to verify that your intended key does not conflict with any existing native or custom resource key.
+**Example response — `201 Created`:**
+
+```json
+{
+  "Id": 42,
+  "Key": "report_viewer",
+  "Name": "Report Viewer",
+  "Description": "Allows access to reporting"
+}
+```
 
 ### Listing storefront resources
 
-Send a `GET` request to [`/api/license-manager/storefront/resource`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) to retrieve all storefront resources visible to the account, including native VTEX resources and your account's own custom resources. An empty array is a valid response.
+Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) to retrieve all storefront resources visible to the account, including native VTEX resources and your account's own custom resources. An empty array is a valid response.
+
+**Example response — `200 OK`:**
+
+```json
+[
+  {
+    "Id": 1,
+    "Key": "ViewUsers",
+    "Name": "View Users",
+    "Description": null,
+    "IsCustom": false
+  },
+  {
+    "Id": 42,
+    "Key": "report_viewer",
+    "Name": "Report Viewer",
+    "Description": "Allows access to reporting",
+    "IsCustom": true
+  }
+]
+```
 
 ### Deleting a custom storefront resource
 
-Send a `DELETE` request to [`/api/license-manager/storefront/resource/{id}`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/resource/-id-) to permanently remove a custom resource from the account.
+Use `DELETE` [Delete custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/resource/-id-) to permanently remove a custom resource from the account.
 
 > ⚠️ A resource can't be deleted while it is assigned to any custom role. Remove the resource from all roles that reference it before attempting to delete it. Native VTEX resources can't be deleted.
 
@@ -83,39 +109,137 @@ Custom storefront roles group resources into named permission sets that can then
 
 ### Creating a custom storefront role
 
-Send a `POST` request to [`/api/license-manager/storefront/role`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/role) with the fields described below.
-
-| Field | Type | Required | Description |
-| :---- | :---- | :---- | :---- |
-| `Name` | string | Yes | Role name. Must be 1–100 characters and must not match any native VTEX role name. |
-| `Resources` | array of integers | Yes | List of resource IDs to assign to the role. Must contain at least one ID. Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) to discover available resource IDs. |
+Use `POST` [Create custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/role) to create a new role and assign resources to it.
 
 **Example request body:**
 
 ```json
 {
   "Name": "Report Viewer",
-  "Resources": [1, 42]
+  "Resources": [1, 7]
+}
+```
+
+**Example response — `201 Created`:**
+
+```json
+{
+  "Id": 42,
+  "Name": "Report Viewer",
+  "Resources": [
+    {
+      "Id": 1,
+      "Key": "ManageOrganizationAndContract",
+      "IsCustom": false
+    },
+    {
+      "Id": 7,
+      "Key": "MyResource",
+      "IsCustom": true
+    }
+  ]
 }
 ```
 
 ### Listing storefront roles
 
-Send a `GET` request to [`/api/license-manager/storefront/role`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role) to retrieve all storefront roles visible to the account, including native VTEX roles and your account's own custom roles. An empty array is a valid response.
+Use `GET` [List storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role) to retrieve all storefront roles visible to the account, including native VTEX roles and your account's own custom roles. An empty array is a valid response.
+
+**Example response — `200 OK`:**
+
+```json
+[
+  {
+    "Id": 1,
+    "Name": "Organizational Unit Admin",
+    "IsCustom": false,
+    "Resources": [
+      {
+        "Id": 1,
+        "Key": "ManageOrganizationAndContract",
+        "IsCustom": false
+      }
+    ]
+  },
+  {
+    "Id": 42,
+    "Name": "Report Viewer",
+    "IsCustom": true,
+    "Resources": [
+      {
+        "Id": 1,
+        "Key": "ManageOrganizationAndContract",
+        "IsCustom": false
+      },
+      {
+        "Id": 7,
+        "Key": "MyResource",
+        "IsCustom": true
+      }
+    ]
+  }
+]
+```
 
 ### Getting a storefront role
 
-Send a `GET` request to [`/api/license-manager/storefront/role/{roleId}`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role/-roleId-) to retrieve the details of a specific role by its numeric ID, including its name, whether it is custom or native, and its associated resources.
+Use `GET` [Get storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role/-roleId-) to retrieve the details of a specific role by its numeric ID, including its name, whether it is custom or native, and its associated resources.
+
+**Example response — `200 OK`:**
+
+```json
+{
+  "Id": 42,
+  "Name": "Report Viewer",
+  "IsCustom": true,
+  "Resources": [
+    {
+      "Id": 1,
+      "Key": "ManageOrganizationAndContract",
+      "IsCustom": false
+    }
+  ]
+}
+```
 
 ### Updating a custom storefront role
 
-Send a `PUT` request to [`/api/license-manager/storefront/role/{roleId}`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#put-/api/license-manager/storefront/role/-roleId-) to update a custom role's name or resource assignments.
+Use `PUT` [Update custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#put-/api/license-manager/storefront/role/-roleId-) to update a custom role's name or resource assignments.
 
 > ℹ️ The `Resources` array in the request body replaces the role's current resource list entirely. Include all resource IDs the role should have after the update, not just the ones being added or removed. Native VTEX roles can't be updated through this endpoint.
 
+**Example request body:**
+
+```json
+{
+  "Resources": [1, 9]
+}
+```
+
+**Example response — `200 OK`:**
+
+```json
+{
+  "Id": 42,
+  "Name": "Report Viewer",
+  "Resources": [
+    {
+      "Id": 1,
+      "Key": "ManageOrganizationAndContract",
+      "IsCustom": false
+    },
+    {
+      "Id": 9,
+      "Key": "AnotherResource",
+      "IsCustom": true
+    }
+  ]
+}
+```
+
 ### Deleting a custom storefront role
 
-Send a `DELETE` request to [`/api/license-manager/storefront/role/{roleId}`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/role/-roleId-) to permanently remove a custom role from the account.
+Use `DELETE` [Delete custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/role/-roleId-) to permanently remove a custom role from the account.
 
 > ⚠️ The role must be unassigned from all storefront users before it can be deleted. Native VTEX roles can't be deleted.
 
