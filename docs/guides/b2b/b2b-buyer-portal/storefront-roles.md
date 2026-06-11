@@ -7,7 +7,7 @@ createdAt: "2025-10-09T00:00:00.000Z"
 updatedAt: "2026-06-09T00:00:00.000Z"
 ---
 
-> ⚠️ This feature is available only for stores using B2B Buyer Portal, currently available for selected accounts.
+> ⚠️ This feature is available only for stores using [B2B Buyer Portal](https://help.vtex.com/docs/tutorials/b2b-buyer-portal), currently available for selected accounts.
 
 The [Storefront Roles API](https://developers.vtex.com/docs/api-reference/storefront-roles-api#overview) provides a structured way to manage user access and roles within the storefront. It enables organizations to define and enforce authorization policies by controlling which actions users can perform.
 

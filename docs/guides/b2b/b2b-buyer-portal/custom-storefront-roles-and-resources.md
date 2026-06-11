@@ -7,7 +7,7 @@ createdAt: "2026-06-09T00:00:00.000Z"
 updatedAt: "2026-06-09T00:00:00.000Z"
 ---
 
-> ⚠️ This feature is available only for stores using B2B Buyer Portal, currently available for selected accounts.
+> ⚠️ This feature is available only for stores using [B2B Buyer Portal](https://help.vtex.com/docs/tutorials/b2b-buyer-portal), currently available for selected accounts.
 
 The B2B Buyer Portal permission model is built on [predefined storefront roles and resources](https://developers.vtex.com/docs/guides/storefront-roles) provided by VTEX. When the native set does not cover all the permission scenarios your business requires, you can extend it by creating custom storefront roles and resources scoped to your account.
 
