@@ -20,21 +20,21 @@ Custom storefront roles and resources follow the same model as native ones, but 
 - **Custom storefront resource**: An account-defined permission key representing a specific capability not covered by the native VTEX storefront resources. Once created, a resource key is immutable.
 - **Custom storefront role**: An account-defined grouping of storefront resources. Custom roles can include both native VTEX storefront resources and custom resources belonging to your account.
 
-## Constraints
+## Before you begin
 
-Before working with custom roles and resources, keep the following limits and rules in mind:
+All endpoints require the Storefront Roles feature to be enabled on your account. Requests sent to accounts without this feature return a `403 Forbidden` error.
+
+Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/docs/tutorials/license-manager-resources) as described in the table below. Otherwise, they will receive a status code `403` error.
+
+### Constraints
+
+Keep the following limits and rules in mind before creating custom roles and resources:
 
 - An account can have a maximum of 10 custom storefront resources.
 - Custom resource keys must be 5–80 characters, unique within the account, and must not match any native VTEX resource key. Keys are treated as case-insensitive and can't be changed after creation. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native resource keys to avoid conflicts.
 - Custom role names must be 1–100 characters, unique within the account, and must not match any native VTEX role name. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native role names.
 - A custom role must be unassigned from all users before it can be deleted.
 - Native roles and resources can't be modified or deleted through the custom role and resource endpoints.
-
-## Before you begin
-
-All endpoints require the Storefront Roles feature to be enabled on your account. Requests sent to accounts without this feature return a `403 Forbidden` error.
-
-Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/docs/tutorials/license-manager-resources) as described in the table below. Otherwise, they will receive a status code `403` error.
 
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
