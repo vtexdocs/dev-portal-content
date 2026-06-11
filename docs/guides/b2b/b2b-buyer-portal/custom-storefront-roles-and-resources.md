@@ -23,16 +23,16 @@ Custom storefront roles and resources follow the same model as native ones, but 
 Before working with custom roles and resources, keep the following limits and rules in mind:
 
 - An account can have a maximum of 10 custom storefront resources.
-- Custom resource keys must be 5–80 characters, unique within the account, and must not match any native VTEX resource key. Keys are treated as case-insensitive and cannot be changed after creation. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native resource keys to avoid conflicts.
+- Custom resource keys must be 5–80 characters, unique within the account, and must not match any native VTEX resource key. Keys are treated as case-insensitive and can't be changed after creation. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native resource keys to avoid conflicts.
 - Custom role names must be 1–100 characters, unique within the account, and must not match any native VTEX role name. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native role names.
 - A custom role must be unassigned from all users before it can be deleted.
-- Native roles and resources cannot be modified or deleted through the custom role and resource endpoints.
+- Native roles and resources can't be modified or deleted through the custom role and resource endpoints.
 
 ## Before you begin
 
 All endpoints require the Storefront Roles feature to be enabled on your account. Requests sent to accounts without this feature return a `403 Forbidden` error.
 
-Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) as described in the table below. Otherwise, they will receive a status code `403` error.
+Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/docs/tutorials/license-manager-resources) as described in the table below. Otherwise, they will receive a status code `403` error.
 
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
@@ -75,7 +75,7 @@ Send a `GET` request to [`/api/license-manager/storefront/resource`](https://dev
 
 Send a `DELETE` request to [`/api/license-manager/storefront/resource/{id}`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/resource/-id-) to permanently remove a custom resource from the account.
 
-> ⚠️ A resource cannot be deleted while it is assigned to any custom role. Remove the resource from all roles that reference it before attempting to delete it. Native VTEX resources cannot be deleted.
+> ⚠️ A resource can't be deleted while it is assigned to any custom role. Remove the resource from all roles that reference it before attempting to delete it. Native VTEX resources can't be deleted.
 
 ## Managing custom storefront roles
 
@@ -111,13 +111,13 @@ Send a `GET` request to [`/api/license-manager/storefront/role/{roleId}`](https:
 
 Send a `PUT` request to [`/api/license-manager/storefront/role/{roleId}`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#put-/api/license-manager/storefront/role/-roleId-) to update a custom role's name or resource assignments.
 
-> ℹ️ The `Resources` array in the request body replaces the role's current resource list entirely. Include all resource IDs the role should have after the update, not just the ones being added or removed. Native VTEX roles cannot be updated through this endpoint.
+> ℹ️ The `Resources` array in the request body replaces the role's current resource list entirely. Include all resource IDs the role should have after the update, not just the ones being added or removed. Native VTEX roles can't be updated through this endpoint.
 
 ### Deleting a custom storefront role
 
 Send a `DELETE` request to [`/api/license-manager/storefront/role/{roleId}`](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/role/-roleId-) to permanently remove a custom role from the account.
 
-> ⚠️ The role must be unassigned from all storefront users before it can be deleted. Native VTEX roles cannot be deleted.
+> ⚠️ The role must be unassigned from all storefront users before it can be deleted. Native VTEX roles can't be deleted.
 
 ## Assigning custom roles to users
 

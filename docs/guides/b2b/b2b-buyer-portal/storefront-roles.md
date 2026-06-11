@@ -38,7 +38,7 @@ The Storefront Roles API supports a wide range of business scenarios by enabling
 
 * All endpoints require the Storefront Roles feature to be enabled on your account. Requests sent to accounts without this feature enabled return a “Feature not enabled for this account” error.
 
-* Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to be able to successfully run requests to the License Manager API as listed in the table below. Otherwise, they will receive a status code 403 error.
+* Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/docs/tutorials/license-manager-resources) to be able to successfully run requests to the License Manager API as listed in the table below. Otherwise, they will receive a status code 403 error.
 
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
