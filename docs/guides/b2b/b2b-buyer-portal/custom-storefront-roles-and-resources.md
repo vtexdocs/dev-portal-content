@@ -26,6 +26,13 @@ All endpoints require the Storefront Roles feature to be enabled on your account
 
 Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/docs/tutorials/license-manager-resources) as described in the table below. Otherwise, they will receive a status code `403` error.
 
+| Product | Category | Resource | Associated endpoints |
+| :---- | :---- | :---- | :---- |
+| License Manager | Services access control | View Storefront User Permissions | `GET` [List storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role) <br/> `GET` [Get storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role/-roleId-) <br/> `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) |
+| License Manager | Services access control | Edit Storefront User Permissions | `POST` [Create custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/role) <br/> `PUT` [Update custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#put-/api/license-manager/storefront/role/-roleId-) <br/> `DELETE` [Delete custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/role/-roleId-) <br/> `POST` [Create custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/resource) <br/> `DELETE` [Delete custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/resource/-id-) |
+
+To learn more about machine authentication at VTEX, see [Authentication overview](https://developers.vtex.com/docs/guides/authentication-overview#machine-authentication).
+
 ### Constraints
 
 Keep the following limits and rules in mind before creating custom roles and resources:
@@ -35,13 +42,6 @@ Keep the following limits and rules in mind before creating custom roles and res
 - Custom role names must be 1–100 characters, unique within the account, and must not match any native VTEX role name. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native role names.
 - A custom role must be unassigned from all users before it can be deleted.
 - Native roles and resources can't be modified or deleted through the custom role and resource endpoints.
-
-| Product | Category | Resource | Associated endpoints |
-| :---- | :---- | :---- | :---- |
-| License Manager | Services access control | View Storefront User Permissions | `GET` [List storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role) <br/> `GET` [Get storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role/-roleId-) <br/> `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) |
-| License Manager | Services access control | Edit Storefront User Permissions | `POST` [Create custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/role) <br/> `PUT` [Update custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#put-/api/license-manager/storefront/role/-roleId-) <br/> `DELETE` [Delete custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/role/-roleId-) <br/> `POST` [Create custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/resource) <br/> `DELETE` [Delete custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/resource/-id-) |
-
-To learn more about machine authentication at VTEX, see [Authentication overview](https://developers.vtex.com/docs/guides/authentication-overview#machine-authentication).
 
 ## Managing custom storefront resources
 
