@@ -15,9 +15,8 @@ Custom storefront roles and resources follow the same model as native ones, but 
 
 ## Key concepts
 
-- **Custom storefront resource**: An account-defined permission key representing a specific capability not covered by the native VTEX resources. Once created, a resource key is immutable.
-- **Custom storefront role**: An account-defined grouping of storefront resources. Custom roles can include both native VTEX resources and custom resources belonging to your account.
-- **Native entity**: Any role or resource provided by VTEX out of the box. Native entities are read-only and cannot be modified or deleted. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the full list of native roles and resources.
+- **Custom storefront resource**: An account-defined permission key representing a specific capability not covered by the native VTEX storefront resources. Once created, a resource key is immutable.
+- **Custom storefront role**: An account-defined grouping of storefront resources. Custom roles can include both native VTEX storefront resources and custom resources belonging to your account.
 
 ## Constraints
 
