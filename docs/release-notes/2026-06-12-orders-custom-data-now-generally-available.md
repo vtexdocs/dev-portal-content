@@ -11,7 +11,7 @@ The VTEX Admin order details page now displays custom order data for all stores.
 
 ## What has changed?
 
-Previously, this feature was available in open beta and required stores to contact [VTEX Support](https://support.vtex.com/) to enable it. Now, custom order data is available to all stores by default. When an order contains `customData`, both the order details page and print view display the information in collapsible groups, one for custom fields and one for app payloads.
+Previously, this feature was available in [open beta]((https://developers.vtex.com/updates/release-notes/2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin)) and required stores to contact [VTEX Support](https://support.vtex.com/) to enable it. Now, custom order data is available to all stores by default. When an order contains `customData`, both the order details page and print view display the information in collapsible groups, one for custom fields and one for app payloads.
 
 ## Why did we make this change?
 
@@ -20,5 +20,3 @@ In order to give all merchants and store operators a complete view of order info
 ## What needs to be done?
 
 No action is required. Custom order data is now automatically visible in the order details page and print view of the VTEX Admin for all stores that have `customData` attached to their orders.
-
-To learn more, see [Orders: Custom data now visible in the VTEX Admin](https://developers.vtex.com/updates/release-notes/2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin).
