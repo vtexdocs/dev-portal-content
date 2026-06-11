@@ -5,6 +5,8 @@ hidden: false
 excerpt: "Learn how to manage user access and roles within the storefront using the Storefront Permissions API for B2B scenarios."
 createdAt: "2025-10-09T00:00:00.000Z"
 updatedAt: "2026-06-09T00:00:00.000Z"
+seeAlso:
+ - "/docs/guides/custom-storefront-roles-and-resources"
 ---
 
 > ⚠️ This feature is available only for stores using [B2B Buyer Portal](https://help.vtex.com/docs/tutorials/b2b-buyer-portal), currently available for selected accounts.

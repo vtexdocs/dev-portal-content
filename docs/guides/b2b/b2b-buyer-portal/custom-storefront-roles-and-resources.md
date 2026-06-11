@@ -5,6 +5,8 @@ hidden: false
 excerpt: "Learn how to create and manage custom storefront roles and resources to extend the B2B Buyer Portal permission model for your account's specific needs."
 createdAt: "2026-06-09T00:00:00.000Z"
 updatedAt: "2026-06-09T00:00:00.000Z"
+seeAlso:
+ - "/docs/guides/storefront-roles"
 ---
 
 > ⚠️ This feature is available only for stores using [B2B Buyer Portal](https://help.vtex.com/docs/tutorials/b2b-buyer-portal), currently available for selected accounts.
