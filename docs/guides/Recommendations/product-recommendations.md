@@ -6,8 +6,8 @@ excerpt: "VTEX Product Recommendations (beta): strategies, data prerequisites fo
 createdAt: "2026-05-12T12:00:00.000Z"
 updatedAt: "2026-05-12T18:00:00.000Z"
 seeAlso:
-  - "/docs/guides/implementing-product-recommendations-in-faststore"
-  - "/docs/guides/integrating-product-recommendations-in-headless-stores"
+  - "/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores"
+  - "/docs/guides/integrating-product-recommendations-in-mobile-stores"
   - "/docs/guides/vtex-recommendation-shelf"
 hidePaginationPrevious: false
 hidePaginationNext: false
@@ -28,6 +28,7 @@ You need a storefront implemented with one of the following:
 * [Store Framework](https://developers.vtex.com/docs/guides/store-framework)
 * [FastStore](https://developers.vtex.com/docs/guides/faststore)
 * A [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront that can load scripts and call VTEX APIs
+* A mobile app capable of making authenticated HTTPS requests
 
 ### Activation and onboarding
 
@@ -41,7 +42,7 @@ Recommendation quality depends on **catalog quality**, **tracked shopper behavio
 * Persist the shopper identifier used for recommendations (including `_snrs_uuid` in the order form where applicable) so purchases can be tied to browsing behavior. Details are in the implementation guides below.
 * Send the **events** expected for your channel (for example, product views on channels that do not auto-track them), so the service can learn from real traffic.
 
-For **FastStore** specifically, [Intelligent Search](https://help.vtex.com/docs/tracks/installing-intelligent-search) must be installed and integrated with the catalog before you implement recommendations, as described in [Implementing product recommendations in FastStore](https://developers.vtex.com/docs/guides/implementing-product-recommendations-in-faststore).
+For **FastStore** specifically, [Intelligent Search](https://help.vtex.com/docs/tracks/installing-intelligent-search) must be installed and integrated with the catalog before you implement recommendations, as described in [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores).
 
 Some strategies need **minimum purchase history** so joint purchase patterns can be learned. Until those thresholds are met, VTEX may not train that strategy to full quality; see [Recommendation strategies](#recommendation-strategies) and [FAQ](#faq).
 
@@ -111,7 +112,7 @@ Use this when deciding where to render each shelf. Your final placement is agree
 | **Visually similar products** | Depends on **images** and the visual model being enabled for your account. |
 | **Manual collection** | No model training loop—quality is entirely your **collection** curation. |
 
-Campaign identifiers and API usage (including BFF campaign types such as `rec-persona-v2`, `rec-cross-v2`, and others) are documented in [Implementing product recommendations in FastStore](https://developers.vtex.com/docs/guides/implementing-product-recommendations-in-faststore) and the [Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api) reference.
+Campaign identifiers and API usage (including BFF campaign types such as `rec-persona-v2`, `rec-cross-v2`, and others) are documented in [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores) and the [Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api) reference.
 
 ## Implementation by storefront
 
@@ -120,8 +121,8 @@ Choose the guide that matches how your storefront is built:
 | Storefront | Developer guide |
 | ---------- | ----------------- |
 | **Store Framework** | [Product Recommendation shelf (`vtex.recommendation-shelf`)](https://developers.vtex.com/docs/guides/vtex-recommendation-shelf): blocks, props, and Biggy pixel prerequisites for tracking. |
-| **FastStore** | [Implementing product recommendations in FastStore](https://developers.vtex.com/docs/guides/implementing-product-recommendations-in-faststore): scripts, sessions, events, model training steps, and BFF usage. |
-| **Headless / custom frontend** | [Integrating product recommendations in headless stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-stores): script placement, session lifecycle, fetching recommendations, and event tracking. |
+| **FastStore / Headless** | [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores): session management, fetching recommendations, event tracking, and Activity Flow setup. |
+| **Mobile** | [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores): session management, fetching recommendations, and manual event tracking via API. |
 
 All API-based flows rely on the **[Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api)**.
 
@@ -137,7 +138,7 @@ It varies by traffic, catalog size, and which strategies you enabled. Implementa
 
 ### Do I need Intelligent Search for every storefront?
 
-**FastStore** implementations require Intelligent Search and catalog integration, as documented in the FastStore guide. Requirements for Store Framework or headless may differ; follow the guide for your stack and what onboarding specifies.
+**FastStore** implementations require Intelligent Search and catalog integration, as documented in [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores). Requirements for Store Framework or mobile may differ; follow the guide for your stack and what onboarding specifies.
 
 ### What is the difference between “Similar products” and “Frequently bought together”?
 
@@ -165,7 +166,7 @@ Open a ticket with **[VTEX Support](https://help.vtex.com/en/support)** with exa
 
 ## Next steps
 
-* [Implementing product recommendations in FastStore](https://developers.vtex.com/docs/guides/implementing-product-recommendations-in-faststore)
-* [Integrating product recommendations in headless stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-stores)
+* [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores)
+* [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores)
 * [Product Recommendation shelf (Store Framework)](https://developers.vtex.com/docs/guides/vtex-recommendation-shelf)
 * [Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api)
