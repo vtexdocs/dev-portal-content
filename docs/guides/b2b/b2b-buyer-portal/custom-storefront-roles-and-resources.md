@@ -17,8 +17,8 @@ Custom storefront roles and resources follow the same model as native ones, but 
 
 ## Key concepts
 
-- **Custom storefront resource**: An account-defined permission key representing a specific capability not covered by the native VTEX storefront resources. Once created, a resource key is immutable.
-- **Custom storefront role**: An account-defined grouping of storefront resources. Custom roles can include both native VTEX storefront resources and custom resources belonging to your account.
+- **Custom storefront resource**: An account-defined permission key representing a specific capability not covered by the native VTEX storefront resources. Once created, a storefront resource key is immutable.
+- **Custom storefront role**: An account-defined grouping of storefront resources. Custom storefront roles can include both native VTEX storefront resources and custom storefront resources belonging to your account.
 
 ## Before you begin
 
@@ -35,23 +35,23 @@ To learn more about machine authentication at VTEX, see [Authentication overview
 
 ### Constraints
 
-Keep the following limits and rules in mind before creating custom roles and resources:
+Keep the following limits and rules in mind before creating custom storefront roles and resources:
 
 - An account can have a maximum of 10 custom storefront resources.
-- Custom resource keys must be 5–80 characters, unique within the account, and must not match any native VTEX resource key. Keys are treated as case-insensitive and can't be changed after creation. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native resource keys to avoid conflicts.
-- Custom role names must be 1–100 characters, unique within the account, and must not match any native VTEX role name. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native role names.
-- A custom role must be unassigned from all users before it can be deleted.
-- Native roles and resources can't be modified or deleted through the custom role and resource endpoints.
+- Custom storefront resource keys must be 5–80 characters, unique within the account, and must not match any native VTEX storefront resource key. Keys are treated as case-insensitive and can't be changed after creation. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native storefront resource keys to avoid conflicts.
+- Custom storefront role names must be 1–100 characters, unique within the account, and must not match any native VTEX storefront role name. See the [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) guide for the list of native storefront role names.
+- A custom storefront role must be unassigned from all users before it can be deleted.
+- Native storefront roles and resources can't be modified or deleted through the custom storefront role and resource endpoints.
 
 ## Managing custom storefront resources
 
-Custom storefront resources define new permission keys that your account can use when building custom roles.
+Custom storefront resources define new permission keys that your account can use when building custom storefront roles.
 
 ### Creating a custom storefront resource
 
-Use `POST` [Create custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/resource) to create a new resource key for your account.
+Use `POST` [Create custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/resource) to create a new storefront resource key for your account.
 
-> ℹ️ Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) before creating a resource to verify that your intended key does not conflict with any existing native or custom resource key.
+> ℹ️ Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) before creating a storefront resource to verify that your intended key does not conflict with any existing native or custom storefront resource key.
 
 **Example request body:**
 
@@ -76,7 +76,7 @@ Use `POST` [Create custom storefront resource](https://developers.vtex.com/docs/
 
 ### Listing storefront resources
 
-Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) to retrieve all storefront resources visible to the account, including native VTEX resources and your account's own custom resources. An empty array is a valid response.
+Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) to retrieve all storefront resources visible to the account, including native VTEX storefront resources and your account's own custom storefront resources. An empty array is a valid response.
 
 **Example response — `200 OK`:**
 
@@ -101,17 +101,17 @@ Use `GET` [List storefront resources](https://developers.vtex.com/docs/api-refer
 
 ### Deleting a custom storefront resource
 
-Use `DELETE` [Delete custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/resource/-id-) to permanently remove a custom resource from the account.
+Use `DELETE` [Delete custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/resource/-id-) to permanently remove a custom storefront resource from the account.
 
-> ⚠️ A resource can't be deleted while it is assigned to any custom role. Remove the resource from all roles that reference it before attempting to delete it. Native VTEX resources can't be deleted.
+> ⚠️ A storefront resource can't be deleted while it is assigned to any custom storefront role. Remove the storefront resource from all storefront roles that reference it before attempting to delete it. Native VTEX storefront resources can't be deleted.
 
 ## Managing custom storefront roles
 
-Custom storefront roles group resources into named permission sets that can then be assigned to storefront users.
+Custom storefront roles group storefront resources into named permission sets that can then be assigned to storefront users.
 
 ### Creating a custom storefront role
 
-Use `POST` [Create custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/role) to create a new role and assign resources to it.
+Use `POST` [Create custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/role) to create a new storefront role and assign storefront resources to it.
 
 **Example request body:**
 
@@ -145,7 +145,7 @@ Use `POST` [Create custom storefront role](https://developers.vtex.com/docs/api-
 
 ### Listing storefront roles
 
-Use `GET` [List storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role) to retrieve all storefront roles visible to the account, including native VTEX roles and your account's own custom roles. An empty array is a valid response.
+Use `GET` [List storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role) to retrieve all storefront roles visible to the account, including native VTEX storefront roles and your account's own custom storefront roles. An empty array is a valid response.
 
 **Example response — `200 OK`:**
 
@@ -185,7 +185,7 @@ Use `GET` [List storefront roles](https://developers.vtex.com/docs/api-reference
 
 ### Getting a storefront role
 
-Use `GET` [Get storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role/-roleId-) to retrieve the details of a specific role by its numeric ID, including its name, whether it is custom or native, and its associated resources.
+Use `GET` [Get storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role/-roleId-) to retrieve the details of a specific storefront role by its numeric ID, including its name, whether it is custom or native, and its associated storefront resources.
 
 **Example response — `200 OK`:**
 
@@ -206,9 +206,9 @@ Use `GET` [Get storefront role](https://developers.vtex.com/docs/api-reference/s
 
 ### Updating a custom storefront role
 
-Use `PUT` [Update custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#put-/api/license-manager/storefront/role/-roleId-) to update a custom role's name or resource assignments.
+Use `PUT` [Update custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#put-/api/license-manager/storefront/role/-roleId-) to update a custom storefront role's name or storefront resource assignments.
 
-> ℹ️ The `Resources` array in the request body replaces the role's current resource list entirely. Include all resource IDs the role should have after the update, not just the ones being added or removed. Native VTEX roles can't be updated through this endpoint.
+> ℹ️ The `Resources` array in the request body replaces the storefront role's current storefront resource list entirely. Include all storefront resource IDs the storefront role should have after the update, not just the ones being added or removed. Native VTEX storefront roles can't be updated through this endpoint.
 
 **Example request body:**
 
@@ -241,10 +241,10 @@ Use `PUT` [Update custom storefront role](https://developers.vtex.com/docs/api-r
 
 ### Deleting a custom storefront role
 
-Use `DELETE` [Delete custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/role/-roleId-) to permanently remove a custom role from the account.
+Use `DELETE` [Delete custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/role/-roleId-) to permanently remove a custom storefront role from the account.
 
-> ⚠️ The role must be unassigned from all storefront users before it can be deleted. Native VTEX roles can't be deleted.
+> ⚠️ The storefront role must be unassigned from all storefront users before it can be deleted. Native VTEX storefront roles can't be deleted.
 
-## Assigning custom roles to users
+## Assigning custom storefront roles to users
 
-Once a custom role is created, you can assign it to storefront users using the existing role assignment endpoints, the same way you would assign any predefined role. See [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) for details on the assignment endpoints and the required permissions.
+Once a custom storefront role is created, you can assign it to storefront users using the existing storefront role assignment endpoints, the same way you would assign any predefined storefront role. See [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) for details on the assignment endpoints and the required permissions.
