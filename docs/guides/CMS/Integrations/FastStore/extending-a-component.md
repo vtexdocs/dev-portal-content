@@ -1,5 +1,5 @@
 ---
-title: "Extending a component"  
+title: "Creating a new section in the CMS"
 hidden: false  
 slug: "cms-extending-a-component"  
 createdAt: "2026-02-19T12:50:00.813Z"  
