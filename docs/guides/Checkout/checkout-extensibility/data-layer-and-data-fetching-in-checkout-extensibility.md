@@ -1,5 +1,5 @@
 ---
-title: "Data-layer and data-fetching in Checkout extensions"
+title: "Data layer and data fetching in Checkout extensions"
 slug: "data-layer-and-data-fetching-in-checkout-extensibility"
 hidden: true
 createdAt: "2026-06-10T00:00:00.000Z"
@@ -9,20 +9,22 @@ excerpt: "Access the Checkout data layer with hooks and fetch data from VTEX or 
 
 > ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
 
-When extending the UX/UI of Checkout, you may need to present data to the user, whether it's data from the Checkout flow itself, additional information from VTEX APIs, or data from your own or third-party APIs.
+When [creating a Checkout extension](https://developers.vtex.com/docs/guides/getting-started-with-checkout-extensions), you may need to present data to the user, whether it is data from the Checkout flow, VTEX APIs, or third-party APIs.
 
-In extension points, there are two main ways to interact with data:
+There are two ways to enable your extensions to interact with data:
 
-- Data-layer resources, such as the [`useCart`](https://developers.vtex.com/docs/guides/usecart-hook) or [`useCartItem`](https://developers.vtex.com/docs/guides/usecartitem-hook) hooks.
-- Fetching data from VTEX APIs or external APIs.
+- Data layer resources, such as the [`useCart`](https://developers.vtex.com/docs/guides/usecart-hook) or [`useCartItem`](https://developers.vtex.com/docs/guides/usecartitem-hook) hooks.
+- Data fetching from VTEX APIs or external APIs.
 
 > ℹ️ In this release, the extensions data layer includes a limited set of hooks and utilities.
 
-## Data-layer
+## Data layer in extensions
 
-Whenever possible, prefer using the data layer from Checkout itself. This is recommended because this data is already cached within the core Checkout's data layer, so accessing data (for example, through `useCartItem`) won't trigger additional requests, which is highly beneficial for both application performance and your extensions.
+All interactions with the Checkout data layer happen through functions and hooks provided by the `@vtex/checkout` package.
 
-All interactions with the Checkout data layer happen through functions and hooks provided by the `@vtex/checkout` package. For example, if you need to access cart item data while using the `cart.cart-item.after` extension point, you can use the [`useCartItem` hook](https://developers.vtex.com/docs/guides/usecartitem-hook):
+> ℹ️ Whenever possible, use the Checkout data layer, because this data is already cached in the core data layer. This approach prevents additional requests, enhancing application performance and benefiting your extensions.
+
+For example, if you need to access cart item data while using the `cart.cart-item.after` extension point, you can use the [`useCartItem` hook](https://developers.vtex.com/docs/guides/usecartitem-hook):
 
 ```tsx
 import { useCartItem } from '@vtex/checkout';
@@ -34,13 +36,13 @@ const MyComponent = () => {
 };
 ```
 
-> ℹ️ For more information on Checkout data-layer hooks and utilities, see [Checkout extension points](https://developers.vtex.com/docs/guides/checkout-extension-points) and the available [Checkout hooks](https://developers.vtex.com/docs/guides/usecart-hook).
+> ℹ️ For detailed information about the available hooks and the extension points where they can be used, see [Checkout extension points](https://developers.vtex.com/docs/guides/checkout-extension-points) and the [Checkout hooks](https://developers.vtex.com/docs/guides/usecart-hook).
 
-## Data-fetching
+## Data fetching in extensions
 
-The data in the Checkout layer might not always be sufficient for building your extension. Sometimes, you may need to communicate with a VTEX API (such as Intelligent Search) or with your own or third-party APIs.
+When you need to fetch data from VTEX APIs (for example, Intelligent Search) or external APIs, you can use the browser's Fetch API to make requests, as shown in the example below:
 
-In these cases, you can use the browser's Fetch API to make requests, just as you would in your everyday React applications:
+> ⚠️ Extensions run in the browser, so authentication tokens and API keys included in requests can be exposed to users. The example below uses a public endpoint that does not require credentials. If your API requires authentication, create a [VTEX IO app](https://developers.vtex.com/docs/guides/vtex-io-documentation-3-creating-the-new-app) to proxy the request and handle authentication on the server.
 
 ```tsx
 import React, { useState, useEffect } from 'react';
@@ -69,4 +71,4 @@ function MyCustomData() {
 }
 ```
 
-> ⚠️ When performing data-fetching, handle loading states to ensure a good UX. Additionally, allocate space in advance to avoid layout shift. For more information, see how to deal with layout shift in [Checkout extension points](https://developers.vtex.com/docs/guides/checkout-extension-points).
+> ⚠️ When fetching data, handle loading states to ensure a better user experience. Additionally, allocate space in advance to avoid layout shift. For more information, see how to deal with layout shift in [Checkout extension points](https://developers.vtex.com/docs/guides/checkout-extension-points).

@@ -1,7 +1,7 @@
 ---
 title: "Buyer Portal Checkout extension points"
 slug: "checkout-extension-points"
-hidden: true
+hidden: false
 createdAt: "2026-06-09T00:00:00.000Z"
 updatedAt: "2026-06-09T00:00:00.000Z"
 excerpt: "Explore the available Checkout extension points to extend the UI of Checkout across all of its stages."
@@ -9,7 +9,7 @@ excerpt: "Explore the available Checkout extension points to extend the UI of Ch
 
 > ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
 
-Checkout offers a variety of extension points across all of its stages, including Cart, Delivery, Review, and Order Placed. These extension points allow you to extend the UX/UI of Checkout to meet your store's specific needs.
+Checkout offers a variety of extension points across all of its stages, including cart, delivery, cart review, and order placed. These extension points allow you to extend the UX/UI of Checkout to meet your store's specific needs.
 
 Before implementing extensions, make sure you have [set up FastCheckout](https://developers.vtex.com/docs/guides/fastcheckout-setting-up).
 
