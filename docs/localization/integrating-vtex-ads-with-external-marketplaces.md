@@ -170,7 +170,7 @@ Authentication uses a JWT token with a shared secret. The token must contain:
 - 24h expiration time
 
 ```http
-GET https://app.newtail.com.br/login/marketplace?sso=JWT
+GET https://app.ads.vtex.com/login/marketplace?sso=JWT
 ```
 
 ### User information query
@@ -222,7 +222,7 @@ POST https://api-retail-media.newtail.com.br/sso/marketplace
 
 ```json
 {
-  "url_redirect": "https://app.newtail.com.br/login/marketplace?token=JWT"
+  "url_redirect": "https://app.ads.vtex.com/login/marketplace?token=JWT"
 }
 ```
 

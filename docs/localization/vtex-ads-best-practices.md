@@ -16,7 +16,7 @@ HTTP connection reuse allows multiple requests to share the same TCP connection,
 
 The following diagram illustrates the performance difference between multiple connections and persistent connections:
 
-![vtex-ads-best-practices](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20Ads/getting-started-with-vtex-ads-api/vtex-ads-best-practices.png)
+![vtex-ads-best-practices](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/localization/vtex-ads-best-practices.png)
 
 To implement HTTP persistence, configure your HTTP client to include the following header:
 
@@ -26,7 +26,7 @@ Connection: keep-alive
 
 This header instructs the client to maintain the connection for subsequent requests from the same origin.
 
-> ℹ️ Learn more about HTTP persistence in the [Mozilla Developer documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x). 
+> ℹ️ Learn more about HTTP persistence in the [Mozilla Developer documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x).
 
 ## Timeout implementation
 

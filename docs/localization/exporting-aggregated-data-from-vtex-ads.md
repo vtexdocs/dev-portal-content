@@ -51,7 +51,7 @@ See more about the connection in [Exporting data from VTEX Ads](https://develope
 
 | Column            | Type              | Description                                              |
 | :---------------- | :---------------- | :------------------------------------------------------- |
-| day               | date YYYY-DD-MM   | Day is always sent in the publisher's timezone          |
+| day               | date YYYY-MM-DD   | Day is always sent in the publisher's timezone          |
 | name              | String            | Campaign name                                            |
 | campaign_id       | String            | Unique campaign identifier                               |
 | campaign_type     | String            | Campaign type: `product`, `banner`, `sponsored_brands`, `video` |
@@ -63,8 +63,8 @@ See more about the connection in [Exporting data from VTEX Ads](https://develope
 | conversions_total | int               | Total conversions                                        |
 | conversion_rate   | float             | Order conversion rate                                    |
 | sales_revenue     | float             | Revenue from sold items                                  |
-| start_date        | date YYYY-DD-MM   | Campaign start date                                      |
-| end_date          | date YYYY-DD-MM   | Campaign end date                                        |
+| start_date        | date YYYY-MM-DD   | Campaign start date                                      |
+| end_date          | date YYYY-MM-DD   | Campaign end date                                        |
 | advertiser_id     | String            | Unique advertiser identifier                             |
 
 ### Ads
@@ -73,7 +73,7 @@ See more about the connection in [Exporting data from VTEX Ads](https://develope
 
 | Column            | Type              | Description                                              |
 | :---------------- | :---------------- | :------------------------------------------------------- |
-| day               | date YYYY-DD-MM   | Day is always sent in the publisher's timezone          |
+| day               | date YYYY-MM-DD   | Day is always sent in the publisher's timezone          |
 | ad_id             | String            | Unique ad identifier                                     |
 | campaign_id       | String            | Unique campaign identifier                               |
 | ad_status         | String            | Ad operating status                                      |
@@ -95,7 +95,7 @@ See more about the connection in [Exporting data from VTEX Ads](https://develope
 
 | Column            | Type              | Description                                              |
 | :---------------- | :---------------- | :------------------------------------------------------- |
-| day               | date YYYY-DD-MM   | Day is always sent in the publisher's timezone          |
+| day               | date YYYY-MM-DD   | Day is always sent in the publisher's timezone          |
 | ad_id             | String            | Unique ad identifier                                     |
 | campaign_id       | String            | Unique campaign identifier                               |
 | advertiser_id     | String            | Unique advertiser identifier                             |

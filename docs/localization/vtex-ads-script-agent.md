@@ -82,7 +82,7 @@ To prevent the script from executing on checkout pages, we'll create an exceptio
 For the VTEX Ads platform to correctly correlate user interactions, you must specify which session identifier is used by your ecommerce.
 
 >⚠️ **Required action:** The ecommerce team must inform the VTEX Ads team about the **name of the attribute in the `cookie` or `sessionStorage`** that stores the user's session ID.
-> 
+>
 > For example: If the session ID is stored in a cookie called `vtex_session`, this information must be provided.
 >
 > This configuration allows the script to read the correct identifier and associate it with navigation events.
