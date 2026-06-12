@@ -47,7 +47,7 @@ The CLI initialization flow now catches errors thrown by `createNextJsPages` so 
 
 ### Windows URL resolution fixed in CLI (PR: [#3337](https://github.com/vtex/faststore/pull/3337))
 
-Normalizes module URLs used by `@faststore/cli` when loading user/project configs, plugins, and discovery files. This fixes dynamic import failures on Windows caused by Windows-style (`C:/`) ESM paths. CLI commands, including `build`, `dev`, `start`, `cache`, `cms-sync`, `i18n`, and `test,` are affected. No changes for macOS/Linux users.
+Normalizes module URLs used by `@faststore/cli` when loading user/project configs, plugins, and discovery files. This fixes dynamic import failures on Windows caused by Windows-style (`C:/`) ESM paths. CLI commands, including `build`, `dev`, `start`, `cache`, `cms-sync`, `i18n`, and `test`, are affected. No changes for macOS/Linux users.
 
 For Windows users:
 
