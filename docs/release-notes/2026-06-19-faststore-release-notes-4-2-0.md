@@ -1,4 +1,4 @@
----  
+---
 title: 'FastStore Release Notes — Version 4.2.0'  
 slug: '2026-06-19-faststore-release-notes-4-2-0'  
 type: added   
