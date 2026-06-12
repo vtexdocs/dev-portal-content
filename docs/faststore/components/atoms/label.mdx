@@ -9,7 +9,11 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Label)
 
-A label allows the user to understand a single element. It is often in the form of information, and can have an implied instruction. Usually used to describe the meaning of input fields.
+The `Label` component provides accessible text descriptions for form controls, helping users understand the purpose and expected input of each field. Typical use cases include:
+
+- Describing the purpose of input fields (e.g., `Email Address`, `Password`, or `Phone Number`).
+- Associating descriptive text with form elements for improved accessibility.
+- Providing context for user interactions in forms and surveys.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -19,7 +23,12 @@ A label allows the user to understand a single element. It is often in the form 
   </Tab>
   <Tab>
     ```tsx
-    <Label>Label</Label>
+    import React from "react";
+    import { Label } from "@faststore/ui";
+
+    export default function LabelBasicUsage() {
+      return <Label>Label</Label>;
+    }
     ```
   </Tab>
 </Tabs>
@@ -34,6 +43,82 @@ A label allows the user to understand a single element. It is often in the form 
 import { Label } from "@faststore/ui";
 ```
 
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/atoms/Label/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Examples
+
+### Label with Input
+
+Labels are commonly used to describe input fields. Use the `htmlFor` attribute to associate the label with the [Input](https://developers.vtex.com/docs/guides/faststore/atoms-input) component.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Label htmlFor="email-input">Email Address</Label>
+      <Input id="email-input" type="email" placeholder="Enter your email" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Label } from "@faststore/ui";
+    import { Input } from "@faststore/ui";
+
+    export default function LabelWithInput() {
+      return (
+        <>
+          <Label htmlFor="email-input">Email Address</Label>
+          <Input id="email-input" type="email" placeholder="Enter your email" />
+        </>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Label with custom attributes
+
+You can pass additional HTML attributes to customize the label behavior.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Label htmlFor="password-input" className="custom-label">
+        Password
+      </Label>
+      <Input id="password-input" type="password" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Label } from "@faststore/ui";
+    import { Input } from "@faststore/ui";
+
+    export default function LabelWithCustomAttributes() {
+      return (
+        <>
+          <Label htmlFor="password-input" className="custom-label">
+            Password
+          </Label>
+          <Input id="password-input" type="password" />
+        </>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
 ---
 
 ## Data attributes
@@ -47,3 +132,19 @@ You can target and override `Label` styles using the following data attributes:
 ## Props
 
 <ComponentPropsSection component="Label" />
+
+---
+
+## Best practices
+
+### ✅ Dos
+
+- Use clear and concise text that accurately describes the expected input. Be specific about what information is required.
+- Ensure labels remain visible at all times and are not replaced by placeholders.
+- Keep label text short and to the point, avoiding unnecessary words.
+
+### ❌ Don'ts
+
+- Don't use placeholder text as a substitute for labels, as placeholders disappear when users start typing.
+- Don't hide labels visually while keeping them only for screen readers.
+- Don't use vague or generic text like "Enter value" or "Field".

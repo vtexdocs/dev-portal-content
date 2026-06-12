@@ -34,7 +34,7 @@ You can conduct a Lighthouse audit in different ways: using [PageSpeed Insights]
 
 ### FastStore WebOps - Lighthouse scores
 
-For stores using [FastStore](https://developers.vtex.com/docs/guides/faststore), you can run Lighthouse audit using the methods presented in the previous section. You can also streamline your web audits by using the [Lighthouse scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores) tool for the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/1-onboarding-overview) app.
+For stores using [FastStore](https://developers.vtex.com/docs/guides/faststore), you can run Lighthouse audit using the methods presented in the previous section. You can also streamline your web audits by using the [Lighthouse scores](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#lighthouse-scores) tool for the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project) app.
 
 ![WebOps Previews](https://vtexhelp.vtexassets.com/assets/docs/src/lighthouse-scores-webops___f9a501c9132684e7398456db26da2547.png)
 

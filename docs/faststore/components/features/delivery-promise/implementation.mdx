@@ -11,7 +11,7 @@ This solution continuously updates product availability throughout the buying jo
 
 In this guide, you'll learn how to configure Delivery Promise in your FastStore project.
 
-To understand how Delivery Promise works, see the guide [Delivery Promise (beta)](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview).
+>ℹ To understand how Delivery Promise operates, see the [Understanding Delivery Promise operation](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview) guide. For more information about Delivery Promise components, see the [Working with Delivery Promise components](https://developers.vtex.com/docs/guides/faststore/delivery-promise-components) guide.
 
 ## Default settings
 
@@ -26,8 +26,8 @@ deliveryPromise: {
   },
 ```
 
-* `enabled`: When set to **true**, Delivery Promise is activated, allowing the store to provide delivery estimates based on user location.
-* `mandatory`: When set to **false**, providing a postal code is optional for the user. Users can browse and add items to the cart without entering their postal code, though the accuracy of delivery information may be limited.
+* `enabled`: When set to **true**, Delivery Promise activates, allowing the store to provide delivery estimates based on the user's location.
+* `mandatory`: When set to **true**, users must provide a postal code. By default, this is **false**, allowing users to browse and add items to the cart without entering their postal code. However, without a postal code, the accuracy of delivery information may be limited.
 
 ## Before you begin
 
@@ -39,7 +39,7 @@ Check if you have version `0.5.0` or later of the [`search-session`](https://dev
 
 1. In your terminal, run the `vtex list` command.
 2. In the returned results, search for the app.
-3. If you don’t have this app installed, run the command `vtex install vtex.search-session`.
+3. If you don't have this app installed, run the command `vtex install vtex.search-session`.
 
 ### Enable the VTEX Intelligent Search app
 
@@ -50,9 +50,9 @@ In your terminal, log in to your account by running `vtex login {accountName}` a
 <details>
 <summary>Accounts with `vtex.edition-store@5.x`</summary>
 
-If your account is using the `vtex.edition-store@5.x` major, the VTEX Intelligent Search app is already included, and you need to integrate it via the VTEX Admin.
+If your account is using the `vtex.edition-store@5.x` major version, the VTEX Intelligent Search app is already included, and you need to integrate it via VTEX Admin.
 
-To integrate VTEX Intelligent Search, go to **Store Settings > Intelligent Search > Integrations** in the VTEX Admin, and click `START INTEGRATION`.
+To integrate VTEX Intelligent Search, access **Store Settings > Intelligent Search > Integrations** in the VTEX Admin, and click `START INTEGRATION`.
 
 </details>
 
@@ -340,3 +340,53 @@ To set a default postal code for your store, follow the steps below:
         person: null,
       },
       ```
+## Managing Delivery Promise filters and labels
+
+Delivery Promise [filters](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#filter-options) help shoppers narrow products by delivery/pickup availability for their location, while [badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-components) visually indicate shipping/pickup availability for the shopper's location when Delivery Promise data exists.
+
+By default, filters and badges are active once Delivery Promise is enabled and implemented in the store. However, you can deactivate them (Global Filter by Pickup Point, [Delivery Option](https://newhelp.vtex.com/docs/tutorials/delivery-options-beta), and [Badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#badges) and edit their labels in the Headless CMS. To do this, follow these steps.
+
+>ℹ️ For more details on filters and badges, see the [Working with Delivery Promise components](https://developers.vtex.com/docs/guides/faststore/delivery-promise-components) guide.
+
+1. Access the VTEX Admin and go to **Storefront > Headless CMS**.
+2. Click the **Global Sections** Content Type.
+3. Click the **Settings** tab.
+4. Go to the **Delivery Promise** section and change the labels and settings to suit your scenario.
+
+![dp-managing-filter-and-badges-labels](https://vtexhelp.vtexassets.com/assets/docs/src/dp-managing-filter-labels___8ced78ce723693085b3d8baa857ff5a6.gif)
+
+## Enabling the Availability (In-stock) filter
+
+By default, the [Availability](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#plp-or-search-page-filters) filter is disabled in the Headless CMS. To enable this feature, follow these steps:
+
+### Setting up `hideUnavailableItems`
+
+1. Open your FastStore project in the code editor of your choice.
+2. Open the `discovery.config.js` file.
+3. In the `hideUnavailableItems` property, change the value to `false`.
+
+    ```discovery.config.js mark=6
+    ...
+    api: {
+        storeId: "newstore",
+        workspace: "master",
+        environment: "vtexcommercestable",
+        hideUnavailableItems: false,
+        incrementAddress: false,
+    },
+    ...
+    ```
+
+4. Create a new branch and open a pull request to deploy the change made in the `discovery.config.js` file to production.
+
+### Enabling the filter in the Headless CMS
+
+After changing the `hideUnavailableItems` value to `false`, you can enable this filter in the Headless CMS.
+
+1. Access VTEX Admin and go to **Storefront > Headless CMS**.
+2. Click the **Global Sections** Content Type.
+3. Click the **Settings** tab.
+4. Go to the **Delivery Promise** section and check the field **Should display In Stock filter?**
+
+![dp-availability-in-stock-filter](https://vtexhelp.vtexassets.com/assets/docs/src/dp-availability-filter___2fd389aefe66a4014d8bf9828ade58b1.png)
+

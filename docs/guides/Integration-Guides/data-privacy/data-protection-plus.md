@@ -21,7 +21,7 @@ seeAlso:
 >
 > If you are not yet a customer but are interested in this solution, please complete our [contact form](https://vtex.com/us-en/contact/). 
 
-The VTEX platform allows stores to process shoppers' Personal Identifiable Information (PII) in compliance with data privacy regulations such as [GDPR and LGPD](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/).
+The VTEX platform allows stores to process shoppers' Personal Identifiable Information (PII) in compliance with data privacy regulations such as GDPR and LGPD.
 
 When using Data Protection Plus, accounts follow the PII data architecture, where all PII is stored in the [Profile System](https://developers.vtex.com/docs/guides/profile-system). Other VTEX modules, such as **Order Management** and **Checkout**, store only pseudonymized data associated with a **Profile System** token. These modules may also access PII from the **Profile System**, as described in the [PII data architecture specifications](https://developers.vtex.com/docs/guides/pii-data-architecture-specifications).
 
