@@ -1,19 +1,19 @@
----
-title: "Product recommendations"
-slug: "product-recommendations"
-hidden: false
-excerpt: "VTEX Product Recommendations (beta): strategies, data prerequisites for model training, implementation paths by storefront, and frequently asked questions."
-createdAt: "2026-05-12T12:00:00.000Z"
-updatedAt: "2026-05-12T18:00:00.000Z"
-seeAlso:
-  - "/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores"
-  - "/docs/guides/integrating-product-recommendations-in-mobile-stores"
-  - "/docs/apps/vtex.recommendation-shelf"
-hidePaginationPrevious: false
-hidePaginationNext: false
+---  
+title: "Product recommendations"  
+slug: "product-recommendations"  
+hidden: false  
+excerpt: "VTEX Product Recommendations (beta): strategies, data prerequisites for model training, implementation paths by storefront, and frequently asked questions."  
+createdAt: "2026-05-12T12:00:00.000Z"  
+updatedAt: "2026-05-12T18:00:00.000Z"  
+seeAlso:  
+  - "/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores"  
+  - "/docs/guides/integrating-product-recommendations-in-mobile-stores"  
+  - "/docs/apps/vtex.recommendation-shelf"  
+hidePaginationPrevious: false  
+hidePaginationNext: false  
 ---
 
-> ℹ️ Product Recommendations is in closed beta and available only to selected clients. If you are a VTEX client and want to adopt it, contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. For a product-focused introduction, see the Help Center tutorial [Product Recommendations (beta)](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta).
+ℹ️ Product Recommendations is in closed beta and available only to selected clients. If you are a VTEX client and want to adopt it, contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. For a product-focused introduction, see the Help Center tutorial [Product Recommendations (beta)](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta).
 
 Product Recommendations let your store surface relevant products through multiple strategies (for example, similar items, cross-sell, or personalized shelves). They can improve discovery, conversion, and average order value.
 
@@ -25,9 +25,9 @@ This page is the entry point for developers: it summarizes prerequisites to trai
 
 You need a storefront implemented with one of the following:
 
-* [Store Framework](https://developers.vtex.com/docs/guides/store-framework)
-* [FastStore](https://developers.vtex.com/docs/guides/faststore)
-* A [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront that can load scripts and call VTEX APIs
+* [Store Framework](https://developers.vtex.com/docs/guides/store-framework)  
+* [FastStore](https://developers.vtex.com/docs/guides/faststore)  
+* A [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront that can load scripts and call VTEX APIs  
 * A mobile app capable of making authenticated HTTPS requests
 
 ### Activation and onboarding
@@ -38,25 +38,23 @@ Request activation and the strategies you want enabled through [Commercial Suppo
 
 Recommendation quality depends on catalog quality, tracked shopper behavior, and, for some strategies, order volume. Before models are trained and campaigns go live, your integration should:
 
-* All storefronts must have cart and order event capture configured. Store Framework handles this through the `vtex.recommendation-shelf` app. For FastStore, headless, and mobile, configure [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) as described in your implementation guide.
-* FastStore, headless, and mobile must also call the [Start session](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/v2/users/start-session) endpoint to link browsing behavior to completed purchases.
+* All storefronts must have cart and order event capture configured. Store Framework handles click/view events through the `vtex.recommendation-shelf` app. For other events in Store Framework, or all events in FastStore, headless, and mobile, configure [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) as described in the implementation guides.  
+* FastStore, headless, and mobile must also call the [Start session](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/v2/users/start-session) endpoint to link browsing behavior to completed purchases.  
 * All channels should send the product view events expected by the recommendation service so models can learn from real traffic.
 
-Some strategies need minimum purchase history so joint purchase patterns can be learned. Until those thresholds are met, VTEX may not train that strategy to full quality. See [Recommendation strategies](#recommendation-strategies) and [FAQ](#faq).
+Some strategies need minimum purchase history and product views so joint purchase patterns can be learned. Until those thresholds are met, VTEX may not train that strategy to full quality. See [Recommendation strategies](#recommendation-strategies) and [FAQ](#faq).
 
 ## Recommendation strategies
 
 The exact set of strategies enabled for your account is agreed during onboarding. Some strategies require enough sales or behavioral history before models perform well. Until then, rely on strategies that do not depend on those signals or tune shelves with your VTEX contact.
 
 | Strategy | How it works | Data requirements | Typical placement |
-| -------- | ------------ | ----------------- | ----------------- |
-| Most popular | Surfaces items with the highest view activity across the store | View event tracking | Home, category, search |
-| Best sellers | Highlights top-performing products by sales volume | Completed order data | Home, category, search |
-| Recommended for you | Personalizes picks based on individual browsing and purchase history. Falls back to top picks for new users or when the model is not ready yet (see [FAQ](#faq)) | 1,000+ multi-item purchases | Home, category, search, PDP, cart, checkout, post-purchase |
+| :---- | :---- | :---- | :---- |
+| Best sellers | Highlights top-performing products by sales volume | None | Home, category, search |
+| Recommended for you | Personalizes picks based on individual browsing and purchase history. Falls back to top picks for new users or when the model is not ready yet (see [FAQ](#faq)) | At least 1,000 unique profiles who visited a product page more than once. At least 10,000 of one of the following: product.view events or transaction.charge events.  | Home, category, search, PDP, cart, checkout, post-purchase |
 | Similar products | Matches items by catalog attributes such as category, brand, and specifications | Complete and consistent catalog attributes | PDP |
-| Frequently bought together | Surfaces items commonly purchased alongside the reference product | 10,000+ orders with more than one item | PDP, cart |
+| Frequently bought together | Surfaces items commonly purchased alongside the reference product | At least 1,000 transactions with basket size > 1 | PDP, cart |
 | Recently viewed | Shows the shopper's last-seen items based on view and interaction events | View and interaction event tracking | Home, category, search, PDP, cart, checkout, post-purchase |
-| Recent interactions | Surfaces products the shopper is likely to engage with next, based on recent activity | Ongoing interaction data and correct user/session linkage | Home, category, search, PDP, cart, checkout, post-purchase |
 | Visually similar products | Matches items by visual similarity using image recognition | Visual model enabled for the account | PDP |
 | Manual collection | Displays a merchant-defined set of products from a collection or rules | None | Any |
 
@@ -67,7 +65,7 @@ For FastStore, headless, and mobile implementations, campaign identifiers and AP
 Choose the guide that matches how your storefront is built:
 
 | Storefront | Developer guide |
-| ---------- | ----------------- |
+| :---- | :---- |
 | Store Framework | [Product Recommendation shelf (`vtex.recommendation-shelf`)](https://developers.vtex.com/docs/apps/vtex.recommendation-shelf): blocks, props, and Intelligent Search pixel prerequisites for tracking. |
 | FastStore / Headless | [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores): session management, fetching recommendations, event tracking, and Activity Flow setup. |
 | Mobile | [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores): session management, fetching recommendations, and manual event tracking via API. |
@@ -104,4 +102,4 @@ Campaign VRNs follow the format `vrn:recommendations:{store-name}:{campaignType}
 
 ### Who do I contact if recommendations are empty or look wrong?
 
-Open a ticket with [VTEX Support](https://help.vtex.com/en/support) with examples (page, strategy, time). Wrong or sparse results are often tied to catalog structure, missing events, or a strategy that is still gathering training data.
+Open a ticket with [VTEX Support](https://help.vtex.com/en/support) with examples (page, strategy, time). Wrong or sparse results are often tied to catalog structure, missing events, or a strategy that is still gathering training data.  
