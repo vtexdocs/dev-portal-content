@@ -39,25 +39,26 @@ After installing the CMS into your store account, install the Content plugin on 
 3. Add the following code to the `CallToAction.tsx` file:
 
    ```tsx
-   import React from "react";  
-
-CallToAction.$componentKey = 'CallToAction';
-   export interface CallToActionProps {  
-     title: string;  
-     link: {  
-       text: string;  
-       url: string;  
-     };  
-   }  
-     
-   export default function CallToAction(props: CallToActionProps) {  
-     return (  
-       <section>  
-         <h2>{props.title}</h2>  
-         <a href={props.link.url}>{props.link.text}</a>  
-       </section>  
-     );  
-   }  
+      import React from "react";
+   
+      export interface CallToActionProps {
+        title: string;
+        link: {
+          text: string;
+          url: string;
+        };
+      }
+   
+      export default function CallToAction(props: CallToActionProps) {
+        return (
+          <section>
+            <h2>{props.title}</h2>
+            <a href={props.link.url}>{props.link.text}</a>
+          </section>
+        );
+      }
+   
+      CallToAction.$componentKey = 'CallToAction';
    ```
 
 4. Export the `CallToAction` component in the `index.tsx` file.
