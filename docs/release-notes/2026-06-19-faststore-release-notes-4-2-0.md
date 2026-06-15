@@ -1,7 +1,7 @@
 ---
 title: 'FastStore Release Notes — Version 4.2.0'  
 slug: '2026-06-19-faststore-release-notes-4-2-0'  
-type: added   
+type: improved
 excerpt: 'FastStore version 4.2.0 focuses on Product Listing Page (PLP) performance improvements, localization reliability, session handling fixes, and CLI stability.'  
 createdAt: 2026-06-01T00:00:00.000Z  
 updatedAt: 2026-06-08T00:00:00.000Z  
