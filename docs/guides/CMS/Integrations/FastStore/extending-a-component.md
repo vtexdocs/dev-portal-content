@@ -155,8 +155,10 @@ Push the changes to sync with the CMS. Before doing it, make sure you're logged 
 Push the schema generated to the CMS to reflect in the Admin. To do this, run the following command:
 
 ```shell
-vtex content upload-schema cms/faststore/schema.json
+vtex content upload-schema -s faststore cms/faststore/schema.json
 ```
+
+> ℹ️ The `-s {storeId}` parameter (in this case, `faststore`) specifies the store ID directly, so you won't be prompted to enter it when running the command.
 
 ### Step 4 - Add the component to the CMS
 
