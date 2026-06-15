@@ -6,7 +6,7 @@ createdAt: "2026-02-19T12:50:00.813Z"
 updatedAt: "2026-04-30T11:48:00.813Z"  
 ---
 
-> ⚠️ This guide is valid only for [FastStore stores running v4](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) or higher and using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For stores using a FastStore version below v4, see [this guide](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section).
+> ⚠️ This guide applies only to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions 3 or 4. For stores using Headless CMS, please refer to [this guide](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section).
 
 To reuse an existing layout or behavior (such as a banner, hero, or product shelf), you can extend a component and adapt it to your store brand or business rules without rewriting everything from scratch. By extending rather than creating components from scratch, you maintain visual and technical consistency and reduce maintenance.
 
