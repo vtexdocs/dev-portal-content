@@ -41,6 +41,7 @@ After installing the CMS into your store account, install the Content plugin on 
    ```tsx
    import React from "react";  
 
+CallToAction.$componentKey = 'CallToAction';
    export interface CallToActionProps {  
      title: string;  
      link: {  
@@ -118,7 +119,7 @@ After installing the CMS into your store account, install the Content plugin on 
 7. Generate the final schema to add the new section. To do this, run the following command in a terminal:
 
     ```bash
-    vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json -b vtex.faststore  
+    vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json
     ```
 
 8. Open the `schema.json` file and check if the section was added to the section list. It should look similar to this:
