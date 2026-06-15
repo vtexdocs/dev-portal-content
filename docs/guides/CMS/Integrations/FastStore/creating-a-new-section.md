@@ -1,16 +1,16 @@
 ---
 title: "Creating a new section in the CMS"
 hidden: false  
-slug: "cms-extending-a-component"  
+slug: "cms-creating-a-new-section"  
 createdAt: "2026-02-19T12:50:00.813Z"  
 updatedAt: "2026-04-30T11:48:00.813Z"  
 ---
 
 > ⚠️ This guide applies only to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions 3 or 4. For stores using Headless CMS, please refer to [this guide](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section).
 
-To reuse an existing layout or behavior (such as a banner, hero, or product shelf), you can extend a component and adapt it to your store brand or business rules without rewriting everything from scratch. By extending rather than creating components from scratch, you maintain visual and technical consistency and reduce maintenance.
+When your store requires a layout or behavior not natively available, you can create a new section component tailored to your brand or business rules. A section component gives you full control over the structure and content while integrating with the CMS.
 
-In this guide, you'll learn how to extend the **CallToAction** section in your FastStore project.
+In this guide, you'll learn how to create a new **CallToAction** section in your FastStore project.
 
 ![call-to-action](https://vtexhelp.vtexassets.com/assets/docs/src/call-to-cation___e74ef106c68c9e8d1e99edb2e9840d7b.png)
 
