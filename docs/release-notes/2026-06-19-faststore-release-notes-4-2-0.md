@@ -6,7 +6,7 @@ excerpt: 'FastStore version 4.2.0 focuses on Product Listing Page (PLP) performa
 createdAt: 2026-06-01T00:00:00.000Z  
 updatedAt: 2026-06-08T00:00:00.000Z  
 ---
- 
+
 This release brings targeted improvements across performance, localization, session handling, and CLI reliability. Highlights include faster PLP image loading and SSR behavior, fixes for localized routing and session hydration, and Windows-specific CLI import normalizations. See the sections below for details and upgrade notes.
 
 ## Performance
