@@ -1,6 +1,6 @@
 ---
 title: "Using CSS in Checkout extensions"
-slug: "css-styling-in-checkout-extensibility"
+slug: "using-css-in-checkout-extensions"
 hidden: false
 createdAt: "2026-06-10T00:00:00.000Z"
 updatedAt: "2026-06-10T00:00:00.000Z"
