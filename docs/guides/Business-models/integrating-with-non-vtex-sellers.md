@@ -1,5 +1,6 @@
 ---
-title: 'Integrating with non-VTEX sellers'
+title: "Integrating with non-VTEX sellers"
+slug: "integrating-with-non-vtex-sellers"
 hidden: false
 excerpt: "Learn how to act as a marketplace and onboard non-VTEX (external) sellers."
 createdAt: "2026-06-16T00:00:00.000Z"
