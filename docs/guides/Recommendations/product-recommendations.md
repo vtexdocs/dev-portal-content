@@ -13,7 +13,7 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-ℹ️ Product Recommendations is in closed beta and available only to selected clients. If you are a VTEX client and want to adopt it, contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. For a product-focused introduction, see the Help Center tutorial [Product Recommendations (beta)](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta).
+> ℹ️ Product Recommendations is in closed beta and available only to selected clients. If you are a VTEX client and want to adopt it, contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. For a product-focused introduction, see the Help Center tutorial [Product Recommendations (beta)](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta).
 
 Product Recommendations let your store surface relevant products through multiple strategies (for example, similar items, cross-sell, or personalized shelves). They can improve discovery, conversion, and average order value.
 
