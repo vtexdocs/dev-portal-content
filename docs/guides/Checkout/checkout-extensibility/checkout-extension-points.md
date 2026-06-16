@@ -45,7 +45,7 @@ These extension points are global and available across all Checkout pages, from 
 
 ### `layout.footer`
 
-Use this extension point to render content in the Checkout footer. Because it's global, the content is displayed consistently across all Checkout pages.
+Use this extension point to render content in the Checkout footer. Since it's global, the content is displayed consistently across all Checkout pages.
 
 ![Footer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/layout.footer.webp)
 
