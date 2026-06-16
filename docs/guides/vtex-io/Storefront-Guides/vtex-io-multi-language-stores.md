@@ -15,7 +15,7 @@ Internationalization is crucial for reaching global markets and providing a seam
 
 Before starting the internationalization process, understand the distinction between frontend app messages and catalog data.
 
-In general, **storefront content** can be sourced from either **frontend React apps** or the **[Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview)**. More precisely, app messages are translatable strings defined within a frontend app, while catalog messages comprise external data from the Catalog API. Therefore, consider these differences when translating storefront content, as internationalization is handled differently for each case. 
+In general, **storefront content** can be sourced from either **frontend React apps** or the **[Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview)**. More precisely, app messages are translatable strings defined within a frontend app, while catalog messages comprise external data from the Catalog API. Therefore, consider these differences when translating storefront content, as internationalization is handled differently for each case.
 
 ## Frontend app messages
 
@@ -79,6 +79,6 @@ Catalog messages include product names and product descriptions from the store c
 
 > ℹ️ We recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide) to manage catalog translations. It provides granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). To learn how to implement it, see the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
 
-Every data from the Catalog API is already set as translatable. The GraphQl approach is to overwrite an automatic catalog translation by sending the appropriate GraphQL query either to the Catalog API or to the Messages app. To learn how to overwrite a catalog message via the GraphQL API, please follow the [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization) guide.
+All data from the Catalog API is already set as translatable. The GraphQL approach is to overwrite an automatic catalog translation by sending the appropriate GraphQL query either to the Catalog API or to the Messages app. To learn how to overwrite a catalog message via the GraphQL API, please follow the [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization) guide.
 
 > ⚠️ The simultaneous use of both the Catalog Multi-Language API and the GraphQL (Messages) approach is not supported for catalog entities. Once the Catalog Multi-Language feature is activated for your account, you will no longer be able to manage translations using GraphQL.
