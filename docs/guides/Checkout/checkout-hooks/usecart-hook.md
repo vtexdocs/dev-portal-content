@@ -11,8 +11,6 @@ excerpt: "Learn how to use the useCart hook to access and modify cart data in Ch
 
 The `useCart` hook allows you to access cart data and perform mutations that are reflected across other entities within the Checkout data layer.
 
-> ℹ️ This hook is only available in some extension points.
-
 ## Usage
 
 ```js
