@@ -87,13 +87,13 @@ You must deploy and maintain an HTTPS service that VTEX will call to validate le
 * Validate the credentials against the legacy identity platform.  
 * Return only one of the supported response codes.
 
-##### Client registration
+#### Client registration
 
 Before VTEX can send authenticated requests to your middleware, it must register itself as a client to obtain a shared secret. VTEX does this by calling `POST /register` on your middleware. See `POST` [Register client](https://developers.vtex.com/docs/api-reference/b2b-password-migration-protocol#post-/register) for the protocol specification.
 
 > ℹ️ Your middleware generates and returns the `ClientId` and `Secret`. VTEX then uses these to sign every subsequent request. Treat the `Secret` as a credential: don't log it, and don't reuse it across environments.
 
-##### Request example
+**Request example**
 
 ```shell
 curl -X POST "https://your-middleware.com/register" \
@@ -103,7 +103,7 @@ curl -X POST "https://your-middleware.com/register" \
   }'
 ```
 
-##### Response example
+**Response example**
 
 ```json
 {
@@ -113,13 +113,13 @@ curl -X POST "https://your-middleware.com/register" \
 }
 ```
 
-##### Authentication request contract
+#### Authentication request contract
 
 Once registered, VTEX sends credential validation requests to your middleware as specified in  `POST` [Validate legacy credentials](https://developers.vtex.com/docs/api-reference/b2b-password-migration-protocol#post-/authentication).
 
 > ⚠️ The request to your middleware will always be made from one of the VTEX IPs listed at [http://ips.vtex.com](http://ips.vtex.com). Although VTEX cannot enforce this, we strongly recommend that your middleware checks the IP origin. If the IP is not from VTEX, your middleware should not respond.
 
-##### Request example
+**Request example**
 
 ```shell
 curl -X POST "https://your-middleware.com/authentication" \
@@ -135,7 +135,7 @@ curl -X POST "https://your-middleware.com/authentication" \
   }'
 ```
 
-##### Response contract
+#### Response contract
 
 Your middleware must return **only** the following HTTP status codes:
 
@@ -162,7 +162,7 @@ VTEX and your middleware must sign the exact same canonical string. Your middlew
 
 Canonical string format (`\n` separators, UTF-8 encoded):
 
-```
+```text
 {HTTP_METHOD}\n
 {PATH}\n
 {X-VTEX-Client-Id}\n
@@ -179,13 +179,13 @@ Where:
 
 ##### Signature computation
 
-```
+```text
 signature = HMAC(UTF8(canonicalString), secret)
 ```
 
 ##### Authorization header
 
-```
+```text
 Authorization: HMAC-SHA256 SignedHeaders=X-VTEX-Client-Id;X-VTEX-Timestamp;X-VTEX-Nonce;X-VTEX-Content-SHA256&Signature={{signature}}
 ```
 
@@ -224,7 +224,7 @@ Use `PUT` [Upsert password migration configuration](https://developers.vtex.com/
 
 > ⚠️ Treat `Secret` as a credential: don't log it, don't share it, and don't reuse it across environments.
 
-##### Request example
+**Request example**
 
 ```shell
 curl -X PUT "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/tenants/features/PasswordMigration" \
@@ -244,7 +244,7 @@ Use `PATCH` [Enable or disable password migration](https://developers.vtex.com/d
 
 Set the `enabled` parameter to `true` to enable or `false` to disable password migration.
 
-##### Request example
+**Request example**
 
 ```shell
 curl -X PATCH "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/tenants/features/PasswordMigration" \
@@ -260,7 +260,7 @@ curl -X PATCH "https://{{accountName}}.vtexcommercestable.com.br/api/authenticat
 
 Use `DELETE` [Delete password migration configuration](https://developers.vtex.com/docs/api-reference/vtex-id-api#delete-/api/authenticator/v1/tenants/features/-featureId-) to remove the password migration configuration from your account entirely.
 
-##### Request example
+**Request example**
 
 ```shell
 curl -X DELETE "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/tenants/features/PasswordMigration" \
@@ -274,7 +274,7 @@ When creating storefront users who should authenticate via password migration on
 
 > ⚠️ Once you create a user, you can't edit or remove it. If you upload incorrect data, create a new user with a new username.
 
-#### Request example
+**Request example**
 
 ```shell
 curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticator/storefront/users?isLegacyPassword=true" \
@@ -295,7 +295,7 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
   }'
 ```
 
-#### Response example
+**Response example**
 
 ```json
 {
