@@ -94,7 +94,7 @@ create_hash(' Allan ') #=> 8c01ade3cb71d3ac7c718ed5a0c565155a4c05a216d9e59013c5d
 ```
 
 > ℹ️ Delivery recommendation
-> 
+>
 > On the first integration, send all data. You can split it across multiple files (a good size is around 1 million rows per file). After the first integration, send only the delta of rows that changed.
 
 ## Instructions
