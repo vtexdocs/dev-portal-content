@@ -11,7 +11,7 @@ excerpt: "Understand the structure of a Checkout extensions project and build yo
 
 After you have a Checkout extensions project in your monorepo, you can create your first extension. When you create the project, a sample extension is already set up for you. To understand how it works, this guide walks through the files inside the project folder and then builds a new extension.
 
-> ℹ️ Before starting, make sure you have [set up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-setting-up).
+> ℹ️ Before starting, make sure you have [set up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
 
 ## Understanding the project
 
@@ -69,7 +69,7 @@ Consider the following key aspects of this example:
 
 ## Creating your first extension
 
-With an understanding of the essential parts of an extension and the project structure, you can create your first extension. This guide uses the example created in the [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-setting-up) step, with the sample folders and accounts. Replace the account and folder names, such as `store-a`, with your own to ensure the extension works as expected.
+With an understanding of the essential parts of an extension and the project structure, you can create your first extension. This guide uses the example created in the [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout) step, with the sample folders and accounts. Replace the account and folder names, such as `store-a`, with your own to ensure the extension works as expected.
 
 ### 1. Running the Checkout extensions project
 

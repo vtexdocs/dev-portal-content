@@ -16,7 +16,7 @@ After creating Checkout extensions, deploy them to make the changes available in
 
 ## Requirements
 
-Before deploying, make sure you have [set up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-setting-up) and configured FastStore WebOps for your account.
+Before deploying, make sure you have [set up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout) and configured FastStore WebOps for your account.
 
 > ℹ️ Deploying Checkout extensions with WebOps does not require the `discovery` module. You can use WebOps exclusively to deploy Checkout extensions if needed.
 

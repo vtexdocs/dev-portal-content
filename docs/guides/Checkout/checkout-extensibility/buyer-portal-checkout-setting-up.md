@@ -1,6 +1,6 @@
 ---
 title: "Setting up Buyer Portal Checkout"
-slug: "buyer-portal-checkout-setting-up"
+slug: "setting-up-buyer-portal-checkout"
 hidden: false
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"

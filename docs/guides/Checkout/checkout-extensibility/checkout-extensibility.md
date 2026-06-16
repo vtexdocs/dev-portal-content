@@ -13,7 +13,7 @@ Buyer Portal Checkout Extensibility lets you extend the default checkout journey
 
 The technical aspects of Checkout extensions are covered in the following articles:
 
-- [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-setting-up) — Install the Buyer Portal Checkout modules in your FastStore monorepo, create a Checkout project, and preview your extensions in development.
+- [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout) — Install the Buyer Portal Checkout modules in your FastStore monorepo, create a Checkout project, and preview your extensions in development.
 - [Getting started with Checkout extensions](https://developers.vtex.com/docs/guides/getting-started-with-checkout-extensions) — Understand the structure of a Buyer Portal Checkout extensions project and build your first extension.
 - [Deploying Checkout extensions](https://developers.vtex.com/docs/guides/deploying-checkout-extensions) — Deploy your extensions to production, generate preview deploys, and troubleshoot build failures.
 - [Using CSS in Checkout extensions](https://developers.vtex.com/docs/guides/css-styling-in-checkout-extensibility) — Style your extensions using CSS Modules, global imports, and CSS variables.
