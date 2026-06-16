@@ -12,7 +12,7 @@ In this guide, you'll learn how to start implementing internationalization in yo
 
 - **[Store architecture](#store-architecture):** Define your operation and the architecture that best fits your business needs.
 - **[Quickstart](#quickstart):** Discover the initial steps to internationalize your store.
-- **[Translation setup](#translation-setup):** Set up the tools you must have for your internationalized operation to work correctly.
+- **[Fundamental tools](#fundamental-tools):** Set up the tools you must have for your internationalized operation to work correctly.
 
 >ℹ️ This guide covers the internationalization approach for stores developed using [Store Framework](https://developers.vtex.com/docs/guides/store-framework). FastStore projects handle internationalization through a separate Localization feature, which follows a different setup flow.
 
@@ -74,7 +74,7 @@ Avoid mixing a root URL for one locale with a path prefix for another:
   **en-US:** `https://store.com/`
   **pt-BR:** `https://store.com/pt`
 
-## Translation setup
+## Fundamental tools
 
 The following tools are essential for enabling multi-language operation in your VTEX account.
 
