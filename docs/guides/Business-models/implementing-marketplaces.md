@@ -3,14 +3,14 @@ title: "Implementing marketplaces"
 slug: "implementing-marketplaces"
 hidden: false
 excerpt: "Learn about VTEX marketplace models to sell on other marketplaces or host multiple sellers."
-createdAt: ""
+createdAt: "2026-06-16T00:00:00.000Z"
 ---
 
 A marketplace is an ecommerce platform where multiple sellers offer their products, while the marketplace operator manages the platform and the overall customer experience. With VTEX, you can operate as a marketplace, hosting products from various sellers, and sell your products on other marketplaces.
 
 > ℹ️ Marketplace capabilities are available for all VTEX storefront technologies.
 
-This section cover the main marketplace implementation scenarios supported by VTEX. You'll learn how to implement marketplace operations with VTEX, whether you want to connect VTEX stores, sell through non-VTEX marketplaces, or onboard external sellers into your marketplace.
+This section covers the main marketplace implementation scenarios supported by VTEX. You'll learn how to implement marketplace operations with VTEX, whether you want to connect VTEX stores, sell through non-VTEX marketplaces, or onboard external sellers into your marketplace.
 
 ## Choose your implementation scenario
 
@@ -31,7 +31,7 @@ For detailed instructions, see [Integrating VTEX stores](https://developers.vtex
 
 ### Integrate with non-VTEX marketplaces
 
-Choose this path when your VTEX store acts as a seller and you want to sell through marketplaces outside the VTEX platform. This scenario can use native connectors, partner connectors, or custom integrations, depending on marketplace support and business requirements.
+Choose this path when your VTEX store acts as a seller, and you want to sell through marketplaces outside the VTEX platform. This scenario can use native connectors, partner connectors, or custom integrations, depending on marketplace support and business requirements.
 
 Use this guide to learn how to:
 
@@ -46,7 +46,7 @@ For detailed instructions, see [Integrating with non-VTEX marketplaces](https://
 
 ### Integrate with non-VTEX sellers
 
-Choose this path when your VTEX store acts as a marketplace and you want to onboard sellers that do not use VTEX. In this model, external sellers are integrated through a custom connector that exchanges catalog, price, inventory, and order data with your marketplace through VTEX APIs and the Marketplace Protocol.
+Choose this path when your VTEX store acts as a marketplace, and you want to onboard sellers who don't use VTEX. In this model, external sellers are integrated through a custom connector that exchanges catalog, price, inventory, and order data with your marketplace through VTEX APIs and the Marketplace Protocol.
 
 Use this guide to learn how to:
 
