@@ -15,7 +15,7 @@ After you have a Checkout extensions project in your monorepo, you can create yo
 
 ## Understanding the project
 
-### Entrypoint
+### Entry point
 
 The `src/index.tsx` file, located at the root of your project, is the entry point for all extensions created for Checkout. Upon project creation, this file contains the following structure:
 
