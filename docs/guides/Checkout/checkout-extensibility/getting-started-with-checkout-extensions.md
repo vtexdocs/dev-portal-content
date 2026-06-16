@@ -44,7 +44,7 @@ Consider the following key aspects of this file:
 
 Upon project creation, a sample extension is provided in the `src/HelloWorld.tsx` file. This sample extension consists of two files: a TypeScript file for the implementation and a CSS file for styling. Implementation and style files may be organized as preferred, either as multiple files or combined into a single file.
 
-> ℹ️ A stylesheet is not required for every extension. This structure is provided only as an example.
+> ℹ️ A stylesheet isn't required for every extension. This structure is provided only as an example.
 
 ```tsx
 // src/HelloWorld.tsx
