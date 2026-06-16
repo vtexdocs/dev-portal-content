@@ -29,7 +29,7 @@ Prepare the audience file before requesting an upload URL. The file must follow 
 Most attributes are not required. However, the more complete this information is, the better ad targeting and campaign segmentation will be.
 
 > ℹ️ Columns are case-sensitive
-> 
+>
 > Keep the column names exactly as they are presented.
 
 | Column            | Type   | Required | Description                                              |
