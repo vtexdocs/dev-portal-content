@@ -3,6 +3,7 @@ title: "Exploring Sales App extensions"
 slug: "exploring-sales-app-extensions"
 hidden: false
 createdAt: "2026-05-28T00:00:00.000Z"
+updatedAt: "2026-06-02T00:00:00.000Z"
 excerpt: "Customize Sales App with extension points in the cart, product detail page, and menu."
 seeAlso:
   - "/docs/guides/setting-up-sales-app-extensions"
