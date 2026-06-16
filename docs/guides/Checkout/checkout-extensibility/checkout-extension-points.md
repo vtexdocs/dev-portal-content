@@ -11,30 +11,30 @@ excerpt: "Explore the available Checkout extension points to extend the UI of Ch
 
 Checkout offers a variety of extension points across all of its stages, including cart, delivery, cart review, and order placed. These extension points allow you to extend the UX/UI of Checkout to meet your store's specific needs.
 
-Before implementing extensions, make sure you have [set up FastCheckout](https://developers.vtex.com/docs/guides/fastcheckout-setting-up).
+Before implementing extensions, make sure you have [set up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
 
 ## Available extension points
 
 The following table lists all available extension points, the Checkout stage where they render, and whether they may cause layout shift.
 
-| Extension point                       | Stage         | Description                                                                                      | Layout shift |
-| ------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------ | ------------ |
-| `layout.footer`                       | Global        | Render content in the Checkout footer, available across all Checkout pages.                      | No           |
-| `cart.cart-list.before`               | Cart          | Render content before the cart item list.                                                        | Yes ⚠️       |
-| `cart.cart-list.after`                | Cart          | Render content after the cart item list.                                                         | No           |
-| `cart.cart-item.after`                | Cart          | Render content below each cart item row.                                                         | Yes ⚠️       |
-| `cart.assembly-options.button.after`  | Cart          | Render content after the assembly options button of a cart item.                                 | Yes ⚠️       |
-| `cart.order-summary.after`            | Cart          | Render content below the order summary on the cart page.                                         | Yes ⚠️       |
-| `cart.order-button.after`             | Cart          | Render content after the main order button on the cart page.                                     | Yes ⚠️       |
-| `punchout.cart-item.after`            | Cart Punchout | Render content below each cart item row on the Punchout cart screen.                             | Yes ⚠️       |
-| `punchout.order-summary.cta`          | Cart Punchout | Render a primary action (call to action) in the Punchout order summary.                          | No           |
-| `delivery.cart-item.after`            | Delivery      | Render content below each cart item row on the delivery stage.                                   | Yes ⚠️       |
-| `delivery.information-form.after`     | Delivery      | Render content after the delivery information form.                                              | Yes ⚠️       |
-| `delivery.order-button.after`         | Delivery      | Render content after the order button on the delivery stage.                                     | Yes ⚠️       |
-| `review.cart-item.after`              | Review        | Render content below each cart item row on the review stage.                                     | Yes ⚠️       |
-| `payment.cart-item.after`             | Payment       | Render content below each cart item row on the payment stage.                                    | Yes ⚠️       |
-| `payment.order-button.after`          | Payment       | Render content after the order button on the payment stage.                                      | Yes ⚠️       |
-| `order-placed.cart-item.after`        | Order Placed  | Render content below each cart item row on the order placed stage.                               | Yes ⚠️       |
+| Extension point | Stage | Description | Layout shift |
+| --------------- | ----- | ----------- | ------------ |
+| [`layout.footer`](#layoutfooter) | Global | Render content in the Checkout footer, available across all Checkout pages. | No |
+| [`cart.cart-list.before`](#cartcart-listbefore) | Cart | Render content before the cart item list. | Yes ⚠️ |
+| [`cart.cart-list.after`](#cartcart-listafter) | Cart | Render content after the cart item list. | No |
+| [`cart.cart-item.after`](#cartcart-itemafter) | Cart | Render content below each cart item row. | Yes ⚠️ |
+| [`cart.assembly-options.button.after`](#cartassembly-optionsbuttonafter) | Cart | Render content after the assembly options button of a cart item. | Yes ⚠️ |
+| [`cart.order-summary.after`](#cartorder-summaryafter) | Cart | Render content below the order summary on the cart page. | Yes ⚠️ |
+| [`cart.order-button.after`](#cartorder-buttonafter) | Cart | Render content after the main order button on the cart page. | Yes ⚠️ |
+| [`punchout.cart-item.after`](#punchoutcart-itemafter) | Cart Punchout | Render content below each cart item row on the Punchout cart screen. | Yes ⚠️ |
+| [`punchout.order-summary.cta`](#punchoutorder-summarycta) | Cart Punchout | Render a primary action (call to action) in the Punchout order summary. | No |
+| [`delivery.cart-item.after`](#deliverycart-itemafter) | Delivery | Render content below each cart item row on the delivery stage. | Yes ⚠️ |
+| [`delivery.information-form.after`](#deliveryinformation-formafter) | Delivery | Render content after the delivery information form. | Yes ⚠️ |
+| [`delivery.order-button.after`](#deliveryorder-buttonafter) | Delivery | Render content after the order button on the delivery stage. | Yes ⚠️ |
+| [`review.cart-item.after`](#reviewcart-itemafter) | Review | Render content below each cart item row on the review stage. | Yes ⚠️ |
+| [`payment.cart-item.after`](#paymentcart-itemafter) | Payment | Render content below each cart item row on the payment stage. | Yes ⚠️ |
+| [`payment.order-button.after`](#paymentorder-buttonafter) | Payment | Render content after the order button on the payment stage. | Yes ⚠️ |
+| [`order-placed.cart-item.after`](#order-placedcart-itemafter) | Order Placed | Render content below each cart item row on the order placed stage. | Yes ⚠️ |
 
 > ⚠️ Some extension points may cause layout shifts and are marked with `Yes ⚠️` in the table above. If your extension relies on data fetching (for example, Fetch API calls), reserve space to handle dynamic content smoothly by using loading states and skeletons.
 > Fully static extensions and extensions that rely solely on data-layer hooks (such as `useCart`) shouldn't cause layout shifts, because Checkout always renders extensions seamlessly within the existing layout. Even so, implementing skeletons or loading states is recommended to improve the overall UX/UI.
@@ -165,7 +165,7 @@ Render content below each cart item row on the order placed stage. Use the [`use
 
 ## Displaying extension points in dev mode
 
-You can view all available extension points directly in the Checkout UI. To do this, run Checkout using the Checkout CLI with the `--show-placeholders` flag:
+You can view all available extension points directly in the Checkout UI. To do this, run Checkout using the Checkout CLI with the `--show-placeholders` flag (see the [Checkout CLI documentation](https://developers.vtex.com/docs/guides/checkout-cli) for more information):
 
 ```bash
 yarn checkout dev <account> <project-path> <port> --show-placeholders
