@@ -1,5 +1,5 @@
 ---
-title: "Buyer Portal Checkout extension points"
+title: "Checkout extension points"
 slug: "checkout-extension-points"
 hidden: false
 createdAt: "2026-06-09T00:00:00.000Z"
