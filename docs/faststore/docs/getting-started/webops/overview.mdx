@@ -1,5 +1,6 @@
 ---
 title: '1. Setting up the FastStore WebOps app'
+updatedAt: "2025-12-05T17:22:21.242Z"
 ---
 
 This document provides an overview of the [FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard), a tool designed to simplify the process of setting up a store and give you a clear view of your website's deployments and performance. The app allows you to focus on building your storefront without the hassle of complex configurations.
@@ -18,7 +19,7 @@ The FastStore WebOps app follows a specific workflow for setup and development. 
 - **Development workflow:** Unlike VTEX IO, which uses [workspaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace), FastStore relies on [branching system](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) for development and testing. Here's how it works:
     1. The app is installed in the `master` environment of your account.
     2. Development and testing occur on Git branches.
-    3. Once changes are approved, they are merged into your repository's `main` branch and will be available in the production environment for your customers.
+    3. Once changes are approved, they are merged into your repository's production branch (by default, the repository's default branch, typically `main`) and will be available in the production environment for your customers. You can [customize which branch generates production builds](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches) in the WebOps Integrations tab.
 
 ### Create your store Catalog
 

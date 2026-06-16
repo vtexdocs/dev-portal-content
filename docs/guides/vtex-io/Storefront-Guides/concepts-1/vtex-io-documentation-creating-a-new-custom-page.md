@@ -3,64 +3,60 @@ title: "Creating a new custom page"
 slug: "vtex-io-documentation-creating-a-new-custom-page"
 hidden: false
 createdAt: "2020-06-03T16:02:44.295Z"
-updatedAt: "2022-12-13T20:17:44.080Z"
+updatedAt: "2026-04-27T14:48:52.586Z"
+excerpt: "Learn how to create a new custom page for your store developed using Store Framework."
 category: "Storefront Development"
 ---
 
-Stores are made up of several different pages, each one having a different layout and content. When creating a store from scratch in VTEX IO, some default pages with predefined URLs are already available to you, such as:
+Stores consist of several pages, each with a unique layout and content. When you create a store in VTEX IO, several default pages with predefined URLs are available, such as:
 
-- `store.home` - Home page
-- `store.product`- Product page
-- `store.search` - Search Results page
-- `store.account` - Client Account page
-- `store.login` - Login page
-- `store.orderplaced` - Order Placed page
+- `store.home`: Homepage
+- `store.product`: Product page
+- `store.search`: Search results page
+- `store.account`: Client account page
+- `store.login`: Login page
+- `store.orderplaced`: Order placed page
 
-> ℹ️ You can manage each page's title and template in the Pages section, within the admin's CMS.
+> ℹ️ You can manage the title and template of each page in the Pages section of the CMS in the VTEX Admin.
 
-However, you may want to create a new custom page to meet your store's specific needs. In this case, you must create a new URL and template to accompany it.
+You can also develop custom pages to meet your store's specific needs, such as landing pages for special campaigns or institutional pages.
+
+In this guide, you'll learn how to create a new custom page for your Store Framework store.
 
 ## Instructions
 
-Follow the steps below and learn how to define a different layout and path for a new store page:
-
-1. Create a new template in your Store Theme.
-2. Create your new page's path.
-3. Add content to your page.
-4. Make your new theme content **publicly available**.
-
-### Creating the new template
-
-A template sets the page layout, so if you want to create a custom page for your store you also will need to create a new template for it.
-
-In order to do so, you first must choose one of three template types to host your new page:
-
-- **Product** - For pages that must deal with the content of a single product, such as a product details page. Adding any new product automatically generates a new product page.
-- **Product collections** - For pages containing a group of products, such as the Search Result page.
-- **Standard** - For pages with no specific product content. For instance, the Home page.
-
-> ℹ️ Even though `Standard` pages are not directly linked to any specific product, they may display shelves or lists of any chosen group of products. The main difference is that the group of products shown on such a page does not depend on the URL query but only on the setting of the shelf itself.
-
-Let's suppose we are going to create a simple About Us page for a store. At first, the page is not directly connected to any specific product, we should create a custom `Standard` template for it with an image in its left column and a title and text content in its right column:
+As an example, consider that you want to create a custom **About us** page for your store with an image in the left column and a title and text in the right column:
 
 ![store-product-exp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-0.png)
 
-1. In your Store Theme's code, declare a new template within your `blocks` folder or `blocks.jsonc` file.
+### Step 1 - Creating the new template
+
+First, define the template the new page will use. There are three template types:
+
+- **Product:** For pages that display content for a single product, like a product detail page. When a new product is added, a product page is automatically generated.
+- **Product collections:** For pages containing a group of products, such as the search result page.
+- **Standard:** For pages with no specific product content, such as the homepage.
+
+> ℹ️ Even though `Standard` pages aren't directly linked to a specific product, they can display shelves or lists for any chosen group of products. The main difference is that the group of products shown on a standard page depend on the shelf settings, not on the URL query.
+
+Then follow the steps below:
+
+1. In your Store Theme's code, declare a new template within your `blocks` folder or `blocks.jsonc` file as follows:
 
 ```json
 {
- "store.custom#{templatename}": {
+ "store.custom#about-us": {
      "blocks": [  
      ]
   }
 }
 ```
 
-2. Fill it out with the blocks that will set the desired layout. For example:
+2. Complete it with the blocks that will set the desired layout. For example:
 
 ```json
 {
- "store.custom#{templatename}": {
+ "store.custom#about-us": {
    "blocks": [
      "flex-layout.row#about-us"
    ]
@@ -101,16 +97,16 @@ Let's suppose we are going to create a simple About Us page for a store. At firs
 }
 ```
 
-For more information, refer to the [Flex Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout) documentation.
+For more information, see the [Flex Layout](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-flex-layout) documentation.
 
-### Creating the new page's path
+### Step 2 - Creating the new page's path
 
-Now that your page layout has been defined in the Store Theme code, the next step is to define the page's path to make the page accessible. You can define it through direct code changes or by using the account's admin.
+To make the new page accessible in your store, you must declare its path. You can do it by [updating the Store Theme code](#updating-the-store-theme-code) or [using the VTEX Admin](#using-the-vtex-admin).
 
-#### Through code changes
+#### Updating the Store Theme code
 
-1. In your theme's source code, access the `routes.json` file. It can be found in the `store` folder.
-2. There, add a path to the recently created template's JSON:
+1. In your theme's source code, access the `routes.json` file. You can find it in the `store` folder.
+2. In that file, add the path to the JSON file for the template you recently created:
 
 ```json
 "store.custom#{templatename}": {
@@ -119,32 +115,32 @@ Now that your page layout has been defined in the Store Theme code, the next ste
 ```
 
 3. Save your files.
-4. [Link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app/) the theme to a Development workspace. You will be able to access and see your new page live through your workspace, using the following format: `{workspaceName}--{accountName}.myvtex.com/{pathName}`.
+4. [Link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app/) the theme to a Development workspace. You'll be able to access and see your new page live through your workspace using the following format: `{workspaceName}--{accountName}.myvtex.com/{pathName}`.
 
-#### Using the account admin
+#### Using the VTEX Admin
 
-If you prefer to set the new page path using account admin, you must first must [release](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) your changes regarding template creation and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the new version of your Store Theme in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace).
+To set the new page path using VTEX Admin, you must first [release](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version) the changes you made to create the template and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the new version of your Store Theme in a [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace).
 
-Once your changes are set up in a Production workspace, you will be able to use the admin's CMS to create the page's path:
+Once your changes are set up in a production workspace, you can use the CMS in the Admin to create the page path:
 
-1. Access the admin's **Pages** section.
-2. Click on **Create New**.
-3. Choose the desired URL and any created template. For instance, the About Us page template previously created:
+1. In the VTEX Admin, go to **Storefront > Pages**.
+2. Click `Create new`.
+3. Choose the desired URL and one of the templates you created, such as the **About Us** page template previously created.
 
-![custom-pages-pages](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-1.png)
+A template only defines the page layout. Therefore, you can apply any new template to any page that accepts templates of the same type.
 
-Notice that a template only sets the page layout. Hence, any new template can be set on any page that accepts templates of the same type as the page itself.
+> ℹ️ When editing any content using the CMS section, When editing content in the CMS, we recommend making your changes in a production workspace. Make sure you do not create your new custom page in the store's master workspace.
 
-> ℹ️ When editing any content using the CMS section, it's always good to make your changes in a production workspace. Therefore, make sure you are not creating your new custom page in the store's master workspace.
+### Step 3 - Adding the content
 
-### Adding the content
+You can define your page content either by making changes directly in the [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app or by using [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview) in the VTEX Admin.
 
-Your new page now has a custom layout, thanks to the newly created template, and can be accessed thanks to its route creation. The next step is editing its content.
+When editing directly in the Store Theme app, you can visualize your changes by linking the theme to your development workspace.
 
-You can define your page content by performing changes directly to your Store Theme app or using the admin's Site Editor. When using this last one, you can browse to your custom page or simply write its URL in the `Page URL` field. For example:
+To edit the page in Site Editor, you can browse to your custom page or enter its URL in the `Page URL` field.
 
-![custom-pages-siteeditor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-creating-a-new-custom-page-2.png)
+![custom-pages-siteeditor](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-page-site-editor.png)
 
-### Making your theme content publicly available
+### Step 4 - Making your theme content publicly available
 
-If you are happy with the changes to your Store Theme, make your new theme content public. Up until this point, the changes were performed in your development workspace. Access our documentation on [**making your theme content publicly available**](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/) and follow the steps detailed there.
+If you're satisfied with the changes to your Store Theme, make your new page publicly available. For detailed instructions, see the guide [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public/).

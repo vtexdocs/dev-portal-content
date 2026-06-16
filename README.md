@@ -21,6 +21,9 @@ This repository contains all the files for the guides featured in the [VTEX Deve
   - [Check VTEX Styleguide](#check-vtex-styleguide)
   - [Navigation Preview](#navigation-preview)
   - [Markdown Lint](#markdown-lint)
+  - [Index Documents](#index-documents)
+- [Managing Developer Portal documentation](#managing-developer-portal-documentation)
+  - [Applying categorization and filters to a troubleshooting article](#applying-categorization-and-filters-to-a-troubleshooting-article)
 
 ## Contributing to the documentation
 
@@ -193,3 +196,139 @@ Commit types supported:
 **Dependencies**:
 - `actions/checkout@v1`: Checks out the repository
 - `reviewdog/action-markdownlint@v0`: Runs markdown linting with reviewdog integration
+
+### Index Documents
+**Trigger**: Push to `main`/`master` (when `docs/**/*.md` files change), or manual `workflow_dispatch`  
+**Purpose**: Indexes changed documentation files into the VTEX Docs search system for hybrid search (BM25 + vector similarity). Uses content-hash-based skip optimization to avoid re-indexing unchanged files. Supports manual `full_reindex` mode to reprocess all documents.  
+**Dependencies**:
+- `actions/checkout@v4`: Checks out the repository with `fetch-depth: 2` for diff comparison
+- `jq` (pre-installed): JSON processing for file lists and API responses
+- `curl` (pre-installed): HTTP requests to the indexing API
+
+**Required Secrets**:
+- `INDEXING_URL`: Base URL of the VTEX Docs API
+- `INTERNAL_ACCESS_KEY`: API consumer key with `index-documents` permission
+
+## Managing Developer Portal documentation
+
+In this section, we will address the following topics related to the Developer Portal:
+
+- [Applying categorization and filters to a troubleshooting article](#applying-categorization-and-filters-to-a-troubleshooting-article)
+
+### Applying categorization and filters to a troubleshooting article
+
+The [Troubleshooting](https://developers.vtex.com/docs/troubleshooting) page allows users to navigate content through:
+
+- **Primary category**: the article's folder within `docs/troubleshooting`
+- **Type**: values added to `symptomFilters`
+- **Area**: values added to `domainFilters`
+
+
+#### Troubleshooting primary categories
+
+Troubleshooting primary categories are determined by the folder where the article is saved. Use the category that best matches the broad operational context of the issue.
+
+The current troubleshooting categories are:
+
+| Category                        | Description                                                                                                             |
+| :---------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| **API and integrations** | API usage, payload issues, resource updates, integration contracts, external provider flows, and related Admin configuration for integrations |
+| **VTEX IO and app development** | VTEX IO app lifecycle, CLI usage, dependencies, workspaces, installation, publishing, and Admin settings related to app behavior and configuration |
+| **Storefront** | Storefront behavior, rendering, customization of components and blocks, FastStore implementation, routes, overrides, schema usage, and Admin settings that affect storefront behavior |
+| **Content Management (CMS)** | Issues related to accessing and using VTEX CMS tools, including CMS, Headless CMS (Legacy), Site Editor, and Layout, such as permissions and login, finding and editing content, publishing updates to the storefront, previewing changes where supported, and understanding how content changes propagate |
+| **Checkout and shopping experience** | Checkout completion, cart behavior, purchase blockers, storefront issues that affect the shopping experience, and Admin settings related to checkout behavior |
+| **Analytics and data collection** | Analytics behavior, GTM, GA, dataLayer, event collection, measurement consistency, and Admin settings related to analytics configuration |
+
+
+#### Troubleshooting Type filters
+
+These filters appear in the Troubleshooting UI under **Type**. Each troubleshooting article should usually have **1 to 2** values in `symptomFilters`.
+
+The existing values and their context are:
+
+| Type                        | Description                                                                                                             |
+| :---------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| **Access restriction** | Permission, authorization, authentication, or access-related failures |
+| **Setup issue** | Incorrect setup, environment mismatch, dependency setup, or missing configuration |
+| **Installation failure** | Installation, linking, plugin, or dependency installation failures |
+| **Loading failure** | Content, feature, or resource not loading or not becoming available |
+| **Performance degradation** | Slow behavior, delayed publishing, degraded performance, or timeouts |
+| **Publishing failure** | Publish, release, deploy, or availability-after-publish failures |
+| **Rendering mismatch** | Wrong storefront output, missing visual behavior, display inconsistency |
+| **Runtime error** | Explicit CLI, app, GraphQL, or runtime execution errors |
+| **Measurement inconsistency** | Analytics, GTM, GA, UTM, or dataLayer inconsistency |
+| **Validation error** | Schema, API, dependency, version, or payload validation failures |
+
+
+#### Troubleshooting Area filters
+
+These filters appear in the Troubleshooting UI under **Area**. Each troubleshooting article should usually have **1 to 3** values in `domainFilters`.
+
+The existing values and their context are:
+
+| Area                        | Description                                                                                                             |
+| :---------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| **Analytics** | General analytics behavior, tracking setup, and event consistency |
+| **Apps** | App install, dependency, and publish issues |
+| **Catalog** | Catalog data, SKU configuration, and product-related behavior |
+| **Checkout** | Checkout flow, cart behavior, purchase completion, and session-related storefront behavior |
+| **CMS** | CMS access, plugins, pages, and content publishing |
+| **DNS** | DNS, hostname, SSL, and domain pointing issues |
+| **FastStore** | FastStore storefront, performance, schema, and publishing topics |
+| **Google Analytics** | GA and GA4 tracking behavior |
+| **Google Tag Manager** | GTM setup, debugging, and event collection |
+| **Headless CMS (Legacy)** | Legacy Headless CMS access, content modeling, page publishing, plugin usage, and legacy content delivery behavior |
+| **License Manager** | User roles, permissions, and resource access management |
+| **Pricing and Promotions** | Price display, price configuration, discount behavior, promotional rules, and offer inconsistencies |
+| **Releases** | Releases module, build status, and deployment delivery |
+| **Routes/Rewriter** | Routes, redirects, and rewrite behavior |
+| **Search** | Search provider integration, result rendering, and search-driven storefront data |
+| **Site Editor** | Site Editor access, block-level content editing, storefront customization, preview, and publishing behavior |
+| **Store Framework** | VTEX IO Store Framework storefront implementation and behavior |
+| **VTEX IO** | VTEX IO platform, CLI usage, workspaces, app lifecycle, and account-level app behavior |
+
+> ℹ️ If you wish to add or remove a troubleshooting filter value, you have to manage it in the [devportal](https://github.com/vtexdocs/devportal) repository.
+
+
+##### Example of troubleshooting categorization in the front matter
+
+See below some examples of categorization and filters applied to the troubleshooting article front matter:
+
+1. `dev-portal-content/docs/troubleshooting/vtex-io-and-app-development/i-cant-install-vtex-io-cli.md`
+   - Primary category: **VTEX IO and app development**
+   - Symptom filters: **Installation failure**, **Setup issue**
+   - Domain filters: **VTEX IO**
+
+2. `dev-portal-content/docs/troubleshooting/content-management-cms/unable-to-access-headless-cms.md`
+   - Primary category: **Content Management (CMS)**
+   - Symptom filters: **Access restriction**, **Setup issue**
+   - Domain filters: **CMS**, **License Manager**, **VTEX IO**
+
+3. `dev-portal-content/docs/troubleshooting/checkout-and-shopping-experience/i-cant-complete-a-purchase-on-a-faststore-website.md`
+   - Primary category: **Checkout and shopping experience**
+   - Symptom filters: **Access restriction**, **Setup issue**
+   - Domain filters: **Checkout**, **FastStore**, **DNS**
+
+
+#### Troubleshooting filter governance
+
+When classifying troubleshooting content, apply the following rules:
+
+1. Use **domainFilters** as the primary discovery axis.
+2. Use **symptomFilters** as the secondary refinement axis.
+3. Treat the **primary category** (folder) as the broad navigation layer, not as the main retrieval mechanism.
+4. For hybrid articles, prioritize:
+   - the product or area the user is most likely to associate with the issue as the main domain filter
+   - the dominant symptom as the main troubleshooting refinement
+   - additional domain filters only when they materially improve discovery
+
+#### Troubleshooting taxonomy governance for scale
+
+To keep the troubleshooting taxonomy consistent as the section grows, follow these guidelines:
+
+- Apply **1 primary category** per article.
+- Apply **1 to 2 symptomFilters** per article in most cases.
+- Apply **1 to 3 domainFilters** per article in most cases.
+- Only promote niche filter values when recurring article volume justifies them.
+- Only propose new primary categories when the current structure creates repeated ambiguity for users and editors.
+- Prioritize the user's mental model over internal team ownership or root-cause attribution when deciding how to classify an article.

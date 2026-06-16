@@ -34,7 +34,10 @@ def plural_list(list):
 # Get changed Markdown files in the PR (only in 'docs/guides', 'docs/release-notes', 'docs/troubleshooting', and 'docs/faststore' folders)
 changed_files = [f for f in pr.get_files() if (
     f.filename.endswith(('.md', '.mdx'))
-    and f.filename.startswith(('docs/guides/', 'docs/release-notes/', 'docs/troubleshooting/', 'docs/faststore/'))
+    and (
+        f.filename.startswith(('docs/guides/', 'docs/release-notes/', 'docs/faststore/'))
+        or (f.filename.startswith('docs/troubleshooting/') and f.filename.count('/') > 2)
+    )
 )]
 
 print(f"Found {len(changed_files)} markdown file{plural_list(changed_files)} in PR:")
@@ -71,6 +74,9 @@ for f in changed_files:
             # Regular expression for ISO 8601 date format (YYYY-MM-DDThh:mm:ss.sssZ)
             iso8601_regex = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$")
 
+            # Regular expression for date format (YYYY-MM-DD)
+            date_regex = re.compile(r"^\d{4}-\d{2}-\d{2}-")
+
             # Validate formatting in present fields
             for key, value in fm_dict.items():
                 if key == 'title':
@@ -89,6 +95,9 @@ for f in changed_files:
                         error_found = True
                     if value != f.filename.split('/')[-1].replace('.mdx', '').replace('.md', ''):
                         field_errors.append({"field": "slug", "message": "'slug' must match the filename without extension"})
+                        error_found = True
+                    if f.filename.startswith('docs/release-notes') and not date_regex.match(value):
+                        field_errors.append({"field": "slug", "message": "'slug' in release notes must start with date in format YYYY-MM-DD"})
                         error_found = True
                     continue
                 if key == 'hidden':
@@ -111,6 +120,16 @@ for f in changed_files:
                         field_errors.append({"field": "tags", "message": "'tags' must be a list"})
                         error_found = True
                     continue
+                if key == 'domainFilters':
+                    if not isinstance(value, list):
+                        field_errors.append({"field": "domainFilters", "message": "'domainFilters' must be a list"})
+                        error_found = True
+                    continue
+                if key == 'symptomFilters':
+                    if not isinstance(value, list):
+                        field_errors.append({"field": "symptomFilters", "message": "'symptomFilters' must be a list"})
+                        error_found = True
+                    continue
                 if key == 'type':
                     allowed_types = {"added", "deprecated", "fixed", "improved", "info", "removed"}
                     if not (isinstance(value, str) and value in allowed_types):
@@ -128,7 +147,7 @@ for f in changed_files:
 
             rn_mandatory_fields = ['type', 'slug', 'excerpt', 'createdAt']
             guides_mandatory_fields = ['slug', 'excerpt']
-            ts_mandatory_fields = ['tags', 'slug', 'excerpt']
+            ts_mandatory_fields = ['domainFilters', 'symptomFilters', 'slug', 'excerpt']
 
             if f.filename.startswith('docs/release-notes'):
                 missing_fields = not_present_keys(rn_mandatory_fields, fm_dict)
@@ -193,7 +212,6 @@ if file_errors:
                 message = err.get("message", "")
                 comment_body += f"| `{field}` | {message} |\n"
 
-       
         pr.create_issue_comment(comment_body)
     print(' \n')
     print("Frontmatter errors found. Failing the action.")

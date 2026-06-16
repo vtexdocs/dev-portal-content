@@ -8,7 +8,7 @@ tags:
     - FastStore
 ---
 
-This release introduces right-to-left (RTL) language support, improves search page metadata for better discoverability, and delivers UI refinements and stability for components.
+This release improves search page metadata for better discoverability and delivers UI refinements and stability for components.
 
 ## General
 

@@ -1,0 +1,239 @@
+---
+title: 'Upgrading FastStore to v4'
+---
+
+In this guide, you'll learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities.
+
+> ⚠️ Follow the instructions that match your current FastStore version to ensure a smooth and consistent migration.
+
+## Upgrading from v3 to v4
+
+### Change the `@faststore/cli` version
+
+Make sure your project is up to date with FastStore `4.1.0` version or the latest. To do so, follow the steps in [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
+
+### Update `package.json`
+
+Open your `package.json` and apply the following changes:
+
+|  | Description |
+| :---- | :---- |
+| **Add `graphql`** to `^16.11.0` | **GraphQL** must now be explicitly declared as a dependency in your `package.json` file. It should be version `^16.11.0` or higher. Previously, this was managed internally by `@faststore/cli`. |
+| **Remove the `next` entry** from `dependencies` | Next.js is now managed internally by `@faststore/cli`, and declaring it separately causes version conflicts. |
+| **Update `TypeScript` version** | To ensure correct TypeScript typing, update the TypeScript version to `^5.9.3`. |
+
+```json
+{
+  ...
+  "dependencies": {
+    "@faststore/cli": "^4.0.1",
+    "graphql": "^16.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+
+}
+```
+
+```json
+{
+  ...
+  "devDependencies": {
+    ...
+    "typescript": "^5.9.3"
+    ...
+  },
+}
+```
+
+> ⚠️ The example above shows only the entries relevant to this change. Keep the rest of your `package.json` intact.
+
+#### Update `package.json` for stores using the monorepo
+
+For stores using the [monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), in addition to the updates described in [Update package.json](#update-package-json), you must also add `@inquirer/type` to the `resolutions` field.
+
+This is required to ensure consistent dependency resolution across the monorepo and to avoid version conflicts related to the `inquirer` package.
+
+```json
+{
+  ...
+  "resolutions": {
+    ...
+    "@inquirer/type": "^1.5.5"
+  }
+}
+```
+
+### Update the Node.js version in discovery.config.js
+
+In your `discovery.config.js`, ensure the `experimental` object includes `nodeVersion: 24`:
+
+```javascript
+experimental: {
+  nodeVersion: 24,
+},
+```
+
+### Update the SCSS utilities import
+
+> ⚠️ Only applies if you have custom SCSS files using FastStore utility mixins.
+
+In previous versions, FastStore utility mixins were imported globally. This meant you could use mixins like `media` or `layout-content` without explicitly importing them in your file.
+
+With FastStore v4, utilities are no longer globally available. You must explicitly import them in each SCSS file where they are used. This improves traceability and avoids conflicts between mixins.
+
+* **Before (global import, no namespace):**
+
+```
+@import "~@faststore/ui/src/styles/base/utilities";
+
+/* Usage without namespace */
+@include media("<tablet") { ... }
+@include layout-content;
+```
+
+* **After (explicit import at the top of the file):**
+
+```
+@use "@faststore/ui/src/styles/base/utilities" as u;
+
+/* Usage with namespace */
+@include u.media("<tablet") { ... }
+@include u.layout-content;
+```
+
+By using `@use`, you explicitly declare dependencies and access the mixins through a namespace (`u` in this case), making the origin of each utility clear and easier to maintain.
+
+> ⚠️ Any file with custom mixins needs to be updated to adapt to the [Sass library](https://sass-lang.com/) update, which no longer allows `@import`; only `@use` is supported.
+
+### Update imports to use `@faststore/core/api`
+
+`@faststore/graphql-utils` is deprecated in FastStore v4. The gql tag used for GraphQL documents should no longer be imported from that package. Update imports to use `@faststore/core/api` instead. For example, replace `import { gql } from '@faststore/graphql-utils'` with `import { gql } from '@faststore/core/api'`.
+
+### Sync the change with CMS
+
+After updating the imports, you must sync the changes with the CMS. The steps depend on which CMS your store uses.
+
+#### Stores using Headless CMS (legacy)
+
+> ⚠️ FastStore v4 introduces breaking changes that move several previously hardcoded labels and messages into the CMS. Before publishing, you must sync the CMS, configure the new fields in the affected sections, and republish any pages that use them.
+
+1. Run `yarn cms-sync` to sync the schema changes with the Headless CMS.
+2. Review the breaking changes below, configure the new fields in the relevant sections, and republish the affected pages.
+
+<details>
+<summary><b>Breaking changes affecting Headless CMS (legacy) sections</b></summary>
+
+The following components had hardcoded labels removed in v4. Each one now exposes new fields in the corresponding Headless CMS (legacy) section that must be configured after the sync.
+
+- **Breadcrumb** ([PR #3099](https://github.com/vtex/faststore/pull/3099)): The `"All products"` label, previously fixed in code for pages without a breadcrumb list (such as Search), is now configurable through the `Fallback label` field in the Breadcrumb section. After syncing, configure this field and republish pages that include the Breadcrumb section.
+- **Sort** ([PR #3100](https://github.com/vtex/faststore/pull/3100)): Sort option labels are no longer hardcoded. They are now configured through the `sortBySelector` field in the ProductGallery section. After syncing, configure the labels and republish pages that include the ProductGallery section.
+- **Invalid quantity toast** ([PR #3102](https://github.com/vtex/faststore/pull/3102)): The toast message shown when an invalid quantity is entered (in the PDP quantity selector, the Navbar search suggestions with quick order enabled, or the SKU matrix sidebar) is no longer hardcoded. It is now configured through the `invalidQuantityToast` field, available in both the Navbar and ProductDetails sections. After syncing, configure the labels in both sections and republish the affected pages.
+- **ScrollToTopButton**: Removed from the ProductListing template. It must now be added manually through the Headless CMS on PLP and Search pages.
+- **Other components with hardcoded messages removed** ([PR #3192](https://github.com/vtex/faststore/pull/3192)): Hardcoded labels were also removed from the components listed below. After syncing the CMS, review the corresponding sections and configure the new fields as needed:
+    - Filter: `FilterSlider`, `FilterDesktop`, `FilterDeliveryMethodFacet`
+    - Region: `RegionSlider`, `RegionPopover`
+    - Cart: `EmptyCart` (`title`, `buttonLabel`)
+    - Product: `ProductCard`, `ProductCardContent` (`buttonLabel`, `outOfStockLabel`, `includeTaxesLabel`, `sponsoredLabel`), `ProductDetailsSettings` (`buyButtonTitle`)
+    - Common: `Breadcrumb` (`alt`, `icon`), `Footer` (`logoLink` defaults), `Navbar` (`collapseSearchAriaLabel`)
+    - Search: `SearchProductItem` (`outOfStockLabel` in `quickOrderSettings`), `SearchInput`, `SearchTop`, `SearchHistory`
+    - `EmptyGallery`
+    - Hooks: `useDeliveryPromise`, `useShippingSimulation`
+    - `PickupPointCards`
+
+</details>
+
+#### Stores using CMS with custom components
+
+If your store already uses the new [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) format, with component schemas and Content Type schemas stored in separate `.jsonc` files, you can skip the migration steps in this section and follow the instructions in [Generate and upload the schema below](#generate-and-upload-the-schema).
+
+If your store still uses the legacy `sections.json` and `content-types.json` files, you must first split them into the new format before generating the schema.
+
+1. If `sections.json` is still in the legacy format, run the following command:
+
+  ```shell
+  vtex content split-components -i cms/faststore/sections.json -o cms/faststore/components
+  ```
+
+2. If `content-types.json` is still in the legacy format, run:
+
+  ```shell
+  vtex content split-content-types -i cms/faststore/content-types.json -s cms/faststore/sections.json -o cms/faststore/pages
+  ```
+
+  > ℹ️ The paths above are examples based on the default FastStore project structure. If your project stores component schemas and Content Type schemas in different locations, adjust the input and output paths accordingly.
+
+#### Generate and upload the schema
+
+After ensuring your CMS files are in the new format, generate and upload the schema:
+
+1. Log in to your VTEX account:
+
+  ```shell
+  vtex login {accountName}
+  ```
+
+2. Generate the schema:
+
+  ```shell
+  vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json
+  ```
+
+3. Upload the schema:
+
+  ```shell
+  vtex content upload-schema cms/faststore/schema.json
+  ```
+
+The table below explains the command arguments:
+
+| Argument | Description |
+| -------- | ----------- |
+| `cms/faststore/components` | Directory containing your component schema files. |
+| `cms/faststore/pages` | Directory containing your Content Type schema files. |
+| `-o cms/faststore/schema.json` | Local output path for the generated schema file before upload. |
+
+For more details on these commands, see [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
+
+#### Stores using CMS without custom components
+
+If your store **does not have any custom CMS schema files** yet and should use only the default FastStore schema, you do not need to run `generate-schema`. Instead, create a `schema.json` file in `cms/faststore` and add the following content:
+
+  ```json
+  {
+    "$base": "vtex.faststore"
+  }
+  ```
+
+Upload this content by running the following command in the terminal:
+
+  ```shell
+  vtex content upload-schema cms/faststore/schema.json
+  ```
+
+This creates a schema for your store in CMS that points to the FastStore base schema.
+
+> ℹ️ You can also use `"vtex.faststore@4.1.0"` as the `$base` value if you want to pin the version explicitly. Otherwise, use `"vtex.faststore"` to get the latest version.
+
+After uploading the file, you can safely delete the local `cms/faststore/schema.json` file.
+
+### Update Node.js runtime version in WebOps (existing projects only)
+
+To ensure compatibility with FastStore v4, update your project to use Node.js `v24` in the runtime environment.
+
+1. **Test locally with Node.js `v24`**
+
+Build and run your project locally using Node.js `v24`. Identify and fix any compatibility issues that may arise during the process.
+
+2. **Update Node.js version in WebOps and deploy**
+
+After validating locally, update the Node.js version to `v24` in WebOps and deploy your changes:
+
+1. Open the VTEX Admin and access **Storefront > FastStore WebOps**.
+2. Go to the **Settings** tab and in the **Node.js version** configuration, set it to `v24`.
+3. Click `Save`.
+4. Trigger a new deployment to apply the changes.
+
+## Upgrading from v2 to v4
+
+To upgrade your project from v2 to v4, first follow the instructions in [Upgrading from FastStore v2 to v3](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v2-to-v3). Once completed, proceed with the steps in [Upgrading from v3 to v4](#upgrading-from-v3-to-v4).

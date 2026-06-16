@@ -16,12 +16,12 @@ The Node builder versions are defined in the table below. Each builder version i
 
 |Builder version|Node.js|@types/node|TypeScript|Status|
 |-|-|-|-|-|
-|3.x|[8.x](https://nodejs.org/en/blog/release/v8.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Deprecated|
-|4.x|[12.x](https://nodejs.org/en/blog/release/v12.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Deprecated|
-|6.x|[16.x](https://nodejs.org/en/blog/release/v16.0.0)|[12.0.0](https://www.npmjs.com/package/@types/node/v/12.0.0)|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Active until June 2025|
-|7.x|[20.x](https://nodejs.org/en/blog/release/v20.0.0)|[20.0.0](https://www.npmjs.com/package/@types/node/v/20.0.0)|[5.5.3](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html)|Active|
+|3.x|[8.x](https://nodejs.org/en/blog/release/v8.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Decommissioned|
+|4.x|[12.x](https://nodejs.org/en/blog/release/v12.0.0)|-|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Decommissioned|
+|6.x|[16.x](https://nodejs.org/en/blog/release/v16.0.0)|[12.0.0](https://www.npmjs.com/package/@types/node/v/12.0.0)|[3.9.7](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html)|Stable until June 2025|
+|7.x|[20.x](https://nodejs.org/en/blog/release/v20.0.0)|[20.0.0](https://www.npmjs.com/package/@types/node/v/20.0.0)|[5.5.3](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html)|Stable|
 
->⚠️ We strongly recommend upgrading your Node app to the latest Node builder before legacy Node builder versions are deprecated. After deprecation, apps using a legacy builder version will continue to work, but you won't be able to release or publish new **major** [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning). Follow the instructions in the [Node builder 7.x migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide) to upgrade your Node app.
+>⚠️ We strongly recommend upgrading your Node app to the latest Node builder before legacy Node builder versions lose the **Stable** status. For details, see [Builder version statuses](https://developers.vtex.com/docs/guides/vtex-io-documentation-builder-version-statuses). Follow the instructions in the [Node builder 7.x migration guide](https://developers.vtex.com/docs/guides/node-builder-7x-migration-guide) to upgrade your Node app.
 
 ## Dependency compatibility
 

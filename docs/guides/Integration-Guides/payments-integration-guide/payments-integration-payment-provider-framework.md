@@ -99,7 +99,9 @@ paymentProvider
 manifest.json
 ```
 
-3. Declare the payment methods accepted by your payment provider. This action allows them to be implemented automatically by the builder, without the need to declare them in the `/manifest` route.
+3. Declare the payment methods accepted by your payment provider. This allows them to be automatically implemented by the builder, without the need to declare them in the `/manifest` route.
+
+> ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
 
 ```json
 {
@@ -331,7 +333,7 @@ A prerequisite for this procedure is to have products for sale at your store for
 
 1. Launch a beta version of your connector. E.g.: `vtex.payment-provider-test@0.1.0-beta`. If you need, check the [Making your app publicly available article](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
 2. Install the beta version on `master` workspace. Wait for around 1 hour.
-3. Go to `https://{account}myvtex.com/admin/affiliations/connector/Vtex.PaymentGateway.Connectors.PaymentProvider.PaymentProviderConnector_{connector-name}/`. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
+3. Go to `https://{account}.myvtex.com/admin/affiliations/connector/Vtex.PaymentGateway.Connectors.PaymentProvider.PaymentProviderConnector_{connector-name}/`. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
 
    ![Payment affiliation configuration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/payments-integration-guide/payments-integration-payment-provider-framework-0_370.png)
 

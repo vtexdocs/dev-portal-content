@@ -1,6 +1,6 @@
 ---
 title: "FastStore Release Notes — Version 3.90.0" 
-slug: "2025-10-13-faststore-release-notes"
+slug: "2025-10-13-faststore-release-notes-version"
 type: "added"
 createdAt: "2025-10-13T11:00:00.000Z"
 updatedAt: "2025-10-13T11:05:00.000Z"
