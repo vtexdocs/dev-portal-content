@@ -1,6 +1,6 @@
 ---
 title: "Integrating VTEX stores"
-slug: ""integrating-vtex-stores"
+slug: "integrating-vtex-stores"
 hidden: false
 excerpt: "Learn the initial steps to integrate VTEX stores to act as marketplaces and sellers."
 createdAt: "2026-06-16T00:00:00.000Z"
