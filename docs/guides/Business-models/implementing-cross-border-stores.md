@@ -3,7 +3,7 @@ title: "Implementing cross-border stores"
 slug: "implementing-cross-border-stores"
 hidden: false
 excerpt: "Learn the initial steps for implementing a cross-border store."
-createdAt: "2026-01-15T14:29:26.332Z"
+createdAt: "2026-06-16T00:00:00.000Z"
 ---
 
 A cross-border store is a specialized [multistore](https://help.vtex.com/en/tutorial/managing-a-multistore--4S0lFVBPylRS5KpVgdyDhJ) setup where a VTEX account operates multiple localized stores for different countries or regions, each with its own catalog, prices, logistics, and language.
@@ -12,7 +12,7 @@ In this guide, you'll learn how to start implementing your cross-border operatio
 
 * **[Store architecture](#store-architecture):** Define your operation and choose the architecture that best fits your business needs.
 * **[Quickstart](#quickstart):** Discover the initial steps to implement your cross-border store.
-* **[Fundamental apps](#fundamental-apps):** Set up the apps you must have for your cross-border operation to work correctly.
+* **[Fundamental tools](#fundamental-tools):** Set up the tools you must have for your cross-border operation to work correctly.
 
 >ℹ️ The cross-border implementation is available only for stores developed using [Store Framework](https://developers.vtex.com/docs/guides/store-framework).
 
@@ -52,10 +52,10 @@ See below the main differences between them:
 | **Storefront/websites** | Separate websites or domains bound to different sales channels within the same account. | Separate websites per account. | Separate websites per account. |
 | **Catalog** | One shared catalog segmented by sales channels. | The main account is the source of truth for the catalog. | Each account manages its own catalog. |
 | **Multi-language** | Supported via bindings and locales, enabling translated content from a shared catalog. | Each marketplace account localizes the catalog received from the main seller. | Multi-language support is independent per account. |
-| **Customer data** | All customer data stored in a single Master Data instance. | Customer data stored by marketplace account. The seller (main account) doesn't store marketplace customer data in its Master Data. | Customer data separated by account. Each account has its own Master Data with no sharing between accounts. |
+| **Customer data** | All customer data stored in a single Master Data instance. | Customer data stored by the marketplace account. The seller (main account) doesn't store marketplace customer data in its Master Data. | Customer data separated by account. Each account has its own Master Data with no sharing between accounts. |
 | **Promotions** | Configured per store using sales channel segmentation and managed in the same panel. | The main account has few options for promotions because it can't access the marketplace Master Data. Promotions that rely on seller payment methods may not work. | Each account sets up its own promotions. If an account operates a marketplace with external sellers, promotion limitations apply only to that seller–marketplace relationship. |
 | **Checkout, OMS, Payments, Message Center** | All stores share these modules and panels. | Each store manages these modules in its own Admin, independently of the main account. | Each store manages these modules in its Admin. |
-| **Logistics** | All stores share the same logistics panel and use different warehouses for each store. | The main account is the source of truth for logistics, but each account manages its own logistics settings in its Admin. | Each account manages its own logistics. |
+| **Logistics** | All stores share the same logistics panel and use different warehouses. | The main account is the source of truth for logistics, but each account manages its own logistics settings in its Admin. | Each account manages its own logistics. |
 | **Back-office systems (ERP/PIM/WMS)** | A single set of integrations connects the account to the back-office systems. | Shared back-office across accounts. The main account acts as the central connection for core services, while operations are specific to each account. | Independent back-office per account. |
 
 All architectures support multi-currency through sales channels. The main differences lie in how prices are managed and where pricing logic is centralized.
@@ -66,11 +66,11 @@ All architectures support multi-currency through sales channels. The main differ
 
 To start implementing your cross-border operation, follow the steps below:
 
-### Step 1 - Configure a trade policy
+### Step 1 - Configure a sales channel
 
-On VTEX, a sales channel (previously known as "trade policy") is the key that differentiates each country or region storefront within a single VTEX account that uses a multi-binding architecture. Each website is linked to a specific sales channel, allowing separate sites for different markets. Learn more in [How trade policies work](https://newhelp.vtex.com/en/docs/tutorials/how-trade-policies-work).
+On VTEX, a sales channel is the key that differentiates each country or region storefront within a single VTEX account that uses a multi-binding architecture. Each website is linked to a specific sales channel, allowing separate sites for different markets. Learn more in [How sales channels work](https://help.vtex.com/docs/tutorials/how-trade-policies-work).
 
-To request a new sales channel/trade policy, open a ticket with [VTEX Support](https://help.vtex.com/en/support), select the option Commercial, and click Create a trade policy. Learn more in [Creating a trade policy](https://help.vtex.com/en/tutorial/creating-a-trade-policy--563tbcL0TYKEKeOY4IAgAE).
+To request a new sales channel, open a ticket with [VTEX Support](https://help.vtex.com/en/support), select the option Commercial, and click Create a trade policy. Learn more in [Creating a sales channel](https://help.vtex.com/docs/tutorials/creating-a-trade-policy).
 
 When configuring sales channels, make sure the currency code and symbol, as well as the country code and cultural information, are set correctly.
 
@@ -87,13 +87,13 @@ To create a new binding, open a ticket with [VTEX Support](https://help-tickets.
 You can retrieve your store's binding ID by using the following API:
 
 ```bash
-curl --location '*http://portal.vtexcommercestable.com.br/api/license-manager/binding/site/haight*' \
+curl --location 'https://portal.vtexcommercestable.com.br/api/license-manager/binding/site/{siteName}' \
 --header 'Content-Type: application/json'
 ```
 
 Alternatively, follow the instructions in the [Checking your store's binding ID](https://developers.vtex.com/docs/guides/checking-your-stores-binding-id) guide.
 
->⚠️ When multiple language versions of URLs are required, create one binding for each language. Using a single binding for multiple languages isn't the proper approach. Even if you manually create additional URLs using GraphQL calls, it will lead to duplicate content. This is because the page will always default to displaying in the primary language, regardless of the new URLs.
+>⚠️ When multiple language versions of URLs are required, create one binding for each language. Using a single binding for multiple languages isn't the proper approach. Even if you manually create additional URLs via GraphQL calls, it will result in duplicate content. This is because the page will always default to displaying in the primary language, regardless of the new URLs.
 
 ### Step 3 - Enable the use of a custom currency symbol
 
@@ -105,18 +105,19 @@ Alternatively, follow the instructions in the [Checking your store's binding ID]
 
   ![currency-symbol](https://vtexhelp.vtexassets.com/assets/docs/src/currency-symbol___9ba20d1b1cd02454841854781d7acc73.gif)
 
-## Fundamental apps
+## Fundamental tools
 
-The apps below are essential to enable your cross-border operation on VTEX:
+The tools below are essential to enable your cross-border operation on VTEX:
 
-* **[Binding Selector](https://developers.vtex.com/docs/apps/vtex.binding-selector):** Allows changing store bindings from the UI via a dropdown.
 * **[Locale Switcher](https://developers.vtex.com/docs/guides/vtex-locale-switcher):** Allows switching languages on the site.
 * **[Messages](https://developers.vtex.com/docs/apps/vtex.messages):** In VTEX IO, translations for store components are stored in a "/messages" folder located within the app's root directory. Thus, the translation of the content involves declaring the translated content for each language (binding) and for each element to be rendered via GraphQL. In this case, especially for specifications, breadcrumbs, and filters, the translation must be done using the Messages app. Learn more in the guides [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and [Overwriting the Messages app](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app).
-* **[Admin Catalog Translation](https://developers.vtex.com/docs/apps/vtex.admin-catalog-translation):** Enables the Admin UI to translate catalog information (category, product, SKU, brand, specifications, and collections), overriding automatic translation.
+* **Catalog translation:** To translate catalog information (categories, products, SKUs, brands, specifications, and collections) and override the automatic translation, we recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide). It provides granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). To learn how to implement it, see the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
 
-  You can also override the automatic translation using the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). Additionally, you can translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) but adding the "Accept-Language" header with the language into which you want to translate the information. This is especially relevant for headless stores.
+  >⚠️ The simultaneous use of both the Catalog Multi-Language API and the GraphQL (Messages) approach is not supported for catalog entities. Once the Catalog Multi-Language feature is activated for your account, you will no longer be able to manage translations using GraphQL.
 
-  >ℹ️ Product information on the **Order Placed** pages and in transactional emails is translated automatically. However, on the **My Account** page, it is not. To translate it, you must add customizations that run the GraphQL calls above.
+  Alternatively, you can override the automatic translation using the legacy GraphQL approach: through the [Admin Catalog Translation](https://developers.vtex.com/docs/apps/vtex.admin-catalog-translation) app UI or the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). You can also translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) by adding the "**Accept-Language**" header with the desired target language. This is especially relevant for Headless stores.
+
+  >ℹ️ Product information on the **Order Placed** pages and in transactional emails is automatically translated. However, on the **My Account** page, product information is not translated automatically. You need to implement customizations that make the above-mentioned GraphQL calls to perform these translations.
 
 ## Next steps
 
