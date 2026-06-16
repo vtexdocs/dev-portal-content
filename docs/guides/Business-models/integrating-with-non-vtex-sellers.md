@@ -1,11 +1,11 @@
 ---
 title: 'Integrating with non-VTEX sellers'
 hidden: false
-excerpt: "Learn how to act as a marketplace and orboard non-VTEX (external) sellers."
+excerpt: "Learn how to act as a marketplace and onboard non-VTEX (external) sellers."
 createdAt: "2026-06-16T00:00:00.000Z"
 ---
 
-Integrating non-VTEX sellers into your VTEX store lets you expand your product assortment, reach new customers, and increase revenue through commisions, without holding the inventory yourself.
+Integrating non-VTEX sellers into your VTEX store lets you expand your product assortment, reach new customers, and increase revenue through commissions, without holding the inventory yourself.
 
 This guide shows how to onboard sellers that operate outside the VTEX platform (external sellers) and start receiving and selling their products, managing everything from your VTEX Admin.
 
@@ -15,7 +15,7 @@ This guide shows how to onboard sellers that operate outside the VTEX platform (
 
 When your VTEX store receives and sells products from other stores, it's **acting as a marketplace**. VTEX's native multi-seller architecture decouples the marketplace subsystem from the seller subsystem, so you can onboard sellers and sell their offers in your storefront while each party keeps its own catalog and responsibilities.
 
-A **non-VTEX seller** (external seller) is a store that isn't hosted on VTEX platform that owns its products and is usually responsible for fulfilling its own orders. Unlike VTEX sellers, external sellers don't have a VTEX account, so they exchange catalog, price, inventory, and order data with your marketplace through endpoints and APIs.
+A **non-VTEX seller** (external seller) is a store that isn't hosted on the VTEX platform that owns its products and is usually responsible for fulfilling its own orders. Unlike VTEX sellers, external sellers don't have a VTEX account, so they exchange catalog, price, inventory, and order data with your marketplace through endpoints and APIs.
 
 Because non-VTEX sellers don't have a VTEX account, they're integrated through a **custom connector** that uses VTEX APIs to connect the seller's external platform to your marketplace:
 
