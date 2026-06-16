@@ -29,8 +29,8 @@ Before implementing your cross-border store, make sure you have the following in
 * **Inventory management:** Decide if inventory will be managed from a single country or locally in each country/region.
 * **Tax and export partner:** Choose a partner for handling export taxes and fees for international operations. To find a partner, visit the [Partners](https://vtex.com/en-us/partners/) page on the VTEX website.
 * **Catalog translation:** Check if your catalog is translated or needs localization for each country/region.
-* **Promotions:** Plan the types of promotions for each store. Learn about the types available in [Promotions](https://help.vtex.com/subcategory/benefits--1yTYB5p4b6iwMsUg8uieyq) guides.
-* **Operations:** Consider any existing physical stores, sellers, or other operations abroad. Learn more in [VTEX account types](https://help.vtex.com/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types)
+* **Promotions:** Plan the types of promotions for each store. Learn about the types available in [Promotions](https://help.vtex.com/docs/tutorials/promotions-and-taxes-category) guides.
+* **Operations:** Consider any existing physical stores, sellers, or other operations abroad. Learn more in [VTEX account types](https://help.vtex.com/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types).
 * **Teams:** Identify if different teams will manage each country/region's ecommerce operations.
 * **ERP systems:** Confirm if each country/region has its own ERP or a centralized system.
 * **Payment gateway:** Make sure you have a gateway that supports multiple currencies.
