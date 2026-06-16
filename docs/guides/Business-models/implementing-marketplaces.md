@@ -78,7 +78,7 @@ linkTitle="See more"
 
 <WhatsNextCard
 title="Integrating with non-VTEX sellers"
-description="Learn how to act as a marketplace and onboard non-VTEX (external) sellers"
+description="Learn how to act as a marketplace and onboard non-VTEX (external) sellers."
 linkTo="/docs/guides/integrating-with-non-vtex-sellers"
 linkTitle="See more"
 />
