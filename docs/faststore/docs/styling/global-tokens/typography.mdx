@@ -29,9 +29,7 @@ A standard scale and basic definitions for your text: `font family`,`weight` and
 
 ## Typography Scale
 
-Use a type scale to add rhythm to your typography and ensure consistency throughout the project.
-
-Access [Typescale](https://type-scale.com) and choose a scale that suits the store's branding.
+FastStore uses a linear scale that adds a fixed step value to each size level — `--fs-text-scale-mobile` (2px) for mobile and `--fs-text-scale-desktop` (4px) for desktop. You can use [Typescale](https://type-scale.com) as inspiration when designing a custom scale for your store.
 
 ### Mobile Scale
 
@@ -48,34 +46,34 @@ Access [Typescale](https://type-scale.com) and choose a scale that suits the sto
   <TokenDivider />
   <TokenRow token="--fs-text-size-0" value="12px" />
   <TokenRow token="--fs-text-size-1" value="14px" />
-  <TokenRow token="--fs-text-size-2" value="var(--fs-text-size-base)" />
+  <TokenRow token="--fs-text-size-2" value="var(--fs-text-size-base) → 16px" />
   <TokenRow
     token="--fs-text-size-3"
-    value="calc(var(--fs-text-size-2) + var(--fs-scale))"
+    value="calc(var(--fs-text-size-2) + var(--fs-scale)) → 18px / 20px"
   />
   <TokenRow
     token="--fs-text-size-4"
-    value="calc(var(--fs-text-size-3) + var(--fs-scale))"
+    value="calc(var(--fs-text-size-3) + var(--fs-scale)) → 20px / 24px"
   />
   <TokenRow
     token="--fs-text-size-5"
-    value="calc(var(--fs-text-size-4) + var(--fs-scale))"
+    value="calc(var(--fs-text-size-4) + var(--fs-scale)) → 22px / 28px"
   />
   <TokenRow
     token="--fs-text-size-6"
-    value="calc(var(--fs-text-size-5) + var(--fs-scale))"
+    value="calc(var(--fs-text-size-5) + var(--fs-scale)) → 24px / 32px"
   />
   <TokenRow
     token="--fs-text-size-7"
-    value="calc(var(--fs-text-size-6) + (var(--fs-scale) * 2))"
+    value="calc(var(--fs-text-size-6) + (var(--fs-scale) * 2)) → 28px / 40px"
   />
   <TokenRow
     token="--fs-text-size-8"
-    value="calc(var(--fs-text-size-7) + (var(--fs-scale) * 2))"
+    value="calc(var(--fs-text-size-7) + (var(--fs-scale) * 2)) → 32px / 48px"
   />
   <TokenRow
     token="--fs-text-size-9"
-    value="calc(var(--fs-text-size-8) + (var(--fs-scale) * 2))"
+    value="calc(var(--fs-text-size-8) + (var(--fs-scale) * 2)) → 36px / 56px"
   />
 </TokenTable>
 

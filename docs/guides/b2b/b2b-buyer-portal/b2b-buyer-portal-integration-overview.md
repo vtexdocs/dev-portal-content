@@ -3,7 +3,7 @@ title: "B2B Buyer Portal integration overview"
 slug: "b2b-buyer-portal-integration-overview"
 hidden: false
 createdAt: "2026-03-13T00:00:00.000Z"
-updatedAt: "2026-03-13T00:00:00.000Z"
+updatedAt: "2026-06-08T00:00:00.000Z"
 excerpt: "Explore the integration capabilities of B2B Buyer Portal, including contracts, organization management, payment cards, addresses, Budgets, Buying policies, Accounting fields, and Punchout."
 ---
 
@@ -35,9 +35,11 @@ This guide provides an overview of the integration capabilities available in B2B
 B2B Buyer Portal integrations are built around the following core concepts:
 
 - **Contracts** sit at the **root** of the buyer organization. They define the commercial conditions that apply to the whole organization, such as product assortment, prices, and payment methods.
-- [Organizational Units](https://help.vtex.com/en/docs/tutorials/organization-units) represent the hierarchical structure under that root, such as departments, divisions, or subsidiaries. They are the central entity for scoping many buyer portal features.
+- [Organizational Units](https://help.vtex.com/docs/tutorials/organizational-units) represent the hierarchical structure under that root, such as departments, divisions, or subsidiaries. They are the central entity for scoping many buyer portal features.
 - **Storefront users** are members of the buyer organization who interact with the store, each assigned specific roles and permissions.
 - **Storefront roles** control what actions each user can perform, from placing orders to managing budgets.
+
+> ℹ️ For how buyer organization data maps to Master Data entities and their relationships, see [B2B Buyer Portal Master Data architecture](https://developers.vtex.com/docs/guides/b2b-buyer-portal-master-data-architecture).
 
 ## Contracts
 
@@ -85,7 +87,6 @@ The provisioning flow includes registering storefront credentials in VTEX ID, as
 | Create storefront users | Register users in VTEX ID with unique usernames and optional login emails. |
 | Assign users to units | Link storefront users to their respective organizational units. |
 | Assign storefront roles | Grant role-based permissions that control what each user can do. |
-
 
 The key APIs related to user provisioning are:
 
@@ -147,7 +148,7 @@ Shipping destinations, internal delivery points, and recipients support checkout
 
 A **location** is a specific delivery point within a site, such as a dock, department, or internal area. For example, freight may be consigned to the company's street address while the actual delivery is to **Dock 3456**. Locations are managed through the [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api). See [Custom Fields integration](https://developers.vtex.com/docs/guides/custom-fields-integration) to learn more.
 
-**Recipients** are the people who can be chosen as **order recipients**, who will receive the shipment. At checkout, the buyer selects the recipient for the order. That person may be different from the user placing the order. Recipient records are maintained at the **organization** level and can be **associated with addresses**, so choosing a shipping address can narrow which recipients are offered. Use the [B2B Recipients API](https://developers.vtex.com/docs/api-reference/b2b-recipients-api) to manage recipients in B2B scenarios.
+**Recipients** are the people who can be chosen as **order recipients**, who will receive the shipment. At checkout, the buyer selects the recipient for the order. That person may be different from the user placing the order. Recipient records are maintained at the **organization** level and can be **associated with addresses**, so choosing a shipping address can narrow which recipients are offered. Use the [B2B Addresses API](https://developers.vtex.com/docs/api-reference/b2b-addresses) to manage recipients in B2B scenarios.
 
 ## Budgets and allocations
 
