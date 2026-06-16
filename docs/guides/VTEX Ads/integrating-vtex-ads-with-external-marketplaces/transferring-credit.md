@@ -10,7 +10,7 @@ Credit transfer is the flow that allows marketplaces to transfer advertising cre
 
 > ℹ️ The Authentication model follows [Basic Auth](https://developers.vtex.com/docs/guides/integrating-vtex-ads-with-external-marketplaces#vtex-ads-to-marketplace).
 
-![transferring-credit](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/localization/transferring-credit.png)
+![transferring-credit](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20Ads/integrating-vtex-ads-with-external-marketplaces/transferring-credit.png)
 
 ## Endpoints to be implemented by the marketplace
 
