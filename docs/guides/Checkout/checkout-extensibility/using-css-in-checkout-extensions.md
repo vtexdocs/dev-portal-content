@@ -34,7 +34,9 @@ Avoid using global CSS to target elements outside your extension, such as with `
 
 > ℹ️ Using CSS Modules is the recommended approach.
 
-CSS Modules ensure that class names are scoped locally to the component, avoiding potential conflicts with other styles in the global namespace. Classes are imported as an object and applied to your components dynamically, ensuring a clean separation of styles.
+[CSS Modules](https://www.w3schools.com/REACT/react_css_modules.asp) ensure that class names are scoped locally to the component, avoiding potential conflicts with other styles in the global namespace. Classes are imported as an object and applied to your components dynamically, ensuring a clean separation of styles.
+
+Here's a sample component using a CSS Module for styling:
 
 ```tsx
 // CustomFooter.tsx
@@ -48,6 +50,8 @@ export const CustomFooter = () => {
   );
 };
 ```
+
+This is the accompanying CSS module file:
 
 ```css
 /* custom-footer.module.css */
