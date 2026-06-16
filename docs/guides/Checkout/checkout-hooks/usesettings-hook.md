@@ -7,7 +7,7 @@ updatedAt: "2026-03-11T17:08:52.219Z"
 excerpt: ""
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 The `useSettings` hook provides access to various Checkout settings, such as branding data like logos and colors. These settings can be used to customize different aspects of your Checkout extensions, enabling more flexibility and personalization in the user experience.
 

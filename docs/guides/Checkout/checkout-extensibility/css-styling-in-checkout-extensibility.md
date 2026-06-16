@@ -7,7 +7,7 @@ updatedAt: "2026-06-10T00:00:00.000Z"
 excerpt: "Style your Checkout extensions using CSS Modules, global imports, and CSS variables."
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 Once you have [created a Checkout extension](https://developers.vtex.com/docs/guides/getting-started-with-checkout-extensions), you can style your components using CSS. Checkout supports two approaches:
 

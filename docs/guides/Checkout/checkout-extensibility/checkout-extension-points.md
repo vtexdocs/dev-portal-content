@@ -7,7 +7,7 @@ updatedAt: "2026-06-09T00:00:00.000Z"
 excerpt: "Explore the available Checkout extension points to extend the UI of Checkout across all of its stages."
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 Checkout offers a variety of extension points across all of its stages, including cart, delivery, cart review, and order placed. These extension points allow you to extend the UX/UI of Checkout to meet your store's specific needs.
 

@@ -7,7 +7,7 @@ updatedAt: "2026-03-11T17:08:52.219Z"
 excerpt: ""
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 The `useExtension` hook allows you to access information about the current account and the extension point in which your extension is running.
 

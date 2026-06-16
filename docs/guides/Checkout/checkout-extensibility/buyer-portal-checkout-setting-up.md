@@ -7,7 +7,7 @@ updatedAt: "2026-03-11T17:08:52.219Z"
 excerpt: "Learn how to set up Buyer Portal Checkout, including installing required modules in your FastStore monorepo, creating a Checkout extensions project, and configuring your monorepo workspaces."
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 After setting up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you can create a Checkout extensions project. First, add the VTEX Checkout modules to your monorepo:
 

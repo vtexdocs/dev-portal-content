@@ -7,7 +7,7 @@ updatedAt: "2026-06-10T00:00:00.000Z"
 excerpt: "Access the Checkout data layer with hooks and fetch data from VTEX or external APIs in your extensions."
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 When [creating a Checkout extension](https://developers.vtex.com/docs/guides/getting-started-with-checkout-extensions), you may need to present data to the user, whether it is data from the Checkout flow, VTEX APIs, or third-party APIs.
 

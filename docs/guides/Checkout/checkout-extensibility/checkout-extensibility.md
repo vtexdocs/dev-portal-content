@@ -7,7 +7,7 @@ createdAt: "2026-06-09T00:00:00.000Z"
 updatedAt: "2026-06-09T00:00:00.000Z"
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 Buyer Portal Checkout Extensibility lets you extend the default checkout journey with capabilities aligned to your business model, such as external integrations and custom UI. Using extension points across all Checkout stages (Cart, Delivery, Review, Payment, and Order Placed), you can render your own components without changing checkout's core behavior.
 

@@ -7,7 +7,7 @@ updatedAt: "2026-06-10T00:00:00.000Z"
 excerpt: "Deploy your Checkout extensions to production, generate preview deploys, and troubleshoot build failures."
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 After creating Checkout extensions, deploy them to make the changes available in your store. A Checkout extensions project supports two deployment methods:
 

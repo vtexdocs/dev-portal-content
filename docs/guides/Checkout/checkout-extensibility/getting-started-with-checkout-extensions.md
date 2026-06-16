@@ -7,7 +7,7 @@ updatedAt: "2026-06-10T00:00:00.000Z"
 excerpt: "Understand the structure of a Checkout extensions project and build your first extension."
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 After you have a Checkout extensions project in your monorepo, you can create your first extension. When you create the project, a sample extension is already set up for you. To understand how it works, this guide walks through the files inside the project folder and then builds a new extension.
 
