@@ -2,8 +2,8 @@
 title: "Implementing internationalization"
 slug: "implementing-internationalization"
 hidden: false
-createdAt: ""
-excerpt: "Learn how "
+createdAt: "2026-06-16T00:00:00.000Z"
+excerpt: "Learn how to prepare your store to operate in multiple languages by translating storefront and catalog content."
 ---
 
 **Internationalization** prepares your store to operate in multiple languages by translating storefront content and catalog data and applying regional formatting. When your business requires multiple currencies, prices, or logistics per market, pair internationalization with a [cross-border setup](https://developers.vtex.com/docs/guides/implementing-cross-border-stores) that uses different trade policies.
@@ -12,9 +12,9 @@ In this guide, you'll learn how to start implementing internationalization in yo
 
 - **[Store architecture](#store-architecture):** Define your operation and the architecture that best fits your business needs.
 - **[Quickstart](#quickstart):** Discover the initial steps to internationalize your store.
-- **[Fundamental apps](#fundamental-apps):** Set up the apps you must have for your internationalized operation to work correctly.
+- **[Translation setup](#translation-setup):** Set up the tools you must have for your internationalized operation to work correctly.
 
->ℹ️ Internationalization is available only for stores developed using [Store Framework](https://developers.vtex.com/docs/guides/store-framework).
+>ℹ️ This guide covers the internationalization approach for stores developed using [Store Framework](https://developers.vtex.com/docs/guides/store-framework). FastStore projects handle internationalization through a separate Localization feature, which follows a different setup flow.
 
 ## Store architecture
 
@@ -74,24 +74,35 @@ Avoid mixing a root URL for one locale with a path prefix for another:
   **en-US:** `https://store.com/`
   **pt-BR:** `https://store.com/pt`
 
-## Fundamental apps
+## Translation setup
 
-The apps listed below are essential for enabling multi-language operation in your VTEX account.
+The following tools are essential for enabling multi-language operation in your VTEX account.
 
-- [Messages](https://developers.vtex.com/docs/apps/vtex.messages): In VTEX IO, translations for store components are stored in a "/messages" folder located within the app's root directory. Thus, the translation of the content involves declaring the translated content for each language (binding) and for each element to be rendered via GraphQL. In this case, especially for specifications, breadcrumbs, and filters, the translation must be done using the Messages app. Learn more in the guides [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and [Overwriting the Messages app](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app).
-- [Locale Switcher](https://developers.vtex.com/docs/guides/vtex-locale-switcher): Allows switching languages on the site.
-- [Admin Catalog Translation](https://developers.vtex.com/docs/apps/vtex.admin-catalog-translation): Enables the admin UI to translate catalog information (category, product, SKU, brand, specifications, and collections), overriding the automatic translation.
+- **[Messages](https://developers.vtex.com/docs/apps/vtex.messages):** In Store Framework projects, translations for store components are stored in a "/messages" folder located within the app's root directory. Thus, the translation of the content involves declaring the translated content for each language (binding) and for each element to be rendered via GraphQL. In this case, especially for specifications, breadcrumbs, and filters, the translation must be done using the Messages app. Learn more in the guides [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and [Overwriting the Messages app](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app).
+- **[Locale Switcher](https://developers.vtex.com/docs/guides/vtex-locale-switcher):** Allows switching languages on the site.
+- **Catalog translation:** To translate catalog information (categories, products, SKUs, brands, specifications, and collections) and override the automatic translation, we recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide). It provides granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). To learn how to implement it, see the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
 
-  You can also override the automatic translation using the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). Additionally, you can translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) by adding the "**Accept-Language**" header with the desired target language. This is especially relevant for Headless stores.
+  >⚠️ The simultaneous use of both the Catalog Multi-Language API and the GraphQL (Messages) approach is not supported for catalog entities. Once the Catalog Multi-Language feature is activated for your account, you will no longer be able to manage translations using GraphQL.
+
+  Alternatively, you can override the automatic translation using the legacy GraphQL approach: through the [Admin Catalog Translation](https://developers.vtex.com/docs/apps/vtex.admin-catalog-translation) app UI or the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). You can also translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) by adding the "**Accept-Language**" header with the desired target language. This is especially relevant for Headless stores.
 
   >ℹ️ Product information on the **Order Placed** pages and in transactional emails is automatically translated. However, on the **My Account** page, product information is not translated automatically. You need to implement customizations that make the above-mentioned GraphQL calls to perform these translations.
 
 ## Next steps
 
+<Flex>
+
 <WhatsNextCard
 title="Handling internationalization"
 description="Learn how to create a multi-language store using Store Framework."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Catalog multi-language integration guide"
+description="Learn how to manage catalog translations using the recommended Catalog Multi-Language API."
+linkTo="https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide"
 linkTitle="See more"
 />
 
