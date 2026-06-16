@@ -4,7 +4,7 @@ slug: "usesettings-hook"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
-excerpt: ""
+excerpt: "Learn how to use the useSettings hook to access branding and customization settings in Checkout extensions."
 ---
 
 > ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.

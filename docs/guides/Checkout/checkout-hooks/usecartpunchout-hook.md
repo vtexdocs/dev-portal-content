@@ -4,7 +4,7 @@ slug: "usecartpunchout-hook"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
-excerpt: ""
+excerpt: "Learn how to use the useCartPunchout hook to access and modify Punchout cart data in Checkout extensions, including adding and removing cart items."
 ---
 
 > ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
