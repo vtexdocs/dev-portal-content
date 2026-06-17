@@ -61,8 +61,8 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 
 To retrieve user details and roles, use the [License Manager API](https://developers.vtex.com/docs/api-reference/license-manager-api):
 
-- [Get user](https://developers.vtex.com/docs/api-reference/license-manager-api#get-/api/license-manager/users/-userId-) — Returns user data by ID.
-- [Get user roles](https://developers.vtex.com/docs/api-reference/license-manager-api#get-/api/license-manager/users/-userId-/roles) — Returns user data and associated roles.
+- [Get admin user information by user ID](https://developers.vtex.com/docs/api-reference/license-manager-api#get-/api/license-manager/users/-userId-) — Returns user data by ID.
+- [Get roles by admin user ID or API Key](https://developers.vtex.com/docs/api-reference/license-manager-api#get-/api/license-manager/users/-userId-/roles) — Returns user data and associated roles.
 
 ## Contract management
 
