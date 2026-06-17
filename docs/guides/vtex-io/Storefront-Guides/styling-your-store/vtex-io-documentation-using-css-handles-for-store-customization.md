@@ -35,13 +35,13 @@ Follow the steps below to apply a style that affects every block instance:
 2. In the `css` folder, create a new CSS file named after the component you're targeting. For example, `vtex.menu.css`.
 3. In the new file, use one of the listed CSS handles and customize its properties. For example:
 
-  ```css
-  .menuItem {  
-      background: rgba(0, 0, 0, 0.2);
-      margin: 5px;
-      border-radius: 5px;
-  }
-  ```
+    ```css
+    .menuItem {  
+        background: rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        border-radius: 5px;
+    }
+    ```
 
     > ⚠️ If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon}`.
 
@@ -55,15 +55,15 @@ To customize a single, specific block without affecting other blocks of the same
 
 1. In the `json` file where your target block is declared, add the prop `blockClass` to the element you want to customize. Assign any unique name as its value. For example:
 
-  ```json mark=4
-  "menu-item#your-item": {
-    "props": {
-      ...,
-      "blockClass": "header"
-    },
-    ...
-  }
-  ```
+    ```json mark=4
+    "menu-item#your-item": {
+      "props": {
+        ...,
+        "blockClass": "header"
+      },
+      ...
+    }
+    ```
 
 2. Save the file to update the workspace you're working on.
 3. Inspect the element by following the instructions in [Identifying CSS handles](#identifying-css-handles). You'll see a new, more specific CSS handle composed of the original handle and the `blockClass` value you provided.
