@@ -27,8 +27,8 @@ Follow this sequence when setting up Sales Team Management for the first time:
 
 1. [Create root organization units](#organization-unit-management) using the endpoint [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1). Don't include the `parentId` parameter.
 2. Create child units, passing the root unit's ID as the `parentId` parameter.
-3. [Add users](#user-management) to each unit.
-4. [Link B2B contracts](#contract-management) to the appropriate units.
+3. [Add users](#user-management) to each unit using the endpoint [Add user to organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api//vtexid/organization-units/-organizationUnitId-/users).
+4. [Link B2B contracts](#contract-management) to the appropriate units using the endpoint [Create organization unit scope](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/scopes/-scope-).
 5. Verify the hierarchy using the endpoints [Get all children organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/children) and [Get root organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/roots).
 6. Verify linked contracts using the endpoint [Get organization unit scopes](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/scopes).
 7. Verify users and their accessible scopes using the endpoints [List users from organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api//vtexid/organization-units/-organizationUnitId-/users) and [Get user scopes](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/users/-userId-/scopes).
