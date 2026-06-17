@@ -4,7 +4,7 @@ excerpt: "Learn how to customize your storefront using CSS handles."
 slug: "vtex-io-documentation-using-css-handles-for-store-customization"
 hidden: false
 createdAt: "2020-06-03T16:02:45.024Z"
-updatedAt: "2026-05-07T15:41:30.641Z"
+updatedAt: "2026-06-17T15:41:30.641Z"
 ---
 
 In this guide, you'll learn how to customize your storefront using CSS handles. These unique identifiers assigned to HTML elements allow you to target and add CSS classes to a component within your [store theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme).
