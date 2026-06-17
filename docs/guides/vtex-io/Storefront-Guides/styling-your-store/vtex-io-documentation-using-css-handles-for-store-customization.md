@@ -17,11 +17,11 @@ CSS handles can override a storefront's default styles, enabling independent cus
 
 1. Open your browser and go to your store's development workspace using this URL: `https://{workspace}--{account}.myvtex.com?__inspect`. Replace the values inside curly braces with your specific workspace and account names.
 
-> ⚠️ Always use a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and make sure your store domain is under `myvtex.com`.
+    > ⚠️ Always use a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) and make sure your store domain is under `myvtex.com`.
 
 2. Hover your mouse over the page element you want to customize. A box will appear showing the available CSS handles (names starting with `.`), CSS file names, and related information.
 
-![css-handles-inspect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-0.png)
+    ![css-handles-inspect](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-0.png)
 
 3. Check the CSS handles table in the app or block documentation that renders the HTML element. This allows you to confirm whether the inspected handle is valid and if the customization requires another add-on, such as the HTML element attribute.
 
@@ -43,11 +43,11 @@ Follow the steps below to apply a style that affects every block instance:
   }
   ```
 
-> ⚠️ If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon}`.
+    > ⚠️ If the handle requires an add-on, such as the HTML element attribute or a handle modifier, add it next to the handle name, following this format: `{cssHandleName}--{addon}`.
 
 4. [Link your app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) to see the changes. Once linked, the new style applies to all `menu-item` blocks in the workspace you're working on.
 
-![css handles customization applied to the menuItem](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-1.png)
+    ![css handles customization applied to the menuItem](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-1.png)
 
 ### Customizing a single block
 
@@ -68,11 +68,11 @@ To customize a single, specific block without affecting other blocks of the same
 2. Save the file to update the workspace you're working on.
 3. Inspect the element by following the instructions in [Identifying CSS handles](#identifying-css-handles). You'll see a new, more specific CSS handle composed of the original handle and the `blockClass` value you provided.
 
-![css handles with block class](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-2.png)
+    ![css handles with block class](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-2.png)
 
 4. In your CSS file, you can now use this new class (for example: `.menu-item--header`) to target only the block with that specific `blockClass`.
 
-![specific menu items with css handles applied using blockClass](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-3.png)
+    ![specific menu items with css handles applied using blockClass](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-using-css-handles-for-store-customization-3.png)
 
 ## Best practices
 

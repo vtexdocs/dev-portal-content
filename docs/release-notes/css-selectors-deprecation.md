@@ -37,7 +37,7 @@ We're deprecating all selectors and combinators not mentioned on the list above,
 - `:nth-child` with numbers
 - Attribute selectors excepting `[data-...]` (e.g. `[class~="mb8 b--red"]`)
 
-  This CSS selector allowlist is flexible because the deprecation is intended to encourage robust CSS customization without risking store layout issues. If the deprecation of CSS selectors not on this list causes any unintended harm to your store, let us know immediately by opening a ticket with [VTEX Support](https://supporticket.vtex.com/support).
+This CSS selector allowlist is flexible because the deprecation is intended to encourage robust CSS customization without risking store layout issues. If the deprecation of CSS selectors not on this list causes any unintended harm to your store, let us know immediately by opening a ticket with [VTEX Support](https://supporticket.vtex.com/support).
 
 ## Why this action is being taken
 
