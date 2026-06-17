@@ -21,9 +21,7 @@ Sales Team Management is built around three core entities:
 - **User** — A VTEX account user assigned to an organization unit. Users inherit the contracts linked to their unit.
 - **Contract** — A B2B contract (stored in Master Data) linked to an organization unit via the `contractIds` scope. All users in the unit gain access to the contracts linked to it.
 
-> ℹ️ For more information about OUs, see [Organization Units](https://help.vtex.com/en/docs/tutorials/organizational-units).
-
-## Recommended setup flow
+## Setup flow
 
 Follow this sequence when setting up Sales Team Management for the first time:
 
@@ -35,11 +33,9 @@ Follow this sequence when setting up Sales Team Management for the first time:
 6. Verify linked contracts using the endpoint [Get organization unit scopes](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/scopes).
 7. Verify users and their accessible scopes using the endpoints [List users from organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api//vtexid/organization-units/-organizationUnitId-/users) and [Get user scopes](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/users/-userId-/scopes).
 
----
-
 ## Organization unit management
 
-Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) to create and manage the sales team hierarchy.
+Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) to create and manage the sales team hierarchy:
 
 | Endpoint | Description |
 | :--- | :--- |
@@ -48,14 +44,12 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 | [Get organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-) | Returns the full details of a unit by ID. |
 | [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) | Creates a unit. The `type` field must be `Sales Team`. Omit `parentId` to create a root unit. |
 | [Rename organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#patch-/api/organization-units/v1/-organizationUnitId-) | Updates the unit name without changing its position in the hierarchy. |
-| [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path) | Moves a unit to a new parent. All child units move with it. Send `"parentId": null` to promote to root level. |
+| [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path) | Moves a unit to a new parent. All child units move with it. Send `parentId: null` to promote to root level. |
 | [Delete organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-) | Permanently removes a unit. Irreversible — verify the unit has no linked users or children first. |
-
----
 
 ## User management
 
-Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) to assign users to units and check their access.
+Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) to assign users to units and check their access:
 
 | Endpoint | Description |
 | :--- | :--- |
@@ -70,11 +64,9 @@ To retrieve user details and roles, use the [License Manager API](https://develo
 - [Get user](https://developers.vtex.com/docs/api-reference/license-manager-api#get-/api/license-manager/users/-userId-) — Returns user data by ID.
 - [Get user roles](https://developers.vtex.com/docs/api-reference/license-manager-api#get-/api/license-manager/users/-userId-/roles) — Returns user data and associated roles.
 
----
-
 ## Contract management
 
-Contracts are B2B contracts stored in Master Data and linked to organization units via the `contractIds` scope. All users in a unit gain access to the contracts linked to it.
+B2B contracts are stored in Master Data and linked to organization units via the `contractIds` scope. All users in a unit gain access to the contracts linked to it.
 
 Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) to manage contract associations:
 
@@ -85,8 +77,6 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 | [Delete organization unit scope](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-/scopes/-scope-) | Removes one or more contracts from a unit. Users in the unit lose access to those contracts. |
 
 To retrieve full contract details, use the [Master Data API v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/documents/-id-) with `dataEntityName=CL`.
-
----
 
 ## Organizational structure
 
