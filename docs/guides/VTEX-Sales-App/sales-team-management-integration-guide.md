@@ -60,7 +60,7 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
 | `GET` | [List users from organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/vtexid/organization-units/-organizationUnitId-/users) | Returns all users in a unit, including IDs, emails, and roles. |
-| `POST` | [Add user to organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api//vtexid/organization-units/-organizationUnitId-/users) | Adds one or more users to a unit. Users must already exist in the VTEX account. |
+| `POST` | [Add user to organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users) | Adds one or more users to a unit. Users must already exist in the VTEX account. |
 | `DELETE` | [Remove users from organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api//vtexid/organization-units/-organizationUnitId-/users) | Removes users from a unit without deleting them from the account. Requires a request body with `userIds`. |
 | `GET` | [Get user's organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-userId-/unit) | Returns which unit a user belongs to. |
 | `GET` | [Get user scopes](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/users/-userId-/scopes) | Returns all scopes (contracts and resources) accessible to a user through their unit. Scopes can be inherited from parent units. |
