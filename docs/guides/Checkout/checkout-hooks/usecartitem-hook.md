@@ -4,10 +4,10 @@ slug: "usecartitem-hook"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
-excerpt: ""
+excerpt: "Learn how to use the useCartItem hook to access and display details for an individual item within the cart in Checkout extensions."
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 The `useCartItem` hook allows you to access detailed information about an individual cart item. This is particularly useful when you need to retrieve or display specific data related to a single item in the cart.
 
@@ -42,7 +42,7 @@ The `useCartItem` returns a `CartItem` object for the current cart item context.
 
 ## Extension Points
 
-This hook is available in the following extension points:
+This hook is available in the following [Checkout extension points](https://developers.vtex.com/docs/guides/checkout-extension-points):
 
 - `cart.cart-item.after`
 - `punchout.cart-item.after`
