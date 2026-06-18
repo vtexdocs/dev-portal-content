@@ -3,8 +3,8 @@ title: "Exporting ads events"
 slug: "exporting-ads-events"
 excerpt: "Export raw advertising event data including impressions, clicks, views, and conversions for detailed analysis."
 hidden: false
-createdAt: "2025-10-13T00:00:00.000Z"
-updatedAt: "2025-10-14T00:00:00.000Z"
+createdAt: "2026-06-18T00:00:00.000Z"
+updatedAt: "2026-06-18T00:00:00.000Z"
 ---
 Event data export enables systematic and periodic integration of raw advertising events for detailed analysis and custom reporting.
 
