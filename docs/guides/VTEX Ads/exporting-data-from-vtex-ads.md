@@ -3,8 +3,8 @@ title: "Exporting data from VTEX Ads"
 slug: "exporting-data-from-vtex-ads"
 excerpt: "Learn how to export data from VTEX Ads using S3-compatible connections for events and aggregated data."
 hidden: false
-createdAt: "2025-10-13T00:00:00.000Z"
-updatedAt: "2025-10-13T00:00:00.000Z"
+createdAt: "2026-06-18T00:00:00.000Z"
+updatedAt: "2026-06-18T00:00:00.000Z"
 ---
 You can export campaign events and aggregated performance data from **VTEX Ads** using an S3-compatible connection. Provide the connection details for your storage endpoint before setting up the integration. This guide covers shared prerequisites and credentials. For setup steps, choose the export type that matches your use case in [Export types](#export-types).
 
