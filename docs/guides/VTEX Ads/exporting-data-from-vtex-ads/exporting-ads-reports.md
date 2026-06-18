@@ -9,7 +9,7 @@ updatedAt: "2026-06-18T00:00:00.000Z"
 Report export allows you to access and download platform information automatically, without the need for manual extraction through the interface. All report routes return data in JSON format by default, but can be exported as XLSX files by including the `download=true` parameter in the query.
 
 > ℹ️ API Authentication
-> To access the routes, users must be authenticated. See the [authentication documentation](https://newtail-media.readme.io/reference/autenticacao) for more details.
+> To access the endpoints, users must be authenticated. See the [VTEX Ads API overview](https://developers.vtex.com/docs/api-reference/vtex-ads-api) for more details.
 
 > ⚠️ Limited availability of some reports
 > Export of certain reports may be restricted based on the account type associated with the authentication. Not all users will have access to all available reports.
