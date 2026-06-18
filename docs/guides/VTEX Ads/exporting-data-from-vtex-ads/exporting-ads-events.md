@@ -14,9 +14,9 @@ See more about the connection in [Exporting data from VTEX Ads](https://develope
 
 ## Integration format
 
-- Data sent is always D-1 (previous day)
-- Files are in [Parquet](https://parquet.apache.org/docs/overview/) format with [Snappy](https://parquet.apache.org/docs/file-format/data-pages/compression/) compression
-- Files are always sent in a daily path format: `TYPE_REPORT/YYYY/MM/DD/TIMESTAMP_NS/RANDOM_FILE_NAMES.snappy.parquet` (one or more files may be sent)
+- Data sent is always D-1 (previous day).
+- Files are in [Parquet](https://parquet.apache.org/docs/overview/) format with [Snappy](https://parquet.apache.org/docs/file-format/data-pages/compression/) compression.
+- Files are always sent in a daily path format: `TYPE_REPORT/YYYY/MM/DD/TIMESTAMP_NS/RANDOM_FILE_NAMES.snappy.parquet` (one or more files may be sent).
 
 > ⚠️ Event deduplication
 >
