@@ -29,7 +29,7 @@ Follow this sequence when setting up Sales Team Management for the first time:
 
 1. Create root units using [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1). Don't include the `parentId` parameter.
 2. Create child units with the same endpoint, passing the root unit's ID as `parentId`.
-3. Add users to each unit using [Add user to organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api//vtexid/organization-units/-organizationUnitId-/users).
+3. Add users to each unit using [Add user to organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users).
 4. Link B2B contracts to the appropriate units using [Create organization unit scope](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/scopes/-scope-).
 5. Verify the hierarchy using [Get all children organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/children) and [Get root organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/roots).
 6. Verify linked contracts using [Get organization unit scopes](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/scopes).
