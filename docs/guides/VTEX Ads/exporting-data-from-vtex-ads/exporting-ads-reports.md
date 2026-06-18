@@ -32,17 +32,7 @@ x-app-id: <PUBLISHER_APP_ID>
 x-api-key: <API_KEY>
 ```
 
-#### Query parameters
-
-| Parameter    | Required | Description                                                                       |
-| :----------- | :------- | :-------------------------------------------------------------------------------- |
-| start_date   | Yes      | Metrics start date in `YYYY-MM-DD` format                                        |
-| end_date     | Yes      | Metrics end date in `YYYY-MM-DD` format                                          |
-| account_info | No       | If true, includes detailed account information in the result. Default is `false` |
-| page         | No       | Page number of results. Default is `1`                                           |
-| quantity     | No       | Number of items per page. Default is `100`                                       |
-| count        | No       | If `true`, returns the total number of available records. Default is `false`     |
-| download     | No       | If `true`, returns an XLSX file buffer ready for download instead of JSON        |
+For the query parameters and response schema, see [Get advertisers report](https://developers.vtex.com/docs/api-reference/vtex-ads-api#get-/report/v2/advertisers) in the API Reference.
 
 ### Publishers
 
@@ -60,20 +50,7 @@ x-app-id: <PUBLISHER_APP_ID>
 x-api-key: <API_KEY>
 ```
 
-#### Query parameters
-
-| Parameter       | Required | Description                                                                                                                                                                                              |
-| :-------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| start_date      | Yes      | Metrics start date in `YYYY-MM-DD` format                                                                                                                                                               |
-| end_date        | Yes      | Metrics end date in `YYYY-MM-DD` format                                                                                                                                                                 |
-| publisher_name  | No       | Filters results by publisher name                                                                                                                                                                        |
-| account_info    | No       | If true, includes detailed account information in the result. Default is `false`                                                                                                                         |
-| page            | No       | Page number of results. Default is `1`                                                                                                                                                                  |
-| quantity        | No       | Number of items per page. Default is `100`                                                                                                                                                              |
-| count           | No       | If `true`, returns the total number of available records. Default is `false`                                                                                                                            |
-| order_by        | No       | Defines the field for sorting results. Possible values: `name, balance, total_daily_budget, total_campaigns, impressions, clicks, ctr, total_spent, conversions, conversion_rate, income, roas`      |
-| order_direction | No       | Defines the sorting direction. Possible values: `asc` (ascending) or `desc` (descending)                                                                                                                |
-| download        | No       | If `true`, returns an XLSX file buffer ready for download instead of JSON                                                                                                                                |
+For the query parameters and response schema, see [Get publishers report](https://developers.vtex.com/docs/api-reference/vtex-ads-api#get-/report/v2/publishers) in the API Reference.
 
 ### Network publishers
 
@@ -91,20 +68,7 @@ x-app-id: <PUBLISHER_APP_ID>
 x-api-key: <API_KEY>
 ```
 
-#### Query parameters
-
-| Parameter       | Required | Description                                                                                                                                              |
-| :-------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| start_date      | Yes      | Metrics start date in `YYYY-MM-DD` format                                                                                                               |
-| end_date        | Yes      | Metrics end date in `YYYY-MM-DD` format                                                                                                                 |
-| publisher_name  | No       | Filters results by publisher name                                                                                                                        |
-| account_info    | No       | If true, includes detailed account information in the result. Default is `false`                                                                         |
-| page            | No       | Page number of results. Default is `1`                                                                                                                  |
-| quantity        | No       | Number of items per page. Default is `100`                                                                                                              |
-| count           | No       | If `true`, returns the total number of available records. Default is `false`                                                                            |
-| order_by        | No       | Defines the field for sorting results. Possible values: `name, impressions, clicks, ctr, conversions, conversion_rate, income, roas, requests`        |
-| order_direction | No       | Defines the sorting direction. Possible values: `asc` (ascending) or `desc` (descending)                                                                |
-| download        | No       | If `true`, returns an XLSX file buffer ready for download instead of JSON                                                                                |
+For the query parameters and response schema, see [Get network publishers report](https://developers.vtex.com/docs/api-reference/vtex-ads-api#get-/report/network/publishers) in the API Reference.
 
 ### Campaigns
 
@@ -120,23 +84,7 @@ x-app-id: <PUBLISHER_APP_ID>
 x-api-key: <API_KEY>
 ```
 
-#### Query parameters
-
-| Parameter       | Required | Description                                                                                                                                                                                                        |
-| :-------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| start_date      | Yes      | Metrics start date in `YYYY-MM-DD` format                                                                                                                                                                         |
-| end_date        | Yes      | Metrics end date in `YYYY-MM-DD` format                                                                                                                                                                           |
-| status          | No       | Filters by campaign status                                                                                                                                                                                         |
-| advertiser_id   | No       | Filters campaigns by advertiser ID                                                                                                                                                                                 |
-| ad_type         | No       | Filters by ad type                                                                                                                                                                                                 |
-| name            | No       | Searches campaigns by name                                                                                                                                                                                         |
-| account_info    | No       | If true, includes detailed account information in the result. Default is `false`                                                                                                                                   |
-| page            | No       | Page number of results. Default is `1`                                                                                                                                                                            |
-| quantity        | No       | Number of items per page. Default is `100`                                                                                                                                                                        |
-| count           | No       | If `true`, returns the total number of available records. Default is `false`                                                                                                                                      |
-| order_by        | No       | Defines the field for sorting results. Possible values: `name, impressions, clicks, ctr, conversions, conversion_rate, income, roas, created_at, start_at, daily_budget, ad_type, advertiser_name, status`    |
-| order_direction | No       | Defines the sorting direction. Possible values: `asc` (ascending) or `desc` (descending)                                                                                                                          |
-| download        | No       | If `true`, returns an XLSX file buffer ready for download instead of JSON                                                                                                                                          |
+For the query parameters and response schema, see [List campaigns](https://developers.vtex.com/docs/api-reference/vtex-ads-api#get-/campaign/v2) in the API Reference.
 
 ### Ads
 
@@ -152,24 +100,4 @@ x-app-id: <PUBLISHER_APP_ID>
 x-api-key: <API_KEY>
 ```
 
-#### Query parameters
-
-| Parameter       | Required | Description                                                                                                                                                                                      |
-| :-------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| start_date      | Yes      | Metrics start date in `YYYY-MM-DD` format                                                                                                                                                       |
-| end_date        | Yes      | Metrics end date in `YYYY-MM-DD` format                                                                                                                                                         |
-| campaign_name   | No       | Filters ads by campaign name                                                                                                                                                                     |
-| campaign_id     | No       | Filters ads by campaign ID                                                                                                                                                                       |
-| advertiser_id   | No       | Filters ads by advertiser ID                                                                                                                                                                     |
-| product_sku     | No       | Filters ads by product SKU                                                                                                                                                                       |
-| ad_status       | No       | Filters ads by status                                                                                                                                                                            |
-| ad_type         | No       | Filters by ad type                                                                                                                                                                               |
-| targeting_type  | No       | Filters by targeting type                                                                                                                                                                        |
-| show_inactive   | No       | If `true`, includes paused ads                                                                                                                                                                   |
-| account_info    | No       | If `true`, includes detailed account information in the result. Default is `false`                                                                                                               |
-| page            | No       | Page number of results. Default is `1`                                                                                                                                                          |
-| quantity        | No       | Number of items per page. Default is `100`                                                                                                                                                      |
-| count           | No       | If `true`, returns the total number of available records. Default is `false`                                                                                                                    |
-| order_by        | No       | Defines the field for sorting results. Possible values: `ad_type, ad_status, impressions, conversion_rate, ctr, income, total_spent, roas, conversions, total_conversions_item_quantity`     |
-| order_direction | No       | Defines the sorting direction. Possible values: `asc` (ascending) or `desc` (descending)                                                                                                        |
-| download        | No       | If `true`, returns an XLSX file buffer ready for download instead of JSON                                                                                                                        |
+For the query parameters and response schema, see [Get ads performance report](https://developers.vtex.com/docs/api-reference/vtex-ads-api#get-/ad/results/v2) in the API Reference.
