@@ -2,7 +2,7 @@
 title: "FastStore Release Notes — Version 4.3.0"
 slug: "2026-06-19-faststore-release-notes-4-3-0"
 type: improved
-excerpt: "Storefront password protection, Order Entry Service file upload in QuickOrder, CMS landing page sitemap control, and My Account and BFF reliability fixes"
+excerpt: "Storefront password protection, Order Entry Service file upload in QuickOrder, and My Account and BFF reliability fixes"
 createdAt: "2026-06-19T00:00:00.000Z"
 updatedAt: "2026-06-19T00:00:00.000Z"
 hidden: true
@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore 4.3.0 adds storefront password protection for preview and production domains, integrates QuickOrder file upload with the VTEX Order Entry Service (OES), and extends CMS landing pages with sitemap visibility control. This release also fixes My Account authentication, password reset routing, GraphQL BFF error status propagation, and dependency maintenance for Partytown. See the sections below for details.
+FastStore 4.3.0 adds storefront password protection for preview and production domains, integrates QuickOrder file upload with the VTEX Order Entry Service (OES. This release also fixes My Account authentication, password reset routing, GraphQL BFF error status propagation, and dependency maintenance for Partytown. See the sections below for details.
 
 ## Features
 
@@ -26,11 +26,6 @@ QuickOrder file upload now uses the VTEX Order Entry Service instead of a rigid 
 
 Stores using QuickOrder file upload can accept more file formats and benefit from server-side parsing with AI-assisted extraction. The UI flow remains upload → processing → drawer, but processing is now distinct from upload. Upgrade to 4.3.0; no configuration changes are required beyond republishing CMS content if you customize `processingStatusText` in the Navbar schema.
 
-### Sitemap control for CMS landing pages ([#3386](https://github.com/vtex/faststore/pull/3386))
-
-[CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) landing page content types now include an optional **Public** toggle (`siteMap`, default `true`) that controls whether the landing page URL is included in `sitemap.xml`. The field is added to `cms_content_type__landingpage.jsonc` and reflected in the aggregated CMS schema.
-
-Editors can exclude specific landing pages from the sitemap without unpublishing them. After upgrading, run `vtex content upload-schema` in your account so the updated schema is available in CMS.
 
 ---
 
@@ -48,6 +43,9 @@ After #3381 removed the `withAutCookie` helper, the Order Entry Service client m
 
 Stores using OES-backed QuickOrder file upload should upgrade to 4.3.0 together with #3334. No separate configuration is required.
 
+
+## Dependencies updates
+
 ### Migrate Partytown to @qwik.dev ([#3394](https://github.com/vtex/faststore/pull/3394))
 
 `@faststore/core` replaces `@builder.io/partytown@^0.6.1` with `@qwik.dev/partytown@^0.14.0`, following the official Partytown package relocation. Runtime behavior is unchanged: the CLI still runs `partytown copylib` at `predev`/`prebuild` and loads static assets from `/~partytown/partytown.js`.
@@ -56,11 +54,11 @@ Upgrade to 4.3.0 to stay on the maintained Partytown package. Re-run `faststore 
 
 ---
 
-## My Account
+## My Account for B2B Buyer Portal (Closed Beta)
 
 ### Forward auth token only via account-scoped cookie (PR: [#3381](https://github.com/vtex/faststore/pull/3381))
 
-Logged-in shoppers were redirected to `/pvt/account/403` when accessing FastStore My Account because `@auth`-protected GraphQL queries forwarded the VTEX ID token twice—via the account-scoped cookie and a duplicated top-level header. The platform rejected the duplicate with `401` even for valid sessions. This PR removes the `withAutCookie` helper and standardizes authenticated VTEX requests on the account-scoped cookie pattern used elsewhere in `@faststore/api`.
+Logged-in shoppers were redirected to `/pvt/account/403` when accessing FastStore My Account because `@auth`-protected GraphQL queries forwarded the VTEX ID token twice—via the account-scoped cookie and a duplicated top-level header. The platform rejected the duplicate with `401` even for valid sessions. This PR standardizes authenticated VTEX requests on the account-scoped cookie pattern used elsewhere in `@faststore/api`.
 
 Stores with `experimental.enableFaststoreMyAccount` enabled should regain access to My Account routes after upgrading. No configuration changes are required.
 
