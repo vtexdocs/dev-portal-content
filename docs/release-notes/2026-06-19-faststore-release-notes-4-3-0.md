@@ -2,7 +2,7 @@
 title: "FastStore Release Notes — Version 4.3.0"
 slug: "2026-06-19-faststore-release-notes-4-3-0"
 type: improved
-excerpt: "Storefront password protection, Order Entry Service file upload in QuickOrder, and My Account and BFF reliability fixes"
+excerpt: "FastStore version 4.3.0 focuses on storefront password protection, QuickOrder file upload through the Order Entry Service, GraphQL BFF error handling, and My Account reliability fixes."
 createdAt: "2026-06-19T00:00:00.000Z"
 updatedAt: "2026-06-19T00:00:00.000Z"
 hidden: true
@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore 4.3.0 adds storefront password protection for preview and production domains, integrates QuickOrder file upload with the VTEX Order Entry Service (OES. This release also fixes My Account authentication, password reset routing, GraphQL BFF error status propagation, and dependency maintenance for Partytown. See the sections below for details.
+This release introduces storefront password protection and QuickOrder file upload through the VTEX Order Entry Service (OES), along with fixes for My Account authentication, password reset routing, and GraphQL BFF error status propagation. It also migrates Partytown to the maintained `@qwik.dev` package. See the sections below for details and upgrade notes.
 
 ## Features
 
