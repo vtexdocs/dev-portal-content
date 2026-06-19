@@ -40,10 +40,10 @@ PUT https://{accountName}.{environment}.com.br/api/dataentities/{dataEntityName}
 }
 ```
 
-| Field            | Type             | Required | Description                                                                                                                |
-| :--------------- | :--------------- | :------- | :------------------------------------------------------------------------------------------------------------------------- |
-| `Fields`         | array of strings | Yes      | Names of fields that contain personal data.                                                                |
-| `SubjectIdField` | string           | Yes      | Name of the field whose value identifies the data subject (owner of the personal data). |
+| Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `Fields` | array of strings | Yes | Names of fields that contain personal data. |
+| `SubjectIdField` | string | Yes | Name of the field whose value identifies the data subject (owner of the personal data). |
 
 ### What happens after configuration
 
@@ -113,9 +113,9 @@ GET https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/docum
 }
 ```
 
-| Parameter   | Type    | Required | Description                                                                                                                                                                                                                                                                                                     |
-| :---------- | :------ | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `_unmasked` | boolean | No       | When set to `true`, fields configured as personal data are returned with their original values instead of masked. Only takes effect if the data entity has personal data configured. Otherwise, it's ignored. Default: `false`. |
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `_unmasked` | boolean | No | When set to `true`, fields configured as personal data are returned with their original values instead of masked. Only takes effect if the data entity has personal data configured. Otherwise, it's ignored. Default: `false`. |
 
 The `_unmasked` parameter also applies to [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) and [Scroll documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/scroll).
 
