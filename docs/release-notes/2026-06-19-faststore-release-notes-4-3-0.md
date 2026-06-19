@@ -41,6 +41,7 @@ API consumers and debugging workflows now receive accurate HTTP status codes ins
 After #3381 removed the `withAutCookie` helper, the Order Entry Service client methods introduced in #3334 still referenced the helper, breaking builds and file upload requests. The five `orderEntry` methods now use the same `withCookie` header pattern as other authenticated commerce calls, preserving `multipart/form-data` for file upload.
 
 Stores using OES-backed QuickOrder file upload should upgrade to 4.3.0 together with #3334. No separate configuration is required.
+
 ## Dependencies updates
 
 ### Migrate Partytown to @qwik.dev ([#3394](https://github.com/vtex/faststore/pull/3394))
