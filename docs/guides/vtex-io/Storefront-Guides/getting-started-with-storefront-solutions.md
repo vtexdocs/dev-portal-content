@@ -35,12 +35,14 @@ The VTEX platform supports the configuration of different business models, such 
 
 |     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
-| [**B2B capabilities**](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC?\&utm_source=autocomplete) | ❌ | ✅ | ❌ |
-| [**Bindings**](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W?\&utm_source=autocomplete) | ❌ | ✅ | ✅ |
-| [**Cross-border and multi-language stores**](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/5qgXy9Erm7FDP3UB5Ox8Bs) | ❌ | ✅ | ❌ |
+| [**B2B capabilities**](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC?\&utm_source=autocomplete) | ⚠️ | ✅ | ❌ |
+| [**Bindings**](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W?\&utm_source=autocomplete) | ✅ (Closed Beta) | ✅ | ✅ |
+| [**Cross-border and multi-language stores**](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/5qgXy9Erm7FDP3UB5Ox8Bs) | ✅ (Closed Beta) | ✅ | ❌ |
 | [**Franchise accounts**](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) | ✅ | ✅ | ✅ |
 | [**Marketplace capabilities**](https://help.vtex.com/en/tutorial/marketplace-strategies-at-vtex--tutorials_402) | ✅ | ✅ | ✅ |
 | [**Multiple trade policies**](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) | ✅ | ✅ | ✅ |
+
+> ⚠️ FastStore supports Bindings and cross-border/multi-language stores through the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature) in [FastStore v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4). This feature is in **Closed Beta** — contact [VTEX Support](https://help.vtex.com/en/support) to request access.
 
 ## Features and functionalities
 
