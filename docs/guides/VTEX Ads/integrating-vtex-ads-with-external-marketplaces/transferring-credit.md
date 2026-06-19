@@ -10,7 +10,32 @@ Credit transfer is the flow that allows marketplaces to transfer advertising cre
 
 > ℹ️ The Authentication model follows [Basic Auth](https://developers.vtex.com/docs/guides/integrating-vtex-ads-with-external-marketplaces#vtex-ads-to-marketplace).
 
-![transferring-credit](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX%20Ads/integrating-vtex-ads-with-external-marketplaces/transferring-credit.png)
+```mermaid
+sequenceDiagram
+    participant MP as Marketplace
+    participant Ads as VTEX Ads
+    participant Seller
+
+    Seller ->> Ads: Request available ad credit balance
+    Ads ->> MP: GET /checking_account?seller_id=SELLER_ID
+    MP -->> Ads: 200 OK<br/>total 1111.00
+    Ads -->> Seller: Show available balance
+
+    Seller ->> Ads: Request to transfer an amount to ads
+    Ads ->> MP: POST /checking_account/transfer
+
+    alt Synchronous success
+        MP -->> Ads: 201 Created<br/>status success
+    else Synchronous failure
+        MP -->> Ads: 400 Bad Request<br/>status failure
+    else Asynchronous (webhook)
+        MP -->> Ads: 202 Accepted<br/>status processing
+        MP ->> Ads: POST /webhook/marketplace/transfers<br/>status success or failure
+        Ads -->> MP: 204 No Content
+    end
+
+    Ads -->> Seller: Confirm transfer result
+```
 
 ## Endpoints to be implemented by the marketplace
 
