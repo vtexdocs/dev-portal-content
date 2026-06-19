@@ -7,9 +7,9 @@ updatedAt: "2026-05-15T00:00:00.000Z"
 excerpt: "Learn how to configure, store, and retrieve personal data in Master Data v2 with encryption, masking, and data subject compliance."
 ---
 
-Master Data v2 allows you to declare which fields in a data entity contain personal data. Once configured, these fields are encrypted, stored with data residency controls, and automatically participate in data subject request flows (e.g., right to be forgotten). On read operations, personal data fields are returned masked by default, and you must explicitly request unmasked access.
+Master Data v2 allows you to declare which fields in a data entity contain personal data. Once configured, these fields are encrypted, stored with data residency controls, and automatically participate in data subject request flows (e.g., right to be forgotten). When retrieved, personal data fields are masked by default, and you must explicitly request unmasked access.
 
-This guide walks through the full integration flow: configuring personal data fields, writing and reading documents, and searching.
+This guide covers the full integration flow: configuring personal data fields, saving documents, reading them, and searching.
 
 > ℹ️ This feature is only available for Master Data v2 entities. Master Data v1 entities (e.g., CL, AD) are not supported.
 
@@ -29,7 +29,7 @@ Use the [Configure personal data fields](https://developers.vtex.com/docs/api-re
 PUT https://{accountName}.{environment}.com.br/api/dataentities/{dataEntityName}/personalData
 ```
 
-> ℹ️ To inspect the current personal data configuration for an entity before changing it, use the [Get personal data configuration](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/personalData) endpoint. Inspecting first is recommended because saving a new configuration locks the endpoint for up to 12 hours (see [What happens after configuration](#what-happens-after-configuration)).
+> ℹ️ To inspect the current personal data configuration for an entity before changing it, use the [Get personal data configuration](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/personalData) endpoint. We recommend inspecting first, because saving a new configuration locks the endpoint for up to 12 hours (see [What happens after configuration](#what-happens-after-configuration)).
 
 ### Personal data request body
 
@@ -71,7 +71,7 @@ POST https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/docu
 
 Master Data v2 automatically checks the personal data configuration for the entity. The values of personal data fields (`email` and `firstName` in this example) are stored separately with encryption and special data residency, while non-personal fields (`categories`) are stored normally.
 
-> ⚠️ Every document saved in an entity with personal data configuration must contain the field declared in `SubjectIdField`.
+> ⚠️ Every document saved in an entity with personal data configuration must include the field declared in `SubjectIdField`.
 
 ## Read documents (masked by default)
 
@@ -115,7 +115,7 @@ GET https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/docum
 
 | Parameter | Type | Required | Description |
 | :--- | :--- | :--- | :--- |
-| `_unmasked` | boolean | No | When set to `true`, fields configured as personal data are returned with their original values instead of masked. Only takes effect if the data entity has personal data configured. Otherwise, it is ignored. Default: `false`. |
+| `_unmasked` | boolean | No | When set to `true`, fields configured as personal data are returned with their original values instead of masked. Only takes effect if the data entity has personal data configured. Otherwise, it's ignored. Default: `false`. |
 
 The `_unmasked` parameter also applies to [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) and [Scroll documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/scroll).
 
@@ -148,7 +148,7 @@ PUT https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/schem
 GET https://{accountName}.{environment}.com.br/api/dataentities/Newsletter/search?email=john@example.com&_fields=email,categories
 ```
 
-The response follows the same masking rules. Personal data fields are masked by default. To retrieve them in clear text, add `_unmasked=true`.
+The response follows the same masking rules. Personal data fields are masked by default. To retrieve unmasked values, add `_unmasked=true`.
 
 > ⚠️ Only exact match filters are supported for personal data fields. Range filters, partial matches, and full-text search on these fields are not supported.
 
@@ -158,5 +158,5 @@ Keep the following restrictions in mind when working with personal data in Maste
 
 - **Master Data v1:** Not supported. Only v2 entities are compatible.
 - **Search operators:** Personal data fields only support exact match. Range, contains, and full-text operators are not available.
-- **All-or-nothing unmasking:** You cannot unmask individual fields. The `_unmasked` parameter applies to all personal data fields in the document.
+- **All-or-nothing unmasking:** You can't unmask individual fields. The `_unmasked` parameter applies to all personal data fields in the document.
 - **Data subject ID required:** Every document in an entity with personal data must include the field configured in `SubjectIdField`.
