@@ -42,6 +42,8 @@ After #3381 removed the `withAutCookie` helper, the Order Entry Service client m
 
 Stores using OES-backed QuickOrder file upload should upgrade to 4.3.0 together with #3334. No separate configuration is required.
 
+---
+
 ## Dependencies updates
 
 ### Migrate Partytown to @qwik.dev ([#3394](https://github.com/vtex/faststore/pull/3394))
