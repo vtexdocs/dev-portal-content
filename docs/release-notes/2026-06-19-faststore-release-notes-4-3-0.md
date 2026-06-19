@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore 4.3.0 adds storefront password protection for preview and production domains, integrates QuickOrder file upload with the VTEX Order Entry Service (OES), and extends Headless CMS landing pages with sitemap visibility control. This release also fixes My Account authentication, password reset routing, GraphQL BFF error status propagation, and dependency maintenance for Partytown. See the sections below for details.
+FastStore 4.3.0 adds storefront password protection for preview and production domains, integrates QuickOrder file upload with the VTEX Order Entry Service (OES), and extends CMS landing pages with sitemap visibility control. This release also fixes My Account authentication, password reset routing, GraphQL BFF error status propagation, and dependency maintenance for Partytown. See the sections below for details.
 
 ## Features
 
@@ -22,15 +22,15 @@ Merchants can restrict preview URLs and production domains to authorized users, 
 
 ### File upload via Order Entry Service (OES) ([#3334](https://github.com/vtex/faststore/pull/3334))
 
-QuickOrder file upload now uses the VTEX Order Entry Service instead of a rigid CSV parser. `@faststore/api` adds GraphQL operations (`uploadFileToOrderEntry`, `startOrderEntryOperation`, `orderEntryOperation`, `orderFormItems`) and VTEX commerce client methods for the OES flow. `@faststore/core` introduces `useOrderEntryUpload`, `useOrderEntryOperation`, `useOrderFormItems`, and the orchestration hook `useOrderEntry`. `@faststore/components` adds a `Processing` state to `FileUploadStatus` with a configurable `processingStatusText` label. `SearchInput` is refactored to use the OES-backed flow end to end, and the legacy `useCSVParser` hook and `useBulkProductsQuery` are removed.
+QuickOrder file upload now uses the VTEX Order Entry Service instead of a rigid CSV parser. `@faststore/api` adds GraphQL operations (`uploadFileToOrderEntry`, `startOrderEntryOperation`, `orderEntryOperation`, `orderFormItems`) and VTEX commerce client methods for the OES flow. `@faststore/core` introduces `useOrderEntryUpload`, `useOrderEntryOperation`, `useOrderFormItems`, and the orchestration hook `useOrderEntry`. `@faststore/components` adds a `Processing` state to `FileUploadStatus` with a configurable `processingStatusText` label. `SearchInput` is refactored to use the OES-backed flow end-to-end, and the legacy `useCSVParser` hook and `useBulkProductsQuery` are removed.
 
 Stores using QuickOrder file upload can accept more file formats and benefit from server-side parsing with AI-assisted extraction. The UI flow remains upload → processing → drawer, but processing is now distinct from upload. Upgrade to 4.3.0; no configuration changes are required beyond republishing CMS content if you customize `processingStatusText` in the Navbar schema.
 
 ### Sitemap control for CMS landing pages ([#3386](https://github.com/vtex/faststore/pull/3386))
 
-Headless CMS landing page content types now include an optional **Public** toggle (`siteMap`, default `true`) that controls whether the landing page URL is included in `sitemap.xml`. The field is added to `cms_content_type__landingpage.jsonc` and reflected in the aggregated CMS schema.
+[CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) landing page content types now include an optional **Public** toggle (`siteMap`, default `true`) that controls whether the landing page URL is included in `sitemap.xml`. The field is added to `cms_content_type__landingpage.jsonc` and reflected in the aggregated CMS schema.
 
-Editors can exclude specific landing pages from the sitemap without unpublishing them. After upgrading, run `vtex content upload-schema` in your account so the updated schema is available in Headless CMS.
+Editors can exclude specific landing pages from the sitemap without unpublishing them. After upgrading, run `vtex content upload-schema` in your account so the updated schema is available in CMS.
 
 ---
 
@@ -44,7 +44,7 @@ API consumers and debugging workflows now receive accurate HTTP status codes ins
 
 ### Order Entry header authentication fix ([#3395](https://github.com/vtex/faststore/pull/3395))
 
-After #3381 removed the `withAutCookie` helper, the Order Entry Service client methods introduced in #3334 still referenced the undefined helper, breaking builds and file-upload requests. The five `orderEntry` methods now use the same `withCookie` header pattern as other authenticated commerce calls, preserving `multipart/form-data` for file upload.
+After #3381 removed the `withAutCookie` helper, the Order Entry Service client methods introduced in #3334 still referenced the helper, breaking builds and file upload requests. The five `orderEntry` methods now use the same `withCookie` header pattern as other authenticated commerce calls, preserving `multipart/form-data` for file upload.
 
 Stores using OES-backed QuickOrder file upload should upgrade to 4.3.0 together with #3334. No separate configuration is required.
 
@@ -66,6 +66,6 @@ Stores with `experimental.enableFaststoreMyAccount` enabled should regain access
 
 ### Use authenticator route for set password ([#3380](https://github.com/vtex/faststore/pull/3380))
 
-The My Account **Reset password** flow in `useSetPassword` now posts to `/api/authenticator/pub/authentication/classic/setpassword` instead of the deprecated `/api/vtexid/pub/authentication/classic/setpassword` endpoint. The account name is passed explicitly via the `an` query parameter, sourced from the hook argument with a fallback to `config.api.storeId`. Request method, credentials, form body, and success/error toast mapping are unchanged.
+The My Account **Reset password** flow in `useSetPassword` now posts to `/api/authenticator/pub/authentication/classic/setpassword` instead of the deprecated `/api/vtexid/pub/authentication/classic/setpassword` endpoint. The account name is passed explicitly via the `an` query parameter, sourced from the hook argument with a fallback to `config.api.storeId`. The request method, credentials, form body, and success/error toast mapping remain unchanged.
 
-Stores using FastStore My Account security settings should verify password reset after upgrading. No developer configuration changes are required.
+Stores using FastStore My Account security settings should verify the password reset after upgrading. No developer configuration changes are required.
