@@ -6,7 +6,7 @@ createdAt: "2026-02-19T12:50:00.813Z"
 updatedAt: "2026-04-30T11:48:00.813Z"  
 ---
 
-> ⚠️ This guide applies only to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions 3 or 4. For stores using Headless CMS, please refer to [this guide](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section).
+> ⚠️ This guide applies only to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions 3 or 4. For stores using Headless CMS (Legacy), please refer to [this guide](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section).
 
 When your store requires a layout or behavior not natively available, you can create a new section component tailored to your brand or business rules. A section component gives you full control over the structure and content while integrating with the CMS.
 
