@@ -18,7 +18,7 @@ FastStore 4.3.0 adds storefront password protection for preview and production d
 
 FastStore now ships a password-protection flow for gated storefront access. The change adds middleware that validates a secure session cookie, a `/api/fs/password-protection/unlock` endpoint that verifies passwords and returns a safe redirect URL, and a login page for protected environments. WebOps settings continue to drive which domains require authentication. The CLI also removes localization-based proxy filename toggling from `dev` and `build` commands.
 
-Merchants can restrict preview URLs and production domains to authorized users, reducing accidental public exposure during development and launch. Configure password protection in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard#password-protection) and upgrade to 4.3.0 to enable the storefront login flow.
+Merchants can restrict preview URLs and production domains to authorized users, reducing accidental public exposure during development and launch. Configure password protection in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard#password-protection) and [upgrade to 4.3.0](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to enable the storefront login flow.
 
 ### File upload via Order Entry Service (OES) ([#3334](https://github.com/vtex/faststore/pull/3334))
 
