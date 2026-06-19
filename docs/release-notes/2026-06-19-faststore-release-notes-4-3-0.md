@@ -68,4 +68,4 @@ Stores with `experimental.enableFaststoreMyAccount` enabled should regain access
 
 The My Account **Reset password** flow in `useSetPassword` now posts to `/api/authenticator/pub/authentication/classic/setpassword` instead of the deprecated `/api/vtexid/pub/authentication/classic/setpassword` endpoint. The account name is passed explicitly via the `an` query parameter, sourced from the hook argument with a fallback to `config.api.storeId`. The request method, credentials, form body, and success/error toast mapping remain unchanged.
 
-Stores using FastStore My Account security settings should verify the password reset after upgrading. No developer configuration changes are required.
+Stores using FastStore My Account security settings should verify the password reset after upgrading. No configuration is required.
