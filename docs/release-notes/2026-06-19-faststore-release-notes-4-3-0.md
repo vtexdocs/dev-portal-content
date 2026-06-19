@@ -1,7 +1,7 @@
 ---
 title: "FastStore Release Notes — Version 4.3.0"
 slug: "2026-06-19-faststore-release-notes-4-3-0"
-type: added
+type: improved
 excerpt: "Storefront password protection, Order Entry Service file upload in QuickOrder, CMS landing page sitemap control, and My Account and BFF reliability fixes"
 createdAt: "2026-06-19T00:00:00.000Z"
 updatedAt: "2026-06-19T00:00:00.000Z"
