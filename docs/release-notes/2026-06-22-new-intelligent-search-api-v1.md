@@ -74,6 +74,10 @@ The `simulationBehavior` parameter now accepts two additional values:
 | `only3P` | Calls simulation for third-party sellers only. |
 | `regionalize1p` | Calls regionalized simulation for first-party sellers only. |
 
+### Resolved: Incomplete product item data on product search
+
+A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in the legacy API has been resolved in Intelligent Search API v1. Some fields previously returned incorrect or empty values, including `isKit`, `modalType`, and `images[].imageText`. In addition, the attachment schema has been updated and new fields such as `estimatedDateArrival`, `kitItems`, and `PaymentOptions` are now returned.
+
 ## What needs to be done?
 
 For a step-by-step migration checklist, see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
