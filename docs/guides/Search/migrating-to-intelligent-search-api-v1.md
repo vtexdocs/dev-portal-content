@@ -143,22 +143,6 @@ Supported `field` values:
 | `sku` | SKU ID |
 | `reference` | SKU reference ID |
 
-## Step 6 - Fix pickup point availability parameter name
-
-If you use the pickup point availability endpoint, rename the `pickupsHash` parameter to `pickupPointsHash`.
-
-**Before**
-
-```
-?pickupsHash=d41d8cd98f00b204e9800998ecf8427e
-```
-
-**After**
-
-```
-?pickupPointsHash=d41d8cd98f00b204e9800998ecf8427e
-```
-
 ## Caching behavior reference
 
 | Endpoint | Cache behavior |
@@ -190,4 +174,3 @@ If you use the pickup point availability endpoint, rename the `pickupsHash` para
 - [ ] Passing regionalization parameters explicitly (if applicable)
 - [ ] Passing UTM and marketing parameters explicitly (if applicable)
 - [ ] Replaced single-product search calls with `GET /products` (if applicable)
-- [ ] Renamed `pickupsHash` to `pickupPointsHash` (if applicable)
