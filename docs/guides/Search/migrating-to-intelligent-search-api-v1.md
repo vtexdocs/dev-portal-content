@@ -61,7 +61,7 @@ Rename paths to match the new URL structure. Underscores become hyphens, the IO 
 
 ## Step 3 - Replace segment cookie context with explicit parameters
 
-Intelligent Search API (Legacy) read locale, sales channel, regionalization, and marketing context from the VTEX segment cookie. Intelligent Search API v1 does not read the segment cookie. You must pass this context explicitly.
+Intelligent Search API (Legacy) read locale, sales channel, regionalization, marketing context, and Delivery Promise parameters from the VTEX segment cookie. Intelligent Search API v1 does not read the segment cookie. You must pass this context explicitly.
 
 Read the current segment values from the VTEX segment cookie (or your session/context store) and map them to the corresponding query parameters:
 
@@ -172,30 +172,32 @@ function segmentToProductSearchV1(segment: Segment, query?: string): string {
 }
 ```
 
+### Delivery Promise parameters (if applicable)
+
+If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the parameters `deliveryZonesHash`, `pickupPointsHash`, and `pickupPoint` were previously passed via the segment `facets` string. In Intelligent Search API v1, pass them as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
+
+`deliveryZonesHash` is obtained from `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) and `pickupPointsHash` from `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search). Both are part of the Delivery Promise Suggestions API.
+
 ## Step 4 - Add regionalization parameters (if applicable)
 
-If your store uses regionalization, you previously relied on the segment to pass this context. In Intelligent Search API v1, pass it explicitly on `product-search`, `facets`, and `pickup-point-availability` requests.
+If your store uses regionalization, you previously relied on the segment to pass this context. In Intelligent Search API v1, pass it explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
 
-You can provide the buyer's location in one of two ways:
-
-**With country and ZIP code**
+You can pass the buyer's location using country and ZIP code:
 
 ```
 ?country=BRA&zip-code=22271020
 ```
 
-**With pre-computed hashes** (faster, avoids a geolocation lookup)
-
-```
-?deliveryZonesHash=4bab2513d897914b0b33f25c8c74f571&pickupPointsHash=d41d8cd98f00b204e9800998ecf8427e
-```
-
-> `deliveryZonesHash` is obtained from `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2). `pickupPointsHash` is obtained from `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search). Both endpoints are part of the Delivery Promise Suggestions API.
-
 Optionally include coordinates to sort pickup results by proximity:
 
 ```
 ?country=BRA&zip-code=22271020&coordinates=-43.19532775878906,-22.955032348632812
+```
+
+If your account uses `regionId` instead, pass it directly:
+
+```
+?regionId=v2.C0FC2DE04D6A7C9E1DC22C0D7EBD939B
 ```
 
 ## Step 5 - Replace single-product search with the new Get product endpoint
