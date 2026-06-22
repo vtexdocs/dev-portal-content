@@ -21,7 +21,7 @@ Sales Team Management is built around three core entities:
 
 - **Organization Unit (OU)**: A node in the sales team hierarchy. Every unit must have the `type` field set to `Sales Team`. Units without a `parentId` are root-level units.
 - **User**: A VTEX account user assigned to an organization unit. Users inherit the contracts linked to their unit.
-- **Contract*: A B2B contract (stored in Master Data) linked to an organization unit via the `contractIds` scope. All users in the unit gain access to the contracts linked to it.
+- **Contract**: A B2B contract (stored in Master Data) linked to an organization unit via the `contractIds` scope. All users in the unit gain access to the contracts linked to it.
 
 ## Setup flow
 
