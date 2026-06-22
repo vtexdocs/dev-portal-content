@@ -45,7 +45,7 @@ https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1
 
 Rename paths to match the new URL structure. Underscores become hyphens, the IO prefix is removed, and `/v1` is added.
 
-> **Note on pickup point availability:** this endpoint was already being served by the v1 service in the legacy API. The path itself does not change, only the base URL and how context is passed (see steps 3 and 6).
+> **Note on pickup point availability:** this endpoint was already being served by the v1 service in the legacy API. The path itself does not change, only the base URL and how context is passed (see steps 3 and 4).
 
 | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | --- | --- |
