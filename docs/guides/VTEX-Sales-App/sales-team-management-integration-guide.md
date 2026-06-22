@@ -9,7 +9,7 @@ updatedAt: "2026-06-17T10:00:00.000Z"
 
 > ⚠️ This feature is currently in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
-Sales Team Management lets you organize your sales force into a hierarchical structure using [Organization Units (OUs)](https://help.vtex.com/en/docs/tutorials/organizational-units). Each unit can contain users and B2B contracts, allowing you to control which commercial conditions are available to each team.
+**Sales Team Management** lets you organize your sales force into a hierarchical structure using [Organization Units (OUs)](https://help.vtex.com/en/docs/tutorials/organizational-units). Each unit can contain users and B2B contracts, allowing you to control which commercial conditions are available to each team.
 
 This guide covers the API operations needed to configure and operate Sales Team Management programmatically: creating the unit hierarchy, assigning users, and linking B2B contracts.
 
