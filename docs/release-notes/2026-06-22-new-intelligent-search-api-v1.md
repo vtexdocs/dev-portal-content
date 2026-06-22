@@ -74,10 +74,6 @@ The `simulationBehavior` parameter now accepts two additional values:
 | `only3P` | Calls simulation for third-party sellers only. |
 | `regionalize1p` | Calls regionalized simulation for first-party sellers only. |
 
-### Fixed parameter name on pickup point availability
-
-Intelligent Search API (Legacy) documented `pickupsHash` as a query parameter on the pickup point availability endpoint. The correct name is `pickupPointsHash`, which is what Intelligent Search API v1 uses.
-
 ## What needs to be done?
 
 For a step-by-step migration checklist, see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
