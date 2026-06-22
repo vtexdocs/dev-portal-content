@@ -69,7 +69,7 @@ Read the current segment values from the VTEX segment cookie (or your session/co
 | --- | --- | --- |
 | `cultureInfo` | `locale` | All endpoints |
 | `channel` | `sc` query param or `trade-policy/{id}` facet | All endpoints |
-| `regionId` | `regionId` | `product-search`, `facets`, `pickup-point-availability` |
+| `regionId` | `regionId` | `product-search`, `facets`, `pickup-point-availability`, `products` |
 | `utm_source` | `utmSource` | `product-search`, `products` |
 | `utm_campaign` | `utmCampaign` | `product-search`, `products` |
 | `utmi_campaign` | `utmiCampaign` | `product-search`, `products` |
