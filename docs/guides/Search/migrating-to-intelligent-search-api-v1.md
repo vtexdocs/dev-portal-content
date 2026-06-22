@@ -89,6 +89,89 @@ curl 'https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-
 curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/trade-policy/1?locale=en-US&sc=1'
 ```
 
+### Parsing the segment `facets` field
+
+The segment cookie's `facets` field is a semicolon-separated `key=value` string, for example:
+
+```
+zip-code=22250-040;country=BRA;brand=samsung;category-1=tv
+```
+
+Six keys from this string map to v1 query parameters: `zip-code`, `coordinates`, `country`, `pickupPoint`, `deliveryZonesHash`, and `pickupPointsHash`. All other keys become path facets in the URL.
+
+The following TypeScript snippet shows a reference implementation of the full segment-to-v1 translation for `product-search`:
+
+```ts
+type Segment = {
+  channel?: string | number
+  regionId?: string
+  countryCode?: string
+  cultureInfo?: string
+  // Semicolon-separated "key=value" string, e.g. "zip-code=22250-040;country=BRA;brand=samsung"
+  facets?: string
+  utm_source?: string
+  utm_campaign?: string
+  utmi_campaign?: string
+  campaigns?: string
+  priceTables?: string
+}
+
+const SHIPPING_KEYS = new Set([
+  'zip-code', 'coordinates', 'country', 'pickupPoint',
+  'deliveryZonesHash', 'pickupPointsHash',
+])
+
+function segmentToProductSearchV1(segment: Segment, query?: string): string {
+  const shipping: Record<string, string> = {}
+  const pathFacets: Array<{ key: string; value: string }> = []
+
+  for (const pair of (segment.facets ?? '').split(';')) {
+    const eq = pair.indexOf('=')
+    if (eq < 0) continue
+    const key = pair.slice(0, eq)
+    const value = pair.slice(eq + 1)
+    if (!key || !value) continue
+
+    if (SHIPPING_KEYS.has(key)) {
+      shipping[key] = value
+    } else {
+      pathFacets.push({ key, value })
+    }
+  }
+
+  const params: Record<string, string> = {}
+  const set = (name: string, value?: string | number) => {
+    if (value !== undefined && value !== null && value !== '') {
+      params[name] = String(value)
+    }
+  }
+
+  set('sc', segment.channel)
+  set('locale', segment.cultureInfo)
+  set('regionId', segment.regionId)
+  set('country', segment.countryCode ?? shipping.country)
+  set('zip-code', shipping['zip-code'])
+  set('coordinates', shipping.coordinates)
+  set('pickupPoint', shipping.pickupPoint)
+  set('deliveryZonesHash', shipping.deliveryZonesHash)
+  set('pickupPointsHash', shipping.pickupPointsHash)
+  set('utmSource', segment.utm_source)
+  set('utmCampaign', segment.utm_campaign)
+  set('utmiCampaign', segment.utmi_campaign)
+  set('campaigns', segment.campaigns)
+  set('priceTables', segment.priceTables)
+
+  if (query) params.query = query
+
+  const sc = params.sc ?? '1'
+  const facetPath = pathFacets.map(f => `${f.key}/${f.value}`).join('/')
+  const path = ['trade-policy', sc, facetPath].filter(Boolean).join('/')
+  const search = new URLSearchParams(params).toString()
+
+  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/${path}?${search}`
+}
+```
+
 ## Step 4 - Add regionalization parameters (if applicable)
 
 If your store uses regionalization, you previously relied on the segment to pass this context. In Intelligent Search API v1, pass it explicitly on `product-search`, `facets`, and `pickup-point-availability` requests.
@@ -166,9 +249,30 @@ Each suggestion now optionally includes an `attributes` array describing facet a
 
 A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in Intelligent Search API (Legacy) is resolved in v1. If your integration reads any of the following fields, verify that your code handles the updated values correctly after migrating:
 
-- `isKit`, `modalType`, and `images[].imageText`: previously returned incorrect data, now correct.
-- Attachment schema: the `id` field is now a number (was a string); `required` and `domainValues` have been replaced by `isActive`, `isRequired`, `schema`, and `fields`.
-- New fields now returned: `estimatedDateArrival`, `kitItems`, and `PaymentOptions`.
+**Fields that previously returned incorrect data, now correct:**
+
+- `products[].items[].isKit`
+- `products[].items[].modalType`
+- `products[].items[].images[].imageText`
+
+**Attachment schema change:** the `attachments[]` object structure changed significantly. Update any code that reads attachment data:
+
+| Field | Intelligent Search API (Legacy) | Intelligent Search API v1 |
+| --- | --- | --- |
+| `attachments[].id` | `string` | `number` |
+| `attachments[].name` | `string` | `string` (unchanged) |
+| `attachments[].required` | `boolean` | Removed — use `isRequired` |
+| `attachments[].domainValues` | `string` | Removed — use `fields[].domain_values` |
+| `attachments[].isRequired` | Not present | `boolean` |
+| `attachments[].isActive` | Not present | `boolean` |
+| `attachments[].schema` | Not present | `object` (free-form JSON schema) |
+| `attachments[].fields[]` | Not present | Array of `{ field_name, max_characters, domain_values }` |
+
+**New fields now returned:**
+
+- `products[].items[].estimatedDateArrival` (string): Estimated arrival date for the SKU, when configured.
+- `products[].items[].kitItems[]` (array): Component SKUs when `isKit` is `true`. Each entry has `itemId` and `amount`.
+- `products[].items[].sellers[].commertialOffer.PaymentOptions` (object): Available payment options and installment plans for the seller's offer.
 
 ## Caching behavior reference
 
