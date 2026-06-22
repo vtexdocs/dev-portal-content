@@ -74,6 +74,24 @@ The `simulationBehavior` parameter now accepts two additional values:
 | `only3P` | Calls simulation for third-party sellers only. |
 | `regionalize1p` | Calls regionalized simulation for first-party sellers only. |
 
+### Updated parameters and response fields
+
+Several endpoints expose new parameters and response fields compared to Intelligent Search API (Legacy).
+
+**`GET /top-searches`:** A new optional `query` parameter filters results to return only popular terms containing the given text (case-insensitive).
+
+**`GET /search-suggestions`:** Each suggestion in the response now includes an optional `attributes` array, providing facet attributes associated with the suggestion — the same shape returned by `GET /autocomplete-suggestions`.
+
+**`GET /facets`:** A new optional `removeHiddenFacets` parameter omits hidden facets from the response when set to `true`. The `facets[].type` field now includes a third possible value, `DELIVERY`, in addition to `TEXT` and `PRICERANGE`, representing delivery and shipping option facets.
+
+**`GET /product-search`:** The response now includes:
+- `searchId`: A unique identifier for the search request, for use in analytics events.
+- `correction`: Spelling correction applied to the query, if any.
+- `redirect`: URL to redirect the user to when the query matches a redirect rule.
+- `options`: Available sort options, product counts, and delivery promise data.
+
+**`GET /pickup-point-availability`:** Two new optional parameters: `locale` for localized results, and `pickupPoint` to filter results to a specific pickup point ID.
+
 ### Resolved: Incomplete product item data on product search
 
 A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in the legacy API has been resolved in Intelligent Search API v1. Some fields previously returned incorrect or empty values, including `isKit`, `modalType`, and `images[].imageText`. In addition, the attachment schema has been updated and new fields such as `estimatedDateArrival`, `kitItems`, and `PaymentOptions` are now returned.
