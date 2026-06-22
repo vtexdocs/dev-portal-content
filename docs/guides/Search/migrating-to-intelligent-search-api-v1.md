@@ -45,7 +45,7 @@ https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1
 
 Rename paths to match the new URL structure. Underscores become hyphens, the IO prefix is removed, and `/v1` is added.
 
-> **Note on pickup point availability:** this endpoint was already being served by the v1 service in the legacy API. The path itself does not change, only the base URL and how context is passed (see steps 3 and 4).
+> **Note on pickup point availability:** this endpoint was already being served by the v1 service in the legacy API. The path itself does not change, only the base URL and how context is passed (see step 3).
 
 | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | --- | --- |
@@ -70,6 +70,7 @@ Read the current segment values from the VTEX segment cookie (or your session/co
 | `cultureInfo` | `locale` | All endpoints |
 | `channel` | `sc` query param or `trade-policy/{id}` facet | All endpoints |
 | `regionId` | `regionId` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `countryCode` | `country` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 | `utm_source` | `utmSource` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 | `utm_campaign` | `utmCampaign` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 | `utmi_campaign` | `utmiCampaign` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
@@ -98,6 +99,10 @@ zip-code=22250-040;country=BRA;brand=samsung;category-1=tv
 ```
 
 Six keys from this string map to v1 query parameters: `zip-code`, `coordinates`, `country`, `pickupPoint`, `deliveryZonesHash`, and `pickupPointsHash`. All other keys become path facets in the URL.
+
+> **Note on `country`:** if `countryCode` is present as a top-level segment field, it takes precedence over the `country` key in the `facets` string. The TypeScript reference implementation below handles this automatically.
+
+> **Note on `campaigns`:** this field is only forwarded when the segment carries it as a non-empty string. Segments often have `campaigns: null` — in that case, omit the parameter entirely.
 
 The following TypeScript snippet shows a reference implementation of the full segment-to-v1 translation for `product-search`:
 
@@ -286,7 +291,7 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 | `GET` [Get attempt of correction of a misspelled term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) | `Cache-Control: public, max-age=600` |
 | `GET` [Get list of banners registered for query (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) | `Cache-Control: public, max-age=600` |
 | `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (organic, public sales channel) | `Cache-Control: public, max-age=600` |
-| `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (with sponsored products) | `Cache-Control: no-store` |
+| `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (with sponsored products) | May return `Cache-Control: no-store` to prevent ad impressions from being served from a shared cache |
 | `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) | `Cache-Control: public, max-age=600` |
 | `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (public sales channel) | `Cache-Control: public, max-age=600` |
 | `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) (public sales channel) | `Cache-Control: public, max-age=600` |
