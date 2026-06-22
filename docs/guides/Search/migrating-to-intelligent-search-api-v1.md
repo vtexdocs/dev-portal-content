@@ -53,7 +53,7 @@ Rename paths to match the new URL structure. Underscores become hyphens, the IO 
 | `GET /api/io/_v/api/intelligent-search/product_search/{facets}`<br>[Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) | `GET /api/intelligent-search/v1/product-search/{facets}`<br>[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) |
 | `GET /api/io/_v/api/intelligent-search/facets/{facets}`<br>[Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-) | `GET /api/intelligent-search/v1/facets/{facets}`<br>[List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
 | `GET /api/io/_v/api/intelligent-search/pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) | `GET /api/intelligent-search/v1/pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) |
-| New endpoint | `GET /api/intelligent-search/v1/products`<br>[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| N/A | `GET /api/intelligent-search/v1/products`<br>[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 
 ## Step 3 - Replace segment cookie context with explicit parameters
 
@@ -115,13 +115,13 @@ If you use `GET` [Search products](https://developers.vtex.com/docs/api-referenc
 
 This endpoint accepts a `value` and a `field` parameter, skips the search pipeline, and responds faster with a higher cache-hit rate.
 
-**Before:** fetching a single product via product search
+**Before:** Fetching a single product via product search
 
 ```sh
 curl 'https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search/trade-policy/1?query=product.link:blue-shirt'
 ```
 
-**After:** fetching a single product by slug
+**After:** Fetching a single product by slug
 
 ```sh
 curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/products?sc=1&field=slug&value=blue-shirt'
@@ -188,9 +188,9 @@ curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/
 
 ## Related resources
 
-- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): new API reference
-- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): legacy API reference
-- [New Intelligent Search API v1](https://developers.vtex.com/docs/release-notes/2026-06-22-new-intelligent-search-api-v1): release note
+- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): New API reference
+- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): Legacy API reference
+- [New Intelligent Search API v1](https://developers.vtex.com/docs/release-notes/2026-06-22-new-intelligent-search-api-v1): Release note
 
 ## Migration checklist
 
