@@ -30,7 +30,7 @@ Responses from most endpoints are now returned with `Cache-Control: public, max-
 
 Exceptions:
 
-- Responses containing sponsored products: `Cache-Control: no-store`.
+- Responses containing sponsored products: may return `Cache-Control: no-store` to prevent ad impressions from being served from a shared cache.
 - Private sales channel responses: not cached.
 
 ### Explicit context: No segment cookie
