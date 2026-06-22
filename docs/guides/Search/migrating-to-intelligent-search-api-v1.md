@@ -69,12 +69,12 @@ Read the current segment values from the VTEX segment cookie (or your session/co
 | --- | --- | --- |
 | `cultureInfo` | `locale` | All endpoints |
 | `channel` | `sc` query param or `trade-policy/{id}` facet | All endpoints |
-| `regionId` | `regionId` | `product-search`, `facets`, `pickup-point-availability`, `products` |
-| `utm_source` | `utmSource` | `product-search`, `products` |
-| `utm_campaign` | `utmCampaign` | `product-search`, `products` |
-| `utmi_campaign` | `utmiCampaign` | `product-search`, `products` |
-| `campaigns` | `campaigns` | `product-search`, `products` |
-| `priceTables` | `priceTables` | `product-search`, `products` |
+| `regionId` | `regionId` | `GET /product-search/{facets}`<br />[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products`<br />[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `utm_source` | `utmSource` | `GET /product-search/{facets}`<br />[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `utm_campaign` | `utmCampaign` | `GET /product-search/{facets}`<br />[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `utmi_campaign` | `utmiCampaign` | `GET /product-search/{facets}`<br />[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `campaigns` | `campaigns` | `GET /product-search/{facets}`<br />[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `priceTables` | `priceTables` | `GET /product-search/{facets}`<br />[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 
 **Before**
 
