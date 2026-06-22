@@ -143,6 +143,14 @@ Supported `field` values:
 | `sku` | SKU ID |
 | `reference` | SKU reference ID |
 
+## Step 6 - Verify product item data in your integration
+
+A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in Intelligent Search API (Legacy) is resolved in v1. If your integration reads any of the following fields, verify that your code handles the updated values correctly after migrating:
+
+- `isKit`, `modalType`, and `images[].imageText`: previously returned incorrect data, now correct.
+- Attachment schema: the `id` field is now a number (was a string); `required` and `domainValues` have been replaced by `isActive`, `isRequired`, `schema`, and `fields`.
+- New fields now returned: `estimatedDateArrival`, `kitItems`, and `PaymentOptions`.
+
 ## Caching behavior reference
 
 | Endpoint | Cache behavior |
