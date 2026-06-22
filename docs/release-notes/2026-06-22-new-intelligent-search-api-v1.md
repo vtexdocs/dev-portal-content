@@ -4,6 +4,7 @@ slug: "2026-06-22-new-intelligent-search-api-v1"
 excerpt: "The new Intelligent Search API v1 is now available for headless integrations. It adds HTTP caching, lower latency, explicit regionalization, and a new endpoint for product detail pages."
 hidden: false
 createdAt: "2026-06-22T00:00:00.000Z"
+updatedAt: "2026-06-22T00:00:00.000Z"
 type: "added"
 tags:
     - Search
@@ -39,15 +40,15 @@ The IO prefix and underscores in path names have been removed, and `/v1` has bee
 
 | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | --- | --- |
-| `GET /api/io/_v/api/intelligent-search/top_searches`<br>[Get list of the 10 most searched terms](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/top_searches) | `GET /api/intelligent-search/v1/top-searches`<br>[Get list of the 10 most searched terms v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) |
-| `GET /api/io/_v/api/intelligent-search/autocomplete_suggestions`<br>[Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/autocomplete_suggestions) | `GET /api/intelligent-search/v1/autocomplete-suggestions`<br>[Get list of suggested terms and attributes similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions) |
-| `GET /api/io/_v/api/intelligent-search/search_suggestions`<br>[Get list of suggested terms similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/search_suggestions) | `GET /api/intelligent-search/v1/search-suggestions`<br>[Get list of suggested terms similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) |
-| `GET /api/io/_v/api/intelligent-search/correction_search`<br>[Get attempt of correction of a misspelled term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/correction_search) | `GET /api/intelligent-search/v1/correction-search`<br>[Get attempt of correction of a misspelled term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) |
-| `GET /api/io/_v/api/intelligent-search/banners/{facets}`<br>[Get list of banners registered for query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/banners/-facets-) | `GET /api/intelligent-search/v1/banners/{facets}`<br>[Get list of banners registered for query v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) |
-| `GET /api/io/_v/api/intelligent-search/product_search/{facets}`<br>[Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) | `GET /api/intelligent-search/v1/product-search/{facets}`<br>[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) |
-| `GET /api/io/_v/api/intelligent-search/facets/{facets}`<br>[Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-) | `GET /api/intelligent-search/v1/facets/{facets}`<br>[List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
-| `GET /api/io/_v/api/intelligent-search/pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) | `GET /api/intelligent-search/v1/pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) |
-| N/A | `GET /api/intelligent-search/v1/products`<br>[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `GET /api/io/_v/api/intelligent-search/top_searches`<br />[Get list of the 10 most searched terms](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/top_searches) | `GET /api/intelligent-search/v1/top-searches`<br />[Get list of the 10 most searched terms v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) |
+| `GET /api/io/_v/api/intelligent-search/autocomplete_suggestions`<br />[Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/autocomplete_suggestions) | `GET /api/intelligent-search/v1/autocomplete-suggestions`<br />[Get list of suggested terms and attributes similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions) |
+| `GET /api/io/_v/api/intelligent-search/search_suggestions`<br />[Get list of suggested terms similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/search_suggestions) | `GET /api/intelligent-search/v1/search-suggestions`<br />[Get list of suggested terms similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) |
+| `GET /api/io/_v/api/intelligent-search/correction_search`<br />[Get attempt of correction of a misspelled term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/correction_search) | `GET /api/intelligent-search/v1/correction-search`<br />[Get attempt of correction of a misspelled term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) |
+| `GET /api/io/_v/api/intelligent-search/banners/{facets}`<br />[Get list of banners registered for query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/banners/-facets-) | `GET /api/intelligent-search/v1/banners/{facets}`<br />[Get list of banners registered for query v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) |
+| `GET /api/io/_v/api/intelligent-search/product_search/{facets}`<br />[Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) | `GET /api/intelligent-search/v1/product-search/{facets}`<br />[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) |
+| `GET /api/io/_v/api/intelligent-search/facets/{facets}`<br />[Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-) | `GET /api/intelligent-search/v1/facets/{facets}`<br />[List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
+| `GET /api/io/_v/api/intelligent-search/pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) | `GET /api/intelligent-search/v1/pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) |
+| N/A | `GET /api/intelligent-search/v1/products`<br />[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 
 ### New endpoint: Get product
 
@@ -78,19 +79,19 @@ The `simulationBehavior` parameter now accepts two additional values:
 
 Several endpoints expose new parameters and response fields compared to Intelligent Search API (Legacy).
 
-**`GET /top-searches`:** A new optional `query` parameter filters results to return only popular terms containing the given text (case-insensitive).
+**`GET` [Get list of the 10 most searched terms v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches):** A new optional `query` parameter filters results to return only popular terms containing the given text (case-insensitive).
 
-**`GET /search-suggestions`:** Each suggestion in the response now includes an optional `attributes` array, providing facet attributes associated with the suggestion, using the same shape as `GET /autocomplete-suggestions`.
+**`GET` [Get list of suggested terms similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions):** Each suggestion in the response now includes an optional `attributes` array, providing facet attributes associated with the suggestion, using the same shape as `GET` [Get list of suggested terms and attributes similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions).
 
-**`GET /facets`:** A new optional `removeHiddenFacets` parameter omits hidden facets from the response when set to `true`. The `facets[].type` field now includes a third possible value, `DELIVERY`, in addition to `TEXT` and `PRICERANGE`, representing delivery and shipping option facets.
+**`GET` [List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):** A new optional `removeHiddenFacets` parameter omits hidden facets from the response when set to `true`. The `facets[].type` field now includes a third possible value, `DELIVERY`, in addition to `TEXT` and `PRICERANGE`, representing delivery and shipping option facets.
 
-**`GET /product-search`:** The response now includes:
+**`GET` [Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-):** The response now includes:
 - `searchId`: A unique identifier for the search request, for use in analytics events.
 - `correction`: Spelling correction applied to the query, if any.
 - `redirect`: URL to redirect the user to when the query matches a redirect rule.
 - `options`: Available sort options, product counts, and delivery promise data.
 
-**`GET /pickup-point-availability`:** Two new optional parameters: `locale` for localized results, and `pickupPoint` to filter results to a specific pickup point ID.
+**`GET` [Get pickup point availability for Delivery Promise v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-):** Two new optional parameters: `locale` for localized results, and `pickupPoint` to filter results to a specific pickup point ID.
 
 ### Resolved: Incomplete product item data on product search
 
