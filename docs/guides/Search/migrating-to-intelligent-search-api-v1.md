@@ -300,21 +300,21 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 
 ## Migration checklist
 
-| Done | Task | Step | Required |
-| --- | --- | --- | --- |
-| [ ] | Updated base URL to `/api/intelligent-search/v1` | [Step 1](#step-1---update-the-base-url) | Yes |
-| [ ] | Renamed all endpoint paths (underscores to hyphens) | [Step 2](#step-2---update-endpoint-paths) | Yes |
-| [ ] | Passing `locale` explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
-| [ ] | Passing `sc` or `trade-policy` facet explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
-| [ ] | Passing regionalization parameters explicitly (`regionId`, `country`, `zip-code`, `coordinates`) | [Step 3](#regionalization-parameters-if-applicable) | If applicable |
-| [ ] | Passing Delivery Promise parameters explicitly (`deliveryZonesHash`, `pickupPointsHash`, `pickupPoint`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
-| [ ] | Passing UTM and marketing parameters explicitly (`utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`) | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | If applicable |
-| [ ] | Replaced single-product search calls with `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | [Step 4](#step-4---replace-single-product-search-with-the-new-get-product-endpoint) | If applicable |
-| [ ] | Handling `searchId` in analytics events | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| [ ] | Handling `correction` field for spell-correction messaging | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| [ ] | Handling `redirect` field for query redirect rules | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| [ ] | Handling `attributes` on search-suggestions response | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| [ ] | Added `DELIVERY` handler to facet type switch/filter | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| [ ] | Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
-| [ ] | Updated code reading attachment data to match new schema | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
-| [ ] | Handled new fields: `estimatedDateArrival`, `kitItems[]`, `PaymentOptions` | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
+| Task | Step | Required |
+| --- | --- | --- |
+| <input type="checkbox"></input> Updated base URL to `/api/intelligent-search/v1` | [Step 1](#step-1---update-the-base-url) | Yes |
+| <input type="checkbox"></input> Renamed all endpoint paths (underscores to hyphens) | [Step 2](#step-2---update-endpoint-paths) | Yes |
+| <input type="checkbox"></input> Passing `locale` explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
+| <input type="checkbox"></input> Passing `sc` or `trade-policy` facet explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
+| <input type="checkbox"></input> Passing regionalization parameters explicitly (`regionId`, `country`, `zip-code`, `coordinates`) | [Step 3](#regionalization-parameters-if-applicable) | If applicable |
+| <input type="checkbox"></input> Passing Delivery Promise parameters explicitly (`deliveryZonesHash`, `pickupPointsHash`, `pickupPoint`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
+| <input type="checkbox"></input> Passing UTM and marketing parameters explicitly (`utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`) | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | If applicable |
+| <input type="checkbox"></input> Replaced single-product search calls with `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | [Step 4](#step-4---replace-single-product-search-with-the-new-get-product-endpoint) | If applicable |
+| <input type="checkbox"></input> Handling `searchId` in analytics events | [Step 5](#step-5---handle-new-response-fields) | If applicable |
+| <input type="checkbox"></input> Handling `correction` field for spell-correction messaging | [Step 5](#step-5---handle-new-response-fields) | If applicable |
+| <input type="checkbox"></input> Handling `redirect` field for query redirect rules | [Step 5](#step-5---handle-new-response-fields) | If applicable |
+| <input type="checkbox"></input> Handling `attributes` on search-suggestions response | [Step 5](#step-5---handle-new-response-fields) | If applicable |
+| <input type="checkbox"></input> Added `DELIVERY` handler to facet type switch/filter | [Step 5](#step-5---handle-new-response-fields) | If applicable |
+| <input type="checkbox"></input> Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
+| <input type="checkbox"></input> Updated code reading attachment data to match new schema | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
+| <input type="checkbox"></input> Handled new fields: `estimatedDateArrival`, `kitItems[]`, `PaymentOptions` | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
