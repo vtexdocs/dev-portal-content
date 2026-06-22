@@ -47,11 +47,11 @@ The IO prefix and underscores in path names have been removed.
 | `GET /product_search/{facets}`<br>[Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) | `GET /product-search/{facets}`<br>[Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) |
 | `GET /facets/{facets}`<br>[Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-) | `GET /facets/{facets}`<br>[List filters for a search](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
 | `GET /pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) | `GET /pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) |
-| — | `GET /products`<br>[Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| New endpoint | `GET /products`<br>[Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 
 ### New endpoint: Get product
 
-A new `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier — product ID, slug, EAN, SKU ID, or reference — it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
+A new `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
 
 ### Updated parameters on product search and facets
 
@@ -64,10 +64,6 @@ Intelligent Search API v1 adds explicit regionalization parameters to `GET` [Sea
 - `pickupPoint`
 - `deliveryZonesHash`
 - `pickupPointsHash`
-
-Marketing and simulation parameters are also now explicit query parameters instead of being read from the segment:
-
-- `utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`
 
 ### Updated `simulationBehavior` enum
 
@@ -90,6 +86,6 @@ For a step-by-step migration checklist, see [Migrating to Intelligent Search API
 
 ## Related resources
 
-- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) — new API reference
-- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) — legacy API reference
-- [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1) — step-by-step migration guide
+- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): new API reference
+- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): legacy API reference
+- [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1): step-by-step migration guide
