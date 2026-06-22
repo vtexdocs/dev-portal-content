@@ -52,7 +52,7 @@ If your store uses [Delivery Promise for headless stores](https://developers.vte
 
 ### New URL structure
 
-The IO prefix and underscores in path names have been removed, and `/v1` has been added to the path.
+The IO prefix has been removed, underscores in path names have been replaced by hyphens, and `/v1` has been added to the path.
 
 | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | --- | --- |
