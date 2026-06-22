@@ -90,5 +90,5 @@ To retrieve full contract details, use the [Master Data API v2](https://develope
 
 Use [Get all children organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/children) to traverse the hierarchy below a given unit. The `shallowSearch` parameter controls the depth:
 
-- `shallowSearch=true` — Returns direct children only.
+- `shallowSearch=true`: Returns direct children only.
 - `shallowSearch=false` (default): Returns the full subtree recursively. May be slower for large hierarchies.
