@@ -4,10 +4,10 @@ slug: "useredirect-hook"
 hidden: true
 createdAt: "2026-03-11T17:08:52.219Z"
 updatedAt: "2026-03-11T17:08:52.219Z"
-excerpt: ""
+excerpt: "Learn how to use the useRedirect hook to programmatically redirect users to different pages in your Checkout extension."
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 The `useRedirect` hook allows an extension to redirect the user to another page.
 
@@ -45,6 +45,6 @@ The `url` is the destination URL. It must be a complete URL, such as `https://ww
 
 ## Extension Points
 
-This hook is available in the following extension point:
+This hook is available in the following [Checkout extension point](https://developers.vtex.com/docs/guides/checkout-extension-points):
 
 - `punchout.order-summary.cta`
