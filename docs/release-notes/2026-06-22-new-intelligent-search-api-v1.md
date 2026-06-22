@@ -34,6 +34,12 @@ Intelligent Search API (Legacy) relied on the VTEX segment cookie to fill in loc
 | Region | Read from segment cookie | `regionId`, `country`, `zip-code`, `coordinates` query parameters |
 | UTM / price tables | Read from segment cookie | `utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables` query parameters |
 
+If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the following parameters were previously passed via the segment `facets` string and must now be passed explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-):
+
+- `pickupPoint`
+- `deliveryZonesHash`
+- `pickupPointsHash`
+
 ### New URL structure
 
 The IO prefix and underscores in path names have been removed, and `/v1` has been added to the path.
@@ -53,21 +59,6 @@ The IO prefix and underscores in path names have been removed, and `/v1` has bee
 ### New endpoint: Get product
 
 A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
-
-### Updated parameters on product search and facets
-
-Intelligent Search API v1 adds explicit regionalization parameters to `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) and `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):
-
-- `regionId`
-- `country`
-- `zip-code`
-- `coordinates`
-
-If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the following parameters are also now explicit on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-):
-
-- `pickupPoint`
-- `deliveryZonesHash`
-- `pickupPointsHash`
 
 ### Updated `simulationBehavior` enum
 
