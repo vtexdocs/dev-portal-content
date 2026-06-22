@@ -1,7 +1,7 @@
 ---
 title: "New Intelligent Search API v1"
 slug: "2026-06-22-new-intelligent-search-api-v1"
-excerpt: "The new Intelligent Search API v1 is now available for headless integrations. It adds HTTP caching, lower latency, explicit regionalization, and a new endpoint for product detail pages."
+excerpt: "The new Intelligent Search API v1 is now available for headless integrations. It adds HTTP caching, lower latency, explicit context parameters instead of the segment cookie, and a new endpoint for product detail pages."
 hidden: false
 createdAt: "2026-06-22T00:00:00.000Z"
 updatedAt: "2026-06-22T00:00:00.000Z"
@@ -72,7 +72,7 @@ A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/in
 
 ### Updated `simulationBehavior` enum
 
-The `simulationBehavior` parameter now accepts two additional values:
+The `simulationBehavior` parameter on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) now accepts two additional values:
 
 | Value | Description |
 | --- | --- |
