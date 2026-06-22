@@ -45,6 +45,8 @@ https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1
 
 Rename paths to match the new URL structure. Underscores become hyphens, the IO prefix is removed, and `/v1` is added.
 
+> **Note on pickup point availability:** this endpoint was already being served by the v1 service in the legacy API. The path itself does not change, only the base URL and how context is passed (see steps 3 and 6).
+
 | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | --- | --- |
 | `GET /api/io/_v/api/intelligent-search/top_searches`<br>[Get list of the 10 most searched terms](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/top_searches) | `GET /api/intelligent-search/v1/top-searches`<br>[Get list of the 10 most searched terms v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) |
@@ -157,23 +159,6 @@ If you use the pickup point availability endpoint, rename the `pickupsHash` para
 ?pickupPointsHash=d41d8cd98f00b204e9800998ecf8427e
 ```
 
-## Step 7 - Remove the Host header workaround (if applicable)
-
-Intelligent Search API (Legacy) required sending a `Host` header with the store's production domain in fully headless setups with no configured store domain. Intelligent Search API v1 does not require this header.
-
-**Before**
-
-```sh
-curl 'https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search/' \
-  --header 'Host: {configured domain}'
-```
-
-**After**
-
-```sh
-curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/'
-```
-
 ## Caching behavior reference
 
 | Endpoint | Cache behavior |
@@ -206,4 +191,3 @@ curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/
 - [ ] Passing UTM and marketing parameters explicitly (if applicable)
 - [ ] Replaced single-product search calls with `GET /products` (if applicable)
 - [ ] Renamed `pickupsHash` to `pickupPointsHash` (if applicable)
-- [ ] Removed `Host` header workaround (if applicable)
