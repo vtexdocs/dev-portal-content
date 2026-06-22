@@ -47,7 +47,7 @@ The IO prefix and underscores in path names have been removed, and `/v1` has bee
 | `GET /api/io/_v/api/intelligent-search/product_search/{facets}`<br>[Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) | `GET /api/intelligent-search/v1/product-search/{facets}`<br>[Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) |
 | `GET /api/io/_v/api/intelligent-search/facets/{facets}`<br>[Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-) | `GET /api/intelligent-search/v1/facets/{facets}`<br>[List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
 | `GET /api/io/_v/api/intelligent-search/pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) | `GET /api/intelligent-search/v1/pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) |
-| New endpoint | `GET /api/intelligent-search/v1/products`<br>[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| N/A | `GET /api/intelligent-search/v1/products`<br>[Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 
 ### New endpoint: Get product
 
@@ -86,6 +86,6 @@ For a step-by-step migration checklist, see [Migrating to Intelligent Search API
 
 ## Related resources
 
-- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): new API reference
-- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): legacy API reference
-- [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1): step-by-step migration guide
+- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): New API reference
+- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): Legacy API reference
+- [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1): Step-by-step migration guide
