@@ -143,7 +143,26 @@ Supported `field` values:
 | `sku` | SKU ID |
 | `reference` | SKU reference ID |
 
-## Step 6 - Verify product item data in your integration
+## Step 6 - Handle new response fields
+
+Intelligent Search API v1 returns several fields that were absent or undocumented in the legacy API. Review each one and update your integration as needed.
+
+**`GET /product-search` response additions:**
+
+- `searchId` (string): Unique identifier for the search request. Pass this value in analytics events to tie impressions and clicks back to the originating search.
+- `correction` (object): Spelling correction applied to the query. Check this field to display "Did you mean?" messaging.
+- `redirect` (string): When the query matches a redirect rule, this field contains the target URL. Redirect the user instead of displaying search results.
+- `options` (object): Available sort options, result counts, and delivery promise metadata.
+
+**`GET /search-suggestions` response addition:**
+
+Each suggestion now optionally includes an `attributes` array describing facet attributes associated with the term, using the same shape as `GET /autocomplete-suggestions`.
+
+**`GET /facets` response addition:**
+
+`facets[].type` can now be `DELIVERY` in addition to `TEXT` and `PRICERANGE`. If your integration filters or switches on `type`, add a handler for `DELIVERY`.
+
+## Step 7 - Verify product item data in your integration
 
 A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in Intelligent Search API (Legacy) is resolved in v1. If your integration reads any of the following fields, verify that your code handles the updated values correctly after migrating:
 
@@ -182,3 +201,6 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 - [ ] Passing regionalization parameters explicitly (if applicable)
 - [ ] Passing UTM and marketing parameters explicitly (if applicable)
 - [ ] Replaced single-product search calls with `GET /products` (if applicable)
+- [ ] Updated analytics code to use `searchId` from product search response (if applicable)
+- [ ] Added `DELIVERY` handler to facet type switch/filter (if applicable)
+- [ ] Verified attachment schema and new product item fields after migrating (if applicable)
