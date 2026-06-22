@@ -230,18 +230,18 @@ Supported `field` values:
 
 Intelligent Search API v1 returns several fields that were absent or undocumented in the legacy API. Review each one and update your integration as needed.
 
-**`GET /product-search` response additions:**
+**`GET` [Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) response additions:**
 
 - `searchId` (string): Unique identifier for the search request. Pass this value in analytics events to tie impressions and clicks back to the originating search.
 - `correction` (object): Spelling correction applied to the query. Check this field to display "Did you mean?" messaging.
 - `redirect` (string): When the query matches a redirect rule, this field contains the target URL. Redirect the user instead of displaying search results.
 - `options` (object): Available sort options, result counts, and delivery promise metadata.
 
-**`GET /search-suggestions` response addition:**
+**`GET` [Get list of suggested terms similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) response addition:**
 
-Each suggestion now optionally includes an `attributes` array describing facet attributes associated with the term, using the same shape as `GET /autocomplete-suggestions`.
+Each suggestion now optionally includes an `attributes` array describing facet attributes associated with the term, using the same shape as `GET` [Get list of suggested terms and attributes similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions).
 
-**`GET /facets` response addition:**
+**`GET` [List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) response addition:**
 
 `facets[].type` can now be `DELIVERY` in addition to `TEXT` and `PRICERANGE`. If your integration filters or switches on `type`, add a handler for `DELIVERY`.
 
@@ -278,16 +278,16 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 
 | Endpoint | Cache behavior |
 | --- | --- |
-| `GET /top-searches` [Get list of the 10 most searched terms v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) | `Cache-Control: public, max-age=600` |
-| `GET /autocomplete-suggestions` [Get list of suggested terms and attributes similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions) | `Cache-Control: public, max-age=600` |
-| `GET /search-suggestions` [Get list of suggested terms similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) | `Cache-Control: public, max-age=600` |
-| `GET /correction-search` [Get attempt of correction of a misspelled term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) | `Cache-Control: public, max-age=600` |
-| `GET /banners/{facets}` [Get list of banners registered for query v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) | `Cache-Control: public, max-age=600` |
-| `GET /product-search/{facets}` [Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (organic, public sales channel) | `Cache-Control: public, max-age=600` |
-| `GET /product-search/{facets}` [Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (with sponsored products) | `Cache-Control: no-store` |
-| `GET /facets/{facets}` [List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) | `Cache-Control: public, max-age=600` |
-| `GET /products` [Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (public sales channel) | `Cache-Control: public, max-age=600` |
-| `GET /pickup-point-availability/{facets}` [Get pickup point availability for Delivery Promise v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) (public sales channel) | `Cache-Control: public, max-age=600` |
+| `GET` [Get list of the 10 most searched terms v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) | `Cache-Control: public, max-age=600` |
+| `GET` [Get list of suggested terms and attributes similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions) | `Cache-Control: public, max-age=600` |
+| `GET` [Get list of suggested terms similar to the search term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) | `Cache-Control: public, max-age=600` |
+| `GET` [Get attempt of correction of a misspelled term v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) | `Cache-Control: public, max-age=600` |
+| `GET` [Get list of banners registered for query v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) | `Cache-Control: public, max-age=600` |
+| `GET` [Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (organic, public sales channel) | `Cache-Control: public, max-age=600` |
+| `GET` [Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (with sponsored products) | `Cache-Control: no-store` |
+| `GET` [List filters for a search v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) | `Cache-Control: public, max-age=600` |
+| `GET` [Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (public sales channel) | `Cache-Control: public, max-age=600` |
+| `GET` [Get pickup point availability for Delivery Promise v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) (public sales channel) | `Cache-Control: public, max-age=600` |
 | Any endpoint on a private sales channel | Not cached |
 
 ## Related resources
@@ -304,7 +304,7 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 - [ ] Passing `sc` or `trade-policy` facet explicitly instead of relying on segment cookie
 - [ ] Passing regionalization parameters explicitly (if applicable)
 - [ ] Passing UTM and marketing parameters explicitly (if applicable)
-- [ ] Replaced single-product search calls with `GET /products` (if applicable)
+- [ ] Replaced single-product search calls with `GET` [Get product v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (if applicable)
 - [ ] Updated analytics code to use `searchId` from product search response (if applicable)
 - [ ] Added `DELIVERY` handler to facet type switch/filter (if applicable)
 - [ ] Verified attachment schema and new product item fields after migrating (if applicable)
