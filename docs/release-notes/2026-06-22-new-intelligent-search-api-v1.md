@@ -82,7 +82,7 @@ Intelligent Search API (Legacy) documented `pickupsHash` as a query parameter on
 
 For a step-by-step migration checklist, see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
-[Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) remains available. We recommend migrating headless integrations to [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) to benefit from HTTP caching and lower latency.
+All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) remains available for existing integrations, but its endpoints will be deprecated in a future announcement. We recommend migrating existing integrations as soon as possible.
 
 ## Related resources
 
