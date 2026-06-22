@@ -47,7 +47,7 @@ The IO prefix and underscores in path names have been removed.
 | `GET /product_search/{facets}`<br>[Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) | `GET /product-search/{facets}`<br>[Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) |
 | `GET /facets/{facets}`<br>[Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-) | `GET /facets/{facets}`<br>[List filters for a search](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
 | `GET /pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) | `GET /pickup-point-availability/{facets}`<br>[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) |
-| New endpoint | `GET /products`<br>[Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| N/A | `GET /products`<br>[Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 
 ### New endpoint: Get product
 
