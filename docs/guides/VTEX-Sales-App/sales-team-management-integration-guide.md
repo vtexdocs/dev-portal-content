@@ -49,7 +49,7 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 | `POST` | [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) | Creates a unit. You must include in the request body the `type` parameter and set it to `Sales Team`. When creating a root unit, don't include the `parentId` parameter. |
 | `PATCH` | [Rename organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#patch-/api/organization-units/v1/-organizationUnitId-) | Updates the unit name without changing its position in the hierarchy. |
 | `PUT` | [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path) | Moves a unit to a new parent. All child units move with it. Send `parentId: null` to promote to root level. |
-| `DELETE` | [Delete organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-) | Permanently removes a unit. Irreversible — verify the unit has no linked users or children first. |
+| `DELETE` | [Delete organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-) | Permanently removes a unit. This action can’t be undone. Before proceeding, confirm the unit has no linked users or child units. |
 
 ---
 
