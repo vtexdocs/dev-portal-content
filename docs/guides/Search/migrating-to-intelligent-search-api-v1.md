@@ -200,7 +200,7 @@ Optionally include coordinates to sort pickup results by proximity:
 
 ## Step 5 - Replace single-product search with the new Get product endpoint
 
-If you use `GET` [Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) to fetch a single known product — for example, to render a product detail page from a URL slug — replace it with `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products).
+If you use `GET` [Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) to fetch a single known product (for example, to render a product detail page from a URL slug), replace it with `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products).
 
 This endpoint accepts a `value` and a `field` parameter, skips the search pipeline, and responds faster with a higher cache-hit rate.
 
@@ -261,8 +261,8 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 | --- | --- | --- |
 | `attachments[].id` | `string` | `number` |
 | `attachments[].name` | `string` | `string` (unchanged) |
-| `attachments[].required` | `boolean` | Removed — use `isRequired` |
-| `attachments[].domainValues` | `string` | Removed — use `fields[].domain_values` |
+| `attachments[].required` | `boolean` | Removed. Use `isRequired` instead. |
+| `attachments[].domainValues` | `string` | Removed. Use `fields[].domain_values` instead. |
 | `attachments[].isRequired` | Not present | `boolean` |
 | `attachments[].isActive` | Not present | `boolean` |
 | `attachments[].schema` | Not present | `object` (free-form JSON schema) |
