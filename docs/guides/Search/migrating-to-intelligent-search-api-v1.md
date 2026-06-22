@@ -103,7 +103,7 @@ You can provide the buyer's location in one of two ways:
 ?deliveryZonesHash=4bab2513d897914b0b33f25c8c74f571&pickupPointsHash=d41d8cd98f00b204e9800998ecf8427e
 ```
 
-> Hash values are obtained from the `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search) endpoint of the Delivery Promise Suggestions API.
+> `deliveryZonesHash` is obtained from `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2). `pickupPointsHash` is obtained from `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search). Both endpoints are part of the Delivery Promise Suggestions API.
 
 Optionally include coordinates to sort pickup results by proximity:
 
