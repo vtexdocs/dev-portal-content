@@ -315,5 +315,5 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 
 ## Related resources
 
-- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): New API reference
-- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): Legacy API reference
+- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1)
+- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api)
