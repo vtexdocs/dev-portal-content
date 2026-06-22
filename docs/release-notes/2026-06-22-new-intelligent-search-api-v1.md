@@ -105,6 +105,6 @@ All new headless integrations must use [Intelligent Search API (v1)](https://dev
 
 ## Related resources
 
-- [Intelligent Search API (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): New API reference
-- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): Legacy API reference
-- [Migrating to Intelligent Search API (v1)](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1): Step-by-step migration guide
+- [Intelligent Search API (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1)
+- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api)
+- [Migrating to Intelligent Search API (v1)](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1)
