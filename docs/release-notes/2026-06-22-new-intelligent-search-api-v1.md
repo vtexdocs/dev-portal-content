@@ -79,19 +79,13 @@ The `simulationBehavior` parameter now accepts two additional values:
 
 Several endpoints expose new parameters and response fields compared to Intelligent Search API (Legacy).
 
-**`GET` [Get list of the 10 most searched terms (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches):** A new optional `query` parameter filters results to return only popular terms containing the given text (case-insensitive).
-
-**`GET` [Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions):** Each suggestion in the response now includes an optional `attributes` array, providing facet attributes associated with the suggestion, using the same shape as `GET` [Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions).
-
-**`GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):** A new optional `removeHiddenFacets` parameter omits hidden facets from the response when set to `true`. The `facets[].type` field now includes a third possible value, `DELIVERY`, in addition to `TEXT` and `PRICERANGE`, representing delivery and shipping option facets.
-
-**`GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-):** The response now includes:
-- `searchId`: A unique identifier for the search request, for use in analytics events.
-- `correction`: Spelling correction applied to the query, if any.
-- `redirect`: URL to redirect the user to when the query matches a redirect rule.
-- `options`: Available sort options, product counts, and delivery promise data.
-
-**`GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-):** Two new optional parameters: `locale` for localized results, and `pickupPoint` to filter results to a specific pickup point ID.
+| Endpoint | What's new |
+| --- | --- |
+| `GET` [Get list of the 10 most searched terms (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) | New `query` parameter: filters results to terms containing the given text (case-insensitive). |
+| `GET` [Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) | Response: each suggestion now includes an optional `attributes` array with facet attributes, using the same shape as `GET` [Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions). |
+| `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) | New `removeHiddenFacets` parameter: omits hidden facets from the response when set to `true`.<br />Response: `facets[].type` now includes `DELIVERY` in addition to `TEXT` and `PRICERANGE`. |
+| `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) | Response: new `searchId` (analytics identifier), `correction` (spelling correction), `redirect` (redirect rule URL), and `options` (sort options and delivery promise data) fields. |
+| `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) | New `locale` parameter for localized results and `pickupPoint` parameter to filter by a specific pickup point ID. |
 
 ### Resolved: Incomplete product item data on product search
 
