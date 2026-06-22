@@ -10,7 +10,7 @@ tags:
     - Search
 ---
 
-The new [Intelligent Search API (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) is now available for headless integrations at `/api/intelligent-search/v1/*`. It replaces [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) at `/api/io/_v/api/intelligent-search/*` with HTTP caching, lower latency, and explicit context parameters.
+The new [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) is now available for headless integrations at `/api/intelligent-search/v1/*`. It replaces [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) at `/api/io/_v/api/intelligent-search/*` with HTTP caching, lower latency, and explicit context parameters.
 
 ## What has changed?
 
@@ -52,16 +52,19 @@ The IO prefix and underscores in path names have been removed, and `/v1` has bee
 
 ### New endpoint: Get product
 
-A new `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
+A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
 
 ### Updated parameters on product search and facets
 
-Intelligent Search API v1 adds explicit regionalization parameters to `GET` [Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) and `GET` [List filters for a search](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):
+Intelligent Search API v1 adds explicit regionalization parameters to `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) and `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):
 
 - `regionId`
 - `country`
 - `zip-code`
 - `coordinates`
+
+If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the following parameters are also now explicit on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-):
+
 - `pickupPoint`
 - `deliveryZonesHash`
 - `pickupPointsHash`
@@ -89,16 +92,18 @@ Several endpoints expose new parameters and response fields compared to Intellig
 
 ### Resolved: Incomplete product item data on product search
 
-A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in the legacy API has been resolved in Intelligent Search API v1. Some fields previously returned incorrect or empty values, including `isKit`, `modalType`, and `images[].imageText`. In addition, the attachment schema has been updated and new fields such as `estimatedDateArrival`, `kitItems`, and `PaymentOptions` are now returned.
+A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in the legacy API has been resolved in Intelligent Search API v1. Some fields previously returned incorrect or empty values, including `isKit`, `modalType`, and `images[].imageText`. New fields `estimatedDateArrival`, `kitItems`, and `PaymentOptions` are now returned.
+
+The `attachments[]` object structure has also changed in a breaking way: `id` changed from `string` to `number`, and `required` and `domainValues` have been removed in favor of `isRequired` and `fields[].domain_values`. If your integration reads attachment data, update it before migrating. See [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1) for the full before/after schema.
 
 ## What needs to be done?
 
-For a step-by-step migration checklist, see [Migrating to Intelligent Search API (v1)](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
+For a step-by-step migration checklist, see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
-All new headless integrations must use [Intelligent Search API (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) remains available for existing integrations, but its endpoints will be deprecated in a future announcement. We recommend migrating existing integrations as soon as possible.
+All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) remains available for existing integrations, but its endpoints will be deprecated in a future announcement. We recommend migrating existing integrations as soon as possible.
 
 ## Related resources
 
-- [Intelligent Search API (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1)
+- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1)
 - [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api)
-- [Migrating to Intelligent Search API (v1)](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1)
+- [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1)
