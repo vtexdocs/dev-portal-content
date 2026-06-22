@@ -9,6 +9,8 @@ updatedAt: "2026-06-22T00:00:00.000Z"
 
 This guide covers everything you need to migrate a headless integration from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) to [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
 
+All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). The legacy API endpoints will be deprecated in a future announcement.
+
 ## Why migrate?
 
 Intelligent Search API v1 offers:
