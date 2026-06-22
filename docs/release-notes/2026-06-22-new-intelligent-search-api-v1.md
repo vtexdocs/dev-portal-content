@@ -22,7 +22,7 @@ Exceptions:
 - Responses containing sponsored products: `Cache-Control: no-store`.
 - Private sales channel responses: not cached.
 
-### Explicit context — no segment cookie
+### Explicit context: No segment cookie
 
 Intelligent Search API (Legacy) relied on the VTEX segment cookie to fill in locale, sales channel, regionalization, and marketing context. Intelligent Search API v1 does not read the segment cookie. All context must be passed explicitly as query parameters or facets in the URL path.
 
