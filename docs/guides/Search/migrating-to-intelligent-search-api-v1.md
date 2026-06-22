@@ -292,12 +292,6 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 | `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) (public sales channel) | `Cache-Control: public, max-age=600` |
 | Any endpoint on a private sales channel | Not cached |
 
-## Related resources
-
-- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): New API reference
-- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): Legacy API reference
-- [New Intelligent Search API v1](https://developers.vtex.com/docs/release-notes/2026-06-22-new-intelligent-search-api-v1): Release note
-
 ## Migration checklist
 
 | Task | Step | Required |
@@ -318,3 +312,8 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 | <input type="checkbox"></input> Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
 | <input type="checkbox"></input> Updated code reading attachment data to match new schema | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
 | <input type="checkbox"></input> Handled new fields: `estimatedDateArrival`, `kitItems[]`, `PaymentOptions` | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
+
+## Related resources
+
+- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): New API reference
+- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): Legacy API reference
