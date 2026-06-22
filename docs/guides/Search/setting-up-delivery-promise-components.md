@@ -4,9 +4,11 @@ slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
-updatedAt: "2026-04-07T12:00:00.000Z"
+updatedAt: "2026-06-22T12:00:00.000Z"
 seeAlso:
  - "/docs/apps/vtex.delivery-promise-components"
+ - "/docs/guides/gathering-delivery-promise-information"
+ - "/docs/api-reference/delivery-promise-suggestions-api"
 ---
 
 > ℹ️ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
@@ -27,13 +29,15 @@ If you're building your storefront with Store Framework, you can enable this exp
 * [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components): Used to display blocks for postal code, delivery versus pickup, and pickup point selection.
 * [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result): Used to implement sidebar filters.
 
-This guide walks you through the basic setup needed to implement these components in your store.
+Additionally, you can leverage the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) to display delivery-related tags and badges directly on product cards in the Product Listing Page (PLP), such as "Same Day Delivery", "Express Delivery", and "Pickup Today". This brings delivery context earlier into the shopping journey, improving product discoverability and conversion rates.
+
+This guide walks you through the basic setup needed to implement Delivery Promise in your store.
 
 >ℹ️ Explore the [Delivery Promise Figma library](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) to learn more about component specs, usage guidelines, reference use cases, and behavioral patterns.
 
 ## Before you begin
 
-To enable Delivery Promise (Beta) in your store, the following conditions must be met:
+To enable Delivery Promise in your store, the following conditions must be met:
 
 * The store must use [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG).
 * Check if you have installed the `0.5.0` or a later version of the [`search-session`](https://developers.vtex.com/docs/apps/vtex.search-session) app. To do this, run the `vtex list` command in your terminal and search for the app in the results. If you don’t have this app installed, run the command `vtex install vtex.search-session`.
@@ -73,7 +77,7 @@ Choose the configuration that matches your use case:
 
 Use the `shopper-location-setter` block when you only need the shopper to provide their location, without separate header controls for shipping method or store.
 
-**Example** 
+**Example**
 
 ```json
     "header-row#1-desktop": {
@@ -93,7 +97,7 @@ Use the `shopper-location-setter` block when you only need the shopper to provid
 
 Use `shopper-location-setter` and `shipping-method-selector` when you want the header to make the delivery or pickup choice explicit right after the shopper enters a location.
 
-**Example** 
+**Example**
 
 ```json
     "header-row#1-desktop": {
@@ -123,7 +127,7 @@ Use `shopper-location-setter` and `shipping-method-selector` when you want the h
 
 Use `shopper-location-setter` and `pickup-point-selector` when pickup is a central part of your experience, and you want both "where am I?" and "which store?" visible in the header.
 
-**Example** 
+**Example**
 
 ```json
     "header-row#1-desktop": {
@@ -235,3 +239,12 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
 
 The shipping method facet appears only when `showShippingMethodFacet` is enabled. The options listed match `availableShippingValues` when you set it, or fall back to the default set when the prop is not provided. Other Delivery Promise-related facets continue to behave as usual.
 
+### Step 4 - Displaying delivery tags and badges on Product Listing Pages
+
+The [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) enables you to display delivery-related tags and badges directly on product cards in the Product Listing Page (PLP).
+
+After shoppers enter their ZIP code once, they can immediately see which delivery options are available for each product, such as "Same Day Delivery", "Express Delivery", or "Pickup Today", without needing to apply filters or navigate to the Product Detail Page (PDP) or checkout.
+
+To display delivery information on product cards, retrieve the `deliveryZonesHash` and `pickupPointsHash` for the shopper's location, then use these values along with product IDs to fetch delivery and pickup suggestions for each product. The API returns delivery names (for example, `"Express Delivery"`) and time estimates (`slaTimeTarget`) that you can format and display as tags or badges according to your store's design (for example, "Got it today", "Got it tomorrow").
+
+> ℹ️ For complete endpoint details and response examples, see [Gathering delivery promise information](https://developers.vtex.com/docs/guides/gathering-delivery-promise-information) and [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api).
