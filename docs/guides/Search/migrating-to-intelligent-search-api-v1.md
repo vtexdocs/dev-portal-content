@@ -7,9 +7,9 @@ createdAt: "2026-06-22T00:00:00.000Z"
 updatedAt: "2026-06-22T00:00:00.000Z"
 ---
 
-This guide covers everything you need to migrate a headless integration from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) to [Intelligent Search API (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
+This guide covers everything you need to migrate a headless integration from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) to [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
 
-All new headless integrations must use [Intelligent Search API (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). The legacy API endpoints will be deprecated in a future announcement.
+All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). The legacy API endpoints will be deprecated in a future announcement.
 
 ## Why migrate?
 
@@ -172,17 +172,11 @@ function segmentToProductSearchV1(segment: Segment, query?: string): string {
 }
 ```
 
-### Delivery Promise parameters (if applicable)
+### Regionalization parameters (if applicable)
 
-If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the parameters `deliveryZonesHash`, `pickupPointsHash`, and `pickupPoint` were previously passed via the segment `facets` string. In Intelligent Search API v1, pass them as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
+If your store uses regionalization, `regionId` was a top-level segment field and `country`, `zip-code`, and `coordinates` came from the segment `facets` string. In Intelligent Search API v1, pass them explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
 
-`deliveryZonesHash` is obtained from `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) and `pickupPointsHash` from `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search). Both are part of the Delivery Promise Suggestions API.
-
-## Step 4 - Add regionalization parameters (if applicable)
-
-If your store uses regionalization, you previously relied on the segment to pass this context. In Intelligent Search API v1, pass it explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
-
-You can pass the buyer's location using country and ZIP code:
+Pass the buyer's location using country and ZIP code:
 
 ```
 ?country=BRA&zip-code=22271020
@@ -200,7 +194,13 @@ If your account uses `regionId` instead, pass it directly:
 ?regionId=v2.C0FC2DE04D6A7C9E1DC22C0D7EBD939B
 ```
 
-## Step 5 - Replace single-product search with the new Get product endpoint
+### Delivery Promise parameters (if applicable)
+
+If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the parameters `deliveryZonesHash`, `pickupPointsHash`, and `pickupPoint` were previously passed via the segment `facets` string. In Intelligent Search API v1, pass them as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
+
+`deliveryZonesHash` is obtained from `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) and `pickupPointsHash` from `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search). Both are part of the Delivery Promise Suggestions API.
+
+## Step 4 - Replace single-product search with the new Get product endpoint
 
 If you use `GET` [Search products](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) to fetch a single known product (for example, to render a product detail page from a URL slug), replace it with `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products).
 
@@ -228,7 +228,7 @@ Supported `field` values:
 | `sku` | SKU ID |
 | `reference` | SKU reference ID |
 
-## Step 6 - Handle new response fields
+## Step 5 - Handle new response fields
 
 Intelligent Search API v1 returns several fields that were absent or undocumented in the legacy API. Review each one and update your integration as needed.
 
@@ -247,7 +247,7 @@ Each suggestion now optionally includes an `attributes` array describing facet a
 
 `facets[].type` can now be `DELIVERY` in addition to `TEXT` and `PRICERANGE`. If your integration filters or switches on `type`, add a handler for `DELIVERY`.
 
-## Step 7 - Verify product item data in your integration
+## Step 6 - Verify product item data in your integration
 
 A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in Intelligent Search API (Legacy) is resolved in v1. If your integration reads any of the following fields, verify that your code handles the updated values correctly after migrating:
 
@@ -294,9 +294,9 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 
 ## Related resources
 
-- [Intelligent Search API (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): New API reference
+- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1): New API reference
 - [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api): Legacy API reference
-- [New Intelligent Search API (v1)](https://developers.vtex.com/docs/release-notes/2026-06-22-new-intelligent-search-api-v1): Release note
+- [New Intelligent Search API v1](https://developers.vtex.com/docs/release-notes/2026-06-22-new-intelligent-search-api-v1): Release note
 
 ## Migration checklist
 
