@@ -80,7 +80,7 @@ Several endpoints expose new parameters and response fields compared to Intellig
 
 **`GET /top-searches`:** A new optional `query` parameter filters results to return only popular terms containing the given text (case-insensitive).
 
-**`GET /search-suggestions`:** Each suggestion in the response now includes an optional `attributes` array, providing facet attributes associated with the suggestion — the same shape returned by `GET /autocomplete-suggestions`.
+**`GET /search-suggestions`:** Each suggestion in the response now includes an optional `attributes` array, providing facet attributes associated with the suggestion, using the same shape as `GET /autocomplete-suggestions`.
 
 **`GET /facets`:** A new optional `removeHiddenFacets` parameter omits hidden facets from the response when set to `true`. The `facets[].type` field now includes a third possible value, `DELIVERY`, in addition to `TEXT` and `PRICERANGE`, representing delivery and shipping option facets.
 
