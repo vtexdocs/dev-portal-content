@@ -12,6 +12,10 @@ tags:
 
 The new [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) is now available for headless integrations at `/api/intelligent-search/v1/*`. It replaces [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) at `/api/io/_v/api/intelligent-search/*` with HTTP caching, lower latency, and explicit context parameters.
 
+## What has changed?
+
+Here is a summary of the key differences between Intelligent Search API (Legacy) and Intelligent Search API v1. See the sections below for full details.
+
 | | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | --- | --- | --- |
 | **Base URL** | `/api/io/_v/api/intelligent-search` | `/api/intelligent-search/v1` |
@@ -19,8 +23,6 @@ The new [Intelligent Search API v1](https://developers.vtex.com/docs/api-referen
 | **HTTP caching** | Not cached | `public, max-age=600` on most endpoints |
 | **Single-product lookup** | Via product search pipeline | Dedicated `GET /products` endpoint |
 | **Path format** | `endpoint_name` (underscores) | `endpoint-name` (hyphens) |
-
-## What has changed?
 
 ### HTTP caching
 
