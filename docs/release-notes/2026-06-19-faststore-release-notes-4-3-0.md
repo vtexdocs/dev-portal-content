@@ -25,6 +25,7 @@ Merchants can restrict preview URLs and production domains to authorized users, 
 ### File upload via Order Entry Service (OES) ([#3334](https://github.com/vtex/faststore/pull/3334))
 
 QuickOrder file upload now uses the VTEX Order Entry Service instead of a rigid CSV parser.
+
 - `@faststore/api` adds GraphQL operations (`uploadFileToOrderEntry`, `startOrderEntryOperation`, `orderEntryOperation`, `orderFormItems`) and VTEX commerce client methods for the OES flow.
 - `@faststore/core` introduces `useOrderEntryUpload`, `useOrderEntryOperation`, `useOrderFormItems`, and the orchestration hook `useOrderEntry`.
 - `@faststore/components` adds a `Processing` state to `FileUploadStatus` with a configurable `processingStatusText` label.
