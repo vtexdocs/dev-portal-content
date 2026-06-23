@@ -62,11 +62,11 @@ To use Delivery Promise, customers must provide a delivery address early in thei
 
 2. Declare the blocks in your theme header (or another layout that should show the controls). The app exposes three header blocks.
 
-| Block                      | Description                                                                                           |
-| -------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `shopper-location-setter`  | **Required.** Collects the shopper's location (postal code or equivalent). This value drives all Delivery Promise subsequent availability calculations and filters.|
-| `shipping-method-selector` | Optional. A control for choosing between delivery and pickup after a location is set. |
-| `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after a location is set.  |
+   | Block                      | Description                                                                                           |
+   | -------------------------- | ----------------------------------------------------------------------------------------------------- |
+   | `shopper-location-setter`  | **Required.** Collects the shopper's location (postal code or equivalent). This value drives all Delivery Promise subsequent availability calculations and filters.|
+   | `shipping-method-selector` | Optional. A control for choosing between delivery and pickup after a location is set. |
+   | `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after a location is set.  |
 
   >ℹ️ The `shopper-location-setter` block is required and must always be included in the header. `shipping-method-selector` and `pickup-point-selector` are optional. They complement the location setter but do not replace it, since both depend on the location already set in the session. Add them only if you want to expose additional controls in the UI. Otherwise, keep the header simple: either `shopper-location-setter` alone, or `shopper-location-setter` paired with one of the selectors. Using all three together is possible but uncommon.
 
