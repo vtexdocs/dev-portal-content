@@ -24,7 +24,11 @@ Merchants can restrict preview URLs and production domains to authorized users, 
 
 ### File upload via Order Entry Service (OES) ([#3334](https://github.com/vtex/faststore/pull/3334))
 
-QuickOrder file upload now uses the VTEX Order Entry Service instead of a rigid CSV parser. `@faststore/api` adds GraphQL operations (`uploadFileToOrderEntry`, `startOrderEntryOperation`, `orderEntryOperation`, `orderFormItems`) and VTEX commerce client methods for the OES flow. `@faststore/core` introduces `useOrderEntryUpload`, `useOrderEntryOperation`, `useOrderFormItems`, and the orchestration hook `useOrderEntry`. `@faststore/components` adds a `Processing` state to `FileUploadStatus` with a configurable `processingStatusText` label. `SearchInput` is refactored to use the OES-backed flow end-to-end, and the legacy `useCSVParser` hook and `useBulkProductsQuery` are removed.
+QuickOrder file upload now uses the VTEX Order Entry Service instead of a rigid CSV parser.
+- `@faststore/api` adds GraphQL operations (`uploadFileToOrderEntry`, `startOrderEntryOperation`, `orderEntryOperation`, `orderFormItems`) and VTEX commerce client methods for the OES flow.
+- `@faststore/core` introduces `useOrderEntryUpload`, `useOrderEntryOperation`, `useOrderFormItems`, and the orchestration hook `useOrderEntry`.
+- `@faststore/components` adds a `Processing` state to `FileUploadStatus` with a configurable `processingStatusText` label.
+- `SearchInput` is refactored to use the OES-backed flow end-to-end, and the legacy `useCSVParser` hook and `useBulkProductsQuery` are removed.
 
 Stores using QuickOrder file upload can accept more file formats and benefit from server-side parsing with AI-assisted extraction. The UI flow remains upload → processing → drawer, but processing is now distinct from upload. No configuration changes are required beyond upgrading your store to `v4.3.0` and republishing CMS content if you customize `processingStatusText` in the Navbar schema.
 
