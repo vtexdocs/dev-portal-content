@@ -114,7 +114,7 @@ https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/produc
 https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/products?sc=1&field=slug&value=apple-magic-mouse
 ```
 
->⚠️ **For stores using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise):** Include regionalization and delivery promise parameters in your requests to ensure accurate delivery estimates and product availability. See the [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide for implementation details.
+>⚠️ **For stores using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise):** Include delivery promise parameters in your requests to ensure accurate delivery estimates and product availability. See the [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide for implementation details.
 
 ### Alternative approach (VTEX Search (Legacy))
 
