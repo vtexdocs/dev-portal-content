@@ -8,7 +8,7 @@ updatedAt: "2026-06-22T00:00:00.000Z"
 
 > ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
-It is possible to display banners as promotional actions on the customer’s search result page. This process is done through an association between the words and facets that represent filters selected when making a search. For more information on how to configure a banner, check the [Configuring Banners](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4ViKEivLJtJsvpaW0aqIQ5#) article.
+It is possible to display banners as promotional actions on the customer’s search result page. This process is done through an association between the words and facets that represent filters selected when making a search. For more information on how to configure a banner, check the [Configuring Banners](https://help.vtex.com/en/docs/tutorials/configuring-banners) article.
 
 To retrieve a list of banners for a specific search, use the `GET` [Get list of banners registered for query (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) endpoint. You can filter the endpoint response by defining the search’s `facets` and the term’s `locale` and `query`.
 
