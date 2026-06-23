@@ -12,19 +12,21 @@ tags:
 
 This release introduces storefront password protection and QuickOrder file upload through the VTEX Order Entry Service (OES), along with fixes for My Account authentication, password reset routing, and GraphQL BFF error status propagation. It also migrates Partytown to the maintained `@qwik.dev` package. See the sections below for details and upgrade notes.
 
+> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.3.0` and keep your store up-to-date with the following improvements.
+
 ## Features
 
 ### Password Protection ([#3276](https://github.com/vtex/faststore/pull/3276))
 
 FastStore now ships a password-protection flow for gated storefront access. The change adds middleware that validates a secure session cookie, a `/api/fs/password-protection/unlock` endpoint that verifies passwords and returns a safe redirect URL, and a login page for protected environments. WebOps settings continue to drive which domains require authentication. The CLI also removes localization-based proxy filename toggling from `dev` and `build` commands.
 
-Merchants can restrict preview URLs and production domains to authorized users, reducing accidental public exposure during development and launch. Configure password protection in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard#password-protection) and [upgrade to 4.3.0](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to enable the storefront login flow.
+Merchants can restrict preview URLs and production domains to authorized users, reducing accidental public exposure during development and launch. Upgrade your store to `v4.3.0` and configure password protection in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard#password-protection) to enable the storefront login flow.
 
 ### File upload via Order Entry Service (OES) ([#3334](https://github.com/vtex/faststore/pull/3334))
 
 QuickOrder file upload now uses the VTEX Order Entry Service instead of a rigid CSV parser. `@faststore/api` adds GraphQL operations (`uploadFileToOrderEntry`, `startOrderEntryOperation`, `orderEntryOperation`, `orderFormItems`) and VTEX commerce client methods for the OES flow. `@faststore/core` introduces `useOrderEntryUpload`, `useOrderEntryOperation`, `useOrderFormItems`, and the orchestration hook `useOrderEntry`. `@faststore/components` adds a `Processing` state to `FileUploadStatus` with a configurable `processingStatusText` label. `SearchInput` is refactored to use the OES-backed flow end-to-end, and the legacy `useCSVParser` hook and `useBulkProductsQuery` are removed.
 
-Stores using QuickOrder file upload can accept more file formats and benefit from server-side parsing with AI-assisted extraction. The UI flow remains upload → processing → drawer, but processing is now distinct from upload. Upgrade to 4.3.0; no configuration changes are required beyond republishing CMS content if you customize `processingStatusText` in the Navbar schema.
+Stores using QuickOrder file upload can accept more file formats and benefit from server-side parsing with AI-assisted extraction. The UI flow remains upload → processing → drawer, but processing is now distinct from upload. No configuration changes are required beyond upgrading your store to `v4.3.0` and republishing CMS content if you customize `processingStatusText` in the Navbar schema.
 
 ---
 
@@ -32,15 +34,15 @@ Stores using QuickOrder file upload can accept more file formats and benefit fro
 
 ### Propagate upstream error status instead of always 500 ([#3379](https://github.com/vtex/faststore/pull/3379))
 
-The GraphQL BFF at `/api/graphql` previously returned HTTP `500` for all errors because masked `GraphQLError` instances hid the nested `FastStoreError` that carries `extensions.status`. The handler now unwraps masked errors via `recoverFastStoreError` and responds with the upstream status (for example `400` for invalid shipping `postalCode`). Non-production responses include structured `extensions.type` and `extensions.status`; upstream messages are omitted in production.
+The GraphQL BFF at `/api/graphql` previously returned HTTP `500` for all errors because masked `GraphQLError` instances hid the nested `FastStoreError` that carries `extensions.status`. The handler now unwraps masked errors via `recoverFastStoreError` and returns the upstream status (for example, `400` for invalid shipping `postalCode`). Non-production responses include structured `extensions.type` and `extensions.status`; upstream messages are omitted in production.
 
-API consumers and debugging workflows now receive accurate HTTP status codes instead of generic `500` responses. The storefront SDK still builds errors from `response.status` before reading the body. Upgrade to 4.3.0; review any custom error handling that assumed all BFF failures were `500`.
+API consumers and debugging workflows now receive accurate HTTP status codes instead of generic `500` responses. The storefront SDK still builds errors from `response.status` before reading the body. Upgrade your store to `v4.3.0` and review any custom error handling that assumed all BFF failures were `500`.
 
 ### Order Entry header authentication fix ([#3395](https://github.com/vtex/faststore/pull/3395))
 
 After #3381 removed the `withAutCookie` helper, the Order Entry Service client methods introduced in #3334 still referenced the helper, breaking builds and file upload requests. The five `orderEntry` methods now use the same `withCookie` header pattern as other authenticated commerce calls, preserving `multipart/form-data` for file upload.
 
-Stores using OES-backed QuickOrder file upload should upgrade to 4.3.0 together with #3334. No separate configuration is required.
+Stores using OES-backed QuickOrder file upload should upgrade to `4.3.0` together with [#3334](https://github.com/vtex/faststore/pull/3334). No separate configuration is required.
 
 ---
 
@@ -50,7 +52,7 @@ Stores using OES-backed QuickOrder file upload should upgrade to 4.3.0 together 
 
 `@faststore/core` replaces `@builder.io/partytown@^0.6.1` with `@qwik.dev/partytown@^0.14.0`, following the official Partytown package relocation. Runtime behavior is unchanged: the CLI still runs `partytown copylib` at `predev`/`prebuild` and loads static assets from `/~partytown/partytown.js`.
 
-Upgrade to 4.3.0 to stay on the maintained Partytown package. Re-run `faststore dev` or `faststore build` so `public/~partytown/` is regenerated. No store configuration changes are required.
+After upgrading to `v4.3.0`, re-run `faststore dev` or `faststore build` so `public/~partytown/` is regenerated. No store configuration changes are required.
 
 ---
 
