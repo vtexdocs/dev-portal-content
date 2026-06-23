@@ -59,7 +59,7 @@ Rename paths to match the new URL structure. Underscores become hyphens, the IO 
 
 ## Step 3 - Replace segment cookie context with explicit parameters
 
-Intelligent Search API (Legacy) read locale, sales channel, regionalization, marketing context, and Delivery Promise parameters from the VTEX segment cookie. Intelligent Search API v1 does not read the segment cookie. You must pass this context explicitly.
+Intelligent Search API (Legacy) reads locale, sales channel, regionalization, marketing context, and Delivery Promise parameters from the VTEX segment cookie. Intelligent Search API v1 does not read the segment cookie. You must pass this context explicitly.
 
 Read the current segment values from the VTEX segment cookie (or your session/context store) and map them to the corresponding query parameters:
 
