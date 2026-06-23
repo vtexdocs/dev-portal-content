@@ -78,19 +78,19 @@ Use the `shopper-location-setter` block when you only need the shopper to provid
 
 **Example**
 
-  ```json
-      "header-row#1-desktop": {
-        "children": ["shopper-location-setter"]
-      },
+   ```json
+       "header-row#1-desktop": {
+         "children": ["shopper-location-setter"]
+       },
 
-      "shopper-location-setter": {
-        "props": {
-          "required": false,
-          "mode": "default",
-          "showLocationDetectorButton": false
-        }
-      }
-  ```
+       "shopper-location-setter": {
+         "props": {
+           "required": false,
+           "mode": "default",
+           "showLocationDetectorButton": false
+         }
+       }
+   ```
 
 #### Location + shipping method
 
@@ -98,29 +98,29 @@ Use `shopper-location-setter` and `shipping-method-selector` when you want the h
 
 **Example**
 
-  ```json
-      "header-row#1-desktop": {
-        "children": [
-          "shopper-location-setter",
-          "shipping-method-selector"
-        ]
-      },
+   ```json
+       "header-row#1-desktop": {
+         "children": [
+           "shopper-location-setter",
+           "shipping-method-selector"
+         ]
+       },
 
-      "shopper-location-setter": {
-        "props": {
-          "required": false,
-          "mode": "default",
-          "showLocationDetectorButton": false
-        }
-      },
+       "shopper-location-setter": {
+         "props": {
+           "required": false,
+           "mode": "default",
+           "showLocationDetectorButton": false
+         }
+       },
 
-      "shipping-method-selector": {
-        "props": {
-          "required": false,
-          "mode": "default"
-        }
-      }
-  ```
+       "shipping-method-selector": {
+         "props": {
+           "required": false,
+           "mode": "default"
+         }
+       }
+   ```
 
 #### Location + pickup point
 
@@ -128,28 +128,28 @@ Use `shopper-location-setter` and `pickup-point-selector` when pickup is a centr
 
 **Example**
 
-  ```json
-      "header-row#1-desktop": {
-        "children": [
-          "shopper-location-setter",
-          "pickup-point-selector"
-        ]
-      },
+   ```json
+       "header-row#1-desktop": {
+         "children": [
+           "shopper-location-setter",
+           "pickup-point-selector"
+         ]
+       },
 
-      "shopper-location-setter": {
-        "props": {
-          "required": false,
-          "mode": "default",
-          "showLocationDetectorButton": false
-        }
-      },
+       "shopper-location-setter": {
+         "props": {
+           "required": false,
+           "mode": "default",
+           "showLocationDetectorButton": false
+         }
+       },
 
-      "pickup-point-selector": {
-        "props": {
-          "mode": "default"
-        }
-      }
-  ```
+       "pickup-point-selector": {
+         "props": {
+           "mode": "default"
+         }
+       }
+   ```
 
 3. Configure the behavior with props to customize the blocks. Below are the available props.
 
@@ -182,11 +182,11 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
 
 1. In your theme's `manifest.json`, add the `search-result` app as a dependency:
 
-  ```json
-   "dependencies": {
-       "vtex.search-result": "3.x"
-   }
-  ```
+   ```json
+    "dependencies": {
+        "vtex.search-result": "3.x"
+    }
+   ```
 
 2. Ensure your theme uses either the `search-result-layout.desktop` or `search-result-layout.mobile` blocks, depending on the layout. Inside these layouts, include the `filter-navigator.v3` block so the sidebar can render filters:
 
