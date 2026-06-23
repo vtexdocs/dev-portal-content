@@ -4,11 +4,10 @@ slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
-updatedAt: "2026-06-22T12:00:00.000Z"
+updatedAt: "2026-06-23T12:00:00.000Z"
 seeAlso:
  - "/docs/apps/vtex.delivery-promise-components"
  - "/docs/guides/gathering-delivery-promise-information"
- - "/docs/api-reference/delivery-promise-suggestions-api"
 ---
 
 > ℹ️ This feature is in closed beta, which means that only selected customers can access it. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
@@ -238,13 +237,3 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
    ```
 
 The shipping method facet appears only when `showShippingMethodFacet` is enabled. The options listed match `availableShippingValues` when you set it, or fall back to the default set when the prop is not provided. Other Delivery Promise-related facets continue to behave as usual.
-
-### Step 4 - Displaying delivery tags and badges on Product Listing Pages
-
-The [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) enables you to display delivery-related tags and badges directly on product cards in the Product Listing Page (PLP).
-
-After shoppers enter their ZIP code once, they can immediately see which delivery options are available for each product, such as "Same Day Delivery", "Express Delivery", or "Pickup Today", without needing to apply filters or navigate to the Product Detail Page (PDP) or checkout.
-
-To display delivery information on product cards, retrieve the `deliveryZonesHash` and `pickupPointsHash` for the shopper's location, then use these values along with product IDs to fetch delivery and pickup suggestions for each product. The API returns delivery names (for example, `"Express Delivery"`) and time estimates (`slaTimeTarget`) that you can format and display as tags or badges according to your store's design (for example, "Got it today", "Got it tomorrow").
-
-> ℹ️ For complete endpoint details and response examples, see [Gathering delivery promise information](https://developers.vtex.com/docs/guides/gathering-delivery-promise-information) and [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api).
