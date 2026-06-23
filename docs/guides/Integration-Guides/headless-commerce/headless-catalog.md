@@ -7,6 +7,8 @@ updatedAt: "2021-03-31T21:16:55.757Z"
 excerpt: "Explore API endpoints for retrieving product information, categories, and search results to build headless commerce experiences with VTEX."
 ---
 
+> ℹ️ The Intelligent Search sections of this guide use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
+
 Be it through category menus, keyword searches, or product pages, shoppers accessing your headless store will need to browse through your products' information.
 
 Below you can learn more about API endpoints you can use to help shoppers find what they need in your store. See the [catalog documentation](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3rA2tTpIoEXdv2nzC27zxR) to learn how to manage products, SKUs and categories, among other things.
