@@ -8,7 +8,7 @@ type: "fixed"
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/additional-validation-when-creating-and-updating-an-sku-0.png)
 
-Before, [Catalog API](ref:catalog-api-overview) did not apply the same validation rules seen in Admin, which had unintended side effects for our users when they attempted to activate an SKU they created or updated. Now we have corrected this behavior and the following restrictions apply.
+Before, [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api) did not apply the same validation rules seen in Admin, which had unintended side effects for our users when they attempted to activate an SKU they created or updated. Now we have corrected this behavior and the following restrictions apply.
 
 - post [Create SKU](ref:catalog-api-post-sku)
 SKU should never be created as active.
