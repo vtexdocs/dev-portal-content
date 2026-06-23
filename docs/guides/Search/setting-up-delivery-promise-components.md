@@ -29,7 +29,7 @@ If you're building your storefront with Store Framework, you can enable this exp
 * [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components): Used to display blocks for postal code, delivery versus pickup, and pickup point selection.
 * [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result): Used to implement sidebar filters.
 
-Additionally, you can leverage the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) to display delivery-related tags and badges directly on product cards in the Product Listing Page (PLP), such as "Same Day Delivery", "Express Delivery", and "Pickup Today". This brings delivery context earlier into the shopping journey, improving product discoverability and conversion rates.
+Additionally, you can leverage the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) to display delivery-related tags and badges directly on product cards in the Product Listing Page (PLP), such as "Same Day Delivery", "Express Delivery", and "Pickup Today". This brings delivery context earlier into the shopping journey, improving product discoverability and conversion rates. For more details, see [Gathering delivery promise information](https://developers.vtex.com/docs/guides/gathering-delivery-promise-information).
 
 This guide walks you through the basic setup needed to implement Delivery Promise in your store.
 
