@@ -11,7 +11,7 @@ updatedAt: "2026-04-27T10:00:00.000Z"
 
 > ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
-This guide details how to use the [Delivery Promise](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) feature on headless stores, using [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) with additional facets for this purpose.
+This guide details how to use the [Delivery Promise](https://help.vtex.com/docs/tutorials/delivery-promise-beta) feature on headless stores, using [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) with additional facets for this purpose.
 
 Only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
 
