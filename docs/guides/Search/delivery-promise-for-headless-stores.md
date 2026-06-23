@@ -9,6 +9,8 @@ updatedAt: "2026-04-27T10:00:00.000Z"
 
 >ℹ️ This feature is in closed beta, which means that only selected customers can access it for now. If you are interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
 
+> ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
+
 This guide details how to use the [Delivery Promise](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) feature on headless stores, using [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) with additional facets for this purpose.
 
 Only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
@@ -210,7 +212,7 @@ In headless implementations, you must manually retrieve and render filters using
 
 You can retrieve available filters using the `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) endpoint and use the response to build a custom filter UI in your headless storefront. For example, mapping `name: "pickup-in-point"` to a checkbox labeled **Pickup in store**.
 
->⚠️ Delivery-related filters (e.g. delivery, pickup-in-point) are included in the `facets` response. These are tied to the user's session and shipping context Make sure the regionalization and delivery promise parameters are passed correctly in your requests.
+>⚠️ Delivery-related filters (e.g. delivery, pickup-in-point) are included in the `facets` response. These are tied to the user's shipping context. Make sure the delivery promise parameters (`deliveryZonesHash`, `pickupPointsHash`) are passed correctly in your requests.
 
 **Example request:**
 
