@@ -6,6 +6,8 @@ createdAt: "2023-03-13T21:11:36.747Z"
 updatedAt: "2026-06-22T00:00:00.000Z"
 ---
 
+> ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
+
 Facets represent the combination of filters that are selected in a search. To retrieve a list of possible facets for a specific search, use the `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) endpoint. You can filter the endpoint response by defining the search's `facets` and the term's `locale` and `query`.
 
 A facet value is only returned in the response if at least one of the products returned in the query has this value.
