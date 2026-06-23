@@ -3,15 +3,15 @@ title: "Consult product search information"
 slug: "consult-product-search-information"
 hidden: false
 createdAt: "2022-10-14T21:11:36.747Z"
-updatedAt: "2022-11-02T14:39:45.843Z"
+updatedAt: "2026-06-22T00:00:00.000Z"
 ---
 
-It is essential to understand the products searched in your store to present personalized marketing information to shoppers. You can use the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview), as detailed in the following sections, to gather information about shoppers’ product searches. This way, you can create [synonyms](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) or [banners](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) that include common searches on your store.
+It is essential to understand the products searched in your store to present personalized marketing information to shoppers. You can use the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1), as detailed in the following sections, to gather information about shoppers’ product searches. This way, you can create [synonyms](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) or [banners](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) that include common searches on your store.
 
 
 ## Get a list of suggested terms for a search term
 
-To get a list of suggested terms for a search term, you must use the [Get list of suggested terms similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_search-suggestions) endpoint. You can filter the endpoint response by defining the term's `locale` and `query`.
+To get a list of suggested terms for a search term, you must use the `GET` [Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) endpoint. You can filter the endpoint response by defining the term’s `locale` and `query`.
 
 **Response body example:**
 
@@ -44,7 +44,7 @@ To get a list of suggested terms for a search term, you must use the [Get list o
 
 ## Get correction of misspelled words of a search
 
-To get the system corrections for a misspelled search term, you must use the [Get attempt of correction of a misspelled term](https://developers.vtex.com/vtex-rest-api/reference/get_correction-search) endpoint. You can filter the endpoint response by defining the term's `locale` and `query`.
+To get the system corrections for a misspelled search term, you must use the `GET` [Get attempt of correction of a misspelled term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) endpoint. You can filter the endpoint response by defining the term's `locale` and `query`.
 
 **Response body example:**
 
@@ -61,7 +61,7 @@ To get the system corrections for a misspelled search term, you must use the [Ge
 
 ## Get product list for a specific search
 
-To get a product list for a search term, you must use the [Get list of products for a query](https://developers.vtex.com/vtex-rest-api/reference/get_product-search-facets) endpoint. You can filter the endpoint response by defining the term's `locale` and `query`.
+To get a product list for a search term, you must use the `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) endpoint. You can filter the endpoint response by defining the term's `locale` and `query`.
 
 **Response body example:**
 
