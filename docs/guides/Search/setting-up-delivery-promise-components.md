@@ -190,7 +190,31 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
 
 2. Ensure your theme uses either the `search-result-layout.desktop` or `search-result-layout.mobile` blocks, depending on the layout. Inside these layouts, include the `filter-navigator.v3` block so the sidebar can render filters:
 
-  
+   ```json store/search.json
+   {
+     "store.search#default": {
+       "blocks": ["search-result-layout"]
+     },
+     "search-result-layout": {
+       "children": [
+         "search-result-layout.desktop",
+         "search-result-layout.mobile"
+       ]
+     },
+     "search-result-layout.desktop": {
+       "children": ["filter-navigator.v3", "search-content"],
+       "props": {
+         "showShippingMethodFacet": true
+       }
+     },
+     "search-result-layout.mobile": {
+       "children": ["filter-navigator.v3", "search-content"],
+       "props": {
+         "showShippingMethodFacet": true
+       }
+     }
+   }
+   ```
 
 3. Enable the Delivery Promise filters by setting the `showShippingMethodFacet` to `true` in each flexible search layout where the facet should appear. This property is disabled by default, so the shipping method filter remains hidden unless explicitly enabled. The example above enables it on both desktop and mobile layouts.
 4. Optionally, define which shipping options should be displayed using the `availableShippingValues` prop in the same layout blocks. When this prop is not defined, or when it is set to an empty array, the default options are used: `delivery`, `pickup-in-point`, and `pickup-nearby`. When you provide a non-empty array, it replaces the default entirely, and only the specified values are shown. Supported values correspond to the search API facet names and include: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
