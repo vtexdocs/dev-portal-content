@@ -6,6 +6,8 @@ createdAt: "2022-10-14T21:11:36.747Z"
 updatedAt: "2026-06-22T00:00:00.000Z"
 ---
 
+> ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
+
 To deliver relevant search results to your store's shoppers, it's essential to understand how they search for products in your store. The [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) offers powerful insights into [popular search terms](#get-the-most-searched-terms) and [autocomplete suggestions](#get-autocomplete-suggested-terms-and-similar-attributes). The sections below outline how to use these tools to optimize your store's search experience.
 
 ## Retrieving the most searched terms
