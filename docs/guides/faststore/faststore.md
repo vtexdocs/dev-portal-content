@@ -8,7 +8,7 @@ excerpt: "The ultimate toolkit for building blazing-fast storefronts."
 
 [FastStore](https://github.com/vtex/faststore) is a toolkit based on [Jamstack](https://jamstack.org/) that helps developers build high-performance stores.
 
-It supports integration with [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), offers analytics functionalities to inform storefront decision-making, and gives developers the flexibility to customize the store based on the brand’s vision, creating a unique shopping experience for users.
+It supports integration with [CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), offers analytics functionalities to inform storefront decision-making, and gives developers the flexibility to customize the store based on the brand’s vision, creating a unique shopping experience for users.
 
 | Aspect | Description |
 | ------ | ----------- |
@@ -34,7 +34,7 @@ It supports integration with [Headless CMS](https://developers.vtex.com/docs/gui
   direction TB
   M(GitHub pipeline)
   N(Releases)
-  O(Preview mode for Headless CMS)
+  O(Preview mode for CMS)
   P(FastStore CLI)
   Q(Localhost preview)
   R(VTEX IO CLI)
@@ -89,7 +89,7 @@ It supports integration with [Headless CMS](https://developers.vtex.com/docs/gui
 
   subgraph " "
   C --> E(User touchpoint)
-  L(VTEX Headless CMS)
+  L(VTEX CMS)
   end
   end
   ```
@@ -99,7 +99,7 @@ The diagram above shows a FastStore architectural flow, which includes the follo
 - **Codebase:** Source code of the FastStore project hosted on GitHub.
 - **Build process:** Process of converting the source code into a deployable project through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project).
 - **Deployment:** Process of deploying the project to a production environment through [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project) and quality assurance bots.
-- **Business user touchpoint:** Environment where admin users interact with storefront settings on VTEX Headless CMS.
+- **Business user touchpoint:** Environment where admin users interact with storefront settings on CMS.
 - **Customer touchpoint:** Environment where customers interact with the storefront, in this case, the store website.
 
 ## Developer tools

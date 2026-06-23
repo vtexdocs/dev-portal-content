@@ -19,8 +19,8 @@ Below are various troubleshooting checks and instructions you can use to solve y
 | Issue | Troubleshooting instructions |
 | ----- | ---------------------------- |
 | Overrides fail to display in your store. | [Check the `getOverriddenSection` function](#checking-the-getoverriddensection-function). |
-| The custom section is not available in the Headless CMS.  | [Add the section’s schema in the Headless CMS](#adding-the-sections-schema-in-the-headless-cms). |
-| Overrides are not reflected in the Headless CMS. | [Remove default props](#removing-default-props). |
+| The custom section is not available in the Headless CMS (legacy).  | [Add the section’s schema in the Headless CMS (legacy)](#adding-the-sections-schema-in-the-headless-cms-legacy). |
+| Overrides are not reflected in the Headless CMS (legacy). | [Remove default props](#removing-default-props). |
 | Styles are not being applied to the component. | [Check custom section class names](#checking-custom-section-class-names).|
 
 ## Solution
@@ -55,16 +55,16 @@ This function is important for displaying product overrides within your store, a
 
 3. Run `yarn dev` to sync your changes with your development environment.
 
-### Adding the section’s schema in the Headless CMS
+### Adding the section’s schema in the Headless CMS (legacy)
 
-If you can't see the changes in the Headless CMS after [overriding a prop](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) or a [section](https://developers.vtex.com/docs/guides/faststore/overrides-native-component), this may be due to a missing schema. The Headless CMS will not display your custom section without one.
+If you can't see the changes in the Headless CMS (legacy) after [overriding a prop](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) or a [section](https://developers.vtex.com/docs/guides/faststore/overrides-native-component), this may be due to a missing schema. The Headless CMS (legacy) will not display your custom section without one.
 
-1. [Add the schema](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms) for the new section to the Headless CMS.
-2. Replace the native section with your custom one. For detailed instructions, see the guide [Syncing components with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
+1. [Add the schema](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms) for the new section to the Headless CMS (legacy).
+2. Replace the native section with your custom one. For detailed instructions, see the guide [Syncing components with the Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
 
 ### Removing default props
 
-If the changes you made after [overriding a prop](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) are not being reflected or not behaving as expected, this could be due to default prop definitions taking precedence. In this case, default props definitions may override yours when adding the section to the Headless CMS. Props changed via the Headless CMS take precedence over those defined in code through overrides. This can lead to confusion when you try to set a different default value in your code.
+If the changes you made after [overriding a prop](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) are not being reflected or not behaving as expected, this could be due to default prop definitions taking precedence. In this case, default props definitions may override yours when adding the section to the Headless CMS (legacy). Props changed via the Headless CMS (legacy) take precedence over those defined in code through overrides. This can lead to confusion when you try to set a different default value in your code.
 
 Consider removing default values to ensure your overrides work.
 
