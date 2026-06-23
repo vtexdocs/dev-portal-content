@@ -8,7 +8,7 @@ updatedAt: "2026-06-22T00:00:00.000Z"
 
 > ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
-It is essential to understand the products searched in your store to present personalized marketing information to shoppers. You can use the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1), as detailed in the following sections, to gather information about shoppers’ product searches. This way, you can create [synonyms](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) or [banners](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/1pxAWPEglBey1UFdvcetZV) that include common searches on your store.
+It is essential to understand the products searched in your store to present personalized marketing information to shoppers. You can use the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1), as detailed in the following sections, to gather information about shoppers’ product searches. This way, you can create [synonyms](https://help.vtex.com/docs/tutorials/synonyms) or [banners](https://help.vtex.com/docs/tutorials/banners) that include common searches on your store.
 
 
 ## Get a list of suggested terms for a search term
