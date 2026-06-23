@@ -68,13 +68,13 @@ To use Delivery Promise, customers must provide a delivery address early in thei
    | `shipping-method-selector` | Optional. A control for choosing between delivery and pickup after a location is set. |
    | `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after a location is set.  |
 
-  >ℹ️ The `shopper-location-setter` block is required and must always be included in the header. `shipping-method-selector` and `pickup-point-selector` are optional. They complement the location setter but do not replace it, since both depend on the location already set in the session. Add them only if you want to expose additional controls in the UI. Otherwise, keep the header simple: either `shopper-location-setter` alone, or `shopper-location-setter` paired with one of the selectors. Using all three together is possible but uncommon.
+   >ℹ️ The `shopper-location-setter` block is required and must always be included in the header. `shipping-method-selector` and `pickup-point-selector` are optional. They complement the location setter but do not replace it, since both depend on the location already set in the session. Add them only if you want to expose additional controls in the UI. Otherwise, keep the header simple: either `shopper-location-setter` alone, or `shopper-location-setter` paired with one of the selectors. Using all three together is possible but uncommon.
 
-Choose the configuration that matches your use case:
+   Choose the configuration that matches your use case:
 
-#### Location only
+   #### Location only
 
-Use the `shopper-location-setter` block when you only need the shopper to provide their location, without separate header controls for shipping method or store.
+   Use the `shopper-location-setter` block when you only need the shopper to provide their location, without separate header controls for shipping method or store.
 
    **Example**
 
@@ -92,9 +92,9 @@ Use the `shopper-location-setter` block when you only need the shopper to provid
        }
    ```
 
-#### Location + shipping method
+   #### Location + shipping method
 
-Use `shopper-location-setter` and `shipping-method-selector` when you want the header to make the delivery or pickup choice explicit right after the shopper enters a location.
+   Use `shopper-location-setter` and `shipping-method-selector` when you want the header to make the delivery or pickup choice explicit right after the shopper enters a location.
 
    **Example**
 
@@ -122,9 +122,9 @@ Use `shopper-location-setter` and `shipping-method-selector` when you want the h
        }
    ```
 
-#### Location + pickup point
+   #### Location + pickup point
 
-Use `shopper-location-setter` and `pickup-point-selector` when pickup is a central part of your experience, and you want both "where am I?" and "which store?" visible in the header.
+   Use `shopper-location-setter` and `pickup-point-selector` when pickup is a central part of your experience, and you want both "where am I?" and "which store?" visible in the header.
 
    **Example**
 
@@ -153,26 +153,26 @@ Use `shopper-location-setter` and `pickup-point-selector` when pickup is a centr
 
 3. Configure the behavior with props to customize the blocks. Below are the available props.
 
-#### `shopper-location-setter`
+   #### `shopper-location-setter`
 
-| Prop                         | Type      | Default     | Description                                                                                                            |
-| ---------------------------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `required`                   | `boolean` | `false`     | When `true`, opens a non-dismissible postal code modal until a valid code is set. When `false`, uses the popover flow. |
-| `mode`                       | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                     |
-| `showLocationDetectorButton` | `boolean` | `false`     | Shows the control that uses the browser geolocation API to suggest the postal code. Available only on this block.      |
+   | Prop                         | Type      | Default     | Description                                                                                                            |
+   | ---------------------------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+   | `required`                   | `boolean` | `false`     | When `true`, opens a non-dismissible postal code modal until a valid code is set. When `false`, uses the popover flow. |
+   | `mode`                       | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                     |
+   | `showLocationDetectorButton` | `boolean` | `false`     | Shows the control that uses the browser geolocation API to suggest the postal code. Available only on this block.      |
 
-#### `shipping-method-selector`
+   #### `shipping-method-selector`
 
-| Prop       | Type      | Default     | Description                                                                                                       |
-| ---------- | --------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
-| `required` | `boolean` | `false`     | When `true`, the shipping method modal cannot be dismissed until a method is selected (after a postal code is entered). |
-| `mode`     | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                |
+   | Prop       | Type      | Default     | Description                                                                                                       |
+   | ---------- | --------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
+   | `required` | `boolean` | `false`     | When `true`, the shipping method modal cannot be dismissed until a method is selected (after a postal code is entered). |
+   | `mode`     | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                |
 
-#### `pickup-point-selector`
+   #### `pickup-point-selector`
 
-| Prop   | Type     | Default     | Description                        |
-| ------ | -------- | ----------- | ---------------------------------- |
-| `mode` | `string` | `"default"` | Display mode: `default` or `icon`. |
+   | Prop   | Type     | Default     | Description                        |
+   | ------ | -------- | ----------- | ---------------------------------- |
+   | `mode` | `string` | `"default"` | Display mode: `default` or `icon`. |
 
 ### Step 3 - Implementing sidebar filters
 
