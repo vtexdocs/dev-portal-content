@@ -35,7 +35,7 @@ The VTEX platform supports the configuration of different business models, such 
 
 |     | FastStore | Store Framework | Legacy CMS Portal |
 | --- | :---: | :---: | :---: |
-| [**B2B capabilities**](https://help.vtex.com/en/tutorial/b2b-overview--5vb9SNXhX2bZnkpAh7ADdC?\&utm_source=autocomplete) | ⚠️ | ✅ | ❌ |
+| [**B2B capabilities**](https://help.vtex.com/en/docs/tutorials/b2b-category) | ✅ (B2B Buyer Portal - Closed Beta) | ✅ | ❌ |
 | [**Bindings**](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W?\&utm_source=autocomplete) | ✅ (Closed Beta) | ✅ | ✅ |
 | [**Cross-border and multi-language stores**](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/5qgXy9Erm7FDP3UB5Ox8Bs) | ✅ (Closed Beta) | ✅ | ❌ |
 | [**Franchise accounts**](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) | ✅ | ✅ | ✅ |
