@@ -235,7 +235,7 @@ Supported `field` values:
 
 ## Step 5 - Handle new response fields
 
-Intelligent Search API v1 returns several fields that were absent or undocumented in the legacy API. Review each one and update your integration as needed.
+Intelligent Search API v1 returns several fields that were absent in the Intelligent Search API (Legacy). Review each one and update your integration as needed.
 
 **`GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) response additions:**
 
