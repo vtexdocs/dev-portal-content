@@ -76,7 +76,7 @@ Choose the configuration that matches your use case:
 
 Use the `shopper-location-setter` block when you only need the shopper to provide their location, without separate header controls for shipping method or store.
 
-**Example**
+   **Example**
 
    ```json
        "header-row#1-desktop": {
@@ -96,7 +96,7 @@ Use the `shopper-location-setter` block when you only need the shopper to provid
 
 Use `shopper-location-setter` and `shipping-method-selector` when you want the header to make the delivery or pickup choice explicit right after the shopper enters a location.
 
-**Example**
+   **Example**
 
    ```json
        "header-row#1-desktop": {
@@ -126,7 +126,7 @@ Use `shopper-location-setter` and `shipping-method-selector` when you want the h
 
 Use `shopper-location-setter` and `pickup-point-selector` when pickup is a central part of your experience, and you want both "where am I?" and "which store?" visible in the header.
 
-**Example**
+   **Example**
 
    ```json
        "header-row#1-desktop": {
