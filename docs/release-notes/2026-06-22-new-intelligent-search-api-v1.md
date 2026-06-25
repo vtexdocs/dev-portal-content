@@ -85,7 +85,6 @@ Several endpoints expose new parameters and response fields compared to Intellig
 
 | Endpoint | What's new |
 | --- | --- |
-| `GET` [Get list of the 10 most searched terms (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) | New `query` parameter: filters results to terms containing the given text (case-insensitive). |
 | `GET` [Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) | Response: each suggestion now includes an optional `attributes` array with facet attributes, using the same shape as `GET` [Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions). |
 | `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) | New `removeHiddenFacets` parameter: omits hidden facets from the response when set to `true`.<br />Response: `facets[].type` now includes `DELIVERY` in addition to `TEXT` and `PRICERANGE`. |
 | `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) | Response: new `searchId` (analytics identifier), `correction` (spelling correction), `redirect` (redirect rule URL), and `options` (sort options and delivery promise data) fields. |
