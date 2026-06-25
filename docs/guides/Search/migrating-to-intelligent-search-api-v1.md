@@ -223,15 +223,7 @@ Supported `field` values:
 
 ## Step 5 - Verify product item data in your integration
 
-A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in Intelligent Search API (Legacy) is resolved in v1. If your integration reads any of the following fields, verify that your code handles the updated values correctly after migrating:
-
-**Fields that previously returned incorrect data, now correct:**
-
-- `products[].items[].isKit`
-- `products[].items[].modalType`
-- `products[].items[].images[].imageText`
-
-**Attachment schema change:** the `attachments[]` object structure changed significantly. Update any code that reads attachment data:
+The `attachments[]` object structure has changed in `products[].items[]`. Update any code that reads attachment data:
 
 | Field | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | --- | --- | --- |
@@ -249,6 +241,8 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 - `products[].items[].estimatedDateArrival` (string): Estimated arrival date for the SKU, when configured.
 - `products[].items[].kitItems[]` (array): Component SKUs when `isKit` is `true`. Each entry has `itemId` and `amount`.
 - `products[].items[].sellers[].commertialOffer.PaymentOptions` (object): Available payment options and installment plans for the seller's offer.
+
+Additionally, fields such as `isKit`, `modalType`, and `images[].imageText`, which previously returned incorrect or empty values, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
 
 ## Caching behavior
 
