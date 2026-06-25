@@ -67,8 +67,8 @@ Read the current segment values from the VTEX segment cookie (or your session/co
 | --- | --- | --- |
 | `cultureInfo` | `locale` | All endpoints |
 | `channel` | `sc` query param | All endpoints |
-| `regionId` | `regionId` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
-| `countryCode` | `country` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `regionId` | `regionId` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
+| `countryCode` | `country` | Delivery Promise endpoints only. See [Delivery Promise parameters](#delivery-promise-parameters-if-applicable). |
 | `utm_source` | `utmSource` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 | `utm_campaign` | `utmCampaign` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 | `utmi_campaign` | `utmiCampaign` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
@@ -175,21 +175,7 @@ function segmentToProductSearchV1(segment: Segment, query?: string): string {
 
 ### Regionalization parameters (if applicable)
 
-If your store uses regionalization, `regionId` was a top-level segment field and `country`, `zip-code`, and `coordinates` came from the segment `facets` string. In Intelligent Search API v1, pass them explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
-
-Pass the buyer's location using country and ZIP code:
-
-```
-?country=BRA&zip-code=22271020
-```
-
-Optionally include coordinates to sort pickup results by proximity:
-
-```
-?country=BRA&zip-code=22271020&coordinates=-43.19532775878906,-22.955032348632812
-```
-
-If your account uses `regionId` instead, pass it directly:
+If your store uses regionalization, `regionId` was a top-level segment field. In Intelligent Search API v1, pass it explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) and `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):
 
 ```
 ?regionId=v2.C0FC2DE04D6A7C9E1DC22C0D7EBD939B
@@ -199,7 +185,11 @@ If your account uses `regionId` instead, pass it directly:
 
 If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the parameters `deliveryZonesHash`, `pickupPointsHash`, and `pickupPoint` were previously passed via the segment `facets` string. In Intelligent Search API v1, pass them as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
 
-`deliveryZonesHash` is obtained from `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) and `pickupPointsHash` from `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search). Both are part of the Delivery Promise Suggestions API.
+`deliveryZonesHash` is obtained from `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) and `pickupPointsHash` from `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search). Both are part of the Delivery Promise Suggestions API. If the hashes have expired, pass `country` and `zip-code` (and optionally `coordinates`) so the API can revalidate them:
+
+```
+?country=BRA&zip-code=22271020&coordinates=-43.19532775878906,-22.955032348632812
+```
 
 ## Step 4 - Replace single-product search with the new Get product endpoint
 
