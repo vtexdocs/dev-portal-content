@@ -85,7 +85,7 @@ curl 'https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-
 **After**
 
 ```sh
-curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/trade-policy/1?locale=en-US&sc=1'
+curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?locale=en-US&sc=1'
 ```
 
 ### Parsing the segment `facets` field
