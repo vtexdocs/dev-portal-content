@@ -48,7 +48,7 @@ Intelligent Search API (Legacy) relied on the VTEX segment cookie to fill in loc
 
 If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the following parameters were previously passed via the segment `facets` string and must now be passed as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-):
 
-- `country`, `zip-code`, and optionally `coordinates` (buyer's address — the fundamental parameters)
+- `country`, `zip-code`, and optionally `coordinates` (buyer's address, the fundamental parameters)
 - `deliveryZonesHash` and `pickupPointsHash` (pre-computed alternative for faster lookup; hashes expire and require a specific renewal flow, so always have the address available as a fallback)
 - `pickupPoint`
 
