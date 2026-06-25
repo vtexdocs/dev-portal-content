@@ -231,18 +231,7 @@ Supported `field` values:
 | `sku` | SKU ID |
 | `reference` | SKU reference ID |
 
-## Step 5 - Handle new response fields
-
-Intelligent Search API v1 returns several fields that were absent in the Intelligent Search API (Legacy). Review each one and update your integration as needed.
-
-**`GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) response additions:**
-
-- `searchId` (string): Unique identifier for the search request. Pass this value in analytics events to tie impressions and clicks back to the originating search.
-- `correction` (object): Spelling correction applied to the query. Check this field to display "Did you mean?" messaging.
-- `redirect` (string): When the query matches a redirect rule, this field contains the target URL. Redirect the user instead of displaying search results.
-- `options` (object): Available sort options, result counts, and delivery promise metadata.
-
-## Step 6 - Verify product item data in your integration
+## Step 5 - Verify product item data in your integration
 
 A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in Intelligent Search API (Legacy) is resolved in v1. If your integration reads any of the following fields, verify that your code handles the updated values correctly after migrating:
 
@@ -299,12 +288,9 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 | <input type="checkbox"></input> Passing Delivery Promise parameters explicitly (`deliveryZonesHash`, `pickupPointsHash`, `pickupPoint`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing UTM and marketing parameters explicitly (`utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`) | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | If applicable |
 | <input type="checkbox"></input> Replaced single-product search calls with `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | [Step 4](#step-4---replace-single-product-search-with-the-new-get-product-endpoint) | If applicable |
-| <input type="checkbox"></input> Handling `searchId` in analytics events | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| <input type="checkbox"></input> Handling `correction` field for spell-correction messaging | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| <input type="checkbox"></input> Handling `redirect` field for query redirect rules | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| <input type="checkbox"></input> Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
-| <input type="checkbox"></input> Updated code reading attachment data to match new schema | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
-| <input type="checkbox"></input> Handled new fields: `estimatedDateArrival`, `kitItems[]`, `PaymentOptions` | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
+| <input type="checkbox"></input> Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
+| <input type="checkbox"></input> Updated code reading attachment data to match new schema | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
+| <input type="checkbox"></input> Handled new fields: `estimatedDateArrival`, `kitItems[]`, `PaymentOptions` | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
 
 ## Related resources
 
