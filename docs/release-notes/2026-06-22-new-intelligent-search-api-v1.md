@@ -72,15 +72,6 @@ The IO prefix has been removed, underscores in path names have been replaced by 
 
 A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
 
-### Updated `simulationBehavior` enum
-
-The `simulationBehavior` parameter on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) now accepts two additional values:
-
-| Value | Description |
-| --- | --- |
-| `only3P` | Calls simulation for third-party sellers only. |
-| `regionalize1p` | Calls regionalized simulation for first-party sellers only. |
-
 ### Updated parameters and response fields
 
 Several endpoints expose new parameters and response fields compared to Intelligent Search API (Legacy).
