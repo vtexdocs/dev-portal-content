@@ -1,7 +1,7 @@
 ---
 title: 'FastStore WebOps - Dashboard'
 createdAt: "2023-08-14T17:31:00.000Z"
-updatedAt: "2026-05-15T20:19:39.310Z"
+updatedAt: "2026-06-25T00:00:00.000Z"
 ---
 
 Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project), or are already working on customizing it, you can use the WebOps dashboard to view website deployments and performance.
@@ -102,15 +102,20 @@ If a deploy fails due to issues unrelated to your code, such as environment vari
 
 The **Integrations** tab allows you to configure branch settings and store pages for Lighthouse tests. The tab contains the following sections:
 
-1. **[Production branch](#production-branch):** Configures which Git branch generates production builds for your account.
-2. **[Preview branches](#preview-branches):** Controls which branches generate preview deploys.
-3. **[Lighthouse scores](#lighthouse-scores):** Configures store pages for Lighthouse testing.
+1. **[Git Provider](#git-provider):** Configures the GitHub organization and repository connected to your project.
+2. **[Production branch](#production-branch):** Configures which Git branch generates production builds for your account.
+3. **[Preview branches](#preview-branches):** Controls which branches generate preview deploys.
+4. **[Lighthouse scores](#lighthouse-scores):** Configures store pages for Lighthouse testing.
 
-![integrations-webops](https://vtexhelp.vtexassets.com/assets/docs/src/customizing-branches-integrations___ae60f6b2b7c97b7200d8b8295fe7c755.gif)
+![integrations-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/webops-integrations.gif)
+
+### Git Provider
+
+The **Git Provider** section lets you configure the GitHub organization and repository associated with your FastStore project. From this section, you can move your project to a different organization or to a different repository within the same organization. For detailed instructions, see [Moving your FastStore project to a new GitHub repository](https://developers.vtex.com/docs/guides/faststore/webops-moving-your-faststore-project-to-a-new-github-repository).
 
 ### Production branch
 
-The **Production branch** section allows you to configure which Git branch generates production builds for your account.
+The **Production branch** section lets you configure which Git branch triggers production builds for your account.
 
 ### Preview branches
 
