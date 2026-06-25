@@ -83,7 +83,7 @@ This results in the following behavior when using Delivery Options and Dynamic E
 Here is an example of a basic Delivery Promise search using the delivery promise information:
 
 ```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/trade-policy/1?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 
 ```
 
@@ -108,7 +108,7 @@ Parameters: `/shipping/delivery`
 Example:
 
 ```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/shipping/delivery/trade-policy/1?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/shipping/delivery?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 #### Pickup at a specific location
@@ -120,7 +120,7 @@ Parameters: `/shipping/pickup-in-point/pickupPoint/{pickupPointId}`
 Example:
 
 ```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/shipping/pickup-in-point/trade-policy/1/pickupPoint/vtex-botafogo?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/shipping/pickup-in-point/pickupPoint/vtex-botafogo?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 #### Pickup at a nearby location
@@ -132,7 +132,7 @@ Parameters: `/shipping/pickup-nearby`
 Example:
 
 ```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/shipping/pickup-nearby/trade-policy/1?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/shipping/pickup-nearby?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 ### Retrieving available pickup points
@@ -144,13 +144,13 @@ You can call this endpoint in two ways:
 - **With country and ZIP code:** Provide the country and ZIP code to retrieve pickup points based on location.
 
    ```txt
-   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability/productClusterIds/{productClusterIds}?sc={tradePolicy}&zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
    ```
 
  - **With delivery zones and pickup point hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupPointsHash`) for faster lookup.
 
    ```txt
-   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?deliveryZonesHash={deliveryZonesHash}&pickupPointsHash={pickupPointsHash}&an={accountName}
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability/productClusterIds/{productClusterIds}?sc={tradePolicy}&deliveryZonesHash={deliveryZonesHash}&pickupPointsHash={pickupPointsHash}&an={accountName}
    ```
 
 ### Filtering by Delivery Options
@@ -167,7 +167,7 @@ To filter by a Delivery Option, use the `delivery-options` parameter. Its value 
 Example:
 
 ```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/delivery-options/express-option-id/trade-policy/1?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/delivery-options/express-option-id?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 You can also filter for multiple Delivery Options by including multiple entries for the `delivery-options` parameter on the request.
@@ -175,7 +175,7 @@ You can also filter for multiple Delivery Options by including multiple entries 
 Example:
 
 ```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/delivery-options/one-week-option-id/delivery-options/one-day-option-id/trade-policy/1?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/delivery-options/one-week-option-id/delivery-options/one-day-option-id?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 ### Filtering by Dynamic Estimates
@@ -191,7 +191,7 @@ Filters the search for products that can be delivered or picked up at the locati
 Example:
 
 ```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/dynamic-estimate/same-day/trade-policy/1?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/dynamic-estimate/same-day?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 #### Next-day Delivery
@@ -201,7 +201,7 @@ Filters the search for products that can be delivered or picked up at the locati
 Example:
 
 ```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/dynamic-estimate/next-day/trade-policy/1?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/dynamic-estimate/next-day?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 ## Implementing sidebar filters
@@ -217,7 +217,7 @@ You can retrieve available filters using the `GET` [List filters for a search (v
 **Example request:**
 
 ```txt
-GET https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/facets/trade-policy/1?query=moisturizer
+GET https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/facets?sc=1&query=moisturizer
 ```
 
 **Example response:**
