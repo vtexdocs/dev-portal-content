@@ -144,13 +144,13 @@ You can call this endpoint in two ways:
 - **With country and ZIP code:** Provide the country and ZIP code to retrieve pickup points based on location.
 
    ```txt
-   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability/productClusterIds/{productClusterIds}?sc={tradePolicy}&zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability/productClusterIds/{productClusterIds}?sc={salesChannel}&zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
    ```
 
  - **With delivery zones and pickup point hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupPointsHash`) for faster lookup.
 
    ```txt
-   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability/productClusterIds/{productClusterIds}?sc={tradePolicy}&deliveryZonesHash={deliveryZonesHash}&pickupPointsHash={pickupPointsHash}&an={accountName}
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability/productClusterIds/{productClusterIds}?sc={salesChannel}&deliveryZonesHash={deliveryZonesHash}&pickupPointsHash={pickupPointsHash}&an={accountName}
    ```
 
 ### Filtering by Delivery Options
