@@ -15,7 +15,7 @@ All new headless integrations must use [Intelligent Search API v1](https://devel
 
 Intelligent Search API v1 offers:
 
-- **HTTP caching:** most responses now include a `Cache-Control` header, enabling CDN and browser caching. This reduces origin load and speeds up storefronts. Always read this header at runtime — don't hardcode cache durations in your integration.
+- **HTTP caching:** most responses now include a `Cache-Control` header, enabling CDN and browser caching. This reduces origin load and speeds up storefronts. Always read this header at runtime. Don't hardcode cache durations in your integration.
 - **Lower latency:** the new `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint skips the search pipeline entirely for single-product lookups.
 - **Explicit context:** all inputs are passed as query parameters or path facets. Responses are deterministic and cache-friendly because they no longer vary by segment cookie.
 - **Simpler URLs:** no IO prefix, no underscores.
