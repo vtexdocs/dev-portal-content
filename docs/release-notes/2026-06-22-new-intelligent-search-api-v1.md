@@ -72,14 +72,6 @@ The IO prefix has been removed, underscores in path names have been replaced by 
 
 A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
 
-### Updated parameters and response fields
-
-Several endpoints expose new parameters and response fields compared to Intelligent Search API (Legacy).
-
-| Endpoint | What's new |
-| --- | --- |
-| `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) | New `locale` parameter for localized results and `pickupPoint` parameter to filter by a specific pickup point ID. |
-
 ### Resolved: Incomplete product item data on product search
 
 A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in the legacy API has been resolved in Intelligent Search API v1. Some fields previously returned incorrect or empty values, including `isKit`, `modalType`, and `images[].imageText`. New fields `estimatedDateArrival`, `kitItems`, and `PaymentOptions` are now returned.
