@@ -271,7 +271,7 @@ Exceptions:
 | <input type="checkbox"></input> Renamed all endpoint paths (underscores to hyphens) | [Step 2](#step-2---update-endpoint-paths) | Yes |
 | <input type="checkbox"></input> Passing `locale` explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
 | <input type="checkbox"></input> Passing `sc` query parameter explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
-| <input type="checkbox"></input> Passing regionalization parameters explicitly (`regionId`, `country`, `zip-code`, `coordinates`) | [Step 3](#regionalization-parameters-if-applicable) | If applicable |
+| <input type="checkbox"></input> Passing `regionId` explicitly | [Step 3](#regionalization-parameters-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing Delivery Promise parameters explicitly (`country`, `zip-code`, `coordinates`, `pickupPoint`, `deliveryZonesHash`, `pickupPointsHash`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing UTM and marketing parameters explicitly (`utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`) | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | If applicable |
 | <input type="checkbox"></input> Replaced single-product search calls with `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | [Step 4](#step-4---replace-single-product-search-with-the-new-get-product-endpoint) | If applicable |
