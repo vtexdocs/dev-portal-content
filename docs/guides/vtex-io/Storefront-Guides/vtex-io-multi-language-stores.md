@@ -45,7 +45,8 @@ You can implement custom translations at either the app or account level:
 When translating a message, the Messages app follows a specific decision flow:
 
 1. Check for custom account-level translations.
-2. If no custom definitions are found, it checks for frontend app translations in the app's `/messages` folder.
+2. If the Messages app doesn't find any custom definitions, it checks for frontend app translations in the app's `/messages` folder.
+3. ```
 3. If a specific translation is still not found, the Messages app falls back to the automatic translation service.
 
 ```mermaid
