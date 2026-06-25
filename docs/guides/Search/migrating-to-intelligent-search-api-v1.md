@@ -183,13 +183,17 @@ If your store uses regionalization, `regionId` was a top-level segment field. In
 
 ### Delivery Promise parameters (if applicable)
 
-If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the parameters `deliveryZonesHash`, `pickupPointsHash`, and `pickupPoint` were previously passed via the segment `facets` string. In Intelligent Search API v1, pass them as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
+If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), pass the buyer's location as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
 
-`deliveryZonesHash` is obtained from `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) and `pickupPointsHash` from `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search). Both are part of the Delivery Promise Suggestions API. If the hashes have expired, pass `country` and `zip-code` (and optionally `coordinates`) so the API can revalidate them:
+`deliveryZonesHash` and `pickupPointsHash` are the preferred approach — pre-computed by the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api), they enable faster lookup. Because hashes expire and require a specific renewal flow, always have the buyer's address available as a fallback: `country`, `zip-code`, and optionally `coordinates`:
 
 ```
 ?country=BRA&zip-code=22271020&coordinates=-43.19532775878906,-22.955032348632812
 ```
+
+`pickupPoint` filters results to a specific pickup point ID.
+
+If your integration reads a VTEX segment cookie, all of these values may already be present in the segment `facets` string (`country`, `zip-code`, `coordinates`, `pickupPoint`, `deliveryZonesHash`, `pickupPointsHash`). Extract and forward them as explicit query parameters.
 
 ## Step 4 - Replace single-product search with the new Get product endpoint
 
@@ -268,7 +272,7 @@ Exceptions:
 | <input type="checkbox"></input> Passing `locale` explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
 | <input type="checkbox"></input> Passing `sc` query parameter explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
 | <input type="checkbox"></input> Passing regionalization parameters explicitly (`regionId`, `country`, `zip-code`, `coordinates`) | [Step 3](#regionalization-parameters-if-applicable) | If applicable |
-| <input type="checkbox"></input> Passing Delivery Promise parameters explicitly (`deliveryZonesHash`, `pickupPointsHash`, `pickupPoint`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
+| <input type="checkbox"></input> Passing Delivery Promise parameters explicitly (`country`, `zip-code`, `coordinates`, `pickupPoint`, `deliveryZonesHash`, `pickupPointsHash`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing UTM and marketing parameters explicitly (`utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`) | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | If applicable |
 | <input type="checkbox"></input> Replaced single-product search calls with `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | [Step 4](#step-4---replace-single-product-search-with-the-new-get-product-endpoint) | If applicable |
 | <input type="checkbox"></input> Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
