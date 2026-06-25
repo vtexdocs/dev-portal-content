@@ -264,19 +264,12 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 
 Responses include a `Cache-Control` header — always read it at runtime. Don't hardcode cache durations in your integration.
 
-| Endpoint | Cache behavior |
-| --- | --- |
-| `GET` [Get list of the 10 most searched terms (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) | Cached for public sales channels |
-| `GET` [Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions) | Cached for public sales channels |
-| `GET` [Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) | Cached for public sales channels |
-| `GET` [Get attempt of correction of a misspelled term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) | Cached for public sales channels |
-| `GET` [Get list of banners registered for query (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) | Cached for public sales channels |
-| `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (organic, public sales channel) | Cached for public sales channels |
-| `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (with sponsored products) | Not cached — prevents ad impressions from being served from a shared cache |
-| `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) | Cached for public sales channels |
-| `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | Cached for public sales channels |
-| `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) | Cached for public sales channels |
-| Any endpoint on a private sales channel | Not cached |
+Most endpoints return cacheable responses for public sales channels, enabling CDN and browser caching.
+
+Exceptions:
+
+- **Sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)):** responses from `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) that include sponsored products are not cached, preventing ad impressions from being served from a shared cache.
+- **Private sales channels:** responses are not cached regardless of endpoint.
 
 ## Migration checklist
 
