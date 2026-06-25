@@ -7,7 +7,7 @@ createdAt: "2026-05-28T00:00:00.000Z"
 updatedAt: "2026-06-02T00:00:00.000Z"
 ---
 
-> ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
+> ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact [Support](https://help.vtex.com/en/support).
 
 After setting up a Sales App extension project in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you're ready to create custom experiences by rendering React components in predefined extension points.
 
@@ -21,7 +21,7 @@ In this guide, you'll learn how to create a basic extension and connect it to an
 
 ## Instructions
 
-Suppose you want to create a custom message for your Sales App. Based on the sample folder generated in your monorepo when creating the project, follow the steps below.
+Suppose you want to create a custom message for Sales App. Based on the sample folder generated in your monorepo when creating the project, follow the steps below.
 
 ### Step 1 - Creating the component
 
@@ -59,4 +59,4 @@ After saving the file, open the cart page again. The custom message should appea
 
 ![VTEX cart page with empty cart and Extension example area displayed without custom styling](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/creating-extensions-example-without-css.webp)
 
-Once you have created an extension and connected it to an extension point, you can customize your component's styling. For detailed instructions, see the guide [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility).
+Once you've created an extension and connected it to an extension point, you can customize the styling of your component. For detailed instructions, see the guide [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility).
