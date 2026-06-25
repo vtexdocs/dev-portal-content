@@ -167,10 +167,9 @@ function segmentToProductSearchV1(segment: Segment, query?: string): string {
   if (query) params.query = query
 
   const facetPath = pathFacets.map(f => `${f.key}/${f.value}`).join('/')
-  const path = facetPath
   const search = new URLSearchParams(params).toString()
 
-  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search${path ? `/${path}` : ''}?${search}`
+  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search${facetPath ? `/${facetPath}` : ''}?${search}`
 }
 ```
 
