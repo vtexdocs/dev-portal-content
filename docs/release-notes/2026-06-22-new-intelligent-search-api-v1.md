@@ -30,8 +30,8 @@ Responses from most endpoints now include a `Cache-Control` header, enabling CDN
 
 Exceptions:
 
-- Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)): not cached, preventing ad impressions from being served from a shared cache.
-- Private sales channel responses: not cached.
+* Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)) are not cached, preventing ad impressions from being served from a shared cache.
+* Private sales channel responses: not cached.
 
 ### Explicit context: No segment cookie
 
