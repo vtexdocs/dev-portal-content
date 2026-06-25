@@ -28,15 +28,15 @@ Intelligent Search API v1 offers:
 
 Change the base URL from the legacy IO path to the v1 path.
 
-**Before**
+**Before:**
 
-```
+```text
 https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search
 ```
 
-**After**
+**After:**
 
-```
+```text
 https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1
 ```
 
@@ -74,14 +74,14 @@ Read the current segment values from the VTEX segment cookie (or your session/co
 | `campaigns` | `campaigns` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 | `priceTables` | `priceTables` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 
-**Before**
+**Before:**
 
 ```sh
 curl 'https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search/trade-policy/1' \
   --header 'Cookie: vtex_segment=...'
 ```
 
-**After**
+**After:**
 
 ```sh
 curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?locale=en-US&sc=1'
@@ -91,14 +91,13 @@ curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/
 
 The segment cookie's `facets` field is a semicolon-separated `key=value` string, for example:
 
-```
+```text
 zip-code=22250-040;country=BRA;brand=samsung;category-1=tv
 ```
 
 Six keys from this string map to v1 query parameters: `zip-code`, `coordinates`, `country`, `pickupPoint`, `deliveryZonesHash`, and `pickupPointsHash`. All other keys become path facets in the URL.
 
 > **Note on `country`:** if `countryCode` is present as a top-level segment field, it takes precedence over the `country` key in the `facets` string. The TypeScript reference implementation below handles this automatically.
-
 > **Note on `campaigns`:** this field is only forwarded when the segment carries it as a non-empty string. Segments often have `campaigns: null` — in that case, omit the parameter entirely.
 
 The following TypeScript snippet shows a reference implementation of the full segment-to-v1 translation for `product-search`:
@@ -176,7 +175,7 @@ function segmentToProductSearchV1(segment: Segment, query?: string): string {
 
 If your store uses regionalization, `regionId` was a top-level segment field in Intelligent Search API (Legacy). In Intelligent Search API v1, pass it explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) and `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):
 
-```
+```text
 ?regionId=v2.C0FC2DE04D6A7C9E1DC22C0D7EBD939B
 ```
 
@@ -186,7 +185,7 @@ If your store uses [Delivery Promise for headless stores](https://developers.vte
 
 The fundamental parameters are the buyer's address: `country`, `zip-code`, and optionally `coordinates`:
 
-```
+```text
 ?country=BRA&zip-code=22271020&coordinates=-43.19532775878906,-22.955032348632812
 ```
 
@@ -259,8 +258,8 @@ Responses from most endpoints now include a `Cache-Control` header, enabling CDN
 
 Exceptions:
 
-* Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)) are not cached, preventing ad impressions from being served from a shared cache.
-* Private sales channel responses: not cached.
+- Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)) are not cached, preventing ad impressions from being served from a shared cache.
+- Private sales channel responses: not cached.
 
 ## Migration checklist
 
@@ -270,7 +269,7 @@ Exceptions:
 | <input type="checkbox"></input> Renamed all endpoint paths (underscores to hyphens) | [Step 2](#step-2---update-endpoint-paths) | Yes |
 | <input type="checkbox"></input> Passing `locale` explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
 | <input type="checkbox"></input> Passing `sc` query parameter explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
-| <input type="checkbox"></input> Passing `regionId` explicitly | [Step 3](#regionalization-parameters-if-applicable) | If applicable |
+| <input type="checkbox"></input> Passing `regionId` explicitly | [Step 3](#regionalization-parameter-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing Delivery Promise parameters explicitly (`country`, `zip-code`, `coordinates`, `pickupPoint`, `deliveryZonesHash`, `pickupPointsHash`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing UTM and marketing parameters explicitly (`utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`) | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | If applicable |
 | <input type="checkbox"></input> Replaced single-product search calls with `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | [Step 4](#step-4---replace-single-product-search-with-the-new-get-product-endpoint) | If applicable |
