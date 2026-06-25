@@ -26,9 +26,9 @@ Now, you can change your project's connected repository directly from the WebOps
 
 This change was made to simplify the repository migration process and give developers more control over their FastStore project configuration.
 
-The feature is available to all FastStore projects using WebOps that meet the required permissions (Owner role in VTEX Admin and Admin role in GitHub repositories).
+The feature is available to all FastStore projects using WebOps that meet the required permissions (`Owner` role in VTEX Admin and `Admin` role in GitHub repositories).
 
-> ⚠️ The repository change feature is not available for private GitHub instances. If your project is connected to a private GitHub instance, the option will not be displayed.
+>⚠️ The repository change feature isn't available for private GitHub instances. If your project is connected to a private GitHub instance, the option will not be displayed.
 
 ## What needs to be done?
 
