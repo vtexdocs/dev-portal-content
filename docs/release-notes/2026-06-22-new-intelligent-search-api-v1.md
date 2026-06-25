@@ -72,11 +72,21 @@ The IO prefix has been removed, underscores in path names have been replaced by 
 
 A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
 
-### Resolved: Incomplete product item data on product search
+### Breaking change: `attachments[]` object structure in product search
 
-A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty) affecting `products[].items[]` fields in the legacy API has been resolved in Intelligent Search API v1. Some fields previously returned incorrect or empty values, including `isKit`, `modalType`, and `images[].imageText`. New fields `estimatedDateArrival`, `kitItems`, and `PaymentOptions` are now returned.
+The `attachments[]` object structure has changed in `products[].items[]` between Intelligent Search API (Legacy) and Intelligent Search API v1, affecting the following endpoints:
 
-The `attachments[]` object structure has also changed in a breaking way: `id` changed from `string` to `number`, and `required` and `domainValues` have been removed in favor of `isRequired` and `fields[].domain_values`. If your integration reads attachment data, update it before migrating. See [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1) for the full before/after schema.
+* `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (previously `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-))
+* `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (new)
+
+Key changes:
+
+* `id` changed from string to number.
+* `required` and `domainValues` have been removed in favor of `isRequired` and `fields[].domain_values`.
+* New fields `estimatedDateArrival`, `kitItems`, and `PaymentOptions` are now returned.
+* Fields previously returning incorrect or empty values, such as `isKit`, `modalType`, and `images[].imageText`, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
+
+If your integration reads attachment data, update it before migrating. See [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1) for the full before/after schema.
 
 ## What needs to be done?
 
