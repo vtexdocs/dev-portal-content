@@ -20,18 +20,15 @@ Here is a summary of the key differences between Intelligent Search API (Legacy)
 | --- | --- | --- |
 | **Base URL** | `/api/io/_v/api/intelligent-search` | `/api/intelligent-search/v1` |
 | **Context** | VTEX segment cookie | Explicit query parameters |
-| **HTTP caching** | Not cached | `public, max-age=600` on most endpoints |
+| **HTTP caching** | Not cached | Responses include a `Cache-Control` header; read it at runtime to determine cacheability. |
 | **Single-product lookup** | Via product search pipeline | Dedicated `GET /products` endpoint |
 | **Path format** | `endpoint_name` (underscores) | `endpoint-name` (hyphens) |
 
 ### HTTP caching
 
-Responses from most endpoints are now returned with `Cache-Control: public, max-age=600`, enabling CDN and browser caching for public sales channels. This reduces origin load and improves storefront response times.
+Responses from most endpoints now include a `Cache-Control` header, enabling CDN and browser caching for public sales channels. Always read this header at runtime to determine cacheability — do not hardcode cache durations in your integration.
 
-Exceptions:
-
-- Responses containing sponsored products: `Cache-Control: no-store`, preventing ad impressions from being served from a shared cache.
-- Private sales channel responses: not cached.
+Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)) are not cached, preventing ad impressions from being served from a shared cache.
 
 ### Explicit context: No segment cookie
 
