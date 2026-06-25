@@ -108,7 +108,6 @@ The following TypeScript snippet shows a reference implementation of the full se
 type Segment = {
   channel?: string | number
   regionId?: string
-  countryCode?: string
   cultureInfo?: string
   // Semicolon-separated "key=value" string, e.g. "zip-code=22250-040;country=BRA;brand=samsung"
   facets?: string
@@ -152,7 +151,6 @@ function segmentToProductSearchV1(segment: Segment, query?: string): string {
   set('sc', segment.channel)
   set('locale', segment.cultureInfo)
   set('regionId', segment.regionId)
-  set('country', segment.countryCode ?? shipping.country)
   set('zip-code', shipping['zip-code'])
   set('coordinates', shipping.coordinates)
   set('pickupPoint', shipping.pickupPoint)
