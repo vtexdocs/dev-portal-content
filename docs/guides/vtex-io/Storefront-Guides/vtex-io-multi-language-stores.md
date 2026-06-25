@@ -71,7 +71,7 @@ sequenceDiagram
 
 As translating an app to every language can be daunting, it is recommended to structure precise translations for the target audience and rely on automatic translation for other languages.
 
-After detecting a user's locale, every message from your frontend component that is set as translatable will be automatically translated by the automatic translation service, the frontend app's messages, or custom content personalized through a GraphQL mutation at the account level.
+After detecting a user's locale, every message from your frontend component marked as translatable will be automatically translated using the automatic translation service, the frontend app's messages, or custom content personalized via a GraphQL mutation at the account level.
 
 ## Catalog data
 
