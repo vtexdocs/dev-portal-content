@@ -117,7 +117,7 @@ For headless storefronts, you either use the [Intelligent Search API v1](https:/
 Query Intelligent Search with the desired locale to receive translated results:
 
 ```bash
-curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/trade-policy/1?locale=es-ES&query=camiseta" \
+curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?sc=1&locale=es-ES&query=camiseta" \
   -H "Accept: application/json"
 ```
 
