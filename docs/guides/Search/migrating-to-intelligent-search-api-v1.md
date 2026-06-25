@@ -66,7 +66,7 @@ Read the current segment values from the VTEX segment cookie (or your session/co
 | Segment field | Intelligent Search API v1 parameter | Affected endpoints |
 | --- | --- | --- |
 | `cultureInfo` | `locale` | All endpoints |
-| `channel` | `sc` query param or `trade-policy/{id}` facet | All endpoints |
+| `channel` | `sc` query param | All endpoints |
 | `regionId` | `regionId` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 | `countryCode` | `country` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 | `utm_source` | `utmSource` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
@@ -166,12 +166,11 @@ function segmentToProductSearchV1(segment: Segment, query?: string): string {
 
   if (query) params.query = query
 
-  const sc = params.sc ?? '1'
   const facetPath = pathFacets.map(f => `${f.key}/${f.value}`).join('/')
-  const path = ['trade-policy', sc, facetPath].filter(Boolean).join('/')
   const search = new URLSearchParams(params).toString()
+  const base = `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search`
 
-  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/${path}?${search}`
+  return facetPath ? `${base}/${facetPath}?${search}` : `${base}?${search}`
 }
 ```
 
@@ -278,7 +277,7 @@ Exceptions:
 | <input type="checkbox"></input> Updated base URL to `/api/intelligent-search/v1` | [Step 1](#step-1---update-the-base-url) | Yes |
 | <input type="checkbox"></input> Renamed all endpoint paths (underscores to hyphens) | [Step 2](#step-2---update-endpoint-paths) | Yes |
 | <input type="checkbox"></input> Passing `locale` explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
-| <input type="checkbox"></input> Passing `sc` or `trade-policy` facet explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
+| <input type="checkbox"></input> Passing `sc` query parameter explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
 | <input type="checkbox"></input> Passing regionalization parameters explicitly (`regionId`, `country`, `zip-code`, `coordinates`) | [Step 3](#regionalization-parameters-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing Delivery Promise parameters explicitly (`deliveryZonesHash`, `pickupPointsHash`, `pickupPoint`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing UTM and marketing parameters explicitly (`utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`) | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | If applicable |
