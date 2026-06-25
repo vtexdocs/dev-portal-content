@@ -11,11 +11,11 @@ seeAlso:
   - "/docs/guides/sales-app-extension-hooks-and-types"
 ---
 
-> ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
+> ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact [Support](https://help.vtex.com/en/support).
 
 [VTEX Sales App Extensibility](https://help.vtex.com/docs/tutorials/vtex-sales-app-extensibility) lets you customize the default assisted-sales journey with features that support your business requirements.
 
-By using predefined extension points, you can integrate external APIs, use VTEX data, and add custom experiences to areas such as cart and checkout, the side menu, and the product details page.
+By using predefined extension points, you can integrate external APIs, use VTEX data, and add custom experiences to areas such as cart and checkout, side menu, and product details page.
 
 In this guide, you'll learn how to set up Sales App extensions for your stores.
 
@@ -23,7 +23,7 @@ In this guide, you'll learn how to set up Sales App extensions for your stores.
 
 * Set up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview). The monorepo uses a `faststore.json` file at the repository root to define module settings such as `paths` and `ports` for local development and production.
 
-* Install the VTEX Sales App on your account, complete the onboarding in VTEX Admin, and add a sales associate linked to a store. For detailed instructions, see the guide [VTEX Sales App - Basic settings](https://help.vtex.com/docs/tracks/vtex-sales-app-basic-settings).
+* Install VTEX Sales App on your account, complete the onboarding in the VTEX Admin, and add a sales associate linked to a store. For detailed instructions, see the guide [VTEX Sales App - Basic settings](https://help.vtex.com/docs/tracks/vtex-sales-app-basic-settings).
 
 ## Instructions
 
@@ -41,10 +41,10 @@ npm add @vtex/sales-app -D
 
 ### Step 2 - Creating a Sales App project
 
-Ensure the following information is available:
+Make sure the following information is available:
 
-* The store account name for which you're creating extensions.
-* The module you want to initialize a project. In this case, it's `sales-app`.
+* The store account name that you are creating extensions for.
+* The module you want to use to initialize a project. In this case, it's `sales-app`.
 * The path where you want to initialize the project.
 
 Run the following commands in your terminal:
@@ -57,7 +57,7 @@ yarn fsp create
 npx fsp create
 ```
 
-As an example, consider the account `store-a` and the path `./store-a/sales-app`. Remember to fill in the prompts according to your project requirements:
+As an example, consider the account `store-a` and the path `./store-a/sales-app`. Remember to complete the prompts using your project requirements:
 
 ```text
 > ? What's the account name? store-a
@@ -98,9 +98,9 @@ The [`defineExtensions`](https://developers.vtex.com/docs/guides/sales-app-exten
 
 This function also helps during development by showing available extension points with autocomplete and type-checking, making the setup easier and less error-prone. To build your extension, use the hooks, types, and helper functions available in the `@vtex/sales-app` package. For more information, see the [Sales App extension hooks and types](https://developers.vtex.com/docs/guides/sales-app-extension-hooks-and-types) guide.
 
-The `src/components/Example.tsx` file includes a sample extension point. You can import CSS files, such as `Example.css`, to define classes and make them available globally. Organize your code however best fits your project, either by separating implementation and styling into different files or by keeping everything in a single file. For additional information about CSS, refer to [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility)
+The `src/components/Example.tsx` file includes a sample extension point. You can import CSS files, such as `Example.css`, to define classes and make them available globally. Organize your code however best fits your project, either by separating implementation and styling into different files or by keeping everything in a single file. For additional information about CSS, check [CSS styling in VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/css-styling-in-vtex-sales-app-extensibility).
 
-The `faststore.json` file should include a `sales-app` entry like the following:
+The `faststore.json` file should include a `sales-app` entry like the one below:
 
 ```json
 {
@@ -129,7 +129,7 @@ For example, if you're using Yarn, your `package.json` should include:
 }
 ```
 
-> ℹ️ For more information, see your package manager's documentation on workspaces, such as the [Yarn](https://classic.yarnpkg.com/lang/en/docs/workspaces/) or [npm](https://docs.npmjs.com/cli/v7/using-npm/workspaces) documentation.
+> ℹ️ For more information, see the workspace documentation of your package manager, such as the [Yarn](https://classic.yarnpkg.com/lang/en/docs/workspaces/) or [npm](https://docs.npmjs.com/cli/v7/using-npm/workspaces) documentation.
 
 After a workspace is declared, run the install command at the root of the monorepo:
 
@@ -153,8 +153,8 @@ yarn fsp dev store-a
 npx fsp dev store-a
 ```
 
-The VTEX Sales App is available at the `/sales-app/checkout/cart` path on the URL provided by the FastStore CLI. You should see a screen similar to this:
+VTEX Sales App is available at the `/sales-app/checkout/cart` path on the URL provided by the FastStore CLI. You should see a screen similar to this:
 
 ![Sales App Extensions tab listing available apps with name, description, and enable toggles](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/sales-app-extensions-1.webp)
 
-You can also access the VTEX Sales App locally using the `path` and `port` values defined in `faststore.json`. For example, if the file specifies port `3002`, open `http://localhost:3002/sales-app/checkout/cart`.
+You can also access VTEX Sales App locally using the `path` and `port` values defined in `faststore.json`. For example, if the file specifies port `3002`, open `http://localhost:3002/sales-app/checkout/cart`.
