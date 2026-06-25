@@ -90,9 +90,9 @@ On product pages and in other sections of your headless store, you will need to 
 
 We recommend using the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) for Product Detail Pages (PDP), as it provides:
 
-* **Better search performance:** Optimized for faster response times.
-* **Consistent user experience:** When using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), using Intelligent Search ensures delivery estimates and availability match between Product Listing Pages (PLP) and Product Detail Pages (PDP).
-* **Location-based availability:** Supports filtering by ZIP code for accurate product availability.
+- **Better search performance:** Optimized for faster response times.
+- **Consistent user experience:** When using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), using Intelligent Search ensures delivery estimates and availability match between Product Listing Pages (PLP) and Product Detail Pages (PDP).
+- **Location-based availability:** Supports filtering by ZIP code for accurate product availability.
 
 Use the `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint to retrieve a specific product by a known identifier. It accepts a `field` and `value` parameter and skips the search pipeline, resulting in lower latency.
 
