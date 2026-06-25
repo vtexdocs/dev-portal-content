@@ -242,10 +242,6 @@ Intelligent Search API v1 returns several fields that were absent in the Intelli
 - `redirect` (string): When the query matches a redirect rule, this field contains the target URL. Redirect the user instead of displaying search results.
 - `options` (object): Available sort options, result counts, and delivery promise metadata.
 
-**`GET` [Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) response addition:**
-
-Each suggestion now optionally includes an `attributes` array describing facet attributes associated with the term, using the same shape as `GET` [Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions).
-
 **`GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) response addition:**
 
 `facets[].type` can now be `DELIVERY` in addition to `TEXT` and `PRICERANGE`. If your integration filters or switches on `type`, add a handler for `DELIVERY`.
@@ -310,7 +306,6 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 | <input type="checkbox"></input> Handling `searchId` in analytics events | [Step 5](#step-5---handle-new-response-fields) | If applicable |
 | <input type="checkbox"></input> Handling `correction` field for spell-correction messaging | [Step 5](#step-5---handle-new-response-fields) | If applicable |
 | <input type="checkbox"></input> Handling `redirect` field for query redirect rules | [Step 5](#step-5---handle-new-response-fields) | If applicable |
-| <input type="checkbox"></input> Handling `attributes` on search-suggestions response | [Step 5](#step-5---handle-new-response-fields) | If applicable |
 | <input type="checkbox"></input> Added `DELIVERY` handler to facet type switch/filter | [Step 5](#step-5---handle-new-response-fields) | If applicable |
 | <input type="checkbox"></input> Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
 | <input type="checkbox"></input> Updated code reading attachment data to match new schema | [Step 6](#step-6---verify-product-item-data-in-your-integration) | If applicable |
