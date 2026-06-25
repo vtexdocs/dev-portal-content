@@ -26,9 +26,12 @@ Here is a summary of the key differences between Intelligent Search API (Legacy)
 
 ### HTTP caching
 
-Responses from most endpoints now include a `Cache-Control` header, enabling CDN and browser caching for public sales channels. Always read this header at runtime to determine cacheability — do not hardcode cache durations in your integration.
+Responses from most endpoints now include a `Cache-Control` header, enabling CDN and browser caching for public sales channels. This reduces origin load and improves storefront response times. Always read this header at runtime to determine cacheability. Don't hardcode cache durations in your integration.
 
-Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)) are not cached, preventing ad impressions from being served from a shared cache.
+Exceptions:
+
+- Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)): not cached, preventing ad impressions from being served from a shared cache.
+- Private sales channel responses: not cached.
 
 ### Explicit context: No segment cookie
 
