@@ -85,7 +85,6 @@ Several endpoints expose new parameters and response fields compared to Intellig
 
 | Endpoint | What's new |
 | --- | --- |
-| `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) | New `removeHiddenFacets` parameter: omits hidden facets from the response when set to `true`.<br />Response: `facets[].type` now includes `DELIVERY` in addition to `TEXT` and `PRICERANGE`. |
 | `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) | Response: new `searchId` (analytics identifier), `correction` (spelling correction), `redirect` (redirect rule URL), and `options` (sort options and delivery promise data) fields. |
 | `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) | New `locale` parameter for localized results and `pickupPoint` parameter to filter by a specific pickup point ID. |
 
