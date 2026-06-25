@@ -262,14 +262,12 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 
 ## Caching behavior reference
 
-Responses include a `Cache-Control` header — always read it at runtime. Don't hardcode cache durations in your integration.
-
-Most endpoints return cacheable responses for public sales channels, enabling CDN and browser caching.
+Responses from most endpoints now include a `Cache-Control` header, enabling CDN and browser caching for public sales channels. This reduces origin load and improves storefront response times. Always read this header at runtime to determine cacheability. Don't hardcode cache durations in your integration.
 
 Exceptions:
 
-- **Sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)):** responses from `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) that include sponsored products are not cached, preventing ad impressions from being served from a shared cache.
-- **Private sales channels:** responses are not cached regardless of endpoint.
+* Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)) are not cached, preventing ad impressions from being served from a shared cache.
+* Private sales channel responses: not cached.
 
 ## Migration checklist
 
