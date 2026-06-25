@@ -19,10 +19,11 @@ Here is a summary of the key differences between Intelligent Search API (Legacy)
 | | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | --- | --- | --- |
 | **Base URL** | `/api/io/_v/api/intelligent-search` | `/api/intelligent-search/v1` |
-| **Context** | VTEX segment cookie | Explicit query parameters |
-| **HTTP caching** | Not cached | Responses include a `Cache-Control` header; read it at runtime to determine cacheability. |
-| **Single-product lookup** | Via product search pipeline | Dedicated `GET /products` endpoint |
 | **Path format** | `endpoint_name` (underscores) | `endpoint-name` (hyphens) |
+| **[HTTP caching](#http-caching)** | Not cached | Responses include a `Cache-Control` header; read it at runtime to determine cacheability. |
+| **[Context](#explicit-context-no-segment-cookie)** | VTEX segment cookie | Explicit query parameters |
+| **[Single-product lookup](#new-endpoint-get-product)** | Via product search pipeline | Dedicated `GET /products` endpoint |
+| **[`attachments[]` schema](#breaking-change-attachments-object-structure-in-product-search)** | `id` string; `required`/`domainValues` fields | `id` number; replaced by `isRequired`/`fields[].domain_values` |
 
 ### HTTP caching
 
