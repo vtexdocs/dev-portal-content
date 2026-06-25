@@ -262,7 +262,9 @@ A [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-int
 
 ## Caching behavior reference
 
-Responses from most endpoints now include a `Cache-Control` header, enabling CDN and browser caching for public sales channels. This reduces origin load and improves storefront response times. Always read this header at runtime to determine cacheability. Don't hardcode cache durations in your integration.
+Responses from most endpoints now include a `Cache-Control` header, enabling CDN and browser caching for public sales channels. This reduces origin load and improves storefront response times.
+
+> ℹ️ Always read the `Cache-Control` header at runtime to determine cacheability. Don't hardcode cache durations in your integration.
 
 Exceptions:
 
