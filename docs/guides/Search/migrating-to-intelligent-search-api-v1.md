@@ -185,13 +185,13 @@ If your store uses regionalization, `regionId` was a top-level segment field. In
 
 If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), pass the buyer's location as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-).
 
-`deliveryZonesHash` and `pickupPointsHash` are the preferred approach — pre-computed by the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api), they enable faster lookup. Because hashes expire and require a specific renewal flow, always have the buyer's address available as a fallback: `country`, `zip-code`, and optionally `coordinates`:
+The fundamental parameters are the buyer's address: `country`, `zip-code`, and optionally `coordinates`:
 
 ```
 ?country=BRA&zip-code=22271020&coordinates=-43.19532775878906,-22.955032348632812
 ```
 
-`pickupPoint` filters results to a specific pickup point ID.
+As an alternative, `deliveryZonesHash` and `pickupPointsHash` can be passed for faster lookup. They are pre-computed in `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) and `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search), respectively. Since hashes expire and require a specific renewal flow, always have the buyer's address available as a fallback.
 
 If your integration reads a VTEX segment cookie, all of these values may already be present in the segment `facets` string (`country`, `zip-code`, `coordinates`, `pickupPoint`, `deliveryZonesHash`, `pickupPointsHash`). Extract and forward them as explicit query parameters.
 
