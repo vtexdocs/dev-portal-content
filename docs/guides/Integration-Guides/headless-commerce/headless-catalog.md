@@ -13,7 +13,7 @@ Be it through category menus, keyword searches, or product pages, shoppers acces
 
 Below you can learn more about API endpoints you can use to help shoppers find what they need in your store. See the [catalog documentation](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3rA2tTpIoEXdv2nzC27zxR) to learn how to manage products, SKUs and categories, among other things.
 
->ℹ️ You can filter the results of the endpoints below by [trade policy](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV?&utm_source=autocomplete) with the query parameter `sc={tradePolicy}`.
+>ℹ️ You can filter the results of the endpoints below by [sales channel](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV?&utm_source=autocomplete) with the query parameter `sc={salesChannel}`.
 
 ## Categories
 
