@@ -21,7 +21,7 @@ In general, **storefront content** can be sourced from either **frontend React a
 
 A Store Framework storefront consists of multiple frontend apps built with VTEX IO and React. For translations, Store Framework uses the [react-intl](https://www.npmjs.com/package/react-intl) library and the VTEX IO Messages app.
 
-Moreover, developers can designate text components as translatable messages when developing a frontend app using the `<Formatted*>` component from the `react-intl` library. This enables translatable messages to be automatically translated by an automatic translation service based on the user's locale.
+Moreover, developers can designate text components as translatable messages when developing a frontend app using the `<Formatted*>` component from the `react-intl` library. This designation enables translatable messages to be automatically translated by an automatic translation service based on the user's locale.
 
 ### Automatic translations
 
@@ -33,10 +33,10 @@ However, automatic translations may not always be culturally accurate. To addres
 
 To address potential cultural inaccuracies in automatic translations, the Messages app provides features for managing custom translations. Developers can override an automatic translation with more specific or representative content for their store, such as a special login message for Spanish-speaking users in Argentina.
 
-Custom translations can be implemented at either the app or account level:
+You can implement custom translations at either the app or account level:
 
-- **App-level translations**: Developers can set personalized translations for each locale within the frontend app's `/messages` folder. These translations are applied by default to any store that uses the app. To learn how to set messages during the development of a React app, please follow this [guide](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component).
-- **Account-level translations**: Developers can overwrite a message imported from a frontend app with a completely customized message, making the appropriate GraphQL API request to the Messages app. To learn how to overwrite a message from a frontend app, follow the [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization) guide.
+- **App-level translations**: Developers can set personalized translations for each locale within the frontend app's `/messages` folder. The app applies these translations by default to any store that uses it. To learn how to set messages during the development of a React app, please follow this [Translating the component](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) guide.
+- **Account-level translations**: Developers can overwrite a message imported from a frontend app with a completely customized message by making the appropriate GraphQL API request to the Messages app. To learn how to overwrite a message from a frontend app, follow the [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization) guide.
 
 >ℹ️ The Messages app is a standalone translation application and should not be confused with a string repository. It requires providing a source language, source content, and destination language. The output will be the translation of the source content from the source language to the destination language.
 
@@ -69,7 +69,7 @@ sequenceDiagram
     end
 ```
 
-As translating an app to every language can be daunting, it is recommended to structure precise translations for the target audience and rely on automatic translation for other languages.
+As translating an app to every language can be daunting, we recommend structuring precise translations for the target audience and relying on automatic translation for other languages.
 
 After detecting a user's locale, every message from your frontend component marked as translatable will be automatically translated using the automatic translation service, the frontend app's messages, or custom content personalized via a GraphQL mutation at the account level.
 
@@ -77,8 +77,8 @@ After detecting a user's locale, every message from your frontend component mark
 
 Catalog messages include product names and product descriptions from the store catalog.
 
->ℹ️ We recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide) to manage catalog translations. It provides granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). To learn how to implement it, see the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
+>ℹ️ We recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) to manage catalog translations. It provides granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). To learn how to implement it, see the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
 
 All data from the Catalog API is already set as translatable. The GraphQL approach is to override automatic catalog translation by sending the appropriate GraphQL query to the Catalog API or the Messages app. To learn how to overwrite a catalog message via the GraphQL API, follow the [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization) guide.
 
->⚠️ Simultaneous use of the Catalog Multi-Language API and the GraphQL (Messages) approach is not supported for catalog entities. Once the Catalog Multi-Language feature is activated for your account, you will no longer be able to manage translations using GraphQL.
+>⚠️ Simultaneous use of the Catalog Multi-Language API and the GraphQL (Messages) approach is not supported for catalog entities. After activating the Catalog Multi-Language feature for your account, you'll no longer be able to manage translations using GraphQL.
