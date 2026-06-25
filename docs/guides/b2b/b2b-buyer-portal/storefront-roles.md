@@ -4,10 +4,12 @@ slug: "storefront-roles"
 hidden: false
 excerpt: "Learn how to manage user access and roles within the storefront using the Storefront Permissions API for B2B scenarios."
 createdAt: "2025-10-09T00:00:00.000Z"
-updatedAt: "2026-04-10T00:00:00.000Z"
+updatedAt: "2026-06-09T00:00:00.000Z"
+seeAlso:
+ - "/docs/guides/custom-storefront-roles-and-resources"
 ---
 
-> ⚠️ This feature is available only for stores using B2B Buyer Portal, currently available for selected accounts.
+> ⚠️ This feature is available only for stores using [B2B Buyer Portal](https://help.vtex.com/docs/tutorials/b2b-buyer-portal), currently available for selected accounts.
 
 The [Storefront Roles API](https://developers.vtex.com/docs/api-reference/storefront-roles-api#overview) provides a structured way to manage user access and roles within the storefront. It enables organizations to define and enforce authorization policies by controlling which actions users can perform.
 
@@ -38,12 +40,12 @@ The Storefront Roles API supports a wide range of business scenarios by enabling
 
 * All endpoints require the Storefront Roles feature to be enabled on your account. Requests sent to accounts without this feature enabled return a “Feature not enabled for this account” error.
 
-* Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3) to be able to successfully run requests to the License Manager API as listed in the table below. Otherwise, they will receive a status code 403 error.
+* Any user or [API key](https://developers.vtex.com/docs/guides/authentication-overview#api-keys) must have the appropriate [License Manager resources](https://help.vtex.com/docs/tutorials/license-manager-resources) to be able to successfully run requests to the License Manager API as listed in the table below. Otherwise, they will receive a status code 403 error.
 
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
-| License Manager | Services access control | View Storefront User Permissions | `GET` [Check storefront user resource access](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/users/-userId-/resources/-resourceKey-/granted) <br/> `GET` [Get storefront user roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/users/-userId-/roles) <br/>  `GET` [Fetch storefront user roles by email](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/users/-email-/roles) <br/> `GET` [Fetch storefront user details](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/users/-userId-) |
-| License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles) <br/> `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/roles/assign) <br/> `DELETE` [Revoke storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/user/roles) <br/> `DELETE` [Remove storefront user](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/remove/users/-userId-) |
+| License Manager | Services access control | View Storefront User Permissions | `GET` [Check storefront user resource access](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/users/-userId-/resources/-resourceKey-/granted) <br/> `GET` [Get storefront user roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/users/-userId-/roles) <br/>  `GET` [Fetch storefront user roles by email](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/users/-email-/roles) <br/> `GET` [Fetch storefront user details](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/users/-userId-) <br/> `GET` [List storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role) <br/> `GET` [Get storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/role/-roleId-) <br/> `GET` [List storefront resources](https://developers.vtex.com/docs/api-reference/storefront-roles-api#get-/api/license-manager/storefront/resource) |
+| License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles) <br/> `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/roles/assign) <br/> `DELETE` [Revoke storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/user/roles) <br/> `DELETE` [Remove storefront user](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/remove/users/-userId-) <br/> `POST` [Create custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/role) <br/> `PUT` [Update custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#put-/api/license-manager/storefront/role/-roleId-) <br/> `DELETE` [Delete custom storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/role/-roleId-) <br/> `POST` [Create custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/resource) <br/> `DELETE` [Delete custom storefront resource](https://developers.vtex.com/docs/api-reference/storefront-roles-api#delete-/api/license-manager/storefront/resource/-id-) |
 
 To learn more about machine authentication at VTEX, see [Authentication overview](https://developers.vtex.com/docs/guides/authentication-overview#machine-authentication).
 
@@ -96,3 +98,9 @@ The system comes with these predefined storefront roles, each with specific perm
 | Credit Card Manager | 41 | Can manage and view saved credit cards. | ManageCreditCards, ViewCreditCards | UI and API |
 
 > ℹ️ Roles marked as "API only" can only be assigned to users via the `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles) or `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/roles/assign) endpoints.
+
+## Extending the permission model
+
+If the predefined roles and resources listed above do not cover all your business scenarios, you can create custom storefront roles and resources scoped to your account. Custom entities follow the same permission model as native ones and can be assigned to storefront users using the same assignment endpoints.
+
+See [Custom storefront roles and resources](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources) for a full guide on creating, listing, updating, and deleting custom roles and resources via the API.
