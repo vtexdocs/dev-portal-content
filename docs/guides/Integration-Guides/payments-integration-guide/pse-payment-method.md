@@ -1,28 +1,28 @@
 ---
-title: "PSE Payment Method"
+title: "PSE payment method"
 slug: "pse-payment-method"
 hidden: false
 createdAt: "2022-05-18T19:17:21.588Z"
 updatedAt: "2022-09-01T19:53:36.514Z"
 excerpt: "Learn how payment providers can offer the PSE payment method in VTEX stores."
 ---
-This guide is for payment  that want to offer [PSE (Pagos Seguros en Línea)](https://help.vtex.com/en/tutorial/setting-up-payments-with-pse--7dRChprovidersubn7TqdEyWrHQEQp6) as a payment method on VTEX stores. PSE is a Colombian online bank transfer method that uses the [redirect purchase flow](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows#redirect).
+This guide is for payment providers that want to offer [PSE (Pagos Seguros en Línea)](https://help.vtex.com/en/tutorial/setting-up-payments-with-pse--7dRChprovidersubn7TqdEyWrHQEQp6) as a payment method in VTEX stores. PSE is a Colombian online bank transfer method that uses the [redirect purchase flow](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows#redirect).
 
 During the order transaction, the connector must know which bank the customer selected. The integration requires the following steps:
 
 1. Send bank list endpoint and authentication information to VTEX.
 2. Update the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) to include PSE.
 3. Handle the `bankCode` metadata in the [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request.
-4. Request the payment connector update through the [VTEX Support Portal](https://help.vtex.com/support).
+4. Request the payment connector update through [VTEX Support](https://help.vtex.com/support).
 
-> ⚠️ To integrate PSE, you must have a [partnership agreement for financial services](https://vtex.com/us-en/partners) with VTEX. If you do not have one, contact the [VTEX Support Portal](https://help.vtex.com/support).
+> ⚠️ To integrate PSE, you must have a [partnership agreement for financial services](https://vtex.com/us-en/partners) with VTEX. If you don't have one, contact [VTEX Support](https://help.vtex.com/support).
 
 ## Step 1: Send bank and authentication information
 
-VTEX needs access to your bank list endpoint to display available banks to the shopper at checkout. Submit the following information through [VTEX Support](https://help.vtex.com/en/support):
+VTEX needs access to your bank list endpoint to display available banks to buyers at checkout. Submit the following information through [VTEX Support](https://help.vtex.com/en/support):
 
-- **GET Banks endpoint:** the URL that returns the list of available banks. Include the expected response body format and any required parameters.
-- **Authentication credentials:** any keys or tokens required to call the endpoint.
+- **GET Banks endpoint:** The URL that returns a list of available banks. Include the expected response body format and any required parameters.
+- **Authentication credentials:** Any keys or tokens required to call the endpoint.
 
 Example request that VTEX makes to your endpoint:
 
@@ -74,7 +74,7 @@ Add PSE to the `paymentMethods` array in your [List Payment Provider Manifest](h
 
 ## Step 3: Handle the Create Payment request
 
-When a shopper selects PSE and chooses a bank at checkout, VTEX sends the selected bank code in the `metadata` field of the [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request:
+When a buyer selects PSE and chooses a bank at checkout, VTEX sends the selected bank code in the `metadata` field of the [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request:
 
 ```json
 {
@@ -92,20 +92,20 @@ Your connector must:
 2. Create the payment in PSE using the selected bank.
 3. Return a response with:
    - `status`: `"undefined"` (since the payment requires redirect).
-   - `paymentUrl`: the bank's authentication page URL where the shopper completes the payment.
+   - `paymentUrl`: The bank's authentication page URL where the buyer completes the payment.
 
-> ⚠️ The `metadata` field can be `null` if the bank selection app is not properly configured. In this case, the connector must return an error with code `PSE_CUSTOM_APP_NOT_FOUND`.
+> ⚠️ The `metadata` field can be `null` if the bank selection app isn't properly configured. In this case, the connector must return an error with code `PSE_CUSTOM_APP_NOT_FOUND`.
 
 ## Step 4: Post-authentication flow
 
-After the shopper is redirected to the bank's authentication page:
+After the buyer is redirected to the bank's authentication page:
 
-1. The shopper completes authentication at the selected bank.
+1. The buyer completes authentication at the selected bank.
 2. The bank processes the transfer and returns the result to the provider.
 3. The provider calls the `callbackUrl` (included in the original Create Payment request) to notify VTEX of the final status: `approved` or `denied`.
-4. VTEX redirects the shopper back to the store using the `returnUrl`:
-   - **Payment approved:** the order confirmation page is displayed.
-   - **Payment denied:** an error page with the specific failure reason is displayed.
+4. VTEX redirects the buyer back to the store using the `returnUrl`:
+   - **Payment approved:** The order confirmation page is displayed.
+   - **Payment denied:** An error page with the specific failure reason is displayed.
 
 For more details on the redirect flow and callback mechanism, see [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows#redirect).
 
