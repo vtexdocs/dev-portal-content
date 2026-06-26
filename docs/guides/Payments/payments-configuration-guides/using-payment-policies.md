@@ -9,7 +9,7 @@ excerpt: "Create and test payment policies to control payment method eligibility
 
 Payment policies allow merchants to control which payment methods are available in Checkout based on purchase context, such as item collection and shipping state. They complement payment conditions: conditions define how a payment method is configured, including installments, interest, and affiliation, while policies define whether a configured payment method is displayed for each cart item.
 
-> ⚠️ This feature is in closed beta, meaning only specific customers can access it now. If you want to implement it in the future, please contact [our Support](https://support.vtex.com/hc/en-us/)
+> ⚠️ This feature is in closed beta, meaning only specific customers can access it now. If you want to implement it in the future, contact [our Support](https://support.vtex.com/hc/en-us/).
 
 > ℹ️ VTEX is developing a Payment Policies version with support for agents or LLM models and additional purchase context variables. In the current version, use the API and the `collectionIds` and `shippingState` variables described in this guide.
 
@@ -195,7 +195,7 @@ Example:
 
 In this example, payment system `2` is available for `sku-002`, but not for `sku-001`. This means the policy filtered payment system `2` only for the item that matched the rule.
 
-During payment authorization, VTEX revalidates whether the selected payment system complies with active policies. If a shopper or integration attempts to use a payment system that is not allowed by an active policy, the authorization is rejected.
+During payment authorization, VTEX revalidates whether the selected payment system complies with active policies. If a buyer or integration attempts to use a payment system that isn't allowed by an active policy, the authorization is rejected.
 
 ## Test scenarios
 
@@ -204,8 +204,8 @@ Use the following scenarios to validate a policy setup:
 | Scenario | Expected result |
 | --- | --- |
 | Item belongs to the configured collection and delivery state matches the policy. | The excluded payment system is absent for that item. |
-| Item does not belong to the configured collection and delivery state matches the policy. | The rule does not fire and the payment system remains available. |
-| Item belongs to the configured collection and delivery state does not match the policy. | The rule does not fire and the payment system remains available. |
+| Item doesn't belong to the configured collection and delivery state matches the policy. | The rule doesn't fire and the payment system remains available. |
+| Item belongs to the configured collection and delivery state doesn't match the policy. | The rule doesn't fire and the payment system remains available. |
 | Cart has two items, one matching the policy and one not matching it. | The payment system is filtered only for the matching item. |
 | Matching `Include` rule. | Only the listed payment systems are available for matching items. |
 | Matching `Include` and `Exclude` rules with different priorities. | The rule with the lower priority value takes precedence. |
@@ -216,9 +216,9 @@ Use the following scenarios to validate a policy setup:
 
 | Symptom | Likely cause | What to check |
 | --- | --- | --- |
-| Policy rules were created, but Checkout is not filtering payment systems. | The feature is not enabled for the account. | Confirm the account enablement with VTEX Support or your VTEX representative. |
+| Policy rules were created, but Checkout is not filtering payment systems. | The feature isn't enabled for the account. | Confirm the account enablement with VTEX Support or your VTEX representative. |
 | `POST /policy-rules` returns `401` or `403`. | API credentials do not have `ManageStore`. | Review the permissions assigned to the app key and app token. |
 | `GET /policy-rules` or `POST /search` returns `401` or `403`. | API credentials do not have `ViewPayments`. | Review the permissions assigned to the app key and app token. |
-| The rule was created, but the search result did not change. | The rule is disabled, the expression does not match the test item, or the wrong payment system ID was used. | Check `enabled`, `collectionIds`, `shippingState`, and `paymentSystems` with `GET /policy-rules/{id}`. |
+| The rule was created, but the search result did not change. | The rule is disabled, the expression doesn't match the test item, or the wrong payment system ID was used. | Check `enabled`, `collectionIds`, `shippingState`, and `paymentSystems` with `GET /policy-rules/{id}`. |
 | The expression is rejected with `400`. | Invalid JSONLogic syntax or too many operators. | Validate the JSONLogic object and keep the expression under 500 operators. |
-| The search endpoint returns the expected result, but the `orderForm` does not. | Checkout is not using the payment policies contract for the account. | Confirm the account enablement and test with a fresh `orderForm`. |
+| The search endpoint returns the expected result, but the `orderForm` does not. | Checkout isn't using the payment policies contract for the account. | Confirm the account enablement and test with a fresh `orderForm`. |
