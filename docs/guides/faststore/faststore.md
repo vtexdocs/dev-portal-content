@@ -8,12 +8,12 @@ excerpt: "The ultimate toolkit for building blazing-fast storefronts."
 
 [FastStore](https://github.com/vtex/faststore) is a toolkit based on [Jamstack](https://jamstack.org/) that helps developers build high-performance stores.
 
-It supports integration with [CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), offers analytics functionalities to inform storefront decision-making, and gives developers the flexibility to customize the store based on the brand’s vision, creating a unique shopping experience for users.
+It supports integration with [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), offers analytics functionalities to inform storefront decision-making, and gives developers the flexibility to customize the store based on the brand’s vision, creating a unique shopping experience for users.
 
 | Aspect | Description |
 | ------ | ----------- |
-| **Performance** | Ensures fast-loading stores and provides a good user experience, focusing on achieving high scores in tests like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) and [Web Vitals](https://web.dev/articles/vitals#core-web-vitals).  |
-| **Stability** | Built to be stable and avoid crashes, so your store doesn't lose sales due to provider issues.  |
+| **Performance** | Ensures fast-loading stores and provides a good user experience, focusing on achieving high scores in tests like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) and [Web Vitals](https://web.dev/articles/vitals#core-web-vitals). |
+| **Stability** | Built to be stable and avoid crashes, so your store doesn't lose sales due to provider issues. |
 | **Analytics/SEO** | Works with analytics tools to understand store customers and with SEO tools to improve store visibility in search results. |
 
 > ⚠ For a detailed understanding of the key differences between FastStore versions, their support levels, and guidelines for upgrading, please refer to the [FastStore versions and support levels](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels) guide.
@@ -114,7 +114,7 @@ These are the tools that developers use to build and deploy FastStore projects. 
 
 FastStore consists of five main packages that enable the store to work:
 
-- [Core](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson): Provides the starter source code to get your store up and running. It contains four sub-packages: Components, SDK, UI, and API packages.
+- [Core](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#packagejson): Provides the starter source code to get your store up and running. It contains four sub-packages: Components, SDK, UI, and API packages.
 
 - [SDK](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#packagejson): Provides developers with a set of tools that handle all meaningful states an ecommerce store might have, such as Session, Cart, Component, and Search. The SDKs also provide GA4-compatible analytics functions to help you create powerful analytics capabilities in your ecommerce store.
 
