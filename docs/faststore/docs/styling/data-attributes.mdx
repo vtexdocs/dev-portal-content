@@ -104,7 +104,7 @@ Target different states of components:
 
 ### Nested elements
 
-To better understand how to target nested elements, here's the typical structure of a ProductCard component:
+To better understand how to target nested elements, this example shows the typical structure of a ProductCard component:
 
 ```tsx
 <ProductCard>
@@ -281,7 +281,7 @@ Override component-specific tokens for consistent theming:
 
 #### Creating theme variations
 
-Theme variations work by adding a `data-theme` attribute to a root element — typically `<html>` or a top-level wrapper. Because CSS custom properties cascade, any FastStore UI component nested inside that element automatically inherits the overridden tokens, with no class changes needed on individual components.
+Theme variations work by adding a `data-theme` attribute to a root element — typically `\<html>` or a top-level wrapper. Because CSS custom properties cascade, any FastStore UI component nested inside that element automatically inherits the overridden tokens, with no class changes needed on individual components.
 
 To apply a theme, set the `data-theme` attribute on the root element:
 
@@ -469,7 +469,7 @@ cy.get('.btn-primary').click();
 
 - **Don't use generic selectors** - Overly broad selectors may affect unintended components.
 - **Don't ignore component variants** - Account for all component states when writing styles.
-- **Don't break accessibility** - Ensure your custom styles maintain each component's accessibility.
+- **Don't break accessibility** - Make your custom styles maintain each component's accessibility.
 - **Don't forget to document your customizations** - Keep track of the token overrides and custom data attributes you introduce.
 
 ## Debugging data attributes
