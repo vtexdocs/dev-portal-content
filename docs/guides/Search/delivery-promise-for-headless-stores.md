@@ -38,27 +38,27 @@ The delivery promise information parameters are **required** to filter product a
 | Query string | Description | Example |
 | :---- | :---- | :---- |
 | `deliveryZonesHash` [required] | Hash representing the user's Delivery Context, which is a part of the delivery promise information. | `?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9` |
-| `pickupsHash` [required] | Hash representing the user's Pickup Context, which is a part of the delivery promise information. | `?pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
+| `pickupPointsHash` [required] | Hash representing the user's Pickup Context, which is a part of the delivery promise information. | `?pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
 
 > ℹ️ To obtain the delivery promise information, check [Gathering delivery promise information](https://developers.vtex.com/docs/guides/gathering-delivery-promise-information).
 
 **Example:**
 
 ```txt
-?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 ### Additional parameters
 
 | Query string / Facet | Description | Example |
 | :---- | :---- | :---- |
-| `shipping` (facet) | Shipping method. It must always be combined with the delivery promise information parameters. Possible values: `pickup-in-point`, `delivery`, `pickup-all`, `pickup-nearby` | `/shipping/pickup-in-point/?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
-| `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters. | `/shipping/pickup-in-point?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16&pickupPoint=vtex-botafogo` |
-| `delivery-options` (facet) | [Delivery Option](https://help.vtex.com/en/docs/tutorials/delivery-options-beta) ID or IDs to be filtered. The ID can be obtained in the VTEX Admin, at **Shipping > Delivery Options**. It must always be combined with the delivery promise information parameters. Multiple entries of this filter can be used in the request to search for multiple Delivery Options. | **`/delivery-options/express-option-id`**`?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
-| `dynamic-estimate` (facet) | The Dynamic Estimate filter selects Delivery Options that can meet the requested delivery or pickup timeframe. It must always be used together with the delivery promise information parameters and `shipping`. Possible values: `same-day`, `next-day`. It dynamically identifies which Delivery Options for the given delivery promise information and `shipping` facet can meet the requested timeframe, and then filters the search as if those Delivery Options had been manually passed as filters. | `/shipping/delivery/dynamic-estimate/same-day?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
+| `shipping` (facet) | Shipping method. It must always be combined with the delivery promise information parameters. Possible values: `pickup-in-point`, `delivery`, `pickup-all`, `pickup-nearby` | `/shipping/pickup-in-point/?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
+| `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters. | `/shipping/pickup-in-point?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16&pickupPoint=vtex-botafogo` |
+| `delivery-options` (facet) | [Delivery Option](https://help.vtex.com/en/docs/tutorials/delivery-options-beta) ID or IDs to be filtered. The ID can be obtained in the VTEX Admin, at **Shipping > Delivery Options**. It must always be combined with the delivery promise information parameters. Multiple entries of this filter can be used in the request to search for multiple Delivery Options. | **`/delivery-options/express-option-id`**`?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
+| `dynamic-estimate` (facet) | The Dynamic Estimate filter selects Delivery Options that can meet the requested delivery or pickup timeframe. It must always be used together with the delivery promise information parameters and `shipping`. Possible values: `same-day`, `next-day`. It dynamically identifies which Delivery Options for the given delivery promise information and `shipping` facet can meet the requested timeframe, and then filters the search as if those Delivery Options had been manually passed as filters. | `/shipping/delivery/dynamic-estimate/same-day?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
 | `hideUnavailableItems` (query string) | Controls whether the search returns only available products or both available and unavailable ones. When set to `true`, only products in stock are returned; when set to `false`, the API includes unavailable products as well. A product is considered unavailable when `availableQuantity = 0`, while `availableQuantity = 10000` indicates that the product is available.<br><br>**When filtering by shipping method (`shipping`), Delivery Options (`delivery-options`), or Dynamic Estimates (`dynamic-estimate`), this parameter must be set to `true`.** Otherwise, products that are unavailable for the selected filter may be displayed.<br><br>When filtering only by ZIP code (`zip-code`) without any of the above filters, retailers may choose to show unavailable items for commercial reasons (for example, to signal that they carry those products even if temporarily out of stock). This facet also allows merchants to expose a shopper-facing filter such as "show only in-stock products."<br><br>If `hideUnavailableItems` is omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
 
->⚠️ The delivery promise information parameters (`deliveryZonesHash` and `pickupsHash`) are **required** to filter product availability according to the shopper's location and are integral to any request using Delivery Promise functionality. This means you must use them when filtering by shipping method and pickup point. To obtain the delivery promise information parameters, check [Gathering delivery promise information](https://developers.vtex.com/docs/guides/gathering-delivery-promise-information).
+>⚠️ The delivery promise information parameters (`deliveryZonesHash` and `pickupPointsHash`) are **required** to filter product availability according to the shopper's location and are integral to any request using Delivery Promise functionality. This means you must use them when filtering by shipping method and pickup point. To obtain the delivery promise information parameters, check [Gathering delivery promise information](https://developers.vtex.com/docs/guides/gathering-delivery-promise-information).
 
 >⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
 
@@ -81,7 +81,7 @@ This results in the following behavior when using Delivery Options and Dynamic E
 Here is an example of a basic Delivery Promise search using the delivery promise information:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 
 ```
 
@@ -106,7 +106,7 @@ Parameters: `/shipping/delivery`
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/shipping/delivery?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.myvtex.com.br/api/io/_v/api/intelligent-search/product_search/shipping/delivery?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 #### Pickup at a specific location
@@ -118,7 +118,7 @@ Parameters: `/shipping/pickup-in-point/pickupPoint/{pickupPointId}`
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-in-point/pickupPoint/vtex-botafogo?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-in-point/pickupPoint/vtex-botafogo?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 #### Pickup at a nearby location
@@ -130,7 +130,7 @@ Parameters: `/shipping/pickup-nearby`
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-nearby?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/shipping/pickup-nearby?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 ### Retrieving available pickup points
@@ -145,10 +145,10 @@ You can call this endpoint in two ways:
    GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?zip-code={zipCode}&an={accountName}&coordinates={coordinates}&country={country}
    ```
 
- - **With delivery zones and pickups hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupsHash`) for faster lookup.
+ - **With delivery zones and pickup point hashes:** Alternatively, provide pre-computed hashes (`deliveryZonesHash` and `pickupPointsHash`) for faster lookup.
 
    ```txt
-   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?deliveryZonesHash={deliveryZonesHash}&pickupsHash={pickupsHash}&an={accountName}
+   GET https://api.vtexcommercestable.com.br/api/intelligent-search/v0/pickup-point-availability/productClusterIds/{productClusterIds}/trade-policy/{tradePolicy}?deliveryZonesHash={deliveryZonesHash}&pickupPointsHash={pickupPointsHash}&an={accountName}
    ```
 
 ### Filtering by Delivery Options
@@ -165,7 +165,7 @@ To filter by a Delivery Option, use the `delivery-options` parameter. Its value 
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/delivery-options/express-option-id?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/delivery-options/express-option-id?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 You can also filter for multiple Delivery Options by including multiple entries for the `delivery-options` parameter on the request.
@@ -173,7 +173,7 @@ You can also filter for multiple Delivery Options by including multiple entries 
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/delivery-options/one-week-option-id/delivery-options/one-day-option-id?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/delivery-options/one-week-option-id/delivery-options/one-day-option-id?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 ### Filtering by Dynamic Estimates
@@ -189,7 +189,7 @@ Filters the search for products that can be delivered or picked up at the locati
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/dynamic-estimate/same-day?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/dynamic-estimate/same-day?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 #### Next-day Delivery
@@ -199,7 +199,7 @@ Filters the search for products that can be delivered or picked up at the locati
 Example:
 
 ```txt
-https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/dynamic-estimate/next-day?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupsHash=0b79d8a9979a5f4f5f30a7849da5da16
+https://{{accountName}}.myvtex.com/api/io/_v/api/intelligent-search/product_search/dynamic-estimate/next-day?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
 ## Implementing sidebar filters

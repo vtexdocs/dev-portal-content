@@ -4,11 +4,12 @@ slug: "search-overview"
 hidden: false
 createdAt: "2022-04-28T19:54:24.451Z"
 updatedAt: "2022-09-13T20:26:18.916Z"
+excerpt: "Learn how to implement Intelligent Search in your VTEX store, including search components, autocomplete, banners, and integrations with external search providers."
 ---
 
 > **Help us improve our documentation!** Tell us about your experience with this article by filling out [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
 
-Intelligent Search is a [VTEX IO](https://vtex.com/us-en/store-framework/) alternative to Legacy Search. It assists the customer in their purchase journey and presents results from the first interaction with the search bar. The tool displays search and product suggestions that may interest the user. Intelligent Search also corrects spelling errors and understands words not contained in the product information.
+Intelligent Search is a [VTEX IO](https://developers.vtex.com/docs/guides/store-framework) alternative to VTEX Search (Legacy). It assists the customer in their purchase journey and presents results from the first interaction with the search bar. The tool displays search and product suggestions that may interest the user. Intelligent Search also corrects spelling errors and understands words not contained in the product information.
 
 ## Setting up the Intelligent Search
 
@@ -81,10 +82,10 @@ You can integrate your store's search to some Google features, such as the Googl
 - [Setting up Google Analytics search tracking](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking)
 - [Speech to Text Search](https://developers.vtex.com/docs/guides/vtexarg-speech-to-text)
 
-## Legacy Search
+## VTEX Search (Legacy)
 
-Legacy Search allows you to query, search and sort products in the catalog using fulltext, category, and brand search terms.
+VTEX Search (Legacy) allows you to query, search and sort products in the catalog using fulltext, category, and brand search terms.
 
-- [Legacy Search API](https://developers.vtex.com/docs/api-reference/search-api#overview)
+- [VTEX Search (Legacy) API](https://developers.vtex.com/docs/api-reference/search-api#overview)
 - [How search parameters work](https://developers.vtex.com/vtex-rest-api/docs/how-search-parameters-work)
 - [Search Control](https://developers.vtex.com/docs/guides/search-control-fulltextsearchbox)
