@@ -12,8 +12,8 @@ It supports integration with [CMS](https://developers.vtex.com/docs/guides/cms-f
 
 | Aspect | Description |
 | ------ | ----------- |
-| **Performance** | Ensures fast-loading stores and provides a good user experience, focusing on achieving high scores in tests like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) and [Web Vitals](https://web.dev/articles/vitals#core-web-vitals).  |
-| **Stability** | Built to be stable and avoid crashes, so your store doesn't lose sales due to provider issues.  |
+| **Performance** | Ensures fast-loading stores and provides a good user experience, focusing on achieving high scores in tests like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) and [Web Vitals](https://web.dev/articles/vitals#core-web-vitals). |
+| **Stability** | Built to be stable and avoid crashes, so your store doesn't lose sales due to provider issues. |
 | **Analytics/SEO** | Works with analytics tools to understand store customers and with SEO tools to improve store visibility in search results. |
 
 > ⚠ For a detailed understanding of the key differences between FastStore versions, their support levels, and guidelines for upgrading, please refer to the [FastStore versions and support levels](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels) guide.
