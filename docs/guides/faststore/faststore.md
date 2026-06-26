@@ -116,7 +116,7 @@ FastStore consists of five main packages that enable the store to work:
 
 - [Core](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson): Provides the starter source code to get your store up and running. It contains four sub-packages: Components, SDK, UI, and API packages.
 
-- [SDK](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson): Provides developers with a set of tools that handle all meaningful states an ecommerce store might have, such as Session, Cart, Component, and Search. The SDKs also provide GA4-compatible analytics functions to help you create powerful analytics capabilities in your ecommerce store.
+- [SDK](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#packagejson): Provides developers with a set of tools that handle all meaningful states an ecommerce store might have, such as Session, Cart, Component, and Search. The SDKs also provide GA4-compatible analytics functions to help you create powerful analytics capabilities in your ecommerce store.
 
 - [UI](https://developers.vtex.com/docs/guides/faststore/components-index): Gathers the design system based on FastStore components, using [Sass](https://sass-lang.com/) for styling.
 

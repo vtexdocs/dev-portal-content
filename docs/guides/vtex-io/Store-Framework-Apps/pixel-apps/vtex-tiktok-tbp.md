@@ -23,7 +23,7 @@ Before installing the app, make sure you have read about its compatibility and r
 
 ### Compatibility
 
-TikTok for Business is fully compatible with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2) and partially compatible with stores using [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS (legacy)](https://www.faststore.dev/docs/headless-cms-overview).
+TikTok for Business is fully compatible with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2) and partially compatible with stores using [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
 In VTEX IO stores, installing and configuring TikTok for Business causes the TikTok Pixel to be inserted automatically. On the other hand, stores using the Legacy CMS Portal or Headless CMS (legacy) need to configure the TikTok Pixel manually. Refer to the [Manual TikTok Pixel configuration](#manual-tiktok-pixel-configuration) section for more information on this.
 
