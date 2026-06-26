@@ -41,6 +41,5 @@ updatedAt: "2022-09-09t17:59:09.868z"
 | [Session Manager API](https://developers.vtex.com/docs/api-reference/session-manager-api) | Tracks relevant information about the customer's current browsing session and integrates with several VTEX systems using a single call. |
 | [Subscriptions API v3](https://developers.vtex.com/vtex-rest-api/reference/subscriptions-api-v3) | Manages store subscription rules to maximize revenue and reduce bounce and churn rates. |
 | [VTEX Shipping Network API](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api) | Sets up your app to integrate with VTEX Shipping Network. |
-| [VTEX Tracking API](https://developers.vtex.com/docs/api-reference/tracking) | Manages all delivery solutions powered by a VTEX Tracking service. |
 | [VTEX Do API](https://developers.vtex.com/docs/api-reference/vtex-do-api) | Manages and retrieves notes or tasks from VTEX Do. |
 | [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api) | Manages tokens from a given app key and app token pair. |
