@@ -8,7 +8,7 @@ excerpt: "The ultimate toolkit for building blazing-fast storefronts."
 
 [FastStore](https://github.com/vtex/faststore) is a toolkit based on [Jamstack](https://jamstack.org/) that helps developers build high-performance stores.
 
-It supports integration with [CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), offers analytics functionalities to inform storefront decision-making, and gives developers the flexibility to customize the store based on the brand’s vision, creating a unique shopping experience for users.
+It supports integration with [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), offers analytics functionalities to inform storefront decision-making, and gives developers the flexibility to customize the store based on the brand’s vision, creating a unique shopping experience for users.
 
 | Aspect | Description |
 | ------ | ----------- |
