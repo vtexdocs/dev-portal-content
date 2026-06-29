@@ -1,0 +1,78 @@
+---
+title: "Migrating from Store Framework to FastStore"
+createdAt: "2026-06-29T00:00:00.000Z"
+---
+
+In this guide, you'll learn how to migrate a storefront from [Store Framework](https://developers.vtex.com/docs/guides/store-framework) to [FastStore](https://developers.vtex.com/docs/guides/faststore) within the same VTEX account, using traffic spliting to gradually move users from the current storefront to the new one.
+
+>ℹ️ If you don't need traffic splitting, you can perform a full cutover with rollback instead.
+
+By the end, you'll understand how to prepare both storefronts to run in parallel, validade the new storefront with real traffic, and complete the cutover with a rollback option.
+
+>⚠️ This guide describes the same-account migration approach: the FastStore storefront is developed in the same VTEX account that runs the Store Framework storefront. Migrating in the same account avoids syncing Master Data between accounts and makes it easier to reuse existing VTEX IO apps. 
+
+## Before you begin
+
+Before starting the migration, create the FastStore project that will receive your storefront development. To start one, follow the guides of the FastStore [Getting started](https://developers.vtex.com/docs/guides/faststore/getting-started-overview) track. Once you complete the track, you'll have a GitHub repository connected to your account that you can deploy through WebOps.
+
+## Migration overview
+
+The migration runs both storefronts in parallel within the same account. Your Store Framework storefront stays live while you develop, validate, and gradually roll out the FastStore storefront.
+
+In the following table, see the role of each storefront during the migration:
+
+| Stage | Store Framework (current storefront) | FastStore v4 (new storefront) |
+| ----- | ------------------------------------ | ----------------------------- |
+| Development | Remains live. No changes are made. | Develop the FastStore project and connect the repository to WebOps. |
+| VTEX IO apps | Map installed apps and document their settings. | Review app compatibility and reinstall or replace apps as needed. For more details, see [step 1 - Auditing VTEX IO apps for compatibility](#step-1---auditing-vtex-io-apps-for-compatibility) |
+| Content | Site Editor content remains as is. | Recreate storefront content by using [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For more details, see [Step 2 - Recreating the storefront content](#step-2---recreating-the-storefront-content). |
+| Search  | Intelligent Search settings  remains as is. | Rebuild Intelligent Search settings. For more details, see [Step 3 - Rebuilding the Intelligent Search settings](#step-3---rebuilding-the-intelligent-search-settings). |
+| Traffic splitting | Shares live traffic with FastStore during the transition. | Gradually receives traffic, starting at 0%, until validated. |
+| Completion | Retired after a successful cutover. | Becomes the live storefront. |
+
+## Instructions
+
+### Step 1 - Auditing VTEX IO apps for compatibility
+
+Each storefront technology manages its own VTEX IO app installations, permissions, and URLs. Some apps that work in Store Framework may need a custom integration or an alternative in FastStore. To prepare your apps for FastStore, follow these instructions:
+
+1. Map all apps (`vendor.name` and current version) used by the Store Framework storefront.
+2. Check the compatibility of each app with FastStore.
+3. For incompatible apps, choose to build a custom integration, replace the app with an alternative, or remove it.
+4. Document all current app settings, including secrets, API keys, and toggles.
+5. Recreate the app settings in the FastStore storefront.
+6. Review and update the permissions and policies required by each app.
+
+>ℹ️ App data and app settings can't be transferred automatically between storefront technologies, so you must recreate them.
+
+### Step 2 - Recreating the storefront content
+
+Recreate all necessary pages, components, and content in the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefrontsw) for your FastStore project.
+
+>ℹ️ Content migration between Store Framework and FastStore CMS isn't supported, so plan enough time to recreate and review the content manually.
+
+### Step 3 - Rebuilding the Intelligent Search settings
+
+Rebuild your [Intelligent Search](https://help.vtex.com/docs/tutorials/intelligent-search-overview) configuration for the FastStore storefront, and plan enough time to reproduce and test all search settings.
+
+>ℹ️ Reproduce search-related settings, such as merchandising rules, synonyms, and relevance, and test the results before sending live traffic to FastStore.
+
+### Step 4 - Adding the production domain to WebOps
+
+Add your production domain to FastStore WebOps. Adding the domain doesn't change your live storefront, which keeps pointing to Store Framework until you request a traffic split.
+
+### Step 5 - Requesting the traffic split
+
+Once you've completed the previous steps, open a ticket with [VTEX Support](https://help.vtex.com/en/support) at least five days before your planned migration date to request traffic splitting between Store Framework and FastStore.
+
+This gradual rollout allows you to slowly redirect users from the old store to the new one, run A/B tests with your analtytics or testing tools, monitor performance, and ensure stability before going fully live on FatStore.
+
+Once the FastStore storefront is validated, make it your live store and retire the Store Framework storefront.
+
+## Keeping unfinished pages on Store Framework
+
+If some pages can't be rebuilt in FastStore in time for go-live, you can keep them running on Store Framework while the rest of the storefront runs on FastStore. FastStore captures all storefront routes except a few reserved ones, so you can route specific pages to the VTEX IO infrastructure through the `/api/io/{path}` route.
+
+To keep a page on Store Framework, create the redirect to the `/api/io/{path}` route inside your FastStore project, following [Managing URLs with redirects and rewrite paths](https://developers.vtex.com/docs/guides/faststore/routing-managing-urls-with-redirects-and-rewrite-paths).
+
+>⚠️ Don't create the redirect to the `/api/io/{path}` route using the Store Framework Admin redirects. Doing so may cause an infinite redirect loop (`ERR_TOO_MANY_REDIRECTS`) on both storefronts, because the VTEX IO app delivered the redirect and looped on itself. Create the redirect inside FastStore project.
