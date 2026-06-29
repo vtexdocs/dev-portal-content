@@ -11,12 +11,14 @@ A component is a reusable JSON Schema object that groups related fields, a link,
 
 This guide covers how to define components: where files live, which properties are required, and three annotated examples: a reusable building block, a page section, and nested composition with `$ref`.
 
-> ℹ️ For modeling concepts (Content Type vs. component, singleton patterns, recommended page structures), see [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores).
+<!-- 
+> ℹ️ For modeling concepts (Content Type vs. component, singleton patterns, recommended page structures), see [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores). 
+!-->
 
 ## Before you begin
 
-* [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
-* [Defining content types for headless stores](https://developers.vtex.com/docs/guides/defining-content-types-for-headless-stores)
+<!--  * [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
+ * [Defining content types for headless stores](https://developers.vtex.com/docs/guides/defining-content-types-for-headless-stores) !-->
 * [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) installed
 
 ## Distinguishing components from Content Types
@@ -32,7 +34,8 @@ Both components and Content Types are JSON Schema objects, but they play differe
 | **Referenced from pages** | Embedded with `$ref` or listed in a `sections` array. | Creates entries fetched by Content Type name or slug. |
 | **Storefront mapping** | Map `$componentKey` to a UI block or nested field renderer. | Map Content Type name to a page route and layout. |
 
-> ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page or groups fields reused elsewhere, model it as a component. See [Choosing between a Content Type and a component](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores#choosing-between-a-content-type-and-a-component).
+<!--
+> ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page or groups fields reused elsewhere, model it as a component. See [Choosing between a Content Type and a component](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores#choosing-between-a-content-type-and-a-component). !-->
 
 Sections are components that editors add to a page through a Content Type's `sections` array. Reusable building blocks (such as `Link` or `SEO`) are usually embedded inside sections or Content Types with `$ref` instead of appearing in the section picker.
 
@@ -65,7 +68,7 @@ You can use another directory; the CLI accepts custom paths as arguments. What m
 
 | Rule | Example | Result in schema bundle |
 | :---- | :---- | :---- |
-| File prefix | `cms_component__` | Required — files without this prefix are ignored. |
+| File prefix | `cms_component__` | Required. Files without this prefix are ignored. |
 | Component ID | `cms_component__PromoBanner.jsonc` | Becomes the key `PromoBanner` under `components`. |
 | Casing | Use PascalCase for the ID segment | `PromoBanner`, `CallToAction`, `SEO` |
 | Extension | `.jsonc` (recommended) or `.json` | `.jsonc` allows inline comments for documentation. |
@@ -115,17 +118,17 @@ Set `$abstract: true` on building blocks that should never be placed directly on
 
 ## Defining a reusable building block
 
-The example below defines a `Link` component with two fields. Editors never add `Link` as a standalone section — other components and Content Types embed it with `$ref`.
+The example below defines a `Link` component with three fields. Editors never add `Link` as a standalone section. ther components and Content Types embed it with `$ref`.
 
 **File:** `cms/components/cms_component__Link.jsonc`
 
 ```json
 {
-  // Unique ID — must match the filename segment after cms_component__
+  // Unique ID: must match the filename segment after cms_component__
   "$componentKey": "Link",
   "$componentTitle": "Link",
 
-  // Template-only — excluded from the section picker
+  // Template-only: excluded from the section picker
   "$abstract": true,
 
   "type": "object",
@@ -155,7 +158,7 @@ The example below defines a `Link` component with two fields. Editors never add 
 
 ## Defining a page section
 
-The example below defines a `CallToAction` section — a page block editors add through a Content Type's `sections` array. It includes a title and a nested link object.
+The example below defines a `CallToAction` section, a page block editors add through a Content Type's `sections` array. It includes a title and a nested link object.
 
 **File:** `cms/components/cms_component__CallToAction.jsonc`
 
@@ -221,7 +224,7 @@ The example below updates `CallToAction` to reuse the `Link` component from the 
     },
     "link": {
       "title": "Link",
-      // Reuses the Link component — includes linkTargetBlank automatically
+      // Reuses the Link component: includes linkTargetBlank automatically
       "$ref": "#/components/Link"
     }
   }
@@ -234,7 +237,7 @@ Both components must exist in the same schema bundle before you upload. The Sche
 | :---- | :---- |
 | **Inline object** | The nested shape is used in one place only and is unlikely to change. |
 | **`$ref` to another component** | The same shape is reused across multiple components or Content Types (links, SEO blocks, media objects). |
-| **`$extends` on the component** | Multiple components share a base set of fields (promotion dates, color variants). See [Extending schemas with `$extends`](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores#extending-schemas-with-extends). |
+| **`$extends` on the component** | Multiple components share a base set of fields (promotion dates, color variants). |
 
 ## Making components available on pages
 
@@ -256,7 +259,7 @@ Reference the generated `$ALLOW_ALL_COMPONENTS` definition:
 }
 ```
 
-Every component in your bundle — including `CallToAction` and `PromoBanner` — appears in the Admin section picker. Building blocks such as `Link` and `SEO` are meant to be embedded with `$ref`, not added as standalone sections — mark them with `$abstract: true` to signal that intent.
+Every component in your bundle (including `CallToAction` and `PromoBanner`) appears in the Admin section picker. Building blocks such as `Link` and `SEO` are meant to be embedded with `$ref`, not added as standalone sections; mark them with `$abstract: true` to signal that intent.
 
 ### Restricting which sections editors can add
 
@@ -295,7 +298,7 @@ The examples below use a `CustomCarousel` component to illustrate both patterns.
 
 #### `oneOf` on a single field
 
-Use `oneOf` when an editor must choose exactly one variant for a field. In the example below, the `card` field accepts either an Image Card or a Text Card — not both at the same time.
+Use `oneOf` when an editor must choose exactly one variant for a field. In the example below, the `card` field accepts either an Image Card or a Text Card, not both at the same time.
 
 **File:** `cms/components/cms_component__CustomCarouselOneOf.jsonc`
 
@@ -351,7 +354,7 @@ Use `oneOf` when an editor must choose exactly one variant for a field. In the e
 }
 ```
 
-**What editors get:** a single `Card` field with a type picker — they choose "Image Card" or "Text Card" and fill in its fields. Only one variant is active at a time.
+**What editors get:** a single `Card` field with a type picker. They choose "Image Card" or "Text Card" and fill in its fields. Only one variant is active at a time.
 
 **What your storefront does:** read the published `card` object and branch on which properties are present (`image` vs. `text`) to decide which renderer to use.
 
@@ -416,7 +419,7 @@ Use `anyOf` on the `items` of an array field when editors should be able to add 
 }
 ```
 
-**What editors get:** a `Cards` list with an **Add item** dropdown. Each click adds a new item — editors pick "Image Card" or "Text Card" per item, and items of different types can be freely mixed and reordered in the same list (Figure 1).
+**What editors get:** a `Cards` list with an **Add item** dropdown. Each click adds a new item, editors pick "Image Card" or "Text Card" per item, and items of different types can be freely mixed and reordered in the same list (Figure 1).
 
 ![CMS Admin showing the Custom Carousel anyOf section with a Cards array containing an Image Card, a Text Card, and a second Image Card mixed together](<!-- REPLACE WITH HOSTED IMAGE URL: Screenshot_385.png -->)
 
@@ -424,7 +427,7 @@ Use `anyOf` on the `items` of an array field when editors should be able to add 
 
 **What your storefront does:** iterate over the `cards` array and dispatch each item to the appropriate renderer based on which properties are present.
 
-> ℹ️ `anyOf` and `oneOf` can each appear inside or outside an array. The examples above pair `oneOf` with a single field and `anyOf` with an array to illustrate how the **array context** — not the keyword — drives the key UI difference: a single type-picker vs. a growable list with per-item type selection.
+> ℹ️ `anyOf` and `oneOf` can each appear inside or outside an array. The examples above pair `oneOf` with a single field and `anyOf` with an array to illustrate how the **array context** (not the keyword) drives the key UI difference: a single type-picker vs. a growable list with per-item type selection.
 
 ## Reviewing the published component shape
 
@@ -456,10 +459,10 @@ Your storefront owns the mapping from schema to UI:
 
 1. **Fetch the entry** from the Data Plane API by Content Type name or slug.
 2. **Loop through `sections`** (or fixed component fields such as `seo`).
-3. **Match `componentKey`** to a component in your framework — React, Vue, Svelte, or server templates.
+3. **Match `componentKey`** to a component in your framework (React, Vue, Svelte, or server templates).
 4. **Pass field values** as props or template context.
 
-Unlike FastStore integrations, headless projects do not ship with a predefined component library. You define both the schemas in `cms/components/` and the renderers in your codebase. Keep `$componentKey` values stable — changing them breaks existing published content and storefront mappings.
+Unlike FastStore integrations, headless projects do not ship with a predefined component library. You define both the schemas in `cms/components/` and the renderers in your codebase. Keep `$componentKey` values stable: changing them breaks existing published content and storefront mappings.
 
 For the full content lifecycle (schema upload, authoring, publishing, delivery), see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
 
