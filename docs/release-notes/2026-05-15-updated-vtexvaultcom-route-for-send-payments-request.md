@@ -27,7 +27,7 @@ Update your payment integration to use the new route format before **September 1
 
 | **Method** | **From** | **To** |
 |-----------|----------|----------|
-| **POST** | `https://api.vtexvault.com/api/payments/transactions/{transactionId}/payments?an={accountName}` | `https:/{accountName}.vtexvault.com/api/payments/transactions/{transactionId}/payments` |
+| **POST** | `https://api.vtexvault.com/api/payments/transactions/{transactionId}/payments?an={accountName}` | `https://{accountName}.vtexvault.com/api/payments/transactions/{transactionId}/payments` |
 
 
 > ⚠️ If you have not yet migrated from the legacy routes (`myvtex.com`, `vtexcommercestable.com.br`, `vtexpayments.com.br`), migrate directly to the route `https:/{accountName}.vtexvault.com/api/payments/transactions/{transactionId}/payments` before **September 1, 2026**. For the full list of deprecated routes, see the [original release note](https://developers.vtex.com/updates/release-notes/2025-10-28-mandatory-migration-to-vtexvault-com-for-send-payments-request).
