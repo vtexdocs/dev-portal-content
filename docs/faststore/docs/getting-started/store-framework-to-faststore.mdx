@@ -7,12 +7,6 @@ In this guide, you'll learn how to migrate your storefront from [Store Framework
 
 By the end, you'll know how to prepare both storefronts to run in parallel, validate the new storefront with real traffic, and complete the cutover.
 
-## Before you begin
-
-Before starting the migration, create the FastStore project that will receive your storefront development. To start one, follow the guides in the FastStore [Getting started](https://developers.vtex.com/docs/guides/faststore/getting-started-overview) track.
-
-Once you complete the track, you'll have a GitHub repository connected to your account that you can deploy through WebOps.
-
 ## Migration overview
 
 The migration runs both storefronts in parallel within the same account. Your Store Framework storefront stays live while you develop, validate, and gradually roll out the FastStore storefront.
@@ -28,6 +22,12 @@ In the following table, see the role of each storefront during the migration:
 | Production domain | Keep serving the live production domain. | Add the production domain to WebOps so FastStore is ready for validation and cutover, but it still doesn't receive live traffic. For more details, see [Step 4 - Adding the production domain to WebOps](#step-4---adding-the-production-domain-to-webops) |
 | Traffic splitting | Shares live traffic with FastStore during the transition. | Gradually receives traffic, starting at 0%, until validated. For more details, see [Step 5 - Requesting the traffic split](#step-5---requesting-the-traffic-split). |
 | Completion | Retired after a successful cutover. | Becomes the live storefront. |
+
+## Before you begin
+
+Before starting the migration, create the FastStore project that will receive your storefront development. To start one, follow the guides in the FastStore [Getting started](https://developers.vtex.com/docs/guides/faststore/getting-started-overview) track.
+
+Once you complete the track, you'll have a GitHub repository connected to your account that you can deploy through WebOps.
 
 ## Instructions
 
