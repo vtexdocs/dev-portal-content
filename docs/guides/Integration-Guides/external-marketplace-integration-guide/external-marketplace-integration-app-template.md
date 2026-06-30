@@ -31,14 +31,14 @@ An integration app created from our App Template already includes:
 Apps created from the Template App come with a predefined set of policies declared in their `manifest.json`. These policies grant the app the permissions required to integrate orders and catalog data with an external marketplace. Apps derived from the template are granted permission to perform the following actions:
 
 - Read and write data in VBase (`vbase-read-write`), used to persist the app's configuration data.
-- View orders through the [OMS](https://developers.vtex.com/docs/guides/orders) (Order Management System).
-- Change the status of orders** in the order workflow.
+- View orders through the [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview).
+- Change the status of orders in the order workflow.
 - Cancel orders.
 - Update invoices and tracking information for orders.
 - Receive inbound invoice notifications.
 - Access the Portal API.
 
-> Removing or altering these policies may break the integration. Only change them if you are sure your app does not require the corresponding permission.
+> ⚠️ Removing or altering these policies may break the integration. Only change them if you are sure your app does not require the corresponding permission.
 
 ## Before you begin
 
@@ -53,11 +53,11 @@ The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-
 ## Step 1 - Creating your repository from the template
 
 1. Access the [Template App’s repository](https://github.com/vtex/mkp-app-template).
-2. Click on `Use this template`.
+2. Click `Use this template`.
 3. Add a name to your repository.
 4. Select the `Private` option.
-5. Do not check the Include all branches option.
-6. Click on `Create repository from template`.
+5. Do not check the `Include all branches` option.
+6. Click `Create repository from template`.
 
 > ℹ️ The Template App already declares the builders it needs (`admin`, `docs`, `graphql`, `messages`, `node`, and `react`) in its `manifest.json`. All VTEX IO builders are publicly available, so no Application form or approval is required to use them. For more information, see the [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) documentation.
 
