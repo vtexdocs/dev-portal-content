@@ -216,8 +216,8 @@ The `useCartItem` hook returns an object with the following properties:
 |---|---|---|
 | `item` | `CartItem[] \| undefined` | Cart item data for the current item. |
 | `itemIndex` | `number \| undefined` | Index of the current item in the cart. |
-| `changeItem` | `(data: UseCartItemChangeItemData) => Promise\<void>` | Updates the item data. |
-| `changePrice` | `(price: number) => Promise\<void>` | Changes the item price when manual price is enabled.<br />To check whether the manual price is active, use [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm). To enable it, use [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) and set `allowManualPrice` to `true`. |
+| `changeItem` | `(data: UseCartItemChangeItemData) => Promise<void>` | Updates the item data. |
+| `changePrice` | `(price: number) => Promise<void>` | Changes the item price when manual price is enabled.<br />To check whether the manual price is active, use [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm). To enable it, use [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) and set `allowManualPrice` to `true`. |
 
 ##### `changeItem`
 
