@@ -17,9 +17,10 @@ This guide covers how to define components: where files live, which properties a
 
 ## Before you begin
 
+The Content plugin provides the CLI commands used in this guide to generate and upload your schema bundle. Make sure it is installed before proceeding by following the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) guide.
+
 <!--  * [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
  * [Defining content types for headless stores](https://developers.vtex.com/docs/guides/defining-content-types-for-headless-stores) !-->
-* [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) installed
 
 ## Distinguishing components from Content Types
 
