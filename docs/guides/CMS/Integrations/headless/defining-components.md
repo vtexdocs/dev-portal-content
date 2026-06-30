@@ -28,7 +28,7 @@ Both components and Content Types are JSON Schema objects, but they play differe
 
 | Criteria | Component | Content Type |
 | :---- | :---- | :---- |
-| **Purpose** | Defines a reusable data shape or a page block editors add to a page. | Defines a page template editors create entries from. |
+| **Purpose** | Defines a reusable data shape or a page block to add to a page. | Defines a page template to create entries from. |
 | **Schema key** | `components` | `content-types` |
 | **File prefix** | `cms_component__` | `cms_content_type__` |
 | **Identifiers** | `$componentKey`, `$componentTitle` | `identifierKeys`, `$singleton` |
@@ -38,7 +38,7 @@ Both components and Content Types are JSON Schema objects, but they play differe
 <!--
 > ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page or groups fields reused elsewhere, model it as a component. See [Choosing between a Content Type and a component](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores#choosing-between-a-content-type-and-a-component). !-->
 
-Sections are components that editors add to a page through a Content Type's `sections` array. Reusable building blocks (such as `Link` or `SEO`) are usually embedded inside sections or Content Types with `$ref` instead of appearing in the section picker.
+Sections are components that you add to a page through a Content Type's `sections` array. Reusable building blocks (such as `Link` or `SEO`) are usually embedded inside sections or Content Types with `$ref` instead of appearing in the section picker.
 
 ## Organizing component files
 
@@ -103,10 +103,10 @@ A component schema is a JSON Schema `object` with CMS-specific metadata.
 | `type` | ✅ | Must be `"object"`. |
 | `properties` | ✅ | Field definitions for the component. |
 | `$extends` | Optional | Inherits structure from base definitions (for example, `#/$defs/base-component`). |
-| `$abstract` | Optional | When `true`, marks a template-only component that editors cannot add directly to pages. Use on building blocks embedded with `$ref`. |
+| `$abstract` | Optional | When `true`, marks a template-only component that cannot be added directly to pages. Use on building blocks embedded with `$ref`. |
 | `title` | Optional | Form section title (often matches `$componentTitle` for sections). |
-| `description` | Optional | Help text shown to editors in the Admin. |
-| `required` | Optional | Lists fields editors must fill before saving. |
+| `description` | Optional | Help text shown in the Admin form. |
+| `required` | Optional | Lists fields that must be filled before saving. |
 | `widget` | Optional | Overrides the default Admin form widget for a field. For example, `{ "ui:widget": "media-gallery" }` renders a media picker instead of a plain text input. |
 
 ### Reusable building blocks and page sections
@@ -116,7 +116,7 @@ A component schema is a JSON Schema `object` with CMS-specific metadata.
 | **Reusable building block** | `true` | No. Embedded with `$ref` only | `Link`, `SEO`, shared promo base |
 | **Page section** | `false` (default) | Yes. When referenced from a Content Type's `sections` | `CallToAction`, `PromoBanner`, `RichTextBlock` |
 
-Set `$abstract: true` on building blocks that should never be placed directly on a page. Leave it unset (or `false`) on sections editors add through the page editor.
+Set `$abstract: true` on building blocks that should never be placed directly on a page. Leave it unset (or `false`) on sections you add through the page editor.
 
 ## Defining a reusable building block
 
@@ -154,13 +154,13 @@ The example below defines a `Link` component with three fields. Editors never ad
 }
 ```
 
-**What editors get:** a reusable link form wherever another schema references `#/components/Link`.
+**What you get in the Admin:** a reusable link form wherever another schema references `#/components/Link`.
 
 **What your storefront does:** render the nested `link` object inside a parent section or Content Type field. No separate `componentKey` lookup for `Link` unless you fetch it as an embedded object.
 
 ## Defining a page section
 
-The example below defines a `CallToAction` section, a page block editors add through a Content Type's `sections` array. It includes a title and a nested link object.
+The example below defines a `CallToAction` section, a page block you add through a Content Type's `sections` array. It includes a title and a nested link object.
 
 **File:** `cms/components/cms_component__CallToAction.jsonc`
 
@@ -198,7 +198,7 @@ The example below defines a `CallToAction` section, a page block editors add thr
 }
 ```
 
-**What editors get:** a section they can add, reorder, and configure on any Content Type that exposes `$ALLOW_ALL_COMPONENTS` (or a restricted `anyOf` list that includes `CallToAction`).
+**What you get in the Admin:** a section you can add, reorder, and configure on any Content Type that exposes `$ALLOW_ALL_COMPONENTS` (or a restricted `anyOf` list that includes `CallToAction`).
 
 **What your storefront does:** map `componentKey: "CallToAction"` to a UI component and render `title` and `link` from the published JSON.
 
@@ -243,9 +243,9 @@ Both components must exist in the same schema bundle before upload. The Schema R
 
 ## Defining polymorphic fields inside a component
 
-Polymorphic fields accept more than one shape depending on what the editor chooses. Instead of a fixed object, you declare a set of variants using `anyOf` or `oneOf`, and the CMS Admin presents editors with a picker so they can select which variant to fill in.
+Polymorphic fields accept more than one shape depending on what you choose. Instead of a fixed object, you declare a set of variants using `anyOf` or `oneOf`, and the CMS Admin presents you with a picker to select which variant to fill in.
 
-The two JSON Schema keywords work the same way structurally but enforce different validation rules. Use `oneOf` when exactly one variant must match, and `anyOf` when one or more can match. Beyond validation, the main practical difference for editors is whether the field is **a single object** or **an array of items**. That is what changes the UI behavior, not the keyword itself.
+The two JSON Schema keywords work the same way structurally but enforce different validation rules. Use `oneOf` when exactly one variant must match, and `anyOf` when one or more can match. Beyond validation, the main practical difference is whether the field is **a single object** or **an array of items**. That is what changes the UI behavior, not the keyword itself.
 
 | Keyword | Validation rule | Notes |
 | :---- | :---- | :---- |
@@ -258,7 +258,7 @@ The examples below use a `CustomCarousel` component to illustrate both patterns.
 
 ### Single field without an array
 
-The example below uses `oneOf` on a single `card` field. The editor picks exactly one variant, image card or text card, and fills in its fields. You could also use `anyOf` here with the same structural result; the keyword choice depends on your validation intent.
+The example below uses `oneOf` on a single `card` field. You pick exactly one variant, image card or text card, and fill in its fields. You could also use `anyOf` here with the same structural result; the keyword choice depends on your validation intent.
 
 **File:** `cms/components/cms_component__CustomCarouselOneOf.jsonc`
 
@@ -314,7 +314,7 @@ The example below uses `oneOf` on a single `card` field. The editor picks exactl
 }
 ```
 
-**What editors get:** a single `Card` field with a type picker. They choose "Image Card" or "Text Card" and fill in its fields. Only one variant is active at a time.
+**What you get in the Admin:** a single `Card` field with a type picker. You choose "Image Card" or "Text Card" and fill in its fields. Only one variant is active at a time.
 
 **What your storefront does:** read the published `card` object and branch on which properties are present (`image` vs. `text`) to decide which renderer to use.
 
@@ -379,7 +379,7 @@ The example below uses `anyOf` on the `items` of a `cards` array. Editors can ad
 }
 ```
 
-**What editors get:** a `Cards` list with an **Add item** dropdown. Each click adds a new item, editors pick "Image Card" or "Text Card" per item, and items of different types can be freely mixed and reordered in the same list.
+**What you get in the Admin:** a `Cards` list with an **Add item** dropdown. Each click adds a new item, you pick "Image Card" or "Text Card" per item, and items of different types can be freely mixed and reordered in the same list.
 
 ![custom-carosel](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/CMS/Integrations/headless/Screenshot_385.png)
 
@@ -411,7 +411,7 @@ Reference the generated `$ALLOW_ALL_COMPONENTS` definition:
 
 Every component in your bundle (including `CallToAction` and `PromoBanner`) appears in the Admin section picker. Building blocks such as `Link` and `SEO` are meant to be embedded with `$ref`, not added as standalone sections; mark them with `$abstract: true` to signal that intent.
 
-### Restricting which sections editors can add
+### Restricting sections
 
 When a Content Type should allow only certain sections, replace `$ALLOW_ALL_COMPONENTS` with an explicit `anyOf` list:
 
@@ -433,7 +433,7 @@ Use restricted lists on Content Types where commerce or promotional sections wou
 
 ## Reviewing the published component shape
 
-After editors add a `CallToAction` section to a landing page and publish, the Data Plane returns content shaped like this:
+After adding a `CallToAction` section to a landing page and publish, the Data Plane returns content shaped like this:
 
 ```json
 {
