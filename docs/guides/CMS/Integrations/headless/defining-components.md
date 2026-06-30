@@ -9,7 +9,7 @@ excerpt: "Learn how to define reusable CMS components: file structure, required 
 
 A component is a reusable JSON Schema object that groups related fields, a link, a banner, an SEO block, or a full page section. In a headless project, you declare each component in its own `.jsonc` file under `cms/components/`, merge them into a schema bundle with the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin), and upload the bundle to the Schema Registry.
 
-This guide covers how to define components: where files live, which properties are required, and three annotated examples: a reusable building block, a page section, and nested composition with `$ref`.
+This guide covers how to define components: where files live, which properties are required, and four annotated examples: a reusable building block, a page section, nested composition with `$ref`, and polymorphic fields.
 
 <!-- 
 > ℹ️ For modeling concepts (Content Type vs. component, singleton patterns, recommended page structures), see [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores). 
@@ -106,6 +106,7 @@ A component schema is a JSON Schema `object` with CMS-specific metadata.
 | `title` | Optional | Form section title (often matches `$componentTitle` for sections). |
 | `description` | Optional | Help text shown to editors in the Admin. |
 | `required` | Optional | Lists fields editors must fill before saving. |
+| `widget` | Optional | Overrides the default Admin form widget for a field. For example, `{ "ui:widget": "media-gallery" }` renders a media picker instead of a plain text input. |
 
 ### Reusable building blocks and page sections
 
@@ -118,7 +119,7 @@ Set `$abstract: true` on building blocks that should never be placed directly on
 
 ## Defining a reusable building block
 
-The example below defines a `Link` component with three fields. Editors never add `Link` as a standalone section. ther components and Content Types embed it with `$ref`.
+The example below defines a `Link` component with three fields. Editors never add `Link` as a standalone section. Other components and Content Types embed it with `$ref`.
 
 **File:** `cms/components/cms_component__Link.jsonc`
 
@@ -231,13 +232,161 @@ The example below updates `CallToAction` to reuse the `Link` component from the 
 }
 ```
 
-Both components must exist in the same schema bundle before you upload. The Schema Registry resolves `$ref` pointers when the bundle is saved, so the Admin form and validation use the merged `Link` definition.
+Both components must exist in the same schema bundle before upload. The Schema Registry resolves `$ref` pointers when the bundle is saved, so the Admin form and validation use the merged `Link` definition.
 
 | Approach | Use when |
 | :---- | :---- |
 | **Inline object** | The nested shape is used in one place only and is unlikely to change. |
 | **`$ref` to another component** | The same shape is reused across multiple components or Content Types (links, SEO blocks, media objects). |
 | **`$extends` on the component** | Multiple components share a base set of fields (promotion dates, color variants). |
+
+## Defining polymorphic fields inside a component
+
+Polymorphic fields accept more than one shape depending on what the editor chooses. Instead of a fixed object, you declare a set of variants using `anyOf` or `oneOf`, and the CMS Admin presents editors with a picker so they can select which variant to fill in.
+
+The two JSON Schema keywords work the same way structurally but enforce different validation rules. Use `oneOf` when exactly one variant must match, and `anyOf` when one or more can match. Beyond validation, the main practical difference for editors is whether the field is **a single object** or **an array of items**. That is what changes the UI behavior, not the keyword itself.
+
+| Keyword | Validation rule | Notes |
+| :---- | :---- | :---- |
+| `oneOf` | Exactly one schema must match. | Can be used on a single field or on array items. |
+| `anyOf` | One or more schemas may match. | Can be used on a single field or on array items. |
+
+> ⚠️ Keep `$componentKey` values stable across schema versions. Changing a key breaks existing published content that references the old value, and storefront renderers that map on `componentKey` will stop matching.
+
+The examples below use a `CustomCarousel` component to illustrate both patterns.
+
+### Single field without an array
+
+The example below uses `oneOf` on a single `card` field. The editor picks exactly one variant, image card or text card, and fills in its fields. You could also use `anyOf` here with the same structural result; the keyword choice depends on your validation intent.
+
+**File:** `cms/components/cms_component__CustomCarouselOneOf.jsonc`
+
+```json
+{
+  "$componentKey": "CustomCarouselOneOf",
+  "$componentTitle": "Custom Carousel oneOf",
+  "$abstract": false,
+  "title": "Custom Carousel oneOf",
+  "description": "Custom Carousel with oneOf object",
+  "type": "object",
+  "required": [],
+
+  "properties": {
+    "card": {
+      "title": "Card",
+      "oneOf": [
+        {
+          "title": "Image Card",
+          "type": "object",
+          "properties": {
+            "image": {
+              "title": "Image URL",
+              "type": "string",
+              // Renders a media picker in the Admin form instead of a plain text input
+              "widget": { "ui:widget": "media-gallery" }
+            },
+            "link": {
+              "title": "Link URL",
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        {
+          "title": "Text Card",
+          "type": "object",
+          "properties": {
+            "text": {
+              "title": "Text Content",
+              "type": "string"
+            },
+            "link": {
+              "title": "Link URL",
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+**What editors get:** a single `Card` field with a type picker. They choose "Image Card" or "Text Card" and fill in its fields. Only one variant is active at a time.
+
+**What your storefront does:** read the published `card` object and branch on which properties are present (`image` vs. `text`) to decide which renderer to use.
+
+### Array field with multiple items
+
+The example below uses `anyOf` on the `items` of a `cards` array. Editors can add multiple items of different types in any order and combination. You could also use `oneOf` on array items; the keyword choice again depends on validation intent.
+
+**File:** `cms/components/cms_component__CustomCarouselAnyOf.jsonc`
+
+```json
+{
+  "$componentKey": "CustomCarouselAnyOf",
+  "$componentTitle": "Custom Carousel anyOf",
+  "$abstract": false,
+  "title": "Custom Carousel anyOf",
+  "description": "Custom Carousel with anyOf object",
+  "type": "object",
+  "required": [],
+
+  "properties": {
+    "cards": {
+      "title": "Cards",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "title": "Image Card",
+            "type": "object",
+            "properties": {
+              "image": {
+                "title": "Image URL",
+                "type": "string",
+                // Renders a media picker in the Admin form instead of a plain text input
+                "widget": { "ui:widget": "media-gallery" }
+              },
+              "link": {
+                "title": "Link URL",
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          },
+          {
+            "title": "Text Card",
+            "type": "object",
+            "properties": {
+              "text": {
+                "title": "Text Content",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link URL",
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+**What editors get:** a `Cards` list with an **Add item** dropdown. Each click adds a new item, editors pick "Image Card" or "Text Card" per item, and items of different types can be freely mixed and reordered in the same list.
+
+![custom-carosel](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/CMS/Integrations/headless/Screenshot_385.png)
+
+*The `Custom Carousel anyOf` section in the CMS Admin. The `Cards` array accepts Image Card and Text Card items in any order and combination. Editors use the "Adicionar item" dropdown to append a new item of either type.*
+
+**What your storefront does:** iterate over the `cards` array and dispatch each item to the appropriate renderer based on which properties are present.
+
+> ℹ️ The examples above illustrate two different **array contexts**, not a rule about which keyword to use where. `anyOf` and `oneOf` can each appear on a single field or on array items. What changes the UI behavior is the array context: a single field renders a type-picker, while an array renders a growable list with per-item type selection.
 
 ## Making components available on pages
 
@@ -279,155 +428,7 @@ When a Content Type should allow only certain sections, replace `$ALLOW_ALL_COMP
 }
 ```
 
-Use restricted lists on Content Types where commerce or promotional sections would not make sense, for example, blog posts or legal pages. See [Modeling page Content Types](/tbd) for a full example.
-
-### Defining polymorphic fields inside a component
-
-Polymorphic fields accept more than one shape depending on what the editor chooses. Instead of a fixed object, you declare a set of variants using `anyOf` or `oneOf`, and the CMS Admin presents editors with a picker so they can select which variant to fill in.
-
-The two JSON Schema keywords work the same way structurally but enforce different validation rules. Use `oneOf` when exactly one variant must match, and `anyOf` when one or more can match. Beyond validation, the main practical difference for editors is whether the field is **a single object** or **an array of items**. That is what changes the UI behavior, not the keyword itself.
-
-| Keyword | Validation rule | Typical use in components |
-| :---- | :---- | :---- |
-| `oneOf` | Exactly one schema must match. | Single-choice fields: the editor picks one variant and fills it in (for example, one card type, one media type). |
-| `anyOf` | One or more schemas may match. | Array item types: each item in a list can independently match any of the declared schemas (for example, a mixed carousel, a section picker). |
-
-> ⚠️ Keep `$componentKey` values stable across schema versions. Changing a key breaks existing published content that references the old value, and storefront renderers that map on `componentKey` will stop matching.
-
-The examples below use a `CustomCarousel` component to illustrate both patterns.
-
-#### `oneOf` on a single field
-
-Use `oneOf` when an editor must choose exactly one variant for a field. In the example below, the `card` field accepts either an Image Card or a Text Card, not both at the same time.
-
-**File:** `cms/components/cms_component__CustomCarouselOneOf.jsonc`
-
-```json
-{
-  "$componentKey": "CustomCarouselOneOf",
-  "$componentTitle": "Custom Carousel oneOf",
-  "$singleton": false,
-  "$abstract": false,
-  "title": "Custom Carousel oneOf",
-  "description": "Custom Carousel with oneOf object",
-  "type": "object",
-  "required": [],
-
-  "properties": {
-    "card": {
-      "title": "Card",
-      "oneOf": [
-        {
-          "title": "Image Card",
-          "type": "object",
-          "properties": {
-            "image": {
-              "title": "Image URL",
-              "type": "string",
-              "widget": { "ui:widget": "media-gallery" }
-            },
-            "link": {
-              "title": "Link URL",
-              "type": "string",
-              "format": "uri"
-            }
-          }
-        },
-        {
-          "title": "Text Card",
-          "type": "object",
-          "properties": {
-            "text": {
-              "title": "Text Content",
-              "type": "string"
-            },
-            "link": {
-              "title": "Link URL",
-              "type": "string",
-              "format": "uri"
-            }
-          }
-        }
-      ]
-    }
-  }
-}
-```
-
-**What editors get:** a single `Card` field with a type picker. They choose "Image Card" or "Text Card" and fill in its fields. Only one variant is active at a time.
-
-**What your storefront does:** read the published `card` object and branch on which properties are present (`image` vs. `text`) to decide which renderer to use.
-
-#### `anyOf` inside an array
-
-Use `anyOf` on the `items` of an array field when editors should be able to add multiple items of different types in any combination. In the example below, the `cards` array can hold any mix of Image Cards and Text Cards.
-
-**File:** `cms/components/cms_component__CustomCarouselAnyOf.jsonc`
-
-```json
-{
-  "$componentKey": "CustomCarouselAnyOf",
-  "$componentTitle": "Custom Carousel anyOf",
-  "$singleton": false,
-  "$abstract": false,
-  "title": "Custom Carousel anyOf",
-  "description": "Custom Carousel with anyOf object",
-  "type": "object",
-  "required": [],
-
-  "properties": {
-    "cards": {
-      "title": "Cards",
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "title": "Image Card",
-            "type": "object",
-            "properties": {
-              "image": {
-                "title": "Image URL",
-                "type": "string",
-                "widget": { "ui:widget": "media-gallery" }
-              },
-              "link": {
-                "title": "Link URL",
-                "type": "string",
-                "format": "uri"
-              }
-            }
-          },
-          {
-            "title": "Text Card",
-            "type": "object",
-            "properties": {
-              "text": {
-                "title": "Text Content",
-                "type": "string"
-              },
-              "link": {
-                "title": "Link URL",
-                "type": "string",
-                "format": "uri"
-              }
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-**What editors get:** a `Cards` list with an **Add item** dropdown. Each click adds a new item, editors pick "Image Card" or "Text Card" per item, and items of different types can be freely mixed and reordered in the same list (Figure 1).
-
-![CMS Admin showing the Custom Carousel anyOf section with a Cards array containing an Image Card, a Text Card, and a second Image Card mixed together](<!-- REPLACE WITH HOSTED IMAGE URL: Screenshot_385.png -->)
-
-*Figure 1: The `Custom Carousel anyOf` section in the CMS Admin. The `Cards` array accepts Image Card and Text Card items in any order and combination. Editors use the "Adicionar item" dropdown to append a new item of either type.*
-
-**What your storefront does:** iterate over the `cards` array and dispatch each item to the appropriate renderer based on which properties are present.
-
-> ℹ️ `anyOf` and `oneOf` can each appear inside or outside an array. The examples above pair `oneOf` with a single field and `anyOf` with an array to illustrate how the **array context** (not the keyword) drives the key UI difference: a single type-picker vs. a growable list with per-item type selection.
+Use restricted lists on Content Types where commerce or promotional sections would not make sense, for example, blog posts or legal pages.
 
 ## Reviewing the published component shape
 
@@ -476,13 +477,6 @@ For the full content lifecycle (schema upload, authoring, publishing, delivery),
   linkTo="https://developers.vtex.com/docs/guides/defining-content-types-for-headless-stores"
   title="Defining content types for headless stores"
   description="Declare Content Types that expose your components through sections arrays and embedded relations."
-  linkTitle="See more"
-/>
-
-<WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores"
-  title="Understanding content modeling and architecture for headless stores"
-  description="Review modeling concepts, design principles, and recommended page patterns."
   linkTitle="See more"
 />
 
