@@ -95,24 +95,17 @@ A **Content Type** describes the shape of a page. **Components** are the buildin
 
 ```mermaid
 flowchart TD
-  Schema["Schema"]
+  Schema["Schema bundle"]
   CT["Content Type"]
-  Fields["Fields<br/>(slug, seo…)"]
+  Comp["Component"]
   Sections["sections array"]
-  CompA["Component: PromoBanner"]
-  CompB["Component: SiteHeader"]
-  FieldA["Field: title"]
-  FieldB["Field: links"]
+  Fields["Fields"]
 
-  Schema --> CT
-  Schema --> CompA
-  Schema --> CompB
-  CT --> Fields
+  Schema -->|"defines"| CT
+  Schema -->|"defines"| Comp
   CT --> Sections
-  Sections --> CompA
-  Sections --> CompB
-  CompA --> FieldA
-  CompB --> FieldB
+  Sections -->|"references"| Comp
+  Comp --> Fields
 ```
 
 **Relationship in practice:**
@@ -438,6 +431,8 @@ function Sections({ sections }: { sections: { componentKey: string; [key: string
 
 Each component receives the full section object as props, so field names in your JSON Schema map directly to the props your component expects. If a `componentKey` is not in your map, the section is silently skipped — this is a safe default during incremental rollout.
 
+> ℹ️ For full query parameter documentation (`locale`, `sort`, `order`, `content`, `scroll`), see the [Data Plane API reference](https://developers.vtex.com/docs/api-reference/data-plane-api).
+
 ## Recommended content modeling patterns
 
 The patterns below are common conventions for headless commerce storefronts. Names, components, and routes are yours to define. Nothing in this section exists until you add it to your schema bundle.
@@ -470,7 +465,7 @@ Some content applies across every page rather than to a single route. Model thes
 
 Fetch singleton entries by Content Type name (no slug) and wrap every page layout with the returned sections.
 
-ℹ️ **Navigation** is usually a component inside a header singleton, not its own page Content Type. **Banners** are components on page-level Content Types. Each page chooses its own banner stack.
+> ℹ️ **Navigation** is usually a component inside a header singleton, not its own page Content Type. **Banners** are components on page-level Content Types. Each page chooses its own banner stack.
 
 ### Page Content Types
 
@@ -560,14 +555,14 @@ Restricting `sections` with a custom `anyOf` (instead of `$ALLOW_ALL_COMPONENTS`
 \<Flex\>
 
 \<WhatsNextCard  
-  linkTo="<https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations>"  
+  linkTo="https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations"  
   title="Understanding CMS architecture and schema declarations"  
   description="Learn about CQRS, schema file organization, and the content lifecycle."  
   linkTitle="See more"  
 /\>
 
 \<WhatsNextCard  
-  linkTo="<https://developers.vtex.com/docs/guides/content-plugin>"  
+  linkTo="https://developers.vtex.com/docs/guides/content-plugin"  
   title="Content plugin"  
   description="Generate and upload schema bundles for your headless store."  
   linkTitle="See more"  
