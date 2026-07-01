@@ -1,25 +1,24 @@
 ---
-title: "Setting up the Headless CMS"
-excerpt: "Define your first Content Type and sync it with Headless CMS to make it available for editing in VTEX Admin."
-sidebar_label: "Integrating your storefront with Headless CMS"
+title: "Setting up the Headless CMS (legacy)"
+excerpt: "Define your first Content Type and sync it with Headless CMS (legacy) to make it available for editing in VTEX Admin."
 ---
 
-Now that [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) is integrated with your FastStore project, you'll define your own **Content Types** and **Sections** so editors can create and manage pages in the VTEX Admin.
+Define your own **Content Types** and **Sections** so editors can create and manage pages in the VTEX Admin.
 
 ## What you'll accomplish
 
-By the end of this step, you will have:
+By the end of this guide, you will have:
 
 - Created the CMS folder structure in your project for content type definitions
 - Defined your first Content Type (Landing Page) with SEO settings
-- Synced your CMS definitions to the Headless CMS app
+- Synced your CMS definitions to the Headless CMS (legacy) app
 - Verified that your Content Type appears in the Headless CMS interface
 
-This establishes the foundation for content editing workflows. In the next step, you'll learn to structure more complex Content Types and Sections.
+This establishes the foundation for content editing workflows. In the next guide, you'll learn to structure more complex Content Types and Sections.
 
 ## Before you begin
 
-This guide assumes you are starting without existing CMS-related files. If your project already includes `content-types.json` or `sections.json`, create only what’s missing. See [Step 1: Creating the CMS folder](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms#step-1-creating-the-cms-folder).
+This guide assumes you are starting without existing CMS-related files. If your project already includes `content-types.json` or `sections.json`, create only what's missing. See [Step 1: Creating the CMS folder](https://developers.vtex.com/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms#step-1-creating-the-cms-folder).
 
 ## Instructions
 
@@ -63,8 +62,8 @@ This guide assumes you are starting without existing CMS-related files. If your 
 
 | File name            | Description                                                                                                                                               |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `content-types.json` | An array of JSON objects that describes the **Content Types** available for customization in the Headless CMS app.                                        |
-| `sections.json`      | An array of JSON objects that describes the content structure of the frontend **Section** components available for customization in the Headless CMS app. |
+| `content-types.json` | An array of JSON objects that describes the **Content Types** available for customization in the Headless CMS (legacy) app.                                        |
+| `sections.json`      | An array of JSON objects that describes the content structure of the frontend **Section** components available for customization in the Headless CMS (legacy) app. |
 
 5. Update the `sections.json` file with an empty array:
 
@@ -124,7 +123,7 @@ This guide assumes you are starting without existing CMS-related files. If your 
   ]
   ```
 
-> ℹ️ Don't worry about the structure of this file for now, as we'll learn more about it later in this tutorial.
+> ℹ️ Don't worry about the structure of this file for now, as we'll learn more about it later in this track.
 > However, notice that we have defined the **Custom Page** Content Type.
 
 7. Save your changes in the `content-types.json` file.
@@ -134,7 +133,7 @@ This guide assumes you are starting without existing CMS-related files. If your 
 
 ### Step 2: Syncing your changes
 
-Let's now sync the changes with the Headless CMS app and see what happens.
+Let's now sync the changes with the Headless CMS (legacy) app and see what happens.
 
 1. Open another terminal and log in to your VTEX account.
 
@@ -148,7 +147,7 @@ Let's now sync the changes with the Headless CMS app and see what happens.
 
 3. Change to the root directory of your FastStore project.
 
-4. Sync your changes in the `cms` folder with the Headless CMS app:
+4. Sync your changes in the `cms` folder with the Headless CMS (legacy) app:
 
   ```bash
   yarn cms-sync
@@ -171,8 +170,8 @@ Once your changes are synced with the Headless CMS, the terminal will show the f
 ![cms-custom-page](https://vtexhelp.vtexassets.com/assets/docs/src/headless-custom-page___c952670d0592c3c66202d6702af3fc17.png)
 
 You should now see the content type we created in the previous step available for use in the Headless CMS app.
-However, no Sections will be available yet. We'll learn more about this in the following part of this track, [Structuring Content Types and Sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections).
+However, no Sections will be available yet. We'll learn more about this in the following guide, [Structuring Content Types and Sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections).
 
 ## Next step
 
-Now that you've created your first Content Type, learn to structure more complex Content Types and Sections: [Structuring Content Types and Sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections)
+Learn to structure more complex Content Types and Sections: [Structuring Content Types and Sections](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections)
