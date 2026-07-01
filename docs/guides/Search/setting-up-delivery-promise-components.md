@@ -66,7 +66,7 @@ To use Delivery Promise, customers must provide a delivery address early in thei
    | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | `shopper-location-setter`  | **Required.** Collects the shopper's location (postal code or equivalent). This value drives all Delivery Promise subsequent availability calculations and filters. |
    | `shipping-method-selector` | Optional. A control for choosing between delivery and pickup after setting a location.                                                                              |
-   | `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after setting a location.                                                                                 |
+   | `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after setting a location.                                                                                |
 
    >ℹ️ The `shopper-location-setter` block is required, and you must always include it in the header. `shipping-method-selector` and `pickup-point-selector` are optional. These blocks complement the location setter but do not replace it, since both depend on the location already set in the session. Add them only if you want to expose additional controls in the UI. Otherwise, keep the header simple: either `shopper-location-setter` alone, or `shopper-location-setter` paired with one of the selectors. Using all three together is possible but uncommon.
 
@@ -155,11 +155,11 @@ To use Delivery Promise, customers must provide a delivery address early in thei
 
    #### `shopper-location-setter`
 
-   | Prop                         | Type      | Default     | Description                                                                                                            |
-   | ---------------------------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+   | Prop                         | Type      | Default     | Description                                                                                                             |
+   | ---------------------------- | --------- | ----------- | ----------------------------------------------------------------------------------------------------------------------- |
    | `required`                   | `boolean` | `false`     | When `true`, opens a non-dismissible postal code modal until setting a valid code. When `false`, uses the popover flow. |
-   | `mode`                       | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                     |
-   | `showLocationDetectorButton` | `boolean` | `false`     | Shows the control that uses the browser geolocation API to suggest the postal code. Available only on this block.      |
+   | `mode`                       | `string`  | `"default"` | Display mode: `default` or `icon`.                                                                                      |
+   | `showLocationDetectorButton` | `boolean` | `false`     | Shows the control that uses the browser geolocation API to suggest the postal code. Available only on this block.       |
 
    #### `shipping-method-selector`
 
