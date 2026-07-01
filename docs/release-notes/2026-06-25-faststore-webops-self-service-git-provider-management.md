@@ -9,13 +9,13 @@ tags:
   - WebOps
 ---
 
-FastStore WebOps now provides a self-service interface for changing the GitHub organization and repository connected to your project. This feature streamlines the process of moving FastStore projects between organizations or repositories, eliminating the need to open support tickets for repository migrations.
+FastStore WebOps now provides a self-service interface for changing the GitHub organization and repository connected to your project. This feature streamlines moving FastStore projects between organizations or repositories, eliminating the need to open support tickets for repository migrations.
 
 ## What has changed?
 
 The **Integrations** tab in the FastStore WebOps dashboard now includes a **Git Provider** section where you can configure the GitHub organization and repository associated with your FastStore project.
 
-Before, moving a FastStore project to a different GitHub organization or repository required opening a ticket with VTEX Support and providing detailed information including repository IDs, installation IDs, and account details. The process involved multiple manual steps and coordination with the Support team.
+Before, moving a FastStore project to a different GitHub organization or repository required opening a ticket with VTEX Support and providing detailed information, including repository IDs, installation IDs, and account details. The process involved multiple manual steps and coordination with the Support team.
 
 Now, you can change your project's connected repository directly from the WebOps dashboard. The **Git Provider** card allows you to:
 
@@ -24,11 +24,11 @@ Now, you can change your project's connected repository directly from the WebOps
 
 ## Why did we make this change?
 
-This change was made to simplify the repository migration process and give developers more control over their FastStore project configuration.
+This change simplifies the repository migration process and gives developers more control over their FastStore project configuration.
 
 The feature is available to all FastStore projects using WebOps that meet the required permissions (`Owner` role in VTEX Admin and `Admin` role in GitHub repositories).
 
->⚠️ The repository change feature isn't available for private GitHub instances. If your project is connected to a private GitHub instance, the option will not be displayed.
+>⚠️ The repository change feature isn't available for private GitHub instances. The WebOps dashboard won't display the option if your project is connected to a private GitHub instance.
 
 ## What needs to be done?
 
