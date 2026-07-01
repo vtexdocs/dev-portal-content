@@ -5,10 +5,10 @@ type: "added"
 createdAt: "2026-07-01T00:00:00.000Z"
 updatedAt: "2026-07-01T00:00:00.000Z"
 hidden: false
-excerpt: "Customize the assisted-sales journey in Sales App through predefined extension points. The feature is in closed beta and is available for all VTEX stores."
+excerpt: "Customize the assisted-sales journey in Sales App through predefined extension points."
 ---
 
-[VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility) lets merchants customize the default assisted-sales journey by rendering components and adding capabilities at predefined slots in the Sales App interface. The feature is in open beta for all VTEX stores.
+[VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility) lets merchants customize the default assisted-sales journey by rendering components and adding capabilities at predefined slots in the Sales App interface. The feature is available in open beta for all VTEX stores.
 
 ## What changed?
 
@@ -24,10 +24,10 @@ Extensions can integrate with external APIs and interact with data from other ap
 - **Stability:** application stability is preserved even when customizations fail.
 - **Compatibility:** extensions remain compatible with existing customizations.
 
-Common use cases include loyalty program integrations, additional services (such as warranties or insurance), integration with VTEX solutions outside the standard Sales App flow, and centralizing seller tasks in a single platform.
+Common use cases include loyalty program integrations, additional services (such as warranties or insurance), integrations with VTEX solutions outside the standard Sales App flow, and consolidation of seller tasks in a single platform.
 
 ## What needs to be done?
 
-Implementation is the responsibility of merchants and partners. Follow the [Sales App extensions implementation](https://developers.vtex.com/docs/guides/sales-app-extensions-implementation) guide to get started.
+The implementation of **VTEX Sales App Extensibility** is the responsibility of merchants and partners. Follow the [Sales App extensions implementation](https://developers.vtex.com/docs/guides/sales-app-extensions-implementation) guide to get started.
 
 > ℹ️ Use the [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill) as an AI assistant throughout the definition and implementation process.
