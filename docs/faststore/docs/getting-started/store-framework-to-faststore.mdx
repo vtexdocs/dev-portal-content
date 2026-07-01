@@ -1,0 +1,78 @@
+---
+title: "Migrating from Store Framework to FastStore"
+createdAt: "2026-06-29T00:00:00.000Z"
+---
+
+In this guide, you'll learn how to migrate your storefront from [Store Framework](https://developers.vtex.com/docs/guides/store-framework) to [FastStore](https://developers.vtex.com/docs/guides/faststore) within the same VTEX account. The same-account migration approach avoids syncing Master Data between accounts and makes it easier to reuse existing VTEX IO apps. 
+
+By the end, you'll know how to prepare both storefronts to run in parallel, validate the new storefront with real traffic, and complete the cutover.
+
+## Migration overview
+
+The migration runs both storefronts in parallel within the same account. Your Store Framework storefront stays live while you develop, validate, and gradually roll out the FastStore storefront.
+
+In the following table, see the role of each storefront during the migration:
+
+| Stage | Store Framework (current storefront) | FastStore (new storefront) |
+| ----- | ------------------------------------ | ----------------------------- |
+| Development | Remains live. No changes are made. | Develop the FastStore project and connect the repository to WebOps. For more details, see the [Before you begin](#before-you-begin) section. |
+| VTEX IO apps | Map installed apps and document their settings. | Review app compatibility and reinstall or replace apps as needed. For more details, see [step 1 - Auditing VTEX IO apps for compatibility](#step-1---auditing-vtex-io-apps-for-compatibility) |
+| Content | Site Editor content remains as is. | Recreate storefront content by using [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For more details, see [Step 2 - Recreating the storefront content](#step-2---recreating-the-storefront-content). |
+| Search  | Intelligent Search settings remain as is. | Rebuild Intelligent Search settings. For more details, see [Step 3 - Rebuilding the Intelligent Search settings](#step-3---rebuilding-the-intelligent-search-settings). |
+| Production domain | Keep serving the live production domain. | Add the production domain to WebOps so FastStore is ready for validation and cutover, but it still doesn't receive live traffic. For more details, see [Step 4 - Adding the production domain to WebOps](#step-4---adding-the-production-domain-to-webops) |
+| Traffic splitting | Shares live traffic with FastStore during the transition. | Gradually receives traffic, starting at 0%, until validated. For more details, see [Step 5 - Requesting the traffic split](#step-5---requesting-the-traffic-split). |
+| Completion | Retired after a successful cutover. | Becomes the live storefront. |
+
+## Before you begin
+
+Before starting the migration, create the FastStore project that will receive your storefront development. To start one, follow the guides in the FastStore [Getting started](https://developers.vtex.com/docs/guides/faststore/getting-started-overview) track.
+
+Once you complete the track, you'll have a GitHub repository connected to your account that you can deploy through WebOps.
+
+## Instructions
+
+### Step 1 - Auditing VTEX IO apps for compatibility
+
+Each storefront technology manages its own VTEX IO app installations, permissions, and URLs. Some apps that work in Store Framework may need a custom integration or an alternative in FastStore. To prepare your apps for FastStore, follow these instructions:
+
+1. Map all apps (`vendor.name` and current version) used by the Store Framework storefront.
+2. Check the compatibility of each app with FastStore.
+3. For incompatible apps, choose to build a custom integration, replace the app with an alternative, or remove it.
+4. Document all current app settings, including secrets, API keys, and toggles.
+5. Recreate the app settings in the FastStore storefront.
+6. Review and update the permissions and policies required by each app.
+
+>ℹ️ App data and app settings can't be transferred automatically between storefront technologies, so you must recreate them.
+
+### Step 2 - Recreating the storefront content
+
+Recreate all necessary pages, components, and content in the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) for your FastStore project.
+
+>ℹ️ Content migration between Store Framework and FastStore CMS isn't supported, so plan enough time to recreate and review the content manually.
+
+### Step 3 - Rebuilding the Intelligent Search settings
+
+Rebuild your [Intelligent Search](https://help.vtex.com/docs/tutorials/intelligent-search-overview) configuration for the FastStore storefront, and plan enough time to reproduce and test all search settings.
+
+>ℹ️ Reproduce search-related settings, such as merchandising rules, synonyms, and relevance, and test the results before sending live traffic to FastStore.
+
+### Step 4 - Adding the production domain to WebOps
+
+Add your production domain to FastStore WebOps by following these steps:
+
+1. In your VTEX Admin, go to **Storefront > FastStore WebOps**.
+2. Navigate to the **Settings** tab.
+3. In the **Production domain** card, select your production domain from the dropdown list under the **Host** section.
+4. Click `Add`.
+
+    ![adding-host-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/adding-host-webops.png)
+
+>ℹ️ Adding the domain doesn't change your live storefront, which keeps pointing to Store Framework until you request a traffic split.
+
+### Step 5 - Requesting the traffic split
+
+Once you've completed the previous steps, open a ticket with [VTEX Support](https://help.vtex.com/en/support) at least five days before your planned migration date to request traffic splitting between Store Framework and FastStore.
+
+This gradual rollout allows you to slowly redirect users from the old store to the new one, run A/B tests with your analytics or testing tools, monitor performance, and ensure stability before going fully live on FastStore.
+
+Once the FastStore storefront is validated, make it your live store and retire the Store Framework storefront.
