@@ -19,7 +19,7 @@ The CMS uses [JSON Schema](https://json-schema.org/) to declare every Content Ty
 | :---- | :---- |
 | `type` | Declares the data shape (`string`, `number`, `boolean`, `object`, `array`). |
 | `properties` | Lists the fields inside an `object`. |
-| `required` | Names fields that must complete before saving. |
+| `required` | Names fields that must be completed before saving. |
 | `items` | Defines the shape of each element in an `array`. |
 | `$ref` | Points to another definition in the same schema bundle. |
 
@@ -123,15 +123,15 @@ A Content Type holds fixed fields (always present on every entry) and a dynamic 
 
 | Scenario | Content Type | Component |
 | :---- | :---- | :---- |
-| Represents a routable **page** | ✅ |  |
-| Needs **multiple instances** (many landing pages) | ✅ |  |
-| Only **one instance** store-wide | ✅ (`$singleton: true`) |  |
-| **Reusable UI block** on one or more pages |  | ✅ |
-| **Nested inside** another component |  | ✅ |
-| Needs a **slug** or identifier field | ✅ |  |
+| Represents a routable **page** | ✅ | |
+| Needs **multiple instances** (many landing pages) | ✅ | |
+| Only **one instance** store-wide | ✅ (`$singleton: true`) | |
+| **Reusable UI block** on one or more pages | | ✅ |
+| **Nested inside** another component | | ✅ |
+| Needs a **slug** or identifier field | ✅ | |
 | Shared across the store (header, footer) | ✅ (singleton Content Type) | ✅ (component inside it) |
 
-> ℹ️ if it has a URL, model it as a Content Type. If it renders a block on a page, model it as a component.
+> ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page, model it as a component.
 
 ## Design principles
 
@@ -444,7 +444,7 @@ Some content applies across every page rather than to a single route. Model thes
 | :---- | :---- | :---- | :---- |
 | **Header** | `globalHeader` | `SiteHeader`, `AnnouncementBar` | Top navigation, logo, utility links. |
 | **Footer** | `globalFooter` | `SiteFooter` | Links, social icons, copyright. |
-| **Navigation** | Inside a header component | Link arrays, menu items | Main menu maintains once. |
+| **Navigation** | Inside a header component | Link arrays, menu items | Main menu is maintained once. |
 | **Banners** | On page Content Types | `PromoBanner`, `TextBanner` | Promotional blocks per page. |
 
 ```jsonc
@@ -554,14 +554,14 @@ Restricting `sections` with a custom `anyOf` (instead of `$ALLOW_ALL_COMPONENTS`
 \<Flex\>
 
 \<WhatsNextCard  
-  linkTo="https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations"  
+  linkTo="<https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations>"  
   title="Understanding CMS architecture and schema declarations"  
   description="Learn about CQRS, schema file organization, and the content lifecycle."  
   linkTitle="See more"  
 /\>
 
 \<WhatsNextCard  
-  linkTo="https://developers.vtex.com/docs/guides/content-plugin"  
+  linkTo="<https://developers.vtex.com/docs/guides/content-plugin>"  
   title="Content plugin"  
   description="Generate and upload schema bundles for your headless store."  
   linkTitle="See more"  
