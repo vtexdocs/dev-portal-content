@@ -9,17 +9,26 @@ excerpt: "Learn how to define reusable CMS components: file structure, required 
 
 A component is a reusable JSON Schema object that groups related fields, a link, a banner, an SEO block, or a full page section. In a headless project, you declare each component in its own `.jsonc` file under `cms/components/`, merge them into a schema bundle with the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin), and upload the bundle to the Schema Registry.
 
-This guide covers how to define components: where files live, which properties are required, and four annotated examples: a reusable building block, a page section, nested composition with `$ref`, and polymorphic fields.
+This guide covers how to define components, including file structure, required properties, and four annotated examples: a reusable building block, a page section, nested composition with `$ref`, and polymorphic fields.
 
-<!-- 
+<!-- TODO: Uncomment when "Understanding content modeling and architecture for headless stores" is published.
 > ℹ️ For modeling concepts (Content Type vs. component, singleton patterns, recommended page structures), see [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores). 
 !-->
+
+```mermaid
+flowchart LR
+    A["Component files\ncms/components/*.jsonc\ncms/pages/*.jsonc"] -->|"vtex content:generate-schema"| B["schema.json bundle"]
+    B -->|"vtex content upload-schema"| C["Schema Registry"]
+    C --> D["CMS Admin\n(section picker and forms)"]
+    C --> E["Data Plane API\n(content delivery)"]
+```
 
 ## Before you begin
 
 The Content plugin provides the CLI commands used in this guide to generate and upload your schema bundle. Make sure it is installed before proceeding by following the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) guide.
 
-<!--  * [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
+<!-- TODO: Uncomment when companion guides are published.
+ * [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
  * [Defining content types for headless stores](https://developers.vtex.com/docs/guides/defining-content-types-for-headless-stores) !-->
 
 ## Distinguishing components from Content Types
@@ -35,7 +44,7 @@ Both components and Content Types are JSON Schema objects, but they play differe
 | **Referenced from pages** | Embedded with `$ref` or listed in a `sections` array. | Creates entries fetched by Content Type name or slug. |
 | **Storefront mapping** | Map `$componentKey` to a UI block or nested field renderer. | Map Content Type name to a page route and layout. |
 
-<!--
+<!-- TODO: Uncomment when "Understanding content modeling and architecture for headless stores" is published.
 > ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page or groups fields reused elsewhere, model it as a component. See [Choosing between a Content Type and a component](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores#choosing-between-a-content-type-and-a-component). !-->
 
 Sections are components that you add to a page through a Content Type's `sections` array. Reusable building blocks (such as `Link` or `SEO`) are usually embedded inside sections or Content Types with `$ref` instead of appearing in the section picker.
@@ -63,7 +72,7 @@ your-headless-project/
     └── …                          # Your storefront implementation
 ```
 
-You can use another directory; the CLI accepts custom paths as arguments. What matters is the file prefix.
+You can use a different directory. The CLI accepts custom paths as arguments. The file prefix is what determines discovery.
 
 ### Naming component files
 
@@ -78,17 +87,28 @@ You can use another directory; the CLI accepts custom paths as arguments. What m
 
 ### Uploading the schema bundle
 
-Generate and upload the bundle with the headless base schema:
+Generate and upload the bundle:
 
 ```shell
-vtex content generate-schema cms/components cms/pages \
-  --out schema.json \
-  --base vtex.headless
+vtex content:generate-schema cms/components cms/pages
+  --out schema.json
+```
 
+> ⚠️ For headless projects that use a custom base schema, pass `--remote <url>` to point to a publicly accessible JSON Schema file, or `--local <path>` to use a local file. If your project extends `vtex.faststore`, omit both flags. The command fetches the FastStore schema automatically.
+
+```shell
 vtex content upload-schema schema.json
 ```
 
-The `generate-schema` command also creates `#/$defs/$ALLOW_ALL_COMPONENTS`, a generated list of every component in your bundle. Content Types reference it for open section pickers. Do not hand-author this definition in individual files.
+On success, the CLI prints:
+
+```shell
+✓ Validating schema.json
+✓ Uploading schema to registry for account: <yourstore>
+✓ Schema uploaded successfully
+```
+
+The `generate-schema` command also creates `#/$defs/$ALLOW_ALL_COMPONENTS`, a generated list of every component in your bundle. Content Types reference it for open section pickers. See [Making components available on pages](#making-components-available-on-pages). Do not hand-author this definition in individual files.
 
 ## Declaring required and optional properties
 
@@ -107,7 +127,7 @@ A component schema is a JSON Schema `object` with CMS-specific metadata.
 | `title` | Optional | Form section title (often matches `$componentTitle` for sections). |
 | `description` | Optional | Help text shown in the Admin form. |
 | `required` | Optional | Lists fields that must be filled before saving. |
-| `widget` | Optional | Overrides the default Admin form widget for a field. For example, `{ "ui:widget": "media-gallery" }` renders a media picker instead of a plain text input. |
+| `widget` | Optional | Applied to individual field definitions inside `properties` (not at the component root). Overrides the default Admin form widget for that field. For example, `{ "ui:widget": "media-gallery" }` renders a media picker instead of a plain text input. |
 
 ### Reusable building blocks and page sections
 
@@ -120,11 +140,11 @@ Set `$abstract: true` on building blocks that should never be placed directly on
 
 ## Defining a reusable building block
 
-The example below defines a `Link` component with three fields. Editors never add `Link` as a standalone section. Other components and Content Types embed it with `$ref`.
+The example below defines a `Link` component with three fields. `Link` is never added as a standalone section. Other components and Content Types embed it with `$ref`.
 
 **File:** `cms/components/cms_component__Link.jsonc`
 
-```json
+```jsonc
 {
   // Unique ID: must match the filename segment after cms_component__
   "$componentKey": "Link",
@@ -164,7 +184,7 @@ The example below defines a `CallToAction` section, a page block you add through
 
 **File:** `cms/components/cms_component__CallToAction.jsonc`
 
-```json
+```jsonc
 {
   "$componentKey": "CallToAction",
   "$componentTitle": "Call To Action",
@@ -210,7 +230,7 @@ The example below updates `CallToAction` to reuse the `Link` component from the 
 
 **File:** `cms/components/cms_component__CallToAction.jsonc`
 
-```json
+```jsonc
 {
   "$componentKey": "CallToAction",
   "$componentTitle": "Call To Action",
@@ -258,11 +278,11 @@ The examples below use a `CustomCarousel` component to illustrate both patterns.
 
 ### Single field without an array
 
-The example below uses `oneOf` on a single `card` field. You pick exactly one variant, image card or text card, and fill in its fields. You could also use `anyOf` here with the same structural result; the keyword choice depends on your validation intent.
+The example below uses `oneOf` on a single `card` field. You pick exactly one variant, image card or text card, and fill in its fields. You could also use `anyOf` here with the same structural result. The keyword choice depends on your validation intent.
 
 **File:** `cms/components/cms_component__CustomCarouselOneOf.jsonc`
 
-```json
+```jsonc
 {
   "$componentKey": "CustomCarouselOneOf",
   "$componentTitle": "Custom Carousel oneOf",
@@ -320,11 +340,11 @@ The example below uses `oneOf` on a single `card` field. You pick exactly one va
 
 ### Array field with multiple items
 
-The example below uses `anyOf` on the `items` of a `cards` array. Editors can add multiple items of different types in any order and combination. You could also use `oneOf` on array items; the keyword choice again depends on validation intent.
+The example below uses `anyOf` on the `items` of a `cards` array. Multiple items of different types can be added in any order and combination. You could also use `oneOf` on array items. The keyword choice again depends on validation intent.
 
 **File:** `cms/components/cms_component__CustomCarouselAnyOf.jsonc`
 
-```json
+```jsonc
 {
   "$componentKey": "CustomCarouselAnyOf",
   "$componentTitle": "Custom Carousel anyOf",
@@ -383,7 +403,7 @@ The example below uses `anyOf` on the `items` of a `cards` array. Editors can ad
 
 ![custom-carosel](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/CMS/Integrations/headless/Screenshot_385.png)
 
-*The `Custom Carousel anyOf` section in the CMS Admin. The `Cards` array accepts Image Card and Text Card items in any order and combination. Editors use the "Adicionar item" dropdown to append a new item of either type.*
+In the image above, there's the `Custom Carousel anyOf` section in the CMS Admin. The `Cards` array accepts Image Card and Text Card items in any order and combination.
 
 **What your storefront does:** iterate over the `cards` array and dispatch each item to the appropriate renderer based on which properties are present.
 
@@ -397,7 +417,7 @@ Components become editable page blocks when a Content Type references them throu
 
 Reference the generated `$ALLOW_ALL_COMPONENTS` definition:
 
-```json
+```jsonc
 // cms/pages/cms_content_type__landingPage.jsonc
 {
   "properties": {
@@ -409,13 +429,13 @@ Reference the generated `$ALLOW_ALL_COMPONENTS` definition:
 }
 ```
 
-Every component in your bundle (including `CallToAction` and `PromoBanner`) appears in the Admin section picker. Building blocks such as `Link` and `SEO` are meant to be embedded with `$ref`, not added as standalone sections; mark them with `$abstract: true` to signal that intent.
+Every component in your bundle (including `CallToAction` and `PromoBanner`) appears in the Admin section picker. Building blocks such as `Link` and `SEO` are meant to be embedded with `$ref`, not added as standalone sections. Mark them with `$abstract: true` to signal that intent to the Admin.
 
 ### Restricting sections
 
 When a Content Type should allow only certain sections, replace `$ALLOW_ALL_COMPONENTS` with an explicit `anyOf` list:
 
-```json
+```jsonc
 "sections": {
   "title": "Page sections",
   "type": "array",
@@ -433,9 +453,9 @@ Use restricted lists on Content Types where commerce or promotional sections wou
 
 ## Reviewing the published component shape
 
-After adding a `CallToAction` section to a landing page and publish, the Data Plane returns content shaped like this:
+After adding a `CallToAction` section to a landing page and publishing it, the Data Plane returns content shaped like this:
 
-```json
+```jsonc
 {
   "componentKey": "landingPage",
   "slug": "summer-sale",
