@@ -1,12 +1,11 @@
 ---
-
-## title: "VTEX Ads API: New attribution breakdown and halo effect metrics"
-
+title: "VTEX Ads API: New attribution breakdown and halo effect metrics"
 slug: "2026-06-29-vtex-ads-api-new-attribution-breakdown-and-halo-effect-metrics"
 hidden: false
 type: "added"
 createdAt: "2026-06-29T12:00:00.000Z"
 excerpt: "Starting July 1, 2026, the Ads API will return view-attributed and halo effect metric breakdowns across campaigns, ad groups, and ads. The ROAS field will reflect a consolidated click-and-view attribution model across all ad formats, and for Sponsored Products this means a change from the previous click-only model."
+---
 
 Starting **July 1, 2026**, the **VTEX Ads API** `metrics` object, returned in campaign, ad group, and ad responses, will include new fields that break down performance by attribution type and expose halo effect data. Additionally, the `roas` field will reflect a consolidated click-and-view attribution model across all ad formats.
 
@@ -37,7 +36,7 @@ The following fields have been added to the `metrics` object across campaign, ad
 - `halo_orders`: Number of orders from halo effect purchases
 - `halo_items`: Number of items from halo effect purchases
 
-The `roas` field will reflect a consolidated click-and-view attribution model across all ad formats. 
+The `roas` field will reflect a consolidated click-and-view attribution model across all ad formats.
 
 ## What needs to be done?
 
@@ -46,4 +45,3 @@ The `roas` field will reflect a consolidated click-and-view attribution model ac
 - No action is required to receive the new fields: they are returned automatically in existing API responses.
 
 > ℹ️ Learn more about the VTEX Ads metrics change in the announcement: [New ROAS calculation methodology for Sponsored Products](https://help.vtex.com/announcements/2026-07-01-new-roas-calculation-methodology-for-sponsored-products).
-
