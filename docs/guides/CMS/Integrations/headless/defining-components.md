@@ -16,11 +16,17 @@ This guide covers how to define components, including file structure, required p
 !-->
 
 ```mermaid
-flowchart LR
-    A["Component files\ncms/components/*.jsonc\ncms/pages/*.jsonc"] -->|"vtex content:generate-schema"| B["schema.json bundle"]
-    B -->|"vtex content upload-schema"| C["Schema Registry"]
-    C --> D["CMS Admin\n(section picker and forms)"]
-    C --> E["Data Plane API\n(content delivery)"]
+flowchart TD
+    A["Component files\ncms/components/ · cms/pages/"]
+    B(["vtex content:generate-schema"])
+    C["schema.json"]
+    D(["vtex content upload-schema"])
+    E["Schema Registry"]
+    F["CMS Admin"]
+    G["Data Plane API"]
+
+    A --> B --> C --> D --> E --> F
+    E --> G
 ```
 
 ## Before you begin
