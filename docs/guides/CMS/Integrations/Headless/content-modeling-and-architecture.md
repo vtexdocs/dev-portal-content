@@ -1,5 +1,11 @@
-
-# Content modeling and architecture for headless stores
+---
+title: "Content modeling and architecture for headless stores"
+hidden: false
+slug: "content-modeling-and-architecture-for-headless-stores"
+createdAt: "2026-07-01T12:00:00.000Z"
+updatedAt: "2026-07-01T12:00:00.000Z"
+excerpt: "Learn how to model and consume CMS content in headless storefronts: JSON Schema structure, Content Types, components, and Data Plane API consumption patterns."
+---
 
 Content modeling defines what can be created on the CMS. Architecture defines how that content moves from your repository to the CMS Admin and, after publishing, to your storefront.
 
