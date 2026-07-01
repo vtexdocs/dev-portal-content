@@ -6,7 +6,7 @@ excerpt: "Choose the VTEX business model that fits your operation."
 createdAt: "2026-06-16T00:00:00.000Z"
 ---
 
-Your business model defines how your VTEX operation is structured, how catalogs, prices, languages, and integrations are managed, and how your store connects to other markets and sellers.
+Your business model determines how to structure your VTEX operation, manage catalogs, prices, languages, and integrations, and connect your store to other markets and sellers.
 
 This section helps you choose the implementation path that matches your business goal:
 
