@@ -401,7 +401,7 @@ The example below uses `anyOf` on the `items` of a `cards` array. Multiple items
 
 **What you get in the Admin:** a `Cards` list with an **Add item** dropdown. Each click adds a new item, you pick "Image Card" or "Text Card" per item, and items of different types can be freely mixed and reordered in the same list.
 
-![custom-carosel](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/CMS/Integrations/headless/Screenshot_387.png)
+![custom-carosel](https://vtexhelp.vtexassets.com/assets/docs/src/defining-components___78ba6194d85ac97df5c9f57d63a685e7.png)
 
 In the image above, there's the `Custom Carousel anyOf` section in the CMS Admin. The `Cards` array accepts Image Card and Text Card items in any order and combination.
 
