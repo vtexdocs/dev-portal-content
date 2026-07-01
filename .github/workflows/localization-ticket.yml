@@ -230,7 +230,7 @@ jobs:
           DAYS_TO_DUE=$((DAYS_TO_FOLLOWING_MONDAY + 4 + EXTRA_WEEKS * 7))
           JIRA_DUE_DATE=$(date -u -d "${TODAY} + ${DAYS_TO_DUE} days" +%Y-%m-%d)
 
-          PR_BODY=$(echo "$PR_BODY_RAW" | sed \
+          PR_BODY=$(echo "$PR_BODY_RAW" | strip_pr_description_sections | sed \
             -e 's/^#### /h4. /' \
             -e 's/^### /h3. /' \
             -e 's/^## /h2. /' \
