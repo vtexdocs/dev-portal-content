@@ -3,7 +3,7 @@ title: "Defining components"
 hidden: false
 slug: "defining-components"
 createdAt: "2026-06-29T12:00:00.813Z"
-updatedAt: "2026-06-29T12:00:00.813Z"
+updatedAt: "2026-07-01T12:00:00.813Z"
 excerpt: "Learn how to define reusable CMS components: file structure, required properties, and annotated examples covering building blocks, page sections, and nested composition with $ref."
 ---
 
