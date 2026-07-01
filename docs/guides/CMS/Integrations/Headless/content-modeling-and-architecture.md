@@ -552,20 +552,20 @@ Restricting `sections` with a custom `anyOf` (instead of `$ALLOW_ALL_COMPONENTS`
 
 ## Related resources
 
-\<Flex\>
+<Flex>
 
-\<WhatsNextCard  
+<WhatsNextCard  
   linkTo="https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations"  
   title="Understanding CMS architecture and schema declarations"  
   description="Learn about CQRS, schema file organization, and the content lifecycle."  
   linkTitle="See more"  
-/\>
+/>
 
-\<WhatsNextCard  
+<WhatsNextCard  
   linkTo="https://developers.vtex.com/docs/guides/content-plugin"  
   title="Content plugin"  
   description="Generate and upload schema bundles for your headless store."  
   linkTitle="See more"  
-/\>
+/>
 
-\</Flex\>
+</Flex>
