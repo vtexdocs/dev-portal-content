@@ -19,7 +19,7 @@ This guide covers the API operations needed to configure and operate **Sales Tea
 
 Sales Team Management is built around three core entities:
 
-- **Organization Unit (OU)**: A node in the sales team hierarchy. Every unit must have the `type` field set to `Sales Team`. Units without a `parentId` are root-level units.
+- **Organization Unit (OU)**: A node in the sales team hierarchy. Every unit must have the `type` field set to `Sales Team`. New units are always created at the root level and can later be moved to become child units of another unit.
 - **User**: A VTEX account user assigned to an organization unit. Users inherit the contracts linked to their unit.
 - **Contract**: A B2B contract (stored in Master Data) linked to an organization unit via the `contractIds` scope. All users in the unit gain access to the contracts linked to it.
 
@@ -27,8 +27,8 @@ Sales Team Management is built around three core entities:
 
 Follow this sequence when setting up Sales Team Management for the first time:
 
-1. Create root units using [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1). Don't include the `parentId` parameter.
-2. Create child units with the same endpoint, passing the root unit's ID as `parentId`.
+1. Create the units you need using [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1). Every unit is created at the root level.
+2. Build the hierarchy by moving units under their parent with [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path), passing the parent unit's ID as `parentId`. Units that should stay at the top of the hierarchy don't need to be moved.
 3. Add users to each unit using [Add user to organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users).
 4. Link B2B contracts to the appropriate units using [Create organization unit scope](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/scopes/-scope-).
 5. Verify the hierarchy using [Get all children organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/children) and [Get root organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/roots).
@@ -46,9 +46,9 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 | `GET` | [Get root organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/roots) | Returns all top-level units (no parent). |
 | `GET` | [Search organization units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1) | Lists all units with pagination. Always set `type=Sales Team`. |
 | `GET` | [Get organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-) | Returns the full details of a unit by ID. |
-| `POST` | [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) | Creates a unit. You must include in the request body the `type` parameter and set it to `Sales Team`. When creating a root unit, don't include the `parentId` parameter. |
+| `POST` | [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) | Creates a unit at the root level. You must include in the request body the `type` parameter and set it to `Sales Team`. This endpoint always creates root units; to make a unit a child of another, move it afterward with [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path). |
 | `PATCH` | [Rename organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#patch-/api/organization-units/v1/-organizationUnitId-) | Updates the unit name without changing its position in the hierarchy. |
-| `PUT` | [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path) | Moves a unit to a new parent. All child units move with it. Send `parentId: null` to promote to the root level. |
+| `PUT` | [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path) | Moves a unit under a new parent by passing the target parent's ID as `parentId` in the request body. This is how you turn a root unit into a child unit. All child units move with it. Omit `parentId` or send `parentId: null` to promote the unit back to the root level. |
 | `DELETE` | [Delete organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-) | Permanently deletes a unit. This action can’t be undone. Before proceeding, confirm the unit has no linked users or child units. |
 
 ---
