@@ -9,7 +9,7 @@ updatedAt: "2026-06-17T10:00:00.000Z"
 
 > ⚠️ This feature is currently in beta, and we're working to improve it. If you have any questions, please contact our [Support](https://help.vtex.com/en/support).
 
-**Sales Team Management** lets you organize your sales force into a hierarchical structure using [Organization Units (OUs)](https://help.vtex.com/en/docs/tutorials/organizational-units). Each unit can contain users and B2B contracts, allowing you to control which commercial conditions are available to each team.
+**Sales Team Management** allows you to organize your sales force into a hierarchical structure using [Organization Units (OUs)](https://help.vtex.com/en/docs/tutorials/organizational-units). Each unit can contain users and B2B contracts, giving you control over which commercial conditions are available to each team.
 
 This guide covers the API operations needed to configure and operate **Sales Team Management** programmatically: creating the unit hierarchy, assigning users, and linking B2B contracts.
 
@@ -48,8 +48,8 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 | `GET` | [Get organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-) | Returns the full details of a unit by ID. |
 | `POST` | [Create organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) | Creates a unit. You must include in the request body the `type` parameter and set it to `Sales Team`. When creating a root unit, don't include the `parentId` parameter. |
 | `PATCH` | [Rename organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#patch-/api/organization-units/v1/-organizationUnitId-) | Updates the unit name without changing its position in the hierarchy. |
-| `PUT` | [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path) | Moves a unit to a new parent. All child units move with it. Send `parentId: null` to promote to root level. |
-| `DELETE` | [Delete organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-) | Permanently removes a unit. This action can’t be undone. Before proceeding, confirm the unit has no linked users or child units. |
+| `PUT` | [Move organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path) | Moves a unit to a new parent. All child units move with it. Send `parentId: null` to promote to the root level. |
+| `DELETE` | [Delete organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-) | Permanently deletes a unit. This action can’t be undone. Before proceeding, confirm the unit has no linked users or child units. |
 
 ---
 
@@ -62,7 +62,7 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 | `GET` | [List users from organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/vtexid/organization-units/-organizationUnitId-/users) | Returns all users in a unit, including IDs, emails, and roles. |
 | `POST` | [Add user to organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users) | Adds one or more users to a unit. Users must already exist in the VTEX account. |
 | `DELETE` | [Remove users from organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/vtexid/organization-units/-organizationUnitId-/users) | Removes users from a unit without deleting them from the account. Requires a request body with `userIds`. |
-| `GET` | [Get user's organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-userId-/unit) | Returns which unit a user belongs to. |
+| `GET` | [Get user's organization unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-userId-/unit) | Returns the unit to which a user belongs. |
 | `GET` | [Get user scopes](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1/users/-userId-/scopes) | Returns all scopes (contracts and resources) accessible to a user through their unit. Scopes can be inherited from parent units. |
 
 To retrieve user details and roles, use the [License Manager API](https://developers.vtex.com/docs/api-reference/license-manager-api):
