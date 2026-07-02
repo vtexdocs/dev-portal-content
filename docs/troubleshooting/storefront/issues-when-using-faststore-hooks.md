@@ -35,10 +35,10 @@ If you see an import error or the hook returns `undefined` when used in a compon
 
 To solve this issue, follow these steps:
 
-1. Verify that the corresponding package is installed in your project (`@faststore/components` for UI hooks or `@faststore/core` for analytics and experimental hooks).
-2. Check that the installed package version is compatible with your FastStore version.
-3. Make sure your app is wrapped with `UIProvider` if you are using UI hooks (such as `useUI` or `useSearch`).
-4. Confirm that you are importing the hook from the correct package.
+1. Check if the corresponding package is installed in your project (`@faststore/components` for UI hooks or `@faststore/core` for analytics and experimental hooks).
+2. Confirm that the installed package version is compatible with your FastStore version.
+3. Make sure your app is wrapped with `UIProvider` if you're using UI hooks (such as `useUI` or `useSearch`).
+4. Make sure you're importing the hook from the correct package.
 
 ### Context errors
 
@@ -50,8 +50,8 @@ To solve this issue, follow these steps:
    - `UIProvider` for `useUI` and `useSearch`.
    - `SKUMatrixProvider` for `useSKUMatrix`.
    - `ProductComparisonProvider` for `useProductComparison`.
-2. Check that the provider is placed high enough in the component tree to wrap all components that consume the hook.
-3. Make sure the provider is not rendered conditionally, since this can break the context during re-renders.
+2. Make sure the provider is placed high enough in the component tree to wrap all components that consume the hook.
+3. Make sure the provider isn't rendered conditionally, since this can break the context during re-renders.
 
 ### Stale data
 
@@ -59,9 +59,9 @@ If a hook returns outdated information that doesn't reflect the latest state of 
 
 To solve this issue, follow these steps:
 
-1. Review the dependencies of any `useEffect` calls that rely on the hook's output to ensure they include all relevant values.
+1. Review the dependencies of any `useEffect` calls that rely on the hook output to ensure they include all relevant values.
 2. Verify that your store subscriptions are correctly set up and not being unsubscribed unexpectedly.
-3. If you are using GraphQL hooks, clear the cache to force a fresh data fetch.
+3. If you're using GraphQL hooks, clear the cache to force a fresh data fetch.
 4. Look for issues with `useMemo` or `useCallback` dependencies that may be preserving stale references.
 
 ### Performance issues
