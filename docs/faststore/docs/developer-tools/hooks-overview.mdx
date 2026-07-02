@@ -7,11 +7,11 @@ FastStore provides React hooks that give you access to built-in store features a
 
 FastStore hooks follow [React's hooks](https://react.dev/reference/react/hooks) conventions and allow you to:
 
-* **Access store state**: Retrieve and manage cart, session, and UI state.
-* **Implement analytics**: Track user behavior with GA4-compatible events.
-* **Build interactive user interfaces**: Create carousels, modals, search interfaces, and more.
-* **Enhance accessibility**: Implement focus management, keyboard navigation, and ARIA attributes.
-* **Optimize performance**: Lazy-load data, prefetch resources, and manage rendering.
+- **Access store state**: Retrieve and manage cart, session, and UI state.
+- **Implement analytics**: Track user behavior with GA4-compatible events.
+- **Build interactive user interfaces**: Create carousels, modals, search interfaces, and more.
+- **Enhance accessibility**: Implement focus management, keyboard navigation, and ARIA attributes.
+- **Optimize performance**: Lazy-load data, prefetch resources, and manage rendering.
 
 ## Benefits of using FastStore hooks
 
@@ -158,19 +158,19 @@ Follow these guidelines to get the most out of FastStore hooks and keep your cus
 
 FastStore hooks are organized by responsibility. Choosing the appropriate package for the task simplifies your code and minimizes the risk of unintended side effects:
 
-* **UI state**: Use `@faststore/components` hooks for interface interactions.
-* **Business logic**: Use `@faststore/core/experimental` hooks for store features.
-* **Analytics**: Use analytics hooks for tracking.
-* **Data fetching**: Use GraphQL hooks for custom queries.
+- **UI state**: Use `@faststore/components` hooks for interface interactions.
+- **Business logic**: Use `@faststore/core/experimental` hooks for store features.
+- **Analytics**: Use analytics hooks for tracking.
+- **Data fetching**: Use GraphQL hooks for custom queries.
 
 ### Test experimental hooks before production
 
 Experimental hooks (suffixed with `_unstable`) provide early access to new features but may change without notice. Before relying on them in production, take the following precautions:
 
-* Test in a development environment first.
-* Monitor for console warnings.
-* Check the changelog for breaking changes.
-* Have fallback behavior in place.
+- Test in a development environment first.
+- Monitor for console warnings.
+- Check the changelog for breaking changes.
+- Have fallback behavior in place.
 
 ## Common use cases
 
@@ -180,8 +180,8 @@ The following examples show how to combine multiple hooks to build common storef
 
 This example builds a custom "Add to Cart" button that integrates with FastStore's cart and UI systems. It combines two hooks:
 
-* `useBuyButton_unstable`: Handles the cart logic and triggers GA4 analytics automatically when the item is added.
-* `useUI`: Exposes UI actions such as `pushToast`, used here to display a confirmation message after the user clicks the button.
+- `useBuyButton_unstable`: Handles the cart logic and triggers GA4 analytics automatically when the item is added.
+- `useUI`: Exposes UI actions such as `pushToast`, used here to display a confirmation message after the user clicks the button.
 
 The result is a fully functional buy button with built-in analytics and user feedback, without having to manually manage cart state or events.
 
@@ -222,10 +222,10 @@ function CustomBuyButton({ product, quantity = 1 }) {
 
 This example creates a search modal that follows accessibility best practices (focus trapping, keyboard navigation, and dismiss-on-outside-click) while displaying search suggestions in real time. It combines four hooks:
 
-* `useUI`: Manages modal visibility and exposes the `closeModal` action.
-* `useOnClickOutside`: Closes the modal when the user clicks outside it.
-* `useTrapFocus`: Keeps keyboard focus inside the modal while it's open, an essential accessibility behavior for dialogs.
-* `useSuggestions_unstable`: Fetches search term suggestions based on the current query.
+- `useUI`: Manages modal visibility and exposes the `closeModal` action.
+- `useOnClickOutside`: Closes the modal when the user clicks outside it.
+- `useTrapFocus`: Keeps keyboard focus inside the modal while it's open, an essential accessibility behavior for dialogs.
+- `useSuggestions_unstable`: Fetches search term suggestions based on the current query.
 
 ```tsx
 import { useRef, useState } from 'react'
@@ -270,9 +270,9 @@ function SearchModal() {
 
 This example builds a product carousel that tracks which products are visible to the shopper at any given moment, sending a GA4 `view_item_list` event whenever the visible set changes. It combines three hooks:
 
-* `useSlider`: Manages carousel state, navigation, and swipe gestures.
-* `useSlideVisibility`: Determines which items are currently visible, useful for lazy-loading and impression tracking.
-* `useViewItemListEvent`: Sends the GA4 product impression event with the visible products.
+- `useSlider`: Manages carousel state, navigation, and swipe gestures.
+- `useSlideVisibility`: Determines which items are currently visible, useful for lazy-loading and impression tracking.
+- `useViewItemListEvent`: Sends the GA4 product impression event with the visible products.
 
 ```tsx
 import { useSlider, useSlideVisibility } from '@faststore/components'
@@ -333,8 +333,8 @@ function ProductCarousel({ products, listName }) {
 
 This example builds a shipping calculator that allows shoppers estimate delivery costs and times based on their postal code. It combines two hooks:
 
-* `useShippingSimulation_unstable`: Runs the shipping simulation client-side and returns available delivery options.
-* `useFormattedPrice_unstable`: Formats prices according to the store's current locale and currency.
+- `useShippingSimulation_unstable`: Runs the shipping simulation client-side and returns available delivery options.
+- `useFormattedPrice_unstable`: Formats prices according to the store's current locale and currency.
 
 ```tsx
 import { useState } from 'react'
@@ -392,4 +392,4 @@ function ShippingCalculator({ items }) {
 
 ## Related guides
 
-* [Issues when using FastStore hooks](https://developers.vtex.com/docs/guides/issues-when-using-faststore-hooks)
+- [Issues when using FastStore hooks](https://developers.vtex.com/docs/guides/issues-when-using-faststore-hooks)
