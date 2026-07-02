@@ -4,7 +4,9 @@ slug: "define-payment-methods-displayed-on-vtex-sales-app"
 hidden: false
 createdAt: "2021-09-16T22:06:59.987Z"
 updatedAt: "2022-10-05T18:22:47.556Z"
+excerpt: "Configure payment filters to control which conditions appear at checkout for all users or specific sales associates."
 ---
+
 After creating a payment condition as described in the [VTEX Sales App - Payments](https://help.vtex.com/en/tracks/vtex-sales-app-payments--43B4Nr7uZva5UdwWEt3PEy/2liigRors32hzqBNs2M1Oa) guide, we need to create the filters that will define which payment methods will appear at inStore’s checkout.
 
 You must do this by inserting a JavaScript object in the `checkout-instore-custom.js` file. Check out the [How to customize VTEX Sales App](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-vtex-sales-app) guide for further information on how to access this file.

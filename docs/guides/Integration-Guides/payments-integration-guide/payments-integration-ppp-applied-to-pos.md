@@ -4,7 +4,9 @@ slug: "payments-integration-ppp-applied-to-pos"
 hidden: false
 createdAt: "2022-09-28T22:39:13.979Z"
 updatedAt: "2022-09-29T17:49:33.957Z"
+excerpt: "Integrate payment providers for physical card terminals in stores using the POS." 
 ---
+
 VTEX has multiple solutions to deliver a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience to shoppers, being able to handle orders from both the ecommerce and physical stores. To deal with the physical store experience, VTEX offers the [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), where sellers can serve customers and complete the entire sales process. When finishing a purchase, the customer will have the option to make the payment with a physical card in a payment terminal, also known as a Point of Sale (POS).
 
 For payment partners to integrate their solutions for payments using a POS, there are a series of requirements that must be taken into account. You can check a summary of the requirements in the list below:
