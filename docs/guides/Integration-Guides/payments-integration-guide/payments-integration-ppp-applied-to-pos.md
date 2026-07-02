@@ -15,6 +15,9 @@ For payment partners to integrate their solutions for payments using a POS, ther
   - Include the supported payment methods (credit or debit card) in the [Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
   - Use [callbacks](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) for asynchronous payments.
   - Work with [Payment Apps](https://developers.vtex.com/docs/guides/payments-integration-payment-app) to identify the POS and wait for its response.
+
+    > ⚠️ For the payment architecture that relies on a Payment App (such as the challenges used by the `Venda Direta Credito` and `Venda Direta Debito` payment methods) to work correctly, the store must have the `challengeDrivenPaymentWorkflow: true` flag enabled in the `window.INSTORE_CONFIG` object of its `checkout-instore-custom.js` file. Without this flag, the payment flow will not work as expected.
+
   - The endpoint must return to any call in less than 20 seconds.
 - For testing, have a VTEX store configured with the supported payment methods. This should be provided by VTEX.
 - If needed for testing, have a device with the [VTEX Sales App installed](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh).
@@ -154,8 +157,6 @@ It is important to note that the payment cannot stay `undefined` forever. There 
 ### Additional interactions and paymentAppData
 
 At VTEX, payments in physical stores follow an asynchronous flow that requires additional interactions with the user, also called challenges, until it is approved. To offer this kind of interaction, the connector has to tell our Gateway from the `paymentAppData` field in the response of the Create Payment endpoint. This field contains the name of the VTEX IO app (`appName`) that will be presented on the VTEX Sales App and the data needed for the app to work (`payload`).
-
-> ⚠️ For the payment architecture that relies on a Payment App (such as the challenges used by the `Venda Direta Credito` and `Venda Direta Debito` payment methods) to work correctly, the store must have the `challengeDrivenPaymentWorkflow: true` flag enabled in the `window.INSTORE_CONFIG` object of its `checkout-instore-custom.js` file. Without this flag, the payment flow will not work as expected.
 
 We have some apps that are ready to use for additional interaction with payments on a POS.
 
