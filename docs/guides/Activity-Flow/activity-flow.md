@@ -4,11 +4,16 @@ slug: "activity-flow"
 excerpt: "Get started with Activity Flow, VTEX's Real User Monitoring (RUM) solution."
 hidden: false
 createdAt: "2025-12-02T12:37:39.964Z"
+updatedAt: "2026-07-02T00:00:00.000Z"
 ---
 
 Activity Flow is the VTEX solution for Real User Monitoring (RUM) that captures and analyzes shopper navigation actions to generate metrics and insights that help improve user experience.
 
 The tool tracks page views and sessions, offering a real-time view of the shopper journey. It captures clicks, views, and impressions to evaluate engagement in the products. Additionally, it assesses Web Vitals performance metrics and analyzes HTTP requests to identify failures that may impact the user experience. When integrated with [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads), Activity Flow also captures ad events, such as impressions and clicks.
+
+Activity Flow also supports `add-to-cart` tracking through the web script data layer plugin. This allows the script to capture cart events across different storefronts and analytics implementations, including stores using Google Analytics Universal (GAU), Google Analytics 4 (GA4), or both.
+
+The web script recognizes common cart event naming conventions, such as `add_to_cart`, `addToCart`, `add-to-cart`, and `add_to_cart_v2`. When GA4 and GAU are running simultaneously, Activity Flow filters out duplicate cart events to generate a single event per user cart action.
 
 This guide provides an overview of the Activity Flow architecture and how to get started with its tracking capabilities.
 
