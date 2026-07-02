@@ -72,6 +72,8 @@ window.INSTORE_CONFIG = {
 
 >❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object to avoid breaking other functionalities.
 
+> ⚠️ If your store processes payments through a Payment App (for example, the challenge flow used by the `Venda Direta Credito` and `Venda Direta Debito` payment methods on a POS), you must also enable the `challengeDrivenPaymentWorkflow: true` flag in the `window.INSTORE_CONFIG` object. Without this flag, the payment flow will not work as expected.
+
 3. After making changes in the code, make sure you press the `Save` button.
 
 ### Define payment methods per sales associate

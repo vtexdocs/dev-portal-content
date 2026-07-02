@@ -153,6 +153,8 @@ It is important to note that the payment cannot stay `undefined` forever. There 
 
 At VTEX, payments in physical stores follow an asynchronous flow that requires additional interactions with the user, also called challenges, until it is approved. To offer this kind of interaction, the connector has to tell our Gateway from the `paymentAppData` field in the response of the Create Payment endpoint. This field contains the name of the VTEX IO app (`appName`) that will be presented on the VTEX Sales App and the data needed for the app to work (`payload`).
 
+> ⚠️ For the payment architecture that relies on a Payment App (such as the challenges used by the `Venda Direta Credito` and `Venda Direta Debito` payment methods) to work correctly, the store must have the `challengeDrivenPaymentWorkflow: true` flag enabled in the `window.INSTORE_CONFIG` object of its `checkout-instore-custom.js` file. Without this flag, the payment flow will not work as expected.
+
 We have some apps that are ready to use for additional interaction with payments on a POS.
 
 > ℹ️ Besides the provided apps, partners can also develop apps for their specific needs. You can check more details in the [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app) article.
