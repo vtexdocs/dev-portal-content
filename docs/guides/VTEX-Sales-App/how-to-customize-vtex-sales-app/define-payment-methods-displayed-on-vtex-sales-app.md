@@ -56,7 +56,7 @@ The code should look similar to the example below.
 
 In this example, we are excluding the conditions “Boleto bancário” (ID = 6) and "Direct debit" (ID = 45); and we are including “Credit card” (IDs = 2 and 4), “Cash” (ID = 202) and "Pix" (ID = 125). The first two will not be displayed at checkout, while the last two will be displayed.
 
-1. Still in the `checkout-instore-custom.js` file, you need to add a reference to the object created within the `window.INSTORE_CONFIG` object.
+2. Still in the `checkout-instore-custom.js` file, you need to add a reference to the object created within the `window.INSTORE_CONFIG` object.
 
 To do this, include the following line of code inside the `window.INSTORE_CONFIG` object:
 
