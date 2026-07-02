@@ -11,7 +11,7 @@ Content modeling defines what can be created on the CMS. Architecture defines ho
 
 This guide covers modeling for headless integrations: core concepts, design principles, JSON Schema rules, consumption patterns, and recommended Content Type structures.
 
-> ℹ️ For platform architecture (CQRS, schema upload lifecycle, file organization), see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
+ℹ️ For platform architecture (CQRS, schema upload lifecycle, file organization), see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
 
 ## Before you begin
 
@@ -51,8 +51,8 @@ vtex plugins install @vtex/cli-plugin-content
 
 Typical workflow:
 
-1. Author component and Content Type files in your repository.
-2. Run `vtex content generate-schema` to produce a unified bundle.
+1. Author component and Content Type files in your repository.  
+2. Run `vtex content generate-schema` to produce a unified bundle.  
 3. Run `vtex content upload-schema` to publish it to the Schema Registry.
 
 For headless stores, the `generate-schema` command requires two extra arguments: the paths to your component and Content Type directories, and `--base vtex.headless`:
@@ -93,7 +93,7 @@ Your team owns rendering, preview wiring, and CI/CD. The CMS provides schemas, a
 
 A **Content Type** describes the shape of a page. **Components** are the building blocks you arrange inside it.
 
-```mermaid
+```
 flowchart TD
   Schema["Schema bundle"]
   CT["Content Type"]
@@ -122,15 +122,15 @@ A Content Type holds fixed fields (always present on every entry) and a dynamic 
 
 | Scenario | Content Type | Component |
 | :---- | :---- | :---- |
-| Represents a routable **page** | ✅ | |
-| Needs **multiple instances** (many landing pages) | ✅ | |
-| Only **one instance** store-wide | ✅ (`$singleton: true`) | |
-| **Reusable UI block** on one or more pages | | ✅ |
-| **Nested inside** another component | | ✅ |
-| Needs a **slug** or identifier field | ✅ | |
+| Represents a routable **page** | ✅ |  |
+| Needs **multiple instances** (many landing pages) | ✅ |  |
+| Only **one instance** store-wide | ✅ (`$singleton: true`) |  |
+| **Reusable UI block** on one or more pages |  | ✅ |
+| **Nested inside** another component |  | ✅ |
+| Needs a **slug** or identifier field | ✅ |  |
 | Shared across the store (header, footer) | ✅ (singleton Content Type) | ✅ (component inside it) |
 
-> ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page, model it as a component.
+ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page, model it as a component.
 
 ## Design principles
 
@@ -146,7 +146,7 @@ Well-structured schemas reuse definitions instead of duplicating fields. The CMS
 
 The `vtex.headless` base provides core platform definitions — not a full page library. You add the `components` and `content-types` your storefront needs.
 
-```jsonc
+```
 // Store schema bundle (simplified)
 {
   "$id": "youraccount.yourstore@1.0.0",
@@ -162,7 +162,7 @@ The `vtex.headless` base provides core platform definitions — not a full page 
 
 `$extends` inherits properties from one or more definitions in the same bundle. Child properties override parent properties with the same name.
 
-```jsonc
+```
 {
   "$extends": ["#/$defs/base-component"],
   "$componentKey": "PromoBanner",
@@ -188,7 +188,7 @@ Use `$extends` when multiple components share fields (dates, color variants, lin
 | **Open section picker** | `"sections": { "$ref": "#/$defs/$ALLOW_ALL_COMPONENTS" }` | You need to add any component you registered. |
 | **Restricted sections** | `"sections": { "type": "array", "items": { "anyOf": [...] } } }` | Only certain components are allowed on a page. |
 
-```jsonc
+```
 "seo": {
   "$ref": "#/components/SEO"
 }
@@ -198,7 +198,7 @@ Use `$extends` when multiple components share fields (dates, color variants, lin
 }
 ```
 
-> ℹ️ `$ALLOW_ALL_COMPONENTS` is generated when you run `vtex content generate-schema`. It lists every component in your bundle as an `anyOf` array. Reference it in Content Types. Do not hand-author this definition in individual `.jsonc` files.
+ℹ️ `$ALLOW_ALL_COMPONENTS` is generated when you run `vtex content generate-schema`. It lists every component in your bundle as an `anyOf` array. Reference it in Content Types. Do not hand-author this definition in individual `.jsonc` files.
 
 ## JSON Schema fundamentals
 
@@ -263,8 +263,8 @@ For the full lifecycle (schema upload, authoring, publishing, sync), see [Unders
 
 Your storefront owns:
 
-- **Routing**: Mapping URLs to Content Types and slugs.
-- **Locale**: Passing the `locale` query parameter when fetching entries.
+- **Routing**: Mapping URLs to Content Types and slugs.  
+- **Locale**: Passing the `locale` query parameter when fetching entries.  
 - **Rendering**: Mapping each `componentKey` to a UI component in your framework.
 
 The sections below cover the most common consumption patterns.
@@ -274,12 +274,12 @@ The sections below cover the most common consumption patterns.
 Use this pattern when a URL arrives at your frontend and you need to load the corresponding CMS entry. Pass the slug as a path segment after `entries/slug/`. Multi-segment slugs (for example, `en/promo`) are supported.
 
 ```shell
-GET https://api.vtex.com/content-platform/{account}/{storeId}/landingPage/entries/slug/summer-sale
+GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/{contentType}/entries/slug/summer-sale
 ```
 
 **Response shape (simplified):**
 
-```jsonc
+```
 {
   "componentKey": "landingPage",
   "slug": "summer-sale",
@@ -296,7 +296,7 @@ GET https://api.vtex.com/content-platform/{account}/{storeId}/landingPage/entrie
 To request a localized version, add the `locale` query parameter:
 
 ```shell
-GET https://api.vtex.com/content-platform/{account}/{storeId}/landingPage/entries/slug/summer-sale?locale=pt-BR
+GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/landingPage/entries/slug/summer-sale?locale=pt-BR
 ```
 
 ### Fetch all entries of a content type
@@ -304,12 +304,12 @@ GET https://api.vtex.com/content-platform/{account}/{storeId}/landingPage/entrie
 Use this pattern to build listing pages (for example, a blog index or a campaign directory), or to pre-render all entries at build time.
 
 ```shell
-GET https://api.vtex.com/content-platform/{account}/{storeId}/blogPost/entries
+GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/blogPost/entries
 ```
 
 **Response shape (simplified):**
 
-```jsonc
+```
 {
   "entries": [
     {
@@ -332,7 +332,7 @@ GET https://api.vtex.com/content-platform/{account}/{storeId}/blogPost/entries
 By default, only entry metadata is returned. To include the full content blob for each entry, add `?content=all`:
 
 ```shell
-GET https://api.vtex.com/content-platform/{account}/{storeId}/blogPost/entries?content=all
+GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/blogPost/entries?content=all
 ```
 
 ### Paginate through entries
@@ -342,7 +342,9 @@ The Data Plane API uses scroll-based pagination. Each response returns a `scroll
 **First request:**
 
 ```shell
-GET https://api.vtex.com/content-platform/{account}/{storeId}/blogPost/entries
+GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/blogPost/entries
+
+
 ```
 
 ```json
@@ -355,7 +357,7 @@ GET https://api.vtex.com/content-platform/{account}/{storeId}/blogPost/entries
 **Next page:**
 
 ```shell
-GET https://api.vtex.com/content-platform/{account}/{storeId}/blogPost/entries?scroll=eyJzb3J0IjoidXBkYXRlZEF0Iiw...
+GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/blogPost/entries?scroll=eyJzb3J0IjoidXBkYXRlZEF0Iiw...
 ```
 
 When `scroll` is absent from the response, you have reached the last page.
@@ -363,7 +365,7 @@ When `scroll` is absent from the response, you have reached the last page.
 You can also control sort order:
 
 ```shell
-GET https://api.vtex.com/content-platform/{account}/{storeId}/blogPost/entries?sort=createdAt&order=asc
+GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/blogPost/entries?sort=createdAt&order=asc
 ```
 
 ### Fetch singleton or global content
@@ -371,10 +373,10 @@ GET https://api.vtex.com/content-platform/{account}/{storeId}/blogPost/entries?s
 Singleton Content Types (defined with `"$singleton": true`) have exactly one entry store-wide — no slug is needed. Fetch them by listing the Content Type's entries and reading the first (and only) result. This is the standard pattern for headers, footers, and global navigation.
 
 ```shell
-GET https://api.vtex.com/content-platform/{account}/{storeId}/globalHeader/entries?content=all
+GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/globalHeader/entries?content=all
 ```
 
-```jsonc
+```
 {
   "entries": [
     {
@@ -403,7 +405,7 @@ Every section object in an API response includes a `componentKey` that identifie
 
 A typical implementation in React:
 
-```tsx
+```
 import { PromoBanner } from '@/components/PromoBanner'
 import { SiteHeader } from '@/components/SiteHeader'
 import { RichText } from '@/components/RichText'
@@ -431,7 +433,7 @@ function Sections({ sections }: { sections: { componentKey: string; [key: string
 
 Each component receives the full section object as props, so field names in your JSON Schema map directly to the props your component expects. If a `componentKey` is not in your map, the section is silently skipped — this is a safe default during incremental rollout.
 
-> ℹ️ For full query parameter documentation (`locale`, `sort`, `order`, `content`, `scroll`), see the [Data Plane API reference](https://developers.vtex.com/docs/api-reference/data-plane-api).
+ℹ️ For full query parameter documentation (`locale`, `sort`, `order`, `content`, `scroll`), see the [Data Plane API reference](https://developers.vtex.com/docs/api-reference/data-plane-api).
 
 ## Recommended content modeling patterns
 
@@ -448,7 +450,7 @@ Some content applies across every page rather than to a single route. Model thes
 | **Navigation** | Inside a header component | Link arrays, menu items | Main menu is maintained once. |
 | **Banners** | On page Content Types | `PromoBanner`, `TextBanner` | Promotional blocks per page. |
 
-```jsonc
+```
 // cms/pages/cms_content_type__globalHeader.jsonc
 {
   "title": "Global Header",
@@ -465,7 +467,7 @@ Some content applies across every page rather than to a single route. Model thes
 
 Fetch singleton entries by Content Type name (no slug) and wrap every page layout with the returned sections.
 
-> ℹ️ **Navigation** is usually a component inside a header singleton, not its own page Content Type. **Banners** are components on page-level Content Types. Each page chooses its own banner stack.
+ℹ️ **Navigation** is usually a component inside a header singleton, not its own page Content Type. **Banners** are components on page-level Content Types. Each page chooses its own banner stack.
 
 ### Page Content Types
 
@@ -480,7 +482,7 @@ Fetch singleton entries by Content Type name (no slug) and wrap every page layou
 
 **Home**: One entry, no slug:
 
-```jsonc
+```
 {
   "title": "Home",
   "type": "object",
@@ -495,7 +497,7 @@ Fetch singleton entries by Content Type name (no slug) and wrap every page layou
 
 **Landing page**: Many entries, slug required:
 
-```jsonc
+```
 {
   "title": "Landing Page",
   "type": "object",
@@ -516,7 +518,7 @@ Fetch singleton entries by Content Type name (no slug) and wrap every page layou
 
 **Blog**: Define `blogCategory` and `blogPost` Content Types when your storefront needs editorial content:
 
-```jsonc
+```
 // cms/pages/cms_content_type__blogPost.jsonc
 {
   "title": "Blog Post",
