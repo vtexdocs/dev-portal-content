@@ -89,7 +89,7 @@ There are some steps needed for the connector to be able to process payments in 
 
 2. Route [POST Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) (`/payments`). This route must be idempotent, which means that the provider must be able to correctly handle if the route is called many times with the same `paymentId`. The provider should not recreate the payment for multiple calls but has to return the most updated status instead.
 
-## Scenery and flow
+## Scenario and flow
 
 Here we describe the payment flow in the context of a physical store using a POS. The following sequence diagram represents all the steps in this flow, where the green bars are the steps that the payment provider is responsible for:
 ![Fluxo PPP com POS atualizado](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-ppp-applied-to-pos-0.png)
