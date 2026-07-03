@@ -1,15 +1,15 @@
 ---
-title: "FastStore hooks"
-excerpt: "Guide for all FastStore hooks, including their types, use cases, and impact on your store customization."
+title: FastStore hooks
+excerpt: Guide for all FastStore hooks, including their types, use cases, and impact on your store customization.
 ---
 
 FastStore provides React hooks that give you access to built-in store features and state management, so you can build customized storefronts faster. This guide covers all available hooks, their categories, implementation patterns, and impact on your store.
 
-FastStore hooks follow [React's hooks](https://react.dev/reference/react/hooks) conventions let you:
+FastStore hooks follow [React's hooks](https://react.dev/reference/react/hooks) conventions and allow you to:
 
 - **Access store state**: Retrieve and manage cart, session, and UI state.
 - **Implement analytics**: Track user behavior with GA4-compatible events.
-- **Build interactive user interface**: Create carousels, modals, search interfaces, and more.
+- **Build interactive user interfaces**: Create carousels, modals, search interfaces, and more.
 - **Enhance accessibility**: Implement focus management, keyboard navigation, and ARIA attributes.
 - **Optimize performance**: Lazy-load data, prefetch resources, and manage rendering.
 
@@ -44,17 +44,17 @@ FastStore hooks are organized into the following categories:
 
 | Hook | Description | Use cases |
 |------|-------------|-------------|
-| `UIProvider` | Context provider that manages global UI state for cart sidebar, modals, navigation, filters, toasts, popovers, and region selection. | Wrap your application root to enable UI state management. Required by other UI hooks. |
-| `useUI` | Access global UI state and actions managed by `UIProvider`. | Control cart sidebar, modals, navigation menu, filters, toasts, popovers, and region selection from any component. |
-| `useSearch` | Manages search interface state within `SearchProvider` context. | Building custom search components, managing search input state, implementing search suggestions. |
-| `useSlider` | Manages carousel/slider state including current page, navigation, and swipe gestures. | Creating product carousels, image galleries, testimonial sliders, or any multi-item navigation component. |
-| `useSlideVisibility` | Determines visibility state for slider items based on current index. | Lazy-loading carousel images, applying visibility-based animations, optimizing render performance. |
+| `UIProvider` | Context provider that manages global UI state for the cart sidebar, modals, navigation, filters, toasts, popovers, and region selection. | Wrap your application root to enable UI state management. Required by other UI hooks. |
+| `useUI` | Access global UI state and actions managed by `UIProvider`. | Control the cart sidebar, modals, navigation menu, filters, toasts, popovers, and region selection from any component. |
+| `useSearch` | Manages search interface state within the `SearchProvider` context. | Building custom search components, managing search input state, implementing search suggestions. |
+| `useSlider` | Manages carousel/slider state including the current page, navigation, and swipe gestures. | Creating product carousels, image galleries, testimonial sliders, or any multi-item navigation component. |
+| `useSlideVisibility` | Determines visibility state for slider items based on the current index. | Lazy-loading carousel images, applying visibility-based animations, optimizing render performance. |
 | `useOnClickOutside` | Detects clicks outside a referenced element and triggers a callback. | Closing modals when clicking backdrop, dismissing dropdowns, hiding popovers on outside interaction. |
 | `useTrapFocus` | Traps keyboard focus within a container element for accessibility. | Modal dialogs, slide-out panels, any overlay that should constrain focus for keyboard navigation. |
 | `useScrollDirection` | Detects scroll direction (up/down) for responsive header behavior. | Hide/show sticky headers on scroll, trigger animations based on scroll direction, optimize mobile screen space. |
-| `useFadeEffect` | Creates progressive fade-in effect based on scroll position or distance. | Subtle entrance animations, progressive content reveal, enhancing visual hierarchy. |
-| `useSKUMatrix` | Manages SKU/variant selection logic within `SKUMatrixProvider` context. | Building custom variant selectors, product configuration interfaces, size/color pickers. |
-| `useProductComparison` | Manages product comparison list within `ProductComparisonProvider`. | Product comparison features, "Compare" buttons on product cards, comparison page implementation. |
+| `useFadeEffect` | Creates a progressive fade-in effect based on scroll position or distance. | Subtle entrance animations, progressive content reveal, enhancing visual hierarchy. |
+| `useSKUMatrix` | Manages SKU/variant selection logic within the `SKUMatrixProvider` context. | Building custom variant selectors, product configuration interfaces, size/color pickers. |
+| `useProductComparison` | Manages product comparison list within the `ProductComparisonProvider`. | Product comparison features, "Compare" buttons on product cards, comparison page implementation. |
 
 ### Analytics hooks
 
@@ -96,7 +96,7 @@ FastStore hooks are organized into the following categories:
 | Hook | Description | Use cases |
 |------|-------------|-------------|
 | `useQuery_unstable` | Execute GraphQL queries with automatic caching and error handling. | Fetching product data, custom data requirements, extending FastStore API. |
-| `useLazyQuery_unstable` | Execute GraphQL queries on-demand (e.g., on button click). | Search suggestions on input, load-more pagination, conditional data fetching. |
+| `useLazyQuery_unstable` | Execute GraphQL queries on-demand (ex.: when a button is clicked). | Search suggestions on input, load-more pagination, conditional data fetching. |
 
 #### Newsletter
 
@@ -108,9 +108,9 @@ FastStore hooks are organized into the following categories:
 
 | Hook | Description | Use cases |
 |------|-------------|-------------|
-| `useDiscountPercent_unstable` | Calculate discount percentage from price and list price. | Display discount badges, savings indicators, promotional information. |
-| `useFormattedPrice_unstable` | Format price values according to current locale and currency. | Display prices consistently across the store with proper currency symbols and formatting. |
-| `useLocalizedVariables_unstable` | Provides localized variables for queries based on current session. | Multi-locale stores, currency conversion, region-specific content. |
+| `useDiscountPercent_unstable` | Calculate discount percentage from the price and list price. | Display discount badges, savings indicators, promotional information. |
+| `useFormattedPrice_unstable` | Format price values according to the current locale and currency. | Display prices consistently across the store with proper currency symbols and formatting. |
+| `useLocalizedVariables_unstable` | Provides localized variables for queries based on the current session. | Multi-locale stores, currency conversion, region-specific content. |
 | `useProductQuery_unstable` | Fetch detailed product data by ID or slug. | Product detail pages, quick view modals, product preview cards. |
 | `useProductLink_unstable` | Generate SEO-friendly product URLs. | Product card links, navigation to Product Detail Pages (PDPs), breadcrumbs. |
 | `useProductsPrefetch_unstable` | Preload product data for faster navigation. | Hover intent on product cards, carousel pre-loading, performance optimization. |
@@ -331,7 +331,7 @@ function ProductCarousel({ products, listName }) {
 
 ### Building a shipping calculator
 
-This example builds a shipping calculator that lets shoppers estimate delivery costs and times based on their postal code. It combines two hooks:
+This example builds a shipping calculator that allows shoppers estimate delivery costs and times based on their postal code. It combines two hooks:
 
 - `useShippingSimulation_unstable`: Runs the shipping simulation client-side and returns available delivery options.
 - `useFormattedPrice_unstable`: Formats prices according to the store's current locale and currency.
