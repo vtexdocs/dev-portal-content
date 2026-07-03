@@ -15,7 +15,7 @@ To integrate a POS payment solution, payment partners must meet the following re
   - Use [callbacks](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) for asynchronous payments.
   - Work with [Payment Apps](https://developers.vtex.com/docs/guides/payments-integration-payment-app) to identify the POS and wait for its response.
   - The endpoint must respond to any call in less than 20 seconds.
-- For testing, use a VTEX store configured with the supported payment methods. VTEX provides this store.
+- For testing, use a VTEX store configured with the supported payment methods. VTEX can provide an account for this purpose.
 - For testing, use a device with the [VTEX Sales App installed](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh).
 - Optionally, create a Payment App to identify the POS. Install this app in the store as well.
 
@@ -188,7 +188,7 @@ To make the flow resilient:
 
 ### Payment Apps and paymentAppData
 
-At VTEX, payments in physical stores follow an asynchronous flow that requires additional interactions with the user, also called challenges, before approval. To request this interaction, the connector returns the `paymentAppData` field in the Create Payment response. This field contains the name of the VTEX IO app (`appName`) presented on the VTEX Sales App and the data the app needs to work (`payload`).
+At VTEX, payments in physical stores follow an asynchronous flow that requires additional interactions with the user, also called challenges, before approval. To request this interaction, the connector returns the `paymentAppData` field in the Create Payment response. This field contains the name of the VTEX IO app (`appName`) presented on the VTEX Sales App and the data the app needs to function (`payload`).
 
 VTEX provides ready-to-use apps for additional interaction with payments on a POS.
 
