@@ -3,7 +3,8 @@ title: "Payments"
 slug: "payments-integration-guide"
 hidden: false
 createdAt: "2020-10-27T00:24:27.500Z"
-updatedAt: "2026-04-17T00:00:00.000Z"
+updatedAt: "2026-05-22T00:00:00.000Z"
+excerpt: "Explore VTEX payments documentation, including payment providers, anti-fraud, gift cards, configuration, and testing."
 ---
 Communication between systems and services of stores, partners and platform is carried out through integration protocols. At VTEX, we use the Payment Provider Protocol (PPP), a protocol created to assist companies that carry out financial transaction operations.
 
@@ -56,6 +57,7 @@ The articles listed below present the characteristics and mode of operation of o
 | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Gift Card system architecture](https://developers.vtex.com/docs/guides/gift-card-integration-guide-system-architecture) | Overview of the Gift Card Hub, Provider Protocol, and native provider architecture. |
 | [Managing VTEX gift cards](https://developers.vtex.com/docs/guides/managing-vtex-gift-cards)                             | How to create, update, and manage native VTEX gift cards via API.                   |
+| [Configuring an external gift card provider](https://developers.vtex.com/docs/guides/configuring-an-external-gift-card-provider) | How to register an external gift card provider and implement the integration flows used by VTEX Gift Card Hub. |
 
 ### Operations & Configuration
 

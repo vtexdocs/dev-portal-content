@@ -7,7 +7,7 @@ createdAt: "2026-05-15T12:00:00.000Z"
 updatedAt: "2026-05-15T12:00:00.000Z"
 ---
 
-> ℹ️ This feature is in beta, and we are actively working to improve it. If you have questions about enablement, account configuration, or campaigns, please contact [our Support](https://help.vtex.com/en/support).
+> ℹ️ This feature is in beta, and we're actively working to improve it. If you have questions about enablement, account configuration, or campaigns, contact [our Support](https://help.vtex.com/en/support).
 
 This guide explains how to integrate [product recommendations](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta) in headless or FastStore web stores using the VTEX [Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api).
 
@@ -43,7 +43,7 @@ Once these configurations are complete, you can proceed with the implementation 
 
 Your headless or FastStore web store must call the `POST` [Start session](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/v2/users/start-session) endpoint.
 
-This endpoint starts or updates the user's recommendations session. It associates the `userId` used during browsing with the current `orderFormId`, saves this identifier in the orderForm custom data, and returns the `recommendationsUserId` that must be used in subsequent requests.
+This endpoint starts or updates the user's recommendations session. It associates the `userId` used during browsing with the current `orderFormId`, stores this identifier in the orderForm custom data, and returns the `recommendationsUserId` that must be used in subsequent requests.
 
 > ℹ️ Sending `orderFormId` in the JSON body is optional for web storefronts when the request forwards the `checkout.vtex.com` cookie: the API can resolve the order form from that cookie when it isn't in the body. If the client can't send cookies (for example, some server-only calls), include `orderFormId` in the body manually. For FastStore, the recommended approach is to forward cookies on the `start-session` request.
 
@@ -60,9 +60,9 @@ The endpoint also sets the `vtex-rec-user-id` cookie with the returned `recommen
 
 When the request includes the shopper's `checkout.vtex.com` cookie, you can omit the JSON body. That applies to FastStore and to headless storefronts that forward the browser's checkout cookies.
 
-In tools like `curl`, pass that cookie explicitly like in the example below. In the browser it is forwarded automatically. The cookie value includes the cart identifier (for example, `_ofid` and the `orderFormId`), as described in [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id).
+In tools like `curl`, explicitly pass that cookie, as in the example below. In the browser, it's forwarded automatically. The cookie value includes the cart identifier (for example, `_ofid` and the `orderFormId`), as described in [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id).
 
-In tools like `curl`, pass that cookie explicitly like below. In the browser it is forwarded automatically. The cookie value includes the cart identifier, for example `_ofid={orderFormId}`, as described in [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id).
+In tools like `curl`, explicitly pass that cookie, as shown below. In the browser, it's forwarded automatically. The cookie value includes the cart identifier, for example, `_ofid={orderFormId}`, as described in [Get cart information by ID](https://developers.vtex.com/docs/guides/get-cart-information-by-id).
 
 ```bash
 curl --request POST \
@@ -77,7 +77,7 @@ curl --request POST \
 
 **Request example with `orderFormId`**:
 
-When the request cannot send checkout cookies (for example, some server-side calls), include `orderFormId` in the body.
+When the request can't send checkout cookies (for example, some server-side calls), include `orderFormId` in the body.
 
 ```bash
 curl --request POST \
@@ -255,7 +255,7 @@ curl --request POST \
 
 The response returns `202 Accepted`.
 
-The `source` field accepts values such as `WEB_DESKTOP` and `WEB_MOBILE`. When `source` is not sent, the BFF tries to infer the value from the `user-agent`.
+The `source` field accepts values, such as `WEB_DESKTOP` and `WEB_MOBILE`. When `source` isn't sent, the BFF tries to infer the value from the `user-agent`.
 
 ## Step 5: Configure shelf event tracking through Activity Flow
 
