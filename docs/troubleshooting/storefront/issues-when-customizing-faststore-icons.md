@@ -12,7 +12,7 @@ symptomFilters:
   - Rendering mismatch
 ---
 
-FastStore users may encounter issues when customizing the icon set in their store, either by [adding a custom icon](https://developers.vtex.com/docs/guides/faststore/managing-icons-adding-custom-icons) or [overriding a native icon](https://developers.vtex.com/docs/guides/faststore/managing-icons-overriding-native-icons). The icon may not appear, look distorted, ignore the theme colors, or the default FastStore icons may stop rendering after the change.
+FastStore users may encounter issues when customizing the icon set in their store, either by [adding a custom icon](https://developers.vtex.com/docs/guides/faststore/managing-icons-adding-custom-icons) or [overriding a native icon](https://developers.vtex.com/docs/guides/faststore/managing-icons-overriding-native-icons). The icon may not appear, look distorted, or ignore the theme colors. In some cases, the default FastStore icons may stop rendering after the change.
 
 | Issue | Possible cause | Solution |
 | ----- | -------------- | -------- |
@@ -29,7 +29,7 @@ To solve your issue, follow one of the paths below based on the symptom you're s
 
 Use this path when the icon doesn't appear at all or when an override has no effect.
 
-1. Open `/public/icons.svg` and confirm that the `id` on the `<symbol>` element matches exactly the `name` prop passed to the `Icon` component, including capitalization. For overrides, the `id` must remain identical to the original icon's `id`.
+1. Open `/public/icons.svg` and confirm that the `id` on the `<symbol>` element exactly matches the `name` prop passed to the `Icon` component, including capitalization. For overrides, the `id` must remain identical to the original icon's `id`.
 2. Make sure `icons.svg` is at the root of `/public/`, not inside a subfolder.
 3. Run `yarn dev` (or `yarn build`) to copy the file into the build output.
 4. Clear your browser cache and reload the local store to confirm the icon now appears.
@@ -51,12 +51,12 @@ Use this path when the icon appears in a fixed color and ignores the surrounding
 
 1. Open the `<symbol>` for your icon in `/public/icons.svg`.
 2. Replace hardcoded `fill` and `stroke` attribute values with `currentColor` so the icon inherits the surrounding text color.
-3. Remove any inline `style` attribute or `color` attribute that pins the icon to a specific color.
+3. Remove any inline `style` or `color` attributes that pin the icon to a specific color.
 4. Save the file, rebuild the project, and verify the icon now reflects the theme.
 
 ### Restore the default icons
 
-Use this path when default FastStore icons stopped rendering after you added a custom icon or applied an override.
+Use this path when default FastStore icons stop rendering after you add a custom icon or apply an override.
 
 1. Open your terminal and run `yarn dev` to make sure the `.faststore` folder is up to date.
 2. Copy `.faststore/public/icons.svg` again into your store's `/public/` folder, overwriting the current file.
