@@ -114,7 +114,7 @@ vtex content generate-schema --local ./base-schema.json --out final-schema.json
 
 ### `split-components`
 
-Splits a `sections.json` file into separate component files. Use this command when migrating component definitions from the legacy [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to help organize your store components by creating a separate file for each component.
+Splits a `sections.json` file into separate component files. Use this command when migrating component definitions from the legacy [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to help organize your store components by creating a separate file for each component.
 
 #### Usage
 
@@ -150,7 +150,7 @@ vtex content split-components --input ./cms/sections.json --output ./cms/compone
 
 ### `split-content-types`
 
-Splits CMS Content Type definitions from `content-types.json` into separate files, one per Content Type. Use this command when migrating custom Content Types from the legacy [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to organize your Content Types into separate files for easier management.
+Splits CMS Content Type definitions from `content-types.json` into separate files, one per Content Type. Use this command when migrating custom Content Types from the legacy [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to organize your Content Types into separate files for easier management.
 
 #### Usage
 
