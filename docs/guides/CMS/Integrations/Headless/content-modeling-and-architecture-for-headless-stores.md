@@ -10,7 +10,7 @@ Content modeling defines what can be created on the CMS. Architecture defines ho
 
 This guide covers modeling for headless integrations: core concepts, design principles, JSON Schema rules, consumption patterns, and recommended Content Type structures.
 
-ℹ️ For platform architecture (CQRS, schema upload lifecycle, file organization), see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
+> ℹ️ For platform architecture (CQRS, schema upload lifecycle, file organization), see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
 
 ## Before you begin
 
@@ -129,7 +129,7 @@ A Content Type holds fixed fields (always present on every entry) and a dynamic 
 | Needs a **slug** or identifier field | ✅ | |
 | Shared across the store (header, footer) | ✅ (singleton Content Type) | ✅ (component inside it) |
 
-ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page, model it as a component.
+> ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page, model it as a component.
 
 ## Design principles
 
@@ -155,7 +155,7 @@ The `vtex.headless` base provides core platform definitions — not a full page 
 }
 ```
 
-ℹ️ Definitions such as `base-component` or `base-page-template` may be provided by your base bundle. Check the merged output of `vtex content generate-schema` before referencing them with `$extends`.
+> ℹ️ Definitions such as `base-component` or `base-page-template` may be provided by your base bundle. Check the merged output of `vtex content generate-schema` before referencing them with `$extends`.
 
 ### Extension (`$extends`)
 
@@ -197,7 +197,7 @@ Use `$extends` when multiple components share fields (dates, color variants, lin
 }
 ```
 
-ℹ️ `$ALLOW_ALL_COMPONENTS` is generated when you run `vtex content generate-schema`. It lists every component in your bundle as an `anyOf` array. Reference it in Content Types. Do not hand-author this definition in individual `.jsonc` files.
+> ℹ️ `$ALLOW_ALL_COMPONENTS` is generated when you run `vtex content generate-schema`. It lists every component in your bundle as an `anyOf` array. Reference it in Content Types. Do not hand-author this definition in individual `.jsonc` files.
 
 ## JSON Schema fundamentals
 
@@ -466,7 +466,7 @@ Some content applies across every page rather than to a single route.
 
 Fetch singleton entries by Content Type name (no slug) and wrap every page layout with the returned sections.
 
-ℹ️ **Navigation** is usually a component inside a header singleton, not its own page Content Type. **Banners** are components on page-level Content Types. Each page chooses its own banner stack.
+> ℹ️ **Navigation** is usually a component inside a header singleton, not its own page Content Type. **Banners** are components on page-level Content Types. Each page chooses its own banner stack.
 
 ### Page Content Types
 
