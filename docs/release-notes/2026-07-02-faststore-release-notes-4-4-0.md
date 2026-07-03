@@ -24,7 +24,7 @@ Stores using FastStore My Account password reset should upgrade to `v4.4.0` to a
 
 ---
 
-## Improvements
+## Improvement
 
 ### CMS aware `cms-sync` command (PR: [#3406](https://github.com/vtex/faststore/pull/3406))
 
