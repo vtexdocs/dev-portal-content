@@ -33,7 +33,7 @@ This guide covers the full journey to integrate POS payments:
 
 Complete the following steps to enable the connector to process payments in the physical world:
 
-### 1. Route [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) (`/manifest`).
+### 1. Route [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) (`/manifest`)
 
 The response body of the endpoint must contain the payment methods `Venda Direta Credito` and `Venda Direta Debito`. If a split of receivables is offered, indicate it in the `allowsSplit` field for each payment method. The following example shows a correctly configured response body, including the POS-specific `Venda Direta Debito` and `Venda Direta Credito` methods:
 
@@ -92,7 +92,7 @@ The response body of the endpoint must contain the payment methods `Venda Direta
 }
 ```
 
-### 2. Route [POST Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) (`/payments`).
+### 2. Route [POST Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) (`/payments`)
 
 This route must be idempotent: the provider must handle repeated calls with the same `paymentId` correctly. Instead of recreating the payment on each call, the provider must return the most up-to-date status.
 
