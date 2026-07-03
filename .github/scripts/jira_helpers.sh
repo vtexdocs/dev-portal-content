@@ -78,6 +78,15 @@ resolve_jira_reporter_from_github() {
 
   echo "Could not resolve Jira reporter for GitHub user ${github_login}; using API token user" >&2
   return 1
+
+# Drop PR template sections that should not appear in Jira descriptions.
+strip_pr_description_sections() {
+  awk '
+    /^#{1,6}[[:space:]]+Checklist([[:space:]]*|$)/ { skip=1; next }
+    /^#{1,6}[[:space:]]+AI review instructions([[:space:]]*|$)/ { skip=1; next }
+    /^#{1,6}[[:space:]]+/ { skip=0 }
+    !skip { print }
+  '
 }
 
 jira_post_search() {
