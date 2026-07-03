@@ -1,6 +1,7 @@
 ---
 title: "Installing Activity Flow in React Native apps"
 slug: "installing-activity-flow-in-react-native-apps"
+excerpt: "Learn how to install the Activity Flow SDK in React Native apps for Android and iOS to track navigation, order events, deep links, ads, and customer interactions."
 hidden: false
 createdAt: "2025-12-18T16:30:39.842Z"
 updatedAt: "2026-07-03T00:00:00.000Z"
@@ -202,7 +203,7 @@ To enable deep-link handling in your iOS app, add your URL scheme to the `Info.p
 
 2. Handle incoming deep links by modifying your `AppDelegate.swift` (or `AppDelegate.mm`) file. The following example handles deep links for cold starts (when the app isn't running) and warm starts (when the app is already running).
 
-    
+    ```swift AppDelegate.swift
     import UIKit
     import React
 
