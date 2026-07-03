@@ -3,21 +3,21 @@ title: "Overriding native icons"
 excerpt: "Replace existing FastStore icons with custom SVG designs that match your brand identity."
 ---
 
-This guide explains how to override an icon that already ships with FastStore by replacing it with your own SVG design — for example, swapping the default outlined heart for a filled one that matches your brand.
+This guide explains how to override the icons that ship with FastStore by replacing them with your own SVG design — for example, swapping the default outlined heart with a filled one that matches your brand.
 
-If you instead need to add an icon that doesn't exist in the default set, see [Adding custom icons](https://developers.vtex.com/docs/guides/faststore/managing-icons-adding-custom-icons).
+If you need to add an icon that doesn't exist in the default set, see [Adding custom icons](https://developers.vtex.com/docs/guides/faststore/managing-icons-adding-custom-icons).
 
 ## Before you begin
 
 Make sure you have:
 
-- A FastStore project set up and running locally. If you don't, refer to the [Setting up the development environment](https://developers.vtex.com/docs/guides/faststore/getting-started-1-setting-up-your-environment) guide.
+- A FastStore project set up and running locally. If you don't, check the [Setting up the development environment](https://developers.vtex.com/docs/guides/faststore/getting-started-1-setting-up-your-environment) guide.
 - The replacement icon available as an SVG file.
 - The `id` of the icon you want to override. You can find it in the [Iconography reference](https://developers.vtex.com/docs/guides/faststore/styling-icons).
 
-## How the override works
+## How override works
 
-To override an icon, you ship your own `icons.svg` from your store's `/public` folder containing a modified `<symbol>` under the **same `id`** the FastStore components reference. During the build, FastStore copies your file on top of the default one, so your version becomes the active icon source.
+To override an icon, you ship your own `icons.svg` from the store's `/public` folder containing a modified `\<symbol>` under the **same `id`** the FastStore components reference. During the build, FastStore copies your file on top of the default one, so your version becomes the active icon source.
 
 ## Instructions
 
@@ -37,7 +37,7 @@ If your project doesn't already have a `/public` folder at the root level, creat
 To preserve every default icon, copy the existing file as your starting point:
 
 1. Run `yarn dev` once to generate the `.faststore` folder in your project.
-2. Copy `.faststore/public/icons.svg` into your store's `/public` folder.
+2. Copy `.faststore/public/icons.svg` into the store's `/public` folder.
 
 ```
 📂 your-store
@@ -63,7 +63,7 @@ Open `/public/icons.svg` and find the `<symbol>` whose `id` matches the icon you
 
 ### Step 4 - Replace the symbol contents
 
-Replace the paths inside the `<symbol>` with your custom design. Keep the same `id` (case-sensitive) and, ideally, the same `viewBox` to preserve consistent sizing:
+Replace the paths inside `<symbol>` with your custom design. Keep the same `id` (case-sensitive) and, ideally, the same `viewBox` to preserve consistent sizing:
 
 ```svg
 <symbol id="ShoppingCart" viewBox="0 0 256 256">
