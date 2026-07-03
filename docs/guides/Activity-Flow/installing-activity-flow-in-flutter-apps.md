@@ -1,6 +1,7 @@
 ---
 title: "Installing Activity Flow in Flutter apps"
 slug: "installing-activity-flow-in-flutter-apps"
+excerpt: "Learn how to install the VTEX Activity Flow SDK in your Flutter app to track navigation, page views, deep links, ads, and customer interactions across Android and iOS."
 hidden: false
 createdAt: "2025-12-18T16:30:39.842Z"
 updatedAt: "2026-07-03T00:00:00.000Z"
@@ -495,7 +496,7 @@ class ButtonTemplate extends StatelessWidget {
 }
 ```
 
-The example demonstrates integrating Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to automatically capture page-view events.
+The example demonstrates how to integrate Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to automatically capture page-view events.
 
 It outlines a `MyHomePage` that incorporates an `AdBanner` that uses `addAdsListener` to pass ad metadata, such as product name, price, and ID. Additionally, it features navigation buttons sourced from a routes list.
 
