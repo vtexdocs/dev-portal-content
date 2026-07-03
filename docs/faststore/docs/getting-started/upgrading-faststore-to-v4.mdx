@@ -2,9 +2,12 @@
 title: 'Upgrading FastStore to v4'
 ---
 
-In this guide, you'll learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities.
+In this guide, you'll learn how to upgrade your FastStore project to the v4 major version. It covers the main changes introduced in this version, including updates to dependencies, configuration, and styling utilities. Follow the instructions for your current FastStore version to ensure a smooth, consistent migration:
 
-> ⚠️ Follow the instructions that match your current FastStore version to ensure a smooth and consistent migration.
+- [Upgrading from v3 to v4](#upgrading-from-v3-to-v4)
+- [Upgrading from v2 to v4](#upgrading-from-v2-to-v4)
+
+> ⚠️ **AI-assisted upgrade:** If you use an AI coding assistant (Cursor, GitHub Copilot, Claude Code, or similar), install the [`faststore-storefront`](https://github.com/vtex/skills/tree/main/skills/faststore-storefront) skill from [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills). This skill provides your assistant with persistent context on FastStore conventions, section overrides, SCSS patterns, BFF extensions, and the specific steps required to upgrade from **v3 to v4**, helping it generate accurate suggestions throughout the upgrade.
 
 ## Upgrading from v3 to v4
 
@@ -26,7 +29,7 @@ Open your `package.json` and apply the following changes:
 {
   ...
   "dependencies": {
-    "@faststore/cli": "^4.0.0",
+    "@faststore/cli": "^4.0.1",
     "graphql": "^16.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -68,7 +71,7 @@ This is required to ensure consistent dependency resolution across the monorepo 
 
 In your `discovery.config.js`, ensure the `experimental` object includes `nodeVersion: 24`:
 
-```javascript
+```js
 experimental: {
   nodeVersion: 24,
 },
@@ -118,7 +121,7 @@ After updating the imports, you must sync the changes with the CMS. The steps de
 
 > ⚠️ FastStore v4 introduces breaking changes that move several previously hardcoded labels and messages into the CMS. Before publishing, you must sync the CMS, configure the new fields in the affected sections, and republish any pages that use them.
 
-1. Run `yarn cms-sync` to sync the schema changes with the Headless CMS.
+1. Run `yarn cms-sync` to sync the schema changes with the Headless CMS (legacy).
 2. Review the breaking changes below, configure the new fields in the relevant sections, and republish the affected pages.
 
 <details>
@@ -129,7 +132,7 @@ The following components had hardcoded labels removed in v4. Each one now expose
 - **Breadcrumb** ([PR #3099](https://github.com/vtex/faststore/pull/3099)): The `"All products"` label, previously fixed in code for pages without a breadcrumb list (such as Search), is now configurable through the `Fallback label` field in the Breadcrumb section. After syncing, configure this field and republish pages that include the Breadcrumb section.
 - **Sort** ([PR #3100](https://github.com/vtex/faststore/pull/3100)): Sort option labels are no longer hardcoded. They are now configured through the `sortBySelector` field in the ProductGallery section. After syncing, configure the labels and republish pages that include the ProductGallery section.
 - **Invalid quantity toast** ([PR #3102](https://github.com/vtex/faststore/pull/3102)): The toast message shown when an invalid quantity is entered (in the PDP quantity selector, the Navbar search suggestions with quick order enabled, or the SKU matrix sidebar) is no longer hardcoded. It is now configured through the `invalidQuantityToast` field, available in both the Navbar and ProductDetails sections. After syncing, configure the labels in both sections and republish the affected pages.
-- **ScrollToTopButton**: Removed from the ProductListing template. It must now be added manually through the Headless CMS on PLP and Search pages.
+- **ScrollToTopButton**: Removed from the ProductListing template. It must now be added manually through the Headless CMS (legacy) on PLP and Search pages.
 - **Other components with hardcoded messages removed** ([PR #3192](https://github.com/vtex/faststore/pull/3192)): Hardcoded labels were also removed from the components listed below. After syncing the CMS, review the corresponding sections and configure the new fields as needed:
     - Filter: `FilterSlider`, `FilterDesktop`, `FilterDeliveryMethodFacet`
     - Region: `RegionSlider`, `RegionPopover`
