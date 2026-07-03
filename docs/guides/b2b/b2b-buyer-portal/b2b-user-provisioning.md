@@ -110,7 +110,7 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
 
 >⚠️ This step is required only if the storefront user's organizational unit does not exist yet. If it already exists, proceed to [Step 3 - Assign user to organizational unit](#step-3---assign-user-to-organizational-unit).
 
-Organizational units identify the organizations that buyer users are part of. All new units are created at the root level. To create child-level units, see `POST` [Move organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/path).
+Organizational units identify the organizations that buyer users are part of. All new units are created at the root level. To create child-level units, see `PUT` [Move organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path).
 
 >ℹ️ For more information, see `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1).
 
@@ -282,6 +282,6 @@ For additional user and organizational management operations, see the following 
 * `GET` [Verify user roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/roles)
 * `GET` [Get buyer data](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search)
 * `PATCH` [Edit organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#patch-/api/organization-units/v1/-unitId-)
-* `POST` [Move organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/path)
+* `PUT` [Move organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#put-/api/organization-units/v1/-organizationUnitId-/path)
 * `DELETE` [Delete organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-unitId-)
 * `DELETE` [Remove users from organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-unitId-/users)

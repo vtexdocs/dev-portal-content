@@ -130,18 +130,18 @@ Use the authorization retrieved from the steps listed in [Before you begin](#bef
             ]
             }
         ]
-        "shipping"?: {
+        "shipping": {
             "trackingId": "string",
             "trackingStatus": "string",
-            "services"?: [
+            "services": [
                 {
                     "serviceId": "string",
-                    "agent"?: "string",
-                    "vehicle"?: "string",
+                    "agent": "string",
+                    "vehicle": "string",
                     "courier": "string",
-                    "trackingUrl"?: "string",
+                    "trackingUrl": "string",
                     "serviceStatus": "string",
-                    "evidences"?: "string",
+                    "evidences": "string",
                     "createdAt": "string"
                 }
             ]
