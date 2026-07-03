@@ -15,14 +15,14 @@ All new headless integrations must use [Intelligent Search API v1](https://devel
 
 Intelligent Search API v1 offers:
 
-- **HTTP caching:** most responses now include a `Cache-Control` header, enabling CDN and browser caching. This reduces origin load and speeds up storefronts. Always read this header at runtime. Don't hardcode cache durations in your integration.
-- **Lower latency:** the new `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint skips the search pipeline entirely for single-product lookups.
-- **Explicit context:** all inputs are passed as query parameters or path facets. Responses are deterministic and cache-friendly because they no longer vary by segment cookie.
+* **HTTP caching:** most responses now include a `Cache-Control` header, enabling CDN and browser caching. This reduces origin load and speeds up storefronts. Always read this header at runtime. Don't hardcode cache durations in your integration.
+* **Lower latency:** the new `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint skips the search pipeline entirely for single-product lookups.
+* **Explicit context:** all inputs are passed as query parameters or path facets. Responses are deterministic and cache-friendly because they no longer vary by segment cookie.
 
 ## Before you begin
 
-- You must have [VTEX Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) installed in your account.
-- Identify all places in your codebase that call Intelligent Search API (Legacy) at `/api/io/_v/api/intelligent-search/*`.
+* You must have [VTEX Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) installed in your account.
+* Identify all places in your codebase that call Intelligent Search API (Legacy) at `/api/io/_v/api/intelligent-search/*`.
 
 ## Step 1 - Update the base URL
 
@@ -45,16 +45,16 @@ https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1
 Rename paths to match the new URL structure. Underscores become hyphens, the IO prefix is removed, and `/v1` is added.
 
 | Intelligent Search API (Legacy) | Intelligent Search API v1 |
-| --- | --- |
-| `GET /api/io/_v/api/intelligent-search/top_searches`<br />[Get list of the 10 most searched terms](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/top_searches) | `GET /api/intelligent-search/v1/top-searches`<br />[Get list of the 10 most searched terms (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) |
-| `GET /api/io/_v/api/intelligent-search/autocomplete_suggestions`<br />[Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/autocomplete_suggestions) | `GET /api/intelligent-search/v1/autocomplete-suggestions`<br />[Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions) |
-| `GET /api/io/_v/api/intelligent-search/search_suggestions`<br />[Get list of suggested terms similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/search_suggestions) | `GET /api/intelligent-search/v1/search-suggestions`<br />[Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) |
-| `GET /api/io/_v/api/intelligent-search/correction_search`<br />[Get attempt of correction of a misspelled term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/correction_search) | `GET /api/intelligent-search/v1/correction-search`<br />[Get attempt of correction of a misspelled term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) |
-| `GET /api/io/_v/api/intelligent-search/banners/{facets}`<br />[Get list of banners registered for query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/banners/-facets-) | `GET /api/intelligent-search/v1/banners/{facets}`<br />[Get list of banners registered for query (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) |
-| `GET /api/io/_v/api/intelligent-search/product_search/{facets}`<br />[Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) | `GET /api/intelligent-search/v1/product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) |
-| `GET /api/io/_v/api/intelligent-search/facets/{facets}`<br />[Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-) | `GET /api/intelligent-search/v1/facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
-| `GET /api/io/_v/api/intelligent-search/pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) | `GET /api/intelligent-search/v1/pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) |
-| N/A | `GET /api/intelligent-search/v1/products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| :---- | :---- |
+| `GET /api/io/_v/api/intelligent-search/top_searches` [Get list of the 10 most searched terms](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/top_searches) | `GET /api/intelligent-search/v1/top-searches` [Get list of the 10 most searched terms (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) |
+| `GET /api/io/_v/api/intelligent-search/autocomplete_suggestions` [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/autocomplete_suggestions) | `GET /api/intelligent-search/v1/autocomplete-suggestions` [Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions) |
+| `GET /api/io/_v/api/intelligent-search/search_suggestions` [Get list of suggested terms similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/search_suggestions) | `GET /api/intelligent-search/v1/search-suggestions` [Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions) |
+| `GET /api/io/_v/api/intelligent-search/correction_search` [Get attempt of correction of a misspelled term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/correction_search) | `GET /api/intelligent-search/v1/correction-search` [Get attempt of correction of a misspelled term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search) |
+| `GET /api/io/_v/api/intelligent-search/banners/{facets}` [Get list of banners registered for query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/banners/-facets-) | `GET /api/intelligent-search/v1/banners/{facets}` [Get list of banners registered for query (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-) |
+| `GET /api/io/_v/api/intelligent-search/product_search/{facets}` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) | `GET /api/intelligent-search/v1/product-search/{facets}` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) |
+| `GET /api/io/_v/api/intelligent-search/facets/{facets}` [Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-) | `GET /api/intelligent-search/v1/facets/{facets}` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
+| `GET /api/io/_v/api/intelligent-search/pickup-point-availability/{facets}` [Get pickup point availability for Delivery Promise](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/pickup-point-availability/-facets-) | `GET /api/intelligent-search/v1/pickup-point-availability/{facets}` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) |
+| N/A | `GET /api/intelligent-search/v1/products` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
 
 ## Step 3 - Replace segment cookie context with explicit parameters
 
@@ -63,113 +63,44 @@ Intelligent Search API (Legacy) reads locale, sales channel, regionalization, ma
 Read the current segment values from the VTEX segment cookie (or your session/context store) and map them to the corresponding query parameters:
 
 | Segment field | Intelligent Search API v1 parameter | Affected endpoints |
-| --- | --- | --- |
+| :---- | :---- | :---- |
 | `cultureInfo` | `locale` | All endpoints |
-| `channel` | `sc` query param | All endpoints |
-| `regionId` | `regionId` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
-| `countryCode` | `country` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}`<br />[List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}`<br />[Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
-| `utm_source` | `utmSource` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
-| `utm_campaign` | `utmCampaign` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
-| `utmi_campaign` | `utmiCampaign` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
-| `campaigns` | `campaigns` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
-| `priceTables` | `priceTables` | `GET /product-search/{facets}`<br />[Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products`<br />[Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `channel` | `sc` | `GET /product-search/{facets}` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `regionId` | `regionId` | `GET /product-search/{facets}` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /products` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `countryCode` | `country` | `GET /product-search/{facets}` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `utm_source`<br />`utm_campaign`<br />`utmi_campaign`<br />`campaigns`<br />`priceTables` | `utmSource`<br />`utmCampaign`<br />`utmiCampaign`<br />`campaigns` (omit if `null`)<br />`priceTables` | `GET /product-search/{facets}` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /products` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| `zip-code`, `coordinates`, `country`, `pickupPoint`, `deliveryZonesHash`, `pickupPointsHash` keys in `segment.facets` | Same-named query parameters. If `countryCode` is present as a top-level segment field, it takes precedence over the `country` key in the `facets` string. | `GET /product-search/{facets}` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)<br />`GET /pickup-point-availability/{facets}` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)<br />`GET /products` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) |
+| All other keys in `segment.facets` | URL path facets, appended as `key/value` pairs | `GET /product-search/{facets}` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)<br />`GET /facets/{facets}` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-) |
 
 **Before:**
 
-```sh
+```shell
 curl 'https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search/trade-policy/1' \
   --header 'Cookie: vtex_segment=...'
+
+# segment = { channel: 1, cultureInfo: "en-US", facets: "zip-code=22250-040;country=BRA;brand=acme" }
 ```
 
 **After:**
 
-```sh
-curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?locale=en-US&sc=1'
+```shell
+curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/brand/acme?locale=en-US&sc=1&country=BRA&zip-code=22250-040'
 ```
 
 ### Parsing the segment `facets` field
 
-The segment cookie's `facets` field is a semicolon-separated `key=value` string, for example:
+The last two rows of the table above reference keys inside `segment.facets`. Unlike the other segment fields, `facets` is a semicolon-separated `key=value` string that must be parsed before its values can be forwarded as query parameters or path facets. For example:
 
 ```text
-zip-code=22250-040;country=BRA;brand=samsung;category-1=tv
+zip-code=22250-040;country=BRA;brand=acme;category-1=tv
 ```
 
-Six keys from this string map to v1 query parameters: `zip-code`, `coordinates`, `country`, `pickupPoint`, `deliveryZonesHash`, and `pickupPointsHash`. All other keys become path facets in the URL.
+Each affected endpoint includes a TypeScript reference implementation in its own documentation:
 
-> **Note on `country`:** if `countryCode` is present as a top-level segment field, it takes precedence over the `country` key in the `facets` string. The TypeScript reference implementation below handles this automatically.
-> **Note on `campaigns`:** this field is only forwarded when the segment carries it as a non-empty string. Segments often have `campaigns: null` — in that case, omit the parameter entirely.
-
-The following TypeScript snippet shows a reference implementation of the full segment-to-v1 translation for `product-search`:
-
-```ts
-type Segment = {
-  channel?: string | number
-  regionId?: string
-  countryCode?: string
-  cultureInfo?: string
-  // Semicolon-separated "key=value" string, e.g. "zip-code=22250-040;country=BRA;brand=samsung"
-  facets?: string
-  utm_source?: string
-  utm_campaign?: string
-  utmi_campaign?: string
-  campaigns?: string
-  priceTables?: string
-}
-
-const SHIPPING_KEYS = new Set([
-  'zip-code', 'coordinates', 'country', 'pickupPoint',
-  'deliveryZonesHash', 'pickupPointsHash',
-])
-
-function segmentToProductSearchV1(segment: Segment, query?: string): string {
-  const shipping: Record<string, string> = {}
-  const pathFacets: Array<{ key: string; value: string }> = []
-
-  for (const pair of (segment.facets ?? '').split(';')) {
-    const eq = pair.indexOf('=')
-    if (eq < 0) continue
-    const key = pair.slice(0, eq)
-    const value = pair.slice(eq + 1)
-    if (!key || !value) continue
-
-    if (SHIPPING_KEYS.has(key)) {
-      shipping[key] = value
-    } else {
-      pathFacets.push({ key, value })
-    }
-  }
-
-  const params: Record<string, string> = {}
-  const set = (name: string, value?: string | number) => {
-    if (value !== undefined && value !== null && value !== '') {
-      params[name] = String(value)
-    }
-  }
-
-  set('sc', segment.channel)
-  set('locale', segment.cultureInfo)
-  set('regionId', segment.regionId)
-  set('country', segment.countryCode ?? shipping.country)
-  set('zip-code', shipping['zip-code'])
-  set('coordinates', shipping.coordinates)
-  set('pickupPoint', shipping.pickupPoint)
-  set('deliveryZonesHash', shipping.deliveryZonesHash)
-  set('pickupPointsHash', shipping.pickupPointsHash)
-  set('utmSource', segment.utm_source)
-  set('utmCampaign', segment.utm_campaign)
-  set('utmiCampaign', segment.utmi_campaign)
-  set('campaigns', segment.campaigns)
-  set('priceTables', segment.priceTables)
-
-  if (query) params.query = query
-
-  const facetPath = pathFacets.map(f => `${f.key}/${f.value}`).join('/')
-  const search = new URLSearchParams(params).toString()
-
-  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search${facetPath ? `/${facetPath}` : ''}?${search}`
-}
-```
+* `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)
+* `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)
+* `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products)
+* `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)
 
 ### Regionalization parameter (if applicable)
 
@@ -201,20 +132,20 @@ This endpoint accepts a `value` and a `field` parameter, skips the search pipeli
 
 **Before:** Fetching a single product via product search
 
-```sh
+```shell
 curl 'https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search/trade-policy/1?query=product.link:blue-shirt'
 ```
 
 **After:** Fetching a single product by slug
 
-```sh
+```shell
 curl 'https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/products?sc=1&field=slug&value=blue-shirt'
 ```
 
 Supported `field` values:
 
 | Value | Identifier type |
-| --- | --- |
+| :---- | :---- |
 | `id` (default) | Product ID (fastest, skips search pipeline entirely) |
 | `slug` | Product slug (link text) |
 | `ean` | SKU EAN |
@@ -226,7 +157,7 @@ Supported `field` values:
 The `attachments[]` object structure has changed in `products[].items[]`. Update any code that reads attachment data:
 
 | Field | Intelligent Search API (Legacy) | Intelligent Search API v1 |
-| --- | --- | --- |
+| :---- | :---- | :---- |
 | `attachments[].id` | `string` | `number` |
 | `attachments[].name` | `string` | `string` (unchanged) |
 | `attachments[].required` | `boolean` | Removed. Use `isRequired` instead. |
@@ -238,9 +169,9 @@ The `attachments[]` object structure has changed in `products[].items[]`. Update
 
 **New fields now returned:**
 
-- `products[].items[].estimatedDateArrival` (string): Estimated arrival date for the SKU, when configured.
-- `products[].items[].kitItems[]` (array): Component SKUs when `isKit` is `true`. Each entry has `itemId` and `amount`.
-- `products[].items[].sellers[].commertialOffer.PaymentOptions` (object): Available payment options and installment plans for the seller's offer.
+* `products[].items[].estimatedDateArrival` (string): Estimated arrival date for the SKU, when configured.
+* `products[].items[].kitItems[]` (array): Component SKUs when `isKit` is `true`. Each entry has `itemId` and `amount`.
+* `products[].items[].sellers[].commertialOffer.PaymentOptions` (object): Available payment options and installment plans for the seller's offer.
 
 Additionally, fields such as `isKit`, `modalType`, and `images[].imageText`, which previously returned incorrect or empty values, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
 
@@ -252,13 +183,13 @@ Responses from most endpoints now include a `Cache-Control` header, enabling CDN
 
 Exceptions:
 
-- Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)) are not cached, preventing ad impressions from being served from a shared cache.
-- Private sales channel responses: not cached.
+* Responses containing sponsored products ([VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads)) are not cached, preventing ad impressions from being served from a shared cache.
+* Private sales channel responses: not cached.
 
 ## Migration checklist
 
 | Task | Step | Required |
-| --- | --- | --- |
+| :---- | :---- | :---- |
 | <input type="checkbox"></input> Updated base URL to `/api/intelligent-search/v1` | [Step 1](#step-1---update-the-base-url) | Yes |
 | <input type="checkbox"></input> Renamed all endpoint paths (underscores to hyphens) | [Step 2](#step-2---update-endpoint-paths) | Yes |
 | <input type="checkbox"></input> Passing `locale` explicitly | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | Yes |
@@ -273,5 +204,5 @@ Exceptions:
 
 ## Related resources
 
-- [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1)
-- [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api)
+* [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1)
+* [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api)
