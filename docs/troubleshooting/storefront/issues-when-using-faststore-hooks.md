@@ -13,7 +13,7 @@ symptomFilters:
   - Rendering mismatch
 ---
 
-**Keywords:** FastStore | hooks | React | context errors | performance | TypeScript
+**Keywords:** FastStore | Hooks | React | Context errors | Performance | TypeScript
 
 [FastStore hooks](https://developers.vtex.com/docs/guides/faststore/developer-tools-hooks-overview) give you access to built-in store features and state. During implementation, you may encounter issues such as import errors, context errors, stale data, performance regressions, or type mismatches.
 
