@@ -174,7 +174,7 @@ This `AndroidManifest` adds two intent filters for deep linking:
 - One for a custom scheme `"{YOUR_CUSTOM_SCHEME}"`.
 
 Both use `action.VIEW`, `category_DEFAULT`, and `category_BROWSABLE`, allowing the Activity Flow to launch from browsers or other apps.
-The data tag for deep link via HTTP specifies the `scheme`, `host`, and an optional `pathPrefix`, matching any path that begins with that prefix (for example, **"/products/42"** if `{APP_ROUTE}` is **"/products"**). The main difference between intent filters for different routes is the `android:pathPrefix` attribute, which specifies the app route.
+The data tag for a deep link via HTTP specifies the `scheme`, `host`, and an optional `pathPrefix`, matching any path that begins with that prefix (for example, **"/products/42"** if `{APP_ROUTE}` is **"/products"**). The main difference between intent filters for different routes is the `android:pathPrefix` attribute, which specifies the app route.
 
 For a deep link via a custom scheme, the data tag sets the scheme, matching any URL that starts with that scheme (for example, **myapp://...** if `{YOUR_CUSTOM_SCHEME}` is **myapp**).
 
@@ -192,7 +192,7 @@ To enable deep-link handling in your iOS app, add your URL scheme to the `Info.p
       <array>
        <string>{YOUR_BUNDLE_URL_SCHEME}</string>
       </array>
-      <key0>CFBundleURLName</key>
+      <key>CFBundleURLName</key>
        <string>{YOUR_BUNDLE_URL_NAME}</string>
      </dict>
     </array>
@@ -202,7 +202,7 @@ To enable deep-link handling in your iOS app, add your URL scheme to the `Info.p
 
 2. Handle incoming deep links by modifying your `AppDelegate.swift` (or `AppDelegate.mm`) file. The following example handles deep links for cold starts (when the app isn't running) and warm starts (when the app is already running).
 
-    ```swift AddDelegate.swift
+    
     import UIKit
     import React
 
@@ -296,9 +296,9 @@ To configure ad tracking, follow these steps:
 
 2. Integrate the ad tracker into your components
 
-    There are two methods to integrate the ad tracker into your components: Using the AFAdsTracker Wrapper component or using the `useAdsTracker` hook.
+    There are two methods to integrate the ad tracker into your components: using the AFAdsTracker Wrapper component or using the `useAdsTracker` hook.
 
-    #### Using the AFAdsTracker Wrapper component
+   #### Using the AFAdsTracker Wrapper component
 
     To track ad events with the AFAdsTracker, wrap your ad component with it and provide the necessary tracking parameters. The wrapper will automatically manage all required event handlers.
 
@@ -416,7 +416,7 @@ To configure ad tracking, follow these steps:
     }
     ```
 
-    The app initializes tracking via `initActivityFlow` with your VTEX account name, and enables automatic page view tracking by calling `usePageViewObserver` with a `NavigationContainer` ref.
+    The app initializes tracking via `initActivityFlow` with your VTEX account name and enables automatic page view tracking by calling `usePageViewObserver` with a `NavigationContainer` ref.
 
     On the Ads screen, ad parameters (including the required `accountName`) are passed to the AFAdsTracker wrapper, which wraps a fully clickable child to automatically fire impression, view, and click events without manual handler wiring.
 
@@ -424,7 +424,7 @@ To configure ad tracking, follow these steps:
 
     >⚠️ To use this example in your project, remember to replace `accountName` based on your scenario.
 
-    #### Using the `useAdsTracker` hook
+   #### Using the `useAdsTracker` hook
 
     The `useAdsTracker` hook provides more control over how events are attached. It returns handlers and a ref that you must apply manually to your components.
 
@@ -565,7 +565,7 @@ Use `useImpressionObserver` to track when a screen or component is rendered. The
 
 #### Combining multiple observers
 
-The hooks can be combined on the same screen or component to track the full interaction funnel: whether the elemente was rendered (impression), actually seen by the user (view), and clicked (click). 
+The hooks can be combined on the same screen or component to track the full interaction funnel: whether the element was rendered (impression), actually seen by the user (view), and clicked (click).
 
 The example below tracks all three on a product detail screen:
 
