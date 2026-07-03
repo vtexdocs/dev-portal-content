@@ -813,10 +813,6 @@ jobs:
             fi
           }
 
-          merge_word_count_description() {
-            CURRENT="$1" COUNT="$2" python3 .github/scripts/crowdin_sync.py word-count
-          }
-
           is_language_subtask() {
             case "$1" in
               English*|Portuguese*|Spanish*) return 0 ;;
@@ -827,28 +823,12 @@ jobs:
           update_subtask_word_count() {
             local key="$1"
             local summary="$2"
-            local current_desc merged_desc custom_fields payload response
-
-            if [ -z "$CROWDIN_TOTAL_WORDS" ]; then
-              echo "Missing word count for ${summary} subtask ${key}" >&2
-              exit 1
-            fi
-
-            current_desc=$(curl -s \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}?fields=description" \
-              | jq -r '.fields.description // ""')
-            merged_desc=$(merge_word_count_description "$current_desc" "$CROWDIN_TOTAL_WORDS")
-
-            custom_fields=$(jq -n \
-              --arg field "$LOC_JIRA_WORD_COUNT_FIELD" \
-              --argjson count "$CROWDIN_TOTAL_WORDS" \
-              '{($field): $count}')
+            local payload response
 
             payload=$(jq -n \
-              --arg description "$merged_desc" \
-              --argjson custom_fields "$custom_fields" \
-              '{fields: ({description: $description} + $custom_fields)}')
+              --arg field "$LOC_JIRA_WORD_COUNT_FIELD" \
+              --argjson count "$CROWDIN_TOTAL_WORDS" \
+              '{fields: {($field): $count}}')
 
             response=$(curl -s -o update-subtask-word-count-response.json -w "%{http_code}" \
               -X PUT \
