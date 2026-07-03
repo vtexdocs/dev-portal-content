@@ -31,7 +31,7 @@ The CMS uses [JSON Schema](https://json-schema.org/) to declare every Content Ty
 
 A minimal field declaration looks like this:
 
-```json
+```jsonc
 "title": {
   "title": "Title",       // Label shown in the CMS Admin
   "type": "string",
@@ -93,7 +93,7 @@ Your team owns rendering, preview wiring, and CI/CD. The CMS provides schemas, a
 
 A **Content Type** describes the shape of a page. **Components** are the building blocks you arrange inside it.
 
-```
+```mermaid
 flowchart TD
   Schema["Schema bundle"]
   CT["Content Type"]
@@ -146,7 +146,7 @@ Well-structured schemas reuse definitions instead of duplicating fields. The CMS
 
 The `vtex.headless` base provides core platform definitions — not a full page library. You add the `components` and `content-types` your storefront needs.
 
-```
+```jsonc
 // Store schema bundle (simplified)
 {
   "$id": "youraccount.yourstore@1.0.0",
@@ -162,7 +162,7 @@ The `vtex.headless` base provides core platform definitions — not a full page 
 
 `$extends` inherits properties from one or more definitions in the same bundle. Child properties override parent properties with the same name.
 
-```
+```jsonc
 {
   "$extends": ["#/$defs/base-component"],
   "$componentKey": "PromoBanner",
@@ -188,7 +188,7 @@ Use `$extends` when multiple components share fields (dates, color variants, lin
 | **Open section picker** | `"sections": { "$ref": "#/$defs/$ALLOW_ALL_COMPONENTS" }` | You need to add any component you registered. |
 | **Restricted sections** | `"sections": { "type": "array", "items": { "anyOf": [...] } } }` | Only certain components are allowed on a page. |
 
-```
+```jsonc
 "seo": {
   "$ref": "#/components/SEO"
 }
@@ -279,7 +279,7 @@ GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{accou
 
 **Response shape (simplified):**
 
-```
+```json
 {
   "componentKey": "landingPage",
   "slug": "summer-sale",
@@ -309,7 +309,7 @@ GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{accou
 
 **Response shape (simplified):**
 
-```
+```json
 {
   "entries": [
     {
@@ -347,7 +347,7 @@ GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{accou
 
 ```
 
-```json
+```jsonc
 {
   "entries": [ /* 20 entries */ ],
   "scroll": "eyJzb3J0IjoidXBkYXRlZEF0Iiw..."
@@ -376,7 +376,7 @@ Singleton Content Types (defined with `"$singleton": true`) have exactly one ent
 GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/globalHeader/entries?content=all
 ```
 
-```
+```json
 {
   "entries": [
     {
@@ -405,7 +405,7 @@ Every section object in an API response includes a `componentKey` that identifie
 
 A typical implementation in React:
 
-```
+```tsx
 import { PromoBanner } from '@/components/PromoBanner'
 import { SiteHeader } from '@/components/SiteHeader'
 import { RichText } from '@/components/RichText'
@@ -433,7 +433,7 @@ function Sections({ sections }: { sections: { componentKey: string; [key: string
 
 Each component receives the full section object as props, so field names in your JSON Schema map directly to the props your component expects. If a `componentKey` is not in your map, the section is silently skipped — this is a safe default during incremental rollout.
 
-ℹ️ For full query parameter documentation (`locale`, `sort`, `order`, `content`, `scroll`), see the [Data Plane API reference](https://developers.vtex.com/docs/api-reference/data-plane-api).
+<!-- For full query parameter documentation (`locale`, `sort`, `order`, `content`, `scroll`), see the [Data Plane API reference](https://developers.vtex.com/docs/api-reference/data-plane-api). -->
 
 ## Recommended content modeling patterns
 
@@ -450,7 +450,7 @@ Some content applies across every page rather than to a single route.
 | **Navigation** | Inside a header component | Link arrays, menu items | Main menu is maintained once. |
 | **Banners** | On page Content Types | `PromoBanner`, `TextBanner` | Promotional blocks per page. |
 
-```
+```jsonc
 // cms/pages/cms_content_type__globalHeader.jsonc
 {
   "title": "Global Header",
@@ -482,7 +482,7 @@ Fetch singleton entries by Content Type name (no slug) and wrap every page layou
 
 **Home**: One entry, no slug:
 
-```
+```jsonc
 {
   "title": "Home",
   "type": "object",
@@ -497,7 +497,7 @@ Fetch singleton entries by Content Type name (no slug) and wrap every page layou
 
 **Landing page**: Many entries, slug required:
 
-```
+```jsonc
 {
   "title": "Landing Page",
   "type": "object",
@@ -518,7 +518,7 @@ Fetch singleton entries by Content Type name (no slug) and wrap every page layou
 
 **Blog**: Define `blogCategory` and `blogPost` Content Types when your storefront needs editorial content:
 
-```
+```jsonc
 // cms/pages/cms_content_type__blogPost.jsonc
 {
   "title": "Blog Post",
