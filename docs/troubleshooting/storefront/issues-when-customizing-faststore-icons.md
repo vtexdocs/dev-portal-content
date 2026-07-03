@@ -3,7 +3,7 @@ title: "Issues when customizing FastStore icons"
 slug: "issues-when-customizing-faststore-icons"
 hidden: false
 createdAt: "2026-05-19T00:00:00.000Z"
-updatedAt: "2026-05-19T13:00:00.000Z"
+updatedAt: "2026-07-03T11:00:00.000Z"
 excerpt: "Troubleshoot common issues when adding custom icons or overriding native icons in a FastStore project."
 domainFilters:
   - FastStore
