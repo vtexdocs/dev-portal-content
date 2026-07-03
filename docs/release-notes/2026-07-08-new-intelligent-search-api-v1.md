@@ -1,10 +1,10 @@
 ---
 title: "New Intelligent Search API v1"
-slug: "2026-06-22-new-intelligent-search-api-v1"
+slug: "2026-07-08-new-intelligent-search-api-v1"
 excerpt: "The new Intelligent Search API v1 is now available for headless integrations. It adds HTTP caching, lower latency, explicit context parameters instead of the segment cookie, and a new endpoint for product detail pages."
 hidden: false
-createdAt: "2026-06-22T00:00:00.000Z"
-updatedAt: "2026-06-22T00:00:00.000Z"
+createdAt: "2026-07-08T00:00:00.000Z"
+updatedAt: "2026-07-08T00:00:00.000Z"
 type: "added"
 tags:
     - Search
@@ -16,14 +16,14 @@ The new [Intelligent Search API v1](https://developers.vtex.com/docs/api-referen
 
 Here is a summary of the key differences between Intelligent Search API (Legacy) and Intelligent Search API v1. See the sections below for full details.
 
-| | Intelligent Search API (Legacy) | Intelligent Search API v1 |
-| --- | --- | --- |
-| **Base URL** | `/api/io/_v/api/intelligent-search` | `/api/intelligent-search/v1` |
-| **Path format** | `endpoint_name` (underscores) | `endpoint-name` (hyphens) |
+|  | Intelligent Search API (Legacy) | Intelligent Search API v1 |
+| :---- | :---- | :---- |
 | **[HTTP caching](#http-caching)** | Not cached | Responses include a `Cache-Control` header; read it at runtime to determine cacheability. |
-| **[Context](#explicit-context-no-segment-cookie)** | VTEX segment cookie | Explicit query parameters |
-| **[Single-product lookup](#new-endpoint-get-product)** | Via product search pipeline | Dedicated `GET /products` endpoint |
-| **[`attachments[]` schema](#breaking-change-attachments-object-structure-in-product-search)** | `id` string; `required`/`domainValues` fields | `id` number; replaced by `isRequired`/`fields[].domain_values` |
+| [**Context**](#explicit-context-no-segment-cookie) | VTEX segment cookie | Explicit query parameters |
+| [**Single-product lookup**](#new-endpoint-get-product)  | Via product search pipeline | Dedicated `GET /products` endpoint |
+| **[Base URL](#new-url-structure)** | `/api/io/_v/api/intelligent-search` | `/api/intelligent-search/v1` |
+| **[Path format](#new-url-structure)** | `endpoint_name` (underscores) | `endpoint-name` (hyphens) |
+| **[`attachments[]` schema](#breaking-change-attachments-object-structure-in-product-search)** | `id` string; `required`/`domainValues` fields | `id` number; `required`/`domainValues` replaced by `isRequired`/`fields[].domain_values` |
 
 ### HTTP caching
 
@@ -41,11 +41,12 @@ Exceptions:
 Intelligent Search API (Legacy) relied on the VTEX segment cookie to fill in locale, sales channel, regionalization, and marketing context. Intelligent Search API v1 does not read the segment cookie. All context must be passed explicitly as query parameters or facets in the URL path.
 
 | Context | Intelligent Search API (Legacy) | Intelligent Search API v1 |
-| --- | --- | --- |
-| Locale | Read from segment cookie | `locale` query parameter |
-| Sales channel | Read from segment cookie | `sc` query parameter |
-| Region | Read from segment cookie | `regionId` query parameter |
-| UTM / price tables | Read from segment cookie | `utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables` query parameters |
+| :---- | :---- | :---- |
+| Locale | Read from `segment.cultureInfo` | `locale` query parameter |
+| Sales channel | Read from `segment.channel` | `sc` query parameter |
+| Country | Read from `segment.countryCode` | `country` query parameter |
+| Region | Read from `segment.regionId` | `regionId` query parameter |
+| UTM / price tables | Read from `segment.utm_source`, `utm_campaign`, `utmi_campaign`, `campaigns`, `priceTables` | `utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables` query parameters |
 
 If your store uses [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores), the following parameters were previously passed via the segment `facets` string and must now be passed as explicit query parameters on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-), `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-), and `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-):
 
@@ -77,7 +78,7 @@ A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/in
 
 The `attachments[]` object structure has changed in `products[].items[]` between Intelligent Search API (Legacy) and Intelligent Search API v1, affecting the following endpoints:
 
-* `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (previously `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-))
+* `GET` [Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (previously `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-))
 * `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (new)
 
 Key changes:
@@ -93,7 +94,9 @@ If your integration reads attachment data, update it before migrating. See [Migr
 
 For a step-by-step migration checklist, see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
-All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) remains available for existing integrations, but its endpoints will be deprecated in a future announcement. We recommend migrating existing integrations as soon as possible.
+All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
+
+[Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) remains available for existing integrations, but its endpoints will be deprecated in a future announcement. We recommend migrating existing integrations as soon as possible.
 
 ## Related resources
 
