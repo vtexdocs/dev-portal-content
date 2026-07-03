@@ -2,8 +2,8 @@
 # is added to a PR with new markdown content in docs/.
 #
 # Trigger: localization needed (high|medium|low) on PRs to main under docs/**.
-# Skips PRs with the "localization" label or l10n* branches. Re-add the label
-# after new commits if it was applied before content changed.
+# Skips PRs with the "localization" label (case-insensitive) or l10n* branches
+# (case-insensitive). Re-add the label after new commits if it was applied before content changed.
 #
 # Developer Portal uses en-us source files reviewed in Crowdin in the same language
 # (single Crowdin project; no PT/ES translation pipeline).
@@ -17,8 +17,8 @@
 # Reporter on new tasks/subtasks: PR author (GitHub login → Jira user search;
 # optional LOC_JIRA_REPORTER_EMAIL_DOMAIN fallback, e.g. @vtex.com).
 #
-# Crowdin: uploads PR-changed files via API, sets word count on the parent,
-# editor links on the English revision subtask. Partial upload for existing files with
+# Crowdin: uploads PR-changed files via API, sets word count on the parent and
+# language subtasks, editor links on the English revision subtask. Partial upload for existing files with
 # changes in ≤5 blocks (not new files); full source file is attached as Crowdin
 # file context with START/END OF UPDATED SECTION markers.
 #
@@ -47,23 +47,48 @@ on:
 jobs:
   create-jira-ticket:
     if: >
-      (github.event.label.name == 'localization needed (high)' ||
-       github.event.label.name == 'localization needed (medium)' ||
-       github.event.label.name == 'localization needed (low)') &&
-      !contains(github.event.pull_request.labels.*.name, 'localization') &&
-      !startsWith(github.event.pull_request.head.ref, 'l10n')
+      github.event.label.name == 'localization needed (high)' ||
+      github.event.label.name == 'localization needed (medium)' ||
+      github.event.label.name == 'localization needed (low)'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
 
     steps:
+      - name: Check PR eligibility
+        id: eligibility
+        run: |
+          HEAD_REF='${{ github.event.pull_request.head.ref }}'
+          HEAD_REF_LOWER=$(printf '%s' "$HEAD_REF" | tr '[:upper:]' '[:lower:]')
+
+          if [[ "$HEAD_REF_LOWER" == l10n* ]]; then
+            echo "Skipping: head branch starts with l10n (case-insensitive): ${HEAD_REF}"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          HAS_LOCALIZATION_LABEL=$(jq -r '
+            [.pull_request.labels[].name | ascii_downcase == "localization"] | any
+          ' "$GITHUB_EVENT_PATH")
+
+          if [ "$HAS_LOCALIZATION_LABEL" = "true" ]; then
+            echo "Skipping: PR has localization label (case-insensitive)"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "PR is eligible for localization automation"
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
+
       - name: Checkout
+        if: steps.eligibility.outputs.should_run == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: Check for content additions
+        if: steps.eligibility.outputs.should_run == 'true'
         id: content_diff
         run: |
           BASE_SHA="${{ github.event.pull_request.base.sha }}"
@@ -97,7 +122,9 @@ jobs:
 
       - name: Check production lock for existing tasks
         id: production_lock
-        if: steps.content_diff.outputs.has_additions == 'true'
+        if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
+          steps.content_diff.outputs.has_additions == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
@@ -178,6 +205,7 @@ jobs:
       - name: Resolve or create Jira ticket
         id: parent_ticket
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true'
         env:
@@ -378,6 +406,7 @@ jobs:
 
       - name: Link source Jira tasks from PR
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
@@ -479,6 +508,7 @@ jobs:
       - name: Upload touched files to Crowdin
         id: crowdin_upload
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
@@ -494,6 +524,7 @@ jobs:
 
       - name: Update parent task word count
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
@@ -541,6 +572,7 @@ jobs:
 
       - name: Comment on PR with Jira link
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
@@ -613,6 +645,7 @@ jobs:
 
       - name: Create localization subtasks
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
@@ -626,6 +659,7 @@ jobs:
           PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
           PARENT_DUE_DATE: ${{ steps.parent_ticket.outputs.parent_due_date }}
           CROWDIN_EDITOR_LINKS: ${{ steps.crowdin_upload.outputs.editor_links }}
+          CROWDIN_TOTAL_WORDS: ${{ steps.crowdin_upload.outputs.total_words }}
         run: |
           PR_AUTHOR=$(jq -r '.pull_request.user.login' "$GITHUB_EVENT_PATH")
 
@@ -832,6 +866,39 @@ jobs:
             fi
           }
 
+          is_language_subtask() {
+            case "$1" in
+              English*|Portuguese*|Spanish*) return 0 ;;
+              *) return 1 ;;
+            esac
+          }
+
+          update_subtask_word_count() {
+            local key="$1"
+            local summary="$2"
+            local payload response
+
+            payload=$(jq -n \
+              --arg field "$LOC_JIRA_WORD_COUNT_FIELD" \
+              --argjson count "$CROWDIN_TOTAL_WORDS" \
+              '{fields: {($field): $count}}')
+
+            response=$(curl -s -o update-subtask-word-count-response.json -w "%{http_code}" \
+              -X PUT \
+              -H "Content-Type: application/json" \
+              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+              -d "$payload" \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}")
+
+            if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
+              echo "Updated word count for ${key} (${summary}): ${CROWDIN_TOTAL_WORDS}"
+            else
+              echo "Failed to update word count for ${key} (HTTP ${response})" >&2
+              cat update-subtask-word-count-response.json >&2
+              exit 1
+            fi
+          }
+
           rank_subtask_after() {
             local key="$1"
             local after_key="$2"
@@ -956,3 +1023,11 @@ jobs:
             "${ORDERED_KEYS[1]}" \
             "$CROWDIN_EDITOR_LINKS" \
             "English revision"
+
+          echo "Updating word count on language subtasks..."
+          for i in "${!SUBTASK_SUMMARIES[@]}"; do
+            summary="${SUBTASK_SUMMARIES[$i]}"
+            if is_language_subtask "$summary"; then
+              update_subtask_word_count "${ORDERED_KEYS[$i]}" "$summary"
+            fi
+          done
