@@ -15,8 +15,8 @@
 # Links source tasks found in the PR title, description, or branch to
 # the LOC parent with a `blocks` link.
 #
-# Crowdin: uploads PR-changed files via API, sets word count on the parent,
-# editor links on the English revision subtask. Partial upload for existing files with
+# Crowdin: uploads PR-changed files via API, sets word count on the parent and
+# language subtasks, editor links on the English revision subtask. Partial upload for existing files with
 # changes in ≤5 blocks (not new files); full source file is attached as Crowdin
 # file context with START/END OF UPDATED SECTION markers.
 #
@@ -614,6 +614,7 @@ jobs:
           PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
           PARENT_DUE_DATE: ${{ steps.parent_ticket.outputs.parent_due_date }}
           CROWDIN_EDITOR_LINKS: ${{ steps.crowdin_upload.outputs.editor_links }}
+          CROWDIN_TOTAL_WORDS: ${{ steps.crowdin_upload.outputs.total_words }}
         run: |
           if [ -z "$PARENT_DUE_DATE" ]; then
             echo "Parent due date is missing; cannot set subtask due dates." >&2
@@ -812,6 +813,59 @@ jobs:
             fi
           }
 
+          merge_word_count_description() {
+            CURRENT="$1" COUNT="$2" python3 .github/scripts/crowdin_sync.py word-count
+          }
+
+          is_language_subtask() {
+            case "$1" in
+              English*|Portuguese*|Spanish*) return 0 ;;
+              *) return 1 ;;
+            esac
+          }
+
+          update_subtask_word_count() {
+            local key="$1"
+            local summary="$2"
+            local current_desc merged_desc custom_fields payload response
+
+            if [ -z "$CROWDIN_TOTAL_WORDS" ]; then
+              echo "Missing word count for ${summary} subtask ${key}" >&2
+              exit 1
+            fi
+
+            current_desc=$(curl -s \
+              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}?fields=description" \
+              | jq -r '.fields.description // ""')
+            merged_desc=$(merge_word_count_description "$current_desc" "$CROWDIN_TOTAL_WORDS")
+
+            custom_fields=$(jq -n \
+              --arg field "$LOC_JIRA_WORD_COUNT_FIELD" \
+              --argjson count "$CROWDIN_TOTAL_WORDS" \
+              '{($field): $count}')
+
+            payload=$(jq -n \
+              --arg description "$merged_desc" \
+              --argjson custom_fields "$custom_fields" \
+              '{fields: ({description: $description} + $custom_fields)}')
+
+            response=$(curl -s -o update-subtask-word-count-response.json -w "%{http_code}" \
+              -X PUT \
+              -H "Content-Type: application/json" \
+              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+              -d "$payload" \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}")
+
+            if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
+              echo "Updated word count for ${key} (${summary}): ${CROWDIN_TOTAL_WORDS}"
+            else
+              echo "Failed to update word count for ${key} (HTTP ${response})" >&2
+              cat update-subtask-word-count-response.json >&2
+              exit 1
+            fi
+          }
+
           rank_subtask_after() {
             local key="$1"
             local after_key="$2"
@@ -936,3 +990,11 @@ jobs:
             "${ORDERED_KEYS[1]}" \
             "$CROWDIN_EDITOR_LINKS" \
             "English revision"
+
+          echo "Updating word count on language subtasks..."
+          for i in "${!SUBTASK_SUMMARIES[@]}"; do
+            summary="${SUBTASK_SUMMARIES[$i]}"
+            if is_language_subtask "$summary"; then
+              update_subtask_word_count "${ORDERED_KEYS[$i]}" "$summary"
+            fi
+          done
