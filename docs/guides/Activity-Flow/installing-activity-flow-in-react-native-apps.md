@@ -3,12 +3,12 @@ title: "Installing Activity Flow in React Native apps"
 slug: "installing-activity-flow-in-react-native-apps"
 hidden: false
 createdAt: "2025-12-18T16:30:39.842Z"
-updatedAt: "2026-07-02T00:00:00.000Z"
+updatedAt: "2026-07-03T00:00:00.000Z"
 seeAlso:
   - "/docs/guides/activity-flow"
 ---
 
-In this guide, you'll learn how to install and use the Activity Flow SDK in React Native apps for Android and iOS. By following these steps, you'll be able to track user navigation, order events, deep links, ad events, and customer interaction events (clicks, views, and impressions) in your app.
+In this guide, you'll learn how to install and use the [Activity Flow SDK](https://developers.vtex.com/docs/guides/activity-flow) in React Native apps for Android and iOS. By following these steps, you'll be able to track user navigation, order events, deep links, ad events, and customer interaction events (clicks, views, and impressions) in your app.
 
 ## Before you begin
 
