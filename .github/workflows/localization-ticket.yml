@@ -14,6 +14,8 @@
 # lock): then a Jira comment is posted and automation skips further Jira/Crowdin updates.
 # Links source tasks found in the PR title, description, or branch to
 # the LOC parent with a `blocks` link.
+# Reporter on new tasks/subtasks: PR author (GitHub login → Jira user search;
+# optional LOC_JIRA_REPORTER_EMAIL_DOMAIN fallback, e.g. @vtex.com).
 #
 # Crowdin: uploads PR-changed files via API, sets word count on the parent,
 # editor links on the English revision subtask. Partial upload for existing files with
@@ -31,6 +33,7 @@ name: Create Localization Ticket
 env:
   LOC_JIRA_WORD_COUNT_FIELD: customfield_10253
   LOC_JIRA_SOURCE_LINK_PROJECT_KEY: EDU
+  LOC_JIRA_REPORTER_EMAIL_DOMAIN: '@vtex.com'
   CROWDIN_LANGUAGE: en-us
 
 on:
@@ -184,6 +187,7 @@ jobs:
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
           LOC_JIRA_PROJECT_KEY: ${{ secrets.LOC_JIRA_PROJECT_KEY }}
           LOC_JIRA_EPIC_KEY: ${{ secrets.LOC_JIRA_EPIC_KEY }}
+          LOC_JIRA_REPORTER_EMAIL_DOMAIN: ${{ env.LOC_JIRA_REPORTER_EMAIL_DOMAIN }}
           CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
         run: |
           PR_NUMBER=$(jq -r '.pull_request.number' "$GITHUB_EVENT_PATH")
@@ -312,6 +316,8 @@ jobs:
             exit 0
           fi
 
+          JIRA_REPORTER_JSON=$(resolve_jira_reporter_from_github "$PR_AUTHOR" || true)
+
           PAYLOAD=$(jq -n \
             --arg project "$LOC_JIRA_PROJECT_KEY" \
             --arg epic_key "$LOC_JIRA_EPIC_KEY" \
@@ -325,27 +331,31 @@ jobs:
             --arg changed_files "$CHANGED_FILES_SECTION" \
             --arg priority "$JIRA_PRIORITY" \
             --arg duedate "$JIRA_DUE_DATE" \
+            --argjson reporter "${JIRA_REPORTER_JSON:-null}" \
             '{
-              fields: {
-                project: { key: $project },
-                parent: { key: $epic_key },
-                summary: ("[DP] " + $pr_title),
-                description: (
-                  "dp-github-pr-ref: " + $pr_ref + "\n\n" +
-                  "h3. PR Details\n" +
-                  "||Field||Value||\n" +
-                  "|Author|" + $pr_author + "|\n" +
-                  "|PR|[#" + $pr_number + "|" + $pr_url + "]|\n\n" +
-                  "h3. Changed files\n\n" +
-                  $changed_files + "\n\n" +
-                  "h3. PR Description\n\n" +
-                  $pr_body
-                ),
-                issuetype: { name: "Task" },
-                priority: { name: $priority },
-                duedate: $duedate,
-                labels: [$pr_label]
-              }
+              fields: (
+                {
+                  project: { key: $project },
+                  parent: { key: $epic_key },
+                  summary: ("[DP] " + $pr_title),
+                  description: (
+                    "dp-github-pr-ref: " + $pr_ref + "\n\n" +
+                    "h3. PR Details\n" +
+                    "||Field||Value||\n" +
+                    "|Author|" + $pr_author + "|\n" +
+                    "|PR|[#" + $pr_number + "|" + $pr_url + "]|\n\n" +
+                    "h3. Changed files\n\n" +
+                    $changed_files + "\n\n" +
+                    "h3. PR Description\n\n" +
+                    $pr_body
+                  ),
+                  issuetype: { name: "Task" },
+                  priority: { name: $priority },
+                  duedate: $duedate,
+                  labels: [$pr_label]
+                }
+                + (if $reporter == null then {} else {reporter: $reporter} end)
+              )
             }')
 
           RESPONSE=$(curl -s -o response.json -w "%{http_code}" \
@@ -610,11 +620,15 @@ jobs:
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
           LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           LOC_JIRA_PROJECT_KEY: ${{ secrets.LOC_JIRA_PROJECT_KEY }}
+          LOC_JIRA_REPORTER_EMAIL_DOMAIN: ${{ env.LOC_JIRA_REPORTER_EMAIL_DOMAIN }}
           PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
           PARENT_DUE_DATE: ${{ steps.parent_ticket.outputs.parent_due_date }}
           CROWDIN_EDITOR_LINKS: ${{ steps.crowdin_upload.outputs.editor_links }}
         run: |
+          PR_AUTHOR=$(jq -r '.pull_request.user.login' "$GITHUB_EVENT_PATH")
+
           if [ -z "$PARENT_DUE_DATE" ]; then
             echo "Parent due date is missing; cannot set subtask due dates." >&2
             exit 1
@@ -622,6 +636,8 @@ jobs:
 
           # shellcheck source=.github/scripts/jira_helpers.sh
           source .github/scripts/jira_helpers.sh
+
+          JIRA_REPORTER_JSON=$(resolve_jira_reporter_from_github "$PR_AUTHOR" || true)
 
           TODAY=$(date -u +%Y-%m-%d)
           DOW=$(date -u +%u)
@@ -722,14 +738,18 @@ jobs:
               --arg parent "$PARENT_KEY" \
               --arg summary "$summary" \
               --arg duedate "$duedate" \
+              --argjson reporter "${JIRA_REPORTER_JSON:-null}" \
               '{
-                fields: {
-                  project: { key: $project },
-                  parent: { key: $parent },
-                  summary: $summary,
-                  issuetype: { name: "Subtask" },
-                  duedate: $duedate
-                }
+                fields: (
+                  {
+                    project: { key: $project },
+                    parent: { key: $parent },
+                    summary: $summary,
+                    issuetype: { name: "Subtask" },
+                    duedate: $duedate
+                  }
+                  + (if $reporter == null then {} else {reporter: $reporter} end)
+                )
               }')
 
             local response
