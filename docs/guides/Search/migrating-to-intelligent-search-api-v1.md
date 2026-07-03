@@ -21,7 +21,7 @@ Intelligent Search API v1 offers:
 
 ## Before you begin
 
-* You must have [VTEX Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) installed in your account.
+* You must have [VTEX Intelligent Search](https://help.vtex.com/docs/tracks/overview-intelligent-search) installed in your account.
 * Identify all places in your codebase that call Intelligent Search API (Legacy) at `/api/io/_v/api/intelligent-search/*`.
 
 ## Step 1 - Update the base URL
