@@ -78,7 +78,7 @@ A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/in
 
 The `attachments[]` object structure has changed in `products[].items[]` between Intelligent Search API (Legacy) and Intelligent Search API v1, affecting the following endpoints:
 
-* `GET` [Search products v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (previously `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-))
+* `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (previously `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-))
 * `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (new)
 
 Key changes:
