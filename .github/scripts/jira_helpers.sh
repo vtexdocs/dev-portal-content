@@ -2,6 +2,16 @@
 # Source after setting LOC_JIRA_BASE_URL, LOC_JIRA_USER_EMAIL, LOC_JIRA_API_TOKEN,
 # LOC_JIRA_PROJECT_KEY, PR_NUMBER, GITHUB_REPOSITORY, PR_REF, PR_LABEL, and GH_TOKEN.
 
+# Drop PR template sections that should not appear in Jira descriptions.
+strip_pr_description_sections() {
+  awk '
+    /^#{1,6}[[:space:]]+Checklist([[:space:]]*|$)/ { skip=1; next }
+    /^#{1,6}[[:space:]]+AI review instructions([[:space:]]*|$)/ { skip=1; next }
+    /^#{1,6}[[:space:]]+/ { skip=0 }
+    !skip { print }
+  '
+}
+
 jira_post_search() {
   local jql="$1"
   local fields_csv="$2"
