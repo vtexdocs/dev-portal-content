@@ -7,7 +7,7 @@ createdAt: "2026-05-15T12:00:00.000Z"
 updatedAt: "2026-05-15T12:00:00.000Z"
 ---
 
-> ℹ️ This feature is in beta, and we are actively working to improve it. If you have questions about enablement, account configuration, or campaigns, please contact [our Support](https://help.vtex.com/en/support).
+> ℹ️ This feature is in beta, and we're actively working to improve it. If you have questions about enablement, account configuration, or campaigns, contact [our Support](https://help.vtex.com/en/support).
 
 This guide explains how to integrate [product recommendations](https://help.vtex.com/tutorial/product-recommendations-beta--2QIexbD2FSXBxELUnFtg7g) in mobile stores using the VTEX [Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api).
 
@@ -211,11 +211,11 @@ Render the returned products as product cards on the shelf.
 
 ## Step 4: Track recommendation events through the API
 
-To measure performance and improve recommendations in mobile, the store must send three event types through the API:
+To measure performance and improve recommendations on mobile, the store must send three event types through the API:
 
-* `recommendation-view`: when the recommendation shelf enters the viewport.
-* `recommendation-click`: when the user clicks a recommended product.
-* `product-view`: when the user opens a product detail page.
+* `recommendation-view`: When the recommendation shelf enters the viewport.
+* `recommendation-click`: When the user clicks a recommended product.
+* `product-view`: When the user opens a product detail page.
 
 For accurate tracking, ensure that:
 
