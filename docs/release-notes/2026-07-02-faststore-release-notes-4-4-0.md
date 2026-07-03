@@ -12,7 +12,7 @@ tags:
 
 FastStore `v4.4.0` version introduces CMS-backed pages for My Account for B2B Buyer Portal (Closed Beta), an improved CMS sync flow, locale fixes for the Localization feature (Closed Beta), and versioned Authenticator API routes.
 
-> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.4.0` and keep your store up-to-date with the following improvements.
+> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.4.0` and keep your store up-to-date with the following updates.
 
 ## Bug Fix
 
