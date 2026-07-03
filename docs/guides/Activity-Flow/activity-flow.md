@@ -19,7 +19,7 @@ This guide provides an overview of the Activity Flow architecture and how to get
 
 > ℹ️ Manual configuration of Activity Flow is only required for headless stores or mobile apps. For setup instructions, see [Next steps](#next-steps).
 >
-> If your store uses VTEX’s native storefront solutions (FastStore, Store Framework, or the Legacy CMS Portal), no additional configuration is needed. 
+> If your store uses VTEX’s native storefront solutions (FastStore, Store Framework, or the Legacy CMS Portal), no additional configuration is needed.
 
 ## Activity Flow architecture
 
