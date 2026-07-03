@@ -21,13 +21,11 @@ Now, React Native and Flutter apps support click, view, and impression tracking.
 - **Click tracking:** Use the new `useClickObserver` hook to capture tap interactions. It returns an `afHandlePress` callback to call in your press handler.
 - **View tracking:** Use the new `useViewObserver` hook to detect when a component is at least 50% visible for 1 second. It returns an `afViewRef` that can be attached to the target view.
 - **Impression tracking:** Use the new `useImpressionObserver` hook to record when a component is rendered, regardless of viewport visibility. It re-fires only when the tracked attributes change.
-
 ### Flutter
 
 - **Click tracking:** Use the new `addClickListener` extension method on any widget to capture tap interactions.
 - **View tracking:** Use the new `addViewListener` extension method to fire a view event when the widget is at least 50% visible for 1 second (per IAB standards). It fires once per app session.
 - **Impression tracking:** Use the new `addImpressionListener` extension method to record when a widget is built and rendered in the widget tree.
-
 ## What needs to be done?
 
 To implement interaction events tracking in your app, see the related guides:
