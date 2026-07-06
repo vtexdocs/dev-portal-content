@@ -99,9 +99,9 @@ For a step-by-step migration checklist, see [Migrating to Intelligent Search API
 
 All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
 
-To access all performance and reliability improvements in Intelligent Search API v1, headless integrations should use the REST API directly. Integrations using Search GraphQL are not recommended for headless implementations and should be migrated to [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
-
 [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) remains available for existing integrations, but its endpoints will be deprecated in a future announcement. We recommend migrating existing integrations as soon as possible.
+
+To access all performance and reliability improvements in Intelligent Search API v1, headless integrations should use the REST API directly. Integrations using Search GraphQL aren't recommended for headless implementations and should be migrated to [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
 
 ## Related resources
 
