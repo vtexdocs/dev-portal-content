@@ -7,9 +7,9 @@ updatedAt: "2026-07-01T12:00:00.000Z"
 excerpt: "Learn how to model and consume CMS content in headless storefronts: JSON Schema structure, Content Types, components, and Data Plane API consumption patterns."
 ---
 
-Content modeling defines what can be created on the CMS. Architecture defines how that content moves from your repository to the CMS Admin and, after publishing, to your storefront.
+Content modeling defines what can be created on the CMS and the architecture defines how that content moves from your repository to the CMS Admin and, after publishing, to your storefront.
 
-This guide covers modeling for headless integrations: core concepts, design principles, JSON Schema rules, consumption patterns, and recommended Content Type structures.
+ This guide details both layers for headless integrations, covering core concepts, design principles, JSON Schema rules, consumption patterns, and recommended Content Type structures.
 
 > ℹ️ For platform architecture (CQRS, schema upload lifecycle, file organization), see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
 
@@ -72,7 +72,7 @@ vtex content generate-schema cms/mystore/components cms/mystore/pages --out cms/
 | Requirement | Details |
 | :---- | :---- |
 | CMS enabled | CMS Admin available in your VTEX account. |
-| Headless store | A store created with storefront type Headless in **Storefront \> Content**. |
+| Headless store | A store created with storefront type Headless in **Storefront > Content**. |
 | Frontend integration | An app that fetches published entries from the Data Plane API and maps `componentKey` values to UI components. |
 
 Your team owns rendering, preview wiring, and CI/CD. The CMS provides schemas, authoring, and published content delivery.
