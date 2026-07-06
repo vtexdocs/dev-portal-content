@@ -171,7 +171,6 @@ The `attachments[]` object structure has changed in `products[].items[]`. Update
 
 * `products[].items[].estimatedDateArrival` (string): Estimated arrival date for the SKU, when configured.
 * `products[].items[].kitItems[]` (array): Component SKUs when `isKit` is `true`. Each entry has `itemId` and `amount`.
-* `products[].items[].sellers[].commertialOffer.PaymentOptions` (object): Available payment options and installment plans for the seller's offer.
 
 Additionally, fields such as `isKit`, `modalType`, and `images[].imageText`, which previously returned incorrect or empty values, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
 
@@ -200,7 +199,7 @@ Exceptions:
 | <input type="checkbox"></input> Replaced single-product search calls with `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | [Step 4](#step-4---replace-single-product-search-with-the-new-get-product-endpoint) | If applicable |
 | <input type="checkbox"></input> Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
 | <input type="checkbox"></input> Updated code reading attachment data to match new schema | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
-| <input type="checkbox"></input> Handled new fields: `estimatedDateArrival`, `kitItems[]`, `PaymentOptions` | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
+| <input type="checkbox"></input> Handled new fields: `estimatedDateArrival` and `kitItems[]` | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
 
 ## Related resources
 
