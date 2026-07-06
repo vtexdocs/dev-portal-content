@@ -174,8 +174,7 @@ jobs:
             "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${EXISTING_KEY}?fields=assignee" \
             | jq -r '.fields.assignee.displayName // "Assignee"')
 
-          COMMENT_BODY="${ASSIGNEE}, THE TASK WAS UPDATED IN GITHUB!
-But since it is already in production, it was not automatically updated here. Please check if any changes are needed."
+          COMMENT_BODY=$(printf '%s, THE TASK WAS UPDATED IN GITHUB!\nBut since it is already in production, it was not automatically updated here. Please check if any changes are needed.' "$ASSIGNEE")
           jira_post_comment "$EXISTING_KEY" "$COMMENT_BODY"
 
           echo "Production lock active for ${EXISTING_KEY} (Prepare file due: ${PREPARE_DUE}, today: ${TODAY})"
