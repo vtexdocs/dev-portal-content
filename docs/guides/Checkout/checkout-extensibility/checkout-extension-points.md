@@ -151,7 +151,7 @@ Render content below each cart item row on the payment stage. Use the [`useCartI
 
 Render content after the order button on the payment stage.
 
-![payment.order-button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/payment.order-button.after.webp)
+![payment.order-button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/payment.order-button.after.webp)
 
 ## Order Placed extension points
 
@@ -161,7 +161,7 @@ Use the following extension point to customize the order placed stage.
 
 Render content below each cart item row on the order placed stage. Use the [`useCartItem` hook](https://developers.vtex.com/docs/guides/usecartitem-hook) to access data for the current item.
 
-![order-placed.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/order-placed.cart-item.after.webp)
+![order-placed.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/order-placed.cart-item.after.webp)
 
 ## Displaying extension points in dev mode
 
