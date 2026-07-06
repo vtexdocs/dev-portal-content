@@ -14,7 +14,7 @@ The new [Intelligent Search API v1](https://developers.vtex.com/docs/api-referen
 
 ## What has changed?
 
-Here is a summary of the key differences between Intelligent Search API (Legacy) and Intelligent Search API v1. See the sections below for full details.
+Here is a summary of the key differences between **Intelligent Search API (Legacy)** and **Intelligent Search API v1**. See the sections below for full details.
 
 |  | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | :---- | :---- | :---- |
@@ -38,7 +38,7 @@ Exceptions:
 
 ### Explicit context: No segment cookie
 
-Intelligent Search API (Legacy) relied on the VTEX segment cookie to fill in locale, sales channel, regionalization, and marketing context. Intelligent Search API v1 does not read the segment cookie. All context must be passed explicitly as query parameters or facets in the URL path.
+**Intelligent Search API (Legacy)** relied on the VTEX segment cookie to fill in locale, sales channel, regionalization, and marketing context. Intelligent Search API v1 does not read the segment cookie. All context must be passed explicitly as query parameters or facets in the URL path.
 
 | Context | Intelligent Search API (Legacy) | Intelligent Search API v1 |
 | :---- | :---- | :---- |
