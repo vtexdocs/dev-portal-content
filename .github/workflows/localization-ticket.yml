@@ -84,7 +84,8 @@ jobs:
         if: steps.eligibility.outputs.should_run == 'true'
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          # Merge ref so workflow scripts come from main on branches behind main.
+          ref: ${{ github.sha }}
           fetch-depth: 0
 
       - name: Check for content additions
