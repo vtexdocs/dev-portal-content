@@ -23,7 +23,7 @@ Here is a summary of the key differences between Intelligent Search API (Legacy)
 | [**Single-product lookup**](#new-endpoint-get-product)  | Via product search pipeline | Dedicated `GET /products` endpoint |
 | **[Base URL](#new-url-structure)** | `/api/io/_v/api/intelligent-search` | `/api/intelligent-search/v1` |
 | **[Path format](#new-url-structure)** | `endpoint_name` (underscores) | `endpoint-name` (hyphens) |
-| **[`items[]` schema](#breaking-change-items-structure-in-product-search)** | `attachments[].id` string; `required`/`domainValues` fields; no `estimatedDateArrival` or `kitItems` | `attachments[].id` number; `required`/`domainValues` replaced by `isRequired`/`fields[].domain_values`; new `estimatedDateArrival` and `kitItems` fields |
+| **[New `items[]` data](#new-data-returned-in-product-search)** | `attachments[]` always empty; no `estimatedDateArrival` or `kitItems` | `attachments[]` fully populated; new `estimatedDateArrival` and `kitItems` fields |
 
 ### HTTP caching
 
@@ -74,27 +74,32 @@ The IO prefix has been removed, underscores in path names have been replaced by 
 
 A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
 
-### Breaking change: `items[]` structure in product search
+### New data returned in product search
 
-The `products[].items[]` object structure has changed between Intelligent Search API (Legacy) and Intelligent Search API v1, affecting the following endpoints:
+Intelligent Search API v1 returns additional and corrected data in `products[].items[]` on the following endpoints:
 
 * `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (previously `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-))
 * `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (new)
 
-Key changes:
+| Field | Type | Description |
+| :---- | :---- | :---- |
+| `items[].estimatedDateArrival` | `string` | Estimated arrival date for the SKU, when configured. |
+| `items[].kitItems[]` | `array` | Component SKUs when `isKit` is `true`. Each entry has `itemId` and `amount`. |
+| `items[].attachments[].id` | `number` | Attachment unique identifier. |
+| `items[].attachments[].isRequired` | `boolean` | Whether the attachment is required. |
+| `items[].attachments[].isActive` | `boolean` | Whether the attachment is active. |
+| `items[].attachments[].schema` | `object` | Free-form JSON schema describing the attachment. |
+| `items[].attachments[].fields[]` | `array` | Array of `{ field_name, max_characters, domain_values }`. |
 
-* The `attachments[]` object structure has changed: `id` changed from string to number.
-* `required` and `domainValues` have been removed in favor of `isRequired` and `fields[].domain_values`.
-* New fields `estimatedDateArrival` and `kitItems` are now returned at the `items[]` level.
-* Fields previously returning incorrect or empty values, such as `isKit`, `modalType`, and `images[].imageText`, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
-
-If your integration reads `items[]` data, update it before migrating. See [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1) for the full before/after schema.
+Fields that previously returned incorrect or empty values, such as `isKit`, `modalType`, and `images[].imageText`, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
 
 ## What needs to be done?
 
 For a step-by-step migration checklist, see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
 All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
+
+To access all performance and reliability improvements in Intelligent Search API v1, headless integrations should use the REST API directly. Integrations using Search GraphQL are not recommended for headless implementations and should be migrated to [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
 
 [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) remains available for existing integrations, but its endpoints will be deprecated in a future announcement. We recommend migrating existing integrations as soon as possible.
 
