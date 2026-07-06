@@ -154,28 +154,6 @@ Supported `field` values:
 | `sku` | SKU ID |
 | `reference` | SKU reference ID |
 
-## Step 5 - Verify product item data in your integration
-
-The `attachments[]` object structure has changed in `products[].items[]`. Update any code that reads attachment data:
-
-| Field | Intelligent Search API (Legacy) | Intelligent Search API v1 |
-| :---- | :---- | :---- |
-| `attachments[].id` | `string` | `number` |
-| `attachments[].name` | `string` | `string` (unchanged) |
-| `attachments[].required` | `boolean` | Removed. Use `isRequired` instead. |
-| `attachments[].domainValues` | `string` | Removed. Use `fields[].domain_values` instead. |
-| `attachments[].isRequired` | Not present | `boolean` |
-| `attachments[].isActive` | Not present | `boolean` |
-| `attachments[].schema` | Not present | `object` (free-form JSON schema) |
-| `attachments[].fields[]` | Not present | Array of `{ field_name, max_characters, domain_values }` |
-
-**New fields now returned:**
-
-* `products[].items[].estimatedDateArrival` (string): Estimated arrival date for the SKU, when configured.
-* `products[].items[].kitItems[]` (array): Component SKUs when `isKit` is `true`. Each entry has `itemId` and `amount`.
-
-Additionally, fields such as `isKit`, `modalType`, and `images[].imageText`, which previously returned incorrect or empty values, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
-
 ## Caching behavior
 
 Responses from most endpoints now include a `Cache-Control` header, enabling CDN and browser caching for public sales channels. This reduces origin load and improves storefront response times.
@@ -199,9 +177,6 @@ Exceptions:
 | <input type="checkbox"></input> Passing Delivery Promise parameters explicitly (`country`, `zip-code`, `coordinates`, `pickupPoint`, `deliveryZonesHash`, `pickupPointsHash`) | [Step 3](#delivery-promise-parameters-if-applicable) | If applicable |
 | <input type="checkbox"></input> Passing UTM and marketing parameters explicitly (`utmSource`, `utmCampaign`, `utmiCampaign`, `campaigns`, `priceTables`) | [Step 3](#step-3---replace-segment-cookie-context-with-explicit-parameters) | If applicable |
 | <input type="checkbox"></input> Replaced single-product search calls with `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) | [Step 4](#step-4---replace-single-product-search-with-the-new-get-product-endpoint) | If applicable |
-| <input type="checkbox"></input> Verified `isKit`, `modalType`, and `imageText` fields now return correct data | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
-| <input type="checkbox"></input> Updated code reading attachment data to match new schema | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
-| <input type="checkbox"></input> Handled new fields: `estimatedDateArrival` and `kitItems[]` | [Step 5](#step-5---verify-product-item-data-in-your-integration) | If applicable |
 
 ## Related resources
 
