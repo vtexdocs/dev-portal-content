@@ -23,7 +23,7 @@ Here is a summary of the key differences between Intelligent Search API (Legacy)
 | [**Single-product lookup**](#new-endpoint-get-product)  | Via product search pipeline | Dedicated `GET /products` endpoint |
 | **[Base URL](#new-url-structure)** | `/api/io/_v/api/intelligent-search` | `/api/intelligent-search/v1` |
 | **[Path format](#new-url-structure)** | `endpoint_name` (underscores) | `endpoint-name` (hyphens) |
-| **[`attachments[]` schema](#breaking-change-attachments-object-structure-in-product-search)** | `id` string; `required`/`domainValues` fields | `id` number; `required`/`domainValues` replaced by `isRequired`/`fields[].domain_values` |
+| **[`items[]` schema](#breaking-change-items-structure-in-product-search)** | `attachments[].id` string; `required`/`domainValues` fields; no `estimatedDateArrival` or `kitItems` | `attachments[].id` number; `required`/`domainValues` replaced by `isRequired`/`fields[].domain_values`; new `estimatedDateArrival` and `kitItems` fields |
 
 ### HTTP caching
 
@@ -74,21 +74,21 @@ The IO prefix has been removed, underscores in path names have been replaced by 
 
 A new `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint is now available for product detail pages (PDP). Given a known identifier (product ID, slug, EAN, SKU ID, or reference), it returns a single product without going through the search pipeline, resulting in lower latency and better cache-hit rates than `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
 
-### Breaking change: `attachments[]` object structure in product search
+### Breaking change: `items[]` structure in product search
 
-The `attachments[]` object structure has changed in `products[].items[]` between Intelligent Search API (Legacy) and Intelligent Search API v1, affecting the following endpoints:
+The `products[].items[]` object structure has changed between Intelligent Search API (Legacy) and Intelligent Search API v1, affecting the following endpoints:
 
 * `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) (previously `GET` [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-))
 * `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) (new)
 
 Key changes:
 
-* `id` changed from string to number.
+* The `attachments[]` object structure has changed: `id` changed from string to number.
 * `required` and `domainValues` have been removed in favor of `isRequired` and `fields[].domain_values`.
-* New fields `estimatedDateArrival` and `kitItems` are now returned.
+* New fields `estimatedDateArrival` and `kitItems` are now returned at the `items[]` level.
 * Fields previously returning incorrect or empty values, such as `isKit`, `modalType`, and `images[].imageText`, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
 
-If your integration reads attachment data, update it before migrating. See [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1) for the full before/after schema.
+If your integration reads `items[]` data, update it before migrating. See [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1) for the full before/after schema.
 
 ## What needs to be done?
 
