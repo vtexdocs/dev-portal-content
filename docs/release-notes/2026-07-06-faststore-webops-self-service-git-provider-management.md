@@ -1,19 +1,19 @@
 ---
 title: "FastStore WebOps: Self-service Git provider management"
-slug: "2026-06-25-faststore-webops-self-service-git-provider-management"
+slug: "2026-07-06-faststore-webops-self-service-git-provider-management"
 type: added
 excerpt: "FastStore WebOps now allows you to change the GitHub organization and repository connected to your project."
-createdAt: "2026-06-25T00:00:00.000Z"
+createdAt: "2026-07-06T00:00:00.000Z"
 tags:
   - FastStore
   - WebOps
 ---
 
-FastStore WebOps now provides a self-service interface for changing the GitHub organization and repository connected to your project. This feature streamlines moving FastStore projects between organizations or repositories, eliminating the need to open support tickets for repository migrations.
+FastStore WebOps now provides a self-service interface to change the GitHub organization and repository associated with your project. This feature streamlines the process of moving FastStore projects between organizations or repositories, eliminating the need to open support tickets for repository migrations.
 
 ## What has changed?
 
-The **Integrations** tab in the FastStore WebOps dashboard now includes a **Git Provider** section where you can configure the GitHub organization and repository associated with your FastStore project.
+The **Integrations** tab in the FastStore WebOps dashboard now includes a **Git Provider** section to configure the GitHub organization and repository associated with your FastStore project.
 
 Before, moving a FastStore project to a different GitHub organization or repository required opening a ticket with VTEX Support and providing detailed information, including repository IDs, installation IDs, and account details. The process involved multiple manual steps and coordination with the Support team.
 
