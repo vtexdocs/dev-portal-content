@@ -100,7 +100,7 @@ zip-code=22250-040;country=BRA;brand=acme;category-1=tv
 The following TypeScript snippets show the full translation for each affected endpoint.
 
 <details>
-<summary>`GET` Search products (v1)</summary>
+<summary>`GET` <a href="https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-">Search products (v1)</a></summary>
 
 ```typescript
 type Segment = {
@@ -174,7 +174,7 @@ function segmentToProductSearchV1(segment: Segment, query?: string): string {
 </details>
 
 <details>
-<summary>`GET` List filters for a search (v1)</summary>
+<summary>`GET` <a href="https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-">List filters for a search (v1)</a></summary>
 
 ```typescript
 type Segment = {
@@ -238,7 +238,7 @@ function segmentToFacetsV1(segment: Segment, query?: string): string {
 </details>
 
 <details>
-<summary>`GET` Get product (v1)</summary>
+<summary>`GET` <a href="https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products">Get product (v1)</a></summary>
 
 ```typescript
 type Segment = {
@@ -305,7 +305,7 @@ function segmentToProductsV1(segment: Segment, identifier: string): string {
 </details>
 
 <details>
-<summary>`GET` Get pickup point availability for Delivery Promise (v1)</summary>
+<summary>`GET` <a href="https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-">Get pickup point availability for Delivery Promise (v1)</a></summary>
 
 ```typescript
 type Segment = {
