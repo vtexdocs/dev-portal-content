@@ -96,7 +96,7 @@ jobs:
           # Three-dot diff matches the GitHub PR "Files changed" tab (branch-only changes).
           DIFF_RANGE="${BASE_SHA}...${HEAD_SHA}"
 
-          INSERTIONS=$(git diff --numstat \
+          INSERTIONS=$(git diff --numstat -M \
             "$DIFF_RANGE" \
             -- docs/ \
             | awk '{sum += $1} END {print sum+0}')
@@ -107,7 +107,7 @@ jobs:
             echo "has_additions=false" >> $GITHUB_OUTPUT
           fi
 
-          CHANGED_FILES=$(git diff --numstat \
+          CHANGED_FILES=$(git diff --numstat -M \
             "$DIFF_RANGE" \
             -- docs/ \
             | awk '$1 > 0 {print $3}' \
@@ -174,28 +174,9 @@ jobs:
             "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${EXISTING_KEY}?fields=assignee" \
             | jq -r '.fields.assignee.displayName // "Assignee"')
 
-          COMMENT_PAYLOAD=$(jq -n \
-            --arg assignee "$ASSIGNEE" \
-            '{
-              body: (
-                $assignee + ", THE TASK WAS UPDATED IN GITHUB!\n" +
-                "But since it is already in production, it was not automatically updated here. " +
-                "Please check if any changes are needed."
-              )
-            }')
-
-          COMMENT_RESPONSE=$(curl -s -o production-lock-comment-response.json -w "%{http_code}" \
-            -X POST \
-            -H "Content-Type: application/json" \
-            -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-            -d "$COMMENT_PAYLOAD" \
-            "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${EXISTING_KEY}/comment")
-
-          if [ "$COMMENT_RESPONSE" -ne 201 ]; then
-            echo "Failed to post production lock comment on ${EXISTING_KEY} (HTTP ${COMMENT_RESPONSE})" >&2
-            cat production-lock-comment-response.json >&2
-            exit 1
-          fi
+          COMMENT_BODY="${ASSIGNEE}, THE TASK WAS UPDATED IN GITHUB!
+But since it is already in production, it was not automatically updated here. Please check if any changes are needed."
+          jira_post_comment "$EXISTING_KEY" "$COMMENT_BODY"
 
           echo "Production lock active for ${EXISTING_KEY} (Prepare file due: ${PREPARE_DUE}, today: ${TODAY})"
           echo "Posted production lock comment on ${EXISTING_KEY}"
