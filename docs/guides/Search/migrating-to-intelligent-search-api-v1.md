@@ -97,12 +97,265 @@ The last two rows of the table above reference keys inside `segment.facets`. Unl
 zip-code=22250-040;country=BRA;brand=acme;category-1=tv
 ```
 
-Each affected endpoint includes a TypeScript reference implementation in its own documentation:
+The following TypeScript snippets show the full translation for each affected endpoint.
 
-* `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)
-* `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)
-* `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products)
-* `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-)
+<details>
+<summary>`GET` Search products (v1)</summary>
+
+```typescript
+type Segment = {
+  channel?: string | number
+  regionId?: string
+  countryCode?: string
+  cultureInfo?: string
+  // Semicolon-separated "key=value" string, e.g. "zip-code=22250-040;country=BRA"
+  facets?: string
+  utm_source?: string
+  utm_campaign?: string
+  utmi_campaign?: string
+  campaigns?: string
+  priceTables?: string
+}
+
+const SHIPPING_KEYS = new Set([
+  'zip-code', 'coordinates', 'country', 'pickupPoint',
+  'deliveryZonesHash', 'pickupPointsHash',
+])
+
+function segmentToProductSearchV1(segment: Segment, query?: string): string {
+  const shipping: Record<string, string> = {}
+  const pathFacets: Array<{ key: string; value: string }> = []
+
+  for (const pair of (segment.facets ?? '').split(';')) {
+    const eq = pair.indexOf('=')
+    if (eq < 0) continue
+    const key = pair.slice(0, eq)
+    const value = pair.slice(eq + 1)
+    if (!key || !value) continue
+
+    if (SHIPPING_KEYS.has(key)) {
+      shipping[key] = value
+    } else {
+      pathFacets.push({ key, value })
+    }
+  }
+
+  const params: Record<string, string> = {}
+  const set = (name: string, value?: string | number) => {
+    if (value !== undefined && value !== null && value !== '') {
+      params[name] = String(value)
+    }
+  }
+
+  set('sc', segment.channel)
+  set('locale', segment.cultureInfo)
+  set('regionId', segment.regionId)
+  set('country', segment.countryCode ?? shipping.country)
+  set('zip-code', shipping['zip-code'])
+  set('coordinates', shipping.coordinates)
+  set('pickupPoint', shipping.pickupPoint)
+  set('deliveryZonesHash', shipping.deliveryZonesHash)
+  set('pickupPointsHash', shipping.pickupPointsHash)
+  set('utmSource', segment.utm_source)
+  set('utmCampaign', segment.utm_campaign)
+  set('utmiCampaign', segment.utmi_campaign)
+  set('campaigns', segment.campaigns)
+  set('priceTables', segment.priceTables)
+
+  if (query) params.query = query
+
+  const facetPath = pathFacets.map(f => `${f.key}/${f.value}`).join('/')
+  const search = new URLSearchParams(params).toString()
+
+  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search${facetPath ? `/${facetPath}` : ''}?${search}`
+}
+```
+
+</details>
+
+<details>
+<summary>`GET` List filters for a search (v1)</summary>
+
+```typescript
+type Segment = {
+  channel?: string | number
+  regionId?: string
+  countryCode?: string
+  cultureInfo?: string
+  // Semicolon-separated "key=value" string, e.g. "zip-code=22250-040;country=BRA;brand=acme"
+  facets?: string
+}
+
+const SHIPPING_KEYS = new Set([
+  'zip-code', 'coordinates', 'country', 'pickupPoint',
+  'deliveryZonesHash', 'pickupPointsHash',
+])
+
+function segmentToFacetsV1(segment: Segment, query?: string): string {
+  const shipping: Record<string, string> = {}
+  const pathFacets: Array<{ key: string; value: string }> = []
+
+  for (const pair of (segment.facets ?? '').split(';')) {
+    const eq = pair.indexOf('=')
+    if (eq < 0) continue
+    const key = pair.slice(0, eq)
+    const value = pair.slice(eq + 1)
+    if (!key || !value) continue
+
+    if (SHIPPING_KEYS.has(key)) {
+      shipping[key] = value
+    } else {
+      pathFacets.push({ key, value })
+    }
+  }
+
+  const params: Record<string, string> = {}
+  const set = (name: string, value?: string | number) => {
+    if (value !== undefined && value !== null && value !== '') {
+      params[name] = String(value)
+    }
+  }
+
+  set('sc', segment.channel)
+  set('locale', segment.cultureInfo)
+  set('regionId', segment.regionId)
+  set('country', segment.countryCode ?? shipping.country)
+  set('zip-code', shipping['zip-code'])
+  set('coordinates', shipping.coordinates)
+  set('pickupPoint', shipping.pickupPoint)
+  set('deliveryZonesHash', shipping.deliveryZonesHash)
+  set('pickupPointsHash', shipping.pickupPointsHash)
+
+  if (query) params.query = query
+
+  const facetPath = pathFacets.map(f => `${f.key}/${f.value}`).join('/')
+  const search = new URLSearchParams(params).toString()
+
+  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/facets${facetPath ? `/${facetPath}` : ''}?${search}`
+}
+```
+
+</details>
+
+<details>
+<summary>`GET` Get product (v1)</summary>
+
+```typescript
+type Segment = {
+  channel?: string | number
+  regionId?: string
+  countryCode?: string
+  cultureInfo?: string
+  // Semicolon-separated "key=value" string, e.g. "zip-code=22250-040;country=BRA"
+  facets?: string
+  utm_source?: string
+  utm_campaign?: string
+  utmi_campaign?: string
+  campaigns?: string
+  priceTables?: string
+}
+
+const SHIPPING_KEYS = new Set([
+  'zip-code', 'coordinates', 'country', 'pickupPoint',
+  'deliveryZonesHash', 'pickupPointsHash',
+])
+
+function segmentToProductsV1(segment: Segment, identifier: string): string {
+  const shipping: Record<string, string> = {}
+
+  for (const pair of (segment.facets ?? '').split(';')) {
+    const eq = pair.indexOf('=')
+    if (eq < 0) continue
+    const key = pair.slice(0, eq)
+    const value = pair.slice(eq + 1)
+    if (!key || !value) continue
+    if (SHIPPING_KEYS.has(key)) shipping[key] = value
+  }
+
+  const params: Record<string, string> = {}
+  const set = (name: string, value?: string | number) => {
+    if (value !== undefined && value !== null && value !== '') {
+      params[name] = String(value)
+    }
+  }
+
+  set('sc', segment.channel)
+  set('locale', segment.cultureInfo)
+  set('regionId', segment.regionId)
+  set('country', segment.countryCode ?? shipping.country)
+  set('zip-code', shipping['zip-code'])
+  set('coordinates', shipping.coordinates)
+  set('pickupPoint', shipping.pickupPoint)
+  set('deliveryZonesHash', shipping.deliveryZonesHash)
+  set('pickupPointsHash', shipping.pickupPointsHash)
+  set('utmSource', segment.utm_source)
+  set('utmCampaign', segment.utm_campaign)
+  set('utmiCampaign', segment.utmi_campaign)
+  set('campaigns', segment.campaigns)
+  set('priceTables', segment.priceTables)
+
+  params.identifier = identifier
+
+  const search = new URLSearchParams(params).toString()
+
+  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/products?${search}`
+}
+```
+
+</details>
+
+<details>
+<summary>`GET` Get pickup point availability for Delivery Promise (v1)</summary>
+
+```typescript
+type Segment = {
+  channel?: string | number
+  countryCode?: string
+  cultureInfo?: string
+  // Semicolon-separated "key=value" string, e.g. "zip-code=22250-040;country=BRA"
+  facets?: string
+}
+
+const SHIPPING_KEYS = new Set([
+  'zip-code', 'coordinates', 'country', 'pickupPoint',
+  'deliveryZonesHash', 'pickupPointsHash',
+])
+
+function segmentToPickupPointAvailabilityV1(segment: Segment): string {
+  const shipping: Record<string, string> = {}
+
+  for (const pair of (segment.facets ?? '').split(';')) {
+    const eq = pair.indexOf('=')
+    if (eq < 0) continue
+    const key = pair.slice(0, eq)
+    const value = pair.slice(eq + 1)
+    if (!key || !value) continue
+    if (SHIPPING_KEYS.has(key)) shipping[key] = value
+  }
+
+  const params: Record<string, string> = {}
+  const set = (name: string, value?: string | number) => {
+    if (value !== undefined && value !== null && value !== '') {
+      params[name] = String(value)
+    }
+  }
+
+  set('sc', segment.channel)
+  set('locale', segment.cultureInfo)
+  set('country', segment.countryCode ?? shipping.country)
+  set('zip-code', shipping['zip-code'])
+  set('coordinates', shipping.coordinates)
+  set('pickupPoint', shipping.pickupPoint)
+  set('deliveryZonesHash', shipping.deliveryZonesHash)
+  set('pickupPointsHash', shipping.pickupPointsHash)
+
+  const search = new URLSearchParams(params).toString()
+
+  return `https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/pickup-point-availability?${search}`
+}
+```
+
+</details>
 
 ### Regionalization parameter (if applicable)
 
