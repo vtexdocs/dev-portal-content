@@ -85,7 +85,7 @@ Key changes:
 
 * `id` changed from string to number.
 * `required` and `domainValues` have been removed in favor of `isRequired` and `fields[].domain_values`.
-* New fields `estimatedDateArrival`, `kitItems`, and `PaymentOptions` are now returned.
+* New fields `estimatedDateArrival` and `kitItems` are now returned.
 * Fields previously returning incorrect or empty values, such as `isKit`, `modalType`, and `images[].imageText`, now return correctly, potentially resolving a [known issue](https://help.vtex.com/known-issues/unsupported-fields-by-the-intelligent-search-api-returning-empty).
 
 If your integration reads attachment data, update it before migrating. See [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1) for the full before/after schema.
