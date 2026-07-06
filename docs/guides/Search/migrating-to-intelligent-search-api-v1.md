@@ -9,7 +9,7 @@ updatedAt: "2026-06-22T00:00:00.000Z"
 
 This guide covers everything you need to migrate a headless integration from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) to [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1).
 
-All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). The legacy API endpoints will be deprecated in a future announcement.
+> ⚠️ All new headless integrations must use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). The legacy API endpoints will be deprecated in a future announcement.
 
 ## Migration benefits
 
@@ -60,7 +60,7 @@ Rename paths to match the new URL structure. Underscores become hyphens, the IO 
 
 ## Step 3 - Replace segment cookie context with explicit parameters
 
-Intelligent Search API (Legacy) reads locale, sales channel, regionalization, marketing context, and Delivery Promise parameters from the VTEX segment cookie. Intelligent Search API v1 does not read the segment cookie. You must pass this context explicitly.
+**Intelligent Search API (Legacy)** reads locale, sales channel, regionalization, marketing context, and Delivery Promise parameters from the VTEX segment cookie. **Intelligent Search API v1** does not read the segment cookie. You must pass this context explicitly.
 
 Read the current segment values from the VTEX segment cookie (or your session/context store) and map them to the corresponding query parameters:
 
@@ -359,7 +359,7 @@ function segmentToPickupPointAvailabilityV1(segment: Segment): string {
 
 ### Regionalization parameter (if applicable)
 
-If your store uses regionalization, `regionId` was a top-level segment field in Intelligent Search API (Legacy). In Intelligent Search API v1, pass it explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) and `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):
+If your store uses regionalization, `regionId` was a top-level segment field in the **Intelligent Search API (Legacy)**. In **Intelligent Search API v1**, pass it explicitly on `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) and `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-):
 
 ```text
 ?regionId=v2.C0FC2DE04D6A7C9E1DC22C0D7EBD939B
