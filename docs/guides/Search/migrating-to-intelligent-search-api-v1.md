@@ -13,11 +13,13 @@ All new headless integrations must use [Intelligent Search API v1](https://devel
 
 ## Migration benefits
 
-Intelligent Search API v1 offers:
+Migrating to Intelligent Search API v1 offers the following improvements over Intelligent Search API (Legacy):
 
-* **HTTP caching:** most responses now include a `Cache-Control` header, enabling CDN and browser caching. This reduces origin load and speeds up storefronts. Always read this header at runtime. Don't hardcode cache durations in your integration.
-* **Lower latency:** the new `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint skips the search pipeline entirely for single-product lookups.
-* **Explicit context:** all inputs are passed as query parameters or path facets. Responses are deterministic and cache-friendly because they no longer vary by segment cookie.
+* **Lower latency:** Average 60% reduction in response time for search endpoints.
+* **HTTP caching:** Most responses now include a `Cache-Control` header, enabling CDN and browser caching to reduce origin load and speed up storefronts. Always read this header at runtime. Don't hardcode cache durations in your integration.
+* **New endpoint for single-product lookup:** The new `GET` [Get product](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint skips the search pipeline for product detail pages, resulting in lower latency and better cache-hit rates than a full product search.
+* **Explicit context:** All inputs are passed as query parameters or path facets. Responses are deterministic and cache-friendly because they no longer vary by segment cookie.
+* **Complete product item data:** fields that previously returned incorrect or empty values now return correctly, including `attachments[]`, `estimatedDateArrival`, `kitItems`, `isKit`, `modalType`, and `images[].imageText`.
 
 ## Before you begin
 
