@@ -92,8 +92,8 @@ Use this unified flow to import either base prices or fixed prices. The high-lev
 1. Prepare a CSV file following the schema for the import type (see CSV schemas below). Ensure UTF-8 encoding, comma delimiter and a header row.  
 2. Call `POST /api/price-importer/pvt/import/{importType}` with a JSON body containing `contentType` and `contentLengthBytes`. Optionally set `output=email` for email notifications.  
    - Example `importType` values:  
-     - `base-prices` — base price import.  
-     - `fixed-prices` — fixed price import.  
+     - `base-prices` — base-price import.  
+     - `fixed-prices` — fixed-price import.  
 3. Extract `batchId` and `upload.url` from the response.  
 4. Upload the CSV to `upload.url` with `PUT`. Include `Content-Type: text/csv` and any headers in `upload.headers`.  
 5. Poll `GET /api/price-importer/pvt/batches/{batchId}` until status is a terminal state (`COMPLETED`, `COMPLETED_WITH_ERRORS`, `FAILED`).  
@@ -103,7 +103,7 @@ Use this unified flow to import either base prices or fixed prices. The high-lev
 
 ### Request examples
 
-Start a base price import:
+Start a base-price import:
 
 ```shell
 curl -X POST \
@@ -118,7 +118,7 @@ curl -X POST \
   }'
 ```
 
-Start a fixed price import:
+Start a fixed-price import:
 
 ```shell
 curl -X POST \
@@ -213,8 +213,7 @@ SKU ID,Trade Policy,Price,List Price,Min Quantity,Date From,Date To,Child Accoun
 | 429 | Rate limit exceeded. | Wait and retry the request after a delay. |
 | 503 | Service unavailable. | Retry with exponential backoff. |
 
-> ⛔ If you receive a `413` error, check if the file is up to 500MB; if necessary, split it into several smaller files of up to 500MB each and submit them as individual import jobs.
-
+> ⛔ If you receive a `413` error, check if the file is up to 500 MB; if necessary, split it into several smaller files of up to 500 MB each and submit them as individual import jobs.
 
 ## Batch monitoring and error handling flow
 
@@ -323,8 +322,6 @@ All CSV files must follow these formatting rules:
 | Header row | Required (first row) |
 | Delimiter | Comma (`,`) |
 | Quote character | Double quote (`"`) |
-
-
 
 ### Output notifications
 

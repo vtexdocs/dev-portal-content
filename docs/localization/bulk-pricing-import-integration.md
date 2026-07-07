@@ -24,7 +24,6 @@ This guide covers the following integration flows:
 - [Bulk import flow](#bulk-import-flow)
 - [Batch monitoring and error handling flow](#batch-monitoring-and-error-handling-flow)
 
-
 ## How it works
 
 Every bulk pricing import follows the same three-step async pattern, regardless of whether you are importing base or fixed prices:
@@ -322,8 +321,6 @@ All CSV files must follow these formatting rules:
 | Header row | Required (first row) |
 | Delimiter | Comma (`,`) |
 | Quote character | Double quote (`"`) |
-
-
 
 ### Output notifications
 
