@@ -4,7 +4,7 @@ slug: "installing-activity-flow-in-react-native-apps"
 excerpt: "Learn how to install the Activity Flow SDK in React Native apps for Android and iOS to track navigation, order events, deep links, ads, and customer interactions."
 hidden: false
 createdAt: "2025-12-18T16:30:39.842Z"
-updatedAt: "2026-07-03T00:00:00.000Z"
+updatedAt: "2026-07-07T00:00:00.000Z"
 seeAlso:
   - "/docs/guides/activity-flow"
 ---
