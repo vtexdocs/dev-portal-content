@@ -285,7 +285,7 @@ To configure ad tracking, follow these steps:
 
 1. Create the ad object
 
-    To track events, provide an object containing all information relevant to the ad event. The accountName field is mandatory.
+    To track events, provide an object containing all information relevant to the ad event. The accountName field is required.
 
     ```ts
     const adParams = {
@@ -318,7 +318,7 @@ To configure ad tracking, follow these steps:
     </AFAdsTracker>
     ```
 
-    The example below shows a React Native app that uses `@vtex/activity-flow` with React Navigation to track navigation across multiple screens and ad events from a single location.
+    The example below shows a React Native app that uses `@vtex/activity-flow` with React Navigation to track navigation across multiple screens and ad events from a single location:
 
     ```tsx
     // App.tsx
@@ -501,7 +501,7 @@ Beyond page views and ad events, Activity Flow provides individual hooks for tra
 
 All hooks require `elementSource`, a string that identifies the tracked element. This field is sent as a top-level property in the event payload, separate from the other attributes.
 
->ℹ️ The `elementSource` key is mandatory for all events and must be provided to every hook.
+>ℹ️ The `elementSource` key is required for all events and must be provided to every hook.
 
 #### Click event
 
