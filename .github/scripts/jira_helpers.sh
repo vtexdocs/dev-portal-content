@@ -2,6 +2,27 @@
 # Source after setting LOC_JIRA_BASE_URL, LOC_JIRA_USER_EMAIL, LOC_JIRA_API_TOKEN,
 # LOC_JIRA_PROJECT_KEY, PR_NUMBER, GITHUB_REPOSITORY, PR_REF, PR_LABEL, and GH_TOKEN.
 
+# Post a plain-text comment on a Jira issue. Returns 0 on HTTP 201.
+jira_post_comment() {
+  local issue_key="$1"
+  local body="$2"
+  local payload http_code
+
+  payload=$(jq -n --arg body "$body" '{body: $body}')
+  http_code=$(curl -s -o jira-comment-response.json -w "%{http_code}" \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+    -d "$payload" \
+    "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${issue_key}/comment")
+
+  if [ "$http_code" -ne 201 ]; then
+    echo "Failed to post Jira comment on ${issue_key} (HTTP ${http_code})" >&2
+    cat jira-comment-response.json >&2
+    return 1
+  fi
+}
+
 jira_user_search() {
   local query="$1"
   local max_results="${2:-10}"
@@ -78,6 +99,7 @@ resolve_jira_reporter_from_github() {
 
   echo "Could not resolve Jira reporter for GitHub user ${github_login}; using API token user" >&2
   return 1
+}
 
 # Drop PR template sections that should not appear in Jira descriptions.
 strip_pr_description_sections() {
