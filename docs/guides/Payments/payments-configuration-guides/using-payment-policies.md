@@ -113,19 +113,28 @@ Use the following endpoints to manage policy rules:
 | List rules | `GET {baseUrl}/policy-rules?an={accountName}` |
 | Get rule by ID | `GET {baseUrl}/policy-rules/{id}?an={accountName}` |
 | Replace rule | `PUT {baseUrl}/policy-rules/{id}?an={accountName}` |
-| Partially update rule | `PATCH {baseUrl}/policy-rules/{id}?an={accountName}` |
 | Delete rule | `DELETE {baseUrl}/policy-rules/{id}?an={accountName}` |
 
-To disable a rule without deleting it, send a partial update:
+To update a rule without deleting it, replace the existing rule with a new version:
 
 ```bash
-curl --request PATCH \
+curl --request PUT \
   --url "https://pcs.vtexcommercestable.com.br/api/payment-configuration-service/policy-rules/{id}?an={accountName}" \
   --header "Content-Type: application/json" \
   --header "X-VTEX-API-AppKey: {appKey}" \
   --header "X-VTEX-API-AppToken: {appToken}" \
   --data '{
-    "enabled": false
+    "name": "Exclude payment system 5 for collection 139 in NY",
+    "expression": {
+      "and": [
+        { "in": [139, { "var": "collectionIds" }] },
+        { "==": [{ "var": "shippingState" }, "NY"] }
+      ]
+    },
+    "enabled": true,
+    "priority": 90,
+    "action": "Exclude",
+    "paymentSystems": [5]
   }'
 ```
 
@@ -156,14 +165,19 @@ Expected response pattern:
 
 ```json
 {
-  "paymentSystemAssignments": [
+  "paymentSystemAssignments": {
+    "sku-01": [1, 4]
+  },
+  "paymentSystemDefinitions": [
     {
-      "paymentSystem": 1,
-      "itemIds": ["sku-01"]
+      "id": 1,
+      "name": "Debit Card",
+      "groupName": "debitCard"
     },
     {
-      "paymentSystem": 4,
-      "itemIds": ["sku-01"]
+      "id": 4,
+      "name": "Mastercard",
+      "groupName": "creditCard"
     }
   ]
 }
