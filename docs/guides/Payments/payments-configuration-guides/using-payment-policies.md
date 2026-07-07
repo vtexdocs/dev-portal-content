@@ -42,7 +42,7 @@ Available actions:
 | `Exclude` | Removes the listed payment systems from matching items. |
 | `Include` | Restricts matching items to the listed payment systems. |
 
-Rules are evaluated in priority order. Lower `priority` values have higher precedence. If an `Include` rule and an `Exclude` rule have the same priority for the same payment system, `Exclude` takes precedence.
+Rules run in ascending priority order (lower first). `Exclude` removes payment systems from the allowed set; `Include` only filters what remains and cannot restore systems removed by a prior `Exclude`. When both actions match the same item, exclusion therefore prevails over inclusion. Use different priority values for predictable ordering.
 
 Payment systems not mentioned in any policy rule are always returned. Payment systems mentioned in a rule are returned normally when the rule condition is not met.
 
@@ -140,7 +140,7 @@ curl --request PUT \
 
 ## Step 4 - Test the policy with the search endpoint
 
-Use the search endpoint to validate policy behavior before testing the full Checkout flow. The request receives item context and returns payment system assignments by item.
+Use the search endpoint to validate policy behavior before testing the full Checkout flow. Send the cart line items (and optionally `salesChannel` and `paymentSystemIds`) in the request body. The response returns, for each item ID, the payment system IDs still allowed after active policy rules are applied (`paymentSystemAssignments`), plus the corresponding payment system metadata (`paymentSystemDefinitions`)."
 
 ```bash
 curl --request POST \
