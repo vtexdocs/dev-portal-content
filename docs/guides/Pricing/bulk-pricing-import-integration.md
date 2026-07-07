@@ -133,7 +133,7 @@ curl -X POST \
   }'
 ```
 
-### Generic response example (start import)
+### Response example (start import)
 
 ```json
 {
