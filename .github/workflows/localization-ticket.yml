@@ -86,7 +86,8 @@ jobs:
         if: steps.eligibility.outputs.should_run == 'true'
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          # PR merge ref includes main workflow scripts even when the head branch is behind.
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
           fetch-depth: 0
 
       - name: Check for content additions
@@ -113,8 +114,16 @@ jobs:
             "$DIFF_RANGE" \
             -- docs/ \
             | awk '$1 > 0 {print $3}' \
+            | sed 's/^"//;s/"$//' \
             | grep -E '\.(md|mdx)$' \
             | sort || true)
+
+          if [ -n "$CHANGED_FILES" ]; then
+            echo "has_eligible_files=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_eligible_files=false" >> $GITHUB_OUTPUT
+            echo "No eligible md/mdx files to upload (e.g. only non-markdown docs/ changes)"
+          fi
 
           {
             echo "changed_files<<EOF"
@@ -492,6 +501,7 @@ jobs:
         if: >-
           steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
+          steps.content_diff.outputs.has_eligible_files == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
         env:
@@ -519,6 +529,7 @@ jobs:
         if: >-
           steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
+          steps.content_diff.outputs.has_eligible_files == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != '' &&
           steps.crowdin_upload.outputs.upload_succeeded == 'false'
