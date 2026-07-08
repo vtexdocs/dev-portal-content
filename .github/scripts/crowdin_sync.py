@@ -4,7 +4,9 @@ Upload PR-touched markdown files to Crowdin and update Jira descriptions
 with Crowdin metadata (word count, editor links).
 
 Developer Portal uses a single Crowdin project with en-us source files
-reviewed in the same language (no PT/ES translation pipeline).
+reviewed in the same language (no PT/ES translation pipeline). Partial
+uploads use rename-aware git diffs; numstat rename paths are normalized
+in Python before processing.
 
 Commands:
   crowdin_sync.py              Upload touched files to Crowdin
@@ -31,6 +33,11 @@ CROWDIN_API_BASE_DEFAULT = "https://api.crowdin.com/api/v2"
 CROWDIN_WEB_BASE_DEFAULT = "https://crowdin.com"
 
 DOCS_SOURCE_PATH_PREFIX = "docs/"
+
+RENAME_PATH_PATTERN = re.compile(r"\{[^ ]+ => ([^}]+)\}")
+RENAME_STATUS_PATTERN = re.compile(r"^R\d+\t(.+)\t(.+)$")
+
+_rename_map: dict[str, str] = {}
 
 
 def env(name: str, default: str = "") -> str:
@@ -250,20 +257,120 @@ def is_eligible_path(relative_path: str) -> bool:
     return path.startswith(DOCS_SOURCE_PATH_PREFIX)
 
 
+def normalize_changed_path(path: str) -> str:
+    """Resolve git numstat rename syntax (dir/{old => new}) to the new path."""
+    normalized = path.replace("\\", "/").strip()
+    if "{" not in normalized or "=>" not in normalized:
+        return normalized
+
+    parent, _, name = normalized.rpartition("/")
+    if RENAME_PATH_PATTERN.search(name):
+        new_name = RENAME_PATH_PATTERN.sub(r"\1", name)
+        return f"{parent}/{new_name}" if parent else new_name
+    return RENAME_PATH_PATTERN.sub(r"\1", normalized)
+
+
 def changed_files() -> list[str]:
     raw = env("CHANGED_FILES")
     if not raw:
         return []
-    return [
-        line.strip()
-        for line in raw.splitlines()
-        if line.strip().endswith((".md", ".mdx")) and is_eligible_path(line.strip())
-    ]
+    seen: set[str] = set()
+    files: list[str] = []
+    for line in raw.splitlines():
+        path = normalize_changed_path(line.strip())
+        if (
+            path
+            and path.endswith((".md", ".mdx"))
+            and is_eligible_path(path)
+            and path not in seen
+        ):
+            seen.add(path)
+            files.append(path)
+    return files
+
+
+def build_rename_map(base_sha: str, head_sha: str) -> dict[str, str]:
+    rename_map: dict[str, str] = {}
+    result = subprocess.run(
+        [
+            "git",
+            "diff",
+            "--name-status",
+            "-M",
+            f"{base_sha}...{head_sha}",
+            "--",
+            DOCS_SOURCE_PATH_PREFIX,
+        ],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode in (0, 1):
+        for line in result.stdout.splitlines():
+            match = RENAME_STATUS_PATTERN.match(line)
+            if match:
+                rename_map[match.group(2)] = match.group(1)
+    return rename_map
+
+
+def diff_scope_for_path(relative_path: str, rename_source: str | None) -> str:
+    path = relative_path.replace("\\", "/")
+    if rename_source:
+        old = rename_source.replace("\\", "/")
+        old_parts = Path(old).parts
+        new_parts = Path(path).parts
+        common = [
+            left
+            for left, right in zip(old_parts, new_parts, strict=False)
+            if left == right
+        ]
+        if common:
+            return "/".join(common)
+        return DOCS_SOURCE_PATH_PREFIX.rstrip("/")
+    parent = str(Path(path).parent)
+    return parent if parent != "." else path
+
+
+def extract_file_diff(full_diff: str, relative_path: str) -> str:
+    target = relative_path.replace("\\", "/")
+    chunks: list[str] = []
+    current: list[str] = []
+    matches = False
+
+    for line in full_diff.splitlines(keepends=True):
+        if line.startswith("diff --git"):
+            if matches and current:
+                chunks.append("".join(current))
+            current = [line]
+            matches = False
+        else:
+            current.append(line)
+
+        stripped = line.rstrip("\n")
+        if stripped.startswith("+++ b/") and stripped[6:] == target:
+            matches = True
+        elif stripped.startswith("rename to ") and stripped[len("rename to ") :] == target:
+            matches = True
+
+    if matches and current:
+        chunks.append("".join(current))
+
+    return "".join(chunks)
 
 
 def git_diff(base_sha: str, head_sha: str, relative_path: str) -> str:
+    rename_source = _rename_map.get(relative_path.replace("\\", "/"))
+    scope = diff_scope_for_path(relative_path, rename_source)
     result = subprocess.run(
-        ["git", "diff", "-U0", f"{base_sha}...{head_sha}", "--", relative_path],
+        [
+            "git",
+            "diff",
+            "-U0",
+            "-M",
+            f"{base_sha}...{head_sha}",
+            "--",
+            scope,
+        ],
         capture_output=True,
         text=True,
         check=False,
@@ -273,7 +380,31 @@ def git_diff(base_sha: str, head_sha: str, relative_path: str) -> str:
             f"git diff failed for {relative_path}: "
             f"{result.stderr.strip() or result.stdout.strip()}"
         )
-    return result.stdout
+
+    extracted = extract_file_diff(result.stdout, relative_path)
+    if extracted.strip():
+        return extracted
+
+    fallback = subprocess.run(
+        [
+            "git",
+            "diff",
+            "-U0",
+            "-M",
+            f"{base_sha}...{head_sha}",
+            "--",
+            relative_path,
+        ],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if fallback.returncode not in (0, 1):
+        raise RuntimeError(
+            f"git diff failed for {relative_path}: "
+            f"{fallback.stderr.strip() or result.stdout.strip()}"
+        )
+    return fallback.stdout
 
 
 def parse_added_lines(diff_text: str) -> list[tuple[int, str]]:
@@ -313,6 +444,10 @@ def group_consecutive_blocks(additions: list[tuple[int, str]]) -> list[list[str]
 
 
 def is_new_file(diff_text: str) -> bool:
+    if not diff_text.strip():
+        return False
+    if "rename from" in diff_text or "similarity index" in diff_text:
+        return False
     return "new file mode" in diff_text
 
 
@@ -522,8 +657,11 @@ def upload_files_to_crowdin(
     head_sha: str,
     task_key: str,
 ) -> tuple[int, list[str], list[dict]]:
+    global _rename_map
     if not files:
         return 0, [], []
+
+    _rename_map = build_rename_map(base_sha, head_sha)
 
     project_id = require_project_id()
     project_data = fetch_project_data(project_id)
