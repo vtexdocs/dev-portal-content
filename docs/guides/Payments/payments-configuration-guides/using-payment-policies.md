@@ -2,8 +2,8 @@
 title: "Using payment policies"
 slug: "using-payment-policies"
 hidden: false
-createdAt: "2026-06-08T00:00:00.000Z"
-updatedAt: "2026-06-08T00:00:00.000Z"
+createdAt: "2026-07-07T00:00:00.000Z"
+updatedAt: "2026-07-07T00:00:00.000Z"
 excerpt: "Create and test payment policies to control payment method eligibility by item collection and delivery state."
 ---
 
@@ -19,7 +19,7 @@ Make sure you have:
 
 - A VTEX account enabled for payment policies. Contact [VTEX Support](https://support.vtex.com/hc/en-us/) or your VTEX representative to request enablement.
 - API credentials with the required [permissions](https://help.vtex.com/docs/tutorials/license-manager-resources):
-  - `ManageStore` to create, update, disable, and delete policy rules.
+  - `ManageStore` to create, update, and delete policy rules.
   - `ViewPayments` to list policy rules and test payment system availability.
 - Numeric IDs of the payment systems you want to manage. You can retrieve them with `GET https://{accountName}.vtexpayments.com.br/api/pvt/payment-systems`.
 - Catalog collections created and associated with the SKUs that should be affected by the policies.
@@ -48,7 +48,7 @@ Payment systems not mentioned in any policy rule are always returned. Payment sy
 
 ## API reference
 
-For endpoint contracts, base URLs, request parameters, and response schemas, see the [Payment Policies API reference](https://github.com/vtex/openapi-schemas/blob/ed57245faeabbc5351666be92eb6e8e8c1929e66/VTEX%20-%20Payment%20Policies%20API.json).
+For endpoint contracts, base URLs, request parameters, and response schemas, see the [Payment Policies API reference](https://developers.vtex.com/docs/api-reference/payment-policies-api).
 
 The examples below use the stable environment and require the `an` query parameter with the account name.
 
