@@ -108,14 +108,16 @@ No code changes are required: Once you submit translations via the multi-languag
 
 ### Headless implementation
 
-For headless storefronts, you either use the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) or the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api) directly, depending on your needs.
+For headless storefronts, you either use the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) or the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api) directly, depending on your needs.
 
-#### Option A: Using Intelligent Search API
+> ℹ️ If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
+
+#### Option A: Using Intelligent Search API v1
 
 Query Intelligent Search with the desired locale to receive translated results:
 
 ```bash
-curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search?locale=es-ES&query=camiseta" \
+curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?sc=1&locale=es-ES&query=camiseta" \
   -H "Accept: application/json"
 ```
 
