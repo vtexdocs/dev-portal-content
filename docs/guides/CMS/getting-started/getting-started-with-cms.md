@@ -80,15 +80,15 @@ The CMS Admin app (`vtex.admin-content-platform-ui`) provides the interface wher
 
 3. Verify the installation by opening the following URL in your browser, replacing `{account}` with your VTEX account name:
 
-```shell
-https://{account}.myvtex.com/admin/content-platform
-```
+    ```shell
+    https://{account}.myvtex.com/admin/content-platform
+    ```
 
-If you see the CMS menu items (e.g., **All content**, **Branches**, **Media**), the app is installed correctly.
+    If you see the CMS menu items (e.g., **All content**, **Branches**, **Media**), the app is installed correctly.
 
-![all-content](https://vtexhelp.vtexassets.com/assets/docs/src/all-content___b72ab7347e5eb418dca1072d929d1ec9.png)
+    ![all-content](https://vtexhelp.vtexassets.com/assets/docs/src/all-content___b72ab7347e5eb418dca1072d929d1ec9.png)
 
-> ⚠️ If you receive a `Permission denied` error when accessing CMS in the Admin, check the [CMS schema sync errors](https://developers.vtex.com/docs/guides/cms-troubleshooting) troubleshooting guide.
+    > ⚠️ If you receive a `Permission denied` error when accessing CMS in the Admin, check the [CMS schema sync errors](https://developers.vtex.com/docs/guides/cms-troubleshooting) troubleshooting guide.
 
 ## Step 4 - Scaffolding the CMS folder structure
 
