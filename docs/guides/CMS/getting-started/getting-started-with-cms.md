@@ -88,7 +88,7 @@ If you see the CMS menu items (e.g., **All content**, **Branches**, **Media**), 
 
 ![all-content](https://vtexhelp.vtexassets.com/assets/docs/src/all-content___b72ab7347e5eb418dca1072d929d1ec9.png)
 
-> ⚠️ If you receive a `Permission denied` error when accessing CMS in the Admin, check the [CMS schema sync errors](https://developers.vtex.com/docs/troubleshooting/cms-schema-sync-errors) troubleshooting guide.
+> ⚠️ If you receive a `Permission denied` error when accessing CMS in the Admin, check the [CMS schema sync errors](https://developers.vtex.com/docs/guides/cms-troubleshooting) troubleshooting guide.
 
 ## Step 4 - Scaffolding the CMS folder structure
 

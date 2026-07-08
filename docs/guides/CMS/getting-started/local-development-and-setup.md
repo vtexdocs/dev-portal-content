@@ -115,7 +115,6 @@ Regardless of the command used, the CLI will:
 
 The CLI follows [semantic versioning](https://semver.org/) (major.minor.patch). When prompted, choose a version type based on the nature of your change:
 
-
 | Change type | Version bump | Example |
 | :---- | :---- | :---- |
 | New optional field or component added | **Minor** | `1.5.0` → `1.6.0` |
