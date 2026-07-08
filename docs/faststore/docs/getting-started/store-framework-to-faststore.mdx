@@ -33,7 +33,7 @@ In the following table, see the role of each storefront during the migration:
 
 Because traffic splitting only happens once development is complete, you need a running production-like domain on FastStore earlier, to validate specific flows that can't be tested from preview URLs alone, such as login-gated features or the transition from the minicart to checkout.
 
->ℹ️ This domain is only a temporary stand-in for testing during development. It's separate from your actual production domain, which you add later in [Step 5](#step-5---adding-the-production-domain-to-webops), and which is the only domain involved in the real go-live and traffic split.
+> ℹ️ This domain is only a temporary stand-in for testing during development. It's separate from your actual production domain, which you add later in [Step 5](#step-5---adding-the-production-domain-to-webops), and which is the only domain involved in the real go-live and traffic split.
 
 There are two supported ways to get that test domain during development:
 
@@ -68,7 +68,7 @@ Front-end VTEX IO components, on the other hand, aren't compatible with FastStor
 
 Recreate all necessary pages, components, and content in the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) for your FastStore project.
 
->ℹ️ Content migration between Store Framework and FastStore CMS isn't supported, so plan enough time to recreate and review the content manually.
+> ℹ️ Content migration between Store Framework and FastStore CMS isn't supported, so plan enough time to recreate and review the content manually.
 
 If you migrate within the same account, you register this content once, directly in the account that will go live. If you use a QA subaccount instead, plan for an additional step to recreate this content into the main account before cutover.
 
@@ -86,7 +86,7 @@ Use whichever production domain you set up in [Choosing your test environment](#
 
 Also, confirm that all front-end third-party tools you reimplemented in the [previous step](#step-3---reimplementing-front-end-third-party-tools) are firing correctly on the FastStore domain.
 
->ℹ️ If you use a QA subaccount, it has its own Master Data, so the data used in tests is isolated from your live store. If you're testing on a second domain in the main account, be mindful that Master Data is shared with production.
+> ℹ️ If you use a QA subaccount, it has its own Master Data, so the data used in tests is isolated from your live store. If you're testing on a second domain in the main account, be mindful that Master Data is shared with production.
 
 ### Step 5 - Adding the production domain to WebOps
 
@@ -99,11 +99,11 @@ Before requesting the traffic split, add your production domain to FastStore Web
 
     ![adding-host-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/faststore/docs/go-live/adding-host-webops.png)
 
->ℹ️ Adding the domain doesn't change your live storefront, which keeps pointing to Store Framework until you request a traffic split.
+> ℹ️ Adding the domain doesn't change your live storefront, which keeps pointing to Store Framework until you request a traffic split.
 
 ### Step 6 - Requesting the traffic split
 
->⚠️ Before requesting the traffic split, make sure your FastStore storefront is fully ready to go live. If you developed on a second domain in the same account, confirm the production domain was added to WebOps in [Step 5](#step-5---adding-the-production-domain-to-webops). If you developed on a QA subaccount, make sure you've also recreated the CMS content and reinstalled the necessary apps in your main account, since none of that is carried over automatically.
+> ⚠️ Before requesting the traffic split, make sure your FastStore storefront is fully ready to go live. If you developed on a second domain in the same account, confirm the production domain was added to WebOps in [Step 5](#step-5---adding-the-production-domain-to-webops). If you developed on a QA subaccount, make sure you've also recreated the CMS content and reinstalled the necessary apps in your main account, since none of that is carried over automatically.
 
 Once you've completed the previous steps, open a ticket with [VTEX Support](https://help.vtex.com/en/support) at least five days before your planned migration date to request traffic splitting between Store Framework and FastStore.
 
