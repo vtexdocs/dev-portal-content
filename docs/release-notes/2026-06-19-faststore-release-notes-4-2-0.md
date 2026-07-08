@@ -6,7 +6,7 @@ excerpt: "FastStore version 4.2.0 focuses on Product Listing Page (PLP) performa
 createdAt: "2026-06-15T00:00:00.000Z"
 updatedAt: "2026-06-15T00:00:00.000Z"
 ---
- 
+
 This release brings targeted improvements across performance, localization, session handling, and CLI reliability. Highlights include faster PLP image loading and SSR behavior, fixes for localized routing and session hydration, and Windows-specific CLI import normalizations. See the sections below for details and upgrade notes.
 
 ## Performance
@@ -29,7 +29,7 @@ The first-page refetch decision for PLP queries now uses a per-mount client-side
 
 ---
 
-## Bug Fixes
+## Bug fixes
 
 ### Session refresh bypassed on localhost (PR: [#3325](https://github.com/vtex/faststore/pull/3325))
 

@@ -55,10 +55,14 @@ We currently use two main attribution models based on ad type:
 
 ### Product ads
 
-- **Conversion window**: 7 days
-- **Trigger**: User clicks on a product ad
+- **Conversion window (click)**: 7 days
+- **Conversion window (view)**: 1 day
+- **Trigger**: User views or clicks on a product ad
 
-Tracking begins only when the user clicks on a product ad. Views alone do not initiate tracking. From the moment of the click, the ad is monitored for 7 days.
+Tracking begins when a user views or clicks on a product ad. Product ads, also known as Sponsored Products, use two attribution windows:
+
+- **Click attribution**: from the moment of the click, the ad is monitored for 7 days. If the user makes a purchase during this period, the conversion is attributed to the click.
+- **View attribution**: if a user views a product ad and completes a purchase within 1 day (24 hours), the conversion is attributed to the view.
 
 ### Display or video ads
 
