@@ -17,7 +17,7 @@ Previously, add-to-cart measurement relied on product listing page (PLP) and pro
 
 On top of that, event capture broke when stores used a different naming convention, ran Google Analytics 4 (GA4) and Google Analytics Universal (GAU) simultaneously, or loaded the Activity Flow script more than once.
 
-Now, The data-layer plugin addresses these limitations with the following improvements:
+Now, the data-layer plugin addresses these limitations with the following improvements:
 
 - Expanded compatibility to stores using only GAU, which were previously unsupported.
 - Cart events are captured regardless of naming convention, including `add_to_cart`, `addToCart`, `add-to-cart`, `add_to_cart_v2`, and other common variations.
