@@ -121,15 +121,15 @@ cms/
 />
 
 <WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/local-setup-and-development"
+  linkTo="TBD"
   title="Local setup and development"
   description="Learn the daily workflow for creating component schema files, syncing them to the CMS, and verifying the result in the Admin."
   linkTitle="See more"
 />
 
 <WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/cms-troubleshooting"
-  title="Troubleshooting"
+  linkTo="TBD"
+  title="Troubleshooting: Issues during CMS schema sync"
   description="Find solutions for common errors during schema generation, upload, and Admin access, including permission issues and missing components in the section picker."
   linkTitle="See more"
 />
