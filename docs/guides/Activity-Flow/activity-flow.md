@@ -39,7 +39,6 @@ Activity Flow is natively installed in all VTEX accounts. To install it in your 
 
 <WhatsNextCard
 title="Installing Activity Flow in headless stores"
-title="Installing Activity Flow in headless stores"
 description="Learn how to install Activity Flow in your headless store."
 linkTo="/docs/guides/installing-activity-flow-in-headless-stores"
 linkTitle="See more"
