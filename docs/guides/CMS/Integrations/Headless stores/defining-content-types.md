@@ -55,7 +55,7 @@ You can co-locate Content Type files under `cms/pages/` (shown above) or use ano
 
 ### Uploading the schema bundle
 
-> ⚠️ Remember, this step applies only to headless stores. Do not use the \`vtex.headless\` base schema for FastStore stores, as it may remove the default FastStore content types and components from the store schema.
+> ⚠️ Remember, this step applies only to headless stores. Do not use the `vtex.headless` base schema for FastStore stores, as it may remove the default FastStore content types and components from the store schema.
 
 Before uploading the schema, open the generated `schema.json` file and review its contents. Make sure it includes the expected content types, components, and pages for your headless store.
 
