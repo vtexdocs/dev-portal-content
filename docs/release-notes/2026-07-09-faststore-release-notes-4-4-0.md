@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore `v4.4.0` version introduces CMS-backed pages for My Account for B2B Buyer Portal (Closed Beta), an improved CMS sync flow, locale fixes for the Localization feature (Closed Beta), and versioned Authenticator API routes.
+FastStore `v4.4.0` introduces CMS-backed pages for My Account for B2B Buyer Portal (Closed Beta), an improved CMS sync flow, locale fixes for the Localization feature (Closed Beta), and versioned Authenticator API routes.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.4.0` and keep your store up-to-date with the following updates.
 
@@ -28,7 +28,7 @@ Stores using FastStore My Account password reset should upgrade to `v4.4.0` to a
 
 ### CMS aware `cms-sync` command (PR: [#3406](https://github.com/vtex/faststore/pull/3406))
 
-The `faststore cms-sync` command now supports stores using the CMS. Previously, these stores had to run schema generation and upload commands separately. Now, the command identifies the store's CMS setup and runs the appropriate sync flow automatically.
+The `faststore cms-sync` command now supports stores using the CMS. Previously, these stores had to run schema generation and upload commands separately. Now, the command identifies the store's CMS setup and automatically runs the appropriate sync flow.
 
 For stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts), the command includes schema generation and upload in the sync process. It also checks the VTEX CLI version and verifies the authenticated VTEX account before running schema generation.
 
@@ -46,7 +46,7 @@ Previously, stores using the Localization feature (Closed Beta) could experience
 
 With this update, FastStore derives the search locale from the active route and prioritizes the locale selected in the URL. This helps ensure product names and slugs update correctly after a locale switch.
 
-Stores with `localization.enabled` should upgrade to `v4.4.0` and verify Product Listing Pages, search pages, and shelves under locale-prefixed URLs. No configuration changes are required.
+Stores with `localization.enabled` should upgrade to `v4.4.0` and verify that Product Listing Pages, search pages, and shelves are accessible under locale-prefixed URLs. No configuration changes are required.
 
 ---
 
@@ -55,7 +55,7 @@ Stores with `localization.enabled` should upgrade to `v4.4.0` and verify Product
 
 My Account for B2B Buyer Portal pages can now use CMS content. Previously, these pages relied on hardcoded English copy and could not be customized.
 
-This update adds CMS content types and section schemas for My Account for B2B Buyer Portal pages, including profile, orders, order details, user details, security, and unauthorized access pages. If CMS content is available, My Account for B2B Buyer Portal pages render the published content. If CMS content is empty or unavailable, pages continue to render with default English content.
+This update adds CMS content types and section schemas for My Account for B2B Buyer Portal pages, including profile, orders, order details, user details, security, and unauthorized access. If CMS content is available, My Account for B2B Buyer Portal pages render the published content. If CMS content is empty or unavailable, pages continue to render with default English content.
 
 Merchants can use the CMS to localize labels, reorder sections, and customize order status badges. Stores with `localization.enabled` should upgrade to `v4.4.0` and run the `faststore cms-sync` in the terminal.
 
