@@ -33,7 +33,7 @@ This change accounts for direct-to-PDP sessions and PLP-level add-to-cart action
 
 ## What needs to be done?
 
-No action is required for stores using VTEX native storefront solutions - FastStore, Store Framework, or CMS Portal (Legacy) -, where Activity Flow is installed by default.
+No action is required for stores using VTEX native storefront solutions - FastStore, Store Framework, or CMS Portal (Legacy) - where Activity Flow is installed by default.
 
 If you use a headless storefront, make sure the [Activity Flow Web Script](https://developers.vtex.com/docs/guides/installing-activity-flow-in-headless-stores) is installed and loaded only once per page. Once the script is in place, the improved cart event capture applies automatically.
 
