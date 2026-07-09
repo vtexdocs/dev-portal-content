@@ -2,7 +2,7 @@
 title: "FastStore Release Notes — Version 4.4.0"
 slug: "2026-07-02-faststore-release-notes-4-4-0"
 type: improved
-excerpt: "This release brings CMS-backed My Account pages, smarter cms-sync for Content Platform, Intelligent Search locale fixes, and updated Authenticator API routes."
+excerpt: "This release brings CMS-backed My Account for B2B Buyer Portal pages, smarter `faststore cms-sync` for CMS, Intelligent Search locale fixes, and updated Authenticator API routes."
 createdAt: "2026-07-02T00:00:00.000Z"
 updatedAt: "2026-07-02T00:00:00.000Z"
 hidden: true
