@@ -77,7 +77,7 @@ The implementation follows these main steps:
 2. [Configure password migration on VTEX](#step-2---configure-password-migration-on-vtex): Register the middleware endpoint and HMAC credentials in your VTEX account.
 3. [Provision legacy users](#step-3---provision-legacy-users): When creating storefront users, set `isLegacyPassword=true` so their first login is validated against your middleware.
 
-### Step 1 \- Build the authentication middleware
+### Step 1 - Build the authentication middleware
 
 You must deploy and maintain an HTTPS service that VTEX will call to validate legacy credentials. Your middleware must:
 
@@ -214,7 +214,7 @@ Enforce an internal timeout for the legacy validation call (recommended: 2.0–2
 * Never log the `Secret`, passwords, or signatures.
 * Don't reuse secrets across environments (for example, staging vs. production).
 
-### Step 2 \- Configure password migration on VTEX
+### Step 2 - Configure password migration on VTEX
 
 Once your middleware is deployed, configure the external authentication endpoint and HMAC credentials in your VTEX account using the following endpoints.
 
@@ -268,7 +268,7 @@ curl -X DELETE "https://{{accountName}}.vtexcommercestable.com.br/api/authentica
   -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
 ```
 
-### Step 3 \- Provision legacy users
+### Step 3 - Provision legacy users
 
 When creating storefront users who should authenticate via password migration on their first login, follow the same flow described in [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning), setting `isLegacyPassword=true` in the query parameter of the `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/storefront/users) request instead of the default `false`.
 
