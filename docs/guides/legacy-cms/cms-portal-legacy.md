@@ -13,7 +13,7 @@ CMS Portal (Legacy) is VTEX's first storefront technology that allows developers
 CMS Portal (Legacy) relies on the following characteristics:
 
 | Aspect | Description |
-|---|---|
+| --- | --- |
 | Admin-based management | Code management is done exclusively through the VTEX Admin, without the need for local development tools or version control systems. |
 | Template controls | Pre-built controls simplify the implementation of common storefront features like product displays, navigation menus, and search functionality. |
 | Direct deployment | Content updates are made directly through the CMS without separate development or staging environments. |
