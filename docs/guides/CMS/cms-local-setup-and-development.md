@@ -15,9 +15,9 @@ This guide covers the daily workflow for adding or changing a component, along w
 
 Make sure you have completed all steps in the [Getting started with CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms) guide, including:
 
-* VTEX IO CLI and Content plugin installed.  
+* VTEX IO CLI and Content plugin are installed.  
 * CMS Admin app (`vtex.admin-content-platform-ui`) is installed in your account.  
-* CMS folder structure scaffolded in your storefront project (`cms/{storeId}/components/` and `cms/{storeId}/pages/`).
+* CMS folder structure is scaffolded in your storefront project (`cms/{storeId}/components/` and `cms/{storeId}/pages/`).
 
 ## Workflow overview
 
