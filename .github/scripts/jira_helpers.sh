@@ -2,6 +2,115 @@
 # Source after setting LOC_JIRA_BASE_URL, LOC_JIRA_USER_EMAIL, LOC_JIRA_API_TOKEN,
 # LOC_JIRA_PROJECT_KEY, PR_NUMBER, GITHUB_REPOSITORY, PR_REF, PR_LABEL, and GH_TOKEN.
 
+# Post a plain-text comment on a Jira issue. Returns 0 on HTTP 201.
+jira_post_comment() {
+  local issue_key="$1"
+  local body="$2"
+  local payload http_code
+
+  payload=$(jq -n --arg body "$body" '{body: $body}')
+  http_code=$(curl -s -o jira-comment-response.json -w "%{http_code}" \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+    -d "$payload" \
+    "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${issue_key}/comment")
+
+  if [ "$http_code" -ne 201 ]; then
+    echo "Failed to post Jira comment on ${issue_key} (HTTP ${http_code})" >&2
+    cat jira-comment-response.json >&2
+    return 1
+  fi
+}
+
+jira_user_search() {
+  local query="$1"
+  local max_results="${2:-10}"
+
+  curl -s -G \
+    -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+    --data-urlencode "query=${query}" \
+    --data-urlencode "maxResults=${max_results}" \
+    "${LOC_JIRA_BASE_URL}/rest/api/2/user/search"
+}
+
+# Resolve PR author (GitHub login) to a Jira reporter field object.
+# Prints JSON like {"accountId":"..."} or {"name":"..."}; empty if not found.
+# Optional: GH_TOKEN (GitHub profile email), LOC_JIRA_REPORTER_EMAIL_DOMAIN (e.g. @vtex.com).
+resolve_jira_reporter_from_github() {
+  local github_login="$1"
+  local candidates match_json email_query derived_email
+
+  if [ -z "$github_login" ] || [ "$github_login" = "null" ]; then
+    return 1
+  fi
+
+  pick_existing_user() {
+    jq -c --arg login "$github_login" '
+      [.[] | select(.active != false)] |
+      map(select(
+        ((.emailAddress // "" | ascii_downcase | split("@")[0]) == ($login | ascii_downcase)) or
+        ((.displayName // "" | ascii_downcase | contains($login | ascii_downcase)))
+      )) | .[0] // empty
+    '
+  }
+
+  pick_user_by_email() {
+    local email="$1"
+    jq -c --arg email "$email" '
+      [.[] | select(.active != false and ((.emailAddress // "") | ascii_downcase) == ($email | ascii_downcase))] |
+      .[0] // empty
+    '
+  }
+
+  reporter_field_from_user() {
+    jq -c 'if .accountId then {accountId: .accountId} elif .name then {name: .name} else empty end'
+  }
+
+  candidates=$(jira_user_search "$github_login" 50)
+  match_json=$(echo "$candidates" | pick_existing_user)
+  if [ -n "$match_json" ] && [ "$match_json" != "null" ]; then
+    echo "$match_json" | reporter_field_from_user
+    echo "Resolved Jira reporter for GitHub user ${github_login}" >&2
+    return 0
+  fi
+
+  if [ -n "${GH_TOKEN:-}" ]; then
+    email_query=$(gh api "users/${github_login}" --jq '.email // empty' 2>/dev/null || true)
+    if [ -n "$email_query" ]; then
+      match_json=$(jira_user_search "$email_query" 5 | pick_user_by_email "$email_query")
+      if [ -n "$match_json" ] && [ "$match_json" != "null" ]; then
+        echo "$match_json" | reporter_field_from_user
+        echo "Resolved Jira reporter for GitHub user ${github_login} via GitHub email" >&2
+        return 0
+      fi
+    fi
+  fi
+
+  if [ -n "${LOC_JIRA_REPORTER_EMAIL_DOMAIN:-}" ]; then
+    derived_email="${github_login}${LOC_JIRA_REPORTER_EMAIL_DOMAIN}"
+    match_json=$(jira_user_search "$derived_email" 5 | pick_user_by_email "$derived_email")
+    if [ -n "$match_json" ] && [ "$match_json" != "null" ]; then
+      echo "$match_json" | reporter_field_from_user
+      echo "Resolved Jira reporter for GitHub user ${github_login} via ${derived_email}" >&2
+      return 0
+    fi
+  fi
+
+  echo "Could not resolve Jira reporter for GitHub user ${github_login}; using API token user" >&2
+  return 1
+}
+
+# Drop PR template sections that should not appear in Jira descriptions.
+strip_pr_description_sections() {
+  awk '
+    /^#{1,6}[[:space:]]+Checklist([[:space:]]*|$)/ { skip=1; next }
+    /^#{1,6}[[:space:]]+AI review instructions([[:space:]]*|$)/ { skip=1; next }
+    /^#{1,6}[[:space:]]+/ { skip=0 }
+    !skip { print }
+  '
+}
+
 jira_post_search() {
   local jql="$1"
   local fields_csv="$2"
