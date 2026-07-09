@@ -211,4 +211,4 @@ The diagram above represents an account implemented with [FastStore](https://dev
 
 ### Learn more
 
-- [Headless CMS - Overview](https://help.vtex.com/en/tutorial/headless-cms-overview--3U5gvhHdQL0jczYH8gjX09)
+- [Headless CMS (legacy) - Overview](https://help.vtex.com/en/tutorial/headless-cms-overview--3U5gvhHdQL0jczYH8gjX09)
