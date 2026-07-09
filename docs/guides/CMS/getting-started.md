@@ -15,8 +15,8 @@ This guide walks you through the tools and steps required to get started with CM
 
 Before starting, make sure you have:
 
-* A VTEX account with the **Content Administrator** role assigned to your user in [License Manager](https://help.vtex.com/en/tutorial/roles--7HKbd9jg39YZlsqhqZPHbR).  
-* [Node.js](https://nodejs.org/) is installed on your machine.  
+* A VTEX account with the **Content Administrator** role assigned to your user in [License Manager](https://help.vtex.com/en/tutorial/roles--7HKbd9jg39YZlsqhqZPHbR).
+* [Node.js](https://nodejs.org/) is installed on your machine.
 * A storefront project repository cloned locally (e.g., a [FastStore](https://developers.vtex.com/docs/guides/faststore) project).
 
 ## Step 1 - Installing the VTEX IO CLI
@@ -71,7 +71,7 @@ COMMANDS
 
 The CMS Admin app (`vtex.admin-content-platform-ui`) provides the interface where editors manage content. You only need to install it once per account.
 
-1. In the terminal, make sure you are logged in to your VTEX account.  
+1. In the terminal, make sure you are logged in to your VTEX account.
 2. Run the following command:
 
     ```shell
