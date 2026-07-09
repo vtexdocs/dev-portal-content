@@ -1,7 +1,7 @@
 ---
 title: "Getting started with CMS"
 hidden: false
-slug: "getting-started-with-cms"
+slug: "getting-started"
 createdAt: "2026-07-08T12:50:00.813Z"
 updatedAt: "2026-07-08T09:00:00.813Z"
 excerpt: "Set up your local environment to manage CMS schemas, from installing the required tools to scaffolding the folder structure in your storefront project."
