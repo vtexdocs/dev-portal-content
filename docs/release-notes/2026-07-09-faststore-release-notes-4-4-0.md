@@ -50,7 +50,6 @@ Stores with `localization.enabled` should upgrade to `v4.4.0` and verify that Pr
 
 ---
 
-
 ### CMS-backed My Account for B2B Buyer Portal pages (PR: [#3354](https://github.com/vtex/faststore/pull/3354))
 
 My Account for B2B Buyer Portal pages can now use CMS content. Previously, these pages relied on hardcoded English copy and could not be customized.
