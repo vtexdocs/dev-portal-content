@@ -4,6 +4,7 @@ slug: "installing-activity-flow-in-headless-stores"
 excerpt: "Learn how to install Activity Flow in your headless store."
 hidden: false
 createdAt: "2025-12-02T12:37:39.964Z"
+updatedAt: "2026-07-09T00:00:00.000Z"
 ---
 
 In this guide, you'll learn how to install and configure the [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) script in your headless store.
