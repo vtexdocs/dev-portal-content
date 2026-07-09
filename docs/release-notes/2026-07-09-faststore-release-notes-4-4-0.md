@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore `v4.4.0` introduces CMS-backed pages for My Account for B2B Buyer Portal (Closed Beta), an improved CMS sync flow, locale fixes for the Localization feature (Closed Beta), and versioned Authenticator API routes.
+FastStore `v4.4.0` introduces CMS-backed pages for My Account for B2B Buyer Portal (Closed Beta), which now also supports the Localization feature (Closed Beta), an improved CMS sync flow, locale fixes for Intelligent Search, and versioned Authenticator API routes.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.4.0` and keep your store up-to-date with the following updates.
 
@@ -20,7 +20,7 @@ FastStore `v4.4.0` introduces CMS-backed pages for My Account for B2B Buyer Port
 
 FastStore now uses versioned Authenticator API routes for password reset flows. The password reset and authentication start requests now include the `v1` segment in the API path, following the expected Authenticator route format.
 
-Stores using FastStore My Account password reset should upgrade to `v4.4.0` to avoid issues when unversioned Authenticator paths are deprecated. No configuration changes are required.
+Stores using FastStore My Account password reset should upgrade to `v4.4.0` to avoid issues when unversioned Authenticator paths are deprecated. No configuration changes are required, and no deprecation date has been set at this time.
 
 ---
 
