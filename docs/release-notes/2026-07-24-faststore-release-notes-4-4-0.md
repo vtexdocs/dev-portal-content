@@ -16,7 +16,7 @@ FastStore `v4.4.0` introduces CMS-backed pages for My Account for B2B Buyer Port
 
 ## Bug Fix
 
-### Versioned Authenticator routes for My Account B2B Buyer Portal (PR: [#3398](https://github.com/vtex/faststore/pull/3398))
+### Versioned Authenticator routes for My Account for B2B Buyer Portal (PR: [#3398](https://github.com/vtex/faststore/pull/3398))
 
 FastStore now uses versioned Authenticator API routes for password reset flows. The password reset and authentication start requests now include the `v1` segment in the API path, following the expected Authenticator route format.
 
@@ -26,7 +26,7 @@ Stores using FastStore My Account password reset should upgrade to `v4.4.0` to a
 
 ## Improvement
 
-### CMS aware `cms-sync` command (PR: [#3406](https://github.com/vtex/faststore/pull/3406))
+### CMS-aware `cms-sync` command (PR: [#3406](https://github.com/vtex/faststore/pull/3406))
 
 The `faststore cms-sync` command now supports stores using the CMS. Previously, these stores had to run schema generation and upload commands separately. Now, the command identifies the store's CMS setup and automatically runs the appropriate sync flow.
 
