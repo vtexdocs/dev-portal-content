@@ -9,17 +9,15 @@ tags:
   - Intelligent Search
 ---
 
-The [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) Web Script data-layer plugin now captures add-to-cart events reliably across any storefront and analytics setup. This provides a complete and trusted conversion-to-add-to-cart signal across accounts, serving as the north-star metric for measuring search impact directly before checkout.
+The [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) Web Script data-layer plugin now captures add-to-cart events reliably across any storefront and analytics setup. This provides a complete and trustworthy conversion-to-add-to-cart signal across accounts, serving as the north-star metric for measuring search impact directly before checkout.
 
 ## What has changed?
 
-Previously, add-to-cart measurement relied on product listing page (PLP) and product detail page (PDP) click-through as a proxy. This approach had two key distortions: it missed sessions that landed directly on a PDP without going through a PLP, and it ignored add-to-cart actions that happened on the PLP itself, which is common in grocery and similar verticals.
-
-On top of that, event capture broke when stores used a different naming convention, ran Google Analytics 4 (GA4) and Google Analytics Universal (GAU) simultaneously, or loaded the Activity Flow script more than once.
+Previously, add-to-cart measurement relied on product listing page (PLP) and product detail page (PDP) click-through as a proxy. This approach had two key limitations: it missed sessions that landed directly on a PDP without going through a PLP, and it ignored add-to-cart actions that happened on the PLP itself, which is common in grocery and similar verticals. Additionally, event capture broke when stores used different naming conventions, ran Google Analytics 4 (GA4) and Google Analytics Universal (GAU) simultaneously, or loaded the Activity Flow script more than once.
 
 Now, the data-layer plugin addresses these limitations with the following improvements:
 
-- Expanded compatibility to stores using only GAU, which were previously unsupported.
+- Expanded compatibility to stores using only GAU.
 - Cart events are captured regardless of naming convention, including `add_to_cart`, `addToCart`, `add-to-cart`, `add_to_cart_v2`, and other common variations.
 - Automatic filtering of duplicate cart events when GA4 and GAU run simultaneously.
 - Elimination of duplicate events caused by multiple Activity Flow script loads.
