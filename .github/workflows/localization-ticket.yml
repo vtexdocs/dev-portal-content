@@ -22,7 +22,8 @@
 # links on the English revision subtask. If the Crowdin upload fails, Jira/subtask
 # creation still runs; word count and editor links are skipped and a comment is
 # posted on the parent task. Partial upload for existing files with changes in
-# ≤5 blocks (not new files); full source file is attached as Crowdin file context
+# Partial upload when the diff meets block/word-count tiers (not new files); full source
+# file is attached as Crowdin file context for partial uploads.
 # with START/END OF UPDATED SECTION markers.
 #
 # Secrets — required: LOC_JIRA_BASE_URL, LOC_JIRA_USER_EMAIL, LOC_JIRA_API_TOKEN,
