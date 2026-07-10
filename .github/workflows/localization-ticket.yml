@@ -2,8 +2,8 @@
 # is added to a PR with new markdown content in docs/.
 #
 # Trigger: localization needed (high|medium|low) on PRs to main under docs/**.
-# Skips PRs with the "localization" label or l10n* branches. Re-add the label
-# after new commits if it was applied before content changed.
+# Skips PRs with the "localization" label (case-insensitive) or l10n* branches
+# (case-insensitive). Re-add the label after new commits if it was applied before content changed.
 #
 # Developer Portal uses en-us source files reviewed in Crowdin in the same language
 # (single Crowdin project; no PT/ES translation pipeline).
@@ -14,11 +14,15 @@
 # lock): then a Jira comment is posted and automation skips further Jira/Crowdin updates.
 # Links source tasks found in the PR title, description, or branch to
 # the LOC parent with a `blocks` link.
+# Reporter on new tasks/subtasks: PR author (GitHub login → Jira user search;
+# optional LOC_JIRA_REPORTER_EMAIL_DOMAIN fallback, e.g. @vtex.com).
 #
-# Crowdin: uploads PR-changed files via API, sets word count on the parent,
-# editor links on the English revision subtask. Partial upload for existing files with
-# changes in ≤5 blocks (not new files); full source file is attached as Crowdin
-# file context with START/END OF UPDATED SECTION markers.
+# Crowdin: uploads PR-changed files via API, sets word count on the parent and
+# language subtasks, editor links on the English revision subtask. If the Crowdin
+# upload fails, Jira/subtask creation still runs; word count and editor links are
+# skipped and a comment is posted on the parent task. Partial upload for existing
+# files with changes in ≤5 blocks (not new files); full source file is attached as
+# Crowdin file context with START/END OF UPDATED SECTION markers.
 #
 # Secrets — required: LOC_JIRA_BASE_URL, LOC_JIRA_USER_EMAIL, LOC_JIRA_API_TOKEN,
 # LOC_JIRA_PROJECT_KEY, LOC_JIRA_EPIC_KEY, LOC_CROWDIN_API_TOKEN,
@@ -31,6 +35,7 @@ name: Create Localization Ticket
 env:
   LOC_JIRA_WORD_COUNT_FIELD: customfield_10253
   LOC_JIRA_SOURCE_LINK_PROJECT_KEY: EDU
+  LOC_JIRA_REPORTER_EMAIL_DOMAIN: '@vtex.com'
   CROWDIN_LANGUAGE: en-us
 
 on:
@@ -44,23 +49,49 @@ on:
 jobs:
   create-jira-ticket:
     if: >
-      (github.event.label.name == 'localization needed (high)' ||
-       github.event.label.name == 'localization needed (medium)' ||
-       github.event.label.name == 'localization needed (low)') &&
-      !contains(github.event.pull_request.labels.*.name, 'localization') &&
-      !startsWith(github.event.pull_request.head.ref, 'l10n')
+      github.event.label.name == 'localization needed (high)' ||
+      github.event.label.name == 'localization needed (medium)' ||
+      github.event.label.name == 'localization needed (low)'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
 
     steps:
+      - name: Check PR eligibility
+        id: eligibility
+        run: |
+          HEAD_REF='${{ github.event.pull_request.head.ref }}'
+          HEAD_REF_LOWER=$(printf '%s' "$HEAD_REF" | tr '[:upper:]' '[:lower:]')
+
+          if [[ "$HEAD_REF_LOWER" == l10n* ]]; then
+            echo "Skipping: head branch starts with l10n (case-insensitive): ${HEAD_REF}"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          HAS_LOCALIZATION_LABEL=$(jq -r '
+            [.pull_request.labels[].name | ascii_downcase == "localization"] | any
+          ' "$GITHUB_EVENT_PATH")
+
+          if [ "$HAS_LOCALIZATION_LABEL" = "true" ]; then
+            echo "Skipping: PR has localization label (case-insensitive)"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "PR is eligible for localization automation"
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
+
       - name: Checkout
+        if: steps.eligibility.outputs.should_run == 'true'
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          # PR merge ref includes main workflow scripts even when the head branch is behind.
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
           fetch-depth: 0
 
       - name: Check for content additions
+        if: steps.eligibility.outputs.should_run == 'true'
         id: content_diff
         run: |
           BASE_SHA="${{ github.event.pull_request.base.sha }}"
@@ -68,7 +99,7 @@ jobs:
           # Three-dot diff matches the GitHub PR "Files changed" tab (branch-only changes).
           DIFF_RANGE="${BASE_SHA}...${HEAD_SHA}"
 
-          INSERTIONS=$(git diff --numstat \
+          INSERTIONS=$(git diff --numstat -M \
             "$DIFF_RANGE" \
             -- docs/ \
             | awk '{sum += $1} END {print sum+0}')
@@ -79,12 +110,20 @@ jobs:
             echo "has_additions=false" >> $GITHUB_OUTPUT
           fi
 
-          CHANGED_FILES=$(git diff --numstat \
+          CHANGED_FILES=$(git diff --numstat -M \
             "$DIFF_RANGE" \
             -- docs/ \
             | awk '$1 > 0 {print $3}' \
+            | sed 's/^"//;s/"$//' \
             | grep -E '\.(md|mdx)$' \
             | sort || true)
+
+          if [ -n "$CHANGED_FILES" ]; then
+            echo "has_eligible_files=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_eligible_files=false" >> $GITHUB_OUTPUT
+            echo "No eligible md/mdx files to upload (e.g. only non-markdown docs/ changes)"
+          fi
 
           {
             echo "changed_files<<EOF"
@@ -94,7 +133,9 @@ jobs:
 
       - name: Check production lock for existing tasks
         id: production_lock
-        if: steps.content_diff.outputs.has_additions == 'true'
+        if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
+          steps.content_diff.outputs.has_additions == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
@@ -144,28 +185,8 @@ jobs:
             "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${EXISTING_KEY}?fields=assignee" \
             | jq -r '.fields.assignee.displayName // "Assignee"')
 
-          COMMENT_PAYLOAD=$(jq -n \
-            --arg assignee "$ASSIGNEE" \
-            '{
-              body: (
-                $assignee + ", THE TASK WAS UPDATED IN GITHUB!\n" +
-                "But since it is already in production, it was not automatically updated here. " +
-                "Please check if any changes are needed."
-              )
-            }')
-
-          COMMENT_RESPONSE=$(curl -s -o production-lock-comment-response.json -w "%{http_code}" \
-            -X POST \
-            -H "Content-Type: application/json" \
-            -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-            -d "$COMMENT_PAYLOAD" \
-            "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${EXISTING_KEY}/comment")
-
-          if [ "$COMMENT_RESPONSE" -ne 201 ]; then
-            echo "Failed to post production lock comment on ${EXISTING_KEY} (HTTP ${COMMENT_RESPONSE})" >&2
-            cat production-lock-comment-response.json >&2
-            exit 1
-          fi
+          COMMENT_BODY=$(printf '%s, THE TASK WAS UPDATED IN GITHUB!\nBut since it is already in production, it was not automatically updated here. Please check if any changes are needed.' "$ASSIGNEE")
+          jira_post_comment "$EXISTING_KEY" "$COMMENT_BODY"
 
           echo "Production lock active for ${EXISTING_KEY} (Prepare file due: ${PREPARE_DUE}, today: ${TODAY})"
           echo "Posted production lock comment on ${EXISTING_KEY}"
@@ -175,6 +196,7 @@ jobs:
       - name: Resolve or create Jira ticket
         id: parent_ticket
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true'
         env:
@@ -184,6 +206,7 @@ jobs:
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
           LOC_JIRA_PROJECT_KEY: ${{ secrets.LOC_JIRA_PROJECT_KEY }}
           LOC_JIRA_EPIC_KEY: ${{ secrets.LOC_JIRA_EPIC_KEY }}
+          LOC_JIRA_REPORTER_EMAIL_DOMAIN: ${{ env.LOC_JIRA_REPORTER_EMAIL_DOMAIN }}
           CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
         run: |
           PR_NUMBER=$(jq -r '.pull_request.number' "$GITHUB_EVENT_PATH")
@@ -230,7 +253,7 @@ jobs:
           DAYS_TO_DUE=$((DAYS_TO_FOLLOWING_MONDAY + 4 + EXTRA_WEEKS * 7))
           JIRA_DUE_DATE=$(date -u -d "${TODAY} + ${DAYS_TO_DUE} days" +%Y-%m-%d)
 
-          PR_BODY=$(echo "$PR_BODY_RAW" | sed \
+          PR_BODY=$(echo "$PR_BODY_RAW" | strip_pr_description_sections | sed \
             -e 's/^#### /h4. /' \
             -e 's/^### /h3. /' \
             -e 's/^## /h2. /' \
@@ -312,6 +335,8 @@ jobs:
             exit 0
           fi
 
+          JIRA_REPORTER_JSON=$(resolve_jira_reporter_from_github "$PR_AUTHOR" || true)
+
           PAYLOAD=$(jq -n \
             --arg project "$LOC_JIRA_PROJECT_KEY" \
             --arg epic_key "$LOC_JIRA_EPIC_KEY" \
@@ -325,27 +350,31 @@ jobs:
             --arg changed_files "$CHANGED_FILES_SECTION" \
             --arg priority "$JIRA_PRIORITY" \
             --arg duedate "$JIRA_DUE_DATE" \
+            --argjson reporter "${JIRA_REPORTER_JSON:-null}" \
             '{
-              fields: {
-                project: { key: $project },
-                parent: { key: $epic_key },
-                summary: ("[DP] " + $pr_title),
-                description: (
-                  "dp-github-pr-ref: " + $pr_ref + "\n\n" +
-                  "h3. PR Details\n" +
-                  "||Field||Value||\n" +
-                  "|Author|" + $pr_author + "|\n" +
-                  "|PR|[#" + $pr_number + "|" + $pr_url + "]|\n\n" +
-                  "h3. Changed files\n\n" +
-                  $changed_files + "\n\n" +
-                  "h3. PR Description\n\n" +
-                  $pr_body
-                ),
-                issuetype: { name: "Task" },
-                priority: { name: $priority },
-                duedate: $duedate,
-                labels: [$pr_label]
-              }
+              fields: (
+                {
+                  project: { key: $project },
+                  parent: { key: $epic_key },
+                  summary: ("[DP] " + $pr_title),
+                  description: (
+                    "dp-github-pr-ref: " + $pr_ref + "\n\n" +
+                    "h3. PR Details\n" +
+                    "||Field||Value||\n" +
+                    "|Author|" + $pr_author + "|\n" +
+                    "|PR|[#" + $pr_number + "|" + $pr_url + "]|\n\n" +
+                    "h3. Changed files\n\n" +
+                    $changed_files + "\n\n" +
+                    "h3. PR Description\n\n" +
+                    $pr_body
+                  ),
+                  issuetype: { name: "Task" },
+                  priority: { name: $priority },
+                  duedate: $duedate,
+                  labels: [$pr_label]
+                }
+                + (if $reporter == null then {} else {reporter: $reporter} end)
+              )
             }')
 
           RESPONSE=$(curl -s -o response.json -w "%{http_code}" \
@@ -368,6 +397,7 @@ jobs:
 
       - name: Link source Jira tasks from PR
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
@@ -469,7 +499,9 @@ jobs:
       - name: Upload touched files to Crowdin
         id: crowdin_upload
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
+          steps.content_diff.outputs.has_eligible_files == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
         env:
@@ -480,13 +512,56 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           JIRA_TASK_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
-        run: python3 .github/scripts/crowdin_sync.py
+        run: |
+          if python3 .github/scripts/crowdin_sync.py 2>crowdin-upload-error.log; then
+            echo "upload_succeeded=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "upload_succeeded=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "upload_error<<EOF_UPLOAD_ERROR"
+              tail -40 crowdin-upload-error.log
+              echo "EOF_UPLOAD_ERROR"
+            } >> "$GITHUB_OUTPUT"
+            cat crowdin-upload-error.log >&2
+          fi
+
+      - name: Comment on parent task for Crowdin upload failure
+        if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
+          steps.content_diff.outputs.has_additions == 'true' &&
+          steps.content_diff.outputs.has_eligible_files == 'true' &&
+          steps.production_lock.outputs.updates_blocked != 'true' &&
+          steps.parent_ticket.outputs.parent_key != '' &&
+          steps.crowdin_upload.outputs.upload_succeeded == 'false'
+        env:
+          LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
+          LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
+          LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
+          PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
+          UPLOAD_ERROR: ${{ steps.crowdin_upload.outputs.upload_error }}
+        run: |
+          PR_NUMBER=$(jq -r '.pull_request.number' "$GITHUB_EVENT_PATH")
+          PR_URL=$(jq -r '.pull_request.html_url' "$GITHUB_EVENT_PATH")
+
+          # shellcheck source=.github/scripts/jira_helpers.sh
+          source .github/scripts/jira_helpers.sh
+
+          COMMENT_BODY=$(printf '%s\n\n%s\n\nPR: #%s (%s)\n\nError:\n%s' \
+            "Crowdin upload failed during localization automation." \
+            "The Jira ticket and subtasks were created or updated, but files were not uploaded to Crowdin. Word count and Crowdin editor links were not updated." \
+            "$PR_NUMBER" \
+            "$PR_URL" \
+            "${UPLOAD_ERROR:-See the GitHub Actions log for the Crowdin upload step.}")
+          jira_post_comment "$PARENT_KEY" "$COMMENT_BODY"
+          echo "Posted Crowdin upload failure comment on ${PARENT_KEY}"
 
       - name: Update parent task word count
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
-          steps.parent_ticket.outputs.parent_key != ''
+          steps.parent_ticket.outputs.parent_key != '' &&
+          steps.crowdin_upload.outputs.upload_succeeded == 'true'
         env:
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
           LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
@@ -531,6 +606,7 @@ jobs:
 
       - name: Comment on PR with Jira link
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
@@ -603,6 +679,7 @@ jobs:
 
       - name: Create localization subtasks
         if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
           steps.production_lock.outputs.updates_blocked != 'true' &&
           steps.parent_ticket.outputs.parent_key != ''
@@ -610,11 +687,17 @@ jobs:
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
           LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           LOC_JIRA_PROJECT_KEY: ${{ secrets.LOC_JIRA_PROJECT_KEY }}
+          LOC_JIRA_REPORTER_EMAIL_DOMAIN: ${{ env.LOC_JIRA_REPORTER_EMAIL_DOMAIN }}
           PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
           PARENT_DUE_DATE: ${{ steps.parent_ticket.outputs.parent_due_date }}
+          CROWDIN_UPLOAD_SUCCEEDED: ${{ steps.crowdin_upload.outputs.upload_succeeded }}
           CROWDIN_EDITOR_LINKS: ${{ steps.crowdin_upload.outputs.editor_links }}
+          CROWDIN_TOTAL_WORDS: ${{ steps.crowdin_upload.outputs.total_words }}
         run: |
+          PR_AUTHOR=$(jq -r '.pull_request.user.login' "$GITHUB_EVENT_PATH")
+
           if [ -z "$PARENT_DUE_DATE" ]; then
             echo "Parent due date is missing; cannot set subtask due dates." >&2
             exit 1
@@ -622,6 +705,8 @@ jobs:
 
           # shellcheck source=.github/scripts/jira_helpers.sh
           source .github/scripts/jira_helpers.sh
+
+          JIRA_REPORTER_JSON=$(resolve_jira_reporter_from_github "$PR_AUTHOR" || true)
 
           TODAY=$(date -u +%Y-%m-%d)
           DOW=$(date -u +%u)
@@ -722,14 +807,18 @@ jobs:
               --arg parent "$PARENT_KEY" \
               --arg summary "$summary" \
               --arg duedate "$duedate" \
+              --argjson reporter "${JIRA_REPORTER_JSON:-null}" \
               '{
-                fields: {
-                  project: { key: $project },
-                  parent: { key: $parent },
-                  summary: $summary,
-                  issuetype: { name: "Subtask" },
-                  duedate: $duedate
-                }
+                fields: (
+                  {
+                    project: { key: $project },
+                    parent: { key: $parent },
+                    summary: $summary,
+                    issuetype: { name: "Subtask" },
+                    duedate: $duedate
+                  }
+                  + (if $reporter == null then {} else {reporter: $reporter} end)
+                )
               }')
 
             local response
@@ -808,6 +897,39 @@ jobs:
             else
               echo "Failed to update Crowdin links for ${key} (HTTP ${response})" >&2
               cat update-crowdin-response.json >&2
+              exit 1
+            fi
+          }
+
+          is_language_subtask() {
+            case "$1" in
+              English*|Portuguese*|Spanish*) return 0 ;;
+              *) return 1 ;;
+            esac
+          }
+
+          update_subtask_word_count() {
+            local key="$1"
+            local summary="$2"
+            local payload response
+
+            payload=$(jq -n \
+              --arg field "$LOC_JIRA_WORD_COUNT_FIELD" \
+              --argjson count "$CROWDIN_TOTAL_WORDS" \
+              '{fields: {($field): $count}}')
+
+            response=$(curl -s -o update-subtask-word-count-response.json -w "%{http_code}" \
+              -X PUT \
+              -H "Content-Type: application/json" \
+              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+              -d "$payload" \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}")
+
+            if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
+              echo "Updated word count for ${key} (${summary}): ${CROWDIN_TOTAL_WORDS}"
+            else
+              echo "Failed to update word count for ${key} (HTTP ${response})" >&2
+              cat update-subtask-word-count-response.json >&2
               exit 1
             fi
           }
@@ -932,7 +1054,23 @@ jobs:
               "${ORDERED_KEYS[$blocked_index]}"
           done
 
-          update_subtask_crowdin_links \
-            "${ORDERED_KEYS[1]}" \
-            "$CROWDIN_EDITOR_LINKS" \
-            "English revision"
+          if [ "$CROWDIN_UPLOAD_SUCCEEDED" = "true" ]; then
+            update_subtask_crowdin_links \
+              "${ORDERED_KEYS[1]}" \
+              "$CROWDIN_EDITOR_LINKS" \
+              "English revision"
+          else
+            echo "Skipping Crowdin editor links (Crowdin upload failed or was skipped)"
+          fi
+
+          if [ "$CROWDIN_UPLOAD_SUCCEEDED" = "true" ]; then
+            echo "Updating word count on language subtasks..."
+            for i in "${!SUBTASK_SUMMARIES[@]}"; do
+              summary="${SUBTASK_SUMMARIES[$i]}"
+              if is_language_subtask "$summary"; then
+                update_subtask_word_count "${ORDERED_KEYS[$i]}" "$summary"
+              fi
+            done
+          else
+            echo "Skipping subtask word counts (Crowdin upload failed or was skipped)"
+          fi
