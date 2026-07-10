@@ -100,7 +100,7 @@ jobs:
           # Three-dot diff matches the GitHub PR "Files changed" tab (branch-only changes).
           DIFF_RANGE="${BASE_SHA}...${HEAD_SHA}"
 
-          INSERTIONS=$(git diff --numstat -M \
+          INSERTIONS=$(git -c core.quotepath=false diff --numstat -M \
             "$DIFF_RANGE" \
             -- docs/ \
             | awk '{sum += $1} END {print sum+0}')
@@ -111,7 +111,7 @@ jobs:
             echo "has_additions=false" >> $GITHUB_OUTPUT
           fi
 
-          CHANGED_FILES=$(git diff --numstat -M \
+          CHANGED_FILES=$(git -c core.quotepath=false diff --numstat -M \
             "$DIFF_RANGE" \
             -- docs/ \
             | awk '$1 > 0 {print $3}' \
