@@ -3,7 +3,7 @@ title: "Purchase Flows"
 slug: "payments-integration-purchase-flows"
 hidden: false
 createdAt: "2021-03-26T14:45:28.135Z"
-updatedAt: "2026-07-06T00:00:00.000"
+updatedAt: "2026-07-06T00:00:00.000Z"
 excerpt: "Understand the Transparent, Redirect, and Payment App purchase flows in VTEX and how the Gateway authorizes, cancels, refunds, and settles payments with providers."
 ---
 
@@ -105,15 +105,15 @@ In the [Transactions page of the Admin](https://help.vtex.com/en/tutorial/how-to
 
 When making the callback request, use the callback URL exactly as received to guarantee that all parameters are included.
 
-#### Contigency Mode
+#### Contingency Mode
 
-Contigency Mode status is a native reliability feature that allows VTEX to track the payment health and stability of its partners, ensuring the system does not cancel orders due to instabilities.
+Contingency Mode status is a native reliability feature that allows VTEX to track the payment health and stability of its partners, ensuring the system does not cancel orders due to instabilities.
 
-When VTEX identifies consecutive errors in its payment partners’ integrations — more than five errors over the last five minutes — the Contigency Mode status is activated to handle credit card transactions.
+When VTEX identifies consecutive errors in its payment partners’ integrations — more than five errors over the last five minutes — the Contingency Mode status is activated to handle credit card transactions.
 
-While the Contigency Mode status is activated, all transactions that allow an asynchronous flow are retained. During this period, the transaction remains in `authorizing` status.
+While the Contingency Mode status is activated, all transactions that allow an asynchronous flow are retained. During this period, the transaction remains in `authorizing` status.
 
-This process takes an average of two hours and can hold up to two thousand requests. When the provider’s system returns to stability, the Contigency Mode status is deactivated, and the system reattempts processing for the transactions on standby.
+This process takes an average of two hours and can hold up to two thousand requests. When the provider’s system returns to stability, the Contingency Mode status is deactivated, and the system reattempts processing for the transactions on standby.
 
 For more information and frequently asked questions, see the [Contingency Mode](https://help.vtex.com/docs/tutorials/mode-off-faq) article in the VTEX Help Center.
 
