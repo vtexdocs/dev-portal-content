@@ -36,7 +36,6 @@ CROWDIN_WEB_BASE_DEFAULT = "https://crowdin.com"
 DOCS_SOURCE_PATH_PREFIX = "docs/"
 
 RENAME_PATH_PATTERN = re.compile(r"\{[^ ]+ => ([^}]+)\}")
-GIT_QUOTEPATH_ESCAPE_PATTERN = re.compile(r"\\([0-7]{3})")
 RENAME_STATUS_PATTERN = re.compile(r"^R\d+\t(.+)\t(.+)$")
 
 _rename_map: dict[str, str] = {}
@@ -287,11 +286,25 @@ def is_eligible_path(relative_path: str) -> bool:
 
 
 def decode_git_path(path: str) -> str:
-    """Decode git core.quotepath octal byte escapes (e.g. \\303\\242 -> â)."""
-    return GIT_QUOTEPATH_ESCAPE_PATTERN.sub(
-        lambda match: chr(int(match.group(1), 8)),
-        path,
-    )
+    """Decode git core.quotepath octal byte escapes (e.g. relev\\303\\242ncia -> relevância)."""
+    if "\\" not in path:
+        return path
+
+    out = bytearray()
+    index = 0
+    while index < len(path):
+        if (
+            path[index] == "\\"
+            and index + 3 < len(path)
+            and path[index + 1 : index + 4].isdigit()
+            and all(ch in "01234567" for ch in path[index + 1 : index + 4])
+        ):
+            out.append(int(path[index + 1 : index + 4], 8))
+            index += 4
+            continue
+        out.extend(path[index].encode("utf-8"))
+        index += 1
+    return out.decode("utf-8")
 
 
 def normalize_changed_path(path: str) -> str:
