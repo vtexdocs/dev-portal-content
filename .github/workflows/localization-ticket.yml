@@ -5,7 +5,7 @@
 # Skips PRs with the "localization" label (case-insensitive) or l10n* branches
 # (case-insensitive). Re-add the label after new commits if it was applied before content changed.
 #
-# Developer Portal uses en-us source files reviewed in Crowdin in the same language
+# Developer Portal uses en-US source files reviewed in Crowdin in the same language
 # (single Crowdin project; no PT/ES translation pipeline).
 #
 # Label → priority/due: high = High / Friday next week; medium/low add 1–2 weeks.
@@ -17,12 +17,13 @@
 # Reporter on new tasks/subtasks: PR author (GitHub login → Jira user search;
 # optional LOC_JIRA_REPORTER_EMAIL_DOMAIN fallback, e.g. @vtex.com).
 #
-# Crowdin: uploads PR-changed files via API, sets word count on the parent and
-# language subtasks, editor links on the English revision subtask. If the Crowdin
-# upload fails, Jira/subtask creation still runs; word count and editor links are
-# skipped and a comment is posted on the parent task. Partial upload for existing
-# files with changes in ≤5 blocks (not new files); full source file is attached as
-# Crowdin file context with START/END OF UPDATED SECTION markers.
+# Crowdin: uploads PR-changed files via API, self-imports the same content as
+# en-US translation, sets word count on the parent and language subtasks, editor
+# links on the English revision subtask. If the Crowdin upload fails, Jira/subtask
+# creation still runs; word count and editor links are skipped and a comment is
+# posted on the parent task. Partial upload for existing files with changes in
+# ≤5 blocks (not new files); full source file is attached as Crowdin file context
+# with START/END OF UPDATED SECTION markers.
 #
 # Secrets — required: LOC_JIRA_BASE_URL, LOC_JIRA_USER_EMAIL, LOC_JIRA_API_TOKEN,
 # LOC_JIRA_PROJECT_KEY, LOC_JIRA_EPIC_KEY, LOC_CROWDIN_API_TOKEN,
@@ -36,7 +37,7 @@ env:
   LOC_JIRA_WORD_COUNT_FIELD: customfield_10253
   LOC_JIRA_SOURCE_LINK_PROJECT_KEY: EDU
   LOC_JIRA_REPORTER_EMAIL_DOMAIN: '@vtex.com'
-  CROWDIN_LANGUAGE: en-us
+  CROWDIN_LANGUAGE: en-US
 
 on:
   pull_request:

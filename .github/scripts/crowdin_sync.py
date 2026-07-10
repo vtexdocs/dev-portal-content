@@ -3,9 +3,10 @@
 Upload PR-touched markdown files to Crowdin and update Jira descriptions
 with Crowdin metadata (word count, editor links).
 
-Developer Portal uses a single Crowdin project with en-us source files
-reviewed in the same language (no PT/ES translation pipeline). Partial
-uploads use rename-aware git diffs; numstat rename paths are normalized
+Developer Portal uses a single Crowdin project with en-US source files
+reviewed in the same language (no PT/ES translation pipeline). After source
+upload, the same content is self-imported as the en-US translation for review.
+Partial uploads use rename-aware git diffs; numstat rename paths are normalized
 in Python before processing.
 
 Commands:
@@ -45,10 +46,14 @@ def env(name: str, default: str = "") -> str:
 
 
 def crowdin_language_id() -> str:
-    language_id = env("CROWDIN_LANGUAGE", "en-us")
+    language_id = env("CROWDIN_LANGUAGE", "en-US")
     if not language_id:
         raise RuntimeError("CROWDIN_LANGUAGE is required for Crowdin uploads")
     return language_id
+
+
+def normalize_language_id(language_id: str) -> str:
+    return language_id.replace("_", "-").lower()
 
 
 def crowdin_api_base() -> str:
@@ -150,11 +155,12 @@ def fetch_project_data(project_id: str) -> dict:
 
 
 def language_editor_code(project_data: dict, language_id: str) -> str:
+    target = normalize_language_id(language_id)
     source = project_data.get("sourceLanguage") or {}
-    if source.get("id") == language_id:
+    if normalize_language_id(str(source.get("id", ""))) == target:
         return str(source["editorCode"])
     for language in project_data.get("targetLanguages") or []:
-        if language.get("id") == language_id:
+        if normalize_language_id(str(language.get("id", ""))) == target:
             return str(language["editorCode"])
     return language_id
 
@@ -176,6 +182,28 @@ def find_file(project_id: str, file_name: str) -> int | None:
         if item["data"]["name"] == file_name:
             return int(item["data"]["id"])
     return None
+
+
+def import_translation_file(
+    project_id: str,
+    file_id: int,
+    language_id: str,
+    content: bytes,
+    file_name: str,
+) -> str:
+    storage_id = upload_storage_bytes(content, file_name)
+    response = crowdin_request(
+        "POST",
+        f"/projects/{project_id}/translations/imports",
+        data={
+            "storageId": storage_id,
+            "fileId": file_id,
+            "languageIds": [language_id],
+            "importEqSuggestions": True,
+            "autoApproveImported": False,
+        },
+    )
+    return str(response["data"]["identifier"])
 
 
 def create_or_update_file(
@@ -694,6 +722,18 @@ def upload_files_to_crowdin(
             "md",
             file_context=plan.file_context if plan.mode == "partial" else None,
         )
+        import_id = import_translation_file(
+            project_id,
+            file_id,
+            language_id,
+            plan.content,
+            crowdin_name,
+        )
+        print(
+            f"Imported {crowdin_name} as {language_id} translation "
+            f"(import {import_id})",
+            file=sys.stderr,
+        )
         words = get_file_word_count(project_id, file_id)
         total_words += words
 
@@ -717,6 +757,8 @@ def upload_files_to_crowdin(
                 "addition_blocks": plan.block_count,
                 "crowdin_project_id": project_id,
                 "editor_url": editor_link,
+                "translation_import_id": import_id,
+                "translation_language_id": language_id,
             }
         )
         print(
