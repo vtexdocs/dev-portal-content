@@ -8,7 +8,7 @@ hidden: false
 excerpt: "Customize the assisted-sales journey in Sales App through predefined extension points."
 ---
 
-[VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility) lets merchants customize the default assisted-sales journey by rendering components and adding capabilities at predefined slots in the Sales App interface. The feature is available in open beta for all VTEX stores.
+[VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility) lets merchants customize the default assisted-sales journey by rendering components and adding capabilities at predefined slots in the Sales App interface. The feature is available in open beta for all stores that use [Sales App](https://help.vtex.com/docs/tracks/what-is-vtex-sales-app).
 
 To support the development and implementation of extensions, merchants and partners can use the [VTEX Sales App Extensions Skill](https://developers.vtex.com/docs/guides/vtex-sales-app-extensions-skill), an AI-powered skill with embedded knowledge of Sales App and the FastStore monorepo.
 
