@@ -15,7 +15,7 @@
 # Links source tasks found in the PR title, description, or branch to
 # the LOC parent with a `blocks` link.
 # Reporter on new tasks/subtasks: PR author (GitHub login → Jira user search;
-# optional LOC_JIRA_REPORTER_EMAIL_DOMAIN fallback, e.g. @vtex.com).
+# PR commit email, GitHub profile/name, optional LOC_JIRA_REPORTER_EMAIL_DOMAIN).
 #
 # Crowdin: uploads PR-changed files via API, self-imports the same content as
 # en-US translation, sets word count on the parent and language subtasks, editor
