@@ -3,10 +3,11 @@
 Upload PR-touched markdown files to Crowdin and update Jira descriptions
 with Crowdin metadata (word count, editor links).
 
-Developer Portal uses a single Crowdin project with en-us source files
-reviewed in the same language (no PT/ES translation pipeline). Partial
-uploads use rename-aware git diffs; numstat rename paths are normalized
-in Python before processing.
+Developer Portal uses a single Crowdin project with en-US source files
+reviewed in the same language (no PT/ES translation pipeline). After source
+upload, the same content is self-imported as the en-US translation for review.
+Partial uploads use rename-aware git diffs and block/word-count tiers on the PR diff;
+numstat rename paths are normalized in Python before processing.
 
 Commands:
   crowdin_sync.py              Upload touched files to Crowdin
@@ -45,10 +46,14 @@ def env(name: str, default: str = "") -> str:
 
 
 def crowdin_language_id() -> str:
-    language_id = env("CROWDIN_LANGUAGE", "en-us")
+    language_id = env("CROWDIN_LANGUAGE", "en-US")
     if not language_id:
         raise RuntimeError("CROWDIN_LANGUAGE is required for Crowdin uploads")
     return language_id
+
+
+def normalize_language_id(language_id: str) -> str:
+    return language_id.replace("_", "-").lower()
 
 
 def crowdin_api_base() -> str:
@@ -150,11 +155,12 @@ def fetch_project_data(project_id: str) -> dict:
 
 
 def language_editor_code(project_data: dict, language_id: str) -> str:
+    target = normalize_language_id(language_id)
     source = project_data.get("sourceLanguage") or {}
-    if source.get("id") == language_id:
+    if normalize_language_id(str(source.get("id", ""))) == target:
         return str(source["editorCode"])
     for language in project_data.get("targetLanguages") or []:
-        if language.get("id") == language_id:
+        if normalize_language_id(str(language.get("id", ""))) == target:
             return str(language["editorCode"])
     return language_id
 
@@ -176,6 +182,28 @@ def find_file(project_id: str, file_name: str) -> int | None:
         if item["data"]["name"] == file_name:
             return int(item["data"]["id"])
     return None
+
+
+def import_translation_file(
+    project_id: str,
+    file_id: int,
+    language_id: str,
+    content: bytes,
+    file_name: str,
+) -> str:
+    storage_id = upload_storage_bytes(content, file_name)
+    response = crowdin_request(
+        "POST",
+        f"/projects/{project_id}/translations/imports",
+        data={
+            "storageId": storage_id,
+            "fileId": file_id,
+            "languageIds": [language_id],
+            "importEqSuggestions": True,
+            "autoApproveImported": False,
+        },
+    )
+    return str(response["data"]["identifier"])
 
 
 def create_or_update_file(
@@ -257,9 +285,31 @@ def is_eligible_path(relative_path: str) -> bool:
     return path.startswith(DOCS_SOURCE_PATH_PREFIX)
 
 
+def decode_git_path(path: str) -> str:
+    """Decode git core.quotepath octal byte escapes (e.g. relev\\303\\242ncia -> relevância)."""
+    if "\\" not in path:
+        return path
+
+    out = bytearray()
+    index = 0
+    while index < len(path):
+        if (
+            path[index] == "\\"
+            and index + 3 < len(path)
+            and path[index + 1 : index + 4].isdigit()
+            and all(ch in "01234567" for ch in path[index + 1 : index + 4])
+        ):
+            out.append(int(path[index + 1 : index + 4], 8))
+            index += 4
+            continue
+        out.extend(path[index].encode("utf-8"))
+        index += 1
+    return out.decode("utf-8")
+
+
 def normalize_changed_path(path: str) -> str:
     """Resolve git numstat rename syntax (dir/{old => new}) to the new path."""
-    normalized = path.replace("\\", "/").strip()
+    normalized = decode_git_path(path.strip()).replace("\\", "/")
     if "{" not in normalized or "=>" not in normalized:
         return normalized
 
@@ -451,10 +501,33 @@ def is_new_file(diff_text: str) -> bool:
     return "new file mode" in diff_text
 
 
+def count_words(text: str) -> int:
+    return len(re.findall(r"\w+", text, flags=re.UNICODE))
+
+
+def partial_upload_tier(
+    block_count: int,
+    added_words: int,
+    total_words: int,
+) -> str | None:
+    if total_words <= 0 or added_words <= 0:
+        return None
+    added_ratio = added_words / total_words
+    if block_count <= 10 and added_ratio < 0.80:
+        return "≤10 blocks and added words <80% of total"
+    if block_count <= 15 and added_ratio < 0.60 and total_words >= 2000:
+        return "≤15 blocks and added words <60% of total (≥2000 words)"
+    if block_count <= 20 and added_ratio < 0.40 and total_words >= 3000:
+        return "≤20 blocks and added words <40% of total (≥3000 words)"
+    return None
+
+
 def should_upload_partial(
     added_count: int,
     block_count: int,
     total_lines: int,
+    added_words: int,
+    total_words: int,
     *,
     new_file: bool,
 ) -> bool:
@@ -462,7 +535,7 @@ def should_upload_partial(
         return False
     if total_lines > 0 and added_count >= total_lines:
         return False
-    return block_count <= 5
+    return partial_upload_tier(block_count, added_words, total_words) is not None
 
 
 def format_partial_content(blocks: list[list[str]]) -> str:
@@ -562,21 +635,25 @@ class UploadPlan:
 def plan_upload(relative_path: str, base_sha: str, head_sha: str) -> UploadPlan:
     file_path = Path(relative_path)
     file_name = crowdin_basename(relative_path)
-    total_lines = len(file_path.read_text(encoding="utf-8").splitlines())
+    full_text = file_path.read_text(encoding="utf-8")
+    total_lines = len(full_text.splitlines())
+    total_words = count_words(full_text)
     diff_text = git_diff(base_sha, head_sha, relative_path)
     additions = parse_added_lines(diff_text)
     blocks = group_consecutive_blocks(additions)
     added_count = len(additions)
+    added_words = count_words("\n".join(text for _, text in additions))
     new_file = is_new_file(diff_text)
 
     if should_upload_partial(
         added_count,
         len(blocks),
         total_lines,
+        added_words,
+        total_words,
         new_file=new_file,
     ):
         partial_text = format_partial_content(blocks)
-        full_text = file_path.read_text(encoding="utf-8")
         changed_line_numbers = {line_no for line_no, _ in additions}
         return UploadPlan(
             mode="partial",
@@ -590,6 +667,19 @@ def plan_upload(relative_path: str, base_sha: str, head_sha: str) -> UploadPlan:
                 full_text,
                 changed_line_numbers,
             ),
+        )
+
+    if new_file or (total_lines > 0 and added_count >= total_lines):
+        print(
+            f"Using full upload for {relative_path}: new file or full rewrite",
+            file=sys.stderr,
+        )
+    else:
+        print(
+            f"Using full upload for {relative_path}: "
+            f"{len(blocks)} blocks, {added_words}/{total_words} added words "
+            "outside partial tiers",
+            file=sys.stderr,
         )
 
     return UploadPlan(
@@ -694,6 +784,18 @@ def upload_files_to_crowdin(
             "md",
             file_context=plan.file_context if plan.mode == "partial" else None,
         )
+        import_id = import_translation_file(
+            project_id,
+            file_id,
+            language_id,
+            plan.content,
+            crowdin_name,
+        )
+        print(
+            f"Imported {crowdin_name} as {language_id} translation "
+            f"(import {import_id})",
+            file=sys.stderr,
+        )
         words = get_file_word_count(project_id, file_id)
         total_words += words
 
@@ -717,6 +819,8 @@ def upload_files_to_crowdin(
                 "addition_blocks": plan.block_count,
                 "crowdin_project_id": project_id,
                 "editor_url": editor_link,
+                "translation_import_id": import_id,
+                "translation_language_id": language_id,
             }
         )
         print(

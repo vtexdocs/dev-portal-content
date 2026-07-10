@@ -36,10 +36,11 @@ jira_user_search() {
 
 # Resolve PR author (GitHub login) to a Jira reporter field object.
 # Prints JSON like {"accountId":"..."} or {"name":"..."}; empty if not found.
-# Optional: GH_TOKEN (GitHub profile email), LOC_JIRA_REPORTER_EMAIL_DOMAIN (e.g. @vtex.com).
+# Optional: GH_TOKEN, PR_NUMBER, GITHUB_REPOSITORY, GITHUB_EVENT_PATH,
+# LOC_JIRA_REPORTER_EMAIL_DOMAIN (e.g. @vtex.com).
 resolve_jira_reporter_from_github() {
   local github_login="$1"
-  local candidates match_json email_query derived_email
+  local candidates match_json email_query derived_email display_name
 
   if [ -z "$github_login" ] || [ "$github_login" = "null" ]; then
     return 1
@@ -63,8 +64,66 @@ resolve_jira_reporter_from_github() {
     '
   }
 
+  pick_user_by_display_name() {
+    local name="$1"
+    jq -c --arg name "$name" --arg first "$(printf '%s' "$name" | awk '{print $1}')" \
+      --arg last "$(printf '%s' "$name" | awk '{print $NF}')" '
+      [.[] | select(.active != false)] |
+      if ($first != "" and $last != "" and ($first | ascii_downcase) != ($last | ascii_downcase)) then
+        map(select(
+          (.displayName // "" | ascii_downcase | contains($first | ascii_downcase)) and
+          (.displayName // "" | ascii_downcase | contains($last | ascii_downcase))
+        ))
+      else
+        map(select((.displayName // "" | ascii_downcase | contains($name | ascii_downcase))))
+      end |
+      .[0] // empty
+    '
+  }
+
   reporter_field_from_user() {
     jq -c 'if .accountId then {accountId: .accountId} elif .name then {name: .name} else empty end'
+  }
+
+  try_reporter_from_email() {
+    local email="$1"
+    local via="$2"
+
+    if [ -z "$email" ]; then
+      return 1
+    fi
+
+    match_json=$(jira_user_search "$email" 5 | pick_user_by_email "$email")
+    if [ -n "$match_json" ] && [ "$match_json" != "null" ]; then
+      echo "$match_json" | reporter_field_from_user
+      echo "Resolved Jira reporter for GitHub user ${github_login} via ${via}" >&2
+      return 0
+    fi
+    return 1
+  }
+
+  github_pr_commit_emails() {
+    local repo="${GITHUB_REPOSITORY:-}"
+    local pr_number="${PR_NUMBER:-}"
+
+    if [ -z "$repo" ] || [ -z "$pr_number" ]; then
+      if [ -n "${GITHUB_EVENT_PATH:-}" ] && [ -f "$GITHUB_EVENT_PATH" ]; then
+        repo=$(jq -r '.repository.full_name // empty' "$GITHUB_EVENT_PATH")
+        pr_number=$(jq -r '.pull_request.number // empty' "$GITHUB_EVENT_PATH")
+      fi
+    fi
+
+    if [ -z "${GH_TOKEN:-}" ] || [ -z "$repo" ] || [ -z "$pr_number" ] || [ "$pr_number" = "null" ]; then
+      return 0
+    fi
+
+    gh api "repos/${repo}/pulls/${pr_number}/commits" --paginate \
+      --jq ".[] | select((.author.login // \"\") == \"${github_login}\") | .commit.author.email // empty" \
+      2>/dev/null \
+      | grep -i '@' \
+      | grep -vi 'users.noreply.github.com' \
+      | grep -vi 'noreply@github.com' \
+      | sort -u
   }
 
   candidates=$(jira_user_search "$github_login" 50)
@@ -75,13 +134,24 @@ resolve_jira_reporter_from_github() {
     return 0
   fi
 
+  while IFS= read -r email_query; do
+    if try_reporter_from_email "$email_query" "PR commit email ${email_query}"; then
+      return 0
+    fi
+  done <<< "$(github_pr_commit_emails)"
+
   if [ -n "${GH_TOKEN:-}" ]; then
     email_query=$(gh api "users/${github_login}" --jq '.email // empty' 2>/dev/null || true)
-    if [ -n "$email_query" ]; then
-      match_json=$(jira_user_search "$email_query" 5 | pick_user_by_email "$email_query")
+    if try_reporter_from_email "$email_query" "GitHub profile email"; then
+      return 0
+    fi
+
+    display_name=$(gh api "users/${github_login}" --jq '.name // empty' 2>/dev/null || true)
+    if [ -n "$display_name" ]; then
+      match_json=$(jira_user_search "$display_name" 20 | pick_user_by_display_name "$display_name")
       if [ -n "$match_json" ] && [ "$match_json" != "null" ]; then
         echo "$match_json" | reporter_field_from_user
-        echo "Resolved Jira reporter for GitHub user ${github_login} via GitHub email" >&2
+        echo "Resolved Jira reporter for GitHub user ${github_login} via GitHub name \"${display_name}\"" >&2
         return 0
       fi
     fi
@@ -89,10 +159,7 @@ resolve_jira_reporter_from_github() {
 
   if [ -n "${LOC_JIRA_REPORTER_EMAIL_DOMAIN:-}" ]; then
     derived_email="${github_login}${LOC_JIRA_REPORTER_EMAIL_DOMAIN}"
-    match_json=$(jira_user_search "$derived_email" 5 | pick_user_by_email "$derived_email")
-    if [ -n "$match_json" ] && [ "$match_json" != "null" ]; then
-      echo "$match_json" | reporter_field_from_user
-      echo "Resolved Jira reporter for GitHub user ${github_login} via ${derived_email}" >&2
+    if try_reporter_from_email "$derived_email" "derived email ${derived_email}"; then
       return 0
     fi
   fi
