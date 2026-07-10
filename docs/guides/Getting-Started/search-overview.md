@@ -21,13 +21,15 @@ The [VTEX Search app](https://developers.vtex.com/docs/guides/vtex-search) is re
 
 ### Intelligent Search API
 
-The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview) allows you to consult the information about the user's search in your store and its terms. You can also access information about banners, facets, and suggested terms.
+The [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) allows you to consult the information about the user's search in your store and its terms. You can also access information about banners, facets, and suggested terms.
+
+> ℹ️ If you are migrating from a previous headless integration, see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
 ## Customizing the search experience of your store
 
 ### Search Result
 
-[VTEX Search Result app](https://developers.vtex.com/docs/apps/vtex.search-result) is responsible for handling the result fetched by the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
+[VTEX Search Result app](https://developers.vtex.com/docs/apps/vtex.search-result) is responsible for handling the result fetched by the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) and displaying it to users. The app exports all store blocks expected in a search results page, such as the filters and the product gallery.
 
 ![Search Result](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/search-overview-1_33.png)
 
