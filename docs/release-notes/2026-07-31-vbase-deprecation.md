@@ -5,6 +5,8 @@ hidden: false
 type: "deprecated"
 createdAt: "2026-07-31T12:00:00.000Z"
 excerpt: "VBase will be gradually deprecated for VTEX IO apps. Master Data becomes the platform's single database solution."
+tags:
+    - VTEX IO
 ---
 
 VBase will be gradually deprecated for VTEX IO apps, consolidating [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) as the single database solution offered by the VTEX platform. Apps that currently use VBase must migrate to Master Data before the shutdown dates below.
