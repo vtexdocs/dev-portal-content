@@ -116,7 +116,7 @@ jobs:
           CHANGED_FILES=$(git -c core.quotepath=false diff --numstat -M \
             "$DIFF_RANGE" \
             -- docs/ \
-            | awk '$1 > 0 {print $3}' \
+            | awk -F'\t' '$1 > 0 {print $3}' \
             | sed 's/^"//;s/"$//' \
             | grep -E '\.(md|mdx)$' \
             | sort || true)

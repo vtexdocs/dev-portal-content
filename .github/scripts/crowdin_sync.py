@@ -336,7 +336,16 @@ def changed_files() -> list[str]:
     seen: set[str] = set()
     files: list[str] = []
     for line in raw.splitlines():
-        path = normalize_changed_path(line.strip())
+        stripped = line.strip()
+        if "{" in stripped and "=>" not in stripped:
+            print(
+                "[crowdin_sync] Skipping truncated rename path "
+                "(ensure CHANGED_FILES uses awk -F'\\t'): "
+                f"{stripped}",
+                file=sys.stderr,
+            )
+            continue
+        path = normalize_changed_path(stripped)
         if (
             path
             and path.endswith((".md", ".mdx"))
