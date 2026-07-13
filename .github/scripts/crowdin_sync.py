@@ -13,6 +13,7 @@ Commands:
   crowdin_sync.py              Upload touched files to Crowdin
   crowdin_sync.py word-count   Merge word count into a Jira description (CURRENT, COUNT)
   crowdin_sync.py crowdin-links  Merge editor links into a Jira description (CURRENT, LINKS)
+  crowdin_sync.py annotate-changed-files  Add (PARTIAL|FULL) to Changed files (CURRENT, CHANGED_FILES, FILES_JSON)
 """
 
 from __future__ import annotations
@@ -719,6 +720,53 @@ def write_github_output(name: str, value: str) -> None:
         handle.write(f"{name}<<{delimiter}\n{value}\n{delimiter}\n")
 
 
+def build_upload_modes_for_changed_files(
+    changed_paths: list[str],
+    uploaded_files: list[dict],
+) -> dict[str, str]:
+    path_to_mode = {
+        str(record["source_path"]): str(record.get("upload_mode", "full")).upper()
+        for record in uploaded_files
+        if record.get("source_path")
+    }
+    return {path: path_to_mode.get(path, "FULL") for path in changed_paths}
+
+
+def format_annotated_changed_files_section(
+    changed_paths: list[str],
+    upload_modes: dict[str, str],
+) -> str:
+    if not changed_paths:
+        return "* No MD/MDX files changed"
+    lines = [
+        f"* {path} **({upload_modes.get(path, 'FULL')})**"
+        for path in changed_paths
+    ]
+    return "\n".join(lines)
+
+
+def merge_changed_files_description(current: str, changed_files_section: str) -> str:
+    block = f"h3. Changed files\n\n{changed_files_section.rstrip()}"
+    pattern = r"^h3\. Changed files\n\n[\s\S]*?(?=\nh3\. PR Description\b)"
+    if re.search(pattern, current, flags=re.MULTILINE):
+        return re.sub(
+            pattern,
+            block + "\n\n",
+            current.rstrip(),
+            count=1,
+            flags=re.MULTILINE,
+        )
+    if "h3. PR Description" in current:
+        return current.replace(
+            "h3. PR Description",
+            f"{block}\n\nh3. PR Description",
+            1,
+        )
+    if current.strip():
+        return f"{current.rstrip()}\n\n{block}\n"
+    return f"{block}\n"
+
+
 def merge_word_count_description(current: str, count: str) -> str:
     row = f"|Word count|{count}|"
     if re.search(r"^\|Word count\|", current, flags=re.MULTILINE):
@@ -909,12 +957,30 @@ def main() -> int:
             os.environ.get("LINKS", ""),
         ))
         return 0
+    if command == "annotate-changed-files":
+        current = os.environ.get("CURRENT", "")
+        changed_paths = [
+            line.strip()
+            for line in os.environ.get("CHANGED_FILES", "").splitlines()
+            if line.strip()
+        ]
+        uploaded_files = json.loads(os.environ.get("FILES_JSON", "[]"))
+        upload_modes = build_upload_modes_for_changed_files(
+            changed_paths,
+            uploaded_files,
+        )
+        section = format_annotated_changed_files_section(
+            changed_paths,
+            upload_modes,
+        )
+        print(merge_changed_files_description(current, section))
+        return 0
     if command == "upload":
         return upload_files()
 
     print(
         f"Unknown command: {command} "
-        "(expected upload, word-count, or crowdin-links)",
+        "(expected upload, word-count, crowdin-links, or annotate-changed-files)",
         file=sys.stderr,
     )
     return 1

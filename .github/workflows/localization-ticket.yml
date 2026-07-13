@@ -571,16 +571,23 @@ jobs:
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
           PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
           CROWDIN_TOTAL_WORDS: ${{ steps.crowdin_upload.outputs.total_words }}
+          FILES_JSON: ${{ steps.crowdin_upload.outputs.files_json }}
+          CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
         run: |
           merge_word_count_description() {
             CURRENT="$1" COUNT="$2" python3 .github/scripts/crowdin_sync.py word-count
+          }
+
+          annotate_changed_files_description() {
+            CURRENT="$1" python3 .github/scripts/crowdin_sync.py annotate-changed-files
           }
 
           current_desc=$(curl -s \
             -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
             "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${PARENT_KEY}?fields=description" \
             | jq -r '.fields.description // ""')
-          merged_desc=$(merge_word_count_description "$current_desc" "$CROWDIN_TOTAL_WORDS")
+          merged_desc=$(annotate_changed_files_description "$current_desc")
+          merged_desc=$(merge_word_count_description "$merged_desc" "$CROWDIN_TOTAL_WORDS")
 
           custom_fields=$(jq -n \
             --arg field "$LOC_JIRA_WORD_COUNT_FIELD" \
