@@ -51,9 +51,9 @@ The exact set of strategies enabled for your account is agreed during onboarding
 | Strategy | How it works | Data requirements | Typical placement |
 | :---- | :---- | :---- | :---- |
 | Best sellers | Highlights top-performing products by sales volume | None | Home, category, search |
-| Recommended for you | Personalizes picks based on individual browsing and purchase history. Falls back to top picks for new users or when the model is not ready yet (see [FAQ](#faq)) | At least 1,000 unique profiles who visited a product page more than once. At least 10,000 of one of the following: product.view events or transaction.charge events. | Home, category, search, PDP, cart, checkout, post-purchase |
+| Recommended for you | Personalizes picks based on individual browsing and purchase history. For shoppers with no item page visit events or completed transactions, recommendations are generated based on the first items clicked in the last 90 days by other first-time visitors (see [FAQ](#faq)) | At least 1,000 unique profiles who visited a product page more than once. At least 10,000 of one of the following: product.view events or transaction.charge events. | Home, category, search, PDP, cart, checkout, post-purchase |
 | Similar products | Matches items by catalog attributes such as category, brand, and specifications | Complete and consistent catalog attributes | PDP |
-| Frequently bought together | Surfaces items commonly purchased alongside the reference product | At least 1,000 transactions with basket size > 1 | PDP, cart |
+| Frequently bought together | Surfaces items commonly purchased alongside the reference product | At least 1,000 transactions with more than one item in the cart | PDP, cart |
 | Recently viewed | Shows the shopper's last-seen items based on view and interaction events | View and interaction event tracking | Home, category, search, PDP, cart, checkout, post-purchase |
 | Visually similar products | Matches items by visual similarity using image recognition | Visual model enabled for the account | PDP |
 | Manual collection | Displays a merchant-defined set of products from a collection or rules | None | Any |
@@ -80,7 +80,7 @@ Yes. You request the strategies you want during activation. VTEX enables and tra
 
 ### How long does it take before models are ready?
 
-It depends on the strategy. Strategies that do not rely on model training, such as Most popular, Best sellers, Recently viewed, and Manual collection, are available as soon as the integration is configured. Strategies that require training become available once the minimum data thresholds are met: Recommended for you requires at least 1,000 multi-item purchases, and Frequently bought together requires at least 10,000 orders with more than one item. Beyond those thresholds, time to readiness also depends on catalog size and overall traffic volume. Your onboarding team can give more accurate timelines for your store.
+It depends on the strategy. Strategies that do not rely on model training, such as Best sellers, Recently viewed, and Manual collection, are available as soon as the integration is configured. Strategies that require training become available once the minimum data thresholds are met: Recommended for you requires at least 1,000 unique profiles with repeat product page visits and at least 10,000 product view or purchase events, and Frequently bought together requires at least 1,000 transactions with more than one item in the cart. Beyond those thresholds, time to readiness also depends on catalog size and overall traffic volume. Your onboarding team can give more accurate timelines for your store.
 
 ### What data is collected for training?
 
@@ -88,13 +88,13 @@ Typically includes navigation and product interaction events used to learn views
 
 ### What happens to co-purchase strategies when the store does not have enough order volume?
 
-Strategies that rely on co-purchase patterns, such as Frequently bought together, require a minimum of 10,000 orders with more than one item in the cart. Until that threshold is reached, the strategy remains inactive. Once the volume is met, VTEX trains the model and activates the strategy. Until then, consider relying on strategies that do not depend on co-purchase data, such as Most popular, Best sellers, or Similar products.
+Strategies that rely on co-purchase patterns, such as Frequently bought together, require a minimum of 1,000 transactions with more than one item in the cart. Until that threshold is reached, the strategy remains inactive. Once the volume is met, VTEX trains the model and activates the strategy. Until then, consider relying on strategies that do not depend on co-purchase data, such as Best sellers or Similar products.
 
 ### What happens to "Recommended for you" when there is not enough data?
 
 Recommended for you depends on a personalization model trained from real shopper and purchase behavior. When a shopper has no item page visit events or completed transactions, recommendations are generated based on the first items clicked in the last 90 days by other first-time visitors in the store. As the shopper builds a history, recommendations gradually shift to reflect their individual behavior.
 
-Until there is enough account-level history for VTEX to train and enable the model, the campaign does not behave as fully personalized. What shoppers see in the meantime is configured as part of onboarding (for example, emphasizing other strategies such as Most popular or Best sellers, hiding the shelf, or using a transitional setup). Confirm the exact behavior with your VTEX contact so your UI matches expectations.
+Until there is enough account-level history for VTEX to train and enable the model, the campaign does not behave as fully personalized. What shoppers see in the meantime is configured as part of onboarding (for example, emphasizing other strategies such as Best sellers, hiding the shelf, or using a transitional setup). Confirm the exact behavior with your VTEX contact so your UI matches expectations.
 
 ### Where do I get campaign IDs (VRNs) for API calls?
 
