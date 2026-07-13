@@ -1,6 +1,6 @@
 ---
-title: "VBase deprecation for VTEX IO apps: Migration to Master Data"
-slug: "2026-07-31-vbase-deprecation"
+title: "VTEX IO: VBase deprecation and Master Data migration"
+slug: 2026-07-31-vtex-io-vbase-deprecation-master-data-migration
 hidden: false
 type: "deprecated"
 createdAt: "2026-07-31T12:00:00.000Z"
