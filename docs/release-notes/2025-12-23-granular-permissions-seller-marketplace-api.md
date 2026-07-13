@@ -67,6 +67,21 @@ To align the modules with the security principle of Least Privilege, raising the
 3. Add resources according to the required access level.
 4. Validate access to modules in the VTEX Admin.
 
+### For VTEX IO apps
+
+Apps that interact with Seller Register must declare the necessary policies in the `manifest.json` file. Add the corresponding permissions inside the `policies` object:
+
+```json
+"policies": [
+  {
+    "name": "view-seller"
+  },
+  {
+    "name": "save-seller"
+  }
+]
+```
+
 ### API validation example
 
 ```bash
