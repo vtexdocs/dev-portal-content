@@ -155,14 +155,16 @@ def fetch_project_data(project_id: str) -> dict:
 
 
 def language_editor_code(project_data: dict, language_id: str) -> str:
+    """Resolve a Crowdin editor URL language segment (e.g. en-US -> enus)."""
     target = normalize_language_id(language_id)
-    source = project_data.get("sourceLanguage") or {}
-    if normalize_language_id(str(source.get("id", ""))) == target:
-        return str(source["editorCode"])
     for language in project_data.get("targetLanguages") or []:
         if normalize_language_id(str(language.get("id", ""))) == target:
             return str(language["editorCode"])
-    return language_id
+    source = project_data.get("sourceLanguage") or {}
+    if normalize_language_id(str(source.get("id", ""))) == target:
+        return str(source["editorCode"])
+    # Crowdin editor codes drop hyphens (en-US -> enus), not en-us.
+    return language_id.replace("-", "").lower()
 
 
 def editor_url(
