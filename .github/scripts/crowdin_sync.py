@@ -56,6 +56,11 @@ def normalize_language_id(language_id: str) -> str:
     return language_id.replace("_", "-").lower()
 
 
+def normalize_editor_code(code: str) -> str:
+    """Crowdin editor URL segments drop separators (en-US -> enus, pt-BR -> ptbr)."""
+    return code.replace("_", "").replace("-", "").lower()
+
+
 def crowdin_api_base() -> str:
     organization = env("LOC_CROWDIN_ORGANIZATION")
     if organization:
@@ -159,12 +164,11 @@ def language_editor_code(project_data: dict, language_id: str) -> str:
     target = normalize_language_id(language_id)
     for language in project_data.get("targetLanguages") or []:
         if normalize_language_id(str(language.get("id", ""))) == target:
-            return str(language["editorCode"])
+            return normalize_editor_code(str(language["editorCode"]))
     source = project_data.get("sourceLanguage") or {}
     if normalize_language_id(str(source.get("id", ""))) == target:
-        return str(source["editorCode"])
-    # Crowdin editor codes drop hyphens (en-US -> enus), not en-us.
-    return language_id.replace("-", "").lower()
+        return normalize_editor_code(str(source["editorCode"]))
+    return normalize_editor_code(language_id)
 
 
 def editor_url(
@@ -173,7 +177,10 @@ def editor_url(
     source_editor_code: str,
     target_editor_code: str,
 ) -> str:
-    language_pair = f"{source_editor_code}-{target_editor_code}"
+    language_pair = (
+        f"{normalize_editor_code(source_editor_code)}-"
+        f"{normalize_editor_code(target_editor_code)}"
+    )
     return f"{crowdin_web_base()}/editor/{project_identifier}/{file_id}/{language_pair}"
 
 
