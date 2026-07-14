@@ -15,7 +15,7 @@ All Beacon requests require specific information to accurately identify and attr
 
 The `session_id` is the user's session identifier. It has a limited lifespan and helps us determine when a user transitions from an anonymous to an identified state. It also allows us to understand how many sessions a user goes through before converting.
 
-The `session_id` is **mandatory** in all cases—even for short-lived sessions. For example, in an offline point-of-sale (POS) conversion, you can generate a random value. For web sessions, the value should match the current user session ID.
+The `session_id` is **mandatory** in all cases, even for short-lived sessions. For example, in an offline point-of-sale (POS) conversion, you can generate a random value. For web sessions, the value should match the current user session ID.
 
 ### `user_id`
 
@@ -46,6 +46,16 @@ On day 2, if the same user clicks on the same ad again **before 12:00 PM** (stil
 If the user changes sessions, a new event will always be counted, regardless of the time since the last interaction.
 
 >ℹ️ **Conversion events are always counted**, whether or not the session has changed.
+
+## Budget validation for impressions and views
+
+[Impressions](https://developers.vtex.com/docs/guides/impressions) and [views](https://developers.vtex.com/docs/guides/views) are subject to different budget validation controls. Because impressions directly impact budget under CPM billing, **impression** events are gated by campaign budget validation. **view** events are not subject to budget validation.
+
+For ad types charged per impression (CPM), including banner, display, and video campaigns and **Sponsored Brands**, this difference affects reporting when a campaign reaches its daily budget cap. At the cap, impression counting is interrupted, but some view events may still be recorded. Reported views can therefore exceed reported impressions. The closer a campaign is to its daily budget cap, the larger this discrepancy tends to be.
+
+This behavior does not apply to **Sponsored Products**, which use a different billing model.
+
+>ℹ️ **View counts that exceed impressions near the daily budget cap are expected** for CPM ad types. See [Impressions](https://developers.vtex.com/docs/guides/impressions) and [Views](https://developers.vtex.com/docs/guides/views) for how to send each event type.
 
 ## Conversion window
 

@@ -2,6 +2,8 @@
 # Source after setting LOC_JIRA_BASE_URL, LOC_JIRA_USER_EMAIL, LOC_JIRA_API_TOKEN,
 # LOC_JIRA_PROJECT_KEY, PR_NUMBER, GITHUB_REPOSITORY, PR_REF, PR_LABEL, and GH_TOKEN.
 
+CROWDIN_UPLOAD_SUCCESS_COMMENT=$'AUTOMATIC CROWDIN UPLOAD SUCCESSFUL\n\nThe Jira ticket and subtasks were created or updated, the files were uploaded to Crowdin, and the word count and Crowdin editor links were added or updated.'
+
 # Post a plain-text comment on a Jira issue. Returns 0 on HTTP 201.
 jira_post_comment() {
   local issue_key="$1"
