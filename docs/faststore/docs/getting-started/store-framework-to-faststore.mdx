@@ -40,13 +40,15 @@ There are two supported ways to get that test domain during development:
 - **Same account:** Keep your existing domain pointed at Store Framework, and add a second domain in the same account pointed at FastStore (for example, `www.yourstore.com` for Store Framework and `faststore.yourstore.com` for FastStore). This keeps everything — Master Data, CMS content, app settings — in a single account. You don't need to promote a repository or resync content from another environment before the final traffic split.
 - **QA subaccount:** Create a separate subaccount, connect your FastStore project to it, and point a test domain there (for example, `faststoreqa.yourstore.com` hosted on a subaccount). This isolates your tests behind a completely separate Master Data instance.
 
+Choose the QA subaccount path mainly when you need an isolated environment for destructive tests or order-flow testing that shouldn't run against your production account.
+
 The following table summarizes the trade-offs:
 
 | Criteria | Same account | QA subaccount |
 |---|---|---|
 | Setup complexity | Lower: no new account, no content resync before go-live. | Higher: new account, plus CMS content and app settings must be recreated/copied into the main account later. |
 | Master Data | Shared with production (use with care for tests that write data). | Fully isolated, safe for destructive tests. |
-| Order simulation | Tests run in the production account context. If checkout remains unchanged, placing real orders is usually unnecessary for storefront validation. | Lets you simulate order flows in an isolated account context when you need stronger separation from production operations. |
+| Order simulation | Because the checkout is unchanged, placing real orders is usually unnecessary for storefront validation. Any test orders you do place run in your production account context and are subject to the same billing rules as real orders. | Lets you place test orders in a fully isolated context when you need to exercise order flows without touching production. Choose the QA subaccount path mainly when you need an isolated environment for destructive tests or order-flow testing that shouldn't run against your production account. |
 | Intelligent Search | Reuses existing account-level configuration; no rebuild needed. | Requires reconfiguring merchandising rules, synonyms, and relevance settings, since a subaccount is a separate environment. |
 | Best fit | Smaller stores and simpler setups that want the fastest path to production. | Larger stores with multiple storefronts or monorepo setups that already operate several accounts, or any store that wants a permanent QA environment for testing new flows after go-live without touching production. |
 | Post-go-live use | None by default (the temporary test domain is retired once the production domain takes over). | Reusable afterward as a standing QA environment. |
@@ -119,6 +121,8 @@ After the split is active, you can force each storefront version for QA and debu
 
 To keep the shopper experience consistent, VTEX persists the assigned storefront version in the `VtexStoreVersion` cookie, so the same shopper stays on the same variant rather than being re-randomized between the two versions on subsequent requests.
 
-You can also read the `VtexStoreVersion` cookie in tools such as Google Tag Manager or Google Analytics to compare metrics across the two storefront variants.
+You can also read the `VtexStoreVersion` cookie in tools such as Google Tag Manager (GTM) or Google Analytics (GA) to compare metrics across the two storefront variants.
+
+ℹ️ By default, the `VtexStoreVersion` cookie is set as `HttpOnly`, which prevents client-side tools like GTM from reading it. If you need to read it in the browser for analytics, request this adjustment when you open the traffic split ticket.
 
 Once you've validated the FastStore storefront, make it your live store and retire the Store Framework storefront.
