@@ -41,9 +41,9 @@ For how sessions, deduplication, and conversion windows are defined in **VTEX Ad
 
 Capture succeeds only when all of the following are true:
 
-1. The offsite media is served with the **VTEX Ads** parameters preserved.
-2. The redirect to the destination URL provided by **VTEX Ads** is preserved (not shortened or altered).
-3. The destination page actually loads for the user. Capture happens on load.
+- The offsite media is served with the **VTEX Ads** parameters preserved.
+- The redirect to the destination URL provided by **VTEX Ads** is preserved (not shortened or altered).
+- The destination page actually loads for the user. Capture happens on load.
 
 For journeys that finish inside a mobile app, the [Activity Flow Mobile SDK](https://developers.vtex.com/docs/guides/installing-activity-flow-in-mobile-apps) is also required. See [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) for an overview of the SDK and supported platforms.
 
@@ -114,10 +114,3 @@ Follow these checks after installing the script:
 ### Zeroed metrics
 
 If the script is not loading on the destination pages, there is no capture and metrics come out zeroed. Confirm the script tag is present on the destination pages and that the bundle loads without errors.
-
-## Next steps
-
-- [VTEX Ads](https://developers.vtex.com/docs/guides/vtex-ads) - Integration overview and related guides.
-- [VTEX Ads Script Agent](https://developers.vtex.com/docs/guides/vtex-ads-script-agent) - On-site tracking script for Retail Media campaigns (distinct from the offsite capture web script).
-- [Understanding ads events](https://developers.vtex.com/docs/guides/understanding-ads-events) - Sessions, deduplication, and conversion windows.
-- [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) and [Installing Activity Flow in mobile apps](https://developers.vtex.com/docs/guides/installing-activity-flow-in-mobile-apps) - Required for offsite journeys that complete in a mobile app.
