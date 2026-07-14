@@ -2,7 +2,7 @@
 title: "Migrating from Store Framework to FastStore"
 slug: "store-framework-to-faststore"
 excerpt: "Learn how to migrate your storefront from Store Framework to FastStore, validate it end-to-end, and gradually move traffic before going live."
-createdAt: "2026-07-08T00:00:00.000Z"
+createdAt: "2026-07-14T00:00:00.000Z"
 ---
 
 In this guide, you'll learn how to migrate your storefront from [Store Framework](https://developers.vtex.com/docs/guides/store-framework) to [FastStore](https://developers.vtex.com/docs/guides/faststore).
@@ -37,7 +37,7 @@ Because traffic splitting only happens once development is complete, you need a 
 
 There are two supported ways to get that test domain during development:
 
-- **Same account:** Keep your existing domain pointed at Store Framework, and add a second domain in the same account pointed at FastStore (for example, `www.yourstore.com` for Store Framework and `faststore.yourstore.com` for FastStore). This is technically supported, doesn't require any additional VTEX setup or ticket, and keeps everything — Master Data, CMS content, app settings — in a single account. You don't need to promote a repository or resync content from another environment before the final traffic split.
+- **Same account:** Keep your existing domain pointed at Store Framework, and add a second domain in the same account pointed at FastStore (for example, `www.yourstore.com` for Store Framework and `faststore.yourstore.com` for FastStore). This keeps everything — Master Data, CMS content, app settings — in a single account. You don't need to promote a repository or resync content from another environment before the final traffic split.
 - **QA subaccount:** Create a separate subaccount, connect your FastStore project to it, and point a test domain there (for example, `faststoreqa.yourstore.com` hosted on a subaccount). This isolates your tests behind a completely separate Master Data instance.
 
 The following table summarizes the trade-offs:
@@ -46,8 +46,9 @@ The following table summarizes the trade-offs:
 |---|---|---|
 | Setup complexity | Lower: no new account, no content resync before go-live. | Higher: new account, plus CMS content and app settings must be recreated/copied into the main account later. |
 | Master Data | Shared with production (use with care for tests that write data). | Fully isolated, safe for destructive tests. |
+| Order simulation | Tests run in the production account context. If checkout remains unchanged, placing real orders is usually unnecessary for storefront validation. | Lets you simulate order flows in an isolated account context when you need stronger separation from production operations. |
 | Intelligent Search | Reuses existing account-level configuration; no rebuild needed. | Requires reconfiguring merchandising rules, synonyms, and relevance settings, since a subaccount is a separate environment. |
-| Best fit | Smaller stores/simpler setups that want the fastest path to production. | Larger stores with multiple storefronts/monorepo setups that already operate several accounts, or any store that wants a permanent QA environment for testing new flows after go-live without touching production. |
+| Best fit | Smaller stores and simpler setups that want the fastest path to production. | Larger stores with multiple storefronts or monorepo setups that already operate several accounts, or any store that wants a permanent QA environment for testing new flows after go-live without touching production. |
 | Post-go-live use | None by default (the temporary test domain is retired once the production domain takes over). | Reusable afterward as a standing QA environment. |
 
 ## Before you begin
@@ -82,9 +83,11 @@ Keep these tools maintained throughout your FastStore development, and treat the
 
 Validate the full shopper journey on FastStore: catalog browsing, adding products to the cart, cart and checkout, login, and My Account. Most of this can be reviewed from preview URLs, but a handful of flows, such as login-gated features or the minicart-to-checkout transition, require a live production domain running FastStore.
 
-Use whichever production domain you set up in [Choosing your test environment](#choosing-your-test-environment) to run these tests, either the second domain in your main account or your QA subaccount domain.
+Use whichever production-like domain you set up in [Choosing your test environment](#choosing-your-test-environment) to run these tests, either the second domain in your main account or your QA subaccount domain.
 
-Also, confirm that all front-end third-party tools you reimplemented in the [previous step](#step-3---reimplementing-front-end-third-party-tools) are firing correctly on the FastStore domain.
+If your checkout remains unchanged, focus this validation on the storefront-to-checkout transition and related authenticated flows. Placing real orders is usually unnecessary unless you specifically need to validate order creation behavior in the chosen environment.
+
+Confirm that all front-end third-party tools you reimplemented in the [previous step](#step-3---reimplementing-front-end-third-party-tools) are firing correctly on the FastStore domain.
 
 > ℹ️ If you use a QA subaccount, it has its own Master Data, so the data used in tests is isolated from your live store. If you're testing on a second domain in the main account, be mindful that Master Data is shared with production.
 
@@ -107,6 +110,15 @@ Before requesting the traffic split, add your production domain to FastStore Web
 
 Once you've completed the previous steps, open a ticket with [VTEX Support](https://help.vtex.com/en/support) at least five days before your planned migration date to request traffic splitting between Store Framework and FastStore.
 
-This gradual rollout allows you to slowly redirect users from the old store to the new one, run A/B tests with your analytics or testing tools, monitor performance, and ensure stability before going fully live on FastStore.
+When the split is enabled, we recommend starting with 0% of traffic routed to FastStore and 100% kept on Store Framework for final validations on the production domain. After confirming that routing, analytics, and critical flows are working as expected, gradually increase the FastStore share. This gradual rollout allows you to slowly redirect users from the old store to the new one, run A/B tests with your analytics or testing tools, monitor performance, and ensure stability before going fully live on FastStore.
+
+After the split is active, you can force each storefront version for QA and debugging by adding the ab_test query parameter to the URL:
+
+- To force the Store Framework version: `https://www.store.com/?ab_test=v1`
+- To force the FastStore version: `https://www.store.com/?ab_test=v2`
+
+To keep the shopper experience consistent, VTEX persists the assigned storefront version in the `VtexStoreVersion` cookie, so the same shopper stays on the same variant rather than being re-randomized between the two versions on subsequent requests.
+
+You can also read the `VtexStoreVersion` cookie in tools such as Google Tag Manager or Google Analytics to compare metrics across the two storefront variants.
 
 Once you've validated the FastStore storefront, make it your live store and retire the Store Framework storefront.
