@@ -20,12 +20,10 @@ Confirm the following before installing the script:
 - Your store is registered in **VTEX Ads** as a publisher and you have a **Publisher ID** (UUID) from the VTEX Ads team. See [Request publisher provisioning](#1-request-publisher-provisioning).
 - You know which installation path applies to your storefront (VTEX native or independent). Use the table below.
 
-
 | Your store                                             | How the script is added                                                          | Who installs       |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------ |
 | VTEX native store (Store Framework, Portal, FastStore) | Potentially installed as a VTEX app (confirm eligibility with the VTEX Ads team) | VTEX / store admin |
 | Independent store (not built on the VTEX storefront)   | A JavaScript snippet loaded from the VTEX Ads CDN                                | Your team          |
-
 
 > ℹ️ VTEX native store eligibility for the VTEX Ads Agent app may vary. Confirm with the VTEX Ads team before you install.
 
@@ -84,7 +82,7 @@ Add the published bundle, hosted on the CDN, to your storefront pages:
 
 ### VTEX native stores: VTEX Ads Agent app
 
-For VTEX native stores, the offsite capture web script is potentially delivered through the `[vtex.ads-agent](https://developers.vtex.com/docs/apps/vtex.ads-agent)` VTEX IO app. Confirm eligibility with the VTEX Ads team before you install.
+For VTEX native stores, the offsite capture web script is potentially delivered through the [`vtex.ads-agent`](https://developers.vtex.com/docs/apps/vtex.ads-agent) VTEX IO app. Confirm eligibility with the VTEX Ads team before you install.
 
 **Prerequisites:**
 
@@ -98,7 +96,7 @@ Install the app with the VTEX IO CLI:
 vtex install vtex.ads-agent
 ```
 
-After installing, set `publisherId` in the app settings so the script starts reporting events. For full install and configuration steps, see the `[vtex.ads-agent` app documentation](https://developers.vtex.com/docs/apps/vtex.ads-agent).
+After installing, set `publisherId` in the app settings so the script starts reporting events. For full install and configuration steps, see the [`vtex.ads-agent` app documentation](https://developers.vtex.com/docs/apps/vtex.ads-agent).
 
 ## 3. Validate your installation
 
@@ -123,4 +121,3 @@ If the script is not loading on the destination pages, there is no capture and m
 - [VTEX Ads Script Agent](https://developers.vtex.com/docs/guides/vtex-ads-script-agent) - On-site tracking script for Retail Media campaigns (distinct from the offsite capture web script).
 - [Understanding ads events](https://developers.vtex.com/docs/guides/understanding-ads-events) - Sessions, deduplication, and conversion windows.
 - [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) and [Installing Activity Flow in mobile apps](https://developers.vtex.com/docs/guides/installing-activity-flow-in-mobile-apps) - Required for offsite journeys that complete in a mobile app.
-
