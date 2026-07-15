@@ -9,21 +9,21 @@ tags:
     - VTEX IO
 ---
 
-VBase will be gradually deprecated for VTEX IO apps, consolidating [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) as the single database solution offered by the VTEX platform. Apps that currently use VBase must migrate to Master Data before the shutdown dates below.
+VBase, the database solution available to VTEX IO apps, will be gradually deprecated, consolidating [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) as the VTEX platform's single database solution. Apps that currently use VBase must migrate to Master Data before the shutdown dates below.
 
 ## What has changed?
 
-VBase, the database service available to VTEX IO apps, will no longer be available for app development and running apps. The VBase deprecation will happen in the following phases:
+VBase will no longer be available for app development and running apps. The deprecation will happen in the following phases:
 
 | Date | Phase |
 | :- | :- |
 | September 1st, 2026 | [Publishing](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) and [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) new apps that use VBase are blocked. |
 | March 1st, 2027 | Publishing and linking new [major versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps that use VBase are blocked. |
-| September 1st, 2027 | VBase shutdown. Requests from apps to VBase will no longer work. |
+| September 1st, 2027 | VBase shutdown. Requests from apps to VBase no longer work. |
 
 ## Why did we make this change?
 
-Consolidating our database infrastructure on Master Data provides stores with a more reliable, scalable, and resilient foundation. This unified solution minimizes operational complexity and ensures a consistent, high-performance development experience across the VTEX platform.
+Consolidating our database infrastructure on Master Data provides stores a more reliable, scalable, and resilient foundation. This unified solution minimizes operational complexity and ensures a consistent, high-performance development experience across the VTEX platform.
 
 ## What needs to be done?
 
@@ -41,7 +41,7 @@ For exceptional cases requiring extended VBase support, [open a ticket](https://
 
 ### New integrations
 
-Do not use VBase in new projects or integrations. Use Master Data instead. The following integration guides and template repositories currently reference VBase and will be updated to use Master Data:
+Don't use VBase in new projects or integrations. Use Master Data instead. The following integration guides and template repositories currently reference VBase and will be updated to use Master Data:
 
 | Integration | Template repository |
 | :- | :- |
