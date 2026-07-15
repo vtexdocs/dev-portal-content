@@ -74,7 +74,7 @@ Replace `{presignedUrl}` with the value returned in `url`. A successful upload r
 
 ### CSV file schema
 
-The CSV file must contain one row per SKU and warehouse combination you want to update, with the following fields:
+The CSV file must contain one row per SKU, warehouse and account name combination you want to update, with the following fields:
 
 | **Field** | **Type** | **Description** |
 | :--- | :--- | :--- |
@@ -82,8 +82,8 @@ The CSV file must contain one row per SKU and warehouse combination you want to 
 | `account_name` | string | Name of the VTEX account the warehouse belongs to. |
 | `container_id` | string | ID of the warehouse where the inventory update should be applied. |
 | `quantity` | integer | Number of units available for the SKU in the given warehouse. This value is ignored when `unlimited` is `true`. |
-| `unlimited` | boolean | Indicates whether the SKU has unlimited inventory (`true`) or a finite `quantity` (`false`). |
-| `lead_time` | string | Shipping lead time for the SKU at the warehouse, in ISO 8601 duration format (for example, `PT24H` for 24 hours). |
+| `unlimited` | boolean | Indicates whether the SKU has [unlimited inventory](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) (`true`) or a finite `quantity` (`false`). |
+| `lead_time` | string | Shipping [lead time](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) for the SKU at the warehouse, in ISO 8601 duration format (for example, `PT24H` for 24 hours). |
 
 Keep the following in mind when filling out each field:
 
