@@ -604,9 +604,18 @@ def format_partial_file_context(
         if changed_line_numbers
         else ""
     )
-    context_title = env("PR_NUMBER") or "Full file reference"
+    pr_number = env("PR_NUMBER")
+    pr_url = env("PR_URL")
+    if pr_number and not pr_url:
+        repository = env("GITHUB_REPOSITORY")
+        if repository:
+            pr_url = f"https://github.com/{repository}/pull/{pr_number}"
+    if pr_number and pr_url:
+        context_heading = f"Source PR: [PR#{pr_number}]({pr_url})"
+    else:
+        context_heading = "Full file reference"
     return (
-        f"# {context_title}\n\n"
+        f"# {context_heading}\n\n"
         f"Source path: `{relative_path}`\n\n"
         "The strings in this file are **partial changes only**. "
         "Use the full document below for context when reviewing.\n\n"
