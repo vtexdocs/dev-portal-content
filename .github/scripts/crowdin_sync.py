@@ -21,6 +21,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import secrets
 import subprocess
 import sys
 import time
@@ -33,6 +34,7 @@ from typing import Literal
 
 CROWDIN_API_BASE_DEFAULT = "https://api.crowdin.com/api/v2"
 CROWDIN_WEB_BASE_DEFAULT = "https://crowdin.com"
+CROWDIN_REQUEST_TIMEOUT_SECONDS = 60
 
 DOCS_SOURCE_PATH_PREFIX = "docs/"
 
@@ -122,7 +124,9 @@ def crowdin_request(
 
     request = urllib.request.Request(url, data=body, method=method, headers=headers)
     try:
-        with urllib.request.urlopen(request) as response:
+        with urllib.request.urlopen(
+            request, timeout=CROWDIN_REQUEST_TIMEOUT_SECONDS
+        ) as response:
             raw = response.read().decode("utf-8")
             if not raw:
                 return {}
@@ -131,6 +135,10 @@ def crowdin_request(
         detail = error.read().decode("utf-8", errors="replace")
         raise RuntimeError(
             f"Crowdin API {method} {path} failed (HTTP {error.code}): {detail}"
+        ) from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(
+            f"Crowdin API {method} {path} failed: {error.reason}"
         ) from error
 
 
@@ -596,8 +604,9 @@ def format_partial_file_context(
         if changed_line_numbers
         else ""
     )
+    context_title = env("PR_NUMBER") or "Full file reference"
     return (
-        "# Full file reference\n\n"
+        f"# {context_title}\n\n"
         f"Source path: `{relative_path}`\n\n"
         "The strings in this file are **partial changes only**. "
         "Use the full document below for context when reviewing.\n\n"
@@ -715,7 +724,7 @@ def write_github_output(name: str, value: str) -> None:
     output_path = env("GITHUB_OUTPUT")
     if not output_path:
         return
-    delimiter = f"EOF_{name}"
+    delimiter = secrets.token_hex(16)
     with open(output_path, "a", encoding="utf-8") as handle:
         handle.write(f"{name}<<{delimiter}\n{value}\n{delimiter}\n")
 
@@ -784,9 +793,10 @@ def merge_word_count_description(current: str, count: str) -> str:
 
 def merge_crowdin_description(current: str, links: str) -> str:
     section = f"h3. Crowdin editor\n\n{links}"
+    crowdin_editor_pattern = r"^h3\. Crowdin editor\b[\s\S]*?(?=\n^h3\. |\Z)"
     if re.search(r"^h3\. Crowdin editor\b", current, flags=re.MULTILINE):
         return re.sub(
-            r"^h3\. Crowdin editor[\s\S]*$",
+            crowdin_editor_pattern,
             section,
             current.rstrip(),
             count=1,
