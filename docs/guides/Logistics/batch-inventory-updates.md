@@ -105,6 +105,8 @@ SKU-12345,WH-01,dgbransonmissouri,150,false,PT24H
 
 After uploading the CSV to S3, call the [Confirm batch inventory](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch/-batchId-/commit) endpoint, passing the `batchId` as a path parameter. This request confirms that the upload is complete and triggers the asynchronous processing of the batch.
 
+>⚠️ You have 30 minutes to confirm the batch after uploading the CSV file, otherwise the upload will expire and you will have to start the process again.
+
 A successful commit returns an HTTP `202 Accepted` response, and the batch transitions to the `QUEUED` status. From this point on, processing is handled asynchronously by VTEX, and you can use the status endpoint to track progress.
 
 >⚠️ If you call this endpoint twice in parallel for the same `batchId`, the second request will receive a `423 Locked` response. Wait for the first commit to complete before retrying.
