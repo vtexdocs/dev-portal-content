@@ -9,7 +9,7 @@ In this guide, you'll learn how to migrate your storefront from [Store Framework
 
 By the end, you'll know how to prepare both storefronts to run in parallel, validate the new storefront end-to-end and with real traffic, and complete the cutover.
 
-> ℹ️ You can choose between two approaches for validating FastStore before go-live: develop and test directly in your production VTEX account using a temporary second domain, or in an isolated QA subaccount. To learn more about both approaches and their trade-offs, see [Choosing your test environment](#choosing-your-test-environment). The final cutover always happens on your production account's domain.
+> ℹ️ You can choose between two approaches for validating FastStore before go-live: Develop and test directly in your production VTEX account using a temporary second domain, or in an isolated QA subaccount. To learn more about both approaches and their trade-offs, see [Choosing your test environment](#choosing-your-test-environment). The final cutover always happens on your production account's domain.
 
 ## Migration overview
 
@@ -60,13 +60,6 @@ Before starting the migration, create the FastStore project that will receive yo
 
 Once you complete the track, you'll have a GitHub repository connected to your account that you can deploy through FastStore WebOps. Decide at this point whether you'll follow the same-account or subaccount path described above. If you go with the same-account approach, you connect the repository directly to your main account and avoid any later repository re-pointing or content resync work.
 
-FastStore go-live also requires `vtex.edition-store@5.x` to be installed in your account's master workspace. Check your current edition early on, since `vtex.edition-store` versions map to different `vtex.checkout` majors:
-
-- `vtex.edition-store` 3.x uses `vtex.checkout` 0.x, which routes to the default Checkout V6.
-- `vtex.edition-store` 5.x uses `vtex.checkout` 1.x (IO cart) or 2.x (full IO checkout).
-
-> ⚠️ If you're currently on `vtex.edition-store` 3.x, upgrading to 5.x also upgrades `vtex.checkout`, which can change which checkout experience shoppers land on, even if you haven't customized checkout. Plan to test this upgrade in a QA or test environment well before requesting the traffic split, so you have time to adjust any checkout UI customizations if needed.
-
 ## Instructions
 
 ### Step 1 - Handling VTEX IO apps
@@ -74,8 +67,6 @@ FastStore go-live also requires `vtex.edition-store@5.x` to be installed in your
 Backend VTEX IO apps and integrations are fully compatible with FastStore. If you migrate within the same account, no action is needed — your existing backend apps keep running as is. If you migrate using a QA subaccount, reinstall the same backend apps in that subaccount before you start development.
 
 Front-end VTEX IO components, on the other hand, aren't compatible with FastStore at all and must be recreated regardless of which account you use. Start by checking the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) catalog to see if a native component already covers your needs. If it doesn't, see [Developing and overriding UI components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-overview) to learn how to override native components or build entirely new sections to recreate your custom front-end elements.
-
-> ℹ️ If your storefront has checkout UI customizations, also check the `vtex.edition-store` and `vtex.checkout` requirements covered in [Before you begin](#before-you-begin), since upgrading the edition later can affect your checkout interface.
 
 ### Step 2 - Recreating the storefront content
 
@@ -99,13 +90,11 @@ Use whichever production-like domain you set up in [Choosing your test environme
 
 If your checkout remains unchanged, focus this validation on the storefront-to-checkout transition and related authenticated flows. Placing real orders is usually unnecessary unless you specifically need to validate order creation behavior in the chosen environment.
 
-Because both storefronts share the same production domain during the traffic split, login redirects and links into the checkout panel generally continue to work without extra configuration, even if you have login or checkout UI customizations. Still, verify these flows in your test environment before requesting the split, since Store Framework allows extensive customization that can behave differently case by case.
+Because both storefronts share the same production domain during the traffic split, login redirects and links into the checkout panel generally continue to work without extra configuration, even if you have login or checkout UI customizations. Still, verify these flows in your test environment before requesting the split, since Store Framework allows extensive customization that can behave differently on a case-by-case basis.
 
 > ℹ️ The [Integrating the VTEX Order Placed and My Account](https://developers.vtex.com/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account) step from the FastStore go-live checklist is meant for storefronts built from scratch that still need their theme styled to match the account's branding. If your Store Framework storefront already has My Account and Checkout styled the way you want, you can skip that step.
 
-Because the header and footer are shared between Store Framework and FastStore during the traffic split, verify that all header and footer links and experiences work consistently on both storefront versions before requesting the split.
-
-> ℹ️ If your store has specific URLs that only exist on one of the storefronts, you may need to set up redirects to keep navigation consistent for shoppers on either version. For instructions, see [Managing URL redirects](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects).
+Because the header and footer are shared between Store Framework and FastStore during the traffic split, verify that all header and footer links and experiences work consistently on both storefront versions before requesting the split. If your store has URLs unique to a single storefront, you may need to set up redirects to keep navigation consistent for shoppers across both versions. For instructions, see [Managing URL redirects](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects).
 
 Confirm that all front-end third-party tools you reimplemented in the [previous step](#step-3---reimplementing-front-end-third-party-tools) are firing correctly on the FastStore domain.
 
