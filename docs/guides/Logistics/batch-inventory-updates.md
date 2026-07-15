@@ -72,6 +72,35 @@ curl -X PUT \
 
 Replace `{presignedUrl}` with the value returned in `url`. A successful upload returns an HTTP `200 OK` response from S3.
 
+### CSV file schema
+
+The CSV file must contain one row per SKU and warehouse combination you want to update, with the following fields:
+
+| **Field** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| `item_id` | string | SKU identifier of the item you want to update. |
+| `account_name` | string | Name of the VTEX account the warehouse belongs to. |
+| `container_id` | string | ID of the warehouse where the inventory update should be applied. |
+| `quantity` | integer | Number of units available for the SKU in the given warehouse. This value is ignored when `unlimited` is `true`. |
+| `unlimited` | boolean | Indicates whether the SKU has unlimited inventory (`true`) or a finite `quantity` (`false`). |
+| `lead_time` | string | Shipping lead time for the SKU at the warehouse, in ISO 8601 duration format (for example, `PT24H` for 24 hours). |
+
+Keep the following in mind when filling out each field:
+
+- **`item_id`:** Use the exact SKU ID as registered in your catalog. Rows with a nonexistent SKU return the `UNKNOWN` error code.
+- **`account_name`:** Use the store's account name exactly as it appears in the VTEX URL (for example, the `{accountName}` in `https://{accountName}.myvtex.com`).
+- **`container_id`:** Use the exact warehouse ID configured in Warehouse & Inventory Management. An incorrect or nonexistent ID causes the row to fail.
+- **`quantity`:** Provide a non-negative integer. This field is still required even when `unlimited` is `true`, but its value is ignored during processing.
+- **`unlimited`:** Use the lowercase literals `true` or `false`. Any other value is treated as an invalid format.
+- **`lead_time`:** Use ISO 8601 duration format (for example, `PT24H` for 24 hours or `PT0S` for immediate availability). Omitting this field or using an invalid format causes the row to fail.
+
+CSV example:
+
+```csv
+item_id,account_name,container_id,quantity,unlimited,lead_time
+SKU-12345,WH-01,dgbransonmissouri,150,false,PT24H
+```
+
 ## Confirm the batch
 
 After uploading the CSV to S3, call the [Confirm batch inventory](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch/-batchId-/commit) endpoint, passing the `batchId` as a path parameter. This request confirms that the upload is complete and triggers the asynchronous processing of the batch.
