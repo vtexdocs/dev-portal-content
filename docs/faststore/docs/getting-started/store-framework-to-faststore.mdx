@@ -46,7 +46,8 @@ The following table summarizes the trade-offs:
 
 | Criteria | Same account | QA subaccount |
 |---|---|---|
-| Setup complexity | Lower: no new account, no content resync before go-live. | Higher: new account, plus CMS content and app settings must be recreated/copied into the main account later. |
+| Setup complexity | Lower: no new account, no content resync before go-live. | Higher: new account, plus CMS content and app settings must be recreated into the main account later. |
+| CMS content | Registered once, directly in the production account. | Registered in the subaccount for testing, then must be recreated a second time in the production account before go-live, since subaccount CMS content isn't copied over automatically. |
 | Master Data | Shared with production (use with care for tests that write data). | Fully isolated, safe for destructive tests. |
 | Order simulation | Because the checkout is unchanged, placing real orders is usually unnecessary for storefront validation. Any test orders you do place run in your production account context and are subject to the same billing rules as real orders. | Lets you place test orders in a fully isolated context when you need to exercise order flows without touching production. Choose the QA subaccount path mainly when you need an isolated environment for destructive tests or order-flow testing that shouldn't run against your production account. |
 | Intelligent Search | Reuses existing account-level configuration; no rebuild needed. | Requires reconfiguring merchandising rules, synonyms, and relevance settings, since a subaccount is a separate environment. |
@@ -59,6 +60,13 @@ Before starting the migration, create the FastStore project that will receive yo
 
 Once you complete the track, you'll have a GitHub repository connected to your account that you can deploy through FastStore WebOps. Decide at this point whether you'll follow the same-account or subaccount path described above. If you go with the same-account approach, you connect the repository directly to your main account and avoid any later repository re-pointing or content resync work.
 
+FastStore go-live also requires `vtex.edition-store@5.x` to be installed in your account's master workspace. Check your current edition early on, since `vtex.edition-store` versions map to different `vtex.checkout` majors:
+
+- `vtex.edition-store` 3.x uses `vtex.checkout` 0.x, which routes to the default Checkout V6.
+- `vtex.edition-store` 5.x uses `vtex.checkout` 1.x (IO cart) or 2.x (full IO checkout).
+
+> ⚠️ If you're currently on `vtex.edition-store` 3.x, upgrading to 5.x also upgrades `vtex.checkout`, which can change which checkout experience shoppers land on, even if you haven't customized checkout. Plan to test this upgrade in a QA or test environment well before requesting the traffic split, so you have time to adjust any checkout UI customizations if needed.
+
 ## Instructions
 
 ### Step 1 - Handling VTEX IO apps
@@ -67,11 +75,13 @@ Backend VTEX IO apps and integrations are fully compatible with FastStore. If yo
 
 Front-end VTEX IO components, on the other hand, aren't compatible with FastStore at all and must be recreated regardless of which account you use. Start by checking the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) catalog to see if a native component already covers your needs. If it doesn't, see [Developing and overriding UI components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-overview) to learn how to override native components or build entirely new sections to recreate your custom front-end elements.
 
+> ℹ️ If your storefront has checkout UI customizations, also check the `vtex.edition-store` and `vtex.checkout` requirements covered in [Before you begin](#before-you-begin), since upgrading the edition later can affect your checkout interface.
+
 ### Step 2 - Recreating the storefront content
 
 Recreate all necessary pages, components, and content in the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) for your FastStore project.
 
-> ℹ️ Content migration between Store Framework and FastStore CMS isn't supported, so plan enough time to recreate and review the content manually.
+> ℹ️ Content migration between Store Framework and FastStore Headless CMS (Legacy) or CMS isn't supported, so plan enough time to recreate and review the content manually.
 
 If you migrate within the same account, you register this content once, directly in the account that will go live. If you use a QA subaccount instead, plan for an additional step to recreate this content into the main account before cutover.
 
@@ -89,11 +99,21 @@ Use whichever production-like domain you set up in [Choosing your test environme
 
 If your checkout remains unchanged, focus this validation on the storefront-to-checkout transition and related authenticated flows. Placing real orders is usually unnecessary unless you specifically need to validate order creation behavior in the chosen environment.
 
+Because both storefronts share the same production domain during the traffic split, login redirects and links into the checkout panel generally continue to work without extra configuration, even if you have login or checkout UI customizations. Still, verify these flows in your test environment before requesting the split, since Store Framework allows extensive customization that can behave differently case by case.
+
+> ℹ️ The [Integrating the VTEX Order Placed and My Account](https://developers.vtex.com/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account) step from the FastStore go-live checklist is meant for storefronts built from scratch that still need their theme styled to match the account's branding. If your Store Framework storefront already has My Account and Checkout styled the way you want, you can skip that step.
+
+Because the header and footer are shared between Store Framework and FastStore during the traffic split, verify that all header and footer links and experiences work consistently on both storefront versions before requesting the split.
+
+> ℹ️ If your store has specific URLs that only exist on one of the storefronts, you may need to set up redirects to keep navigation consistent for shoppers on either version. For instructions, see [Managing URL redirects](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects).
+
 Confirm that all front-end third-party tools you reimplemented in the [previous step](#step-3---reimplementing-front-end-third-party-tools) are firing correctly on the FastStore domain.
 
 > ℹ️ If you use a QA subaccount, it has its own Master Data, so the data used in tests is isolated from your live store. If you're testing on a second domain in the main account, be mindful that Master Data is shared with production.
 
 ### Step 5 - Adding the production domain to WebOps
+
+> ℹ️ [DNS configuration on VTEX](https://help.vtex.com/en/docs/tutorials/how-dns-configuration-works-on-vtex) points to the platform in general and isn't exclusive to Store Framework or FastStore. Since your production domain already works on Store Framework, you don't need to configure a new domain or subdomain for the traffic split. You only need to register your existing production domain in FastStore WebOps, as described below, and share this context with [VTEX Support](https://help.vtex.com/en/support) when you request the traffic split in [Step 6](#step-6---requesting-the-traffic-split), so they can confirm everything is set up as expected.
 
 Before requesting the traffic split, add your production domain to FastStore WebOps by following these steps:
 
@@ -108,7 +128,7 @@ Before requesting the traffic split, add your production domain to FastStore Web
 
 ### Step 6 - Requesting the traffic split
 
-> ⚠️ Before requesting the traffic split, make sure your FastStore storefront is fully ready to go live. If you developed on a second domain in the same account, confirm the production domain was added to WebOps in [Step 5](#step-5---adding-the-production-domain-to-webops). If you developed on a QA subaccount, make sure you've also recreated the CMS content and reinstalled the necessary apps in your main account, since none of that is carried over automatically.
+> ⚠️ Before requesting the traffic split, make sure your FastStore storefront is fully ready to go live. If you developed on a second domain in the same account, confirm the production domain was added to WebOps in [Step 5](#step-5---adding-the-production-domain-to-webops). If you developed on a QA subaccount, make sure you've recreated the CMS content and reinstalled the necessary apps in your main account, since none of that is carried over automatically. Also confirm your account is running `vtex.edition-store` 5.x, as described in [Before you begin](#before-you-begin), since VTEX Support requires this edition to enable the traffic split.
 
 Once you've completed the previous steps, open a ticket with [VTEX Support](https://help.vtex.com/en/support) at least five days before your planned migration date to request traffic splitting between Store Framework and FastStore.
 
