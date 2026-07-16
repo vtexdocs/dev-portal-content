@@ -19,8 +19,10 @@ In the following table, see the role of each storefront during the migration:
 
 | Stage | Store Framework (current storefront) | FastStore (new storefront) |
 | ----- | ------------------------------------ | ----------------------------- |
+| Test environment | Not affected. | Decide whether to test in a second domain in the same account or on a QA subaccount. For more details, see [Choose your test environment](#choose-your-test-environment). |
+| Edition App | Check the Edition App version and upgrade to `vtex.edition-store@5.x` if it's an older major. | FastStore requires `vtex.edition-store@5.x`. For more details, see [Check your Edition App version](#check-your-edition-app-version). |
 | Development | Remains live. No changes are made. | Develop the FastStore project and connect the repository to [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard). For more details, see the [Before you begin](#before-you-begin) section. |
-| Test environment | Not affected. | Decide whether to test in a second domain in the same account or on a QA subaccount. For more details, see [Choosing your test environment](#choosing-your-test-environment). |
+| Testing domain | Keeps serving the live domain. | Stand up a production-like test domain: Configure the subdomain in your DNS provider, add it to VTEX Account Settings, then to FastStore WebOps (or reuse the QA subaccount domain). For more details, see [Set your testing domain](#set-your-testing-domain). |
 | VTEX IO apps | Map installed apps. | Backend apps are fully compatible: nothing to do if migrating in the same account, or reinstall them if using a QA subaccount. Front-end components aren't compatible and must be recreated. For more details, see [Step 1 - Handling VTEX IO apps](#step-1-handling-vtex-io-apps). |
 | Content | [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview) content remains as is. | Recreate storefront content by using [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For more details, see [Step 2 - Recreating the storefront content](#step-2-recreating-the-storefront-content). |
 | Front-end third-party tools | Remain as is. | Reimplement front-end tools (analytics, consent, heatmaps, etc.) and validate them during end-to-end testing. For more details, see [Step 3 - Reimplementing front-end third-party tools](#step-3-reimplementing-front-end-third-party-tools). |
@@ -32,17 +34,6 @@ In the following table, see the role of each storefront during the migration:
 ## Before you begin
 
 <Steps>
-
-### Check your Edition App version
-
-Confirm the Edition App of your Store Framework account is set to `vtex.edition-store@5.x` in your master workspace:
-
-1. Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {accountName}` command. Replace `{accountName}` with the name of your account.
-2. Check the installed Edition App version by running `vtex edition get`.
-
-If the result is `vtex.edition-store@5.x`, no action is needed. If it's an older major, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request the installation of `vtex.edition-store@5.x`, which FastStore requires.
-
-> ❗ Changing the Edition App is an account-wide operation that applies to the master workspace and may update the major versions of some base apps. Since your Store Framework storefront is live, align the timing and post-change validation with VTEX Support when you request the upgrade. For more details about the version differences and the impact on dependencies, see [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
 
 ### Choose your test environment
 
@@ -64,6 +55,22 @@ The following table summarizes the trade-offs:
 | Intelligent Search | Reuses existing account-level configuration; no rebuild needed. | Requires reconfiguring merchandising rules, synonyms, and relevance settings, since a subaccount is a separate environment. |
 | Best fit | Teams that want the fastest path to production and prefer to keep development, content, and account-level configuration in the same VTEX account. | Teams that need stronger isolation for testing, already operate with separate accounts or subaccounts, or want a reusable QA environment after go-live. |
 | Post-go-live use | None by default (the temporary test domain is retired once the production domain takes over). | Reusable afterward as a standing QA environment. |
+
+### Check your Edition App version
+
+Confirm the Edition App of your Store Framework account is set to `vtex.edition-store@5.x` in your master workspace:
+
+1. Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {accountName}` command. Replace `{accountName}` with the name of your account.
+2. Check the installed Edition App version by running `vtex edition get`.
+
+If the result is `vtex.edition-store@5.x`, no action is needed. If it's an older major, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request the installation of `vtex.edition-store@5.x` in your test account, which FastStore requires.
+
+> ⚠️ Changing the Edition App is an account-wide operation that applies to the master workspace and may update the major versions of some base apps. Since your Store Framework storefront is live, align the timing and post-change validation with VTEX Support when you request the upgrade. For more details on version differences and their impact on dependencies, see [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
+
+According to the test environment you chose in the [previous step](#choose-your-test-environment), 
+
+- **Same account:** Set `vtex.edition-store@5.x` in your production Store Framework account's master workspace. Both your live Store Framework and the new FastStore share the same account edition, so you can't upgrade one domain and leave the other behind. The temporary second domain doesn't isolate the edition.
+- **QA subaccount:** Set `vtex.edition-store@5.x` in your QA subaccount's master workspace first to develop and test FastStore in isolation. Because the cutover happens on your production account, upgrade that account to `5.x` before requesting the traffic split.
 
 ### Create your FastStore Project
 
