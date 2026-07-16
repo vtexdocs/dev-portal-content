@@ -35,14 +35,14 @@ In the following table, see the role of each storefront during the migration:
 
 ### Check your Edition App version
 
-Confirm the [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) of your Store Framework account is set to `vtex.edition-store@5.x` in your master workspace:
+Confirm the Edition App of your Store Framework account is set to `vtex.edition-store@5.x` in your master workspace:
 
 1. Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {accountName}` command. Replace `{accountName}` with the name of your account.
 2. Check the installed Edition App version by running `vtex edition get`.
 
 If the result is `vtex.edition-store@5.x`, no action is needed. If it's an older major, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request the installation of `vtex.edition-store@5.x`, which FastStore requires.
 
-> ❗ Changing the Edition App is an account-wide operation that applies to the master workspace and may update the major versions of some base apps. Since your Store Framework storefront is live, align the timing and post-change validation with VTEX Support when you request the upgrade.
+> ❗ Changing the Edition App is an account-wide operation that applies to the master workspace and may update the major versions of some base apps. Since your Store Framework storefront is live, align the timing and post-change validation with VTEX Support when you request the upgrade. For more details about the version differences and the impact on dependencies, see [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
 
 ### Choose your test environment
 
@@ -111,7 +111,6 @@ Keep the following in mind when performing end-to-end tests:
 
 - **Checkout:** If your checkout remains unchanged, focus this validation on the storefront-to-checkout transition and related authenticated flows. Placing real orders is usually unnecessary unless you specifically need to validate order creation behavior in the chosen environment.
 - **Customized flows:** Because both storefronts share the same production domain during the traffic split, login redirects and links into the checkout panel generally continue to work without extra configuration, even if you have login or checkout UI customizations. Still, verify these flows in your test environment before requesting the split, since Store Framework allows extensive customization that can behave differently on a case-by-case basis.
-- **Order Placed and My Account:** The [Integrating the VTEX Order Placed and My Account](https://developers.vtex.com/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account) step from the FastStore go-live checklist is meant for storefronts built from scratch that still need their theme styled to match the account's branding. If your Store Framework storefront already has My Account and Checkout styled the way you want, you can skip that step.
 - **Header and footer:** Because the header and footer are shared between Store Framework and FastStore during the traffic split, verify that all header and footer links and experiences work consistently on both storefront versions before requesting the split. If your store has URLs unique to a single storefront, you may need to set up redirects to keep navigation consistent for shoppers across both versions. For instructions, see [Managing URL redirects](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects).
 - **Third-party tools:** Confirm that all front-end third-party tools you reimplemented in the [previous step](#step-3-reimplementing-front-end-third-party-tools) are firing correctly on the FastStore domain.
 - **Master Data:** If you use a QA subaccount, it has its own Master Data, so the data used in tests is isolated from your live store. If you're testing on a second domain in the main account, be mindful that Master Data is shared with production.
@@ -139,7 +138,7 @@ Once you've completed the previous steps, open a ticket with [VTEX Support](http
 
 When the split is enabled, we recommend starting with 0% of traffic routed to FastStore and 100% kept on Store Framework for final validations on the production domain. After confirming that routing, analytics, and critical flows are working as expected, gradually increase the FastStore share. This gradual rollout allows you to slowly redirect users from the old store to the new one, run A/B tests with your analytics or testing tools, monitor performance, and ensure stability before going fully live on FastStore.
 
-After the split is active, you can force each storefront version for QA and debugging by adding the ab_test query parameter to the URL:
+After the split is active, you can force each storefront version for QA and debugging by adding the `ab_test` query parameter to the URL:
 
 - To force the Store Framework version: `https://www.store.com/?ab_test=v1`
 - To force the FastStore version: `https://www.store.com/?ab_test=v2`
@@ -148,6 +147,6 @@ To keep the shopper experience consistent, VTEX persists the assigned storefront
 
 You can also read the `VtexStoreVersion` cookie in tools such as Google Tag Manager (GTM) or Google Analytics (GA) to compare metrics across the two storefront variants.
 
-ℹ️ By default, the `VtexStoreVersion` cookie is set as `HttpOnly`, which prevents client-side tools like GTM from reading it. If you need to read it in the browser for analytics, request this adjustment when you open the traffic split ticket.
+> ℹ️ By default, the `VtexStoreVersion` cookie is set as `HttpOnly`, which prevents client-side tools like GTM from reading it. If you need to read it in the browser for analytics, request this adjustment when you open the traffic split ticket.
 
 Once you've validated the FastStore storefront, make it your live store and retire the Store Framework storefront.
