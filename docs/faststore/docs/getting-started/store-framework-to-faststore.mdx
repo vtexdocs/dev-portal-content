@@ -54,18 +54,29 @@ Keep the following in mind when working with a QA subaccount:
 
 ## Instructions
 
-### Step 1 - Check your Edition App version
+### Step 1 - Check your Edition App versions
 
-> ℹ️ This step checks your **production** Store Framework account so you can plan the upgrade, but the actual production upgrade happens later, at cutover, in [Step 8 - Recreating the FastStore project in your production account](#step-8-recreating-the-faststore-project-in-your-production-account). Your **QA subaccount**, where you develop FastStore, must also run `vtex.edition-store@5.x` (see [Set up your test environment](#set-up-your-test-environment)).
+FastStore requires `vtex.edition-store@5.x`, so validate which [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) version is installed in both your production account and QA subaccount. This verification process guarantees that your environments meet the necessary requirements for proper FastStore operation.
 
-Confirm the Edition App of your Store Framework account is set to `vtex.edition-store@5.x` in the master workspace:
+#### Check the QA subaccount
 
-1. Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {accountName}` command. Replace `{accountName}` with the name of your account.
+Check that the Edition App of your QA subaccount is set to `vtex.edition-store@5.x` in the master workspace:
+
+1. Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {qaAccountName}` command. Replace `{qaAccountName}` with the subaccount name.
 2. Check the installed Edition App version by running `vtex edition get`.
 
-If the result is `vtex.edition-store@5.x`, no action is needed. If it's an older major, you'll need to upgrade your Store Framework account to `5.x` before recreating the FastStore project in your production environment.
+If the result is `vtex.edition-store@5.x`, continue to [step 2](#step-2-create-your-faststore-project).
 
-To upgrade the Edition App of your account, open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting the installation of `vtex.edition-store@5.x` in your production's master workspace.
+If the result shows an older major version, open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting the installation of `vtex.edition-store@5.x` in the QA subaccount's master workspace. Wait for the upgrade to be completed before creating the FastStore project.
+
+#### Check the production account
+
+Check that the Edition App of your production account, where your Store Framework storefront lives, is set to `vtex.edition-store@5.x` in the master workspace:
+
+1. Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {accountName}` command. Replace `{accountName}` with the account name.
+2. Check the installed Edition App version by running `vtex edition get`.
+
+If the result is `vtex.edition-store@5.x`, no upgrade is required. If it shows an older major version, plan the upgrade as part of [Step 8 - Recreating the FastStore project in your production account](#step-8-recreating-the-faststore-project-in-your-production-account). Don't connect the FastStore project to the production account until the upgrade is complete.
 
 > ⚠️ Changing the Edition App is an account-wide operation that applies to the master workspace and may update the major versions of some base apps. Since your Store Framework storefront is live, align the timing and post-change validation with VTEX Support when you request the upgrade. For more details on version differences and their impact on dependencies, see [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
 
