@@ -15,7 +15,7 @@ This guide explains how to retrieve and interpret that data.
 
 ## Retrieving session data
 
-To retrieve the current B2B session data for a logged-in buyer, send a `GET` [Get Session](https://developers.vtex.com/docs/api-reference/session-manager-api#get-/api/sessions?endpoint=get-/api/sessions) request including the `shopperPolicies` namespace:
+To retrieve the current B2B session data for a logged-in buyer, send a [`Get Session`](https://developers.vtex.com/docs/api-reference/session-manager-api#get-/api/sessions?endpoint=get-/api/sessions) request including the `shopperPolicies` namespace:
 
 ```html
 GET /api/sessions?items=shopperPolicies
@@ -82,7 +82,7 @@ The `shopperPolicies` namespace is divided into sub-namespaces, each representin
 
 ## Session data expiration and refresh
 
-The `shopperPolicies` data is a snapshot taken at session creation time. If the buyer's contract changes after the session is created (for example, a new address is added or a credit limit is updated) the session data will not reflect those changes until a new session is created or the session is explicitly refreshed.
+The `shopperPolicies` data is a snapshot taken at session creation time. If the buyer's contract changes after the session is created (for example, a new address is added or a credit limit is updated), the session data will not reflect those changes until a new session is created or the session is explicitly refreshed.
 
 By default, the `vtex_session` cookie has a fixed **5-day expiration**.
 
