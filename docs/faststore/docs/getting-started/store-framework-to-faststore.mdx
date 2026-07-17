@@ -22,7 +22,7 @@ In the following table, see the role of each storefront during the migration:
 | Test environment | Not affected. | Set up an isolated QA subaccount for development and testing. For more details, see [Set up your test environment](#set-up-your-test-environment). |
 | Edition App | Check the Edition App version and upgrade to `vtex.edition-store@5.x` if it's an older major. | FastStore requires `vtex.edition-store@5.x`. For more details, see [Step 1 - Check your Edition App version](#step-1-check-your-edition-app-version). |
 | Development | Remains live. No changes are made. | Develop the FastStore project and connect the repository to [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard). For more details, see [Step 2 - Create your FastStore project](#step-2-create-your-faststore-project). |
-| Testing domain | Keeps serving the live domain. | Stand up a production-like test domain on the QA subaccount: Configure the subdomain in your DNS provider, add it to VTEX Account Settings, then to FastStore WebOps. For more details, see [Step 3 - Set your testing domain](#step-3-set-your-testing-domain). |
+| Testing domain | Keeps serving the live domain. | Stand up a production-like test domain on the QA subaccount: Configure the subdomain in your DNS provider, add it to VTEX Account Settings, then to FastStore WebOps. For more details, see [Step 3 - Set up your testing domain](#step-3-set-up-your-testing-domain). |
 | VTEX IO apps | Map installed apps. | Backend apps are fully compatible: reinstall them in the QA subaccount. Front-end components aren't compatible and must be recreated. For more details, see [Step 4 - Handling VTEX IO apps](#step-4-handling-vtex-io-apps). |
 | Content | [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview) content remains as is. | Recreate storefront content by using [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For more details, see [Step 5 - Recreating the storefront content](#step-5-recreating-the-storefront-content). |
 | Front-end third-party tools | Remain as is. | Reimplement front-end tools (analytics, consent, heatmaps, etc.) and validate them during end-to-end testing. For more details, see [Step 6 - Reimplementing front-end third-party tools](#step-6-reimplementing-front-end-third-party-tools). |
@@ -80,6 +80,8 @@ For the complete instructions, see [Configuring external DNS](https://developers
 
 ### Step 4 - Handling VTEX IO apps
 
+Start by taking an inventory of the VTEX IO apps installed in your Store Framework account, so you know which ones to reinstall or recreate in your QA subaccount.
+
 Backend VTEX IO apps and integrations are fully compatible with FastStore. Reinstall the same backend apps in your QA subaccount before you start development.
 
 Front-end VTEX IO components, on the other hand, aren't compatible with FastStore at all and must be recreated. Start by checking the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) catalog to see if a native component already covers your needs. If it doesn't, see [Developing and overriding UI components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-overview) to learn how to override native components or build entirely new sections to recreate your custom front-end elements.
@@ -102,7 +104,7 @@ Keep these tools maintained throughout your FastStore development, and validate 
 
 Validate the full shopper journey on FastStore: Catalog browsing, adding products to the cart, cart and checkout, login, and My Account. Most of this can be reviewed from preview URLs, but a handful of flows, such as login-gated features or the minicart-to-checkout transition, require a live production domain running FastStore.
 
-Use the production-like domain you set up on your QA subaccount in [Set up your test environment](#set-up-your-test-environment) to run these tests.
+Use the production-like domain you set up on your QA subaccount in [Step 3 - Set up your testing domain](#step-3-set-up-your-testing-domain) to run these tests.
 
 Keep the following in mind when performing end-to-end tests:
 
