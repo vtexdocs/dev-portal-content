@@ -2,14 +2,14 @@
 title: "Migrating from Store Framework to FastStore"
 slug: "store-framework-to-faststore"
 excerpt: "Learn how to migrate your storefront from Store Framework to FastStore, validate it end-to-end, and gradually move traffic before going live."
-createdAt: "2026-07-16T00:00:00.000Z"
+createdAt: "2026-07-17T00:00:00.000Z"
 ---
 
 In this guide, you'll learn how to migrate your storefront from [Store Framework](https://developers.vtex.com/docs/guides/store-framework) to [FastStore](https://developers.vtex.com/docs/guides/faststore) using a [subaccount](https://help.vtex.com/docs/tutorials/managing-a-multistore).
 
 By the end, you'll know how to prepare both storefronts to run in parallel, validate the new storefront end-to-end and with real traffic, and complete the cutover.
 
-> ℹ️ You'll develop and validate FastStore before go-live in an isolated QA subaccount. To learn more about this test environment and what it entails, see [Set up your test environment](#set-up-your-test-environment) in the Before you begin section. The final cutover always happens on your production account's domain.
+> ℹ️ You'll develop and validate FastStore before going live in an isolated QA subaccount. To learn more about this test environment and what it entails, see [Set up your test environment](#set-up-your-test-environment) in the Before you begin section. The final cutover always happens on your production account's domain.
 
 ## Migration overview
 
@@ -50,7 +50,7 @@ Keep the following in mind when working with a QA subaccount:
 - **VTEX IO apps:** Backend apps and integrations must be reinstalled in the subaccount before you start development.
 - **Edition App:** FastStore requires `vtex.edition-store@5.x`. Confirm your QA subaccount is set to this major before you start development, using the same procedure described in [Step 1 - Check your Edition App version](#step-1-check-your-edition-app-version). If it's an older major, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to upgrade the subaccount.
 
-> ℹ️ Because development and content live in the subaccount while the cutover happens on your production account, plan for a step to connect the FastStore project and recreate the CMS content in the production account before requesting the traffic split. Backend apps and Intelligent Search are already in place there from your live storefront.
+> ℹ️ Because development and content live in the subaccount while the cutover happens on your production account, plan for a step to connect the FastStore project and recreate the CMS content in the production account before requesting the traffic split. Backend apps and Intelligent Search are already in place there, as they are in your live storefront.
 
 ## Instructions
 
