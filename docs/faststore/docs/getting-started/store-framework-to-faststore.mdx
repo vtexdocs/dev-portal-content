@@ -26,7 +26,7 @@ In the following table, see the role of each storefront during the migration:
 | VTEX IO apps | Map installed apps. | Backend apps are fully compatible: reinstall them in the QA subaccount. Front-end components aren't compatible and must be recreated. For more details, see [Step 4 - Handling VTEX IO apps](#step-4-handling-vtex-io-apps). |
 | Content | [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview) content remains as is. | Recreate storefront content by using [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For more details, see [Step 5 - Recreating the storefront content](#step-5-recreating-the-storefront-content). |
 | Front-end third-party tools | Remain as is. | Reimplement front-end tools (analytics, consent, heatmaps, etc.) and validate them during end-to-end testing. For more details, see [Step 6 - Reimplementing front-end third-party tools](#step-6-reimplementing-front-end-third-party-tools). |
-| End-to-end validation | Keeps serving live traffic. | Validate the full shopper journey before requesting traffic. For more details, see [Step 7 - Validating end-to-end flows](#step-7-validating-end-to-end-flows). |
+| End-to-end validation | Keeps serving live traffic. | Validate the full shopper journey before requesting the traffic split. For more details, see [Step 7 - Validating end-to-end flows](#step-7-validating-end-to-end-flows). |
 | Production account setup | Remains live. Backend apps and Intelligent Search are already in place. | Recreate the FastStore-specific setup in your production account. For more details, see [Step 8 - Setting up FastStore in your production account](#step-8-setting-up-faststore-in-your-production-account). |
 | Production domain | Keeps serving the live production domain. | Add the production domain to FastStore WebOps so FastStore is ready for cutover, but it still doesn't receive live traffic. For more details, see [Step 9 - Adding the production domain to WebOps](#step-9-adding-the-production-domain-to-webops). |
 | Traffic splitting | Shares live traffic with FastStore during the transition. | Gradually receives traffic, starting at 0%, until validated. For more details, see [Step 10 - Requesting the traffic split](#step-10-requesting-the-traffic-split). |
@@ -56,7 +56,7 @@ Keep the following in mind when working with a QA subaccount:
 
 ### Step 1 - Check your Edition App versions
 
-FastStore requires `vtex.edition-store@5.x`, so validate which [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) version is installed in both your production account and QA subaccount. This verification process guarantees that your environments meet the necessary requirements for proper FastStore operation.
+FastStore requires `vtex.edition-store@5.x`, so validate which [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) version is installed in both your production account and QA subaccount. This ensures that both environments meet FastStore's Edition App requirement.
 
 #### Check the QA subaccount
 
@@ -104,7 +104,7 @@ When contacting VTEX Support, specify that the requests apply to the QA subaccou
 
 Start by taking an inventory of the VTEX IO apps installed in your Store Framework account, so you know which ones to reinstall or recreate in your QA subaccount.
 
-Backend VTEX IO apps and integrations are fully compatible with FastStore. Reinstall the same backend apps in your QA subaccount before you start development.
+Backend VTEX IO apps and integrations can generally be reused with FastStore. Reinstall the required apps in the QA subaccount and validate their account-specific settings and integrations before you start development.
 
 Front-end VTEX IO components, on the other hand, aren't compatible with FastStore at all and must be recreated. Start by checking the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) catalog to see if a native component already covers your needs. If it doesn't, see [Developing and overriding UI components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-overview) to learn how to override native components or build entirely new sections to recreate your custom front-end elements.
 
@@ -171,7 +171,7 @@ Before requesting the traffic split, add your production domain to FastStore Web
 
 ### Step 10 - Requesting the traffic split
 
-> ⚠️ Before requesting the traffic split, make sure your FastStore storefront is fully ready to go live. Confirm you recreated the FastStore project in your production account in [step 8](#step-8-setting-up-faststore-in-your-production-account) and that the production domain was added to WebOps in [step 9](#step-9-adding-the-production-domain-to-webops).
+> ⚠️ Before requesting the traffic split, make sure your FastStore storefront is fully ready to go live. Confirm that you completed the FastStore production setup in [step 8](#step-8-setting-up-faststore-in-your-production-account) and added the production domain to WebOps in [step 9](#step-9-adding-the-production-domain-to-webops).
 
 Once you've completed the previous steps, open a ticket with [VTEX Support](https://help.vtex.com/en/support) at least five days before your planned migration date to request traffic splitting between Store Framework and FastStore.
 
