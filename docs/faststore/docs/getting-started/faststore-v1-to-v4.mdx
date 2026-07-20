@@ -12,68 +12,6 @@ For stores still running in FastStore v1, migrate directly to FastStore v4 in a 
 
 The migration process involves running two VTEX accounts in parallel. Your main account (FastStore v1) remains live while you create a subaccount (FastStore v4) for development, validation, and gradual rollout.
 
-The following diagram illustrates the process:
-
-```mermaid
-flowchart TB
-    classDef v1Task fill:#ffebee,stroke:#ef9a9a,color:#000
-    classDef v4Task fill:#e3f2fd,stroke:#90caf9,color:#000
-    classDef stepLabel fill:#fff3e0,stroke:#ffb74d,stroke-width:2px,font-weight:bold,color:#000
-    classDef final fill:#c8e6c9,stroke:#81c784,stroke-width:2px,font-weight:bold,color:#000
-
-    S1(["Step 1: Account Setup"]):::stepLabel
-    S1_1["v1: Keep live store running"]:::v1Task
-    S1_4["v4: Create subaccount with separate domain & CMS"]:::v4Task
-
-    S2(["Step 2: Initialization"]):::stepLabel
-    S2_1["v1: No changes made to live store"]:::v1Task
-    S2_4["v4: Start v4 project and repository via WebOps"]:::v4Task
-
-    S3(["Step 3: Dependencies"]):::stepLabel
-    S3_1["v1: Map IO apps in use & document settings"]:::v1Task
-    S3_4["v4: Review/install IO apps & update pointers"]:::v4Task
-
-    S4(["Step 4: Content"]):::stepLabel
-    S4_1["v1: Headless CMS (Legacy) stays as is"]:::v1Task
-    S4_4["v4: Recreate pages and content in v4 CMS"]:::v4Task
-
-    S5(["Step 5: Search"]):::stepLabel
-    S5_1["v1: Search settings stay as is"]:::v1Task
-    S5_4["v4: Recreate Intelligent Search configuration"]:::v4Task
-
-    S6(["Step 6: Data Unification"]):::stepLabel
-    S6_1["v1: Provide data for Master Data"]:::v1Task
-    S6_4["v4: Open ticket & unify Master Data into v4"]:::v4Task
-
-    S7(["Step 7: Testing"]):::stepLabel
-    S7_1["v1: Participate in traffic split & monitoring"]:::v1Task
-    S7_4["v4: Split traffic to v4 & measure key metrics"]:::v4Task
-
-    Done((Go Live on v4)):::final
-
-    %% Flow logic
-    S1 --> S1_1 & S1_4
-    S1_1 & S1_4 --> S2
-    
-    S2 --> S2_1 & S2_4
-    S2_1 & S2_4 --> S3
-    
-    S3 --> S3_1 & S3_4
-    S3_1 & S3_4 --> S4
-    
-    S4 --> S4_1 & S4_4
-    S4_1 & S4_4 --> S5
-    
-    S5 --> S5_1 & S5_4
-    S5_1 & S5_4 --> S6
-    
-    S6 --> S6_1 & S6_4
-    S6_1 & S6_4 --> S7
-    
-    S7 --> S7_1 & S7_4
-    S7_1 & S7_4 --> Done
-```
-
 | **Step** | **FastStore v1 (main account)** | **FastStore v4 (subaccount)** |
 | --- | --- | --- |
 | **1. Subaccount setup** | Live store remains on v1. No changes made here. | Create a new subaccount with its own domain and CMS. |
