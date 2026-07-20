@@ -2,13 +2,13 @@
 title: "CMS Portal (Legacy)"
 slug: "cms-portal-legacy"
 hidden: false
-createdAt: "2026-07-09T18:31:00.000Z"
+createdAt: "2026-07-20T18:31:00.000Z"
 excerpt: "VTEX's first storefront technology for building ecommerce websites with HTML, CSS, and JavaScript."
 ---
 
-CMS Portal (Legacy) is VTEX's original storefront technology for building ecommerce websites using HTML, CSS, and JavaScript. Code management is done exclusively through the VTEX Admin, using the [Layout](https://help.vtex.com/docs/tracks/legacy-cms-portal) feature to create and manage templates, folders, and files.
+> ⚠️ CMS Portal (Legacy) is no longer available for newly created VTEX stores. If your store currently uses this technology, we strongly recommend [migrating to Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io).
 
-> ⚠️ CMS Portal (Legacy) is no longer available to newly created VTEX stores. If your store currently uses this technology, we strongly recommend [migrating to Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io).
+CMS Portal (Legacy) is VTEX's original storefront technology for building ecommerce websites using HTML, CSS, and JavaScript. Code management is done exclusively through the VTEX Admin, using the [Layout](https://help.vtex.com/docs/tracks/legacy-cms-portal) feature to create and manage templates, folders, and files.
 
 CMS Portal (Legacy) relies on the following characteristics:
 
