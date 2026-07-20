@@ -102,9 +102,9 @@ Open a ticket with [VTEX Support](https://help.vtex.com/en/support) and request 
     }
     ```
 
-### Step 2 - Syncing your FastStore project with Headless CMS
+### Step 2 - Syncing your FastStore project with Headless CMS (legacy)
 
-Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore project with [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+Run the `faststore cms-sync` command to sync the `cms` folder of your FastStore project with [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
 The expected response is the message `CMS synced successfully...`. The native regionalization components and sections will be automatically updated. You can check them in the VTEX Admin:
 
@@ -302,7 +302,7 @@ export default RegionPopover
 ```
 </details>
 
-Follow the steps below to add the `RegionPopover` section to Headless CMS.
+Follow the steps below to add the `RegionPopover` section to Headless CMS (legacy).
 
 1. In the VTEX Admin, go to **Storefront > Headless CMS > Global Sections**.
 2. In the Sections tab, click `+` to open a modal with a list of section options.
@@ -311,7 +311,7 @@ Follow the steps below to add the `RegionPopover` section to Headless CMS.
 5. Click `Save` to save your changes.
 6. Click `Publish` to open a dropdown list with the options `Add to Release` (to schedule the update) and `Publish now` (to publish immediately).
 
-Learn more in [Adding sections to Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)
+Learn more in [Adding sections to Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections#step-3-adding-sections-to-the-headless-cms)
 
 ### Step 4 - (Optional) Defining a default postal code
 
@@ -344,7 +344,7 @@ To set a default postal code for your store, follow the steps below:
 
 Delivery Promise [filters](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#filter-options) help shoppers narrow products by delivery/pickup availability for their location, while [badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-components) visually indicate shipping/pickup availability for the shopper's location when Delivery Promise data exists.
 
-By default, filters and badges are active once Delivery Promise is enabled and implemented in the store. However, you can deactivate them (Global Filter by Pickup Point, [Delivery Option](https://newhelp.vtex.com/docs/tutorials/delivery-options-beta), and [Badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#badges) and edit their labels in the Headless CMS. To do this, follow these steps.
+By default, filters and badges are active once Delivery Promise is enabled and implemented in the store. However, you can deactivate them (Global Filter by Pickup Point, [Delivery Option](https://newhelp.vtex.com/docs/tutorials/delivery-options-beta), and [Badges](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#badges) and edit their labels in the Headless CMS (legacy). To do this, follow these steps.
 
 >ℹ️ For more details on filters and badges, see the [Working with Delivery Promise components](https://developers.vtex.com/docs/guides/faststore/delivery-promise-components) guide.
 
@@ -357,7 +357,7 @@ By default, filters and badges are active once Delivery Promise is enabled and i
 
 ## Enabling the Availability (In-stock) filter
 
-By default, the [Availability](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#plp-or-search-page-filters) filter is disabled in the Headless CMS. To enable this feature, follow these steps:
+By default, the [Availability](https://developers.vtex.com/docs/guides/faststore/delivery-promise-overview#plp-or-search-page-filters) filter is disabled in the Headless CMS (legacy). To enable this feature, follow these steps:
 
 ### Setting up `hideUnavailableItems`
 
@@ -379,9 +379,9 @@ By default, the [Availability](https://developers.vtex.com/docs/guides/faststore
 
 4. Create a new branch and open a pull request to deploy the change made in the `discovery.config.js` file to production.
 
-### Enabling the filter in the Headless CMS
+### Enabling the filter in the Headless CMS (legacy)
 
-After changing the `hideUnavailableItems` value to `false`, you can enable this filter in the Headless CMS.
+After changing the `hideUnavailableItems` value to `false`, you can enable this filter in the Headless CMS (legacy).
 
 1. Access VTEX Admin and go to **Storefront > Headless CMS**.
 2. Click the **Global Sections** Content Type.
