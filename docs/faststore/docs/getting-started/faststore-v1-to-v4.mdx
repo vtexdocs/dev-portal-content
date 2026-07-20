@@ -15,7 +15,7 @@ The migration process involves running two VTEX accounts in parallel. Your main 
 The following diagram illustrates the process:
 
 ```mermaid
-flowchart TB
+flowchart LR
     classDef v1Task fill:#ffebee,stroke:#ef9a9a,color:#000
     classDef v4Task fill:#e3f2fd,stroke:#90caf9,color:#000
     classDef stepLabel fill:#fff3e0,stroke:#ffb74d,stroke-width:2px,font-weight:bold,color:#000
@@ -34,7 +34,7 @@ flowchart TB
     S3_4["v4: Review/install IO apps & update pointers"]:::v4Task
 
     S4(["Step 4: Content"]):::stepLabel
-    S4_1["v1: CMS stays as is"]:::v1Task
+    S4_1["v1: Headless CMS (Legacy) stays as is"]:::v1Task
     S4_4["v4: Recreate pages and content in v4 CMS"]:::v4Task
 
     S5(["Step 5: Search"]):::stepLabel
