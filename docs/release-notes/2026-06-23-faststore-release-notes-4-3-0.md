@@ -1,10 +1,10 @@
 ---
 title: "FastStore Release Notes — Version 4.3.0"
-slug: "2026-07-10-faststore-release-notes"
+slug: "2026-06-23-faststore-release-notes"
 type: improved
 excerpt: "FastStore version 4.3.0 focuses on storefront password protection, QuickOrder file upload through the Order Entry Service, GraphQL BFF error handling, and My Account reliability fixes."
-createdAt: "2026-07-10T00:00:00.000Z"
-updatedAt: "2026-07-10T00:00:00.000Z"
+createdAt: "2026-06-23T00:00:00.000Z"
+updatedAt: "2026-07-20T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
