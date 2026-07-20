@@ -23,11 +23,11 @@ In the following table, see the role of each storefront during the migration:
 | Edition App | Check the Edition App version and upgrade to `vtex.edition-store@5.x` if it's an older major. | FastStore requires `vtex.edition-store@5.x`. For more details, see [Step 2 - Checking your Edition App versions](#step-2-checking-your-edition-app-versions). |
 | Development | Remains live. No changes are made. | Develop the FastStore project and connect the repository to [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard). For more details, see [Step 3 - Creating your FastStore project](#step-3-creating-your-faststore-project). |
 | Testing domain | Keeps serving the live domain. | Stand up a production-like test domain on the QA subaccount: Configure the subdomain in your DNS provider, add it to VTEX Account Settings, then to FastStore WebOps. For more details, see [Step 4 - Setting up your testing domain](#step-4-setting-up-your-testing-domain). |
-| VTEX IO apps | Map installed apps. | Back-end apps are fully compatible: Reinstall them in the QA subaccount. Front-end components aren't compatible and must be recreated. For more details, see [Step 5 - Handling VTEX IO apps](#step-5-handling-vtex-io-apps). |
+| VTEX IO apps | Map installed apps. | Backend apps are fully compatible: Reinstall them in the QA subaccount. Frontend components aren't compatible and must be recreated. For more details, see [Step 5 - Handling VTEX IO apps](#step-5-handling-vtex-io-apps). |
 | Content | [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview) content remains unchanged. | Recreate storefront content by using [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For more details, see [Step 6 - Recreating the storefront content](#step-6-recreating-the-storefront-content). |
-| Front-end third-party tools | Remain as is. | Reimplement front-end tools (analytics, consent, heatmaps, etc.) and validate them during end-to-end testing. For more details, see [Step 7 - Reimplementing front-end third-party tools](#step-7-reimplementing-front-end-third-party-tools). |
+| Frontend third-party tools | Remain as is. | Reimplement frontend tools (analytics, consent, heatmaps, etc.) and validate them during end-to-end testing. For more details, see [Step 7 - Reimplementing frontend third-party tools](#step-7-reimplementing-frontend-third-party-tools). |
 | End-to-end validation | Keeps serving live traffic. | Validate the full shopper journey before requesting the traffic split. For more details, see [Step 8 - Validating end-to-end flows](#step-8-validating-end-to-end-flows). |
-| Production account setup | Remains live. Back-end apps and Intelligent Search are already in place. | Recreate the FastStore-specific setup in your production account. For more details, see [Step 9 - Setting up FastStore in your production account](#step-9-setting-up-faststore-in-your-production-account). |
+| Production account setup | Remains live. Backend apps and Intelligent Search are already in place. | Recreate the FastStore-specific setup in your production account. For more details, see [Step 9 - Setting up FastStore in your production account](#step-9-setting-up-faststore-in-your-production-account). |
 | Production domain | Keeps serving the live production domain. | Add the production domain to FastStore WebOps so FastStore is ready for cutover, but it still doesn't receive live traffic. For more details, see [Step 10 - Adding the production domain to WebOps](#step-10-adding-the-production-domain-to-webops). |
 | Traffic splitting | Shares live traffic with FastStore during the transition. | Gradually receives traffic, starting at 0%, until fully validated. For more details, see [Step 11 - Requesting the traffic split](#step-11-requesting-the-traffic-split). |
 | Completion | Retired after a successful cutover. | Becomes the live storefront. |
@@ -41,10 +41,10 @@ When working with a QA subaccount, keep the following considerations in mind:
 - **CMS content:** Content you register in the subaccount CMS is for testing only. It must be recreated a second time in the production account before go-live, since subaccount CMS content isn't copied over automatically. For more information, see [step 9](#step-9-setting-up-faststore-in-your-production-account).
 - **Master Data:** Fully isolated from production, so it's safe for destructive tests and for placing test orders in a separate context.
 - **Intelligent Search:** Requires reconfiguring merchandising rules, synonyms, and relevance settings, since a subaccount is a separate environment.
-- **VTEX IO apps:** Back-end apps and integrations must be reinstalled in the subaccount before you start development.
+- **VTEX IO apps:** Backend apps and integrations must be reinstalled in the subaccount before you start development.
 - **Edition App:** FastStore requires `vtex.edition-store@5.x`. Confirm your QA subaccount is set to this major before you start development, using the same procedure described in [Step 2 - Checking your Edition App versions](#step-2-checking-your-edition-app-versions). If it's an older major, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to upgrade the subaccount.
 
-> ℹ️ Since your development and content creation happen in the subaccount, but the final cutover occurs on your production account, you must plan a step to connect your FastStore project and recreate your CMS content in the production account before requesting the traffic split. For guidance, see [step 9](#step-9-setting-up-faststore-in-your-production-account). Back-end apps and Intelligent Search are already set up in the production account from your live storefront.
+> ℹ️ Since your development and content creation happen in the subaccount, but the final cutover occurs on your production account, you must plan a step to connect your FastStore project and recreate your CMS content in the production account before requesting the traffic split. For guidance, see [step 9](#step-9-setting-up-faststore-in-your-production-account). Backend apps and Intelligent Search are already set up in the production account from your live storefront.
 
 ## Instructions
 
@@ -112,9 +112,9 @@ When contacting VTEX Support, specify that the requests apply to the QA subaccou
 
 Start by inventorying the VTEX IO apps installed in your Store Framework account, so you know which ones to reinstall or recreate in your QA subaccount.
 
-Back-end VTEX IO apps and integrations can generally be reused with FastStore. Reinstall the required apps in the QA subaccount and validate their account-specific settings and integrations before you start development.
+Backend VTEX IO apps and integrations can generally be reused with FastStore. Reinstall the required apps in the QA subaccount and validate their account-specific settings and integrations before you start development.
 
-Front-end VTEX IO components, on the other hand, aren't compatible with FastStore at all and must be recreated. Start by checking the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) catalog to see if a native component already covers your needs. If it doesn't, see [Developing and overriding UI components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-overview) to learn how to override native components or build entirely new sections to recreate your custom front-end elements.
+Frontend VTEX IO components, on the other hand, aren't compatible with FastStore at all and must be recreated. Start by checking the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) catalog to see if a native component already covers your needs. If it doesn't, see [Developing and overriding UI components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-overview) to learn how to override native components or build entirely new sections to recreate your custom frontend elements.
 
 ### Step 6 - Recreating the storefront content
 
@@ -124,11 +124,11 @@ Recreate all necessary pages, components, and content in the [CMS for FastStore 
 
 Because you develop in a QA subaccount, plan for an additional step to recreate this content in the main account before cutover, since subaccount CMS content isn't carried over automatically.
 
-### Step 7 - Reimplementing front-end third-party tools
+### Step 7 - Reimplementing frontend third-party tools
 
-Because the FastStore front-end code is independent of the Store Framework, any third-party tools that run on the front-end must be reimplemented in your FastStore project to ensure they continue working after migration. This typically includes analytics, consent management, and behavior-tracking tools (for example, Google Tag Manager, Hotjar, and similar platforms).
+Because the FastStore frontend code is independent of the Store Framework, any third-party tools that run on the frontend must be reimplemented in your FastStore project to ensure they continue to work after the migration. This typically includes analytics, consent management, and behavior-tracking tools (for example, Google Tag Manager, Hotjar, and similar platforms).
 
-Keep these tools maintained throughout your FastStore development, and validate them as part of the end-to-end flows described in [step 8](#step-8-validating-end-to-end-flows). Before requesting the traffic split, confirm that all reimplemented tools fire correctly on the FastStore front-end, so you have a reliable baseline for comparison once traffic starts flowing to both variants.
+Keep these tools maintained throughout your FastStore development, and validate them as part of the end-to-end flows described in [step 8](#step-8-validating-end-to-end-flows). Before requesting the traffic split, confirm that all reimplemented tools fire correctly on the FastStore frontend, so you have a reliable baseline for comparison once traffic starts flowing to both variants.
 
 ### Step 8 - Validating end-to-end flows
 
@@ -141,12 +141,12 @@ Keep the following in mind when performing end-to-end tests:
 - **Checkout and order placement:** If your checkout remains unchanged, focus this validation on the storefront-to-checkout transition and related authenticated flows. Placing real orders is usually unnecessary unless you specifically need to validate order creation behavior in the chosen environment.
 - **Customized flows:** Because both storefronts share the same production domain during the traffic split, login redirects and links into the checkout panel generally continue to work without extra configuration, even if you have login or checkout UI customizations. Still, verify these flows in your test environment before requesting the split, since Store Framework allows extensive customization that can behave differently on a case-by-case basis.
 - **Checkout, Order Placed, and My Account navigation:** Checkout, Order Placed, and My Account use the existing VTEX IO theme and are shared by customers routed to either Store Framework or FastStore during the traffic split. Verify that their header, footer, and other navigation links point to URLs available in both storefronts. Prefer using the same URLs in both versions. When equivalent pages use different URLs, configure the redirect in the storefront where the original URL isn't available. See [Managing URL redirects](https://developers.vtex.com/docs/guides/vtex-io-documentation-managing-url-redirects) for Store Framework and [Managing URLs with redirects and rewrite paths](https://developers.vtex.com/docs/guides/faststore/routing-managing-urls-with-redirects-and-rewrite-paths) for FastStore.
-- **Third-party tools:** Confirm that all front-end third-party tools you reimplemented in the [previous step](#step-7-reimplementing-front-end-third-party-tools) are firing correctly on the FastStore domain.
+- **Third-party tools:** Confirm that all frontend third-party tools you reimplemented in the [previous step](#step-7-reimplementing-frontend-third-party-tools) are firing correctly on the FastStore domain.
 - **Master Data:** Your QA subaccount has its own Master Data, so the data used in tests is isolated from your live store.
 
 ### Step 9 - Setting up FastStore in your production account
 
-Your production account is your live Store Framework store, so its back-end VTEX IO apps, integrations, and Intelligent Search configuration are already in place and shared with FastStore. You don't need to reinstall or reconfigure them. What's missing on production is the FastStore-specific setup that lived only in your QA subaccount: the connected project (code) and the FastStore CMS content.
+Your production account is your live Store Framework store, so its backend VTEX IO apps, integrations, and Intelligent Search configuration are already in place and shared with FastStore. You don't need to reinstall or reconfigure them. What's missing on production is the FastStore-specific setup that lived only in your QA subaccount: the connected project (code) and the FastStore CMS content.
 
 The code isn't recreated. During FastStore onboarding, you can connect to the same project you developed for end-to-end tests. However, FastStore CMS content must be recreated, as it cannot be migrated automatically.
 
@@ -155,9 +155,9 @@ While your Store Framework storefront keeps serving live traffic, complete the f
 1. **Upgrade the Edition App:** Confirm your production account is set to `vtex.edition-store@5.x`, as described in [Step 2 - Checking your Edition App versions](#step-2-checking-your-edition-app-versions). Since this is an account-wide operation on a live storefront, align the timing and post-change validation with [VTEX Support](https://help.vtex.com/en/support).
 2. **Connect the FastStore project:** Connect the same GitHub repository you developed in [Step 3 - Creating your FastStore project](#step-3-creating-your-faststore-project) to your production account through FastStore WebOps, so it can be deployed on production.
 3. **Recreate CMS content:** Recreate all pages, components, and content in the [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) on your production account, as described in [Step 6 - Recreating the storefront content](#step-6-recreating-the-storefront-content). Subaccount CMS content isn't carried over automatically.
-4. **Verify front-end third-party tools:** Since the front-end third-party tools you reimplemented in [Step 7 - Reimplementing front-end third-party tools](#step-7-reimplementing-front-end-third-party-tools) are part of your FastStore code, they come with the connected repository. Confirm they're firing correctly on the production project.
+4. **Verify frontend third-party tools:** Since the frontend third-party tools you reimplemented in [Step 7 - Reimplementing frontend third-party tools](#step-7-reimplementing-frontend-third-party-tools) are part of your FastStore code, they come with the connected repository. Confirm they're firing correctly on the production project.
 
-> ℹ️ Your production account's back-end apps, integrations, and Intelligent Search are already in place from your live storefront, and you don't need to recreate these settings.
+> ℹ️ Your production account's backend apps, integrations, and Intelligent Search are already in place from your live storefront, and you don't need to recreate these settings.
 
 ### Step 10 - Adding the production domain to WebOps
 
