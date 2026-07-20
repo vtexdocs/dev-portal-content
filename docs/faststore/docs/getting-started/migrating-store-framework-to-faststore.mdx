@@ -7,7 +7,7 @@ createdAt: "2026-07-20T00:00:00.000Z"
 
 In this guide, you'll learn how to migrate your storefront from [Store Framework](https://developers.vtex.com/docs/guides/store-framework) to [FastStore](https://developers.vtex.com/docs/guides/faststore). By the end, you'll know how to prepare both storefronts to run in parallel, validate the new storefront with real traffic, and complete the cutover.
 
-> ℹ️ To validate flows that preview URLs cannot test, such as login-gated features or the transition from minicart to checkout, use a production-like FastStore domain before traffic splitting. This domain provides a production deployment of FastStore for end-to-end testing and remains separate from your customer-facing production domain. During development, use an isolated QA subaccount to obtain the test domain. The final cutover must always occur in the actual production account. Learn more in [Developing in an isolated QA subaccount](#developing-in-an-isolated-qa-subaccount).
+During this process, you'll use an isolated QA subaccount to obtain a production-like FastStore domain. This test domain allows you to validate flows that preview URLs cannot test, such as login-gated features or the transition from minicart to checkout, while remaining separate from your customer-facing production domain. Note that the final cutover must always occur in the actual production account. For more information, see the [Developing in an isolated QA subaccount](#developing-in-an-isolated-qa-subaccount) section.
 
 For guidance on each migration step and layers involved, see [Migration overview](#migration-overview).
 
