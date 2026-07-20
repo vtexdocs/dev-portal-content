@@ -70,10 +70,9 @@ FastStore requires `vtex.edition-store@5.x`, so validate which [Edition App](htt
 
 #### Check the QA subaccount
 
-Check that the Edition App of your QA subaccount is set to `vtex.edition-store@5.x` in the master workspace:
+Check that the Edition App of your QA subaccount is set to `vtex.edition-store@5.x` in the master workspace.
 
-1. Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {qaAccountName}` command. Replace `{qaAccountName}` with the subaccount name.
-2. Check the installed Edition App version by running `vtex edition get`.
+Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {qaAccountName}` command, where `{qaAccountName}` is the subaccount name. Then, run `vtex edition get` to check the installed Edition App version.
 
 If the result is `vtex.edition-store@5.x`, continue to [step 3](#step-3-creating-your-faststore-project).
 
@@ -83,8 +82,7 @@ If the result shows an older major version, open a ticket with [VTEX Support](ht
 
 Check that the Edition App of your production account, where your Store Framework storefront lives, is set to `vtex.edition-store@5.x` in the master workspace:
 
-1. Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {accountName}` command. Replace `{accountName}` with the account name.
-2. Check the installed Edition App version by running `vtex edition get`.
+Using the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), log in to your account by running the `vtex login {accountName}` command. Replace `{accountName}` with the account name. Then, run `vtex edition get` to check the installed Edition App version.
 
 If the result is `vtex.edition-store@5.x`, no upgrade is required. If it shows an older major version, plan the upgrade as part of [Step 9 - Setting up FastStore in your production account](#step-9-setting-up-faststore-in-your-production-account). Don't connect the FastStore project to the production account until the upgrade is complete.
 
