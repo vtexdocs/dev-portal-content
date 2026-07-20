@@ -1,7 +1,7 @@
 ---
 title: "Migrating from Store Framework to FastStore"
 slug: "migrating-store-framework-to-faststore"
-excerpt: "Migrate your storefront from Store Framework to FastStore, validate it end-to-end, and gradually move traffic before going live."
+excerpt: "Migrate your storefront from Store Framework to FastStore, validate it end to end, and gradually move traffic before going live."
 createdAt: "2026-07-20T00:00:00.000Z"
 ---
 
@@ -32,7 +32,7 @@ In the following table, see the role of each storefront during the migration:
 | Traffic splitting | Shares live traffic with FastStore during the transition. | Gradually receives traffic, starting at 0%, until fully validated. For more details, see [Step 11 - Requesting the traffic split](#step-11-requesting-the-traffic-split). |
 | Completion | Retired after a successful cutover. | Becomes the live storefront. |
 
-## Developing in a isolated QA subaccount
+## Developing in an isolated QA subaccount
 
 To get a test domain during development, use an isolated QA subaccount (for example, `faststoreqa.yourstore.com`). Doing so isolates your tests behind a separate Master Data instance, making it safe for destructive testing and order flows that shouldn't impact your production environment. Plus, you can continue using this subaccount as a permanent QA environment after the migration.
 
@@ -58,11 +58,11 @@ To create the subaccount, follow these steps:
 2. Go to **Account Settings > Account**.
 3. Click the **Stores** tab.
 4. Click the `+ New Store` button.
-5. Fill in the basic store information: Store name, Trading name, Locale, and Sales channel.
-6. Fill in the `Hosts` field with your store's domain.
+5. In the **Basic information** section, fill in the fields: **Store name**, **Trade name**, **Locale**, and **Sales channel**.
+6. In the **Hosts** section, fill in the field with your store's domain, then click `Add`.
 7. Click `Create`.
 
-Lear more in [Managing a multistore](https://help.vtex.com/docs/tutorials/managing-a-multistore).
+Learn more in [Managing a multistore](https://help.vtex.com/docs/tutorials/managing-a-multistore).
 
 ### Step 2 - Check your Edition App versions
 
