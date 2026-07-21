@@ -220,7 +220,7 @@ Learn more about fold blocks in the guide [Lazy loading components](https://deve
 
 If a menu block doesn't have a submenu, configure it to use `menu-item` blocks as props instead of children.
 
-In the example below, the main `menu items` (Apparel & Accessories, Home & Decor, and More) can't be modified in their implementation. They must remain children, since they have a trigger that opens a `submenu`.
+In the example below, the main `menu-items` (Apparel & Accessories, Home & Decor, and More) can't be modified in their implementation. They must remain children, since they have a trigger that opens a `submenu`.
 
 ![menu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-3.png)
 
