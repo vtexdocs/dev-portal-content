@@ -146,7 +146,7 @@ This action allows the browser to load and execute scripts asynchronously. This 
 
 This action helps the store stay responsive by adjusting to the capabilities of the user's device and network speed. This means rendering tasks can be prioritized and interrupted based on user interactions or current network conditions.
 
-For example, if a user begins typing in a search bar while other content is still loading, concurrent mode can pause loading to process your input, ensuring the search bar remains responsive. Once the input is handled, rendering can resume without perceived delays.
+For example, if a user begins typing in a search bar while other content is still loading, concurrent mode can pause loading to process the input, ensuring the search bar remains responsive. Once the input is handled, rendering can resume without perceived delays.
 
 #### Enable fetching filters partially
 
