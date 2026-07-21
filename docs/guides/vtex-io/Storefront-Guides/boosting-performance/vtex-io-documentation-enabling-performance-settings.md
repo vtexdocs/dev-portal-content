@@ -8,7 +8,7 @@ updatedAt: "2026-07-21T17:20:42.530Z"
 
 For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough to convert leads if the user experience falls short. Store website performance is essential to the user experience, directly impacting sales conversion rate, user session time, and other metrics. Every millisecond counts and affects both consumer decision-making and search engine rankings.
 
-This guide outlines actions you can implement to optimize store performance. These [optimization options](#optimization-options) can improve SEO scores and page load times. You can measure these improvements using tools like [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/1205784?hl=en). Learn more in the **Monitoring tools** section in the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
+This guide outlines actions you can implement to optimize store performance. These [optimization options](#optimization-options) can improve SEO scores and page load times. You can measure these improvements using tools like [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/10089681). Learn more in the **Monitoring tools** section in the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
 
 This guide is divided into the following sections:
 
