@@ -3,12 +3,12 @@ title: "Enabling performance settings"
 slug: "vtex-io-documentation-enabling-performance-settings"
 hidden: false
 createdAt: "2024-11-18T15:26:22.439Z"
-updatedAt: "2025-11-17T19:07:23.731Z"
+updatedAt: "2026-07-21T17:20:42.530Z"
 ---
 
-For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough to convert leads if the user experience falls short. Store website performance is essential to the user experience, directly impacting sales conversion rate, user session time, and other metrics. Every millisecond counts and affects the consumer decision-making process and website ranking in search engine results.
+For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough to convert leads if the user experience falls short. Store website performance is essential to the user experience, directly impacting sales conversion rate, user session time, and other metrics. Every millisecond counts and affects both consumer decision-making and search engine rankings.
 
-This guide outlines actions you can implement to optimize store performance. These [optimization options](#optimization-options) can improve SEO score and page loading time. You can measure these improvements using tools like [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/1205784?hl=en). Learn more in the **Monitoring tools** section in the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
+This guide outlines actions you can implement to optimize store performance. These [optimization options](#optimization-options) can improve SEO scores and page load times. You can measure these improvements using tools like [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/1205784?hl=en). Learn more in the **Monitoring tools** section in the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
 
 This guide is divided into the following sections:
 
@@ -35,19 +35,24 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 5. Follow the instructions in the [Store settings](#store-settings) section to activate the desired features, then save the changes.
 6. Access your store in the workspace you're using and check whether the performance improvements were applied.
 
-  >ℹ️ Changes may take some time to be reflected.
+    >ℹ️ Changes may take some time to be reflected.
 
 ### Step 3 - Testing and analyzing performance
 
-1. Review and test all main pages, ensuring the changes didn't cause any side effects, such as style inconsistencies or undesired behaviors.
-2. Access [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights).
-3. Using the following URL pattern: `https://{account}.myvtex.com/?workspace={productionWorkspace}`, check store performance in the production workspace where you're currently working.
+Using [Lighthouse](https://developers.vtex.com/docs/guides/storefront-getting-started-with-lighthouse) in [DevTools](https://developer.chrome.com/docs/devtools/overview), review and test all main pages to ensure the changes haven't caused any side effects, such as style inconsistencies or unintended behavior.
 
-  >⚠️ Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show the store performance score in the specified workspace. To analyze performance in a workspace, **you must use the `?workspace={productionWorkspace}` query string** as shown in Step 3.3.
+1. In your browser, access your store's website using the following URL pattern: `https://{account}.myvtex.com/?workspace={productionWorkspace}`.
+
+   >⚠️ Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show the store performance score in the specified workspace. To analyze performance in a workspace, **you must use the `?workspace={productionWorkspace}` query string**.
+
+2. Open **DevTools** and go to the **Lighthouse** tab.
+3. Choose the device: **Mobile** or **Desktop**.
+4. Set the categories to include in the performance report: **Performance**, **Accessibility**, **Best Practices**, **SEO**, and **Agentic Browsing**.
+5. Click `Analyze page load` to generate the Lighthouse performance report.
 
 ### Step 4 - Making your changes publicly available
 
-If you're satisfied with the results, run `vtex promote` to promote your workspace and benefit from a faster store. Before promoting your workspace to master, measure the performance improvements by comparing the performance scores in the production and master workspaces.
+If you're satisfied with the results, run `vtex promote` to promote your workspace and benefit from a faster store. Before promoting your workspace to master, measure performance improvements by comparing performance scores between the production and master workspaces.
 
 ## Optimization options
 
@@ -73,17 +78,17 @@ Learn more in the guide [Enabling OrderForm optimization](https://developers.vte
 
 This action adds the default service worker provided by VTEX.
 
-The VTEX IO platform provides a native service worker to every store using Store Framework. If you need to use a third-party service with its service worker, you may face conflicts. You can deactivate the native VTEX service worker to resolve this.
+The VTEX IO platform provides a native service worker to every store using Store Framework. If you need to use a third-party service that uses a service worker, you may encounter conflicts. You can deactivate the native VTEX service worker to resolve this.
 
 Learn more in the guide [Deactivating the VTEX IO native service worker](https://developers.vtex.com/docs/guides/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker/).
 
 #### Critical CSS optimization
 
-This action enables CSS optimizations on your pages to boost performance and improve Lighthouse scores. It lets the browser identify and load essential CSS needed for critical, above-the-fold content first, while loading the remaining CSS code asynchronously.
+This action enables CSS optimizations on your pages to boost performance and improve Lighthouse scores. It lets the browser identify and load the essential CSS for critical, above-the-fold content first, while loading the remaining CSS asynchronously.
 
 ![critical](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-1.png)
 
-However, by default, the browser initiates the rendering of a web page after it finishes loading, parsing, and executing all related CSS files. Consequently, the more extensive the CSS code, the longer it takes to render the critical part of the page.
+However, by default, the browser renders a web page after it has finished loading, parsing, and executing all related CSS files. Consequently, the more extensive the CSS code, the longer it takes to render the page's critical parts.
 
 This optimization can be enabled for the following pages:
 
@@ -96,7 +101,7 @@ This optimization can be enabled for the following pages:
 
 #### Enable CSS concatenation
 
-This action concatenates a page's CSS in a single file for faster download, reducing the HTTP requests required to load each CSS file separately.
+This action concatenates a page's CSS into a single file for faster download, reducing the number of HTTP requests required to load each CSS file separately.
 
 ![concatenation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-2.png)
 
@@ -110,28 +115,28 @@ When enabled, the page content is proactively downloaded in the background when 
 
 This action enables lazy loading of page metadata.
 
-Before displaying a web page, the VTEX IO service app that renders server-side (Render Runtime) interprets the page metadata script. See the example below:
+Before displaying a web page, the VTEX IO service app (Render Runtime) that renders server-side interprets the page metadata script. See the example below:
 
 ```ts
 <script>
         __RUNTIME__ = {"account":"vtexstore","amp":false,"bindingChanged":false,"binding":{"id":"aacb04t3-a8fa-4bab-b5bd-2d654d20dcd8","canonicalBaseAddress":"vtexstore.vtex.com"},"culture":{"availableLocales":[],"country":"USA","currency":"USD","language":"en","locale":"en-US","customCurrencyDecimalDigits":null,"customCurrencySymbol":"$"},"production":true,"query":{},"settings":{....
 ```
 
-This script contains significant web page data and can be long, demanding significant browser processing. When you enable lazy runtime, the script is broken into smaller scripts to avoid compromising the total blocking time of the store website. This helps avoid lengthy tasks, leading to a faster store experience.
+This script contains significant web page data and can be long, demanding significant browser processing. When you enable lazy runtime, the script is split into smaller scripts to avoid increasing the store website's total blocking time. This helps avoid lengthy tasks, leading to a faster store experience.
 
 >⚠️ Some apps might not work as expected when this option is enabled. Test with caution before enabling it on a production workspace. If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
 
 #### Enable lazy rendering of submenu items
 
-By enabling this action, menus containing submenus automatically apply the `experimentalOptimizeRendering` prop. This configuration prevents the entire set of `submenus` from loading unnecessarily, as `submenus` only load when the user interacts with the parent menu where the prop is set.
+Enabling this action automatically applies the `experimentalOptimizeRendering` prop to menus containing submenus. This configuration prevents the entire set of `submenus` from loading unnecessarily, as `submenus` only load when the user interacts with the parent menu where the prop is set.
 
->⚠️ Google won't be able to track the hidden submenu items for SEO, as their content only loads with user interaction. Make sure your SEO strategy is covered by the store sitemap or the first meaningfully painted content.
+>⚠️ Google won't be able to track the hidden submenu items for SEO, since their content loads only with user interaction. Make sure your SEO strategy is covered by the store's sitemap or the first meaningful painted content.
 
 #### Enable lazy rendering of search results and facets
 
 This action enables lazy rendering for the scrollable facet box and search results pages. Content within the user's viewport loads first, and content outside the viewport loads only as the user scrolls.
 
->⚠️ Enabling this option might cause unexpected behaviors, such as gaps while scrolling. If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
+>⚠️ Enabling this option might cause unexpected behavior, such as gaps when scrolling. If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
 
 #### Enable loading scripts asynchronously
 
@@ -147,19 +152,19 @@ For example, if a user begins typing in a search bar while other content is stil
 
 When you enable this action, search results pages display a maximum of 10 facets per filter.
 
-The search query won't automatically retrieve any additional facets or show them to the user. Instead, a `Show more` button allows users to load the remaining facets.
+The search query won't automatically retrieve or show additional facets to the user. Instead, a `Show more` button allows users to load the remaining facets.
 
 >ℹ️ A facet is a filter value. For example, `Color` is a filter, and `Blue` is a facet of that filter.
 
 #### Enable executing all GraphQL queries on the product page
 
-This action allows the product page to fetch additional data necessary to render components positioned above-the-fold. This helps ensure that product details, images, and any other components in the main view display together without delays or missing information.
+This action allows the product page to fetch additional data necessary to render components positioned above the fold. This helps ensure that product details, images, and any other components in the main view display together without delays or missing information.
 
 >⚠️ Enable this only if your product page truly needs it; otherwise, it may lead to deoptimization.
 
 #### Enable lazy rendering of the page footer
 
-This action renders the page footer and loads its assets lazily, which helps improve performance when first rendering the page.
+This action renders the page footer and loads its assets lazily, which helps improve performance during initial page rendering.
 
 #### Enable lazy loading of assets below the fold
 
@@ -169,7 +174,7 @@ This action enables lazy loading of the JavaScript files of the components below
 
 This option adds a `#{Number}` to the HTML title. This helps both users and search engines know exactly which page they're viewing and avoids duplicate titles, which can impact SEO.
 
->⚠️ It's best suited for stores using traditional pagination. After enabling, review your page titles to make sure they remain clear and consistent.
+>⚠️ It's best suited for stores that use traditional pagination. After enabling, review your page titles to make sure they remain clear and consistent.
 
 #### Canonical URL without URL parameters
 
@@ -193,7 +198,7 @@ This action enables stores in the Retail Media Network (RMN) pilot to place adve
 
 #### Enable default browser navigation
 
-Enabling this action means each store page loads separately with full reloads instead of rendering through the VTEX IO service app on the server (Render Runtime). This default browser navigation can be useful for troubleshooting or when experiencing issues with client-side routing.
+Enabling this action means each store page loads separately, with full page reloads, rather than being rendered through the VTEX IO service app on the server (Render Runtime). This default browser navigation can be useful for troubleshooting or when experiencing issues with client-side routing.
 
 >⚠️ Full-page reloads are generally slower and consume more bandwidth than the standard VTEX navigation. Use this only when necessary for testing or for compatibility, and consider whether the change impacts user experience or conversion rates.
 
@@ -215,7 +220,7 @@ Learn more about fold blocks in the guide [Lazy loading components](https://deve
 
 If a menu block doesn't have a submenu, configure it to use `menu-item` blocks as props instead of children.
 
-In the example below, the main `menu items` (Apparel & Accessories, Home & Decor, and More) can't be modified in their implementation. They must remain as children since they have a trigger to open a `submenu`.
+In the example below, the main `menu items` (Apparel & Accessories, Home & Decor, and More) can't be modified in their implementation. They must remain children, since they have a trigger that opens a `submenu`.
 
 ![menu](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-3.png)
 
