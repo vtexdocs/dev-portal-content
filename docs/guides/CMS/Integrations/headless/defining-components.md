@@ -224,9 +224,11 @@ The example below defines a `CallToAction` section, a page block you add through
 }
 ```
 
-**What you get in the Admin:** a section you can add, reorder, and configure on any Content Type that exposes `$ALLOW_ALL_COMPONENTS` (or a restricted `anyOf` list that includes `CallToAction`).
+Adding this component to a Content Type affects two places:
 
-**What your storefront does:** map `componentKey: "CallToAction"` to a UI component and render `title` and `link` from the published JSON.
+- In the Admin: a section you can add, reorder, and configure on any Content Type that exposes `$ALLOW_ALL_COMPONENTS` (or a restricted `anyOf` list that includes `CallToAction`).
+
+- In the storefront: map `componentKey: "CallToAction"` to a UI component and render `title` and `link` from the published JSON.
 
 ## Composing components with `$ref`
 
@@ -340,9 +342,11 @@ The example below uses `oneOf` on a single `card` field. You pick exactly one va
 }
 ```
 
-**What you get in the Admin:** a single `Card` field with a type picker. You choose "Image Card" or "Text Card" and fill in its fields. Only one variant is active at a time.
+Using `oneOf` on a single field changes behavior in two places:
 
-**What your storefront does:** read the published `card` object and branch on which properties are present (`image` vs. `text`) to decide which renderer to use.
+- In the Admin: a single `Card` field with a type picker. You choose "Image Card" or "Text Card" and fill in its fields. Only one variant is active at a time.
+
+- In the storefront:  read the published `card` object and branch on which properties are present (`image` vs. `text`) to decide which renderer to use.
 
 ### Array field with multiple items
 
@@ -485,10 +489,10 @@ Each item in `sections` includes a `componentKey` your storefront uses to select
 
 Your storefront owns the mapping from schema to UI:
 
-1. **Fetch the entry** from the Data Plane API by Content Type name or slug.
-2. **Loop through `sections`** (or fixed component fields such as `seo`).
-3. **Match `componentKey`** to a component in your framework (React, Vue, Svelte, or server templates).
-4. **Pass field values** as props or template context.
+1. Fetch the entry from the Data Plane API by Content Type name or slug.
+2. Loop through `sections` (or fixed component fields such as `seo`).
+3. Match `componentKey` to a component in your framework (React, Vue, Svelte, or server templates).
+4. Pass field values as props or template context.
 
 Unlike FastStore integrations, headless projects do not ship with a predefined component library. You define both the schemas in `cms/components/` and the renderers in your codebase. Keep `$componentKey` values stable: changing them breaks existing published content and storefront mappings.
 
