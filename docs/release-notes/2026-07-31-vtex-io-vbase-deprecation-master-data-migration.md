@@ -9,17 +9,17 @@ tags:
     - VTEX IO
 ---
 
-VBase, the database solution available to VTEX IO apps, will be gradually deprecated, consolidating [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) as the VTEX platform's single database solution. Apps that currently use VBase must migrate to Master Data before the shutdown dates below.
+VBase, the database solution available to VTEX IO apps, will be gradually deprecated, consolidating [Master Data](https://developers.vtex.com/docs/guides/master-data) as the single database solution offered by the VTEX platform. Apps that currently use VBase must migrate to Master Data before the shutdown dates below.
 
 ## What has changed?
 
-VBase will no longer be available for app development and running apps. The deprecation will happen in the following phases:
+VBase will no longer be available for app development and running apps. The VBase phase-out uses the same terminology of [builder version statuses](https://developers.vtex.com/docs/guides/vtex-io-documentation-builder-version-statuses) and will happen in the following phases:
 
 | Date | Phase |
 | :- | :- |
-| September 1st, 2026 | [Publishing](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) and [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) new apps that use VBase are blocked. |
-| March 1st, 2027 | Publishing and linking new [major versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps that use VBase are blocked. |
-| September 1st, 2027 | VBase shutdown. Requests from apps to VBase no longer work. |
+| February 1st, 2027 | **Deprecated:** [Publishing](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) and [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) new apps and new [major versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps that use VBase are blocked. |
+| July 1st, 2027 | **Decommissioned:** Publishing and linking new [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) (minor and patch) of existing apps that use VBase are blocked. |
+| October 1st, 2027 | **Non-functional:** Apps using VBase no longer work on the platform. |
 
 ## Why did we make this change?
 
@@ -31,11 +31,11 @@ If you develop or maintain apps that use VBase, migrate them to Master Data befo
 
 ### New apps
 
-Use Master Data as the storage solution from the start. Starting September 1st, 2026, new apps using VBase will be blocked.
+Use Master Data as the storage solution from the start. Starting **February 1st, 2027**, new apps using VBase will be blocked.
 
 ### Existing apps
 
-Replace VBase usage with Master Data and publish the updated version before March 1st, 2027, as publishing new major versions of apps that use VBase will be blocked. Publishing new minor and patch versions will still be allowed after March 1st, 2027.
+Replace VBase usage with Master Data and publish the updated version before the established timelines: **February 1st, 2027**, for new major releases, and **July 1st, 2027**, for minor and patch updates. Following these dates, any attempts to publish versions of apps still utilizing VBase will be blocked.
 
 For exceptional cases requiring extended VBase support, [open a ticket](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) with [VTEX support](https://support.vtex.com/hc/en-us) to discuss your specific needs.
 
@@ -50,4 +50,4 @@ Don't use VBase in new projects or integrations. Use Master Data instead. The fo
 | [External marketplace](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-template) | [mkp-app-template](https://github.com/vtex/mkp-app-template) |
 | [Search resolver](https://developers.vtex.com/docs/guides/external-search-provider-recipe) | [search-resolver](https://github.com/vtex-apps/search-resolver) |
 
-For more information about modeling and storing data with Master Data, see [Master Data introduction](https://developers.vtex.com/docs/guides/master-data-introduction).
+For more information about modeling and storing data with Master Data, see [Master Data introduction](https://developers.vtex.com/docs/guides/master-data).
