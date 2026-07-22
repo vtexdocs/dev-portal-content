@@ -1,10 +1,10 @@
 ---
 title: "Installing Activity Flow in React Native apps"
 slug: "installing-activity-flow-in-react-native-apps"
-excerpt: "Learn how to install the Activity Flow SDK in React Native apps for Android and iOS to track navigation, order events, deep links, ads, and customer interactions."
+excerpt: "Install the Activity Flow SDK in React Native apps for Android and iOS to track navigation, order events, deep links, ads, and customer interactions."
 hidden: false
 createdAt: "2025-12-18T16:30:39.842Z"
-updatedAt: "2026-07-07T00:00:00.000Z"
+updatedAt: "2026-07-22T00:00:00.000Z"
 seeAlso:
   - "/docs/guides/activity-flow"
 ---
@@ -49,7 +49,7 @@ This process installs the Activity Flow script in your app by adding a new depen
 
 ## Instructions
 
-### Step 1 - Import the Activity Flow plugin
+### Step 1 - Importing the Activity Flow plugin
 
 In your app's main file (for example, `App.js` or `App.tsx`), import the plugin as follows:
 
@@ -57,7 +57,7 @@ In your app's main file (for example, `App.js` or `App.tsx`), import the plugin 
 import { initActivityFlow } from '@vtex/activity-flow';
 ```
 
-### Step 2 - Create an Activity Flow instance
+### Step 2 - Creating an Activity Flow instance
 
 Set the account name to create an instance of the main package class:
 
