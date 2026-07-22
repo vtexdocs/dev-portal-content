@@ -1,13 +1,15 @@
 ---
-title: "Migrating from Store Framework to FastStore"
+title: "Migrating your storefront from Store Framework to FastStore"
 slug: "migrating-store-framework-to-faststore"
 excerpt: "Migrate your storefront from Store Framework to FastStore, validate it end to end, and gradually move traffic before going live."
-createdAt: "2026-07-20T00:00:00.000Z"
+createdAt: "2026-07-22T00:00:00.000Z"
 ---
 
 In this guide, you'll learn how to migrate your storefront from [Store Framework](https://developers.vtex.com/docs/guides/store-framework) to [FastStore](https://developers.vtex.com/docs/guides/faststore). By the end, you'll know how to prepare both storefronts to run in parallel, validate the new storefront with real traffic, and complete the cutover.
 
 During this process, you'll use an isolated QA subaccount to create a production-like FastStore domain. This test domain allows you to validate flows that preview URLs cannot test, such as login-gated features or the transition from minicart to checkout, while remaining separate from your customer-facing production domain. Note that the final cutover must always occur in the actual production account. For more information, see the [Developing in an isolated QA subaccount](#developing-in-an-isolated-qa-subaccount) section.
+
+> ⚠️ You'll build in the QA subaccount first, then recreate part of that work in your production account before request traffic splitting. More information in [Step 9 - Setting up FastStore in your production account](#step-9-setting-up-faststore-in-your-production-account).
 
 For guidance on each migration step and layers involved, see [Migration overview](#migration-overview).
 
@@ -26,7 +28,7 @@ In the following table, see the role of each storefront during the migration:
 | VTEX IO apps | Map installed apps. | Backend apps are fully compatible: Reinstall them in the QA subaccount. Frontend components aren't compatible and must be recreated. For more details, see [Step 5 - Handling VTEX IO apps](#step-5-handling-vtex-io-apps). |
 | Content | [Site Editor](https://help.vtex.com/docs/tutorials/site-editor-overview) content remains unchanged. | Recreate storefront content by using [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). For more details, see [Step 6 - Recreating the storefront content](#step-6-recreating-the-storefront-content). |
 | Frontend third-party tools | Remain as is. | Reimplement frontend tools (analytics, consent, heatmaps, etc.) and validate them during end-to-end testing. For more details, see [Step 7 - Reimplementing frontend third-party tools](#step-7-reimplementing-frontend-third-party-tools). |
-| End-to-end validation | Keeps serving live traffic. | Validate the full shopper journey before requesting the traffic split. For more details, see [Step 8 - Validating end-to-end flows](#step-8-validating-end-to-end-flows). |
+| End-to-end validation | Keeps serving live traffic. | Validate the full customer journey before requesting the traffic split. For more details, see [Step 8 - Validating end-to-end flows](#step-8-validating-end-to-end-flows). |
 | Production account setup | Remains live. Backend apps and Intelligent Search are already in place. | Recreate the FastStore-specific setup in your production account. For more details, see [Step 9 - Setting up FastStore in your production account](#step-9-setting-up-faststore-in-your-production-account). |
 | Production domain | Keeps serving the live production domain. | Add the production domain to FastStore WebOps so FastStore is ready for cutover, but it still doesn't receive live traffic. For more details, see [Step 10 - Adding the production domain to WebOps](#step-10-adding-the-production-domain-to-webops). |
 | Traffic splitting | Shares live traffic with FastStore during the transition. | Gradually receives traffic, starting at 0%, until fully validated. For more details, see [Step 11 - Requesting the traffic split](#step-11-requesting-the-traffic-split). |
@@ -132,7 +134,7 @@ Keep these tools maintained throughout your FastStore development, and validate 
 
 ### Step 8 - Validating end-to-end flows
 
-Validate the full shopper journey on FastStore: Catalog browsing, adding products to the cart, cart and checkout, login, and My Account. Most of this can be reviewed from preview URLs, but a handful of flows, such as login-gated features or the minicart-to-checkout transition, require FastStore to run on a production-like domain.
+Validate the full customer journey on FastStore: Catalog browsing, adding products to the cart, cart and checkout, login, and My Account. Most of this can be reviewed from preview URLs, but a handful of flows, such as login-gated features or the minicart-to-checkout transition, require FastStore to run on a production-like domain.
 
 Use the production-like domain you set up on your QA subaccount in [Step 4 - Setting up your testing domain](#step-4-setting-up-your-testing-domain) to run these tests.
 
@@ -178,19 +180,21 @@ Before requesting the traffic split, add your production domain to FastStore Web
 
 > ⚠️ Before requesting the traffic split, make sure your FastStore storefront is fully ready to go live. Confirm that you completed the FastStore production setup in [step 9](#step-9-setting-up-faststore-in-your-production-account) and added the production domain to WebOps in [step 10](#step-10-adding-the-production-domain-to-webops).
 
-Once you've completed the previous steps, open a ticket with [VTEX Support](https://help.vtex.com/en/support) at least five days before your planned migration date to request traffic splitting between Store Framework and FastStore.
+Once you've completed the previous steps, open a ticket with [VTEX Support](https://help.vtex.com/en/support) at least five days before your planned migration date to request traffic splitting between Store Framework and FastStore. If you need client-side access to the `VtexStoreVersion` cookie for analytics, include that request in the same ticket. For details, see [Managing storefront versions during the split](#managing-storefront-versions-during-the-split).
 
 When the split is enabled, we recommend starting with 0% of traffic routed to FastStore and 100% kept on Store Framework for final validations on the production domain. After confirming that routing, analytics, and critical flows are working as expected, gradually increase the FastStore share. This gradual rollout allows you to slowly redirect users from the old store to the new one, run A/B tests with your analytics or testing tools, monitor performance, and ensure stability before going fully live on FastStore.
 
-After the split is active, you can force each storefront version for QA and debugging by adding the `ab_test` query parameter to the URL:
-
-- To force the Store Framework version: `https://www.store.com/?ab_test=v1`
-- To force the FastStore version: `https://www.store.com/?ab_test=v2`
-
-To keep the customer experience consistent, VTEX persists the assigned storefront version in the `VtexStoreVersion` cookie, so the same shopper stays on the same variant rather than being re-randomized between the two versions on subsequent requests.
-
-You can also read the `VtexStoreVersion` cookie in tools such as Google Tag Manager (GTM) or Google Analytics (GA) to compare metrics across the two storefront variants.
-
-> ℹ️ By default, the `VtexStoreVersion` cookie is set as `HttpOnly`, which prevents client-side tools like GTM from reading it. If you need to read it in the browser for analytics, request this adjustment when you open the traffic split ticket.
-
 Once you've validated the FastStore storefront, make it your live store and retire the Store Framework storefront.
+
+#### Managing storefront versions during the split
+
+During the traffic split, each customer is assigned either the Store Framework or the FastStore version. You can force a version for QA and debugging, and the platform stores the assigned version so the same customer stays on the same variant and so you can compare analytics across both storefronts.
+
+To force a version, add the `ab_test` query parameter to the URL:
+
+- **Store Framework:** `https://www.store.com/?ab_test=v1`
+- **FastStore:** `https://www.store.com/?ab_test=v2`
+
+VTEX stores the assigned version in the `VtexStoreVersion` cookie. Use that cookie in tools such as Google Tag Manager (GTM) or Google Analytics (GA) to segment metrics by storefront variant.
+
+By default, the cookie is set as `HttpOnly`, which prevents client-side tools like GTM from reading it. If you need browser access for analytics, request this adjustment when you open the traffic split ticket.
