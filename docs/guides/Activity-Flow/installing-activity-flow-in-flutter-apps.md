@@ -1,10 +1,10 @@
 ---
 title: "Installing Activity Flow in Flutter apps"
 slug: "installing-activity-flow-in-flutter-apps"
-excerpt: "Learn how to install the VTEX Activity Flow SDK in your Flutter app to track navigation, page views, deep links, ads, and customer interactions across Android and iOS."
+excerpt: "Install the VTEX Activity Flow SDK in your Flutter app to track navigation, page views, deep links, ads, and customer interactions across Android and iOS."
 hidden: false
 createdAt: "2025-12-18T16:30:39.842Z"
-updatedAt: "2026-07-07T00:00:00.000Z"
+updatedAt: "2026-07-22T00:00:00.000Z"
 seeAlso:
   - "/docs/guides/activity-flow"
 ---
@@ -25,7 +25,7 @@ This installs the SDK and updates your `pubspec.yaml` file with the `activity_fl
 
 ## Instructions
 
-### Step 1 – Import the Activity Flow package
+### Step 1 – Importing the Activity Flow package
 
 In your app's main file, import the Activity Flow package as follows:
 
@@ -33,7 +33,7 @@ In your app's main file, import the Activity Flow package as follows:
 import 'package:activity_flow/activity_flow.dart';
 ```
 
-### Step 2 – Create an Activity Flow instance
+### Step 2 – Creating an Activity Flow instance
 
 Set the account name to create an instance of the main package class:
 
