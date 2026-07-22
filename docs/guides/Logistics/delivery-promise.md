@@ -65,8 +65,8 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 - Install the [Session Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-collecting-user-session-data) app in your VTEX account. This app enables your store to collect user session data.
 - Build your store's frontend using [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) or [FastStore](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#faststore).
 - External sellers must comply with the notification protocol of the [Delivery Promise Notification API](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api).
-- Do not use [VTEX Shipping Network](https://help.vtex.com/en/tutorial/vtex-shipping-network-dashboard--51e8tx1IehiN4ZtURRWU92) in your VTEX account.
-- Do not use [Operational capacity](https://developers.vtex.com/docs/api-reference/operational-capacity-api) in your VTEX account.
+- Do not use VTEX Shipping Network in your VTEX account.
+- Do not use [Operational capacity](https://help.vtex.com/en/docs/tutorials/operational-capacity) in your VTEX account.
 - Do not use more than 10,000 [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R).
 - Do not use [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) from regular sellers.
 
