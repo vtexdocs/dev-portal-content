@@ -26,7 +26,7 @@ Developers may encounter the following errors when working with CMS schemas loca
 
 Use this path when the error is related to permissions in the CMS Admin or during schema upload.
 
-1. Open the VTEX Admin and go to **Account Settings \> User Roles**.  
+1. Open the VTEX Admin and go to **Account Settings > User Roles**.  
 2. Select the role associated with the affected user.  
 3. In **Products and Resources**, click **CMS**.  
 4. Make sure the required CMS permissions are checked, including **See CMS menu on the top-bar** and **Settings**.  
@@ -34,7 +34,7 @@ Use this path when the error is related to permissions in the CMS Admin or durin
 6. Click **Save**.  
 7. Ask the user to run the sync command again and verify that the error no longer appears.
 
-For more details on CMS permissions, see [Roles \- License Manager](https://help.vtex.com/en/tutorial/roles--7HKbd9jg39YZlsqhqZPHbR).
+For more details on CMS permissions, see [Roles - License Manager](https://help.vtex.com/en/tutorial/roles--7HKbd9jg39YZlsqhqZPHbR).
 
 ### Fix FastStore CLI detection
 
