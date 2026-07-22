@@ -25,7 +25,7 @@ This installs the SDK and updates your `pubspec.yaml` file with the `activity_fl
 
 ## Instructions
 
-### Step 1 – Importing the Activity Flow package
+### Step 1 – Import the Activity Flow package
 
 In your app's main file, import the Activity Flow package as follows:
 
@@ -33,7 +33,7 @@ In your app's main file, import the Activity Flow package as follows:
 import 'package:activity_flow/activity_flow.dart';
 ```
 
-### Step 2 – Creating an Activity Flow instance
+### Step 2 – Create an Activity Flow instance
 
 Set the account name to create an instance of the main package class:
 
@@ -74,7 +74,7 @@ This setup enables automatic screen view tracking for standard route navigation.
 
 For navigation widgets such as `BottomNavigationBar` or `TabBar` that don't trigger route changes, use the `screenViewChange` function to manually track screen views.
 
-For example, using the `onTap` callback within a `BottomNavigationBar` widget allows for capturing a new route each time the user taps on a different tab:
+For example, using the `onTap` callback within a `BottomNavigationBar` widget enables capturing a new route each time the user taps on a different tab:
 
 ```dart
 BottomNavigationBar(
@@ -243,7 +243,7 @@ When you apply the listener to a widget, the SDK automatically tracks three even
 
 To start tracking your ad events, follow these steps:
 
-1. Call the `addAdsListener` method
+1. Call the `addAdsListener` method.
 
 To enable tracking, call the `addAdsListener` extension method on any Flutter widget that represents an ad:
 
@@ -307,7 +307,7 @@ class HomeScreen extends StatelessWidget {
 }
 ```
 
-This Flutter screen is constructed as a `StatelessWidget` that lists products and displays an ad banner. The banner's `Container` is wrapped with Activity Flow's `addAdsListener`, which attaches an ad-event listener and sends the provided metadata map with each event.
+This Flutter screen is built as a `StatelessWidget` that lists products and displays an ad banner. The banner's `Container` is wrapped with Activity Flow's `addAdsListener`, which attaches an ad-event listener and sends the provided metadata map with each event.
 
 This instrumentation enables the automatic tracking of impressions, viewability, and clicks, allowing for comprehensive analytics tied to `adId`, `creativeId`, `position`, and `campaignName`.
 
@@ -335,7 +335,7 @@ ElevatedButton(
 
 #### View event
 
-Use `addViewListener` to fire a view event when the widget has been at least 50% visible on screen for at least 1 second (IAB standard). The event fires once per app session — it does not re-fire if the widget scrolls off-screen and back, or if the user navigates away and returns.
+Use `addViewListener` to fire a view event when the widget has been at least 50% visible on screen for at least 1 second (IAB standard). The event fires once per app session — it doesn't re-fire if the widget scrolls off-screen and back, or if the user navigates away and returns.
 
 >ℹ️ You must include the `elementSource` key in the method's metadata map.
 
@@ -496,8 +496,8 @@ class ButtonTemplate extends StatelessWidget {
 }
 ```
 
-The example demonstrates how to integrate Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to automatically capture page-view events.
+The example demonstrates how to integrate Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to capture page-view events automatically.
 
 It outlines a `MyHomePage` that incorporates an `AdBanner` that uses `addAdsListener` to pass ad metadata, such as product name, price, and ID. Additionally, it features navigation buttons sourced from a routes list.
 
-The reusable `ButtonTemplate` facilitates navigation through `Navigator.pushNamed`, showcasing a standard configuration for automatic screen tracking, as well as ad impression and click tracking, in a Flutter application.
+The reusable `ButtonTemplate` facilitates navigation via `Navigator.pushNamed` and showcases a standard configuration for automatic screen tracking, as well as ad impression and click tracking, in a Flutter application.
