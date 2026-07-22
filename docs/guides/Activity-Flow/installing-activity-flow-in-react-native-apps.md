@@ -17,7 +17,7 @@ In this guide, you'll learn how to install and use the [Activity Flow SDK](https
   
 ### Use React Navigation or Expo Router in your project
 
-To manage navigation between different screens of your app, you must use either [React Navigation](https://reactnavigation.org/) or [Expo Router](https://docs.expo.dev/router/introduction/). This is important because Activity Flow relies on React Navigation's `useFocusEffect` hook to detect page changes. For more information, refer to the [React Navigation guide](https://reactnavigation.org/docs/getting-started).
+To manage navigation between different app screens, you must use either [React Navigation](https://reactnavigation.org/) or [Expo Router](https://docs.expo.dev/router/introduction/). This is important because Activity Flow relies on React Navigation's `useFocusEffect` hook to detect page changes. For more information, check the [React Navigation guide](https://reactnavigation.org/docs/getting-started).
 
 ### Install the Activity Flow package
 
@@ -49,7 +49,7 @@ This process installs the Activity Flow script in your app by adding a new depen
 
 ## Instructions
 
-### Step 1 - Importing the Activity Flow plugin
+### Step 1 - Import the Activity Flow plugin
 
 In your app's main file (for example, `App.js` or `App.tsx`), import the plugin as follows:
 
@@ -57,7 +57,7 @@ In your app's main file (for example, `App.js` or `App.tsx`), import the plugin 
 import { initActivityFlow } from '@vtex/activity-flow';
 ```
 
-### Step 2 - Creating an Activity Flow instance
+### Step 2 - Create an Activity Flow instance
 
 Set the account name to create an instance of the main package class:
 
@@ -93,7 +93,7 @@ To track navigation state changes, integrate the `usePageViewObserver` hook with
 
     ```js
     <NavigationContainer ref={navigationRef}>
-      {/* Stack configurations */}
+      {/* Stack configuration */}
     </NavigationContainer>
     ```
 
@@ -275,7 +275,7 @@ To enable deep-link handling in your iOS app, add your URL scheme to the `Info.p
     }
     ```
 
-Your Android app can now be launched from both web links (`https://mystore.com/products/42`) and custom scheme links: (`myapp://products/42`).
+Your iOS app can now be launched from both web links (`https://mystore.com/products/42`) and custom scheme links: (`myapp://products/42`).
 
 ### Tracking ad events
 
