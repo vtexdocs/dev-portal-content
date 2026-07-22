@@ -26,10 +26,10 @@ Before provisioning B2B users in VTEX, make sure the required features are enabl
 
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
-| VTEX ID | User Management | Create User | `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/storefront/users) |
+| VTEX ID | User Management | Create User | `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/v1/storefront/users) |
 | Organization Units | Units | Edit Organization Unit | `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) <br/><br/>`POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/organization-units/-organizationUnit-/users) |
 | License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users) |
-| Dynamic Storage | Dynamic storage generic resources | Insert or update document (not remove) | `POST` [Create new document](https://developers.vtex.com/docs/api-reference/masterdata-api#post-/api/dataentities/-acronym-/documents) |
+| Dynamic Storage | Dynamic storage generic resources | Insert or update document (not remove) | `POST` [Create buyer](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api#post-/api/dataentities/shopper/documents) |
 
 ### B2B buyer requirements
 
@@ -68,14 +68,14 @@ At this stage, the created user is not yet linked to an organizational unit, nor
 * `identifiers`: List of login keys, indicating their type and value.
 * `isLegacyPassword`: Indicates whether the user should recover their password through an external service (`true`) or define a new password on their first login (`false`, default).
 
->ℹ️ For more information, see `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/storefront/users).
+>ℹ️ For more information, see `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/v1/storefront/users).
 
 >⚠️ Once you create a user, you can’t edit or remove it. If you upload incorrect data, create a new user with a new username.
 
 ### Request example
 
 ```shell
-curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticator/storefront/users?isLegacyPassword=false" \
+curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticator/v1/storefront/users?isLegacyPassword=false" \
   -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
   -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}" \
   -H "Content-Type: application/json" \
@@ -240,7 +240,7 @@ In this context, the email address saved in buyer data is used exclusively for o
 
 This transactional email is different from the login email defined in [Step 1](#step-1---create-storefront-user-with-username), which is used for authentication and password recovery.
 
->ℹ️ For more information, see `POST` [Create new document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/documents).
+>ℹ️ For more information, see `POST` [Create buyer](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api#post-/api/dataentities/shopper/documents).
 
 ### Request example
 
