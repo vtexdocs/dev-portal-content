@@ -4,7 +4,7 @@ title: 'Enums'
 
 Enums define a fixed set of allowed values for a field or argument in the FastStore GraphQL schema. When a field type or query argument is an enum, only the values listed for that enum are accepted. They are used as argument values in queries (e.g., `sort`) and as fields returned in query responses (e.g., `type` in a collection).
 
-### StoreCollectionType
+## StoreCollectionType
 
 Product collection type, returned in the `type` field of the [`StoreCollection`](https://developers.vtex.com/docs/guides/faststore/schema-objects#storecollection) object. These values reflect the VTEX Catalog hierarchy: departments, categories, and subcategories make up the catalog tree, while brands, clusters, and collections are additional grouping mechanisms configured in the VTEX Admin.
 
@@ -67,7 +67,7 @@ A manually curated product group created in the VTEX Admin (e.g., `Summer Sale`)
 </tbody>
 </table>
 
-**Usage example**
+### Usage example
 
 The following query retrieves a collection by its slug and returns its `type`, which resolves to one of the `StoreCollectionType` values above:
 
@@ -85,7 +85,7 @@ query {
 }
 ```
 
-### StoreFacetType
+## StoreFacetType
 
 Search facet type, returned in search results to indicate what kind of input control a facet uses. Used in [`StoreFacet`](https://developers.vtex.com/docs/guides/faststore/schema-objects#storefacet) objects to describe the filter options available on a search results page.
 
@@ -114,7 +114,7 @@ Indicates a filter to choose between a range of values (e.g., `price`, `size`, e
 </tbody>
 </table>
 
-### StoreSort
+## StoreSort
 
 Product search results sorting options. Passed as the `sort` argument in the [`search` query](https://developers.vtex.com/docs/guides/faststore/schema-queries#search) to control how results are ordered.
 
@@ -191,7 +191,7 @@ Sort by product score, from highest to lowest.
 </tbody>
 </table>
 
-**Usage example**
+### Usage example
 
 The following example passes `price_asc` as the `sort` argument to return search results sorted by lowest price first:
 
@@ -212,7 +212,7 @@ query {
 }
 ```
 
-### StoreStatus
+## StoreStatus
 
 Status used to indicate a message type. Returned in cart and notification messages (e.g., [`StoreNotificationItem`](https://developers.vtex.com/docs/guides/faststore/schema-objects#storenotificationitem)) to indicate the severity of a user-facing message.
 
