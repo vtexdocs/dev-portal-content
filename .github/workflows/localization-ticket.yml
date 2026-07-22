@@ -57,7 +57,9 @@ jobs:
       github.event.label.name == 'localization needed (low)'
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pull-requests: write
+      issues: write
 
     steps:
       - name: Check PR eligibility
@@ -514,6 +516,8 @@ jobs:
           CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
           JIRA_TASK_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
         run: |
           if python3 .github/scripts/crowdin_sync.py 2>crowdin-upload-error.log; then
