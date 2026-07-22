@@ -13,9 +13,7 @@ In this guide, you'll learn how to install and configure the [VTEX Activity Flow
 
 ## Before you begin
 
-### Install the Activity Flow package
-
-The Activity Flow SDK captures user navigation and sends events from your mobile app. To install the package, run the following command in your project directory:
+Make sure you've installed the Activity Flow SDK package to capture user navigation and send events from your mobile app. To install the package, run the following command in your project directory:
 
 ```bash
 flutter pub add activity_flow
