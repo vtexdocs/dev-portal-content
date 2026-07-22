@@ -1,0 +1,62 @@
+---
+title: "Moving your FastStore project to a new GitHub repository"
+updatedAt: "2026-07-06T00:00:00.000Z"
+---
+
+In this guide, you'll learn how to move your FastStore project from one repository to another. You can do this directly from [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard), for the following cases:
+
+- Move a FastStore project hosted in its own GitHub organization to a new organization.
+- Move a FastStore project to a different repository within the same organization.
+
+>⚠️ For FastStore projects hosted in the `vtex-sites` organization, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to move your project to your account's GitHub organization.
+
+## Before you begin
+
+<Steps>
+
+### Have a FastStore project using WebOps
+
+Make sure the FastStore project you want to move uses [WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard).
+
+### Have the required permissions
+
+Make sure you have the following permissions before starting the migration:
+- **VTEX Admin:** The `Owner` role in the VTEX account, which is the same role required to onboard a project to WebOps.
+- **GitHub:** The `Admin` role in both the source and the target repositories.
+
+### Have a GitHub organization
+
+If you want to move your project to a new organization, make sure you have created a GitHub organization beforehand. Learn how to do so in the GitHub guide [Creating a new organization from scratch](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch).
+
+### Have a GitHub repository
+
+Make sure you have created the GitHub repository where you want to move your FastStore project. Learn how to do so in the GitHub guide [Creating a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository).
+
+>⚠️ The repository change isn't available for **private GitHub instances**. The WebOps dashboard won't display the option if your project is connected to a private GitHub instance.
+
+</Steps>
+
+## Instructions
+
+Choose the scenario that matches your case:
+- [Moving to a new organization and repository](#moving-to-a-new-organization-and-repository)
+- [Moving to a new repository in the same organization](#moving-to-a-new-repository-in-the-same-organization)
+
+### Moving to a new organization and repository
+
+Follow these steps to connect your project to a repository in a different GitHub organization:
+
+1. In your VTEX Admin, go to **Storefront > FastStore WebOps** and navigate to the **Integrations** tab.
+2. In the **Git Provider** card, click `Change account` under the **Account/Organization** section.
+3. You'll be redirected to GitHub. Select the organization you want to connect to.
+4. Choose whether to grant access to all repositories in the selected organization or to only selected repositories.
+5. Back in WebOps, select the target repository.
+6. Click `Save` to connect your project to the selected organization and repository.
+
+### Moving to a new repository in the same organization
+
+Follow these steps to connect your project to a different repository within the same organization:
+
+1. In your VTEX Admin, go to **Storefront > FastStore WebOps** and navigate to the **Integrations** tab.
+2. In the **Git Provider** card, under the **Repository** section, select the repository you want to connect to.
+3. Click `Save` to connect your project to the selected repository, keeping the same GitHub organization.

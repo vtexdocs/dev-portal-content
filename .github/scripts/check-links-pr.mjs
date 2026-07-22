@@ -1,8 +1,9 @@
 import fetch from "node-fetch";
 import fs from "fs";
-import core from "@actions/core";
+import path from "node:path";
 
 const filePath = process.argv[2];
+const issuesFile = process.env.LINK_ISSUES_FILE || "link_issues.txt";
 
 if (!filePath) {
   console.error("No file path provided.");
@@ -16,7 +17,10 @@ if (!fs.existsSync(filePath)) {
 
 const content = fs.readFileSync(filePath, "utf-8");
 
-// Extract links from Markdown and HTML content
+const displayPath =
+  path.relative(process.cwd(), path.resolve(filePath)).split(path.sep).join("/") ||
+  filePath;
+
 // Extract links from Markdown and HTML content
 const extractLinks = (content) => {
   const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g; // Markdown links
@@ -89,14 +93,60 @@ const extractLinks = (content) => {
   return links;
 };
 
+const BROWSER_UA =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(url, {
+      redirect: "follow",
+      headers: {
+        "User-Agent": BROWSER_UA,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        ...options.headers,
+      },
+      signal: controller.signal,
+      ...options,
+    });
+
+    return response;
+  } finally {
+    clearTimeout(id);
+  }
+}
+
 // Check if a link is broken (404 or other errors)
+// states: "valid" | "invalid" | "unknown"
 async function checkLink(url) {
   try {
-    const response = await fetch(url);
-    return { isValid: response.ok, statusCode: response.status }; 
+    let response = await fetchWithTimeout(url, { method: "HEAD" });
+
+    if (!response.ok && [405, 501].includes(response.status)) {
+      response = await fetchWithTimeout(url, { method: "GET" });
+    }
+
+    const status = response.status;
+
+    // likely auth / rate limit
+    const ambiguous = [401, 403, 429];
+    if (ambiguous.includes(status) || status >= 500) {
+      return { state: "unknown", statusCode: status };
+    }
+
+    if (response.ok) {
+      return { state: "valid", statusCode: status };
+    }
+
+    // e.g. 404, 410, 500, etc.
+    return { state: "invalid", statusCode: status };
   } catch (error) {
     console.error(`Error checking link ${url}: ${error.message}`);
-    return false;
+
+    return { state: "unknown", statusCode: null, error };
   }
 }
 
@@ -106,11 +156,12 @@ async function checkLinksInFile(content) {
   const issues = [];
 
   for (const link of links) {
-    const { isValid, statusCode } = await checkLink(link.url);
-    if (!isValid) {
-      // Format the issue message with line and column numbers
-      const issue = `${filePath}:${link.lineNumber}:${link.columnNumber}:🚨 **Found a broken link in a ${link.type} (Error ${statusCode}):**<br> ${link.url}<br><br><blockquote>👉 Please review this link before merging your Pull Request.</blockquote>`;
+    const { state, statusCode } = await checkLink(link.url);
+    if (state === "invalid") {
+      const issue = `${displayPath}:${link.lineNumber}:${link.columnNumber}:🚨 **Found a broken link in a ${link.type} (Error ${statusCode}):**<br> ${link.url}<br><br><blockquote>👉 Please review this link before merging your Pull Request.</blockquote>`;
       issues.push(issue);
+    } else if (state === "unknown") {
+      console.error(`Could not reliably check link: ${link.url}`);
     }
   }
 
@@ -118,21 +169,20 @@ async function checkLinksInFile(content) {
 }
 
 (async () => {
-    try {
-      const issues = await checkLinksInFile(content);
-      
-      if (issues.length > 0) {
-        console.log(`Broken links found in ${filePath}:`);
-        const formattedIssues = issues.join("\n");
-        core.setOutput('link-issues', formattedIssues);
-        console.log(formattedIssues);
-        process.exit(0);
-      } else {
-        console.log(`No broken links in ${filePath}`);
-        process.exit(0); // Indicate success
-      }
-    } catch (error) {
-      console.error(`An error occurred: ${error.message}`);
-      process.exit(1); // Indicate failure due to error
+  try {
+    const issues = await checkLinksInFile(content);
+
+    if (issues.length > 0) {
+      console.error(`Broken links found in ${displayPath}:`);
+      const block = issues.join("\n") + "\n";
+      fs.appendFileSync(issuesFile, block, "utf-8");
+      process.exit(0);
+    } else {
+      console.error(`No broken links in ${displayPath}`);
+      process.exit(0);
     }
-  })();
+  } catch (error) {
+    console.error(`An error occurred: ${error.message}`);
+    process.exit(1);
+  }
+})();

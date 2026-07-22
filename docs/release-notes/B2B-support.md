@@ -2,8 +2,8 @@
 title: B2B support
 excerpt: 'VTEX IO now requires authentication to access product commercial information, providing a greater support to stores with closed sales channel.'
 createdAt: '2019-12-12T18:27:49.833Z'
+type: 'info'
 ---
-
 VTEX IO now requires authentication to access product commercial information, providing a greater support to stores with closed sales channel.
 
 ## What has changed

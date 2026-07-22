@@ -2,8 +2,8 @@
 title: Product Summary
 excerpt: "Did you enjoy the SKU Selector release? So check out our Product Summary release as well: more props para define image sizes!"
 createdAt: "2019-10-25T14:47:00.000Z"
+type: 'info'
 ---
-
 Similar to the SKU Selector, the Product Summary component gained **two new props** the define the height and width of its images: `height` and `width`. 
 
 ![product-summary-image](https://user-images.githubusercontent.com/52087100/67565345-98113700-f6fb-11e9-820a-22359dc206de.png)

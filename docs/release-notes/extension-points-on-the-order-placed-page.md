@@ -2,8 +2,8 @@
 title: Extension points on the Order Placed page 
 excerpt: "The Order Placed page can now accept new components to its upper part thanks to the use of extension points."
 createdAt: "2019-08-22T14:47:00.000Z"
+type: 'info'
 ---
-
 The Order Placed page can now accept new components to its upper part thanks to the use of extension points.
 
 ## Main advantages

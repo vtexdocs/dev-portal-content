@@ -2,8 +2,8 @@
 title: Toast component redirect
 excerpt: "Greater control over user browsing is always magical. Use the `BuyButton` and `ProductSummaryBuyButton` new prop and redirect your user to any URL with a simple click on the Toast component."
 createdAt: "2019-09-26T14:47:00.000Z"
+type: 'info'
 ---
-
 Thanks to the `BuyButton` and `ProductSummaryBuyButton` new prop, retailers are now able to choose any URL to direct users to using the Toast component. 
 
 ## What has changed

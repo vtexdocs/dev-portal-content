@@ -2,8 +2,8 @@
 title: Search Result Gallery
 excerpt: "During the Black Friday week, the e-commerce gods have bestowed the blessing upon the Gallery component, making it responsive and willing to accept different values for (almost) any existing device."
 createdAt: "2019-11-25T14:47:00.000Z"
+type: 'info'
 ---
-
 The Search Result Gallery component's `maxItemsPerRow` prop just became **responsive**. In addition to sending a single value, it now allows an object to send different values for different devices. 
 
 ## What has changed 

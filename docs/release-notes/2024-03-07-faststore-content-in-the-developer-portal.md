@@ -5,6 +5,8 @@ type: "info"
 createdAt: "2024-03-07T10:00:00.661Z"
 hidden: false
 excerpt: "After March 18, 2024, FastStore content moves to the Developer Portal."
+tags:
+    - FastStore
 ---
 
 After March 18, 2024, all FastStore content currently available on the [FastStore Portal](https://www.faststore.dev/docs) will be relocated and redirected to the [Developer Portal](https://developers.vtex.com).

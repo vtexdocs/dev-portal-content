@@ -2,8 +2,8 @@
 title: 'Storefront page customization by URL'
 excerpt: "You can directly navigate to a specific URL when customization store pages through the Storefront section, located within the new CMS module version."
 createdAt: "2019-07-10"
+type: 'info'
 ---
-
 You can directly navigate to a specific URL when customization store pages through the Storefront section, located within the new CMS module version.
 
 ![](https://user-images.githubusercontent.com/52087100/60998943-5e751580-a330-11e9-91cb-8d7001f59756.png)

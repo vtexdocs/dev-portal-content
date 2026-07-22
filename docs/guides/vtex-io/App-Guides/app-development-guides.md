@@ -8,25 +8,25 @@ updatedAt: "2022-06-20T16:13:26.684Z"
 category: "App Development"
 ---
 
-## Local Development
+## Setting up your workspace
 
 Set up your local environment: start new projects, sync your local files to the cloud, and manage development logs.
 
 - [Creating a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace)
 - [Installing an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app)
 - [Linking an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app)
-- [Managing application logs](https://developers.vtex.com/docs/guides/managing-application-logs)
 
-## Services
+## Service development
 
-Deliver new functionalities to your VTEX IO apps by developing new service apps and clients.
+Develop new functionalities by building service apps and integrating clients.
 
 - [Using and creating clients](https://developers.vtex.com/docs/guides/how-to-use-and-create-clients-on-vtex-io)
 - [Developing service configuration apps](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-service-configuration-apps)
 - [Connecting to VTEX core commerce APIs](https://developers.vtex.com/docs/guides/how-to-connect-with-vtex-core-commerce-apis-using-vtex-io)
 - [Receiving order notifications](https://developers.vtex.com/docs/guides/how-to-receive-order-notifications-on-vtex-io)
+- [Managing application logs](https://developers.vtex.com/docs/guides/managing-application-logs)
 
-## Deployment
+## App deployment
 
 Make your new VTEX IO app or storefront customizations available to end users.
 
@@ -35,16 +35,9 @@ Make your new VTEX IO app or storefront customizations available to end users.
 - [Deploying the app's stable version](https://developers.vtex.com/docs/guides/vtex-io-documentation-deploying-the-app-stable-version)
 - [Promoting a workspace to master](https://developers.vtex.com/docs/guides/vtex-io-documentation-promoting-a-workspace-to-master)
 
-
-## A/B Tests
-
-Optimize your store's conversion rates by running A/B tests.
-
-- [Running native A/B tests](https://developers.vtex.com/docs/guides/vtex-io-documentation-running-native-ab-testing)
-
 ## Edition Apps
 
-Become a Sponsor Account and manage Edition Apps of your child account.
+Become a Sponsor Account and manage the Edition Apps of your child accounts.
 
 - [Becoming a Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-sponsor-account)
 - [Configuring an Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-configuring-an-edition-app)

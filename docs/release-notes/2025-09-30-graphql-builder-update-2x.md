@@ -31,7 +31,7 @@ If an app is built with GraphQL builder version `2.x` and is missing the `@auth`
 - The `scope` argument is missing.
 - The `scope` is `PRIVATE`, and `productCode` or `resourceCode` arguments are missing.
 
-![GraphQL auth directive error](../../images/graphql-auth-directive-error.png)
+![GraphQL auth directive error](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/graphql-auth-directive-error.png)
 
 ## Why did we make this change?
 

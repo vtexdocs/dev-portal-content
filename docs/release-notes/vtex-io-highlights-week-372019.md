@@ -3,9 +3,8 @@ slug: "vtex-io-highlights-week-372019"
 title: "VTEX IO Release Notes - Week 37/2019"
 createdAt: 2019-09-23T17:54:00.000Z
 hidden: false
-type: ""
+type: "info"
 ---
-
 ![App Development](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-highlights-week-372019-0.png)
 
 Hey! 👋 Welcome to VTEX IO Release Notes for week 37 of 2019!

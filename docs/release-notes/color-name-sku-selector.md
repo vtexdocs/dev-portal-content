@@ -2,8 +2,8 @@
 title: Color name on SKU Selector 
 excerpt: "Display the name of the SKU color above its image on the SKU Selector."
 createdAt: "2019-09-08T14:47:00.000Z"
+type: 'info'
 ---
-
 Display the name of the SKU color above its image on the SKU Selector.
 
 ## What has changed

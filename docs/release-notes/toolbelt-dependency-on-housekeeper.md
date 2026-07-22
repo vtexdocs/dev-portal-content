@@ -2,8 +2,8 @@
 title: 'VTEX IO CLI dependency on Housekeeper '
 excerpt: "In order to decrease inconsistencies between apps updates, [VTEX IO CLI](https://github.com/vtex/toolbelt) now uses the __Housekeeper API__.  "
 createdAt: "2019-07-03T14:47:00.000Z"
+type: 'info'
 ---
-
 In order to decrease inconsistencies between apps updates, [VTEX IO CLI](https://github.com/vtex/toolbelt) now uses the __Housekeeper API__.  
 
 > ℹ️ Housekeeper is the system responsible for automatically updating account apps.

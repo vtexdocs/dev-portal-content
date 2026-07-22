@@ -2,8 +2,8 @@
 title: 'Brand component'
 excerpt: "A new component which shows either the product brand name or product brand logo was released."
 createdAt: "2019-07-03T14:47:00.000Z"
+type: 'info'
 ---
-
 With the introduction of the Brand component, you can now display the product’s brand name independently and also showcase the brand logo, which was not possible before.
 
 ![brand-component](https://user-images.githubusercontent.com/52087100/60600980-a374d700-9d87-11e9-9f57-e10cbe371577.png)

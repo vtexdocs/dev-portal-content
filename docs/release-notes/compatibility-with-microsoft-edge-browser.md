@@ -2,8 +2,8 @@
 title: Compatibility with Microsoft Edge Browser
 excerpt: 'The Store Framework v2 is now compatible with the Microsoft Edge Browser from Windows.'
 createdAt: '2019-12-12T18:27:49.833Z'
+type: 'info'
 ---
-
 The Store Framework v2 is now compatible with the Microsoft Edge Browser from Windows.
 
 ## What has changed

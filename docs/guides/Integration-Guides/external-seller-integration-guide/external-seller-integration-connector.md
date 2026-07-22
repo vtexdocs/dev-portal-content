@@ -3,9 +3,9 @@ title: "External seller connector"
 slug: "external-seller-integration-connector"
 hidden: false
 createdAt: "2020-09-01T13:47:40.310Z"
-updatedAt: "2022-09-30T16:51:08.972Z"
+updatedAt: "2025-12-18T14:25:08.972Z"
 ---
-The seller integration flow comprises eight different API requests. Four of these are calls that the seller should make to the marketplace. The other four are requests that the marketplace will need to make to the seller. So, for these, you will need to implement endpoints that are prepared to receive specific request bodies and respond with specific objects.
+The seller integration flow comprises 12 different API requests. Four of these are calls that the seller should make to the marketplace. Seven are requests that the marketplace will need to make to the seller. Only one endpoint is a request made both from the seller and from the marketplace. So, for these, you will need to implement endpoints that are prepared to receive specific request bodies and respond with specific objects.
 
 In the table below, you will find every API request needed for each step of the integration. Each one of them links to their specific API Reference documentation, where you can find the request URLs, methods, headers, the explanation of every field, and examples of requests and responses.
 
@@ -13,19 +13,20 @@ In the table below, you will find every API request needed for each step of the 
 
 | Step | API Request | Request Target |
 |---|---|---|
-| [Catalog Notification](#catalog-notification) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-">Change Notification</a>| ➡ Marketplace |
-| [Catalog Registration](#catalog-registration) | <span class="api pg-type type-put">put</span><a href="https://developers.vtex.com/docs/guides/marketplace-api#manage-suggestions">Send SKU Suggestion</a> | ➡ Marketplace |
+| [Catalog Notification](#catalog-notification) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/skuseller/changenotification/-skuId-">Change Notification</a>| ⮕ Marketplace |
+| [Catalog Registration](#catalog-registration) | <span class="api pg-type type-put">put</span><a href="https://developers.vtex.com/docs/guides/marketplace-api#manage-suggestions">Send SKU Suggestion</a> | ⮕ Marketplace |
 | [Catalog and Storefront Update](#catalog-update) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orderForms/simulationn">Fulfillment Simulation</a>  | ⬅ Seller |
 | [Order Placement](#order-placement) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders">Order Placement</a>  | ⬅ Seller |
 | [Order Dispatching](#order-dispatching) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill">Authorize Fulfillment</a>  | ⬅ Seller |
-| [Order Invoicing and Tracking](#order-invoicing) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice">Order Invoice Notification</a>  | ➡ Marketplace |
+| [Order Invoicing and Tracking](#order-invoicing) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice">Order Invoice Notification</a>  | ⮕ Marketplace |
 | [Cancellation by the Marketplace](#cancellation-by-the-marketplace) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-orderId-/cancel">Marketplace Order Cancellation</a> | ⬅ Seller |
-| [Cancellation by the Seller](#cancellation-by-the-seller) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/cancel">Cancel Order</a>  | ➡ Marketplace |
-| [Order invoicing](#order-invoicing)                   | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice">Send invoice</a>                     | ➡ Marketplace  |
-| [Send tracking information](#order-tracking)       | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-">Send tracking information</a>     | ➡ Marketplace  |
-| [Update tracking status](#order-tracking)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking">Update tracking status</a>         | ➡ Marketplace  |
+| [Cancellation by the Seller](#cancellation-by-the-seller) | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/cancel">Cancel Order</a>  | ⮕ Marketplace |
+| [Order invoicing](#order-invoicing)                   | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice">Send invoice</a>                     | ⮕ Marketplace  |
+| [Send tracking information](#order-tracking)       | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-">Send tracking information</a>     | ⮕ Marketplace  |
+| [Update tracking status](#order-tracking)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking">Update tracking status</a>         | ⮕ Marketplace  |
+| [Send agreement for order modifications](#order-modifications)          | <span class="api pg-type type-post">post</span><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/api/order-system/orders/-participantOrderId-/changes/-changeRequestId-/send-agreement">Send agreement for order modifications</a>         | ⬅ Seller  |
 
->ℹ️ To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.\n\n[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/external-seller-integration-guide/button_32.svg)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-connector-0.png)
+>ℹ️ To help you test the integration requests and see in practice how they behave, we've assembled a Postman API Collection with all eight requests listed in this guide, including the necessary URLs, methods, headers, and example request bodies.[![Run in Postman](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/external-seller-integration-guide/button_32.svg)](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-seller-integration-connector-0.png)
 
 Let’s walk through each of the steps in the integration.
 
@@ -167,6 +168,21 @@ The same endpoint called by the seller to send the invoice is used to send the o
 - Tracking URL
 
 In this case, the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice">Order Invoice Notification</a></span> should happen once the seller delivers the package to the carrier and receives the tracking data from it.
+
+## Order modifications
+
+In the event of modifications made to an order, the seller must notify the marketplace, acknowledging the request for changes and then confirming that the order was modified.
+
+### Endpoint implementation
+
+This notification is done through a request to the <span class="pg-type type-post">post</span><span class="api"><a href="https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/api/order-system/orders/-participantOrderId-/changes/-changeRequestId-/send-agreement">Send agreement for order modifications</a></span> endpoint, which needs to be implemented by the seller or the marketplace.
+
+The body of this request contains only one piece of information: the `agreementType`, which has two possible values:
+
+- `Acknowledgment`: This indicates the seller recognizes the request for modifications to the order.
+- `Confirmation`: This indicates the seller has applied the modifications to the order and the order flow can proceed.
+
+> ⚠️ To modify an order, the seller must implement the Order modifications integration, which includes calling the endpoints listed below in compliance with their API specifications (request/response schemas, validation rules, and error handling): [Send agreement for order modifications](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/api/order-system/orders/-participantOrderId-/changes/-changeRequestId-/send-agreement), [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes), [Preview order modifications](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/order-system/orders/-changeOrderId-/changes/preview), and [Cancel order modifications](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/cancel).
 
 ## Cancellation by the marketplace
 
