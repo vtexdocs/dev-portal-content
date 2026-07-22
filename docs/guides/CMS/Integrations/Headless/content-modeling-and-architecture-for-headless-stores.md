@@ -122,12 +122,12 @@ A Content Type holds fixed fields (always present on every entry) and a dynamic 
 
 | Scenario | Content Type | Component |
 | :---- | :---- | :---- |
-| Represents a routable **page** | ✅ | |
-| Needs **multiple instances** (many landing pages) | ✅ | |
-| Only **one instance** store-wide | ✅ (`$singleton: true`) | |
-| **Reusable UI block** on one or more pages | | ✅ |
-| **Nested inside** another component | | ✅ |
-| Needs a **slug** or identifier field | ✅ | |
+| Represents a routable **page** | ✅ | ❌ |
+| Needs **multiple instances** (many landing pages) | ✅ | ❌ |
+| Only **one instance** store-wide | ✅ (`$singleton: true`) | ❌ |
+| **Reusable UI block** on one or more pages | ❌ | ✅ |
+| **Nested inside** another component | ❌ | ✅ |
+| Needs a **slug** or identifier field | ✅ | ❌ |
 | Shared across the store (header, footer) | ✅ (singleton Content Type) | ✅ (component inside it) |
 
 > ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page, model it as a component.
