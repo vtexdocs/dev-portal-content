@@ -4,6 +4,7 @@ slug: "2026-07-07-activity-flow-customer-interaction-event-tracking-for-mobile-a
 type: "added"
 excerpt: "The Activity Flow SDK for React Native and Flutter now tracks click, view, and impression events."
 createdAt: "2026-07-07T00:00:00.000Z"
+updatedAt: "2026-07-22T00:00:00.000Z"
 tags:
   - Activity Flow
 ---
