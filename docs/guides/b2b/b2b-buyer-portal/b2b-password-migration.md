@@ -270,14 +270,14 @@ curl -X DELETE "https://{{accountName}}.vtexcommercestable.com.br/api/authentica
 
 ### Step 3 - Provision legacy users
 
-When creating storefront users who should authenticate via password migration on their first login, follow the same flow described in [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning), setting `isLegacyPassword=true` in the query parameter of the `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/storefront/users) request instead of the default `false`.
+When creating storefront users who should authenticate via password migration on their first login, follow the same flow described in [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning), setting `isLegacyPassword=true` in the query parameter of the `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/v1/storefront/users) request instead of the default `false`.
 
 > ⚠️ Once you create a user, you can't edit or remove it. If you upload incorrect data, create a new user with a new username.
 
 **Request example**
 
 ```shell
-curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticator/storefront/users?isLegacyPassword=true" \
+curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticator/v1/storefront/users?isLegacyPassword=true" \
   -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
   -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}" \
   -H "Content-Type: application/json" \
