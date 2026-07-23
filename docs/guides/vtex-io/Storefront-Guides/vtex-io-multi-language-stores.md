@@ -38,7 +38,7 @@ You can implement custom translations at either the app or account level:
 - **App-level translations**: Developers can set custom translations for each locale within the frontend app's `/messages` folder. The app applies these translations by default to any store that uses it. To learn how to set messages during the development of a React app, see [Translating the component](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component).
 - **Account-level translations**: Developers can overwrite a message imported from a frontend app with a completely custom message by making the appropriate GraphQL API request to the Messages app. To learn how to overwrite a message from a frontend app, see [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization).
 
->ℹ️ The Messages app is a standalone translation application and shouldn't be confused with a string repository. It requires a source language, source content, and a destination language. The output will be the source content translated into the destination language.
+> ℹ️ The Messages app is a standalone translation application and shouldn't be confused with a string repository. It requires a source language, source content, and a destination language. The output will be the source content translated into the destination language.
 
 ### Translation decision flow
 
@@ -77,7 +77,7 @@ After detecting a user's locale, every message from your frontend component mark
 
 Catalog messages include product names and product descriptions from the store catalog.
 
->ℹ️ We recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) to manage catalog translations. It gives you granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). To learn how to implement it, see the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
+> ℹ️ We recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) to manage catalog translations. It gives you granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). To learn how to implement it, see the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
 
 All data from the Catalog API is already translatable by default. You can override these automatic translations by sending the appropriate GraphQL query to the Catalog API or the Messages app. To learn how to overwrite a catalog message via the GraphQL API, follow the [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization) guide.
 
