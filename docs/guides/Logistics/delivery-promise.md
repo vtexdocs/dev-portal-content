@@ -17,7 +17,7 @@ The content is organized as follows:
 
 - [Available features](#available-features)
 - [Advantages](#advantages)
-- [Requirements and restrictions](#requirements-and-restrictions)
+- [Requirements](#requirements)
 - [Delivery Promise for Store Framework](#delivery-promise-for-store-framework)
 - [Delivery Promise for headless stores](#delivery-promise-for-headless-stores)
 - [Delivery Promise for FastStore](#delivery-promise-for-faststore)
@@ -57,15 +57,18 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 | Improved shopping experience | <p><b>Delivery Promise</b> promotes a better shopping experience for the customer as a whole:<ul><li>It eliminates any frustration at checkout when they find it impossible to place an order.</li><li>It allows customers to view more products.</li><li>It allows customers to browse the storefront in a way that meets their needs, whether they prioritize the type of shipment or choose to place an order in a physical store.</li></ul></p> |
 | Promotion of physical store sales | <b>Delivery Promise</b> gives customers confidence in finding certain products in physical stores, which encourages them to go to the stores and increases sales opportunities. |
 
-## Requirements and restrictions
+## Requirements
 
-**Delivery Promise** requires the customer's location from the beginning of the buying journey, ensuring that only products with valid shipping methods are displayed on the product listing page. To join the current phase of **Delivery Promise**, you must meet the following conditions:
+**Delivery Promise (Beta)** requires the customer's location from the beginning of the buying journey, ensuring that only products with valid shipping methods are displayed on the product listing page. To join the current phase of **Delivery Promise (Beta)**, contact our Support and meet the following conditions:
 
-| Requirement | Description |  
-| -------------- | ------------ |  
-| Install Intelligent Search | Install the [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) app in your VTEX account. This app provides advanced search capabilities for your store. |
-| Install Session Manager | Install the [Session Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-collecting-user-session-data) app in your VTEX account. This app enables your store to collect user session data. |
-| Build the storefront | Build your store's frontend using [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) or [FastStore](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#faststore). |  
+- Use [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) app in your VTEX account. This app provides advanced search capabilities for your store.
+- Install the [Session Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-collecting-user-session-data) app in your VTEX account. This app enables your store to collect user session data.
+- Build your store's frontend using [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) or [FastStore](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#faststore).
+- External sellers must comply with the notification protocol of the [Delivery Promise Notification API](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api).
+- Do not use VTEX Shipping Network in your VTEX account.
+- Do not use [Operational capacity](https://help.vtex.com/en/docs/tutorials/operational-capacity) in your VTEX account.
+- Do not use more than 10,000 [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R).
+- Do not use [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) from regular sellers.
 
 >ℹ️ Check the [Delivery Promise visual library](https://www.figma.com/community/file/1545494767147168145) with [use cases](https://www.figma.com/design/a9urb9GGi7BTQkX92hIPp8/Delivery-Promise-by-VTEX--Community-?node-id=8001-14743&p=f&t=6WFsbpkt0lln18z1-0), [behavior specifications](https://www.figma.com/design/a9urb9GGi7BTQkX92hIPp8/Delivery-Promise-by-VTEX--Community-?node-id=8002-48329&p=f&t=6WFsbpkt0lln18z1-0) and [components](https://www.figma.com/design/a9urb9GGi7BTQkX92hIPp8/Delivery-Promise-by-VTEX--Community-?node-id=8001-14732&p=f&t=6WFsbpkt0lln18z1-0) to better understand how to apply it to your store.  
 
