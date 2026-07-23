@@ -31,7 +31,6 @@ To translate text messages from the store Catalog, follow these steps:
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
 2. In the VTEX Admin, go to **Store Settings > Storefront > GraphQL IDE**.
-
 3. From the dropdown list, choose the `vtex.catalog-graphql` app.
 4. Click _Query variables_ at the bottom of the page.
 
