@@ -3,118 +3,133 @@ title: "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App"
 slug: "payments-integration-ppp-applied-to-pos"
 hidden: false
 createdAt: "2022-09-28T22:39:13.979Z"
-updatedAt: "2022-09-29T17:49:33.957Z"
-excerpt: "Integrate payment providers for POS in physical stores using the PPP, including asynchronous flows, Payment Apps, and callback requirements." 
+updatedAt: "2026-07-01T00:00:00.000Z"
+excerpt: "Learn how to integrate a payment connector for in-store card payments through a Point of Sale (POS) terminal using the Payment Provider Protocol and VTEX Sales App."
 ---
+VTEX offers multiple solutions for a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience, handling orders from both ecommerce and physical stores. For the physical store experience, VTEX provides the [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), where sellers serve customers and complete the entire sales process. To finish a purchase, the customer can pay with a physical card in a payment terminal, also known as a Point of Sale (POS).
 
-VTEX has multiple solutions to deliver a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience to shoppers, being able to handle orders from both the ecommerce and physical stores. To deal with the physical store experience, VTEX offers the [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), where sellers can serve customers and complete the entire sales process. When finishing a purchase, the customer will have the option to make the payment with a physical card in a payment terminal, also known as a Point of Sale (POS).
+To integrate a POS payment solution, payment partners must meet the following requirements:
 
-For payment partners to integrate their solutions for payments using a POS, there are a series of requirements that must be taken into account. You can check a summary of the requirements in the list below:
-
-- Develop a payment connector using the [Payment Provider Protocol (PPP)](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m). There are some details required in the connector to deal with payments on a POS, such as:
+- Develop a payment connector using the [Payment Provider Protocol (PPP)](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m). To handle POS payments, the connector requires the following:
   - Include the supported payment methods (credit or debit card) in the [Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
-  - Use [callbacks](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) for asynchronous payments.
+  - Use [callbacks](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) for asynchronous payments.
   - Work with [Payment Apps](https://developers.vtex.com/docs/guides/payments-integration-payment-app) to identify the POS and wait for its response.
+  - The endpoint must respond to any call in less than 20 seconds.
+- For testing, use a VTEX store configured with the supported payment methods. VTEX can provide an account for this purpose.
+- For testing, use a device with the [VTEX Sales App installed](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh).
+- Optionally, create a Payment App to identify the POS. Install this app in the store as well.
 
-    > ⚠️ For the payment architecture that relies on a Payment App (such as the challenges used by the `Venda Direta Credito` and `Venda Direta Debito` payment methods) to work correctly, the store must have the `challengeDrivenPaymentWorkflow: true` flag enabled in the `window.INSTORE_CONFIG` object of its `checkout-instore-custom.js` file. Without this flag, the payment flow will not work as expected.
+> ⚠️ To develop a new payment connector, you must follow the **prerequisites determined by VTEX**. See the [Implementation prerequisites section of the Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites).
 
-  - The endpoint must return to any call in less than 20 seconds.
-- For testing, have a VTEX store configured with the supported payment methods. This should be provided by VTEX.
-- If needed for testing, have a device with the [VTEX Sales App installed](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh).
-- Developers might want to create their Payment App to identify the POS. This app will also have to be installed in the store.
+This guide covers the full journey to integrate POS payments:
 
-> ⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites) article.
+- [Payment connector prerequisites](#payment-connector-prerequisites): Required routes and manifest configuration.
+- [How POS payments work](#how-pos-payments-work): End-to-end payment flow, from identifying the POS to confirming the result.
+- [Implementing the connector](#implementing-the-connector): Create Payment parameters, asynchronous flow, timeouts, Payment Apps, and POS interaction.
+- [Testing your connector](#testing-your-connector): Setting up a store to test the integration.
+- [Homologation](#homologation): Validating and publishing your connector.
 
-## Payment connector pre-requisites
+## Payment connector prerequisites
 
-There are some steps needed for the connector to be able to process payments in the physical world, which are described below:
+Complete the following steps to enable the connector to process payments in the physical world:
 
-1. Route [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) (`/manifest`). The response body of the endpoint must contain the payment methods `Venda Direta Credito` and `Venda Direta Debito`. In case a split of receivables is offered, this must be informed in the `allowsSplit` field for each payment method. Example of response body properly configured:
+### 1. Route [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) (`/manifest`)
+
+The response body of the endpoint must contain the payment methods `Venda Direta Credito` and `Venda Direta Debito`. If a split of receivables is offered, indicate it in the `allowsSplit` field for each payment method. The following example shows a correctly configured response body, including the POS-specific `Venda Direta Debito` and `Venda Direta Credito` methods:
 
 ```json
 {
-  paymentMethods:
-  [
+  "paymentMethods": [
     {
-      name: "American Express",
-      allowsSplit: "onCapture"
+      "name": "American Express",
+      "allowsSplit": "onCapture"
     },
     {
-      name: "Diners",
-      allowsSplit: "onCapture"
+      "name": "Diners",
+      "allowsSplit": "onCapture"
     },
     {
-      name: "Elo",
-      allowsSplit: "onCapture"
+      "name": "Elo",
+      "allowsSplit": "onCapture"
     },
     {
-      name: "Hipercard",
-      allowsSplit: "onCapture"
+      "name": "Hipercard",
+      "allowsSplit": "onCapture"
     },
     {
-      name: "Mastercard",
-      allowsSplit: "onCapture"
+      "name": "Mastercard",
+      "allowsSplit": "onCapture"
     },
     {
-      name: "Visa",
-      allowsSplit: "onCapture"
+      "name": "Visa",
+      "allowsSplit": "onCapture"
     },
     {
-      name: "Boleto Bancário",
-      allowsSplit: "onAuthorize"
+      "name": "Boleto Bancário",
+      "allowsSplit": "onAuthorize"
     },
     {
-      name: "Visa Electron",
-      allowsSplit: "disabled"
+      "name": "Visa Electron",
+      "allowsSplit": "disabled"
     },
     {
-      name: "Maestro",
-      allowsSplit: "disabled"
+      "name": "Maestro",
+      "allowsSplit": "disabled"
     },
     {
-      name: "Pix",
-      allowsSplit: "onAuthorize"
+      "name": "Pix",
+      "allowsSplit": "onAuthorize"
     },
-+    {
-+      name: "Venda Direta Debito",
-+      allowsSplit: "onCapture"
-+    },
-+    {
-+      name: "Venda Direta Credito",
-+      allowsSplit: "onCapture"
-+    }
+    {
+      "name": "Venda Direta Debito",
+      "allowsSplit": "onCapture"
+    },
+    {
+      "name": "Venda Direta Credito",
+      "allowsSplit": "onCapture"
+    }
   ]
 }
 ```
 
-2. Route [POST Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) (`/payments`). This route must be idempotent, which means that the provider must be able to correctly handle if the route is called many times with the same `paymentId`. The provider should not recreate the payment for multiple calls but has to return the most updated status instead.
+### 2. Route [POST Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) (`/payments`)
 
-## Scenario and flow
+This route must be idempotent: the provider must handle repeated calls with the same `paymentId` correctly. Instead of recreating the payment on each call, the provider must return the most up-to-date status.
 
-Here we describe the payment flow in the context of a physical store using a POS. The following sequence diagram represents all the steps in this flow, where the green bars are the steps that the payment provider is responsible for:
-![Fluxo PPP com POS atualizado](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-ppp-applied-to-pos-0.png)
+## How POS payments work
+
+This section describes the end-to-end payment flow for a physical store using a POS. The following sequence diagram shows all the steps, where the green bars represent the steps that the payment provider is responsible for:
+![PPP flow applied to POS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-ppp-applied-to-pos-0.png)
+
+The flow has three phases:
+
+- **Identifying the POS** (steps 1–7): The Gateway routes the payment to the connector, and a Payment App captures the POS serial number.
+- **Processing the payment** (steps 8–13): The payment processor charges the card on the POS and reports the result through a callback.
+- **Confirming the result** (steps 14–18): The VTEX Sales App confirms the final status and places the order.
+
+The complete sequence is as follows:
 
 1. The flow starts with a buyer finishing a purchase in a VTEX physical store created on [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc).
 2. The VTEX Sales App makes an [Authorization](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/authorization-request) request to the VTEX Payment Gateway.
-3. Our Gateway makes a [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request to the connector defined in the store settings for the specific payment method used in the purchase (i.e.: `Venda Direta Credito`).
-4. The Gateway receives the Create Payment response from the connector with the `undefined` status and the `appname` field of the `paymentAppData` parameter filled with the name of an app (i.e.: `vtex.challenge-terminal-connector-app`). It means that the payment is not concluded and it needs to do a challenge by opening a [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app#understanding-the-payment-app-flow), which will be responsible to identify the POS.
+3. The Gateway makes a [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request to the connector defined in the store settings for the specific payment method used in the purchase (for example, `Venda Direta Credito`).
+4. The Gateway receives the Create Payment response from the connector with the `undefined` status and the `appname` field of the `paymentAppData` parameter filled with the name of an app (for example, `vtex.challenge-terminal-connector-app`). This means the payment is not concluded and requires a challenge, which opens a [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app#understanding-the-payment-app-flow) responsible for identifying the POS.
 5. The VTEX Sales App receives the response from the Gateway and opens the app to start the challenge.
-6. The seller interacts with the app to identify the POS to be used in the payment process. Then the app sends the serial number of the POS to the connector and closes.
-7. The connector requests to update the order in the payment processor with the serial number of the POS.
-8. After the app closes, a callback is triggered in the VTEX Sales App to the Gateway, initiating the sequence of requests to make the payment in the POS.
-   I. The Gateway makes a Create Payment request to the connector with the same payment ID used in step 3. This means that the Gateway is waiting for an update on the payment status.
-   II. The connector calls the payment processor to start the payment in the POS.
-   III. The payment processor calls the POS to make the payment with the card. Then, the payment processor returns to the connector telling that the payment in the POS has started.
-   IV. Since it takes some time for the payment to be concluded in the POS, the connector returns to the Gateway once more with an `undefined` status and information to open another Payment App called `vtex.challenge-wait-for-confirmation`.
-   V. The Gateway returns to the VTEX Sales App telling it to open the [Wait for confirmation app](#wait-for-confirmation).
-9. The VTEX Sales App opens the [Wait for confirmation app](#wait-for-confirmation), so the user visually understands that the VTEX Sales App is waiting for the POS to finish the payment.
-   I. The [Wait for confirmation app](#wait-for-confirmation) asks the Gateway for the updated payment status.
-   II. The Gateway uses the Create Payment request to the connector for the updated payment status.
-   III. While the POS does not finish the payment and responds, the Payment Connector keeps responding that the payment status is `undefined`.
-   IV. The Gateway responds to the [Wait for confirmation app](#wait-for-confirmation) app with the `undefined` status.
-   V. The [Wait for confirmation app](#wait-for-confirmation) enters in a loop, repeating from step 9.1., calling the Gateway again for the updated status until the POS finishes the payment and the status change or there is a timeout. The time for the timeout is defined in the `secondsWaiting` parameter from the payload. If there is a timeout, the payment is canceled and the buyer has to finish the order again. More information can be found in the [Wait for confirmation app](#wait-for-confirmation) subsection in this article.
-10. After step 8.3., many of the steps occurred in the background. But from that point, the buyer is allowed to insert the card and interact with the POS to perform the payment.
-11. The POS responds to the payment processor from the request in step 8.3.
+6. The Sales person interacts with the app to identify the POS used in the payment. The app then sends the POS serial number to the connector and closes.
+7. The connector updates the order in the payment processor with the POS serial number.
+8. After the app closes, the VTEX Sales App triggers a callback to the Gateway, starting the sequence of requests to process the payment on the POS.
+   a. The Gateway makes a Create Payment request to the connector with the same payment ID used in step 3, waiting for an update on the payment status.
+   b. The connector calls the payment processor to start the payment on the POS.
+   c. The payment processor calls the POS to process the card payment, then confirms to the connector that the payment has started.
+   d. Because the payment takes time to conclude on the POS, the connector responds to the Gateway again with an `undefined` status and instructions to open another Payment App called `vtex.challenge-wait-for-confirmation`.
+   e. The Gateway instructs the VTEX Sales App to open the [Wait for confirmation app](#wait-for-confirmation).
+9. The VTEX Sales App opens the [Wait for confirmation app](#wait-for-confirmation) to indicate that it is waiting for the POS to finish the payment.
+   a. The [Wait for confirmation app](#wait-for-confirmation) asks the Gateway for the updated payment status.
+   b. The Gateway makes a Create Payment request to the connector for the updated status.
+   c. Until the POS finishes the payment, the connector keeps responding that the status is `undefined`.
+   d. The Gateway responds to the [Wait for confirmation app](#wait-for-confirmation) with the `undefined` status.
+   e. The [Wait for confirmation app](#wait-for-confirmation) enters a loop, repeating from step 9.a and polling the Gateway for the updated status until the POS finishes the payment and the status changes, or until a timeout occurs. The `secondsWaiting` parameter in the payload defines the timeout. On timeout, the payment is canceled and the buyer must place the order again. For details, see the [Wait for confirmation app](#wait-for-confirmation) subsection.
+10. After step 8.c, the previous steps occur in the background. From this point, the buyer can insert the card and interact with the POS to complete the payment.
+11. The POS responds to the payment processor from the request in step 8.c.
 12. The payment processor processes the transaction and uses a webhook to call the connector.
 13. The payment provider makes a mandatory [callback](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) request to the Gateway (without which it is not possible to approve or deny the POS transaction), sending the following information to VTEX:
     - Payload containing card information (`cardBrand`, `firstDigits` and `lastDigits` fields)
@@ -123,13 +138,17 @@ Here we describe the payment flow in the context of a physical store using a POS
 15. The [Wait for confirmation app](#wait-for-confirmation) receives the updated payment status.
 16. The [Wait for confirmation app](#wait-for-confirmation) responds to the VTEX Sales App that it can proceed, so the app is closed.
 17. From a callback, the VTEX Sales App calls the Gateway to know the status of the payment.
-18. The Gateway responds to the VTEX Sales App with the last status. If the payment status is `denied` or `canceled`, the VTEX Sales App shows an error and the buyer can try to finish the purchase again from the checkout. Else, the purchase is concluded and the order is placed in the system.
+18. The Gateway responds to the VTEX Sales App with the final status. If the status is `denied` or `canceled`, the VTEX Sales App shows an error and the buyer can retry the purchase from checkout. Otherwise, the purchase is completed and the order is placed in the system.
 
-### Details on the Create Payment route
+## Implementing the connector
 
-The request body of the [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) endpoint has many parameters. Some of them require more attention in the context of physical stores and are detailed below:
+This section details the connector behavior required for POS payments: the Create Payment request parameters, the asynchronous authorization flow, timeout handling, the Payment Apps used for challenges, and the interaction with the POS.
 
-- `card`: VTEX’s Gateway does not receive card data for payments in physical stores. Therefore, this object is sent with all its fields as `null`.
+### Create Payment route parameters
+
+The request body of the [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) endpoint has many parameters. The following parameters require special attention for physical stores:
+
+- `card`: The VTEX Gateway does not receive card data for payments in physical stores. Therefore, all fields in this object are sent as `null`.
 
 ```json
 "card": {
@@ -145,33 +164,50 @@ The request body of the [Create Payment](https://developers.vtex.com/docs/api-re
     }
 ```
 
-- `paymentMethod`: for payments in physical stores, instead of using values like `"Visa"` and `"Mastercard"`, this field will be filled with the values `"Venda Direta Debito"` or `"Venda Direta Credito"`. If the connector works both for ecommerce and physical payments, it can decide which of them is being used by checking this field.
-- `callbackUrl`: this field is needed since physical payments follow an asynchronous flow. The Gateway uses this field to tell the provider which URL has to be used to notify VTEX about updates in the payment status. First, the payment is created with an `undefined` status. Then, when the status changes to `approved` or `denied`, the provider has to send a request to the URL from the `callbackUrl` field with the updated status. You can find more details about this flow in the [Additional interactions and paymentAppData](#additional-interactions-and-paymentappdata) section and the [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app#understanding-the-payment-app-flow) article.
+- `paymentMethod`: For physical stores, this field contains `"Venda Direta Debito"` or `"Venda Direta Credito"` instead of values like `"Visa"` or `"Mastercard"`. A connector that handles both ecommerce and physical payments can check this field to determine which flow applies.
+- `callbackUrl`: Because physical payments follow an asynchronous flow, this field tells the provider which URL to use when notifying VTEX about status updates. The payment is first created with an `undefined` status. When the status changes to `approved` or `denied`, the provider sends a request with the updated status to the `callbackUrl`. For details, see the [Payment Apps and paymentAppData](#payment-apps-and-paymentappdata) section and the [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app#understanding-the-payment-app-flow) article.
 
 ### Asynchronous flow and delayToCancel
 
 When VTEX Payment Gateway calls the Create Payment endpoint, the connector starts an asynchronous authorization process, which returns immediately with an `undefined` status. This flow is similar to other asynchronous payment methods like Pix and Boleto (common methods used in Brazil). After the Gateway receives the initial status as `undefined`, at some point the payment will be concluded and the status will be updated to `approved` or `denied`.
 
-It is important to note that the payment cannot stay `undefined` forever. There is a limit of time that VTEX’s Gateway waits for the conclusion of the payment. If this time limit is exceeded, the Gateway automatically calls the [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations) endpoint of the connector. This time limit is defined by the connector and informed by the `delayToCancel` field in the response body of the Create Payment route, expressed in seconds.
+The payment cannot stay `undefined` indefinitely. The Gateway waits for the payment to conclude up to a time limit defined by the connector in the `delayToCancel` field of the Create Payment response body, expressed in seconds. If this limit is exceeded, the Gateway automatically calls the connector's [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations) endpoint.
 
-### Additional interactions and paymentAppData
+### Handling timeouts and errors
 
-At VTEX, payments in physical stores follow an asynchronous flow that requires additional interactions with the user, also called challenges, until it is approved. To offer this kind of interaction, the connector has to tell our Gateway from the `paymentAppData` field in the response of the Create Payment endpoint. This field contains the name of the VTEX IO app (`appName`) that will be presented on the VTEX Sales App and the data needed for the app to work (`payload`).
+POS payments involve two independent timeouts. Handle both to avoid stuck transactions:
 
-We have some apps that are ready to use for additional interaction with payments on a POS.
+| Timeout | Set by | Scope | Outcome when exceeded |
+| --- | --- | --- | --- |
+| `secondsWaiting` | Connector (Wait for confirmation payload) | How long the Wait for confirmation app polls for a status update | The app stops polling, the payment is canceled, and the buyer must restart the order. |
+| `delayToCancel` | Connector (Create Payment response) | Maximum time the Gateway keeps the payment as `undefined` | The Gateway calls [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations) on the connector. |
+
+To make the flow resilient:
+
+- **Keep responses under 20 seconds.** Every connector endpoint must respond within 20 seconds; otherwise, the Gateway treats the call as failed.
+- **Set `secondsWaiting` and `delayToCancel` consistently.** `delayToCancel` should be greater than or equal to `secondsWaiting` so the Gateway does not cancel a payment that the app is still waiting for.
+- **Return the latest status on repeated Create Payment calls.** Because the route is idempotent, respond with the current status rather than creating a new payment.
+- **Handle POS-side failures at the processor.** Card declines, insufficient funds, and password retries are resolved between the payment processor and the POS. Report the final result to the Gateway through the callback flow with `approved` or `denied`.
+- **Confirm cancellation on failure.** When a payment is canceled or denied, the VTEX Sales App returns the buyer to checkout so they can retry.
+
+### Payment Apps and paymentAppData
+
+At VTEX, payments in physical stores follow an asynchronous flow that requires additional interactions with the user, also called challenges, before approval. To request this interaction, the connector returns the `paymentAppData` field in the Create Payment response. This field contains the name of the VTEX IO app (`appName`) presented on the VTEX Sales App and the data the app needs to function (`payload`).
+
+VTEX provides ready-to-use apps for additional interaction with payments on a POS.
 
 > ℹ️ Besides the provided apps, partners can also develop apps for their specific needs. You can check more details in the [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app) article.
 
 #### Terminal connector App
 
-This app uses the device camera to read the barcode of the POS that will be used for the purchase. After reading the barcode, the information is sent automatically to the URL defined by the `submitUrl` parameter. The payload sent by the app to the URL uses the following format: `{"serialNumber": "12345"}`.
+This app uses the device camera to read the barcode of the POS used for the purchase. After reading the barcode, the app automatically sends the information to the URL defined by the `submitUrl` parameter, using the format `{"serialNumber": "12345"}`.
 
 Fields used in this app:
 
 - `appName`:
   - `vtex.terminal-connector-app`
 - `payload`:
-  - `submitUrl` (string): URL where the `serialNumber` is sent to.
+  - `submitUrl` (string): URL where the app sends the `serialNumber`.
 
 Payload example:
 
@@ -185,18 +221,18 @@ Payload example:
 }
 ```
 
-![Print of the Terminal connector App using the camera to scan the bar code of the POS](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-ppp-applied-to-pos-2.png)
+![Terminal connector App using the camera to scan the POS barcode](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-ppp-applied-to-pos-2.png)
 
 #### Wait for confirmation
 
-This app is returned by the connector after the payment has started on the POS, so that the VTEX Sales App polls for the payment status. The waiting time for a status change in the payment is defined by the `secondsWaiting` parameter, which comes from the connector in the payload.
+The connector returns this app after the payment starts on the POS, so the VTEX Sales App can poll for the payment status. The `secondsWaiting` parameter in the connector's payload defines how long the app waits for a status change.
 
 Fields used in this app:
 
 - `appName`:
   - `vtex.challenge-wait-for-confirmation`
 - `payload`:
-  - `secondsWaiting` (int): defines how many seconds the app will keep open waiting for a payment status update.
+  - `secondsWaiting` (int): Number of seconds the app stays open waiting for a payment status update.
 
 Payload example:
 
@@ -209,11 +245,16 @@ Payload example:
 
 ### Interaction with the POS
 
-After the user interacts with the app that identifies the POS, the payment processor is responsible for the communication with the POS to read the physical card of the buyer. When communicating with the POS, the payment process is done without VTEX’s intervention. The payment processor is also responsible to deal with retries caused by password errors, insufficient credit, and other reasons.
+After the user interacts with the app that identifies the POS, the payment processor communicates with the POS to read the buyer’s physical card. This communication happens without VTEX intervention. The payment processor also handles retries caused by password errors, insufficient credit, and other reasons.
 
-When the payment processor receives an answer that the payment is either approved or denied, it has to tell VTEX Payment Gateway the response with the payment status. This is done through the callback flow using the URL in the `callbackUrl` field from the Create Payment request. You can find more details about this flow in the [Payment Authorization section of the Payment Provider Protocol](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) article.
+When the payment processor determines that the payment is approved or denied, it must report the status to the VTEX Payment Gateway. This report uses the callback flow with the URL in the `callbackUrl` field from the Create Payment request. For details, see the [Payment Authorization section of the Payment Provider Protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) article.
 
-The callback flow starts with the payment connector calling the URL in the `callbackUrl` field to the Gateway. The callback request can be one of two types: retry or notification. If it is a retry, the `/retry` route will be used and the Gateway will make another Create Payment request to receive the updated status. If it is a notification, the connector calls the `/notification` endpoint to tell the Gateway about the updated status. For physical payments, the payload of the callback request must have three additional fields about the card used in the payment, which are used for conciliations and merchant’s financial reports:
+The callback flow starts when the payment connector calls the `callbackUrl` to the Gateway. The callback request is one of two types:
+
+- **Retry:** The connector calls the `/retry` route, and the Gateway makes another Create Payment request to receive the updated status.
+- **Notification:** The connector calls the `/notification` endpoint to report the updated status to the Gateway.
+
+For physical payments, the callback request payload must include three additional fields about the card, used for reconciliation and merchant financial reports:
 
 - `cardBrand`: Brand of the card.
 - `firstDigits`: First six digits of the card number.
@@ -221,15 +262,15 @@ The callback flow starts with the payment connector calling the URL in the `call
 
 ## Testing your connector
 
-Before a VTEX store can provide payments in the physical world, some setup steps are needed in the payments Gateway. VTEX provides a store to the payment provider for testing during the development process, which will be already configured and ready to use. Nevertheless, you can follow the steps below to configure a store whenever needed:
+Before a VTEX store can process payments in the physical world, the payments Gateway requires some setup. VTEX provides a preconfigured store for testing during development, so these steps are usually not needed. To configure a store manually, follow these steps:
 
-1. Install the connector you developed in the store. If you are creating a PPF connector using VTEX IO, check the steps in the [Payment Provider Framework](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#placing-an-order-with-your-new-connector) article to properly install this type of connector. If you need help with the installation, you can [open a ticket to VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en).
-2. Configure a Gateway affiliation with the installed connector. You can find more details in the [Registering gateway affiliations](https://help.vtex.com/en/tutorial/registering-gateway-affiliations--tutorials_444) article.
-3. Configure a payment condition that works with a POS. For credit cards is **Venda Direta Crédito**, and for debit cards is **Venda Direta Débito**. Remember to choose the configured affiliation. You can find more details in the [Configuring payment conditions](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) article.
-4. Make the payment method available on the VTEX Sales App by following the steps in the [Define payment methods displayed on VTEX Sales App](https://developers.vtex.com/docs/guides/define-payment-methods-displayed-on-vtex-sales-app) article. The ID of the payment conditions used in the `filter` array is `44` for debit and `45` for credit and it can also be checked on the **Payment Conditions** page of the Admin.
-5. [Install the VTEX Sales App](https://help.vtex.com/pt/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh) on a device of your choice.
+1. Install your connector in the store. To install a PPF connector built with VTEX IO, follow the steps in the [Payment Provider Framework](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#placing-an-order-with-your-new-connector) article. For installation help, [open a ticket with the VTEX Support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en).
+2. Configure a Gateway affiliation with the installed connector. For details, see [Registering gateway affiliations](https://help.vtex.com/en/tutorial/registering-gateway-affiliations--tutorials_444).
+3. Configure a payment condition that works with a POS: **Venda Direta Crédito** for credit cards and **Venda Direta Débito** for debit cards. These are the payment condition names displayed in the Admin, which correspond to the `Venda Direta Credito` and `Venda Direta Debito` API method values. Remember to select the configured affiliation. For more details, see [Configuring payment conditions](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455).
+4. Make the payment method available on the VTEX Sales App by following the steps in the [Define payment methods displayed on VTEX Sales App](https://developers.vtex.com/docs/guides/define-payment-methods-displayed-on-vtex-sales-app) article. The payment condition IDs used in the `filter` array are `44` for debit and `45` for credit. You can also check them on the **Payment Conditions** page in the Admin.
+5. [Install the VTEX Sales App](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/2rPSJ8519UCCZo5uEBkqxh) on a device.
 6. Simulate a purchase using your connector as a payment condition.
 
-## Making your connector available to everyone
+## Homologation
 
-When you decide the connector is ready to be available for every VTEX store, you can start the homologation process. You will have to test the endpoints of your connector with the [Payment Provider Test Suite](https://apps.vtex.com/vtex-payment-provider-test-suite/p) app and, if all the tests pass, you will have to [open a ticket to VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en) to publish your connector. You can find more details about the homologation process in the [Payment Provider Protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#3-payment-provider-homologation) and the [Payment Provider Homologation](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) articles.
+When the connector is ready for all VTEX stores, start the homologation process. Test the connector endpoints with the [Payment Provider Test Suite](https://apps.vtex.com/vtex-payment-provider-test-suite/p) app. After all tests pass, [open a ticket with the VTEX Support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en) to publish your connector. For details about the homologation process, see the [Payment Provider Protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#3-payment-provider-homologation) and [Payment Provider Homologation](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) articles.
