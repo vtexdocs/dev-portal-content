@@ -2,14 +2,14 @@
 title: "FastStore WebOps: Self-service Git provider management"
 slug: "2026-07-06-faststore-webops-self-service-git-provider-management"
 type: added
-excerpt: "FastStore WebOps now allows you to change the GitHub organization and repository connected to your project."
+excerpt: "FastStore WebOps now allows you to change the GitHub organization and repository associated with your project."
 createdAt: "2026-07-06T00:00:00.000Z"
 tags:
   - FastStore
   - WebOps
 ---
 
-FastStore WebOps now provides a self-service interface to change the GitHub organization and repository associated with your project. This feature streamlines the process of moving FastStore projects between organizations or repositories, eliminating the need to open support tickets for repository migrations.
+FastStore WebOps now provides a self-service interface to change the GitHub organization and repository associated with your project. This feature streamlines moving FastStore projects between organizations or repositories, eliminating the need to open support tickets for repository migrations.
 
 ## What has changed?
 
@@ -28,9 +28,9 @@ This change simplifies the repository migration process and gives developers mor
 
 ## What needs to be done?
 
-The feature is available to all FastStore projects using WebOps that meet the required permissions (`Owner` role in VTEX Admin and `Admin` role in GitHub repositories).
+The feature is available to all FastStore projects using WebOps that meet the required permissions (`Owner` role in the VTEX Admin and `Admin` role in the GitHub repositories).
 
->⚠️ For FastStore projects hosted in the `vtex-sites` organization, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to move your project to your account's GitHub organization.
+> ⚠️ For FastStore projects hosted in the `vtex-sites` organization, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to move your project to your account's GitHub organization.
 
 To change your Git Provider configuration:
 
@@ -40,6 +40,6 @@ To change your Git Provider configuration:
    - To change repositories in the same organization: Select the target repository from the **Repository** dropdown.
 3. Click `Save` to apply your changes.
 
->⚠️ The repository change feature isn't available for private GitHub instances. The WebOps dashboard won't display the option if your project is connected to a private GitHub instance.
+> ⚠️ The repository change feature isn't available for private GitHub instances. The WebOps dashboard won't display the option if your project is connected to a private GitHub instance.
 
 Learn more in the guide [Moving your FastStore project to a new GitHub repository](https://developers.vtex.com/docs/guides/faststore/webops-moving-your-faststore-project-to-a-new-github-repository).
