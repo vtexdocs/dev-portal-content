@@ -1,9 +1,9 @@
 ---
 title: "New VTEX Sales App Extensibility"
-slug: "2026-07-01-new-vtex-sales-app-extensibility"
+slug: "2026-07-23-new-vtex-sales-app-extensibility"
 type: "added"
-createdAt: "2026-07-01T00:00:00.000Z"
-updatedAt: "2026-07-01T00:00:00.000Z"
+createdAt: "2026-07-23T00:00:00.000Z"
+updatedAt: "2026-07-23T00:00:00.000Z"
 hidden: false
 excerpt: "Customize the assisted-sales journey in Sales App through predefined extension points."
 ---
