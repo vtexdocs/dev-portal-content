@@ -1,10 +1,10 @@
 ---
 title: "App authentication using auth tokens"
 slug: "app-authentication-using-auth-tokens"
-excerpt: "Learn how to use app auth tokens in each context"
+excerpt: "Learn how to use app, storefront, and Admin authentication tokens in VTEX IO clients with the correct VTEX ID cookie headers."
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
-updatedAt: "2025-08-26T14:20:00.000Z"
+updatedAt: "2026-05-07T12:00:00.000Z"
 seeAlso:
  - "/docs/guides/api-authentication-using-user-tokens"
 ---
@@ -53,6 +53,8 @@ export class OmsClient extends JanusClient {
 
 When the app is focused on **store browsing** experience, use `storeUserAuthToken` whenever possible. This way, app permissions will be limited to **shopper** user permissions in the account.
 
+Store (webstore) audience tokens must be sent with the account-suffixed header name `VtexIdclientAutCookie_{account}`, where `{account}` is the VTEX account name in `ctx.account`.
+
 ```ts
 export class OmsClient extends JanusClient {
  constructor(ctx: IOContext, options?: InstanceOptions) {
@@ -60,7 +62,7 @@ export class OmsClient extends JanusClient {
      ...options,
      headers: {
        ...options?.headers,
-       VtexIdclientAutCookie: ctx.storeUserAuthToken,
+       VtexIdclientAutCookie_{{account}}: ctx.storeUserAuthToken,
      },
    })
  }
