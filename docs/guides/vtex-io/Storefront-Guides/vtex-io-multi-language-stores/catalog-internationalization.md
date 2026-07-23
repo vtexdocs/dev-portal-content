@@ -7,11 +7,11 @@ createdAt: "2020-08-31T17:18:54.238Z"
 updatedAt: "2026-06-16T13:09:58.384Z"
 ---
 
-⚠️ This guide describes the GraphQL-based approach to translating catalog content with the `catalog-graphql` app. We recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide) instead, which is the latest solution for managing catalog translations. It offers granular control over translations for products, SKUs, categories, brands, and other entities, integrates natively with Intelligent Search, and supports Translation Management Systems (TMS). Catalog entities don't support simultaneous use of the Catalog Multi-Language API and the GraphQL approach. After activating the Catalog Multi-Language feature for your account, you'll no longer be able to manage translations using GraphQL.
+⚠️ This guide describes the GraphQL-based approach to translating catalog content with the `catalog-graphql` app. We recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide) instead, which is the latest solution for managing catalog translations. It gives you granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). Catalog entities don't support simultaneous use of the Catalog Multi-Language API and the GraphQL approach. After activating the Catalog Multi-Language feature for your account, you'll no longer be able to manage translations using GraphQL.
 
-In this guide, you'll learn how to override automatic message translations in your store's Catalog, such as product names and descriptions. By following these instructions, you can provide more specific content in different languages.
+In this guide, you'll learn how to override automatic message translations in your store Catalog, such as product names and descriptions. By following these instructions, you can provide more specific content in different languages.
 
-Catalog messages are translatable text strings associated with the store catalog. These messages are stored externally within the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview), which manages your store's sales channels, categories, brands, products, SKUs, and specifications.
+Catalog messages are translatable text strings associated with the store catalog. These messages are stored externally within the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview), which manages store sales channels, categories, brands, products, SKUs, and specifications.
 
 Below is a list of Catalog API settings that automatically translate based on the user's locale:
 
@@ -27,10 +27,11 @@ To ensure accuracy and brand consistency, you can customize VTEX automatic trans
 
 ## Instructions
 
-To translate text messages from your store's Catalog, follow these steps:
+To translate text messages from the store Catalog, follow these steps:
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
 2. In the VTEX Admin, go to **Store Settings > Storefront > GraphQL IDE**.
+
 3. From the dropdown list, choose the `vtex.catalog-graphql` app.
 4. Click _Query variables_ at the bottom of the page.
 
@@ -61,7 +62,7 @@ mutation translate($args:CategoryInputTranslation, $locale:Locale){
 
 #### Query variables
 
-Complete the _Query variables_ section with the desired translations for each parameter.
+Complete the _Query variables_ section with the desired translations for each parameter:
 
 ```json
 {
@@ -88,7 +89,7 @@ Complete the _Query variables_ section with the desired translations for each pa
 - `linkId`: The `textLink` (must **not** be translated unless your store is cross-border).
 - `locale`: Target translation locale.
 
-> ℹ️ If you have a cross-border store, the `linkId` serves as the category URL slug. The [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) app will automatically create an alias using the translated slug for each target locale and store it in the `resolveAs` field for that locale's internal route. For example, a category with the slug `electronics` at `http://{storename}.com/us/electronics/d` could have the translated slug `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
+>ℹ️ If you have a cross-border store, the `linkId` serves as the category URL slug. The [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) app will automatically create an alias using the translated slug for each target locale and store it in the `resolveAs` field for that locale's internal route. For example, a category with the slug `electronics` at `http://{storename}.com/us/electronics/d` could have the translated slug `eletronicos` for the `pt-BR` binding, as in `http://{storename}.com/br/eletronicos/d`.
 
 ### Brand
 
@@ -104,7 +105,7 @@ mutation translate($args:BrandInputTranslation, $locale:Locale){
 
 #### Query variables
 
-Complete the _Query variables_ section with the desired translations for each parameter.
+Complete the _Query variables_ section with the desired translations for each parameter:
 
 ```json
 {
@@ -140,7 +141,7 @@ mutation translate($args:ProductInputTranslation, $locale:Locale){
 
 #### Query variables
 
-Complete the _Query variables_ section with the desired translations for each parameter.
+Complete the _Query variables_ section with the desired translations for each parameter:
 
 ```json
 {
@@ -170,7 +171,7 @@ Complete the _Query variables_ section with the desired translations for each pa
 - `linkId`: The `textLink` (must **not** be translated unless your store is cross-border).
 - `locale`: Target translation locale.
 
-> ℹ️ If you have a cross-border store, the `linkId` serves as the product URL slug. The [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) app will automatically create an alias using the translated slug for each target locale and store it in the `resolveAs` field for that locale's internal route. For example, a product with the slug `blue-top-retro-camera` at `http://{storename}.com/us/blue-top-retro-camera/p` could have the translated slug `camera-retro-azul` for the `pt-BR` binding, as in `http://{storename}.com/br/camera-retro-azul/p`.
+>ℹ️ If you have a cross-border store, the `linkId` serves as the product URL slug. The [Rewriter](https://developers.vtex.com/docs/apps/vtex.rewriter) app will automatically create an alias using the translated slug for each target locale and store it in the `resolveAs` field for that locale's internal route. For example, a product with the slug `blue-top-retro-camera` at `http://{storename}.com/us/blue-top-retro-camera/p` could have the translated slug `camera-retro-azul` for the `pt-BR` binding, as in `http://{storename}.com/br/camera-retro-azul/p`.
 
 ### SKU
 
@@ -186,7 +187,7 @@ mutation translate($args:SKUInputTranslation, $locale:Locale){
 
 #### Query variables
 
-Complete the _Query variables_ section with the desired translations for each parameter.
+Complete the _Query variables_ section with the desired translations for each parameter:
 
 ```json
 {
@@ -216,7 +217,7 @@ mutation translate($args:FieldInputTranslation, $locale:Locale){
 
 #### Query variables
 
-Complete the _Query variables_ section with the desired translations for each parameter.
+Complete the _Query variables_ section with the desired translations for each parameter:
 
 ```json
 {
@@ -246,7 +247,7 @@ mutation translate($args:FieldValueInputTranslation, $locale:Locale){
 
 #### Query variables
 
-Complete the _Query variables_ section with the desired translations for each parameter.
+Complete the _Query variables_ section with the desired translations for each parameter:
 
 ```json
 {
