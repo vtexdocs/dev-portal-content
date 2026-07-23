@@ -1,9 +1,9 @@
 ---
 title: "VTEX IO: VBase deprecation and Master Data migration"
-slug: 2026-07-31-vtex-io-vbase-deprecation-master-data-migration
+slug: 2026-08-03-vtex-io-vbase-deprecation-master-data-migration
 hidden: false
 type: "deprecated"
-createdAt: "2026-07-31T12:00:00.000Z"
+createdAt: "2026-08-03T12:00:00.000Z"
 excerpt: "VBase will be gradually deprecated for VTEX IO apps. Master Data becomes the platform's single database solution."
 tags:
   - VTEX IO
@@ -15,10 +15,10 @@ VBase, the database solution available to VTEX IO apps, will be gradually deprec
 
 VBase will no longer be available for app development and running apps. The VBase phase-out uses the same terminology of [builder version statuses](https://developers.vtex.com/docs/guides/vtex-io-documentation-builder-version-statuses) and will happen in the following phases:
 
-| Date               | Phase                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Date               | Phase                                                                                                                                                                                                                                                                                                                                                                                                            |
+| :----------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | February 1st, 2027 | **Deprecated:** [Publishing](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) and [linking](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) new apps and new [major versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) of existing apps that use VBase are blocked. |
-| July 1st, 2027     | **Decommissioned:** Publishing and linking new [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) (minor and patch) of existing apps that use VBase are blocked.                                                                                                                                              |
+| July 1st, 2027     | **Decommissioned:** Publishing and linking new [versions](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning) (minor and patch) of existing apps that use VBase are blocked.                                                                                                                                                                 |
 | October 1st, 2027  | **Non-functional:** Apps using VBase no longer work on the platform.                                                                                                                                                                                                                                                                                                                                             |
 
 ## Why did we make this change?
