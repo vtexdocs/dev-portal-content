@@ -327,8 +327,6 @@ export class MyPCICertifiedClient extends SecureExternalClient {
 
 Now that you have a new connector ready to be used, you can test it entirely in the production flow using your store's Checkout.
 
-> ⚠️ The account must be allowed to test IO Connectors. This must be [requested via ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing the name of the app and the account where the tests will be made.
-
 A prerequisite for this procedure is to have products for sale at your store for testing. To place an order with your new connector:
 
 1. Launch a beta version of your connector. E.g.: `vtex.payment-provider-test@0.1.0-beta`. If you need, check the [Making your app publicly available article](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
