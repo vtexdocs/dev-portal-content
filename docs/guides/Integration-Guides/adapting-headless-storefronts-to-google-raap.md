@@ -20,7 +20,7 @@ When a customer clicks a regional Google Shopping ad, Google expects the landing
 ## Compatibility by storefront type
 
 | Store type | Status regarding |
-|---|---|
+| --- | --- |
 | Store Framework or FastStore | Native support. The `region_id` parameter and session regionalization are already handled by the platform; no storefront adaptation is required. |
 | Headless | Adaptation required. The store's technical team must implement the flow in this guide. |
 | CMS Portal (Legacy) | Adaptation is not possible. Portal accounts must [migrate to headless](https://developers.vtex.com/docs/guides/headless-commerce) or to Store Framework or FastStore to use regional price and availability in Google Shopping ads with consistency on the PDP. |
@@ -55,7 +55,7 @@ vtex:{countryCode}:{postalCode}
 ```
 
 | Part | Meaning | Example |
-|---|---|---|
+| --- | --- | --- |
 | `vtex` | Fixed format prefix | `vtex` |
 | `countryCode` | Country code in the ISO 3166-1 alpha-3 standard | `BRA`, `USA`, `ARG` |
 | `postalCode` | Postal code with digits only | `04561000`, `10001` |
@@ -63,7 +63,7 @@ vtex:{countryCode}:{postalCode}
 Examples of the value in the URL and the content after decoding:
 
 | `region_id` in the URL | Decoded value |
-|---|---|
+| --- | --- |
 | `dnRleDpCUkE6MjAyNDEyMjA=` | `vtex:BRA:20241220` |
 | `dnRleDpVU0E6MTAwMDE=` | `vtex:USA:10001` |
 | `dnRleDpCUkE6MDQ1NjEwMDA=` | `vtex:BRA:04561000` |
@@ -100,7 +100,7 @@ In addition to applying the region via `region_id`, the PDP must fulfill the pro
 Choose where the regionalization logic will run in the headless architecture. This also defines how the PDP search and rendering will be executed:
 
 | Pattern | When to use | How to execute |
-|---|---|---|
+| --- | --- | --- |
 | Middleware | Store with a server-side layer on the destination route | On the server, in this order: read `region_id` > save locality in the session > fetch price and inventory > serve the PDP code. The first response is already regionalized; the customer does not need a reload. |
 | PDP frontend | Headless front without middleware on the destination route | On PDP load: read `region_id` > save the session on the client > fetch price and inventory again with the updated `vtex_session` > update the UI. If the page has already loaded national data, discard it and replace it with the regional result. Do not ask the customer for a postal code. |
 
