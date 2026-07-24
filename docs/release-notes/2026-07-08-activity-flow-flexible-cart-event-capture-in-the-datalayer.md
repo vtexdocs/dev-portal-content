@@ -13,7 +13,7 @@ The [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) Web S
 
 ## What has changed?
 
-Previously, add-to-cart measurement relied on product listing page (PLP) and product detail page (PDP) click-through as a proxy. This approach had two key limitations: it missed sessions that landed directly on a PDP without going through a PLP, and it ignored add-to-cart actions that happened on the PLP itself, which is common in grocery and similar verticals. Additionally, event capture broke when stores used different naming conventions, ran Google Analytics 4 (GA4) and Google Analytics Universal (GAU) simultaneously, or loaded the Activity Flow script more than once.
+Previously, add-to-cart measurement relied on product listing page (PLP) and product details page (PDP) click-through as a proxy. This approach had two key limitations: it missed sessions that landed directly on a PDP without going through a PLP, and it ignored add-to-cart actions that happened on the PLP itself, which is common in grocery and similar verticals. Additionally, event capture broke when stores used different naming conventions, ran Google Analytics 4 (GA4) and Google Analytics Universal (GAU) simultaneously, or loaded the Activity Flow script more than once.
 
 Now, the data-layer plugin addresses these limitations with the following improvements:
 
@@ -33,7 +33,7 @@ This change accounts for direct-to-PDP sessions and PLP-level add-to-cart action
 
 The cart event capture mechanism depends on cart events being available in the `dataLayer`, since the Activity Flow Web Script reads them from `window.dataLayer` to generate Activity Flow events. Therefore, for this feature to work properly, your storefront must expose cart events in the `dataLayer`.
 
-No extra action is required for stores using VTEX native storefront solutions - FastStore, Store Framework, or CMS Portal (Legacy) - where Activity Flow is installed by default.
+No extra action is required for stores using VTEX native storefront solutions — FastStore, Store Framework, or CMS Portal (Legacy) — where Activity Flow is installed by default.
 
 If you use a headless storefront, make sure the [Activity Flow Web Script](https://developers.vtex.com/docs/guides/installing-activity-flow-in-headless-stores) is installed and loaded only once per page. Once the script is in place, the improved cart event capture applies automatically.
 
