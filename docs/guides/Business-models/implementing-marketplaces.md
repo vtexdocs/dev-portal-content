@@ -51,7 +51,7 @@ Choose this path when your VTEX store acts as a marketplace, and you want to onb
 Use this guide to learn how to:
 
 * Define your marketplace operation.
-* Develop the custom connector.
+* Develop a custom connector.
 * Configure sales channels for sellers.
 * Add and configure external sellers.
 * Map catalog data.
