@@ -68,7 +68,7 @@ To use Delivery Promise, customers must provide a delivery address early in thei
    | `shipping-method-selector` | Optional. A control for choosing between delivery and pickup after setting a location.                                                                              |
    | `pickup-point-selector`    | Optional. A control for choosing which pickup point to use after setting a location.                                                                                |
 
-   > ℹ️ The `shopper-location-setter` block is required, and you must always include it in the header. `shipping-method-selector` and `pickup-point-selector` are optional. These blocks complement the location setter but don't replace it, since both depend on the location already set in the session. Add them only if you want to expose additional controls in the UI. Otherwise, keep the header simple: either `shopper-location-setter` alone, or `shopper-location-setter` paired with one of the selectors. Using all three together is possible but uncommon.
+   >ℹ️ The `shopper-location-setter` block is required, and you must always include it in the header. `shipping-method-selector` and `pickup-point-selector` are optional. These blocks complement the location setter but don't replace it, since both depend on the location already set in the session. Add them only if you want to expose additional controls in the UI. Otherwise, keep the header simple: either `shopper-location-setter` alone, or `shopper-location-setter` paired with one of the selectors. Using all three together is possible but uncommon.
 
    Choose the configuration that matches your use case:
 
@@ -217,7 +217,6 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
    ```
 
 3. Set `showShippingMethodFacet` to `true` in each flexible search layout where you want the Delivery Promise filters to appear. By default, this property is disabled, so the shipping method filter remains hidden unless you explicitly enable it. The example above enables it on both desktop and mobile layouts.
-
 4. Optionally, use the `availableShippingValues` prop in the same layout blocks to define which shipping options to display. If you don't define this prop or set it to an empty array, the system uses the default options: `delivery`, `pickup-in-point`, and `pickup-nearby`. When you provide a non-empty array, it replaces the default entirely and shows only the specified values. Supported values correspond to the search API facet names: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
 
    Example with an explicit list (same as the default) plus `pickup-all` on desktop and mobile:
