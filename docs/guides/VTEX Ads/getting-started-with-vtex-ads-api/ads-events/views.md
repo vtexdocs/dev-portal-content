@@ -19,6 +19,8 @@ VTEX Ads uses view tracking to measure when banner advertisements are effectivel
 >
 > This is extremely important to ensure long-term stability of the integration, because the parameters of the event URL may change over time, but the integration itself does not.
 
+>ℹ️ View events are not budget-gated the way impressions are. When a campaign reaches its daily budget cap, impression counting is interrupted while view events may still be recorded, so reported views can exceed reported impressions. See [Understanding ads events](https://developers.vtex.com/docs/guides/understanding-ads-events) for the full budget-validation model.
+
 ## Sending a view event
 
 Use the `POST` [Track ad views](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/view/-ad_id-) endpoint to send view events. Check the endpoint documentation for detailed information about all available fields.

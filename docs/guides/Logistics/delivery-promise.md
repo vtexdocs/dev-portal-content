@@ -77,7 +77,7 @@ Learn how to configure these components in the [Setting up Delivery Promise comp
 
 ## Delivery Promise for headless stores
 
-When using a headless approach in your store, you can use the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) to enable Delivery Promise. To learn how to apply it to your store, read the [Delivery Promise for headless stores (Beta)](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide.
+When using a headless approach in your store, you can use the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) to enable Delivery Promise. To learn how to apply it to your store, read the [Delivery Promise for headless stores (Beta)](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide.
 
 ## Delivery Promise for FastStore
 
