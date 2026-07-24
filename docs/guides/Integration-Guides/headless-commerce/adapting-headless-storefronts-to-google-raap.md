@@ -1,7 +1,7 @@
 ---
 title: "How to adapt headless storefronts to Google regional price and availability"
 slug: "adapting-headless-storefronts-to-google-raap"
-hidden: true
+hidden: false
 createdAt: "2026-07-15T00:00:00.000Z"
 updatedAt: "2026-07-16T00:00:00.000Z"
 excerpt: "Learn how to adapt headless storefronts so the product detail page shows regional price and availability when the customer returns from Google Shopping ads. CMS Portal (Legacy) accounts must migrate to headless or VTEX IO."
