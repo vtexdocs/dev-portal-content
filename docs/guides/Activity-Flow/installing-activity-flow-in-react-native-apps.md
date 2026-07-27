@@ -4,7 +4,7 @@ slug: "installing-activity-flow-in-react-native-apps"
 excerpt: "Install the Activity Flow SDK in React Native apps for Android and iOS to track navigation, order events, deep links, ads, and customer interactions."
 hidden: false
 createdAt: "2025-12-18T16:30:39.842Z"
-updatedAt: "2026-07-22T00:00:00.000Z"
+updatedAt: "2026-07-27T00:00:00.000Z"
 seeAlso:
   - "/docs/guides/activity-flow"
 ---
@@ -275,7 +275,7 @@ To enable deep-link handling in your iOS app, add your URL scheme to the `Info.p
     }
     ```
 
-Your iOS app can now be launched from both web links (`https://mystore.com/products/42`) and custom scheme links: (`myapp://products/42`).
+Your iOS app can now be launched from both web links (`https://mystore.com/products/42`) and custom scheme links: `myapp://products/42`.
 
 ### Tracking ad events
 
