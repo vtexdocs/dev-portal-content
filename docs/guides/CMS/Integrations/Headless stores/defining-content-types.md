@@ -64,8 +64,8 @@ Uploading a schema replaces the current schema configuration for the selected st
 Generate and upload the bundle with the headless base schema:
 
 ```bash
-vtex content generate-schema cms/components cms/pages
-  --out schema.json
+vtex content generate-schema cms/components cms/pages \
+  --out schema.json \
   --base vtex.headless
 
 vtex content upload-schema schema.json
@@ -278,13 +278,13 @@ Your storefront maps `landingPage` to its page template, reads `slug` for routin
   title="Understanding content modeling and architecture for headless stores"  
   description="Review modeling concepts, design principles, and recommended page patterns."  
   linkTitle="See more"  
-\>
+/>
 
 <WhatsNextCard  
   linkTo="https://developers.vtex.com/docs/guides/content-plugin"  
   title="Content plugin"  
   description="Generate and upload schema bundles for your headless store."  
   linkTitle="See more"  
-\>
+/>
 
 </Flex>
