@@ -3,7 +3,7 @@ title: "Internationalization"
 slug: "vtex-io-multi-language-stores"
 hidden: false
 createdAt: "2020-08-31T17:15:01.754Z"
-updatedAt: "2026-06-16T13:43:00.948Z"
+updatedAt: "2026-07-27T13:43:00.948Z"
 excerpt: "Get to know the internationalization process for creating a multi-language ecommerce store using Store Framework."
 ---
 
