@@ -4,7 +4,7 @@ slug: "activity-flow"
 excerpt: "Get started with Activity Flow, VTEX's Real User Monitoring (RUM) solution."
 hidden: false
 createdAt: "2025-12-02T12:37:39.964Z"
-updatedAt: "2026-07-08T00:00:00.000Z"
+updatedAt: "2026-07-27T00:00:00.000Z"
 ---
 
 Activity Flow is the VTEX solution for Real User Monitoring (RUM) that captures and analyzes shopper navigation actions to generate metrics and insights that help improve user experience.
