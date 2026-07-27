@@ -14,8 +14,8 @@ This guide covers how to define Content Types: where files live, which propertie
 
 ## Before you begin
 
-* [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)  
-* [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) installed  
+* [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
+* [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) installed
 * Component schemas your Content Types reference (for example, `SEO`, `PromoBanner`) are defined under `cms/components/`
 
 ## Organizing Content Type files
@@ -55,7 +55,7 @@ You can co-locate Content Type files under `cms/pages/` (shown above) or use ano
 
 ### Uploading the schema bundle
 
-> ⚠️ Remember, this step applies only to headless stores. Do not use the `vtex.headless` base schema for FastStore stores, as it may remove the default FastStore content types and components from the store schema.
+> ⚠️ Remember, this step applies only to headless stores. Don't use the `vtex.headless` base schema for FastStore stores, as it may remove the default FastStore content types and components from the store schema.
 
 Before uploading the schema, open the generated `schema.json` file and review its contents. Make sure it includes the expected content types, components, and pages for your headless store.
 
@@ -75,7 +75,7 @@ Replace `{storeId}` with your headless store ID when prompted, or pass it with t
 
 ## Declaring required and optional properties
 
-A Content Type schema is a JSON Schema `object` with CMS-specific metadata. The table below lists every property you are likely to use.
+A Content Type schema is a JSON Schema `object` with CMS-specific metadata. The table below lists every property you're likely to use.
 
 ### CMS-specific properties
 
@@ -88,7 +88,7 @@ A Content Type schema is a JSON Schema `object` with CMS-specific metadata. The 
 | `properties` | ✅ | Field and relation definitions for the Content Type. |
 | `$extends` | Optional | Inherits structure from a base template (for example, `#/$defs/base-page-template`). |
 | `description` | Optional | Help text shown to editors in the Admin. |
-| `required` | Optional | Lists top-level fields editors must fill before saving. |
+| `required` | Optional | Lists top-level fields editors must complete before saving. |
 
 ### Common fields inside `properties`
 
@@ -98,7 +98,7 @@ A Content Type schema is a JSON Schema `object` with CMS-specific metadata. The 
 | `seo` | Fixed SEO block on every entry | Embed with `"$ref": "#/components/SEO"`. |
 | `sections` | Dynamic page blocks | Reference `"#/$defs/$ALLOW_ALL_COMPONENTS"` or a restricted `anyOf`. |
 
-> ℹ️ `$ALLOW_ALL_COMPONENTS` is **generated** when you run `vtex content generate-schema`. Reference it in Content Types — do not create it manually in individual files.
+> ℹ️ `$ALLOW_ALL_COMPONENTS` is **generated** when you run `vtex content generate-schema`. Reference it in Content Types — don't create it manually in individual files.
 
 ### `identifierKeys` and `$singleton`
 
@@ -239,7 +239,7 @@ The example below defines a multi-instance **Landing Page** Content Type with:
 
 | Property | Mechanism | Behavior |
 | :---- | :---- | :---- |
-| `seo` | `$ref` to `#/components/SEO` | Every entry includes one SEO block with `title`, `description`, and `canonical`. Editors fill it as part of the landing page form. |
+| `seo` | `$ref` to `#/components/SEO` | Every entry includes one SEO block with `title`, `description`, and `canonical`. Editors complete it as part of the landing page form. |
 | `sections` | `$ref` to `$ALLOW_ALL_COMPONENTS` | Editors add any registered component. Each item in the array includes a `componentKey` at publish time. |
 | `heroImage` | `media-gallery` widget | Stores a Media Gallery asset URL as a string. Your storefront renders it in the page layout outside the section loop. |
 
