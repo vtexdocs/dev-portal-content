@@ -2,7 +2,7 @@
 title: "Multiple page templates"
 ---
 
-Multiple page templates allow the creation of flexible layouts for Product Details and Product Listing Pages (PDPs and PLPs) in Headless CMS. This feature allows you to create and manage pages hierarchically, leveraging product information, user context, product type, brand specifications, and template hierarchy.
+Multiple page templates allow the creation of flexible layouts for Product Details and Product Listing Pages (PDPs and PLPs) in Headless CMS. This feature allows you to create and manage pages hierarchically, leveraging product information, user context, product type, brand specifications, [collections](https://help.vtex.com/docs/tutorials/collection-subcategory), and template hierarchy.
 
 This document outlines the implementation details, usage instructions, and template hierarchy logic for integrating the templates into your FastStore project.
 
@@ -76,7 +76,7 @@ The system first searches for a template named after the product slug. For examp
 
 ### PLP template selection criteria
 
-PLP templates are selected in FastStore based on URL slug matching. 
+PLP templates are selected in FastStore based on URL slug matching. This applies to [collections](https://help.vtex.com/docs/tutorials/collection-subcategory) as well as to departments, categories, and subcategories: a collection reachable at `/summer-collection`, for example, can have a template defined for the `/summer-collection` slug, and more specific collection slugs take precedence over generic templates.
 
 The PLP template selection process follows this order:
 
@@ -209,7 +209,7 @@ For PLPs, we will go over the following possible templates:
 - [Slug](#slug-template-plp)
 - [Generic PLP](#generic-plp-template).
 
-When using PLPs, this type of page template is recognized by the slug pattern. In the example, we will use the [office/chairs slug](https://starter.vtex.app/office/chairs) to render the PLP template.
+When using PLPs, this type of page template is recognized by the slug pattern. In the example, we will use the [office/chairs slug](https://starter.vtex.app/office/chairs) to render the PLP template. The same slug-based logic applies to [collection](https://help.vtex.com/docs/tutorials/collection-subcategory) pages, so you can define templates for collection slugs in the same way.
 
 #### Slug template (PLP)
 

@@ -4,11 +4,12 @@ slug: "2026-07-07-activity-flow-customer-interaction-event-tracking-for-mobile-a
 type: "added"
 excerpt: "The Activity Flow SDK for React Native and Flutter now tracks click, view, and impression events."
 createdAt: "2026-07-07T00:00:00.000Z"
+updatedAt: "2026-07-22T00:00:00.000Z"
 tags:
   - Activity Flow
 ---
 
-The [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) SDK for mobile now supports customer interaction event tracking (click, view, and impression) in React Native and Flutter apps. This aligns the mobile SDKs with the web script, so you can measure the full engagement funnel (rendered → seen → clicked) for any component in your app, not just page views and ad events.
+The [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) SDK for mobile now supports customer interaction event tracking (clicks, views, and impressions) in React Native and Flutter apps. This aligns the mobile SDKs with the web script, so you can measure the full engagement funnel (rendered → seen → clicked) for any component in your app, not just page views and ad events.
 
 ## What has changed?
 
