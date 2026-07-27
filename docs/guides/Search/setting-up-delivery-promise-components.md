@@ -10,7 +10,7 @@ seeAlso:
  - "/docs/guides/gathering-delivery-promise-information"
 ---
 
->⚠️ This feature is in open beta phase. If you're interested in testing the feature, contact our [Support team](https://support.vtex.com/hc/en-us). For more information, see the [official announcement](https://help.vtex.com/announcements/2026-07-01-delivery-promise-in-open-beta).
+>⚠️ This feature is in open beta phase. If you're interested in testing it, contact our [Support team](https://support.vtex.com/hc/en-us).
 
 The [Delivery Promise (Beta)](https://help.vtex.com/en/docs/tutorials/delivery-promise-beta) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products the store can deliver to the provided address or pick up at available locations.
 
