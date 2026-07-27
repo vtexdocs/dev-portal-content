@@ -4,7 +4,7 @@ excerpt: "Learn how to override automatic message translations from the Catalog.
 slug: "catalog-internationalization"
 hidden: false
 createdAt: "2020-08-31T17:18:54.238Z"
-updatedAt: "2026-06-16T13:09:58.384Z"
+updatedAt: "2026-07-27T13:09:58.384Z"
 ---
 
 ⚠️ This guide describes the GraphQL-based approach to translating catalog content with the `catalog-graphql` app. We recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide) instead, which is the latest solution for managing catalog translations. It gives you granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). Catalog entities don't support simultaneous use of the Catalog Multi-Language API and the GraphQL approach. After activating the Catalog Multi-Language feature for your account, you'll no longer be able to manage translations using GraphQL.
