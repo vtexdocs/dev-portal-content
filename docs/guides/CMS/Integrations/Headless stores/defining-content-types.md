@@ -26,6 +26,7 @@ Each Content Type lives in its own file. The [Content plugin](https://developers
 
 For headless storefronts, keep Content Type files separate from component schemas:
 
+```bash
 your-headless-project/
 ├── cms/
 │   ├── components/
@@ -62,6 +63,7 @@ Uploading a schema replaces the current schema configuration for the selected st
 
 Generate and upload the bundle with the headless base schema:
 
+```bash
 vtex content generate-schema cms/components cms/pages
   --out schema.json
   --base vtex.headless
@@ -269,7 +271,7 @@ Your storefront maps `landingPage` to its page template, reads `slug` for routin
 
 ## Related resources
 
-<Flex\>
+<Flex>
 
 <WhatsNextCard  
   linkTo="https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores"  
@@ -285,4 +287,4 @@ Your storefront maps `landingPage` to its page template, reads `slug` for routin
   linkTitle="See more"  
 \>
 
-</Flex\>
+</Flex>
