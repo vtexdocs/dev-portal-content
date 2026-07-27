@@ -26,7 +26,6 @@ Each Content Type lives in its own file. The [Content plugin](https://developers
 
 For headless storefronts, keep Content Type files separate from component schemas:
 
-```md
 your-headless-project/
 ├── cms/
 │   ├── components/
@@ -63,7 +62,6 @@ Uploading a schema replaces the current schema configuration for the selected st
 
 Generate and upload the bundle with the headless base schema:
 
-```shell
 vtex content generate-schema cms/components cms/pages
   --out schema.json
   --base vtex.headless
