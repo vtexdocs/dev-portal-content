@@ -1,9 +1,9 @@
 ---
 title: "Activity Flow: Flexible cart event capture in the dataLayer"
-slug: "2026-07-27-activity-flow-flexible-cart-event-capture-in-the-datalayer"
+slug: "2026-07-28-activity-flow-flexible-cart-event-capture-in-the-datalayer"
 type: "improved"
 excerpt: "The Activity Flow Web Script data-layer plugin now captures add-to-cart events reliably across storefronts and analytics setups."
-createdAt: "2026-07-27T00:00:00.000Z"
+createdAt: "2026-07-28T00:00:00.000Z"
 tags:
   - Activity Flow
   - Intelligent Search
