@@ -6,15 +6,15 @@ excerpt: "Learn how to act as a marketplace and onboard non-VTEX (external) sell
 createdAt: "2026-06-16T00:00:00.000Z"
 ---
 
-Integrating non-VTEX sellers into your VTEX store lets you expand your product assortment, reach new customers, and increase revenue through commissions, without holding the inventory yourself.
+Integrating non-VTEX sellers into your VTEX store allows you to expand your product assortment, reach new customers, and increase revenue through commissions, all without holding the inventory yourself.
 
-This guide shows how to onboard sellers that operate outside the VTEX platform (external sellers) and start receiving and selling their products, managing everything from your VTEX Admin.
+This guide shows how to onboard sellers that operate outside the VTEX platform (external sellers), start receiving and selling their products, and manage everything from your VTEX Admin.
 
 ℹ️ If you want to integrate sellers that already have a VTEX store, see the guide [Integrating VTEX stores](https://developers.vtex.com/docs/guides/integrating-vtex-stores). To learn how to sell your own products on other marketplaces, see [Integrating with non-VTEX marketplaces](https://developers.vtex.com/docs/guides/integrating-with-non-vtex-marketplaces).
 
 ## Understanding the integration architecture
 
-When your VTEX store receives and sells products from other stores, it's **acting as a marketplace**. VTEX's native multi-seller architecture decouples the marketplace subsystem from the seller subsystem, so you can onboard sellers and sell their offers in your storefront while each party keeps its own catalog and responsibilities.
+When your VTEX store receives and sells products from other stores, it's **acting as a marketplace**. The native multi-seller architecture of VTEX decouples the marketplace subsystem from the seller subsystem, so you can onboard sellers and sell their offers in your storefront while each party manages its own catalog and responsibilities.
 
 A **non-VTEX seller** (external seller) is a store that isn't hosted on the VTEX platform that owns its products and is usually responsible for fulfilling its own orders. Unlike VTEX sellers, external sellers don't have a VTEX account, so they exchange catalog, price, inventory, and order data with your marketplace through endpoints and APIs.
 
@@ -36,7 +36,7 @@ Before onboarding sellers, define the operation to choose the setup that best fi
 * **Seller types:** Define whether you'll integrate external sellers, VTEX sellers, or both. For details, see [Marketplace strategies at VTEX](https://help.vtex.com/docs/tutorials/marketplace-strategies-at-vtex#marketplace-types).
 * **Integration strategy:** Plan how you'll build and maintain the custom connector that integrates each external seller's platform with your marketplace through VTEX APIs.
 * **Seller hunting:** Identify and recruit sellers that cover your desired product variety, inventory availability, and logistics coverage. For details, see [Find sellers](https://help.vtex.com/docs/tutorials/find-sellers).
-* **Catalog ownership:** Define who manages product catalogs (sellers, your marketplace team, or both), how offers are approved, and which product information is mandatory (for example, images, descriptions, and attributes).
+* **Catalog ownership:** Define who manages product catalogs (sellers, your marketplace team, or both), how offers are approved, and which product information is required (for example, images, descriptions, and attributes).
 * **Order fulfillment:** Choose how orders placed in your marketplace will be fulfilled (for example, fulfillment by each seller, centralized logistics, or a hybrid model).
 * **Payment and settlement model:** Define how payments will be collected from shoppers and distributed to sellers, including settlement rules, commission structure, and responsibility for refunds and chargebacks.
 
