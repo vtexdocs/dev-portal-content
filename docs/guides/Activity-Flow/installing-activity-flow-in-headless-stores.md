@@ -1,9 +1,10 @@
 ---
-title: "Installing Activity Flow in Headless stores"
+title: "Installing Activity Flow in headless stores"
 slug: "installing-activity-flow-in-headless-stores"
-excerpt: "Learn how to install Activity Flow in your Headless store."
+excerpt: "Learn how to install Activity Flow in your headless store."
 hidden: false
 createdAt: "2025-12-02T12:37:39.964Z"
+updatedAt: "2026-07-09T00:00:00.000Z"
 ---
 
 In this guide, you'll learn how to install and configure the [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) script in your headless store.
@@ -36,7 +37,7 @@ f=v.vtexaf=v.vtexaf||function(){(f.q=f.q||[]).push(arguments)};
 
 ### Step 2 - Defining default parameters
 
-Next, configure the identification parameters of your store.
+Next, configure your store's identification parameters.
 
 These settings allow Activity Flow to recognize the account, environment, and workspace to which the events belong.
 
