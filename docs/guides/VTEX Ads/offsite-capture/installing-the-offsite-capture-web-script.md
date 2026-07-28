@@ -7,7 +7,7 @@ updatedAt: "2026-07-10T00:00:00.000Z"
 excerpt: "Install and configure the VTEX Ads offsite capture web script on VTEX native or independent storefronts so offsite clicks and conversions are attributed to your campaigns."
 ---
 
-Offsite traffic and conversion tracking rely on a lightweight **VTEX Ads** web script that runs on your storefront. This guide explains how offsite capture works and walks you through publisher provisioning, installing the script for your store type, validating capture, and troubleshooting zeroed metrics.
+Offsite traffic and conversion tracking rely on a lightweight **VTEX Ads** web script that runs on your storefront. This guide explains how offsite capture works and walks you through publisher provisioning, installing the script for your store type, validating capture, and troubleshooting metrics showing 0.
 
 The offsite capture web script is a small browser JavaScript script that detects visitors arriving from an offsite ad, captures the relevant events, and sends them to **VTEX Ads** so the click and the resulting purchase can be attributed to the campaign. For both native VTEX storefronts and independent storefronts, the script is provided and maintained by **VTEX Ads**. You add it to your store and configure your **Publisher ID**. You do not build or host the script yourself.
 
@@ -31,7 +31,7 @@ Confirm the following before installing the script:
 
 Offsite capture connects an ad click to a later purchase on your storefront. The flow below summarizes how attribution is established.
 
-1. The offsite ad's destination URL carries the **VTEX Ads** annotators (URL parameters that preserve campaign and click attribution data). On VTEX native stores, the click may also pass through the intermediate URL (`/va/go`), which preserves the annotators until the user reaches the destination retailer.
+1. The offsite ad's destination URL carries the **VTEX Ads** annotators (URL parameters that preserve campaign and click attribution data). In VTEX native stores, the click may also pass through the intermediate URL (`/va/go`), preserving the annotators until the user reaches the destination retailer.
 2. When the user lands on the destination retailer, the web script captures the session and the page view.
 3. **VTEX Ads** matches that session or journey to the offsite click and, when an order is placed, attributes the conversion to the campaign. Attribution is subject to the applicable conversion window.
 
@@ -49,7 +49,7 @@ For journeys that finish inside a mobile app, the [Activity Flow Mobile SDK](htt
 
 ## 1. Request publisher provisioning
 
-To run offsite campaigns that drive traffic to your store, your store must first be registered in **VTEX Ads** as a publisher. This setup is handled by the VTEX Ads team. You do not create the publisher account yourself.
+To run offsite campaigns that drive traffic to your store, your store must first be registered in **VTEX Ads** as a publisher. The VTEX Ads team handles this setup. You do not create the publisher account yourself.
 
 As part of this one-time setup, the VTEX Ads team:
 
@@ -111,6 +111,6 @@ Follow these checks after installing the script:
 
 ## Troubleshooting
 
-### Zeroed metrics
+### Metrics remain at 0
 
-If the script is not loading on the destination pages, there is no capture and metrics come out zeroed. Confirm the script tag is present on the destination pages and that the bundle loads without errors.
+If the script is not loading on the destination pages, there is no capture, and metrics remain at 0. Confirm the script tag is present on the destination pages and that the bundle loads without errors.
