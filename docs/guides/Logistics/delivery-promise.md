@@ -69,7 +69,7 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 - Do not use more than 10,000 [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R).
 - Do not use [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) from regular sellers.
 
->ℹ️ Check the [Delivery Promise visual library](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) with [use cases](https://www.figma.com/design/IQdo0yOuTf0sowO0Uw6XRW/Delivery-Promise-by-VTEX--Community-?node-id=8001-14743), [behavior specifications](https://www.figma.com/design/VcWB2lLUkGKYgZUoYGQDkI/Delivery-Promise-by-VTEX--Community-?node-id=8002-48329) and [components](https://www.figma.com/design/VcWB2lLUkGKYgZUoYGQDkI/Delivery-Promise-by-VTEX--Community-?node-id=8001-14732) to better understand how to apply it to your store.  
+>ℹ️ Check the [Delivery Promise visual library](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) with use cases, behavior specifications and components to better understand how to apply it to your store.  
 
 ## Delivery Promise for Store Framework
 
