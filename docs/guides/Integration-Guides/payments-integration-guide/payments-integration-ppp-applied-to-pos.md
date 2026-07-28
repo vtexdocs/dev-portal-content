@@ -6,7 +6,7 @@ createdAt: "2022-09-28T22:39:13.979Z"
 updatedAt: "2026-07-01T00:00:00.000Z"
 excerpt: "Learn how to integrate a payment connector for in-store card payments through a Point of Sale (POS) terminal using the Payment Provider Protocol and VTEX Sales App."
 ---
-VTEX offers multiple solutions for a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience, handling orders from both ecommerce and physical stores. For the physical store experience, VTEX provides the [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), where sellers serve customers and complete the entire sales process. To finish a purchase, the customer can pay with a physical card in a payment terminal, also known as a Point of Sale (POS).
+VTEX offers multiple solutions for a [Unified Commerce](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv) experience, handling orders from both ecommerce and physical stores. For the physical store experience, VTEX provides the [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc), where sellers serve customers and complete the entire sales process. To complete a purchase, the customer can pay with a physical card in a payment terminal, also known as a Point of Sale (POS).
 
 To integrate a POS payment solution, payment partners must meet the following requirements:
 
@@ -112,7 +112,7 @@ The complete sequence is as follows:
 1. The flow starts with a buyer finishing a purchase in a VTEX physical store created on [VTEX Sales App](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc).
 2. The VTEX Sales App makes an [Authorization](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/authorization-request) request to the VTEX Payment Gateway.
 3. The Gateway makes a [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) request to the connector defined in the store settings for the specific payment method used in the purchase (for example, `Venda Direta Credito`).
-4. The Gateway receives the Create Payment response from the connector with the `undefined` status and the `appname` field of the `paymentAppData` parameter filled with the name of an app (for example, `vtex.challenge-terminal-connector-app`). This means the payment is not concluded and requires a challenge, which opens a [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app#understanding-the-payment-app-flow) responsible for identifying the POS.
+4. The Gateway receives the Create Payment response from the connector with the `undefined` status and the `appname` field of the `paymentAppData` parameter set with the name of an app (for example, `vtex.challenge-terminal-connector-app`). This means the payment isn't concluded and requires a challenge, which opens a [Payment App](https://developers.vtex.com/docs/guides/payments-integration-payment-app#understanding-the-payment-app-flow) that identifies the POS.
 5. The VTEX Sales App receives the response from the Gateway and opens the app to start the challenge.
 6. The Sales person interacts with the app to identify the POS used in the payment. The app then sends the POS serial number to the connector and closes.
 7. The connector updates the order in the payment processor with the POS serial number.
@@ -131,7 +131,7 @@ The complete sequence is as follows:
 10. After step 8.c, the previous steps occur in the background. From this point, the buyer can insert the card and interact with the POS to complete the payment.
 11. The POS responds to the payment processor from the request in step 8.c.
 12. The payment processor processes the transaction and uses a webhook to call the connector.
-13. The payment provider makes a mandatory [callback](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) request to the Gateway (without which it is not possible to approve or deny the POS transaction), sending the following information to VTEX:
+13. The payment provider makes a mandatory [callback](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#payment-authorization) request to the Gateway (without which it's not possible to approve or deny the POS transaction), sending the following information to VTEX:
     - Payload containing card information (`cardBrand`, `firstDigits` and `lastDigits` fields)
     - Payment status (`approved` or `denied`)
 14. The [Wait for confirmation app](#wait-for-confirmation) requests the Gateway once more for the updated payment status.
@@ -171,7 +171,7 @@ The request body of the [Create Payment](https://developers.vtex.com/docs/api-re
 
 When VTEX Payment Gateway calls the Create Payment endpoint, the connector starts an asynchronous authorization process, which returns immediately with an `undefined` status. This flow is similar to other asynchronous payment methods like Pix and Boleto (common methods used in Brazil). After the Gateway receives the initial status as `undefined`, at some point the payment will be concluded and the status will be updated to `approved` or `denied`.
 
-The payment cannot stay `undefined` indefinitely. The Gateway waits for the payment to conclude up to a time limit defined by the connector in the `delayToCancel` field of the Create Payment response body, expressed in seconds. If this limit is exceeded, the Gateway automatically calls the connector's [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations) endpoint.
+The payment can't stay `undefined` indefinitely. The Gateway waits for the payment to conclude up to a time limit defined by the connector in the `delayToCancel` field of the Create Payment response body, expressed in seconds. If this limit is exceeded, the Gateway automatically calls the connector's [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations) endpoint.
 
 ### Handling timeouts and errors
 
