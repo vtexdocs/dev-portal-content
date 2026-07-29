@@ -15,7 +15,7 @@ This guide explains how to retrieve and interpret that data.
 
 ## Retrieving session data
 
-To retrieve the current B2B session data for a logged-in buyer, send a [`Get Session`](https://developers.vtex.com/docs/api-reference/session-manager-api#get-/api/sessions?endpoint=get-/api/sessions) request including the `shopperPolicies` namespace:
+To retrieve the current B2B session data for a logged-in buyer, send a `GET` [Get Session](https://developers.vtex.com/docs/api-reference/session-manager-api#get-/api/sessions?endpoint=get-/api/sessions) request including the `shopperPolicies` namespace:
 
 ```html
 GET /api/sessions?items=shopperPolicies
