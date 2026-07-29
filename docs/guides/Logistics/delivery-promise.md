@@ -3,7 +3,7 @@ title: "Delivery Promise"
 slug: "delivery-promise"
 hidden: false
 createdAt: "2025-09-01T16:53:51.800Z"
-updatedAt: "2026-07-29T14:00:00.000Z"
+updatedAt: "2026-04-13T15:35:32.755Z"
 excerpt: "Delivery Promise helps your store show only products that can be delivered or picked up based on the customer’s location. It improves shopping experience, reduces cart abandonment, and increases product assortment visibility."
 seeAlso: 
     - "https://help.vtex.com/en/tutorial/delivery-promise-faq--2frHHK5uPsQrLK5XbYHALN"
@@ -84,14 +84,3 @@ When using a headless approach in your store, you can use the [Intelligent Searc
 ## Delivery Promise for FastStore
 
 When building your storefront with FastStore, you can enable Delivery Promise using hooks, filter options, and location priority. Learn how to apply it in the [Delivery Promise](https://developers.vtex.com/docs/guides/faststore/features-delivery-promise) guide.
-
-## Testing Delivery Promise before going live
-
-When you request Delivery Promise activation for a headless or Store Framework account, our Support team activates the feature in a `DpReady` state. This lets you test Delivery Promise without affecting production Search requests, using one of the following methods:
-
-- **Headless stores:** Add the `dpPreview=true` query parameter to Search requests that use the delivery promise information (hashes or ZIP code), as described in [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores). While previewing, the Intelligent Search API v1 response returns `deliveryPromiseEnabled: false`.
-- **Store Framework:** Generate a workspace and install the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app to test the feature before publishing it to your production workspace (master).
-
->ℹ️ FastStore accounts, as well as test, demo, and proof-of-concept accounts of any storefront type, are activated directly in `DpLive`, since they still require additional setup (such as installing a theme) before going live in production.
-
-Once you finish testing, contact [our Support](https://support.vtex.com/hc/en-us) team to promote your account from `DpReady` to `DpLive`. From that point on, Search requests using the delivery promise information are considered production traffic — you no longer need the `dpPreview=true` parameter, and the API response returns `deliveryPromiseEnabled: true`.
