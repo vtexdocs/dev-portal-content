@@ -1,0 +1,76 @@
+---
+title: "5. Working with CMS"
+excerpt: "Understand how CMS works in your FastStore project."
+---
+
+> ⚠️ This guide is for stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). If your store still runs on Headless CMS (legacy), follow the [Headless CMS (legacy) track](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+
+If you completed [Step 2: Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project), your store is already linked to the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). WebOps configures the CMS store during onboarding in the [CMS Integration](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project#cms-integration) step.
+
+This guide explains what that integration means and where to find the resources you need to model content, create sections, and extend your storefront.
+
+## What you'll accomplish
+
+By the end of this step, you will have:
+
+- Understood how CMS fits into your FastStore project after WebOps onboarding
+- Known where to access CMS in VTEX Admin
+- Identified the developer tools and guides for content modeling and section creation
+- Known where to look if you still use Headless CMS (legacy)
+
+## CMS in your FastStore project
+
+During WebOps onboarding, you either created a new CMS store or connected to an existing one. That store is linked to your FastStore project and receives content definitions from your codebase.
+
+As a developer, you typically work with CMS in two places:
+
+1. **Your local project**: Define and upload component schemas and Content Types using the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin), which you installed in [Step 1: Setting up your environment](https://developers.vtex.com/docs/guides/faststore/getting-started-1-setting-up-your-environment).
+2. **VTEX Admin**: Editors create, preview, and publish content through the CMS interface.
+
+Common CLI workflows include initializing the CMS folder structure (`content init`), generating schemas (`content generate-schema`), and uploading definitions to your CMS store.
+
+## Accessing CMS in VTEX Admin
+
+You can manage the storefront content in the CMS interface of VTEX Admin. From there, you can work with branches, edit pages, manage media, and publish changes to your storefront.
+
+If you need to confirm which CMS store is linked to your project, check the CMS Integration settings in **Storefront > FastStore WebOps**.
+
+## Related resources
+
+Use the guides below to go deeper into CMS development for FastStore:
+
+<Flex>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts"
+  title="CMS for FastStore storefronts"
+  description="Learn about CMS architecture, content modeling, and main features for FastStore storefronts."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/content-plugin"
+  title="Content plugin"
+  description="Use CLI commands to generate, split, and upload CMS schemas from your project."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/cms-creating-a-new-section"
+  title="Creating a new section in the CMS"
+  description="Build a custom section component and make it available for editors in the CMS."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/understanding-components-and-sections"
+  title="Understanding components and sections"
+  description="Learn how components and sections relate to Content Types and page layouts."
+  linkTitle="See more"
+/>
+
+</Flex>
+
+## Next step
+
+You've finished the core Getting Started track. Explore additional resources to continue customizing your store: [6. Next steps](https://developers.vtex.com/docs/guides/faststore/getting-started-6-next-steps)

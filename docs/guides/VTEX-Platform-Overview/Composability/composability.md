@@ -68,7 +68,7 @@ The complete platform case uses mostly VTEX's native features, including fronten
 
 This case uses a Digital Experience Platform (DXP) decoupled from the native commerce infrastructure. As a single provider, the DXP usually handles the Storefront Application, Frontend Infrastructure, CMS, and Search & Personalization. A headless model with a single DXP provider is a good option for building a store’s frontend from scratch without having to handle multiple frontend systems and the commerce infrastructure.
 
-> ℹ️ VTEX has a native service that allows developers to build headless storefronts: [FastStore](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore), a starter headless storefront that uses VTEX infrastructure. FastStore can be customized, extended, and combined with [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) and [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG).
+> ℹ️ VTEX has a native service that allows developers to build headless storefronts: [FastStore](https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore), a starter headless storefront that uses VTEX infrastructure. FastStore can be customized, extended, and combined with [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) and [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG).
 
 ### Frontend as a Service (FEaaS)
 

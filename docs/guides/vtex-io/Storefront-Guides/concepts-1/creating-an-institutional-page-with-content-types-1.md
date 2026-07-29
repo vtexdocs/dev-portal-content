@@ -80,6 +80,6 @@ To create an institutional page, follow these instructions.
 
 ## Learn More
 
-- [Setting up the VTEX Headless CMS in your FastStore project](https://www.faststore.dev/tutorials/cms/2#step-2---syncing-your-changes)
-- [Adding Content Types and Sections to the VTEX Headless CMS](https://www.faststore.dev/tutorials/cms/3)
+- [Setting up the VTEX Headless CMS (legacy) in your FastStore project](https://www.faststore.dev/tutorials/cms/2#step-2---syncing-your-changes)
+- [Adding Content Types and Sections to the VTEX Headless CMS (legacy)](https://www.faststore.dev/tutorials/cms/3)
 - [Querying the CMS data](https://www.faststore.dev/tutorials/cms/4)

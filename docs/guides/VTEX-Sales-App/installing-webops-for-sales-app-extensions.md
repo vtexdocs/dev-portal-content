@@ -25,7 +25,7 @@ Before starting, you should have the following information on hand:
 * **GitHub organization:** The GitHub organization where your repository lives (or where you'll create it).
 * **GitHub repository:** An existing GitHub repository with your extension code, or you can create a new one during onboarding.
 
-Also, note that full store onboarding in WebOps can **overwrite or remove existing content** in Headless CMS (hCMS).
+Also, note that full store onboarding in WebOps can **overwrite or remove existing content** in Headless CMS (legacy).
 
 > ❗ If your storefront already has relevant content in hCMS, keep this in mind before running the onboarding. If that isn't a concern (for example, if you're setting up a new project or only a `sales-app` module with no FastStore project in hCMS), proceed with the onboarding as usual. If you can't run the WebOps onboarding because you already have a FastStore project or existing hCMS content that must not be overwritten, follow this guide, but skip step 3. If you have any questions, open a ticket with [Support](https://help.vtex.com/en/support).
 
@@ -35,7 +35,7 @@ Also, note that full store onboarding in WebOps can **overwrite or remove existi
 
 1. In your VTEX Admin, go to **Storefront > FastStore WebOps**.
 2. If the WebOps page loads and shows your project and repository, it means WebOps is already installed and configured. In this case, you don't need to follow these instructions.
-3. If you don't see WebOps or the page indicates no project is linked, go to [step 2](#step-2-installing-webops-in-your-account).
+3. If you don't see WebOps or the page indicates no project is linked, go to [step 2](#step-2---installing-webops-in-your-account).
 
 ### Step 2 - Installing WebOps in your account
 
@@ -55,7 +55,7 @@ Also, note that full store onboarding in WebOps can **overwrite or remove existi
 
 ### Step 3 - Configuring the repository in WebOps
 
-> ❗ If your storefront already has relevant content in Headless CMS (hCMS) or if you already have a FastStore project that must not be overwritten, don't complete the WebOps onboarding. Go to the [next step](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions#step-4-installing-webops-in-your-github-organization) instead.
+>❗ If your storefront already has relevant content in Headless CMS (legacy), or if you already have a FastStore project that must not be overwritten, don't complete the WebOps onboarding. Go to the [next step](https://developers.vtex.com/docs/guides/installing-webops-for-sales-app-extensions#step-4-installing-webops-in-your-github-organization) instead.
 
 The repository is linked to WebOps through the WebOps onboarding in the dashboard. To start this process, follow these steps:
 
@@ -104,7 +104,7 @@ Share the following information in the ticket:
 
 * **Account:** Name of your account.
 * **Link to the repository:** URL of the repository where you want to install WebOps.
-* **App installation ID (`installationId`):** The unique identifier of the FastStore WebOps installation on GitHub. See how to get this ID in [Identifying the app installation ID](#step-5-identifying-the-webops-installation-id).
-* **Repository ID:** The unique identifier of the repository you want to migrate. See how to get this ID in the [Identifying the repository ID](#step-6-identifying-the-repository-id) section.
+* **App installation ID (`installationId`):** The unique identifier of the FastStore WebOps installation on GitHub. See how to get this ID in [Identifying the app installation ID](#step-5---identifying-the-webops-installation-id).
+* **Repository ID:** The unique identifier of the repository you want to migrate. See how to get this ID in the [Identifying the repository ID](#step-6---identifying-the-repository-id) section.
 
 The Support team will work on your request and notify you when the process is complete.
