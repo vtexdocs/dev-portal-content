@@ -218,7 +218,7 @@ While previewing, the response returns `deliveryPromiseEnabled: false`.
 
 >⚠️ The `dpPreview` parameter is only supported in Intelligent Search API v1. It isn't available in [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api).
 
-Once you finish testing, contact [our Support](https://support.vtex.com/hc/en-us) team to promote your account to the `DpLive` state. From that point on, remove the `dpPreview` parameter from your requests — Delivery Promise is applied in production, and the response returns `deliveryPromiseEnabled: true`.
+Once you finish testing, contact [our Support](https://support.vtex.com/hc/en-us) team to promote your account to the `DpLive` state. From that point on, remove the `dpPreview` parameter from your requests. Delivery Promise is then applied in production, and the response returns `deliveryPromiseEnabled: true`.
 
 ## Implementing sidebar filters
 
