@@ -9,7 +9,7 @@ seeAlso:
  - "/docs/apps/vtex.delivery-promise-components"
 ---
 
-> ℹ️ This feature is currently in Open Beta and can be activated at both the main account and subaccount-only levels. If you want to implement it, please contact our [Support](https://support.vtex.com/hc/en-us) team to request activation.
+> ℹ️ This feature is currently in open beta and can be activated at both the main account and subaccount-only levels. If you want to implement it, please contact our [Support](https://support.vtex.com/hc/en-us) team to request activation.
 
 The [Delivery Promise (Beta)](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products that can be delivered to the provided address or picked up at available locations.
 
