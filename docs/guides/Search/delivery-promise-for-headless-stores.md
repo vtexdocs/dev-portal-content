@@ -7,7 +7,7 @@ createdAt: "2025-05-14T22:18:24.684Z"
 updatedAt: "2026-07-29T10:00:00.000Z"
 ---
 
->ℹ️ This feature is currently in [open beta](https://help.vtex.com/pt/announcements/2026-07-01-delivery-promise-em-open-beta) and can be activated at both the main account and subaccount-only levels. If you want to implement it, please contact our [Support](https://support.vtex.com/hc/en-us) team to request activation.
+>ℹ️ This feature is currently in [open beta](https://help.vtex.com/en/announcements/2026-07-01-delivery-promise-in-open-beta) and can be activated at both the main account and subaccount-only levels. If you want to implement it, please contact our [Support](https://support.vtex.com/hc/en-us) team to request activation.
 
 This guide details how to use the [Delivery Promise](https://help.vtex.com/en/tutorial/delivery-promise-beta--p9EJH9GgxL0JceA6dBswd) feature on headless stores, using [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) with additional facets for this purpose.
 
