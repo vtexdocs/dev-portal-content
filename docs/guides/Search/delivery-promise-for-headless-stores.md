@@ -204,7 +204,7 @@ Example:
 https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search/dynamic-estimate/next-day?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16
 ```
 
-### Previewing Delivery Promise before going live
+## Previewing Delivery Promise before going live
 
 If your account is in the `DpReady` activation state, you can test Delivery Promise on Search requests without affecting production traffic. To do so, add the `dpPreview=true` query parameter together with the delivery promise information (`deliveryZonesHash` and `pickupPointsHash`, or country and ZIP code).
 
