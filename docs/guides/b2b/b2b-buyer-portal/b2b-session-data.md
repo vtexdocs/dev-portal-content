@@ -82,7 +82,7 @@ The `shopperPolicies` namespace is divided into sub-namespaces, each representin
 
 ## Session data expiration and refresh
 
-The `shopperPolicies` data is a snapshot taken at session creation time. If the buyer's contract changes after the session is created (for example, a new address is added or a credit limit is updated) the session data will not reflect those changes until a new session is created or the session is explicitly refreshed.
+The `shopperPolicies` data is a snapshot taken at session creation time. If the buyer's contract changes after the session is created (for example, a new address is added or a credit limit is updated), the session data will not reflect those changes until a new session is created or the session is explicitly refreshed.
 
 By default, the `vtex_session` cookie has a fixed **5-day expiration**.
 
