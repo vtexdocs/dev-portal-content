@@ -4,7 +4,7 @@ slug: "delivery-promise-for-headless-stores"
 hidden: false
 excerpt: "Learn how to implement the delivery promise feature in headless stores."
 createdAt: "2025-05-14T22:18:24.684Z"
-updatedAt: "2026-07-29T10:00:00.000Z"
+updatedAt: "2026-07-29T14:00:00.000Z"
 ---
 
 >ℹ️ This feature is currently in [open beta](https://help.vtex.com/en/announcements/2026-07-01-delivery-promise-in-open-beta) and can be activated at both the main account and subaccount-only levels. If you want to implement it, please contact our [Support](https://support.vtex.com/hc/en-us) team to request activation.
@@ -65,6 +65,22 @@ The delivery promise information parameters are **required** to filter product a
 >⚠️ To ensure only products that are available for delivery or pickup are returned, you must include the `hideUnavailableItems=true` query parameter in your requests. If this parameter is omitted, the search engine will include products with the `ShowIfNotAvailable` property set to `true` in the Catalog module even if they are not available for delivery or pickup. For example, product `649553` may appear in results if it has `ShowIfNotAvailable` enabled, unless you explicitly set `hideUnavailableItems=true`. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-).
 
 For more information on facet options apart from the ones directly related to Delivery Promise, go to `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-).
+
+### Previewing Delivery Promise before going live
+
+If your account is in the `DpReady` activation state, you can test Delivery Promise on Search requests without affecting production traffic. To do so, add the `dpPreview=true` query parameter together with the delivery promise information (`deliveryZonesHash` and `pickupPointsHash`, or country and ZIP code).
+
+Example:
+
+```txt
+https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16&dpPreview=true
+```
+
+While previewing, the response returns `deliveryPromiseEnabled: false`.
+
+>⚠️ The `dpPreview` parameter is only supported in Intelligent Search API v1. It isn't available in [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api).
+
+Once you finish testing, contact [our Support](https://support.vtex.com/hc/en-us) team to promote your account to the `DpLive` state. From that point on, remove the `dpPreview` parameter from your requests — Delivery Promise is applied in production, and the response returns `deliveryPromiseEnabled: true`.
 
 ### Filter combinations
 
