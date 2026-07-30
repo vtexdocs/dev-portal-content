@@ -14,6 +14,9 @@ Report export allows you to access and download platform information automatical
 > ⚠️ Limited availability of some reports
 > Export of certain reports may be restricted based on the account type associated with the authentication. Not all users will have access to all available reports.
 
+> ⚠️ Rate limit on Reports endpoints
+> Reports endpoints are limited to 100 requests per minute per account. This limit applies only to API Key-authenticated calls and does not affect normal platform use through the UI. Requests that exceed the limit return `429 Too Many Requests` and the error message `Rate limit exceeded for this account`. Wait for the next window before retrying. Spread large export workloads over time, including historical loads and full daily syncs. Contact [our support](https://help.vtex.com/en/tutorial/how-does-vtex-support-work--2eAT5EyOvaLoHdIWDVaxC3) if your integration needs a higher volume.
+
 ## Reports
 
 ### Advertisers
