@@ -7,7 +7,7 @@ updatedAt: "2026-07-28T00:00:00.000Z"
 excerpt: "A new Checkout API endpoint lets you split a single cart item into multiple items, distributing its current quantity among them."
 ---
 
-The [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) now has a new [Split a cart item](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split) endpoint, which splits a single item in a cart into multiple items, distributing its current quantity among them.
+The [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) now includes a new [Split a cart item](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split) endpoint, which splits a single item in a cart into multiple items, distributing its current quantity among them. For example, this allows different shipping or fulfillment rules to be applied to portions of the same SKU.
 
 ## What changed?
 
