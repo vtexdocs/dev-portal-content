@@ -13,9 +13,9 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-> ℹ️ Product Recommendations is in closed beta and available only to selected clients. If you are a VTEX client and want to adopt it, contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. For a product-focused introduction, see the Help Center tutorial [Product Recommendations (beta)](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta).
+> ℹ️ **Product Recommendations** is in closed beta and available only to selected clients. If you are a VTEX client and want to adopt it, contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. For a product-focused introduction, see the Help Center tutorial [Product Recommendations (beta)](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta).
 
-Product Recommendations let your store surface relevant products through multiple strategies (for example, similar items, cross-sell, or personalized shelves). They can improve discovery, conversion, and average order value.
+**Product Recommendations** let your store surface relevant products through multiple strategies (for example, similar items, cross-sell, or personalized shelves). They can improve discovery, conversion, and average order value.
 
 This page is the entry point for developers: it summarizes prerequisites to train models, lists strategies, points to implementation guides by storefront model, and includes frequently asked questions.
 
@@ -80,7 +80,11 @@ Yes. You request the strategies you want during activation. VTEX enables and tra
 
 ### How long does it take before models are ready?
 
-It depends on the strategy. Strategies that do not rely on model training, such as Best sellers, Recently viewed, and Manual collection, are available as soon as the integration is configured. Strategies that require training become available once the minimum data thresholds are met: Recommended for you requires at least 1,000 unique profiles with repeat product page visits and at least 10,000 product view or purchase events, and Frequently bought together requires at least 1,000 transactions with more than one item in the cart. Beyond those thresholds, time to readiness also depends on catalog size and overall traffic volume. Your onboarding team can give more accurate timelines for your store.
+It depends on the strategy. Strategies that do not rely on model training, such as **Best sellers**, **Recently viewed**, and **Manual collection**, are available as soon as the integration is configured. Strategies that require training become available once the minimum data thresholds are met: 
+- **Recommended for you:** requires at least 1,000 unique profiles with repeat product page visits and at least 10,000 product view or purchase events.
+- **Frequently bought together:** requires at least 1,000 transactions with more than one item in the cart. 
+
+Beyond those thresholds, time to readiness also depends on catalog size and overall traffic volume. Your onboarding team can give more accurate timelines for your store.
 
 ### What data is collected for training?
 
@@ -88,13 +92,13 @@ Typically includes navigation and product interaction events used to learn views
 
 ### What happens to co-purchase strategies when the store does not have enough order volume?
 
-Strategies that rely on co-purchase patterns, such as Frequently bought together, require a minimum of 1,000 transactions with more than one item in the cart. Until that threshold is reached, the strategy remains inactive. Once the volume is met, VTEX trains the model and activates the strategy. Until then, consider relying on strategies that do not depend on co-purchase data, such as Best sellers or Similar products.
+Strategies that rely on co-purchase patterns, such as **Frequently bought together**, require a minimum of 1,000 transactions with more than one item in the cart. Until that threshold is reached, the strategy remains inactive. Once the volume is met, VTEX trains the model and activates the strategy. Until then, consider relying on strategies that do not depend on co-purchase data, such as **Best sellers** or **Similar products**.
 
 ### What happens to "Recommended for you" when there is not enough data?
 
-Recommended for you depends on a personalization model trained from real shopper and purchase behavior. When a shopper has no item page visit events or completed transactions, recommendations are generated based on the first items clicked in the last 90 days by other first-time visitors in the store. As the shopper builds a history, recommendations gradually shift to reflect their individual behavior.
+**Recommended for you** depends on a personalization model trained from real shopper and purchase behavior. When a shopper has no item page visit events or completed transactions, recommendations are generated based on the first items clicked in the last 90 days by other first-time visitors in the store. As the shopper builds a history, recommendations gradually shift to reflect their individual behavior.
 
-Until there is enough account-level history for VTEX to train and enable the model, the campaign does not behave as fully personalized. What shoppers see in the meantime is configured as part of onboarding (for example, emphasizing other strategies such as Best sellers, hiding the shelf, or using a transitional setup). Confirm the exact behavior with your VTEX contact so your UI matches expectations.
+Until there is enough account-level history for VTEX to train and enable the model, the campaign does not behave as fully personalized. What shoppers see in the meantime is configured as part of onboarding (for example, emphasizing other strategies such as **Best sellers**, hiding the shelf, or using a transitional setup). Confirm the exact behavior with your VTEX contact so your UI matches expectations.
 
 ### Where do I get campaign IDs (VRNs) for API calls?
 
