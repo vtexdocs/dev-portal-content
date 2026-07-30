@@ -13,13 +13,13 @@ seeAlso:
  - "/docs/guides/vtex-io-documentation-workspace"
 ---
 
-To render a badge on top of a [Product Summary](/docs/guides/vtex-product-summary) component, for example, product collection on a [Shelf](/docs/guides/vtex-shelf) block, you combine the [Product Highlights app](/docs/guides/vtex-product-highlights/) and [Stack Layout](/docs/guides/vtex-stack-layout).
+To render a badge on top of a [Product Summary](https://developers.vtex.com/docs/apps/vtex.product-summary) component, for example, product collection on a [Shelf](https://developers.vtex.com/docs/apps/vtex.shelf) block, you combine the [Product Highlights app](https://developers.vtex.com/docs/apps/vtex.product-highlights) and [Stack Layout](https://developers.vtex.com/docs/guides/vtex-stack-layout).
 
 ![badge](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-rendering-a-badge-0.png)
 
 ## Before you begin
 
-1. Knowledge of how the Product Summary, Product Highlights, Stack Layout, and Product collections work is required for this recipe. If you have any doubts regarding them, we strongly recommend you access their technical documentation: [Product Summary](/docs/guides/vtex-product-summary), [Product Highlights](/docs/guides/vtex-product-highlights/), [Stack Layout](/docs/guides/vtex-stack-layout) and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye).
+1. Knowledge of how the Product Summary, Product Highlights, Stack Layout, and Product collections work is required for this recipe. If you have any doubts regarding them, we strongly recommend you access their technical documentation: [Product Summary](https://developers.vtex.com/docs/apps/vtex.product-summary), [Product Highlights](https://developers.vtex.com/docs/apps/vtex.product-highlights), [Stack Layout](https://developers.vtex.com/docs/guides/vtex-stack-layout) and [Collections](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye).
 
 2. Ensure you have already installed [VTEX IO CLI](/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) on your machine.
 
@@ -78,7 +78,7 @@ To render a badge on top of a [Product Summary](/docs/guides/vtex-product-summar
 
 6. After declare the props and the children of `vtex.product-highlights@2.x:product-highlights#collection`: `product-highlight-wrapper` and `product-highlight-text`.
 
-   > ℹ️ The `product-highlight-text` only renders the text already defined in the **Collection** page in a store’s Admin.  For more information about it, refer to [Collections articles](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye) and the [Product Highlights app](/docs/guides/vtex-product-highlights#configuration)
+   > ℹ️ The `product-highlight-text` only renders the text already defined in the **Collection** page in a store’s Admin.  For more information about it, refer to [Collections articles](https://help.vtex.com/en/tutorial/creating-collections-beta--yJBHqNMViOAnnnq4fyOye) and the [Product Highlights app](https://developers.vtex.com/docs/apps/vtex.product-highlights#configuration)
 
    ```json
 
@@ -102,4 +102,4 @@ To render a badge on top of a [Product Summary](/docs/guides/vtex-product-summar
      ...
    ```
 
-Once you have declared the blocks’ props, [link the app](/docs/guides/vtex-io-documentation-linking-an-app) and see the changes live at the [Development workspace](/docs/guides/vtex-io-documentation-workspace) you are working.
+Once you have declared the blocks’ props, [link the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) and see the changes live at the [Development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) you are working.
