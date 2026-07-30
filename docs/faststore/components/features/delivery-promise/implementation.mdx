@@ -1,11 +1,11 @@
 ---
 title: "Implementing Delivery Promise"
-updatedAt: "2025-10-01T13:52:21.684Z"
+updatedAt: "2026-07-27T18:52:21.684Z"
 ---
 
->ℹ This feature is in closed beta, which means that only selected customers have access to it. If you're interested in implementing it in the future, please contact our [Support](https://support.vtex.com/hc/en-us) team.
+>⚠️ This feature is in open beta phase. If you're interested in testing it, contact our [Support team](https://support.vtex.com/hc/en-us).
 
-**Delivery Promise** is a feature that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location.
+Delivery Promise is a feature that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location.
 
 This solution continuously updates product availability throughout the buying journey by responding to changes in catalog, pricing, inventory, or shipping settings. These updates are then sent to [Checkout](https://developers.vtex.com/docs/guides/checkout-overview) and [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search), ensuring customers see up-to-date options based on their region.
 
@@ -118,7 +118,7 @@ You only need to [add a new section](#step-3-adding-region-popover-section): `Re
 
 ### Step 3 - Adding the `Region Popover` section
 
-`RegionPopover` is a section that manages user location inputs. It's used when location data is missing or the store default postal code is applied. `RegionPopover` is available in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/project-structure-overview#packagejson) and uses the [`Popover`](https://developers.vtex.com/docs/guides/faststore/molecules-popover) component as its UI base.
+`RegionPopover` is a section that manages user location inputs. It's used when location data is missing or the store default postal code is applied. `RegionPopover` is available in [`@faststore/core`](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure#packagejson) and uses the [`Popover`](https://developers.vtex.com/docs/guides/faststore/molecules-popover) component as its UI base.
 
 ![regionpopover](https://vtexhelp.vtexassets.com/assets/docs/src/regionpopover___dedb0aad756657e71d4c8d40cb2ef5e7.png)
 

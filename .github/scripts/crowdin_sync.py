@@ -13,6 +13,7 @@ Commands:
   crowdin_sync.py              Upload touched files to Crowdin
   crowdin_sync.py word-count   Merge word count into a Jira description (CURRENT, COUNT)
   crowdin_sync.py crowdin-links  Merge editor links into a Jira description (CURRENT, LINKS)
+  crowdin_sync.py annotate-changed-files  Add (PARTIAL|FULL) to Changed files (CURRENT, CHANGED_FILES, FILES_JSON)
 """
 
 from __future__ import annotations
@@ -20,6 +21,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import secrets
 import subprocess
 import sys
 import time
@@ -32,6 +34,7 @@ from typing import Literal
 
 CROWDIN_API_BASE_DEFAULT = "https://api.crowdin.com/api/v2"
 CROWDIN_WEB_BASE_DEFAULT = "https://crowdin.com"
+CROWDIN_REQUEST_TIMEOUT_SECONDS = 60
 
 DOCS_SOURCE_PATH_PREFIX = "docs/"
 
@@ -54,6 +57,11 @@ def crowdin_language_id() -> str:
 
 def normalize_language_id(language_id: str) -> str:
     return language_id.replace("_", "-").lower()
+
+
+def normalize_editor_code(code: str) -> str:
+    """Crowdin editor URL segments drop separators (en-US -> enus, pt-BR -> ptbr)."""
+    return code.replace("_", "").replace("-", "").lower()
 
 
 def crowdin_api_base() -> str:
@@ -116,7 +124,9 @@ def crowdin_request(
 
     request = urllib.request.Request(url, data=body, method=method, headers=headers)
     try:
-        with urllib.request.urlopen(request) as response:
+        with urllib.request.urlopen(
+            request, timeout=CROWDIN_REQUEST_TIMEOUT_SECONDS
+        ) as response:
             raw = response.read().decode("utf-8")
             if not raw:
                 return {}
@@ -125,6 +135,10 @@ def crowdin_request(
         detail = error.read().decode("utf-8", errors="replace")
         raise RuntimeError(
             f"Crowdin API {method} {path} failed (HTTP {error.code}): {detail}"
+        ) from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(
+            f"Crowdin API {method} {path} failed: {error.reason}"
         ) from error
 
 
@@ -155,14 +169,15 @@ def fetch_project_data(project_id: str) -> dict:
 
 
 def language_editor_code(project_data: dict, language_id: str) -> str:
+    """Resolve a Crowdin editor URL language segment (e.g. en-US -> enus)."""
     target = normalize_language_id(language_id)
-    source = project_data.get("sourceLanguage") or {}
-    if normalize_language_id(str(source.get("id", ""))) == target:
-        return str(source["editorCode"])
     for language in project_data.get("targetLanguages") or []:
         if normalize_language_id(str(language.get("id", ""))) == target:
-            return str(language["editorCode"])
-    return language_id
+            return normalize_editor_code(str(language["editorCode"]))
+    source = project_data.get("sourceLanguage") or {}
+    if normalize_language_id(str(source.get("id", ""))) == target:
+        return normalize_editor_code(str(source["editorCode"]))
+    return normalize_editor_code(language_id)
 
 
 def editor_url(
@@ -171,7 +186,10 @@ def editor_url(
     source_editor_code: str,
     target_editor_code: str,
 ) -> str:
-    language_pair = f"{source_editor_code}-{target_editor_code}"
+    language_pair = (
+        f"{normalize_editor_code(source_editor_code)}-"
+        f"{normalize_editor_code(target_editor_code)}"
+    )
     return f"{crowdin_web_base()}/editor/{project_identifier}/{file_id}/{language_pair}"
 
 
@@ -327,7 +345,16 @@ def changed_files() -> list[str]:
     seen: set[str] = set()
     files: list[str] = []
     for line in raw.splitlines():
-        path = normalize_changed_path(line.strip())
+        stripped = line.strip()
+        if "{" in stripped and "=>" not in stripped:
+            print(
+                "[crowdin_sync] Skipping truncated rename path "
+                "(ensure CHANGED_FILES uses awk -F'\\t'): "
+                f"{stripped}",
+                file=sys.stderr,
+            )
+            continue
+        path = normalize_changed_path(stripped)
         if (
             path
             and path.endswith((".md", ".mdx"))
@@ -577,8 +604,18 @@ def format_partial_file_context(
         if changed_line_numbers
         else ""
     )
+    pr_number = env("PR_NUMBER")
+    pr_url = env("PR_URL")
+    if pr_number and not pr_url:
+        repository = env("GITHUB_REPOSITORY")
+        if repository:
+            pr_url = f"https://github.com/{repository}/pull/{pr_number}"
+    if pr_number and pr_url:
+        context_heading = f"Source PR: [PR#{pr_number}]({pr_url})"
+    else:
+        context_heading = "Full file reference"
     return (
-        "# Full file reference\n\n"
+        f"# {context_heading}\n\n"
         f"Source path: `{relative_path}`\n\n"
         "The strings in this file are **partial changes only**. "
         "Use the full document below for context when reviewing.\n\n"
@@ -696,9 +733,56 @@ def write_github_output(name: str, value: str) -> None:
     output_path = env("GITHUB_OUTPUT")
     if not output_path:
         return
-    delimiter = f"EOF_{name}"
+    delimiter = secrets.token_hex(16)
     with open(output_path, "a", encoding="utf-8") as handle:
         handle.write(f"{name}<<{delimiter}\n{value}\n{delimiter}\n")
+
+
+def build_upload_modes_for_changed_files(
+    changed_paths: list[str],
+    uploaded_files: list[dict],
+) -> dict[str, str]:
+    path_to_mode = {
+        str(record["source_path"]): str(record.get("upload_mode", "full")).upper()
+        for record in uploaded_files
+        if record.get("source_path")
+    }
+    return {path: path_to_mode.get(path, "FULL") for path in changed_paths}
+
+
+def format_annotated_changed_files_section(
+    changed_paths: list[str],
+    upload_modes: dict[str, str],
+) -> str:
+    if not changed_paths:
+        return "* No MD/MDX files changed"
+    lines = [
+        f"* {path} **({upload_modes.get(path, 'FULL')})**"
+        for path in changed_paths
+    ]
+    return "\n".join(lines)
+
+
+def merge_changed_files_description(current: str, changed_files_section: str) -> str:
+    block = f"h3. Changed files\n\n{changed_files_section.rstrip()}"
+    pattern = r"^h3\. Changed files\n\n[\s\S]*?(?=\nh3\. PR Description\b)"
+    if re.search(pattern, current, flags=re.MULTILINE):
+        return re.sub(
+            pattern,
+            block + "\n\n",
+            current.rstrip(),
+            count=1,
+            flags=re.MULTILINE,
+        )
+    if "h3. PR Description" in current:
+        return current.replace(
+            "h3. PR Description",
+            f"{block}\n\nh3. PR Description",
+            1,
+        )
+    if current.strip():
+        return f"{current.rstrip()}\n\n{block}\n"
+    return f"{block}\n"
 
 
 def merge_word_count_description(current: str, count: str) -> str:
@@ -718,9 +802,10 @@ def merge_word_count_description(current: str, count: str) -> str:
 
 def merge_crowdin_description(current: str, links: str) -> str:
     section = f"h3. Crowdin editor\n\n{links}"
+    crowdin_editor_pattern = r"^h3\. Crowdin editor\b[\s\S]*?(?=\n^h3\. |\Z)"
     if re.search(r"^h3\. Crowdin editor\b", current, flags=re.MULTILINE):
         return re.sub(
-            r"^h3\. Crowdin editor[\s\S]*$",
+            crowdin_editor_pattern,
             section,
             current.rstrip(),
             count=1,
@@ -891,12 +976,30 @@ def main() -> int:
             os.environ.get("LINKS", ""),
         ))
         return 0
+    if command == "annotate-changed-files":
+        current = os.environ.get("CURRENT", "")
+        changed_paths = [
+            line.strip()
+            for line in os.environ.get("CHANGED_FILES", "").splitlines()
+            if line.strip()
+        ]
+        uploaded_files = json.loads(os.environ.get("FILES_JSON", "[]"))
+        upload_modes = build_upload_modes_for_changed_files(
+            changed_paths,
+            uploaded_files,
+        )
+        section = format_annotated_changed_files_section(
+            changed_paths,
+            upload_modes,
+        )
+        print(merge_changed_files_description(current, section))
+        return 0
     if command == "upload":
         return upload_files()
 
     print(
         f"Unknown command: {command} "
-        "(expected upload, word-count, or crowdin-links)",
+        "(expected upload, word-count, crowdin-links, or annotate-changed-files)",
         file=sys.stderr,
     )
     return 1
