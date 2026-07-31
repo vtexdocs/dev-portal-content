@@ -39,7 +39,7 @@ The pre-analysis flow adds one step (step 1) and reuses the standard anti-fraud 
 4. **Approved:** This status indicates that the issuing bank authorized the transaction.
 5. **Analyzing Risk:** After the issuing bank approves the transaction, the anti-fraud system analyzes the risk of the operation.
 6. **Risk Approved:** If the anti-fraud provider approves the transaction, the status changes to **Risk Approved**. If it identifies evidence of fraud, the transaction is **canceled**.
-7. **Settlement of [amount]:** Indicates that the settlement process for a given amount is about to start. The amount has not been settled yet at this stage. The status name includes the amount because a transaction can be settled in full or in parts, generating one settlement status per amount. The transaction timeline in the VTEX Admin displays the actual value in place of `[amount]`.
+7. **Settlement of [amount]:** Indicates that the settlement process for a given amount is about to start. The amount has not been settled yet at this stage. The status name includes the amount because a transaction can be settled in full or in parts, generating one settlement status per amount.
 8. **Settling:** The settlement attempt starts, and the systems responsible for it begin transferring the transaction amount.
 9. **Settled:** The amount was successfully settled and sent to the store's account.
 10. **Finished:** The invoice with the payment amount was issued and linked to the order in the Order Management System (OMS). This is the final status of a successful transaction.
@@ -48,7 +48,7 @@ The pre-analysis flow adds one step (step 1) and reuses the standard anti-fraud 
 
 When settlement starts depends on the capture behavior configured for the connector. By default, capture follows the schedule recommended by the acquirer, but it can also run immediately after authorization, immediately after the anti-fraud analysis, only when the order is invoiced, or on a fixed schedule. For details, see [Custom Auto Capture Feature](https://developers.vtex.com/docs/guides/custom-auto-capture-feature).
 
-> ⚠️ A successful settlement does not finalize the transaction on its own. You must [include the invoice in the order](https://help.vtex.com/en/faq/why-has-a-transaction-been-successfully-captured-but-not-finalized-in-the-pci-gateway) for it to reach the **Finished** status.
+> ⚠️ A successful settlement does not finalize the transaction on its own. You must [include the invoice in the order](https://help.vtex.com/en/faq/why-has-a-transaction-been-successfully-settled-but-not-finalized-in-the-pci-gateway) for it to reach the **Finished** status.
 
 ## Cancellation scenarios
 
@@ -83,6 +83,6 @@ After activation, validate the integration in a test account before going live:
 1. Configure a payment condition for debit cards associated with your anti-fraud provider. For details, see [Configuring payment conditions](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455).
 2. Place a test order with a debit card and confirm that the transaction reaches the **Analyzing initial risk** status before **Authorizing**.
 3. Verify each cancellation scenario in the [Cancellation scenarios](#cancellation-scenarios) table, confirming that the transaction stops at the expected stage.
-4. Check the transaction timeline on the [Transactions page in the Admin](https://help.vtex.com/en/tutorial/payment-transactions-list--tutorials_450) to confirm the status sequence matches the flow above.
+4. Check the transaction timeline in the VTEX Admin, under **Orders > Transactions**, to confirm that the status sequence matches the flow above.
 
 > ℹ️ If the transaction skips the pre-analysis step and goes directly to **Authorizing**, confirm that `shouldUseAntifraudOnDebit` is set to `true` and that the payment rule includes an anti-fraud provider.
