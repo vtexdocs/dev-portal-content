@@ -5,7 +5,7 @@ excerpt: "Display a carousel of personalized product recommendations from a VTEX
 
 > ⚠️ This feature is in beta, if you have questions about enablement, account configuration, or campaigns, contact [our Support team](https://help.vtex.com/en/support).
 
-In this guide, you'll learn how to enable, configure, and add the Recommendation Shelf to a [FastStore](https://developers.vtex.com/docs/guides/faststore) storefront. The Recommendation Shelf is a native FastStore section that displays a carousel of personalized product recommendations from a [VTEX Recommendations](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta) campaign. Depending on the campaign configuration, the shelf can show recommendations such as cross-sell products, similar items, or top sellers.
+In this guide, you'll learn how to enable, configure, and add the Recommendation Shelf to a [FastStore(https://developers.vtex.com/docs/guides/faststore) storefront]. The Recommendation Shelf is a native FastStore section that displays a carousel of personalized product recommendations from a [VTEX Recommendations](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta) campaign. Depending on the campaign configuration, the shelf can show recommendations such as cross-sell products, similar items, or top sellers.
 
 The section uses the same product cards as other shelves in your store, keeping the appearance of recommended products consistent across the storefront. It is also registered as a global CMS component, so you can add and configure it on any page through the CMS.
 
@@ -17,7 +17,7 @@ The section uses the same product cards as other shelves in your store, keeping 
 
 Make sure you have:
 
-- A FastStore store connected to the CMS.
+- A FastStore store connected to the [CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms).
 - Approval to use the product recommendations feature for your account. To request it, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
 - At least one active recommendation campaign and its VRN (campaign identifier).
 - [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) available in your store, if you want to track recommendation impressions, views, and clicks. Activity Flow is optional but recommended, and FastStore includes it natively.
@@ -37,10 +37,12 @@ For example: `vrn:recommendations:apiexamples:rec-persona-v2:123e4567-e89b-12d3-
 To get the VRN, follow these steps:
 
 1. In the VTEX Admin, go to **Storefront > Recommendations**.
-2. In the shelf list, find the campaign you want to display.
+2. In the shelf list, select the campaign you want to display.
 3. Click the three dots on the right side of the shelf and then click **Copy ID**.
 
-For the list of supported campaign types, see [Campaign types and product context](#campaign-types-and-product-context).
+![copy-id-recommendation-shelf](https://vtexhelp.vtexassets.com/assets/docs/src/step-1-recommendation-shelf___834829da267896ff916276bfe14758e4.gif)
+
+> ℹ️ For the list of supported campaign types, see [Campaign types and product context](#campaign-types-and-product-context).
 
 ### Step 2: Add and configure the section in the CMS
 
