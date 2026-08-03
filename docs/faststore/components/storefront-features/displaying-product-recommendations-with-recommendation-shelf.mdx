@@ -3,15 +3,15 @@ title: "Displaying product recommendations with the Recommendation Shelf"
 excerpt: "Display a carousel of personalized product recommendations from a VTEX Recommendations campaign, configured entirely through the CMS."
 ---
 
-> ⚠️ This feature is in beta, if you have questions about enablement, account configuration, or campaigns, contact [our Support](https://help.vtex.com/en/support).
+> ⚠️ This feature is in beta, if you have questions about enablement, account configuration, or campaigns, contact [our Support team](https://help.vtex.com/en/support).
 
-The Recommendation Shelf is a native FastStore section that displays a carousel of personalized product recommendations from a [VTEX Recommendations](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta) campaign. This section resolves its products through a recommendation campaign, such as cross-sell, similar items, or top sellers. It uses the same product cards as your store's other shelves, so recommended products look consistent with the rest of the storefront.
+In this guide, you'll learn how to enable, configure, and add the Recommendation Shelf to a [FastStore](https://developers.vtex.com/docs/guides/faststore) storefront. The Recommendation Shelf is a native FastStore section that displays a carousel of personalized product recommendations from a [VTEX Recommendations](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta) campaign. Depending on the campaign configuration, the shelf can show recommendations such as cross-sell products, similar items, or top sellers.
 
-Recommendations are served by the VTEX Recommendations BFF and exposed through the `@faststore/api` GraphQL layer. Because the section is registered as a global CMS component, you can add it to any page and enable it entirely through the CMS. No store code changes or feature flags are required.
+The section uses the same product cards as other shelves in your store, keeping the appearance of recommended products consistent across the storefront. It is also registered as a global CMS component, so you can add and configure it on any page through the CMS.
 
-This guide explains how to enable, configure, and place the section for FastStore stores.
+![recommendation-shelf-example](https://vtexhelp.vtexassets.com/assets/docs/src/recommendation-shelf-example___9a04be264281918f98e55f5702f421ff.gif)
 
-> ⚠️ If you're building a custom headless storefront instead of using FastStore, see [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores).
+> ⚠️ This guide covers the native Recommendation Shelf section, which is the recommended way to display recommendations in a FastStore store. Follow [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores) only if you're building a custom headless storefront or a fully custom recommendation experience that calls the Recommendations API directly instead of using this section.
 
 ## Before you begin
 
