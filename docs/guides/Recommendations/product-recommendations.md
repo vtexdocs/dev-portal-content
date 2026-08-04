@@ -81,6 +81,7 @@ Yes. You request the strategies you want during activation. VTEX enables and tra
 ### How long does it take before models are ready?
 
 It depends on the strategy. Strategies that do not rely on model training, such as **Best sellers**, **Recently viewed**, and **Manual collection**, are available as soon as the integration is configured. Strategies that require training become available once the minimum data thresholds are met:
+
 * **Recommended for you:** requires at least 1,000 unique profiles with repeat product page visits and at least 10,000 product view or purchase events.
 * **Frequently bought together:** requires at least 1,000 transactions with more than one item in the cart.
 
