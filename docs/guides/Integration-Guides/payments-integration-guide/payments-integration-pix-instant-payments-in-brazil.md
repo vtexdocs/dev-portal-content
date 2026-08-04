@@ -1,6 +1,7 @@
 ---
 title: "Pix: Instant Payments in Brazil"
 slug: "payments-integration-pix-instant-payments-in-brazil"
+excerpt: "Learn how to extend your Payment Provider Protocol implementation so VTEX stores can offer Pix instant payments in Brazil."
 hidden: false
 createdAt: "2020-10-27T00:35:36.404Z"
 updatedAt: "2026-08-04T00:00:00.000Z"
