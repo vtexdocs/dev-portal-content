@@ -3,7 +3,7 @@ title: "Pix: Instant Payments in Brazil"
 slug: "payments-integration-pix-instant-payments-in-brazil"
 hidden: false
 createdAt: "2020-10-27T00:35:36.404Z"
-updatedAt: "2022-02-03T15:19:06.694Z"
+updatedAt: "2026-08-04T00:00:00.000Z"
 ---
 [Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix) is the instant payments ecosystem implementation led by the Central Bank of Brazil (BCB) to enable online money transfers with reduced costs, increased safety and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account, without the need for intermediaries, resulting in lower transaction costs.
 
@@ -11,28 +11,28 @@ Pix is available to both physical and legal persons, and both need to have an id
 
 According to the [eligibility criteria](https://www.bcb.gov.br/estabilidadefinanceira/participantespix) set forth by the BCB, certain financial entities will be required to offer this payment method, while others may optionally offer it or not be eligible to participate.
 
-In this article, we will explain how to extend your Payment Provider Protocol implementation to allow stores to offer Pix as an additional payment method to their clients.
+This guide explains how to extend your Payment Provider Protocol implementation so stores can offer Pix as an additional payment method to their customers.
 
 ![These are some of the benefits of an instant payments ecosystem highlighted by the BCB](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-pix-instant-payments-in-brazil-0.png)
 
-> ✔️ If you want to know more about instant payments in Brazil, we have prepared a [blog post](https://vtex.com/pt-br/blog/produto/pix-no-e-commerce/) with all the implications of this new payment method. You can also check out the [FAQ](https://www.bcb.gov.br/estabilidadefinanceira/perguntaserespostaspix) provided by the BCB for more details.
+> ℹ️ For more information about instant payments in Brazil, see the [FAQ](https://www.bcb.gov.br/estabilidadefinanceira/perguntaserespostaspix) provided by the BCB.
 
-> ⚠️ This tutorial assumes you are already a [VTEX Partner](http://vtex.com/br-pt/partner) and understand how the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol) works.
+> ⚠️ This guide assumes that you are already a [VTEX partner](https://www.vtex.com/en-us/partners/) and that you understand how the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol) works.
 
 ## Integration conditions
 
-If you are ready to develop the middleware that implements our Payment Provider Protocol, you should be aware of these requirements:
+Before developing the middleware that implements the Payment Provider Protocol, review the following requirements:
 
 - **All endpoints must be served over HTTPS on port 443 with TLS 1.2 support**: Connections over non-secured HTTP will not be accepted under any circumstances.
 - **The integrator must create a subdomain or a domain name for the provider endpoints**: IP addresses will not be accepted as names under any circumstances.
-- **The middleware must consistently respond within established response times**: We enforce a maximum response time of 5 seconds for homologation tests, as well as a maximum response time of 20 seconds to any other API request.
+- **The middleware must consistently respond within the established response times**: VTEX enforces a maximum response time of 5 seconds for homologation tests and 20 seconds for any other API request.
 
-While our protocol describes nine endpoints for implementation, not all of them are applicable when integrating Pix instant payments. Regarding the two provider flows:
+The Payment Provider Protocol describes nine endpoints, but not all of them apply to Pix. These endpoints are divided into two provider flows:
 
-- [Payment Flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): six endpoints that must be mandatory implemented.
-- [Configuration Flow endpoints](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token): three endpoints whose implementation is optional and currently not available for Pix.
+- [Payment flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): six endpoints, all mandatory for Pix.
+- [Configuration flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token): three optional endpoints, currently not available for Pix.
 
-The table below gives further detail on the applicability of each endpoint to Pix instant payments.
+The following table details the applicability of each endpoint to Pix:
 
 | Provider Flow | Endpoint                       | Applicable to Pix? |
 | ------------- | ------------------------------ | ------------------ |
@@ -46,15 +46,15 @@ The table below gives further detail on the applicability of each endpoint to Pi
 | Payment       | Provider Authentication        | ⛔ No              |
 | Payment       | Get Credentials                | ⛔ No              |
 
-> ⚠️ Pix is not available for marketplace clients that use the Checkout Split.
+> ⚠️ Pix is not available for marketplaces that use Checkout Split.
 
-> ⚠️ The following JSONs are just examples. Each partner must adapt the models to their own realities, with the data needed to realize the integration.
+> ⚠️ The following JSON examples are illustrative. Adapt them to your own scenario, including the data required for your integration.
 
 ## Integration steps
 
 ### Establish the payment methods available
 
-The first information your provider has to inform us is which are the payment methods that it handles. To do so, you can make an API request using the `<span class="api pg-type type-get">`GET [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) route.
+First, your provider must declare which payment methods it handles. To do so, implement the `GET` [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint.
 
 The expected response is:
 
@@ -65,7 +65,7 @@ The expected response is:
             "name": "Visa",
             "allowsSplit": "onCapture"
         },
-        { 
+        {
             "name": "Pix",
             "allowsSplit": "disabled"
         },
@@ -117,13 +117,13 @@ The expected response is:
 }
 ```
 
-> ⚠️ Pix still does not handle payment split, but this feature may be released in the future. For more information on payment methods that currently accept split, check the [List Payment Provider Manifest endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
+> ⚠️ Pix does not support payment split. For the payment methods that currently support split, see the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint reference.
 
-### Create Pix Payment Method
+### Create Pix Payment
 
-Now you have to create a new payment method. To do this, use the route `<span class="api pg-type type-post">`POST [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
+To create a Pix payment, implement the `POST` [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
 
-> ℹ️ A lot of information is required from the cart data in the Smart Checkout, so be careful and validate all payload information.
+> ℹ️ The request includes extensive cart data from Smart Checkout. Validate all payload fields before processing the payment.
 
 See an example of the Create Payment request:
 
@@ -204,7 +204,7 @@ See an example of the Create Payment request:
 }
 ```
 
-As a result, we expect the following response:
+The expected response is:
 
 ```json
 {
@@ -224,13 +224,13 @@ As a result, we expect the following response:
 }
 ```
 
-> ❗ The PIX QR Code expiration time must be set ​​between 15 and 60 minutes (900 and 3600 seconds). Also, the partner must respect the callback time (20 seconds).
+> ❗ Set the Pix QR code expiration time between 15 and 60 minutes (900 and 3600 seconds). The provider must also respect the 20-second callback time limit.
 
 For more information, access the [Create Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
 
 ### Cancel a Payment
 
-To cancel a payment, you must already have created one. To do so, you will make an API request using the route `<span class="api pg-type type-post">`POST [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations).
+To cancel an existing payment, implement the `POST` [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations).
 
 See an example of the Cancel Payment request:
 
@@ -241,7 +241,7 @@ See an example of the Cancel Payment request:
 }
 ```
 
-After the provider realizes the payment cancelation, we expect a response like this:
+After the provider processes the cancellation, the expected response is:
 
 ```json
 {
@@ -255,11 +255,11 @@ After the provider realizes the payment cancelation, we expect a response like t
 
 For more information, access the [Cancel Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations).
 
-### Settle Payment (capture)
+### Settle a payment (capture)
 
-If your transaction was completed successfully, the provider can settle the payment.
+After the transaction is successfully completed, the provider can settle the payment.
 
-Thus, in order to settle the payment, VTEX will send the information below through the `<span class="api pg-type type-post">`POST [Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements).
+To settle the payment, VTEX sends the following request to the `POST` [Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements).
 
 See an example of the Settle Payment request:
 
@@ -272,7 +272,7 @@ See an example of the Settle Payment request:
 }
 ```
 
-The response should be similar to the following response body:
+The expected response is:
 
 ```json
 {
@@ -287,9 +287,9 @@ The response should be similar to the following response body:
 
 For more information, access the [Settle Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements).
 
-### Refund Payment
+### Refund a payment
 
-The provider should be ready to receive the following request through the `<span class="api pg-type type-post">`POST [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds).
+The provider must be ready to receive the following request on the `POST` [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) endpoint.
 
 See an example of the Refund Payment request:
 
@@ -316,11 +316,13 @@ The expected response is:
 }
 ```
 
-For more information, access the [Refund Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds).
+> ℹ️ This example response indicates that the provider cannot process the refund automatically: `refundId` is `null`, `value` is `0.0`, and `code` is `refund-manually`. In this case, the merchant must complete the refund outside the platform. If your provider supports automated Pix refunds, return the refunded `value` and a valid `refundId` instead.
+
+For more information, see the [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) endpoint reference.
 
 ### Communicate with the Gateway
 
-The last endpoint, the `<span class="api pg-type type-post">`POST [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), implements a URL that facilitates a direct connection between our Gateway service and the Payment Provider.
+The last endpoint, `POST` [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), provides a URL that enables a direct connection between the VTEX gateway and the payment provider.
 
 See an example of the Inbound Request (BETA) request:
 
@@ -337,7 +339,7 @@ See an example of the Inbound Request (BETA) request:
 }
 ```
 
-As a result, the client should send the following response:
+As a result, the provider should send the following response:
 
 ```json
 {
@@ -352,8 +354,8 @@ As a result, the client should send the following response:
 }
 ```
 
-> ℹ️ The Inbound Request (BETA) is mandatory only for integrations via Payment Provider Protocol with an external Payment App. If the Pix payment method was implemented via VTEX Payment App, the Inbound Request is not necessary. For more information, access the [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-).
+> ℹ️ Inbound Request (BETA) is mandatory only for Payment Provider Protocol integrations that use an external Payment App. If you implement Pix with the VTEX Payment App, this endpoint is not required. For more information, see the [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-).
 
-For more information about the Pix, access its [FAQ](https://help.vtex.com/en/tutorial/pix-faq--3lx7zCU2lQroTEBCYKYbo3).
+For more information about Pix, see the [Pix FAQ](https://help.vtex.com/en/docs/tutorials/pix-faq).
 
-After completing all integration steps, you should complete our [homologation process](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) to allow VTEX stores to use your provider as a payment method.
+After completing all integration steps, complete the [homologation process](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) so VTEX stores can use your provider as a payment method.
