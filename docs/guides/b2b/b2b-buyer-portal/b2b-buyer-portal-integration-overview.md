@@ -88,11 +88,6 @@ The provisioning flow includes registering storefront credentials in VTEX ID, as
 | Assign users to units | Link storefront users to their respective organizational units. |
 | Assign storefront roles | Grant role-based permissions that control what each user can do. |
 
-The key APIs related to user provisioning are:
-
-- [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api) — Create storefront users and manage authentication identifiers.
-- [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) — Allocate users to organizational units.
-
 > ℹ️ For the full step-by-step integration, see [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning).
 
 ### Storefront roles and permissions
