@@ -53,13 +53,6 @@ To get the VRN, follow these steps:
 5. Configure the remaining fields as needed. See [Section fields](#section-fields).
 6. Save and publish the page.
 
-> ⚠️ If the shelf doesn't appear on the published page, check that:
-> - **Enable recommendations?** is turned on and the page is published.
-> - The **Campaign VRN** is valid and belongs to an active campaign.
-> - For context-based campaigns, a context product is available (a product detail page for `PDP`, or a non-empty cart for `CART`).
-> - The `vtex-rec-user-id` cookie isn't blocked by an ad blocker or consent management. Without it, the shelf doesn't fetch recommendations.
-> - The campaign returned products. An empty response renders nothing by design. If the loading skeleton never resolves, inspect the browser console and the recommendations response.
-
 ## Section fields
 
 The Recommendation Shelf is a native, global section, so there's no schema to create: it ships with `@faststore/core`, and you configure it directly through the CMS form. The table below lists all available fields. Only the **Campaign VRN** is required; the remaining fields are optional and fall back to their default values. Fields prefixed with `›` are nested inside the **Carousel Configuration** and **Product Card Configuration** groups.
@@ -69,16 +62,46 @@ The Recommendation Shelf is a native, global section, so there's no schema to cr
 | Enable recommendations? | `enableRecommendations` | boolean | No | `false` | Opts the store into the personalization session and allows this shelf to fetch recommendations. While off, no session starts and the shelf renders nothing. |
 | Title | `title` | string | No | — | Overrides the shelf title. When empty, the campaign title is used. If both are empty, no heading is rendered. |
 | Campaign VRN | `campaignVrn` | string | Yes | — | The recommendation campaign VRN. Validated against the pattern described in [Step 1](#step-1-get-the-campaign-vrn). |
-| Items context | `itemsContext` | `PDP` | `CART` | No | `PDP` | Products used as context for the request. In the CMS, the options are **Product page** (`PDP`, default) and **Cart** (`CART`). Applies only to context-based campaigns. |
+| Items context | `itemsContext` | `PDP` \| `CART` | No | `PDP` | Products used as context for the request. In the CMS, the options are **Product page** (`PDP`, default) and **Cart** (`CART`). Applies only to context-based campaigns. |
 | Carousel Configuration | `carouselConfiguration` | object | No | — | Carousel settings. |
 | › Items per page (desktop) | `itemsPerPageDesktop` | number | No | `4` | Items per page on desktop. |
 | › Items per page (mobile) | `itemsPerPageMobile` | number | No | `2` | Items per page on mobile and tablet (≤ 768px). |
-| › Carousel track variant | `variant` | `slide` | `scroll` | No | `scroll` | Carousel navigation mode. In the CMS, the options are **Slide** (`slide`) and **Scroll** (`scroll`, default). |
+| › Carousel track variant | `variant` | `slide` \| `scroll` | No | `scroll` | Carousel navigation mode. In the CMS, the options are **Slide** (`slide`) and **Scroll** (`scroll`, default). |
 | › Infinite navigation? | `infiniteMode` | boolean | No | `false` | Enables infinite navigation. Applies only to the `slide` variant. |
-| › Navigation controls | `controls` | `complete` | `navigationArrows` | `paginationBullets` | No | `complete` | Which navigation controls are displayed. In the CMS, the options are **Arrows and bullets** (`complete`, default), **Arrows only** (`navigationArrows`), and **Bullets only** (`paginationBullets`). |
+| › Navigation controls | `controls` | `complete` \| `navigationArrows` \| `paginationBullets` | No | `complete` | Which navigation controls are displayed. In the CMS, the options are **Arrows and bullets** (`complete`, default), **Arrows only** (`navigationArrows`), and **Bullets only** (`paginationBullets`). |
 | Product Card Configuration | `productCardConfiguration` | object | No | — | Product card settings. |
 | › Show discount badge? | `showDiscountBadge` | boolean | No | `true` | Shows the discount badge on cards. |
 | › Cards should be bordered? | `bordered` | boolean | No | `true` | Renders bordered cards. |
+
+## Customizing the section
+
+Most stores configure the shelf entirely through the CMS, using the [Section fields](#section-fields). To go beyond those fields, for example, to render a custom product card or change how each recommended product maps to card props, customize the section in code through FastStore's override system. See [Section override](https://developers.vtex.com/docs/guides/faststore/overrides-overview) to customize a native section, or [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) to build your own. CMS configuration takes priority over code-based overrides.
+
+Beyond the CMS fields, the component accepts two code-level props that aren't exposed in the CMS schema:
+
+- `ProductCard`: a custom card component. Defaults to the core `ProductCard`.
+- `mapProductToProductCard`: maps each recommended product, a normalized `StoreProduct`, into card props. When you provide this function, it fully owns the card props and the default `productCardConfiguration` merge no longer applies.
+
+The following example illustrates these props.
+
+```tsx
+import { RecommendationShelf } from 'src/components/sections/RecommendationShelf'
+
+<RecommendationShelf
+  enableRecommendations
+  campaignVrn="vrn:recommendations:my-account:rec-cross-v2:abc123"
+  itemsContext="PDP"
+  ProductCard={MyCustomCard}
+  mapProductToProductCard={(product, index) => ({
+    product,
+    index,
+    highlight: index === 0,
+  })}
+  carouselConfiguration={{ itemsPerPageDesktop: 5, variant: 'slide' }}
+/>
+```
+
+> ⚠️ The exact integration depends on your override setup.
 
 ## Campaign types and product context
 
@@ -112,27 +135,3 @@ Because the shelf is a global component, you can add it to any CMS page. We reco
 | Product detail pages | Cross-Sell, Similar Items, Visual Similarity, Next Interactions | `PDP` |
 | Cart page | Cross-Sell | `CART` |
 | Product listing pages | Top Sellers, Personalized, Last Seen, Search-Based | Not applicable |
-
-## Customizing the shelf in code
-
-This section is for developers who compose the section in code instead of configuring it through the CMS. In addition to the CMS fields, the component accepts overrides that aren't exposed in the CMS schema:
-
-```tsx
-import { RecommendationShelf } from 'src/components/sections/RecommendationShelf'
-
-<RecommendationShelf
-  enableRecommendations
-  campaignVrn="vrn:recommendations:my-account:rec-cross-v2:abc123"
-  itemsContext="PDP"
-  ProductCard={MyCustomCard}
-  mapProductToProductCard={(product, index) => ({
-    product,
-    index,
-    highlight: index === 0,
-  })}
-  carouselConfiguration={{ itemsPerPageDesktop: 5, variant: 'slide' }}
-/>
-```
-
-- `ProductCard`: a custom card component. Defaults to the core `ProductCard`.
-- `mapProductToProductCard`: maps each recommended product, a normalized `StoreProduct`, into card props. When you provide this function, it fully owns the card props and the default `productCardConfiguration` merge no longer applies.
