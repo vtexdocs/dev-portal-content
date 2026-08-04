@@ -62,16 +62,16 @@ The Recommendation Shelf is a native, global section, so there's no schema to cr
 | Enable recommendations? | `enableRecommendations` | boolean | No | `false` | Opts the store into the personalization session and allows this shelf to fetch recommendations. While off, no session starts and the shelf renders nothing. |
 | Title | `title` | string | No | — | Overrides the shelf title. When empty, the campaign title is used. If both are empty, no heading is rendered. |
 | Campaign VRN | `campaignVrn` | string | Yes | — | The recommendation campaign VRN. Validated against the pattern described in [Step 1](#step-1-get-the-campaign-vrn). |
-| Items context | `itemsContext` | `PDP` \| `CART` | No | `PDP` | Products used as context for the request. In the CMS, the options are **Product page** (`PDP`, default) and **Cart** (`CART`). Applies only to context-based campaigns. |
+| Items context | `itemsContext` | `PDP` | `CART` | No | `PDP` | Products used as context for the request. In the CMS, the options are **Product page** (`PDP`, default) and **Cart** (`CART`). Applies only to context-based campaigns. |
 | Carousel Configuration | `carouselConfiguration` | object | No | — | Carousel settings. |
-| › Items per page (desktop) | `itemsPerPageDesktop` | number | No | `4` | Items per page on desktop. |
-| › Items per page (mobile) | `itemsPerPageMobile` | number | No | `2` | Items per page on mobile and tablet (≤ 768px). |
-| › Carousel track variant | `variant` | `slide` \| `scroll` | No | `scroll` | Carousel navigation mode. In the CMS, the options are **Slide** (`slide`) and **Scroll** (`scroll`, default). |
-| › Infinite navigation? | `infiniteMode` | boolean | No | `false` | Enables infinite navigation. Applies only to the `slide` variant. |
-| › Navigation controls | `controls` | `complete` \| `navigationArrows` \| `paginationBullets` | No | `complete` | Which navigation controls are displayed. In the CMS, the options are **Arrows and bullets** (`complete`, default), **Arrows only** (`navigationArrows`), and **Bullets only** (`paginationBullets`). |
+| Items per page (desktop) | `itemsPerPageDesktop` | number | No | `4` | Items per page on desktop. |
+| Items per page (mobile) | `itemsPerPageMobile` | number | No | `2` | Items per page on mobile and tablet (≤ 768px). |
+| Carousel track variant | `variant` | `slide` | `scroll` | No | `scroll` | Carousel navigation mode. In the CMS, the options are **Slide** (`slide`) and **Scroll** (`scroll`, default). |
+| Infinite navigation? | `infiniteMode` | boolean | No | `false` | Enables infinite navigation. Applies only to the `slide` variant. |
+| Navigation controls | `controls` | `complete` | `navigationArrows` | `paginationBullets` | No | `complete` | Which navigation controls are displayed. In the CMS, the options are **Arrows and bullets** (`complete`, default), **Arrows only** (`navigationArrows`), and **Bullets only** (`paginationBullets`). |
 | Product Card Configuration | `productCardConfiguration` | object | No | — | Product card settings. |
-| › Show discount badge? | `showDiscountBadge` | boolean | No | `true` | Shows the discount badge on cards. |
-| › Cards should be bordered? | `bordered` | boolean | No | `true` | Renders bordered cards. |
+| Show discount badge? | `showDiscountBadge` | boolean | No | `true` | Shows the discount badge on cards. |
+| Cards should be bordered? | `bordered` | boolean | No | `true` | Renders bordered cards. |
 
 ## Customizing the section
 
