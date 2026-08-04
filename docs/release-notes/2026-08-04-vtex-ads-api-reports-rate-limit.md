@@ -1,6 +1,6 @@
 ---
 title: "VTEX Ads API: Rate limit on Reports endpoints"
-slug: "2026-07-29-vtex-ads-api-reports-rate-limit"
+slug: "2026-08-04-vtex-ads-api-reports-rate-limit"
 hidden: false
 type: "info"
 createdAt: "2026-08-04T12:00:00.000Z"
