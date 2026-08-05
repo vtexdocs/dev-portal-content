@@ -7,7 +7,7 @@ updatedAt: "2026-07-01T12:00:00.000Z"
 excerpt: "Learn how to model and consume CMS content in headless storefronts: JSON Schema structure, Content Types, components, and Data Plane API consumption patterns."
 ---
 
-Content modeling defines what can be created on the CMS and the architecture defines how that content moves from your repository to the CMS Admin and, after publishing, to your storefront.
+Content modeling defines what can be created on the CMS, and the architecture defines how that content moves from your repository to the CMS Admin and, after publishing, to your storefront.
 
  This guide details both layers for headless integrations, covering core concepts, design principles, JSON Schema rules, consumption patterns, and recommended Content Type structures.
 
@@ -19,13 +19,13 @@ Before modeling content for a headless store, you need three foundations in plac
 
 ### JSON Schema basics
 
-The CMS uses [JSON Schema](https://json-schema.org/) to declare every Content Type, component, and field. You do not need to master the full specification, but you should be comfortable with:
+The CMS uses [JSON Schema](https://json-schema.org/) to declare every Content Type, component, and field. You don't need to master the full specification, but you should be comfortable with:
 
 | Concept | Role in the CMS |
 | :---- | :---- |
 | `type` | Declares the data shape (`string`, `number`, `boolean`, `object`, `array`). |
 | `properties` | Lists the fields inside an `object`. |
-| `required` | Names fields that must be completed before saving. |
+| `required` | Indicates which fields are required before content can be saved. |
 | `items` | Defines the shape of each element in an `array`. |
 | `$ref` | Points to another definition in the same schema bundle. |
 
@@ -39,7 +39,7 @@ A minimal field declaration looks like this:
 }
 ```
 
-Learn more in the [JSON Schema step-by-step guide](https://json-schema.org/learn/getting-started-step-by-step).
+Learn more in the [JSON Schema instructions guide](https://json-schema.org/learn/getting-started-step-by-step).
 
 ### Content plugin (CLI)
 
@@ -51,8 +51,8 @@ vtex plugins install @vtex/cli-plugin-content
 
 Typical workflow:
 
-1. Author component and Content Type files in your repository.  
-2. Run `vtex content generate-schema` to produce a unified bundle.  
+1. Author component and Content Type files in your repository.
+2. Run `vtex content generate-schema` to produce a unified bundle.
 3. Run `vtex content upload-schema` to publish it to the Schema Registry.
 
 For headless stores, the `generate-schema` command requires two extra arguments: the paths to your component and Content Type directories, and `--base vtex.headless`:
@@ -142,7 +142,7 @@ Well-structured schemas reuse definitions instead of duplicating fields. The CMS
 | :---- | :---- | :---- |
 | **Platform** | `"$base": "vtex.headless"` | Inherits the headless platform bundle when you upload your store schema. |
 | **Component** | `"$extends": ["#/$defs/base-component"]` | Inherits shared component structure from your base bundle, when available. |
-| **Content Type** | `"$extends": ["#/$defs/base-page-template"]` | Shares common page properties across Content Types, when you define a template. |
+| **Content Type** | `"$extends": ["#/$defs/base-page-template"]` | Shares common page properties across Content Types when you define a template. |
 
 The `vtex.headless` base provides core platform definitions — not a full page library. You add the `components` and `content-types` your storefront needs.
 
@@ -208,7 +208,7 @@ The CMS uses JSON Schema draft [2019-09](https://json-schema.org/draft/2019-09/j
 
 ### CMS-specific keywords
 
-These keywords extend standard JSON Schema. They are resolved when you upload a bundle.
+These keywords extend standard JSON Schema. They're resolved when you upload a bundle.
 
 | Keyword | Applies to | Purpose |
 | :---- | :---- | :---- |
@@ -246,14 +246,14 @@ Standard JSON Schema validation runs when you save content. Common constraints:
 
 | Constraint | Example | Effect |
 | :---- | :---- | :---- |
-| `required` | `"required": ["title", "slug"]` | Named fields must be filled. |
+| `required` | `"required": ["title", "slug"]` | Named fields must be completed. |
 | `minLength` / `maxLength` | `"minLength": 10` on a slug | Enforces string length. |
 | `minimum` / `maximum` | `"maximum": 5` on item count | Bounds numeric values. |
 | `minItems` / `maxItems` | `"minItems": 1, "maxItems": 8` on a link array | Limits array size. |
 | `enum` | `"enum": ["primary", "secondary"]` | Restricts to allowed values. |
 | `default` | `"default": "primary"` | Pre-fills new entries. |
 
-Invalid data is rejected when saving, before content is published.
+Invalid data is rejected when saving, before the content is published.
 
 ## Consuming content
 
@@ -263,15 +263,15 @@ For the full lifecycle (schema upload, authoring, publishing, sync), see [Unders
 
 Your storefront owns:
 
-- **Routing**: Mapping URLs to Content Types and slugs.  
-- **Locale**: Passing the `locale` query parameter when fetching entries.  
+- **Routing**: Mapping URLs to Content Types and slugs.
+- **Locale**: Passing the `locale` query parameter when fetching entries.
 - **Rendering**: Mapping each `componentKey` to a UI component in your framework.
 
 The sections below cover the most common consumption patterns.
 
 ### Fetch a page by route or slug
 
-Use this pattern when a URL arrives at your frontend and you need to load the corresponding CMS entry. Pass the slug as a path segment after `entries/slug/`. Multi-segment slugs (for example, `en/promo`) are supported.
+Use this pattern when a URL arrives at your frontend, and you need to load the corresponding CMS entry. Pass the slug as a path segment after `entries/slug/`. Multi-segment slugs (for example, `en/promo`) are supported.
 
 ```shell
 GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{account}/{storeId}/{contentType}/entries/slug/summer-sale
@@ -401,7 +401,7 @@ GET https://{account}.vtexcommercestable.com.br/api/content-platform/data/{accou
 
 ### Map `componentKey` to UI components
 
-Every section object in an API response includes a `componentKey` that identifies which component to render. Your frontend is responsible for mapping these keys to actual UI components.
+Every section object in an API response includes a `componentKey` that identifies which component to render. Your frontend maps these keys to actual UI components.
 
 A typical implementation in React:
 
@@ -431,7 +431,7 @@ function Sections({ sections }: { sections: { componentKey: string; [key: string
 }
 ```
 
-Each component receives the full section object as props, so field names in your JSON Schema map directly to the props your component expects. If a `componentKey` is not in your map, the section is silently skipped — this is a safe default during incremental rollout.
+Each component receives the full section object as props, so field names in your JSON Schema map directly to the props your component expects. If a `componentKey` isn't in your map, the section is silently skipped — this is a safe default during incremental rollout.
 
 <!-- For full query parameter documentation (`locale`, `sort`, `order`, `content`, `scroll`), see the [Data Plane API reference](https://developers.vtex.com/docs/api-reference/data-plane-api). -->
 
@@ -473,12 +473,12 @@ Fetch singleton entries by Content Type name (no slug) and wrap every page layou
 
 | Page type | `$singleton` | `identifierKeys` | Components you might use | Example route |
 | :---- | :---- | :---- | :---- | :---- |
-| **Home** | `true` | `[]` | Promo banners, featured collections | `/` |
-| **Landing page** | `false` | `["slug"]` | Banners, rich text, CTA | `/{slug}` |
-| **PLP** | `false` | `["slug"]` | Breadcrumb, layout config | `/category/{slug}` |
-| **PDP** | `false` | `["slug"]` | Product layout, cross-sell blocks | `/product/{slug}` |
-| **Blog category** | `false` | `["slug"]` | Category header, article list | `/blog/{slug}` |
-| **Blog post** | `false` | `["slug"]` | Article body, related content | `/blog/post/{slug}` |
+| **Home** | `true` | `[]` | Promo banners, featured collections. | `/` |
+| **Landing page** | `false` | `["slug"]` | Banners, rich text, CTA. | `/{slug}` |
+| **PLP** | `false` | `["slug"]` | Breadcrumb, layout config. | `/category/{slug}` |
+| **PDP** | `false` | `["slug"]` | Product layout, cross-sell blocks. | `/product/{slug}` |
+| **Blog category** | `false` | `["slug"]` | Category header, article list. | `/blog/{slug}` |
+| **Blog post** | `false` | `["slug"]` | Article body, related content. | `/blog/post/{slug}` |
 
 **Home**: One entry, no slug:
 
