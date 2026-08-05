@@ -3,7 +3,7 @@ title: "Extensibility"
 slug: "extensibility"
 hidden: false
 createdAt: "2024-07-22T10:00:00.000Z"
-updatedAt: "2026-08-05T17:17:00.000Z"
+updatedAt: "2026-08-05T20:15:00.000Z"
 excerpt: "Understand how to extend VTEX capabilities beyond what comes out of the box"
 ---
 
@@ -25,10 +25,11 @@ In this guide, we discuss VTEX’s extensibility in four areas divided into the 
 Master Data provides the following advantages:
 
 - **Native VTEX solution**: Start working with Master Data out of the box. There is no need to integrate an external database solution.
-- **Scalable**: Store data as needed without worrying about usage limits.
-- **Native entities**: Free to use. Custom entities are billed monthly in tiers based on the number of documents stored. For more details, see [Master Data billing](https://help.vtex.com/docs/tutorials/master-data#billing).
+- **Scalability**: Store more data as your operation grows.
 
-There are two Master Data versions available (v1 and v2). Learn more about each of their features in the [Master Data](https://help.vtex.com/docs/tutorials/master-data#versions-available) guide. By default, Master Data v1 keeps customer data from the stores.
+>⚠️ Using Master Data may generate costs. Native data entities are free, but the custom data entities you create are billed monthly in tiers based on the total number of documents stored. For pricing details, see [Master Data billing](https://help.vtex.com/docs/tutorials/master-data#billing).
+
+There are two Master Data versions available (v1 and v2). Learn more about each of their features in the [Master Data](https://help.vtex.com/docs/tutorials/master-data#available-versions) guide. By default, Master Data v1 keeps customer data from the stores.
 
 Master Data has three main concepts about data structure:
 
