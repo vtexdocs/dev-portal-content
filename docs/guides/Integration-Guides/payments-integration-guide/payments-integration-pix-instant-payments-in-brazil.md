@@ -120,7 +120,7 @@ The expected response is:
 
 > ⚠️ Pix does not support payment split. For the payment methods that currently support split, see the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint reference.
 
-### Create Pix Payment
+### Create a Pix payment
 
 To create a Pix payment, implement the `POST` [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
 
@@ -229,7 +229,7 @@ The expected response is:
 
 For more information, access the [Create Payment endpoint](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments).
 
-### Cancel a Payment
+### Cancel a payment
 
 To cancel an existing payment, implement the `POST` [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations).
 
@@ -321,7 +321,7 @@ The expected response is:
 
 For more information, see the [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) endpoint reference.
 
-### Communicate with the Gateway
+### Communicate with the gateway
 
 The last endpoint, `POST` [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), provides a URL that enables a direct connection between the VTEX gateway and the payment provider.
 
