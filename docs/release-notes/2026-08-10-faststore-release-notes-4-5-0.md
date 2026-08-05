@@ -2,7 +2,7 @@
 title: "FastStore Release Notes — Version 4.5.0"
 slug: "2026-08-10-faststore-release-notes-4-5-0"
 type: improved
-excerpt: "FastStore version 4.5.0 focuses on My Account for B2B Buyer Portal (Closed Beta) quotes and contract switching, CMS-driven recommendations and custom account pages, localized PDP and PLP URLs, and Pricing Fallback support"
+excerpt: "FastStore version 4.5.0 focuses on My Account for B2B Buyer Portal (Closed Beta) quotes and contract switching, CMS-driven recommendations and custom account pages, localized PDP and PLP URLs, and Pricing Fallback support."
 createdAt: "2026-08-10T00:00:00.000Z"
 updatedAt: "2026-08-10T00:00:00.000Z"
 hidden: false
@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore `v4.5.0` expands My Account for B2B Buyer Portal (Closed Beta) with a quotes list and contract switcher, adds CMS-configurable product recommendations and custom account pages, and improves multi-locale PDP and PLP URLs resolution. It also forwards Intelligent Search Pricing Fallback tokens into Checkout and copies self-hosted fonts from `public/` during CLI generate. See the sections below for more details.
+FastStore `v4.5.0` expands My Account for B2B Buyer Portal (Closed Beta) with a quotes list and contract switcher, adds CMS-configurable product recommendations and custom account pages, and improves multi-locale PDP and PLP URLs resolution. It also forwards Intelligent Search Pricing Fallback tokens into Checkout and copies self-hosted fonts from `public/` during CLI generation. See the sections below for more details.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.5.0` and keep your store up-to-date with the following improvements.
 
@@ -30,7 +30,7 @@ Adds a CMS-configurable `RecommendationShelf` section that fetches VTEX personal
 
 `@faststore/cli` `copyPublicFiles` previously dropped nested directories and mismatched extensions, so self-hosted fonts under `public/fonts/` never reached the production build. Font formats (`.woff`, `.woff2`, `.ttf`, `.otf`, `.eot`) and nested directories are now copied correctly.
 
-Stores that place fonts or nested assets in `public/` should upgrade to `v4.5.0` and re-run build the store.
+Stores that place fonts or nested assets in `public/` should upgrade to `v4.5.0` and re-run the build.
 
 ### Forward Pricing Fallback price token to Checkout (PR: [#3415](https://github.com/vtex/faststore/pull/3415))
 
@@ -62,6 +62,6 @@ B2B stores on FastStore My Account should upgrade to `v4.5.0` to avoid store-wid
 
 ### CMS-driven custom My Account pages (PR: [#3411](https://github.com/vtex/faststore/pull/3411))
 
-Stores can now declare a My Account route bound to a CMS content type so new account pages are authored in CMS Admin instead of remaining code-only. An optional `contentType` on each `Route` in `navigation.ts` controls the mode: content type alone generates a CMS-only page, content type plus a `.tsx` page keeps a hybrid of CMS sections and code; omitting `contentType` preserves legacy code-only routes.
+Stores can now declare a My Account route bound to a CMS content type so new account pages are authored in CMS Admin instead of remaining code-only. An optional `contentType` on each `Route` in `navigation.ts` controls the mode: content type alone generates a CMS-only page; content type plus a `.tsx` page keeps a hybrid of CMS sections and code; omitting `contentType` preserves legacy code-only routes.
 
 Upgrade to `v4.5.0`, add `contentType` on the desired route, sync CMS schemas, publish sections in Admin, and open the route while logged in. Existing routes without `contentType` are unchanged.
