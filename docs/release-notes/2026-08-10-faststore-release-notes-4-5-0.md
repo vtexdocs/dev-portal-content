@@ -10,13 +10,13 @@ tags:
   - FastStore
 ---
 
-FastStore 4.5.0 expands My Account for B2B Buyer Portal (Closed Beta)  with a quotes list and contract switcher, adds CMS-configurable product recommendations and custom account pages, and improves multi-locale PDP/PLP URL resolution. It also forwards Intelligent Search Pricing Fallback tokens into Checkout and copies self-hosted fonts from `public/` during CLI generate. See the sections below for more details.
+FastStore 4.5.0 expands My Account for B2B Buyer Portal (Closed Beta) with a quotes list and contract switcher, adds CMS-configurable product recommendations and custom account pages, and improves multi-locale PDP/PLP URL resolution. It also forwards Intelligent Search Pricing Fallback tokens into Checkout and copies self-hosted fonts from `public/` during CLI generate. See the sections below for more details.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.5.0` and keep your store up-to-date with the following improvements.
 
 ## Features
 
-### Localized product URLs and breadcrumbs on PDP and PLPs (PR: [#3402](https://github.com/vtex/faststore/pull/3402))
+### Localized product URLs and breadcrumbs on PDPs and PLPs (PR: [#3402](https://github.com/vtex/faststore/pull/3402))
 
 PDP and PLP slugs, breadcrumbs, and alternate-locale links now resolve correctly for multi-language catalogs.
 
@@ -28,7 +28,7 @@ Adds a CMS-configurable `RecommendationShelf` section that fetches VTEX personal
 
 ### Copy fonts and nested assets from public/ to build (PR: [#3412](https://github.com/vtex/faststore/pull/3412))
 
-`@faststore/cli` `copyPublicFiles` previously dropped nested directories and mis-matched extensions, so self-hosted fonts under `public/fonts/` never reached the production build. Font formats (`.woff`, `.woff2`, `.ttf`, `.otf`, `.eot`) and nested directories are now copied correctly.
+`@faststore/cli` `copyPublicFiles` previously dropped nested directories and mismatched extensions, so self-hosted fonts under `public/fonts/` never reached the production build. Font formats (`.woff`, `.woff2`, `.ttf`, `.otf`, `.eot`) and nested directories are now copied correctly.
 
 Stores that place fonts or nested assets in `public/` should upgrade to `v4.5.0` and re-run build so files copy into `.faststore/public/`.
 
@@ -54,7 +54,7 @@ B2B buyers can now view the active contract and switch among contracts for their
 
 Stores using My Account for B2B Buyer Portal (Closed Beta) should upgrade to `v4.5.0`. Local development may need `authenticator`/`vtexid` rewrites for non-WebOps environments.
 
-### Prevent My Account 500s from empty session profile and missing CMS content (PR: [#3417](https://github.com/vtex/faststore/pull/3417))
+### Prevent My Account 500s from an empty session profile and missing CMS content (PR: [#3417](https://github.com/vtex/faststore/pull/3417))
 
 My Account routes could previously return HTTP 500 when a representative session had an empty VTEX profile or when a My Account content type had no published CMS document. Both cases are now handled gracefully, including a fallback for `/pvt/account/404`.
 
