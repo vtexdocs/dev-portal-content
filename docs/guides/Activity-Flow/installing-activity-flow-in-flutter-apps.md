@@ -1,10 +1,10 @@
 ---
 title: "Installing Activity Flow in Flutter apps"
 slug: "installing-activity-flow-in-flutter-apps"
-excerpt: "Learn how to install the VTEX Activity Flow SDK in your Flutter app to track navigation, page views, deep links, ads, and customer interactions across Android and iOS."
+excerpt: "Install the VTEX Activity Flow SDK in your Flutter app to track navigation, page views, deep links, ads, and customer interactions across Android and iOS."
 hidden: false
 createdAt: "2025-12-18T16:30:39.842Z"
-updatedAt: "2026-07-03T00:00:00.000Z"
+updatedAt: "2026-07-22T00:00:00.000Z"
 seeAlso:
   - "/docs/guides/activity-flow"
 ---
@@ -13,9 +13,7 @@ In this guide, you'll learn how to install and configure the [VTEX Activity Flow
 
 ## Before you begin
 
-### Install the Activity Flow package
-
-The Activity Flow SDK captures user navigation and sends events from your mobile app. To install the package, run the following command in your project directory:
+Make sure you've installed the Activity Flow SDK package to capture user navigation and send events from your mobile app. To install the package, run the following command in your project directory:
 
 ```bash
 flutter pub add activity_flow
@@ -74,7 +72,7 @@ This setup enables automatic screen view tracking for standard route navigation.
 
 For navigation widgets such as `BottomNavigationBar` or `TabBar` that don't trigger route changes, use the `screenViewChange` function to manually track screen views.
 
-For example, using the `onTap` callback within a `BottomNavigationBar` widget allows for capturing a new route each time the user taps on a different tab:
+For example, using the `onTap` callback within a `BottomNavigationBar` widget enables capturing a new route each time the user taps on a different tab:
 
 ```dart
 BottomNavigationBar(
@@ -243,7 +241,7 @@ When you apply the listener to a widget, the SDK automatically tracks three even
 
 To start tracking your ad events, follow these steps:
 
-1. Call the `addAdsListener` method
+1. Call the `addAdsListener` method.
 
 To enable tracking, call the `addAdsListener` extension method on any Flutter widget that represents an ad:
 
@@ -307,7 +305,7 @@ class HomeScreen extends StatelessWidget {
 }
 ```
 
-This Flutter screen is constructed as a `StatelessWidget` that lists products and displays an ad banner. The banner's `Container` is wrapped with Activity Flow's `addAdsListener`, which attaches an ad-event listener and sends the provided metadata map with each event.
+This Flutter screen is built as a `StatelessWidget` that lists products and displays an ad banner. The banner's `Container` is wrapped with Activity Flow's `addAdsListener`, which attaches an ad-event listener and sends the provided metadata map with each event.
 
 This instrumentation enables the automatic tracking of impressions, viewability, and clicks, allowing for comprehensive analytics tied to `adId`, `creativeId`, `position`, and `campaignName`.
 
@@ -335,7 +333,7 @@ ElevatedButton(
 
 #### View event
 
-Use `addViewListener` to fire a view event when the widget has been at least 50% visible on screen for at least 1 second (IAB standard). The event fires once per app session — it does not re-fire if the widget scrolls off-screen and back, or if the user navigates away and returns.
+Use `addViewListener` to fire a view event when the widget has been at least 50% visible on screen for at least 1 second (IAB standard). The event fires once per app session — it doesn't re-fire if the widget scrolls off-screen and back, or if the user navigates away and returns.
 
 >ℹ️ You must include the `elementSource` key in the method's metadata map.
 
@@ -496,8 +494,8 @@ class ButtonTemplate extends StatelessWidget {
 }
 ```
 
-The example demonstrates how to integrate Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to automatically capture page-view events.
+The example demonstrates how to integrate Activity Flow into a Flutter app by importing the necessary package, initializing it with `initActivityFlow(accountName: appAccountName)`, and constructing a `MaterialApp` with named routes and a `PageViewObserver` to capture page-view events automatically.
 
 It outlines a `MyHomePage` that incorporates an `AdBanner` that uses `addAdsListener` to pass ad metadata, such as product name, price, and ID. Additionally, it features navigation buttons sourced from a routes list.
 
-The reusable `ButtonTemplate` facilitates navigation through `Navigator.pushNamed`, showcasing a standard configuration for automatic screen tracking, as well as ad impression and click tracking, in a Flutter application.
+The reusable `ButtonTemplate` facilitates navigation via `Navigator.pushNamed` and showcases a standard configuration for automatic screen tracking, as well as ad impression and click tracking, in a Flutter application.
