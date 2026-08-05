@@ -220,7 +220,7 @@ Once your middleware is deployed, configure the external authentication endpoint
 
 #### Upserting the configuration
 
-Use `PUT` [Upsert password migration configuration](https://developers.vtex.com/docs/api-reference/vtex-id-api#put-/api/authenticator/v1/tenants/features/-featureId-) to register your middleware's URL on VTEX and enable legacy credential routing for your account.
+Use `PUT` [Upsert password migration configuration](https://developers.vtex.com/docs/api-reference/authenticator-api#put-/api/authenticator/v1/tenants/features/-featureId-) to register your middleware's URL on VTEX and enable legacy credential routing for your account.
 
 > ⚠️ Treat `Secret` as a credential: Don't log it, don't share it, and don't reuse it across environments.
 
@@ -240,7 +240,7 @@ curl -X PUT "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator
 
 #### Enabling or disabling the feature
 
-Use `PATCH` [Enable or disable password migration](https://developers.vtex.com/docs/api-reference/vtex-id-api#patch-/api/authenticator/v1/tenants/features/-featureId-) to enable or disable password migration for your account without removing the configuration.
+Use `PATCH` [Enable or disable password migration](https://developers.vtex.com/docs/api-reference/authenticator-api#patch-/api/authenticator/v1/tenants/features/-featureId-) to enable or disable password migration for your account without removing the configuration.
 
 Set the `enabled` parameter to `true` to enable or `false` to disable password migration.
 
@@ -258,7 +258,7 @@ curl -X PATCH "https://{{accountName}}.vtexcommercestable.com.br/api/authenticat
 
 #### Deleting the configuration
 
-Use `DELETE` [Delete password migration configuration](https://developers.vtex.com/docs/api-reference/vtex-id-api#delete-/api/authenticator/v1/tenants/features/-featureId-) to remove the password migration configuration from your account entirely.
+Use `DELETE` [Delete password migration configuration](https://developers.vtex.com/docs/api-reference/authenticator-api#delete-/api/authenticator/v1/tenants/features/-featureId-) to remove the password migration configuration from your account entirely.
 
 **Request example**
 
@@ -270,7 +270,7 @@ curl -X DELETE "https://{{accountName}}.vtexcommercestable.com.br/api/authentica
 
 ### Step 3 - Provision legacy users
 
-When creating storefront users who should authenticate via password migration on their first login, follow the same flow described in [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning), setting `isLegacyPassword=true` in the query parameter of the `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/v1/storefront/users) request instead of the default `false`.
+When creating storefront users who should authenticate via password migration on their first login, follow the same flow described in [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning), setting `isLegacyPassword=true` in the query parameter of the `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users) request instead of the default `false`.
 
 > ⚠️ Once you create a user, you can't edit or remove it. If you upload incorrect data, create a new user with a new username.
 
