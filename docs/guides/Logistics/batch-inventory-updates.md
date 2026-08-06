@@ -74,7 +74,7 @@ Replace `{presignedUrl}` with the value returned in `url`, and `{batchId}` with 
 
 The CSV file must contain one row per SKU, warehouse, and account combination you want to update. Use the column headers below, in this order:
 
-![CSV File Schema](./batch-inventory-updates.png)
+![CSV File Schema](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Logistics/batch-inventory-updates.png)
 
 | **Field** | **Type** | **Description** |
 | :--- | :--- | :--- |
