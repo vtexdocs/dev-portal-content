@@ -56,14 +56,14 @@ To work with a Development Branch, you need the [VTEX CLI](https://developers.vt
     vtex content upload-schema ./cms_schema.json
     ```
 
-5. When the CLI asks which version to associate with the schema, type the full version you want to publish, using a `beta` pre-release tag to avoid affecting the current live schema, for example `1.7.0-beta.0`.
+5. When the CLI asks which version to associate with the schema, type the full version you want to publish, using a `beta` pre-release tag to avoid affecting the current live schema, for example, `1.7.0-beta.0`.
 
 ### Step 2 - Create your Development Branch
 
 1. Open the VTEX Admin and go to **Storefront > Content > Branches**.  
 2. Click `+` to create a new branch.  
 3. Enable the **Development branch** toggle.  
-4. Under **Schema version**, select the version you published in [Step 1](#step-1–sync-your-schema-version).  
+4. Under **Schema version**, select the version you published in [Step 1](#step-1-sync-your-schema-version).  
 5. Click `Create`.
 
 ![create-development-branches](https://vtexhelp.vtexassets.com/assets/docs/src/create-development-branches___7e6b97f48ce0869b87c046403fb1d5ff.gif)
