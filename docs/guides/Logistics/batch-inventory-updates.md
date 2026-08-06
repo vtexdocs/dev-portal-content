@@ -53,13 +53,9 @@ The batch starts in `AWAITING_UPLOAD` status and remains in this state until the
 
 ## Upload the CSV to S3 (data plane)
 
+Using the [CSV file template](#csv-file-template) as a reference, create a `.csv` file containing the inventory updates you want to make. Save the file with the `batchId` returned by the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint as the file name (for example, `550e8400-e29b-41d4-a716-446655440000.csv`).
+
 Upload the CSV file directly to S3 using the `url` returned by the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint. This request does not go through the VTEX API.
-
-Keep the following requirements in mind:
-
-- Submit every field following the order defined in the CSV file.
-- The CSV file name must match the `batchId` returned in the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) response (for example, `550e8400-e29b-41d4-a716-446655440000.csv`).
-- Use the HTTP method (`PUT`) and headers (`Content-Type: text/csv`) returned in the `upload` object.
 
 Example request:
 
@@ -67,38 +63,35 @@ Example request:
 curl -X PUT \
   "{presignedUrl}" \
   -H "Content-Type: text/csv" \
-  --data-binary "@550e8400-e29b-41d4-a716-446655440000.csv"
+  --data-binary "@{batchId}.csv"
 ```
 
-Replace `{presignedUrl}` with the value returned in `url`. A successful upload returns an HTTP `200 OK` response from S3.
+Replace `{presignedUrl}` with the value returned in `url`, and `{batchId}` with the `batchId` from the same response. A successful upload returns an HTTP `200 OK` response from S3.
 
-### CSV file schema
+> ⚠️ The CSV file name must match the `batchId` returned in the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) response (for example, `550e8400-e29b-41d4-a716-446655440000.csv`). Use the HTTP method (`PUT`) and headers (`Content-Type: text/csv`) returned in the `upload` object.
 
-The CSV file must contain one row per SKU, warehouse and account name combination you want to update, with the following fields:
+### CSV file template
+
+The CSV file must contain one row per SKU, warehouse, and account combination you want to update. Use the column headers below, in this order:
+
+![CSV File Schema](./batch-inventory-updates.png)
 
 | **Field** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| `item_id` | string | SKU identifier of the item you want to update. |
-| `account_name` | string | Name of the VTEX account the warehouse belongs to. |
-| `container_id` | string | ID of the warehouse where the inventory update should be applied. |
-| `quantity` | integer | Number of units available for the SKU in the given warehouse. This value is ignored when `unlimited` is `true`. |
-| `unlimited` | boolean | Indicates whether the SKU has [unlimited inventory](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) (`true`) or a finite `quantity` (`false`). |
-| `lead_time` | string | Shipping [lead time](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) for the SKU at the warehouse, in ISO 8601 duration format (for example, `PT24H` for 24 hours). |
+| `item_id` | string | SKU ID as registered in the catalog. Rows with a nonexistent SKU return the `UNKNOWN` error code. |
+| `account_name` | string | VTEX account name of the warehouse, exactly as it appears in the store URL (`https://{accountName}.myvtex.com`). |
+| `container_id` | string | Warehouse ID where the inventory update should be applied, as configured in **Warehouse & Inventory Management**. An incorrect or nonexistent ID causes the row to fail. |
+| `quantity` | integer | Number of units available for the SKU in the given warehouse. Must be a non-negative integer. Still required when `unlimited` is `true`, but the quantity value is ignored in that case. |
+| `unlimited` | boolean | Indicates whether the SKU has [unlimited inventory](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) (`true`) or a finite `quantity` (`false`). Use lowercase `true` or `false` only.  |
+| `lead_time` | string | Shipping [lead time](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) for the SKU at the warehouse, in ISO 8601 duration format (for example, `PT24H` for 24 hours or `PT0S` for immediate availability). Omitting this field or using an invalid format causes the row to fail. |
 
-Keep the following in mind when filling out each field:
+> ❗ Do not rename, reorder, or remove the header columns. Submit every field in the order defined above.
 
-- **`item_id`:** Use the exact SKU ID as registered in your catalog. Rows with a nonexistent SKU return the `UNKNOWN` error code.
-- **`account_name`:** Use the store's account name exactly as it appears in the VTEX URL (for example, the `{accountName}` in `https://{accountName}.myvtex.com`).
-- **`container_id`:** Use the exact warehouse ID configured in Warehouse & Inventory Management. An incorrect or nonexistent ID causes the row to fail.
-- **`quantity`:** Provide a non-negative integer. This field is still required even when `unlimited` is `true`, but its value is ignored during processing.
-- **`unlimited`:** Use the lowercase literals `true` or `false`. Any other value is treated as an invalid format.
-- **`lead_time`:** Use ISO 8601 duration format (for example, `PT24H` for 24 hours or `PT0S` for immediate availability). Omitting this field or using an invalid format causes the row to fail.
-
-CSV example:
+**CSV example:**
 
 ```csv
 item_id,account_name,container_id,quantity,unlimited,lead_time
-SKU-12345,WH-01,dgbransonmissouri,150,false,PT24H
+12345,barcelonastore,WH01,150,false,PT24H 
 ```
 
 ## Confirm the batch
@@ -194,9 +187,9 @@ Example:
 
 ```csv
 line_number,item_id,container_id,error_code,error_message
-1523,SKU-12345,WH-01,INVALID_QUANTITY,"quantity cannot be negative: -50"
-4892,SKU-67890,WH-01,MISSING_REQUIRED_FIELD,"container_id is required"
-10234,SKU-11111,WH-01,INVALID_DATE_FORMAT,"supply_date is not valid"
+1523,12345,WH01,INVALID_QUANTITY,"quantity cannot be negative: -50"
+4892,67890,WH01,MISSING_REQUIRED_FIELD,"container_id is required"
+10234,11111,WH01,INVALID_DATE_FORMAT,"supply_date is not valid"
 ```
 
 ### Error types
