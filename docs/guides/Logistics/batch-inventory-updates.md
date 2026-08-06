@@ -76,14 +76,14 @@ The CSV file must contain one row per SKU, warehouse, and account combination yo
 
 ![CSV File Schema](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Logistics/batch-inventory-updates.png)
 
-| **Field** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `item_id` | string | SKU ID as registered in the catalog. Rows with a nonexistent SKU return the `UNKNOWN` error code. |
-| `account_name` | string | VTEX account name of the warehouse, exactly as it appears in the store URL (`https://{accountName}.myvtex.com`). |
-| `container_id` | string | Warehouse ID where the inventory update should be applied, as configured in **Warehouse & Inventory Management**. An incorrect or nonexistent ID causes the row to fail. |
-| `quantity` | integer | Number of units available for the SKU in the given warehouse. Must be a non-negative integer. Still required when `unlimited` is `true`, but the quantity value is ignored in that case. |
-| `unlimited` | boolean | Indicates whether the SKU has [unlimited inventory](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) (`true`) or a finite `quantity` (`false`). Use lowercase `true` or `false` only. |
-| `lead_time` | string | Shipping [lead time](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) for the SKU at the warehouse, in ISO 8601 duration format (for example, `PT24H` for 24 hours or `PT0S` for immediate availability). Omitting this field or using an invalid format causes the row to fail. |
+| **Field** | **Type** | **Required** | **Description** |
+| :--- | :--- | :--- | :--- |
+| `item_id` | string | Yes | SKU ID as registered in the catalog. Rows with a nonexistent SKU return the `UNKNOWN` error code. |
+| `account_name` | string | Yes | VTEX account name of the warehouse, exactly as it appears in the store URL (`https://{accountName}.myvtex.com`). |
+| `container_id` | string | Yes | Warehouse ID where the inventory update should be applied, as configured in **Warehouse & Inventory Management**. An incorrect or nonexistent ID causes the row to fail. |
+| `quantity` | integer | Yes | Number of units available for the SKU in the given warehouse. Must be a non-negative integer. Still required when `unlimited` is `true`, but the quantity value is ignored in that case. |
+| `unlimited` | boolean | No | Indicates whether the SKU has [unlimited inventory](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) (`true`) or a finite `quantity` (`false`). Use lowercase `true` or `false` only. Defaults to `false` when omitted. |
+| `lead_time` | string | No | Shipping [lead time](https://help.vtex.com/docs/tutorials/managing-stock-items#inventory-information) for the SKU at the warehouse, in ISO 8601 duration format (for example, `PT24H` for 24 hours or `PT0S` for immediate availability). Defaults to `0` when omitted. An invalid format causes the row to fail. |
 
 > ❗ Do not rename, reorder, or remove the header columns. Submit every field in the order defined above.
 
