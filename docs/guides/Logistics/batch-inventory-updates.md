@@ -53,11 +53,11 @@ The batch starts in `AWAITING_UPLOAD` status and remains in this state until the
 
 ## Upload the CSV to S3 (data plane)
 
-Using the [CSV file template](#csv-file-template) as a reference, create a `.csv` file containing the inventory updates you want to make. Save the file with the `batchId` returned by the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint as the file name (for example, `550e8400-e29b-41d4-a716-446655440000.csv`).
+Using the [CSV file template](#csv-file-template) as a reference, create a `.csv` file containing the inventory updates you want to make. Name the file after the `batchId` returned by the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint (for example, `550e8400-e29b-41d4-a716-446655440000.csv`).
 
-Upload the CSV file directly to S3 using the `url` returned by the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint. This request does not go through the VTEX API.
+Next, upload the CSV file directly to S3 using the `url` returned by the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint. This request does not go through the VTEX API.
 
-Example request:
+**Example request:**
 
 ```bash
 curl -X PUT \
@@ -108,7 +108,7 @@ A successful commit returns an HTTP `202 Accepted` response, and the batch trans
 
 Use the [Get batch inventory status](https://developers.vtex.com/docs/api-reference/logistics-api#get-/availability/v1/inventory/batch/-batchId-/status) endpoint to track the processing progress of the batch. The response returns row counts, error counts, percentage completed, processing stages, and a final summary once the batch is processed.
 
-Response example:
+**Response example:**
 
 ```json
 {
@@ -157,7 +157,7 @@ The `status` field can return the following values:
 
 If the batch status response indicates `errorCount > 0`, use the [Get batch inventory errors](https://developers.vtex.com/docs/api-reference/logistics-api#get-/availability/v1/inventory/batch/-batchId-/errors) endpoint to retrieve a pre-signed URL for downloading a CSV report with all rows that failed processing.
 
-Response example:
+**Response example:**
 
 ```json
 {
@@ -183,7 +183,7 @@ The error CSV contains the following fields:
 | `error_code` | string | Machine-readable error code. |
 | `error_message` | string | Human-readable error description. |
 
-Example:
+**Example:**
 
 ```csv
 line_number,item_id,container_id,error_code,error_message
