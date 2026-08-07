@@ -116,7 +116,7 @@ Follow these checks after installing the script:
 
 1. Access the destination retailer through an offsite URL (the parameterized URL generated for the campaign).
 2. Confirm the script loads and that the offsite access event is sent. Check the network request.
-3. Run a control case: an access to the same page **without** the offsite parameters should **not** be registered as an offsite click.
+3. Run a control case: access to the same page **without** the offsite parameters should **not** be registered as an offsite click.
 4. Run an end-to-end test: with a test offsite campaign, place a test order and confirm that all metrics (impression, click, and conversion) were captured. This end-to-end validation is the retailer's responsibility.
 
 > ℹ️ The expected network endpoint, request name, or payload signature for offsite access events has not been documented here. Confirm what to look for in DevTools with the VTEX Ads team if validation is unclear.
