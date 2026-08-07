@@ -4,7 +4,7 @@ slug: "2026-07-06-faststore-webops-self-service-git-provider-management"
 type: added
 excerpt: "FastStore WebOps now allows you to change the GitHub organization and repository associated with your project."
 createdAt: "2026-07-06T00:00:00.000Z"
-updatedAt: "2026-07-24T00:00:00.000Z"
+updatedAt: "2026-08-07T00:00:00.000Z"
 tags:
   - FastStore
   - WebOps
