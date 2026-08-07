@@ -7,7 +7,7 @@ updatedAt: "2026-07-08T09:00:00.813Z"
 excerpt: "Set up your local environment to manage CMS schemas, from installing the required tools to scaffolding the folder structure in your storefront project."
 ---
 
-In the CMS, developers define the content structure, including which fields exist, their types, and their names, while editors use the CMS Admin interface to create and publish pages based on that structure. This separation means every new content block starts with a developer writing a schema file, so an editor can configure it in the Admin panel.
+In the CMS, developers define the content structure, including which fields exist, their types, and their names, while editors use the CMS Admin interface to create and publish pages based on that structure. This separation means every new content block starts with a developer writing a schema file, so an editor can configure the content block in the Admin panel.
 
 This guide walks you through the tools and steps required to get started with CMS locally.
 
@@ -15,11 +15,11 @@ This guide walks you through the tools and steps required to get started with CM
 
 Before starting, make sure you have:
 
-* A VTEX account with the **Content Administrator** role assigned to your user in [License Manager](https://help.vtex.com/en/tutorial/roles--7HKbd9jg39YZlsqhqZPHbR).  
+* A VTEX account with the **Content Administrator** role assigned to you in [License Manager](https://help.vtex.com/en/tutorial/roles--7HKbd9jg39YZlsqhqZPHbR).  
 * [Node.js](https://nodejs.org/) is installed on your machine.  
-* A storefront project repository cloned locally (e.g., a [FastStore](https://developers.vtex.com/docs/guides/faststore) project).
+* A storefront project repository cloned locally (ex.:, a [FastStore](https://developers.vtex.com/docs/guides/faststore) project).
 
-## Step 1 - Installing the VTEX IO CLI
+## Step 1 - Install the VTEX IO CLI
 
 The [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) is the command-line interface for managing your VTEX account, installing apps, and running CMS commands. If you haven't installed it yet, run:
 
@@ -35,7 +35,7 @@ vtex login {accountName}
 
 Replace `{accountName}` with your VTEX account name. You can verify you are logged in by running `vtex whoami`.
 
-## Step 2 - Installing the Content plugin
+## Step 2 - Install the Content plugin
 
 The [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) extends the VTEX IO CLI with commands for managing CMS schemas. Install it by running:
 
@@ -67,7 +67,7 @@ COMMANDS
 
 ```
 
-## Step 3 - Installing the CMS Admin app
+## Step 3 - Install the CMS Admin app
 
 The CMS Admin app (`vtex.admin-content-platform-ui`) provides the interface where editors manage content. You only need to install it once per account.
 
@@ -90,7 +90,7 @@ The CMS Admin app (`vtex.admin-content-platform-ui`) provides the interface wher
 
     > ⚠️ If you receive a `Permission denied` error when accessing CMS in the Admin, check the [CMS schema sync errors](https://developers.vtex.com/docs/guides/cms-troubleshooting) troubleshooting guide.
 
-## Step 4 - Scaffolding the CMS folder structure
+## Step 4 - Scaffold the CMS folder structure
 
 The CMS folder structure organizes your component schemas and page definitions. Run the following command from the root of your storefront project:
 
