@@ -71,7 +71,7 @@ COMMANDS
 
 The CMS Admin app (`vtex.admin-content-platform-ui`) provides the interface where editors manage content. You only need to install it once per account.
 
-1. In the terminal, make sure you are logged in to your VTEX account.  
+1. In the terminal, make sure you're logged in to your VTEX account.  
 2. Run the following command:
 
     ```shell
