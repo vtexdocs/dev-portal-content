@@ -11,9 +11,7 @@ A component is a reusable JSON Schema object that groups related fields — for 
 
 This guide covers how to define components, including file structure, required properties, and four annotated examples: a reusable building block, a page section, nested composition with `$ref`, and polymorphic fields.
 
-<!-- TODO: Uncomment when "Understanding content modeling and architecture for headless stores" is published.
 > ℹ️ For modeling concepts (Content Type vs. component, singleton patterns, recommended page structures), see [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores). 
-!-->
 
 ```mermaid
 flowchart TD
@@ -50,8 +48,7 @@ Both components and Content Types are JSON Schema objects, but they play differe
 | **Referenced from pages** | Embedded with `$ref` or listed in a `sections` array. | Creates entries fetched by Content Type name or slug. |
 | **Storefront mapping** | Maps `$componentKey` to a UI block or nested field renderer. | Maps Content Type name to a page route and layout. |
 
-<!-- TODO: Uncomment when "Understanding content modeling and architecture for headless stores" is published.
-> ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page or groups fields reused elsewhere, model it as a component. See [Choosing between a Content Type and a component](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores#choosing-between-a-content-type-and-a-component). !-->
+> ℹ️ If it has a URL, model it as a Content Type. If it renders a block on a page or groups fields reused elsewhere, model it as a component. See [Choosing between a Content Type and a component](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores#choosing-between-a-content-type-and-a-component).
 
 Sections are components that you add to a page through a Content Type's `sections` array. Reusable building blocks (such as `Link` or `SEO`) are usually embedded inside sections or Content Types with `$ref` instead of being listed in the section picker.
 
