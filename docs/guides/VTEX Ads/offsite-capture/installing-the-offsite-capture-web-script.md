@@ -3,7 +3,7 @@ title: "Installing the offsite capture web script"
 slug: "installing-the-offsite-capture-web-script"
 hidden: false
 createdAt: "2026-07-10T00:00:00.000Z"
-updatedAt: "2026-07-10T00:00:00.000Z"
+updatedAt: "2026-08-12T00:00:00.000Z"
 excerpt: "Install and configure the VTEX Ads offsite capture web script on VTEX native or independent storefronts so offsite clicks and conversions are attributed to your campaigns."
 ---
 
@@ -45,7 +45,19 @@ Capture succeeds only when all of the following are true:
 - The redirect to the destination URL provided by **VTEX Ads** is preserved (not shortened or altered).
 - The destination page actually loads for the user. Capture happens on load.
 
-For journeys that finish inside a mobile app, the [Activity Flow Mobile SDK](https://developers.vtex.com/docs/guides/installing-activity-flow-in-mobile-apps) is also required. See [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) for an overview of the SDK and supported platforms.
+### Journeys that finish in a mobile app
+
+For journeys that finish inside the retailer's mobile app, offsite capture is handled by the Activity Flow SDK, which is installed in the app and available for apps developed with React Native or Flutter. See [Installing Activity Flow in mobile apps](https://developers.vtex.com/docs/guides/installing-activity-flow-in-mobile-apps) for the SDK installation and deep link configuration steps for each platform, and [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) for an overview of the solution.
+
+The SDK combines two features:
+
+- **Deep link tracking** is the primary mechanism and brings the offsite parameters (the annotators, or UTMs) into the app. When the user clicks the offsite ad and the deep link opens the app, the SDK captures the deep link's query parameters and includes them in the page view event. There is no click inside the app: **VTEX Ads** ingests that page view as the offsite click.
+- **Order group tracking** closes the conversion. When the purchase is completed in the app, the SDK captures the order's `orderGroup`/`orderId`, tying the order to that offsite access.
+
+This setup requires the following:
+
+- Deep linking configured in the app (Android intent filters, iOS `Info.plist` and `AppDelegate`).
+- Mobile order integration between the store and VTEX.
 
 ## 1. Request publisher provisioning
 
@@ -104,7 +116,7 @@ Follow these checks after installing the script:
 
 1. Access the destination retailer through an offsite URL (the parameterized URL generated for the campaign).
 2. Confirm the script loads and that the offsite access event is sent. Check the network request.
-3. Run a control case: an access to the same page **without** the offsite parameters should **not** be registered as an offsite click.
+3. Run a control case: access to the same page **without** the offsite parameters should **not** be registered as an offsite click.
 4. Run an end-to-end test: with a test offsite campaign, place a test order and confirm that all metrics (impression, click, and conversion) were captured. This end-to-end validation is the retailer's responsibility.
 
 > ℹ️ The expected network endpoint, request name, or payload signature for offsite access events has not been documented here. Confirm what to look for in DevTools with the VTEX Ads team if validation is unclear.
