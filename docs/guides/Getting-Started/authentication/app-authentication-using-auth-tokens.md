@@ -57,15 +57,15 @@ Store (webstore) audience tokens must be sent with the account-suffixed header n
 
 ```ts
 export class OmsClient extends JanusClient {
- constructor(ctx: IOContext, options?: InstanceOptions) {
-   super(ctx, {
-     ...options,
-     headers: {
-       ...options?.headers,
-       VtexIdclientAutCookie_{{account}}: ctx.storeUserAuthToken,
-     },
-   })
- }
+  constructor(ctx: IOContext, options?: InstanceOptions) {
+    super(ctx, {
+      ...options,
+      cookies: {
+        ...options?.cookies,
+        [`VtexIdclientAutCookie_${ctx.account}`]: ctx.storeUserAuthToken,
+      },
+    })
+  }
 }
 ```
 
