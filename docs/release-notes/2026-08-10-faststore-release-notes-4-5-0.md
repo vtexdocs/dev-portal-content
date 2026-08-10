@@ -40,7 +40,12 @@ Accounts with the Intelligent Search Pricing Fallback flag enabled after upgrade
 
 PDP and PLP slugs, breadcrumbs, and alternate-locale links now resolve correctly for multi-language catalogs.
 
-`StoreCollection.type` no longer returns `Cluster` or `SubCategory` (clusters report as `Collection`, deeper categories as `Category`). Unmatched single-segment slugs that previously fell back to full-text search now return `404`. Stores that branch on `collection { type }` or rely on search fallback should review those paths after upgrading to `v4.5.0`.
+Retiring `pagetype` on the collection path in favor of the typed `by-linkid` cascade changes two observable behaviors. Neither is a schema change (no query breaks), but both are worth calling out for stores that rely on them:
+
+- **`StoreCollection.type` no longer returns `Cluster` or `SubCategory`.** Clusters and curated collections are both served by `collection/by-linkid`, so clusters now report as `Collection`. The category response doesn't expose tree depth beyond root, so third-level categories now report as `Category`. Both enum values remain declared for backward compatibility.
+- **Slugs that exhaust the cascade now return `404` instead of falling back to full-text search.** `pagetype` implicitly promoted unmatched single-segment slugs to a full-text search; the new cascade returns a not-found error when category, brand, and collection resolution all miss.
+
+Stores that branch on `collection { type }` or rely on the search fallback for unmatched slugs should review those paths after upgrading to `v4.5.0`.
 
 ---
 
