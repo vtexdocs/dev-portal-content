@@ -22,7 +22,7 @@ PDP and PLP slugs, breadcrumbs, and alternate-locale links now resolve correctly
 
 `StoreCollection.type` no longer returns `Cluster` or `SubCategory` (clusters report as `Collection`, deeper categories as `Category`). Unmatched single-segment slugs that previously fell back to full-text search now return `404`. Stores that branch on `collection { type }` or relied on search fallback should review those paths after upgrading to `v4.5.0`.
 
-### CMS-configurable product recommendations (PRs: [#3403](https://github.com/vtex/faststore/pull/3403) | [#3414](https://github.com/vtex/faststore/pull/3414))
+### New `RecommendationShelf` native component (PRs: [#3403](https://github.com/vtex/faststore/pull/3403) | [#3414](https://github.com/vtex/faststore/pull/3414))
 
 Adds a CMS-configurable `RecommendationShelf` section that fetches VTEX personalization recommendations for a campaign VRN and renders them with the shared core `ProductCard`. After upgrading to `v4.5.0`, add the **Recommendation Shelf** section in the CMS and on the desired page with a valid campaign VRN. <!-- TODO: add the guide about RecommendationShelf once we publish it: https://github.com/vtexdocs/dev-portal-content/pull/2904 -->
 
