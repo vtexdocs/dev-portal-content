@@ -4,6 +4,17 @@ title: Cart
 
 The Cart module offers features to manage the store shopping cart. It handles large orders and complex ecommerce operations, such as marketplace integration, coupons, gift options, and promotions.
 
+For standard cart management in FastStore projects, the recommended approach is to use the experimental hooks:
+
+- `useCart_unstable` – hook to access and manage the cart state.
+- `cartStore_unstable` – store to directly interact with cart functions such as `addItem`.
+
+```tsx
+import { useCart_unstable as useCart, cartStore_unstable as cartStore } from '@faststore/core/experimental'
+```
+For the full list of available hooks, see [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components).
+The `@faststore/sdk` Cart module (with `CartProvider` and `createCartStore`) is intended for advanced cases where you need to implement your own custom state manager.
+
 ## Cart data storage
 
 Cart data is saved in the browser's [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), ensuring that users' carts remain saved even when they close the browser. The data is structured as follows:
@@ -32,7 +43,8 @@ To implement the Pure cart mode, follow these steps:
 2. Access the cart using the `useCart` hook:
 
     ```tsx
-    import { CartProvider, useCart } from '@faststore/sdk'
+    import { CartProvider } from '@faststore/sdk'
+    import { useCart_unstable as useCart } from '@faststore/core/experimental'
 
     // In the App's root component:
     const App = ({ children }) => {
@@ -61,8 +73,8 @@ To implement the Optimistic cart mode, follow these steps:
 2. Implement the `validateCart` function to handle server-side validation:
 
     ```tsx
-    import { CartProvider, useCart, Cart } from '@faststore/sdk'
-
+    import { CartProvider, Cart } from '@faststore/sdk'
+    import { useCart_unstable as useCart } from '@faststore/core/experimental'
     // In the App's root component:
     const validateCart = async (cart: Cart) => {
     const response = await fetch(...)

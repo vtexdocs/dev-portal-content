@@ -13,12 +13,12 @@ This guide presents an overview of VTEX's approach towards data privacy. Read th
 
 VTEX follows the principle of data minimization, which refers to collecting, processing, and storing only the information essential to achieving a specific purpose. This means we limit the personal data we collect and keep, thus reducing the risk associated with excessive information processing.
 
-VTEX processes shoppers’ personal data only when strictly necessary, following the requirements of each platform module to carry out ecommerce operations. Our platform may process personal data of the following types, as described in our [Data Processing Addendum (DPA)](https://vtex.com/us-en/privacy-and-agreements/data-processing-addendum/):
+VTEX processes shoppers’ personal data only when strictly necessary, following the requirements of each platform module to carry out ecommerce operations. Our platform may process personal data of the following types, as described in our [Data Processing Addendum (DPA)](https://compliance.vtex.com/?itemName=data_privacy&source=click&itemUid=c4223a81-5840-4e11-ac9f-2b812794a67e/):
 
 * Name
 * Email address
 * IP address
-* Browsing information ([cookies](https://vtex.com/br-pt/privacy-and-agreements/vtex-platform-cookies-information/))
+* Browsing information ([cookies](https://vtex.com/us-en/trust/cookies-information/))
 * Cart information
 * Order information and history
 * Delivery address
@@ -29,7 +29,7 @@ VTEX processes shoppers’ personal data only when strictly necessary, following
 * Session passwords (encrypted)
 * Generated tokens
 
-VTEX does not sell, monetize, enrich, or transfer shoppers' personal data to other companies. See the [Privacy & Contracts](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/) section of our website to learn more about our approach to data privacy, including certifications, internal policies, and commitments.
+VTEX does not sell, monetize, enrich, or transfer shoppers' personal data to other companies. See the [VTEX Trust Center](https://vtex.com/en-us/trust) section of our website to learn more about our approach to data privacy, including certifications, internal policies, and commitments.
 
 >ℹ Learn more about the definition of personal data and our role in data protection in the [Data and privacy](https://help.vtex.com/en/tracks/data-and-privacy--4Lc0i0an0DgnEtB0AUwlcq/65ZqZlNWcmFSOqZQxr8gha) track on VTEX Help Center.
 
@@ -48,7 +48,7 @@ All data on the platform has a life cycle from creation to deletion, divided int
 
 Data retention limits define the duration for which data can be stored within our platform. These limits are influenced by different factors, such as legal and compliance requirements, data privacy considerations, and costs. By establishing data retention limits, we aim to ensure compliance with regulations, protect user privacy, and maintain efficient resource allocation.
 
-VTEX stores the shopper's personal data for the duration of the [Master Services Agreement (MSA)](https://vtex.com/us-en/privacy-and-agreements/agreements/). In the event of termination of the contract with VTEX, the merchant must ensure that the data is extracted from the Master Data within thirty (30) days before the date of termination of the MSA, under Clause 7 of the [DPA](https://vtex.com/us-en/privacy-and-agreements/data-processing-addendum/).
+VTEX stores the shopper's personal data for the duration of the [Master Services Agreement (MSA)](https://vtex.com/us-en/trust/agreements/). In the event of termination of the contract with VTEX, the merchant must ensure that the data is extracted from the Master Data within thirty (30) days before the date of termination of the MSA, under Clause 7 of the [DPA](https://compliance.vtex.com/?itemName=data_privacy&source=click&itemUid=c4223a81-5840-4e11-ac9f-2b812794a67e/).
 
 Merchants are responsible for complying with local laws and regulations. This includes defining and respecting data retention periods, which may vary depending on the specific legislation to which each store is subject.
 
@@ -78,12 +78,12 @@ Learn more about our Security practices in the [Security](https://developers.vte
 
 ## Storage location
 
-The [hosting provider](https://vtex.com/us-en/privacy-and-agreements/subprocessors/.) used by VTEX is Amazon Web Services (AWS), which stores data in the Northern Virginia region of the United States. The AWS platform has important certifications such as ISO 27001, PCI DSS, CSA, and NIST. For a detailed list of certifications, go to [AWS Compliance Programs](https://aws.amazon.com/en/compliance/programs/). Authorization for storing data on AWS can be found in our [DPA](https://vtex.com/us-en/privacy-and-agreements/data-processing-addendum/).
+The [hosting provider](https://compliance.vtex.com/?itemUid=e3fae2ca-94a9-416b-b577-5c90e382df57&source=click) used by VTEX is Amazon Web Services (AWS), which stores data in the Northern Virginia region of the United States. The AWS platform has important certifications such as ISO 27001, PCI DSS, CSA, and NIST. For a detailed list of certifications, go to [AWS Compliance Programs](https://aws.amazon.com/en/compliance/programs/). Authorization for storing data on AWS can be found in our [DPA](https://compliance.vtex.com/?itemName=data_privacy&source=click&itemUid=c4223a81-5840-4e11-ac9f-2b812794a67e/).
 
 ## Policies and compliance
 
-VTEX has privacy and data protection policies, which are reviewed annually. The [External Privacy Notice](https://vtex.com/us-en/privacy-and-agreements/external-notice/) can be accessed on the VTEX website.
+VTEX has privacy and data protection policies, which are reviewed annually. The [External Privacy Notice](https://vtex.com/us-en/trust/general-external-privacy-notice/) can be accessed on the VTEX website.
 
 Merchants should add their own privacy policies to their websites to comply with local privacy regulations.
 
-VTEX is committed to complying with all applicable data protection regulations, including GDPR and LGPD. The tools provided by our platform, through Admin and our APIs, allow merchants to comply with GDPR and local regulations. Learn more about our policies, contracts, and commitment to data protection compliance in the [Privacy & Contracts](https://vtex.com/us-en/privacy-and-agreements/vtex-commitment/) section of our website.
+VTEX is committed to complying with all applicable data protection regulations, including GDPR and LGPD. The tools provided by our platform, through Admin and our APIs, allow merchants to comply with GDPR and local regulations. Learn more about our policies, contracts, and commitment to data protection compliance in the [VTEX Trust Center](https://vtex.com/en-us/trust) section of our website.

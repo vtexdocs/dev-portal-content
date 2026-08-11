@@ -50,7 +50,7 @@ You will have created your **Merchant ID**.
 
 Now you've created your Merchant ID, you'll need a certificate to activate it.
 
-This certificate is created by VTEX. Therefore, the retailer needs to [open a ticket](https://help.vtex.com/en/tutorial/open-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) with support for the team responsible for integrations to send you the file.
+This certificate is created by VTEX. Therefore, the retailer needs to [open a ticket](https://supporticket.vtex.com/support) with support for the team responsible for integrations to send you the file.
 
 Thereafter, the retailer can submit the file to Apple Pay's system.
 

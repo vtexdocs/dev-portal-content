@@ -2,8 +2,8 @@
 title: "Delivery Promise"
 slug: "delivery-promise"
 hidden: false
-createdAt: "2025-09-01T16:53:51.8Z"
-updatedAt: ""
+createdAt: "2025-09-01T16:53:51.800Z"
+updatedAt: "2026-04-13T15:35:32.755Z"
 excerpt: "Delivery Promise helps your store show only products that can be delivered or picked up based on the customer’s location. It improves shopping experience, reduces cart abandonment, and increases product assortment visibility."
 seeAlso: 
     - "https://help.vtex.com/en/tutorial/delivery-promise-faq--2frHHK5uPsQrLK5XbYHALN"
@@ -17,7 +17,7 @@ The content is organized as follows:
 
 - [Available features](#available-features)
 - [Advantages](#advantages)
-- [Requirements and restrictions](#requirements-and-restrictions)
+- [Requirements](#requirements)
 - [Delivery Promise for Store Framework](#delivery-promise-for-store-framework)
 - [Delivery Promise for headless stores](#delivery-promise-for-headless-stores)
 - [Delivery Promise for FastStore](#delivery-promise-for-faststore)
@@ -46,7 +46,7 @@ At this stage, **Delivery Promise** allows your store's customers to filter the 
 
 ## Advantages
 
-**Delivery Promise** is suitable for all types of operations, as the solution provides many advantages for any business model. Learn about the store architecture requirements for participating in the current beta phase in the [Requirements and restrictions](#requirements-and-restrictions) section.
+**Delivery Promise** is suitable for all types of operations, as the solution provides many advantages for any business model. Learn about the store architecture requirements for participating in the current beta phase in the [Requirements](#requirements) section.
 
 For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3) operations, the greater the coverage of the logistics network and the greater the number of sellers and [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) associated with the operation, the greater the benefits. The table below shows the main advantages:  
 
@@ -57,27 +57,29 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 | Improved shopping experience | <p><b>Delivery Promise</b> promotes a better shopping experience for the customer as a whole:<ul><li>It eliminates any frustration at checkout when they find it impossible to place an order.</li><li>It allows customers to view more products.</li><li>It allows customers to browse the storefront in a way that meets their needs, whether they prioritize the type of shipment or choose to place an order in a physical store.</li></ul></p> |
 | Promotion of physical store sales | <b>Delivery Promise</b> gives customers confidence in finding certain products in physical stores, which encourages them to go to the stores and increases sales opportunities. |
 
-## Requirements and restrictions
+## Requirements
 
-**Delivery Promise** requires the customer's location from the beginning of the buying journey, ensuring that only products with valid shipping methods are displayed on the product listing page. To join the current phase of **Delivery Promise**, you must meet the following conditions:
+**Delivery Promise** allows the customer to view, during navigation, only the products they can actually purchase, considering stock availability and the [delivery options](https://help.vtex.com/en/docs/tutorials/delivery-options-beta) valid for the delivery address they provide. By knowing the customer's location from the beginning of the buying journey, the store displays a more accurate and relevant assortment, with delivery deadline and shipping method information available from the earliest steps of the purchase. To join the current phase of **Delivery Promise**, contact our Support and meet the following conditions:
 
-| Requirement | Description |  
-| -------------- | ------------ |  
-| Install Intelligent Search | Install the [Intelligent Search](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG) app in your VTEX account. This app provides advanced search capabilities for your store. |
-| Install Session Manager | Install the [Session Manager](https://developers.vtex.com/docs/guides/vtex-io-documentation-collecting-user-session-data) app in your VTEX account. This app enables your store to collect user session data. |
-| Build the storefront | Build your store's frontend using [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework) or [FastStore](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#faststore). |  
+- Use [Intelligent Search](https://help.vtex.com/en/docs/tracks/overview-intelligent-search).
+- Build your store's frontend using [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework), [FastStore](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#faststore), or a headless approach using the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1), as described in the [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide. Make sure your search requests always pass the Delivery Promise postal code and pickup points hash parameters.
+- External sellers must comply with the notification protocol of the [Delivery Promise Notification API](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api).
+- Do not use VTEX Shipping Network in your VTEX account.
+- Do not use [Operational capacity](https://help.vtex.com/en/docs/tutorials/operational-capacity) in your VTEX account.
+- Do not use more than 10,000 [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R).
+- Do not use [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) from regular sellers.
 
->ℹ️ Check the [Delivery Promise visual library](https://www.figma.com/community/file/1545494767147168145) with [use cases](https://www.figma.com/design/a9urb9GGi7BTQkX92hIPp8/Delivery-Promise-by-VTEX--Community-?node-id=8001-14743&p=f&t=6WFsbpkt0lln18z1-0), [behavior specifications](https://www.figma.com/design/a9urb9GGi7BTQkX92hIPp8/Delivery-Promise-by-VTEX--Community-?node-id=8002-48329&p=f&t=6WFsbpkt0lln18z1-0) and [components](https://www.figma.com/design/a9urb9GGi7BTQkX92hIPp8/Delivery-Promise-by-VTEX--Community-?node-id=8001-14732&p=f&t=6WFsbpkt0lln18z1-0) to better understand how to apply it to your store.  
+>ℹ️ Check the [Delivery Promise visual library](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) with use cases, behavior specifications and components to better understand how to apply it to your store.  
 
 ## Delivery Promise for Store Framework
 
-When building your storefront with Store Framework, you can enable Delivery Promise components using the [Shipping Option Components](https://developers.vtex.com/docs/apps/vtex.shipping-option-components) and [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) apps.
+When building your storefront with Store Framework, you can enable Delivery Promise components using the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) and [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) apps.
 
 Learn how to configure these components in the [Setting up Delivery Promise components (Beta)](https://developers.vtex.com/docs/guides/setting-up-delivery-promise-components) guide.
 
 ## Delivery Promise for headless stores
 
-When using a headless approach in your store, you can use the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) to enable Delivery Promise. To learn how to apply it to your store, read the [Delivery Promise for headless stores (Beta)](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide.
+When using a headless approach in your store, you can use the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) to enable Delivery Promise. To learn how to apply it to your store, read the [Delivery Promise for headless stores (Beta)](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide.
 
 ## Delivery Promise for FastStore
 

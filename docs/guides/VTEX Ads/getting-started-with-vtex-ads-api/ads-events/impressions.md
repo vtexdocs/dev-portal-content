@@ -20,6 +20,8 @@ Impression tracking is fundamental for measuring ad visibility in VTEX Ads. This
 >
 > This is extremely important to ensure long-term stability of the integration, because the parameters of the event URL may change over time, but the integration itself does not.
 
+>ℹ️ Impression counting is gated by campaign budget validation for CPM-charged ad types, so it is interrupted when a campaign reaches its daily budget cap, even if the ad continues to render. See [Understanding ads events](https://developers.vtex.com/docs/guides/understanding-ads-events) for the full budget-validation model.
+
 ## Sending an impression event
 
 Use the `POST` [Track ad impressions](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/impression/-ad_id-) endpoint to send impression events. Check the endpoint documentation for detailed information about all available fields.

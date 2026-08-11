@@ -28,7 +28,3 @@ Signing out now clears client-side storage used by session-aware features, preve
 **Item-level taxes and totals (PR: [#3144](https://github.com/vtex/faststore/pull/3144))**
 
 Each item in the delivery accordion now shows its own tax amount and total, so customers can understand how taxes contribute to the final price.
-
-**Payment surcharge visibility in the summary (PR: [#3144](https://github.com/vtex/faststore/pull/3144))**
-
-If a payment method includes interest or a surcharge, the Summary card now adds an `Interest` line item before the Total, so the final amount is transparent.

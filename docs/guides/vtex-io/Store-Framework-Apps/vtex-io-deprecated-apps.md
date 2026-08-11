@@ -90,6 +90,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Massive Stock Update                     | `vtexarg.massive-stock-update`         |
 | Package Optimizer (FedEx Shipping)       | `vtex.packing-optimization`           |
 | Return App                              | `vtex.return-app`                     |
+| Shipping Option Components              | `vtex.shipping-option-components`     |
 | ShipStation                             | `vtex.ship-station`                   |
 | Shopper Location (Inventory Locator)     | `vtex.shopper-location`      |
 | Store Locator                           | `vtex.store-locator`                  |
