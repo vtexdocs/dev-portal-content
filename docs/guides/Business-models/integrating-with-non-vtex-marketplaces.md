@@ -3,7 +3,7 @@ title: "Integrating with non-VTEX marketplaces"
 slug: "integrating-with-non-vtex-marketplaces"
 hidden: false
 excerpt: "Learn how to connect your VTEX store to non-VTEX marketplaces using native, partner, or custom connectors."
-createdAt: 2026-06-16T00:00:00.000Z
+createdAt: "2026-08-11T00:00:00.000Z"
 ---
 
 Integrating your VTEX store with non-VTEX marketplaces enables you to expand your sales channels, reach new customers, and increase brand visibility. This guide shows how to connect your VTEX store as a seller to marketplaces through connectors, APIs, or custom integrations.
