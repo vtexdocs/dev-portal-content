@@ -10,7 +10,7 @@ Integrating non-VTEX sellers into your VTEX store allows you to expand your prod
 
 This guide shows how to onboard sellers that operate outside the VTEX platform (external sellers), start receiving and selling their products, and manage everything from your VTEX Admin.
 
-ℹ️ If you want to integrate sellers that already have a VTEX store, see the guide [Integrating VTEX stores](https://developers.vtex.com/docs/guides/integrating-vtex-stores). To learn how to sell your own products on other marketplaces, see [Integrating with non-VTEX marketplaces](https://developers.vtex.com/docs/guides/integrating-with-non-vtex-marketplaces).
+> ℹ️ If you want to integrate sellers that already have a VTEX store, see the guide [Integrating VTEX stores](https://developers.vtex.com/docs/guides/integrating-vtex-stores). To learn how to sell your own products on other marketplaces, see [Integrating with non-VTEX marketplaces](https://developers.vtex.com/docs/guides/integrating-with-non-vtex-marketplaces).
 
 ## Understanding the integration architecture
 
