@@ -61,7 +61,6 @@ When one locale is at the root (`store.com`), and another is under a path (`stor
 Use a path prefix for every locale on the same host or use separate domains for each locale:
 
 - Example with paths for all locales on the same host:
-    
   **en-US:** `https://store.com/en`
   **pt-BR:** `https://store.com/pt`
     
