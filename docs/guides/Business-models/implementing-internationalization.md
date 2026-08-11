@@ -39,7 +39,7 @@ To start implementing internationalization, configure the binding. The steps dif
 
 A **binding** represents a storefront surface that combines a domain (canonical base address), locale, currency, and the sales channels (trade policies) it serves. This configuration is key for operating multiple languages within a single VTEX account.
 
-### Store Framework
+### Store Framework quickstart
 
 To internationalize your Store Framework store, configure the binding to use your final public domain as the **canonical base address**. In multi‑locale setups, use consistent paths per locale when sharing the same host (for example, `/en`, `/pt`). See the instructions below:
 
@@ -53,7 +53,7 @@ To internationalize your Store Framework store, configure the binding to use you
 
 In a multi-locale setup on the same host, make each locale's **canonical base address** follow the same structure, typically with a path prefix for all locales (for example, `store.com/en`, `store.com/pt`), instead of mixing root for one locale and paths for others. This avoids conflicts in session cookies and redirects between locales.
 
-When one locale is at the root (`store.com`), and another is under a path (`store.com/pt`), users can end up with two segment cookies: One scoped to `/` and another to `/pt`, which leads to conflicting session information and erratic behaviour during language switches. Using paths in both locales avoids this duplication.
+When one locale is at the root (`store.com`), and another is under a path (`store.com/pt`), users can end up with two segment cookies: One scoped to `/` and another to `/pt`, which leads to conflicting session information and erratic behavior during language switches. Using paths in both locales avoids this duplication.
 
 ✅ Do
 
