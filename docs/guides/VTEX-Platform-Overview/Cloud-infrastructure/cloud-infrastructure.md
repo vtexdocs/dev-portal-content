@@ -128,7 +128,7 @@ Our multi-tenant architecture ensures elastic scalability, allowing stores to ea
 
 ### Reliability
 
-We deliver high availability, as defined in our [SLA agreement](https://vtex.com/us-en/privacy-and-agreements/agreements/), a document that expresses the service level of the platform's infrastructure and technically clarifies its operational uptime and downtime, as well as all the types of events considered as incidents.
+We deliver high availability, as defined in our [SLA agreement](https://vtex.com/us-en/trust/agreements/), a document that expresses the service level of the platform's infrastructure and technically clarifies its operational uptime and downtime, as well as all the types of events considered as incidents.
 
 You can monitor the platform's stability in real time and access the full incident and maintenance history at [VTEX Status](https://status.vtex.com/). Learn more about the information available on this page in our guide [VTEX Status page](https://help.vtex.com/en/tutorial/vtex-status-page--gPhqDn9IQ3c67wbJEX3JJ).
 

@@ -34,7 +34,10 @@ def plural_list(list):
 # Get changed Markdown files in the PR (only in 'docs/guides', 'docs/release-notes', 'docs/troubleshooting', and 'docs/faststore' folders)
 changed_files = [f for f in pr.get_files() if (
     f.filename.endswith(('.md', '.mdx'))
-    and f.filename.startswith(('docs/guides/', 'docs/release-notes/', 'docs/troubleshooting/', 'docs/faststore/'))
+    and (
+        f.filename.startswith(('docs/guides/', 'docs/release-notes/', 'docs/faststore/'))
+        or (f.filename.startswith('docs/troubleshooting/') and f.filename.count('/') > 2)
+    )
 )]
 
 print(f"Found {len(changed_files)} markdown file{plural_list(changed_files)} in PR:")
@@ -117,6 +120,16 @@ for f in changed_files:
                         field_errors.append({"field": "tags", "message": "'tags' must be a list"})
                         error_found = True
                     continue
+                if key == 'domainFilters':
+                    if not isinstance(value, list):
+                        field_errors.append({"field": "domainFilters", "message": "'domainFilters' must be a list"})
+                        error_found = True
+                    continue
+                if key == 'symptomFilters':
+                    if not isinstance(value, list):
+                        field_errors.append({"field": "symptomFilters", "message": "'symptomFilters' must be a list"})
+                        error_found = True
+                    continue
                 if key == 'type':
                     allowed_types = {"added", "deprecated", "fixed", "improved", "info", "removed"}
                     if not (isinstance(value, str) and value in allowed_types):
@@ -134,7 +147,7 @@ for f in changed_files:
 
             rn_mandatory_fields = ['type', 'slug', 'excerpt', 'createdAt']
             guides_mandatory_fields = ['slug', 'excerpt']
-            ts_mandatory_fields = ['tags', 'slug', 'excerpt']
+            ts_mandatory_fields = ['domainFilters', 'symptomFilters', 'slug', 'excerpt']
 
             if f.filename.startswith('docs/release-notes'):
                 missing_fields = not_present_keys(rn_mandatory_fields, fm_dict)

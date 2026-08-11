@@ -1,8 +1,9 @@
 ---
 title: "Implementing payments tokenization"
 slug: "implementing-payments-tokenization"
+excerpt: "Learn how to implement payment tokenization in your VTEX store to enhance security and improve the customer experience."
 hidden: false
-createdAt: "2025-12-01T00:00:00.00Z"
+createdAt: "2025-12-01T00:00:00.000Z"
 ---
 
 Payment tokenization is the VTEX solution that allows providers to process payment transactions using [tokens](https://help.vtex.com/docs/tutorials/dpan-and-fpan-understanding-security-in-the-online-tokenized-payment-flow) instead of real credit card data. This approach adds a layer of security to the process, reducing the exposure of sensitive information and the risk of fraud or attacks.
@@ -18,7 +19,7 @@ Tokenization allows you to:
 
 > ℹ️ VTEX doesn't generate or request tokens from other services. It only stores tokens imported directly into the Card Token Vault (CTV) or returned by a payment provider in the authorization response.
 
-> ⚠️ Payment tokenization is available only for stores with checkout in the [Headless](https://developers.vtex.com/docs/guides/store-architecture#headless) and [FastCheckout](https://newhelp.vtex.com/en/announcements/2024-04-03-fastcheckout-boost-your-conversion-with-the-new-checkout) architecture. The feature supports proprietary tokens from payment providers and also allows using Network Tokens when the connector acts as a Token Requester and sends the token back to VTEX.
+> ⚠️ The Payment tokenization feature supports proprietary tokens from payment providers and also allows using Network Tokens when the connector acts as a Token Requester and sends the token back to VTEX.
 
 ## Steps for deployment
 
@@ -97,7 +98,7 @@ Below are examples of requests and responses for each payment transaction scenar
 {
     ...
     "saveCreditCard": true,
-    "useCardToken": true
+    "useCardToken": false
     ...
 }
 ```
@@ -195,21 +196,33 @@ Below are examples of requests and responses for each payment transaction scenar
 ```json
 [
     ...
-    "fields": [
-        {
-            "accountId": "null",
+    "fields": {
+        "isCardToken": "true",
+        "savePaymentData": "false",
+        "accountId": "account-guid",
+        "cardTokenData": {
+            "accountName": "cea",
+            "providerId": "connector-id",
+            "card": {
+                "firstDigits": "411111",
+                "lastDigits": "1111",
+                "holderName": "NOME",
+                "paymentSystemId": 2,
+                "paymentSystemName": "Visa"
+            },
             "cardTokenData": {
-                "cardTokenType": "TOKEN_FILE",
-                "cardTokenHref": "https://linktothetokenfile.com",
-                "tokenExtraData": {
-                    "extraData1": "string",
-                    "extraData2": "string"
-                },
-                "useCvvForAuthorization": "boolean",
-                "cardTokenCvv": "string"
+                "cardLabel": "My card",
+                "type": "TOKEN_VALUE",
+                "value": "tok_xxx",
+                "expiration": "2032-04",
+                "useCvvForAuthorization": true
+            },
+            "tokenExtraData": {
+            "extraData1": "string",
+            "extraData2": "string"
             }
         }
-    ]
+    }
     ...
 ]
 ```
@@ -286,23 +299,30 @@ Below are examples of requests and responses for each payment transaction scenar
 [
     ...
     "fields": {
-        "accountId": "null",
-        "savePaymentData": true,
-        "cardData": {
-            "cardLabel": "string",
-            "paymentName": "enum",
-            "bin": "string",
-            "lastDigits": "string"
-        },
+        "isCardToken": "true",
+        "savePaymentData": "true",
+        "accountId": "account-guid",
         "cardTokenData": {
-            "cardTokenType": "TOKEN_FILE",
-            "cardTokenHref": "https://linktothetokenfile.com",
-            "tokenExtraData": {
-                "extraData1": "string",
-                "extraData2": "string"
+            "accountName": "cea",
+            "providerId": "connector-id",
+            "card": {
+                "firstDigits": "411111",
+                "lastDigits": "1111",
+                "holderName": "NOME",
+                "paymentSystemId": 2,
+                "paymentSystemName": "Visa"
             },
-            "useCvvForAuthorization": "boolean",
-            "cardTokenCvv": "string"
+            "cardTokenData": {
+                "cardLabel": "My card",
+                "type": "TOKEN_VALUE",
+                "value": "tok_xxx",
+                "expiration": "2032-04",
+                "useCvvForAuthorization": true
+            },
+            "tokenExtraData": {
+            "extraData1": "string",
+            "extraData2": "string"
+            }
         }
     }
     ...
@@ -424,10 +444,10 @@ See the [Managing tokenized cards](https://developers.vtex.com/docs/guides/manag
 ### Validating the deployment of payment tokenization
 
 
-Before you start validation on the provider side, make sure you have an account set up for headless purchases (without using the VTEX Admin). Then perform purchase tests as described in the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
+Perform purchase tests as described in the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
 
 
-After testing headless purchases, complete the following actions to validate tokenization:
+After testing purchases, complete the following actions to validate tokenization:
 
 1. [Set up the account](#setting-up-the-account)
 2. [Simulate a credit card purchase](#simulating-a-credit-card-purchase)
@@ -435,7 +455,7 @@ After testing headless purchases, complete the following actions to validate tok
 
 #### Setting up the account
 
-Enable tokenization on the headless account following the steps below:
+Enable tokenization on your account following the steps below:
 
 1. Ask the VTEX Payments team to enable the tokenization feature.
 2. Install the payment connector that will support tokenization operations on the account.
@@ -501,4 +521,4 @@ Authorization response received: [200 OK] {"status":"approved","authorizationId"
 }
 ```
 
-> ℹ️ The presence of the `generatedCardToken` dataset and the `accountId` field confirms the connector processed tokenization correctly and the token has been assigned to the buyer's profile.
+> ℹ️ The presence of the `generatedCardToken` dataset and the `accountId` field confirms that the connector has processed the tokenization correctly and the token has been assigned to the buyer's profile.
