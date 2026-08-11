@@ -17,8 +17,8 @@ Developers may encounter the following errors when working with CMS schemas loca
 | Error message | Possible cause | Solution |
 | :---- | :---- | :---- |
 | `Error: Permission denied` | The user role doesn't have the required CMS permissions. | [Grant user CMS access](#grant-user-cms-access) |
-| `Could not detect the @faststore/cli version` | The command is running outside the storefront project root, or the FastStore CLI package is not in `package.json`. | [Fix FastStore CLI detection](#fix-faststore-cli-detection) |
-| Component doesn't appear in the section picker after upload | The store ID is mismatched, or the content type doesn't reference the component. | [Fix missing component in section picker](#fix-the-missing-component-in-the-section-picker) |
+| `Could not detect the @faststore/cli version` | The command is running outside the storefront project root, or the FastStore CLI package isn't in `package.json`. | [Fix FastStore CLI detection](#fix-faststore-cli-detection) |
+| Component doesn't display in the section picker after upload | The store ID is mismatched, or the content type doesn't reference the component. | [Fix missing component in section picker](#fix-the-missing-component-in-the-section-picker) |
 
 ## Solutions
 
@@ -32,7 +32,7 @@ Use this path when the error is related to permissions in the CMS Admin or durin
 4. Make sure the required CMS permissions are checked, including **See CMS menu on the top-bar** and **Settings**.  
 5. In the **Users** section, confirm the user's email is added to the role.  
 6. Click **Save**.  
-7. Ask the user to run the sync command again and verify that the error no longer appears.
+7. Ask the user to run the sync command again and confirm the error has been resolved.
 
 For more details on CMS permissions, see [Roles - License Manager](https://help.vtex.com/en/tutorial/roles--7HKbd9jg39YZlsqhqZPHbR).
 
@@ -43,7 +43,7 @@ Use this path when `generate-schema` exits with a message that it couldn't detec
 #### Verify your working directory
 
 1. Open the terminal.  
-2. Make sure you are in the root of your storefront project, the directory that contains `package.json`.  
+2. Make sure you're in the root of your storefront project, the directory that contains `package.json`.  
 3. Run the sync command again.
 
 #### Pass the version manually
@@ -64,23 +64,23 @@ Replace the version number with the FastStore major version your project uses.
 
 ### Fix the missing component in the section picker
 
-Use this path when the schema upload succeeds, but the new component does not appear in the CMS Admin section picker.
+Use this path when the schema upload succeeds, but the new component isn't listed in the CMS Admin section picker.
 
 #### Verify the store ID
 
 1. Open the terminal output from the sync command.  
-2. Check the store ID that was used during upload (e.g., `cmsdev.faststore`).  
-3. In the CMS Admin, confirm you are viewing a page that belongs to the same store.  
+2. Check the store ID that was used during upload (example: `cmsdev.faststore`).  
+3. In the CMS Admin, confirm you're viewing a page that belongs to the same store.  
 4. If the store IDs don't match, re-run the sync command and enter the correct store ID when prompted.
 
 #### Check the content type configuration
 
 1. Navigate to the `cms/{storeId}/pages/` directory in your project.  
-2. Open the content type file for the page where you expect the component to appear (e.g., `cms_content_type__landingPage.jsonc`).  
+2. Open the content type file for the page where you expect the component to appear (example: `cms_content_type__landingPage.jsonc`).  
 3. Check the `sections` property. It must either:  
    * Reference `#/$defs/$ALLOW_ALL_COMPONENTS` to allow all components, or  
    * Explicitly list your component's `$componentKey`.  
-4. If the content type does not reference your component, add it, then re-generate and re-upload the schema.
+4. If the content type doesn't reference your component, add the reference, then regenerate and re-upload the schema.
 
 #### Re-sync after changes to pages
 
