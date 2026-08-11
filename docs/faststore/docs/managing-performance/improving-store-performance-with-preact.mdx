@@ -2,6 +2,8 @@
 title: "Improving store performance with Preact"
 ---
 
+> ⚠️ This feature is experimental and available only for **FastStore v3**.
+
 Enabling [Preact](https://preactjs.com/) in your FastStore project can reduce the package size used in the project and improve performance. Preact is a lightweight alternative to [React](https://react.dev/) that improves performance by reducing the size of the JavaScript bundle. Enabling Preact decreases the overall build size in a FastStore project, resulting in faster page load times and better performance.
 
 
@@ -18,11 +20,17 @@ Before implementing Preact, take the following considerations:
 
 ### Update `@faststore/cli` package
 
-Make sure the `@faststore/cli` package from your project is updated to the latest version. To do so, follow the instructions in [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-cli-package-version).
+Make sure the `@faststore/cli` package from your project is updated to the latest **v3** version. To do so, open the terminal and run:
+
+```bash
+yarn add @faststore/cli@3
+```
+
+Then run `yarn dev` to sync the changes to your project.
 
 ### Understand the experimental nature of Preact
 
-Preact is currently an experimental feature, which may have limitations and could cause issues with some store customizations.
+Preact is an experimental feature available only for FastStore v3 and may have limitations that could cause issues with some store customizations.
 
 - Before using it in the production environment, make sure to test it to ensure compatibility with your store.
 

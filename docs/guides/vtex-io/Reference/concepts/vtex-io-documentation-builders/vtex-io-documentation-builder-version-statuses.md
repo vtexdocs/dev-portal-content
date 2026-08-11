@@ -11,7 +11,7 @@ The [VTEX IO platform](https://developers.vtex.com/docs/guides/vtex-io-documenta
 
 The primary purpose of defining these statuses is to ensure the platform's long-term efficiency, security, and stability. By guiding developers and merchants toward the most up-to-date and recommended versions, we can systematically retire outdated or vulnerable components. The statuses provide a roadmap and a necessary transition period, allowing developers enough time to update their applications whenever a status change is announced.
 
-This document outlines the definition of each status and presents a table detailing the current status of VTEX IO Builder versions.
+This document defines each status and presents a table detailing the current status of VTEX IO Builder versions.
 
 ## Understanding Builder statuses
 
@@ -19,9 +19,9 @@ The possible statuses a Builder version can have are:
 
 - **Beta:** Pre-release version containing experimental features not yet stable for production.
 - **Stable:** Fully functional and recommended for use.
-- **Deprecated:** Existing apps are permitted to run, link, and publish minor or patch updates, but new apps or major versions cannot be linked or published.
-- **Decommissioned:** Existing apps can run, but linking or publishing new apps or any new versions is not permitted.
-- **Non-functional:** Apps are not operational on the platform.
+- **Deprecated:** Existing apps are permitted to run, link, and publish minor or patch updates, but new apps or major versions can't be linked or published.
+- **Decommissioned:** Existing apps can run, but linking or publishing new apps or any new versions isn't allowed.
+- **Non-functional:** Apps aren't operational on the platform.
 
 The table below summarizes what can be done for each status.
 
@@ -33,7 +33,7 @@ The table below summarizes what can be done for each status.
 | Decommissioned | ✅ | ❌ | ❌ |
 | Non-functional | ❌ | ❌ | ❌ |
 
-If you try to use a non-supported Builder, you will receive an error message in the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), such as the ones below:
+If you try to use a non-supported Builder, you'll receive an error message in the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference), such as the ones below:
 
 ![GraphQL Builder 1.x warning](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/graphql-1x-builder-warn.jpg)
 *Warning after trying to link an app (major published) with the deprecated GraphQL `1.x` Builder.*
@@ -51,4 +51,4 @@ The table below shows the current statuses of each Builder version:
 | `graphql` | Stable: `2.x`. Deprecated: `1.x`. |
 | `node` | Stable: `6.x`, `7.x`. Decommissioned: `3.x`, `4.x`. |
 
-> ℹ️ If you want to use a Builder version that is not listed here and you are unsure of its status, open a ticket with our [support](http://help.vtex.com/en/support).
+> ℹ️ If you want to use a Builder version not listed here and are unsure of its status, open a ticket with our [support](http://help.vtex.com/en/support).

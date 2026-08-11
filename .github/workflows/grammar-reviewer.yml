@@ -5,24 +5,41 @@ on:
     paths:
       - 'docs/**/*.md'
       - 'docs/**/*.mdx'
-      - '!docs/localization/**'
-    types: [opened, synchronize]
+    types: [labeled]
 
 permissions:
   contents: read
   pull-requests: write
+  issues: write
 
 jobs:
   grammar-review:
+    if: github.event.label.name == 'AI grammar review'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: vtexdocs/ai-grammar-reviewer-action@v0
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           folders: |
-            docs/faststore
-            docs/guides
-            docs/release-notes
-            docs/troubleshooting
+            docs
+
+      - name: Remove AI grammar review label and add AI reviewed
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = context.payload.pull_request.number;
+            await github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              name: 'AI grammar review'
+            }).catch(() => {});
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              labels: ['AI reviewed']
+            });
