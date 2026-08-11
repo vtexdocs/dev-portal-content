@@ -4,8 +4,9 @@ slug: "payments-integration-payment-provider-framework"
 hidden: false
 createdAt: "2022-05-19T16:21:58.633Z"
 updatedAt: "2022-05-19T17:46:05.176Z"
+excerpt: "Learn how the Payment Provider Framework (PPF) lets you develop payment connectors on VTEX IO using a boilerplate app that handles API routes, request/response types, Secure Proxy, and hosting."
 ---
-Payment Provider Framework (PPF) is an alternative way to develop payment connectors for your integration through VTEX IO. Since the development is based on a boilerplate of an IO app, a lot of the work is already done to implement the needed feature including the [API routes](https://developers.vtex.com/docs/guides/payment-provider-protocol-api-overview), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). With PPF, developers also do not need to worry about hosting the connector since it is hosted on the IO infrastructure.
+Payment Provider Framework (PPF) is an alternative way to develop payment connectors for your integration through VTEX IO. Since the development is based on a boilerplate of an IO app, a lot of the work is already done to implement the needed feature, including the [API routes]([https://developers.vtex.com/docs/guides/payment-provider-protocol-api-overview](https://developers.vtex.com/docs/api-reference/payment-provider-protocol)), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). With PPF, developers also do not need to worry about hosting the connector since it is hosted on the IO infrastructure.
 
 > ⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites). For more information on how payment providers can be integrated into VTEX, visit [Integrating a new payment provider on VTEX](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex).
 
@@ -99,7 +100,9 @@ paymentProvider
 manifest.json
 ```
 
-3. Declare the payment methods accepted by your payment provider. This action allows them to be implemented automatically by the builder, without the need to declare them in the `/manifest` route.
+3. Declare the payment methods accepted by your payment provider. This allows them to be automatically implemented by the builder, without the need to declare them in the `/manifest` route.
+
+> ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
 
 ```json
 {
@@ -325,13 +328,11 @@ export class MyPCICertifiedClient extends SecureExternalClient {
 
 Now that you have a new connector ready to be used, you can test it entirely in the production flow using your store's Checkout.
 
-> ⚠️ The account must be allowed to test IO Connectors. This must be [requested via ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing the name of the app and the account where the tests will be made.
-
 A prerequisite for this procedure is to have products for sale at your store for testing. To place an order with your new connector:
 
 1. Launch a beta version of your connector. E.g.: `vtex.payment-provider-test@0.1.0-beta`. If you need, check the [Making your app publicly available article](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
 2. Install the beta version on `master` workspace. Wait for around 1 hour.
-3. Go to `https://{account}myvtex.com/admin/affiliations/connector/Vtex.PaymentGateway.Connectors.PaymentProvider.PaymentProviderConnector_{connector-name}/`. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
+3. Go to `https://{account}.myvtex.com/admin/affiliations/connector/Vtex.PaymentGateway.Connectors.PaymentProvider.PaymentProviderConnector_{connector-name}/`. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
 
    ![Payment affiliation configuration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/payments-integration-guide/payments-integration-payment-provider-framework-0_370.png)
 

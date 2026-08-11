@@ -13,13 +13,13 @@ A [headless](https://developers.vtex.com/docs/guides/headless-commerce) store ha
 
 ## Shopping cart
 
-In the Checkout API, the VTEX shopping cart information is organized using the `orderForm`, an object containing all information relevant to the purchase, from the products to shipping and payment information, among others.
+In the Checkout API, the VTEX shopping cart information is organized using the [orderForm](https://developers.vtex.com/docs/guides/orderform-fields), an object containing all information relevant to the purchase, including products, shipping, and payment information.
 
-The `orderForm` is a complex data structure with many customization possibilities. The essential section for placing an order is divided into [`items`](#cart-items) and [`attachments`](#cart-attachments).
+The `orderForm` is a complex data structure with many customization possibilities. The `orderForm`'s essential sections for placing an order are [`items`](#cart-items) and [`attachments`](#cart-attachments).
 
-For a customer to make a purchase, the store must have a shopping cart that contains an `orderForm` for them. When you use the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint, you get an `orderFormId` in the response.
+For a customer to make a purchase, the store must have a shopping cart containing an `orderForm`. When you use the [Get current or create a new cart](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/orderForm) endpoint, you get an `orderFormId` in the response.
 
-> ⚠️ If your headless storefront is not browser-based (e.g., native app), it is important that you save the `orderFormId` and use it to manage the cart's information with the requests above. Otherwise, VTEX cookies will automatically manage this information in the customer's browser.
+> ⚠️ If your headless storefront is not browser-based (e.g., native app), it is important to save the `orderFormId` and use it to manage the cart's information using the requests below. Otherwise, VTEX cookies will automatically manage this information in the customer's browser.
 
 <CH.Scrollycoding>
 
@@ -50,7 +50,14 @@ To learn how to add products to a shopping cart, read the guide [Add cart items]
 
 ### Cart attachments
 
-Shopping cart attachments are `orderForm` objects containing order information related to the [client profile](https://developers.vtex.com/docs/guides/add-client-profile), [shipping address and delivery option](https://developers.vtex.com/docs/guides/add-shipping-address-and-delivery-option-to-the-cart), [marketing data](https://developers.vtex.com/docs/guides/add-marketing-information-to-the-cart), [payment data](https://developers.vtex.com/docs/guides/adding-payment-information-to-the-cart), and [merchant context data](https://developers.vtex.com/docs/guides/add-merchant-context-information-to-the-cart). Check a basic example of a cart attachments.
+Shopping cart attachments are `orderForm` objects containing order information related to:
+- [Customer profile](https://developers.vtex.com/docs/guides/add-customer-profile-information-to-the-cart)
+- [Shipping address and delivery option](https://developers.vtex.com/docs/guides/add-shipping-address-and-delivery-option-to-the-cart)
+- [Marketing data](https://developers.vtex.com/docs/guides/add-marketing-information-to-the-cart)
+- [Payment data](https://developers.vtex.com/docs/guides/adding-payment-information-to-the-cart)
+- [Merchant context data](https://developers.vtex.com/docs/guides/add-merchant-context-information-to-the-cart)
+
+Check on the right side of the screen a basic example of a cart attachment.
 
 <CH.Code>
 ```json Request
@@ -76,6 +83,9 @@ Shopping cart attachments are `orderForm` objects containing order information r
       "geoCoordinates": [-47.924747467041016, -15.832582473754883]
     }
   ],
+  "contactInformation": [],
+  "contacts": [],
+  "contactsInfo": [],
   "userProfile": {
     "email": "clark.kent@example.com",
     "firstName": "Clark",
@@ -106,12 +116,10 @@ Shopping cart attachments are `orderForm` objects containing order information r
 
 There are two ways of placing orders with the Checkout API:
 
-- [Place new order](#place-new-order): Manage shopping cart information in your frontend and then use one API request to send all order information to VTEX.
-- [Place order from existing cart](#place-order-from-existing-cart): Manage shopping cart information in the VTEX platform throughout the shopping experience, then place an order from that data using just the cart ID.
+- [Place new order](#place-new-order): Manage shopping cart information in your frontend and then use one API request to send all order information to VTEX. You should use this method if your operation has specific requirements, such as limiting the number of HTTP requests sent from your storefront.
+- [Place order from existing cart](#place-order-from-existing-cart): Manage shopping cart information in the VTEX platform throughout the shopping experience, then place an order from that data using just the cart ID. This method is generally recommended.
 
-The [place new order](#place-new-order) method increases the complexity of your application since you must manage all shopping cart data to correctly assemble the [`orderForm`](#shopping-cart). Additionally, placing a new order does not send shopping cart information to VTEX until the customers complete their purchase.
-
-The [place order from existing cart](#place-order-from-existing-cart) method is recommended in most cases. Use [place new order](#place-new-order) if your operation has specific requirements, such as limiting the number of HTTP requests sent from your storefront.
+>ℹ️ The [place new order](#place-new-order) method increases the complexity of your application since you must manage all shopping cart data to correctly assemble the [`orderForm`](#shopping-cart). Additionally, placing a new order does not send shopping cart information to VTEX until the customers complete their purchase.
 
 ---
 
@@ -119,13 +127,13 @@ The [place order from existing cart](#place-order-from-existing-cart) method is 
 
 To place a new order without any shopping cart data previously stored on the VTEX platform, use the [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) endpoint.
 
-For a tutorial of this method, check the guide [Create a regular order from an existing cart](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api) or follow the steps in the [Create a regular order using the Checkout API](https://developers.vtex.com/docs/guides/create-a-regular-order-using-the-checkout-api).
+For a tutorial on this method, check the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
 
 ---
 
 ### Place order from existing cart
 
-You can also place an order from an existing cart, which already has an orderForm structure and a shopping cart ID. To do so, use the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint or follow the steps in the [Create a regular order from an existing cart](https://developers.vtex.com/docs/guides/create-a-regular-order-from-an-existing-cart) guide.
+You can also place an order from an existing cart, which already has an `orderForm` structure and a shopping cart ID. To do so, use the [Place order from an existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) endpoint or follow the steps in the [Creating a regular order from an existing cart](https://developers.vtex.com/docs/guides/creating-a-regular-order-from-an-existing-cart) guide.
 
 This endpoint may be used to perform tasks such as adding products to a cart or linking shipping information to the order.
 
@@ -188,6 +196,7 @@ Once you created a new cart, use the [Get current or create a new cart](https://
     "customerClass": null
   },
   "paymentData": {
+    "updateStatus": "updated",
     "installmentOptions": [],
     "paymentSystems": [],
     "payments": [
@@ -206,13 +215,16 @@ Once you created a new cart, use the [Get current or create a new cart](https://
     "giftCards": [],
     "giftCardMessages": [],
     "availableAccounts": [],
-    "availableTokens": []
+    "availableTokens": [],
+    "availableAssociations": {}
   },
   "marketingData": null,
   "sellers": [],
   "clientPreferencesData": {
     "locale": "pt-BR",
-    "optinNewsLetter": null
+    "optinNewsLetter": null,
+    "savePersonalData": false,
+    "savePaymentData": false
   },
   "commercialConditionData": null,
   "storePreferencesData": {
@@ -256,6 +268,8 @@ Once you created a new cart, use the [Get current or create a new cart](https://
     "teaser": []
   },
   "subscriptionData": null,
+  "merchantContextData": null,
+  "purchaseAgentsData": null,
   "itemsOrdination": {
     "criteria": "NAME",
     "ascending": true
@@ -266,7 +280,7 @@ Once you created a new cart, use the [Get current or create a new cart](https://
 
 --- 
 
-Once you have the `orderForm`, you must add the client data to it. To do so, send the profile data in the [Add client profile](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData) endpoint request, as in the example.
+After obtaining the `orderForm`, you must add the client data to it. To do so, send the profile data in the [Add client profile](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData) endpoint request, as in the example.
 
 <CH.Code>
 ```json Request-Add-client-profile
@@ -295,7 +309,7 @@ After making this request, the `CheckoutOrderFormOwnership` cookie will be set a
 
 ### Add address data
 
-Once the client data has been added, it is also important to add the customer address data to the `orderForm`. This data includes all information about the delivery of the order to the customer. To do so, use the [Add shipping address and select delivery option](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) endpoint.
+The next step is to add the customer address data to the `orderForm`. This data includes all information about the delivery of the order to the customer. To do so, use the [Add shipping address and select delivery option](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) endpoint.
 
 <CH.Code>
 ```json Request
@@ -306,6 +320,7 @@ Once the client data has been added, it is also important to add the customer ad
       "addressType": "residential",
       "receiverName": "receiver name",
       "addressId": "c3701fc4c61b4d1b91f67e81415db44d",
+      "isDisposable": true,
       "postalCode": "12345-000",
       "city": "Rio de Janeiro",
       "state": "RJ",
@@ -321,8 +336,8 @@ Once the client data has been added, it is also important to add the customer ad
   "logisticsInfo": [
     {
       "itemIndex": 0,
-      "selectedDeliveryChannel": "delivery",
-      "selectedSla": "normal"
+      "selectedSla": "normal",
+      "selectedDeliveryChannel": "delivery"
     }
   ]
 }
@@ -347,66 +362,46 @@ With the correct ownership cookie, both client profile data and address data are
 
 ## Complete order
 
-After placing an order using either of the methods presented above, you will receive an `orderId` and `transactionId` in the response body, along with some login values. Your integration must use this information to complete the purchase process within five minutes. This involves [sending payment information](#send-payment-information) and then [requesting order processing](#process-order).
+After placing an order using either of the methods presented above, you will receive an `orderId` and `transactionId` in the response body, along with some login values. Your integration must use this information to complete the purchase process within 5 minutes. This involves [sending payment information](#send-payment-information) and then [requesting order processing](#process-order).
 
-> ❗ Failing to perform these steps within five minutes will cause the order to be automatically canceled and tagged as [`incomplete`](https://help.vtex.com/en/tutorial/how-incomplete-orders-work--tutorials_294).
+> ❗ Failing to perform these steps within 5 minutes will cause the order to be automatically canceled and tagged as [`incomplete`](https://help.vtex.com/en/docs/tutorials/understanding-incomplete-orders).
 
 ---
 
 ### Send payment information
 
-To send the payment information to VTEX, use one of these endpoints:
+To forward payment data to VTEX, use the [Send payments information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/payments/transactions/-transactionId-/payments) endpoint.
 
-- [Send payment information (public)](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments)
-- [Send payment information (private)](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/payments).
-
-The request body used in this step is based on the order's `paymentData` attachment. You can get this data from the response of the [Get client profile by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles), as in the example.
+The request body used in this step is based on the order's `paymentData` attachment as in the example.
 
 <CH.Code>
 ```json Request
-"paymentData":{
-   "updateStatus":"updated",
-   "installmentOptions":[
-      {
-         "paymentSystem":2,
-         "bin":null"paymentName":null"paymentGroupName":null"value":65780,
-         "installments":[
-            {
-               "count":1,
-               "hasInterestRate":false,
-               "interestRate":0,
-               "value":65780,
-               "total":65780,
-               "sellerMerchantInstallments":[
-                  {
-                     "id":"MYSHOP",
-                     "count":1,
-                     "hasInterestRate":false,
-                     "interestRate":0,
-                     "value":65780,
-                     "total":65780
-                  }
-               ]
-            }
-         ]
-      }
-   ]
-}
+[
+    {
+        "paymentSystem": 2,
+        "installments": 1,
+        "currencyCode": "BRL",
+        "value": 75000,
+        "installmentsInterestRate": 0,
+        "installmentsValue": 75000,
+        "referenceValue": 75000,
+        "fields": {},
+        "transaction": {
+            "id": "72E84719BDF14B2FB170B38AD12598C9",
+            "merchantName": "paymentsptas"
+        }
+    }
+]
 ```
 </CH.Code>
 
-Learn more about these endpoints:
-
-- [`POST` Send payment information](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pub/transactions/-transactionId-/payments)
-- [`POST` Send payment information with a saved credit card](https://developers.vtex.com/docs/api-reference/payments-gateway-api#post-/api/pvt/transactions/-transactionId-/payments)
-
-> ❗ Make sure that all value-related fields match the information sent when [placing the order](#place-order) to create a successful request.
+> ❗ Make sure that all value-related fields match the information sent when [placing the order](#place-order) to create a successful request. If incorrect payment details are provided, the system cannot redirect the user to the Order Confirmation page, thereby interrupting the checkout flow and preventing purchase completion.
 
 ---
 
 #### Retrieving saved credit cards
 
-In the payment section at checkout, we recommend retrieving the saved credit card information from the customer profile. This can ease the checkout process as the customer would only need to select the chosen credit card and input the CVV (Card Verification Value). This process will only display the last four numbers of a credit card to the customer, making it a secure interaction with the client data.
+In the payment section at checkout, we recommend retrieving the saved credit card information from the customer profile. This can ease the checkout process as the customer would only need to select the chosen credit card and input the **CVV (Card Verification Value)**. This process will only display the last four numbers of a credit card to the customer, making it a secure interaction with the client data.
 
 To check if the customer has any saved cards, use the [Get client profile by email](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/profiles) endpoint. This endpoint returns the available cards. The card information is displayed in the `availableAccounts` array, as shown in the examples.
 
@@ -454,17 +449,17 @@ To check if the customer has any saved cards, use the [Get client profile by ema
 
 Lastly, you must request order processing by using the [Process order](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/gatewayCallback/-orderGroup-) endpoint after the order's payment is approved. If the payment has not been approved yet, it will return a status code `500` error.
 
-> ⚠️ Keep in mind that this process uses the [gateway connectors](https://help.vtex.com/en/tutorial/what-is-the-connector--3lze0Cu0bmyC6u2o2iaeEA#) configured in your VTEX environment. Be careful when using it to avoid any unwanted charges or unexpected payment denials.
+> ⚠️ Keep in mind that this process uses [payment connectors](https://help.vtex.com/en/docs/tutorials/what-is-the-connector) configured in your VTEX environment. Be careful when using it to avoid any unwanted charges or unexpected payment denials.
 
 ## Verify order status
 
-Once you have successfully placed an order, sent payment information, and requested order processing, you will be able to see the order in the [Order management module](https://help.vtex.com/en/tutorial/orders-list--tutorials_200#) in VTEX Admin.
+After successfully placing an order, submitting the payment information, and requesting order processing, the order will appear in the [Order management module](https://help.vtex.com/en/docs/tutorials/all-orders) in the VTEX Admin.
 
 You can also use the [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) and [List orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders) endpoints for this purpose. Another way to check the order updates is by integrating [Feed v3](https://developers.vtex.com/docs/guides/orders-feed#best-practices-for-integrations) and [Hook](https://developers.vtex.com/docs/guides/orders-feed#hook) with your store.
 
 ## Checkout interface
 
-When a customer goes to your store checkout, your [frontend implementation](https://help.vtex.com/en/tracks/trilha-da-loja-vtex--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ) must handle several tasks. Follow the sections below to implement these tasks effectively.
+When a customer goes to your store's checkout, your [frontend implementation](https://help.vtex.com/docs/tracks/vtex-store-overview) must handle several tasks. Follow the sections below to implement these tasks effectively.
 
 ### Order details
 
@@ -487,7 +482,7 @@ Shipping information is added to the order as [`orderForm` attachments](#order-d
 
 - [`GET` List pickup points by location](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pub/pickup-points)
 
->❗️ [reCAPTCHA integration](https://help.vtex.com/en/tutorial/using-recaptcha-at-checkout--18Te3oDd7f4qcjKu9jhNzP) does not work in Headless checkout. It only works with stores using [Checkout v6](https://help.vtex.com/en/tutorial/enable-checkout-v6--7qVqv3ptRvpVVplrvg8ruH).
+>❗️ [reCAPTCHA integration](https://help.vtex.com/docs/tutorials/using-recaptcha-at-checkout) doesn't work with Headless checkout. It only works with stores using [Checkout v6](https://help.vtex.com/docs/tutorials/enable-checkout-v6).
 
 
 ## Learn more

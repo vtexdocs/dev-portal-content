@@ -4,10 +4,12 @@ title: "useCart"
 
 The `useCart` hook gives access to the `Cart` object and helper functions for managing the shopping cart. The hook allows adding, removing, and updating items in the cart and checking its status (e.g., whether it is empty or validating).
 
+> ⚠️ The `useCart` hook is available from [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components) as `useCart_unstable`. This is the recommended import for FastStore projects. For instructions on how to use experimental hooks, see [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components).
+
 ## Import
 
 ```tsx
-import { useCart } from '@faststore/sdk'
+import { useCart_unstable as useCart } from '@faststore/core/experimental'
 ```
 
 ## Usage
