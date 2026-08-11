@@ -3,7 +3,7 @@ title: "Integrating with non-VTEX sellers"
 slug: "integrating-with-non-vtex-sellers"
 hidden: false
 excerpt: "Learn how to act as a marketplace and onboard non-VTEX (external) sellers."
-createdAt: "2026-06-16T00:00:00.000Z"
+createdAt: "2026-08-11T00:00:00.000Z"
 ---
 
 Integrating non-VTEX sellers into your VTEX store allows you to expand your product assortment, reach new customers, and increase revenue through commissions, all without holding the inventory yourself.
