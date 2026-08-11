@@ -46,7 +46,7 @@ After defining your operation based on the topics above, choose the architecture
 
 See below the main differences between them:
 
-|                       | Single account, multi-binding | Multi-account, shared back-office systems | Multi-account, independent back-office systems |
+| | Single account, multi-binding | Multi-account, shared back-office systems | Multi-account, independent back-office systems |
 | --------------------- | ----------------------------- | ----------------------------------------- | ---------------------------------------------- |
 | **VTEX accounts** | One account serves multiple countries via bindings/sales channels. | Multiple accounts (usually one per country or region). A main account acts as the seller, and the others act as marketplaces. | Fully separate accounts, each operating independently. |
 | **Storefront/websites** | Separate websites or domains bound to different sales channels within the same account. | Separate websites per account. | Separate websites per account. |
