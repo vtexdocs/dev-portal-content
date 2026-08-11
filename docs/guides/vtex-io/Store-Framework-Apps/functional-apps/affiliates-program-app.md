@@ -6,6 +6,8 @@ createdAt: "2022-10-14T17:02:14.091Z"
 updatedAt: "2022-11-07T22:59:36.234Z"
 ---
 
+> ⚠️ The Affiliate Program app has been discontinued and is therefore no longer supported or maintained by VTEX.
+
 > ℹ️ For the **Affiliates Program app**, an affiliate is different from the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0). In the app's context, an affiliate is anyone who associates with a VTEX store to promote sales while receiving a commission.
 
 The [Affiliates Program app](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ) creates a specific URL of your VTEX store for each of your affiliates, and every URL is targeted with a parameter that identifies the affiliate. When an affiliate shares their URL with shoppers, and they buy something through that link, the affiliate earns a commission over sales.
@@ -41,7 +43,7 @@ After installing and configuring the app, you will find three pages in your VTEX
 
 ## Compatibility
 
-The Affiliates Program app is compatible only with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), so make sure you fit the criteria. Stores using [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS](https://www.faststore.dev/docs/headless-cms-overview) are not compatible.
+The Affiliates Program app is compatible only with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), so make sure you fit the criteria. Stores using [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) are not compatible.
 
 ## Installation
 

@@ -91,7 +91,7 @@ If your store uses [FastStore](https://developers.vtex.com/docs/guides/faststore
 
 * **Publishing failures**
   
-  See this guide on [Debugging Releases and VTEX Headless CMS publishing errors](https://developers.vtex.com/docs/troubleshooting/my-pages-are-taking-too-long-to-be-published-on-headless-cms).
+  See this guide on [Debugging Releases and VTEX Headless CMS (legacy) publishing errors](https://developers.vtex.com/docs/troubleshooting/my-pages-are-taking-too-long-to-be-published-on-headless-cms).
 * **Lighthouse tests**
 
    [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) is an open-source tool that helps developers assess website performance. FastStore projects run automatic Lighthouse tests with every pull request. You need to consider the results of these automatic tests to identify and mitigate any performance issues before they impact your store in production.

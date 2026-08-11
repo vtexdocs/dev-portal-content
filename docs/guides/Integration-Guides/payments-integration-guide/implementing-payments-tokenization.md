@@ -19,7 +19,7 @@ Tokenization allows you to:
 
 > ℹ️ VTEX doesn't generate or request tokens from other services. It only stores tokens imported directly into the Card Token Vault (CTV) or returned by a payment provider in the authorization response.
 
-> ⚠️ Payment tokenization is available only for stores with checkout in the [Headless](https://developers.vtex.com/docs/guides/store-architecture#headless) and [FastCheckout](https://newhelp.vtex.com/en/announcements/2024-04-03-fastcheckout-boost-your-conversion-with-the-new-checkout) architecture. The feature supports proprietary tokens from payment providers and also allows using Network Tokens when the connector acts as a Token Requester and sends the token back to VTEX.
+> ⚠️ The Payment tokenization feature supports proprietary tokens from payment providers and also allows using Network Tokens when the connector acts as a Token Requester and sends the token back to VTEX.
 
 ## Steps for deployment
 
@@ -444,10 +444,10 @@ See the [Managing tokenized cards](https://developers.vtex.com/docs/guides/manag
 ### Validating the deployment of payment tokenization
 
 
-Before you start validation on the provider side, make sure you have an account set up for headless purchases (without using the VTEX Admin). Then perform purchase tests as described in the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
+Perform purchase tests as described in the guide [Creating a regular order with the Checkout API](https://developers.vtex.com/docs/guides/creating-a-regular-order-with-the-checkout-api).
 
 
-After testing headless purchases, complete the following actions to validate tokenization:
+After testing purchases, complete the following actions to validate tokenization:
 
 1. [Set up the account](#setting-up-the-account)
 2. [Simulate a credit card purchase](#simulating-a-credit-card-purchase)
@@ -455,7 +455,7 @@ After testing headless purchases, complete the following actions to validate tok
 
 #### Setting up the account
 
-Enable tokenization on the headless account following the steps below:
+Enable tokenization on your account following the steps below:
 
 1. Ask the VTEX Payments team to enable the tokenization feature.
 2. Install the payment connector that will support tokenization operations on the account.
