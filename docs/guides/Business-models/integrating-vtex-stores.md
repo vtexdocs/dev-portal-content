@@ -109,7 +109,7 @@ To reindex the database:
 2. Click the `Reindex database` button to start the process.
 3. Track the reindexing progress in the VTEX Admin through **Catalog > Reports**.
 
-> ℹ️ Only the [sponsor user (owner)](https://help.vtex.com/docs/tracks/what-is-the-master-user) has permission to reindex the database. During reindexing, products remain available for sale in the store while being queued for information updates.
+> ℹ️ Only the [sponsor user (owner)](https://help.vtex.com/en/docs/tutorials/what-is-the-sponsor-user) has permission to reindex the database. During reindexing, products remain available for sale in the store while being queued for information updates.
 
 After the seller sends products to the marketplace, the marketplace must map the seller catalog to match its own structure.
 
