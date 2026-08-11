@@ -3,7 +3,7 @@ title: "Implementing marketplaces"
 slug: "implementing-marketplaces"
 hidden: false
 excerpt: "Learn about VTEX marketplace models to sell on other marketplaces or host multiple sellers."
-createdAt: "2026-06-16T00:00:00.000Z"
+createdAt: "2026-08-11T00:00:00.000Z"
 ---
 
 A marketplace is an ecommerce platform where multiple sellers offer their products, while the marketplace operator manages the platform and the overall customer experience. With VTEX, you can operate as a marketplace, hosting products from various sellers, and sell your products on other marketplaces.
