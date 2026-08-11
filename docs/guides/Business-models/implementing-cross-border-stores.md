@@ -6,7 +6,7 @@ excerpt: "Learn the initial steps for implementing a cross-border store."
 createdAt: "2026-08-11T00:00:00.000Z"
 ---
 
-A cross-border store is a specialized [multistore](https://help.vtex.com/en/tutorial/managing-a-multistore--4S0lFVBPylRS5KpVgdyDhJ) setup where a VTEX account operates multiple localized stores for different countries or regions, each with its own catalog, prices, logistics, and language.
+A cross-border store is a specialized [multistore](https://help.vtex.com/en/docs/tutorials/managing-a-multistore) setup where a VTEX account operates multiple localized stores for different countries or regions, each with its own catalog, prices, logistics, and language.
 
 In this guide, you'll learn how to start implementing your cross-border operation, including:
 
@@ -30,7 +30,7 @@ Before implementing your cross-border store, make sure you have the following in
 * **Tax and export partner:** Choose a partner for handling export taxes and fees for international operations. To find a partner, visit the [Partners](https://vtex.com/en-us/partners/) page on the VTEX website.
 * **Catalog translation:** Check if your catalog is translated or needs localization for each country/region.
 * **Promotions:** Plan the types of promotions for each store. Learn about the types available in [Promotions](https://help.vtex.com/docs/tutorials/promotions-and-taxes-category) guides.
-* **Operations:** Consider any existing physical stores, sellers, or other operations abroad. Learn more in [VTEX account types](https://help.vtex.com/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/4yPqZQyj0t675QpcG7H6yl#vtex-account-types).
+* **Operations:** Consider any existing physical stores, sellers, or other operations abroad. Learn more in [Accounts and architecture](https://help.vtex.com/en/docs/tracks/accounts-and-architecture).
 * **Teams:** Identify if different teams will manage each country/region's ecommerce operations.
 * **ERP systems:** Confirm if each country/region has its own ERP or a centralized system.
 * **Payment gateway:** Make sure you have a gateway that supports multiple currencies.
