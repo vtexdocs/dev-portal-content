@@ -73,7 +73,7 @@ Avoid mixing a root URL for one locale with a path prefix for another:
   **en-US:** `https://store.com/`
   **pt-BR:** `https://store.com/pt`
 
-### FastStore
+### FastStore quickstart
 
 In FastStore, bindings are configured through [VTEX Support](https://help.vtex.com/en/support). Each domain is associated with a sales channel (currency, catalog, and pricing) and a locale. Even if a binding is configured with multiple locales, FastStore only considers the default locale.
 
