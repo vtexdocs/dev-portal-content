@@ -1,7 +1,7 @@
 ---
-title: "I can't access the Headless CMS"
+title: "I can't access the Headless CMS (legacy)"
 slug: "unable-to-access-headless-cms"
-excerpt: "Troubleshoot Headless CMS access errors caused by permissions, authorization, or VTEX IO CLI environment configuration issues."
+excerpt: "Troubleshoot Headless CMS (legacy) access errors caused by permissions, authorization, or VTEX IO CLI environment configuration issues."
 domainFilters:
   - CMS
   - License Manager
@@ -11,7 +11,7 @@ symptomFilters:
   - Setup issue
 ---
 
-**Keywords:** Headless CMS, FastStore, CLI
+**Keywords:** Headless CMS (legacy), FastStore, CLI
 
 FastStore users may encounter the following errors after using the commands `faststore cms-sync` or `vtex cms sync`.
 

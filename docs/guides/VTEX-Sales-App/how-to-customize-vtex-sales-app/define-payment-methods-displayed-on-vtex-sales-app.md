@@ -4,7 +4,9 @@ slug: "define-payment-methods-displayed-on-vtex-sales-app"
 hidden: false
 createdAt: "2021-09-16T22:06:59.987Z"
 updatedAt: "2022-10-05T18:22:47.556Z"
+excerpt: "Configure payment filters to control which conditions appear at checkout for all users or specific sales associates."
 ---
+
 After creating a payment condition as described in the [VTEX Sales App - Payments](https://help.vtex.com/en/tracks/vtex-sales-app-payments--43B4Nr7uZva5UdwWEt3PEy/2liigRors32hzqBNs2M1Oa) guide, we need to create the filters that will define which payment methods will appear at inStore’s checkout.
 
 You must do this by inserting a JavaScript object in the `checkout-instore-custom.js` file. Check out the [How to customize VTEX Sales App](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-vtex-sales-app) guide for further information on how to access this file.
@@ -54,7 +56,7 @@ The code should look similar to the example below.
 
 In this example, we are excluding the conditions “Boleto bancário” (ID = 6) and "Direct debit" (ID = 45); and we are including “Credit card” (IDs = 2 and 4), “Cash” (ID = 202) and "Pix" (ID = 125). The first two will not be displayed at checkout, while the last two will be displayed.
 
-1. Still in the `checkout-instore-custom.js` file, you need to add a reference to the object created within the `window.INSTORE_CONFIG` object.
+2. Still in the `checkout-instore-custom.js` file, you need to add a reference to the object created within the `window.INSTORE_CONFIG` object.
 
 To do this, include the following line of code inside the `window.INSTORE_CONFIG` object:
 
@@ -71,6 +73,8 @@ window.INSTORE_CONFIG = {
 ```
 
 >❗ Do not remove any of the other properties present in the `window.INSTORE_CONFIG` object to avoid breaking other functionalities.
+
+> ⚠️ If your store processes payments through a Payment App (for example, the challenge flow used by the `Venda Direta Credito` and `Venda Direta Debito` payment methods on a POS), you must also enable the `challengeDrivenPaymentWorkflow: true` flag in the `window.INSTORE_CONFIG` object. Without this flag, the payment flow will not work as expected.
 
 3. After making changes in the code, make sure you press the `Save` button.
 

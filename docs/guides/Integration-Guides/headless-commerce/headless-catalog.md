@@ -7,11 +7,13 @@ updatedAt: "2021-03-31T21:16:55.757Z"
 excerpt: "Explore API endpoints for retrieving product information, categories, and search results to build headless commerce experiences with VTEX."
 ---
 
+> ℹ️ The Intelligent Search sections of this guide use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
+
 Be it through category menus, keyword searches, or product pages, shoppers accessing your headless store will need to browse through your products' information.
 
 Below you can learn more about API endpoints you can use to help shoppers find what they need in your store. See the [catalog documentation](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/3rA2tTpIoEXdv2nzC27zxR) to learn how to manage products, SKUs and categories, among other things.
 
->ℹ️ You can filter the results of the endpoints below by [trade policy](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV?&utm_source=autocomplete) with the query parameter `sc={tradePolicy}`.
+>ℹ️ You can filter the results of the endpoints below by [sales channel](https://help.vtex.com/docs/tutorials/how-trade-policies-work) with the query parameter `sc={salesChannel}`.
 
 ## Categories
 
@@ -33,32 +35,32 @@ Before implementing Intelligent Search in your headless storefront, make sure to
 
 To retrieve products with the Intelligent Search API, use this endpoint:
 
-- [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-)
+- `GET` [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-)
 
 For any given Intelligent Search query, you can get search facets and display them so that your shoppers can narrow their search.
 
-- [Get list of the possible facets for a given query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/facets/-facets-)
+- `GET` [List filters for a search (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/facets/-facets-)
 
 Shoppers may have trouble coming up with the optimal search term for their needs. Use these endpoints to help fill in the gaps:
 
-- [Get attempt of correction of a misspelled term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/correction_search)
-- [Get list of suggested terms similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/search_suggestions)
+- `GET` [Get attempt of correction of a misspelled term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/correction-search)
+- `GET` [Get list of suggested terms similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/search-suggestions)
 
 #### Banners
 
 You can use the Intelligent Search [banners feature](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4ViKEivLJtJsvpaW0aqIQ5) with this endpoint:
 
-- [Get list of banners registered for query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/banners/-facets-)
+- `GET` [Get list of banners registered for query (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/banners/-facets-)
 
 #### Intelligent Search autocomplete
 
 You can also improve shopping experience by implementing an [autocomplete feature](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4gXFsEWjF7QF7UtI2GAvhL). Use this endpoint to get suggested search terms based on a provided term:
 
-- [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/autocomplete_suggestions)
+- `GET` [Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions)
 
 You can also get the most searched terms on your site:
 
-- [Get list of the 10 most searched terms](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/top_searches)
+- `GET` [Get list of the 10 most searched terms (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches)
 
 ### VTEX Search (Legacy)
 
@@ -86,58 +88,33 @@ On product pages and in other sections of your headless store, you will need to 
 
 ### Recommended approach (Intelligent Search)
 
-We recommend using the [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) for Product Detail Pages (PDP), as it provides:
+We recommend using the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) for Product Detail Pages (PDP), as it provides:
 
-* **Better search performance:** Optimized for faster response times.
-* **Consistent user experience:** When using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), using Intelligent Search ensures delivery estimates and availability match between Product Listing Pages (PLP) and Product Detail Pages (PDP).
-* **Location-based availability:** Supports filtering by ZIP code for accurate product availability.
+- **Better search performance:** Optimized for faster response times.
+- **Consistent user experience:** When using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), using Intelligent Search ensures delivery estimates and availability match between Product Listing Pages (PLP) and Product Detail Pages (PDP).
+- **Location-based availability:** Supports filtering by ZIP code for accurate product availability.
 
-Use the [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) endpoint with the `query` (or `q`) parameter to retrieve a specific product by ID. The Intelligent Search API supports the following ID types:
+Use the `GET` [Get product (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/products) endpoint to retrieve a specific product by a known identifier. It accepts a `field` and `value` parameter and skips the search pipeline, resulting in lower latency.
 
-**Search by Product ID:**
-
-```txt
-https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:{productId}
-```
-
-**Search by SKU ID:**
-
-```txt
-https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=sku:{skuId}
-```
-
-**Search by product slug:**
-
-```txt
-https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product.link:{slug}
-```
-
-**Other supported ID types:**
-
-- `query=product.id:{id}` - Product ID (alternative syntax)
-- `query=sku.id:{id}` - SKU ID (alternative syntax)
-- `query=sku.ean:{ean}` - SKU EAN
-- `query=sku.reference:{refId}` - SKU Reference ID
+| `field` value | Identifier type |
+| --- | --- |
+| `id` (default) | Product ID |
+| `slug` | Product slug |
+| `ean` | SKU EAN |
+| `sku` | SKU ID |
+| `reference` | SKU reference ID |
 
 **Examples:**
 
 ```txt
-https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234
+https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/products?sc=1&field=id&value=1234
 ```
 
 ```txt
-https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?q=product.link:apple-magic-mouse
+https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/products?sc=1&field=slug&value=apple-magic-mouse
 ```
 
->⚠️ **For stores using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise):** You must include the `zip-code` parameter in all Intelligent Search API requests to ensure accurate delivery estimates and product availability. See the [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide for implementation details.
-
-**Example with ZIP code (required for Delivery Promise):**
-
-```txt
-https://{accountName}.myvtex.com/api/io/_v/api/intelligent-search/product_search?query=product:1234&zip-code=22250040&hideUnavailableItems=true
-```
-
->ℹ️ The `query` parameter accepts specific filters like `product:{id}`, `sku:{id}`, `product.link:{slug}`, and other ID types to retrieve individual products. For more details, see the [Intelligent Search API reference](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-).
+>⚠️ **For stores using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise):** Include delivery promise parameters in your requests to ensure accurate delivery estimates and product availability. See the [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide for implementation details.
 
 ### Alternative approach (VTEX Search (Legacy))
 
@@ -148,7 +125,7 @@ Alternatively, you can use VTEX Search (Legacy) API endpoints to retrieve produc
   - Filter by product ID: `fq=productId:{productId}`
   - Filter by SKU ID: `fq=skuId:{skuId}`
 
->⚠️ VTEX Search (Legacy) endpoints do not support Delivery Promise features. If your store uses [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), you must use the Intelligent Search API as described above.
+>⚠️ VTEX Search (Legacy) endpoints do not support Delivery Promise features. If your store uses [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), you must use the Intelligent Search API v1 as described above.
 
 ### Cross selling
 

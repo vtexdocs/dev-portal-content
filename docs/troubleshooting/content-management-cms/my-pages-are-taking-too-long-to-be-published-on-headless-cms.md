@@ -1,10 +1,10 @@
 ---
-title: "My pages are taking too long to be published on Headless CMS"
+title: "My pages are taking too long to be published on Headless CMS (legacy)"
 slug: "my-pages-are-taking-too-long-to-be-published-on-headless-cms"
 hidden: false
 createdAt: "2024-06-28T14:00:00.000Z"
 updatedAt: "2024-06-28T14:00:00.000Z"
-excerpt: "Releasing or publishing a page via Headless CMS or Releases can take a long build times"
+excerpt: "Releasing or publishing a page via Headless CMS (legacy) or Releases can take a long build times"
 domainFilters:
   - CMS
   - FastStore
@@ -14,15 +14,15 @@ symptomFilters:
   - Performance degradation
 ---
 
-**Tags:** Headless CMS, Releases, FastStore
+**Tags:** Headless CMS (legacy), Releases, FastStore
 
 **Keywords:** Build, deploy, FastStore
 
-When releasing or publishing a page via [Headless CMS](https://help.vtex.com/en/tutorial/headless-cms-overview--3U5gvhHdQL0jczYH8gjX09) or [Releases](https://help.vtex.com/en/tutorial/releases-module-beta--n2tN0WX5I6MJMbrJrS0Kb), you may experience long build times.
+When releasing or publishing a page via [Headless CMS (legacy)](https://help.vtex.com/en/tutorial/headless-cms-overview--3U5gvhHdQL0jczYH8gjX09) or [Releases](https://help.vtex.com/en/tutorial/releases-module-beta--n2tN0WX5I6MJMbrJrS0Kb), you may experience long build times.
 
 ## Solution
 
-Follow the steps below to identify the root cause of publishing errors with the VTEX Headless CMS and Releases module.
+Follow the steps below to identify the root cause of publishing errors with the VTEX Headless CMS (legacy) and Releases module.
 
 ### Step 1: Check the release status
 

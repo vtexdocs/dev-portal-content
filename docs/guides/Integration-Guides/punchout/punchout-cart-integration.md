@@ -10,7 +10,7 @@ seeAlso:
  - "/docs/guides/punchout-login-integration"
 ---
 
-> ⚠️ This feature is only available for stores using B2B Buyer Portal, which is currently available to selected accounts.
+> ⚠️ This feature is only available for stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
 In a Punchout scenario, buyers must transfer their cart back to their organization’s eprocurement system for approval and compliance validation before completing the purchase.
 
@@ -52,7 +52,7 @@ To implement the Punchout cart flow, you must contact our [Support team](https:/
 
 ### Implementing extension points
 
-After enabling the extension points, create a [storefront monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview) to customize it. Once you have set up your storefront monorepo, you’re ready to [set up Checkout extension points](https://developers.vtex.com/docs/guides/fastcheckout-setting-up).
+After enabling the extension points, create a [storefront monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview) to customize it. Once you have set up your storefront monorepo, you’re ready to [set up Checkout extension points](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
 
 To implement the Punchout cart flow, you must use the `punchout.order-summary.cta` extension point to send the cart data to the eprocurement system and redirect to its URL (e.g., via a “Transfer cart” or “Checkout” button).
 
