@@ -2,8 +2,7 @@
 title: "Implementing internationalization"
 slug: "implementing-internationalization"
 hidden: false
-createdAt: "2026-06-16T00:00:00.000Z"
-updatedAt: "2026-08-11T00:00:00.000Z"
+createdAt: "2026-08-11T00:00:00.000Z"
 excerpt: "Learn how to prepare your store to operate in multiple languages by translating storefront and catalog content."
 ---
 
