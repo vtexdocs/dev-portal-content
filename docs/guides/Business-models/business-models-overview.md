@@ -3,7 +3,7 @@ title: "Business models"
 slug: "business-models-overview"
 hidden: false
 excerpt: "Choose the VTEX business model that fits your operation."
-createdAt: "2026-06-16T00:00:00.000Z"
+createdAt: "2026-08-11T00:00:00.000Z"
 ---
 
 Your business model determines how to structure your VTEX operation, manage catalogs, prices, languages, and integrations, and connect your store to other markets and sellers.
