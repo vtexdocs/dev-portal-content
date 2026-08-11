@@ -63,7 +63,6 @@ Use a path prefix for every locale on the same host or use separate domains for 
 - Example with paths for all locales on the same host:
   **en-US:** `https://store.com/en`
   **pt-BR:** `https://store.com/pt`
-    
 - Example with different domains per locale:
     
   **en-US:** `https://en.store.com`
