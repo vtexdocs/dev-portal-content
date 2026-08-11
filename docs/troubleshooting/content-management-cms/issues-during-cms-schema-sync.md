@@ -2,7 +2,7 @@
 title: "I can't sync my store CMS schema"
 excerpt: "Troubleshoot common errors during CMS schema generation, upload, and Admin access."
 slug: "issues-during-cms-schema-sync"
-updatedAt: "2026-07-27T10:00:00.977Z"
+updatedAt: "2026-08-11T10:00:00.977Z"
 domainFilters:
   - CMS
 symptomFilters:
