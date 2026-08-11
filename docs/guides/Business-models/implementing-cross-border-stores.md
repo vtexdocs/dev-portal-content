@@ -6,7 +6,12 @@ excerpt: "Learn the initial steps for implementing a cross-border store."
 createdAt: "2026-08-11T00:00:00.000Z"
 ---
 
-A cross-border store is a specialized [multistore](https://help.vtex.com/en/docs/tutorials/managing-a-multistore) setup where a VTEX account operates multiple localized stores for different countries or regions, each with its own catalog, prices, logistics, and language.
+A cross-border store is a specialized [multistore](https://help.vtex.com/en/docs/tutorials/managing-a-multistore) setup where a VTEX account operates multiple localized stores for different countries or regions, each with its own pricing, logistics, and language configuration. Depending on the architecture you choose, the catalog may be shared across stores or managed separately.
+
+In a cross-border context, a multistore setup allows a single VTEX account to manage multiple stores, such as:
+
+* `http://{storeName}.com/en` (English store)
+* `http://{storeName}.com/pt` (Portuguese store)
 
 In this guide, you'll learn how to start implementing your cross-border operation, including:
 
@@ -14,7 +19,7 @@ In this guide, you'll learn how to start implementing your cross-border operatio
 * **[Quickstart](#quickstart):** Discover the initial steps to implement your cross-border store.
 * **[Fundamental tools](#fundamental-tools):** Set up the tools you must have for your cross-border operation to work correctly.
 
->ℹ️ The cross-border implementation is available only for stores developed using [Store Framework](https://developers.vtex.com/docs/guides/store-framework).
+>ℹ️ The cross-border implementation is available only for stores developed using [Store Framework](https://developers.vtex.com/docs/guides/store-framework). To become a cross-border store, open a [VTEX support ticket](https://supporticket.vtex.com/support) and request the setup of a multistore environment.
 
 ## Store architecture
 
@@ -68,7 +73,9 @@ To start implementing your cross-border operation, follow the steps below:
 
 ### Step 1 - Configure a sales channel
 
-On VTEX, a sales channel is the key that differentiates each country or region storefront within a single VTEX account that uses a multi-binding architecture. Each website is linked to a specific sales channel, allowing separate sites for different markets. Learn more in [How sales channels work](https://help.vtex.com/docs/tutorials/how-trade-policies-work).
+On VTEX, a sales channel is a set of configurations that define a store's catalog, pricing, and logistics strategy. In a multi-binding architecture, each website is linked to a specific sales channel, allowing separate sites for different markets. Learn more in [How sales channels work](https://help.vtex.com/docs/tutorials/how-trade-policies-work).
+
+If the pricing, catalog, or logistics structure differs between markets, create separate sales channels. If two stores share the same logistics, catalog, and prices, they can use a common sales channel.
 
 To request a new sales channel, open a ticket with [VTEX Support](https://help.vtex.com/en/support), select the option Commercial, and click Create a trade policy. Learn more in [Creating a sales channel](https://help.vtex.com/docs/tutorials/creating-a-trade-policy).
 
@@ -110,20 +117,22 @@ Alternatively, follow the instructions in the [Checking your store's binding ID]
 The tools below are essential to enable your cross-border operation on VTEX:
 
 * **[Locale Switcher](https://developers.vtex.com/docs/guides/vtex-locale-switcher):** Allows switching languages on the site.
-* **[Messages](https://developers.vtex.com/docs/apps/vtex.messages):** In VTEX IO, translations for store components are stored in a "/messages" folder located within the app's root directory. Thus, the translation of the content involves declaring the translated content for each language (binding) and for each element to be rendered via GraphQL. In this case, especially for specifications, breadcrumbs, and filters, the translation must be done using the Messages app. Learn more in the guides [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and [Overwriting the Messages app](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app).
+* **[Messages](https://developers.vtex.com/docs/apps/vtex.messages):** Handles storefront component translations per language (binding). Use it especially for specifications, breadcrumbs, and filters. Learn more in [Translating storefront content](https://developers.vtex.com/docs/guides/storefront-content-internationalization) and [Overwriting the Messages app](https://developers.vtex.com/docs/guides/vtex-io-documentation-overwriting-the-messages-app).
 * **Catalog translation:** To translate catalog information (categories, products, SKUs, brands, specifications, and collections) and override the automatic translation, we recommend using the [Catalog Multi-Language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide). It provides granular control over translations for products, SKUs, categories, brands, and other entities, while integrating natively with Intelligent Search and supporting Translation Management Systems (TMS). To learn how to implement it, see the [Catalog multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide).
 
-  >⚠️ The simultaneous use of both the Catalog Multi-Language API and the GraphQL (Messages) approach is not supported for catalog entities. Once the Catalog Multi-Language feature is activated for your account, you will no longer be able to manage translations using GraphQL.
+  >⚠️ The simultaneous use of both the Catalog Multi-Language API and the GraphQL catalog translation flow isn't supported for catalog entities. Once the Catalog Multi-Language feature is activated, you'll no longer be able to manage catalog translations using GraphQL. For stores that still use the legacy GraphQL translation flow, see [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization).
 
-  Alternatively, you can override the automatic translation using the legacy GraphQL approach: through the [Admin Catalog Translation](https://developers.vtex.com/docs/apps/vtex.admin-catalog-translation) app UI or the GraphQL APIs described in [Translating Catalog content](https://developers.vtex.com/docs/guides/catalog-internationalization). You can also translate using the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview) by adding the "**Accept-Language**" header with the desired target language. This is especially relevant for Headless stores.
+  Product information on the **Order Placed** pages and in transactional emails is automatically translated. On the **My Account** page, product information isn't translated automatically and may require additional customization.
 
-  >ℹ️ Product information on the **Order Placed** pages and in transactional emails is automatically translated. However, on the **My Account** page, product information is not translated automatically. You need to implement customizations that make the above-mentioned GraphQL calls to perform these translations.
+* **Translatable URLs:** Cross-border stores that share the same catalog can translate catalog URLs (product, category, and brand slugs) per binding. For example, a product available as `http://{storeName}.com/us/yellow-dress/p` in one market can resolve as `http://{storeName}.com/ar/vestido-amarillo/p` in another. Catalog URL translations are accepted for each binding — not for multiple languages within a single binding. Learn more in [Cross-border store content internationalization](https://developers.vtex.com/docs/guides/cross-border-custom-urls-1).
 
 ## Next steps
 
+<Flex>
+
 <WhatsNextCard
 title="Setting up cross-border stores"
-description="Learn how to set up a cross-border store."
+description="Review key concepts and related guides for cross-border storefronts."
 linkTo="https://developers.vtex.com/docs/guides/store-framework-setting-up-cross-border-stores"
 linkTitle="See more"
 />
