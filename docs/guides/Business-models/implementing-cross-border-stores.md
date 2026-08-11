@@ -3,7 +3,7 @@ title: "Implementing cross-border stores"
 slug: "implementing-cross-border-stores"
 hidden: false
 excerpt: "Learn the initial steps for implementing a cross-border store."
-createdAt: "2026-06-16T00:00:00.000Z"
+createdAt: "2026-08-11T00:00:00.000Z"
 ---
 
 A cross-border store is a specialized [multistore](https://help.vtex.com/en/tutorial/managing-a-multistore--4S0lFVBPylRS5KpVgdyDhJ) setup where a VTEX account operates multiple localized stores for different countries or regions, each with its own catalog, prices, logistics, and language.
