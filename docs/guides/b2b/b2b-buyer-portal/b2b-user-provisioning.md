@@ -11,7 +11,7 @@ updatedAt: "2026-02-20T00:00:00.000Z"
 
 This guide explains how merchants can migrate their B2B user base from external platforms to VTEX in a secure way, including how to:
 
-* Register new users in VTEX ID with unique login credentials.
+* Register new users in Authenticator with unique login credentials.
 * Create and manage organizational units for buyer users.
 * Link users to their respective organizational units.
 * Assign administrative roles and permissions to users.
@@ -26,8 +26,8 @@ Before provisioning B2B users in VTEX, make sure the required features are enabl
 
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
-| VTEX ID | User Management | Create User | `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/v1/storefront/users) |
-| Organization Units | Units | Edit Organization Unit | `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) <br/><br/>`POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/organization-units/-organizationUnit-/users) |
+| Authenticator | User Management | Create User | `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users) |
+| Organization Units | Units | Edit Organization Unit | `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) <br/><br/>`POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users) |
 | License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users) |
 | Dynamic Storage | Dynamic storage generic resources | Insert or update document (not remove) | `POST` [Create buyer](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api#post-/api/dataentities/shopper/documents) |
 
@@ -45,7 +45,7 @@ For effective authentication, every B2B buyer must comply with the following:
 
 The user provisioning process follows these main steps:
 
-1. [Create storefront user with username](#step-1---create-storefront-user-with-username): Register new storefront users in VTEX ID with unique login credentials.
+1. [Create storefront user with username](#step-1---create-storefront-user-with-username): Register new storefront users in Authenticator with unique login credentials.
 2. [Create organizational unit](#step-2---create-organizational-unit): Create organizational units where storefront users will be assigned.
 3. [Assign user to organizational unit](#step-3---assign-user-to-organizational-unit): Link storefront users to their respective organizational units.
 4. [Assign storefront roles to user](#step-4---assign-storefront-roles-to-user): Assign storefront roles and permissions to users.
@@ -55,7 +55,7 @@ At this stage, the created user is not yet linked to an organizational unit, nor
 
 ## Step 1 - Create storefront user with username
 
-Register a new user in VTEX ID. You must create this user with a required `username`, which remains the primary login identifier for the storefront. The username is a case-insensitive field that accepts 3 to 70 characters, including special characters (except whitespace).
+Register a new user in Authenticator. You must create this user with a required `username`, which remains the primary login identifier for the storefront. The username is a case-insensitive field that accepts 3 to 70 characters, including special characters (except whitespace).
 
 Optionally, you may also register a login email for the user. When provided, the user can use this email address as an alternative login identifier to authenticate using either their `username` or their login email address. This same login email will also be used for password recovery.
 
@@ -68,7 +68,7 @@ At this stage, the created user is not yet linked to an organizational unit, nor
 * `identifiers`: List of login keys, indicating their type and value.
 * `isLegacyPassword`: Indicates whether the user should recover their password through an external service (`true`) or define a new password on their first login (`false`, default).
 
->ℹ️ For more information, see `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/authenticator/v1/storefront/users).
+>ℹ️ For more information, see `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users).
 
 >⚠️ Once you create a user, you can’t edit or remove it. If you upload incorrect data, create a new user with a new username.
 
@@ -149,7 +149,7 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/organization
 
 Links a user to an organizational unit, establishing their organizational membership.
 
->ℹ️ For more information, see `POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/organization-units/-organizationUnit-/users).
+>ℹ️ For more information, see `POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users).
 
 ### Request example
 
@@ -278,7 +278,7 @@ For additional user and organizational management operations, see the following 
 
 * `GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/pvt/user/info)
 * `GET` [Get organizational units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1)
-* `GET` [Get users from organizational unit](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/organization-units/-organizationUnit-/users)
+* `GET` [Get users from organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/vtexid/organization-units/-organizationUnitId-/users)
 * `GET` [Verify user roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/roles)
 * `GET` [Get buyer data](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search)
 * `PATCH` [Edit organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#patch-/api/organization-units/v1/-unitId-)
