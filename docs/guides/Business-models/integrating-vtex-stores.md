@@ -42,7 +42,7 @@ sequenceDiagram
 The following table provides an overview of the required steps and who is responsible for each:
 
 | Step | Responsibility | Description |
-|------|----------------|-------------|
+| ------ | ---------------- | ------------- |
 | [Define sales channels for marketplace integration](#define-sales-channels-for-marketplace-integration) | Seller | Decide whether to use an existing or new **sales channel (trade policy)** for marketplace sales and configure catalog, pricing, promotions, payments, and logistics as needed. |
 | [Create affiliate ID](#create-an-affiliate-id) | Seller | Create an **affiliate** that uniquely identifies the marketplace, that links it to the correct sales channel and notification endpoint, and share the affiliate ID with the marketplace. |
 | [Define sales channels for sellers in your marketplace](#define-sales-channels-for-sellers-in-your-marketplace) | Marketplace | Decide whether to use the default or a dedicated **sales channel** for marketplace operations and configure catalog, pricing, promotions, payments, and logistics for seller sales. |
