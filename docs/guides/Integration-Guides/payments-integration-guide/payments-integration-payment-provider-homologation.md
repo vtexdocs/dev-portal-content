@@ -1,93 +1,120 @@
 ---
-title: "Payment Provider Homologation"
+title: "Payment provider homologation"
 slug: "payments-integration-payment-provider-homologation"
 excerpt: "Validate your payment provider integration and complete the homologation process using the Payment Provider Test Suite."
 hidden: false
 createdAt: "2020-10-27T15:19:20.313Z"
-updatedAt: "2022-11-03T14:26:34.287Z"
+updatedAt: "2026-08-12T00:00:00.000Z"
 ---
 
-The last step to complete the implementation process is to check if the integration was done correctly.
+The last step of the implementation process is verifying that the integration works correctly. To do so, simulate the integration with the Payment Provider Test Suite app.
 
-To do so, you can simulate the integration functioning with the Payment Provider Test Suite app.
+> ℹ️ Homologation is the VTEX certification process that validates a payment provider integration before stores can use it in production.
 
 ## Install the Test Suite app
 
-There are two ways to download it: accessing the [VTEX App Store](https://apps.vtex.com/vtex-payment-provider-test-suite/p) or through the Admin.
+You can install the Payment Provider Test Suite from the [VTEX App Store](https://apps.vtex.com/vtex-payment-provider-test-suite/p) or directly from the VTEX Admin.
 
-Considering that you want to download the app through the Admin, proceed as follows:
+To install the app from the Admin, follow these steps:
 
-1. Access the Admin.
-2. Go to the **ACCOUNT SETTINGS** module.
-3. Click on **Apps** then **App Store**.
-4. Now look for **Payment Provider Test Suite** in the search bar.
-5. Click **Install**.
-   ![Test\_suite\_1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-0.png)
-6. After that, you will be redirected to the VTEX App Store. Click the **GET APP** button at the top right corner of the page.
-   ![Test\_suite\_2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-1.png)
-7. Then, on the popup screen, type your account's name in lowercase, with no spaces, and click the **CONFIRM** button.
-   ![Test\_suite\_3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-2.png)
-8. Click **INSTALL** to complete the installation process.
-   ![Test\_suite\_4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-3.png)
-   After that, the Test Suite app will be installed in your Admin.
+1. In the VTEX Admin, go to **Apps > Extensions Hub > App Store**.
+2. Search for **Payment Provider Test Suite**.
+3. Open the app page and click **Get App**.
+
+![App Store Payment Provider Test Suite page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-1.png)
+
+4. Follow the instructions on the screen to complete the installation.
+
+After the installation, the app is available in the VTEX Admin under **Apps > Payment Provider Test Suite**.
 
 ## Run the tests
 
-After having proceeded with the Homologation process, you can start running tests to validate the integration.
+Open the app in the VTEX Admin under **Apps > Payment Provider Test Suite** and configure the test as described in the sections below:
+
+![Payment Provider Test Suite page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-2.png)
 
 ### Service information
 
-To start, fill in each field according to the instructions below:
+In the **Service information** section, provide the information needed to access your connector:
 
-- Service URL: The provider’s endpoint. VTEX will use this URL to contact the provider system.
-- Connector Name: How your connector will be named in VTEX. The connector name has to be necessarily related to your brand. Also, the Connector Name is case-sensitive. That means that it considers uppercase and lowercase.
-- X-VTEX-API-AppKey: Fill it in with the value `X-VTEX-API-AppKey`.
-- X-VTEX-API-AppToken: Fill it in with the value `X-VTEX-API-AppToken`.
+- **Service URL**: The base endpoint of your connector. VTEX uses this URL to contact the provider system.
+- **Test with AppKey and AppToken**: Enable this toggle if your connector requires authentication. The application key and token configured by the merchant are sent as API headers in the POST request. For more information, see [API authentication using API keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys).
 
->❗ Once you define the connector name, it can not be changed.
+### Payment method
 
-Then, click the **Check URL** button. This action will call the [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint. The response will indicate which payment methods can be analyzed in the next step (Tests form).
+Select the payment method you want to use for the test. The dropdown lists the methods declared by your connector in the [GET List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) response.
 
-### Tests
+Run the tests once for each payment method your connector supports.
 
-After the call, the payment methods implemented will be exposed in the form and the switches will be activated automatically.
+### Test cases
 
-Check if the right options were activated. Then, click the **Run Tests** button.
+Select the cases you want to test, or select all of them. Each case corresponds to a scenario your connector must handle:
 
-### Logs
+| Test case | What it validates |
+| --- | --- |
+| Approved flow | The connector authorizes and approves the payment. |
+| Denied flow | The connector denies the payment and returns the corresponding status. |
+| Async approved flow | The connector returns the `undefined` status and later notifies the approval through the callback. |
+| Async denied flow | The connector returns the `undefined` status and later notifies the denial through the callback. |
+| Cancellation flow | The connector cancels a payment and returns a `cancellationId`. |
+| Boleto flow | The connector handles a bank invoice payment. |
+| Redirect flow | The connector returns a redirect URL so the shopper can complete the payment outside checkout. |
 
-All the operations performed in the test phase will be exposed in the Logs box, including the ones that may present some errors in the integration.
+For details on these scenarios, see [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
 
-If errors occur, make all the adjustments necessary to adapt your connector to the Payment Provider Protocol rules and try to run the test again.
+After configuring the service information, the payment method, and the test cases, click **Run Test**.
 
-If everything is ok, you need to [open a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en) informing them that the integration was completed. However, before opening the ticket, make sure you have the following information:
+### Test report
 
-- **Connector Name**: A description of the provider. Use max. 16 alphanumeric characters. This name cannot be modified after being published.
-- **Partner contact**: Partner email address in case we need to communicate changes and new features of our protocol.
-- **Production Service Provider Endpoint**: The base path that will be used for API calls to the provider, e.g., `https://vtex.pagseguro.com>`. It has to respond to the route `{{serviceUrl}}/manifest`. This endpoint must be publicly available.
-- **Sandbox Service Provider Endpoint**: The base path that will be used in test mode for API calls to the provider (e.g. `https://sandboxserviceproviderendpoint.com`).
-- **Owner account**: The VTEX account name which will be used in callback requests. This account must be available at `*[account].myvtex.com*`.
-- **Allowed Accounts**: Describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
-- **New Payment Method**: Inform whether this connector supports a payment method that is not yet available in the VTEX Admin.
-- **New Payment Method purchase flow**: If a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access  [Purchase Flows](https://developers.vtex.com/vtex-rest-api/docs/payments-integration-purchase-flows).
+The **Test Report** summarizes the run, showing the service URL, the payment method, the credentials used, and how many tests passed out of the total. Each selected test case is listed with a `success` or `fail` result.
 
-> ⚠️ If the connector processes payments with credit, debit, or cobranded cards, it will also be necessary to send the [AOC](https://www.pcisecuritystandards.org/document_library) (Attestation of Compliance for Onsite Assessments – Service Provider Version) submitted with the homologation request ticket.
+![Payment Provider Test Suite - Test report page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-3.png)
 
-The SLA required for the payment team to carry out the homologation is 30 days. This term will start only after the submission of the document **Master Partner Agreement for Financial Services (MPA)**. For homologation requests without using the MPA, the SLA term may be extended due to the need for additional analysis by the payment team.
+To inspect a specific case, open its **Logs**. The logs display a timeline of the run, from the initiated test through the request sent to your connector and the response received, ending with the test result. Each step includes the full request and response payloads.
 
-> ❗ Do **not** open the ticket for homologation if the Logs box presents any type of error. Redo the operation until the Logs box results are clear. If you need help in this scenario, talk to your Partner Account Manager.
+![Payment Provider Test Suite - Logs page](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/payments-integration-payment-provider-homologation-4.png)
 
-> ❗ It is mandatory to open a ticket with VTEX Support. Without doing so, the implementation will not be recognized by our system.
+If a test fails, adjust your connector to comply with the Payment Provider Protocol and run the tests again. The most common causes of failure are:
 
-After that, the VTEX support team will inform you whether the implementation was performed correctly.
+| Cause | How to fix |
+| --- | --- |
+| The endpoint is not publicly accessible, or uses an IP address instead of a domain name. | Serve the endpoints over HTTPS on port 443 with TLS 1.2 support, using a subdomain or domain name. |
+| The response takes too long. | Respond in less than 5 seconds during homologation tests and less than 20 seconds for any other call. |
+| The manifest does not list the expected payment methods. | Review the `paymentMethods` array returned by the manifest endpoint. |
+| The connector returns an unexpected status value. | Return the status values defined by the protocol for each operation. |
+
+For the full request and response schemas of each operation, see the [Payment Provider Protocol](https://developers.vtex.com/docs/api-reference/payment-provider-protocol) API reference.
+
+## Request homologation
+
+If all test cases pass, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) stating that the integration is complete. VTEX only recognizes the implementation after you open this ticket.
+
+Gather the following information before opening the ticket:
+
+- **Connector name**: The name of the provider. Use a maximum of 16 alphanumeric characters. This name cannot be changed after publishing.
+- **Partner contact**: Partner email address for communicating protocol changes and new features.
+- **Production service provider endpoint**: The base path used for API calls to the provider, for example, `https://productionserviceproviderendpoint.com`. It must respond to the `{{serviceUrl}}/manifest` route and be publicly available.
+- **Sandbox service provider endpoint**: The base path used in test mode for API calls to the provider, for example, `https://sandboxserviceproviderendpoint.com`.
+- **Owner account**: The VTEX account name used in callback requests. This account must be available at `{account}.myvtex.com`.
+- **Allowed accounts**: Which VTEX accounts can use this provider, either all accounts or specific accounts.
+- **New payment method**: Specify whether this connector supports a payment method that is not yet available in the VTEX Admin.
+- **New payment method purchase flow**: If the connector supports a new payment method, specify whether it works with Redirect or Payment App. For more information, see [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
+
+> ⚠️ If the connector processes payments with credit, debit, or co-branded cards, you must also attach the [Attestation of Compliance (AOC) for Onsite Assessments, Service Provider Version](https://www.pcisecuritystandards.org/document_library/) to the homologation request ticket.
+
+The payment team completes the homologation within 30 days. This period starts only after you submit the Master Partner Agreement for Financial Services (MPA). Requests without an MPA may take longer, because the payment team needs to perform additional analysis.
+
+> ❗ Do not open the homologation ticket if any test case fails. Fix the connector and run the tests again until every case returns `success`. If you need help, contact your Partner Account Manager.
+
+VTEX Support then confirms whether the implementation is correct.
 
 ## When is payment provider homologation not required?
 
-A connector is exempt from the payment provider homologation process only if all of the conditions below are met simultaneously:
+A connector is exempt from the payment provider homologation process only if it meets all the following conditions:
 
 - It is a [PPF connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework), developed using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
 - It only uses payment methods already available on the VTEX platform.
 - It is installed locally, restricted to specific accounts.
 - The target account is already using an IO/PPF connector.
 
-> ⚠️ If any of these conditions is not satisfied, the connector must follow the homologation process.
+> ⚠️ If the connector does not meet all these conditions, it must go through the homologation process.
