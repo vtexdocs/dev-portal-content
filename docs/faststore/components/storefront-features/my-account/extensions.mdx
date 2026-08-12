@@ -2,18 +2,67 @@
 title: "Extending My Account for B2B stores"
 hidden: true
 excerpt: "Learn how to extend the My Account page in your B2B FastStore project."
-updatedAt: "2026-02-03T13:16:12.258Z"
+updatedAt: "2026-08-11T00:00:00.000Z"
 ---
 
-In this guide, you'll learn how to extend the [My Account](https://developers.vtex.com/docs/guides/faststore/my-account-overview) page in your B2B store by creating new pages or adding new sections to the default pages.
+In this guide, you'll learn how to extend the [My Account](https://developers.vtex.com/docs/guides/faststore/my-account-overview) page in your B2B store by adding sections to existing pages or creating new pages, either with content fixed in code or managed in the CMS.
 
-Check if the [default My Account pages](https://developers.vtex.com/docs/guides/faststore/my-account-overview#default-my-account-pages) meet your needs. If not, you can [create a new page](#creating-new-pages) or [add a new section](#adding-new-sections) to better fit your requirements. These extensions allow you to customize the My Account experience without changing its default structure.
+Check if the [default My Account pages](https://developers.vtex.com/docs/guides/faststore/my-account-overview#default-my-account-pages) meet your needs. If not, you can [add a section](#adding-new-sections) or create a new page, with [fixed content](#creating-a-page-with-fixed-content) or [managed by the CMS](#creating-a-cms-managed-page), to better fit your requirements. These extensions allow you to customize the My Account experience without changing its default structure.
 
-> ⚠️ All My Account routes are private and must include the `/pvt/account` prefix. Custom routes are validated to ensure this prefix is included, but you should declare it.
+> ⚠️ All My Account routes are private and must include the `/pvt/account` prefix. Custom routes are validated to ensure this prefix is included, but you should declare it. The validation compares complete path segments, so a route such as `/pvt/accounting/dashboard` isn't considered part of `/pvt/account`.
 
-## Creating new pages
+## Before you begin
 
-To create a new page for **My Account**, follow these steps:
+Make sure you have the following:
+
+- FastStore `v4.5.0` or later. See [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
+- My Account enabled in your project, as described in [Enabling My Account for B2B stores](https://developers.vtex.com/docs/guides/faststore/my-account-enablement). Without the `enableFaststoreMyAccount` flag, all `/pvt/account/*` routes redirect to the legacy account.
+- The `contentSource` object set to `type: "CP"` in your `discovery.config` file, if you plan to create CMS-managed pages. See [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts).
+- Access to the CMS Admin of your account, to publish the content of CMS-managed pages.
+
+> ⚠️ CMS-managed My Account pages aren't compatible with [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). The content type flow in `cms/faststore/pages/` and the schema sync are only available in the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts).
+
+## Choosing an approach
+
+| What you want to do? | What to create? | Who edits the content afterwards? |
+| ------------------- | -------------- | -------------------------------- |
+| Add a block before or after the content of a page | `before.tsx` or `after.tsx` in `src/myAccount/extensions/` | Developer (code) |
+| Create a new page with fixed content | A `.tsx` file in `src/pages/pvt/account/` and a route in `navigation.ts` | Developer (code) |
+| Create a new page that the merchant can edit | A route with `contentType` in `navigation.ts` and a content type in the CMS | Merchant (CMS Admin) |
+| Create a page that combines both | Both approaches above, on the same route | Developer and merchant |
+
+These approaches aren't mutually exclusive: your store can have pages of each type at the same time, and the last three are all declared in the same `src/myAccount/navigation.ts` file.
+
+## Adding new sections
+
+To add a new section before or after the content of a My Account page, follow these steps:
+
+1. Open your FastStore project using the code editor of your choice.
+2. Open the `src/myAccount/extensions/{pageName}` folder, where `pageName` is the URL path of the page without the `/pvt/account` prefix. For example:
+   - For `/pvt/account/orders`, use `src/myAccount/extensions/orders/`.
+   - For `/pvt/account/orders/[id]`, use `src/myAccount/extensions/orders/[id]/`.
+   - For a custom route such as `/pvt/account/wishlist`, use `src/myAccount/extensions/wishlist/`.
+3. In the `src/myAccount/extensions/{pageName}` folder, create two files: `before.tsx` and `after.tsx`. Use the `before.tsx` file to add a section before the existing content of the page, and use `after.tsx` to add a section after the existing content. Each file must export a React component as `default`.
+
+For example, to add a section after the order details page, you can implement the following:
+
+```js src/myAccount/extensions/orders/[id]/after.tsx
+function After() {
+  return <div>After the default sections, this section is shown :)</div>;
+}
+
+export default After;
+```
+
+> ℹ️ Both default pages and custom routes created by your store can have `before.tsx` and `after.tsx` extension sections.
+
+Based on the example above, the new section will be placed after the current content on the order details page:
+
+![new-section-my-account](https://vtexhelp.vtexassets.com/assets/docs/src/new-section___1ff45ac89fb0c8629c705bdc6b5deb36.png)
+
+## Creating a page with fixed content
+
+Use this approach when the page content should be maintained in code, without the merchant editing it in the CMS Admin.
 
 1. Open your FastStore project using the code editor of your choice.
 2. Open the `src` folder.
@@ -49,30 +98,145 @@ Next, enable this new page as a valid route:
    });
    ```
 
-Once you've completed these steps, the new page will appear as an option in the **My Account** menu.
+Once you've completed these steps, the new page will appear as an option in the **My Account** menu, using the `title` value as its label.
 
 ![page-test-my-account](https://vtexhelp.vtexassets.com/assets/docs/src/new-page___e41daa56a05a4783e974a6c7cec08d59.png)
 
-## Adding new sections
+## Creating a CMS-managed page
 
-To add a new section to a [default My Account page](https://developers.vtex.com/docs/guides/faststore/my-account-overview#default-my-account-pages), follow these steps:
+Use this approach when the merchant needs to build and edit the page content directly in the CMS Admin, without requiring a new deploy.
 
-1. Open your FastStore project using the code editor of your choice.
-2. Open the `src/myAccount/extensions/{pageName}` folder, where `pageName` is one of the default My Account pages. Example: `src/myAccount/extensions/orders/`.
-3. In the `src/myAccount/extensions/{pageName}` folder, create two files: `before.tsx` and `after.tsx`. Use the `before.tsx` file to add a section before the existing content of the default page, and use `after.tsx` to add a section after the existing content.
+In this case, you don't create a `.tsx` file. FastStore generates the page automatically, and its whole body is composed of the sections published in the CMS.
 
-For example, to add a section after the order details page, you can implement the following:
+### Step 1 - Binding the route to a content type
 
-```js src/myAccount/extensions/orders/[id]/after.tsx
-function After() {
-  return <div>After the default sections, this section is shown :)</div>;
-}
+In the `src/myAccount/navigation.ts` file, add the `contentType` property to the route. Its value must be the exact identifier of the content type you'll define in the CMS:
 
-export default After;
+```ts src/myAccount/navigation.ts mark=7
+import { getMyAccountRoutes } from "@faststore/core";
+
+export default getMyAccountRoutes({
+  routes: [
+    {
+      route: "/pvt/account/wishlist",
+      title: "Wishlist",
+      contentType: "myAccountWishlist",
+    },
+  ],
+});
 ```
 
-> ℹ️ Every default page can have `before.tsx` and `after.tsx` extension sections.
+The `contentType` property is the only opt-in for CMS-managed content. Routes without it keep the behavior described in [Creating a page with fixed content](#creating-a-page-with-fixed-content). The `title` property remains required, as it's the label displayed in the My Account menu. Route entries missing `route` or `title` are skipped with a warning at build time.
 
-Based on the example above, the new section will be placed after the current content on the order details page:
+> ⚠️ Declare routes as static object literals. The `navigation.ts` file is read through static analysis at build time, so routes built dynamically using variables, `map`, spread operators, or a function that returns the list aren't recognized by the page generator.
 
-![new-section-my-account](https://vtexhelp.vtexassets.com/assets/docs/src/new-section___1ff45ac89fb0c8629c705bdc6b5deb36.png)
+CMS-managed pages inherit the same protections as the default My Account pages, with no extra configuration: unauthenticated users are redirected to `/login`, sessions that require a refresh are redirected to `/pvt/account/403?from=<route>`, and locale validation is applied, so localized content works as expected.
+
+### Step 2 - Defining the content type in the CMS
+
+Create the content type file in the `cms/faststore/pages` folder of your project. The root key must match the `contentType` value declared in the route:
+
+```jsonc cms/faststore/pages/cms_content_type__myaccountwishlist.jsonc
+{
+  "myAccountWishlist": {
+    "$extends": ["#/components/base-page-template"],
+    "$singleton": true,
+    "type": "object",
+    "title": "My Account — Wishlist",
+    "properties": {
+      "sections": {
+        "$ref": "#/$defs/$ALLOW_ALL_COMPONENTS"
+      }
+    },
+    "readOnly": false,
+    "writeOnly": false,
+    "deprecated": false,
+    "$abstract": false,
+    "identifierKeys": []
+  }
+}
+```
+
+- `$singleton: true` and `identifierKeys: []` make the page a single instance, without replication per entity.
+- `$ALLOW_ALL_COMPONENTS` in the `sections` property allows the merchant to use any section available in your store when building the page. To restrict the available sections, replace it with an explicit `anyOf` list.
+
+### Step 3 - Syncing the schema
+
+Run the following command to send the new content type to the CMS:
+
+```bash
+yarn cms-sync
+```
+
+For more details about the sync flow, see [Local setup and development](https://developers.vtex.com/docs/guides/local-setup-and-development).
+
+### Step 4 - Publishing the content in the CMS Admin
+
+1. In the VTEX Admin, go to **Storefront > Content > All content**.
+2. Open the content type you created, for example, **My Account — Wishlist**.
+3. Add and configure the desired sections.
+4. Save and publish your changes.
+
+### Step 5 - Checking the new page
+
+Log in to your store and access the new route, for example, `/pvt/account/wishlist`. The page appears in the My Account menu with the sections published in the CMS.
+
+> ⚠️ If the content type was never published or its identifier doesn't match the `contentType` value, the page still loads with the menu, layout, and authentication, but with an empty body. See [Troubleshooting](#troubleshooting).
+
+## Creating a hybrid page
+
+Use this approach when the page needs to mix blocks fixed in code, such as complex API integrations, with flexible sections managed by the merchant.
+
+To create a hybrid page, combine both approaches on the same route:
+
+1. Add the `contentType` property to the route in `src/myAccount/navigation.ts`:
+
+   ```ts src/myAccount/navigation.ts mark=4
+   {
+     route: "/pvt/account/page-cms",
+     title: "CMS page",
+     contentType: "myAccountPageCms",
+   }
+   ```
+
+2. Create the corresponding `.tsx` file in the `src/pages/pvt/account` folder:
+
+   ```js src/pages/pvt/account/page-cms.tsx
+   export default function PageCms() {
+     return (
+       <div>
+         <h1>Block in code</h1>
+         <p>Sections published in the CMS are rendered above this block.</p>
+       </div>
+     );
+   }
+   ```
+
+3. Define the content type in the CMS and publish its content, as described in [Creating a CMS-managed page](#creating-a-cms-managed-page).
+
+The final page displays both the sections coming from the CMS Admin and the interface defined in code.
+
+## Rendering order
+
+When a route has more than one content source, FastStore renders them in the following order:
+
+```
+My Account layout
+  └─ before.tsx
+     └─ CMS sections
+        └─ .tsx page component
+           └─ after.tsx
+```
+
+Every layer is optional. FastStore renders only the ones available for that route.
+
+## Using custom sections in My Account
+
+You can use your store's own sections in CMS-managed My Account pages by following the standard FastStore flow:
+
+1. Create the section in the `src/components/sections` folder and set its `$componentKey`.
+2. Export the section in the `src/components/index.tsx` file.
+3. Create the corresponding `.jsonc` schema in the `cms/faststore/components` folder.
+4. Run `yarn cms-sync` to make the section available in the CMS Admin.
+
+For the complete step-by-step, see [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/creating-a-new-section).
