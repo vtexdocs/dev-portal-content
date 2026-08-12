@@ -17,6 +17,8 @@ check 'Comment on parent with prepare result' 'prepare result comment step'
 check 'Comment on parent with finalize result' 'finalize result comment step'
 check 'jira_post_comment_best_effort' 'best-effort Jira comments'
 check 'jira_curl subtask-response.json' 'retried subtask create'
+check 'jira_curl response.json POST' 'retried parent create'
+check 'jira_curl update-due-response.json PUT' 'retried due-date update'
 
 check 'workflow_dispatch:' 'manual workflow_dispatch trigger'
 check 'Resolve PR context' 'PR context resolve step'

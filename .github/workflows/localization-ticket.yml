@@ -484,12 +484,10 @@ jobs:
               )
             }')
 
-          RESPONSE=$(curl -s -o response.json -w "%{http_code}" \
-            -X POST \
+          RESPONSE=$(jira_curl response.json POST \
+            "${LOC_JIRA_BASE_URL}/rest/api/2/issue" \
             -H "Content-Type: application/json" \
-            -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-            -d "$PAYLOAD" \
-            "${LOC_JIRA_BASE_URL}/rest/api/2/issue")
+            -d "$PAYLOAD")
 
           if [ "$RESPONSE" -eq 201 ]; then
             TICKET=$(jq -r '.key' response.json)
@@ -1016,12 +1014,10 @@ jobs:
             local payload response
 
             payload=$(jq -n --arg duedate "$duedate" '{fields: {duedate: $duedate}}')
-            response=$(curl -s -o update-due-response.json -w "%{http_code}" \
-              -X PUT \
+            response=$(jira_curl update-due-response.json PUT \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}" \
               -H "Content-Type: application/json" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              -d "$payload" \
-              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}")
+              -d "$payload")
 
             if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
               echo "Updated due date for ${key}: ${duedate}"
