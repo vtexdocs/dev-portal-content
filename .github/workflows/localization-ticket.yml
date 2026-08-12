@@ -28,7 +28,7 @@
 # with START/END OF UPDATED SECTION markers.
 #
 # Secrets — required: LOC_JIRA_BASE_URL, LOC_JIRA_USER_EMAIL, LOC_JIRA_API_TOKEN,
-# LOC_JIRA_PROJECT_KEY, LOC_JIRA_EPIC_KEY, LOC_CROWDIN_API_TOKEN,
+# LOC_JIRA_EPIC_KEY, LOC_CROWDIN_API_TOKEN,
 # LOC_CROWDIN_PROJECT_ID
 # Optional: LOC_CROWDIN_ORGANIZATION (Crowdin Enterprise subdomain)
 
@@ -36,6 +36,9 @@ name: Create Localization Ticket
 
 # LOC / Crowdin configuration (edit here if needed).
 env:
+  # Hardcoded (not a secret): storing as LOC_JIRA_PROJECT_KEY secret masks
+  # job outputs like parent_key=LOC-12345.
+  LOC_JIRA_PROJECT_KEY: LOC
   LOC_JIRA_WORD_COUNT_FIELD: customfield_10253
   LOC_JIRA_SOURCE_LINK_PROJECT_KEY: EDU
   LOC_JIRA_REPORTER_EMAIL_DOMAIN: '@vtex.com'
@@ -146,7 +149,6 @@ jobs:
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
           LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
-          LOC_JIRA_PROJECT_KEY: ${{ secrets.LOC_JIRA_PROJECT_KEY }}
         run: |
           PR_NUMBER=$(jq -r '.pull_request.number' "$GITHUB_EVENT_PATH")
           GITHUB_REPOSITORY=$(jq -r '.repository.full_name' "$GITHUB_EVENT_PATH")
@@ -209,7 +211,6 @@ jobs:
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
           LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
-          LOC_JIRA_PROJECT_KEY: ${{ secrets.LOC_JIRA_PROJECT_KEY }}
           LOC_JIRA_EPIC_KEY: ${{ secrets.LOC_JIRA_EPIC_KEY }}
           LOC_JIRA_REPORTER_EMAIL_DOMAIN: ${{ env.LOC_JIRA_REPORTER_EMAIL_DOMAIN }}
           CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
@@ -335,6 +336,7 @@ jobs:
           if [ -n "$EXISTING_KEY" ]; then
             update_parent_issue "$EXISTING_KEY"
             echo "parent_key=${EXISTING_KEY}" >> "$GITHUB_OUTPUT"
+            echo "parent_reused=true" >> "$GITHUB_OUTPUT"
             echo "parent_due_date=${JIRA_DUE_DATE}" >> "$GITHUB_OUTPUT"
             echo "Using existing ticket: ${LOC_JIRA_BASE_URL}/browse/${EXISTING_KEY}"
             exit 0
@@ -392,6 +394,7 @@ jobs:
           if [ "$RESPONSE" -eq 201 ]; then
             TICKET=$(jq -r '.key' response.json)
             echo "parent_key=${TICKET}" >> "$GITHUB_OUTPUT"
+            echo "parent_reused=false" >> "$GITHUB_OUTPUT"
             echo "parent_due_date=${JIRA_DUE_DATE}" >> "$GITHUB_OUTPUT"
             echo "Ticket created: ${LOC_JIRA_BASE_URL}/browse/${TICKET} (epic: ${LOC_JIRA_EPIC_KEY}, priority: ${JIRA_PRIORITY}, due: ${JIRA_DUE_DATE})"
           else
@@ -401,6 +404,7 @@ jobs:
           fi
 
       - name: Link source Jira tasks from PR
+        id: link_sources
         if: >-
           steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
@@ -501,124 +505,8 @@ jobs:
             create_source_block_link "$PARENT_KEY" "$source_key"
           done <<< "$SOURCE_KEYS"
 
-      - name: Upload touched files to Crowdin
-        id: crowdin_upload
-        if: >-
-          steps.eligibility.outputs.should_run == 'true' &&
-          steps.content_diff.outputs.has_additions == 'true' &&
-          steps.content_diff.outputs.has_eligible_files == 'true' &&
-          steps.production_lock.outputs.updates_blocked != 'true' &&
-          steps.parent_ticket.outputs.parent_key != ''
-        env:
-          LOC_CROWDIN_API_TOKEN: ${{ secrets.LOC_CROWDIN_API_TOKEN }}
-          LOC_CROWDIN_PROJECT_ID: ${{ secrets.LOC_CROWDIN_PROJECT_ID }}
-          LOC_CROWDIN_ORGANIZATION: ${{ secrets.LOC_CROWDIN_ORGANIZATION }}
-          CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          JIRA_TASK_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
-        run: |
-          if python3 .github/scripts/crowdin_sync.py 2>crowdin-upload-error.log; then
-            echo "upload_succeeded=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "upload_succeeded=false" >> "$GITHUB_OUTPUT"
-            {
-              echo "upload_error<<EOF_UPLOAD_ERROR"
-              tail -40 crowdin-upload-error.log
-              echo "EOF_UPLOAD_ERROR"
-            } >> "$GITHUB_OUTPUT"
-            cat crowdin-upload-error.log >&2
-          fi
-
-      - name: Comment on parent task for Crowdin upload failure
-        if: >-
-          steps.eligibility.outputs.should_run == 'true' &&
-          steps.content_diff.outputs.has_additions == 'true' &&
-          steps.content_diff.outputs.has_eligible_files == 'true' &&
-          steps.production_lock.outputs.updates_blocked != 'true' &&
-          steps.parent_ticket.outputs.parent_key != '' &&
-          steps.crowdin_upload.outputs.upload_succeeded == 'false'
-        env:
-          LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
-          LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
-          LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
-          PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
-          UPLOAD_ERROR: ${{ steps.crowdin_upload.outputs.upload_error }}
-        run: |
-          PR_NUMBER=$(jq -r '.pull_request.number' "$GITHUB_EVENT_PATH")
-          PR_URL=$(jq -r '.pull_request.html_url' "$GITHUB_EVENT_PATH")
-
-          # shellcheck source=.github/scripts/jira_helpers.sh
-          source .github/scripts/jira_helpers.sh
-
-          COMMENT_BODY=$(printf '%s\n\n%s\n\nPR: #%s (%s)\n\nError:\n%s' \
-            "Crowdin upload failed during localization automation." \
-            "The Jira ticket and subtasks were created or updated, but files were not uploaded to Crowdin. Word count and Crowdin editor links were not updated." \
-            "$PR_NUMBER" \
-            "$PR_URL" \
-            "${UPLOAD_ERROR:-See the GitHub Actions log for the Crowdin upload step.}")
-          jira_post_comment_best_effort "$PARENT_KEY" "$COMMENT_BODY"
-          echo "Posted Crowdin upload failure comment on ${PARENT_KEY}"
-
-      - name: Update parent task word count
-        if: >-
-          steps.eligibility.outputs.should_run == 'true' &&
-          steps.content_diff.outputs.has_additions == 'true' &&
-          steps.production_lock.outputs.updates_blocked != 'true' &&
-          steps.parent_ticket.outputs.parent_key != '' &&
-          steps.crowdin_upload.outputs.upload_succeeded == 'true'
-        env:
-          LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
-          LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
-          LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
-          PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
-          CROWDIN_TOTAL_WORDS: ${{ steps.crowdin_upload.outputs.total_words }}
-          FILES_JSON: ${{ steps.crowdin_upload.outputs.files_json }}
-          CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
-        run: |
-          merge_word_count_description() {
-            CURRENT="$1" COUNT="$2" python3 .github/scripts/crowdin_sync.py word-count
-          }
-
-          annotate_changed_files_description() {
-            CURRENT="$1" python3 .github/scripts/crowdin_sync.py annotate-changed-files
-          }
-
-          current_desc=$(curl -s \
-            -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-            "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${PARENT_KEY}?fields=description" \
-            | jq -r '.fields.description // ""')
-          merged_desc=$(annotate_changed_files_description "$current_desc")
-          merged_desc=$(merge_word_count_description "$merged_desc" "$CROWDIN_TOTAL_WORDS")
-
-          custom_fields=$(jq -n \
-            --arg field "$LOC_JIRA_WORD_COUNT_FIELD" \
-            --argjson count "$CROWDIN_TOTAL_WORDS" \
-            '{($field): $count}')
-
-          payload=$(jq -n \
-            --arg description "$merged_desc" \
-            --argjson custom_fields "$custom_fields" \
-            '{fields: ({description: $description} + $custom_fields)}')
-
-          response=$(curl -s -o update-word-count-response.json -w "%{http_code}" \
-            -X PUT \
-            -H "Content-Type: application/json" \
-            -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-            -d "$payload" \
-            "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${PARENT_KEY}")
-
-          if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
-            echo "Updated word count for ${PARENT_KEY}: ${CROWDIN_TOTAL_WORDS}"
-          else
-            echo "Failed to update word count for ${PARENT_KEY} (HTTP ${response})" >&2
-            cat update-word-count-response.json >&2
-            exit 1
-          fi
-
       - name: Comment on PR with Jira link
+        id: pr_comment
         if: >-
           steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
@@ -627,7 +515,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
-          LOC_JIRA_PROJECT_KEY: ${{ secrets.LOC_JIRA_PROJECT_KEY }}
           PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
           PARENT_DUE_DATE: ${{ steps.parent_ticket.outputs.parent_due_date }}
         run: |
@@ -691,6 +578,169 @@ jobs:
           cat "$COMMENT_FILE"
           rm -f "$COMMENT_FILE"
 
+
+      - name: Comment on parent with prepare result
+        if: >-
+          always() &&
+          steps.parent_ticket.outputs.parent_key != ''
+        env:
+          LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
+          LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
+          LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
+          PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
+          PARENT_REUSED: ${{ steps.parent_ticket.outputs.parent_reused }}
+          LINK_SOURCES_OK: ${{ steps.link_sources.outcome }}
+          PR_COMMENT_OK: ${{ steps.pr_comment.outcome }}
+        run: |
+          # shellcheck source=.github/scripts/jira_helpers.sh
+          source .github/scripts/jira_helpers.sh
+
+          status_line() {
+            local mark="$1"
+            local text="$2"
+            printf -- '* %s %s' "$mark" "$text"
+          }
+
+          mark_for() {
+            if [ "$1" = "true" ]; then
+              echo "{color:#00875A}*✓*{color}"
+            else
+              echo "{color:#DE350B}*✗*{color}"
+            fi
+          }
+
+          if [ "$PARENT_REUSED" = "true" ]; then
+            parent_ok=true
+            parent_line="Jira parent reused."
+          else
+            parent_ok=true
+            parent_line="Jira parent created."
+          fi
+
+          link_ok=false
+          if [ "$LINK_SOURCES_OK" = "success" ]; then
+            link_ok=true
+            link_line="Source Jira relates links completed."
+          elif [ "$LINK_SOURCES_OK" = "skipped" ]; then
+            link_line="Source Jira relates links skipped."
+          else
+            link_line="Source Jira relates links failed."
+          fi
+
+          pr_ok=false
+          if [ "$PR_COMMENT_OK" = "success" ]; then
+            pr_ok=true
+            pr_line="Comment added in source PR."
+          elif [ "$PR_COMMENT_OK" = "skipped" ]; then
+            pr_line="Source PR comment skipped."
+          else
+            pr_line="Source PR comment failed."
+          fi
+
+          DETAILS=""
+          DETAILS="${DETAILS}$(status_line "$(mark_for "$parent_ok")" "$parent_line")"$'\n'
+          DETAILS="${DETAILS}$(status_line "$(mark_for "$link_ok")" "$link_line")"$'\n'
+          DETAILS="${DETAILS}$(status_line "$(mark_for "$pr_ok")" "$pr_line")"$'\n'
+
+          if $link_ok && $pr_ok; then
+            HEADING="Localization prepare succeeded"
+          else
+            HEADING="Localization prepare completed with issues"
+          fi
+
+          COMMENT_BODY=$(printf 'h3. %s\n\n%s' "$HEADING" "$DETAILS")
+          jira_post_comment_best_effort "$PARENT_KEY" "$COMMENT_BODY"
+          echo "Posted prepare result comment on ${PARENT_KEY}"
+
+      - name: Upload touched files to Crowdin
+        id: crowdin_upload
+        if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
+          steps.content_diff.outputs.has_additions == 'true' &&
+          steps.content_diff.outputs.has_eligible_files == 'true' &&
+          steps.production_lock.outputs.updates_blocked != 'true' &&
+          steps.parent_ticket.outputs.parent_key != ''
+        env:
+          LOC_CROWDIN_API_TOKEN: ${{ secrets.LOC_CROWDIN_API_TOKEN }}
+          LOC_CROWDIN_PROJECT_ID: ${{ secrets.LOC_CROWDIN_PROJECT_ID }}
+          LOC_CROWDIN_ORGANIZATION: ${{ secrets.LOC_CROWDIN_ORGANIZATION }}
+          CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          JIRA_TASK_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
+        run: |
+          if python3 .github/scripts/crowdin_sync.py 2>crowdin-upload-error.log; then
+            echo "upload_succeeded=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "upload_succeeded=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "upload_error<<EOF_UPLOAD_ERROR"
+              tail -40 crowdin-upload-error.log
+              echo "EOF_UPLOAD_ERROR"
+            } >> "$GITHUB_OUTPUT"
+            cat crowdin-upload-error.log >&2
+          fi
+
+
+      - name: Update parent task word count
+        id: word_count
+        if: >-
+          steps.eligibility.outputs.should_run == 'true' &&
+          steps.content_diff.outputs.has_additions == 'true' &&
+          steps.production_lock.outputs.updates_blocked != 'true' &&
+          steps.parent_ticket.outputs.parent_key != '' &&
+          steps.crowdin_upload.outputs.upload_succeeded == 'true'
+        env:
+          LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
+          LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
+          LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
+          PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
+          CROWDIN_TOTAL_WORDS: ${{ steps.crowdin_upload.outputs.total_words }}
+          FILES_JSON: ${{ steps.crowdin_upload.outputs.files_json }}
+          CHANGED_FILES: ${{ steps.content_diff.outputs.changed_files }}
+        run: |
+          merge_word_count_description() {
+            CURRENT="$1" COUNT="$2" python3 .github/scripts/crowdin_sync.py word-count
+          }
+
+          annotate_changed_files_description() {
+            CURRENT="$1" python3 .github/scripts/crowdin_sync.py annotate-changed-files
+          }
+
+          current_desc=$(curl -s \
+            -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+            "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${PARENT_KEY}?fields=description" \
+            | jq -r '.fields.description // ""')
+          merged_desc=$(annotate_changed_files_description "$current_desc")
+          merged_desc=$(merge_word_count_description "$merged_desc" "$CROWDIN_TOTAL_WORDS")
+
+          custom_fields=$(jq -n \
+            --arg field "$LOC_JIRA_WORD_COUNT_FIELD" \
+            --argjson count "$CROWDIN_TOTAL_WORDS" \
+            '{($field): $count}')
+
+          payload=$(jq -n \
+            --arg description "$merged_desc" \
+            --argjson custom_fields "$custom_fields" \
+            '{fields: ({description: $description} + $custom_fields)}')
+
+          response=$(curl -s -o update-word-count-response.json -w "%{http_code}" \
+            -X PUT \
+            -H "Content-Type: application/json" \
+            -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+            -d "$payload" \
+            "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${PARENT_KEY}")
+
+          if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
+            echo "Updated word count for ${PARENT_KEY}: ${CROWDIN_TOTAL_WORDS}"
+          else
+            echo "Failed to update word count for ${PARENT_KEY} (HTTP ${response})" >&2
+            cat update-word-count-response.json >&2
+            exit 1
+          fi
+
       - name: Create localization subtasks
         id: subtasks
         if: >-
@@ -703,7 +753,6 @@ jobs:
           LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
           GH_TOKEN: ${{ github.token }}
-          LOC_JIRA_PROJECT_KEY: ${{ secrets.LOC_JIRA_PROJECT_KEY }}
           LOC_JIRA_REPORTER_EMAIL_DOMAIN: ${{ env.LOC_JIRA_REPORTER_EMAIL_DOMAIN }}
           PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
           PARENT_DUE_DATE: ${{ steps.parent_ticket.outputs.parent_due_date }}
@@ -1098,43 +1147,86 @@ jobs:
             echo "Skipping subtask word counts (Crowdin upload failed or was skipped)"
           fi
 
-      - name: Comment on parent for subtasks/pipeline failure
+      - name: Comment on parent with finalize result
         if: >-
           always() &&
-          steps.parent_ticket.outputs.parent_key != '' &&
-          (steps.subtasks.outcome == 'failure' || steps.subtasks.outcome == 'cancelled')
+          steps.parent_ticket.outputs.parent_key != ''
         env:
           LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
           LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
           LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
           PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
+          UPLOAD_OK: ${{ steps.crowdin_upload.outputs.upload_succeeded }}
+          UPLOAD_ERROR: ${{ steps.crowdin_upload.outputs.upload_error }}
+          WORD_COUNT_OK: ${{ steps.word_count.outcome }}
+          CROWDIN_TOTAL_WORDS: ${{ steps.crowdin_upload.outputs.total_words }}
+          SUBTASKS_OK: ${{ steps.subtasks.outcome }}
         run: |
           # shellcheck source=.github/scripts/jira_helpers.sh
           source .github/scripts/jira_helpers.sh
-          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-          COMMENT_BODY=$(printf '%s\n\n%s\n%s' \
-            "AUTOMATIC LOCALIZATION PIPELINE FAILED" \
-            "Subtasks (or a later Jira step) failed — often a transient Jira/network error (HTTP 000)." \
-            "Re-run the workflow to finish: ${RUN_URL}")
+
+          status_line() {
+            local mark="$1"
+            local text="$2"
+            printf -- '* %s %s' "$mark" "$text"
+          }
+
+          mark_for() {
+            if [ "$1" = "true" ]; then
+              echo "{color:#00875A}*✓*{color}"
+            else
+              echo "{color:#DE350B}*✗*{color}"
+            fi
+          }
+
+          upload_ok=false
+          if [ "$UPLOAD_OK" = "true" ]; then
+            upload_ok=true
+            upload_line="Source files uploaded into Crowdin; word count and editor links updated when available."
+          else
+            upload_line="Crowdin upload failed or was skipped."
+          fi
+
+          word_ok=false
+          if [ "$UPLOAD_OK" = "true" ] \
+            && [ -n "${CROWDIN_TOTAL_WORDS}" ] \
+            && [ "${CROWDIN_TOTAL_WORDS}" -gt 0 ] 2>/dev/null; then
+            word_ok=true
+            word_line="Parent word count set (${CROWDIN_TOTAL_WORDS} words)."
+          elif [ "$WORD_COUNT_OK" = "skipped" ] && [ "$UPLOAD_OK" != "true" ]; then
+            word_line="Parent word count skipped."
+          else
+            word_line="Parent word count failed or was 0."
+          fi
+
+          subtasks_ok=false
+          if [ "$SUBTASKS_OK" = "success" ]; then
+            subtasks_ok=true
+            subtasks_line="Subtasks details completed."
+          elif [ "$SUBTASKS_OK" = "skipped" ]; then
+            subtasks_line="Subtasks step skipped."
+          else
+            RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            subtasks_line="Subtasks failed (often transient Jira/network). Re-run: ${RUN_URL}"
+          fi
+
+          DETAILS=""
+          DETAILS="${DETAILS}$(status_line "$(mark_for "$upload_ok")" "$upload_line")"$'\n'
+          DETAILS="${DETAILS}$(status_line "$(mark_for "$word_ok")" "$word_line")"$'\n'
+          DETAILS="${DETAILS}$(status_line "$(mark_for "$subtasks_ok")" "$subtasks_line")"$'\n'
+
+          if [ -n "${UPLOAD_ERROR:-}" ] && ! $upload_ok; then
+            DETAILS="${DETAILS}"$'\n'"Crowdin error:"$'\n'"{noformat}${UPLOAD_ERROR}{noformat}"$'\n'
+          fi
+
+          if $upload_ok && $word_ok && $subtasks_ok; then
+            HEADING="Localization finalize succeeded"
+          else
+            HEADING="Localization finalize completed with issues"
+          fi
+
+          COMMENT_BODY=$(printf 'h3. %s\n\n%s' "$HEADING" "$DETAILS")
           jira_post_comment_best_effort "$PARENT_KEY" "$COMMENT_BODY"
-          echo "Posted failure comment on ${PARENT_KEY} (best-effort)"
+          echo "Posted finalize result comment on ${PARENT_KEY}"
+          printf '%s\n' "$COMMENT_BODY"
 
-      - name: Comment on parent task for Crowdin upload success
-        if: >-
-          steps.eligibility.outputs.should_run == 'true' &&
-          steps.content_diff.outputs.has_additions == 'true' &&
-          steps.content_diff.outputs.has_eligible_files == 'true' &&
-          steps.production_lock.outputs.updates_blocked != 'true' &&
-          steps.parent_ticket.outputs.parent_key != '' &&
-          steps.crowdin_upload.outputs.upload_succeeded == 'true'
-        env:
-          LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
-          LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
-          LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
-          PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
-        run: |
-          # shellcheck source=.github/scripts/jira_helpers.sh
-          source .github/scripts/jira_helpers.sh
-
-          jira_post_comment_best_effort "$PARENT_KEY" "$CROWDIN_UPLOAD_SUCCESS_COMMENT"
-          echo "Posted Crowdin upload success comment on ${PARENT_KEY}"
