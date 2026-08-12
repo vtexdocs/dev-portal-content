@@ -17,6 +17,11 @@ check 'Comment on parent with prepare result' 'prepare result comment step'
 check 'Comment on parent with finalize result' 'finalize result comment step'
 check 'jira_post_comment_best_effort' 'best-effort Jira comments'
 check 'jira_curl subtask-response.json' 'retried subtask create'
+
+check 'workflow_dispatch:' 'manual workflow_dispatch trigger'
+check 'Resolve PR context' 'PR context resolve step'
+check 'LOC_PR_EVENT_PATH=' 'synthetic PR event path'
+check 'localization_priority:' 'dispatch priority input'
 # prepare before Crowdin upload
 python3 - <<PY
 from pathlib import Path
