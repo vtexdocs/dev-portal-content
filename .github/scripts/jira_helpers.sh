@@ -280,6 +280,10 @@ jira_post_search() {
     body=$(cat "$outfile" 2>/dev/null || true)
 
     if [ "$http_code" = "200" ] || [ "$http_code" = "201" ]; then
+      if [ -z "$body" ] || ! echo "$body" | jq -e . >/dev/null 2>&1; then
+        echo "Jira search returned non-JSON body (HTTP ${http_code})" >&2
+        return 1
+      fi
       if [ "$(echo "$body" | jq -r '.errorMessages // [] | length')" -gt 0 ]; then
         echo "Jira search error: $(echo "$body" | jq -r '.errorMessages[]')" >&2
         return 1
