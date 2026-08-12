@@ -11,6 +11,8 @@ After creating a payment condition as described in the [VTEX Sales App - Payment
 
 You must do this by inserting a JavaScript object in the `checkout-instore-custom.js` file. Check out the [How to customize VTEX Sales App](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-vtex-sales-app) guide for further information on how to access this file.
 
+> ⚠️ If your store also has the Checkout UI Settings app installed, changes made to `checkout-instore-custom.js` may not be reflected in production. See [Changes to checkout-instore-custom.js are not applied in production](https://developers.vtex.com/docs/guides/how-to-customize-vtex-sales-app#changes-to-checkout-instore-customjs-are-not-applied-in-production) for more information.
+
 ## Edit the `checkout-instore-custom.js` file
 
 There are two options for defining which payment methods will be displayed on VTEX Sales App. You can set global payment methods, that is, payment methods that any VTEX Sales App user will be able to see, or payment methods per vendor, which means only specific users will be able to see them.

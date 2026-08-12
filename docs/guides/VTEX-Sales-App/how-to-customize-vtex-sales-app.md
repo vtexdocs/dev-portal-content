@@ -63,3 +63,13 @@ You can make the following customizations on VTEX Sales App:
 - [Integration VTEX Sales App Local stock sale](https://developers.vtex.com/docs/guides/integration-vtex-sales-app-local-stock-sale)
 
 You can find more information on how to set up each customization in the following guides.
+
+## Troubleshooting
+
+### Changes to `checkout-instore-custom.js` are not applied in production
+
+If you edit the `checkout-instore-custom.js` or `checkout-instore-custom.css` files through VTEX Admin but the changes are not reflected in production, check whether your store also has the [Checkout UI Settings](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) app installed.
+
+>⚠️ Any script changes made through the Checkout UI Settings app override the HTML, CSS, and JS customizations made through VTEX Admin, including the `checkout-instore-custom.js` and `checkout-instore-custom.css` files used to customize the VTEX Sales App. For more information, see the [Checkout customization guide](https://developers.vtex.com/docs/guides/checkout-customization-guide).
+
+If this is the case, you must either remove the conflicting configuration from the Checkout UI Settings app or replicate the desired customization there instead of in `checkout-instore-custom.js`.
