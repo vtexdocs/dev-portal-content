@@ -191,7 +191,7 @@ jobs:
             | jq -r '.fields.assignee.displayName // "Assignee"')
 
           COMMENT_BODY=$(printf '%s, THE TASK WAS UPDATED IN GITHUB!\nBut since it is already in production, it was not automatically updated here. Please check if any changes are needed.' "$ASSIGNEE")
-          jira_post_comment "$EXISTING_KEY" "$COMMENT_BODY"
+          jira_post_comment_best_effort "$EXISTING_KEY" "$COMMENT_BODY"
 
           echo "Production lock active for ${EXISTING_KEY} (Prepare file due: ${PREPARE_DUE}, today: ${TODAY})"
           echo "Posted production lock comment on ${EXISTING_KEY}"
@@ -559,7 +559,7 @@ jobs:
             "$PR_NUMBER" \
             "$PR_URL" \
             "${UPLOAD_ERROR:-See the GitHub Actions log for the Crowdin upload step.}")
-          jira_post_comment "$PARENT_KEY" "$COMMENT_BODY"
+          jira_post_comment_best_effort "$PARENT_KEY" "$COMMENT_BODY"
           echo "Posted Crowdin upload failure comment on ${PARENT_KEY}"
 
       - name: Update parent task word count
@@ -692,6 +692,7 @@ jobs:
           rm -f "$COMMENT_FILE"
 
       - name: Create localization subtasks
+        id: subtasks
         if: >-
           steps.eligibility.outputs.should_run == 'true' &&
           steps.content_diff.outputs.has_additions == 'true' &&
@@ -835,21 +836,29 @@ jobs:
                 )
               }')
 
-            local response
-            response=$(curl -s -o subtask-response.json -w "%{http_code}" \
-              -X POST \
+            local response recovered
+            response=$(jira_curl subtask-response.json POST \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issue" \
               -H "Content-Type: application/json" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              -d "$payload" \
-              "${LOC_JIRA_BASE_URL}/rest/api/2/issue")
+              -d "$payload")
 
             if [ "$response" -eq 201 ]; then
               jq -r '.key' subtask-response.json
-            else
-              echo "Failed to create subtask \"${summary}\" (HTTP ${response})" >&2
-              cat subtask-response.json >&2
-              exit 1
+              return 0
             fi
+
+            # Transport blip after server create (HTTP 000) — recover by summary.
+            EXISTING=$(fetch_child_issues || true)
+            recovered=$(find_existing_subtask_key "$summary" "$EXISTING")
+            if [ -n "$recovered" ]; then
+              echo "Recovered subtask after HTTP ${response}: ${recovered} — ${summary}" >&2
+              printf '%s\n' "$recovered"
+              return 0
+            fi
+
+            echo "Failed to create subtask \"${summary}\" (HTTP ${response})" >&2
+            cat subtask-response.json >&2 || true
+            exit 1
           }
 
           update_issue_due_date() {
@@ -1089,6 +1098,27 @@ jobs:
             echo "Skipping subtask word counts (Crowdin upload failed or was skipped)"
           fi
 
+      - name: Comment on parent for subtasks/pipeline failure
+        if: >-
+          always() &&
+          steps.parent_ticket.outputs.parent_key != '' &&
+          (steps.subtasks.outcome == 'failure' || steps.subtasks.outcome == 'cancelled')
+        env:
+          LOC_JIRA_BASE_URL: ${{ secrets.LOC_JIRA_BASE_URL }}
+          LOC_JIRA_USER_EMAIL: ${{ secrets.LOC_JIRA_USER_EMAIL }}
+          LOC_JIRA_API_TOKEN: ${{ secrets.LOC_JIRA_API_TOKEN }}
+          PARENT_KEY: ${{ steps.parent_ticket.outputs.parent_key }}
+        run: |
+          # shellcheck source=.github/scripts/jira_helpers.sh
+          source .github/scripts/jira_helpers.sh
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          COMMENT_BODY=$(printf '%s\n\n%s\n%s' \
+            "AUTOMATIC LOCALIZATION PIPELINE FAILED" \
+            "Subtasks (or a later Jira step) failed — often a transient Jira/network error (HTTP 000)." \
+            "Re-run the workflow to finish: ${RUN_URL}")
+          jira_post_comment_best_effort "$PARENT_KEY" "$COMMENT_BODY"
+          echo "Posted failure comment on ${PARENT_KEY} (best-effort)"
+
       - name: Comment on parent task for Crowdin upload success
         if: >-
           steps.eligibility.outputs.should_run == 'true' &&
@@ -1106,5 +1136,5 @@ jobs:
           # shellcheck source=.github/scripts/jira_helpers.sh
           source .github/scripts/jira_helpers.sh
 
-          jira_post_comment "$PARENT_KEY" "$CROWDIN_UPLOAD_SUCCESS_COMMENT"
+          jira_post_comment_best_effort "$PARENT_KEY" "$CROWDIN_UPLOAD_SUCCESS_COMMENT"
           echo "Posted Crowdin upload success comment on ${PARENT_KEY}"
