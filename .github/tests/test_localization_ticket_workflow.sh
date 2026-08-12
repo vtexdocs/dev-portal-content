@@ -19,6 +19,8 @@ check 'jira_post_comment_best_effort' 'best-effort Jira comments'
 check 'jira_curl subtask-response.json' 'retried subtask create'
 check 'jira_curl response.json POST' 'retried parent create'
 check 'jira_curl update-due-response.json PUT' 'retried due-date update'
+check 'jira_curl update-word-count-response.json' 'retried word-count update'
+check 'jira_curl update-crowdin-response.json' 'retried crowdin description update'
 
 check 'workflow_dispatch:' 'manual workflow_dispatch trigger'
 check 'Resolve PR context' 'PR context resolve step'

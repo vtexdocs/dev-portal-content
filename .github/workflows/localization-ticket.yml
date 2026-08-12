@@ -416,12 +416,10 @@ jobs:
                 }
               }')
 
-            response=$(curl -s -o update-response.json -w "%{http_code}" \
-              -X PUT \
-              -H "Content-Type: application/json" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              -d "$payload" \
-              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}")
+              response=$(jira_curl update-response.json PUT \
+                "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}" \
+                -H "Content-Type: application/json" \
+                -d "$payload")
 
             if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
               echo "Updated ticket: ${LOC_JIRA_BASE_URL}/browse/${key} (priority: ${JIRA_PRIORITY}, due: ${JIRA_DUE_DATE})"
@@ -551,8 +549,7 @@ jobs:
           source_issue_exists() {
             local source_key="$1"
             local http_code
-            http_code=$(curl -s -o /dev/null -w "%{http_code}" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+            http_code=$(jira_curl "${RUNNER_TEMP:-/tmp}/jira-source-exists.json" GET \
               "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${source_key}")
             [ "$http_code" = "200" ]
           }
@@ -571,12 +568,10 @@ jobs:
                 outwardIssue: { key: $source }
               }')
 
-            response=$(curl -s -o source-link-response.json -w "%{http_code}" \
-              -X POST \
-              -H "Content-Type: application/json" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              -d "$payload" \
-              "${LOC_JIRA_BASE_URL}/rest/api/2/issueLink")
+              response=$(jira_curl source-link-response.json POST \
+                "${LOC_JIRA_BASE_URL}/rest/api/2/issueLink" \
+                -H "Content-Type: application/json" \
+                -d "$payload")
 
             if [ "$response" -eq 201 ]; then
               echo "Created block: ${loc_key} blocks ${source_key}"
@@ -824,12 +819,10 @@ jobs:
             --argjson custom_fields "$custom_fields" \
             '{fields: ({description: $description} + $custom_fields)}')
 
-          response=$(curl -s -o update-word-count-response.json -w "%{http_code}" \
-            -X PUT \
+          response=$(jira_curl update-word-count-response.json PUT \
+            "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${PARENT_KEY}" \
             -H "Content-Type: application/json" \
-            -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-            -d "$payload" \
-            "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${PARENT_KEY}")
+            -d "$payload")
 
           if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
             echo "Updated word count for ${PARENT_KEY}: ${CROWDIN_TOTAL_WORDS}"
@@ -920,11 +913,9 @@ jobs:
           fetch_child_issues() {
             local response http_code body search_result
 
-            response=$(curl -s -w "\n%{http_code}" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+            http_code=$(jira_curl subtasks-response.json GET \
               "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${PARENT_KEY}?fields=subtasks")
-            http_code=$(echo "$response" | tail -1)
-            body=$(echo "$response" | sed '$d')
+            body=$(cat subtasks-response.json)
 
             if [ "$http_code" = "200" ]; then
               echo "$body" | jq '{
@@ -1053,12 +1044,10 @@ jobs:
               --arg description "$merged_desc" \
               '{fields: {description: $description}}')
 
-            response=$(curl -s -o update-crowdin-response.json -w "%{http_code}" \
-              -X PUT \
+            response=$(jira_curl update-crowdin-response.json PUT \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}" \
               -H "Content-Type: application/json" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              -d "$payload" \
-              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}")
+              -d "$payload")
 
             if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
               echo "Updated Crowdin links for ${key}"
@@ -1086,12 +1075,10 @@ jobs:
               --argjson count "$CROWDIN_TOTAL_WORDS" \
               '{fields: {($field): $count}}')
 
-            response=$(curl -s -o update-subtask-word-count-response.json -w "%{http_code}" \
-              -X PUT \
+            response=$(jira_curl update-subtask-word-count-response.json PUT \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}" \
               -H "Content-Type: application/json" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              -d "$payload" \
-              "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}")
+              -d "$payload")
 
             if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
               echo "Updated word count for ${key} (${summary}): ${CROWDIN_TOTAL_WORDS}"
@@ -1112,12 +1099,10 @@ jobs:
               '{issues: [$key], rankAfterIssue: $after}')
 
             local response
-            response=$(curl -s -o rank-response.json -w "%{http_code}" \
-              -X PUT \
+            response=$(jira_curl rank-response.json PUT \
+              "${LOC_JIRA_BASE_URL}/rest/agile/1.0/issue/rank" \
               -H "Content-Type: application/json" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              -d "$payload" \
-              "${LOC_JIRA_BASE_URL}/rest/agile/1.0/issue/rank")
+              -d "$payload")
 
             if [ "$response" -ne 204 ]; then
               echo "Failed to order subtask ${key} after ${after_key} (HTTP ${response})"
@@ -1161,12 +1146,10 @@ jobs:
               }')
 
             local response
-            response=$(curl -s -o block-link-response.json -w "%{http_code}" \
-              -X POST \
+            response=$(jira_curl block-link-response.json POST \
+              "${LOC_JIRA_BASE_URL}/rest/api/2/issueLink" \
               -H "Content-Type: application/json" \
-              -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-              -d "$payload" \
-              "${LOC_JIRA_BASE_URL}/rest/api/2/issueLink")
+              -d "$payload")
 
             if [ "$response" -eq 201 ]; then
               echo "Created block: ${blocker} blocks ${blocked}"
