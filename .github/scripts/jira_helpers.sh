@@ -5,25 +5,98 @@
 CROWDIN_UPLOAD_SUCCESS_COMMENT=$'AUTOMATIC CROWDIN UPLOAD SUCCESSFUL\n\nThe Jira ticket and subtasks were created or updated, the files were uploaded to Crowdin, and the word count and Crowdin editor links were added or updated.'
 
 # Post a plain-text comment on a Jira issue. Returns 0 on HTTP 201.
+# Transient transport/API failures (HTTP 000, 408, 429, 5xx) are retried.
+# Override: LOC_JIRA_HTTP_RETRIES (default 4), LOC_JIRA_HTTP_RETRY_SLEEP (default 2s, doubles).
+
+jira_http_retryable() {
+  case "$1" in
+    000|408|425|429|500|502|503|504) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+# jira_curl OUTFILE METHOD URL [extra curl args…]
+# Writes body to OUTFILE, prints HTTP code to stdout (000 on transport failure).
+jira_curl() {
+  local outfile="$1"
+  local method="$2"
+  local url="$3"
+  shift 3
+  local max="${LOC_JIRA_HTTP_RETRIES:-4}"
+  local sleep_s="${LOC_JIRA_HTTP_RETRY_SLEEP:-2}"
+  local attempt=1
+  local code=000
+
+  if [ "$max" -lt 1 ] 2>/dev/null; then
+    max=1
+  fi
+
+  while [ "$attempt" -le "$max" ]; do
+    : >"$outfile"
+    code=$(
+      curl -sS --connect-timeout 15 --max-time 90 \
+        -o "$outfile" -w "%{http_code}" \
+        -X "$method" \
+        -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
+        "$@" \
+        "$url" 2>/dev/null || true
+    )
+    if [ -z "$code" ]; then
+      code=000
+    fi
+
+    if ! jira_http_retryable "$code"; then
+      printf '%s\n' "$code"
+      return 0
+    fi
+    if [ "$attempt" -ge "$max" ]; then
+      printf '%s\n' "$code"
+      return 0
+    fi
+    echo "Jira ${method} ${url} → HTTP ${code}; retry ${attempt}/${max} in ${sleep_s}s" >&2
+    sleep "$sleep_s"
+    sleep_s=$((sleep_s * 2))
+    attempt=$((attempt + 1))
+  done
+
+  printf '%s\n' "$code"
+}
+
 jira_post_comment() {
   local issue_key="$1"
   local body="$2"
   local payload http_code
+  local outfile="${RUNNER_TEMP:-/tmp}/jira-comment-response.json"
 
   payload=$(jq -n --arg body "$body" '{body: $body}')
-  http_code=$(curl -s -o jira-comment-response.json -w "%{http_code}" \
-    -X POST \
+  http_code=$(jira_curl "$outfile" POST \
+    "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${issue_key}/comment" \
     -H "Content-Type: application/json" \
-    -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-    -d "$payload" \
-    "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${issue_key}/comment")
+    -d "$payload")
 
   if [ "$http_code" -ne 201 ]; then
     echo "Failed to post Jira comment on ${issue_key} (HTTP ${http_code})" >&2
-    cat jira-comment-response.json >&2
+    cat "$outfile" >&2 || true
     return 1
   fi
 }
+
+# Retries harder; never fails the job (for always() failure reporting).
+jira_post_comment_best_effort() {
+  local issue_key="$1"
+  local body="$2"
+
+  if (
+    export LOC_JIRA_HTTP_RETRIES="${LOC_JIRA_COMMENT_RETRIES:-6}"
+    export LOC_JIRA_HTTP_RETRY_SLEEP="${LOC_JIRA_COMMENT_RETRY_SLEEP:-3}"
+    jira_post_comment "$issue_key" "$body"
+  ); then
+    return 0
+  fi
+  echo "Best-effort Jira comment on ${issue_key} still failed after retries" >&2
+  return 0
+}
+
 
 jira_user_search() {
   local query="$1"
@@ -184,7 +257,7 @@ jira_post_search() {
   local jql="$1"
   local fields_csv="$2"
   local max_results="${3:-50}"
-  local payload response http_code body api_url
+  local payload http_code body api_url outfile
 
   payload=$(jq -n \
     --arg jql "$jql" \
@@ -196,19 +269,21 @@ jira_post_search() {
       fields: ($fields | split(",") | map(gsub("^\\s+|\\s+$"; "")))
     }')
 
+  outfile="${RUNNER_TEMP:-/tmp}/jira-search-response.json"
+
   for api_url in \
     "${LOC_JIRA_BASE_URL}/rest/api/3/search/jql" \
     "${LOC_JIRA_BASE_URL}/rest/api/2/search"; do
-    response=$(curl -s -w "\n%{http_code}" \
-      -X POST \
+    http_code=$(jira_curl "$outfile" POST "$api_url" \
       -H "Content-Type: application/json" \
-      -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
-      -d "$payload" \
-      "$api_url")
-    http_code=$(echo "$response" | tail -1)
-    body=$(echo "$response" | sed '$d')
+      -d "$payload")
+    body=$(cat "$outfile" 2>/dev/null || true)
 
     if [ "$http_code" = "200" ] || [ "$http_code" = "201" ]; then
+      if [ -z "$body" ] || ! echo "$body" | jq -e . >/dev/null 2>&1; then
+        echo "Jira search returned non-JSON body (HTTP ${http_code})" >&2
+        return 1
+      fi
       if [ "$(echo "$body" | jq -r '.errorMessages // [] | length')" -gt 0 ]; then
         echo "Jira search error: $(echo "$body" | jq -r '.errorMessages[]')" >&2
         return 1
