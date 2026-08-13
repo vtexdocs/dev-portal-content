@@ -10,11 +10,11 @@ seeAlso:
   - "/docs/guides/marketplace-api-overview"
 ---
 
-This guide shows how to **create an external matcher** for the [Received SKUs](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396) module. An external matcher is a service that you develop and host. It receives notifications from the VTEX Suggestions API, applies your own matching rules, and returns the result to the marketplace.
+This guide shows how to create an external matcher for the [Received SKUs](https://help.vtex.com/en/docs/tutorials/manual-sku-cataloging) module. An external matcher is a service that you develop and host. It receives notifications from the [VTEX Suggestions API](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions), applies your own matching rules, and returns the result to the marketplace.
 
-Create an external matcher when the default [VTEX Matcher score](https://help.vtex.com/en/tutorial/understanding-vtex-matcher-scoring--tutorials_424) does not meet the marketplace catalog strategy. A common example is multicountry marketplaces, where the product name changes by translation even when the EAN and RefId are the same. In these cases, the default matcher may create duplicate products instead of matching existing items.
+Creating an external matcher is necessary when the default [VTEX Matcher score](https://help.vtex.com/en/docs/tutorials/understanding-vtex-matcher-scoring) doesn't meet the marketplace catalog strategy. A common example is multicountry marketplaces, where the product name changes by translation even when the EAN and RefId are the same. In these cases, the default matcher may create duplicate products instead of matching existing items.
 
-> ℹ️ You cannot customize the scoring rules of the default VTEX Matcher. The external matcher lets you define your own rules and runs in parallel with VTEX Matcher in the standard flow.
+> ℹ️ You can't customize the scoring rules of the default VTEX Matcher. The external matcher lets you define your own rules and runs in parallel with VTEX Matcher in the standard flow.
 
 Creating the matcher happens in two stages:
 
@@ -71,7 +71,7 @@ You can use the same URL in both fields or different URLs for creation and updat
 
 The external matcher and VTEX Matcher process the suggestion together, with or without autoApprove enabled. In the complementary flow, the suggestion only moves to the accepted state when both matchers return a score above the configured approval threshold.
 
-To keep the standard Received SKUs processing and the display of suggestions in the VTEX Admin interface, VTEX Matcher must remain active (`IsActive: true`). If it is deactivated, the item no longer follows the standard flow and may not appear in the Received SKUs UI. In that scenario, the external matcher fully takes over retrieving and processing the suggestion.
+To keep the standard **Received SKUs** processing and the display of suggestions in the VTEX Admin interface, VTEX Matcher must remain active (`IsActive: true`). If it's deactivated, the item no longer follows the standard flow and may not appear in the **Received SKUs** UI. In that scenario, the external matcher fully takes over retrieving and processing the suggestion.
 
 ## Creating the matcher structure
 
@@ -95,8 +95,9 @@ curl -i https://{your-domain}/health
 The expected response is `200`. If the endpoint only responds on your local network, VTEX will not be able to notify the matcher.
 
 5. Keep the final URLs that will be used in the VTEX configuration, for example:
-- https://{your-domain}/suggestions/new → `hook-base-address`
-- https://{your-domain}/suggestions/update → `UpdatesNotificationEndpoint`
+
+   - https://{your-domain}/suggestions/new → `hook-base-address`
+   - https://{your-domain}/suggestions/update → `UpdatesNotificationEndpoint`
 
 > ℹ️ In this step, the goal is only to get the service online. Matching rules come after the technical flow is validated.
 
@@ -104,7 +105,8 @@ The expected response is `200`. If the endpoint only responds on your local netw
 
 1. Create the **new suggestion** route, for example `POST /suggestions/new`. This URL will be the `hook-base-address`.
 2. Create the **update** route, for example `POST /suggestions/update`. This URL will be the `UpdatesNotificationEndpoint`.
-Alternatively, use a single route for both events and differentiate the handling in the handler.
+
+   Alternatively, use a single route for both events and differentiate the handling in the handler.
 3. Implement the endpoint to:
    - Accept the request sent by VTEX.
    - Validate authentication or headers, if your architecture requires it.
@@ -120,11 +122,11 @@ In this step, configure the credentials the matcher will use to call the Marketp
 
 1. Generate an appKey and appToken pair in the marketplace account.
 2. Confirm that the key has permission for Suggestions, Match Received SKUs, and Approval Settings.
-3. Configure the credentials in the matcher as a secret, for example in environment variables. Do not hardcode this information in the code or in the repository.
+3. Configure the credentials in the matcher as a secret, for example in environment variables. Don't hardcode this information in the code or in the repository.
 4. In every call to VTEX, send the headers:
 
-`X-VTEX-API-AppKey`
-`X-VTEX-API-AppToken`
+   `X-VTEX-API-AppKey`
+   `X-VTEX-API-AppToken`
 
 5. Test authentication with a simple call:
 
@@ -212,7 +214,7 @@ Example:
 6. Call [Save Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration) with the full updated body.
 7. Run another `GET` on `/suggestions/configuration` and confirm that the matcher appears as active in the response.
 
-> ⚠️ Do not remove or deactivate VTEX Matcher unless the integration is prepared to take over all processing. External matchers complement the default matcher.
+> ⚠️ Don't remove or deactivate VTEX Matcher unless the integration is prepared to take over all processing. External matchers complement the default matcher.
 
 Before you define the matching rules, confirm that the structure works end to end by following the diagram below:
 
@@ -295,7 +297,7 @@ function applyMatchingRules(suggestionContent, marketplaceSku) {
 }
 ```
 
-> ℹ️ Align the score thresholds with the marketplace approval settings. The default VTEX Matcher thresholds are: Approved ≥ 80, Pending 31 to 79, Denied 0 to 30. Learn more in [How VTEX Matcher scoring works](https://help.vtex.com/en/tutorial/understanding-vtex-matcher-scoring--tutorials_424).
+> ℹ️ Align the score thresholds with the marketplace approval settings. The default VTEX Matcher thresholds are: Approved ≥ 80, Pending 31 to 79, Denied 0 to 30. Learn more in [How VTEX Matcher scoring works](https://help.vtex.com/en/docs/tutorials/understanding-vtex-matcher-scoring).
 
 ### Calculate the match and return the real result
 
@@ -339,7 +341,7 @@ With the matcher registered and returning a real score, adjust how the marketpla
 
 1. Get the current configuration with [Get Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration): `GET https://api.vtex.com/{{accountName}}/suggestions/configuration`
 
-If the rule is per seller, use [Get Seller's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/seller/-sellerId-).
+   If the rule is per seller, use [Get Seller's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/configuration/seller/-sellerId-).
 
 2. In the returned JSON, locate and adjust:
    - The approval and rejection score thresholds, aligned with your matcher scores.
@@ -362,7 +364,7 @@ If the rule is per seller, use [Get Seller's Approval Settings](https://develope
 
 ### Validate the matching rules
 
-With the rules and approval settings configured, validate the business behavior. The goal is to confirm that each condition in the code produces the expected `matchType`, score, and status in [Received SKUs](https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396).
+With the rules and approval settings configured, validate the business behavior. The goal is to confirm that each condition in the code produces the expected `matchType`, score, and status in [Received SKUs](https://help.vtex.com/en/docs/tutorials/manual-sku-cataloging).
 
 1. Send the suggestion with [Send SKU Suggestion](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/-sellerId-/-sellerSkuId-).
 2. In the matcher logs, confirm that `hook-base-address` received the notification and that the service called [Get SKU Suggestion by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#get-/suggestions/-sellerId-/-sellerSkuId-).
