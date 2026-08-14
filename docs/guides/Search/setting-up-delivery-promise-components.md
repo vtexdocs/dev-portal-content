@@ -51,7 +51,7 @@ Contact our [Support](https://support.vtex.com/hc/en-us) team to request the act
 Activation happens in two stages, so you can validate the experience before impacting production traffic:
 
 - **`DpReady`:** The initial state Support applies to your account. In this state, Delivery Promise is available for testing, but production search requests aren't affected. This lets you validate Delivery Promise in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) before applying it to `master`.
-- **`DpLive`:** The production state. After you finish testing, contact [Support](https://support.vtex.com/hc/en-us) again to request promotion from `DpReady` to `DpLive`. From that point on, Search requests using Delivery Promise hashes or ZIP code use Delivery Promise in production.
+- **`DpLive`:** The production state. After you finish testing, contact [Support](https://support.vtex.com/hc/en-us) again to request promotion from `DpReady` to `DpLive`. From that point on, search requests using Delivery Promise hashes or ZIP code use Delivery Promise in production.
 
 ### Step 2 - Create a development workspace
 
