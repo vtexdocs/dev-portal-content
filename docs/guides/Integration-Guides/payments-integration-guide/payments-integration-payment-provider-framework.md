@@ -50,7 +50,7 @@ Once you have the repository code in your workspace, you have to make sure you h
 
 ```json
 "builders": {
-  "node": "6.x",
+  "node": "7.x",
   "paymentProvider": "1.x"
 }
 ```
