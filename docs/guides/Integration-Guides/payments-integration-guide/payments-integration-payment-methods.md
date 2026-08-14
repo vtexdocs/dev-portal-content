@@ -14,7 +14,7 @@ Payment methods are the different ways a customer can pay for a product or a ser
 - Digital wallets
 - Cash
 - Custom payments
-  - Promissory
+  - Notes payable
   - Private label
   - Co-branded
 - Regional payments
@@ -48,7 +48,7 @@ Use the following identifiers in the `name` field:
 | Bank invoice (boleto bancário) | `BankInvoice` |
 | Co-branded | `Cobranded` |
 | Private label | `Privatelabels` |
-| Promissory | `Promissories` |
+| Notes payable (Promissory) | `Promissories` |
 
 > ⚠️ For custom payments, use only the supported method types (`Cobranded`, `Privatelabels`, or `Promissories`) in the `name` field. Do not use the commercial name of the custom payment, such as "Colombian Bank Promissory".
 
@@ -88,13 +88,13 @@ If you are building a connector that handles wallet transactions, see [Google Pa
 
 Custom payments are payment methods that do not follow standard market patterns. Their behavior is specific to each scenario where they apply.
 
-VTEX supports three custom payment types: notes payable, private label, and co-branded.
+VTEX supports three custom payment types: Notes payable, Private label, and Co-branded.
 
-### Notes Payable
+### Notes payable
 
-The seller must manually approve each payment registered in the platform. After approval, the transaction proceeds normally. Notes Payable payments are mostly used to facilitate cash payments.
+The seller must manually approve each payment registered in the platform. After approval, the transaction proceeds normally. Notes payable payments are mostly used to facilitate cash payments.
 
-For configuration steps, see [Setting up payments with Notes Payable](https://help.vtex.com/docs/tutorials/setting-up-payments-with-notes-payable).
+For configuration steps, see [Setting up payments with Notes payable](https://help.vtex.com/docs/tutorials/setting-up-payments-with-notes-payable).
 
 ### Private label
 
