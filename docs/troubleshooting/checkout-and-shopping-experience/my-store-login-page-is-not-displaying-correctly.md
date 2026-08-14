@@ -32,11 +32,11 @@ To understand and correct each error, see the solutions below:
 
 ### Reproducing the issue in an incognito session
 
-Reports of this issue tend to concentrate on **first-time visits** — i.e., sessions with no existing cookies or cached data for the store domain. If you can't reproduce the problem in your regular browser session, try the following:
+Reports of this issue tend to concentrate on first-time visits, such as sessions with no existing cookies or cached data for the store domain. If you can't reproduce the problem in your regular browser session, try the following:
 
 1. Open an incognito/private browsing window.
 2. Disable browser extensions that might interfere with the page, such as ad blockers (some ad blockers can incidentally hide the same requests that are causing the conflict, masking the bug).
-3. Navigate to your store's home page and then to the login page (e.g., by clicking **Sign in**).
+3. Navigate to your store's home page and then to the login page (for example, by clicking **Sign in**).
 4. Repeat the navigation a few times, since the issue is intermittent by nature and may not appear on every attempt.
 
 ### Checking the browser console for script conflicts
@@ -71,10 +71,7 @@ Once you have one or more suspect scripts (from the console errors or HAR compar
 
 ### Fixing the conflicting customization
 
-The VTEX ID login page itself is delivered by VTEX, but its content and any additional scripts are fully customizable through the **Admin > Account Settings > Authentication** settings and via tag managers or other customizations added to the store. The steps above point to a customization issue, rather than a VTEX platform issue, if:
-
-- The issue only happens with a specific custom script or library loaded (not a native VTEX ID request), and
-- Blocking that script consistently prevents the issue.
+The VTEX ID login page itself is delivered by VTEX, but its content and any additional scripts are fully customizable through the **Admin > Account Settings > Authentication** settings and via tag managers or other customizations added to the store. The steps above point to a customization issue, rather than a VTEX platform issue, if the issue only happens with a specific custom script or library loaded (not a native VTEX ID request), and blocking that script consistently prevents the issue. Follow the steps below to fix the problem.
 
 1. Using the console errors, HAR files, and the specific request(s) identified as the source of the conflict, locate the script in your codebase or tag manager configuration.
 2. Check for duplicate library loads (e.g., two versions of jQuery loaded on the same page) or scripts that assume they're the only ones manipulating the login page's DOM.
