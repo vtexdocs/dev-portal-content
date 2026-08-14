@@ -50,8 +50,8 @@ Contact our [Support](https://support.vtex.com/hc/en-us) team to request the act
 
 Activation happens in two stages, so you can validate the experience before impacting production traffic:
 
-- **`DpReady`:** The initial state Support applies to your account. In this state, Delivery Promise is available for testing, but production Search requests aren't affected. This lets you validate Delivery Promise using an [IO development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) or by adding the `dpPreview=true` query parameter to [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) requests. See [Testing Delivery Promise before going live](#testing-delivery-promise-before-going-live) for details.
-- **`DpLive`:** The production state. After you finish testing, contact [Support](https://support.vtex.com/hc/en-us) again to request promotion from `DpReady` to `DpLive`. From that point on, Search requests using Delivery Promise hashes or ZIP code use Delivery Promise in production, and the `dpPreview` parameter is no longer needed.
+- **`DpReady`:** The initial state Support applies to your account. In this state, Delivery Promise is available for testing, but production search requests aren't affected. This lets you validate Delivery Promise in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) before applying it to `master`. See [Testing Delivery Promise before going live](#testing-delivery-promise-before-going-live) for details.
+- **`DpLive`:** The production state. After you finish testing, contact [Support](https://support.vtex.com/hc/en-us) again to request promotion from `DpReady` to `DpLive`. From that point on, Search requests using Delivery Promise hashes or ZIP code use Delivery Promise in production.
 
 ### Step 2 - Display a location selector
 
@@ -245,11 +245,7 @@ The shipping method facet appears only when `showShippingMethodFacet` is enabled
 
 ## Testing Delivery Promise before going live
 
-While your account is in the `DpReady` state (see [Step 1 - Request Delivery Promise activation](#step-1---request-delivery-promise-activation)), you can validate Delivery Promise without affecting production Search traffic. There are two complementary ways to test:
-
-### Test in a development workspace
-
-Use an development [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) to validate the full storefront experience (postal code modal, shipping method selector, pickup point selector, and sidebar filters) while `master` continues to serve production traffic without Delivery Promise.
+While your account is in the `DpReady` state (see [Step 1 - Request Delivery Promise activation](#step-1---request-delivery-promise-activation)), you can validate Delivery Promise without affecting production search traffic by using a development [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace). This lets you validate the full storefront experience (postal code modal, shipping method selector, pickup point selector, and sidebar filters) while `master` continues to serve production traffic without Delivery Promise.
 
 1. [Create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) by running the following command in your terminal:
 
@@ -257,31 +253,9 @@ Use an development [workspace](https://developers.vtex.com/docs/guides/vtex-io-d
    vtex use {wokspaceName}
    ```
 
-   > ⚠️ Replace {workspaceName} according to your scenario.
-
 2. In this workspace, follow [Step 2 - Display a location selector](#step-2---display-a-location-selector) and [Step 3 - Implement sidebar filters](#step-3---implement-sidebar-filters) to add `vtex.delivery-promise-components` to your theme dependencies and configure the blocks.
 3. Link or install your theme in the workspace and open the workspace URL (for example, `https://{workspaceName}--{accountName}.myvtex.com`) to validate the Delivery Promise experience end-to-end.
 
-  > ⚠️ Replace values between curly braces according to your scenario.
+> ⚠️ Replace values between curly braces according to your scenario.
 
-Once the account is promoted to `DpLive`, promote your workspace changes to `master` as usual.
-
-### Test with `dpPreview=true` on Intelligent Search API v1
-
-Use the `dpPreview=true` query parameter to validate Delivery Promise responses directly from [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) without any storefront changes. Add `dpPreview=true` together with the Delivery Promise information (`deliveryZonesHash` and `pickupPointsHash`, or country and ZIP code).
-
-**Example:**
-
-```txt
-https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?sc=1&deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16&dpPreview=true
-```
-
-While previewing, the response returns `deliveryPromiseEnabled: false`.
-
-> ⚠️ The `dpPreview` parameter is only supported in Intelligent Search API v1. It isn't available in [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api).
-
-For more details on Delivery Promise parameters accepted by Intelligent Search API v1, see [Delivery promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores#previewing-delivery-promise-before-going-live).
-
-## Going live
-
-Once you finish testing, contact [Support](https://support.vtex.com/hc/en-us) to promote the account from `DpReady` to `DpLive`. From that point on, remove the `dpPreview` parameter from any Intelligent Search requests. Search responses will return `deliveryPromiseEnabled: true`, and Delivery Promise will apply to production traffic.
+Once you finish testing, contact [Support](https://support.vtex.com/hc/en-us) to promote the account from `DpReady` to `DpLive`. From that point on, Delivery Promise applies to production traffic, and search responses return `deliveryPromiseEnabled: true`.
