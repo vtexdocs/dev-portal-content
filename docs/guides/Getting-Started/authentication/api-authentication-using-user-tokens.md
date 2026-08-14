@@ -1,36 +1,37 @@
 ---
 title: "API authentication using user tokens"
 slug: "api-authentication-using-user-tokens"
+excerpt: "Learn how to authenticate VTEX API requests with user tokens and match cookie and header names to Admin or storefront audiences."
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
-updatedAt: "2022-12-13T18:43:56.137Z"
+updatedAt: "2026-05-07T12:00:00.000Z"
 ---
 
-Whenever a user successfully logs in to your VTEX store, VTEX ID generates a [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) user token and sets it as the `VtexIdclientAutCookie` cookie.
+When a user successfully logs in to a VTEX store, VTEX ID issues a [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) user token and stores it in an HTTP-only cookie. For **Admin** sessions, the cookie name is `VtexIdclientAutCookie`. For **webstore** (shopper) sessions, the cookie name is `VtexIdclientAutCookie_{accountName}` or `VtexIdclientAutCookie_{accountId}`.
 
-For a period of 24 hours after its creation, the user token can be used to authenticate requests to VTEX APIs. To do this, send it as a header named `VtexIdclientAutCookie`.
+For a period of 24 hours after its creation, the user token can be used to authenticate requests to VTEX APIs. Send it in an HTTP header as cookies whose name matches that cookie (same pattern as above, depending on audience).
 
 User tokens allow for actions limited to their scope, which is defined according to the user who logged in:
 
 * **Shopper:** Shoppers' tokens have permission to perform actions related to the shopping experience, such as viewing active products' information, placing orders, and viewing information of orders made under that same shopper profile. This token scope does not allow users to access the VTEX Admin panel or change logistics settings, for example.
-* **Admin:** Administrative users' tokens allow for actions based on [License Manager roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) attributed to them. This may include access to different Admin panel pages or the ability to edit different configurations, for example.
+* **Admin:** Administrative users' tokens allow for actions based on [License Manager roles](https://help.vtex.com/en/docs/tutorials/roles) attributed to them. This may include access to different Admin panel pages or the ability to edit different configurations, for example.
 
-As described above, user tokens and associated permissions are tied to the user who logged in. However, they are not store-exclusive. This means, for example, that administrative users with access to different accounts can perform actions in all of those stores with the same token.
+User tokens and associated permissions are tied to the user who logged in. Each request must use credentials valid for the VTEX account where that operation runs. The account in the API hostname must be the same as the account the token was issued for.
 
 ## Generating user tokens
 
 Developers working with VTEX can generate authentication tokens without having to simulate a shopper’s login. This can be useful to run tests or even to generate tokens programmatically if your integration depends on an API that can not be authenticated with [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys). There are two methods you can use:
 
-- [Generating user tokens](#generating-user-tokens)
-  - [Generating a user token with the VTEX IO CLI](#generating-a-user-token-with-the-vtex-io-cli)
-  - [Generating an authentication token with the VTEX ID API](#generating-an-authentication-token-with-the-vtex-id-api)
+* [Generating user tokens](#generating-user-tokens)
+  * [Generating a user token with the VTEX IO CLI](#generating-a-user-token-with-the-vtex-io-cli)
+  * [Generating an authentication token with the VTEX ID API](#generating-an-authentication-token-with-the-vtex-id-api)
 
 ### Generating a user token with the VTEX IO CLI
 
 1. Install the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
 2. Log in to VTEX by running the following command on your terminal.
    Remember to replace the `{accountName}` value with your VTEX account name.
-   
+
    ```bash
    vtex login {accountName}
    ```
