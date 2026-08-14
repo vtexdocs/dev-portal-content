@@ -19,7 +19,7 @@ Availability is determined by the following rules:
 - When a pickup point is selected — whether in the header or on its own page — the system displays all available pickup points within a 50 km radius configured in Checkout. There's no limit to the number of pickup points displayed.
 - For the nearby pickup filter, pickup points within a 10 km radius of the shopper's location are displayed, with a maximum of 40 pickup points.
 
->ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX Sellers, [Seller Portal](https://help.vtex.com/en/docs/tracks/accounts-and-architecture#vtex-account-types), and external sellers).
+>ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX sellers, [Seller Portal](https://help.vtex.com/en/docs/tracks/accounts-and-architecture#vtex-account-types), and external sellers).
 
 ![delivery-promise-components](https://vtexhelp.vtexassets.com/assets/docs/src/shipping-option-components___c5a1d86b0ebf692a3eb9ca49f79b55f8.png)
 
