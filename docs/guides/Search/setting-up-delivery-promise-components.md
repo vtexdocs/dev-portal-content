@@ -258,4 +258,6 @@ While your account is in the `DpReady` state (see [Step 1 - Request Delivery Pro
 
 > ⚠️ Replace values between curly braces according to your scenario.
 
-Once you finish testing, contact [Support](https://support.vtex.com/hc/en-us) to promote the account from `DpReady` to `DpLive`, and follow the standard release flow to make your theme changes public: see [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public). From that point on, Delivery Promise applies to production traffic, and search responses return `deliveryPromiseEnabled: true`.
+Once you finish testing, contact [Support](https://support.vtex.com/hc/en-us) to promote the account from `DpReady` to `DpLive`, and follow the standard release flow to make your theme changes public. For detailed instructions, see [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
+
+From that point on, Delivery Promise applies to production traffic, and search responses return `deliveryPromiseEnabled: true`.
