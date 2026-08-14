@@ -81,4 +81,4 @@ The VTEX ID login page itself is delivered by VTEX, but its content and any addi
 3. Remove or de-duplicate the conflicting script, or scope it so it doesn't load on or affect the login page.
 4. Re-test using the [incognito reproduction steps](#reproducing-the-issue-in-an-incognito-session) above to confirm the fix.
 
-> ℹ️ For more on how the login page integrates with your store, see [Login (SSO)](https://developers.vtex.com/docs/guides/login-integration-guide) and, for Store Framework/FastStore stores specifically, [Integrating the VTEX Login](https://developers.vtex.com/docs/faststore/2-integrating-the-vtex-login).
+> ℹ️ For more on how the login page integrates with your store, see [Login (SSO)](https://developers.vtex.com/docs/guides/login-integration-guide) and, for Store Framework/FastStore stores specifically, [Integrating the VTEX Login](https://developers.vtex.com/docs/guides/faststore/go-live-2-integrating-the-vtex-login).
