@@ -57,7 +57,7 @@ If your store had a go-live failure or was functioning normally and then stopped
 | **Cloudflare proxy**  | If [Cloudflare](https://www.cloudflare.com/) is your DNS provider, their native proxy can interfere with the SSL certificate, causing your store to go down. If this is your case, learn [how to disable the Cloudflare proxy](https://help.vtex.com/en/tutorial/disable-cloudflare-proxy--75QqsXAqR7NdkRc1GZPiXb).  |
 | **Reverse proxy** | [Reverse proxy](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir) malfunction can cause store availability issues. When you use a reverse proxy, you give up the optimized edge service managed by VTEX and are responsible for the site's actual provisioning, which is tasked with the settings, monitoring and feature management such as header forwarding, cookies and cache management.<br><br>If this is your case, you can see this article on [How to insert a reverse proxy in front of VTEX services](https://help.vtex.com/en/tutorial/how-to-insert-a-reverse-proxy-in-front-of-vtex-services--4PFWsfRAKviNVPf1bYdiir) and follow up with your infrastructure team or provider to learn if this is the cause of your problem.<br><br>❗ **VTEX does not recommend using reverse proxies.** |
 
-If the issue persists, you can find additional troubleshooting steps below for [Checking your storefront code and settings](\#checking-your-storefront-code-and-settings).
+If the issue persists, you can find additional troubleshooting steps below for [Checking your storefront code and settings](#checking-your-storefront-code-and-settings).
 
 ### If the store is slow: Reviewing customizations and integrations
 
@@ -67,7 +67,7 @@ To maintain the platform's overall health, VTEX may occasionally throttle uninte
 
  Ensure that these elements are not generating excessive requests to VTEX, as this can lead to throttling issues or bottlenecks for your store. By optimizing your requests and ensuring they are within acceptable limits, you can improve the overall performance of your store while ensuring compliance with VTEX's request throttling mechanisms.
 
-If the issue persists, you can find additional troubleshooting steps below for [Checking your storefront code and settings](\#checking-your-storefront-code-and-settings).
+If the issue persists, you can find additional troubleshooting steps below for [Checking your storefront code and settings](#checking-your-storefront-code-and-settings).
 
 ### Checking your storefront code and settings
 

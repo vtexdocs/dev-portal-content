@@ -7,24 +7,25 @@ updatedAt: "2022-07-19T14:16:44.889Z"
 ---
 If you're currently using the Condition Layout in its **`1.x.x`** version, the following guide aims to help you to perform a **version upgrade**, migrating your store theme to the latest version of the app (**`2.x.x`**).
 
-If you’re using the former version, you can still find its documentation [here](https://github.com/vtex-apps/condition-layout/tree/master/docs/v1-DOC.md). Do not forget to also access the [**Condition Layout current documentation**](https://github.com/vtex-apps/condition-layout/tree/master/docs/README.md) for its `2.x.x` version. 
+If you’re using the former version, you can still find its documentation [here](https://github.com/vtex-apps/condition-layout/tree/master/docs/v1-DOC.md). Do not forget to also access the [**Condition Layout current documentation**](https://github.com/vtex-apps/condition-layout/tree/master/docs/README.md) for its `2.x.x` version.
 
 > ℹ️ *Although support for the former version is still granted, we strongly recommend you to update your store theme with the app's newest version in order to keep up with the components' evolution.*
 
 ## Overview
 
-The rewriting of this app aimed to provide a clearer logic when setting the conditions to build the new desired layout. 
+The rewriting of this app aimed to provide a clearer logic when setting the conditions to build the new desired layout.
 
 The changes included in the app upgrade are, namely:
 
 <!-- code_chunk_output -->
 
-- [Block structure](#block-structure)
-- [Prop's syntax](#props-syntax)
-- [Negative conditions](#negative-conditions)
+- [Overview](#overview)
+  - [Block structure](#block-structure)
+  - [Prop's syntax](#props-syntax)
+  - [Negative conditions](#negative-conditions)
 
 <!-- /code_chunk_output -->
-  
+
 ### Block structure
 
 In the `1.x.x` version, the `condition-layout` app exports three different types of blocks for your store theme:
@@ -114,7 +115,7 @@ The same structure above can now be rewritten using the new block's props:
 
 ### Prop's syntax
 
-In **`1.x.x`**, a simple logic for creating conditions was provided, where you could mix the `subject`, `verb`, and `object` props to set conditions in an idiomatic way. 
+In **`1.x.x`**, a simple logic for creating conditions was provided, where you could mix the `subject`, `verb`, and `object` props to set conditions in an idiomatic way.
 
 Since it provided a very effortless and easy syntax to set conditions, these last ones were, in turn, very limited as well. For example, it was not possible to check for a specification property name *and* value at the sime time.
 
@@ -137,9 +138,9 @@ Since it provided a very effortless and easy syntax to set conditions, these las
 }
 ```
 
-In **`2.x.x`**, the aforementioned syntax was replaced with a pair of `subject` and `arguments` props. 
+In **`2.x.x`**, the aforementioned syntax was replaced with a pair of `subject` and `arguments` props.
 
-In practice, a `subject` is linked to an internal method that receives the `arguments`. Make sure to check [which arguments each `subject` can receive in the Condition Layout documentation](/docs/readme.md).
+In practice, a `subject` is linked to an internal method that receives the `arguments`. Make sure to check [which arguments each `subject` can receive in the Condition Layout documentation](https://developers.vtex.com/docs/apps/vtex.condition-layout).
 
 The above condition can be rewritten in the app's newest version as:
 

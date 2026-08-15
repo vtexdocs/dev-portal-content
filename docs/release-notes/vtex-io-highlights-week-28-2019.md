@@ -12,14 +12,14 @@ Here’s a sneak peek at the key changes made in the last week:
 
 ### New features :rocket:
 
-- [Sidecar pixel app](sidecar-pixel-app.md) - Get your hands on a first-party integrations with the Sidecar solution.
-- [Native A/B Testing](native-ab-testing.md) – Increase your store’s conversion rate by performing native VTEX IO A/B testing, now available to clients platform-wide.
-- [Typography customization](typography-customization.md) - Easily customize your store’s typography through Storefront.
+- [Sidecar pixel app](https://developers.vtex.com/updates/release-notes/sidecar-pixel-app) - Get your hands on a first-party integrations with the Sidecar solution.
+- [Native A/B Testing](https://developers.vtex.com/updates/release-notes/native-ab-testing) – Increase your store’s conversion rate by performing native VTEX IO A/B testing, now available to clients platform-wide.
+- [Typography customization](https://developers.vtex.com/updates/release-notes/typography-customization) - Easily customize your store’s typography through Storefront.
 
 ### Improvements :heavy_plus_sign:
 
-- [Submenu behaviour](submenu-behavior.md) - The Menu component now has a better behavior when it is triggered to expand.
-- [React render performance](react-render-performance.md) - VTEX IO now implements the new React feature that allows component data reuse using hooks.
+- [Submenu behaviour](https://developers.vtex.com/updates/release-notes/submenu-behavior) - The Menu component now has a better behavior when it is triggered to expand.
+- [React render performance](https://developers.vtex.com/updates/release-notes/react-render-performance) - VTEX IO now implements the new React feature that allows component data reuse using hooks.
 
 ### Notable bug fixes :bug:
 

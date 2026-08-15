@@ -12,16 +12,16 @@ Here's a sneak peek at key changes made in the last week:
 
 ### New features :rocket:
 
-- [Store Theme blocks structure](store-theme-blocks-structure.md) - Gain more flexibility when organizing your Store Theme blocks as wanted.
-- [Price internationalization](price-internationalization.md) – Overcome internationalization hurdles by changing the behavior of the currency in which prices are being displayed in your store.
-- [Server Timing](server-timing.md) – Monitor the performance of each sent request with the Server timing feature.
+- [Store Theme blocks structure](https://developers.vtex.com/updates/release-notes/store-theme-blocks-structure) - Gain more flexibility when organizing your Store Theme blocks as wanted.
+- [Price internationalization](https://developers.vtex.com/updates/release-notes/price-internationalization) – Overcome internationalization hurdles by changing the behavior of the currency in which prices are being displayed in your store.
+- [Server Timing](https://developers.vtex.com/updates/release-notes/server-timing) – Monitor the performance of each sent request with the Server timing feature.
 
 ### Improvements :heavy_plus_sign:
 
-- [PowerReviews pixel app](powerreviews-pixel-app.md) - It now has a first-party integration with PowerReviews Checkout Beacon solution.
-- [Minicart component](minicart-component.md) - New properties enable the displaying of the total item and value quantity in the component.
+- [PowerReviews pixel app](https://developers.vtex.com/updates/release-notes/powerreviews-pixel-app) - It now has a first-party integration with PowerReviews Checkout Beacon solution.
+- [Minicart component](https://developers.vtex.com/docs/apps/vtex.minicart) - New properties enable the displaying of the total item and value quantity in the component.
 
 ### Notable bug fixes :bug:
 
 - [Cookies transfer to `graphql-server`](https://github.com/vtex-apps/admin-graphql-ide/pull/5) - Cookies that were lost when going through the app [Admin GraphQL IDE](https://github.com/vtex-apps/admin-graphql-ide) were recovered and are now being correctly redirected to the `graphql-server`.
-- [Non editable blocks showing up](https://github.com/vtex-apps/admin-pages/pull/245)) - Non editable blocks no longer show up in Storefront’s editing section in CMS.
+- [Non editable blocks showing up](https://github.com/vtex-apps/admin-pages/pull/245) - Non editable blocks no longer show up in Storefront’s editing section in CMS.

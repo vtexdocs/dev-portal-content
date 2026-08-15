@@ -8,12 +8,12 @@ type: "fixed"
 
 ![Commerce APIs](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/additional-validation-when-creating-and-updating-an-sku-0.png)
 
-Before, [Catalog API](ref:catalog-api-overview) did not apply the same validation rules seen in Admin, which had unintended side effects for our users when they attempted to activate an SKU they created or updated. Now we have corrected this behavior and the following restrictions apply.
+Before, [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api) did not apply the same validation rules seen in Admin, which had unintended side effects for our users when they attempted to activate an SKU they created or updated. Now we have corrected this behavior and the following restrictions apply.
 
-- post [Create SKU](ref:catalog-api-post-sku)
+- post [Create SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit)
 SKU should never be created as active.
 
-- put [Update SKU](ref:catalog-api-put-sku)
+- put [Update SKU](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-)
 SKU should not be saved as active if:
 
 - It does not have files added and associated to it.
@@ -24,7 +24,7 @@ From now on, if you violate these conditions when attempting to create or update
 
 These constraints were created to guide developers into following the recommended SKU creation sequence:
 
-1. [Create the SKU](ref:catalog-api-post-sku).
-2. If the SKU is a kit, [create and associate SKU components](ref:catalog-api-post-sku-kit).
-3. [Create and associate SKU files](ref:catalog-api-post-sku-file).
-4. [Update the SKU](ref:catalog-api-put-sku) as active.
+1. [Create the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit).
+2. If the SKU is a kit, [create and associate SKU components](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunitkit).
+3. [Create and associate SKU files](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog/pvt/stockkeepingunit/-skuId-/file).
+4. [Update the SKU](https://developers.vtex.com/docs/api-reference/catalog-api#put-/api/catalog/pvt/stockkeepingunit/-skuId-) as active.
