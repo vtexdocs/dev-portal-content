@@ -4,7 +4,9 @@ slug: "b2b-user-provisioning"
 hidden: false
 excerpt: "Learn how to migrate B2B users from external platforms to VTEX by registering users, creating organizational units, and managing roles and permissions."
 createdAt: "2026-02-20T00:00:00.000Z"
-updatedAt: "2026-02-20T00:00:00.000Z"
+updatedAt: "2026-08-11T00:00:00.000Z"
+seeAlso:
+  - "/docs/guides/b2b-first-login"
 ---
 
 > ⚠️ This feature is available only for stores using B2B Buyer Portal, currently available for selected accounts.
@@ -105,6 +107,8 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
   "identifier": "beneson_test_21"
 }
 ```
+
+>ℹ️ At this point, the user exists but can't log in yet. If you registered a login email for the user, they must still define a password before authenticating for the first time. See [B2B first login](https://developers.vtex.com/docs/guides/b2b-first-login).
 
 ## Step 2 - Create organizational unit
 
