@@ -3,14 +3,14 @@ title: "CMS Portal (Legacy)"
 slug: "cms-portal-legacy"
 hidden: false
 createdAt: "2026-07-20T18:31:00.000Z"
-excerpt: "VTEX's first storefront technology for building ecommerce websites with HTML, CSS, and JavaScript."
+excerpt: "The first VTEX storefront technology for building ecommerce websites with HTML, CSS, and JavaScript."
 ---
 
 > ⚠️ CMS Portal (Legacy) is no longer available for newly created VTEX stores. If your store currently uses this technology, we strongly recommend [migrating to Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io).
 
-CMS Portal (Legacy) is VTEX's original storefront technology for building ecommerce websites using HTML, CSS, and JavaScript. Code management is done exclusively through the VTEX Admin, using the [Layout](https://help.vtex.com/docs/tracks/legacy-cms-portal) feature to create and manage templates, folders, and files.
+CMS Portal (Legacy) is the original VTEX storefront technology for building ecommerce websites using HTML, CSS, and JavaScript. Code management is done exclusively through the VTEX Admin, using the [Layout](https://help.vtex.com/docs/tracks/legacy-cms-portal) feature to create and manage templates, folders, and files.
 
-CMS Portal (Legacy) relies on the following characteristics:
+CMS Portal (Legacy) has the following characteristics:
 
 | Aspect | Description |
 | --- | --- |
@@ -34,13 +34,13 @@ For stores using CMS Portal (Legacy), the storefront is managed entirely through
 ### 1. Access the Layout feature
 
 1. In the VTEX Admin, go to **Storefront > Layout**.
-2. The Layout section displays the folder structure containing your store's templates, shelves, and other components.
+2. This section displays the folder structure containing your store's templates, shelves, and other components.
 
-### 2. Understand the template structure
+### 2) Understand the template structure
 
 Templates are files that contain the HTML, CSS, and JavaScript code for your website pages. The Layout feature provides standard [templates](https://help.vtex.com/docs/tutorials/what-are-templates) that you can customize for different page types, such as:
 
-- Home page
+- Homepage
 - Product page
 - Category page
 - Department page
@@ -58,12 +58,12 @@ Shelves display collections of products on your storefront. You can configure th
 
 CMS Portal (Legacy) provides access to VTEX core commerce services and native template controls. However, as a legacy technology, it has some limitations:
 
-- **No CLI support**: Unlike [FastStore](https://developers.vtex.com/docs/guides/faststore) and [Store Framework](https://developers.vtex.com/docs/guides/store-framework), there is no command-line interface available.
+- **No CLI support**: Unlike [FastStore](https://developers.vtex.com/docs/guides/faststore) and [Store Framework](https://developers.vtex.com/docs/guides/store-framework), there's no command-line interface available.
 - **No development environments**: Changes are made directly in production without separate development or staging workspaces.
 - **Limited modern features**: Some newer VTEX features aren't available, including [Intelligent Search](https://help.vtex.com/docs/tracks/overview-intelligent-search) integration and VTEX IO frontend apps.
 - **Performance challenges**: Outdated technologies make it more difficult to maintain optimal performance, especially with extensive customizations.
 
-For detailed feature availability, refer to the [Getting started with storefront solutions](https://developers.vtex.com/docs/guides/getting-started-with-storefront-solutions) comparison guide.
+For detailed feature availability, see the [Getting started with storefront solutions](https://developers.vtex.com/docs/guides/getting-started-with-storefront-solutions) comparison guide.
 
 ## Next steps
 
