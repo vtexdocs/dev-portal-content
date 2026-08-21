@@ -49,6 +49,6 @@ The table below shows the current statuses of each Builder version:
 | - | - |
 | `dotnet` | Stable: `2.x`. Decommissioned: `0.x`, `1.x`. |
 | `graphql` | Stable: `2.x`. Deprecated: `1.x`. |
-| `node` | Stable: `6.x`, `7.x`. Decommissioned: `3.x`, `4.x`. |
+| `node` | Stable: `7.x`. Deprecated: `6.x`. Decommissioned: `3.x`, `4.x`. |
 
 > ℹ️ If you want to use a Builder version not listed here and are unsure of its status, open a ticket with our [support](http://help.vtex.com/en/support).
