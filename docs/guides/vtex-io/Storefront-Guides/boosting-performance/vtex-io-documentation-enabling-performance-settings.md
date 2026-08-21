@@ -8,7 +8,7 @@ updatedAt: "2026-07-21T17:20:42.530Z"
 
 For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough to convert leads if the user experience falls short. Store website performance is essential to the user experience, directly impacting sales conversion rate, user session time, and other metrics. Every millisecond counts and affects both consumer decision-making and search engine rankings.
 
-This guide outlines actions you can implement to optimize store performance. These [optimization options](#optimization-options) can improve SEO scores and page load times. You can measure these improvements using tools like [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/10089681). Learn more in the **Monitoring tools** section in the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
+This guide outlines actions you can implement to optimize store performance. These [optimization options](#optimization-options) can improve SEO scores and page load times. You can measure these improvements using tools like [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) and [Google Analytics](https://support.google.com/analytics/answer/10089681). Learn more in the **Monitoring tools** section of the [Performance](https://developers.vtex.com/docs/guides/storefront-performance) guide.
 
 This guide is divided into the following sections:
 
@@ -21,14 +21,14 @@ This guide is divided into the following sections:
 
 ### Step 1 - (Optional) Testing manual optimizations
 
-If you have implemented [manual optimizations](#manual-optimizations), make sure to use a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) to test them before making your new app version publicly available. Learn more about this process in the guide [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
+If you've implemented [manual optimizations](#manual-optimizations), make sure to use a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) to test them before making your new app version publicly available. Learn more about this process in the guide [Deploying a new app version](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available).
 
 ### Step 2 - Applying changes in a production workspace
 
 1. Using the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference/), log in to the desired account by running `vtex login {account}`.
 2. Run the command `vtex use {productionWorkspace} --production` to create and use a **new** [production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace/).
 
-    >⚠️ Replace the values between the curly braces based on your scenario.
+    >⚠️ Replace the values between curly brackets with your own values.
 
 3. Using your browser, access the Admin for that workspace.
 4. In the account's Admin, go to **Store Settings > Storefront > Store > Advanced**.
@@ -39,9 +39,9 @@ If you have implemented [manual optimizations](#manual-optimizations), make sure
 
 ### Step 3 - Testing and analyzing performance
 
-Using [Lighthouse](https://developers.vtex.com/docs/guides/storefront-getting-started-with-lighthouse) in [DevTools](https://developer.chrome.com/docs/devtools/overview), review and test all main pages to ensure the changes haven't caused any side effects, such as style inconsistencies or unintended behavior.
+Using [Lighthouse](https://developers.vtex.com/docs/guides/storefront-getting-started-with-lighthouse) in [DevTools](https://developer.chrome.com/docs/devtools/overview), check and test all main pages to ensure the changes haven't caused any side effects, such as style inconsistencies or unintended behavior.
 
-1. In your browser, access your store's website using the following URL pattern: `https://{account}.myvtex.com/?workspace={productionWorkspace}`.
+1. In your browser, access the store website using the following URL pattern: `https://{account}.myvtex.com/?workspace={productionWorkspace}`.
 
    >⚠️ Using the standard URL pattern `https://{workspace}--{account}.myvtex.com/` won't show the store performance score in the specified workspace. To analyze performance in a workspace, **you must use the `?workspace={productionWorkspace}` query string**.
 
@@ -88,7 +88,7 @@ This action enables CSS optimizations on your pages to boost performance and imp
 
 ![critical](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-1.png)
 
-However, by default, the browser renders a web page after it has finished loading, parsing, and executing all related CSS files. Consequently, the more extensive the CSS code, the longer it takes to render the page's critical parts.
+However, by default, the browser renders a web page after it has finished loading, parsing, and executing all related CSS files. Consequently, the more extensive the CSS code, the longer it takes to render the critical parts of the page.
 
 This optimization can be enabled for the following pages:
 
@@ -101,7 +101,7 @@ This optimization can be enabled for the following pages:
 
 #### Enable CSS concatenation
 
-This action concatenates a page's CSS into a single file for faster download, reducing the number of HTTP requests required to load each CSS file separately.
+This action concatenates the CSS of a page into a single file for faster download, reducing the number of HTTP requests required to load each CSS file separately.
 
 ![concatenation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-2.png)
 
@@ -122,7 +122,7 @@ Before displaying a web page, the VTEX IO service app (Render Runtime) that rend
         __RUNTIME__ = {"account":"vtexstore","amp":false,"bindingChanged":false,"binding":{"id":"aacb04t3-a8fa-4bab-b5bd-2d654d20dcd8","canonicalBaseAddress":"vtexstore.vtex.com"},"culture":{"availableLocales":[],"country":"USA","currency":"USD","language":"en","locale":"en-US","customCurrencyDecimalDigits":null,"customCurrencySymbol":"$"},"production":true,"query":{},"settings":{....
 ```
 
-This script contains significant web page data and can be long, demanding significant browser processing. When you enable lazy runtime, the script is split into smaller scripts to avoid increasing the store website's total blocking time. This helps avoid lengthy tasks, leading to a faster store experience.
+This script contains significant web page data and can be long, demanding significant browser processing. When you enable lazy runtime, the script is split into smaller scripts to avoid increasing the total blocking time of the store website. This helps avoid lengthy tasks, leading to a faster store experience.
 
 >⚠️ Some apps might not work as expected when this option is enabled. Test with caution before enabling it on a production workspace. If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
 
@@ -174,7 +174,7 @@ This action enables lazy loading of the JavaScript files of the components below
 
 This option adds a `#{Number}` to the HTML title. This helps both users and search engines know exactly which page they're viewing and avoids duplicate titles, which can impact SEO.
 
->⚠️ It's best suited for stores that use traditional pagination. After enabling, review your page titles to make sure they remain clear and consistent.
+>⚠️ It's best suited for stores that use traditional pagination. After enabling this option, check your page titles to make sure they remain clear and consistent.
 
 #### Canonical URL without URL parameters
 
@@ -188,7 +188,7 @@ This action removes the store name from the end of page titles on product and ca
 
 #### Enable custom currency symbol
 
-This action uses the `Currency Symbol` field defined in the trade policy. This ensures that prices are displayed in the format and symbol your customers expect, which is especially important for international or multi-currency stores.
+This action uses the `Currency Symbol` field defined in the sales channel. This ensures that prices are displayed in the format and symbol your customers expect, which is especially important for international or multi-currency stores.
 
 #### [BETA] Show sponsored products on search results
 
