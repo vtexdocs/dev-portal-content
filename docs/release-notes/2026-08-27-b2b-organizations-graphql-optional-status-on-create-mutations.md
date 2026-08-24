@@ -3,7 +3,7 @@ title: "B2B Organizations GraphQL: optional status on create mutations"
 slug: "2026-08-27-b2b-organizations-graphql-optional-status-on-create-mutations"
 hidden: false
 type: "added"
-createdAt: "2026-08-27T00:00:00.000Z"
+createdAt: "2026-08-24T00:00:00.000Z"
 excerpt: "The B2B Organizations GraphQL API now accepts an optional status when creating organizations, so integrations can start them as inactive or on-hold without a follow-up update call."
 ---
 
