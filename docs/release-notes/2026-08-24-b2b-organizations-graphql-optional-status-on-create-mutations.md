@@ -1,6 +1,6 @@
 ---
 title: "B2B Organizations GraphQL: optional status on create mutations"
-slug: "2026-08-27-b2b-organizations-graphql-optional-status-on-create-mutations"
+slug: "2026-08-24-b2b-organizations-graphql-optional-status-on-create-mutations"
 hidden: false
 type: "added"
 createdAt: "2026-08-24T00:00:00.000Z"
