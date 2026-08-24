@@ -1,15 +1,17 @@
 ---
 title: "VTEX IO: VBase deprecation and Master Data migration"
-slug: 2026-08-03-vtex-io-vbase-deprecation-master-data-migration
+slug: 2026-08-24-vtex-io-vbase-deprecation-master-data-migration
 hidden: false
 type: "deprecated"
-createdAt: "2026-08-03T12:00:00.000Z"
+createdAt: "2026-08-24T12:00:00.000Z"
 excerpt: "VBase will be gradually deprecated for VTEX IO apps. Master Data becomes the platform's single database solution."
 tags:
     - VTEX IO
 ---
 
 VBase, the database solution available to VTEX IO apps, will be gradually deprecated, consolidating [Master Data](https://developers.vtex.com/docs/guides/master-data) as the single database solution offered by the VTEX platform. Apps that currently use VBase must migrate to Master Data before the shutdown dates below.
+
+Integration apps are exceptions and will be handled separately. **Payments (PPF)**, **Antifraud**, **External Marketplace**, and **Search** integrations currently use VBase and are excluded from this deprecation.
 
 ## What has changed?
 
@@ -39,9 +41,11 @@ Replace VBase usage with Master Data and publish the updated version before the 
 
 For exceptional cases requiring extended VBase support, [open a ticket](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) with [VTEX Support](https://support.vtex.com/hc/en-us) to discuss your specific needs.
 
-### New integrations
+For more information about modeling and storing data with Master Data, see [Master Data introduction](https://developers.vtex.com/docs/guides/master-data).
 
-Don't use VBase in new projects or integrations. Use Master Data instead. The following integration guides and template repositories currently reference VBase and will be updated to use Master Data:
+### Integrations exception
+
+Integration apps will be addressed separately. The following integration guides and template repositories currently reference VBase. Apps from these integrations will continue to work as intended.
 
 | Integration | Template repository |
 | :- | :- |
@@ -49,5 +53,3 @@ Don't use VBase in new projects or integrations. Use Master Data instead. The fo
 | [Anti-fraud provider](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works) | [antifraud-provider-example](https://github.com/vtex-apps/antifraud-provider-example) |
 | [External marketplace](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-template) | [mkp-app-template](https://github.com/vtex/mkp-app-template) |
 | [Search resolver](https://developers.vtex.com/docs/guides/external-search-provider-recipe) | [search-resolver](https://github.com/vtex-apps/search-resolver) |
-
-For more information about modeling and storing data with Master Data, see [Master Data introduction](https://developers.vtex.com/docs/guides/master-data).
