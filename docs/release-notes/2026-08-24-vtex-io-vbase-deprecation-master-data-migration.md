@@ -11,7 +11,7 @@ tags:
 
 VBase, the database solution available to VTEX IO apps, will be gradually deprecated, consolidating [Master Data](https://developers.vtex.com/docs/guides/master-data) as the single database solution offered by the VTEX platform. Apps that currently use VBase must migrate to Master Data before the shutdown dates below.
 
-Integration apps are exceptions and will be handled separately. **Payments (PPF)**, **Antifraud**, **External Marketplace**, and **Search** integrations currently use VBase and are excluded from this deprecation.
+Integration apps are exceptions and will be handled separately. **Payments (PPF)**, **Antifraud**, and **Search** integrations currently use VBase and are excluded from this deprecation.
 
 ## What has changed?
 
@@ -51,5 +51,4 @@ Integration apps will be addressed separately. The following integration guides 
 | :- | :- |
 | [Payment provider](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework) | [payment-provider-example](https://github.com/vtex-apps/payment-provider-example) |
 | [Anti-fraud provider](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works) | [antifraud-provider-example](https://github.com/vtex-apps/antifraud-provider-example) |
-| [External marketplace](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-template) | [mkp-app-template](https://github.com/vtex/mkp-app-template) |
 | [Search resolver](https://developers.vtex.com/docs/guides/external-search-provider-recipe) | [search-resolver](https://github.com/vtex-apps/search-resolver) |
