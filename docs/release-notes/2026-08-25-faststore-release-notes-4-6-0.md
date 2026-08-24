@@ -1,10 +1,10 @@
 ---
 title: "FastStore Release Notes — Version 4.6.0"
-slug: "2026-08-27-faststore-release-notes-4-6-0"
+slug: "2026-08-25-faststore-release-notes-4-6-0"
 type: improved
 excerpt: "FastStore version 4.6.0 improves CLI reliability on Windows and in hoisted monorepos, cart sales-channel synchronization after external checkout flows, ISR recovery for transient PDP and PLP 404s, and default Twitter Card meta tags for social previews."
-createdAt: "2026-08-21T00:00:00.000Z"
-updatedAt: "2026-08-21T00:00:00.000Z"
+createdAt: "2026-08-25T00:00:00.000Z"
+updatedAt: "2026-08-25T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
