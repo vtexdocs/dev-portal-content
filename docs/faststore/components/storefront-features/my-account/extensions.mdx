@@ -111,6 +111,8 @@ In this case, you don't create a `.tsx` file. FastStore generates the page autom
 ### Step 1 - Binding the route to a content type
 
 In the `src/myAccount/navigation.ts` file, add the `contentType` property to the route. Its value must be the exact identifier of the content type you'll define in the CMS:
+
+```ts
 import { getMyAccountRoutes } from "@faststore/core";
 
 export default getMyAccountRoutes({
@@ -179,7 +181,7 @@ For more details about the sync flow, see [Local setup and development](https://
 
 Log in to your store and access the new route, for example, `/pvt/account/wishlist`. The page appears in the My Account menu with the sections published in the CMS.
 
-> ⚠️ If the content type was never published or its identifier doesn't match the `contentType` value, the page still loads with the menu, layout, and authentication, but with an empty body. See [Troubleshooting](#troubleshooting).
+> ⚠️ If the content type was never published or its identifier doesn't match the `contentType` value, the page still loads with the menu, layout, and authentication, but with an empty body. See [Common issues during extensions](#common-issues-during-extensions) section.
 
 ## Creating a hybrid page
 
@@ -238,3 +240,13 @@ You can use your store's own sections in CMS-managed My Account pages by followi
 4. Run `yarn cms-sync` to make the section available in the CMS Admin.
 
 For the complete step-by-step, see [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/creating-a-new-section).
+
+## Common issues during extensions
+
+| Issue | Possible cause and solution |
+| ------- | --------------------------- |
+| The page loads with the menu and layout, but the body is empty. | The content type was never published in the CMS Admin, or its identifier doesn't match the `contentType` declared in the route. Check that the root key of the `.jsonc` file, the `contentType` value, and the published content type are identical, then run `yarn cms-sync` again. |
+| The build shows the `Skipping CMS route <route>: only /pvt/account prefixes are allowed` warning. | The declared route is outside the private namespace. Move it to `/pvt/account` or one of its descendants. |
+| The build shows the `Skipping CMS route <route>: native page takes precedence` warning. | The route conflicts with a [default My Account page](https://developers.vtex.com/docs/guides/faststore/my-account-overview#default-my-account-pages). Native pages are always preserved. Use another path, or extend the existing page with `before.tsx` and `after.tsx`, as described in [Adding new sections](#adding-new-sections). |
+| The build shows the `[my-account-cms] Could not statically parse routes in <file>` warning. | The routes in `navigation.ts` aren't static object literals. Replace dynamic logic, such as variables, `map`, or spread operators, with literal objects. |
+| The build shows the `[my-account-cms] Skipping CMS route entry missing route/title in <file>` warning. | The route entry doesn't have the `route` or `title` property. Both are required. |
