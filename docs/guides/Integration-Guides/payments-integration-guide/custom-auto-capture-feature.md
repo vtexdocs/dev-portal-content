@@ -14,9 +14,9 @@ Setting up this feature involves two roles:
 - **Payment providers** declare support for the feature in the connector manifest and define the range of delays merchants can choose from.
 - **Merchants** select the settlement behavior for that provider in the VTEX Admin.
 
-> ℹ️ VTEX [replaced the term capture with settlement](https://help.vtex.com/en/announcements/2022-06-30-replacing-the-term-capture-for-settlement-in-the-payments-documentation) throughout the Payments documentation, and the VTEX Admin labels this feature as settlement. Some identifiers keep the previous term, such as `usesEarlySecurityCapture`.
+> ℹ️ VTEX [replaced the term capture with settlement](https://help.vtex.com/en/announcements/2022-06-30-replacing-the-term-capture-for-settlement-in-the-payments-documentation) throughout the Payments documentation. Some VTEX Admin fields and identifiers keep the previous term, such as `usesEarlySecurityCapture`, and this guide reproduces them as they appear.
 
-## Before you start
+## Before you begin
 
 Check the following requirements according to your role:
 
@@ -70,9 +70,17 @@ When the merchant schedules a time frame in the VTEX Admin, that value takes pre
 
 ## Merchant configuration
 
+To define how a payment provider settles payments, follow these instructions:
+
 1. In the VTEX Admin, go to **Store Settings > Payments > Providers**, or type **Providers** in the search bar at the top of the page.
 2. Select the payment provider you want to configure.
-3. In the **Automatic settlement** field, select one of the following options:
+3. In the **Automatic settlement** field, select one of the available options.
+4. (Optional) If you select **Scheduled: Schedules the automatic capture**, fill in the **Scheduled time frame in hours for automatic capture** field with the period the platform must wait before settling the payment.
+5. Save the configuration.
+
+> ⚠️ Set the time frame in whole hours and within the range declared by the payment provider in the manifest. Decimals are not allowed.
+
+The **Automatic settlement** field provides the following options:
 
 | Option | Behavior |
 | ------ | -------- |
@@ -82,16 +90,13 @@ When the merchant schedules a time frame in the VTEX Admin, that value takes pre
 | **Disabled** | Settlement happens only when the order is invoiced. Consider your invoicing time, because it can exceed the settlement time agreed with the payment provider and lead to the cancellation of the transaction. |
 | **Scheduled: Schedules the automatic capture** | Settlement happens after the time frame you define, within the range declared by the payment provider. |
 
+The following image shows the **Automatic settlement** field in the provider configuration:
+
 ![Payment settlement field in the provider configuration in the VTEX Admin, displaying the available automatic settlement options.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-auto-capture-feature-0.JPG)
 
-4. If you select **Scheduled: Schedules the automatic capture**, fill in the **Scheduled time frame in hours for automatic capture** field with the period the platform must wait before settling the payment.
+When you select the scheduled option, the VTEX Admin displays the **Scheduled time frame in hours for automatic capture** field, as shown in the following image:
 
 ![Scheduled time frame in hours for automatic settlement field, displayed after selecting the scheduled option.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-auto-capture-feature-2.JPG)
-
-5. Save the configuration.
-
-> ⚠️ Set the time frame in whole hours and within the range declared by the payment provider in the manifest. Decimals are not allowed.
-
 
 ## Learn more
 
