@@ -174,25 +174,3 @@ In the following table, see the most common symptoms and what to check for each 
 | The customer received two recovery messages. | The same `order_form_id` was sent with different phone numbers, creating two active records. Send only complete, validated phone numbers. |
 | Cart response time in the store increased. | The notification is on the critical path of the operation. Make the call asynchronous. Reducing call volume mitigates the issue but doesn't eliminate it. |
 | No message is triggered even though the cart was registered. | The order may have been completed within the verification period, or the cart may not meet the eligibility rules of the automation, such as minimum value, cooldown, or phone restrictions. These rules are configured in the automation and don't depend on the payload. |
-
-## Frequently asked questions
-
-### What happens if I send the same `order_form_id` several times?
-
-Each request with the same `order_form_id` and the same `phone` restarts the verification period for that cart. If an active record already exists for that combination, VTEX renews the countdown instead of creating a new cart. Sending the same `order_form_id` with a different phone number creates a separate record.
-
-### Do I need to notify VTEX when the purchase is completed?
-
-No. The purchase completion check runs automatically at the end of the configured period, querying the `order_form_id` on VTEX. Additional rules, such as minimum cart value, are applied at that stage based on the automation configuration, not on the payload you send.
-
-### Is the `name` parameter required?
-
-Yes. Without `name`, or with the field blank, payload validation fails and the cart isn't registered, even though the response is HTTP `200`. The value is used as the personalization variable of the recovery message.
-
-### Can I call the webhook directly from the mobile app?
-
-No. The integration is supported only for server-to-server calls, because the UUID is the only credential and must not be embedded in an end-user client.
-
-### Do I need to send the cart total and the cart items?
-
-No. The payload doesn't have those fields. The cart value is obtained by querying VTEX at verification time, which is why item or value changes don't require a notification of their own.
