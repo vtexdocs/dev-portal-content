@@ -52,9 +52,9 @@ The webhook records only the cart state at the moment of the request. The decisi
 
 Make sure you have the following:
 
-- The abandoned cart automation configured in your [VTEX CX Platform](https://dash.weni.ai/orgs) account.
+- The abandoned cart automation configured in your VTEX account.
 - The `integrated_agent_uuid` of the automation, provided during onboarding. This UUID identifies your store in the request URL and is the only credential of the integration, so treat it as a secret.
-- A backend service able to make server-to-server requests. Calls made directly from a mobile app, browser, WebView, or any other end-user client aren't supported.
+- A backend service able to make server-to-server requests. Calls made directly from a mobile app, browser, WebView, or any other end-user client are supported, but we don't recommend using them.
 - The ability to send the notification asynchronously, through a queue, a worker, or fire-and-forget, off the critical path of the user-facing response.
 
 > ⚠️ There's no token-based or key-based authentication. Anyone holding the UUID can submit arbitrary `phone` and `name` values and make your official WhatsApp sender deliver recovery messages to numbers that never visited your store. This degrades the quality rating of the sender, may lead to sending limits or a block, and has a per-message cost. If you suspect the UUID was exposed, open a ticket with [VTEX Support](https://help.vtex.com/en/support) requesting a new one, and update the integration with the new value.
