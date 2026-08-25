@@ -19,9 +19,9 @@ The field accepts the following values:
 
 Compound interest is the most common model in Brazil, while countries such as Argentina prefer simple interest. For a comparison between both models, see [How to choose the type of interest for a payment condition](https://help.vtex.com/en/docs/tutorials/how-to-choose-the-type-of-interest-for-a-payment-condition).
 
-> ℹ️ The interest type selector in the VTEX Admin offers only compound interest (`0`) and simple interest (`2`). To set either of these values, follow [How to choose the type of interest for a payment condition](https://help.vtex.com/en/docs/tutorials/how-to-choose-the-type-of-interest-for-a-payment-condition). Use the steps below to set simple interest with tax (`1`), which is only available through the API.
+> ℹ️ The interest type selector in the VTEX Admin offers only compound interest (`0`) and simple interest (`2`). To set either of these values, follow [How to choose the type of interest for a payment condition](https://help.vtex.com/en/docs/tutorials/how-to-choose-the-type-of-interest-for-a-payment-condition). Use the following steps to set simple interest with tax (`1`), which is only available through the API.
 
-## Before you start
+## Before you begin
 
 To complete the steps in this guide, you need the following:
 
@@ -33,18 +33,18 @@ To complete the steps in this guide, you need the following:
 | [Get payment rule by ID](https://developers.vtex.com/docs/api-reference/payments-gateway-api#get-/api/pvt/rules/-ruleId-) | PCI Gateway | Payment-Make Payments | **View Payment Data** |
 | [Update payment rule by ID](https://developers.vtex.com/docs/api-reference/payments-gateway-api#put-/api/pvt/rules/-ruleId-) | PCI Gateway | Payment-ManageStore | **Manage Store** |
 
-> ❗ No [predefined role](https://help.vtex.com/en/docs/tutorials/predefined-roles) grants these resources. [Create a custom role](https://help.vtex.com/en/docs/tutorials/creating-roles) with the resources above, and follow the [best practices for managing API keys](https://help.vtex.com/en/docs/tutorials/best-practices-api-keys) to avoid granting excessive permissions.
+> ❗ No [predefined role](https://help.vtex.com/en/docs/tutorials/predefined-roles) grants these resources. [Create a custom role](https://help.vtex.com/en/docs/tutorials/creating-roles) with the resources in the preceding table, and follow the [best practices for managing API keys](https://help.vtex.com/en/docs/tutorials/best-practices-api-keys) to avoid granting excessive permissions.
 
 ## Step 1: Get the payment condition ID
 
 1. In the VTEX Admin, go to **Store Settings > Payment > Settings**, or type **Settings** in the search bar at the top of the page.
 2. Click the **Payment Conditions** tab.
 3. Select the payment condition you want to configure.
-4. Copy the last parameter of the page URL, which is the ID of the payment condition, as shown in the image below.
+4. Copy the last parameter of the page URL, which is the ID of the payment condition, as shown in the following image.
 
 ![Payment condition settings page in the VTEX Admin, with the payment condition ID highlighted at the end of the browser address bar.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-the-type-of-interest-rate-0.png)
 
-This value corresponds to the `ruleId` path parameter in the requests below.
+This value corresponds to the `ruleId` path parameter in the following requests.
 
 > ⚠️ The `ruleId` identifies the payment condition, not the payment method. A payment method such as Visa can have several payment conditions, each with its own `ruleId` and interest settings. Setting the interest rate type affects only the payment condition you send in the request.
 
@@ -147,7 +147,7 @@ curl --request PUT \
 }'
 ```
 
-> ⚠️ This request replaces the entire payment condition. Any field omitted from the request body is overwritten with its default value, which can disable the payment condition or remove its installment settings. Always build the request body from the response you retrieved in the previous step, rather than from the example above.
+> ⚠️ This request replaces the entire payment condition. Any field omitted from the request body is overwritten with its default value, which can disable the payment condition or remove its installment settings. Always build the request body from the response you retrieved in the previous step, rather than from the preceding example.
 
 A successful request returns the status code `200 OK` and the updated payment condition.
 
