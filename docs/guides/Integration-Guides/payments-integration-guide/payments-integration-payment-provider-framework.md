@@ -22,38 +22,38 @@ Once you have the repository code in your workspace, you have to make sure you h
 
 1. Run the following command on your node folder:
 
-```sh
-  yarn add @vtex/payment-provider
-```
+    ```sh
+      yarn add @vtex/payment-provider
+    ```
 
 2. Go to your `package.json` and make sure it has been added as a dependency with the correct version:
 
-```sh
-  "@vtex/payment-provider": "1.x"
-```
+    ```sh
+      "@vtex/payment-provider": "1.x"
+    ```
 
 3. Check in the `package.json` the version of `@vtex/api`, which should be listed in the devDependencies as follows:
 
-```sh
-  "@vtex/api": "6.x"
-```
+    ```sh
+      "@vtex/api": "6.x"
+    ```
 
 4. When linking your app, this version might get updated to a later than 6.x version, which is fine. In case it is not listed as a `devDependency`, run the following command on your node folder:
 
-```shell
-  yarn add -D @vtex/api
-```
+    ```shell
+      yarn add -D @vtex/api
+    ```
 
-> ℹ️ If you get any type errors or conflicts in your project related to `@vtex/api`, follow these steps: 1. Delete the `node_modules` folder and the `yarn.lock` file from both your project root and your project's node folder. 2. Run the command `yarn install -f` in both folders.
+    > ℹ️ If you get any type errors or conflicts in your project related to `@vtex/api`, follow these steps: 1. Delete the `node_modules` folder and the `yarn.lock` file from both your project root and your project's node folder. 2. Run the command `yarn install -f` in both folders.
 
 5. In your `manifest.json`, you should check the builders section, in which you must include the `paymentProvider` in its current version. This will add policies to callback the Payment Gateway APIs and also expose Payment Provider protocol routes.
 
-```json
-"builders": {
-  "node": "6.x",
-  "paymentProvider": "1.x"
-}
-```
+    ```json
+    "builders": {
+      "node": "7.x",
+      "paymentProvider": "1.x"
+    }
+    ```
 
 ## Next steps
 
@@ -65,7 +65,7 @@ This is an abstract class with the signatures of the route functions required in
 
 You must create a new class extending the Payment Provider, which must implement a function for each route. The functions will receive the request body (when there is one) as a parameter and the response must be returned as an object, such as the example shown below:
 
-```js
+```ts
 import {
  PaymentProvider,
  // ...
@@ -85,62 +85,62 @@ To specify which payment methods the connector will accept to process, follow th
 
 1. Create a folder named `paymentProvider` using the following folder structure.
 
-```
-node
-paymentProvider
-manifest.json
-```
+    ```
+    📂 node
+    📂 paymentProvider
+    📄 manifest.json
+    ```
 
 2. Create a file named `configuration.json` inside the `paymentProvider` folder.
 
-```
-node
-paymentProvider
-   |--configuration.json
-manifest.json
-```
+    ```
+    📂 node
+    📂 paymentProvider
+    ┗ 📄configuration.json
+    📄 manifest.json
+    ```
 
 3. Declare the payment methods accepted by your payment provider. This allows them to be automatically implemented by the builder, without the need to declare them in the `/manifest` route.
 
-> ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
+    > ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
 
-```json
-{
-  "name": "MyConnector",
-  "paymentMethods": [
+    ```json
     {
-      "name": "Visa",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "American Express",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "Diners",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "Elo",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "Hipercard",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "Mastercard",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "BankInvoice",
-      "allowsSplit": "onAuthorize"
+      "name": "MyConnector",
+      "paymentMethods": [
+        {
+          "name": "Visa",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "American Express",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "Diners",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "Elo",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "Hipercard",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "Mastercard",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "BankInvoice",
+          "allowsSplit": "onAuthorize"
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
-> ⚠️ The `name` field indicating the name of the connector must be replaced with the name of your provider. This field cannot be filled with a value `"MyConnector"`.
+    > ⚠️ The `name` field indicating the name of the connector must be replaced with the name of your provider. This field cannot be filled with a value `"MyConnector"`.
 
 > ℹ️ To check which payment methods are currently available in the VTEX Admin, go to Store **Settings > Payment > Settings**, or type **Settings** in the search bar at the top of the page and click the green `+` button. If you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
 
@@ -231,7 +231,7 @@ In addition to the manifest fields (`paymentMethods` and `customFields`), the fo
 
 A retry is required to develop your connector according to the [protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol), and for this action, the function below must be invoked:
 
-```js
+```ts
 this.retry(request)
 ```
 
@@ -243,7 +243,7 @@ This is a class that extends the Service from `@vtex/api`. You must invoke it by
 
 The following code shows how to do this and find it in the `node/index.ts` file.
 
-```
+```ts
 import {
  PaymentProviderService,
 } from '@vtex/payment-provider'
@@ -264,7 +264,7 @@ By default, the Payment Provider Service declares the following routes:
 
 If your service requires any extra routes, you must declare them separately and use them as parameters:
 
-```js
+```ts
 new PaymentProviderService({
  routes: newRoutes,
  connector: YourPaymentConnector,
@@ -273,7 +273,7 @@ new PaymentProviderService({
 
 If your connector requires any extra clients, you must also pass them in the parameters along with the connector:
 
-```js
+```ts
 new PaymentProviderService({
  clients: NewClients,
  connector: YourPaymentConnector,
@@ -291,7 +291,7 @@ To make calls over our Secure Proxy, you must:
 1. Extend the `SecureExternalClient` abstract class. The constructor of the class is made in a way that VTEX allows `'http://my-pci-certified-domain.com'` as one of the trusted destinations by receiving its AOC.
 2. Set the Secure Proxy URL on the request that you want to be proxied. `SecureProxyURL` is received on `createPayment` flow.
 
-```js
+```ts
 import { SecureExternalClient, CardAuthorization } from '@vtex/payment-provider'
 import type {
   InstanceOptions,
@@ -341,9 +341,9 @@ A prerequisite for this procedure is to have products for sale at your store for
 
    ![Payment affiliation configuration test](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/payments-integration-guide/payments-integration-payment-provider-framework-1_375.png)
 
-8. Configure a [payment condition](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) with your newly created connector and wait 10 minutes to appear on Checkout.
-9. Make a purchase with the payment condition you configured with your connector.
-10. After completing all transaction testing in the beta version of the connector, [release and deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version) a stable version of your connector (e.g.: vtex.payment-provider-test@0.1.0). This stable version must be sent to the [homologation process](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#7-homologation-and-go-live).
+6. Configure a [payment condition](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) with your newly created connector and wait 10 minutes to appear on Checkout.
+7. Make a purchase with the payment condition you configured with your connector.
+8. After completing all transaction testing in the beta version of the connector, [release and deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version) a stable version of your connector (e.g.: vtex.payment-provider-test@0.1.0). This stable version must be sent to the [homologation process](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#7-homologation-and-go-live).
 
 ## Making your connector available to process sales
 
