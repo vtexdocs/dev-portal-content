@@ -4,7 +4,7 @@ slug: "split-payouts-on-payment-provider-protocol"
 excerpt: "Learn how the VTEX Gateway calculates commissions and sends the recipients array to your connector at each stage of the Payment Provider Protocol."
 hidden: false
 createdAt: "2021-11-09T14:21:42.226Z"
-updatedAt: "2026-08-2600:00:00.000Z"
+updatedAt: "2026-08-26T00:00:00.000Z"
 ---
 
 Split payouts are a common requirement for payment providers used by marketplaces. They allow a marketplace to process the payment for an order, collect its commission, and pay sellers for their products in a single transaction, which improves operational efficiency when managing payouts at scale.
