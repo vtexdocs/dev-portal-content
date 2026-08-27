@@ -13,9 +13,9 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-> ℹ️ **Product Recommendations** is in closed beta and available only to selected clients. If you are a VTEX client and want to adopt it, contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. For a product-focused introduction, see the Help Center tutorial [Product Recommendations (beta)](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta).
+> ℹ️ **Product Recommendations** is in closed beta and available only to selected clients. If you're a VTEX client and want to adopt it, contact [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). Additional fees may apply. For a product-focused introduction, see the Help Center tutorial [Product Recommendations (beta)](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta).
 
-**Product Recommendations** let your store surface relevant products through multiple strategies (for example, similar items, cross-sell, or personalized shelves). They can improve discovery, conversion, and average order value.
+**Product Recommendations** allows your store to surface relevant products through multiple strategies (for example, similar items, cross-selling, or personalized shelves). It can improve discovery, conversion, and the average order value.
 
 This page is the entry point for developers: it summarizes prerequisites to train models, lists strategies, points to implementation guides by storefront model, and includes frequently asked questions.
 
@@ -32,21 +32,21 @@ You need a storefront implemented with one of the following:
 
 ### Activation and onboarding
 
-Request activation and the strategies you want enabled through [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support). After approval, VTEX typically prepares your account by creating a recommendations workspace, syncing the catalog with the recommendation service, and issuing API access where needed.
+Submit a request through [Commercial Support](https://help.vtex.com/docs/tracks/commercial-support) to activate and enable the strategies you want. After approval, VTEX typically prepares your account by creating a recommendations workspace, syncing the catalog with the recommendation service, and issuing API access where needed.
 
 ### Collecting data and training models
 
-Recommendation quality depends on catalog quality, tracked shopper behavior, and, for some strategies, order volume. Before models are trained and campaigns go live, your integration should:
+Recommendation quality depends on catalog quality, tracked shopper behavior, and, for some strategies, order volume. Before models are trained and campaigns go live, make sure your integration meets the following requirements:
 
 * All storefronts must have cart and order event capture configured. Store Framework handles click/view events through the `vtex.recommendation-shelf` app. For other events in Store Framework, or all events in FastStore, headless, and mobile, configure [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) as described in the implementation guides.
 * FastStore, headless, and mobile must also call the [Start session](https://developers.vtex.com/docs/api-reference/recommendations-bff-api#post-/api/recommend-bff/v2/users/start-session) endpoint to link browsing behavior to completed purchases.
 * All channels should send the product view events expected by the recommendation service so models can learn from real traffic.
 
-Some strategies need minimum purchase history and product views so joint purchase patterns can be learned. Until those thresholds are met, VTEX may not train that strategy to full quality. See [Recommendation strategies](#recommendation-strategies) and [FAQ](#faq).
+Some strategies require a minimum purchase history and product views to learn joint purchase patterns. Until those thresholds are met, VTEX may not train that strategy to full quality. See [Recommendation strategies](#recommendation-strategies) and [FAQ](#faq).
 
 ## Recommendation strategies
 
-The exact set of strategies enabled for your account is agreed during onboarding. Some strategies require enough sales or behavioral history before models perform well. Until then, rely on strategies that do not depend on those signals or tune shelves with your VTEX contact.
+The exact set of strategies enabled for your account is agreed during onboarding. Some strategies require enough sales or behavioral history before models perform well. Until then, rely on strategies that don't depend on those signals or tune shelves with your VTEX contact.
 
 | Strategy | How it works | Data requirements | Typical placement |
 | :---- | :---- | :---- | :---- |
@@ -66,11 +66,11 @@ Choose the guide that matches how your storefront is built:
 
 | Storefront | Developer guide |
 | :---- | :---- |
-| Store Framework | [Product Recommendation shelf (`vtex.recommendation-shelf`)](https://developers.vtex.com/docs/apps/vtex.recommendation-shelf): blocks, props, and Intelligent Search pixel prerequisites for tracking. |
-| FastStore / Headless | [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores): session management, fetching recommendations, event tracking, and Activity Flow setup. |
-| Mobile | [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores): session management, fetching recommendations, and manual event tracking via API. |
+| Store Framework | [Product Recommendation shelf (`vtex.recommendation-shelf`)](https://developers.vtex.com/docs/apps/vtex.recommendation-shelf): Blocks, props, and Intelligent Search pixel prerequisites for tracking. |
+| FastStore / Headless | [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores): Session management, fetching recommendations, event tracking, and Activity Flow setup. |
+| Mobile | [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores): Session management, fetching recommendations, and manual event tracking via API. |
 
-FastStore, headless, and mobile implementations all use the [Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api). Store Framework uses the app and block model and does not call the BFF API directly.
+FastStore, headless, and mobile implementations all use the [Recommendations BFF API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api). Store Framework uses the app and block model and doesn't call the BFF API directly.
 
 ## FAQ
 
@@ -80,10 +80,10 @@ Yes. You request the strategies you want during activation. VTEX enables and tra
 
 ### How long does it take before models are ready?
 
-It depends on the strategy. Strategies that do not rely on model training, such as **Best sellers**, **Recently viewed**, and **Manual collection**, are available as soon as the integration is configured. Strategies that require training become available once the minimum data thresholds are met:
+It depends on the strategy. Strategies that don't rely on model training, such as **Best sellers**, **Recently viewed**, and **Manual collection**, are available as soon as the integration is configured. Strategies that require training become available once the minimum data thresholds are met:
 
-* **Recommended for you:** requires at least 1,000 unique profiles with repeat product page visits and at least 10,000 product view or purchase events.
-* **Frequently bought together:** requires at least 1,000 transactions with more than one item in the cart.
+- **Recommended for you:** Requires at least 1,000 unique profiles with repeat product page visits and at least 10,000 product view or purchase events.
+- **Frequently bought together:** Requires at least 1,000 transactions with more than one item in the cart.
 
 Beyond those thresholds, time to readiness also depends on catalog size and overall traffic volume. Your onboarding team can give more accurate timelines for your store.
 
@@ -91,19 +91,19 @@ Beyond those thresholds, time to readiness also depends on catalog size and over
 
 Typically includes navigation and product interaction events used to learn views, affinity, and personalization signals, plus order data when identifiers link a session to a completed purchase. Your integration guide lists the events you should send explicitly.
 
-### What happens to co-purchase strategies when the store does not have enough order volume?
+### What happens to co-purchase strategies when the store doesn't have enough order volume?
 
-Strategies that rely on co-purchase patterns, such as **Frequently bought together**, require a minimum of 1,000 transactions with more than one item in the cart. Until that threshold is reached, the strategy remains inactive. Once the volume is met, VTEX trains the model and activates the strategy. Until then, consider relying on strategies that do not depend on co-purchase data, such as **Best sellers** or **Similar products**.
+Strategies that rely on co-purchase patterns, such as **Frequently bought together**, require a minimum of 1,000 transactions with more than one item in the cart. Until that threshold is reached, the strategy remains inactive. Once the volume is met, VTEX trains the model and activates the strategy. Until then, consider relying on strategies that don't depend on co-purchase data, such as **Best sellers** or **Similar products**.
 
-### What happens to "Recommended for you" when there is not enough data?
+### What happens to "Recommended for you" when there isn't enough data?
 
 **Recommended for you** depends on a personalization model trained from real shopper and purchase behavior. When a shopper has no item page visit events or completed transactions, recommendations are generated based on the first items clicked in the last 90 days by other first-time visitors in the store. As the shopper builds a history, recommendations gradually shift to reflect their individual behavior.
 
-Until there is enough account-level history for VTEX to train and enable the model, the campaign does not behave as fully personalized. What shoppers see in the meantime is configured as part of onboarding (for example, emphasizing other strategies such as **Best sellers**, hiding the shelf, or using a transitional setup). Confirm the exact behavior with your VTEX contact so your UI matches expectations.
+Until there is enough account-level history for VTEX to train and enable the model, the campaign doesn't behave as fully personalized. What shoppers see in the meantime is configured as part of onboarding (for example, emphasizing other strategies such as **Best sellers**, hiding the shelf, or using a transitional setup). Confirm the exact behavior with your VTEX contact so your UI matches expectations.
 
 ### Where do I get campaign IDs (VRNs) for API calls?
 
-Campaign VRNs follow the format `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. You can retrieve the full VRN from the store Admin under **Storefront > Recommendations**: in the shelf list, click the three dots next to the shelf and select **Copy ID**. You can also request it through [VTEX Support](https://help.vtex.com/en/support). For the list of available campaign types, see [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores) or [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores).
+Campaign VRNs follow the format `vrn:recommendations:{store-name}:{campaignType}:{campaignId}`. You can retrieve the full VRN from the store Admin under **Storefront > Recommendations**. In the shelf list, click the three dots next to the shelf and select **Copy ID**. You can also request it through [VTEX Support](https://help.vtex.com/en/support). For the list of available campaign types, see [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores) or [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores).
 
 ### Who do I contact if recommendations are empty or look wrong?
 
