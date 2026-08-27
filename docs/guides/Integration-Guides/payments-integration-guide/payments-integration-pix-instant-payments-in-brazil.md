@@ -1,16 +1,16 @@
 ---
-title: "Pix: Instant Payments in Brazil"
+title: "Pix: Instant payment in Brazil"
 slug: "payments-integration-pix-instant-payments-in-brazil"
 excerpt: "Learn how to extend your Payment Provider Protocol implementation so VTEX stores can offer Pix instant payments in Brazil."
 hidden: false
 createdAt: "2020-10-27T00:35:36.404Z"
 updatedAt: "2026-08-04T00:00:00.000Z"
 ---
-[Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix) is the instant payments ecosystem implementation led by the Central Bank of Brazil (BCB) to enable online money transfers with reduced costs, increased safety and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account, without the need for intermediaries, resulting in lower transaction costs.
+[Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix) is the instant payments ecosystem implemented by the Central Bank of Brazil (BCB) to enable online money transfers with lower costs, greater security, and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account, eliminating intermediaries and reducing transaction costs.
 
-Pix is available to both physical and legal persons, and both need to have an identifier key registered with some financial entity (banks, fintechs or payment institutions) to proceed with the transaction.
+Pix is available to both individuals and legal entities, and both need to have a Pix key registered with a financial institution, such as a bank, fintech, or payment institution, to complete a transaction.
 
-According to the [eligibility criteria](https://www.bcb.gov.br/estabilidadefinanceira/participantespix) set forth by the BCB, certain financial entities will be required to offer this payment method, while others may optionally offer it or not be eligible to participate.
+According to the [eligibility criteria](https://www.bcb.gov.br/estabilidadefinanceira/participantespix) set forth by the BCB, certain financial entities will be required to offer this payment method, while others may offer it voluntarily or may not be eligible to participate.
 
 This guide explains how to extend your Payment Provider Protocol implementation so stores can offer Pix as an additional payment method to their customers.
 
@@ -24,13 +24,13 @@ This guide explains how to extend your Payment Provider Protocol implementation 
 
 Before developing the middleware that implements the Payment Provider Protocol, review the following requirements:
 
-- **All endpoints must be served over HTTPS on port 443 with TLS 1.2 support**: Connections over non-secured HTTP will not be accepted under any circumstances.
-- **The integrator must create a subdomain or a domain name for the provider endpoints**: IP addresses will not be accepted as names under any circumstances.
+- **All endpoints must be served over HTTPS on port 443 with TLS 1.2 support**: Connections over non-secured HTTP won't be accepted under any circumstances.
+- **The integrator must create a subdomain or a domain name for the provider endpoints**: IP addresses won't be accepted as names under any circumstances.
 - **The middleware must consistently respond within the established response times**: VTEX enforces a maximum response time of 5 seconds for homologation tests and 20 seconds for any other API request.
 
 The Payment Provider Protocol describes nine endpoints, but not all of them apply to Pix. These endpoints are divided into two provider flows:
 
-- [Payment flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): six endpoints, all mandatory for Pix.
+- [Payment flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest): six endpoints, all required for Pix.
 - [Configuration flow](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token): three optional endpoints, currently not available for Pix.
 
 The following table details the applicability of each endpoint to Pix:
@@ -47,7 +47,7 @@ The following table details the applicability of each endpoint to Pix:
 | Payment       | Provider Authentication        | ⛔ No              |
 | Payment       | Get Credentials                | ⛔ No              |
 
-> ⚠️ Pix is not available for marketplaces that use Checkout Split.
+> ⚠️ Pix isn't available for marketplaces that use Checkout Split.
 
 > ⚠️ The following JSON examples are illustrative. Adapt them to your own scenario, including the data required for your integration.
 
@@ -118,7 +118,7 @@ The expected response is:
 }
 ```
 
-> ⚠️ Pix does not support payment split. For the payment methods that currently support split, see the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint reference.
+> ⚠️ Pix doesn't support payment split. For the payment methods that currently support split, see the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint reference.
 
 ### Create a Pix payment
 
@@ -317,7 +317,7 @@ The expected response is:
 }
 ```
 
-> ℹ️ This example response indicates that the provider cannot process the refund automatically: `refundId` is `null`, `value` is `0.0`, and `code` is `refund-manually`. In this case, the merchant must complete the refund outside the platform. If your provider supports automated Pix refunds, return the refunded `value` and a valid `refundId` instead.
+> ℹ️ This example response indicates that the provider can't process the refund automatically: `refundId` is `null`, `value` is `0.0`, and `code` is `refund-manually`. In this case, the merchant must complete the refund outside the platform. If your provider supports automated Pix refunds, return the refunded `value` and a valid `refundId` instead.
 
 For more information, see the [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) endpoint reference.
 
@@ -355,7 +355,7 @@ As a result, the provider should send the following response:
 }
 ```
 
-> ℹ️ Inbound Request (BETA) is mandatory only for Payment Provider Protocol integrations that use an external Payment App. If you implement Pix with the VTEX Payment App, this endpoint is not required. For more information, see the [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-).
+> ℹ️ Inbound Request (BETA) is mandatory only for Payment Provider Protocol integrations that use an external Payment App. If you implement Pix with the VTEX Payment App, this endpoint isn't required. For more information, see the [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-).
 
 For more information about Pix, see the [Pix FAQ](https://help.vtex.com/en/docs/tutorials/pix-faq).
 
