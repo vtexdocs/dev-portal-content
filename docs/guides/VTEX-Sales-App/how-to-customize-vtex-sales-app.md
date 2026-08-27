@@ -66,9 +66,9 @@ You can find more information on how to set up each customization in the followi
 
 ## Troubleshooting
 
-### Changes to `checkout-instore-custom.js` are not applied in production
+### Changes to `checkout-instore-custom.js` aren't applied in production
 
-If you edit the `checkout-instore-custom.js` or `checkout-instore-custom.css` files through VTEX Admin but the changes are not reflected in production, check whether your store also has the [Checkout UI Settings](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) app installed.
+If you edit the `checkout-instore-custom.js` or `checkout-instore-custom.css` files through VTEX Admin but the changes aren't reflected in production, check whether your store also has the [Checkout UI Settings](https://developers.vtex.com/docs/guides/vtex-checkout-ui-settings) app installed.
 
 >⚠️ Any script changes made through the Checkout UI Settings app override the HTML, CSS, and JS customizations made through VTEX Admin, including the `checkout-instore-custom.js` and `checkout-instore-custom.css` files used to customize the VTEX Sales App. For more information, see the [Checkout customization guide](https://developers.vtex.com/docs/guides/checkout-customization-guide).
 

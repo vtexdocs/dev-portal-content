@@ -11,7 +11,7 @@ After creating a payment condition as described in the [VTEX Sales App - Payment
 
 You must do this by inserting a JavaScript object in the `checkout-instore-custom.js` file. Check out the [How to customize VTEX Sales App](https://developers.vtex.com/vtex-rest-api/docs/how-to-customize-vtex-sales-app) guide for further information on how to access this file.
 
-> ⚠️ If your store also has the Checkout UI Settings app installed, changes made to `checkout-instore-custom.js` may not be reflected in production. See [Changes to checkout-instore-custom.js are not applied in production](https://developers.vtex.com/docs/guides/how-to-customize-vtex-sales-app#changes-to-checkout-instore-customjs-are-not-applied-in-production) for more information.
+> ⚠️ If your store also has the Checkout UI Settings app installed, changes made to `checkout-instore-custom.js` may not be reflected in production. For more information, see [Changes to checkout-instore-custom.js are not applied in production](https://developers.vtex.com/docs/guides/how-to-customize-vtex-sales-app#changes-to-checkout-instore-customjs-are-not-applied-in-production).
 
 ## Edit the `checkout-instore-custom.js` file
 
