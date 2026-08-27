@@ -1,7 +1,7 @@
 ---
 title: "Overriding a native component in the CMS"
 hidden: false
-slug: "cms-overriding-a-native-section"
+slug: "cms-overriding-a-native-component"
 createdAt: "2026-08-26T12:00:00.000Z"
 updatedAt: "2026-08-26T20:30:00.000Z"
 ---
