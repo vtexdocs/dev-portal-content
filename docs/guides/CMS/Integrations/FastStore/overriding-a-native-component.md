@@ -12,9 +12,7 @@ FastStore includes native component sections such as `ProductShelf`, `ProductDet
 
 In this guide, you'll override the native `ProductShelf` component by adding a CMS-editable **Show Pix discount?** toggle to it product cards, while keeping the native carousel unchanged.
 
-| Before | After |
-| ------ | ----- |
-| ![product-shelf-before](https://vtexhelp.vtexassets.com/assets/docs/src/override-component-1___904b839803dde8e865ecd1c89068e6ec.png) | ![product-shelf-after](https://vtexhelp.vtexassets.com/assets/docs/src/override-component-3___06a05f31d4a330b60b57d046ba75f47b.png) |
+![product-shelf-with-pix-discount](https://vtexhelp.vtexassets.com/assets/docs/src/override-component-3___06a05f31d4a330b60b57d046ba75f47b.png)
 
 > ℹ️ If you need to create a section that doesn't have a native FastStore counterpart, see the [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/cms-creating-a-new-section) guide.
 
