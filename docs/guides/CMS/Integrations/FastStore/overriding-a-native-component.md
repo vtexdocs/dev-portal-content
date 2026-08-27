@@ -10,7 +10,7 @@ updatedAt: "2026-08-26T20:30:00.000Z"
 
 FastStore includes native component sections such as `ProductShelf`, `ProductDetails`, and `Breadcrumb`. When a native component already meets most of your store's needs, you can override it to keep its existing data fetching and behavior while changing only the parts you need.
 
-In this guide, you'll override the native `ProductShelf` component by adding a CMS-editable **Show Pix discount?** toggle to it product cards, while keeping the native carousel unchanged.
+In this guide, you'll override the native `ProductShelf` component to display a Pix discount message on its product cards. You'll also make this message configurable in the CMS, while keeping the native carousel unchanged.
 
 ![product-shelf-with-pix-discount](https://vtexhelp.vtexassets.com/assets/docs/src/override-component-3___06a05f31d4a330b60b57d046ba75f47b.png)
 
@@ -20,10 +20,12 @@ In this guide, you'll override the native `ProductShelf` component by adding a C
 
 ## Before you begin
 
+Overriding a native component touches both your store code and the CMS, so you need a working CMS setup, the Content plugin installed locally, and a clear idea of which part of the section you want to change. Make sure the following is in place before you start:
+
 - The [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) must be installed and enabled in your VTEX account.
-- The [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) must be installed on your machine (`vtex plugins install @vtex/cli-plugin-content`) and up to date (`vtex plugins update`) — an outdated plugin fails with a version-mismatch error the first time you run any `vtex content` command.
-- You know your CMS store ID. It's the `contentSource.project` value in your project's `discovery.config.js` — **not** your VTEX account name. Every `cms/` folder path and every `vtex content` prompt below expects this ID.
-- Identify which native section and which overridable component (slot) you want to change. See the [List of native sections and overridable components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections).
+- The [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) must be installed on your machine (`vtex plugins install @vtex/cli-plugin-content`) and up to date (`vtex plugins update`).
+- You know your CMS store ID. It's the `contentSource.project` value in your project's `discovery.config.js`.
+- Identify which native section and which overridable component you want to change. See the [List of native sections and overridable components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections).
 
 ---
 
