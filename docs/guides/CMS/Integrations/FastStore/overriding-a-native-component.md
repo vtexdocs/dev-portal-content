@@ -6,17 +6,17 @@ createdAt: "2026-08-26T12:00:00.000Z"
 updatedAt: "2026-08-26T20:30:00.000Z"
 ---
 
-> ⚠️ This guide applies to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions 3 or 4. For stores using Headless CMS (legacy), the equivalent workflow is split across two guides: [Overriding a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component) and [Syncing components with the Headless CMS](https://developers.vtex.com/docs/guides/faststore/overrides-syncing-components-with-the-headless-cms).
+> ⚠️ This guide applies to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions `3` or `4`. For stores using Headless CMS (legacy), see the [Overriding a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component) guide.
 
-FastStore ships native sections such as `ProductShelf`, `ProductDetails`, and `Breadcrumb`. When a native section is *almost* what your store needs, you can override it: keep the section's data fetching and behavior, and replace or extend only the parts you want to change.
+FastStore includes native component sections such as `ProductShelf`, `ProductDetails`, and `Breadcrumb`. When a native component already meets most of your store's needs, you can override it to keep its existing data fetching and behavior while changing only the parts you need.
 
-This guide walks through a real, tested example: adding a CMS-editable **Show Pix discount?** toggle to the native `ProductShelf` section's product cards, while leaving the native carousel untouched.
+In this guide, you'll override the native `ProductShelf` component by adding a CMS-editable **Show Pix discount?** toggle to it product cards, while keeping the native carousel unchanged.
 
 | Before | After |
 | ------ | ----- |
 | ![product-shelf-before](https://vtexhelp.vtexassets.com/assets/docs/src/override-component-1___904b839803dde8e865ecd1c89068e6ec.png) | ![product-shelf-after](https://vtexhelp.vtexassets.com/assets/docs/src/override-component-3___06a05f31d4a330b60b57d046ba75f47b.png) |
 
-> ℹ️ If you need a section that has no native counterpart, see [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/cms-creating-a-new-section) instead.
+> ℹ️ If you need to create a section that doesn't have a native FastStore counterpart, see the [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/cms-creating-a-new-section) guide.
 
 ---
 
