@@ -82,8 +82,8 @@ Yes. You request the strategies you want during activation. VTEX enables and tra
 
 It depends on the strategy. Strategies that don't rely on model training, such as **Best sellers**, **Recently viewed**, and **Manual collection**, are available as soon as the integration is configured. Strategies that require training become available once the minimum data thresholds are met:
 
-- **Recommended for you:** Requires at least 1,000 unique profiles with repeat product page visits and at least 10,000 product view or purchase events.
-- **Frequently bought together:** Requires at least 1,000 transactions with more than one item in the cart.
+* **Recommended for you:** Requires at least 1,000 unique profiles with repeat product page visits and at least 10,000 product view or purchase events.
+* **Frequently bought together:** Requires at least 1,000 transactions with more than one item in the cart.
 
 Beyond those thresholds, time to readiness also depends on catalog size and overall traffic volume. Your onboarding team can give more accurate timelines for your store.
 
