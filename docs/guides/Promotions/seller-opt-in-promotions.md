@@ -1,6 +1,7 @@
 ---
 title: "Seller Opt-in for Promotions"
 slug: "seller-opt-in-promotions"
+excerpt: "Learn how to create promotions with seller opt-in and manage participating sellers via API."
 hidden: false
 createdAt: "2025-06-11T11:03:41.334Z"
 updatedAt: "2025-09-22T13:45:17.316Z"
