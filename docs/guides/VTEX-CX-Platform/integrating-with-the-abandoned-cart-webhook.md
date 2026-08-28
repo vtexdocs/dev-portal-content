@@ -159,20 +159,7 @@ If the cart doesn't appear in the logs, check the following:
 
 - Invalid payloads generate no log entry and no error record. The absence of a log means that the payload was invalid or the cart wasn't registered, with no distinction between the two cases.
 - Review the URL requirements (trailing slash and `Content-Type` header) and confirm that all three required fields were sent and populated.
+- Read the article [Troubleshooting: Abandoned cart webhook](https://developers.vtex.com/docs/guides/troubleshooting-abandoned-cart-webhook) to see common problems when integrating the abandoned cart webhook.
 - If the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support) providing the `order_form_id` and the time of the request. Support has access to additional internal logs.
-
-## Troubleshooting
-
-In the following table, see the most common symptoms and what to check for each one:
-
-| Symptom | Likely causes and what to check |
-| :---- | :---- |
-| The call returns `200`, but the cart isn't registered. | The `name` field is missing or blank: It's required, and its absence makes payload validation fail without changing the response. Also check `order_form_id`, `phone`, and the phone format, with country code and digits only. |
-| The request body appears to be ignored. | The URL was sent without the trailing slash, and the resulting redirect makes most HTTP clients drop the body. Also check that the `Content-Type: application/json` header is present. |
-| The call fails or is blocked when made from the app or the browser. | Calls from end-user clients aren't supported. Requests with `Content-Type: application/json` originating from a browser or WebView trigger a Cross-Origin Resource Sharing (CORS) preflight check. The integration must originate from your backend. |
-| The cart doesn't appear in the logs. | Check whether the verification period of the automation has already ended, as the entry only appears once it does. Invalid payloads generate no log at all. |
-| The customer received two recovery messages. | The same `order_form_id` was sent with different phone numbers, creating two active records. Send only complete, validated phone numbers. |
-| Cart response time in the store increased. | The notification is on the critical path of the operation. Make the call asynchronous. Reducing call volume mitigates the issue but doesn't eliminate it. |
-| No message is triggered even though the cart was registered. | The order may have been completed within the verification period, or the cart may not meet the eligibility rules of the automation, such as minimum value, cooldown, or phone restrictions. These rules are configured in the automation and don't depend on the payload. |
 
 > ℹ️ This guide covers the merchant side of the integration. The internal settings of the automation, such as verification period, minimum cart value, cooldown, phone restrictions, and other abandonment rules, are defined in the abandoned cart automation configuration and aren't part of the payload you send. See [Understanding abandoned cart recovery trigger rules](https://developers.vtex.com/docs/guides/abandoned-cart-trigger-rules) for the default values and how each rule works.
