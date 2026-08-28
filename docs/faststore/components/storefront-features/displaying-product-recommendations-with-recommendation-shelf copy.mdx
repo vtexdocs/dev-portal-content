@@ -3,11 +3,11 @@ title: "Displaying product recommendations with the Recommendation Shelf"
 excerpt: "Display a carousel of personalized product recommendations from a VTEX Recommendations campaign, configured entirely through the CMS."
 ---
 
-> ⚠️ This feature is in beta, if you have questions about enablement, account configuration, or campaigns, contact [our Support team](https://help.vtex.com/en/support).
+> ⚠️ This feature is in beta. If you have questions about enablement, account configuration, or campaigns, contact [our Support team](https://help.vtex.com/en/support).
 
 In this guide, you'll learn how to enable, configure, and add the Recommendation Shelf to a [FastStore](https://developers.vtex.com/docs/guides/faststore) storefront. The Recommendation Shelf is a native FastStore section that displays a carousel of personalized product recommendations from a [VTEX Recommendations](https://help.vtex.com/en/docs/tutorials/product-recommendations-beta) campaign. Depending on the campaign configuration, the shelf can show recommendations such as cross-sell products, similar items, or top sellers.
 
-The section uses the same product cards as other shelves in your store, keeping the appearance of recommended products consistent across the storefront. It is also registered as a global CMS component, so you can add and configure it on any page through the CMS, including more than one shelf per page.
+The section uses the same product cards as other shelves in your store, keeping the appearance of recommended products consistent across the storefront. It's also a global CMS component, so you can add and configure it on any page through the CMS, including more than one shelf per page.
 
 ![recommendation-shelf-example](https://vtexhelp.vtexassets.com/assets/docs/src/recommendation-shelf-example___9a04be264281918f98e55f5702f421ff.gif)
 
@@ -32,7 +32,7 @@ The VRN (Virtual Resource Name) identifies the recommendation campaign the shelf
 vrn:recommendations:{accountName}:{campaignType}:{campaignId}
 ```
 
-For example: `vrn:recommendations:apiexamples:rec-persona-v2:123e4567-e89b-12d3-a456-426614174000`.
+Example: `vrn:recommendations:apiexamples:rec-persona-v2:123e4567-e89b-12d3-a456-426614174000`.
 
 To get the VRN, follow these steps:
 
@@ -46,43 +46,43 @@ To get the VRN, follow these steps:
 
 ### Step 2: Add and configure the section in the CMS
 
-1. In the VTEX Admin, go to **Storefront > Content > All Content** and open the page where you want to display the shelf, such as the Homepage, a Product Detail Page (PDP), or a Product Listing Page (PLP).
+1. In the VTEX Admin, go to **Storefront > Content > All Content** and open the page where you want to display the shelf, such as the Homepage, a Product Details Page (PDP), or a Product Listing Page (PLP).
 2. Click **Add Section** and select **Recommendation Shelf**.
-3. Turn on **Enable recommendations?**. This field is off by default, and the shelf doesn't fetch or render anything while it's off.
+3. Turn on the **Enable recommendations?** toggle switch. This field is disabled by default, and the shelf doesn't fetch or render anything while the field is disabled.
 4. Paste the campaign VRN from [Step 1](#step-1-get-the-campaign-vrn) in the **Campaign VRN** field. This field is required.
 5. Configure the remaining fields as needed. See [Section fields](#section-fields).
 6. Save and publish the page.
 
-> ℹ️ You can add more than one Recommendation Shelf to the same page. Repeat the steps above for each shelf and give each one its own campaign VRN, for example, to display cross-sell and similar-items shelves on the same product page.
+> ℹ️ You can add more than one Recommendation Shelf to the same page. Repeat the steps above for each shelf and give each one its own campaign VRN, for example, to display cross-sell and similar-item shelves on the same product page.
 
 ## Section fields
 
 The Recommendation Shelf is a native, global section, so there's no schema to create: it ships with `@faststore/core`, and you configure it directly through the CMS form. The table below lists all available fields. Only the **Campaign VRN** is required; the remaining fields are optional and fall back to their default values. Fields prefixed with `›` are nested inside the **Carousel Configuration** and **Product Card Configuration** groups.
 
-| Field | Key | Type | Required | Default | Description |
-| --- | --- | --- | --- | --- | --- |
-| Enable recommendations? | `enableRecommendations` | boolean | No | `false` | Opts the store into the personalization session and allows this shelf to fetch recommendations. While off, no session starts and the shelf renders nothing. |
-| Title | `title` | string | No | — | Overrides the shelf title. When empty, the campaign title is used. If both are empty, no heading is rendered. |
-| Campaign VRN | `campaignVrn` | string | Yes | — | The recommendation campaign VRN. Validated against the pattern described in [Step 1](#step-1-get-the-campaign-vrn). |
-| Items context | `itemsContext` | `PDP` | `CART` | No | `PDP` | Products used as context for the request. In the CMS, the options are **Product page** (`PDP`, default) and **Cart** (`CART`). Applies only to context-based campaigns. |
-| Carousel Configuration | `carouselConfiguration` | object | No | — | Carousel settings. |
-| Items per page (desktop) | `itemsPerPageDesktop` | number | No | `4` | Items per page on desktop. |
-| Items per page (mobile) | `itemsPerPageMobile` | number | No | `2` | Items per page on mobile and tablet (≤ 768px). |
-| Carousel track variant | `variant` | `slide` | `scroll` | No | `scroll` | Carousel navigation mode. In the CMS, the options are **Slide** (`slide`) and **Scroll** (`scroll`, default). |
-| Infinite navigation? | `infiniteMode` | boolean | No | `false` | Enables infinite navigation. Applies only to the `slide` variant. |
-| Navigation controls | `controls` | `complete` | `navigationArrows` | `paginationBullets` | No | `complete` | Which navigation controls are displayed. In the CMS, the options are **Arrows and bullets** (`complete`, default), **Arrows only** (`navigationArrows`), and **Bullets only** (`paginationBullets`). |
-| Product Card Configuration | `productCardConfiguration` | object | No | — | Product card settings. |
-| Show discount badge? | `showDiscountBadge` | boolean | No | `true` | Shows the discount badge on cards. |
-| Cards should be bordered? | `bordered` | boolean | No | `true` | Renders bordered cards. |
+| Field                                       | Key                        | Type       | Required           | Default             | Description                                                                                                                                                                                 |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------- | -------------------------- | ---------- | ------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable recommendations?                     | `enableRecommendations`    | boolean    | No                 | `false`             | Opts the store into the personalization session and allows this shelf to fetch recommendations. While off, no session starts and the shelf renders nothing. |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Title                                       | `title`                    | string     | No                 | —                   | Overrides the shelf title. When empty, the campaign title is used. If both are empty, no heading is rendered.                               |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Campaign VRN                                | `campaignVrn`              | string     | Yes                | —                   | The recommendation campaign VRN. Validated against the pattern described in [Step 1](#step-1-get-the-campaign-vrn).                                         |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Items context                               | `itemsContext`             | `PDP`      | `CART`             | No                  | `PDP`                                                                                                                                                                                       | Products used as context for the request. In the CMS, the options are **Product page** (`PDP`, default) and **Cart** (`CART`). Applies only to context-based campaigns. |                                                                                                                                                                                                                                                                                               |
+| Carousel Configuration                      | `carouselConfiguration`    | object     | No                 | —                   | Carousel settings.                                                                                                                                                          |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Items per page (desktop) | `itemsPerPageDesktop`      | number     | No                 | `4`                 | Items per page on desktop.                                                                                                                                                  |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Items per page (mobile)  | `itemsPerPageMobile`       | number     | No                 | `2`                 | Items per page on mobile and tablet (≤ 768px).                                                                                                           |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Carousel track variant                      | `variant`                  | `slide`    | `scroll`           | No                  | `scroll`                                                                                                                                                                                    | Carousel navigation mode. In the CMS, the options are **Slide** (`slide`) and **Scroll** (`scroll`, default).                                                                           |                                                                                                                                                                                                                                                                                               |
+| Infinite navigation?                        | `infiniteMode`             | boolean    | No                 | `false`             | Enables infinite navigation. Applies only to the `slide` variant.                                                                                           |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Navigation controls                         | `controls`                 | `complete` | `navigationArrows` | `paginationBullets` | No                                                                                                                                                                                          | `complete`                                                                                                                                                                                                                                                    | Which navigation controls are displayed. In the CMS, the options are **Arrows and bullets** (`complete`, default), **Arrows only** (`navigationArrows`), and **Bullets only** (`paginationBullets`). |
+| Product Card Configuration                  | `productCardConfiguration` | object     | No                 | —                   | Product card settings.                                                                                                                                                      |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Show discount badge?                        | `showDiscountBadge`        | boolean    | No                 | `true`              | Shows the discount badge on cards.                                                                                                                                          |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
+| Cards should be bordered?                   | `bordered`                 | boolean    | No                 | `true`              | Renders bordered cards.                                                                                                                                                     |                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                               |
 
 ## Customizing the section
 
-Most stores configure the shelf entirely through the CMS, using the [Section fields](#section-fields). To go beyond those fields, for example, to render a custom product card or change how each recommended product maps to card props, customize the section in code through FastStore's override system. See [Section override](https://developers.vtex.com/docs/guides/faststore/overrides-overview) to customize a native section, or [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) to build your own. CMS configuration takes priority over code-based overrides.
+Most stores configure the shelf entirely through the CMS, using the [Section fields](#section-fields). If you need to go beyond those fields — for example, to render a custom product card or change how each recommended product maps to card props — customize the section in code through FastStore's override system. See [Section override](https://developers.vtex.com/docs/guides/faststore/overrides-overview) to customize a native section, or [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) to build your own. CMS configuration takes priority over code-based overrides.
 
 Beyond the CMS fields, the component accepts two code-level props that aren't exposed in the CMS schema:
 
-- `ProductCard`: a custom card component. Defaults to the core `ProductCard`.
-- `mapProductToProductCard`: maps each recommended product, a normalized `StoreProduct`, into card props. When you provide this function, it fully owns the card props and the default `productCardConfiguration` merge no longer applies.
+- `ProductCard`: A custom card component. Defaults to the core `ProductCard`.
+- `mapProductToProductCard`: Maps each recommended product, a normalized `StoreProduct`, into card props. When you provide this function, it fully owns the card props and the default `productCardConfiguration` merge no longer applies.
 
 The following example illustrates these props.
 
@@ -109,31 +109,31 @@ import { RecommendationShelf } from 'src/components/sections/RecommendationShelf
 
 FastStore derives the campaign type from the `{campaignType}` segment of the VRN. Some campaign types require a product context, meaning the shelf needs one or more anchor products to generate recommendations.
 
-| Campaign | VRN segment | Requires product context |
-| --- | --- | --- |
-| Cross-Sell | `rec-cross-v2` | Yes |
-| Similar Items | `rec-similar-v2` | Yes |
-| Visual Similarity | `rec-visual-v2` | Yes |
-| Next Interactions | `rec-next-v2` | Yes |
-| Personalized | `rec-persona-v2` | No |
-| Top Sellers | `rec-top-items-v2` | No |
-| Last Seen | `rec-last-v2` | No |
-| Search-Based | `rec-search-v2` | No |
+| Campaign          | VRN segment        | Requires product context |
+| ----------------- | ------------------ | ------------------------ |
+| Cross-Sell        | `rec-cross-v2`     | Yes                      |
+| Similar Items     | `rec-similar-v2`   | Yes                      |
+| Visual Similarity | `rec-visual-v2`    | Yes                      |
+| Next Interactions | `rec-next-v2`      | Yes                      |
+| Personalized      | `rec-persona-v2`   | No                       |
+| Top Sellers       | `rec-top-items-v2` | No                       |
+| Last Seen         | `rec-last-v2`      | No                       |
+| Search-Based      | `rec-search-v2`    | No                       |
 
 The **Items context** field determines which products are used as context:
 
 - `PDP` (default): uses the product on the current product detail page. Outside a PDP, there's no product context.
 - `CART`: uses the products currently in the cart, deduplicated. This is intended for cross-sell shelves on the cart page.
 
-Campaigns that require product context skip the request when no context products are available — for example, `PDP` context outside a product detail page, or `CART` context with an empty cart. This avoids returning recommendations without an anchor, and the shelf renders nothing in that case. Campaigns that don't require context ignore the **Items context** field.
+Campaigns that require product context skip the request when no context products are available — for example, `PDP` context on a page that isn't a product page, or `CART` context with an empty cart. This avoids returning recommendations without an anchor, and the shelf renders nothing in that case. Campaigns that don't require context ignore the **Items context** field.
 
 ### Recommended placement
 
 Because the shelf is a global component, you can add it to any CMS page. We recommend matching the placement to the campaign type:
 
-| Page | Recommended campaigns | Items context |
-| --- | --- | --- |
-| Home and institutional pages | Top Sellers, Personalized, Last Seen, Search-Based | Not applicable |
-| Product detail pages | Cross-Sell, Similar Items, Visual Similarity, Next Interactions | `PDP` |
-| Cart page | Cross-Sell | `CART` |
-| Product listing pages | Top Sellers, Personalized, Last Seen, Search-Based | Not applicable |
+| Page                         | Recommended campaigns                                           | Items context  |
+| ---------------------------- | --------------------------------------------------------------- | -------------- |
+| Home and institutional pages | Top Sellers, Personalized, Last Seen, Search-Based              | Not applicable |
+| Product details pages        | Cross-Sell, Similar Items, Visual Similarity, Next Interactions | `PDP`          |
+| Cart page                    | Cross-Sell                                                      | `CART`         |
+| Product listing pages        | Top Sellers, Personalized, Last Seen, Search-Based              | Not applicable |
