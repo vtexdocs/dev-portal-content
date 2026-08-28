@@ -6,9 +6,9 @@ createdAt: "2025-06-11T11:03:41.334Z"
 updatedAt: "2025-09-22T13:45:17.316Z"
 ---
 
-The Seller Opt-in Promotions feature allows sellers to choose whether they want to participate in promotions on the marketplace.
+The Seller Opt-in Promotions feature allows sellers to choose whether they want to participate in promotions on the marketplace. You can create promotions with the opt-in condition in the VTEX Admin or via the [Promotions and Taxes API](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api). Adding or removing participating sellers, however, is not available through the Admin interface and must be performed exclusively via API.
 
->⚠️ Adding or removing sellers is not available through the Admin interface. These actions must be performed exclusively via the [Promotions and Taxes API](https://developers.vtex.com/docs/api-reference/promotions-and-taxes-api).
+> ⚠️ Seller Opt-in is not supported for [White Label sellers](https://help.vtex.com/en/tutorial/white-label-seller--5orlGHyDHGAYciQ64oEgKa) (`sellerType = 2`). Promotions with the opt-in condition do not apply to these sellers. Do not include White Label sellers in the opt-in configuration.
 
 ## Creating promotions
 
@@ -166,6 +166,8 @@ POST
   "operation": "{operation}"
 }'
 ```
+
+> ⚠️ White Label sellers (`sellerType = 2`) are not compatible with Seller Opt-in and should not be included in the `sellerIds` list.
 
 | Field | Required | Type | Description |
 | :---- | :---- | :---- | :---- |
