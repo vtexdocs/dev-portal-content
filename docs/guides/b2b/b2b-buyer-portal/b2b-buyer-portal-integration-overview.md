@@ -29,6 +29,7 @@ This guide provides an overview of the integration capabilities available in B2B
 - [Accounting fields](#accounting-fields)
   - [Default values](#default-values)
 - [Punchout](#punchout)
+- [Checkout extensibility](#checkout-extensibility)
 
 ## Architecture overview
 
@@ -80,20 +81,22 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 
 User provisioning covers the process of creating B2B users in VTEX and linking them to organizational units. This integration is essential when onboarding buyer organizations from external platforms or ERPs and when automating user lifecycle management.
 
-The provisioning flow includes registering storefront credentials in VTEX ID, assigning users to organizational units, granting storefront roles, and saving enriched buyer data in the Shopper entity.
+The provisioning flow includes registering storefront credentials in Authenticator, assigning users to organizational units, granting storefront roles, and saving enriched buyer data in the Shopper entity.
 
 | Capability | Description |
 | :--- | :--- |
-| Create storefront users | Register users in VTEX ID with unique usernames and optional login emails. |
+| Create storefront users | Register users in Authenticator with unique usernames and optional login emails. |
 | Assign users to units | Link storefront users to their respective organizational units. |
 | Assign storefront roles | Grant role-based permissions that control what each user can do. |
 
-The key APIs related to user provisioning are:
+> ℹ️ For the full step-by-step integration, see [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning). For migrating users' legacy passwords from an external platform, see [B2B password migration](https://developers.vtex.com/docs/guides/b2b-password-migration).
 
-- [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api) — Create storefront users and manage authentication identifiers.
-- [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) — Allocate users to organizational units.
+The key endpoints for user provisioning are:
 
-> ℹ️ For the full step-by-step integration, see [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning).
+- `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users) — Register a new storefront user with authentication identifiers.
+- `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) — Create the organizational unit users will belong to.
+- `POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users) — Link a storefront user to their organizational unit.
+- `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users) — Grant role-based storefront permissions to the user.
 
 ### Storefront roles and permissions
 
@@ -223,3 +226,15 @@ Punchout enables integration between external eprocurement systems and the VTEX 
 Use the [Punchout API](https://developers.vtex.com/docs/api-reference/punchout-api) to start and finish punchout login flows using one-time tokens.
 
 > ℹ️ For the full login integration, see [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration). For cart transfer customization, see [Punchout cart integration](https://developers.vtex.com/docs/guides/punchout-cart-integration). For a conceptual overview, see [Punchout](https://developers.vtex.com/docs/guides/punchout).
+
+## Checkout extensibility
+
+Beyond the data and API integrations above, B2B Buyer Portal also lets you customize the Checkout UI itself. Using extension points across all Checkout stages (Cart, Delivery, Review, Payment, and Order Placed), you can render your own components without changing Checkout's core behavior.
+
+| Capability | Description |
+| :--- | :--- |
+| Extension points | Render custom components at defined points across the Checkout journey. |
+| Data layer access | Read and mutate cart, settings, and extension data through dedicated hooks. |
+| Custom styling | Style extensions with CSS Modules, global imports, or CSS variables. |
+
+> ℹ️ For the full technical reference, see [Buyer Portal Checkout Extensibility](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility).
