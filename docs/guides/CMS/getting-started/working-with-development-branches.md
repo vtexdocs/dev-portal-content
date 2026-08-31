@@ -59,6 +59,10 @@ To work with a development branch, you need to have [VTEX CLI](https://developer
 
 5. When the CLI asks which version to associate with the schema, type the full version you want to publish, using a `beta` pre-release tag to avoid affecting the current live schema, for example, `1.7.0-beta.0`.
 
+   ```bash
+    ✔ Schema version to publish (e.g. 1.2.0 or 1.2.0-beta.1, not already in the registry) 1.7.0-beta.0
+    ```
+
 ### Step 2 - Create your development branch
 
 1. Open the VTEX Admin and go to **Storefront > Content > Branches**.
