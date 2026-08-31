@@ -4,7 +4,7 @@ slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
-updatedAt: "2026-07-27T12:00:00.000Z"
+updatedAt: "2026-08-14T12:00:00.000Z"
 seeAlso:
  - "/docs/apps/vtex.delivery-promise-components"
  - "/docs/guides/gathering-delivery-promise-information"
@@ -48,7 +48,26 @@ To enable Delivery Promise in your store, you must meet the following conditions
 
 Contact our [Support](https://support.vtex.com/hc/en-us) team to request the activation of Delivery Promise.
 
-### Step 2 - Display a location selector
+Activation happens in two stages, so you can validate the experience before impacting production traffic:
+
+- **`DpReady`:** The initial state Support applies to your account. In this state, Delivery Promise is available for testing, but production search requests aren't affected. This lets you validate Delivery Promise in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) before applying it to `master`.
+- **`DpLive`:** The production state. After you finish testing, contact [Support](https://support.vtex.com/hc/en-us) again to request promotion from `DpReady` to `DpLive`. From that point on, Search requests using Delivery Promise hashes or ZIP code use Delivery Promise in production.
+
+### Step 2 - Create a development workspace
+
+While your account is in the `DpReady` state, you can validate Delivery Promise without affecting production search traffic by using a development [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace). This lets you validate the full storefront experience (postal code modal, shipping method selector, pickup point selector, and sidebar filters) while `master` continues to serve production traffic without Delivery Promise.
+
+[Create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) by running the following command in your terminal:
+
+```bash
+vtex use {wokspaceName}
+```
+
+> ⚠️ Replace values between curly braces according to your scenario.
+
+Perform the configurations in the next steps in this workspace so you can validate them end-to-end before promoting the account to `DpLive`.
+
+### Step 3 - Display a location selector
 
 To use Delivery Promise, customers must provide a delivery address early in their shopping journey. The [`delivery-promise-components`](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) app exposes Store Framework blocks that collect the location and, optionally, the fulfillment method (delivery vs. pickup or a specific pickup point).
 
@@ -174,7 +193,7 @@ To use Delivery Promise, customers must provide a delivery address early in thei
    | ------ | -------- | ----------- | ---------------------------------- |
    | `mode` | `string` | `"default"` | Display mode: `default` or `icon`. |
 
-### Step 3 - Implement sidebar filters
+### Step 4 - Implement sidebar filters
 
 To display Delivery Promise filters in the search sidebar, configure the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app as described below.
 
@@ -237,3 +256,15 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
    ```
 
 The shipping method facet appears only when `showShippingMethodFacet` is enabled. If you set `availableShippingValues`, the component lists those options; otherwise, it falls back to the default. Other Delivery Promise-related facets behave as usual.
+
+### Step 5 - Validate the experience in the development workspace
+
+[Link](https://developers.vtex.com/docs/guides/vtex-io-documentation-linking-an-app) your theme in the development workspace created in [Step 2 - Create a development workspace](#step-2---create-a-development-workspace) and open the workspace URL (for example, `https://{workspaceName}--{accountName}.myvtex.com`) to validate the Delivery Promise experience end-to-end, including the postal code modal, shipping method selector, pickup point selector, and sidebar filters.
+
+> ⚠️ Replace values between curly braces according to your scenario.
+
+### Step 6 - Make Delivery Promise live
+
+Once you finish testing, contact [Support](https://support.vtex.com/hc/en-us) to promote the account from `DpReady` to `DpLive`, and follow the standard release flow to make your theme changes public. For detailed instructions, see [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
+
+From that point on, Delivery Promise applies to production traffic, and search responses return `deliveryPromiseEnabled: true`.
