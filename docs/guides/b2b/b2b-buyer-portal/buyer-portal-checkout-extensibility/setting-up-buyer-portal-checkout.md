@@ -114,7 +114,7 @@ npx fsp dev store-a
 
 Checkout is available at the `/checkout/cart` path on the URL provided by the FastStore CLI. To access it, open your store’s homepage, add products to the cart, and proceed to the cart. You should see a screen similar to this:
 
-![cart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Checkout/fastcheckout-cart.png)
+![cart](https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/fastcheckout-cart.png)
 
 You can also access Checkout directly by using the local URL and port defined in `faststore.json`. To find it, check the `port` value in the store and project configuration that was added when you ran `yarn fsp create`:
 
