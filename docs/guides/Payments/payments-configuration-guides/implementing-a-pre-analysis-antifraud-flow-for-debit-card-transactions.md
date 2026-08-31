@@ -15,17 +15,17 @@ The following diagram shows a debit card transaction using the pre-analysis anti
 
 ```mermaid
 flowchart LR
-    START(["Debit card<br/>transaction"]) --> PRE{"Analyzing initial risk<br/>(pre-analysis)"}
+    START(["Debit card"]) --> PRE{"Analyzing initial risk"}
     PRE -->|"No inconsistencies"| AUTHORIZING["Authorizing"]
-    AUTHORIZING --> BANK{"Issuing bank<br/>decision"}
+    AUTHORIZING --> BANK{"Issuing bank"}
     BANK -->|"Authorizes"| AUTHORIZED["Authorized"]
     AUTHORIZED --> APPROVED["Approved"]
     APPROVED --> RISK{"Analyzing risk"}
-    RISK -->|"No fraud detected"| RISKAPPROVED["Risk approved"]
-    RISKAPPROVED --> SETTLE["Settlement, Settling,<br/>Settled, Finished"]
+    RISK -->|"No fraud detected"| RISKAPPROVED["Risk Approved"]
+    RISKAPPROVED --> SETTLE["Settlement flow"]
 
     PRE -->|"Inconsistencies found"| CANCELED["Canceled"]
-    BANK -->|"Declines"| CANCELED
+    BANK -->|"Denies"| CANCELED
     RISK -->|"Evidence of fraud"| CANCELED
 ```
 
