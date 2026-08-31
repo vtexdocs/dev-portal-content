@@ -77,4 +77,3 @@ VTEX Community is an ecosystem where our clients and partners can interact, ask 
 [Support](https://help.vtex.com/en/support)
 
 All customers have access to the services provided by our Technical Support team. These specialists are extensively prepared to give you the best experience possible when solving your tickets. To contact them, you need to open a ticket with VTEX support.
-
