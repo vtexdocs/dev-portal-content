@@ -19,6 +19,8 @@ The field accepts the following values:
 
 Compound interest is the most common model in Brazil, while countries such as Argentina prefer simple interest. For a comparison between both models, see [How to choose the type of interest for a payment condition](https://help.vtex.com/en/docs/tutorials/how-to-choose-the-type-of-interest-for-a-payment-condition).
 
+When using simple interest with tax (`1`), set the `interestTax` value for each installment in the `installmentOptions.installments` array. This guide covers changing the `interestRateMethod` field; include the desired `interestTax` values in the same payment rule request.
+
 > ℹ️ The interest type selector in the VTEX Admin offers only compound interest (`0`) and simple interest (`2`). To set either of these values, follow [How to choose the type of interest for a payment condition](https://help.vtex.com/en/docs/tutorials/how-to-choose-the-type-of-interest-for-a-payment-condition). Use the following steps to set simple interest with tax (`1`), which is only available through the API.
 
 ## Before you begin
@@ -62,27 +64,29 @@ curl --request GET \
 
 Replace `{accountName}` with your account name, `{ruleId}` with the ID from the previous step, and `{appKey}` and `{appToken}` with your API key credentials.
 
-A successful request returns the status code `200 OK` and the complete payment condition. The `installmentOptions` object holds the interest settings:
+A successful request returns the status code `200 OK` and the complete payment condition. The interest settings are inside the `installmentOptions` object. The following excerpt shows the relevant fields from the response:
 
 ```json
 {
-  "dueDateType": 0,
-  "interestRateMethod": null,
-  "minimumInstallmentValue": 400,
-  "installments": [
-    {
-      "ruleId": null,
-      "quantity": 12,
-      "value": 0,
-      "interestRate": 25,
-      "isExternalInstallmentService": null,
-      "interestTax": 0
-    }
-  ]
+  "installmentOptions": {
+    "dueDateType": 0,
+    "interestRateMethod": null,
+    "minimumInstallmentValue": 400,
+    "installments": [
+      {
+        "ruleId": null,
+        "quantity": 12,
+        "value": 0,
+        "interestRate": 25,
+        "isExternalInstallmentService": null,
+        "interestTax": 5
+      }
+    ]
+  }
 }
 ```
 
-Save the entire response body, as you need it to build the request in the next step.
+Save the entire response body, including the other payment condition fields, as you need it to build the request in the next step.
 
 ## Step 3: Set the interest rate type
 
