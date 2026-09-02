@@ -6,12 +6,15 @@ createdAt: "2026-07-08T21:34:00.000Z"
 updatedAt: "2026-07-08T21:34:00.000Z"
 excerpt: "Learn how to delete Master Data v1 documents in bulk through the API to reduce stored volume, and how to recover access when an entity was removed from the Master Data v1 interface."
 seeAlso:
+ - "/docs/guides/bulk-deleting-documents-in-master-data"
  - "/docs/guides/extracting-data-from-master-data-with-search-and-scroll"
  - "/docs/guides/pagination-in-the-master-data-api"
  - "/docs/guides/querying-documents-in-master-data-v1"
 ---
 
 This guide explains how to delete documents in [custom data entities](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#custom-data-entities) in Master Data v1 through the [Master Data API v1](https://developers.vtex.com/docs/api-reference/masterdata-api) to reduce stored volume and billing. The flow uses [Scroll documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/scroll) to list document IDs and [Delete document](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-) to remove each record.
+
+> ℹ️ To delete every document matching a filter, use the bulk deletion job instead of the flow below. A single request creates an asynchronous job that removes all matching documents, so you do not have to scroll the entity and delete each record. See [Bulk deleting documents in Master Data](https://developers.vtex.com/docs/guides/bulk-deleting-documents-in-master-data). Use the flow below when you need to delete a specific set of document IDs, or when the entity has no indexed field you can filter on.
 
 > ℹ️ To erase data for one specific customer for privacy reasons, follow [Erasing customer data](https://help.vtex.com/en/tutorial/erasing-customer-data--1R9Fn7A06Ifj4R9YD4JTKU), which uses [Search documents](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search) and [Delete document](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-). This guide does not replace that flow.
 
