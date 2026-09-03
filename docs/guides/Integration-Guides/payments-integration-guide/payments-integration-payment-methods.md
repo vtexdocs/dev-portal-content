@@ -120,7 +120,7 @@ Boleto is a popular payment method in Brazil. It's an official voucher that a cu
 
 Although boletos are easy to pay, the payment can take up to two business days to be processed.
 
-To configure this payment method in a store, see [How to configure a bank slip (boleto)](https://help.vtex.com/en/docs/tutorials/how-to-configure-a-bank-slip).
+To configure this payment method in a store, see [Configuring a Boleto](https://help.vtex.com/docs/tutorials/how-to-configure-a-boleto).
 
 > ℹ️ In the Payment Provider Protocol manifest, this payment method is identified as `BankInvoice`.
 
