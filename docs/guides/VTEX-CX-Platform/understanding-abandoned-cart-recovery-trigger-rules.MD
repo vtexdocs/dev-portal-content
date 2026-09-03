@@ -9,10 +9,10 @@ updatedAt: "2026-08-31T00:00:00.000Z"
 
 The abandoned cart recovery feature of VTEX CX Platform sends a WhatsApp message to a customer who added items to a cart in your store and didn't complete the purchase.
 
-A common question is why the message wasn't sent in a specific situation. This happens because the trigger depends on two independent stages:
+A common question is why the message wasn't sent in a specific situation. This happens because the trigger depends on two sequential stages, and a failure in either of them prevents the message from being sent. The stages are:
 
-1. Your store sends the cart data to CX Platform.
-2. CX Platform evaluates whether to trigger the message.
+1. [Your store sends the cart data to VTEX CX Platform](#stage-1-sending-the-cart-data).
+2. [VTEX CX Platform evaluates whether to trigger the message](#stage-2-evaluating-whether-to-trigger-the-message).
 
 Most abandoned carts stop at the first stage, so they're never evaluated for a trigger.
 
@@ -26,14 +26,14 @@ The trigger goes through two sequential stages:
 
 | Stage | Where it happens | What it decides |
 | :---: | :--- | :--- |
-| 1. Sending the cart data | On your store's pages | Whether the cart data is sent to CX Platform. |
-| 2. Evaluating whether to trigger the message | In CX Platform | Whether the cart is registered and whether the WhatsApp message is triggered. |
+| Sending the cart data | On your store's pages | Whether the cart data is sent to CX Platform. |
+| Evaluating whether to trigger the message | In VTEX CX Platform | Whether the cart is registered and whether the WhatsApp message is triggered. |
 
 If Stage 1 doesn't send the data, Stage 2 doesn't happen. In that scenario, there's no record of the cart in CX Platform, so there's nothing to evaluate, since the cart doesn't appear in reports or in the execution history.
 
 ## Stage 1: Sending the cart data
 
-For the recovery flow to work, your store needs to send the cart data to CX Platform. On the regular website, this is done automatically by a script that runs on your store's pages and watches the customer's cart.
+For the recovery flow to work, your store needs to send the cart data to VTEX CX Platform. On the regular website, this is done automatically by a script that runs on your store's pages and watches the customer's cart.
 
 The script is served at:
 
@@ -49,6 +49,8 @@ The script attempts to send the cart data at the following moments:
 - When the customer adds an item to the cart.
 - When the cart (order form) is updated, with a limit of one attempt every 3 seconds.
 - Every 15 minutes, while the customer's session remains active.
+
+> ℹ️ You can also enable this feature inside the VTEX Admin. To learn more, read the [Introduction to VTEX CX Platform](https://help.vtex.com/docs/tutorials/introduction-to-cx) article.
 
 ### Data required
 
@@ -69,7 +71,7 @@ To get the name and phone number, the script checks the following sources, in th
 
 If none of these sources has the name and the phone number, the script doesn't send the data and the recovery cart message isn't triggered.
 
-### Scenarios of Stage 1
+### Stage 1 scenarios
 
 | Scenario | Status of the cart data |
 | :---: | :--- |
@@ -81,9 +83,7 @@ If none of these sources has the name and the phone number, the script doesn't s
 
 ## Stage 2: Evaluating whether to trigger the message
 
-This stage only happens if Stage 1 sent the data successfully. Here, CX Platform decides whether to register the cart and whether to trigger the WhatsApp message.
-
-### Trigger blockers
+This stage only happens if Stage 1 sent the data successfully. Here, VTEX CX Platform decides whether to register the cart and whether to trigger the WhatsApp message.
 
 The trigger is blocked in the following situations:
 
@@ -99,7 +99,7 @@ The trigger is blocked in the following situations:
 | Cart abandonment time hasn't been reached. | The cart has to be abandoned for longer than its abandonment time to trigger the message. The default time is 60 minutes. |
 | Invalid data | The data sent is invalid. |
 
-### Scenarios of Stage 2
+### Stage 2 scenarios
 
 | Scenario | Status of the recovery cart message trigger |
 | :---: | :--- |
