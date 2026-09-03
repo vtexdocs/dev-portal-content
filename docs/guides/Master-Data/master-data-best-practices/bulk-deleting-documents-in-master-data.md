@@ -9,6 +9,8 @@ excerpt: "Learn how to delete all Master Data documents matching a filter in a s
 
 In this guide, you will learn how to delete every document that matches a filter in a [Master Data](https://developers.vtex.com/docs/guides/master-data-introduction) data entity, using a single asynchronous deletion job. The job is available for both Master Data v1 and Master Data v2 data entities. When you need to remove everything matching one filter, use this job instead of the scroll and per-document `DELETE` loop described in [Deleting documents in Master Data v1](https://developers.vtex.com/docs/guides/deleting-documents-in-master-data-v1).
 
+> ⚠️ This feature is in closed beta, meaning only specific customers can access it now. If you want to implement it in the future, please contact [our Support](https://support.vtex.com/hc/en-us/).
+
 This guide focuses on the create, poll, and confirm flow. For the full operation set, parameters, schemas, and errors, see the API reference in the following table:
 
 | Operation | Master Data v1 | Master Data v2 |
