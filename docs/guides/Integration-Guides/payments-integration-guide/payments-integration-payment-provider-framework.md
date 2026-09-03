@@ -3,69 +3,69 @@ title: "Payment Provider Framework"
 slug: "payments-integration-payment-provider-framework"
 hidden: false
 createdAt: "2022-05-19T16:21:58.633Z"
-updatedAt: "2022-05-19T17:46:05.176Z"
-excerpt: "Learn how the Payment Provider Framework (PPF) lets you develop payment connectors on VTEX IO using a boilerplate app that handles API routes, request/response types, Secure Proxy, and hosting."
+updatedAt: "2026-08-24T00:00:00.000Z"
+excerpt: "Learn how the Payment Provider Framework (PPF) allows you to develop payment connectors on VTEX IO using a boilerplate app that handles API routes, request/response types, Secure Proxy, and hosting."
 ---
-Payment Provider Framework (PPF) is an alternative way to develop payment connectors for your integration through VTEX IO. Since the development is based on a boilerplate of an IO app, a lot of the work is already done to implement the needed feature, including the [API routes](https://developers.vtex.com/docs/api-reference/payment-provider-protocol), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). With PPF, developers also do not need to worry about hosting the connector since it is hosted on the IO infrastructure.
+Payment Provider Framework (PPF) is an alternative way to develop payment connectors through VTEX IO. Because development starts from a VTEX IO app boilerplate, the framework already provides the [API routes](https://developers.vtex.com/docs/api-reference/payment-provider-protocol), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). PPF connectors run on the VTEX IO infrastructure, so you don't need to host the connector yourself.
 
-> ⚠️ To develop a new payment connector, it is mandatory to follow the **prerequisites determined by VTEX**. You can learn about them in the [Implementation prerequisites section of our Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites). For more information on how payment providers can be integrated into VTEX, visit [Integrating a new payment provider on VTEX](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex).
+> ⚠️ Before developing a payment connector, you must meet the prerequisites defined by VTEX. For more information, see [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol) and [Integrating a new payment provider on VTEX](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex).
 
 ## Getting started
 
-### Cloning base repository
+### Cloning the base repository
 
-If you are starting a brand new project, we recommend you to clone the [example repository](https://github.com/vtex-apps/payment-provider-example), as it already has all the basic configuration setup.
+If you're starting a new project, clone the [example repository](https://github.com/vtex-apps/payment-provider-example), which already includes the basic configuration.
 
 ### Updating your project
 
-Once you have the repository code in your workspace, you have to make sure you have all the necessary dependencies and that they are updated. To do so, follow these steps:
+After you have the repository code in your workspace, check that all the necessary dependencies are installed and up to date:
 
 1. Run the following command on your node folder:
 
-```sh
-  yarn add @vtex/payment-provider
-```
+    ```sh
+      yarn add @vtex/payment-provider
+    ```
 
-2. Go to your `package.json` and make sure it has been added as a dependency with the correct version:
+2. In your `package.json`, confirm that the package was added as a dependency with the correct version:
 
-```sh
-  "@vtex/payment-provider": "1.x"
-```
+    ```json
+      "@vtex/payment-provider": "1.x"
+    ```
 
 3. Check in the `package.json` the version of `@vtex/api`, which should be listed in the devDependencies as follows:
 
-```sh
-  "@vtex/api": "6.x"
-```
+    ```json
+      "@vtex/api": "6.x"
+    ```
 
-4. When linking your app, this version might get updated to a later than 6.x version, which is fine. In case it is not listed as a `devDependency`, run the following command on your node folder:
+4. When linking your app, this version might be updated to a version later than 6.x, which is fine. In case it's not listed as a `devDependency`, run the following command on your node folder:
 
-```shell
-  yarn add -D @vtex/api
-```
+    ```sh
+      yarn add -D @vtex/api
+    ```
 
-> ℹ️ If you get any type errors or conflicts in your project related to `@vtex/api`, follow these steps: 1. Delete the `node_modules` folder and the `yarn.lock` file from both your project root and your project's node folder. 2. Run the command `yarn install -f` in both folders.
+    > ℹ️ If you get any type errors or conflicts in your project related to `@vtex/api`, follow these steps: 1. Delete the `node_modules` folder and the `yarn.lock` file from both your project root and your project's node folder. 2. Run the command `yarn install -f` in both folders.
 
-5. In your `manifest.json`, you should check the builders section, in which you must include the `paymentProvider` in its current version. This will add policies to callback the Payment Gateway APIs and also expose Payment Provider protocol routes.
+5. In your `manifest.json`, check the builders section and include `paymentProvider` in its current version. This adds policies to call back the Payment Gateway APIs and exposes the Payment Provider Protocol routes.
 
-```json
-"builders": {
-  "node": "6.x",
-  "paymentProvider": "1.x"
-}
-```
+    ```json
+    "builders": {
+      "node": "7.x",
+      "paymentProvider": "1.x"
+    }
+    ```
 
 ## Next steps
 
-In order to create your service, you must implement your [payment provider connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#payment-provider) and the [service](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#payment-provider-service) itself, as described in the sections below.
+To create your service, implement your [payment provider connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#payment-provider) and the [service](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#payment-provider-service) itself, as described in the sections below.
 
 ## Payment Provider
 
-This is an abstract class with the signatures of the route functions required in your connector, according to the [protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol).
+This is an abstract class with the signatures of the route functions required by your connector, based on the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol).
 
-You must create a new class extending the Payment Provider, which must implement a function for each route. The functions will receive the request body (when there is one) as a parameter and the response must be returned as an object, such as the example shown below:
+Create a new class that extends Payment Provider and implements a function for each route. Each function receives the request body (when there is one) as a parameter and must return the response as an object, as in the following example:
 
-```js
+```ts
 import {
  PaymentProvider,
  // ...
@@ -73,78 +73,78 @@ import {
 
 class YourPaymentConnector extends PaymentProvider {
 
- // ... implementation of the other routes functions
+ // ... implementation of the other route functions
 }
 ```
 
-> ℹ️ Typescript should automatically check for typing errors, but if you need, you can check the requests and responses signatures from the [Payment Flow endpoints in our API Reference](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
+> ℹ️ TypeScript automatically checks for typing errors. You can also review the request and response signatures of the Payment Flow endpoints in the [Payment Provider Protocol API reference](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest).
 
 ### Payment Provider builder
 
-To specify which payment methods the connector will accept to process, follow the steps below:
+To specify which payment methods the connector processes, follow these steps:
 
 1. Create a folder named `paymentProvider` using the following folder structure.
 
-```
-node
-paymentProvider
-manifest.json
-```
+    ```
+    📂 node
+    📂 paymentProvider
+    📄 manifest.json
+    ```
 
 2. Create a file named `configuration.json` inside the `paymentProvider` folder.
 
-```
-node
-paymentProvider
-   |--configuration.json
-manifest.json
-```
+    ```
+    📂 node
+    📂 paymentProvider
+    ┗ 📄configuration.json
+    📄 manifest.json
+    ```
 
 3. Declare the payment methods accepted by your payment provider. This allows them to be automatically implemented by the builder, without the need to declare them in the `/manifest` route.
 
-> ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
+    > ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is new.
 
-```json
-{
-  "name": "MyConnector",
-  "paymentMethods": [
+    ```json
     {
-      "name": "Visa",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "American Express",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "Diners",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "Elo",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "Hipercard",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "Mastercard",
-      "allowsSplit": "onCapture"
-    },
-    {
-      "name": "BankInvoice",
-      "allowsSplit": "onAuthorize"
+      "name": "MyConnector",
+      "paymentMethods": [
+        {
+          "name": "Visa",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "American Express",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "Diners",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "Elo",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "Hipercard",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "Mastercard",
+          "allowsSplit": "onCapture"
+        },
+        {
+          "name": "BankInvoice",
+          "allowsSplit": "onAuthorize"
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
-> ⚠️ The `name` field indicating the name of the connector must be replaced with the name of your provider. This field cannot be filled with a value `"MyConnector"`.
+    > ⚠️ Replace the `name` field value with the name of your provider. Don't keep the `"MyConnector"` placeholder.
 
-> ℹ️ To check which payment methods are currently available in the VTEX Admin, go to Store **Settings > Payment > Settings**, or type **Settings** in the search bar at the top of the page and click the green `+` button. If you want to support a new payment method that is not available, you need to [open a ticket to the VTEX team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) informing them of this new payment method.
+> ℹ️ To check which payment methods are currently available in the VTEX Admin, go to **Store Settings > Payment > Settings**, or type **Settings** in the search bar at the top of the page, then click the green `+` button. To support a payment method that isn't available, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) describing the new payment method.
 
-You can also declare the `customFields` array to allow your payment provider to send specific information. The `type` field can be configured as follows: `text` for non-confidential data; `password` for sensitive and security information (except `appKey` and `AppToken` which should not be sent in this field); and `select` to group a set of custom information.
+You can also declare the `customFields` array to allow your payment provider to send specific information. The `type` field can be configured as follows: `text` for non-confidential data; `password` for sensitive and security information (except `appKey` and `appToken`, which must not be sent in this field); and `select` to group a set of custom information.
 
 ```json
 {
@@ -183,9 +183,9 @@ You can also declare the `customFields` array to allow your payment provider to 
 }
 ```
 
-### Overriding the Manifest route
+### Overriding the manifest route
 
-If you wish to override the default `/manifest` route due to some specific feature of your provider, please [open a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) describing your use case and add special parameters as specified below.
+To override the default `/manifest` route because of a specific feature of your provider, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) describing your use case, and add the parameters shown below.
 
 ```json
 {
@@ -196,20 +196,27 @@ If you wish to override the default `/manifest` route due to some specific featu
   "maxReplicas": 3,
   "routes": {
     "manifest": {
-        "path": "/_v/api/my-connector/manifest",
-        "handler": "vtex.payment-gateway@1.x/providerManifest",
-        "headers": {
-          "x-provider-app": "$appVendor.$appName@$appVersion",
-        },
-        "public": true
-      }
+      "path": "/_v/api/my-connector/manifest",
+      "handler": "vtex.payment-gateway@1.x/providerManifest",
+      "headers": {
+        "x-provider-app": "$appVendor.$appName@$appVersion"
+      },
+      "public": true
+    }
   }
 }
 ```
 
-> ⚠️ The `x-provider-app` parameter must be updated whenever there is an important change (e.g. vtex.payment-provider-example@1.2.3). You can also omit the `handler` and `headers` parameters, however, when performing this procedure you will need to implement them yourself.
+> ⚠️ Update the `x-provider-app` parameter whenever there is a significant change, for example, `vtex.payment-provider-example@1.2.3`. You can omit the `handler` and `headers` parameters, but then you must implement them yourself.
 
-### Available Configurable Options
+The `memory`, `ttl`, `timeout`, `minReplicas`, and `maxReplicas` fields are VTEX IO runtime parameters, not payment-specific settings. Two of them affect how quickly your connector answers the Payment Gateway:
+
+- `ttl`: How long, in minutes, the platform keeps an instance running without receiving new requests. The default is 10 minutes, and the maximum is 60. After this period, the platform shuts down the instance, and the next request starts a new one.
+- `timeout`: How many seconds the platform waits before aborting an incoming request. The default is 10 seconds. This value applies only to requests the platform sends to your connector, not to the calls your connector makes to the provider.
+
+For the full list of parameters and their limits, see [service.json](https://developers.vtex.com/docs/guides/vtex-io-documentation-service).
+
+### Available configurable options
 
 In addition to the manifest fields (`paymentMethods` and `customFields`), the following configuration options are available:
 
@@ -219,31 +226,31 @@ In addition to the manifest fields (`paymentMethods` and `customFields`), the fo
 | `serviceUrl` | Yes | Auto-generated for IO connectors. | A valid URL (can include relative paths). |
 | `implementsOAuth` | No | `false` | Defines whether the provider implements the configuration flow with OAuth authentication support. |
 | `implementsSplit` | No | `false` | Defines whether the provider implements the payment split flow. |
-| `usesProviderHeadersName` | No | `true` | Defines whether the provider will receive appKey and appToken headers as `"x-provider-api-appKey"` and `"x-provider-api-appToken"` respectively. |
+| `usesProviderHeadersName` | No | `true` | Defines whether the provider receives the appKey and appToken headers as `"x-provider-api-appKey"` and `"x-provider-api-appToken"` respectively. |
 | `useAntifraud` | No | `false` | Defines whether anti-fraud providers can be used in the payment provider's transactions. |
-| `usesBankInvoiceEnglishName` | No | `false` | Defines if the Bank Invoice payment method will use the English name (`true`), or the Brazilian name (Boleto Bancário)(`false`). |
-| `usesSecureProxy` | No | `true` | If `true`, the provider can process payment without being [PCI-Certified](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance). The connector will receive a `secureProxyUrl` on `createPayment flow`, and the card encrypted data. If `false`, the provider must be a PCI-Certified entity, and you should send the AOC containing the provided `serviceUrl`. |
-| `requiresDocument` | No | `false` | If `true`, the customer must include the cardholder document on Checkout. A new field will appear on the Checkout form. If `false`, the customer does not need to include a cardholder document. |
-| `acceptSplitPartialRefund` | No | `false` | If `true`, a partial refund will be sent when a payment split occurs. If `false`, the connector couldn't process a partial refund when a payment split occurs. |
-| `usesAutoSettleOptions` | No | `false` | If `true`, the client will be able to choose the behavior of the auto settlement in the VTEX admin configurations of the provider. The available options are as follows: "Use behavior recommended by the payment processor", "Automatic capture immediately after payment authorization", "Automatic capture immediately after anti-fraud analysis", "Scheduled: schedules the automatic capture" and "Deactivated: not automatically captured". If `false`, the connector will not have this dropdown configuration field for auto settlement. More information can be found in the [Custom Auto Capture Feature article](https://developers.vtex.com/docs/guides/custom-auto-capture-feature). |
+| `usesBankInvoiceEnglishName` | No | `false` | Defines whether the Bank Invoice payment method uses the English name (`true`) or the Brazilian name, Boleto Bancário (`false`). |
+| `usesSecureProxy` | No | `true` | If `true`, the provider can process payments without being [PCI-certified](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance). The connector receives a `secureProxyUrl` in the `createPayment` flow, along with the encrypted card data. If `false`, the provider must be PCI-certified, and you must send the AOC containing the provided `serviceUrl`. |
+| `requiresDocument` | No | `false` | If `true`, the customer must include the cardholder document on Checkout. A new field appears on the Checkout form. If `false`, the customer doesn't need to include a cardholder document. |
+| `acceptSplitPartialRefund` | No | `false` | If `true`, VTEX sends a partial refund when a payment split occurs. If `false`, the connector can't process a partial refund when a payment split occurs. |
+| `usesAutoSettleOptions` | No | `false` | If `true`, the merchant can configure the auto-settlement behavior in the provider settings in the VTEX Admin. The available options are as follows: "Use behavior recommended by the payment processor", "Automatic capture immediately after payment authorization", "Automatic capture immediately after anti-fraud analysis", "Scheduled: schedules the automatic capture" and "Deactivated: not automatically captured". If `false`, the connector doesn't display this dropdown for auto settlement. For more information, see [Custom Auto Capture Feature](https://developers.vtex.com/docs/guides/custom-auto-capture-feature). |
 
 ### Request a retry from Payment Gateway
 
-A retry is required to develop your connector according to the [protocol](https://help.vtex.com/en/tutorial/payment-provider-protocol), and for this action, the function below must be invoked:
+Your connector must support retries, as defined by the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol). To request a retry, invoke the following function:
 
-```js
+```ts
 this.retry(request)
 ```
 
-> ℹ️ More information about the retry flow can be found in the [Payment Authorization section of the Payment Provider Protocol article](https://help.vtex.com/en/tutorial/payment-provider-protocol#payment-authorization).
+> ℹ️ For more information about the retry flow, see [Authorization](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows#authorization) in the Purchase Flows guide.
 
 ### Payment Provider Service
 
-This is a class that extends the Service from `@vtex/api`. You must invoke it by passing the developed connector as a property of the first parameter and it will automatically set up the required routes for you.
+This is a class that extends the Service from `@vtex/api`. Invoke it by passing the developed connector as a property of the first parameter. It automatically sets up the required routes.
 
 The following code shows how to do this and find it in the `node/index.ts` file.
 
-```
+```ts
 import {
  PaymentProviderService,
 } from '@vtex/payment-provider'
@@ -264,7 +271,7 @@ By default, the Payment Provider Service declares the following routes:
 
 If your service requires any extra routes, you must declare them separately and use them as parameters:
 
-```js
+```ts
 new PaymentProviderService({
  routes: newRoutes,
  connector: YourPaymentConnector,
@@ -273,7 +280,7 @@ new PaymentProviderService({
 
 If your connector requires any extra clients, you must also pass them in the parameters along with the connector:
 
-```js
+```ts
 new PaymentProviderService({
  clients: NewClients,
  connector: YourPaymentConnector,
@@ -282,16 +289,18 @@ new PaymentProviderService({
 
 ### Using Secure Proxy
 
-For processing credit, debit or co-branded card transactions, integrations must be compliant with [PCI-DSS security standards](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance). For integrations hosted in VTEX IO supporting one of those payment methods, it is mandatory to use Secure Proxy to make calls to a PCI-certified endpoint. You can check more details in the [Secure Proxy article](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
+To process credit, debit, or co-branded card transactions, integrations must comply with [PCI DSS security standards](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance). Integrations hosted on VTEX IO that support these payment methods must use Secure Proxy to call a PCI-certified endpoint. You can check more details in the [Secure Proxy article](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
 
-> ⚠️ The endpoint must be allowed by VTEX Secure Proxy. This must be [requested via ticket](https://help.vtex.com/support) sending the AOC with the wanted endpoint. Currently the Secure Proxy only accepts two Content-Types: You can use `\"application/json\"` or `\"application/x-www-form-urlencoded\"`. Any other Content-Type will not be supported.
+> ⚠️ VTEX Secure Proxy must allow the endpoint. To request this, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) and attach the AOC with the endpoint. Secure Proxy supports only two content types: `application/json` and `application/x-www-form-urlencoded`.
 
-To make calls over our Secure Proxy, you must:
+To make calls over Secure Proxy, follow these steps:
 
-1. Extend the `SecureExternalClient` abstract class. The constructor of the class is made in a way that VTEX allows `'http://my-pci-certified-domain.com'` as one of the trusted destinations by receiving its AOC.
-2. Set the Secure Proxy URL on the request that you want to be proxied. `SecureProxyURL` is received on `createPayment` flow.
+1. Extend the `SecureExternalClient` abstract class. The constructor declares the PCI-certified destination, for example, `'http://my-pci-certified-domain.com'`. VTEX adds this destination to the trusted list after receiving its AOC.
+2. Set the Secure Proxy URL on the request you want to proxy. The connector receives `secureProxyUrl` in the `createPayment` flow.
 
-```js
+> ℹ️ Declare the destination with the `http://` scheme, as shown in the example below. VTEX IO routes outbound requests over HTTP internally and applies TLS when the request leaves the VTEX infrastructure, so Secure Proxy calls still reach the provider over HTTPS. For outbound calls that do not go through Secure Proxy, such as the cancellation, settlement, and refund operations, keep the `http://` scheme and set the `x-vtex-use-https` header to `true`. For more information, see [How to create and use Clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-how-to-create-and-use-clients).
+
+```ts
 import { SecureExternalClient, CardAuthorization } from '@vtex/payment-provider'
 import type {
   InstanceOptions,
@@ -305,19 +314,19 @@ export class MyPCICertifiedClient extends SecureExternalClient {
   }
 
   public myPCIEndpoint = (cardRequest: CardAuthorization) => {
-  return this.http.post(
-   'my-pci-endpoint',
+    return this.http.post(
+      'my-pci-endpoint',
       {
-    holder: cardRequest.holderToken,
-    number: cardRequest.numberToken,
-     expiration: cardRequest.expiration,
-     csc: cardRequest.cscToken
+        holder: cardRequest.holderToken,
+        number: cardRequest.numberToken,
+        expiration: cardRequest.expiration,
+        csc: cardRequest.cscToken,
       },
       {
-    headers: {
-         Authorization: 'my-pci-endpoint-authorization',
+        headers: {
+          Authorization: 'my-pci-endpoint-authorization',
         },
-    secureProxy: cardRequest.secureProxyUrl,
+        secureProxy: cardRequest.secureProxyUrl,
       } as RequestConfig
     )
   }
@@ -326,49 +335,50 @@ export class MyPCICertifiedClient extends SecureExternalClient {
 
 ## Placing an order with your new connector
 
-Now that you have a new connector ready to be used, you can test it entirely in the production flow using your store's Checkout.
+After your connector is ready, you can test it in the production flow using your store's Checkout.
 
-A prerequisite for this procedure is to have products for sale at your store for testing. To place an order with your new connector:
+> ℹ️ Beta versions always use a `ttl` of 10 minutes, regardless of the value declared in `service.json`. Only the most recent stable version of the app honors a custom `ttl`. While testing, expect the first request after an idle period to take longer because the platform must start a new instance.
 
-1. Launch a beta version of your connector. E.g.: `vtex.payment-provider-test@0.1.0-beta`. If you need, check the [Making your app publicly available article](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
-2. Install the beta version on `master` workspace. Wait for around 1 hour.
-3. Go to `https://{account}.myvtex.com/admin/affiliations/connector/Vtex.PaymentGateway.Connectors.PaymentProvider.PaymentProviderConnector_{connector-name}/`. Replace `{account}` for the name of the account you want to test on and `{connector-name}` for the name of your connector. The format of the name is: `${vendor}-${appName}-${appMajor}` (e.g.: `vtex-payment-provider-example-v1`).
+Before starting, confirm that your store has products available for sale. To place an order with your new connector, follow these steps:
+
+1. Launch a beta version of your connector, for example, `vtex.payment-provider-test@0.1.0-beta`. For more information, see the [Making your app publicly available article](https://developers.vtex.com/docs/guides/vtex-io-documentation-10-making-your-app-publicly-available#launching-a-new-version) to learn how to create a beta version of your app.
+2. Install the beta version on the `master` workspace and wait about one hour.
+3. Go to `https://{account}.myvtex.com/admin/affiliations/connector/Vtex.PaymentGateway.Connectors.PaymentProvider.PaymentProviderConnector_{connector-name}/`. Replace `{account}` with the name of the account you want to test on, and `{connector-name}` with the name of your connector. The format of the name is `${vendor}-${appName}-${appMajor}`, for example, `vtex-payment-provider-example-v1`.
 
    ![Payment affiliation configuration](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/payments-integration-guide/payments-integration-payment-provider-framework-0_370.png)
 
-4. In **Payment Control**, activate the test environment by clicking **Enable test mode**. A new field called **Workspace** will appear.
-5. Set the **Workspace** as you wish. You can leave it as `master` if it is the workspace you want to test on.
+4. In **Payment Control**, activate the test environment by clicking **Enable test mode**. A new **Workspace** field appears.
+5. Set the **Workspace** field. You can leave it as `master` if that is the workspace you want to test on.
 
    ![Payment affiliation configuration test](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Integration-Guides/payments-integration-guide/payments-integration-payment-provider-framework-1_375.png)
 
-8. Configure a [payment condition](https://help.vtex.com/en/tutorial/how-to-configure-payment-conditions--tutorials_455) with your newly created connector and wait 10 minutes to appear on Checkout.
-9. Make a purchase with the payment condition you configured with your connector.
-10. After completing all transaction testing in the beta version of the connector, [release and deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version) a stable version of your connector (e.g.: vtex.payment-provider-test@0.1.0). This stable version must be sent to the [homologation process](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#7-homologation-and-go-live).
+6. Configure a [payment condition](https://help.vtex.com/en/docs/tutorials/how-to-configure-payment-conditions) with your new connector, then wait 10 minutes for it to appear on Checkout.
+7. Make a purchase with the payment condition you configured with your connector.
+8. After completing all transaction testing in the beta version of the connector, [release and deploy](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-new-app-version-publicly-available#step-6---deploying-the-app-stable-version) a stable version of your connector, for example, `vtex.payment-provider-test@0.1.0`. Submit this stable version to the [homologation process](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#7-homologation-and-go-live).
 
 ## Making your connector available to process sales
 
-> ⚠️ To process sales with your connector on all VTEX accounts, make sure to send the `billingOptions` field indicated as `free` in the manifest. If you want to restrict the use of the connector to only a few specific accounts, the `billingOptions` field must also be sent as `free`, but the payments team must be notified via a [support ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) to enable the connector only for the desired accounts. More information about this field can be found in the [Billing Options article](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
+> ⚠️ To process sales with your connector on all VTEX accounts, send the `billingOptions` field as `free` in the manifest. If you want to restrict the use of the connector to only a few specific accounts, send the `billingOptions` field as `free` as well, and [open a support ticket](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) asking the payments team to enable the connector only for those accounts. For more information about this field, see [Billing Options](https://developers.vtex.com/docs/guides/vtex-io-documentation-billing-options).
 
-The publication process is made via the [app store](https://apps.vtex.com/). More info on how to do that can be found in the [Submitting your app to the VTEX App Store article](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
+Publication happens through the [VTEX App Store](https://apps.vtex.com/). For more information, see [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
 
-After that, you need to [open a ticket to the VTEX support team](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en) informing them that the integration was completed. However, before opening the ticket, make sure you have the following information:
+After that, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) stating that the integration is complete. Include the following information, which is specific to PPF connectors:
 
-- **Connector App Name**: Name of the PPF connector app. Use the following format: `"vendor.appname"`. For example: `partnername.connector-partnername`. These can be found in the `manifest.json` file.
-- **Partner contact**: partner email address in case we need to communicate changes and new features of our protocol.
-- **Production Service Provider Endpoint**: the base path that will be used for API calls to the provider, e.g. `https://vtex.pagseguro.com`. It has to respond to the route `{{serviceUrl}}/manifest` . This endpoint must be publicly available.
-- **Allowed Accounts**: describe which VTEX accounts from this provider will be available (all accounts or specific accounts).
-- **New Payment methods**: inform if this connector supports a payment method that is not yet available in the VTEX Admin.
-- **New Payment method purchase flow**: if a "New Payment method" is supported, inform whether it works with Redirect or Payment App. For more information, access the [Purchase Flows article](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
+- **Connector app name**: The name of the PPF connector app, in the `vendor.appname` format, for example, `partnername.connector-partnername`. You can find it in the `manifest.json` file.
+- **Allowed accounts**: Which VTEX accounts can use this connector, either all accounts or specific accounts.
+- **New payment method**: Specify whether the connector supports a payment method that is not yet available in the VTEX Admin. If it does, specify whether the method works with Redirect or the Payment App. For more information, see [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
 
-The SLA required for the payment team to carry out homologation is 30 days.
+For the complete list of information required in the ticket, see [Payment Provider Homologation](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation).
 
-After the homologation step is complete, your app needs to be installed in the account that wants to use it. Then, a new affiliation will be available to configure it.
+The payment team completes the homologation within 30 days.
+
+After homologation, install the app in the account that will use it. A new affiliation then becomes available for configuration.
 
 ## Updating and testing new configurations for an already published connector
 
-To change and test new settings in an already published connector, you must:
+To change and test new settings in a published connector, follow these steps:
 
 1. Apply the new settings to the last created beta version of your connector.
 2. Follow the same procedures described in the [Placing an order with your new connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#placing-an-order-with-your-new-connector) section to verify that the beta version of your connector is working correctly after applying the new settings.
-3. Create and submit a new stable version of your connector (containing the same modifications as the beta version) to the homologation process. E.g.: vtex.payment-provider-test@0.1.1.
+3. Create and submit a new stable version of your connector (containing the same modifications as the beta version) to the homologation process, for example, `vtex.payment-provider-test@0.1.1`.
 4. Publish it as indicated in the [Making your connector available to process sales](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#making-your-connector-available-to-process-sales) section.
