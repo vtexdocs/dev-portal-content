@@ -7,7 +7,7 @@ updatedAt: "2026-08-11T00:00:00.000Z"
 excerpt: "Learn about the payment method families supported by VTEX and the identifiers used to declare them in the Payment Provider Protocol."
 ---
 
-Payment methods are the different ways a customer can pay for a product or a service. VTEX supports the following types of payment methods:
+Payment methods are the different ways a customer can pay for a product or a service. VTEX supports the following types:
 
 - Credit cards
 - Debit cards
@@ -18,17 +18,17 @@ Payment methods are the different ways a customer can pay for a product or a ser
   - Private label
   - Co-branded
 - Regional payments
-  - Instant payments (Pix/Brazil)
-  - Bank invoice (boleto bancário/Brazil)
+  - Instant payments (Pix from Brazil)
+  - Boleto (Brazil)
   - PSE (Colombia)
 
-## Checking which payment methods are available
+## Checking available payment methods
 
-The list above covers the payment method families supported by the platform. It is not an exhaustive list of what a specific store can offer. Availability depends on the store's country, the payment providers connected to the account, and the account configuration.
+The list above covers the payment method families supported by the platform. It's not an exhaustive list of what a specific store can offer. Availability depends on the store's country, the payment providers connected to the account, and the account configuration.
 
 To find out which payment methods an account can offer:
 
-- Check the [list of payment providers by country](https://help.vtex.com/en/docs/tutorials/list-of-payment-providers-by-country) to see which providers operate in a specific market and which methods they support.
+- Check the [list of payment providers by country](https://help.vtex.com/en/docs/tutorials/list-of-payment-providers-by-country) to see the providers that operate in a specific market and the methods they support.
 - Review the payment providers configured in the Payments module of the VTEX Admin. For more information, see [Register payment and anti-fraud providers](https://help.vtex.com/en/docs/tutorials/registering-gateway-affiliations).
 
 Payment methods also vary from country to country. Before integrating with VTEX, check whether the methods your system processes are compatible with the platform.
@@ -45,14 +45,14 @@ Use the following identifiers in the `name` field:
 | Mastercard | `Mastercard` |
 | American Express | `American Express` |
 | Pix | `Pix` |
-| Bank invoice (boleto bancário) | `BankInvoice` |
+| Boleto | `BankInvoice` |
 | Co-branded | `Cobranded` |
 | Private label | `Privatelabels` |
-| Notes payable (Promissory) | `Promissories` |
+| Notes payable (promissory) | `Promissories` |
 
-> ⚠️ For custom payments, use only the supported method types (`Cobranded`, `Privatelabels`, or `Promissories`) in the `name` field. Do not use the commercial name of the custom payment, such as "Colombian Bank Promissory".
+> ⚠️ For custom payments, use only the supported method types (`Cobranded`, `Privatelabels`, or `Promissories`) in the `name` field. Do not use the business name of the custom payment, such as "Colombian Bank Promissory".
 
-Cash is not declared through the Payment Provider Protocol. It is configured directly in the VTEX Sales App.
+Cash isn't declared through the Payment Provider Protocol. It's configured directly in VTEX Sales App.
 
 For the full request and response schemas, see the [Payment Provider Protocol](https://developers.vtex.com/docs/api-reference/payment-provider-protocol) API reference. To learn how each method behaves during authorization, settlement, and cancellation, see [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
 
@@ -62,7 +62,7 @@ Financial institutions can offer a credit limit to their account holders. Custom
 
 Credit cards operate through card networks, which manage credit card operations. Mastercard, Visa, American Express, and Diners are examples of card networks. For more information, see [Credit card payment flow](https://help.vtex.com/en/docs/tracks/credit-card-payment-flow).
 
-Credit cards can also support payment in installments, depending on the payment condition configured in the store. In the Payment Provider Protocol, the number of installments is sent in the `installments` field of the Create Payment request.
+Credit cards can also support installments, depending on the payment condition configured in the store. In the Payment Provider Protocol, the number of installments is sent in the `installments` field of the Create Payment request.
 
 ## Debit cards
 
@@ -70,29 +70,29 @@ A debit card is offered by a financial institution to its account holders. Purch
 
 Like credit cards, debit cards also operate through card networks.
 
-For configuration examples, see [Setting up Visa Debit](https://help.vtex.com/en/docs/tutorials/how-to-set-up-visa-debit) and [Setting up debit direct sale](https://help.vtex.com/en/docs/tracks/setting-up-debit-direct-sale) in the VTEX Sales App.
+For configuration examples, see [Setting up Visa Debit](https://help.vtex.com/en/docs/tutorials/how-to-set-up-visa-debit) and [Setting up debit direct sale](https://help.vtex.com/en/docs/tracks/setting-up-debit-direct-sale) in VTEX Sales App.
 
 ## Cash
 
-Cash payments can be enabled in the VTEX Sales App. After you configure and enable this payment method, cash payments can be received at a brick-and-mortar store or on delivery. For more information, see [Configuring cash payments through VTEX Sales App](https://help.vtex.com/en/docs/tracks/configuring-cash-payments-through-vtex-sales-app).
+Cash payments can be enabled in VTEX Sales App. After you configure and enable this payment method, cash payments can be received at a physical store or on delivery. For more information, see [Configuring cash payments through VTEX Sales App](https://help.vtex.com/en/docs/tracks/configuring-cash-payments-through-vtex-sales-app).
 
 ## Digital wallets
 
-A digital wallet, also called an e-wallet, stores the customer's payment credentials so they can pay without entering card data at checkout. Apple Pay, Google Pay, and Samsung Pay are examples of digital wallets supported by VTEX.
+A digital wallet, also called an e-wallet, stores the customer's payment credentials so they can pay without entering their card information at checkout. Apple Pay, Google Pay, and Samsung Pay are examples of digital wallets supported by VTEX.
 
 For an overview of how digital wallets work, see [What is an e-wallet](https://help.vtex.com/en/docs/tutorials/what-is-an-e-wallet) and the [Digital wallet (e-wallet)](https://help.vtex.com/en/docs/tracks/digital-wallet-e-wallet) track.
 
-If you are building a connector that handles wallet transactions, see [Google Pay: processing information for payment providers and anti-fraud](https://developers.vtex.com/docs/guides/google-pay-processing-information-for-payment-providers-and-anti-fraud) and [Setting up merchant ID in Apple Pay](https://developers.vtex.com/docs/guides/setting-up-merchant-id-in-apple-pay).
+If you're building a connector that handles wallet transactions, see [Google Pay: processing information for payment providers and anti-fraud](https://developers.vtex.com/docs/guides/google-pay-processing-information-for-payment-providers-and-anti-fraud) and [Setting up merchant ID in Apple Pay](https://developers.vtex.com/docs/guides/setting-up-merchant-id-in-apple-pay).
 
 ## Custom payments
 
-Custom payments are payment methods that do not follow standard market patterns. Their behavior is specific to each scenario where they apply.
+Custom payments are payment methods that don't follow standard market patterns. Their behavior is specific to each scenario where they apply.
 
-VTEX supports three custom payment types: Notes payable, Private label, and Co-branded.
+VTEX supports three custom payment types: notes payable, private label, and co-branded.
 
 ### Notes payable
 
-The seller must manually approve each payment registered in the platform. After approval, the transaction proceeds normally. Notes payable payments are mostly used to facilitate cash payments.
+The seller must manually approve each payment recorded on the platform. After approval, the transaction proceeds normally. Notes payable payments are mostly used to facilitate cash payments.
 
 For configuration steps, see [Setting up payments with Notes payable](https://help.vtex.com/docs/tutorials/setting-up-payments-with-notes-payable).
 
@@ -110,17 +110,17 @@ For configuration steps, see [Setting up payments with store card (co-branded)](
 
 ## Regional payments
 
-### Instant payments (Pix/Brazil)
+### Instant payments (Pix from Brazil)
 
-Pix is the instant payments ecosystem implementation led by the Central Bank of Brazil (BCB) to enable online money transfers with reduced costs, increased safety, and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account, without the need for intermediaries, resulting in lower transaction costs. For more information, see [Pix: Instant Payments in Brazil](https://developers.vtex.com/docs/guides/payments-integration-pix-instant-payments-in-brazil).
+Pix is the instant payment ecosystem implementation led by the Central Bank of Brazil (BCB) to enable online money transfers with reduced costs, increased safety, and 24/7 availability. Transfers occur directly from the payer’s account to the payee’s account without intermediaries, resulting in lower transaction costs. For more information, see [Pix: Instant Payments in Brazil](https://developers.vtex.com/docs/guides/payments-integration-pix-instant-payments-in-brazil).
 
-### Bank invoice (boleto bancário/Brazil)
+### Boleto (Brazil)
 
-The boleto bancário is a popular payment method in Brazil. It is an official voucher that a customer can pay in cash at more than 200,000 locations, such as banks, post offices, and supermarkets, or electronically through internet banking. For more information, see [Bank invoice payment flow](https://help.vtex.com/en/docs/tutorials/boleto-bancario-registrado-fluxo-basico-de-um-pagamento).
+Boleto is a popular payment method in Brazil. It's an official voucher that a customer can pay in cash at more than 200,000 locations, such as banks, post offices, and supermarkets, or electronically through internet banking. For more information, see [Bank invoice (boleto) payment flow](https://help.vtex.com/en/docs/tutorials/boleto-bancario-registrado-fluxo-basico-de-um-pagamento).
 
-Although bank invoices are easy to pay, the payment can take up to two business days to be processed.
+Although boletos are easy to pay, the payment can take up to two business days to be processed.
 
-To configure this payment method in a store, see [How to configure a bank slip](https://help.vtex.com/en/docs/tutorials/how-to-configure-a-bank-slip).
+To configure this payment method in a store, see [How to configure a bank slip (boleto)](https://help.vtex.com/en/docs/tutorials/how-to-configure-a-bank-slip).
 
 > ℹ️ In the Payment Provider Protocol manifest, this payment method is identified as `BankInvoice`.
 
