@@ -403,15 +403,12 @@ When your agent is deployed on the VTEX CX Platform (Weni), credentials are secu
 > ```
 > 
 > After running the command `weni project push agent_definition.yaml` to upload your agent to your project on the VTEX CX Platform (Weni), you'll find your agent in the Agent Builder gallery. When you select and assign this agent, you'll be prompted to enter the actual values for the credentials you defined (in this case, the API Key).
-
-
-> ![Agents Gallery](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-gallery.png)
-```suggestion
-> ![Agents Gallery](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-gallery.png)
-
+>
+> ![Agents Gallery](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-CX-Platform/CLI/assets/agent-builder-gallery.png)
+>
 > Enter you credentials:
-
-> ![Assign Agent](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-assign.png)
+>
+> ![Assign Agent](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-CX-Platform/CLI/assets/agent-builder-assign.png)
 
 #### Security in Production
 
