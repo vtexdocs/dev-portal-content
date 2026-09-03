@@ -1,6 +1,6 @@
 ---
-title: "Bulk deleting documents in Master Data"
-slug: "bulk-deleting-documents-in-master-data"
+title: "Deleting documents in bulk in Master Data"
+slug: "deleting-documents-in-bulk-in-master-data"
 hidden: false
 createdAt: "2026-09-04T12:00:00.000Z"
 updatedAt: "2026-09-04T12:00:00.000Z"
@@ -20,6 +20,8 @@ This guide focuses on the create, poll, and confirm flow. For the full operation
 
 > ❗ This action cannot be undone. Deleted documents are permanently lost. Confirm how many documents your filter matches before you create the job, so you can compare that number with the `DocumentsDeleted` value at the end.
 
+<!-- -->
+
 > ℹ️ To erase data for one specific customer for privacy reasons, follow [Erasing customer data](https://help.vtex.com/en/docs/tutorials/erasing-customer-data), which uses search and per-document deletion. This guide does not replace that flow.
 
 ## Before you begin
@@ -28,8 +30,8 @@ This guide focuses on the create, poll, and confirm flow. For the full operation
 - The `filter` field is required and uses the same syntax as the data entity search filter. Wildcards aren't allowed.
 - Every field in the filter must be indexed. Internal fields such as `createdIn` are already indexed. Filtering on a custom field also requires the `schema` that declares it as indexed.
 - In Master Data v1, a field is indexed when it exists in the data entity and has `isSearchable` enabled. In Master Data v2, a custom field is indexed when it is listed in the `v-indexed` array of that [schema](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2).
-- Only one deletion job can be active per account and data entity at a time. While a job is `InProgress`, creating another job for the same data entity returns `409`. Follow the existing job as described in [step 2](#2-follow-the-job-status) and send the new request once that job reaches `Success` or `Failed`. If a job appears stuck, Master Data automatically allows a new job for that data entity after 12 hours.
-- Before you create the job, search the data entity with the same filter criteria and schema, record the number of matching documents as your baseline count, and save a few of the returned document IDs. You'll use these in [step 3](#3-confirm-the-result). To learn the query patterns and count how many documents a filter matches, see [Extracting data from Master Data with search and scroll](https://developers.vtex.com/docs/guides/extracting-data-from-master-data-with-search-and-scroll).
+- Only one deletion job can be active per account and data entity at a time. While a job is `InProgress`, creating another job for the same data entity returns `409`. Follow the existing job as described in [step 2](#step-2---follow-the-job-status) and send the new request once that job reaches `Success` or `Failed`. If a job appears stuck, Master Data automatically allows a new job for that data entity after 12 hours.
+- Before you create the job, search the data entity with the same filter criteria and schema, record the number of matching documents as your baseline count, and save a few of the returned document IDs. You'll use these in [step 3](#step-3---confirm-the-deletion-result). To learn the query patterns and count how many documents a filter matches, see [Extracting data from Master Data with search and scroll](https://developers.vtex.com/docs/guides/extracting-data-from-master-data-with-search-and-scroll).
 
 ## How it works
 
@@ -44,17 +46,19 @@ sequenceDiagram
   participant APP as Integration
   participant MD as Master Data API
 
-  APP->>MD: POST Create bulk document deletion job
+  APP->>MD: POST Create bulk<br>document deletion job
   MD-->>APP: 202 Accepted (JobId)
-  loop Until Status is Success or Failed
-    APP->>MD: GET Get bulk document deletion job status
-    MD-->>APP: 200 OK (Status, DocumentsDeleted)
+  loop Until Success or Failed
+    APP->>MD: GET Get bulk document<br>deletion job status
+    MD-->>APP: 200 OK (Status,<br>DocumentsDeleted)
   end
-  APP->>MD: Search documents / Get document
+  APP->>MD: Search documents /<br>Get document
   MD-->>APP: Empty result
 ```
 
-## 1. Create the deletion job
+## Instructions
+
+### Step 1 - Create the deletion job
 
 Send a `POST` request to [Create bulk document deletion job](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/delete), or to the [Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#post-/api/dataentities/-acronym-/delete) equivalent.
 
@@ -85,7 +89,7 @@ A successful request returns HTTP status `202 Accepted`:
 
 Save the `JobId`. It's the only way to track the operation.
 
-## 2. Follow the job status
+### Step 2 - Follow the job status
 
 Send a `GET` request to [Get bulk document deletion job status](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/delete/jobs/-jobId-), or to the [Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/delete/jobs/-jobId-) equivalent, using the `JobId` from step 1.
 
@@ -101,14 +105,14 @@ Poll until `Status` is `Success` or `Failed`. Example response for a finished jo
 Each status requires a different action:
 
 - `InProgress`: The job is running. Keep polling. Don't submit another job for this data entity.
-- `Success`: The job deleted all matching documents. Compare `DocumentsDeleted` with your baseline count, as described in [step 3](#3-confirm-the-result).
+- `Success`: The job deleted all matching documents. Compare `DocumentsDeleted` with your baseline count, as described in [step 3](#step-3---confirm-the-deletion-result).
 - `Failed`: Processing stopped after the job exhausted its internal retries. Deletion is partial. Search the data entity with the same filter to see which documents remain, then create a new job with that filter to finish the deletion. For errors that reject a new job, see [Create bulk document deletion job](https://developers.vtex.com/docs/api-reference/master-data-api-v2#post-/api/dataentities/-dataEntityName-/delete) or the [Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#post-/api/dataentities/-acronym-/delete) equivalent.
 
 > ⚠️ `Failed` doesn't mean that nothing was deleted. Documents from batches the job already completed are permanently gone.
 
 The status response may include fields beyond `Status` and `DocumentsDeleted`. Ignore unexpected fields. Don't treat them as errors.
 
-## 3. Confirm the result
+### Step 3 - Confirm the deletion result
 
 1. Read `DocumentsDeleted` from the job status response and compare it with the baseline count you recorded before creating the job.
 2. Search the data entity again with the same filter criteria and schema, using [Search documents](https://developers.vtex.com/docs/api-reference/master-data-api-v2#get-/api/dataentities/-dataEntityName-/search) or the [Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#get-/api/dataentities/-acronym-/search) equivalent. It should return no documents.
@@ -129,7 +133,7 @@ After the documents are deleted, they are no longer counted in stored volume.
 | `400` | `The field '{field}' does not exist for the data entity '{entity}'` | Correct the field name in the filter. |
 | `400` | `The field {field} of the data entity {entity} is not indexed (isSearchable is not enabled)...` | Enable `isSearchable` on the field and wait for reindexing, or use another indexed field. |
 | `400` | `Invalid data entity name` | Correct the data entity name in the URL. Invalid characters are rejected. |
-| `409` | `Bulk deletion job creation failed for {entity}`. A job is already `InProgress` for this account and data entity. | Follow the existing job as described in step 2 and send the request again once it reaches a terminal state. If a job appears stuck, the lock is released automatically after 12 hours. |
+| `409` | `Bulk deletion job creation failed for {entity}`. A job is already `InProgress` for this account and data entity. | Follow the existing job as described in [step 2](#step-2---follow-the-job-status) and send the request again once it reaches a terminal state. If a job appears stuck, the lock is released automatically after 12 hours. |
 | `415` | No request body was sent. | Send a JSON body with the `Content-Type: application/json` header. |
 | `5xx` | Transient infrastructure failure during job creation. | No residual state is left behind. Send the request again. |
 
