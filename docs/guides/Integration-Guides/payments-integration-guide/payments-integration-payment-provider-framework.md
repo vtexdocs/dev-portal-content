@@ -4,17 +4,17 @@ slug: "payments-integration-payment-provider-framework"
 hidden: false
 createdAt: "2022-05-19T16:21:58.633Z"
 updatedAt: "2026-08-24T00:00:00.000Z"
-excerpt: "Learn how the Payment Provider Framework (PPF) lets you develop payment connectors on VTEX IO using a boilerplate app that handles API routes, request/response types, Secure Proxy, and hosting."
+excerpt: "Learn how the Payment Provider Framework (PPF) allows you to develop payment connectors on VTEX IO using a boilerplate app that handles API routes, request/response types, Secure Proxy, and hosting."
 ---
-Payment Provider Framework (PPF) is an alternative way to develop payment connectors through VTEX IO. Because development starts from a VTEX IO app boilerplate, the framework already provides the [API routes](https://developers.vtex.com/docs/api-reference/payment-provider-protocol), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). PPF connectors run on the VTEX IO infrastructure, so you do not need to host the connector yourself.
+Payment Provider Framework (PPF) is an alternative way to develop payment connectors through VTEX IO. Because development starts from a VTEX IO app boilerplate, the framework already provides the [API routes](https://developers.vtex.com/docs/api-reference/payment-provider-protocol), the types used in the request and response bodies, and the [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy). PPF connectors run on the VTEX IO infrastructure, so you don't need to host the connector yourself.
 
 > ⚠️ Before developing a payment connector, you must meet the prerequisites defined by VTEX. For more information, see [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol) and [Integrating a new payment provider on VTEX](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex).
 
 ## Getting started
 
-### Cloning base repository
+### Cloning the base repository
 
-If you are starting a new project, clone the [example repository](https://github.com/vtex-apps/payment-provider-example), which already includes the basic configuration.
+If you're starting a new project, clone the [example repository](https://github.com/vtex-apps/payment-provider-example), which already includes the basic configuration.
 
 ### Updating your project
 
@@ -38,7 +38,7 @@ After you have the repository code in your workspace, check that all the necessa
       "@vtex/api": "6.x"
     ```
 
-4. When linking your app, this version might get updated to a later than 6.x version, which is fine. In case it is not listed as a `devDependency`, run the following command on your node folder:
+4. When linking your app, this version might be updated to a version later than 6.x, which is fine. In case it's not listed as a `devDependency`, run the following command on your node folder:
 
     ```sh
       yarn add -D @vtex/api
@@ -61,9 +61,9 @@ To create your service, implement your [payment provider connector](https://deve
 
 ## Payment Provider
 
-This is an abstract class with the signatures of the route functions required in your connector, according to the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol).
+This is an abstract class with the signatures of the route functions required by your connector, based on the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol).
 
-Create a new class extending the Payment Provider, implementing a function for each route. Each function receives the request body (when there is one) as a parameter and must return the response as an object, as in the following example:
+Create a new class that extends Payment Provider and implements a function for each route. Each function receives the request body (when there is one) as a parameter and must return the response as an object, as in the following example:
 
 ```ts
 import {
@@ -73,7 +73,7 @@ import {
 
 class YourPaymentConnector extends PaymentProvider {
 
- // ... implementation of the other routes functions
+ // ... implementation of the other route functions
 }
 ```
 
@@ -102,7 +102,7 @@ To specify which payment methods the connector processes, follow these steps:
 
 3. Declare the payment methods accepted by your payment provider. This allows them to be automatically implemented by the builder, without the need to declare them in the `/manifest` route.
 
-    > ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
+    > ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is new.
 
     ```json
     {
@@ -140,9 +140,9 @@ To specify which payment methods the connector processes, follow these steps:
     }
     ```
 
-    > ⚠️ Replace the `name` field value with the name of your provider. Do not keep the `"MyConnector"` placeholder.
+    > ⚠️ Replace the `name` field value with the name of your provider. Don't keep the `"MyConnector"` placeholder.
 
-> ℹ️ To check which payment methods are currently available in the VTEX Admin, go to **Store Settings > Payment > Settings**, or type **Settings** in the search bar at the top of the page, then click the green `+` button. To support a payment method that is not available, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) describing the new payment method.
+> ℹ️ To check which payment methods are currently available in the VTEX Admin, go to **Store Settings > Payment > Settings**, or type **Settings** in the search bar at the top of the page, then click the green `+` button. To support a payment method that isn't available, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) describing the new payment method.
 
 You can also declare the `customFields` array to allow your payment provider to send specific information. The `type` field can be configured as follows: `text` for non-confidential data; `password` for sensitive and security information (except `appKey` and `appToken`, which must not be sent in this field); and `select` to group a set of custom information.
 
@@ -209,10 +209,10 @@ To override the default `/manifest` route because of a specific feature of your 
 
 > ⚠️ Update the `x-provider-app` parameter whenever there is a significant change, for example, `vtex.payment-provider-example@1.2.3`. You can omit the `handler` and `headers` parameters, but then you must implement them yourself.
 
-The `memory`, `ttl`, `timeout`, `minReplicas`, and `maxReplicas` fields are VTEX IO runtime parameters rather than payment-specific settings. Two of them affect how quickly your connector answers the Payment Gateway:
+The `memory`, `ttl`, `timeout`, `minReplicas`, and `maxReplicas` fields are VTEX IO runtime parameters, not payment-specific settings. Two of them affect how quickly your connector answers the Payment Gateway:
 
-- `ttl`: How long, in minutes, the platform keeps an instance running without receiving new requests. The default is 10 minutes and the maximum is 60. After this period, the platform shuts the instance down, and the next request starts a new one.
-- `timeout`: How long, in seconds, the platform waits before aborting an incoming request. The default is 10 seconds. This value applies only to requests the platform sends to your connector, not to the calls your connector makes to the provider.
+- `ttl`: How long, in minutes, the platform keeps an instance running without receiving new requests. The default is 10 minutes, and the maximum is 60. After this period, the platform shuts down the instance, and the next request starts a new one.
+- `timeout`: How many seconds the platform waits before aborting an incoming request. The default is 10 seconds. This value applies only to requests the platform sends to your connector, not to the calls your connector makes to the provider.
 
 For the full list of parameters and their limits, see [service.json](https://developers.vtex.com/docs/guides/vtex-io-documentation-service).
 
@@ -230,9 +230,9 @@ In addition to the manifest fields (`paymentMethods` and `customFields`), the fo
 | `useAntifraud` | No | `false` | Defines whether anti-fraud providers can be used in the payment provider's transactions. |
 | `usesBankInvoiceEnglishName` | No | `false` | Defines whether the Bank Invoice payment method uses the English name (`true`) or the Brazilian name, Boleto Bancário (`false`). |
 | `usesSecureProxy` | No | `true` | If `true`, the provider can process payments without being [PCI-certified](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance). The connector receives a `secureProxyUrl` in the `createPayment` flow, along with the encrypted card data. If `false`, the provider must be PCI-certified, and you must send the AOC containing the provided `serviceUrl`. |
-| `requiresDocument` | No | `false` | If `true`, the customer must include the cardholder document on Checkout. A new field appears on the Checkout form. If `false`, the customer does not need to include a cardholder document. |
-| `acceptSplitPartialRefund` | No | `false` | If `true`, VTEX sends a partial refund when a payment split occurs. If `false`, the connector cannot process a partial refund when a payment split occurs. |
-| `usesAutoSettleOptions` | No | `false` | If `true`, the merchant can choose the auto settlement behavior in the provider settings in the VTEX Admin. The available options are as follows: "Use behavior recommended by the payment processor", "Automatic capture immediately after payment authorization", "Automatic capture immediately after anti-fraud analysis", "Scheduled: schedules the automatic capture" and "Deactivated: not automatically captured". If `false`, the connector does not display this dropdown for auto settlement. For more information, see [Custom Auto Capture Feature](https://developers.vtex.com/docs/guides/custom-auto-capture-feature). |
+| `requiresDocument` | No | `false` | If `true`, the customer must include the cardholder document on Checkout. A new field appears on the Checkout form. If `false`, the customer doesn't need to include a cardholder document. |
+| `acceptSplitPartialRefund` | No | `false` | If `true`, VTEX sends a partial refund when a payment split occurs. If `false`, the connector can't process a partial refund when a payment split occurs. |
+| `usesAutoSettleOptions` | No | `false` | If `true`, the merchant can configure the auto-settlement behavior in the provider settings in the VTEX Admin. The available options are as follows: "Use behavior recommended by the payment processor", "Automatic capture immediately after payment authorization", "Automatic capture immediately after anti-fraud analysis", "Scheduled: schedules the automatic capture" and "Deactivated: not automatically captured". If `false`, the connector doesn't display this dropdown for auto settlement. For more information, see [Custom Auto Capture Feature](https://developers.vtex.com/docs/guides/custom-auto-capture-feature). |
 
 ### Request a retry from Payment Gateway
 
@@ -337,7 +337,7 @@ export class MyPCICertifiedClient extends SecureExternalClient {
 
 After your connector is ready, you can test it in the production flow using your store's Checkout.
 
-> ℹ️ Beta versions always use a `ttl` of 10 minutes, regardless of the value declared in `service.json`. Only the most recent stable version of the app honors a custom `ttl`. While testing, expect the first request after an idle period to take longer, because the platform has to start a new instance.
+> ℹ️ Beta versions always use a `ttl` of 10 minutes, regardless of the value declared in `service.json`. Only the most recent stable version of the app honors a custom `ttl`. While testing, expect the first request after an idle period to take longer because the platform must start a new instance.
 
 Before starting, confirm that your store has products available for sale. To place an order with your new connector, follow these steps:
 
@@ -366,7 +366,7 @@ After that, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tuto
 
 - **Connector app name**: The name of the PPF connector app, in the `vendor.appname` format, for example, `partnername.connector-partnername`. You can find it in the `manifest.json` file.
 - **Allowed accounts**: Which VTEX accounts can use this connector, either all accounts or specific accounts.
-- **New payment method**: Specify whether the connector supports a payment method that is not yet available in the VTEX Admin. If it does, specify whether the method works with Redirect or Payment App. For more information, see [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
+- **New payment method**: Specify whether the connector supports a payment method that is not yet available in the VTEX Admin. If it does, specify whether the method works with Redirect or the Payment App. For more information, see [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
 
 For the complete list of information required in the ticket, see [Payment Provider Homologation](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation).
 
