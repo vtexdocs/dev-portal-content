@@ -194,7 +194,7 @@ agents:
 
 > Can have up to 55 characters.
 
-`Credentials`: The credentials used in the tools you define for your agent. For more detailed information about this definition, see [Authenticating with your VTEX CX Platform (Weni) account](authenticating-with-your-weni-by-vtex-account.md).
+`Credentials`: The credentials used in the tools you define for your agent. For more detailed information about this definition, see [Authenticating with your VTEX CX Platform (Weni) account](https://developers.vtex.com/docs/guides/authenticating-with-your-weni-by-vtex-account).
 
 `Description`: Important information about your agent, where you can describe its purpose, capabilities, and other relevant details.
 
@@ -322,7 +322,7 @@ By effectively utilizing contact fields, you can create more intelligent, contex
 
 ## Credentials
 
-Credentials are confidential information that your agents can use when invoking a specific tool. To fully understand how to incorporate credentials into your agents, we recommend reading this entire content and the following complementary resources: [Agents](./agents.md) and [tools](./tools.md).
+Credentials are confidential information that your agents can use when invoking a specific tool. To fully understand how to incorporate credentials into your agents, we recommend reading this entire content and the following complementary resources: [Agents](https://developers.vtex.com/docs/guides/working-with-weni-by-vtex-agents) and [tools](https://developers.vtex.com/docs/guides/using-weni-run-to-execute-tool-tests).
 
 Credentials are extremely important at two stages of your agents' development cycle:
 
@@ -403,15 +403,12 @@ When your agent is deployed on the VTEX CX Platform (Weni), credentials are secu
 > ```
 > 
 > After running the command `weni project push agent_definition.yaml` to upload your agent to your project on the VTEX CX Platform (Weni), you'll find your agent in the Agent Builder gallery. When you select and assign this agent, you'll be prompted to enter the actual values for the credentials you defined (in this case, the API Key).
-
-
-> ![Agents Gallery](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-gallery.png)
-```suggestion
-> ![Agents Gallery](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-gallery.png)
-
+>
+> ![Agents Gallery](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-CX-Platform/CLI/assets/agent-builder-gallery.png)
+>
 > Enter you credentials:
-
-> ![Assign Agent](https://github.com/vtexdocs/dev-portal-content/main/docs/guides/Weni-by-VTEX/CLI/assets/agent-builder-assign.png)
+>
+> ![Assign Agent](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/VTEX-CX-Platform/CLI/assets/agent-builder-assign.png)
 
 #### Security in Production
 
@@ -465,7 +462,7 @@ Tools transform your agent from a simple conversational interface into a powerfu
 
 ### Using Tools in Your Agent
 
-Once you've created a tool, you can relate it to your agent by defining it in your agent's YAML configuration file, as demonstrated in the [Agents](./agents.md) documentation page. The agent will automatically detect when to use the tool based on the context of the conversation.
+Once you've created a tool, you can relate it to your agent by defining it in your agent's YAML configuration file, as demonstrated in the [Agents](https://developers.vtex.com/docs/guides/working-with-weni-by-vtex-agents) documentation page. The agent will automatically detect when to use the tool based on the context of the conversation.
 
 By creating custom tools, you can extend your agent's capabilities to handle specific tasks relevant to your use case, making your agent truly tailored to your business needs.
 
@@ -634,7 +631,7 @@ agents:
                 contact_field: true
 ```
 
-> **Highly Recommended**: For a comprehensive understanding of how credentials work in production environments and local testing, please read the [Credentials](./credentials.md) documentation page. This will help you properly manage sensitive information and understand the different approaches for development and production environments.
+> **Highly Recommended**: For a comprehensive understanding of how credentials work in production environments and local testing, please read the [Credentials](https://developers.vtex.com/docs/guides/authenticating-with-your-weni-by-vtex-account) documentation page. This will help you properly manage sensitive information and understand the different approaches for development and production environments.
 
 #### Best Practices for Handling Credentials
 

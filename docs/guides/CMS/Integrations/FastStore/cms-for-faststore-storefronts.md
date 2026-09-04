@@ -67,7 +67,7 @@ Build and manage schemas with:
 <Flex>
 
 <!-- <WhatsNextCard
-  linkTo="/TBD"
+  linkTo="https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project#cms-integration"
   title="FastStore integration"
   description="Learn how to connect the CMS with FastStore"
   linkTitle="See more"
