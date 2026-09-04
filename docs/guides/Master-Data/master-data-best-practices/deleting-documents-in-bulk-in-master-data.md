@@ -29,7 +29,7 @@ This guide focuses on the create, poll, and confirm flow. For the full operation
 - Both the create and status requests require a valid [user token](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens) in the `VtexIdclientAutCookie` header.
 - The `filter` field is required and uses the same syntax as the data entity search filter. Wildcards aren't allowed.
 - Every field in the filter must be indexed. Internal fields such as `createdIn` are already indexed. Custom fields follow a different rule in each Master Data version:
-  - In Master Data v1, a custom field is indexed when it exists in the data entity and has `isSearchable` enabled. The API ignores the `schema` field, so you don't need to send it.
+  - In Master Data v1, a custom field is indexed when it exists in the data entity and has `isSearchable` enabled. You don't need to send the `schema` field.
   - In Master Data v2, a custom field is indexed when it is listed in the `v-indexed` array of a [schema](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2), and the request must declare that schema in the `schema` field.
 - There is no limit to how many documents a single job can delete, but deleting hundreds of thousands of documents or more at once raises the chance of failure. Whenever possible, narrow the filter down to batches of a few tens of thousands of documents. For example, in a data entity with 10 million documents, run several jobs partitioned by a date field instead of a single filter that matches everything.
 - Only one deletion job can be active per account and data entity at a time. While a job is `InProgress`, creating another job for the same data entity returns `409`. Follow the existing job as described in [step 2](#step-2---follow-the-job-status) and send the new request once that job reaches `Success` or `Failed`. If a job appears stuck, Master Data automatically allows a new job for that data entity after 12 hours.
@@ -81,7 +81,7 @@ In Master Data v2, filtering on a custom indexed field also requires the `schema
 }
 ```
 
-In Master Data v1, filtering on a custom field takes no `schema`. The field only needs `isSearchable` enabled:
+In Master Data v1, filtering on a custom field doesn't require `schema`. The field only needs `isSearchable` enabled:
 
 ```json
 {
@@ -141,11 +141,11 @@ Master Data v1 and Master Data v2 validate the request on separate code paths, s
 
 | HTTP status | Version | Message or cause | Action |
 | :---- | :---- | :---- | :---- |
-| `400` | v1 and v2 | `The {filter} field is required.` | Send the `filter` field in the body. |
+| `400` | v1 and v2 | `The {filter} field is required` | Send the `filter` field in the body. |
 | `400` | v1 and v2 | `Wildcard filters are not allowed for bulk delete.` | Rewrite the filter using exact or range conditions over indexed fields. |
-| `400` | v2 only | `The field {field} is not an internal indexed field, so the 'schema' that declares it as indexed must be provided.` | Add the `schema` that declares the field as indexed to the body, as shown in [step 1](#step-1---create-the-deletion-job). |
+| `400` | v2 only | `The field {field} is not an internal indexed field, so the 'schema' that declares it as indexed must be provided` | Add the `schema` that declares the field as indexed to the body, as shown in [step 1](#step-1---create-the-deletion-job). |
 | `400` | v2 only | `The field '{field}' is not indexed in the schema '{schema}'...` | Mark the field as indexed in the schema and wait for reindexing, or filter on a field that is already indexed. |
-| `400` | v1 only | `The field {field} does not exist for the data entity '{entity}'.` | Correct the field name in the filter. |
+| `400` | v1 only | `The field {field} does not exist for the data entity '{entity}'` | Correct the field name in the filter. |
 | `400` | v1 only | `The field {field} of the data entity {entity} is not indexed (isSearchable is not enabled)...` | Enable `isSearchable` on the field and wait for reindexing, or use another indexed field. |
 | `400` | v1 and v2 | `Invalid data entity name.` | Correct the data entity name in the URL. Invalid characters are rejected. |
 | `400` | v1 and v2 | The request body is empty or isn't valid JSON, and the `Content-Type` header is present. This response follows the standard validation format and has no `Message` field. | Send a valid JSON body containing the `filter` field. |
