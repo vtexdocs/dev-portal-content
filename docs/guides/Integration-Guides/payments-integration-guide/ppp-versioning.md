@@ -3,7 +3,7 @@ title: "PPP versioning"
 slug: "ppp-versioning"
 excerpt: "Learn how to set the Payment Provider Protocol version used by your payment connector to enable additional features."
 hidden: false
-createdAt: "2025-12-18T00:00:00.00Z"
+createdAt: "2025-12-18T00:00:00.000Z"
 updatedAt: "2026-09-04T00:00:00.000Z"
 ---
 
