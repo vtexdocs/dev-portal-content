@@ -38,7 +38,7 @@ Open the app in the VTEX Admin under **Apps > Payment Provider Test Suite** and 
 In the **Service information** section, provide the information needed to access your connector:
 
 - **Service URL**: The base endpoint of your connector. VTEX uses this URL to contact the provider system.
-- **Test with AppKey and AppToken**: Enable this toggle if your connector requires authentication. The application key and token configured by the merchant are sent as API headers in the POST request. For more information, see [API authentication using API keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys).
+- **Test with AppKey and AppToken**: Enable this toggle switch if your connector requires authentication. The application key and token configured by the merchant are sent as API headers in the POST request. For more information, see [API authentication using API keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys).
 
 ### Payment method
 
@@ -78,9 +78,9 @@ If a test fails, adjust your connector to comply with the Payment Provider Proto
 
 | Cause | How to fix |
 | --- | --- |
-| The endpoint is not publicly accessible, or uses an IP address instead of a domain name. | Serve the endpoints over HTTPS on port 443 with TLS 1.2 support, using a subdomain or domain name. |
+| The endpoint isn't publicly accessible, or uses an IP address instead of a domain name. | Serve the endpoints over HTTPS on port 443 with TLS 1.2 support, using a subdomain or domain name. |
 | The response takes too long. | Respond in less than 5 seconds during homologation tests and less than 20 seconds for any other call. |
-| The manifest does not list the expected payment methods. | Review the `paymentMethods` array returned by the manifest endpoint. |
+| The manifest doesn't list the expected payment methods. | Review the `paymentMethods` array returned by the manifest endpoint. |
 | The connector returns an unexpected status value. | Return the status values defined by the protocol for each operation. |
 
 For the full request and response schemas of each operation, see the [Payment Provider Protocol](https://developers.vtex.com/docs/api-reference/payment-provider-protocol) API reference.
@@ -91,7 +91,7 @@ If all test cases pass, [open a ticket with VTEX Support](https://help.vtex.com/
 
 Gather the following information before opening the ticket:
 
-- **Connector name**: The name of the provider. Use a maximum of 16 alphanumeric characters. This name cannot be changed after publishing.
+- **Connector name**: The name of the provider. Use a maximum of 16 alphanumeric characters. This name can't be changed after publishing.
 - **Partner contact**: Partner email address for communicating protocol changes and new features.
 - **Production service provider endpoint**: The base path used for API calls to the provider, for example, `https://productionserviceproviderendpoint.com`. It must respond to the `{{serviceUrl}}/manifest` route and be publicly available.
 - **Sandbox service provider endpoint**: The base path used in test mode for API calls to the provider, for example, `https://sandboxserviceproviderendpoint.com`.
@@ -104,7 +104,7 @@ Gather the following information before opening the ticket:
 
 The payment team completes the homologation within 30 days. This period starts only after you submit the Master Partner Agreement for Financial Services (MPA). Requests without an MPA may take longer, because the payment team needs to perform additional analysis.
 
-> ❗ Do not open the homologation ticket if any test case fails. Fix the connector and run the tests again until every case returns `success`. If you need help, contact your Partner Account Manager.
+> ❗ Don't open the homologation ticket if any test case fails. Fix the connector and run the tests again until every case returns `success`. If you need help, contact your Partner Account Manager.
 
 VTEX Support then confirms whether the implementation is correct.
 
@@ -112,9 +112,9 @@ VTEX Support then confirms whether the implementation is correct.
 
 A connector is exempt from the payment provider homologation process only if it meets all the following conditions:
 
-- It is a [PPF connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework), developed using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
+- It's a [PPF connector](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework), developed using [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
 - It only uses payment methods already available on the VTEX platform.
-- It is installed locally, restricted to specific accounts.
+- It's installed locally, restricted to specific accounts.
 - The target account is already using an IO/PPF connector.
 
-> ⚠️ If the connector does not meet all these conditions, it must go through the homologation process.
+> ⚠️ If the connector doesn't meet all these conditions, it must go through the homologation process.
