@@ -14,7 +14,7 @@ Setting up this feature involves two roles:
 - **Payment providers** declare support for the feature in the connector manifest and define the range of delays merchants can choose from.
 - **Merchants** select the settlement behavior for that provider in the VTEX Admin.
 
-> ℹ️ VTEX [replaced the term capture with settlement](https://help.vtex.com/en/announcements/2022-06-30-replacing-the-term-capture-for-settlement-in-the-payments-documentation) throughout the Payments documentation, and the VTEX Admin labels this feature as settlement. Some identifiers keep the previous term, such as `usesEarlySecurityCapture`.
+> ℹ️ VTEX [replaced the term capture with settlement](https://help.vtex.com/en/announcements/2022-06-30-replacing-the-term-capture-for-settlement-in-the-payments-documentation) throughout the Payments documentation. Some identifiers keep the previous term, such as `usesEarlySecurityCapture`.
 
 ## Before you start
 
