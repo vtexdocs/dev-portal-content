@@ -18,7 +18,7 @@ FastStore `v4.5.0` expands My Account for B2B Buyer Portal (closed beta) with a 
 
 ### New `RecommendationShelf` native component (PRs: [#3403](https://github.com/vtex/faststore/pull/3403) | [#3414](https://github.com/vtex/faststore/pull/3414))
 
-Adds a CMS-configurable `RecommendationShelf` section that fetches VTEX personalization recommendations for a campaign VRN and renders them with the shared core `ProductCard`. After upgrading to `v4.5.0`, add the **Recommendation Shelf** section in the CMS and on the desired page with a valid campaign VRN. <!-- TODO: add the guide about RecommendationShelf once we publish it: https://github.com/vtexdocs/dev-portal-content/pull/2904 -->
+Adds a CMS-configurable `RecommendationShelf` component that fetches VTEX personalization recommendations for a campaign VRN and renders them with the shared core `ProductCard`. After upgrading to `v4.5.0`, add the **Recommendation Shelf** section in the CMS and on the desired page with a valid campaign VRN. For more information on how to use this component, see the [Displaying product recommendations with the Recommendation Shelf](https://developers.vtex.com/docs/guides/faststore/storefront-features-displaying-product-recommendations-with-recommendation-shelf#campaign-types-and-product-context) guide.
 
 ### Copy fonts and nested assets from `public/` folder to build (PR: [#3412](https://github.com/vtex/faststore/pull/3412))
 
