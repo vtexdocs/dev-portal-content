@@ -145,7 +145,7 @@ customerProfile: async (_, __, ctx) => {
   await requireAuthenticatedUser(ctx)
 
   const session = await ctx.clients.commerce.session('')
-  const userId = session.namespaces?.profile?.id?.value
+  const userId = session.namespaces?.authentication?.storeUserId?.value
 
   if (!userId) {
     return null
@@ -156,6 +156,14 @@ customerProfile: async (_, __, ctx) => {
 ```
 
 Remove the argument from the type definition as well as from the resolver. An argument that exists will eventually be used.
+
+### Read the identity from the right namespace
+
+The session carries both a `profile` and an `authentication` namespace, and they answer different questions. The `profile` namespace reflects identification, which includes an email captured during a checkout flow, so `profile.id` can hold a value for a visitor who never signed in. The `authentication` namespace is populated by a VTEX ID sign-in.
+
+Read `authentication.storeUserId`, as above. Identity and proof of sign-in then arrive in the same request, and an empty value means the visitor is not authenticated.
+
+> ℹ️ This is how the platform treats the two namespaces as well: `resolveJwtClaims` validates the token before trusting any claim, and discards the claims when validation fails.
 
 ## Step 3: Authenticate as the shopper, not as the store
 
@@ -241,7 +249,7 @@ loyaltyBalance: async (_: never, __: never, ctx: any) => {
   await requireAuthenticatedUser(ctx)
 
   const session = await ctx.clients.commerce.session('')
-  const shopperId = session.namespaces?.profile?.id?.value
+  const shopperId = session.namespaces?.authentication?.storeUserId?.value
 
   if (!shopperId) {
     return null
@@ -296,6 +304,7 @@ Before deploying a custom resolver that handles shopper data, confirm the follow
 
 - The resolver checks authentication before any other logic.
 - Identity comes from the session or the cookie, never from an argument.
+- Session reads use `authentication.storeUserId`, not `profile.id`.
 - Calls to VTEX APIs carry the shopper's cookie, not a fixed credential.
 - Calls to third-party APIs filter by an identifier taken from the session.
 - Master Data reads use `io/safedata`, not `dataentities`.
