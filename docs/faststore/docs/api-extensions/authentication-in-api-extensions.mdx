@@ -160,13 +160,11 @@ Remove the argument from the type definition as well as from the resolver. An ar
 
 ### Read the identity from the right namespace
 
-The session carries both a `profile` and an `authentication` namespace, and they answer different questions. The `profile` namespace reflects identification, which includes an email captured during a checkout flow, so `profile.id` can hold a value for a visitor who never signed in. The `authentication` namespace is populated by a VTEX ID sign-in.
+Use `authentication.storeUserId`, as above. VTEX documents it as extracted from VTEX ID cookie validation, so it holds a value only for a shopper who signed in. Do not use `profile.id`: it is loaded from Master Data and can hold a value for a visitor who was identified without signing in.
 
-Read `authentication.storeUserId`, as above. Identity and proof of sign-in then arrive in the same request, and an empty value means the visitor is not authenticated. Within the `authentication` namespace, use `storeUserId`. It is one of the fields VTEX documents there as extracted from VTEX ID cookie validation, alongside `storeUserEmail`. `customerId` is not part of that documented set, and the platform reads it as a fallback while resolving an active contract id, so do not treat it as an identifier for a person.
+Treat an empty value as an error rather than as an absent result. Every session field is optional, so optional chaining yields `undefined` without complaining, and if that reaches your lookup the filter may drop out of the request and the call returns every record. Throw `UnauthorizedError` before the identifier is used, as in the example above.
 
-Treat an empty value as an error rather than as an absent result. Every session field is optional, so optional chaining yields `undefined` without complaining. If that `undefined` reaches your lookup, the filter may drop out of the request and the call returns every record — the failure this guide exists to prevent. Throw `UnauthorizedError` before the identifier is used, as in the example above.
-
-> ℹ️ This is how the platform treats the two namespaces as well: `resolveJwtClaims` validates the token before trusting any claim, and discards the claims when validation fails.
+> ℹ️ The remaining session identifiers answer other questions. `unitId` is the B2B organization unit, and `customerId` is read by the platform while resolving contracts, so neither identifies a person.
 
 ## Step 3: Authenticate as the shopper, not as the store
 
