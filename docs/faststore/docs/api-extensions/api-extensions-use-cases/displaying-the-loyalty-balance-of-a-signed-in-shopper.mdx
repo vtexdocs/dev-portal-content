@@ -1,0 +1,185 @@
+---
+title: "Displaying the loyalty balance of a signed-in shopper"
+slug: "displaying-the-loyalty-balance-of-a-signed-in-shopper"
+hidden: false
+createdAt: "2026-09-04T00:00:00.000Z"
+updatedAt: "2026-09-04T00:00:00.000Z"
+excerpt: "Extend the FastStore API with a query that returns the loyalty points of the signed-in shopper, authenticated with the shopper's own credentials."
+---
+
+This guide describes how to display the loyalty balance of a signed-in shopper on the account page. Unlike the other use cases in this section, this one reads personal data, so the resolver must be authenticated as the shopper rather than as the store.
+
+> ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). For the reasoning behind the credentials used here, see [Authentication in API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-authentication-in-api-extensions).
+
+## Context
+
+- Your store runs a loyalty program that awards points for each order.
+- The balance is stored in a custom Master Data entity named `LoyaltyBalance`, with the acronym `LB`.
+- You want to display the balance on the account page, so each shopper sees their own points.
+- The balance is personal data, so no shopper may read another shopper's record.
+
+The example uses the fictional account `examplestore`. Replace it with your own account name.
+
+## Before you begin
+
+Configure the ACL of the `LoyaltyBalance` entity in the VTEX Admin so that a shopper can read only their own document. The endpoint used in this guide delegates the authorization decision to that ACL, so an entity without an ACL remains open to every shopper.
+
+## Step 1: Creating the type definitions
+
+In your store repository, create the `src/graphql/vtex/typeDefs/loyalty.graphql` file:
+
+```graphql src/graphql/vtex/typeDefs/loyalty.graphql
+type LoyaltyBalance {
+  """
+  Points currently available to the shopper.
+  """
+  availablePoints: Int!
+
+  """
+  Date when the next batch of points expires, in ISO 8601 format.
+  """
+  nextExpirationDate: String
+}
+
+extend type Query {
+  """
+  Returns the loyalty balance of the signed-in shopper.
+  """
+  loyaltyBalance: LoyaltyBalance
+    @cacheControl(scope: "private", sMaxAge: 0)
+}
+```
+
+Note that the query declares no arguments. The shopper's identity comes from the request, not from the caller, so there is no email or user ID to pass. The `@cacheControl` directive keeps the response out of shared caches.
+
+## Step 2: Creating the authentication helper
+
+Create the `src/graphql/vtex/utils/auth.ts` file:
+
+```ts src/graphql/vtex/utils/auth.ts
+import { UnauthorizedError } from '@faststore/api'
+import { parse } from 'cookie'
+
+/**
+ * Returns the shopper's authentication token, or throws when the request
+ * carries no valid session.
+ */
+export const getShopperToken = (ctx: any) => {
+  const token = parse(ctx.headers?.cookie ?? '')[
+    `VtexIdclientAutCookie_${ctx.account}`
+  ]
+
+  if (!token) {
+    throw new UnauthorizedError('Authentication required')
+  }
+
+  return token
+}
+```
+
+Parse the cookie with the `cookie` package rather than splitting the string manually. Token values can contain `=`, and truncating one causes a silent `401` response.
+
+## Step 3: Creating the resolver
+
+Create the `src/graphql/vtex/resolvers/loyalty.ts` file:
+
+```ts src/graphql/vtex/resolvers/loyalty.ts
+import { getShopperToken } from '../utils/auth'
+
+const LoyaltyResolver = {
+  Query: {
+    loyaltyBalance: async (_: never, __: never, ctx: any) => {
+      const token = getShopperToken(ctx)
+      const { account } = ctx
+
+      const searchParams = new URLSearchParams({
+        _fields: 'availablePoints,nextExpirationDate',
+      })
+
+      const response = await fetch(
+        `https://${account}.myvtex.com/api/io/safedata/LB/search?${searchParams}`,
+        {
+          headers: {
+            Accept: 'application/vnd.vtex.ds.v10+json',
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            cookie: `VtexIdclientAutCookie_${account}=${token}`,
+          },
+        }
+      )
+
+      if (!response.ok) {
+        throw new Error(`Loyalty balance request failed: ${response.status}`)
+      }
+
+      const documents = await response.json()
+
+      if (!documents.length) {
+        return { availablePoints: 0, nextExpirationDate: null }
+      }
+
+      return documents[0]
+    },
+  },
+}
+
+export default LoyaltyResolver
+```
+
+Three details make this resolver safe:
+
+- The request goes to `io/safedata`, not `dataentities`. This endpoint applies the entity's ACL to the identity in the cookie, so it returns only the record that belongs to the signed-in shopper.
+- The request carries the shopper's cookie instead of `appKey` and `appToken`. Application credentials would return any record in the entity, and the resolver would become responsible for filtering.
+- `_fields` lists the two fields the interface renders. Requesting `_all` would return the entire document, including data the account page never displays.
+
+## Step 4: Registering the resolver
+
+Add the resolver to the `src/graphql/vtex/resolvers/index.ts` file:
+
+```ts src/graphql/vtex/resolvers/index.ts
+import LoyaltyResolver from './loyalty'
+
+const resolvers = { ...LoyaltyResolver }
+
+export default resolvers
+```
+
+## Step 5: Querying the data from a component
+
+Declare the query in your custom component and render the result:
+
+```tsx src/components/LoyaltyBalance.tsx
+import { gql } from '@faststore/core/api'
+import { useQuery_unstable as useQuery } from '@faststore/core/experimental'
+
+const query = gql(`
+  query LoyaltyBalanceQuery {
+    loyaltyBalance {
+      availablePoints
+      nextExpirationDate
+    }
+  }
+`)
+
+export default function LoyaltyBalance() {
+  const { data } = useQuery(query, {})
+
+  if (!data?.loyaltyBalance) {
+    return null
+  }
+
+  return (
+    <p>
+      You have {data.loyaltyBalance.availablePoints} points available.
+    </p>
+  )
+}
+```
+
+> ⚠️ The `useQuery_unstable` hook is exported from `@faststore/core/experimental` and its API may change between releases. For the stable approach of extending an existing page query, see [Consuming API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-consuming-api-extensions) and [Extending queries using fragments](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-queries-using-fragments).
+
+Render this component only in a page that requires authentication. A signed-out visitor receives a `401` response, which the component treats as no data.
+
+## Result
+
+The account page displays the balance of the signed-in shopper. A shopper who is not signed in sees nothing, and no request can return the balance of another shopper, because the entity's ACL rejects it before your code runs.

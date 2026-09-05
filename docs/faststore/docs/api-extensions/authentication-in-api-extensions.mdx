@@ -1,0 +1,347 @@
+---
+title: "Authentication in API extensions"
+slug: "authentication-in-api-extensions"
+hidden: false
+createdAt: "2026-09-04T00:00:00.000Z"
+updatedAt: "2026-09-04T00:00:00.000Z"
+excerpt: "Learn how to authenticate custom resolvers whose response belongs to one shopper, whether they call a VTEX API or a third-party service."
+---
+
+Custom resolvers run on your store's server, with no browser between them and the APIs they call. The credentials they use determine who is allowed to read what.
+
+This guide covers any resolver that reads or writes data belonging to one shopper: order history, addresses, profile fields, wishlists, loyalty balances, subscriptions, B2B contracts, or data your store keeps in an external system. The service on the other end can be a VTEX API or a third-party one. What changes between them is how you carry the shopper's identity, not whether you need to.
+
+> ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). This guide assumes you are familiar with that structure.
+
+## Before you begin
+
+Make sure you know which of the two credential models your resolver needs.
+
+| | Fixed credentials | Shopper credentials |
+| --- | --- | --- |
+| Examples | `X-VTEX-API-AppKey` and `X-VTEX-API-AppToken`, an integration `Bearer` token, a partner key in `vtex.env` | `VtexIdclientAutCookie_{account}` |
+| Caller identity | The store | The signed-in shopper |
+| Permissions | The permissions the credential holds, usually broad | What that one shopper may access |
+| Enforced by | Your resolver code only | The service you call |
+
+A fixed credential works as a service account: it is identical on every request, whoever is browsing. It is the right choice for data that is the same for every shopper, such as catalog information, store locations, promotions, and configuration. It carries no notion of the current shopper, so when a resolver uses one to read a personal record, your resolver code is the only thing preventing one shopper from accessing another shopper's data.
+
+Three questions identify a resolver that needs attention:
+
+1. Does the response differ from one shopper to the next?
+2. Does the resolver create, change, or delete something that belongs to someone? Saving an address, cancelling a subscription, removing a record. Nothing is disclosed, but another shopper's data is altered, and the same rule applies.
+3. Does the call authenticate with a credential that is the same on every request?
+
+> ⚠️ When the answer to question 3 is yes, along with either of the first two, the resolver needs the steps below. This holds regardless of which service it calls, and regardless of whether the credential is a VTEX app key or a token issued by an external provider.
+
+## Resolvers that need authentication
+
+Not every resolver calls an API. The example in [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema) derives a field from data already loaded:
+
+```ts src/graphql/vtex/resolvers/product.ts
+const StoreProductResolver = {
+  StoreProduct: {
+    customData: (root: StoreProductRoot) => `My item id: ${root.itemId}`,
+  },
+}
+```
+
+Nothing here reaches the network, so nothing here needs credentials. The same applies to [Adding installment information in the product details page](https://developers.vtex.com/docs/guides/faststore/api-extensions-use-cases-adding-installment-information-in-the-product-details-page), which reshapes data already present in `root`.
+
+Authentication becomes a concern the moment a resolver calls an API. That is the case this guide covers.
+
+## Understanding the resolver context
+
+Custom resolvers receive the standard GraphQL signature. The third argument is the FastStore context:
+
+```ts
+const MyResolver = {
+  Query: {
+    myField: async (root, args, ctx) => {
+      ctx.headers // Incoming request headers, including `cookie`.
+      ctx.account // Your VTEX account name.
+      ctx.clients // Platform clients, such as `commerce` and `search`.
+      ctx.storage // Per-request storage, such as locale and channel.
+    },
+  },
+}
+```
+
+`ctx.headers.cookie` holds the shopper's cookies, forwarded from the browser. Every pattern in this guide builds on it.
+
+## Public writes and personal data
+
+[Adding a contact form to a landing page](https://developers.vtex.com/docs/guides/faststore/api-extensions-use-cases-adding-a-contact-form-to-a-landing-page) documents a mutation that writes to Master Data with no credentials:
+
+```ts
+const response = await fetch(
+  'https://{account}.vtexcommercestable.com.br/api/dataentities/ContactForm/documents?_schema=contactForm',
+  {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(input),
+  }
+)
+```
+
+This is appropriate for that scenario: an anonymous visitor submits a form into a dedicated entity, and there is no shopper identity to carry. Even so, it is an unauthenticated write path, so you remain responsible for rate limiting, validating `input` against the schema, and keeping the entity's read ACL closed.
+
+> ⚠️ Never reuse this pattern for an entity that holds personal data, such as `CL`, `NL`, `AD`, or any custom entity keyed by email or document number. Adding `appKey` and `appToken` to it does not make it safer. It makes the request succeed against every record in the entity.
+
+Follow the sections below instead.
+
+## Step 1: Require authentication in the resolver
+
+The FastStore API marks its own private fields with the `@auth` directive, which validates the shopper's token before the resolver runs. That directive is applied to the platform schema, so do not assume it will be enforced on a field you declare. Write the check in your resolver:
+
+```ts src/graphql/vtex/utils/auth.ts
+import { UnauthorizedError } from '@faststore/api'
+
+/**
+ * Throws unless the incoming request carries a valid shopper token.
+ * Call this first in every resolver that reads or writes personal data.
+ */
+export const requireAuthenticatedUser = async (ctx: any) => {
+  const validation = await ctx.clients.commerce.vtexid.validate()
+
+  if (validation?.authStatus?.toLowerCase() !== 'success') {
+    throw new UnauthorizedError('Authentication required')
+  }
+}
+```
+
+`@faststore/api` exports `UnauthorizedError` and `ForbiddenError`, which the GraphQL route converts into the corresponding HTTP statuses. Throwing them is preferable to returning `null`, which the storefront cannot distinguish from an empty result.
+
+## Step 2: Take identity from the session
+
+A query that accepts an identifier and returns the matching record works as an oracle: anyone can iterate over emails, user IDs, or document numbers and read each result. Authentication alone does not solve this, because a signed-in shopper can still pass another shopper's email.
+
+Avoid declaring an identifier argument:
+
+```graphql src/graphql/vtex/typeDefs/profile.graphql
+extend type Query {
+  customerProfile(email: String!): CustomerProfile
+}
+```
+
+```ts src/graphql/vtex/resolvers/profile.ts
+customerProfile: async (_, { email }, ctx) => {
+  await requireAuthenticatedUser(ctx)
+
+  return fetchProfileByEmail(email) // The caller chooses whose data to read.
+}
+```
+
+Derive the identity from the session instead:
+
+```graphql src/graphql/vtex/typeDefs/profile.graphql
+extend type Query {
+  customerProfile: CustomerProfile
+    @cacheControl(scope: "private", sMaxAge: 0)
+}
+```
+
+```ts src/graphql/vtex/resolvers/profile.ts
+customerProfile: async (_, __, ctx) => {
+  await requireAuthenticatedUser(ctx)
+
+  const session = await ctx.clients.commerce.session('')
+  const userId = session.namespaces?.authentication?.storeUserId?.value
+
+  if (!userId) {
+    throw new UnauthorizedError('Authentication required')
+  }
+
+  return fetchProfileByUserId(userId, ctx)
+}
+```
+
+Remove the argument from the type definition as well as from the resolver. An argument that exists will eventually be used.
+
+### Read the identity from the right namespace
+
+Use `authentication.storeUserId`, as above. VTEX documents it as extracted from VTEX ID cookie validation, so it holds a value only for a shopper who signed in. Do not use `profile.id`: it is loaded from Master Data and can hold a value for a visitor who was identified without signing in.
+
+Treat an empty value as an error rather than as an absent result. Every session field is optional, so optional chaining yields `undefined` without complaining, and if that reaches your lookup the filter may drop out of the request and the call returns every record. Throw `UnauthorizedError` before the identifier is used, as in the example above.
+
+> ℹ️ The remaining session identifiers answer other questions. `unitId` is the B2B organization unit, and `customerId` is read by the platform while resolving contracts, so neither identifies a person.
+
+## Step 3: Authenticate as the shopper, not as the store
+
+How you carry the shopper's identity depends on the service you call.
+
+### VTEX APIs: forward the cookie
+
+VTEX APIs accept the shopper's cookie and apply that shopper's permissions, so the service performs the authorization instead of your resolver. In Master Data, the shopper-scoped endpoint is `/api/io/safedata/{entity}`, which applies the entity's ACL to the identity in the cookie. The `/api/dataentities/{entity}` endpoint does not, and trusts whichever credential is attached to the request.
+
+```ts src/graphql/vtex/utils/masterdata.ts
+import { UnauthorizedError } from '@faststore/api'
+import { parse } from 'cookie'
+
+/**
+ * Reads a Master Data entity as the signed-in shopper. VTEX applies the
+ * entity's ACL, so this returns only records that shopper may access.
+ */
+export const safedataSearch = async (
+  ctx: any,
+  entity: string,
+  params: Record<string, string>
+) => {
+  const account = ctx.account
+  const authCookie = parse(ctx.headers?.cookie ?? '')[
+    `VtexIdclientAutCookie_${account}`
+  ]
+
+  if (!authCookie) {
+    throw new UnauthorizedError('Authentication required')
+  }
+
+  const searchParams = new URLSearchParams(params)
+
+  const response = await fetch(
+    `https://${account}.myvtex.com/api/io/safedata/${entity}/search?${searchParams}`,
+    {
+      headers: {
+        Accept: 'application/vnd.vtex.ds.v10+json',
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        cookie: `VtexIdclientAutCookie_${account}=${authCookie}`,
+      },
+    }
+  )
+
+  if (!response.ok) {
+    throw new Error(`safedata ${entity} search failed: ${response.status}`)
+  }
+
+  return response.json()
+}
+```
+
+> ℹ️ Parse the cookie with a parser such as the `cookie` package rather than `split('=')[1]`. Token values can contain `=`, and truncating one causes a silent `401` response.
+
+Writes follow the same rule. Resolve the document ID through `safedataSearch` in the same request. A document ID accepted as an argument returns control over which record is written to the caller:
+
+```ts src/graphql/vtex/utils/masterdata.ts
+export const safedataUpdate = async (
+  ctx: any,
+  entity: string,
+  documentId: string,
+  fields: Record<string, unknown>
+) => {
+  // Build the headers as in `safedataSearch`.
+  const response = await fetch(
+    `https://${ctx.account}.myvtex.com/api/io/safedata/${entity}/documents/${documentId}`,
+    { method: 'PATCH', headers, body: JSON.stringify(fields) }
+  )
+
+  // Handle the response.
+}
+```
+
+For VTEX APIs outside Master Data, the pattern is the same: forward `ctx.headers.cookie` and let the upstream service authorize the call.
+
+### Third-party APIs: derive the identifier server-side
+
+An external system, such as an ERP, a CRM, or a loyalty provider, knows nothing about the VTEX cookie, so there is nothing to forward. The integration credential stays on the server, and the shopper's identifier comes from the session:
+
+```ts src/graphql/thirdParty/resolvers/loyalty.ts
+loyaltyBalance: async (_: never, __: never, ctx: any) => {
+  await requireAuthenticatedUser(ctx)
+
+  const session = await ctx.clients.commerce.session('')
+  const shopperId = session.namespaces?.authentication?.storeUserId?.value
+
+  if (!shopperId) {
+    throw new UnauthorizedError('Authentication required')
+  }
+
+  const response = await fetch(
+    `${process.env.LOYALTY_API_URL}/customers/${shopperId}/balance`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.LOYALTY_API_TOKEN}`,
+      },
+    }
+  )
+
+  // Handle the response.
+}
+```
+
+> ⚠️ In this arrangement your resolver is the only barrier, because the external service authorizes the integration rather than the shopper. The identifier must come from the session, as above, and never from a query argument. Return only the records that belong to the shopper who asked.
+
+## Step 4: Return only the fields the interface uses
+
+Request the fields your interface renders, not the whole record. This limits the impact when a service returns more than expected, and it keeps personal data out of logs and traces. In Master Data, this means listing fields in `_fields` rather than requesting `_all`. With a third-party API, it usually means selecting fields from the response before returning it.
+
+The same applies to filters. Never interpolate an argument into a query string, a filter such as a Master Data `_where` clause, or a URL path. Build them from session values, or validate the argument against an allowlist.
+
+## Step 5: Keep private responses out of shared caches
+
+The GraphQL route derives the `cache-control` header from the `@cacheControl` directive. When the directive is absent, a `GET` query response is cached as `public, s-maxage=300` by default, unless the request carries a `VtexIdclientAutCookie` cookie, in which case the scope becomes `private`.
+
+This means a custom query that returns personal data without requiring authentication is not only readable by anyone. Its response can also be stored in a shared cache and served to unrelated visitors. Requiring authentication as described in Step 1 addresses both problems, because an authenticated request always carries the cookie.
+
+Declare the intent in your type definition as well:
+
+```graphql
+extend type Query {
+  myPrivateField: MyType @cacheControl(scope: "private", sMaxAge: 0)
+}
+```
+
+## Step 6: Keep credentials out of what you return
+
+The resolver's `catch` block is a second surface. The GraphQL route protects what you *throw*: a plain error becomes a body-less `500`, and a `FastStoreError` message is included in the response only outside production. It does not protect what you *return*, because a returned value is a data field like any other:
+
+```ts
+// The message travels to the browser as data, unmasked.
+catch (error) {
+  return { error: error.message }
+}
+```
+
+```ts
+// The detail stays in the log; the client receives a typed error.
+catch (error) {
+  console.error('loyalty balance request failed', { status: error.status })
+
+  throw new UnauthorizedError('Authentication required')
+}
+```
+
+Keep the request URL and the headers out of the error text as well. The message always reaches your logs, and preview and development builds do expose it.
+
+> ⚠️ A credential that appeared in an error message should be treated as compromised and rotated, because the message may have travelled through logs, screenshots, and third-party error tools.
+
+## Using fixed credentials safely
+
+A fixed credential remains the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. It is also what a third-party integration uses even when the response is personal, as in Step 3. When you use one:
+
+- Store the credential as a [secret](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) or in the `vtex.env` file, never in your repository. Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must never use that prefix.
+- If a credential is currently a string literal in the source, moving it to an environment variable is not enough on its own. It remains in the repository history and stays valid until it is rotated, so rotate it as well.
+- Call every endpoint over `https://`. A plain `http://` request carries the credential in cleartext.
+- Do not let the caller shape the upstream request. An argument that reaches a URL path or a filter without validation turns a service account into an open proxy.
+- Scope the credential to the permissions it needs, and rotate it when a partner's access ends.
+
+## Review checklist
+
+Before deploying a custom resolver that handles shopper data, confirm the following:
+
+- The resolver checks authentication before any other logic.
+- Identity comes from the session or the cookie, never from an argument.
+- Session reads use `authentication.storeUserId`, not `profile.id`, and an empty value throws instead of continuing.
+- Calls to VTEX APIs carry the shopper's cookie, not a fixed credential.
+- Calls to third-party APIs filter by an identifier taken from the session.
+- Master Data reads use `io/safedata`, not `dataentities`.
+- The response carries only the fields the interface renders.
+- No argument is interpolated into a filter or a URL path.
+- The field declares `@cacheControl(scope: "private", sMaxAge: 0)`.
+- No `catch` returns a raw error: the detail is logged and the response is generic.
+- No credential is a string literal in the source, and any that was has been rotated.
+- Every outgoing call uses `https://`.
+- Credentials come from environment variables without the `NEXT_PUBLIC_` prefix.
+- Whichever party authorizes the request is configured to do so.
+
+> ⚠️ The last item is the one most often missed. When you forward the cookie, the service decides, and a Master Data entity without an ACL stays open however you call it. When you cannot forward it, your resolver decides, and it must filter by an identifier that came from the session.
