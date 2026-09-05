@@ -162,7 +162,7 @@ Remove the argument from the type definition as well as from the resolver. An ar
 
 The session carries both a `profile` and an `authentication` namespace, and they answer different questions. The `profile` namespace reflects identification, which includes an email captured during a checkout flow, so `profile.id` can hold a value for a visitor who never signed in. The `authentication` namespace is populated by a VTEX ID sign-in.
 
-Read `authentication.storeUserId`, as above. Identity and proof of sign-in then arrive in the same request, and an empty value means the visitor is not authenticated. Within the `authentication` namespace, prefer `storeUserId` over `customerId`: in a B2B context `customerId` carries the contract, not the person, and `resolveActiveContractIdFromSession` reads it for exactly that purpose.
+Read `authentication.storeUserId`, as above. Identity and proof of sign-in then arrive in the same request, and an empty value means the visitor is not authenticated. Within the `authentication` namespace, use `storeUserId`. It is one of the fields VTEX documents there as extracted from VTEX ID cookie validation, alongside `storeUserEmail`. `customerId` is not part of that documented set, and the platform reads it as a fallback while resolving an active contract id, so do not treat it as an identifier for a person.
 
 Treat an empty value as an error rather than as an absent result. Every session field is optional, so optional chaining yields `undefined` without complaining. If that `undefined` reaches your lookup, the filter may drop out of the request and the call returns every record — the failure this guide exists to prevent. Throw `UnauthorizedError` before the identifier is used, as in the example above.
 
