@@ -4,12 +4,12 @@ slug: "authentication-in-api-extensions"
 hidden: false
 createdAt: "2026-09-04T00:00:00.000Z"
 updatedAt: "2026-09-04T00:00:00.000Z"
-excerpt: "Learn how to authenticate custom resolvers that read or write shopper data, so one shopper can never access another shopper's information."
+excerpt: "Learn how to authenticate custom resolvers whose response belongs to one shopper, whether they call a VTEX API or a third-party service."
 ---
 
-Custom resolvers run on your store's server, with no browser between them and the VTEX APIs. The credentials they use determine who is allowed to read what.
+Custom resolvers run on your store's server, with no browser between them and the APIs they call. The credentials they use determine who is allowed to read what.
 
-This guide covers how to authenticate a resolver that handles shopper data: order history, addresses, profile fields, wishlists, newsletter preferences, loyalty status, or any Master Data entity holding personal information.
+This guide covers any resolver whose response belongs to one shopper: order history, addresses, profile fields, wishlists, loyalty balances, subscriptions, B2B contracts, or data your store keeps in an external system. The service on the other end can be a VTEX API or a third-party one. What changes between them is how you carry the shopper's identity, not whether you need to.
 
 > ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). This guide assumes you are familiar with that structure.
 
@@ -17,16 +17,21 @@ This guide covers how to authenticate a resolver that handles shopper data: orde
 
 Make sure you know which of the two credential models your resolver needs.
 
-| | Application credentials | Shopper credentials |
+| | Fixed credentials | Shopper credentials |
 | --- | --- | --- |
-| Header or cookie | `X-VTEX-API-AppKey` and `X-VTEX-API-AppToken` | `VtexIdclientAutCookie_{account}` |
+| Examples | `X-VTEX-API-AppKey` and `X-VTEX-API-AppToken`, an integration `Bearer` token, a partner key in `vtex.env` | `VtexIdclientAutCookie_{account}` |
 | Caller identity | The store | The signed-in shopper |
-| Permissions | The roles the key holds, usually broad | What that one shopper may access |
-| Enforced by | Your resolver code only | VTEX, through the entity's ACL |
+| Permissions | The permissions the credential holds, usually broad | What that one shopper may access |
+| Enforced by | Your resolver code only | The service you call |
 
-Application credentials work as a service account. They are the right choice for data that is the same for every shopper, such as catalog information, store locations, promotions, and configuration. They carry no notion of the current shopper, so when a resolver uses them to read a personal record, your resolver code is the only thing preventing one shopper from accessing another shopper's data.
+A fixed credential works as a service account: it is identical on every request, whoever is browsing. It is the right choice for data that is the same for every shopper, such as catalog information, store locations, promotions, and configuration. It carries no notion of the current shopper, so when a resolver uses one to read a personal record, your resolver code is the only thing preventing one shopper from accessing another shopper's data.
 
-> ⚠️ If the response can differ from one shopper to another, the outgoing request must carry that shopper's cookie, not the app key.
+Two questions identify a resolver that needs attention:
+
+1. Does the response differ from one shopper to the next?
+2. Does the call authenticate with a credential that is the same on every request?
+
+> ⚠️ When the answer to both is yes, the resolver needs the steps below. This holds regardless of which service it calls, and regardless of whether the credential is a VTEX app key or a token issued by an external provider.
 
 ## Resolvers that need authentication
 
@@ -152,9 +157,13 @@ customerProfile: async (_, __, ctx) => {
 
 Remove the argument from the type definition as well as from the resolver. An argument that exists will eventually be used.
 
-## Step 3: Forward the shopper's cookie
+## Step 3: Authenticate as the shopper, not as the store
 
-In Master Data, the shopper-scoped endpoint is `/api/io/safedata/{entity}`, which applies the entity's ACL to the identity in the cookie. The `/api/dataentities/{entity}` endpoint does not, and trusts whichever credential is attached to the request.
+How you carry the shopper's identity depends on the service you call.
+
+### VTEX APIs: forward the cookie
+
+VTEX APIs accept the shopper's cookie and apply that shopper's permissions, so the service performs the authorization instead of your resolver. In Master Data, the shopper-scoped endpoint is `/api/io/safedata/{entity}`, which applies the entity's ACL to the identity in the cookie. The `/api/dataentities/{entity}` endpoint does not, and trusts whichever credential is attached to the request.
 
 ```ts src/graphql/vtex/utils/masterdata.ts
 import { UnauthorizedError } from '@faststore/api'
@@ -223,11 +232,41 @@ export const safedataUpdate = async (
 
 For VTEX APIs outside Master Data, the pattern is the same: forward `ctx.headers.cookie` and let the upstream service authorize the call.
 
-## Step 4: Request only the fields you need
+### Third-party APIs: derive the identifier server-side
 
-`_fields=_all` returns the entire record, including fields your interface never renders, such as document numbers and phone numbers. List the fields explicitly. This limits the impact if an entity's ACL is more permissive than expected, and it keeps personal data out of logs and traces.
+An external system, such as an ERP, a CRM, or a loyalty provider, knows nothing about the VTEX cookie, so there is nothing to forward. The integration credential stays on the server, and the shopper's identifier comes from the session:
 
-The same applies to filters. Never interpolate an argument into a `_where` clause. Build the clause from session values, or validate the argument against an allowlist.
+```ts src/graphql/thirdParty/resolvers/loyalty.ts
+loyaltyBalance: async (_: never, __: never, ctx: any) => {
+  await requireAuthenticatedUser(ctx)
+
+  const session = await ctx.clients.commerce.session('')
+  const shopperId = session.namespaces?.profile?.id?.value
+
+  if (!shopperId) {
+    return null
+  }
+
+  const response = await fetch(
+    `${process.env.LOYALTY_API_URL}/customers/${shopperId}/balance`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.LOYALTY_API_TOKEN}`,
+      },
+    }
+  )
+
+  // Handle the response.
+}
+```
+
+> ⚠️ In this arrangement your resolver is the only barrier, because the external service authorizes the integration rather than the shopper. The identifier must come from the session, as above, and never from a query argument. Return only the records that belong to the shopper who asked.
+
+## Step 4: Return only the fields the interface uses
+
+Request the fields your interface renders, not the whole record. This limits the impact when a service returns more than expected, and it keeps personal data out of logs and traces. In Master Data, this means listing fields in `_fields` rather than requesting `_all`. With a third-party API, it usually means selecting fields from the response before returning it.
+
+The same applies to filters. Never interpolate an argument into a query string, a filter such as a Master Data `_where` clause, or a URL path. Build them from session values, or validate the argument against an allowlist.
 
 ## Step 5: Keep private responses out of shared caches
 
@@ -243,13 +282,13 @@ extend type Query {
 }
 ```
 
-## Using application credentials safely
+## Using fixed credentials safely
 
-Application credentials remain the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. When you use them:
+A fixed credential remains the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. It is also what a third-party integration uses even when the response is personal, as in Step 3. When you use one:
 
-- Store the credentials as [secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) or in the `vtex.env` file, never in your repository. Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so an app token must never use that prefix.
-- Do not let the caller shape the upstream request. An argument that reaches a URL path or a `_where` clause without validation turns a service account into an open proxy.
-- Scope the key to the roles it needs, and rotate it when a partner's access ends.
+- Store the credential as a [secret](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) or in the `vtex.env` file, never in your repository. Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must never use that prefix.
+- Do not let the caller shape the upstream request. An argument that reaches a URL path or a filter without validation turns a service account into an open proxy.
+- Scope the credential to the permissions it needs, and rotate it when a partner's access ends.
 
 ## Review checklist
 
@@ -257,12 +296,13 @@ Before deploying a custom resolver that handles shopper data, confirm the follow
 
 - The resolver checks authentication before any other logic.
 - Identity comes from the session or the cookie, never from an argument.
-- The outgoing request carries the shopper's cookie, not `appKey` and `appToken`.
+- Calls to VTEX APIs carry the shopper's cookie, not a fixed credential.
+- Calls to third-party APIs filter by an identifier taken from the session.
 - Master Data reads use `io/safedata`, not `dataentities`.
-- `_fields` lists specific fields, and `_all` does not appear.
-- No argument is interpolated into a `_where` clause or a URL path.
+- The response carries only the fields the interface renders.
+- No argument is interpolated into a filter or a URL path.
 - The field declares `@cacheControl(scope: "private", sMaxAge: 0)`.
 - Credentials come from environment variables without the `NEXT_PUBLIC_` prefix.
-- The entity's ACL is configured in the VTEX Admin.
+- Whichever party authorizes the request is configured to do so.
 
-> ⚠️ The last item is the one most often missed. Forwarding the cookie delegates the authorization decision to VTEX. It does not make the decision for you, and an entity with no ACL remains open.
+> ⚠️ The last item is the one most often missed. When you forward the cookie, the service decides, and a Master Data entity without an ACL stays open however you call it. When you cannot forward it, your resolver decides, and it must filter by an identifier that came from the session.
