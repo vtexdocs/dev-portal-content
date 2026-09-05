@@ -9,7 +9,7 @@ excerpt: "Learn how to authenticate custom resolvers whose response belongs to o
 
 Custom resolvers run on your store's server, with no browser between them and the APIs they call. The credentials they use determine who is allowed to read what.
 
-This guide covers any resolver whose response belongs to one shopper: order history, addresses, profile fields, wishlists, loyalty balances, subscriptions, B2B contracts, or data your store keeps in an external system. The service on the other end can be a VTEX API or a third-party one. What changes between them is how you carry the shopper's identity, not whether you need to.
+This guide covers any resolver that reads or writes data belonging to one shopper: order history, addresses, profile fields, wishlists, loyalty balances, subscriptions, B2B contracts, or data your store keeps in an external system. The service on the other end can be a VTEX API or a third-party one. What changes between them is how you carry the shopper's identity, not whether you need to.
 
 > ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). This guide assumes you are familiar with that structure.
 
@@ -26,12 +26,13 @@ Make sure you know which of the two credential models your resolver needs.
 
 A fixed credential works as a service account: it is identical on every request, whoever is browsing. It is the right choice for data that is the same for every shopper, such as catalog information, store locations, promotions, and configuration. It carries no notion of the current shopper, so when a resolver uses one to read a personal record, your resolver code is the only thing preventing one shopper from accessing another shopper's data.
 
-Two questions identify a resolver that needs attention:
+Three questions identify a resolver that needs attention:
 
 1. Does the response differ from one shopper to the next?
-2. Does the call authenticate with a credential that is the same on every request?
+2. Does the resolver create, change, or delete something that belongs to someone? Saving an address, cancelling a subscription, removing a record. Nothing is disclosed, but another shopper's data is altered, and the same rule applies.
+3. Does the call authenticate with a credential that is the same on every request?
 
-> ⚠️ When the answer to both is yes, the resolver needs the steps below. This holds regardless of which service it calls, and regardless of whether the credential is a VTEX app key or a token issued by an external provider.
+> ⚠️ When the answer to question 3 is yes, along with either of the first two, the resolver needs the steps below. This holds regardless of which service it calls, and regardless of whether the credential is a VTEX app key or a token issued by an external provider.
 
 ## Resolvers that need authentication
 
@@ -148,7 +149,7 @@ customerProfile: async (_, __, ctx) => {
   const userId = session.namespaces?.authentication?.storeUserId?.value
 
   if (!userId) {
-    return null
+    throw new UnauthorizedError('Authentication required')
   }
 
   return fetchProfileByUserId(userId, ctx)
@@ -161,7 +162,9 @@ Remove the argument from the type definition as well as from the resolver. An ar
 
 The session carries both a `profile` and an `authentication` namespace, and they answer different questions. The `profile` namespace reflects identification, which includes an email captured during a checkout flow, so `profile.id` can hold a value for a visitor who never signed in. The `authentication` namespace is populated by a VTEX ID sign-in.
 
-Read `authentication.storeUserId`, as above. Identity and proof of sign-in then arrive in the same request, and an empty value means the visitor is not authenticated.
+Read `authentication.storeUserId`, as above. Identity and proof of sign-in then arrive in the same request, and an empty value means the visitor is not authenticated. Within the `authentication` namespace, prefer `storeUserId` over `customerId`: in a B2B context `customerId` carries the contract, not the person, and `resolveActiveContractIdFromSession` reads it for exactly that purpose.
+
+Treat an empty value as an error rather than as an absent result. Every session field is optional, so optional chaining yields `undefined` without complaining. If that `undefined` reaches your lookup, the filter may drop out of the request and the call returns every record — the failure this guide exists to prevent. Throw `UnauthorizedError` before the identifier is used, as in the example above.
 
 > ℹ️ This is how the platform treats the two namespaces as well: `resolveJwtClaims` validates the token before trusting any claim, and discards the claims when validation fails.
 
@@ -252,7 +255,7 @@ loyaltyBalance: async (_: never, __: never, ctx: any) => {
   const shopperId = session.namespaces?.authentication?.storeUserId?.value
 
   if (!shopperId) {
-    return null
+    throw new UnauthorizedError('Authentication required')
   }
 
   const response = await fetch(
@@ -290,11 +293,37 @@ extend type Query {
 }
 ```
 
+## Step 6: Keep credentials out of what you return
+
+The resolver's `catch` block is a second surface. The GraphQL route protects what you *throw*: a plain error becomes a body-less `500`, and a `FastStoreError` message is included in the response only outside production. It does not protect what you *return*, because a returned value is a data field like any other:
+
+```ts
+// The message travels to the browser as data, unmasked.
+catch (error) {
+  return { error: error.message }
+}
+```
+
+```ts
+// The detail stays in the log; the client receives a typed error.
+catch (error) {
+  console.error('loyalty balance request failed', { status: error.status })
+
+  throw new UnauthorizedError('Authentication required')
+}
+```
+
+Keep the request URL and the headers out of the error text as well. The message always reaches your logs, and preview and development builds do expose it.
+
+> ⚠️ A credential that appeared in an error message should be treated as compromised and rotated, because the message may have travelled through logs, screenshots, and third-party error tools.
+
 ## Using fixed credentials safely
 
 A fixed credential remains the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. It is also what a third-party integration uses even when the response is personal, as in Step 3. When you use one:
 
 - Store the credential as a [secret](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) or in the `vtex.env` file, never in your repository. Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must never use that prefix.
+- If a credential is currently a string literal in the source, moving it to an environment variable is not enough on its own. It remains in the repository history and stays valid until it is rotated, so rotate it as well.
+- Call every endpoint over `https://`. A plain `http://` request carries the credential in cleartext.
 - Do not let the caller shape the upstream request. An argument that reaches a URL path or a filter without validation turns a service account into an open proxy.
 - Scope the credential to the permissions it needs, and rotate it when a partner's access ends.
 
@@ -304,13 +333,16 @@ Before deploying a custom resolver that handles shopper data, confirm the follow
 
 - The resolver checks authentication before any other logic.
 - Identity comes from the session or the cookie, never from an argument.
-- Session reads use `authentication.storeUserId`, not `profile.id`.
+- Session reads use `authentication.storeUserId`, not `profile.id`, and an empty value throws instead of continuing.
 - Calls to VTEX APIs carry the shopper's cookie, not a fixed credential.
 - Calls to third-party APIs filter by an identifier taken from the session.
 - Master Data reads use `io/safedata`, not `dataentities`.
 - The response carries only the fields the interface renders.
 - No argument is interpolated into a filter or a URL path.
 - The field declares `@cacheControl(scope: "private", sMaxAge: 0)`.
+- No `catch` returns a raw error: the detail is logged and the response is generic.
+- No credential is a string literal in the source, and any that was has been rotated.
+- Every outgoing call uses `https://`.
 - Credentials come from environment variables without the `NEXT_PUBLIC_` prefix.
 - Whichever party authorizes the request is configured to do so.
 
