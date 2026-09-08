@@ -147,7 +147,7 @@ You should understand all the expected behavior for the __identity provider__ en
 
 You can implement a custom OAuth option by going to your Admin and providing information about the communication between VTEX and your __identity provider__ as shown in the relevant requests described above.
 
->⚠️ Each VTEX store may have up to one custom OAuth implementation, which will be active for all store names in that account.
+>⚠️ Each VTEX account can have up to one active custom OAuth implementation. This configuration applies to every host/domain bound to that account, but not to other stores (subaccounts) listed under **Account Settings > Account > Stores**, since each of those is a separate VTEX account with its own authentication settings, and will need its own independent custom OAuth setup.
 
 The table below lists the information you need to configure for each request. After the table, you will find more details about each configuration step.
 
