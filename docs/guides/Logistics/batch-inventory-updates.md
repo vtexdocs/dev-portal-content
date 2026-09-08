@@ -30,7 +30,7 @@ The integration involves four API endpoints and one direct upload to the pre-sig
 
 Use the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint to register a new batch. The response returns the `batchId` you will use throughout the flow and the pre-signed `upload` object you will use to send the CSV to S3.
 
-Response example:
+**Response example:**
 
 ```json
 {
@@ -91,7 +91,7 @@ The CSV file must contain one row per SKU, warehouse, and account combination yo
 
 ```csv
 item_id,account_name,container_id,quantity,unlimited,lead_time
-12345,barcelonastore,WH01,150,false,PT24H 
+12345,barcelonastore,WH01,150,false,PT24H
 ```
 
 ## Confirm the batch
@@ -189,7 +189,7 @@ The error CSV contains the following fields:
 line_number,item_id,container_id,error_code,error_message
 1523,12345,WH01,INVALID_QUANTITY,"quantity cannot be negative: -50"
 4892,67890,WH01,MISSING_REQUIRED_FIELD,"container_id is required"
-10234,11111,WH01,INVALID_DATE_FORMAT,"supply_date is not valid"
+10234,11111,WH01,INVALID_DATE_FORMAT,"lead_time is not valid"
 ```
 
 ### Error types
