@@ -38,7 +38,6 @@ Introduces `defaultLocaleSlug` on `StoreProduct` for locale-selector navigation 
 
 Shoppers switching locales land on working product URLs instead of broken links, and search engines receive accurate hreflang annotations that do not point to pages that return 404. Stores with the Localization feature enabled should verify alternate-locale links and locale-selector behavior on PDP after upgrading.
 
-
 ### Make PDP product JSON-LD Schema.org compliant (PR: [#3465](https://github.com/vtex/faststore/pull/3465))
 
 Normalizes `StoreProduct.releaseDate` to an ISO 8601 calendar date regardless of whether Intelligent Search returns epoch milliseconds, epoch seconds, or date strings. PDP JSON-LD now omits empty `gtin`, `mpn`, `releaseDate`, and `offers` fields instead of publishing blank values, and offer prices are formatted for Schema.org compliance.
