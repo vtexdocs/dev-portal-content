@@ -15,7 +15,7 @@ Here's a sneak peek at the key changes made in the last week:
 
 ### New features 🚀
 
-- [Brand component](brand-component.md) - Shows a product's brand name or logo on your Product Details page.
+- [Brand component](https://developers.vtex.com/updates/release-notes/brand-component) - Shows a product's brand name or logo on your Product Details page.
 
 ### Improvements ➕
 
