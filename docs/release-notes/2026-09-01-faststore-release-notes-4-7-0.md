@@ -38,11 +38,6 @@ Introduces `defaultLocaleSlug` on `StoreProduct` for locale-selector navigation 
 
 Shoppers switching locales land on working product URLs instead of broken links, and search engines receive accurate hreflang annotations that do not point to pages that return 404. Stores with the Localization feature enabled should verify alternate-locale links and locale-selector behavior on PDP after upgrading.
 
-### Gate Cards route and sidebar entry on organization membership (PR: [#3463](https://github.com/vtex/faststore/pull/3463))
-
-Adds the Cards route to `ROUTES_ONLY_FOR_B2B_MEMBERS` and redirects buyers without a unit or contract association to `/pvt/account/404` before calling the Saved-cards service. The sidebar entry is hidden for shoppers with no organization association.
-
-Buyers who can't use saved cards no longer see a Cards menu item or reach a page that errors or shows an empty, unusable tab. Organization members keep full access; `useAdHocCard` continues to control Personal-tab rendering inside the page only. No configuration changes are required beyond upgrading to `v4.7.0`.
 
 ### Make PDP product JSON-LD Schema.org compliant (PR: [#3465](https://github.com/vtex/faststore/pull/3465))
 
@@ -60,10 +55,16 @@ Shoppers reach the correct destination when Admin redirect rules apply, even if 
 
 ## My Account for B2B Buyer Portal
 
+### Gate Cards route and sidebar entry on organization membership (PR: [#3463](https://github.com/vtex/faststore/pull/3463))
+
+Adds the Cards route to `ROUTES_ONLY_FOR_B2B_MEMBERS` and redirects buyers without a unit or contract association to `/pvt/account/404` before calling the Saved-cards service. The sidebar entry is hidden for shoppers with no organization association.
+
+Buyers who can't use saved cards no longer see a Cards menu item or reach a page that returns an error or shows an empty, unusable tab. Organization members retain full access. `useAdHocCard` continues to control Personal-tab rendering only within the page. No configuration changes are required beyond upgrading to `v4.7.0`.
+
 ### My Account for Buyer Portal B2B Cards — Personal and Shared listing (PR: [#3443](https://github.com/vtex/faststore/pull/3443))
 
 Adds a My Account **Cards** page at `/pvt/account/cards` with CMS-driven sections for listing personal and shared saved cards. The feature introduces GraphQL queries and resolvers for saved-card data, a `MyAccountListCards` component with Personal and Shared tabs, and CMS schemas for the new account page and list section.
-Buyers with the required organization access can view and manage their saved payment cards in one place-personal cards and shared cards on separate tabs—without custom storefront code. After upgrading to `v4.7.0`, sync My Account CMS schemas, publish the Cards content type and sections in Admin, and ensure eligible buyers have the required B2B organization association. Review sidebar visibility and page gating together with PR [#3463](https://github.com/vtex/faststore/pull/3463).
+Buyers with the required organization access can view and manage their saved payment cards in one place-personal cards and shared cards on separate tabs, without custom storefront code. After upgrading to `v4.7.0`, sync the My Account CMS schemas, publish the Cards content type and sections in the CMS via Admin, and ensure eligible buyers have the required B2B organization association. Review sidebar visibility and page gating together with PR [#3463](https://github.com/vtex/faststore/pull/3463).
 
 ### Restore Order Details layout and first-paint rendering in My Account (PR: [#3464](https://github.com/vtex/faststore/pull/3464))
 
