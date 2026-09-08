@@ -4,7 +4,7 @@ slug: "custom-auto-capture-feature"
 excerpt: "Learn how payment providers enable custom automatic capture (settlement) in the connector manifest and how merchants schedule the settlement time frame in the VTEX Admin."
 hidden: false
 createdAt: "2021-12-17T11:45:14.279Z"
-updatedAt: "2026-08-25T00:00:00.000Z"
+updatedAt: "2026-09-08T00:00:00.000Z"
 ---
 
 Merchants need flexibility to receive payments according to the characteristics and restrictions of their business. VTEX allows payment providers to offer merchants a custom delay interval for automatic payment settlement.
@@ -31,7 +31,7 @@ To control which settlement options merchants can use, declare the following fie
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| `usesAutoSettleOptions` | Boolean | When set to `true`, the **Payment settlement** field becomes available to merchants in the provider configuration in the VTEX Admin. When set to `false` or omitted, the VTEX Admin doesn't display this field. |
+| `usesAutoSettleOptions` | Boolean | When set to `true`, the **Scheduled: Schedules the automatic capture** option becomes available in the **Automatic settlement** field in the provider configuration in the VTEX Admin. When set to `false` or omitted, merchants only see the settlement options that do not require a custom delay. |
 | `autoSettleDelay` | Object | Range of delays merchants can schedule, declared with the `minimum` and `maximum` properties. Both properties are required, and their values are strings expressed in whole hours. |
 
 The following example declares a provider that accepts scheduled settlement between 0 and 720 hours:
@@ -53,7 +53,6 @@ The following example declares a provider that accepts scheduled settlement betw
 ```
 
 > ⚠️ Declare `minimum` and `maximum` as strings representing whole hours, as decimals are not allowed. Declaring them as numbers makes the manifest validation fail.
-
 > ⚠️ Enabling `usesAutoSettleOptions` overrides any behavior set for the `usesEarlySecurityCapture` field.
 
 ### Relationship with the authorization response
@@ -85,16 +84,12 @@ The **Automatic settlement** field provides the following options:
 | Option | Behavior |
 | ------ | -------- |
 | **Use behavior recommended by the payment processor** | Settlement is not automatic. It follows the period specified by the acquirer, which indicates whether the payment was authorized and can recommend a number of days for settlement. This is the default behavior of the platform. |
-| **Automatic capture after payment authorization** | Settlement happens right after payment authorization, even if the transaction includes an anti-fraud analysis. |
-| **Automatic capture after anti-fraud analysis** | Settlement happens after payment authorization and anti-fraud analysis. Without an anti-fraud analysis, the platform settles the payment right after authorization. |
+| **Automatic capture immediately after payment authorization** | Settlement happens right after payment authorization, even if the transaction includes an anti-fraud analysis. |
+| **Automatic capture immediately after anti-fraud analysis** | Settlement happens after payment authorization and anti-fraud analysis. Without an anti-fraud analysis, the platform settles the payment right after authorization. |
 | **Disabled** | Settlement happens only when the order is invoiced. Consider your invoicing time, because it can exceed the settlement time agreed with the payment provider and lead to the cancellation of the transaction. |
 | **Scheduled: Schedules the automatic capture** | Settlement happens after the time frame you define, within the range declared by the payment provider. |
 
-The following image shows the **Automatic settlement** field in the provider configuration:
-
-![Payment settlement field in the provider configuration in the VTEX Admin, displaying the available automatic settlement options.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-auto-capture-feature-0.JPG)
-
-When you select the scheduled option, the VTEX Admin displays the **Scheduled time frame in hours for automatic capture** field, as shown in the following image:
+When you select the scheduled option, the VTEX Admin displays the **Scheduled time frame in hours for automatic settlement** field, as shown in the following image:
 
 ![Scheduled time frame in hours for automatic settlement field, displayed after selecting the scheduled option.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/custom-auto-capture-feature-2.JPG)
 
