@@ -19,7 +19,7 @@ Availability is determined by the following rules:
 - When a pickup point is selected — whether in the header or on its own page — the system displays all available pickup points within a 50 km radius configured in Checkout. There's no limit to the number of pickup points displayed.
 - For the nearby pickup filter, pickup points within a 10 km radius of the shopper's location are displayed, with a maximum of 40 pickup points.
 
->ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX sellers, [Seller Portal](https://help.vtex.com/en/docs/tracks/accounts-and-architecture#vtex-account-types), and external sellers).
+> ℹ️ Delivery Promise supports any seller architecture (franchise accounts, VTEX sellers, [Seller Portal](https://help.vtex.com/en/docs/tracks/accounts-and-architecture#vtex-account-types), and external sellers).
 
 ![delivery-promise-components](https://vtexhelp.vtexassets.com/assets/docs/src/shipping-option-components___c5a1d86b0ebf692a3eb9ca49f79b55f8.png)
 
@@ -48,14 +48,14 @@ To enable Delivery Promise in your store, you must meet the following conditions
 
 Contact our [Support](https://support.vtex.com/hc/en-us) team to request the activation of Delivery Promise.
 
-Activation happens in two stages, so you can validate the experience before impacting production traffic:
+Activation happens in two stages, so you can validate the experience before it affects production traffic:
 
-- **`DpReady`:** The initial state Support applies to your account. In this state, Delivery Promise is available for testing, but production search requests aren't affected. This lets you validate Delivery Promise in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) before applying it to `master`.
-- **`DpLive`:** The production state. After you finish testing, contact [Support](https://support.vtex.com/hc/en-us) again to request promotion from `DpReady` to `DpLive`. From that point on, search requests using Delivery Promise hashes or ZIP code use Delivery Promise in production.
+- **`DpReady`:** The initial state Support applies to your account. In this state, Delivery Promise is available for testing, but doesn't affect production search requests. This allows you to validate Delivery Promise in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) before applying it to `master`.
+- **`DpLive`:** The production state. After you finish testing, contact [Support](https://support.vtex.com/hc/en-us) again to request promotion from `DpReady` to `DpLive`. From that point on, search requests with Delivery Promise hashes or ZIP codes are processed by Delivery Promise in production.
 
 ### Step 2 - Create a development workspace
 
-While your account is in the `DpReady` state, you can validate Delivery Promise without affecting production search traffic by using a development [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace). This lets you validate the full storefront experience (postal code modal, shipping method selector, pickup point selector, and sidebar filters) while `master` continues to serve production traffic without Delivery Promise.
+While your account is in the `DpReady` state, you can validate Delivery Promise without affecting production search traffic by using a development [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace). This allows you to validate the full storefront experience (postal code modal, shipping method selector, pickup point selector, and sidebar filters) while `master` continues to serve production traffic without Delivery Promise.
 
 [Create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) by running the following command in your terminal:
 
@@ -65,7 +65,7 @@ vtex use {wokspaceName}
 
 > ⚠️ Replace values between curly braces according to your scenario.
 
-Perform the configurations in the next steps in this workspace so you can validate them end-to-end before promoting the account to `DpLive`.
+Perform the configurations in the next steps in this workspace to validate them end-to-end before promoting the account to `DpLive`.
 
 ### Step 3 - Display a location selector
 
