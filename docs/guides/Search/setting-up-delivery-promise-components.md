@@ -4,7 +4,7 @@ slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
-updatedAt: "2026-08-14T12:00:00.000Z"
+updatedAt: "2026-09-08T12:00:00.000Z"
 seeAlso:
  - "/docs/apps/vtex.delivery-promise-components"
  - "/docs/guides/gathering-delivery-promise-information"
