@@ -1,10 +1,10 @@
 ---
 title: "FastStore Release Notes — Version 4.7.0"
-slug: "2026-09-01-faststore-release-notes-4-7-0"
+slug: "2026-09-08-faststore-release-notes-4-7-0"
 type: improved
 excerpt: "FastStore version 4.7.0 adds My Account Cards with Personal and Shared listings, gates recommendation sessions through discovery config, and fixes redirects, localization hreflang, Order Details layout, and PDP JSON-LD markup"
-createdAt: "2026-09-01T00:00:00.000Z"
-updatedAt: "2026-09-01T00:00:00.000Z"
+createdAt: "2026-09-08T00:00:00.000Z"
+updatedAt: "2026-09-08T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
