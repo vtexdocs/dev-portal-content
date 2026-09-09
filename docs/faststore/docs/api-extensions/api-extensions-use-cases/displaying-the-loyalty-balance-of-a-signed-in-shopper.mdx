@@ -26,7 +26,11 @@ Configure the access control list (ACL) of the `LoyaltyBalance` entity in the VT
 
 ## Step 1: Creating the type definitions
 
-In your store repository, create the `src/graphql/vtex/typeDefs/loyalty.graphql` file:
+Before the API can return a shopper's loyalty balance, your store's GraphQL schema needs to know that this data exists and what shape it takes. This step declares a new `loyaltyBalance` query and the `LoyaltyBalance` type it returns. The resolver you'll create in [Step 3](#step-3---creating-the-resolver) is what actually fetches the data to fulfill this query.
+
+1. Open your store's repository in a code editor of your preference.
+2. In the `src/graphql/vtex/typeDefs` directory, create a file named `loyalty.graphql`.
+3. In the `loyalty.graphql` file, add the following content:
 
 ```graphql src/graphql/vtex/typeDefs/loyalty.graphql
 type LoyaltyBalance {
@@ -50,7 +54,11 @@ extend type Query {
 }
 ```
 
-Note that the query declares no arguments. The shopper's identity comes from the request, not from the caller, so there is no email or user ID to pass. The `@cacheControl` directive keeps the response out of shared caches.
+In this file, the following is declared:
+
+- `type LoyaltyBalance` defines a new GraphQL object type with the two fields the account page needs: `availablePoints` (required, hence `Int!`) and `nextExpirationDate` (optional, since a shopper with no expiring points has none to report). The triple-quoted comments above each field become that field's description in your API's schema.
+- `extend type Query` adds a new root-level query, `loyaltyBalance`, to your store's existing GraphQL schema, without modifying any query that already exists. This is what makes `loyaltyBalance` queryable from a component later, once a resolver is registered for it.
+- Notice that the query takes no arguments: the shopper's identity comes from the request, not from the caller, so there is no email or user ID to pass. The `@cacheControl` directive keeps the response out of shared caches. 
 
 ## Step 2: Creating the authentication helper
 
