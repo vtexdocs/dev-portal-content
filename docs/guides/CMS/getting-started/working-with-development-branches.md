@@ -20,8 +20,7 @@ flowchart LR
    C --> D["Test content in branch"]
    D --> E["Preview and validate"]
 
-   C . "isolated from" .> F
-
+   C -. "isolated from" .-> F
    subgraph MAIN["main"]
    F["Live schema + published content"]
    end
