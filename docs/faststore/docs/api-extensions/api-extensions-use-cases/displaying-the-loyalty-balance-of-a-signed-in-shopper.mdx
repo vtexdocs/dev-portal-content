@@ -62,7 +62,11 @@ In this file, the following is declared:
 
 ## Step 2: Creating the authentication helper
 
-Create the `src/graphql/vtex/utils/auth.ts` file:
+The resolver you'll write in [Step 3](#step-3---creating-the-resolver) needs to prove it's acting on behalf of the signed-in shopper, not the store. To do that, it needs the shopper's session token, which VTEX stores in a cookie on every authenticated request. This step creates a small helper that extracts that token from the request and fails fast, with a clear error, if the shopper isn't actually signed in, so the resolver itself doesn't have to deal with cookie parsing or missing-session edge cases.
+
+1. If the `cookie` package isn't already a dependency in your store's `package.json`, install it by running `yarn add cookie` (or `npm install cookie`) in your repository root. This guide uses it to parse the request's cookie header safely.
+2. In the `src/graphql/vtex/utils` directory, create a file named `auth.ts`. If the `utils` directory doesn't exist yet, create it first.
+3. In the `auth.ts` file, add the following content:
 
 ```ts src/graphql/vtex/utils/auth.ts
 import { UnauthorizedError } from '@faststore/api'
@@ -85,11 +89,18 @@ export const getShopperToken = (ctx: any) => {
 }
 ```
 
-Parse the cookie with the `cookie` package rather than splitting the string manually. Token values can contain `=`, and truncating one causes a silent `401` response.
+In this file, the following happens:
+
+- `parse(ctx.headers?.cookie ?? '')` reads the raw `Cookie` header from the incoming request and parses it into a key-value object, using the `cookie` package rather than splitting the string manually. Token values can contain `=`, and a manual split can truncate one, which causes a silent `401` response later instead of a clear error here.
+- `` `VtexIdclientAutCookie_${ctx.account}` `` is the name VTEX gives the shopper's session cookie for a given account, It's account-specific, which is why `ctx.account` is part of the key.
+- If no token is found under that cookie name, `getShopperToken` throws `UnauthorizedError` immediately, rather than letting the resolver proceed with an empty or undefined token. `UnauthorizedError` comes from `@faststore/api` and results in a `401` response to the caller.
 
 ## Step 3: Creating the resolver
 
-Create the `src/graphql/vtex/resolvers/loyalty.ts` file:
+The type definitions from [Step 1](#step1---creating-the-type-definitions) tell your API that a `loyaltyBalance` query exists, but GraphQL still needs a function that actually produces the data when that query runs. This step writes that function: a resolver that uses the shopper's token from [Step 2](#step-2---creating-the-authentication-helper) to request the shopper's own record from Master Data, so the response is scoped to that one shopper instead of the whole `LoyaltyBalance` entity.
+
+1. In the `src/graphql/vtex/resolvers` directory, create a file named `loyalty.ts`. If the `resolvers` directory doesn't exist yet, create it first.
+2. In the `loyalty.ts` file, add the following content:
 
 ```ts src/graphql/vtex/resolvers/loyalty.ts
 import { getShopperToken } from '../utils/auth'
@@ -134,11 +145,27 @@ const LoyaltyResolver = {
 export default LoyaltyResolver
 ```
 
-Three details make this resolver safe:
+In this file, the following happens:
+
+- `LoyaltyResolver.Query.loyaltyBalance` is the resolver function GraphQL calls whenever a `loyaltyBalance` query runs. Its third parameter, `ctx`, is the request context, the same object `getShopperToken` reads from in Step 2.
+- `getShopperToken(ctx)` runs first and throws immediately if the shopper isn't signed in, so the rest of the function only ever runs for an authenticated shopper.
+- `searchParams` builds the query string for the Master Data request, requesting only the two fields the account page needs (`availablePoints` and `nextExpirationDate`) via `_fields`.
+- The `fetch` call sends the request to `io/safedata/LB/search`, `LB` is the `LoyaltyBalance` entity's acronym from **Context**. The `cookie` header rebuilds the shopper's session cookie from the account and token, which is what lets Master Data apply the entity's ACL to this specific shopper.
+- If the response isn't successful (`!response.ok`), the resolver throws rather than returning partial or default data. See [Expected behavior](#expected-behavior) below for what this means in practice.
+- If the shopper has no `LoyaltyBalance` document yet, `documents` is an empty array, and the resolver returns a default zero balance instead of `undefined`. Otherwise, it returns the first (and only) matching document.
+
+Three details make this resolver return only the signed-in shopper's own data:
 
 - The request goes to `io/safedata`, not `dataentities`. This endpoint applies the entity's ACL to the identity in the cookie, so it returns only the record that belongs to the signed-in shopper.
 - The request carries the shopper's cookie instead of `appKey` and `appToken`. Application credentials would return any record in the entity, and the resolver would become responsible for filtering.
-- `_fields` lists the two fields the interface renders. Requesting `_all` would return the entire document, including data the account page never displays.
+- `_fields` lists only the two fields the interface renders, which keeps the response small. The ACL, not the field list, is what prevents the resolver from ever seeing another shopper's document; `_fields` only avoids over-fetching data this component doesn't use.
+
+### Expected behavior for empty and failed responses
+
+This resolver can reach the `no balance to show` state through two different paths, and they mean different things:
+
+- **No record yet:** `documents.length` is `0` and `response.ok` is `true`. This happens when the shopper hasn't earned points yet. The resolver returns `{ availablePoints: 0, nextExpirationDate: null }`, which is the expected, non-error case.
+- **Authentication or ACL failure:** `response.ok` is `false` (for example, an expired token or an ACL misconfiguration), and the resolver throws. This is an error case, not a zero-balance case.
 
 ## Step 4: Registering the resolver
 
