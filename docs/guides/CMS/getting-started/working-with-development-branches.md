@@ -15,16 +15,16 @@ You point the branch to a new or updated schema, create test content against it,
 
 ```mermaid
 flowchart LR
-A["Update schema"] --> B["Sync version"]
-B --> C["Create development branch"]
-C --> D["Test content in branch"]
-D --> E["Preview and validate"]
+   A["Update schema"] --> B["Sync version"]
+   B --> C["Create development branch"]
+   C --> D["Test content in branch"]
+   D --> E["Preview and validate"]
 
-C . "isolated from" .> F
+   C . "isolated from" .> F
 
-subgraph MAIN["main"]
-F["Live schema + published content"]
-end
+   subgraph MAIN["main"]
+   F["Live schema + published content"]
+   end
 ```
 
 ## Before you begin
