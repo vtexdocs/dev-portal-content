@@ -16,7 +16,7 @@ FastStore preview deploys now use an inactivity-based lifecycle instead of a fix
 
 Previously, preview URLs were discarded a few days after creation, regardless of usage, and had to be redeployed to work again.
 
-Now, a preview URL is automatically deactivated only after a period of inactivity. Accessing the URL again automatically reactivates it:
+Now, a preview URL is automatically deactivated only after **12 hours of inactivity**. Accessing the URL again automatically reactivates it:
 
 * The first request to a deactivated preview shows a loading screen while the preview wakes up. The page refreshes on its own, and the storefront loads normally after a few seconds.
 * If a preview can no longer be reactivated, an expired page is shown instead, and the branch needs to be redeployed to generate a new preview.
