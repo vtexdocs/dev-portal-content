@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "dimension": "scratch",
+      "iteration": 1,
+      "score": 9.0,
+      "rubric_version": "scratch-placeholder-1",
+      "decision": "advance",
+      "deductions": {},
+      "findings": [
+        {
+          "criterion": "clarity",
+          "severity": "minor",
+          "note": "some sentences are lengthy (e.g., the first sentence in 'From Request to Pipeline' contains multiple clauses that could be separated)"
+        },
+        {
+          "criterion": "clarity",
+          "severity": "minor",
+          "note": "repeated opening phrases ('The system', 'The draft', 'The agent', 'Reviewers') create some monotony in structure"
+        }
+      ],
+      "cost": null,
+      "duration": 38.0
+    }
+  ]
+}
