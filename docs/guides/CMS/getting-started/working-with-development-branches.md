@@ -71,9 +71,9 @@ To work with a development branch, you need to have [VTEX CLI](https://developer
 4. Under **Schema version**, select the version you published in [Step 1](#step-1---sync-your-schema-version).
 5. Click `Create`.
 
-![create-development-branches](https://vtexhelp.vtexassets.com/assets/docs/src/create-development-branches___7e6b97f48ce0869b87c046403fb1d5ff.gif)
+   ![create-development-branches](https://vtexhelp.vtexassets.com/assets/docs/src/create-development-branches___7e6b97f48ce0869b87c046403fb1d5ff.gif)
 
-> ⚠️ Development branches can't be merged into `main`, so content built on a test schema can never accidentally reach the live store. Also, this type of branch is automatically deleted 15 days after creation.
+   > ⚠️ Development branches can't be merged into `main`, so content built on a test schema can never accidentally reach the live store. Also, this type of branch is automatically deleted 15 days after creation.
 
 ### Step 3 - Create and test content in the branch
 
@@ -85,4 +85,4 @@ To work with a development branch, you need to have [VTEX CLI](https://developer
 
 3. To preview content locally while testing, add a Preview URL to the version. This is useful, for example, when testing new React components against a local FastStore instance running on your machine. To do so, point the Preview URL to `http://localhost:<port>/api/preview`.
 
-![localhost-preview](https://vtexhelp.vtexassets.com/assets/docs/src/localhost-preview___52a1236720c070aab93d0f1604854a94.png)
+   ![localhost-preview](https://vtexhelp.vtexassets.com/assets/docs/src/localhost-preview___52a1236720c070aab93d0f1604854a94.png)
