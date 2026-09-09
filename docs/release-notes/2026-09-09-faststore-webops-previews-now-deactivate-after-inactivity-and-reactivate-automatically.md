@@ -10,7 +10,7 @@ tags:
     - WebOps
 ---
 
-FastStore preview deploys now use an inactivity-based lifecycle instead of a fixed expiration window. Preview URLs stay usable for longer, and no longer require a redeploy just to bring them back.
+FastStore preview deploys now use an inactivity-based lifecycle instead of a fixed expiration window. Preview URLs stay usable for longer and no longer require a redeploy just to bring them back.
 
 ## What has changed?
 
