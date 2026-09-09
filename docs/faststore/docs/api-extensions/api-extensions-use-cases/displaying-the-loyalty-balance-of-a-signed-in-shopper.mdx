@@ -169,15 +169,27 @@ This resolver can reach the `no balance to show` state through two different pat
 
 ## Step 4: Registering the resolver
 
-Add the resolver to the `src/graphql/vtex/resolvers/index.ts` file:
+1. Open the `src/graphql/vtex/resolvers/index.ts` file. If your store doesn't have this file yet, create it in the `src/graphql/vtex/resolvers` directory.
+2. At the top of the file, import the resolver you created in Step 3:
 
-```ts src/graphql/vtex/resolvers/index.ts
-import LoyaltyResolver from './loyalty'
+    ```ts
+    import LoyaltyResolver from './loyalty'
+    ```
 
-const resolvers = { ...LoyaltyResolver }
+3. Add `LoyaltyResolver` to the object exported by this file, so the FastStore API picks it up alongside any other resolvers:
 
-export default resolvers
-```
+    ```ts src/graphql/vtex/resolvers/index.ts
+    import LoyaltyResolver from './loyalty'
+
+    const resolvers = { ...LoyaltyResolver }
+
+    export default resolvers
+    ```
+
+4. Save the file.
+
+> ⚠️ This pattern assumes `LoyaltyResolver` is the only resolver contributing to the `Query` root in your store. If you already register other `Query` resolvers elsewhere, spreading them the same way overwrites rather than merges the `Query` object — merge the `Query` (and `Mutation`, if applicable) keys from each resolver file instead of spreading multiple resolver objects directly into `resolvers`.
+
 
 ## Step 5: Querying the data from a component
 
