@@ -29,6 +29,7 @@ This guide provides an overview of the integration capabilities available in B2B
 - [Accounting fields](#accounting-fields)
   - [Default values](#default-values)
 - [Punchout](#punchout)
+- [Checkout extensibility](#checkout-extensibility)
 
 ## Architecture overview
 
@@ -225,3 +226,15 @@ Punchout enables integration between external eprocurement systems and the VTEX 
 Use the [Punchout API](https://developers.vtex.com/docs/api-reference/punchout-api) to start and finish punchout login flows using one-time tokens.
 
 > ℹ️ For the full login integration, see [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration). For cart transfer customization, see [Punchout cart integration](https://developers.vtex.com/docs/guides/punchout-cart-integration). For a conceptual overview, see [Punchout](https://developers.vtex.com/docs/guides/punchout).
+
+## Checkout extensibility
+
+Beyond the data and API integrations above, B2B Buyer Portal also lets you customize the Checkout UI itself. Using extension points across all Checkout stages (Cart, Delivery, Review, Payment, and Order Placed), you can render your own components without changing Checkout's core behavior.
+
+| Capability | Description |
+| :--- | :--- |
+| Extension points | Render custom components at defined points across the Checkout journey. |
+| Data layer access | Read and mutate cart, settings, and extension data through dedicated hooks. |
+| Custom styling | Style extensions with CSS Modules, global imports, or CSS variables. |
+
+> ℹ️ For the full technical reference, see [Buyer Portal Checkout Extensibility](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility).

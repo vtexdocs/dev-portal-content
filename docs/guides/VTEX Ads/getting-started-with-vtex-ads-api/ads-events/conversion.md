@@ -23,7 +23,9 @@ Conversion tracking is crucial for measuring ad campaign effectiveness in VTEX A
 
 ## Sending a conversion event
 
-Use the `POST` [Track conversions](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/conversion) endpoint to send conversion events. Check the endpoint documentation for detailed information about all available fields.
+Use the `POST` [Track conversions](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/conversion) endpoint to send conversion events.
+
+> ℹ️ The request example below includes all required fields, plus the optional item-level fields `seller_id` and `product_id`. See the [Track conversions](https://developers.vtex.com/docs/api-reference/vtex-ads-api#post-/v1/beacon/conversion) API reference for the other optional fields, such as customer and location data, and for each field's type and whether it is required.
 
 Request example:
 
