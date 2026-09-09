@@ -68,7 +68,7 @@ To work with a development branch, you need to have [VTEX CLI](https://developer
 1. Open the VTEX Admin and go to **Storefront > Content > Branches**.
 2. Click `+` to create a new branch.
 3. Enable the **Development branch** toggle.
-4. Under **Schema version**, select the version you published in [Step 1](#step-1--sync-your-schema-version).
+4. Under **Schema version**, select the version you published in [Step 1](#step-1---sync-your-schema-version).
 5. Click `Create`.
 
 ![create-development-branches](https://vtexhelp.vtexassets.com/assets/docs/src/create-development-branches___7e6b97f48ce0869b87c046403fb1d5ff.gif)
