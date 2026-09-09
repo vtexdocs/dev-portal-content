@@ -7,7 +7,7 @@ updatedAt: "2026-09-04T00:00:00.000Z"
 excerpt: "Extend the FastStore API with a query that returns the loyalty points of the signed-in shopper, authenticated with the shopper's own credentials."
 ---
 
-This guide describes how to display the loyalty balance of a signed-in shopper on the account page. Unlike the other use cases in this section, this one reads personal data, so the resolver must be authenticated as the shopper rather than as the store.
+This guide describes how to extend your storefront's account page so signed-in shoppers can see their current loyalty balance. Because this balance is personal data tied to one specific shopper, the resolver must authenticate as that shopper rather than as the store, so each shopper only ever sees their own points and never another shopper's.
 
 > ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). For the reasoning behind the credentials used here, see [Authentication in API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-authentication-in-api-extensions).
 
@@ -18,7 +18,7 @@ This guide describes how to display the loyalty balance of a signed-in shopper o
 - You want to display the balance on the account page, so each shopper sees their own points.
 - The balance is personal data, so no shopper may read another shopper's record.
 
-The example uses the fictional account `examplestore`. Replace it with your own account name.
+For this guide, we'll use a fictional account example, `examplestore`. Replace it with your own account name.
 
 ## Before you begin
 
