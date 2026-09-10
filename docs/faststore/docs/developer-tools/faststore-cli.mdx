@@ -34,32 +34,17 @@ To use FastStore CLI commands globally on your machine, install the [`@faststore
 ## Default commands
 Below is a brief description of the default commands available in the FastStore CLI. To view detailed information about each command, click the respective command name.
 
-> ⚠️ Running commands via `yarn` is sufficient for developing your store. However, to set up your project with the Headless CMS and create new sections, you must install the FastStore CLI globally and use its commands.
+> ⚠️ Running commands via `yarn` is sufficient for developing your store. However, to set up your project with the Headless CMS, create new sections, or scaffold a new store, you must install the FastStore CLI globally and use its commands.
 
 | Command name | Description |
 | ------------ | ----------- |
 | [`build`](#build) | Generates a production-ready storefront. It compiles the project and optimizes it for production usage. |
 | [`cms-sync`](#cms-sync) | Syncs the `cms` folder of your FastStore project with the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). |
 | [`dev`](#dev) | Starts the project in the development environment and uses `http://localhost:3000` as the default server. It allows you to make changes to the project and see the results locally in real time without affecting the production environment. |
-| [`generate`](#generate) | Optimizes the schema and regenerates TypeScript types so that recent changes take effect without restarting the development server. |
+| [`generate-graphql`](#generate) | Optimizes the schema and regenerates TypeScript types so that recent changes take effect without restarting the development server. |
 | [`help`](#help) | Displays help for FastStore CLI commands. |
 | [`start`](#start) | Executes the FastStore project in the root directory and uses `http://localhost:3000` as the default server. |
-
-### `dev`
-
-Starts the project in the development environment and uses `http://localhost:3000` as the default server. This allows you to make changes to the project and see the results locally in real time without affecting the production environment.
-
-#### Usage
-
-```bash 
-  yarn dev
-```
-
-```bash 
-  faststore dev
-```
-
-<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+| [`test`](#test) | Runs the project's end-to-end tests. |
 
 ### `build`
 
@@ -72,30 +57,17 @@ Generates a production-ready storefront. It compiles the project and optimizes i
 ```
 
 ```bash 
-  faststore build
+  faststore build [PATH] [--no-verify]
 ```
 
-<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
-
-### `start`
-
-Executes the FastStore project in the root directory and uses `http://localhost:3000` as the default server.
-
-#### Usage
-
-```bash 
-  yarn start
-```
-
-```bash 
-  faststore start
-```
+- `PATH` (optional): the path where the FastStore project being built is located. Defaults to the current working directory.
+- `--no-verify` (optional): skips verification of the `@faststore/*` dependency version strings, preventing the use of packages installed from outside the npm registry.
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
 
 ### `cms-sync`
 
-Syncs the `cms` folder of your FastStore project with the Headless CMS.
+Syncs the `cms` folder of your FastStore project with the Headless CMS. Depending on the `contentSource.type` set in your `discovery.config.js` file, this command automatically syncs content using either the legacy Headless CMS flow or the Content Provider (CP) schema publishing flow.
 
 #### Usage
 
@@ -104,7 +76,46 @@ Syncs the `cms` folder of your FastStore project with the Headless CMS.
 ```
 
 ```bash 
-  faststore cms-sync
+  faststore cms-sync [PATH] [-d, --dry-run]
+```
+
+- `PATH` (optional): the path where the FastStore project being synced with the CMS is located. Defaults to the current working directory.
+- `-d, --dry-run` (optional): runs the sync steps without actually publishing the schema or content, useful for previewing changes beforehand.
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+
+### `dev`
+
+Starts the project in the development environment and uses `http://localhost:3000` as the default server. This allows you to make changes to the project and see the results locally in real time without affecting the production environment.
+
+#### Usage
+
+```bash 
+  yarn dev
+```
+
+```bash 
+  faststore dev [PATH] [PORT] [--watch-plugins]
+```
+
+- `PATH` (optional): the path where the FastStore project being run is located. Defaults to the current working directory.
+- `PORT` (optional): the port where FastStore should run. Defaults to `3000`.
+- `--watch-plugins` (optional): also watches installed `@vtex` scoped packages inside `node_modules` for changes, useful when developing plugins alongside your store.
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+
+### `generate-graphql`
+
+Optimizes the schema and regenerates TypeScript types so that recent changes take effect without restarting the development server.
+
+#### Usage
+
+```bash 
+  yarn faststore generate-graphql
+```
+
+```bash 
+  faststore generate-graphql
 ```
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
@@ -120,7 +131,48 @@ Displays help for FastStore CLI commands.
 ```
 
 ```bash 
-  faststore help [COMMAND] [-n]
+  faststore help [COMMAND] [-n, --nested-commands]
 ```
+
+- `COMMAND` (optional): the command to show help for.
+- `-n, --nested-commands` (optional): includes all nested commands in the output.
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+### `start`
+
+Executes the FastStore project in the root directory and uses `http://localhost:3000` as the default server. If the project hasn't been built yet, it runs [`build`](#build) automatically before starting the server.
+
+> ℹ️ In FastStore CLI `3.x` versions, this command was invoked as `start` instead of `serve`. If you're on an older CLI version, use `faststore start` instead.
+
+#### Usage
+
+```bash 
+  yarn start
+```
+
+```bash 
+  faststore serve [PATH] [PORT]
+```
+
+- `PATH` (optional): the path where the FastStore project being run is located. Defaults to the current working directory.
+- `PORT` (optional): the port where FastStore should run. Defaults to `3000`.
+
+<div align="right"> 🔼 <a href="#default-commands">Back</a></div>
+
+### `test`
+
+Runs the project's end-to-end tests, watching the project files for changes.
+
+#### Usage
+
+```bash 
+  yarn test
+```
+
+```bash 
+  faststore test [PATH]
+```
+
+- `PATH` (optional): the path where the FastStore project being tested is located. Defaults to the current working directory.
 
 <div align="right"> 🔼 <a href="#default-commands">Back</a></div>
