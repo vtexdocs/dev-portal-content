@@ -287,11 +287,11 @@ In this file, the following is declared:
 
 5. Run `yarn cms-sync` to send the section to the CMS, then add **OrderSummary** to a page in the VTEX Admin. See [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section).
 
-> ⚠️ The `useQuery_unstable` and `useAuth_unstable` hooks are exported from `@faststore/core/experimental` and their APIs may change between releases. See [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components) for more information.
+> ⚠️ The `useQuery_unstable` and `useSession_unstable` hooks are exported from `@faststore/core/experimental` and their APIs may change between releases. See [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components) for more information.
 
 The `doNotRun` option matters here: without it, the query runs for signed-out visitors too, and every one of them receives a `401` the component has to discard.
 
-> ℹ️ This component reads `person` from `useSession_unstable` rather than calling `useAuth_unstable`. The property that `useAuth_unstable` returns was renamed between core versions, while `person` is the same in both.
+> ℹ️ The component reads `person` from `useSession_unstable` to tell whether someone is signed in. `useAuth_unstable` answers the same question, but the property it returns was renamed between core versions, while `person` is the same in both.
 
 ## Expected behavior
 
@@ -305,4 +305,8 @@ The section reaches a "nothing to show" state through three different paths, and
 
 ## Result
 
-On the page where you placed the section, a signed-in shopper sees how many orders they have placed and the date of the most recent one. A signed-out visitor sees the sign-in message instead, and no request can return another shopper's summary, because the Orders API scopes the response to the session that made the request.
+On the page where you placed the section, a signed-in shopper sees how many orders they have placed and the date of the most recent one:
+
+<!-- TODO: replace with the uploaded asset URL for the /order-summary-test screenshot -->
+
+A signed-out visitor sees the sign-in message instead, and no request can return another shopper's summary, because the Orders API scopes the response to the session that made the request.
