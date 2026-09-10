@@ -114,7 +114,7 @@ export const requireAuthenticatedUser = async (ctx: any) => {
 
 ## Step 3: Take identity from the session
 
-A query that accepts an identifier and returns the matching record works as an oracle: anyone can iterate over emails, user IDs, or document numbers and read each result. Authentication alone does not solve this, because a signed-in shopper can still pass another shopper's email.
+Do not let the caller provide the identifier used to retrieve personal data. Even after signing in, a shopper could pass another shopper’s email, user ID, or document number and access that person’s record.
 
 Avoid declaring an identifier argument:
 
@@ -166,9 +166,11 @@ Treat an empty value as an error rather than as an absent result. Every session 
 
 > ℹ️ The remaining session identifiers answer other questions. `unitId` is the B2B organization unit, and `customerId` is read by the platform while resolving contracts, so neither identifies a person.
 
-## Step 4: Authenticate as the shopper, not as the store
+## Step 4: Authenticate as the shopper
 
-How you carry the shopper's identity depends on the service you call.
+Step 3 gave you the shopper's identity. Now you need to prove it to whichever service you call, and how you do that depends on what's on the other end.
+
+VTEX APIs can accept the shopper's own cookie and enforce that shopper's permissions themselves. Third-party APIs have no notion of that cookie, so your resolver has to authenticate as the integration and filter the data itself, using the identity from Step 3.
 
 ### VTEX APIs: forward the cookie
 
@@ -279,7 +281,9 @@ The same applies to filters. Never interpolate an argument into a query string, 
 
 ## Step 6: Keep private responses out of shared caches
 
-The GraphQL route derives the `cache-control` header from the `@cacheControl` directive. When the directive is absent, a `GET` query response is cached as `public, s-maxage=300` by default, unless the request carries a `VtexIdclientAutCookie` cookie, in which case the scope becomes `private`.
+Authentication is not the only way personal data can leak: even an authenticated response can end up stored in a cache shared by other visitors if nothing tells the GraphQL route to keep it private.
+
+The route derives the `cache-control` header from the `@cacheControl` directive. When the directive is absent, a `GET` query response is cached as `public, s-maxage=300` by default, unless the request carries a `VtexIdclientAutCookie` cookie, in which case the scope becomes `private`.
 
 This means a custom query that returns personal data without requiring authentication is not only readable by anyone. Its response can also be stored in a shared cache and served to unrelated visitors. Requiring authentication as described in Step 1 addresses both problems, because an authenticated request always carries the cookie.
 
