@@ -27,6 +27,7 @@ Before provisioning B2B users in VTEX, make sure the required features are enabl
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
 | Authenticator | User Management | Create User | `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users) |
+| Authenticator | User Management | Read Users | `GET` [Get user by ID](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/-userId-) <br/><br/>`GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/info) |
 | Organization Units | Units | Edit Organization Unit | `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) <br/><br/>`POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users) |
 | License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users) |
 | Dynamic Storage | Dynamic storage generic resources | Insert or update document (not remove) | `POST` [Create buyer](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api#post-/api/dataentities/shopper/documents) |
@@ -103,6 +104,69 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
 {
   "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
   "identifier": "beneson_test_21"
+}
+```
+
+## Retrieving created users
+
+After creating a user, you can retrieve their `userId` and identifiers using either of the following endpoints.
+
+### Get user by ID
+
+Retrieves a user by their `userId`.
+
+>ℹ️ For more information, see `GET` [Get user by ID](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/-userId-).
+
+#### Request example
+
+```shell
+curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/{{userId}}" \
+  -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
+  -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
+```
+
+#### Response example
+
+```json
+{
+  "userId": "1761fad7-d87a-45da-af04-5284017fe4b5",
+  "identifiers": [
+    { "type": "email", "value": "user_test@acme.com" },
+    { "type": "username", "value": "user_test" },
+    { "type": "phoneNumber", "value": "00123456789" }
+  ]
+}
+```
+
+### Get user by identifier
+
+Retrieves a user by one of their identifiers.
+
+**Query parameters:**
+
+* `identifier`: The value of the identifier (e.g., an email address, username, or phone number).
+* `type`: The type of identifier. Supported values are `username`, `email`, `phonenumber`, and `apikey`.
+
+>ℹ️ For more information, see `GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/info).
+
+#### Request example
+
+```shell
+curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/info?identifier=user_test@acme.com&type=email" \
+  -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
+  -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
+```
+
+#### Response example
+
+```json
+{
+  "userId": "1761fad7-d87a-45da-af04-5284017fe4b5",
+  "identifiers": [
+    { "type": "email", "value": "user_test@acme.com" },
+    { "type": "username", "value": "user_test" },
+    { "type": "phoneNumber", "value": "00123456789" }
+  ]
 }
 ```
 
@@ -276,7 +340,6 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/dataentities
 
 For additional user and organizational management operations, see the following API references:
 
-* `GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/pvt/user/info)
 * `GET` [Get organizational units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1)
 * `GET` [Get users from organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/vtexid/organization-units/-organizationUnitId-/users)
 * `GET` [Verify user roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/roles)
