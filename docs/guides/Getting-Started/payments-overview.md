@@ -24,7 +24,7 @@ The key components are:
 
 There are three [purchase flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows) available: **Transparent** (the shopper stays on the VTEX checkout), **Redirect** (the shopper is sent to the provider's page), and **Payment App** (custom payment UX built with VTEX IO).
 
-When a marketplace processes the shopper’s payment, the seller order can still include native `paymentData` for invoicing. That object is not a Gateway transaction on the seller account. See [Marketplace payment data on seller orders](https://developers.vtex.com/docs/guides/marketplace-payment-data-on-seller-orders).
+When a marketplace processes the customer's payment, the seller order can still include native `paymentData` for invoicing. That object isn't a Gateway transaction on the seller account. See [Marketplace payment data on seller orders](https://developers.vtex.com/docs/guides/marketplace-payment-data-on-seller-orders).
 
 ## Integration paths
 

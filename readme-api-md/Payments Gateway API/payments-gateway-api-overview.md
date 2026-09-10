@@ -14,4 +14,4 @@ updatedAt: "2022-06-15T19:38:22.663Z"
 [/block]
 The Payments Gateway API allows you to get payment data and process your store's transactions.
 
-> ⚠️ The `paymentData` object on a marketplace seller order is not a VTEX Gateway transaction. Filling that object does not create a Get transaction result on the seller account. See [Marketplace payment data on seller orders](https://developers.vtex.com/docs/guides/marketplace-payment-data-on-seller-orders).
+> ⚠️ The `paymentData` object on a marketplace seller order isn't a VTEX Gateway transaction. Don't expect the Get transaction endpoint on the seller account to return a transaction only because `paymentData` is present. See [Marketplace payment data on seller orders](https://developers.vtex.com/docs/guides/marketplace-payment-data-on-seller-orders).
