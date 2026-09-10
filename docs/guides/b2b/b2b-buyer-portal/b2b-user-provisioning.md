@@ -84,11 +84,11 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
   "identifiers": [
     {
         "type": "username",
-        "value": "beneson_test_21"
+        "value": "john_doe"
     },
     {
         "type": "email",
-        "value": "beneson2010@gmail.com+4"
+        "value": "john.doe@gmail.com"
     },
     {
         "type": "phoneNumber",
@@ -103,7 +103,7 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
 ```json
 {
   "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
-  "identifier": "beneson_test_21"
+  "identifier": "john_doe"
 }
 ```
 
