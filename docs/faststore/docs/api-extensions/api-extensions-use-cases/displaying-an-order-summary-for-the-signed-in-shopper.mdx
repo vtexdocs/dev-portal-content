@@ -7,7 +7,9 @@ updatedAt: "2026-09-10T00:00:00.000Z"
 excerpt: "Extend the FastStore API with a query that summarizes the signed-in shopper's orders, authenticated with the shopper's own session."
 ---
 
-This guide describes how to extend your storefront with a section that shows signed-in shoppers how many orders they have placed and when the most recent one was. Because this data belongs to one specific shopper, the resolver must authenticate as that shopper rather than as the store, so each shopper only ever sees their own orders and never another shopper's.
+This guide describes how to extend your storefront with a section that shows signed-in shoppers how many orders they have placed and when the most recent one was. You can then place that section on any page managed in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), such as a landing page.
+
+Because this data belongs to one specific shopper, the resolver must authenticate as that shopper rather than as the store, so each shopper only ever sees their own orders and never another shopper's.
 
 > ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). For the reasoning behind the credentials used here, see [Authentication in API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-authentication-in-api-extensions).
 
@@ -257,7 +259,33 @@ export const OrderSummary = () => {
 export default OrderSummary;
 ```
 
-3. Register the component in `src/components/index.tsx` so it becomes available as a section. See [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section).
+3. Export the component from `src/components/index.tsx`, so the storefront can render it:
+
+    ```tsx src/components/index.tsx
+    import OrderSummary from "./OrderSummary/OrderSummary";
+
+    const sections = {
+      OrderSummary,
+    };
+
+    export default sections;
+    ```
+
+4. Declare the section in `cms/faststore/sections.json`, so it becomes available in the CMS:
+
+    ```json cms/faststore/sections.json
+    {
+      "name": "OrderSummary",
+      "schema": {
+        "title": "OrderSummary",
+        "description": "Shows the signed-in shopper a summary of their own orders",
+        "type": "object",
+        "properties": {}
+      }
+    }
+    ```
+
+5. Run `yarn cms-sync` to send the section to the CMS, then add **OrderSummary** to a page in the VTEX Admin. See [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section).
 
 > ⚠️ The `useQuery_unstable` and `useAuth_unstable` hooks are exported from `@faststore/core/experimental` and their APIs may change between releases. See [Experimental features](https://developers.vtex.com/docs/guides/faststore/api-extensions-experimental-features).
 
@@ -277,4 +305,4 @@ The section reaches a "nothing to show" state through three different paths, and
 
 ## Result
 
-The section shows the signed-in shopper how many orders they have placed and the date of the most recent one. A signed-out visitor sees the sign-in message instead, and no request can return another shopper's summary, because the Orders API scopes the response to the session that made the request.
+On the page where you placed the section, a signed-in shopper sees how many orders they have placed and the date of the most recent one. A signed-out visitor sees the sign-in message instead, and no request can return another shopper's summary, because the Orders API scopes the response to the session that made the request.
