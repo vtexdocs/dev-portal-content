@@ -24,7 +24,7 @@ This guide describes how to extend your storefront with a section that shows sig
 
 Make sure you have:
 
-- A FastStore project running locally. See [Getting started](https://developers.vtex.com/docs/guides/faststore/getting-started-installation).
+- A FastStore project running locally. See [Getting started](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
 - A shopper account you can sign in with on your store, ideally with at least one placed order, so the summary shows a value other than zero.
 
 No configuration in the VTEX Admin is required: the endpoint scopes the response by the shopper's own session.
@@ -259,7 +259,7 @@ export default OrderSummary;
 
 3. Register the component in `src/components/index.tsx` so it becomes available as a section. See [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section).
 
-> ⚠️ The `useQuery_unstable` and `useAuth_unstable` hooks are exported from `@faststore/core/experimental` and their APIs may change between releases. See [Experimental features](https://developers.vtex.com/docs/guides/faststore/api-extensions-experimental-features).
+> ⚠️ The `useQuery_unstable` and `useAuth_unstable` hooks are exported from `@faststore/core/experimental` and their APIs may change between releases. See [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components) for more information.
 
 The `doNotRun` option matters here: without it, the query runs for signed-out visitors too, and every one of them receives a `401` the component has to discard.
 
