@@ -3,7 +3,7 @@ title: "Authentication in API extensions"
 slug: "authentication-in-api-extensions"
 hidden: false
 createdAt: "2026-09-04T00:00:00.000Z"
-updatedAt: "2026-09-04T00:00:00.000Z"
+updatedAt: "2026-09-10T00:00:00.000Z"
 excerpt: "Learn how to authenticate custom resolvers whose response belongs to one shopper, whether they call a VTEX API or a third-party service."
 ---
 
@@ -13,7 +13,9 @@ This guide covers any resolver that reads or writes data belonging to one shoppe
 
 > ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). This guide assumes you are familiar with that structure.
 
-## Before you begin
+## instructions
+
+### Step 1: Determine whether your resolver needs authentication
 
 Make sure you know which of the two credential models your resolver needs.
 
@@ -34,7 +36,7 @@ Three questions identify a resolver that needs attention:
 
 > ⚠️ When the answer to question 3 is yes, along with either of the first two, the resolver needs the steps below. This holds regardless of which service it calls, and regardless of whether the credential is a VTEX app key or a token issued by an external provider.
 
-## Resolvers that need authentication
+#### Resolvers that need authentication
 
 Not every resolver calls an API. The example in [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema) derives a field from data already loaded:
 
@@ -50,7 +52,7 @@ Nothing here reaches the network, so nothing here needs credentials. The same ap
 
 Authentication becomes a concern the moment a resolver calls an API. That is the case this guide covers.
 
-## Understanding the resolver context
+#### Understanding the resolver context
 
 Custom resolvers receive the standard GraphQL signature. The third argument is the FastStore context:
 
@@ -69,7 +71,7 @@ const MyResolver = {
 
 `ctx.headers.cookie` holds the shopper's cookies, forwarded from the browser. Every pattern in this guide builds on it.
 
-## Public writes and personal data
+#### Public writes and personal data
 
 [Adding a contact form to a landing page](https://developers.vtex.com/docs/guides/faststore/api-extensions-use-cases-adding-a-contact-form-to-a-landing-page) documents a mutation that writes to Master Data with no credentials:
 
@@ -90,7 +92,7 @@ This is appropriate for that scenario: an anonymous visitor submits a form into 
 
 Follow the sections below instead.
 
-## Step 1: Require authentication in the resolver
+### Step 2: Require authentication in the resolver
 
 The FastStore API marks its own private fields with the `@auth` directive, which validates the shopper's token before the resolver runs. That directive is applied to the platform schema, so do not assume it will be enforced on a field you declare. Write the check in your resolver:
 
@@ -112,7 +114,7 @@ export const requireAuthenticatedUser = async (ctx: any) => {
 
 `@faststore/api` exports `UnauthorizedError` and `ForbiddenError`, which the GraphQL route converts into the corresponding HTTP statuses. Throwing them is preferable to returning `null`, which the storefront cannot distinguish from an empty result.
 
-## Step 2: Take identity from the session
+### Step 3: Take identity from the session
 
 A query that accepts an identifier and returns the matching record works as an oracle: anyone can iterate over emails, user IDs, or document numbers and read each result. Authentication alone does not solve this, because a signed-in shopper can still pass another shopper's email.
 
@@ -158,7 +160,7 @@ customerProfile: async (_, __, ctx) => {
 
 Remove the argument from the type definition as well as from the resolver. An argument that exists will eventually be used.
 
-### Read the identity from the right namespace
+#### Read the identity from the right namespace
 
 Use `authentication.storeUserId`, as above. VTEX documents it as extracted from VTEX ID cookie validation, so it holds a value only for a shopper who signed in. Do not use `profile.id`: it is loaded from Master Data and can hold a value for a visitor who was identified without signing in.
 
@@ -166,11 +168,11 @@ Treat an empty value as an error rather than as an absent result. Every session 
 
 > ℹ️ The remaining session identifiers answer other questions. `unitId` is the B2B organization unit, and `customerId` is read by the platform while resolving contracts, so neither identifies a person.
 
-## Step 3: Authenticate as the shopper, not as the store
+### Step 4: Authenticate as the shopper, not as the store
 
 How you carry the shopper's identity depends on the service you call.
 
-### VTEX APIs: forward the cookie
+#### VTEX APIs: forward the cookie
 
 VTEX APIs accept the shopper's cookie and apply that shopper's permissions, so the service performs the authorization instead of your resolver. In Master Data, the shopper-scoped endpoint is `/api/io/safedata/{entity}`, which applies the entity's ACL to the identity in the cookie. The `/api/dataentities/{entity}` endpoint does not, and trusts whichever credential is attached to the request.
 
@@ -241,7 +243,7 @@ export const safedataUpdate = async (
 
 For VTEX APIs outside Master Data, the pattern is the same: forward `ctx.headers.cookie` and let the upstream service authorize the call.
 
-### Third-party APIs: derive the identifier server-side
+#### Third-party APIs: derive the identifier server-side
 
 An external system, such as an ERP, a CRM, or a loyalty provider, knows nothing about the VTEX cookie, so there is nothing to forward. The integration credential stays on the server, and the shopper's identifier comes from the session:
 
@@ -271,13 +273,13 @@ loyaltyBalance: async (_: never, __: never, ctx: any) => {
 
 > ⚠️ In this arrangement your resolver is the only barrier, because the external service authorizes the integration rather than the shopper. The identifier must come from the session, as above, and never from a query argument. Return only the records that belong to the shopper who asked.
 
-## Step 4: Return only the fields the interface uses
+### Step 5: Return only the fields the interface uses
 
 Request the fields your interface renders, not the whole record. This limits the impact when a service returns more than expected, and it keeps personal data out of logs and traces. In Master Data, this means listing fields in `_fields` rather than requesting `_all`. With a third-party API, it usually means selecting fields from the response before returning it.
 
 The same applies to filters. Never interpolate an argument into a query string, a filter such as a Master Data `_where` clause, or a URL path. Build them from session values, or validate the argument against an allowlist.
 
-## Step 5: Keep private responses out of shared caches
+### Step 6: Keep private responses out of shared caches
 
 The GraphQL route derives the `cache-control` header from the `@cacheControl` directive. When the directive is absent, a `GET` query response is cached as `public, s-maxage=300` by default, unless the request carries a `VtexIdclientAutCookie` cookie, in which case the scope becomes `private`.
 
@@ -291,7 +293,7 @@ extend type Query {
 }
 ```
 
-## Step 6: Keep credentials out of what you return
+### Step 7: Keep credentials out of what you return
 
 The resolver's `catch` block is a second surface. The GraphQL route protects what you *throw*: a plain error becomes a body-less `500`, and a `FastStoreError` message is included in the response only outside production. It does not protect what you *return*, because a returned value is a data field like any other:
 
@@ -327,21 +329,118 @@ A fixed credential remains the right choice for data with no shopper dimension, 
 
 ## Review checklist
 
-Before deploying a custom resolver that handles shopper data, confirm the following:
+Before deploying a custom resolver that handles shopper data, confirm the following.
 
-- The resolver checks authentication before any other logic.
-- Identity comes from the session or the cookie, never from an argument.
-- Session reads use `authentication.storeUserId`, not `profile.id`, and an empty value throws instead of continuing.
-- Calls to VTEX APIs carry the shopper's cookie, not a fixed credential.
-- Calls to third-party APIs filter by an identifier taken from the session.
-- Master Data reads use `io/safedata`, not `dataentities`.
-- The response carries only the fields the interface renders.
-- No argument is interpolated into a filter or a URL path.
-- The field declares `@cacheControl(scope: "private", sMaxAge: 0)`.
-- No `catch` returns a raw error: the detail is logged and the response is generic.
-- No credential is a string literal in the source, and any that was has been rotated.
-- Every outgoing call uses `https://`.
-- Credentials come from environment variables without the `NEXT_PUBLIC_` prefix.
-- Whichever party authorizes the request is configured to do so.
+<CheckboxField label="Authentication runs first" id="checkboxfield-auth-first" />
+<details>
+<summary>The resolver checks authentication before any other logic.</summary>
+
+Call `requireAuthenticatedUser` (or an equivalent check) as the first line of the resolver, before any data is read or written.
+
+</details>
+
+<CheckboxField label="Identity comes from the session" id="checkboxfield-identity-session" />
+<details>
+<summary>Identity comes from the session or the cookie, never from an argument.</summary>
+
+An identifier accepted as a query or mutation argument lets the caller choose whose data to read or change. Derive it from `ctx.clients.commerce.session('')` or from the forwarded cookie instead.
+
+</details>
+
+<CheckboxField label="Session reads use the right namespace" id="checkboxfield-session-namespace" />
+<details>
+<summary>Session reads use `authentication.storeUserId`, not `profile.id`, and an empty value throws instead of continuing.</summary>
+
+`profile.id` can hold a value for a visitor who was identified without signing in. Use `authentication.storeUserId`, and throw `UnauthorizedError` when it is empty rather than letting the lookup continue with no filter.
+
+</details>
+
+<CheckboxField label="VTEX API calls carry the shopper's cookie" id="checkboxfield-vtex-cookie" />
+<details>
+<summary>Calls to VTEX APIs carry the shopper's cookie, not a fixed credential.</summary>
+
+Forward `ctx.headers.cookie` so the upstream VTEX service authorizes the request against that shopper's permissions.
+
+</details>
+
+<CheckboxField label="Third-party API calls filter by session identifier" id="checkboxfield-third-party-filter" />
+<details>
+<summary>Calls to third-party APIs filter by an identifier taken from the session.</summary>
+
+A third-party service has no notion of the VTEX cookie, so your resolver is the only barrier. Filter the request by the shopper ID taken from the session, never from an argument.
+
+</details>
+
+<CheckboxField label="Master Data reads use safedata" id="checkboxfield-safedata" />
+<details>
+<summary>Master Data reads use `io/safedata`, not `dataentities`.</summary>
+
+The `/api/io/safedata/{entity}` endpoint applies the entity's ACL to the identity in the cookie. The `/api/dataentities/{entity}` endpoint does not, and trusts whichever credential is attached to the request.
+
+</details>
+
+<CheckboxField label="Response returns only rendered fields" id="checkboxfield-fields-returned" />
+<details>
+<summary>The response carries only the fields the interface renders.</summary>
+
+Request the fields your interface renders, not the whole record. In Master Data, list fields in `_fields` rather than requesting `_all`.
+
+</details>
+
+<CheckboxField label="No unvalidated argument reaches a filter or URL" id="checkboxfield-no-interpolation" />
+<details>
+<summary>No argument is interpolated into a filter or a URL path.</summary>
+
+Never interpolate an argument into a query string, a filter such as a Master Data `_where` clause, or a URL path. Build them from session values, or validate the argument against an allowlist.
+
+</details>
+
+<CheckboxField label="Field declares a private cache scope" id="checkboxfield-cache-control" />
+<details>
+<summary>The field declares `@cacheControl(scope: "private", sMaxAge: 0)`.</summary>
+
+This keeps a personal response out of shared caches, even when the default caching behavior would otherwise apply.
+
+</details>
+
+<CheckboxField label="No catch block returns a raw error" id="checkboxfield-raw-error" />
+<details>
+<summary>No `catch` returns a raw error: the detail is logged and the response is generic.</summary>
+
+A returned value is a data field like any other, so it is not protected the way a thrown error is. Log the detail and throw a typed error such as `UnauthorizedError` instead.
+
+</details>
+
+<CheckboxField label="No credential is a string literal" id="checkboxfield-no-literal-credential" />
+<details>
+<summary>No credential is a string literal in the source, and any that was has been rotated.</summary>
+
+A credential that was ever committed as a string literal remains in the repository history and stays valid until it is rotated, even after moving it to an environment variable.
+
+</details>
+
+<CheckboxField label="Every outgoing call uses HTTPS" id="checkboxfield-https" />
+<details>
+<summary>Every outgoing call uses `https://`.</summary>
+
+A plain `http://` request carries the credential in cleartext.
+
+</details>
+
+<CheckboxField label="Credentials come from environment variables" id="checkboxfield-env-vars" />
+<details>
+<summary>Credentials come from environment variables without the `NEXT_PUBLIC_` prefix.</summary>
+
+Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must never use that prefix.
+
+</details>
+
+<CheckboxField label="The right party authorizes the request" id="checkboxfield-authorizing-party" />
+<details>
+<summary>Whichever party authorizes the request is configured to do so.</summary>
+
+When you forward the cookie, the service decides, and a Master Data entity without an ACL stays open however you call it. When you cannot forward it, your resolver decides, and it must filter by an identifier that came from the session.
+
+</details>
 
 > ⚠️ The last item is the one most often missed. When you forward the cookie, the service decides, and a Master Data entity without an ACL stays open however you call it. When you cannot forward it, your resolver decides, and it must filter by an identifier that came from the session.
