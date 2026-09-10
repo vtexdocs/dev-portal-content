@@ -30,7 +30,7 @@ The [Self-Assessment Questionnaire](https://www.pcisecuritystandards.org/pci_sec
 
 ## Attestation of Compliance for Onsite Assessments (AOC)
 
-The Attestation of Compliance for Onsite Assessments ([AOC](https://www.pcisecuritystandards.org/document_library)) is a document that declares the compliance status of the service provider or merchant with PCI DSS. It must be signed by a company representative and a Qualified Security Assessor ([QSA](\[https://www.pcisecuritystandards.org/assessors_and_solutions/qualified_security_assessors])).
+The Attestation of Compliance for Onsite Assessments ([AOC](https://www.pcisecuritystandards.org/document_library)) is a document that declares the compliance status of the service provider or merchant with PCI DSS. It must be signed by a company representative and a Qualified Security Assessor ([QSA](https://www.pcisecuritystandards.org/assessors_and_solutions/qualified_security_assessors)).
 
 The provider must forward the AOC (Service Provider version) fully completed to VTEX, noting the following points:
 

@@ -11,6 +11,8 @@ updatedAt: "2026-06-09T00:00:00.000Z"
 
 Buyer Portal Checkout Extensibility lets you extend the default checkout journey with capabilities aligned to your business model, such as external integrations and custom UI. Using extension points across all Checkout stages (Cart, Delivery, Review, Payment, and Order Placed), you can render your own components without changing checkout's core behavior.
 
+> ℹ️ For the full set of B2B Buyer Portal integration capabilities, such as contracts, organization management, and Punchout, see [B2B Buyer Portal integration overview](https://developers.vtex.com/docs/guides/b2b-buyer-portal-integration-overview).
+
 The technical aspects of Checkout extensions are covered in the following articles:
 
 - [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout): Install the Buyer Portal Checkout modules in your FastStore monorepo, create a Checkout project, and preview your extensions in development.
