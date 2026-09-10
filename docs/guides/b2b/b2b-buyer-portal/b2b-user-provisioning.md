@@ -107,69 +107,6 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
 }
 ```
 
-## Retrieving created users
-
-After creating a user, you can retrieve their `userId` and identifiers using either of the following endpoints.
-
-### Get user by ID
-
-Retrieves a user by their `userId`.
-
->ℹ️ For more information, see `GET` [Get user by ID](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/-userId-).
-
-#### Request example
-
-```shell
-curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/{{userId}}" \
-  -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
-  -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
-```
-
-#### Response example
-
-```json
-{
-  "userId": "1761fad7-d87a-45da-af04-5284017fe4b5",
-  "identifiers": [
-    { "type": "email", "value": "user_test@acme.com" },
-    { "type": "username", "value": "user_test" },
-    { "type": "phoneNumber", "value": "00123456789" }
-  ]
-}
-```
-
-### Get user by identifier
-
-Retrieves a user by one of their identifiers.
-
-**Query parameters:**
-
-* `identifier`: The value of the identifier (e.g., an email address, username, or phone number).
-* `type`: The type of identifier. Supported values are `username`, `email`, `phonenumber`, and `apikey`.
-
->ℹ️ For more information, see `GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/info).
-
-#### Request example
-
-```shell
-curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/info?identifier=user_test@acme.com&type=email" \
-  -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
-  -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
-```
-
-#### Response example
-
-```json
-{
-  "userId": "1761fad7-d87a-45da-af04-5284017fe4b5",
-  "identifiers": [
-    { "type": "email", "value": "user_test@acme.com" },
-    { "type": "username", "value": "user_test" },
-    { "type": "phoneNumber", "value": "00123456789" }
-  ]
-}
-```
-
 ## Step 2 - Create organizational unit
 
 >⚠️ This step is required only if the storefront user's organizational unit does not exist yet. If it already exists, proceed to [Step 3 - Assign user to organizational unit](#step-3---assign-user-to-organizational-unit).
@@ -333,6 +270,69 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/dataentities
   "Id": "shopper-cbfc4f67-6ea3-11ee-83ab-0a8d18f9f827",
   "Href": "http://{{accountName}}.vtexcommercestable.com.br/api/dataentities/shopper/documents/cbfc4f67-6ea3-11ee-83ab-0a8d18f9f827",
   "DocumentId": "cbfc4f67-6ea3-11ee-83ab-0a8d18f9f827"
+}
+```
+
+## Retrieving created users
+
+After creating a user, you can retrieve their `userId` and identifiers using either of the following endpoints.
+
+### Get user by ID
+
+Retrieves a user by their `userId`.
+
+>ℹ️ For more information, see `GET` [Get user by ID](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/-userId-).
+
+#### Request example
+
+```shell
+curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/{{userId}}" \
+  -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
+  -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
+```
+
+#### Response example
+
+```json
+{
+  "userId": "1761fad7-d87a-45da-af04-5284017fe4b5",
+  "identifiers": [
+    { "type": "email", "value": "user_test@acme.com" },
+    { "type": "username", "value": "user_test" },
+    { "type": "phoneNumber", "value": "00123456789" }
+  ]
+}
+```
+
+### Get user by identifier
+
+Retrieves a user by one of their identifiers.
+
+**Query parameters:**
+
+* `identifier`: The value of the identifier (e.g., an email address, username, or phone number).
+* `type`: The type of identifier. Supported values are `username`, `email`, `phonenumber`, and `apikey`.
+
+>ℹ️ For more information, see `GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/info).
+
+#### Request example
+
+```shell
+curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/info?identifier=user_test@acme.com&type=email" \
+  -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
+  -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
+```
+
+#### Response example
+
+```json
+{
+  "userId": "1761fad7-d87a-45da-af04-5284017fe4b5",
+  "identifiers": [
+    { "type": "email", "value": "user_test@acme.com" },
+    { "type": "username", "value": "user_test" },
+    { "type": "phoneNumber", "value": "00123456789" }
+  ]
 }
 ```
 
