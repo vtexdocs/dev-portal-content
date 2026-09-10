@@ -88,7 +88,7 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
     },
     {
         "type": "email",
-        "value": "john.doe@gmail.com"
+        "value": "john.doe@acme.com"
     },
     {
         "type": "phoneNumber",
@@ -256,7 +256,7 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/dataentities
     "firstName": "John",
     "lastName": "Doe",
     "document": "111.444.000-00",
-    "email": "john.doe@acme.com",
+    "email": "buyer.john.doe@acme.com",
     "phone": "5583987499600",
     "documentType": "cpf",
     "cards": []
@@ -297,7 +297,7 @@ curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator
 {
   "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
   "identifiers": [
-    { "type": "email", "value": "john.doe@gmail.com" },
+    { "type": "email", "value": "john.doe@acme.com" },
     { "type": "username", "value": "john_doe" },
     { "type": "phoneNumber", "value": "415-602-8838" }
   ]
@@ -318,7 +318,7 @@ Retrieves a user by one of their identifiers.
 #### Request example
 
 ```shell
-curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/info?identifier=john.doe@gmail.com&type=email" \
+curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/info?identifier=john.doe@acme.com&type=email" \
   -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
   -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
 ```
@@ -329,7 +329,7 @@ curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator
 {
   "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
   "identifiers": [
-    { "type": "email", "value": "john.doe@gmail.com" },
+    { "type": "email", "value": "john.doe@acme.com" },
     { "type": "username", "value": "john_doe" },
     { "type": "phoneNumber", "value": "415-602-8838" }
   ]
