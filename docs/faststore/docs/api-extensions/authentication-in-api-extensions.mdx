@@ -102,13 +102,26 @@ import { UnauthorizedError } from '@faststore/api'
  * Call this first in every resolver that reads or writes personal data.
  */
 export const requireAuthenticatedUser = async (ctx: any) => {
-  const validation = await ctx.clients.commerce.vtexid.validate()
+  try {
+    const validation = await ctx.clients.commerce.vtexid.validate()
 
-  if (validation?.authStatus?.toLowerCase() !== 'success') {
+    if (validation?.authStatus?.toLowerCase() !== 'success') {
+      throw new UnauthorizedError('Authentication required')
+    }
+  } catch (error) {
+    if (error instanceof UnauthorizedError) {
+      throw error
+    }
+
+    // For a missing or expired token, VTEX ID answers 401 and the client
+    // throws instead of resolving. Without this catch, the caller would get
+    // a 500 rather than a 401.
     throw new UnauthorizedError('Authentication required')
   }
 }
 ```
+
+The `try`/`catch` is not optional. For a missing or expired token, VTEX ID answers `401` and the client throws rather than resolving with an unsuccessful status, so the check above would never run and the caller would receive a `500`.
 
 `@faststore/api` exports `UnauthorizedError` and `ForbiddenError`, which the GraphQL route converts into the corresponding HTTP statuses. Throwing them is preferable to returning `null`, which the storefront cannot distinguish from an empty result.
 
@@ -174,74 +187,38 @@ VTEX APIs can accept the shopper's own cookie and enforce that shopper's permiss
 
 ### VTEX APIs: forward the cookie
 
-VTEX APIs accept the shopper's cookie and apply that shopper's permissions, so the service performs the authorization instead of your resolver. In Master Data, the shopper-scoped endpoint is `/api/io/safedata/{entity}`, which applies the entity's ACL to the identity in the cookie. The `/api/dataentities/{entity}` endpoint does not, and trusts whichever credential is attached to the request.
+Many VTEX APIs accept the shopper's own cookie and answer as that shopper, so the service performs the authorization instead of your resolver. Forward the incoming cookie header as it arrives:
 
-```ts src/graphql/vtex/utils/masterdata.ts
-import { UnauthorizedError } from '@faststore/api'
+```ts src/graphql/vtex/resolvers/orderSummary.ts
+const response = await fetch(
+  `https://${ctx.account}.vtexcommercestable.com.br/api/oms/user/orders?per_page=1`,
+  {
+    headers: {
+      'content-type': 'application/json',
+      // Forwarding the shopper's cookies is what scopes the response.
+      cookie: ctx.headers?.cookie ?? '',
+    },
+  }
+)
+```
+
+`/api/oms/user/orders` returns only the orders belonging to whoever is signed in. Sending an `appKey` and `appToken` pair instead would authenticate the request as the store, and the endpoint would no longer be scoped to one person.
+
+Forwarding the whole `cookie` header is the simplest form and the one the platform itself uses. When an endpoint needs the token on its own, read it with a parser rather than by splitting the string:
+
+```ts
 import { parse } from 'cookie'
 
-/**
- * Reads a Master Data entity as the signed-in shopper. VTEX applies the
- * entity's ACL, so this returns only records that shopper may access.
- */
-export const safedataSearch = async (
-  ctx: any,
-  entity: string,
-  params: Record<string, string>
-) => {
-  const account = ctx.account
-  const authCookie = parse(ctx.headers?.cookie ?? '')[
-    `VtexIdclientAutCookie_${account}`
-  ]
-
-  if (!authCookie) {
-    throw new UnauthorizedError('Authentication required')
-  }
-
-  const searchParams = new URLSearchParams(params)
-
-  const response = await fetch(
-    `https://${account}.myvtex.com/api/io/safedata/${entity}/search?${searchParams}`,
-    {
-      headers: {
-        Accept: 'application/vnd.vtex.ds.v10+json',
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        cookie: `VtexIdclientAutCookie_${account}=${authCookie}`,
-      },
-    }
-  )
-
-  if (!response.ok) {
-    throw new Error(`safedata ${entity} search failed: ${response.status}`)
-  }
-
-  return response.json()
-}
+const token = parse(ctx.headers?.cookie ?? '')[
+  `VtexIdclientAutCookie_${ctx.account}`
+]
 ```
 
-> ℹ️ Parse the cookie with a parser such as the `cookie` package rather than `split('=')[1]`. Token values can contain `=`, and truncating one causes a silent `401` response.
+> ℹ️ Use a parser such as the `cookie` package rather than `split('=')[1]`. Token values can contain `=`, and truncating one causes a silent `401` response.
 
-Writes follow the same rule. Resolve the document ID through `safedataSearch` in the same request. A document ID accepted as an argument returns control over which record is written to the caller:
+Writes follow the same rule as reads. Resolve the record's identifier within the same request, from the session or from a scoped read. An identifier accepted as an argument returns control over which record is written to the caller.
 
-```ts src/graphql/vtex/utils/masterdata.ts
-export const safedataUpdate = async (
-  ctx: any,
-  entity: string,
-  documentId: string,
-  fields: Record<string, unknown>
-) => {
-  // Build the headers as in `safedataSearch`.
-  const response = await fetch(
-    `https://${ctx.account}.myvtex.com/api/io/safedata/${entity}/documents/${documentId}`,
-    { method: 'PATCH', headers, body: JSON.stringify(fields) }
-  )
-
-  // Handle the response.
-}
-```
-
-For VTEX APIs outside Master Data, the pattern is the same: forward `ctx.headers.cookie` and let the upstream service authorize the call.
+> ⚠️ Not every VTEX endpoint is scoped by the shopper. Check the endpoint's reference before relying on the cookie alone, and treat an endpoint that answers the same for every session as the third-party case below.
 
 ### Third-party APIs: derive the identifier server-side
 
@@ -275,9 +252,9 @@ loyaltyBalance: async (_: never, __: never, ctx: any) => {
 
 ## Step 5: Return only the fields the interface uses
 
-Request the fields your interface renders, not the whole record. This limits the impact when a service returns more than expected, and it keeps personal data out of logs and traces. In Master Data, this means listing fields in `_fields` rather than requesting `_all`. With a third-party API, it usually means selecting fields from the response before returning it.
+Request the fields your interface renders, not the whole record. This limits the impact when a service returns more than expected, and it keeps personal data out of logs and traces. When the endpoint supports selecting fields, list them explicitly; otherwise, pick the fields out of the response before returning it.
 
-The same applies to filters. Never interpolate an argument into a query string, a filter such as a Master Data `_where` clause, or a URL path. Build them from session values, or validate the argument against an allowlist.
+The same applies to filters. Never interpolate an argument into a query string, a filter, or a URL path. Build them from session values, or validate the argument against an allowlist.
 
 ## Step 6: Keep private responses out of shared caches
 
@@ -373,19 +350,11 @@ A third-party service has no notion of the VTEX cookie, so your resolver is the 
 
 </details>
 
-<CheckboxField label="Master Data reads use safedata" id="checkboxfield-safedata" />
-<details>
-<summary>Master Data reads use `io/safedata`, not `dataentities`.</summary>
-
-The `/api/io/safedata/{entity}` endpoint applies the entity's ACL to the identity in the cookie. The `/api/dataentities/{entity}` endpoint does not, and trusts whichever credential is attached to the request.
-
-</details>
-
 <CheckboxField label="Response returns only rendered fields" id="checkboxfield-fields-returned" />
 <details>
 <summary>The response carries only the fields the interface renders.</summary>
 
-Request the fields your interface renders, not the whole record. In Master Data, list fields in `_fields` rather than requesting `_all`.
+Request the fields your interface renders, not the whole record. When an endpoint supports selecting fields, list them explicitly instead of asking for everything.
 
 </details>
 
@@ -393,7 +362,7 @@ Request the fields your interface renders, not the whole record. In Master Data,
 <details>
 <summary>No argument is interpolated into a filter or a URL path.</summary>
 
-Never interpolate an argument into a query string, a filter such as a Master Data `_where` clause, or a URL path. Build them from session values, or validate the argument against an allowlist.
+Never interpolate an argument into a query string, a filter, or a URL path. Build them from session values, or validate the argument against an allowlist.
 
 </details>
 
@@ -441,8 +410,8 @@ Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must 
 <details>
 <summary>Whichever party authorizes the request is configured to do so.</summary>
 
-When you forward the cookie, the service decides, and a Master Data entity without an ACL stays open however you call it. When you cannot forward it, your resolver decides, and it must filter by an identifier that came from the session.
+When you forward the cookie, the service decides, so confirm that the endpoint really is scoped by the shopper. When you cannot forward it, your resolver decides, and it must filter by an identifier that came from the session.
 
 </details>
 
-> ⚠️ The last item is the one most often missed. When you forward the cookie, the service decides, and a Master Data entity without an ACL stays open however you call it. When you cannot forward it, your resolver decides, and it must filter by an identifier that came from the session.
+> ⚠️ The last item is the one most often missed. When you forward the cookie, the service decides, so confirm that the endpoint really is scoped by the shopper. When you cannot forward it, your resolver decides, and it must filter by an identifier that came from the session.
