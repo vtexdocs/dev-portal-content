@@ -26,7 +26,7 @@ Because this data belongs to one specific shopper, the resolver must authenticat
 
 Make sure you have:
 
-- A FastStore project running locally. See [Getting started](https://developers.vtex.com/docs/guides/faststore/getting-started-installation).
+- A FastStore project running locally. See [Getting started](https://developers.vtex.com/docs/guides/faststore/getting-started-overview).
 - A shopper account you can sign in with on your store, ideally with at least one placed order, so the summary shows a value other than zero.
 
 No configuration in the VTEX Admin is required: the endpoint scopes the response by the shopper's own session.
@@ -157,7 +157,7 @@ const orderSummaryResolver = {
 export default orderSummaryResolver;
 ```
 
-In this file, the following happens:
+In this file, the following is declared:
 
 - `orderSummaryResolver.Query.orderSummary` is the function GraphQL calls whenever an `orderSummary` query runs. Its third parameter, `ctx`, is the request context, which carries the incoming headers, the account name, and the platform clients.
 - `requireAuthenticatedShopper(ctx)` runs first and throws immediately for a signed-out visitor, so the rest of the function only ever runs for an authenticated shopper. `UnauthorizedError` comes from `@faststore/api` and results in a `401` response to the caller.
@@ -192,72 +192,72 @@ In this file, the following happens:
 1. In the `src/components` directory, create a directory named `OrderSummary` with a file named `OrderSummary.tsx`.
 2. In the `OrderSummary.tsx` file, add the following content:
 
-```tsx src/components/OrderSummary/OrderSummary.tsx
-import { gql } from "@faststore/core/api";
+    ```tsx src/components/OrderSummary/OrderSummary.tsx
+    import { gql } from "@faststore/core/api";
 
-import {
-  useQuery_unstable as useQuery,
-  useSession_unstable as useSession,
-} from "@faststore/core/experimental";
+    import {
+      useQuery_unstable as useQuery,
+      useSession_unstable as useSession,
+    } from "@faststore/core/experimental";
 
-export const query = gql(`
-  query OrderSummaryQuery {
-    orderSummary {
-      totalOrders
-      lastOrderDate
-    }
-  }
-`);
+    export const query = gql(`
+      query OrderSummaryQuery {
+        orderSummary {
+          totalOrders
+          lastOrderDate
+        }
+      }
+    `);
 
-type OrderSummaryData = {
-  orderSummary: {
-    totalOrders: number;
-    lastOrderDate: string | null;
-  } | null;
-};
+    type OrderSummaryData = {
+      orderSummary: {
+        totalOrders: number;
+        lastOrderDate: string | null;
+      } | null;
+    };
 
-export const OrderSummary = () => {
-  // `person` is only populated for a signed-in shopper.
-  const { person } = useSession();
-  const isSignedIn = Boolean(person?.id);
+    export const OrderSummary = () => {
+      // `person` is only populated for a signed-in shopper.
+      const { person } = useSession();
+      const isSignedIn = Boolean(person?.id);
 
-  // The resolver answers with a 401 for a signed-out visitor, so the query
-  // only runs once there is a session to authenticate.
-  const { data, error } = useQuery<OrderSummaryData>(
-    query,
-    {},
-    { doNotRun: !isSignedIn }
-  );
+      // The resolver answers with a 401 for a signed-out visitor, so the query
+      // only runs once there is a session to authenticate.
+      const { data, error } = useQuery<OrderSummaryData>(
+        query,
+        {},
+        { doNotRun: !isSignedIn }
+      );
 
-  if (!isSignedIn) {
-    return <p>Sign in to see your order summary.</p>;
-  }
+      if (!isSignedIn) {
+        return <p>Sign in to see your order summary.</p>;
+      }
 
-  if (error) {
-    return <p>We could not load your order summary. Please try again.</p>;
-  }
+      if (error) {
+        return <p>We could not load your order summary. Please try again.</p>;
+      }
 
-  if (!data?.orderSummary) {
-    return null;
-  }
+      if (!data?.orderSummary) {
+        return null;
+      }
 
-  const { totalOrders, lastOrderDate } = data.orderSummary;
+      const { totalOrders, lastOrderDate } = data.orderSummary;
 
-  return (
-    <section>
-      <h2>Your orders</h2>
+      return (
+        <section>
+          <h2>Your orders</h2>
 
-      <p>{totalOrders === 1 ? "1 order" : `${totalOrders} orders`}</p>
+          <p>{totalOrders === 1 ? "1 order" : `${totalOrders} orders`}</p>
 
-      {lastOrderDate && (
-        <p>Last order on {new Date(lastOrderDate).toLocaleDateString()}</p>
-      )}
-    </section>
-  );
-};
+          {lastOrderDate && (
+            <p>Last order on {new Date(lastOrderDate).toLocaleDateString()}</p>
+          )}
+        </section>
+      );
+    };
 
-export default OrderSummary;
-```
+    export default OrderSummary;
+    ```
 
 3. Export the component from `src/components/index.tsx`, so the storefront can render it:
 
@@ -287,7 +287,7 @@ export default OrderSummary;
 
 5. Run `yarn cms-sync` to send the section to the CMS, then add **OrderSummary** to a page in the VTEX Admin. See [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section).
 
-> ⚠️ The `useQuery_unstable` and `useAuth_unstable` hooks are exported from `@faststore/core/experimental` and their APIs may change between releases. See [Experimental features](https://developers.vtex.com/docs/guides/faststore/api-extensions-experimental-features).
+> ⚠️ The `useQuery_unstable` and `useAuth_unstable` hooks are exported from `@faststore/core/experimental` and their APIs may change between releases. See [Experimental exports - Hooks and Components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components) for more information.
 
 The `doNotRun` option matters here: without it, the query runs for signed-out visitors too, and every one of them receives a `401` the component has to discard.
 
