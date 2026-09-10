@@ -1,0 +1,104 @@
+---
+title: Overriding native component's props
+---
+
+> ⚠️ This guide applies only to stores using [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+
+Overriding props allows you to customize a component's behavior while preserving its native integration. This approach is useful when you want to customize specific aspects of a native component, for example, an icon or a button label. 
+
+For this guide, we'll use the [Buy Button](https://developers.vtex.com/docs/guides/faststore/molecules-buy-button) component to make the customization. 
+
+Here's how the initial component looks with the `size` prop set as `regular` in the Product Details Page (PDP):
+
+![overrides-PDP-buy-button-initial](https://vtexhelp.vtexassets.com/assets/docs/src/overrides-pdp-buy-button-initial___a4b7ae9d88ed888da5649b2b6cc1eecd.png)
+
+## Before you begin
+
+Make sure your `@faststore/core` package has the 3.x version or above. If you need to update
+it, refer to this [release note](https://github.com/vtex/faststore/releases/tag/v3.0.0).
+
+## Instructions
+
+### Step 1 - Setting up the component file
+
+1. After choosing a native section to be customized from the [list of available native sections](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections), open your FastStore project in any code editor of your preference.
+2. Create a new branch to work with the custom component you will create.
+3. Go to the `src` folder, create the `components` folder, and inside it, create the `sections` folder. You can run the following command to create them:
+
+    > ℹ️ The naming of the `sections` folder is arbitrary, as overrides can be created in any file since the import is made in the `src/components/index.tsx` file. 
+
+    <Tabs items={['macOS and Linux', 'Windows']}>
+        <Tab>```bash copy mkdir src/components src/components/sections ```</Tab>
+        <Tab>```bash copy mkdir src\components src\components\sections ```</Tab>
+    </Tabs>
+
+4. In the `sections` folder, create a new file for your customized section. For example, create a new file named `ProductDetailsWithCustomButton.tsx` under the `src/components/sections` directory.
+
+    <Tabs items={['macOS and Linux', 'Windows']}>
+        <Tab>
+            ```bash copy touch src/components/sections/ProductDetailsWithCustomButton.tsx ```
+        </Tab>
+        <Tab>
+            ```bash copy type nul > src\components\sections\ProductDetailsWithCustomButton.tsx
+            ```
+        </Tab>
+    </Tabs>
+
+5. Copy and paste the following code snippet into the file:
+
+    ```tsx ProductDetailsWithCustomButton.tsx
+    import { ProductDetailsSection, getOverriddenSection } from '@faststore/core'
+
+    const ProductDetailsWithCustomButton = getOverriddenSection({
+    Section: ProductDetailsSection,
+    components: {},
+    })
+
+    export default ProductDetailsWithCustomButton;
+    ```
+
+    > ℹ️ Change the value of the `Section` variable to the section you wish to override. In the given example, we set the `Section` variable to the component `ProductDetailsSection` to override this specific section.
+
+6. Save your changes.
+
+### Step 2 - Setting up the override
+
+1. Open the `ProductDetailsWithCustomButton.tsx` file created in the [Step 1 - Setting up the component file](#step-1-setting-up-the-overrides-folder) and add the following code:
+
+    ```tsx ProductDetailsWithCustomButton.tsx mark=5,6,7
+    import { ProductDetailsSection, getOverriddenSection } from '@faststore/core'
+    
+    const ProductDetailsWithCustomButton = getOverriddenSection({
+    Section: ProductDetailsSection,
+    components: {
+        BuyButton: { props: { size: "small", iconPosition: "right" } } 
+    },
+    });
+    
+    export default ProductDetailsWithCustomButton;
+    ```
+
+2. In the `components` folder, create the `index.tsx` file and add the following. This code overrides the `BuyButton` props `size` and `iconPosition`.
+
+    ```tsx index.tsx
+    import ProductDetailsWithCustomButton from "./sections/ProductDetailsWithCustomButton";
+
+    const sections = {
+
+    ProductDetails: ProductDetailsWithCustomButton
+    };
+    export default sections;
+
+    ```
+
+3. Open the terminal, and run `yarn dev` to sync the new custom component to your store preview. 
+4. Open the localhost available after running `yarn dev`. You'll see a smaller button than the initial one, and the cart icon positioned on the right side.
+
+### Step 3 - Publishing your changes
+
+If your changes are working locally and you want to publish them in production, follow the steps below:
+
+1. Publish your branch with the custom components files.
+2. Open a pull request in the store's GitHub repository.
+3. Review the pull request
+4. Merge the changes from this branch to the `main` one and the new component will be available in the live store.
