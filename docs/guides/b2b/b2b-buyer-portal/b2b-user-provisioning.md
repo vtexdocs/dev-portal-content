@@ -92,7 +92,7 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
     },
     {
         "type": "phoneNumber",
-        "value": "415‑602‑8838"
+        "value": "415-602-8838"
     }
   ]
 }'
@@ -253,10 +253,10 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/dataentities
   -H "Accept: application/json" \
   -d '{
     "userId": "{{userId}}",
-    "firstName": "User First Name",
-    "lastName": "User Last Name",
+    "firstName": "John",
+    "lastName": "Doe",
     "document": "111.444.000-00",
-    "email": "user@vtex.com",
+    "email": "john.doe@acme.com",
     "phone": "5583987499600",
     "documentType": "cpf",
     "cards": []
@@ -295,11 +295,11 @@ curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator
 
 ```json
 {
-  "userId": "1761fad7-d87a-45da-af04-5284017fe4b5",
+  "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
   "identifiers": [
-    { "type": "email", "value": "user_test@acme.com" },
-    { "type": "username", "value": "user_test" },
-    { "type": "phoneNumber", "value": "00123456789" }
+    { "type": "email", "value": "john.doe@gmail.com" },
+    { "type": "username", "value": "john_doe" },
+    { "type": "phoneNumber", "value": "415-602-8838" }
   ]
 }
 ```
@@ -318,7 +318,7 @@ Retrieves a user by one of their identifiers.
 #### Request example
 
 ```shell
-curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/info?identifier=user_test@acme.com&type=email" \
+curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/info?identifier=john.doe@gmail.com&type=email" \
   -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
   -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
 ```
@@ -327,11 +327,11 @@ curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator
 
 ```json
 {
-  "userId": "1761fad7-d87a-45da-af04-5284017fe4b5",
+  "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
   "identifiers": [
-    { "type": "email", "value": "user_test@acme.com" },
-    { "type": "username", "value": "user_test" },
-    { "type": "phoneNumber", "value": "00123456789" }
+    { "type": "email", "value": "john.doe@gmail.com" },
+    { "type": "username", "value": "john_doe" },
+    { "type": "phoneNumber", "value": "415-602-8838" }
   ]
 }
 ```
