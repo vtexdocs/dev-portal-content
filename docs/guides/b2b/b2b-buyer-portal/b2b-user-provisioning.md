@@ -83,15 +83,15 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
   -d '{
   "identifiers": [
     {
-        "type": "username", 
+        "type": "username",
         "value": "beneson_test_21"
-    }, 
+    },
     {
-        "type": "email", 
+        "type": "email",
         "value": "beneson2010@gmail.com+4"
-    }, 
+    },
     {
-        "type": "phoneNumber", 
+        "type": "phoneNumber",
         "value": "415‑602‑8838"
     }
   ]
