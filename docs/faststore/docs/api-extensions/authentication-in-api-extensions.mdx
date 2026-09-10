@@ -7,11 +7,26 @@ updatedAt: "2026-09-10T00:00:00.000Z"
 excerpt: "Learn how to authenticate custom resolvers whose response belongs to one shopper, whether they call a VTEX API or a third-party service."
 ---
 
-Custom resolvers run on your store's server, with no browser between them and the APIs they call. The credentials they use determine who is allowed to read what.
+A custom resolver is a server-side function that retrieves or updates data not provided by the FastStore API by default. For example, a resolver can retrieve a shopper's loyalty balance from a third-party service or add a derived field to a product.
 
-This guide covers any resolver that reads or writes data belonging to one shopper: order history, addresses, profile fields, wishlists, loyalty balances, subscriptions, B2B contracts, or data your store keeps in an external system. The service on the other end can be a VTEX API or a third-party one. What changes between them is how you carry the shopper's identity, not whether you need to.
+Not every resolver requires authentication. A resolver that only derives a value from existing data or retrieves public information may not need the shopper's identity. However, when a resolver reads or modifies shopper-specific data, it must ensure that each shopper can access only their own information.
 
-> ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). This guide assumes you are familiar with that structure.
+The authentication flow depends on the service being called:
+
+- For VTEX APIs, the resolver forwards the shopper's authentication cookie so that the API can authorize the request.
+- For third-party services, the resolver verifies the shopper's session and uses an identifier from that session to retrieve the correct data.
+
+In both cases, the resolver must not trust identifiers provided by the client, such as an email address or user ID, because they can be modified.
+
+This guide explains how to:
+
+- Determine whether a resolver requires shopper authentication.
+- Verify that a request comes from a signed-in shopper.
+- Retrieve the shopper's identity from the session.
+- Call VTEX APIs and third-party services using the appropriate authentication flow.
+- Prevent personal data exposure through shared caches, detailed error messages, and exposed credentials.
+
+> ℹ️ For instructions on declaring types and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). This guide assumes you are familiar with that structure.
 
 ## Step 1: Determine whether your resolver needs authentication
 
