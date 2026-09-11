@@ -69,7 +69,7 @@ Preview URLs that aren't accessed for **12 hours** are automatically deactivated
 * **Waking up:** You'll see a loading screen while the preview is reactivated. This page refreshes automatically, and the storefront loads normally after a few seconds, with no action required from you.
 * **Expired:** If the preview can no longer be reactivated, you'll see an expired page instead. In this case, redeploy the corresponding branch from the **Deploys** tab to generate a new preview.
 
-> ⚠️ If you run automated tests against preview URLs, keep in mind that a request made right after 12 hours of inactivity may not immediately return the storefront, since the preview could still be waking up. Add a retry to your test setup to account for this.
+> ⚠️ If you run automated tests against preview URLs, keep in mind that a request made right after 12 hours of inactivity may not immediately return the storefront, since the preview could still be waking up. During this state, the page returns an HTTP **202** status code. Once the preview is fully available, it returns a **200** status code. Add a retry to your test setup to account for this.
 
 ## Deploys
 
