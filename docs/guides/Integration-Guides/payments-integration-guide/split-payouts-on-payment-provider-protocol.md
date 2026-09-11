@@ -35,7 +35,7 @@ When an order is placed, the cart falls into one of three scenarios:
 When a split payout is required, the VTEX Gateway is responsible for:
 
 - Calculating the commission per seller of each order.
-- Sending the split payload data to the payment processor.
+- Sending the split payload data to the payment provider.
 - Processing the complete or partial refund in split operations, when required.
 
 > ⚠️ The VTEX Gateway sends the split payload only if the payment provider supports this scenario.
@@ -58,7 +58,7 @@ The marketplace receives the value of its own products plus the commission colle
 
 You can configure the following characteristics of the split process:
 
-- **Automatic settlement time:** The payment processor controls whether the automatic settlement occurs before or after the anti-fraud analysis, through the `delayToAutoSettle` and `delayToAutoSettleAfterAntifraud` fields of the authorization response.
+- **Automatic settlement time:** The payment provider controls whether the automatic settlement occurs before or after the anti-fraud analysis, through the `delayToAutoSettle` and `delayToAutoSettleAfterAntifraud` fields of the authorization response.
 - **Split payload sending time:** Set per payment method through the `allowsSplit` property of each item in the `paymentMethods` array of the manifest.
 
 The `allowsSplit` property accepts the following values:
@@ -66,13 +66,10 @@ The `allowsSplit` property accepts the following values:
 | Value | Behavior |
 | ----- | -------- |
 | `onAuthorize` | The VTEX Gateway sends the `recipients` array in the authorization request. |
-| `onCapture` | The VTEX Gateway sends the `recipients` array in the settlement request. |
+| `onCapture` | The VTEX Gateway sends the `recipients` array in the settlement request. Capture and settlement refer to the same step. |
 | `disabled` | The VTEX Gateway doesn't send the `recipients` array for this payment method. |
 
-When the processor doesn't specify a value, the default behavior is:
-
-- **Credit card transactions:** The split is sent in the settlement call.
-- **Transactions with boleto:** The split is sent in the authorization call.
+The `allowsSplit` property is required for every payment method in the manifest. Do not omit it: use `disabled` for payment methods that don't support split payouts. The split payload is sent at the stage specified by the declared value.
 
 ## The recipients array
 
@@ -100,7 +97,7 @@ The following sections describe the changes applied to each stage of the Payment
 
 ### Authorization
 
-For transactions where the split on authorization is enabled, the VTEX Gateway sends the `recipients` array in the authorization payload, containing the values to be passed on to each seller and to the marketplace involved in the order.
+When `allowsSplit` is `onAuthorize` for the payment method, the VTEX Gateway sends the `recipients` array in the authorization payload, containing the values to be passed on to each seller and to the marketplace involved in the order.
 
 The following example shows the authorization request for the order described in [Commission calculation example](#commission-calculation-example):
 
@@ -232,11 +229,11 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments' \
 }'
 ```
 
-> ℹ️ For transactions where the split on authorization is disabled, there are no changes in the authorization payload.
+> ℹ️ When `allowsSplit` is `onCapture` or `disabled` for the payment method, there are no changes in the authorization payload.
 
 ### Settlement
 
-The VTEX Gateway sends the list of recipients involved in the transaction in the settlement request when the split is configured for the settlement step of that payment method.
+When `allowsSplit` is `onCapture` for the payment method, the VTEX Gateway sends the list of recipients involved in the transaction in the settlement request.
 
 Consider a cart made up of products from seller A, with an order value of 45.00 and a registered commission of 16% for the marketplace. The VTEX Gateway sends 7.2 to the marketplace and 37.8 to seller A:
 
@@ -279,7 +276,7 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments/{paymentI
 }'
 ```
 
-> ℹ️ For transactions where the split on settlement is disabled, there are no changes in the settlement payload.
+> ℹ️ When `allowsSplit` is `onAuthorize` or `disabled` for the payment method, there are no changes in the settlement payload.
 
 ### Complete refund
 
@@ -304,7 +301,7 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments/{paymentI
 
 > ⚠️ To use the split partial refund functionality, request the Partner Support team to enable the `acceptSplitPartialRefund` parameter as `true` during the payment provider homologation process.
 
-The `recipients` array contains the sellers involved in the refund. When the refund applies only to marketplace items, the array contains only the marketplace data.
+The `recipients` array contains the recipients affected by the refund: each seller whose items are refunded and the marketplace, with the commission share it returns. When the refund applies only to marketplace items, the array contains only the marketplace data.
 
 #### Partial refund of a seller item
 
@@ -426,7 +423,7 @@ Report failures through the status code and the `code` and `message` fields of t
 
 | Status code | When to use it | Response fields |
 | ----------- | -------------- | --------------- |
-| `500 Internal Server Error` | Your connector or the payment processor couldn't complete the split operation. | Set `settleId` or `refundId` to `null`, `value` to `0`, and describe the failure in `code` and `message`. |
+| `500 Internal Server Error` | Your connector or the payment provider couldn't complete the split operation. | Set `settleId` or `refundId` to `null`, `value` to `0`, and describe the failure in `code` and `message`. |
 | `501 Not Implemented` | Your connector can't refund the payment automatically and the merchant must refund it outside VTEX. | Set `code` to `refund-manually` and explain the limitation in `message`. |
 
 The following example shows a settlement that failed:
