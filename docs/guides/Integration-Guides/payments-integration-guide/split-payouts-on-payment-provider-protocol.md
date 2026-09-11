@@ -18,7 +18,7 @@ This guide describes how the VTEX Gateway calculates the split and what changes 
 Check the following requirements:
 
 - Your connector must be integrated through the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol).
-- The manifest returned by the [Get manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint must declare the `allowsSplit` property for each payment method that supports split payouts.
+- The manifest returned by the [Get manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint must declare the `allowsSplit` property for every payment method, using `disabled` for methods that don't support split payouts.
 - To support partial refunds in split transactions, the `acceptSplitPartialRefund` parameter must be enabled for your connector. Request this during the [payment provider homologation](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) process.
 - The merchant must have sellers and commission percentages registered in the marketplace, as described in [Adding a seller](https://help.vtex.com/en/docs/tutorials/adding-a-seller).
 
