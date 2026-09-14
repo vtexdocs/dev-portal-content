@@ -7,7 +7,7 @@ createdAt: "2026-09-14T18:00:00.000Z"
 updatedAt: "2026-09-14T18:00:00.000Z"
 ---
 
-The Data Plane GraphQL API (`data-plane-graphql`) is a read-only GraphQL gateway for querying content published with the Content Platform. You can query any Content Type through a generic JSON interface or use a typed GraphQL schema generated from a JSON Schema published to the Schema Registry.
+The Data Plane GraphQL API is a read-only GraphQL gateway for querying content published with the [CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms). You can query any Content Type through a generic JSON interface or use a typed GraphQL schema generated from a JSON Schema published to the Schema Registry.
 
 The API doesn't support mutations.
 
