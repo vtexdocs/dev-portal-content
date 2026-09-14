@@ -113,7 +113,7 @@ By clicking on the "Open Ads Creation" button, another popup will open with a li
 
 Conversions API comes with the FBE App by default. It allows firing certain events directly from VTEX servers, ensuring the relevant data reaches facebook independently from front-end implementations and/or network failures.
 
-These are the supported events in the current version of this App:
+These are the supported events in the current version of this app:
 
 | Event              	| Facebook Pixel (Native)  	| Conversions API    	|
 |--------------------	|--------------------------	|--------------------	|
@@ -150,7 +150,7 @@ If no actions are required, you may skip the following subtopic.
 
 > ℹ️ **What is Event Deduplication?** Facebook tries to deduplicate identical events sent through the Facebook pixel and the Conversions API when we work with a redundant setup. 
 
-> ℹ️ **A redundant setup** is when you send the same events through from both a browser pixel and Conversions API. This is the default setup used by this App.
+> ℹ️ **A redundant setup** is when you send the same events from both a browser pixel and Conversions API. This is the default setup used by this app.
 
 > ⚠️ **What events will I be able to configure in this step?** For now, the only supported event for this step is the Purchase event. The other 5 (PageView, ViewContent, Search, AddToCart and InitiateCheckout) are just supported by VTEX IO stores. These scripts for Legacy stores are on our implementation roadmap.
 

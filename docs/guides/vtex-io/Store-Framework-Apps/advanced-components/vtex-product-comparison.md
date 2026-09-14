@@ -184,7 +184,7 @@ In any desired template, such as the `store.search`, add the `product-comparison
 ...
 ```
 
-> ℹ️ _By adding the `product-comparison-drawer` block as showed above, you will be declaring the following structure behind the scenes:_
+> ℹ️ By adding the `product-comparison-drawer` block as shown above, you will be declaring the following structure behind the scenes:
 
 ```json
 "product-comparison-drawer": {
@@ -233,7 +233,7 @@ In any desired template, such as the `store.search`, add the `product-comparison
 }
 ```
 
-> ℹ️ _The code above is a default implementation of the Product Comparison component. If any changes are desired, declare the code above in your theme and perform the needed updates according to the available blocks._
+> ℹ️ The code above is a default implementation of the Product Comparison component. If any changes are desired, declare the code above in your theme and perform the needed updates according to the available blocks.
 
 ### Step 5 - Building the Product Comparison page
 

@@ -220,7 +220,7 @@ Possible values for the`condition-layout.telemarketing`'s `subject` prop:
 | -------- | ------------ | ---------- |
 | `impersonable` | Value of the impersonable setting.  | `{ value: boolean }` |
 
-## Modus Operandi
+## Behavior
 
 The `condition-layout.product` mainly uses the `matchType` and `conditions` props to set, respectively, the criteria and the conditions that blocks must meet to be rendered or not.
 

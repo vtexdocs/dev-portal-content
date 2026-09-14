@@ -71,12 +71,12 @@ All blocks exported by `store-link` share the same props:
 
 | Prop name | Type | Description | Default value |
 | --- | --- | --- | --- |
-| `variant` | `enum` | Link button visual proeminence. Possible values are: `primary` or `secondary` (values are set according to the [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms/Button)).  | `primary` |
+| `variant` | `enum` | Link button visual prominence. Possible values are: `primary` or `secondary` (values are set according to the [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms/Button)).  | `primary` |
 | `size` | `enum` | Link button size. Possible values are: `small`, `regular` or `large` (values are set according to the [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms/Button)). | `regular` |
 
-## Modus Operandi
+## Behavior
 
-When creating an URL link using the `href` prop, you can create hypotheticals query string values, as shown in the example below:
+When creating a URL link using the `href` prop, you can create hypothetical query string values, as shown in the example below:
 
 ```json
 {

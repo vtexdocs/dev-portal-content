@@ -13,7 +13,7 @@ updatedAt: "2022-09-15T11:39:24.420Z"
 - Product Suggestions.
 - Term Suggestions.
 
-You can read a detailed explanation of Autocomplete and it's features [here](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4gXFsEWjF7QF7UtI2GAvhL).
+You can read a detailed explanation of Autocomplete and its features [here](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4gXFsEWjF7QF7UtI2GAvhL).
 
 ## Usage
 

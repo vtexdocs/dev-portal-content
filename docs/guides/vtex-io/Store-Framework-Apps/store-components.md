@@ -102,7 +102,7 @@ linkTitle="See more"
 
 <WhatsNextCard
 title="Share"
-description= "Allows to share a product URL via social media."
+description= "Allows you to share a product URL via social media."
 linkTo="/docs/apps/vtex.store-components/share"
 linkTitle="See more"
 />

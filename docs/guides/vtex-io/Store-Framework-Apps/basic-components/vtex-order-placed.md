@@ -264,7 +264,7 @@ Renders a button that triggers a full page print.
 
 **Props:** none.
 
-**CSS Handles:**: none.
+**CSS Handles:** none.
 
 | Default appearance                                                                                       |
 | -------------------------------------------------------------------------------------------------------- |
@@ -272,7 +272,7 @@ Renders a button that triggers a full page print.
 
 ### `op-notices`
 
-Renders a list of important informations relevant to the currently placed order. The messages may vary according to the type of order.
+Renders a list of important information relevant to the currently placed order. The messages may vary according to the type of order.
 
 **Composition:** none.
 
@@ -291,7 +291,7 @@ Renders a list of important informations relevant to the currently placed order.
 
 ### `op-summary-section`
 
-If a placed order is split between delivery and pickup, renders a summary of all pickup and delivery packages with informations such as number of items, packages, pickup/delivery address and pickup/delivery SLA.
+If a placed order is split between delivery and pickup, renders a summary of all pickup and delivery packages with information such as number of items, packages, pickup/delivery address and pickup/delivery SLA.
 
 **Composition:** none.
 

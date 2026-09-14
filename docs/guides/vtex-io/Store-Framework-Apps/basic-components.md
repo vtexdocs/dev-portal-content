@@ -66,7 +66,7 @@ linkTitle="See more" />
 
 <WhatsNextCard
 title="Order Placed"
-description="Renders the the orderPlaced page with all order data."
+description="Renders the orderPlaced page with all order data."
 linkTo="https://developers.vtex.com/docs/apps/vtex.order-placed"
 linkTitle="See more" />
 

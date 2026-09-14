@@ -18,7 +18,7 @@ To configure the Search app, check the sections below.
 
 ### Add the Search app to your theme's dependencies
 
-Add the `search` app to your theme's dependencies in the `manifest.json` as showed below:
+Add the `search` app to your theme's dependencies in the `manifest.json` as shown below:
 
 ```diff
   "dependencies": {
@@ -74,8 +74,8 @@ First, declare the `autocomplete-result-list.v2` block as a child block of the [
 | Prop name | Type     | Description                                                                    | Default value |
 | --------- | -------- | ------------------------------------------------------------------------------ | ------------- |
 | `md`      | `object` | Defines the maximum number of suggested products for the `md` breakpoint.      | `undefined`   |
-| `lg`      | `object` | Defines the the maximum number of suggested products for the `lg` breakpoint.  | `undefined`   |
-| `xlg`     | `object` | Defines the the maximum number of suggested products for the `xlg` breakpoint. | `undefined`   |
+| `lg`      | `object` | Defines the maximum number of suggested products for the `lg` breakpoint.  | `undefined`   |
+| `xlg`     | `object` | Defines the maximum number of suggested products for the `xlg` breakpoint. | `undefined`   |
 
 ##### The `md`, `lg` and `xlg` objects
 
@@ -147,9 +147,9 @@ Once added, these can be declared using their respective props for their configu
 | `blockClass`          | `string` | Unique block ID to be used in [CSS customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) | `undefined`   |
 | `horizontalAlignment` | `string` | Defines the banner horizontal alignment. Possible values are `left`, `center` or `right`.                                        | `center`      |
 
-## Modus Operandi
+## Behavior
 
-The Search app is responsible for offering blocks that when rendered as components will improve the user's search experience in stores where the VTEX Intelligent Search engine is already supported.
+The Search app is responsible for offering blocks that, when rendered as components, improve the user's search experience in stores where the VTEX Intelligent Search engine is already supported.
 
 These components use `_q` as the query-string for the search term, meaning that if you wish to track the searches of your users in these components you'll need to add the `_q` query-string to the store's Google Analytics.
 

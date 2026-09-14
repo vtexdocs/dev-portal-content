@@ -53,9 +53,9 @@ Once you have added the block to the header, the Telemarketing component is read
 
 > ⚠️ The telemarketing bar is accessed via browser by the following URL, where `{accountName}` should be replaced by the name of your account: `{accountName}.myvtex.com`
 
-## Modus Operandi
+## Behavior
 
-This component will only be displayed and properly work for users whose role is `2 - Televendas (Call center operator)` in their access profile.
+This component will only be displayed and work properly for users whose role is `2 - Televendas (Call center operator)` in their access profile.
 
 To understand how the permissions work for your account, including the call center operator permission, access the learning track on [Accounts & Permissions](https://help.vtex.com/tracks/contas-e-permissoes--5PxyAgZrtiYlaYZBTlhJ2A/4T2vusW9RRUmVjGSuKNO2H) on VTEX Help Center.
 

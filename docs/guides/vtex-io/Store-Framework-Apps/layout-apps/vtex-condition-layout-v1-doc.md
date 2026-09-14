@@ -143,9 +143,9 @@ If users interact with a product whose ID is not equal to 12, the block that is 
 | `specificationProperties` | `array` | List of product specifications. |
 | `areAllVariationsSelected` | `value` | Whether all product variations available on the page were selected by the user (`true`) or not (`false`). |
 
-> ℹ️ *Since the Condition Layout can only be used with product contexts, only the subjects listed above are needed for the proper functioning of the `condition` block. Remember to choose the subject's value according to the value passed to the `object` prop*.
+> ℹ️ Since the Condition Layout can only be used with product contexts, only the subjects listed above are needed for the proper functioning of the `condition` block. Remember to choose the subject's value according to the value passed to the `object` prop.
 
-## Modus Operandi
+## Behavior
 
 In practice, the Condition Layout does not render a block on its own. **The app provides 3 logic blocks**, meaning blocks that lay out the reasoning behind rendering other Store Framework blocks.
 
