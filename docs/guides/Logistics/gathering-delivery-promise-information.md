@@ -52,7 +52,9 @@ Response example:
 
 Use the `deliveryZonesHash` and `pickupPointsHash` values when you search for delivery suggestions.
 
->⚠️ Both hashes have a time to live (TTL) of 30 minutes. After this period, they expire and are no longer valid for use in the Delivery Promise Suggestions API and the Intelligent Search API. To generate new hashes, call this endpoint again. There is no penalty or side effect in regenerating them, so call it as close as possible to the moment the hashes are used.
+>⚠️ Both hashes have a time to live (TTL) of 30 minutes. After this period, they expire and are no longer valid for use in the Delivery Promise Suggestions API and the Intelligent Search API. Requests sent with an expired hash may be rejected or return invalid responses.
+>
+> If a hash expires before use, generate a new one by calling this endpoint again — there is no penalty or side effect in regenerating them. We recommend that integrations relying on these hashes call this endpoint as close as possible to the moment the hashes are used, and handle the expired hash scenario by requesting new ones.
 
 ## Delivery Promise suggestions
 
