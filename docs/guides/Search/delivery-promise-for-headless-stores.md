@@ -44,6 +44,8 @@ The delivery promise information parameters are **required** to filter product a
 
 > ℹ️ To obtain the delivery promise information, check [Gathering delivery promise information](https://developers.vtex.com/docs/guides/gathering-delivery-promise-information).
 
+>⚠️ Both hashes expire 30 minutes after being generated. Requests sent with an expired hash may be rejected or return invalid responses. Generate new hashes as close as possible to the moment they are used, and handle the expired hash scenario by requesting new ones.
+
 **Example:**
 
 ```txt
