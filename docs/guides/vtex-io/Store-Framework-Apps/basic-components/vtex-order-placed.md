@@ -6,9 +6,9 @@ createdAt: "2020-06-03T15:19:33.374Z"
 updatedAt: "2022-03-17T19:30:39.410Z"
 ---
 
-The `order-placed` app comes already installed on all stores and with it, it's possible to build your own page with the blocks exported by the app.
+The `order-placed` app comes already installed on all stores, and with it, it's possible to build your own page with the blocks exported by the app.
 
-After defining a `order-placed` block inside your `store/blocks` directory or in your `blocks.json` file, the page can be constructed with [blocks](#blocks) and customized with [CSS handles](#css-handles).
+After defining an `order-placed` block inside your `store/blocks` directory or in your `blocks.json` file, the page can be constructed with [blocks](#blocks) and customized with [CSS handles](#css-handles).
 
 _Note: this is the default `order-placed` layout implementation._
 
@@ -291,7 +291,7 @@ Renders a list of important information relevant to the currently placed order. 
 
 ### `op-summary-section`
 
-If a placed order is split between delivery and pickup, renders a summary of all pickup and delivery packages with information such as number of items, packages, pickup/delivery address and pickup/delivery SLA.
+If a placed order is split between delivery and pickup, this block renders a summary of all pickup and delivery packages with information such as number of items, packages, pickup/delivery address, and pickup/delivery SLA.
 
 **Composition:** none.
 

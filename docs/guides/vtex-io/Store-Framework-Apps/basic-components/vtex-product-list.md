@@ -289,7 +289,7 @@ Therefore, in order to customize the `product-list` configuration, you can simpl
 | `textAlign`            | `string` | Product unit prices position on the list.                                                                                                                                                                                      | `left`        |
 | `unitPriceType`        | `enum`   | Defines whether the price type should be displayed. Possible values are: `sellingPrice` or `price`                                                                                                                             | `price`       |
 | `unitPriceDisplay`     | `enum`   | Defines when the unit price should be displayed. Possible values are: `always` (unit price is always displayed) or `default` (unit price is only displayed when the number of products is greater than one).                   | `default`     |
-| `displayUnitListPrice` | `enum`   | Defines whether the product list price should be displayed or not. Possible values are: `showWhenDifferent` (list price is displayed when it is different from the regular price) or`notShow` (list price is never displayed). | `notShow`     |
+| `displayUnitListPrice` | `enum`   | Defines whether the product list price should be displayed or not. Possible values are: `showWhenDifferent` (list price is displayed when it is different from the regular price) or `notShow` (list price is never displayed). | `notShow`     |
 
 ### `product-list-image` props
 
@@ -309,7 +309,7 @@ Therefore, in order to customize the `product-list` configuration, you can simpl
 | Prop name     | Type   | Description                                                                                                                                                                                                                                                                                                                     | Default value |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `variation`   | `enum` | Variation for the button visual prominence based on the [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms/Button). Possible values are: `primary`, `secondary`, `tertiary`, `inverted-tertiary`, `danger` and `danger-tertiary`.                                                                                | `danger`      |
-| `displayMode` | `enum` | Defines how the remove button should be displayed. Possible values are: `icon-button` (to render an icon button) and `text-button` (to render a text message button). If you desire to [create a modal in the remove button](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-modals-using-icons), use the `icon-button` value. | `icon-button` |
+| `displayMode` | `enum` | Defines how the remove button should be displayed. Possible values are: `icon-button` (to render an icon button) and `text-button` (to render a text message button). If you want to [create a modal for the remove button](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-modals-using-icons), use the `icon-button` value. | `icon-button` |
 
 ### `quantity-selector` props
 

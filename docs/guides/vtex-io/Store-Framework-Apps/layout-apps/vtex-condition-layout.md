@@ -201,7 +201,7 @@ Possible values for the `condition-layout.product`'s `subject` prop:
 | `isProductAvailable`                  | Whether the product is available (`true`) or not (`false`).  | No arguments are expected. |
 | `hasMoreSellersThan`                  | Whether the quantity of sellers for the product is more than argument passed.  | `{ quantity: number }`|
 
-Possible values for the`condition-layout.binding`'s `subject` prop:
+Possible values for the `condition-layout.binding`'s `subject` prop:
 
 | Subject | Description | Arguments |
 | -------- | ------------ | ---------- |
@@ -214,7 +214,7 @@ Possible values for the `condition-layout.category`'s `subject` prop:
 | `category`               | Category's IDs currently displayed on the UI.    | `{ ids: string[] }` |
 | `department`             | Department's IDs currently displayed on the UI.  | `{ ids: string[] }` |
 
-Possible values for the`condition-layout.telemarketing`'s `subject` prop:
+Possible values for the `condition-layout.telemarketing`'s `subject` prop:
 
 | Subject | Description | Arguments |
 | -------- | ------------ | ---------- |

@@ -101,10 +101,10 @@ Before generating your store's sitemap, you might want to adjust if products, na
 
 #### Managing routes
 
-You can manage if you want to include product, navigation and/or apps routes in your sitemap or not. To do that, check the following step by step.
+You can manage whether you want to include product, navigation, and/or app routes in your sitemap. To do that, check the following step by step.
 
-1. In your browser, access the account's Admin in which you are working using the Production workspace used in the **step 2** of the [Configuration section](#configuration) (`{workspaceName}--{accountName}.myvtex.com/admin`).
-2. Go to **Account settings > Apps > My apps** and search for **Sitemap** app.
+1. In your browser, access the account's Admin in which you are working using the Production workspace used in **step 2** of the [Configuration section](#configuration) (`{workspaceName}--{accountName}.myvtex.com/admin`).
+2. Go to **Account settings > Apps > My apps** and search for the **Sitemap** app.
 3. Enable or disable product, navigation, or app routes according to your scenario.
 
   ![sitemap-admin](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-sitemap-1.png)

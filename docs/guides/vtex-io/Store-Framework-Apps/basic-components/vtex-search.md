@@ -66,8 +66,8 @@ First, declare the `autocomplete-result-list.v2` block as a child block of the [
 | `hideUnavailableItems`                  | `boolean`               | Defines whether the autocomplete should hide unavailable items (`true`) or not (`false`).             | `false`       |
 | `historyFirst`                | `boolean`               | Defines whether the search history list should be prioritized over the other lists (`true`) or not (`false`).                                                          | `false`       |
 | `customBreakpoints`           | `object`                | Defines a maximum number of suggested products by breakpoints. Possible values are `md`, `lg` or `xlg`.                                                           | -             |
-| `simulationBehavior`          | `"skip"` or `"default"` | If you want faster searches and do not care about most up to date prices and promotions, use `"skip"` value.     | `default`     |
-| `HorizontalProductSummary`          | `product-summary` block | By default, the mobile autocomplete uses the `CustomListItem` component to render the suggested products with a horizontal layout. But if you send a `product-summary` block here, it will render your customized Product Summary component. Read our documentation of [how to build a horizontal Product Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-horizontal-product-summary) component.                            | `undefined`     |
+| `simulationBehavior`          | `"skip"` or `"default"` | If you want faster searches and do not care about the most up-to-date prices and promotions, use the `"skip"` value.     | `default`     |
+| `HorizontalProductSummary`          | `product-summary` block | By default, the mobile autocomplete uses the `CustomListItem` component to render the suggested products with a horizontal layout. But if you send a `product-summary` block here, it will render your customized Product Summary component. Read our documentation on [how to build a horizontal Product Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-horizontal-product-summary) component.                            | `undefined`     |
 
 ##### The `customBreakpoints` object
 
@@ -96,7 +96,7 @@ The `autocomplete-result-list.v2` block also allows you to add a list of child b
 
 Now, you can add the last three search blocks: `search-banner`, `did-you-mean` and `search-suggestions`.
 
-Those blocks, differently from `autocomplete-result-list.v2`, need to be added under the `search-result-layout.desktop` or the `search-result-layout.mobile` blocks, according to the Search Results block hierarchy.
+Those blocks, unlike `autocomplete-result-list.v2`, need to be added under the `search-result-layout.desktop` or the `search-result-layout.mobile` blocks, according to the Search Results block hierarchy.
 
 Once added, these can be declared using their respective props for their configuration, for example:
 
@@ -151,7 +151,7 @@ Once added, these can be declared using their respective props for their configu
 
 The Search app is responsible for offering blocks that, when rendered as components, improve the user's search experience in stores where the VTEX Intelligent Search engine is already supported.
 
-These components use `_q` as the query-string for the search term, meaning that if you wish to track the searches of your users in these components you'll need to add the `_q` query-string to the store's Google Analytics.
+These components use `_q` as the query string for the search term, meaning that if you wish to track the searches of your users in these components you'll need to add the `_q` query string to the store's Google Analytics.
 
 Find out how to do this by accessing our [Google Analytics search tracking](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking) documentation.
 

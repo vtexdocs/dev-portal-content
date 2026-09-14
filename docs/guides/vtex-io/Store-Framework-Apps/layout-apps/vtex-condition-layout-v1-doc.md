@@ -149,9 +149,9 @@ If users interact with a product whose ID is not equal to 12, the block that is 
 
 In practice, the Condition Layout does not render a block on its own. **The app provides 3 logic blocks**, meaning blocks that lay out the reasoning behind rendering other Store Framework blocks.
 
-The `condition.{context}` block is the one that does your store's actual Layout logic and, using the `conditions` and `match` props to set the conditions that blocks must meet to be rendered or not.
+The `condition.{context}` block is the one that does your store's actual layout logic, using the `conditions` and `match` props to set the conditions that blocks must meet to be rendered or not.
 
-The `conditions` prop object has 3 other props, namely `subject`, `verb` and `object`, that together define the condition that must be met and how it is going to be validated: the `object` prop from `conditions` compares its value with the values fetched by the subject passed to the `subject` prop. The criteria used for this comparison stems from the value passed in the `verb`. The result being to define whether the condition put forth by the `condition` block and its props is acuatlly valid or not.
+The `conditions` prop object has 3 other props, namely `subject`, `verb` and `object`, that together define the condition that must be met and how it is going to be validated: the `object` prop from `conditions` compares its value with the values fetched by the subject passed to the `subject` prop. The criteria used for this comparison stems from the value passed in the `verb`. The result is whether the condition put forth by the `condition` block and its props is actually valid or not.
 
 Lastly, the `match` prop decides the necessary number of valid conditions (defined in `condition.{context}` blocks) for the layout rendering to actually occur.
 

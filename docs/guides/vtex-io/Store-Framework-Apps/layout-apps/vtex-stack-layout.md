@@ -36,7 +36,7 @@ This means `flex-layout.row#viewone` will appear on the bottom, `flex-layout.row
 | Prop name      | Type     | Description                                                                                                                                                                            | Default value |
 | -------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `blockClass`   | `string` | Allows you to pass a custom name to be added to component CSS classes                                                                                                                      | `null`        |
-| `zIndexOffset` | `number` | An offset to be passed to the zIndex of the children of the stack layout. If you pass 3, the first children will have zIndex of 3 and the next layer will have zIndex of 4, and so on. | `0`           |
+| `zIndexOffset` | `number` | An offset to be passed to the zIndex of the children of the stack layout. If you pass 3, the first child will have a zIndex of 3 and the next layer will have a zIndex of 4, and so on. | `0`           |
 
 ## Customization
 

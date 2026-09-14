@@ -17,7 +17,7 @@ You can read a detailed explanation of Autocomplete and its features [here](http
 
 ## Usage
 
-Add `autocomplete-result-list.v2` into the blocks of a `search-bar`. We also recommend to set `openAutocompleteOnFocus` as shown.
+Add `autocomplete-result-list.v2` into the blocks of a `search-bar`. We also recommend setting `openAutocompleteOnFocus` as shown.
 
 ```json
 {

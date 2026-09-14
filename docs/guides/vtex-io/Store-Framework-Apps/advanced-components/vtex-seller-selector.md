@@ -167,7 +167,7 @@ This block uses the [ICU Message Format](https://format-message.github.io/icu-me
 ## Behavior
 
 The Seller Selector app fetches seller data automatically from the [Catalog in VTEX Admin](https://help.vtex.com/tutorial/configuring-the-seller--tutorials_392).
-Behind the scenes, the blocks exported from the app use the product context in which they are inserted to identify the seller's data in the SKU registry.
+Behind the scenes, the blocks exported from the app use the product context in which they are inserted to identify seller data in the SKU registry.
 Based on this, they are able to display seller data without having to declare each desired seller in your theme.
 
 ## Customization

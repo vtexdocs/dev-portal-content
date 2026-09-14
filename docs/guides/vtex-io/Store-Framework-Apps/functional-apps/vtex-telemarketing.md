@@ -51,7 +51,7 @@ The Telemarketing app is a store component that enables a [call center operator]
 
 Once you have added the block to the header, the Telemarketing component is ready to be rendered, since it does not require props.
 
-> ⚠️ The telemarketing bar is accessed via browser by the following URL, where `{accountName}` should be replaced by the name of your account: `{accountName}.myvtex.com`
+> ⚠️ The telemarketing bar is accessed in the browser at the following URL, where `{accountName}` should be replaced by the name of your account: `{accountName}.myvtex.com`
 
 ## Behavior
 

@@ -93,11 +93,11 @@ Pixel code example:
 }
 [/block]
 
-After inserting the pixel’s code in the front, is required that you also use the Conversions API. The Conversions API works with the Pixel to help improve the performance and measurement of your ad campaigns.
+After inserting the pixel’s code on the frontend, you must also use the Conversions API. The Conversions API works with the Pixel to help improve the performance and measurement of your ad campaigns.
 
 ## Ads Plugin
 
-On the ads plugin cards, it's possible to manage your facebook ads. 
+On the ads plugin cards, it's possible to manage your Facebook ads. 
 
 <img alt= "Ads Plugin Cards" src="https://user-images.githubusercontent.com/12246072/176775187-f48636de-8ffa-41c6-b839-18d316b15109.png" width="500px"/>
 
@@ -111,7 +111,7 @@ By clicking on the "Open Ads Creation" button, another popup will open with a li
 
 ## Conversions API Integration
 
-Conversions API comes with the FBE App by default. It allows firing certain events directly from VTEX servers, ensuring the relevant data reaches facebook independently from front-end implementations and/or network failures.
+Conversions API comes with the FBE App by default. It allows firing certain events directly from VTEX servers, ensuring the relevant data reaches Facebook independently from front-end implementations and/or network failures.
 
 These are the supported events in the current version of this app:
 
@@ -124,7 +124,7 @@ These are the supported events in the current version of this app:
 | Initiate Checkout  	| ✅       	               | ✅ 	|
 | Purchase           	| ✅                        | ✅ 	|
 
-This integration is configured automatically upon connecting your Facebook account. The CAPI integration works on any store (Legacy/IO), be sure to follow the next steps to ensure an optimal setup for your store.
+This integration is configured automatically upon connecting your Facebook account. The CAPI integration works on any store (Legacy/IO). Be sure to follow the next steps to ensure an optimal setup for your store.
 
 ### Optimizing your Conversions API setup
 
@@ -152,7 +152,7 @@ If no actions are required, you may skip the following subtopic.
 
 > ℹ️ **A redundant setup** is when you send the same events from both a browser pixel and Conversions API. This is the default setup used by this app.
 
-> ⚠️ **What events will I be able to configure in this step?** For now, the only supported event for this step is the Purchase event. The other 5 (PageView, ViewContent, Search, AddToCart and InitiateCheckout) are just supported by VTEX IO stores. These scripts for Legacy stores are on our implementation roadmap.
+> ⚠️ **What events will I be able to configure in this step?** For now, the only supported event for this step is the Purchase event. The other 5 (PageView, ViewContent, Search, AddToCart and InitiateCheckout) are only supported by VTEX IO stores. These scripts for Legacy stores are on our implementation roadmap.
 
 This is done through specific parameters that may be used to guarantee the events are the same. The two parameters we'll be configuring in this section are the *Event ID* and the *Event Name*.
 
@@ -161,7 +161,7 @@ This is done through specific parameters that may be used to guarantee the event
 
 **2** - Browser events must be initialized with the *external_id* parameter in order to correctly match the actor of the event (the end consumer). We'll use the *userProfileId* as the *external_id*
 
-> ℹ️ **The userProfileId** is a unique id which represents a end consumer of a store in the VTEX platform.
+> ℹ️ **The userProfileId** is a unique ID that represents an end consumer of a store in the VTEX platform.
 
 In order to do all that, the following steps need to be done in **Google Tag Manager** (or your tool of choice):
 
