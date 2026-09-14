@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2021-05-27T19:18:44.566Z"
 updatedAt: "2022-12-14T20:30:07.485Z"
 ---
-The [Facebook Business Extension and Conversions API app](https://apps.vtex.com/vtex-facebook-fbe/p) is the one-stop shop for merchants to easily connect their stores to Facebook services through the FBE platform. FBE stands for Facebook Business Extension and supports integration with facebook features such as [Catalog](https://developers.facebook.com/docs/marketing-api/catalog), [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel), Conversions Api, and call-to-action buttons for Facebook and Instagram pages.
+The [Facebook Business Extension and Conversions API app](https://apps.vtex.com/vtex-facebook-fbe/p) is the one-stop shop for merchants to easily connect their stores to Facebook services through the FBE platform. FBE stands for Facebook Business Extension and supports integration with Facebook features such as [Catalog](https://developers.facebook.com/docs/marketing-api/catalog), [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel), Conversions API, and call-to-action buttons for Facebook and Instagram pages.
 
 ## Table of Contents
   1. [Table of Contents](#table-of-contents)
@@ -27,13 +27,13 @@ This app is fully compatible with IO stores, and partially compatible with Legac
 | Catalog Sync           	| ✅        | ✅ 	|
 | Call-To-Action Buttons 	| ✅	       | ✅ 	|
 
-This means legacy stores need to do a few extra steps to optimize their Pixel/Conversions API setup, which is explained in the later topics of this documentation.
+This means legacy stores need to do a few extra steps to optimize their Pixel/Conversions API setup, which is explained in later sections of this documentation.
 
-This app is fully compatible with the [Facebook Pixel App](https://apps.vtex.com/vtex-facebook-fbe/p). FBE detects if you've selected the same pixel and replaces the Facebook Pixel App with its own Pixel App, that is tailored to work properly with Conversions API.
+This app is fully compatible with the [Facebook Pixel App](https://apps.vtex.com/vtex-facebook-fbe/p). FBE detects if you've selected the same pixel and replaces the Facebook Pixel App with its own Pixel App, which is tailored to work properly with Conversions API.
 
 This app is fully compatible with the [Facebook Connector](https://help.vtex.com/pt/tracks/integracao-com-o-facebook--7h8KvIC4DbRRc8VlyJ8PFc/5OP69kHWKca01wLH0w10jX). When you configure FBE, if you already have the catalog sync configured, the Facebook Connector won't be impacted and will keep working as usual. Otherwise, FBE automatically configures the Facebook Connector to enable Catalog synchronization with Facebook.
 
-This app is available in all countries, as long as the used currency is supported by Facebook Ads. You can check an updated list of all supported currencies in this link: [Accepted Currencies for Facebook Ads](https://www.facebook.com/business/help/151451521590943?id=738655959856647)
+This app is available in all countries, as long as the currency used is supported by Facebook Ads. You can check an updated list of all supported currencies at this link: [Accepted Currencies for Facebook Ads](https://www.facebook.com/business/help/151451521590943?id=738655959856647)
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ After installing the [Facebook Business Extension and Conversions API app](https
 
 Region, currency settings and the store URL will be automatically filled in but you can double check these settings and change if needed.
 
-Store URL, region, and currency settings are saved in order to correctly fire store events such as AddToCart and Purchase, and to enable call-to-action buttons on your store's social media pages (Facebook, Instagram, etc)
+Store URL, region, and currency settings are saved in order to correctly fire store events such as AddToCart and Purchase, and to enable call-to-action buttons on your store's social media pages (Facebook, Instagram, etc.).
 
 ![FBE Page](https://user-images.githubusercontent.com/1629129/126334878-2405d70a-6d99-4cfc-97b1-8f16973acf1e.png)
 
@@ -77,7 +77,7 @@ These features are all provided by a custom Facebook UI and include, but are not
 
 A [Pixel](https://developers.facebook.com/docs/meta-pixel/get-started) is a snippet of code placed on the website that allows you to measure the effectiveness of your advertising by understanding the actions people take on the website.
 
-This app is fully compatible with the Facebook Pixel App. FBE detects if you've selected the same pixel and replaces the Facebook Pixel App with its own Pixel App, that is tailored to work properly with Conversions API.
+This app is fully compatible with the Facebook Pixel App. FBE detects if you've selected the same pixel and replaces the Facebook Pixel App with its own Pixel App, which is tailored to work properly with Conversions API.
 
 Stores using our Legacy CMS Portal need to [manually add the pixel's code](https://www.facebook.com/business/help/952192354843755) to their frontend. Once you've added the Pixel base code to your site, you can set up events to measure actions that interest you, such as making a purchase.
 
@@ -93,11 +93,11 @@ Pixel code example:
 }
 [/block]
 
-After inserting the pixel’s code in the front, is required that you also use the Conversions API. The Conversions API works with the Pixel to help improve the performance and measurement of your ad campaigns.
+After inserting the pixel’s code on the frontend, you must also use the Conversions API. The Conversions API works with the Pixel to help improve the performance and measurement of your ad campaigns.
 
 ## Ads Plugin
 
-On the ads plugin cards, it's possible to manage your facebook ads. 
+On the ads plugin cards, it's possible to manage your Facebook ads. 
 
 <img alt= "Ads Plugin Cards" src="https://user-images.githubusercontent.com/12246072/176775187-f48636de-8ffa-41c6-b839-18d316b15109.png" width="500px"/>
 
@@ -111,9 +111,9 @@ By clicking on the "Open Ads Creation" button, another popup will open with a li
 
 ## Conversions API Integration
 
-Conversions API comes with the FBE App by default. It allows firing certain events directly from VTEX servers, ensuring the relevant data reaches facebook independently from front-end implementations and/or network failures.
+Conversions API comes with the FBE App by default. It allows firing certain events directly from VTEX servers, ensuring the relevant data reaches Facebook independently from front-end implementations and/or network failures.
 
-These are the supported events in the current version of this App:
+These are the supported events in the current version of this app:
 
 | Event              	| Facebook Pixel (Native)  	| Conversions API    	|
 |--------------------	|--------------------------	|--------------------	|
@@ -124,7 +124,7 @@ These are the supported events in the current version of this App:
 | Initiate Checkout  	| ✅       	               | ✅ 	|
 | Purchase           	| ✅                        | ✅ 	|
 
-This integration is configured automatically upon connecting your Facebook account. The CAPI integration works on any store (Legacy/IO), be sure to follow the next steps to ensure an optimal setup for your store.
+This integration is configured automatically upon connecting your Facebook account. The CAPI integration works on any store (Legacy/IO). Be sure to follow the next steps to ensure an optimal setup for your store.
 
 ### Optimizing your Conversions API setup
 
@@ -146,22 +146,22 @@ If no actions are required, you may skip the following subtopic.
 
 ### Required actions for stores using VTEX IO
 
-**1** - Browser events need to be fired with the correct parameters in order to promote a correct deduplication between browser and server events. In this case, we need to do this for the Purchase event.
+**1** - Browser events need to be fired with the correct parameters in order to ensure correct deduplication between browser and server events. In this case, we need to do this for the Purchase event.
 
 > ℹ️ **What is Event Deduplication?** Facebook tries to deduplicate identical events sent through the Facebook pixel and the Conversions API when we work with a redundant setup. 
 
-> ℹ️ **A redundant setup** is when you send the same events through from both a browser pixel and Conversions API. This is the default setup used by this App.
+> ℹ️ **A redundant setup** is when you send the same events from both a browser pixel and Conversions API. This is the default setup used by this app.
 
-> ⚠️ **What events will I be able to configure in this step?** For now, the only supported event for this step is the Purchase event. The other 5 (PageView, ViewContent, Search, AddToCart and InitiateCheckout) are just supported by VTEX IO stores. These scripts for Legacy stores are on our implementation roadmap.
+> ⚠️ **What events will I be able to configure in this step?** For now, the only supported event for this step is the Purchase event. The other 5 (PageView, ViewContent, Search, AddToCart and InitiateCheckout) are only supported by VTEX IO stores. These scripts for Legacy stores are on our implementation roadmap.
 
 This is done through specific parameters that may be used to guarantee the events are the same. The two parameters we'll be configuring in this section are the *Event ID* and the *Event Name*.
 
 - **Event ID**: This ID uniquely identifies an event. In our purchase event, we're going to use orderId as the Event ID.
 - **Event Name**: This is the type of the event being triggered. In our purchase event, we're going to go with 'Purchase'.
 
-**2** - Browser events must be initialized with the *external_id* parameter in order to correctly match the actor of the event (the end consumer). We'll use the *userProfileId* as the *external_id*
+**2** - Browser events must be initialized with the *external_id* parameter in order to correctly match the actor of the event (the end consumer). We'll use the *userProfileId* as the *external_id*.
 
-> ℹ️ **The userProfileId** is a unique id which represents a end consumer of a store in the VTEX platform.
+> ℹ️ **The userProfileId** is a unique ID that represents an end consumer of a store in the VTEX platform.
 
 In order to do all that, the following steps need to be done in **Google Tag Manager** (or your tool of choice):
 
@@ -354,11 +354,11 @@ You can then test your events on the Events Manager in the Facebook platform. Op
 
 ![Call-to-Action Example](https://user-images.githubusercontent.com/1629129/122405892-cc7fd980-cf56-11eb-96ac-ae304d9f9edd.png)
 
-> ℹ️ Though most of the setups use GTM to fire pixel events, it's possible to configure this using other tools. Just make sure the corresponding parameters are being sent correctly in your tool of choice.
+> ℹ️ Although most setups use GTM to fire pixel events, it's possible to configure this using other tools. Just make sure the corresponding parameters are being sent correctly in your tool of choice.
 
 ### Configuring Conversions API for stores using our Legacy CMS Portal (Backend)
 
-The Conversions API is configured automatically on any IO stores, but not in Legacy CMS Portal. Therefore, it is mandatory that Legacy CMS Portal do the configuration.
+The Conversions API is configured automatically on any IO stores, but not in Legacy CMS Portal. Therefore, Legacy CMS Portal stores must complete the configuration.
 
 #### Required actions for stores using the Legacy CMS Portal
 
@@ -378,7 +378,7 @@ The event captured by the frontend will start the conversions API in the backend
 Recommendations: 
 
 - Make sure to use `/api/io` in the URL to proxy the app on [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io).
-- The parameter `eventID` sent on the front-end and back-end must be exactly the same to promote a correct deduplication between browser and server events.
+- The parameter `eventID` sent on the front-end and back-end must be exactly the same to ensure correct deduplication between browser and server events.
 
 ## Disconnecting from FBE
 
