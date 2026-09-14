@@ -6,7 +6,7 @@ createdAt: "2020-09-29T19:28:07.531Z"
 updatedAt: "2022-10-07T13:56:32.252Z"
 ---
 
-The Store Locator app fetches the Pickup point data in order to display address location for retail stores.
+The Store Locator app fetches pickup point data in order to display store address locations.
 
 ![store-list](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-locator-0.png)
 ![store-detail](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-store-locator-1.png)

@@ -6,7 +6,7 @@ createdAt: "2021-02-23T17:09:08.532Z"
 updatedAt: "2022-09-15T11:39:24.357Z"
 ---
 
-A simple banner with that can configured to appear depending on the context of the search.
+A simple banner that can be configured to appear depending on the context of the search.
 
 ## Configuration
 

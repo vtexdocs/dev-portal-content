@@ -8,7 +8,7 @@ updatedAt: "2022-06-15T17:27:43.318Z"
 
 The Product Comparison app compares specifications of pre-selected SKUs, allowing store users to better understand their needs when shopping.
 
-The app exports several blocks, which you can leverage from in order to display a Product Comparison drawer on seach results page and a new Product Comparison page in your store.
+The app exports several blocks that you can use to display a Product Comparison drawer on the search results page and a new Product Comparison page in your store.
 
 ![Comparison drawer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-comparison-0.png)
 _Product Comparison drawer on the store's search results page_
@@ -32,20 +32,20 @@ Now, you are able to use all the blocks exported by the Product Comparison app. 
 |                        Block name                         |                                                                                                                                 Description                                                                                                                                  |
 | :-------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                `product-comparison-drawer`                | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-comparison-2.png) Main block responsible for rendering the drawer from the Product Comparison component in which the items will be compared. |
-|     `list-context.comparison-product-summary-slider`      |                                                   Extends the `list-context` block to built the Product Comparison component using the [Slider Layout](https://vtex.io/docs/components/layout-blocks/vtex.slider-layout/.)                                                   |
+|     `list-context.comparison-product-summary-slider`      |                                                   Extends the `list-context` block to build the Product Comparison component using the [Slider Layout](https://vtex.io/docs/components/layout-blocks/vtex.slider-layout/.)                                                   |
 |        `product-summary.shelf.product-comparison`         |                                      Extends the default `product-summary.shelf` block (from the [Product Summary app](https://developers.vtex.com/docs/guides/vtex-product-summary/)) for the Product Comparison component's features.                                      |
 |                `product-comparison-block`                 |                                                                    Logical block that, once extended (see blocks listed below), is responsible for rendering the Product Comparison component's features.                                                                    |
 |            `product-comparison-block.selector`            |                                                                                                      Renders the selector checkbox on the Product Comparison component.                                                                                                      |
 |          `product-comparison-block.close-button`          |                                                                                                        Renders the close button on the Product Comparison component.                                                                                                         |
 |      `product-comparison-block.product-summary-row`       |                                                                                           Renders the first row to list and compare products on the Product Comparison component.                                                                                            |
-|               `list-context.comparison-row`               |                                                 Extends the `list-context` block to built a row in the Product Comparison page using the [Slider Layout](https://vtex.io/docs/components/layout-blocks/vtex.slider-layout/.)                                                 |
+|               `list-context.comparison-row`               |                                                 Extends the `list-context` block to build a row in the Product Comparison page using the [Slider Layout](https://vtex.io/docs/components/layout-blocks/vtex.slider-layout/.)                                                 |
 | `product-comparison-block.grouped-product-specifications` |                                                                                                            Renders the section for product specification groups.                                                                                                             |
 |     `product-comparison-block.product-specifications`     |                                                                                                               Renders the section for product specifications.                                                                                                                |
 |       `product-comparison-block.sku-specifications`       |                                                                                                                 Renders the section for SKU specifications.                                                                                                                  |
 
 ### Step 2 - Adding extended interfaces
 
-In the theme's `interfaces.json` file, add the following extented interfaces:
+In the theme's `interfaces.json` file, add the following extended interfaces:
 
 ```diff
 +{
@@ -62,7 +62,7 @@ In the theme's `interfaces.json` file, add the following extented interfaces:
 +}
 ```
 
-### Step 3 - Wraping the search blocks with Product Comparison context
+### Step 3 - Wrapping the search blocks with Product Comparison context
 
 1. In the theme's `search.jsonc` file, replace the default `store.search` blocks with the `store.search.product-comparison` blocks as shown in the example below:
 
@@ -92,7 +92,7 @@ In the theme's `interfaces.json` file, add the following extented interfaces:
   ...
 ```
 
-> ℹ️ _The `store.search.product-comparison` blocks will wraps the `store.search` block with comparison context. The replacement is needed so we can synchronously display the selected products in the Product Comparison drawer._
+> ℹ️ _The `store.search.product-comparison` blocks wrap the `store.search` block with comparison context. The replacement is needed so we can synchronously display the selected products in the Product Comparison drawer._
 
 2. Replace the `search-result-layout.desktop` blocks with the `search-result-layout.desktop.product-comparison` blocks as shown below:
 
@@ -119,7 +119,7 @@ In the theme's `interfaces.json` file, add the following extented interfaces:
 ...
 ```
 
-### Step 4 - Adding the Product Comparison to the product detail Page
+### Step 4 - Adding the Product Comparison to the product detail page
 
 1. In the theme's `product.jsonc` file, replace the default `"store.product"` blocks with the `"store.product.product-comparison"` blocks as shown in the example below:
 
@@ -131,7 +131,7 @@ In the theme's `interfaces.json` file, add the following extented interfaces:
   }
 ```
 
-2. add `"product-comparison-drawer"` to the `"store.product.product-comparison"` children as shown in the example below:
+2. Add `"product-comparison-drawer"` to the `"store.product.product-comparison"` children as shown in the example below:
 
 ```diff
 "store.product.product-comparison": {
@@ -143,7 +143,7 @@ In the theme's `interfaces.json` file, add the following extented interfaces:
 }
 ```
 
-3. add `"product-comparison-block.selector#pdp"` to the `"store.product.product-comparison"` block as shown in the example below:
+3. Add `"product-comparison-block.selector#pdp"` to the `"store.product.product-comparison"` block as shown in the example below:
 
 ```diff
  "store.product.product-comparison": {
@@ -184,7 +184,7 @@ In any desired template, such as the `store.search`, add the `product-comparison
 ...
 ```
 
-> ℹ️ _By adding the `product-comparison-drawer` block as showed above, you will be declaring the following structure behind the scenes:_
+> ℹ️ By adding the `product-comparison-drawer` block as shown above, you will be declaring the following structure behind the scenes:
 
 ```json
 "product-comparison-drawer": {
@@ -233,7 +233,7 @@ In any desired template, such as the `store.search`, add the `product-comparison
 }
 ```
 
-> ℹ️ _The code above is a default implementation of the Product Comparison component. If any changes are desired, declare the code above in your theme and perform the needed updates according to the available blocks._
+> ℹ️ The code above is a default implementation of the Product Comparison component. If any changes are desired, declare the code above in your theme and perform the needed updates according to the available blocks.
 
 ### Step 5 - Building the Product Comparison page
 

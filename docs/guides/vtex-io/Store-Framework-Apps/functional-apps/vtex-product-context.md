@@ -10,7 +10,7 @@ The Product Context app is responsible for providing data regarding a certain pr
 
 ## Configuration
 
-1. Add the `product-context` app as a dependency in you theme's `manifest.json` file:
+1. Add the `product-context` app as a dependency in your theme's `manifest.json` file:
 
 
 ```diff
