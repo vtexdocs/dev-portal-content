@@ -76,7 +76,7 @@ Before generating your store's sitemap, you might want to adjust if products, na
   }
   ```
 
-  This means your sitemap will be available in some minutes, after being processed and saved on our database.
+  This means your sitemap will be available in a few minutes, after being processed and saved on our database.
 
   > ℹ️ Keep in mind that the time taken to generate a sitemap is proportional to the number of products. For example, the average time to generate a sitemap for a store with 60k products is 30 minutes. For 5k products, the duration should be about 5 minutes.
 
@@ -87,7 +87,7 @@ Before generating your store's sitemap, you might want to adjust if products, na
   > Next generation available: <End-date>
   > ```
 
-  To make a force restart, add the `force` argument to the query, as in: `generateSitemap(force: true)`. But, be aware that this will cancel the previous process.
+  To force a restart, add the `force` argument to the query, as in: `generateSitemap(force: true)`. Be aware that this will cancel the previous process.
 
 10. Check the sitemap generated for the current workspace you are working on by accessing `https://{workspace}--{account}.myvtex.com/sitemap.xml` on your browser. Notice that if your store is a cross-border one, you'll first see an index containing a website's sitemap for each locale.
 
@@ -95,7 +95,7 @@ Before generating your store's sitemap, you might want to adjust if products, na
 
 11. If you're happy with the results, run `vtex promote` to promote your workspace and to have your sitemap in your master workspace.
 
-  Once you promoted your workspace, no further actions are needed on your part: you are ready to check out your store's sitemap by accessing `https://{account}.myvtex.com/sitemap.xml` on your browser.
+  Once you have promoted your workspace, no further actions are needed on your part: you are ready to check out your store's sitemap by accessing `https://{account}.myvtex.com/sitemap.xml` on your browser.
 
 ### Advanced configuration
 
@@ -136,7 +136,7 @@ For implementation details, check the following step by step.
 
 2. [Publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) and install your app in a production workspace.
 
-3. Now, to make your index available in the sitemap root file (`/sitemap.xml`), access your account's admin, relative to the workspace you're working on, and select the GraphQL IDE.
+3. Now, to make your index available in the sitemap root file (`/sitemap.xml`), access your account's Admin for the workspace you're working on, and select the GraphQL IDE.
 
 4. From the dropdown list, choose the `vtex.store-sitemap@2.x` app and perform the following mutation, adapting it to your scenario:
 
@@ -154,7 +154,7 @@ For implementation details, check the following step by step.
 
 ##### Removing a custom route
 
-If it's ever desired to remove a custom route, you may execute the following mutation, which takes the same arguments as `saveIndex`:
+If you ever need to remove a custom route, you may execute the following mutation, which takes the same arguments as `saveIndex`:
 
   ```gql
   mutation {

@@ -57,7 +57,7 @@ Once you have added the block to the header, the Telemarketing component is read
 
 This component will only be displayed and work properly for users whose role is `2 - Televendas (Call center operator)` in their access profile.
 
-To understand how the permissions work for your account, including the call center operator permission, access the learning track on [Accounts & Permissions](https://help.vtex.com/tracks/contas-e-permissoes--5PxyAgZrtiYlaYZBTlhJ2A/4T2vusW9RRUmVjGSuKNO2H) on VTEX Help Center.
+To understand how the permissions work for your account, including the call center operator permission, access the [Accounts & Permissions](https://help.vtex.com/tracks/contas-e-permissoes--5PxyAgZrtiYlaYZBTlhJ2A/4T2vusW9RRUmVjGSuKNO2H) learning track in the VTEX Help Center.
 
 ## Customization
 

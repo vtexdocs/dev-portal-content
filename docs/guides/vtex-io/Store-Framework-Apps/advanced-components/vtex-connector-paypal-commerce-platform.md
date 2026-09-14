@@ -19,7 +19,7 @@ An app integrating PayPal Checkout with Smart Payment Buttons with a VTEX IO sto
 ## Features
 
 - Adds PayPal's [Smart Payment Buttons](https://developer.paypal.com/docs/checkout/) to your store's Checkout Cart page (or other locations such as the minicart), allowing users to place orders using PayPal's checkout experience instead of the standard VTEX checkout
-- Also allows the user to use PayPal within the native VTEX checkout
+- Also allows the user to use PayPal within the native VTEX checkout.
 - Allows the VTEX Payment Gateway's auto-settle behavior to be configured or disabled
 - Allows PayPal Credit ("Pay Later") messaging to be displayed on the PDP and in product shelves
 

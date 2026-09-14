@@ -13,11 +13,11 @@ Use this layout component to show blocks on top of other blocks.
 
 Each children passed to `stack-layout` will receive an increasingly higher value of `zIndex`.
 
-This means `flex-layout.row#viewone` will appear on the bottom, `flex-layout.row#viewtwo` will appear over it with `zIndex` of value 2, and `flex-layout.row#viewthree` will appear over them both with `zIndex` of value 3. Another thing to notice is that you pass the `blockClass` prop to any children of the `stack-layout` it will apply the `blockClass` to the element that wraps child element.
+This means `flex-layout.row#viewone` will appear on the bottom, `flex-layout.row#viewtwo` will appear over it with a `zIndex` of 2, and `flex-layout.row#viewthree` will appear over them both with a `zIndex` of 3. Also notice that if you pass the `blockClass` prop to any children of the `stack-layout`, it will apply the `blockClass` to the element that wraps the child element.
 
 ## Configuration
 
-1. Import the breadcrumb's app to your theme's dependencies in the `manifest.json`, for example:
+1. Import the Stack Layout app to your theme's dependencies in the `manifest.json` file, for example:
 
 ```json
   "dependencies": {
@@ -29,13 +29,13 @@ This means `flex-layout.row#viewone` will appear on the bottom, `flex-layout.row
 
 ```json
 "stack-layout": {
-  "children": ["flex-layout.row#viewone", "flex-layout.row#viewtwo", "flex-layout.row#viewthree]
+  "children": ["flex-layout.row#viewone", "flex-layout.row#viewtwo", "flex-layout.row#viewthree"]
 }
 ```
 
 | Prop name      | Type     | Description                                                                                                                                                                            | Default value |
 | -------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `blockClass`   | `string` | Allows you to pass a custom name to be added to component CSS classes                                                                                                                      | `null`        |
+| `blockClass`   | `string` | Allows you to pass a custom name to be added to the component CSS classes.                                                                                                                      | `null`        |
 | `zIndexOffset` | `number` | An offset to be passed to the zIndex of the children of the stack layout. If you pass 3, the first child will have a zIndex of 3 and the next layer will have a zIndex of 4, and so on. | `0`           |
 
 ## Customization

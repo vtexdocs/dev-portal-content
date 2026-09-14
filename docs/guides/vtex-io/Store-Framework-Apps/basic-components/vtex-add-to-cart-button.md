@@ -7,7 +7,7 @@ createdAt: "2020-06-03T15:19:30.080Z"
 updatedAt: "2022-04-11T12:41:12.534Z"
 ---
 
-The `add-to-cart-button` block is responsible for adding products in the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart/) (`minicart.v2`).
+The `add-to-cart-button` block is responsible for adding products to the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart/) (`minicart.v2`).
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-add-to-cart-button-0.png)
 
@@ -23,7 +23,7 @@ The `add-to-cart-button` block is responsible for adding products in the [Minica
 }
 ```
 
-2. Add the `add-to-cart-button` to other theme block using the product context, such as the `product-summary.shelf`. In the example below, the `add-to-cart-button` is added to the `flex-layout.row` block from the `store.product` template (which uses the product context):
+2. Add the `add-to-cart-button` to another theme block using the product context, such as the `product-summary.shelf`. In the example below, the `add-to-cart-button` is added to the `flex-layout.row` block from the `store.product` template (which uses the product context):
 
 ```json
   "store.product": {

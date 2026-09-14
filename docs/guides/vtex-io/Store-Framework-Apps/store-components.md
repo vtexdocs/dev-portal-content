@@ -46,7 +46,7 @@ linkTitle="See more"
 
 <WhatsNextCard
 title="Logo"
-description= "Displays an image logo for the store header."
+description= "Displays a logo image for the store header."
 linkTo="/docs/apps/vtex.store-components/logo"
 linkTitle="See more"
 />

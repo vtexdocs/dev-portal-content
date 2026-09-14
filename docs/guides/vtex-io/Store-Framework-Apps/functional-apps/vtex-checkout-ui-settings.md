@@ -18,9 +18,9 @@ In practice, it means that Checkout UI Settings allows A/B testing in your store
 2.  Run `vtex list` to access the list of apps that are already installed on the account you're working on. If the Checkout UI Settings option already exists, you can skip to step 7 of this step-by-step;
 3.  If the Checkout UI Settings app was not found in the list of installed apps, run the `vtex init` command;
 4. Select the `checkout-ui-settings` option;
-5.  Open the `checkout-ui-settings`  app in whichever code editor you prefer;
-6.  In the  `manifest.json`  file, change the predefined default value  `vendor`  to the name of the account in which you want to install the app;
-7.  In the  `checkout-ui-custom`  folder, create the files in which the scripts will be included, just as you would do in the [Admin interface](https://help.vtex.com/tutorial/configure-template-in-smartcheckout-update--ToTE5XB39t0SwtHgpgwSv?locale=en#configure-code). Notice that a few default files already exist in the `checkout-ui-custom` folder; you can use these files to insert the scripts;
+5.  Open the `checkout-ui-settings` app in whichever code editor you prefer;
+6.  In the `manifest.json` file, change the predefined default value `vendor` to the name of the account in which you want to install the app;
+7.  In the `checkout-ui-custom` folder, create the files in which the scripts will be included, just as you would do in the [Admin interface](https://help.vtex.com/tutorial/configure-template-in-smartcheckout-update--ToTE5XB39t0SwtHgpgwSv?locale=en#configure-code). Notice that a few default files already exist in the `checkout-ui-custom` folder; you can use these files to insert the scripts;
 8.  According to the Checkout customization you are looking for, open the most suitable file and insert the desired scripts;
 9.  Save your changes. Then, [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) the app's new version;
 10. Still logged into the desired account, [create a production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) and [install the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app);

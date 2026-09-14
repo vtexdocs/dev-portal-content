@@ -12,7 +12,7 @@ The Store Link app provides blocks responsible for displaying links in other the
 
 ## Configuration
 
-1. Add the `store-link` app to your theme's dependencies in the `manifest.json` file. You'll, then, be able to use all the [blocks](#blocks) exported by the `store-link` app and its respective [props](#props).
+1. Add the `store-link` app to your theme's dependencies in the `manifest.json` file. You'll then be able to use all the [blocks](#blocks) exported by the `store-link` app and its respective [props](#props).
 
 ```diff
   "dependencies": {

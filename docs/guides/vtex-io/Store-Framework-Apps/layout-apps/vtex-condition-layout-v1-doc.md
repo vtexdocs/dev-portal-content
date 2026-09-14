@@ -6,7 +6,7 @@ createdAt: "2020-10-26T15:24:19.885Z"
 updatedAt: "2022-07-19T14:16:44.931Z"
 ---
 
-> ⚠️ ***Condition Layout app v1 has been deprecated in favor of Condition Layout app v2**. Although support for the former version is still granted, we strongly recommend you to access the [Migration Guide](https://github.com/vtex-apps/condition-layout/tree/master/docs/MIGRATION-GUIDE.md) and update your store theme with the app's newest version in order to keep up with the components' evolution.*
+> ⚠️ ***Condition Layout app v1 has been deprecated in favor of Condition Layout app v2**. Although support for the former version is still granted, we strongly recommend that you access the [Migration Guide](https://github.com/vtex-apps/condition-layout/tree/master/docs/MIGRATION-GUIDE.md) and update your store theme with the app's newest version in order to keep up with the components' evolution.*
 
 As the name implies, the Condition Layout app allows a block to be rendered if certain conditions are met.
 
@@ -29,7 +29,7 @@ You are now able to use all blocks that are exported by the `condition-layout` a
 | Block name | Description |
 | -------------- | ----------------------------------------------- |
 | `condition-layout.{context}` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Top level block in which you will specify (replacing the `{context}` value in the block name) which context will be used for providing data to its child block namely `condition`. **Currently, the Condition Layout only works with the product context** therefore the top block must be `condition-layout.product`. |
-| `condition.{context}` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines the condition logic and the children blocks that are going to be rendered in case the predefined condition is met. Remember to replace the `{context}` value for the context name specified in the Condition Layout block (`product`). |
+| `condition.{context}` | ![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Defines the condition logic and the children blocks that are going to be rendered if the predefined condition is met. Remember to replace the `{context}` value with the context name specified in the Condition Layout block (`product`). |
 | `condition.else` | This block is optional and can be used as a child of the `condition-layout.{context}` block. When declared, its children are rendered if no condition was met. In scenarios where no condition was met and the `condition.else` block was not declared, no content will be displayed. |
 
 ### Step 2 - Adding the `condition-layout.{context}` block to your theme's templates
@@ -126,8 +126,8 @@ If users interact with a product whose ID is not equal to 12, the block that is 
 
 | Prop name | Type | Description | Default value |
 | --------- | --------------- | ----- | ---------------------|
-| `subject` | `string` | A subject is a similar data fetched from a given context. When passed as a value to this prop, the subject will be used to identify which data is needed from the UI to validate the value chosen in the  `object` prop. Check below the possible value for the subject prop provided by the product context. | `undefined` |
-| `verb` | `enum` | The condition validator. It directly depends on the subject chosen for the `subject` prop. For `value` type subjects, possible `verb`values are `is` or `is-not` (checking, respectively, for equality or inequality between the subject's value and the object prop's value). For  `array` type subjects, possible values are `contains` and `does-not-contain` (checking, respectively, if the subject's array contains or does not contain the object prop's value). | `is` (for `value` type subjects) and `contains` (for `array` type subjects). |
+| `subject` | `string` | A subject is similar data fetched from a given context. When passed as a value to this prop, the subject will be used to identify which data is needed from the UI to validate the value chosen in the `object` prop. See below the possible values for the subject prop provided by the product context. | `undefined` |
+| `verb` | `enum` | The condition validator. It directly depends on the subject chosen for the `subject` prop. For `value` type subjects, possible `verb` values are `is` or `is-not` (checking, respectively, for equality or inequality between the subject's value and the object prop's value). For `array` type subjects, possible values are `contains` and `does-not-contain` (checking, respectively, if the subject's array contains or does not contain the object prop's value). | `is` (for `value` type subjects) and `contains` (for `array` type subjects). |
 | `object` | `string` | Value that you want to be matched when comparing to the data fetched in the `subject` prop in order to render the predefined layout. | `undefined` |
 
 - Possible `subject` prop's values provided by the product context:

@@ -572,7 +572,7 @@ Renders an order delivery packages information and product list. Must be placed 
 
 The `order-placed` app exports two hooks to allow customization using the current order data: `useOrderGroup` and `useOrder`.
 
-`useOrderGroup`: used to get the data of the current order group. An order group is the collection of all orders created by an users's purchase.
+`useOrderGroup`: used to get the data of the current order group. An order group is the collection of all orders created by a user's purchase.
 
 ```js
 import { useOrderGroup } from "vtex.order-placed/OrderGroupContext";
