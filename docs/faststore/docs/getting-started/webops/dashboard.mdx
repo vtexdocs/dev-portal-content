@@ -1,7 +1,7 @@
 ---
 title: 'FastStore WebOps - Dashboard'
 createdAt: "2023-08-14T17:31:00.000Z"
-updatedAt: "2026-08-07T00:00:00.000Z"
+updatedAt: "2026-09-09T00:00:00.000Z"
 ---
 
 Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project), or are already working on customizing it, you can use the WebOps dashboard to view website deployments and performance.
@@ -62,6 +62,20 @@ For a complete list of all store deployments and their details, see the [Deploys
 
 This section lists all the deploy previews created for GitHub branches in your project repository. These previews are automatically available for each pull request opened in its corresponding branch. You can [configure which branches generate preview deploys](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches#configuring-preview-branch-filters) in the Integrations tab.
 
+#### Preview availability
+
+Preview URLs that aren't accessed for **12 hours** are automatically deactivated to save resources. This doesn't delete your preview or its data; it only pauses it until it's needed again. When you open a deactivated preview URL, one of the following happens:
+
+- **Waking up:** You'll see a loading screen while the preview is reactivated. This page refreshes automatically, and the storefront loads normally after a few seconds, with no action required from you.
+
+  ![environment-waking-up](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-19511/images/waking-up-environment.png)
+
+- **Expired:** If the preview can no longer be reactivated, you'll see an expired page instead. In this case, redeploy the corresponding branch from the **Deploys** tab to generate a new preview.
+
+  ![deployment-expired](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-19511/images/deploy-expired.png)
+
+> ⚠️ If you run automated tests against preview URLs, keep in mind that a request made right after 12 hours of inactivity may not immediately return the storefront, since the preview could still be waking up. During this state, the page returns an HTTP **202** status code. Once the preview is fully available, it returns a **200** status code. Add a retry to your test setup to account for this.
+
 ## Deploys
 
 The **Deploys** tab provides insights into store deployments, including their status (success, failed, etc.). The table below summarizes the key features of the Deploys page.
@@ -75,7 +89,7 @@ The **Deploys** tab provides insights into store deployments, including their st
 | 3 - Environment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with.</li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                 |
 | 4 - Branch            | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                       |
 | 5 - Status            | Filters deploy status: <ol><li>Queued: The deployment is next in line to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment has completed successfully.</li><li>Failed: The deployment process encountered an error and didn't complete as expected.</li></ol>                                                                                               |
-| 6 - Sort by           | Filters deployments by **Latest first** or **Oldest First**.                                                                                                                                                                                                                                                                                                                                                  |
+| 6 - Sort by           | Filters deployments by **Latest First** or **Oldest First**.                                                                                                                                                                                                                                                                                                                                                  |
 | 7 - Deployments table | Lists all store deployments with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deploy author and the date and time of the deployment.</li><li>Environment: The environment that was changed, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deploy status.</li></ol> |
 
 ### Deployment details
