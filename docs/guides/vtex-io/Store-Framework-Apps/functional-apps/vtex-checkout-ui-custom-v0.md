@@ -31,7 +31,7 @@ Let's assume you were working in a [Development workspace](https://developers.vt
 
 For this purpose, you can access the `History` tab using the desired Production workspace, load your last changes from `testredcolor` and then click on `Publish`, copying your configurations to the Production workspace you are currently working in.
 
-> ⚠️ _The Header and Footer HTML files are still configured using the Admin Portal (`/admin/portal/#/sites`). In order to properly use the Checkout UI Custom app, it is strongly recommended to use the HTML stated below:_
+> ⚠️ The Header and Footer HTML files are still configured using the Admin Portal (`/admin/portal/#/sites`). In order to properly use the Checkout UI Custom app, it is strongly recommended to use the HTML stated below:
 
 - **Header HTML:**
 
