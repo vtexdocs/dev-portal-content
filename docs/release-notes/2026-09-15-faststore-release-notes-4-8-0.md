@@ -12,7 +12,7 @@ tags:
 
 FastStore `v4.8.0` helps merchants increase average order value with recommendations in the mini cart, gives developers safer and faster ways to extend the BFF and run the CLI, and improves storefront stability under bot traffic and in multilingual SEO. Shoppers get a more polished My Account for B2B Buyer Portal Cards experience, and teams on Windows or in monorepos spend less time on opaque build failures. See the sections below for details.
 
-> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.8.0` and keep your store up-to-date with the following improvements.
+> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.8.0` and keep your store up todate with the following improvements.
 
 ## Features
 
