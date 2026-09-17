@@ -1,6 +1,6 @@
 ---
 title: "CMS GraphQL API"
-slug: "using-the-cms-graphql-api.md"
+slug: "using-the-cms-graphql-api"
 hidden: false
 excerpt: "GraphQL API reference for querying published CMS content through generic and typed schemas."
 createdAt: "2026-09-14T18:00:00.000Z"
