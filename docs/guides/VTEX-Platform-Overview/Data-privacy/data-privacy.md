@@ -31,7 +31,7 @@ VTEX processes shoppers’ personal data only when strictly necessary, following
 
 VTEX does not sell, monetize, enrich, or transfer shoppers' personal data to other companies. See the [VTEX Trust Center](https://vtex.com/en-us/trust) section of our website to learn more about our approach to data privacy, including certifications, internal policies, and commitments.
 
->ℹ Learn more about the definition of personal data and our role in data protection in the [Data and privacy](https://help.vtex.com/en/tracks/data-and-privacy--4Lc0i0an0DgnEtB0AUwlcq/65ZqZlNWcmFSOqZQxr8gha) track on VTEX Help Center.
+>ℹ Learn more about the definition of personal data and our role in data protection in the [Data and privacy](https://help.vtex.com/docs/tracks/data-and-privacy) track on VTEX Help Center.
 
 ## Data lifecycle
 
@@ -54,9 +54,9 @@ Merchants are responsible for complying with local laws and regulations. This in
 
 ## Data subject rights
 
-VTEX offers tools for merchants to assist shoppers with requests related to data subject rights, including access and portability, rectification, consent, and erasure. Learn more in [Data subject rights](https://help.vtex.com/en/tutorial/data-subject-rights--6imchxTx09icupKMbzHVIM). For details on the data exclusion procedure, see the [Erasing customer data](https://help.vtex.com/en/tutorial/erasing-customer-data--1R9Fn7A06Ifj4R9YD4JTKU).
+VTEX offers tools for merchants to assist shoppers with requests related to data subject rights, including access and portability, rectification, consent, and erasure. Learn more in [Data subject rights](https://help.vtex.com/en/docs/tutorials/data-subject-rights). For details on the data exclusion procedure, see the [Erasing customer data](https://help.vtex.com/en/docs/tutorials/erasing-customer-data).
 
->❗ VTEX is not responsible for personal data stored by systems integrated with your store, such as ERPs, third-party marketplaces, third-party sellers, third-party applications available in the [VTEX App Store](https://help.vtex.com/en/tutorial/visao-geral-apps--4xfsHXyAQTjbZNuiKl6Y0e) or customizations implemented by your development team. You must map this data and ensure the enforceability of the rights of personal data subjects in these instances, in addition to the processes described below.
+>❗ VTEX is not responsible for personal data stored by systems integrated with your store, such as ERPs, third-party marketplaces, third-party sellers, third-party applications available in the [VTEX App Store](https://help.vtex.com/en/docs/tutorials/apps-overview) or customizations implemented by your development team. You must map this data and ensure the enforceability of the rights of personal data subjects in these instances, in addition to the processes described below.
 
 ## Data protection mechanisms
 
@@ -80,9 +80,11 @@ Learn more about our Security practices in the [Security](https://developers.vte
 
 The [hosting provider](https://compliance.vtex.com/?itemUid=e3fae2ca-94a9-416b-b577-5c90e382df57&source=click) used by VTEX is Amazon Web Services (AWS), which stores data in the Northern Virginia region of the United States. The AWS platform has important certifications such as ISO 27001, PCI DSS, CSA, and NIST. For a detailed list of certifications, go to [AWS Compliance Programs](https://aws.amazon.com/en/compliance/programs/). Authorization for storing data on AWS can be found in our [DPA](https://compliance.vtex.com/?itemName=data_privacy&source=click&itemUid=c4223a81-5840-4e11-ac9f-2b812794a67e/).
 
+VTEX may also carry out international transfers of personal data when necessary for platform operations, for example, to support subprocessors or other processing activities, relying on recognized legal transfer mechanisms, such as the EU-U.S. Data Privacy Framework (DPF), where applicable. For more details, see the [International Transfers and the DPF whitepaper](https://compliance.vtex.com/?itemUid=b625c744-158a-4edc-9d76-9322b4c730e8&source=click) in the VTEX Trust Center.
+
 ## Policies and compliance
 
-VTEX has privacy and data protection policies, which are reviewed annually. The [External Privacy Notice](https://vtex.com/us-en/trust/general-external-privacy-notice/) can be accessed on the VTEX website.
+VTEX has privacy and data protection policies, which are reviewed annually. The [External Privacy Notice](https://compliance.vtex.com/?itemUid=63f59def-eb18-4135-95a1-addeb7463801&source=click) for the VTEX Platform can be accessed through the VTEX Trust Center.
 
 Merchants should add their own privacy policies to their websites to comply with local privacy regulations.
 

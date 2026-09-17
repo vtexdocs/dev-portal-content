@@ -74,3 +74,7 @@ To validate whether the script is installed in your store, follow the steps belo
 ![dev_tools_af](https://vtexhelp.vtexassets.com/assets/docs/src/dev_tools_af___1d5b729dddb7926ba5678e8a1a1541e2.png)
 
 If the `af.js` file doesn't show in the Network tab, make sure that the snippet is in the `<head>` of the page and that there are no script blockers. If the setup is correct and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+
+## Next steps
+
+To track Intelligent Search analytics events on your search screens, see [Tracking search analytics events in headless web stores](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-headless-web-stores).

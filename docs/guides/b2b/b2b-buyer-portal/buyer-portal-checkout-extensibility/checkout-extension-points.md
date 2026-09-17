@@ -47,7 +47,7 @@ These extension points are global and available across all Checkout pages, from 
 
 Use this extension point to render content in the Checkout footer. Since it's global, the content is displayed consistently across all Checkout pages.
 
-![Footer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/layout.footer.webp)
+![Footer](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/layout.footer.webp)
 
 ## Cart extension points
 
@@ -57,7 +57,7 @@ Use the following extension points to customize different areas of the cart expe
 
 Render content before the cart item list, ideal for cart-level messaging that should appear above the items. Use the [`useCart` hook](https://developers.vtex.com/docs/guides/usecart-hook) to access and mutate cart data.
 
-![cart-list.before](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/cart.cart-list.before.webp)
+![cart-list.before](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/cart.cart-list.before.webp)
 
 ### `cart.cart-list.after`
 
@@ -75,7 +75,7 @@ Render content immediately below each cart item row, allowing you to attach item
 
 Render content after the assembly options button of a cart item. Use the [`useCart` hook](https://developers.vtex.com/docs/guides/usecart-hook) to access and mutate cart data.
 
-![cart.assembly-options.button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/cart.assembly-options.button.after.webp)
+![cart.assembly-options.button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/cart.assembly-options.button.after.webp)
 
 ### `cart.order-summary.after`
 
@@ -87,7 +87,7 @@ Append components under the order summary on the cart page, such as financing si
 
 Render content after the main order button on the cart page.
 
-![cart.order-button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/cart.order-button.after.webp)
+![cart.order-button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/cart.order-button.after.webp)
 
 ## Cart Punchout extension points
 
@@ -97,13 +97,13 @@ Use the following extension points to customize the [Punchout cart screen](https
 
 Render content below each cart item row on the Punchout cart screen, for example to add per-item options or attachments. Use the [`useCartPunchout`](https://developers.vtex.com/docs/guides/usecartpunchout-hook) and [`useCartItem`](https://developers.vtex.com/docs/guides/usecartitem-hook) hooks to read and update the cart.
 
-![punchout.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/punchout.cart-item.after.webp)
+![punchout.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/punchout.cart-item.after.webp)
 
 ### `punchout.order-summary.cta`
 
 Render a primary action button in the Punchout order summary sidebar, typically used to transfer the cart back to the eprocurement system. Use the [`useRedirect` hook](https://developers.vtex.com/docs/guides/useredirect-hook) to redirect the user to a target URL.
 
-![punchout.order-summary.cta](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/punchout.order-summary.cta.webp)
+![punchout.order-summary.cta](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/punchout.order-summary.cta.webp)
 
 ## Delivery extension points
 
@@ -113,19 +113,19 @@ Use the following extension points to customize the delivery stage.
 
 Render content below each cart item row on the delivery stage. Use the [`useCartItem` hook](https://developers.vtex.com/docs/guides/usecartitem-hook) to access data for the current item.
 
-![delivery.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/delivery.cart-item.after.webp)
+![delivery.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/delivery.cart-item.after.webp)
 
 ### `delivery.information-form.after`
 
 Render content after the delivery information form.
 
-![delivery.information-form.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/delivery.information-form.after.webp)
+![delivery.information-form.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/delivery.information-form.after.webp)
 
 ### `delivery.order-button.after`
 
 Render content after the order button on the delivery stage.
 
-![delivery.order-button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/delivery.order-button.after.webp)
+![delivery.order-button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/delivery.order-button.after.webp)
 
 ## Review extension points
 
@@ -135,7 +135,7 @@ Use the following extension point to customize the review stage.
 
 Render content below each cart item row on the review stage. Use the [`useCartItem` hook](https://developers.vtex.com/docs/guides/usecartitem-hook) to access data for the current item.
 
-![review.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/review.cart-item.after.webp)
+![review.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/review.cart-item.after.webp)
 
 ## Payment extension points
 
@@ -145,13 +145,13 @@ Use the following extension points to customize the payment stage.
 
 Render content below each cart item row on the payment stage. Use the [`useCartItem` hook](https://developers.vtex.com/docs/guides/usecartitem-hook) to access data for the current item.
 
-![payment.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/payment.cart-item.after.webp)
+![payment.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/payment.cart-item.after.webp)
 
 ### `payment.order-button.after`
 
 Render content after the order button on the payment stage.
 
-![payment.order-button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/payment.order-button.after.webp)
+![payment.order-button.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/payment.order-button.after.webp)
 
 ## Order Placed extension points
 
@@ -161,7 +161,7 @@ Use the following extension point to customize the order placed stage.
 
 Render content below each cart item row on the order placed stage. Use the [`useCartItem` hook](https://developers.vtex.com/docs/guides/usecartitem-hook) to access data for the current item.
 
-![order-placed.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/Checkout/checkout-extensibility/order-placed.cart-item.after.webp)
+![order-placed.cart-item.after](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/docs/guides/b2b/b2b-buyer-portal/buyer-portal-checkout-extensibility/order-placed.cart-item.after.webp)
 
 ## Displaying extension points in dev mode
 

@@ -41,6 +41,8 @@ jobs:
         id: changed-markdown-files
         uses: tj-actions/changed-files@v45
         with:
+          separator: "\n"
+          safe_output: false
           files: |
              **.md
              **.mdx
@@ -49,9 +51,10 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
         run: |
-          for file in ${ALL_CHANGED_FILES}; do
+          while IFS= read -r file || [ -n "$file" ]; do
+            [ -z "$file" ] && continue
             echo "$file was changed"
-          done
+          done <<< "$ALL_CHANGED_FILES"
 
       # Step 6: Check for broken links in changed markdown files
       - name: Check for broken links
@@ -61,10 +64,11 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
           LINK_ISSUES_FILE: link_issues.txt
         run: |
-          for file in ${ALL_CHANGED_FILES}; do
+          while IFS= read -r file || [ -n "$file" ]; do
+            [ -z "$file" ] && continue
             echo "Checking for broken links in $file"
             node .github/scripts/check-links-pr.mjs "$file"
-          done
+          done <<< "$ALL_CHANGED_FILES"
           if [ -f "$LINK_ISSUES_FILE" ] && [ -s "$LINK_ISSUES_FILE" ]; then
             echo "has_issues=true" >> "$GITHUB_OUTPUT"
           fi

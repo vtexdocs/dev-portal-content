@@ -26,3 +26,7 @@ linkTitle="See more"
 />
 
 </Flex>
+
+## Next steps
+
+To track Intelligent Search analytics events on your search screens, see [Tracking search analytics events in mobile apps](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-mobile-apps).
