@@ -28,13 +28,14 @@ Overriding a native component touches both your store code and the CMS, so you n
 - Identify which native section and which overridable component you want to change. See the [List of native sections and overridable components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections).
 
 ---
+
 ## Instructions
 
 ### Step 1 - Create the overridden section
 
 1. Open your store project in a code editor.
 2. In `src/components/sections`, create a `ProductShelf` folder with an `index.tsx` file.
-3. Import the native section and `getOverriddenSection` from `@faststore/core`. Since we're keeping the native carousel, we only override the `__experimentalProductCard` slot — wrapping the native card rather than replacing it:
+3. Import the native section and `getOverriddenSection` from `@faststore/core`. Since we're keeping the native carousel, we only override the product card overridable component (`__experimentalProductCard`), wrapping the native card rather than replacing it:
 
 ```tsx src/components/sections/ProductShelf/index.tsx
 import { useMemo, type ComponentProps } from 'react'
@@ -60,7 +61,7 @@ type ProductShelfProps = Omit<
   }
 }
 
-// Keeps the native carousel untouched; only the product card slot is overridden.
+// Keeps the native carousel untouched; only the product card overridable component is overridden.
 function withPixDiscount(showPixDiscount: boolean) {
   return function PixDiscountProductCard(props: ProductCardProps) {
     if (!showPixDiscount) {
