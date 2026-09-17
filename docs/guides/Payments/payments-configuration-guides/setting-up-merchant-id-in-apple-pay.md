@@ -23,7 +23,7 @@ Check the following requirements:
 - An [Apple Developer account](https://developer.apple.com/).
 - A computer running macOS, required to create the merchant identity certificate, because you use Keychain Access to generate its certificate signing request and to export the certificate.
 - An [API key](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) of your VTEX account, used to upload the domain validation file.
-- A payment provider that processes Apple Pay, as described in [Setting up payments with Apple Pay](https://help.vtex.com/en/docs/tutorials/setting-up-payments-with-apple-pay).
+- A payment provider selected for your store that supports Apple Pay. You will configure it after completing this guide.
 
 > ⚠️ VTEX generates the certificate signing request (CSR) used to create the payment processing certificate. [Open a ticket to VTEX support](https://supporticket.vtex.com/support) to request this file before you begin, because Apple asks for it in the middle of the certificate creation flow.
 
@@ -82,6 +82,8 @@ To create the certificate, follow these instructions:
 
     ![Question about processing payments exclusively in China, with the default option No selected.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-merchant-id-in-apple-pay-8.png)
 
+> ℹ️ Use the CSR sent by VTEX support instead of generating your own. The payment processing certificate requires a CSR created with the key pair that VTEX controls.
+
 6. On the screen with the instructions to create the CSR, click `Continue`.
 7. Click `Choose File`.
 8. Select the `{merchantID}.csr` file sent by VTEX support.
@@ -94,8 +96,6 @@ To create the certificate, follow these instructions:
     ![Certificate download screen, with the Download button highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-merchant-id-in-apple-pay-10.png)
 
 11. Click `Done`.
-
-> ℹ️ Use the CSR sent by VTEX support instead of generating your own. The payment processing certificate requires a CSR created with the key pair that VTEX controls.
 
 ## Validating the domains of your store
 
@@ -124,6 +124,9 @@ To validate a domain, follow these instructions:
     ![Domain registration screen, with the Download button of the validation file highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-merchant-id-in-apple-pay-13.png)
 
 8. Open the `.txt` validation file.
+
+> ⚠️ Don't change the content of the validation file.
+
 9. Copy the entire content of the file, respecting the following format:
 
     - Inside quotation marks
@@ -152,8 +155,6 @@ To validate a domain, follow these instructions:
 
     ![Domain registration screen, with the Verify button highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-merchant-id-in-apple-pay-14.png)
 
-> ⚠️ Don't change the content of the validation file.
-
 When the validation succeeds, the domain appears with the **Verified** status. To add more domains, repeat this procedure using the `Add Domain` button in the **Merchant Domains** section.
 
 ## Creating the merchant identity certificate
@@ -173,6 +174,8 @@ To create the certificate, follow these instructions:
 4. Under **Apple Pay Merchant Identity Certificate**, click `Create Certificate`.
 
     ![Merchant ID configuration page, with the Create Certificate button of the Apple Pay Merchant Identity Certificate section highlighted.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/setting-up-merchant-id-in-apple-pay-16.png)
+
+> ⚠️ The merchant identity certificate requires a CSR generated with an RSA 2048-bit key pair, as described in the [Apple Pay Merchant Integration Guide](https://developer.apple.com/apple-pay/Apple-Pay-Merchant-Integration-Guide.pdf). This CSR is different from the one VTEX sends for the payment processing certificate.
 
 5. Follow the instructions displayed on the screen to create the CSR.
 6. Click `Continue`.
@@ -197,14 +200,10 @@ To create the certificate, follow these instructions:
 16. Define the password that protects the exported data.
 17. Save the certificate on your computer.
 
-> ⚠️ The merchant identity certificate requires a CSR generated with an RSA 2048-bit key pair, as described in the [Apple Pay Merchant Integration Guide](https://developer.apple.com/apple-pay/Apple-Pay-Merchant-Integration-Guide.pdf). This CSR is different from the one VTEX sends for the payment processing certificate.
-
 ## Next steps
 
 After completing the previous stages, you have a Merchant ID, validated domains, a `.p12` certificate saved on your computer, and the export password. Use this data to configure the payment provider that processes Apple Pay payments in your store, as described in [Registering gateway affiliations](https://help.vtex.com/en/docs/tutorials/registering-gateway-affiliations) and [Setting up payments with Apple Pay](https://help.vtex.com/en/docs/tutorials/setting-up-payments-with-apple-pay).
 
 ## Learn more
 
-- [Setting up payments with Apple Pay](https://help.vtex.com/en/docs/tutorials/setting-up-payments-with-apple-pay)
-- [Registering gateway affiliations](https://help.vtex.com/en/docs/tutorials/registering-gateway-affiliations)
 - [Apple Pay Merchant Integration Guide](https://developer.apple.com/apple-pay/Apple-Pay-Merchant-Integration-Guide.pdf)
