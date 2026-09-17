@@ -16,7 +16,7 @@ To give anti-fraud providers and merchants control over this behavior, the [Anti
 Configuring this field involves two roles:
 
 - **Anti-fraud providers** declare `cardholderDocument` in the connector manifest, as described in this guide.
-- **Merchants** choose whether to display the field at checkout, when the provider allows it. See [Cardholder document configuration](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works#cardholder-document-configuration).
+- **Merchants** choose whether to display the field at checkout, when the provider allows it. See [Merchant-side cardholder document setting in VTEX Admin](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works#cardholder-document-configuration).
 
 ## Before you begin
 
@@ -29,7 +29,7 @@ Your connector must be integrated through the [Anti-fraud Provider Protocol](htt
 To define how the checkout handles the cardholder document, follow these instructions:
 
 1. In the connector manifest, add the `cardholderDocument` field with one of the values described in [Accepted values](#accepted-values).
-2. [Open a ticket to VTEX support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) requesting the update of your connector on VTEX.
+2. [Open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) requesting the update of your connector on VTEX.
 
 The following example declares a manifest that requires the cardholder document:
 
@@ -63,7 +63,7 @@ After VTEX updates your connector, validate the result:
 
 1. Confirm that the [List anti-fraud provider manifest](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#get-/manifest) endpoint returns the expected `cardholderDocument` value.
 2. Place a test order in a store that uses your connector and confirm that the checkout requests the cardholder document as expected. Changes may take up to 10 minutes to appear at the checkout.
-3. If you declared `optional`, ask the merchant to set the **Cardholder document field** option, as described in [Cardholder document configuration](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works#cardholder-document-configuration).
+3. If you declared `optional`, ask the merchant to set the **Cardholder document field** option, as described in [Merchant-side cardholder document setting in VTEX Admin](https://developers.vtex.com/docs/guides/how-the-integration-protocol-between-vtex-and-antifraud-companies-works#cardholder-document-configuration).
 
 ## Learn more
 
