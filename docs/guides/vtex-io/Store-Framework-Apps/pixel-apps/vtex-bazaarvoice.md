@@ -42,7 +42,7 @@ You can set some options of the Reviews component in the CMS:
 
 This app provides some CSS classes as an API for style customization.
 
-To use this CSS API, you must add the `styles` builder and create an app styling CSS file and add `vtex.bazaarvoice` to your theme `peerDependencies`.
+To use this CSS API, you must add the `styles` builder, create an app styling CSS file, and add `vtex.bazaarvoice` to your theme `peerDependencies`.
 
 1. Add the `styles` builder to your `manifest.json`:
 
