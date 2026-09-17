@@ -19,7 +19,7 @@ To install the accessiBe app:
 
 You will be redirected to your store’s accessiBe settings page. To setup your accessiBe account, please go to https://accessibe.com/a/lbbihws, log in to your accessibe account, and add your VTEX store URL as one of the managed sites. Accessibility parameters can be managed directly through the accessiBe platform after installing and configuring the app.
 
-> ⚠️ _You need to have an accessiBe paid account to be able to use the app_
+> ⚠️ You need to have an accessiBe paid account to be able to use the app
 
 After installing and adding your VTEX store URL on the accessiBe website, the accessibility button will be available on your store with the default configuration.
 
