@@ -14,7 +14,7 @@ In this guide, you'll override the native `ProductShelf` component to display a 
 
 ![product-shelf-with-pix-discount](https://vtexhelp.vtexassets.com/assets/docs/src/override-component-3___06a05f31d4a330b60b57d046ba75f47b.png)
 
-> ℹ️ If you need to create a section that doesn't have a native FastStore counterpart, see the [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/cms-creating-a-new-section) guide.
+> ℹ️ If you need to create a section that doesn't have a native FastStore counterpart, see the [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/creating-a-new-section) guide.
 
 ---
 
@@ -29,72 +29,6 @@ Overriding a native component touches both your store code and the CMS, so you n
 
 ---
 
-## How overriding works
-
-Overriding a native section involves two independent layers. Both are required, and changing only one is the most common source of confusion.
-
-| Layer | File | What it controls |
-| ----- | ---- | ---------------- |
-| **Behavior** | `src/components/sections/**` + `src/components/index.tsx` | Which React components render inside the section |
-| **Content** | `cms/{storeId}/components/cms_component__*.jsonc` | Which fields editors see in the CMS |
-
-### Where your override files actually need to live
-
-This is the part that cost the most time to get right, so it gets its own section.
-
-The FastStore CLI's dev/build step copies your **entire** `src/` folder into `.faststore/src/customizations/src/`. That's not a paraphrase — it's literally what the CLI does internally:
-
-```js
-// @faststore/cli, simplified
-copySync(userSrcDir, tmpCustomizationsSrcDir)
-// userSrcDir            = <project>/src
-// tmpCustomizationsSrcDir = .faststore/src/customizations/src
-```
-
-The practical consequence: your override component belongs at `src/components/sections/ProductShelf/index.tsx` and your registration file at `src/components/index.tsx` — **directly under `src/`, not inside a `src/customizations/` folder that you create yourself.**
-
-If you nest your files under `src/customizations/src/components/index.tsx` (a reasonable-looking convention, and one you may see suggested elsewhere), the whole `customizations` folder you created gets swept up by the copy above and lands one level too deep: `.faststore/src/customizations/src/customizations/src/components/index.tsx`. That file compiles cleanly, your CMS field saves fine in Admin, and nothing errors — but the module FastStore actually imports at runtime (`src/customizations/src/components`, resolved inside the generated `.faststore` tree) still resolves to the framework's default stub:
-
-```ts
-// what stays loaded if your files are nested one level too deep
-export default {}
-```
-
-Your override silently never runs. There is no warning for this.
-
-**How to verify you got it right:** after `yarn dev` finishes its first compile, open `.faststore/src/customizations/src/components/index.tsx` directly and confirm it contains *your* code, not `export default {}`. If it doesn't, your files are in the wrong place — move them to `src/components/index.tsx` / `src/components/sections/{Name}/`, delete `.faststore/` entirely, and restart `yarn dev` to force a clean resync.
-
-### The schema supersession rule
-
-When your `.jsonc` file declares a `$componentKey` that matches a native section name, your definition **supersedes** the native definition for that key. The generated schema extends the platform base:
-
-```json
-{
-  "$base": "vtex.faststore@4",
-  "components": {
-    "ProductShelf": { "...": "your definition" }
-  }
-}
-```
-
-The practical consequence is important: **any native field you omit disappears from the CMS editor.** To override `ProductShelf` and add one field, your `.jsonc` must declare all of the native fields *plus* your new one. There is currently no `$extends` reference that inherits a native section's properties — `$extends` is always `["#/$defs/base-component"]`, which supplies only the shared base, not the section's own fields.
-
-> ⚠️ Because native fields are copied rather than inherited, your schema can drift when FastStore adds a field to a native section upstream. Re-check your overridden sections' schemas when upgrading `@faststore/core`.
-
-### Choosing how to override a slot
-
-`getOverriddenSection` accepts two forms per component, and they are **mutually exclusive**:
-
-- `{ props: { ... } }` — keep the native component, change its props.
-- `{ Component: MyComponent }` — replace the component entirely.
-
-If you supply both, `props` is ignored and a warning is logged to the browser console. To replace a component *and* configure it from the CMS, wrap it in a function that closes over the CMS configuration (shown in [Step 1](#step-1---create-the-overridden-section)).
-
-You don't have to replace every slot a section exposes. `ProductShelf` has two: `__experimentalCarousel` and `__experimentalProductCard`. If you only need to change the product card, simply omit `__experimentalCarousel` from your `components` object — the native carousel keeps rendering untouched.
-
-> 💡 To find a section's exact slot names and native prop shape for the version you have installed, read the source directly: `node_modules/@faststore/core/src/components/sections/{Name}/DefaultComponents.ts` lists the slots, and `node_modules/@faststore/core/src/components/ui/{Name}/{Name}.tsx` shows how they're called. These names and props are internal APIs and can change between versions — checking your actual installed version beats trusting any doc, including this one.
-
----
 
 ## Instructions
 
@@ -199,40 +133,8 @@ export default ProductShelf
 
 > ⚠️ We import the native card via `src/components/product/ProductCard` (no relative path) — this resolves to the framework's default because our project doesn't have a file at that exact path, shadowing it. If you *do* create your own file at that same path (e.g. to fully replace the card everywhere, not just inside this shelf), that new file becomes what resolves — and this override would then need a relative import instead to still reach the original. Know which one you're doing.
 
-### Step 2 (optional) - Replacing a slot's component entirely, with CMS configuration
 
-The pattern above wraps the native component. If instead you want to **replace** a slot outright (e.g. swap the carousel for a different library) and still configure it from the CMS, remember `props` and `Component` are mutually exclusive — so the section itself must read the CMS prop and forward it into the replacement, closing over it in a wrapper:
-
-```tsx
-function withCarouselConfiguration(configuration: CarouselConfiguration = {}) {
-  const defined = Object.fromEntries(
-    Object.entries(configuration).filter(([, v]) => v !== undefined)
-  )
-
-  return function ConfiguredCarousel(props: CarouselProps) {
-    return <YourCarousel {...props} {...defined} />
-  }
-}
-
-// inside your section component, alongside the productCardConfiguration handling:
-const OverriddenProductShelf = useMemo(
-  () =>
-    getOverriddenSection({
-      Section: ProductShelfSection,
-      components: {
-        __experimentalCarousel: {
-          Component: withCarouselConfiguration(carouselConfiguration),
-        },
-        // ...other slots
-      },
-    }),
-  [carouselKey] // JSON.stringify(carouselConfiguration) — CMS returns a new object each render
-)
-```
-
-This part is architecturally consistent with how `getOverriddenSection` works, but — unlike Step 1 — we didn't build and verify a full carousel replacement in this pass. If you go this route, budget time to actually test it; introducing a new carousel library is a real dependency decision, not just a code pattern.
-
-### Step 3 - Declare the CMS schema
+### Step 2 - Declare the CMS schema
 
 Run `vtex content init` if you haven't already. It prompts for a store ID (default shown is `faststore` — **type your actual CMS store ID instead**, matching `contentSource.project` in `discovery.config.js`) and scaffolds:
 
@@ -349,7 +251,7 @@ In `cms/{storeId}/components`, create `cms_component__productshelf.jsonc`. Decla
 }
 ```
 
-### Step 4 - Register the override
+### Step 3 - Register the override
 
 In `src/components/index.tsx` — directly under `src/`, per the [warning above](#where-your-override-files-actually-need-to-live) — map the **native section name** to your component:
 
@@ -373,7 +275,7 @@ export default {
 }
 ```
 
-### Step 5 - Generate and upload the schema
+### Step 4 - Generate and upload the schema
 
 1. Confirm the component compiles: `yarn dev`. Then check `.faststore/src/customizations/src/components/index.tsx` actually contains your code (see [the callout above](#where-your-override-files-actually-need-to-live)) — do this every time, it's the cheapest way to catch the nesting mistake before it wastes your afternoon.
 
@@ -411,7 +313,7 @@ export default {
 
    > ⚠️ Run this in a real, interactive terminal. Piping answers into it (for automation or scripting) is unreliable — a wrong or mistimed answer gets silently absorbed by whichever prompt happens to be active, with no error to warn you.
 
-### Step 6 - Verify in the CMS
+### Step 5 - Verify in the CMS
 
 1. In the Admin, open **Storefront > Content** and select the entry that uses the section, such as **Home**.
 2. Open the **Product Shelf** section and confirm that both the native fields and your new **"Show Pix discount?"** field appear under **Product Card Configuration**.
