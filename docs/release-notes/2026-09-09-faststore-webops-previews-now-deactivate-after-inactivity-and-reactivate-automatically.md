@@ -1,9 +1,9 @@
 ---
 title: "FastStore WebOps: Previews now deactivate after inactivity and reactivate automatically"
-slug: "2026-09-09-faststore-webops-previews-now-deactivate-after-inactivity-and-reactivate-automatically"
+slug: "2026-09-17-faststore-webops-previews-now-deactivate-after-inactivity-and-reactivate-automatically"
 type: "improved"
-createdAt: "2026-09-09T00:00:00.000Z"
-updatedAt: "2026-09-09T00:00:00.000Z"
+createdAt: "2026-09-17T00:00:00.000Z"
+updatedAt: "2026-09-17T00:00:00.000Z"
 excerpt: "FastStore preview URLs no longer require a redeploy to stay usable. Idle previews are automatically deactivated and reactivate on the next access."
 tags:
     - FastStore
