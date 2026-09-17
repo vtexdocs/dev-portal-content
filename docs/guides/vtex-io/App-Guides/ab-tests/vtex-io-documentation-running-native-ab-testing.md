@@ -9,9 +9,9 @@ seeAlso:
  - "/docs/guides/vtexarg-abtester"
 ---
 
-In this guide, you will learn how to manage an A/B test, covering steps from running the test to providing the results.
+In this guide, you will learn how to manage an A/B test, covering steps from running the test to reviewing the results.
 
-A/B testing involves comparing traffic between two store workspaces and helps you determine which performs better regarding user engagement and conversions. To run an A/B test, you can use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) or the [A/B Tester](https://developers.vtex.com/docs/guides/vtexarg-abtester) app.
+A/B testing involves comparing traffic between two store workspaces and helps you determine which performs better in terms of user engagement and conversions. To run an A/B test, you can use the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-installation-and-command-reference) or the [A/B Tester](https://developers.vtex.com/docs/guides/vtexarg-abtester) app.
 
 > ⚠️ A/B tests have a maximum duration of 30 days from their start date. After this period, tests may end automatically without notice.
 
@@ -29,7 +29,7 @@ The A/B Tester app allows you to run A/B tests via the Admin. To use the app, fo
     vtex login {accountName}
     ```
 
-   >ℹ️ Replace the values between curly brackets based on your account name.
+   >ℹ️ Replace the value in curly brackets with your account name.
 
 2. Install the A/B Tester app in the `master` workspace by running:
 
@@ -48,19 +48,19 @@ The A/B Tester app allows you to run A/B tests via the Admin. To use the app, fo
   
 5. Type `y` to confirm the installation.
 6. Now, in the VTEX Admin, go to **Extensions Hub > Installed Apps > AB Tester**.
-7. See the [A/B Tester Admin app documentation](https://developers.vtex.com/docs/guides/vtexarg-abtester#usage) to create A/B tests, compare and conclude tests.
+7. See the [A/B Tester Admin app documentation](https://developers.vtex.com/docs/guides/vtexarg-abtester#usage) to create, compare, and conclude A/B tests.
 
 ## Running A/B tests via VTEX IO CLI
 
 ### Step 1 - Enabling A/B testing
 
-1. Open the terminal and log in to the desired account. *Remember to replace the values between curly brackets based on your account name.*
+1. Open the terminal and log in to the desired account.
   
     ```sh
     vtex login {accountName}
     ```
 
-   >ℹ️ Replace the values between curly brackets based on your account name.
+   >ℹ️ Replace the value in curly brackets with your account name.
 
 2. [Create and switch to a Production workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-production-workspace) by running the following command:
 
@@ -113,7 +113,7 @@ This is the time (in hours) when the traffic proportion stated in the previous q
 | Option | Description |
 |------------|-----------------|
 | **Answer `0` to automatically proceed with the A/B test.** | In this case, VTEX IO will automatically split your website traffic between workspaces, routing 50% of your store traffic to the `master` and the other 50% to the production workspace being tested.<br>Following that, the platform will automatically balance traffic every three minutes based on the conversion rates. This means that traffic will be gradually routed from the workspace with the lowest conversion rate to the workspace with the highest conversion rate.<br><br>**The test doesn't conclude independently.**<br>**Evaluate the test results daily.** |
-| **Answer with the number of hours you want to keep constant the proportion of traffic previously specified.** | During peak operational periods, it's critical for the test to extract as much data as possible. At the same time, the test shouldn't overextend and end up harming users navigating the workspace with the poorest performance. |
+| **Answer with the number of hours you want to keep the previously specified traffic proportion constant.** | During peak operational periods, it's critical for the test to extract as much data as possible. At the same time, the test shouldn't overextend and end up harming users navigating the workspace with the poorest performance. |
 
 You can run many A/B tests simultaneously by comparing two or more workspaces to the `master` individually. However, if you set up the traffic manually, the A/B test will distribute the traffic evenly among all production workspaces being A/B tested. For example, suppose you started an A/B test between workspace A and `master`, routing 90% of traffic to the former and 10% to the latter. If you run a new A/B test between workspace B and the `master`, each production workspace, A and B, will only receive 5% of the store traffic.
 
@@ -141,14 +141,14 @@ Before concluding your A/B test, it's essential to understand the comparative an
 | **Expected Loss**            | Anticipated percentage of conversion loss for the store if the lower conversion rate workspace is selected as the winner (based on **Conversion** results). |
 | **N. of Sessions**           | Total number of sessions for each workspace since the beginning of the test.                        |
 | **N. of Sessions (last 24hrs)** | Number of sessions for each workspace during the test in the past 24 hours.                           |
-| **Revenue**             | Total revenue placed by users navigating the store version associated with each workspace since the beginning of the test (expressed in the store's native currency).|
-| **Revenue (last 24 hs)** | Total revenue placed by users navigating the store version associated with each workspace in the past 24 hours during the test (expressed in the store's native currency).|
+| **Revenue**             | Total revenue generated by users navigating the store version associated with each workspace since the beginning of the test (expressed in the store's native currency).|
+| **Revenue (last 24 hrs)** | Total revenue generated by users navigating the store version associated with each workspace in the past 24 hours during the test (expressed in the store's native currency).|
 
 #### Final results
 
 | **Metric**                   | **Description**                                                                                                                                                                              |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Start Date**                  | Date and time for the test to start.                                                                                                                                               |
+| **Start Date**                  | Date and time for the test to start.                                                                                                                                          |
 | **Running Time**                | Test duration.                                                                                                                                                                               |
 | **Probability B beats A**        | Probability, in percentage points, that the production workspace is better for your store than the current `master` workspace. This calculation is based on session and completed sales counts. If this metric is greater than 10%, the production workspace can become the winner. |
 | **Winner**                      | Workspace you selected as the winner.                                                                                                                                                        |
@@ -159,7 +159,7 @@ Before concluding your A/B test, it's essential to understand the comparative an
 
 The best way to validate your A/B test workspace winner is to set a maximum conversion loss value based on the size of your store operation.
 
-For example, when starting your test, you can set a maximum conversion loss of `0,0001%`. Then, when either workspace achieves an `Expect Loss` result greater than `0,0001%`, you should end the test and declare a winner.
+For example, when starting your test, you can set a maximum conversion loss of `0.0001%`. Then, when either workspace achieves an `Expected Loss` result greater than `0.0001%`, you should end the test and declare a winner.
 
 ### Step 4 - Finishing the A/B test
 
@@ -191,7 +191,7 @@ In [Step 4](#step-4---finishing-the-ab-test), you only ended the test on the sel
     vtex use {workspaceName}
     ```
 
-   > ℹ️ Replace the values between curly brackets based on your workspace name.
+   > ℹ️ Replace the value in curly brackets with your workspace name.
 
 2. Promote the workspace being used.
 
@@ -199,4 +199,4 @@ In [Step 4](#step-4---finishing-the-ab-test), you only ended the test on the sel
     vtex workspace promote
     ```
 
-Now, all changes made in production are available in the master workspace.
+Now, all changes made in the production workspace are available in the `master` workspace.

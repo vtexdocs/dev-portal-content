@@ -1,6 +1,6 @@
 ---
 title: "Displaying product recommendations with the Recommendation Shelf"
-excerpt: "Display a carousel of personalized product recommendations from a VTEX Recommendations campaign, configured entirely through the CMS."
+excerpt: "Display a carousel of personalized product recommendations from a VTEX Recommendations campaign on any page or inside the cart drawer, configured entirely through the CMS."
 ---
 
 > ⚠️ This feature is in beta. If you have questions about enablement, account configuration, or campaigns, contact [our Support team](https://help.vtex.com/en/support).
@@ -10,6 +10,13 @@ In this guide, you'll learn how to enable, configure, and add the Recommendation
 The section uses the same product cards as other shelves in your store, keeping the appearance of recommended products consistent across the storefront. It's also a global CMS component, so you can add and configure it on any page through the CMS, including more than one shelf per page.
 
 ![recommendation-shelf-example](https://vtexhelp.vtexassets.com/assets/docs/src/recommendation-shelf-example___9a04be264281918f98e55f5702f421ff.gif)
+
+Recommendations can be displayed on two surfaces, both powered by the same VTEX Recommendations campaigns:
+
+| Surface | Layout |
+| --- | --- |
+| Recommendation Shelf | Full-width carousel |
+| [Mini cart shelf](displaying-recommendations-in-the-mini-cart) | Compact carousel inside the cart drawer |
 
 > ⚠️ This guide covers the native Recommendation Shelf section, which is the recommended way to display recommendations in a FastStore store. Follow [Integrating product recommendations in headless or FastStore web stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores) only if you're building a custom headless storefront or a fully custom recommendation experience that calls the Recommendations API directly instead of using this section.
 
@@ -137,3 +144,60 @@ Because the shelf is a global component, you can add it to any CMS page. We reco
 | Product details pages        | Cross-Sell, Similar Items, Visual Similarity, Next Interactions | `PDP`          |
 | Cart page                    | Cross-Sell                                                      | `CART`         |
 | Product listing pages        | Top Sellers, Personalized, Last Seen, Search-Based              | Not applicable |
+
+## Displaying recommendations in the mini cart
+
+The mini cart shelf displays a compact recommendation carousel inside the cart drawer, between the cart items and the order summary. Because the shopper has just added a product and the drawer is already open, this is the store’s highest-intent cross-sell surface.
+
+![recommendations-in-the-mini-cart](https://vtexhelp.vtexassets.com/assets/docs/src/recommendation-mini-cart___764187b91e8f259164c878b7dadc72bf.png)
+
+Compared to the page shelf, the mini cart shelf always uses the cart as its context and updates as shoppers add items:
+
+- It inherits the Cart Sidebar’s tax configuration.
+- Doesn't render when the cart is empty, even for context-agnostic campaigns.
+- Allows shoppers to add recommended products without closing the drawer.
+- It's bundled in its own chunk so that stores with the feature disabled do not download its code or styles.
+
+> ⚠️ The mini cart shelf reuses the same Recommendations infrastructure as the Recommendation Shelf. Follow [Before you begin](#before-you-begin) and [Step 1: Get the campaign VRN](#step-1-get-the-campaign-vrn) before enabling it.
+
+### Step 1: Enable the shelf on the Cart Sidebar component
+
+1. In the VTEX Admin, go to **Storefront > Content > All Content**.
+2. Open the **Global Sections** content type and select the **Cart Sidebar** component.
+3. Under **Recommendations**, turn on the **Should display Recommendation Shelf?** toggle switch. This field is off by default, and the drawer doesn't fetch or render anything while it's off.
+4. Paste the campaign VRN from [Step 1](#step-1-get-the-campaign-vrn) in the **Campaign VRN** field.
+5. Configure the remaining fields as needed. See [Mini cart shelf fields](#mini-cart-shelf-fields).
+6. Save and publish.
+
+### Mini cart shelf fields
+
+The table below lists the fields available under the **Recommendations** group of the **Cart Sidebar** component. Only **Should display Recommendation Shelf?** has no dependency. **Campaign VRN** is required for the shelf to fetch anything once the toggle is on, but isn't enforced by the CMS so the field can be left empty while the shelf is off. 
+
+> ⚠️Fields prefixed with `›` are nested inside the **Carousel Configuration** and **Product Card Configuration** groups.
+
+| Field | Key | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- | --- |
+| Should display Recommendation Shelf? | `shouldDisplayRecommendationShelf` | boolean | No | `false` | Opts the cart drawer into fetching and rendering the shelf. While off, there's no personalization session, no request, and nothing rendered. |
+| Title | `title` | string | No | — | Overrides the shelf title. When empty, the campaign title is used. |
+| Campaign VRN | `campaignVrn` | string | No | — | The recommendation campaign VRN. Uses the same format and campaign types as the page shelf (see [Campaign types and product context](#campaign-types-and-product-context)). Needed at runtime once the toggle is on; the drawer doesn't fetch without it. |
+| › Items per page | `carouselConfiguration.itemsPerPage` | number | No | `1` | Products visible at once. The drawer is a fixed, narrow width on every breakpoint, so there's a single field instead of separate desktop/mobile counts. Fractional values, such as `1.5`, hint that the carousel scrolls. |
+| › Carousel track variant | `carouselConfiguration.variant` | `slide` | `scroll` | No | `scroll` | Carousel navigation mode. In the CMS, the options are **Slide** (`slide`) and **Scroll** (`scroll`, default). |
+| › Navigation controls | `carouselConfiguration.controls` | `complete` | `navigationArrows` | `paginationBullets` | No | `navigationArrows` | Which navigation controls are displayed. In the CMS, the options are **Arrows and bullets** (`complete`), **Arrows only** (`navigationArrows`, default), and **Bullets only** (`paginationBullets`). |
+| › Show discount badge? | `productCardConfiguration.showDiscountBadge` | boolean | No | `true` | Shows the discount badge on cards. |
+| › Cards should be bordered? | `productCardConfiguration.bordered` | boolean | No | `false` | Renders bordered cards. |
+
+### Customizing the mini cart shelf
+
+The mini cart shelf accepts the same code-level overrides as the page shelf (`ProductCard` and `mapProductToProductCard`; see [Customizing the section](#customizing-the-section)). Because the drawer is rendered from the Cart Sidebar's CMS props, applying a custom card to the mini cart shelf means customizing the Cart Sidebar component in code through FastStore's override system, forwarding the override into the `recommendations` configuration.
+
+The shelf root also exposes a dedicated CSS hook, `data-fs-cart-recommendation-shelf`, in addition to the `data-fs-recommendation-shelf` hook shared with the page shelf. Use it to style the drawer instance without affecting page shelves:
+
+```scss
+[data-fs-recommendation-shelf] {
+  /* page shelf and mini cart shelf */
+}
+
+[data-fs-cart-recommendation-shelf] {
+  /* mini cart shelf only */
+}
+```

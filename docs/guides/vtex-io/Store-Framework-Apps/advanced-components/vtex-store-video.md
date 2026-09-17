@@ -81,4 +81,4 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `volumeButton`      |
 | `volumeSlider`      |
 
-> ⚠️ It's required that `controlsType` prop is set as `custom-vtex` in order to have the following CSS Handles properly working: `controlsContainer`, `fullscreenButton`, `playButton`, `trackContainer`, `trackTimer`, `trackBar`, `volumeContainer`, `volumeSlider`, and `volumeButton`.
+> ⚠️ The `controlsType` prop must be set as `custom-vtex` in order for the following CSS Handles to work properly: `controlsContainer`, `fullscreenButton`, `playButton`, `trackContainer`, `trackTimer`, `trackBar`, `volumeContainer`, `volumeSlider`, and `volumeButton`.
