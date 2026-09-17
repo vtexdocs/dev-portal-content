@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:50.043Z"
 updatedAt: "2022-11-22T18:39:22.812Z"
 ---
 
-VTEX Store Components is a collection of components that can be used to create/extend others VTEX apps.
+VTEX Store Components is a collection of components that can be used to create/extend other VTEX apps.
 
 - [VTEX Store Components](#vtex-store-components)
   - [Usage](#usage)
