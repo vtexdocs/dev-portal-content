@@ -1,0 +1,117 @@
+---
+title: "FastStore monorepo"
+slug: "faststore-monorepo-overview"
+excerpt: "Learn how to configure a FastStore monorepo for Product Discovery, Checkout, and Sales App."
+hidden: true
+createdAt: "2026-03-12T14:47:26.933Z"
+updatedAt: "2026-09-17T16:14:14.542Z"
+---
+
+**FastStore monorepo** is the unified repository model that centralizes development of storefront modules on VTEX.
+
+This architecture centralizes code, dependencies, and configuration for multiple projects in a single repository, enabling consistent customization, streamlined collaboration, and efficient code reuse.
+
+The storefront experience is organized into modules, which are sets of pages that comprise a functional area of the ecommerce experience on VTEX. We support three modules:
+
+* **Product Discovery Experience:** Covers the main customer-facing browsing flows, such as homepage, product listing pages (PLPs), search, product detail pages (PDPs), and custom content pages. It enables buyers to efficiently explore and discover products. In `faststore.json`, this module is the `discovery` key.
+* **Checkout:** Handles the purchase and payment process and provides customization for checkout logic, UI, and integration points to ensure a seamless buying experience. Use this module for [Buyer Portal Checkout Extensibility](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility).
+* **Sales App:** Designed for assisted sales and in-store experiences. It supports use cases where sales representatives interact with buyers (for example, in physical stores), helping them complete purchases on behalf of customers. Use this module for [VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility).
+
+>ℹ️ You don't need to use FastStore as your storefront to work with a FastStore monorepo. The Product Discovery Experience (`discovery`) module is optional. Configure only the modules you use. For example, you can include Checkout and/or Sales App in the monorepo while using a different storefront, such as [Store Framework](https://developers.vtex.com/docs/guides/store-framework).
+
+In this guide, you'll learn how to set up a FastStore monorepo.
+
+## Monorepo structure
+
+A FastStore monorepo doesn't require a rigid folder structure. You can organize your code as needed, as long as you keep a `faststore.json` file at the root of the repository. This file guides both local development and production deployments. See how to initialize a monorepo with `@vtex/fsp-cli` in the [Setting up your monorepo](#setting-up-your-monorepo) section.
+
+In local development, the `faststore.json` file acts as a configuration entry point. It consolidates the definitions and settings required for the unified repository and its storefront modules.
+
+For production deployments, the `faststore.json` file guides the deployment process via [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard). It ensures that the correct settings and configurations are applied when deploying storefront customizations to live environments. This file facilitates the transition from a local development setup to a production-ready application by supporting necessary parameters, such as paths and ports for each module.
+
+### `faststore.json` file
+
+The root of the `faststore.json` object contains a `stores` key. In `stores`, each key should be an account name.
+
+Each account object must include at least one of the following keys: `discovery`, `checkout`, and `sales-app`. You can use any combination of these keys. You don't need a `discovery` key if FastStore isn't your storefront.
+
+Each of these keys maps to a module configuration object with the following fields:
+
+| **Field** | **Type** | **Description** | **Example** | **Usage** | **Required** |
+| --- | --- | --- | --- | --- | :-: |
+| `path` | `string` | Path to the given module customization | `"packages/store1"` | Local development, production build | ✅ |
+| `port` | `number` | Port where the module will be available | `3001` | Local development | ✅ |
+| `cli` | `string` | Argument to override the module CLI being used | `"custom-cli"` | Local development, production build | ❌ |
+
+The following example shows a `faststore.json` file setup for a single store using multiple modules:
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3000
+      },
+      "checkout": {
+        "path": "packages/checkout",
+        "port": 3001
+      },
+      "sales-app": {
+        "path": "packages/sales-app",
+        "port": 3002
+      }
+    }
+  }
+}
+```
+
+The following example shows a `faststore.json` file for an account that uses Sales App without FastStore as the storefront (`discovery` isn't declared):
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "sales-app": {
+        "path": "packages/sales-app",
+        "port": 3002
+      }
+    }
+  }
+}
+```
+
+>ℹ️ You can see more examples of `faststore.json` configuration in the [Monorepo use cases](https://developers.vtex.com/docs/guides/monorepo-use-cases) guide.
+
+## Setting up your monorepo
+
+>ℹ️ If your FastStore project uses [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) and is hosted in `vtex-sites` or in your own GitHub organization, and you want to move to a FastStore monorepo, follow the instructions in the guide [Moving your FastStore project to a new GitHub repository](https://developers.vtex.com/docs/guides/faststore/webops-moving-your-faststore-project-to-a-new-github-repository) before setting up your monorepo.
+
+To set up your monorepo, run `@vtex/fsp-cli` to generate the required monorepo configuration files and update your [project structure](#monorepo-structure).
+
+1. Open a terminal.
+2. Navigate to your monorepo project folder.
+3. Run `npx @vtex/fsp-cli init --from-discovery` to initialize your FastStore monorepo. Use this command when you already have a Product Discovery Experience project. If you aren't using FastStore as your storefront, add only the modules you need with `fsp create` after the monorepo is set up. See [Creating new projects](https://developers.vtex.com/docs/guides/monorepo-creating-new-projects).
+4. Run `yarn install` to install and update the project dependencies.
+5. Open your FastStore monorepo project in a code editor and check that it's working.
+6. Commit your changes and push them to the repository.
+
+If you encounter errors during the process, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+
+## Next steps
+
+<WhatsNextCard
+title="Creating new projects"
+description="Learn how to create new projects in your FastStore monorepo."
+linkTo="https://developers.vtex.com/docs/guides/monorepo-creating-new-projects"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
+title="Monorepo use cases"
+description="Explore common FastStore monorepo layouts and example faststore.json setups for single accounts, multiple stores, and shared code."
+linkTo="https://developers.vtex.com/docs/guides/monorepo-use-cases"
+linkTitle="See more"
+/>
