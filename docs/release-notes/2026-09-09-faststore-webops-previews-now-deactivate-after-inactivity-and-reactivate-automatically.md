@@ -29,4 +29,4 @@ This improvement lets you keep using a preview URL for as long as you need it, s
 
 ## What needs to be done?
 
-This behavior is automatic and requires no configuration. However, if you run automated tests against preview URLs, add a retry to your test setup: a request made right after a period of inactivity may return an HTTP `202` status while the preview wakes up, before returning `200` once the storefront is fully available.
+This behavior is automatic and requires no configuration. However, if you run automated tests against preview URLs, add a retry to your test setup: a request made right after a period of inactivity may return an HTTP `202 Accepted` status while the preview wakes up, before returning `200 OK` once the storefront is fully available.
