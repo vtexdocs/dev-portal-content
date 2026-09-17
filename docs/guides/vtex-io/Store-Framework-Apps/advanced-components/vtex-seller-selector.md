@@ -125,14 +125,14 @@ Behind the scenes, the Seller Selector page uses the following default implement
 | `seller-head`                | Builds a header to be used on the Seller Selector table. You can pass to it the `seller-head-cell` block as children.                                                                                                                                                                             |
 | `seller-head-cell`           | Defines a title for each column in the table header.                                                                                                                                                                                                                                              |
 | `seller-body`                | Defines the page main content. It is responsible for displaying all sellers' data in the table body.                                                                                                                                                                                              |
-| `seller-row`                 | Used inside the Seller Selector table to separate seller's data into columns. You can use the blocks listed below (`seller-name`, `seller-price`, `seller-shipping`, `seller-price-with-shipping`, `seller-add-to-cart`) as `seller-row`'s children in order to provide all needed seller's data. |
+| `seller-row`                 | Used inside the Seller Selector table to separate seller data into columns. You can use the blocks listed below (`seller-name`, `seller-price`, `seller-shipping`, `seller-price-with-shipping`, `seller-add-to-cart`) as `seller-row`'s children in order to provide all needed seller data. |
 | `seller-name`                | Displays the seller name.                                                                                                                                                                                                                                                                         |
 | `seller-price`               | Displays the seller price for a given product.                                                                                                                                                                                                                                                    |
 | `seller-shipping`            | Displays shipping cost considering the sellers' data.                                                                                                                                                                                                                                             |
 | `seller-price-with-shipping` | Displays the purchase final cost (shipping cost + product price).                                                                                                                                                                                                                                 |
-| `seller-add-to-cart`         | Displays a Buy button that adds a given seller's product to the shopping cart. It is possible to use two different blocks inside of it `buy-button` or `add-to-cart-button`                                                                                                                       |
+| `seller-add-to-cart`         | Displays a Buy button that adds a given seller's product to the shopping cart. It is possible to use two different blocks inside of it: `buy-button` or `add-to-cart-button`.                                                                                                                       |
 | `buy-button`                 | Default buy button, will be used if nothing is provided in the blocks section of `seller-add-to-cart`                                                                                                                                                                                             |
-| `add-to-cart-button`         | Buy button to use with Minicart.V2 and GoCommerce Stores                                                                                                                                                                                                                                          |
+| `add-to-cart-button`         | Buy button to use with Minicart.V2 and GoCommerce stores                                                                                                                                                                                                                                          |
 
 #### `link-seller` props
 
@@ -164,10 +164,10 @@ This block uses the [ICU Message Format](https://format-message.github.io/icu-me
 | --------- | -------- | --------------------------------------------------- | ------------- |
 | `title`   | `string` | Text displayed on the table header for each column. | `undefined`   |
 
-## Modus operandi
+## Behavior
 
-The Seller Selector app fetch seller's data automatically from the [admin's Catalog ](https://help.vtex.com/tutorial/configuring-the-seller--tutorials_392).
-Behind the scenes, the blocks exported from the app use the product context in which they are inserted to identify the seller's data in the SKU registry.
+The Seller Selector app fetches seller data automatically from the [Catalog in VTEX Admin](https://help.vtex.com/tutorial/configuring-the-seller--tutorials_392).
+Behind the scenes, the blocks exported from the app use the product context in which they are inserted to identify seller data in the SKU registry.
 Based on this, they are able to display seller data without having to declare each desired seller in your theme.
 
 ## Customization
