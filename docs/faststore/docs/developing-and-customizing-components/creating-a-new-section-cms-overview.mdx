@@ -2,9 +2,9 @@
 title: "Creating a new section (CMS) - Overview"
 ---
 
-> ⚠️ This guide applies to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). If your store still runs on [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-legacy), refer to [Creating a new section (Headless CMS (legacy))](https://developers.vtex.com/docs/guides/faststore/headless-cms-creating-a-new-section-legacy) instead.
+> ⚠️ This guide applies to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). If your store still runs on [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), refer to [Creating a new section (Headless CMS (legacy))](https://developers.vtex.com/docs/guides/faststore/headless-cms-creating-a-new-section-legacy) instead.
 
-When FastStore's native sections don't meet your storefront requirements, you can build a custom React section and expose its properties as editable fields in the [VTEX CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts).
+When [FastStore's native sections](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-list-of-native-sections) don't meet your storefront requirements, you can build a custom React section and expose its properties as editable fields in the [VTEX CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts).
 
 In this workflow, developers build and register the section, define its CMS schema, and sync it with the CMS. Content editors then add the section to a page and configure its fields in the VTEX Admin, and developers preview the result in the local storefront.
 
@@ -18,7 +18,7 @@ Depending on your goal, you may need a different customization approach:
 | --- | --- |
 | Configure the properties of an existing section | The section editor in the CMS |
 | Build a new editable storefront block | A custom section, as described in this guide |
-| Change the visual appearance of the storefront | [Themes and design tokens](https://developers.vtex.com/docs/guides/faststore/styling-a-component) |
+| Change the visual appearance of the storefront | [Themes and design tokens](https://developers.vtex.com/docs/guides/faststore/using-themes-components) |
 | Add new data to existing FastStore API queries | [API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions) |
 
 ## CMS integration workflow
@@ -62,8 +62,8 @@ Make sure that:
 
 - Your FastStore project is connected to the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts).
 - The [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) is installed and available in your development environment.
-- You understand the relationship between [components and sections](https://developers.vtex.com/docs/guides/faststore/understanding-components-and-sections).
-- You can run the FastStore storefront locally. For setup instructions, see [Setting up your development environment](https://developers.vtex.com/docs/guides/faststore/setting-up-your-environment).
+- You understand the relationship between [components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections).
+- You can run the FastStore storefront locally. For setup instructions, see [Setting up your development environment](https://developers.vtex.com/docs/guides/faststore/getting-started-1-setting-up-your-environment).
 
 ## Next step
 
