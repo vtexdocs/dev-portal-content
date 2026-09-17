@@ -25,7 +25,7 @@ For more information, see [Preview availability](https://developers.vtex.com/doc
 
 ## Why did we make this change?
 
-This change lets you keep using a preview URL for as long as you need it, simply by accessing it, instead of losing it after a fixed number of days and having to trigger a new deploy.
+This improvement lets you keep using a preview URL for as long as you need it, simply by accessing it, instead of losing it after a fixed number of days and having to trigger a new deploy.
 
 ## What needs to be done?
 
