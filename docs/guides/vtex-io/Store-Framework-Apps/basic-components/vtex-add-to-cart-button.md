@@ -7,7 +7,7 @@ createdAt: "2020-06-03T15:19:30.080Z"
 updatedAt: "2022-04-11T12:41:12.534Z"
 ---
 
-The `add-to-cart-button` block is responsible for adding products in the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart/) (`minicart.v2`).
+The `add-to-cart-button` block is responsible for adding products to the [Minicart](https://developers.vtex.com/docs/guides/vtex-minicart/) (`minicart.v2`).
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-add-to-cart-button-0.png)
 
@@ -23,7 +23,7 @@ The `add-to-cart-button` block is responsible for adding products in the [Minica
 }
 ```
 
-2. Add the `add-to-cart-button` to other theme block using the product context, such as the `product-summary.shelf`. In the example below, the `add-to-cart-button` is added to the `flex-layout.row` block from the `store.product` template (which uses the product context):
+2. Add the `add-to-cart-button` to another theme block using the product context, such as the `product-summary.shelf`. In the example below, the `add-to-cart-button` is added to the `flex-layout.row` block from the `store.product` template (which uses the product context):
 
 ```json
   "store.product": {
@@ -47,7 +47,7 @@ The `add-to-cart-button` block is responsible for adding products in the [Minica
 | `customToastUrl`          | `string`  | Defines the link to where users will be redirected when the Toast (pop-up notification displayed when adding an item to the minicart) is clicked on.                                                                                                                                                                                                      | `/checkout/#/cart`                                                                                 |
 | `text`                    | `string`  | Defines a custom text message to be displayed on the Add To Cart Button.                                                                                                                                                                                                                                                                                  | `Add to cart` _(automatic translation will be applied according to your store's default language)_ |
 | `unavailableText`         | `string`  | Defines a custom text message to be displayed on the Add To Cart Button when a product is unavailable.                                                                                                                                                                                                                                                    | `Unavailable` _(automatic translation will be applied according to your store's default language)_ |
-| `customPixelEventId`      | `string`  | Define the `id` for the event that will be sent by the the button upon user interaction.                                                                                                                                                                                                                                                                  | `undefined`                                                                                        |
+| `customPixelEventId`      | `string`  | Defines the `id` for the event that will be sent by the button upon user interaction.                                                                                                                                                                                                                                                                  | `undefined`                                                                                        |
 
 ## Customization
 

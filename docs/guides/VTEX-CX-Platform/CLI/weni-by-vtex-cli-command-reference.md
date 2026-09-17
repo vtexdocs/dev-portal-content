@@ -7,7 +7,7 @@ updatedAt: "2025-11-06T13:05:57.445Z"
 excerpt: "Learn the command reference for the VTEX CX Platform (Weni) CLI."
 ---
 
-This documentation includes the default commands available in [VTEX CX Platform (Weni) CLI](weni-by-vtex-understanding-the-core-concepts.md).
+This documentation includes the default commands available in [VTEX CX Platform (Weni) CLI](https://developers.vtex.com/docs/guides/using-the-weni-by-vtex-cli).
 
 ## Default commands
 
