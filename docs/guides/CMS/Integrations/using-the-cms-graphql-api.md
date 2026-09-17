@@ -1,13 +1,13 @@
 ---
-title: "CMS GraphQL API"
-slug: "using-the-cms-graphql-api"
+title: "Using GraphQL API for querying CMS content"
+slug: "using-graphql-api-for-querying-cms-content"
 hidden: false
 excerpt: "GraphQL API reference for querying published CMS content through generic and typed schemas."
 createdAt: "2026-09-14T18:00:00.000Z"
 updatedAt: "2026-09-17T18:00:00.000Z"
 ---
 
-The CMS GraphQL API lets storefronts and other integrations retrieve content published with the [CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms). It provides a single GraphQL endpoint with two ways to query content:
+The GraphQL API lets storefronts and other integrations retrieve content published with the [CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms). It provides a single GraphQL endpoint with two ways to query content:
 
 - **Generic queries** return the complete content document as JSON and work with any Content Type.
 - **Typed queries** expose fields generated from a JSON Schema published to the Schema Registry, enabling field selection and type generation.
