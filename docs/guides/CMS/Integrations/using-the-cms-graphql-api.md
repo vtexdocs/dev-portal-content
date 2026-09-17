@@ -1,13 +1,13 @@
 ---
-title: "Data Plane GraphQL API"
-slug: "using-the-data-plane-graphql-api"
+title: "CMS GraphQL API"
+slug: "using-the-cms-graphql-api.md"
 hidden: false
 excerpt: "GraphQL API reference for querying published CMS content through generic and typed schemas."
 createdAt: "2026-09-14T18:00:00.000Z"
-updatedAt: "2026-09-14T18:00:00.000Z"
+updatedAt: "2026-09-17T18:00:00.000Z"
 ---
 
-The Data Plane GraphQL API lets storefronts and other integrations retrieve content published with the [CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms). It provides a single GraphQL endpoint with two ways to query content:
+The CMS GraphQL API lets storefronts and other integrations retrieve content published with the [CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms). It provides a single GraphQL endpoint with two ways to query content:
 
 - **Generic queries** return the complete content document as JSON and work with any Content Type.
 - **Typed queries** expose fields generated from a JSON Schema published to the Schema Registry, enabling field selection and type generation.
@@ -122,7 +122,7 @@ query EntryBySlug($contentTypeId: String!, $slug: String!, $locale: String!) {
 }
 ```
 
-Slug matching checks `content.slug` first and then `content.seo.slug`. Slugs with and without a leading slash match, but including the leading slash, for example `/home`, is recommended.
+Slug matching checks `content.slug` first and then `content.seo.slug`. Slugs with and without a leading slash match, but including the leading slash, for example, `/black-friday`, is recommended.
 
 ### List entries
 
@@ -311,8 +311,6 @@ Update the pinned version deliberately when the store schema changes.
 ## Query limits
 
 The maximum query depth is 12. Deeper queries are rejected before execution with the `QUERY_TOO_DEEP` code and the `extensions.maxDepth` and `extensions.actualDepth` fields. Fragments contribute to the query depth wherever they are spread.
-
-Introspection queries have a separate depth limit of 20, although introspection is disabled.
 
 ## Errors
 
