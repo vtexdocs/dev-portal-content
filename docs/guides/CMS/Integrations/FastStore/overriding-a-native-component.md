@@ -28,8 +28,6 @@ Overriding a native component touches both your store code and the CMS, so you n
 - Identify which native section and which overridable component you want to change. See the [List of native sections and overridable components](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections).
 
 ---
-
-
 ## Instructions
 
 ### Step 1 - Create the overridden section
@@ -132,7 +130,6 @@ export default ProductShelf
 ```
 
 > ⚠️ We import the native card via `src/components/product/ProductCard` (no relative path) — this resolves to the framework's default because our project doesn't have a file at that exact path, shadowing it. If you *do* create your own file at that same path (e.g. to fully replace the card everywhere, not just inside this shelf), that new file becomes what resolves — and this override would then need a relative import instead to still reach the original. Know which one you're doing.
-
 
 ### Step 2 - Declare the CMS schema
 
@@ -309,9 +306,7 @@ export default {
    - **Store ID to associate** — type your CMS store ID again (matching `contentSource.project`). There's no `-s`/`--store` flag to pass this on the command line in current plugin versions; some older references show one, but check `vtex content upload-schema --help` against what you actually have installed.
    - **Version to publish** — it looks up the latest published version for that store ID and suggests a semver bump (e.g. `1.0.0` → `1.1.0`). Accept the suggestion or type your own.
 
-   > ⚠️ This command publishes immediately to your **live** CMS store — there's no separate "are you sure" step after the version prompt. Confirm the store ID matches `api.storeId`/`contentSource.project` in `discovery.config.js` before running it; uploading to the wrong store overwrites that store's schema.
-
-   > ⚠️ Run this in a real, interactive terminal. Piping answers into it (for automation or scripting) is unreliable — a wrong or mistimed answer gets silently absorbed by whichever prompt happens to be active, with no error to warn you.
+   ⚠️ This command publishes immediately to your live store. Confirm that the store ID matches `api.storeId`/`contentSource.project` in `discovery.config.js` before running it; uploading to the wrong store overwrites that store's schema.
 
 ### Step 5 - Verify in the CMS
 
