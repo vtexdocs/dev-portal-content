@@ -63,7 +63,7 @@ Standard credit and debit card transactions made without a digital wallet don't 
 
 ## What are the possible values for the `paymentOrigin` field in the payload?
 
-The `paymentOrigin` field identifies the wallet used in the payment. In Google Pay transactions, VTEX sends the value `Google Pay`. Transactions made with other wallets carry their own values, such as `Apple Pay`, and transactions made without a wallet don't include this field.
+Transactions made with other digital wallets carry their own `paymentOrigin` values, such as `Apple Pay`. Transactions made without a digital wallet don't include this field.
 
 ## How can I check whether a transaction used Google Pay?
 
