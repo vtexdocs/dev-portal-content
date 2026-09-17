@@ -1,7 +1,7 @@
 ---
 title: "Metadata information in payment transactions"
 slug: "metadata-information-in-payment-transactions"
-excerpt: "Learn how a payment provider stores custom metadata in the VTEX payment gateway using the Payment Provider Protocol."
+excerpt: "Learn how a payment provider stores and retrieves custom metadata in the VTEX payment gateway using the Payment Provider Protocol."
 hidden: false
 createdAt: "2024-04-16T00:00:00.691Z"
 updatedAt: "2026-09-04T00:00:00.000Z"
