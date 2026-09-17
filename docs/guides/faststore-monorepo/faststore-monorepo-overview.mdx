@@ -1,8 +1,7 @@
 ---
 title: "FastStore monorepo"
 slug: "faststore-monorepo-overview"
-excerpt: "Learn how to configure a FastStore monorepo for Product Discovery, Checkout, and Sales App."
-hidden: true
+excerpt: "Learn how to configure a FastStore monorepo for Product Discovery, Buyer Portal Checkout, and Sales App."
 createdAt: "2026-03-12T14:47:26.933Z"
 updatedAt: "2026-09-17T16:14:14.542Z"
 ---
@@ -14,10 +13,10 @@ This architecture centralizes code, dependencies, and configuration for multiple
 The storefront experience is organized into modules, which are sets of pages that comprise a functional area of the ecommerce experience on VTEX. We support three modules:
 
 * **Product Discovery Experience:** Covers the main customer-facing browsing flows, such as homepage, product listing pages (PLPs), search, product detail pages (PDPs), and custom content pages. It enables buyers to efficiently explore and discover products. In `faststore.json`, this module is the `discovery` key.
-* **Checkout:** Handles the purchase and payment process and provides customization for checkout logic, UI, and integration points to ensure a seamless buying experience. Use this module for [Buyer Portal Checkout Extensibility](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility).
+* **Buyer Portal Checkout:** Handles the purchase and payment process and provides customization for Buyer Portal Checkout logic, UI, and integration points to ensure a seamless buying experience. Use this module for [Buyer Portal Checkout Extensibility](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility).
 * **Sales App:** Designed for assisted sales and in-store experiences. It supports use cases where sales representatives interact with buyers (for example, in physical stores), helping them complete purchases on behalf of customers. Use this module for [VTEX Sales App Extensibility](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility).
 
->ℹ️ You don't need to use FastStore as your storefront to work with a FastStore monorepo. The Product Discovery Experience (`discovery`) module is optional. Configure only the modules you use. For example, you can include Checkout and/or Sales App in the monorepo while using a different storefront, such as [Store Framework](https://developers.vtex.com/docs/guides/store-framework).
+>ℹ️ You don't need to use FastStore as your storefront to work with a FastStore monorepo. The Product Discovery Experience (`discovery`) module is optional. Configure only the modules you use. For example, you can include Buyer Portal Checkout and/or Sales App in the monorepo while using a different storefront, such as [Store Framework](https://developers.vtex.com/docs/guides/store-framework).
 
 In this guide, you'll learn how to set up a FastStore monorepo.
 

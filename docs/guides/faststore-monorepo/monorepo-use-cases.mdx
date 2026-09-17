@@ -2,7 +2,6 @@
 title: "Monorepo use cases"
 slug: "monorepo-use-cases"
 excerpt: "Explore common FastStore monorepo layouts and example faststore.json setups for single accounts, multiple stores, and shared code."
-hidden: true
 createdAt: "2026-03-12T14:47:26.933Z"
 updatedAt: "2026-09-17T16:14:14.542Z"
 ---
@@ -14,7 +13,7 @@ This guide outlines common repository structures for these scenarios and provide
 The following sections cover:
 
 * **[Single account with multiple modules](#single-account-with-multiple-modules):** A single VTEX account using more than one storefront module.
-* **[Checkout and Sales App without Product Discovery](#checkout-and-sales-app-without-product-discovery):** A FastStore monorepo that customizes Checkout and/or Sales App while using a different storefront.
+* **[Buyer Portal Checkout and Sales App without Product Discovery](#buyer-portal-checkout-and-sales-app-without-product-discovery):** A FastStore monorepo that customizes Buyer Portal Checkout and/or Sales App while using a different storefront.
 * **[Multiple brands or stores sharing code](#multiple-brands-or-stores-sharing-code):** Multiple accounts or [subaccounts](https://help.vtex.com/docs/tutorials/managing-a-multistore) using the same monorepo while sharing common code.
 * **[Multiple brands or stores with multiple modules](#multiple-brands-or-stores-with-multiple-modules):** A monorepo where each account or subaccount can use multiple storefront modules with its own configuration.
 
@@ -60,9 +59,9 @@ In this scenario, one VTEX account uses multiple storefront modules, each with i
 }
 ```
 
-## Checkout and Sales App without Product Discovery
+## Buyer Portal Checkout and Sales App without Product Discovery
 
-In this scenario, the account uses a FastStore monorepo for Checkout and/or Sales App, but FastStore isn't the storefront. Omit the `discovery` key and declare only the modules you use.
+In this scenario, the account uses a FastStore monorepo for Buyer Portal Checkout and/or Sales App, but FastStore isn't the storefront. Omit the `discovery` key and declare only the modules you use.
 
 After the monorepo is configured, set up the modules you included: [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout) and [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions).
 
