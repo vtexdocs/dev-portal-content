@@ -24,7 +24,7 @@ Before developing your layout, make sure you meet the following requirements:
 | Requirement | Description |
 | ----------- | ----------- |
 | Payment provider integration | Your payment provider must be integrated with VTEX, as described in [Integrating a new payment provider on VTEX](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex). |
-| Checkout version | The store must use [Checkout v6](https://help.vtex.com/pt/docs/tutorials/ativar-o-checkout-v6), as layout updates don't apply to other versions. |
+| Checkout version | The store must use [Checkout v6](help.vtex.com/en/docs/tutorials/enable-checkout-v6), as layout updates don't apply to other versions. |
 | Development environment | [Node.js](https://nodejs.org/en/download) and npm installed on your machine, plus a [Git](https://git-scm.com/downloads) client to clone the Payment Mocker repository. |
 | Front-end knowledge | Familiarity with HTML, CSS, and [LESS](https://lesscss.org/), since Payment Mocker compiles the layout styles from a LESS file. |
 
