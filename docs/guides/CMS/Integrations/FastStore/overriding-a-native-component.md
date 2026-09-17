@@ -130,8 +130,6 @@ export default ProductShelf
 }
 ```
 
-> ⚠️ We import the native card via `src/components/product/ProductCard` (no relative path) — this resolves to the framework's default because our project doesn't have a file at that exact path, shadowing it. If you *do* create your own file at that same path (e.g. to fully replace the card everywhere, not just inside this shelf), that new file becomes what resolves — and this override would then need a relative import instead to still reach the original. Know which one you're doing.
-
 ### Step 2 - Declare the CMS schema
 
 Run `vtex content init` if you haven't already. It prompts for a store ID (default shown is `faststore` — **type your actual CMS store ID instead**, matching `contentSource.project` in `discovery.config.js`) and scaffolds:
@@ -144,11 +142,9 @@ cms/{storeId}/
     └── cms_content_type__landingPage.jsonc.example
 ```
 
-These `.jsonc.example` files are placeholder templates, not live schemas — `generate-schema` ignores them. Create your own `.jsonc` file (no `.example` suffix) instead.
+These `.jsonc.example` files are placeholder templates, not live schemas,  `generate-schema` ignores them. Create your own `.jsonc` file (no `.example` suffix) instead.
 
 In `cms/{storeId}/components`, create `cms_component__productshelf.jsonc`. Declare **every native field** of `ProductShelf`, then append your custom field:
-
-> ℹ️ To read the exact native definition for your installed version, open `node_modules/@faststore/core/cms/faststore/components/cms_component__productshelf.jsonc` and copy it as your starting point. This is the reliable way to avoid dropping fields — don't retype them from memory or from a doc (including this one).
 
 ```jsonc cms/{storeId}/components/cms_component__productshelf.jsonc
 {
@@ -251,7 +247,7 @@ In `cms/{storeId}/components`, create `cms_component__productshelf.jsonc`. Decla
 
 ### Step 3 - Register the override
 
-In `src/components/index.tsx` — directly under `src/`, per the [warning above](#where-your-override-files-actually-need-to-live) — map the **native section name** to your component:
+In `src/components/index.tsx`, directly under `src/`, map the native section name to your component:
 
 ```tsx src/components/index.tsx
 import ProductShelf from './sections/ProductShelf'
@@ -261,7 +257,7 @@ export default {
 }
 ```
 
-> ⚠️ `src/components/index.tsx` must use a **default export only**. Named exports are not picked up.
+> ⚠️ `src/components/index.tsx` must use a default export only. Named exports are not picked up.
 
 The object key is what connects your code to the CMS definition, and must match the `$componentKey` exactly. When your component name differs from the native section name, map it explicitly:
 
@@ -275,8 +271,7 @@ export default {
 
 ### Step 4 - Generate and upload the schema
 
-1. Confirm the component compiles: `yarn dev`. Then check `.faststore/src/customizations/src/components/index.tsx` actually contains your code (see [the callout above](#where-your-override-files-actually-need-to-live)) — do this every time, it's the cheapest way to catch the nesting mistake before it wastes your afternoon.
-
+1. Confirm the component compiles by running `yarn dev`.
 2. Generate the aggregated schema:
 
    ```bash
@@ -311,7 +306,7 @@ export default {
 
 ### Step 5 - Verify in the CMS
 
-1. In the Admin, open **Storefront > Content** and select the entry that uses the section, such as **Home**.
+1. In the Admin, open **Storefront > Content > All content** and select the entry that uses the section, such as **Home**.
 2. Open the **Product Shelf** section and confirm that both the native fields and your new **"Show Pix discount?"** field appear under **Product Card Configuration**.
 3. Toggle it on and **Save** (and publish/promote, if your CMS uses a draft/live branch split).
 
@@ -319,4 +314,4 @@ export default {
 
 4. With the dev server still running, reload the page. CMS content changes take effect on the next request in local dev — no server restart needed for content, only for code changes (see Step 5.1).
 
-> ℹ️ Uploading a schema **registers** the definition so it appears in the editor. It does not place the section on a page or guarantee that section has products to show — see the troubleshooting note below if a shelf renders empty even with everything wired up correctly.
+> ℹ️ Uploading a schema registers the definition so it appears in the editor. It does not place the section on a page or guarantee that section has products to show.
