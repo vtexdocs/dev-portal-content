@@ -22,7 +22,7 @@ Adds an optional `CartRecommendationShelf` inside the cart drawer, between cart 
 
 Merchants can promote complementary products at the moment shoppers are ready to buy, without custom storefront code. Shoppers discover relevant items without leaving checkout flow, which supports higher conversion and basket size. For more information, see the [Displaying recommendations in the mini cart](https://developers.vtex.com/docs/guides/faststore/storefront-features-displaying-product-recommendations-with-recommendation-shelf#displaying-recommendations-in-the-mini-cart) section.
 
-### Export `validateUserAuthentication` and `getAuthCookie` from `@faststore/api` (PR: [#3481](https://github.com/vtex/faststore/pull/3481))
+### Build safer custom BFF routes with VTEX ID authentication helpers (PR: [#3481](https://github.com/vtex/faststore/pull/3481))
 
 Exports two helpers that already exist in the BFF but were not part of the public package entry: `validateUserAuthentication(ctx)` (calls `commerce.vtexid.validate()` and throws `UnauthorizedError` / `ForbiddenError` on failure) and `getAuthCookie(ctx)` (reads the VTEX ID auth cookie from the request context).
 
