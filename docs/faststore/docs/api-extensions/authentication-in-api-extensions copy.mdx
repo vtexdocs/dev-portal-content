@@ -121,36 +121,9 @@ orderSummary: async (_: never, __: never, ctx: any) => {
 
 `validateUserAuthentication` is exported by `@faststore/api` from version 4.8.0. It calls the VTEX ID client, throws `UnauthorizedError` when the token is missing, expired, or invalid, and `ForbiddenError` when the token is valid but the shopper may not access the resource. The GraphQL route converts both into the corresponding HTTP statuses. Throwing is preferable to returning `null`, which the storefront cannot distinguish from an empty result.
 
-> ⚠️ Always call the VTEX ID client, whether through `validateUserAuthentication` or your own equivalent. Values read from the session are not a substitute: the session is a separate artifact with its own lifetime, so a resolver that authorizes on session values alone can keep granting access after the shopper's token is no longer valid.
+> ⚠️ Values read from the session are not a substitute for this call. The session is a separate artifact with its own lifetime, so a resolver that authorizes on session values alone can keep granting access after the shopper's token is no longer valid.
 
-<details>
-<summary>On `@faststore/core` earlier than 4.8.0</summary>
-
-`validateUserAuthentication` is not exported before 4.8.0, so the check has to be written in the store:
-
-```ts src/graphql/vtex/utils/auth.ts
-import { UnauthorizedError } from '@faststore/api'
-
-export const requireAuthenticatedUser = async (ctx: any) => {
-  try {
-    const validation = await ctx.clients.commerce.vtexid.validate()
-
-    if (validation?.authStatus?.toLowerCase() !== 'success') {
-      throw new UnauthorizedError('Authentication required')
-    }
-  } catch (error) {
-    if (error instanceof UnauthorizedError) {
-      throw error
-    }
-
-    throw new UnauthorizedError('Authentication required')
-  }
-}
-```
-
-The `try`/`catch` is not optional here. For a missing or expired token, VTEX ID answers `401` and the client throws rather than resolving with an unsuccessful status, so the check would never run and the caller would receive a `500`.
-
-</details>
+> ℹ️ `validateUserAuthentication` requires `@faststore/core` 4.8.0 or later. See [Updating your `@faststore/core` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-core-package-version).
 
 ## Step 3: Take identity from the session
 
@@ -166,7 +139,7 @@ extend type Query {
 
 ```ts src/graphql/vtex/resolvers/profile.ts
 customerProfile: async (_, { email }, ctx) => {
-  await requireAuthenticatedUser(ctx)
+  await validateUserAuthentication(ctx)
 
   return fetchProfileByEmail(email) // The caller chooses whose data to read.
 }
@@ -183,7 +156,7 @@ extend type Query {
 
 ```ts src/graphql/vtex/resolvers/profile.ts
 customerProfile: async (_, __, ctx) => {
-  await requireAuthenticatedUser(ctx)
+  await validateUserAuthentication(ctx)
 
   const session = await ctx.clients.commerce.session('')
   const userId = session.namespaces?.authentication?.storeUserId?.value
@@ -239,7 +212,7 @@ import { getAuthCookie } from '@faststore/api'
 const token = getAuthCookie(ctx.headers?.cookie ?? '', ctx.account)
 ```
 
-> ℹ️ On earlier versions, parse the cookie with a parser such as the `cookie` package rather than with `split('=')[1]`. Token values can contain `=`, and truncating one causes a silent `401` response. `getAuthCookie` also normalizes duplicated cookie keys before reading the value.
+> ℹ️ `getAuthCookie` normalizes duplicated cookie keys and reads the value without splitting the string, which avoids truncating a token that contains `=`.
 
 Writes follow the same rule as reads. Resolve the record's identifier within the same request, from the session or from a scoped read. An identifier accepted as an argument returns control over which record is written to the caller.
 
@@ -253,7 +226,7 @@ An external system, such as an ERP, a CRM, or a loyalty provider, knows nothing 
 
 ```ts src/graphql/thirdParty/resolvers/loyalty.ts
 loyaltyBalance: async (_: never, __: never, ctx: any) => {
-  await requireAuthenticatedUser(ctx)
+  await validateUserAuthentication(ctx)
 
   const session = await ctx.clients.commerce.session('')
   const shopperId = session.namespaces?.authentication?.storeUserId?.value
@@ -341,7 +314,7 @@ Before deploying a custom resolver that handles shopper data, confirm the follow
 <details>
 <summary>The resolver checks authentication before any other logic.</summary>
 
-Call `requireAuthenticatedUser` (or an equivalent check) as the first line of the resolver, before any data is read or written.
+Call `validateUserAuthentication` as the first line of the resolver, before any data is read or written.
 
 </details>
 
