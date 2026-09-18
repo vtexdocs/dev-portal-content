@@ -69,7 +69,7 @@ The endpoint returns some of the previously sent details and new information abo
 
 - `"id"`: Gift card identification, composed of the customer's `profileId` and a sequential number, separated by an underscore.
 - `"redemptionCode"`: Code the shopper enters at checkout to activate the gift card. It has a minimum of 6 characters.
-- `"redemptionToken"`: Optional token used to validate the gift card. Using it requires customizing your checkout to accept the token as user input.
+- `"redemptionToken"`: Token used to validate the gift card. This value is required when creating a gift card transaction.
 - `"balance"`: Gift card balance.
 - `"emissionDate"`: Gift card issue date.
 - `"transactions"`: URL of the gift card transactions resource.
