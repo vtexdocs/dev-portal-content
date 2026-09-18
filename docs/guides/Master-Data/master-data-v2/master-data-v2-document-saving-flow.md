@@ -36,7 +36,7 @@ In this step, an ID is added to the document. If the document lacks an ID, **Mas
 
 Following validation, a locking mechanism is applied. This ensures that only one operation can be executed using the document's ID or alternate key, preventing data conflicts.
 
->ℹ️ Concurrent write operations targeting the same document ID or the same alternate key are serialized by a lock. If a caller cannot acquire the lock within approximately 2 seconds, the request times out and returns an HTTP `408 Request Timeout` response. Above approximately 30 simultaneous write attempts on the same key, the platform can respond with `429 Too Many Requests` instead. Both responses reflect expected load-shedding from lock contention, not a conventional rate limit. If your integration writes frequently to the same document or key, reduce the number of concurrent writers per key or retry with backoff.
+> ℹ️ Concurrent write operations targeting the same document ID or the same alternate key are serialized by a lock. If a caller cannot acquire the lock within approximately 2 seconds, the request times out and returns an HTTP `408 Request Timeout` response. Above approximately 30 simultaneous write attempts on the same key per pod, the platform can respond with `429 Too Many Requests` instead. Both responses reflect expected load-shedding from lock contention, not a conventional rate limit. If your integration writes frequently to the same document or key, reduce the number of concurrent writers per key or retry with backoff.
 
 ## Step 5 - Get changed fields
 
