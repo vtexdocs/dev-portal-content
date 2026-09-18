@@ -75,51 +75,23 @@ In this file, the following is declared:
 
 The type definitions tell your API that an `orderSummary` query exists, but GraphQL still needs a function that produces the data when that query runs. This step writes that function: a resolver that checks the shopper is signed in, then forwards the shopper's own cookies to the Orders API so the response is scoped to that one shopper.
 
+> ℹ️ This step uses `validateUserAuthentication`, exported by `@faststore/api` from version 4.8.0. Update `@faststore/core` before continuing if your store is on an earlier version. See [Updating your `@faststore/core` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-core-package-version).
+
 1. In the `src/graphql/vtex/resolvers` directory, create a file named `orderSummary.ts`. If the `resolvers` directory doesn't exist yet, create it first.
 2. In the `orderSummary.ts` file, add the following content:
 
 ```ts src/graphql/vtex/resolvers/orderSummary.ts
-import { UnauthorizedError } from "@faststore/api";
-
-type ResolverContext = {
-  account: string;
-  headers: Record<string, string | undefined>;
-  clients: {
-    commerce: {
-      vtexid: { validate: () => Promise<{ authStatus?: string }> };
-    };
-  };
-};
+import { validateUserAuthentication } from "@faststore/api";
 
 type UserOrdersResponse = {
   list?: Array<{ creationDate?: string }>;
   paging?: { total?: number };
 };
 
-// Throws unless the incoming request carries a valid shopper token.
-const requireAuthenticatedShopper = async (ctx: ResolverContext) => {
-  try {
-    const validation = await ctx.clients.commerce.vtexid.validate();
-
-    if (validation?.authStatus?.toLowerCase() !== "success") {
-      throw new UnauthorizedError("Authentication required");
-    }
-  } catch (error) {
-    if (error instanceof UnauthorizedError) {
-      throw error;
-    }
-
-    // For a missing or expired token, VTEX ID answers 401 and the client
-    // throws instead of resolving. Without this catch, the caller would get
-    // a 500 rather than a 401.
-    throw new UnauthorizedError("Authentication required");
-  }
-};
-
 const orderSummaryResolver = {
   Query: {
-    orderSummary: async (_: never, __: never, ctx: ResolverContext) => {
-      await requireAuthenticatedShopper(ctx);
+    orderSummary: async (_: never, __: never, ctx: any) => {
+      await validateUserAuthentication(ctx);
 
       // Only the most recent order is needed: `paging.total` carries the count.
       const searchParams = new URLSearchParams({
@@ -162,8 +134,7 @@ export default orderSummaryResolver;
 In this file, the following is declared:
 
 - `orderSummaryResolver.Query.orderSummary` is the function GraphQL calls whenever an `orderSummary` query runs. Its third parameter, `ctx`, is the request context, which carries the incoming headers, the account name, and the platform clients.
-- `requireAuthenticatedShopper(ctx)` runs first and throws immediately for a signed-out visitor, so the rest of the function only ever runs for an authenticated shopper. `UnauthorizedError` comes from `@faststore/api` and results in a `401` response to the caller.
-- The `try`/`catch` around the validation matters. For a missing or expired token, VTEX ID answers `401` and the client throws rather than resolving with an unsuccessful status, so without the `catch` the caller would receive a `500` instead of a `401`.
+- `validateUserAuthentication(ctx)` runs first and throws immediately for a signed-out visitor, so the rest of the function only ever runs for an authenticated shopper. It is exported by `@faststore/api` from version 4.8.0, and the caller receives a `401` when the token is missing, expired, or invalid.
 - `cookie: ctx.headers?.cookie` forwards the shopper's own cookies to the Orders API. This is what makes the endpoint answer as that shopper. Sending an `appKey` and `appToken` pair instead would authenticate the request as the store, and the endpoint would no longer be scoped to one person.
 - `per_page: "1"` keeps the response small. The count comes from `paging.total`, so there is no reason to download the whole list.
 - If the response isn't successful, the resolver logs the status and throws. The upstream body is never returned, since an error body may carry headers or internal URLs.
