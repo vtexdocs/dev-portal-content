@@ -42,8 +42,8 @@ To operate in the VTEX environment, payment providers need to be integrated thro
 
 To understand how the Payment Provider Protocol works and the routes used in the payment and authentication flows, see:
 
-- [Payment Provider Protocol - Overview](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m)
-- [Payment Provider Protocol - API References](https://developers.vtex.com/docs/api-reference/payment-provider-protocol)
+- [Payment Provider Protocol overview](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m)
+- [Payment Provider Protocol API reference](https://developers.vtex.com/docs/api-reference/payment-provider-protocol)
 
 After making sure you meet the PPP implementation [prerequisites](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites), the next step is defining how your connector will work in the VTEX environment.
 
