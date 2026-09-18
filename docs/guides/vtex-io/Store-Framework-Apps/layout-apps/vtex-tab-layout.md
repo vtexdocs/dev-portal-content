@@ -166,7 +166,7 @@ Now, you are able to use all the blocks exported by the `tab-layout` app. Check 
 + }
 ```
 
-> ⚠️ _Do not forget to also declare the `tab-content.item`'s children blocks in order to properly render the tab content._
+> ⚠️ Do not forget to also declare the `tab-content.item`'s children blocks in order to properly render the tab content.
 
 ### `tab-layout` props
 

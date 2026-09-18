@@ -79,7 +79,7 @@ Note that the `slider-layout` block, exported from the Slider Layout app, is giv
 | `image`       | `string`            | Image URL.                                | `undefined`   |
 | `mobileImage` | `string`            | Mobile image URL.                         | `undefined`   |
 | `description` | `string`            | Image description.                        | `undefined`   |
-| `link`        | `object`            | Links an URL to the image being rendered. | `undefined`   |
+| `link`        | `object`            | Links a URL to the image being rendered. | `undefined`   |
 | `width`       | `string` / `number` | Image width (in `%` or `px`).             | `100%`        |
 
 - **`link` object:**
@@ -88,10 +88,10 @@ Note that the `slider-layout` block, exported from the Slider Layout app, is giv
 | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `url`        | `string`  | URL users will be redirected to when clicking on the image.                                                                                                                     | `undefined`   |
 | `noFollow`   | `boolean` | Whether the linked URL is endorsed by the owner of the page the user was navigating on i.e. if there is a commercial relationship between both pages (`true`) or not (`false`). | `false`       |
-| `openNewTab` | `string`  | Whether a new tab on browser will be opened (`true`) or not (`false`) .                                                                                                         | `undefined`   |
-| `title`      | `string`  | Text label used to identify the image in the admin's Site Editor.                                                                                                               | `undefined`   |
+| `openNewTab` | `string`  | Whether a new tab in the browser will be opened (`true`) or not (`false`) .                                                                                                         | `undefined`   |
+| `title`      | `string`  | Text label used to identify the image in the Admin's Site Editor.                                                                                                               | `undefined`   |
 
-> ℹ️ Use the **admin's Site Editor** to manage all images declared in the `list-context.image-list` block.
+> ℹ️ Use the **Admin's Site Editor** to manage all images declared in the `list-context.image-list` block.
 
 ## Customization
 
