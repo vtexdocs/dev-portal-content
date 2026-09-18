@@ -8,7 +8,7 @@ updatedAt: "2022-08-18T13:26:16.005Z"
 
 The pickup point selector app adds a block to your store, which allows shoppers to add a product to cart and select a pickup point for it with a single action.
 
-The app creates a list of available pickup points by running a simulation with the selected SKU and the zipcode provoded by the shopper.
+The app creates a list of available pickup points by running a simulation with the selected SKU and the zip code provided by the shopper.
 
 > ⚠️ Warning: This app should only be used inside the product page, since one of its dependencies is the `product-context`.
 

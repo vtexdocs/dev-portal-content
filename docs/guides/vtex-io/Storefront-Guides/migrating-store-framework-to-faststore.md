@@ -116,7 +116,7 @@ Start by inventorying the VTEX IO apps installed in your Store Framework account
 
 Backend VTEX IO apps and integrations can generally be reused with FastStore. Reinstall the required apps in the QA subaccount and validate their account-specific settings and integrations before you start development.
 
-Frontend VTEX IO components, on the other hand, aren't compatible with FastStore at all and must be recreated. Start by checking the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) catalog to see if a native component already covers your needs. If it doesn't, see [Developing and overriding UI components](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-overview) to learn how to override native components or build entirely new sections to recreate your custom frontend elements.
+Frontend VTEX IO components, on the other hand, aren't compatible with FastStore at all and must be recreated. Start by checking the [FastStore UI](https://developers.vtex.com/docs/guides/faststore/components-index) catalog to see if a native component already covers your needs. If it doesn't, see [Developing and customizing FastStore components](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-overview) to learn how to override native components or build entirely new sections to recreate your custom frontend elements.
 
 ### Step 6 - Recreating the storefront content
 
