@@ -18,7 +18,7 @@ To configure the Search app, check the sections below.
 
 ### Add the Search app to your theme's dependencies
 
-Add the `search` app to your theme's dependencies in the `manifest.json` as showed below:
+Add the `search` app to your theme's dependencies in the `manifest.json` as shown below:
 
 ```diff
   "dependencies": {
@@ -30,7 +30,7 @@ You are now able to use all of the blocks exported by the `search` app. Check th
 
 | Block name                    | Description             |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `autocomplete-result-list.v2` | Provides customized autocomplete features in the search bar component, such as top searches, search history, product suggestions or term suggestions. You can read more about the Intelligent Search [autocomplete feature](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4gXFsEWjF7QF7UtI2GAvhL) on VTEX Help Center. |
+| `autocomplete-result-list.v2` | Provides customized autocomplete features in the search bar component, such as top searches, search history, product suggestions or term suggestions. You can read more about the Intelligent Search [autocomplete feature](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4gXFsEWjF7QF7UtI2GAvhL) in the VTEX Help Center. |
 | `search-banner`               | Renders a customized banner according to the search query performed.           |
 | `did-you-mean`                | Helps users with possible misspelling corrections for the current search query.             |
 | `search-suggestions`          | Renders a list of similar search terms for the current search query.          |
@@ -66,16 +66,16 @@ First, declare the `autocomplete-result-list.v2` block as a child block of the [
 | `hideUnavailableItems`                  | `boolean`               | Defines whether the autocomplete should hide unavailable items (`true`) or not (`false`).             | `false`       |
 | `historyFirst`                | `boolean`               | Defines whether the search history list should be prioritized over the other lists (`true`) or not (`false`).                                                          | `false`       |
 | `customBreakpoints`           | `object`                | Defines a maximum number of suggested products by breakpoints. Possible values are `md`, `lg` or `xlg`.                                                           | -             |
-| `simulationBehavior`          | `"skip"` or `"default"` | If you want faster searches and do not care about most up to date prices and promotions, use `"skip"` value.     | `default`     |
-| `HorizontalProductSummary`          | `product-summary` block | By default, the mobile autocomplete uses the `CustomListItem` component to render the suggested products with a horizontal layout. But if you send a `product-summary` block here, it will render your customized Product Summary component. Read our documentation of [how to build a horizontal Product Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-horizontal-product-summary) component.                            | `undefined`     |
+| `simulationBehavior`          | `"skip"` or `"default"` | If you want faster searches and do not care about the most up-to-date prices and promotions, use the `"skip"` value.     | `default`     |
+| `HorizontalProductSummary`          | `product-summary` block | By default, the mobile autocomplete uses the `CustomListItem` component to render the suggested products with a horizontal layout. But if you send a `product-summary` block here, it will render your customized Product Summary component. Read our documentation on [how to build a horizontal Product Summary](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-horizontal-product-summary) component.                            | `undefined`     |
 
 ##### The `customBreakpoints` object
 
 | Prop name | Type     | Description                                                                    | Default value |
 | --------- | -------- | ------------------------------------------------------------------------------ | ------------- |
 | `md`      | `object` | Defines the maximum number of suggested products for the `md` breakpoint.      | `undefined`   |
-| `lg`      | `object` | Defines the the maximum number of suggested products for the `lg` breakpoint.  | `undefined`   |
-| `xlg`     | `object` | Defines the the maximum number of suggested products for the `xlg` breakpoint. | `undefined`   |
+| `lg`      | `object` | Defines the maximum number of suggested products for the `lg` breakpoint.  | `undefined`   |
+| `xlg`     | `object` | Defines the maximum number of suggested products for the `xlg` breakpoint. | `undefined`   |
 
 ##### The `md`, `lg` and `xlg` objects
 
@@ -96,7 +96,7 @@ The `autocomplete-result-list.v2` block also allows you to add a list of child b
 
 Now, you can add the last three search blocks: `search-banner`, `did-you-mean` and `search-suggestions`.
 
-Those blocks, differently from `autocomplete-result-list.v2`, need to be added under the `search-result-layout.desktop` or the `search-result-layout.mobile` blocks, according to the Search Results block hierarchy.
+Those blocks, unlike `autocomplete-result-list.v2`, need to be added under the `search-result-layout.desktop` or the `search-result-layout.mobile` blocks, according to the Search Results block hierarchy.
 
 Once added, these can be declared using their respective props for their configuration, for example:
 
@@ -147,11 +147,11 @@ Once added, these can be declared using their respective props for their configu
 | `blockClass`          | `string` | Unique block ID to be used in [CSS customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization) | `undefined`   |
 | `horizontalAlignment` | `string` | Defines the banner horizontal alignment. Possible values are `left`, `center` or `right`.                                        | `center`      |
 
-## Modus Operandi
+## Behavior
 
-The Search app is responsible for offering blocks that when rendered as components will improve the user's search experience in stores where the VTEX Intelligent Search engine is already supported.
+The Search app is responsible for offering blocks that, when rendered as components, improve the user's search experience in stores where the VTEX Intelligent Search engine is already supported.
 
-These components use `_q` as the query-string for the search term, meaning that if you wish to track the searches of your users in these components you'll need to add the `_q` query-string to the store's Google Analytics.
+These components use `_q` as the query string for the search term, meaning that if you wish to track the searches of your users in these components you'll need to add the `_q` query string to the store's Google Analytics.
 
 Find out how to do this by accessing our [Google Analytics search tracking](https://developers.vtex.com/docs/guides/vtex-io-documentation-setting-up-google-analytics-search-tracking) documentation.
 

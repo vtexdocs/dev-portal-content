@@ -19,11 +19,11 @@ VTEX IO open-source apps and documentation are fully stored in the [VTEX Apps Or
 
 ## [Release Notes](https://developers.vtex.com/vtex-developer-docs/changelog)
 
-Technical updates focused on developers and partners, including APIs updates, new development guides, and VTEX IO announcements are published in the Developer Portal [Release Notes](https://developers.vtex.com/vtex-developer-docs/changelog) section.
+Technical updates for developers and partners, including API updates, new development guides, and VTEX IO announcements, are published in the Developer Portal [Release Notes](https://developers.vtex.com/vtex-developer-docs/changelog) section.
 
 ## Newsletter
 
-Sign up for the VTEX IO Developer's newsletter and stay up to date with the latest news of the platform.
+Sign up for the VTEX IO Developer Newsletter and stay up to date with the latest platform news.
 
 [block:html]
 {
@@ -33,8 +33,8 @@ Sign up for the VTEX IO Developer's newsletter and stay up to date with the late
 
 ## [Help Center](https://help.vtex.com/)
 
-The [Help Center](https://help.vtex.com/) contains beginner tutorials, reference guides and troubleshooting articles about the **VTEX Admin panel.**
+The [Help Center](https://help.vtex.com/) contains beginner tutorials, reference guides, and troubleshooting articles about the **VTEX Admin panel**.
 
 ## [Support](https://help.vtex.com/en/tutorial/abrir-chamados-para-o-suporte-vtex--16yOEqpO32UQYygSmMSSAM?)
 
-All clients have access to the services provided by our Support team. These specialists are extensively prepared to give you the best experience possible when solving your tickets. To contact them, you need to [open a ticket to VTEX support.](https://help.vtex.com/en/tutorial/abrir-chamados-para-o-suporte-vtex--16yOEqpO32UQYygSmMSSAM)
+All clients have access to the services provided by our Support team. These specialists are thoroughly trained to provide the best possible experience when resolving your tickets. To contact them, [open a ticket with VTEX Support](https://help.vtex.com/en/tutorial/abrir-chamados-para-o-suporte-vtex--16yOEqpO32UQYygSmMSSAM).

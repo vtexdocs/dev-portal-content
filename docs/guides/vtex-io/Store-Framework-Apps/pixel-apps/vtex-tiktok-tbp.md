@@ -45,7 +45,7 @@ After installation, the app settings will be available in the VTEX Admin, under 
 
 ## Configuration
 
-You must configure the TikTok for Business app through the VTEX Admin. Please check out the documentation about the [Integration with TikTok](https://help.vtex.com/en/tracks/tiktok-integration--1r0yJSO11nrer1YVu3WTFd/7Dwfwu1aHMp1aR1yvej5nv) for instructions on this process.
+You must configure the TikTok for Business app through the VTEX Admin. See the [Integration with TikTok](https://help.vtex.com/en/tracks/tiktok-integration--1r0yJSO11nrer1YVu3WTFd/7Dwfwu1aHMp1aR1yvej5nv) documentation for instructions on this process.
 
 In case you are using the Legacy CMS Portal or Headless CMS (legacy), you need to configure the TikTok Pixel manually as well. Read the following sections for more information on this.
 
@@ -76,7 +76,7 @@ To insert the TikTok Pixel manually, you must follow the instructions in the Tik
 
 ## Disconnecting from TikTok
 
-Merchants can disable the integration between their store and TikTok at any time, by following the instructions on [Disconnecting TikTok from your store](https://help.vtex.com/en/tracks/tiktok-integration--1r0yJSO11nrer1YVu3WTFd/24SfBYkRkKMaetgjLDKgaP#disconnecting-tiktok-from-your-store).
+Merchants can disable the integration between their store and TikTok at any time by following the instructions on [Disconnecting TikTok from your store](https://help.vtex.com/en/tracks/tiktok-integration--1r0yJSO11nrer1YVu3WTFd/24SfBYkRkKMaetgjLDKgaP#disconnecting-tiktok-from-your-store).
 
 In case their TikTok user access token is revoked (deactivated or invalid), the integration will be disconnected automatically. The `access_token` is the token that bears the authorization of the TikTok user.
 

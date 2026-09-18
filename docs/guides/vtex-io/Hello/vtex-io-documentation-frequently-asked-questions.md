@@ -16,7 +16,7 @@ VTEX IO enables you to build:
 
 - **Storefront apps:** Design tailored storefront components with React.
 - **Admin apps:** Extend your store's admin capabilities with additional applications.
-- **Backend apps:** Create backend services for integration with Storefront or Admin apps, using Node or .NET Core.
+- **Backend apps:** Create backend services for integration with Storefront or Admin apps using Node or .NET Core.
 - **Pixel apps:** Develop pixel apps to gather user data for integration with third-party services.
 
 ### Who can use VTEX IO?
@@ -24,7 +24,7 @@ VTEX IO enables you to build:
 VTEX IO access is generally limited to a small group of developers as a closed beta, except for custom storefront apps.
 
 - **Closed beta access:** To join the closed beta for project types like Admin, backend, and pixel, you must meet one of the following criteria:
-  - Enterprise VTEX Accounts: Users on an Enterprise plan can verify eligibility based on their contract.
+  - Enterprise VTEX accounts: Users on an Enterprise plan can verify eligibility based on their contract.
   - Partners: VTEX IO-certified development partners are eligible for closed beta access.
 - **Storefront apps:** All VTEX accounts and partners can develop storefront apps without restrictions. This option allows you to build React-based storefronts to suit your specific business needs, regardless of your VTEX plan or certification status.
 
@@ -66,11 +66,11 @@ The Store Framework is included by default in VTEX contracts, with no additional
 
 VTEX provides support for all native Store Framework blocks, so any issues related to these blocks can be resolved by opening a [support ticket](https://help-tickets.vtex.com/smartlink/sso/login/zendesk) with the VTEX Support team.
 
-Being open-source, the Store Framework also benefits from a community-driven support network. Users can request new features, report bugs, and engage with other developers via the [VTEX Community](https://community.vtex.com/), and follow updates in our [Release Notes](https://developers.vtex.com/updates/release-notes).
+As an open-source project, Store Framework also benefits from a community-driven support network. Users can request new features, report bugs, engage with other developers via the [VTEX Community](https://community.vtex.com/), and follow updates in our [Release Notes](https://developers.vtex.com/updates/release-notes).
 
 ### How do I get started with Store Framework?
 
 To start building with Store Framework, check out our [Getting Started guide](https://developers.vtex.com/docs/guides/getting-started-3).  
 
-> ℹ️ Need additional assistance? If you have questions not covered here, feel free to [VTEX support](https://help.vtex.com/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) for further help.
+> ℹ️ Need additional assistance? If you have questions not covered here, feel free to [contact VTEX Support](https://help.vtex.com/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) for further help.
 
