@@ -7,7 +7,7 @@ createdAt: "2022-01-27T14:33:58.199Z"
 updatedAt: "2026-08-25T00:00:00.000Z"
 ---
 
-When a payment condition offers installments with interest, the VTEX Payment Gateway uses the `interestRateMethod` field to calculate the amount of each installment. This field belongs to the `installmentOptions` object of the payment condition, which the Payments Gateway API refers to as a rule.
+When a payment condition allows installments with interest, the VTEX Payment Gateway uses the `interestRateMethod` field to calculate the amount of each installment. This field belongs to the `installmentOptions` object of the payment condition, which the Payments Gateway API refers to as a rule.
 
 The field accepts the following values:
 
