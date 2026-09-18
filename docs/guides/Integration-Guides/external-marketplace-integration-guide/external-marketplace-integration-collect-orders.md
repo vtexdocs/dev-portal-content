@@ -9,7 +9,7 @@ updatedAt: "2022-06-10T16:10:11.654Z"
 >⚠️ If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/docs/guides/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/docs/guides/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.
 
 ## Authentication/authorization
-When sending a request to our APIs, you must inform in the headers a X-VTEX-API-AppKey + X-VTEX-API-AppToken pair or a VtexIdclientAutCookie (the connector’s app token, if using our [App Template](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-template)) that has access to the specified account.
+When sending a request to our APIs, you must inform in the headers a X-VTEX-API-AppKey + X-VTEX-API-AppToken pair or a VtexIdclientAutCookie that has access to the specified account.
 
 
 ## API Reference: New order Integration
@@ -121,7 +121,7 @@ It’s important to note that although some fields are optional in our API, depe
 ```
 
 ### Response Notifications
-To receive notifications from our service, the connector must implement some API routes in the base endpoint informed in connectorEndpoint (be in the request or the App Template).
+To receive notifications from our service, the connector must implement some API routes in the base endpoint informed in connectorEndpoint.
 Order Processing Result
 
  Notifications with the orders processing result are sent through the following request: POST {connectorEndpoint}/order-integration/notification/processing-result?an={accountName}. The body is the same as described here.
