@@ -92,7 +92,7 @@ Converts `process.cwd()` to forward slashes before writing `outputFileTracingRoo
 
 Windows-based developers get parity with macOS/Linux—production builds complete reliably instead of failing on config parse errors that have nothing to do with store business logic.
 
-My Account for B2B Buyer Portal
+## My Account for B2B Buyer Portal
 
 ### Align the saved-cards list with the design reference (PR: [#3487](https://github.com/vtex/faststore/pull/3487))
 
