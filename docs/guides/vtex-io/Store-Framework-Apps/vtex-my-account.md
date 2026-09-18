@@ -20,11 +20,11 @@ The app is responsible for handling customer's personal data such as: profile in
 
 ## Features
 
-This app provides a few extension points in order to allow apps to customize stores' experience as needed.
+This app provides a few extension points in order to allow apps to customize the store's experience as needed.
 
 ### Adding a new page to My Account
 
-First, make sure you have the store-builder as a dependency in you `manifest.json`:
+First, make sure you have the store-builder as a dependency in your `manifest.json`:
 
 ```diff
     "builders": {
