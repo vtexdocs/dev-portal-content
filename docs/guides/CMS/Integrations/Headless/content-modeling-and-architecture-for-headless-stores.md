@@ -261,7 +261,7 @@ After you upload schemas and publish content, your headless storefront reads pub
 
 For the full lifecycle (schema upload, authoring, publishing, sync), see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
 
-To retrieve published content through generic or schema-generated GraphQL fields, see [Using GraphQL API for querying CMS content](https://developers.vtex.com/docs/guides/using-the-cms-graphql-api).
+To retrieve published content through generic or schema-generated GraphQL fields, see [Using GraphQL API for querying CMS content](https://developers.vtex.com/docs/guides/using-graphql-api-for-querying-cms-content).
 
 Your storefront owns:
 
