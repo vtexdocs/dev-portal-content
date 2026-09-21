@@ -36,6 +36,8 @@ In this step, an ID is added to the document. If the document lacks an ID, **Mas
 
 Following validation, a locking mechanism is applied. This ensures that only one operation can be executed using the document's ID or alternate key, preventing data conflicts.
 
+> ℹ️ If you send too many write requests for the same document ID or alternate key, you may receive an HTTP `408 Request Timeout` or `429 Too Many Requests` response. If this happens, reduce the number of concurrent writers per key or retry with backoff.
+
 ## Step 5 - Get changed fields
 
 In this step, the system retrieves the most recent version of the document from the database and compares it with the newly saved content. If any changes are detected, the process proceeds to the next step.
