@@ -38,8 +38,8 @@ When you send translated content using the multi-language feature, the workflow 
 
 ```mermaid
 flowchart LR
-    A[1. Catalog system <br> translation ingestion] --> B[2. Indexing]
-    B --> C[3. Storefront <br> display]
+    A[1. Catalog system - Translation ingestion] --> B[2. Indexing]
+    B --> C[3. Storefront - Display]
 ```
 
 ### Step 1: Catalog system translation ingestion
