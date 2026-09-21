@@ -18,7 +18,7 @@ Because this data belongs to one specific shopper, the resolver must authenticat
 - You want to show a compact summary of the shopper's purchase history, without loading the full order list.
 - The data comes from the [Orders API](https://developers.vtex.com/docs/api-reference/orders-api), through the `/api/oms/user/orders` endpoint.
 - That endpoint returns only the orders belonging to whoever is signed in, so it requires no entity, schema, or app configuration of your own.
-- The summary is personal data, so no shopper may read another shopper's orders.
+- The summary is personal data, so no shopper can access another shopper's orders.
 
 > ⚠️ This guide covers the standard B2C flow, where the signed-in shopper is the owner of the orders. B2B and telesales sessions carry additional identity, such as an organization unit, a contract, or an operator acting on a shopper's behalf, and the endpoint's scoping in those cases is outside the scope of this guide. Check the [Orders API](https://developers.vtex.com/docs/api-reference/orders-api) reference before reusing this pattern in a B2B or telesales storefront.
 
