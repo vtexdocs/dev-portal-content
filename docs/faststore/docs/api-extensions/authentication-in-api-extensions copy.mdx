@@ -47,7 +47,7 @@ Three questions identify a resolver that needs attention:
 2. Does the resolver create, change, or delete something that belongs to someone? Saving an address, cancelling a subscription, removing a record. Nothing is disclosed, but another shopper's data is altered, and the same rule applies.
 3. Does the call authenticate with a credential that is the same on every request?
 
-> ⚠️ When the answer to question 3 is yes, along with either of the first two, the resolver needs the steps below. This holds regardless of which service it calls, and regardless of whether the credential is a VTEX app key or a token issued by an external provider.
+> ⚠️ The steps below are required whenever question 3 is yes and either question 1 or question 2 is also yes. This applies to any service the resolver calls, and to both VTEX app keys and tokens issued by external providers.
 
 ### Resolvers that need authentication
 
