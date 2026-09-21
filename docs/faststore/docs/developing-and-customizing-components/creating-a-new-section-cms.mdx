@@ -1,0 +1,18 @@
+---
+title: 'Creating a new section (CMS)'
+---
+
+> ℹ️ This guide applies to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). If your store still runs on [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), refer to [Creating a new section (Headless CMS legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-creating-a-new-section-legacy) instead.
+
+When the available FastStore native sections don't meet your business requirements, you can create a new section component and make it available for editors in the CMS.
+
+## How it works
+
+Creating a new section for the CMS involves:
+
+1. **Creating the component**: Build the React component and its `.jsonc` schema in `cms/faststore/components`.
+2. **Verifying it locally**: Run the storefront locally to confirm the component compiles without errors before syncing.
+3. **Syncing with the CMS**:Generate and upload the schema with a single `faststore cms-sync` command (or the individual [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) commands).
+4. **Adding it to a page**: In the Admin, go to **Storefront > Content**, open a page, and add the new section through the section picker.
+
+For the complete step-by-step instructions, including a working `CallToAction` example with code snippets, see [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/creating-a-new-section).

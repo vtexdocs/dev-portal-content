@@ -65,7 +65,7 @@ Configure the MCP server in the AI development tool you use.
 Make sure you have the following:
 
 - **Node.js 18 or later**: Run `node --version` to check your installed version.
-- **An MCP-compatible AI development tool**, such as [Cursor](https://www.cursor.com/), [VS Code](https://code.visualstudio.com/) with GitHub Copilot, [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview), or [Claude Desktop](https://claude.ai/download).
+- **An MCP-compatible AI development tool**, such as [Cursor](https://www.cursor.com/), [VS Code](https://code.visualstudio.com/) with GitHub Copilot, [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview), [Claude Desktop](https://claude.ai/download), or [Gemini CLI](https://google-gemini.github.io/gemini-cli/).
 
 ### Cursor
 
@@ -127,6 +127,33 @@ Alternatively, add a `.mcp.json` file at your project root:
 2. Click **Edit Config** to open `claude_desktop_config.json`.
 3. Add the following configuration:
 
+   ```json
+   {
+     "mcpServers": {
+       "vtex-developer": {
+         "command": "npx",
+         "args": ["-y", "@vtex/developer-mcp"]
+       }
+     }
+   }
+   ```
+
+4. Quit and reopen Claude Desktop.
+
+### Gemini CLI
+
+> MCP servers are supported by [Gemini CLI](https://google-gemini.github.io/gemini-cli/), not by the Gemini web app.
+
+Run the following command in your terminal:
+
+```bash
+gemini mcp add vtex-developer npx -y @vtex/developer-mcp
+```
+
+This adds the server to your project configuration (`.gemini/settings.json`). To make the server available in every project, add the `--scope user` option, which writes to `~/.gemini/settings.json` instead.
+
+Alternatively, add the server to `.gemini/settings.json` in your project root, or to `~/.gemini/settings.json` for a global configuration:
+
 ```json
 {
   "mcpServers": {
@@ -138,7 +165,7 @@ Alternatively, add a `.mcp.json` file at your project root:
 }
 ```
 
-4. Quit and reopen Claude Desktop.
+Restart Gemini CLI and run the `/mcp` command to check that the `vtex-developer` server is connected.
 
 ### Troubleshooting
 

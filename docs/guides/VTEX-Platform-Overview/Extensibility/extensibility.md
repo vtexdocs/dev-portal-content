@@ -3,7 +3,7 @@ title: "Extensibility"
 slug: "extensibility"
 hidden: false
 createdAt: "2024-07-22T10:00:00.000Z"
-updatedAt: "2024-08-20T13:00:00.000Z"
+updatedAt: "2026-08-05T20:15:00.000Z"
 excerpt: "Understand how to extend VTEX capabilities beyond what comes out of the box"
 ---
 
@@ -20,21 +20,22 @@ In this guide, we discuss VTEX’s extensibility in four areas divided into the 
 
 ## Data services
 
-[Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) is a key-document database solution that enables merchants to store, search, expand, and customize data. This solution allows custom data behaviors and creating custom applications using its API endpoints and [VTEX IO clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
+[Master Data](https://help.vtex.com/docs/tutorials/master-data) is a key-document database solution that enables merchants to store, search, expand, and customize data. This solution allows custom data behaviors and creating custom applications using its API endpoints and [VTEX IO clients](https://developers.vtex.com/docs/guides/vtex-io-documentation-clients).
 
 Master Data provides the following advantages:
 
 - **Native VTEX solution**: Start working with Master Data out of the box. There is no need to integrate an external database solution.
-- **Scalable**: Store data as needed without worrying about usage limits.
-- **No additional costs**: VTEX does not charge extra. It does not matter how much you use Master Data resources.
+- **Scalability**: Store more data as your operation grows.
 
-There are two Master Data versions available (v1 and v2). Learn more about each of their features in the [Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#versions-available) guide. By default, Master Data v1 keeps customer data from the stores.
+>⚠️ Using Master Data may generate costs. Native data entities are free, but the custom data entities you create are billed monthly in tiers based on the total number of documents stored. For pricing details, see [Master Data billing](https://help.vtex.com/docs/tutorials/master-data#billing).
+
+There are two Master Data versions available (v1 and v2). Learn more about each of their features in the [Master Data](https://help.vtex.com/docs/tutorials/master-data#available-versions) guide. By default, Master Data v1 keeps customer data from the stores.
 
 Master Data has three main concepts about data structure:
 
-- [**Data entities**](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#data-entities): The definition of the data structures in table format. Each data entity has a name and stores a data type. For instance, in Master Data v1, the CL data entity stores data from store customers.
-- [**Documents**](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#documents): The table rows, which are records of the data entity. In Master Data v1, each document represents one store customer in the CL data entity.
-- [**Fields**](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#fields): The table columns, which are the properties of the data entity. In Master Data v1, the CL data entity has the fields name, ID number, email, and phone number.
+- [**Data entities**](https://help.vtex.com/docs/tutorials/master-data#data-entities): The definition of the data structures in table format. Each data entity has a name and stores a data type. For instance, in Master Data v1, the CL data entity stores data from store customers.
+- [**Documents**](https://help.vtex.com/docs/tutorials/master-data#documents): The table rows, which are records of the data entity. In Master Data v1, each document represents one store customer in the CL data entity.
+- [**Fields**](https://help.vtex.com/docs/tutorials/master-data#fields): The table columns, which are the properties of the data entity. In Master Data v1, the CL data entity has the fields name, ID number, email, and phone number.
 
 The following sections show how Master Data extends the basic functionality of a VTEX store.
 
@@ -242,7 +243,7 @@ The table below shows the Master Data endpoints used to interact with documents:
 
 ### Triggers
 
-A [Master Data Trigger](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw#triggers) is a mechanism that performs an action after creating or updating a document if the conditions set in the configuration are met. The possible actions with triggers are:
+A [Master Data Trigger](https://help.vtex.com/docs/tutorials/master-data#triggers) is a mechanism that performs an action after creating or updating a document if the conditions set in the configuration are met. The possible actions with triggers are:
 
 - Send an HTTP request.
 - Send an email.

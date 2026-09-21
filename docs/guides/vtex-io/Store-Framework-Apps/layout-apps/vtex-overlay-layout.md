@@ -28,8 +28,8 @@ Now you can use the two blocks exported by the app:
 
 Block name | Description |
 | --------------------| -------- |
-| `overlay-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-overlay-layout-1.png) Declares a renderable children block responsible for triggering the `overlay-layout` content. |
-| `overlay-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-overlay-layout-2.png) Declares a renderable children block responsible for building the   |
+| `overlay-trigger` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-overlay-layout-1.png) Declares a renderable child block responsible for triggering the `overlay-layout` content. |
+| `overlay-layout` | ![https://img.shields.io/badge/-Mandatory-red](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-overlay-layout-2.png) Declares a renderable child block responsible for building the Overlay Layout content. |
 
 2. In any desired theme template, add the `overlay-trigger` and then declare it using a block of your choosing and the `overlay-layout`:
 
@@ -43,7 +43,7 @@ Block name | Description |
   },
 ```
 
-*Notice that the* `overlay-trigger` i*s not rendered. Following the example stated above, the* `rich-text` *block will be the one rendered and responsible for effectively triggering the Overlay Layout content (defined by the children block of* `overlay-layout`*).*
+*Notice that the* `overlay-trigger` *is not rendered. Following the example stated above, the* `rich-text` *block will be the one rendered and responsible for effectively triggering the Overlay Layout content (defined by the child block of* `overlay-layout`*).*
 
 ### `overlay-trigger` props
 
@@ -77,7 +77,7 @@ Block name | Description |
 }
 ```
 
-*The* `overlay-layout` *defines which block will be rendered in order to build the Overlay Layout content. This means that you will have to pass to it a children block to be rendered.*
+*The* `overlay-layout` *defines which block will be rendered in order to build the Overlay Layout content. This means that you will have to pass it a child block to be rendered.*
 
 ### `overlay-layout` props
 
@@ -86,7 +86,7 @@ Block name | Description |
 | `placement` | `Enum` | Defines the Overlay Layout content placement when it is triggered according to the Trigger component positioning. Possible values are: `bottom`, `left`, `right` or `top`.  If there is no page space in the placement that you choose, it will fit in a fallback position. | `bottom` |
 | `scrollBehavior` | `Enum` | Defines the Overlay Layout content behavior when users try to scroll the page. Possible values are: `lock-page-scroll` (in which users can't scroll), `close-on-scroll` (the block is closed when users start scrolling) or `default` (Scroll does not affect the Overlay Layout content). | `default` |
 | `backdrop` | `Enum` | Once the Overlay Layout content is rendered, it defines whether a backdrop overlay will be displayed (`visible`) or not (`none`). When set as `visible`, the backdrop will close Overlay Layout content when clicked on. Otherwise, the content will be closed only if any component from the page is clicked on. | `none` |
-| `showArrow`  | `Boolean` | Whether an arrow pointing to the `overlay-trigger` component should be displayed on UI(`true`) or not (`false`). | `false` |
+| `showArrow`  | `Boolean` | Whether an arrow pointing to the `overlay-trigger` component should be displayed on the UI (`true`) or not (`false`). | `false` |
 | `offsets` | `Object` | Defines the `overlay-layout` component positioning when compared to the `overlay-trigger` (unit used is `px`). For more details, check out the `offsets` object table stated below. | `{ skidding: 0, distance: 0 }` |
 
 - **`offsets` object:**
