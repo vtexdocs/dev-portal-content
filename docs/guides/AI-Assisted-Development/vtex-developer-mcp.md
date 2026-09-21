@@ -127,16 +127,16 @@ Alternatively, add a `.mcp.json` file at your project root:
 2. Click **Edit Config** to open `claude_desktop_config.json`.
 3. Add the following configuration:
 
-```json
-{
-  "mcpServers": {
-    "vtex-developer": {
-      "command": "npx",
-      "args": ["-y", "@vtex/developer-mcp"]
-    }
-  }
-}
-```
+   ```json
+   {
+     "mcpServers": {
+       "vtex-developer": {
+         "command": "npx",
+         "args": ["-y", "@vtex/developer-mcp"]
+       }
+     }
+   }
+   ```
 
 4. Quit and reopen Claude Desktop.
 
