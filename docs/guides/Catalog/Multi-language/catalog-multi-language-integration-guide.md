@@ -4,7 +4,7 @@ slug: "catalog-multi-language-integration-guide"
 hidden: false
 excerpt: "Manage multiple languages for catalog entities."
 createdAt: "2026-01-13T00:00:00.000Z"
-updatedAt: "2026-04-14T00:00:00.000Z"
+updatedAt: "2026-09-21T00:00:00.000Z"
 ---
 
 Learn how to create translations and integrate localized content for catalog entities using the multi-language feature.
@@ -115,7 +115,7 @@ For headless storefronts, you either use the [Intelligent Search API](https://de
 Query Intelligent Search with the desired locale to receive translated results:
 
 ```bash
-curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search?locale=es-ES&query=camiseta" \
+curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?locale=es-ES&query=tshirt" \
   -H "Accept: application/json"
 ```
 
