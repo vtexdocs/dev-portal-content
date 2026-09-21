@@ -66,10 +66,12 @@ extend type Query {
 
 In this file, the following is declared:
 
-- `type OrderSummary` defines a new GraphQL object type with the two fields the section needs: `totalOrders` (required, hence `Int!`) and `lastOrderDate` (optional, since a shopper with no orders has no date to report). The triple-quoted comments above each field become that field's description in your API's schema.
-- `extend type Query` adds a new root-level query, `orderSummary`, to your store's existing GraphQL schema, without modifying any query that already exists.
-- Notice that the query takes no arguments. The shopper's identity comes from the request, not from the caller, so there is no email or user ID to pass. An argument like that would let any caller ask for someone else's summary.
-- `@cacheControl(scope: "private", sMaxAge: 0)` keeps the response out of shared caches, so one shopper's summary is never served to another visitor.
+| Declaration | Description |
+| --- | --- |
+| `type OrderSummary` | Defines a new GraphQL object type with the two fields the section needs: `totalOrders` (required, hence `Int!`) and `lastOrderDate` (optional, since a shopper with no orders has no date to report). The triple-quoted comments above each field become that field's description in your API's schema. |
+| `extend type Query` | Adds a new root-level query, `orderSummary`, to your store's existing GraphQL schema without modifying any existing query. |
+| No query arguments | The shopper's identity comes from the request, not from the caller, so there is no email or user ID to pass. Such an argument would let any caller ask for someone else's summary. |
+| `@cacheControl(scope: "private", sMaxAge: 0)` | Keeps the response out of shared caches, so one shopper's summary is never served to another visitor. |
 
 ## Step 2: Creating the resolver
 
