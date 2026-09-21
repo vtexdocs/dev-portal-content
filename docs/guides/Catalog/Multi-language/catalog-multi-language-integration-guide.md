@@ -18,7 +18,7 @@ The [multi-language feature](https://developers.vtex.com/docs/api-reference/cata
 - **Multiple storefront technologies:** Consumes translations across [Store Framework](https://developers.vtex.com/docs/guides/store-framework) and [headless](https://developers.vtex.com/docs/guides/store-architecture#headless) implementations.
 - **Localized experience:** Provides customers with localized shopping experiences across multiple markets.
 
-> ℹ️ To see the complete documentation of the multi-language endpoints, see [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
+> ℹ️ To see the complete documentation of the multi-language endpoints, see [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language/-locale-).
 
 ## Use cases
 
@@ -27,7 +27,7 @@ The multi-language feature supports different integration scenarios:
 | Use case | Description |
 | :--- | :--- |
 | Multilingual storefront | Displays translated product names, descriptions, and specifications based on the customer's locale as identified by the storefront. |
-| TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview). |
+| TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api). |
 | Business expansion | Seamlessly adapts your catalog for new geographic markets without duplicating products. |
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
 | Headless commerce | Fetches translated catalog data for headless storefront applications. |
