@@ -14,7 +14,7 @@ Learn more with this [article about specifications](https://help.vtex.com/en/tra
 ## Data Model
 
 | Field | Description | Required | Format | Default |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Id | ID of Specification. This Id is used to delete/update the specification | No | Integer | AutoIncrement |
 | ProductId | ID of Product | Yes | Integer | - |
 | FieldId | Field ID | Yes | Integer | - |
