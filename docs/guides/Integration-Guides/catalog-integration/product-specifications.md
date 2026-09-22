@@ -161,7 +161,7 @@ Body:
 
 Response:
 
-```json
+```text
 Status: 200 OK 
 ```
 
