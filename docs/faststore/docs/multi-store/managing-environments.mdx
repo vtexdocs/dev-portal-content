@@ -1,0 +1,73 @@
+---
+title: "Managing environments"
+excerpt: "Give each store a testing environment that supports end-to-end validation, and map repository branches to the accounts they deploy to."
+updatedAt: "2026-09-22T16:14:09.641Z"
+---
+
+A multi-store program needs somewhere to validate changes before shoppers see them. This guide explains why a VTEX workspace alone does not provide that for tests involving backend data, how to structure testing and production environments per store, and how repository branches map to the accounts they deploy to.
+
+## Why a workspace is not a testing environment
+
+A [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) isolates app versions, which makes it suitable for validating frontend changes and app upgrades. It does not isolate commerce data. Workspaces in the same account share the [VTEX Core Services](https://developers.vtex.com/docs/guides/getting-started), so a change made through the Admin in one workspace is visible in all of them, including the live store.
+
+This has concrete consequences:
+
+- Editing the category tree in a workspace changes the production catalog immediately.
+- A promotion rule configured in a workspace is the same rule that runs in production.
+- Shipping configuration cannot be tested in isolation from the live operation.
+
+> ⚠️ Any test that depends on backend data, such as catalog, promotions, logistics, payments, or integrations, requires a separate VTEX account. Workspaces only cover frontend changes and app versions. For more details, see [Best practices on workspaces management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices).
+
+## Environments per store
+
+The recommended setup gives each store two VTEX accounts:
+
+| Environment | Purpose |
+| --- | --- |
+| Production account | Serves shopper traffic. |
+| Testing account | Mirrors production for full validation, covering both the storefront and backend data. Because it has its own Master Data, it is safe for destructive tests and test orders. |
+
+This structure is a recommendation, not a requirement. A market in an early phase, or one with a simpler operation, can start with the production account alone and add a testing account later as the program matures.
+
+When using a testing account, keep the following in mind:
+
+- **Content:** CMS content created in the testing account is for validation only. It is not copied to production automatically and has to be recreated there.
+- **Search:** Merchandising rules, synonyms, and relevance settings are configured per account, so they need to be set up again in the testing account.
+- **Apps and integrations:** Backend apps and integrations must be installed in the testing account before development starts.
+- **Edition App:** FastStore requires `vtex.edition-store@5.x` in every account, testing accounts included.
+
+## Mapping branches to accounts
+
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) connects a repository to a VTEX account and deploys on merge. Each account has its own integration, so one repository can serve every account in the program while each deploys independently.
+
+A branch model that fits this structure:
+
+| Branch | Deploys to | Behavior |
+| --- | --- | --- |
+| `feature/*` | Preview URL | WebOps generates a shareable preview deployment automatically, with no additional infrastructure. |
+| `develop` | Testing account of each store | Deploys automatically on merge, providing an environment for full frontend and backend validation. |
+| `main` | Production account of each store | Deploys automatically on merge. Protect this branch and require pull requests. |
+
+The production branch does not have to be `main`. WebOps lets you choose which branch generates production builds, and filter which branches generate previews, in the **Integrations** tab. For instructions, see [Configuring production and preview branches in WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches).
+
+> ℹ️ Keeping the testing and production accounts in sync, for catalog, shipping, and promotions, is done through the VTEX APIs rather than by copying an environment. Plan for that synchronization as part of the program's routine.
+
+## Next steps
+
+<Flex>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches"
+  title="Configuring production and preview branches in WebOps"
+  description="Choose the branch that generates production builds and filter which branches generate previews."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/developer-tools-continuous-integration"
+  title="Continuous integration for FastStore projects"
+  description="Validate every pull request before it reaches a deployment branch, and keep CMS schema synchronization manual."
+  linkTitle="See more"
+/>
+
+</Flex>
