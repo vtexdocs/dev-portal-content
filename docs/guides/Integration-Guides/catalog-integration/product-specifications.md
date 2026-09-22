@@ -136,8 +136,6 @@ To get all specification fields and values from a product, use the [Get product 
 
 To update a product specification use the [Update a product specification by product ID API endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#post-/api/catalog_system/pvt/products/-productId-/specification). It's also possible to update specification values in bulk.
 
->⚠️ Updating product specification by `fieldName` does not work.
-
 #### Example request
 
 Body:
