@@ -4,7 +4,7 @@ slug: "2026-09-15-faststore-release-notes-4-8-0"
 type: improved
 excerpt: "FastStore v4.8.0 adds cart-drawer recommendations for higher conversion, safer BFF extensions, and more reliable builds on Windows, plus stronger SEO for localized stores"
 createdAt: "2026-09-15T00:00:00.000Z"
-updatedAt: "2026-09-15T00:00:00.000Z"
+updatedAt: "2026-09-22T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
