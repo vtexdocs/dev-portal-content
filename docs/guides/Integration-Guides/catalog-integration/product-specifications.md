@@ -167,8 +167,8 @@ Status: 200 OK
 
 ### Remove product specifications
 
-To remove a specification from a product, use the [Delete product specification API endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/product/-productId-/specification/-specificationId-).
+To remove a specification from a product, use the [Delete product specification](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/product/-productId-/specification/-specificationId-) endpoint.
 
 ### Remove all specifications from a product
 
-To delete all specifications registered in a product, use the [Delete all product specification API endpoint](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/product/-productId-/specification).
+To delete all specifications registered in a product, use the [Delete all product specification](https://developers.vtex.com/docs/api-reference/catalog-api#delete-/api/catalog/pvt/product/-productId-/specification) endpoint.
