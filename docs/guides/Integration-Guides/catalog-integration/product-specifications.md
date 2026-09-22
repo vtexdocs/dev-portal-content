@@ -31,7 +31,7 @@ To create a product specification, use the API below. Remember that you must hav
 
 POST
 
-```
+```text
 https://{{accountName}}.vtexcommercestable.com.br/api/catalog/pvt/product/{{productId}}/specification
 ```
 
@@ -46,7 +46,7 @@ Body:
 
 Header:
 
-```
+```text
 Accept: application/json 
 Content-Type: application/json 
 X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}} 
@@ -55,7 +55,7 @@ X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}
 
 Response:
 
-```
+```json
 Status: 200 OK 
 ```
 
@@ -73,7 +73,7 @@ Status: 200 OK
 
 POST
 
-```
+```text
 https://{{accountName}}.vtexcommercestable.com.br/api/catalog/pvt/product/{{productId}}/specification
 ```
 
@@ -88,7 +88,7 @@ Body:
 
 Headers:
 
-```
+```text
 Accept: application/json 
 Content-Type: application/json 
 X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}} 
@@ -97,7 +97,7 @@ X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}
 
 Response:
 
-```
+```json
 Status: 200 OK 
 ```
 
