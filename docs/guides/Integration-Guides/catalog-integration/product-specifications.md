@@ -23,7 +23,7 @@ Learn more with this [article about specifications](https://help.vtex.com/en/tra
 
 ## Implementation
 
-To create a product specification, use the API below. Remember that you must have saved the ID of the field for which you want to create a specification.
+To create a product specification, use the API below. You must have previously saved the ID of the field for which you want to create a specification.
 
 > ℹ️ If the specification field is of the Combo, Radio or Checkbox type (`FieldTypeId` of 5, 6 and 7 respectively), the `FieldValueId` field is required and the `Text` field is not. For text type fields, it is not necessary to create values for the field; that is, the `FieldValueId` attribute must be `null` and the `Text` attribute must be provided with the specification value.
 
