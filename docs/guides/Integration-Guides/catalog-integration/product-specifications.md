@@ -113,7 +113,7 @@ Status: 200 OK
 
 ### Get all specifications from a product
 
-To get all specification fields and values from a product, use the [Get product specifications and their information by product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/specification). See an example response below.
+To get all specification fields and values from a product, use the [Get product specifications and their information by product ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/specification) endpoint. See an example response below:
 
 ```json
 [
