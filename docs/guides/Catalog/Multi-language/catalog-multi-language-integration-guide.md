@@ -11,14 +11,14 @@ Learn how to create translations and integrate localized content for catalog ent
 
 ## Overview
 
-The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enables the following capabilities:
+The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language/-locale-) enables the following capabilities:
 
 - **Granular content management:** Retrieves and stores translations for products, SKUs, categories, brands, specifications, collections, and services.
 - **Integrated translation workflows:** It allows automated translations via a Translation Management System (TMS).
 - **Multiple storefront technologies:** Consumes translations across [Store Framework](https://developers.vtex.com/docs/guides/store-framework) and [headless](https://developers.vtex.com/docs/guides/store-architecture#headless) implementations.
 - **Localized experience:** Provides customers with localized shopping experiences across multiple markets.
 
-> ℹ️ To see the complete documentation of the multi-language endpoints, see [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
+> ℹ️ To see the complete documentation of the multi-language endpoints, see [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language/-locale-).
 
 ## Use cases
 
@@ -27,7 +27,7 @@ The multi-language feature supports different integration scenarios:
 | Use case | Description |
 | :--- | :--- |
 | Multilingual storefront | Displays translated product names, descriptions, and specifications based on the customer's locale as identified by the storefront. |
-| TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview). |
+| TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api). |
 | Business expansion | Seamlessly adapts your catalog for new geographic markets without duplicating products. |
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
 | Headless commerce | Fetches translated catalog data for headless storefront applications. |
@@ -38,8 +38,8 @@ When you send translated content using the multi-language feature, the workflow 
 
 ```mermaid
 flowchart LR
-    A[1. Catalog system <br> translation ingestion] --> B[2. Indexing]
-    B --> C[3. Storefront <br> display]
+    A[1. Catalog system translation ingestion] --> B[2. Indexing]
+    B --> C[3. Storefront display]
 ```
 
 ### Step 1: Catalog system translation ingestion
@@ -138,7 +138,7 @@ The complete implementation for FastStore is described in the [Handling internat
 
 ## Activation
 
-Open a [ticket with Support](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they'll contact you to inform you that you can start using the feature.
+Open a ticket with [support](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they'll contact you to inform you that you can start using the feature.
 
 > ❗ The simultaneous use of both the multi-language APIs and Messages APIs (GraphQL) isn't supported for catalog entities. Therefore, once the new feature is activated, you'll no longer be able to manage translations using GraphQL.
 
@@ -224,7 +224,7 @@ See below an example of how the multi-language feature [works for a product](htt
 
 ### Retrieving translations for a product
 
-After creating translations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
+After creating translations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language/-locale-).
 
 **Method:** `GET`
 
