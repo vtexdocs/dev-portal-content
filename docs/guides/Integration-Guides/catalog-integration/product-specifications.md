@@ -55,7 +55,7 @@ X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}
 
 Response:
 
-```json
+```text
 Status: 200 OK 
 ```
 
