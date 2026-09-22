@@ -4,7 +4,9 @@ slug: "product-specifications"
 hidden: false
 createdAt: "2021-12-14T13:58:54.540Z"
 updatedAt: "2026-09-22T21:23:05.347Z"
+excerpt: "Learn how to create, update, and delete product specifications using the VTEX API."
 ---
+
 Learn more with this [article about specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP?&utm_source=autocomplete#).
 
 > ℹ️ If you wish to implement color variation in your products, we recommend you do not use specifications. Instead, see this tutorial about [How to implement product color variation](https://developers.vtex.com/docs/guides/how-to-implement-product-color-variation).
@@ -16,8 +18,8 @@ Learn more with this [article about specifications](https://help.vtex.com/en/tra
 | Id | ID of Specification. This Id is used to delete/update the specification | No | Integer | AutoIncrement |
 | ProductId | ID of Product | Yes | Integer | - |
 | FieldId | Field ID | Yes | Integer | - |
-| FieldValueId | ID of FieldValue. ONLY for `FieldTypeId`(5,6,7). | Mandatory for 5,6,7. MUST NOT be used for any other field types | Integer | null |
-| Text | Value of specification. Only for `FieldTypeId` different from (5,6,7) | Mandatory for all fields EXCEPT 5,6,7 where it MUSTN’T be used | String | null |
+| FieldValueId | ID of FieldValue. ONLY for `FieldTypeId`(5,6,7). | Mandatory for 5,6,7. Mustn't be used for any other field types. | Integer | null |
+| Text | Value of specification. Only for `FieldTypeId` different from (5,6,7) | Mandatory for all fields except 5,6,7 where it mustn't be used. | String | null |
 
 ## Implementation
 
