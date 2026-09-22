@@ -9,7 +9,7 @@ excerpt: "Learn how to create, update, and delete product specifications using t
 
 Learn more with this [article about specifications](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/2NQoBv8m4Yz3oQaLgDRagP?&utm_source=autocomplete#).
 
-> ℹ️ If you wish to implement color variation in your products, we recommend you do not use specifications. Instead, see this tutorial about [How to implement product color variation](https://developers.vtex.com/docs/guides/how-to-implement-product-color-variation).
+> ℹ️ If you wish to implement color variation in your products, we recommend you don't use specifications. Instead, see this tutorial about [How to implement product color variation](https://developers.vtex.com/docs/guides/how-to-implement-product-color-variation).
 
 ## Data Model
 
