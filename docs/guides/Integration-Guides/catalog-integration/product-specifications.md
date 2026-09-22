@@ -18,8 +18,8 @@ Learn more with this [article about specifications](https://help.vtex.com/en/tra
 | `Id` | ID of Specification. This Id is used to delete/update the specification | No | Integer | AutoIncrement |
 | `ProductId` | ID of Product | Yes | Integer | - |
 | `FieldId` | Field ID | Yes | Integer | - |
-| `FieldValueId` | ID of FieldValue. ONLY for `FieldTypeId`(5,6,7). | Mandatory for 5,6,7. Mustn't be used for any other field types. | Integer | null |
-| `Text` | Value of specification. Only for `FieldTypeId` different from (5,6,7) | Mandatory for all fields except 5,6,7 where it mustn't be used. | String | null |
+| `FieldValueId` | ID of FieldValue. ONLY for `FieldTypeId`(5,6,7). | Mandatory for 5,6,7. Must not be used for any other field types. | Integer | null |
+| `Text` | Value of specification. Only for `FieldTypeId` different from (5,6,7) | Mandatory for all fields except 5,6,7 where it must not be used. | String | null |
 
 ## Implementation
 
