@@ -6,7 +6,7 @@ createdAt: "2021-11-08T16:34:25.542Z"
 updatedAt: "2025-00-11T07:08:09.500Z"
 ---
 
->❗ Pricing Hub is no longer supported. VTEX is working on a replacement solution. Until it is available, if you need to send prices outside VTEX, use the [Audience API](https://developers.vtex.com/docs/api-reference/audience-api). See the [Pricing Hub is no longer supported](https://developers.vtex.com/docs/release-notes/2026-09-22-pricing-hub-end-of-support) release note for details.
+>❗ Pricing Hub is no longer supported. VTEX is working on a replacement solution. Until it is available, if you need to send prices outside VTEX, use the [Audience API](https://developers.vtex.com/docs/api-reference/audience-api).
 
 In B2B commerce, it is often necessary to offer personalized prices. For example, in the commercial relationship between a distributor (seller) and different supermarkets (buyers), there might be specific price deals in place for each supermarket. In this case, the distributor (seller) needs to set specific prices for each customer.
 

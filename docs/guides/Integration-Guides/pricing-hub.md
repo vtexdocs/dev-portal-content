@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2021-11-08T16:32:41.297Z"
 updatedAt: "2025-02-11T07:37:36.661Z"
 ---
->❗ Pricing Hub is no longer supported. VTEX is working on a replacement solution. Until it is available, if you need to send prices outside VTEX, use the [Audience API](https://developers.vtex.com/docs/api-reference/audience-api). See the [Pricing Hub is no longer supported](https://developers.vtex.com/docs/release-notes/2026-09-22-pricing-hub-end-of-support) release note for details.
+>❗ Pricing Hub is no longer supported. VTEX is working on a replacement solution. Until it is available, if you need to send prices outside VTEX, use the [Audience API](https://developers.vtex.com/docs/api-reference/audience-api).
 
 Pricing Hub is a system developed for the B2B context that works as an intermediary between VTEX and external pricing systems.
 
