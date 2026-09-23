@@ -13,9 +13,9 @@ In this guide, you'll learn how to install and configure **FastStore WebOps** so
 
 > ⚠️ [VTEX Sales App Extensibility](https://help.vtex.com/en/tutorial/vtex-sales-app-extensibility) is in beta, and we're working to improve it. If you have any questions, please contact [Support](https://help.vtex.com/en/support).
 
-Use this guide if your project is based on the [**FastStore monorepo**](https://developers.vtex.com/docs/guides/faststore/monorepo-overview) and includes the `sales-app` module for Sales App extensions but doesn't use the `discovery` module in production. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the storefront uses another technology stack.
+Use this guide if your project is based on the [**FastStore monorepo**](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) and includes the `sales-app` module for Sales App extensions but doesn't use the `discovery` module in production. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the storefront uses another technology stack.
 
-> ℹ️ If you already have a FastStore project that uses the `discovery` module and only need to connect it to WebOps, don't follow this guide. Instead, run `npx @vtex/fsp-cli init --from-discovery` in your project directory. Learn more in the **Setting up your monorepo** section of the [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview) guide.
+> ℹ️ If you already have a FastStore project that uses the `discovery` module and only need to connect it to WebOps, don't follow this guide. Instead, run `npx @vtex/fsp-cli init --from-discovery` in your project directory. Learn more in the **Setting up your monorepo** section of the [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) guide.
 
 ## Before you begin
 
