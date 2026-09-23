@@ -23,7 +23,7 @@ In practice, it means that Checkout UI Settings allows A/B testing in your store
 6. In the `manifest.json` file, change the predefined default value `vendor` to the name of the account in which you want to install the app.
 7. In the `checkout-ui-custom` folder, create the files in which the scripts will be included, just as you would do in the [Admin interface](https://help.vtex.com/en/docs/tutorials/configure-template-in-smartcheckout-update#configure-code). Notice that a few default files already exist in the `checkout-ui-custom` folder; you can use these files to insert the scripts.
 
-  > ⚠️ If your store uses the [VTEX Sales App](https://help.vtex.com/docs/tracks/what-is-vtex-sales-app), make sure your custom implementation doesn't overwrite the `checkout-instore-custom.js` and `checkout-instore-custom.css` files, since the **Sales App** depends on them to work correctly.
+    > ⚠️ If your store uses the [VTEX Sales App](https://help.vtex.com/docs/tracks/what-is-vtex-sales-app), make sure your custom implementation doesn't overwrite the `checkout-instore-custom.js` and `checkout-instore-custom.css` files, since the **Sales App** depends on them to work correctly.
 
 8. According to the Checkout customization you are looking for, open the most suitable file and insert the desired scripts.
 9. Save your changes. Then, [publish](https://developers.vtex.com/docs/guides/vtex-io-documentation-publishing-an-app) the app's new version.
