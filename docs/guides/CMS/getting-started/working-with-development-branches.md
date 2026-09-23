@@ -13,6 +13,8 @@ A development branch is a temporary CMS branch used for testing. Unlike a regula
 
 You point the branch to a new or updated schema, create test content against it, and see exactly how that schema behaves, without touching production content or the live schema.
 
+> ℹ️ This guide covers development branches, used by developers to test schema changes. If you're a content operator creating and publishing regular content, see [Creating and publishing content](https://developers.vtex.com/docs/guides/getting-started-with-cms#creating-and-publishing-content) instead.
+
 ```mermaid
 flowchart LR
    A["Update schema"] --> B["Sync version"]
@@ -56,7 +58,7 @@ To work with a development branch, you need to have [VTEX CLI](https://developer
     vtex content upload-schema ./cms_schema.json
     ```
 
-5. When the CLI asks which version to associate with the schema, type the full version you want to publish, using a `beta` pre-release tag to avoid affecting the current live schema, for example, `1.7.0-beta.0`.
+5. When the CLI asks which version to associate with the schema, type the full version you want to publish, using a `beta` pre-release tag to avoid affecting the current live schema, for example, `1.7.0-beta.0`. See [Schema versioning](https://developers.vtex.com/docs/guides/schema-versioning) for more details on stable vs. pre-release versions.
 
    ```bash
     ✔ Schema version to publish (e.g. 1.2.0 or 1.2.0-beta.1, not already in the registry) 1.7.0-beta.0

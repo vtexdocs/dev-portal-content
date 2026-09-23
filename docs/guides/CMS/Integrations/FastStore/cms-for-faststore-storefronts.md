@@ -50,7 +50,7 @@ Manage content through the VTEX Admin using:
 
 Organize and reuse media assets with:
 
-- **Media Gallery**: Central repository for images and video references.
+- **Media Gallery**: Central repository for images and video references. See [Media gallery](https://developers.vtex.com/docs/guides/cms-media-gallery) for details.
 - **Image formats**: PNG, JPG, JPEG, GIF, SVG, and WebP.
 - **Video embedding**: Reference videos from YouTube, Vimeo, and other services.
 
@@ -62,16 +62,27 @@ Build and manage schemas with:
 - **Modular schemas**: Individual `.jsonc` files for components and Content Types.
 - **Role-based permissions**: Granular access control for editors, reviewers, and administrators.
 
+## The CMS development and content journey
+
+Going from a schema to a live storefront involves the following: developers shape and test the content structure, and content operators create and publish the content itself. See [Getting started with CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms) to find your track and where to start.
+
 ## Next steps
 
 <Flex>
 
-<!-- <WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project#cms-integration"
-  title="FastStore integration"
-  description="Learn how to connect the CMS with FastStore"
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/getting-started-with-cms"
+  title="Getting started with CMS"
+  description="Find your track, developer or content operator, and see the full CMS journey."
   linkTitle="See more"
-/> -->
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/setting-up-your-cms-environment"
+  title="Setting up your CMS environment"
+  description="Set up your local environment and model your first Content Types, Sections, and Components."
+  linkTitle="See more"
+/>
 
 <WhatsNextCard
   linkTo="https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview"

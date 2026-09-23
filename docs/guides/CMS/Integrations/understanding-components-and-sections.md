@@ -161,6 +161,36 @@ In any storefront integration:
 
 For a deeper dive into how schemas are organized, validated, and deployed, see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
 
+## Reusing content with content referencing
+
+A Section isn't locked to a single Content Type. Once you define it, you can reference it from as many Content Type schemas as you need, without duplicating its fields or its content.
+
+For example, a `NewsletterSignup` Section defined once can power the `home`, a `landingPage`, and the `pdp` Content Types at the same time:
+
+```jsonc
+// cms/pages/cms_content_type__home.jsonc
+{
+  "$componentKey": "home",
+  "sections": [
+    { "$ref": "#/components/NewsletterSignup" }
+  ]
+}
+```
+
+```jsonc
+// cms/pages/cms_content_type__landingPage.jsonc
+{
+  "$componentKey": "landingPage",
+  "sections": [
+    { "$ref": "#/components/NewsletterSignup" }
+  ]
+}
+```
+
+Both Content Types list the same `NewsletterSignup` Section by reference (`$ref`), instead of redefining its schema.
+
+> ℹ️ In the Headless CMS (legacy), each page's content was isolated and had to be duplicated to reuse a block. The CMS lets both the schema and the content entry be referenced instead, so an update to the source content can be reused everywhere it's referenced.
+
 ## Native sections in FastStore
 
 FastStore ships with several native sections you can reuse or override before creating new ones. These examples apply specifically to FastStore projects, but the underlying concepts (page-placeable Sections composed of Components) apply to any storefront.
