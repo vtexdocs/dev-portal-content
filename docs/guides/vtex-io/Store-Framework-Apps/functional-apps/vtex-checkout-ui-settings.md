@@ -21,7 +21,7 @@ In practice, it means that Checkout UI Settings allows A/B testing in your store
 4. Select the `checkout-ui-settings` option.
 5. Open the `checkout-ui-settings` app in whichever code editor you prefer.
 6. In the `manifest.json` file, change the predefined default value `vendor` to the name of the account in which you want to install the app.
-7. In the `checkout-ui-custom` folder, create the files in which the scripts will be included, just as you would do in the [Admin interface](https://help.vtex.com/en/docs/tutorials/configure-template-in-smartcheckout-update#configure-code). Notice that a few default files already exist in the `checkout-ui-custom` folder; you can use these files to insert the scripts.
+7. In the `checkout-ui-custom` folder, create the files in which the scripts will be included, just as you would do in the [Admin interface](https://help.vtex.com/docs/tutorials/configure-template-in-smartcheckout-update#configure-code). Notice that a few default files already exist in the `checkout-ui-custom` folder; you can use these files to insert the scripts.
 
     > ⚠️ If your store uses the [VTEX Sales App](https://help.vtex.com/docs/tracks/what-is-vtex-sales-app), make sure your custom implementation doesn't overwrite the `checkout-instore-custom.js` and `checkout-instore-custom.css` files, since the **Sales App** depends on them to work correctly.
 
@@ -32,7 +32,7 @@ In practice, it means that Checkout UI Settings allows A/B testing in your store
 
 ## Behavior
 
-Once the app is deployed and installed in the account, all scripts contained in it will be automatically linked to your store and used to [build the templates](https://help.vtex.com/en/docs/tutorials/configure-template-in-smartcheckout-update#configuring-templates-from-the-code-menu) to customize your Checkout.
+Once the app is deployed and installed in the account, all scripts contained in it will be automatically linked to your store and used to [build the templates](https://help.vtex.com/docs/tutorials/configure-template-in-smartcheckout-update#configuring-templates-from-the-code-menu) to customize your Checkout.
 
 > ⚠️ Scripts used by Checkout are linked to the Checkout UI Settings version that's installed in your store. If a prior app version was already installed and you want to change the scripts linked to it, you'll need to repeat the already existing code and then publish the app's new version containing the changes you just made. Housekeeper is responsible for updating app versions in the accounts in which it is installed.
 
