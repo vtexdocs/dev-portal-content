@@ -19,7 +19,7 @@ The **[Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-re
 
 ## What needs to be done?
 
-No immediate action is required, because the deprecated endpoints keep working and no existing endpoint changed its behavior.
+No immediate action is required because the deprecated endpoints keep working, and no existing endpoint has changed its behavior.
 
 Still, we recommend that integrations that generate the fulfillment context hashes migrate to `POST /api/logistics-shipping/zones/_search`, replacing the two separate calls to the deprecated endpoints with a single call.
 
