@@ -3,7 +3,7 @@ title: "Overriding a native component in the CMS"
 hidden: false
 slug: "cms-overriding-a-native-component"
 createdAt: "2026-08-26T12:00:00.000Z"
-updatedAt: "2026-08-26T20:30:00.000Z"
+updatedAt: "2026-09-23T14:11:00.000Z"
 ---
 
 > ⚠️ This guide applies to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions `3` or `4`. For stores using Headless CMS (legacy), see the [Overriding a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component) guide.
@@ -269,16 +269,17 @@ export default {
 }
 ```
 
-### Step 4 - Generate and upload the schema
+### Step 4 - Sync the schema with the CMS
 
 1. Confirm the component compiles by running `yarn dev`.
-2. Generate the aggregated schema:
+2. Make sure you're logged in to the correct account (`vtex whoami` confirms).
+3. From the root of your FastStore project, run:
 
    ```bash
-   vtex content generate-schema cms/{storeId}/components cms/{storeId}/pages --out cms/{storeId}/schema.json
+   yarn cms-sync
    ```
 
-   If you're overriding a native component (as we are with `ProductShelf`), this prompts:
+4. Confirm the overriding:
 
    ```bash
      You are about to override default definitions for the following components:
@@ -286,23 +287,11 @@ export default {
      Are you sure? (y/N)
    ```
 
-   This is expected — answer **yes**.
+   ⚠️ This command publishes immediately to your live store. Confirm that the store ID matches `api.storeId`/`contentSource.project` in `discovery.config.js` before confirming. Uploading to the wrong store overwrites that store's schema.
 
-3. Confirm your definition landed in the generated `schema.json` under `components.ProductShelf.properties.productCardConfiguration.properties`, including both the native fields and `showPixDiscount`.
+5. Confirm your definition landed in the generated `schema.json` (under `cms/{storeId}`) in `components.ProductShelf.properties.productCardConfiguration.properties`, including both the native fields and `showPixDiscount`.
 
-   > ⚠️ Never edit `schema.json` by hand. It is generated output. If a field is missing, fix the `.jsonc` file and regenerate.
-
-4. Make sure you're logged in to the correct account (`vtex whoami` confirms), then upload:
-
-   ```bash
-   vtex content upload-schema cms/{storeId}/schema.json
-   ```
-
-   This command is interactive and asks two things, in order:
-   - **Store ID to associate** — type your CMS store ID again (matching `contentSource.project`). There's no `-s`/`--store` flag to pass this on the command line in current plugin versions; some older references show one, but check `vtex content upload-schema --help` against what you actually have installed.
-   - **Version to publish** — it looks up the latest published version for that store ID and suggests a semver bump (e.g. `1.0.0` → `1.1.0`). Accept the suggestion or type your own.
-
-   ⚠️ This command publishes immediately to your live store. Confirm that the store ID matches `api.storeId`/`contentSource.project` in `discovery.config.js` before running it; uploading to the wrong store overwrites that store's schema.
+   > ⚠️ Never edit `schema.json` by hand. It is generated output. If a field is missing, fix the `.jsonc` file and run `yarn cms-sync` again.
 
 ### Step 5 - Verify in the CMS
 
