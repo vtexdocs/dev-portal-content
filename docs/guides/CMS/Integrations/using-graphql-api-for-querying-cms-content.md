@@ -18,6 +18,7 @@ The GraphQL API lets storefronts and other integrations retrieve content publish
 
 Send GraphQL queries as `POST` requests to:
 
+```sh
 https://api.vtexcommercestable.com.br/api/content-platform/graphql/{account}/{storeId}
 ```
 
@@ -30,7 +31,7 @@ Replace the path parameters as follows:
 
 If you don't know the store ID, list the stores in the account:
 
-```http
+```sh
 GET https://api.vtexcommercestable.com.br/api/content-platform/manage/{account}/stores
 Authorization: Bearer {token}
 ```
@@ -41,7 +42,7 @@ Use the `id` field from the response as the `storeId`.
 
 Every request requires a bearer token in the `Authorization` header:
 
-```http
+```sh
 Authorization: Bearer {token}
 ```
 
@@ -165,13 +166,13 @@ The `entries` result contains:
 
 To query fields generated from a registered JSON Schema, send the `X-Content-Schema` header:
 
-```http
+```sh
 X-Content-Schema: {account}.{name}[@version]
 ```
 
 For example:
 
-```http
+```sh
 X-Content-Schema: vtex.faststore
 ```
 
@@ -277,14 +278,14 @@ The field used for sorting doesn't need to be included in the selection set.
 
 GraphQL introspection is disabled. To inspect the available fields, append `/schema.graphql` to the tenant URL and send a `GET` request:
 
-```http
+```sh
 GET https://api.vtexcommercestable.com.br/api/content-platform/graphql/{account}/{storeId}/schema.graphql
 Authorization: Bearer {token}
 ```
 
 Without a schema selection, this endpoint returns the generic schema. To retrieve a typed schema, use the `schema` query parameter:
 
-```http
+```sh
 GET https://api.vtexcommercestable.com.br/api/content-platform/graphql/{account}/{storeId}/schema.graphql?schema=vtex.faststore@4.0.1
 Authorization: Bearer {token}
 ```
