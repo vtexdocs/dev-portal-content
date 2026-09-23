@@ -4,6 +4,7 @@ slug: "vtex-checkout-ui-settings"
 hidden: false
 createdAt: "2020-06-03T15:19:09.589Z"
 updatedAt: "2022-05-20T00:24:43.708Z"
+excerpt: "Customize Checkout UI through scripts."
 ---
 
 The Checkout UI Settings app allows you to customize your store's Checkout UI through the terminal and the [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install).
