@@ -23,7 +23,7 @@ No immediate action is required, because the deprecated endpoints keep working a
 
 Still, we recommend that integrations that generate the fulfillment context hashes migrate to `POST /api/logistics-shipping/zones/_search`, replacing the two separate calls to the deprecated endpoints with a single call.
 
-Because the hashes expire after 30 minutes, we also recommend calling this endpoint as close as possible to the moment the hashes are used, and handling the expired hash scenario by requesting new ones. There is no penalty or side effect in regenerating them.
+Because the hashes expire after 30 minutes, we also recommend calling this endpoint as close as possible to the moment the hashes are used, and handling the expired hash scenario by requesting new ones. There is no penalty or side effect of regenerating them.
 
 ## Learn more
 
