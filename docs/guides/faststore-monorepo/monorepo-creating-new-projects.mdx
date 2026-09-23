@@ -115,4 +115,4 @@ yarn fsp dev brand-store-1 --proxy-port 4000
 
 This is useful when port `3000` is already in use, or when you need to run more than one store at the same time, since each one needs its own port. The flag applies to all storefront modules.
 
-> ⚠️ If your monorepo includes the [Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility) module, the `checkoutUrl` value in the Product Discovery Experience configuration points to this port. Update it whenever you change the port. See [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
+> ⚠️ If your monorepo includes the [Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility) module, the `checkoutUrl` value in the Product Discovery Experience configuration points to the port the store is served on (`3000` by default, or the one set with `--proxy-port`). Update `checkoutUrl` whenever you change this port. For more information, see [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
