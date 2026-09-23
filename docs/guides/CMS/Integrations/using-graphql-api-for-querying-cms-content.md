@@ -18,7 +18,6 @@ The GraphQL API lets storefronts and other integrations retrieve content publish
 
 Send GraphQL queries as `POST` requests to:
 
-```text
 https://api.vtexcommercestable.com.br/api/content-platform/graphql/{account}/{storeId}
 ```
 
