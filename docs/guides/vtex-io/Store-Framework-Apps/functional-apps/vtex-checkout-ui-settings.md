@@ -3,7 +3,7 @@ title: "Checkout UI Settings"
 slug: "vtex-checkout-ui-settings"
 hidden: false
 createdAt: "2020-06-03T15:19:09.589Z"
-updatedAt: "2022-05-20T00:24:43.708Z"
+updatedAt: "2026-09-23T00:24:43.708Z"
 excerpt: "Customize Checkout UI through scripts."
 ---
 
