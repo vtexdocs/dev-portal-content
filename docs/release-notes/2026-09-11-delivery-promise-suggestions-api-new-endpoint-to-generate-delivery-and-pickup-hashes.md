@@ -4,10 +4,10 @@ slug: "2026-09-11-delivery-promise-suggestions-api-new-endpoint-to-generate-deli
 hidden: false
 type: "added"
 createdAt: "2026-09-11T12:00:00.000Z"
-excerpt: "The Delivery Promise Suggestions API now offers the Search delivery zones and pickup points endpoint, which returns both the deliveryZonesHash and the pickupPointsHash in a single response. The two previous hash generation endpoints are now deprecated."
+excerpt: "The Delivery Promise Suggestions API now offers the Get delivery zones and pickup points hashes endpoint, which returns both the deliveryZonesHash and the pickupPointsHash in a single response. The two previous hash generation endpoints are now deprecated."
 ---
 
-The **[Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api)** now offers a new operation, [Search delivery zones and pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/zones/_search) (`POST /api/logistics-shipping/zones/_search`), documented in the API Reference. It returns the delivery zones and the pickup points available for a given location, along with both hashes that represent the shopper's fulfillment context.
+The **[Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api)** now offers a new operation, [Get delivery zones and pickup points hashes](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/zones/_search) (`POST /api/logistics-shipping/zones/_search`), documented in the API Reference. It returns the delivery zones and the pickup points available for a given location, along with both hashes that represent the shopper's fulfillment context.
 
 ## What has changed?
 
@@ -28,5 +28,5 @@ Because the hashes expire after 30 minutes, we also recommend calling this endpo
 ## Learn more
 
 - [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) reference.
-- [Search delivery zones and pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/zones/_search) in the API Reference.
+- [Get delivery zones and pickup points hashes](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/zones/_search) in the API Reference.
 - [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) reference.
