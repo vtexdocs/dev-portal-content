@@ -3,6 +3,7 @@ title: "Migrating from Store Framework to FastStore"
 slug: "migrating-store-framework-to-faststore"
 excerpt: "Migrate your storefront from Store Framework to FastStore, validate it end-to-end, and gradually move traffic before going live."
 createdAt: "2026-07-22T00:00:00.000Z"
+updatedAt: "2026-09-22T16:14:09.641Z"
 ---
 
 In this guide, you'll learn how to migrate your storefront from [Store Framework](https://developers.vtex.com/docs/guides/store-framework) to [FastStore](https://developers.vtex.com/docs/guides/faststore). This includes preparing both storefronts to run in parallel, validating the new storefront with real traffic, and completing the cutover.
@@ -185,6 +186,19 @@ Once you've completed the previous steps, open a ticket with [VTEX Support](http
 When the split is enabled, we recommend starting with 0% of traffic routed to FastStore and 100% kept on Store Framework for final validations on the production domain. After confirming that routing, analytics, and critical flows are working as expected, gradually increase the FastStore share. This gradual rollout allows you to slowly redirect users from the old store to the new one, run A/B tests with your analytics or testing tools, monitor performance, and ensure stability before going fully live on FastStore.
 
 Once you've validated the FastStore storefront, make it your live store and retire the Store Framework storefront.
+
+#### Using absolute URLs in storefront links
+
+While the split is active, both storefronts answer on the same production domain, and the routing decision happens at the CDN layer, before the request reaches either application. FastStore is a single-page application, so a link written with a relative URL, such as `/`, is resolved by the client-side router within the FastStore application and produces no navigation for the CDN to route.
+
+> ⚠️ Any link meant to leave the FastStore application must use an absolute URL, including protocol and domain, so the browser performs a full navigation and the split rules are applied. A relative URL keeps the shopper inside FastStore and can lead to a page that only exists in the Store Framework storefront.
+
+Review these links in particular, as they're the most common sources of relative URLs:
+
+- The logo in the header, which usually points to the home page.
+- Main navigation and menu links.
+- Footer links to category and institutional pages.
+- Links added through CMS content or third-party tools.
 
 #### Managing storefront versions during the split
 
