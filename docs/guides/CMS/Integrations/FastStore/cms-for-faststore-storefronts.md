@@ -71,7 +71,7 @@ Content branches stay synchronized with the main branch through:
 
 For details on this behavior, see [Collaboration workflows](https://help.vtex.com/docs/tutorials/collaboration-workflows).
 
-### Multi-account content
+## Multi-account content
 
 Content management scales across several VTEX accounts through:
 
