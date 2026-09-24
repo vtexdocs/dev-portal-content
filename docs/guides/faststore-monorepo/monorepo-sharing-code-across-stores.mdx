@@ -1,0 +1,109 @@
+---
+title: "Sharing code across stores"
+slug: "monorepo-sharing-code-across-stores"
+excerpt: "Organize a shared component library in a FastStore monorepo so that improvements reach every store from a single pull request."
+createdAt: "2026-09-22T00:00:00.000Z"
+updatedAt: "2026-09-22T16:14:09.641Z"
+---
+
+The [Multiple brands or stores sharing code](https://developers.vtex.com/docs/guides/monorepo-use-cases#multiple-brands-or-stores-sharing-code) use case shows how several stores can live in one [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) and import shared code from a common directory. This guide covers how to organize that shared code so it stays maintainable as the number of stores grows.
+
+The approach described here is a recommended practice rather than a platform requirement. The monorepo supports other layouts, and the structure below can be adapted to the needs of your team.
+
+## The shared package
+
+The recommendation is to keep shared code in a single package, commonly named `core`, that every store imports as a dependency. This package is not a FastStore project: it has no `discovery.config.js`, it is not declared in `faststore.json`, and FastStore WebOps never deploys it. It is a plain Node package that the store projects consume.
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages
+│   ├── 📂 core
+│   │   ├── 📂 components
+│   │   ├── 📂 sections
+│   │   ├── 📂 tokens
+│   │   └── 📄 package.json
+│   ├── 📂 store1
+│   └── 📂 store2
+├── 📄 faststore.json
+├── 📄 package.json
+│
+```
+
+| Directory | Holds |
+| --- | --- |
+| `components` | React components shared by every store. |
+| `sections` | Base section implementations and their schemas for the CMS. |
+| `tokens` | Design token definitions that stores extend with their own brand values. |
+
+Only the store directories appear in `faststore.json`, since only they are deployable projects:
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3001
+      }
+    },
+    "account2": {
+      "discovery": {
+        "path": "packages/store2",
+        "port": 3002
+      }
+    }
+  }
+}
+```
+
+### Exports and versioning
+
+Two practices keep the shared package stable as it grows:
+
+- **Export explicitly.** Declare the components each store is meant to consume, rather than letting stores reach into internal file paths. This keeps the package's public surface visible and makes it safe to refactor anything that is not exported.
+- **Version the package.** Treat a change to shared code as a release, with a version bump and a changelog entry. Stores then depend on a known version, and a store can stay on the previous one while it adapts to a breaking change. See [Continuous integration for FastStore projects](https://developers.vtex.com/docs/guides/faststore/developer-tools-continuous-integration) for automating this.
+
+The result is that improving a shared component takes one pull request, and the change reaches every store without copying files or publishing to an external registry.
+
+## Customization layers
+
+With shared code in place, every piece of the interface sits in one of four layers. Knowing which layer a change belongs to is what keeps stores consistent without blocking local teams.
+
+| Layer | What it contains | Who maintains it |
+| --- | --- | --- |
+| FastStore core | Native components from `@faststore/core`. Never modified directly. | VTEX |
+| Shared package | Components, base sections, and tokens in `packages/core`, valid for every store. | Central team |
+| Store overrides | Props, styles, or component overrides inside a store's own directory. | Store team |
+| Store-exclusive sections | Sections built for one store's specific need or campaign. | Store team |
+
+Each layer is more specific than the one above it, and a change should be made at the highest layer that solves the problem. A fix that belongs in the shared package but is applied as a store override has to be repeated in every other store, which is how stores drift apart.
+
+For the mechanics of overriding native components and their props, see [Developing and customizing FastStore components](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-overview).
+
+## Design tokens
+
+FastStore themes are built on CSS variables such as `--fs-color-primary-bkg`, described in [Global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview). In a multi-store monorepo, keeping the token definitions in the shared package and letting each store supply only the values that differ avoids maintaining a full set of token files per brand.
+
+Where the number of brands makes editing those files by hand impractical, teams commonly generate the stylesheets from structured token definitions as a build step, so that onboarding a new brand means supplying a set of values rather than authoring a new theme.
+
+## Next steps
+
+<Flex>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/monorepo-use-cases"
+  title="Monorepo use cases"
+  description="Compare repository layouts for single accounts, multiple stores, and multiple storefront modules."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/multi-store-overview"
+  title="Multi-store architecture"
+  description="Plan the account, environment, and content decisions behind a program that runs several storefronts."
+  linkTitle="See more"
+/>
+
+</Flex>
