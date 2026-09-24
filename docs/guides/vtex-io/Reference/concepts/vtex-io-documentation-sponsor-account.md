@@ -23,7 +23,7 @@ The image below exemplifies the hierarchy among VTEX accounts.
 At the top of this hierarchy is the `vtex` account, which assumes the role of a Sponsor Account for all other accounts on the VTEX platform. This is because the `vtex` account is responsible for the development and release of the two native Edition Apps that all others derive from:
 
 - Edition Business (`vtex.edition-business@0.x`): Installs all the necessary apps to build a store with [Legacy CMS Portal](https://help.vtex.com/tutorial/o-que-e-o-cms--EmO8u2WBj2W4MUQCS8262).
-- Edition Store (`vtex.edition-store@5.x`): Installs all the necessary apps to develop a store with the [Store Framework.](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework)
+- Edition Store (`vtex.edition-store@5.x`): Installs all the necessary apps to develop a store with the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework).
 
 ### Secondary Sponsor Accounts
 
