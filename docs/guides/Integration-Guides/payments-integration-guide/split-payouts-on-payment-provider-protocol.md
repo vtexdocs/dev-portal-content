@@ -9,7 +9,7 @@ updatedAt: "2026-08-26T00:00:00.000Z"
 
 Split payouts are a common requirement for payment providers used by marketplaces. They allow a marketplace to process the payment for an order, collect its commission, and pay sellers for their products in a single transaction, which improves operational efficiency when managing payouts at scale.
 
-The VTEX platform allows merchants to register sellers, configure commission percentages for the total order and freight values, and set specific commissions by seller category. For more information, see [Adding a seller](https://help.vtex.com/en/docs/tutorials/adding-a-seller).
+The VTEX platform allows merchants to register sellers, configure commission percentages for the total order and shipping rates, and set specific commissions by seller category. For more information, see [Adding a seller](https://help.vtex.com/en/docs/tutorials/adding-a-seller).
 
 This guide describes how the VTEX Gateway calculates the split and what changes in each [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol) request when split payouts are active.
 
@@ -20,7 +20,7 @@ Check the following requirements:
 - Your connector must be integrated through the [Payment Provider Protocol](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-protocol).
 - The manifest returned by the [Get manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint must declare the `allowsSplit` property for every payment method, using `disabled` for methods that don't support split payouts.
 - To support partial refunds in split transactions, the `acceptSplitPartialRefund` parameter must be enabled for your connector. Request this during the [payment provider homologation](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation) process.
-- The merchant must have sellers and commission percentages registered in the marketplace, as described in [Adding a seller](https://help.vtex.com/en/docs/tutorials/adding-a-seller).
+- The merchant must have sellers and commission percentages configured in the marketplace, as described in [Adding a seller](https://help.vtex.com/en/docs/tutorials/adding-a-seller).
 
 ## Cart scenarios
 
@@ -42,11 +42,11 @@ When a split payout is required, the VTEX Gateway is responsible for:
 
 ### Commission calculation example
 
-Consider an order of 199.62 with the following registered commissions: 16% for the marketplace when the product comes from seller X, and 20% for the marketplace when the product comes from seller Y. The cart contains products from seller X, seller Y, and the marketplace itself.
+Consider an order of 199.62 USD with the following registered commissions: 16% for the marketplace when the product comes from seller X, and 20% for the marketplace when the product comes from seller Y. The cart contains products from seller X, seller Y, and the marketplace itself.
 
 The VTEX Gateway calculates the following breakdown:
 
-| Item | Seller | Item value | Marketplace commission | Amount sent to recipient |
+| Item | Seller | Item amount | Marketplace commission | Amount sent to recipient |
 | ---- | ------ | ---------- | ---------------------- | ------------------------ |
 | SellerX product | `sellerX` | 87.12 | 13.94 | 73.18 |
 | SellerY product | `sellerY` | 42.60 | 8.52 | 34.08 |
@@ -58,7 +58,7 @@ The marketplace receives the value of its own products plus the commission colle
 
 You can configure the following characteristics of the split process:
 
-- **Automatic settlement time:** The payment provider controls whether the automatic settlement occurs before or after the anti-fraud analysis, through the `delayToAutoSettle` and `delayToAutoSettleAfterAntifraud` fields of the authorization response.
+- **Automatic settlement time:** The payment provider controls whether automatic settlement occurs before or after the anti-fraud analysis via the `delayToAutoSettle` and `delayToAutoSettleAfterAntifraud` fields in the authorization response.
 - **Split payload sending time:** Set per payment method through the `allowsSplit` property of each item in the `paymentMethods` array of the manifest.
 
 The `allowsSplit` property accepts the following values:
@@ -69,7 +69,7 @@ The `allowsSplit` property accepts the following values:
 | `onCapture` | The VTEX Gateway sends the `recipients` array in the settlement request. Capture and settlement refer to the same step. |
 | `disabled` | The VTEX Gateway doesn't send the `recipients` array for this payment method. |
 
-The `allowsSplit` property is required for every payment method in the manifest. Do not omit it: use `disabled` for payment methods that don't support split payouts. The split payload is sent at the stage specified by the declared value.
+The `allowsSplit` property is required for every payment method in the manifest. Don't omit it: use `disabled` for payment methods that don't support split payouts. The split payload is sent at the stage specified by the declared value.
 
 ## The recipients array
 
@@ -81,7 +81,7 @@ The recipient object contains the following fields:
 | ----- | ---- | -------- | ----------- |
 | `id` | String | Yes | Recipient identifier. |
 | `name` | String | Yes | Recipient name. |
-| `documentType` | String | Yes | Recipient document type, such as `CNPJ`. |
+| `documentType` | String | Yes | Recipient document type, such as the Brazilian `CNPJ`. |
 | `document` | String | Yes | Recipient document number. |
 | `role` | String | Yes | Indicates whether the recipient is the `seller` or the `marketplace`. |
 | `chargeProcessingFee` | Boolean | No | Indicates whether this recipient is charged for processing fees. |
@@ -124,7 +124,7 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments' \
       "year": "2029"
     }
   },
-  "currency": "BRL",
+  "currency": "USD",
   "installments": 1,
   "deviceFingerprint": "12ade389087fe",
   "miniCart": {
@@ -132,30 +132,30 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments' \
       "id": "3287c060-2e43-4dc7-b730-4b8d2a9bd114",
       "firstName": "Mary",
       "lastName": "Rose",
-      "document": "11112222333",
-      "documentType": "cpf",
+      "document": "987654321",
+      "documentType": "SSN",
       "email": "mary.rose@example.com",
-      "phone": "+5521978888888"
+      "phone": "+12125550143"
     },
     "shippingAddress": {
-      "country": "BRA",
-      "street": "Praia de Botafogo",
-      "number": "300",
-      "complement": "3rd Floor",
-      "neighborhood": "Botafogo",
-      "postalCode": "22250040",
-      "city": "Rio de Janeiro",
-      "state": "RJ"
+      "country": "USA",
+      "street": "Main Street",
+      "number": "123",
+      "complement": "Apt 3B",
+      "neighborhood": null,
+      "postalCode": "10001",
+      "city": "New York",
+      "state": "NY"
     },
     "billingAddress": {
-      "country": "BRA",
-      "street": "Brigadeiro Faria Lima Avenue",
+      "country": "USA",
+      "street": "Market Street",
       "number": "4440",
-      "complement": "10th Floor",
-      "neighborhood": "Itaim Bibi",
-      "postalCode": "04538132",
-      "city": "Rio de Janeiro",
-      "state": "RJ"
+      "complement": "Suite 1000",
+      "neighborhood": null,
+      "postalCode": "94105",
+      "city": "San Francisco",
+      "state": "CA"
     },
     "items": [
       {
@@ -196,8 +196,8 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments' \
     {
       "id": "mystore",
       "name": "Company XPTO",
-      "documentType": "CNPJ",
-      "document": "01239313000160",
+      "documentType": "EIN",
+      "document": "012345678",
       "role": "marketplace",
       "chargeProcessingFee": true,
       "chargebackLiable": true,
@@ -206,8 +206,8 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments' \
     {
       "id": "sellerX",
       "name": "Company X",
-      "documentType": "CNPJ",
-      "document": "88888888000173",
+      "documentType": "EIN",
+      "document": "888888888",
       "role": "seller",
       "chargeProcessingFee": false,
       "chargebackLiable": false,
@@ -217,8 +217,8 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments' \
     {
       "id": "sellerY",
       "name": "Company Y",
-      "documentType": "CNPJ",
-      "document": "99999999000126",
+      "documentType": "EIN",
+      "document": "999999990",
       "role": "seller",
       "chargeProcessingFee": false,
       "chargebackLiable": false,
@@ -235,7 +235,7 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments' \
 
 When `allowsSplit` is `onCapture` for the payment method, the VTEX Gateway sends the list of recipients involved in the transaction in the settlement request.
 
-Consider a cart made up of products from seller A, with an order value of 45.00 and a registered commission of 16% for the marketplace. The VTEX Gateway sends 7.2 to the marketplace and 37.8 to seller A:
+Consider a cart consisting of products from seller A, with an order value of 45.00 and a marketplace commission rate of 16%. The VTEX Gateway sends 7.2 to the marketplace and 37.8 to seller A:
 
 ```sh
 curl --location --request POST 'https://{providerApiEndpoint}/payments/{paymentId}/settlements' \
@@ -299,13 +299,13 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments/{paymentI
 
 ### Partial refund
 
-> ⚠️ To use the split partial refund functionality, request the Partner Support team to enable the `acceptSplitPartialRefund` parameter as `true` during the payment provider homologation process.
+> ⚠️ To use the split partial refund feature, request the Partner Support team to enable the `acceptSplitPartialRefund` parameter as `true` during the payment provider homologation process.
 
 The `recipients` array contains the recipients affected by the refund: each seller whose items are refunded and the marketplace, with the commission share it returns. When the refund applies only to marketplace items, the array contains only the marketplace data.
 
 #### Partial refund of a seller item
 
-Consider a cart made up of items from seller A, with a registered commission of 16% for the marketplace, where 20.00 must be refunded. The VTEX Gateway sends 3.2 for the marketplace and 16.8 for seller A:
+Consider a cart composed of items from seller A, with a marketplace commission of 16%, for which 20.00 must be refunded. The VTEX Gateway sends 3.2 for the marketplace and 16.8 for seller A:
 
 ```sh
 curl --location --request POST 'https://{providerApiEndpoint}/payments/{paymentId}/refunds' \
@@ -343,7 +343,7 @@ curl --location --request POST 'https://{providerApiEndpoint}/payments/{paymentI
 
 #### Partial refund of a marketplace item
 
-When 20.00 must be refunded for a marketplace item, the VTEX Gateway sends a single recipient object with the marketplace data:
+When 20.00 USD must be refunded for a marketplace item, the VTEX Gateway sends a single recipient object with the marketplace data:
 
 ```sh
 curl --location --request POST 'https://{providerApiEndpoint}/payments/{paymentId}/refunds' \
@@ -419,7 +419,7 @@ A successful refund also returns the status code `200 OK`:
 
 ## Error handling
 
-Report failures through the status code and the `code` and `message` fields of the response, so that the VTEX Gateway can register the result of the operation:
+Report failures through the status code and the `code` and `message` fields of the response, so that the VTEX Gateway can record the result of the operation:
 
 | Status code | When to use it | Response fields |
 | ----------- | -------------- | --------------- |
