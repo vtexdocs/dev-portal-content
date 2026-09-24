@@ -68,6 +68,18 @@ Example:
     - Associated locale: en-US
     > ⚠️ Changes to bindings only take effect after the next store build. Also, even if a binding is configured with multiple locales, FastStore only considers the default locale.
 
+> ⚠️ If your bindings are configured using the `myvtex.com` domain (common in test accounts), the locale switcher won't work as expected. See [Testing with myvtex.com bindings](#testing-with-myvtexcom-bindings) for more information.
+
+#### Testing with `myvtex.com` bindings
+
+Some accounts, mostly test ones, configure bindings using the `myvtex.com` domain, for example, `myvtex.com/es`, `myvtex.com/en-us`, or `myvtex.com/brasil`.
+
+Accessing the store directly through `store.vtex.app/{locale-code}` (for example, `store.vtex.app/es` or `store.vtex.app/pt-BR`) works, and the content is correctly localized in FastStore. However, only the locale code itself works this way (such as `en-US`, `es-AR`, or `pt-BR`) — custom paths like `store.vtex.app/en` or `store.vtex.app/fr` don't work while the binding uses `myvtex.com`.
+
+The locale switcher, however, won't work as expected with this type of binding: changing the language in the header redirects the user to the `myvtex.com` domain instead of the `vtex.app` one.
+
+To successfully test the locale switcher, configure a real domain for your bindings instead of `myvtex.com`. When using a real domain, custom paths (such as `/en` or `/fr`) work normally.
+
 ### Step 3 - Enable the `localization` flag in `discovery.config.js`
 
 To enable the localization feature, add the `localization` flag to the `[discovery.config.js](http://discovery.config.js)` file.
