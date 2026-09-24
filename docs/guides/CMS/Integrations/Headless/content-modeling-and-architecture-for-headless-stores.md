@@ -3,7 +3,7 @@ title: "Content modeling and architecture for headless stores"
 hidden: false
 slug: "content-modeling-and-architecture-for-headless-stores"
 createdAt: "2026-07-01T12:00:00.000Z"
-updatedAt: "2026-07-01T12:00:00.000Z"
+updatedAt: "2026-09-14T18:00:00.000Z"
 excerpt: "Learn how to model and consume CMS content in headless storefronts: JSON Schema structure, Content Types, components, and Data Plane API consumption patterns."
 ---
 
@@ -260,6 +260,8 @@ Invalid data is rejected when saving, before the content is published.
 After you upload schemas and publish content, your headless storefront reads published entries from the Data Plane API. The schema you defined shapes the JSON your app receives: field names, section structure, and `componentKey` values.
 
 For the full lifecycle (schema upload, authoring, publishing, sync), see [Understanding CMS architecture and schema declarations](https://developers.vtex.com/docs/guides/understanding-cms-architecture-and-schema-declarations).
+
+To retrieve published content through generic or schema-generated GraphQL fields, see [Using GraphQL API for querying CMS content](https://developers.vtex.com/docs/guides/using-graphql-api-for-querying-cms-content).
 
 Your storefront owns:
 
