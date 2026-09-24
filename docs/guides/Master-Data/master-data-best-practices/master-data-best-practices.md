@@ -6,6 +6,7 @@ hidden: false
 createdAt: "2022-07-05T19:11:40.758Z"
 updatedAt: "2022-07-05T20:08:04.515Z"
 ---
+
 Below, you can check some guides to help you get started with Master Data.
 
 ## Manage documents
@@ -17,6 +18,8 @@ See Master Data v2 endpoints for managing documents:
 - `PUT` - [Update entire document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/documents/-id-) 
 - `PATCH` - [Update partial document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#patch-/api/dataentities/-dataEntityName-/documents/-id-)
 - `DELETE` - [Delete document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)
+
+> ℹ️ To delete documents in bulk, see [Bulk deleting documents in Master Data](/docs/guides/bulk-deleting-documents-in-master-data).
 
 ## Customize data entities
 
