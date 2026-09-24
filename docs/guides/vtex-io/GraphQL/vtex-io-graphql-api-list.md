@@ -11,7 +11,6 @@ updatedAt: "2025-09-11T17:50:00.000Z"
 |-|-|
 |[B2B Organizations GraphQL API](https://github.com/vtex-apps/b2b-organizations-graphql/blob/master/graphql/schema.graphql)|Manages B2B users into organizations. Users in the same organization share the same commercial conditions such as specific payment methods, price tables, and product collections. This is part of the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite).|
 |[B2B Quotes GraphQL API](https://developers.vtex.com/docs/apps/vtex.b2b-quotes-graphql/b2bquotes-graphql-api)|Manages quotes in a B2B environment. This is part of the [B2B Suite](https://developers.vtex.com/docs/apps/vtex.b2b-suite).|
-|[External Marketplace Integration GraphQL API](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-graphql-api)|Defines the requirements for integrating an [external marketplace](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide) into VTEX.|
 |[Messages GraphQL API](https://developers.vtex.com/docs/apps/vtex.messages/messages-graphql-api)|Manages the internationalization of messages in different store contexts.|
 |[Rewriter GraphQL API](https://developers.vtex.com/docs/apps/vtex.rewriter/rewriter-graphql-api)|Manages internal URLs and URL redirects.|
 |[Search GraphQL API](https://developers.vtex.com/docs/apps/vtex.search-graphql)|Makes catalog searches in VTEX stores.|

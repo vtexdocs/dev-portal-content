@@ -3,7 +3,7 @@ title: "B2B Buyer Portal integration overview"
 slug: "b2b-buyer-portal-integration-overview"
 hidden: false
 createdAt: "2026-03-13T00:00:00.000Z"
-updatedAt: "2026-06-08T00:00:00.000Z"
+updatedAt: "2026-09-23T00:00:00.000Z"
 excerpt: "Explore the integration capabilities of B2B Buyer Portal, including contracts, organization management, payment cards, addresses, Budgets, Buying policies, Accounting fields, and Punchout."
 ---
 
@@ -17,6 +17,7 @@ This guide provides an overview of the integration capabilities available in B2B
 
 - [Architecture overview](#architecture-overview)
 - [Contracts](#contracts)
+  - [Prospect review](#prospect-review)
 - [Organization management](#organization-management)
   - [Organizational Units and scopes](#organizational-units-and-scopes)
   - [User provisioning](#user-provisioning)
@@ -50,9 +51,26 @@ B2B Buyer Portal integrations are built around the following core concepts:
 | :--- | :--- |
 | Agreement alignment | Define organization-wide conditions: assortment, pricing, and payment rules—that organizational units inherit. |
 | Contract lifecycle | Create, update, and manage buyer contracts and keep commercial conditions aligned with negotiated agreements. |
+| Prospect review | Review buyer organizations registered as prospects and approve or reject them before they start buying. |
 
 Use the [B2B Contracts API](https://developers.vtex.com/docs/api-reference/b2b-contracts-api) to
 create, update, and manage contracts and their corresponding commercial conditions.
+
+### Prospect review
+
+A **prospect** is a buyer organization that has registered but is not yet cleared to buy. Registration is integrator-driven: VTEX exposes no prospect-registration endpoint, so you assemble the prospect by calling core platform APIs directly. A prospect is a contract whose `prospectWorkflow` field is set to `PENDING`, held inactive until it is reviewed.
+
+Once the prospect exists, you move it between `PENDING`, `APPROVED`, and `REJECTED` by updating that field on the contract. Approval is a state change, not provisioning: the organizational unit, the address, and the user must already exist before a prospect can be approved. A direct write does not refuse an ineligible approval, so confirm those entities first. The VTEX Admin review interface will not approve while those entities are missing.
+
+| Capability | Description |
+| :--- | :--- |
+| Prospect state | Track whether a contract is `PENDING`, `APPROVED`, or `REJECTED` review. |
+| Eligibility | Confirm before approval that the prospect has an associated organizational unit and an active address. |
+| Review lifecycle | Approve and reject prospects as the onboarding review progresses. |
+
+Use the [B2B Contracts API](https://developers.vtex.com/docs/api-reference/b2b-contracts-api) to create a prospect and to move it through review.
+
+> ℹ️ For the full integration flow, see [Managing B2B prospects](https://developers.vtex.com/docs/guides/b2b-prospect-management).
 
 ## Organization management
 
