@@ -13,8 +13,8 @@ Not every resolver requires authentication. A resolver that only derives a value
 
 The authentication flow depends on the service being called:
 
-- For VTEX APIs, the resolver forwards the shopper's authentication cookie so that the API can authorize the request.
-- For third-party services, the resolver verifies the shopper's session and uses an identifier from that session to retrieve the correct data.
+- **For VTEX APIs**: The resolver forwards the shopper's authentication cookie so that the API can authorize the request.
+- **For third-party services**: The resolver verifies the shopper's session and uses an identifier from that session to retrieve the correct data.
 
 In both cases, the resolver must not trust identifiers provided by the client, such as an email address or user ID, because they can be modified.
 
@@ -47,7 +47,7 @@ Three questions identify a resolver that needs attention:
 2. Does the resolver create, change, or delete something that belongs to someone? Saving an address, cancelling a subscription, removing a record. Nothing is disclosed, but another shopper's data is altered, and the same rule applies.
 3. Does the call authenticate with a credential that is the same on every request?
 
-> ⚠️ When the answer to question 3 is yes, along with either of the first two, the resolver needs the steps below. This holds regardless of which service it calls, and regardless of whether the credential is a VTEX app key or a token issued by an external provider.
+> ⚠️ The steps below are required whenever question 3 is yes and either question 1 or question 2 is also yes. This applies to any service the resolver calls, and to both VTEX app keys and tokens issued by external providers.
 
 ### Resolvers that need authentication
 
@@ -107,38 +107,23 @@ Follow the sections below instead.
 
 ## Step 2: Require authentication in the resolver
 
-The FastStore API marks its own private fields with the `@auth` directive, which validates the shopper's token before the resolver runs. That directive is applied to the platform schema, so do not assume it will be enforced on a field you declare. Write the check in your resolver:
+The FastStore API marks its own private fields with the `@auth` directive, which validates the shopper's token before the resolver runs. That directive is applied to the platform schema, so do not assume it will be enforced on a field you declare. Call the check yourself, as the first statement in the resolver:
 
-```ts src/graphql/vtex/utils/auth.ts
-import { UnauthorizedError } from '@faststore/api'
+```ts src/graphql/vtex/resolvers/orderSummary.ts
+import { validateUserAuthentication } from '@faststore/api'
 
-/**
- * Throws unless the incoming request carries a valid shopper token.
- * Call this first in every resolver that reads or writes personal data.
- */
-export const requireAuthenticatedUser = async (ctx: any) => {
-  try {
-    const validation = await ctx.clients.commerce.vtexid.validate()
+orderSummary: async (_: never, __: never, ctx: any) => {
+  await validateUserAuthentication(ctx)
 
-    if (validation?.authStatus?.toLowerCase() !== 'success') {
-      throw new UnauthorizedError('Authentication required')
-    }
-  } catch (error) {
-    if (error instanceof UnauthorizedError) {
-      throw error
-    }
-
-    // For a missing or expired token, VTEX ID answers 401 and the client
-    // throws instead of resolving. Without this catch, the caller would get
-    // a 500 rather than a 401.
-    throw new UnauthorizedError('Authentication required')
-  }
+  // The rest of the resolver only runs for an authenticated shopper.
 }
 ```
 
-The `try`/`catch` is not optional. For a missing or expired token, VTEX ID answers `401` and the client throws rather than resolving with an unsuccessful status, so the check above would never run and the caller would receive a `500`.
+`validateUserAuthentication` is exported by `@faststore/api` from version 4.8.0. It calls the VTEX ID client, throws `UnauthorizedError` when the token is missing, expired, or invalid, and `ForbiddenError` when the token is valid but the shopper may not access the resource. The GraphQL route converts both into the corresponding HTTP statuses. Throwing is preferable to returning `null`, which the storefront cannot distinguish from an empty result.
 
-`@faststore/api` exports `UnauthorizedError` and `ForbiddenError`, which the GraphQL route converts into the corresponding HTTP statuses. Throwing them is preferable to returning `null`, which the storefront cannot distinguish from an empty result.
+> ⚠️ Values read from the session are not a substitute for this call. The session is a separate artifact with its own lifetime, so a resolver that authorizes on session values alone can keep granting access after the shopper's token is no longer valid.
+
+> ℹ️ `validateUserAuthentication` requires `@faststore/core` 4.8.0 or later. See [Updating your `@faststore/core` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-core-package-version).
 
 ## Step 3: Take identity from the session
 
@@ -154,7 +139,7 @@ extend type Query {
 
 ```ts src/graphql/vtex/resolvers/profile.ts
 customerProfile: async (_, { email }, ctx) => {
-  await requireAuthenticatedUser(ctx)
+  await validateUserAuthentication(ctx)
 
   return fetchProfileByEmail(email) // The caller chooses whose data to read.
 }
@@ -171,7 +156,7 @@ extend type Query {
 
 ```ts src/graphql/vtex/resolvers/profile.ts
 customerProfile: async (_, __, ctx) => {
-  await requireAuthenticatedUser(ctx)
+  await validateUserAuthentication(ctx)
 
   const session = await ctx.clients.commerce.session('')
   const userId = session.namespaces?.authentication?.storeUserId?.value
@@ -219,17 +204,15 @@ const response = await fetch(
 
 `/api/oms/user/orders` returns only the orders belonging to whoever is signed in. Sending an `appKey` and `appToken` pair instead would authenticate the request as the store, and the endpoint would no longer be scoped to one person.
 
-Forwarding the whole `cookie` header is the simplest form and the one the platform itself uses. When an endpoint needs the token on its own, read it with a parser rather than by splitting the string:
+Forwarding the whole `cookie` header is the simplest form and the one the platform itself uses. When an endpoint needs the token on its own, read it with `getAuthCookie`, exported by `@faststore/api` from version 4.8.0:
 
 ```ts
-import { parse } from 'cookie'
+import { getAuthCookie } from '@faststore/api'
 
-const token = parse(ctx.headers?.cookie ?? '')[
-  `VtexIdclientAutCookie_${ctx.account}`
-]
+const token = getAuthCookie(ctx.headers?.cookie ?? '', ctx.account)
 ```
 
-> ℹ️ Use a parser such as the `cookie` package rather than `split('=')[1]`. Token values can contain `=`, and truncating one causes a silent `401` response.
+> ℹ️ `getAuthCookie` normalizes duplicated cookie keys and reads the value without splitting the string, which avoids truncating a token that contains `=`.
 
 Writes follow the same rule as reads. Resolve the record's identifier within the same request, from the session or from a scoped read. An identifier accepted as an argument returns control over which record is written to the caller.
 
@@ -239,9 +222,11 @@ Writes follow the same rule as reads. Resolve the record's identifier within the
 
 An external system, such as an ERP, a CRM, or a loyalty provider, knows nothing about the VTEX cookie, so there is nothing to forward. The integration credential stays on the server, and the shopper's identifier comes from the session:
 
+> ⚠️ Never forward the shopper's cookie, or any VTEX cookie, to a host outside VTEX. `VtexIdclientAutCookie_{account}` is a bearer credential for that shopper on your account: whoever holds it can act as that person until it expires. Sending it to a third-party domain hands over the shopper's session, and it reaches that provider's logs and proxies along the way. Forward the cookie only to VTEX endpoints.
+
 ```ts src/graphql/thirdParty/resolvers/loyalty.ts
 loyaltyBalance: async (_: never, __: never, ctx: any) => {
-  await requireAuthenticatedUser(ctx)
+  await validateUserAuthentication(ctx)
 
   const session = await ctx.clients.commerce.session('')
   const shopperId = session.namespaces?.authentication?.storeUserId?.value
@@ -329,7 +314,7 @@ Before deploying a custom resolver that handles shopper data, confirm the follow
 <details>
 <summary>The resolver checks authentication before any other logic.</summary>
 
-Call `requireAuthenticatedUser` (or an equivalent check) as the first line of the resolver, before any data is read or written.
+Call `validateUserAuthentication` as the first line of the resolver, before any data is read or written.
 
 </details>
 
@@ -346,6 +331,14 @@ An identifier accepted as a query or mutation argument lets the caller choose wh
 <summary>Session reads use `authentication.storeUserId`, not `profile.id`, and an empty value throws instead of continuing.</summary>
 
 `profile.id` can hold a value for a visitor who was identified without signing in. Use `authentication.storeUserId`, and throw `UnauthorizedError` when it is empty rather than letting the lookup continue with no filter.
+
+</details>
+
+<CheckboxField label="No VTEX cookie leaves VTEX" id="checkboxfield-cookie-scope" />
+<details>
+<summary>The shopper's cookie is forwarded only to VTEX endpoints.</summary>
+
+`VtexIdclientAutCookie_{account}` is a bearer credential for that shopper on your account. Sending it to a host outside VTEX hands over the shopper's session and exposes it to that provider's logs and proxies.
 
 </details>
 
