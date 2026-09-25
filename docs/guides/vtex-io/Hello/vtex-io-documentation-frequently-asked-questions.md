@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-frequently-asked-questions"
 hidden: false
 createdAt: "2020-06-03T16:02:44.268Z"
 updatedAt: "2026-09-25T17:13:00.000Z"
+excerpt: "Get answers for common questions about VTEX IO and Store Framework, including development options, access, costs, and support."
 ---
 
 This FAQ provides detailed information on VTEX IO and the VTEX IO Store Framework, covering their usage, access requirements, cost, and support options.
