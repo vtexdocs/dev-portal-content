@@ -66,4 +66,4 @@ As an open-source project, Store Framework also benefits from a community-driven
 
 To start building with Store Framework, check out our [Getting Started guide](https://developers.vtex.com/docs/guides/getting-started-3).
 
-> ℹ️ Need additional assistance? If you have questions not covered here, feel free to [contact VTEX Support](https://help.vtex.com/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM) for further help.
+> ℹ️ Need additional assistance? If you have questions not covered here, feel free to [contact VTEX Support](https://help.vtex.com/pt/docs/tutorials/opening-tickets-to-vtex-support) for further help.
