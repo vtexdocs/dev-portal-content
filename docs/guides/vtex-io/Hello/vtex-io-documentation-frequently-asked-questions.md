@@ -19,7 +19,7 @@ VTEX IO enables you to build:
 - **Admin apps:** Extend your store's admin capabilities with additional applications.
 - **Backend apps:** Create backend services for integration with Storefront or Admin apps using Node or .NET Core.
 - **Pixel apps:** Develop pixel apps to gather user data for integration with third-party services.
-- **Edition apps:** Bundle of settings, policies, backend and frontend apps encapsulated and exported by a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
+- **Edition apps:** A bundle of settings, policies, backend and frontend apps encapsulated and exported by a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
 
 ### Who can use VTEX IO?
 
