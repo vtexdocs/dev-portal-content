@@ -7,8 +7,8 @@ updatedAt: "2022-02-03T13:21:17.263Z"
 ---
 Although in our [marketplace / seller architecture](https://developers.vtex.com/docs/guides/external-marketplace-integration-architecture) payments are usually processed by the marketplace, this can also be done by the seller. This decision of where to process payments depends on the commercial conditions they have negotiated with the payment provider.  Therefore, there are two possibilities for processing payments:
 
-- **Marketplace processing payments:** no development is needed from the seller.
-- **External seller processing payments:** seller should follow the instructions below.
+- **Marketplace processing payments:** The seller doesn't configure a Gateway to process the customer's payment. If you issue invoices, read `paymentData` on the seller order, as described in [Marketplace payment data on seller orders](https://developers.vtex.com/docs/guides/marketplace-payment-data-on-seller-orders).
+- **External seller processing payments:** Follow the instructions in this guide.
 
 ## Split Payments
 

@@ -59,6 +59,12 @@ The articles listed below present the characteristics and mode of operation of o
 | [Managing VTEX gift cards](https://developers.vtex.com/docs/guides/managing-vtex-gift-cards)                             | How to create, update, and manage native VTEX gift cards via API.                   |
 | [Configuring an external gift card provider](https://developers.vtex.com/docs/guides/configuring-an-external-gift-card-provider) | How to register an external gift card provider and implement the integration flows used by VTEX Gift Card Hub. |
 
+### Marketplace
+
+| Article                                                                                                                       | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Marketplace payment data on seller orders](https://developers.vtex.com/docs/guides/marketplace-payment-data-on-seller-orders) | How seller orders receive native `paymentData` for invoicing when the marketplace processes the payment. |
+
 ### Operations & Configuration
 
 | Article                                                                                                                           | Description                                                                        |
