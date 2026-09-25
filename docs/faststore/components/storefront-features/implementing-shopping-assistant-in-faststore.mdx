@@ -101,3 +101,30 @@ The `Shopping Assistant` section is available on all store pages. It should be a
 ![enable-hcms](https://vtexhelp.vtexassets.com/assets/docs/src/shopping-assistant-hcms___1224dded8d2b7de941e7c00aef1e204f.gif)
 
 </details>
+
+### (Optional) Step 4 - Add the script to the storefront
+
+If you want to load Shopping Assistant directly in the storefront code, you can add it [as a third-party script](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts).
+
+1. Open your FastStore project.
+2. Create or open the `src/scripts/ThirdPartyScripts.tsx` file, where you can also keep other third-party scripts. See [Adding third-party scripts](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-third-party-scripts) for details.
+3. Add the script to the component:
+
+    ```tsx
+    import Script from 'next/script'
+
+    const ThirdPartyScripts = () => {
+      return (
+        <Script
+          src="https://cdn.cloud.weni.ai/agentic-cx.js"
+          strategy="afterInteractive"
+        />
+      )
+    }
+
+    export default ThirdPartyScripts
+    ```
+
+FastStore loads this file on every page.
+
+> ℹ️ You can also add the plain HTML tag `<script src="https://cdn.cloud.weni.ai/agentic-cx.js" async></script>` inside a component that is rendered globally. Both approaches load the script asynchronously.
