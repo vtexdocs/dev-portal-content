@@ -1,22 +1,16 @@
 ---
-title: "Overriding a native component in the CMS"
-hidden: false
-slug: "cms-overriding-a-native-component"
-createdAt: "2026-08-26T12:00:00.000Z"
-updatedAt: "2026-09-23T14:11:00.000Z"
+title: 'Overriding a native component in the CMS'
 ---
 
-> ⚠️ This guide applies to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions `3` or `4`. For stores using Headless CMS (legacy), see the [Overriding a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component) guide.
+> ⚠️ This guide applies to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions `3` or `4`. For stores using Headless CMS (legacy), see [Overriding a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component).
 
 FastStore includes native component sections such as `ProductShelf`, `ProductDetails`, and `Breadcrumb`. When a native component already meets most of your store's needs, you can override it to keep its existing data fetching and behavior while changing only the parts you need.
 
-In this guide, you'll override the native `ProductShelf` component to display a Pix discount message on its product cards. You'll also make this message configurable in the CMS, while keeping the native carousel unchanged.
+In this guide, you'll override the native `ProductShelf` component to display a Pix discount message on its product cards. You'll also make this message configurable in the CMS while keeping the native carousel unchanged.
 
 ![product-shelf-with-pix-discount](https://vtexhelp.vtexassets.com/assets/docs/src/override-component-3___06a05f31d4a330b60b57d046ba75f47b.png)
 
-> ℹ️ If you need to create a section that doesn't have a native FastStore counterpart, see the [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/creating-a-new-section) guide.
-
----
+> ℹ️ If you need to create a section that doesn't have a native FastStore counterpart, see [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms).
 
 ## Before you begin
 
@@ -132,7 +126,7 @@ export default ProductShelf
 
 ### Step 2 - Declare the CMS schema
 
-Run `vtex content init` if you haven't already. It prompts for a store ID (default shown is `faststore` — **type your actual CMS store ID instead**, matching `contentSource.project` in `discovery.config.js`) and scaffolds:
+Run `vtex content init` if you haven't already. It prompts for a store ID (the default shown is `faststore`; type your actual CMS store ID instead, matching `contentSource.project` in `discovery.config.js`) and scaffolds:
 
 ```sh
 cms/{storeId}/
@@ -142,9 +136,9 @@ cms/{storeId}/
     └── cms_content_type__landingPage.jsonc.example
 ```
 
-These `.jsonc.example` files are placeholder templates, not live schemas,  `generate-schema` ignores them. Create your own `.jsonc` file (no `.example` suffix) instead.
+These `.jsonc.example` files are placeholder templates, not live schemas. `generate-schema` ignores them. Create your own `.jsonc` file without the `.example` suffix instead.
 
-In `cms/{storeId}/components`, create `cms_component__productshelf.jsonc`. Declare **every native field** of `ProductShelf`, then append your custom field:
+In `cms/{storeId}/components`, create `cms_component__productshelf.jsonc`. Declare every native field of `ProductShelf`, then append your custom field:
 
 ```jsonc cms/{storeId}/components/cms_component__productshelf.jsonc
 {
@@ -207,7 +201,7 @@ In `cms/{storeId}/components`, create `cms_component__productshelf.jsonc`. Decla
           },
           "value": {
             "title": "Value",
-            "description": "The ID of the VTEX Collection to pull products from. Verify it exists and has products under Catalog > Collections before using it here — see the troubleshooting note below.",
+            "description": "The ID of the VTEX Collection to pull products from. Verify it exists and has products under Catalog > Collections before using it here.",
             "type": "string",
             "default": "140"
           }
@@ -218,17 +212,32 @@ In `cms/{storeId}/components`, create `cms_component__productshelf.jsonc`. Decla
       "title": "Taxes Configuration",
       "type": "object",
       "properties": {
-        "usePriceWithTaxes": { "title": "Should use taxes to calculate the price?", "type": "boolean", "default": false },
-        "taxesLabel": { "title": "Tax label to be displayed", "type": "string", "default": "Tax included" }
+        "usePriceWithTaxes": {
+          "title": "Should use taxes to calculate the price?",
+          "type": "boolean",
+          "default": false
+        },
+        "taxesLabel": {
+          "title": "Tax label to be displayed",
+          "type": "string",
+          "default": "Tax included"
+        }
       }
     },
     "productCardConfiguration": {
       "title": "Product Card Configuration",
       "type": "object",
       "properties": {
-        "showDiscountBadge": { "title": "Show discount badge?", "type": "boolean", "default": true },
-        "bordered": { "title": "Cards should be bordered?", "type": "boolean", "default": true },
-
+        "showDiscountBadge": {
+          "title": "Show discount badge?",
+          "type": "boolean",
+          "default": true
+        },
+        "bordered": {
+          "title": "Cards should be bordered?",
+          "type": "boolean",
+          "default": true
+        },
         "showPixDiscount": {
           "title": "Show Pix discount?",
           "description": "Displays a \"% off paying with Pix\" message below the product card, using the same discount already applied to the product.",
@@ -259,7 +268,7 @@ export default {
 
 > ⚠️ `src/components/index.tsx` must use a default export only. Named exports are not picked up.
 
-The object key is what connects your code to the CMS definition, and must match the `$componentKey` exactly. When your component name differs from the native section name, map it explicitly:
+The object key connects your code to the CMS definition and must match the `$componentKey` exactly. When your component name differs from the native section name, map it explicitly:
 
 ```tsx
 import CustomProductDetails from './sections/CustomProductDetails'
@@ -279,28 +288,28 @@ export default {
    yarn cms-sync
    ```
 
-4. Confirm the overriding:
+4. Confirm the override:
 
-   ```bash
-     You are about to override default definitions for the following components:
-     ProductShelf
-     Are you sure? (y/N)
+   ```text
+   You are about to override default definitions for the following components:
+   ProductShelf
+   Are you sure? (y/N)
    ```
 
-   ⚠️ This command publishes immediately to your live store. Confirm that the store ID matches `api.storeId`/`contentSource.project` in `discovery.config.js` before confirming. Uploading to the wrong store overwrites that store's schema.
+   > ⚠️ This command publishes immediately to your live store. Confirm that the store ID matches `api.storeId` or `contentSource.project` in `discovery.config.js` before confirming. Uploading to the wrong store overwrites that store's schema.
 
-5. Confirm your definition landed in the generated `schema.json` (under `cms/{storeId}`) in `components.ProductShelf.properties.productCardConfiguration.properties`, including both the native fields and `showPixDiscount`.
+5. Confirm your definition is present in the generated `schema.json` under `cms/{storeId}`, in `components.ProductShelf.properties.productCardConfiguration.properties`, including both the native fields and `showPixDiscount`.
 
    > ⚠️ Never edit `schema.json` by hand. It is generated output. If a field is missing, fix the `.jsonc` file and run `yarn cms-sync` again.
 
 ### Step 5 - Verify in the CMS
 
-1. In the Admin, open **Storefront > Content > All content** and select the entry that uses the section, such as **Home**.
-2. Open the **Product Shelf** section and confirm that both the native fields and your new **"Show Pix discount?"** field appear under **Product Card Configuration**.
-3. Toggle it on and **Save** (and publish/promote, if your CMS uses a draft/live branch split).
+1. In the Admin, go to **Storefront > Content > All content** and select the entry that uses the section, such as **Home**.
+2. Open the **Product Shelf** section and confirm that both the native fields and your new **Show Pix discount?** field appear under **Product Card Configuration**.
+3. Enable it and click **Save**. Publish or promote the change if your CMS uses separate draft and live branches.
 
-    ![show-pix-toogle](https://vtexhelp.vtexassets.com/assets/docs/src/show-pix-toogle___579842a11b21c9cca0df58a587a7d2b4.gif)
+   ![show-pix-toggle](https://vtexhelp.vtexassets.com/assets/docs/src/show-pix-toogle___579842a11b21c9cca0df58a587a7d2b4.gif)
 
-4. With the dev server still running, reload the page. CMS content changes take effect on the next request in local dev — no server restart needed for content, only for code changes (see Step 5.1).
+4. With the development server still running, reload the page. CMS content changes take effect on the next request in local development. You only need to restart the server after code changes.
 
-> ℹ️ Uploading a schema registers the definition so it appears in the editor. It does not place the section on a page or guarantee that section has products to show.
+> ℹ️ Uploading a schema registers the definition so it appears in the editor. It doesn't place the section on a page or guarantee that the section has products to show.
