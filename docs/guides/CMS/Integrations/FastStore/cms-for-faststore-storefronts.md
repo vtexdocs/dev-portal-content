@@ -83,12 +83,19 @@ Content management scales across several VTEX accounts through:
 
 <Flex>
 
-<!-- <WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project#cms-integration"
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/getting-started-with-cms"
   title="FastStore integration"
   description="Learn how to connect the CMS with FastStore"
   linkTitle="See more"
-/> -->
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/customizing-faststore-storefronts-with-cms"
+  title="Customizing FastStore storefronts with the CMS"
+  description="Choose how to edit native sections, override FastStore components, create sections, and change content models."
+  linkTitle="See more"
+/>
 
 <WhatsNextCard
   linkTo="https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview"
