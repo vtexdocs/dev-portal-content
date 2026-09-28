@@ -1,0 +1,46 @@
+---
+title: 'Developing and customizing FastStore components'
+---
+
+FastStore offers the ability to extend and customize your store components in the following ways:
+
+## Content customization via CMS
+
+Change the behavior of specific components by changing their props through the Admin, instead of overriding them in code. The steps depend on which CMS your store uses.
+
+### CMS
+
+In the VTEX Admin, go to **Storefront > Content**, open the page where the component is located, and edit its props directly in the section editor. For more details on how content and component schemas work, see [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) and [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections).
+
+### Headless CMS (legacy)
+
+In the VTEX Admin, go to **Storefront > Headless CMS** and select the section where the desired component is located.
+From there, you can customize the component by modifying its props. Find the available props in each native section for customization in the Headless CMS in [list of available native sections](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-list-of-native-sections).
+
+  > ⚠️ The props changed via Headless CMS (legacy) overlap the changes made through [override](https://developers.vtex.com/docs/guides/faststore/overrides-overview). For example, if you change a prop through override and also change it using Headless CMS (legacy), the final prop's value will be the one added using the CMS.
+
+## Theming customization
+
+Change the store theme and component styling using theming and design tokens. For detailed instructions on customizing through these methods, refer to the [Store Theme](https://developers.vtex.com/docs/guides/faststore/themes-overview) and [Styling a Component](https://developers.vtex.com/docs/guides/faststore/using-themes-components) documentation.
+
+## Components and sections customization
+
+You have the following customization options for components and sections:
+
+| Type of customization | CMS compatibility | Description |
+| ---------------------- | ------------------ | ----------- |
+| [Create a new section (CMS)](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms) | CMS | If the available FastStore native sections do not meet your business requirements, you can create a new section and make it available in the CMS. |
+| [Create a new section (Headless CMS legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-creating-a-new-section-legacy) | Headless CMS (legacy) | Equivalent flow for stores still on Headless CMS (legacy). |
+| [Override native component's props](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) | Headless CMS (legacy) | Modify the behavior of a specific component by passing additional props to it in your store code. |
+| [Override a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component) | Headless CMS (legacy) | Create a new component and override its native equivalent to achieve the desired functionality. |
+
+> ℹ️ Code-based overrides (props override and native component override) are currently documented only for stores on Headless CMS (legacy). If your store uses the CMS, customize component props directly through the Admin, as described in [Content customization via CMS](#content-customization-via-cms) above.
+
+## Manage Analytics
+
+The [`__experimentalProductCard`](https://developers.vtex.com/docs/guides/faststore/molecules-product-card) and [`SearchInput`](https://developers.vtex.com/docs/guides/faststore/organisms-search-input) components are FastStore components that need to be customized carefully, since they can affect the triggering of events and impact your [Intelligent Search Analytics](https://help.vtex.com/en/tutorial/analytics--6qRMAHDL9hvv3oE0bh8mA1) store report.
+To understand how these components can affect store analytics while customizing them, refer to the [List of native sections and overridable components](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-list-of-native-sections).
+
+## API extension
+
+Add new data to existing queries on the FastStore API by extending it. Refer to the [API extension guide](https://developers.vtex.com/docs/guides/faststore/api-extensions-overview) for more information.

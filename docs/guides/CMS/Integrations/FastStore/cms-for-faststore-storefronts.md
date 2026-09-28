@@ -3,7 +3,7 @@ title: "CMS for FastStore storefronts"
 hidden: false
 slug: "cms-for-faststore-storefronts"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-03-26T11:48:00.813Z"
+updatedAt: "2026-09-22T16:14:09.641Z"
 ---
 
 > ⚠️ For documentation about Headless CMS (legacy) used with FastStore versions earlier than `3`, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
@@ -61,6 +61,23 @@ Build and manage schemas with:
 - [**Content plugin**](https://developers.vtex.com/docs/guides/content-plugin): Commands for schema generation, splitting, and uploading (`@vtex/cli-plugin-content`).
 - **Modular schemas**: Individual `.jsonc` files for components and Content Types.
 - **Role-based permissions**: Granular access control for editors, reviewers, and administrators.
+
+### Branch synchronization
+
+Content branches stay synchronized with the main branch through:
+
+- **Automatic updates**: While an editor works in a branch, new content published to the main branch is merged into that branch automatically, so editors continue from the current state of the store instead of an outdated copy.
+- **Conflict resolution**: When the same content was changed in both the branch and the main branch, the version in the branch is preserved.
+
+For details on this behavior, see [Collaboration workflows](https://help.vtex.com/docs/tutorials/collaboration-workflows).
+
+## Multi-account content
+
+Content management scales across several VTEX accounts through:
+
+- **Content isolation**: Each VTEX account has its own CMS instance, so content is isolated between accounts by default. An editor working in one account can't view or change content in another, and each market's team can manage its own content independently, without any additional configuration.
+- **Shared schema structure**: Schemas live in the storefront repository and must be published separately to each account's CMS. Publishing the same schema to every account keeps components consistent across stores. See [Continuous integration for FastStore projects](https://developers.vtex.com/docs/guides/faststore/developer-tools-continuous-integration).
+- **No content sharing**: Pages and media that should appear identically in every market aren't copied between accounts automatically and have to be recreated in each one.
 
 ## Next steps
 

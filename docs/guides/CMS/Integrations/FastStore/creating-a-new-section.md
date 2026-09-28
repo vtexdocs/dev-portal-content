@@ -6,7 +6,7 @@ createdAt: "2026-02-19T12:50:00.813Z"
 updatedAt: "2026-04-30T11:48:00.813Z"  
 ---
 
-> ⚠️ This guide applies only to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions 3 or 4. For stores using Headless CMS (legacy), please refer to [this guide](https://developers.vtex.com/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section).
+> ⚠️ This guide applies only to stores using the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) with FastStore versions 3 or 4. For stores using Headless CMS (legacy), please refer to [this guide](https://developers.vtex.com/docs/guides/faststore/headless-cms-creating-a-new-section-legacy).
 
 When your store requires a layout or behavior not natively available, you can create a new section component tailored to your brand or business rules. A section component gives you full control over the structure and content while integrating with the CMS.
 
@@ -109,22 +109,6 @@ In this guide, you'll learn how to create a new **CallToAction** section in your
    }  
    ```
 
-7. Generate the final schema to add the new section. To do this, run the following command in a terminal:
-
-    ```bash
-    vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json
-    ```
-
-8. Open the `schema.json` file and check if the section was added to the section list. It should look similar to this:
-
-    ```json
-    …  
-    {  
-        "$ref": "#/components/CallToAction"  
-    }  
-    …  
-    ```
-
 ### Step 2 - Verify the component locally
 
 Before syncing your changes with the CMS, run the storefront locally to confirm your new component compiles without errors. This catches typos, missing imports, and invalid schemas before you sync with the CMS.
@@ -143,15 +127,43 @@ If the development server starts successfully and reports no compilation errors,
 
 ### Step 3 - Sync the changes with the CMS
 
-Push the changes to sync with the CMS. Before doing it, make sure you're logged in to your VTEX account by running in the terminal the `vtex login {accountName}` command. Change the `{accountName}` to your store account, for example, `vtex login mystore`.
+Before syncing, make sure you're logged in to your VTEX account by running in the terminal the `vtex login {accountName}` command. Change the `{accountName}` to your store account, for example, `vtex login mystore`.
 
-Push the schema generated to the CMS to reflect in the Admin. To do this, run the following command:
+From the root of your FastStore project, run:
 
 ```shell
-vtex content upload-schema -s faststore cms/faststore/schema.json
+vtex faststore cms-sync
 ```
 
-> ℹ️ The `-s {storeId}` parameter (in this case, `faststore`) specifies the store ID directly, so you won't be prompted to enter it when running the command.
+This single command detects your store's content source, generates the schema from your `cms/faststore/components` and `cms/faststore/pages` folders, and uploads it to the CMS — prompting you to confirm the store ID and the schema version before publishing.
+
+> ℹ️ Available from FastStore `v4.4.0`. Stores on earlier versions must upgrade first. See [Local setup and development](https://developers.vtex.com/docs/guides/local-development-and-setup) for details on the version prompt and best practices for choosing a version number.
+
+#### Syncing manually
+
+If you prefer to run each step separately, for example, to preview the generated schema before uploading, or to automate the upload in a CI/CD pipeline, use the individual [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) commands instead:
+
+1. Generate the schema:
+
+   ```shell
+   vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json
+   ```
+
+2. Open the `schema.json` file and check if the section was added to the section list. It should look similar to this:
+
+   ```json
+   …
+   {
+       "$ref": "#/components/CallToAction"
+   }
+   …
+   ```
+
+3. Upload the schema:
+
+   ```shell
+   vtex content upload-schema cms/faststore/schema.json
+   ```
 
 ### Step 4 - Add the component to the CMS
 
