@@ -91,7 +91,7 @@ Content management scales across several VTEX accounts through:
 />
 
 <WhatsNextCard
-  linkTo="/docs/guides/customizing-faststore-storefronts-with-cms"
+  linkTo="/docs/guides/customizing-faststore-with-cms"
   title="Customizing FastStore storefronts with the CMS"
   description="Choose how to edit native sections, override FastStore components, create sections, and change content models."
   linkTitle="See more"
