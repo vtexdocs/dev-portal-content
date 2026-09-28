@@ -12,6 +12,8 @@ Change the behavior of specific components by changing their props through the A
 
 In the VTEX Admin, go to **Storefront > Content**, open the page where the component is located, and edit its props directly in the section editor. For more details on how content and component schemas work, see [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) and [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections).
 
+To choose between editing content, overriding a native component, creating a section, changing the content model, and styling a component, see [Customizing FastStore storefronts with the CMS](https://developers.vtex.com/docs/guides/customizing-faststore-storefronts-with-cms).
+
 ### Headless CMS (legacy)
 
 In the VTEX Admin, go to **Storefront > Headless CMS** and select the section where the desired component is located.
@@ -30,11 +32,12 @@ You have the following customization options for components and sections:
 | Type of customization | CMS compatibility | Description |
 | ---------------------- | ------------------ | ----------- |
 | [Create a new section (CMS)](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms) | CMS | If the available FastStore native sections do not meet your business requirements, you can create a new section and make it available in the CMS. |
+| [Override a native component (CMS)](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-overriding-a-native-component-cms) | CMS | Keep a native section's data fetching and behavior while changing one of its overridable components and exposing new properties to editors. |
 | [Create a new section (Headless CMS legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-creating-a-new-section-legacy) | Headless CMS (legacy) | Equivalent flow for stores still on Headless CMS (legacy). |
 | [Override native component's props](https://developers.vtex.com/docs/guides/faststore/overrides-component-props) | Headless CMS (legacy) | Modify the behavior of a specific component by passing additional props to it in your store code. |
 | [Override a native component](https://developers.vtex.com/docs/guides/faststore/overrides-native-component) | Headless CMS (legacy) | Create a new component and override its native equivalent to achieve the desired functionality. |
 
-> ℹ️ Code-based overrides (props override and native component override) are currently documented only for stores on Headless CMS (legacy). If your store uses the CMS, customize component props directly through the Admin, as described in [Content customization via CMS](#content-customization-via-cms) above.
+> ℹ️ If your store uses the CMS, edit the fields already exposed by a native section directly in the Admin. Use a code-based override when you need to change how a native component renders or expose a new property.
 
 ## Manage Analytics
 

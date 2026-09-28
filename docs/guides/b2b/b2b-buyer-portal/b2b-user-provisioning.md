@@ -4,7 +4,7 @@ slug: "b2b-user-provisioning"
 hidden: false
 excerpt: "Learn how to migrate B2B users from external platforms to VTEX by registering users, creating organizational units, and managing roles and permissions."
 createdAt: "2026-02-20T00:00:00.000Z"
-updatedAt: "2026-02-20T00:00:00.000Z"
+updatedAt: "2026-09-21T00:00:00.000Z"
 ---
 
 > ⚠️ This feature is available only for stores using B2B Buyer Portal, currently available for selected accounts.
@@ -186,17 +186,23 @@ Each storefront role has a unique `roleId` (integer). The available roles and th
 
 | Role ID | Storefront role | Associated resources |
 | :---- | :---- | :---- |
-| 1 | Organizational Unit Admin | ManageOrganizationAndContract |
+| 1 | Organizational Unit Admin | ManageOrganizationAndContract, ManageUsers, ViewUsers, ManageBuyingPolicies, ViewBuyingPolicies, ManageBudgets, ViewBudget, ManageAccountingFields, ViewAccountingFields, ManageCreditCards, ViewCreditCards |
 | 2 | Order Approver | ApproveOrders |
 | 3 | Order Modifier | ModifyOrders |
 | 4 | Buyer | PlaceOrders |
-| 5 | Personal Cards User | UseAdHocCard, SavePrivateCard |
+| 5 | Personal Cards User | UseAdHocCard |
 | 6 | Contract Manager | ViewMyContractOrders |
 | 7 | Buyer Organization Manager | ViewMyOrgUnitOrders |
-| 8 | Contract Viewer | ViewProfile, ViewMyCards, ViewAddresses |
-| 9 | Address Manager | ManageAddresses |
+| 10 | User Manager | ManageUsers, ViewUsers |
+| 11 | Buying Policy Manager | ManageBuyingPolicies, ViewBuyingPolicies |
+| 12 | Budget Manager | ManageBudgets, ViewBudget |
+| 13 | Accounting Field Manager | ManageAccountingFields, ViewAccountingFields |
+| 16 | Super Buyer Admin | ManageOrganizationHierarchy |
+| 41 | Credit Card Manager | ManageCreditCards, ViewCreditCards |
 
->ℹ️ For more information about available storefront roles and permissions, see [Storefront Permissions](https://developers.vtex.com/docs/guides/storefront-permissions). For the complete endpoint reference, see `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users).
+> ℹ️ Role ID `9` (Address Manager) was removed on September 21, 2026. Address management permissions (`ManageAddresses` and `ViewAddresses`) are now available only through a custom storefront role — see the note in [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles).
+
+>ℹ️ For more information about available storefront roles and permissions, see [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles). For the complete endpoint reference, see `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles).
 
 ### Request example
 
