@@ -213,6 +213,9 @@ Contains settings for experimental features.
 | `cypressVersion`            | `string` | The Cypress version.                            | `"13"` |
 | [`enableScriptsLogs`](https://developers.vtex.com/docs/guides/faststore/developer-tools-enable-scripts-logs)         | `boolean` | Enables additional browser console logs for third-party scripts and analytics integrations while debugging. | `true` |
 | [`useIsGiftFromOrderForm`](https://developers.vtex.com/docs/guides/faststore/developer-tools-use-is-gift-from-order-form) | `boolean` | When `true`, uses the `isGift` field from the VTEX Order Form item to detect gift items in the cart. When `false` or unset, uses the legacy behavior of checking `item.price === 0`. | `false` |
+| [`noRobots`](https://developers.vtex.com/updates/release-notes/2025-05-16-faststore-new-seo-flags) | `boolean` | When `true`, prevents the default `robots` meta tag from being added to pages. | `false` |
+| [`noindex`](https://developers.vtex.com/updates/release-notes/2025-05-16-faststore-new-seo-flags) | `boolean` | When `true`, instructs search engines not to index store pages. | `false` |
+| [`nofollow`](https://developers.vtex.com/updates/release-notes/2025-05-16-faststore-new-seo-flags) | `boolean` | When `true`, instructs search engines not to follow links on store pages. | `false` |
 | `graphqlCacheControl`       | `object` | Settings for GraphQL responses. |       |
 | &nbsp;&nbsp;├─ `maxAge`                | `number` | Maximum time (in seconds) that the response can be cached. | `300` |
 | &nbsp;&nbsp;└─ `staleWhileRevalidate`  | `number` | Time (in seconds) during which stale responses can be served while revalidating. | `60` |
