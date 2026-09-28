@@ -3,13 +3,13 @@ title: "Displaying an order summary for the signed-in shopper"
 slug: "displaying-an-order-summary-for-the-signed-in-shopper"
 hidden: true
 createdAt: "2026-09-10T00:00:00.000Z"
-updatedAt: "2026-09-10T00:00:00.000Z"
+updatedAt: "2026-09-25T00:00:00.000Z"
 excerpt: "Extend the FastStore API with a query that summarizes the signed-in shopper's orders, authenticated with the shopper's own session."
 ---
 
 This guide describes how to extend your storefront with a section that shows signed-in shoppers how many orders they have placed and when the most recent one was. You can then place that section on any page managed in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), such as a landing page.
 
-Because this data belongs to one specific shopper, the resolver must authenticate as that shopper rather than as the store, so each shopper only ever sees their own orders and never another shopper's.
+Since this data belongs to one specific shopper, the resolver must authenticate as that shopper rather than as the store, so each shopper only ever sees their own orders and never another shopper's.
 
 > ℹ️ For instructions on declaring type definitions and resolvers, see [Extending API schemas](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema). For the reasoning behind the credentials used here, see [Authentication in API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-authentication-in-api-extensions).
 
@@ -18,7 +18,9 @@ Because this data belongs to one specific shopper, the resolver must authenticat
 - You want to show a compact summary of the shopper's purchase history, without loading the full order list.
 - The data comes from the [Orders API](https://developers.vtex.com/docs/api-reference/orders-api), through the `/api/oms/user/orders` endpoint.
 - That endpoint returns only the orders belonging to whoever is signed in, so it requires no entity, schema, or app configuration of your own.
-- The summary is personal data, so no shopper may read another shopper's orders.
+- The summary is personal data, so no shopper can access another shopper's orders.
+
+> ⚠️ This guide covers the standard B2C flow, where the signed-in shopper is the owner of the orders. B2B and telesales sessions carry additional identity, such as an organization unit, a contract, or an operator acting on a shopper's behalf, and the endpoint's scoping in those cases is outside the scope of this guide. Check the [Orders API](https://developers.vtex.com/docs/api-reference/orders-api) reference before reusing this pattern in a B2B or telesales storefront.
 
 > ℹ️ The complete implementation is available in the [playground.store](https://github.com/vtex-sites/playground.store) repository, in `src/graphql/vtex` and `src/components/OrderSummary`.
 
@@ -64,60 +66,34 @@ extend type Query {
 
 In this file, the following is declared:
 
-- `type OrderSummary` defines a new GraphQL object type with the two fields the section needs: `totalOrders` (required, hence `Int!`) and `lastOrderDate` (optional, since a shopper with no orders has no date to report). The triple-quoted comments above each field become that field's description in your API's schema.
-- `extend type Query` adds a new root-level query, `orderSummary`, to your store's existing GraphQL schema, without modifying any query that already exists.
-- Notice that the query takes no arguments. The shopper's identity comes from the request, not from the caller, so there is no email or user ID to pass. An argument like that would let any caller ask for someone else's summary.
-- `@cacheControl(scope: "private", sMaxAge: 0)` keeps the response out of shared caches, so one shopper's summary is never served to another visitor.
+| Declaration | Description |
+| --- | --- |
+| `type OrderSummary` | Defines a new GraphQL object type with the two fields the section needs: `totalOrders` (required, hence `Int!`) and `lastOrderDate` (optional, since a shopper with no orders has no date to report). The triple-quoted comments above each field become that field's description in your API's schema. |
+| `extend type Query` | Adds a new root-level query, `orderSummary`, to your store's existing GraphQL schema without modifying any existing query. |
+| No query arguments | The shopper's identity comes from the request, not from the caller, so there is no email or user ID to pass. Such an argument would let any caller ask for someone else's summary. |
+| `@cacheControl(scope: "private", sMaxAge: 0)` | Keeps the response out of shared caches, so one shopper's summary is never served to another visitor. |
 
 ## Step 2: Creating the resolver
 
 The type definitions tell your API that an `orderSummary` query exists, but GraphQL still needs a function that produces the data when that query runs. This step writes that function: a resolver that checks the shopper is signed in, then forwards the shopper's own cookies to the Orders API so the response is scoped to that one shopper.
 
+> ℹ️ This step uses `validateUserAuthentication`, exported by `@faststore/api` from version 4.8.0. Update `@faststore/core` before continuing if your store is on an earlier version. See [Updating your `@faststore/core` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-core-package-version).
+
 1. In the `src/graphql/vtex/resolvers` directory, create a file named `orderSummary.ts`. If the `resolvers` directory doesn't exist yet, create it first.
 2. In the `orderSummary.ts` file, add the following content:
 
 ```ts src/graphql/vtex/resolvers/orderSummary.ts
-import { UnauthorizedError } from "@faststore/api";
-
-type ResolverContext = {
-  account: string;
-  headers: Record<string, string | undefined>;
-  clients: {
-    commerce: {
-      vtexid: { validate: () => Promise<{ authStatus?: string }> };
-    };
-  };
-};
+import { validateUserAuthentication } from "@faststore/api";
 
 type UserOrdersResponse = {
   list?: Array<{ creationDate?: string }>;
   paging?: { total?: number };
 };
 
-// Throws unless the incoming request carries a valid shopper token.
-const requireAuthenticatedShopper = async (ctx: ResolverContext) => {
-  try {
-    const validation = await ctx.clients.commerce.vtexid.validate();
-
-    if (validation?.authStatus?.toLowerCase() !== "success") {
-      throw new UnauthorizedError("Authentication required");
-    }
-  } catch (error) {
-    if (error instanceof UnauthorizedError) {
-      throw error;
-    }
-
-    // For a missing or expired token, VTEX ID answers 401 and the client
-    // throws instead of resolving. Without this catch, the caller would get
-    // a 500 rather than a 401.
-    throw new UnauthorizedError("Authentication required");
-  }
-};
-
 const orderSummaryResolver = {
   Query: {
-    orderSummary: async (_: never, __: never, ctx: ResolverContext) => {
-      await requireAuthenticatedShopper(ctx);
+    orderSummary: async (_: never, __: never, ctx: any) => {
+      await validateUserAuthentication(ctx);
 
       // Only the most recent order is needed: `paging.total` carries the count.
       const searchParams = new URLSearchParams({
@@ -160,8 +136,7 @@ export default orderSummaryResolver;
 In this file, the following is declared:
 
 - `orderSummaryResolver.Query.orderSummary` is the function GraphQL calls whenever an `orderSummary` query runs. Its third parameter, `ctx`, is the request context, which carries the incoming headers, the account name, and the platform clients.
-- `requireAuthenticatedShopper(ctx)` runs first and throws immediately for a signed-out visitor, so the rest of the function only ever runs for an authenticated shopper. `UnauthorizedError` comes from `@faststore/api` and results in a `401` response to the caller.
-- The `try`/`catch` around the validation matters. For a missing or expired token, VTEX ID answers `401` and the client throws rather than resolving with an unsuccessful status, so without the `catch` the caller would receive a `500` instead of a `401`.
+- `validateUserAuthentication(ctx)` runs first and throws immediately for a signed-out visitor, so the rest of the function only ever runs for an authenticated shopper. It is exported by `@faststore/api` from version 4.8.0, and the caller receives a `401` when the token is missing, expired, or invalid.
 - `cookie: ctx.headers?.cookie` forwards the shopper's own cookies to the Orders API. This is what makes the endpoint answer as that shopper. Sending an `appKey` and `appToken` pair instead would authenticate the request as the store, and the endpoint would no longer be scoped to one person.
 - `per_page: "1"` keeps the response small. The count comes from `paging.total`, so there is no reason to download the whole list.
 - If the response isn't successful, the resolver logs the status and throws. The upstream body is never returned, since an error body may carry headers or internal URLs.

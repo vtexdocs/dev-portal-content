@@ -4,7 +4,7 @@ slug: "b2b-user-provisioning"
 hidden: false
 excerpt: "Learn how to migrate B2B users from external platforms to VTEX by registering users, creating organizational units, and managing roles and permissions."
 createdAt: "2026-02-20T00:00:00.000Z"
-updatedAt: "2026-02-20T00:00:00.000Z"
+updatedAt: "2026-09-21T00:00:00.000Z"
 ---
 
 > ⚠️ This feature is available only for stores using B2B Buyer Portal, currently available for selected accounts.
@@ -27,6 +27,7 @@ Before provisioning B2B users in VTEX, make sure the required features are enabl
 | Product | Category | Resource | Associated endpoints |
 | :---- | :---- | :---- | :---- |
 | Authenticator | User Management | Create User | `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users) |
+| Authenticator | User Management | Read Users | `GET` [Get user by ID](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/-userId-) <br/><br/>`GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/info) |
 | Organization Units | Units | Edit Organization Unit | `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) <br/><br/>`POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users) |
 | License Manager | Services access control | Edit Storefront User Permissions | `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users) |
 | Dynamic Storage | Dynamic storage generic resources | Insert or update document (not remove) | `POST` [Create buyer](https://developers.vtex.com/docs/api-reference/b2b-buyer-data-api#post-/api/dataentities/shopper/documents) |
@@ -82,16 +83,16 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
   -d '{
   "identifiers": [
     {
-        "type": "username", 
-        "value": "beneson_test_21"
-    }, 
+        "type": "username",
+        "value": "john_doe"
+    },
     {
-        "type": "email", 
-        "value": "beneson2010@gmail.com+4"
-    }, 
+        "type": "email",
+        "value": "john.doe@acme.com"
+    },
     {
-        "type": "phoneNumber", 
-        "value": "415‑602‑8838"
+        "type": "phoneNumber",
+        "value": "415-602-8838"
     }
   ]
 }'
@@ -102,7 +103,7 @@ curl -X POST "https://{{accountname}}.vtexcommercestable.com.br/api/authenticato
 ```json
 {
   "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
-  "identifier": "beneson_test_21"
+  "identifier": "john_doe"
 }
 ```
 
@@ -185,17 +186,23 @@ Each storefront role has a unique `roleId` (integer). The available roles and th
 
 | Role ID | Storefront role | Associated resources |
 | :---- | :---- | :---- |
-| 1 | Organizational Unit Admin | ManageOrganizationAndContract |
+| 1 | Organizational Unit Admin | ManageOrganizationAndContract, ManageUsers, ViewUsers, ManageBuyingPolicies, ViewBuyingPolicies, ManageBudgets, ViewBudget, ManageAccountingFields, ViewAccountingFields, ManageCreditCards, ViewCreditCards |
 | 2 | Order Approver | ApproveOrders |
 | 3 | Order Modifier | ModifyOrders |
 | 4 | Buyer | PlaceOrders |
-| 5 | Personal Cards User | UseAdHocCard, SavePrivateCard |
+| 5 | Personal Cards User | UseAdHocCard |
 | 6 | Contract Manager | ViewMyContractOrders |
 | 7 | Buyer Organization Manager | ViewMyOrgUnitOrders |
-| 8 | Contract Viewer | ViewProfile, ViewMyCards, ViewAddresses |
-| 9 | Address Manager | ManageAddresses |
+| 10 | User Manager | ManageUsers, ViewUsers |
+| 11 | Buying Policy Manager | ManageBuyingPolicies, ViewBuyingPolicies |
+| 12 | Budget Manager | ManageBudgets, ViewBudget |
+| 13 | Accounting Field Manager | ManageAccountingFields, ViewAccountingFields |
+| 16 | Super Buyer Admin | ManageOrganizationHierarchy |
+| 41 | Credit Card Manager | ManageCreditCards, ViewCreditCards |
 
->ℹ️ For more information about available storefront roles and permissions, see [Storefront Permissions](https://developers.vtex.com/docs/guides/storefront-permissions). For the complete endpoint reference, see `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users).
+> ℹ️ Role ID `9` (Address Manager) was removed on September 21, 2026. Address management permissions (`ManageAddresses` and `ViewAddresses`) are now available only through a custom storefront role — see the note in [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles).
+
+>ℹ️ For more information about available storefront roles and permissions, see [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles). For the complete endpoint reference, see `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles).
 
 ### Request example
 
@@ -252,10 +259,10 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/dataentities
   -H "Accept: application/json" \
   -d '{
     "userId": "{{userId}}",
-    "firstName": "User First Name",
-    "lastName": "User Last Name",
+    "firstName": "John",
+    "lastName": "Doe",
     "document": "111.444.000-00",
-    "email": "user@vtex.com",
+    "email": "buyer.john.doe@acme.com",
     "phone": "5583987499600",
     "documentType": "cpf",
     "cards": []
@@ -272,11 +279,73 @@ curl -X POST "https://{{accountName}}.vtexcommercestable.com.br/api/dataentities
 }
 ```
 
+## Retrieving created users
+
+After creating a user, you can retrieve their `userId` and identifiers using either of the following endpoints.
+
+### Get user by ID
+
+Retrieves a user by their `userId`.
+
+>ℹ️ For more information, see `GET` [Get user by ID](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/-userId-).
+
+#### Request example
+
+```shell
+curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/{{userId}}" \
+  -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
+  -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
+```
+
+#### Response example
+
+```json
+{
+  "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
+  "identifiers": [
+    { "type": "email", "value": "john.doe@acme.com" },
+    { "type": "username", "value": "john_doe" },
+    { "type": "phoneNumber", "value": "415-602-8838" }
+  ]
+}
+```
+
+### Get user by identifier
+
+Retrieves a user by one of their identifiers.
+
+**Query parameters:**
+
+* `identifier`: The value of the identifier (e.g., an email address, username, or phone number).
+* `type`: The type of identifier. Supported values are `username`, `email`, `phonenumber`, and `apikey`.
+
+>ℹ️ For more information, see `GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/authenticator-api#get-/api/authenticator/v1/users/info).
+
+#### Request example
+
+```shell
+curl -X GET "https://{{accountName}}.vtexcommercestable.com.br/api/authenticator/v1/users/info?identifier=john.doe@acme.com&type=email" \
+  -H "X-VTEX-API-AppKey: {{X-VTEX-API-AppKey}}" \
+  -H "X-VTEX-API-AppToken: {{X-VTEX-API-AppToken}}"
+```
+
+#### Response example
+
+```json
+{
+  "userId": "f0a15a42-f7fc-4b09-a9ab-fabc76d9f332",
+  "identifiers": [
+    { "type": "email", "value": "john.doe@acme.com" },
+    { "type": "username", "value": "john_doe" },
+    { "type": "phoneNumber", "value": "415-602-8838" }
+  ]
+}
+```
+
 ## Additional operations
 
 For additional user and organizational management operations, see the following API references:
 
-* `GET` [Get user by identifier](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/pvt/user/info)
 * `GET` [Get organizational units](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/organization-units/v1)
 * `GET` [Get users from organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#get-/api/vtexid/organization-units/-organizationUnitId-/users)
 * `GET` [Verify user roles](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#get-/api/license-manager/storefront/users/-userId-/roles)

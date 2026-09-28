@@ -1,17 +1,19 @@
 ---
 title: "Monorepo use cases"
-hidden: true
+slug: "monorepo-use-cases"
+excerpt: "Explore common FastStore monorepo layouts and example faststore.json setups for single accounts, multiple stores, and shared code."
 createdAt: "2026-03-12T14:47:26.933Z"
-updatedAt: "2026-04-27T14:48:52.586Z"
+updatedAt: "2026-09-17T16:14:14.542Z"
 ---
 
-A [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview) can support different storefront modules, such as Product Discovery Experience, Checkout, and Sales App, to meet the merchant's needs.
+A [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) can support different storefront modules, such as Product Discovery Experience, [Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility), and [VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility), to meet the merchant's needs. You don't need to include the Product Discovery Experience (`discovery`) module if FastStore isn't your storefront.
 
 This guide outlines common repository structures for these scenarios and provides example `faststore.json` configurations for each one. These examples can help organize your monorepo based on your implementation requirements.
 
 The following sections cover:
 
 * **[Single account with multiple modules](#single-account-with-multiple-modules):** A single VTEX account using more than one storefront module.
+* **[Buyer Portal Checkout and Sales App without Product Discovery](#buyer-portal-checkout-and-sales-app-without-product-discovery):** A FastStore monorepo that customizes Buyer Portal Checkout and/or Sales App while using a different storefront.
 * **[Multiple brands or stores sharing code](#multiple-brands-or-stores-sharing-code):** Multiple accounts or [subaccounts](https://help.vtex.com/docs/tutorials/managing-a-multistore) using the same monorepo while sharing common code.
 * **[Multiple brands or stores with multiple modules](#multiple-brands-or-stores-with-multiple-modules):** A monorepo where each account or subaccount can use multiple storefront modules with its own configuration.
 
@@ -51,6 +53,45 @@ In this scenario, one VTEX account uses multiple storefront modules, each with i
       "sales-app": {
         "path": "package/sales-app",
         "port": 3003
+      }
+    }
+  }
+}
+```
+
+## Buyer Portal Checkout and Sales App without Product Discovery
+
+In this scenario, the account uses a FastStore monorepo for Buyer Portal Checkout and/or Sales App, but FastStore isn't the storefront. Omit the `discovery` key and declare only the modules you use.
+
+After the monorepo is configured, set up the modules you included: [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout) and [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions).
+
+### Basic directory structure
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages
+│   ├── 📂 checkout
+│   └── 📂 sales-app
+├── 📄 faststore.json
+├── 📄 package.json
+│  
+```
+
+### `faststore.json` configuration example
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "account1": {
+      "checkout": {
+        "path": "packages/checkout",
+        "port": 3001
+      },
+      "sales-app": {
+        "path": "packages/sales-app",
+        "port": 3002
       }
     }
   }

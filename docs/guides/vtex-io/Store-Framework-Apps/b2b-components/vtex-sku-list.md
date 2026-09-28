@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:30.003Z"
 updatedAt: "2022-06-09T16:53:53.438Z"
 ---
 
-The SKU List app is an essential B2B feature responsible for rendering a SKU list in the product details page.
+The SKU List app is an essential B2B feature responsible for rendering a SKU list on the product details page.
 
 ![sku-list](https://user-images.githubusercontent.com/52087100/85888338-c762d100-b7bf-11ea-9ca0-c808ef9641ea.png)
 
@@ -29,7 +29,7 @@ The SKU List app is an essential B2B feature responsible for rendering a SKU lis
     | `sku-content.mobile` | Defines the SKU List layout for mobile devices. |
     | `sku-name`  | Renders the SKU name. |
     | `sku-image` | Renders the SKU image. |
-    | `sku-seller` | Renders the SKU sellers (if it has any). It uses the `seller-name`, `seller-inventory` and `seller-price` blocks as children in order to display seller data. |
+    | `sku-seller` | Renders the SKU sellers (if any). It uses the `seller-name`, `seller-inventory` and `seller-price` blocks as children in order to display seller data. |
     | `seller-name` | Renders the SKU seller name. |  
     | `seller-inventory` | Renders the SKU inventory per seller. |
     | `seller-price` | Renders the SKU price per seller. |
@@ -42,7 +42,7 @@ The SKU List app is an essential B2B feature responsible for rendering a SKU lis
     | `sku-specifications` | Renders the SKU specifications. |
     | `sku-highlights` | Renders a highlight disclaimer for a specific SKU. |
 
-2. In the product template (`store.product`), use the following block structure in order to rebuild the Product Details Page now including the `sku-list` blocks:
+2. In the product template (`store.product`), use the following block structure in order to rebuild the Product Details Page, now including the `sku-list` blocks:
 
 ```diff
 {

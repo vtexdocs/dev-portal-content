@@ -10,7 +10,7 @@ updatedAt: "2022-11-07T22:59:36.234Z"
 
 > ℹ️ For the **Affiliates Program app**, an affiliate is different from the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0). In the app's context, an affiliate is anyone who associates with a VTEX store to promote sales while receiving a commission.
 
-The [Affiliates Program app](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ) creates a specific URL of your VTEX store for each of your affiliates, and every URL is targeted with a parameter that identifies the affiliate. When an affiliate shares their URL with shoppers, and they buy something through that link, the affiliate earns a commission over sales.
+The [Affiliates Program app](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ) creates a specific URL of your VTEX store for each of your affiliates, and every URL includes a parameter that identifies the affiliate. When an affiliate shares their URL with shoppers, and they buy something through that link, the affiliate earns a commission on sales.
 
 The image below is an example of an affiliate’s page to be shared with shoppers:
 
@@ -38,12 +38,12 @@ After installing and configuring the app, you will find three pages in your VTEX
 - [Orders Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#order-management): provides information about affiliates’ orders. The page enables you to filter data in multiple ways and export it via email.
   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-3.png)
 
-- [Commissions Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#commission-management): allows you to manage affiliates’ commissions and import information using files with . CSV or . XLSX extension.
+- [Commissions Management](https://help.vtex.com/en/tutorial/aplicativo-affiliates-program--7IpHHHcjjWxdmSRMw1FMPQ#commission-management): allows you to manage affiliates’ commissions and import information using files with the `.CSV` or `.XLSX` extension.
   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/affiliates-program-app-4.png)
 
 ## Compatibility
 
-The Affiliates Program app is compatible only with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), so make sure you fit the criteria. Stores using [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) are not compatible.
+The Affiliates Program app is compatible only with stores using [VTEX IO](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/4yB9wSl79cArd68aRBnBZ2), so make sure you meet the criteria. Stores using [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj) or [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) are not compatible.
 
 ## Installation
 
@@ -68,11 +68,11 @@ In **Settings**, you will define for how long the lead will be valid and set a d
    [block:callout]
    {
    "type": "warning",
-   "body": "Every affiliate has its own unique identification code, which is the `Affiliate ID` . When a shopper buys something through the affiliate's URL, the `Affiliate ID` is linked to the shopper for the period configured in this step - 60 days by default. If within the lead duration that shopper makes a second purchase, whether by accessing the store in an organic way, or through another affiliate's URL, the `Affiliate ID` of the first affiliate is prioritized and ensures commission. Note that the `Affiliate ID` for the app's context is not the `Affiliate ID` in the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0)."
+   "body": "Every affiliate has its own unique identification code, which is the `Affiliate ID`. When a shopper buys something through the affiliate's URL, the `Affiliate ID` is linked to the shopper for the period configured in this step - 60 days by default. If within the lead duration that shopper makes a second purchase, whether by accessing the store organically or through another affiliate's URL, the first affiliate's `Affiliate ID` is prioritized and still earns the commission. Note that the `Affiliate ID` for the app's context is not the `Affiliate ID` in the standard definition of [affiliate in VTEX](https://help.vtex.com/en/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0)."
    }
    [/block]
 
-2. Fill in the **Default value to be used for sku commission** field with the percentual you want to set to determine the affiliates’ commission over sales. Use numbers only, decimals are not allowed.
+2. Fill in the **Default value to be used for sku commission** field with the percentage you want to set to determine the affiliates’ commission on sales. Use numbers only; decimals are not allowed.
 3. Click on `SAVE`.
 
 The following message will be displayed:

@@ -8,7 +8,7 @@ updatedAt: "2022-12-13T20:17:44.738Z"
 
 ## Accessing the list of commands
 
-Start using VTEX IO CLI by running the following command to access a summary of the CLI default commands.
+Start using VTEX IO CLI by running the following command to access a summary of the CLI's default commands.
 
 ```shell
 vtex help
@@ -28,7 +28,7 @@ vtex login {accountName}
 
 > ⚠️ Remember to replace the value in curly brackets with the values that apply to your scenario.
 
-After running this command, a new tab will open in your browser, asking you to log in to the desired VTEX account with your email.
+After running this command, a new tab will open in your browser, asking you to log in to the desired VTEX account using your email address.
 
 Once logged in, the web page will display the following message: *“You may now close this window.”*
 
@@ -42,7 +42,7 @@ When you return to the computer terminal, you will have access to a development 
 
 After logging in to a VTEX account, you will be automatically directed to the `master` workspace, the version publicly available to end users.
 
-To start customizing your storefront or developing a VTEX IO app, you must switch from the master workspace to a development one.
+To start customizing your storefront or developing a VTEX IO app, you must switch from the master workspace to a development workspace.
 
 To switch to an existing development workspace or create a new one, run the following command:
 
@@ -50,7 +50,7 @@ To switch to an existing development workspace or create a new one, run the foll
 vtex use {workspaceName}
 ```
 
-Notice that if a workspace with the chosen name already exists, you will be directed to it.
+If a workspace with the chosen name already exists, you will be directed to it.
 
 ![Change Workspace](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-2.png)
 
@@ -82,9 +82,9 @@ If you try to install an app that has [Billing Options](https://developers.vtex.
 
 ![Billing Options](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-4.png)
 
-1. If you type `Y`, the app page you wish to install from the VTEX App Store will open in your browser.
+1. If you type `Y`, the VTEX App Store page for the app you want to install will open in your browser.
 2. To proceed with the installation, click `GET APP` > `CONFIRM` to log in to your VTEX store.
-3. Read and agree to the app's Terms and Conditions.
+3. Read and agree to the app's terms and conditions.
 
 > ℹ️ Note that some apps are free, and others may have specific charging methods.
 
@@ -110,13 +110,13 @@ vtex link
 
 ![Link Command](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-6.png)
 
-VTEX IO CLI will monitor your files and provide a URL related to that workspace. You will be able to access it through `https://{workspace}--{account}.myvtex.com` by replacing the value between curly braces with the name of the workspace previously created and your VTEX account. For example, `https://marianacaetano--appliancetheme.myvtex.com`.
+VTEX IO CLI will monitor your files and provide a URL related to that workspace. You will be able to access it through `https://{workspace}--{account}.myvtex.com` by replacing the values between curly braces with the name of the workspace previously created and your VTEX account. For example, `https://marianacaetano--appliancetheme.myvtex.com`.
 
 By accessing this URL, you can observe any local changes made to the linked files.
 
 ## Checking the installed apps
 
-To check apps installed on your account, you can run the following command:
+To check the apps installed on your account, you can run the following command:
 
 ```shell
 vtex list
@@ -124,7 +124,7 @@ vtex list
 
 The installed apps are classified as follows:
 
-1. Apps automatically installed by your account [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
+1. Apps automatically installed by your account's [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app).
 2. Apps manually installed on the current workspace.
 3. Apps linked to the current workspace.
 
