@@ -9,7 +9,7 @@ The Breadcrumb component gained a series of key improvements, such as:
 - Two new **CSS Handles** (`homeLink` and `termArrow`).
 - **Variations to the already existing Handles** `link` and `arrow`, so that users can individually and independently customize each one.
 - Two **new props** (`homeIconSize` and `caretIconSize`).
-- In addition, all Handles pertaining to the component now make use of the [**new CSS Handles creation format**](release). 
+- In addition, all Handles pertaining to the component now make use of the [**new CSS Handles creation format**](https://developers.vtex.com/updates/release-notes/css-handles).
 
 ## Main advantages
 

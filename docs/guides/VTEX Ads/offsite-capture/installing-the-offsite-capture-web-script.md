@@ -99,7 +99,7 @@ For VTEX native stores, the offsite capture web script is potentially delivered 
 **Prerequisites:**
 
 - Access to the store's VTEX Admin
-- The VTEX IO Toolbelt (`vtex` CLI)
+- The VTEX IO CLI (`vtex` CLI)
 - The **Publisher ID** (UUID) provisioned by the VTEX Ads team
 
 Install the app with the VTEX IO CLI:
