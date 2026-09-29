@@ -29,11 +29,11 @@ flowchart TD
 
 ## Before you begin
 
-The Content plugin provides the CLI commands used in this guide to generate and upload your schema bundle. Make sure it's installed before proceeding by following the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) guide.
+Before defining components:
 
-- [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
-  
-- [Defining content types for headless stores](https://developers.vtex.com/docs/guides/defining-content-types)
+- Review [content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores).
+- Install the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
+- Become familiar with basic JSON Schema concepts, especially objects, properties, arrays, and `$ref`.
 
 ## Distinguishing components from Content Types
 
