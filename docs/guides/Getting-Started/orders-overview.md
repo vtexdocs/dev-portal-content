@@ -1,6 +1,7 @@
 ---
 title: "Orders"
 slug: "orders-overview"
+excerpt: "Understand VTEX order flows, retrieve and filter orders, and build order integrations with Feed and Hook."
 hidden: false
 createdAt: "2020-09-21T22:46:46.589Z"
 updatedAt: "2026-09-29T15:30:00.000Z"
