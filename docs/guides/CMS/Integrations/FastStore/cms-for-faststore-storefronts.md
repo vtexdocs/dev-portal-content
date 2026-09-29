@@ -76,19 +76,26 @@ For details on this behavior, see [Collaboration workflows](https://help.vtex.co
 Content management scales across several VTEX accounts through:
 
 - **Content isolation**: Each VTEX account has its own CMS instance, so content is isolated between accounts by default. An editor working in one account can't view or change content in another, and each market's team can manage its own content independently, without any additional configuration.
-- **Shared schema structure**: Schemas live in the storefront repository and must be published separately to each account's CMS. Publishing the same schema to every account keeps components consistent across stores. See [Continuous integration for FastStore projects](https://developers.vtex.com/docs/guides/faststore/developer-tools-continuous-integration).
+- **Shared schema structure**: Schemas live in the storefront repository and must be published separately to each account's CMS. Publishing the same schema to every account keeps components consistent across stores. See the Content plugin's [`upload-schema`](/docs/guides/content-plugin#upload-schema) command.
 - **No content sharing**: Pages and media that should appear identically in every market aren't copied between accounts automatically and have to be recreated in each one.
 
 ## Next steps
 
 <Flex>
 
-<!-- <WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project#cms-integration"
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/getting-started-with-cms"
   title="FastStore integration"
   description="Learn how to connect the CMS with FastStore"
   linkTitle="See more"
-/> -->
+/>
+
+<WhatsNextCard
+  linkTo="/docs/guides/customizing-faststore-with-cms"
+  title="Customizing FastStore storefronts with the CMS"
+  description="Choose how to edit native sections, override FastStore components, create sections, and change content models."
+  linkTitle="See more"
+/>
 
 <WhatsNextCard
   linkTo="https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview"
