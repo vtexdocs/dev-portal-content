@@ -3,7 +3,7 @@ title: "Orders"
 slug: "orders-overview"
 hidden: false
 createdAt: "2020-09-21T22:46:46.589Z"
-updatedAt: "2023-03-28t15:07:06.478z"
+updatedAt: "2026-09-29T15:30:00.000Z"
 ---
 
 > **Help us improve our documentation!** Tell us about your experience with this article by completing [this form](https://forms.gle/fQoELRA1yfKDqmAb8).
@@ -177,6 +177,30 @@ You can fetch information about orders in multiple ways and about specific topic
 
 - [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-)
 - [List orders](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders)
+
+The List orders endpoint supports both broad and field-specific searches. The `q`
+parameter performs a full-text OR search across multiple indexed fields, including
+order ID, sequence, client data, payment identifiers, item identifiers,
+subscription group ID, and invoice numbers. Because the response does not
+indicate which field matched, use a dedicated parameter when you know the
+identifier type.
+
+For example, use `sequence` for an exact order sequence, `orderId` for an exact
+order ID, `nsu` for a payment connector NSU, `tid` for a transaction ID, or
+`sku_Ids` for one or more SKU IDs:
+
+```text
+GET /api/oms/pvt/orders?sequence=522217
+GET /api/oms/pvt/orders?nsu=2437281
+GET /api/oms/pvt/orders?sku_Ids=25,26
+```
+
+See the [List orders API reference](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders)
+for the complete query parameter list. The endpoint searches an eventually
+consistent order index and is intended for user-driven retrieval, not order
+integrations. Use [Orders Feed v3](https://developers.vtex.com/docs/guides/orders-feed)
+or [Hook](https://developers.vtex.com/docs/guides/orders-feed#hook) for
+integrations.
 
 #### Conversation
 
