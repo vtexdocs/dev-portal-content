@@ -76,7 +76,7 @@ Use the [B2B Contracts API](https://developers.vtex.com/docs/api-reference/b2b-c
 
 Organization management covers the structure, identity, and access control of a buyer organization. It includes creating and managing organizational units, provisioning users, assigning roles, and storing enriched buyer data.
 
-These capabilities form the foundation of every B2B Buyer Portal integration since most other features (Budgets, Buying policies, accounting fields) operate within the context of organizational units and depend on users having the right storefront roles.
+These capabilities form the foundation of every B2B Buyer Portal integration since most other features (Budgets, Buying policies, Accounting fields) operate within the context of organizational units and depend on users having the right storefront roles.
 
 ### Organizational units and scopes
 

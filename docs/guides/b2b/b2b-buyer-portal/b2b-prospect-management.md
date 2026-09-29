@@ -23,7 +23,7 @@ This guide covers what must exist for a prospect to be reviewable, how to confir
 
 - The store must have **[B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal)** enabled.
 - Requests must be authenticated with an App Key and App Token pair or with a valid `VtexIdclientAutCookie` header. Learn more about [API authentication](https://developers.vtex.com/docs/guides/authentication-overview).
-- The user or API key must hold the **[License Manager** resources](https://help.vtex.com/docs/tutorials/license-manager-resources) listed in the **Permissions** section of each endpoint you call. Writing `CL` and `AD` documents requires **Dynamic Storage** resources, the **License Manager** resource family that covers **Master Data** document operations. Reading organization units requires **Organization Units** resource.
+- The user or API key must hold the [**License Manager** resources](https://help.vtex.com/docs/tutorials/license-manager-resources) listed in the **Permissions** section of each endpoint you call. Writing `CL` and `AD` documents requires **Dynamic Storage** resources, the **License Manager** resource family that covers **Master Data** document operations. Reading organization units requires **Organization Units** resources.
 
 ## 1. Create the prospect contract
 
