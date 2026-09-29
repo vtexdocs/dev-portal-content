@@ -18,7 +18,7 @@ VTEX IO enables you to build:
 - **Storefront apps:** Design tailored storefront components with React.
 - **Admin apps:** Extend your store's admin capabilities with additional applications.
 - **Backend apps:** Create backend services for integration with Storefront or Admin apps using Node or .NET Core.
-- **Pixel apps:** Develop pixel apps to gather user data for integration with third-party services.
+- **Pixel apps:** Collect user data for integration with third-party services.
 - **Edition apps:** A bundle of settings, policies, backend and frontend apps encapsulated and exported by a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
 
 ### Who can use VTEX IO?
@@ -67,4 +67,4 @@ As an open-source project, Store Framework also benefits from a community-driven
 
 To start building with Store Framework, check out our [Getting Started guide](https://developers.vtex.com/docs/guides/getting-started-3).
 
-> ℹ️ Need additional assistance? If you have questions not covered here, feel free to [contact VTEX Support](https://help.vtex.com/pt/docs/tutorials/opening-tickets-to-vtex-support) for further help.
+> ℹ️ Need additional assistance? If you have questions not covered here, feel free to [contact VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) for further help.
