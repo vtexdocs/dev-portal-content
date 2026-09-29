@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2022-01-18T17:20:04.667Z"
 updatedAt: "2022-12-13T20:17:44.128Z"
 category: "App Development"
+excerpt: "VTEX Apps extend the VTEX platform's functionality, allowing developers to build custom solutions for storefronts, admin panels, backend services, and integrations."
 seeAlso:
  - "/docs/guides/concepts"
  - "/docs/guides/vtex-io-documentation-developing-an-app"
@@ -59,4 +60,4 @@ A VTEX App can also be characterized as:
 - **Private**: Apps that are not published on the VTEX App Store. They can be installed in multiple accounts, according to their **allowed list**.
 - **Public**: Apps published on the VTEX App Store.
 - **Single-account**: Apps designed to run for a single account, i.e., in a single store.
-- **Multi-account**: Apps designed to run in multiple accounts, i.e., different stores. The vendor’s responsibility is to handle account isolation properly in the application layer.
+- **Multi-account**: Apps designed to run in multiple accounts, i.e., different stores. The vendor's responsibility is to handle account isolation properly in the application layer.
