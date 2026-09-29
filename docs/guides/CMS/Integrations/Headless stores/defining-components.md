@@ -31,9 +31,9 @@ flowchart TD
 
 The Content plugin provides the CLI commands used in this guide to generate and upload your schema bundle. Make sure it's installed before proceeding by following the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) guide.
 
-<!-- TODO: Uncomment when companion guides are published.
- * [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
- * [Defining content types for headless stores](https://developers.vtex.com/docs/guides/defining-content-types-for-headless-stores) !-->
+- [Understanding content modeling and architecture for headless stores](https://developers.vtex.com/docs/guides/content-modeling-and-architecture-for-headless-stores)
+  
+- [Defining content types for headless stores](https://developers.vtex.com/docs/guides/defining-content-types)
 
 ## Distinguishing components from Content Types
 
@@ -502,7 +502,7 @@ For the full content lifecycle (schema upload, authoring, publishing, delivery),
 <Flex>
 
 <WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/defining-content-types-for-headless-stores"
+  linkTo="https://developers.vtex.com/docs/guides/defining-content-types"
   title="Defining content types for headless stores"
   description="Declare Content Types that expose your components through sections arrays and embedded relations."
   linkTitle="See more"
