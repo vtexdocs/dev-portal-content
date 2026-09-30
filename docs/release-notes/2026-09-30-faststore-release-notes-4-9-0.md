@@ -32,7 +32,7 @@ Shoppers and search engines receive valid canonical, Open Graph, breadcrumb, and
 
 The CLI now resolves the store root by folder name instead of treating any path ending in `.faststore` as the generated directory. Custom type definitions are consequently loaded from the correct `src/graphql` location, including when paths have trailing separators.
 
-Developers whose repository name ends with `.faststore` can build without custom GraphQL fields disappearing from the generated schema. No project rename or path workaround is required.
+Developers whose repository names end with `.faststore` can build without custom GraphQL fields disappearing from the generated schema. No project rename or path workaround is required.
 
 ### Quote resolved Next.js executable paths (PR: [#3494](https://github.com/vtex/faststore/pull/3494))
 
@@ -54,7 +54,7 @@ Windows developers using Yarn Classic no longer lose the search page during inst
 
 ### Keep VTEX services attached to the correct cart line (PR: [#3504](https://github.com/vtex/faststore/pull/3504))
 
-Cart validation now represents Checkout `bundleItems` as service properties and includes applied services in cart-line identity and relevant etags. Serviced and unserviced units remain separate, and available offerings are not sent back to Checkout as selected services.
+Cart validation now represents Checkout `bundleItems` as service properties and includes applied services in cart-line identity and relevant ETags. Serviced and unserviced units remain separate, and available offerings are not sent back to Checkout as selected services.
 
 Shoppers keep services attached to the intended item through validation, quantity changes, reloads, and removals. Merchants avoid duplicated or dropped services and the resulting incorrect cart state.
 
