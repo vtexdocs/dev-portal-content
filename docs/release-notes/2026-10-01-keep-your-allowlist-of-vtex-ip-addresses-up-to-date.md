@@ -16,7 +16,6 @@ From time to time, compare the allowlist configured in your firewall, security g
 We recommend making this review part of your regular maintenance routine, so that integrations where VTEX sends requests to endpoints you provide keep working as expected. Examples include:
 
 - [Orders Hook](https://developers.vtex.com/docs/guides/orders-feed#hook), which notifies your endpoint about order updates.
-- [Orders Broadcast](https://developers.vtex.com/docs/guides/how-to-receive-order-notifications-on-vtex-io), which sends order status notifications to a listener you configure.
 
 If you don't restrict requests from VTEX by IP address, no action is needed.
 
@@ -24,4 +23,3 @@ If you don't restrict requests from VTEX by IP address, no action is needed.
 
 - [VTEX IP addresses](http://ips.vtex.com)
 - [Feed v3 and Hook](https://developers.vtex.com/docs/guides/orders-feed)
-- [Receiving order notifications](https://developers.vtex.com/docs/guides/how-to-receive-order-notifications-on-vtex-io)
