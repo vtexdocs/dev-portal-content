@@ -4,7 +4,7 @@ slug: "2026-09-30-master-data-api-v2-schema-saves-blocked-during-reindex"
 hidden: false
 type: "improved"
 createdAt: "2026-09-30T00:00:00.000Z"
-excerpt: "A schema save that triggers a full reindex of a data entity now blocks further schema saves on that  for 12 hours, which return 423 Locked."
+excerpt: "A schema save that triggers a full reindex of a data entity now blocks further schema saves on that for 12 hours, which return 423 Locked."
 ---
 
 Saving a schema in **Master Data** with [Save schema by name](https://developers.vtex.com/docs/api-reference/master-data-api-v2#put-/api/dataentities/-dataEntityName-/schemas/-schemaName-) now can apply a temporary reindex lock if the save triggers a full reindex of a data entity.
