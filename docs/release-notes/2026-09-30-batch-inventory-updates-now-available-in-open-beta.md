@@ -5,7 +5,7 @@ hidden: false
 type: "added"
 createdAt: "2026-09-30T12:00:00.000Z"
 updatedAt: "2026-09-30T12:00:00.000Z"
-excerpt: "All customers can now use the Batch operations endpoints in the Logistics API to update large volumes of inventory data asynchronously, without opening a support ticket."
+excerpt: "All customers can now use the Batch operations endpoints in the Logistics API to update large volumes of inventory data asynchronously."
 ---
 
 [Batch inventory updates](https://developers.vtex.com/docs/guides/batch-inventory-updates) are now available in open beta. You can use the **Batch operations** endpoints in the [Logistics API](https://developers.vtex.com/docs/api-reference/logistics-api) to update large volumes of inventory data asynchronously by uploading a CSV file, monitoring the processing status, and downloading an error report if any rows fail.
