@@ -127,20 +127,22 @@ Once the change is live, you can manage the store's redirects in VTEX Admin by f
 
 ## Using code and Admin redirects together
 
-You can keep redirects in `src/redirects.json` and in the VTEX Admin at the same time. `redirects.json` accepts wildcard and regex patterns, such as `/old-category/:path*`. The Admin has no limit on the number of redirects, but each rule matches one exact path. A common setup is to keep the patterns in `redirects.json` and the long list of fixed redirects in the Admin. To use the Admin redirects, enable the `enableRedirects` flag as described in the [previous section](#beta-enabling-redirects-using-the-enableredirects-flag).
+You can use code-based redirects in `src/redirects.json` alongside redirects configured in the VTEX Admin. To set them up, follow [Creating redirects](#creating-redirects) and [(Beta) Enabling redirects using the `enableRedirects` flag](#beta-enabling-redirects-using-the-enableredirects-flag).
+
+The `redirects.json` file accepts wildcard and regex patterns, such as `/old-category/:path*`. Admin redirects have no limit on the number of rules, but each rule matches one exact path. A common setup is to define patterns in `redirects.json` and keep long lists of fixed redirects in the Admin. To use Admin redirects, enable the `enableRedirects` flag as described in the [previous section](#beta-enabling-redirects-using-the-enableredirects-flag).
 
 FastStore handles each request in this order:
 
-1. Redirects from `redirects.json`. They run for every route, before any page renders.
-2. Native pages. If the path is a published product, collection, or Headless CMS page, that page renders.
-3. Redirects from the Admin. FastStore only looks them up when the path doesn't match a published page and returns 404, for example, a product path (`/{slug}/p`) for a product that no longer exists.
+1. **Redirects from `redirects.json`.** These run for every route, before a page renders.
+2. **Native pages.** If the path matches a published product, collection, or Headless CMS page, that page renders.
+3. **Redirects from the Admin.** FastStore looks up Admin redirects only if the path doesn't match a published page and the request would otherwise return a 404. For example, this can happen when a product at `/{slug}/p` no longer exists.
 
-Keep the following in mind when you use both:
+Keep the following in mind when using both redirect sources:
 
-- If a path matches a rule in both places, the `redirects.json` rule applies and the Admin isn't queried. A wildcard such as `/old-category/:path*` overrides every Admin rule that starts with `/old-category/`, so use prefixes that don't overlap.
+- If a path matches a rule in both places, the `redirects.json` rule applies, and FastStore doesn't query the Admin. A wildcard such as `/old-category/:path*` takes precedence over Admin rules whose paths start with `/old-category/`, so avoid overlapping prefixes.
 - Admin redirects don't apply to routes that always render a page, such as `/s`, `/login`, and `/checkout`.
-- FastStore caches the Admin redirect for a path for five minutes. It also caches a 404 response for the time set in `experimental.revalidate404`, which is five minutes by default. A rule added to the Admin for a path that already returned 404 can take that long to apply, plus the CDN cache time.
-- Next.js compares the request against the `redirects.json` rules one by one on every request, including requests that don't redirect. Keep this list short and move large lists of fixed redirects to the Admin.
+- FastStore caches each Admin redirect lookup for five minutes. It also caches 404 responses for the duration set by `experimental.revalidate404`, which defaults to five minutes. If you add an Admin redirect for a path that has already returned a 404, it may take that long to apply, in addition to any CDN cache time.
+- Next.js checks `redirects.json` rules one by one on every request, including requests that don't redirect. Keep this list short and move large lists of fixed redirects to the Admin.
 
 > ℹ️ For a working example, see the [redirects example](https://github.com/vtex-sites/playground.store#4-redirects) in the FastStore Playground repository.
 
