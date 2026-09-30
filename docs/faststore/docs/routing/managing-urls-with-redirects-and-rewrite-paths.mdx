@@ -1,7 +1,7 @@
 ---
 title: "Managing URLs with redirects and rewrite paths"
 excerpt: "Learn how to configure redirects and rewrites in your FastStore project to manage user access to your content."
-updatedAt: "2026-06-15T14:38:58.465Z"
+updatedAt: "2026-09-30T12:00:00.000Z"
 ---
 
 In this guide, you'll learn how to configure redirects and rewrites in your FastStore project. These tools help you manage user access to your content by automatically directing users from one URL to another or mapping custom URLs to existing page templates.
@@ -98,6 +98,8 @@ For projects requiring more than 1,024 redirects, you can enable the `enableRedi
 
 1. Update your FastStore project to version `3.2.0` or higher. To do this, open your project in a code editor.
 
+    > ⚠️ If your project also has a `src/redirects.json` file, use FastStore `3.100.4` or higher (v3) or `4.7.0` or higher (v4). In earlier versions, having this file makes FastStore ignore the redirects created in the Admin.
+
 2. Open a terminal and run the following command to update the FastStore packages to the latest version:
     
     ```bash
@@ -122,6 +124,25 @@ For projects requiring more than 1,024 redirects, you can enable the `enableRedi
 > ⚠️ After deploying this change, open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request the CDN-side configuration required to forward query string parameters. Otherwise, if you configure a redirect using rules such as `/from` → `/to`, a request to `from?key=value` will be redirected to `/to` rather than `/to?key=value`, so the query string parameter is not preserved.
 
 Once the change is live, you can manage the store's redirects in VTEX Admin by following the instructions in [Managing URL redirects](https://help.vtex.com/tutorial/managing-url-redirects--3UJuFrU8imSVWg134mkvJV).
+
+## Using code and Admin redirects together
+
+You can keep redirects in `src/redirects.json` and in the VTEX Admin at the same time. `redirects.json` accepts wildcard and regex patterns, such as `/old-category/:path*`. The Admin has no limit on the number of redirects, but each rule matches one exact path. A common setup is to keep the patterns in `redirects.json` and the long list of fixed redirects in the Admin. To use the Admin redirects, enable the `enableRedirects` flag as described in the [previous section](#beta-enabling-redirects-using-the-enableredirects-flag).
+
+FastStore handles each request in this order:
+
+1. Redirects from `redirects.json`. They run for every route, before any page renders.
+2. Native pages. If the path is a published product, collection, or Headless CMS page, that page renders.
+3. Redirects from the Admin. FastStore only looks them up when the path doesn't match a published page and returns 404, for example, a product path (`/{slug}/p`) for a product that no longer exists.
+
+Keep the following in mind when you use both:
+
+- If a path matches a rule in both places, the `redirects.json` rule applies and the Admin isn't queried. A wildcard such as `/old-category/:path*` overrides every Admin rule that starts with `/old-category/`, so use prefixes that don't overlap.
+- Admin redirects don't apply to routes that always render a page, such as `/s`, `/login`, and `/checkout`.
+- FastStore caches the Admin redirect for a path for five minutes. It also caches a 404 response for the time set in `experimental.revalidate404`, which is five minutes by default. A rule added to the Admin for a path that already returned 404 can take that long to apply, plus the CDN cache time.
+- Next.js compares the request against the `redirects.json` rules one by one on every request, including requests that don't redirect. Keep this list short and move large lists of fixed redirects to the Admin.
+
+> ℹ️ For a working example, see the [redirects example](https://github.com/vtex-sites/playground.store#4-redirects) in the FastStore Playground repository.
 
 ## Creating rewrites
 
