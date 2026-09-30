@@ -3,7 +3,7 @@ title: "B2B Buyer Portal integration overview"
 slug: "b2b-buyer-portal-integration-overview"
 hidden: false
 createdAt: "2026-03-13T00:00:00.000Z"
-updatedAt: "2026-06-08T00:00:00.000Z"
+updatedAt: "2026-09-29T00:00:00.000Z"
 excerpt: "Explore the integration capabilities of B2B Buyer Portal, including contracts, organization management, payment cards, addresses, Budgets, Buying policies, Accounting fields, and Punchout."
 ---
 
@@ -113,6 +113,8 @@ The system ships with predefined roles (such as Buyer, Order Approver, and Organ
 Use the [Storefront Roles API](https://developers.vtex.com/docs/api-reference/storefront-roles-api) to assign, revoke, and query storefront roles and resource permissions.
 
 > ℹ️ For the full list of available roles, resources, and required permissions, see [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles).
+
+If the predefined roles and resources don't cover your scenarios, you can create custom ones scoped to your account via API. See [Custom storefront roles and resources](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources). Merchants can also manage them in the VTEX Admin. Learn more in [Custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/custom-storefront-roles-and-permissions-overview).
 
 ### Buyer data
 
