@@ -24,29 +24,60 @@ The `ProductGrid` is a section generally used on PLP pages to list the products 
   </Tab>
   <Tab>
     ```tsx
-    <ProductGrid>
-      {products.map(({ product }, idx) => (
-        <ProductGridItem>
-          <ProductCard>
-            <ProductCardImage>
-              <img
-                data-fs-image
-                src={product.image[0].url}
-                alt={product.image[0].alternateName}
-              />
-            </ProductCardImage>
-            <ProductCardContent
-              title={product.isVariantOf.name}
-              price={{
-                value: product.offers.offers[0].price,
-                listPrice: product.offers.offers[0].listPrice,
-                formatter: useFormattedPrice,
-              }}
-            />
-          </ProductCard>
-        </ProductGridItem>
-      ))}
-    </ProductGrid>
+    import {
+      ProductCard,
+      ProductCardContent,
+      ProductCardImage,
+      ProductGrid,
+      ProductGridItem,
+    } from '@faststore/ui'
+
+    const products = [
+      {
+        product: {
+          image: [{
+            url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg',
+            alternateName: 'Apple Magic Mouse',
+          }],
+          isVariantOf: { name: 'Apple Magic Mouse' },
+          offers: { offers: [{ price: 950, listPrice: 999 }] },
+        },
+      },
+    ]
+
+    const useFormattedPrice = (price: number) =>
+      new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      }).format(price)
+
+    export default function ProductGridExample() {
+      return (
+        <ProductGrid>
+          {products.map(({ product }) => (
+            <ProductGridItem key={product.image[0].url}>
+              <ProductCard>
+                <ProductCardImage>
+                  <img
+                    data-fs-image
+                    src={product.image[0].url}
+                    alt={product.image[0].alternateName}
+                  />
+                </ProductCardImage>
+                <ProductCardContent
+                  title={product.isVariantOf.name}
+                  price={{
+                    value: product.offers.offers[0].price,
+                    listPrice: product.offers.offers[0].listPrice,
+                    formatter: useFormattedPrice,
+                  }}
+                />
+              </ProductCard>
+            </ProductGridItem>
+          ))}
+        </ProductGrid>
+      )
+    }
     ```
   </Tab>
 </Tabs>

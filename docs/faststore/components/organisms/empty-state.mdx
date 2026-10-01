@@ -1,6 +1,6 @@
 ---
 title: "EmptyState"
-excerpt: Represents the component's empty state while the main content is loading.
+excerpt: Displays a message and actions when there is no content to show.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/PaymentMethods___b0f344b254360daa53406cd631887adf.png
 components:
@@ -15,6 +15,7 @@ The `EmptyState` can be used to represent an empty state.
   <Tab>
     <OverviewSection containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
       <EmptyState
+        bkgColor="default"
         title="Your Cart is empty"
         titleIcon={
           <Icon name="ShoppingCart" width={56} height={56} weight="thin" />
@@ -31,6 +32,7 @@ The `EmptyState` can be used to represent an empty state.
     ```tsx
     // An implementation of the `EmptyState` that represents the Cart with no items.
       <EmptyState
+        bkgColor="default"
         title="Your Cart is empty"
         titleIcon={
           <Icon name="ShoppingCart" width={56} height={56} weight="thin" />
@@ -77,6 +79,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     <OverviewSection containerStyle={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
       <EmptyState
         variant="rounded"
+        bkgColor="light"
         title="Nothing matches with your search"
         titleIcon={
           <Icon name="CircleWavyWarning" width={56} height={56} weight="thin" />
@@ -105,6 +108,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     // An implementation of the `EmptyState` that represents a Gallery with no items.
      <EmptyState
       variant="rounded"
+      bkgColor="light"
       title="Nothing matches your search"
       titleIcon={
         <Icon name="CircleWavyWarning" width={56} height={56} weight="thin" />
@@ -180,7 +184,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   />
 </TokenTable>
 
-### Design tokens: White background color
+### Design tokens: Light background color
 
 <TokenTable>
   <TokenRow
@@ -201,7 +205,7 @@ You can target and override `EmptyState` styles using the following data attribu
 
 `data-fs-empty-state-variant="default | rounded"`
 
-`data-fs-empty-state-bkg-color="default | white"`
+`data-fs-empty-state-bkg-color="default | light"`
 
 ---
 
