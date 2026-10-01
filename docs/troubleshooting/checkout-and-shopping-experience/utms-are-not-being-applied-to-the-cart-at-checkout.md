@@ -14,7 +14,7 @@ symptomFilters:
 ---
 Keywords: utm source | utm campaign | utm medium | checkout | cart
 
-> ⚠️ This guide and the IPS cookie are created for CMS Portal (Legacy) stores only. For stores using the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), marketing UTM information is sent to Checkout via the Sessions system.
+> ⚠️ The IPS cookie are created for CMS Portal (Legacy) stores only. For stores using the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), marketing UTM information is sent to Checkout via the Sessions system.
 
 When an [UTM parameter](https://help.vtex.com/en/tutorial/what-are-utm-source-utm-campaign-and-utm-medium--2wTz7QJ8KUG6skGAoAQuii) (`utm_source`, `utm_campaign` or `utm_medium`) is used to load a store page, the system creates a cookie named **IPS** whose value is equal to the value of the parameter.
 
@@ -38,7 +38,7 @@ Carry out procedures to check the existence of UTMs in the cart according to you
   2. Go to the **Developer tools** screen (**F12** in Chrome, if you are in Windows, or **Cmd+Opt+I** on a Mac).
   3. Click the **Application** tab, and under **Cookies**, click the name **IPS**.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/check-marketing-utms-used-at-checkout-0.PNG)
+![utm-source](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/check-marketing-utms-used-at-checkout-0.PNG)
 
 - **Store Framework**
 
