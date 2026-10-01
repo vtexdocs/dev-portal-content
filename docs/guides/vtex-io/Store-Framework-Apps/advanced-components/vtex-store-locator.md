@@ -29,7 +29,7 @@ Once installed, the app will generate a new route called `/stores` for your stor
 
 The new page already contains a default template with all blocks exported by the Store Locator app, meaning the `/stores` page is ready to be rendered and no further actions are required. However, you can **customize the new page overwriting the template by creating a brand new one**. To do so, check the [**Advanced configuration**](#advanced-configuration) section below.
 
-> ℹ️ _This app will also **add a new entry to your store's `/sitemap.xml` file so that all your pickup points are available to search engines** - make sure you already have the `vtex.store-sitemap@2.x` app installed in your VTEX account!_
+> ℹ️ This app will also **add a new entry to your store's `/sitemap.xml` file so that all your pickup points are available to search engines** - make sure you already have the `vtex.store-sitemap@2.x` app installed in your VTEX account.
 
 ### Advanced configuration
 
@@ -190,9 +190,9 @@ In order to define the Store Locator custom page UI, you must use the blocks exp
 |    `long`     | `number` |                            Longitude coordinate.                             |      undefined       |
 |   `sortBy`    | `string` |        Property (`name` or `distance`) used to sort the stores list.         |      `distance`      |
 
-> ℹ️ _Use the `lat` and `long` props to display Pickup Points configured in seller accounts. If these props are not configured and you do not have any pick up points set up in your main account, the app will display no stores._
+> ℹ️ Use the `lat` and `long` props to display Pickup Points configured in seller accounts. If these props are not configured and you do not have any pick up points set up in your main account, the app will display no stores.
 
-> ℹ️ _The `filterByTag` prop cannot be used along with `lat` and `long`. If you set a value for `filterByTag`, the `lat` and `long` props will be ignored._
+> ℹ️ The `filterByTag` prop cannot be used along with `lat` and `long`. If you set a value for `filterByTag`, the `lat` and `long` props will be ignored.
 
 #### `store-group` props
 

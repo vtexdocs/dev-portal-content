@@ -226,7 +226,7 @@ According to the example above, products with measurement unit and unit multipli
 
 `$24.00 / 2 oz`
 
-> ℹ️ _Notice that the measurement unit and unit multiplier would be properly rendered alongside their price_
+> ℹ️ Notice that the measurement unit and unit multiplier would be properly rendered alongside their price.
 
 Still, according to the example, products that don't have a measurement unit and a unit multiplier will render only their price:
 

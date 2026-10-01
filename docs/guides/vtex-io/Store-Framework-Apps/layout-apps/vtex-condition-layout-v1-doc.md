@@ -6,7 +6,7 @@ createdAt: "2020-10-26T15:24:19.885Z"
 updatedAt: "2022-07-19T14:16:44.931Z"
 ---
 
-> ⚠️ ***Condition Layout app v1 has been deprecated in favor of Condition Layout app v2**. Although support for the former version is still granted, we strongly recommend that you access the [Migration Guide](https://github.com/vtex-apps/condition-layout/tree/master/docs/MIGRATION-GUIDE.md) and update your store theme with the app's newest version in order to keep up with the components' evolution.*
+> ⚠️ Condition Layout app v1 has been deprecated in favor of Condition Layout app v2. Although support for the former version is still granted, we strongly recommend that you access the [Migration Guide](https://github.com/vtex-apps/condition-layout/tree/master/docs/MIGRATION-GUIDE.md) and update your store theme with the app's newest version in order to keep up with the components' evolution.
 
 As the name implies, the Condition Layout app allows a block to be rendered if certain conditions are met.
 
@@ -43,7 +43,7 @@ In the product theme template, add the `condition-layout.{context}` block, repla
   },
 ```
 
-> ⚠️ *You should never use `condition-layout` directly. Make sure to always use it with the context variant, such as `condition-layout.product`.*
+> ⚠️ You should never use `condition-layout` directly. Make sure to always use it with the context variant, such as `condition-layout.product`.
   
 ### Step 3 - Configuring the `condition-layout.{context}` block
 

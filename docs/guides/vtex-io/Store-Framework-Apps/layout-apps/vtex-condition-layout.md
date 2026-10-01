@@ -62,7 +62,7 @@ Or the `condition-layout.category` block, for example:
 }
 ```
 
-> ⚠️ _Never use `condition-layout` directly. Make sure to always use it with the context variant, such as `condition-layout.product`._
+> ⚠️ Never use `condition-layout` directly. Make sure to always use it with the context variant, such as `condition-layout.product`.
 
 ### Step 3 - Defining the desired conditions
 
@@ -169,7 +169,7 @@ Or for `condition-layout.telemarketing`:
 + }
 ```
 
-> ℹ️ *According to the example above, whenever users interact with a product whose ID is equal to 12, the block `flex-layout.row#custom-pdp-layout-12` is rendered. If users interact with a product whose ID is not equal to 12, the rendered block is the `flex-layout.row#default`.*
+> ℹ️ According to the example above, whenever users interact with a product whose ID is equal to 12, the block `flex-layout.row#custom-pdp-layout-12` is rendered. If users interact with a product whose ID is not equal to 12, the rendered block is the `flex-layout.row#default`.
 
 | Prop name    | Type     | Description  | Default value |
 | ------------ | -------- | ------------ | ------------- |

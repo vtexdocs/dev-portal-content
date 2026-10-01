@@ -37,7 +37,7 @@ This app is available in all countries, as long as the currency used is supporte
 
 ## Getting Started
 
-> ℹ️ *To configure the Facebook Business Extension and Conversions API app in the VTEX Admin, check out the documentation [Integration with Facebook Business Extension](https://help.vtex.com/en/tracks/integration-with-facebook-business-extension--2hS3ANSZ7vlHCcba4h7k8D/7JvybNGcBXxGKbVWjadKjt).*
+> ℹ️ To configure the Facebook Business Extension and Conversions API app in the VTEX Admin, check out the documentation [Integration with Facebook Business Extension](https://help.vtex.com/en/tracks/integration-with-facebook-business-extension--2hS3ANSZ7vlHCcba4h7k8D/7JvybNGcBXxGKbVWjadKjt).
 
 After installing the [Facebook Business Extension and Conversions API app](https://apps.vtex.com/vtex-facebook-fbe/p), you can connect to your Facebook account through the Admin menu, under `Marketplace -> Facebook`.
 

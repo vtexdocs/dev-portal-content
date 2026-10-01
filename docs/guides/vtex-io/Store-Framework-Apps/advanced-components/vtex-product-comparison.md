@@ -92,7 +92,7 @@ In the theme's `interfaces.json` file, add the following extended interfaces:
   ...
 ```
 
-> ℹ️ _The `store.search.product-comparison` blocks wrap the `store.search` block with comparison context. The replacement is needed so we can synchronously display the selected products in the Product Comparison drawer._
+> ℹ️ The `store.search.product-comparison` blocks wrap the `store.search` block with comparison context. The replacement is needed so we can synchronously display the selected products in the Product Comparison drawer.
 
 2. Replace the `search-result-layout.desktop` blocks with the `search-result-layout.desktop.product-comparison` blocks as shown below:
 
