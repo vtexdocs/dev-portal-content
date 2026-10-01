@@ -69,7 +69,7 @@ Content branches stay synchronized with the main branch through:
 - **Automatic updates**: While an editor works in a branch, new content published to the main branch is merged into that branch automatically, so editors continue from the current state of the store instead of an outdated copy.
 - **Conflict resolution**: When the same content was changed in both the branch and the main branch, the version in the branch is preserved.
 
-For details on this behavior, see [Collaboration workflows](https://help.vtex.com/docs/tutorials/collaboration-workflows).
+For details on this behavior, see [Versions and branches](https://help.vtex.com/docs/tutorials/managing-versions-and-branches).
 
 ## Next steps
 
