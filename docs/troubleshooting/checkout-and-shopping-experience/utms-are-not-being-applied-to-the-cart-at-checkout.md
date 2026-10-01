@@ -14,7 +14,7 @@ symptomFilters:
 ---
 Keywords: utm source | utm campaign | utm medium | checkout | cart
 
-> ⚠️ The IPS cookie are created for CMS Portal (Legacy) stores only. For stores using the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), marketing UTM information is sent to Checkout via the Sessions system.
+> ⚠️ The IPS cookie are created for CMS Portal (legacy) stores only. For stores using the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework), marketing UTM information is sent to Checkout via the Sessions system.
 
 When an [UTM parameter](https://help.vtex.com/en/tutorial/what-are-utm-source-utm-campaign-and-utm-medium--2wTz7QJ8KUG6skGAoAQuii) (`utm_source`, `utm_campaign` or `utm_medium`) is used to load a store page, the system creates a cookie named **IPS** whose value is equal to the value of the parameter.
 
@@ -32,13 +32,13 @@ To check whether the UTM parameters are being correctly applied to the cart and 
 
 Carry out procedures to check the existence of UTMs in the cart according to your type of store:
 
-- **Legacy CMS Portal**
+- **CMS Portal (legacy)**
 
   1. Access any page of the store with the UTM in the query string (e.g., `{accountName}.{environment}.com.br/?utm_source=facebook`).
   2. Go to the **Developer tools** screen (**F12** in Chrome, if you are in Windows, or **Cmd+Opt+I** on a Mac).
   3. Click the **Application** tab, and under **Cookies**, click the name **IPS**.
 
-![utm-source](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/check-marketing-utms-used-at-checkout-0.PNG)
+![utm-source-cms-portal-legacy](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/check-marketing-utms-used-at-checkout-0.PNG)
 
 - **Store Framework**
 
@@ -49,7 +49,7 @@ Carry out procedures to check the existence of UTMs in the cart according to you
   5. In the **Preview** tab, open the `marketingData` node.
   6. Check the value of the `utmSource` field.
 
-![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/check-marketing-utms-used-at-checkout-1.PNG)
+![utm-source-store-framework](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/check-marketing-utms-used-at-checkout-1.PNG)
 
 > ℹ️ If the value found in the `utmSource` field is the same as the UTM previously entered in the page address querystring, it means that Checkout is correctly receiving the information in the cart. If the `utmSource` field is blank, it indicates that the information was not assigned to the cart, preventing the tracking of the origin of the traffic, the application of promotions related to UTM and the registration of the parameter in the orders carried out by the OMS.
 
