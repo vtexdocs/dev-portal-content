@@ -362,7 +362,7 @@ Object containing the criteria used to sort the items in the `items` array. Retu
 
 ### selectableGifts
 
-Array containing the gifts that the customer can choose from, based on promotions of the type [Buy one get gift](https://help.vtex.com/en/tutorial/buy-and-win--tutorials_322). Each object represents a list of gift options.
+Array containing the gifts that the customer can choose from, based on [Buy One Get One](https://help.vtex.com/en/docs/tutorials/buy-one-get-one) promotions that offer a gift. Each object represents a list of gift options.
 
 **Example:**
 
@@ -515,7 +515,7 @@ Object containing the preferences of the customer who is placing the order.
 
 ### giftRegistryData
 
-Object containing information about the [gift list](https://help.vtex.com/en/tutorial/gift-list--3IpX7BGrlqi8EuUuAQMEEA) associated with the cart, when the customer is buying items from a gift list. Returns `null` when the cart isn't associated with a gift list.
+Object containing information about the gift list associated with the cart, when the customer is buying items from a gift list. Returns `null` when the cart isn't associated with a gift list.
 
 **Example:**
 
@@ -681,7 +681,7 @@ Object containing the shipping information of the order: the delivery address, t
 | `logisticsInfo[].slas[].availableDeliveryWindows[].startDateUtc` | String | Delivery window start date and time in UTC. | `"2026-10-05T09:00:00+00:00"` |
 | `logisticsInfo[].slas[].availableDeliveryWindows[].endDateUtc` | String | Delivery window end date and time in UTC. | `"2026-10-05T12:00:00+00:00"` |
 | `logisticsInfo[].slas[].availableDeliveryWindows[].price` | Integer | Delivery window price in cents. | `1000` |
-| `logisticsInfo[].slas[].availableDeliveryWindows[].lisPrice` | Integer | Delivery window list price in cents. | `1000` |
+| `logisticsInfo[].slas[].availableDeliveryWindows[].lisPrice` | Integer | Delivery window list price in cents. The field name is `lisPrice` in the API response. | `1000` |
 | `logisticsInfo[].slas[].availableDeliveryWindows[].tax` | Integer | Delivery window tax in cents. | `0` |
 | `logisticsInfo[].slas[].deliveryWindow` | Object or null | Delivery window selected by the customer, in case of scheduled delivery. It has the same fields as the objects in `availableDeliveryWindows`. | `{"startDateUtc": "2026-10-05T09:00:00+00:00", "endDateUtc": "2026-10-05T12:00:00+00:00", "price": 1000, "lisPrice": 1000, "tax": 0}` |
 | `logisticsInfo[].slas[].price` | Integer | SLA price in cents. | `1500` |
