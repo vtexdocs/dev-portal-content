@@ -6,13 +6,13 @@ createdAt: "2026-10-02T18:19:47.246Z"
 
 A multi-store project built on a [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) can serve its markets in two ways: from one VTEX account, using [bindings](https://help.vtex.com/docs/tutorials/what-is-binding), or from one VTEX account per market. This choice sets how catalog, pricing, and promotions are managed, and it determines how many CMS instances, WebOps integrations, and app-version targets the project operates.
 
-In either model, `faststore.json` maps account names to project directories. Bindings are configured on the account, not in the repository.
+> ℹ️ In both models, the repository is organized by VTEX account: each key in [`faststore.json`](https://developers.vtex.com/docs/guides/faststore-monorepo-overview#faststorejson-file) is an account name that points to a project directory in the monorepo. Bindings don't appear in this file. They are configured on the VTEX account itself, so an account with several bindings still has a single entry in `faststore.json`.
 
-> ⚠️ Make this choice before implementation starts. Changing the account structure after markets are live means migrating catalog, content, and deployments.
-
-This guide focuses on how your account structure impacts FastStore development and storefront configuration in a multi-store project.
+This guide compares the two models and shows what each one means for the CMS, the WebOps integration, and the app versions installed in the account.
 
 ## Choosing the account structure
+
+> ⚠️ Make this choice before implementation starts. Changing the account structure after markets are live means migrating catalog, content, and deployments.
 
 A FastStore multi-store project can serve its markets from one VTEX account or from one account per market. The following table compares the two models:
 
