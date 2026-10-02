@@ -128,7 +128,14 @@ hideTOC: true
     description="Wraps an `Input` and its corresponding `Label`."
     actionPath="/docs/guides/faststore/molecules-input-field"
   >
-    <InputField label="Input w/ Action" id="inputfield-action" actionable />
+    <InputField
+      label="Input with action"
+      id="inputfield-action"
+      value="SAVE10"
+      actionable
+      onSubmit={() => {}}
+      onClear={() => {}}
+    />
   </CardItem>
   <CardItem
     title="LinkButton"

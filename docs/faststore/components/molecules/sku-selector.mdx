@@ -25,6 +25,7 @@ This is a product related component, we recommend testing it using a product moc
     ```tsx
     <SkuSelector
       skuPropertyName="Image"
+      variant="image"
       availableVariations={
         product.isVariantOf.skuVariants.availableVariations
       }
@@ -36,6 +37,7 @@ This is a product related component, we recommend testing it using a product moc
     ```tsx
     <SkuSelector
       skuPropertyName="Color"
+      variant="color"
       availableVariations={product.isVariantOf.skuVariants.availableVariations}
       activeVariations={product.isVariantOf.skuVariants.activeVariations}
       slugsMap={product.isVariantOf.skuVariants.slugsMap}
@@ -45,6 +47,7 @@ This is a product related component, we recommend testing it using a product moc
     ```tsx
     <SkuSelector
       skuPropertyName="Size"
+      variant="label"
       availableVariations={product.isVariantOf.skuVariants.availableVariations}
       activeVariations={product.isVariantOf.skuVariants.activeVariations}
       slugsMap={product.isVariantOf.skuVariants.slugsMap}
@@ -91,6 +94,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
     <SkuSelector
       skuPropertyName={skuPropertyName}
+      variant="image"
       availableVariations={
         product.isVariantOf.skuVariants.availableVariations
       }
@@ -116,6 +120,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
     <SkuSelector
       skuPropertyName="Size"
+      variant="label"
       availableVariations={product.isVariantOf.skuVariants.availableVariations}
       activeVariations={product.isVariantOf.skuVariants.activeVariations}
       slugsMap={product.isVariantOf.skuVariants.slugsMap}
@@ -140,6 +145,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
     <SkuSelector
       skuPropertyName="Color"
+      variant="color"
       availableVariations={product.isVariantOf.skuVariants.availableVariations}
       activeVariations={product.isVariantOf.skuVariants.activeVariations}
       slugsMap={product.isVariantOf.skuVariants.slugsMap}

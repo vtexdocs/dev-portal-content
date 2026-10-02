@@ -19,7 +19,7 @@ The `Dropdown` component Displays a set of actions/items to the user, usually us
     <OverviewSection>
       <Dropdown>
         <DropdownButton icon={<Icon name="CaretDown" />}>{'Dropdown'}</DropdownButton>
-        <DropdownMenu>
+        <DropdownMenu align="left">
           <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
             {'Dropdown Item 1'}
           </DropdownItem>
@@ -33,7 +33,7 @@ The `Dropdown` component Displays a set of actions/items to the user, usually us
       </Dropdown>
       <Dropdown>
         <DropdownButton icon={<Icon name="CaretDown" />}>{'Dropdown Small'}</DropdownButton>
-        <DropdownMenu size="small">
+        <DropdownMenu size="small" align="right">
           <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
             {'Dropdown Item 1'}
           </DropdownItem>
@@ -51,7 +51,7 @@ The `Dropdown` component Displays a set of actions/items to the user, usually us
     ```tsx
     <Dropdown>
       <DropdownButton icon={<Icon name="CaretDown" />}>Dropdown</DropdownButton>
-      <DropdownMenu>
+      <DropdownMenu align="left">
         <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
           Dropdown Item 1
         </DropdownItem>
@@ -65,7 +65,7 @@ The `Dropdown` component Displays a set of actions/items to the user, usually us
     </Dropdown>
     <Dropdown>
       <DropdownButton icon={<Icon name="CaretDown" />}>Dropdown Small</DropdownButton>
-      <DropdownMenu size="small">
+      <DropdownMenu size="small" align="right">
         <DropdownItem icon={<Icon name="ArrowElbowDownRight" />}>
           Dropdown Item 1
         </DropdownItem>
@@ -107,6 +107,8 @@ To apply styles, include the following in your stylesheet:
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
+
+Set `DropdownMenu`'s `align` to `"left"`, `"center"`, or `"right"` to align the menu with its trigger.
 
 ## Design tokens
 
