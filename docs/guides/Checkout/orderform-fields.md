@@ -662,7 +662,7 @@ Object containing the shipping information of the order: the delivery address, t
 | `logisticsInfo[].slas` | Array of objects | SLAs (shipping options) available for the item. | See the following rows. |
 | `logisticsInfo[].slas[].id` | String | SLA ID. If the store uses the [Delivery Options](https://help.vtex.com/en/docs/tutorials/delivery-options-beta) feature, this field returns the delivery option ID, as in `1223d5b4-52a4-442f-ab23-01345b60be48`. | `"Normal"` |
 | `logisticsInfo[].slas[].deliveryChannel` | String | Delivery channel of the SLA. Possible values are `delivery` and `pickup-in-point`. | `"delivery"` |
-| `logisticsInfo[].slas[].name` | String | SLA name. If the store uses the [Delivery Options](https://help.vtex.com/en/docs/tutorials/delivery-options-beta) feature, this field shows the delivery option name, as in `Delivery \| BRA \| Up to 30 hours`. | `"Normal"` |
+| `logisticsInfo[].slas[].name` | String | SLA name. If the store uses the [Delivery Options](https://help.vtex.com/en/docs/tutorials/delivery-options-beta) feature, this field displays the delivery option name, as in `Delivery \| BRA \| Up to 30 hours`. | `"Normal"` |
 | `logisticsInfo[].slas[].deliveryIds` | Array of objects | Information on each delivery that composes the SLA. | See the following rows. |
 | `logisticsInfo[].slas[].deliveryIds[].courierId` | String | Carrier ID. | `"1"` |
 | `logisticsInfo[].slas[].deliveryIds[].warehouseId` | String | Warehouse ID. | `"1_1"` |
