@@ -1,0 +1,44 @@
+---
+title: "Implementing a multi-store architecture"
+excerpt: "Set up several FastStore storefronts from a single monorepo, including account structure, environments, and content governance."
+createdAt: "2026-10-02T17:58:08.642Z"
+---
+
+A FastStore multi-store architecture is a project in which a brand operates several FastStore storefronts, for example one per country or one per brand.
+
+This track covers how to build a multi-store architecture from a single [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), where every market reuses the same components, design tokens, and delivery pipeline. You'll learn what to share and what to keep local, and which areas to plan before you start.
+
+> ℹ️ You can also run each store as a separate FastStore project in its own repository. Each market then keeps its own codebase, pipeline, and release schedule. However, sharing components or design tokens requires extra effort, such as publishing them as a package, and each store must be upgraded individually. This track focuses on the monorepo, but the guidance on account structure, environments, and content governance applies to both approaches.
+
+## Shared foundation and local control
+
+A multi-store architecture isn't an attempt to make every market identical. The goal is to draw a precise line between what is shared across stores and what stays local to each market.
+
+The following table shows how each layer is typically divided between shared and local:
+
+| Layer | Shared | Local |
+| --- | --- | --- |
+| Components and design system | Component library, design tokens, section schemas | Per-market style overrides |
+| Delivery | Repository, continuous integration pipeline, release process | Deployment target account and branch |
+| Content | Section schemas that must look the same everywhere | Pages, campaigns, and media per market |
+| Commerce | Nothing by default. Sharing depends on the account structure, not on the repository. | Catalog, pricing, promotions, logistics, payments |
+
+Components and the delivery pipeline are shared because duplicating them is what creates drift. Commerce configuration stays local because it's the part each market's business team needs to control directly.
+
+> ℹ️ This division is a common starting point, not a fixed rule. Adjust it to your markets, teams, and governance needs. For example, a market that follows a different release schedule can point its [WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches) integration to a different production branch while still sharing the repository and the continuous integration pipeline with the other stores.
+
+## Starting a multi-store project
+
+To start developing your multi-store project, plan the three areas below. A different guide covers each one:
+
+| Area | Description | Guide |
+| --- | --- | --- |
+| Account structure | Defines whether markets operate under separate VTEX accounts or share one account through bindings, and what each option means for the CMS, WebOps, and app versions. | [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multi-store-planning-your-account-structure) |
+| Environments and deployment | Provides each store with its own testing and production environments, and maps repository branches to the accounts they deploy to. | [Managing environments](https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments) |
+| Content governance | Keeps content managed per market, so each team edits only its own pages, campaigns, and media. | [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) |
+
+> ℹ️ If you're new to the monorepo, start with the [FastStore monorepo overview](https://developers.vtex.com/docs/guides/faststore-monorepo-overview).
+
+The account structure comes first because the other two areas follow from it. Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance and [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) integration, so the number of accounts determines how many content workspaces and deployment targets the program operates.
+
+> ⚠️ Changing the account structure after markets are live is significantly more expensive than setting it up correctly from the start. Moving a market later means rebuilding its content and deployment target.
