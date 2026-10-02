@@ -1,8 +1,161 @@
 ---
 title: "Styling a section"
-hidden: true
+excerpt: "Use FastStore utilities and custom Sass mixins to create reusable styles for storefront sections."
+seeAlso:
+  - "/docs/guides/faststore/building-sections-creating-a-new-section"
+  - "/docs/guides/faststore/global-tokens-overview"
+  - "/docs/guides/faststore/data-attributes"
 ---
 
-FastStore provides the flexibility to use mixins for styling your page sections.
+FastStore sections support [Sass mixins](https://sass-lang.com/documentation/at-rules/mixin/), which let you reuse groups of styles. You can use the mixins provided by FastStore or create mixins for your project.
 
-> This content is currently under development.
+This guide shows how to style a custom section with FastStore utility mixins and how to share a custom mixin across sections.
+
+## Before you begin
+
+- Create a custom section by following the [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) guide.
+- Use a [CSS Module](https://nextjs.org/docs/pages/building-your-application/styling/css-modules) file with the `.module.scss` extension for the section styles.
+
+## Using FastStore mixins in a section
+
+FastStore's utility stylesheet provides mixins for layout, spacing, responsive breakpoints, text truncation, and focus states. In FastStore v4, import this stylesheet with Sass's `@use` rule in every SCSS file that uses its mixins.
+
+The following example styles a `PromoBanner` section.
+
+<Steps>
+
+### Create the section stylesheet
+
+Create `src/components/PromoBanner/section.module.scss` and import the FastStore utilities. The `as u` clause assigns them the `u` namespace, which is used in each `@include`.
+
+```scss src/components/PromoBanner/section.module.scss
+@use "@faststore/ui/src/styles/base/utilities" as u;
+
+@layer components {
+  .section {
+    @include u.layout-content;
+
+    display: grid;
+    gap: var(--fs-spacing-3);
+    padding-block: var(--fs-spacing-5);
+    padding-inline: var(--fs-spacing-3);
+    background-color: var(--fs-color-neutral-bkg);
+
+    @include u.media(">=tablet") {
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+      padding-inline: var(--fs-spacing-5);
+    }
+  }
+
+  .title {
+    @include u.truncate-title(2);
+
+    margin: 0;
+    font-size: var(--fs-text-size-title-section);
+  }
+}
+```
+
+In this example:
+
+- `layout-content` limits the section to the store's content width and centers it.
+- `media(">=tablet")` applies styles at the `tablet` breakpoint and above.
+- `truncate-title(2)` limits the title to two lines.
+- FastStore [global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) provide consistent spacing, color, and typography values.
+- `@layer components` places the styles in FastStore's component layer so they follow the expected cascade order.
+
+### Apply the CSS Module classes
+
+Import the stylesheet in the section component and apply its classes to the corresponding elements.
+
+```tsx src/components/PromoBanner/PromoBanner.tsx
+import styles from "./section.module.scss";
+
+interface PromoBannerProps {
+  title: string;
+  description: string;
+}
+
+export default function PromoBanner({ title, description }: PromoBannerProps) {
+  return (
+    <section className={styles.section}>
+      <h2 className={styles.title}>{title}</h2>
+      <p>{description}</p>
+    </section>
+  );
+}
+```
+
+### Check the result
+
+Run your FastStore project locally and open a page that contains the section. The section uses a single-column layout on smaller screens and changes to two columns at the `tablet` breakpoint.
+
+</Steps>
+
+## Creating a reusable mixin
+
+For styles shared by multiple custom sections, create a Sass module in your project and explicitly load it in each section stylesheet.
+
+1. Create `src/styles/_section-mixins.scss`:
+
+   ```scss src/styles/_section-mixins.scss
+   @use "@faststore/ui/src/styles/base/utilities" as u;
+
+   @mixin highlighted-section($background: var(--fs-color-highlighted-bkg)) {
+     @include u.layout-colored(
+       $background,
+       var(--fs-spacing-4),
+       var(--fs-spacing-4)
+     );
+
+     border-radius: var(--fs-border-radius);
+   }
+   ```
+
+2. Import the module into the section stylesheet and include the mixin:
+
+   ```scss src/components/PromoBanner/section.module.scss
+   @use "@faststore/ui/src/styles/base/utilities" as u;
+   @use "../../styles/section-mixins" as sectionMixins;
+
+   @layer components {
+     .section {
+       @include u.layout-content;
+       @include sectionMixins.highlighted-section;
+     }
+   }
+   ```
+
+The leading underscore in `_section-mixins.scss` marks the file as a Sass partial. Omit the underscore and file extension in the `@use` path.
+
+## Available FastStore utilities
+
+The utility stylesheet includes:
+
+- Layout and spacing: `layout-content`, `layout-content-full`, `layout-colored`, and `section-divisor`.
+- Responsive styles: `media`, with the `phone`, `phonemid`, `tablet`, `notebook`, and `desktop` breakpoints.
+- Text: `truncate-title`.
+- Focus states: `input-focus-ring`, `focus-ring`, and `focus-ring-visible`.
+- Unit conversion: the `rem` function.
+
+All FastStore utilities use a namespace. For example:
+
+```scss
+@use "@faststore/ui/src/styles/base/utilities" as u;
+
+.example {
+  font-size: u.rem(18px);
+
+  @include u.media("<notebook") {
+    @include u.layout-content;
+  }
+}
+```
+
+## Usage considerations
+
+- Utility mixins are not global in FastStore v4. Each SCSS file that uses them must load the utility stylesheet with `@use`.
+- A `src/styles/custom-mixins.scss` file is not automatically loaded into section styles. Import project mixins explicitly in every file where you use them.
+- Sass mixins run when the storefront CSS is built. They cannot be selected or configured by content editors in the Headless CMS. To make a style configurable in the CMS, expose a section property and map its value to a class or data attribute in the component.
+- Use design tokens when you only need to change a component's colors, spacing, typography, or other theme values. Use mixins for reusable groups of style declarations.
