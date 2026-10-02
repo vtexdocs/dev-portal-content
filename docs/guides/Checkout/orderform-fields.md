@@ -15,10 +15,12 @@ This guide describes every field of the `orderForm`, grouped by section. Each se
 
 ## Conventions used in this guide
 
-- **Monetary values:** All fields that represent monetary values are integers in **cents**, without a decimal separator. For example, `10390` represents R$ 103.90 in a Brazilian store, and `2499` represents $24.99 in a US store.
-- **Nested fields:** Field names in the tables use dot notation relative to the section. `[]` indicates that the field belongs to each object of an array. For example, `logisticsInfo[].slas[].price` is the `price` field of each SLA, inside each element of the `logisticsInfo` array.
-- **Nullable fields:** When a field can return `null`, the type column says so (for example, `String or null`). Fields related to the customer, such as addresses and profile data, are often `null` until the customer identifies themselves.
-- **Masked data:** When the customer hasn't been authenticated, personal data, such as names, documents, phone numbers, and addresses, is returned partially masked with asterisks (for example, `"Cla** ***t"`) to protect the shopper's privacy.
+| Convention | Description | Example |
+| - | - | - |
+| **Monetary values** | Fields that represent monetary values are integers in **cents**, without a decimal separator. | `10390` represents R$ 103.90 in a Brazilian store, and `2499` represents $24.99 in a US store. |
+| **Nested fields** | Field names use dot notation relative to the section. `[]` indicates that the field belongs to each object in an array. | `logisticsInfo[].slas[].price` refers to the `price` field of each SLA in each `logisticsInfo` array item. |
+| **Nullable fields** | When a field can return `null`, the type column indicates this. Customer-related fields, such as addresses and profile data, are often `null` until the customer identifies themselves. | `String or null` |
+| **Masked data** | When the customer isn't authenticated, personal data, such as names, documents, phone numbers, and addresses, is partially masked with asterisks to protect the shopper's privacy. | `"Cla** ***t"` |
 
 ## orderForm structure
 
