@@ -11,7 +11,7 @@ An Edition App represents a bundle of settings, policies, backend, and frontend 
 
 ![EditionApp](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-edition-app.png)
 
-> ℹ️ VTEX IO is the VTEX development platform as a whole, not only the storefront layer. Backend apps, such as ERP and loyalty integrations or payment connectors, and admin apps, such as custom management panels, also run on VTEX IO. A store that builds its storefront with [FastStore](https://developers.vtex.com/docs/guides/faststore), therefore, still relies on Edition Apps and [Sponsor Accounts](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) to keep those app versions aligned across its accounts.
+> ℹ️ [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) is the VTEX development platform as a whole, not only the storefront layer. Backend apps, such as ERP and loyalty integrations or payment connectors, and admin apps, such as custom management panels, also run on VTEX IO. A store that builds its storefront with [FastStore](https://developers.vtex.com/docs/guides/faststore), therefore, still relies on Edition Apps and [Sponsor Accounts](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) to keep those app versions aligned across its accounts.
 
 ## List of native Edition Apps
 
