@@ -1162,7 +1162,7 @@ Object containing information about the [commercial conditions](https://help.vte
 
 ### subscriptionData
 
-Object containing the [subscription](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453) information of the items in the cart. Returns `null` when the cart has no subscriptions. Use the [Add subscription data](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/subscriptionData) endpoint to add this information.
+Object containing the [subscription](https://help.vtex.com/en/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453) information of the items in the cart. Returns `null` if the cart has no subscriptions. Use the [Add subscription data](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/subscriptionData) endpoint to add this information.
 
 **Example:**
 
