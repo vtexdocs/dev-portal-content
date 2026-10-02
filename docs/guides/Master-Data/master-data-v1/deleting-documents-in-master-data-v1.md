@@ -27,7 +27,7 @@ If the data entity was already deleted from the Master Data v1 interface, the AP
 
 To recover access to a deleted entity:
 
-1. **Recreate the data entity** in the Master Data v1 interface. See [Data entity](https://help.vtex.com/docs/tutorials/data-entity).
+1. **Recreate the data entity** in the Master Data v1 interface. The recreated entity must include at least one field, or the process will not work. Any field is enough. For example, add a field named `name` of type **Varchar 10**. See [Data entity](https://help.vtex.com/docs/tutorials/data-entity).
 2. **Publish the entity** using the save action on the entity row, as described in [Data entity](https://help.vtex.com/docs/tutorials/data-entity).
 3. **Reindex the entity** so the documents become searchable and scrollable through the API again. To reindex, follow the instructions in [Filtering data on Master Data](https://help.vtex.com/docs/tutorials/filtering-data-on-master-data).
 4. **Run the scroll and delete flow** to remove the records once reindexing completes.
