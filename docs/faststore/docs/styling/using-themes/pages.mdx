@@ -147,7 +147,7 @@ All FastStore utilities use a namespace. For example:
 
 ## Usage considerations
 
-- Utility mixins are not global in FastStore v4. Each SCSS file that uses them must load the utility stylesheet with `@use`.
+- Utility mixins are not global in [FastStore v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4). Each SCSS file that uses them must load the utility stylesheet with `@use`.
 - A `src/styles/custom-mixins.scss` file is not automatically loaded into section styles. Import project mixins explicitly in every file where you use them.
 - Sass mixins run when the storefront CSS is built. They cannot be selected or configured by content editors in the Headless CMS. To make a style configurable in the CMS, expose a section property and map its value to a class or data attribute in the component.
 - Use design tokens when you only need to change a component's colors, spacing, typography, or other theme values. Use mixins for reusable groups of style declarations.
