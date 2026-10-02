@@ -4,9 +4,11 @@ excerpt: "Set up several FastStore storefronts from a single monorepo, including
 createdAt: "2026-10-02T17:58:08.642Z"
 ---
 
-A FastStore multi-store architecture is a project in which a brand operates several FastStore storefronts, for example one per country or one per brand, from a single [monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview). This shared foundation lets every market reuse the same components, design tokens, and delivery pipeline. As a result, teams avoid duplicated work, the shopping experience stays consistent across markets, and a platform upgrade is made once and reaches every storefront.
+A FastStore multi-store architecture is a project in which a brand operates several FastStore storefronts, for example one per country or one per brand.
 
-This track helps you plan a multi-store FastStore architecture that balances consistency and autonomy. Markets build on common components, design tokens, and a delivery pipeline, while each one keeps control of its own content, catalog, and promotions.
+This track covers how to build a multi-store architecture from a single [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), where every market reuses the same components, design tokens, and delivery pipeline. You'll learn what to share and what to keep local, and which areas to plan before you start.
+
+> ℹ️ You can also run each store as a separate FastStore project in its own repository. Each market then keeps its own codebase, pipeline, and release schedule. However, sharing components or design tokens requires extra effort, such as publishing them as a package, and each store must be upgraded individually. This track focuses on the monorepo, but the guidance on account structure, environments, and content governance applies to both approaches.
 
 ## Shared foundation and local control
 
