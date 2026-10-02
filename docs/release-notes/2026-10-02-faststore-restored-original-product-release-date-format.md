@@ -8,7 +8,7 @@ tags:
   - FastStore
 ---
 
-FastStore now returns `StoreProduct.releaseDate` in the original format provided by Intelligent Search. This restores compatibility with storefront customizations that consume the field directly while keeping product structured data valid for search engines.
+FastStore now returns `StoreProduct.releaseDate` in the original format provided by [Intelligent Search](https://help.vtex.com/en/docs/tutorials/intelligent-search-overview). This restores compatibility with storefront customizations that consume the field directly while keeping product structured data valid for search engines.
 
 ## What has changed?
 
