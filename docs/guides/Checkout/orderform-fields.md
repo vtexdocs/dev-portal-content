@@ -7,7 +7,7 @@ updatedAt: "2026-10-02T00:00:00.000Z"
 excerpt: "Reference of all orderForm fields returned by the Checkout API, organized by section, with descriptions, types, and examples."
 ---
 
-The `orderForm` is the main object processed by VTEX Checkout and one of the most important data structures in the architecture of every VTEX store. It represents a shopping cart and stores all the contextual information needed to turn that cart into an order: the items, the customer's profile, delivery and pickup options, payment options, promotions, and custom information.
+The `orderForm` is the main object processed by VTEX Checkout and one of the most important data structures in every VTEX architecture's store. It represents a shopping cart and stores all the contextual information needed to turn that cart into an order: the items, the customer's profile, delivery and pickup options, payment options, promotions, and custom information.
 
 The [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) is the main interface for reading and changing the `orderForm`. Most of its endpoints return the complete `orderForm` in the response body.
 
