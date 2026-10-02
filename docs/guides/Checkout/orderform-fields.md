@@ -713,7 +713,7 @@ The address object is used in `shippingData.address`, `shippingData.selectedAddr
 | `addressType` | String | Type of address. Possible values are `residential`, `commercial`, `pickup`, `inStore`, `giftRegistry`, `search`, and `invoice`. | `"residential"` |
 | `receiverName` | String or null | Name of the person who will receive the order. | `"Clark Kent"` |
 | `addressId` | String or null | Address ID. | `"666c2e830bd9474ab6f6cc53fb6dd2d2"` |
-| `isDisposable` | Boolean | Indicates whether the address is disposable. Addresses with `isDisposable` set to `true` aren't saved to the shopper's profile when the order is completed, while addresses with `isDisposable` set to `false` belong to the shopper. See [Disposable addresses](#disposable-addresses). | `true` |
+| `isDisposable` | Boolean | Indicates whether the address is disposable. Addresses with `isDisposable` set to `true` aren't saved to the shopper's profile when the order is completed, while addresses with `isDisposable` set to `false` belong to the shopper's profile. See [Disposable addresses](#disposable-addresses). | `true` |
 | `postalCode` | String | Postal code. | `"22250040"` |
 | `city` | String | City. | `"Rio de Janeiro"` |
 | `state` | String | State. | `"RJ"` |
