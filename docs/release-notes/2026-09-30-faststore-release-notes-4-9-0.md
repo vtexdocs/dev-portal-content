@@ -36,7 +36,7 @@ The search page moves from `src/pages/s.tsx` to `src/pages/s/index.tsx`, preserv
 
 Windows developers using Yarn Classic no longer lose the search page during installation or encounter the resulting Next.js type-check failure. Store URLs and shopper navigation remain unchanged.
 
-### Normalize locale-aware storefront URLs (PR: [#3498](https://github.com/vtex/faststore/pull/3498))
+### Normalize storefront canonical URLs (PR: [#3498](https://github.com/vtex/faststore/pull/3498))
 
 FastStore now removes a trailing slash from locale-aware store URLs before appending landing-page, product, home-search, and search-page paths. Search SEO generation also receives the active router locale.
 
