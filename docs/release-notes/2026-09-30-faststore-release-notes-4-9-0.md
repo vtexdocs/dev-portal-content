@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-> ⚠️ **Update in FastStore 4.9.1:** This patch restores the original format of `StoreProduct.releaseDate` in the GraphQL API. ISO 8601 normalization is now applied only to the product page's JSON-LD structured data. See the [FastStore 4.9.1 release notes](/TBD) for details and upgrade guidance.
+> ⚠️ **Update in FastStore 4.9.1:** This patch restores the original format of `StoreProduct.releaseDate` in the GraphQL API. ISO 8601 normalization is now applied only to the product page's JSON-LD structured data. See the [FastStore: Restored the original product release date format](LINK) release notes for details.
 
 FastStore `v4.9.0` keeps cart services and My Account for B2B Buyer Portal sessions consistent, gives merchants more control over localized account content, and corrects localized storefront URLs. Developers gain more reliable builds, especially on Windows, plus new APIs for custom sorting and product cluster data. See the fixes and features below for details.
 
