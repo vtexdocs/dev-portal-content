@@ -22,62 +22,62 @@ The following example styles a `PromoBanner` section.
 
 1. Create `src/components/PromoBanner/section.module.scss` and import the FastStore utilities. The `as u` clause assigns them the `u` namespace, which is used in each `@include`.
 
-  ```scss src/components/PromoBanner/section.module.scss
-  @use "@faststore/ui/src/styles/base/utilities" as u;
+    ```scss src/components/PromoBanner/section.module.scss
+    @use "@faststore/ui/src/styles/base/utilities" as u;
 
-  @layer components {
-    .section {
-      @include u.layout-content;
+    @layer components {
+      .section {
+        @include u.layout-content;
 
-      display: grid;
-      gap: var(--fs-spacing-3);
-      padding-block: var(--fs-spacing-5);
-      padding-inline: var(--fs-spacing-3);
-      background-color: var(--fs-color-neutral-bkg);
+        display: grid;
+        gap: var(--fs-spacing-3);
+        padding-block: var(--fs-spacing-5);
+        padding-inline: var(--fs-spacing-3);
+        background-color: var(--fs-color-neutral-bkg);
 
-      @include u.media(">=tablet") {
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        padding-inline: var(--fs-spacing-5);
+        @include u.media(">=tablet") {
+          grid-template-columns: 2fr 1fr;
+          align-items: center;
+          padding-inline: var(--fs-spacing-5);
+        }
+      }
+
+      .title {
+        @include u.truncate-title(2);
+
+        margin: 0;
+        font-size: var(--fs-text-size-title-section);
       }
     }
+    ```
 
-    .title {
-      @include u.truncate-title(2);
+    In this example:
 
-      margin: 0;
-      font-size: var(--fs-text-size-title-section);
-    }
-  }
-  ```
-
-  In this example:
-
-  - `layout-content` limits the section to the store's content width and centers it.
-  - `media(">=tablet")` applies styles at the `tablet` breakpoint and above.
-  - `truncate-title(2)` limits the title to two lines.
-  - FastStore [global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) provide consistent spacing, color, and typography values.
-  - `@layer components` places the styles in FastStore's component layer so they follow the expected cascade order.
+    - `layout-content` limits the section to the store's content width and centers it.
+    - `media(">=tablet")` applies styles at the `tablet` breakpoint and above.
+    - `truncate-title(2)` limits the title to two lines.
+    - FastStore [global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) provide consistent spacing, color, and typography values.
+    - `@layer components` places the styles in FastStore's component layer so they follow the expected cascade order.
 
 2. Import the stylesheet in the section component and apply its classes to the corresponding elements.
 
-  ```tsx src/components/PromoBanner/PromoBanner.tsx
-  import styles from "./section.module.scss";
+    ```tsx src/components/PromoBanner/PromoBanner.tsx
+    import styles from "./section.module.scss";
 
-  interface PromoBannerProps {
-    title: string;
-    description: string;
-  }
+    interface PromoBannerProps {
+      title: string;
+      description: string;
+    }
 
-  export default function PromoBanner({ title, description }: PromoBannerProps) {
-    return (
-      <section className={styles.section}>
-        <h2 className={styles.title}>{title}</h2>
-        <p>{description}</p>
-      </section>
-    );
-  }
-  ```
+    export default function PromoBanner({ title, description }: PromoBannerProps) {
+      return (
+        <section className={styles.section}>
+          <h2 className={styles.title}>{title}</h2>
+          <p>{description}</p>
+        </section>
+      );
+    }
+    ```
 
 3. Run your FastStore project locally and open a page that contains the section. The section uses a single-column layout on smaller screens and changes to two columns at the `tablet` breakpoint.
 
