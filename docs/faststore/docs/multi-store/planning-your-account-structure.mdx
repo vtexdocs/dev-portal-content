@@ -27,8 +27,6 @@ Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-
 
 The single-account model depends on the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature). A binding connects one domain to one sales channel and one locale. The sales channel sets the currency, catalog, and pricing for that domain. FastStore reads only the binding's default locale, so each language needs its own binding.
 
-> ℹ️ Learn more about this architecture in the section [Single account, multi-binding](https://developers.vtex.com/docs/guides/store-architecture#single-account-multi-binding) of the Store architecture guide.
-
 The three account-level parts of the implementation work as follows:
 
 - **CMS:** The account has one [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance. With Localization enabled, editors manage storefront content per locale in that CMS.
@@ -41,8 +39,6 @@ The three account-level parts of the implementation work as follows:
 ### Multiple accounts
 
 In the multiple accounts model, each market or brand is a separate VTEX account with its own domain, catalog, pricing, language, and currency. Catalog and back-office setup follow one of two models: a main account that owns the catalog and sells into the market accounts, or fully independent accounts.
-
-> ℹ️ Learn more about this architecture in the section [Multi-account](https://developers.vtex.com/docs/guides/store-architecture#multi-account) of the Store architecture guide.
 
 The three account-level parts of the implementation work as follows:
 
