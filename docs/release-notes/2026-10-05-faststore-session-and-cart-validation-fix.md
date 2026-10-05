@@ -1,10 +1,10 @@
 ---
 title: "FastStore: Fixed session and cart validation after region changes"
-slug: "2026-10-07-faststore-session-and-cart-validation-fix"
+slug: "2026-10-05-faststore-session-and-cart-validation-fix"
 type: "fixed"
 excerpt: "FastStore now keeps interface-only fields out of session and cart requests, restoring validation and Checkout synchronization after shoppers set their location."
-createdAt: "2026-10-07T00:00:00.000Z"
-updatedAt: "2026-10-07T00:00:00.000Z"
+createdAt: "2026-10-05T00:00:00.000Z"
+updatedAt: "2026-10-05T00:00:00.000Z"
 tags:
   - FastStore
 ---
