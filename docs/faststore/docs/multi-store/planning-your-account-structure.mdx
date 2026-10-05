@@ -29,7 +29,7 @@ The single-account model depends on the [Localization feature](https://developer
 
 > ℹ️ Learn more about this architecture in the section [Single account, multi-binding](https://developers.vtex.com/docs/guides/store-architecture#single-account-multi-binding) of the Store architecture guide.
 
-In a single-account setup, these three account-level components work as follows:
+The three account-level parts of the implementation work as follows:
 
 - **CMS:** The account has one [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance. With Localization enabled, editors manage storefront content per locale in that CMS.
 
@@ -44,7 +44,7 @@ In the multiple accounts model, each market or brand is a separate VTEX account 
 
 > ℹ️ Learn more about this architecture in the section [Multi-account](https://developers.vtex.com/docs/guides/store-architecture#multi-account) of the Store architecture guide.
 
-In a multiple-account setup, these three account-level components work as follows:
+The three account-level parts of the implementation work as follows:
 
 - **CMS:** Each account has its own CMS instance, so an editor in one market works only in that market's content. Pages, components, and media that should match across markets, such as global policies or campaign assets, are maintained in each account. Section schemas stay in the repository, and the CMS does not copy them from one account to another. After a schema change, sync it to each account: log in to that account and run [`vtex faststore cms-sync`](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms), or generate and upload the schema from that account's pipeline with the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
 - **WebOps:** Each account has its own WebOps integration, so the accounts share one repository and deploy independently. In `faststore.json`, each key is an account name and points to that account's project directory. See [Monorepo use cases](https://developers.vtex.com/docs/guides/monorepo-use-cases). How testing and production environments map to branches is covered in [Managing environments](https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments).
