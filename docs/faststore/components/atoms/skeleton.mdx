@@ -204,27 +204,27 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 ### Loading state control
 
 ```tsx
-import React from 'react'
+import React, { useState } from 'react'
 import { Skeleton } from '@faststore/ui'
 
 export default function SkeletonExample() {
-  const isLoading = true
+  const [isLoading, setIsLoading] = useState(true)
 
   return (
-    <div>
-      {isLoading ? (
-        // Loading state
-        <Skeleton
-          style={{ width: '150px', height: '100px' }}
-          border="regular"
-        />
-      ) : (
-        // Content loaded
+    <>
+      <button type="button" onClick={() => setIsLoading(false)}>
+        Load content
+      </button>
+      <Skeleton
+        loading={isLoading}
+        size={{ width: '150px', height: '100px' }}
+        border="regular"
+      >
         <div style={{ padding: '20px', background: '#f0f0f0', borderRadius: '8px' }}>
           Content loaded
         </div>
-      )}
-    </div>
+      </Skeleton>
+    </>
   )
 }
 ```
@@ -276,6 +276,8 @@ export default function SkeletonExample() {
 You can target and override `Skeleton` styles using the following data attributes:
 
 `data-fs-skeleton`
+
+`data-fs-skeleton-border="regular" | "pill" | "circle"`
 
 `data-fs-skeleton-shimmer`
 
