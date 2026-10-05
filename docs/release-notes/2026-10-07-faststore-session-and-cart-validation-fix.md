@@ -9,11 +9,13 @@ tags:
   - FastStore
 ---
 
+> ⚠️ This issue affects only FastStore `v4.9.0` and `v4.9.1`.
+
 FastStore now validates sessions and carts correctly after shoppers set their location through the region modal, popover, or slider. This fix restores cart synchronization with Checkout for affected shoppers.
 
 ## What has changed?
 
-Before, setting a postal code could save the interface-only `hasValidated` field in the shopper's session. Because this field isn't part of the session input accepted by the API, subsequent `ValidateSession` and `ValidateCartMutation` requests failed with a 500 error. The invalid session remained in IndexedDB, preventing the cart from synchronizing with Checkout until the shopper cleared their browser data.
+In the affected versions, setting a postal code could save the interface-only `hasValidated` field in the shopper's session. Because this field isn't part of the session input accepted by the API, subsequent `ValidateSession` and `ValidateCartMutation` requests failed with a 500 error. The invalid session remained in IndexedDB, preventing the cart from synchronizing with Checkout until the shopper cleared their browser data.
 
 FastStore now removes interface-only fields (`isSessionReady`, `isValidating`, and `hasValidated`) before sending session data to session validation, cart validation, and reorder requests. The same normalization is applied when updating the shopper's region or storing the session.
 
