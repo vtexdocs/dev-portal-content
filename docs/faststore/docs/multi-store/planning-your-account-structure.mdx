@@ -1,0 +1,56 @@
+---
+title: "Planning your account structure"
+excerpt: "Choose between one VTEX account with bindings and one account per market, and see what each option means for the CMS, WebOps, and app versions of a FastStore project."
+createdAt: "2026-10-02T18:19:47.246Z"
+---
+
+A multi-store project built on a [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) can serve its markets in two ways: from one VTEX account, using [bindings](https://help.vtex.com/docs/tutorials/what-is-binding), or from one VTEX account per market. This choice sets how catalog, pricing, and promotions are managed, and it determines how many CMS instances, WebOps integrations, and app-version targets the project operates.
+
+> ℹ️ In both models, the repository is organized by VTEX account: each key in [`faststore.json`](https://developers.vtex.com/docs/guides/faststore-monorepo-overview#faststorejson-file) is an account name that points to a project directory in the monorepo. Bindings don't appear in this file. They're configured on the VTEX account itself, so an account with several bindings still has a single entry in `faststore.json`.
+
+This guide compares the two models and shows what each one means for the CMS, the WebOps integration, and the app versions installed in the account.
+
+## Choosing the account structure
+
+> ⚠️ Make this choice before implementation starts. Changing the account structure after markets are live means migrating catalog, content, and deployments.
+
+A FastStore multi-store project can serve its markets from one VTEX account or from one account per market. The following table compares the two models:
+
+| Model | How it works | Suits |
+| --- | --- | --- |
+| [Single account with bindings](#single-account-with-bindings) | One VTEX account serves several storefronts. Each storefront has its own domain, bound to a [sales channel](https://help.vtex.com/en/docs/tutorials/how-trade-policies-work). Prices and promotions can differ by sales channel and are managed in the same panels. Payments, search settings, and customer data stay shared. | Markets that share core services and are operated by one team. |
+| [Multiple accounts](#multiple-accounts) | Each market or brand runs its own VTEX account, with its own catalog, pricing, promotions, and back office. | Markets that need commercial and operational autonomy, often with a separate team per market. |
+
+Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts), [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) integration, and installed app versions. Choosing one account or one account per market therefore decides whether the project runs one of each or one per market.
+
+### Single account with bindings
+
+The single-account model depends on the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature). A binding connects one domain to one sales channel and one locale. The sales channel sets the currency, catalog, and pricing for that domain. FastStore reads only the binding's default locale, so each language needs its own binding.
+
+The three account-level parts of the implementation work as follows:
+
+- **CMS:** The account has one [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance. With Localization enabled, editors manage storefront content per locale in that CMS.
+
+  > ⚠️ Localization feature works with the CMS. It's unavailable for [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+
+- **WebOps:** `faststore.json` has one entry for the account and one `discovery` path. One WebOps integration deploys that project, and every binding of the account is served by the same deployment. Bindings are configured on the account through [VTEX Support](https://help.vtex.com/en/support) and enabled in the project's `discovery.config.js`.
+- **App versions:** VTEX IO apps, such as Intelligent Search, back-end apps, and Admin apps, are installed once in that account.
+
+### Multiple accounts
+
+In the multiple accounts model, each market or brand is a separate VTEX account with its own domain, catalog, pricing, language, and currency. Catalog and back-office setup follow one of two models: a main account that owns the catalog and sells into the market accounts, or fully independent accounts.
+
+The three account-level parts of the implementation work as follows:
+
+- **CMS:** Each account has its own CMS instance, so an editor in one market works only in that market's content. Pages, components, and media that should match across markets, such as global policies or campaign assets, are maintained in each account. Section schemas stay in the repository, and the CMS does not copy them from one account to another. After a schema change, sync it to each account: log in to that account and run [`vtex faststore cms-sync`](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms), or generate and upload the schema from that account's pipeline with the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
+- **WebOps:** Each account has its own WebOps integration, so the accounts share one repository and deploy independently. In `faststore.json`, each key is an account name and points to that account's project directory. See examples in [Monorepo use cases](https://developers.vtex.com/docs/guides/monorepo-use-cases). How testing and production environments map to branches is covered in [Managing environments](https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments).
+- **App versions:** Updating each account by hand doesn't scale. Two features keep versions aligned:
+
+  | Feature | What it does |
+  | --- | --- |
+  | [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) | A parent account that sponsors child accounts and determines which Edition App they run. A sponsor of a sponsor isn't supported. |
+  | [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) | Defines which VTEX IO apps, and at which versions, are installed across every account linked to the sponsor. |
+
+Together they keep every account on the same versions of core apps, such as Intelligent Search, back-end apps, and Admin apps. Decide which account will be the sponsor before creating the others: The relationship is enabled by [VTEX Support](https://help.vtex.com/support) for a named list of accounts, and a sponsor of a sponsor isn't supported, so the hierarchy has one parent and cannot be nested later.
+
+> ℹ️ FastStore requires `vtex.edition-store@5.x` in every account of the project, including any testing accounts. Learn more in the [Before you begin](https://developers.vtex.com/docs/guides/faststore/go-live-before-you-begin) article of the Going live track.
