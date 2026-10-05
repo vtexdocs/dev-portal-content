@@ -74,7 +74,7 @@ Example:
 
 Some accounts, mostly test ones, configure bindings using the `myvtex.com` domain, for example, `myvtex.com/es`, `myvtex.com/en-us`, or `myvtex.com/brasil`.
 
-Accessing the store directly through `store.vtex.app/{locale-code}` (for example, `store.vtex.app/es` or `store.vtex.app/pt-BR`) works, and the content is correctly localized in FastStore. However, only the locale code itself works this way (such as `en-US`, `es-AR`, or `pt-BR`) — custom paths like `store.vtex.app/en` or `store.vtex.app/fr` don't work while the binding uses `myvtex.com`.
+Accessing the store directly through `store.vtex.app/{locale-code}` (for example, `store.vtex.app/es-AR` or `store.vtex.app/pt-BR`) works, and the content is correctly localized in FastStore. The complete locale code, including the language and country codes, is required. Language-only paths such as `store.vtex.app/es` and custom paths such as `store.vtex.app/en` or `store.vtex.app/fr` don't work while the binding uses `myvtex.com`.
 
 The locale switcher, however, won't work as expected with this type of binding: changing the language in the header redirects the user to the `myvtex.com` domain instead of the `vtex.app` one.
 
