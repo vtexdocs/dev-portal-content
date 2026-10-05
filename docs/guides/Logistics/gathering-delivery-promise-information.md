@@ -20,13 +20,14 @@ seeAlso:
 
 This guide walks you through the data you need to collect before rendering any UI: the available delivery zones, the available pickup points, and the resulting delivery promise suggestions for a shopper's location.
 
-## Delivery zones
+## Delivery zones and pickup points hashes
 
-Use the [`POST` Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) endpoint to retrieve the following information:
+Use the [`POST` Get delivery zones and pickup points hashes](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/zones/_search) endpoint to retrieve, in a single request, the delivery zones and pickup points available for a shopper's location, along with the hashes that represent them:
 
 - Delivery zone IDs
 - Delivery zones hash
-- Country code
+- Pickup points near the location
+- Pickup points hash
 
 Response example:
 
@@ -38,82 +39,28 @@ Response example:
          "BRA_SUBSTATE_PB_INTERIOR"
    ],
    "deliveryZonesHash": "c3e1a42f7b9d4e81aafe24ba6e7b120f",
-   "countryCode": "BRA"
-}
-```
-
-Use the `deliveryZonesHash` value when you search for delivery suggestions.
-
-## Delivery pickup points
-
-To retrieve the available pickup points for the shopper, use the [`POST` Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search) endpoint.
-
-Response example:
-
-```json
-{
-   "pickupPointDistances": [
+   "pickupPointsHash": "b92e64d0a08f4c6785e6d0319cbad19a",
+   "pickupDistances": [
          {
             "pickupId": "fulfillmentqa_vtexsp",
             "distance": 4.990988731384277,
-            "pickupName": "VTEX SP",
-            "isActive": true,
-            "address": {
-               "city": "São Paulo",
-               "neighborhood": "Itaim Bibi",
-               "number": "4440",
-               "postalCode": "04538-132",
-               "street": "Avenida Brigadeiro Faria Lima",
-               "state": "SP"
-            },
-            "businessHours": [
-               {
-                     "dayOfWeek": 0,
-                     "openingTime": "00:00:00",
-                     "closingTime": "23:59:00"
-               },
-               {
-                     "dayOfWeek": 1,
-                     "openingTime": "00:00:00",
-                     "closingTime": "23:59:00"
-               },
-               {
-                     "dayOfWeek": 2,
-                     "openingTime": "00:00:00",
-                     "closingTime": "23:59:00"
-               },
-               {
-                     "dayOfWeek": 3,
-                     "openingTime": "00:00:00",
-                     "closingTime": "23:59:00"
-               },
-               {
-                     "dayOfWeek": 4,
-                     "openingTime": "00:00:00",
-                     "closingTime": "23:59:00"
-               },
-               {
-                     "dayOfWeek": 5,
-                     "openingTime": "00:00:00",
-                     "closingTime": "23:59:00"
-               },
-               {
-                     "dayOfWeek": 6,
-                     "openingTime": "00:00:00",
-                     "closingTime": "23:59:00"
-               }
-            ]
+            "pickupName": "VTEX SP"
          }
-      ],
-   "pickupPointsHash": "b92e64d0a08f4c6785e6d0319cbad19a"
+      ]
 }
 ```
 
-Use the `pickupPointsHash` value when you search for delivery suggestions.
+Use the `deliveryZonesHash` and `pickupPointsHash` values when you search for delivery suggestions.
+
+>⚠️ Both hashes have a time to live (TTL) of 30 minutes. After this period, they expire and are no longer valid for use in the Delivery Promise Suggestions API and the Intelligent Search API. Requests sent with an expired hash may be rejected or return invalid responses.
+>
+> If a hash expires before use, generate a new one by calling this endpoint again — there is no penalty or side effect in regenerating them. We recommend that integrations relying on these hashes call this endpoint as close as possible to the moment the hashes are used, and handle the expired hash scenario by requesting new ones.
 
 ## Delivery Promise suggestions
 
 Use the [`POST` Search delivery suggestions](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/delivery-promise-suggestions/_search) endpoint with the `deliveryZonesHash` and `pickupPointsHash` values in the request body to gather the delivery promise suggestions that will be presented in your storefront. You can use this endpoint for batch processing and for scenarios that involve multiple products.
+
+>⚠️ The `deliveryZonesHash` and `pickupPointsHash` values expire 30 minutes after being generated. Requests sent with an expired hash may be rejected or return invalid responses. To get new hashes, call the [`POST` Get delivery zones and pickup points hashes](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/zones/_search) endpoint again.
 
 The following example response illustrates the data you can expect:
 
