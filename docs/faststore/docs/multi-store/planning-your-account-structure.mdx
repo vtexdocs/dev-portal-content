@@ -6,7 +6,7 @@ createdAt: "2026-10-02T18:19:47.246Z"
 
 A multi-store project built on a [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) can serve its markets in two ways: from one VTEX account, using [bindings](https://help.vtex.com/docs/tutorials/what-is-binding), or from one VTEX account per market. This choice sets how catalog, pricing, and promotions are managed, and it determines how many CMS instances, WebOps integrations, and app-version targets the project operates.
 
-> ℹ️ In both models, the repository is organized by VTEX account: each key in [`faststore.json`](https://developers.vtex.com/docs/guides/faststore-monorepo-overview#faststorejson-file) is an account name that points to a project directory in the monorepo. Bindings don't appear in this file. They are configured on the VTEX account itself, so an account with several bindings still has a single entry in `faststore.json`.
+> ℹ️ In both models, the repository is organized by VTEX account: each key in [`faststore.json`](https://developers.vtex.com/docs/guides/faststore-monorepo-overview#faststorejson-file) is an account name that points to a project directory in the monorepo. Bindings don't appear in this file. They're configured on the VTEX account itself, so an account with several bindings still has a single entry in `faststore.json`.
 
 This guide compares the two models and shows what each one means for the CMS, the WebOps integration, and the app versions installed in the account.
 
@@ -21,15 +21,15 @@ A FastStore multi-store project can serve its markets from one VTEX account or f
 | [Single account with bindings](#single-account-with-bindings) | One VTEX account serves several storefronts. Each storefront has its own domain, bound to a [sales channel](https://help.vtex.com/en/docs/tutorials/how-trade-policies-work). Prices and promotions can differ by sales channel and are managed in the same panels. Payments, search settings, and customer data stay shared. | Markets that share core services and are operated by one team. |
 | [Multiple accounts](#multiple-accounts) | Each market or brand runs its own VTEX account, with its own catalog, pricing, promotions, and back office. | Markets that need commercial and operational autonomy, often with a separate team per market. |
 
-Three parts of a FastStore implementation are scoped to the VTEX account: the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts), the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) integration, and the installed app versions. The model you choose sets how many of each the project operates.
+Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts), [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) integration, and installed app versions. Choosing one account or one account per market therefore decides whether the project runs one of each or one per market.
 
 ### Single account with bindings
 
-The single-account model depends on the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature) (Closed Beta, [FastStore v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4), CMS). A binding ties a domain to a sales channel, which carries the currency, catalog, and pricing, and to a locale. FastStore uses the default locale of each binding, so each language needs its own binding.
+The single-account model depends on the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature). A binding connects one domain to one sales channel and one locale. The sales channel sets the currency, catalog, and pricing for that domain. FastStore reads only the binding's default locale, so each language needs its own binding.
 
 > ℹ️ Learn more about this architecture in the section [Single account, multi-binding](https://developers.vtex.com/docs/guides/store-architecture#single-account-multi-binding) of the Store architecture guide.
 
-The three account-scoped parts of the implementation work as follows:
+In a single-account setup, these three account-level components work as follows:
 
 - **CMS:** The account has one [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance. With Localization enabled, editors manage storefront content per locale in that CMS.
 
@@ -44,7 +44,7 @@ In the multiple accounts model, each market or brand is a separate VTEX account 
 
 > ℹ️ Learn more about this architecture in the section [Multi-account](https://developers.vtex.com/docs/guides/store-architecture#multi-account) of the Store architecture guide.
 
-The three account-scoped parts of the implementation work as follows:
+In a multiple-account setup, these three account-level components work as follows:
 
 - **CMS:** Each account has its own CMS instance, so an editor in one market works only in that market's content. Pages, components, and media that should match across markets, such as global policies or campaign assets, are maintained in each account. Section schemas stay in the repository, and the CMS does not copy them from one account to another. After a schema change, sync it to each account: log in to that account and run [`vtex faststore cms-sync`](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms), or generate and upload the schema from that account's pipeline with the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
 - **WebOps:** Each account has its own WebOps integration, so the accounts share one repository and deploy independently. In `faststore.json`, each key is an account name and points to that account's project directory. See [Monorepo use cases](https://developers.vtex.com/docs/guides/monorepo-use-cases). How testing and production environments map to branches is covered in [Managing environments](https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments).
