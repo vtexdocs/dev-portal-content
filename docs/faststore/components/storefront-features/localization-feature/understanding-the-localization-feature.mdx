@@ -13,7 +13,7 @@ Localization helps a single FastStore project serve shoppers in different langua
 
 This guide introduces the four pillars of Localization and directs you to the documentation for planning and implementing each one.
 
-> ℹ️ This page explains the concepts and scope of Localization. To enable the feature, configure bindings, update your FastStore project, and test your locales, follow [Handling internationalization with the Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature), the main implementation guide.
+> ℹ️ This page explains the concepts and scope of Localization. To enable the feature, configure bindings, update your FastStore project, and test your locales, follow [Handling internationalization with the Localization feature](https://developers.vtex.com/docs/guides/faststore/localization-feature-handling-internationalization-with-the-localization-feature), the main implementation guide.
 
 ## How Localization works
 
@@ -34,7 +34,7 @@ flowchart LR
 
 > ℹ️ A locale represents a language and region, such as `en-US` or `pt-BR`. A binding connects a storefront domain to a locale and a Sales Channel.
 
-The [implementation guide](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature) explains how to configure this flow in WebOps, FastStore, the CMS, and your local environment.
+The [implementation guide](https://developers.vtex.com/docs/guides/faststore/localization-feature-handling-internationalization-with-the-localization-feature) explains how to configure this flow in WebOps, FastStore, the CMS, and your local environment.
 
 ## Explore the four pillars
 
@@ -50,21 +50,21 @@ The [implementation guide](https://developers.vtex.com/docs/guides/faststore/sto
   <WhatsNextCard
   title="2. Product information"
   description="Translate product names, descriptions, and product-level SEO fields through the Catalog Multi-Language API."
-  linkTo="https://developers.vtex.com/docs/guides/faststore/storefront-features-localizing-product-information"
+  linkTo="https://developers.vtex.com/docs/guides/faststore/localization-feature-localizing-product-information"
   linkTitle="Explore product information"
   />
 
   <WhatsNextCard
   title="3. Currency and availability"
   description="Use Sales Channels to control the currency, catalog scope, prices, and available products for each binding."
-  linkTo="https://developers.vtex.com/docs/guides/faststore/storefront-features-managing-currency-and-product-availability"
+  linkTo="https://developers.vtex.com/docs/guides/faststore/localization-feature-managing-currency-and-product-availability"
   linkTitle="Explore commercial settings"
   />
 
   <WhatsNextCard
   title="4. SEO"
   description="Serve localized metadata, canonical URLs, and alternate links so search engines understand every locale."
-  linkTo="https://developers.vtex.com/docs/guides/faststore/storefront-features-localizing-seo-metadata"
+  linkTo="https://developers.vtex.com/docs/guides/faststore/localization-feature-localizing-seo-metadata"
   linkTitle="Explore localized SEO"
   />
 
@@ -84,25 +84,25 @@ Use the CMS guides to complete this pillar:
 
 Product information belongs to the Catalog, not the CMS. The Catalog Multi-Language API stores localized product data, including names, descriptions, and product-level SEO fields. FastStore sends the current locale to Intelligent Search, which returns the matching catalog translation.
 
-[Learn how product localization works](https://developers.vtex.com/docs/guides/faststore/storefront-features-localizing-product-information).
+[Learn how product localization works](https://developers.vtex.com/docs/guides/faststore/localization-feature-localizing-product-information).
 
 ### Currency and product availability
 
 The binding's Sales Channel defines the commercial context for a localized storefront. It determines which currency, catalog assortment, prices, inventory, and trade policy conditions shoppers receive. Two locales can therefore show different products or currencies even when they use the same FastStore project.
 
-[Learn how Sales Channels affect currency and product availability](https://developers.vtex.com/docs/guides/faststore/storefront-features-managing-currency-and-product-availability).
+[Learn how Sales Channels affect currency and product availability](https://developers.vtex.com/docs/guides/faststore/localization-feature-managing-currency-and-product-availability).
 
 ### SEO
 
 Localized SEO combines translated catalog fields with locale-specific URLs. FastStore uses the current locale when generating titles and descriptions, and exposes canonical and alternate locale URLs to help search engines index the correct version of each page.
 
-[Learn how FastStore localizes SEO metadata](https://developers.vtex.com/docs/guides/faststore/storefront-features-localizing-seo-metadata).
+[Learn how FastStore localizes SEO metadata](https://developers.vtex.com/docs/guides/faststore/localization-feature-localizing-seo-metadata).
 
 ## Plan your implementation
 
 Localization works as a system. Before publishing a new locale, confirm that every layer is ready:
 
-1. Complete [Handling internationalization with the Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature) to enable Localization and configure the project and bindings.
+1. Complete [Handling internationalization with the Localization feature](https://developers.vtex.com/docs/guides/faststore/localization-feature-handling-internationalization-with-the-localization-feature) to enable Localization and configure the project and bindings.
 2. Configure the locale and fallback behavior in the CMS.
 3. Translate the required catalog and CMS content.
 4. Validate currency, assortment, pricing, inventory, and localized URLs.
@@ -117,7 +117,7 @@ Localization works as a system. Before publishing a new locale, confirm that eve
   <WhatsNextCard
   title="Handling internationalization with Localization"
   description="Follow the main implementation guide to prepare your account and FastStore project, configure bindings, enable the feature, and test it locally."
-  linkTo="https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature"
+  linkTo="https://developers.vtex.com/docs/guides/faststore/localization-feature-handling-internationalization-with-the-localization-feature"
   linkTitle="Open the implementation guide"
   />
 
