@@ -309,8 +309,42 @@ jira_search_first_key() {
   echo "$result" | jq -r '.issues[0].key // empty'
 }
 
+# Read the dp-github-pr-ref marker from an issue description (exact owner/repo#N).
+jira_issue_owned_pr_ref() {
+  local issue_key="$1"
+  local outfile desc
+
+  outfile="${RUNNER_TEMP:-/tmp}/jira-issue-owned-ref-${issue_key}.json"
+  if ! jira_curl "$outfile" GET \
+    "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${issue_key}?fields=description" \
+    >/dev/null; then
+    return 1
+  fi
+
+  desc=$(jq -r '.fields.description // ""' "$outfile")
+  printf '%s\n' "$desc" \
+    | grep -oE 'dp-github-pr-ref:[[:space:]]*[^[:space:]]+' \
+    | head -1 \
+    | sed -E 's/^dp-github-pr-ref:[[:space:]]*//'
+}
+
+# True when the issue is owned by this PR, or has no ownership marker yet.
+jira_issue_belongs_to_pr() {
+  local issue_key="$1"
+  local owned_ref
+
+  owned_ref=$(jira_issue_owned_pr_ref "$issue_key" || true)
+  if [ -z "$owned_ref" ]; then
+    return 0
+  fi
+
+  [ "$owned_ref" = "$PR_REF" ]
+}
+
+# Dedupe must be PR-exact. Never trust fuzzy Jira text ~ matches for PR numbers —
+# Lucene tokenizes owner/repo#N and can return another DP PR's LOC ticket.
 resolve_existing_parent_key() {
-  local key source
+  local key source owned_ref
 
   key=$(gh api \
     "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments" \
@@ -325,23 +359,19 @@ resolve_existing_parent_key() {
       "project = ${LOC_JIRA_PROJECT_KEY} AND labels = \"${PR_LABEL}\" ORDER BY created ASC" || true)
     if [ -n "$key" ]; then
       source="dp-github-pr label"
-    else
-      key=$(jira_search_first_key \
-        "project = ${LOC_JIRA_PROJECT_KEY} AND text ~ \"dp-github-pr-ref: ${PR_REF}\" ORDER BY created ASC" || true)
-      if [ -n "$key" ]; then
-        source="dp-github-pr-ref marker"
-      else
-        key=$(jira_search_first_key \
-          "project = ${LOC_JIRA_PROJECT_KEY} AND summary ~ \"\\\\[DP\\\\]\" AND text ~ \"#${PR_NUMBER}\" ORDER BY created ASC" || true)
-        if [ -n "$key" ]; then
-          source="[DP] summary and PR link text"
-        fi
-      fi
     fi
   fi
 
-  if [ -n "$key" ]; then
-    echo "Found existing ticket via ${source}: ${key}" >&2
-    echo "$key"
+  if [ -z "$key" ]; then
+    return 0
   fi
+
+  if ! jira_issue_belongs_to_pr "$key"; then
+    owned_ref=$(jira_issue_owned_pr_ref "$key" || true)
+    echo "Ignoring ${key} from ${source}: owned by ${owned_ref:-unknown}, this PR is ${PR_REF}" >&2
+    return 0
+  fi
+
+  echo "Found existing ticket via ${source}: ${key}" >&2
+  echo "$key"
 }
