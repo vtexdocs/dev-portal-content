@@ -1,0 +1,71 @@
+---
+title: "Multi-store architecture"
+excerpt: "Plan the account, repository, environment, and content decisions that a brand operating several FastStore storefronts makes before development starts."
+createdAt: "2026-09-22T16:14:09.641Z"
+---
+
+A brand that operates in several countries, or that runs more than one brand on VTEX, usually starts with one storefront per market, each built by a different team. That approach duplicates work, lets the shopping experience drift apart between markets, and makes every platform upgrade a repeated effort.
+
+This track helps you plan a multi-store FastStore program so that markets share what should be shared, such as components, design tokens, and the delivery pipeline, while keeping local control over what must stay local, such as content, catalog, and promotions.
+
+> ⚠️ Make these decisions before development starts. Changing an account structure after markets are live is significantly more expensive than choosing the right one upfront.
+
+## Decisions to make upfront
+
+A multi-store program rests on four decisions. Each one is covered by a different guide:
+
+| Decision | Question it answers | Where to start |
+| --- | --- | --- |
+| Account structure | Does each market need its own VTEX account, or can one account serve all markets through bindings? | [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multi-store-planning-your-account-structure) |
+| Repository structure | Do storefronts live in separate repositories, or in a single repository that shares code between them? | [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) |
+| Environments and deployment | How does each market get a testing environment, and which branch deploys where? | [Managing environments](https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments) |
+| Content governance | Who edits content for each market, and how is content kept isolated between markets? | [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) |
+
+The account decision comes first, because the other three follow from it. Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance and its own [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) integration, so the number of accounts determines how many content workspaces and deployment targets the program has to operate.
+
+## What is shared and what stays local
+
+A multi-store program is not an attempt to make every market identical. The goal is to draw a precise line between the two:
+
+| Layer | Typically shared | Typically local |
+| --- | --- | --- |
+| Components and design system | Component library, design tokens, section schemas | Per-market style overrides |
+| Delivery | Repository, continuous integration pipeline, release process | Deployment target account and branch |
+| Content | Section schemas that must look the same everywhere | Pages, campaigns, and media per market |
+| Commerce | Nothing inherently | Catalog, pricing, promotions, logistics, payments |
+
+Components and the delivery pipeline are shared because duplicating them is what creates drift. Commerce configuration stays local because it is the part each market's business team needs to control directly.
+
+## Next steps
+
+<Flex>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/multi-store-planning-your-account-structure"
+  title="Planning your account structure"
+  description="Understand what a single account or multiple accounts means for the CMS, WebOps, and app version governance of a FastStore program."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments"
+  title="Managing environments"
+  description="Set up testing and production environments per store, and map repository branches to the accounts they deploy to."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores"
+  title="Sharing code across stores"
+  description="Organize a shared component library in a FastStore monorepo so that improvements reach every store from a single pull request."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/developer-tools-continuous-integration"
+  title="Continuous integration for FastStore projects"
+  description="Structure a quality gate that validates every pull request, and keep CMS schema synchronization off the automatic deployment path."
+  linkTitle="See more"
+/>
+
+</Flex>

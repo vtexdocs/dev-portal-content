@@ -1,6 +1,6 @@
 ---
 title: "Configuring production and preview branches in WebOps"
-updatedAt: "2025-12-18T15:06:33.040Z"
+updatedAt: "2026-09-22T16:14:09.641Z"
 ---
 
 In this guide, you'll learn how to configure custom branches for production builds and preview deployments in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard), enabling you to use different branches for production and QA accounts from the same repository.
@@ -26,6 +26,8 @@ If you maintain separate VTEX accounts for production and QA environments, branc
 - **QA account (`mystoreqa`):** Configured to use the `homolog` branch for testing and validation.
 
 Both accounts share the same repository, but each points to its respective branch for deployments. This setup enables your QA team to test changes in the `homolog` branch without affecting production, while production deployments automatically use the stable `main` branch.
+
+> ℹ️ For guidance on structuring these environments across several stores, including why a workspace doesn't replace a separate testing account, see [Managing environments](https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments).
 
 ### Optimizing preview deployments
 

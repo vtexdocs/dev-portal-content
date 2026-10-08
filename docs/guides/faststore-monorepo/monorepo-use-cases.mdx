@@ -3,7 +3,7 @@ title: "Monorepo use cases"
 slug: "monorepo-use-cases"
 excerpt: "Explore common FastStore monorepo layouts and example faststore.json setups for single accounts, multiple stores, and shared code."
 createdAt: "2026-03-12T14:47:26.933Z"
-updatedAt: "2026-09-17T16:14:14.542Z"
+updatedAt: "2026-09-22T16:14:09.641Z"
 ---
 
 A [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) can support different storefront modules, such as Product Discovery Experience, [Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility), and [VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility), to meet the merchant's needs. You don't need to include the Product Discovery Experience (`discovery`) module if FastStore isn't your storefront.
@@ -128,16 +128,18 @@ With separate repositories, sharing code between brands or stores usually depend
         "path": "packages/store1",
         "port": 3001
       }
-    }
+    },
     "account2": {
       "discovery": {
         "path": "packages/store2",
         "port": 3002
-      },
+      }
     }
   }
 }
 ```
+
+To learn how to structure the shared code itself, see [Sharing code across stores](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores).
 
 ## Multiple brands or stores with multiple modules
 
