@@ -46,7 +46,7 @@ Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound co
           <Button
             variant="secondary"
             type="submit"
-            inverse={colorVariant === "main"}
+            inverse
           >
             Subscribe
           </Button>
@@ -188,7 +188,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Newsletter card={false} colorVariant="light">
+    <Newsletter card={false} colorVariant="accent">
       <NewsletterForm onSubmit={() => null}>
         <NewsletterHeader
           icon={<Icon name="Envelope" />}

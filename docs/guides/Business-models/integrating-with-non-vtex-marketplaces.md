@@ -58,7 +58,7 @@ For unsupported marketplaces, consider developing a custom connector.
 * The integration requires unique business logic.
 * Volume justifies development investment.
 
-> ℹ️ To develop a custom marketplace integration, see the guides [External Marketplace Integration](https://developers.vtex.com/vtex-developer-docs/docs/external-marketplace-integration-guide) and [Integration app template](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-template).
+> ℹ️ To develop a custom marketplace integration, see the guide [External Marketplace Integration](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide).
 
 ### Defining sales channels
 
