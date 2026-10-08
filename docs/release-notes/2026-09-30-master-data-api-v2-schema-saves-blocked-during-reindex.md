@@ -1,5 +1,5 @@
 ---
-title: "Master Data API v2: schema saves are blocked while a reindex is in progress"
+title: "Master Data API v2: Schema saves are blocked while a reindex is in progress"
 slug: "2026-09-30-master-data-api-v2-schema-saves-blocked-during-reindex"
 hidden: false
 type: "improved"
