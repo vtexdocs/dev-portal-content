@@ -1,9 +1,9 @@
 ---
 title: "User Rights API: Automated personal data erasure"
-slug: "2026-10-08-user-rights-api-automated-personal-data-erasure"
+slug: "2026-10-09-user-rights-api-automated-personal-data-erasure"
 hidden: false
 type: "added"
-createdAt: "2026-10-08T14:00:00.000Z"
+createdAt: "2026-10-09T14:00:00.000Z"
 excerpt: "The new User Rights API allows you to automate personal data erasure requests across VTEX applications."
 ---
 
