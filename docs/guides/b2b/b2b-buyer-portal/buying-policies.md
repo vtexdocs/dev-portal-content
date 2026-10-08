@@ -28,11 +28,23 @@ The following are the main characteristics of organization unit evaluation:
 
 ## Policy type evaluation (rule priority)
 
-Within each organization unit's dimension, rules are evaluated in ascending priority order with fixed behaviors according to the value assigned:
+Within each organization unit's dimension, rules are evaluated in ascending priority order (lower numbers first). Rules must be organized in the following order, with sequential priority values:
 
-- Priority `1` = bypass (`effectType: 0`) - checked first, approves and stops evaluation.
-- Priority `2` = deny (`effectType: 1`) - checked second, denies and stops evaluation.
-- Priority `3` = sequential workflow (`effectType: 2`) - checked last, requires approval.
+1. **Bypass rules** (`effectType: 0`) — checked first, approve and stop evaluation.
+2. **Deny rules** (`effectType: 1`) — checked after all bypass rules, deny and stop evaluation.
+3. **Sequential workflow rules** (`effectType: 2`) — checked last, require manual approval.
+
+Priority values are not fixed to specific numbers. They must be assigned sequentially across all rules, keeping the group order above. For example, with 2 bypass rules, 3 deny rules, and 2 approval rules:
+
+| Priority | Effect type | Description |
+| :--- | :--- | :--- |
+| 1 | `0` (bypass) | 1st bypass rule |
+| 2 | `0` (bypass) | 2nd bypass rule |
+| 3 | `1` (deny) | 1st deny rule |
+| 4 | `1` (deny) | 2nd deny rule |
+| 5 | `1` (deny) | 3rd deny rule |
+| 6 | `2` (sequential workflow) | 1st approval rule |
+| 7 | `2` (sequential workflow) | 2nd approval rule |
 
 >❗ If you wish to enable bypass, the dimension must have `requireAllRulesAcceptance: false` so the first matching rule executes and stops further evaluation.
 

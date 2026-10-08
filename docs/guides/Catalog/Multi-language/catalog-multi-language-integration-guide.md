@@ -4,32 +4,30 @@ slug: "catalog-multi-language-integration-guide"
 hidden: false
 excerpt: "Manage multiple languages for catalog entities."
 createdAt: "2026-01-13T00:00:00.000Z"
-updatedAt: "2026-01-30T00:00:00.000Z"
+updatedAt: "2026-09-21T00:00:00.000Z"
 ---
 
-> ℹ️ This feature is in beta, which means that we are working to improve it. If you have any questions or feedback, please contact our [Support](https://support.vtex.com/hc/en-us/requests).
-
-Learn how to create translations and integrate localized content for catalog entities with the multi-language feature.
+Learn how to create translations and integrate localized content for catalog entities using the multi-language feature.
 
 ## Overview
 
-The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language) enables the following capabilities:
+The [multi-language feature](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language/-locale-) enables the following capabilities:
 
-- **Granular content management:** Retrieve and store translations for products, SKUs, categories, brands, specifications, collections, and services.
-- **Integrated translation workflows:** It enables automated translations with a Translation Management System (TMS).
-- **Multiple storefront technologies:** Consume translations across [Store Framework](https://developers.vtex.com/docs/guides/store-framework) and [headless](https://developers.vtex.com/docs/guides/store-architecture#headless) implementations.
-- **Localized experience:** Provide customers with localized shopping experiences across multiple markets.
+- **Granular content management:** Retrieves and stores translations for products, SKUs, categories, brands, specifications, collections, and services.
+- **Integrated translation workflows:** It allows automated translations via a Translation Management System (TMS).
+- **Multiple storefront technologies:** Consumes translations across [Store Framework](https://developers.vtex.com/docs/guides/store-framework) and [headless](https://developers.vtex.com/docs/guides/store-architecture#headless) implementations.
+- **Localized experience:** Provides customers with localized shopping experiences across multiple markets.
 
-> ℹ️ To see the complete documentation of the multi-language endpoints, check the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
+> ℹ️ To see the complete documentation of the multi-language endpoints, see [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language/-locale-).
 
 ## Use cases
 
-The multi-language feature supports various integration scenarios:
+The multi-language feature supports different integration scenarios:
 
 | Use case | Description |
 | :--- | :--- |
 | Multilingual storefront | Displays translated product names, descriptions, and specifications based on the customer's locale as identified by the storefront. |
-| TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#overview). |
+| TMS integration | Connects your Translation Management System (TMS) to automatically push and pull translations via the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api). |
 | Business expansion | Seamlessly adapts your catalog for new geographic markets without duplicating products. |
 | SEO optimization | Provides localized meta descriptions, keywords, and URL slugs for better search engine rankings in each market. |
 | Headless commerce | Fetches translated catalog data for headless storefront applications. |
@@ -40,8 +38,8 @@ When you send translated content using the multi-language feature, the workflow 
 
 ```mermaid
 flowchart LR
-    A[1. Catalog system <br> translation ingestion] --> B[2. Indexing]
-    B --> C[3. Storefront <br> display]
+    A[1. Catalog system translation ingestion] --> B[2. Indexing]
+    B --> C[3. Storefront display]
 ```
 
 ### Step 1: Catalog system translation ingestion
@@ -54,7 +52,7 @@ Intelligent Search indexes or reindexes the translated entity content to make it
 
 ### Step 3: Storefront display
 
-The storefront components (in this case, Store Framework and Checkout) query [Intelligent Search](https://help.vtex.com/docs/tracks/overview-intelligent-search) and the Catalog system at render time, so it automatically retrieves and displays the translations according to the customer's selected locale. No manual configuration or synchronization is needed.
+The storefront components (in this case, Store Framework and Checkout) query [Intelligent Search](https://help.vtex.com/docs/tracks/overview-intelligent-search) and the Catalog system at render time, automatically retrieving and displaying translations based on the customer's selected locale. No manual configuration or synchronization is needed.
 
 > ℹ️ The available storefront solutions for the multi-language feature are Store Framework and headless implementations.
 
@@ -78,7 +76,7 @@ For most storefront implementations, Intelligent Search is the recommended appro
 | Store Framework | ✅ Yes (default behavior) |
 | Headless with IS | ✅ Yes |
 | CMS Portal (Legacy) | ⚠️ May require additional configuration |
-| FastStore | ❌ Not available |
+| FastStore | ✅ Yes (Closed Beta) |
 
 ### Option 2: Via Catalog API (direct fetch)
 
@@ -94,16 +92,15 @@ See below the implementation by storefront type for consuming localized content:
 
 - [Store Framework](#store-framework-implementation)
 - [Headless](#headless-implementation)
-
-> ℹ️ The multi-language feature is not available for FastStore.
+- [FastStore](#faststore-implementation)
 
 ### Store Framework implementation
 
-> ⚠️ To enable the multi-language feature for Store Framework in your store, submit a request via [Support](https://help.vtex.com/en/support).
+> ⚠️ To enable the multi-language feature for Store Framework in your store, submit a request with [Support](https://help.vtex.com/en/support).
 
 For stores built with [Store Framework](https://developers.vtex.com/docs/guides/store-framework), localized content is consumed automatically:
 
-1. **Locale detection:** The store detects the consumer's locale from the URL binding (e.g., `store.com/es-ES/`) or browser settings.
+1. **Locale detection:** The store detects the consumer's locale from the URL binding (for example, `store.com/es-ES/`) or browser settings.
 2. **Automatic translation:** Intelligent Search returns translated content for the detected locale.
 3. **Component rendering:** Store Framework components (product shelf, product details, search results) display the translated content without additional configuration.
 
@@ -118,7 +115,7 @@ For headless storefronts, you either use the [Intelligent Search API](https://de
 Query Intelligent Search with the desired locale to receive translated results:
 
 ```bash
-curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/io/_v/api/intelligent-search/product_search?locale=es-ES&query=camiseta" \
+curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/intelligent-search/v1/product-search?locale=es-ES&query=tshirt" \
   -H "Accept: application/json"
 ```
 
@@ -133,11 +130,17 @@ curl -X GET "https://{accountName}.vtexcommercestable.com.br/api/catalog_system/
   -H "X-VTEX-API-AppToken: {appToken}"
 ```
 
+### FastStore implementation
+
+> ⚠️ To enable the multi-language feature for FastStore in your store, submit a request with [Support](https://help.vtex.com/en/support).
+
+The complete implementation for FastStore is described in the [Handling internationalization with the Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature) guide.
+
 ## Activation
 
-Open a [support ticket](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they will contact you to inform you that you can start using the feature.
+Open a ticket with [support](https://help.vtex.com/en/support) requesting the activation of the Catalog multi-language feature for your account. Once the VTEX team activates it, they'll contact you to inform you that you can start using the feature.
 
-> ❗ The simultaneous use of both the multi-language APIs and Messages APIs (GraphQL) is not supported for catalog entities. Therefore, once the new feature is activated, you will no longer be able to manage translations using GraphQL.
+> ❗ The simultaneous use of both the multi-language APIs and Messages APIs (GraphQL) isn't supported for catalog entities. Therefore, once the new feature is activated, you'll no longer be able to manage translations using GraphQL.
 
 ## Permissions
 
@@ -221,7 +224,7 @@ See below an example of how the multi-language feature [works for a product](htt
 
 ### Retrieving translations for a product
 
-After creating translations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
+After creating translations for an entity, you can use the `GET` endpoint to retrieve them. See below an example of how to [retrieve translations for a product](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language/-locale-).
 
 **Method:** `GET`
 

@@ -4,12 +4,13 @@ slug: "2026-04-02-faststore-webops-support-for-github-enterprise-accounts-with-a
 excerpt: "FastStore WebOps now supports GitHub Enterprise accounts with custom domains, so you can connect your FastStore project to an existing GitHub Enterprise infrastructure."
 type: "added"
 createdAt: "2026-04-02T13:48:24.227Z"
+updatedAt: "2026-04-27T14:48:52.586Z"
 tags:
   - FastStore
   - WebOps
 ---
 
-[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) onboarding now includes support for GitHub Enterprise, so you can connect your storefront to enterprise GitHub instances with custom domains.
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) onboarding now includes support for GitHub Enterprise so that you can connect your storefront to enterprise GitHub instances with custom domains.
 
 > ℹ️ **GitHub Enterprise support is currently in open beta.** If you want to use a GitHub Enterprise instance for your FastStore project, please contact [VTEX Support](https://help.vtex.com/support).
 
@@ -27,7 +28,7 @@ If you want to use a GitHub Enterprise instance for your FastStore project, plea
 
 Once enabled, follow these steps to set up FastStore WebOps with GitHub Enterprise:
 
-1. In the **Git Provider** section of the onboarding process, select **Custom Domain** to connect to a GitHub Enterprise instance.
+1. In the **Git Provider** section of the onboarding process, select **Custom domain** to connect to a GitHub Enterprise instance.
 
 2. Enter your GitHub Enterprise domain. For example, `{enterpriseName}.ghe.com`, where `{enterpriseName}` is the name of your GitHub Enterprise account.
 
@@ -37,4 +38,4 @@ Once enabled, follow these steps to set up FastStore WebOps with GitHub Enterpri
 
 5. Click **Install** to complete the integration, then proceed with repository selection (create new or select existing).
 
-For detailed instructions, see the [Starting the Project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-setting-up-the-project) guide.
+For detailed instructions, see the guide [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project#step-2-setting-up-integrations).

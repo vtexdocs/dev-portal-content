@@ -96,8 +96,8 @@ VTEX Commerce Platform provides a set of core commerce out-of-the-box features f
  </thead>
  <tbody>
   <tr>
-    <td>Headless CMS</td>
-    <td><a href="https://developers.vtex.com/docs/guides/faststore/headless-cms-overview">Headless CMS</a> is part of our <a href="https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore">FastStore toolkit</a>. It allows merchants to store content in a decoupled data layer and deliver it as structured data to a VTEX store with FastStore via API.</td>
+    <td>Headless CMS (legacy)</td>
+    <td><a href="https://developers.vtex.com/docs/guides/faststore/headless-cms-overview">Headless CMS (legacy)</a> is part of our <a href="https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore">FastStore toolkit</a>. It allows merchants to store content in a decoupled data layer and deliver it as structured data to a VTEX store with FastStore via API.</td>
     <td>Requires implementation</td>
   </tr>
   <tr>

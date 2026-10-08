@@ -6,11 +6,11 @@ createdAt: "2020-07-03T14:59:47.729Z"
 updatedAt: "2020-10-06T20:06:22.306Z"
 ---
 
-BTG 360 uses behavioral targert technology so you can achieve even more assertive results
-with email marketing campaigns based on browsing and / or purchasing behavior of each
-one of the registered users in your lists.
+BTG 360 uses behavioral target technology so you can achieve even more assertive results
+with email marketing campaigns based on browsing and/or purchasing behavior of each
+of the registered users in your lists.
 
-For more information please visit, [AllIn](https://allinmail.com.br/) website.
+For more information, please visit the [AllIn](https://allinmail.com.br/) website.
 
 ## How to install
 

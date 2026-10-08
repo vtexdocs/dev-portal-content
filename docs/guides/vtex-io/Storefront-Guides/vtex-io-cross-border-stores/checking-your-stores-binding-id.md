@@ -8,14 +8,14 @@ updatedAt: "2020-10-07T14:32:47.618Z"
 
 If your store is a [Multistore](https://help.vtex.com/en/tutorial/creating-multi-store-multi-domain--tutorials_510?locale=en) or a Cross-border one, it's important to know the `id` values of its related `bindings`'s.
 
-Hence, for a step by step on how to access this information, check the following section.
+Follow the steps below to access this information.
 
 ## Instructions
 
 1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.admin-graphql-ide@3.x` app using your terminal.
 2. Access the **GraphQL admin IDE**.
 3. From the dropdown list, choose the `vtex.tenant-graphql@0.x.x` app.
-4. Write the following query command in the text box that is displayed:
+4. Enter the following query in the text box:
 
 ```gql
 query {
@@ -29,7 +29,7 @@ query {
 }
 ```
 
-The expected response is a JSON object, as in:
+The expected response is a JSON object, as shown below:
 
 ```json
 {
@@ -57,4 +57,4 @@ The expected response is a JSON object, as in:
 }
 ```
 
-That's all! Save the returned response as this information might be useful when managing your VTEX account.
+Save the response, as this information may be useful when managing your VTEX account.

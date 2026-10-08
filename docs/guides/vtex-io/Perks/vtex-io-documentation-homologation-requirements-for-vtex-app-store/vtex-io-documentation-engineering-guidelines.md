@@ -59,9 +59,9 @@ Nevertheless, if you identify any security breaches after publishing your app, t
 
 Once the new version is approved, the app will be available again in the VTEX App Store.
 
-### Hardcoding VTEX appKey/appToken
+### Don’t hardcode VTEX API key and API token
 
-Having an appKey/appToken exposed in your code can cause serious security issues, like unwanted access. Instead of using a VTEX appKey/appToken pair, apps should use the existing tokens (`ctx.authToken`,  `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken`). For more information, see [Connecting to VTEX Core Commerce APIs](https://developers.vtex.com/docs/guides/how-to-connect-with-vtex-core-commerce-apis-using-vtex-io#steps).
+Having an API key / API token pair exposed in your code can cause serious security issues, like unwanted access. Instead of using a VTEX API key / API token pair, apps should use the existing tokens (`ctx.authToken`,  `ctx.vtex.storeUserAuthToken` or `ctx.vtex.adminUserAuthToken`). For more information, see [Connecting to VTEX Core Commerce APIs](https://developers.vtex.com/docs/guides/how-to-connect-with-vtex-core-commerce-apis-using-vtex-io#steps).
 
 ### Using an app token for a user-initiated action
 
@@ -71,13 +71,13 @@ For user-initiated actions, apps should use either `ctx.vtex.storeUserAuthToken`
 
 Outbound access policies (`outbound-access`) to VTEX resources should follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). In short, you only give access to what is really needed. For instance, the `path` should not be configured as `*`. See an example [here](https://github.com/vtex-apps/store-graphql/blob/684dcbbbd6e9cdbd121afd7802200856cb952d2b/manifest.json#L107-L112) of how it should be done.
 
-### Do not expose private information through public routes
+### Don't expose private information through public routes
 
 As the name suggests, public routes do not require authentication when accessed from the frontend. Consequently, they should never reveal data sourced from private APIs, such as displaying a list of orders directly to the frontend. In this sense, a common mistake is failing to restrict routes intended exclusively for Admin usage. Additionally, keep in mind that GraphQL APIs are public by default, necessitating cautious schema design to avoid queries that inadvertently expose confidential information.
 
 Access to REST APIs should be restricted using [policies](https://developers.vtex.com/docs/guides/vtex-io-documentation-policies#resource-based-policies). Access to GraphQL APIs should be restricted using directives, either [@auth](https://github.com/vtex/node-vtex-api/blob/08ea11d380997f5abf02455487b342caa74b2001/src/service/worker/runtime/graphql/schema/schemaDirectives/Auth.ts#L66-L75) or a custom-made one.
 
-### Isolate data between tenants
+### Isolating data between tenants
 
 Single-tenant external systems should be used carefully. Data from one tenant must always be isolated from data from another tenant to prevent leakage and unwanted access. The isolation method will depend on the external system. One possible solution is to use the name (or other identifier) of the tenant in routes or as a parameter for access control or to define how the data is managed.
 
@@ -85,11 +85,25 @@ Single-tenant external systems should be used carefully. Data from one tenant mu
 
 ### Persisting PII within VTEX
 
-If using Master Data to store Personal Identifiable Information (PII), a mechanism must be in place to ensure compliance with the [Right to be Forgotten](https://en.wikipedia.org/wiki/Right_to_be_forgotten) or other similar data-protection practices. Possible solutions are to provide an option or endpoint in the app that erases the data, for instance, by using a delete operation with our [Master Data Client](https://developers.vtex.com/docs/guides/create-master-data-crud-app) or through the API ([Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-), [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)).
+If using Master Data to store Personal Identifiable Information (PII), it is recommended that the merchant implements a mechanism to ensure compliance with the [right to erasure](https://help.vtex.com/en/docs/tutorials/data-subject-rights) (also known as the Right to be Forgotten) under applicable data-protection regulations, such as GDPR and LGPD.
+
+Possible solutions are to provide an option or endpoint in the app that erases the data, for instance, by using a delete operation with our [Master Data Client](https://developers.vtex.com/docs/guides/create-master-data-crud-app) or through the API ([Master Data v1](https://developers.vtex.com/docs/api-reference/masterdata-api#delete-/api/dataentities/-acronym-/documents/-id-), [Master Data v2](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)).
+
+> ⚠️ **Deletion scope**
+>
+> This mechanism must not be limited to Master Data. If your app persists PII anywhere else — including its own external database, logs, caches, or backups — it must also erase that data within a reasonable, defined timeframe upon request.
 
 ### Sending PII to external service
 
-We should ensure that all PII being shared externally is strictly necessary for the app to work. If you have any questions, reach out to us [via ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM).
+It is recommended that the Merchant ensures that all PII being shared externally follows the [principle of data minimization, meaning that](https://developers.vtex.com/docs/guides/data-privacy) only the data strictly necessary for the app to work should be sent to third parties.
+
+If your app shares PII with a third-party processor, check with your legal/compliance team whether a Data Processing Agreement (DPA) or equivalent contractual safeguard is required between your company and that third party.
+
+If you have any questions, reach out to us [via ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM).
+
+### Restricting access to PII stored in Master Data
+
+It is not recommended to expose Master Data endpoints directly to the frontend using API key / API token authentication. When your app needs to read or write PII stored in the CL or AD entities from a storefront context, use the SafeData app, as it validates that the shopper token making the request matches the owner of the data before allowing access.
 
 ## Usability
 

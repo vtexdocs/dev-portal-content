@@ -14,15 +14,15 @@ Here's a sneak peek at the key changes made in the last week:
 
 ### New features 🚀
 
-- [Storefront page customization by URL](storefront-page-customization-by-url.md) - Customize your store through Storefront faster by simply navigating to the desired page using its URL.
-- [Product Identifier component](product-identifier-component.md) - Display products/SKU IDs and reference anywhere on your Product page, Shelf and Search Results.
-- [Search Bar component behavior](search-bar-component-behavior.md) - Use its new prop as `true` and enable store users to search by the desired category, brand and collection.
+- [Storefront page customization by URL](https://developers.vtex.com/updates/release-notes/storefront-page-customization-by-url) - Customize your store through Storefront faster by simply navigating to the desired page using its URL.
+- [Product Identifier component](https://developers.vtex.com/updates/release-notes/product-identifier-component) - Display products/SKU IDs and reference anywhere on your Product page, Shelf and Search Results.
+- [Search Bar component behavior](https://developers.vtex.com/updates/release-notes/search-bar-component-behavior) - Use its new prop as `true` and enable store users to search by the desired category, brand and collection.
 
 ### Improvements :heavy_plus_sign:
 
-- [Warning disclaimer when in master](warning-disclaimer-when-in-master.md) - Storefront now send a warning when editing a store in a master workspace.
-- [Search query](search-query.md) - The Search component now takes 50% less time to display results to users.
-- [Shelf rendering](shelf-rendering.md) - The Shelf component now has a faster user loading time.
+- [Warning disclaimer when in master](https://developers.vtex.com/updates/release-notes/warning-disclaimer-when-in-master) - Storefront now send a warning when editing a store in a master workspace.
+- [Search query](https://developers.vtex.com/updates/release-notes/search-query) - The Search component now takes 50% less time to display results to users.
+- [Shelf rendering](https://developers.vtex.com/updates/release-notes/shelf-rendering) - The Shelf component now has a faster user loading time.
 
 ### Notable bug fixes :bug:
 

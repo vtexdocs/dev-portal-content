@@ -4,12 +4,12 @@ hidden: false
 slug: "comparing-headless-cms-legacy-and-cms-features"
 createdAt: "2026-01-26T12:50:00.813Z"
 updatedAt: "2026-03-02T11:20:00.813Z"
-excerpt: "Understand the differences between the legacy Headless CMS and the CMS, including content modeling, editing workflows, localization, media management, and technical infrastructure."
+excerpt: "Understand the differences between Headless CMS (legacy) and the CMS, including content modeling, editing workflows, localization, media management, and technical infrastructure."
 ---
 
 The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
 
-Before diving into the technical details, it's important to understand the high-level differences between the CMS and [Headless CMS (Legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview):
+Before diving into the technical details, it's important to understand the high-level differences between the CMS and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview):
 
 - [Content modeling](#content-modeling): How content schemas are defined and structured, including Content Types, components, and capabilities such as referencing and extension.
 - [Content editing and publishing](#content-editing-and-publishing): The authoring experience for content editors, including the CMS interface in the Admin, search capabilities, and content lifecycle management.
@@ -23,7 +23,7 @@ Before diving into the technical details, it's important to understand the high-
 
 Content modeling defines how content is structured and reused across your storefront. Both content management platforms use [JSON Schema](https://json-schema.org/) as the underlying technology, but the CMS introduces schema reusability and content relationships, allowing you to reuse the same content across multiple pages or components without duplication.
 
-| Feature | Headless CMS (Legacy) | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :----: | :----: |
 | **Content Types** | ✅ | ✅ |
 | **Components** | ✅ | ✅ |
@@ -45,7 +45,7 @@ Content modeling defines how content is structured and reused across your storef
 
 Content editing capabilities determine how content editors interact with the CMS interface.
 
-| Feature | Headless CMS (Legacy) | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :----: | :----: |
 | **Content management (Admin)** | ✅ | ✅ |
 | **Content search and filtering** | ✅ | ✅ |
@@ -88,7 +88,7 @@ Content editing capabilities determine how content editors interact with the CMS
 
 - **Multi-user awareness**: The CMS provides features that show when multiple users are editing the same content, helping prevent conflicts and facilitating team collaboration.
 
-- **Content grouping (Projects and Stores)**: Both platforms allow organizing content by projects (Headless CMS) and Stores (CMS), enabling multi-store and multi-brand content management within a single account.
+- **Content grouping (Projects and Stores)**: Both platforms allow organizing content by projects (Headless CMS (legacy)) and Stores (CMS), enabling multi-store and multi-brand content management within a single account.
 
 - **Content approval workflow**: The CMS supports content approval workflows through its versioning and role-based permission system. Editors can submit content for review, and approvers can review changes on branches before they are merged and published.
 
@@ -96,7 +96,7 @@ Content editing capabilities determine how content editors interact with the CMS
 
 Localization capabilities determine how content is adapted for different languages and regions. The CMS provides multi-language support with locale management, fallback rules, and character encoding for international content.
 
-| Feature | Headless CMS (Legacy) | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :----: | :----: |
 | **Locales** | ❌ | ✅ |
 | **Default and automatic language fallback rules** | ❌ | ✅ |
@@ -115,7 +115,7 @@ Localization capabilities determine how content is adapted for different languag
 
 Media management capabilities define how images, videos, and other assets are stored, organized, and used across content. Both platforms support media galleries for common image formats and for embedding external videos.
 
-| Feature | Headless CMS (Legacy) | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :----: | :----: |
 | **Media Gallery** | ✅ | ✅ |
 | **Image support** | ✅ PNG, JPG, JPEG, GIF, SVG, and WebP | ✅ PNG, JPG, JPEG, GIF, SVG, and WebP |
@@ -134,14 +134,13 @@ Media management capabilities define how images, videos, and other assets are st
 
 Storefront integration capabilities determine which frontend frameworks and technologies can consume content from the CMS.
 
-| Feature | Headless CMS (Legacy) | CMS |
+| Feature | Headless CMS (legacy) | CMS |
 | :---- | :----: | :----: |
 | **Headless** | ✅ | ⚒️ *Coming soon* |
 | **Store Framework** | ❌ | ❌ |
 | **FastStore v1 and v2** | ✅ | ❌ |
 | **FastStore v3** | ✅ | ✅ |
-
-<!-- TODO: Once FastStore v4 is available, add a row for it in this table. -->
+| **FastStore v4** | ❌ | ✅ |
 
 ## Development tools and permissions
 

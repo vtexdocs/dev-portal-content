@@ -23,11 +23,11 @@ It is possible to install the app in your store either by using the VTEX App Sto
 
 ### Using VTEX IO CLI
 
-1. [Install](/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.onesignal@1.x` app. You can confirm that the app has now been successfully installed by running the `vtex ls` command.
+1. [Install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) the `vtex.onesignal@1.x` app. You can confirm that the app has now been successfully installed by running the `vtex ls` command.
 2. Access the **Apps** section in your account's admin page and look for the OneSignal box. Once you find it, click on the box.
-4. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your **App ID**.
-5. Click on **Save**.
+3. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your **App ID**.
+4. Click on **Save**.
 
 > ℹ️️ The App ID works as an account identifier and should be provided by the OneSignal solution.
 
-> ⚠️ To successfully use this native integration in your store, you will need to [deactivate the native service worker provided by VTEX IO](/docs/guides/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker).
+> ⚠️ To successfully use this native integration in your store, you will need to [deactivate the native service worker provided by VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker).

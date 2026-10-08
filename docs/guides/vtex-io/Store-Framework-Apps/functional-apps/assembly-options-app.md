@@ -7,7 +7,7 @@ updatedAt: "2022-06-23T14:21:02.843Z"
 ---
 > ⚠ This app is available only for stores developed in [VTEX IO](https://vtex.com/br-pt/store-framework/).
 
-At VTEX, [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) consist on creating [attachments](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm) for complex scenarios, where it is necessary to offer various combinations of SKUs, quantities, additional items and costs.
+At VTEX, [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) consist of creating [attachments](https://help.vtex.com/en/tutorial/what-is-an-attachment--aGICk0RVbqKg6GYmQcWUm) for complex scenarios, where it is necessary to offer various combinations of SKUs, quantities, additional items and costs.
 
 The **Assembly Options** app provides an interface on VTEX Admin to create and manage product customization options available to customers in a specific store.  This experience aims to offer a simple and easy-to-use alternative to the [manual configuration](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH#attachments) available through **Catalog > Attachments** using a certain attachment syntax.
 

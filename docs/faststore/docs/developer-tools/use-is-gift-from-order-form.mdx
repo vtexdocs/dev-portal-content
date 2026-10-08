@@ -1,0 +1,70 @@
+---
+title: "Handling gift items in the cart"
+---
+
+> ⚠️ This is an experimental feature.
+
+Correctly identifying gift items is important for showing the right prices, applying promotions, and displaying the correct messages to buyers. The `useIsGiftFromOrderForm` flag controls how FastStore detects gift items in the cart:
+
+| | `useIsGiftFromOrderForm: false` (default) | `useIsGiftFromOrderForm: true` |
+|---|---|---|
+| **Detection method** | Checks if `item.price === 0` | Reads `item.isGift` from the Order Form |
+| **Best for** | Stores where gift items always have a zero price | Stores where gift items may have a non-zero price but are flagged in the Order Form |
+
+When set to `true`, the `isGift` field is exposed on the `StoreOffer` GraphQL type and resolved from the VTEX Order Form. The cart SDK uses this value to separate gift items from regular items and calculate correct totals.
+
+## Before you begin
+
+This feature requires the latest version of FastStore packages. Make sure you update them before enabling the flag. Update the FastStore packages to the latest version by following these steps:
+
+1. Open your store project in a code editor.
+2. Open a terminal and run the following command to update the FastStore version:
+
+```sh
+yarn upgrade -L --scope @faststore
+```
+## Instructions
+
+### Step 1 - Enable `useIsGiftFromOrderForm`
+
+1. Open your `discovery.config.js` file.
+2. In the `experimental` object, set `useIsGiftFromOrderForm` to `true`.
+
+```js discovery.config.js
+...
+experimental: {
+  ...
+  useIsGiftFromOrderForm: true,
+}
+```
+
+### Step 2 - Validate gift items in the cart
+
+Before deploying the new flag to your live store, test it locally, as it changes how gift items are detected across the entire cart.
+
+In the terminal, run:
+
+```sh
+yarn dev
+```
+
+### Step 3 - Validate gift items in the cart
+
+With the local server running, check if gift items display correctly:
+
+1. Add a product that is configured as a gift in the VTEX Order Form to your cart.
+2. Open the minicart and confirm that:
+   - The gift icon is displayed next to the item.
+   - The item is labeled as free (for example, with a **Free** tag).
+3. Proceed to checkout and check if the gift items are correctly excluded from the cart subtotal.
+
+If items aren't displaying as gifts, check if the `isGift` property is being returned correctly in your VTEX Order Form and if your GraphQL queries include the `isGift` field on `StoreOffer`.
+
+### Step 4 - Deploy the changes
+
+Once you have validated the behavior locally, deploy the changes to your production store:
+
+1. Commit the changes to your `discovery.config.js` file.
+2. Push the changes to the main branch of your repository.
+
+This triggers a [WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) build. Once it completes, the `useIsGiftFromOrderForm` flag will be active in your live store.

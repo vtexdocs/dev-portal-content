@@ -228,18 +228,3 @@ The endpoint below notifies the carrier of the dispatched package information, i
 The endpoint below updates tracking events for pending deliveries using a list of tracking codes.
 
 * [POST - Tracking Events with App](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
-
-### VTEX Tracking (independent App)
-
-[VTEX Tracking](https://vtex.com/br-pt/vtex-tracking/) is an app that enables the merchant to control and manage deliveries in real-time, having visibility of indicators like the driver's location and order delivery status. Shoppers can also keep up with deliveries in real-time. Currently, the solution is available exclusively in Brazil.
-
->❗ We strongly recommend that a call to a VTEX Tracking GET endpoint is made only once every 6 hours. Retrieving data from the same endpoint more than once during a 6-hour window represents a load to our API that will slow down the overall usage of systems.
-
-* [POST - Asynchronous Login](https://developers.vtex.com/docs/api-reference/tracking#post-/auth)
-* [PUT - Remove Packing List](https://developers.vtex.com/docs/api-reference/tracking#put-/services)
-* [POST - Post Delivery Service](https://developers.vtex.com/docs/api-reference/tracking#post-/services)
-* [GET - Get Delivery Services List](https://developers.vtex.com/docs/api-reference/tracking#get-/services)
-* [GET - Get Delivery Service by ID](https://developers.vtex.com/docs/api-reference/tracking#get-/services/-idDeliveryService-)
-* [POST - Post Delivery Service With Route Scheduling](https://developers.vtex.com/docs/api-reference/tracking#post-/services/routes)
-* [GET - Get Delivery Services List by Route](https://developers.vtex.com/docs/api-reference/tracking#get-/services/routes)
-* [GET - Get Delivery Service by Invoice](https://developers.vtex.com/docs/api-reference/tracking#get-/services/invoice)

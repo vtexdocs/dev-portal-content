@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:48.350Z"
 updatedAt: "2020-11-10T14:41:34.438Z"
 ---
 
-This is a Iubenda first party integration app. The [solution](https://www.iubenda.com/en/?utm_source=adwords&utm_medium=ppc&utm_campaign=aw_brand_global_exact&utm_term=iubenda&utm_content=336331123145&gclid=EAIaIQobChMI38Tz0Jqg6QIVlwyRCh3KoQtkEAAYASAAEgKtK_D_BwE) is integrated with the IAB TCF and US Privacy Framework and it is responsible for managing consent preferences for the ePrivacy, GDPR, and CCPAntegrated.
+This is an Iubenda first party integration app. The [solution](https://www.iubenda.com/en/?utm_source=adwords&utm_medium=ppc&utm_campaign=aw_brand_global_exact&utm_term=iubenda&utm_content=336331123145&gclid=EAIaIQobChMI38Tz0Jqg6QIVlwyRCh3KoQtkEAAYASAAEgKtK_D_BwE) is integrated with the IAB TCF and US Privacy Framework and it is responsible for managing consent preferences for the ePrivacy, GDPR, and CCPA.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-iubenda-0.png)
 

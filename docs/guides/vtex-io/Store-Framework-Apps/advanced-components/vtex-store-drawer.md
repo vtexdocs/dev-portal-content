@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:47.724Z"
 updatedAt: "2022-06-13T17:20:27.990Z"
 ---
 
-This component allows you to have a sliding drawer for your menus. This is specially handy for mobile layouts.
+This component allows you to have a sliding drawer for your menus. This is especially handy for mobile layouts.
 
 ## Configuration
 
