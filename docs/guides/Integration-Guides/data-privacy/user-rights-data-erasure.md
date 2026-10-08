@@ -14,7 +14,7 @@ The [User Rights API](https://developers.vtex.com/docs/api-reference/user-rights
 
 Instead of manually processing each erasure request, you submit the user's email, receive a job ID, and poll for status updates until the deletion is complete.
 
-> ⚠️ This data erasure flow applies only to non-corporate shoppers. They don't apply to B2B buyers or Admin users.
+> ⚠️ This data erasure flow applies only to non-corporate shoppers. It doesn't apply to B2B buyers or Admin users.
 
 > ℹ️ This API handles personal data that is standard to the VTEX platform. For custom data stored in [Master Data](https://help.vtex.com/en/tutorial/master-data--4otjBnR27u4WUIciQsmkAw) entities, follow the process described in [Erasing customer data](https://help.vtex.com/docs/tutorials/erasing-customer-data).
 
