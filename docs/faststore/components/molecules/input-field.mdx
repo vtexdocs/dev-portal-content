@@ -20,11 +20,14 @@ The `InputField` is a text field component to get user inputs. The component wra
         id="inputfield-error"
         error="Error Message"
       />
-      <InputField label="Input w/ Action" id="inputfield-action" actionable />
+      <InputField label="Input with action" id="inputfield-action" value="SAVE10" actionable onSubmit={() => {}} onClear={() => {}} />
       <InputField
         label="Input w/ Action and Error"
         id="inputfield-action-error"
         actionable
+        value="SAVE10"
+        onSubmit={() => {}}
+        onClear={() => {}}
         error="Error Message"
       />
       <InputField label="Input Disabled" id="inputfield-disabled" disabled />
@@ -38,11 +41,14 @@ The `InputField` is a text field component to get user inputs. The component wra
       id="inputfield-error"
       error="Error Message"
     />
-    <InputField label="Input w/ Action" id="inputfield-action" actionable />
+    <InputField label="Input with action" id="inputfield-action" value="SAVE10" actionable onSubmit={() => {}} onClear={() => {}} />
     <InputField
       label="Input w/ Action and Error"
       id="inputfield-action-error"
       actionable
+      value="SAVE10"
+      onSubmit={() => {}}
+      onClear={() => {}}
       error="Error Message"
     />
     <InputField label="Input Disabled" id="inputfield-disabled" disabled />
@@ -81,17 +87,17 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <InputField label="Input w/ Action" id="inputfield-action" actionable />
+      <InputField label="Coupon code" id="inputfield-action" value="SAVE10" actionable onSubmit={() => {}} onClear={() => {}} />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    <InputField label="Input w/ Action" id="inputfield-action" actionable />
+    <InputField label="Coupon code" id="inputfield-action" value="SAVE10" actionable onSubmit={() => {}} onClear={() => {}} />
     ```
   </Tab>
 </Tabs>
 
-#### Actionable w/ Error
+#### Error
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -114,7 +120,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
-#### Error
+#### Actionable with error
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -123,6 +129,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
         label="Input w/ Action and Error"
         id="inputfield-action-error"
         actionable
+        value="INVALID"
+        onSubmit={() => {}}
+        onClear={() => {}}
         error="Error Message"
       />
     </OverviewSection>
@@ -133,6 +142,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
       label="Input w/ Action and Error"
       id="inputfield-action-error"
       actionable
+      value="INVALID"
+      onSubmit={() => {}}
+      onClear={() => {}}
       error="Error Message"
     />
     ```

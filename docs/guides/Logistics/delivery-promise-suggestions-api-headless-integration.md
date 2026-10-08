@@ -83,10 +83,8 @@ sequenceDiagram
 
     
     Shopper->>Storefront: Provide ZIP code or geo-location
-    Storefront->>Delivery Promise Suggestions API: POST Search delivery zones
-    Delivery Promise Suggestions API-->>Storefront: deliveryZonesHash
-    Storefront->>Delivery Promise Suggestions API: POST Search pickup points
-    Delivery Promise Suggestions API-->>Storefront: pickupPointsHash
+    Storefront->>Delivery Promise Suggestions API: POST Get delivery zones and pickup points hashes
+    Delivery Promise Suggestions API-->>Storefront: deliveryZonesHash + pickupPointsHash
     Note over Storefront: Identify product IDs<br/>from search results
     Storefront->>Delivery Promise Suggestions API: POST Search delivery suggestions<br/>(product IDs + hashes)
     Delivery Promise Suggestions API-->>Storefront: Delivery & pickup suggestions<br/>(slaTimeTarget + name)
