@@ -13,6 +13,15 @@ This guide explains how to implement the refresh token flow in [headless](https:
 
 >ℹ️ If you are using FastStore, the [FastStore SDK Session](https://developers.vtex.com/docs/guides/faststore/sdk-overview#session) automatically handles token renewal, session management, and error handling. You only need to follow the instructions in [Enabling refresh token on FastStore](https://developers.vtex.com/docs/guides/faststore/session-enabling-refresh-token).
 
+## Authentication tokens
+
+The refresh token flow operates with two types of tokens:
+
+* **Access token (`VtexIdclientAutCookie_{{accountName}}`)**: Short-lived token (24h), the primary credential used to authenticate API requests. It has a short expiration time to minimize security risks.
+* **Refresh token (`vid_rt`)**: Token with configurable expiration, always with a longer duration when compared to the access token (from 1 to 365 days). Used to renew access tokens.
+
+>⚠️ `VtexIdclientAutCookie_{account}` cookies use the **webstore** (shopper) audience naming. They apply to login flows on the storefront described in this guide. Don't treat them as generic credentials for VTEX Admin APIs or for integrations that expect application keys or Admin user tokens.
+
 ## Before you begin
 
 Before implementing the refresh token flow, enable persistent login in your account. This activates the refresh token and sets its expiration time (from 1 to 365 days).
@@ -22,15 +31,6 @@ Before implementing the refresh token flow, enable persistent login in your acco
 3. To change the duration, click `Edit`, enter a number of days from 1 to 365 in the **Session duration** field, and click `Save`.
 
 For more details, see [Configuring persistent login for customers](https://help.vtex.com/en/docs/tutorials/configuring-persistent-login-for-customers).
-
-## Authentication tokens
-
-The refresh token flow operates with two types of tokens:
-
-* **Access token (`VtexIdclientAutCookie_{{accountName}}`)**: Short-lived token (24h), the primary credential used to authenticate API requests. It has a short expiration time to minimize security risks.
-* **Refresh token (`vid_rt`)**: Token with configurable expiration, always with a longer duration when compared to the access token (from 1 to 365 days). Used to renew access tokens.
-
->⚠️ `VtexIdclientAutCookie_{account}` cookies use the **webstore** (shopper) audience naming. They apply to login flows on the storefront described in this guide. Don't treat them as generic credentials for VTEX Admin APIs or for integrations that expect application keys or Admin user tokens.
 
 ## Refresh token flow
 
