@@ -11,6 +11,8 @@ The refresh token flow is a security mechanism in authentication systems that al
 
 This guide explains how to implement the refresh token flow in [headless](https://developers.vtex.com/docs/guides/headless-commerce) scenarios using native VTEX Login.
 
+>ℹ️ Before implementing the flow, enable persistent login in the VTEX Admin, under **Account settings > Authentication**. This activates the refresh token and sets its expiration time. For step-by-step instructions, see [Configuring persistent login for customers](https://help.vtex.com/en/docs/tutorials/configuring-persistent-login-for-customers).
+
 >ℹ️ If you are using FastStore, the [FastStore SDK Session](https://developers.vtex.com/docs/guides/faststore/sdk-overview#session) automatically handles token renewal, session management, and error handling. You only need to follow the instructions in [Enabling refresh token on FastStore](https://developers.vtex.com/docs/guides/faststore/session-enabling-refresh-token).
 
 ## Authentication tokens
@@ -21,8 +23,6 @@ The refresh token flow operates with two types of tokens:
 * **Refresh token (`vid_rt`)**: Token with configurable expiration, always with a longer duration when compared to the access token (from 1 to 365 days). Used to renew access tokens.
 
 >⚠️ `VtexIdclientAutCookie_{account}` cookies use the **webstore** (shopper) audience naming. They apply to login flows on the storefront described in this guide. Don't treat them as generic credentials for VTEX Admin APIs or for integrations that expect application keys or Admin user tokens.
-
->ℹ️ The refresh token is activated, and its expiration time is configured, by enabling persistent login in the VTEX Admin, under **Account settings > Authentication**. For step-by-step instructions, see [Configuring persistent login for customers](https://help.vtex.com/en/docs/tutorials/configuring-persistent-login-for-customers).
 
 ## Refresh token flow
 
