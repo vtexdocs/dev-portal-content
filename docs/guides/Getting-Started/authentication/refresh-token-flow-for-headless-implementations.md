@@ -65,7 +65,7 @@ The following steps detail the refresh token flow shown in the diagram:
 
    For example, if the refresh token has a 30-day lifespan and the user attempts to log in 29 days after their last authentication, the user’s browser sends the refresh token to VTEX ID to obtain a new access token. However, once the 30-day period ends, the refresh token expires, and the user must log in again to generate new access and refresh tokens.
 
-   This happens automatically when stores use [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [Legacy CMS Portal](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj). For [headless](https://developers.vtex.com/docs/guides/headless-commerce) stores, it needs to be manually implemented following the instructions on this guide.
+   This happens automatically when stores use [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [Legacy CMS Portal](https://help.vtex.com/en/docs/tracks/legacy-cms-portal). For [headless](https://developers.vtex.com/docs/guides/headless-commerce) stores, it needs to be manually implemented following the instructions on this guide.
 
 4. **VTEX ID issues new tokens**
 
