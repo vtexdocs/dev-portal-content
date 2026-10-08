@@ -1,15 +1,13 @@
 ---
 title: "User Rights API: Automated personal data erasure"
-slug: "2026-05-21-user-rights-api-automated-personal-data-erasure"
+slug: "2026-10-08-user-rights-api-automated-personal-data-erasure"
 hidden: false
 type: "added"
-createdAt: "2026-05-21T14:00:00.000Z"
+createdAt: "2026-10-08T14:00:00.000Z"
 excerpt: "The new User Rights API allows you to automate personal data erasure requests across VTEX applications."
 ---
 
 The new [User Rights API](https://developers.vtex.com/docs/api-reference/user-rights-api) allows you to automate the deletion of a user's personal data across VTEX applications, in compliance with "Right to be Forgotten" regulations.
-
-> ℹ️ This feature is in open beta.
 
 > ⚠️ The user rights flows available in this API apply only to non-corporate shoppers. They don't apply to B2B buyers or Admin users.
 

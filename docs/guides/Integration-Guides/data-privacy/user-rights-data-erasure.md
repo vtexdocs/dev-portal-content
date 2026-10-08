@@ -2,10 +2,9 @@
 title: "User Rights: Automating data erasure requests"
 slug: "user-rights-data-erasure"
 hidden: false
-createdAt: "2026-05-21T14:00:00.000Z"
-updatedAt: "2026-05-21T14:00:00.000Z"
+createdAt: "2026-10-08T14:00:00.000Z"
+updatedAt: "2026-10-08T14:00:00.000Z"
 seeAlso:
- - "/docs/guides/erasing-customer-data"
  - "/docs/guides/data-protection-plus"
  - "/docs/guides/profile-system"
 excerpt: "Learn how to automate personal data erasure requests using the User Rights API."
