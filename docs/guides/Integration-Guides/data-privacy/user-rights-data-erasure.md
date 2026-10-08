@@ -62,7 +62,7 @@ The response returns a `jobId` that you will use to track the deletion progress:
 
 ## Step 2 - Poll the job status
 
->⚠️ Do not poll more frequently than once every 30 seconds. Requests that exceed this rate may be throttled.
+> ⚠️ Do not poll more frequently than once every 30 seconds. Requests that exceed this rate may be throttled.
 
 Send periodic `GET` requests to the [Get data erasure job status](https://developers.vtex.com/docs/api-reference/user-rights-api#get-/api/user-rights/forget/jobs/-jobId-) endpoint using the `jobId` from the previous step:
 
