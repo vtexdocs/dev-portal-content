@@ -3,11 +3,11 @@ title: "Displaying an order summary for the signed-in shopper"
 slug: "displaying-an-order-summary-for-the-signed-in-shopper"
 hidden: true
 createdAt: "2026-09-10T00:00:00.000Z"
-updatedAt: "2026-09-25T00:00:00.000Z"
+updatedAt: "2026-10-08T00:00:00.000Z"
 excerpt: "Extend the FastStore API with a query that summarizes the signed-in shopper's orders, authenticated with the shopper's own session."
 ---
 
-This guide describes how to extend your storefront with a section that shows signed-in shoppers how many orders they have placed and when the most recent one was. You can then place that section on any page managed in the [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), such as a landing page.
+This guide describes how to extend your storefront with a section that shows signed-in shoppers how many orders they've placed and when the most recent one was. You can then place that section on any page managed in the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts), such as a landing page.
 
 Since this data belongs to one specific shopper, the resolver must authenticate as that shopper rather than as the store, so each shopper only ever sees their own orders and never another shopper's.
 

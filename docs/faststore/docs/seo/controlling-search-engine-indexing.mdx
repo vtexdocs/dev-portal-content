@@ -1,0 +1,50 @@
+---
+title: "Controlling search engine indexing"
+---
+
+FastStore provides the experimental `noRobots`, `noindex`, and `nofollow` flags to control how search engines interact with your storefront.
+
+> ⚠️ These flags are experimental and may have limitations. Test them before using them in a production environment. Incorrect settings can prevent storefront pages from appearing in search results.
+
+## Before you begin
+
+### Review the available flags
+
+Make sure to review the available flags and choose the ones that fit your use case:
+
+| Flag | Type | Behavior when set to `true` |
+| --- | --- | --- |
+| `noRobots` | `boolean` | Prevents FastStore from adding its default `robots` meta tag to pages. Use this option when you want to manage crawler instructions through another implementation. |
+| `noindex` | `boolean` | Instructs search engines not to index storefront pages or include them in search results. |
+| `nofollow` | `boolean` | Instructs search engines not to follow links on storefront pages or pass ranking signals to the linked pages. |
+
+## Update the FastStore version
+
+Make sure your FastStore project is on the latest version; if not, run the following to update it:
+
+```bash
+yarn upgrade -L --scope @faststore
+```
+
+## Configuring the flags
+
+1. Open the `discovery.config.js` file in your FastStore project.
+2. Add the flags you need to the `experimental` object. For example:
+
+   ```js discovery.config.js
+   experimental: {
+     noRobots: false,
+     noindex: true,
+     nofollow: true,
+   },
+   ```
+
+3. Run the project locally:
+
+   ```bash
+   yarn dev
+   ```
+
+4. Open the local storefront and inspect the page's `<head>` element or use an SEO testing tool to confirm that the expected crawler directives are present.
+
+> ⚠️ Before deploying, confirm that `noindex` and `nofollow` have the intended values. Enabling them can affect the storefront's visibility and link discovery in search engines.
