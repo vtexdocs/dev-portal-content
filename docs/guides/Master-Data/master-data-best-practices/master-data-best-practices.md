@@ -19,7 +19,7 @@ See Master Data v2 endpoints for managing documents:
 - `PATCH` - [Update partial document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#patch-/api/dataentities/-dataEntityName-/documents/-id-)
 - `DELETE` - [Delete document](https://developers.vtex.com/docs/api-reference/master-data-api-v2#delete-/api/dataentities/-dataEntityName-/documents/-id-)
 
-> ℹ️ To delete documents in bulk, see [Bulk deleting documents in Master Data](/docs/guides/bulk-deleting-documents-in-master-data).
+> ℹ️ To delete documents in bulk, see [Deleting documents in bulk in Master Data](https://developers.vtex.com/docs/guides/deleting-documents-in-bulk-in-master-data).
 
 ## Customize data entities
 
