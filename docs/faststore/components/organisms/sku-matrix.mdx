@@ -17,14 +17,6 @@ The final component is a compound of the following:
 - `SKUMatrixTrigger`: Renders a button that opens the SKU Matrix sidebar.
 - `SKUMatrixSidebar`: Renders a `SlideOver` containing a table with product variations, prices, availability, and quantity selectors.
 
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <SKUMatrixUsage />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-
 ```tsx
 import React, { useEffect } from 'react'
 import Image from 'next/image'
@@ -35,7 +27,50 @@ import {
   useSKUMatrix,
   UIProvider,
 } from '@faststore/ui'
-import { skus } from 'components/faststore-components/mocks/skus'
+
+const skus = [
+  {
+    id: 'monitor-black-24',
+    name: 'Philips Monitor - Black - 24"',
+    image: {
+      url: 'https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg',
+      alternateName: 'Black 24-inch monitor',
+    },
+    inventory: 8,
+    availability: 'inStock',
+    price: 249,
+    listPrice: 299,
+    priceWithTaxes: 249,
+    listPriceWithTaxes: 299,
+    specifications: {
+      color: 'Black',
+      size: '24"',
+      safetyrating: 'A',
+    },
+    selectedCount: 0,
+    offers: {
+      highPrice: 299,
+      lowPrice: 249,
+      lowPriceWithTaxes: 249,
+      offerCount: 1,
+      priceCurrency: 'USD',
+      offers: [
+        {
+          listPrice: 299,
+          listPriceWithTaxes: 299,
+          sellingPrice: 249,
+          priceCurrency: 'USD',
+          price: 249,
+          priceWithTaxes: 249,
+          priceValidUntil: '2030-12-31T23:59:59Z',
+          itemCondition: 'https://schema.org/NewCondition',
+          availability: 'inStock',
+          quantity: 8,
+        },
+      ],
+    },
+  },
+]
 
 const ImageComponent = ({
   src,
@@ -62,7 +97,7 @@ function SKUMatrixContent() {
 
   useEffect(() => {
     setAllVariantProducts(skus)
-  }, [])
+  }, [setAllVariantProducts])
 
   return (
     <>
@@ -115,9 +150,6 @@ export default function ProductPageSkuMatrix() {
 }
 ```
 
-  </Tab>
-</Tabs>
-
 ---
 
 ## Usage
@@ -161,6 +193,8 @@ While fetching product variants, display skeleton loaders to improve perceived p
           <SKUMatrixTrigger variant="secondary">View variants</SKUMatrixTrigger>
           <SKUMatrixSidebar
             title="Loading variants..."
+            direction="rightSide"
+            size="partial"
             loading={true}
             columns={{
               name: 'Variation',
@@ -176,7 +210,9 @@ While fetching product variants, display skeleton loaders to improve perceived p
               onClick: () => {},
             }}
             ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
-          />
+          >
+            {null}
+          </SKUMatrixSidebar>
         </SKUMatrix>
       </UIProvider>
     </OverviewSection>
@@ -198,6 +234,8 @@ export default function LoadingExample() {
         <SKUMatrixTrigger variant="secondary">View variants</SKUMatrixTrigger>
         <SKUMatrixSidebar
           title="Loading variants..."
+          direction="rightSide"
+          size="partial"
           loading={true}
           columns={{
             name: 'Variation',
@@ -215,7 +253,9 @@ export default function LoadingExample() {
             },
           }}
           ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
-        />
+        >
+          {null}
+        </SKUMatrixSidebar>
       </SKUMatrix>
     </UIProvider>
   )
@@ -229,69 +269,106 @@ export default function LoadingExample() {
 
 ### Full Width Sidebar
 
-Display the matrix in a full-width slide-over for complex product catalogs with many columns by setting `size="full"`.
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <UIProvider>
-        <SKUMatrix>
-          <SKUMatrixTrigger variant="secondary">View all options</SKUMatrixTrigger>
-          <SKUMatrixSidebar
-            title="Select your products"
-            size="full"
-            columns={{
-              name: 'Product',
-              additionalColumns: [
-                { label: 'Color', value: 'color' },
-                { label: 'Size', value: 'size' },
-                { label: 'Material', value: 'material' },
-              ],
-              availability: { label: 'Stock', stockDisplaySettings: 'showStockQuantity' },
-              price: 'Unit Price',
-              quantitySelector: 'Qty',
-            }}
-            buyProps={{
-              'data-testid': 'bulk-add',
-              'data-sku': 'full-width',
-              'data-seller': 'seller-1',
-              onClick: () => {},
-            }}
-            ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
-          />
-        </SKUMatrix>
-      </UIProvider>
-    </OverviewSection>
-  </Tab>
-  <Tab>
+Display the matrix in a full-width slide-over for complex product catalogs with many columns by setting `size="full"`. This example also sets `stockDisplaySettings` to `showAvailability`, which renders an availability badge instead of the inventory quantity.
 
 ```tsx
-<SKUMatrixSidebar
-  title="Select your products"
-  size="full"
-  columns={{
-    name: 'Product',
-    additionalColumns: [
-      { label: 'Color', value: 'color' },
-      { label: 'Size', value: 'size' },
-      { label: 'Material', value: 'material' },
-    ],
-    availability: { label: 'Stock', stockDisplaySettings: 'showStockQuantity' },
-    price: 'Unit Price',
-    quantitySelector: 'Qty',
-  }}
-  buyProps={{
-    'data-testid': 'bulk-add',
-    'data-sku': 'full-width',
-    'data-seller': 'seller-1',
-    onClick: () => {},
-  }}
-  ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
-/>
-```
+import { useEffect } from 'react'
+import {
+  SKUMatrix,
+  SKUMatrixSidebar,
+  SKUMatrixTrigger,
+  UIProvider,
+  useSKUMatrix,
+} from '@faststore/ui'
 
-  </Tab>
-</Tabs>
+const skus = [{
+  id: 'monitor-black-24',
+  name: 'Philips Monitor - Black - 24"',
+  image: {
+    url: 'https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg',
+    alternateName: 'Black 24-inch monitor',
+  },
+  inventory: 8,
+  availability: 'inStock',
+  price: 249,
+  listPrice: 299,
+  priceWithTaxes: 249,
+  listPriceWithTaxes: 299,
+  specifications: { color: 'Black', size: '24"', material: 'Plastic' },
+  selectedCount: 0,
+  offers: {
+    highPrice: 299,
+    lowPrice: 249,
+    lowPriceWithTaxes: 249,
+    offerCount: 1,
+    priceCurrency: 'USD',
+    offers: [{
+      listPrice: 299,
+      listPriceWithTaxes: 299,
+      sellingPrice: 249,
+      priceCurrency: 'USD',
+      price: 249,
+      priceWithTaxes: 249,
+      priceValidUntil: '2030-12-31T23:59:59Z',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability: 'inStock',
+      quantity: 8,
+    }],
+  },
+}]
+
+function FullWidthMatrix() {
+  const { setAllVariantProducts } = useSKUMatrix()
+
+  useEffect(() => {
+    setAllVariantProducts(skus)
+  }, [setAllVariantProducts])
+
+  return (
+    <>
+      <SKUMatrixTrigger variant="secondary">View all options</SKUMatrixTrigger>
+      <SKUMatrixSidebar
+        title="Select your products"
+        size="full"
+        direction="rightSide"
+        columns={{
+          name: 'Product',
+          additionalColumns: [
+            { label: 'Color', value: 'color' },
+            { label: 'Size', value: 'size' },
+            { label: 'Material', value: 'material' },
+          ],
+          availability: {
+            label: 'Availability',
+            stockDisplaySettings: 'showAvailability',
+          },
+          price: 'Unit Price',
+          quantitySelector: 'Qty',
+        }}
+        buyProps={{
+          'data-testid': 'bulk-add',
+          'data-sku': 'full-width',
+          'data-seller': 'seller-1',
+          onClick: () => {},
+        }}
+        ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
+      >
+        {null}
+      </SKUMatrixSidebar>
+    </>
+  )
+}
+
+export default function FullWidthExample() {
+  return (
+    <UIProvider>
+      <SKUMatrix>
+        <FullWidthMatrix />
+      </SKUMatrix>
+    </UIProvider>
+  )
+}
+```
 
 ---
 
@@ -302,52 +379,104 @@ Open the sidebar from the left side of the screen by setting `direction="leftSid
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <UIProvider>
-        <SKUMatrix>
-          <SKUMatrixTrigger variant="secondary">Open from left</SKUMatrixTrigger>
-          <SKUMatrixSidebar
-            title="Product Selection"
-            direction="leftSide"
-            columns={{
-              name: 'Item',
-              additionalColumns: [],
-              availability: { label: 'Available', stockDisplaySettings: 'showStockQuantity' },
-              price: 'Price',
-              quantitySelector: 'Quantity',
-            }}
-            buyProps={{
-              'data-testid': 'bulk-add',
-              'data-sku': 'left-side',
-              'data-seller': 'seller-1',
-              onClick: () => {},
-            }}
-            ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
-          />
-        </SKUMatrix>
-      </UIProvider>
+      <SKUMatrixUsage />
     </OverviewSection>
   </Tab>
   <Tab>
 
 ```tsx
-<SKUMatrixSidebar
-  title="Product Selection"
-  direction="leftSide"
-  columns={{
-    name: 'Item',
-    additionalColumns: [],
-    availability: { label: 'Available', stockDisplaySettings: 'showStockQuantity' },
-    price: 'Price',
-    quantitySelector: 'Quantity',
-  }}
-  buyProps={{
-    'data-testid': 'bulk-add',
-    'data-sku': 'left-side',
-    'data-seller': 'seller-1',
-    onClick: () => {},
-  }}
-  ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
-/>
+import { useEffect } from 'react'
+import {
+  SKUMatrix,
+  SKUMatrixSidebar,
+  SKUMatrixTrigger,
+  UIProvider,
+  useSKUMatrix,
+} from '@faststore/ui'
+
+const skus = [{
+  id: 'monitor-black-24',
+  name: 'Philips Monitor - Black - 24"',
+  image: {
+    url: 'https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg',
+    alternateName: 'Black 24-inch monitor',
+  },
+  inventory: 8,
+  availability: 'inStock',
+  price: 249,
+  listPrice: 299,
+  priceWithTaxes: 249,
+  listPriceWithTaxes: 299,
+  specifications: { color: 'Black', size: '24"' },
+  selectedCount: 0,
+  offers: {
+    highPrice: 299,
+    lowPrice: 249,
+    lowPriceWithTaxes: 249,
+    offerCount: 1,
+    priceCurrency: 'USD',
+    offers: [{
+      listPrice: 299,
+      listPriceWithTaxes: 299,
+      sellingPrice: 249,
+      priceCurrency: 'USD',
+      price: 249,
+      priceWithTaxes: 249,
+      priceValidUntil: '2030-12-31T23:59:59Z',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability: 'inStock',
+      quantity: 8,
+    }],
+  },
+}]
+
+function LeftSideMatrix() {
+  const { setAllVariantProducts } = useSKUMatrix()
+
+  useEffect(() => {
+    setAllVariantProducts(skus)
+  }, [setAllVariantProducts])
+
+  return (
+    <>
+      <SKUMatrixTrigger variant="secondary">Open from left</SKUMatrixTrigger>
+      <SKUMatrixSidebar
+        title="Product Selection"
+        direction="leftSide"
+        size="partial"
+        columns={{
+          name: 'Item',
+          additionalColumns: [],
+          availability: {
+            label: 'Available',
+            stockDisplaySettings: 'showStockQuantity',
+          },
+          price: 'Price',
+          quantitySelector: 'Quantity',
+        }}
+        buyProps={{
+          'data-testid': 'bulk-add',
+          'data-sku': 'left-side',
+          'data-seller': 'seller-1',
+          onClick: () => {},
+        }}
+        ImageComponent={({ src, alt }) => <img src={src} alt={alt} />}
+      >
+        {null}
+      </SKUMatrixSidebar>
+    </>
+  )
+}
+
+export default function LeftSideExample() {
+  return (
+    <UIProvider>
+      <SKUMatrix>
+        <LeftSideMatrix />
+      </SKUMatrix>
+    </UIProvider>
+  )
+}
 ```
 
   </Tab>
