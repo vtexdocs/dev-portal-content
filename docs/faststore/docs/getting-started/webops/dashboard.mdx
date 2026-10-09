@@ -94,11 +94,11 @@ The **Deploys** tab provides insights into store deployments, including their st
 
 ### Skipped deploys
 
-A build is skipped when it's no longer needed because a newer commit was pushed to the same branch. WebOps runs only one build at a time per branch, so if several commits arrive while a build is already running, only the most recent queued commit is built once the current one finishes. Older queued commits are marked **Skipped** and never start a build, since the next one would replace them anyway.
+A build is skipped when it's no longer needed because a newer commit was pushed to the same branch. WebOps runs only one build at a time per branch, so if several commits arrive while a build is already running, only the most recent queued commit is built once the current one finishes. Older queued commits are marked **Skipped** and aren't built because a more recent version of the branch is already available..
 
-A deploy already **In progress** is never interrupted. Only deploys still **Queued** for that branch can become **Skipped**.
+> ℹ️ A deploy already **In progress** is never interrupted. Only deploys still **Queued** for that branch can become **Skipped**.
 
-Consider the following scenario for deploys to the same branch:
+Consider the following deployment scenario to the same branch:
 
 1. Deploy `A` arrives while nothing is running, so it starts immediately (**In progress**).
 2. Deploy `B` arrives while `A` is still running, so it becomes **Queued**.
