@@ -18,10 +18,10 @@ The following table shows how each layer is typically divided between shared and
 
 | Layer | Shared | Local |
 | --- | --- | --- |
-| Components and design system | Component library, design tokens, section schemas | Per-market style overrides |
-| Delivery | Repository, continuous integration pipeline, release process | Deployment target account and branch |
-| Content | Section schemas that must look the same everywhere | Pages, campaigns, and media per market |
-| Commerce | Nothing by default. Sharing depends on the account structure, not on the repository. | Catalog, pricing, promotions, logistics, payments |
+| Components and design system | Component library, design tokens, section schemas. | Per-market style overrides. |
+| Delivery | Repository, continuous integration pipeline, release process. | Deployment target account and branch. |
+| Content | Section schemas that must look the same everywhere. | Pages, campaigns, and media per market. |
+| Commerce | Nothing by default. Sharing depends on the account structure, not on the repository. | Catalog, pricing, promotions, logistics, payments. |
 
 Components and the delivery pipeline are shared because duplicating them is what creates drift. Commerce configuration stays local because it's the part each market's business team needs to control directly.
 
