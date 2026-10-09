@@ -2,7 +2,7 @@
 title: "Enabling refresh token on FastStore"
 excerpt: "Automatically refresh user sessions without re-logging in by enabling the refresh token flow in your FastStore project."
 createdAt: "2025-08-15T14:00:00.000Z"
-updatedAt: "2025-09-17T09:00:00.000Z"
+updatedAt: "2026-10-08T00:00:00.000Z"
 ---
 
 [Refresh token](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations) is a security mechanism that allows users to obtain a new, short-lived access token without requiring them to log in again.
@@ -29,9 +29,15 @@ Make sure your project is updated to the latest version. To do so, follow these 
 yarn upgrade -L --scope @faststore
 ```
 
-### Request refresh token activation
+### Enable persistent login
 
-Open a ticket with [VTEX Support](https://help.vtex.com/en/support) to request refresh token activation and an expiration time (1, 7, or 30 days). Include the account name(s) in your request to enable the feature. Without this activation, you won’t be able to enable the refresh token in your account.
+In the VTEX Admin, enable persistent login and set the refresh token expiration time (from 1 to 365 days):
+
+1. Go to **Account settings > Authentication**.
+2. On the **Webstore** tab, find the **Persistent login** card and click the toggle to enable it.
+3. To change the duration, click `Edit`, enter a number of days from 1 to 365 in the **Session duration** field, and click `Save`.
+
+For more details, see [Configuring persistent login for customers](https://help.vtex.com/en/docs/tutorials/configuring-persistent-login-for-customers). Without persistent login enabled in your account, you won’t be able to enable the refresh token in your project.
 
 </Steps>
 
