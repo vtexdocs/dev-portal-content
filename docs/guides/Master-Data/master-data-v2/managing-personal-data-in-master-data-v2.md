@@ -2,8 +2,8 @@
 title: "Managing personal data in Master Data v2"
 slug: "managing-personal-data-in-master-data-v2"
 hidden: false
-createdAt: "2026-05-15T00:00:00.000Z"
-updatedAt: "2026-05-15T00:00:00.000Z"
+createdAt: "2026-10-13T00:00:00.000Z"
+updatedAt: "2026-10-13T00:00:00.000Z"
 excerpt: "Learn how to configure, store, and retrieve personal data in Master Data v2 with encryption, masking, and data subject compliance."
 ---
 
