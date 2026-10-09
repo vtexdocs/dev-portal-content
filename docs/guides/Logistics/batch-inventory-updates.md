@@ -12,8 +12,7 @@ seeAlso:
  - "https://help.vtex.com/en/docs/tutorials/managing-stock-items"
 ---
 
->ℹ️ This feature is in early access, which means that we are working to improve it. If you want to use this feature, please contact our [Support Center](https://support.vtex.com/hc/en-us/requests).
-
+>ℹ️ This feature is in open beta, which means that we are working to improve it.
 The **Batch operations** endpoints of the [Logistics API](https://developers.vtex.com/docs/api-reference/logistics-api) are designed for merchants with large catalogs and multiple sellers or warehouses that need to update inventory across many SKU–seller combinations. By uploading a single CSV file to [Amazon S3](https://aws.amazon.com/s3/), merchants can perform full inventory refreshes and bulk synchronizations, track processing through the API, and avoid a high number of requests to per-SKU endpoints.
 
 This guide walks you through the end-to-end flow: creating a batch job, uploading the CSV file, committing the batch for processing, polling the processing status, and downloading the error report if there are failed rows.
