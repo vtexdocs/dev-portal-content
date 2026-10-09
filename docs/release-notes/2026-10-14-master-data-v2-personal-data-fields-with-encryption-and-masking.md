@@ -1,9 +1,9 @@
 ---
 title: "Master Data v2: Personal data fields with encryption and masking"
-slug: "2026-10-13-master-data-v2-personal-data-fields-with-encryption-and-masking"
+slug: "2026-10-14-master-data-v2-personal-data-fields-with-encryption-and-masking"
 hidden: false
 type: "added"
-createdAt: "2026-10-13T00:00:00.000Z"
+createdAt: "2026-10-14T00:00:00.000Z"
 excerpt: "Master Data v2 now lets you declare personal data fields per entity. Configured fields are encrypted, returned masked by default, and automatically participate in data subject request flows."
 ---
 
