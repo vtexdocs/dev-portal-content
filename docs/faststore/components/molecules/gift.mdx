@@ -20,7 +20,7 @@ The `Gift` component is a compound of the following:
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection bigGap><GiftTemplate/> <GiftTemplateIcon/></OverviewSection>
-    <OverviewSection bigGap><GiftTemplateWithoutIcon/> <GiftTemplateWithoutBadge/></OverviewSection>
+    <OverviewSection bigGap><GiftTemplateWithoutIcon/></OverviewSection>
   </Tab>
   <Tab>
     ```tsx
@@ -62,24 +62,6 @@ The `Gift` component is a compound of the following:
     ```tsx
     // Without Icon
     <Gift>
-      <GiftImage>
-        <img
-          src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
-          alt="Magicwhite"
-          width={89}
-          height={89}
-        />
-      </GiftImage>
-      <GiftContent
-        productName="Apple Magic Mouse"
-        price={{ value: 999, listPrice: 999, formatter: useFormattedPrice }}
-      />
-    </Gift>
-    ```
-
-    ```tsx
-    // Without Badge
-    <Gift icon={<Icon name="Tag" />}>
       <GiftImage>
         <img
           src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
