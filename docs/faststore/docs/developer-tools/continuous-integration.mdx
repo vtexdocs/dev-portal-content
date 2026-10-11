@@ -1,0 +1,105 @@
+---
+title: "Continuous integration for FastStore projects"
+excerpt: "Structure a quality gate that validates every pull request, and keep CMS schema synchronization off the automatic deployment path."
+createdAt: "2026-09-22T16:14:09.641Z"
+---
+
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) deploys your storefront when a branch is updated, but it does not decide whether the code being merged is ready. That is the role of a continuous integration (CI) pipeline running on your Git provider.
+
+In this guide, you'll learn how to structure CI workflows for a FastStore project, and why CMS schema synchronization should be triggered manually rather than running as a side effect of a code deployment. The structure described here is a recommendation. Adapt it to the practices of your team.
+
+This guidance matters most when a single repository serves several stores, as in a [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), because a change to shared code reaches every store at once.
+
+---
+
+## Before you begin
+
+- Have a FastStore project connected to FastStore WebOps. See [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project).
+- Decide which branches deploy to which accounts. See [Configuring production and preview branches in WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches).
+- Install the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) (`@vtex/cli-plugin-content`) if the pipeline will publish CMS schemas.
+
+---
+
+## Instructions
+
+### Step 1 - Organize workflows by responsibility
+
+Creating one workflow per store, or one per type of check, produces dozens of near-identical files that are hard to keep consistent. Organizing by responsibility keeps the pipeline small as the number of stores grows.
+
+| Responsibility | When it runs | What it covers |
+| --- | --- | --- |
+| Quality gate | Automatically, on every pull request and on pushes to deployment branches | Linting, TypeScript type checking, building shared packages, unit tests, end-to-end tests, and visual regression checks |
+| Release and changelog | Automatically, when a pull request merges into the production branch | Version bump of shared packages and generation of release notes from commit history |
+| CMS schema synchronization | Manually only, through an explicit trigger | Publishing section schemas to a store's CMS |
+
+### Step 2 - Build the quality gate
+
+The quality gate runs before code reaches a branch that WebOps deploys. A minimal workflow covers these checks:
+
+```yaml .github/workflows/quality-gate.yml
+name: Quality gate
+
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+      - run: yarn tsc --noEmit
+      - run: yarn build
+      - run: yarn test
+```
+
+Keep the following in mind:
+
+- **Shared packages first:** In a monorepo, build shared packages before the stores that import them, so a breaking change surfaces in the pull request rather than during deployment.
+- **End-to-end tests:** FastStore runs native integration tests and supports custom ones. Run them on pull requests rather than on every push, since they are the slowest part of the gate. See [Custom Cypress integration](https://developers.vtex.com/docs/guides/faststore/developer-tools-custom-cypress).
+- **Visual regression:** Comparing rendered components against approved snapshots catches unintended styling changes in shared components before they reach every store. Any visual regression service that integrates with your Git provider works here.
+- **Performance:** WebOps runs Lighthouse audits on configured pages as part of its own deployment flow, so the CI pipeline does not need to duplicate them. See [Managing performance](https://developers.vtex.com/docs/guides/faststore/managing-performance-overview).
+
+### Step 3 - Keep CMS schema synchronization manual
+
+Publishing section schemas to a store's [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) can be automated with the Content plugin, using the same commands documented in [Creating a new section](https://developers.vtex.com/docs/guides/creating-a-new-section):
+
+```shell
+vtex content generate-schema cms/faststore/components cms/faststore/pages -o cms/faststore/schema.json
+vtex content upload-schema cms/faststore/schema.json
+```
+
+Configure this as a workflow that only runs on an explicit, manual trigger, never on push or merge.
+
+> ⚠️ Publishing schemas changes what content editors see in the Admin, and the effect is immediate. Attaching it to a code deployment means an unrelated merge can alter a live store's content structure without anyone intending it. Keeping the trigger manual makes the operation deliberate and auditable, while still allowing any authorized team member to run it when needed.
+
+This separation matters more as the program grows. With several stores sharing one repository, an automatic schema sync would propagate a schema change to every store's CMS at once, including production.
+
+---
+
+## Next steps
+
+<Flex>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/developer-tools-custom-cypress"
+  title="Custom Cypress integration"
+  description="Add custom end-to-end tests to your FastStore project and run them as part of the pipeline."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments"
+  title="Managing environments"
+  description="Map repository branches to the VTEX accounts they deploy to across several stores."
+  linkTitle="See more"
+/>
+
+</Flex>

@@ -1,9 +1,9 @@
----
+ ---
 title: "Store architecture"
 slug: "store-architecture"
 hidden: false
 createdAt: "2024-05-23T13:08:55.338Z"
-updatedAt: "2025-10-31T13:05:02.206Z"
+updatedAt: "2026-09-22T16:14:09.641Z"
 excerpt: "Learn how our store architecture models are tailored to meet different business needs."
 seeAlso:
  - "/docs/guides/understanding-vtex-reference-architectures"
@@ -212,3 +212,4 @@ The diagram above represents an account implemented with [FastStore](https://dev
 ### Learn more
 
 - [Headless CMS (legacy) - Overview](https://help.vtex.com/en/tutorial/headless-cms-overview--3U5gvhHdQL0jczYH8gjX09)
+- [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multi-store-planning-your-account-structure): what the architectures above mean for the CMS, deployment, and app version governance of a FastStore program that serves several stores.
