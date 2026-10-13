@@ -6,6 +6,7 @@ sidebar_custom_props:
 components:
   - Filter.tsx
   - FilterFacets.tsx
+  - FilterFacetBoolean.tsx
   - FilterFacetBooleanItem.tsx
   - FilterFacetRange.tsx
 ---
@@ -125,7 +126,18 @@ The `Filter` component is used to filter products inside the <a href="https://st
               </Button>
             </div>
             {displayFilter && (
-              <FilterSlider {...filter} testId="fs-filter" title="Filters" />
+              <FilterSlider
+                testId="fs-filter"
+                title="Filters"
+                size="partial"
+                direction="rightSide"
+                onClose={() =>
+                  dispatch({
+                    type: 'selectFacets',
+                    payload: state.selectedFacets,
+                  })
+                }
+              />
             )}
           </>
         )
@@ -328,6 +340,10 @@ You can target and override `Filter` styles using the following data attributes:
 ### FilterFacets
 
 <ComponentPropsSection component="FilterFacets" />
+
+### FilterFacetBoolean
+
+`FilterFacetBoolean` requires `children`, usually a list of `FilterFacetBooleanItem` components.
 
 ### FilterFacetBooleanItem
 

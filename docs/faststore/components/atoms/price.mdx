@@ -30,11 +30,13 @@ The `Price` component displays the price of a given product, its discount, and t
 
     export function PriceExample() {
       return (
-        <Price value={62.5} variant="selling" />
-        <Price value={62.5} variant="listing" />
-        <Price value={62.5} variant="spot" />
-        <Price value={62.5} variant="savings" />
-        <Price value={62.5} variant="installment" />
+        <>
+          <Price value={62.5} variant="selling" />
+          <Price value={62.5} variant="listing" />
+          <Price value={62.5} variant="spot" />
+          <Price value={62.5} variant="savings" />
+          <Price value={62.5} variant="installment" />
+        </>
       )
     }
     ```
@@ -175,40 +177,64 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
+### Semantic element and screen-reader text
+
+Use `as` to choose the rendered element and `SRText` to add visually hidden context before the formatted value.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Price
+        as="del"
+        value={79.9}
+        variant="listing"
+        SRText="Original price:"
+      />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { Price } from '@faststore/ui'
+
+    export function OriginalPrice() {
+      return (
+        <Price
+          as="del"
+          value={79.9}
+          variant="listing"
+          SRText="Original price:"
+        />
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
 ### INTL Formatted to parts
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
       <Price
-        formatter={function useIntlPartsFormatter(price) {
-            return useMemo(() => {
-              return new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-              })
-                .formatToParts(price)
-              .map((part) => {
-                const props = {
-                  [`data-fs-price-${part.type}`]: true,
-                }
-
-                if (part.type === 'integer') {
-                  props.style = { fontWeight: 700 }
-                }
-
-                return (
-                  <span key={part.type} {...props}>
-                    {part.value}
-                  </span>
-                )
-              })
+        formatter={function intlPartsFormatter(price) {
+          return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
           })
+            .formatToParts(price)
+            .map((part, index) => (
+              <span
+                key={`${part.type}-${index}`}
+                data-fs-price-part={part.type}
+                style={part.type === 'integer' ? { fontWeight: 700 } : undefined}
+              >
+                {part.value}
+              </span>
+            ))
         }}
         value={62.5}
         variant="selling"
-
-    />
+      />
     </OverviewSection>
 
   </Tab>
@@ -216,33 +242,27 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     ```tsx
     import { Price } from '@faststore/ui'
 
+    function intlPartsFormatter(price: number) {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      })
+        .formatToParts(price)
+        .map((part, index) => (
+          <span
+            key={`${part.type}-${index}`}
+            data-fs-price-part={part.type}
+            style={part.type === 'integer' ? { fontWeight: 700 } : undefined}
+          >
+            {part.value}
+          </span>
+        ))
+    }
+
     export function PriceExample() {
       return (
         <Price
-          formatter={function useIntlPartsFormatter(price) {
-            return useMemo(() => {
-              return new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-              })
-                .formatToParts(price)
-                .map((part) => {
-                  const props = {
-                    [`data-fs-price-${part.type}`]: true,
-                  }
-
-                  if (part.type === 'integer') {
-                    props.style = { fontWeight: 700 }
-                  }
-
-                  return (
-                    <span key={part.type} {...props}>
-                      {part.value}
-                    </span>
-                  )
-                })
-            })
-          }}
+          formatter={intlPartsFormatter}
           value={62.5}
           variant="selling"
         />
@@ -259,20 +279,15 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   <Tab>
     <OverviewSection>
       <Price
-        formatter={function useIntlFormatter(price) {
-          return useMemo(() => {
-            const formattedPrice = new Intl.NumberFormat('en-GB', {
-              style: 'currency',
-              currency: 'EUR',
-            }).format(price)
-
-            return formattedPrice
-          })
+        formatter={function intlFormatter(price) {
+          return new Intl.NumberFormat('en-GB', {
+            style: 'currency',
+            currency: 'EUR',
+          }).format(price)
         }}
         value={62.5}
         variant="savings"
-
-    />
+      />
     </OverviewSection>
 
   </Tab>
@@ -280,19 +295,17 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     ```tsx
     import { Price } from '@faststore/ui'
 
+    function intlFormatter(price: number) {
+      return new Intl.NumberFormat('en-GB', {
+        style: 'currency',
+        currency: 'EUR',
+      }).format(price)
+    }
+
     export function PriceExample() {
       return (
         <Price
-          formatter={function useIntlFormatter(price) {
-            return useMemo(() => {
-              const formattedPrice = new Intl.NumberFormat('en-GB', {
-                style: 'currency',
-                currency: 'EUR',
-              }).format(price)
-
-              return formattedPrice
-            })
-          }}
+          formatter={intlFormatter}
           value={62.5}
           variant="savings"
         />
@@ -309,10 +322,10 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   <Tab>
     <OverviewSection>
       <Price
-        formatter={function customFormatter(price) {
+        formatter={function customFormatter(price, variant) {
           const unformattedPrice = `${price}`
           const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
-          return formattedPrice
+          return variant === 'spot' ? `À vista: ${formattedPrice}` : formattedPrice
         }}
         value={62.5}
         variant="spot"
@@ -323,11 +336,11 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     ```tsx
     import { Price } from '@faststore/ui'
     
-    function customFormatter(price: number) {
+    function customFormatter(price: number, variant: string) {
       const unformattedPrice = `${price}`
       const formattedPrice = `${unformattedPrice.replace('.', ',')} reais`
 
-      return formattedPrice
+      return variant === 'spot' ? `À vista: ${formattedPrice}` : formattedPrice
     }
 
     export function PriceExample() {
@@ -374,7 +387,7 @@ You can target and override `Price` styles using the following data attributes:
 
 `data-fs-price`
 
-`data-fs-price-variant="selling| 'listing' | 'spot' | 'savings'| 'installment"`
+`data-fs-price-variant="selling" | "listing" | "spot" | "savings" | "installment"`
 
 ---
 
