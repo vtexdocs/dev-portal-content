@@ -4,7 +4,7 @@ slug: "vtex-io-deprecated-apps"
 excerpt: "Check here which apps are no longer supported or maintained by VTEX."
 hidden: false
 createdAt: "2022-01-03T14:32:52.429Z"
-updatedAt: "2026-01-26T16:16:14.190Z"
+updatedAt: "2026-10-09T16:16:14.190Z"
 ---
 
 A deprecated app refers to an application no longer supported or maintained by VTEX, meaning that:
@@ -185,6 +185,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Buy Box                    | `vtex.buybox-resolver`<br><br>`vtex.buybox-context`<br><br>`vtex.buybox-graphql` |
 | Kit Look                   | `vtex.kit-look`                          |
 | Minicart free shipping bar | `vtexeurope.minicart-freeshipping-bar`    |
+| Personal Shopper          | `vtexventures.personal-shopper-free`     |
 | Pickup Selector            | `vtex.pickup-selector`                   |
 | Power Reviews              | `vtex.powerreviews`                      |
 | QR & Bar Code Reader       | `vtexarg.qr-barcode-reader`              |
