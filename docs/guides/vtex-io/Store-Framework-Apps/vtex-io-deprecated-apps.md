@@ -23,10 +23,10 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 
 ### Account management
 
-| App               | `vendor.app-name`       |
-| ----------------- | ----------------------- |
-| Binding Selector  | `vtex.binding-selector` |
-| Franchise Setup   | `vtex.franchise-setup`  |
+| App              | `vendor.app-name`       |
+| ---------------- | ----------------------- |
+| Binding Selector | `vtex.binding-selector` |
+| Franchise Setup  | `vtex.franchise-setup`  |
 
 ### Analytics
 
@@ -240,6 +240,6 @@ Review any [dependencies](https://developers.vtex.com/docs/guides/vtex-io-docume
 ### Check the installed apps
 
 Check the apps installed in your account:
- 
+
 1. Open the terminal and run the `vtex list` command.
 2. Identify the apps installed.
