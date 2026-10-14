@@ -1,7 +1,7 @@
 ---
 title: "Migrating from FastStore v1 to v4 with CMS"
 hidden: true
-updatedAt: "2026-10-06T00:00:00.000Z"
+updatedAt: "2026-10-14T00:00:00.000Z"
 ---
 
 This guide explains how to gradually replace a FastStore v1 store with FastStore v4 in the same account, adopting the [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) on v4. Traffic is split between both versions by percentage until v4 takes over completely.
@@ -16,23 +16,12 @@ For an overview of the process and how to confirm your project runs on FastStore
 
 The migration happens in four phases. The key idea is that v1 and v4 run side by side in the same account while traffic moves gradually from one to the other. Each version has its own content management system: v1 stays on Headless CMS (Legacy) and v4 uses the CMS.
 
-1. **[Preparation](#phase-1-preparation):** create the v4 repository, prepare the content in the CMS, and review the domains and checkout on v4.
-2. **[Configuration](#phase-2-configuration):** ask VTEX to activate traffic split with 0% on v4 and complete the WebOps onboarding.
-3. **[Gradual rollout](#phase-3-gradual-rollout):** validate v4 and increase its share of the traffic until it reaches 100%.
+1. **[Preparation](#phase-1-preparation):** Create the v4 repository, prepare the content in the CMS, and review the domains and checkout on v4.
+2. **[Configuration](#phase-2-configuration):** Ask VTEX to activate traffic split with 0% on v4 and complete the WebOps onboarding.
+3. **[Gradual rollout](#phase-3-gradual-rollout):** Validate v4 and increase its share of the traffic until it reaches 100%.
 4. **[Post-migration](#phase-4-post-migration):** VTEX ends the traffic split and you retire the v1 repository.
 
 > ⚠️ Traffic split is only available between FastStore v1 and v4 in the **same account and the same domain**. It isn't possible to split traffic between different accounts or subaccounts, or between two versions that already run on WebOps.
-
-The following diagram shows how traffic and content flow while both versions are live:
-
-```mermaid
-flowchart TD
-    visitors[Visitors] --> split{Traffic split}
-    split -->|"v1 percentage"| v1[FastStore v1]
-    split -->|"v4 percentage"| v4[FastStore v4 on WebOps]
-    hcms[Headless CMS Legacy] -->|"build URL"| v1
-    cms[CMS] -->|"WebOps"| v4
-```
 
 ## Phase 1: Preparation
 
