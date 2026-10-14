@@ -4,7 +4,7 @@ slug: "2026-09-17-faststore-webops-previews-now-deactivate-after-inactivity-and-
 type: "improved"
 createdAt: "2026-09-17T00:00:00.000Z"
 updatedAt: "2026-09-17T00:00:00.000Z"
-excerpt: "FastStore preview URLs no longer require a redeploy to stay usable. Idle previews are automatically deactivated and reactivate on the next access."
+excerpt: "FastStore preview URLs no longer require a redeploy to stay usable. Idle previews are automatically deactivated and reactivated on the next access."
 tags:
     - FastStore
     - WebOps
@@ -25,7 +25,7 @@ For more information, see [Preview availability](https://developers.vtex.com/doc
 
 ## Why did we make this change?
 
-This improvement lets you keep using a preview URL for as long as you need it, simply by accessing it, instead of losing it after a fixed number of days and having to trigger a new deploy.
+This improvement allows you to keep using a preview URL for as long as you need it, simply by accessing it, instead of losing it after a fixed number of days and having to trigger a new deploy.
 
 ## What needs to be done?
 
