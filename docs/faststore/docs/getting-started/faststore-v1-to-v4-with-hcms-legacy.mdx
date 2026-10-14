@@ -8,11 +8,11 @@ This guide explains how to gradually replace a FastStore v1 store with FastStore
 
 > ℹ️ FastStore v3 and v4 run on WebOps and follow the same process. This guide also applies to migrations from v1 to v3.
 
-If you want to use the [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) on v4, follow the [Migrating from FastStore v1 to v4 with CMS](https://developers.vtex.com/docs/guides/faststore/getting-started-migrating-from-faststore-v1-to-v4-with-cms) guide.
+If you want to use the [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) on v4, follow the [Migrating from FastStore v1 to v4 with CMS](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v1-to-v4-with-cms) guide.
 
 > ⚠️ Traffic split is only available between FastStore v1 and v4 in the **same account and the same domain**. It isn't possible to split traffic between different accounts or subaccounts, or between two versions that already run on WebOps.
 
-For an overview of the process and how to confirm your project runs on FastStore v1, see [Migrating from FastStore v1 to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-migrating-from-faststore-v1-to-v4).
+For an overview of the process and how to confirm your project runs on FastStore v1, see [Migrating from FastStore v1 to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v1-to-v4).
 
 ## Migration overview
 
@@ -68,7 +68,7 @@ While traffic is split, both versions serve visitors using the same Headless CMS
 
 #### Step 3 - Rebuild v4 when content is published
 
-During the split, the Headless CMS (Legacy) keeps building only v1 through the current build URL. For more details, see [Integrating your storefront with Headless CMS (Legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-integrating-your-storefront-with-headless-cms-legacy).
+During the split, the Headless CMS (Legacy) keeps building only v1 through the current build URL. For more details, see [Integrating your storefront with Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/integration-overview).
 
 The v4 project doesn't receive content updates automatically, so you need to trigger a new v4 build every time content is published. Follow these steps to set up an automation that rebuilds v4 whenever content is published:
 
