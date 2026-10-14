@@ -14,6 +14,9 @@
 # Fuzzy Jira text ~ matching is intentionally not used (it can collide across PRs).
 # Re-runs update the existing parent unless the Prepare file subtask is due (production
 # lock): then a Jira comment is posted and automation skips further Jira/Crowdin updates.
+# On reuse, summary/priority/duedate are skipped when changelog last author ≠ automation
+# account. Subtasks: create only truly missing canonical summaries; if child count already
+# meets the expected set, skip creates (avoids duplicates after renames).
 # Links source tasks found in the PR title, description, or branch to
 # the LOC parent with a `blocks` link.
 # Reporter on new tasks/subtasks: PR author (GitHub login → Jira user search;
@@ -379,12 +382,28 @@ jobs:
           update_parent_issue() {
             local key="$1"
             local labels_json payload response
+            local include_summary=false include_priority=false include_duedate=false
+            local updated_fields="description,labels"
 
             labels_json=$(curl -s \
               -u "${LOC_JIRA_USER_EMAIL}:${LOC_JIRA_API_TOKEN}" \
               "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${key}?fields=labels" \
               | jq -c --arg label "$PR_LABEL" \
                 '[.fields.labels[]? | if type == "string" then . else .name end] | if index($label) then . else . + [$label] end')
+
+            # Skip summary/priority/duedate when last changelog author is not the bot.
+            if jira_field_writable_by_automation "$key" "summary"; then
+              include_summary=true
+              updated_fields="${updated_fields},summary"
+            fi
+            if jira_field_writable_by_automation "$key" "priority"; then
+              include_priority=true
+              updated_fields="${updated_fields},priority"
+            fi
+            if jira_field_writable_by_automation "$key" "duedate"; then
+              include_duedate=true
+              updated_fields="${updated_fields},duedate"
+            fi
 
             payload=$(jq -n \
               --arg summary "[DP] ${PR_TITLE}" \
@@ -397,24 +416,29 @@ jobs:
               --arg priority "$JIRA_PRIORITY" \
               --arg duedate "$JIRA_DUE_DATE" \
               --argjson labels "$labels_json" \
+              --argjson include_summary "$include_summary" \
+              --argjson include_priority "$include_priority" \
+              --argjson include_duedate "$include_duedate" \
               '{
-                fields: {
-                  summary: $summary,
-                  description: (
-                    "dp-github-pr-ref: " + $pr_ref + "\n\n" +
-                    "h3. PR Details\n" +
-                    "||Field||Value||\n" +
-                    "|Author|" + $pr_author + "|\n" +
-                    "|PR|[#" + $pr_number + "|" + $pr_url + "]|\n\n" +
-                    "h3. Changed files\n\n" +
-                    $changed_files + "\n\n" +
-                    "h3. PR Description\n\n" +
-                    $pr_body
-                  ),
-                  priority: { name: $priority },
-                  duedate: $duedate,
-                  labels: $labels
-                }
+                fields: (
+                  {
+                    description: (
+                      "dp-github-pr-ref: " + $pr_ref + "\n\n" +
+                      "h3. PR Details\n" +
+                      "||Field||Value||\n" +
+                      "|Author|" + $pr_author + "|\n" +
+                      "|PR|[#" + $pr_number + "|" + $pr_url + "]|\n\n" +
+                      "h3. Changed files\n\n" +
+                      $changed_files + "\n\n" +
+                      "h3. PR Description\n\n" +
+                      $pr_body
+                    ),
+                    labels: $labels
+                  }
+                  + (if $include_summary then {summary: $summary} else {} end)
+                  + (if $include_priority then {priority: {name: $priority}} else {} end)
+                  + (if $include_duedate then {duedate: $duedate} else {} end)
+                )
               }')
 
               response=$(jira_curl update-response.json PUT \
@@ -423,7 +447,7 @@ jobs:
                 -d "$payload")
 
             if [ "$response" -eq 204 ] || [ "$response" -eq 200 ]; then
-              echo "Updated ticket: ${LOC_JIRA_BASE_URL}/browse/${key} (priority: ${JIRA_PRIORITY}, due: ${JIRA_DUE_DATE})"
+              echo "Updated ticket: ${LOC_JIRA_BASE_URL}/browse/${key} (fields: ${updated_fields})"
             else
               echo "Failed to update ticket ${key} (HTTP ${response})" >&2
               cat update-response.json >&2
@@ -1174,18 +1198,26 @@ jobs:
           )
 
           ORDERED_KEYS=()
+          EXPECTED_SUBTASKS=${#SUBTASK_SUMMARIES[@]}
           for summary in "${SUBTASK_SUMMARIES[@]}"; do
             subtask_due=$(subtask_due_date "$summary")
             already_exists=$(find_existing_subtask_key "$summary" "$EXISTING")
 
             if [ -n "$already_exists" ]; then
               key="$already_exists"
-              update_issue_due_date "$key" "$subtask_due"
-              echo "Updated existing subtask: ${LOC_JIRA_BASE_URL}/browse/${key} — ${summary} (due: ${subtask_due})"
+              # Exact match: leave due date alone; Crowdin/word count update below.
+              echo "Reusing existing subtask: ${LOC_JIRA_BASE_URL}/browse/${key} — ${summary}"
             else
-              key=$(create_subtask "$summary" "$subtask_due")
-              echo "Created subtask: ${LOC_JIRA_BASE_URL}/browse/${key} — ${summary} (due: ${subtask_due})"
-              EXISTING=$(fetch_child_issues)
+              existing_count=$(echo "$EXISTING" | jq '[.issues[]?] | length')
+              # Avoid recreating renamed subtasks when the parent already has a full set.
+              if [ "$existing_count" -ge "$EXPECTED_SUBTASKS" ]; then
+                echo "Skipping create for \"${summary}\": parent already has ${existing_count} subtasks (possible rename)"
+                key=""
+              else
+                key=$(create_subtask "$summary" "$subtask_due")
+                echo "Created subtask: ${LOC_JIRA_BASE_URL}/browse/${key} — ${summary} (due: ${subtask_due})"
+                EXISTING=$(fetch_child_issues)
+              fi
             fi
 
             ORDERED_KEYS+=("$key")
@@ -1195,28 +1227,44 @@ jobs:
             if [ "$i" -eq 0 ]; then
               continue
             fi
-            rank_subtask_after "${ORDERED_KEYS[$i]}" "${ORDERED_KEYS[$((i - 1))]}"
+            prev_key="${ORDERED_KEYS[$((i - 1))]}"
+            cur_key="${ORDERED_KEYS[$i]}"
+            if [ -n "$prev_key" ] && [ -n "$cur_key" ]; then
+              rank_subtask_after "$cur_key" "$prev_key"
+            fi
           done
 
           echo "Subtasks ordered:"
           for i in "${!ORDERED_KEYS[@]}"; do
-            echo "$((i + 1)). ${ORDERED_KEYS[$i]} — ${SUBTASK_SUMMARIES[$i]}"
+            if [ -n "${ORDERED_KEYS[$i]}" ]; then
+              echo "$((i + 1)). ${ORDERED_KEYS[$i]} — ${SUBTASK_SUMMARIES[$i]}"
+            else
+              echo "$((i + 1)). (skipped) — ${SUBTASK_SUMMARIES[$i]}"
+            fi
           done
 
           echo "Creating subtask block links..."
           for pair in "${BLOCK_INDEX_PAIRS[@]}"; do
             blocker_index="${pair%%:*}"
             blocked_index="${pair##*:}"
-            create_block_link \
-              "${ORDERED_KEYS[$blocker_index]}" \
-              "${ORDERED_KEYS[$blocked_index]}"
+            blocker_key="${ORDERED_KEYS[$blocker_index]}"
+            blocked_key="${ORDERED_KEYS[$blocked_index]}"
+            if [ -z "$blocker_key" ] || [ -z "$blocked_key" ]; then
+              echo "Skipping block link ${blocker_index}->${blocked_index}: missing subtask key"
+              continue
+            fi
+            create_block_link "$blocker_key" "$blocked_key"
           done
 
           if [ "$CROWDIN_UPLOAD_SUCCEEDED" = "true" ]; then
-            update_subtask_crowdin_links \
-              "${ORDERED_KEYS[1]}" \
-              "$CROWDIN_EDITOR_LINKS" \
-              "English revision"
+            if [ -n "${ORDERED_KEYS[1]:-}" ]; then
+              update_subtask_crowdin_links \
+                "${ORDERED_KEYS[1]}" \
+                "$CROWDIN_EDITOR_LINKS" \
+                "English revision"
+            else
+              echo "Skipping Crowdin editor links: English revision subtask key missing"
+            fi
           else
             echo "Skipping Crowdin editor links (Crowdin upload failed or was skipped)"
           fi
@@ -1225,6 +1273,9 @@ jobs:
             echo "Updating word count on language subtasks..."
             for i in "${!SUBTASK_SUMMARIES[@]}"; do
               summary="${SUBTASK_SUMMARIES[$i]}"
+              if [ -z "${ORDERED_KEYS[$i]}" ]; then
+                continue
+              fi
               if is_language_subtask "$summary"; then
                 update_subtask_word_count "${ORDERED_KEYS[$i]}" "$summary"
               fi
