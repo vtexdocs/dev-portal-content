@@ -1,38 +1,50 @@
 ---
 title: "Integrating a new payment provider on VTEX"
 slug: "integrating-a-new-payment-provider-on-vtex"
+excerpt: "Follow the seven steps to integrate a new payment provider on VTEX, from implementing the Payment Provider Protocol to homologation and go-live."
 hidden: false
 createdAt: "2023-08-25T00:00:15.623Z"
-updatedAt: ""
+updatedAt: "2026-09-15T00:00:00.000Z"
 ---
-This article is divided into steps that explain the integration flow for a new payment provider on VTEX. Before completing each step and moving on, make sure to check and understand the information in the related links, as well as any prerequisites and settings that need to be in place in the current step.
+
+This article is divided into steps that explain the integration flow for a new payment provider on VTEX. Before completing each step and moving on, make sure to review and understand the information in the related links, as well as any prerequisites and settings that must be in place for the current step.
 
 The integration flow of a new payment provider on VTEX has the following steps:
 
-1. [Payment Provider Protocol - Overview](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#1-payment-provider-protocol-overview)
+1. [Payment Provider Protocol overview](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#1-payment-provider-protocol-overview)
 2. [Defining the operation environment](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#2-defining-the-operation-environment)
 3. [Selecting the infrastructure type](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#3-selecting-the-infrastructure-type)
 4. [Defining the purchase flow](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#4-defining-the-purchase-flow)
 5. [Additional requirements and settings](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#5-additional-requirements-and-settings)
 6. [Connector tests](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#6-connector-tests)
-7. [Homologation and Go-live](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#7-homologation-and-go-live)
+7. [Homologation and go-live](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#7-homologation-and-go-live)
 
 The following flowchart shows the possible journeys within the integration process.
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/docs/guides/Integration-Guides/payments-integration-guide/new-payment-provider-flow.gif"></img>
-</p>
+```mermaid
+flowchart TD
+    S1["1. Payment Provider Protocol overview"] --> S2["2. Defining the operation environment"]
+    S2 -->|"Ecommerce"| S3["3. Selecting the infrastructure type"]
+    S2 -->|"Physical stores"| S3
+    S2 -->|"Both environments"| S3
+    S3 -->|"Own infrastructure"| S4["4. Defining the purchase flow"]
+    S3 -->|"VTEX IO"| S4
+    S4 -->|"Transparent"| S5["5. Additional requirements and settings"]
+    S4 -->|"Custom (Payment App<br/>or redirect)"| S5
+    S5 --> S6["6. Connector tests"]
+    S6 --> S7["7. Homologation and go-live"]
+```
 
-## 1. Payment Provider Protocol - Overview
+## 1. Payment Provider Protocol overview
 
-Payment service providers (PSP), or simply payment providers, are companies that support electronic transactions with different payment methods, such as credit cards or digital wallets.
+Payment service providers (PSPs), or simply payment providers, are companies that support electronic transactions with different payment methods, such as credit cards and digital wallets.
 
-To operate in the VTEX environment, payment providers need to be integrated through the Payment Provider Protocol (PPP). This protocol defines the necessary prerequisites and settings that the payment methods available in your connector need to have in order to work in VTEX stores.
+To operate in the VTEX environment, payment providers must be integrated via the Payment Provider Protocol (PPP). This protocol defines the prerequisites and settings that the payment methods available in your connector must meet to work in VTEX stores.
 
 To understand how the Payment Provider Protocol works and the routes used in the payment and authentication flows, see:
 
-- [Payment Provider Protocol - Overview](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m)
-- [Payment Provider Protocol - API References](https://developers.vtex.com/docs/api-reference/payment-provider-protocol)
+- [Payment Provider Protocol overview](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m)
+- [Payment Provider Protocol API reference](https://developers.vtex.com/docs/api-reference/payment-provider-protocol)
 
 After making sure you meet the PPP implementation [prerequisites](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#implementation-prerequisites), the next step is defining how your connector will work in the VTEX environment.
 
@@ -42,13 +54,13 @@ On VTEX, a payment connector can operate in three different contexts: ecommerce 
 
 ### Operating payments on the ecommerce website only
 
-A payment connector can handle purchases for all virtual stores within the VTEX ecosystem, whether they be national or international.
+A payment connector can handle purchases across all virtual stores within the VTEX ecosystem, both national and international.
 
-> ℹ️ To process sales in countries other than your home country, check if your payment system meets the financial regulations of every country where you wish to operate. In addition, you need to sign a local or global partnership agreement with VTEX. Learn more in [Become a VTEX partner](https://vtex.com/us-en/partner/).
+> ℹ️ To process sales in countries other than your home country, check if your payment system meets the financial regulations of every country where you want to operate. In addition, you need to sign a local or global partnership agreement with VTEX. Learn more in [Become a VTEX partner](https://vtex.com/us-en/partner/).
 
-### Operating payments in the physical stores only
+### Operating payments in physical stores only
 
-For payment operations in physical stores, VTEX offers the VTEX Sales App solution. This app enables sales associates to offer a complete and customized in-person experience for each customer, tracking the purchase process from selecting the product to delivering the order.
+For payment operations in physical stores, VTEX provides the VTEX Sales App solution. This app enables sales associates to offer a complete, customized in-person experience for each customer, tracking the purchase process from product selection to order delivery.
 
 > ℹ️ Connectors developed for VTEX Sales App also use the Payment Provider Protocol (PPP).
 
@@ -57,15 +69,15 @@ To learn more about VTEX Sales App, see:
 - [VTEX Sales App - Getting started and setting up](https://help.vtex.com/en/tracks/instore-getting-started-and-setting-up--zav76TFEZlAjnyBVL5tRc/7fnnVlG3Kv1Tay9iagc5yf)
 - [VTEX Sales App - Using the app](https://help.vtex.com/en/tracks/instore-using-the-app--4BYzQIwyOHvnmnCYQgLzdr/6cq4E1JCmA6vCvBCCtAgIM)
 - [VTEX Sales App - Payments](https://help.vtex.com/en/tracks/instore-payments--43B4Nr7uZva5UdwWEt3PEy/2liigRors32hzqBNs2M1Oa)
-- [Payment Provider Protocol applied to payments with POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos)
+- [Payment Provider Protocol for Point of Sale (POS)](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos)
 
 ### Operating payments in both physical stores and ecommerce website
 
-If you want to offer a payment experience in physical stores and on the ecommerce website, you will need to configure settings for both cases.
+If you want to offer a payment experience in physical stores and on the ecommerce website, you need to configure settings for both cases.
 
 To learn more about this type of operation, in addition to the documentation references linked in previous sections, see [Unified Commerce Strategies](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3).
 
-> ℹ️ You can develop a single connector configured to work in both environments (physical stores and ecommerce websites). You do not have to create a connector for each type of operation.
+> ℹ️ You can develop a single connector configured to work in both environments (physical stores and ecommerce websites). You don't have to create a connector for each type of operation.
 
 ## 3. Selecting the infrastructure type
 
@@ -75,23 +87,23 @@ When implementing the payment connector on VTEX, you can use the internal infras
 
 You can develop a connector using your internal infrastructure. In this case, you need to make sure that the architecture allows secure communication between you (payment provider) and the VTEX gateway.
 
-To protect sensitive information, like credit card numbers, during transactions, you need to have the [PCI - DSS Compliance](https://www.pcisecuritystandards.org/document_library/?document=pci_dss) security certification or use Secure Proxy, the VTEX solution that replaces confidential information with encrypted tokens.
+To protect sensitive information, like credit card numbers, during transactions, you need to have a valid [Payment Card Industry Data Security Standard](https://www.pcisecuritystandards.org/standards/pci-dss/) (PCI DSS) certification or use Secure Proxy, the VTEX solution that replaces confidential information with encrypted tokens.
 
 To learn more about how to develop the integration (middleware) and transfer sensitive payment information, see:
 
 - [Implementing a Payment Provider - Middleware](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider)
-- [PCI - DSS Compliance - Developer Portal](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance)
-- [Secure proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy)
+- [PCI DSS Compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance)
+- [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy)
 
 ### Developing with VTEX infrastructure (VTEX IO)
 
-If you want to develop your connector using VTEX infrastructure, you can use our [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io), our proprietary development platform. VTEX IO offers the following advantages:
+If you want to develop your connector using VTEX infrastructure, you can use [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io). This platform offers the following advantages:
 
-- Greater integration agility by reusing VTEX templates and clients.
-- [Serverless](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless) environment with no need to invest additional financial resources related to infrastructure, reliability, and security management.
-- Simplified authentication, authorization, and configuration resources that are integrated with all other VTEX systems.
+- Greater integration agility by reusing VTEX templates and clients
+- [Serverless](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless) environment with no need to invest additional financial resources related to infrastructure, reliability, and security management
+- Simplified authentication, authorization, and configuration resources that are integrated with all other VTEX systems
 
-If you use our infrastructure, you can also use our VTEX IO boilerplate, __Payment Provider Framework (PPF)__, which makes creating the connector faster in comparison to using your own infrastructure. With PPF, you do not have to manually configure the API routes, response and request body default formats, and sensitive information transfer (such as credit card information).
+If you use the VTEX infrastructure, you can also use our VTEX IO boilerplate, **Payment Provider Framework (PPF)**, which makes creating the connector faster than using your own infrastructure. With PPF, you don't have to manually configure API routes, default response and request body formats, and sensitive information transfer (such as credit card information).
 
 To learn more about development using VTEX IO and how the Payment Provider Framework works, see:
 
@@ -101,26 +113,26 @@ To learn more about development using VTEX IO and how the Payment Provider Frame
 
 ## 4. Defining the purchase flow
 
-A purchase flow represents the steps or actions that a customer takes to complete the payment of a purchase. On VTEX, the [available purchase flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows) are: transparent or custom (Payment App or Redirect). Select the option that matches the operating characteristics of your connector.
+A purchase flow represents the steps a customer takes to complete the payment of a purchase. On VTEX, the [available purchase flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows) are transparent or custom (Payment App or Redirect). Select the option that matches the operating characteristics of your connector.
 
 ### Transparent
 
-In the transparent purchase flow, the customer enters the payment information and places the order directly in the checkout of the VTEX store. This is the most widely used flow type because it allows completing all payment steps in the same environment, which improves the customer purchase experience.
+In the transparent purchase flow, the customer enters payment information and places the order directly at checkout in the VTEX store. This is the most widely used flow type because it allows all payment steps to be completed in the same environment, which improves the customer purchase experience.
 
 To learn more about the transparent purchase flow, see [What is transparent checkout?](https://help.vtex.com/en/tutorial/what-is-transparent-checkout--2Y4ECegUmcYUggmck2GOwe).
 
 ### Custom
 
-If you do not want to use the native VTEX purchase flow (transparent), you have two options to create custom payment experiences for your customer: Payment App and Redirect.
+If you don't want to use the native VTEX purchase flow (transparent), you have two options to create custom payment experiences for your customers: Payment App and Redirect.
 
 #### Payment App
 
-Payment App is an app created in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io), which enables a payment provider to create a custom payment experience without having to redirect the customer to an external page, unlike the redirect purchase flow.
+Payment App is an app built in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-io) that enables a payment provider to create a custom payment experience without redirecting the customer to an external page, unlike the redirect purchase flow.
 
 If your connector is being developed using [VTEX infrastructure](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#developing-with-vtex-infrastructure-vtex-io), you can implement Payment App in two different ways:
 
-1. [Create a specific app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app) for Payment App.
-2. Use the connector's app. In this case, you have to create a specific React folder for Payment App within the connector app.
+- [Create a specific app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app) for Payment App.
+- Use the connector's app. In this case, you have to create a specific React folder for Payment App within the connector app.
 
 > ⚠️ Connectors that only [operate payments in physical stores](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#operating-payments-in-the-physical-stores-only) are required to use Payment App as the default purchase flow.
 
@@ -142,7 +154,7 @@ To learn how to create a custom payment layout, see [Layout Development Guide fo
 
 ### Payment provider and VTEX interactions in the purchase flow
 
-In addition to defining the best purchase flow, you need to know the operation and communication patterns between your connector and the VTEX payment gateway. To learn more, see:
+In addition to defining the best purchase flow, you need to know the operational and communication patterns between your connector and the VTEX payment gateway. To learn more, see:
 
 - [Payment flow - Operations](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows#operations-in-the-payment-flow)
 - [Payment flow - Communication](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows#communication-in-the-payment-flow)
@@ -151,49 +163,51 @@ In addition to defining the best purchase flow, you need to know the operation a
 
 The [configuration flow](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider#configuration-flow) has three endpoints ([Create Authorization Token](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/authorization/token), [Provider Authentication](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/authorization/redirect), and [Get Credentials](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/authorization/credentials)), designed to improve merchant experience when enabling your connector on the VTEX Admin.
 
-This flow enables the merchant to authenticate in your connector through the VTEX Admin using the `appKey`, `appToken`, and `applicationId` as credentials. Also, you can use this resource to provide other authentication methods for the merchant, such as login on your platform or even an initial registration.
+This flow enables the merchant to authenticate in your connector through the VTEX Admin using the `appKey`, `appToken`, and `applicationId` as credentials. Also, you can use this resource to provide other authentication methods for the merchant, such as logging in on your platform or even initial registration.
 
-> ℹ️ Implementing a configuration flow is optional. It can be done during middleware creation when you develop the connector using [your own infrastructure](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider#developing-with-internal-infrastructure) or with the [VTEX IO](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider#developing-with-vtex-infrastructure-vtex-io).
+> ℹ️ Implementing a configuration flow is optional. It can be done during middleware creation when you develop the connector using [your own infrastructure](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#developing-with-internal-infrastructure) or with [VTEX IO](https://developers.vtex.com/docs/guides/integrating-a-new-payment-provider-on-vtex#developing-with-vtex-infrastructure-vtex-io).
 
 ## 5. Additional requirements and settings
 
 Depending on the payment method or features that your connector offers, you might need to meet specific requirements or configure additional settings.
 
-> ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol?endpoint=get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
+> ⚠️ Before adding values to `paymentMethods` in your connector manifest, check the names already documented in the [List Payment Provider Manifest](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#get-/manifest) endpoint. If a payment method already exists, use the same name (same spelling and capitalization). Create a new name only when the payment method is truly new.
 
-- __Payment methods (ecommerce website)__
+- **Payment methods (ecommerce website)**
 
-  - __Debit, credit, or co-branded cards__: Make sure that your connector has the [PCI DSS Compliance](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) certification. If you don't have or don't want to use that certification in your connector, you can implement [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
-- __Payment methods (physical store)__
+  - **Debit, credit, or co-branded cards**: Make sure that your connector has the [PCI DSS](https://developers.vtex.com/docs/guides/payments-integration-pci-dss-compliance) certification. If you don't have or don't want to use that certification in your connector, you can implement [Secure Proxy](https://developers.vtex.com/docs/guides/payments-integration-secure-proxy).
+- **Payment methods (physical store)**
 
-  - __Direct credit sale and direct debit sale__: Make sure that both these payment methods were configured as described in [Payment Provider Protocol applied to payments with POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos#payment-connector-pre-requisites).
-- __Features__
+  - **Direct credit sale and direct debit sale**: Make sure that both payment methods are configured as described in [Payment Provider Protocol applied to payments with POS](https://developers.vtex.com/docs/guides/payments-integration-ppp-applied-to-pos#payment-connector-prerequisites).
+- **Features**
 
-  - __Split Payout__: This solution enables marketplaces to manage order amounts, and it divides your commission and the amount due to the seller. Learn more in:
+  - **Split Payout**: This solution enables marketplaces to manage order amounts, and it divides your commission and the amount due to the seller. Learn more in:
     - [Split Payouts on Payment Provider Protocol](https://developers.vtex.com/docs/guides/split-payouts-on-payment-provider-protocol)
     - [Split Payment](https://help.vtex.com/en/tutorial/split-payment--6k5JidhYRUxileNolY2VLx)
-  - __Custom Auto Capture__: This solution enables the merchant to set a window for automatic capture after the payment is completed. Learn more in Custom Auto Capture Feature.
-  - __Inbound Request__: URL directly connected between the VTEX gateway and the payment provider. Learn more in 6. POST Inbound Request (BETA) in [Payment Flow](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider#payment-flow).
+  - **Custom Auto Capture**: This solution enables the merchant to set a window for automatic capture after the payment is completed. Learn more in [Custom Auto Capture Feature](https://developers.vtex.com/docs/guides/custom-auto-capture-feature).
+  - **Inbound Request**: URL directly connected between the VTEX gateway and the payment provider. Learn more in [6. POST Inbound Request (Beta)](https://developers.vtex.com/docs/guides/payments-integration-implementing-a-payment-provider#6-post-inbound-request-beta).
 
-## 6. Connector Tests
+## 6. Connector tests
 
-After connector development is complete, you can use [Test Suite App](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation#install-the-test-suite-app) to test the following routes:
+After connector development is complete, you can use the [Payment Provider Test Suite](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-homologation#install-the-test-suite-app) to test the following routes:
 
 - [Create Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments)
 - [Cancel Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/cancellations)
 - [Settle Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/settlements)
 - [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds)
 
-Learn more about Test Suite App tests in [Testing details](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#4-testing).
+Learn more about Payment Provider Test Suite tests in [Testing details](https://help.vtex.com/en/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m#4-testing).
 
 You can also access your test store to [simulate payment of an order](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#placing-an-order-with-your-new-connector) before starting the connector homologation process on VTEX.
 
-## 7. Homologation and Go-live
+## 7. Homologation and go-live
 
-After completing all the above stages, ensuring that all the necessary requirements and settings are in place, and getting positive test results, you need to request connector homologation by opening a [ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en) with VTEX support.
+> ℹ️ Homologation is the VTEX certification process that validates a payment provider integration before stores can use it in production.
 
-> ⚠️ The required SLA for homologation is 30 days, which may vary depending on any inconsistencies found in the connector development.
+After completing all previous stages, ensuring that all requirements and settings are in place, and obtaining positive test results, you need to request connector homologation by opening a [ticket](https://help.vtex.com/en/tutorial/opening-tickets-to-vtex-support--16yOEqpO32UQYygSmMSSAM?locale=en) with VTEX support.
 
-After the homologation process is completed, you will receive a confirmation message and your connector will be available for configuration to VTEX Admin merchants.
+> ⚠️ The payment team completes the homologation within 30 days. This period begins only after you submit the Master Partner Agreement for Financial Services (MPA), and it may be longer if any inconsistencies are found during connector development.
 
-> ℹ️ If you want to increase the visibility of your connector in another channel, you can also publish your connector on the [VTEX App Store](https://apps.vtex.com/). Learn more in [Making your connector available to everyone](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#making-your-connector-available-to-everyone) and [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
+After the homologation process is completed, you receive a confirmation message, and merchants can configure your connector in the VTEX Admin.
+
+> ℹ️ If you want to increase the visibility of your connector in another channel, you can also publish your connector on the [VTEX App Store](https://apps.vtex.com/). Learn more in [Making your connector available to process sales](https://developers.vtex.com/docs/guides/payments-integration-payment-provider-framework#making-your-connector-available-to-process-sales) and [Submitting your app to the VTEX App Store](https://developers.vtex.com/docs/guides/vtex-io-documentation-submitting-your-app-in-the-vtex-app-store).
