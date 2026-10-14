@@ -1,7 +1,7 @@
 ---
 title: "Update Order Status"
 slug: "update-order-status"
-excerpt: "API request used to update an order status in VTEX.\n\nThis process is asynchronous and a notification with the order's integration results will be sent to the endpoint specified in the **connectiorEndpoint** field or the **connectiorEndpoint** [App Template](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-app-template), if the connector uses our App template. The field **connectorName** is also optional for connectors that use our App Template and authenticate using the app's auth cookie. \n\nFor a detailed explanation of the steps required to develop a custom connector to become an external marketplace for VTEX sellers, check out our complete [External Marketplace Integration Guide](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-guide)."
+excerpt: "API request used to update an order status in VTEX.\n\nThis process is asynchronous and a notification with the order's integration results will be sent to the endpoint specified in the **connectorEndpoint** field. \n\nFor a detailed explanation of the steps required to develop a custom connector to become an external marketplace for VTEX sellers, check out our complete [External Marketplace Integration Guide](https://developers.vtex.com/docs/guides/external-marketplace-integration-guide)."
 hidden: false
 createdAt: "2022-04-29T19:11:59.376Z"
 updatedAt: "2022-04-29T19:32:22.479Z"

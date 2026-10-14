@@ -21,7 +21,7 @@ In this guide, you'll learn how to set up Sales App extensions for your stores.
 
 ## Before you begin
 
-* Set up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview). The monorepo uses a `faststore.json` file at the repository root to define module settings such as `paths` and `ports` for local development and production.
+* Set up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview). The monorepo uses a `faststore.json` file at the repository root to define module settings such as `paths` and `ports` for local development and production.
 
 * Install VTEX Sales App on your account, complete the onboarding in the VTEX Admin, and add a sales associate linked to a store. For detailed instructions, see the guide [VTEX Sales App - Basic settings](https://help.vtex.com/docs/tracks/vtex-sales-app-basic-settings).
 

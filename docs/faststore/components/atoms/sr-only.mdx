@@ -40,6 +40,36 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ---
 
+## Examples
+
+### Render as another element
+
+Use `as` to set the element rendered by `SROnly`. It renders a `span` by default.
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <SROnly as="p" text="Additional instructions for screen readers" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import { SROnly } from '@faststore/ui'
+
+    export default function AccessibleInstructions() {
+      return (
+        <SROnly
+          as="p"
+          text="Additional instructions for screen readers"
+        />
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
+---
+
 ## Data attributes
 
 You can target and override `SROnly` styles using the following data attributes:
