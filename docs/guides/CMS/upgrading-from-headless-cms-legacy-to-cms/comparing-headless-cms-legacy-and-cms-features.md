@@ -136,7 +136,7 @@ Storefront integration capabilities determine which frontend frameworks and tech
 
 | Feature | Headless CMS (legacy) | CMS |
 | :---- | :----: | :----: |
-| **Headless** | ✅ | ⚒️ *Coming soon* |
+| **Headless stores** | ✅ | ✅ |
 | **Store Framework** | ❌ | ❌ |
 | **FastStore v1 and v2** | ✅ | ❌ |
 | **FastStore v3** | ✅ | ✅ |
