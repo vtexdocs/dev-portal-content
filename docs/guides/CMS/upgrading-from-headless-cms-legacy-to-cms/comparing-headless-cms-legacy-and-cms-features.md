@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Comparing Headless CMS (legacy) and CMS features"
 hidden: false
 slug: "comparing-headless-cms-legacy-and-cms-features"
