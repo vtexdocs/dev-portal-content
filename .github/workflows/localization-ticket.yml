@@ -202,6 +202,15 @@ jobs:
           ref: ${{ steps.pr.outputs.checkout_ref }}
           fetch-depth: 0
 
+      # Merged-PR / old-head checkouts can predate jira_curl and crowdin_sync fixes.
+      # Always run helpers from main so workflow_dispatch on closed PRs still works.
+      - name: Overlay localization scripts from main
+        if: steps.eligibility.outputs.should_run == 'true'
+        run: |
+          git fetch origin main --depth=1
+          git checkout origin/main -- .github/scripts/jira_helpers.sh .github/scripts/crowdin_sync.py
+          echo "Using .github/scripts from origin/main"
+
       - name: Check for content additions
         if: steps.eligibility.outputs.should_run == 'true'
         id: content_diff
