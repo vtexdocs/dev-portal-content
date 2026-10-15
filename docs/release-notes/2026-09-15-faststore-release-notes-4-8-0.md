@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore `v4.8.0` helps merchants increase average order value with recommendations in the mini cart, provides developers with safer, faster ways to extend the BFF and run the CLI, and improves storefront stability under bot traffic and in multilingual SEO. Shoppers get a more polished My Account experience for B2B Buyer Portal Cards, and teams on Windows or in monorepos spend less time on opaque build failures. See the sections below for details.
+FastStore `v4.8.0` helps merchants increase average order value with recommendations in the mini cart, provides developers with safer, faster ways to extend the BFF and run the CLI, and improves storefront stability under bot traffic and strengthens multilingual SEO. Shoppers get a more polished My Account experience for B2B Buyer Portal Cards, and teams on Windows or in monorepos spend less time on opaque build failures. See the sections below for details.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.8.0` and keep your store up to date with the following improvements.
 
@@ -20,23 +20,23 @@ FastStore `v4.8.0` helps merchants increase average order value with recommendat
 
 Adds an optional `CartRecommendationShelf` inside the cart drawer, between cart line items and the order summary. Merchants configure the shelf on the Cart Sidebar CMS group with a display toggle (off by default), campaign VRN, title, carousel settings, and product-card options. The shelf reuses recommendation shelf patterns and hides when the cart is empty.
 
-Merchants can promote complementary products at the moment shoppers are ready to buy, without custom storefront code. Shoppers discover relevant items without leaving checkout flow, which supports higher conversion and basket size. For more information, see the [Displaying recommendations in the mini cart](https://developers.vtex.com/docs/guides/faststore/storefront-features-displaying-product-recommendations-with-recommendation-shelf#displaying-recommendations-in-the-mini-cart) section.
+Merchants can promote complementary products at the moment shoppers are ready to buy, without custom storefront code. Shoppers discover relevant items without leaving the checkout flow, which supports higher conversion rates and a larger basket size. For more information, see the [Displaying recommendations in the mini cart](https://developers.vtex.com/docs/guides/faststore/storefront-features-displaying-product-recommendations-with-recommendation-shelf#displaying-recommendations-in-the-mini-cart) section.
 
 ### Build safer custom BFF routes with VTEX ID authentication helpers (PR: [#3481](https://github.com/vtex/faststore/pull/3481))
 
-Exports two helpers that already exist in the BFF but were not part of the public package entry: `validateUserAuthentication(ctx)` (calls `commerce.vtexid.validate()` and throws `UnauthorizedError` / `ForbiddenError` on failure) and `getAuthCookie(ctx)` (reads the VTEX ID auth cookie from the request context).
+Exports two helpers that already exist in the BFF but weren't part of the public package entry: `validateUserAuthentication(ctx)` (calls `commerce.vtexid.validate()` and throws `UnauthorizedError` / `ForbiddenError` on failure) and `getAuthCookie(ctx)` (reads the VTEX ID auth cookie from the request context).
 
-Teams building custom BFF routes spend less time reimplementing VTEX ID checks and reduce the risk of auth bugs that expose data or block legitimate buyers. Extensions behave consistently with the platform BFF. Upgrade `@faststore/api` to `v4.8.0` and import the helpers from `@faststore/api` in server-side extension code. For more information, see the [Authentication in API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-authentication-in-api-extensions).
+Teams building custom BFF routes spend less time reimplementing VTEX ID checks and reduce the risk of auth bugs that expose data or block legitimate buyers. Extensions behave consistently with the platform BFF. Upgrade `@faststore/api` to `v4.8.0` and import the helpers from `@faststore/api` in server-side extension code. For more information, see the article [Authentication in API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-authentication-in-api-extensions).
 
 ---
 
-## Bug Fixes
+## Bug fixes
 
 ### Stop forwarding unvalidated `ni` output to the shell in the CLI (PR: [#3422](https://github.com/vtex/faststore/pull/3422))
 
 Validates the stdout of `ni` package-manager detection in `getPreferredPackageManager()` before callers interpolate it into shell commands. Previously, unexpected output could produce opaque `/bin/sh: syntax error` failures during `faststore` commands with no log context tying the error to package-manager detection.
 
-Developers and CI pipelines get clearer, faster resolution when builds fail—you are less likely to lose hours chasing a generic shell error unrelated to your store code. No configuration changes are required after upgrading to `v4.8.0`.
+Developers and CI pipelines get clearer, faster resolution when builds fail — you're less likely to lose hours chasing a generic shell error unrelated to your store code. No configuration changes are required after upgrading to `v4.8.0`.
 
 ### Resolve the `next` binary from `@faststore/core` (PR: [#3454](https://github.com/vtex/faststore/pull/3454))
 
@@ -66,7 +66,7 @@ Teams that document components in Storybook or use mocks beside production code 
 
 Converts `process.cwd()` to forward slashes before writing `outputFileTracingRoot` into the generated `next.config.js`, preventing JavaScript escape sequences (such as `\f`) from corrupting the config when paths contain backslashes on Windows.
 
-Windows-based developers get parity with macOS/Linux—production builds complete reliably rather than failing on config parse errors unrelated to store business logic.
+Windows-based developers get parity with macOS/Linux — production builds complete reliably rather than failing on config parse errors unrelated to store business logic.
 
 ### Keep Yarn 1 from hoisting an incompatible `@inquirer/type` into the CLI (PR: [#3459](https://github.com/vtex/faststore/pull/3459))
 
@@ -88,20 +88,20 @@ Merchants automate CMS schema sync in CI and onboarding scripts without manual p
 
 ---
 
-## Localization feature (Closed beta)
+## Localization feature (closed beta)
 
 ### Point localized canonical URLs and hreflang at the rendered locale (PR: [#3470](https://github.com/vtex/faststore/pull/3470))
 
 Fixes SSR localization URL resolution so `getStoreURL()` no longer infers locale from `window.location` during server render. Collection and listing templates receive binding-aware URLs, and PLPs emit hreflang alternates for localized routes.
 
-Multilingual stores improve organic search signals—search engines index the correct locale URLs, and shoppers land on the right language version from SERPs and shared links. Merchants reduce duplicate content and wrong-locale ranking issues. After upgrading to `v4.8.0`, spot-check canonical and hreflang tags on a few localized PLPs and landing pages.
+Multilingual stores improve organic search signals — search engines index the correct locale URLs, and shoppers land on the right language version from SERPs and shared links. Merchants reduce duplicate content and wrong-locale ranking issues. After upgrading to `v4.8.0`, spot-check canonical and hreflang tags on a few localized PLPs and landing pages.
 
 ---
 
-## My Account for B2B Buyer Portal (Closed beta)
+## My Account for B2B Buyer Portal (closed beta)
 
 ### Align the saved-cards list with the design reference (PR: [#3487](https://github.com/vtex/faststore/pull/3487))
 
 Updates `MyAccountListCards` layout and styles so the Personal and Shared saved-card listings match design review for spacing, typography, and empty states introduced in `v4.7.0`.
 
-B2B buyers see a clearer, more trustworthy payment experience when managing personal and shared cards—fewer layout surprises and empty states that look broken. No CMS or configuration changes beyond upgrading to `v4.8.0`.
+B2B buyers see a clearer, more trustworthy payment experience when managing personal and shared cards — fewer layout surprises and empty states that look broken. No CMS or configuration changes beyond upgrading to `v4.8.0`.
