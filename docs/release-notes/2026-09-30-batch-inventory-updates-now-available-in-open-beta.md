@@ -1,5 +1,5 @@
 ---
-title: "Batch inventory updates are now available in open beta"
+title: "Logistics: Batch inventory updates are now available in open beta"
 slug: "2026-09-30-batch-inventory-updates-now-available-in-open-beta"
 hidden: false
 type: "added"
