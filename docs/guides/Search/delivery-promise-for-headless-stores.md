@@ -159,7 +159,7 @@ Delivery Options  are the set of choices a merchant provides to shoppers, descri
 
 Before you can display Delivery Option filters, it is necessary to:
 
-* Enable the Delivery Options feature by contacting [our Support](https://help.vtex.com/en/support).  
+* Review the Delivery Options in the [Delivery Promise activation flow](https://help.vtex.com/en/docs/tutorials/activate-delivery-promise) in the VTEX Admin.
 * Create the Delivery Options for your store in the VTEX Admin following the instructions in the [Delivery Options](https://help.vtex.com/docs/tutorials/delivery-options-beta) guide.
 
 To filter by a Delivery Option, use the `delivery-options` parameter. Its value must be the ID for one of the Delivery Options configured on your store.
