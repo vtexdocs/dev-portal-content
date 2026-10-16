@@ -1,5 +1,5 @@
 ---
-title: "Setting up Delivery Promise components (Beta)"
+title: "Setting up Delivery Promise components"
 slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
@@ -10,9 +10,7 @@ seeAlso:
  - "/docs/guides/gathering-delivery-promise-information"
 ---
 
->⚠️ This feature is in open beta phase. If you're interested in testing it, contact our [Support team](https://support.vtex.com/hc/en-us).
-
-The [Delivery Promise (Beta)](https://help.vtex.com/en/docs/tutorials/delivery-promise-beta) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products the store can deliver to the provided address or pick up at available locations.
+The [Delivery Promise](https://help.vtex.com/en/docs/tutorials/delivery-promise-beta) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products the store can deliver to the provided address or pick up at available locations.
 
 Availability is determined by the following rules:
 
@@ -196,8 +194,6 @@ To use Delivery Promise, customers must provide a delivery address early in thei
 ### Step 4 - Implement sidebar filters
 
 To display Delivery Promise filters in the search sidebar, configure the [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) app as described below.
-
-> ⚠️ Delivery Promise filters are a beta feature and may be subject to breaking changes. If you customize this functionality, ensure your implementation can handle future updates.
 
 1. In your theme's `manifest.json`, add the `search-result` app as a dependency:
 
