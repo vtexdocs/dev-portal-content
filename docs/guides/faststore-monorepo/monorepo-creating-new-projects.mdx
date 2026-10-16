@@ -1,12 +1,14 @@
 ---
 title: "Creating new projects"
 slug: "monorepo-creating-new-projects"
-excerpt: "Learn how to create new projects in your FastStore monorepo."
+excerpt: "Create new projects in your FastStore monorepo."
 createdAt: "2026-05-12T14:47:17.858Z"
-updatedAt: "2026-09-17T16:14:14.542Z"
+updatedAt: "2026-10-02T14:32:00.000Z"
 ---
 
-After setting up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), you can create new projects for additional stores, brands, or modules using the `fsp create` command. This is useful when you need to add a new storefront, extend your monorepo with additional modules ([Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility), [VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility)), or create projects for different brand variants within your organization. You can create a Buyer Portal Checkout (`checkout`) or Sales App (`sales-app`) project without a Product Discovery Experience (`discovery`) project if FastStore isn't your storefront.
+After setting up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), you can create new projects for additional stores, brands, or modules using the `fsp create` command. This is useful when you need to add a new storefront, extend your monorepo with additional modules, such as [Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility) and [VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility), or create projects for different brand variants within your organization.
+
+> ℹ️ You can create a Buyer Portal Checkout (`checkout`) or Sales App (`sales-app`) project without a Product Discovery Experience (`discovery`) project if FastStore isn't your storefront.
 
 The `fsp create` command automatically creates the project directory with the necessary structure and updates your `faststore.json` configuration file with the new project settings, including the path and port allocation.
 
@@ -76,13 +78,13 @@ And your `faststore.json` will be automatically updated with the new configurati
     "store-a": {
       "discovery": {
         "path": "packages/store-a",
-        "port": 3000
+        "port": 3001
       }
     },
     "brand-store-1": {
       "discovery": {
         "path": "packages/brand-store-1",
-        "port": 3001
+        "port": 3002
       }
     }
   }
