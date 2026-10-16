@@ -79,6 +79,37 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ## Examples
 
+### Products sold in multiples
+
+Forward `unitMultiplier` and `useUnitMultiplier` to the internal quantity selector. This example represents packs of six units.
+
+```tsx
+import { useState } from "react";
+import { CartItem, CartItemSummary } from "@faststore/ui";
+
+const formatPrice = (price: number) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(price);
+
+export default function CartItemMultiplesExample() {
+  const [quantity, setQuantity] = useState(1);
+
+  return (
+    <CartItem
+      price={{ value: 24, listPrice: 24, formatter: formatPrice }}
+      quantity={quantity}
+      unitMultiplier={6}
+      useUnitMultiplier
+      onQuantityChange={setQuantity}
+    >
+      <CartItemSummary title="Sparkling water — pack of 6" />
+    </CartItem>
+  );
+}
+```
+
 ### Unavailable
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
