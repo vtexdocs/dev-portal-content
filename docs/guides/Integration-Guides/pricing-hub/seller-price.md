@@ -40,7 +40,7 @@ The marketplace must follow the steps below to activate the B2B Seller Price:
 
 The B2B sellers – white label or not – who want to use this feature must follow the instructions below.
 
-1. Configure specific price tables associated with the customers’ respective email addresses, either using the [Pricing API](https://developers.vtex.com/docs/guides/pricing-api-overview) or the [VTEX Admin panel](https://help.vtex.com/en/tutorial/configurar-price-tables-especificas--5S9oDOMHNmY4K0kAewAiWY).
+1. Configure specific price tables associated with the customers’ respective email addresses, either using the [Pricing API](https://developers.vtex.com/docs/api-reference/pricing-api) or the [VTEX Admin panel](https://help.vtex.com/en/tutorial/configurar-price-tables-especificas--5S9oDOMHNmY4K0kAewAiWY).
 2. Develop a VTEX IO app to allow querying price tables by email, integrating with external price systems, and install it in the master workspace.
 
    We offer a reference implementation template to simplify this process: [Node template](https://github.com/vtex/unilever-external-prices-node). This template app can be customized to use other price parameters, by following the instructions on the app repository.

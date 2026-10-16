@@ -4,15 +4,15 @@ slug: "2026-09-08-faststore-release-notes-4-7-0"
 type: improved
 excerpt: "FastStore version 4.7.0 adds My Account Cards with Personal and Shared listings, gates recommendation sessions through discovery config, and fixes redirects, localization hreflang, Order Details layout, and PDP JSON-LD markup"
 createdAt: "2026-09-08T00:00:00.000Z"
-updatedAt: "2026-09-08T00:00:00.000Z"
+updatedAt: "2026-09-28T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
 ---
 
-FastStore `v4.7.0` lets buyers manage saved payment cards in My Account, improves how product recommendations start across the storefront, and fixes issues that caused broken redirects, incorrect SEO locale links, incomplete order pages, and invalid product markup in search results. See the sections below for more details.
+FastStore `v4.7.0` allows buyers to manage saved payment cards in My Account, improves how product recommendation sessions start across the storefront, and fixes issues that caused broken redirects, incorrect SEO locale links, incomplete order pages, and invalid product markup in search results. See the sections below for more details.
 
-> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.7.0` and keep your store up-to-date with the following improvements.
+> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.7.0` and keep your store up to date with the following improvements.
 
 ## Features
 
@@ -63,10 +63,10 @@ Buyers who can't use saved cards no longer see a Cards menu item or reach a page
 ### My Account for Buyer Portal B2B Cards — Personal and Shared listing (PR: [#3443](https://github.com/vtex/faststore/pull/3443))
 
 Adds a My Account **Cards** page at `/pvt/account/cards` with CMS-driven sections for listing personal and shared saved cards. The feature introduces GraphQL queries and resolvers for saved-card data, a `MyAccountListCards` component with Personal and Shared tabs, and CMS schemas for the new account page and list section.
-Buyers with the required organization access can view and manage their saved payment cards in one place-personal cards and shared cards on separate tabs, without custom storefront code. After upgrading to `v4.7.0`, sync the My Account CMS schemas, publish the Cards content type and sections in the CMS via Admin, and ensure eligible buyers have the required B2B organization association. Review sidebar visibility and page gating together with PR [#3463](https://github.com/vtex/faststore/pull/3463).
+Buyers with the required organization access can view and manage their saved payment cards in one place — personal cards and shared cards on separate tabs, without custom storefront code. After upgrading to `v4.7.0`, sync the My Account CMS schemas, publish the Cards content type and sections in the CMS via Admin, and ensure eligible buyers have the required B2B organization association. Review sidebar visibility and page gating together with PR [#3463](https://github.com/vtex/faststore/pull/3463).
 
 ### Restore Order Details layout and first-paint rendering in My Account (PR: [#3464](https://github.com/vtex/faststore/pull/3464))
 
-Adds a `skipLazyLoading` option to `RenderSectionsBase` for authenticated My Account pages so CMS sections render on first paint instead of behind lazy-loading placeholders. Order Details grid CSS now targets CMS section wrapper classes rather than nested card data attributes, and server-side props omit undefined `orderStatusLabels` so pages without CMS order-status content serialize correctly.
+Adds a `skipLazyLoading` option to `RenderSectionsBase` for authenticated My Account pages, so that CMS sections render on first paint rather than behind lazy-loading placeholders. Order Details grid CSS now targets CMS section wrapper classes rather than nested card data attributes, and server-side props omit undefined `orderStatusLabels` so pages without CMS order-status content serialize correctly.
 
-Buyers opening an order in My Account see the full order layout immediately—status, payment, delivery, and summary sections in the correct grid—instead of placeholders or a broken two-column layout. Upgrade to `v4.7.0`; no CMS or theme changes are required.
+Buyers opening an order in My Account see the full order layout immediately — status, payment, delivery, and summary sections in the correct grid—instead of placeholders or a broken two-column layout. Upgrade to `v4.7.0`; no CMS or theme changes are required.
