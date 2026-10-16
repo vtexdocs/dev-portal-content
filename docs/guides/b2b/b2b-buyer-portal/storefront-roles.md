@@ -4,7 +4,7 @@ slug: "storefront-roles"
 hidden: false
 excerpt: "Learn how to manage user access and roles within the storefront using the Storefront Permissions API for B2B scenarios."
 createdAt: "2025-10-09T00:00:00.000Z"
-updatedAt: "2026-09-21T00:00:00.000Z"
+updatedAt: "2026-09-29T00:00:00.000Z"
 seeAlso:
  - "/docs/guides/custom-storefront-roles-and-resources"
 ---
@@ -98,10 +98,12 @@ The system comes with these predefined storefront roles, each with specific perm
 
 > ℹ️ Roles marked as "API only" can only be assigned to users via the `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles) or `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/roles/assign) endpoints.
 
-> ℹ️ As of September 21, 2026, the native **Address Manager** role (storefront role ID `9`) has been removed. Permissions for managing B2B customer addresses (`ManageAddresses` and `ViewAddresses`) are now available only through a [custom storefront role](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources) with these resources. Accounts that already had this role were migrated to an equivalent custom role and keep their access; accounts that need this permission going forward must create their own custom role.
+> ℹ️ As of September 21, 2026, the native **Address Manager** role (storefront role ID `9`) has been removed. Permissions for managing B2B customer addresses (`ManageAddresses` and `ViewAddresses`) are now available only through a [custom storefront role](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources) with these resources. Accounts that already had this role were migrated to an equivalent custom role and keep their access; accounts that need this permission going forward must create their own custom role, either via API or in the VTEX Admin.
 
 ## Extending the permission model
 
 If the predefined roles and resources listed above do not cover all your business scenarios, you can create custom storefront roles and resources scoped to your account. Custom entities follow the same permission model as native ones and can be assigned to storefront users using the same assignment endpoints.
 
 See [Custom storefront roles and resources](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources) for a full guide on creating, listing, updating, and deleting custom roles and resources via the API.
+
+> ℹ️ You can also manage custom storefront roles and resources in the VTEX Admin, where resources are called **permissions**. To learn more, see [Custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/custom-storefront-roles-and-permissions-overview) and [Managing custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/manage-custom-storefront-roles-and-permissions).

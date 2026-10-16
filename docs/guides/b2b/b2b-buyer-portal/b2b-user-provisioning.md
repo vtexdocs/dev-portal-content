@@ -4,7 +4,7 @@ slug: "b2b-user-provisioning"
 hidden: false
 excerpt: "Learn how to migrate B2B users from external platforms to VTEX by registering users, creating organizational units, and managing roles and permissions."
 createdAt: "2026-02-20T00:00:00.000Z"
-updatedAt: "2026-09-21T00:00:00.000Z"
+updatedAt: "2026-09-29T00:00:00.000Z"
 ---
 
 > ⚠️ This feature is available only for stores using B2B Buyer Portal, currently available for selected accounts.
@@ -200,7 +200,7 @@ Each storefront role has a unique `roleId` (integer). The available roles and th
 | 16 | Super Buyer Admin | ManageOrganizationHierarchy |
 | 41 | Credit Card Manager | ManageCreditCards, ViewCreditCards |
 
-> ℹ️ Role ID `9` (Address Manager) was removed on September 21, 2026. Address management permissions (`ManageAddresses` and `ViewAddresses`) are now available only through a custom storefront role — see the note in [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles).
+> ℹ️ Role ID `9` (Address Manager) was removed on September 21, 2026. Address management permissions (`ManageAddresses` and `ViewAddresses`) are now available only through a custom storefront role. See the note in [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles) and learn how to [create custom storefront roles and resources](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources) via API or in the VTEX Admin.
 
 >ℹ️ For more information about available storefront roles and permissions, see [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles). For the complete endpoint reference, see `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles).
 
