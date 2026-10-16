@@ -1,5 +1,5 @@
 ---
-title: "Delivery promise for headless stores (Beta)"
+title: "Delivery promise for headless stores"
 slug: "delivery-promise-for-headless-stores"
 hidden: false
 excerpt: "Learn how to implement the delivery promise feature in headless stores."
@@ -7,7 +7,7 @@ createdAt: "2025-05-14T22:18:24.684Z"
 updatedAt: "2026-07-29T14:00:00.000Z"
 ---
 
->ℹ️ This feature is currently in [open beta](https://help.vtex.com/en/announcements/2026-07-01-delivery-promise-in-open-beta) and can be activated at both the main account and subaccount-only levels. If you want to implement it, please contact our [Support](https://support.vtex.com/hc/en-us) team to request activation.
+>ℹ️ Delivery Promise can be activated at both the main account and subaccount-only levels.
 
 > ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
@@ -223,8 +223,6 @@ While previewing, the response returns `deliveryPromiseEnabled: false`.
 Once you finish testing, contact [our Support](https://support.vtex.com/hc/en-us) team to apply Delivery Promise in production. From that point on, remove the `dpPreview` parameter from your requests. The response will return `deliveryPromiseEnabled: true`.
 
 ## Implementing sidebar filters
-
->⚠️ The delivery promise filters are part of a beta feature and may be subject to breaking changes. If you choose to customize this functionality, ensure your implementation can adapt to updates.
 
 In headless implementations, you must manually retrieve and render filters using VTEX Intelligent Search APIs. For example, inside a filter sidebar, where you want users to refine results based on shipping method or pickup location.
 
