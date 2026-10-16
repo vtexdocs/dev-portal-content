@@ -12,7 +12,7 @@ tags:
 
 > ⚠️ **Fixes included from FastStore 4.9.1 and 4.9.2:** Version 4.10.0 includes the 4.9.1 fix that [restores the original product release date format](https://developers.vtex.com/updates/release-notes/2026-10-02-faststore-restored-original-product-release-date-format) and the 4.9.2 fix for [session and cart validation after region changes](https://developers.vtex.com/updates/release-notes/2026-10-05-faststore-session-and-cart-validation-fix).
 
-FastStore `v4.10.0` lets merchants show images inside CMS rich text, and shoppers see pickup points that can fulfill their location and sales channel. Anonymous visitors on stores that do not use sales channel `1` keep their catalog, and preview environments stop looping cart validation. See the fixes and features below.
+FastStore `v4.10.0` lets merchants show images inside CMS rich text, and shoppers see pickup points that can fulfill orders for their location and sales channel. Anonymous visitors on stores that do not use sales channel `1` keep their catalog, and preview environments stop looping cart validation. See the fixes and features below.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.10.0` and keep your store up-to-date with the following improvements.
 
@@ -28,7 +28,7 @@ Anonymous shoppers on stores whose sales channel is not `1` keep seeing products
 
 On allowlisted hosts (`*.vtex.app` and `localhost`), the GraphQL API drops the `Domain` attribute from upstream `Set-Cookie` headers so the browser stores host-only cookies. A single `x-forwarded-host` value only decides whether that attribute is removed. The header value is never written into the cookie. Multi-value or malformed forwarded hosts are ignored, and the request falls back to the `host` header.
 
-Developers and QA teams can use `*.preview.vtex.app` without `validateCart` creating a new order form on every request. That loop had left preview sessions without a checkout cookie and blocked cart testing. Production stores on custom domains are unchanged, and a client-supplied `x-forwarded-host` can no longer choose the cookie scope.
+Developers and QA teams can use `*.preview.vtex.app` without `validateCart` creating a new orderForm on every request. That loop left preview sessions without a checkout cookie and blocked cart testing. Production stores on custom domains are unchanged, and a client-supplied `x-forwarded-host` can no longer choose the cookie scope.
 
 ---
 
@@ -42,6 +42,6 @@ Merchants can insert, align, and resize images in CMS rich text, including newsl
 
 ### Offer pickup points that can fulfill the shopper's order (PR: [#3515](https://github.com/vtex/faststore/pull/3515))
 
-The `pickupPoints` query lists points from Intelligent Search `pickup-point-availability` instead of the logistics shipping search. New optional arguments are `postalCode`, `country`, and `channel` (the same channel JSON string used by search facets). When `channel` is set, Intelligent Search uses that sales channel instead of the store default. Delivery hashes are sent only when the requested postal code matches the segment, and coordinates can locate points when there is no postal code. `pickupPointsHash` is deprecated and always `null`, and the query cache scope is private. The pickup slider refetches when the shopper channel or country changes, ignores a late response for a previous location, and retries after a failed request.
+The `pickupPoints` query lists points from Intelligent Search `pickup-point-availability` instead of the logistics shipping search. New optional arguments are `postalCode`, `country`, and `channel` (the same channel JSON string used by search facets). When `channel` is set, Intelligent Search uses that sales channel instead of the store default. Delivery hashes are sent only when the requested postal code matches the segment; coordinates can locate points when there is no postal code. `pickupPointsHash` is deprecated and always `null`, and the query cache scope is private. The pickup slider refetches when the shopper channel or country changes, ignores a late response for a previous location, and retries after a failed request.
 
 Shoppers using Delivery Promise see pickup points that have products for their postal code and sales channel, including localized and B2B channels, instead of points from another channel or a previous location. Merchants get a slider that matches what the shopper can collect. Developers calling `pickupPoints` can pass `postalCode`, `country`, and `channel`, and should not rely on `pickupPointsHash`.
