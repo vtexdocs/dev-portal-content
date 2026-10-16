@@ -20,7 +20,7 @@ FastStore `v4.10.0` lets merchants show images inside CMS rich text, and shopper
 
 ### Keep empty carts on the session sales channel and preserve the shopper catalog (PR: [#3509](https://github.com/vtex/faststore/pull/3509))
 
-`validateCart` no longer treats the sales channel on an empty orderForm as authoritative. Checkout can answer with sales channel `1` when an orderForm that never had items is fetched without `sc`, and FastStore now refetches that cart with the session sales channel instead of adopting `1`. An orderForm sales channel is adopted only when the cart has items. A sales channel that comes from the URL (localization) is always sent and is never overwritten. If Session Manager rejects an adopted sales channel for the shopper, the session retries once without that channel and does not adopt it again.
+`validateCart` no longer treats the sales channel on an empty `orderForm` as authoritative. Checkout can answer with sales channel `1` when an `orderForm` that never had items is fetched without `sc`, and FastStore now refetches that cart with the session sales channel instead of adopting `1`. An `orderForm` sales channel is adopted only when the cart has items. A sales channel that comes from the URL (localization) is always sent and is never overwritten. If Session Manager rejects an adopted sales channel for the shopper, the session retries once without that channel and does not adopt it again.
 
 Anonymous shoppers on stores whose sales channel is not `1` keep seeing products on shelves, product listing pages, and product pages, instead of an empty catalog after a cart check. Merchants avoid a storefront that looks out of stock for visitors who have not added items. Quick Order still keeps the cart's sales channel while the cart has items. No configuration change is required beyond upgrading.
 
@@ -28,7 +28,7 @@ Anonymous shoppers on stores whose sales channel is not `1` keep seeing products
 
 On allowlisted hosts (`*.vtex.app` and `localhost`), the GraphQL API drops the `Domain` attribute from upstream `Set-Cookie` headers so the browser stores host-only cookies. A single `x-forwarded-host` value only decides whether that attribute is removed. The header value is never written into the cookie. Multi-value or malformed forwarded hosts are ignored, and the request falls back to the `host` header.
 
-Developers and QA teams can use `*.preview.vtex.app` without `validateCart` creating a new orderForm on every request. That loop left preview sessions without a checkout cookie and blocked cart testing. Production stores on custom domains are unchanged, and a client-supplied `x-forwarded-host` can no longer choose the cookie scope.
+Developers and QA teams can use `*.preview.vtex.app` without `validateCart` creating a new `orderForm` on every request. That loop left preview sessions without a checkout cookie and blocked cart testing. Production stores on custom domains are unchanged, and a client-supplied `x-forwarded-host` can no longer choose the cookie scope.
 
 ---
 
