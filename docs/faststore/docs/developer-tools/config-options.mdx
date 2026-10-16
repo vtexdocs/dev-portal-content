@@ -10,6 +10,10 @@ This guide outlines the configuration options for tailoring your FastStore websi
 
 ```javascript
 module.exports = {
+  contentSource: {
+    type: "CP",
+    project: "my-cms-project",
+  },
   seo: {
     title: "FastStore Starter",
     description: "Fast Demo Store",
@@ -35,6 +39,26 @@ Check the full file example at [`discovery.config.js` sample code](https://githu
 ## Configuration options
 
 Below is a description of each setting you can configure in the `discovery.config.js` file:
+
+### `contentSource`
+
+Defines the CMS integration used by the FastStore project and the CMS project that stores its content.
+
+| Property  | Type     | Description | Example |
+|-----------|----------|-------------|---------|
+| `type`    | `string` | CMS integration type. Use `CP` for [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) or `CMS` for [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview). | `"CP"` |
+| `project` | `string` | CMS project ID, also called the CMS store ID. If omitted, the default value is `faststore`. | `"my-cms-project"` |
+
+Set a custom `project` value when you need to isolate large content changes, test a different content model, or migrate content without creating a VTEX subaccount. The value must match the store ID used by the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin) when initializing and uploading your CMS schemas.
+
+```javascript
+contentSource: {
+  type: "CP",
+  project: "my-cms-project",
+},
+```
+
+---
 
 ### `seo`
 
