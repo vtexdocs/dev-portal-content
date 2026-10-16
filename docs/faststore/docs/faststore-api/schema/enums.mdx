@@ -87,7 +87,7 @@ query {
 
 ## StoreFacetType
 
-Search facet type, returned in search results to indicate what kind of input control a facet uses. Used in [`StoreFacet`](https://developers.vtex.com/docs/guides/faststore/schema-objects#storefacet) objects to describe the filter options available on a search results page.
+Search facet type, returned in search results to indicate what kind of filter control a facet uses. Used in [`StoreFacet`](https://developers.vtex.com/docs/guides/faststore/schema-objects#storefacet) objects to describe the filter options available on a search results page.
 
 <table>
 <thead>
@@ -191,6 +191,8 @@ Sort by product score, from highest to lowest.
 </tbody>
 </table>
 
+> ℹ️ FastStore `4.9.0` and later versions can accept values beyond this table. Extend `StoreSort`, map each new value in [`api.customSortMap`](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options#api), and pass the same key to [`registerCustomSortKeys`](https://developers.vtex.com/docs/guides/faststore/search-use-search#custom-sort-values). A value missing from the map returns a bad request. See [Adding a custom search sort](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema#adding-a-custom-search-sort).
+
 ### Usage example
 
 The following example passes `price_asc` as the `sort` argument to return search results sorted by lowest price first:
@@ -227,7 +229,7 @@ Status used to indicate a message type. Returned in cart and notification messag
 <td>Indicates non-critical notifications or informative messages related to the user's action.</td>
 </tr>
 <tr>
-<td valign="top"><strong>WARNING</strong></td>
+<td valign="top"><strong><code>WARNING</code></strong></td>
 <td>Indicates a potential issue or unexpected behavior that might require user attention but doesn't necessarily prevent them from continuing.</td>
 </tr>
 <tr>

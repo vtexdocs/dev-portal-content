@@ -69,7 +69,7 @@ Once you have created the necessary folders, you will have a folder structure fo
 						└─ …
 		```
 
-    	> ℹ️ Note that in the code example above, the type definitions and resolvers files were created at `<resolverName>.ts` and `<typeName>.graphql`.
+    	> ℹ️ Note that in the code example above, the type definitions and resolvers files were created in `<resolverName>.ts` and `<typeName>.graphql`.
 
 #### Step 2 - Creating type definitions (`typeDefs`)
 
@@ -141,6 +141,133 @@ Note that you can leverage the use of TypeScript by typing the root param as [St
 Once you have defined these files in the `vtex` folder, the new fields are available to use.
 
 	> ⚠️ If the changes you made are still not available, refer to the troubleshooting section [GraphQL changes not visible during development](https://developers.vtex.com/docs/guides/faststore/api-extensions-troubleshooting#graphql-changes-not-visible-during-development).
+
+## Adding a custom search sort
+
+FastStore `4.9.0` and later versions can resolve extra [`StoreSort`](https://developers.vtex.com/docs/guides/faststore/schema-enums#storesort) values. Use this procedure to sort search results by an Intelligent Search field, such as a product specification, without replacing the search resolver.
+
+The same key must appear in three places:
+
+- The `StoreSort` extension.
+- `api.customSortMap` in `discovery.config.js`.
+- The `registerCustomSortKeys` call in the storefront.
+
+The examples below use `rating_desc` for the GraphQL value and `Rating:desc` for the Intelligent Search sort string.
+
+### Requirements
+
+- FastStore `4.9.0` or a later version. See the [4.9.0 release notes](https://developers.vtex.com/updates/release-notes/2026-10-01-faststore-release-notes-4-9-0).
+- The Intelligent Search sort string for the field you want to sort by.
+
+### Add the custom sort
+
+#### Step 1 - Extend the StoreSort enum
+
+1. Create a `.graphql` file in `src/graphql/vtex/typeDefs`. If that folder is missing, create the [VTEX API extension folders](#extending-vtex-api-schemas) first.
+2. Add the new enum value. This extension does not need a resolver. FastStore resolves the value through `customSortMap`.
+
+   ```graphql src/graphql/vtex/typeDefs/sort.graphql
+   extend enum StoreSort {
+     rating_desc
+   }
+   ```
+
+#### Step 2 - Map the value in discovery.config.js
+
+1. Open `discovery.config.js`.
+2. Add the same key under `api.customSortMap`. The mapped value is the Intelligent Search sort string (`Field:asc` or `Field:desc`).
+
+   ```javascript discovery.config.js
+   module.exports = {
+     api: {
+       customSortMap: {
+         rating_desc: "Rating:desc",
+       },
+     },
+   };
+   ```
+
+FastStore checks `customSortMap` before the built-in sort values. A key in this map overrides the default mapping for that key. See [`api.customSortMap`](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options#api).
+
+#### Step 3 - Accept the sort key from the URL
+
+`parseSearchState` rejects a `sort` query parameter outside the built-in values until the storefront adds that key with `registerCustomSortKeys`. Call the function when a module that loads with the search page is evaluated, before `parseSearchState` reads the URL. A deep link or a page refresh that includes `?sort=rating_desc` then keeps the custom sort.
+
+```tsx
+import { registerCustomSortKeys } from '@faststore/sdk'
+
+registerCustomSortKeys(['rating_desc'])
+```
+
+The key must match the enum value and the `customSortMap` entry exactly. See [`registerCustomSortKeys`](https://developers.vtex.com/docs/guides/faststore/search-use-search#custom-sort-values).
+
+#### Step 4 - Add the option to the sort control
+
+The built-in Product Gallery sort control renders the default `StoreSort` values. A key that exists only in `customSortMap` does not appear in that control. Override `SortSkeleton` in the [`ProductGallery`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#productgallery) section and render a control that includes the custom key. Follow [Overriding a native component](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-overriding-a-native-component-cms).
+
+Use the same key as the option value, then apply it with `setSort` from [`useSearch`](https://developers.vtex.com/docs/guides/faststore/search-use-search):
+
+```tsx
+import { registerCustomSortKeys, useSearch } from '@faststore/sdk'
+
+registerCustomSortKeys(['rating_desc'])
+
+const keyMap = {
+  score_desc: 'Relevance',
+  price_desc: 'Price, descending',
+  price_asc: 'Price, ascending',
+  orders_desc: 'Top sales',
+  name_asc: 'Name, A-Z',
+  name_desc: 'Name, Z-A',
+  release_desc: 'Release date',
+  discount_desc: 'Discount',
+  rating_desc: 'Rating, descending',
+}
+
+const keys = Object.keys(keyMap)
+
+function CustomSort() {
+  const {
+    setSort,
+    state: { sort },
+  } = useSearch()
+
+  return (
+    <select
+      onChange={(event) => setSort(keys[event.target.selectedIndex])}
+      value={sort}
+    >
+      {keys.map((key) => (
+        <option key={key} value={key}>
+          {keyMap[key]}
+        </option>
+      ))}
+    </select>
+  )
+}
+```
+
+### Confirm the query
+
+After the enum, the map, and the storefront key are in place, query the custom value directly:
+
+```graphql
+query {
+  search(first: 10, sort: rating_desc, term: "sneakers") {
+    products {
+      edges {
+        node {
+          name
+        }
+      }
+    }
+  }
+}
+```
+
+### Unmapped values
+
+A `StoreSort` value missing from `customSortMap` and from the built-in map returns a bad request with the message `Unknown sort value`. Keys inherited from `Object.prototype`, such as `constructor`, are rejected the same way.
 
 ## Extending FastStore API with third-party API schemas
 
