@@ -13,6 +13,8 @@ sidebar_custom_props:
 
 Toasts are used to display notifications. They appear temporarily, and should contain a single line of text directly related to the operation performed.
 
+The `status` stored by `pushToast` is notification metadata; the `Toast` component does not map it to a visual variant. Use the `title`, `message`, and optional `icon` to communicate meaning, without relying on status-specific styling.
+
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection direction="row">
