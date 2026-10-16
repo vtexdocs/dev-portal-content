@@ -11,11 +11,12 @@ If your endpoints only accept requests from specific IP addresses, keeping your 
 
 ## What needs to be done?
 
-From time to time, compare the allowlist configured in your firewall, security group, or application with the addresses at [ips.vtex.com](http://ips.vtex.com), and add any address that is missing on your side.
+From time to time, compare the allowlist configured in your firewall, security group, or application with the addresses at [ips.vtex.com](http://ips.vtex.com), and add any missing addresses on your side.
 
-We recommend making this review part of your regular maintenance routine, so that integrations where VTEX sends requests to endpoints you provide keep working as expected. Examples include:
+We recommend making this review part of your regular maintenance routine so that integrations in which VTEX sends requests to endpoints you provide keep working as expected. Examples include:
 
 - [Orders Hook](https://developers.vtex.com/docs/guides/orders-feed#hook), which notifies your endpoint about order updates.
+- [Orders Broadcast](https://developers.vtex.com/docs/guides/how-to-receive-order-notifications-on-vtex-io), which sends order status notifications to a listener you configure.
 
 If you don't restrict requests from VTEX by IP address, no action is needed.
 
@@ -23,3 +24,4 @@ If you don't restrict requests from VTEX by IP address, no action is needed.
 
 - [VTEX IP addresses](http://ips.vtex.com)
 - [Feed v3 and Hook](https://developers.vtex.com/docs/guides/orders-feed)
+- [Receiving order notifications](https://developers.vtex.com/docs/guides/how-to-receive-order-notifications-on-vtex-io)
