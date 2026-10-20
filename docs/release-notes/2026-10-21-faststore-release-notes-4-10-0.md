@@ -16,7 +16,7 @@ FastStore `v4.10.0` lets merchants show images inside CMS rich text, and shopper
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.10.0` and keep your store up-to-date with the following improvements.
 
-## Bug Fixes
+## Bug fixes
 
 ### Anonymous shoppers no longer lose the catalog after a cart check (PR: [#3509](https://github.com/vtex/faststore/pull/3509))
 
