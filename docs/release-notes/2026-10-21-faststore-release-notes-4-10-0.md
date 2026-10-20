@@ -1,10 +1,10 @@
 ---
 title: "FastStore Release Notes — Version 4.10.0"
-slug: "2026-10-16-faststore-release-notes-4-10-0"
+slug: "2026-10-21-faststore-release-notes-4-10-0"
 type: improved
 excerpt: "FastStore 4.10.0 shows images in CMS rich text, lists pickup points that can fulfill the shopper location, and keeps catalog and preview carts on the correct sales channel"
-createdAt: "2026-10-16T00:00:00.000Z"
-updatedAt: "2026-10-16T00:00:00.000Z"
+createdAt: "2026-10-21T00:00:00.000Z"
+updatedAt: "2026-10-21T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
