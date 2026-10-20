@@ -123,7 +123,7 @@ orderSummary: async (_: never, __: never, ctx: any) => {
 
 > ⚠️ Values read from the session are not a substitute for this call. The session is a separate artifact with its own lifetime, so a resolver that authorizes based solely on session values can continue granting access even after the shopper's token is no longer valid.
 
-> ℹ️ `validateUserAuthentication` requires `@faststore/core` 4.8.0 or later. See [Updating your `@faststore/core` package version](https://developers.vtex.com/docs/guides/faststore/project-structure-updating-the-core-package-version).
+> ℹ️ `validateUserAuthentication` requires `@faststore/cli` 4.8.0 or later. That version installs `@faststore/core` 4.8.0. See [Updating the '@faststore/cli' package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
 
 ## Step 3: Take identity from the session
 
