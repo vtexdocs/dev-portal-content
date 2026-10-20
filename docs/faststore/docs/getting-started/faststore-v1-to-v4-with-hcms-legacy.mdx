@@ -10,7 +10,7 @@ This guide explains how to gradually replace a FastStore v1 store with FastStore
 
 If you want to use the [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) on v4, follow the [Migrating from FastStore v1 to v4 with CMS](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v1-to-v4-with-cms) guide.
 
-> ⚠️ Traffic split is only available between FastStore v1 and v4 in the **same account and the same domain**. It isn't possible to split traffic between different accounts or subaccounts, or between two versions that already run on WebOps.
+> ⚠️ Traffic split is only available between FastStore v1 and v4 in the **same account and the same domain**. You can't split traffic between different accounts or subaccounts, or between two versions that already run on WebOps.
 
 For an overview of the process and how to confirm your project runs on FastStore v1, see [Migrating from FastStore v1 to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v1-to-v4).
 
@@ -30,7 +30,7 @@ flowchart TD
     visitors[Visitors] --> split{Traffic split}
     split -->|"v1 percentage"| v1[FastStore v1]
     split -->|"v4 percentage"| v4[FastStore v4 on WebOps]
-    hcms[Headless CMS Legacy] -->|"build URL"| v1
+    hcms["Headless CMS (Legacy)"] -->|"build URL"| v1
     hcms -.->|"your rebuild automation"| v4
 ```
 
@@ -41,13 +41,13 @@ The following table shows what happens in each version during this phase:
 | **Step** | **FastStore v1 (current repository)** | **FastStore v4 (new repository, same account)** |
 | --- | --- | --- |
 | [1. Create the repository](#step-1---create-the-v4-repository) | No changes. The live store stays on v1 with no new development. | Create the v4 repository in your GitHub organization and make sure the main branch builds. |
-| [2. Sync Headless CMS (Legacy) content](#step-2---make-the-headless-cms-legacy-content-work-on-v1-and-v4) | Headless CMS (Legacy) content remains as is. | Sync content types and sections, and confirm the content renders correctly on v4. |
+| [2. Sync Headless CMS (Legacy) content](#step-2---sync-the-headless-cms-legacy-content) | Headless CMS (Legacy) content remains as is. | Sync content types and sections, and confirm the content renders correctly on v4. |
 | [3. Rebuild v4 on publish](#step-3---rebuild-v4-when-content-is-published) | The Headless CMS (Legacy) keeps building v1 through the current build URL. | Set up your own automation that triggers a v4 build whenever content is published. |
 | [4. Domains](#step-4---configure-the-correct-domains-in-discoveryconfig) | No changes. | Review `discovery.config.js` so it has the correct account and domains. |
 
 ### Step 1 - Create the v4 repository
 
-The WebOps onboarding creates the v4 repository in your GitHub organization and its first deploy. From then on, WebOps creates a production deploy for every commit to the main branch, so the main branch must build without errors.
+Create the v4 repository in your GitHub organization and make sure its main branch builds without errors. After WebOps is configured, every commit to the main branch creates a production deploy.
 
 To create the v4 project, follow the guide [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project).
 
@@ -66,7 +66,7 @@ While traffic is split, both versions serve visitors using the same Headless CMS
 2. Run `yarn dev` and open the main pages locally (home, category, product, and search) to confirm the content published in the Headless CMS (Legacy) renders as it does in v1.
 3. Fix any differences, such as sections or props that no longer exist in v4, before moving on.
 
-#### Step 3 - Rebuild v4 when content is published
+### Step 3 - Rebuild v4 when content is published
 
 During the split, the Headless CMS (Legacy) keeps building only v1 through the current build URL. For more details, see [Integrating your storefront with Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/integration-overview).
 
@@ -82,9 +82,9 @@ The v4 project doesn't receive content updates automatically, so you need to tri
 
 3. Automate this step in your CI or in a script, and test it by publishing a change in the Headless CMS (Legacy) and confirming it appears in v4.
 
-> ℹ️ You deactivate this automation in [Step 3](#step-3---gradual-rollout), after the build URL points to v4.
+> ℹ️ You deactivate this automation in [Phase 3](#phase-3-gradual-rollout), after the build URL points to v4.
 
-#### Step 4 - Configure the correct domains in `discovery.config`
+### Step 4 - Configure the correct domains in `discovery.config`
 
 The `discovery.config.js` file in the root of the v4 project defines the account and domains v4 uses. Wrong values can cause v4 to load the wrong data or break the checkout.
 
@@ -101,9 +101,9 @@ The `discovery.config.js` file in the root of the v4 project defines the account
 
     For more details, see [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options).
 
-3. Commit the changes to a branch other than main, and merge them only when the WebOps configuration is confirmed in [Step 2](#step-2---configuration).
+3. Commit the changes to a branch other than main, and merge them only when the WebOps configuration is confirmed in [Phase 2](#phase-2-configuration).
 
-### Phase 2: Configuration
+## Phase 2: Configuration
 
 The following table shows what happens in each version during this phase:
 
@@ -113,14 +113,14 @@ The following table shows what happens in each version during this phase:
 | 2.2 Traffic split | Receives 100% of the traffic. | VTEX activates traffic split with 0% on v4. |
 | 2.3 WebOps setup | No changes. | VTEX configures WebOps with your existing Headless CMS project. Don't commit to main until VTEX confirms. |
 
-Complete these steps at least one day before the migration.
+Complete these steps at least one day before the migration:
 
 | # | Who | Action |
 | --- | --- | --- |
 | 1 | You | Install the [FastStore WebOps GitHub App](https://github.com/apps/faststore-webops) in your organization, with access to the v4 repository. |
 | 2 | You | [Open a ticket with VTEX Support](https://help.vtex.com/support) at least one day in advance, with your `ACCOUNT`, `ORG`, `REPO`, `REPO_ID`, and `INSTALLATION_ID`, requesting the activation of traffic split. |
 | 3 | VTEX | Activates traffic split with 100% on v1 and 0% on v4. |
-| 4 | VTEX | Configures WebOps pointing to your existing Headless CMS project and registers the primary domain. VTEX confirms in the ticket. |
+| 4 | VTEX | Configures WebOps pointing to your existing Headless CMS project and adds the primary domain. VTEX confirms in the ticket. |
 | 5 | You | Don't commit to the main branch of the v4 repository until VTEX confirms step 4 in the ticket. |
 
 VTEX configures WebOps because the WebOps onboarding in the Admin only offers the new CMS and has no option for Headless CMS (Legacy). When you install the GitHub App, you see the following error. This error is expected and indicates that VTEX still needs to finish the configuration:
@@ -132,7 +132,7 @@ VTEX configures WebOps because the WebOps onboarding in the Admin only offers th
 }
 ```
 
-### Phase 3: Gradual rollout
+## Phase 3: Gradual rollout
 
 The following table shows what happens in each version during this phase:
 
@@ -161,7 +161,7 @@ Traffic split works as follows:
 
 > ⚠️ Only ask VTEX to switch the Headless CMS configuration when 100% of the traffic is on v4, the store is validated, and the build URL already points to v4. If the configuration is switched earlier, publications stop being reflected on v1, which still receives traffic.
 
-### Phase 4: Post-migration
+## Phase 4: Post-migration
 
 The following table shows what happens in each version during this phase:
 
