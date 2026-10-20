@@ -2,8 +2,8 @@
 title: "List of template controls"
 slug: "list-of-controls-for-templates"
 hidden: false
-createdAt: "2022-09-08t14:21:08.318z"
-updatedAt: "2026-10-20t19:20:00.000z"
+createdAt: "2022-09-08t14:21:08.318Z"
+updatedAt: "2026-10-20t19:20:00.000Z"
 ---
 
 The controls listed in this article can be used by your store's frontend developer to create the store page layout in the **Storefront > Layout** module.
@@ -42,7 +42,7 @@ The **Shelf** control `<vtex.cmc:ProductQueryStringReferenceShelf/>` supports th
 | `showUnavailable`           | The page will display out-of-stock products when this attribute is set to `true`.                                                |
 | `selectionMode="batch-buy"` | Optional attribute that allows sorting products in bulk.                                                                         |
 | `isTrackable`               | This control is trackable when this attribute is set to `true`.                                                                  |
-| `InternalCampaign`          | Name of the internal [campaign audience](https://help.vtex.com/en/tutorial/creating-campaign-audiences--6cnuDZJzIkIeocewAQQK4K). |
+| `InternalCampaign`          | Name of the internal [campaign audience](https://help.vtex.com/docs/tutorials/creating-a-campaign-audience). |
 | `InternalPart`              | Internal *ViewPart* name.                                                                                                        |
 
 **Shelf** control example:
