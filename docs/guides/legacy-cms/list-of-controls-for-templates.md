@@ -2,8 +2,8 @@
 title: "List of template controls"
 slug: "list-of-controls-for-templates"
 hidden: false
-createdAt: "2022-09-08t14:21:08.318Z"
-updatedAt: "2026-10-20t19:20:00.000Z"
+createdAt: "2022-09-08T14:21:08.318Z"
+updatedAt: "2026-10-20T19:50:37.784Z"
 ---
 
 The controls listed in this article can be used by your store's frontend developer to create the store page layout in the **Storefront > Layout** module.
