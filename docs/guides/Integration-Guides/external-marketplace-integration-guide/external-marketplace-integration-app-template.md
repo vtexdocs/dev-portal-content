@@ -2,7 +2,7 @@
 title: "Creating an integration app from a Template"
 slug: "external-marketplace-integration-app-template"
 excerpt: "Create an app to integrate with external marketplaces."
-hidden: false
+hidden: true
 createdAt: "2021-09-27T16:02:23.338Z"
 updatedAt: "2022-06-23T20:26:15.880Z"
 ---

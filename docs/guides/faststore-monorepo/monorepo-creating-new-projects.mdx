@@ -1,0 +1,90 @@
+---
+title: "Creating new projects"
+slug: "monorepo-creating-new-projects"
+excerpt: "Learn how to create new projects in your FastStore monorepo."
+createdAt: "2026-05-12T14:47:17.858Z"
+updatedAt: "2026-09-17T16:14:14.542Z"
+---
+
+After setting up your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), you can create new projects for additional stores, brands, or modules using the `fsp create` command. This is useful when you need to add a new storefront, extend your monorepo with additional modules ([Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility), [VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility)), or create projects for different brand variants within your organization. You can create a Buyer Portal Checkout (`checkout`) or Sales App (`sales-app`) project without a Product Discovery Experience (`discovery`) project if FastStore isn't your storefront.
+
+The `fsp create` command automatically creates the project directory with the necessary structure and updates your `faststore.json` configuration file with the new project settings, including the path and port allocation.
+
+## Instructions
+
+Run the following command in your terminal at the root of your monorepo:
+
+```bash
+yarn fsp create
+```
+
+Or using npm:
+
+```bash
+npx fsp create
+```
+
+## Use case example
+
+Consider you want to create a new Discovery project for a different brand. The `fsp create` command will guide you through an interactive setup by asking for:
+
+1. **Account name**: The VTEX account for which you're creating the project (example: `store-a`, `brand-store-1`).
+2. **Module type**: The module you want to initialize (`discovery`, `checkout`, or `sales-app`). For Buyer Portal Checkout (`checkout`) and Sales App (`sales-app`), continue with [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout) or [Setting up Sales App extensions](https://developers.vtex.com/docs/guides/setting-up-sales-app-extensions) after you create the project.
+3. **Project path**: The directory path where the project will be created (example: `./packages/store-a`, `./store-a/checkout`).
+
+In your terminal, you should answer the questions as follows to create a new Discovery project for a different brand:
+
+```text
+? What's the account name? brand-store-1
+? Which module do you want to initialize? discovery
+? What should be the path to initialize discovery? ./packages/brand-store-1
+```
+
+You can also include all parameters directly in your command:
+
+```text
+yarn fsp create brand-store-1 discovery ./packages/brand-store-1
+```
+
+Or using npm:
+
+```text
+npx fsp create brand-store-1 discovery ./packages/brand-store-1
+```
+
+After running the command, your monorepo structure will be updated with:
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages
+│   └── 📂 store-a
+│      ├── 📂 discovery
+│   └── 📂 brand-store-1
+│      ├── 📂 discovery
+├── 📄 faststore.json
+├── 📄 package.json
+│  
+```
+
+And your `faststore.json` will be automatically updated with the new configuration:
+
+```json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "store-a": {
+      "discovery": {
+        "path": "packages/store-a",
+        "port": 3000
+      }
+    },
+    "brand-store-1": {
+      "discovery": {
+        "path": "packages/brand-store-1",
+        "port": 3001
+      }
+    }
+  }
+}
+```

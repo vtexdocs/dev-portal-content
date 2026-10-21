@@ -9,7 +9,7 @@ updatedAt: "2026-06-02T00:00:00.000Z"
 
 > ⚠️ This feature is in beta, and we're working to improve it. If you have any questions, please contact [Support](https://help.vtex.com/en/support).
 
-After setting up a Sales App extension project in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore/monorepo-overview), you're ready to create custom experiences by rendering React components in predefined extension points.
+After setting up a Sales App extension project in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), you're ready to create custom experiences by rendering React components in predefined extension points.
 
 > ℹ️ To create a Sales App extension, it's not mandatory to configure the `discovery` module. In this setup, FastStore provides the monorepo structure, tooling, and build process, while the `sales-app` module contains the extension code.
 
