@@ -10,7 +10,7 @@ seeAlso:
  - "/docs/guides/gathering-delivery-promise-information"
 ---
 
-The [Delivery Promise](https://help.vtex.com/en/docs/tutorials/delivery-promise-beta) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products the store can deliver to the provided address or pick up at available locations.
+The [Delivery Promise](https://help.vtex.com/en/docs/tutorials/delivery-promise) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products the store can deliver to the provided address or pick up at available locations.
 
 Availability is determined by the following rules:
 
@@ -46,14 +46,10 @@ To enable Delivery Promise in your store, you must meet the following conditions
 
 Contact our [Support](https://support.vtex.com/hc/en-us) team to request the activation of Delivery Promise.
 
-Activation happens in two stages, so you can validate the experience before it affects production traffic:
-
-- **`DpReady`:** The initial state Support applies to your account. In this state, Delivery Promise is available for testing, but doesn't affect production search requests. This allows you to validate Delivery Promise in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) before applying it to `master`.
-- **`DpLive`:** The production state. After you finish testing, contact [Support](https://support.vtex.com/hc/en-us) again to request promotion from `DpReady` to `DpLive`. From that point on, search requests with Delivery Promise hashes or ZIP codes are processed by Delivery Promise in production.
 
 ### Step 2 - Create a development workspace
 
-While your account is in the `DpReady` state, you can validate Delivery Promise without affecting production search traffic by using a development [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace). This allows you to validate the full storefront experience (postal code modal, shipping method selector, pickup point selector, and sidebar filters) while `master` continues to serve production traffic without Delivery Promise.
+While Delivery Promise is in test mode, you can validate Delivery Promise without affecting production search traffic by using a development [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace). This allows you to validate the full storefront experience (postal code modal, shipping method selector, pickup point selector, and sidebar filters) while `master` continues to serve production traffic without Delivery Promise.
 
 [Create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) by running the following command in your terminal:
 
@@ -63,7 +59,7 @@ vtex use {wokspaceName}
 
 > ⚠️ Replace values between curly braces according to your scenario.
 
-Perform the configurations in the next steps in this workspace to validate them end-to-end before promoting the account to `DpLive`.
+Then, enable Delivery Promise preview in this workspace.
 
 ### Step 3 - Display a location selector
 
@@ -261,6 +257,8 @@ The shipping method facet appears only when `showShippingMethodFacet` is enabled
 
 ### Step 6 - Make Delivery Promise live
 
-Once you finish testing, contact [Support](https://support.vtex.com/hc/en-us) to promote the account from `DpReady` to `DpLive`, and follow the standard release flow to make your theme changes public. For detailed instructions, see [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
+Once you finish testing, follow the standard release flow to make your theme changes public. For detailed instructions, see [Making your theme content public](https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public).
+
+Then, in the VTEX Admin, go back to **Storefront > Delivery Promise** and complete the publishing step of the activation flow. Only users with the Super Admin role can publish Delivery Promise to production. Learn more in [Activating Delivery Promise](https://help.vtex.com/en/docs/tutorials/activate-delivery-promise).
 
 From that point on, Delivery Promise applies to production traffic, and search responses return `deliveryPromiseEnabled: true`.
