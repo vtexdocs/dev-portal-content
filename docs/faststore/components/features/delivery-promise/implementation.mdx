@@ -79,11 +79,11 @@ If you're using a different major version and want to migrate, please [open a ti
 
 Run the `yarn upgrade @faststore/cli` command to update the `@faststore/cli` package to the latest version.
 
-  ### Open a ticket with VTEX Support
+  ### Activate Delivery Promise in the Admin
 
-Open a ticket with [VTEX Support](https://help.vtex.com/en/support) and request the activation of Delivery Promise in your account.
+In the VTEX Admin, go to **Storefront > Delivery Promise** and follow the activation flow. For details on each step, see [Activating Delivery Promise](https://help.vtex.com/en/docs/tutorials/activate-delivery-promise).
 
-For FastStore accounts, Delivery Promise is activated directly in production, because the feature only takes effect after you install the theme with Delivery Promise in your store. Once Support confirms the activation, [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) returns `deliveryPromiseEnabled: true` for your account.
+FastStore doesn't have an isolated test version, so Delivery Promise only takes effect after you deploy the project changes and publish Delivery Promise to production in the activation flow. Once it's published, [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search) returns `deliveryPromiseEnabled: true` for your account.
 
 Your storefront only starts displaying Delivery Promise after you deploy the project changes described in the [Instructions](#instructions) section, so the activation alone doesn't change what shoppers see.
 </Steps>

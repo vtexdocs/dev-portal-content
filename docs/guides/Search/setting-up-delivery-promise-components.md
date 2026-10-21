@@ -42,10 +42,11 @@ To enable Delivery Promise in your store, you must meet the following conditions
 
 ## Instructions
 
-### Step 1 - Request Delivery Promise activation
+### Step 1 - Activate Delivery Promise test mode in the Admin
 
-Contact our [Support](https://support.vtex.com/hc/en-us) team to request the activation of Delivery Promise.
+In the VTEX Admin, go to **Storefront > Delivery Promise** and complete the activation flow up to test mode. Test mode makes Delivery Promise available for testing without affecting production search requests, so you can validate the experience in a [development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) before applying it to `master`.
 
+For details on each step of the flow, see [Activating Delivery Promise](https://help.vtex.com/en/docs/tutorials/activate-delivery-promise).
 
 ### Step 2 - Create a development workspace
 
@@ -59,7 +60,17 @@ vtex use {wokspaceName}
 
 > ⚠️ Replace values between curly braces according to your scenario.
 
-Then, enable Delivery Promise preview in this workspace.
+Then, enable Delivery Promise preview in this workspace:
+
+1. Go to the **GraphQL resolver for the VTEX store APIs** app settings in your workspace:
+
+   `https://{workspaceName}--{accountName}.myvtex.com/admin/apps/vtex.search-resolver/setup`
+
+2. Enable the **Enable Delivery Promises Preview for Intelligent Search** option and save.
+
+>⚠️ Without this setting, the workspace behaves like production, and Delivery Promise won't be applied to search results in the workspace.
+
+Perform the configurations in the next steps in this workspace to validate them end-to-end before publishing Delivery Promise to production.
 
 ### Step 3 - Display a location selector
 
