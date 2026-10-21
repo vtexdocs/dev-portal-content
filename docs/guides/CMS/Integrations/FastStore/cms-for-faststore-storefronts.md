@@ -50,7 +50,7 @@ Manage content through the VTEX Admin using:
 
 Organize and reuse media assets with:
 
-- **Media Gallery**: Central repository for images and video references. See [Media gallery](https://developers.vtex.com/docs/guides/cms-media-gallery) for details.
+- **Media Gallery**: Central repository for images and video references. See [Media gallery](https://developers.vtex.com/docs/guides/media-gallery) for details.
 - **Image formats**: PNG, JPG, JPEG, GIF, SVG, and WebP.
 - **Video embedding**: Reference videos from YouTube, Vimeo, and other services.
 

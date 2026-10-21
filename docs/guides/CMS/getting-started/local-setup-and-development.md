@@ -89,7 +89,7 @@ Each schema must include:
 * `$componentTitle`: The display name editors will see in the CMS Admin.
 * `properties`: The fields editors can complete, each with a `type` and `title`.
 
-> ℹ️ For the full schema reference, including all field types, available widgets, and how sections differ from components, see [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections). For details on the `media-gallery` widget used above, see [Media gallery](https://developers.vtex.com/docs/guides/cms-media-gallery).
+> ℹ️ For the full schema reference, including all field types, available widgets, and how sections differ from components, see [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections). For details on the `media-gallery` widget used above, see [Media gallery](https://developers.vtex.com/docs/guides/media-gallery).
 
 ## Step 2 - Syncing the schema
 

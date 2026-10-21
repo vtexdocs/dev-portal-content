@@ -136,8 +136,7 @@ The schema below declares a `CallToAction` section in a FastStore project, compo
 }
 ```
 
-<!-- Add the following callout once we have the following guide published
-> ℹ️ To see a Section being created end-to-end in a FastStore project, follow the [Extending a component](https://developers.vtex.com/docs/guides/cms-extending-a-component) guide.-->
+> ℹ️ To see a Section being created end-to-end in a FastStore project, follow the [Creating a new section in the CMS](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms) guide.
 
 ## Differences between components and sections
 
