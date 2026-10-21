@@ -10,9 +10,9 @@ seeAlso:
  - "/docs/guides/gathering-delivery-promise-information"
 ---
 
->⚠️ This feature is in open beta phase. If you're interested in testing it, contact our [Support team](https://support.vtex.com/hc/en-us).
+>ℹ️ Delivery Promise is available to eligible stores and can be activated in the VTEX Admin, at **Storefront > Delivery Promise**.
 
-The [Delivery Promise (Beta)](https://help.vtex.com/en/docs/tutorials/delivery-promise-beta) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products the store can deliver to the provided address or pick up at available locations.
+The [Delivery Promise](https://help.vtex.com/en/docs/tutorials/delivery-promise) feature helps create a more accurate and reliable shopping experience by ensuring customers only see products the store can deliver to the provided address or pick up at available locations.
 
 Availability is determined by the following rules:
 
