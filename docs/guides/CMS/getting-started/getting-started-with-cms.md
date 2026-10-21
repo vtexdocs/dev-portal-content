@@ -87,7 +87,7 @@ Locale configuration and translation management happen in the VTEX Admin and are
 />
 
 <WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/cms-media-gallery"
+  linkTo="https://developers.vtex.com/docs/guides/media-gallery"
   title="Media gallery"
   description="Declare the media-gallery widget so editors can pick images and reference videos from a central gallery."
   linkTitle="See more"
