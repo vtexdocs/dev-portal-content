@@ -39,7 +39,7 @@ flowchart LR
 | **Developer** | Building or maintaining the storefront code. | Modeling content as schemas, testing locally, and publishing the schema so it becomes editable in the Admin. | [Setting up your CMS environment](https://developers.vtex.com/docs/guides/setting-up-your-cms-environment) |
 | **Content operator** | Working in the VTEX Admin, no code required. | Creating, reviewing, and publishing content against the fields developers made available. | [Creating and publishing content](#creating-and-publishing-content) below |
 
-> ℹ️ Setting up the CMS is a one-time task per storefront project. Once it's done, developers repeat "Model content → Test locally → Generate and upload the schema" every time they add or change a component, see [Local setup and development](https://developers.vtex.com/docs/guides/local-development-and-setup) for that daily loop.
+> ℹ️ Setting up the CMS is a one-time task per storefront project. Once it's done, developers repeat "Model content → Test locally → Generate and upload the schema" every time they add or change a component, see [Local setup and development](https://developers.vtex.com/docs/guides/local-setup-and-development) for that daily loop.
 
 ## Creating and publishing content
 
@@ -87,7 +87,7 @@ Locale configuration and translation management happen in the VTEX Admin and are
 />
 
 <WhatsNextCard
-  linkTo="https://developers.vtex.com/docs/guides/cms-media-gallery"
+  linkTo="https://developers.vtex.com/docs/guides/media-gallery"
   title="Media gallery"
   description="Declare the media-gallery widget so editors can pick images and reference videos from a central gallery."
   linkTitle="See more"
