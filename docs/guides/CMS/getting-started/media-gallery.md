@@ -1,7 +1,7 @@
 ---
 title: "Media gallery"
 hidden: false
-slug: "cms-media-gallery"
+slug: "media-gallery"
 createdAt: "2026-09-21T12:00:00.000Z"
 updatedAt: "2026-09-21T12:00:00.000Z"
 excerpt: "Declare the media-gallery widget in a component schema so editors can pick images and reference videos from the CMS Media Gallery."
