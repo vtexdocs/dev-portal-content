@@ -4,7 +4,7 @@ slug: "setting-up-delivery-promise-components"
 excerpt: ""
 hidden: false
 createdAt: "2025-05-23T22:18:24.684Z"
-updatedAt: "2026-09-08T12:00:00.000Z"
+updatedAt: "2026-10-14T12:00:00.000Z"
 seeAlso:
  - "/docs/apps/vtex.delivery-promise-components"
  - "/docs/guides/gathering-delivery-promise-information"
@@ -226,28 +226,64 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
      "search-result-layout.desktop": {
        "children": ["filter-navigator.v3", "search-content"],
        "props": {
-         "showShippingMethodFacet": true
+         "showDeliveryPromiseFacets": true
        }
      },
      "search-result-layout.mobile": {
        "children": ["filter-navigator.v3", "search-content"],
        "props": {
-         "showShippingMethodFacet": true
+         "showDeliveryPromiseFacets": true
        }
      }
    }
    ```
 
-3. Set `showShippingMethodFacet` to `true` in each flexible search layout where you want the Delivery Promise filters to appear. By default, this property is disabled, so the shipping method filter remains hidden unless you explicitly enable it. The example above enables it on both desktop and mobile layouts.
-4. Optionally, use the `availableShippingValues` prop in the same layout blocks to define which shipping options to display. If you don't define this prop or set it to an empty array, the system uses the default options: `delivery`, `pickup-in-point`, and `pickup-nearby`. When you provide a non-empty array, it replaces the default entirely and shows only the specified values. Supported values correspond to the search API facet names: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
+3. Use the `showDeliveryPromiseFacets` prop to control whether the Delivery Promise filters appear in each flexible search layout. By default, the filters appear automatically whenever the page contains a Delivery Promise block, such as the `shopper-location-setter` block added in [Step 3](#step-3---display-a-location-selector). Set the prop to `true` to show the filters, or to `false` to hide them.
 
-   Example with an explicit list (same as the default) plus `pickup-all` on desktop and mobile:
+   The `showDeliveryPromiseFacets` prop controls the following three filter groups together. There is no separate prop for each group.
+
+   | Group              | Description |
+   | ------------------ | ----------- |
+   | `shipping`         | Filters products by shipping method, such as delivery or pickup. |
+   | `dynamic-estimate` | Filters products by a fixed delivery timeframe, such as same-day or next-day. |
+   | `delivery-options` | Filters products by the [Delivery Options](https://help.vtex.com/en/docs/tutorials/delivery-options) configured by the merchant in the Admin, such as "Express Delivery". |
+
+   When set to `true`, the prop shows all three groups, as long as the search returns them. When set to `false`, it hides all three. To hide only specific groups, see the `hiddenFacets` configuration in the next item.
+
+   > ℹ️ The `showShippingMethodFacet` prop is deprecated. It still works and has the same effect as `showDeliveryPromiseFacets`, but we recommend using `showDeliveryPromiseFacets` in new implementations.
+
+4. Optionally, use the `hiddenFacets` prop with the `delivery-promise` key in the same layout blocks to hide specific Delivery Promise filter groups. This configuration supports the following options:
+
+   - `hideAll`: When `true`, hides all Delivery Promise filter groups.
+   - `hiddenGroups`: List of groups to hide. Each item must have a `name` property with one of the following values: `shipping`, `dynamic-estimate`, or `delivery-options`.
+
+   The same configuration also applies to the `search-not-found-layout` block.
+
+   Example showing only the Delivery Options and dynamic estimate filters, hiding the shipping method filter:
 
    ```json
    "search-result-layout.desktop": {
      "children": ["filter-navigator.v3", "search-content"],
      "props": {
-       "showShippingMethodFacet": true,
+       "showDeliveryPromiseFacets": true,
+       "hiddenFacets": {
+         "delivery-promise": {
+           "hiddenGroups": [{ "name": "shipping" }]
+         }
+       }
+     }
+   }
+   ```
+
+5. Optionally, use the `availableShippingValues` prop in the same layout blocks to define which shipping options to display in the `shipping` filter group. If you don't define this prop or set it to an empty array, the system uses the default options: `delivery`, `pickup-in-point`, and `pickup-nearby`. When you provide a non-empty array, it replaces the default entirely and shows only the specified values. Supported values correspond to the search API facet names: `delivery`, `pickup-in-point`, `pickup-nearby`, `pickup-all`.
+
+   Example with an explicit list (same as the default) plus `pickup-all`:
+
+   ```json
+   "search-result-layout.desktop": {
+     "children": ["filter-navigator.v3", "search-content"],
+     "props": {
+       "showDeliveryPromiseFacets": true,
        "availableShippingValues": [
          "delivery",
          "pickup-in-point",
@@ -258,7 +294,9 @@ To display Delivery Promise filters in the search sidebar, configure the [Search
    }
    ```
 
-The shipping method facet appears only when `showShippingMethodFacet` is enabled. If you set `availableShippingValues`, the component lists those options; otherwise, it falls back to the default. Other Delivery Promise-related facets behave as usual.
+> ℹ️ Repeat the configurations from items 3 to 5 in the `search-result-layout.mobile` block to apply them to the mobile layout.
+
+For more details on how each filter group works and how to use Delivery Options as filters, see [Filtering products by Delivery Options](#filtering-products-by-delivery-options).
 
 ### Step 5 - Validate the experience in the development workspace
 
@@ -273,3 +311,55 @@ Once you finish testing, follow the standard release flow to make your theme cha
 Then, in the VTEX Admin, go back to **Storefront > Delivery Promise** and complete the publishing step of the activation flow. Only users with the Super Admin role can publish Delivery Promise to production. Learn more in [Activating Delivery Promise](https://help.vtex.com/en/docs/tutorials/activate-delivery-promise).
 
 From that point on, Delivery Promise applies to production traffic, and search responses return `deliveryPromiseEnabled: true`.
+
+## Filtering products by Delivery Options
+
+Delivery Options let shoppers filter search results by the delivery experiences your store offers, such as "Express Delivery" or "Scheduled Delivery". After you complete the setup in this guide, these options appear as filters in the search sidebar, along with the other Delivery Promise filters.
+
+### Available filters
+
+The Delivery Promise filters in the sidebar are organized into three groups:
+
+| Group              | What it filters | Example values |
+| ------------------ | --------------- | -------------- |
+| `delivery-options` | Products that can be fulfilled by the Delivery Options configured by the merchant in the Admin. | "Express Delivery", "Scheduled Delivery" |
+| `dynamic-estimate` | Products that can be delivered or picked up within a fixed timeframe. | "Same day", "Next day" |
+| `shipping`         | Products by shipping method. | Delivery, pickup point, nearby pickup |
+
+### Delivery Options vs. dynamic estimate
+
+Although both filters relate to delivery time, they work differently:
+
+- **Delivery Options (`delivery-options`):** Each filter value corresponds to a Delivery Option the merchant created and named in the Admin. The shopper filters by a specific commercial offer, such as "Express Delivery", regardless of the exact timeframe behind it.
+- **Dynamic estimate (`dynamic-estimate`):** The filter values are fixed timeframes (`same-day` and `next-day`), not configured by the merchant. When the shopper selects one, the search dynamically identifies which Delivery Options can meet that timeframe for the shopper's location and shipping method, and filters the results as if those Delivery Options had been selected.
+
+Use Delivery Options when you want to highlight the delivery offers you've named and configured, and use dynamic estimate when you want shoppers to filter by how soon they receive their products.
+
+### Configuring Delivery Options in the Admin
+
+To display Delivery Options as filters, you must first create them in the VTEX Admin, at **Shipping > Delivery Options**. For detailed instructions, see [Delivery Options](https://help.vtex.com/en/docs/tutorials/delivery-options).
+
+To show only the Delivery Options filter, hide the other groups using the `hiddenFacets` configuration described in [Step 4](#step-4---implement-sidebar-filters):
+
+```json
+"search-result-layout.desktop": {
+  "children": ["filter-navigator.v3", "search-content"],
+  "props": {
+    "showDeliveryPromiseFacets": true,
+    "hiddenFacets": {
+      "delivery-promise": {
+        "hiddenGroups": [{ "name": "shipping" }, { "name": "dynamic-estimate" }]
+      }
+    }
+  }
+}
+```
+
+### Why a filter option may not appear
+
+The sidebar only displays the filter options that the search returns for the shopper's location. As a result, a Delivery Option or timeframe may not appear in the sidebar in the following scenarios:
+
+- The shopper hasn't set a location yet in the `shopper-location-setter` block.
+- No product in the search results can be fulfilled by that Delivery Option or within that timeframe for the shopper's location.
+- The Delivery Option isn't configured or active in the Admin.
+- The filter group is hidden by `showDeliveryPromiseFacets: false` or by the `hiddenFacets` configuration.
