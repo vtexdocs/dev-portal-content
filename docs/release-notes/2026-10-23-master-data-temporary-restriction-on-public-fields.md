@@ -24,7 +24,7 @@ Starting October 26, 2026, [Master Data](https://developers.vtex.com/docs/guides
 
 ## Why did we make this change?
 
-This restriction strengthens data security in Master Data by preventing new fields from being exposed through unauthenticated requests. It helps reduce the risk of unintended data exposure and encourages authenticated access to store and customer information.
+We are strengthening data security in Master Data. Because all new fields are private, access to store and customer information always requires authentication, in line with data protection best practices.
 
 ## What needs to be done?
 
