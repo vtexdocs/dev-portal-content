@@ -80,7 +80,7 @@ To cover a period longer than 15 days, split it into several windows of up to 15
 
 All events of a release share the same `releaseId`. Group the entries by this field to read the release's sequence. For example:
 
-```
+```md
 created > publishing > enqueued > build_succeeded > published
 ```
 
