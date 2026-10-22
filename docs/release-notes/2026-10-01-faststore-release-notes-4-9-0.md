@@ -4,7 +4,7 @@ slug: "2026-10-01-faststore-release-notes-4-9-0"
 type: improved
 excerpt: "FastStore 4.9.0 improves cart and My Account for B2B Buyer Portal account reliability, Windows development, localized SEO, custom search sorting, and access to product cluster data"
 createdAt: "2026-10-01T00:00:00.000Z"
-updatedAt: "2026-10-09T00:00:00.000Z"
+updatedAt: "2026-10-22T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
