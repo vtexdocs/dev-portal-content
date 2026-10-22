@@ -80,11 +80,15 @@ To cover a period longer than 15 days, split it into several windows of up to 15
 
 All events of a release share the same `releaseId`. Group the entries by this field to read the release's sequence. For example:
 
-```md
-created > publishing > enqueued > build_succeeded > published
+```mermaid
+flowchart LR
+    A[created] --> B[publishing]
+    B --> C[enqueued]
+    C --> D[build_succeeded]
+    D --> E[published]
 ```
 
-A step can happen more than once for the same release.
+This is an example of a successful sequence. A step can happen more than once for the same release, and the steps that appear depend on what happened to it.
 
 The log doesn't include release names. To find the name of a release, use the List Releases endpoint. The `id` it returns is the `releaseId` used in the log.
 
