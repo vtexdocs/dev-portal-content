@@ -14,8 +14,6 @@ seeAlso:
 
 Starting October 26, 2026, [Master Data](https://developers.vtex.com/docs/guides/master-data) will temporarily block the creation of public fields and the conversion of existing private fields to public. This change applies to both native and custom fields in Master Data v1 and v2.
 
-> Master Data public fields can be accessed through unauthenticated API requests, while private fields require authenticated API requests.
-
 ## What is changing?
 
 - New fields can only be created as private.
