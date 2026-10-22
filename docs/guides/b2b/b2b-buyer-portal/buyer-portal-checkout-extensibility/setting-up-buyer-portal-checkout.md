@@ -98,7 +98,7 @@ To do this, update the `checkoutUrl` entry in the store’s `discovery.config.js
 
 This configuration points Discovery's `checkoutUrl` to the Checkout instance running locally.
 
-> ℹ️ Port `3000` is the default proxy port used by the FastStore CLI. This ensures that redirects to Checkout work correctly and also allows direct access through `http://localhost:3000/checkout/cart`. If you are using a custom port with the `--proxy-port` flag, update this value accordingly. For more information, see [Running projects locally](https://developers.vtex.com/docs/guides/monorepo-running-projects-locally).
+> ℹ️ Port `3000` is the default proxy port used by the FastStore CLI. This ensures that redirects to Checkout work correctly and also allows direct access through `http://localhost:3000/checkout/cart`. If you're using a custom port with the `--proxy-port` flag, update this value accordingly. For more information, see [Running projects locally](https://developers.vtex.com/docs/guides/monorepo-running-projects-locally).
 
 ## Previewing extensions in development
 
