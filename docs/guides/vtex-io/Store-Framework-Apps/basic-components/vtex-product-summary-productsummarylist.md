@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-06-09T14:48:52.857Z"
 updatedAt: "2022-07-02T00:50:32.864Z"
 ---
-The  Product Summary List app (`list-context.product-list`) is an instance of the `list-context` interface - a set of special interfaces used to create lists of content, such as a list of products.
+The Product Summary List app (`list-context.product-list`) is an instance of the `list-context` interface - a set of special interfaces used to create lists of content, such as a list of products.
 
 ![list-context-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-summary-productsummarylist-0.png)
 
@@ -13,7 +13,7 @@ To create a list of products, you must use the `list-context.product-list` and `
 
 ## product-list-block
 
-This block is used to specify what variation of `product-summary` to be used to create the list of products, and the `list-context.product-list` you want as follows:
+This block is used to specify which variation of `product-summary` to use to create the list of products, and the `list-context.product-list` you want, as follows:
 
 ```json
   "product-summary.shelf#demo1": {
@@ -39,28 +39,28 @@ This block is used to specify what variation of `product-summary` to be used to 
 | `category`             | `String`                               | Category ID of the listed items. For sub-categories, use "/" (e.g. "1/2/3")                                                                                                                                | -                        |
 | `specificationFilters` | `Array({ id: String, value: String })` | Specification Filters of the listed items.                                                                                                                                                                 | []                       |
 | `collection`           | `String`                               | Filter by collection.                                                                                                                                                                                      | -                        |
-| `orderBy`              | `Enum`                                 | Ordination type of the items. Possible values: `''`, `OrderByTopSaleDESC`, `OrderByReleaseDateDESC`, `OrderByBestDiscountDESC`, `OrderByPriceDESC`, `OrderByPriceASC`, `OrderByNameASC`, `OrderByNameDESC` | `OrderByTopSaleDESC`     |
+| `orderBy`              | `Enum`                                 | Sorting type of the items. Possible values: `''`, `OrderByTopSaleDESC`, `OrderByReleaseDateDESC`, `OrderByBestDiscountDESC`, `OrderByPriceDESC`, `OrderByPriceASC`, `OrderByNameASC`, `OrderByNameDESC` | `OrderByTopSaleDESC`     |
 | `hideUnavailableItems` | `Boolean`                              | Hides items that are unavailable.                                                                                                                                                                          | `false`                  |
 | `maxItems`             | `Number`                               | Maximum items to be fetched.                                                                                                                                                                               | `10`                     |
-| `skusFilter`           | `SkusFilterEnum`                       | Control SKUs returned for each product in the query. The less SKUs needed to be returned, the more performant your shelf query will be.                                                                    | `"ALL_AVAILABLE"`        |
-| `installmentCriteria`  | `InstallmentCriteriaEnum`              | Control what price to be shown when price has different installments options.                                                                                                                              | `"MAX_WITHOUT_INTEREST"` |
+| `skusFilter`           | `SkusFilterEnum`                       | Controls which SKUs are returned for each product in the query. The fewer SKUs that need to be returned, the more performant your shelf query will be.                                                                    | `"ALL_AVAILABLE"`        |
+| `installmentCriteria`  | `InstallmentCriteriaEnum`              | Controls which price is shown when the price has different installment options.                                                                                                                              | `"MAX_WITHOUT_INTEREST"` |
 | `listName`             | `String`                               | Name of the list property on Google Analytics events.                                                                                                                                                      | ``                       |
-| `preferredSKU`         | `PreferredSKUEnum`                     | Controls which SKU will be selected in the summary                                                                                                                                                         | `"FIRST_AVAILABLE"`      |
+| `preferredSKU`         | `PreferredSKUEnum`                     | Controls which SKU will be selected in the summary.                                                                                                                                                         | `"FIRST_AVAILABLE"`      |
 
 For `SkusFilterEnum`:
 
 | Name            | Value             | Description                                                                                                                                            |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| First Available | `FIRST_AVAILABLE` | Most performant, ideal if you do not have a SKU selector in your shelf. Will return only the first available SKU for that product in your shelf query. |
-| All Available   | `ALL_AVAILABLE`   | A bit better performace, will only return SKUs that are available, ideal if you have a SKU selector but still want a better performance.               |
-| All             | `ALL`             | Returns all SKUs related to that product, least performant option.                                                                                     |
+| First Available | `FIRST_AVAILABLE` | Most performant. Ideal if you do not have a SKU selector in your shelf. Returns only the first available SKU for that product in your shelf query. |
+| All Available   | `ALL_AVAILABLE`   | Slightly better performance. Returns only SKUs that are available. Ideal if you have a SKU selector but still want better performance.               |
+| All             | `ALL`             | Returns all SKUs related to that product. Least performant option.                                                                                     |
 
 For `InstallmentCriteriaEnum`:
 
 | Name                     | Value                  | Description                                                         |
 | ------------------------ | ---------------------- | ------------------------------------------------------------------- |
-| Maximum without interest | `MAX_WITHOUT_INTEREST` | Will display the maximum installment option with no interest.       |
-| Maximum                  | `MAX_WITH_INTEREST`    | Will display the maximum installment option having interest or not. |
+| Maximum without interest | `MAX_WITHOUT_INTEREST` | Displays the maximum installment option with no interest.       |
+| Maximum                  | `MAX_WITH_INTEREST`    | Displays the maximum installment option, whether or not it has interest. |
 
 For `PreferredSKUEnum`:
 

@@ -6,7 +6,7 @@ createdAt: "2021-11-08T16:34:25.542Z"
 updatedAt: "2025-00-11T07:08:09.500Z"
 ---
 
-> This feature is in closed beta, available only for selected customers. If you have any questions, contact our [Support](https://help.vtex.com/support).
+>❗ Pricing Hub is no longer supported. VTEX is working on a replacement solution. Until it is available, if you need to send prices outside VTEX, use the [Audience API](https://developers.vtex.com/docs/api-reference/audience-api).
 
 In B2B commerce, it is often necessary to offer personalized prices. For example, in the commercial relationship between a distributor (seller) and different supermarkets (buyers), there might be specific price deals in place for each supermarket. In this case, the distributor (seller) needs to set specific prices for each customer.
 
@@ -40,7 +40,7 @@ The marketplace must follow the steps below to activate the B2B Seller Price:
 
 The B2B sellers – white label or not – who want to use this feature must follow the instructions below.
 
-1. Configure specific price tables associated with the customers’ respective email addresses, either using the [Pricing API](https://developers.vtex.com/docs/guides/pricing-api-overview) or the [VTEX Admin panel](https://help.vtex.com/en/tutorial/configurar-price-tables-especificas--5S9oDOMHNmY4K0kAewAiWY).
+1. Configure specific price tables associated with the customers’ respective email addresses, either using the [Pricing API](https://developers.vtex.com/docs/api-reference/pricing-api) or the [VTEX Admin panel](https://help.vtex.com/en/tutorial/configurar-price-tables-especificas--5S9oDOMHNmY4K0kAewAiWY).
 2. Develop a VTEX IO app to allow querying price tables by email, integrating with external price systems, and install it in the master workspace.
 
    We offer a reference implementation template to simplify this process: [Node template](https://github.com/vtex/unilever-external-prices-node). This template app can be customized to use other price parameters, by following the instructions on the app repository.

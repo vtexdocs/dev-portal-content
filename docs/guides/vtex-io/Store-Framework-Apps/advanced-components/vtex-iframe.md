@@ -6,20 +6,21 @@ createdAt: "2020-06-03T15:19:18.838Z"
 updatedAt: "2022-03-10T18:31:22.068Z"
 ---
 
-An app that makes it possible to render external iframes on a store.
+An app that makes it possible to render external iframes on a store website.
 
 ![image](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-iframe-0.png)
 
 ## Configuration - standard Iframe
 
-1. Add the `vtex.iframe` to the theme's dependencies on the `manifest.json`
+1. Add `vtex.iframe` to the theme's dependencies in the `manifest.json` file.
+
 ```json
 "dependencies": {
  "vtex.iframe": "0.x"
 }
 ```
  
- 2. Add the interface `iframe` to any **custom page** (Iframes are not allowed outside custom pages).
+2. Add the `iframe` interface to any **custom page** (iframes are not allowed outside custom pages).
  
 ```json
 {
@@ -43,11 +44,11 @@ An app that makes it possible to render external iframes on a store.
 | `src` | String | Source address the iframe should render | `null`
 | `width` | Number | Width attribute of the iframe | `null`
 | `height` | Number | Height attribute of the iframe | `null`
-| `allow` | String | allow attribute of the iframe | `null`
+| `allow` | String | `allow` attribute of the iframe | `null`
 
 ## Configuration - dynamic Iframe
 
-1. Add the `vtex.iframe` to the theme's dependencies on the `manifest.json`
+1. Add `vtex.iframe` to the theme's dependencies in the `manifest.json` file.
 
 ```json
 "dependencies": {
@@ -55,7 +56,7 @@ An app that makes it possible to render external iframes on a store.
 }
 ```
 
-2. Add the dynamicIframe block and its properties to the blocks.json file
+2. Add the `iframe.dynamic-src` block and its properties to the `blocks.json` file.
 
 ```json
 {
@@ -75,7 +76,7 @@ An app that makes it possible to render external iframes on a store.
   }
 }
 ```
-3. register your new page in routes.json with appropriate parameters passed into the page url
+3. Register your new page in `routes.json` with the appropriate parameters passed into the page URL.
 
 ```json
 {
@@ -91,8 +92,8 @@ An app that makes it possible to render external iframes on a store.
 | `width` | Number | Width attribute of the iframe | `null`
 | `height` | Number | Height attribute of the iframe | `null`
 | `title` | String | title attribute of the iframe | `null`
-| `allow` | String | allow attribute of the iframe | `null`
+| `allow` | String | `allow` attribute of the iframe | `null`
 
 ## Customization
 
-There is a `.container` handle that wraps the iframe, it's also possible to use `blockClass`.
+There is a `.container` handle that wraps the iframe. It's also possible to use `blockClass`.

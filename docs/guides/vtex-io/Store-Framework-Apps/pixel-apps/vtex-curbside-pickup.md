@@ -40,7 +40,7 @@ In your VTEX account's admin, perform the following actions:
 
 Once the email templates are created, you may customize them as you see fit. Follow the links to the templates from the Curbside Pickup page, or navigate to `Message center > Templates` from your admin dashboard sidebar.
   
-## Modus Operandi
+## Behavior
 
 When a pickup order has reached the `Ready For Handling` state, the Curbside Pickup adds a comment to the order timeline stating that the curbside pickup process has begun and sends an email to the staff of the physical store where the order will be picked up.
 

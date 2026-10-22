@@ -3,10 +3,10 @@ title: "CMS for FastStore storefronts"
 hidden: false
 slug: "cms-for-faststore-storefronts"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-03-26T11:48:00.813Z"
+updatedAt: "2026-01-26T12:50:00.813Z"
 ---
 
-> ⚠️ For documentation about the legacy Headless CMS used with FastStore versions earlier than `3`, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
+> ⚠️ For documentation about Headless CMS (legacy) used with FastStore versions earlier than `3`, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
 
 The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
 
@@ -32,7 +32,7 @@ The system follows a decoupled architecture that separates content authoring fro
 Define content structures using [JSON Schema](https://json-schema.org/) with support for:
 
 - **Content Types**: Page structures like `home`, `pdp`, `plp`, and `landingPage`.
-- **Components**: Reusable building blocks with metadata like `$componentKey` and `$componentTitle`.
+- **Components**: Reusable building blocks with metadata like `$componentKey` and `$componentTitle`. See [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections) for details.
 - **Content referencing**: Reference entries across multiple pages without duplication.
 - **Schema extension**: Inherit properties from base schemas using the `$extends` keyword.
 
@@ -50,7 +50,7 @@ Manage content through the VTEX Admin using:
 
 Organize and reuse media assets with:
 
-- **Media Gallery**: Central repository for images and video references.
+- **Media Gallery**: Central repository for images and video references. See [Media gallery](https://developers.vtex.com/docs/guides/media-gallery) for details.
 - **Image formats**: PNG, JPG, JPEG, GIF, SVG, and WebP.
 - **Video embedding**: Reference videos from YouTube, Vimeo, and other services.
 
@@ -62,16 +62,34 @@ Build and manage schemas with:
 - **Modular schemas**: Individual `.jsonc` files for components and Content Types.
 - **Role-based permissions**: Granular access control for editors, reviewers, and administrators.
 
+## The CMS development and content journey
+
+Going from a schema to a live storefront involves the following: developers shape and test the content structure, and content operators create and publish the content itself. See [Getting started with CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms) to find your track and where to start.
+
 ## Next steps
 
 <Flex>
 
-<!-- <WhatsNextCard
-  linkTo="/TBD"
-  title="FastStore integration"
-  description="Learn how to connect the CMS with FastStore"
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/getting-started-with-cms"
+  title="Getting started with CMS"
+  description="Find your track, developer or content operator, and see the full CMS journey."
   linkTitle="See more"
-/> -->
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/setting-up-your-cms-environment"
+  title="Setting up your CMS environment"
+  description="Set up your local environment and model your first Content Types, Sections, and Components."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="/docs/guides/customizing-faststore-with-cms"
+  title="Customizing FastStore storefronts with the CMS"
+  description="Choose how to edit native sections, override FastStore components, create sections, and change content models."
+  linkTitle="See more"
+/>
 
 <WhatsNextCard
   linkTo="https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview"

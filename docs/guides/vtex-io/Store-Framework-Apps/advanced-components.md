@@ -109,7 +109,7 @@ linkTitle="See more"
 
 <WhatsNextCard
 title="Store form"
-description="Provides blocks for displaying an user form connected to Master Data through a JSON Schema."
+description="Provides blocks for displaying a user form connected to Master Data through a JSON Schema."
 linkTo="/docs/apps/vtex.store-form"
 linkTitle="See more"
 />

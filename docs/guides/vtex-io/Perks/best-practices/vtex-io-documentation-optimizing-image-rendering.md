@@ -18,7 +18,7 @@ This guide presents the following sections:
 
 ## List of image blocks
 
-Store Framework offers several image blocks for different use cases. Selecting the right block helps to maintain performance and visual consistency.
+Store Framework offers several image blocks for different use cases. Selecting the right block helps maintain performance and visual consistency.
 
 - [**Logo**](https://developers.vtex.com/docs/apps/vtex.store-components/logo): Renders your brand logo, typically in the header or footer.
 - [**Infocard**](https://developers.vtex.com/docs/apps/vtex.store-components/infocard): Renders images with links and call-to-action (CTA) buttons when you want to guide users with image-based CTAs.
@@ -31,7 +31,7 @@ Store Framework offers several image blocks for different use cases. Selecting t
   - `height`
   - `maxHeight`
 
-  These props define image dimensions, ensuring that product summary images are displayed at a consistent size, even if the images uploaded in the catalog have different dimensions. By declaring these props, your store shelf will replicate image consistency across all products being displayed, differently from the shelf example below:
+  These props define image dimensions, ensuring that product summary images are displayed at a consistent size, even if the images uploaded to the catalog have different dimensions. By declaring these props, your store shelf will display images consistently across all products, unlike the shelf in the example below:
 
   ![beat-practices-images](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-rendering-images-0.png)
 

@@ -6,9 +6,7 @@ createdAt: "2022-04-06T22:24:27.302Z"
 updatedAt: "2022-04-13T17:36:48.363Z"
 ---
 
-Order modification is a feature that allows your store to modify the items or prices of an order. With this feature, the store can handle potential changes in orders due to customer mistakes, product unavailability, and the inclusion of discounts, among other reasons. Learn more about how it works and its restrictions in the article [Changing items from a completed order](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190).
-
-> ℹ️ We recommend that you use the [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes) endpoint to modify an order.
+Order modifications is a feature that allows your store to modify the items or prices of an order. With this feature, the store can handle potential changes in orders due to customer mistakes, product unavailability, and the inclusion of discounts, among other reasons. Learn more about how it works and its restrictions in the article [Changing items from a completed order](https://help.vtex.com/en/tutorial/changing-items-from-a-complete-order--tutorials_190).
 
 >⚠️ The [Order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes) feature is not applicable to the Catalog API - Seller Portal.
 
@@ -16,7 +14,7 @@ Order modification is a feature that allows your store to modify the items or pr
 
 ## Implementation
 
-The [Register modifications on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) endpoint in the Orders API allows you to create a discount, change an item, or increase the price of an order.
+The [Create order modifications](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/order-system/orders/-changeOrderId-/changes) endpoint in the Orders API allows you to create a discount, change an item, or increase the price of an order.
 
 >⚠️ When removing or adding items to an order, the inventory of the affected SKUs is not updated automatically. You should update it [using the Logistics API](https://developers.vtex.com/docs/api-reference/logistics-api#put-/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-).
 
@@ -26,7 +24,11 @@ Modifications made this way can be confirmed using the `changesAttachment` field
 
 ### Errors in Change v1
 
-See below which API errors can be returned when attempting to [modify an order via Change v1 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
+The [Register modifications on order](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) endpoint was the first solution to modifying ongoing orders through the API. For this reason, we can sometimes refer to it as **Change v1**.
+
+> ❗ The Register modifications on order endpoint is being deprecated and no longer receives updates.
+
+See below which API errors can be returned when attempting to [modify an order via the Change v1 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
 
 #### Request errors
 
@@ -61,7 +63,9 @@ These are errors returned when the request is correct but the order cannot be mo
 
 ### Errors in Change v2
 
-See below which API errors can be returned when attempting to [modify an order via Change v2 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
+The [Order modifications](https://developers.vtex.com/docs/api-reference/orders-api#:~:text=modifications%20on%20order-,Order%20modifications,-PATCH%20Create%20order) feature is our latest solution to modifying ongoing orders. Since it is also our second, we can sometimes refer to it as **Change v2**.
+
+See below which API errors can be returned when attempting to [modify an order via the Change v2 API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes) and how to avoid or work around them.
 
 #### Errors with exception codes
 

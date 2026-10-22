@@ -12,13 +12,13 @@ Here's a sneak peek at key changes made in the last week:
 
 ### Improvements :heavy_plus_sign:
 
-- [Navigation arrows on thumbnails](arrows-pdp-thumbnails.md) - Add navigation arrows to your PDP images.
-- [Link brand component](brand-component-link.md) - Our brand component may take the user to the brand's page.
-- [Full category tree on events](category-tree-events.md) - Track your product's full category-tree on Google Analytics.
-- [Menu-item component with icon](icon-menu-item.md) - Add an icon next to each menu-item text and create custom menus.
-- [Image with link](image-component-link.md) - Our image component now supports the prop link.
-- [New sorting criteria](new-orderby-options.md) - Use these new criteria to sort your products.
-- [Shelf hiding unavailable items](shelf-hide-unavailble.md) - Prevent out-of-stock products from appearing on your shelf.
+- [Navigation arrows on thumbnails](https://developers.vtex.com/updates/release-notes/arrows-pdp-thumbnails) - Add navigation arrows to your PDP images.
+- [Link brand component](https://developers.vtex.com/updates/release-notes/brand-component-link) - Our brand component may take the user to the brand's page.
+- [Full category tree on events](https://developers.vtex.com/updates/release-notes/category-tree-events) - Track your product's full category-tree on Google Analytics.
+- [Menu-item component with icon](https://developers.vtex.com/updates/release-notes/icon-menu-item) - Add an icon next to each menu-item text and create custom menus.
+- [Image with link](https://developers.vtex.com/updates/release-notes/image-component-link) - Our image component now supports the prop link.
+- [New sorting criteria](https://developers.vtex.com/updates/release-notes/new-orderby-options) - Use these new criteria to sort your products.
+- [Shelf hiding unavailable items](https://developers.vtex.com/updates/release-notes/shelf-hide-unavailble) - Prevent out-of-stock products from appearing on your shelf.
 
 ### Notable bug fixes :bug:
 
