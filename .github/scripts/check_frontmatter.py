@@ -1,6 +1,6 @@
 import os
 import sys
-from github import Github
+from github import Auth, Github
 import yaml
 import re
 import json
@@ -26,7 +26,7 @@ if not pr_number:
     print('Not a pull request event.')
     sys.exit(0)
 
-g = Github(GITHUB_TOKEN)
+g = Github(auth=Auth.Token(GITHUB_TOKEN))
 repo = g.get_repo(GITHUB_REPOSITORY)
 pr = repo.get_pull(pr_number)
 
@@ -39,9 +39,12 @@ head_sha = pr.head.sha
 def plural_list(list):
     return 's' if len(list) != 1 else ''
 
+
 # Get changed Markdown files in the PR (only in 'docs/guides', 'docs/release-notes', 'docs/troubleshooting', and 'docs/faststore' folders)
+# Skip files deleted in the PR: they don't exist at head_sha, so get_contents would raise a 404
 changed_files = [f for f in pr.get_files() if (
-    f.filename.endswith(('.md', '.mdx'))
+    f.status != 'removed'
+    and f.filename.endswith(('.md', '.mdx'))
     and (
         f.filename.startswith(('docs/guides/', 'docs/release-notes/', 'docs/faststore/'))
         or (f.filename.startswith('docs/troubleshooting/') and f.filename.count('/') > 2)
