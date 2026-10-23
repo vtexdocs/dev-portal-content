@@ -1,6 +1,6 @@
 ---
 title: "Configuration options for discovery.config.js"
-updatedAt: "2025-10-31T13:23:44.263Z"
+updatedAt: "2026-10-14T19:05:00.000Z"
 ---
 
 The `discovery.config.js` is a configuration file for managing settings that control store behavior, appearance, and functionality. This file serves as a central hub for configuring key aspects of your FastStore website, including SEO, API connections, session management, analytics, and more.
@@ -44,7 +44,7 @@ Sets default metadata related to Search Engine Optimization (SEO), influencing h
 |-----------------|--------|-----------------------------------------------------------------------------|---------------|
 | `title`         | `string` | Store headline displayed in search results (60 characters recommended).     | `"FastStore Starter"` |
 | `description`   | `string` | Brief description of the store (150-160 characters optimal).                | `"FastStore Demo Store"` |
-| `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder.                      | `%s` | FastStore"` |
+| `titleTemplate` | `string` | Dynamic page title pattern. Use `%s` as a placeholder.                      | "%s \| FastStore" |
 | `author`        | `string` | Content author/owner for attribution.                                       | `"FastStore"` |
 | [`minPriceAmountFractionDigits`](https://developers.vtex.com/docs/guides/faststore/seo-configuring-product-price-meta-tag-on-pdp) | `number` | Minimum fraction digits used in the PDP `product:price:amount` meta tag. | `2` |
 
@@ -76,6 +76,17 @@ Contains settings related to the store's APIs, which link your FastStore storefr
 | `environment`          | `string`  | API environment.       | `"vtexcommercestable"` |
 | `hideUnavailableItems` | `boolean` | Controls product display. When `true`, hides out-of-stock products. Default value is `false`.                         | `false` |
 | `incrementAddress`     | `boolean` | Enables automatic completion of address details during checkout using [VTEX’s address API](https://developers.vtex.com/docs/guides/get-address-by-postal-code). When `true`, missing address fields (such as city, state, street, etc.) are automatically filled based on the provided postal code. Default value is `false`.            | `false` |
+| `customSortMap`        | `object`  | Maps extra [`StoreSort`](https://developers.vtex.com/docs/guides/faststore/schema-enums#storesort) values to Intelligent Search sort strings. FastStore checks this map before the built-in values, and a matching key overrides a default sort. Available in FastStore `4.9.0` and later versions. | `{ rating_desc: "Rating:desc" }` |
+
+The following `api` excerpt maps a custom rating sort. Use the same key in the `StoreSort` extension and in `registerCustomSortKeys`. See [Adding a custom search sort](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema#adding-a-custom-search-sort).
+
+```javascript
+api: {
+  customSortMap: {
+    rating_desc: "Rating:desc",
+  },
+},
+```
 
 ---
 
