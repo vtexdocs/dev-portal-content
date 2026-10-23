@@ -101,9 +101,25 @@ const response = await fetch(
 
 This is appropriate for that scenario: an anonymous visitor submits a form into a dedicated entity, and there is no shopper identity to carry. Even so, it's an unauthenticated write path, so you remain responsible for rate limiting, validating `input` against the schema, and keeping the entity's read ACL closed.
 
-> ⚠️ Never reuse this pattern for an entity that holds personal data, such as `CL`, `NL`, `AD`, or any custom entity keyed by email or document number. Adding `appKey` and `appToken` to it doesn't make it safer. It makes the request succeed against every record in the entity.
+> ⚠️ Never reuse this pattern for an entity that holds personal data, such as `CL`, `NL`, `AD`, or any custom entity keyed by email or document number. Adding `appKey` and `appToken` to it doesn't make it safer. Because the resolver forwards the caller's `input`, the caller can include a document `id` or shape the request, and with a fixed credential the request succeeds against every record in the entity.
+
+> ℹ️ Since October 26, 2026, Master Data no longer allows creating public fields or changing private fields to public. See [Master Data: Temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields).
 
 Follow the sections below instead.
+
+#### Create-only writes from anonymous visitors
+
+Some forms must accept personal data from visitors who aren't signed in, such as a newsletter subscription. There is no shopper identity to verify, and the entity's fields must stay private, so the resolver writes with a fixed credential. This is acceptable only when the resolver, not the caller, defines the whole upstream request:
+
+- **Create only.** Use `POST /api/dataentities/{acronym}/documents`. Never use `PATCH` or `PUT`, which can target an existing document.
+- **No identifiers from the caller.** Don't accept or forward a document `id`, and don't build URLs or filters from arguments.
+- **Server-built body.** Validate each argument (format and length) and build the body with an explicit list of fields. Never spread `input` into the body.
+- **No reads.** Don't read, search, or return existing documents. Return only the ID of the document you created.
+- **Dedicated credential.** Use an API key created only for this write, with a role that has only the **Insert or update document (not remove)** resource. Master Data permissions aren't scoped by entity, so don't reuse a key that serves other features.
+
+The native Newsletter section follows these rules. See [Setting up newsletter subscriptions](https://developers.vtex.com/docs/guides/faststore/organisms-newsletter#setting-up-newsletter-subscriptions).
+
+The resolver is still an anonymous write path: anyone can submit any email address. Rate limit the route and treat the stored data as unverified until the person confirms it.
 
 ## Step 2: Require authentication in the resolver
 
@@ -298,7 +314,7 @@ Keep the request URL and the headers out of the error text as well. The message 
 
 ### Using fixed credentials safely
 
-A fixed credential remains the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. It's also what a third-party integration uses even when the response is personal, as in Step 3. When you use one:
+A fixed credential remains the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. It's also what a third-party integration uses even when the response is personal, as in Step 3, and what a [create-only write from an anonymous visitor](#create-only-writes-from-anonymous-visitors) uses. When you use one:
 
 - Store the credential as a [secret](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) or in the `vtex.env` file, never in your repository. Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must never use that prefix.
 - If a credential is currently a string literal in the source, moving it to an environment variable is not enough on its own. It remains in the repository history and stays valid until it's rotated, so rotate it as well.

@@ -1,0 +1,459 @@
+---
+keywords:
+  - UI library
+  - ecommerce
+  - react
+sidebar_custom_props:
+  image: https://vtexhelp.vtexassets.com/assets/docs/src/Hero___c73fdfe80ce87c2ccc4701c07e9d5398.png
+components:
+  - Newsletter.tsx
+  - NewsletterAddendum.tsx
+  - NewsletterContent.tsx
+  - NewsletterForm.tsx
+  - NewsletterHeader.tsx
+title: Newsletter
+excerpt: The `Newsletter` component is a section with at least one input text with an action allowing users to submit their input.
+---
+
+[<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/Newsletter)
+
+Uses `NewsletterForm`, `NewsletterHeader` and `NewsletterContent` as compound components.
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <NewsletterUsage />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Newsletter card colorVariant="main">
+      <NewsletterForm onSubmit={() => null}>
+        <NewsletterHeader
+          icon={<Icon name="Envelope" />}
+          title="Get News and Special Offers!"
+          description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+        />
+        <NewsletterContent>
+          <InputField id="newsletter-name" required label="Name" />
+          <InputField
+            id="newsletter-email"
+            type="email"
+            required
+            label="Email"
+          />
+          <NewsletterAddendum addendum="By subscribing to our newsletter you agree to to our Privacy Policy." />
+          <Button
+            variant="secondary"
+            type="submit"
+            inverse
+          >
+            Subscribe
+          </Button>
+        </NewsletterContent>
+      </NewsletterForm>
+    </Newsletter>
+    ```
+  </Tab>
+</Tabs>
+
+## Usage
+
+### Import the component
+
+```tsx
+import {
+  Newsletter,
+  NewsletterAddendum,
+  NewsletterContent,
+  NewsletterForm,
+  NewsletterHeader,
+} from "@faststore/ui";
+```
+
+### Import styles
+
+To apply styles, include the following in your stylesheet:
+
+```scss
+@import "@faststore/ui/src/components/organisms/Newsletter/styles.scss";
+```
+
+For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Examples
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <NewsletterUsage card/>
+    </OverviewSection>
+    <OverviewSection>
+      <NewsletterUsage />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Newsletter card>
+      <NewsletterForm onSubmit={() => null}>
+        <NewsletterHeader
+          icon={<Icon name="Envelope" />}
+          title="Get News and Special Offers!"
+          description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+        />
+        <NewsletterContent>
+          <NewsletterAddendum addendum="By subscribing to our newsletter you agree to to our Privacy Policy." />
+        </NewsletterContent>
+      </NewsletterForm>
+    </Newsletter>
+
+    <Newsletter card={false}>
+      <NewsletterForm onSubmit={() => null}>
+        <NewsletterHeader
+          icon={<Icon name="Envelope" />}
+          title="Get News and Special Offers!"
+          description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+        />
+        <NewsletterContent>
+          <NewsletterAddendum addendum="By subscribing to our newsletter you agree to to our Privacy Policy." />
+        </NewsletterContent>
+      </NewsletterForm>
+    </Newsletter>
+    ```
+
+  </Tab>
+</Tabs>
+
+### Color variants
+
+#### Main
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <NewsletterUsage />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Newsletter card={false} colorVariant="main">
+      <NewsletterForm onSubmit={() => null}>
+        <NewsletterHeader
+          icon={<Icon name="Envelope" />}
+          title="Get News and Special Offers!"
+          description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+        />
+        <NewsletterContent>
+          <NewsletterAddendum addendum="By subscribing to our newsletter you agree to to our Privacy Policy." />
+        </NewsletterContent>
+      </NewsletterForm>
+    </Newsletter>
+    ```
+  </Tab>
+</Tabs>
+#### Light
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <NewsletterUsage colorVariant="light" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Newsletter card={false} colorVariant="light">
+      <NewsletterForm onSubmit={() => null}>
+        <NewsletterHeader
+          icon={<Icon name="Envelope" />}
+          title="Get News and Special Offers!"
+          description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+        />
+        <NewsletterContent>
+          <NewsletterAddendum addendum="By subscribing to our newsletter you agree to to our Privacy Policy." />
+        </NewsletterContent>
+      </NewsletterForm>
+    </Newsletter>
+    ```
+  </Tab>
+</Tabs>
+#### Accent
+
+<Tabs items={["Example", "Code"]} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <NewsletterUsage colorVariant="accent" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    <Newsletter card={false} colorVariant="accent">
+      <NewsletterForm onSubmit={() => null}>
+        <NewsletterHeader
+          icon={<Icon name="Envelope" />}
+          title="Get News and Special Offers!"
+          description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+        />
+        <NewsletterContent>
+          <NewsletterAddendum addendum="By subscribing to our newsletter you agree to to our Privacy Policy." />
+        </NewsletterContent>
+      </NewsletterForm>
+    </Newsletter>
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Design tokens
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-padding-mobile"
+    value="var(--fs-spacing-5)"
+  />
+  <TokenRow
+    token="--fs-newsletter-padding-desktop"
+    value="var(--fs-spacing-9) 10%"
+  />
+  <TokenRow
+    token="--fs-newsletter-border-radius"
+    value="var(--fs-border-radius)"
+  />
+</TokenTable>
+
+### Title
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-title-size"
+    value="var(--fs-text-size-title-section)"
+  />
+  <TokenRow
+    token="--fs-newsletter-title-weight"
+    value="var(--fs-text-weight-bold)"
+  />
+</TokenTable>
+
+### Icon
+
+<TokenTable>
+  <TokenRow token="--fs-newsletter-icon-size" value="var(--fs-spacing-5)" />
+</TokenTable>
+
+### Variants
+
+#### Card
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-card-border-radius"
+    value="var(--fs-border-radius)"
+  />
+</TokenTable>
+
+#### Main
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-main-bkg-color"
+    value="var(--fs-color-primary-bkg)"
+  />
+  <TokenRow
+    token="--fs-newsletter-main-text-color"
+    value="var(--fs-color-primary-text)"
+  />
+</TokenTable>
+
+#### Light
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-light-bkg-color"
+    value="var(--fs-color-secondary-bkg-light)"
+  />
+  <TokenRow
+    token="--fs-newsletter-light-text-color"
+    value="var(--fs-color-text-display)"
+  />
+</TokenTable>
+
+#### Accent
+
+<TokenTable>
+  <TokenRow
+    token="--fs-newsletter-accent-bkg-color"
+    value="var(--fs-color-highlighted-bkg)"
+  />
+  <TokenRow
+    token="--fs-newsletter-accent-text-color"
+    value="var(--fs-newsletter-light-text-color)"
+  />
+</TokenTable>
+
+---
+
+## Data attributes
+
+You can target and override `Newsletter` styles using the following data attributes:
+
+`data-fs-newsletter`
+
+`data-fs-newsletter-color-variant="main" | "light" | "accent"`
+
+`data-fs-newsletter-form`
+
+`data-fs-newsletter-header`
+
+`data-fs-newsletter-header-title`
+
+`data-fs-newsletter-header-description`
+
+`data-fs-newsletter-content`
+
+`data-fs-newsletter-addendum`
+
+## Setting up newsletter subscriptions
+
+When customers subscribe to the store newsletter, FastStore saves their name and email in the Newsletter data entity in [Master Data](https://developers.vtex.com/docs/guides/master-data). The request is sent from FastStore's server, authenticated with an API key that is used only for this purpose, so all fields in the entity stay private.
+
+To enable newsletter subscriptions, complete the following steps:
+
+1. [Create the Newsletter data entity](#step-1-creating-the-newsletter-data-entity) with private fields.
+2. [Create a role](#step-2-creating-a-role-to-create-newsletter-documents) that can create Master Data documents.
+3. [Generate an API key](#step-3-generating-an-api-key) dedicated to the newsletter.
+4. [Add the credentials to your project](#step-4-adding-the-credentials-to-your-project).
+
+{/* TODO: replace X.Y.Z with the first @faststore/core versions that include the newsletter credentials (4.x and 3.x) once they are released. */}
+> ℹ️ Authenticated newsletter subscriptions are available from `@faststore/core` X.Y.Z (FastStore v4) and X.Y.Z (FastStore v3). Earlier versions send the subscription without credentials and only work if the entity fields are public, which is no longer allowed. To update, see [Updating the `@faststore/cli` package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
+
+> ⚠️ Don't make the Newsletter fields public. Public fields can be read without credentials, which would expose your subscribers' personal data. Since October 26, 2026, Master Data no longer allows creating public fields. For more information, see [Master Data: Temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields).
+
+### Step 1: Creating the Newsletter data entity
+
+The Newsletter data entity, identified by the `NL` acronym, stores the subscriptions made with the Newsletter component. You can create it [via Admin](#creating-via-admin) or [via API](#creating-via-api).
+
+> ℹ️ For more details about Master Data data entities, see the [data entity](https://help.vtex.com/en/tutorial/data-entity--tutorials_1265) article.
+
+#### Creating via Admin
+
+1.  In the VTEX Admin, go to **Store Settings > Storefront > Master Data**.
+2.  In Master Data, click **Applications > Advanced Settings > Data structure**.
+3.  Click the **Data Entities** tab.
+4.  Click `Add new`.
+5.  Complete the fields of the **Data Entity** section with the following information:
+
+    | **Field name**       | **Value**              |
+    | -------------------- | ---------------------- |
+    | **Acronym**          | `NL`                   |
+    | **Name**             | Newsletter             |
+    | **Primary key type** | Generate a unique GUID |
+
+6.  In the **Fields** tab, click `New Field` and create the following fields:
+
+    | **Name**          | **Display Name**    | **Type**    | **Description**                                     |
+    | ----------------- | ------------------- | ----------- | --------------------------------------------------- |
+    | email             | Email               | Email       | Customer's email address.                           |
+    | isNewsletterOptIn | Receive newsletter? | Boolean     | Whether the customer wants to receive the newsletter. |
+    | name              | Name                | Varchar 750 | Customer's name. Optional in the form.              |
+
+    For each field, click the gear icon (⚙️) to open the field configuration options and:
+
+    - Check **Is nullable?** for the `email` and `name` fields.
+    - In the **Search and filter settings** section, check **Is searchable?** and **Is filterable?**.
+    - Leave **Make readable without credentials**, **Allow editing without credentials**, and **Allow filtering without credentials** unchecked.
+
+7.  Click `Save` and you will be redirected back to the Data Entity tab.
+8.  In the row of the new `NL` entity, click the diskette 💾 to publish the created data entity.
+9.  Click `OK`.
+10. Click the **Applications** tab to return to the Master Data homepage.
+11. Click `Reload applications`.
+
+#### Creating via API
+
+You can also create the Newsletter data entity using the [Create partial document](https://developers.vtex.com/docs/api-reference/masterdata-api#patch-/api/dataentities/-acronym-/documents) endpoint.
+
+To create the three fields for the Newsletter data entity, see the [Create document with custom ID or update entire document](https://developers.vtex.com/docs/api-reference/masterdata-api#put-/api/dataentities/-acronym-/documents/-id-) endpoint reference.
+
+> ⚠️ The field information must be the same as described in [Creating via Admin](#creating-via-admin), including keeping all fields private.
+
+### Step 2: Creating a role to create newsletter documents
+
+1. In the VTEX Admin, go to **Account Settings > User Roles**.
+2. Click `New role` and name it, for example, `FS newsletter`.
+3. Add the **Dynamic Storage** product to the role.
+4. Under **Resources**, select only the **Insert or update document (not remove)** permission.
+5. Save the role.
+
+> ⚠️ Master Data permissions apply to all data entities in the account, not only to `NL`. Use this role only for the newsletter API key, and don't add it to keys or users that have other purposes.
+
+### Step 3: Generating an API key
+
+1. In the VTEX Admin, go to **Account > API Keys**.
+2. In the **Generated** tab, click `Generate Key`.
+3. Complete the fields with the following:
+
+    | Field name         | Description                          | Value example                                    |
+    | ------------------ | ------------------------------------ | ------------------------------------------------ |
+    | Key identification | Name that identifies the key         | `FS NEWSLETTER API KEY`                          |
+    | Roles              | Select the role for the key          | Select only the role created in Step 2, `FS newsletter` |
+
+4. Click `Generate`.
+
+> ⚠️ The **App Key** and **App Token** are displayed only once. Copy and securely save both credentials immediately, as you'll need them in the next step.
+
+### Step 4: Adding the credentials to your project
+
+Add the API credentials to your project as environment variables. In production, use [WebOps secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets). For local development, you can use the `vtex.env` file as described in [Local development](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets#local-development).
+
+| Key                       | Value            |
+| ------------------------- | ---------------- |
+| `FS_NEWSLETTER_APP_KEY`   | `YOUR_APP_KEY`   |
+| `FS_NEWSLETTER_APP_TOKEN` | `YOUR_APP_TOKEN` |
+
+```env vtex.env
+FS_NEWSLETTER_APP_KEY=YOUR_APP_KEY
+FS_NEWSLETTER_APP_TOKEN=YOUR_APP_TOKEN
+```
+
+>❗ Don't prefix these variables with `NEXT_PUBLIC_`, which would send them to the browser. Never commit the `vtex.env` file or expose your API credentials in public repositories.
+
+Once the credentials are configured, FastStore creates each subscription as a new document in the `NL` entity. The request only creates documents: it never reads, updates, or deletes existing ones.
+
+If the credentials are missing, FastStore logs a warning and sends the subscription without credentials, which fails when the `NL` fields are private.
+
+### Migrating an existing Newsletter data entity
+
+If your store created the `NL` entity with public fields, as previously documented, complete [Step 2](#step-2-creating-a-role-to-create-newsletter-documents), [Step 3](#step-3-generating-an-api-key), and [Step 4](#step-4-adding-the-credentials-to-your-project), deploy your store with a FastStore version that supports newsletter credentials, and then:
+
+1. In Master Data, open the `NL` entity in the **Data Entities** tab.
+2. For each field, uncheck **Make readable without credentials**, **Allow editing without credentials**, and **Allow filtering without credentials**.
+3. Save and publish the entity, and then click `Reload applications`.
+4. Subscribe to the newsletter on your store to confirm that the document is created.
+
+> ⚠️ Change the fields to private only after the new version is deployed with the credentials configured. Otherwise, newsletter subscriptions will fail until the deploy is complete.
+
+---
+
+## Props
+
+### Newsletter
+
+<ComponentPropsSection component="Newsletter" />
+
+### NewsletterAddendum
+
+<ComponentPropsSection component="NewsletterAddendum" />
+
+### NewsletterContent
+
+<ComponentPropsSection component="NewsletterContent" />
+
+### NewsletterForm
+
+<ComponentPropsSection component="NewsletterForm" />
+
+### NewsletterHeader
+
+<ComponentPropsSection component="NewsletterHeader" />
