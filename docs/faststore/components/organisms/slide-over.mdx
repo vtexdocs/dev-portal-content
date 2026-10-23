@@ -76,6 +76,39 @@ The `SlideOver` component presents complementary content in a panel that slides 
   </Tab>
 </Tabs>
 
+### Open from bottom
+
+Set `direction="bottomSide"` to slide the panel up from the bottom of the viewport.
+
+```tsx
+import { Button, SlideOver, SlideOverHeader, useFadeEffect, useUI } from '@faststore/ui'
+
+export default function SlideOverBottom() {
+  const { modal, openModal, closeModal } = useUI()
+  const { fade } = useFadeEffect()
+
+  return (
+    <>
+      <Button onClick={openModal}>Open</Button>
+      {modal && (
+        <SlideOver
+          size="full"
+          direction="bottomSide"
+          isOpen={modal}
+          fade={fade}
+          onDismiss={closeModal}
+        >
+          <SlideOverHeader onClose={closeModal}>
+            <b>SlideOver</b>
+          </SlideOverHeader>
+          <main>Content</main>
+        </SlideOver>
+      )}
+    </>
+  )
+}
+```
+
 ---
 
 ## Usage
@@ -347,6 +380,8 @@ You can target and override `SlideOver` styles using the following data attribut
 `data-fs-slide-over`
 
 `data-fs-slide-over-size="full" | "partial"`
+
+`data-fs-slide-over-direction="leftSide" | "rightSide" | "bottomSide"`
 
 `data-fs-slide-over-state="in" | "out"`
 

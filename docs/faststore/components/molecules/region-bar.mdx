@@ -35,6 +35,7 @@ The component is part of the [Regionalization](https://developers.vtex.com/docs/
       <>
         <RegionBar
           icon={<Icon name="MapPin" />}
+          label="Set delivery location"
           postalCode={'151515'}
           onButtonClick={() => openModal()}
         />
@@ -47,6 +48,7 @@ The component is part of the [Regionalization](https://developers.vtex.com/docs/
       <>
         <RegionBar
           icon={<Icon name="MapPin" />}
+          label="Set delivery location"
           postalCode={'151515'}
           onButtonClick={() => openModal()} />
         {modal && <RegionModal fadeOutOnSubmit={true} inputValue={'151515'} />}
@@ -78,6 +80,25 @@ To apply styles, include the following in your stylesheet:
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
 
 ---
+
+## Examples
+
+`label` is required and is displayed when no postal code is available. Use `shouldDisplayPostalCode={false}` to show only the city, and enable `filterButton` when shoppers can change a global filter.
+
+```tsx
+<RegionBar
+  label="Set delivery location"
+  city="New York"
+  postalCode="10001"
+  shouldDisplayPostalCode={false}
+  filterButton={{
+    label: "Select store",
+    selectedFilter: "Manhattan",
+    shouldDisplayFilterButton: true,
+    onClick: () => openStoreSelector(),
+  }}
+/>
+```
 
 ## Design tokens
 

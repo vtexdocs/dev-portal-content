@@ -132,6 +132,59 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ## Examples
 
+The examples below use local product data so they can be copied without depending on a `products` query result.
+
+### Sponsored product, taxes, and delivery promises
+
+`sponsored`, `includeTaxes`, and `deliveryPromiseBadges` render independent labels in `ProductCardContent`. Provide the corresponding labels explicitly.
+
+```tsx
+import {
+  ProductCard,
+  ProductCardContent,
+  ProductCardImage,
+} from "@faststore/ui";
+
+const product = {
+  name: "Apple Magic Mouse",
+  image: "https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg",
+  price: 950,
+  listPrice: 999,
+}
+
+const formatPrice = (price: number) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(price);
+
+export default function ProductCardLabelsExample() {
+  return (
+    <ProductCard>
+      <ProductCardImage>
+        <img data-fs-image src={product.image} alt={product.name} />
+      </ProductCardImage>
+      <ProductCardContent
+        title={product.name}
+        price={{
+          value: product.price,
+          listPrice: product.listPrice,
+          formatter: formatPrice,
+        }}
+        sponsored
+        sponsoredLabel="Sponsored"
+        includeTaxes
+        includeTaxesLabel="Taxes included"
+        deliveryPromiseBadges={[
+          { label: "Delivery today", availability: true },
+          { label: "Pickup unavailable", availability: false },
+        ]}
+      />
+    </ProductCard>
+  );
+}
+```
+
 ### Variants
 
 Prefer using `buyButton` or `discountBadge`, but never both.

@@ -20,9 +20,9 @@ For this guide, we will create two sections:
 
 All sections must be available in the Headless CMS so they can be added and managed on your store's pages. To integrate your FastStore project, please refer to the [Headless CMS integration track](https://developers.vtex.com/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account).
 
-### 2. Knowledge of how sections and content types work on Headless CMS
+### 2. Knowledge of how Sections and Content Types work in Headless CMS
 
-During the creation of a new section, you will create files such as `sections.json` and `content-types.json`, which follow a structure established for the Headless CMS.
+FastStore v2 and v3 provide native Content Types. When creating a custom Section, you define it in `sections.json` and use `requiredScopes` to control which native Content Types can use it. For informational or other custom pages, use the native **Landing Page** Content Type.
 
 ### 3. Install the FastStore CLI
 

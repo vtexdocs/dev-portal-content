@@ -9,8 +9,6 @@ seeAlso:
     - "https://help.vtex.com/en/tutorial/delivery-promise-faq--2frHHK5uPsQrLK5XbYHALN"
 ---
 
->ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).  
-
 **Delivery Promise** is a VTEX solution that provides accurate and reliable delivery estimates for available products based on the customer's location. It ensures that customers only see products that are in stock and can be delivered to their address or picked up at a nearby location. Using this solution, your store can guarantee delivery for every product a customer sees.
 
 The content is organized as follows:
@@ -46,7 +44,7 @@ At this stage, **Delivery Promise** allows your store's customers to filter the 
 
 ## Advantages
 
-**Delivery Promise** is suitable for all types of operations, as the solution provides many advantages for any business model. Learn about the store architecture requirements for participating in the current beta phase in the [Requirements](#requirements) section.
+**Delivery Promise** is suitable for all types of operations, as the solution provides many advantages for any business model. Learn about the store architecture requirements in the [Requirements](#requirements) section.
 
 For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3WGDRRhc3vf1MJb9zGncnv/2LGAiUnHES1enjHsfi8fI3) operations, the greater the coverage of the logistics network and the greater the number of sellers and [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl) associated with the operation, the greater the benefits. The table below shows the main advantages:  
 
@@ -59,14 +57,13 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 
 ## Requirements
 
-**Delivery Promise** allows the customer to view, during navigation, only the products they can actually purchase, considering stock availability and the [delivery options](https://help.vtex.com/en/docs/tutorials/delivery-options-beta) valid for the delivery address they provide. By knowing the customer's location from the beginning of the buying journey, the store displays a more accurate and relevant assortment, with delivery deadline and shipping method information available from the earliest steps of the purchase. To join the current phase of **Delivery Promise**, contact our Support and meet the following conditions:
+**Delivery Promise** allows the customer to view, during navigation, only the products they can actually purchase, considering stock availability and the [delivery options](https://help.vtex.com/en/docs/tutorials/delivery-options) valid for the delivery address they provide. By knowing the customer's location from the beginning of the buying journey, the store displays a more accurate and relevant assortment, with delivery deadline and shipping method information available from the earliest steps of the purchase. To join the current phase of **Delivery Promise**, contact our Support and meet the following conditions:
 
 - Use [Intelligent Search](https://help.vtex.com/en/docs/tracks/overview-intelligent-search).
 - Build your store's frontend using [Store Framework](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#store-framework), [FastStore](https://help.vtex.com/en/tracks/vtex-store-overview--eSDNk26pdvemF3XKM0nK9/67SCtUreXxKYWhZh8n0zvZ#faststore), or a headless approach using the [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1), as described in the [Delivery Promise for headless stores](https://developers.vtex.com/docs/guides/delivery-promise-for-headless-stores) guide. Make sure your search requests always pass the Delivery Promise postal code and pickup points hash parameters.
 - External sellers must comply with the notification protocol of the [Delivery Promise Notification API](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api).
 - Do not use VTEX Shipping Network in your VTEX account.
 - Do not use [Operational capacity](https://help.vtex.com/en/docs/tutorials/operational-capacity) in your VTEX account.
-- Do not use more than 10,000 [pickup points](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R).
 - Do not use [Assembly Options](https://help.vtex.com/en/tutorial/assembly-options--5x5FhNr4f5RUGDEGWzV1nH) from regular sellers.
 
 >ℹ️ Check the [Delivery Promise visual library](https://www.figma.com/community/file/1545494767147168145/delivery-promise-by-vtex) with use cases, behavior specifications and components to better understand how to apply it to your store.  
@@ -75,7 +72,7 @@ For [omnichannel](https://help.vtex.com/en/tracks/unified-commerce-strategies--3
 
 When building your storefront with Store Framework, you can enable Delivery Promise components using the [Delivery Promise Components](https://developers.vtex.com/docs/apps/vtex.delivery-promise-components) and [Search Result](https://developers.vtex.com/docs/apps/vtex.search-result) apps.
 
-Learn how to configure these components in the [Setting up Delivery Promise components (Beta)](https://developers.vtex.com/docs/guides/setting-up-delivery-promise-components) guide.
+Learn how to configure these components in the [Setting up Delivery Promise components](https://developers.vtex.com/docs/guides/setting-up-delivery-promise-components) guide.
 
 ## Delivery Promise for headless stores
 
