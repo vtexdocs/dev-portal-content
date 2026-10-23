@@ -328,15 +328,13 @@ To enable newsletter subscriptions, complete the following steps:
 {/* TODO: replace X.Y.Z with the first @faststore/core versions that include the newsletter credentials (4.x and 3.x) once they are released. */}
 > ℹ️ Authenticated newsletter subscriptions are available from `@faststore/core` X.Y.Z (FastStore v4) and X.Y.Z (FastStore v3). Earlier versions send the subscription without credentials and only work if the entity fields are public, which is no longer allowed. To update, see [Updating the `@faststore/cli` package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
 
-> ⚠️ Don't make the Newsletter fields public. Public fields can be read without credentials, which would expose your subscribers' personal data. Since October 26, 2026, Master Data no longer allows creating public fields. For more information, see [Master Data: Temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields).
+> ⚠️ Don't make the Newsletter fields public. Public fields can be read without credentials, which would expose your subscribers' personal data. Starting October 26, 2026, Master Data no longer allows creating public fields. For more information, see [Master Data: Temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields).
 
 ### Step 1: Creating the Newsletter data entity
 
-The Newsletter data entity, identified by the `NL` acronym, stores the subscriptions made with the Newsletter component. You can create it [via Admin](#creating-via-admin) or [via API](#creating-via-api).
+The Newsletter data entity, identified by the `NL` acronym, stores the subscriptions made with the Newsletter component. Master Data v1 doesn't provide an API to create data entities or fields, so create it in the VTEX Admin.
 
 > ℹ️ For more details about Master Data data entities, see the [data entity](https://help.vtex.com/en/tutorial/data-entity--tutorials_1265) article.
-
-#### Creating via Admin
 
 1.  In the VTEX Admin, go to **Store Settings > Storefront > Master Data**.
 2.  In Master Data, click **Applications > Advanced Settings > Data structure**.
@@ -370,14 +368,6 @@ The Newsletter data entity, identified by the `NL` acronym, stores the subscript
 10. Click the **Applications** tab to return to the Master Data homepage.
 11. Click `Reload applications`.
 
-#### Creating via API
-
-You can also create the Newsletter data entity using the [Create partial document](https://developers.vtex.com/docs/api-reference/masterdata-api#patch-/api/dataentities/-acronym-/documents) endpoint.
-
-To create the three fields for the Newsletter data entity, see the [Create document with custom ID or update entire document](https://developers.vtex.com/docs/api-reference/masterdata-api#put-/api/dataentities/-acronym-/documents/-id-) endpoint reference.
-
-> ⚠️ The field information must be the same as described in [Creating via Admin](#creating-via-admin), including keeping all fields private.
-
 ### Step 2: Creating a role to create newsletter documents
 
 1. In the VTEX Admin, go to **Account Settings > User Roles**.
@@ -405,17 +395,26 @@ To create the three fields for the Newsletter data entity, see the [Create docum
 
 ### Step 4: Adding the credentials to your project
 
-Add the API credentials to your project as environment variables. In production, use [WebOps secrets](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets). For local development, you can use the `vtex.env` file as described in [Local development](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets#local-development).
+Add the API credentials to your project as secrets. In production, use the FastStore WebOps dashboard, as described in [Managing variables and secrets](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets):
 
-| Key                       | Value            |
-| ------------------------- | ---------------- |
-| `FS_NEWSLETTER_APP_KEY`   | `YOUR_APP_KEY`   |
-| `FS_NEWSLETTER_APP_TOKEN` | `YOUR_APP_TOKEN` |
+1. In the FastStore WebOps dashboard, go to the **Settings** tab.
+2. In the **Variables and Secrets** section, add each credential below. For each one, set **Type** to `secret` (not `text`), fill in **Key** and **Value**, and click `Add`.
+
+    | Key                       | Value            |
+    | ------------------------- | ---------------- |
+    | `FS_NEWSLETTER_APP_KEY`   | `YOUR_APP_KEY`   |
+    | `FS_NEWSLETTER_APP_TOKEN` | `YOUR_APP_TOKEN` |
+
+3. Wait 5 minutes and click `Redeploy`. Variables and secrets only take effect in the next successful deployment.
+
+For local development, you can use the `vtex.env` file as described in [Local development](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets#local-development):
 
 ```env vtex.env
 FS_NEWSLETTER_APP_KEY=YOUR_APP_KEY
 FS_NEWSLETTER_APP_TOKEN=YOUR_APP_TOKEN
 ```
+
+If your store doesn't deploy with WebOps, manage the secrets with the VTEX IO CLI secrets plugin (`vtex.env` and `secrets.hidden.json`), as described in [Managing variables and secrets](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets).
 
 >❗ Don't prefix these variables with `NEXT_PUBLIC_`, which would send them to the browser. Never commit the `vtex.env` file or expose your API credentials in public repositories.
 
@@ -425,7 +424,7 @@ If the credentials are missing, FastStore logs a warning and sends the subscript
 
 ### Migrating an existing Newsletter data entity
 
-If your store created the `NL` entity with public fields, as previously documented, complete [Step 2](#step-2-creating-a-role-to-create-newsletter-documents), [Step 3](#step-3-generating-an-api-key), and [Step 4](#step-4-adding-the-credentials-to-your-project), deploy your store with a FastStore version that supports newsletter credentials, and then:
+If your store created the `NL` entity with public fields, as previously documented, complete [Step 2](#step-2-creating-a-role-to-create-newsletter-documents), [Step 3](#step-3-generating-an-api-key), and [Step 4](#step-4-adding-the-credentials-to-your-project) to add the secrets, redeploy your store with a FastStore version that supports newsletter credentials, confirm that the deployment succeeded, and only then:
 
 1. In Master Data, open the `NL` entity in the **Data Entities** tab.
 2. For each field, uncheck **Make readable without credentials**, **Allow editing without credentials**, and **Allow filtering without credentials**.

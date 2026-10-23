@@ -103,7 +103,7 @@ This is appropriate for that scenario: an anonymous visitor submits a form into 
 
 > ⚠️ Never reuse this pattern for an entity that holds personal data, such as `CL`, `NL`, `AD`, or any custom entity keyed by email or document number. Adding `appKey` and `appToken` to it doesn't make it safer. Because the resolver forwards the caller's `input`, the caller can include a document `id` or shape the request, and with a fixed credential the request succeeds against every record in the entity.
 
-> ℹ️ Since October 26, 2026, Master Data no longer allows creating public fields or changing private fields to public. See [Master Data: Temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields).
+> ℹ️ Starting October 26, 2026, Master Data no longer allows creating public fields or changing private fields to public, so the pattern above only keeps working for entities whose fields were already public. See [Master Data: Temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields).
 
 Follow the sections below instead.
 
@@ -316,7 +316,7 @@ Keep the request URL and the headers out of the error text as well. The message 
 
 A fixed credential remains the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. It's also what a third-party integration uses even when the response is personal, as in Step 3, and what a [create-only write from an anonymous visitor](#create-only-writes-from-anonymous-visitors) uses. When you use one:
 
-- Store the credential as a [secret](https://developers.vtex.com/docs/guides/faststore/security-managing-secrets) or in the `vtex.env` file, never in your repository. Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must never use that prefix.
+- Store the credential as a [secret](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets) or in the `vtex.env` file, never in your repository. Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must never use that prefix.
 - If a credential is currently a string literal in the source, moving it to an environment variable is not enough on its own. It remains in the repository history and stays valid until it's rotated, so rotate it as well.
 - Call every endpoint over `https://`. A plain `http://` request carries the credential in cleartext.
 - Don't let the caller shape the upstream request. An argument that reaches a URL path or a filter without validation turns a service account into an open proxy.
