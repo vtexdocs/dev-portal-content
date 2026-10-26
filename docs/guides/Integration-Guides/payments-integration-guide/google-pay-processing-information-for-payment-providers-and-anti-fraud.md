@@ -30,7 +30,7 @@ In addition to standard card transaction fields, the `card` object of a Google P
 | `eci` | Electronic Commerce Indicator (ECI), which indicates the result of the authentication attempt made by the 3DS system. VTEX sends it in specific scenarios, such as some Visa DPAN transactions. This field was previously called `ECI_Indicador`. |
 | `paymentOrigin` | Digital wallet used for the payment, such as `Google Pay`. |
 
-> ⚠️ VTEX sends `cryptogram`, `eci`, and `paymentOrigin` only to connectors that have these fields enabled. This configuration applies to the connector, not to the store account. If your connector doesn't receive these fields yet, open a ticket with [ VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) to enable them.
+> ⚠️ VTEX sends `cryptogram`, `eci`, and `paymentOrigin` only to connectors that have these fields enabled. This configuration applies to the connector, not to the store account. If your connector doesn't receive these fields yet, open a ticket with [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) to enable them.
 
 The following example shows the `card` object of a Create payment request for a Google Pay DPAN transaction. In this example, card data is tokenized because the connector environment isn't PCI DSS compliant:
 
