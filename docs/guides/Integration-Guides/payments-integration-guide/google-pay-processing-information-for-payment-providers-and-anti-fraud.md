@@ -4,7 +4,7 @@ slug: "google-pay-processing-information-for-payment-providers-and-anti-fraud"
 excerpt: "Common questions from payment and anti-fraud providers about how VTEX processes Google Pay transactions, including additional card fields in the payment payload."
 hidden: false
 createdAt: "2022-06-22T00:00:00.000Z"
-updatedAt: "2026-09-03T00:00:00.000Z"
+updatedAt: "2026-10-26T00:00:00.000Z"
 ---
 
 Google Pay is a digital wallet that allows customers to pay with a card saved to their Google account or provisioned to their mobile device. When a customer pays with Google Pay, VTEX sends the transaction to your connector via the [Create payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments) endpoint, including card fields not present in standard card transactions.
