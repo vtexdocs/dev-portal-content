@@ -6,13 +6,13 @@ createdAt: "2026-10-02T17:58:08.642Z"
 
 A FastStore multi-store architecture is a project in which an account operates several FastStore storefronts, for example one per country or one per brand.
 
-This track covers how to build a multi-store architecture from a single [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), where every market reuses the same components, design tokens, and delivery pipeline. You'll learn what to share and what to keep local, and which areas to plan before you start.
+This track covers how to build a multi-store architecture from a single [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), where every market reuses the same components, design tokens, and delivery pipeline. You'll learn what to share, what to keep local, and which areas to plan before you start.
 
-> ℹ️ You can run each store as a separate FastStore project in its own repository. Each market then keeps its own codebase, pipeline, and release schedule. However, sharing components or design tokens requires extra effort, such as publishing them as a package, and each store must be upgraded individually. This track focuses on the monorepo, but the guidance on account structure, environments, and content governance applies to both approaches.
+> ℹ️ You can run each store as a separate FastStore project in its own repository. Each market then keeps its own codebase, pipeline, and release schedule. However, sharing components or design tokens requires extra effort, such as publishing them as a package, and each store must be upgraded individually. This track focuses on the monorepo, but the guidelines for account structure, environments, and content governance apply to both approaches.
 
 ## Shared foundation and local control
 
-A multi-store architecture isn't an attempt to make every market identical. The goal is to draw a precise line between what is shared across stores and what stays local to each market.
+A multi-store architecture isn't an attempt to make every market identical. The goal is to draw a precise line between what is shared across stores and what stays local for each market.
 
 The following table shows how each layer is typically divided between shared and local:
 
@@ -23,7 +23,7 @@ The following table shows how each layer is typically divided between shared and
 | Content | Section schemas that must look the same everywhere. | Pages, campaigns, and media per market. |
 | Commerce | Nothing by default. Sharing depends on the account structure, not on the repository. | Catalog, pricing, promotions, logistics, payments. |
 
-Components and the delivery pipeline are shared because duplicating them is what creates drift. Commerce configuration stays local because it's the part each market's business team needs to control directly.
+Components and the delivery pipeline are shared because duplicating them is what creates drift. Commerce configuration stays local because it's the part that the business team of each market needs to control directly.
 
 > ℹ️ This division is a common starting point, not a fixed rule. Adjust it to your markets, teams, and governance needs. For example, a market that follows a different release schedule can point its [WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches) integration to a different production branch while still sharing the repository and the continuous integration pipeline with the other stores.
 
@@ -34,7 +34,7 @@ To start developing your multi-store project, plan the three areas below. A diff
 | Area | Description | Guide |
 | --- | --- | --- |
 | Account structure | Defines whether markets operate under separate VTEX accounts or share one account through bindings, and what each option means for the CMS, WebOps, and app versions. | [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multi-store-planning-your-account-structure) |
-| Environments and deployment | Provides each store with its own testing and production environments, and maps repository branches to the accounts they deploy to. | [Managing environments](https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments) |
+| Environments and deployment | Provides each store with its own test and production environments, and maps repository branches to the accounts they deploy to. | [Managing environments](https://developers.vtex.com/docs/guides/faststore/multi-store-managing-environments) |
 | Content governance | Keeps content managed per market, so each team edits only its own pages, campaigns, and media. | [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) |
 
 > ℹ️ If you're new to the monorepo, start with the [FastStore monorepo overview](https://developers.vtex.com/docs/guides/faststore-monorepo-overview).
