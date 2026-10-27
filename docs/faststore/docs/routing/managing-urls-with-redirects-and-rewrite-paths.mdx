@@ -51,7 +51,7 @@ If the source path of this native page is published by the Headless CMS, you mus
 
 FastStore allows you to configure redirects through the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file. This configuration is based on [Next.js redirects](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
 
->⚠️ Redirect configurations are subject to platform limits, including a maximum of 1,024 redirects in the array and a maximum string length of 4,096 characters for the source and destination properties. If you need to configure more than 1,024 redirects, see the [(Beta) Enabling redirects using the `enableRedirects` flag](#beta-enabling-redirects-using-the-enableredirects-flag) section for an alternative workflow.
+>⚠️ Redirect configurations are subject to platform limits, including a maximum of 1,024 redirects in the array and a maximum string length of 4,096 characters for the source and destination properties. If you need to configure more than 1,024 redirects, see the [(Beta) Enabling redirects using the `enableRedirects` flag](#beta-enabling-redirects-using-the-enableredirects-flag) section for an alternative workflow. Before combining both methods, read [Admin redirects](#admin-redirects).
 
 1. Open your FastStore project in your preferred code editor and go to the `discovery.config.js` file within your project directory.
 2. Inside `discovery.config.js`, add the `redirects` function. This function will define your redirect rules, for example:
@@ -98,7 +98,7 @@ For projects requiring more than 1,024 redirects, you can enable the `enableRedi
 
 1. Update your FastStore project to version `3.2.0` or higher. To do this, open your project in a code editor.
 
-    > ⚠️ If your project also has a `src/redirects.json` file, use FastStore `3.100.4` or higher (v3) or `4.7.0` or higher (v4). In earlier versions, having this file makes FastStore ignore the redirects created in the Admin.
+    > ⚠️ If your project also has a `src/redirects.json` file, use FastStore `3.100.4` or higher (v3) or `4.7.0` or higher (v4). In earlier versions, having this file makes FastStore ignore the redirects created in the Admin, and only the code-based redirects work. On these versions, choose one method: either code-based or Admin redirects. If the Admin redirects still don't apply, see [Admin redirects](#admin-redirects).
 
 2. Open a terminal and run the following command to update the FastStore packages to the latest version:
     
@@ -143,6 +143,14 @@ Keep the following in mind when using both redirect sources:
 - Admin redirects don't apply to routes that always render a page, such as `/s`, `/login`, and `/checkout`.
 - FastStore caches each Admin redirect lookup for five minutes. It also caches 404 responses for the duration set by `experimental.revalidate404`, which defaults to five minutes. If you add an Admin redirect for a path that has already returned a 404, it may take that long to apply, in addition to any CDN cache time.
 - Next.js checks `redirects.json` rules one by one on every request, including requests that don't redirect. Keep this list short and move large lists of fixed redirects to the Admin.
+
+### Admin redirects
+
+If you configured both redirect sources and the redirects created in the Admin don't apply, follow these steps:
+
+1. Confirm your FastStore version is `3.100.4` or higher (v3) or `4.7.0` or higher (v4). If not, update your project.
+2. If the Admin redirects still don't apply, use only one method. To keep using the Admin, remove the `src/redirects.json` file and the `async redirects()` function from `discovery.config.js`, and keep only `enableRedirects: true` in the `experimental` section.
+3. Deploy the changes and test the redirect again.
 
 > ℹ️ For a working example, see the [redirects example](https://github.com/vtex-sites/playground.store#4-redirects) in the FastStore Playground repository.
 
