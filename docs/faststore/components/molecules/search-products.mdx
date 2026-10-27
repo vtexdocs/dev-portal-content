@@ -124,6 +124,50 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ---
 
+## Quick order
+
+Pass `quickOrder` to `SearchProductItemContent` to render quantity and purchase controls inside a search result.
+
+```tsx
+import { useState } from "react";
+import { SearchProductItemContent } from "@faststore/ui";
+
+const formatPrice = (price: number) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(price);
+
+export default function QuickOrderExample() {
+  const [quantity, setQuantity] = useState(1);
+
+  return (
+    <SearchProductItemContent
+      title="T-shirt"
+      price={{ value: 29.9, listPrice: 39.9, formatter: formatPrice }}
+      quickOrder={{
+        enabled: true,
+        outOfStockLabel: "Out of stock",
+        availability: true,
+        hasVariants: false,
+        skuMatrixControl: null,
+        quantity,
+        max: 10,
+        onChangeQuantity: setQuantity,
+        buyProps: {
+          onClick: () => {
+            /* Call the cart mutation with quantity. */
+          },
+          "data-testid": "quick-order-buy",
+          "data-sku": "SKU-1",
+          "data-seller": "1",
+        },
+      }}
+    />
+  );
+}
+```
+
 ## Design tokens
 
 <TokenTable>

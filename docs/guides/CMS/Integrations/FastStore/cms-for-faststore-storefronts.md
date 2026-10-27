@@ -3,7 +3,7 @@ title: "CMS for FastStore storefronts"
 hidden: false
 slug: "cms-for-faststore-storefronts"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-09-22T16:14:09.641Z"
+updatedAt: "2026-01-26T12:50:00.813Z"
 ---
 
 > ⚠️ For documentation about Headless CMS (legacy) used with FastStore versions earlier than `3`, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
@@ -50,7 +50,7 @@ Manage content through the VTEX Admin using:
 
 Organize and reuse media assets with:
 
-- **Media Gallery**: Central repository for images and video references.
+- **Media Gallery**: Central repository for images and video references. See [Media gallery](https://developers.vtex.com/docs/guides/media-gallery) for details.
 - **Image formats**: PNG, JPG, JPEG, GIF, SVG, and WebP.
 - **Video embedding**: Reference videos from YouTube, Vimeo, and other services.
 
@@ -62,22 +62,9 @@ Build and manage schemas with:
 - **Modular schemas**: Individual `.jsonc` files for components and Content Types.
 - **Role-based permissions**: Granular access control for editors, reviewers, and administrators.
 
-### Branch synchronization
+## The CMS development and content journey
 
-Content branches stay synchronized with the main branch through:
-
-- **Automatic updates**: While an editor works in a branch, new content published to the main branch is merged into that branch automatically, so editors continue from the current state of the store instead of an outdated copy.
-- **Conflict resolution**: When the same content was changed in both the branch and the main branch, the version in the branch is preserved.
-
-For details on this behavior, see [Collaboration workflows](https://help.vtex.com/docs/tutorials/collaboration-workflows).
-
-## Multi-account content
-
-Content management scales across several VTEX accounts through:
-
-- **Content isolation**: Each VTEX account has its own CMS instance, so content is isolated between accounts by default. An editor working in one account can't view or change content in another, and each market's team can manage its own content independently, without any additional configuration.
-- **Shared schema structure**: Schemas live in the storefront repository and must be published separately to each account's CMS. Publishing the same schema to every account keeps components consistent across stores. See the Content plugin's [`upload-schema`](/docs/guides/content-plugin#upload-schema) command.
-- **No content sharing**: Pages and media that should appear identically in every market aren't copied between accounts automatically and have to be recreated in each one.
+Going from a schema to a live storefront involves the following: developers shape and test the content structure, and content operators create and publish the content itself. See [Getting started with CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms) to find your track and where to start.
 
 ## Next steps
 
@@ -85,8 +72,15 @@ Content management scales across several VTEX accounts through:
 
 <WhatsNextCard
   linkTo="https://developers.vtex.com/docs/guides/getting-started-with-cms"
-  title="FastStore integration"
-  description="Learn how to connect the CMS with FastStore"
+  title="Getting started with CMS"
+  description="Find your track, developer or content operator, and see the full CMS journey."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/setting-up-your-cms-environment"
+  title="Setting up your CMS environment"
+  description="Set up your local environment and model your first Content Types, Sections, and Components."
   linkTitle="See more"
 />
 

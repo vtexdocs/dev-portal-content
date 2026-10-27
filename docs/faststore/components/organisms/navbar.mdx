@@ -14,7 +14,7 @@ The `Navbar` represents the page header and groups some features like: `Search`,
 
 Uses `NavbarHeader`, `NavbarRow` and `NavbarButtons` as compound components.
 
-The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-navbar-links) and [NavbarSlider](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider) components are used as child components.
+The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-navbar-links), [NavbarSlider](https://developers.vtex.com/docs/guides/faststore/organisms-navbar-slider), and [SearchInput](https://developers.vtex.com/docs/guides/faststore/organisms-search-input) components are used as child components.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -26,6 +26,21 @@ The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-na
   </Tab>
   <Tab>
     ```tsx
+      import {
+        Icon,
+        IconButton,
+        LinkButton,
+        Navbar,
+        NavbarButtons,
+        NavbarHeader,
+        NavbarLinks,
+        NavbarRow,
+        NavbarSlider,
+        SearchInput,
+        useScrollDirection,
+        useUI,
+      } from '@faststore/ui'
+
       const scrollDirection = useScrollDirection()
       const { openNavbar, navbar: displayNavbar } = useUI()
 
@@ -43,7 +58,9 @@ The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-na
                 aria-label="Logo"
                 icon={<Icon name="Storefront" width={30} height={30} />}
               />
-              <SearchInputUsage actions={false} />
+              <SearchInput>
+                {/* Add SearchInputField and the search dropdown here */}
+              </SearchInput>
               <NavbarButtons searchExpanded={false}>
                 <LinkButton
                   href="#"
@@ -61,9 +78,15 @@ The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-na
             </NavbarRow>
           </NavbarHeader>
 
-          <NavbarLinksUsage className="hidden-mobile" />
+          <NavbarLinks className="hidden-mobile">
+            {/* Add NavbarLinksList and NavbarLinksListItem here */}
+          </NavbarLinks>
 
-          {displayNavbar && <NavbarSliderUsage />}
+          {displayNavbar && (
+            <NavbarSlider>
+              {/* Add NavbarSliderHeader, NavbarSliderContent and NavbarSliderFooter here */}
+            </NavbarSlider>
+          )}
         </Navbar>
       )
     ```
@@ -80,6 +103,15 @@ The [NavbarLinks](https://developers.vtex.com/docs/guides/faststore/molecules-na
 ```tsx
 import { Navbar, NavbarHeader, NavbarRow, NavbarButtons } from '@faststore/ui'
 ```
+
+### Hooks used in the example
+
+The **Code** tab of the example uses the following FastStore hooks, both imported from `@faststore/ui`:
+
+- `useScrollDirection`: detects the scroll direction (up or down) so the `Navbar` can hide or show on scroll.
+- `useUI`: gives access to the global UI state, such as opening the navigation menu (`openNavbar`) and checking whether it is displayed (`navbar`). It requires the component to be wrapped by `UIProvider`.
+
+For more information, see [FastStore hooks](https://developers.vtex.com/docs/guides/faststore/developer-tools-hooks-overview).
 
 ### Import styles
 
