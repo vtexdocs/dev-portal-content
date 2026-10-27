@@ -28,6 +28,6 @@ VTEX stores now offer a flexible, scalable way to manage catalog content across 
 
 ## What needs to be done?
 
-To activate the multi-language API for your account, contact [VTEX Support](https://help.vtex.com/en/support).
+To activate the multi-language API for your account, contact [VTEX Support](https://help.vtex.com/support).
 
 > ⚠️ Once the feature is activated, GraphQL-based translation management will no longer be supported.
