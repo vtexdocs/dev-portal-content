@@ -189,7 +189,7 @@ This body has the main fields:
 | Field                 | Type   | Description                                                                                                                                                                 |
 | --------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `orderFormId`         | string | `orderForm` ID.                                                                                                                                                             |
-| `salesChannel`        | string | Trade policy ID.                                                                                                                                                      |
+| `salesChannel`        | string | Sales channel ID.                                                                                                                                                      |
 | `items`               | array  | List of objects which are the order products, where `dockId` is a field that refers to its identification on the Logistics system that contains information of its address. |
 | `totals`              | array  | Total amount of the `orderForm`, divided into taxes, shipping, discounts, and the item prices.                                                                           |
 | `clientEmail`         | string | Client's email address.                                                                                                                                                     |

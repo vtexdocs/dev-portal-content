@@ -1,6 +1,7 @@
 ---
 title: "Authentication"
 slug: "authentication"
+excerpt: "Learn how to choose VTEX credentials for your integration based on the API account and whether you need storefront, Admin, or machine authentication."
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
 updatedAt: "2022-12-13T18:43:56.137Z"

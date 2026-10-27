@@ -5,6 +5,7 @@ hidden: false
 createdAt: "2020-06-03T15:19:51.305Z"
 updatedAt: "2021-10-13T18:37:48.020Z"
 ---
+
 > ⚠️ This app is now supported by ACCT. For more information and support, email `support@acct.global`.
 
 Flixmedia first party integration app. The [solution](https://flixmedia.eu/) enhances your website content, capturing retail partners, engaging shoppers, and increasing sale rates.
@@ -23,7 +24,7 @@ Flixmedia first party integration app. The [solution](https://flixmedia.eu/) enh
 
 In your terminal, log into your VTEX account and [install](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app/) the `vtex.flixmedia@0.x` app.
 
-> ℹ️ *You can confirm if the app has been properly installed by running `vtex ls`.*
+> ℹ️ You can confirm if the app has been properly installed by running `vtex ls`.
 
 ### Step 2 - Defining the app settings
 

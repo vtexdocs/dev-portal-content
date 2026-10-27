@@ -12,15 +12,15 @@ Here’s a sneak peek at key changes made in the week before last:
 
 ### New features :rocket:
 
-- [Color name on SKU Selector](color-name-sku-selector.md) - Display the selected SKU’s color name.
-- [Change image on hover](change-image-on-hover.md) - Show a secondary product image by hovering it.
-- [Storefront language selector](storefront-language-selector.md) - Storefront now has a language selector.
+- [Color name on SKU Selector](https://developers.vtex.com/updates/release-notes/color-name-sku-selector) - Display the selected SKU’s color name.
+- [Change image on hover](https://developers.vtex.com/updates/release-notes/change-image-on-hover) - Show a secondary product image by hovering it.
+- [Storefront language selector](https://developers.vtex.com/updates/release-notes/storefront-language-selector) - Storefront now has a language selector.
 
 ### Improvements :heavy_plus_sign:
 
-- [Minimum items on shelf](minimum-items-shelf.md) - Control how many items can be displayed on the smallest screen size.
-- [Search Result layout on mobile mode](hide-layout-switcher-mobile.md) – Switch the mobile Search Result layout with the new mobileLayout prop.
-- [Page title of contextless routes](custom-title-standard-page.md) - Set a custom title on a standard page.
+- [Minimum items on shelf](https://developers.vtex.com/updates/release-notes/minimum-items-shelf) - Control how many items can be displayed on the smallest screen size.
+- [Search Result layout on mobile mode](https://developers.vtex.com/updates/release-notes/hide-layout-switcher-mobile) – Switch the mobile Search Result layout with the new mobileLayout prop.
+- [Page title of contextless routes](https://developers.vtex.com/updates/release-notes/custom-title-standard-page) - Set a custom title on a standard page.
 
 ### Notable bug fixes :bug:
 

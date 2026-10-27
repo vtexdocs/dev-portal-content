@@ -1,0 +1,101 @@
+---
+title: "CMS for FastStore storefronts"
+hidden: false
+slug: "cms-for-faststore-storefronts"
+createdAt: "2026-01-26T12:50:00.813Z"
+updatedAt: "2026-01-26T12:50:00.813Z"
+---
+
+> ⚠️ For documentation about Headless CMS (legacy) used with FastStore versions earlier than `3`, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
+
+The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
+
+The system follows a decoupled architecture that separates content authoring from content consumption. This separation allows content management workflows and content delivery workloads to evolve and scale independently.
+
+<!-- > ℹ️ This guide covers the VTEX CMS in the context of FastStore. If you're using another storefront technology, see the content management documentation specific to that storefront. -->
+
+## Technical overview
+
+| Aspect | Description |
+| :---- | :---- |
+| **Performance** | Read-optimized data access for content consumption during storefront builds. |
+| **Reliability** | Event-driven architecture with message queues ensuring no content updates are lost. |
+| **Scalability** | Independent scaling of content authoring (write) and content delivery (read) workloads, enabled by a command-query separation (CQRS) model. |
+| **Developer experience** | Schema-first configuration, CLI-based operations, and compatibility with source control systems. |
+| **Collaboration** | Git-like branching workflows, multi-user awareness, and content approval processes. |
+| **Localization** | Built-in support for multiple locales with automatic language fallback rules. |
+
+## Main features
+
+### Content modeling
+
+Define content structures using [JSON Schema](https://json-schema.org/) with support for:
+
+- **Content Types**: Page structures like `home`, `pdp`, `plp`, and `landingPage`.
+- **Components**: Reusable building blocks with metadata like `$componentKey` and `$componentTitle`. See [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections) for details.
+- **Content referencing**: Reference entries across multiple pages without duplication.
+- **Schema extension**: Inherit properties from base schemas using the `$extends` keyword.
+
+### Content editing
+
+Manage content through the VTEX Admin using:
+
+- **AI content generation**: Generate and improve content with integrated AI services.
+- **Branching workflow**: Create isolated branches, preview changes, and merge to publish.
+- **Version history**: Track changes, compare versions, and restore previous content.
+- **Multi-user awareness**: See when others are editing the same content.
+- **Scheduled publishing**: Schedule content to go live at specific dates and times.
+
+### Media management
+
+Organize and reuse media assets with:
+
+- **Media Gallery**: Central repository for images and video references. See [Media gallery](https://developers.vtex.com/docs/guides/media-gallery) for details.
+- **Image formats**: PNG, JPG, JPEG, GIF, SVG, and WebP.
+- **Video embedding**: Reference videos from YouTube, Vimeo, and other services.
+
+### Developer tools
+
+Build and manage schemas with:
+
+- [**Content plugin**](https://developers.vtex.com/docs/guides/content-plugin): Commands for schema generation, splitting, and uploading (`@vtex/cli-plugin-content`).
+- **Modular schemas**: Individual `.jsonc` files for components and Content Types.
+- **Role-based permissions**: Granular access control for editors, reviewers, and administrators.
+
+## The CMS development and content journey
+
+Going from a schema to a live storefront involves the following: developers shape and test the content structure, and content operators create and publish the content itself. See [Getting started with CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms) to find your track and where to start.
+
+## Next steps
+
+<Flex>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/getting-started-with-cms"
+  title="Getting started with CMS"
+  description="Find your track, developer or content operator, and see the full CMS journey."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/setting-up-your-cms-environment"
+  title="Setting up your CMS environment"
+  description="Set up your local environment and model your first Content Types, Sections, and Components."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="/docs/guides/customizing-faststore-with-cms"
+  title="Customizing FastStore storefronts with the CMS"
+  description="Choose how to edit native sections, override FastStore components, create sections, and change content models."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview"
+  title="Upgrading from Headless CMS (legacy) to CMS"
+  description="Learn about the architectural and code-level changes when migrating from Headless CMS (legacy) to the CMS."
+  linkTitle="See more"
+/>
+
+</Flex>

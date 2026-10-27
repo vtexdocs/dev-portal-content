@@ -1,9 +1,10 @@
 ---
-title: "Installing Activity Flow in Headless stores"
+title: "Installing Activity Flow in headless stores"
 slug: "installing-activity-flow-in-headless-stores"
-excerpt: "Learn how to install Activity Flow in your Headless store."
+excerpt: "Learn how to install Activity Flow in your headless store."
 hidden: false
 createdAt: "2025-12-02T12:37:39.964Z"
+updatedAt: "2026-07-09T00:00:00.000Z"
 ---
 
 In this guide, you'll learn how to install and configure the [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) script in your headless store.
@@ -36,7 +37,7 @@ f=v.vtexaf=v.vtexaf||function(){(f.q=f.q||[]).push(arguments)};
 
 ### Step 2 - Defining default parameters
 
-Next, configure the identification parameters of your store.
+Next, configure your store's identification parameters.
 
 These settings allow Activity Flow to recognize the account, environment, and workspace to which the events belong.
 
@@ -73,3 +74,7 @@ To validate whether the script is installed in your store, follow the steps belo
 ![dev_tools_af](https://vtexhelp.vtexassets.com/assets/docs/src/dev_tools_af___1d5b729dddb7926ba5678e8a1a1541e2.png)
 
 If the `af.js` file doesn't show in the Network tab, make sure that the snippet is in the `<head>` of the page and that there are no script blockers. If the setup is correct and the problem persists, open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+
+## Next steps
+
+To track Intelligent Search analytics events on your search screens, see [Tracking search analytics events in headless web stores](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-headless-web-stores).

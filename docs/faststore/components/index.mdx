@@ -145,6 +145,13 @@ Atomic Design breaks user interfaces hierarchically into smaller and simpler com
   >
     <SROnly text="visually hidden text" />
   </CardItem>
+  <CardItem
+    title="Textarea"
+    description="Enables users to input multi-line text. It's commonly used for longer user inputs, such as comments or descriptions."
+    actionPath="/docs/guides/faststore/atoms-textarea"
+  >
+    <Textarea placeholder="Label" id="textareafield-default" />
+  </CardItem>
 </CardList>
 
 ---
@@ -717,15 +724,6 @@ Atomic Design breaks user interfaces hierarchically into smaller and simpler com
     </UIProvider>
   </CardItem>
   <CardItem
-    title="Newsletter"
-    description="The `Newsletter` component is a section that features a text input field and an action button, allowing users to subscribe to updates and newsletters."
-    actionPath="/docs/guides/faststore/organisms-newsletter"
-  >
-    <UIProvider>
-      <NewsletterUsage />
-    </UIProvider>
-  </CardItem>
-  <CardItem
     title="Out of Stock"
     description="Used to announce to users that the product is out of stock."
     actionPath="/docs/guides/faststore/organisms-out-of-stock"
@@ -791,6 +789,13 @@ Atomic Design breaks user interfaces hierarchically into smaller and simpler com
     actionPath="/docs/guides/faststore/organisms-shipping-simulation"
   >
     <ShippingSimulationUsage />
+  </CardItem>
+  <CardItem
+    title="SKU Matrix"
+    description="Displays a table of product variations with quantity selectors for bulk purchases."
+    actionPath="/docs/guides/faststore/organisms-sku-matrix"
+  >
+    <SKUMatrixUsage />
   </CardItem>
   <CardItem
     title="Slide Over"

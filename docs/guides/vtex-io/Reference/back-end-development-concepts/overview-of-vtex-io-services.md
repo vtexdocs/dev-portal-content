@@ -6,17 +6,17 @@ createdAt: "2020-10-08T13:26:34.527Z"
 updatedAt: "2020-10-08T13:26:34.527Z"
 ---
 
-VTEX IO powers big ecommerce operations, and for most of that it's necessary to **run code on a server**. Services are how we run **Node.js or .NET** code on VTEX IO infrastructure, backed by API abstractions to improve developer experience.
+VTEX IO powers large ecommerce operations, most of which require **running code on a server**. Services run **Node.js or .NET** code on VTEX IO infrastructure and provide API abstractions that improve the developer experience.
 
-Services can export **HTTP Routes**, **GraphQL resolvers** or **event handlers.**
+Services can export **HTTP routes**, **GraphQL resolvers**, or **event handlers**.
 
-Using the builders `node` or `dotnet`, you can export services from a VTEX IO app, just like themes or store blocks. It's easy to quickly setup, for example, a REST API with that.
+Using the builders `node` or `dotnet`, you can export services from a VTEX IO app, just like themes or store blocks. For example, you can quickly set up a REST API this way.
 
 ## The `service.json` file
 
-The `service.json` is a file that must exist on the folder of the service (`node/` or `dotnet/`), and it's with this file that you may **declare routes or events that the service must respond to.** It also configures parameters like *timeout* and *memory* about the deployment of that service.
+The `service.json` is a file that must exist in the folder of the service (`node/` or `dotnet/`), and you use this file to **declare routes or events that the service must respond to.** It also configures deployment parameters such as *timeout* and *memory* for that service.
 
-This is the `node/service.json` from [vtex.service-example](https://github.com/vtex-apps/service-example) app:
+This is the `node/service.json` from the [vtex.service-example](https://github.com/vtex-apps/service-example) app:
 
 [block:code]
 {
@@ -32,10 +32,10 @@ This is the `node/service.json` from [vtex.service-example](https://github.co
 [block:callout]
 {
   "type": "info",
-  "body": "After defining these configs, it's possible to export handler functions on node/index.ts file."
+  "body": "After defining these settings, it's possible to export handler functions in the `node/index.ts` file."
 }
 [/block]
-Most of the fields on the service.json are optional, and default values will be used by the platform.
+Most of the fields in `service.json` are optional, and default values will be used by the platform.
 [block:parameters]
 {
   "data": {
@@ -59,17 +59,17 @@ Most of the fields on the service.json are optional, and default values will be 
     "6-1": "Number",
     "7-1": "Number",
     "0-2": "A map from the name of a route handler you want to another object declaring path, public or other information about ReBAC",
-    "1-2": "A map from the name of a event handler on the code to another object describing sender or keys",
+    "1-2": "A map from the name of an event handler in the code to another object describing sender or keys",
     "2-2": "In MB. The size of memory to be allocated to that service.",
     "3-2": "In minutes. Time that the platform will keep the service running without receiving any requests. Default: 10. Max: 120",
     "4-2": "In seconds. VTEX IO infra will abort the connection if the request time is longer than that",
     "5-2": "When the service is running, how many minimum replicas will be available.",
     "6-2": "The largest amount of replicas that will be available.",
-    "7-2": "Numbers of workers to spawn for that service on production. (Max: 4)"
+    "7-2": "Number of workers to spawn for that service in production. (Max: 4)"
   },
   "cols": 3,
   "rows": 8
 }
 [/block]
 
-> ℹ️ It's also possible to export GraphQL services, using the graphql builder. You can check vtex.graphql-example to see how it's done.
+> ℹ️ It's also possible to export GraphQL services using the `graphql` builder. You can check `vtex.graphql-example` to see how it's done.

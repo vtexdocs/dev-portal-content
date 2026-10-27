@@ -16,9 +16,9 @@ In this guide, you will learn how to use wildcard notation to configure your [`s
 
 ## Example use case
 
-As an example, consider you are developing a service that interfaces with the [Get list of products for a query](https://developers.vtex.com/docs/api-reference/intelligent-search-api#get-/product_search/-facets-) endpoint.
+As an example, consider you are developing a service that interfaces with the [Search products (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/product-search/-facets-) endpoint.
 
-The `facets` parameter of this API follows the format `/${facetKey1}/${facetValue1}/${facetKey2}/${facetValue2}/.../${facetKeyN}/${facetValueN}`, also allowing general filters such as `price`, `category-${n}`, `productClusterIds`, and `trade-policy`. The expected response lists the active products for a given query. To effectively interact with this API, your service needs to define a path that flexibly accommodates the variable structure of this API.
+The `facets` parameter of this API follows the format `/${facetKey1}/${facetValue1}/${facetKey2}/${facetValue2}/.../${facetKeyN}/${facetValueN}`, also allowing general filters such as `price`, `category-${n}`, and `productClusterIds`. The expected response lists the active products for a given query. To effectively interact with this API, your service needs to define a path that flexibly accommodates the variable structure of this API.
 
 ## Instructions
 
@@ -33,12 +33,12 @@ See how the `service.json` file may be configured to consult the API route menti
 
 ```json
 "productSearch": {
-   "path": "/_v/api/intelligent-search/product_search/*path",
+   "path": "/api/intelligent-search/v1/product-search/*path",
    "public": true
 },
 ```
 
->ℹ️ Note that the `*` wildcard notation captures variable-length paths dynamically, allowing the endpoint to handle URLs with diverse structures and query parameters.This wildcard notation signals to the service that the endpoint's path can accommodate any number of segments beyond the specified prefix. For instance, in the configuration `"path"`: `"/_v/api/intelligent-search/product_search/*path"`, the `*/path` segment implies that the endpoint can handle URLs like `/_v/api/intelligent-search/product_search/segment1/segment2/.../segmentN`, where `segment1`, `segment2`, and so forth can vary in number and content.
+>ℹ️ Note that the `*` wildcard notation captures variable-length paths dynamically, allowing the endpoint to handle URLs with diverse structures and query parameters.This wildcard notation signals to the service that the endpoint's path can accommodate any number of segments beyond the specified prefix. For instance, in the configuration `"path"`: `"/api/intelligent-search/v1/product-search/*path"`, the `*/path` segment implies that the endpoint can handle URLs like `/api/intelligent-search/v1/product-search/segment1/segment2/.../segmentN`, where `segment1`, `segment2`, and so forth can vary in number and content.
 
 ### Step 2 - Accessing the path value in your route handler function
 

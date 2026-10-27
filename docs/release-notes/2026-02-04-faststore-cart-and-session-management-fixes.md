@@ -9,7 +9,7 @@ tags:
     - FastStore
 ---
 
-Stores using FastStore now benefit from fixes to cart and session management that improve security and data consistency. These updates ensure carts are properly cleared after checkout, logout removes all browser storage and cookies, and cart validation no longer causes infinite loops when using the location-based behavior for logged-in users.
+Stores using FastStore now benefit from improvements to cart and session management that enhance security and data consistency. These updates ensure that carts are properly cleared after checkout, logging out removes all browser storage and cookies, and cart validation no longer causes infinite loops when using location-based behavior for logged-in users.
 
 ## What has changed?
 
@@ -17,21 +17,21 @@ Stores using FastStore now benefit from fixes to cart and session management tha
 
 The cart now automatically clears after an order is successfully placed. If the checkout cookie is missing or invalid, FastStore creates a new cart instead of reusing stale data.
 
-This prevents purchased items from remaining in the cart and ensures a clean post-checkout experience and avoids items left in the cart between orders.
+This prevents purchased items from remaining in the cart, ensures a clean post-checkout experience, and prevents items left in the cart between orders.
 
 ### Complete logout storage cleanup
 
 Logging out now clears all client-side and server-side storage:
 
 - **Client-side storage:**
-  - `sessionStorage`
-  - `localStorage`
-  - `IndexedDB`
-  - All VTEX-related cookies via JavaScript.
+- `sessionStorage`
+- `localStorage`
+- `IndexedDB`
+- All VTEX-related cookies via JavaScript.
 
 - **Server-side cookies:** All relevant server-side cookies.
 
-This improves security by ensuring no cart, session, or shopper data remains after logout, preventing data from carrying between sessions.
+This improves security by ensuring no cart, session, or shopper data remains after logout, preventing data from being carried between sessions.
 
 ### Cart validation infinite loop
 
@@ -40,7 +40,7 @@ The cart validation logic was updated to prevent infinite revalidation loops whe
 - A user is logged in.
 - Location-based behavior using `postalCode` is active.
 
-The fix updates the cart only when changes affect totals or shipping (for example, changing item quantity) and refreshes shipping simulation only when needed. This reduces errors and prevents interface flicker for logged-in users in stores that base cart and shipping information on the shopper's postal code.
+The fix updates the cart only when changes affect totals or shipping (for example, changing an item quantity), and refreshes the shipping simulation only when needed. This reduces errors and prevents interface flicker for logged-in users in stores that base cart and shipping information on the shopper's postal code.
 
 ## Why did we make these changes?
 
@@ -48,7 +48,7 @@ These updates improve security, data consistency, and developer experience by ke
 
 ## What needs to be done?
 
-These fixes should not break existing setups. To receive these fixes, update the FastStore packages to the latest version by running `yarn upgrade -L --scope @faststore`.
+These fixes shouldn't break existing setups. To receive these fixes, update the FastStore packages to the latest version by running `yarn upgrade -L --scope @faststore`.
 
 If your store has customizations, review the following:
 
