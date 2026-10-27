@@ -1,16 +1,16 @@
 ---
 title: "New Catalog multi-language API"
-slug: "2026-04-13-new-catalog-multi-language-api"
+slug: "2026-10-27-new-catalog-multi-language-api"
 hidden: false
 type: "added"
-createdAt: "2026-04-13T17:08:52.219Z"
-updatedAt: "2026-04-13T17:08:52.219Z"
+createdAt: "2026-10-27T17:08:52.219Z"
+updatedAt: "2026-10-27T17:08:52.219Z"
 excerpt: "Create translations and integrate localized content for catalog entities."
 ---
 
 The [multi-language API](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide) allows you to create and manage translations for products, SKUs, categories, brands, specifications, collections, attachments, and services.
 
-> ℹ️ To see the complete documentation, check the [multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide), and the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language).
+> ℹ️ To see the complete documentation, check the [multi-language integration guide](https://developers.vtex.com/docs/guides/catalog-multi-language-integration-guide), and the [Catalog API](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-/language/-locale-).
 
 ## What has changed?
 
