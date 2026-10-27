@@ -348,6 +348,8 @@ The Newsletter data entity, identified by the `NL` acronym, stores the subscript
     | **Name**             | Newsletter             |
     | **Primary key type** | Generate a unique GUID |
 
+    Leave **Allow all document query without filter** unchecked. It lets anyone list every record in the entity through the API without credentials, and the newsletter doesn't need it.
+
 6.  In the **Fields** tab, click `New Field` and create the following fields:
 
     | **Name**          | **Display Name**    | **Type**    | **Description**                                     |
@@ -407,16 +409,18 @@ Add the API credentials to your project as secrets. In production, use the FastS
 
 3. Wait 5 minutes and click `Redeploy`. Variables and secrets only take effect in the next successful deployment.
 
-For local development, you can use the `vtex.env` file as described in [Local development](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets#local-development):
+For local development, set the credentials as environment variables in the terminal where you start the store. `faststore dev` passes them to the store:
 
-```env vtex.env
-FS_NEWSLETTER_APP_KEY=YOUR_APP_KEY
-FS_NEWSLETTER_APP_TOKEN=YOUR_APP_TOKEN
+```bash
+export FS_NEWSLETTER_APP_KEY=YOUR_APP_KEY
+export FS_NEWSLETTER_APP_TOKEN=YOUR_APP_TOKEN
 ```
+
+Avoid adding the credentials to `vtex.env` for local development. The FastStore starter tracks `vtex.env` in git, so a token added there is easy to commit by mistake.
 
 If your store doesn't deploy with WebOps, manage the secrets with the VTEX IO CLI secrets plugin (`vtex.env` and `secrets.hidden.json`), as described in [Managing variables and secrets](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets).
 
->❗ Don't prefix these variables with `NEXT_PUBLIC_`, which would send them to the browser. Never commit the `vtex.env` file or expose your API credentials in public repositories.
+>❗ Don't prefix these variables with `NEXT_PUBLIC_`, which would send them to the browser. Never commit API credentials to your repository, including in `vtex.env`.
 
 Once the credentials are configured, FastStore creates each subscription as a new document in the `NL` entity. The request only creates documents: it never reads, updates, or deletes existing ones.
 
@@ -427,9 +431,10 @@ If the credentials are missing, FastStore logs a warning and sends the subscript
 If your store created the `NL` entity with public fields, as previously documented, complete [Step 2](#step-2-creating-a-role-to-create-newsletter-documents), [Step 3](#step-3-generating-an-api-key), and [Step 4](#step-4-adding-the-credentials-to-your-project) to add the secrets, redeploy your store with a FastStore version that supports newsletter credentials, confirm that the deployment succeeded, and only then:
 
 1. In Master Data, open the `NL` entity in the **Data Entities** tab.
-2. For each field, uncheck **Make readable without credentials**, **Allow editing without credentials**, and **Allow filtering without credentials**.
-3. Save and publish the entity, and then click `Reload applications`.
-4. Subscribe to the newsletter on your store to confirm that the document is created.
+2. In the **Data Entity** section, uncheck **Allow all document query without filter**.
+3. For each field, uncheck **Make readable without credentials**, **Allow editing without credentials**, and **Allow filtering without credentials**.
+4. Save and publish the entity, and then click `Reload applications`.
+5. Subscribe to the newsletter on your store to confirm that the document is created.
 
 > ⚠️ Change the fields to private only after the new version is deployed with the credentials configured. Otherwise, newsletter subscriptions will fail until the deploy is complete.
 
