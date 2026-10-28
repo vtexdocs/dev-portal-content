@@ -315,7 +315,7 @@ Keep the request URL and the headers out of the error text as well. The message 
 
 ### Using fixed credentials safely
 
-A fixed credential remains the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. It's also what a third-party integration uses even when the response is personal, as in Step 3, and what a [create-only write from an anonymous visitor](#create-only-writes-from-anonymous-visitors) uses. When you use one:
+A fixed credential remains the right choice for data with no shopper dimension, such as catalog enrichment, store locators, promotion metadata, and editorial content. It's also what a third-party integration uses, even when the response is personal, as in [Step 3](https://developers.vtex.com/docs/guides/faststore/api-extensions-authentication-in-api-extensions#step-3-take-identity-from-the-session), and what a [create-only write from an anonymous visitor](#create-only-writes-from-anonymous-visitors) uses. When you use one:
 
 - Store the credential as a [secret](https://developers.vtex.com/docs/guides/faststore/webops-managing-variables-and-secrets) or in the `vtex.env` file, never in your repository. Variables prefixed with `NEXT_PUBLIC_` are sent to the browser, so a token must never use that prefix.
 - If a credential is currently a string literal in the source, moving it to an environment variable is not enough on its own. It remains in the repository history and stays valid until it's rotated, so rotate it as well.
