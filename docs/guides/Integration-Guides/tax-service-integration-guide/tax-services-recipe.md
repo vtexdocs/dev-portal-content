@@ -4,6 +4,7 @@ slug: "tax-services-recipe"
 hidden: false
 createdAt: "2020-09-01T16:36:08.632Z"
 updatedAt: "2026-10-27T12:00:00.000Z"
+excerpt: "Learn how to build a tax service app with clients, routes, and parsers that connect VTEX Checkout to an external tax provider."
 ---
 ## Clients
 

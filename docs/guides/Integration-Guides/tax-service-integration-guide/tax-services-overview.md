@@ -4,6 +4,7 @@ slug: "tax-services-overview"
 hidden: false
 createdAt: "2020-09-01T16:28:25.618Z"
 updatedAt: "2026-10-27T12:00:00.000Z"
+excerpt: "Learn how to integrate an external tax calculation service with VTEX Checkout to calculate taxes and fees for each item in the cart."
 ---
 Selling products online is subject to various types of taxes that can differ based on factors such as inventory location, shipping addresses, and, of course, the nature of the product. For certain stores, particularly those operating in a B2B model, tax calculations can become intricate and require an external tax calculation provider.
 
