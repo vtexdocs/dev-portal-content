@@ -103,7 +103,7 @@ const response = await fetch(
 
 This is appropriate for that scenario: an anonymous visitor submits a form into a dedicated entity, and there is no shopper identity to carry. Even so, it's an unauthenticated write path, so you remain responsible for rate limiting, validating `input` against the schema, and keeping the entity's read ACL closed.
 
-> ⚠️ Never reuse this pattern for an entity that holds personal data, such as `CL`, `NL`, `AD`, or any custom entity keyed by email or document number. Adding `appKey` and `appToken` to it doesn't make it safer. Because the resolver forwards the caller's `input`, the caller can include a document `id` or shape the request, and with a fixed credential the request succeeds against every record in the entity.
+> ❗ Never reuse this pattern for an entity that holds personal data, such as `CL`, `NL`, `AD`, or any custom entity keyed by email or document number. Adding `appKey` and `appToken` to it doesn't make it safer. Because the resolver forwards the caller's `input`, the caller can include a document `id` or shape the request, and with a fixed credential, the request succeeds against every record in the entity.
 
 > ℹ️ Starting October 26, 2026, Master Data no longer allows creating public fields or changing private fields to public, so the pattern above only keeps working for entities whose fields were already public. See [Master Data: Temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields).
 
