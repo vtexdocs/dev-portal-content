@@ -4,7 +4,7 @@ slug: "2026-10-28-tax-services-item-fees"
 type: "added"
 createdAt: "2026-10-28T00:00:00.000Z"
 updatedAt: "2026-10-28T00:00:00.000Z"
-hidden: true
+hidden: false
 excerpt: "Tax providers can now return an optional fees array for each item, separating regulatory or commercial charges from taxes in the cart and order totals."
 tags:
   - Checkout
