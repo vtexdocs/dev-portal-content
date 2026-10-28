@@ -46,11 +46,11 @@ Then, the Checkout settings must be updated using the [Update orderForm configur
 
 In the `taxConfiguration` object, it is important to update the following fields.
 
-| Property name | Description |
-| ---------------------------------- | ------------------------------------------------------------------ |
-| `url`                              | String of external API endpoint of the tax provider that the Checkout will query to receive the calculated taxes. |
+| Property name                      | Description                                                                                                                                                                         |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `url`                              | String of external API endpoint of the tax provider that the Checkout will query to receive the calculated taxes.                                                                   |
 | `authorizationHeader`              | String that the Checkout will use in the `Authorization` header of calls to the external tax calculation API. This field can be used to define the access credentials for this API. |
-| `isMarketplaceResponsibleForTaxes` | Boolean that indicates whether the marketplace is responsible for calculating taxes for the products (`true`) or if the responsibility lies with the seller (`false`). |
+| `isMarketplaceResponsibleForTaxes` | Boolean that indicates whether the marketplace is responsible for calculating taxes for the products (`true`) or if the responsibility lies with the seller (`false`).              |
 
 >⚠️ The `isMarketplaceResponsibleForTaxes` feature is not compatible with stores that have [Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) implemented.
 
@@ -90,7 +90,7 @@ Here is an example of that body sent by Checkout API:
          "productId": "12",
          "ean": "12345678909123",
          "refId": "3432",
-	       "categoryId": "3",
+         "categoryId": "3",
          "unitMultiplier": 1,
          "measurementUnit": "un",
          "targetPrice": 8.2,
@@ -186,17 +186,17 @@ Here is an example of that body sent by Checkout API:
 
 This body has the main fields:
 
-| Field                 | Type   | Description                                                                                                                                                                 |
-| --------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `orderFormId`         | string | `orderForm` ID.                                                                                                                                                             |
-| `salesChannel`        | string | Sales channel ID.                                                                                                                                                      |
-| `items`               | array  | List of objects which are the order products, where `dockId` is a field that refers to its identification on the Logistics system that contains information of its address. |
-| `totals`              | array  | Total amount of the `orderForm`, divided into taxes, shipping, discounts, and the item prices.                                                                           |
-| `clientEmail`         | string | Client's email address.                                                                                                                                                     |
-| `shippingDestinations` | array of objects | List of shipping information. Mandatory field.                                                                                                                                      |
-| `clientData`          | object | Information regarding the client that placed the order.                                                                                                                     |
-| `paymentData`         | object | Contains an array of payments, where there is information regarding the order payment.                                                                                      |
-| `taxApp`              | object | Contains an object with custom fields specific to the tax application.                                                                                                      |
+| Field                  | Type             | Description                                                                                                                                                                 |
+| ---------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `orderFormId`          | string           | `orderForm` ID.                                                                                                                                                             |
+| `salesChannel`         | string           | Sales channel ID.                                                                                                                                                           |
+| `items`                | array            | List of objects which are the order products, where `dockId` is a field that refers to its identification on the Logistics system that contains information of its address. |
+| `totals`               | array            | Total amount of the `orderForm`, divided into taxes, shipping, discounts, and the item prices.                                                                              |
+| `clientEmail`          | string           | Client's email address.                                                                                                                                                     |
+| `shippingDestinations` | array of objects | List of shipping information. Mandatory field.                                                                                                                              |
+| `clientData`           | object           | Information regarding the client that placed the order.                                                                                                                     |
+| `paymentData`          | object           | Contains an array of payments, where there is information regarding the order payment.                                                                                      |
+| `taxApp`               | object           | Contains an object with custom fields specific to the tax application.                                                                                                      |
 
 ### Tax provider response to the request
 
@@ -224,14 +224,14 @@ In response to the request sent by Checkout, it is expected that the external ta
 
 The following JSON represents a list of taxes associated with a particular item, with each tax defined by its name, description, and value:
 
-| Field         | Type   | Description                                                                                       |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------- |
-| `id`          | string | Request item index, which means the SKU's position in the `items` array sent by the request body. |
-| `taxes`       | array  | List of all the tax types for an SKU.|
-| `fees`        | array  | List of the fees for an SKU, such as regulatory or commercial charges that aren't taxes. Optional. Learn more in [Item fees](#item-fees).|
-| `name`        | string | Tax name that will appear in the checkout.|
-| `description` | string | Informative field, which does not appear on the storefront.|
-| `value`       | number | Absolute numeric value that will be added to the original price.|
+| Field         | Type   | Description                                                                                                                               |
+| ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`          | string | Request item index, which means the SKU's position in the `items` array sent by the request body.                                         |
+| `taxes`       | array  | List of all the tax types for an SKU.                                                                                                     |
+| `fees`        | array  | List of the fees for an SKU, such as regulatory or commercial charges that aren't taxes. Optional. Learn more in [Item fees](#item-fees). |
+| `name`        | string | Tax name that will appear in the checkout.                                                                                                |
+| `description` | string | Informative field, which does not appear on the storefront.                                                                               |
+| `value`       | number | Absolute numeric value that will be added to the original price.                                                                          |
 
 In the example above, the only item in the items array has a cost of `10`, and, including the calculated taxes returned by the tax calculation tool, the total value would be `10 + 3.48 + 22 = 35.48`.
 
@@ -284,15 +284,15 @@ Each object in the `fees` array has the same fields as the objects in the `taxes
 ]
 ```
 
-| Field         | Type   | Description |
-| ------------- | ------ | ----------- |
-| `fees`        | array  | List of the fees for an SKU. Optional. |
-| `name`        | string | Fee name that will appear in the checkout. |
-| `description` | string | Informative field, which does not appear on the storefront. |
-| `value`       | number | Absolute numeric value that will be added to the original price. |
-| `rate`        | number | Rate used to calculate the fee. Optional. |
+| Field         | Type   | Description                                                         |
+| ------------- | ------ | ------------------------------------------------------------------- |
+| `fees`        | array  | List of the fees for an SKU. Optional.                              |
+| `name`        | string | Fee name that will appear in the checkout.                          |
+| `description` | string | Informative field, which does not appear on the storefront.         |
+| `value`       | number | Absolute numeric value that will be added to the original price.    |
+| `rate`        | number | Rate used to calculate the fee. Optional.                           |
 | `jurisCode`   | string | Unique code that identifies the appropriate jurisdiction. Optional. |
-| `jurisType`   | string | Type of jurisdiction that applies to the calculation. Optional. |
+| `jurisType`   | string | Type of jurisdiction that applies to the calculation. Optional.     |
 | `jurisName`   | string | Name of the jurisdiction that applies to the calculation. Optional. |
 
 In the example above, considering an item that costs `10`, the total value would be `10 + 3.48 + 0.05 = 13.53`. The tax value (`3.48`) is added to the `CustomTax` totalizer, and the fee value (`0.05`) is added to the `Fee` totalizer.
@@ -301,9 +301,9 @@ In the example above, considering an item that costs `10`, the total value would
 
 If you use [Avalara](https://www.avalara.com/us/en/index.html) as your tax calculation provider, response bodies can also include the following fields, which refer to the different jurisdictions that may apply according to location.
 
-| Field       | Type   | Description|
+| Field       | Type   | Description                                               |
 | ----------- | ------ | --------------------------------------------------------- |
-| `jurisType` | string | Type of jurisdiction that applies to the calculation.         |
+| `jurisType` | string | Type of jurisdiction that applies to the calculation.     |
 | `jurisCode` | string | Unique code that identifies the appropriate jurisdiction. |
 | `jurisName` | string | Name of the jurisdiction that applies to the calculation. |
 

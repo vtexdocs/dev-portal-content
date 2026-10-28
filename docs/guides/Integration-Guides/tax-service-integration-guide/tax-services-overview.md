@@ -16,4 +16,3 @@ Besides taxes, the external API can also return fees for each item. Taxes are fi
 ## Implementation
 
 Access the [specification](https://developers.vtex.com/docs/guides/tax-services-specification) and [recipe](https://developers.vtex.com/docs/guides/tax-services-recipe) to learn more about Tax Service integration and how to implement it.
-
