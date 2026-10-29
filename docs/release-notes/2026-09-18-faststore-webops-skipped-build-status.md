@@ -10,7 +10,7 @@ tags:
     - WebOps
 ---
 
-[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) now skips builds for commits that would be immediately replaced by a newer one. When multiple commits are pushed to the same branch while a build is already running, only the most recent queued commit is built next, and older queued commits are marked **Skipped**.
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) now skips builds for commits that would be immediately replaced by a newer one. When multiple commits are pushed to the same branch while a build is already running, only the most recent queued commit is built next. Older queued commits are marked **Skipped**.
 
 ## What has changed?
 
@@ -18,8 +18,8 @@ Previously, every commit pushed to a branch eventually triggered its own build, 
 
 Now, WebOps runs only one build at a time per branch. Consider the following scenario:
 
-1. Deploy `A` arrives while nothing is running, so it starts immediately (**In progress**).
-2. Deploy `B` arrives while `A` is still running, so it becomes **Queued**.
+1. Deploy `A` arrives while nothing is running, and it starts immediately (**In progress**).
+2. Deploy `B` arrives while `A` is still running, and it becomes **Queued**.
 3. Deploy `C` arrives while `A` is still running. `B` becomes **Skipped**, and `C` becomes **Queued** instead.
 4. `A` finishes, and `C` starts. `B` is never built, since `C` would have replaced it anyway.
 
