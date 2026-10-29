@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore `v4.10.2` is a patch release focused on fix for B2B Buyer Portal stores, security, and CMS performance. B2B buyers see the product assortment of their contract on product listing pages and product pages, and keep that contract after switching contracts or refreshing the token. The release also removes CMS author emails from public page props, lets newsletter subscriptions use a dedicated app key, and reduces repeated CMS calls during page generation. See the fixes below.
+FastStore `v4.10.2` is a patch release focused on a fix for B2B Buyer Portal stores, security, and CMS performance. B2B buyers see the product assortment of their contract on product listing pages and product pages, and keep that contract after switching contracts or refreshing the token. The release also removes CMS author emails from public page props, lets newsletter subscriptions use a dedicated app key, and reduces repeated CMS calls during page generation. See the fixes below.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.10.2` and keep your store up-to-date with the following improvements.
 
@@ -24,7 +24,7 @@ Editor emails no longer reach the public payload of PDPs and of PLPs that resolv
 
 ### Preview hosts no longer log out pasted sessions (PR: [#3533](https://github.com/vtex/faststore/pull/3533))
 
-With `experimental.refreshToken` on, pasting a `VtexIdclientAutCookie_<account>` into a WebOps preview made the first `ValidateSession` fail, the refresh call answered 405 because previews do not proxy VTEX ID, and `/api/fs/logout` deleted the pasted cookie. The refresh-token bypass that already existed for `localhost` now also covers hosts ending in `.preview.vtex.app`, on the browser and on the server (using the `Host` and `x-forwarded-host` headers). `{account}.vtex.app` does not match and keeps the refresh flow.
+With `experimental.refreshToken` on, pasting a `VtexIdclientAutCookie_<account>` into a WebOps preview made the first `ValidateSession` fail, the refresh call answered 405 because previews do not proxy VTEX ID, and `/api/fs/logout` deleted the pasted cookie. The refresh-token bypass that already existed for `localhost` now also covers hosts ending in `.preview.vtex.app`, on the browser and the server (using the `Host` and `x-forwarded-host` headers). `{account}.vtex.app` does not match and keeps the refresh flow.
 
 Developers and QA teams can test logged-in areas in a WebOps preview by pasting the cookie, without editing IndexedDB or blocking `/api/fs/logout`. Production stores are unchanged.
 
