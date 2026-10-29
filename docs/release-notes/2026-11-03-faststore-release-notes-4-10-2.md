@@ -18,7 +18,7 @@ FastStore `v4.10.2` is a patch release focused on a fix for B2B Buyer Portal sto
 
 ### CMS author emails are no longer exposed in page props (PR: [#3555](https://github.com/vtex/faststore/pull/3555))
 
-On Content Platform stores, the `createdBy` and `updatedBy` editor emails were published without authentication in `__NEXT_DATA__` and in `/_next/data/<buildId>/<slug>/p.json`. `mergeEntryWithData` now keeps only the entry content plus `id` and `name`, direct reads through `getEntry` and `getEntryBySlug` drop both fields, and the PDP publishes only `sections` and `settings` from the CMS page.
+On Content Platform stores, the `createdBy` and `updatedBy` editor emails were published without authentication in `__NEXT_DATA__` and `/_next/data/<buildId>/<slug>/p.json`. `mergeEntryWithData` now keeps only the entry content plus `id` and `name`, direct reads through `getEntry` and `getEntryBySlug` drop both fields, and the PDP publishes only `sections` and `settings` from the CMS page.
 
 Editor emails no longer reach the public payload of PDPs and of PLPs that resolve through a template. Sections and template selection are unchanged. No action is required beyond upgrading and rebuilding the store.
 
