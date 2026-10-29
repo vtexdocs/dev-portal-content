@@ -1,20 +1,42 @@
 ---
 title: "FastStore Release Notes — Version 4.10.2"
-slug: "2026-10-29-faststore-release-notes-4-10-2"
+slug: "2026-11-03-faststore-release-notes-4-10-2"
 type: improved
 excerpt: "FastStore 4.10.2 makes B2B contract assortment, contract switching and token refresh consistent, protects CMS author emails, and lets newsletter subscriptions use a dedicated app key"
-createdAt: "2026-10-29T00:00:00.000Z"
-updatedAt: "2026-10-29T00:00:00.000Z"
+createdAt: "2026-11-03T00:00:00.000Z"
+updatedAt: "2026-11-03T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
 ---
 
-FastStore `v4.10.2` is a patch release focused on B2B stores, security, and CMS performance. B2B buyers see the product assortment of their contract on product listing pages and product pages, and keep that contract after switching contracts or refreshing the token. The release also removes CMS author emails from public page props, lets newsletter subscriptions use a dedicated app key, and reduces repeated CMS calls during page generation. See the fixes below.
+FastStore `v4.10.2` is a patch release focused on fix for B2B Buyer Portal stores, security, and CMS performance. B2B buyers see the product assortment of their contract on product listing pages and product pages, and keep that contract after switching contracts or refreshing the token. The release also removes CMS author emails from public page props, lets newsletter subscriptions use a dedicated app key, and reduces repeated CMS calls during page generation. See the fixes below.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.10.2` and keep your store up-to-date with the following improvements.
 
 ## Bug fixes
+
+### CMS author emails are no longer exposed in page props (PR: [#3555](https://github.com/vtex/faststore/pull/3555))
+
+On Content Platform stores, the `createdBy` and `updatedBy` editor emails were published without authentication in `__NEXT_DATA__` and in `/_next/data/<buildId>/<slug>/p.json`. `mergeEntryWithData` now keeps only the entry content plus `id` and `name`, direct reads through `getEntry` and `getEntryBySlug` drop both fields, and the PDP publishes only `sections` and `settings` from the CMS page.
+
+Editor emails no longer reach the public payload of PDPs and of PLPs that resolve through a template. Sections and template selection are unchanged. No action is required beyond upgrading and rebuilding the store.
+
+### Preview hosts no longer log out pasted sessions (PR: [#3533](https://github.com/vtex/faststore/pull/3533))
+
+With `experimental.refreshToken` on, pasting a `VtexIdclientAutCookie_<account>` into a WebOps preview made the first `ValidateSession` fail, the refresh call answered 405 because previews do not proxy VTEX ID, and `/api/fs/logout` deleted the pasted cookie. The refresh-token bypass that already existed for `localhost` now also covers hosts ending in `.preview.vtex.app`, on the browser and on the server (using the `Host` and `x-forwarded-host` headers). `{account}.vtex.app` does not match and keeps the refresh flow.
+
+Developers and QA teams can test logged-in areas in a WebOps preview by pasting the cookie, without editing IndexedDB or blocking `/api/fs/logout`. Production stores are unchanged.
+
+### Newsletter subscriptions can use a dedicated app key (PR: [#3544](https://github.com/vtex/faststore/pull/3544))
+
+The `subscribeToNewsletter` mutation sent an anonymous `PATCH` to the `NL` Master Data entity, which requires public fields. Master Data no longer allows creating public fields as of October 26, 2026, as described in the [temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields) release note. When `FS_NEWSLETTER_APP_KEY` and `FS_NEWSLETTER_APP_TOKEN` are set, the API now sends an authenticated, create-only `POST /api/dataentities/NL/documents` with only `name`, `email`, and `isNewsletterOptIn`. The resolver trims and validates the email and name before any request. `fetchAPI` also redacts credentials, cookies, and request bodies in its error logs.
+
+Stores can keep the `NL` fields private. To use it, create an app key with only the **Insert or update document (not remove)** Master Data resource, and set both environment variables. Without them, FastStore keeps the anonymous `PATCH` and logs a one-time warning, so stores with public `NL` fields keep working. The log redaction applies to every API call.
+
+---
+
+### B2B Buyer Portal (Closed beta)
 
 ### B2B product listing pages respect the contract assortment (PR: [#3516](https://github.com/vtex/faststore/pull/3516))
 
@@ -40,34 +62,12 @@ FastStore used the `isRepresentative` claim in the VTEX ID token to decide wheth
 
 B2B buyers who have a unit and a contract, but no `isRepresentative` flag, now get the PLP refetch, contract switching, token refresh, and the Quotes and Cards pages in My Account. This is not a breaking change: `StoreB2B.isRepresentative` (GraphQL) and `B2bInfo.isRepresentative` (`@faststore/sdk`) are deprecated and still return `true` whenever `b2b` is set, so check that `b2b` is not `null` instead. `OrganizationSignInButton_unstable` accepts the new `isB2BBuyer` prop and keeps `isRepresentative` as a deprecated alias. The deprecated fields will be removed in the next major version.
 
-### CMS author emails are no longer exposed in page props (PR: [#3555](https://github.com/vtex/faststore/pull/3555))
-
-On Content Platform stores, the `createdBy` and `updatedBy` editor emails were published without authentication in `__NEXT_DATA__` and in `/_next/data/<buildId>/<slug>/p.json`. `mergeEntryWithData` now keeps only the entry content plus `id` and `name`, direct reads through `getEntry` and `getEntryBySlug` drop both fields, and the PDP publishes only `sections` and `settings` from the CMS page.
-
-Editor emails no longer reach the public payload of PDPs and of PLPs that resolve through a template. Sections and template selection are unchanged. No action is required beyond upgrading and rebuilding the store.
-
-### Preview hosts no longer log out pasted sessions (PR: [#3533](https://github.com/vtex/faststore/pull/3533))
-
-With `experimental.refreshToken` on, pasting a `VtexIdclientAutCookie_<account>` into a WebOps preview made the first `ValidateSession` fail, the refresh call answered 405 because previews do not proxy VTEX ID, and `/api/fs/logout` deleted the pasted cookie. The refresh-token bypass that already existed for `localhost` now also covers hosts ending in `.preview.vtex.app`, on the browser and on the server (using the `Host` and `x-forwarded-host` headers). `{account}.vtex.app` does not match and keeps the refresh flow.
-
-Developers and QA teams can test logged-in areas in a WebOps preview by pasting the cookie, without editing IndexedDB or blocking `/api/fs/logout`. Production stores are unchanged.
-
 ---
 
 ## Performance
 
 ### Fewer CMS calls during page generation (PR: [#3539](https://github.com/vtex/faststore/pull/3539))
 
-FastStore now caches the global section lookups and single-content reads across page generations on Content Platform and Headless CMS stores, with in-flight deduplication and a five-minute TTL per process. The new `createPromiseCache` helper does not cache failures, and fetches by hCMS `documentId`, `versionId`, or `releaseId` are cached only when the caller opts in. Previews and filtered listings, such as a landing page by slug, are not cached. This builds on the Content Platform template list cache released in `v4.10.1`.
+FastStore now caches the global section lookups and single-content reads across page generations on Content Platform and Headless CMS (legacy) stores, with in-flight deduplication and a five-minute TTL per process. The new `createPromiseCache` helper does not cache failures, and fetches by hCMS `documentId`, `versionId`, or `releaseId` are cached only when the caller opts in. Previews and filtered listings, such as a landing page by slug, are not cached. This builds on the Content Platform template list cache released in `v4.10.1`.
 
 Build and cold page generation make far fewer CMS requests, which reduces the 502 and 504 bursts after a build on stores with many pages. A CMS publish still triggers a new build. Under `next dev`, each page has its own cache, so the effect appears under `next start` and in production. No action is required beyond upgrading.
-
----
-
-## Other
-
-### Newsletter subscriptions can use a dedicated app key (PR: [#3544](https://github.com/vtex/faststore/pull/3544))
-
-The `subscribeToNewsletter` mutation sent an anonymous `PATCH` to the `NL` Master Data entity, which requires public fields. Master Data no longer allows creating public fields as of October 26, 2026, as described in the [temporary restriction on public fields](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields) release note. When `FS_NEWSLETTER_APP_KEY` and `FS_NEWSLETTER_APP_TOKEN` are set, the API now sends an authenticated, create-only `POST /api/dataentities/NL/documents` with only `name`, `email`, and `isNewsletterOptIn`. The resolver trims and validates the email and name before any request. `fetchAPI` also redacts credentials, cookies, and request bodies in its error logs.
-
-Stores can keep the `NL` fields private. To use it, create an app key with only the **Insert or update document (not remove)** Master Data resource, and set both environment variables. Without them, FastStore keeps the anonymous `PATCH` and logs a one-time warning, so stores with public `NL` fields keep working. The log redaction applies to every API call.
