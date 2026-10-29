@@ -5,14 +5,14 @@ hidden: false
 excerpt: "Learn how to configure rich text fields and render CMS images in a FastStore storefront."
 ---
 
-The CMS provides rich text widgets for formatted storefront content. To let editors insert images, set the field widget to `draftjs-rich-text-v2`. Render that field with `RichText` from `@faststore/core`.
+The CMS provides rich text widgets for formatted storefront content. To allow editors to add images, set the field widget to `draftjs-rich-text-v2`. Render that field with `RichText` from `@faststore/core`.
 
 ## Before you begin
 
 Make sure that:
 
 - The store uses the CMS. In `discovery.config.js`, set `contentSource.type` to `CP`.
-- Your project uses the latest FastStore version so the storefront can render images added with `draftjs-rich-text-v2`.
+- Your project uses the latest FastStore version, so the storefront can render images added with `draftjs-rich-text-v2`.
 - You can edit and upload the store's CMS schema. See [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
 
 ## Instructions
