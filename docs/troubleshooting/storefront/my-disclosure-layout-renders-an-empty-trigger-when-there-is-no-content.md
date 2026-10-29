@@ -53,7 +53,7 @@ After removing the block from the `children` list, you can also delete its defin
 
 Use this option if you can't remove the `disclosure-layout` block from the template, for example, because the same template is shared by pages with and without accordion content.
 
-Hide the empty trigger using the `trigger` CSS Handle. In your store theme, add the following rule to the `vtex.disclosure-layout.css` file:
+Hide the empty trigger using the `trigger` CSS handle. In your store theme, add the following rule to the `vtex.disclosure-layout.css` file:
 
 ```css
 .trigger:empty {
@@ -61,6 +61,6 @@ Hide the empty trigger using the `trigger` CSS Handle. In your store theme, add 
 }
 ```
 
-For more information on how to customize the app, see [Using CSS Handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
+For more information on how to customize the app, see [Using CSS handles for store customization](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization).
 
 > ⚠️ This rule only hides the trigger when its child blocks render nothing. If a child block renders an empty wrapper element, such as a block with no text defined, the `:empty` selector doesn't match and the trigger remains visible. In this case, follow the first option [Adding the Disclosure Layout only where there is content](#adding-the-disclosure-layout-only-where-there-is-content).
