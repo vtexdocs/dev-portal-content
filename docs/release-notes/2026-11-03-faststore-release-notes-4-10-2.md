@@ -36,7 +36,7 @@ Stores can keep the `NL` fields private. To use it, create an app key with only 
 
 ---
 
-### B2B Buyer Portal (Closed beta)
+## B2B Buyer Portal (Closed beta)
 
 ### B2B product listing pages respect the contract assortment (PR: [#3516](https://github.com/vtex/faststore/pull/3516))
 
