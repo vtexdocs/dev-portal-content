@@ -3,7 +3,7 @@ title: "CMS for FastStore storefronts"
 hidden: false
 slug: "cms-for-faststore-storefronts"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-01-26T12:50:00.813Z"
+updatedAt: "2026-10-30T00:00:00.000Z"
 ---
 
 > ⚠️ For documentation about Headless CMS (legacy) used with FastStore versions earlier than `3`, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
