@@ -68,6 +68,18 @@ Example:
     - Associated locale: en-US
     > ⚠️ Changes to bindings only take effect after the next store build. Also, even if a binding is configured with multiple locales, FastStore only considers the default locale.
 
+> ⚠️ If your bindings are configured using the `myvtex.com` domain (common in test accounts), the locale switcher won't work as expected. See [Testing with myvtex.com bindings](#testing-with-myvtexcom-bindings) for more information.
+
+#### Testing with `myvtex.com` bindings
+
+Some accounts, mostly test ones, configure bindings using the `myvtex.com` domain, for example, `myvtex.com/es`, `myvtex.com/en-us`, or `myvtex.com/brasil`.
+
+Accessing the store directly through `store.vtex.app/{locale-code}` (for example, `store.vtex.app/es-AR` or `store.vtex.app/pt-BR`) works, and the content is correctly localized in FastStore. The complete locale code, including the language and country codes, is required. Language-only paths such as `store.vtex.app/es` and custom paths such as `store.vtex.app/en` or `store.vtex.app/fr` don't work while the binding uses `myvtex.com`.
+
+The locale switcher, however, won't work as expected with this type of binding: changing the language in the header redirects the user to the `myvtex.com` domain instead of the `vtex.app` one.
+
+To successfully test the locale switcher, configure a real domain for your bindings instead of `myvtex.com`. When using a real domain, custom paths (such as `/en` or `/fr`) work normally.
+
 ### Step 3 - Enable the `localization` flag in `discovery.config.js`
 
 To enable the localization feature, add the `localization` flag to the `[discovery.config.js](http://discovery.config.js)` file.
@@ -115,9 +127,7 @@ Before pushing the changes you made in the previous steps to production, test th
     ```
 
 2. Run `yarn dev`.
-
 3. Open the localhost and test if the locales are working.
-
 4. Deploy the changes.
 
 #### Testing locally with subdomains
@@ -143,11 +153,8 @@ To test subdomain-based locales locally, you need to map the domains to your mac
    * The domains are the subdomains you want to test locally.
 
 3. Save the file.
-
 4. Start your FastStore project locally.
-
 5. Open one of the configured domains in your browser, for example [`http://pt.brandless.fast.store:3000`](http://pt.brandless.fast.store:3000). This will resolve to your local environment.
-
 6. Once you finish testing, you can remove these entries from the hosts file.
 
 After completing these steps, you can enable your store locales by following the instructions in [Configuring store locales](https://help.vtex.com/en/docs/tutorials/configuring-locales).
