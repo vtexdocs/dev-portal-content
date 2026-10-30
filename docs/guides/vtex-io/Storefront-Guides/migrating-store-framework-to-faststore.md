@@ -189,9 +189,9 @@ Once you've validated the FastStore storefront, make it your live store and reti
 
 #### Using absolute URLs in storefront links
 
-While the split is active, both storefronts answer on the same production domain, and the routing decision happens at the CDN layer, before the request reaches either application. FastStore is a single-page application, so a link written with a relative URL, such as `/`, is resolved by the client-side router within the FastStore application and produces no navigation for the CDN to route.
+While the split is active, both storefronts respond on the same production domain, and the routing decision occurs at the CDN layer before the request reaches either application. FastStore is a single-page application, so a link with a relative URL, such as `/`, is resolved by the client-side router within the FastStore application and doesn't trigger navigation for the CDN to route.
 
-> ⚠️ Any link meant to leave the FastStore application must use an absolute URL, including protocol and domain, so the browser performs a full navigation and the split rules are applied. A relative URL keeps the customer inside FastStore and can lead to a page that only exists in the Store Framework storefront.
+> ⚠️ Any link meant to leave the FastStore application must use an absolute URL, including protocol and domain, so the browser performs a full navigation and the split rules are applied. A relative URL keeps the customer within FastStore and can lead to a page that exists only in the Store Framework storefront.
 
 Review these links in particular, as they're the most common sources of relative URLs:
 
