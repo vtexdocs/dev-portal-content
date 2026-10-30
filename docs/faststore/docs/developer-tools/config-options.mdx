@@ -1,6 +1,6 @@
 ---
 title: "Configuration options for discovery.config.js"
-updatedAt: "2026-10-14T19:05:00.000Z"
+updatedAt: "2026-10-30T12:00:00.000Z"
 ---
 
 The `discovery.config.js` is a configuration file for managing settings that control store behavior, appearance, and functionality. This file serves as a central hub for configuring key aspects of your FastStore website, including SEO, API connections, session management, analytics, and more.
@@ -101,6 +101,7 @@ Contains settings related to the store's APIs, which link your FastStore storefr
 | `hideUnavailableItems` | `boolean` | Controls product display. When `true`, hides out-of-stock products. Default value is `false`.                         | `false` |
 | `incrementAddress`     | `boolean` | Enables automatic completion of address details during checkout using [VTEX’s address API](https://developers.vtex.com/docs/guides/get-address-by-postal-code). When `true`, missing address fields (such as city, state, street, etc.) are automatically filled based on the provided postal code. Default value is `false`.            | `false` |
 | `customSortMap`        | `object`  | Maps extra [`StoreSort`](https://developers.vtex.com/docs/guides/faststore/schema-enums#storesort) values to Intelligent Search sort strings. FastStore checks this map before the built-in values, and a matching key overrides a default sort. Available in FastStore `4.9.0` and later versions. | `{ rating_desc: "Rating:desc" }` |
+| `preserveCartLines`    | `boolean` | Keeps separate the cart lines of the same SKU that the store split in Checkout, instead of merging them into a single line. FastStore doesn't split lines on its own. Default value is `false`. Available in FastStore `4.10.3` and later versions. Learn more in [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-preserve-cart-lines). | `true` |
 
 The following `api` excerpt maps a custom rating sort. Use the same key in the `StoreSort` extension and in `registerCustomSortKeys`. See [Adding a custom search sort](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema#adding-a-custom-search-sort).
 
@@ -109,6 +110,14 @@ api: {
   customSortMap: {
     rating_desc: "Rating:desc",
   },
+},
+```
+
+The following `api` excerpt keeps the lines that your store split in Checkout with the [split item endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split). See [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-preserve-cart-lines).
+
+```javascript
+api: {
+  preserveCartLines: true,
 },
 ```
 
