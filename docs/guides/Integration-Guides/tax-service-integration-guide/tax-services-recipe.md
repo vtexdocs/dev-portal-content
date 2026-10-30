@@ -3,7 +3,8 @@ title: "Recipe"
 slug: "tax-services-recipe"
 hidden: false
 createdAt: "2020-09-01T16:36:08.632Z"
-updatedAt: "2021-02-09T15:24:50.558Z"
+updatedAt: "2026-10-27T12:00:00.000Z"
+excerpt: "Learn how to build a tax service app with clients, routes, and parsers that connect VTEX Checkout to an external tax provider."
 ---
 ## Clients
 
@@ -67,3 +68,5 @@ The external provider API will receive a POST request with a specifically format
 ### Parsing data from provider to VTEX
 
 Considering the request done by the provider to the VTEX Checkout API, it is also possible to implement a parser in order to put the payload in the format that the checkout expects.
+
+Besides the `taxes` array, this payload can include an optional `fees` array for each item, used for charges that aren't taxes, such as regulatory or commercial fees. Learn more in [Item fees](https://developers.vtex.com/docs/guides/tax-services-specification#item-fees).
