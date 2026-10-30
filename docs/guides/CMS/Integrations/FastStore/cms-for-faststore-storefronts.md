@@ -50,7 +50,7 @@ Manage content through the VTEX Admin using:
 
 Organize and reuse media assets with:
 
-- **Media Gallery**: Central repository for images and video references.
+- **Media Gallery**: Central repository for images and video references. See [Media gallery](https://developers.vtex.com/docs/guides/media-gallery) for details.
 - **Image formats**: PNG, JPG, JPEG, GIF, SVG, and WebP.
 - **Video embedding**: Reference videos from YouTube, Vimeo, and other services.
 
@@ -71,14 +71,25 @@ Content branches stay synchronized with the main branch through:
 
 For details on this behavior, see [Versions and branches](https://help.vtex.com/docs/tutorials/managing-versions-and-branches).
 
+## The CMS development and content journey
+
+Going from a schema to a live storefront involves the following: developers shape and test the content structure, and content operators create and publish the content itself. See [Getting started with CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms) to find your track and where to start.
+
 ## Next steps
 
 <Flex>
 
 <WhatsNextCard
   linkTo="https://developers.vtex.com/docs/guides/getting-started-with-cms"
-  title="FastStore integration"
-  description="Learn how to connect the CMS with FastStore"
+  title="Getting started with CMS"
+  description="Find your track, developer or content operator, and see the full CMS journey."
+  linkTitle="See more"
+/>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/setting-up-your-cms-environment"
+  title="Setting up your CMS environment"
+  description="Set up your local environment and model your first Content Types, Sections, and Components."
   linkTitle="See more"
 />
 
