@@ -1,0 +1,126 @@
+---
+title: "Sharing code across stores"
+slug: "monorepo-sharing-code-across-stores"
+excerpt: "Organize a shared component library in a FastStore monorepo so that improvements reach every store from a single pull request."
+createdAt: "2026-10-30T15:45:00.000Z"
+---
+
+The [Multiple brands or stores sharing code](https://developers.vtex.com/docs/guides/monorepo-use-cases#multiple-brands-or-stores-sharing-code) use case shows how several stores can live in one [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview) and import shared code from a common directory. This guide covers how to organize that shared code so it stays maintainable as the number of stores grows.
+
+> ℹ️ The structure presented in this guide is a recommendation, not a platform requirement. The FastStore monorepo supports other layouts, and you can adapt the structure to your needs.
+
+## The shared package
+
+Keep shared code in a single package, commonly named `core`, that every store project imports as a versioned dependency. This package isn't a FastStore project: it has no `discovery.config.js`, it's not declared in `faststore.json`, and [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) never deploys it. It's a plain Node package that the store projects consume.
+
+In this structure, each store project in `packages/` (such as `store1` and `store2`) is a complete and independent FastStore project. It has its own `discovery.config.js`, its own `src` directory with customizations, its own `package.json`, and its own deployment through WebOps. The `package.json` file at the root of the monorepo defines the workspaces, listing all packages, and is the entry point for scripts that run operations across several projects at once.
+
+The following example shows the folder structure of a monorepo with a shared `core` package and two stores:
+
+```txt
+📂 Account monorepo
+│
+├── 📂 packages
+│   ├── 📂 core
+│   │   ├── 📂 components
+│   │   ├── 📂 sections
+│   │   ├── 📂 tokens
+│   │   └── 📄 package.json
+│   ├── 📂 store1
+│   └── 📂 store2
+├── 📄 faststore.json
+├── 📄 package.json
+│
+```
+
+{/* TODO (EDU-19766): confirmar com o time responsável se packages/core/components guarda
+componentes React de UI, schemas de componentes de CMS (JSON Schema), ou ambos.
+Fonte de verdade (Google Doc, seção 3.1) fala em "biblioteca de componentes React compartilhados". */}
+
+The following table describes each directory in the shared package:
+
+| Directory | Description |
+| --- | --- |
+| `components` | Shared React components that sections and store projects reuse across every store. |
+| `sections` | Base [section overrides](https://developers.vtex.com/docs/guides/faststore/overrides-overview) and the section schemas added to the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). Learn more in [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections). |
+| `tokens` | [Design token](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) definitions that stores extend with their own brand values. |
+
+The `faststore.json` file at the root of the repository maps each project directory to its VTEX account, and WebOps reads it to know which accounts host which projects. Only the store project directories appear in it, since only they are deployable. To add a new account to the monorepo, use the `fsp create` command, which creates the project directory and updates `faststore.json` automatically. For more information, see [Creating new projects](https://developers.vtex.com/docs/guides/monorepo-creating-new-projects).
+
+```json faststore.json
+{
+  "$schema": "https://unpkg.com/@vtex/fsp-config/faststore.schema.json",
+  "stores": {
+    "store1": {
+      "discovery": {
+        "path": "packages/store1",
+        "port": 3001
+      }
+    },
+    "store2": {
+      "discovery": {
+        "path": "packages/store2",
+        "port": 3002
+      }
+    }
+  }
+}
+```
+
+### Exports and versioning
+
+Two practices keep the shared package stable as it grows:
+
+- **Export explicitly.** Declare the components each store is meant to consume, rather than letting stores reach into internal file paths. This keeps the public surface of the package visible.
+- **Version the package.** Treat a change to shared code as a release: bump the version of the `core` package and generate a semantic changelog from commit messages or with [Changesets](https://github.com/changesets/changesets). Store projects then import the package as a versioned dependency.
+
+The result is that improving a shared component takes one pull request, without duplicating code or manually syncing repositories.
+
+{/* TODO (EDU-19766): confirmar com o time responsável como "um PR propaga para todas as lojas"
+funciona quando cada projeto importa o pacote core como dependência versionada.
+Opção A: workspaces (ex.: "workspace:*"), e a mudança chega a todas as lojas automaticamente.
+Opção B: cada projeto fixa uma versão, e cada loja precisa atualizar a sua.
+O Doc diz: "cada spoke os importe como dependência versionada" (Google Doc, seção 3.1)
+e "Uma melhoria nos componentes compartilhados é propagada para todos os países com um único PR" (Google Doc, seção 3.1).
+Também: "Um PR no hub propaga melhorias para todos os países" (Google Doc, seção 2, linha Monorepo). */}
+
+### Standardizing new components
+
+In a package shared by several stores, structural consistency between components matters. Without a defined standard, each developer structures components differently, which increases the onboarding curve and makes maintenance harder over time. Define and document the standard at the beginning of the project, before the package starts to grow. Every new component should include:
+
+- A TypeScript implementation
+- SCSS styles that use semantic tokens
+- Unit tests
+
+## Customization layers
+
+With shared code in place, every piece of the interface sits in one of four layers. Knowing which layer a change belongs to is what keeps stores consistent without blocking local teams. The following table describes the layers:
+
+| Layer | What it contains | Who maintains it |
+| --- | --- | --- |
+| FastStore core | Native components from `@faststore/core`. Never modified directly. | VTEX |
+| Shared package | Components, base sections, and tokens in `packages/core`, valid for every store. | Central team |
+| Store overrides | Props, styles, or component overrides inside the directory of each store. | Store team |
+| Store-exclusive sections | Sections built for a specific need or campaign of one store. | Store team |
+
+The layers are listed in ascending order of local specificity: each layer is more specific than the preceding one.
+
+Learn more about overriding native components and their props in [Developing and customizing FastStore components](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-overview).
+
+## Design tokens
+
+FastStore themes are built on CSS variables, such as `--fs-color-primary` and `--fs-spacing-2`, described in [Global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview). In a multi-store monorepo, keeping the token definitions in the shared package avoids maintaining a full set of token files per brand.
+
+To go further, you can automate this system with a token pipeline. Instead of editing the SCSS token files of each brand manually, use a tool such as [Style Dictionary](https://styledictionary.com/) to transform JSON definition files into SCSS variables for each brand and store. This removes manual editing and makes onboarding a new brand faster.
+
+## Developing multiple stores locally
+
+To run several stores from the same monorepo at the same time, start each one with the `fsp dev` command in a separate terminal, using a different proxy port for each store. For more information, see [Running projects locally](https://developers.vtex.com/docs/guides/monorepo-running-projects-locally).
+
+You can also add scripts to the root `package.json` that run operations across all store projects at once. These batch scripts can include:
+
+- Building all store projects
+- Propagating generated design tokens
+- Replicating CMS settings between accounts
+
+These batch operations are useful when a change in the shared package needs to be validated in every store before the merge, without having to navigate manually through each project directory.
