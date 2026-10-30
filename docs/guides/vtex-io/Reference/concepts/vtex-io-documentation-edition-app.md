@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-edition-app"
 excerpt: "Learn what Edition Apps are and how they can streamline the setup of specific VTEX accounts."
 hidden: false
 createdAt: "2020-06-03T16:02:44.317Z"
-updatedAt: "2026-09-22T16:14:09.641Z"
+updatedAt: "2026-10-30T00:00:00.000Z"
 ---
 
 An Edition App represents a bundle of settings, policies, backend, and frontend apps that are encapsulated into a single app. These apps are created and exported by a [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account), with the primary objective of streamlining the installation of multiple essential apps for quickly setting up a specific group of accounts.
