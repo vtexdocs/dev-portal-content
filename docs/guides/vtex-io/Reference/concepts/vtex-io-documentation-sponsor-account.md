@@ -3,7 +3,7 @@ title: "Sponsor Account"
 slug: "vtex-io-documentation-sponsor-account"
 hidden: false
 createdAt: "2020-06-03T16:02:47.740Z"
-updatedAt: "2026-09-22T16:14:09.641Z"
+updatedAt: "2026-10-30T00:00:00.000Z"
 excerpt: "Learn what a Sponsor Account is and streamline the management of Edition Apps within your accounts ecosystem."
 seeAlso:
   - "/docs/guides/vtex-io-documentation-edition-app"
