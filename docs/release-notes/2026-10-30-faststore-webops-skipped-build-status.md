@@ -1,9 +1,9 @@
 ---
 title: "FastStore WebOps: Skipped status for superseded builds"
-slug: "2026-09-18-faststore-webops-skipped-build-status"
+slug: "2026-10-30-faststore-webops-skipped-build-status"
 type: "improved"
-createdAt: "2026-09-18T00:00:00.000Z"
-updatedAt: "2026-09-18T00:00:00.000Z"
+createdAt: "2026-10-30T00:00:00.000Z"
+updatedAt: "2026-10-30T00:00:00.000Z"
 excerpt: "WebOps now marks superseded queued deploys as Skipped, so builds that would be immediately replaced by a newer commit on the same branch are no longer executed."
 tags:
     - FastStore
