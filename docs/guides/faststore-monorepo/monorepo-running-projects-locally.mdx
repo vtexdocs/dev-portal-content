@@ -1,0 +1,63 @@
+---
+title: "Running projects locally"
+slug: "monorepo-running-projects-locally"
+excerpt: "Start a FastStore monorepo project locally and configure the proxy port."
+createdAt: "2026-10-02T14:32:00.000Z"
+updatedAt: "2026-10-02T14:32:00.000Z"
+---
+
+After [creating a project](https://developers.vtex.com/docs/guides/monorepo-creating-new-projects) in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), you can run it locally with the `fsp dev` command to develop and test your storefront before deploying it.
+
+The command starts the modules declared for a store in `faststore.json`, such as Product Discovery Experience, [Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility), and [VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility), and serves them through a single local address.
+
+In this guide, learn how to start a project with `fsp dev`, how module ports and the proxy port work together, and how to change the proxy port when the default one is unavailable or when you need to run more than one store at the same time.
+
+## Instructions
+
+After a project is declared in `faststore.json`, start its development environment with the `fsp dev` command, passing the account name:
+
+```bash
+yarn fsp dev brand-store-1
+```
+
+Or using npm:
+
+```bash
+npx fsp dev brand-store-1
+```
+
+The account name is the key declared under `stores` in `faststore.json` (for example, `brand-store-1`). The `fsp dev` command starts only the store you pass to it, so if your monorepo contains several stores, you don't need to run all of them to work on one.
+
+The `fsp dev` command starts each module on its own port and puts a proxy in front of them. You browse the store through the proxy. For example, with this configuration:
+
+```json faststore.json
+{
+  "stores": {
+    "brand-store-1": {
+      "discovery": {
+        "path": "packages/brand-store-1",
+        "port": 3002
+      }
+    }
+  }
+}
+```
+
+- **Module port**: The `port` in `faststore.json` is the address of that module. In the example above, `brand-store-1` discovery runs on port `3002`. If the account also has Buyer Portal Checkout or Sales App, each module gets its own port so they can run at the same time. You can open a module directly, such as discovery at `http://localhost:3002`.
+- **Proxy port**: The proxy is the address you open in the browser. It listens on port `3000` by default and forwards each request to the module that serves that page, so the modules appear as one store. `yarn fsp dev brand-store-1` serves the store at `http://localhost:3000`, and discovery keeps running on port `3002`.
+
+> ⚠️ Module ports and the proxy port must be different, since they run as separate processes on the same machine. For this reason, [creating a project](https://developers.vtex.com/docs/guides/monorepo-creating-new-projects) with `fsp create` assigns module ports starting at `3001` and leaves `3000` for the proxy. If you edit `faststore.json` manually, don't assign port `3000` to a module.
+
+## Changing the proxy port
+
+By default, the proxy runs on port `3000`. To use a different port, add the `--proxy-port` flag to the `fsp dev` command:
+
+```bash
+yarn fsp dev brand-store-1 --proxy-port 4000
+```
+
+With this command, you browse the store at `http://localhost:4000`, while the `discovery` module keeps running on port `3002`, as declared in `faststore.json`. The flag changes only the proxy port, not the module ports.
+
+This is useful when port `3000` is already in use, or when you need to run more than one store at the same time, since each proxy needs its own port.
+
+> ⚠️ If your monorepo includes the [Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility) module, the `checkoutUrl` value in the Product Discovery Experience configuration points to the proxy port (`3000` by default, or the one set with `--proxy-port`), not to the `checkout` module port declared in `faststore.json`. Update `checkoutUrl` whenever you change the proxy port. For more information, see [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
