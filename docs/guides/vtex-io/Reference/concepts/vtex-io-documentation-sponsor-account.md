@@ -23,7 +23,7 @@ The image below exemplifies the hierarchy among VTEX accounts.
 At the top of this hierarchy is the `vtex` account, which assumes the role of a Sponsor Account for all other accounts on the VTEX platform. This is because the `vtex` account is responsible for the development and release of the two native Edition Apps that all others derive from:
 
 - Edition Business (`vtex.edition-business@0.x`): Installs all the necessary apps to build a store with [Legacy CMS Portal](https://help.vtex.com/tutorial/o-que-e-o-cms--EmO8u2WBj2W4MUQCS8262).
-- Edition Store (`vtex.edition-store@5.x`): Installs all the necessary apps to develop a store with the [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework).
+- Edition Store (`vtex.edition-store@5.x`): Installs all the necessary apps to develop a store with [Store Framework](https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework).
 
 ### Secondary Sponsor Accounts
 
@@ -31,6 +31,6 @@ In the second level of the account hierarchy, accounts that meet the [requiremen
 
 Becoming a Sponsor Account confers greater control over child accounts, ensuring that they adhere to the desired configuration and functionality standards. This flexibility is especially valuable for businesses with complex structures and unique requirements.
 
-> ⚠️ An account that is already sponsored by another Sponsor Account can't become a Sponsor Account itself. Becoming a Sponsor Account requires the account to run an Edition App published by the `vtex` account, which means sponsorship doesn't extend beyond the second level of the hierarchy. Define the account structure before creating the accounts, since reorganizing a live account family later is considerably more work.
+> ⚠️ An account that is sponsored by another Sponsor Account can't become a Sponsor Account itself. Becoming a Sponsor Account requires the account to run an Edition App published by the `vtex` account, which means sponsorship doesn't extend beyond the second level of the hierarchy. Define the account structure before creating the accounts. Reorganizing a live account family later is considerably harder.
 
 For more information on how to become a Sponsor Account, refer to the [Becoming a Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-sponsor-account) guide.
