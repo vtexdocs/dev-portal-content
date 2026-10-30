@@ -1,0 +1,78 @@
+---
+title: "Keeping split cart lines"
+---
+
+By default, FastStore merges cart lines that share the same SKU, seller, attachments, and services into a single line. This is the right behavior for most stores. However, some stores need each unit of a product to remain a separate line in the cart, for example, when shoppers choose different [assembly options](https://help.vtex.com/en/docs/tutorials/assembly-options) (such as installation or extended warranty) for each unit, or when each unit must be handled as its own line in an ERP integration.
+
+The `preserveCartLines` flag makes FastStore respect the lines that your store split in Checkout, instead of merging them again.
+
+> ℹ️ FastStore doesn't split lines on its own. Adding a product with quantity `2` still creates a single line, with or without `preserveCartLines`. The split must be done in Checkout.
+
+## Default behavior and behavior with the flag
+
+Consider a shopper who buys 2 units of the same refrigerator. Before the shopper chooses services for each unit, your store splits the line in Checkout using the [split item endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split), resulting in `[refrigerator x1, refrigerator x1]`.
+
+| | `preserveCartLines: false` (default) | `preserveCartLines: true` |
+|---|---|---|
+| **Minicart** | Shows one line with quantity `2`. | Shows two lines with quantity `1` each. |
+| **Checkout** | On the next cart validation, FastStore sends the merged quantity, and Checkout undoes the split. | The split is kept after the cart is validated and the page is reloaded. |
+| **Editing or removing a line** | Because lines share the same ID, the action may affect the wrong line. | The action affects only the selected line. |
+
+The behavior of stores that don't enable the flag remains unchanged.
+
+## Before you begin
+
+- Update your store to FastStore `4.10.3` or a later version. To do so, follow [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version).
+- Make sure your store splits items in Checkout. FastStore only preserves lines that already exist as separate lines in the Order Form.
+
+## Instructions
+
+### Step 1 - Enable `preserveCartLines`
+
+1. Open your `discovery.config.js` file.
+2. In the `api` object, set `preserveCartLines` to `true`.
+
+```js discovery.config.js
+...
+api: {
+  ...
+  preserveCartLines: true,
+}
+```
+
+### Step 2 - Validate the cart locally
+
+Before deploying, test the flag locally, as it changes how cart lines are matched with Checkout.
+
+In the terminal, run:
+
+```sh
+yarn dev
+```
+
+### Step 3 - Check the cart behavior
+
+With the local server running, create a cart with two units of the same SKU, split it in Checkout, and confirm the following:
+
+1. Call `POST /api/checkout/pub/orderForm/{orderFormId}/items/{itemUniqueId}/split` with a body that divides the item into lines of quantity `1`, for example, `[{"quantity": 1}, {"quantity": 1}]`.
+2. Open your store with the cart's `checkout.vtex.com` cookie and open the minicart. It should show two lines, and Checkout should keep two lines after you reload the page.
+3. Increase the quantity of one line. Only that line changes in Checkout.
+4. Remove one line. Only that line is removed, and its services (if any) stay on the correct unit.
+
+If your store uses assembly options, also confirm that the cart stays stable when the same SKU appears with and without a service, and that the minicart matches the Checkout cart line by line.
+
+If you find any issue, contact [VTEX Support](https://supporticket.vtex.com/support) with the `orderFormId` of the affected cart.
+
+### Step 4 - Deploy the changes
+
+1. Commit the changes to your `discovery.config.js` file.
+2. Push the changes to the main branch of your repository.
+
+This triggers a [WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) build. Once it completes, the `preserveCartLines` flag will be active in your live store.
+
+## Things to consider
+
+- **Assembly options and VTEX Services**: assembly options are added to the cart as child items of a product line and are handled by this flag. Services stored in `bundleItems` follow a different mechanism and don't require `preserveCartLines`.
+- **Promotion splits**: Checkout may also return several lines of the same SKU because of promotions. Because of this, the flag is opt-in. Without it, FastStore keeps merging those lines.
+- **Minicart UI**: the default minicart doesn't display assembly options for each line. The split lines follow the Checkout behavior, but you may need a custom component to present the services chosen for each unit.
+- **Services hidden from search**: assembly option SKUs can have **Display on website** turned off. FastStore keeps the cart working in this scenario. Learn more in [this release note](https://developers.vtex.com/updates/release-notes/2026-10-30-faststore-cart-validation-hidden-assembly-skus).
