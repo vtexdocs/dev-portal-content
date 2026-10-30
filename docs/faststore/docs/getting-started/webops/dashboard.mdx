@@ -88,20 +88,20 @@ The **Deploys** tab provides insights into store deployments, including their st
 | 2 - Pagination        | Allows you to navigate through pages of deployment data.                                                                                                                                                                                                                                                                                                                                                      |
 | 3 - Environment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with.</li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                 |
 | 4 - Branch            | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                       |
-| 5 - Status            | Filters deploy status: <ol><li>Queued: The deployment is next in line to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment has completed successfully.</li><li>Failed: The deployment process encountered an error and didn't complete as expected.</li><li>Skipped: The deployment wasn't built because a newer commit was pushed to the same branch. See [Skipped deploys](#skipped-deploys).</li></ol>                                                                                               |
+| 5 - Status            | Filters deploy status: <ol><li>Queued: The deployment is next in line to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment has completed successfully.</li><li>Failed: The deployment encountered an error and didn't complete as expected.</li><li>Skipped: The deployment wasn't built because a newer commit was pushed to the same branch. See [Skipped deploys](#skipped-deploys).</li></ol>                                                                                               |
 | 6 - Sort by           | Filters deployments by **Latest First** or **Oldest First**.                                                                                                                                                                                                                                                                                                                                                  |
 | 7 - Deployments table | Lists all store deployments with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deploy author and the date and time of the deployment.</li><li>Environment: The environment that was changed, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deploy status.</li></ol> |
 
 ### Skipped deploys
 
-A build is skipped when it's no longer needed because a newer commit was pushed to the same branch. WebOps runs only one build at a time per branch, so if several commits arrive while a build is already running, only the most recent queued commit is built once the current one finishes. Older queued commits are marked **Skipped** and aren't built because a more recent version of the branch is already available..
+A build is skipped when it's no longer needed because a newer commit was pushed to the same branch. WebOps runs only one build at a time per branch. If several commits come in while a build is already running, only the most recent queued commit is built once the current one finishes. Older queued commits are marked **Skipped** and aren't built because a more recent version of the branch is already available.
 
 > ℹ️ A deploy already **In progress** is never interrupted. Only deploys still **Queued** for that branch can become **Skipped**.
 
-Consider the following deployment scenario to the same branch:
+Consider the following deployment scenario in the same branch:
 
-1. Deploy `A` arrives while nothing is running, so it starts immediately (**In progress**).
-2. Deploy `B` arrives while `A` is still running, so it becomes **Queued**.
+1. Deploy `A` arrives while nothing is running, and it starts immediately (**In progress**).
+2. Deploy `B` arrives while `A` is still running, and it becomes **Queued**.
 3. Deploy `C` arrives while `A` is still running. `B` becomes **Skipped**, and `C` becomes **Queued** instead.
 4. `A` finishes, and `C` starts. `B` is never built, since `C` would have replaced it anyway.
 
