@@ -3,7 +3,7 @@ title: "Migrating from Store Framework to FastStore"
 slug: "migrating-store-framework-to-faststore"
 excerpt: "Migrate your storefront from Store Framework to FastStore, validate it end-to-end, and gradually move traffic before going live."
 createdAt: "2026-07-22T00:00:00.000Z"
-updatedAt: "2026-09-22T16:14:09.641Z"
+updatedAt: "2026-10-30T00:00:00.000Z"
 ---
 
 In this guide, you'll learn how to migrate your storefront from [Store Framework](https://developers.vtex.com/docs/guides/store-framework) to [FastStore](https://developers.vtex.com/docs/guides/faststore). This includes preparing both storefronts to run in parallel, validating the new storefront with real traffic, and completing the cutover.
