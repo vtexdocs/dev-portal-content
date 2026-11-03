@@ -95,7 +95,7 @@ To receive notifications from VTEX, the seller needs to implement specific API r
 
 ##### Catalog notification
 
-To receive product update notifications and product variations (including stock, price and trade policy), you must implement the POST `{{connectorEndpoint}}/catalog/notification` route.
+To receive product update notifications and product variations (including stock, price and sales channel), you must implement the POST `{{connectorEndpoint}}/catalog/notification` route.
 
 This notification follows the format of our VTEX [Broadcaster Adapter](https://developers.vtex.com/docs/guides/vtex-broadcaster#sku-data).
 
@@ -110,7 +110,7 @@ The store configuration notification format will vary according to the configura
 | `accountName` | Name of the seller’s account in VTEX. | string |
 | `active` | Flag that indicates if the seller wants to be active in the marketplace. If false, the connector should deactivate the seller’s products on the marketplace. | boolean |
 | `affiliateId` | Unique affiliate ID configured in the seller that identifies its connection with the marketplace. | string |
-| `salesChannel` | Sales channel/trade policy ID configured in the seller and being used for this marketplace. | string |
+| `salesChannel` | Sales channel ID configured in the seller and being used for this marketplace. | string |
 | `email` | Email that’ll be notified about changes related to the affiliate. | string |
 | `cookie` | App’s auth cookie. This token can be used when making requests to VTEX APIs with the seller’s account. | string |
 | `allowFranchiseAccounts` | Flag indicates if the seller also wants to synchronize their franchise accounts catalog/orders with the marketplace, through the Multilevel Omnichannel Inventory feature. | boolean |
