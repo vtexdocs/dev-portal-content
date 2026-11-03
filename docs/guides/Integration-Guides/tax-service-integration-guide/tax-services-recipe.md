@@ -27,7 +27,10 @@ This [tax protocol example](https://github.com/vtex-apps/tax-protocol-example) i
 
 - `TaxProvider`: used to connect with the provider's external API;
 
-- `VtexCommerce`: a basic external client that can be used as the class that can be inherited to develop other clients that connect to VTEX API.
+- `Checkout`: Configures the tax service in Checkout.
+- `Logistics`: Fetches dock information by ID through a single method.
+- `TaxProvider`: Connects to the provider's external API.
+- `VtexCommerce`: Defines a basic external client that other clients inherit to connect to the VTEX API.
 
 ## Routes
 
