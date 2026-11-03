@@ -75,4 +75,6 @@ This triggers a [WebOps](https://developers.vtex.com/docs/guides/faststore/webop
 - **Assembly options and VTEX Services**: assembly options are added to the cart as child items of a product line and are handled by this flag. Services stored in `bundleItems` follow a different mechanism and don't require `preserveCartLines`.
 - **Promotion splits**: Checkout may also return several lines of the same SKU because of promotions. Because of this, the flag is opt-in. Without it, FastStore keeps merging those lines.
 - **Minicart UI**: the default minicart doesn't display assembly options for each line. The split lines follow the Checkout behavior, but you may need a custom component to present the services chosen for each unit.
-- **Services hidden from search**: assembly option SKUs can have **Display on website** turned off. FastStore keeps the cart working in this scenario. Learn more in [this release note](https://developers.vtex.com/updates/release-notes/2026-10-30-faststore-cart-validation-hidden-assembly-skus).
+- **Services hidden from search**: assembly option SKUs can have **Display on website** turned off. FastStore keeps the cart working in this scenario. 
+
+{/* Learn more in [this release note](https://developers.vtex.com/updates/release-notes/2026-10-30-faststore-cart-validation-hidden-assembly-skus). */}
