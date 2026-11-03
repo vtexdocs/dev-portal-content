@@ -186,6 +186,7 @@ Below is a [list of deprecated apps](#list-of-deprecated-apps). If you’re usin
 | Buy Box                    | `vtex.buybox-resolver`<br><br>`vtex.buybox-context`<br><br>`vtex.buybox-graphql` |
 | Kit Look                   | `vtex.kit-look`                                                                  |
 | Minicart free shipping bar | `vtexeurope.minicart-freeshipping-bar`                                           |
+| Personal Shopper           | `vtexventures.personal-shopper-free`                                             |
 | Pickup Selector            | `vtex.pickup-selector`                                                           |
 | Power Reviews              | `vtex.powerreviews`                                                              |
 | QR & Bar Code Reader       | `vtexarg.qr-barcode-reader`                                                      |
