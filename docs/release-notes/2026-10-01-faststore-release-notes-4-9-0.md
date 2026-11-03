@@ -4,19 +4,19 @@ slug: "2026-10-01-faststore-release-notes-4-9-0"
 type: improved
 excerpt: "FastStore 4.9.0 improves cart and My Account for B2B Buyer Portal account reliability, Windows development, localized SEO, custom search sorting, and access to product cluster data"
 createdAt: "2026-10-01T00:00:00.000Z"
-updatedAt: "2026-10-07T00:00:00.000Z"
+updatedAt: "2026-10-22T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
 ---
 
-> ⚠️ **Updates in FastStore 4.9.1 and 4.9.2:** Version 4.9.1 restores the original format of `StoreProduct.releaseDate` in the GraphQL API and applies ISO 8601 normalization only to the product page’s JSON-LD structured data. Version 4.9.2 fixes session and cart validation. See the [4.9.1 release notes](https://developers.vtex.com/updates/release-notes/2026-10-02-faststore-restored-original-product-release-date-format) and [4.9.2 release notes](https://developers.vtex.com/updates/release-notes/2026-10-05-faststore-session-and-cart-validation-fix) for details.
+> ⚠️ **Updates in FastStore 4.9.1 and 4.9.2:** Version 4.9.1 restores the original format of `StoreProduct.releaseDate` in the GraphQL API and normalizes dates to ISO 8601 only in the product page's JSON-LD structured data. Version 4.9.2 fixes session and cart validation. See the [4.9.1 release notes](https://developers.vtex.com/updates/release-notes/2026-10-02-faststore-restored-original-product-release-date-format) and [4.9.2 release notes](https://developers.vtex.com/updates/release-notes/2026-10-05-faststore-session-and-cart-validation-fix) for details.
 
 FastStore `v4.9.0` keeps cart services and My Account for B2B Buyer Portal sessions consistent, gives merchants more control over localized account content, and corrects localized storefront URLs. Developers gain more reliable builds, especially on Windows, plus new APIs for custom sorting and product cluster data. See the fixes and features below for details.
 
 > ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.9.0` and keep your store up to date with the following improvements.
 
-## Bug Fixes
+## Bug fixes
 
 ### Prevent caching of GraphQL error responses (PR: [#3485](https://github.com/vtex/faststore/pull/3485))
 
@@ -28,7 +28,7 @@ Shoppers are less likely to receive a previously cached 404, 410, or other Graph
 
 Generated `.faststore/package.json` scripts now wrap resolved Next.js executable paths in double quotes. Paths containing unsafe quote, dollar, backtick, or percent characters fall back to the bare `next` command.
 
-Developers can run generated `build`, `serve`, `dev`, and `dev-only` scripts when the Next.js binary resolves through directories containing spaces. The fallback also avoids generating malformed shell commands.
+Developers can run generated `build`, `serve`, `dev`, and `dev-only` scripts when the Next.js binary resolves through directories containing spaces. The fallback also prevents the generation of malformed shell commands.
 
 ### Preserve the search page on Yarn Classic for Windows (PR: [#3486](https://github.com/vtex/faststore/pull/3486))
 
@@ -40,7 +40,7 @@ Windows developers using Yarn Classic no longer lose the search page during inst
 
 FastStore now removes a trailing slash from locale-aware store URLs before appending landing-page, product, home-search, and search-page paths. Search SEO generation also receives the active router locale.
 
-Shoppers and search engines receive valid canonical, Open Graph, breadcrumb, and search URLs without accidental double slashes. Localized stores get the correction automatically after upgrading.
+Shoppers and search engines receive valid canonical, Open Graph, breadcrumb, and search URLs without accidental double slashes. Localized stores automatically receive the correction after upgrading.
 
 ### Resolve custom GraphQL definitions in repositories ending with `.faststore` (PR: [#3502](https://github.com/vtex/faststore/pull/3502))
 
@@ -52,11 +52,11 @@ Developers whose repository names end with `.faststore` can build without custom
 
 The unsafe-character check for resolved Next.js paths now runs inside the package script builder. Direct callers that pass paths containing quote, dollar, backtick, or percent characters receive bare `next` scripts.
 
-Developers are protected from malformed or shell-expanded generated commands even when code bypasses the normal path resolver. No action is required beyond upgrading.
+Developers are protected from malformed or shell-expanded generated commands, even when code bypasses the normal path resolver. No action is required beyond upgrading.
 
 ### Keep VTEX services attached to the correct cart line (PR: [#3504](https://github.com/vtex/faststore/pull/3504))
 
-Cart validation now represents Checkout `bundleItems` as service properties and includes applied services in cart-line identity and relevant ETags. Serviced and unserviced units remain separate, and available offerings are not sent back to Checkout as selected services.
+Cart validation now represents Checkout `bundleItems` as service properties and includes applied services in cart-line identity and relevant ETags. Serviced and unserviced units remain separate, and available offerings aren't sent back to Checkout as selected services.
 
 Shoppers keep services attached to the intended item through validation, quantity changes, reloads, and removals. Merchants avoid duplicated or dropped services and the resulting incorrect cart state.
 
@@ -74,7 +74,7 @@ Developers can connect custom Intelligent Search sorting to `StoreSort` and supp
 
 The GraphQL schema now includes the non-null `StoreProductCluster` type and a `productClusters` list on `StoreProductGroup`. The resolver returns Intelligent Search cluster IDs and names, or an empty list when none are available.
 
-Developers can query a product's collections or clusters directly with its product-group data instead of adding a custom API extension or separate request. Storefronts can use this data for collection-aware merchandising and presentation after adding the field to their queries.
+Developers can query a product's collections or clusters directly using its product-group data, instead of adding a custom API extension or making a separate request. Storefronts can use this data for collection-aware merchandising and presentation after adding the field to their queries.
 
 ---
 
