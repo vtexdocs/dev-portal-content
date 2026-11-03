@@ -14,8 +14,6 @@ seeAlso:
  - "https://help.vtex.com/docs/tutorials/delivery-promise-faq"
 ---
 
->ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
-
 [**Delivery Promise**](https://developers.vtex.com/docs/guides/delivery-promise) is VTEX's solution that lets shoppers see only the products they can actually buy, taking into account product availability and the shipping methods valid for their delivery address. The [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) builds on this by surfacing the most relevant delivery and pickup options directly in the storefront, such as the fastest delivery available or the nearest pickup point.
 
 This guide walks you through the data you need to collect before rendering any UI: the available delivery zones, the available pickup points, and the resulting delivery promise suggestions for a shopper's location.

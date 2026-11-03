@@ -7,7 +7,6 @@ updatedAt: "2026-05-20T00:00:00.000Z"
 excerpt: "Learn how to update large volumes of inventory data asynchronously using the new Batch operations endpoints in the Logistics API."
 seeAlso:
  - "/docs/api-reference/logistics-api"
- - "/docs/guides/logistics-api-overview"
  - "https://help.vtex.com/en/docs/tutorials/updating-the-quantity-of-items-in-inventory"
  - "https://help.vtex.com/en/docs/tutorials/managing-stock-items"
 ---

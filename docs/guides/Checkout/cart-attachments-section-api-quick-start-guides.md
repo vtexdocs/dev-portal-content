@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2023-01-13T09:00:00.051Z"
 updatedAt: "2023-01-13T10:00:00.334Z"
 ---
-This section contains the quick start guides of the endpoints described in the [Cart Attachments section](https://developers.vtex.com/docs/guides/checkout-api-overview#cart-attachments) of the Checkout API Reference.
+This section contains the quick start guides of the endpoints described in the [Cart Attachments section](https://developers.vtex.com/docs/api-reference/checkout-api#cart-attachments) of the Checkout API Reference.
 
 - [Get client profile by email](https://developers.vtex.com/docs/guides/get-a-client-profile-by-email)
 - [Add client profile](https://developers.vtex.com/docs/guides/add-client-profile)

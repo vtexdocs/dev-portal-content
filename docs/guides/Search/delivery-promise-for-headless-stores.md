@@ -1,5 +1,5 @@
 ---
-title: "Delivery promise for headless stores (Beta)"
+title: "Delivery promise for headless stores"
 slug: "delivery-promise-for-headless-stores"
 hidden: false
 excerpt: "Learn how to implement the delivery promise feature in headless stores."
@@ -7,11 +7,9 @@ createdAt: "2025-05-14T22:18:24.684Z"
 updatedAt: "2026-07-29T14:00:00.000Z"
 ---
 
->ℹ️ This feature is currently in [open beta](https://help.vtex.com/en/announcements/2026-07-01-delivery-promise-in-open-beta) and can be activated at both the main account and subaccount-only levels. If you want to implement it, please contact our [Support](https://support.vtex.com/hc/en-us) team to request activation.
-
 > ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
 
-This guide details how to use the [Delivery Promise](https://help.vtex.com/docs/tutorials/delivery-promise-beta) feature on headless stores, using [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) with additional facets for this purpose.
+This guide details how to use the [Delivery Promise](https://help.vtex.com/en/docs/tutorials/delivery-promise) feature on headless stores, using [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) with additional facets for this purpose.
 
 Only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
 
@@ -58,7 +56,7 @@ The delivery promise information parameters are **required** to filter product a
 | :---- | :---- | :---- |
 | `shipping` (facet) | Shipping method. It must always be combined with the delivery promise information parameters. Possible values: `pickup-in-point`, `delivery`, `pickup-all`, `pickup-nearby` | `/shipping/pickup-in-point/?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
 | `pickupPoint` (query string) | Pickup point ID to filter by a specific pickup point. This is used only with the `shipping/pickup-in-point` facet, besides the required parameters. | `/shipping/pickup-in-point?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16&pickupPoint=vtex-botafogo` |
-| `delivery-options` (facet) | [Delivery Option](https://help.vtex.com/en/docs/tutorials/delivery-options-beta) ID or IDs to be filtered. The ID can be obtained in the VTEX Admin, at **Shipping > Delivery Options**. It must always be combined with the delivery promise information parameters. Multiple entries of this filter can be used in the request to search for multiple Delivery Options. | **`/delivery-options/express-option-id`**`?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
+| `delivery-options` (facet) | [Delivery Option](https://help.vtex.com/en/docs/tutorials/delivery-options) ID or IDs to be filtered. The ID can be obtained in the VTEX Admin, at **Shipping > Delivery Options**. It must always be combined with the delivery promise information parameters. Multiple entries of this filter can be used in the request to search for multiple Delivery Options. | **`/delivery-options/express-option-id`**`?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
 | `dynamic-estimate` (facet) | The Dynamic Estimate filter selects Delivery Options that can meet the requested delivery or pickup timeframe. It must always be used together with the delivery promise information parameters and `shipping`. Possible values: `same-day`, `next-day`. It dynamically identifies which Delivery Options for the given delivery promise information and `shipping` facet can meet the requested timeframe, and then filters the search as if those Delivery Options had been manually passed as filters. | `/shipping/delivery/dynamic-estimate/same-day?deliveryZonesHash=0ecce2ea9d3b57d4ef994efba4fe3ee9&pickupPointsHash=0b79d8a9979a5f4f5f30a7849da5da16` |
 | `hideUnavailableItems` (query string) | Controls whether the search returns only available products or both available and unavailable ones. When set to `true`, only products in stock are returned; when set to `false`, the API includes unavailable products as well. A product is considered unavailable when `availableQuantity = 0`, while `availableQuantity = 10000` indicates that the product is available.<br><br>**When filtering by shipping method (`shipping`), Delivery Options (`delivery-options`), or Dynamic Estimates (`dynamic-estimate`), this parameter must be set to `true`.** Otherwise, products that are unavailable for the selected filter may be displayed.<br><br>When filtering only by ZIP code (`zip-code`) without any of the above filters, retailers may choose to show unavailable items for commercial reasons (for example, to signal that they carry those products even if temporarily out of stock). This facet also allows merchants to expose a shopper-facing filter such as "show only in-stock products."<br><br>If `hideUnavailableItems` is omitted, products with the `ShowIfNotAvailable` property set to `true` in the Catalog may appear even if unavailable. Learn more about the `ShowIfNotAvailable` property in the [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api?endpoint=get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-). | `?hideUnavailableItems=true` |
 
@@ -161,8 +159,8 @@ Delivery Options  are the set of choices a merchant provides to shoppers, descri
 
 Before you can display Delivery Option filters, it is necessary to:
 
-* Enable the Delivery Options feature by contacting [our Support](https://help.vtex.com/en/support).  
-* Create the Delivery Options for your store in the VTEX Admin following the instructions in the [Delivery Options](https://help.vtex.com/docs/tutorials/delivery-options-beta) guide.
+* Review the Delivery Options in the [Delivery Promise activation flow](https://help.vtex.com/en/docs/tutorials/activate-delivery-promise) in the VTEX Admin.
+* Create the Delivery Options for your store in the VTEX Admin following the instructions in the [Delivery Options](https://help.vtex.com/en/docs/tutorials/delivery-options) guide.
 
 To filter by a Delivery Option, use the `delivery-options` parameter. Its value must be the ID for one of the Delivery Options configured on your store.
 
@@ -220,11 +218,9 @@ While previewing, the response returns `deliveryPromiseEnabled: false`.
 
 >⚠️ The `dpPreview` parameter is only supported in Intelligent Search API v1. It isn't available in [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api).
 
-Once you finish testing, contact [our Support](https://support.vtex.com/hc/en-us) team to apply Delivery Promise in production. From that point on, remove the `dpPreview` parameter from your requests. The response will return `deliveryPromiseEnabled: true`.
+Once you finish testing, publish Delivery Promise to production in the VTEX Admin, at **Storefront > Delivery Promise**, following the [activation flow](https://help.vtex.com/en/docs/tutorials/activate-delivery-promise). From that point on, remove the `dpPreview` parameter from your requests. The response will return `deliveryPromiseEnabled: true`.
 
 ## Implementing sidebar filters
-
->⚠️ The delivery promise filters are part of a beta feature and may be subject to breaking changes. If you choose to customize this functionality, ensure your implementation can adapt to updates.
 
 In headless implementations, you must manually retrieve and render filters using VTEX Intelligent Search APIs. For example, inside a filter sidebar, where you want users to refine results based on shipping method or pickup location.
 
