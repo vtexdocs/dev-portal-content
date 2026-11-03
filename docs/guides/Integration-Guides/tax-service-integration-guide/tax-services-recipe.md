@@ -50,7 +50,7 @@ When implementing a tax integration app, there are three types of operations tha
 
 - Commit the order taxes based on a logic regarding the order status changing
 
-> It's the same route that is on the `hooks` object on the provider's response to the Checkout API after calculating the taxes.
+> ℹ️ It's the same route that is on the `hooks` object on the provider's response to the Checkout API after calculating the taxes.
 
 It is important to emphasize that, for the last two routes to work, you must have the tax service configured in your account. This can be done by using the first endpoint described above. Basically, in this step, one is going to:
 
