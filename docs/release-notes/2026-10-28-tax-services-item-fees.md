@@ -14,7 +14,7 @@ tags:
 
 ## What has changed?
 
-Until now, the tax provider response only accepted a `taxes` array. Any charge returned by the provider was handled as a tax, even when it wasn't a fiscal or government charge. For example, a deposit for returnable packaging that varies by state had to be returned as a tax, which added it to the tax total and resulted in incorrect fiscal values.
+Until now, the tax provider response has only accepted a `taxes` array. Any charge returned by the provider was handled as a tax, even when it wasn't a fiscal or government charge. For example, a deposit for returnable packaging that varies by state had to be returned as a tax, which added it to the tax total and resulted in incorrect fiscal values.
 
 The tax provider can now also return a `fees` array for each item, at the same level as `taxes` and with the same fields. When the provider returns fees, Checkout:
 
@@ -25,4 +25,4 @@ The tax provider can now also return a `fees` array for each item, at the same l
 
 No action is required. The `fees` array is optional, and integrations that only return `taxes` work as before.
 
-If your tax provider calculates charges that aren't taxes, you can return them in the `fees` array. For the full response format and examples, see [Item fees](https://developers.vtex.com/docs/guides/tax-services-specification#item-fees) in the Tax services specification.
+If your tax provider calculates charges that aren't taxes, you can return them in the `fees` array. For the full response format and examples, see [Item fees](https://developers.vtex.com/docs/guides/tax-services-specification#item-fees) in the Tax services specification guide.

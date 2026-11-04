@@ -8,11 +8,11 @@ excerpt: "Understand the required request and response format for integrating ex
 
 ---
 
-In synchronous integration, VTEX’s [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) triggers and sends a request to the external tax service API whenever there are changes to a shopper’s cart, such as adding or removing items.
+In synchronous integration, VTEX's [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api) triggers a request to the external tax service API whenever a shopper's cart changes, such as adding or removing items.
 
-To learn more about how to implement a client to connect your tax calculation provider to VTEX’s APIs, check the [Tax Service recipe](https://developers.vtex.com/docs/guides/tax-services-recipe) and [example](https://developers.vtex.com/docs/guides/tax-services-reference-implementation).
+To learn more about how to implement a client to connect your tax calculation provider to VTEX's APIs, check the [Tax Service recipe](https://developers.vtex.com/docs/guides/tax-services-recipe) and [example](https://developers.vtex.com/docs/guides/tax-services-reference-implementation).
 
->⚠️ The timeout for the request is five seconds. There is no retry in case of timeout. If the external service that responds to the request times out constantly, the store will not be able to finish the order. If this integration is active, it applies to all stores in that account.
+> ⚠️ The timeout for the request is five seconds. There is no retry on a timeout. If the external service that responds to the request repeatedly times out, the store won't be able to complete the order. If this integration is active, it applies to all stores in that account.
 
 ## Tax integration via Checkout API
 
@@ -24,7 +24,7 @@ Check the flow of `orderForm` configuration below:
 
 ### Get `orderForm`
 
-To activate the tax integration, first it is necessary to get the current `orderForm` settings using the [Get `orderForm` configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm?endpoint=get-/api/checkout/pvt/configuration/orderForm) endpoint.
+To activate the tax integration, first obtain the current `orderForm` settings using the [Get `orderForm` configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm?endpoint=get-/api/checkout/pvt/configuration/orderForm) endpoint.
 
 In the endpoint response, the `taxConfiguration` object has the tax information that must be updated, as in the example below:  
 
@@ -52,7 +52,7 @@ In the `taxConfiguration` object, it is important to update the following fields
 | `authorizationHeader`              | String that the Checkout will use in the `Authorization` header of calls to the external tax calculation API. This field can be used to define the access credentials for this API. |
 | `isMarketplaceResponsibleForTaxes` | Boolean that indicates whether the marketplace is responsible for calculating taxes for the products (`true`) or if the responsibility lies with the seller (`false`).              |
 
->⚠️ The `isMarketplaceResponsibleForTaxes` feature is not compatible with stores that have [Multilevel Omnichannel Inventory](https://help.vtex.com/en/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) implemented.
+> ⚠️ The `isMarketplaceResponsibleForTaxes` feature isn't compatible with stores that have [Multilevel Omnichannel Inventory](https://help.vtex.com/docs/tutorials/multilevel-omnichannel-inventory) implemented.
 
 Here is an example of the `taxConfiguration` object with the expected information:
 
@@ -200,7 +200,7 @@ This body has the main fields:
 
 ### Tax provider response to the request
 
-In response to the request sent by Checkout, it is expected that the external tax provider API returns an array of products, each with its own array of taxes and, optionally, an array of fees. See the example below:  
+In response to the request sent by Checkout, the external tax provider API is expected to return an array of products, each with its own array of taxes and, optionally, an array of fees. See the example below:  
 
 ```json
 [
@@ -229,13 +229,13 @@ The following JSON represents a list of taxes associated with a particular item,
 | `id`          | string | Request item index, which means the SKU's position in the `items` array sent by the request body.                                         |
 | `taxes`       | array  | List of all the tax types for an SKU.                                                                                                     |
 | `fees`        | array  | List of the fees for an SKU, such as regulatory or commercial charges that aren't taxes. Optional. Learn more in [Item fees](#item-fees). |
-| `name`        | string | Tax name that will appear in the checkout.                                                                                                |
-| `description` | string | Informative field, which does not appear on the storefront.                                                                               |
+| `name`        | string | Tax or fee name that will appear in the checkout.                                                                                         |
+| `description` | string | Informative field, which doesn't appear on the storefront.                                                                                |
 | `value`       | number | Absolute numeric value that will be added to the original price.                                                                          |
 
 In the example above, the only item in the items array has a cost of `10`, and, including the calculated taxes returned by the tax calculation tool, the total value would be `10 + 3.48 + 22 = 35.48`.
 
->ℹ️ If no taxes apply to the items in the order, the expected response is an empty array (`[]`).
+> ℹ️ If no taxes apply to the items in the order, the expected response is an empty array (`[]`).
 
 For the Checkout API to interpret the request body, the `Content-Type` must be set to `application/vnd.vtex.checkout.minicart.v1+json`.  
 
@@ -243,9 +243,9 @@ For the Checkout API to interpret the request body, the `Content-Type` must be s
 
 Besides taxes, the tax provider can optionally return a `fees` array for each item, at the same level as `taxes`. Use `fees` to separate charges that aren't taxes from the fiscal taxes applied to the item.
 
-Taxes are fiscal or government charges that are included in invoices and tax remittance. Fees are additional charges, usually regulatory or commercial, that shouldn't go through the same fiscal flow. For example, a deposit for returnable packaging that varies by state is a fee, not a tax. Without the `fees` array, the provider has to return this type of charge as a tax, which adds it to the tax total and results in incorrect fiscal values.
+Taxes are fiscal or government charges that are included on invoices and in tax remittances. Fees are additional charges, usually regulatory or commercial, that shouldn't go through the same fiscal flow. For example, a deposit for returnable packaging that varies by state is a fee, not a tax. Without the `fees` array, the provider must return this charge as a tax, which adds it to the tax total and results in incorrect fiscal values.
 
-The `fees` array is optional. If the provider doesn't return it, Checkout behaves as it does with taxes only, and existing integrations don't need to change.
+> ℹ️ The `fees` array is optional. If the provider doesn't return it, Checkout behaves as it does with taxes only, and existing integrations don't need to change.
 
 When the provider returns `fees`, Checkout handles them as follows:
 
@@ -263,7 +263,7 @@ Each object in the `fees` array has the same fields as the objects in the `taxes
                 "name": "STATE SALES TAX",
                 "description": "Sales tax applied to the item.",
                 "rate": 0.04,
-                "value": 3.48,
+                "value": 0.4,
                 "jurisCode": "36",
                 "jurisType": "State",
                 "jurisName": "NEW YORK"
@@ -295,7 +295,7 @@ Each object in the `fees` array has the same fields as the objects in the `taxes
 | `jurisType`   | string | Type of jurisdiction that applies to the calculation. Optional.     |
 | `jurisName`   | string | Name of the jurisdiction that applies to the calculation. Optional. |
 
-In the example above, considering an item that costs `10`, the total value would be `10 + 3.48 + 0.05 = 13.53`. The tax value (`3.48`) is added to the `CustomTax` totalizer, and the fee value (`0.05`) is added to the `Fee` totalizer.
+In the example above, considering an item that costs `10`, the total value would be `10 + 0.4 + 0.05 = 10.45`. The tax value (`0.4`) is added to the `CustomTax` totalizer, and the fee value (`0.05`) is added to the `Fee` totalizer.
 
 #### Jurisdiction fields
 
