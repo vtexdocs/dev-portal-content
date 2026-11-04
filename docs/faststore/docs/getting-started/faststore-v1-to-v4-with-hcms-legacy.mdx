@@ -1,5 +1,5 @@
 ---
-title: "Migrating from FastStore v1 to v4 keeping Headless CMS (Legacy)"
+title: "Migrating from FastStore v1 to v4 with Headless CMS (Legacy)"
 hidden: true
 createdAt: "2026-11-04T00:00:00.000Z"
 ---
@@ -18,7 +18,7 @@ For an overview of the full migration process and how to confirm your project ru
 
 The migration happens in four phases. The key idea is that v1 and v4 run side by side in the same account while traffic moves gradually from one to the other.
 
-- **[Preparation](#preparation):** Create the v4 project, make the Headless CMS (Legacy) content work on v4, and set up an automation that rebuilds v4 whenever content is published.
+- **[Preparation](#preparation):** Create the v4 repository, make the Headless CMS (Legacy) content work on v4, and set up an automation that rebuilds v4 whenever content is published.
 - **[Configuration](#configuration):** Install the WebOps GitHub App and ask VTEX to activate traffic split with 0% on v4.
 - **[Gradual rollout](#gradual-rollout):** Validate v4 and increase its share of the traffic until it reaches 100%.
 - **[Post-migration](#post-migration):** VTEX ends the traffic split and you retire the v1 repository.
@@ -31,16 +31,20 @@ The following table shows what happens in each version during this phase:
 
 | **Step** | **FastStore v1 (current repository)** | **FastStore v4 (new repository, same account)** |
 | --- | --- | --- |
-| [1. Create the project](#step-1---create-the-v4-project) | No changes. The live store stays on v1 with no new development. | Create the v4 project in your GitHub organization and make sure the main branch builds. |
+| [1. Create the repository](#step-1---create-the-v4-repository) | No changes. The live store stays on v1 with no new development. | Create the v4 repository in your GitHub organization and make sure the main branch builds. |
 | [2. Sync Headless CMS (Legacy) content](#step-2---sync-the-headless-cms-legacy-content) | Headless CMS (Legacy) content remains as is. | Confirm the existing content renders correctly on v4, and fix any incompatibilities. |
 | [3. Rebuild v4 on publish](#step-3---rebuild-v4-when-content-is-published) | The Headless CMS (Legacy) keeps building v1 through the current build URL. | Set up your own automation that triggers a v4 build whenever content is published. |
 | [4. Domains](#step-4---configure-the-correct-domains-in-discoveryconfigjs) | No changes. | Review `discovery.config.js` so it has the correct account and domains. |
 
-### Step 1 - Create the v4 project
+### Step 1 - Create the v4 repository
 
-Create the v4 project in your GitHub organization and make sure its main branch builds without errors. After WebOps is configured, every commit to the main branch creates a production deploy.
+Create the v4 repository in your GitHub organization and make sure its main branch builds without errors. Don't start the WebOps onboarding in the VTEX Admin. In this scenario, VTEX configures WebOps from the ticket you open in [step 5](#step-5---install-the-webops-github-app-and-open-a-ticket). After that, every commit to the main branch creates a production deploy.
 
-Follow the guide [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project).
+{/* PERGUNTA PARA A ENGENHARIA (step 1): O que o lojista deve fazer exatamente neste passo para ter o "repo v4 criado, com a branch principal buildando sem erro" (texto do documento fonte), antes de a VTEX configurar o WebOps pelo ticket (step 5)?
+(1) O repositório deve conter o código completo do projeto v4? Se sim, de onde vem esse código: de um template, do repositório v1 atualizado ou de outra origem?
+(2) Ou basta um repositório vazio, que a VTEX conecta ao projeto do Headless CMS (Legacy) ao configurar o WebOps?
+(3) Como a branch principal "builda" antes de o WebOps estar configurado: build local, CI ou outro meio?
+(4) Qual guia deve ser referenciado aqui? O guia "Starting a new FastStore project" (getting-started-2-starting-the-project) descreve o onboarding do WebOps pelo Admin, que neste cenário não deve ser usado (o onboarding só oferece o novo CMS, sem opção para o Headless CMS (Legacy)). Por isso o link foi removido. Confirmar se existe uma forma de seguir só a parte de criação do repositório. */}
 
 ### Step 2 - Sync the Headless CMS (Legacy) content
 
