@@ -15,6 +15,7 @@ Authentication is a crucial aspect of API integrations, backend, and frontend ap
 - [API authentication using application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys)
 - [API authentication using user tokens](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens)
 - [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens)
+- [VTEX OAuth provider](https://developers.vtex.com/docs/guides/vtex-oauth-provider)
 
 There are different contexts in which authentication is required in the regular functioning of a VTEX store. Below are some example use cases and the recommended authentication methods.
 
