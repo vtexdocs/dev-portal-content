@@ -505,7 +505,7 @@ Consider the following when handling these errors:
 - The error code identifies the specific failure, but the error message contains a generic, localized message. Internal seller error codes, such as `FMT` codes, aren't exposed in the API response. To handle errors programmatically, use the error code value instead of the message text.
 - When the seller error corresponds to an existing Checkout error, the API returns that code instead of an `ORD015` code. For example, item unavailability errors return `ORD013`, and duplicate order errors return `CHK0085`.
 
->ℹ️ The error codes `ORD015.7` to `ORD015.17` are being gradually rolled out. While they are not active for a store, these errors return `ORD015.5` or `ORD015.6`.
+> ℹ️ The error codes `ORD015.7` to `ORD015.17` are being gradually rolled out. While they aren't active for a store, these errors return `ORD015.5` or `ORD015.6`.
 
 ## orderForm Checkout Error Codes
 
