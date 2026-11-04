@@ -69,6 +69,8 @@ Replace `{presignedUrl}` with the value returned in `url`, and `{batchId}` with 
 
 > ⚠️ The CSV file name must match the `batchId` returned in the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) response (for example, `550e8400-e29b-41d4-a716-446655440000.csv`). Use the HTTP method (`PUT`) and headers (`Content-Type: text/csv`) returned in the `upload` object.
 
+> ⚠️ The CSV file must be no larger than 500 MB. If the file exceeds this size, the confirm request rejects it and the batch is not processed.
+
 ### CSV file template
 
 The CSV file must contain one row per SKU, warehouse, and account combination you want to update. Use the column headers below, in this order:
@@ -95,11 +97,13 @@ item_id,account_name,container_id,quantity,unlimited,lead_time
 
 ## Confirm the batch
 
-After uploading the CSV to S3, call the [Confirm batch inventory](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch/-batchId-/commit) endpoint, passing the `batchId` as a path parameter. This request confirms that the upload is complete and triggers the asynchronous processing of the batch.
+After uploading the CSV to S3, call the [Confirm batch inventory](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch/-batchId-/commit) endpoint, passing the `batchId` as a path parameter. This request confirms that the upload is complete and places the batch in the processing queue.
 
 >⚠️ You have 30 minutes to confirm the batch after uploading the CSV file, otherwise the upload will expire and you will have to start the process again.
 
 A successful commit returns an HTTP `202 Accepted` response, and the batch transitions to the `QUEUED` status. From this point on, processing is handled asynchronously by VTEX, and you can use the status endpoint to track progress.
+
+VTEX processes one batch at a time per account. If you confirm another batch for the same account while one is still `QUEUED` or `PROCESSING`, the new batch is accepted and stays in `QUEUED`. It starts only after the current batch reaches a terminal status.
 
 >⚠️ If you call this endpoint twice in parallel for the same `batchId`, the second request will receive a `423 Locked` response. Wait for the first commit to complete before retrying.
 
@@ -143,7 +147,7 @@ The `status` field can return the following values:
 | **Status** | **Description** |
 | :--- | :--- |
 | `AWAITING_UPLOAD` | Batch created, waiting for CSV upload. |
-| `QUEUED` | Upload committed, waiting to begin processing. |
+| `QUEUED` | Upload committed, waiting for its turn. Only one batch per account is processed at a time. Additional batches stay in this status until the current one finishes. |
 | `PROCESSING` | Batch is currently being processed. |
 | `COMPLETED` | All rows processed successfully. |
 | `COMPLETED_WITH_ERRORS` | Processing finished with some row errors. |
@@ -215,6 +219,7 @@ The error report distinguishes between two categories of errors:
 
 - **Reuse the same `batchId`:** Always use the `batchId` returned by the Create batch inventory job endpoint when uploading the CSV, committing the batch, polling its status, and retrieving errors.
 - **Respect the upload window:** The pre-signed upload URL expires 30 minutes after creation. If it expires before the upload is complete, create a new batch.
+- **Keep each CSV within 500 MB:** Files larger than 500 MB are rejected when the batch is confirmed. Split the update into more than one file. You can confirm the next batch without waiting. Extra batches are queued and processed one at a time per account.
 - **Avoid concurrent commits:** Do not commit the same batch in parallel. A second commit while one is in progress returns a `423 Locked` response.
 - **Use a reasonable polling interval:** When monitoring large batches, poll the status endpoint at intervals proportional to the batch size to avoid unnecessary requests.
 - **Fix deterministic errors at the source:** If the error report shows deterministic errors, correct them in your source data and submit a new batch instead of retrying the same file.
