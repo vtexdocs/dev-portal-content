@@ -215,6 +215,7 @@ The error report distinguishes between two categories of errors:
 
 ## Best practices
 
+- **Send only inventory deltas:** For routine updates, include only the SKU, warehouse, and account combinations that changed. Sending every inventory record on each batch, including rows that are already up to date, is not recommended. The same practice applies to inventory updates made through the per-SKU Logistics API.
 - **Reuse the same `batchId`:** Always use the `batchId` returned by the Create batch inventory job endpoint when uploading the CSV, committing the batch, polling its status, and retrieving errors.
 - **Respect the upload window:** The pre-signed upload URL expires 30 minutes after creation. If it expires before the upload is complete, create a new batch.
 - **Prefer one large batch over many small ones:** Because the account processes one batch at a time, a single larger CSV is usually faster than several smaller uploads.
