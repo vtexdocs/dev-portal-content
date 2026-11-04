@@ -90,8 +90,15 @@ If the user selects to deny access, the browser calls `GET /oauth/consent/deny` 
 
 During the flow, the user leaves your client, interacts with VTEX pages, and returns to your client:
 
-1. **Login:** if the user doesn't have an active VTEX session, VTEX shows a login screen. The user signs in on VTEX and never enters their password in your client.
+1. **Login:** if the user doesn't have an active VTEX session, VTEX shows the VTEX Admin login screen, where the user enters their email and selects **Continue**, or signs in with Google. The user signs in on VTEX and never enters their password in your client.
 2. **Consent:** VTEX shows a consent screen titled **Authorize Access**, which says that an application is requesting access and lists what it needs to do: identify the user by reading their profile and email, know which resources the user can access by reading their roles and assigned resources, and act on the user's behalf using those resources. The screen doesn't show your client's name. If the user has the Super Admin role, the screen also warns that the application will act across all resources and requires the user to confirm before allowing access. The user then selects **Allow** or **Cancel**. These screens are provided by VTEX and are the same for every client, so you can't customize them. If the user already allowed your client, they don't need to consent again.
+
+   ![VTEX consent screen titled Authorize Access, listing the permissions the application requests, with Cancel and Allow buttons](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-oauth-provider-consent.png)
+
+   For users with the Super Admin role, the screen includes a warning and a checkbox that the user must select to enable the **Allow** button.
+
+   ![VTEX consent screen for a Super Admin user, with a warning, an agreement checkbox, and the Allow button disabled](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-oauth-provider-consent-super-admin.png)
+
 3. **Return to your client:** VTEX redirects the user to your `redirect_uri`. If the user allowed access, the URL includes the `code` and the `state`. If the user denied access, it includes `error=access_denied` and the `state`.
 
 Your client must handle both outcomes. For example, when the user denies access, show a message explaining that the client can't continue without permission, and offer to try again.
