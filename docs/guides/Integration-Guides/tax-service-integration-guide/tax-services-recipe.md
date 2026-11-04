@@ -3,7 +3,8 @@ title: "Recipe"
 slug: "tax-services-recipe"
 hidden: false
 createdAt: "2020-09-01T16:36:08.632Z"
-updatedAt: "2021-02-09T15:24:50.558Z"
+updatedAt: "2026-10-27T12:00:00.000Z"
+excerpt: "Learn how to build a tax service app with clients, routes, and parsers that connect VTEX Checkout to an external tax provider."
 ---
 ## Clients
 
@@ -26,7 +27,10 @@ This [tax protocol example](https://github.com/vtex-apps/tax-protocol-example) i
 
 - `TaxProvider`: used to connect with the provider's external API;
 
-- `VtexCommerce`: a basic external client that can be used as the class that can be inherited to develop other clients that connect to VTEX API.
+- `Checkout`: Configures the tax service in Checkout.
+- `Logistics`: Fetches dock information by ID through a single method.
+- `TaxProvider`: Connects to the provider's external API.
+- `VtexCommerce`: Defines a basic external client that other clients inherit to connect to the VTEX API.
 
 ## Routes
 
@@ -38,27 +42,27 @@ When implementing a tax integration app, there are three types of operations tha
 
 - Configure the tax integration by changing the order form configuration - activate or deactivate.
 
-> Private route that configures the tax service for a specific account.
+> ℹ️ Private route that configures the tax service for a specific account.
 
 - Simulate the taxes to be applied to a cart and return this information to the Checkout in a specific format.
 
-> This route will be the one that is going to be registered on the Order Form Configuration.
+> ℹ️ This route will be the one that is going to be registered on the Order Form Configuration.
 
 - Commit the order taxes based on a logic regarding the order status changing
 
-> It's the same route that is on the `hooks` object on the provider's response to the Checkout API after calculating the taxes.
+> ℹ️ It's the same route that is on the `hooks` object on the provider's response to the Checkout API after calculating the taxes.
 
-It is important to emphasize that, for the last two routes to work, you must have the tax service configured in your account. This can be done by using the first endpoint described above. Basically, in this step, one is going to:
+The simulate and commit routes work only after you configure the tax service in your account with the configuration route. To set up the routes:
 
-1. Define the routes in the `service.json` file;
-2. Create handlers for those routes;
+1. Define the routes in the `service.json` file.
+2. Create handlers for those routes.
 3. Use the handlers on the `node/index.ts` file.
 
 ## Parsers
 
-As a way to simplify the logic behind the handlers that need to exist when developing integration with a tax service, the entire code logic needed to parse the payloads to a specific format can be implemented as a parser. This can be necessary because both the external provider API and Checkout API expect specific payload formats.
+To simplify the logic behind the handlers required when developing an integration with a tax service, the entire code that parses payloads into a specific format can be implemented as a parser. This is necessary because both the external provider API and the Checkout API require specific payload formats.
 
-There are a lot of ways of doing it, but this documentation focuses on how it was made in the Tax Protocol Example that you can find on Github.
+There are many ways to do it, but this documentation focuses on how it was implemented in the Tax Protocol Example on GitHub.
 
 ### Parsing data from VTEX to provider
 
@@ -66,4 +70,6 @@ The external provider API will receive a POST request with a specifically format
 
 ### Parsing data from provider to VTEX
 
-Considering the request done by the provider to the VTEX Checkout API, it is also possible to implement a parser in order to put the payload in the format that the checkout expects.
+Considering the response the provider returns to the VTEX Checkout API, it's also possible to implement a parser to format the payload as checkout expects.
+
+Besides the `taxes` array, this payload can include an optional `fees` array for each item, used for charges that aren't taxes, such as regulatory or commercial fees. Learn more in [Item fees](https://developers.vtex.com/docs/guides/tax-services-specification#item-fees).
