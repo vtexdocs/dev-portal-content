@@ -176,6 +176,8 @@ Wait for VTEX to confirm in the ticket. VTEX configures WebOps pointing to your 
 
 ## Gradual rollout
 
+{/* NOTA DE ESTRUTURA: Neste guia, o deploy e a validação da v4 em produção (step 6) ficam na fase Gradual rollout, e não em Configuration como no guia do CMS. Isso segue o documento fonte (Google Docs, "Migração FastStore v1 → v4 na mesma conta com traffic split"): na seção do Headless CMS (Legacy), o commit na main e a validação com ?ab_test=v2 (ações 6 e 7) pertencem à Fase 3 (virada gradual), e a Fase 2 (configuração) termina na confirmação da VTEX. Na seção do novo CMS, a validação (ação 4) pertence à Fase 2. Possível motivo (dedução, não está na fonte): aqui o WebOps é configurado pela VTEX e o primeiro deploy depende de um commit do cliente depois da confirmação, enquanto no CMS o deploy sai do onboarding feito pelo cliente na fase de configuração. Não alinhar os dois guias sem confirmar com a engenharia. */}
+
 The following table shows what happens in each version during this phase:
 
 | **Step** | **FastStore v1 (current repository)** | **FastStore v4 (new repository, same account)** |
