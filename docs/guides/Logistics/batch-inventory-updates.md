@@ -20,7 +20,7 @@ This guide walks you through the end-to-end flow: creating a batch job, uploadin
 The integration involves four API endpoints and one direct upload to the pre-signed S3 URL returned by VTEX:
 
 1. **Create batch:** Call the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint to register a new batch. The response includes a `batchId` and a pre-signed S3 URL for the CSV upload.
-2. **Upload CSV:** Upload the CSV file directly to S3 using the pre-signed URL. This step does not go through the VTEX API.
+2. **Upload CSV:** Upload the CSV file directly to S3 using the pre-signed URL. This step does not go through the VTEX API. The file should be up to 500 MB.
 3. **Confirm batch:** Call the [Confirm batch inventory](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch/-batchId-/commit) endpoint to confirm the upload and queue the batch for processing.
 4. **Monitor processing:** Poll the [Get batch inventory status](https://developers.vtex.com/docs/api-reference/logistics-api#get-/availability/v1/inventory/batch/-batchId-/status) endpoint until the batch reaches a terminal status.
 5. **Download error report (optional):** If the status response indicates `errorCount > 0`, call the [Get batch inventory errors](https://developers.vtex.com/docs/api-reference/logistics-api#get-/availability/v1/inventory/batch/-batchId-/errors) endpoint to retrieve a pre-signed URL for the error CSV.
@@ -68,8 +68,6 @@ curl -X PUT \
 Replace `{presignedUrl}` with the value returned in `url`, and `{batchId}` with the `batchId` from the same response. A successful upload returns an HTTP `200 OK` response from S3.
 
 > ⚠️ The CSV file name must match the `batchId` returned in the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) response (for example, `550e8400-e29b-41d4-a716-446655440000.csv`). Use the HTTP method (`PUT`) and headers (`Content-Type: text/csv`) returned in the `upload` object.
-
-> ⚠️ The CSV file must be no larger than 500 MB.
 
 ### CSV file template
 
