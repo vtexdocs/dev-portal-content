@@ -20,7 +20,7 @@ This guide walks you through the end-to-end flow: creating a batch job, uploadin
 The integration involves four API endpoints and one direct upload to the pre-signed S3 URL returned by VTEX:
 
 1. **Create batch:** Call the [Create batch inventory job](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch) endpoint to register a new batch. The response includes a `batchId` and a pre-signed S3 URL for the CSV upload.
-2. **Upload CSV:** Upload the CSV file directly to S3 using the pre-signed URL. This step does not go through the VTEX API.
+2. **Upload CSV:** Upload the CSV file directly to S3 using the pre-signed URL. This step does not go through the VTEX API. The CSV file size must not exceed 500 MB.
 3. **Confirm batch:** Call the [Confirm batch inventory](https://developers.vtex.com/docs/api-reference/logistics-api#post-/availability/v1/inventory/batch/-batchId-/commit) endpoint to confirm the upload and queue the batch for processing.
 4. **Monitor processing:** Poll the [Get batch inventory status](https://developers.vtex.com/docs/api-reference/logistics-api#get-/availability/v1/inventory/batch/-batchId-/status) endpoint until the batch reaches a terminal status.
 5. **Download error report (optional):** If the status response indicates `errorCount > 0`, call the [Get batch inventory errors](https://developers.vtex.com/docs/api-reference/logistics-api#get-/availability/v1/inventory/batch/-batchId-/errors) endpoint to retrieve a pre-signed URL for the error CSV.
@@ -100,6 +100,8 @@ After uploading the CSV to S3, call the [Confirm batch inventory](https://develo
 >⚠️ You have 30 minutes to confirm the batch after uploading the CSV file, otherwise the upload will expire and you will have to start the process again.
 
 A successful commit returns an HTTP `202 Accepted` response, and the batch transitions to the `QUEUED` status. From this point on, processing is handled asynchronously by VTEX, and you can use the status endpoint to track progress.
+
+VTEX processes one batch at a time per account. Additional batches are accepted and stay in `QUEUED` until the current one finishes.
 
 >⚠️ If you call this endpoint twice in parallel for the same `batchId`, the second request will receive a `423 Locked` response. Wait for the first commit to complete before retrying.
 
@@ -215,6 +217,7 @@ The error report distinguishes between two categories of errors:
 
 - **Reuse the same `batchId`:** Always use the `batchId` returned by the Create batch inventory job endpoint when uploading the CSV, committing the batch, polling its status, and retrieving errors.
 - **Respect the upload window:** The pre-signed upload URL expires 30 minutes after creation. If it expires before the upload is complete, create a new batch.
+- **Prefer one large batch over many small ones:** Because the account processes one batch at a time, a single larger CSV is usually faster than several smaller uploads.
 - **Avoid concurrent commits:** Do not commit the same batch in parallel. A second commit while one is in progress returns a `423 Locked` response.
 - **Use a reasonable polling interval:** When monitoring large batches, poll the status endpoint at intervals proportional to the batch size to avoid unnecessary requests.
 - **Fix deterministic errors at the source:** If the error report shows deterministic errors, correct them in your source data and submit a new batch instead of retrying the same file.
