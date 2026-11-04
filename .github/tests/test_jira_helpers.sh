@@ -65,5 +65,76 @@ assert_eq "$code" "201" "jira_curl retries then succeeds"
 assert_eq "$(cat "$JIRA_TEST_CURL_COUNT")" "3" "jira_curl used 3 attempts"
 assert_eq "$(cat "$TMP/out.json")" '{"ok":true}' "jira_curl wrote body"
 
+# --- changelog field protection helpers ---
+_JIRA_AUTOMATION_ACCOUNT_ID=""
+cat >"$TMP/curl" <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+outfile=/dev/null
+url=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -o) outfile=$2; shift 2 ;;
+    http*) url=$1; shift ;;
+    *) shift ;;
+  esac
+done
+case "$url" in
+  */myself)
+    printf '{"accountId":"bot-account"}' >"$outfile"
+    printf '200'
+    ;;
+  */changelog*)
+    printf '%s' '{"startAt":0,"maxResults":100,"total":2,"values":[{"author":{"accountId":"bot-account"},"items":[{"field":"summary"}]},{"author":{"accountId":"human-account"},"items":[{"field":"summary"},{"field":"priority"}]}]}' >"$outfile"
+    printf '200'
+    ;;
+  *)
+    : >"$outfile"
+    printf '404'
+    ;;
+esac
+exit 0
+EOF
+chmod +x "$TMP/curl"
+export PATH="$TMP:$PATH"
+export LOC_JIRA_HTTP_RETRIES=1 LOC_JIRA_HTTP_RETRY_SLEEP=0
+_JIRA_AUTOMATION_ACCOUNT_ID=""
+
+assert_eq "$(jira_automation_account_id)" "bot-account" "myself accountId"
+assert_eq "$(jira_field_last_editor_account_id LOC-1 summary)" "human-account" "last summary editor"
+assert_eq "$(jira_field_writable_by_automation LOC-1 summary && echo yes || echo no)" no "summary protected after human edit"
+assert_eq "$(jira_field_writable_by_automation LOC-1 duedate && echo yes || echo no)" yes "duedate writable when never in changelog"
+
+_JIRA_AUTOMATION_ACCOUNT_ID=""
+cat >"$TMP/curl" <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+outfile=/dev/null
+url=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -o) outfile=$2; shift 2 ;;
+    http*) url=$1; shift ;;
+    *) shift ;;
+  esac
+done
+case "$url" in
+  */myself)
+    printf '{"accountId":"bot-account"}' >"$outfile"
+    printf '200'
+    ;;
+  */changelog*)
+    printf '%s' '{"startAt":0,"maxResults":100,"total":1,"values":[{"author":{"accountId":"bot-account"},"items":[{"field":"priority"}]}]}' >"$outfile"
+    printf '200'
+    ;;
+  *)
+    : >"$outfile"
+    printf '404'
+    ;;
+esac
+exit 0
+EOF
+assert_eq "$(jira_field_writable_by_automation LOC-1 priority && echo yes || echo no)" yes "priority writable when last editor is bot"
+
 rm -rf "$TMP"
 exit "$fail"
