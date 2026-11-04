@@ -217,6 +217,7 @@ The error report distinguishes between two categories of errors:
 
 - **Reuse the same `batchId`:** Always use the `batchId` returned by the Create batch inventory job endpoint when uploading the CSV, committing the batch, polling its status, and retrieving errors.
 - **Respect the upload window:** The pre-signed upload URL expires 30 minutes after creation. If it expires before the upload is complete, create a new batch.
+- **Prefer one large batch over many small ones:** Because the account processes one batch at a time, a single larger CSV is usually faster than several smaller uploads.
 - **Avoid concurrent commits:** Do not commit the same batch in parallel. A second commit while one is in progress returns a `423 Locked` response.
 - **Use a reasonable polling interval:** When monitoring large batches, poll the status endpoint at intervals proportional to the batch size to avoid unnecessary requests.
 - **Fix deterministic errors at the source:** If the error report shows deterministic errors, correct them in your source data and submit a new batch instead of retrying the same file.
