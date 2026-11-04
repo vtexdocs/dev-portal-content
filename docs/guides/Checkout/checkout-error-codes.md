@@ -6,7 +6,7 @@ createdAt: "2026-05-21T17:34:00.000Z"
 updatedAt: "2026-10-13T00:00:00.000Z"
 excerpt: "Reference of error codes returned by the Checkout API and orderForm, including their messages and meanings."
 ---
-In this guide, you will see information about errors that occurred in the Checkout [APIs](https://developers.vtex.com/docs/guides/checkout-error-codes#api-checkout-error-codes) and [orderForm](https://developers.vtex.com/docs/guides/checkout-error-codes#orderform-checkout-error-codes).
+In this guide, you'll see information about errors that occurred in the Checkout [APIs](https://developers.vtex.com/docs/guides/checkout-error-codes#api-checkout-error-codes) and [orderForm](https://developers.vtex.com/docs/guides/checkout-error-codes#orderform-checkout-error-codes).
 
 ## API Checkout Error Codes
 
