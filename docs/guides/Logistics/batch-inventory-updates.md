@@ -215,6 +215,7 @@ The error report distinguishes between two categories of errors:
 
 ## Best practices
 
+- **Send only the inventory records that changed:** Include in each batch only the SKU and warehouse combinations whose inventory changed. Avoid sending a full snapshot of your inventory on every update, since rows that are already up to date add processing time without changing the result. Follow the same practice when updating inventory through the per-SKU Logistics API.
 - **Reuse the same `batchId`:** Always use the `batchId` returned by the Create batch inventory job endpoint when uploading the CSV, committing the batch, polling its status, and retrieving errors.
 - **Respect the upload window:** The pre-signed upload URL expires 30 minutes after creation. If it expires before the upload is complete, create a new batch.
 - **Prefer one large batch over many small ones:** Because the account processes one batch at a time, a single larger CSV is usually faster than several smaller uploads.
