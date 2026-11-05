@@ -214,7 +214,21 @@ If you find issues in v4 after increasing its traffic, you can return the traffi
 
 | When | What to do |
 | --- | --- |
-| **During the split** (steps 7 to 9) | Reply to the ticket asking VTEX to return v4 to 0%. Traffic goes back to v1 without a new deploy. Each version has its own CMS, so you don't need to revert any CMS configuration, and Headless CMS (Legacy) keeps publishing to v1 normally. If the ticket was closed, open a new one and reference the previous ticket. After returning v4 to 0%, fix the issues in the v4 repository and validate again using `?ab_test=v2`, as described in [step 7](#step-7---validate-v4-in-production), before requesting a new increase. |
-| **After the split ends** (steps 10 and 11) | Don't take any action on your own. After [step 10](#step-10---ask-vtex-to-end-the-traffic-split), v1 no longer receives traffic, and you may have already retired it in [step 11](#step-11---retire-v1). Contact VTEX through a ticket before taking any action. |
+| [**During the split**](#rollback-during-the-split) (steps 7 to 9) | Ask VTEX to return v4 to 0% by replying to the ticket. Traffic goes back to v1 without a new deploy. |
+| [**After the split ends**](#rollback-after-the-split-ends) (steps 10 and 11) | Don't take any action on your own. Contact VTEX through a ticket before taking any action. |
 
-{/* Preciso confirmar com a engenharia: (1) se os intervalos de passos da tabela (7 a 9 e 10 e 11) e a frase introdutória estão corretos (não estão no documento fonte, que só diferencia "durante o split" e "depois do encerramento do split"); (2) se, após o rollback, a recomendação de corrigir a v4 e revalidar com ?ab_test=v2 antes de pedir novo aumento está correta (não está no documento fonte); (3) se abrir um novo ticket referenciando o anterior, caso o original tenha sido fechado, é o fluxo correto; (4) se o repositório v1 pode já ter sido arquivado após o fim do split e se isso afeta o rollback; (5) o prazo estimado para a VTEX concluir a mudança de porcentagem. */}
+{/* Preciso confirmar com a engenharia: os intervalos de passos da tabela (7 a 9 e 10 e 11) e a frase introdutória acima (não estão no documento fonte, que só diferencia "durante o split" e "depois do encerramento do split"). */}
+
+### Rollback during the split
+
+1. Reply to the ticket you opened in [step 5](#step-5---open-a-ticket-to-activate-traffic-split), asking VTEX to return v4 to 0%. If that ticket was closed, open a new one and reference the previous ticket.
+2. Wait for VTEX to confirm in the ticket. Traffic goes back to v1 without a new deploy. Each version has its own CMS, so you don't need to revert any CMS configuration, and Headless CMS (Legacy) keeps publishing to v1 normally.
+3. Fix the issues in the v4 repository and validate again using `?ab_test=v2`, as described in [step 7](#step-7---validate-v4-in-production), before requesting a new increase.
+
+{/* Preciso confirmar com a engenharia: (1) se abrir um novo ticket referenciando o anterior, caso o original tenha sido fechado, é o fluxo correto (não está no documento fonte); (2) se, após o rollback, a recomendação de corrigir a v4 e revalidar com ?ab_test=v2 antes de pedir novo aumento está correta (não está no documento fonte); (3) se aguardar a confirmação da VTEX no ticket antes de seguir é o fluxo esperado (não está no documento fonte); (4) o prazo estimado para a VTEX concluir a mudança de porcentagem. */}
+
+### Rollback after the split ends
+
+After [step 10](#step-10---ask-vtex-to-end-the-traffic-split), v1 no longer receives traffic, and you may have already retired it in [step 11](#step-11---retire-v1). Don't take any action on your own. Contact VTEX through a ticket before taking any action.
+
+{/* Preciso confirmar com a engenharia se o repositório v1 pode já ter sido arquivado após o fim do split e se isso afeta o rollback. */}
