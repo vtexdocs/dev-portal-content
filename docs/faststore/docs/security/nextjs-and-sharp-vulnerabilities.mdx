@@ -1,0 +1,134 @@
+---
+title: "Next.js and sharp security updates for FastStore stores"
+excerpt: "Understand the Next.js and sharp vulnerabilities that affect FastStore v2, v3, and v4, their practical impact on stores, and how to update your project."
+createdAt: "2026-11-05T00:00:00.000Z"
+updatedAt: "2026-11-05T00:00:00.000Z"
+---
+
+`@faststore/core` 4.x now depends on `next@^16.4.3` (and `@next/third-parties` in the same range). This version comes in through the core's own dependency, so your store doesn't need to declare `next` in `package.json` or use `resolutions` for it.
+
+`16.3.8` isn't enough. That version is still in the range of two critical vulnerabilities and one high-severity vulnerability, all fixed in `16.4.1`. The current patch of the 16.x line is **16.4.3**, which includes every fix described in this guide.
+
+In this guide, you'll learn what changed, whether these vulnerabilities actually expose a standard FastStore store, and what to do depending on your FastStore major version.
+
+## Instructions
+
+### v4 stores (Next 16)
+
+Update [`@faststore/cli`](https://developers.vtex.com/docs/guides/faststore/developer-tools-faststore-cli) to the release that sets the `^16.4.3` floor for `next`, and run the install. Until that release is available, the range published today (`^16.2.6`) already accepts `16.4.3`, so you can update your lockfile without adding `resolutions`.
+
+On Yarn 1, do the following:
+
+1. Delete the `next@^16...` block from your `yarn.lock` file.
+2. Run `yarn install`.
+
+> ⚠️ `yarn upgrade next` doesn't work for this. Yarn 1 doesn't update transitive dependencies through that command.
+
+To confirm the update, run:
+
+```bash
+yarn why next
+```
+
+The dependency tree must show a single version, `16.4.3` or newer within the 16.x line, coming from `@faststore/core`.
+
+If your store added `resolutions` or `overrides` for `next`, remove them. Otherwise, your store stays pinned to the old version and doesn't receive the new floor set by the core.
+
+`@faststore/core` and `@faststore/cli` now declare Node `>= 20.9.0`, the minimum required by Next 16.4. In WebOps, v4 stores already build on Node 24.
+
+### v2 (Next 12) and v3 (Next 13) stores
+
+There's no version of Next 12 or Next 13 that fixes these vulnerabilities. See [v2 and v3 stores](#v2-and-v3-stores) below.
+
+## Impact on FastStore stores
+
+FastStore uses the **Pages Router**, with `next build --webpack`. The core doesn't use the App Router, Server Actions, `use cache` (Cache Components), or `next/og`. Product and CMS images are served directly from `{account}.vtexassets.com` through the core's own loader, without going through Next's image optimizer. If your store overrides this configuration (for example, with `hostname: '**'` in `remotePatterns`, or with a custom `loader`), you need to replace that list with the hosts you actually use and trigger a new build in WebOps. Stores published on VTEX run on Linux.
+
+Because of this, most of the critical and high-severity advisories don't have an exploitation path in a standard FastStore store. The advisories themselves scope this out:
+
+- The RCE in `use cache` requires "App router with Cache Component" and a `use cache` function that returns typed arrays ([GHSA-673q-mjm6-r5xr](https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr)). The advisory still recommends updating even if your store doesn't have functions like that.
+- The Server Actions DoS advisory states: "Applications using Pages Router or not using Server Actions are not vulnerable" ([GHSA-p3m5-59mp-jv5r](https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r)).
+- The middleware bypass affects applications "using App Router built with Turbopack" with a single locale ([GHSA-6gpp-xcg3-4w24](https://github.com/vercel/next.js/security/advisories/GHSA-6gpp-xcg3-4w24)). The core's `proxy.ts` runs on the Pages Router with webpack.
+
+| Advisory surface | In a FastStore store |
+| --- | --- |
+| App Router, Server Actions, `use cache` | Not part of the core. Only applies to stores that added the App Router on their own |
+| `next/og` (`ImageResponse`) | The core doesn't generate OG images |
+| RCE on Windows servers | Stores on VTEX run on Linux |
+| Image Optimization (`/_next/image`) with SVG or AVIF | The core uses `loader: 'custom'` and doesn't call `/_next/image`. When the route does respond, the default `remotePatterns` only accepts `{account}.vtexassets.com` origins. If your store overrode `images` in `next.config.js` with broad origins (such as `hostname: '**'`), that restriction doesn't apply, and these advisories gain an exploitation path |
+| Middleware / proxy bypass | Requires App Router with Turbopack. The core uses `proxy.ts` (password protection and localization) on the Pages Router with webpack |
+| SSRF in rewrites with a request-controlled destination | Rewrites come from `discovery.config` and are static |
+| Cache poisoning on SSG/ISR pages | The closest item to the store's model, since it generates static pages. Medium severity, fixed in 16.3.8 |
+
+The practical exposure is low, but the installed version is still flagged by scanners and audits. The bump takes your store out of the affected range.
+
+## Image Optimization with SVG and `sharp`
+
+The SVG RCE ([GHSA-2464-fhr4-w9xw](https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw)) doesn't live in Next's own code. It comes from `librsvg`, bundled inside `sharp`, the library Next uses to optimize images on Linux glibc ([CVE-2026-96889](https://nvd.nist.gov/vuln/detail/CVE-2026-96889), [GHSA-wq5f-xc86-pv6w](https://github.com/advisories/GHSA-wq5f-xc86-pv6w)). The fix is `sharp >= 0.35.5`. Next 16.4.1 now requires that range.
+
+In v4 stores, Next 16.4.3 installs its own `sharp 0.35.5`, and that's the copy the optimizer loads. The same `@faststore/core` release removes the `sharp ^0.32.6` that the core declared without using. As a result, the vulnerable `sharp` disappears from the store's dependency tree and stops showing up in `yarn audit` and in scanners.
+
+If your store's code imports `sharp` directly without declaring it as a dependency, it was relying on the core's copy. With Yarn 1, Next's `sharp 0.35.5` is still accessible at the root of `node_modules`. With strict pnpm, that import breaks. In that case, declare `sharp` in your store's `package.json`.
+
+## v2 and v3 stores
+
+`@faststore/core` 2.x depends on `next ^12.3.1`, and 3.x depends on `next ^13.5.9`. Neither line received a Next fix for the SVG RCE: the advisory covers `>= 10.0.0, <= 15.5.27`. Next 12 and 13 don't bundle their own `sharp`, and load the `sharp ^0.32.6` declared by the core.
+
+In v2, the `/_next/image` route is active and, with the default `remotePatterns`, restricted to `{account}.vtexassets.com`. This is the version where the update closes a real exposure. In v3, the core configures its own loader, and the route returns 404 with the default configuration. The update protects stores that customized image handling and clears the warning in scanners. If a customization opened up broad origins in `remotePatterns`, fix that list: the update reduces the risk, but doesn't eliminate it.
+
+The fix ships in patches of `@faststore/core` 2.x and 3.x, which bump `sharp` to `^0.35.5`. To receive the fix, update `@faststore/cli` (or `@faststore/core`) to the new release of your line and trigger a new build in WebOps.
+
+`sharp 0.35.5` requires Node `>= 20.9.0`, and these core versions now declare that minimum. In WebOps, v2 and v3 stores already build on Node 20 or 22, so nothing changes in production. We tested the build and the Next image optimizer for Next 12.3 and Next 13.5 with `sharp 0.35.5` on Node 20, 22, and 24.
+
+Node 18 is out of support. If you still develop locally on it, you need to update, because `yarn install` fails on `sharp`'s own engine check. For v2 and v3, we recommend Node 22: it's the version used by WebOps and by the FastStore CI for these lines, and Next 12 and 13 predate Node 24.
+
+The App Router, Server Actions, and `use cache` advisories also don't apply to these versions in the standard flow, for the same reason as v4 stores.
+
+## 16.4.3 compatibility
+
+The bump doesn't change the contract your store relies on: React 18.2, Node `>= 20.9.0`, and builds with `--webpack` all remain valid. Next 16 notes that React 18 support ends in Next 17. This doesn't break your store now.
+
+We validated `@faststore/core` 4.x with Next 16.4.3 (unit tests, a production build covering all Pages Router routes and `proxy.ts`). We also validated a production store (core 4.2.0): home, listing, PDP, search, and the `/_next/data/{buildId}/{locale}/...` routes all responded correctly.
+
+Behavior changes worth knowing about:
+
+- Pages Router `/_next/data/*.json` responses bring back `ETag` and `Content-Length` (16.3). A cache sitting in front of these routes may start revalidating.
+- `next dev`'s WebSocket path changes from `/_next/webpack-hmr` to `/_next/hmr` (16.3). This doesn't affect production.
+- With i18n set to a single default locale, the `/_next/data/{buildId}/...` route without the locale prefix returns 404. This is Pages Router behavior, not something introduced by the bump.
+
+## Advisories affecting `next@16.2.6`
+
+<details>
+<summary><b>Full list of advisories, by severity</b></summary>
+
+Source: [Next.js GitHub Security Advisories](https://github.com/vercel/next.js/security/advisories). The version listed is the first 16.x release that closes the advisory. 16.4.3 includes every fix below.
+
+### Critical
+
+- [Remote code execution in `use cache` when returning typed arrays](https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr) (GHSA-673q-mjm6-r5xr). Fixed in 16.4.1.
+- [Remote code execution in the Image Optimization API with SVG](https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw) (GHSA-2464-fhr4-w9xw, CVE-2026-96889 in `librsvg`). Fixed in 16.4.1 / `sharp` 0.35.5.
+- [Remote code execution in `next/og` / `ImageResponse`](https://github.com/vercel/next.js/security/advisories/GHSA-vcvr-r3jv-pc5j) (GHSA-vcvr-r3jv-pc5j). Fixed in 16.3.6.
+- [Remote code execution in the Image Optimization API with AVIF](https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4) (GHSA-2xp9-vwfh-vxw4). Fixed in 16.3.3.
+- [Remote code execution on Windows servers](https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36) (CVE-2026-75604). Fixed in 16.3.3.
+
+### High
+
+- [Denial of service in the App Router via Server Actions](https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r) (CVE-2026-94482). Fixed in 16.4.1.
+- [SSRF in Image Optimization](https://github.com/vercel/next.js/security/advisories/GHSA-cjq9-62q9-8jv4) (CVE-2026-94483). Fixed in 16.3.8.
+- [SSRF in Server Actions on custom servers](https://github.com/vercel/next.js/security/advisories/GHSA-89xv-2m56-2m9x) (CVE-2026-64649). Fixed in 16.2.11.
+- [SSRF in rewrites with a request-controlled destination hostname](https://github.com/vercel/next.js/security/advisories/GHSA-p9j2-gv94-2wf4) (CVE-2026-64645). Fixed in 16.2.11.
+- [Middleware / proxy bypass in the App Router with Turbopack and a single locale](https://github.com/vercel/next.js/security/advisories/GHSA-6gpp-xcg3-4w24) (CVE-2026-64642). Fixed in 16.2.11.
+- [Denial of service in the App Router via Server Actions](https://github.com/vercel/next.js/security/advisories/GHSA-m99w-x7hq-7vfj) (CVE-2026-64641). Fixed in 16.2.11.
+
+### Medium and low
+
+- [SSG and ISR page cache poisoning in self-hosted applications](https://github.com/vercel/next.js/security/advisories/GHSA-4jqv-mc3x-m676) (CVE-2026-94543). Fixed in 16.3.8.
+- [Cache poisoning in SSG/ISR with cross-user content substitution](https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p) (CVE-2026-94484). Fixed in 16.3.8.
+- [Information leak in App Router metadata image routes](https://github.com/vercel/next.js/security/advisories/GHSA-f87g-xv8r-7p7x) (CVE-2026-94485). Fixed in 16.3.8.
+- [Information leak in the dev server's MCP endpoint](https://github.com/vercel/next.js/security/advisories/GHSA-39w2-rjm5-chcv) (CVE-2026-94486). Low severity. Fixed in 16.3.8.
+- [Response body cache confusion on requests with a body](https://github.com/vercel/next.js/security/advisories/GHSA-68g3-v927-f742) (CVE-2026-64648) and [with invalid UTF-8 bytes](https://github.com/vercel/next.js/security/advisories/GHSA-4633-3j49-mh5q) (CVE-2026-64647). Fixed in 16.2.11.
+- [Unbounded Server Action payload on the Edge runtime](https://github.com/vercel/next.js/security/advisories/GHSA-4c39-4ccg-62r3) (CVE-2026-64646). Fixed in 16.2.11.
+- [Denial of service in Image Optimization with SVG](https://github.com/vercel/next.js/security/advisories/GHSA-q8wf-6r8g-63ch) (CVE-2026-64644). Fixed in 16.2.11.
+- [Exposure of internal Server Functions endpoints](https://github.com/vercel/next.js/security/advisories/GHSA-955p-x3mx-jcvp) (CVE-2026-64643). Fixed in 16.2.11.
+
+</details>
