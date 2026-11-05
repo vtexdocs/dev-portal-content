@@ -24,7 +24,7 @@ For sellers to process payments received from an order, it is necessary to creat
 
 VTEX marketplaces can request  Gateway accounts to be created for their sellers for a fixed monthly fee. For this type of account, no variable billing is applied.
 
-The marketplace should send an email to one of the addresses below, depending on their region, requesting the additional Gateway account for their external seller. Make sure to include the following information in your email request:
+The marketplace should open a ticket with [Commercial Support](https://help.vtex.com/en/tracks/support-at-vtex--4AXsGdGHqExp9ZkiNq9eMy/3KQWGgkPOwbFTPfBxL7YwZ) at VTEX, requesting the additional Gateway account for their external seller. Make sure to include the following information in your ticket:
 
 - Account name, included in the VTEX environment url `{accountname}.myvtex.com/admin`
 - Name of the user responsible for the account
@@ -36,11 +36,11 @@ _Account Name: sellerstore_
 _User: Carol Danvers_
 _Email:_ `caroldanvers@sellerstore.com`
 
-| Region                  | Email                     | Monthly Fee |
-|-------------------------|---------------------------|-------------|
-| Brazil                  | `sales-ops-br@vtex.com.br`  | R$750,00    |
-| Europe                  | `sales-operations@vtex.com` | EUR 250     |
-| United States and LatAm | `sales-operations@vtex.com` | 250 USD     |
+| Region                  | Monthly Fee |
+|-------------------------|-------------|
+| Brazil                  | R$750,00    |
+| Europe                  | EUR 250     |
+| United States and LatAm | 250 USD     |
 
 ### Configure payment settings
 
