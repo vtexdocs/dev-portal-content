@@ -27,8 +27,13 @@ For more information on how to use the `useProductLink_unstable` hook and how to
 
 **Impacted section:** [`Navbar`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#navbar)
 
-Customizing the `SearchInput` may affect the tracking of search events. 
-To maintain this functionality, you'll need to ensure that search events are logged even after modifications to the component.
+Customizing `SearchInput` (and its child `SearchDropdown`, which renders the autocomplete suggestions) can affect two independent tracking mechanisms: [Google Analytics 4 (GA4)](https://developers.google.com/analytics/devguides/collection/ga4) events and [Intelligent Search Analytics](https://help.vtex.com/en/tutorial/analytics--6qRMAHDL9hvv3oE0bh8mA1), powered by [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow). Make sure to preserve both after overriding the component.
+
+#### Keeping the GA4 `search` event
+
+The default `SearchInput` sends a GA4 `search` event whenever a user submits or selects a search term. This event is used only for Google Analytics reporting, it doesn't feed Intelligent Search Analytics.
+
+To keep sending this event after customizing the component, follow the steps below:
 
 1. Add the following code to the custom component you are overriding (based on the default [`SearchInput`](https://github.com/vtex/faststore/blob/94f1d5be2e0fa11a98a5b6a08f0d68a8eb2bd95b/packages/core/src/components/search/SearchInput/SearchInput.tsx#L62) component):
 
@@ -55,6 +60,19 @@ To maintain this functionality, you'll need to ensure that search events are log
     setSearchDropdownVisible(false)
   }
   ```
+
+#### Keeping Intelligent Search Analytics tracking
+
+Intelligent Search Analytics tracking doesn't rely on a function call: [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) reads `data-af-*` attributes directly from the rendered DOM. Your custom component must keep rendering the attributes that the FastStore core passes down to the autocomplete markup:
+
+- `data-af-element`: identifies the origin of the event. For autocomplete, it must be set to `search-autocomplete`.
+- `data-af-onimpression` and `data-af-onclick`: trigger attributes that fire the impression and click events, respectively.
+- `data-af-search-id`: the search identifier returned by Intelligent Search. Required on every event.
+- `data-af-product-id` and `data-af-product-position`: required on each clickable product suggestion.
+
+> ⚠️ If any of these attributes is missing, Activity Flow silently discards the corresponding event instead of logging it.
+
+For the full list of attributes, required values, and rendering examples (including the results gallery), see [Tracking search analytics events in headless web stores](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-headless-web-stores).
 
 ## FastStore Native Sections
 
