@@ -194,8 +194,11 @@ After VTEX ends the traffic split, retire v1:
 1. Remove the build URL from Headless CMS (Legacy) so publications no longer trigger v1 builds:
 
     a. In the VTEX Admin, go to **Storefront > Headless CMS**.
+
     b. In the FastStore project, click `Settings` (⚙️).
+
     c. In **Settings**, click the `Build` tab.
+    
     d. Remove the value in **Build Webhook URL** and click `Save`.
 
 2. Prevent new commits to the v1 repository by doing one of the following:
