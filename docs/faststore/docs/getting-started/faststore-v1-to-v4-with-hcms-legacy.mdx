@@ -267,7 +267,7 @@ The following table shows what happens in each version during this phase:
 | **Step** | **FastStore v1 (current repository)** | **FastStore v4 (new repository, same account)** |
 | --- | --- | --- |
 | [10. End traffic split](#step-10---ask-vtex-to-end-the-traffic-split) | No changes. | Reply to the same ticket so VTEX ends the traffic split and reactivates the CDN cache. v4 is the live store. |
-| [11. Retire v1](#step-11---retire-the-v1-repository) | Archive the repository or restrict commits to it. | No changes. |
+| [11. Retire v1](#step-11---retire-v1) | Archive the repository or restrict commits to it. | No changes. |
 
 ### Step 10 - Ask VTEX to end the traffic split
 
@@ -275,7 +275,7 @@ Reply to the same ticket you used in [step 9](#step-9---switch-the-headless-cms-
 
 VTEX then ends the traffic split and reactivates the CDN cache.
 
-### Step 11 - Retire the v1 repository
+### Step 11 - Retire v1
 
 After VTEX ends the traffic split, prevent new commits to the v1 repository by doing one of the following:
 
@@ -326,6 +326,6 @@ Fix the issues in the v4 repository and validate again using `?ab_test=v2`, as d
 
 ### Rollback after the split ends
 
-After VTEX ends the traffic split in [step 10](#step-10---ask-vtex-to-end-the-traffic-split), v1 no longer receives traffic and you may have already retired its repository in [step 11](#step-11---retire-the-v1-repository). Don't take any action on your own. Contact VTEX in the same ticket, or in a new one if it was closed, and describe the issue so VTEX can guide you on the next steps.
+After VTEX ends the traffic split in [step 10](#step-10---ask-vtex-to-end-the-traffic-split), v1 no longer receives traffic and you may have already retired its repository in [step 11](#step-11---retire-v1). Don't take any action on your own. Contact VTEX in the same ticket, or in a new one if it was closed, and describe the issue so VTEX can guide you on the next steps.
 
 {/* Preciso confirmar com a engenharia: (1) se o repositório v1 pode já ter sido arquivado neste ponto e se isso afeta o rollback; (2) se, caso o ticket tenha sido fechado, abrir um novo ticket é o fluxo correto; (3) se descrever o problema no ticket é a orientação esperada (nenhum desses pontos está no documento fonte, que só diz para alinhar com a VTEX via ticket antes de agir). */}
