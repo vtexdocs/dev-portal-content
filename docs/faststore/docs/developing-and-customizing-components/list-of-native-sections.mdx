@@ -70,7 +70,31 @@ Intelligent Search Analytics tracking doesn't rely on a function call: [Activity
 - `data-af-search-id`: the search identifier returned by Intelligent Search. Required on every event.
 - `data-af-product-id` and `data-af-product-position`: required on each clickable product suggestion.
 
-> ⚠️ If any of these attributes is missing, Activity Flow silently discards the corresponding event instead of logging it.
+To keep rendering these attributes, set them explicitly on the suggestions container and on each suggested product, the same way the default [`SearchDropdown`](https://github.com/vtex/faststore/blob/main/packages/core/src/components/search/SearchDropdown/SearchDropdown.tsx) does:
+
+```tsx
+<SearchProducts
+  data-af-element={searchId && 'search-autocomplete'}
+  data-af-onimpression={!!searchId}
+  data-af-search-id={searchId}
+>
+  {products.map((product, index) => (
+    <SearchProductItem
+      key={product.id}
+      product={product}
+      data-af-element={searchId && 'search-autocomplete'}
+      data-af-onclick={!!(searchId && product.id)}
+      data-af-search-id={searchId}
+      data-af-product-position={searchId && index + 1}
+      data-af-product-id={searchId && product.id}
+    />
+  ))}
+</SearchProducts>
+```
+
+After customizing the component, inspect the rendered HTML with your browser's DevTools and confirm that these `data-af-*` attributes are present on the suggestions container and on each product element whenever a search returns a `searchId`.
+
+> ⚠️ If any of these attributes is missing or isn't forwarded to the DOM — for example, because your custom component doesn't spread unknown props onto its root element — Activity Flow silently discards the corresponding event instead of logging it, with no error raised. If this happens, add the missing attributes back explicitly on the corresponding elements, as shown above, and check again in DevTools.
 
 For the full list of attributes, required values, and rendering examples (including the results gallery), see [Tracking search analytics events in headless web stores](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-headless-web-stores).
 
