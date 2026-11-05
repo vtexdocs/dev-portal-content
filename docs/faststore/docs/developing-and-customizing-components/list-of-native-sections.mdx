@@ -63,7 +63,7 @@ To keep sending this event after customizing the component, follow the steps bel
 
 #### Keeping Intelligent Search Analytics tracking
 
-Intelligent Search Analytics tracking doesn't rely on a function call: [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) reads `data-af-*` attributes directly from the rendered DOM. Your custom component must keep rendering the attributes that the FastStore core passes down to the autocomplete markup:
+Intelligent Search Analytics tracking relies on Activity Flow reading `data-af-*` attributes from the rendered DOM, not on a function call. Make sure your custom component preserves the following attributes FastStore passes to the autocomplete markup:
 
 - `data-af-element`: identifies the origin of the event. For autocomplete, it must be set to `search-autocomplete`.
 - `data-af-onimpression` and `data-af-onclick`: trigger attributes that fire the impression and click events, respectively.
