@@ -74,4 +74,10 @@ Group the pipeline by responsibility rather than creating one workflow per store
 
 Section schemas stay in your repository, and the CMS doesn't copy them from one account to another. Syncing them to an account is a high-impact operation, so trigger it deliberately for each account instead of tying it to a code push. This way, a deploy never changes the content structure of a production account as a side effect.
 
-For the commands and the steps to sync schemas to each account, see the CMS section in [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multi-store-planning-your-account-structure#multiple-accounts).
+To sync the schemas to an account:
+
+1. Log in to the account you want to update.
+2. Run [`vtex faststore cms-sync`](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms), or generate and upload the schema with the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
+3. Repeat for each account that needs the update.
+
+You can also run these commands from a workflow that you trigger manually. A manual trigger keeps the operation auditable, and any authorized team member can run it when needed.
