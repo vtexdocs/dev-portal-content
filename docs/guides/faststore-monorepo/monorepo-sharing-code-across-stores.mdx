@@ -11,7 +11,7 @@ The [Multiple brands or stores sharing code](https://developers.vtex.com/docs/gu
 
 ## The shared package
 
-Keep shared code in a single package, commonly named `core`, that every store project imports as a versioned dependency. This package isn't a FastStore project: it has no `discovery.config.js`, it's not declared in `faststore.json`, and [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) never deploys it. It's a plain Node package that the store projects consume.
+Keep shared code in a single package, commonly named `core`, that every store project imports as a versioned dependency. Unlike the store projects, this package is a plain Node package rather than a FastStore project. It has no `discovery.config.js`, it isn't declared in `faststore.json`, and [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) never deploys it. Its only role is to provide code that the store projects consume.
 
 In this structure, each store project in `packages/` (such as `store1` and `store2`) is a complete and independent FastStore project. It has its own `discovery.config.js`, its own `src` directory with customizations, its own `package.json`, and its own deployment through WebOps. The `package.json` file at the root of the monorepo defines the workspaces, listing all packages, and is the entry point for scripts that run operations across several projects at once.
 
