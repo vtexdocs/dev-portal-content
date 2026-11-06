@@ -33,10 +33,6 @@ The following example shows the folder structure of a monorepo with a shared `co
 │
 ```
 
-{/* TODO (EDU-19766): confirmar com o time responsável se packages/core/components guarda
-componentes React de UI, schemas de componentes de CMS (JSON Schema), ou ambos.
-Fonte de verdade (Google Doc, seção 3.1) fala em "biblioteca de componentes React compartilhados". */}
-
 The following table describes each directory in the shared package:
 
 | Directory | Description |
@@ -75,14 +71,6 @@ Two practices keep the shared package stable as it grows:
 - **Version the package.** Treat a change to shared code as a release: bump the version of the `core` package and generate a semantic changelog from commit messages or with [Changesets](https://github.com/changesets/changesets). Store projects then import the package as a versioned dependency.
 
 The result is that improving a shared component takes one pull request, without duplicating code or manually syncing repositories.
-
-{/* TODO (EDU-19766): confirmar com o time responsável como "um PR propaga para todas as lojas"
-funciona quando cada projeto importa o pacote core como dependência versionada.
-Opção A: workspaces (ex.: "workspace:*"), e a mudança chega a todas as lojas automaticamente.
-Opção B: cada projeto fixa uma versão, e cada loja precisa atualizar a sua.
-O Doc diz: "cada spoke os importe como dependência versionada" (Google Doc, seção 3.1)
-e "Uma melhoria nos componentes compartilhados é propagada para todos os países com um único PR" (Google Doc, seção 3.1).
-Também: "Um PR no hub propaga melhorias para todos os países" (Google Doc, seção 2, linha Monorepo). */}
 
 ### Standardizing new components
 
