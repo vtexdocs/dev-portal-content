@@ -10,11 +10,11 @@ tags:
   - FastStore
 ---
 
-FastStore now supports the opt-in `api.preserveCartLines` flag, which keeps separate the cart lines of the same SKU that your store split in Checkout.
+FastStore now supports the opt-in `api.preserveCartLines` flag, which keeps the cart lines of the same SKU that your store split in Checkout separate.
 
 ## What has changed?
 
-By default, FastStore merges cart lines of the same SKU into one line. When a store splits a line in Checkout using the [split item endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split), for example, `[refrigerator x1, refrigerator x1]`, FastStore merges them into `[refrigerator x2]` on the next cart validation, undoing the split in Checkout.
+By default, FastStore merges cart lines with the same SKU into a single line. When a store splits a line in Checkout using the [split item endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split), for example, `[refrigerator x1, refrigerator x1]`, FastStore merges them into `[refrigerator x2]` on the next cart validation, undoing the split in Checkout.
 
 With `preserveCartLines: true`, FastStore respects the lines created in Checkout. Each line is shown separately in the minicart, and editing or removing a line affects only that line. FastStore doesn't split lines on its own, and stores that don't enable the flag keep the current behavior.
 
