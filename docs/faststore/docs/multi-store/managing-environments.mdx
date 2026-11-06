@@ -38,10 +38,12 @@ When using a testing account, consider the following:
 - **Apps and integrations:** Backend apps and integrations are installed per account, so they must also be installed in the testing account before development starts.
 - **Edition App:** FastStore requires `vtex.edition-store@5.x` in every account, testing accounts included. For more information, see [Before you begin](https://developers.vtex.com/docs/guides/faststore/go-live-before-you-begin) in the Going live track.
 
-{/* TODO (EDU-19765): confirmar com o time responsável os itens abaixo, que não constam na fonte (Google Doc, seção 4.2 não detalha o que replicar na conta de QA):
-- Apps and integrations: "before development starts". A doc de Planning your account structure (PR #3098) confirma só que as versões de apps são instaladas por conta; o momento da instalação não está documentado.
-- Content: a fonte (seção 4.5/5.3) confirma instância de CMS por conta e propagação explícita de schemas, mas não diz que o conteúdo "has to be recreated". O PR #3098 diz que páginas, componentes e mídia são mantidos em cada conta.
-Validados na doc oficial: `vtex.edition-store@5.x` em todas as contas (go-live/before-you-begin e PR #3098). */}
+{/* TODO (EDU-19765): os itens abaixo não constam na fonte (Google Doc, seção 4.2 não detalha o que replicar na conta de QA), mas foram validados na doc oficial publicada, seção "Developing in an isolated QA subaccount" de "Migrating from Store Framework to FastStore" (docs/guides/vtex-io/Storefront-Guides/migrating-store-framework-to-faststore.md):
+- Content: "Content you register in the subaccount CMS is for testing only. It must be recreated... subaccount CMS content isn't copied over automatically". Também coerente com o PR #3098 (CMS por conta; páginas, componentes e mídia mantidos em cada conta) e com a fonte (seções 4.5 e 5.3: instância de CMS por conta).
+- Search: "Requires reconfiguring merchandising rules, synonyms, and relevance settings, since a subaccount is a separate environment".
+- Apps and integrations: "Backend apps and integrations must be reinstalled in the subaccount before you start development".
+- Edition App: `vtex.edition-store@5.x` em todas as contas (go-live/before-you-begin, migration guide e PR #3098).
+Atenção: a doc de migração descreve um subaccount de QA usado na migração do Store Framework. Confirmar com o time responsável se as mesmas afirmações valem para contas de testing de um projeto multi-store que não esteja migrando. */}
 
 ## Mapping branches to accounts
 
@@ -65,4 +67,4 @@ For detailed instructions, see [Configuring production and preview branches in W
 
 > ℹ️ To keep the testing account mirroring production, synchronize catalog, shipping, and promotions through the VTEX APIs, for example with scripts. Plan for that synchronization as part of your regular maintenance routine.
 
-{/* TODO (EDU-19765): fonte (Google Doc, seção 4.2, linha "Conta de QA") diz "catálogo, frete e promoções mantidos em sincronia via scripts de API". Confirmar com o time responsável se existe alguma forma oficial de copiar/espelhar um ambiente e se há documentação de API recomendada para esses scripts. */}
+{/* TODO (EDU-19765): fonte (Google Doc, seção 4.2, linha "Conta de QA") diz "catálogo, frete e promoções mantidos em sincronia via scripts de API". Não encontrei na documentação publicada uma página sobre esses scripts de sincronização. Confirmar com o time responsável se existe forma oficial de copiar/espelhar um ambiente e qual documentação de API recomendar. */}
