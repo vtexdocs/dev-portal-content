@@ -16,7 +16,9 @@ This has concrete consequences:
 
 > ⚠️ Any test that depends on backend data, such as catalog, promotions, logistics, payments, or integrations, requires a separate VTEX account. Workspaces only cover frontend changes and app versions. For more details, see [Best practices on workspaces management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices).
 
-We recommend giving each store a dedicated testing account, with its own backend data, alongside the production account. A testing account isn't mandatory: stores with lower operational complexity, or in an early implementation phase, can start with only the production account and add a testing account later.
+We recommend giving each store a dedicated testing account, with its own backend data, alongside the production account.
+
+> ℹ️ A testing account isn't mandatory. Stores with lower operational complexity, or in an early implementation phase, can start with only the production account and add a testing account later.
 
 This guide explains how to structure testing and production environments per store, and how repository branches map to the accounts they deploy to.
 
