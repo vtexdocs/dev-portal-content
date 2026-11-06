@@ -6,7 +6,7 @@ By default, FastStore merges cart lines that share the same SKU, seller, attachm
 
 The `preserveCartLines` flag makes FastStore respect the lines that your store split in Checkout, instead of merging them again.
 
-> ℹ️ FastStore doesn't split lines on its own. Adding a product with quantity `2` still creates a single line, with or without `preserveCartLines`. The split must be done in Checkout.
+> ℹ️ FastStore doesn't split lines on its own. Adding a product with quantity `2` still creates a single line, whether or not `preserveCartLines` is used. The split must be done in Checkout.
 
 ## Default behavior and behavior with the flag
 
@@ -67,7 +67,7 @@ If your store uses assembly options, also confirm the following:
 
 > ℹ️ The default minicart doesn't display the assembly options of each line. The split lines follow the Checkout behavior, but you may need a custom component to present the services chosen for each unit.
 
-If you find any issue, contact [VTEX Support](https://supporticket.vtex.com/support) with the `orderFormId` of the affected cart.
+If you find any issues, contact [VTEX Support](https://supporticket.vtex.com/support) with the `orderFormId` of the affected cart.
 
 ### Step 3 - Deploy the changes
 
