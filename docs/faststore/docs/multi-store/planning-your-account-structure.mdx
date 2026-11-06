@@ -34,9 +34,6 @@ The single-account model depends on the [Localization feature](https://developer
 The three account-level parts of the implementation work as follows:
 
 - **CMS:** The account has one [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance. With Localization enabled, editors manage storefront content per locale in that CMS.
-
-  > ⚠️ The Localization feature isn't available for [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
-
 - **WebOps:** One WebOps integration deploys the account's single project, and every binding of the account is served by the same deployment. Bindings are configured on the account through [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) and enabled in the project's `discovery.config.js`.
 - **App versions:** VTEX IO apps, such as Intelligent Search, backend apps, and Admin apps, are installed once in that account.
 
