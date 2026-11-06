@@ -6,7 +6,7 @@ createdAt: "2026-11-06T00:00:00.000Z"
 
 A FastStore multistore architecture is a project in which a brand operates several FastStore storefronts, for example, one per country or one per brand.
 
-This track covers how to build a multistore architecture from a single [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), where every market reuses the same components, design tokens, and delivery pipeline. You'll learn what to share, what to keep local, and which areas to plan before you start.
+This track covers how to build a multistore architecture from a single [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), where every market reuses the same components, design tokens, and delivery pipeline. You'll learn what to share, what to keep local, and the order to follow when setting up the stores.
 
 > ℹ️ You can also run each store as a separate FastStore project in its own repository. In that case, sharing components and design tokens requires extra effort, such as publishing them as a package. This track focuses on the monorepo, but the guidance on account structure, environments, and content governance applies to both approaches.
 
@@ -27,33 +27,19 @@ Components and the delivery pipeline are shared because duplicating them creates
 
 > ℹ️ This division is a common starting point, not a fixed rule. Adjust it to your markets, teams, and governance needs. For example, a market with a different release schedule can use a different production branch in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) while still sharing the repository and pipeline with the other stores. Learn more in [Configuring production and preview branches in WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches).
 
-## Planning a multistore project
-
-A multistore project involves the areas described in the following table. A different guide covers each one:
-
-| Area | Description | Guide |
-| --- | --- | --- |
-| Account structure | Defines whether markets operate under separate VTEX accounts or share one account through bindings, and what each option means for the CMS, WebOps, and app versions. | [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multistore-planning-your-account-structure) |
-| Environments and deployment | Recommends a test and a production environment for each store, and maps repository branches to the accounts they deploy to. | [Managing environments](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments) |
-| Repository structure | Organizes shared components, sections, and design tokens in a single monorepo, and defines which layers each market can customize. | [Sharing code across stores](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores) |
-| Content governance | Keeps content isolated per market, with each team editing only its own pages, campaigns, and media. Shared section schemas reach every account through an explicit, manual sync. | [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) and [Keeping CMS schema sync manual](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments#keeping-cms-schema-sync-manual) |
-
-The account structure comes first because the other areas follow from it. Each VTEX account has its own CMS instance and WebOps integration, so the number of accounts determines how many CMS instances and deployment targets the project uses.
-
-> ⚠️ Changing the account structure after markets are live results in significantly more effort and costs than setting it up correctly from the start. Moving a market later means rebuilding its content and deployment target.
-
-> ℹ️ If all markets share one VTEX account through bindings, the repository has a single store project, and markets are served by the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature) instead of separate projects. In that case, the guidance on sharing code across store projects and syncing schemas between accounts doesn't apply.
-
 ## Implementation path
 
-After planning, a multistore project with one VTEX account per market typically follows this order:
+A multistore project with one VTEX account per market typically follows this order:
 
 1. **Define the account structure.** Choose the model, set up the [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account) and [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app), and create the testing accounts. See [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multistore-planning-your-account-structure) and [Managing environments](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments).
+
+    The account structure comes first because the other areas follow from it. Each VTEX account has its own CMS instance and WebOps integration, so the number of accounts determines how many CMS instances and deployment targets the project uses.
+
+    > ⚠️ Changing the account structure after markets are live results in significantly more effort and costs than setting it up correctly from the start. Moving a market later means rebuilding its content and deployment target.
 2. **Set up the monorepo.** Initialize the repository and its `faststore.json` file. See [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview).
 3. **Create a project for each account.** Use the `fsp create` command to add each store to the monorepo. See [Creating new projects](https://developers.vtex.com/docs/guides/monorepo-creating-new-projects) and the [Monorepo use cases](https://developers.vtex.com/docs/guides/monorepo-use-cases).
 4. **Organize the shared code.** Create the shared package and define the customization layers. See [Sharing code across stores](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores).
 5. **Run the stores locally.** Start each store with `fsp dev` and, to run several stores at the same time, set a different proxy port for each one. See [Running projects locally](https://developers.vtex.com/docs/guides/monorepo-running-projects-locally).
 6. **Connect each account to the repository.** Set up the [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) integration of each account, and map branches to the testing and production accounts. See [Mapping branches to accounts](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments#mapping-branches-to-accounts).
-7. **Validate changes and sync content structure.** Set up the continuous integration pipeline and sync section schemas to each account. See [Validating changes before merge](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments#validating-changes-before-merge).
+7. **Validate changes and sync content structure.** Set up the continuous integration pipeline and sync section schemas to each account manually. See [Validating changes before merge](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments#validating-changes-before-merge), [Keeping CMS schema sync manual](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments#keeping-cms-schema-sync-manual), and [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts).
 8. **Go live with each store.** Configure the domain and integrations of each account. See [Going live](https://developers.vtex.com/docs/guides/faststore/go-live-overview).
-
