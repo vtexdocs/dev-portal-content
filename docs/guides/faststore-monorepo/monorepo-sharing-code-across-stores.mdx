@@ -97,7 +97,7 @@ Learn more about overriding native components and their props in [Developing and
 
 ## Design tokens
 
-FastStore themes are built on CSS variables, such as `--fs-color-primary` and `--fs-spacing-2`, described in [Global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview). In a multi-store monorepo, keeping the token definitions in the shared package avoids maintaining a full set of token files per brand.
+FastStore themes are built on CSS variables, such as `--fs-color-primary` and `--fs-spacing-2`, described in [Global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview). In a multistore monorepo, keeping the token definitions in the shared package avoids maintaining a full set of token files per brand.
 
 To go further, you can automate this system with a token pipeline. Instead of editing the SCSS token files of each brand manually, use a tool such as [Style Dictionary](https://styledictionary.com/) to transform JSON definition files into SCSS variables for each brand and store. This removes manual editing and makes onboarding a new brand faster.
 
@@ -117,5 +117,7 @@ You can also add scripts to the root `package.json` that run operations across a
 - Building all store projects
 - Propagating generated design tokens
 - Replicating CMS settings between accounts
+
+> ⚠️ Replicating CMS settings between accounts is a high-impact operation. Run it only when you intend to, and don't tie it to the code deployment flow, so that a code push never triggers it by accident.
 
 These batch operations are useful when a change in the shared package needs to be validated in every store before the merge, without having to navigate manually through each project directory.
