@@ -43,15 +43,15 @@ In this scenario, one VTEX account uses multiple storefront modules, each with i
   "stores": {
     "account1": {
       "discovery": {
-        "path": "packages/store1",
+        "path": "packages/discovery",
         "port": 3001
       },
       "checkout": {
-        "path": "package/checkout",
+        "path": "packages/checkout",
         "port": 3002
       },
       "sales-app": {
-        "path": "package/sales-app",
+        "path": "packages/sales-app",
         "port": 3003
       }
     }
@@ -102,7 +102,7 @@ After the monorepo is configured, set up the modules you included: [Setting up B
 
 In this scenario, a merchant has multiple brands or stores, each mapped to a different account or subaccount, yet all share the same FastStore monorepo.
 
-With separate repositories, sharing code between brands or stores usually depends on publishing `npm` packages or copying files between projects. In a FastStore monorepo, each brand or store has its own directory within a single repository, and shared code lives in dedicated folders that can be imported wherever needed. This setup avoids duplicating code across repositories and makes it easier to maintain consistent implementations across storefronts.
+With separate repositories, sharing code between brands or stores usually depends on publishing `npm` packages or copying files between projects. In a FastStore monorepo, each brand or store has its own directory within a single repository, and shared code lives in dedicated folders that can be imported wherever needed. This setup avoids duplicating code across repositories and makes it easier to maintain consistent implementations across storefronts. To learn how to organize the shared code, see [Sharing code across stores](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores).
 
 ### Basic directory structure
 
@@ -128,12 +128,12 @@ With separate repositories, sharing code between brands or stores usually depend
         "path": "packages/store1",
         "port": 3001
       }
-    }
+    },
     "account2": {
       "discovery": {
         "path": "packages/store2",
         "port": 3002
-      },
+      }
     }
   }
 }
@@ -149,12 +149,12 @@ In this scenario, a merchant has multiple brands or stores, and each of them can
 📂 Account monorepo
 │
 ├── 📂 packages
-│   └── 📂 store1
-│      ├── 📂 discovery
-│      └── 📂 checkout
+│   ├── 📂 store1
+│   │   ├── 📂 discovery
+│   │   └── 📂 checkout
 │   └── 📂 store2
-│      ├── 📂 discovery
-│      └── 📂 checkout
+│       ├── 📂 discovery
+│       └── 📂 checkout
 ├── 📄 faststore.json
 ├── 📄 package.json
 │  
@@ -168,22 +168,22 @@ In this scenario, a merchant has multiple brands or stores, and each of them can
   "stores": {
     "account1": {
       "discovery": {
-        "path": "packages/store1",
+        "path": "packages/store1/discovery",
         "port": 3001
       },
       "checkout": {
-        "path": "packages/checkout",
+        "path": "packages/store1/checkout",
         "port": 3002
       }
     },
     "account2": {
       "discovery": {
-        "path": "package/store2",
-        "port": 3001
+        "path": "packages/store2/discovery",
+        "port": 3003
       },
       "checkout": {
-        "path": "package/checkout",
-        "port": 3002
+        "path": "packages/store2/checkout",
+        "port": 3004
       }
     }
   }
